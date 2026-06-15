@@ -116,6 +116,15 @@ Grid 2×2 com 4 sub-módulos acessíveis por tap:
 - **Safety Alert Box** — alertas de toxicidade, diluição e riscos clínicos
 - **Interações Críticas** — grid split: 🔴 Contraindicadas / 🟡 Monitorar
 - **`_fdFormatKey()`** — formata chaves camelCase com dígitos: `pediatrica3Dias` → `Pediátrica — 3 Dias`
+- **Motor Renal v2** — Engine reativa que cruza o ClCr/HD do paciente com `renalDose` de cada fármaco:
+  - `_renalNormalizeFaixa()` — dual-mode: suporta schema objeto `{dose,via,intervalo,obs}` e string legada
+  - `obterDosePorFiltrado()` — retorna `{faixa, state, dados}` onde `state` ∈ `{ok, alert, missing, hd}`
+  - `_renalBuildBodyHtml()` — gera pills coloridas (dose · via · intervalo) + obs com `border-left`
+  - `_renalInjectOrUpdate()` — substitui somente `#fd-renal-dynamic` via `replaceWith()` sem flickering
+  - **Toggle Hemodiálise** — CSS switch puro, desabilita `#hm-clcr` (opacity 38%) quando ativo
+  - **Listener reativo** — `#hm-clcr` events `input`+`change` disparam atualização em tempo real
+  - **`_tryRenalOverride()`** em `calcDrugDose()` — substitui "Esquemas Disponíveis" estáticos pelo card "ESQUEMA RENAL AJUSTADO" quando ClCr ≤ 50 ou HD ativo, com pills laranja/lilás e banner contextual
+  - **22/22 antimicrobianos** com `renalDose` no novo schema `{dose, via, intervalo, obs}` ✅
 
 #### 💧 Sub-view: Fluidos
 | Modo | Fórmula |
@@ -640,6 +649,268 @@ A partir daí, cada push para `main` dispara o pipeline automaticamente.
 
 ## 🔄 Changelog por Sessão
 
+### 2026-06-14 — UX Refactoring v2: 6 Diretrizes de Alta Performance
+
+#### Novos arquivos criados
+
+| Arquivo | Tamanho | Responsabilidade |
+|---|---|---|
+| `css/medcases-ux-v2.css` | 17 KB | Diretriz 5: separação rigorosa de temas |
+| `js/medcases-ux-v2.js` | 20 KB | Diretrizes 3 e 6: formulações + copiar Rx |
+
+#### Diretriz 1 — Detecção automática de idioma ✅ (já implementada)
+- IIFE em `index.html` linha 8171: `?lang=` → `navigator.language` → `'pt'`
+- Background prefetch via `requestIdleCallback` com chunks de 8 fármacos por ciclo idle
+
+#### Diretriz 2 — Resultado inline na Home ✅ (já implementada)
+- `hmShowInlineResult(drugId)` injeta resultado abaixo da busca sem redirect
+- Motor `_fdResolveHeroPatient()`: prioriza pediátrico < 12a, depois adulto + ajuste renal
+- Bloco pediátrico oculto para adultos via lógica do hero
+
+#### Diretriz 3 — Motor de arredondamento por formulação comercial ✅ **NOVO**
+- `window.snapToFormulation(rawMg, formulationsArr)` — encontra o valor comercial mais próximo
+- `window.AVAILABLE_FORMULATIONS` — banco inicial com 35+ fármacos (VO e EV)
+- UI transparente: badge verde com valor ajustado + subtexto "Calculado: Xmg → Ajustado: Ymg (±Z%)"
+- Monkey-patch de `hmShowInlineResult` via IIFE (sem reescrever a função original)
+- Snap armazenado em `window._lastSnapResult` para uso no copiar prescrição
+
+#### Diretriz 4 — Seletor de sexo + cores dinâmicas ✅ (já implementada)
+- `hmSetSex(sex)`: toggle M/F com botão gestante aparecendo apenas para F
+- `hmUpdatePatientCardColor()`: `hm-profile-pedia` (amarelo) | `hm-profile-female` (rosa) | `hm-profile-male` (azul)
+- CSS completo em `index.html` linhas 4453–4502
+
+#### Diretriz 5 — Separação rigorosa de temas ✅ **NOVO (`css/medcases-ux-v2.css`)**
+- **Modo Escuro** (`#091522`): pills com texto branco/âmbar, separadores de categoria em cyan tênue
+- **Modo Claro** (`#f4f6f8`): modais e cards brancos, texto `#1a1f26`/`#0F172A`
+- Corrigido: card inferior de fármacos (`.hm-drug-name`, `.hm-drug-class`) estava invisível no light
+- Corrigido: pills de efeitos adversos escuras sobre fundo escuro → agora sempre legíveis
+- Abas do `fd-modal` com bordas laterais coloridas por seção (doses=cyan, adversos=vermelho, etc.)
+- Badge renal no inline result com variantes dark/light de alto contraste
+
+#### Diretriz 6 — Botão "Copiar Prescrição" formatado ✅ **NOVO**
+- `window.buildPrescriptionString(drugName, hero, snap, lang)` — string WhatsApp com `\n`
+- `window.hmCopyPrescription(drugId)` — `navigator.clipboard.writeText` + fallback `execCommand`
+- Feedback visual no botão: "Copiado! ✓" por 1.8s
+- Formato: `*MEDCASES — FÁRMACO*` | Paciente | Dose Recomendada | Ajuste Renal | Obs | footer
+- Snap integrado: se houve arredondamento, inclui linha "Calculado: 575mg → Ajustado: 625mg"
+
+#### Validação
+```
+PlaywrightConsoleCapture: ✅ 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx)
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+```
+
+---
+
+### 2026-06-14 — Motor Cockcroft-Gault Reativo (Input Creatinina → ClCr automático)
+
+#### Problema resolvido
+O campo "ClCr mL/min" exigia que o médico calculasse manualmente o clearance antes de informar.
+Na prática, o médico tem em mãos a **Creatinina Sérica** (ex: 3 mg/dL) — não o ClCr final.
+
+#### Arquivos modificados
+| Arquivo | Mudanças |
+|---|---|
+| `index.html` | Label `ClCr mL/min` → `Creatinina mg/dL`; input visível `#hm-creatinina`; hidden `#hm-clcr` mantido para retrocompatibilidade; `hmFixarDados` salva `creatinine`; `hmLoadPatient` restaura creatinina e re-dispara CG; `hmClearPatient` limpa `#hm-creatinina` |
+| `js/medcases-ux-v2.js` | Novo §H `hmCalcCockcroft()` + §I listeners reativos + monkey-patch `hmSetSex` |
+
+#### Arquitetura da solução
+
+```
+Médico digita Creatinina (ex: 3.0 mg/dL)
+       ↓  oninput="hmCalcCockcroft()"
+Cockcroft-Gault:
+  Masc: ClCr = ((140 - Idade) × Peso) / (72 × Creatinina)
+  Fem:  ClCr = acima × 0.85
+  → resultado clampado [1, 250] mL/min
+       ↓
+#hm-clcr.value = "20.1"   (hidden — motor renal existente não muda)
+dispatchEvent('input') + dispatchEvent('change')
+       ↓                          ↓
+hm-pv-clcr badge = "20.1"   Motor renal reage → ajuste de dose atualizado
+(borda laranja: ClCr 10–30)  hmShowInlineResult() re-renderiza se visível
+       ↓
+window.patientData.clcr = 20.1
+window.patientData.creatinine = 3.0
+```
+
+#### Por que `#hm-clcr` hidden (não removido)?
+Todo o motor JS existente (~50 referências) lê `getElementById('hm-clcr')`.
+Manter o campo hidden e escrever nele via JS preserva **retrocompatibilidade total**
+sem tocar em nenhuma linha do motor renal, prefetch ou hmFixarDados.
+
+#### Reatividade completa
+| Evento | Reação |
+|---|---|
+| Digita Creatinina | Recalcula CG imediatamente |
+| Digita Peso | Recalcula CG imediatamente |
+| Digita Idade | Recalcula CG imediatamente |
+| Clica Masc./Fem. | Recalcula CG com fator 0.85 para Fem. |
+| Abre app com dados salvos | Restaura creatinina → recalcula CG |
+| Clica Limpar | Zera creatinina + clcr hidden + badge |
+
+#### Pill semafórica de ClCr (cor por faixa)
+| Faixa | Cor da borda |
+|---|---|
+| < 10 mL/min | Vermelho `rgba(248,113,113,0.45)` |
+| 10–29 mL/min | Âmbar `rgba(251,191,36,0.40)` |
+| 30–49 mL/min | Laranja `rgba(251,146,60,0.40)` |
+| ≥ 50 mL/min | Cyan `rgba(56,189,248,0.25)` |
+
+#### Validação
+```
+PlaywrightConsoleCapture: ✅ 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor + Diretriz 3 (formulações) + Diretriz 6 (copiar Rx)
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+```
+
+---
+
+### 2026-06-13 — Finalização: Migração 22/22 + Fix Esquemas Disponíveis
+
+#### Correção adicional — metronidazol e ciprofloxacino
+Na varredura final de sanidade, detectou-se que **metronidazol** e **ciprofloxacino** ainda estavam
+em schema legado (strings planas). Ambos foram migrados para `{ dose, via, intervalo, obs }`.
+Varredura grep confirma zero ocorrências de `fgMaior50: t(lang` ou equivalentes — **22/22 migrados**.
+
+---
+
+### 2026-06-13 — Fix: Esquemas Disponíveis agora refletem ajuste renal em tempo real
+
+#### Problema corrigido
+Os cards "ADULTO VO", "ADULTO EV" e "PEDIÁTRICA" na seção **Esquemas Disponíveis** exibiam
+os intervalos/doses estáticos do `calculate()` (ex: `12/12h` fixo para ciprofloxacino) mesmo
+quando o ClCr do paciente indicava uma faixa diferente (ex: ClCr 8,95 → deveria mostrar `24/24h`).
+
+**Causa raiz**: O bloco "Esquemas Disponíveis" era montado com `rich.dose` (objeto `dose:{}` do
+`calculate()`, sempre calculado com os valores retornados pelo fármaco) e não consultava `renalDose`.
+
+#### Solução implementada
+
+**1. `calcDrugDose()` — `_tryRenalOverride()` IIFE** (`index.html` ~linha 11348)
+
+Antes de montar `allDosesHtml`, executa um interceptador inline que:
+- Lê `drug._source.renalDose` (disponível via adaptador `_source: entry`)
+- Verifica `requiresAdjustment: true` + ClCr real do paciente OU flag HD ativa
+- Determina a faixa ativa: `fg30a50` / `fg10a30` / `fgMenor10` / `hemodialise`
+- Normaliza via `_renalNormalizeFaixa()` inline (dual-mode: objeto e string legada)
+- Retorna `renalOverride = { faixaKey, faixaLabel, dados, clcrV, isHD }` ou `null`
+
+Se `renalOverride !== null`, substitui **toda** a seção "Esquemas Disponíveis" por um
+card único "ESQUEMA RENAL AJUSTADO" com:
+- Badge laranja (ClCr ≤ 50) ou lilás (HD) com borda colorida
+- Pills estruturadas: `💊 dose` · `via` · `🔄 intervalo`
+- Observação clínica em `border-left` colorida
+- Fallback texto plano para schema legado (string)
+
+Se `renalOverride === null` (ClCr > 50 ou sem `renalDose`), exibe os cards originais sem alteração.
+
+**2. Listener `#hm-clcr` ampliado** — também chama `calcDrugDose(selectedDrug)` quando visível
+
+**3. `hmToggleHemodialise()` ampliado** — idem, re-renderiza card ao ativar/desativar HD
+
+**4. Sincronização `patientData.clcr` em tempo real** — o listener agora atualiza
+`window.patientData.clcr` a cada tecla no `#hm-clcr`, sem precisar clicar em "Fixar Dados".
+
+**Playwright**: ✅ zero erros · 125 protocolos · Load 13s
+
+---
+
+### 2026-06-13 — Migração de Schema Completa: Motor Universal v2 (22/22 fármacos)
+
+#### `database/antimicrobianos.js` — Schema `renalDose` migrado para objetos estruturados (22/22 ✅)
+
+Todos os 22 fármacos possuem agora `renalDose` no **novo schema objeto** `{ dose, via, intervalo, obs }`, compatível com o Motor Renal v2 para renderização de pills separadas na UI.
+
+**Schema novo (objeto):**
+```js
+fgMaior50: { dose: "500 mg", via: "VO", intervalo: "12/12h", obs: "Texto clínico..." }
+```
+
+**Migração por lotes (esta sessão):**
+| # | Fármaco | `requiresAdjustment` | Status |
+|---|---|---|---|
+| 7 | clindamicina | false | ✅ |
+| 8 | sulfametoxazol_trimetoprim | true | ✅ |
+| 9 | piperacilina_tazobactam | true | ✅ |
+| 10 | vancomicina | true | ✅ |
+| 11 | cefepime | true | ✅ |
+| 12 | meropenem | true | ✅ |
+| 13 | gentamicina | true | ✅ |
+| 14 | amicacina | true | ✅ |
+| 15 | levofloxacino | true | ✅ |
+| 16 | doxiciclina | false | ✅ |
+| 17 | cefazolina | true | ✅ |
+| 18 | oxacilina | false | ✅ |
+| 19 | cefalexina | true | ✅ |
+| 20 | cefuroxima | true | ✅ |
+| 21 | ceftazidima | true | ✅ |
+| 22 | cefotaxima | false | ✅ |
+
+**Migração prévia (sessões anteriores — 1–6):**
+azitromicina ✅ · ceftriaxona ✅ · amoxicilina ✅ · amoxicilina_clavulanato ✅ · metronidazol ✅ · ciprofloxacino ✅
+
+**Playwright pós-migração:** ✅ zero erros · 125 protocolos carregados · Load 13s
+
+---
+
+### 2026-06-13 — Camada Renal Completa + Módulo Reativo ClCr × renalDose
+
+#### `database/antimicrobianos.js` — Camada `renalDose` (22 fármacos, 100%)
+Todos os 22 antimicrobianos do banco possuem o campo `renalDose` inserido cirurgicamente após a linha `ref:` de cada `return {}`.
+
+**Schema por tipo:**
+- `requiresAdjustment: false` → 6 campos: `message` + `fgMaior50` + `fg30a50` + `fg10a30` + `fgMenor10` + `hemodialise`
+- `requiresAdjustment: true` → 5 campos: `fgMaior50` + `fg30a50` + `fg10a30` + `fgMenor10` + `hemodialise`
+
+| Grupo | Fármacos | `requiresAdjustment` |
+|---|---|---|
+| 1 | azitromicina, amoxicilina, amoxicilina_clavulanato | false / true / true |
+| 2 | ceftriaxona, metronidazol | false / false |
+| 3 | ciprofloxacino, clindamicina | true / false |
+| 4 | sulfametoxazol_trimetoprim, piperacilina_tazobactam, vancomicina, cefepime | true |
+| 5 | meropenem, gentamicina, amicacina, levofloxacino | true |
+| 6 | doxiciclina, cefazolina, oxacilina, cefalexina, cefuroxima, ceftazidima, cefotaxima | false / true / false / true / true / true / false |
+
+**Fontes exclusivas:** Sanford Guide · Lexicomp · Micromedex · UpToDate · Goodman & Gilman · IDSA · KDIGO · ASHP · Johns Hopkins ABX Guide
+
+#### `index.html` — Módulo Renal Dinâmico (JavaScript + CSS + HTML)
+
+**Funções adicionadas:**
+- `window.obterDosePorFiltrado(renalDoseObj, valorClCr, isHD)` — função pura de cruzamento ClCr × renalDose
+- `_renalGetDrugRenalDose(drugId)` — extrai `renalDose` do fármaco via `_source.calculate()`
+- `_renalRenderBlock(renalDoseObj, clcrVal, isHD)` — gera HTML do bloco `fd-renal-dynamic`
+- `window._renalInjectOrUpdate()` — atualiza/insere o bloco no modal sem re-renderizar o body
+- `window.hmToggleHemodialise(checked)` — toggle HD: desabilita input ClCr + força faixa `hemodialise`
+- Patch transparente em `window.openFarmacoDetail` via IIFE
+
+**Lógica de faixas:**
+
+| Condição | Faixa retornada | Estado visual |
+|---|---|---|
+| ClCr vazio + `requiresAdjustment: false` | `message` ou `fgMaior50` | 🟢 `is-ok` |
+| ClCr vazio + `requiresAdjustment: true` | Aviso de preenchimento | 🟡 `is-missing` |
+| ClCr > 50 | `fgMaior50` | 🔵 `is-ok` |
+| ClCr 30–50 | `fg30a50` | 🟠 `is-alert` |
+| ClCr 10–29 | `fg10a30` | 🟠 `is-alert` |
+| ClCr < 10 | `fgMenor10` | 🟠 `is-alert` |
+| HD ativo | `hemodialise` | 🟣 `is-hd` |
+
+**Toggle Hemodiálise (card do paciente):**
+- Switch CSS puro (`hm-hd-toggle`) com transição suave
+- Persiste em `window._renalState.isHD`
+- Desabilita input `#hm-clcr` (opacity 38%) quando ativado
+
+**Listener reativo:**
+- `#hm-clcr` → eventos `input` + `change` → atualiza bloco em tempo real sem flickering
+
+**CSS adicionado:**
+- `.hm-hd-toggle`, `.hm-hd-track`, `.hm-hd-thumb` — toggle switch
+- `.fd-renal-block` com 4 variantes: `.is-ok`, `.is-alert`, `.is-missing`, `.is-hd`
+- Light mode overrides completos para todos os estados
+- Playwright: ✅ zero erros · 125 protocolos carregados
+
 ### 2026-06-13 — JS Formatter Fix + WCAG Refactoring (Aba Calculadoras)
 
 **JS String Formatter:**
@@ -692,10 +963,15 @@ A partir daí, cada push para `main` dispara o pipeline automaticamente.
 
 ### Alta Prioridade
 - [ ] **PWA Manifest** (`manifest.json` + `service-worker.js`) — instalação offline total
+- [ ] **Expandir availableFormulations** — cobrir 100% dos fármacos em `DRUG_DB` com dados comerciais reais do mercado brasileiro
+- [ ] **Módulo Interações** — card "Em breve" → cruzamento real de fármacos por lista de meds ativa
+- [ ] **Histórico de pacientes** — localStorage com até 10 perfis salvos
 - [ ] **Módulo Pediatria** — DRUG_DB infantil com doses por kg para todas as especialidades
 - [ ] **Histórico de pacientes** — localStorage com até 10 perfis salvos
+- [ ] **Módulo Interações** — card "Em breve" → cruzamento real de fármacos por lista de meds ativa
 
 ### Média Prioridade
+- [ ] **Expandir camada renal** — `psicofarmacos.js` e demais databases com `renalDose`
 - [ ] **Scores adicionais** — APACHE II, Killip-Kimball, NIHSS, DAS28, PHQ-9, GAD-7
 - [ ] **Export PDF** — `window.print()` + CSS `@media print` para resultado do paciente
 - [ ] **Módulo Obstetrícia** — calculadoras de IG, DPP, partograma, Bishop

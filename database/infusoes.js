@@ -1,6 +1,6 @@
 /* ============================================================
-   MedCases Pro — Módulo: ENDOCRINOLOGIA
-   Expõe: window.ENDOCRINO_DRUGS_DB
+   MedCases Pro — Módulo: INFUSÕES CONTÍNUAS / DROGAS VASOATIVAS
+   Expõe: window.INFUSOES_DRUGS_DB
    Schema completo (4-Block UI):
    {
      id, name, class, category:{pt,es}, color, colorTxt, icon,
@@ -18,4 +18,4 @@
    }
 ============================================================ */
 
-window.ENDOCRINO_DRUGS_DB = [];
+window.INFUSOES_DRUGS_DB = [];

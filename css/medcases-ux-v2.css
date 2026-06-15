@@ -1,0 +1,572 @@
+/* ================================================================
+   MedCases UX v2 — Folha de estilos complementar
+   Diretriz 5: Separação rigorosa de temas (Modo Dia / Modo Noite)
+   Diretriz 3: UI de arredondamento por formulação comercial
+   Diretriz 6: Botão de cópia de prescrição
+
+   Carregada APÓS o bloco <style> inline do index.html para
+   sobrescrever com maior especificidade onde necessário.
+================================================================ */
+
+/* ============================================================
+   §1 — MODO ESCURO (default): garantias de contraste
+   Todas as pílulas/tags devem ter texto claro legível.
+============================================================ */
+
+/* § 1.1 — Drug-class text na lista de fármacos (home, dark) */
+body:not(.light-mode) .hm-drug-class {
+  color: rgba(148, 163, 184, 0.75); /* slate-400 com opacidade */
+}
+
+/* § 1.2 — Pill-label (contador de fármacos) dark */
+body:not(.light-mode) .hm-pill-lbl {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+/* § 1.3 — Pílulas de efeitos adversos / badges no modal (fd-modal) */
+body:not(.light-mode) .fd-tag,
+body:not(.light-mode) .fd-badge,
+body:not(.light-mode) .fd-adverse-tag,
+body:not(.light-mode) .fd-cat-tag,
+body:not(.light-mode) .safety-pill,
+body:not(.light-mode) .adverse-pill {
+  color: #FFFFFF !important;
+}
+
+/* § 1.4 — Texto das pílulas de dose das faixas renais no dark */
+body:not(.light-mode) .fd-renal-pill-val {
+  color: #E2E8F0;
+}
+body:not(.light-mode) .fd-renal-pill-lbl {
+  color: rgba(148, 163, 184, 0.65);
+}
+
+/* § 1.5 — Inline result: textos dark */
+body:not(.light-mode) .hm-inline-patient-bar {
+  color: rgba(148, 163, 184, 0.85);
+}
+
+/* § 1.6 — Abas do fd-modal: diferenciação visual por cor de borda */
+body:not(.light-mode) .fd-section {
+  border-top: 2px solid rgba(56, 189, 248, 0.10);
+}
+body:not(.light-mode) .fd-section[data-tab="doses"] {
+  border-left: 3px solid #38BDF8;
+}
+body:not(.light-mode) .fd-section[data-tab="adverse"] {
+  border-left: 3px solid #F87171;
+}
+body:not(.light-mode) .fd-section[data-tab="presentations"] {
+  border-left: 3px solid #A78BFA;
+}
+body:not(.light-mode) .fd-section[data-tab="monitoring"] {
+  border-left: 3px solid #34D399;
+}
+body:not(.light-mode) .fd-section[data-tab="pregnancy"] {
+  border-left: 3px solid #F472B6;
+}
+
+/* § 1.7 — Texto-fantasma: qualquer tag com fundo escuro deve ter
+   cor explícita BRANCA ou AMARELA para eliminar invisibilidade */
+body:not(.light-mode) [class*="pill"]:not(.hm-pill):not(.fd-renal-pill),
+body:not(.light-mode) [class*="badge"]:not(.hm-badge):not(.fd-renal-badge):not(.hm-renal-badge) {
+  color: #FFFFFF;
+}
+
+/* § 1.8 — Bottom info do card de fármacos (dark): era invisível */
+body:not(.light-mode) .hm-card--drugs .hm-card-subtitle {
+  color: rgba(148, 163, 184, 0.65);
+}
+body:not(.light-mode) .hm-version-footer {
+  color: rgba(148, 163, 184, 0.30);
+}
+
+/* § 1.9 — Separadores de categoria na lista */
+body:not(.light-mode) .hm-drug-sep {
+  color: rgba(56, 189, 248, 0.50);
+}
+
+/* ============================================================
+   §2 — MODO CLARO (LIGHT): correções críticas de contraste
+============================================================ */
+
+/* § 2.1 — Fundo geral cinza claro confirmado */
+body.light-mode {
+  background-color: #f4f6f8 !important;
+}
+body.light-mode #app {
+  background: #f4f6f8 !important;
+}
+
+/* § 2.2 — CARD INFERIOR DE FÁRMACOS: texto invisível corrigido
+   O .hm-drug-name e .hm-drug-class precisam de cor explícita no light */
+body.light-mode .hm-drug-item .hm-drug-name {
+  color: #0F172A !important;
+}
+body.light-mode .hm-drug-item .hm-drug-class {
+  color: #475569 !important;
+}
+body.light-mode .hm-drug-sep {
+  color: #0369A1 !important;
+  opacity: 0.75;
+}
+body.light-mode .hm-drug-dot {
+  background: #0369A1 !important;
+}
+body.light-mode .hm-drug-arrow {
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+body.light-mode .hm-drug-item:hover {
+  background: rgba(3, 105, 161, 0.06) !important;
+}
+body.light-mode .hm-drug-item:active {
+  background: rgba(3, 105, 161, 0.12) !important;
+}
+
+/* § 2.3 — Pill-label e pill-val no light */
+body.light-mode .hm-pill-val {
+  color: #0369A1 !important;
+}
+body.light-mode .hm-pill-lbl {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+
+/* § 2.4 — Pílulas de efeitos adversos / tags no modal LIGHT:
+   fundo claro + texto escuro, nunca escuro sobre escuro */
+body.light-mode .fd-tag,
+body.light-mode .fd-badge,
+body.light-mode .fd-adverse-tag,
+body.light-mode .fd-cat-tag,
+body.light-mode .safety-pill,
+body.light-mode .adverse-pill {
+  color: #1E293B !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+  border-color: rgba(0, 0, 0, 0.10) !important;
+}
+
+/* § 2.5 — fd-modal LIGHT: branco, texto legível */
+body.light-mode #fd-modal {
+  color: #1a1f26 !important;
+}
+body.light-mode #fd-modal .fd-section-text {
+  color: #334155 !important;
+}
+body.light-mode #fd-modal .fd-section-label {
+  color: #475569 !important;
+  background: rgba(0, 0, 0, 0.03) !important;
+}
+
+/* § 2.6 — Abas do fd-modal LIGHT: bordas coloridas diferenciadas */
+body.light-mode .fd-section[data-tab="doses"] {
+  border-left: 3px solid #0369A1 !important;
+}
+body.light-mode .fd-section[data-tab="adverse"] {
+  border-left: 3px solid #DC2626 !important;
+}
+body.light-mode .fd-section[data-tab="presentations"] {
+  border-left: 3px solid #7C3AED !important;
+}
+body.light-mode .fd-section[data-tab="monitoring"] {
+  border-left: 3px solid #15803D !important;
+}
+body.light-mode .fd-section[data-tab="pregnancy"] {
+  border-left: 3px solid #BE123C !important;
+}
+
+/* § 2.7 — Bloco renal LIGHT: confirmação de alto contraste */
+body.light-mode .fd-renal-header-icon {
+  color: #0369A1 !important;
+}
+body.light-mode .fd-renal-pill-val {
+  color: #0F172A !important;
+}
+
+/* § 2.8 — Card hm-patient LIGHT: textos legíveis */
+body.light-mode #hm-patient-card .hm-card-title {
+  color: #0F172A !important;
+}
+body.light-mode #hm-patient-card .hm-label {
+  color: #475569 !important;
+}
+body.light-mode #hm-patient-card .hm-label-unit {
+  color: #94A3B8 !important;
+}
+
+/* § 2.9 — hm-drug-count LIGHT */
+body.light-mode .hm-drug-count {
+  color: #475569 !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* § 2.10 — hm-version-footer LIGHT */
+body.light-mode .hm-version-footer {
+  color: rgba(0, 0, 0, 0.28) !important;
+}
+
+/* § 2.11 — Coming soon card LIGHT */
+body.light-mode .hm-coming-soon-desc {
+  color: rgba(0, 0, 0, 0.50) !important;
+}
+body.light-mode .hm-csf-item {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+
+/* § 2.12 — Inline result card LIGHT: força fundo branco */
+body.light-mode .hm-inline-result {
+  background: #F0F9FF !important;
+  border-color: rgba(3, 105, 161, 0.22) !important;
+}
+body.light-mode .hm-inline-patient-bar {
+  color: #475569 !important;
+}
+
+/* ============================================================
+   §3 — CORES DINÂMICAS DO CARD DO PACIENTE (LIGHT override)
+   As classes hm-profile-* já existem no dark.
+   Aqui garantimos visibilidade no LIGHT.
+============================================================ */
+body.light-mode #hm-patient-card.hm-profile-pedia {
+  background: linear-gradient(160deg, rgba(251, 191, 36, 0.12), #ffffff) !important;
+  border-color: rgba(251, 191, 36, 0.40) !important;
+  box-shadow: 0 2px 16px rgba(251, 191, 36, 0.12), 0 1px 4px rgba(0,0,0,0.07) !important;
+}
+body.light-mode #hm-patient-card.hm-profile-pedia .hm-card-title {
+  color: #92400E !important;
+}
+body.light-mode #hm-patient-card.hm-profile-female {
+  background: linear-gradient(160deg, rgba(244, 63, 94, 0.08), #ffffff) !important;
+  border-color: rgba(244, 63, 94, 0.35) !important;
+  box-shadow: 0 2px 16px rgba(244, 63, 94, 0.10), 0 1px 4px rgba(0,0,0,0.07) !important;
+}
+body.light-mode #hm-patient-card.hm-profile-female .hm-card-title {
+  color: #9D174D !important;
+}
+body.light-mode #hm-patient-card.hm-profile-male {
+  border-color: rgba(3, 105, 161, 0.30) !important;
+  background: linear-gradient(160deg, rgba(3, 105, 161, 0.06), #ffffff) !important;
+}
+body.light-mode #hm-patient-card.hm-profile-male .hm-card-title {
+  color: #0369A1 !important;
+}
+
+/* ============================================================
+   §4 — FORMULAÇÃO COMERCIAL (Diretriz 3)
+   Componentes do painel de snap para formulação.
+============================================================ */
+
+/* Container principal do resultado de arredondamento */
+.hm-snap-formulation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px 14px 4px;
+  animation: snapIn 0.22s ease;
+}
+@keyframes snapIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Badge principal: formulação ajustada */
+.hm-snap-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: rgba(52, 211, 153, 0.12);
+  border: 1.5px solid rgba(52, 211, 153, 0.30);
+  color: #34D399;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  width: fit-content;
+}
+.hm-snap-badge i {
+  font-size: 11px;
+  color: #34D399;
+}
+.hm-snap-badge .hm-snap-via {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: rgba(52, 211, 153, 0.20);
+  color: #34D399;
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* Subtexto informativo */
+.hm-snap-info {
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.45);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1.4;
+}
+.hm-snap-info i {
+  font-size: 9px;
+  color: rgba(52, 211, 153, 0.60);
+  flex-shrink: 0;
+}
+.hm-snap-info strong {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+/* Quando dose bruta = dose ajustada (sem arredondamento) */
+.hm-snap-exact .hm-snap-badge {
+  background: rgba(56, 189, 248, 0.10);
+  border-color: rgba(56, 189, 248, 0.25);
+  color: #38BDF8;
+}
+.hm-snap-exact .hm-snap-badge i { color: #38BDF8; }
+
+/* Light mode overrides do snap */
+body.light-mode .hm-snap-badge {
+  background: rgba(21, 128, 61, 0.09) !important;
+  border-color: rgba(21, 128, 61, 0.25) !important;
+  color: #15803D !important;
+}
+body.light-mode .hm-snap-badge i { color: #15803D !important; }
+body.light-mode .hm-snap-badge .hm-snap-via {
+  background: rgba(21, 128, 61, 0.12) !important;
+  color: #15803D !important;
+  border-color: rgba(21, 128, 61, 0.25) !important;
+}
+body.light-mode .hm-snap-info {
+  color: rgba(0, 0, 0, 0.50) !important;
+}
+body.light-mode .hm-snap-info i { color: rgba(21, 128, 61, 0.55) !important; }
+body.light-mode .hm-snap-info strong { color: rgba(0, 0, 0, 0.70) !important; }
+body.light-mode .hm-snap-exact .hm-snap-badge {
+  background: rgba(3, 105, 161, 0.08) !important;
+  border-color: rgba(3, 105, 161, 0.20) !important;
+  color: #0369A1 !important;
+}
+body.light-mode .hm-snap-exact .hm-snap-badge i { color: #0369A1 !important; }
+
+/* ============================================================
+   §5 — BOTÃO COPIAR PRESCRIÇÃO (Diretriz 6)
+============================================================ */
+
+/* Container do botão de cópia */
+.hm-copy-rx-wrap {
+  padding: 0 14px 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Botão principal de copiar */
+.hm-copy-rx-btn {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 11px;
+  border: 1.5px solid rgba(52, 211, 153, 0.30);
+  background: rgba(52, 211, 153, 0.09);
+  color: #34D399;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  letter-spacing: 0.1px;
+}
+.hm-copy-rx-btn:hover {
+  background: rgba(52, 211, 153, 0.14);
+  border-color: rgba(52, 211, 153, 0.45);
+}
+.hm-copy-rx-btn:active {
+  transform: scale(0.965);
+  background: rgba(52, 211, 153, 0.20);
+}
+.hm-copy-rx-btn i { font-size: 12px; }
+
+/* Estado "copiado!" */
+.hm-copy-rx-btn.is-copied {
+  background: rgba(52, 211, 153, 0.22) !important;
+  border-color: rgba(52, 211, 153, 0.55) !important;
+  color: #34D399 !important;
+}
+
+/* Light mode: botão copiar */
+body.light-mode .hm-copy-rx-btn {
+  background: rgba(21, 128, 61, 0.07) !important;
+  border-color: rgba(21, 128, 61, 0.25) !important;
+  color: #15803D !important;
+}
+body.light-mode .hm-copy-rx-btn:hover {
+  background: rgba(21, 128, 61, 0.12) !important;
+  border-color: rgba(21, 128, 61, 0.40) !important;
+}
+body.light-mode .hm-copy-rx-btn.is-copied {
+  background: rgba(21, 128, 61, 0.18) !important;
+  border-color: rgba(21, 128, 61, 0.55) !important;
+  color: #15803D !important;
+}
+
+/* ============================================================
+   §6 — REFINAMENTOS DE TAB/SEÇÃO NO fd-modal
+   Separação visual das abas por cor de borda lateral.
+============================================================ */
+
+/* Tab pill/button dentro do modal (se existir navegação por tabs) */
+body:not(.light-mode) .fd-tab-btn {
+  color: rgba(148, 163, 184, 0.75);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+body:not(.light-mode) .fd-tab-btn.active,
+body:not(.light-mode) .fd-tab-btn:hover {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.25);
+  color: #38BDF8;
+}
+body.light-mode .fd-tab-btn {
+  color: #475569;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+body.light-mode .fd-tab-btn.active,
+body.light-mode .fd-tab-btn:hover {
+  background: rgba(3, 105, 161, 0.10);
+  border-color: rgba(3, 105, 161, 0.25);
+  color: #0369A1;
+}
+
+/* ============================================================
+   §7 — BOTTOM NAV LIGHT: garante contraste máximo
+============================================================ */
+body.light-mode #bottom-nav {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.07) !important;
+}
+body.light-mode .nav-btn {
+  color: #64748B !important;
+}
+body.light-mode .nav-btn.active {
+  color: #0369A1 !important;
+}
+body.light-mode .nav-btn .nav-label {
+  color: inherit !important;
+}
+
+/* ============================================================
+   §8 — hm-inline-result: ajustes finais de contraste
+============================================================ */
+/* Fecha a bula sem paciente — texto legível */
+body:not(.light-mode) .hm-inline-no-patient {
+  color: rgba(148, 163, 184, 0.90);
+}
+body:not(.light-mode) .hm-inline-no-patient strong {
+  color: #38BDF8;
+}
+body.light-mode .hm-inline-no-patient {
+  color: #475569 !important;
+}
+body.light-mode .hm-inline-no-patient strong {
+  color: #0369A1 !important;
+}
+body.light-mode .hm-inline-close {
+  background: rgba(0, 0, 0, 0.06) !important;
+  border-color: rgba(0, 0, 0, 0.10) !important;
+  color: #475569 !important;
+}
+
+/* ============================================================
+   §9 — ANIMAÇÃO DO INLINE RESULT (suaviza entrada)
+============================================================ */
+#hm-drug-result {
+  overflow: hidden;
+}
+#hm-drug-result > .hm-inline-result {
+  animation: inlineSlideIn 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes inlineSlideIn {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)  scale(1); }
+}
+
+/* ============================================================
+   §10 — hm-card--drugs: fundo do card no LIGHT completo
+   Confirmação de que o card de fármacos fica branco no light.
+============================================================ */
+body.light-mode .hm-card {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+}
+body.light-mode .hm-card-title {
+  color: #0F172A !important;
+}
+body.light-mode .hm-card-subtitle {
+  color: #64748B !important;
+}
+
+/* ============================================================
+   §11.1 — PILL DE CLCR: transição de cor semafórica
+   A cor de borda é definida inline pelo JS (hmCalcCockcroft).
+   Esta regra garante transição suave.
+============================================================ */
+#hm-pill-clcr {
+  transition: border-color 0.35s ease, background 0.35s ease;
+}
+
+/* ============================================================
+   §11 — RENAL BADGE no inline result: contraste garantido
+============================================================ */
+body:not(.light-mode) .hm-renal-badge--ok {
+  background: rgba(34, 197, 94, 0.16);
+  color: #4ADE80;
+  border: 1px solid rgba(34, 197, 94, 0.30);
+}
+body:not(.light-mode) .hm-renal-badge--alert {
+  background: rgba(251, 191, 36, 0.16);
+  color: #FCD34D;
+  border: 1px solid rgba(251, 191, 36, 0.30);
+}
+body:not(.light-mode) .hm-renal-badge--hd {
+  background: rgba(248, 113, 113, 0.16);
+  color: #FCA5A5;
+  border: 1px solid rgba(248, 113, 113, 0.30);
+}
+body.light-mode .hm-renal-badge--ok {
+  background: rgba(21, 128, 61, 0.10) !important;
+  color: #15803D !important;
+  border: 1px solid rgba(21, 128, 61, 0.25) !important;
+}
+body.light-mode .hm-renal-badge--alert {
+  background: rgba(146, 64, 14, 0.10) !important;
+  color: #92400E !important;
+  border: 1px solid rgba(146, 64, 14, 0.22) !important;
+}
+body.light-mode .hm-renal-badge--hd {
+  background: rgba(185, 28, 28, 0.09) !important;
+  color: #B91C1C !important;
+  border: 1px solid rgba(185, 28, 28, 0.20) !important;
+}
+body.light-mode .hm-renal-dose {
+  color: #334155 !important;
+}
