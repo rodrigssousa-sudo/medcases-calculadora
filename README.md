@@ -703,6 +703,112 @@ PlaywrightConsoleCapture: ✅ 0 erros JavaScript
 
 ---
 
+### 2026-06-15 (rev 2) — Refatoração Cirúrgica: ClCr Dual-Mode + Accordion + Validação Geral
+
+#### Problema identificado
+O HTML do accordion de Urina 24h havia sido definido no CSS (§13) e na lógica JS (`hmToggleUrine24`, leituras `?.value`),
+mas os elementos DOM (`#hm-urine24`, `#hm-urine-creat`, `#hm-urine-body`) **nunca foram inseridos no patient card** —
+o `MultiEdit` anterior falhou silenciosamente no primeiro patch do bloco. O motor `hmCalcCockcroft` lia `undefined?.value → NaN`
+e caia corretamente no fallback CG, mas o médico nunca via os campos.
+
+#### Alterações desta revisão
+
+| Componente | Arquivo | Detalhe |
+|---|---|---|
+| **Accordion HTML** | `index.html` (patient card) | Inserido `#hm-urine-accordion` com header-button ARIA, `#hm-urine-body` colapsável, dois inputs (`#hm-urine24` Volume mL/24h; `#hm-urine-creat` Creatinina Urinária mg/dL), nota da fórmula |
+| **`hmCalcCockcroft()` — Modalidade A** | `index.html` inline | Cockcroft-Gault inalterado; agora adiciona listener em `hm-height` também |
+| **`hmCalcCockcroft()` — Modalidade B** | `index.html` inline | ClCr Medido + **correção BSA Mosteller**: V=Vol/1440 → ClCr_bruto=(Ur×V)/Cr → BSA=√(Peso×Altura/3600) → ClCr_corr=ClCr_bruto×(1.73/BSA); fallback sem altura omite correção BSA; badge pill = "Ur24·BSA" |
+| **`hmToggleUrine24()`** | `index.html` inline | Animação max-height via JS (sem CSS transitions conflitantes); fecha limpa campos e recalcula; badge "Opcional"→"Ativo"; chevron rotaciona 180° |
+| **CSS §13 — Accordion** | `css/medcases-ux-v2.css` | Redesenhado completo: `.hm-urine-header` botão acessível com `focus-visible`; `.hm-urine-badge` + variante `--active`; dark mode borda roxa `rgba(139,92,246,0.22)` → ativa `0.42`; light mode shadow |
+
+#### Fórmula Modalidade B (passo a passo)
+```
+Inputs: Vol_urina_mL, Cr_urinária mg/dL, Cr_sérica mg/dL, Peso kg, Altura cm
+
+Passo 1 — V (mL/min):
+  V = Vol_urina_mL / 1440
+
+Passo 2 — ClCr bruto (mL/min):
+  ClCr_bruto = (Cr_urinária × V) / Cr_sérica
+
+Passo 3 — BSA Mosteller (m²):
+  BSA = √[ (Peso_kg × Altura_cm) / 3600 ]
+
+Passo 4 — ClCr corrigido p/ 1.73 m² de superfície padrão:
+  ClCr_corrigido = ClCr_bruto × (1.73 / BSA)
+
+→ pill badge: "Ur24·BSA"
+→ Se altura ausente: usa ClCr_bruto sem correção BSA → badge "Ur24"
+→ Se painel fechado: usa Cockcroft-Gault clássico → badge "CG"
+```
+
+#### Confirmações dos Workstream D anteriores (intactos)
+- ✅ Pull-to-Refresh (`js/medcases-ux-v2.js §J`) — threshold 80px, indicador roxo, haptic, reload 400ms
+- ✅ i18n Fármacos — `data-i18n="hm_card_drugs_title/sub"` + chaves PT/ES
+- ✅ Nova grade Calculadora — `calc-hub-grid-v2` 5 fileiras, 9 gradientes, Fluidos full-width
+- ✅ Fundo roxo dark — `--bg-deep: #0F0920` + texto global branco/preto
+
+#### Validação
+```
+PlaywrightConsoleCapture: ✅ 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh
+```
+
+---
+
+### 2026-06-15 — Workstream D: 5 Requisitos de Refatoração
+
+#### Resumo das alterações
+
+| Req | Arquivo(s) | Implementação |
+|---|---|---|
+| **1 — Pull-to-Refresh** | `js/medcases-ux-v2.js` §J | Touch gesture `touchstart/touchmove/touchend` no `#scroll-content`; threshold 80px; indicador visual roxo; haptic feedback; `window.location.reload()` após 400ms |
+| **2 — i18n Fármacos** | `index.html` | `data-i18n="hm_card_drugs_title"` + `data-i18n="hm_card_drugs_sub"` no card; chaves `hm_card_drugs_title` e `hm_card_drugs_sub` adicionadas ao objeto i18n PT e ES |
+| **3 — Urina 24h** | `index.html` | Painel colapsável `#hm-urine-section` com inputs `#hm-urine24` (mL) e `#hm-urine-creat` (mg/dL); `hmCalcCockcroft()` integra ClCr Medido `(Ur×Vol)/(Ps×1440)` com prioridade sobre CG clássico; pill exibe "Ur24" vs "CG"; função `hmToggleUrine24()` |
+| **4 — Nova Calculadora** | `index.html` + `css/medcases-ux-v2.css §12` | Remoção do card "Adulto"; novo `calc-hub-grid-v2` 5 fileiras: Pediatria/Gestante, Infusão/Eletrólitos, Antimicrobianos/Fármacos, Hemodinâmica/Scores, Fluidos (full-width); 9 classes `chc-*` com gradientes exclusivos |
+| **5 — Purple + Contraste** | `index.html` + `css/medcases-ux-v2.css §0` | `--bg-deep: #0F0920` (roxo MedCases Pro, era azul `#091522`); regras globais: dark → `color: #FFFFFF`, light → `color: #000000`; exceções para cards coloridos e botões |
+
+#### Arquitetura Pull-to-Refresh
+```
+touchstart (scrollTop≤2) → captura _startY
+touchmove → calcula dy; mostra indicador roxo proporcional
+             label: "Puxe para atualizar" → "↺ Atualizando..." (dy≥80px)
+             haptic vibrate(30ms)
+touchend (triggered) → espera 400ms → window.location.reload()
+touchend (não atingiu) → colapsa indicador
+```
+
+#### Arquitetura ClCr Medido (Urina 24h)
+```
+Se #hm-urine24 E #hm-urine-creat preenchidos:
+  ClCr = (Cr_urinária × Vol_urina_mL) / (Cr_sérica × 1440)
+  pill → "Ur24"
+Senão:
+  ClCr = ((140 - Idade) × Peso) / (72 × Cr_sérica) × 0.85 se Fem.
+  pill → "CG"
+```
+
+#### Nova estrutura calc-hub-grid-v2
+| Fila | Col A | Col B | Cor A | Cor B |
+|---|---|---|---|---|
+| 1 | Pediatria | Gestante | Azul `#1E40AF` | Rosa `#9D174D` |
+| 2 | Infusão | Eletrólitos | Âmbar `#B45309` | Roxo `#5B21B6` |
+| 3 | Antimicrobianos | Fármacos | Marrom `#78350F` | Marinho `#1E3A5F` |
+| 4 | Hemodinâmica | Scores | Vermelho `#991B1B` | Cinza `#374151` |
+| 5 (full-width) | Fluidos | — | Verde `#065F46` | — |
+
+#### Validação
+```
+PlaywrightConsoleCapture: ✅ 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh
+```
+
+---
+
 ### 2026-06-14 — Motor Cockcroft-Gault Reativo (Input Creatinina → ClCr automático)
 
 #### Problema resolvido
@@ -959,6 +1065,779 @@ Todos os 22 antimicrobianos do banco possuem o campo `renalDose` inserido cirurg
 
 ---
 
+### 2026-06-15 — Módulo Cardio: Grupos 1–3B (12 fármacos cardiovasculares)
+
+#### Schema canônico `CARDIO_DRUGS_DB` — IIFE + `calculate(paciente, lang)`
+
+```javascript
+(function () {
+  const t = (lang, pt, es) => lang === 'pt' ? pt : es;
+  window.CARDIO_DRUGS_DB = {};
+  Object.assign(window.CARDIO_DRUGS_DB, { /* Grupo N */ });
+})();
+```
+
+Integrado em `ALL_DRUGS_DB` por spread direto (não `Object.fromEntries`):
+```javascript
+window.ALL_DRUGS_DB = {
+  ...(window.CARDIO_DRUGS_DB || {}),
+  // demais módulos
+};
+```
+
+#### Fármacos inseridos — `database/cardio.js`
+
+| # | Fármaco | Grupo | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|---|
+| 1 | Metoprolol | Betabloqueadores | `false` (hepático) | ~25% — dose pós-HD | Succinato (LP) vs Tartarato (IR) |
+| 2 | Bisoprolol | Betabloqueadores | `fg < 20` | Não removido | CIBIS-II — evidência em ICFEr |
+| 3 | Nebivolol | Betabloqueadores | `fg < 30` | Não removido | Vasodilatação mediada por NO — SENIORS |
+| 4 | Enalapril | IECAs | `fg ≤ 50` | ~35–50% — dose pós-HD | Pró-fármaco; enalaprilat EV disponível |
+| 5 | Lisinopril | IECAs | `fg < 30` | ~50% — dose pós-HD | **Forma ativa** (não pró-fármaco); único IECA FDA pedi ≥ 6 anos |
+| 6 | Ramipril | IECAs | `fg < 30` | **Não dialisável** — sem supl. | HOPE trial; pró-fármaco; hepatotoxicityRisk |
+| 7 | Losartana | BRAs | `fg < 30` (cautela) | Não dialisável | Ação uricosúrica; FDA pedi ≥ 6 anos |
+| 8 | Valsartana | BRAs | `fg < 30` (cautela) | Não dialisável | Maior dose da classe (320 mg); Val-HeFT + VALIANT |
+| 9 | Candesartana | BRAs | `fg < 30` (cautela) | Não dialisável | Maior evidência IC (CHARM Programme); pró-fármaco |
+| 10 | Irbesartana | BRAs | `fg < 30` (cautela) | Não dialisável | Nefroproteção DM2 + proteinúria — IDNT/IRMA-2 |
+| 11 | Telmisartana | BRAs | **`false`** (biliar ~98%) | **Sem ajuste em HD** | **Único BRA sem ajuste renal**; CI em colestase; ONTARGET |
+| 12 | Olmesartana | BRAs | `fg < 30` (cautela) | Não dialisável | Pró-fármaco; **enteropatia sprue-like** (FDA 2013); FDA pedi ≥ 6 anos |
+
+#### Schema `renalDose` V2 — campos obrigatórios
+
+```javascript
+renalDose: {
+  version: 2,
+  requiresAdjustment: Boolean,     // trigger de alerta na UI
+  message: String,                 // mensagem contextual
+  fgMaior50:  { vo, ev, pediatrica, obs },
+  fg30a50:    { vo, ev, pediatrica, obs },
+  fg10a30:    { vo, ev, pediatrica, obs },
+  fgMenor10:  { vo, ev, pediatrica, obs },
+  hemodialise:{ vo, ev, pediatrica, obs }
+}
+// Cada sub-campo: { dose, intervalo, doseMaxima, unidade } | null
+```
+
+#### Regras de conversão de schema externo → canônico
+
+| Campo recebido | Transformação |
+|---|---|
+| `t(lang, ...)` fora de `calculate()` | Mover para dentro do `calculate()` onde `t` existe |
+| `class: { pt, es }` | `class: t(lang, pt, es)` no `return {}` |
+| `dose.adult.initial/maintenance/max` | `adultoPadrao` + `adultoGrave` |
+| `renalAdjustment.required/message` | Expandir para `renalDose` completo (5 bandas + HD) |
+| `commonAdverseEffects: { pt:[], es:[] }` | Array de `t(lang, pt, es)` |
+| `ref: []` (array) | String única separada por `·` |
+| `interactions`, `contraindications` | Absorvidos em `alerts[]` e `risksByPatient[]` |
+
+#### Validações Playwright — todos PASS
+
+```
+✅ Grupo 1 (Betabloqueadores)  — 0 erros JS
+✅ Grupo 2 (IECAs)             — 0 erros JS
+✅ Grupo 3 (BRAs: losartana·valsartana·candesartana)    — 0 erros JS
+✅ Grupo 3B (BRAs: irbesartana·telmisartana·olmesartana) — 0 erros JS
+✅ Grupo 4  (BRAs finais + ARNI: eprosartana·azilsartana·sacubitrilValsartana) — 0 erros JS
+✅ Grupo 5  (Betabloqueadores adicionais: atenolol·propranolol·esmolol·nadolol) — 0 erros JS
+✅ Grupo 6  (Antiarrítmicos: sotalol) — 0 erros JS
+✅ Grupo 7  (Betabloqueador Vasodilatador + Bradicardizante: labetalol · ivabradina) — 0 erros JS
+✅ Grupo 8  (Glicosídeo Cardíaco: digoxina) — 0 erros JS
+✅ Grupo 9  (Diuréticos de Alça: furosemida · bumetanida) — 0 erros JS
+```
+
+---
+
+### 2026-06-15 — Módulo Cardio: Grupo 6 (Antiarrítmicos — sotalol)
+
+#### Grupo 6 — Antiarrítmicos (1 fármaco)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 20 | Sotalol | **`fg < 40`** (24/24h); **CI em fg < 10** | Removido por HD — uso contraindicado em DRC grave | `qtRisk: true`; `torsadesRisk: true`; `bronchospasmRisk: true`; Classe III + betabloqueador não seletivo |
+
+#### Diferenciais Clínicos — Sotalol
+
+| Aspecto | Detalhe |
+|---|---|
+| **Mecanismo duplo** | Bloqueia canais K⁺ (prolongamento QT, Classe III) + betabloqueio não seletivo (β1/β2) |
+| **Threshold renal** | `fg < 40` → 80 mg 24/24h; `fg < 10` → CONTRAINDICADO |
+| **Alertas dinâmicos** | QTc > 450 ms, K⁺ < 4,0 mEq/L, ClCr < 40 e ClCr < 10 geram alertas automáticos no `calculate()` |
+| **CredibleMeds** | Risco "Known Risk" de Torsades de Pointes — categoria de maior risco |
+| **Interações críticas** | Amiodarona, dofetilida, quinidina, macrolídeos, fluoroquinolonas, antipsicóticos, metadona |
+| **Pré-requisitos** | ECG (QTc < 450 ms) + K⁺ ≥ 4,0 mEq/L + Mg²⁺ ≥ 2,0 mg/dL antes de iniciar |
+| **flags extras** | `torsadesRisk: true`, `bronchospasmRisk: true` |
+
+#### Grupo 7 — Betabloqueador Vasodilatador + Bradicardizante (2 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Diferencial chave |
+|---|---|---|---|
+| 21 | Labetalol | `false` (hepático) | Duplo mecanismo α+β; `emergencyDrug: true`; preferido em AVC, dissecção de aorta e gestação; `bronchospasmRisk: true`; `hepatotoxicityRisk: true` |
+| 22 | Ivabradina | `false` (CYP3A4 hepático) | Único bradicardizante sem efeito inotrópico negativo; `atrialFibrillationRisk: true`; CONTRAINDICADA em FA; SHIFT Trial |
+
+#### Grupo 8 — Glicosídeo Cardíaco (1 fármaco)
+
+| # | Fármaco | `requiresAdjustment` | Diferencial chave |
+|---|---|---|---|
+| 23 | Digoxina | **`fg < 60`** (ajuste progressivo) | `digoxinToxicityRisk: true`; `electrolyteDependent: true`; janela estreita; alvo sérico 0,5–0,9 ng/mL; antídoto Fab; CI em WPW + FA |
+
+#### Grupo 9 — Diuréticos de Alça (2 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Diferencial chave |
+|---|---|---|---|
+| 24 | Furosemida | **`fg < 30`** (doses escalonadas) | `ototoxicityRisk: true` (IV rápida); referência diurética; ≤ 4 mg/min IV; resistência em DRC grave |
+| 25 | Bumetanida | **`fg < 30`** (doses maiores) | 1 mg ≈ 40 mg furosemida; maior biodisponibilidade oral (~80%); útil em resistência à furosemida |
+
+#### Flags especiais introduzidos nesta sessão
+
+| Flag | Fármaco(s) | Significado |
+|---|---|---|
+| `emergencyDrug: true` | labetalol | Uso em emergências hipertensivas, AVC, dissecção |
+| `atrialFibrillationRisk: true` | ivabradina | Risco de surgimento de FA — monitorar ritmo |
+| `digoxinToxicityRisk: true` | digoxina | Janela terapêutica estreita — nível sérico obrigatório |
+| `electrolyteDependent: true` | digoxina | K⁺, Mg²⁺ e Ca²⁺ determinam toxicidade |
+| `electrolyteRisk: true` | furosemida, bumetanida | Hipocalemia, hipomagnesemia, hiponatremia |
+| `hypokalemiaRisk: true` | furosemida, bumetanida | Risco primário de depleção de K⁺ |
+| `hyponatremiaRisk: true` | furosemida, bumetanida | Risco de hiponatremia dilucional |
+| `ototoxicityRisk: true` | furosemida, bumetanida | Ototoxicidade — especialmente IV rápida/alta dose |
+
+#### Grupo 9B — Diurético de Alça Alternativo (1 fármaco)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 26 | Torsemida | **`fg < 30`** (dose escalonada) | Parcialmente removida | Biodisponibilidade oral ~80% (vs ~50% furosemida); t½ 3–4h; 20 mg ≈ 40 mg furosemida; TRANSFORM-HF |
+
+##### Diferenciais Clínicos — Torsemida
+
+| Aspecto | Detalhe |
+|---|---|
+| **Equivalência** | 20 mg VO ≈ 40 mg furosemida VO ≈ 1 mg bumetanida VO |
+| **Biodisponibilidade** | ~80% oral (mais consistente que furosemida, menos variável na ICC) |
+| **Indicação principal** | Manejo crônico de congestão; alternativa quando há resposta inadequada à furosemida |
+| **Flags** | `electrolyteRisk: true` · `hypokalemiaRisk: true` · `hyponatremiaRisk: true` · `ototoxicityRisk: true` |
+| **Ref** | TRANSFORM-HF · ESC HF Guidelines · AHA/ACC/HFSA HF Guidelines |
+
+#### Grupo 10 — Diuréticos Poupadores de K⁺ (3 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 27 | Espironolactona | **`fg < 45`** (cautela); **CI fg < 30** (`vo: null`) | Não dialisável | MRA; `hyperkalemiaRisk: true`; `endocrineEffects: true`; RALES Trial; pilar da ICFEr |
+| 28 | Eplerenona | **`fg < 50`** (cautela); **CI fg < 30** (`vo: null`) | Não dialisável | MRA seletivo; sem ginecomastia; CYP3A4 — CI com cetoconazol/itraconazol; EPHESUS + EMPHASIS-HF |
+| 29 | Amilorida | **`fg < 50`** (cautela); **CI fg < 30** (`vo: null`) | Não dialisável | Bloqueador ENaC (não MRA); sem efeitos endócrinos; `hyperkalemiaRisk: true` |
+
+##### Diferenciais Clínicos — Poupadores de K⁺
+
+| Aspecto | Espironolactona | Eplerenona | Amilorida |
+|---|---|---|---|
+| **Mecanismo** | Bloqueia receptor aldosterona | Bloqueia receptor aldosterona (seletivo) | Bloqueia canal ENaC |
+| **Ginecomastia** | ✅ Sim (efeito androgênico) | ❌ Não | ❌ Não |
+| **Interações CYP** | Não relevante | CYP3A4 — CI cetoconazol | Não relevante |
+| **Indicação cardio** | ICFEr (RALES) | ICFEr + pós-IAM (EPHESUS/EMPHASIS) | Adjuvante anti-hipertensivo |
+| **Ci renal grave** | `vo: null` em fg < 30 | `vo: null` em fg < 30 | `vo: null` em fg < 30 |
+| **Flags** | `hyperkalemiaRisk` · `endocrineEffects: true` | `hyperkalemiaRisk` · `endocrineEffects: false` | `hyperkalemiaRisk` · `endocrineEffects: false` |
+
+#### Grupo 11 — Diuréticos Tiazídicos (2 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 30 | Hidroclorotiazida | **`fg < 30`** (perde eficácia — `vo: null`) | Não dialisável | NCC blocker; mais prescrito mundialmente; `hyponatremia` + `hypokalemia` + `hyperuricemia` + `diabetesRisk` |
+| 31 | Clortalidona | **`fg < 30`** (perde eficácia — `vo: null`) | Não dialisável | t½ 40–60h; `longHalfLife: true`; mais potente que HCTZ; ALLHAT + SHEP; maior risco de hiponatremia que HCTZ |
+
+##### Diferenciais Clínicos — Tiazídicos
+
+| Aspecto | Hidroclorotiazida | Clortalidona |
+|---|---|---|
+| **Meia-vida** | 6–15h | **40–60h** (`longHalfLife: true`) |
+| **Duração ação** | 6–12h | 48–72h |
+| **Potência anti-HP** | Referência | **Superior** |
+| **Risco hiponatremia** | Moderado | **Maior** |
+| **Risco hipocalemia** | Moderado | **Maior** |
+| **Evidência cardio** | SHEP (parcial) | **ALLHAT + SHEP** |
+| **Eficácia em DRC** | Perde em fg < 30 → loop diurético | Perde em fg < 30 → loop diurético |
+| **Flags extras** | `hyperuricemiaRisk` · `diabetesRisk` | `hyperuricemiaRisk` · `diabetesRisk` · `longHalfLife` |
+
+#### Regra de inserção CONTRAINDICADO vs perde eficácia
+
+| Classe | FG < 30 — comportamento canônico |
+|---|---|
+| **Poupadores de K⁺** (espironolactona, eplerenona, amilorida) | `vo: null` com mensagem "CONTRAINDICADO — risco de hipercalemia grave" |
+| **Tiazídicos** (HCTZ, clortalidona) | `vo: null` com mensagem "Perde eficácia — considerar diurético de alça" |
+| **Diuréticos de alça** (furosemida, bumetanida, torsemida) | Mantêm `vo` com dose aumentada — são justamente a alternativa |
+
+#### Grupo 11B — Diuréticos Tiazídico-like Especiais (2 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 32 | Indapamida | **`fg < 30`** (perde eficácia — `vo: null`) | Não dialisável | Vasodilatação arterial direta; menor impacto metabólico; HYVET (idosos) + ADVANCE (diabéticos) |
+| 33 | Metolazona | **`fg < 30`** (mantém eficácia — diferencial!) | Uso hospitalar em contexto especializado | Bloqueio sequencial do néfron; IC avançada; `hospitalizationLevelDrug: true`; `qtRisk: true` |
+
+##### Diferenciais Clínicos — Indapamida vs Metolazona
+
+| Aspecto | Indapamida | Metolazona |
+|---|---|---|
+| **Indicação principal** | HAS (especialmente idosos/diabéticos) | IC avançada com resistência diurética |
+| **Eficácia em DRC** | Perde em fg < 30 → loop diurético | **MANTÉM** mesmo em fg < 30 (diferencial) |
+| **Impacto metabólico** | Menor que HCTZ/clortalidona | Elevado |
+| **Uso hospitalar** | Ambulatorial | Hospitalar preferencial |
+| **Risco QT** | ❌ Não | ✅ Sim (distúrbio eletrolítico) |
+| **Evidência** | HYVET · ADVANCE | ESC/AHA HF Guidelines |
+| **Associação** | IECA / BRA / BCC | Diurético de alça (30–60 min antes) |
+
+#### Grupo 11C — Diuréticos Especiais (2 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 34 | Acetazolamida | **`fg < 50`** (`fg < 30` → evitar) | CONTRAINDICADA | Inibidor anidrase carbônica; ADVOR Trial; bicarbonatúria; `metabolicAcidosisRisk: true`; `nephrolithiasisRisk: true` |
+| 35 | Manitol | **`fg < 50`** (`fg < 10` / anúria → CI) | CONTRAINDICADO | Diurético osmótico; HIC/edema cerebral; `infusionDrug: true`; `volumeOverloadRisk: true`; CI em ICC descompensada |
+
+##### Diferenciais Clínicos — Acetazolamida vs Manitol
+
+| Aspecto | Acetazolamida | Manitol |
+|---|---|---|
+| **Mecanismo** | Inibe anidrase carbônica (túbulo proximal) | Osmótico (sem metabolização) |
+| **Via** | VO e IV | IV exclusivo |
+| **Indicação cardio** | IC aguda + alcalose metabólica (ADVOR) | Contraindicado em ICC descompensada ativa |
+| **Indicação neuro** | Hipertensão intracraniana (adjuvante) | **HIC, edema cerebral** (indicação primária) |
+| **Risco principal** | Acidose metabólica | Edema pulmonar por expansão de volume |
+| **Contraindicação** | Acidose metabólica, DRC grave, cirrose | ICC descompensada, anúria, edema pulmonar |
+| **Ref. principal** | ADVOR Trial (NEJM 2022) | Neurocritical Care Guidelines |
+
+#### Grupo 12 — Bloqueadores de Canal de Cálcio Diidropiridínicos (2 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 36 | Amlodipina | **`false`** (hepático / CYP3A4) | Não dialisável — sem ajuste | t½ 30–50h; `peripheralEdemaRisk: true`; 1ª linha HAS global; ASCOT + CAMELOT |
+| 37 | Nifedipina | **`false`** (hepático / CYP3A4) | Não dialisável — sem ajuste | `reflexTachycardiaRisk: true`; `pregnancyPreferred: true`; Formulação IR reservada a urgências; ACOG |
+
+##### Diferenciais Clínicos — Amlodipina vs Nifedipina
+
+| Aspecto | Amlodipina | Nifedipina |
+|---|---|---|
+| **Meia-vida** | **30–50h** (dose única) | 2–5h (IR) · 7–12h (LP) |
+| **Formulações** | Comprimido único | Cápsula IR 10 mg + LP 30/60 mg |
+| **Taquicardia reflexa** | Mínima | **Significativa** (IR > LP) |
+| **Gestação** | Uso possível | **Anti-HP oral de escolha** (ACOG) |
+| **Edema periférico** | Frequente | Frequente |
+| **Uso em urgência** | Sem formulação IV | IR 10 mg VO |
+| **Interação sinvastatina** | Limitar a 20 mg | Limitar a 20 mg |
+| **Flags extras** | `peripheralEdemaRisk` | `reflexTachycardiaRisk` · `pregnancyPreferred` |
+
+#### Alertas dinâmicos implementados — Grupos 11B, 11C, 12
+
+| Fármaco | Parâmetro | Condição → Alerta |
+|---|---|---|
+| indapamida | `sodio` | < 130 → CONTRAINDICADA; < 136 → Hiponatremia leve |
+| indapamida | `potassio` | < 3.0 → Hipocalemia grave; < 3.5 → Hipocalemia |
+| indapamida | `idade` | ≥ 80 → monitorar Na⁺/quedas |
+| metolazona | `sodio` | < 130 → Suspender; < 136 → Avaliar |
+| metolazona | `potassio` | < 3.0 → Suspender urgente; < 3.5 → Avaliar |
+| metolazona | `idade` | ≥ 75 → Monitorização intensiva |
+| acetazolamida | `sodio` | < 130 → CONTRAINDICADA |
+| acetazolamida | `potassio` | < 3.0 → CONTRAINDICADA |
+| acetazolamida | `clcr` | < 30 → Evitar |
+| manitol | `sodio` | > 155 → Risco de hipernatremia |
+| manitol | `clcr` | < 30 → Supervisão especializada |
+| manitol | `peso` | Calculado → doseMin/doseMax exibidos dinamicamente |
+| nifedipina | `gestante` | true → Alerta pré-fixado urgência hipertensiva ACOG |
+| nifedipina | `fc` | > 100 → Taquicardia — avaliar formulação LP |
+| amlodipina | `idade` | ≥ 75 → Iniciar com 2,5 mg |
+
+#### Grupo 12B — BCC Diidropiridínicos 2ª/3ª Geração (3 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 38 | Felodipina | **`false`** (hepático / CYP3A4) | Não dialisável | LP exclusivo; meia-vida 11–16h; `reflexTachycardiaRisk: true`; grapefruit CI |
+| 39 | Lercanidipina | **`false`** (hepático / CYP3A4) | Não dialisável | 3ª geração; `lowEdemaComparedToAmlodipine: true`; CI insuficiência hepática grave; cetoconazol/itraconazol CI absoluta; tomar ANTES das refeições |
+| 40 | Manidipina | **`false`** (hepático / CYP3A4) | Não dialisável | 3ª geração; `renalProtectionPotential: true`; HAS + DM + DRC; menor edema; `reflexTachycardiaRisk: false` |
+
+##### Comparativo BCC DHP — Amlodipina vs Felodipina vs Lercanidipina vs Manidipina
+
+| Aspecto | Amlodipina | Felodipina | Lercanidipina | Manidipina |
+|---|---|---|---|---|
+| **Geração** | 2ª | 2ª | 3ª | 3ª |
+| **t½** | **30–50h** | 11–16h | 8–10h | 7–12h |
+| **Edema periférico** | Frequente | Frequente | **Menor** | **Menor** |
+| **Taquicardia reflexa** | Mínima | Sim | Mínima | Mínima |
+| **Grapefruit** | Sim | **CI** | **CI** | **CI** |
+| **Gestação** | Possível | Evitar | Evitar | Evitar |
+| **Hepatotoxicidade CI** | Não | Sim | **Grave CI absoluta** | Sim |
+| **Indicação especial** | 1ª linha global | HAS + angina | HAS idosos/DM/DRC | HAS + DM + DRC + microalbuminúria |
+| **Instrução de tomada** | Qualquer hora | Qualquer hora | **15 min ANTES refeição** | Qualquer hora |
+
+#### Grupo 13 — BCC Não-Diidropiridínicos (2 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 41 | Verapamil | **`false`** (hepático) | Não dialisável | `bradycardiaRisk: true`; `avBlockRisk: true`; `heartFailureRisk: true`; `digoxinInteractionRisk: true`; constipação mais frequente; CI IC-FEr |
+| 42 | Diltiazem | **`false`** (hepático) | Não dialisável | `bradycardiaRisk: true`; `avBlockRisk: true`; `heartFailureRisk: true`; `ivUseHighRisk: true`; dose IV calculada por peso (0,25 mg/kg bolus); menor inotrópico negativo que verapamil |
+
+##### Diferenciais Clínicos — Verapamil vs Diltiazem
+
+| Aspecto | Verapamil | Diltiazem |
+|---|---|---|
+| **Efeito inotrópico negativo** | **Mais intenso** | Moderado |
+| **Constipação** | **Frequente** | Infrequente |
+| **Dose IV** | 5–10 mg bolus 2–3 min | 0,25 mg/kg bolus 2 min (por peso) |
+| **Infusão IV** | — | 5–15 mg/h (controle FA) |
+| **Indicação extra** | HCM obstrutiva | Angina vasoespástica + coronariana |
+| **CI absoluta** | IC-FEr + betabloqueador IV | IC-FEr + betabloqueador IV |
+| **Digoxina** | ↑ níveis ~50–75% (reduzir dose) | ↑ níveis (monitorar) |
+| **Formulações** | IR 40/80/120 mg · LP 180/240 mg · IV | IR 30/60 mg · LP 90–360 mg · IV |
+| **`infusionDrug`** | ✅ | ✅ |
+| **`ivUseHighRisk`** | ✅ | ✅ |
+
+##### Alertas dinâmicos — Grupos 12B e 13
+
+| Fármaco | Parâmetro | Condição → Alerta |
+|---|---|---|
+| felodipina | `idade` | ≥ 75 → Iniciar 2,5 mg/dia |
+| lercanidipina | `idade` | ≥ 75 → Excelente opção — menor edema |
+| manidipina | `idade` | ≥ 75 → Bom perfil hemodinâmico |
+| manidipina | `clcr` | < 45 → Cautela DRC moderada/grave |
+| verapamil | `feve` | < 40% → CONTRAINDICADO — IC-FEr |
+| verapamil | `fc` | < 55 → Bradicardia — avaliar CI |
+| verapamil | `idade` | ≥ 75 → Doses menores obrigatórias |
+| diltiazem | `feve` | < 40% → CONTRAINDICADO — IC-FEr |
+| diltiazem | `fc` | < 55 → Bradicardia — avaliar CI |
+| diltiazem | `peso` | Calculado → dosesBolus (0,25 e 0,35 mg/kg) exibidas dinamicamente |
+| diltiazem | `idade` | ≥ 75 → Maior risco BAV, hipotensão, quedas |
+
+#### Validação Playwright — Grupos 9B–13 (acumulado)
+
+```
+✅ PlaywrightConsoleCapture — 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh
+Load time: 19.11s
+Total drogas em cardio.js: 42 (Grupos 1–13)
+```
+
+---
+
+#### Grupo 14 — Antiarrítmicos (4 fármacos)
+
+| # | Fármaco | Classe | Uso IV | `safetyFlags` críticos | Diferencial chave |
+|---|---|---|---|---|---|
+| 43 | Adenosina | Bloqueador transitório nó AV (ultracurta) | ✅ bolus exclusivo | `emergencyDrug`, `bronchospasmRisk`, `preExcitationRisk`, `ivUseHighRisk`, `hospitalizationRequired` | t½ <10 s; dose 6→12 mg; 3 mg se dipiridamol/carbamazepina/acesso central; CI FA+pré-excitação |
+| 44 | Amiodarona | Classe III + I + II + IV | ✅ infusão + bolus PCR | `torsadesRisk`, `pulmonaryToxicityRisk`, `hepaticToxicityRisk`, `thyroidToxicityRisk`, `longHalfLife`, `highInteractionRisk` | t½ 40–60 dias; PCR: 300 mg IV bolus; varfarina INR dobra; digoxina ↑ 50%; Black Box: pulmão + fígado |
+| 45 | Dronedarona | Classe III — análogo não iodado amiodarona | ❌ | `heartFailureRisk`, `torsadesRisk`, `hepaticToxicityRisk`, `highInteractionRisk` | t½ 13–19 h; 400 mg 12/12h com alimentos; CI absoluta FA permanente (PALLAS); CI IC descompensada/NYHA IV; CYP3A4 múltiplas CI |
+| 46 | Dofetilida | Classe III puro — bloqueador IKr | ❌ | `torsadesRisk`, `electrolyteDependent`, `hospitalizationRequired`, `renalHighRisk`, `highInteractionRisk` | t½ ~10 h; dose por ClCr (500/250/125 mcg); CI ClCr<20; CI HCTZ, verapamil, trimetoprim, cimetidina, cetoconazol; telemetria ≥3 dias obrigatória |
+
+##### Ajuste Renal — Dofetilida (único com `requiresAdjustment: true` no Grupo 14)
+
+| ClCr (mL/min) | Dose VO 12/12h | Observação |
+|---|---|---|
+| >60 | 500 mcg | Dose plena |
+| 40–60 | 250 mcg | Redução 50% |
+| 20–39 | 125 mcg | Dose mínima |
+| <20 | **CONTRAINDICADO** | Risco de acúmulo e Torsades fatal |
+| Hemodiálise | **CONTRAINDICADO** | ClCr efetivo <20 mL/min |
+
+##### Diferenciais Clínicos — Antiarrítmicos Grupo 14
+
+| Aspecto | Adenosina | Amiodarona | Dronedarona | Dofetilida |
+|---|---|---|---|---|
+| **Meia-vida** | <10 segundos | **40–60 dias** | 13–19 h | ~10 h |
+| **Via** | IV bolus exclusivo | IV + VO | VO exclusivo | VO exclusivo |
+| **Indicação FA** | Diagnóstico/TSVP | FA + arritmias V | FA não permanente | FA + flutter |
+| **IC-FEr** | Possível monitorado | Sim (cautela) | **CI absoluta** | Possível (DIAMOND) |
+| **FA permanente** | Não indicado | Possível | **MORTALIDADE ↑ (PALLAS)** | Não indicado |
+| **Toxicidade órgão** | Broncoespasmo | Pulmão+Fígado+Tireoide | Fígado (rara) | **Renal (ClCr-dependente)** |
+| **Iodo** | Não | **Sim** | **Não** | Não |
+| **Interação warfarina** | Não | **↑↑ INR (CYP2C9)** | Monitorar | Não |
+| **Interação digoxina** | Leve | **↑ 50% (reduzir dose)** | ↑ (reduzir dose) | Não relevante |
+| **Black Box FDA** | Não | **Sim (pulmão+fígado)** | **Sim (FA permanente+IC)** | **Sim (Torsades)** |
+| **Hospitalização** | ✅ emergência | ✅ início IV | ❌ ambulatorial | ✅ início obrigatório |
+| **Referência trial** | AHA ACLS | ESC VA/AF | ATHENA/PALLAS | DIAMOND |
+
+##### Alertas dinâmicos — Grupo 14
+
+| Fármaco | Parâmetro | Condição → Alerta |
+|---|---|---|
+| adenosina | `preExcitacao` | true → CONTRAINDICADO — FA/flutter com pré-excitação (risco FV) |
+| adenosina | `qrsLargo + ritmoIrregular` | true → CONTRAINDICADO — possível FA+pré-excitação |
+| adenosina | `asmaDpoc` | true → CONTRAINDICADO relativo — broncoespasmo grave |
+| adenosina | `usoDipiridamol/usoCarbamazepina` | true → dose inicial 3 mg (reduzida) |
+| adenosina | `acessoCentral` | true → dose inicial 3 mg (acesso central) |
+| adenosina | `paSistolica` | <90 → preferir cardioversão elétrica |
+| amiodarona | `qtc` | >500 → CONTRAINDICADO/avaliar suspensão; >470 → warning |
+| amiodarona | `potassio` | <3.5 → corrigir antes; <4.0 → alerta |
+| amiodarona | `magnesio` | <1.7 → repor antes de iniciar |
+| amiodarona | `fc` | <50 → CONTRAINDICADO; <60 → bradicardia |
+| amiodarona | `indicacao` | 'PCR' → 300 mg IV/IO bolus + 150 mg adicional |
+| amiodarona | `usoVarfarina` | true → reduzir warfarina 30–50%, INR 2×/semana |
+| amiodarona | `usoDigoxina` | true → reduzir digoxina ~50%, monitorar nível |
+| amiodarona | `tsh` | <0.1 → hipertireoidismo; >10 → hipotireoidismo |
+| amiodarona | `doencaPulmonar` | true → monitorar toxicidade pulmonar |
+| dronedarona | `faPermanente` | true → CONTRAINDICADO ABSOLUTO (PALLAS) |
+| dronedarona | `icDescompensadaRecente/classeNYHA≥4` | true → CONTRAINDICADO (Black Box) |
+| dronedarona | `qtc` | ≥500 → CONTRAINDICADO; ≥470 → warning |
+| dronedarona | `inibidoresCYP3A4` | true → CONTRAINDICADO (cetoconazol, claritromicina, ritonavir) |
+| dronedarona | `medicamentosQT` | true → CONTRAINDICADO |
+| dronedarona | `usoDigoxina` | true → reduzir dose e monitorar |
+| dofetilida | `clcr` | <20 → CONTRAINDICADO; 20–39 → 125 mcg; 40–60 → 250 mcg; >60 → 500 mcg |
+| dofetilida | `qtc` | >440 → CONTRAINDICADO; >500 → CONTRAINDICADO absoluto |
+| dofetilida | `potassio` | <3.5 → NÃO INICIAR; <4.0 → manter alvo >4.0 |
+| dofetilida | `magnesio` | <1.7 → NÃO INICIAR |
+| dofetilida | `usoVerapamil` | true → CONTRAINDICADO |
+| dofetilida | `usoHidroclorotiazida` | true → CONTRAINDICADO |
+| dofetilida | `usoTrimetoprim` | true → CONTRAINDICADO |
+| dofetilida | `usoCimetidina` | true → CONTRAINDICADO |
+| dofetilida | `usoCetoconazol` | true → CONTRAINDICADO |
+| dofetilida | `sexo/idade` | F ou ≥70 → maior risco Torsades |
+
+#### Validação Playwright — Grupos 1–14 (acumulado)
+
+```
+✅ PlaywrightConsoleCapture — 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh
+Load time: 30.25s
+Total drogas em cardio.js: 46 (Grupos 1–14)
+```
+
+---
+
+#### Grupo 15 — Antiarrítmicos Adicionais (3 fármacos)
+
+| # | Fármaco | Classe | Via | `safetyFlags` críticos | Diferencial chave |
+|---|---|---|---|---|---|
+| 47 | **Ibutilida** | III IV (IKr + Na⁺ lento) | IV bolus exclusivo | `torsadesRisk`, `qtRisk`, `electrolyteDependent`, `hospitalizationRequired`, `ivUseHighRisk` | t½ ~6 h; ≥60 kg=1 mg, <60 kg=0,01 mg/kg IV 10 min; repetir 1×; CI QTc >440, Torsades prévia, Classe IA/III concomitante; ECG ≥4 h pós-dose; alta taxa conversão flutter (~60–70%) |
+| 48 | **Flecainida** | IC (bloqueador Na⁺ potente) | VO | `ventricularProarrhythmiaRisk`, `structuralHeartDiseaseContraindication`, `qrsWideningRisk`, `avBlockRisk`, `highInteractionRisk` | t½ 12–27 h; 50–150 mg 12/12h; CI absoluta: IAM, coronariana, IC-FEr, cardiopatia estrutural (CAST); alargar QRS >25% = toxicidade; pill-in-the-pocket supervisionada; risco flutter 1:1 sem bloqueador AV |
+| 49 | **Procainamida** | IA (Na⁺ + K⁺) | IV carga + infusão | `torsadesRisk`, `qtRisk`, `qrsWideningRisk`, `hypotensionRisk`, `emergencyDrug`, `infusionDrug`, `preExcitationRisk`, `autoimmunityRisk` | t½ 3–5 h (NAPA 6–10 h); carga 15–18 mg/kg a 20–50 mg/min; infusão 1–4 mg/min; fármaco de **escolha em FA/flutter com WPW**; QRS alarga PR e QT; suspender se QRS >50% ou QTc >500; lúpus induzido (uso crônico) |
+
+##### Ajuste Renal — Flecainida e Procainamida
+
+| Fármaco | ClCr >50 | ClCr 30–50 | ClCr 10–30 | ClCr <10 / HD |
+|---|---|---|---|---|
+| Flecainida | 50–150 mg 12/12h | 50–100 mg 12/12h | 50 mg/dia (cautela) | Evitar |
+| Procainamida | 15–18 mg/kg carga → 1–4 mg/min | 12–15 mg/kg → 1–2 mg/min | 10–12 mg/kg → 0,5–1 mg/min | Dados muito limitados |
+| Ibutilida | Sem ajuste formal | Cautela (pró-arritmia) | Cautela aumentada | Evitar se possível |
+
+##### Diferenciais Clínicos — Grupo 15 vs Grupo 14
+
+| Aspecto | Ibutilida | Flecainida | Procainamida |
+|---|---|---|---|
+| **Indicação primária** | Conversão FA/flutter | FA paroxística manutenção | TV estável + FA/WPW |
+| **Via** | IV bolus | VO | IV carga + infusão |
+| **QRS** | Não afeta | **Alarga** (CI >25%) | **Alarga** (CI >50%) |
+| **QT** | **Prolonga** (Torsades) | Não prolonga | **Prolonga** (Torsades) |
+| **Cardiopatia estrutural** | Cautela (IC grave) | **CI ABSOLUTA** (CAST) | Cautela (inotrópico negativo) |
+| **WPW** | CI | CI sem especialista | **ESCOLHA** |
+| **Ambulatorial** | ❌ hospitalar | ✅ (selecionados) | ❌ hospitalar |
+| **Lúpus** | Não | Não | **Sim (crônico)** |
+| **Telemetria** | ✅ ≥4 h | ❌ | ✅ durante infusão |
+| **Black Box** | **Torsades** | **CAST (morte)** | **Torsades + Lúpus** |
+| **Trial ref.** | AHA/ACC/HRS | **CAST Trial** | AHA ACLS/ESC |
+
+##### Alertas dinâmicos — Grupo 15
+
+| Fármaco | Parâmetro | Condição → Alerta |
+|---|---|---|
+| ibutilida | `qtc` | >440 → CONTRAINDICADO |
+| ibutilida | `torsadesPreviaTorsades` | true → CONTRAINDICADO |
+| ibutilida | `usoAntiarrtimicoClasseIA/III` | true → CONTRAINDICADO |
+| ibutilida | `potassio` | <4.0 → corrigir; <3.5 → CI |
+| ibutilida | `magnesio` | <2.0 → corrigir; <1.7 → CI |
+| ibutilida | `sexo` | 'F' → risco Torsades ~2× maior |
+| ibutilida | `peso` | <60 kg → dose 0,01 mg/kg (calculada) |
+| ibutilida | `feve` | <35% → preferir cardioversão elétrica |
+| flecainida | `iamPrevio` | true → CONTRAINDICADO (CAST) |
+| flecainida | `doencaCoronariana` | true → CONTRAINDICADO |
+| flecainida | `cardiopatiaEstrutural` | true → CONTRAINDICADO |
+| flecainida | `icFEr / feve` | <40% → CONTRAINDICADO |
+| flecainida | `qrs` | >120 → CI; >100 → warning |
+| flecainida | `clcr` | <50 → reduzir dose; <30 → cautela extrema |
+| flecainida | `pillInPocket` | true → alerta protocolo supervisionado + bloqueador AV |
+| flecainida | `usoBloqueadorAV` | false → alerta risco flutter 1:1 |
+| flecainida | `usoAmiodarona` | true → reduzir dose (inibe CYP2D6) |
+| procainamida | `qtc` | >500 → CI; >440 → warning |
+| procainamida | `lupusAtivo` | true → CONTRAINDICADO |
+| procainamida | `paSistolica` | <90 → CI (hipotensão) |
+| procainamida | `icDescompensada` | true → CI (inotrópico negativo) |
+| procainamida | `potassio` | <3.5 → CI |
+| procainamida | `clcr` | <30 → infusão 0,5–1 mg/min; <50 → 1–2 mg/min |
+| procainamida | `indicacao` | 'WPW'/'FA-preexcitacao' → alerta positivo (fármaco de escolha) |
+| procainamida | `peso` | calculado → doseMin/doseMax (15–18 mg/kg) dinâmicas |
+
+#### Validação Playwright — Grupos 1–15 (acumulado)
+
+```
+✅ PlaywrightConsoleCapture — 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh
+Load time: 32.16s
+Total drogas em cardio.js: 49 (Grupos 1–15)
+```
+
+---
+
+#### Grupo 16 — Antiarrítmicos (3 fármacos)
+
+| # | Fármaco | Classe | Via | `safetyFlags` críticos | Diferencial chave |
+|---|---|---|---|---|---|
+| 50 | **Disopiramida** | IA (Na⁺ + K⁺) + anticolinérgico potente | VO | `torsadesRisk`, `qtRisk`, `heartFailureRisk`, `anticholinergicRisk`, `qrsWideningRisk` | t½ 6–8 h; 100–150 mg 6/6h; ajuste renal obrigatório; CI IC-FEr/choque/glaucoma/retenção urinária; anticolinérgico potente (Beers ≥65 anos); indicação especial **CMH obstrutiva** |
+| 51 | **Lidocaína** | IB IV (canal Na⁺ ventricular) | IV bolus + infusão | `neurotoxicityRisk`, `seizureRisk`, `bradycardiaRisk`, `infusionDrug`, `emergencyDrug`, `ivUseHighRisk` | t½ 1,5–2 h; bolus 1–1,5 mg/kg IV → infusão 1–4 mg/min; t½ **prolongada em IC/choque/hepatopatia** → reduzir 50%; dose calculada por peso dinamicamente; PCR: 1,5 mg/kg se amiodarona indisponível |
+| 52 | **Mexiletina** | IB oral (análogo oral da lidocaína) | VO | `neurotoxicityRisk`, `seizureRisk`, `ventricularProarrhythmiaRisk`, `hepaticToxicityRisk`, `highInteractionRisk` | t½ 10–12 h; 150–300 mg 8/8h com alimentos; metabolismo CYP1A2+CYP2D6; hepatotoxicidade rara; amiodarona ↑ níveis; teofilina ↑ por mexiletina; uso restrito a TV/EV potencialmente fatais |
+
+##### Comparativo Classe IB — Lidocaína vs Mexiletina
+
+| Aspecto | Lidocaína IV | Mexiletina VO |
+|---|---|---|
+| **Via** | IV exclusivo | VO exclusivo |
+| **t½** | 1,5–2 h (variável) | 10–12 h |
+| **Uso** | Agudo/emergência | Crônico/manutenção |
+| **QT** | Não prolonga | Não prolonga |
+| **QRS** | Mínimo (toxicidade) | Mínimo (toxicidade) |
+| **Hepatopatia** | Reduzir infusão 50% | Reduzir dose |
+| **IC/Choque** | **Reduzir 50%** | Cautela |
+| **Neurotoxicidade** | Dose-dependente, IV | GI + neurológica |
+| **Indicação PCR** | ✅ alternativa amiodarona | ❌ |
+| **CMH** | ❌ | ❌ |
+| **Interação amiodarona** | Bradicardia + toxicidade | ↑ níveis (CYP) |
+
+##### Diferenciais Disopiramida — Classe IA com perfil único
+
+| Aspecto | Disopiramida | Procainamida | Quinidina |
+|---|---|---|---|
+| **Anticolinérgico** | **Potente** | Fraco | Moderado |
+| **CMH obstrutiva** | **Indicação especial** | Não | Não |
+| **Inotrópico negativo** | **Forte** | Moderado | Moderado |
+| **Lúpus induzido** | Não | Sim (crônico) | Sim (crônico) |
+| **Ajuste renal** | **Sim (obrigatório)** | Sim | Sim |
+| **Idoso (Beers)** | **Evitar ≥65 anos** | Cautela | Cautela |
+
+##### Ajuste Renal — Disopiramida
+
+| ClCr (mL/min) | Dose VO | Observação |
+|---|---|---|
+| >50 | 100–150 mg 6/6h | Dose plena |
+| 30–50 | 100 mg 8/8h | Intervalo estendido |
+| 10–30 | 100 mg 12/12h | Redução significativa |
+| <10 | 100 mg/dia | Evitar; acúmulo alto |
+| HD | 100 mg pós-diálise | Parcialmente dialisável |
+
+##### Alertas dinâmicos — Grupo 16
+
+| Fármaco | Parâmetro | Condição → Alerta |
+|---|---|---|
+| disopiramida | `icFEr / feve` | <40% → CONTRAINDICADO |
+| disopiramida | `glaucoma` | true → CONTRAINDICADO |
+| disopiramida | `retencaoUrinaria` | true → CONTRAINDICADO |
+| disopiramida | `qtc` | >500 → CI; >440 → warning |
+| disopiramida | `usoAmiodarona/usoSotalol` | true → CONTRAINDICADO (Torsades) |
+| disopiramida | `idade` | ≥65 → Beers alert (anticolinérgico) |
+| disopiramida | `cmhObstrutiva` | true → alerta positivo (indicação especial) |
+| disopiramida | `clcr` | <50 → ajuste renal escalonado |
+| lidocaina | `peso` | calculado → bolus Min/Max/Repeat/Max3 dinâmicos |
+| lidocaina | `pcr` | true → alerta PCR bolus 1,5 mg/kg |
+| lidocaina | `choque/icAvancada` | true → reduzir infusão 50% |
+| lidocaina | `funcaoHepatica` | 'grave' → reduzir 50%; 'moderada' → cautela |
+| lidocaina | `sinaisNeurotoxicidade` | true → SUSPENDER imediatamente |
+| lidocaina | `indicacao` | 'FA' → alerta "pouco eficaz em atrial" |
+| mexiletina | `choque` | true → CONTRAINDICADO |
+| mexiletina | `sinaisNeurotoxicidade` | true → SUSPENDER |
+| mexiletina | `usoAmiodarona` | true → ↑ níveis (CYP2D6/1A2) |
+| mexiletina | `usoTeofilina` | true → monitorar toxicidade teofilina |
+| mexiletina | `funcaoHepatica` | 'grave' → reduzir dose |
+| mexiletina | `tvSustentada` | false → warning uso restrito |
+
+#### Validação Playwright — Grupos 1–16 (acumulado)
+
+```
+✅ PlaywrightConsoleCapture — 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh
+Load time: 32.28s
+Total drogas em cardio.js: 52 (Grupos 1–16)
+```
+
+---
+
+#### Grupo 17 — Antiarrítmicos Finais (2 fármacos)
+
+| # | Fármaco | Classe | `safetyFlags` críticos | Diferencial chave |
+|---|---|---|---|---|
+| 53 | **Propafenona** | IC + leve betabloqueio + Ca²⁺ | `qrsWideningRisk`, `ventricularProarrhythmiaRisk`, `structuralHeartDiseaseContraindication`, `bronchospasmRisk`, `brugadaRisk`, `highInteractionRisk` | t½ 2–10 h (CYP2D6); CI IAM/DAC/IC-FEr/Brugada/asma; alerta flutter 1:1; **pode DESMASCARAR Brugada**; CYP2D6+3A4 simultâneos CI; pill-in-the-pocket 450–600 mg |
+| 54 | **Quinidina** | IA (Na⁺ + K⁺) + anticolinérgico | `torsadesRisk`, `qtRisk`, `qrsWideningRisk`, `digoxinInteractionRisk`, `hematologicToxicityRisk`, `highInteractionRisk`, `renalHighRisk` | t½ 6–8 h; CI Torsades prévia, miastenia, trombocitopenia prévia; digoxina ↑ ~2×; efeito vagolítico → condução AV aumentada em flutter/FA sem bloqueio AV; **Brugada** (Ito) e **QT curto** (indicações especializadas); cinchonismo |
+
+##### Propafenona vs Flecainida — Comparativo Classe IC
+
+| Aspecto | Propafenona | Flecainida |
+|---|---|---|
+| **Betabloqueio** | ✅ Leve | ❌ |
+| **Bloqueio Ca²⁺** | ✅ Leve | ❌ |
+| **Brugada** | **Pode desmascarar** | **Pode desmascarar** |
+| **Broncoespasmo** | **CI** (betabloqueio) | Cautela |
+| **CYP relevante** | **CYP2D6 + CYP3A4 + CYP1A2** | CYP2D6 |
+| **t½** | 2–10 h (variável) | 12–27 h |
+| **LP disponível** | ✅ (225/325/425 mg 12/12h) | ❌ |
+| **Pill-in-pocket** | 450–600 mg | 200–300 mg |
+| **CI combinação** | CYP2D6 + CYP3A4 simultâneos | Amiodarona ↑ níveis |
+
+##### Quinidina — Indicações Especiais Raras
+
+| Indicação | Mecanismo | Nível evidência |
+|---|---|---|
+| **Síndrome de Brugada** | Bloqueia corrente Ito (K⁺ transitória) → restaura gradiente epicárdico | ESC IIb |
+| **Síndrome QT curto** | Prolonga QT por bloqueio IKr | Consenso especialistas |
+| **Flutter/FA selecionados** | Uso histórico; hoje substituído por opções mais seguras | Baixo |
+
+##### Alertas dinâmicos — Grupo 17
+
+| Fármaco | Parâmetro | Condição → Alerta |
+|---|---|---|
+| propafenona | `iamPrevio` | true → CONTRAINDICADO |
+| propafenona | `doencaCoronariana` | true → CONTRAINDICADO |
+| propafenona | `icFEr / feve` | <40% → CONTRAINDICADO |
+| propafenona | `brugada` | true → CONTRAINDICADO |
+| propafenona | `asmaDpoc` | true → CONTRAINDICADO (betabloqueio) |
+| propafenona | `qrs` | >120 → CI; >100 → warning |
+| propafenona | `inibidorCYP2D6 + inibidorCYP3A4` | ambos true → CONTRAINDICADO |
+| propafenona | `inibidorCYP2D6` ou `inibidorCYP3A4` | true individual → warning |
+| propafenona | `usoDigoxina` | true → monitorar nível |
+| propafenona | `usoVarfarina` | true → monitorar INR |
+| propafenona | `usoBloqueadorAV` | false → alerta flutter 1:1 |
+| propafenona | `pillInPocket` | true → alerta protocolo supervisionado |
+| propafenona | `!brugada` | — → warning "pode DESMASCARAR Brugada" |
+| quinidina | `torsadesPreviaTorsades` | true → CONTRAINDICADO |
+| quinidina | `miasteniaGravis` | true → CONTRAINDICADO |
+| quinidina | `trombocitopeniaPrevia` | true → CONTRAINDICADO |
+| quinidina | `qtc` | >500 → CI; >450 → warning |
+| quinidina | `potassio` | <3.5 → CI; <4.0 → manter alvo |
+| quinidina | `magnesio` | <1.7 → alerta danger |
+| quinidina | `calcio` | <8.5 → warning |
+| quinidina | `medicamentosQT` | true → CONTRAINDICADO |
+| quinidina | `usoDigoxina` | true → reduzir digoxina 50% (↑ ~2×) |
+| quinidina | `indicacao` | 'FA'/'flutter' → alerta vagolítico (condução AV ↑) |
+| quinidina | `brugadaIndicacao` | true → alerta positivo (Ito) |
+| quinidina | `qtCurto` | true → alerta positivo (especializado) |
+| quinidina | `clcr` | <50 → ajuste renal escalonado 4 faixas |
+
+#### Validação Playwright — Grupos 1–17 (acumulado)
+
+```
+✅ PlaywrightConsoleCapture — 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh
+Load time: 30.47s
+Total drogas em cardio.js: 54 (Grupos 1–17)
+```
+
+---
+
+#### Validação Playwright — Grupos 7–9 (labetalol, ivabradina, digoxina, furosemida, bumetanida)
+
+```
+✅ PlaywrightConsoleCapture — 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh
+```
+
+---
+
+#### Validação Playwright — Grupo 6
+
+```
+✅ PlaywrightConsoleCapture — 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh
+```
+
+---
+
+### 2026-06-15 — Módulo Cardio: Grupos 4–5 (7 fármacos cardiovasculares)
+
+#### Grupo 4 — BRAs Finais + ARNI (3 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 13 | Eprosartana | `fg < 30` (cautela) | Não dialisável | BRA com ação simpatolítica adicional; menos estudado que pares |
+| 14 | Azilsartana | `fg < 30` (cautela) | Não dialisável | Maior potência anti-hipertensiva da classe; pró-fármaco |
+| 15 | Sacubitril/Valsartana | `fg < 30` (24/26 mg) | Dados limitados | `angioedemaRisk: true`; ARNI; PARADIGM-HF; CI com IECAs (36h washout) |
+
+#### Grupo 5 — Betabloqueadores Adicionais (4 fármacos)
+
+| # | Fármaco | `requiresAdjustment` | Hemodiálise | Diferencial chave |
+|---|---|---|---|---|
+| 16 | Atenolol | `fg ≤ 35` | ~50% — dose pós-HD | **Único betabloqueador com threshold ≤35**; eliminação renal ~90% |
+| 17 | Propranolol | `false` (CYP2D6 hepático) | Não removido | `bronchospasmRisk: true`; inibe T4→T3; profilaxia varizes (Baveno VII); `hepatotoxicityRisk: true` |
+| 18 | Esmolol | `false` (esterases eritrocitárias) | Não removido | Meia-vida ~9 min; `infusionDrug: true`; **uso exclusivo hospitalar**; único IV ultracurto |
+| 19 | Nadolol | `fg < 35` (intervalo estendido) | Parcialmente removido | Eliminação renal ~75%; `cirrhosisCaution: true`; `bronchospasmRisk: true`; Baveno VII varizes |
+
+#### Diferenciais Clínicos Preservados no Schema
+
+| Flag adicional | Fármaco(s) | Significado |
+|---|---|---|
+| `bronchospasmRisk: true` | propranolol, nadolol | Risco de broncoespasmo — contraindicado em asma grave |
+| `cirrhosisCaution: true` | nadolol | Titular com extrema cautela em cirrose avançada (hipotensão, disfunção renal) |
+| `infusionDrug: true` | esmolol | Uso exclusivo hospitalar — infusão EV contínua com monitorização cardíaca |
+| `hepatotoxicityRisk: true` | propranolol | Metabolismo hepático relevante — ajuste em cirrose |
+
+#### Tabela completa — `database/cardio.js` (42 fármacos, 15 grupos)
+
+| # | Chave | Grupo | `requiresAdjustment` | HD |
+|---|---|---|---|---|
+| 1 | `metoprolol` | 1 | `false` (hepático) | ~25% pós-HD |
+| 2 | `bisoprolol` | 1 | `fg < 20` | Não |
+| 3 | `nebivolol` | 1 | `fg < 30` | Não |
+| 4 | `enalapril` | 2 | `fg ≤ 50` | ~35–50% pós-HD |
+| 5 | `lisinopril` | 2 | `fg < 30` | ~50% pós-HD |
+| 6 | `ramipril` | 2 | `fg < 30` | Não dialisável |
+| 7 | `losartana` | 3 | `fg < 30` | Não |
+| 8 | `valsartana` | 3 | `fg < 30` | Não |
+| 9 | `candesartana` | 3 | `fg < 30` | Não |
+| 10 | `irbesartana` | 3B | `fg < 30` | Não |
+| 11 | `telmisartana` | 3B | **`false`** (biliar ~98%) | Sem ajuste |
+| 12 | `olmesartana` | 3B | `fg < 30` | Não |
+| 13 | `eprosartana` | 4 | `fg < 30` | Não |
+| 14 | `azilsartana` | 4 | `fg < 30` | Não |
+| 15 | `sacubitrilValsartana` | 4 | `fg < 30` | Dados limitados |
+| 16 | `atenolol` | 5 | **`fg ≤ 35`** | ~50% pós-HD |
+| 17 | `propranolol` | 5 | **`false`** (hepático) | Não |
+| 18 | `esmolol` | 5 | **`false`** (esterases) | Não |
+| 19 | `nadolol` | 5 | **`fg < 35`** (intervalo) | Parcial pós-HD |
+| 20 | `sotalol`    | 6 | **`fg < 40`** → 24h; **CI fg < 10** | Removido por HD |
+| 21 | `labetalol`  | 7 | `false` (hepático) | Não removido |
+| 22 | `ivabradina` | 7 | `false` (CYP3A4) | Não removido |
+| 23 | `digoxina`       | 8  | **`fg < 60`** (ajuste); **`fg < 30`** (reduzir) | NÃO removida (alto Vd) |
+| 24 | `furosemida`     | 9  | **`fg < 30`** (doses maiores) | Parcialmente removida |
+| 25 | `bumetanida`     | 9  | **`fg < 30`** (doses maiores) | Parcialmente removida |
+| 26 | `torsemida`      | 9B | **`fg < 30`** (doses maiores) | Parcialmente removida |
+| 27 | `espironolactona`| 10 | **CI fg < 30** (`vo: null`) | Não dialisável |
+| 28 | `eplerenona`     | 10 | **CI fg < 30** (`vo: null`) | Não dialisável |
+| 29 | `amilorida`      | 10 | **CI fg < 30** (`vo: null`) | Não dialisável |
+| 30 | `hidroclorotiazida` | 11  | **perde eficácia fg < 30** (`vo: null`)     | Não dialisável |
+| 31 | `clortalidona`      | 11  | **perde eficácia fg < 30** (`vo: null`)     | Não dialisável |
+| 32 | `indapamida`        | 11B | **perde eficácia fg < 30** (`vo: null`)     | Não dialisável |
+| 33 | `metolazona`        | 11B | **mantém eficácia** em DRC (diferencial)    | Uso hospitalar especializado |
+| 34 | `acetazolamida`     | 11C | **fg < 50** cautela; **fg < 30** evitar      | CONTRAINDICADA em HD |
+| 35 | `manitol`           | 11C | **fg < 10 / anúria** → CI                   | CONTRAINDICADO em HD rotineiro |
+| 36 | `amlodipina`        | 12  | **`false`** (hepático — sem ajuste renal)   | Não dialisável |
+| 37 | `nifedipina`        | 12  | **`false`** (hepático — sem ajuste renal)   | Não dialisável |
+| 38 | `felodipina`        | 12B | **`false`** (hepático — sem ajuste renal)   | Não dialisável |
+| 39 | `lercanidipina`     | 12B | **`false`** (hepático — sem ajuste renal)   | Não dialisável |
+| 40 | `manidipina`        | 12B | **`false`** (hepático — sem ajuste renal)   | Não dialisável |
+| 41 | `verapamil`         | 13  | **`false`** (hepático — sem ajuste renal)   | Não dialisável |
+| 42 | `diltiazem`         | 13  | **`false`** (hepático — sem ajuste renal)   | Não dialisável |
+
+#### Validação Playwright — Grupo 5
+
+```
+✅ PlaywrightConsoleCapture — 0 erros JavaScript
+[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR
+[MedCases] PRESCRICOES_DB carregado: 125 protocolos
+[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh
+```
+
+---
+
 ## 🚧 Próximos Passos
 
 ### Alta Prioridade
@@ -975,7 +1854,11 @@ Todos os 22 antimicrobianos do banco possuem o campo `renalDose` inserido cirurg
 - [ ] **Scores adicionais** — APACHE II, Killip-Kimball, NIHSS, DAS28, PHQ-9, GAD-7
 - [ ] **Export PDF** — `window.print()` + CSS `@media print` para resultado do paciente
 - [ ] **Módulo Obstetrícia** — calculadoras de IG, DPP, partograma, Bishop
-- [ ] **Populator de Database** — expandir `cardio.js`, `gastro.js`, `endocrino.js` com fármacos completos
+- [x] **Grupo 14 inserido** — Antiarrítmicos: adenosina (#43), amiodarona (#44), dronedarona (#45), dofetilida (#46) — ✅ Validado Playwright 0 erros
+- [x] **Grupo 15 inserido** — Antiarrítmicos adicionais: ibutilida (#47), flecainida (#48), procainamida (#49) — ✅ Validado Playwright 0 erros
+- [x] **Grupo 16 inserido** — Antiarrítmicos: disopiramida (#50), lidocaína (#51), mexiletina (#52) — ✅ Validado Playwright 0 erros
+- [x] **Grupo 17 inserido** — Antiarrítmicos finais: propafenona (#53), quinidina (#54) — ✅ Validado Playwright 0 erros
+- [ ] **Próximos lotes cardio.js** — Grupo 18: Vasodilatadores (hidralazina, nitroprussiato, nitroglicerina, minoxidil)
 
 ### Baixa Prioridade
 - [ ] **Tema personalizado** — seletor de paleta de cores
@@ -1020,3 +1903,4 @@ Este aplicativo é uma ferramenta de apoio à decisão clínica destinada **excl
 *© 2026 MedCases Pro — Todos os direitos reservados.*
 
 </div>
+

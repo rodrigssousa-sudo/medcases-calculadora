@@ -3,10 +3,92 @@
    Diretriz 5: Separação rigorosa de temas (Modo Dia / Modo Noite)
    Diretriz 3: UI de arredondamento por formulação comercial
    Diretriz 6: Botão de cópia de prescrição
+   Workstream D §5: Fundo roxo + texto branco/preto
 
    Carregada APÓS o bloco <style> inline do index.html para
    sobrescrever com maior especificidade onde necessário.
 ================================================================ */
+
+/* ============================================================
+   §0 — IDENTIDADE VISUAL MEDCASES PRO
+   Dark mode  → fundo roxo (#0F0920) + texto global branco
+   Light mode → texto global preto
+   Garante contraste AAA em labels, inputs, botões e placeholders.
+============================================================ */
+
+/* § 0.1 — Dark mode: texto global branco */
+body:not(.light-mode) {
+  color: #FFFFFF;
+}
+body:not(.light-mode) label,
+body:not(.light-mode) .hm-label,
+body:not(.light-mode) input,
+body:not(.light-mode) button,
+body:not(.light-mode) select,
+body:not(.light-mode) textarea,
+body:not(.light-mode) span,
+body:not(.light-mode) p,
+body:not(.light-mode) h1,
+body:not(.light-mode) h2,
+body:not(.light-mode) h3,
+body:not(.light-mode) h4,
+body:not(.light-mode) li {
+  color: #FFFFFF;
+}
+
+/* Placeholder branco suavizado em dark */
+body:not(.light-mode) input::placeholder,
+body:not(.light-mode) textarea::placeholder {
+  color: rgba(255, 255, 255, 0.38) !important;
+}
+
+/* § 0.2 — Light mode: texto global preto */
+body.light-mode {
+  color: #000000;
+}
+body.light-mode label,
+body.light-mode .hm-label,
+body.light-mode input,
+body.light-mode button,
+body.light-mode select,
+body.light-mode textarea,
+body.light-mode span,
+body.light-mode p,
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode li {
+  color: #000000;
+}
+
+/* Placeholder cinza escuro em light mode */
+body.light-mode input::placeholder,
+body.light-mode textarea::placeholder {
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+/* § 0.3 — Exceções: botões com bg colorido mantêm texto branco
+   para não quebrar os cards do calc-hub-grid-v2 */
+body.light-mode .calc-hub-card-v2,
+body.light-mode .calc-hub-card-v2 *,
+body.light-mode .chc-farmacos-btn,
+body.light-mode .chc-farmacos-btn *,
+body.light-mode .hm-btn--primary,
+body.light-mode .hm-sex-btn--active {
+  color: #FFFFFF !important;
+}
+
+/* § 0.4 — Inputs em dark mode herdam cor da variável para não perder
+   o estilo original de border/bg que já usa var(--text-*) */
+body:not(.light-mode) .hm-input {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF;
+}
+body.light-mode .hm-input {
+  color: #1E293B !important;
+  -webkit-text-fill-color: #1E293B;
+}
 
 /* ============================================================
    §1 — MODO ESCURO (default): garantias de contraste
@@ -569,4 +651,390 @@ body.light-mode .hm-renal-badge--hd {
 }
 body.light-mode .hm-renal-dose {
   color: #334155 !important;
+}
+
+/* ============================================================
+   §12 — CALC-HUB GRID V2 (novo layout sem card Adulto)
+   5 fileiras × 2 colunas + fila 5 full-width (Fluidos)
+============================================================ */
+
+.calc-hub-grid-v2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 12px 16px;
+}
+
+/* Card base */
+.calc-hub-card-v2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.calc-hub-card-v2:active {
+  transform: scale(0.96);
+  filter: brightness(0.88);
+}
+
+/* Ícone */
+.calc-hub-card-v2 .chc-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.12);
+}
+
+/* Texto */
+.calc-hub-card-v2 .chc-info {
+  flex: 1;
+  min-width: 0;
+}
+.calc-hub-card-v2 .chc-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.calc-hub-card-v2 .chc-desc {
+  font-size: 10px;
+  opacity: 0.72;
+  margin-top: 2px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Badge de contagem (Fármacos) */
+.chc-count-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.18);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Seta (Fluidos full-width) */
+.chc-arrow-right {
+  margin-left: auto;
+  font-size: 13px;
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+
+/* ── Fila 5: Fluidos — ocupa as 2 colunas ── */
+.chc-fluids--fullwidth {
+  grid-column: 1 / -1;
+}
+
+/* ── Cores por módulo ── */
+
+/* Pediatria — Azul */
+.calc-hub-card-v2.chc-ped {
+  background: linear-gradient(135deg, #1E40AF 0%, #2563EB 100%);
+  color: #FFFFFF;
+}
+.calc-hub-card-v2.chc-ped .chc-icon-wrap {
+  background: rgba(255,255,255,0.18);
+  color: #BFDBFE;
+}
+
+/* Gestante — Rosa Escuro */
+.calc-hub-card-v2.chc-ob {
+  background: linear-gradient(135deg, #9D174D 0%, #BE185D 100%);
+  color: #FFFFFF;
+}
+.calc-hub-card-v2.chc-ob .chc-icon-wrap {
+  background: rgba(255,255,255,0.18);
+  color: #FBCFE8;
+}
+
+/* Infusão — Amarelo */
+.calc-hub-card-v2.chc-infusion {
+  background: linear-gradient(135deg, #B45309 0%, #D97706 100%);
+  color: #FFFFFF;
+}
+.calc-hub-card-v2.chc-infusion .chc-icon-wrap {
+  background: rgba(255,255,255,0.18);
+  color: #FDE68A;
+}
+
+/* Eletrólitos — Roxo */
+.calc-hub-card-v2.chc-elec {
+  background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
+  color: #FFFFFF;
+}
+.calc-hub-card-v2.chc-elec .chc-icon-wrap {
+  background: rgba(255,255,255,0.18);
+  color: #DDD6FE;
+}
+
+/* Antimicrobianos — Marrom */
+.calc-hub-card-v2.chc-atb {
+  background: linear-gradient(135deg, #78350F 0%, #92400E 100%);
+  color: #FFFFFF;
+}
+.calc-hub-card-v2.chc-atb .chc-icon-wrap {
+  background: rgba(255,255,255,0.18);
+  color: #FDE68A;
+}
+
+/* Fármacos — Azul Marinho */
+.calc-hub-card-v2.chc-farmacos {
+  background: linear-gradient(135deg, #1E3A5F 0%, #1E4D8C 100%);
+  color: #FFFFFF;
+}
+.calc-hub-card-v2.chc-farmacos .chc-icon-wrap {
+  background: rgba(255,255,255,0.18);
+  color: #BFDBFE;
+}
+
+/* Hemodinâmica — Vermelho */
+.calc-hub-card-v2.chc-hemo {
+  background: linear-gradient(135deg, #991B1B 0%, #DC2626 100%);
+  color: #FFFFFF;
+}
+.calc-hub-card-v2.chc-hemo .chc-icon-wrap {
+  background: rgba(255,255,255,0.18);
+  color: #FECACA;
+}
+
+/* Scores — Cinza */
+.calc-hub-card-v2.chc-scores {
+  background: linear-gradient(135deg, #374151 0%, #4B5563 100%);
+  color: #FFFFFF;
+}
+.calc-hub-card-v2.chc-scores .chc-icon-wrap {
+  background: rgba(255,255,255,0.18);
+  color: #E5E7EB;
+}
+
+/* Fluidos — Verde escuro / Teal */
+.calc-hub-card-v2.chc-fluids {
+  background: linear-gradient(135deg, #065F46 0%, #059669 100%);
+  color: #FFFFFF;
+  padding: 16px 14px;
+}
+.calc-hub-card-v2.chc-fluids .chc-icon-wrap {
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  background: rgba(255,255,255,0.18);
+  color: #A7F3D0;
+}
+.calc-hub-card-v2.chc-fluids .chc-title {
+  font-size: 15px;
+}
+
+/* ── Light mode: sombra suave nos cards ── */
+body.light-mode .calc-hub-card-v2 {
+  box-shadow: 0 3px 12px rgba(0,0,0,0.14);
+}
+
+/* ============================================================
+   §13 — ACCORDION URINA 24H (card dados do paciente)
+   Componente opcional, colapsável com animação CSS nativa.
+============================================================ */
+
+/* Container — ocupa largura total do input-grid */
+.hm-urine-accordion {
+  grid-column: 1 / -1;
+  margin-top: 6px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(148,163,184,0.18);
+  transition: border-color 0.25s ease;
+}
+
+/* ── Header sempre visível (botão acessível) ── */
+.hm-urine-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  gap: 8px;
+  background: rgba(148,163,184,0.07);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.20s ease;
+}
+.hm-urine-header:active {
+  background: rgba(148,163,184,0.14);
+}
+.hm-urine-header:focus-visible {
+  outline: 2px solid rgba(139,92,246,0.70);
+  outline-offset: -2px;
+}
+
+/* Lado esquerdo do header */
+.hm-urine-header-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 1;
+  min-width: 0;
+}
+
+.hm-urine-icon {
+  font-size: 14px;
+  opacity: 0.72;
+  flex-shrink: 0;
+}
+
+.hm-urine-header-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* Badge "Opcional" / "Ativo" */
+.hm-urine-badge {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 20px;
+  background: rgba(148,163,184,0.18);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.hm-urine-badge--active {
+  background: rgba(52,211,153,0.22);
+  color: #34D399;
+}
+
+/* Chevron animado */
+.hm-urine-chevron {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 11px;
+  opacity: 0.55;
+}
+.hm-urine-chevron i {
+  display: block;
+  transition: transform 0.28s ease;
+}
+
+/* ── Body (campos) — controlado por JS via display ── */
+.hm-urine-body {
+  overflow: hidden;
+  background: rgba(148,163,184,0.04);
+}
+
+/* Grid 2 colunas dos inputs */
+.hm-urine-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 10px 10px 4px;
+}
+
+/* Nota fórmula */
+.hm-urine-note {
+  font-size: 9.5px;
+  line-height: 1.45;
+  opacity: 0.55;
+  font-style: italic;
+  padding: 4px 10px 10px;
+  margin: 0;
+}
+
+/* ── DARK MODE ── */
+body:not(.light-mode) .hm-urine-accordion {
+  border-color: rgba(139, 92, 246, 0.22);
+}
+body:not(.light-mode) .hm-urine-header {
+  background: rgba(139, 92, 246, 0.08);
+}
+body:not(.light-mode) .hm-urine-header:active {
+  background: rgba(139, 92, 246, 0.16);
+}
+body:not(.light-mode) .hm-urine-header-title {
+  color: rgba(226, 232, 240, 0.95);
+}
+body:not(.light-mode) .hm-urine-icon {
+  color: rgba(167, 139, 250, 0.90);
+}
+body:not(.light-mode) .hm-urine-chevron {
+  color: rgba(226, 232, 240, 0.55);
+}
+body:not(.light-mode) .hm-urine-body {
+  background: rgba(139, 92, 246, 0.05);
+}
+
+/* Quando accordion aberto no dark: borda roxa mais intensa */
+.hm-urine-accordion:has([aria-expanded="true"]) {
+  border-color: rgba(139, 92, 246, 0.42);
+}
+
+/* ── LIGHT MODE ── */
+body.light-mode .hm-urine-accordion {
+  border-color: rgba(0,0,0,0.12);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+body.light-mode .hm-urine-header {
+  background: rgba(0,0,0,0.04);
+}
+body.light-mode .hm-urine-header-title {
+  color: #334155;
+}
+body.light-mode .hm-urine-icon {
+  color: #7C3AED;
+}
+body.light-mode .hm-urine-chevron {
+  color: #64748B;
+}
+body.light-mode .hm-urine-body {
+  background: #FAFAFA;
+}
+body.light-mode .hm-urine-badge {
+  background: rgba(100,116,139,0.12);
+  color: #475569;
+}
+body.light-mode .hm-urine-badge--active {
+  background: rgba(16,185,129,0.12);
+  color: #059669;
+}
+
+/* ============================================================
+   §14 — PULL-TO-REFRESH: estilos do spinner de ícone
+============================================================ */
+#ptr-indicator .ptr-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#ptr-indicator .ptr-spinner i {
+  font-size: 16px;
+  transition: transform 0.1s linear;
+}
+#ptr-indicator .ptr-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }

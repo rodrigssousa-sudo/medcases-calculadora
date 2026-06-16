@@ -4735,7 +4735,7 @@
 
     /* ── Modo noite: valores definitivos ── */
     body:not(.light-mode) {
-      --bg-deep:#091522;
+      --bg-deep:#0F0920;  /* Roxo MedCases Pro (era azul #091522) */
     }
     body:not(.light-mode) #fd-modal {
       background:#142235;
@@ -5639,8 +5639,8 @@
               <i class="fa-solid fa-pills"></i>
             </div>
             <div>
-              <div class="hm-card-title">Fármacos</div>
-              <div class="hm-card-subtitle">Busca · Dose · Ajuste Renal</div>
+              <div class="hm-card-title" data-i18n="hm_card_drugs_title">Fármacos</div>
+              <div class="hm-card-subtitle" data-i18n="hm_card_drugs_sub">Busca · Dose · Ajuste Renal</div>
             </div>
           </div>
           <span class="hm-drug-count" id="hm-drug-count">—</span>
@@ -5760,6 +5760,64 @@
               </div>
             </div>
           </div>
+
+          <!-- ── URINA 24H — Accordion opcional (ClCr Medido com correção BSA) ── -->
+          <div class="hm-urine-accordion" id="hm-urine-accordion" style="grid-column:1/-1;">
+
+            <!-- Header clicável — sempre visível -->
+            <button type="button" class="hm-urine-header"
+              id="hm-urine-toggle-btn"
+              onclick="hmToggleUrine24()"
+              aria-expanded="false"
+              aria-controls="hm-urine-body">
+              <span class="hm-urine-header-left">
+                <i class="fa-solid fa-flask-vial hm-urine-icon"></i>
+                <span class="hm-urine-header-title" data-i18n="hm_urine24_title">Urina de 24 Horas</span>
+                <span class="hm-urine-badge" id="hm-urine-badge">Opcional</span>
+              </span>
+              <span class="hm-urine-chevron" id="hm-urine-chevron">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </button>
+
+            <!-- Body colapsável — oculto por padrão -->
+            <div class="hm-urine-body" id="hm-urine-body"
+              role="region" aria-labelledby="hm-urine-toggle-btn"
+              style="display:none; overflow:hidden;">
+
+              <div class="hm-urine-fields">
+
+                <div class="hm-input-wrap">
+                  <label class="hm-label" for="hm-urine24">
+                    Volume Urina <span class="hm-label-unit">mL/24h</span>
+                  </label>
+                  <input class="hm-input" id="hm-urine24"
+                    type="number" min="50" max="15000"
+                    inputmode="decimal" placeholder="Ex: 1500"
+                    oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
+                </div>
+
+                <div class="hm-input-wrap">
+                  <label class="hm-label" for="hm-urine-creat">
+                    Creat. Urinária <span class="hm-label-unit">mg/dL</span>
+                  </label>
+                  <input class="hm-input" id="hm-urine-creat"
+                    type="number" min="1" max="800"
+                    inputmode="decimal" placeholder="Ex: 80"
+                    oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
+                </div>
+
+              </div><!-- /hm-urine-fields -->
+
+              <!-- Nota da fórmula -->
+              <p class="hm-urine-note" data-i18n="hm_urine24_note">
+                Usa ClCr Medido corrigido por BSA: (Ur×V/Ps×1440)×(1,73/BSA).
+                Requer Peso e Altura preenchidos.
+              </p>
+
+            </div><!-- /hm-urine-body -->
+
+          </div><!-- /hm-urine-accordion -->
 
         </div>
 
@@ -6375,84 +6433,101 @@
         <p data-i18n="calc_hub_subtitle">Selecione o módulo clínico</p>
       </header>
 
-      <div class="calc-hub-grid">
+      <div class="calc-hub-grid-v2">
 
-        <!-- Adulto -->
-        <div class="calc-hub-card chc-adult" onclick="navigate('adult')" role="button" aria-label="Adulto">
-          <div class="calc-hub-icon"><i class="fa-solid fa-user-doctor"></i></div>
-          <div class="calc-hub-info">
-            <div class="calc-hub-title" data-i18n="calc_adult">Adulto</div>
-            <div class="calc-hub-desc"  data-i18n="calc_adult_desc">Fármacos, fluidos, hemodinâmica e scores clínicos</div>
+        <!-- ── Fila 1: Pediatria | Gestante ── -->
+        <div class="calc-hub-card-v2 chc-ped"
+             onclick="navigate('ped')" role="button" aria-label="Pediatria">
+          <div class="chc-icon-wrap"><i class="fa-solid fa-baby"></i></div>
+          <div class="chc-info">
+            <div class="chc-title" data-i18n="calc_ped">Pediatria</div>
+            <div class="chc-desc"  data-i18n="calc_ped_desc">Doses mg/kg · Broselow</div>
           </div>
-          <i class="fa-solid fa-chevron-right calc-hub-arrow"></i>
         </div>
 
-        <!-- Pediatria -->
-        <div class="calc-hub-card chc-ped" onclick="navigate('ped')" role="button" aria-label="Pediatria">
-          <div class="calc-hub-icon"><i class="fa-solid fa-baby"></i></div>
-          <div class="calc-hub-info">
-            <div class="calc-hub-title" data-i18n="calc_ped">Pediatria</div>
-            <div class="calc-hub-desc"  data-i18n="calc_ped_desc">Doses mg/kg, Broselow e Holliday-Segar infantil</div>
+        <div class="calc-hub-card-v2 chc-ob"
+             onclick="navigate('ob')" role="button" aria-label="Gestante">
+          <div class="chc-icon-wrap"><i class="fa-solid fa-person-pregnant"></i></div>
+          <div class="chc-info">
+            <div class="chc-title" data-i18n="calc_ob">Gestante</div>
+            <div class="chc-desc"  data-i18n="calc_ob_desc">Módulo obstétrico</div>
           </div>
-          <i class="fa-solid fa-chevron-right calc-hub-arrow"></i>
         </div>
 
-        <!-- Gestante -->
-        <div class="calc-hub-card chc-ob" onclick="navigate('ob')" role="button" aria-label="Gestante">
-          <div class="calc-hub-icon"><i class="fa-solid fa-person-pregnant"></i></div>
-          <div class="calc-hub-info">
-            <div class="calc-hub-title" data-i18n="calc_ob">Gestante</div>
-            <div class="calc-hub-desc"  data-i18n="calc_ob_desc">Módulo obstétrico e drogas na gestação</div>
+        <!-- ── Fila 2: Infusão | Eletrólitos ── -->
+        <div class="calc-hub-card-v2 chc-infusion"
+             onclick="navigate('infusion')" role="button" aria-label="Infusão">
+          <div class="chc-icon-wrap"><i class="fa-solid fa-syringe"></i></div>
+          <div class="chc-info">
+            <div class="chc-title" data-i18n="calc_infusion">Infusão</div>
+            <div class="chc-desc"  data-i18n="calc_infusion_desc">Bombas · Gotejamentos</div>
           </div>
-          <i class="fa-solid fa-chevron-right calc-hub-arrow"></i>
         </div>
 
-        <!-- Infusão -->
-        <div class="calc-hub-card chc-infusion" onclick="navigate('infusion')" role="button" aria-label="Infusão">
-          <div class="calc-hub-icon"><i class="fa-solid fa-syringe"></i></div>
-          <div class="calc-hub-info">
-            <div class="calc-hub-title" data-i18n="calc_infusion">Infusão</div>
-            <div class="calc-hub-desc"  data-i18n="calc_infusion_desc">Bombas de infusão contínua e gotejamentos</div>
+        <div class="calc-hub-card-v2 chc-elec"
+             onclick="navigate('elec')" role="button" aria-label="Eletrólitos">
+          <div class="chc-icon-wrap"><i class="fa-solid fa-bolt"></i></div>
+          <div class="chc-info">
+            <div class="chc-title" data-i18n="calc_elec">Eletrólitos</div>
+            <div class="chc-desc"  data-i18n="calc_elec_desc">Na⁺ · K⁺ · Mg²⁺ · Ca²⁺</div>
           </div>
-          <i class="fa-solid fa-chevron-right calc-hub-arrow"></i>
         </div>
 
-        <!-- Antimicrobianos -->
-        <div class="calc-hub-card chc-atb" onclick="navigate('adult'); setTimeout(()=>showAdultPanel('drugs'),80)" role="button" aria-label="Antimicrobianos">
-          <div class="calc-hub-icon"><i class="fa-solid fa-pills"></i></div>
-          <div class="calc-hub-info">
-            <div class="calc-hub-title" data-i18n="calc_atb">Antimicrobianos</div>
-            <div class="calc-hub-desc"  data-i18n="calc_atb_desc">Busca inteligente com ajuste renal em 4 blocos</div>
+        <!-- ── Fila 3: Antimicrobianos | Fármacos ── -->
+        <div class="calc-hub-card-v2 chc-atb"
+             onclick="navigate('adult'); setTimeout(()=>showAdultPanel('drugs'),80)"
+             role="button" aria-label="Antimicrobianos">
+          <div class="chc-icon-wrap"><i class="fa-solid fa-pills"></i></div>
+          <div class="chc-info">
+            <div class="chc-title" data-i18n="calc_atb">Antimicrobianos</div>
+            <div class="chc-desc"  data-i18n="calc_atb_desc">Ajuste renal · 4 blocos</div>
           </div>
-          <i class="fa-solid fa-chevron-right calc-hub-arrow"></i>
         </div>
 
-        <!-- Eletrólitos -->
-        <div class="calc-hub-card chc-elec" onclick="navigate('elec')" role="button" aria-label="Eletrólitos">
-          <div class="calc-hub-icon"><i class="fa-solid fa-bolt"></i></div>
-          <div class="calc-hub-info">
-            <div class="calc-hub-title" data-i18n="calc_elec">Eletrólitos</div>
-            <div class="calc-hub-desc"  data-i18n="calc_elec_desc">Correção de Na⁺, K⁺, Mg²⁺, Ca²⁺ e fósforo</div>
+        <div class="calc-hub-card-v2 chc-farmacos"
+             onclick="navigate('farmacos')" role="button" aria-label="Fármacos">
+          <div class="chc-icon-wrap"><i class="fa-solid fa-capsules"></i></div>
+          <div class="chc-info">
+            <div class="chc-title" data-i18n="cmd_drugs_title">Fármacos</div>
+            <div class="chc-desc">Bula · Doses · Interações</div>
           </div>
-          <i class="fa-solid fa-chevron-right calc-hub-arrow"></i>
+          <span class="chc-count-badge" id="farmacos-total-count">...</span>
         </div>
 
-      </div><!-- /calc-hub-grid -->
+        <!-- ── Fila 4: Hemodinâmica | Scores ── -->
+        <div class="calc-hub-card-v2 chc-hemo"
+             onclick="navigate('adult'); setTimeout(()=>showAdultPanel('hemo'),80)"
+             role="button" aria-label="Hemodinâmica">
+          <div class="chc-icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="chc-info">
+            <div class="chc-title" data-i18n="cmd_hemo_title">Hemodinâmica</div>
+            <div class="chc-desc"  data-i18n="cmd_hemo_sub">PAM · Choque · SpO₂</div>
+          </div>
+        </div>
 
-      <!-- ══ BOTÃO FARMÁCOS — full-width abaixo do grid ══ -->
-      <button class="chc-farmacos-btn" onclick="navigate('farmacos')" aria-label="Ver todos os fármacos">
-        <div class="chc-farmacos-btn-icon">
-          <!-- Ícone squircle único — emoji removido do título para eliminar redundância visual -->
-          <i class="fa-solid fa-capsules"></i>
+        <div class="calc-hub-card-v2 chc-scores"
+             onclick="navigate('adult'); setTimeout(()=>showAdultPanel('scores'),80)"
+             role="button" aria-label="Scores">
+          <div class="chc-icon-wrap"><i class="fa-solid fa-chart-bar"></i></div>
+          <div class="chc-info">
+            <div class="chc-title" data-i18n="cmd_scores_title">Scores</div>
+            <div class="chc-desc"  data-i18n="cmd_scores_sub">SOFA · Glasgow · CURB-65</div>
+          </div>
         </div>
-        <div class="chc-farmacos-btn-info">
-          <!-- FIX: era "💊 FARMÁCOS" (emoji redundante + UPPERCASE)
-               NOVO: "Farmácos" em Title Case — consistente com os demais cards do grid -->
-          <div class="chc-farmacos-btn-title">Farmácos</div>
-          <div class="chc-farmacos-btn-desc">Bula clínica completa · doses, interações, ajustes · sem precisar de dados do paciente</div>
+
+        <!-- ── Fila 5: Fluidos (full-width) ── -->
+        <div class="calc-hub-card-v2 chc-fluids chc-fluids--fullwidth"
+             onclick="navigate('adult'); setTimeout(()=>showAdultPanel('fluids'),80)"
+             role="button" aria-label="Fluidos">
+          <div class="chc-icon-wrap"><i class="fa-solid fa-droplet"></i></div>
+          <div class="chc-info">
+            <div class="chc-title" data-i18n="cmd_fluids_title">Fluidos</div>
+            <div class="chc-desc"  data-i18n="cmd_fluids_sub">Basal · Déficit · Ressuscitação</div>
+          </div>
+          <i class="fa-solid fa-chevron-right chc-arrow-right"></i>
         </div>
-        <span class="chc-farmacos-btn-count" id="farmacos-total-count">...</span>
-      </button>
+
+      </div><!-- /calc-hub-grid-v2 -->
 
     </section><!-- /page-calculators -->
 
@@ -7613,6 +7688,14 @@ const i18n = {
     calc_elec:'Eletrólitos',
     calc_elec_desc:'Correção de Na⁺, K⁺, Mg²⁺, Ca²⁺ e fósforo',
 
+    /* ── Card Fármacos — home ── */
+    hm_card_drugs_title:'Fármacos',
+    hm_card_drugs_sub:'Busca · Dose · Ajuste Renal',
+
+    /* ── Urina 24h — dados do paciente ── */
+    hm_urine24_title:'Parâmetros Urina 24h',
+    hm_urine24_note:'Quando preenchidos, usa ClCr Medido (U×V/P×1440) no lugar do Cockcroft-Gault',
+
     /* ── Dashboard Adulto — cmd-cards ── */
     cmd_drugs_title:'Fármacos',
     cmd_drugs_sub:'Doses · Ajuste Renal · Diluição',
@@ -7968,6 +8051,14 @@ const i18n = {
     calc_atb_desc:'Búsqueda inteligente con ajuste renal en 4 bloques',
     calc_elec:'Electrólitos',
     calc_elec_desc:'Corrección de Na⁺, K⁺, Mg²⁺, Ca²⁺ y fósforo',
+
+    /* ── Card Fármacos — home ── */
+    hm_card_drugs_title:'Fármacos',
+    hm_card_drugs_sub:'Búsqueda · Dosis · Ajuste Renal',
+
+    /* ── Orina 24h — datos del paciente ── */
+    hm_urine24_title:'Parámetros Orina 24h',
+    hm_urine24_note:'Si se completan, usa ClCr Medido (U×V/P×1440) en lugar de Cockcroft-Gault',
 
     /* ── Dashboard Adulto — cmd-cards ── */
     cmd_drugs_title:'Fármacos',
@@ -15794,10 +15885,10 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Módulos schema {calculate} — mapa nativo chave→objeto */
     ...(window.ANTIMICROBIANOS_DRUGS_DB || {}),
     ...(window.PSICOFARMACOS_DRUGS_DB   || {}),
+    ...(window.CARDIO_DRUGS_DB          || {}),  /* schema calculate() — spread direto */
     /* Módulos schema array — converte para mapa id→entry */
     ...Object.fromEntries((window.ANALGESICOS_DRUGS_DB  || []).filter(d=>d?.id).map(d=>[d.id, d])),
     ...Object.fromEntries((window.ANTICOAG_DRUGS_DB     || []).filter(d=>d?.id).map(d=>[d.id, d])),
-    ...Object.fromEntries((window.CARDIO_DRUGS_DB       || []).filter(d=>d?.id).map(d=>[d.id, d])),
     ...Object.fromEntries((window.ENDOCRINO_DRUGS_DB    || []).filter(d=>d?.id).map(d=>[d.id, d])),
     ...Object.fromEntries((window.GASTRO_DRUGS_DB       || []).filter(d=>d?.id).map(d=>[d.id, d])),
     ...Object.fromEntries((window.INFUSOES_DRUGS_DB     || []).filter(d=>d?.id).map(d=>[d.id, d])),
@@ -16456,66 +16547,131 @@ document.addEventListener('DOMContentLoaded', () => {
   _hmUpdateDrugCount();
 
   /* ============================================================
-     COCKCROFT-GAULT ENGINE — embutido inline (garantia de execução)
-     Calcula ClCr automaticamente a partir de Creatinina, Peso, Idade, Sexo.
-     Escreve em: #hm-clcr (hidden) + pill #hm-pv-clcr + window.patientData.clcr
+     COCKCROFT-GAULT / DEPURAÇÃO MEDIDA — embutido inline
+     ──────────────────────────────────────────────────────────
+     MODALIDADE A (Básica — Cockcroft-Gault)
+       Activa quando #hm-urine-body está colapsado ou os campos
+       de urina não estão preenchidos.
+       ♂: ClCr = [(140-Idade)×Peso] / (72×Cr_sérica)
+       ♀: idem × 0.85
+
+     MODALIDADE B (Completa — Depuração Medida + correção BSA)
+       Activa quando AMBOS hm-urine24 e hm-urine-creat estão
+       preenchidos E o painel está expandido.
+       Passo 1 — V (mL/min)  = Vol_urina_mL / 1440
+       Passo 2 — ClCr_bruto  = (Cr_urinária × V) / Cr_sérica
+       Passo 3 — BSA (Mosteller) = √[(Peso×Altura) / 3600]
+       Passo 4 — ClCr_corr   = ClCr_bruto × (1.73 / BSA)
+
+     Saídas:
+       • #hm-clcr (hidden) → motor renal (50+ refs, sem mudança)
+       • #hm-pv-clcr pill  → valor exibido ao médico
+       • #hm-pv-clcr-src   → badge "CG" ou "Ur24·BSA"
+       • window.patientData.clcr
   ============================================================ */
   window.hmCalcCockcroft = function() {
+
+    /* ── Leituras de DOM ── */
     const creat  = parseFloat(document.getElementById('hm-creatinina')?.value);
     const weight = parseFloat(document.getElementById('hm-weight')?.value);
     const age    = parseFloat(document.getElementById('hm-age')?.value);
+    const height = parseFloat(document.getElementById('hm-height')?.value);
+
     const clcrHid  = document.getElementById('hm-clcr');
     const pillVal  = document.getElementById('hm-pv-clcr');
     const pillSrc  = document.getElementById('hm-pv-clcr-src');
     const pillWrap = document.getElementById('hm-result-pills');
 
+    /* Campos Urina 24h — apenas lidos se painel estiver expandido */
+    const urineBody  = document.getElementById('hm-urine-body');
+    const panelOpen  = urineBody && urineBody.style.display !== 'none';
+    const urine24    = panelOpen ? parseFloat(document.getElementById('hm-urine24')?.value)    : NaN;
+    const urineCreat = panelOpen ? parseFloat(document.getElementById('hm-urine-creat')?.value) : NaN;
+
+    /* ── Validação base (creat + weight + age obrigatórios) ── */
     if (isNaN(creat) || creat <= 0 || isNaN(weight) || weight <= 0 || isNaN(age) || age <= 0) {
       if (clcrHid) clcrHid.value = '';
       if (pillVal) pillVal.textContent = '—';
-      if (pillSrc) pillSrc.style.display = 'none';
-      if (window.patientData) { window.patientData.clcr = null; }
+      if (pillSrc) { pillSrc.textContent = 'CG'; pillSrc.style.display = 'none'; }
+      if (window.patientData) window.patientData.clcr = null;
       return;
     }
 
-    /* Sexo: lê do estado global ou do botão ativo */
+    /* ── Sexo ── */
     const sex = (typeof currentSex !== 'undefined' && currentSex)
       ? currentSex
       : (document.getElementById('hm-btn-female')?.classList.contains('hm-sex-btn--active') ? 'F' : 'M');
 
-    /* Fórmula Cockcroft-Gault */
-    let clcr = ((140 - age) * weight) / (72 * creat);
-    if (sex === 'F') clcr *= 0.85;
-    clcr = Math.max(1, Math.min(250, Math.round(clcr * 10) / 10));
+    /* ── Cálculo ── */
+    let clcr;
+    let method;
 
-    /* Escreve no hidden input — dispara eventos para o motor renal reagir */
+    const hasUrine = panelOpen && !isNaN(urine24) && urine24 > 0
+                               && !isNaN(urineCreat) && urineCreat > 0;
+
+    if (hasUrine) {
+      /* ═══ MODALIDADE B: Depuração Medida + Correção BSA (Mosteller) ═══
+         Passo 1: V = Vol_urina_mL / 1440 (mL/min)
+         Passo 2: ClCr_bruto = (Cr_urinária × V) / Cr_sérica
+         Passo 3: BSA = √[(Peso × Altura) / 3600]          (Mosteller)
+         Passo 4: ClCr_corr = ClCr_bruto × (1.73 / BSA)   (normaliz. 1.73 m²)
+      */
+      const V          = urine24 / 1440;
+      const clcrBruto  = (urineCreat * V) / creat;
+      const hasHeight  = !isNaN(height) && height > 0;
+      if (hasHeight) {
+        const bsa      = Math.sqrt((weight * height) / 3600);
+        clcr           = clcrBruto * (1.73 / bsa);
+        method         = 'Ur24·BSA';
+      } else {
+        /* Sem altura: usa ClCr bruto sem correção BSA */
+        clcr   = clcrBruto;
+        method = 'Ur24';
+      }
+    } else {
+      /* ═══ MODALIDADE A: Cockcroft-Gault clássica ═══ */
+      clcr   = ((140 - age) * weight) / (72 * creat);
+      if (sex === 'F') clcr *= 0.85;
+      method = 'CG';
+    }
+
+    clcr = Math.max(1, Math.min(400, Math.round(clcr * 10) / 10));
+
+    /* ── Propaga para hidden input → motor renal ── */
     if (clcrHid) {
       clcrHid.value = clcr;
       clcrHid.dispatchEvent(new Event('input',  { bubbles: true }));
       clcrHid.dispatchEvent(new Event('change', { bubbles: true }));
     }
 
-    /* Atualiza pill com cor semafórica */
+    /* ── Atualiza pill semafórica ── */
     if (pillVal) {
       pillVal.textContent = clcr;
       const pill = document.getElementById('hm-pill-clcr');
       if (pill) {
         pill.style.borderColor =
-          clcr < 10 ? 'rgba(248,113,113,0.45)' :
-          clcr < 30 ? 'rgba(251,191,36,0.40)'  :
-          clcr < 50 ? 'rgba(251,146,60,0.40)'  :
-                      'rgba(56,189,248,0.25)';
+          clcr < 10  ? 'rgba(248,113,113,0.55)' :
+          clcr < 30  ? 'rgba(251,191, 36,0.50)' :
+          clcr < 50  ? 'rgba(251,146, 60,0.50)' :
+                       'rgba( 56,189,248,0.30)';
         pill.style.transition = 'border-color 0.35s ease';
       }
     }
-    if (pillSrc) { pillSrc.textContent = 'CG'; pillSrc.style.display = ''; }
+    if (pillSrc) {
+      pillSrc.textContent = method;
+      pillSrc.style.display = '';
+      /* Destaque visual quando usando Modalidade B */
+      pillSrc.style.color = hasUrine ? 'rgba(52,211,153,0.90)' : '';
+    }
     if (pillWrap && pillWrap.style.display === 'none') pillWrap.style.display = 'grid';
 
-    /* Sincroniza patientData */
+    /* ── Sincroniza patientData ── */
     window.patientData = window.patientData || {};
     window.patientData.clcr       = clcr;
     window.patientData.creatinine = creat;
+    window.patientData.clcrMethod = method;
 
-    /* Re-render inline result se visível */
+    /* ── Re-render inline result se visível ── */
     const resultEl = document.getElementById('hm-drug-result');
     if (resultEl && resultEl.style.display !== 'none') {
       const detailBtn = resultEl.querySelector('[onclick*="hmOpenDrug"]');
@@ -16528,16 +16684,78 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  /* Listeners reativos para os campos que afetam o CG */
+  /* ── hmToggleUrine24: abre/fecha accordion + limpa campos ao fechar ── */
+  window.hmToggleUrine24 = function() {
+    const body    = document.getElementById('hm-urine-body');
+    const btn     = document.getElementById('hm-urine-toggle-btn');
+    const chevron = document.getElementById('hm-urine-chevron');
+    const badge   = document.getElementById('hm-urine-badge');
+    if (!body) return;
+
+    const isOpen = body.style.display !== 'none';
+
+    if (isOpen) {
+      /* Fechar: anima altura para zero */
+      body.style.maxHeight = body.scrollHeight + 'px';
+      requestAnimationFrame(function() {
+        body.style.transition = 'max-height 0.28s ease, opacity 0.22s ease';
+        body.style.maxHeight  = '0';
+        body.style.opacity    = '0';
+        setTimeout(function() {
+          body.style.display = 'none';
+          body.style.maxHeight  = '';
+          body.style.opacity    = '';
+          body.style.transition = '';
+          /* Limpa campos e retorna ao CG */
+          var u24 = document.getElementById('hm-urine24');
+          var uc  = document.getElementById('hm-urine-creat');
+          if (u24) u24.value = '';
+          if (uc)  uc.value  = '';
+          if (typeof window.hmCalcCockcroft === 'function') window.hmCalcCockcroft();
+        }, 290);
+      });
+    } else {
+      /* Abrir: anima da altura zero */
+      body.style.display    = 'block';
+      body.style.maxHeight  = '0';
+      body.style.opacity    = '0';
+      body.style.overflow   = 'hidden';
+      requestAnimationFrame(function() {
+        body.style.transition = 'max-height 0.30s ease, opacity 0.22s ease';
+        body.style.maxHeight  = body.scrollHeight + 'px';
+        body.style.opacity    = '1';
+        setTimeout(function() {
+          body.style.maxHeight  = 'none';
+          body.style.transition = '';
+        }, 310);
+      });
+    }
+
+    const nowOpen = !isOpen;
+    if (btn)     btn.setAttribute('aria-expanded', String(nowOpen));
+    if (chevron) {
+      const icon = chevron.querySelector('i');
+      if (icon) {
+        icon.style.transition = 'transform 0.28s ease';
+        icon.style.transform  = nowOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+    }
+    if (badge) {
+      badge.textContent = nowOpen ? 'Ativo' : 'Opcional';
+      badge.className   = nowOpen ? 'hm-urine-badge hm-urine-badge--active' : 'hm-urine-badge';
+    }
+  };
+
+  /* ── Listeners reativos para todos os campos que afetam o CG ── */
   (function _attachCGListeners() {
-    ['hm-weight', 'hm-age', 'hm-creatinina'].forEach(function(id) {
+    ['hm-weight', 'hm-age', 'hm-height', 'hm-creatinina'].forEach(function(id) {
       var el = document.getElementById(id);
       if (el) { el.addEventListener('input', window.hmCalcCockcroft); }
     });
 
     /* Patch hmSetSex para re-calcular ao trocar sexo */
     var _origSetSex = window.hmSetSex;
-    if (typeof _origSetSex === 'function') {
+    if (typeof _origSetSex === 'function' && !window.hmSetSex._cgPatched) {
       window.hmSetSex = function(sex) {
         _origSetSex.call(this, sex);
         window.hmCalcCockcroft();
@@ -17319,3 +17537,4 @@ window.MedCasesBridge = {
 
 </body>
 </html>
+
