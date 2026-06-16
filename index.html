@@ -854,6 +854,78 @@
     /* REQ-6: Garante que o banner PTR (pull-to-refresh) nunca apareça em tela */
     #ptr-indicator { display:none !important; height:0 !important; overflow:hidden !important; }
 
+    /* ============================================================
+       GLOBAL PATIENT BAR — v2.4.0
+       Card sticky "Paciente Atual" visível em TODAS as abas exceto Home.
+       Posicionado entre o topbar e o scroll-content, fora do fluxo scroll.
+    ============================================================ */
+    #global-patient-bar {
+      display: none; /* controlado via JS — _updateGlobalPatientBar() */
+      background: linear-gradient(135deg, rgba(30,10,60,0.97) 0%, rgba(15,9,30,0.98) 100%);
+      border-bottom: 1px solid rgba(167,139,250,0.22);
+      padding: 8px 14px 8px 12px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 50;
+      /* Entrada suave */
+      animation: gpbIn 0.22s ease both;
+    }
+    @keyframes gpbIn {
+      from { opacity:0; transform:translateY(-6px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    .gpb-inner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .gpb-avatar {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0;
+      box-shadow: 0 0 0 2px rgba(167,139,250,0.30);
+    }
+    .gpb-info { flex: 1; min-width: 0; }
+    .gpb-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.07em;
+      color: #A78BFA; text-transform: uppercase; line-height: 1;
+      margin-bottom: 2px;
+    }
+    .gpb-metrics {
+      display: flex; flex-wrap: wrap; gap: 5px 10px;
+      align-items: center;
+    }
+    .gpb-chip {
+      font-size: 11px; font-weight: 600; color: var(--text-primary);
+      display: flex; align-items: center; gap: 3px;
+    }
+    .gpb-chip i { font-size: 9px; color: #A78BFA; }
+    .gpb-chip .gpb-chip-val { color: #E2E8F0; }
+    .gpb-chip .gpb-chip-val--warn { color: #FBBF24; }
+    .gpb-chip .gpb-chip-val--danger { color: #F87171; }
+    .gpb-chip .gpb-chip-val--ok { color: #34D399; }
+    .gpb-edit-btn {
+      background: rgba(167,139,250,0.12);
+      border: 1px solid rgba(167,139,250,0.28);
+      border-radius: 8px; padding: 5px 9px;
+      color: #A78BFA; font-size: 11px; font-weight: 600;
+      cursor: pointer; flex-shrink: 0; font-family: 'Inter', sans-serif;
+      display: flex; align-items: center; gap: 5px;
+      transition: background 0.18s;
+    }
+    .gpb-edit-btn:active { background: rgba(167,139,250,0.25); }
+    body.light-mode #global-patient-bar {
+      background: linear-gradient(135deg, rgba(237,233,254,0.97) 0%, rgba(221,214,254,0.95) 100%);
+      border-bottom-color: rgba(124,58,237,0.20);
+    }
+    body.light-mode .gpb-label { color: #7C3AED; }
+    body.light-mode .gpb-chip { color: #1A1A1A; }
+    body.light-mode .gpb-chip i { color: #7C3AED; }
+    body.light-mode .gpb-chip .gpb-chip-val { color: #1A1A1A; }
+    body.light-mode .gpb-edit-btn { color: #7C3AED; border-color: rgba(124,58,237,0.35); }
+
     /* ============================================================ HOME */
     /* home-header removido — redundante com topbar nativa */
 
@@ -1523,9 +1595,8 @@
       color:#1A1F23; font-size:7.5px; font-weight:800; padding:1px 4px; border-radius:6px; line-height:1.3; }
 
     /* ============================================================ CENTRAL DE CALCULADORAS */
-    .calc-hub-header { padding:4px 0 12px; }
-    .calc-hub-header h2 { font-size:18px; font-weight:800; color:var(--text-primary); margin-bottom:4px; }
-    .calc-hub-header p  { font-size:12px; color:var(--text-muted); }
+    /* .calc-hub-header REMOVIDO v2.6.0 — topbar já exibe o título, bloco redundante eliminado */
+    .calc-hub-header { display:none !important; }
 
     /* Grid 2 colunas — cards quadrados empilhados */
     .calc-hub-grid {
@@ -1765,7 +1836,7 @@
       /* Filho direto do overlay — position:relative é suficiente */
       position:relative; z-index:10201;
       width:100%; max-width:480px;
-      background:#0D1525;
+      background:#0F091E;
       border-top:1.5px solid rgba(56,189,248,0.25);
       border-radius:22px 22px 0 0;
       box-shadow:0 -8px 48px rgba(0,0,0,0.70), 0 0 0 1px rgba(255,255,255,0.04);
@@ -1776,6 +1847,39 @@
     }
     #fd-modal.open { transform:translateY(0); }
     #fd-modal::-webkit-scrollbar { display:none; }
+
+    /* ── v2.4.0 REQ-5: Botão X flutuante fixo no canto superior direito ──
+       Posicionado fora do #fd-modal (sem overflow), fixed ao viewport.
+       Visível APENAS quando o modal está aberto (#fd-modal-overlay flex). */
+    #fd-floating-close {
+      display: none; /* controlado via JS junto com o overlay */
+      position: fixed;
+      top: max(18px, env(safe-area-inset-top, 18px));
+      right: 16px;
+      z-index: 10202; /* acima do fd-modal (10201) */
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: rgba(15, 9, 30, 0.90);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(167,139,250,0.45);
+      color: #E2E8F0;
+      font-size: 16px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.55), 0 0 0 1px rgba(167,139,250,0.15);
+      transition: background 0.18s, transform 0.18s;
+      font-family: 'Inter', sans-serif;
+    }
+    #fd-floating-close:active {
+      background: rgba(167,139,250,0.25);
+      transform: scale(0.92);
+    }
+    #fd-modal-overlay.open-overlay #fd-floating-close {
+      display: flex;
+    }
 
     .fd-handle {
       width:32px; height:4px; border-radius:2px;
@@ -1934,6 +2038,46 @@
       color: #D1FAE5;
       font-weight: 700;
     }
+
+    /* ── v2.4.0: Listas tipográficas (Design Limpo / Typo-Driven) ──
+       Substituem os sub-cards de Efeitos Adversos e Apresentações.
+       Zero boxes, zero bordas — só tipografia e marcadores mínimos. */
+    .fd-clean-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding: 8px 14px 4px;
+    }
+    .fd-clean-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: var(--text-primary);
+    }
+    .fd-clean-list li:last-child { border-bottom: none; }
+    .fd-clean-list li .fd-cl-dot {
+      font-size: 7px;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    /* Variantes por tipo */
+    .fd-clean-list--warn   li .fd-cl-dot { color: #FBBF24; }
+    .fd-clean-list--danger li .fd-cl-dot { color: #F87171; }
+    .fd-clean-list--safe   li .fd-cl-dot { color: #34D399; }
+    .fd-clean-list--neutral li .fd-cl-dot { color: #94A3B8; }
+    .fd-clean-list--warn   li { color: #FEF3C7; }
+    .fd-clean-list--danger li { color: #FEE2E2; }
+    .fd-clean-list--safe   li { color: #D1FAE5; }
+    /* Light mode */
+    body.light-mode .fd-clean-list li { color: #1A1A1A; border-bottom-color: rgba(0,0,0,0.06); }
+    body.light-mode .fd-clean-list--warn   li { color: #78350F; }
+    body.light-mode .fd-clean-list--danger li { color: #7F1D1D; }
+    body.light-mode .fd-clean-list--safe   li { color: #064E3B; }
     /* Light mode: texto escuro sobre fundo claro */
     body.light-mode .fd-tag.danger {
       background: rgba(254,226,226,0.90);
@@ -2218,6 +2362,34 @@
       font-family:'Inter',sans-serif; cursor:pointer;
     }
     .fd-btn-close:active { opacity:0.7; }
+
+    /* v2.5.0 — Botão “Copiar Prescrição” no rod apé do modal de fármaco */
+    .fd-btn-copy {
+      flex:1; padding:12px; border-radius:12px;
+      background: linear-gradient(135deg,#3B1F6E 0%,#6D28D9 100%);
+      border:1.5px solid rgba(167,139,250,0.35);
+      color:#EDE9FE; font-size:13px; font-weight:800;
+      font-family:'Inter',sans-serif; cursor:pointer;
+      display:flex; align-items:center; justify-content:center; gap:7px;
+      box-shadow:0 4px 18px rgba(109,40,217,0.28);
+      transition:opacity 0.2s, background 0.28s, color 0.28s;
+    }
+    .fd-btn-copy:active { opacity:0.82; }
+    /* Estado “copiado” — flash verde por 2s */
+    .fd-btn-copy.copied {
+      background: linear-gradient(135deg,#065F46 0%,#10B981 100%);
+      border-color:rgba(52,211,153,0.40);
+      box-shadow:0 4px 18px rgba(16,185,129,0.28);
+      color:#ECFDF5;
+    }
+    body.light-mode .fd-btn-copy {
+      background:linear-gradient(135deg,#5B21B6 0%,#7C3AED 100%);
+      color:#ffffff; border-color:rgba(124,58,237,0.40);
+    }
+    body.light-mode .fd-btn-copy.copied {
+      background:linear-gradient(135deg,#064E3B 0%,#10B981 100%);
+      color:#ECFDF5;
+    }
 
     /* ============================================================ RESULT DASHBOARD — SLIM BADGES */
     .result-dashboard {
@@ -2925,9 +3097,9 @@
       max-width: 100% !important; /* remove o max-width de 360px que causava drift */
       z-index: 10101 !important;
 
-      /* Background explícito com !important — blindado contra qualquer herança iOS */
-      background-color: #0D1525 !important;
-      background: #0D1525 !important;
+      /* Background explícito roxo MedCases Pro — blindado contra qualquer herança iOS */
+      background-color: #0F091E !important;
+      background: #0F091E !important;
       -webkit-appearance: none;
 
       border-top: 1.5px solid rgba(56,189,248,0.25) !important;
@@ -3151,27 +3323,59 @@
     .stepper-val { min-width:32px; text-align:center; font-size:14px; font-weight:700;
       color:var(--text-primary); padding:0 4px; }
 
-    /* Resultado do score */
+    /* ── Resultado do score — v2.6.0: contraste WCAG AA forçado sobre fundo verde escuro ── */
     .score-result-box { background:linear-gradient(135deg,#0A2A1A 0%,#0F3525 100%);
-      border:1px solid rgba(34,200,122,0.2); border-radius:var(--radius-md);
-      padding:11px; margin-top:10px; text-align:center; }
-    .score-result-number { font-size:42px; font-weight:800; color:var(--green-glow);
-      line-height:1; letter-spacing:-2px; }
-    .score-result-label  { font-size:12px; font-weight:600; color:var(--text-secondary); margin-top:4px; }
+      border:1px solid rgba(34,200,122,0.25); border-radius:var(--radius-md);
+      padding:14px 12px 12px; margin-top:10px; text-align:center; }
+    .score-result-number { font-size:42px; font-weight:800; color:#4ADE80;
+      line-height:1; letter-spacing:-2px;
+      text-shadow: 0 0 18px rgba(74,222,128,0.35); }
+    /* FIX CONTRASTE: era var(--text-secondary)=#94A3B8 → invisível sobre verde escuro */
+    .score-result-label  { font-size:12px; font-weight:600;
+      color: rgba(255,255,255,0.90);
+      margin-top:4px; }
     .score-result-interp { font-size:13px; font-weight:700; margin-top:10px; padding:8px 16px;
       border-radius:10px; display:inline-block; }
 
-    .severity-low    { background:rgba(34,200,122,0.15); color:#22C87A; border:1px solid rgba(34,200,122,0.25); }
-    .severity-mid    { background:rgba(240,168,66,0.15);  color:#F0A842; border:1px solid rgba(240,168,66,0.25); }
-    .severity-high   { background:rgba(224,92,107,0.15);  color:#E05C6B; border:1px solid rgba(224,92,107,0.25); }
-    .severity-purple { background:rgba(155,110,232,0.15); color:#9B6EE8; border:1px solid rgba(155,110,232,0.25); }
-    .severity-info   { background:rgba(66,168,212,0.15);  color:#42A8D4; border:1px solid rgba(66,168,212,0.25); }
+    /* Severity badges — fundos semi-opacos com texto SEMPRE branco sobre verde escuro */
+    .severity-low    { background:rgba(34,200,122,0.22); color:#ffffff; border:1px solid rgba(34,200,122,0.40);
+      text-shadow:0 1px 3px rgba(0,0,0,0.45); }
+    .severity-mid    { background:rgba(240,168,66,0.25);  color:#ffffff; border:1px solid rgba(240,168,66,0.45);
+      text-shadow:0 1px 3px rgba(0,0,0,0.45); }
+    .severity-high   { background:rgba(224,92,107,0.30);  color:#ffffff; border:1px solid rgba(224,92,107,0.50);
+      text-shadow:0 1px 3px rgba(0,0,0,0.45); }
+    .severity-purple { background:rgba(155,110,232,0.28); color:#ffffff; border:1px solid rgba(155,110,232,0.45);
+      text-shadow:0 1px 3px rgba(0,0,0,0.45); }
+    .severity-info   { background:rgba(66,168,212,0.28);  color:#ffffff; border:1px solid rgba(66,168,212,0.45);
+      text-shadow:0 1px 3px rgba(0,0,0,0.45); }
 
-    .score-sub-note { font-size:11px; color:var(--text-muted); margin-top:8px; line-height:1.5; }
-    .score-action-tip { background:rgba(66,168,212,0.08); border:1px solid rgba(66,168,212,0.18);
+    /* FIX CONTRASTE: sub-note era var(--text-muted)=#475569 → quase invisível */
+    .score-sub-note { font-size:11px;
+      color: rgba(255,255,255,0.80);
+      margin-top:8px; line-height:1.5; }
+    /* FIX CONTRASTE: action-tip era var(--text-secondary) sobre fundo azul escuro → ilegível */
+    .score-action-tip {
+      background: rgba(56,189,248,0.12);
+      border: 1px solid rgba(56,189,248,0.28);
       border-radius:8px; padding:10px 12px; margin-top:10px; font-size:12px;
-      color:var(--text-secondary); line-height:1.6; }
-    .score-action-tip strong { color:var(--info); }
+      color: rgba(255,255,255,0.92);
+      line-height:1.6; text-align:left; }
+    .score-action-tip strong { color:#7DD3FC; } /* cyan-300 — contraste alto sobre qualquer fundo escuro */
+    /* Light mode: reverte para texto escuro (fundo fica claro) */
+    body.light-mode .score-result-box {
+      background: linear-gradient(135deg,#E8FAF1 0%,#D4F5E2 100%);
+      border-color: rgba(34,200,122,0.35);
+    }
+    body.light-mode .score-result-label  { color: #065F46 !important; }
+    body.light-mode .score-sub-note      { color: #047857 !important; }
+    body.light-mode .score-action-tip    { background:rgba(6,95,70,0.08); border-color:rgba(6,95,70,0.20); color:#065F46 !important; }
+    body.light-mode .score-action-tip strong { color:#065F46 !important; }
+    body.light-mode .score-result-number { color:#059669 !important; text-shadow:none; }
+    body.light-mode .severity-low    { background:rgba(34,200,122,0.18); color:#065F46 !important; text-shadow:none; }
+    body.light-mode .severity-mid    { background:rgba(240,168,66,0.18);  color:#78350F !important; text-shadow:none; }
+    body.light-mode .severity-high   { background:rgba(224,92,107,0.18);  color:#7F1D1D !important; text-shadow:none; }
+    body.light-mode .severity-purple { background:rgba(155,110,232,0.18); color:#4C1D95 !important; text-shadow:none; }
+    body.light-mode .severity-info   { background:rgba(66,168,212,0.18);  color:#0C4A6E !important; text-shadow:none; }
 
     /* ============================================================
        CALCULADORA DE FÁRMACOS
@@ -4897,7 +5101,7 @@
       --bg-deep:#0F0920;  /* Roxo MedCases Pro (era azul #091522) */
     }
     body:not(.light-mode) #fd-modal {
-      background:#142235;
+      background:#0F091E !important;
     }
 
     /* ============================================================ LIGHT MODE */
@@ -5776,6 +5980,27 @@
     </button>
   </div>
 
+  <!-- ══════════════════════════════════════════════════════════
+       GLOBAL PATIENT BAR — v2.4.0
+       Aparece em todas as abas exceto Home quando paciente ativo.
+       Controlada por _updateGlobalPatientBar() chamada via navigate().
+  ══════════════════════════════════════════════════════════ -->
+  <div id="global-patient-bar" role="status" aria-live="polite" aria-label="Paciente atual">
+    <div class="gpb-inner">
+      <div class="gpb-avatar" id="gpb-avatar">👤</div>
+      <div class="gpb-info">
+        <div class="gpb-label" data-i18n="gpb_label">Paciente Atual</div>
+        <div class="gpb-metrics" id="gpb-metrics">
+          <!-- Preenchido via JS -->
+        </div>
+      </div>
+      <button class="gpb-edit-btn" onclick="openQuickEdit('full')" aria-label="Editar paciente">
+        <i class="fa-solid fa-user-pen"></i>
+        <span data-i18n="gpb_edit">Editar</span>
+      </button>
+    </div>
+  </div>
+
   <!-- SCROLL — Webview sem topbar própria: conteúdo começa aqui -->
   <main id="scroll-content">
 
@@ -6587,10 +6812,7 @@
 
     <!-- ══ CENTRAL DE CALCULADORAS ══ -->
     <section id="page-calculators" class="section-page">
-      <header class="calc-hub-header">
-        <h2 data-i18n="calc_hub_title">Central de Calculadoras</h2>
-        <p data-i18n="calc_hub_subtitle">Selecione o módulo clínico</p>
-      </header>
+      <!-- calc-hub-header REMOVIDO v2.6.0: topbar já exibe o título nativo -->
 
       <div class="calc-hub-grid-v2">
 
@@ -7403,6 +7625,11 @@
   <!-- Clique no fundo escuro fecha o modal -->
   <div id="fd-modal-backdrop" onclick="closeFarmacoDetail()" style="position:absolute;inset:0;"></div>
 
+  <!-- REQ-5: Botão X flutuante — fixo no viewport, visível durante qualquer scroll do modal -->
+  <button id="fd-floating-close" onclick="closeFarmacoDetail()" aria-label="Fechar ficha do fármaco">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
   <div id="fd-modal" role="dialog" aria-modal="true" aria-label="Detalhes do fármaco">
     <div class="fd-handle" onclick="closeFarmacoDetail()"></div>
 
@@ -7420,11 +7647,14 @@
     </div>
 
     <div class="fd-footer">
-      <button class="fd-btn-close" id="fd-btn-close-label" onclick="closeFarmacoDetail()">
-        <i class="fa-solid fa-xmark"></i> <span data-i18n="fd_btn_close">Fechar</span>
+      <!-- v2.5.0: botão "Fechar" removido — substituído pelo X flutuante fixo no topo -->
+      <button class="fd-btn-copy" id="fd-btn-copy-label" onclick="_fdCopyPrescricao()">
+        <i class="fa-solid fa-clipboard-check" id="fd-btn-copy-icon"></i>
+        <span id="fd-btn-copy-text" data-i18n="fd_btn_copy">Copiar Prescrição</span>
       </button>
       <button class="fd-btn-study" id="fd-btn-calc-label" onclick="_fdCalcDoseFromModal()">
-        <i class="fa-solid fa-calculator"></i> <span data-i18n="fd_btn_calc">Calcular Dose</span>
+        <i class="fa-solid fa-calculator"></i>
+        <span data-i18n="fd_btn_calc">Calcular Dose</span>
       </button>
     </div>
   </div>
@@ -8077,7 +8307,12 @@ const i18n = {
     /* ── i18n: modal fármacos rodapé ── */
     fd_btn_close:   'Fechar',
     fd_btn_calc:    'Calcular Dose',
+    fd_btn_copy:    'Copiar Prescrição',
+    fd_btn_copy_ok: 'Copiado!',
     chc_drugs_desc: 'Bula · Doses · Interações',
+    /* Global Patient Bar */
+    gpb_label:      'Paciente Atual',
+    gpb_edit:       'Editar',
   },
   es:{
     topbar_subtitle:'Calculadoras Clínicas',badge_premium:'Premium v1.0',
@@ -8457,7 +8692,12 @@ const i18n = {
     /* ── i18n: modal fármacos rodapé ── */
     fd_btn_close:   'Cerrar',
     fd_btn_calc:    'Calcular Dosis',
+    fd_btn_copy:    'Copiar Prescripción',
+    fd_btn_copy_ok: '¡Copiado!',
     chc_drugs_desc: 'Prospecto · Dosis · Interacciones',
+    /* Global Patient Bar */
+    gpb_label:      'Paciente Actual',
+    gpb_edit:       'Editar',
   }
 };
 /* ============================================================
@@ -9053,6 +9293,10 @@ function navigate(page){
   if(activeBtn) activeBtn.classList.add('active');
 
   document.getElementById('scroll-content').scrollTo({top:0,behavior:'smooth'});
+
+  /* REQ-2: Atualiza o card global de Paciente Atual em todas as abas */
+  if (typeof _updateGlobalPatientBar === 'function') _updateGlobalPatientBar(page);
+
   if(page==='adult') {
     updateAdultBanner();
     /* Garante que o grid home está visível ao entrar no módulo adulto */
@@ -9548,7 +9792,10 @@ function recalculate() {
   /* ── 9. Notifica todas as calculadoras sobre novos dados ── */
   _onPatientDataUpdated();
 
-  /* ── 10. NÃO abre modal aqui — recalculate() é chamado também por outros contextos ──
+  /* ── 10. REQ-2: Atualiza o card global de Paciente Atual ── */
+  if (typeof _updateGlobalPatientBar === 'function') _updateGlobalPatientBar();
+
+  /* ── 11. NÃO abre modal aqui — recalculate() é chamado também por outros contextos ──
      O modal só abre quando o usuário clicar no botão "Calcular" via calcularEAbrirModal() */
 }
 
@@ -10730,19 +10977,157 @@ function saveQuickEdit() {
     document.getElementById('qe-btn-f')?.classList.toggle('active-f', sex === 'F');
   }
 
+  /* ── v2.5.0: Persiste no localStorage (HM_KEY) e espelha em TODOS os inputs ──
+     Garante sincronia bidirecional: QE modal → Home inputs → localStorage
+     Mesmo que o usuário não tenha passado pela tela Home, os campos ficam
+     atualizados e o próximo hmFixarDados/hmLoadPatient recebe os valores certos. */
+  try {
+    const _qeSnapshot = {};
+    if (wt  != null && wt  > 0) _qeSnapshot.weight     = wt;
+    if (age != null && age > 0) _qeSnapshot.age        = age;
+    if (ht  != null && ht  > 0) _qeSnapshot.height     = ht;
+    if (cr  != null && cr  > 0) _qeSnapshot.creatinine = cr;
+    if (sex)                     _qeSnapshot.sex        = sex;
+
+    if (Object.keys(_qeSnapshot).length > 0) {
+      const _HM_KEY = 'medcases_hm_patient_v1';
+      let _existing = {};
+      try { _existing = JSON.parse(localStorage.getItem(_HM_KEY) || '{}'); } catch(_) {}
+      const _merged = Object.assign(_existing, _qeSnapshot);
+      localStorage.setItem(_HM_KEY, JSON.stringify(_merged));
+
+      /* Injeta de volta nos inputs da Home, Calculadoras e QE imediatamente */
+      if (typeof _hmMirrorToLegacyInputs === 'function') {
+        _hmMirrorToLegacyInputs(_merged);
+      }
+    }
+  } catch(_e) { /* silencia — persistência é best-effort */ }
+
   /* ── 2. Dispara recalculate() que já atualiza patientData + notifica tudo ── */
   closeQuickEdit();
 
   /* Pequeno delay para a animação de fechar não competir com o recalc */
   setTimeout(() => {
     recalculate();
+    /* REQ-2: Atualiza o card global de Paciente Atual */
+    if (typeof _updateGlobalPatientBar === 'function') _updateGlobalPatientBar();
     /* Feedback visual */
     showToast(currentLang === 'es' ? '✓ Datos actualizados' : '✓ Dados atualizados');
+
+    /* REQ-3: Se havia um fármaco pendente (usuário veio de "Calcular Dose" sem paciente),
+       re-abre automaticamente a ficha do fármaco com os dados recém-cadastrados */
+    const pendingId = window._fdPendingDrugId;
+    if (pendingId) {
+      window._fdPendingDrugId = null;
+      setTimeout(() => {
+        navigate('farmacos');
+        setTimeout(() => {
+          const db   = typeof DRUG_DB !== 'undefined' ? DRUG_DB : [];
+          const drug = db.find(d => d.id === pendingId);
+          if (drug) {
+            const nome = drug.name || drug.nome || pendingId;
+            const inp  = document.getElementById('farmacos-search-input');
+            if (inp) { inp.value = nome; inp.dispatchEvent(new Event('input', { bubbles: true })); }
+            if (typeof renderFarmacosList === 'function') renderFarmacosList(nome);
+            setTimeout(() => { if (typeof openFarmacoDetail === 'function') openFarmacoDetail(pendingId); }, 220);
+          }
+        }, 120);
+      }, 300);
+    }
   }, 120);
 }
 
 /* Atalho: abre quick edit a partir de qualquer botão de edição rápida */
 function qeEdit(context) { openQuickEdit(context || 'full'); }
+
+/* ══════════════════════════════════════════════════════════════
+   _updateGlobalPatientBar() — v2.4.0 REQ-2
+   Exibe/oculta o card "Paciente Atual" no topo de todas as abas
+   exceto Home. Lê window.patientData (ou localStorage fallback).
+   Chamado por: navigate(), saveQuickEdit(), recalculate().
+══════════════════════════════════════════════════════════════ */
+function _updateGlobalPatientBar(currentPage) {
+  const bar     = document.getElementById('global-patient-bar');
+  const metrics = document.getElementById('gpb-metrics');
+  if (!bar || !metrics) return;
+
+  /* Determina página ativa se não for passada como argumento */
+  const page = currentPage || (function() {
+    const active = document.querySelector('.section-page.active');
+    return active ? active.id.replace('page-', '') : 'home';
+  })();
+
+  /* Na Home, esconde sempre */
+  if (page === 'home') {
+    bar.style.display = 'none';
+    return;
+  }
+
+  /* Tenta obter dados do paciente (memória → localStorage) */
+  let pd = window.patientData || null;
+  if (!pd || (!pd.weight && !pd.age)) {
+    try {
+      const raw = localStorage.getItem('medcases_hm_patient_v1');
+      if (raw) { const saved = JSON.parse(raw); if (saved && (saved.weight || saved.age)) pd = saved; }
+    } catch(_e) {}
+  }
+
+  /* Se não há paciente com dado útil, esconde o bar */
+  const hasPatient = pd && (pd.weight || pd.age || pd.clcr);
+  if (!hasPatient) {
+    bar.style.display = 'none';
+    return;
+  }
+
+  const isES = typeof currentLang !== 'undefined' && currentLang === 'es';
+
+  /* ── Chips de métricas ── */
+  let chips = '';
+
+  if (pd.weight) {
+    chips += `<span class="gpb-chip"><i class="fa-solid fa-weight-scale"></i><span class="gpb-chip-val">${pd.weight} kg</span></span>`;
+  }
+  if (pd.age) {
+    chips += `<span class="gpb-chip"><i class="fa-solid fa-cake-candles"></i><span class="gpb-chip-val">${pd.age} ${isES ? 'años' : 'anos'}</span></span>`;
+  }
+  if (pd.sex || pd.sexo) {
+    const sex = pd.sex || pd.sexo;
+    const sexLabel = sex === 'F' ? (isES ? 'Fem.' : 'Fem.') : (isES ? 'Masc.' : 'Masc.');
+    chips += `<span class="gpb-chip"><i class="fa-solid fa-venus-mars"></i><span class="gpb-chip-val">${sexLabel}</span></span>`;
+  }
+  if (pd.clcr || pd.clCr) {
+    const clcr = pd.clcr || pd.clCr;
+    const clcrNum = parseFloat(clcr);
+    const clcrCls = clcrNum < 10 ? 'gpb-chip-val--danger'
+                  : clcrNum < 30 ? 'gpb-chip-val--warn'
+                  : clcrNum < 60 ? 'gpb-chip-val--warn'
+                  : 'gpb-chip-val--ok';
+    chips += `<span class="gpb-chip"><i class="fa-solid fa-kidney"></i><span class="${clcrCls}">ClCr ${Math.round(clcrNum)}</span></span>`;
+  }
+  if (pd.isHD) {
+    chips += `<span class="gpb-chip"><i class="fa-solid fa-droplet-slash" style="color:#F87171;"></i><span class="gpb-chip-val--danger">HD</span></span>`;
+  }
+  if (pd.pregnant || pd.gestante) {
+    chips += `<span class="gpb-chip"><i class="fa-solid fa-person-pregnant" style="color:#F472B6;"></i><span class="gpb-chip-val" style="color:#F472B6;">${isES ? 'Gestante' : 'Gestante'}</span></span>`;
+  }
+
+  /* Se nenhum chip foi gerado, não exibe */
+  if (!chips) { bar.style.display = 'none'; return; }
+
+  /* Avatar: emoji baseado em sexo/perfil */
+  const avatarEl = document.getElementById('gpb-avatar');
+  if (avatarEl) {
+    if (pd.pregnant || pd.gestante) avatarEl.textContent = '🤰';
+    else if ((pd.sex || pd.sexo) === 'F') avatarEl.textContent = '👩‍⚕️';
+    else avatarEl.textContent = '👨‍⚕️';
+  }
+
+  metrics.innerHTML = chips;
+  bar.style.display = 'block';
+  /* Reinicia animação de entrada */
+  bar.style.animation = 'none';
+  requestAnimationFrame(() => { bar.style.animation = ''; });
+}
 
 /* =========================================================
    TOAST
@@ -12397,48 +12782,53 @@ function openFarmacoDetail(id) {
     </div>`;
   }
 
-  /* ══ BLOCO 5 — EFEITOS ADVERSOS COMUNS ══ */
+  /* ══ BLOCO 5 — EFEITOS ADVERSOS COMUNS (lista tipográfica limpa) ══ */
   const common = get('commonAdverseEffects');
   if (common && Array.isArray(common) && common.length) {
+    const items = common.filter(Boolean);
     html += `<div class="fd-section">
-      <div class="fd-section-label"><i class="fa-solid fa-triangle-exclamation" style="color:#F0A842;"></i> ${isES?'EF. ADVERSOS COMUNES':'EF. ADVERSOS COMUNS'}</div>
-      <div class="fd-tag-list" style="padding:10px 14px;">${common.filter(Boolean).map(e=>`<span class="fd-tag warn">${e}</span>`).join('')}</div>
+      <div class="fd-section-label"><i class="fa-solid fa-triangle-exclamation" style="color:#F0A842;"></i> ${isES?'EF. ADVERSOS COMUNES':'EF. ADVERSOS COMUNS'} <span style="font-weight:400;color:var(--text-muted);font-size:9.5px;">(${items.length})</span></div>
+      <ul class="fd-clean-list fd-clean-list--warn">${items.map(e=>`<li><span class="fd-cl-dot">●</span><span>${e}</span></li>`).join('')}</ul>
     </div>`;
   }
 
-  /* ══ BLOCO 6 — EFEITOS ADVERSOS GRAVES ══ */
+  /* ══ BLOCO 6 — EFEITOS ADVERSOS GRAVES (lista tipográfica limpa) ══ */
   const danger = get('dangerousAdverseEffects');
   if (danger && Array.isArray(danger) && danger.length) {
+    const items = danger.filter(Boolean);
     html += `<div class="fd-section">
-      <div class="fd-section-label"><i class="fa-solid fa-circle-exclamation" style="color:#E05C6B;"></i> ${isES?'EF. ADVERSOS GRAVES':'EF. ADVERSOS GRAVES'}</div>
-      <div class="fd-tag-list" style="padding:10px 14px;">${danger.filter(Boolean).map(e=>`<span class="fd-tag danger">${e}</span>`).join('')}</div>
+      <div class="fd-section-label"><i class="fa-solid fa-circle-exclamation" style="color:#E05C6B;"></i> ${isES?'EF. ADVERSOS GRAVES':'EF. ADVERSOS GRAVES'} <span style="font-weight:400;color:var(--text-muted);font-size:9.5px;">(${items.length})</span></div>
+      <ul class="fd-clean-list fd-clean-list--danger">${items.map(e=>`<li><span class="fd-cl-dot">●</span><span>${e}</span></li>`).join('')}</ul>
     </div>`;
   }
 
-  /* ══ BLOCO 7 — CONTRAINDICAÇÕES ══ */
+  /* ══ BLOCO 7 — CONTRAINDICAÇÕES (lista tipográfica limpa) ══ */
   const contra = get('contraindications');
   if (contra && Array.isArray(contra) && contra.length) {
+    const items = contra.filter(Boolean);
     html += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-ban" style="color:#E05C6B;"></i> ${isES?'CONTRAINDICACIONES':'CONTRAINDICAÇÕES'}</div>
-      <div class="fd-tag-list" style="padding:10px 14px;">${contra.filter(Boolean).map(e=>`<span class="fd-tag danger">${e}</span>`).join('')}</div>
+      <ul class="fd-clean-list fd-clean-list--danger">${items.map(e=>`<li><span class="fd-cl-dot" style="color:#F87171;">&#x25A0;</span><span>${e}</span></li>`).join('')}</ul>
     </div>`;
   }
 
-  /* ══ BLOCO 8 — ALERTAS CLÍNICOS ══ */
+  /* ══ BLOCO 8 — ALERTAS CLÍNICOS (lista tipográfica limpa) ══ */
   const risks = get('risksByPatient');
   if (risks && Array.isArray(risks) && risks.filter(Boolean).length) {
+    const items = risks.filter(Boolean);
     html += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-shield-halved" style="color:#A78BFA;"></i> ${isES?'ALERTAS CLÍNICOS':'ALERTAS CLÍNICOS'}</div>
-      <div class="fd-tag-list" style="padding:10px 14px;">${risks.filter(Boolean).map(r=>`<span class="fd-tag warn">${r}</span>`).join('')}</div>
+      <ul class="fd-clean-list fd-clean-list--warn">${items.map(r=>`<li><span class="fd-cl-dot" style="color:#A78BFA;">●</span><span>${r}</span></li>`).join('')}</ul>
     </div>`;
   }
 
-  /* ══ BLOCO 9 — APRESENTAÇÕES COMERCIAIS ══ */
+  /* ══ BLOCO 9 — APRESENTAÇÕES COMERCIAIS (lista tipográfica limpa) ══ */
   const presentation = get('presentation');
   if (presentation && Array.isArray(presentation) && presentation.length) {
+    const items = presentation.filter(Boolean);
     html += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-box" style="color:#38BDF8;"></i> ${isES?'PRESENTACIONES':'APRESENTAÇÕES'}</div>
-      <div class="fd-tag-list" style="padding:10px 14px;">${presentation.filter(Boolean).map(p=>`<span class="fd-tag safe">${p}</span>`).join('')}</div>
+      <ul class="fd-clean-list fd-clean-list--safe">${items.map(p=>`<li><span class="fd-cl-dot">●</span><span>${p}</span></li>`).join('')}</ul>
     </div>`;
   }
 
@@ -12466,6 +12856,10 @@ function openFarmacoDetail(id) {
   modal.scrollTop = 0;
   overlay.style.display = 'flex';
 
+  /* REQ-5: Exibe o botão X flutuante */
+  const floatClose = document.getElementById('fd-floating-close');
+  if (floatClose) floatClose.style.display = 'flex';
+
   /* Duplo rAF garante que o browser processa o display:flex antes de adicionar .open */
   requestAnimationFrame(() => {
     requestAnimationFrame(() => modal.classList.add('open'));
@@ -12475,10 +12869,13 @@ function openFarmacoDetail(id) {
 
 /* Fecha o modal de detalhe */
 function closeFarmacoDetail() {
-  const overlay = document.getElementById('fd-modal-overlay');
-  const modal   = document.getElementById('fd-modal');
+  const overlay     = document.getElementById('fd-modal-overlay');
+  const modal       = document.getElementById('fd-modal');
+  const floatClose  = document.getElementById('fd-floating-close');
   if (!modal) return;
   modal.classList.remove('open');
+  /* REQ-5: Esconde o botão X flutuante junto com o modal */
+  if (floatClose) floatClose.style.display = 'none';
   setTimeout(() => {
     if (overlay) overlay.style.display = 'none';
     document.body.style.overflow = '';
@@ -12496,6 +12893,34 @@ window._fdActiveDrugId = null; /* rastreado por openFarmacoDetail */
 
 function _fdCalcDoseFromModal() {
   const drugId = window._fdActiveDrugId;
+
+  /* ── REQ-3: Verifica se há paciente cadastrado ── */
+  const pd = window.patientData || null;
+  const hasPatient = pd && (pd.weight || pd.age || pd.clcr);
+
+  /* CENÁRIO A: sem paciente → abre QE modal para cadastro */
+  if (!hasPatient) {
+    /* Fecha o modal do fármaco primeiro, depois abre o QE */
+    closeFarmacoDetail();
+    setTimeout(() => {
+      /* Passa o drugId para re-abrir automaticamente após salvar */
+      window._fdPendingDrugId = drugId;
+      if (typeof openQuickEdit === 'function') {
+        openQuickEdit('full');
+        /* Injeta mensagem contextual no header do QE */
+        const qeTitle = document.getElementById('qe-title');
+        const qeSub   = document.getElementById('qe-sub');
+        const isES = typeof currentLang !== 'undefined' && currentLang === 'es';
+        if (qeTitle) qeTitle.textContent = isES ? 'Datos del Paciente' : 'Dados do Paciente';
+        if (qeSub)   qeSub.textContent   = isES
+          ? 'Complete para calcular la dosis personalizada'
+          : 'Preencha para calcular a dose personalizada';
+      }
+    }, 100);
+    return;
+  }
+
+  /* CENÁRIO B: paciente cadastrado → pipeline normal */
 
   /* 1. Fecha a ficha atual */
   closeFarmacoDetail();
@@ -12527,6 +12952,144 @@ function _fdCalcDoseFromModal() {
       }, 220);
     }, 120);
   }, 80);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   _fdCopyPrescricao() — v2.5.0
+   Botão "Copiar Prescrição" no rodapé do modal de fármacos (#fd-modal).
+
+   CENÁRIO A — patientData preenchido: copia dose individualizada
+               com perfil clínico completo (peso, ClCr, faixa renal).
+   CENÁRIO B — sem paciente: copia posologia genérica de referência.
+
+   Feedback visual: botão muda para verde "Copiado!" por 2s exatos.
+   Fallback clipboard: textarea execCommand para WebViews iOS/Android.
+══════════════════════════════════════════════════════════════ */
+function _fdCopyPrescricao() {
+  const isES   = (typeof currentLang !== 'undefined' && currentLang === 'es');
+  const lang   = isES ? 'es' : 'pt';
+  const drugId = window._fdActiveDrugId;
+
+  /* ── Resolve fármaco ── */
+  const db   = (typeof DRUG_DB !== 'undefined') ? DRUG_DB : [];
+  const drug = db.find(d => d.id === drugId);
+  if (!drug) {
+    if (typeof showToast === 'function')
+      showToast(isES ? '⚠ Fármaco no identificado' : '⚠ Fármaco não identificado');
+    return;
+  }
+
+  /* ── Nome resolvido ── */
+  const drugName = (typeof _fdResolveName === 'function')
+    ? _fdResolveName(drug)
+    : (drug.name || drug.nome || drugId);
+
+  /* ── Dados do paciente ── */
+  const pd         = window.patientData || null;
+  const hasPatient = pd && (pd.weight || pd.age || pd.clcr);
+
+  let textToCopy = '';
+
+  /* ════════════════════════════════════
+     CENÁRIO A — paciente com dados
+  ════════════════════════════════════ */
+  if (hasPatient) {
+    let hero = null;
+    try {
+      if (typeof _fdResolveHeroPatient === 'function')
+        hero = _fdResolveHeroPatient(drug, pd, lang);
+    } catch(_e) {}
+
+    const dose  = hero?.heroDose || '—';
+    const freq  = hero?.heroFreq || '';
+    const via   = hero?.heroVia  || '';
+    const faixa = hero?.renalFaixa || '';
+
+    const posologia = [dose, via, freq ? `(${freq})` : ''].filter(Boolean).join(' ');
+    const ajuste    = faixa ? ` · Ajuste Renal: ${faixa}` : '';
+
+    /* Métricas do paciente */
+    const partes = [];
+    if (pd.weight) partes.push(`Peso: ${pd.weight} kg`);
+    if (pd.age)    partes.push(`${isES ? 'Edad' : 'Idade'}: ${pd.age} ${isES ? 'años' : 'anos'}`);
+    if (pd.sex)    partes.push(pd.sex === 'F' ? 'Fem.' : 'Masc.');
+    if (pd.clcr)   partes.push(`ClCr: ${Math.round(pd.clcr)} mL/min`);
+    if (pd.isHD)   partes.push('HD');
+    if (pd.pregnant || pd.gestante) partes.push('Gestante');
+    const metricas = partes.join(' · ');
+
+    textToCopy = isES
+      ? `💊 Fármaco: ${drugName}\n📋 Dosis: ${posologia}${ajuste}\n👤 Paciente: ${metricas}\n⚕ Generado por MedCases Pro`
+      : `💊 Fármaco: ${drugName}\n📋 Dose: ${posologia}${ajuste}\n👤 Paciente: ${metricas}\n⚕ Gerado por MedCases Pro`;
+
+  /* ════════════════════════════════════
+     CENÁRIO B — sem paciente (bula)
+  ════════════════════════════════════ */
+  } else {
+    let doseRef = '—';
+    try {
+      if (typeof _fdResolveHeroPatient === 'function') {
+        const neutral = { weight:70, age:40, sex:'M', height:170,
+          creatinine:1.0, clcr:90, imc:24, pesoIdeal:70,
+          pregnant:false, gestante:false };
+        const h = _fdResolveHeroPatient(drug, neutral, lang);
+        if (h?.heroDose) {
+          doseRef = [h.heroDose, h.heroVia, h.heroFreq ? `(${h.heroFreq})` : '']
+            .filter(Boolean).join(' ');
+        }
+      }
+    } catch(_e) {}
+
+    textToCopy = isES
+      ? `💊 Fármaco: ${drugName}\n📋 Posología de referencia: ${doseRef}\n⚠ Dosis estándar — sin ajuste por paciente\n⚕ Generado por MedCases Pro`
+      : `💊 Fármaco: ${drugName}\n📋 Posologia de referência: ${doseRef}\n⚠ Dose padrão — sem ajuste por paciente\n⚕ Gerado por MedCases Pro`;
+  }
+
+  /* ── Cópia para clipboard (com fallback para WebView iOS/Android) ── */
+  function _doCopy(text) {
+    if (navigator.clipboard?.writeText) return navigator.clipboard.writeText(text);
+    return new Promise((resolve, reject) => {
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0;font-size:16px;';
+        document.body.appendChild(ta);
+        ta.focus(); ta.select();
+        const ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+        ok ? resolve() : reject(new Error('execCommand failed'));
+      } catch(e) { reject(e); }
+    });
+  }
+
+  _doCopy(textToCopy)
+    .then(() => {
+      /* ── Feedback visual: verde "Copiado!" por 2s ── */
+      const btn    = document.getElementById('fd-btn-copy-label');
+      const iconEl = document.getElementById('fd-btn-copy-icon');
+      const txtEl  = document.getElementById('fd-btn-copy-text');
+
+      if (btn) {
+        btn.classList.add('copied');
+        if (iconEl) iconEl.className = 'fa-solid fa-check';
+        if (txtEl)  txtEl.textContent = isES ? '¡Copiado!' : 'Copiado!';
+
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          if (iconEl) iconEl.className = 'fa-solid fa-clipboard-check';
+          if (txtEl)  txtEl.textContent = (typeof t === 'function')
+            ? t('fd_btn_copy')
+            : (isES ? 'Copiar Prescripción' : 'Copiar Prescrição');
+        }, 2000);
+      }
+
+      if (typeof showToast === 'function')
+        showToast(isES ? '✓ Prescripción copiada' : '✓ Prescrição copiada', 1800);
+    })
+    .catch(() => {
+      if (typeof showToast === 'function')
+        showToast(isES ? '⚠ No se pudo copiar' : '⚠ Não foi possível copiar', 2200);
+    });
 }
 
 /* Helper: destaca doses em negrito ciano */
@@ -16684,18 +17247,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  /* ─── Espelha os dados nos inputs legados para manter compatibilidade ─── */
+  /* ─── Espelha os dados em TODOS os inputs (bidirecional) — v2.5.0 ─── */
   function _hmMirrorToLegacyInputs(data) {
+    /* Mapa completo: id-do-input → valor
+       Cobre Home (hm-*), Calculadoras legacy (inp-*) e Quick-Edit (qe-*) */
     const map = {
-      'inp-weight':    data.weight,
-      'inp-age':       data.age,
-      'inp-height':    data.height,
+      /* Calculadoras legacy */
+      'inp-weight':     data.weight,
+      'inp-age':        data.age,
+      'inp-height':     data.height,
+      'inp-creatinine': data.creatinine,
+      /* Home — injeta de volta para a tela Home */
+      'hm-weight':      data.weight,
+      'hm-age':         data.age,
+      'hm-height':      data.height,
+      'hm-creatinina':  data.creatinine,
+      /* Quick-Edit modal — mantém pré-preenchido */
+      'qe-weight':      data.weight,
+      'qe-age':         data.age,
+      'qe-height':      data.height,
+      'qe-creatinine':  data.creatinine,
     };
+
     Object.entries(map).forEach(([id, val]) => {
       const el = document.getElementById(id);
-      if (el && val != null) el.value = val;
+      if (!el) return;
+      if (val != null && val > 0) el.value = val;
     });
-    /* ClCr não tem input próprio no legado — fica apenas no patientData */
+
+    /* Sexo: sincroniza botões de Home + Calculadoras + QE */
+    if (data.sex) {
+      const s = data.sex;
+      if (typeof currentSex !== 'undefined') currentSex = s;
+      document.getElementById('btn-male')?.classList.toggle('active', s === 'M');
+      document.getElementById('btn-female')?.classList.toggle('active', s === 'F');
+      document.getElementById('qe-btn-m')?.classList.toggle('active-m', s === 'M');
+      document.getElementById('qe-btn-f')?.classList.toggle('active-f', s === 'F');
+      /* Home nova (hm-btn-*) */
+      document.getElementById('hm-btn-male')
+        ?.classList.toggle('hm-sex-btn--active', s === 'M');
+      document.getElementById('hm-btn-female')
+        ?.classList.toggle('hm-sex-btn--active', s === 'F');
+      document.getElementById('hm-btn-female')
+        ?.classList.toggle('hm-sex-btn--fem', s === 'F');
+    }
+
+    /* ClCr: campo oculto da home */
+    if (data.clcr) {
+      const clcrEl = document.getElementById('hm-clcr');
+      if (clcrEl) clcrEl.value = data.clcr;
+    }
   }
 
   /* ─────────────────────────────────────────────

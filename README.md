@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-2.3.0-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-2.6.0-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-PWA%20%7C%20WebView-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/i18n-PT%20%7C%20ES-yellow?style=for-the-badge)
@@ -648,6 +648,270 @@ A partir daí, cada push para `main` dispara o pipeline automaticamente.
 ---
 
 ## 🔄 Changelog por Sessão
+
+### 2026-06-16 — v2.6.0: Contraste WCAG nos Scores + Remoção de Cabeçalho Redundante
+
+#### REQ 1 — Correção de Contraste WCAG AA nos Cards de Resultado de Score
+
+**Arquivo:** `index.html` — bloco CSS `.score-result-box` (~linha 3327)
+
+**Problema:** Todos os textos internos dos cards de resultado de score (`.score-result-label`, `.score-sub-note`, `.score-action-tip`) usavam `var(--text-secondary)` = `#94A3B8` e `var(--text-muted)` = `#475569` sobre o fundo verde escuro `#0A2A1A` — ratio de contraste ~1.8:1 (WCAG AAA exige 7:1, AA exige 4.5:1). Textos invisíveis em uso clínico.
+
+| Seletor CSS | Antes | Depois | Ratio estimado |
+|---|---|---|---|
+| `.score-result-label` | `var(--text-secondary)` = #94A3B8 | `rgba(255,255,255,0.90)` | ~8.1:1 ✅ |
+| `.score-sub-note` | `var(--text-muted)` = #475569 | `rgba(255,255,255,0.80)` | ~7.2:1 ✅ |
+| `.score-action-tip` | `var(--text-secondary)` | `rgba(255,255,255,0.92)` | ~8.4:1 ✅ |
+| `.score-action-tip strong` | herdado | `#7DD3FC` (cyan-300) | alto contraste ✅ |
+| `.severity-low/mid/high/purple/info` | var herdado | `color:#ffffff` + `text-shadow` | ✅ |
+
+**Light mode** — overrides completos adicionados via `body.light-mode .score-*` com cores escuras sobre fundo claro.
+
+---
+
+#### REQ 2 — Remoção do Cabeçalho Redundante da Central de Calculadoras
+
+**Arquivo:** `index.html` — HTML linha ~6816 + CSS linha ~1597
+
+**Problema:** A barra superior do app já exibe o título "CALCULADORA CLÍNICA". Logo abaixo havia um bloco `<header class="calc-hub-header">` com "Central de Calculadoras / Selecione o módulo clínico" — redundância de 2 linhas desperdiçando espaço útil em telas mobile.
+
+**Alterações:**
+
+| Tipo | Antes | Depois |
+|---|---|---|
+| **HTML** `#page-calculators` | `<header class="calc-hub-header">...</header>` presente | Bloco removido — comentário `<!-- calc-hub-header REMOVIDO v2.6.0 -->` |
+| **CSS** `.calc-hub-header` | `padding:4px 0 12px` + h2/p estilizados | `display:none !important` (eliminado, sem espaçamento residual) |
+
+**Resultado:** O grid de botões coloridos (Pediatria, Gestante, Infusão, Eletrólitos, etc.) agora começa imediatamente abaixo do topbar roxo, maximizando área útil no celular.
+
+---
+
+#### Validação v2.6.0
+
+```
+Novos erros JavaScript: 0  ✅
+[warn] procainamida torsadesPrevias — pré-existente, não relacionado  ⚠️ (known)
+Contraste WCAG AA: todos os textos de score ≥ 4.5:1  ✅
+Cabeçalho duplicado: removido, grid inicia diretamente abaixo do topbar  ✅
+```
+
+---
+
+### 2026-06-16 — v2.5.0: i18n Fix + Sincronização Bidirecional + Copiar Prescrição
+
+#### REQ 1 — Fix i18n: Strings Travadas em PT no Card da Home (modo ES)
+
+**Arquivo:** `js/medcases-ux-v2.js`
+
+| Função | Bug | Correção |
+|---|---|---|
+| `_buildCopyBtnHtml()` linha ~422 | Ambos os branches do ternário retornavam `'Copiar Prescrição'` (PT) | Branch ES agora retorna `'Copiar Prescripción'` |
+| `_hmCopyFeedback()` linha ~472 | Sobrescrevia `innerHTML` inteiro (perdia ícone WhatsApp) | Opera apenas no `<span class="hm-copy-rx-label">`, preserva ícone |
+
+```javascript
+// ANTES (bug):
+${isES ? 'Copiar Prescrição' : 'Copiar Prescrição'}  // ambos PT!
+
+// DEPOIS (fix):
+const label = isES ? 'Copiar Prescripción' : 'Copiar Prescrição';
+```
+
+---
+
+#### REQ 2 — Sincronização Bidirecional dos Dados do Paciente
+
+**Arquivo:** `index.html`
+
+**`_hmMirrorToLegacyInputs(data)`** — função expandida de 3 para 15 campos mapeados:
+
+| Grupo | Inputs sincronizados |
+|---|---|
+| Calculadoras legacy | `inp-weight`, `inp-age`, `inp-height`, `inp-creatinine` |
+| Home nova | `hm-weight`, `hm-age`, `hm-height`, `hm-creatinina`, `hm-clcr` |
+| Quick-Edit modal | `qe-weight`, `qe-age`, `qe-height`, `qe-creatinine` |
+| Botões de sexo | `btn-male`, `btn-female`, `qe-btn-m`, `qe-btn-f`, `hm-btn-male`, `hm-btn-female` |
+
+**`saveQuickEdit()`** — novo bloco de persistência inserido antes de `closeQuickEdit()`:
+- Monta `_qeSnapshot` com os campos válidos do QE
+- Faz merge com o `localStorage` existente (não apaga campos não editados)
+- Chama `_hmMirrorToLegacyInputs(_merged)` imediatamente
+- Garante que a Home está sempre atualizada mesmo sem o usuário ter passado por ela
+
+---
+
+#### REQ 3 — Novo Botão “Copiar Prescrição” no Rod apé do Modal de Fármacos
+
+**Arquivo:** `index.html`
+
+**HTML** — `.fd-footer` atualizado:
+```html
+<!-- Botão "Fechar" removido — substituído pelo X flutuante do REQ-5 (v2.4.0) -->
+<button class="fd-btn-copy" id="fd-btn-copy-label" onclick="_fdCopyPrescricao()">
+  <i class="fa-solid fa-clipboard-check" id="fd-btn-copy-icon"></i>
+  <span id="fd-btn-copy-text" data-i18n="fd_btn_copy">Copiar Prescrição</span>
+</button>
+<button class="fd-btn-study" id="fd-btn-calc-label" onclick="_fdCalcDoseFromModal()">
+  <i class="fa-solid fa-calculator"></i>
+  <span data-i18n="fd_btn_calc">Calcular Dose</span>
+</button>
+```
+
+**CSS** `.fd-btn-copy` — gradiente roxo MedCases Pro, estado `.copied` verde esmeralda.
+
+**Novas chaves i18n:**
+
+| Chave | PT | ES |
+|---|---|---|
+| `fd_btn_copy` | `Copiar Prescrição` | `Copiar Prescripción` |
+| `fd_btn_copy_ok` | `Copiado!` | `¡Copiado!` |
+
+**Nova função JS `_fdCopyPrescricao()`:**
+
+| Cenário | Comportamento |
+|---|---|
+| **A — Com paciente** | Copia: `💊 Fármaco · Dose individualizada · Perfil clínico (Peso/Idade/Sexo/ClCr/Ajuste Renal)` |
+| **B — Sem paciente** | Copia: `💊 Fármaco · Posologia de referência (dose padrão bula)` |
+| **Feedback** | Botão fica verde `"Copiado!"` / `"¡Copiado!"` por 2 segundos |
+| **Fallback** | `textarea.execCommand('copy')` para WebViews iOS/Android sem Clipboard API |
+
+---
+
+#### Validação v2.5.0
+
+```
+[log] [MedCases] DRUG_DB populado: 247 fármacos       ✅
+[log] [MedCases] PRESCRICOES_DB carregado: 125 protocolos  ✅
+[log] [MedCases] ALL_DRUGS_DB montado: 247 entradas    ✅
+[warn] procainamida torsadesPrevias — pré-existente, não relacionado  ⚠️ (known)
+Novos erros JavaScript: 0  ✅
+```
+
+---
+
+### 2026-06-16 — v2.4.0: Design Polish + UX Inteligente — 5 Requisitos
+
+#### REQ 1 — Correção Crítica: Background Roxo MedCases Pro no Modal do Paciente
+
+| Seletor | Antes | Depois |
+|---|---|---|
+| `#qe-modal` | `background: #0D1525` | `background: #0F091E` (var(--bg-deep)) |
+| `#fd-modal` | `background: #0D1525` | `background: #0F091E` |
+| `body:not(.light-mode) #fd-modal` | `background: #142235` | `background: #0F091E !important` |
+
+Todos os modais agora usam a cor roxa oficial `#0F091E` da identidade visual MedCases Pro, blindada com `!important` contra herança iOS.
+
+---
+
+#### REQ 2 — Card Global "Paciente Atual" em Todas as Abas
+
+**Novo elemento HTML:** `#global-patient-bar` inserido entre o topbar e o `#scroll-content` no `#app`.
+
+**Comportamento:**
+- ❌ **Oculto** na aba Home (sempre)
+- ❌ **Oculto** quando não há paciente cadastrado
+- ✅ **Visível** em Calculadoras, Fármacos, Prescrições, ATB, Elec, Infusão, NEWS2, Obs, Ped quando `window.patientData` tem dados
+
+**Chips exibidos dinamicamente:**
+- Peso (kg), Idade (anos), Sexo (Masc./Fem.), ClCr com código de cor por severidade, Flag HD, Flag Gestante
+
+**Nova função JS:**
+```javascript
+function _updateGlobalPatientBar(currentPage) { ... }
+```
+
+**Hooks adicionados:**
+- `navigate(page)` → chama `_updateGlobalPatientBar(page)`
+- `saveQuickEdit()` → chama `_updateGlobalPatientBar()` após `recalculate()`
+- `recalculate()` → chama `_updateGlobalPatientBar()` após `_onPatientDataUpdated()`
+
+**Novas chaves i18n:**
+
+| Chave | PT | ES |
+|---|---|---|
+| `gpb_label` | `Paciente Atual` | `Paciente Actual` |
+| `gpb_edit` | `Editar` | `Editar` |
+
+---
+
+#### REQ 3 — Fluxo Inteligente do Botão "Calcular Dose"
+
+`_fdCalcDoseFromModal()` agora tem dois cenários distintos:
+
+**Cenário A — Sem paciente cadastrado:**
+1. Fecha o modal do fármaco
+2. Armazena `window._fdPendingDrugId = drugId`
+3. Abre `openQuickEdit('full')` com mensagem contextual: *"Preencha para calcular a dose personalizada"*
+4. Após `saveQuickEdit()`, `_fdPendingDrugId` é detectado e re-abre automaticamente a ficha do fármaco com os dados reciém-cadastrados
+
+**Cenário B — Com paciente cadastrado:**
+- Pipeline existente mantido intacto (navega → busca → abre ficha)
+
+---
+
+#### REQ 4 — Design Limpo (Typo-Driven): Fim dos Sub-Cards Aninhados
+
+**Blocos refatorados em `openFarmacoDetail()`:**
+
+| Bloco | Antes | Depois |
+|---|---|---|
+| Efeitos Adversos Comuns | `<span class="fd-tag warn">` em flex-wrap | `<ul class="fd-clean-list fd-clean-list--warn">` |
+| Efeitos Adversos Graves | `<span class="fd-tag danger">` | `<ul class="fd-clean-list fd-clean-list--danger">` |
+| Contraindicações | `<span class="fd-tag danger">` | `<ul class="fd-clean-list fd-clean-list--danger">` |
+| Alertas Clínicos | `<span class="fd-tag warn">` | `<ul class="fd-clean-list fd-clean-list--warn">` |
+| Apresentações | `<span class="fd-tag safe">` | `<ul class="fd-clean-list fd-clean-list--safe">` |
+
+**Novo CSS `.fd-clean-list`:**
+```css
+.fd-clean-list { list-style:none; display:flex; flex-direction:column; gap:0; padding:8px 14px 4px; }
+.fd-clean-list li { display:flex; align-items:baseline; gap:8px; padding:5px 0;
+  border-bottom:1px solid rgba(255,255,255,0.04); font-size:12.5px; color:var(--text-primary); }
+.fd-clean-list--warn   li { color:#FEF3C7; }
+.fd-clean-list--danger li { color:#FEE2E2; }
+.fd-clean-list--safe   li { color:#D1FAE5; }
+```
+
+---
+
+#### REQ 5 — Botão X Flutuante Fixo no Canto Superior Direito do Modal de Fármacos
+
+**Novo elemento HTML:**
+```html
+<button id="fd-floating-close" onclick="closeFarmacoDetail()" aria-label="Fechar ficha do fármaco">
+  <i class="fa-solid fa-xmark"></i>
+</button>
+```
+Posicionado **fora** do `#fd-modal` (sem overflow), dentro do `#fd-modal-overlay`.
+
+**CSS:**
+```css
+#fd-floating-close {
+  position: fixed;
+  top: max(18px, env(safe-area-inset-top, 18px));
+  right: 16px;
+  z-index: 10202; /* acima do fd-modal */
+  width: 38px; height: 38px; border-radius: 50%;
+  background: rgba(15,9,30,0.90); backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(167,139,250,0.45);
+}
+```
+
+**Controle via JS:**
+- `openFarmacoDetail()` → `floatClose.style.display = 'flex'`
+- `closeFarmacoDetail()` → `floatClose.style.display = 'none'`
+
+---
+
+#### Validação Final v2.4.0
+
+```
+[log] [MedCases] DRUG_DB populado: 247 fármacos       ✅
+[log] [MedCases] PRESCRICOES_DB carregado: 125 protocolos  ✅
+[log] [MedCases] ALL_DRUGS_DB montado: 247 entradas    ✅
+[warn] procainamida torsadesPrevias — pré-existente, não relacionado  ⚠️ (known)
+Novos erros JavaScript: 0  ✅
+```
+
+---
 
 ### 2026-06-16 — v2.2.0: Refatoração Definitiva — 6 Requisitos Unificados
 

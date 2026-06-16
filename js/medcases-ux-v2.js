@@ -414,12 +414,18 @@
      Retorna o HTML do botão de copiar prescrição.
   ============================================================ */
   function _buildCopyBtnHtml(drugId, lang) {
-    const isES = (lang === 'es');
+    const isES  = (lang === 'es');
+    /* v2.5.0 FIX: branch ES retornava PT incorretamente */
+    const label = isES ? 'Copiar Prescripción' : 'Copiar Prescrição';
+    const aria  = isES ? 'Copiar prescripción'  : 'Copiar prescrição';
     return `
       <div class="hm-copy-rx-wrap">
-        <button class="hm-copy-rx-btn" onclick="hmCopyPrescription('${drugId}')" aria-label="${isES ? 'Copiar prescripción' : 'Copiar prescrição'}">
+        <button class="hm-copy-rx-btn"
+                id="hm-copy-btn-${drugId}"
+                onclick="hmCopyPrescription('${drugId}')"
+                aria-label="${aria}">
           <i class="fa-brands fa-whatsapp"></i>
-          ${isES ? 'Copiar Prescrição' : 'Copiar Prescrição'}
+          <span class="hm-copy-rx-label">${label}</span>
         </button>
       </div>`;
   }
@@ -468,15 +474,23 @@
     }
   };
 
-  /* Feedback visual no botão após cópia bem-sucedida */
+  /* Feedback visual no botão após cópia bem-sucedida — v2.5.0 */
   function _hmCopyFeedback(btn, isES) {
     if (!btn) return;
-    const original = btn.innerHTML;
+    /* Preserva ícone WhatsApp — opera apenas no <span> de label */
+    const labelEl   = btn.querySelector('.hm-copy-rx-label');
+    const iconEl    = btn.querySelector('i');
+    const origLabel = labelEl ? labelEl.textContent : '';
+    const origIcon  = iconEl  ? iconEl.className    : '';
+
     btn.classList.add('is-copied');
-    btn.innerHTML = `<i class="fa-solid fa-check"></i> ${isES ? '¡Copiado!' : 'Copiado!'}`;
+    if (iconEl)  iconEl.className    = 'fa-solid fa-check';
+    if (labelEl) labelEl.textContent = isES ? '¡Copiado!' : 'Copiado!';
+
     setTimeout(() => {
       btn.classList.remove('is-copied');
-      btn.innerHTML = original;
+      if (iconEl)  iconEl.className    = origIcon;
+      if (labelEl) labelEl.textContent = origLabel;
     }, 1800);
   }
 
