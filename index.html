@@ -7265,7 +7265,7 @@
       <button class="fd-btn-close" onclick="closeFarmacoDetail()">
         <i class="fa-solid fa-xmark"></i> Fechar
       </button>
-      <button class="fd-btn-study" onclick="closeFarmacoDetail(); navigate('calculators'); setTimeout(()=>showAdultPanel('drugs'),80);">
+      <button class="fd-btn-study" onclick="calcularDoseFromModal();">
         <i class="fa-solid fa-calculator"></i> Calcular Dose
       </button>
     </div>
@@ -8951,6 +8951,8 @@ function showAdultPanel(panel) {
     const lc = document.getElementById('drug-list-container');
     if (lc) { lc.innerHTML = ''; lc.style.display = 'none'; }
     _updateDrugSearchHint();
+    /* Se há fármaco pendente vindo do modal "Calcular Dose", carrega após render */
+    setTimeout(() => _loadPendingDrug(), 150);
   }
   if (panel === 'fluids') { calcFluids(); applySelectTranslations(); }
   if (panel === 'hemo') {
@@ -10469,6 +10471,8 @@ function saveQuickEdit() {
   /* Pequeno delay para a animação de fechar não competir com o recalc */
   setTimeout(() => {
     recalculate();
+    /* Se havia fármaco pendente do modal "Calcular Dose", carrega agora */
+    if (window._pendingCalcDrugId) _loadPendingDrug();
     /* Feedback visual */
     showToast(currentLang === 'es' ? '✓ Datos actualizados' : '✓ Dados atualizados');
   }, 120);
@@ -12180,6 +12184,69 @@ function closeFarmacoDetail() {
     if (overlay) overlay.style.display = 'none';
     document.body.style.overflow = '';
   }, 340);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   calcularDoseFromModal()
+   Chamado pelo botão "Calcular Dose" no modal de detalhe do fármaco.
+   Persiste o ID do fármaco em window._pendingCalcDrugId e navega para a
+   aba Calculadoras. Se o paciente já estiver registrado, o ID é carregado
+   imediatamente por _loadPendingDrug(); caso contrário fica pendente até
+   saveQuickEdit() ou hmFixarDados() serem chamados.
+───────────────────────────────────────────────────────────────────────── */
+function calcularDoseFromModal() {
+  const modal  = document.getElementById('fd-modal');
+  const drugId = modal
+    ? (modal.dataset.currentDrugId || window._lastCalcDrugId || null)
+    : (window._lastCalcDrugId || null);
+
+  if (!drugId) {
+    /* Fallback: navega normalmente sem contexto de fármaco */
+    closeFarmacoDetail();
+    navigate('calculators');
+    setTimeout(() => showAdultPanel('drugs'), 80);
+    return;
+  }
+
+  /* Persiste o ID ANTES de fechar o modal */
+  window._pendingCalcDrugId = drugId;
+
+  closeFarmacoDetail();
+  navigate('calculators');
+  /* showAdultPanel('drugs') chamará _loadPendingDrug() internamente */
+  setTimeout(() => showAdultPanel('drugs'), 80);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   _loadPendingDrug()
+   Verifica se há um fármaco pendente (window._pendingCalcDrugId).
+   • Paciente com dados suficientes → selectDrug() + calcDrugDose() direto.
+   • Sem paciente registrado       → mantém pendente para o próximo save.
+───────────────────────────────────────────────────────────────────────── */
+function _loadPendingDrug() {
+  const id = window._pendingCalcDrugId;
+  if (!id) return;
+
+  /* Verifica dados mínimos do paciente (peso, idade ou ClCr) */
+  const pd         = window.patientData || {};
+  const hasPatient = !!(pd.weight || pd.age || pd.clcr);
+
+  if (!hasPatient) {
+    /* Paciente não cadastrado — aguarda próximo save */
+    console.info('[MedCases] _loadPendingDrug: sem paciente, ID "' + id + '" pendente.');
+    return;
+  }
+
+  /* Limpa o pendente ANTES de executar para evitar loops */
+  window._pendingCalcDrugId = null;
+
+  try {
+    if (typeof selectDrug   === 'function') selectDrug(id);
+    if (typeof calcDrugDose === 'function') calcDrugDose(id);
+    console.info('[MedCases] _loadPendingDrug: fármaco "' + id + '" carregado.');
+  } catch (e) {
+    console.error('[MedCases] _loadPendingDrug erro:', e);
+  }
 }
 
 /* Helper: destaca doses em negrito ciano */
@@ -16378,6 +16445,9 @@ document.addEventListener('DOMContentLoaded', () => {
        Se o médico estava visualizando um fármaco na aba Calculadoras,
        atualiza imediatamente com o novo perfil do paciente.            */
     _patientDataDidChange();
+
+    /* Se havia fármaco pendente do modal "Calcular Dose", carrega agora */
+    if (window._pendingCalcDrugId) setTimeout(() => _loadPendingDrug(), 200);
 
     /* Feedback tátil no botão */
     const btn = document.getElementById('hm-fix-btn');
