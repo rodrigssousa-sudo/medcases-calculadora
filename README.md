@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-2.3.0-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-PWA%20%7C%20WebView-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/i18n-PT%20%7C%20ES-yellow?style=for-the-badge)
@@ -648,6 +648,220 @@ A partir daí, cada push para `main` dispara o pipeline automaticamente.
 ---
 
 ## 🔄 Changelog por Sessão
+
+### 2026-06-16 — v2.2.0: Refatoração Definitiva — 6 Requisitos Unificados
+
+#### REQ 1 — i18n Completo da Modal de Fármacos
+
+Novas chaves adicionadas ao objeto `i18n` (PT + ES):
+
+| Chave | PT | ES |
+|---|---|---|
+| `fd_btn_close` | `Fechar` | `Cerrar` |
+| `fd_btn_calc` | `Calcular Dose` | `Calcular Dosis` |
+| `chc_drugs_desc` | `Bula · Doses · Interações` | `Prospecto · Dosis · Interacciones` |
+
+Rodapé do `#fd-modal` refatorado: `<span data-i18n="fd_btn_close">` e `<span data-i18n="fd_btn_calc">` — atualizados automaticamente via `applyTranslations()` ao trocar idioma.
+
+#### REQ 2 — Reestruturação Visual dos Blocos de Posologia
+
+✅ Implementado na v2.1.0 — mantido intacto. Layout `.dp-top` / `.dp-meta` + `flex-direction: column` nas `.fd-renal-doses`.
+
+#### REQ 3 — Card Fármacos na Central de Calculadoras
+
+**Antes (quebrava o grid):**
+```html
+<span class="chc-count-badge" id="farmacos-total-count">...</span>
+<!-- badge absoluto espremendo o título -->
+```
+
+**Depois (limpo e responsivo):**
+```html
+<div class="chc-desc" id="farmacos-total-count" data-i18n="chc_drugs_desc">
+  Bula · Doses · Interações
+</div>
+<!-- _fdUpdateCount() escreve: "Busca inteligente · 247 fármacos" -->
+```
+
+`_fdUpdateCount()` agora escreve texto bilíngue no subtítulo:
+- PT: `Busca inteligente · ${total} fármacos`
+- ES: `Búsqueda inteligente · ${total} fármacos`
+
+#### REQ 4 — Sincronização do Card de Aviso do Paciente
+
+Adicionado ao final de `navigate()` em `index.html`:
+
+```javascript
+// Ativado para pages: 'calculators' | 'adult' | 'farmacos'
+if (page === 'calculators' || page === 'adult' || page === 'farmacos') {
+  // 1. Lê localStorage key 'medcases_hm_patient_v1'
+  // 2. Se patientData.weight está vazio mas LS tem dados → chama hmLoadPatient()
+  // 3. updateAdultBanner() é chamado imediatamente
+  // → Elimina card rosa "Paciente não cadastrado" falso positivo
+}
+```
+
+#### REQ 5 — Botão "Calcular Dose" Inteligente
+
+**Arquitetura do fluxo:**
+```
+openFarmacoDetail(id)
+  └─ window._fdActiveDrugId = id  ← rastreia fármaco ativo
+
+Clique "Calcular Dose"
+  └─ _fdCalcDoseFromModal()
+       ├─ closeFarmacoDetail()           (fecha ficha)
+       ├─ navigate('farmacos')           (vai para lista)
+       ├─ inp.value = drug.name          (injeta nome)
+       ├─ inp.dispatchEvent('input')     (filtra lista)
+       ├─ renderFarmacosList(nome)       (renderiza)
+       └─ openFarmacoDetail(drugId)      (reabre ficha — motor intacto)
+```
+
+**Motor de cálculo não foi tocado** — o atalho apenas simula a navegação do usuário, garantindo que o engine original processe tudo sem funções redundantes.
+
+#### REQ 6 — Performance e Remoção do Banner "Atualizando..."
+
+**`js/medcases-ux-v2.js` — Pull-to-Refresh silencioso:**
+```javascript
+// ANTES: banner roxo "↺ Atualizando..." com altura animada e labels
+// DEPOIS: elemento PTR com display:none, reload em 80ms, haptic mantido
+const ptr = document.createElement('div');
+ptr.style.cssText = 'display:none!important;height:0!important;...';
+```
+
+**`index.html` — CSS de supressão absoluta:**
+```css
+#ptr-indicator { display:none !important; height:0 !important; overflow:hidden !important; }
+```
+
+**`index.html` — Pré-inicialização idle (IIFE no final do `<script>`):**
+```javascript
+// requestIdleCallback após DOMContentLoaded:
+hmLoadPatient()       // restaura dados salvos
+updateAdultBanner()   // sincroniza estado visual
+_fdUpdateCount()      // popula contadores
+// Elimina delay e card rosa na 1ª abertura das abas
+```
+
+**Transições de aba otimizadas:**
+```css
+.section-page.active {
+  animation: fadeIn 0.22s ease;     /* era 0.28s */
+  will-change: opacity, transform;   /* GPU layer hint — elimina flicker */
+}
+```
+
+#### Validação Final v2.2.0
+```
+[log] [MedCases] DRUG_DB populado: 247 fármacos       ✅
+[log] [MedCases] PRESCRICOES_DB carregado: 125 protocolos  ✅
+[log] [MedCases] ALL_DRUGS_DB montado: 247 entradas    ✅
+[warn] procainamida torsadesPrevias — pré-existente, não relacionado  ⚠️ (known)
+Novos erros JavaScript: 0  ✅
+```
+
+---
+
+### 2026-06-16 — v2.1.0: i18n Completo + Reestruturação Visual dos Blocos de Posologia
+
+#### i18n — 6 Strings Internacionalizadas
+
+| Elemento | PT | ES | Mecanismo |
+|---|---|---|---|
+| Botão ficha técnica (sem paciente) | `Ver bula completa` | `Ver ficha completa` | Template literal `isES ? … : …` |
+| Botão ficha técnica (com paciente) | `Bula completa + Ajuste Renal` | `Ficha completa + Ajuste Renal` | Template literal `isES ? … : …` |
+| Título card Dados do Paciente | `Dados do Paciente` | `Datos del Paciente` | `data-i18n="hm_patient_title"` |
+| Subtítulo card Dados do Paciente | `Preencha para calcular doses` | `Complete para calcular dosis` | `data-i18n="hm_patient_subtitle"` |
+| Subtítulo fixado | `Dados fixados — usados nos cálculos` | `Datos fijados — usados en los cálculos` | `currentLang === 'es'` check inline |
+| Subtítulo reset (unfixed) | usa chave `hm_patient_subtitle` | usa chave `hm_patient_subtitle` | `t('hm_patient_subtitle')` |
+
+**Novas chaves adicionadas ao objeto `i18n`:**
+```javascript
+// i18n.pt:
+hm_btn_bula:         'Ver bula completa',
+hm_btn_bula_renal:   'Bula completa + Ajuste Renal',
+hm_patient_title:    'Dados do Paciente',
+hm_patient_subtitle: 'Preencha para calcular doses',
+
+// i18n.es:
+hm_btn_bula:         'Ver ficha completa',
+hm_btn_bula_renal:   'Ficha completa + Ajuste Renal',
+hm_patient_title:    'Datos del Paciente',
+hm_patient_subtitle: 'Complete para calcular dosis',
+```
+
+**Funções corrigidas:**
+- `calcShowInlineResult()` (linha ~13043, ~13135) — 2 instâncias
+- `hmShowInlineResult()` (linha ~16053, ~16150) — 2 instâncias
+- `_hmSetFixedState()` — estado fixado/não-fixado do card
+- `_fdUpdateCount()` — preparado para expansão futura com `currentLang`
+
+#### Visual — Reestruturação dos Blocos de Posologia Renal (`#fd-modal`)
+
+**CSS modificado (`.fd-renal-*` — bloco de Ajuste Renal da modal):**
+
+| Seletor | Antes | Depois |
+|---|---|---|
+| `.fd-renal-faixa` | `padding: 10px 15px` sem gap | `padding: 12px 15px 14px; display: flex; flex-direction: column; gap: 8px` |
+| `.fd-renal-doses` | `display: flex; flex-wrap: wrap; gap: 6px` (horizontal) | `display: flex; flex-direction: column; gap: 7px` (vertical) |
+| `.fd-renal-dose-pill` | `display: flex; align-items: center; gap: 5px; flex-wrap: wrap` (tudo em linha) | `display: flex; flex-direction: column; gap: 3px` + sub-divs `.dp-top` e `.dp-meta` |
+| `.fd-renal-dose-pill strong` | `font-size` herdado | `font-size: 12.5px; font-weight: 700` |
+| `.fd-renal-obs` | `display: flex; align-items: flex-start; gap: 5px; padding: 4px 0 0` | `display: block; margin-top: 2px; padding: 6px 9px 6px 10px; border-left: 2px solid rgba(148,163,184,0.25); border-radius: 0 6px 6px 0; background: rgba(255,255,255,0.03)` |
+
+**Novas classes de layout (`.dp-top` e `.dp-meta`):**
+```css
+/* Linha superior: tag via + dose em negrito */
+.fd-renal-dose-pill .dp-top {
+  display: flex; align-items: center; gap: 7px; flex-wrap: wrap;
+}
+/* Linha inferior: intervalo + máx (limpos, separados) */
+.fd-renal-dose-pill .dp-meta {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  margin-top: 1px; padding-left: 2px;
+}
+```
+
+**HTML gerado em `openFarmacoDetail()` — reestruturado para usar `.dp-top` e `.dp-meta`:**
+```html
+<!-- ANTES -->
+<div class="fd-renal-dose-pill fd-renal-dose-pill--vo">
+  <span class="fd-renal-via-label">VO</span>
+  <span>${dose}</span>
+  <span class="fd-renal-interval">...</span>
+  <span class="fd-renal-max">...</span>
+</div>
+
+<!-- DEPOIS -->
+<div class="fd-renal-dose-pill fd-renal-dose-pill--vo">
+  <div class="dp-top">
+    <span class="fd-renal-via-label">VO</span>
+    <strong>${dose}</strong>
+  </div>
+  <div class="dp-meta">  <!-- só renderizado se há intervalo ou máx -->
+    <span class="fd-renal-interval">...</span>
+    <span class="fd-renal-max">· máx: ...</span>
+  </div>
+</div>
+```
+
+**Benefícios visuais:**
+- ✅ Tag VO/EV/Ped em linha própria + dose em negrito imediatamente ao lado
+- ✅ Intervalo e dose máxima em linha limpa abaixo, não "amassados" na dose
+- ✅ Obs clínica como bloco isolado com `border-left` colorida — nunca inline
+- ✅ Respiração vertical entre faixas de ClCr via `gap: 8px` no flex column
+- ✅ Dose com cor personalizada por via: verde (VO) / cyan (EV) / âmbar (Ped)
+
+#### Validação Playwright
+```
+[log] [MedCases] DRUG_DB populado: 247 fármacos  ✅
+[log] [MedCases] PRESCRICOES_DB carregado: 125 protocolos  ✅
+[log] [MedCases] ALL_DRUGS_DB montado: 247 entradas  ✅
+[warn] procainamida ReferenceError: torsadesPrevias — pré-existente, não relacionado  ⚠️ (known)
+Novos erros JavaScript: 0 ✅
+```
+
+---
 
 ### 2026-06-14 — UX Refactoring v2: 6 Diretrizes de Alta Performance
 

@@ -23,6 +23,9 @@
     input::-webkit-inner-spin-button { -webkit-appearance:none; margin:0; }
     input[type=number] { -moz-appearance:textfield; }
     :root {
+      /* Safe area bottom para o visualViewport iOS handler */
+      --sab: env(safe-area-inset-bottom, 0px);
+
       /* ── Paleta MedCases Pro — Midnight Blue / Cyan ── */
       --bg-deep:#0F091E;        /* fundo geral: purple-midnight MedCases Pro */
       --bg-card:#1E293B;        /* cards: slate escuro */
@@ -841,8 +844,15 @@
 
     /* ============================================================ SECTION PAGES */
     .section-page { display:none; }
-    .section-page.active { display:block; animation:fadeIn 0.28s ease; }
-    @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+    .section-page.active {
+      display: block;
+      animation: fadeIn 0.22s ease;
+      will-change: opacity, transform; /* GPU layer hint — elimina flicker */
+    }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(5px)} to{opacity:1;transform:translateY(0)} }
+
+    /* REQ-6: Garante que o banner PTR (pull-to-refresh) nunca apareça em tela */
+    #ptr-indicator { display:none !important; height:0 !important; overflow:hidden !important; }
 
     /* ============================================================ HOME */
     /* home-header removido — redundante com topbar nativa */
@@ -2074,10 +2084,13 @@
       border-bottom:1px solid rgba(255,255,255,0.05);
       display:flex; align-items:flex-start; gap:6px;
     }
-    /* Faixa individual */
+    /* Faixa individual — com respiro vertical entre cards */
     .fd-renal-faixa {
       border-bottom:1px solid rgba(255,255,255,0.05);
-      padding:10px 15px 10px;
+      padding:12px 15px 14px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
     }
     .fd-renal-faixa:last-child { border-bottom:none; }
     .fd-renal-faixa--active {
@@ -2087,7 +2100,7 @@
     }
     .fd-renal-faixa-header {
       display:flex; align-items:center; gap:7px;
-      margin-bottom:7px;
+      margin-bottom:0;
     }
     .fd-renal-faixa-label {
       font-size:10px; font-weight:800; text-transform:uppercase;
@@ -2099,28 +2112,42 @@
       border:1px solid rgba(56,189,248,0.35);
       border-radius:6px; padding:2px 7px;
     }
-    /* Pills VO / EV / Ped */
+    /* Pills VO / EV / Ped — cada uma em linha própria */
     .fd-renal-doses {
-      display:flex; flex-wrap:wrap; gap:6px;
-      margin-bottom:6px;
+      display:flex; flex-direction:column; gap:7px;
     }
     .fd-renal-dose-pill {
-      display:flex; align-items:center; gap:5px; flex-wrap:wrap;
+      display:flex;
+      flex-direction:column;
+      gap:3px;
       font-size:11px; font-weight:500; color:#CBD5E1;
       background:rgba(255,255,255,0.05);
       border:1px solid rgba(255,255,255,0.08);
-      border-radius:10px; padding:5px 9px;
-      line-height:1.4;
+      border-radius:10px; padding:8px 11px;
+      line-height:1.45;
+    }
+    /* Linha superior: tag via + dose em negrito */
+    .fd-renal-dose-pill .dp-top {
+      display:flex; align-items:center; gap:7px; flex-wrap:wrap;
+    }
+    /* Linha inferior: intervalo + máx (clean, separados) */
+    .fd-renal-dose-pill .dp-meta {
+      display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+      margin-top:1px;
+      padding-left:2px;
     }
     .fd-renal-dose-pill--vo  { border-color:rgba(52,211,153,0.3); }
     .fd-renal-dose-pill--ev  { border-color:rgba(56,189,248,0.3); }
     .fd-renal-dose-pill--ped { border-color:rgba(251,191,36,0.3); }
-    .fd-renal-dose-pill strong { color:#38BDF8; font-weight:700; }
+    .fd-renal-dose-pill strong { color:#38BDF8; font-weight:700; font-size:12.5px; }
+    .fd-renal-dose-pill--vo  strong { color:#34D399; }
+    .fd-renal-dose-pill--ped strong { color:#FBBF24; }
     .fd-renal-via-label {
       font-size:8.5px; font-weight:900; text-transform:uppercase;
       letter-spacing:0.6px; color:#64748B;
       background:rgba(255,255,255,0.07);
-      border-radius:5px; padding:1px 5px;
+      border-radius:5px; padding:2px 6px;
+      flex-shrink:0;
     }
     .fd-renal-dose-pill--vo  .fd-renal-via-label { color:#34D399; background:rgba(52,211,153,0.1); }
     .fd-renal-dose-pill--ev  .fd-renal-via-label { color:#38BDF8; background:rgba(56,189,248,0.1); }
@@ -2132,10 +2159,15 @@
     .fd-renal-max {
       font-size:9.5px; color:#64748B;
     }
+    /* Obs: sempre em bloco exclusivo abaixo das dose-pills */
     .fd-renal-obs {
-      font-size:10.5px; color:#94A3B8; line-height:1.55;
-      padding:4px 0 0;
-      display:flex; align-items:flex-start; gap:5px;
+      font-size:10.5px; color:#94A3B8; line-height:1.6;
+      margin-top:2px;
+      padding:6px 9px 6px 10px;
+      background:rgba(255,255,255,0.03);
+      border-left:2px solid rgba(148,163,184,0.25);
+      border-radius:0 6px 6px 0;
+      display:block;
     }
 
     /* Light mode overrides */
@@ -2725,6 +2757,7 @@
         min-width: 0 !important;
       }
       /* Cobre grids inline do qe-modal (style="display:grid;grid-template-columns:1fr 1fr") */
+      /* Em mobile: coluna única para não espremer campos */
       #qe-modal .qe-body > div[style*="grid"] {
         display: flex !important;
         flex-direction: column !important;
@@ -2734,13 +2767,8 @@
         width: 100% !important;
         min-width: 0 !important;
       }
-      /* qe-modal ocupa largura total sem margens laterais */
-      #qe-modal {
-        width: 100% !important;
-        left: 0 !important;
-        right: 0 !important;
-        border-radius: 22px 22px 0 0 !important;
-      }
+      /* qe-modal: já corrigido no bloco base (position:fixed, left/right:0) */
+
       /* risk-modal em mobile: sempre bottom-sheet, sem transform extra */
       #risk-modal {
         position: fixed !important;
@@ -2856,32 +2884,99 @@
        QUICK EDIT MODAL — Edição Rápida de Dados do Paciente
     ============================================================ */
     /* ── Fix v2: overlay = flex container fixo, modal = filho relativo ── */
+    /* ══════════════════════════════════════════════════════════════
+       QUICK EDIT MODAL — FIX DEFINITIVO iOS KEYBOARD BUG
+       Problema: iOS Safari redimensiona o viewport quando o teclado
+       virtual sobe, quebrando position:fixed e cálculos de flex.
+       Solução: overlay usa position:fixed ancorado em 0/0/0/0 com
+       height:100% (não 100vh que o iOS altera) + modal SEMPRE fixed
+       no bottom:0 com background explícito em !important para não
+       herdar nada do sistema do Safari ao recompor a camada.
+    ══════════════════════════════════════════════════════════════ */
     #qe-overlay {
-      display:none;
-      position:fixed; top:0; left:0; width:100vw; height:100vh;
-      z-index:10100;
-      background:rgba(0,0,0,0.72); backdrop-filter:blur(10px);
-      -webkit-backdrop-filter:blur(10px);
-      /* centraliza o modal filho matematicamente */
-      align-items:flex-end; justify-content:center;
+      display: none;
+      position: fixed !important;
+      top: 0 !important; left: 0 !important;
+      right: 0 !important; bottom: 0 !important;
+      width: 100% !important;
+      /* NÃO usar 100vh — iOS encolhe ao subir o teclado */
+      height: 100% !important;
+      z-index: 10100 !important;
+      background: rgba(0,0,0,0.72) !important;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      /* Flexbox alinha o modal no bottom, centralizado */
+      align-items: flex-end !important;
+      justify-content: center !important;
+      /* Impede que o iOS deslize o overlay ao rolar */
+      overscroll-behavior: none;
+      -webkit-overflow-scrolling: touch;
     }
+
     #qe-modal {
-      /* Fix: position:relative remove left/right/bottom absolutos que causam drift */
-      display:none; position:relative; z-index:10101;
-      /* Largura contida: max 360px ou 95% da viewport — sem left/right fixos */
-      width:90%; max-width:360px;
-      background:#0D1525;
-      border-top:1.5px solid rgba(56,189,248,0.25);
-      border-radius:22px 22px 0 0;
-      box-shadow:0 -8px 48px rgba(0,0,0,0.70), 0 0 0 1px rgba(255,255,255,0.04);
-      /* Animação de entrada mantida via transform — agora sem drift lateral */
-      transform:translateY(100%);
-      transition:transform 0.34s cubic-bezier(.34,1.08,.64,1);
-      padding-bottom:env(safe-area-inset-bottom,12px);
-      max-height:90vh; overflow-y:auto;
+      /* NUNCA position:relative — o iOS perde a âncora de flex.
+         position:fixed ancorado no bottom resolve o drift lateral. */
+      display: none;          /* controlado via JS (style.setProperty) */
+      position: fixed !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important; /* remove o max-width de 360px que causava drift */
+      z-index: 10101 !important;
+
+      /* Background explícito com !important — blindado contra qualquer herança iOS */
+      background-color: #0D1525 !important;
+      background: #0D1525 !important;
+      -webkit-appearance: none;
+
+      border-top: 1.5px solid rgba(56,189,248,0.25) !important;
+      border-radius: 22px 22px 0 0 !important;
+      box-shadow: 0 -8px 48px rgba(0,0,0,0.80), 0 0 0 1px rgba(255,255,255,0.05) !important;
+
+      /* Animação de entrada: translateY(100%) → 0 */
+      transform: translateY(100%);
+      transition: transform 0.32s cubic-bezier(.34,1.08,.64,1);
+
+      /* Safe area iOS (notch + home indicator) */
+      padding-bottom: env(safe-area-inset-bottom, 12px) !important;
+
+      /* Scroll interno: máx 72% da altura *visual* real (dvh se disponível) */
+      max-height: 72dvh;
+      max-height: 72vh; /* fallback para Safari < 15.4 */
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
     }
-    #qe-modal.open { transform:translateY(0); }
-    #qe-modal::-webkit-scrollbar { display:none; }
+
+    /* Quando aberto: desliza para cima */
+    #qe-modal.open {
+      transform: translateY(0) !important;
+      /* display controlado via JS para não conflitar com display:none do reset */
+    }
+
+    #qe-modal::-webkit-scrollbar { display: none; }
+
+    /* Garante que campos internos não quebrem o layout no iOS */
+    #qe-modal * {
+      box-sizing: border-box;
+    }
+    #qe-modal .qe-body {
+      width: 100% !important;
+    }
+    #qe-modal input,
+    #qe-modal select {
+      /* Evita zoom automático do iOS (font-size < 16px dispara zoom) */
+      font-size: 16px !important;
+      -webkit-text-size-adjust: 100%;
+    }
+    /* Restaura tamanhos visuais normais via padding/line-height */
+    #qe-modal .qe-input {
+      font-size: 16px !important; /* obrigatório anti-zoom iOS */
+      padding: 10px 13px !important;
+      line-height: 1.4 !important;
+    }
 
     .qe-handle {
       width:32px; height:4px; border-radius:2px;
@@ -5749,8 +5844,8 @@
               <i class="fa-solid fa-user-injured"></i>
             </div>
             <div>
-              <div class="hm-card-title">Dados do Paciente</div>
-              <div class="hm-card-subtitle" id="hm-patient-subtitle">Preencha para calcular doses</div>
+              <div class="hm-card-title" data-i18n="hm_patient_title">Dados do Paciente</div>
+              <div class="hm-card-subtitle" id="hm-patient-subtitle" data-i18n="hm_patient_subtitle">Preencha para calcular doses</div>
             </div>
           </div>
           <!-- Badge "Fixado" — aparece após salvar -->
@@ -6553,9 +6648,8 @@
           <div class="chc-icon-wrap"><i class="fa-solid fa-capsules"></i></div>
           <div class="chc-info">
             <div class="chc-title" data-i18n="cmd_drugs_title">Fármacos</div>
-            <div class="chc-desc">Bula · Doses · Interações</div>
+            <div class="chc-desc" id="farmacos-total-count" data-i18n="chc_drugs_desc">Bula · Doses · Interações</div>
           </div>
-          <span class="chc-count-badge" id="farmacos-total-count">...</span>
         </div>
 
         <!-- ── Fila 4: Hemodinâmica | Scores ── -->
@@ -7326,11 +7420,11 @@
     </div>
 
     <div class="fd-footer">
-      <button class="fd-btn-close" onclick="closeFarmacoDetail()">
-        <i class="fa-solid fa-xmark"></i> Fechar
+      <button class="fd-btn-close" id="fd-btn-close-label" onclick="closeFarmacoDetail()">
+        <i class="fa-solid fa-xmark"></i> <span data-i18n="fd_btn_close">Fechar</span>
       </button>
-      <button class="fd-btn-study" onclick="closeFarmacoDetail(); navigate('calculators'); setTimeout(()=>showAdultPanel('drugs'),80);">
-        <i class="fa-solid fa-calculator"></i> Calcular Dose
+      <button class="fd-btn-study" id="fd-btn-calc-label" onclick="_fdCalcDoseFromModal()">
+        <i class="fa-solid fa-calculator"></i> <span data-i18n="fd_btn_calc">Calcular Dose</span>
       </button>
     </div>
   </div>
@@ -7973,6 +8067,17 @@ const i18n = {
     hm_int_feat1:  'Interações críticas e contraindicadas',
     hm_int_feat2:  'Alertas farmacológicos por perfil do paciente',
     hm_int_feat3:  'Histórico de combinações verificadas',
+
+    /* ── i18n: botão ficha técnica e painel dados do paciente ── */
+    hm_btn_bula:         'Ver bula completa',
+    hm_btn_bula_renal:   'Bula completa + Ajuste Renal',
+    hm_patient_title:    'Dados do Paciente',
+    hm_patient_subtitle: 'Preencha para calcular doses',
+
+    /* ── i18n: modal fármacos rodapé ── */
+    fd_btn_close:   'Fechar',
+    fd_btn_calc:    'Calcular Dose',
+    chc_drugs_desc: 'Bula · Doses · Interações',
   },
   es:{
     topbar_subtitle:'Calculadoras Clínicas',badge_premium:'Premium v1.0',
@@ -8342,6 +8447,17 @@ const i18n = {
     hm_int_feat1:  'Interacciones críticas y contraindicadas',
     hm_int_feat2:  'Alertas farmacológicas por perfil del paciente',
     hm_int_feat3:  'Historial de combinaciones verificadas',
+
+    /* ── i18n: botão ficha técnica e painel datos del paciente ── */
+    hm_btn_bula:         'Ver ficha completa',
+    hm_btn_bula_renal:   'Ficha completa + Ajuste Renal',
+    hm_patient_title:    'Datos del Paciente',
+    hm_patient_subtitle: 'Complete para calcular dosis',
+
+    /* ── i18n: modal fármacos rodapé ── */
+    fd_btn_close:   'Cerrar',
+    fd_btn_calc:    'Calcular Dosis',
+    chc_drugs_desc: 'Prospecto · Dosis · Interacciones',
   }
 };
 /* ============================================================
@@ -8950,6 +9066,31 @@ function navigate(page){
     /* Garante que a back-bar de nível adulto está visível */
     const adultBackBar = document.getElementById('adult-back-bar');
     if (adultBackBar) adultBackBar.style.display = '';
+  }
+
+  /* REQ-4: Sincroniza banner do paciente sempre que entrar em qualquer
+     módulo de calculadoras — evita card rosa "Paciente não cadastrado"
+     mesmo quando os dados já estão fixados no localStorage */
+  if (page === 'calculators' || page === 'adult' || page === 'farmacos') {
+    /* Restaura dados do localStorage caso patientData ainda esteja vazio */
+    try {
+      const _hmSavedRaw = localStorage.getItem('medcases_hm_patient_v1');
+      if (_hmSavedRaw) {
+        const _hmSaved = JSON.parse(_hmSavedRaw);
+        const pd = window.patientData;
+        if (pd && !pd.weight && _hmSaved && _hmSaved.weight) {
+          /* Recalcula e sincroniza silenciosamente */
+          if (typeof hmLoadPatient === 'function') {
+            hmLoadPatient();
+          } else {
+            pd.weight = _hmSaved.weight;
+            pd.age    = _hmSaved.age;
+            pd.sex    = _hmSaved.sex || 'M';
+          }
+        }
+      }
+    } catch(_e) {}
+    if (typeof updateAdultBanner === 'function') updateAdultBanner();
   }
 }
 
@@ -10446,14 +10587,32 @@ function openQuickEdit(context) {
   /* Labels */
   _qeUpdateLabels(isES);
 
-  /* Exibir */
+  /* Exibir — iOS Fix: usa setProperty para garantir especificidade */
   const overlay = document.getElementById('qe-overlay');
   const modal   = document.getElementById('qe-modal');
   if (!overlay || !modal) return;
-  overlay.style.display = 'flex';
-  modal.style.display   = 'block';
-  requestAnimationFrame(() => modal.classList.add('open'));
+
+  overlay.style.setProperty('display', 'flex', 'important');
+  modal.style.setProperty('display', 'block', 'important');
+  modal.classList.remove('open');          /* reset posição antes de animar */
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {          /* double-RAF: garante GPU layer antes de animar */
+      modal.classList.add('open');
+    });
+  });
+
   document.body.style.overflow = 'hidden';
+  /* iOS: impede scroll da página por trás do modal */
+  document.body.style.position = 'fixed';
+  document.body.style.width    = '100%';
+
+  /* iOS visualViewport: reposiciona modal quando teclado sobe/desce */
+  if (window.visualViewport && window._qeViewportHandler) {
+    window.visualViewport.removeEventListener('resize', window._qeViewportHandler);
+    window.visualViewport.addEventListener('resize', window._qeViewportHandler, { passive: true });
+    window.visualViewport.addEventListener('scroll', window._qeViewportHandler, { passive: true });
+  }
 
   /* Auto-focus no campo mais relevante */
   setTimeout(() => {
@@ -10492,13 +10651,57 @@ function closeQuickEdit() {
   const overlay = document.getElementById('qe-overlay');
   const modal   = document.getElementById('qe-modal');
   if (!modal) return;
+
+  /* Fecha o teclado virtual antes de animar o modal para baixo */
+  if (document.activeElement && typeof document.activeElement.blur === 'function') {
+    document.activeElement.blur();
+  }
+
   modal.classList.remove('open');
+  /* Remove listener do visualViewport */
+  if (window._qeViewportHandler && window.visualViewport) {
+    window.visualViewport.removeEventListener('resize', window._qeViewportHandler);
+    window._qeViewportHandler = null;
+  }
   setTimeout(() => {
-    overlay.style.display = 'none';
-    modal.style.display   = 'none';
-    document.body.style.overflow = '';
+    if (overlay) overlay.style.setProperty('display', 'none', 'important');
+    /* Esconde modal via setProperty */
+    const m = document.getElementById('qe-modal');
+    if (m) {
+      m.style.setProperty('display', 'none', 'important');
+      m.style.removeProperty('bottom'); /* limpa offset do teclado */
+    }
+    /* Restaura scroll da página (iOS fix) */
+    document.body.style.overflow  = '';
+    document.body.style.position  = '';
+    document.body.style.width     = '';
   }, 340);
 }
+
+/* ══════════════════════════════════════════════════════════════
+   iOS KEYBOARD FIX — visualViewport API
+   Quando o teclado sobe, o visualViewport encolhe.
+   Reposicionamos o modal para ficar sempre colado na borda
+   VISUAL (não na borda do layout que some sob o teclado).
+══════════════════════════════════════════════════════════════ */
+(function _initQeViewportFix() {
+  if (!window.visualViewport) return; /* Safari < 13: não suporta — fallback gracioso */
+
+  window._qeViewportHandler = function() {
+    const modal = document.getElementById('qe-modal');
+    if (!modal || !modal.classList.contains('open')) return;
+
+    /* Calcula o offset: quanto do viewport ficou escondido pelo teclado */
+    const vv        = window.visualViewport;
+    const offsetY   = window.innerHeight - vv.height - vv.offsetTop;
+    const safeInset = parseInt(getComputedStyle(document.documentElement)
+      .getPropertyValue('--sab') || '0') || 0;
+
+    /* Empurra o modal para cima pelo tamanho exato do teclado */
+    modal.style.setProperty('bottom', Math.max(0, offsetY) + 'px', 'important');
+  };
+  /* O listener é adicionado/removido dinamicamente em openQuickEdit/closeQuickEdit */
+})();
 
 function saveQuickEdit() {
   /* Lê valores do modal */
@@ -11252,15 +11455,23 @@ function filterPrescriptions(v) { renderPrescriptions(v); }
 /* ── Atualiza TODOS os contadores de fármacos na UI ── */
 function _fdUpdateCount() {
   const total = _getMasterDB().length;
-  const label = total > 0 ? `${total} fármacos` : '—';
+  const isES  = (typeof currentLang !== 'undefined' && currentLang === 'es');
+  const countStr = total > 0 ? `${total} fármacos` : '—';
 
-  /* Badge do card Fármacos na Central de Calculadoras */
-  const badgeEl = document.getElementById('farmacos-total-count');
-  if (badgeEl) badgeEl.textContent = label;
+  /* Subtítulo do card Fármacos na Central de Calculadoras (agora é o desc) */
+  const descEl = document.getElementById('farmacos-total-count');
+  if (descEl) {
+    if (total > 0) {
+      descEl.textContent = isES
+        ? `Búsqueda inteligente · ${total} fármacos`
+        : `Busca inteligente · ${total} fármacos`;
+    }
+    /* se total === 0 mantém o texto do data-i18n já renderizado */
+  }
 
   /* Counter da Home Mobile (card de busca) */
   const hmEl = document.getElementById('hm-drug-count');
-  if (hmEl) hmEl.textContent = label;
+  if (hmEl) hmEl.textContent = countStr;
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -11765,6 +11976,9 @@ function _fdBuildDoseSrc(hero, rich, isES) {
 
 /* Abre o modal de detalhe do fármaco — usa patientData real (motor v2.0) */
 function openFarmacoDetail(id) {
+  /* REQ-5: registra o drug ativo para o botão "Calcular Dose" */
+  window._fdActiveDrugId = id;
+
   const db   = typeof DRUG_DB !== 'undefined' ? DRUG_DB : [];
   const drug = db.find(d => d.id === id);
   if (!drug) { console.warn('[FD] fármaco não encontrado:', id); return; }
@@ -12098,29 +12312,54 @@ function openFarmacoDetail(id) {
 
       if (voRow || evRow || pedRow) {
         html += `<div class="fd-renal-doses">`;
-        if (voRow) html += `<div class="fd-renal-dose-pill fd-renal-dose-pill--vo">
-            <span class="fd-renal-via-label">VO</span>
-            <span>${_fdHighlight(voRow.dose)}</span>
-            ${voRow.intervalo ? `<span class="fd-renal-interval"><i class="fa-solid fa-rotate" style="font-size:8px;"></i> ${voRow.intervalo}</span>` : ''}
-            ${voRow.doseMaxima ? `<span class="fd-renal-max">máx: ${voRow.doseMaxima}</span>` : ''}
+
+        if (voRow) {
+          const hasMeta = voRow.intervalo || voRow.doseMaxima;
+          html += `<div class="fd-renal-dose-pill fd-renal-dose-pill--vo">
+            <div class="dp-top">
+              <span class="fd-renal-via-label">VO</span>
+              <strong>${_fdHighlight(voRow.dose)}</strong>
+            </div>
+            ${hasMeta ? `<div class="dp-meta">
+              ${voRow.intervalo ? `<span class="fd-renal-interval"><i class="fa-solid fa-rotate" style="font-size:8px;"></i> ${voRow.intervalo}</span>` : ''}
+              ${voRow.doseMaxima ? `<span class="fd-renal-max">· máx: ${voRow.doseMaxima}</span>` : ''}
+            </div>` : ''}
           </div>`;
-        if (evRow) html += `<div class="fd-renal-dose-pill fd-renal-dose-pill--ev">
-            <span class="fd-renal-via-label">EV</span>
-            <span>${_fdHighlight(evRow.dose)}</span>
-            ${evRow.intervalo ? `<span class="fd-renal-interval"><i class="fa-solid fa-rotate" style="font-size:8px;"></i> ${evRow.intervalo}</span>` : ''}
-            ${evRow.doseMaxima ? `<span class="fd-renal-max">máx: ${evRow.doseMaxima}</span>` : ''}
+        }
+
+        if (evRow) {
+          const hasMeta = evRow.intervalo || evRow.doseMaxima;
+          html += `<div class="fd-renal-dose-pill fd-renal-dose-pill--ev">
+            <div class="dp-top">
+              <span class="fd-renal-via-label">EV</span>
+              <strong>${_fdHighlight(evRow.dose)}</strong>
+            </div>
+            ${hasMeta ? `<div class="dp-meta">
+              ${evRow.intervalo ? `<span class="fd-renal-interval"><i class="fa-solid fa-rotate" style="font-size:8px;"></i> ${evRow.intervalo}</span>` : ''}
+              ${evRow.doseMaxima ? `<span class="fd-renal-max">· máx: ${evRow.doseMaxima}</span>` : ''}
+            </div>` : ''}
           </div>`;
-        if (pedRow) html += `<div class="fd-renal-dose-pill fd-renal-dose-pill--ped">
-            <span class="fd-renal-via-label"><i class="fa-solid fa-child" style="font-size:8px;"></i> Ped</span>
-            <span>${_fdHighlight(pedRow.dose)}</span>
-            ${pedRow.intervalo ? `<span class="fd-renal-interval"><i class="fa-solid fa-rotate" style="font-size:8px;"></i> ${pedRow.intervalo}</span>` : ''}
-            ${pedRow.doseMaxima ? `<span class="fd-renal-max">máx: ${pedRow.doseMaxima}</span>` : ''}
+        }
+
+        if (pedRow) {
+          const hasMeta = pedRow.intervalo || pedRow.doseMaxima;
+          html += `<div class="fd-renal-dose-pill fd-renal-dose-pill--ped">
+            <div class="dp-top">
+              <span class="fd-renal-via-label"><i class="fa-solid fa-child" style="font-size:8px;"></i> Ped</span>
+              <strong>${_fdHighlight(pedRow.dose)}</strong>
+            </div>
+            ${hasMeta ? `<div class="dp-meta">
+              ${pedRow.intervalo ? `<span class="fd-renal-interval"><i class="fa-solid fa-rotate" style="font-size:8px;"></i> ${pedRow.intervalo}</span>` : ''}
+              ${pedRow.doseMaxima ? `<span class="fd-renal-max">· máx: ${pedRow.doseMaxima}</span>` : ''}
+            </div>` : ''}
           </div>`;
+        }
+
         html += `</div>`;
       }
 
       if (obsRow) {
-        html += `<div class="fd-renal-obs"><i class="fa-solid fa-circle-info" style="font-size:9px;opacity:0.7;"></i> ${obsRow}</div>`;
+        html += `<div class="fd-renal-obs"><i class="fa-solid fa-circle-info" style="font-size:9px;opacity:0.7;flex-shrink:0;"></i> ${obsRow}</div>`;
       }
 
       html += `</div>`; /* fecha fd-renal-faixa */
@@ -12244,6 +12483,50 @@ function closeFarmacoDetail() {
     if (overlay) overlay.style.display = 'none';
     document.body.style.overflow = '';
   }, 340);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   _fdCalcDoseFromModal() — REQ-5
+   Atalho inteligente do botão "Calcular Dose" na ficha do fármaco.
+   Captura o nome do fármaco ativo → fecha modal → navega para
+   page-farmacos → injeta nome no campo de busca → renderiza lista
+   → abre a ficha do mesmo fármaco automaticamente.
+══════════════════════════════════════════════════════════════ */
+window._fdActiveDrugId = null; /* rastreado por openFarmacoDetail */
+
+function _fdCalcDoseFromModal() {
+  const drugId = window._fdActiveDrugId;
+
+  /* 1. Fecha a ficha atual */
+  closeFarmacoDetail();
+
+  /* 2. Navega para a página de fármacos */
+  setTimeout(() => {
+    navigate('farmacos');
+
+    /* 3. Injeta o ID/nome no campo de busca e renderiza */
+    setTimeout(() => {
+      if (!drugId) return;
+
+      /* Busca o drug no DB para obter o nome */
+      const db   = typeof DRUG_DB !== 'undefined' ? DRUG_DB : [];
+      const drug = db.find(d => d.id === drugId);
+      if (!drug) return;
+
+      const nome = drug.name || drug.nome || drugId;
+      const inp  = document.getElementById('farmacos-search-input');
+      if (inp) {
+        inp.value = nome;
+        inp.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+      if (typeof renderFarmacosList === 'function') renderFarmacosList(nome);
+
+      /* 4. Após lista renderizada, abre automaticamente a ficha do fármaco */
+      setTimeout(() => {
+        if (typeof openFarmacoDetail === 'function') openFarmacoDetail(drugId);
+      }, 220);
+    }, 120);
+  }, 80);
 }
 
 /* Helper: destaca doses em negrito ciano */
@@ -13040,7 +13323,7 @@ function calcShowInlineResult(drugId) {
             <strong>${doseTxt}</strong>${freqTxt ? ' — ' + freqTxt : ''}</span>
         </div>
         <button class="hm-inline-detail-btn" onclick="openFarmacoDetail('${drugId}')">
-          <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ver bula completa' : 'Ver bula completa'}
+          <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ver ficha completa' : 'Ver bula completa'}
         </button>
       </div>`;
     resultEl.style.display = 'block';
@@ -13132,7 +13415,7 @@ function calcShowInlineResult(drugId) {
       ${calcHtml}
       ${renalHtml}
       <button class="hm-inline-detail-btn" onclick="openFarmacoDetail('${drugId}')">
-        <i class="fa-solid fa-book-medical"></i> ${isES ? 'Bula completa + Ajuste Renal' : 'Bula completa + Ajuste Renal'}
+        <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ficha completa + Ajuste Renal' : 'Bula completa + Ajuste Renal'}
       </button>
     </div>`;
   resultEl.style.display = 'block';
@@ -16050,7 +16333,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <strong>${doseTxt}</strong>${freqTxt ? ' — ' + freqTxt : ''}</span>
           </div>
           <button class="hm-inline-detail-btn" onclick="hmOpenDrug('${drugId}')">
-            <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ver bula completa' : 'Ver bula completa'}
+            <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ver ficha completa' : 'Ver bula completa'}
           </button>
         </div>`;
       resultEl.style.display = 'block';
@@ -16147,7 +16430,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ${calcHtml}
         ${renalHtml}
         <button class="hm-inline-detail-btn" onclick="hmOpenDrug('${drugId}')">
-          <i class="fa-solid fa-book-medical"></i> ${isES ? 'Bula completa + Ajuste Renal' : 'Bula completa + Ajuste Renal'}
+          <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ficha completa + Ajuste Renal' : 'Bula completa + Ajuste Renal'}
         </button>
       </div>`;
     resultEl.style.display = 'block';
@@ -16325,12 +16608,12 @@ document.addEventListener('DOMContentLoaded', () => {
       card.classList.add('is-fixed');
       if (badge)    { badge.style.display = 'flex'; }
       if (fixBtn)   { fixBtn.classList.add('is-fixed-btn'); fixBtn.innerHTML = '<i class="fa-solid fa-check"></i> Fixado'; }
-      if (subtitle) { subtitle.textContent = 'Dados fixados — usados nos cálculos'; }
+      if (subtitle) { subtitle.textContent = (typeof currentLang !== 'undefined' && currentLang === 'es') ? 'Datos fijados — usados en los cálculos' : 'Dados fixados — usados nos cálculos'; }
     } else {
       card.classList.remove('is-fixed');
       if (badge)    { badge.style.display = 'none'; }
       if (fixBtn)   { fixBtn.classList.remove('is-fixed-btn'); fixBtn.innerHTML = '<i class="fa-solid fa-thumbtack"></i> Fixar Dados'; }
-      if (subtitle) { subtitle.textContent = 'Preencha para calcular doses'; }
+      if (subtitle) { subtitle.textContent = t('hm_patient_subtitle'); }
     }
   }
 
@@ -17604,6 +17887,42 @@ window.MedCasesBridge = {
   }
 };
 
+/* ══════════════════════════════════════════════════════════════
+   REQ-6 — PRÉ-INICIALIZAÇÃO SILENCIOSA DAS CALCULADORAS
+   Executado via requestIdleCallback após DOMContentLoaded:
+   - Pré-computa dados do paciente do localStorage
+   - Garante que updateAdultBanner() não mostra card rosa falso
+   - Acelera primeira abertura das abas Calculadoras/Adulto
+══════════════════════════════════════════════════════════════ */
+(function _preInitCalcs() {
+  function _run() {
+    try {
+      /* Pré-carrega dados do paciente para evitar card rosa na 1ª abertura */
+      if (typeof hmLoadPatient === 'function') hmLoadPatient();
+      /* Atualiza banner logo após load — sincroniza estado real */
+      if (typeof updateAdultBanner === 'function') updateAdultBanner();
+      /* Atualiza contador de fármacos */
+      if (typeof _fdUpdateCount === 'function') _fdUpdateCount();
+    } catch(e) { /* silencioso */ }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof requestIdleCallback === 'function') {
+        requestIdleCallback(_run, { timeout: 1500 });
+      } else {
+        setTimeout(_run, 600);
+      }
+    });
+  } else {
+    /* DOM já carregado */
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(_run, { timeout: 1500 });
+    } else {
+      setTimeout(_run, 600);
+    }
+  }
+})();
 
 </script>
 

@@ -577,6 +577,69 @@
   ============================================================ */
 
   /* ============================================================
+     §J — PULL-TO-REFRESH (gestos touch)
+     Detecta arrastar para baixo no topo do scroll-content e
+     executa window.location.reload() após threshold de 80px.
+     Um indicador visual sobe do topo durante o gesto.
+  ============================================================ */
+  function _initPullToRefresh() {
+    /* REQ-6: Pull-to-Refresh SILENCIOSO — sem banner "Atualizando..."
+       O indicador visual foi removido. O reload ocorre em segundo plano
+       após threshold de 80px de arraste, com haptic feedback mantido. */
+    const scrollEl = document.getElementById('scroll-content') || document.body;
+
+    /* Elemento PTR mínimo (invisível — só para manter estrutura) */
+    const ptr = document.createElement('div');
+    ptr.id = 'ptr-indicator';
+    ptr.style.cssText = 'display:none!important;height:0!important;overflow:hidden!important;pointer-events:none!important;';
+    document.body.appendChild(ptr);
+
+    const THRESHOLD = 80;
+    let _startY    = 0;
+    let _pulling   = false;
+    let _triggered = false;
+
+    function _isAtTop() {
+      if (scrollEl === document.body) {
+        return (window.scrollY || document.documentElement.scrollTop) <= 2;
+      }
+      return scrollEl.scrollTop <= 2;
+    }
+
+    scrollEl.addEventListener('touchstart', function(e) {
+      if (!_isAtTop()) return;
+      _startY    = e.touches[0].clientY;
+      _pulling   = true;
+      _triggered = false;
+    }, { passive: true });
+
+    scrollEl.addEventListener('touchmove', function(e) {
+      if (!_pulling) return;
+      const dy = e.touches[0].clientY - _startY;
+      if (dy <= 0) { _pulling = false; return; }
+
+      if (dy >= THRESHOLD && !_triggered) {
+        _triggered = true;
+        if (navigator.vibrate) navigator.vibrate(30); /* haptic silencioso */
+      }
+    }, { passive: true });
+
+    scrollEl.addEventListener('touchend', function() {
+      if (!_pulling) return;
+      _pulling = false;
+      if (_triggered) {
+        /* Reload imediato e silencioso */
+        setTimeout(function() { window.location.reload(); }, 80);
+      }
+    }, { passive: true });
+
+    scrollEl.addEventListener('touchcancel', function() {
+      _pulling   = false;
+      _triggered = false;
+    }, { passive: true });
+  }
+
+  /* ============================================================
      §I — INICIALIZAÇÃO
   ============================================================ */
   let _initDone = false;
@@ -585,7 +648,8 @@
     if (_initDone) return;
     _initDone = true;
     _patchHmShowInlineResult();
-    console.log('[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx)');
+    _initPullToRefresh();
+    console.log('[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh');
   }
 
   if (document.readyState === 'loading') {
@@ -595,6 +659,7 @@
   }
   window.addEventListener('load', _init);
 
-  console.log('[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6');
+  console.log('[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR');
 
 })();
+
