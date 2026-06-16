@@ -5877,22 +5877,22 @@
               <i class="fa-solid fa-circle-nodes"></i>
             </div>
             <div>
-              <div class="hm-card-title">Interações Medicamentosas</div>
-              <div class="hm-card-subtitle">Cruzamento inteligente de fármacos</div>
+              <div class="hm-card-title" data-i18n="hm_int_title">Interações Medicamentosas</div>
+              <div class="hm-card-subtitle" data-i18n="hm_int_sub">Cruzamento inteligente de fármacos</div>
             </div>
           </div>
-          <span class="hm-badge hm-badge--soon">Em breve</span>
+          <span class="hm-badge hm-badge--soon" data-i18n="hm_int_soon">Em breve</span>
         </div>
 
-        <p class="hm-coming-soon-desc">
+        <p class="hm-coming-soon-desc" data-i18n="hm_int_desc">
           O módulo de interações cruzará automaticamente os fármacos registrados
           e alertará sobre combinações de risco — críticas, graves e moderadas.
         </p>
 
         <div class="hm-coming-soon-features">
-          <div class="hm-csf-item"><i class="fa-solid fa-triangle-exclamation"></i> Interações críticas e contraindicadas</div>
-          <div class="hm-csf-item"><i class="fa-solid fa-shield-halved"></i> Alertas farmacológicos por perfil do paciente</div>
-          <div class="hm-csf-item"><i class="fa-solid fa-clock-rotate-left"></i> Histórico de combinações verificadas</div>
+          <div class="hm-csf-item"><i class="fa-solid fa-triangle-exclamation"></i> <span data-i18n="hm_int_feat1">Interações críticas e contraindicadas</span></div>
+          <div class="hm-csf-item"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="hm_int_feat2">Alertas farmacológicos por perfil do paciente</span></div>
+          <div class="hm-csf-item"><i class="fa-solid fa-clock-rotate-left"></i> <span data-i18n="hm_int_feat3">Histórico de combinações verificadas</span></div>
         </div>
 
       </div><!-- /hm-card--interactions -->
@@ -6204,9 +6204,9 @@
 
         <!-- ── Voltar ao grid do módulo Adulto ── -->
         <div class="section-back-bar">
-          <button class="section-back-btn" onclick="closeAdultPanel()" aria-label="Voltar ao painel Adulto">
+          <button class="section-back-btn" onclick="navigate('calculators')" aria-label="Voltar à Central de Calculadoras">
             <i class="fa-solid fa-chevron-left"></i>
-            <span>Adulto</span>
+            <span>Calculadoras</span>
           </button>
         </div>
 
@@ -6238,9 +6238,9 @@
 
         <!-- ── Voltar ao grid do módulo Adulto ── -->
         <div class="section-back-bar">
-          <button class="section-back-btn" onclick="closeAdultPanel()" aria-label="Voltar ao painel Adulto">
+          <button class="section-back-btn" onclick="navigate('calculators')" aria-label="Voltar à Central de Calculadoras">
             <i class="fa-solid fa-chevron-left"></i>
-            <span>Adulto</span>
+            <span>Calculadoras</span>
           </button>
         </div>
 
@@ -6321,9 +6321,9 @@
 
         <!-- ── Voltar ao grid do módulo Adulto ── -->
         <div class="section-back-bar">
-          <button class="section-back-btn" onclick="closeAdultPanel()" aria-label="Voltar ao painel Adulto">
+          <button class="section-back-btn" onclick="navigate('calculators')" aria-label="Voltar à Central de Calculadoras">
             <i class="fa-solid fa-chevron-left"></i>
-            <span>Adulto</span>
+            <span>Calculadoras</span>
           </button>
         </div>
 
@@ -6366,9 +6366,9 @@
 
         <!-- ── Voltar ao grid do módulo Adulto ── -->
         <div class="section-back-bar">
-          <button class="section-back-btn" onclick="closeAdultPanel()" aria-label="Voltar ao painel Adulto">
+          <button class="section-back-btn" onclick="navigate('calculators')" aria-label="Voltar à Central de Calculadoras">
             <i class="fa-solid fa-chevron-left"></i>
-            <span>Adulto</span>
+            <span>Calculadoras</span>
           </button>
         </div>
 
@@ -6475,7 +6475,7 @@
 
         <!-- ── Fila 3: Antimicrobianos | Fármacos ── -->
         <div class="calc-hub-card-v2 chc-atb"
-             onclick="navigate('adult'); setTimeout(()=>showAdultPanel('drugs'),80)"
+             onclick="showAdultPanel('drugs')"
              role="button" aria-label="Antimicrobianos">
           <div class="chc-icon-wrap"><i class="fa-solid fa-pills"></i></div>
           <div class="chc-info">
@@ -6496,7 +6496,7 @@
 
         <!-- ── Fila 4: Hemodinâmica | Scores ── -->
         <div class="calc-hub-card-v2 chc-hemo"
-             onclick="navigate('adult'); setTimeout(()=>showAdultPanel('hemo'),80)"
+             onclick="showAdultPanel('hemo')"
              role="button" aria-label="Hemodinâmica">
           <div class="chc-icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
           <div class="chc-info">
@@ -6506,7 +6506,7 @@
         </div>
 
         <div class="calc-hub-card-v2 chc-scores"
-             onclick="navigate('adult'); setTimeout(()=>showAdultPanel('scores'),80)"
+             onclick="showAdultPanel('scores')"
              role="button" aria-label="Scores">
           <div class="chc-icon-wrap"><i class="fa-solid fa-chart-bar"></i></div>
           <div class="chc-info">
@@ -6517,7 +6517,7 @@
 
         <!-- ── Fila 5: Fluidos (full-width) ── -->
         <div class="calc-hub-card-v2 chc-fluids chc-fluids--fullwidth"
-             onclick="navigate('adult'); setTimeout(()=>showAdultPanel('fluids'),80)"
+             onclick="showAdultPanel('fluids')"
              role="button" aria-label="Fluidos">
           <div class="chc-icon-wrap"><i class="fa-solid fa-droplet"></i></div>
           <div class="chc-info">
@@ -7265,7 +7265,7 @@
       <button class="fd-btn-close" onclick="closeFarmacoDetail()">
         <i class="fa-solid fa-xmark"></i> Fechar
       </button>
-      <button class="fd-btn-study" onclick="closeFarmacoDetail(); navigate('adult'); setTimeout(()=>showAdultPanel('drugs'),80);">
+      <button class="fd-btn-study" onclick="closeFarmacoDetail(); navigate('calculators'); setTimeout(()=>showAdultPanel('drugs'),80);">
         <i class="fa-solid fa-calculator"></i> Calcular Dose
       </button>
     </div>
@@ -7900,6 +7900,15 @@ const i18n = {
     news2_conduct_high_3:'Acesso venoso calibroso, oxigenação suplementar',
     news2_conduct_high_4:'Avaliar necessidade de UTI / suporte avançado de vida',
     news2_conduct_high_5:'Gasometria, lactato, hemograma e cultura se suspeita de sepse',
+
+    /* ── Card Interações Medicamentosas (i18n) ── */
+    hm_int_title:  'Interações Medicamentosas',
+    hm_int_sub:    'Cruzamento inteligente de fármacos',
+    hm_int_desc:   'O módulo de interações cruzará automaticamente os fármacos registrados e alertará sobre combinações de risco — críticas, graves e moderadas.',
+    hm_int_soon:   'Em breve',
+    hm_int_feat1:  'Interações críticas e contraindicadas',
+    hm_int_feat2:  'Alertas farmacológicos por perfil do paciente',
+    hm_int_feat3:  'Histórico de combinações verificadas',
   },
   es:{
     topbar_subtitle:'Calculadoras Clínicas',badge_premium:'Premium v1.0',
@@ -8260,6 +8269,15 @@ const i18n = {
     news2_conduct_high_3:'Acceso venoso calibroso, oxigenación suplementaria',
     news2_conduct_high_4:'Evaluar necesidad de UCI / soporte vital avanzado',
     news2_conduct_high_5:'Gasometría, lactato, hemograma y cultivo si sospecha de sepsis',
+
+    /* ── Card Interacciones Medicamentosas (i18n) ── */
+    hm_int_title:  'Interacciones Medicamentosas',
+    hm_int_sub:    'Cruce inteligente de fármacos',
+    hm_int_desc:   'El módulo de interacciones cruzará automáticamente los fármacos registrados y alertará sobre combinaciones de riesgo — críticas, graves y moderadas.',
+    hm_int_soon:   'Próximamente',
+    hm_int_feat1:  'Interacciones críticas y contraindicadas',
+    hm_int_feat2:  'Alertas farmacológicas por perfil del paciente',
+    hm_int_feat3:  'Historial de combinaciones verificadas',
   }
 };
 /* ============================================================
@@ -8290,10 +8308,10 @@ window.patientData={age:null,sex:'M',weight:null,height:null,creatinine:null,bsa
 /* Schema {calculate} — objeto-mapa chave→entry */
 window.ANTIMICROBIANOS_DRUGS_DB  = window.ANTIMICROBIANOS_DRUGS_DB  || {};
 window.PSICOFARMACOS_DRUGS_DB    = window.PSICOFARMACOS_DRUGS_DB    || {};
+window.CARDIO_DRUGS_DB           = window.CARDIO_DRUGS_DB           || {}; /* ← {calculate} schema — NÃO array */
 /* Schema array [] — lista de entries com dose() nativo */
 window.ANALGESICOS_DRUGS_DB      = window.ANALGESICOS_DRUGS_DB      || [];
 window.ANTICOAG_DRUGS_DB         = window.ANTICOAG_DRUGS_DB         || [];
-window.CARDIO_DRUGS_DB           = window.CARDIO_DRUGS_DB           || [];
 window.ENDOCRINO_DRUGS_DB        = window.ENDOCRINO_DRUGS_DB        || [];
 window.GASTRO_DRUGS_DB           = window.GASTRO_DRUGS_DB           || [];
 window.INFUSOES_DRUGS_DB         = window.INFUSOES_DRUGS_DB         || [];
@@ -8881,18 +8899,37 @@ function navigate(page){
 ============================================================ */
 let _activeAdultPanel = null;
 
+/* ============================================================
+   showAdultPanel(panel)
+   Exibe uma sub-view do módulo Adulto (drugs | fluids | hemo | scores).
+   Pode ser chamado direto do Hub de Calculadoras — garante que
+   page-adult está visível antes de ativar a sub-view.
+   O botão Voltar de cada sub-view aponta para navigate('calculators'),
+   voltando sempre à raiz da Central de Calculadoras.
+============================================================ */
 function showAdultPanel(panel) {
+  /* Garante que a seção adulto está visível (chamada direta do Hub) */
+  const sectionAdult = document.getElementById('page-adult');
+  if (sectionAdult && !sectionAdult.classList.contains('active')) {
+    document.querySelectorAll('.section-page').forEach(s => s.classList.remove('active'));
+    sectionAdult.classList.add('active');
+    /* Atualiza nav highlight para sub-módulos */
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    const navBtn = document.getElementById('nav-calculators');
+    if (navBtn) navBtn.classList.add('active');
+  }
+
   const grid = document.getElementById('adult-dashboard-grid');
   if (!grid) return;
 
-  /* 1. Ocultar o grid completamente e marcar o card ativo */
+  /* 1. Ocultar o grid e marcar card ativo */
   grid.style.display = 'none';
   grid.classList.add('compact-grid');
   document.querySelectorAll('.adult-cmd-card').forEach(c => c.classList.remove('active-panel'));
   const activeCard = document.getElementById('cmdcard-' + panel);
   if (activeCard) activeCard.classList.add('active-panel');
 
-  /* Oculta a back-bar do nível adulto (cada sub-view tem a sua própria) */
+  /* Oculta a back-bar de nível adulto (cada sub-view tem a sua própria) */
   const adultBackBar = document.getElementById('adult-back-bar');
   if (adultBackBar) adultBackBar.style.display = 'none';
 
@@ -8901,7 +8938,6 @@ function showAdultPanel(panel) {
   const view = document.getElementById('subview-' + panel);
   if (view) {
     view.classList.add('active');
-    /* Scroll ao topo da área de conteúdo */
     const sc = document.getElementById('scroll-content');
     if (sc) setTimeout(() => sc.scrollTo({ top: 0, behavior: 'smooth' }), 40);
   }
@@ -8910,12 +8946,10 @@ function showAdultPanel(panel) {
 
   /* 3. Inicializar calculadora correspondente */
   if (panel === 'drugs') {
-    /* Reset busca — collapsa lista, limpa input */
     const si = document.getElementById('drug-search-input');
-    if (si) { si.value = ''; }
+    if (si) si.value = '';
     const lc = document.getElementById('drug-list-container');
     if (lc) { lc.innerHTML = ''; lc.style.display = 'none'; }
-    /* Hint dinâmico com contagem de fármacos */
     _updateDrugSearchHint();
   }
   if (panel === 'fluids') { calcFluids(); applySelectTranslations(); }
@@ -8925,42 +8959,33 @@ function showAdultPanel(panel) {
     if (hasPas && hasPad) calcHemo();
   }
 
-  /* 4. Recalcula resultado do fármaco selecionado com dados atuais */
+  /* 4. Recalcula resultado do fármaco selecionado com dados atuais do paciente */
   if (panel === 'drugs' && typeof selectedDrug !== 'undefined' && selectedDrug) {
     if (typeof calcDrugDose === 'function') calcDrugDose(selectedDrug);
   }
 }
 
-/* Fecha sub-view E retorna à Central de Calculadoras */
+/* ── backToCalculators — volta para a raiz do Hub de Calculadoras ── */
 function backToCalculators() {
-  closeAdultPanel();
   navigate('calculators');
 }
 
+/* ── closeAdultPanel — fecha a sub-view ativa e volta ao Hub de Calculadoras ── */
 function closeAdultPanel() {
-  const grid = document.getElementById('adult-dashboard-grid');
-  if (!grid) return;
-
-  /* 1. Expandir o grid de volta */
-  grid.classList.remove('compact-grid');
-  document.querySelectorAll('.adult-cmd-card').forEach(c => c.classList.remove('active-panel'));
-
-  /* 2. Ocultar todas as sub-views */
+  /* Oculta todas as sub-views */
   document.querySelectorAll('.adult-sub-view').forEach(v => v.classList.remove('active'));
-
   _activeAdultPanel = null;
 
-  /* 3. Restaurar o grid (home do módulo adulto) */
-  grid.style.display = '';
-  grid.classList.remove('compact-grid');
+  /* Restaura o grid (caso a página adulto continue visível) */
+  const grid = document.getElementById('adult-dashboard-grid');
+  if (grid) {
+    grid.classList.remove('compact-grid');
+    grid.style.display = '';
+    document.querySelectorAll('.adult-cmd-card').forEach(c => c.classList.remove('active-panel'));
+  }
 
-  /* 4. Restaurar a back-bar de nível adulto */
-  const adultBackBar = document.getElementById('adult-back-bar');
-  if (adultBackBar) adultBackBar.style.display = '';
-
-  /* 5. Scroll de volta ao topo da seção */
-  const section = document.getElementById('page-adult');
-  if (section) setTimeout(() => section.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+  /* Volta sempre para a Central de Calculadoras */
+  navigate('calculators');
 }
 
 /* Alias de compatibilidade legada — mantém chamadas antigas funcionando */
@@ -9963,6 +9988,54 @@ function fecharModal() {
 }
 
 /* =========================================================
+   UTILITÁRIOS DE BUSCA — definidos cedo para uso universal
+   _fNorm, _fdResolveName, _fdResolveClass, _fdResolveCat e
+   _getMasterDB são declarados aqui e reutilizados em todos
+   os motores de busca do app (Home, Adulto, Fármacos, etc.)
+========================================================= */
+
+/* Remove acentos e normaliza para lowercase */
+const _fNorm = s => (s || '').toLowerCase()
+  .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+/* Resolve nome bilíngue para string no idioma atual */
+function _fdResolveName(d) {
+  if (!d || !d.name) return d?.id || '—';
+  if (typeof d.name === 'object') {
+    const lang = (typeof currentLang !== 'undefined' ? currentLang : 'pt');
+    return d.name[lang] || d.name.pt || d.id || '—';
+  }
+  return d.name;
+}
+
+/* Resolve classe bilíngue */
+function _fdResolveClass(d) {
+  if (!d || !d.class) return '';
+  if (typeof d.class === 'object') {
+    const lang = (typeof currentLang !== 'undefined' ? currentLang : 'pt');
+    return d.class[lang] || d.class.pt || '';
+  }
+  return d.class;
+}
+
+/* Resolve categoria bilíngue */
+function _fdResolveCat(d) {
+  if (!d || !d.category) return '';
+  if (typeof d.category === 'object') {
+    const lang = (typeof currentLang !== 'undefined' ? currentLang : 'pt');
+    return d.category[lang] || d.category.pt || '';
+  }
+  return d.category;
+}
+
+/* Fonte única de verdade: retorna window.DRUG_DB (Objeto Mestre Global) */
+function _getMasterDB() {
+  return (typeof window.DRUG_DB !== 'undefined' && Array.isArray(window.DRUG_DB))
+    ? window.DRUG_DB
+    : [];
+}
+
+/* =========================================================
    FÁRMACOS EM USO — Motor de Busca e Estado
 ========================================================= */
 window.patientMeds = []; /* Array global: [{ id, name, icon, class }] */
@@ -9982,12 +10055,14 @@ function filterMedsAutocomplete(query) {
   const q = (query || '').toLowerCase().trim();
   if (!q || q.length < 2) { ac.style.display = 'none'; return; }
 
-  /* Busca no DRUG_DB global */
-  const db = typeof DRUG_DB !== 'undefined' ? DRUG_DB : [];
+  /* Busca usando o Objeto Mestre Global */
+  const db = _getMasterDB();
   const already = (window.patientMeds || []).map(m => m.id);
+  const qNorm = _fNorm(q);
   const matches = db.filter(d => {
     if (already.includes(d.id)) return false;
-    return (d.name||'').toLowerCase().includes(q) || (d.class||'').toLowerCase().includes(q);
+    return _fNorm(_fdResolveName(d)).includes(qNorm)
+        || _fNorm(_fdResolveClass(d)).includes(qNorm);
   }).slice(0, 8);
 
   if (!matches.length) { ac.style.display = 'none'; return; }
@@ -10011,7 +10086,7 @@ function closeMedsAutocomplete() {
 }
 
 function addPatientMed(drugId) {
-  const db  = typeof DRUG_DB !== 'undefined' ? DRUG_DB : [];
+  const db   = _getMasterDB();
   const drug = db.find(d => d.id === drugId);
   if (!drug) return;
   if ((window.patientMeds||[]).find(m => m.id === drugId)) return; /* já existe */
@@ -11095,60 +11170,65 @@ function filterPrescriptions(v) { renderPrescriptions(v); }
 
 /* =========================================================
    ██████████ MÓDULO FARMÁCOS — Estudo sem paciente ██████████
-   renderFarmacosList / openFarmacoDetail / closeFarmacoDetail
+   Motor de Busca v3 — Objeto Mestre Global (escalável)
+
+   Utilitários (_fNorm, _fdResolve*, _getMasterDB) definidos
+   anteriormente no bloco "UTILITÁRIOS DE BUSCA".
+   Este bloco contém: contadores, renderização e detalhe.
+
+   Para adicionar uma NOVA CATEGORIA:
+     1. Criar database/novaCategoria.js → window.NOVA_DRUGS_DB
+     2. Adicionar no DOMContentLoaded:
+          DRUG_DB.push(...window.NOVA_DRUGS_DB);          // array []
+          ou
+          DRUG_DB.push(..._adaptExternalDB(window.NOVA_DRUGS_DB, 'Cat')); // {calculate}
+     Nenhuma linha de código aqui precisa ser alterada.
 ========================================================= */
 
-/* Utilitário: remove acentos para busca */
-const _fNorm = s => (s || '').toLowerCase()
-  .normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-
-/* Resolve nome do fármaco para string no idioma atual */
-function _fdResolveName(d) {
-  if (!d.name) return d.id || '—';
-  if (typeof d.name === 'object') return d.name[currentLang] || d.name.pt || d.id;
-  return d.name;
-}
-function _fdResolveClass(d) {
-  if (!d.class) return '';
-  if (typeof d.class === 'object') return d.class[currentLang] || d.class.pt || '';
-  return d.class;
-}
-function _fdResolveCat(d) {
-  if (!d.category) return '';
-  if (typeof d.category === 'object') return d.category[currentLang] || d.category.pt || '';
-  return d.category;
-}
-
-/* Atualiza o contador do botão FARMÁCOS */
+/* ── Atualiza TODOS os contadores de fármacos na UI ── */
 function _fdUpdateCount() {
-  const el = document.getElementById('farmacos-total-count');
-  if (el && typeof DRUG_DB !== 'undefined') el.textContent = DRUG_DB.length + ' fármacos';
+  const total = _getMasterDB().length;
+  const label = total > 0 ? `${total} fármacos` : '—';
+
+  /* Badge do card Fármacos na Central de Calculadoras */
+  const badgeEl = document.getElementById('farmacos-total-count');
+  if (badgeEl) badgeEl.textContent = label;
+
+  /* Counter da Home Mobile (card de busca) */
+  const hmEl = document.getElementById('hm-drug-count');
+  if (hmEl) hmEl.textContent = label;
 }
 
-/* Renderiza a lista de fármacos com filtro */
+/* ══════════════════════════════════════════════════════════════
+   renderFarmacosList(filter)
+   Motor de renderização genérico — varre _getMasterDB() inteiro,
+   independente de categoria. Escalável por design.
+══════════════════════════════════════════════════════════════ */
 function renderFarmacosList(filter) {
   const container = document.getElementById('farmacos-list-container');
   const statsEl   = document.getElementById('farmacos-stats-text');
   if (!container) return;
 
-  const db = typeof DRUG_DB !== 'undefined' ? DRUG_DB : [];
+  const db = _getMasterDB();
   const q  = _fNorm(filter || '');
 
+  /* ── Filtro multi-campo: nome (pt+es), classe, categoria ── */
   const filtered = !q ? db : db.filter(d => {
-    const n  = _fNorm(_fdResolveName(d));
-    const npt = _fNorm(typeof d.name === 'object' ? (d.name.pt||'') : (d.name||''));
-    const nes = _fNorm(typeof d.name === 'object' ? (d.name.es||'') : '');
-    const cl = _fNorm(_fdResolveClass(d));
-    const ct = _fNorm(_fdResolveCat(d));
-    return n.includes(q)||npt.includes(q)||nes.includes(q)||cl.includes(q)||ct.includes(q);
+    const npt = _fNorm(typeof d.name === 'object' ? (d.name.pt || '') : (d.name || ''));
+    const nes = _fNorm(typeof d.name === 'object' ? (d.name.es || '') : '');
+    const cl  = _fNorm(_fdResolveClass(d));
+    const ct  = _fNorm(_fdResolveCat(d));
+    return npt.includes(q) || nes.includes(q) || cl.includes(q) || ct.includes(q);
   });
 
+  /* ── Stats text ── */
   if (statsEl) {
     statsEl.textContent = q
       ? `${filtered.length} de ${db.length} fármacos encontrados`
       : `${db.length} fármacos disponíveis — toque para ver a bula clínica`;
   }
 
+  /* ── Estado vazio ── */
   if (filtered.length === 0) {
     container.innerHTML = `
       <div class="farmacos-empty">
@@ -11158,7 +11238,7 @@ function renderFarmacosList(filter) {
     return;
   }
 
-  /* Agrupa por categoria */
+  /* ── Agrupamento por categoria (genérico, cobre qualquer categoria futura) ── */
   const groups = {};
   const ORDER  = [];
   filtered.forEach(d => {
@@ -11166,9 +11246,9 @@ function renderFarmacosList(filter) {
     if (!groups[cat]) { groups[cat] = []; ORDER.push(cat); }
     groups[cat].push(d);
   });
-  /* Remove duplicatas de ORDER */
   const orderedCats = [...new Set(ORDER)].sort();
 
+  /* ── Renderização ── */
   let html = '';
   orderedCats.forEach(cat => {
     html += `<div class="farmacos-category-sep">${cat}</div>`;
@@ -11178,9 +11258,10 @@ function renderFarmacosList(filter) {
       const classStr = _fdResolveClass(d);
       const bg       = d.color    || 'rgba(56,189,248,0.15)';
       const clr      = d.colorTxt || '#38BDF8';
+      const safeId   = (d.id || '').replace(/'/g, "\\'");
       html += `
-        <div class="farmacos-row" onclick="openFarmacoDetail('${d.id}')" role="button" tabindex="0"
-             onkeydown="if(event.key==='Enter')openFarmacoDetail('${d.id}')">
+        <div class="farmacos-row" onclick="openFarmacoDetail('${safeId}')" role="button" tabindex="0"
+             onkeydown="if(event.key==='Enter')openFarmacoDetail('${safeId}')">
           <div class="farmacos-row-icon" style="background:${bg};color:${clr};">
             ${d.icon || '💊'}
           </div>
@@ -12748,25 +12829,26 @@ function updateScoreResult(key){
 }
 
 /* ============================================================
-   ██████████ FÁRMACOS ██████████
-   DRUG_DB — Array local vazio.
-   Populado em runtime pelos scripts externos (/database/*.js)
+   ██████████ FÁRMACOS — DRUG_DB (Array Mestre) ██████████
+   Populado em runtime no DOMContentLoaded pelos scripts em
+   /database/*.js via _adaptExternalDB() ou push direto.
+   NÃO adicionar entradas manualmente aqui.
 ============================================================ */
 const DRUG_DB = [];
-/* Expõe como window.DRUG_DB para acesso no módulo hmFilterDrugs */
+/* Expõe globalmente — consumido por _getMasterDB(), hmFilterDrugs, etc. */
 window.DRUG_DB = DRUG_DB;
 
 /* ============================================================
-   RENDER DRUG LIST — Lê categorias bilíngues { pt, es }
+   renderDrugList — painel Adulto > Fármacos (busca compacta)
+   Usa _getMasterDB() como fonte — totalmente escalável.
 ============================================================ */
-/* ── renderDrugList: lista vertical compacta, só aparece ao digitar ── */
 function renderDrugList(filter) {
   const container = document.getElementById('drug-list-container');
   if (!container) return;
 
-  const filterLow = (filter || '').toLowerCase().trim();
+  const filterLow = _fNorm(filter || '');
 
-  /* Tela inicia colapsada — sem espaço morto quando não há query */
+  /* Sem query → colapsa lista */
   if (!filterLow) {
     container.innerHTML = '';
     container.style.display = 'none';
@@ -12774,30 +12856,16 @@ function renderDrugList(filter) {
   }
   container.style.display = '';
 
-  /* Helper: resolve name para string no idioma atual (suporta {pt,es} e string plana) */
-  const resolveName = d => {
-    if (!d.name) return '';
-    if (typeof d.name === 'object') return (d.name[currentLang] || d.name.pt || '');
-    return d.name;
-  };
-  /* Helper: normaliza string para busca (remove acentos + lowercase) */
-  const norm = s => (s || '').toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  const filterNorm = norm(filterLow);
+  /* Usa o Objeto Mestre Global como fonte canônica */
+  const db = _getMasterDB();
 
-  const filtered = DRUG_DB.filter(d => {
-    const nameStr  = resolveName(d);
-    /* Busca em PT e ES simultaneamente */
-    const namePt   = typeof d.name === 'object' ? (d.name.pt || '') : (d.name || '');
-    const nameEs   = typeof d.name === 'object' ? (d.name.es || '') : (d.name || '');
-    const classStr = typeof d.class === 'object' ? (d.class[currentLang] || d.class.pt || '') : (d.class || '');
-    const catStr   = typeof d.category === 'object'
-      ? (d.category[currentLang] || d.category.pt || '')
-      : (d.category || '');
-    return norm(namePt).includes(filterNorm)
-        || norm(nameEs).includes(filterNorm)
-        || norm(classStr).includes(filterNorm)
-        || norm(catStr).includes(filterNorm);
+  const filtered = db.filter(d => {
+    const npt = _fNorm(typeof d.name === 'object' ? (d.name.pt || '') : (d.name || ''));
+    const nes = _fNorm(typeof d.name === 'object' ? (d.name.es || '') : '');
+    const cl  = _fNorm(_fdResolveClass(d));
+    const ct  = _fNorm(_fdResolveCat(d));
+    return npt.includes(filterLow) || nes.includes(filterLow)
+        || cl.includes(filterLow)  || ct.includes(filterLow);
   });
 
   if (filtered.length === 0) {
@@ -12812,20 +12880,19 @@ function renderDrugList(filter) {
   /* Lista vertical compacta */
   let html = `<div class="drug-list-vertical">`;
   filtered.forEach(d => {
-    const isSel   = selectedDrug === d.id ? 'selected' : '';
-    const dispName = resolveName(d);
-    const classStr = typeof d.class === 'object' ? (d.class[currentLang] || d.class.pt || '') : (d.class || '');
-    const catName  = d.category
-      ? (typeof d.category === 'object' ? (d.category[currentLang] || d.category.pt || '') : d.category)
-      : '';
+    const isSel    = selectedDrug === d.id ? 'selected' : '';
+    const dispName = _fdResolveName(d);
+    const classStr = _fdResolveClass(d);
+    const catName  = _fdResolveCat(d);
+    const safeId   = (d.id || '').replace(/'/g, "\\'");
     html += `
-      <div class="drug-list-row ${isSel}" id="dcard-${d.id}" onclick="selectDrug('${d.id}')">
+      <div class="drug-list-row ${isSel}" id="dcard-${d.id}" onclick="selectDrug('${safeId}')">
         <div class="drug-card-icon" style="background:${d.color||'rgba(34,200,122,0.15)'};color:${d.colorTxt||'#22C87A'};width:34px;height:34px;border-radius:9px;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
           ${d.icon || '💊'}
         </div>
         <div style="flex:1;min-width:0;">
           <div class="drug-card-name">${dispName}</div>
-          <div class="drug-card-class">${classStr} ${catName?'· '+catName:''}</div>
+          <div class="drug-card-class">${classStr}${catName ? ' · ' + catName : ''}</div>
         </div>
         <i class="fa-solid fa-chevron-right" style="font-size:10px;color:rgba(255,255,255,0.2);flex-shrink:0;"></i>
       </div>`;
@@ -12836,7 +12903,7 @@ function renderDrugList(filter) {
 }
 
 function filterDrugs(v) {
-  /* Quando o usuário digita novamente, fecha o card inline e reabre a lista */
+  /* Fecha card inline e reabre lista */
   const inlineEl = document.getElementById('calc-drug-result');
   if (inlineEl) { inlineEl.style.display = 'none'; inlineEl.innerHTML = ''; }
   selectedDrug = null;
@@ -15648,12 +15715,9 @@ function calcNEWS2() {
 function _updateDrugSearchHint() {
   const ht = document.getElementById('drug-search-hint-text');
   if (!ht) return;
-  /* Lê o idioma SEMPRE de currentLang no momento da chamada */
   const isEs = (typeof currentLang !== 'undefined') && currentLang === 'es';
-  /* Conta as entradas reais: ALL_DRUGS_DB (mapa chave→entry) é a fonte verdadeira */
-  const cnt = (window.ALL_DRUGS_DB && Object.keys(window.ALL_DRUGS_DB).length)
-    || (typeof DRUG_DB !== 'undefined' ? DRUG_DB.length : 0);
-  /* Usa textContent (sem risco de XSS e sem depender de innerHTML externo) */
+  /* Usa _getMasterDB() — fonte canônica única */
+  const cnt = _getMasterDB().length;
   ht.textContent = isEs
     ? `Escriba para buscar entre ${cnt} fármacos disponibles`
     : `Digite para buscar entre ${cnt} fármacos disponíveis`;
@@ -15828,42 +15892,58 @@ function _adaptExternalDB(dbObj, categoryLabel) {
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ═══════════════════════════════════════════════════════════════════
-     INJEÇÃO DOS 14 MÓDULOS DE FÁRMACOS NO DRUG_DB GLOBAL
-     Módulos com schema {calculate}: passam pelo _adaptExternalDB()
-     Módulos com schema array []:    push direto (vazio = noop seguro)
+     INJEÇÃO DOS MÓDULOS DE FÁRMACOS — OBJETO MESTRE GLOBAL (DRUG_DB)
+     ─────────────────────────────────────────────────────────────────
+     REGRAS DE INJEÇÃO (não alterar sem entender o schema):
+
+     Schema {calculate} (objeto-mapa chave→entry):
+       → OBRIGATÓRIO usar _adaptExternalDB(DB, 'Categoria')
+       → Detecção: typeof DB === 'object' && !Array.isArray(DB)
+       → Módulos atuais: ANTIMICROBIANOS, PSICOFARMACOS, CARDIO
+         ⚠️  CARDIO estava errado (tratado como array com .length) — corrigido.
+
+     Schema [] (array de entries com .dose() ou .id):
+       → Push direto apenas se .length > 0
+       → Módulos atuais: ANALGESICOS, ANTICOAG, ENDOCRINO, GASTRO,
+         INFUSOES, NEFRO, NEURO, OBESIDADE, PNEUMO, PSIQUIATRIA, REUMATOLOGIA
+
+     Para NOVA CATEGORIA:
+       • Schema {calculate} → adicione: _injectObjectDB(window.NOVA_DB, 'NomeCat')
+       • Schema []          → adicione: _injectArrayDB(window.NOVA_DB)
+       Nenhuma outra linha precisa ser alterada.
   ═══════════════════════════════════════════════════════════════════ */
 
-  /* ── Schema {calculate} → adaptador obrigatório ── */
-  if (window.ANTIMICROBIANOS_DRUGS_DB)
-    DRUG_DB.push(..._adaptExternalDB(window.ANTIMICROBIANOS_DRUGS_DB, 'Antimicrobiano'));
-  if (window.PSICOFARMACOS_DRUGS_DB)
-    DRUG_DB.push(..._adaptExternalDB(window.PSICOFARMACOS_DRUGS_DB, 'Psicofármaco'));
+  /* ── Helpers de injeção (DRY, evitam repetição de if/push) ── */
+  function _injectObjectDB(db, category) {
+    /* Para DBs do tipo {chave: {calculate(p,lang)}} */
+    if (db && typeof db === 'object' && !Array.isArray(db) && Object.keys(db).length > 0)
+      DRUG_DB.push(..._adaptExternalDB(db, category));
+  }
+  function _injectArrayDB(db) {
+    /* Para DBs do tipo [{id, dose(p,lang), ...}] */
+    if (Array.isArray(db) && db.length > 0)
+      DRUG_DB.push(...db);
+  }
 
-  /* ── Schema array [] → push direto (stubs vazios = noop seguros) ── */
-  if (window.ANALGESICOS_DRUGS_DB  && window.ANALGESICOS_DRUGS_DB.length)
-    DRUG_DB.push(...window.ANALGESICOS_DRUGS_DB);
-  if (window.ANTICOAG_DRUGS_DB     && window.ANTICOAG_DRUGS_DB.length)
-    DRUG_DB.push(...window.ANTICOAG_DRUGS_DB);
-  if (window.CARDIO_DRUGS_DB       && window.CARDIO_DRUGS_DB.length)
-    DRUG_DB.push(...window.CARDIO_DRUGS_DB);
-  if (window.ENDOCRINO_DRUGS_DB    && window.ENDOCRINO_DRUGS_DB.length)
-    DRUG_DB.push(...window.ENDOCRINO_DRUGS_DB);
-  if (window.GASTRO_DRUGS_DB       && window.GASTRO_DRUGS_DB.length)
-    DRUG_DB.push(...window.GASTRO_DRUGS_DB);
-  if (window.INFUSOES_DRUGS_DB     && window.INFUSOES_DRUGS_DB.length)
-    DRUG_DB.push(...window.INFUSOES_DRUGS_DB);
-  if (window.NEFRO_DRUGS_DB        && window.NEFRO_DRUGS_DB.length)
-    DRUG_DB.push(...window.NEFRO_DRUGS_DB);
-  if (window.NEURO_DRUGS_DB        && window.NEURO_DRUGS_DB.length)
-    DRUG_DB.push(...window.NEURO_DRUGS_DB);
-  if (window.OBESIDADE_DRUGS_DB    && window.OBESIDADE_DRUGS_DB.length)
-    DRUG_DB.push(...window.OBESIDADE_DRUGS_DB);
-  if (window.PNEUMO_DRUGS_DB       && window.PNEUMO_DRUGS_DB.length)
-    DRUG_DB.push(...window.PNEUMO_DRUGS_DB);
-  if (window.PSIQUIATRIA_DRUGS_DB  && window.PSIQUIATRIA_DRUGS_DB.length)
-    DRUG_DB.push(...window.PSIQUIATRIA_DRUGS_DB);
-  if (window.REUMATOLOGIA_DRUGS_DB && window.REUMATOLOGIA_DRUGS_DB.length)
-    DRUG_DB.push(...window.REUMATOLOGIA_DRUGS_DB);
+  /* ── Schema {calculate} ── */
+  _injectObjectDB(window.ANTIMICROBIANOS_DRUGS_DB, 'Antimicrobiano');
+  _injectObjectDB(window.PSICOFARMACOS_DRUGS_DB,   'Psicofármaco');
+  _injectObjectDB(window.CARDIO_DRUGS_DB,           'Cardiovascular'); /* ← bug corrigido */
+
+  /* ── Schema [] ── */
+  _injectArrayDB(window.ANALGESICOS_DRUGS_DB);
+  _injectArrayDB(window.ANTICOAG_DRUGS_DB);
+  _injectArrayDB(window.ENDOCRINO_DRUGS_DB);
+  _injectArrayDB(window.GASTRO_DRUGS_DB);
+  _injectArrayDB(window.INFUSOES_DRUGS_DB);
+  _injectArrayDB(window.NEFRO_DRUGS_DB);
+  _injectArrayDB(window.NEURO_DRUGS_DB);
+  _injectArrayDB(window.OBESIDADE_DRUGS_DB);
+  _injectArrayDB(window.PNEUMO_DRUGS_DB);
+  _injectArrayDB(window.PSIQUIATRIA_DRUGS_DB);
+  _injectArrayDB(window.REUMATOLOGIA_DRUGS_DB);
+
+  console.log('[MedCases] DRUG_DB populado:', DRUG_DB.length, 'fármacos');
 
   /* ── Protocolos de Prescrição (database/prescricoes.js) ── */
   if (window.PRESCRICOES_DB && window.PRESCRICOES_DB.length) {
@@ -15873,20 +15953,15 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('[MedCases] PRESCRICOES_DB não encontrado — database/prescricoes.js pode não ter carregado');
   }
 
-  /* ── Atualiza contador do botão FARMÁCOS ── */
-  if (typeof _fdUpdateCount === 'function') _fdUpdateCount();
-
   /* ═══════════════════════════════════════════════════════════════════
-     window.ALL_DRUGS_DB — mapa global chave→entrada unificado
-     Todos os 14 módulos; fallback {} garante que stubs vazios
-     não quebrem o spread. Usado por contadores, busca e auditoria.
+     window.ALL_DRUGS_DB — mapa chave→entrada para lookup rápido por ID
+     Mantido para compatibilidade com módulos que fazem busca por chave.
+     A fonte de verdade para busca e contagem é DRUG_DB (via _getMasterDB).
   ═══════════════════════════════════════════════════════════════════ */
   window.ALL_DRUGS_DB = {
-    /* Módulos schema {calculate} — mapa nativo chave→objeto */
     ...(window.ANTIMICROBIANOS_DRUGS_DB || {}),
     ...(window.PSICOFARMACOS_DRUGS_DB   || {}),
-    ...(window.CARDIO_DRUGS_DB          || {}),  /* schema calculate() — spread direto */
-    /* Módulos schema array — converte para mapa id→entry */
+    ...(window.CARDIO_DRUGS_DB          || {}),
     ...Object.fromEntries((window.ANALGESICOS_DRUGS_DB  || []).filter(d=>d?.id).map(d=>[d.id, d])),
     ...Object.fromEntries((window.ANTICOAG_DRUGS_DB     || []).filter(d=>d?.id).map(d=>[d.id, d])),
     ...Object.fromEntries((window.ENDOCRINO_DRUGS_DB    || []).filter(d=>d?.id).map(d=>[d.id, d])),
@@ -15899,6 +15974,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ...Object.fromEntries((window.PSIQUIATRIA_DRUGS_DB  || []).filter(d=>d?.id).map(d=>[d.id, d])),
     ...Object.fromEntries((window.REUMATOLOGIA_DRUGS_DB || []).filter(d=>d?.id).map(d=>[d.id, d]))
   };
+  console.log('[MedCases] ALL_DRUGS_DB montado:', Object.keys(window.ALL_DRUGS_DB).length, 'entradas');
+
+  /* ── Atualiza TODOS os contadores (badge + home mobile) ── */
+  if (typeof _fdUpdateCount === 'function') _fdUpdateCount();
 
   /* Disparo inicial de tradução — usa idioma já detectado (Diretriz 1) */
   setLang(currentLang || 'pt');
@@ -16413,6 +16492,12 @@ document.addEventListener('DOMContentLoaded', () => {
      Busca em DRUG_DB (populado logo acima neste
      DOMContentLoaded) e renderiza .hm-drug-list.
   ───────────────────────────────────────────── */
+  /* ══════════════════════════════════════════════════════════════
+     hmFilterDrugs — Motor de busca da Home Mobile
+     Usa _getMasterDB() como fonte canônica (Objeto Mestre Global).
+     Escalável: qualquer nova categoria adicionada ao DRUG_DB
+     aparece automaticamente nos resultados sem alteração aqui.
+  ══════════════════════════════════════════════════════════════ */
   window.hmFilterDrugs = function(term) {
     const listEl   = document.getElementById('hm-drug-list');
     const emptyEl  = document.getElementById('hm-drug-empty');
@@ -16422,27 +16507,27 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Mostra/oculta botão limpar */
     if (clearBtn) clearBtn.style.display = term.length ? 'flex' : 'none';
 
-    /* Sem query → mostra estado vazio com dica */
+    /* Sem query → mostra estado vazio */
     if (!term.trim()) {
       listEl.innerHTML = '';
       if (emptyEl) listEl.appendChild(emptyEl);
-      emptyEl && (emptyEl.style.display = 'flex');
+      if (emptyEl) emptyEl.style.display = 'flex';
       _hmUpdateDrugCount();
       return;
     }
 
-    const q = term.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    /* Normaliza a query (acentos + lowercase) */
+    const q = _fNorm(term);
 
-    /* Filtra DRUG_DB — DRUG_DB é o array global populado no DOMContentLoaded */
-    const results = (window.DRUG_DB || []).filter(d => {
-      if (!d || !d.name) return false;
-      const name  = (d.name  || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-      const cls   = (d.class || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-      const cat   = (typeof d.category === 'object'
-        ? (d.category.pt || '')
-        : (d.category || '')).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-      return name.includes(q) || cls.includes(q) || cat.includes(q);
-    }).slice(0, 40); /* Limita a 40 para performance */
+    /* ── Filtra usando o Objeto Mestre Global ── */
+    const results = _getMasterDB().filter(d => {
+      if (!d) return false;
+      const npt = _fNorm(typeof d.name === 'object' ? (d.name.pt || '') : (d.name || ''));
+      const nes = _fNorm(typeof d.name === 'object' ? (d.name.es || '') : '');
+      const cl  = _fNorm(_fdResolveClass(d));
+      const ct  = _fNorm(_fdResolveCat(d));
+      return npt.includes(q) || nes.includes(q) || cl.includes(q) || ct.includes(q);
+    }).slice(0, 40); /* Limite de performance */
 
     if (!results.length) {
       listEl.innerHTML = `
@@ -16453,28 +16538,29 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    /* Agrupa por categoria */
+    /* ── Agrupamento por categoria (genérico, qualquer categoria futura) ── */
     const byCategory = {};
     results.forEach(d => {
-      const cat = typeof d.category === 'object'
-        ? (d.category.pt || 'Outros')
-        : (d.category || 'Outros');
+      const cat = _fdResolveCat(d) || 'Outros';
       if (!byCategory[cat]) byCategory[cat] = [];
       byCategory[cat].push(d);
     });
 
-    /* Renderiza */
+    /* ── Renderização ── */
     let html = '';
     Object.entries(byCategory).forEach(([cat, drugs]) => {
       html += `<div class="hm-drug-sep">${cat}</div>`;
       drugs.forEach(d => {
         const colorTxt = d.colorTxt || '#38BDF8';
+        const dispName = _fdResolveName(d);
+        const dispClass = _fdResolveClass(d);
+        const safeId = (d.id || '').replace(/'/g, "\\'");
         html += `
-          <div class="hm-drug-item" onclick="hmShowInlineResult('${d.id}')" role="button" aria-label="${d.name}">
+          <div class="hm-drug-item" onclick="hmShowInlineResult('${safeId}')" role="button" aria-label="${dispName}">
             <div class="hm-drug-dot" style="background:${colorTxt}"></div>
             <div class="hm-drug-info">
-              <div class="hm-drug-name">${d.name}</div>
-              <div class="hm-drug-class">${d.class || ''}</div>
+              <div class="hm-drug-name">${dispName}</div>
+              <div class="hm-drug-class">${dispClass}</div>
             </div>
             <i class="fa-solid fa-chevron-right hm-drug-arrow"></i>
           </div>`;
@@ -16509,15 +16595,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof openFarmacoDetail === 'function') {
       openFarmacoDetail(id);
     } else {
-      /* fallback: navega para sub-view de fármacos */
-      navigate('adult');
+      /* fallback: navega para sub-view de fármacos via Central de Calculadoras */
+      navigate('calculators');
       setTimeout(() => {
         showAdultPanel('drugs');
         setTimeout(() => {
-          const inp = document.getElementById('drug-search-input');
-          const drug = (window.DRUG_DB || []).find(d => d.id === id);
-          if (inp && drug) inp.value = drug.name;
-          if (typeof filterDrugs === 'function' && drug) filterDrugs(drug.name);
+          const inp  = document.getElementById('drug-search-input');
+          const drug = _getMasterDB().find(d => d.id === id);
+          if (inp && drug) inp.value = _fdResolveName(drug);
+          if (typeof filterDrugs === 'function' && drug) filterDrugs(_fdResolveName(drug));
         }, 150);
       }, 100);
     }
@@ -16533,13 +16619,9 @@ document.addEventListener('DOMContentLoaded', () => {
     hmFilterDrugs('');
   };
 
-  /* ─── Atualiza o counter de fármacos no cabeçalho do card ─── */
+  /* ─── _hmUpdateDrugCount — alias leve para _fdUpdateCount (compatibilidade) ─── */
   function _hmUpdateDrugCount() {
-    const el = document.getElementById('hm-drug-count');
-    if (el) {
-      const total = (window.DRUG_DB || []).length;
-      el.textContent = total > 0 ? `${total} fármacos` : '—';
-    }
+    if (typeof _fdUpdateCount === 'function') _fdUpdateCount();
   }
 
   /* ─── Inicializa a home mobile: carrega dados salvos + atualiza counter ─── */
