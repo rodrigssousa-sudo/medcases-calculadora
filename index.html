@@ -3349,6 +3349,70 @@
     .dose-copy-btn i { font-size:12px; }
 
     /* ============================================================
+       CDP — PAINEL DE DECISÃO CLÍNICA (card Fármacos da Home)
+    ============================================================ */
+    .cdp-panel {
+      border-radius: 12px;
+      padding: 14px;
+      margin: 0 0 10px;
+    }
+    .cdp-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .cdp-status-badge {
+      flex-shrink: 0;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .cdp-dose-line {
+      line-height: 1.35;
+      flex: 1;
+      min-width: 0;
+    }
+    .cdp-dose-line strong { font-weight: 700; }
+    .cdp-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+    .cdp-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid rgba(148,163,184,0.25);
+      color: #94A3B8;
+      background: rgba(148,163,184,0.06);
+    }
+    .cdp-conduta-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 5px;
+    }
+    .cdp-conduta-text {
+      font-size: 13px;
+      line-height: 1.65;
+      color: #CBD5E1;
+    }
+    .cdp-conduta-text strong { color: #F1F5F9; }
+    body.light-mode .cdp-conduta-text { color: #334155; }
+    body.light-mode .cdp-conduta-text strong { color: #0F172A; }
+    body.light-mode .cdp-chip { color: #475569; border-color: rgba(71,85,105,0.20); }
+
+    /* ============================================================
        BIC — CAMPO DROGA LIVRE + BOTÃO COPIAR PRESCRIÇÃO
     ============================================================ */
 
@@ -13165,149 +13229,34 @@ function calcDrugDose(id) {
   const clcr = p ? p.clcr : null;
 
   /* ══════════════════════════════════════════════════════════════
-     ESQUEMAS DISPONÍVEIS — filtrados por perfil (v3)
-     Pediátrico: apenas chaves /pediatr/i
-     Adulto:     exclui chaves /pediatr/i
+     renalOverride — mantido para alimentar o texto de conduta e
+     o contexto de cópia. Não gera HTML próprio (removido do card).
   ══════════════════════════════════════════════════════════════ */
-  let allDosesHtml = '';
-
-  /* Verifica se há ajuste renal ativo com dados estruturados */
   const renalOverride = (hero.renalAdj && hero.renalDoseObj && hero.faixaKey)
     ? (() => {
         const rawFaixa = hero.renalDoseObj[hero.faixaKey];
         if (!rawFaixa || typeof rawFaixa !== 'object') return null;
-        /* Seleciona sub-objeto por perfil */
         const subObj = isPediatric
           ? rawFaixa.pediatrica
           : (rawFaixa.vo || rawFaixa.ev || null);
         if (!subObj) return null;
         return {
-          faixaKey: hero.faixaKey,
+          faixaKey:   hero.faixaKey,
           faixaLabel: hero.renalFaixa,
-          dados: { dose: subObj.dose, via: isPediatric ? (subObj.via||'') : (rawFaixa.vo ? 'VO' : 'EV'),
-                   intervalo: subObj.intervalo, obs: rawFaixa.obs || '' },
-          clcrV: hero.clcr,
-          isHD: hero.isHD,
+          dados: { dose: subObj.dose,
+                   via:  isPediatric ? (subObj.via||'') : (rawFaixa.vo ? 'VO' : 'EV'),
+                   intervalo: subObj.intervalo,
+                   obs: rawFaixa.obs || '' },
+          clcrV:      hero.clcr,
+          isHD:       hero.isHD,
           isPediatric
         };
       })()
     : null;
 
-  if (renalOverride) {
-    const ro = renalOverride;
-    const stateColor  = ro.isHD ? '#A78BFA' : '#F0A842';
-    const stateBg     = ro.isHD ? 'rgba(167,139,250,0.10)' : 'rgba(240,168,66,0.10)';
-    const stateBorder = ro.isHD ? 'rgba(167,139,250,0.30)' : 'rgba(240,168,66,0.30)';
-    const stateIcon   = ro.isHD ? 'fa-droplet-slash' : 'fa-kidney';
-
-    const bannerTxt = ro.isHD
-      ? (isES ? 'Paciente en hemodiálisis — dosis ajustada:' : 'Paciente em hemodiálise — dose ajustada:')
-      : (isES ? `ClCr ${ro.clcrV} mL/min (${ro.faixaLabel}) — dose ajustada:`
-              : `ClCr ${ro.clcrV} mL/min (${ro.faixaLabel}) — dose ajustada:`);
-
-    let innerHtml = '';
-    if (ro.dados.dose && ro.dados.dose !== '—') {
-      /* Cálculo mg/kg → mg absoluto para dose renal pediátrica */
-      let doseDisplay = ro.dados.dose;
-      if (isPediatric && hero.weight && /mg\/kg/i.test(doseDisplay)) {
-        const m = doseDisplay.match(/(\d+(?:[.,]\d+)?)\s*(?:–|-|a)\s*(\d+(?:[.,]\d+)?)\s*mg\/kg/i)
-               || doseDisplay.match(/(\d+(?:[.,]\d+)?)\s*mg\/kg/i);
-        if (m) {
-          const lo = parseFloat(m[1].replace(',','.'));
-          const hi = m[2] ? parseFloat(m[2].replace(',','.')) : null;
-          if (!isNaN(lo)) {
-            /* Detecta mg/kg/dia vs mg/kg/dose */
-            let div = 1;
-            if (/mg\/kg\/dia|mg\/kg\/day/i.test(doseDisplay) && !/mg\/kg\/dose/i.test(doseDisplay)) {
-              const intv = ro.dados.intervalo || '';
-              if (/12\/12h|12h/i.test(intv))      div = 2;
-              else if (/24\/24h|24h/i.test(intv)) div = 1;
-              else div = 3;
-            }
-            const dMin = Math.round((lo * hero.weight) / div);
-            const dMax = hi ? Math.round((hi * hero.weight) / div) : null;
-            doseDisplay = dMax ? `${dMin}–${dMax} mg` : `${dMin} mg`;
-          }
-        }
-      }
-      innerHtml = `
-        <div class="fd-renal-pills" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;">
-          <span class="fd-renal-pill is-dose" style="background:${stateBg};border:1px solid ${stateBorder};color:${stateColor};padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;">
-            💊 ${doseDisplay}
-          </span>
-          ${ro.dados.via ? `
-          <span class="fd-renal-pill is-via" style="background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.25);color:#38BDF8;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">
-            ${ro.dados.via}
-          </span>` : ''}
-          ${ro.dados.intervalo && ro.dados.intervalo !== '—' ? `
-          <span class="fd-renal-pill is-intervalo" style="background:${stateBg};border:1px solid ${stateBorder};color:${stateColor};padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">
-            🔄 ${ro.dados.intervalo}
-          </span>` : ''}
-        </div>
-        ${ro.dados.obs ? `<div class="fd-renal-obs" style="margin-top:7px;padding:6px 10px;border-left:3px solid ${stateBorder};font-size:11px;color:var(--text-muted);line-height:1.5;">${ro.dados.obs}</div>` : ''}`;
-    } else if (ro.dados.obs) {
-      innerHtml = `<div class="fd-renal-obs" style="margin-top:6px;font-size:11.5px;color:var(--text-body);line-height:1.5;">${highlightDose(ro.dados.obs)}</div>`;
-    }
-
-    allDosesHtml = `
-      <div class="dose-inner-section" style="border:1.5px solid ${stateBorder};border-radius:10px;padding:10px 12px;background:${stateBg};">
-        <div class="dose-inner-label" style="color:${stateColor};margin-bottom:4px;">
-          <i class="fa-solid ${stateIcon}" style="font-size:9px;"></i>
-          ${isPediatric ? (isES?'ESQUEMA RENAL — PEDIÁTRICO':'ESQUEMA RENAL — PEDIÁTRICO')
-                       : (isES?'ESQUEMA RENAL AJUSTADO':'ESQUEMA RENAL AJUSTADO')}
-        </div>
-        <div style="font-size:10.5px;color:${stateColor};opacity:0.85;margin-bottom:2px;">${bannerTxt}</div>
-        ${innerHtml}
-      </div>`;
-
-  } else if (rich.dose && typeof rich.dose === 'object') {
-    /* ── MODO PADRÃO: filtra esquemas por perfil (v3) ── */
-    const { filtered: filteredDoses } = _fdBuildDoseSrc(hero, rich, isES);
-    const doseEntries = Object.entries(filteredDoses || {})
-      .filter(([k, v]) => {
-        /* Para pediátrico não mostra a chave que já está no hero como dose calculada */
-        if (isPediatric && /pediatr/i.test(k)) return false;
-        return v && String(v).trim() !== '—';
-      });
-    if (doseEntries.length > 0) {
-      allDosesHtml = `
-        <div class="dose-inner-section">
-          <div class="dose-inner-label">
-            <i class="fa-solid fa-list-ul" style="color:#38BDF8;font-size:9px;"></i>
-            ${isES ? 'ESQUEMAS DISPONÍVEIS' : 'ESQUEMAS DISPONÍVEIS'}
-          </div>
-          ${doseEntries.map(([k, v]) => `
-            <div class="dose-scheme-card">
-              <div class="dose-scheme-key">${_fdFormatKey ? _fdFormatKey(k) : k.replace(/([A-Z])/g,' $1').replace(/^./,s=>s.toUpperCase())}</div>
-              <div class="dose-scheme-val">${highlightDose(String(v))}</div>
-            </div>`).join('')}
-        </div>`;
-    }
-  }
-
-  /* ── Dose por kg — filtrada por perfil ── */
-  let doseKgHtml = '';
-  if (rich.doseKg && typeof rich.doseKg === 'object') {
-    const kgEntries = Object.entries(rich.doseKg).filter(([k]) =>
-      isPediatric ? true : !/pediatr/i.test(k)   /* adulto: oculta chaves pedi */
-    );
-    if (kgEntries.length > 0) {
-      doseKgHtml = `
-        <div class="dose-inner-section" style="padding-bottom:10px;">
-          <div class="dose-inner-label">
-            <i class="fa-solid fa-weight-scale" style="color:#38BDF8;font-size:9px;"></i>
-            ${isES ? 'DOSIS POR PESO' : 'DOSE POR PESO'}
-          </div>
-          <div class="dose-kg-card">
-            ${kgEntries.map(([k,v]) => `
-              <div class="dose-kg-item">
-                <b>${_fdFormatKey ? _fdFormatKey(k) : k.replace(/([A-Z])/g,' $1').replace(/^./,s=>s.toUpperCase())}:</b>
-                <strong>${highlightDose(String(v))}</strong>
-              </div>`).join('')}
-          </div>
-        </div>`;
-    }
-  }
+  /* allDosesHtml e doseKgHtml removidos do output — info migrada para cdp-conduta */
+  const allDosesHtml = '';
+  const doseKgHtml   = '';
 
   /* ── Cálculo mg absoluto para display extra (pediátrico) ── */
   const calcRowHtml = (isPediatric && calcDoseMgKg && hero.weight)
@@ -13345,84 +13294,149 @@ function calcDrugDose(id) {
   window._lastHeroIsAdjusted = heroIsAdjusted;
   window._lastRenalOverride  = renalOverride;
 
-  /* Alerta gestante (só se hero.pregAlert) */
-  const pregBannerHtml = hero.pregAlert
-    ? `<div class="dose-preg-alert">
-         <i class="fa-solid fa-person-pregnant" style="color:#F472B6;"></i>
-         <span>${hero.pregAlert}</span>
-       </div>`
-    : '';
+  /* ══════════════════════════════════════════════════════════════
+     PAINEL DE DECISÃO CLÍNICA — gera texto de conduta personalizado
+     Baseado exclusivamente nos dados calculados pela engine:
+     heroDose, heroFreq, heroVia, heroIsAdjusted, renalOverride,
+     hero.renalState, hero.pregAlert, isPediatric, clcr
+  ══════════════════════════════════════════════════════════════ */
 
-  /* Badge pediátrico com perfil e cálculo */
-  const pediHeaderHtml = isPediatric
-    ? `<div class="dose-pedi-header">
-         <i class="fa-solid fa-child" style="color:#FBBF24;"></i>
-         <span>${isES
-           ? `POSOLOGÍA PEDIÁTRICA — ${hero.weight||'?'} kg · ${hero.age||'?'} años`
-           : `POSOLOGIA PEDIÁTRICA — ${hero.weight||'?'} kg · ${hero.age||'?'} anos`}</span>
-       </div>`
-    : '';
+  /* ── Detecta contraindicação: dose ausente + ajuste renal ativo ── */
+  const isContraindicated = heroIsAdjusted
+    && (!heroDose || heroDose === '—' || /contra|não recomend|avoid|evitar/i.test(heroDose));
+
+  /* ── Monta linha de dose formatada: "50 mg VO — 24/24h" ── */
+  const doseFormatted = (() => {
+    if (!heroDose || heroDose === '—') return isES ? 'Ver posología' : 'Ver posologia';
+    const parts = [heroDose];
+    if (heroVia  && heroVia  !== '—') parts.push(heroVia);
+    if (heroFreq && heroFreq !== '—') parts.push('— ' + heroFreq);
+    return parts.join(' ');
+  })();
+
+  /* ── Gera texto de conduta baseado no cenário clínico ── */
+  const _buildCondutatxt = () => {
+    /* CENÁRIO 1 — Contraindicado */
+    if (isContraindicated) {
+      const motivo = renalOverride
+        ? (renalOverride.isHD
+            ? (isES ? 'Paciente en hemodiálisis.' : 'Paciente em hemodiálise.')
+            : `ClCr ${renalOverride.clcrV} mL/min (${renalOverride.faixaLabel || hero.renalFaixa}).`)
+        : (hero.renalFaixa ? hero.renalFaixa + '.' : '');
+      return isES
+        ? `${motivo} Fármaco no recomendado con este perfil renal. Considere alternativa terapéutica y consulte la Ficha Técnica.`
+        : `${motivo} Fármaco não recomendado neste perfil renal. Considere alternativa terapêutica e consulte a Bula Completa.`;
+    }
+
+    /* CENÁRIO 2 — Ajuste renal necessário */
+    if (heroIsAdjusted) {
+      const faixaStr = renalOverride
+        ? (renalOverride.isHD
+            ? (isES ? 'Paciente en hemodiálisis' : 'Paciente em hemodiálise')
+            : `ClCr ${renalOverride.clcrV} mL/min`)
+        : (hero.renalFaixa || (clcr != null ? `ClCr ${clcr} mL/min` : ''));
+      const obsStr = renalOverride?.dados?.obs
+        ? ' ' + renalOverride.dados.obs
+        : '';
+      return isES
+        ? `${faixaStr} — ajuste de dosis necesario. Utilizar ${doseFormatted}.${obsStr} Monitorear función renal periódicamente.`
+        : `${faixaStr} — ajuste de dose necessário. Utilizar ${doseFormatted}.${obsStr} Monitorar função renal periodicamente.`;
+    }
+
+    /* CENÁRIO 3 — Gestante */
+    if (hero.pregAlert) {
+      const alertTxt = hero.pregAlert.replace(/<[^>]*>/g, '');
+      return isES
+        ? `Paciente gestante. ${alertTxt} Utilizar ${doseFormatted} con monitoreo obstétrico.`
+        : `Paciente gestante. ${alertTxt} Utilizar ${doseFormatted} com monitoramento obstétrico.`;
+    }
+
+    /* CENÁRIO 4 — Pediátrico */
+    if (isPediatric) {
+      const kgInfo = hero.weight ? ` (${hero.weight} kg)` : '';
+      const calcInfo = calcDoseMgKg ? ` Dose calculada: ${calcDoseMgKg} mg.` : '';
+      return isES
+        ? `Paciente pediátrico${kgInfo}. Utilizar ${doseFormatted}.${calcInfo} Ajustar conforme respuesta clínica.`
+        : `Paciente pediátrico${kgInfo}. Utilizar ${doseFormatted}.${calcInfo} Ajustar conforme resposta clínica.`;
+    }
+
+    /* CENÁRIO 5 — Padrão: função renal preservada ou sem dados renais */
+    const renalOk = clcr != null
+      ? (clcr > 50
+          ? (isES ? `ClCr ${clcr} mL/min — función renal preservada.` : `ClCr ${clcr} mL/min — função renal preservada.`)
+          : (isES ? `ClCr ${clcr} mL/min — función renal reduzida, sem necessidade de ajuste para este fármaco.`
+                  : `ClCr ${clcr} mL/min — função renal reduzida, sem necessidade de ajuste para este fármaco.`))
+      : '';
+    const noteStr = (result && result.note && !/HTA|hipertensão|DM2|diabetes|mecanismo|indicação|bula/i.test(result.note))
+      ? ' ' + result.note.replace(/<[^>]*>/g, '').split('.')[0] + '.'
+      : '';
+    return isES
+      ? `${renalOk} Utilizar ${doseFormatted}.${noteStr} Monitorear respuesta clínica.`
+      : `${renalOk} Utilizar ${doseFormatted}.${noteStr} Monitorar resposta clínica.`;
+  };
+
+  const condutatxt = _buildCondutatxt();
+
+  /* ── Cores e ícones do painel por cenário ── */
+  const panelAccent = isContraindicated
+    ? { color: '#F87171', bg: 'rgba(248,113,113,0.08)', border: 'rgba(248,113,113,0.25)', icon: '🚫', label: isES ? 'NÃO RECOMENDADO' : 'NÃO RECOMENDADO' }
+    : heroIsAdjusted
+      ? { color: '#F0A842', bg: 'rgba(240,168,66,0.08)', border: 'rgba(240,168,66,0.25)', icon: '⚠️', label: isES ? 'AJUSTE DE DOSIS' : 'AJUSTE DE DOSE' }
+      : hero.pregAlert
+        ? { color: '#F472B6', bg: 'rgba(244,114,182,0.08)', border: 'rgba(244,114,182,0.25)', icon: '🤰', label: isES ? 'GESTANTE' : 'GESTANTE' }
+        : isPediatric
+          ? { color: '#FBBF24', bg: 'rgba(251,191,36,0.08)', border: 'rgba(251,191,36,0.25)', icon: '👶', label: isES ? 'PEDIÁTRICO' : 'PEDIÁTRICO' }
+          : { color: '#38BDF8', bg: 'rgba(56,189,248,0.08)', border: 'rgba(56,189,248,0.20)', icon: '✅', label: isES ? 'DOSIS ESTÁNDAR' : 'DOSE PADRÃO' };
+
+  /* ── Linha de dose hero (destaque visual) ── */
+  const doseHeroLine = isContraindicated
+    ? `<span style="color:#F87171;font-weight:700;font-size:15px;">NÃO RECOMENDADA</span>`
+    : `<span style="color:${panelAccent.color};font-weight:700;font-size:15px;">${highlightDose(heroDose)}</span>`
+      + (heroVia  ? `<span style="color:#94A3B8;font-size:13px;margin-left:6px;">${heroVia}</span>` : '')
+      + (heroFreq ? `<span style="color:#94A3B8;font-size:13px;margin-left:4px;">— ${heroFreq}</span>` : '');
+
+  /* ── Chips de perfil do paciente ── */
+  const profileChips = [
+    clcr  != null ? `<span class="cdp-chip" style="color:${heroIsAdjusted?'#F0A842':'#38BDF8'};border-color:${heroIsAdjusted?'rgba(240,168,66,0.30)':'rgba(56,189,248,0.25)'};">
+      <i class="fa-solid fa-kidney" style="font-size:9px;"></i> ClCr ${clcr} mL/min</span>` : '',
+    p?.weight != null ? `<span class="cdp-chip"><i class="fa-solid fa-weight-scale" style="font-size:9px;"></i> ${p.weight} kg</span>` : '',
+    p?.age    != null ? `<span class="cdp-chip"><i class="fa-solid fa-user" style="font-size:9px;"></i> ${p.age} ${isES?'años':'anos'}</span>` : '',
+    p?.sex              ? `<span class="cdp-chip">${p.sex==='M'?(isES?'Masc.':'Masc.'):(isES?'Fem.':'Fem.')}</span>` : '',
+    p?.pregnant         ? `<span class="cdp-chip" style="color:#F472B6;border-color:rgba(244,114,182,0.30);">🤰 ${isES?'Gestante':'Gestante'}</span>` : '',
+  ].filter(Boolean).join('');
 
   const block1 = `
-    <div class="dose-panel${isPediatric ? ' dose-panel--pedi' : ''}">
-      ${pregBannerHtml}
-      ${pediHeaderHtml}
-      <div class="dose-hero-value-block${heroIsAdjusted ? ' is-renal-adjusted' : ''}">
-        ${heroIsAdjusted ? `
-        <div class="dose-hero-adjusted-badge">
-          <i class="fa-solid fa-kidney" style="font-size:9px;"></i>
-          ${isPediatric
-            ? (isES ? 'AJUSTE RENAL — PEDIÁTRICO' : 'AJUSTE RENAL — PEDIÁTRICO')
-            : (isES ? 'AJUSTE RENAL ATIVO' : 'AJUSTE RENAL ATIVO')}
-        </div>` : ''}
-        <div class="dose-hero-value${isPediatric ? ' dose-hero-value--pedi' : ''}">${highlightDose(heroDose)}</div>
-        <div class="dose-hero-freq">
-          <i class="fa-solid fa-rotate" style="font-size:10px;"></i>
-          ${heroFreq || (isES ? 'Ver posología' : 'Ver posologia')}
+    <div class="dose-panel cdp-panel${isPediatric ? ' dose-panel--pedi' : ''}"
+         style="border:1.5px solid ${panelAccent.border};background:${panelAccent.bg};">
+
+      <!-- Cabeçalho do painel: status + dose em destaque -->
+      <div class="cdp-header" style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <span class="cdp-status-badge" style="background:${panelAccent.bg};border:1px solid ${panelAccent.border};color:${panelAccent.color};padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:0.04em;white-space:nowrap;">
+          ${panelAccent.icon} ${panelAccent.label}
+        </span>
+        <div class="cdp-dose-line" style="line-height:1.3;">${doseHeroLine}</div>
+      </div>
+
+      <!-- Chips de perfil do paciente -->
+      ${profileChips ? `<div class="cdp-chips" style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;">${profileChips}</div>` : ''}
+
+      <!-- Linha divisória -->
+      <div style="border-top:1px solid ${panelAccent.border};margin-bottom:10px;"></div>
+
+      <!-- Conduta personalizada -->
+      <div class="cdp-conduta">
+        <div class="cdp-conduta-label" style="color:${panelAccent.color};font-size:10px;font-weight:700;letter-spacing:0.05em;margin-bottom:5px;">
+          📌 ${isES ? 'CONDUTA PARA ESTE PACIENTE' : 'CONDUTA PARA ESTE PACIENTE'}
         </div>
-        ${heroIsAdjusted && renalOverride ? `
-        <div class="dose-hero-clcr-badge">
-          ${renalOverride.isHD
-            ? `<i class="fa-solid fa-droplet-slash"></i> ${isES ? 'Hemodiálisis' : 'Hemodiálise'}`
-            : `<i class="fa-solid fa-tint"></i> ClCr ${renalOverride.clcrV} mL/min`
-          }
-        </div>` : hero.renalFaixa ? `
-        <div class="dose-hero-clcr-badge" style="background:rgba(34,197,94,0.10);color:#22C55E;border-color:rgba(34,197,94,0.20);">
-          <i class="fa-solid fa-kidney" style="font-size:9px;"></i> ${hero.renalFaixa}
-        </div>` : ''}
+        <div class="cdp-conduta-text" style="color:#CBD5E1;font-size:13px;line-height:1.6;">
+          ${condutatxt}
+        </div>
       </div>
-      ${calcRowHtml}
-      <div class="dose-meta-row">
-        <span class="dose-meta-chip">
-          <i class="fa-solid ${viaIconHero}"></i>
-          ${heroVia || (isES ? 'Ver indicación' : 'Ver indicação')}
-        </span>
-        <span class="dose-meta-chip${isPediatric ? ' chip-pedi' : ''}">
-          <i class="fa-solid ${isPediatric ? 'fa-child' : 'fa-user'}"></i>
-          ${isPediatric
-            ? (isES ? `Pediátrico · ${hero.weight||'?'} kg` : `Pediátrico · ${hero.weight||'?'} kg`)
-            : (isES ? 'Adulto' : 'Adulto')}
-        </span>
-        ${result.duration ? `
-        <span class="dose-meta-chip">
-          <i class="fa-solid fa-calendar-check"></i>
-          ${result.duration}
-        </span>` : ''}
-        ${heroIsAdjusted ? `
-        <span class="dose-meta-chip chip-warn">
-          <i class="fa-solid fa-kidney"></i>
-          ${isES ? 'Ajuste renal' : 'Ajuste renal'}
-        </span>` : ''}
-        ${p && p.pregnant ? `
-        <span class="dose-meta-chip" style="border-color:rgba(244,63,94,0.30);color:#F472B6;">
-          <i class="fa-solid fa-person-pregnant" style="color:#F472B6;"></i>
-          ${isES ? 'Gestante' : 'Gestante'}
-        </span>` : ''}
-      </div>
-      ${doseKgHtml}
-      ${allDosesHtml}
-      ${patientBarHtml}
-      <button class="dose-copy-btn" onclick="${copyFnName}()">
+
+      ${calcRowHtml ? `<div style="margin-top:8px;">${calcRowHtml}</div>` : ''}
+
+      <!-- Botão copiar -->
+      <button class="dose-copy-btn" style="margin-top:12px;" onclick="${copyFnName}()">
         <i class="fa-solid fa-whatsapp"></i>
         ${isES ? 'Copiar para WhatsApp' : 'Copiar para WhatsApp'}
       </button>
@@ -17619,3 +17633,4 @@ window.MedCasesBridge = {
 
 </body>
 </html>
+
