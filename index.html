@@ -7927,6 +7927,56 @@
 </div>
 
 <script>
+/* ============================================================
+   WEB RESILIENCE PATCH — v1.0
+   Normaliza window.currentLang (case-insensitive) e garante
+   window.patientData seguro para ambiente web puro sem app nativo.
+   DEVE ser executado ANTES de qualquer outra IIFE de inicialização.
+   Causa raiz corrigida: app nativo injeta window.currentLang='PT'
+   (uppercase) mas o JS esperava 'pt' (lowercase) → crash fatal.
+============================================================ */
+(function _webResiliencePatch() {
+  /* 1. Normaliza window.currentLang: 'PT'/'ES'/'pt-BR'/'es-AR' → 'pt'|'es'
+        Sem esta normalização, i18n[currentLang] retorna undefined → tela cinza */
+  if (typeof window.currentLang !== 'undefined' && window.currentLang !== null) {
+    var _rawLang = String(window.currentLang).trim().toLowerCase();
+    window.currentLang = _rawLang.startsWith('es') ? 'es' : 'pt';
+    /* Propaga para window._autoLang para que _detectAndSetLang respeite */
+    window._autoLang = window.currentLang;
+  }
+
+  /* 2. Garante window.patientData com fallback seguro do localStorage
+        Sem isto, qualquer acesso a window.patientData.weight → TypeError */
+  if (!window.patientData || !window.patientData.weight) {
+    var _pData = null;
+    try { _pData = JSON.parse(localStorage.getItem('medcases_hm_patient_v1') || 'null'); } catch(e) {}
+    if (!_pData || !_pData.weight) {
+      try {
+        var _leg = JSON.parse(localStorage.getItem('pacienteAtual') || 'null');
+        if (_leg && (_leg.weight || _leg.peso)) {
+          _pData = {
+            weight:     parseFloat(_leg.weight     || _leg.peso)       || null,
+            age:        parseInt(_leg.age           || _leg.idade)      || null,
+            sex:        _leg.sex  || _leg.sexo      || 'M',
+            height:     parseFloat(_leg.height      || _leg.altura)     || null,
+            creatinine: parseFloat(_leg.creatinine  || _leg.creatinina) || null
+          };
+        }
+      } catch(e) {}
+    }
+    window.patientData = Object.assign(
+      { age: null, sex: 'M', weight: null, height: null, creatinine: null,
+        bsa: null, clcr: null, imc: null, pesoIdeal: null, tfg: null, pregnant: false },
+      (_pData && _pData.weight ? _pData : {})
+    );
+  }
+
+  /* 3. Garante window.webkit stub para evitar travas if (!window.webkit)
+        No ambiente web puro, window.webkit é undefined → código nativo trava */
+  if (typeof window.webkit === 'undefined') {
+    window.webkit = null; /* stub seguro — evita ReferenceError sem simular app */
+  }
+})();
 /* =========================================================
    i18n
 ========================================================= */
@@ -8720,15 +8770,20 @@ const i18n = {
 ============================================================ */
 (function _detectAndSetLang() {
   try {
+    /* 0. _webResiliencePatch já normalizou window.currentLang e setou _autoLang —
+          se definido como 'pt' ou 'es', respeitar sem sobrescrever.
+          Isso garante que o idioma injetado pelo app nativo (ex: 'PT' uppercase
+          já normalizado para 'pt') não seja sobrescrito pelo navigator do browser. */
+    if (window._autoLang === 'pt' || window._autoLang === 'es') return;
     /* 1. URL param — host app pode injetar ?lang=pt ou ?lang=es */
     const urlParam = new URLSearchParams(window.location.search).get('lang');
     if (urlParam === 'pt' || urlParam === 'es') { window._autoLang = urlParam; return; }
     /* 2. Navigator — lê idioma do sistema operacional */
     const nav = (navigator.language || navigator.userLanguage || 'pt-BR').toLowerCase();
     window._autoLang = nav.startsWith('es') ? 'es' : 'pt';
-  } catch(e) { window._autoLang = 'pt'; }
+  } catch(e) { window._autoLang = window._autoLang || 'pt'; }
 })();
-let currentLang = window._autoLang || 'pt', currentSex='M', currentPregnant=false;
+let currentLang = window.currentLang || window._autoLang || 'pt', currentSex='M', currentPregnant=false;
 
 /* ── Inicialização híbrida Web + WebView ──────────────────────────
    Ordem de prioridade:
@@ -8799,7 +8854,13 @@ window.PRESCRICOES_DB            = window.PRESCRICOES_DB            || [];
 /* Mapa unificado — populado no DOMContentLoaded */
 window.ALL_DRUGS_DB              = window.ALL_DRUGS_DB              || {};
 
-function t(k){return(i18n[currentLang]&&i18n[currentLang][k])||(i18n.pt[k])||k;}
+function t(k){
+  /* Normaliza currentLang defensivamente — suporta 'PT'/'ES' injetados pelo app nativo
+     ou qualquer variante de caixa que tenha escapado do _webResiliencePatch */
+  var _l = (typeof currentLang === 'string' ? currentLang : 'pt').toLowerCase();
+  _l = _l.startsWith('es') ? 'es' : 'pt';
+  return (i18n[_l] && i18n[_l][k]) || (i18n.pt[k]) || k;
+}
 
 /* ── ALTERNAR TEMA CLARO / ESCURO ── */
 function alternarTema(){
