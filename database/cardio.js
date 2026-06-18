@@ -24863,5 +24863,3155 @@
 
   }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 31 (Trombolíticos, Antídotos e Antifibrinolíticos: Alteplase · Tenecteplase · Reteplase · Protamina · VitaminaK · Idarucizumabe · AndexanetAlfa · PCC4F · ÁcidoTranexâmico · ÁcidoAminocaproico) */
 
+  /* ══════════════════════════════════════════════════════════════
+     GRUPO 32 — VASOPRESSORES E CATECOLAMINAS DE UTI
+     noradrenalina · adrenalina
+     Choque séptico · PCR · Anafilaxia · Suporte hemodinâmico intensivo
+  ══════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ══════════════════════════════════════════════════════════════
+       33. NORADRENALINA (Norepinefrina)
+       Vasopressor alfa-1 dominante · 1ª linha no choque séptico
+       Surviving Sepsis Campaign · ESC Shock Guidelines
+    ══════════════════════════════════════════════════════════════ */
+    noradrenalina: {
+      name:     { pt: 'Noradrenalina', es: 'Noradrenalina (Norepinefrina)' },
+      category: 'cardio',
+      icon:     '🩸',
+      color:    'rgba(220,38,38,0.13)',
+      colorTxt: '#991B1B',
+
+      calculate(paciente, lang = 'pt') {
+        const peso      = Number(paciente?.peso   || paciente?.weight || 70);
+        const pam       = Number(paciente?.pam    || 0);
+        const fc        = Number(paciente?.fc     || 0);
+        const lactato   = Number(paciente?.lactato || 0);
+        const diurese   = Number(paciente?.diurese || 0);
+        const doseAtual = Number(paciente?.doseAtual || 0);
+
+        /* Cálculo de velocidade de infusão mcg/kg/min → mL/h
+           Concentração padrão institucional: 4 mg em 250 mL SF → 16 mcg/mL */
+        const concMcgMl    = 16;
+        const velMLhInicio = doseAtual > 0
+          ? +((doseAtual * peso * 60) / concMcgMl).toFixed(1)
+          : null;
+
+        /* Alerta de meta PAM */
+        const alertPAM = pam > 0 && pam < 65
+          ? t(lang,
+              `⚠️ PAM atual ${pam} mmHg — abaixo da meta (≥ 65 mmHg). Considerar ajuste de dose.`,
+              `⚠️ PAM actual ${pam} mmHg — por debajo del objetivo (≥ 65 mmHg). Considerar ajuste de dosis.`
+            )
+          : pam >= 65
+            ? t(lang,
+                `✅ PAM ${pam} mmHg — dentro da meta (≥ 65 mmHg).`,
+                `✅ PAM ${pam} mmHg — dentro del objetivo (≥ 65 mmHg).`
+              )
+            : null;
+
+        /* Alerta de lactato */
+        const alertLactato = lactato > 2
+          ? t(lang,
+              `⚠️ Lactato ${lactato} mmol/L — hipoperfusão tecidual. Reavaliar volemia e dose.`,
+              `⚠️ Lactato ${lactato} mmol/L — hipoperfusión tisular. Reevaluar volemia y dosis.`
+            )
+          : null;
+
+        return {
+          name:  t(lang, 'Noradrenalina (Norepinefrina)', 'Noradrenalina (Norepinefrina)'),
+          class: t(lang, 'Vasopressor catecolaminérgico — agonista alfa-1 predominante',
+                         'Vasopresor catecolaminérgico — agonista alfa-1 predominante'),
+
+          commercialNames: {
+            br: ['Levophed', 'Noradrenalina'],
+            ar: ['Norepinefrina', 'Noradrenalina']
+          },
+
+          presentation: [
+            t(lang, 'Ampolas 1 mg/mL', 'Ampollas 1 mg/mL'),
+            t(lang, 'Ampolas 2 mg/mL', 'Ampollas 2 mg/mL'),
+            t(lang, 'Infusão contínua em bomba', 'Infusión continua en bomba')
+          ],
+
+          mechanism: t(lang,
+            'Potente agonista alfa-1 com atividade beta-1 moderada. Produz vasoconstrição arterial e venosa, aumento da RVS e elevação da pressão arterial.',
+            'Potente agonista alfa-1 con actividad beta-1 moderada. Produce vasoconstricción arterial y venosa, aumento de la RVS y elevación de la presión arterial.'
+          ),
+
+          pharmacokinetics: {
+            onset:    t(lang, '1–2 minutos', '1–2 minutos'),
+            halfLife: t(lang, '1–2 minutos', '1–2 minutos'),
+            duration: t(lang, '1–5 minutos após interrupção', '1–5 minutos tras suspensión')
+          },
+
+          dose: {
+            adultoPadrao: t(lang,
+              'Inicial: 0,01–0,05 mcg/kg/min IV contínuo em bomba.',
+              'Inicial: 0,01–0,05 mcg/kg/min IV continuo en bomba.'
+            ),
+            adultoGrave: t(lang,
+              'Manutenção: 0,02–1 mcg/kg/min conforme resposta clínica. Choque refratário: pode ultrapassar 1 mcg/kg/min.',
+              'Mantenimiento: 0,02–1 mcg/kg/min según respuesta clínica. Shock refractario: puede superar 1 mcg/kg/min.'
+            ),
+            pediatricaPadrao: t(lang,
+              'Dose individualizada por peso e contexto clínico (UTI pediátrica especializada).',
+              'Dosis individualizada por peso y contexto clínico (UCI pediátrica especializada).'
+            ),
+            pediatricaGrave: null,
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '0,01–0,05 mcg/kg/min IV — dose de ataque', '0,01–0,05 mcg/kg/min IV — dosis inicial'),
+            grave:      t(lang, '0,02–1 mcg/kg/min IV — titular conforme PAM', '0,02–1 mcg/kg/min IV — titular según PAM'),
+            meningite:  null,
+            doseMaxima: t(lang,
+              'Sem limite absoluto definido em choque refratário — titular conforme resposta hemodinâmica e perfusão tecidual.',
+              'Sin límite absoluto definido en shock refractario — titular según respuesta hemodinámica y perfusión tisular.'
+            )
+          },
+
+          /* Velocidade calculada com base na dose atual e peso */
+          infusionCalc: doseAtual > 0 && peso > 0
+            ? t(lang,
+                `Dose ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLhInicio} mL/h (conc. 16 mcg/mL — 4 mg/250 mL SF).`,
+                `Dosis ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLhInicio} mL/h (conc. 16 mcg/mL — 4 mg/250 mL SF).`
+              )
+            : t(lang,
+                'Informe doseAtual (mcg/kg/min) e peso para calcular velocidade de infusão.',
+                'Informe doseAtual (mcg/kg/min) y peso para calcular velocidad de infusión.'
+              ),
+
+          therapeuticTargets: [
+            t(lang, 'PAM ≥ 65 mmHg', 'PAM ≥ 65 mmHg'),
+            t(lang, 'Redução do lactato sérico', 'Reducción del lactato sérico'),
+            t(lang, 'Diurese ≥ 0,5 mL/kg/h', 'Diuresis ≥ 0,5 mL/kg/h'),
+            t(lang, 'Melhora do estado mental', 'Mejora del estado mental'),
+            t(lang, 'Melhora da perfusão periférica', 'Mejora de la perfusión periférica')
+          ],
+
+          dilution: t(lang,
+            'Preferencialmente em acesso venoso central. Diluição padrão: 4 mg em 250 mL SF → 16 mcg/mL. Utilizar sempre em bomba de infusão.',
+            'Preferentemente por acceso venoso central. Dilución estándar: 4 mg en 250 mL SF → 16 mcg/mL. Utilizar siempre en bomba de infusión.'
+          ),
+
+          speed: t(lang,
+            'Iniciar 0,01–0,05 mcg/kg/min. Titular a cada 5–10 min conforme PAM alvo ≥ 65 mmHg.',
+            'Iniciar 0,01–0,05 mcg/kg/min. Titular cada 5–10 min según PAM objetivo ≥ 65 mmHg.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Hipertensão', 'Hipertensión'),
+            t(lang, 'Taquicardia reflexa', 'Taquicardia refleja'),
+            t(lang, 'Ansiedade e agitação', 'Ansiedad y agitación'),
+            t(lang, 'Palidez', 'Palidez'),
+            t(lang, 'Cefaleia', 'Cefalea'),
+            t(lang, 'Tremores', 'Temblor')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Isquemia digital e mesentérica', 'Isquemia digital y mesentérica'),
+            t(lang, 'Necrose tecidual por extravasamento', 'Necrosis tisular por extravasación'),
+            t(lang, 'Arritmias ventriculares', 'Arritmias ventriculares'),
+            t(lang, 'IAM por vasoespasmo coronariano', 'IAM por vasoespasmo coronario'),
+            t(lang, 'Hipoperfusão periférica grave', 'Hipoperfusión periférica grave'),
+            t(lang, 'Gangrena de extremidades (uso prolongado)', 'Gangrena de extremidades (uso prolongado)')
+          ],
+
+          extravasationProtocol: [
+            t(lang, 'Suspender infusão imediatamente.', 'Suspender infusión inmediatamente.'),
+            t(lang, 'Não remover o cateter inicialmente.', 'No retirar inicialmente el catéter.'),
+            t(lang, 'Infiltrar fentolamina ao redor da área se disponível (5–10 mg em SF 10 mL).', 'Infiltrar fentolamina alrededor de la zona si disponible (5–10 mg en SF 10 mL).'),
+            t(lang, 'Monitorar necrose tecidual; acionar cirurgia plástica se extensa.', 'Monitorizar necrosis tisular; derivar a cirugía plástica si extensa.')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '⚠️ Corrigir hipovolemia ANTES de escalar dose — vasopressor não substitui reposição volêmica adequada.',
+              '⚠️ Corregir hipovolemia ANTES de escalar dosis — vasopresor no reemplaza reposición volémica adecuada.'
+            ),
+            t(lang,
+              'Gestação: utilizar apenas quando benefício materno superar risco fetal. Monitorar perfusão uteroplacentária.',
+              'Embarazo: utilizar solo cuando el beneficio materno supere el riesgo fetal. Monitorizar perfusión uteroplacentaria.'
+            ),
+            t(lang,
+              'Idosos: maior risco de isquemia periférica e complicações vasculares.',
+              'Ancianos: mayor riesgo de isquemia periférica y complicaciones vasculares.'
+            )
+          ],
+
+          contraindications: {
+            absolutas: [
+              t(lang, 'Hipersensibilidade conhecida à noradrenalina', 'Hipersensibilidad conocida a la noradrenalina')
+            ],
+            relativas: [
+              t(lang, 'Hipovolemia não corrigida (resolver antes de escalar dose)', 'Hipovolemia no corregida (resolver antes de escalar dosis)'),
+              t(lang, 'Isquemia periférica grave preexistente', 'Isquemia periférica grave preexistente'),
+              t(lang, 'Trombose vascular extensa', 'Trombosis vascular extensa'),
+              t(lang, 'Arritmias ventriculares não controladas', 'Arritmias ventriculares no controladas')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'IMAO: potencialização grave da resposta pressora — risco de crise hipertensiva.', 'IMAO: potenciación grave de la respuesta presora — riesgo de crisis hipertensiva.'),
+            t(lang, 'Antidepressivos tricíclicos: aumento significativo da resposta pressora.', 'Antidepresivos tricíclicos: aumento significativo de la respuesta presora.'),
+            t(lang, 'Outros vasopressores: risco de hipertensão excessiva e isquemia.', 'Otros vasopresores: riesgo de hipertensión excesiva e isquemia.'),
+            t(lang, 'Anestésicos halogenados (halotano, isoflurano): maior risco de arritmias.', 'Anestésicos halogenados (halotano, isoflurano): mayor riesgo de arritmias.')
+          ],
+
+          renalAdjustment: t(lang,
+            'Sem ajuste renal específico. Titular conforme resposta hemodinâmica.',
+            'Sin ajuste renal específico. Titular según respuesta hemodinámica.'
+          ),
+
+          hepaticAdjustment: t(lang,
+            'Sem ajuste hepático específico.',
+            'Sin ajuste hepático específico.'
+          ),
+
+          alertsCalc: [alertPAM, alertLactato].filter(Boolean),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'PAM / PA invasiva', 'PAM / PA invasiva'),
+              t(lang, 'FC contínua', 'FC continua'),
+              t(lang, 'ECG contínuo', 'ECG continuo'),
+              t(lang, 'Lactato sérico', 'Lactato sérico'),
+              t(lang, 'Diurese horária', 'Diuresis horaria'),
+              t(lang, 'Perfusão periférica', 'Perfusión periférica')
+            ],
+            followUp: [
+              t(lang, 'PAM contínua — titular para ≥ 65 mmHg', 'PAM continua — titular para ≥ 65 mmHg'),
+              t(lang, 'Lactato seriado a cada 2–4h', 'Lactato seriado cada 2–4h'),
+              t(lang, 'Diurese — alvo ≥ 0,5 mL/kg/h', 'Diuresis — objetivo ≥ 0,5 mL/kg/h'),
+              t(lang, 'Sinais de isquemia periférica e digital', 'Signos de isquemia periférica y digital'),
+              t(lang, 'Necrose no sítio de infusão', 'Necrosis en el sitio de infusión')
+            ]
+          },
+
+          safetyFlags: {
+            highAlertMedication:  true,
+            vasopressor:          true,
+            extravasationRisk:    true,
+            ischemiaRisk:         true,
+            centralLinePreferred: true,
+            requiresInfusionPump: true,
+            requiresTelemetry:    true,
+            hospitalUseOnly:      true,
+            warning: t(lang,
+              'Vasopressor de 1ª linha no choque séptico (Surviving Sepsis Campaign). Exige monitorização invasiva contínua. Risco de isquemia periférica com doses elevadas prolongadas.',
+              'Vasopresor de 1ª línea en shock séptico (Surviving Sepsis Campaign). Exige monitorización invasiva continua. Riesgo de isquemia periférica con dosis elevadas prolongadas.'
+            )
+          },
+
+          auditNotes: {
+            status: 'vasopressor_norepinephrine_master_template'
+          },
+
+          ref: [
+            'Surviving Sepsis Campaign Guidelines (SSC 2021)',
+            'ESC Cardiogenic Shock Guidelines 2024',
+            'SCCM Vasopressor & Inotrope Guidelines',
+            'Lexicomp 2026',
+            'UpToDate — Norepinephrine'
+          ]
+        };
+      }
+    }, /* fim noradrenalina */
+
+    /* ══════════════════════════════════════════════════════════════
+       34. ADRENALINA (Epinefrina)
+       Catecolamina endógena alfa-1 + beta-1 + beta-2
+       1ª linha em PCR e anafilaxia · Vasopressor em choque refratário
+       ACLS AHA · ERC · World Allergy Organization
+    ══════════════════════════════════════════════════════════════ */
+    adrenalina: {
+      name:     { pt: 'Adrenalina', es: 'Adrenalina (Epinefrina)' },
+      category: 'cardio',
+      icon:     '⚡',
+      color:    'rgba(234,88,12,0.13)',
+      colorTxt: '#9A3412',
+
+      calculate(paciente, lang = 'pt') {
+        const peso      = Number(paciente?.peso   || paciente?.weight || 70);
+        const pam       = Number(paciente?.pam    || 0);
+        const fc        = Number(paciente?.fc     || 0);
+        const doseAtual = Number(paciente?.doseAtual || 0);
+        const pcr       = Boolean(paciente?.pcr);
+        const anafilaxia = Boolean(paciente?.anafilaxia);
+
+        /* Velocidade de infusão (choque/vasopressor)
+           Concentração padrão: 4 mg em 250 mL SF → 16 mcg/mL */
+        const concMcgMl = 16;
+        const velMLhInfusao = doseAtual > 0
+          ? +((doseAtual * peso * 60) / concMcgMl).toFixed(1)
+          : null;
+
+        /* Alerta de FC — taquicardia grave é limite para escalar dose */
+        const alertFC = fc > 130
+          ? t(lang,
+              `⚠️ FC ${fc} bpm — taquicardia grave. Reavaliar dose de adrenalina e causas reversíveis.`,
+              `⚠️ FC ${fc} lpm — taquicardia grave. Reevaluar dosis de adrenalina y causas reversibles.`
+            )
+          : null;
+
+        return {
+          name:  t(lang, 'Adrenalina (Epinefrina)', 'Adrenalina (Epinefrina)'),
+          class: t(lang, 'Catecolamina endógena — agonista alfa-1, beta-1 e beta-2',
+                         'Catecolamina endógena — agonista alfa-1, beta-1 y beta-2'),
+
+          commercialNames: {
+            br: ['Adrenalina', 'Epinefrina'],
+            ar: ['Adrenalina', 'Epinefrina']
+          },
+
+          presentation: [
+            t(lang, 'Ampola 1 mg/mL (1:1000) — uso IM/SC/EV em anafilaxia', 'Ampolla 1 mg/mL (1:1000) — uso IM/SC/EV en anafilaxia'),
+            t(lang, 'Ampola 0,1 mg/mL (1:10000) — uso EV em PCR', 'Ampolla 0,1 mg/mL (1:10000) — uso EV en PCR'),
+            t(lang, 'Infusão contínua em bomba (vasopressor/UTI)', 'Infusión continua en bomba (vasopresor/UCI)')
+          ],
+
+          mechanism: t(lang,
+            'Agonista alfa-1, beta-1 e beta-2. Produz vasoconstrição periférica, aumento da contratilidade e FC cardíacas, broncodilatação e inibição da liberação de mediadores inflamatórios (anafilaxia).',
+            'Agonista alfa-1, beta-1 y beta-2. Produce vasoconstricción periférica, aumento de la contractilidad y FC cardíacas, broncodilatación e inhibición de la liberación de mediadores inflamatorios (anafilaxia).'
+          ),
+
+          pharmacokinetics: {
+            onset:    t(lang, 'Segundos a 1–2 minutos', 'Segundos a 1–2 minutos'),
+            halfLife: t(lang, '2–3 minutos', '2–3 minutos'),
+            duration: t(lang, 'Curta — requer infusão contínua em vasopressor', 'Corta — requiere infusión continua como vasopresor')
+          },
+
+          dose: {
+            adultoPadrao: t(lang,
+              pcr
+                ? 'PCR: 1 mg IV/IO a cada 3–5 minutos durante as manobras de ressuscitação (ACLS).'
+                : anafilaxia
+                  ? 'Anafilaxia: 0,3–0,5 mg IM (1:1000) na face anterolateral da coxa. Repetir a cada 5–15 min se necessário.'
+                  : 'Infusão vasopressora: 0,01–0,5 mcg/kg/min IV contínuo. Titular conforme resposta.',
+              pcr
+                ? 'PCR: 1 mg IV/IO cada 3–5 minutos durante las maniobras de reanimación (ACLS).'
+                : anafilaxia
+                  ? 'Anafilaxia: 0,3–0,5 mg IM (1:1000) en la cara anterolateral del muslo. Repetir cada 5–15 min si necesario.'
+                  : 'Infusión vasopresora: 0,01–0,5 mcg/kg/min IV continuo. Titular según respuesta.'
+            ),
+            adultoGrave: t(lang,
+              'Choque refratário: 0,1–1 mcg/kg/min IV contínuo em bomba. Titular conforme PAM e perfusão.',
+              'Shock refractario: 0,1–1 mcg/kg/min IV continuo en bomba. Titular según PAM y perfusión.'
+            ),
+            pediatricaPadrao: t(lang,
+              'PCR pediátrico: 0,01 mg/kg IV/IO (máx 1 mg/dose) a cada 3–5 min. Anafilaxia: 0,01 mg/kg IM (máx 0,5 mg).',
+              'PCR pediátrico: 0,01 mg/kg IV/IO (máx 1 mg/dosis) cada 3–5 min. Anafilaxia: 0,01 mg/kg IM (máx 0,5 mg).'
+            ),
+            pediatricaGrave: t(lang,
+              'Infusão vasopressora pediátrica: 0,01–1 mcg/kg/min IV contínuo (UTI especializada).',
+              'Infusión vasopresora pediátrica: 0,01–1 mcg/kg/min IV continuo (UCI especializada).'
+            ),
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '0,01–0,1 mcg/kg/min IV — vasopressor / 0,01 mg/kg IM — anafilaxia pediátrica', '0,01–0,1 mcg/kg/min IV — vasopresor / 0,01 mg/kg IM — anafilaxia pediátrica'),
+            grave:      t(lang, 'Até 1 mcg/kg/min IV em choque refratário', 'Hasta 1 mcg/kg/min IV en shock refractario'),
+            meningite:  null,
+            doseMaxima: t(lang,
+              'PCR adulto: 1 mg/dose IV. Anafilaxia IM: 0,5 mg adulto / 0,3 mg pré-preenchida (EpiPen). Vasopressor: sem limite absoluto.',
+              'PCR adulto: 1 mg/dosis IV. Anafilaxia IM: 0,5 mg adulto / 0,3 mg autoinyector (EpiPen). Vasopresor: sin límite absoluto.'
+            )
+          },
+
+          /* Velocidade de infusão calculada */
+          infusionCalc: doseAtual > 0 && peso > 0
+            ? t(lang,
+                `Dose ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLhInfusao} mL/h (conc. 16 mcg/mL — 4 mg/250 mL SF).`,
+                `Dosis ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLhInfusao} mL/h (conc. 16 mcg/mL — 4 mg/250 mL SF).`
+              )
+            : t(lang,
+                'Informe doseAtual (mcg/kg/min) para infusão contínua, ou consulte protocolo de PCR/anafilaxia.',
+                'Informe doseAtual (mcg/kg/min) para infusión continua, o consulte protocolo de PCR/anafilaxia.'
+              ),
+
+          therapeuticTargets: [
+            t(lang, 'PCR: retorno da circulação espontânea (RCE)', 'PCR: retorno de circulación espontánea (RCE)'),
+            t(lang, 'Anafilaxia: resolução dos sintomas (urticária, broncoespasmo, hipotensão)', 'Anafilaxia: resolución de síntomas (urticaria, broncoespasmo, hipotensión)'),
+            t(lang, 'Choque: PAM ≥ 65 mmHg com melhora da perfusão', 'Shock: PAM ≥ 65 mmHg con mejora de la perfusión'),
+            t(lang, 'Melhora do broncoespasmo', 'Mejora del broncoespasmo')
+          ],
+
+          dilution: t(lang,
+            'Infusão contínua: 4 mg em 250 mL SF → 16 mcg/mL. PCR: administrar bolus EV sem diluição (1 mg/mL). Anafilaxia IM: usar solução 1:1000 (1 mg/mL) sem diluição.',
+            'Infusión continua: 4 mg en 250 mL SF → 16 mcg/mL. PCR: administrar bolo EV sin dilución (1 mg/mL). Anafilaxia IM: usar solución 1:1000 (1 mg/mL) sin dilución.'
+          ),
+
+          speed: t(lang,
+            'PCR: bolus EV rápido, seguido de flush de 20 mL SF. Infusão: titular a cada 5–10 min conforme PAM e FC.',
+            'PCR: bolo EV rápido, seguido de flush 20 mL SF. Infusión: titular cada 5–10 min según PAM y FC.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Taquicardia sinusal', 'Taquicardia sinusal'),
+            t(lang, 'Palpitações', 'Palpitaciones'),
+            t(lang, 'Ansiedade e agitação', 'Ansiedad y agitación'),
+            t(lang, 'Tremores', 'Temblor'),
+            t(lang, 'Cefaleia', 'Cefalea'),
+            t(lang, 'Sudorese', 'Sudoración'),
+            t(lang, 'Hipertensão', 'Hipertensión')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Arritmias ventriculares graves (FV/TV)', 'Arritmias ventriculares graves (FV/TV)'),
+            t(lang, 'IAM por vasoespasmo coronariano', 'IAM por vasoespasmo coronario'),
+            t(lang, 'AVC hemorrágico', 'ACV hemorrágico'),
+            t(lang, 'Edema pulmonar agudo', 'Edema pulmonar agudo'),
+            t(lang, 'Isquemia periférica grave', 'Isquemia periférica grave'),
+            t(lang, 'Necrose tecidual por extravasamento', 'Necrosis tisular por extravasación')
+          ],
+
+          extravasationProtocol: [
+            t(lang, 'Interromper infusão imediatamente.', 'Interrumpir infusión inmediatamente.'),
+            t(lang, 'Infiltrar fentolamina ao redor da área (5–10 mg em SF 10 mL) se disponível.', 'Infiltrar fentolamina alrededor de la zona (5–10 mg en SF 10 mL) si disponible.'),
+            t(lang, 'Monitorar necrose tecidual.', 'Monitorizar necrosis tisular.'),
+            t(lang, 'Acionar cirurgia plástica se lesão extensa.', 'Valorar cirugía plástica si lesión extensa.')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '🚨 Anafilaxia: NÃO atrasar adrenalina IM — é o tratamento de 1ª linha. Anti-histamínicos e corticoides são adjuvantes, nunca substitutos.',
+              '🚨 Anafilaxia: NO retrasar adrenalina IM — es el tratamiento de 1ª línea. Antihistamínicos y corticoides son adyuvantes, nunca sustitutos.'
+            ),
+            t(lang,
+              'Gestação: indicada na anafilaxia e PCR maternas — risco de vida materno supera risco fetal. Monitorar perfusão uteroplacentária.',
+              'Embarazo: indicada en anafilaxia y PCR maternas — riesgo de vida materno supera riesgo fetal. Monitorizar perfusión uteroplacentaria.'
+            ),
+            t(lang,
+              'Idosos: maior risco de arritmias, IAM e AVC — monitorização intensiva obrigatória.',
+              'Ancianos: mayor riesgo de arritmias, IAM y ACV — monitorización intensiva obligatoria.'
+            ),
+            alertFC
+          ].filter(Boolean),
+
+          contraindications: {
+            absolutas: [
+              t(lang,
+                'Nenhuma contraindicação absoluta em PCR ou anafilaxia grave — benefício supera qualquer risco.',
+                'Ninguna contraindicación absoluta en PCR o anafilaxia grave — el beneficio supera cualquier riesgo.'
+              )
+            ],
+            relativas: [
+              t(lang, 'Taquiarritmias graves não relacionadas à emergência atual', 'Taquiarritmias graves no relacionadas a la emergencia actual'),
+              t(lang, 'Cardiomiopatia hipertrófica obstrutiva (CMHO)', 'Miocardiopatía hipertrófica obstructiva (CMHO)'),
+              t(lang, 'Hipertensão arterial grave não controlada', 'Hipertensión arterial grave no controlada'),
+              t(lang, 'DAC grave com risco de espasmo coronariano', 'EAC grave con riesgo de espasmo coronario')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'IMAO: potencialização grave — risco de crise hipertensiva e arritmias letais.', 'IMAO: potenciación grave — riesgo de crisis hipertensiva y arritmias letales.'),
+            t(lang, 'Antidepressivos tricíclicos: aumento acentuado da resposta adrenérgica.', 'Antidepresivos tricíclicos: aumento marcado de la respuesta adrenérgica.'),
+            t(lang, 'Betabloqueadores não seletivos: hipertensão paradoxal por bloqueio beta-2 com alfa-1 livre.', 'Betabloqueantes no selectivos: hipertensión paradójica por bloqueo beta-2 con alfa-1 libre.'),
+            t(lang, 'Anestésicos halogenados (halotano): sensibilização miocárdica — maior risco de FV.', 'Anestésicos halogenados (halotano): sensibilización miocárdica — mayor riesgo de FV.')
+          ],
+
+          renalAdjustment: t(lang,
+            'Sem ajuste renal necessário — titular conforme resposta clínica.',
+            'Sin ajuste renal necesario — titular según respuesta clínica.'
+          ),
+
+          hepaticAdjustment: t(lang,
+            'Sem ajuste hepático necessário.',
+            'Sin ajuste hepático necesario.'
+          ),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'PAM / PA invasiva quando disponível', 'PAM / PA invasiva cuando disponible'),
+              t(lang, 'FC contínua', 'FC continua'),
+              t(lang, 'ECG contínuo', 'ECG continuo'),
+              t(lang, 'Saturação de O₂', 'Saturación de O₂'),
+              t(lang, 'Lactato sérico', 'Lactato sérico'),
+              t(lang, 'Perfusão periférica', 'Perfusión periférica')
+            ],
+            followUp: [
+              t(lang, 'Arritmias (FV/TV) — monitorização contínua obrigatória', 'Arritmias (FV/TV) — monitorización continua obligatoria'),
+              t(lang, 'PAM contínua — titular para ≥ 65 mmHg', 'PAM continua — titular para ≥ 65 mmHg'),
+              t(lang, 'Retorno da circulação espontânea em PCR (RCE)', 'Retorno de circulación espontánea en PCR (RCE)'),
+              t(lang, 'Resolução dos sinais de anafilaxia', 'Resolución de los signos de anafilaxia'),
+              t(lang, 'Sinais de necrose no sítio de infusão', 'Signos de necrosis en el sitio de infusión')
+            ]
+          },
+
+          safetyFlags: {
+            highAlertMedication:     true,
+            cardiacArrestDrug:       true,
+            anaphylaxisFirstLine:    true,
+            vasopressor:             true,
+            arrhythmiaRisk:          true,
+            extravasationRisk:       true,
+            requiresTelemetry:       true,
+            requiresInfusionPump:    true,
+            centralLinePreferred:    true,
+            hospitalUseOnly:         true,
+            warning: t(lang,
+              '🚨 Medicamento de alta vigilância. Erros de concentração (1:1000 vs 1:10000) e via de administração (IM vs EV) podem ser fatais. Verificar sempre a indicação (PCR / anafilaxia / vasopressor) antes de preparar.',
+              '🚨 Medicamento de alta vigilancia. Errores de concentración (1:1000 vs 1:10000) y vía de administración (IM vs EV) pueden ser fatales. Verificar siempre la indicación (PCR / anafilaxia / vasopresor) antes de preparar.'
+            )
+          },
+
+          auditNotes: {
+            status: 'epinephrine_master_template'
+          },
+
+          ref: [
+            'ACLS AHA Guidelines 2020',
+            'European Resuscitation Council Guidelines 2021',
+            'World Allergy Organization Anaphylaxis Guidelines 2020',
+            'Surviving Sepsis Campaign Guidelines (SSC 2021)',
+            'Lexicomp 2026',
+            'UpToDate — Epinephrine'
+          ]
+        };
+      }
+    } /* fim adrenalina */
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 32 (Vasopressores e Catecolaminas: noradrenalina · adrenalina) */
+
+  /* ══════════════════════════════════════════════════════════════
+     GRUPO 33 — VASOPRESSORES E INOTRÓPICOS DE UTI (expansão)
+     dopamina · fenilefrina · vasopressina · dobutamina
+     Choque cardiogênico · Vasoplegia · Inotrópico · Bradicardia
+  ══════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ══════════════════════════════════════════════════════════════
+       35. DOPAMINA
+       Catecolamina dose-dependente: dopaminérgico → beta-1 → alfa-1
+       Reservar para choque com bradicardia relativa (SSC 2021)
+    ══════════════════════════════════════════════════════════════ */
+    dopamina: {
+      name:     { pt: 'Dopamina', es: 'Dopamina' },
+      category: 'cardio',
+      icon:     '💊',
+      color:    'rgba(124,58,237,0.13)',
+      colorTxt: '#6D28D9',
+
+      calculate(paciente, lang = 'pt') {
+        const peso      = Number(paciente?.peso     || paciente?.weight || 70);
+        const pam       = Number(paciente?.pam      || 0);
+        const fc        = Number(paciente?.fc       || 0);
+        const lactato   = Number(paciente?.lactato  || 0);
+        const diurese   = Number(paciente?.diurese  || 0);
+        const doseAtual = Number(paciente?.doseAtual || 0);
+
+        /* Classifica faixa farmacológica pela dose */
+        const faixaDose = doseAtual <= 3
+          ? t(lang,
+              `Dose ${doseAtual} mcg/kg/min — faixa DOPAMINÉRGICA (D1/D2). ⚠️ Não usar com objetivo de nefroproteção (sem evidência).`,
+              `Dosis ${doseAtual} mcg/kg/min — rango DOPAMINÉRGICO (D1/D2). ⚠️ No usar con objetivo de nefroprotección (sin evidencia).`
+            )
+          : doseAtual <= 10
+            ? t(lang,
+                `Dose ${doseAtual} mcg/kg/min — faixa BETA-1/INOTRÓPICA. Aumenta contratilidade e FC.`,
+                `Dosis ${doseAtual} mcg/kg/min — rango BETA-1/INOTRÓPICO. Aumenta contractilidad y FC.`
+              )
+            : t(lang,
+                `Dose ${doseAtual} mcg/kg/min — faixa ALFA-1/VASOPRESSORA. ⚠️ Maior risco de taquiarritmias e isquemia.`,
+                `Dosis ${doseAtual} mcg/kg/min — rango ALFA-1/VASOPRESOR. ⚠️ Mayor riesgo de taquiarritmias e isquemia.`
+              );
+
+        /* Concentração padrão: 400 mg em 250 mL SF → 1600 mcg/mL */
+        const concMcgMl  = 1600;
+        const velMLh     = doseAtual > 0
+          ? +((doseAtual * peso * 60) / concMcgMl).toFixed(1)
+          : null;
+
+        const alertFC  = fc > 130
+          ? t(lang,
+              `⚠️ FC ${fc} bpm — taquicardia grave. Reavaliar dose e considerar trocar por noradrenalina.`,
+              `⚠️ FC ${fc} lpm — taquicardia grave. Reevaluar dosis y considerar cambio a noradrenalina.`
+            )
+          : null;
+        const alertPAM = pam > 0 && pam < 65
+          ? t(lang, `⚠️ PAM ${pam} mmHg — abaixo da meta ≥ 65 mmHg.`, `⚠️ PAM ${pam} mmHg — por debajo del objetivo ≥ 65 mmHg.`)
+          : null;
+
+        return {
+          name:  t(lang, 'Dopamina', 'Dopamina'),
+          class: t(lang,
+            'Catecolamina / vasopressor e inotrópico dose-dependente',
+            'Catecolamina / vasopresor e inotrópico dependiente de dosis'
+          ),
+
+          commercialNames: { br: ['Dopacris', 'Dopamina'], ar: ['Dopamina'] },
+
+          presentation: [
+            t(lang, 'Ampolas 5 mg/mL',              'Ampollas 5 mg/mL'),
+            t(lang, 'Ampolas 40 mg/mL',             'Ampollas 40 mg/mL'),
+            t(lang, 'Infusão contínua em bomba',    'Infusión continua en bomba')
+          ],
+
+          mechanism: t(lang,
+            'Estimula receptores dopaminérgicos, beta-1 e alfa-1 de forma dose-dependente, aumentando FC, contratilidade e RVS em doses maiores.',
+            'Estimula receptores dopaminérgicos, beta-1 y alfa-1 de forma dependiente de dosis, aumentando FC, contractilidad y RVS en dosis mayores.'
+          ),
+
+          dose: {
+            adultoPadrao: t(lang,
+              '1–3 mcg/kg/min: dopaminérgico (não usar p/ nefroproteção). 3–10 mcg/kg/min: beta-1/inotrópico. 10–20 mcg/kg/min: alfa-1/vasopressor.',
+              '1–3 mcg/kg/min: dopaminérgico (no usar para nefroprotección). 3–10 mcg/kg/min: beta-1/inotrópico. 10–20 mcg/kg/min: alfa-1/vasopresor.'
+            ),
+            adultoGrave: t(lang,
+              'Máximo 20 mcg/kg/min. Doses maiores aumentam significativamente risco de arritmia e isquemia.',
+              'Máximo 20 mcg/kg/min. Dosis mayores aumentan significativamente riesgo de arritmia e isquemia.'
+            ),
+            pediatricaPadrao: t(lang,
+              'Dose individualizada por peso em UTI pediátrica especializada.',
+              'Dosis individualizada por peso en UCI pediátrica especializada.'
+            ),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '3–10 mcg/kg/min IV — faixa inotrópica', '3–10 mcg/kg/min IV — rango inotrópico'),
+            grave:      t(lang, '10–20 mcg/kg/min IV — faixa vasopressora', '10–20 mcg/kg/min IV — rango vasopresor'),
+            meningite:  null,
+            doseMaxima: t(lang, '20 mcg/kg/min (doses > 20 raramente indicadas)', '20 mcg/kg/min (dosis > 20 raramente indicadas)')
+          },
+
+          infusionCalc: doseAtual > 0 && peso > 0
+            ? t(lang,
+                `${faixaDose} → ${velMLh} mL/h (conc. 1600 mcg/mL — 400 mg/250 mL SF).`,
+                `${faixaDose} → ${velMLh} mL/h (conc. 1600 mcg/mL — 400 mg/250 mL SF).`
+              )
+            : t(lang,
+                'Informe doseAtual (mcg/kg/min) e peso para calcular velocidade e faixa farmacológica.',
+                'Informe doseAtual (mcg/kg/min) y peso para calcular velocidad y rango farmacológico.'
+              ),
+
+          therapeuticTargets: [
+            t(lang, 'PAM ≥ 65 mmHg',                       'PAM ≥ 65 mmHg'),
+            t(lang, 'Melhora de bradicardia sintomática',   'Mejoría de bradicardia sintomática'),
+            t(lang, 'Melhora da perfusão tecidual',         'Mejoría de perfusión tisular'),
+            t(lang, 'Diurese ≥ 0,5 mL/kg/h',               'Diuresis ≥ 0,5 mL/kg/h'),
+            t(lang, 'Redução do lactato sérico',            'Reducción del lactato sérico')
+          ],
+
+          dilution: t(lang,
+            'Bomba de infusão obrigatória. Preferir acesso central em doses vasopressoras (> 10 mcg/kg/min). Concentração padrão: 400 mg em 250 mL SF → 1600 mcg/mL.',
+            'Bomba de infusión obligatoria. Preferir acceso central en dosis vasopresoras (> 10 mcg/kg/min). Concentración estándar: 400 mg en 250 mL SF → 1600 mcg/mL.'
+          ),
+
+          speed: t(lang,
+            'Iniciar 3–5 mcg/kg/min; titular a cada 5–10 min conforme PAM e FC.',
+            'Iniciar 3–5 mcg/kg/min; titular cada 5–10 min según PAM y FC.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Taquicardia',           'Taquicardia'),
+            t(lang, 'Palpitações',           'Palpitaciones'),
+            t(lang, 'Náuseas e vômitos',     'Náuseas y vómitos'),
+            t(lang, 'Cefaleia',              'Cefalea'),
+            t(lang, 'Ansiedade',             'Ansiedad'),
+            t(lang, 'Tremor',               'Temblor')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Taquiarritmias (FA, TV)',             'Taquiarritmias (FA, TV)'),
+            t(lang, 'Fibrilação atrial de novo',           'Fibrilación auricular de novo'),
+            t(lang, 'Isquemia miocárdica',                 'Isquemia miocárdica'),
+            t(lang, 'Necrose por extravasamento',          'Necrosis por extravasación'),
+            t(lang, 'Isquemia periférica',                 'Isquemia periférica'),
+            t(lang, 'Hipertensão excessiva (dose alta)',   'Hipertensión excesiva (dosis alta)')
+          ],
+
+          extravasationProtocol: [
+            t(lang, 'Suspender infusão imediatamente.',              'Suspender infusión inmediatamente.'),
+            t(lang, 'Não remover inicialmente o cateter.',           'No retirar inicialmente el catéter.'),
+            t(lang, 'Infiltrar fentolamina ao redor da área.',       'Infiltrar fentolamina alrededor de la zona.'),
+            t(lang, 'Elevar membro e monitorar evolução da necrose.','Elevar miembro y monitorizar evolución de necrosis.')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '⚠️ Dopamina tem maior risco de FA que noradrenalina (SOAP II trial). Evitar como 1ª linha em choque séptico, exceto bradicardia relativa selecionada.',
+              '⚠️ Dopamina tiene mayor riesgo de FA que noradrenalina (estudio SOAP II). Evitar como 1ª línea en shock séptico, excepto bradicardia relativa seleccionada.'
+            ),
+            t(lang,
+              'Gestação: usar se benefício materno superar risco fetal; monitorar perfusão uteroplacentária.',
+              'Embarazo: usar si beneficio materno supera riesgo fetal; monitorizar perfusión uteroplacentaria.'
+            ),
+            t(lang,
+              'Idosos: maior risco de arritmias e isquemia. Titular com cautela extrema.',
+              'Ancianos: mayor riesgo de arritmias e isquemia. Titular con extrema precaución.'
+            ),
+            alertFC,
+            alertPAM
+          ].filter(Boolean),
+
+          contraindications: {
+            absolutas: [
+              t(lang, 'Feocromocitoma',                                    'Feocromocitoma'),
+              t(lang, 'Taquiarritmia ventricular não controlada',          'Taquiarritmia ventricular no controlada'),
+              t(lang, 'Hipersensibilidade à dopamina',                     'Hipersensibilidad a la dopamina')
+            ],
+            relativas: [
+              t(lang, 'Fibrilação atrial com resposta ventricular rápida', 'Fibrilación auricular con respuesta ventricular rápida'),
+              t(lang, 'Isquemia miocárdica ativa',                         'Isquemia miocárdica activa'),
+              t(lang, 'Hipovolemia não corrigida',                         'Hipovolemia no corregida'),
+              t(lang, 'Doença vascular periférica grave',                  'Enfermedad vascular periférica grave')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'IMAO: potencialização grave — crise hipertensiva.',              'IMAO: potenciación grave — crisis hipertensiva.'),
+            t(lang, 'Antidepressivos tricíclicos: resposta pressora aumentada.',      'Antidepresivos tricíclicos: respuesta presora aumentada.'),
+            t(lang, 'Anestésicos halogenados: maior risco de arritmias.',             'Anestésicos halogenados: mayor riesgo de arritmias.'),
+            t(lang, 'Outros vasopressores: hipertensão/isquemia aditiva.',            'Otros vasopresores: hipertensión/isquemia aditiva.')
+          ],
+
+          renalAdjustment: t(lang,
+            'Sem ajuste renal específico. NÃO usar baixa dose para nefroproteção — sem evidência.',
+            'Sin ajuste renal específico. NO usar dosis baja para nefroprotección — sin evidencia.'
+          ),
+          hepaticAdjustment: t(lang, 'Sem ajuste hepático específico.', 'Sin ajuste hepático específico.'),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'PAM / PA', 'PAM / PA'), t(lang, 'FC', 'FC'),
+              t(lang, 'ECG contínuo', 'ECG continuo'), t(lang, 'Lactato', 'Lactato'),
+              t(lang, 'Diurese', 'Diuresis'), t(lang, 'Ritmo cardíaco', 'Ritmo cardíaco')
+            ],
+            followUp: [
+              t(lang, 'PAM contínua', 'PAM continua'),
+              t(lang, 'Arritmias (FA / TV)', 'Arritmias (FA / TV)'),
+              t(lang, 'Dor torácica / isquemia', 'Dolor torácico / isquemia'),
+              t(lang, 'Extravasamento no sítio', 'Extravasación en el sitio')
+            ]
+          },
+
+          safetyFlags: {
+            highAlertMedication: true,
+            vasopressor:         true,
+            inotrope:            true,
+            arrhythmiaRisk:      true,
+            ischemiaRisk:        true,
+            extravasationRisk:   true,
+            notRenalProtective:  true,
+            requiresTelemetry:   true,
+            requiresInfusionPump: true,
+            hospitalUseOnly:     true,
+            warning: t(lang,
+              'Dopamina não deve ser usada para nefroproteção. Reservar para choque com bradicardia relativa. SOAP II: maior risco de FA vs noradrenalina.',
+              'Dopamina no debe usarse para nefroprotección. Reservar para shock con bradicardia relativa. SOAP II: mayor riesgo de FA vs noradrenalina.'
+            )
+          },
+
+          auditNotes: { status: 'vasopressor_dopamine_master_template' },
+
+          ref: [
+            'SOAP II Trial (NEJM 2010)',
+            'Surviving Sepsis Campaign Guidelines (SSC 2021)',
+            'ACLS AHA Guidelines 2020',
+            'ESC Shock Guidelines 2024',
+            'Lexicomp 2026'
+          ]
+        };
+      }
+    }, /* fim dopamina */
+
+    /* ══════════════════════════════════════════════════════════════
+       36. FENILEFRINA
+       Vasopressor alfa-1 seletivo puro — sem efeito beta
+       Hipotensão perioperatória · Taquiarritmia que limita catecolaminas
+    ══════════════════════════════════════════════════════════════ */
+    fenilefrina: {
+      name:     { pt: 'Fenilefrina', es: 'Fenilefrina' },
+      category: 'cardio',
+      icon:     '🩺',
+      color:    'rgba(5,150,105,0.13)',
+      colorTxt: '#065F46',
+
+      calculate(paciente, lang = 'pt') {
+        const peso        = Number(paciente?.peso     || paciente?.weight || 70);
+        const pam         = Number(paciente?.pam      || 0);
+        const fc          = Number(paciente?.fc       || 0);
+        const doseAtual   = Number(paciente?.doseAtual || 0);
+        const baixoDebito = Boolean(paciente?.baixoDebito);
+
+        /* Velocidade de infusão: conc. padrão 100 mcg/mL (10 mg/100 mL SF) */
+        const concMcgMl = 100;
+        const velMLh    = doseAtual > 0
+          ? +((doseAtual * peso * 60) / concMcgMl).toFixed(1)
+          : null;
+
+        const alertBradicardia = fc > 0 && fc < 50
+          ? t(lang,
+              `⚠️ FC ${fc} bpm — bradicardia relevante. Fenilefrina pode intensificá-la por reflexo barorreceptor.`,
+              `⚠️ FC ${fc} lpm — bradicardia relevante. Fenilefrina puede intensificarla por reflejo barorreceptor.`
+            )
+          : null;
+        const alertBaixoDebito = baixoDebito
+          ? t(lang,
+              '⚠️ Baixo débito cardíaco detectado — fenilefrina pode piorar por aumento excessivo de pós-carga. Considerar inotrópico associado.',
+              '⚠️ Bajo gasto cardíaco detectado — fenilefrina puede empeorarlo por aumento excesivo de poscarga. Considerar inotrópico asociado.'
+            )
+          : null;
+
+        return {
+          name:  t(lang, 'Fenilefrina', 'Fenilefrina'),
+          class: t(lang,
+            'Vasopressor alfa-1 agonista seletivo puro — sem efeito beta',
+            'Vasopresor agonista alfa-1 selectivo puro — sin efecto beta'
+          ),
+
+          commercialNames: {
+            br: ['Fenilefrina', 'Neo-Synephrine'],
+            ar: ['Fenilefrina', 'Neo-Synephrine']
+          },
+
+          presentation: [
+            t(lang, 'Solução injetável IV conforme disponibilidade',          'Solución inyectable IV según disponibilidad'),
+            t(lang, 'Bolus IV 50–200 mcg',                                    'Bolo IV 50–200 mcg'),
+            t(lang, 'Infusão contínua em bomba',                             'Infusión continua en bomba')
+          ],
+
+          mechanism: t(lang,
+            'Estimula receptores alfa-1 periféricos produzindo vasoconstrição arterial e venosa, elevação da RVS e da PA, sem atividade beta significativa. Pode causar bradicardia reflexa por ativação barorreceptora.',
+            'Estimula receptores alfa-1 periféricos produciendo vasoconstricción arterial y venosa, elevación de la RVS y la PA, sin actividad beta significativa. Puede causar bradicardia refleja por activación barorreceptora.'
+          ),
+
+          pharmacokinetics: {
+            onset:    t(lang, 'Segundos a poucos minutos por via IV', 'Segundos a pocos minutos por vía IV'),
+            halfLife: t(lang, 'Muito curta — bolus se dissipa em minutos', 'Muy corta — bolo se disipa en minutos'),
+            duration: t(lang, 'Curta; infusão contínua necessária para suporte prolongado', 'Corta; infusión continua necesaria para soporte prolongado')
+          },
+
+          dose: {
+            adultoPadrao: t(lang,
+              'Bolus: 50–200 mcg IV lento conforme protocolo. Infusão: 0,1–0,5 mcg/kg/min IV contínuo.',
+              'Bolo: 50–200 mcg IV lento según protocolo. Infusión: 0,1–0,5 mcg/kg/min IV continuo.'
+            ),
+            adultoGrave: t(lang,
+              'Manutenção: 0,2–3 mcg/kg/min. Doses altas aumentam risco de isquemia e queda do débito cardíaco.',
+              'Mantenimiento: 0,2–3 mcg/kg/min. Dosis altas aumentan riesgo de isquemia y caída del gasto cardíaco.'
+            ),
+            pediatricaPadrao: t(lang,
+              'Dose por peso conforme protocolo pediátrico e contexto anestésico/UTI.',
+              'Dosis por peso según protocolo pediátrico y contexto anestésico/UCI.'
+            ),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '0,1–0,5 mcg/kg/min IV — infusão inicial', '0,1–0,5 mcg/kg/min IV — infusión inicial'),
+            grave:      t(lang, '0,2–3 mcg/kg/min IV — titular conforme PAM', '0,2–3 mcg/kg/min IV — titular según PAM'),
+            meningite:  null,
+            doseMaxima: t(lang, 'Individualizado; sem limite absoluto fixo — guiar pela PAM e perfusão', 'Individualizado; sin límite absoluto fijo — guiar por PAM y perfusión')
+          },
+
+          infusionCalc: doseAtual > 0 && peso > 0
+            ? t(lang,
+                `Dose ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLh} mL/h (conc. 100 mcg/mL — 10 mg/100 mL SF).`,
+                `Dosis ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLh} mL/h (conc. 100 mcg/mL — 10 mg/100 mL SF).`
+              )
+            : t(lang,
+                'Informe doseAtual (mcg/kg/min) e peso para calcular velocidade de infusão.',
+                'Informe doseAtual (mcg/kg/min) y peso para calcular velocidad de infusión.'
+              ),
+
+          therapeuticTargets: [
+            t(lang, 'PAM ≥ 65 mmHg ou alvo individualizado',              'PAM ≥ 65 mmHg u objetivo individualizado'),
+            t(lang, 'Controle de hipotensão perioperatória',              'Control de hipotensión perioperatoria'),
+            t(lang, 'Manutenção de PA sem agravar taquiarritmia',         'Mantenimiento de PA sin agravar taquiarritmia'),
+            t(lang, 'Melhora da perfusão sistêmica',                      'Mejoría de perfusión sistémica')
+          ],
+
+          dilution: t(lang,
+            'Infusão contínua em bomba. Acesso central preferido em uso prolongado ou doses altas. Bolus periférico em ambiente monitorizado. Concentração padrão: 10 mg/100 mL SF → 100 mcg/mL.',
+            'Infusión continua en bomba. Acceso central preferido en uso prolongado o dosis altas. Bolo periférico en ambiente monitorizado. Concentración estándar: 10 mg/100 mL SF → 100 mcg/mL.'
+          ),
+
+          speed: t(lang,
+            'Bolus: 50–200 mcg IV lento. Infusão: iniciar 0,1–0,2 mcg/kg/min e titular a cada 5 min.',
+            'Bolo: 50–200 mcg IV lento. Infusión: iniciar 0,1–0,2 mcg/kg/min y titular cada 5 min.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Hipertensão',        'Hipertensión'),
+            t(lang, 'Bradicardia reflexa','Bradicardia refleja'),
+            t(lang, 'Cefaleia',           'Cefalea'),
+            t(lang, 'Palidez',            'Palidez'),
+            t(lang, 'Ansiedade',          'Ansiedad'),
+            t(lang, 'Náuseas',            'Náuseas')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Isquemia periférica e mesentérica',                      'Isquemia periférica y mesentérica'),
+            t(lang, 'Redução do débito cardíaco por aumento de pós-carga',    'Reducción del gasto cardíaco por aumento de poscarga'),
+            t(lang, 'Hipertensão grave',                                       'Hipertensión grave'),
+            t(lang, 'Bradicardia sintomática',                                 'Bradicardia sintomática'),
+            t(lang, 'Necrose por extravasamento',                              'Necrosis por extravasación'),
+            t(lang, 'IAM por aumento de pós-carga e vasoconstrição coronária', 'IAM por aumento de poscarga y vasoconstricción coronaria')
+          ],
+
+          extravasationProtocol: [
+            t(lang, 'Suspender infusão imediatamente.',                               'Suspender infusión inmediatamente.'),
+            t(lang, 'Não remover inicialmente o cateter.',                            'No retirar inicialmente el catéter.'),
+            t(lang, 'Infiltrar fentolamina ao redor da área (5–10 mg em SF 10 mL).', 'Infiltrar fentolamina alrededor de la zona (5–10 mg en SF 10 mL).'),
+            t(lang, 'Elevar membro; acionar cirurgia plástica se lesão extensa.',     'Elevar miembro; derivar a cirugía plástica si lesión extensa.')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '⚠️ Pode reduzir débito cardíaco por pós-carga excessiva. Evitar como vasopressor principal em choque cardiogênico com baixo débito.',
+              '⚠️ Puede reducir el gasto cardíaco por poscarga excesiva. Evitar como vasopresor principal en shock cardiogénico con bajo gasto.'
+            ),
+            t(lang,
+              'Gestação (anestesia obstétrica): usada para hipotensão selecionada — monitorar PA materna e perfusão uteroplacentária.',
+              'Embarazo (anestesia obstétrica): usada para hipotensión seleccionada — monitorizar PA materna y perfusión uteroplacentaria.'
+            ),
+            t(lang,
+              'Idosos: maior risco de bradicardia excessiva, isquemia e queda de débito cardíaco.',
+              'Ancianos: mayor riesgo de bradicardia excesiva, isquemia y caída de gasto cardíaco.'
+            ),
+            alertBradicardia,
+            alertBaixoDebito
+          ].filter(Boolean),
+
+          contraindications: {
+            absolutas: [
+              t(lang, 'Hipersensibilidade à fenilefrina', 'Hipersensibilidad a fenilefrina')
+            ],
+            relativas: [
+              t(lang, 'Hipertensão grave',                                   'Hipertensión grave'),
+              t(lang, 'Bradicardia importante (FC < 50 bpm)',                'Bradicardia importante (FC < 50 lpm)'),
+              t(lang, 'Choque cardiogênico com baixo débito',                'Shock cardiogénico con bajo gasto'),
+              t(lang, 'Doença vascular periférica grave',                    'Enfermedad vascular periférica grave'),
+              t(lang, 'Isquemia mesentérica ou periférica ativa',            'Isquemia mesentérica o periférica activa'),
+              t(lang, 'Hipovolemia não corrigida',                           'Hipovolemia no corregida')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'IMAO: resposta pressora exagerada — risco de crise hipertensiva.',             'IMAO: respuesta presora exagerada — riesgo de crisis hipertensiva.'),
+            t(lang, 'Antidepressivos tricíclicos: aumento da resposta alfa-adrenérgica.',          'Antidepresivos tricíclicos: aumento de respuesta alfa-adrenérgica.'),
+            t(lang, 'Betabloqueadores: podem intensificar bradicardia reflexa.',                   'Betabloqueantes: pueden intensificar bradicardia refleja.'),
+            t(lang, 'Outros vasopressores: hipertensão e isquemia aditivas.',                      'Otros vasopresores: hipertensión e isquemia aditivas.'),
+            t(lang, 'Oxitocina (obstetrícia): pode aumentar resposta pressora.',                   'Oxitocina (obstetricia): puede aumentar respuesta presora.')
+          ],
+
+          renalAdjustment:   t(lang, 'Sem ajuste renal específico.', 'Sin ajuste renal específico.'),
+          hepaticAdjustment: t(lang, 'Sem ajuste hepático específico.', 'Sin ajuste hepático específico.'),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'PAM / PA', 'PAM / PA'), t(lang, 'FC', 'FC'),
+              t(lang, 'ECG contínuo', 'ECG continuo'),
+              t(lang, 'Perfusão periférica', 'Perfusión periférica'),
+              t(lang, 'Sinais de baixo débito', 'Signos de bajo gasto')
+            ],
+            followUp: [
+              t(lang, 'PAM contínua ou frequente',    'PAM continua o frecuente'),
+              t(lang, 'Bradicardia reflexa',           'Bradicardia refleja'),
+              t(lang, 'Sinais de isquemia',            'Signos de isquemia'),
+              t(lang, 'Sítio de infusão (extravasamento)', 'Sitio de infusión (extravasación)')
+            ]
+          },
+
+          safetyFlags: {
+            highAlertMedication:  true,
+            vasopressor:          true,
+            pureAlphaAgonist:     true,
+            bradycardiaRisk:      true,
+            ischemiaRisk:         true,
+            lowCardiacOutputRisk: true,
+            extravasationRisk:    true,
+            requiresTelemetry:    true,
+            requiresInfusionPump: true,
+            hospitalUseOnly:      true,
+            warning: t(lang,
+              'Fenilefrina é alfa-1 pura: útil quando taquiarritmia limita beta-agonistas, mas pode causar bradicardia reflexa e queda do débito cardíaco.',
+              'Fenilefrina es alfa-1 pura: útil cuando taquiarritmia limita beta-agonistas, pero puede causar bradicardia refleja y caída del gasto cardíaco.'
+            )
+          },
+
+          auditNotes: { status: 'vasopressor_phenylephrine_master_template' },
+
+          ref: [
+            'SCCM Vasopressor Guidelines',
+            'AHA/ACC Shock References',
+            'Anesthesia Hemodynamic Management Guidelines',
+            'Goodman & Gilman',
+            'Lexicomp 2026',
+            'FDA/EMA label'
+          ]
+        };
+      }
+    }, /* fim fenilefrina */
+
+    /* ══════════════════════════════════════════════════════════════
+       37. VASOPRESSINA
+       Vasopressor não catecolaminérgico — receptor V1 vascular
+       Adjuvante da noradrenalina no choque séptico · VASST Trial
+    ══════════════════════════════════════════════════════════════ */
+    vasopressina: {
+      name:     { pt: 'Vasopressina', es: 'Vasopresina' },
+      category: 'cardio',
+      icon:     '🧬',
+      color:    'rgba(37,99,235,0.13)',
+      colorTxt: '#1E40AF',
+
+      calculate(paciente, lang = 'pt') {
+        const pam              = Number(paciente?.pam              || 0);
+        const noradrenalinaDose = Number(paciente?.noradrenalinaDose || 0);
+        const lactato          = Number(paciente?.lactato           || 0);
+        const diurese          = Number(paciente?.diurese           || 0);
+        const sodio            = Number(paciente?.sodio             || 0);
+
+        /* Velocidade de infusão: dose fixa 0,03–0,04 UI/min
+           Concentração padrão: 20 UI em 100 mL SF → 0,2 UI/mL */
+        const concUIml = 0.2;
+        const velMLhPadrao = +((0.03 * 60) / concUIml).toFixed(1); /* 9 mL/h */
+
+        const alertHiponatremia = sodio > 0 && sodio < 130
+          ? t(lang,
+              `⚠️ Sódio ${sodio} mEq/L — hiponatremia grave. Vasopressina pode agravar por efeito V2 renal. Monitorar Na⁺ rigorosamente.`,
+              `⚠️ Sodio ${sodio} mEq/L — hiponatremia grave. Vasopresina puede agravar por efecto V2 renal. Monitorizar Na⁺ rigurosamente.`
+            )
+          : null;
+        const alertPAM = pam > 0 && pam < 65
+          ? t(lang, `⚠️ PAM ${pam} mmHg — abaixo da meta ≥ 65 mmHg.`, `⚠️ PAM ${pam} mmHg — por debajo del objetivo ≥ 65 mmHg.`)
+          : null;
+        const alertNora = noradrenalinaDose >= 0.25
+          ? t(lang,
+              `ℹ️ Noradrenalina ${noradrenalinaDose} mcg/kg/min — considerar vasopressina como adjuvante para poupar catecolaminas (SSC 2021).`,
+              `ℹ️ Noradrenalina ${noradrenalinaDose} mcg/kg/min — considerar vasopresina como adyuvante para ahorrar catecolaminas (SSC 2021).`
+            )
+          : null;
+
+        return {
+          name:  t(lang, 'Vasopressina', 'Vasopresina'),
+          class: t(lang,
+            'Vasopressor não catecolaminérgico — agonista receptor V1 vascular',
+            'Vasopresor no catecolaminérgico — agonista receptor V1 vascular'
+          ),
+
+          commercialNames: {
+            br: ['Vasopressina', 'Pitressina'],
+            ar: ['Vasopresina',  'Pitressina']
+          },
+
+          presentation: [
+            t(lang, 'Ampolas 20 UI/mL', 'Ampollas 20 UI/mL'),
+            t(lang, 'Ampolas 40 UI/mL', 'Ampollas 40 UI/mL'),
+            t(lang, 'Infusão contínua em bomba', 'Infusión continua en bomba')
+          ],
+
+          mechanism: t(lang,
+            'Age em receptores V1 vasculares promovendo vasoconstrição independente de receptores adrenérgicos. Útil quando noradrenalina é insuficiente. Receptores V2 renais medeiam retenção hídrica (risco de hiponatremia).',
+            'Actúa sobre receptores vasculares V1 promoviendo vasoconstricción independiente de receptores adrenérgicos. Útil cuando noradrenalina es insuficiente. Receptores V2 renales median retención hídrica (riesgo de hiponatremia).'
+          ),
+
+          pharmacokinetics: {
+            onset:    t(lang, '2–5 minutos', '2–5 minutos'),
+            halfLife: t(lang, '10–20 minutos', '10–20 minutos'),
+            duration: t(lang, '10–30 minutos após interrupção', '10–30 minutos tras suspensión')
+          },
+
+          dose: {
+            adultoPadrao: t(lang,
+              'Choque séptico adjuvante: 0,03 UI/min IV fixo (não titular — dose-fixa).',
+              'Shock séptico adyuvante: 0,03 UI/min IV fijo (no titular — dosis-fija).'
+            ),
+            adultoGrave: t(lang,
+              'Vasoplegia pós-cirúrgica/choque refratário: 0,03–0,04 UI/min conforme protocolo institucional. Evitar aumentos excessivos — risco isquêmico.',
+              'Vasoplejía posquirúrgica/shock refractario: 0,03–0,04 UI/min según protocolo institucional. Evitar aumentos excesivos — riesgo isquémico.'
+            ),
+            pediatricaPadrao: t(lang,
+              'Dose individualizada por peso em protocolo pediátrico especializado.',
+              'Dosis individualizada por peso en protocolo pediátrico especializado.'
+            ),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '0,03 UI/min IV — dose-fixa (adjuvante SSC)', '0,03 UI/min IV — dosis-fija (adyuvante SSC)'),
+            grave:      t(lang, '0,03–0,04 UI/min IV — vasoplegia/choque refratário', '0,03–0,04 UI/min IV — vasoplejía/shock refractario'),
+            meningite:  null,
+            doseMaxima: t(lang,
+              'Evitar > 0,04 UI/min — sem benefício adicional e maior risco de isquemia mesentérica/periférica.',
+              'Evitar > 0,04 UI/min — sin beneficio adicional y mayor riesgo de isquemia mesentérica/periférica.'
+            )
+          },
+
+          infusionCalc: t(lang,
+            `Dose padrão 0,03 UI/min → ${velMLhPadrao} mL/h (conc. 0,2 UI/mL — 20 UI/100 mL SF). Dose-fixa: NÃO titular pelo peso.`,
+            `Dosis estándar 0,03 UI/min → ${velMLhPadrao} mL/h (conc. 0,2 UI/mL — 20 UI/100 mL SF). Dosis-fija: NO titular por peso.`
+          ),
+
+          therapeuticTargets: [
+            t(lang, 'PAM ≥ 65 mmHg',                                     'PAM ≥ 65 mmHg'),
+            t(lang, 'Redução da dose de noradrenalina (sparing effect)',  'Reducción de dosis de noradrenalina (efecto ahorrador)'),
+            t(lang, 'Melhora da perfusão tecidual',                       'Mejoría de perfusión tisular'),
+            t(lang, 'Melhora da diurese',                                 'Mejoría de diuresis'),
+            t(lang, 'Redução do lactato sérico',                          'Reducción del lactato sérico')
+          ],
+
+          dilution: t(lang,
+            'Exclusivamente em bomba de infusão. Preferencialmente via central. Concentração padrão: 20 UI em 100 mL SF → 0,2 UI/mL.',
+            'Exclusivamente en bomba de infusión. Preferentemente vía central. Concentración estándar: 20 UI en 100 mL SF → 0,2 UI/mL.'
+          ),
+
+          speed: t(lang,
+            'Iniciar 0,03 UI/min — não aumentar acima de 0,04 UI/min. Não titular como catecolaminas.',
+            'Iniciar 0,03 UI/min — no aumentar por encima de 0,04 UI/min. No titular como catecolaminas.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Palidez',          'Palidez'),
+            t(lang, 'Bradicardia',      'Bradicardia'),
+            t(lang, 'Hipertensão',      'Hipertensión'),
+            t(lang, 'Náuseas',          'Náuseas'),
+            t(lang, 'Dor abdominal',    'Dolor abdominal'),
+            t(lang, 'Cefaleia',         'Cefalea')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Isquemia mesentérica',                    'Isquemia mesentérica'),
+            t(lang, 'Isquemia digital e periférica',           'Isquemia digital y periférica'),
+            t(lang, 'Necrose periférica',                      'Necrosis periférica'),
+            t(lang, 'Hiponatremia (efeito V2 renal)',          'Hiponatremia (efecto V2 renal)'),
+            t(lang, 'IAM',                                     'IAM'),
+            t(lang, 'AVC',                                     'ACV'),
+            t(lang, 'Redução crítica do fluxo esplâncnico',   'Reducción crítica del flujo esplácnico')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '⚠️ Não utilizar como único vasopressor no choque séptico grave — sempre associar à noradrenalina.',
+              '⚠️ No utilizar como único vasopresor en shock séptico grave — siempre asociar a noradrenalina.'
+            ),
+            t(lang,
+              'Idosos: maior risco de isquemia mesentérica, periférica e eventos cardiovasculares.',
+              'Ancianos: mayor riesgo de isquemia mesentérica, periférica y eventos cardiovasculares.'
+            ),
+            alertHiponatremia,
+            alertPAM,
+            alertNora
+          ].filter(Boolean),
+
+          contraindications: {
+            absolutas: [
+              t(lang, 'Hipersensibilidade conhecida à vasopressina', 'Hipersensibilidad conocida a la vasopresina')
+            ],
+            relativas: [
+              t(lang, 'Isquemia mesentérica ativa',              'Isquemia mesentérica activa'),
+              t(lang, 'Doença vascular periférica crítica',      'Enfermedad vascular periférica crítica'),
+              t(lang, 'IAM recente (< 72h)',                     'IAM reciente (< 72h)'),
+              t(lang, 'Hiponatremia grave (Na⁺ < 125 mEq/L)',   'Hiponatremia grave (Na⁺ < 125 mEq/L)'),
+              t(lang, 'Necrose periférica em evolução',          'Necrosis periférica en evolución')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'Noradrenalina: principal associação terapêutica — efeito sinérgico vasoconstritor.', 'Noradrenalina: principal asociación terapéutica — efecto sinérgico vasoconstrictor.'),
+            t(lang, 'Outros vasopressores: maior risco de isquemia orgânica.',                           'Otros vasopresores: mayor riesgo de isquemia orgánica.'),
+            t(lang, 'Diuréticos: podem alterar equilíbrio hidroeletrolítico.',                           'Diuréticos: pueden alterar equilibrio hidroelectrolítico.')
+          ],
+
+          renalAdjustment:   t(lang, 'Sem ajuste renal específico.', 'Sin ajuste renal específico.'),
+          hepaticAdjustment: t(lang, 'Sem ajuste hepático específico.', 'Sin ajuste hepático específico.'),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'PAM / PA',              'PAM / PA'),
+              t(lang, 'FC / ECG',              'FC / ECG'),
+              t(lang, 'Lactato',               'Lactato'),
+              t(lang, 'Diurese',               'Diuresis'),
+              t(lang, 'Sódio sérico',          'Sodio sérico'),
+              t(lang, 'Perfusão periférica',   'Perfusión periférica'),
+              t(lang, 'Avaliação abdominal',   'Evaluación abdominal')
+            ],
+            followUp: [
+              t(lang, 'PAM contínua',                    'PAM continua'),
+              t(lang, 'Perfusão digital e periférica',   'Perfusión digital y periférica'),
+              t(lang, 'Dor abdominal (isquemia esplâncnica)', 'Dolor abdominal (isquemia esplácnica)'),
+              t(lang, 'Sódio sérico (hiponatremia)',     'Sodio sérico (hiponatremia)'),
+              t(lang, 'Dose de noradrenalina associada', 'Dosis de noradrenalina asociada'),
+              t(lang, 'Lactato e diurese',               'Lactato y diuresis')
+            ]
+          },
+
+          safetyFlags: {
+            highAlertMedication:      true,
+            vasopressor:              true,
+            nonCatecholamine:         true,
+            ischemiaRisk:             true,
+            mesentericIschemiaRisk:   true,
+            hyponatremiaRisk:         true,
+            centralLinePreferred:     true,
+            requiresInfusionPump:     true,
+            requiresTelemetry:        true,
+            hospitalUseOnly:          true,
+            warning: t(lang,
+              'Vasopressina é adjuvante da noradrenalina no choque séptico (SSC 2021). Dose-fixa 0,03 UI/min — não titular. Atenção a isquemia mesentérica, digital e hiponatremia.',
+              'Vasopresina es adyuvante de noradrenalina en shock séptico (SSC 2021). Dosis-fija 0,03 UI/min — no titular. Atención a isquemia mesentérica, digital e hiponatremia.'
+            )
+          },
+
+          auditNotes: { status: 'vasopressin_master_template' },
+
+          ref: [
+            'VASST Trial (NEJM 2008)',
+            'Surviving Sepsis Campaign Guidelines (SSC 2021)',
+            'SCCM Vasopressor Guidelines',
+            'ESC Shock Guidelines 2024',
+            'Lexicomp 2026',
+            'UpToDate — Vasopressin'
+          ]
+        };
+      }
+    }, /* fim vasopressina */
+
+    /* ══════════════════════════════════════════════════════════════
+       38. DOBUTAMINA
+       Inotrópico beta-1 predominante — choque cardiogênico · ICC aguda
+       ESC Heart Failure Guidelines · AHA/ACC/HFSA Guidelines
+    ══════════════════════════════════════════════════════════════ */
+    dobutamina: {
+      name:     { pt: 'Dobutamina', es: 'Dobutamina' },
+      category: 'cardio',
+      icon:     '❤️',
+      color:    'rgba(220,38,38,0.10)',
+      colorTxt: '#B91C1C',
+
+      calculate(paciente, lang = 'pt') {
+        const peso      = Number(paciente?.peso     || paciente?.weight || 70);
+        const pam       = Number(paciente?.pam      || 0);
+        const fc        = Number(paciente?.fc       || 0);
+        const doseAtual = Number(paciente?.doseAtual || 0);
+        const arritmia  = Boolean(paciente?.arritmia);
+        const isquemia  = Boolean(paciente?.isquemia);
+
+        /* Velocidade de infusão — conc. padrão: 250 mg em 250 mL SF → 1000 mcg/mL */
+        const concMcgMl = 1000;
+        const velMLh    = doseAtual > 0
+          ? +((doseAtual * peso * 60) / concMcgMl).toFixed(1)
+          : null;
+
+        const alertFC = fc > 120
+          ? t(lang,
+              `⚠️ FC ${fc} bpm — taquicardia relevante. Dobutamina pode agravar. Reavaliar dose e considerar arritmia subjacente.`,
+              `⚠️ FC ${fc} lpm — taquicardia relevante. Dobutamina puede agravar. Reevaluar dosis y considerar arritmia subyacente.`
+            )
+          : null;
+        const alertArritmia = arritmia
+          ? t(lang,
+              '⚠️ Arritmia presente — dobutamina pode piorar taquiarritmia. Avaliar benefício/risco.',
+              '⚠️ Arritmia presente — dobutamina puede empeorar taquiarritmia. Evaluar beneficio/riesgo.'
+            )
+          : null;
+        const alertIsquemia = isquemia
+          ? t(lang,
+              '⚠️ Isquemia miocárdica ativa — dobutamina aumenta consumo de O₂. Monitorizar ECG e biomarcadores.',
+              '⚠️ Isquemia miocárdica activa — dobutamina aumenta consumo de O₂. Monitorizar ECG y biomarcadores.'
+            )
+          : null;
+        const alertPAM = pam > 0 && pam < 60
+          ? t(lang,
+              `⚠️ PAM ${pam} mmHg — hipotensão com dobutamina pode piorar. Considerar vasopressor associado (noradrenalina).`,
+              `⚠️ PAM ${pam} mmHg — hipotensión con dobutamina puede empeorar. Considerar vasopresor asociado (noradrenalina).`
+            )
+          : null;
+
+        return {
+          name:  t(lang, 'Dobutamina', 'Dobutamina'),
+          class: t(lang,
+            'Inotrópico catecolaminérgico — agonista beta-1 predominante',
+            'Inotrópico catecolaminérgico — agonista beta-1 predominante'
+          ),
+
+          commercialNames: {
+            br: ['Dobutrex', 'Dobutamina'],
+            ar: ['Dobutrex', 'Dobutamina']
+          },
+
+          presentation: [
+            t(lang, 'Ampolas/frascos 250 mg', 'Ampollas/frascos 250 mg'),
+            t(lang, 'Solução para infusão contínua em bomba', 'Solución para infusión continua en bomba')
+          ],
+
+          mechanism: t(lang,
+            'Estimula predominantemente receptores beta-1 cardíacos, aumentando contratilidade e débito cardíaco. Efeito beta-2 leve pode reduzir levemente a RVS. Não possui ação vasoconstritora alfa relevante.',
+            'Estimula predominantemente receptores beta-1 cardíacos, aumentando contractilidad y gasto cardíaco. Efecto beta-2 leve puede reducir levemente la RVS. No tiene acción vasoconstrictora alfa relevante.'
+          ),
+
+          pharmacokinetics: {
+            onset:    t(lang, '1–2 minutos', '1–2 minutos'),
+            halfLife: t(lang, '2–3 minutos', '2–3 minutos'),
+            duration: t(lang, 'Curta — requer infusão contínua', 'Corta — requiere infusión continua')
+          },
+
+          dose: {
+            adultoPadrao: t(lang,
+              'Inicial: 2,5–5 mcg/kg/min IV contínuo. Manutenção: 2,5–20 mcg/kg/min.',
+              'Inicial: 2,5–5 mcg/kg/min IV continuo. Mantenimiento: 2,5–20 mcg/kg/min.'
+            ),
+            adultoGrave: t(lang,
+              'Até 40 mcg/kg/min em cenários selecionados — alto risco de arritmias e isquemia em doses > 20 mcg/kg/min.',
+              'Hasta 40 mcg/kg/min en escenarios seleccionados — alto riesgo de arritmias e isquemia en dosis > 20 mcg/kg/min.'
+            ),
+            pediatricaPadrao: t(lang,
+              'Dose individualizada por peso em UTI pediátrica especializada.',
+              'Dosis individualizada por peso en UCI pediátrica especializada.'
+            ),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '2,5–5 mcg/kg/min IV — dose inicial', '2,5–5 mcg/kg/min IV — dosis inicial'),
+            grave:      t(lang, '5–20 mcg/kg/min IV — titular conforme débito cardíaco', '5–20 mcg/kg/min IV — titular según gasto cardíaco'),
+            meningite:  null,
+            doseMaxima: t(lang,
+              '40 mcg/kg/min (raramente indicado; alto risco de arritmias acima de 20 mcg/kg/min)',
+              '40 mcg/kg/min (raramente indicado; alto riesgo de arritmias por encima de 20 mcg/kg/min)'
+            )
+          },
+
+          infusionCalc: doseAtual > 0 && peso > 0
+            ? t(lang,
+                `Dose ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLh} mL/h (conc. 1000 mcg/mL — 250 mg/250 mL SF).`,
+                `Dosis ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLh} mL/h (conc. 1000 mcg/mL — 250 mg/250 mL SF).`
+              )
+            : t(lang,
+                'Informe doseAtual (mcg/kg/min) e peso para calcular velocidade de infusão.',
+                'Informe doseAtual (mcg/kg/min) y peso para calcular velocidad de infusión.'
+              ),
+
+          therapeuticTargets: [
+            t(lang, 'Aumento do débito cardíaco',              'Aumento del gasto cardíaco'),
+            t(lang, 'Melhora da perfusão periférica',          'Mejoría de perfusión periférica'),
+            t(lang, 'Redução do lactato sérico',               'Reducción del lactato sérico'),
+            t(lang, 'Melhora da diurese',                      'Mejoría de diuresis'),
+            t(lang, 'Redução de sinais de congestão',          'Reducción de signos de congestión')
+          ],
+
+          dilution: t(lang,
+            'Infusão contínua em bomba. Concentração padrão: 250 mg em 250 mL SF → 1000 mcg/mL. Acesso central preferido em uso prolongado.',
+            'Infusión continua en bomba. Concentración estándar: 250 mg en 250 mL SF → 1000 mcg/mL. Acceso central preferido en uso prolongado.'
+          ),
+
+          speed: t(lang,
+            'Iniciar 2,5–5 mcg/kg/min; titular a cada 10–15 min conforme débito cardíaco, FC e PA.',
+            'Iniciar 2,5–5 mcg/kg/min; titular cada 10–15 min según gasto cardíaco, FC y PA.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Taquicardia sinusal',    'Taquicardia sinusal'),
+            t(lang, 'Palpitações',            'Palpitaciones'),
+            t(lang, 'Cefaleia',               'Cefalea'),
+            t(lang, 'Náuseas',                'Náuseas'),
+            t(lang, 'Tremor',                'Temblor'),
+            t(lang, 'Hipotensão leve',        'Hipotensión leve')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Arritmias ventriculares (TV/FV)',                         'Arritmias ventriculares (TV/FV)'),
+            t(lang, 'Fibrilação atrial com resposta rápida',                   'Fibrilación auricular con respuesta rápida'),
+            t(lang, 'Isquemia miocárdica (↑ consumo de O₂)',                  'Isquemia miocárdica (↑ consumo de O₂)'),
+            t(lang, 'Hipotensão grave por vasodilatação beta-2',               'Hipotensión grave por vasodilatación beta-2'),
+            t(lang, 'Taquicardia extrema com redução de enchimento diastólico','Taquicardia extrema con reducción de llenado diastólico')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '⚠️ Em choque cardiogênico hipotensivo, dobutamina frequentemente exige vasopressor associado (noradrenalina) para manter PAM adequada.',
+              '⚠️ En shock cardiogénico hipotensivo, dobutamina frecuentemente exige vasopresor asociado (noradrenalina) para mantener PAM adecuada.'
+            ),
+            t(lang,
+              'Gestação: usar se benefício materno superar risco fetal em instabilidade hemodinâmica grave.',
+              'Embarazo: usar si beneficio materno supera riesgo fetal en inestabilidad hemodinámica grave.'
+            ),
+            t(lang,
+              'Idosos: maior risco de arritmias, isquemia e hipotensão. Titular com cautela.',
+              'Ancianos: mayor riesgo de arritmias, isquemia e hipotensión. Titular con precaución.'
+            ),
+            alertFC,
+            alertArritmia,
+            alertIsquemia,
+            alertPAM
+          ].filter(Boolean),
+
+          contraindications: {
+            absolutas: [
+              t(lang, 'Hipersensibilidade à dobutamina',                               'Hipersensibilidad a dobutamina'),
+              t(lang, 'Cardiomiopatia hipertrófica obstrutiva grave (CMHO)',            'Miocardiopatía hipertrófica obstructiva grave (CMHO)'),
+              t(lang, 'Obstrução dinâmica grave da via de saída do ventrículo esquerdo','Obstrucción dinámica grave del tracto de salida del ventrículo izquierdo')
+            ],
+            relativas: [
+              t(lang, 'Taquiarritmias não controladas',                 'Taquiarritmias no controladas'),
+              t(lang, 'IAM com isquemia ativa',                         'IAM con isquemia activa'),
+              t(lang, 'Hipovolemia não corrigida',                      'Hipovolemia no corregida'),
+              t(lang, 'Hipotensão grave sem suporte vasopressor',        'Hipotensión grave sin soporte vasopresor'),
+              t(lang, 'Estenose aórtica crítica',                       'Estenosis aórtica crítica')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'Betabloqueadores: reduzem significativamente a resposta inotrópica.',            'Betabloqueantes: reducen significativamente la respuesta inotrópica.'),
+            t(lang, 'IMAO: podem potencializar efeitos adrenérgicos.',                                'IMAO: pueden potenciar efectos adrenérgicos.'),
+            t(lang, 'Anestésicos halogenados: maior risco de arritmias.',                             'Anestésicos halogenados: mayor riesgo de arritmias.'),
+            t(lang, 'Outros inotrópicos/catecolaminas: maior risco de taquiarritmias e isquemia.',   'Otros inotrópicos/catecolaminas: mayor riesgo de taquiarritmias e isquemia.')
+          ],
+
+          renalAdjustment:   t(lang, 'Sem ajuste renal específico.', 'Sin ajuste renal específico.'),
+          hepaticAdjustment: t(lang, 'Sem ajuste hepático específico.', 'Sin ajuste hepático específico.'),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'PAM / PA',                             'PAM / PA'),
+              t(lang, 'FC contínua',                          'FC continua'),
+              t(lang, 'ECG contínuo',                         'ECG continuo'),
+              t(lang, 'Lactato',                              'Lactato'),
+              t(lang, 'Diurese',                              'Diuresis'),
+              t(lang, 'Perfusão periférica',                  'Perfusión periférica'),
+              t(lang, 'Ecocardiograma se disponível',         'Ecocardiograma si disponible')
+            ],
+            followUp: [
+              t(lang, 'FC — alerta se > 120 bpm',            'FC — alerta si > 120 lpm'),
+              t(lang, 'Arritmias (FA / TV / FV)',             'Arritmias (FA / TV / FV)'),
+              t(lang, 'Dor torácica / isquemia (ECG + tropo)','Dolor torácico / isquemia (ECG + tropo)'),
+              t(lang, 'PAM — hipotensão exige vasopressor',  'PAM — hipotensión exige vasopresor'),
+              t(lang, 'Lactato seriado',                     'Lactato seriado'),
+              t(lang, 'Diurese e sinais de congestão',       'Diuresis y signos de congestión')
+            ]
+          },
+
+          safetyFlags: {
+            highAlertMedication: true,
+            inotrope:            true,
+            arrhythmiaRisk:      true,
+            ischemiaRisk:        true,
+            hypotensionRisk:     true,
+            requiresTelemetry:   true,
+            requiresInfusionPump: true,
+            hospitalUseOnly:     true,
+            warning: t(lang,
+              'Dobutamina melhora o débito cardíaco, mas pode causar taquiarritmias, isquemia miocárdica e hipotensão. Em choque hipotensivo, frequentemente necessita vasopressor associado.',
+              'Dobutamina mejora el gasto cardíaco, pero puede causar taquiarritmias, isquemia miocárdica e hipotensión. En shock hipotensivo, frecuentemente necesita vasopresor asociado.'
+            )
+          },
+
+          auditNotes: { status: 'inotrope_dobutamine_master_template' },
+
+          ref: [
+            'ESC Heart Failure Guidelines 2021',
+            'AHA/ACC/HFSA Heart Failure Guidelines 2022',
+            'ESC Cardiogenic Shock Guidelines 2024',
+            'Goodman & Gilman',
+            'Lexicomp 2026'
+          ]
+        };
+      }
+    } /* fim dobutamina */
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 33 (Vasopressores/Inotrópicos UTI: dopamina · fenilefrina · vasopressina · dobutamina) */
+
+  /* ══════════════════════════════════════════════════════════════
+     GRUPO 34 — INODILATADORES (Inibidor PDE-3 + Sensibilizador de Cálcio)
+     milrinona · levosimendana
+     Baixo débito · Choque cardiogênico · Disfunção VD · Beta-bloqueio
+  ══════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ══════════════════════════════════════════════════════════════
+       39. MILRINONA
+       Inibidor PDE-3 — inotrópico + vasodilatador
+       Útil em baixo débito com beta-bloqueio ou disfunção de VD
+       Ajuste renal obrigatório — eliminação predominantemente renal
+    ══════════════════════════════════════════════════════════════ */
+    milrinona: {
+      name:     { pt: 'Milrinona', es: 'Milrinona' },
+      category: 'cardio',
+      icon:     '🫁',
+      color:    'rgba(14,165,233,0.13)',
+      colorTxt: '#0369A1',
+
+      calculate(paciente, lang = 'pt') {
+        const peso      = Number(paciente?.peso     || paciente?.weight || 70);
+        const pam       = Number(paciente?.pam      || 0);
+        const paSist    = Number(paciente?.paSistolica || 0);
+        const fc        = Number(paciente?.fc       || 0);
+        const clcr      = Number(paciente?.clcr     || paciente?.fg || 90);
+        const doseAtual = Number(paciente?.doseAtual || 0);
+        const arritmia  = Boolean(paciente?.arritmia);
+        const betaBloc  = Boolean(paciente?.usoBetabloqueador);
+
+        /* Ajuste de dose por ClCr (FDA labeling milrinona) */
+        let doseMax = 0.75;
+        let ajusteMsg = null;
+        if (clcr < 10) {
+          doseMax = 0.20;
+          ajusteMsg = t(lang,
+            `⚠️ ClCr ${clcr} mL/min — insuficiência renal muito grave. Dose máxima: 0,20 mcg/kg/min. Considerar evitar uso conforme protocolo.`,
+            `⚠️ ClCr ${clcr} mL/min — insuficiencia renal muy grave. Dosis máxima: 0,20 mcg/kg/min. Considerar evitar uso según protocolo.`
+          );
+        } else if (clcr < 20) {
+          doseMax = 0.23;
+          ajusteMsg = t(lang,
+            `⚠️ ClCr ${clcr} mL/min — insuficiência renal grave. Dose máxima: 0,23 mcg/kg/min.`,
+            `⚠️ ClCr ${clcr} mL/min — insuficiencia renal grave. Dosis máxima: 0,23 mcg/kg/min.`
+          );
+        } else if (clcr < 40) {
+          doseMax = 0.28;
+          ajusteMsg = t(lang,
+            `⚠️ ClCr ${clcr} mL/min — insuficiência renal moderada. Dose máxima: 0,28 mcg/kg/min.`,
+            `⚠️ ClCr ${clcr} mL/min — insuficiencia renal moderada. Dosis máxima: 0,28 mcg/kg/min.`
+          );
+        } else if (clcr < 60) {
+          doseMax = 0.43;
+          ajusteMsg = t(lang,
+            `ℹ️ ClCr ${clcr} mL/min — redução discreta da ClCr. Dose máxima recomendada: 0,43 mcg/kg/min. Monitorar.`,
+            `ℹ️ ClCr ${clcr} mL/min — reducción discreta de la ClCr. Dosis máxima recomendada: 0,43 mcg/kg/min. Monitorar.`
+          );
+        }
+
+        /* Velocidade de infusão — conc. padrão: 20 mg em 100 mL SG5% → 200 mcg/mL */
+        const concMcgMl = 200;
+        const velMLh    = doseAtual > 0
+          ? +((doseAtual * peso * 60) / concMcgMl).toFixed(1)
+          : null;
+
+        /* Dose de bolus opcional: 25–50 mcg/kg em 10 min */
+        const bolusTotal    = doseAtual > 0 ? null : null; /* apenas informativo */
+        const bolusMLh      = peso > 0
+          ? +((37.5 * peso) / 200).toFixed(1)   /* 37,5 mcg/kg (média) */
+          : null;
+
+        const alertHipotensao = paSist > 0 && paSist < 85
+          ? t(lang,
+              `⚠️ PAS ${paSist} mmHg — hipotensão. OMITIR bolus. Iniciar infusão em dose baixa (0,125 mcg/kg/min) e associar vasopressor se necessário.`,
+              `⚠️ PAS ${paSist} mmHg — hipotensión. OMITIR bolo. Iniciar infusión en dosis baja (0,125 mcg/kg/min) y asociar vasopresor si necesario.`
+            )
+          : null;
+        const alertPAM = pam > 0 && pam < 60
+          ? t(lang,
+              `⚠️ PAM ${pam} mmHg — abaixo de 60 mmHg. Considerar vasopressor associado (noradrenalina).`,
+              `⚠️ PAM ${pam} mmHg — por debajo de 60 mmHg. Considerar vasopresor asociado (noradrenalina).`
+            )
+          : null;
+        const alertArritmia = arritmia
+          ? t(lang,
+              '⚠️ Arritmia presente — milrinona pode agravar taquiarritmias. Corrigir eletrólitos (K⁺, Mg²⁺) antes.',
+              '⚠️ Arritmia presente — milrinona puede agravar taquiarritmias. Corregir electrolitos (K⁺, Mg²⁺) antes.'
+            )
+          : null;
+        const infoBetaBloc = betaBloc
+          ? t(lang,
+              '✅ Beta-bloqueio presente — milrinona é preferível à dobutamina pois seu mecanismo não depende de receptor beta.',
+              '✅ Beta-bloqueo presente — milrinona es preferible a dobutamina pues su mecanismo no depende del receptor beta.'
+            )
+          : null;
+
+        return {
+          name:  t(lang, 'Milrinona', 'Milrinona'),
+          class: t(lang,
+            'Inodilatador — inibidor da fosfodiesterase tipo 3 (PDE-3)',
+            'Inodilatador — inhibidor de la fosfodiesterasa tipo 3 (PDE-3)'
+          ),
+
+          commercialNames: {
+            br: ['Primacor', 'Milrinona'],
+            ar: ['Primacor', 'Milrinona']
+          },
+
+          presentation: [
+            t(lang, 'Ampola/frasco 1 mg/mL', 'Ampolla/frasco 1 mg/mL'),
+            t(lang, 'Solução para infusão contínua em bomba', 'Solución para infusión continua en bomba')
+          ],
+
+          mechanism: t(lang,
+            'Inibe PDE-3, elevando AMPc no miocárdio e na musculatura lisa vascular. Produz aumento da contratilidade cardíaca + vasodilatação arterial e venosa (↓ pré-carga e pós-carga). Não depende de receptores beta.',
+            'Inhibe PDE-3, elevando AMPc en miocardio y músculo liso vascular. Produce aumento de contractilidad cardíaca + vasodilatación arterial y venosa (↓ precarga y poscarga). No depende de receptores beta.'
+          ),
+
+          pharmacokinetics: {
+            onset:    t(lang, '5–15 minutos', '5–15 minutos'),
+            halfLife: t(lang,
+              '≈ 2–3 horas em função renal normal; prolonga-se com ClCr reduzida',
+              '≈ 2–3 horas en función renal normal; se prolonga con ClCr reducida'
+            ),
+            duration: t(lang, 'Eliminação predominantemente renal — ajuste obrigatório em DRC', 'Eliminación predominantemente renal — ajuste obligatorio en ERC')
+          },
+
+          dose: {
+            adultoPadrao: t(lang,
+              'Bolus opcional: 25–50 mcg/kg em 10 min (omitir se PAS < 90 mmHg). Infusão: 0,125–0,25 mcg/kg/min se risco de hipotensão; 0,25–0,75 mcg/kg/min em pacientes estáveis.',
+              'Bolo opcional: 25–50 mcg/kg en 10 min (omitir si PAS < 90 mmHg). Infusión: 0,125–0,25 mcg/kg/min si riesgo de hipotensión; 0,25–0,75 mcg/kg/min en pacientes estables.'
+            ),
+            adultoGrave: t(lang,
+              `Dose máxima padrão: 0,75 mcg/kg/min. Com ClCr reduzida, máximo atual: ${doseMax} mcg/kg/min.`,
+              `Dosis máxima estándar: 0,75 mcg/kg/min. Con ClCr reducida, máximo actual: ${doseMax} mcg/kg/min.`
+            ),
+            pediatricaPadrao: t(lang,
+              'Uso pediátrico/neonatal apenas em protocolo especializado com dose por peso e monitorização intensiva.',
+              'Uso pediátrico/neonatal solo en protocolo especializado con dosis por peso y monitorización intensiva.'
+            ),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '0,25–0,50 mcg/kg/min IV — infusão de manutenção', '0,25–0,50 mcg/kg/min IV — infusión de mantenimiento'),
+            grave:      t(lang, '0,50–0,75 mcg/kg/min IV (função renal normal)', '0,50–0,75 mcg/kg/min IV (función renal normal)'),
+            meningite:  null,
+            doseMaxima: t(lang,
+              `0,75 mcg/kg/min (função renal normal) | Ajuste obrigatório com ClCr < 60 mL/min. Máximo atual: ${doseMax} mcg/kg/min.`,
+              `0,75 mcg/kg/min (función renal normal) | Ajuste obligatorio con ClCr < 60 mL/min. Máximo actual: ${doseMax} mcg/kg/min.`
+            )
+          },
+
+          infusionCalc: doseAtual > 0 && peso > 0
+            ? t(lang,
+                `Dose ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLh} mL/h (conc. 200 mcg/mL — 20 mg/100 mL SG5%). Máx ajustado por ClCr: ${doseMax} mcg/kg/min.`,
+                `Dosis ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLh} mL/h (conc. 200 mcg/mL — 20 mg/100 mL SG5%). Máx ajustado por ClCr: ${doseMax} mcg/kg/min.`
+              )
+            : t(lang,
+                `Informe doseAtual e peso para calcular velocidade. Concentração padrão: 20 mg/100 mL SG5% → 200 mcg/mL. Dose máx (ClCr atual): ${doseMax} mcg/kg/min.`,
+                `Informe doseAtual y peso para calcular velocidad. Concentración estándar: 20 mg/100 mL SG5% → 200 mcg/mL. Dosis máx (ClCr actual): ${doseMax} mcg/kg/min.`
+              ),
+
+          therapeuticTargets: [
+            t(lang, 'Aumento do débito cardíaco',             'Aumento del gasto cardíaco'),
+            t(lang, 'Melhora da perfusão periférica',         'Mejoría de perfusión periférica'),
+            t(lang, 'Redução das pressões de enchimento',     'Reducción de presiones de llenado'),
+            t(lang, 'Redução do lactato sérico',              'Reducción del lactato sérico'),
+            t(lang, 'Melhora da diurese',                     'Mejoría de diuresis'),
+            t(lang, 'Melhora da função de VD quando indicada','Mejoría de función de VD cuando indicada')
+          ],
+
+          dilution: t(lang,
+            'Bomba de infusão obrigatória. Preferir acesso central. Concentração padrão: 20 mg/100 mL SG5% → 200 mcg/mL. Evitar bolus se PAS < 90 mmHg ou hipovolemia.',
+            'Bomba de infusión obligatoria. Preferir acceso central. Concentración estándar: 20 mg/100 mL SG5% → 200 mcg/mL. Evitar bolo si PAS < 90 mmHg o hipovolemia.'
+          ),
+
+          speed: t(lang,
+            'Bolus opcional: 37,5 mcg/kg (média) em 10 min → ' + (bolusMLh ? bolusMLh + ' mL' : 'calcular por peso') + '. Infusão: iniciar 0,125–0,25 mcg/kg/min e titular conforme resposta e ClCr.',
+            'Bolo opcional: 37,5 mcg/kg (media) en 10 min → ' + (bolusMLh ? bolusMLh + ' mL' : 'calcular por peso') + '. Infusión: iniciar 0,125–0,25 mcg/kg/min y titular según respuesta y ClCr.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Hipotensão',     'Hipotensión'),
+            t(lang, 'Taquicardia',    'Taquicardia'),
+            t(lang, 'Cefaleia',       'Cefalea'),
+            t(lang, 'Tremor',        'Temblor'),
+            t(lang, 'Náuseas',        'Náuseas'),
+            t(lang, 'Palpitações',    'Palpitaciones')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Arritmias ventriculares (TV/FV)',                         'Arritmias ventriculares (TV/FV)'),
+            t(lang, 'Fibrilação atrial com resposta ventricular rápida',       'Fibrilación auricular con respuesta ventricular rápida'),
+            t(lang, 'Hipotensão grave por vasodilatação excessiva',            'Hipotensión grave por vasodilatación excesiva'),
+            t(lang, 'Isquemia miocárdica',                                     'Isquemia miocárdica'),
+            t(lang, 'Trombocitopenia (rara)',                                  'Trombocitopenia (rara)'),
+            t(lang, 'Acúmulo tóxico em DRC grave por eliminação renal',       'Acumulación tóxica en ERC grave por eliminación renal')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '⚠️ Ajuste renal obrigatório — milrinona é eliminada predominantemente por via renal. ClCr reduzida aumenta meia-vida e risco de hipotensão/arritmia.',
+              '⚠️ Ajuste renal obligatorio — milrinona se elimina predominantemente por vía renal. ClCr reducida aumenta vida media y riesgo de hipotensión/arritmia.'
+            ),
+            t(lang,
+              'Idosos: maior risco de DRC subclínica, hipotensão e arritmias. Iniciar dose baixa sem bolus.',
+              'Ancianos: mayor riesgo de ERC subclínica, hipotensión y arritmias. Iniciar dosis baja sin bolo.'
+            ),
+            t(lang,
+              'Gestação: usar apenas se benefício materno superar risco fetal.',
+              'Embarazo: usar solo si beneficio materno supera riesgo fetal.'
+            ),
+            ajusteMsg,
+            alertHipotensao,
+            alertPAM,
+            alertArritmia,
+            infoBetaBloc
+          ].filter(Boolean),
+
+          contraindications: {
+            absolutas: [
+              t(lang, 'Hipersensibilidade à milrinona',                                                    'Hipersensibilidad a milrinona'),
+              t(lang, 'Doença valvar obstrutiva grave como causa principal do baixo débito sem correção',  'Enfermedad valvular obstructiva grave como causa del bajo gasto sin corrección'),
+              t(lang, 'Estenose aórtica crítica com hipotensão',                                           'Estenosis aórtica crítica con hipotensión')
+            ],
+            relativas: [
+              t(lang, 'Hipotensão importante (PAS < 85 mmHg)',              'Hipotensión importante (PAS < 85 mmHg)'),
+              t(lang, 'Insuficiência renal grave — ajuste obrigatório',     'Insuficiencia renal grave — ajuste obligatorio'),
+              t(lang, 'Taquiarritmias não controladas',                     'Taquiarritmias no controladas'),
+              t(lang, 'Hipovolemia não corrigida',                          'Hipovolemia no corregida'),
+              t(lang, 'IAM com isquemia ativa',                             'IAM con isquemia activa'),
+              t(lang, 'Trombocitopenia importante',                         'Trombocitopenia importante')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'Vasodilatadores: maior risco de hipotensão.',                                            'Vasodilatadores: mayor riesgo de hipotensión.'),
+            t(lang, 'Diuréticos: hipovolemia e hipocalemia aumentam risco de arritmia.',                      'Diuréticos: hipovolemia e hipopotasemia aumentan riesgo de arritmia.'),
+            t(lang, 'Outros inotrópicos: maior risco de taquiarritmias.',                                     'Otros inotrópicos: mayor riesgo de taquiarritmias.'),
+            t(lang, 'Noradrenalina: frequentemente necessária para compensar vasodilatação/hipotensão.',       'Noradrenalina: frecuentemente necesaria para compensar vasodilatación/hipotensión.'),
+            t(lang, 'Betabloqueadores: milrinona preserva efeito inotrópico — mecanismo PDE-3, não beta.',    'Betabloqueantes: milrinona preserva efecto inotrópico — mecanismo PDE-3, no beta.')
+          ],
+
+          renalAdjustment: t(lang,
+            `OBRIGATÓRIO. ClCr < 60 mL/min exige redução de dose. Máximo atual (ClCr ${clcr} mL/min): ${doseMax} mcg/kg/min.`,
+            `OBLIGATORIO. ClCr < 60 mL/min requiere reducción de dosis. Máximo actual (ClCr ${clcr} mL/min): ${doseMax} mcg/kg/min.`
+          ),
+          hepaticAdjustment: t(lang,
+            'Não requer ajuste hepático habitual.',
+            'No requiere ajuste hepático habitual.'
+          ),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'PAM / PA',                       'PAM / PA'),
+              t(lang, 'FC / ECG contínuo',              'FC / ECG continuo'),
+              t(lang, 'Creatinina / ClCr',              'Creatinina / ClCr'),
+              t(lang, 'Potássio sérico',                'Potasio sérico'),
+              t(lang, 'Magnésio sérico',                'Magnesio sérico'),
+              t(lang, 'Lactato',                        'Lactato'),
+              t(lang, 'Diurese',                        'Diuresis'),
+              t(lang, 'Ecocardiograma se disponível',   'Ecocardiograma si disponible')
+            ],
+            followUp: [
+              t(lang, 'PAM/PA contínua',                             'PAM/PA continua'),
+              t(lang, 'Arritmias (TV/FA)',                           'Arritmias (TV/FA)'),
+              t(lang, 'Creatinina/ClCr — reavaliação diária',       'Creatinina/ClCr — reevaluación diaria'),
+              t(lang, 'K⁺ e Mg²⁺ (corrigir hipoeletrolitemias)',   'K⁺ y Mg²⁺ (corregir hipoelectrolitemias)'),
+              t(lang, 'Lactato seriado',                             'Lactato seriado'),
+              t(lang, 'Necessidade de vasopressor associado',        'Necesidad de vasopresor asociado')
+            ]
+          },
+
+          safetyFlags: {
+            highAlertMedication:     true,
+            inotrope:                true,
+            inodilator:              true,
+            arrhythmiaRisk:          true,
+            hypotensionRisk:         true,
+            renalDoseAdjustment:     true,
+            betaBlockerUsefulScenario: true,
+            requiresTelemetry:       true,
+            requiresInfusionPump:    true,
+            hospitalUseOnly:         true,
+            warning: t(lang,
+              'Milrinona é inodilatador útil em baixo débito com beta-bloqueio ou disfunção de VD. Ajuste renal OBRIGATÓRIO — eliminação predominantemente renal. Omitir bolus em hipotensos.',
+              'Milrinona es inodilatador útil en bajo gasto con beta-bloqueo o disfunción de VD. Ajuste renal OBLIGATORIO — eliminación predominantemente renal. Omitir bolo en hipotensos.'
+            )
+          },
+
+          auditNotes: { status: 'inodilator_milrinone_master_template' },
+
+          ref: [
+            'ESC Heart Failure Guidelines 2021',
+            'AHA/ACC/HFSA Heart Failure Guidelines 2022',
+            'ESC Cardiogenic Shock Guidelines 2024',
+            'FDA label — Milrinone (Primacor)',
+            'Lexicomp 2026',
+            'Goodman & Gilman'
+          ]
+        };
+      }
+    }, /* fim milrinona */
+
+    /* ══════════════════════════════════════════════════════════════
+       40. LEVOSIMENDANA
+       Sensibilizador de cálcio + abertura de canais K-ATP
+       Inotrópico sem aumento do consumo de O₂ · Efeito 7–9 dias
+       Útil com beta-bloqueio · Ajuste renal e hepático
+    ══════════════════════════════════════════════════════════════ */
+    levosimendana: {
+      name:     { pt: 'Levosimendana', es: 'Levosimendán' },
+      category: 'cardio',
+      icon:     '💙',
+      color:    'rgba(99,102,241,0.13)',
+      colorTxt: '#4338CA',
+
+      calculate(paciente, lang = 'pt') {
+        const peso      = Number(paciente?.peso     || paciente?.weight || 70);
+        const pam       = Number(paciente?.pam      || 0);
+        const paSist    = Number(paciente?.paSistolica || 0);
+        const fc        = Number(paciente?.fc       || 0);
+        const clcr      = Number(paciente?.clcr     || paciente?.fg || 90);
+        const doseAtual = Number(paciente?.doseAtual || 0);
+        const arritmia  = Boolean(paciente?.arritmia);
+        const betaBloc  = Boolean(paciente?.usoBetabloqueador);
+        const potassio  = Number(paciente?.potassio || 0);
+
+        /* Velocidade de infusão — conc. padrão: 12,5 mg em 250 mL SG5% → 50 mcg/mL */
+        const concMcgMl = 50;
+        const velMLh    = doseAtual > 0
+          ? +((doseAtual * peso * 60) / concMcgMl).toFixed(1)
+          : null;
+
+        /* Bolus 6 mcg/kg → omitido em hipotensos */
+        const bolusVolmL = peso > 0
+          ? +((6 * peso) / 1000 / (0.025)).toFixed(1)   /* conc. 2,5 mg/mL ampola original */
+          : null;
+
+        const alertHipotensao = paSist > 0 && paSist < 90
+          ? t(lang,
+              `⚠️ PAS ${paSist} mmHg — hipotensão. OMITIR bolus obrigatoriamente. Iniciar infusão em 0,05 mcg/kg/min e considerar vasopressor associado.`,
+              `⚠️ PAS ${paSist} mmHg — hipotensión. OMITIR bolo obligatoriamente. Iniciar infusión en 0,05 mcg/kg/min y considerar vasopresor asociado.`
+            )
+          : null;
+        const alertRenal = clcr > 0 && clcr < 30
+          ? t(lang,
+              `⚠️ ClCr ${clcr} mL/min — insuficiência renal grave. Evitar levosimendana conforme protocolo local; metabólito ativo pode acumular.`,
+              `⚠️ ClCr ${clcr} mL/min — insuficiencia renal grave. Evitar levosimendán según protocolo local; metabolito activo puede acumularse.`
+            )
+          : null;
+        const alertHipoK = potassio > 0 && potassio < 3.5
+          ? t(lang,
+              `⚠️ K⁺ ${potassio} mEq/L — hipocalemia. Corrigir antes de iniciar: aumenta risco de arritmias com levosimendana.`,
+              `⚠️ K⁺ ${potassio} mEq/L — hipopotasemia. Corregir antes de iniciar: aumenta riesgo de arritmias con levosimendán.`
+            )
+          : null;
+        const alertPAM = pam > 0 && pam < 65
+          ? t(lang,
+              `⚠️ PAM ${pam} mmHg — associar vasopressor (noradrenalina) para manter PAM ≥ 65 mmHg.`,
+              `⚠️ PAM ${pam} mmHg — asociar vasopresor (noradrenalina) para mantener PAM ≥ 65 mmHg.`
+            )
+          : null;
+        const alertProlongado = t(lang,
+          '⏱️ Lembrete: efeito hemodinâmico persiste 7–9 dias pelo metabólito ativo (OR-1896). Monitorar PA e arritmias após fim da infusão.',
+          '⏱️ Recordatorio: efecto hemodinámico persiste 7–9 días por el metabolito activo (OR-1896). Monitorizar PA y arritmias tras fin de la infusión.'
+        );
+        const infoBetaBloc = betaBloc
+          ? t(lang,
+              '✅ Beta-bloqueio presente — levosimendana preserva efeito inotrópico pois não depende de receptores beta (mecanismo cálcio-sensibilizador).',
+              '✅ Beta-bloqueo presente — levosimendán preserva efecto inotrópico pues no depende de receptores beta (mecanismo calcio-sensibilizador).'
+            )
+          : null;
+
+        return {
+          name:  t(lang, 'Levosimendana', 'Levosimendán'),
+          class: t(lang,
+            'Inodilatador — sensibilizador de cálcio (troponina C) + abertura de canais K-ATP',
+            'Inodilatador — sensibilizador de calcio (troponina C) + apertura de canales K-ATP'
+          ),
+
+          commercialNames: {
+            br: ['Simdax', 'Levosimendana'],
+            ar: ['Simdax', 'Levosimendán']
+          },
+
+          presentation: [
+            t(lang, 'Frasco-ampola 12,5 mg/5 mL (2,5 mg/mL)', 'Frasco-ampolla 12,5 mg/5 mL (2,5 mg/mL)'),
+            t(lang, 'Concentrado para infusão IV — diluir em SG5%', 'Concentrado para infusión IV — diluir en SG5%')
+          ],
+
+          mechanism: t(lang,
+            'Sensibiliza a troponina C ao cálcio → ↑ contratilidade sem aumentar consumo de O₂ (não arritmogênico por esse mecanismo). Abre canais K-ATP vasculares → vasodilatação arterial, venosa e coronariana (↓ pré e pós-carga). Metabólito ativo OR-1896 prolonga o efeito por 7–9 dias.',
+            'Sensibiliza la troponina C al calcio → ↑ contractilidad sin aumentar consumo de O₂ (no arritmogénico por este mecanismo). Abre canales K-ATP vasculares → vasodilatación arterial, venosa y coronaria (↓ pre y poscarga). Metabolito activo OR-1896 prolonga el efecto 7–9 días.'
+          ),
+
+          pharmacokinetics: {
+            onset:    t(lang, 'Progressivo durante a infusão (pico ao final)',    'Progresivo durante la infusión (pico al final)'),
+            halfLife: t(lang, 'Fármaco original ≈ 1 h; metabólito OR-1896 ≈ 75–80 h', 'Fármaco original ≈ 1 h; metabolito OR-1896 ≈ 75–80 h'),
+            duration: t(lang,
+              'Efeito hemodinâmico pode persistir 7–9 dias pelo metabólito ativo',
+              'Efecto hemodinámico puede persistir 7–9 días por el metabolito activo'
+            )
+          },
+
+          dose: {
+            adultoPadrao: t(lang,
+              'Bolus: 6–12 mcg/kg em 10 min (omitir se PAS < 90 mmHg). Infusão: 0,05–0,1 mcg/kg/min (início); 0,1–0,2 mcg/kg/min (manutenção) por 24 horas.',
+              'Bolo: 6–12 mcg/kg en 10 min (omitir si PAS < 90 mmHg). Infusión: 0,05–0,1 mcg/kg/min (inicio); 0,1–0,2 mcg/kg/min (mantenimiento) por 24 horas.'
+            ),
+            adultoGrave: t(lang,
+              'Máximo 0,2 mcg/kg/min. Duração padrão: 24 horas (infusão única — efeito se prolonga pelo metabólito).',
+              'Máximo 0,2 mcg/kg/min. Duración estándar: 24 horas (infusión única — efecto se prolonga por el metabolito).'
+            ),
+            pediatricaPadrao: t(lang,
+              'Não aprovado em pediatria — uso off-label restrito a UTI pediátrica especializada.',
+              'No aprobado en pediatría — uso off-label restringido a UCI pediátrica especializada.'
+            ),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '0,05–0,1 mcg/kg/min IV — dose inicial', '0,05–0,1 mcg/kg/min IV — dosis inicial'),
+            grave:      t(lang, '0,1–0,2 mcg/kg/min IV — manutenção (máx)', '0,1–0,2 mcg/kg/min IV — mantenimiento (máx)'),
+            meningite:  null,
+            doseMaxima: t(lang,
+              '0,2 mcg/kg/min. Infusão única de 24 horas na maioria dos protocolos.',
+              '0,2 mcg/kg/min. Infusión única de 24 horas en la mayoría de protocolos.'
+            )
+          },
+
+          infusionCalc: doseAtual > 0 && peso > 0
+            ? t(lang,
+                `Dose ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLh} mL/h (conc. 50 mcg/mL — 12,5 mg/250 mL SG5%).`,
+                `Dosis ${doseAtual} mcg/kg/min × ${peso} kg → ${velMLh} mL/h (conc. 50 mcg/mL — 12,5 mg/250 mL SG5%).`
+              )
+            : t(lang,
+                'Informe doseAtual (mcg/kg/min) e peso para calcular velocidade. Concentração padrão: 12,5 mg/250 mL SG5% → 50 mcg/mL.',
+                'Informe doseAtual (mcg/kg/min) y peso para calcular velocidad. Concentración estándar: 12,5 mg/250 mL SG5% → 50 mcg/mL.'
+              ),
+
+          therapeuticTargets: [
+            t(lang, 'Aumento do débito cardíaco',               'Aumento del gasto cardíaco'),
+            t(lang, 'Melhora da perfusão periférica',           'Mejoría de perfusión periférica'),
+            t(lang, 'Redução das pressões de enchimento',       'Reducción de presiones de llenado'),
+            t(lang, 'Redução do lactato sérico',                'Reducción del lactato sérico'),
+            t(lang, 'Melhora da diurese',                       'Mejoría de diuresis'),
+            t(lang, 'Melhora sintomática da IC aguda',          'Mejoría sintomática de IC aguda')
+          ],
+
+          dilution: t(lang,
+            'Bomba de infusão obrigatória. Preferir acesso central em pacientes críticos. Concentração padrão: 12,5 mg em 250 mL SG5% → 50 mcg/mL. Evitar bolus se PAS < 90 mmHg ou hipovolemia.',
+            'Bomba de infusión obligatoria. Preferir acceso central en pacientes críticos. Concentración estándar: 12,5 mg en 250 mL SG5% → 50 mcg/mL. Evitar bolo si PAS < 90 mmHg o hipovolemia.'
+          ),
+
+          speed: t(lang,
+            'Bolus (se indicado): 6 mcg/kg em 10 min. Infusão: iniciar 0,05–0,1 mcg/kg/min; titular até 0,2 mcg/kg/min conforme resposta. Duração total: 24 h.',
+            'Bolo (si indicado): 6 mcg/kg en 10 min. Infusión: iniciar 0,05–0,1 mcg/kg/min; titular hasta 0,2 mcg/kg/min según respuesta. Duración total: 24 h.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Hipotensão',     'Hipotensión'),
+            t(lang, 'Cefaleia',       'Cefalea'),
+            t(lang, 'Taquicardia',    'Taquicardia'),
+            t(lang, 'Náuseas',        'Náuseas'),
+            t(lang, 'Tontura',        'Mareos'),
+            t(lang, 'Palpitações',    'Palpitaciones')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Hipotensão prolongada (pelo metabólito — dias após infusão)',   'Hipotensión prolongada (por el metabolito — días tras infusión)'),
+            t(lang, 'Arritmias ventriculares',                                        'Arritmias ventriculares'),
+            t(lang, 'Fibrilação atrial',                                              'Fibrilación auricular'),
+            t(lang, 'Isquemia miocárdica em pacientes vulneráveis',                  'Isquemia miocárdica en pacientes vulnerables'),
+            t(lang, 'Hipocalemia (risco de arritmia)',                               'Hipopotasemia (riesgo de arritmia)'),
+            t(lang, 'Acúmulo de metabólito em IR/IH grave',                         'Acumulación de metabolito en IR/IH grave')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '⏱️ Efeito prolongado por metabólito ativo (OR-1896) — monitorar PA e arritmias até 7–9 dias após a infusão.',
+              '⏱️ Efecto prolongado por metabolito activo (OR-1896) — monitorizar PA y arritmias hasta 7–9 días tras la infusión.'
+            ),
+            t(lang,
+              'Gestação: dados limitados — usar apenas em situação crítica com benefício materno claro.',
+              'Embarazo: datos limitados — usar solo en situación crítica con beneficio materno claro.'
+            ),
+            t(lang,
+              'Idosos: maior risco de hipotensão, DRC e arritmias. Iniciar sem bolus, dose mínima.',
+              'Ancianos: mayor riesgo de hipotensión, ERC y arritmias. Iniciar sin bolo, dosis mínima.'
+            ),
+            alertProlongado,
+            alertHipotensao,
+            alertRenal,
+            alertHipoK,
+            alertPAM,
+            infoBetaBloc
+          ].filter(Boolean),
+
+          contraindications: {
+            absolutas: [
+              t(lang, 'Hipersensibilidade à levosimendana',                                             'Hipersensibilidad a levosimendán'),
+              t(lang, 'Hipotensão grave (PAS < 90 mmHg não responsiva)',                                'Hipotensión grave (PAS < 90 mmHg no responsiva)'),
+              t(lang, 'Taquicardia grave não controlada',                                               'Taquicardia grave no controlada'),
+              t(lang, 'Obstrução mecânica significativa ao enchimento/ejeção ventricular',              'Obstrucción mecánica significativa al llenado/eyección ventricular'),
+              t(lang, 'Insuficiência renal muito grave (evitar conforme protocolo local)',              'Insuficiencia renal muy grave (evitar según protocolo local)'),
+              t(lang, 'Insuficiência hepática grave',                                                   'Insuficiencia hepática grave')
+            ],
+            relativas: [
+              t(lang, 'Hipovolemia não corrigida',            'Hipovolemia no corregida'),
+              t(lang, 'Fibrilação atrial rápida',             'Fibrilación auricular rápida'),
+              t(lang, 'Arritmias ventriculares',              'Arritmias ventriculares'),
+              t(lang, 'IAM com isquemia ativa',               'IAM con isquemia activa'),
+              t(lang, 'Hipocalemia (K⁺ < 3,5 mEq/L)',        'Hipopotasemia (K⁺ < 3,5 mEq/L)'),
+              t(lang, 'Estenose aórtica crítica',             'Estenosis aórtica crítica')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'Vasodilatadores: hipotensão aditiva — cautela e monitorização.',                                      'Vasodilatadores: hipotensión aditiva — cautela y monitorización.'),
+            t(lang, 'Diuréticos: hipovolemia e hipocalemia aumentam risco de hipotensão e arritmia.',                      'Diuréticos: hipovolemia e hipopotasemia aumentan riesgo de hipotensión y arritmia.'),
+            t(lang, 'Outros inotrópicos: risco aditivo de arritmias.',                                                     'Otros inotrópicos: riesgo aditivo de arritmias.'),
+            t(lang, 'Noradrenalina: pode ser necessária para compensar vasodilatação.',                                    'Noradrenalina: puede ser necesaria para compensar vasodilatación.'),
+            t(lang, 'Betabloqueadores: efeito inotrópico preservado — mecanismo independente de receptor beta.',           'Betabloqueantes: efecto inotrópico preservado — mecanismo independiente del receptor beta.'),
+            t(lang, 'Anti-hipertensivos IV: hipotensão aditiva — evitar combinação sem monitorização.',                    'Antihipertensivos IV: hipotensión aditiva — evitar combinación sin monitorización.')
+          ],
+
+          renalAdjustment: t(lang,
+            `Cautela em IR moderada/grave (ClCr < 30 mL/min). Atual: ${clcr} mL/min. Evitar em IR muito grave — metabólito ativo OR-1896 acumula.`,
+            `Precaución en IR moderada/grave (ClCr < 30 mL/min). Actual: ${clcr} mL/min. Evitar en IR muy grave — metabolito activo OR-1896 se acumula.`
+          ),
+          hepaticAdjustment: t(lang,
+            'Cautela em hepatopatia moderada. Contraindicado em insuficiência hepática grave.',
+            'Precaución en hepatopatía moderada. Contraindicado en insuficiencia hepática grave.'
+          ),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'PAM / PA',                        'PAM / PA'),
+              t(lang, 'FC / ECG contínuo',               'FC / ECG continuo'),
+              t(lang, 'Creatinina / ClCr',               'Creatinina / ClCr'),
+              t(lang, 'Função hepática (AST/ALT/bilirrubinas)', 'Función hepática (AST/ALT/bilirrubinas)'),
+              t(lang, 'Potássio sérico',                 'Potasio sérico'),
+              t(lang, 'Magnésio sérico',                 'Magnesio sérico'),
+              t(lang, 'Lactato',                         'Lactato'),
+              t(lang, 'Diurese',                         'Diuresis'),
+              t(lang, 'Ecocardiograma se disponível',    'Ecocardiograma si disponible')
+            ],
+            followUp: [
+              t(lang, 'PAM/PA durante E após infusão (7–9 dias)', 'PAM/PA durante Y después de infusión (7–9 días)'),
+              t(lang, 'Arritmias (FA / TV)',                      'Arritmias (FA / TV)'),
+              t(lang, 'K⁺ e Mg²⁺ — corrigir deficiências',      'K⁺ y Mg²⁺ — corregir deficiencias'),
+              t(lang, 'Lactato seriado',                          'Lactato seriado'),
+              t(lang, 'Necessidade de vasopressor',               'Necesidad de vasopresor'),
+              t(lang, 'Sinais de hipotensão prolongada',          'Signos de hipotensión prolongada')
+            ]
+          },
+
+          safetyFlags: {
+            highAlertMedication:       true,
+            inotrope:                  true,
+            inodilator:                true,
+            calciumSensitizer:         true,
+            arrhythmiaRisk:            true,
+            prolongedHypotensionRisk:  true,
+            renalHepaticCaution:       true,
+            betaBlockerUsefulScenario: true,
+            requiresTelemetry:         true,
+            requiresInfusionPump:      true,
+            hospitalUseOnly:           true,
+            warning: t(lang,
+              '⏱️ Levosimendana tem efeito prolongado por metabólito ativo (7–9 dias). Monitorar PA e arritmias após fim da infusão. Omitir bolus em hipotensos. Corrigir K⁺ antes.',
+              '⏱️ Levosimendán tiene efecto prolongado por metabolito activo (7–9 días). Monitorizar PA y arritmias tras fin de infusión. Omitir bolo en hipotensos. Corregir K⁺ antes.'
+            )
+          },
+
+          auditNotes: { status: 'inodilator_levosimendan_master_template' },
+
+          ref: [
+            'ESC Heart Failure Guidelines 2021',
+            'AHA/ACC/HFSA Heart Failure Guidelines 2022',
+            'ESC Cardiogenic Shock Guidelines 2024',
+            'EMA label — Simdax (Levosimendan)',
+            'Lexicomp 2026',
+            'Goodman & Gilman'
+          ]
+        };
+      }
+    } /* fim levosimendana */
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 34 (Inodilatadores: milrinona · levosimendana) */
+
+  /* ══════════════════════════════════════════════════════════════
+     GRUPO 35 — iSGLT2 CARDIOVASCULAR
+     dapagliflozina
+     IC-FEr · IC-FEp · DRC · Proteção cardiorrenal
+     DAPA-HF · DELIVER · DAPA-CKD
+  ══════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ══════════════════════════════════════════════════════════════
+       41. DAPAGLIFLOZINA
+       iSGLT2 — Inibidor SGLT2 com benefício cardiorrenal robusto
+       1ª linha em IC-FEr / IC-FEp / DRC — independente do diabetes
+    ══════════════════════════════════════════════════════════════ */
+    dapagliflozina: {
+      name:     { pt: 'Dapagliflozina', es: 'Dapagliflozina' },
+      category: 'cardio',
+      icon:     '🫀',
+      color:    'rgba(16,185,129,0.13)',
+      colorTxt: '#065F46',
+
+      calculate(paciente, lang = 'pt') {
+        const peso            = Number(paciente?.peso          || paciente?.weight || 70);
+        const paSist          = Number(paciente?.paSistolica   || 0);
+        const egfr            = Number(paciente?.egfr          || paciente?.clcr || paciente?.fg || 90);
+        const creatinina      = Number(paciente?.creatinina    || 0);
+        const diabetes        = Boolean(paciente?.diabetes);
+        const usoInsulina     = Boolean(paciente?.usoInsulina);
+        const usoSulf         = Boolean(paciente?.usoSulfonilureia);
+        const usoDiuretico    = Boolean(paciente?.usoDiuretico);
+        const hipovolemia     = Boolean(paciente?.hipovolemia);
+        const cetoacidosePrev = Boolean(paciente?.cetoacidosePrevia);
+        const gestacao        = Boolean(paciente?.gestacao);
+        const cirurgia        = Boolean(paciente?.cirurgiaProgramada);
+        const doencaAguda     = Boolean(paciente?.doencaAguda);
+        const feve            = Number(paciente?.feve           || 0);
+        const indicacao       = paciente?.indicacao             || '';
+
+        /* ── Avaliação de elegibilidade por eGFR e indicação ── */
+        let egfrAlert = null;
+        let elegivel  = true;
+        if (egfr < 25) {
+          elegivel  = false;
+          egfrAlert = t(lang,
+            `⛔ eGFR ${egfr} mL/min/1,73m² — abaixo do limite aprovado para IC/DRC. Verificar bula local e protocolo antes de iniciar ou continuar.`,
+            `⛔ eGFR ${egfr} mL/min/1,73m² — por debajo del límite aprobado para IC/ERC. Verificar prospecto local y protocolo antes de iniciar o continuar.`
+          );
+        } else if (egfr < 45) {
+          egfrAlert = t(lang,
+            `⚠️ eGFR ${egfr} mL/min/1,73m² — eficácia glicêmica reduzida. Benefício cardiorrenal pode persistir conforme indicação (IC/DRC). Monitorar função renal.`,
+            `⚠️ eGFR ${egfr} mL/min/1,73m² — eficacia glucémica reducida. El beneficio cardiorrenal puede persistir según indicación (IC/ERC). Monitorizar función renal.`
+          );
+        } else if (egfr < 60) {
+          egfrAlert = t(lang,
+            `ℹ️ eGFR ${egfr} mL/min/1,73m² — DRC moderada. Monitorar função renal após início.`,
+            `ℹ️ eGFR ${egfr} mL/min/1,73m² — ERC moderada. Monitorizar función renal tras inicio.`
+          );
+        }
+
+        /* ── Alertas de suspensão temporária ── */
+        const alertCirurgia = cirurgia
+          ? t(lang,
+              '⚠️ Cirurgia programada — suspender dapagliflozina 3–4 dias antes (risco de cetoacidose perioperatória). Reiniciar após tolerância oral adequada.',
+              '⚠️ Cirugía programada — suspender dapagliflozina 3–4 días antes (riesgo de cetoacidosis perioperatoria). Reiniciar tras tolerancia oral adecuada.'
+            )
+          : null;
+        const alertDoencaAguda = doencaAguda
+          ? t(lang,
+              '⚠️ Doença aguda — suspender temporariamente. Risco de hipovolemia, injúria renal aguda e cetoacidose euglicêmica em quadros agudos.',
+              '⚠️ Enfermedad aguda — suspender temporalmente. Riesgo de hipovolemia, lesión renal aguda y cetoacidosis euglucémica en cuadros agudos.'
+            )
+          : null;
+        const alertHipovolemia = hipovolemia
+          ? t(lang,
+              '⚠️ Hipovolemia detectada — corrigir volemia antes de iniciar ou continuar. Associação com diurético de alça aumenta risco.',
+              '⚠️ Hipovolemia detectada — corregir volemia antes de iniciar o continuar. Asociación con diurético de asa aumenta riesgo.'
+            )
+          : null;
+        const alertPASist = paSist > 0 && paSist < 90
+          ? t(lang,
+              `⚠️ PAS ${paSist} mmHg — hipotensão sintomática. Avaliar redução de diuréticos antes de iniciar dapagliflozina.`,
+              `⚠️ PAS ${paSist} mmHg — hipotensión sintomática. Evaluar reducción de diuréticos antes de iniciar dapagliflozina.`
+            )
+          : null;
+        const alertCetoacidose = cetoacidosePrev
+          ? t(lang,
+              '⚠️ História de cetoacidose prévia — risco elevado de cetoacidose euglicêmica. Educar sobre sinais e regras de dia doente.',
+              '⚠️ Historia de cetoacidosis previa — riesgo elevado de cetoacidosis euglucémica. Educar sobre signos y reglas de día enfermo.'
+            )
+          : null;
+        const alertHipoglicemia = (usoInsulina || usoSulf)
+          ? t(lang,
+              '⚠️ Insulina ou sulfonilureia em uso — maior risco de hipoglicemia. Considerar redução de dose desses agentes ao iniciar dapagliflozina.',
+              '⚠️ Insulina o sulfonilurea en uso — mayor riesgo de hipoglucemia. Considerar reducción de dosis de esos agentes al iniciar dapagliflozina.'
+            )
+          : null;
+        const alertGestacao = gestacao
+          ? t(lang,
+              '⛔ Gestação — evitar dapagliflozina, especialmente no 2º e 3º trimestre (risco renal fetal). Substituir por alternativa segura.',
+              '⛔ Embarazo — evitar dapagliflozina, especialmente en 2º y 3er trimestre (riesgo renal fetal). Sustituir por alternativa segura.'
+            )
+          : null;
+        const alertDiuretico = usoDiuretico
+          ? t(lang,
+              'ℹ️ Diurético de alça em uso — avaliar redução de dose se sinais de hipovolemia ou queda de PA após início da dapagliflozina.',
+              'ℹ️ Diurético de asa en uso — evaluar reducción de dosis si signos de hipovolemia o caída de PA tras inicio de dapagliflozina.'
+            )
+          : null;
+
+        /* ── Mensagem de elegibilidade/dose ── */
+        const msgDose = elegivel
+          ? t(lang,
+              `Dose: 10 mg VO 1x/dia (IC-FEr, IC-FEp, DRC). ${!diabetes ? 'Benefício cardiorrenal independente do controle glicêmico.' : 'Diabetes: 5–10 mg conforme objetivo.'}`,
+              `Dosis: 10 mg VO 1 vez/día (IC-FEr, IC-FEp, ERC). ${!diabetes ? 'Beneficio cardiorrenal independiente del control glucémico.' : 'Diabetes: 5–10 mg según objetivo.'}`
+            )
+          : t(lang,
+              `Verificar elegibilidade: eGFR ${egfr} mL/min/1,73m² pode estar abaixo do limite para esta indicação. Consultar bula local.`,
+              `Verificar elegibilidad: eGFR ${egfr} mL/min/1,73m² puede estar por debajo del límite para esta indicación. Consultar prospecto local.`
+            );
+
+        return {
+          name:  t(lang, 'Dapagliflozina', 'Dapagliflozina'),
+          class: t(lang,
+            'Inibidor do cotransportador sódio-glicose tipo 2 (iSGLT2) — benefício cardiorrenal',
+            'Inhibidor del cotransportador sodio-glucosa tipo 2 (iSGLT2) — beneficio cardiorrenal'
+          ),
+
+          commercialNames: {
+            br: ['Forxiga', 'Dapagliflozina genérica'],
+            ar: ['Forxiga', 'Dapagliflozina']
+          },
+
+          presentation: [
+            t(lang, 'Comprimidos 5 mg',  'Comprimidos 5 mg'),
+            t(lang, 'Comprimidos 10 mg', 'Comprimidos 10 mg')
+          ],
+
+          mechanism: t(lang,
+            'Inibe SGLT2 no túbulo proximal renal → ↑ glicosúria e natriurese → redução de congestão e pressão intraglomerular. Em IC e DRC, os benefícios são predominantemente hemodinâmicos e metabólicos, independentes do controle glicêmico.',
+            'Inhibe SGLT2 en el túbulo proximal renal → ↑ glucosuria y natriuresis → reducción de congestión y presión intraglomerular. En IC y ERC, los beneficios son predominantemente hemodinámicos y metabólicos, independientes del control glucémico.'
+          ),
+
+          pharmacokinetics: {
+            onset:    t(lang,
+              'Glicosúria/natriurese nas primeiras horas; benefício clínico em IC pode surgir precocemente',
+              'Glucosuria/natriuresis en las primeras horas; beneficio clínico en IC puede aparecer precozmente'
+            ),
+            halfLife: t(lang, '≈ 12–13 horas', '≈ 12–13 horas'),
+            duration: t(lang,
+              'Efeito sustentado com uso contínuo; metabolismo hepático + eliminação renal/fecal',
+              'Efecto sostenido con uso continuo; metabolismo hepático + eliminación renal/fecal'
+            )
+          },
+
+          dose: {
+            adultoPadrao: t(lang,
+              msgDose,
+              msgDose
+            ),
+            adultoGrave: t(lang,
+              'IC-FEr (DAPA-HF): 10 mg/dia reduziu morte CV + hospitalização por IC. IC-FEp (DELIVER): 10 mg/dia reduziu piora de IC. DRC (DAPA-CKD): 10 mg/dia retardou progressão renal.',
+              'IC-FEr (DAPA-HF): 10 mg/día redujo muerte CV + hospitalización por IC. IC-FEp (DELIVER): 10 mg/día redujo empeoramiento de IC. ERC (DAPA-CKD): 10 mg/día retrasó progresión renal.'
+            ),
+            pediatricaPadrao: t(lang,
+              'Não aprovado em pediatria.',
+              'No aprobado en pediatría.'
+            ),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '10 mg VO 1x/dia — dose única para IC e DRC', '10 mg VO 1 vez/día — dosis única para IC y ERC'),
+            grave:      t(lang, '10 mg/dia — sem titulação por peso', '10 mg/día — sin titulación por peso'),
+            meningite:  null,
+            doseMaxima: t(lang, '10 mg/dia', '10 mg/día')
+          },
+
+          therapeuticTargets: [
+            t(lang, 'Redução de hospitalização por IC',                                         'Reducción de hospitalización por IC'),
+            t(lang, 'Melhora de sintomas e congestão em IC',                                    'Mejoría de síntomas y congestión en IC'),
+            t(lang, 'Proteção renal e redução de albuminúria',                                  'Protección renal y reducción de albuminuria'),
+            t(lang, 'Benefício cardiorrenal independente do controle glicêmico (não-DM)',       'Beneficio cardiorrenal independiente del control glucémico (no-DM)'),
+            t(lang, 'Redução de morte cardiovascular (IC-FEr)',                                 'Reducción de muerte cardiovascular (IC-FEr)')
+          ],
+
+          dilution: t(lang,
+            'Via oral. Administrar 1x/dia com ou sem alimentos. Não é de uso hospitalar exclusivo.',
+            'Vía oral. Administrar 1 vez/día con o sin alimentos. No es de uso hospitalario exclusivo.'
+          ),
+
+          speed: t(lang,
+            'Dose única diária. Avaliar volemia e PA antes de iniciar. Considerar reduzir diurético se PAS < 100 mmHg ou sinais de hipovolemia.',
+            'Dosis única diaria. Evaluar volemia y PA antes de iniciar. Considerar reducir diurético si PAS < 100 mmHg o signos de hipovolemia.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Infecção genital micótica',       'Infección genital micótica'),
+            t(lang, 'Poliúria / nictúria',             'Poliuria / nicturia'),
+            t(lang, 'Aumento da frequência urinária',  'Aumento de frecuencia urinaria'),
+            t(lang, 'Sede',                            'Sed'),
+            t(lang, 'Hipotensão postural',             'Hipotensión postural'),
+            t(lang, 'Náuseas leves',                   'Náuseas leves')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Cetoacidose diabética euglicêmica (DKA-E)',                               'Cetoacidosis diabética euglucémica (DKA-E)'),
+            t(lang, 'Desidratação grave e injúria renal aguda por hipovolemia',                'Deshidratación grave y lesión renal aguda por hipovolemia'),
+            t(lang, 'Hipotensão sintomática',                                                  'Hipotensión sintomática'),
+            t(lang, 'Fasciíte necrosante do períneo (Fournier — rara)',                        'Fascitis necrotizante del periné (Fournier — rara)'),
+            t(lang, 'Urossepse (rara)',                                                        'Urosepsis (rara)'),
+            t(lang, 'Hipoglicemia quando combinada com insulina ou sulfonilureia',             'Hipoglucemia cuando combinada con insulina o sulfonilurea')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '🩺 Sick Day Rules: suspender em jejum prolongado, cirurgia, vômitos, diarreia, febre alta ou doença aguda grave. Reiniciar quando estável e hidratado.',
+              '🩺 Sick Day Rules: suspender en ayuno prolongado, cirugía, vómitos, diarrea, fiebre alta o enfermedad aguda grave. Reiniciar cuando estable e hidratado.'
+            ),
+            t(lang,
+              'Idosos: maior risco de hipovolemia, hipotensão e DRC subclínica. Avaliar diuréticos, PA e risco de quedas.',
+              'Ancianos: mayor riesgo de hipovolemia, hipotensión y ERC subclínica. Evaluar diuréticos, PA y riesgo de caídas.'
+            ),
+            egfrAlert,
+            alertCirurgia,
+            alertDoencaAguda,
+            alertHipovolemia,
+            alertPASist,
+            alertCetoacidose,
+            alertHipoglicemia,
+            alertGestacao,
+            alertDiuretico
+          ].filter(Boolean),
+
+          contraindications: {
+            absolutas: [
+              t(lang, 'Hipersensibilidade à dapagliflozina',                                         'Hipersensibilidad a dapagliflozina'),
+              t(lang, 'Cetoacidose diabética ativa',                                                  'Cetoacidosis diabética activa'),
+              t(lang, 'DM tipo 1 sem protocolo especializado aprovado',                              'DM tipo 1 sin protocolo especializado aprobado'),
+              t(lang, 'DRC terminal / diálise (conforme bula local e eGFR limite da indicação)',     'ERC terminal / diálisis (según prospecto local y eGFR límite de indicación)')
+            ],
+            relativas: [
+              t(lang, 'Hipovolemia não corrigida',                     'Hipovolemia no corregida'),
+              t(lang, 'PAS < 90 mmHg sintomática',                     'PAS < 90 mmHg sintomática'),
+              t(lang, 'Infecções genitais recorrentes',                'Infecciones genitales recurrentes'),
+              t(lang, 'Jejum prolongado ou dieta cetogênica',          'Ayuno prolongado o dieta cetogénica'),
+              t(lang, 'Uso elevado de diuréticos sem compensação',     'Uso elevado de diuréticos sin compensación'),
+              t(lang, 'História prévia de cetoacidose',                'Historia previa de cetoacidosis'),
+              t(lang, 'Doença aguda grave (suspensão temporária)',     'Enfermedad aguda grave (suspensión temporal)')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'Insulina / sulfonilureias: maior risco de hipoglicemia — considerar redução de dose.',           'Insulina / sulfonilureas: mayor riesgo de hipoglucemia — considerar reducción de dosis.'),
+            t(lang, 'Diuréticos de alça: maior risco de hipovolemia, hipotensão e injúria renal.',                   'Diuréticos de asa: mayor riesgo de hipovolemia, hipotensión y lesión renal.'),
+            t(lang, 'Anti-hipertensivos: hipotensão aditiva em pacientes suscetíveis.',                              'Antihipertensivos: hipotensión aditiva en pacientes susceptibles.'),
+            t(lang, 'AINEs + diuréticos + iSGLT2: tríade de risco para injúria renal aguda em hipovolemia.',        'AINEs + diuréticos + iSGLT2: tríada de riesgo para lesión renal aguda en hipovolemia.'),
+            t(lang, 'Lítio: iSGLT2 podem reduzir lítio sérico em alguns casos — monitorar se aplicável.',           'Litio: iSGLT2 pueden reducir litio sérico en algunos casos — monitorizar si aplica.')
+          ],
+
+          renalAdjustment: t(lang,
+            `eGFR atual: ${egfr} mL/min/1,73m². IC/DRC: pode iniciar/continuar com eGFR ≥ 25–30 (conforme indicação e bula local). Eficácia glicêmica reduz com eGFR < 45. Não iniciar em diálise.`,
+            `eGFR actual: ${egfr} mL/min/1,73m². IC/ERC: puede iniciarse/continuarse con eGFR ≥ 25–30 (según indicación y prospecto local). Eficacia glucémica disminuye con eGFR < 45. No iniciar en diálisis.`
+          ),
+          hepaticAdjustment: t(lang,
+            'Geralmente não requer ajuste hepático. Cautela em hepatopatia grave — risco aumentado de desidratação e cetoacidose em doença aguda.',
+            'Generalmente no requiere ajuste hepático. Precaución en hepatopatía grave — riesgo aumentado de deshidratación y cetoacidosis en enfermedad aguda.'
+          ),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'Creatinina / eGFR',                     'Creatinina / eGFR'),
+              t(lang, 'PA em ortostatismo',                     'PA en ortostatismo'),
+              t(lang, 'Estado volêmico (peso, edema, JVP)',     'Estado voléimico (peso, edema, PVY)'),
+              t(lang, 'HbA1c se diabetes',                     'HbA1c si diabetes'),
+              t(lang, 'Albuminúria se DRC',                    'Albuminuria si ERC'),
+              t(lang, 'Uso de diuréticos e dose atual',        'Uso de diuréticos y dosis actual'),
+              t(lang, 'Histórico de cetoacidose',              'Historial de cetoacidosis'),
+              t(lang, 'História de infecções genitais',        'Historia de infecciones genitales')
+            ],
+            followUp: [
+              t(lang, 'Creatinina/eGFR — 2–4 sem após início se alto risco',    'Creatinina/eGFR — 2–4 sem tras inicio si alto riesgo'),
+              t(lang, 'PA e sintomas ortostáticos',                              'PA y síntomas ortostáticos'),
+              t(lang, 'Peso e congestão',                                        'Peso y congestión'),
+              t(lang, 'Infecções genitais ou urinárias',                        'Infecciones genitales o urinarias'),
+              t(lang, 'Sinais de cetoacidose (náuseas, dor abd, taquipneia)',   'Signos de cetoacidosis (náuseas, dolor abd, taquipnea)'),
+              t(lang, 'Necessidade de reduzir dose de diurético',               'Necesidad de reducir dosis de diurético'),
+              t(lang, 'Hospitalizações por IC',                                 'Hospitalizaciones por IC')
+            ]
+          },
+
+          safetyFlags: {
+            highAlertInAcuteIllness:     true,
+            heartFailureBenefit:         true,
+            renalProtection:             true,
+            volumeDepletionRisk:         true,
+            hypotensionRisk:             true,
+            ketoacidosisRisk:            true,
+            euglycemicDKARisk:           true,
+            genitalInfectionRisk:        true,
+            renalFunctionCheckRequired:  true,
+            pregnancyAvoid:              true,
+            hospitalUseOnly:             false,
+            requiresTelemetry:           false,
+            requiresInfusionPump:        false,
+            warning: t(lang,
+              '🫀 Dapagliflozina reduz hospitalização por IC e protege rim — independente do diabetes. Atenção: suspender em doença aguda/cirurgia (cetoacidose euglicêmica), corrigir hipovolemia e monitorar eGFR.',
+              '🫀 Dapagliflozina reduce hospitalización por IC y protege riñón — independiente de la diabetes. Atención: suspender en enfermedad aguda/cirugía (cetoacidosis euglucémica), corregir hipovolemia y monitorizar eGFR.'
+            )
+          },
+
+          auditNotes: {
+            status: 'sglt2_inhibitor_cardiorenal_master_template'
+          },
+
+          ref: [
+            'DAPA-HF Trial (NEJM 2019)',
+            'DELIVER Trial (NEJM 2022)',
+            'DAPA-CKD Trial (NEJM 2020)',
+            'ESC Heart Failure Guidelines 2021',
+            'AHA/ACC/HFSA Heart Failure Guidelines 2022',
+            'KDIGO CKD Guidelines 2022',
+            'ADA Standards of Care 2024',
+            'FDA/EMA label — Forxiga (Dapagliflozin)'
+          ]
+        };
+      }
+    } /* fim dapagliflozina */
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 35 (iSGLT2 Cardiovascular: dapagliflozina) */
+
+  /* ══════════════════════════════════════════════════════════════
+     GRUPO 36 — iSGLT2 CARDIOVASCULAR (expansão)
+     empagliflozina · canagliflozina
+     IC-FEr · IC-FEp · DRC diabética · Benefício CV em DM2
+     EMPEROR · EMPA-REG · CANVAS · CREDENCE
+  ══════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ══════════════════════════════════════════════════════════════
+       42. EMPAGLIFLOZINA
+       iSGLT2 com benefício em IC-FEr, IC-FEp, DRC e mortalidade CV
+       EMPEROR-Reduced · EMPEROR-Preserved · EMPA-KIDNEY · EMPA-REG
+    ══════════════════════════════════════════════════════════════ */
+    empagliflozina: {
+      name:     { pt: 'Empagliflozina', es: 'Empagliflozina' },
+      category: 'cardio',
+      icon:     '🫀',
+      color:    'rgba(245,158,11,0.13)',
+      colorTxt: '#92400E',
+
+      calculate(paciente, lang = 'pt') {
+        const paSist          = Number(paciente?.paSistolica   || 0);
+        const egfr            = Number(paciente?.egfr          || paciente?.clcr || paciente?.fg || 90);
+        const diabetes        = Boolean(paciente?.diabetes);
+        const usoInsulina     = Boolean(paciente?.usoInsulina);
+        const usoSulf         = Boolean(paciente?.usoSulfonilureia);
+        const usoDiuretico    = Boolean(paciente?.usoDiuretico);
+        const hipovolemia     = Boolean(paciente?.hipovolemia);
+        const cetoacidosePrev = Boolean(paciente?.cetoacidosePrevia);
+        const gestacao        = Boolean(paciente?.gestacao);
+        const cirurgia        = Boolean(paciente?.cirurgiaProgramada);
+        const doencaAguda     = Boolean(paciente?.doencaAguda);
+
+        /* ── Elegibilidade por eGFR ── */
+        let egfrAlert = null;
+        let elegivel  = true;
+        if (egfr < 20) {
+          elegivel  = false;
+          egfrAlert = t(lang,
+            `⛔ eGFR ${egfr} mL/min/1,73m² — abaixo do limite aprovado. Verificar bula local antes de iniciar ou continuar.`,
+            `⛔ eGFR ${egfr} mL/min/1,73m² — por debajo del límite aprobado. Verificar prospecto local antes de iniciar o continuar.`
+          );
+        } else if (egfr < 45) {
+          egfrAlert = t(lang,
+            `⚠️ eGFR ${egfr} mL/min/1,73m² — eficácia glicêmica reduzida; benefício cardiorrenal pode persistir conforme indicação. Monitorar função renal.`,
+            `⚠️ eGFR ${egfr} mL/min/1,73m² — eficacia glucémica reducida; beneficio cardiorrenal puede persistir según indicación. Monitorizar función renal.`
+          );
+        } else if (egfr < 60) {
+          egfrAlert = t(lang,
+            `ℹ️ eGFR ${egfr} mL/min/1,73m² — DRC moderada. Monitorar função renal após início.`,
+            `ℹ️ eGFR ${egfr} mL/min/1,73m² — ERC moderada. Monitorizar función renal tras inicio.`
+          );
+        }
+
+        const alertCirurgia    = cirurgia
+          ? t(lang,
+              '⚠️ Cirurgia programada — suspender empagliflozina 3–4 dias antes (risco de cetoacidose perioperatória euglicêmica).',
+              '⚠️ Cirugía programada — suspender empagliflozina 3–4 días antes (riesgo de cetoacidosis perioperatoria euglucémica).'
+            ) : null;
+        const alertDoencaAguda = doencaAguda
+          ? t(lang,
+              '⚠️ Doença aguda — suspender temporariamente. Risco de hipovolemia, IRA e cetoacidose euglicêmica.',
+              '⚠️ Enfermedad aguda — suspender temporalmente. Riesgo de hipovolemia, IRA y cetoacidosis euglucémica.'
+            ) : null;
+        const alertHipovolemia = hipovolemia
+          ? t(lang,
+              '⚠️ Hipovolemia — corrigir antes de iniciar ou continuar. Risco aumentado com diurético de alça.',
+              '⚠️ Hipovolemia — corregir antes de iniciar o continuar. Riesgo aumentado con diurético de asa.'
+            ) : null;
+        const alertPASist = paSist > 0 && paSist < 90
+          ? t(lang,
+              `⚠️ PAS ${paSist} mmHg — hipotensão. Avaliar redução de diurético antes de iniciar.`,
+              `⚠️ PAS ${paSist} mmHg — hipotensión. Evaluar reducción de diurético antes de iniciar.`
+            ) : null;
+        const alertCetoacidose = cetoacidosePrev
+          ? t(lang,
+              '⚠️ História de cetoacidose — alto risco de DKA euglicêmica. Orientar sick day rules rigorosamente.',
+              '⚠️ Historia de cetoacidosis — alto riesgo de DKA euglucémica. Orientar sick day rules rigurosamente.'
+            ) : null;
+        const alertHipoglicemia = (usoInsulina || usoSulf)
+          ? t(lang,
+              '⚠️ Insulina ou sulfonilureia em uso — risco de hipoglicemia. Considerar redução de dose ao iniciar.',
+              '⚠️ Insulina o sulfonilurea en uso — riesgo de hipoglucemia. Considerar reducción de dosis al iniciar.'
+            ) : null;
+        const alertGestacao = gestacao
+          ? t(lang,
+              '⛔ Gestação — evitar, especialmente 2º e 3º trimestre (risco renal fetal).',
+              '⛔ Embarazo — evitar, especialmente 2º y 3er trimestre (riesgo renal fetal).'
+            ) : null;
+        const alertDiuretico = usoDiuretico
+          ? t(lang,
+              'ℹ️ Diurético em uso — monitorar PA, peso e sinais de hipovolemia. Avaliar redução de dose se necessário.',
+              'ℹ️ Diurético en uso — monitorizar PA, peso y signos de hipovolemia. Evaluar reducción de dosis si necesario.'
+            ) : null;
+
+        const msgDose = elegivel
+          ? t(lang,
+              `10 mg VO 1x/dia (IC-FEr, IC-FEp, DRC). ${diabetes ? 'DM2: pode aumentar para 25 mg/dia para maior controle glicêmico se tolerado.' : 'Benefício cardiorrenal independente do controle glicêmico.'}`,
+              `10 mg VO 1 vez/día (IC-FEr, IC-FEp, ERC). ${diabetes ? 'DM2: puede aumentarse a 25 mg/día para mayor control glucémico si tolerado.' : 'Beneficio cardiorrenal independiente del control glucémico.'}`
+            )
+          : t(lang,
+              `eGFR ${egfr} mL/min/1,73m² — verificar limite aprovado para esta indicação. Consultar bula local.`,
+              `eGFR ${egfr} mL/min/1,73m² — verificar límite aprobado para esta indicación. Consultar prospecto local.`
+            );
+
+        return {
+          name:  t(lang, 'Empagliflozina', 'Empagliflozina'),
+          class: t(lang,
+            'Inibidor SGLT2 (iSGLT2) — benefício em IC, DRC e mortalidade CV em DM2',
+            'Inhibidor SGLT2 (iSGLT2) — beneficio en IC, ERC y mortalidad CV en DM2'
+          ),
+
+          commercialNames: {
+            br: ['Jardiance', 'Empagliflozina genérica'],
+            ar: ['Jardiance', 'Empagliflozina']
+          },
+
+          presentation: [
+            t(lang, 'Comprimidos 10 mg',  'Comprimidos 10 mg'),
+            t(lang, 'Comprimidos 25 mg',  'Comprimidos 25 mg')
+          ],
+
+          mechanism: t(lang,
+            'Inibe SGLT2 no túbulo proximal → ↑ glicosúria e natriurese → ↓ congestão, ↓ pressão intraglomerular, ↓ hospitalizações por IC. Benefício CV e renal demonstrado em IC-FEr (EMPEROR-Reduced), IC-FEp (EMPEROR-Preserved), DRC (EMPA-KIDNEY) e DM2 com DCV (EMPA-REG).',
+            'Inhibe SGLT2 en el túbulo proximal → ↑ glucosuria y natriuresis → ↓ congestión, ↓ presión intraglomerular, ↓ hospitalizaciones por IC. Beneficio CV y renal demostrado en IC-FEr (EMPEROR-Reduced), IC-FEp (EMPEROR-Preserved), ERC (EMPA-KIDNEY) y DM2 con ECV (EMPA-REG).'
+          ),
+
+          pharmacokinetics: {
+            onset:    t(lang, 'Glicosúria/natriurese nas primeiras horas', 'Glucosuria/natriuresis en las primeras horas'),
+            halfLife: t(lang, '≈ 12 horas', '≈ 12 horas'),
+            duration: t(lang, 'Efeito sustentado com uso contínuo; eliminação renal e fecal', 'Efecto sostenido con uso continuo; eliminación renal y fecal')
+          },
+
+          dose: {
+            adultoPadrao: t(lang, msgDose, msgDose),
+            adultoGrave: t(lang,
+              'EMPEROR-Reduced: 10 mg/dia ↓ morte CV + hospitaliz. por IC em IC-FEr. EMPEROR-Preserved: 10 mg/dia ↓ piora de IC em IC-FEp. EMPA-REG: 10–25 mg/dia ↓ mortalidade CV em DM2 + DCV.',
+              'EMPEROR-Reduced: 10 mg/día ↓ muerte CV + hospitaliz. por IC en IC-FEr. EMPEROR-Preserved: 10 mg/día ↓ empeoramiento de IC en IC-FEp. EMPA-REG: 10–25 mg/día ↓ mortalidad CV en DM2 + ECV.'
+            ),
+            pediatricaPadrao: t(lang, 'Não aprovado em pediatria.', 'No aprobado en pediatría.'),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '10 mg VO 1x/dia — IC e DRC', '10 mg VO 1 vez/día — IC y ERC'),
+            grave:      t(lang, '25 mg/dia — DM2 (maior controle glicêmico se tolerado)', '25 mg/día — DM2 (mayor control glucémico si tolerado)'),
+            meningite:  null,
+            doseMaxima: t(lang, '25 mg/dia (DM2); 10 mg/dia (IC/DRC)', '25 mg/día (DM2); 10 mg/día (IC/ERC)')
+          },
+
+          therapeuticTargets: [
+            t(lang, 'Redução de hospitalização por IC',                                   'Reducción de hospitalización por IC'),
+            t(lang, 'Redução de mortalidade CV em DM2 com DCV (EMPA-REG)',               'Reducción de mortalidad CV en DM2 con ECV (EMPA-REG)'),
+            t(lang, 'Proteção renal e redução de progressão de DRC',                     'Protección renal y reducción de progresión de ERC'),
+            t(lang, 'Melhora de congestão e sintomas em IC',                             'Mejoría de congestión y síntomas en IC'),
+            t(lang, 'Benefício cardiorrenal independente do controle glicêmico',         'Beneficio cardiorrenal independiente del control glucémico')
+          ],
+
+          dilution: t(lang,
+            'Via oral. 1x/dia com ou sem alimentos. Não requer infusão.',
+            'Vía oral. 1 vez/día con o sin alimentos. No requiere infusión.'
+          ),
+
+          speed: t(lang,
+            'Dose única diária. Avaliar volemia e PA antes. Considerar reduzir diurético se PAS < 100 mmHg ou sinais de hipovolemia.',
+            'Dosis única diaria. Evaluar volemia y PA antes. Considerar reducir diurético si PAS < 100 mmHg o signos de hipovolemia.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Infecção genital micótica',       'Infección genital micótica'),
+            t(lang, 'Poliúria / nictúria',             'Poliuria / nicturia'),
+            t(lang, 'Aumento da frequência urinária',  'Aumento de frecuencia urinaria'),
+            t(lang, 'Sede',                            'Sed'),
+            t(lang, 'Hipotensão postural',             'Hipotensión postural'),
+            t(lang, 'Náuseas leves',                   'Náuseas leves')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Cetoacidose diabética euglicêmica (DKA-E)',                    'Cetoacidosis diabética euglucémica (DKA-E)'),
+            t(lang, 'Desidratação grave e IRA por hipovolemia',                    'Deshidratación grave e IRA por hipovolemia'),
+            t(lang, 'Hipotensão sintomática',                                       'Hipotensión sintomática'),
+            t(lang, 'Urossepse / pielonefrite grave (rara)',                        'Urosepsis / pielonefritis grave (rara)'),
+            t(lang, 'Fasciíte necrosante do períneo — Fournier (rara)',             'Fascitis necrotizante del periné — Fournier (rara)'),
+            t(lang, 'Hipoglicemia com insulina ou sulfonilureia',                   'Hipoglucemia con insulina o sulfonilurea')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '🩺 Sick Day Rules: suspender em doença aguda, cirurgia, jejum, vômitos ou baixa ingesta. Reiniciar quando estável e hidratado.',
+              '🩺 Sick Day Rules: suspender en enfermedad aguda, cirugía, ayuno, vómitos o baja ingesta. Reiniciar cuando estable e hidratado.'
+            ),
+            t(lang,
+              'Idosos: maior risco de hipovolemia, hipotensão e DRC subclínica. Avaliar diuréticos, PA e hidratação.',
+              'Ancianos: mayor riesgo de hipovolemia, hipotensión y ERC subclínica. Evaluar diuréticos, PA e hidratación.'
+            ),
+            egfrAlert,
+            alertCirurgia, alertDoencaAguda, alertHipovolemia,
+            alertPASist, alertCetoacidose, alertHipoglicemia,
+            alertGestacao, alertDiuretico
+          ].filter(Boolean),
+
+          contraindications: {
+            absolutas: [
+              t(lang, 'Hipersensibilidade à empagliflozina',                              'Hipersensibilidad a empagliflozina'),
+              t(lang, 'Cetoacidose diabética ativa',                                       'Cetoacidosis diabética activa'),
+              t(lang, 'DM tipo 1 sem protocolo aprovado',                                 'DM tipo 1 sin protocolo aprobado'),
+              t(lang, 'DRC terminal / diálise (conforme bula local)',                     'ERC terminal / diálisis (según prospecto local)')
+            ],
+            relativas: [
+              t(lang, 'Hipovolemia não corrigida',              'Hipovolemia no corregida'),
+              t(lang, 'PAS < 90 mmHg sintomática',             'PAS < 90 mmHg sintomática'),
+              t(lang, 'Infecções genitais recorrentes',         'Infecciones genitales recurrentes'),
+              t(lang, 'Jejum prolongado / dieta cetogênica',    'Ayuno prolongado / dieta cetogénica'),
+              t(lang, 'Uso elevado de diuréticos',             'Uso elevado de diuréticos'),
+              t(lang, 'História prévia de cetoacidose',         'Historia previa de cetoacidosis'),
+              t(lang, 'Doença aguda grave',                     'Enfermedad aguda grave')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'Insulina / sulfonilureias: maior risco de hipoglicemia.',                        'Insulina / sulfonilureas: mayor riesgo de hipoglucemia.'),
+            t(lang, 'Diuréticos de alça: maior risco de hipovolemia, hipotensão e IRA.',             'Diuréticos de asa: mayor riesgo de hipovolemia, hipotensión e IRA.'),
+            t(lang, 'Anti-hipertensivos: hipotensão aditiva.',                                        'Antihipertensivos: hipotensión aditiva.'),
+            t(lang, 'AINEs + diuréticos + iSGLT2: tríade de risco para IRA em hipovolemia.',        'AINEs + diuréticos + iSGLT2: tríada de riesgo para IRA en hipovolemia.'),
+            t(lang, 'Lítio: iSGLT2 podem reduzir lítio sérico — monitorar se aplicável.',           'Litio: iSGLT2 pueden reducir litio sérico — monitorizar si aplica.')
+          ],
+
+          renalAdjustment: t(lang,
+            `eGFR atual: ${egfr} mL/min/1,73m². IC/DRC: iniciar/continuar com eGFR ≥ 20 conforme indicação e bula. Eficácia glicêmica ↓ com eGFR < 45.`,
+            `eGFR actual: ${egfr} mL/min/1,73m². IC/ERC: iniciar/continuar con eGFR ≥ 20 según indicación y prospecto. Eficacia glucémica ↓ con eGFR < 45.`
+          ),
+          hepaticAdjustment: t(lang,
+            'Sem ajuste hepático habitual. Cautela em hepatopatia grave em doença aguda.',
+            'Sin ajuste hepático habitual. Precaución en hepatopatía grave en enfermedad aguda.'
+          ),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'Creatinina / eGFR', 'Creatinina / eGFR'),
+              t(lang, 'PA em ortostatismo', 'PA en ortostatismo'),
+              t(lang, 'Estado volêmico',    'Estado voléimico'),
+              t(lang, 'HbA1c se DM2',      'HbA1c si DM2'),
+              t(lang, 'Albuminúria se DRC', 'Albuminuria si ERC'),
+              t(lang, 'Uso de diuréticos',  'Uso de diuréticos')
+            ],
+            followUp: [
+              t(lang, 'Creatinina/eGFR — 2–4 sem se alto risco',  'Creatinina/eGFR — 2–4 sem si alto riesgo'),
+              t(lang, 'PA e sintomas ortostáticos',                'PA y síntomas ortostáticos'),
+              t(lang, 'Infecções genitais / urinárias',            'Infecciones genitales / urinarias'),
+              t(lang, 'Sinais de cetoacidose',                     'Signos de cetoacidosis'),
+              t(lang, 'Peso / congestão',                          'Peso / congestión'),
+              t(lang, 'Hospitalizações por IC',                    'Hospitalizaciones por IC')
+            ]
+          },
+
+          administration: [
+            t(lang, 'Administrar 1x/dia, com ou sem alimentos.',                                                                             'Administrar 1 vez/día, con o sin alimentos.'),
+            t(lang, 'Avaliar função renal e estado volêmico antes de iniciar.',                                                              'Evaluar función renal y estado volémico antes de iniciar.'),
+            t(lang, 'Considerar ajuste de diurético se hipotensão, hipovolemia ou perda ponderal excessiva.',                                'Considerar ajuste de diurético si hipotensión, hipovolemia o pérdida ponderal excesiva.'),
+            t(lang, 'Suspender temporariamente em cirurgia, jejum prolongado, doença aguda grave, vômitos ou baixa ingesta.',                'Suspender temporalmente en cirugía, ayuno prolongado, enfermedad aguda grave, vómitos o baja ingesta.'),
+            t(lang, 'Não usar para tratar cetoacidose diabética.',                                                                           'No usar para tratar cetoacidosis diabética.')
+          ],
+
+          hemodynamicRules: {
+            holdIf: {
+              systolicBPBelow:      90,
+              severeDehydration:    true,
+              activeKetoacidosis:   true,
+              severeAcuteIllness:   true,
+              perioperativeFasting: true
+            },
+            warning: t(lang,
+              'Pode causar depleção volêmica e hipotensão, especialmente em idosos, DRC, baixa ingesta ou uso de diurético de alça.',
+              'Puede causar depleción de volumen e hipotensión, especialmente en ancianos, ERC, baja ingesta o uso de diurético de asa.'
+            )
+          },
+
+          electrolyteSafety: {
+            potassiumRisk:   false,
+            magnesiumRisk:   false,
+            sodiumRisk:      true,
+            monitoring: [
+              t(lang, 'Monitorar função renal e volemia.',                                                                                   'Monitorizar función renal y volemia.'),
+              t(lang, 'Atenção a hipotensão ortostática em pacientes com diuréticos.',                                                      'Atención a hipotensión ortostática en pacientes con diuréticos.'),
+              t(lang, 'Em diabéticos, avaliar cetonas se sintomas compatíveis com cetoacidose, mesmo com glicemia moderada.',               'En diabéticos, evaluar cetonas si hay síntomas compatibles con cetoacidosis, incluso con glucemia moderada.')
+            ]
+          },
+
+          sickDayRules: [
+            t(lang, 'Suspender temporariamente em vômitos, diarreia, febre alta, baixa ingesta, jejum prolongado, cirurgia ou internação por doença aguda.', 'Suspender temporalmente en vómitos, diarrea, fiebre alta, baja ingesta, ayuno prolongado, cirugía o internación por enfermedad aguda.'),
+            t(lang, 'Reiniciar quando estiver clinicamente estável, hidratado e alimentando-se adequadamente.',                              'Reiniciar cuando esté clínicamente estable, hidratado y alimentándose adecuadamente.'),
+            t(lang, 'Procurar atendimento se náuseas, dor abdominal, vômitos, respiração rápida, sonolência ou cetonas positivas.',         'Consultar si hay náuseas, dolor abdominal, vómitos, respiración rápida, somnolencia o cetonas positivas.')
+          ],
+
+          pregnancy: t(lang,
+            'Evitar, especialmente no 2º e 3º trimestre, por potencial risco renal fetal. Preferir alternativas com maior segurança.',
+            'Evitar, especialmente en 2º y 3º trimestre, por potencial riesgo renal fetal. Preferir alternativas con mayor seguridad.'
+          ),
+
+          lactation: t(lang,
+            'Evitar por dados limitados e potencial risco renal ao lactente.',
+            'Evitar por datos limitados y potencial riesgo renal para el lactante.'
+          ),
+
+          elderly: t(lang,
+            'Maior risco de hipotensão, hipovolemia, DRC e quedas. Avaliar PA, diuréticos, função renal e hidratação.',
+            'Mayor riesgo de hipotensión, hipovolemia, ERC y caídas. Evaluar PA, diuréticos, función renal e hidratación.'
+          ),
+
+          patientEducation: [
+            t(lang, 'Manter boa hidratação.',                                                                                                'Mantener buena hidratación.'),
+            t(lang, 'Avisar se dor, coceira, secreção ou vermelhidão genital.',                                                             'Avisar si dolor, picazón, secreción o enrojecimiento genital.'),
+            t(lang, 'Suspender temporariamente em jejum, cirurgia, vômitos, diarreia ou doença aguda importante conforme orientação.',       'Suspender temporalmente en ayuno, cirugía, vómitos, diarrea o enfermedad aguda importante según indicación.'),
+            t(lang, 'Procurar atendimento se náuseas, vômitos, dor abdominal, respiração rápida ou sonolência.',                            'Consultar si náuseas, vómitos, dolor abdominal, respiración rápida o somnolencia.'),
+            t(lang, 'Pode aumentar a urina e reduzir discretamente a pressão arterial.',                                                     'Puede aumentar la orina y reducir discretamente la presión arterial.')
+          ],
+
+          calculator: {
+            inputsRequired: [
+              'idade','peso','indicacao','diabetes','feve','nyha','creatinina','egfr','clcr',
+              'paSistolica','usoDiuretico','doseDiuretico','hipovolemia','cetoacidosePrevia',
+              'cetona','gestacao','cirurgiaProgramada','doencaAguda','usoInsulina','usoSulfonilureia'
+            ],
+            output: t(lang,
+              'Avalia elegibilidade cardiorrenal, dose 10 mg, possibilidade de 25 mg em DM2, limites renais, risco de hipovolemia/cetoacidose e necessidade de suspender temporariamente.',
+              'Evalúa elegibilidad cardiorrenal, dosis 10 mg, posibilidad de 25 mg en DM2, límites renales, riesgo de hipovolemia/cetoacidosis y necesidad de suspensión temporal.'
+            )
+          },
+
+          safetyFlags: {
+            highAlertInAcuteIllness:              true,
+            heartFailureBenefit:                  true,
+            cardiovascularMortalityBenefitInDM2CVD: true,
+            renalProtection:                      true,
+            volumeDepletionRisk:                  true,
+            hypotensionRisk:                      true,
+            ketoacidosisRisk:                     true,
+            euglycemicDKARisk:                    true,
+            genitalInfectionRisk:                 true,
+            renalFunctionCheckRequired:           true,
+            pregnancyAvoid:                       true,
+            hospitalUseOnly:                      false,
+            requiresTelemetry:                    false,
+            requiresInfusionPump:                 false,
+            warning: t(lang,
+              '🫀 Empagliflozina: benefício robusto em IC-FEr, IC-FEp, DRC e mortalidade CV em DM2+DCV. Suspender em doença aguda/cirurgia. Monitorar eGFR e sinais de hipovolemia.',
+              '🫀 Empagliflozina: beneficio robusto en IC-FEr, IC-FEp, ERC y mortalidad CV en DM2+ECV. Suspender en enfermedad aguda/cirugía. Monitorizar eGFR y signos de hipovolemia.'
+            )
+          },
+
+          auditNotes: { status: 'sglt2_inhibitor_cardiorenal_master_template' },
+
+          ref: [
+            'EMPEROR-Reduced Trial (NEJM 2020)',
+            'EMPEROR-Preserved Trial (NEJM 2021)',
+            'EMPA-KIDNEY Trial (NEJM 2022)',
+            'EMPA-REG OUTCOME Trial (NEJM 2015)',
+            'ESC Heart Failure Guidelines 2021',
+            'AHA/ACC/HFSA Heart Failure Guidelines 2022',
+            'KDIGO CKD Guidelines 2022',
+            'FDA/EMA label — Jardiance (Empagliflozin)'
+          ]
+        };
+      }
+    }, /* fim empagliflozina */
+
+    /* ══════════════════════════════════════════════════════════════
+       43. CANAGLIFLOZINA
+       iSGLT2 — benefício CV em DM2 + DRC diabética
+       CANVAS · CREDENCE · Atenção especial a amputação e fratura
+    ══════════════════════════════════════════════════════════════ */
+    canagliflozina: {
+      name:     { pt: 'Canagliflozina', es: 'Canagliflozina' },
+      category: 'cardio',
+      icon:     '🩺',
+      color:    'rgba(239,68,68,0.10)',
+      colorTxt: '#991B1B',
+
+      calculate(paciente, lang = 'pt') {
+        const paSist          = Number(paciente?.paSistolica    || 0);
+        const egfr            = Number(paciente?.egfr           || paciente?.clcr || paciente?.fg || 90);
+        const potassio        = Number(paciente?.potassio       || 0);
+        const usoInsulina     = Boolean(paciente?.usoInsulina);
+        const usoSulf         = Boolean(paciente?.usoSulfonilureia);
+        const usoDiuretico    = Boolean(paciente?.usoDiuretico);
+        const hipovolemia     = Boolean(paciente?.hipovolemia);
+        const cetoacidosePrev = Boolean(paciente?.cetoacidosePrevia);
+        const gestacao        = Boolean(paciente?.gestacao);
+        const cirurgia        = Boolean(paciente?.cirurgiaProgramada);
+        const doencaAguda     = Boolean(paciente?.doencaAguda);
+        const dap             = Boolean(paciente?.doencaArterialPeriferica);
+        const ulceraPe        = Boolean(paciente?.ulceraPeDiabetico);
+        const amputacaoPrev   = Boolean(paciente?.amputacaoPrevia);
+        const riscoFratura    = Boolean(paciente?.riscoFratura);
+
+        /* ── Elegibilidade por eGFR ── */
+        let egfrAlert = null;
+        let elegivel  = true;
+        if (egfr < 30) {
+          elegivel  = false;
+          egfrAlert = t(lang,
+            `⛔ eGFR ${egfr} mL/min/1,73m² — abaixo do limite aprovado para início (DM2/DRC). Verificar bula local.`,
+            `⛔ eGFR ${egfr} mL/min/1,73m² — por debajo del límite aprobado para inicio (DM2/ERC). Verificar prospecto local.`
+          );
+        } else if (egfr < 45) {
+          egfrAlert = t(lang,
+            `⚠️ eGFR ${egfr} mL/min/1,73m² — eficácia glicêmica reduzida. Manter apenas para proteção renal/CV se dentro dos critérios. Usar 100 mg/dia.`,
+            `⚠️ eGFR ${egfr} mL/min/1,73m² — eficacia glucémica reducida. Mantener solo para protección renal/CV si dentro de criterios. Usar 100 mg/día.`
+          );
+        } else if (egfr < 60) {
+          egfrAlert = t(lang,
+            `ℹ️ eGFR ${egfr} mL/min/1,73m² — DRC moderada. Usar 100 mg/dia. Monitorar função renal.`,
+            `ℹ️ eGFR ${egfr} mL/min/1,73m² — ERC moderada. Usar 100 mg/día. Monitorizar función renal.`
+          );
+        }
+
+        /* ── Alertas específicos canagliflozina (amputação, fratura) ── */
+        const alertAmputacao = (dap || amputacaoPrev || ulceraPe)
+          ? t(lang,
+              '⚠️ RISCO DE AMPUTAÇÃO (CANVAS): DAP, amputação prévia ou úlcera ativa aumentam risco. Avaliar benefício/risco individualmente e inspecionar pés regularmente.',
+              '⚠️ RIESGO DE AMPUTACIÓN (CANVAS): EAP, amputación previa o úlcera activa aumentan riesgo. Evaluar beneficio/riesgo individualmente e inspeccionar pies regularmente.'
+            ) : null;
+        const alertFratura = riscoFratura
+          ? t(lang,
+              '⚠️ Alto risco de fratura — canagliflozina associada a maior risco de fratura em pacientes predispostos. Avaliar alternativa.',
+              '⚠️ Alto riesgo de fractura — canagliflozina asociada a mayor riesgo de fractura en pacientes predispuestos. Evaluar alternativa.'
+            ) : null;
+        const alertHiperK = potassio > 0 && potassio > 5.0
+          ? t(lang,
+              `⚠️ K⁺ ${potassio} mEq/L — hipercalemia. Canagliflozina em DRC + IECA/BRA/ARM pode elevar K⁺. Monitorar rigorosamente.`,
+              `⚠️ K⁺ ${potassio} mEq/L — hiperpotasemia. Canagliflozina en ERC + IECA/ARA-II/ARM puede elevar K⁺. Monitorizar rigurosamente.`
+            ) : null;
+        const alertCirurgia    = cirurgia
+          ? t(lang,
+              '⚠️ Cirurgia programada — suspender canagliflozina 3–4 dias antes (risco de cetoacidose perioperatória).',
+              '⚠️ Cirugía programada — suspender canagliflozina 3–4 días antes (riesgo de cetoacidosis perioperatoria).'
+            ) : null;
+        const alertDoencaAguda = doencaAguda
+          ? t(lang,
+              '⚠️ Doença aguda — suspender temporariamente. Risco de hipovolemia, IRA e cetoacidose euglicêmica.',
+              '⚠️ Enfermedad aguda — suspender temporalmente. Riesgo de hipovolemia, IRA y cetoacidosis euglucémica.'
+            ) : null;
+        const alertHipovolemia = hipovolemia
+          ? t(lang, '⚠️ Hipovolemia — corrigir antes de iniciar ou continuar.', '⚠️ Hipovolemia — corregir antes de iniciar o continuar.') : null;
+        const alertPASist = paSist > 0 && paSist < 90
+          ? t(lang,
+              `⚠️ PAS ${paSist} mmHg — hipotensão. Reduzir diurético antes de iniciar.`,
+              `⚠️ PAS ${paSist} mmHg — hipotensión. Reducir diurético antes de iniciar.`
+            ) : null;
+        const alertCetoacidose = cetoacidosePrev
+          ? t(lang,
+              '⚠️ História de cetoacidose — risco elevado de DKA euglicêmica. Orientar sick day rules.',
+              '⚠️ Historia de cetoacidosis — riesgo elevado de DKA euglucémica. Orientar sick day rules.'
+            ) : null;
+        const alertHipoglicemia = (usoInsulina || usoSulf)
+          ? t(lang,
+              '⚠️ Insulina ou sulfonilureia em uso — risco de hipoglicemia. Considerar redução de dose.',
+              '⚠️ Insulina o sulfonilurea en uso — riesgo de hipoglucemia. Considerar reducción de dosis.'
+            ) : null;
+        const alertGestacao = gestacao
+          ? t(lang,
+              '⛔ Gestação — evitar, especialmente 2º e 3º trimestre (risco renal fetal).',
+              '⛔ Embarazo — evitar, especialmente 2º y 3er trimestre (riesgo renal fetal).'
+            ) : null;
+
+        const msgDose = elegivel
+          ? t(lang,
+              `100 mg VO 1x/dia antes da 1ª refeição. ${egfr >= 60 ? 'Pode aumentar para 300 mg se necessário para controle glicêmico.' : 'Com eGFR < 60: manter 100 mg/dia.'}`,
+              `100 mg VO 1 vez/día antes de la 1ª comida. ${egfr >= 60 ? 'Puede aumentarse a 300 mg si necesario para control glucémico.' : 'Con eGFR < 60: mantener 100 mg/día.'}`
+            )
+          : t(lang,
+              `eGFR ${egfr} mL/min/1,73m² — verificar elegibilidade na bula local para esta indicação.`,
+              `eGFR ${egfr} mL/min/1,73m² — verificar elegibilidad en el prospecto local para esta indicación.`
+            );
+
+        return {
+          name:  t(lang, 'Canagliflozina', 'Canagliflozina'),
+          class: t(lang,
+            'Inibidor SGLT2 (iSGLT2) — benefício CV e renal em DM2',
+            'Inhibidor SGLT2 (iSGLT2) — beneficio CV y renal en DM2'
+          ),
+
+          commercialNames: {
+            br: ['Invokana', 'Canagliflozina'],
+            ar: ['Invokana', 'Canagliflozina']
+          },
+
+          presentation: [
+            t(lang, 'Comprimidos 100 mg', 'Comprimidos 100 mg'),
+            t(lang, 'Comprimidos 300 mg', 'Comprimidos 300 mg')
+          ],
+
+          mechanism: t(lang,
+            'Inibe SGLT2 no túbulo proximal → ↑ glicosúria e natriurese → ↓ glicemia, ↓ peso, ↓ PA, ↓ pressão intraglomerular. Também inibe parcialmente SGLT1 intestinal (distingue de dapa/empa). Benefício CV (CANVAS) e renal diabético (CREDENCE) demonstrados.',
+            'Inhibe SGLT2 en el túbulo proximal → ↑ glucosuria y natriuresis → ↓ glucemia, ↓ peso, ↓ PA, ↓ presión intraglomerular. También inhibe parcialmente SGLT1 intestinal (distingue de dapa/empa). Beneficio CV (CANVAS) y renal diabético (CREDENCE) demostrados.'
+          ),
+
+          pharmacokinetics: {
+            onset:    t(lang, 'Glicosúria nas primeiras horas', 'Glucosuria en las primeras horas'),
+            halfLife: t(lang, '≈ 10–13 horas', '≈ 10–13 horas'),
+            duration: t(lang, 'Efeito sustentado; metabolismo por glucuronidação + eliminação renal/fecal', 'Efecto sostenido; metabolismo por glucuronidación + eliminación renal/fecal')
+          },
+
+          dose: {
+            adultoPadrao: t(lang, msgDose, msgDose),
+            adultoGrave: t(lang,
+              'CANVAS: 100–300 mg/dia ↓ MACE em DM2+DCV. CREDENCE: 100 mg/dia ↓ progressão renal diabética. Atenção: CANVAS associou aumento de amputação — avaliar individualmente.',
+              'CANVAS: 100–300 mg/día ↓ MACE en DM2+ECV. CREDENCE: 100 mg/día ↓ progresión renal diabética. Atención: CANVAS asoció aumento de amputación — evaluar individualmente.'
+            ),
+            pediatricaPadrao: t(lang, 'Não aprovado em pediatria.', 'No aprobado en pediatría.'),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+
+          doseKg: {
+            padrao:     t(lang, '100 mg VO 1x/dia antes da 1ª refeição', '100 mg VO 1 vez/día antes de la 1ª comida'),
+            grave:      t(lang, '300 mg/dia (eGFR ≥ 60, necessidade glicêmica)', '300 mg/día (eGFR ≥ 60, necesidad glucémica)'),
+            meningite:  null,
+            doseMaxima: t(lang, '300 mg/dia (eGFR ≥ 60)', '300 mg/día (eGFR ≥ 60)')
+          },
+
+          therapeuticTargets: [
+            t(lang, 'Controle glicêmico em DM2',                              'Control glucémico en DM2'),
+            t(lang, 'Redução de MACE em DM2 com DCV estabelecida',            'Reducción de MACE en DM2 con ECV establecida'),
+            t(lang, 'Proteção renal e redução de albuminúria (CREDENCE)',      'Protección renal y reducción de albuminuria (CREDENCE)'),
+            t(lang, 'Redução de hospitalização por IC',                       'Reducción de hospitalización por IC'),
+            t(lang, 'Redução ponderal e pressórica modestas',                 'Reducción ponderal y tensional modestas')
+          ],
+
+          dilution: t(lang,
+            'Via oral. 1x/dia antes da primeira refeição. Não requer infusão.',
+            'Vía oral. 1 vez/día antes de la primera comida. No requiere infusión.'
+          ),
+
+          speed: t(lang,
+            'Dose única diária antes da 1ª refeição. Avaliar eGFR, volemia e PA antes.',
+            'Dosis única diaria antes de la 1ª comida. Evaluar eGFR, volemia y PA antes.'
+          ),
+
+          commonAdverseEffects: [
+            t(lang, 'Infecção genital micótica',       'Infección genital micótica'),
+            t(lang, 'Poliúria / nictúria',             'Poliuria / nicturia'),
+            t(lang, 'Aumento da frequência urinária',  'Aumento de frecuencia urinaria'),
+            t(lang, 'Sede',                            'Sed'),
+            t(lang, 'Hipotensão postural',             'Hipotensión postural'),
+            t(lang, 'Náuseas / constipação',           'Náuseas / estreñimiento')
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, 'Cetoacidose diabética euglicêmica (DKA-E)',                       'Cetoacidosis diabética euglucémica (DKA-E)'),
+            t(lang, 'Desidratação grave e IRA por hipovolemia',                       'Deshidratación grave e IRA por hipovolemia'),
+            t(lang, 'Hipotensão sintomática',                                          'Hipotensión sintomática'),
+            t(lang, 'Amputação de membros inferiores (CANVAS — risco aumentado)',      'Amputación de miembros inferiores (CANVAS — riesgo aumentado)'),
+            t(lang, 'Fraturas em pacientes predispostos',                              'Fracturas en pacientes predispuestos'),
+            t(lang, 'Hipercalemia em DRC + IECA/BRA/ARM',                             'Hiperpotasemia en ERC + IECA/ARA-II/ARM'),
+            t(lang, 'Fasciíte necrosante do períneo — Fournier (rara)',                'Fascitis necrotizante del periné — Fournier (rara)'),
+            t(lang, 'Urossepse (rara)',                                                'Urosepsis (rara)'),
+            t(lang, 'Hipoglicemia com insulina ou sulfonilureia',                      'Hipoglucemia con insulina o sulfonilurea')
+          ],
+
+          risksByPatient: [
+            t(lang,
+              '⚠️ CANVAS: canagliflozina associada a aumento do risco de amputação de MMII. Avaliar DAP, amputação prévia, úlcera ativa — considerar alternativa (dapagliflozina ou empagliflozina) em pacientes de alto risco vascular periférico.',
+              '⚠️ CANVAS: canagliflozina asociada a aumento del riesgo de amputación de MMII. Evaluar EAP, amputación previa, úlcera activa — considerar alternativa (dapagliflozina o empagliflozina) en pacientes de alto riesgo vascular periférico.'
+            ),
+            t(lang,
+              '🩺 Sick Day Rules: suspender em doença aguda, cirurgia, jejum, vômitos ou baixa ingesta.',
+              '🩺 Sick Day Rules: suspender en enfermedad aguda, cirugía, ayuno, vómitos o baja ingesta.'
+            ),
+            t(lang,
+              'Idosos: maior risco de hipovolemia, hipotensão, DRC, quedas, fraturas e complicações vasculares periféricas.',
+              'Ancianos: mayor riesgo de hipovolemia, hipotensión, ERC, caídas, fracturas y complicaciones vasculares periféricas.'
+            ),
+            egfrAlert,
+            alertAmputacao, alertFratura, alertHiperK,
+            alertCirurgia, alertDoencaAguda, alertHipovolemia,
+            alertPASist, alertCetoacidose, alertHipoglicemia,
+            alertGestacao
+          ].filter(Boolean),
+
+          contraindications: {
+            absolutas: [
+              t(lang, 'Hipersensibilidade à canagliflozina',                    'Hipersensibilidad a canagliflozina'),
+              t(lang, 'Cetoacidose diabética ativa',                             'Cetoacidosis diabética activa'),
+              t(lang, 'DM tipo 1 sem protocolo aprovado',                       'DM tipo 1 sin protocolo aprobado'),
+              t(lang, 'DRC terminal / diálise (conforme bula local)',           'ERC terminal / diálisis (según prospecto local)')
+            ],
+            relativas: [
+              t(lang, 'Hipovolemia não corrigida',                   'Hipovolemia no corregida'),
+              t(lang, 'Hipotensão sintomática',                      'Hipotensión sintomática'),
+              t(lang, 'DAP grave / úlcera ativa em pé diabético',    'EAP grave / úlcera activa en pie diabético'),
+              t(lang, 'Amputação prévia de MMII',                   'Amputación previa de MMII'),
+              t(lang, 'Alto risco de fratura',                       'Alto riesgo de fractura'),
+              t(lang, 'Infecções genitais recorrentes',              'Infecciones genitales recurrentes'),
+              t(lang, 'História prévia de cetoacidose',              'Historia previa de cetoacidosis'),
+              t(lang, 'Doença aguda grave',                          'Enfermedad aguda grave')
+            ]
+          },
+
+          interactions: [
+            t(lang, 'Insulina / sulfonilureias: maior risco de hipoglicemia.',                               'Insulina / sulfonilureas: mayor riesgo de hipoglucemia.'),
+            t(lang, 'Diuréticos de alça: maior risco de hipovolemia, hipotensão e IRA.',                    'Diuréticos de asa: mayor riesgo de hipovolemia, hipotensión e IRA.'),
+            t(lang, 'Anti-hipertensivos: hipotensão aditiva.',                                               'Antihipertensivos: hipotensión aditiva.'),
+            t(lang, 'Digoxina: canagliflozina pode ↑ discretamente exposição — monitorar se risco.',         'Digoxina: canagliflozina puede ↑ discretamente exposición — monitorizar si riesgo.'),
+            t(lang, 'Indutores UGT (rifampicina, fenitoína): podem reduzir exposição e eficácia.',           'Inductores UGT (rifampicina, fenitoína): pueden reducir exposición y eficacia.'),
+            t(lang, 'AINEs + diuréticos + iSGLT2: tríade de risco para IRA em hipovolemia.',               'AINEs + diuréticos + iSGLT2: tríada de riesgo para IRA en hipovolemia.')
+          ],
+
+          renalAdjustment: t(lang,
+            `eGFR atual: ${egfr} mL/min/1,73m². Iniciar com eGFR ≥ 45 (DM2 geral). DRC diabética (CREDENCE): pode manter com eGFR ≥ 30. Não iniciar em eGFR < 30. Evitar 300 mg com eGFR < 60.`,
+            `eGFR actual: ${egfr} mL/min/1,73m². Iniciar con eGFR ≥ 45 (DM2 general). ERC diabética (CREDENCE): puede mantenerse con eGFR ≥ 30. No iniciar con eGFR < 30. Evitar 300 mg con eGFR < 60.`
+          ),
+          hepaticAdjustment: t(lang,
+            'Sem ajuste hepático habitual. Cautela em hepatopatia grave em doença aguda.',
+            'Sin ajuste hepático habitual. Precaución en hepatopatía grave en enfermedad aguda.'
+          ),
+
+          monitoring: {
+            baseline: [
+              t(lang, 'Creatinina / eGFR',                      'Creatinina / eGFR'),
+              t(lang, 'PA em ortostatismo',                      'PA en ortostatismo'),
+              t(lang, 'Estado volêmico',                         'Estado voléimico'),
+              t(lang, 'HbA1c',                                   'HbA1c'),
+              t(lang, 'Albuminúria se DRC',                      'Albuminuria si ERC'),
+              t(lang, 'Potássio se DRC/IECA/BRA',               'Potasio si ERC/IECA/ARA-II'),
+              t(lang, 'Avaliação dos pés e circulação periférica','Evaluación de pies y circulación periférica'),
+              t(lang, 'Uso de diuréticos',                       'Uso de diuréticos')
+            ],
+            followUp: [
+              t(lang, 'Creatinina/eGFR — 2–4 sem se alto risco',     'Creatinina/eGFR — 2–4 sem si alto riesgo'),
+              t(lang, 'PA e sintomas ortostáticos',                   'PA y síntomas ortostáticos'),
+              t(lang, 'Avaliação de pés e feridas',                   'Evaluación de pies y heridas'),
+              t(lang, 'Potássio se DRC + inibidores SRAA',           'Potasio si ERC + inhibidores SRAA'),
+              t(lang, 'Sinais de cetoacidose',                        'Signos de cetoacidosis'),
+              t(lang, 'Infecções genitais / urinárias',               'Infecciones genitales / urinarias'),
+              t(lang, 'Fraturas e quedas',                            'Fracturas y caídas'),
+              t(lang, 'Hospitalizações por IC',                       'Hospitalizaciones por IC')
+            ]
+          },
+
+          administration: [
+            t(lang, 'Administrar 1x/dia antes da primeira refeição.',                                                                              'Administrar 1 vez/día antes de la primera comida.'),
+            t(lang, 'Avaliar função renal e volemia antes de iniciar.',                                                                             'Evaluar función renal y volemia antes de iniciar.'),
+            t(lang, 'Considerar reduzir diuréticos se hipovolemia, hipotensão ou perda ponderal excessiva.',                                       'Considerar reducir diuréticos si hay hipovolemia, hipotensión o pérdida ponderal excesiva.'),
+            t(lang, 'Suspender temporariamente em cirurgia, jejum prolongado, doença aguda grave, vômitos, diarreia ou baixa ingesta.',             'Suspender temporalmente en cirugía, ayuno prolongado, enfermedad aguda grave, vómitos, diarrea o baja ingesta.'),
+            t(lang, 'Não usar para tratamento de cetoacidose diabética.',                                                                           'No usar para tratamiento de cetoacidosis diabética.')
+          ],
+
+          hemodynamicRules: {
+            holdIf: {
+              systolicBPBelow:      90,
+              severeDehydration:    true,
+              activeKetoacidosis:   true,
+              severeAcuteIllness:   true,
+              perioperativeFasting: true
+            },
+            warning: t(lang,
+              'Pode causar depleção volêmica, hipotensão e queda inicial do eGFR. Avaliar volemia, PA e diuréticos antes de iniciar.',
+              'Puede causar depleción de volumen, hipotensión y caída inicial del eGFR. Evaluar volemia, PA y diuréticos antes de iniciar.'
+            )
+          },
+
+          electrolyteSafety: {
+            potassiumRisk: true,
+            magnesiumRisk: false,
+            sodiumRisk:    true,
+            monitoring: [
+              t(lang, 'Monitorar função renal e volemia.',                                                                                          'Monitorizar función renal y volemia.'),
+              t(lang, 'Atenção a hipercalemia em DRC, uso de IECA/BRA/ARM ou redução importante do eGFR.',                                         'Atención a hiperpotasemia en ERC, uso de IECA/ARA-II/ARM o reducción importante del eGFR.'),
+              t(lang, 'Avaliar cetonas se sintomas compatíveis com cetoacidose, mesmo com glicemia não muito elevada.',                             'Evaluar cetonas si hay síntomas compatibles con cetoacidosis, incluso con glucemia no muy elevada.')
+            ]
+          },
+
+          sickDayRules: [
+            t(lang, 'Suspender temporariamente em vômitos, diarreia, febre alta, baixa ingesta, jejum prolongado, cirurgia ou internação por doença aguda.', 'Suspender temporalmente en vómitos, diarrea, fiebre alta, baja ingesta, ayuno prolongado, cirugía o internación por enfermedad aguda.'),
+            t(lang, 'Reiniciar apenas quando clinicamente estável, hidratado e alimentando-se adequadamente.',                                      'Reiniciar solo cuando esté clínicamente estable, hidratado y alimentándose adecuadamente.'),
+            t(lang, 'Procurar atendimento se náuseas, vômitos, dor abdominal, respiração rápida, sonolência ou cetonas positivas.',                'Consultar si hay náuseas, vómitos, dolor abdominal, respiración rápida, somnolencia o cetonas positivas.'),
+            t(lang, 'Avaliar pés regularmente; comunicar feridas, úlceras, dor, infecção ou escurecimento dos dedos.',                             'Evaluar pies regularmente; comunicar heridas, úlceras, dolor, infección u oscurecimiento de dedos.')
+          ],
+
+          footSafety: [
+            t(lang, 'Avaliar doença arterial periférica, neuropatia, úlcera ativa e amputação prévia antes de iniciar.',                           'Evaluar enfermedad arterial periférica, neuropatía, úlcera activa y amputación previa antes de iniciar.'),
+            t(lang, 'Orientar inspeção diária dos pés em diabéticos de alto risco.',                                                               'Orientar inspección diaria de pies en diabéticos de alto riesgo.'),
+            t(lang, 'Considerar alternativa se úlcera ativa, infecção grave de pé diabético ou isquemia crítica.',                                'Considerar alternativa si hay úlcera activa, infección grave de pie diabético o isquemia crítica.')
+          ],
+
+          pregnancy: t(lang,
+            'Evitar, especialmente no 2º e 3º trimestre, por potencial risco renal fetal. Preferir alternativas com maior segurança.',
+            'Evitar, especialmente en 2º y 3º trimestre, por potencial riesgo renal fetal. Preferir alternativas con mayor seguridad.'
+          ),
+
+          lactation: t(lang,
+            'Evitar por dados limitados e potencial risco renal ao lactente.',
+            'Evitar por datos limitados y potencial riesgo renal para el lactante.'
+          ),
+
+          elderly: t(lang,
+            'Maior risco de hipovolemia, hipotensão, DRC, quedas, fraturas e complicações em pés. Avaliar PA, diuréticos, função renal e risco vascular periférico.',
+            'Mayor riesgo de hipovolemia, hipotensión, ERC, caídas, fracturas y complicaciones en pies. Evaluar PA, diuréticos, función renal y riesgo vascular periférico.'
+          ),
+
+          patientEducation: [
+            t(lang, 'Tomar antes da primeira refeição.',                                                                                            'Tomar antes de la primera comida.'),
+            t(lang, 'Manter hidratação adequada.',                                                                                                  'Mantener hidratación adecuada.'),
+            t(lang, 'Avisar se tontura, queda de pressão, vômitos ou baixa ingesta.',                                                              'Avisar si mareos, caída de presión, vómitos o baja ingesta.'),
+            t(lang, 'Avisar se dor, coceira, secreção ou vermelhidão genital.',                                                                    'Avisar si dolor, picazón, secreción o enrojecimiento genital.'),
+            t(lang, 'Suspender temporariamente em jejum, cirurgia, vômitos, diarreia ou doença aguda importante conforme orientação.',              'Suspender temporalmente en ayuno, cirugía, vómitos, diarrea o enfermedad aguda importante según indicación.'),
+            t(lang, 'Procurar atendimento se náuseas, vômitos, dor abdominal, respiração rápida ou sonolência.',                                   'Consultar si náuseas, vómitos, dolor abdominal, respiración rápida o somnolencia.'),
+            t(lang, 'Inspecionar os pés diariamente se diabético com neuropatia ou doença arterial periférica.',                                    'Inspeccionar los pies diariamente si tiene diabetes con neuropatía o enfermedad arterial periférica.')
+          ],
+
+          calculator: {
+            inputsRequired: [
+              'idade','peso','indicacao','diabetes','doencaCardiovascular','nefropatiaDiabetica',
+              'albuminuria','creatinina','egfr','clcr','paSistolica','usoDiuretico','doseDiuretico',
+              'hipovolemia','potassio','cetoacidosePrevia','cetona','gestacao','cirurgiaProgramada',
+              'doencaAguda','usoInsulina','usoSulfonilureia','doencaArterialPeriferica',
+              'ulceraPeDiabetico','amputacaoPrevia','riscoFratura'
+            ],
+            output: t(lang,
+              'Avalia elegibilidade cardiorrenal, dose 100/300 mg, limites de função renal, risco de hipovolemia/cetoacidose, pé diabético/amputação, fratura e necessidade de suspensão temporária.',
+              'Evalúa elegibilidad cardiorrenal, dosis 100/300 mg, límites de función renal, riesgo de hipovolemia/cetoacidosis, pie diabético/amputación, fractura y necesidad de suspensión temporal.'
+            )
+          },
+
+          safetyFlags: {
+            highAlertInAcuteIllness:                  true,
+            cardiovascularBenefitInDM2CVD:            true,
+            renalProtectionInDiabeticKidneyDisease:   true,
+            heartFailureHospitalizationBenefit:       true,
+            volumeDepletionRisk:                      true,
+            hypotensionRisk:                          true,
+            ketoacidosisRisk:                         true,
+            euglycemicDKARisk:                        true,
+            genitalInfectionRisk:                     true,
+            renalFunctionCheckRequired:               true,
+            hyperkalemiaCaution:                      true,
+            amputationRiskCaution:                    true,
+            fractureRiskCaution:                      true,
+            pregnancyAvoid:                           true,
+            hospitalUseOnly:                          false,
+            requiresTelemetry:                        false,
+            requiresInfusionPump:                     false,
+            warning: t(lang,
+              '⚠️ Canagliflozina: benefício CV/renal em DM2 comprovado (CANVAS/CREDENCE), mas atenção especial ao RISCO DE AMPUTAÇÃO (CANVAS). Avaliar DAP, amputação prévia e úlcera ativa antes de prescrever.',
+              '⚠️ Canagliflozina: beneficio CV/renal en DM2 comprobado (CANVAS/CREDENCE), pero atención especial al RIESGO DE AMPUTACIÓN (CANVAS). Evaluar EAP, amputación previa y úlcera activa antes de prescribir.'
+            )
+          },
+
+          auditNotes: { status: 'sglt2_inhibitor_canagliflozin_cardiorenal_master_template' },
+
+          ref: [
+            'CANVAS Program (NEJM 2017)',
+            'CREDENCE Trial (NEJM 2019)',
+            'ADA Standards of Care 2024',
+            'KDIGO CKD Guidelines 2022',
+            'ESC Heart Failure Guidelines 2021',
+            'AHA/ACC/HFSA Heart Failure Guidelines 2022',
+            'FDA/EMA label — Invokana (Canagliflozin)'
+          ]
+        };
+      }
+    } /* fim canagliflozina */
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 36 (iSGLT2: empagliflozina · canagliflozina) */
+
 })(); /* fim da IIFE do módulo cardio */
 

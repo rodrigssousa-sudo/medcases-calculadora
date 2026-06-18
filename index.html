@@ -7591,10 +7591,13 @@
       <i class="fa-solid fa-calculator"></i>
       <span data-i18n="nav_calculators">Calculadoras</span>
     </button>
+    <!-- [MVP] Botão Prescrições removido temporariamente — módulo será refatorado em sprint futura.
+         Para restaurar: remover este comentário e reinserir o <button id="nav-prescriptions"> abaixo.
     <button class="nav-item"        onclick="navigate('prescriptions')" id="nav-prescriptions">
       <i class="fa-solid fa-file-medical"></i>
       <span data-i18n="nav_prescriptions">Prescrições</span>
     </button>
+    -->
   </nav>
 </div>
 <div id="toast"></div>
@@ -9600,10 +9603,12 @@ function navigate(page){
     elec:'nav-calculators',
     news2:'nav-calculators',
     farmacos:'nav-calculators',
-    prescriptions:'nav-prescriptions',
+    /* [MVP] prescriptions removido da bottom nav — mantido no navMap como segurança
+       para deep links internos que ainda chamem navigate('prescriptions') */
+    prescriptions:'nav-home',
   };
-  /* Ao entrar em prescrições, renderiza a tela inicial */
-  if(page==='prescriptions') renderPrescriptions('');
+  /* [MVP] Prescrições desabilitadas na nav — chamadas diretas são redirecionadas para home */
+  if(page==='prescriptions') { navigate('home'); return; }
   /* Ao entrar em farmácos, renderiza lista completa e limpa busca */
   if(page==='farmacos') {
     const inp = document.getElementById('farmacos-search-input');
