@@ -8729,7 +8729,47 @@ const i18n = {
   } catch(e) { window._autoLang = 'pt'; }
 })();
 let currentLang = window._autoLang || 'pt', currentSex='M', currentPregnant=false;
-window.patientData={age:null,sex:'M',weight:null,height:null,creatinine:null,bsa:null,clcr:null,imc:null,pesoIdeal:null,tfg:null,pregnant:false};
+
+/* ── Inicialização híbrida Web + WebView ──────────────────────────
+   Ordem de prioridade:
+   1. Objeto já populado pelo app nativo (WebView injetou dados)
+   2. Cache localStorage (sessão anterior na Web ou app)
+   3. Estrutura vazia segura (primeiro acesso absoluto)
+   Chave: 'medcases_hm_patient_v1' — padrão interno do app
+─────────────────────────────────────────────────────────────────── */
+(function _initPatientData() {
+  /* Já existe e tem peso → não sobrescreve (WebView já injetou) */
+  if (window.patientData && window.patientData.weight) return;
+  /* Tenta recuperar da sessão anterior */
+  var _saved = null;
+  try { _saved = JSON.parse(localStorage.getItem('medcases_hm_patient_v1')); } catch(e) {}
+  /* Fallback legado: chave 'pacienteAtual' (compatibilidade com builds antigos) */
+  if (!_saved || !_saved.weight) {
+    try {
+      var _legacy = JSON.parse(localStorage.getItem('pacienteAtual'));
+      if (_legacy && (_legacy.weight || _legacy.peso)) {
+        _saved = {
+          weight    : parseFloat(_legacy.weight || _legacy.peso)   || null,
+          age       : parseInt(_legacy.age    || _legacy.idade)     || null,
+          sex       : _legacy.sex || _legacy.sexo || 'M',
+          height    : parseFloat(_legacy.height  || _legacy.altura) || null,
+          creatinine: parseFloat(_legacy.creatinine || _legacy.creatinina) || null
+        };
+      }
+    } catch(e) {}
+  }
+  if (_saved && _saved.weight) {
+    window.patientData = Object.assign(
+      { age:null, sex:'M', weight:null, height:null, creatinine:null,
+        bsa:null, clcr:null, imc:null, pesoIdeal:null, tfg:null, pregnant:false },
+      _saved
+    );
+  } else {
+    window.patientData = { age:null, sex:'M', weight:null, height:null,
+      creatinine:null, bsa:null, clcr:null, imc:null, pesoIdeal:null,
+      tfg:null, pregnant:false };
+  }
+})();
 
 /* ============================================================
    FALLBACKS DE SEGURANÇA — Bancos de Dados Globais
@@ -9094,19 +9134,109 @@ const CalculadoraMeioInterno = {
   }
 };
 
+/* =========================================================
+   INLINE PATIENT FORM — Modo Web híbrido
+   Renderiza mini-formulário de dados do paciente dentro da
+   própria aba quando window.patientData.weight está ausente.
+   Funciona em qualquer calculadora que dependa de peso/sexo/idade.
+========================================================= */
+function _buildInlinePatientFormHTML(isEs) {
+  return '<div id="inline-patient-form" style="'
+    + 'background:#251a35;padding:15px;border-radius:8px;'
+    + 'border:1px solid #ffb74d;margin-bottom:15px;">'
+    + '<p style="margin:0 0 10px 0;color:#ffb74d;font-size:0.9rem;font-weight:bold;">'
+    + (isEs
+        ? '⚠️ Datos del paciente requeridos para este cálculo:'
+        : '⚠️ Dados do paciente necessários para este cálculo:')
+    + '</p>'
+    + '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">'
+      + '<input type="number" id="inline-peso"'
+        + ' placeholder="Peso (kg)"'
+        + ' oninput="updateInlinePatientData()"'
+        + ' style="padding:8px;background:#1c1427;border:1px solid #4a3563;'
+        + 'border-radius:6px;color:#fff;font-size:0.9rem;">'
+      + '<input type="number" id="inline-idade"'
+        + ' placeholder="' + (isEs ? 'Edad' : 'Idade') + '"'
+        + ' oninput="updateInlinePatientData()"'
+        + ' style="padding:8px;background:#1c1427;border:1px solid #4a3563;'
+        + 'border-radius:6px;color:#fff;font-size:0.9rem;">'
+      + '<select id="inline-sexo"'
+        + ' onchange="updateInlinePatientData()"'
+        + ' style="padding:8px;background:#1c1427;border:1px solid #4a3563;'
+        + 'border-radius:6px;color:#fff;font-size:0.9rem;">'
+        + '<option value="M">Masc</option>'
+        + '<option value="F">Fem</option>'
+      + '</select>'
+    + '</div>'
+  + '</div>';
+}
+
+/* Sincronização reversa: inline form → window.patientData → recalcula */
+function updateInlinePatientData() {
+  var peso  = parseFloat(document.getElementById('inline-peso' )?.value)  || null;
+  var idade = parseInt(  document.getElementById('inline-idade')?.value)  || null;
+  var sexo  = document.getElementById('inline-sexo')?.value || 'M';
+
+  if (!peso || !idade) return; /* aguarda ambos para evitar recálculo prematuro */
+
+  /* Mescla com dados existentes sem destruir clcr/creatinine já calculados */
+  window.patientData = Object.assign(window.patientData || {}, {
+    weight: peso,
+    age   : idade,
+    sex   : sexo
+  });
+
+  /* Persiste nas duas chaves para compatibilidade total */
+  try {
+    localStorage.setItem('medcases_hm_patient_v1', JSON.stringify(window.patientData));
+    localStorage.setItem('pacienteAtual', JSON.stringify({
+      peso: peso, idade: idade, sexo: sexo,
+      weight: peso, age: idade, sex: sexo
+    }));
+  } catch(e) {}
+
+  /* Remove o formulário inline (peso agora disponível) */
+  var form = document.getElementById('inline-patient-form');
+  if (form) form.remove();
+
+  /* Atualiza chips da aba Eletrólitos */
+  if (typeof elecInitFromPatient === 'function') elecInitFromPatient();
+
+  /* Dispara recálculo imediato da calculadora ativa */
+  if (typeof calcEletrolitosAll === 'function') calcEletrolitosAll();
+
+  /* Notifica demais módulos */
+  if (typeof _onPatientDataUpdated === 'function') _onPatientDataUpdated();
+}
+
 function calcEletrolitosAll() {
   const p    = window.patientData || {};
   const lang = (typeof currentLang !== 'undefined') ? currentLang : 'pt';
   const isEs = String(lang).toLowerCase() === 'es';
 
-  /* ── Guard: sem dados do paciente ── */
+  /* ── Guard híbrido Web + WebView ──────────────────────────────
+     Se weight for nulo, tenta recuperar do localStorage antes de
+     renderizar o formulário inline (modo Web sem app nativo).
+  ─────────────────────────────────────────────────────────────── */
   if (!p.weight) {
-    const msg = isEs
-      ? '⚠️ Complete los datos del paciente en la Home.'
-      : '⚠️ Preencha os dados do paciente na Home.';
-    const banNa = document.getElementById('elec-alerts-na');
-    if (banNa) banNa.innerHTML = '<div style="color:#ffb74d;text-align:center;padding:8px 0;">' + msg + '</div>';
-    ['elec-alerts-k','elec-alerts-ag'].forEach(function(id){
+    /* Tentativa silenciosa de recuperação do cache */
+    try {
+      var _ls = JSON.parse(localStorage.getItem('medcases_hm_patient_v1'));
+      if (_ls && _ls.weight) {
+        window.patientData = Object.assign(p, _ls);
+        p = window.patientData;
+      }
+    } catch(e) {}
+  }
+
+  if (!p.weight) {
+    /* Injeta formulário inline no topo do card Na — reutiliza se já existe */
+    const cardNa = document.querySelector('#page-elec .elec-card');
+    if (cardNa && !document.getElementById('inline-patient-form')) {
+      cardNa.insertAdjacentHTML('afterbegin', _buildInlinePatientFormHTML(isEs));
+    }
+    /* Zera resultados sem mensagem de erro */
+    ['elec-alerts-na','elec-alerts-k','elec-alerts-ag'].forEach(function(id){
       const el = document.getElementById(id); if (el) el.innerHTML = '';
     });
     ['elec-res-na-corr','elec-res-deficit-na','elec-res-agua-livre','elec-res-osm',
@@ -9115,6 +9245,10 @@ function calcEletrolitosAll() {
     });
     return;
   }
+
+  /* Dados disponíveis: remove formulário inline se ainda estiver visível */
+  var _inlineForm = document.getElementById('inline-patient-form');
+  if (_inlineForm) _inlineForm.remove();
 
   const peso   = parseFloat(p.weight);
   const genero = p.sex   || 'M';
@@ -16778,6 +16912,26 @@ function _adaptExternalDB(dbObj, categoryLabel) {
         ...patientData
       };
 
+      /* ── Helper i18n local (resolve {pt,es} ou string pura) ── */
+      function _r(field) {
+        if (!field) return '';
+        if (typeof field === 'string') return field;
+        if (typeof field === 'object') return field[lang] || field.pt || field.es || '';
+        return String(field);
+      }
+
+      /* ── Helper: extrai primeiro item legível de array ou string ── */
+      function _rArr(field) {
+        const v = _r(field);
+        if (v) return v;
+        /* Tenta {pt:[...], es:[...]} */
+        if (field && typeof field === 'object') {
+          const arr = field[lang] || field.pt || [];
+          if (Array.isArray(arr) && arr.length) return arr[0];
+        }
+        return '';
+      }
+
       /* Chama o método correto do módulo externo */
       let result;
       try {
@@ -16785,6 +16939,75 @@ function _adaptExternalDB(dbObj, categoryLabel) {
           result = entry.calculate(p, lang);
         } else if (typeof entry.dose === 'function') {
           result = entry.dose(p, lang);
+        } else if (entry.dose && typeof entry.dose === 'object') {
+          /* ══════════════════════════════════════════════════════════════
+             FALLBACK SINTÉTICO — G29/G30/G31 (e futuros grupos estáticos)
+             Estes grupos têm campos {pt,es} mas NÃO têm calculate().
+             Constrói um result compatível com o schema do adaptador.
+          ══════════════════════════════════════════════════════════════ */
+          const d = entry.dose;
+
+          /* Tenta extrair dose adulta na seguinte hierarquia:
+             1. d.adult.infusion / d.adult.bolus / d.adult.standard / d.adult.vo / d.adult.ev
+             2. d.neonatalDuctus (alprostadil)
+             3. d.loading / d.maintenance (trombolíticos)
+             4. Qualquer sub-chave adult-like no primeiro nível             */
+          let doseStr = '';
+
+          if (d.adult && typeof d.adult === 'object') {
+            /* Prioridade: infusão > bolus > standard > vo > ev > primeiro disponível */
+            const adultSubs = ['infusion', 'standard', 'vo', 'bolus', 'ev', 'loading', 'maintenance', 'vascularUse'];
+            for (const k of adultSubs) {
+              if (d.adult[k]) { doseStr = _r(d.adult[k]); break; }
+            }
+            /* Se ainda vazio, pega primeiro campo não-nulo de d.adult */
+            if (!doseStr) {
+              for (const k of Object.keys(d.adult)) {
+                const v = _r(d.adult[k]);
+                if (v) { doseStr = v; break; }
+              }
+            }
+          }
+
+          /* Fallbacks para drogas sem bloco adult */
+          if (!doseStr && d.loading)      doseStr = _r(d.loading);
+          if (!doseStr && d.maintenance)  doseStr = _r(d.maintenance);
+          if (!doseStr && d.neonatalDuctus) doseStr = _r(d.neonatalDuctus);
+          if (!doseStr && d.bolus)        doseStr = _r(d.bolus);
+          if (!doseStr && d.infusion)     doseStr = _r(d.infusion);
+          if (!doseStr && d.standard)     doseStr = _r(d.standard);
+
+          /* Monta objeto rich-like compatível com o fluxo do adaptador */
+          result = {
+            name:  _r(entry.name),
+            class: _r(entry.class),
+            dose:  { adultoPadrao: doseStr || (lang === 'es' ? 'Ver posología completa' : 'Ver posologia completa') },
+            /* Injeta campos descritivos resolvidos para uso em _richResult */
+            _mechanism:  _r(entry.mechanism),
+            _indications: (() => {
+              const arr = entry.indications;
+              if (!arr) return '';
+              const list = (arr[lang] || arr.pt || []);
+              return Array.isArray(list) ? list.join(' • ') : String(list);
+            })(),
+            _renalAdj:   entry.renalAdjustment ? _r(entry.renalAdjustment.message) : '',
+            _hepaticAdj: entry.hepaticAdjustment ? _r(entry.hepaticAdjustment.message) : '',
+            _warning:    entry.safetyFlags ? _r(entry.safetyFlags.warning) : (_r(entry.hemodynamicRules && entry.hemodynamicRules.warning)),
+            _adverse:    (() => {
+              const arr = entry.commonAdverseEffects;
+              if (!arr) return '';
+              const list = (arr[lang] || arr.pt || []);
+              return Array.isArray(list) ? list.join(', ') : String(list);
+            })(),
+            _contraAbs: (() => {
+              const c = entry.contraindications && entry.contraindications.absolute;
+              if (!c) return '';
+              const list = (c[lang] || c.pt || []);
+              return Array.isArray(list) ? list.join(' | ') : String(list);
+            })()
+          };
+
+          console.log('[DRUG ADAPTER] Fallback sintético usado para', key, '— doseStr:', doseStr.substring(0,60));
         } else {
           return { dose: '—', freq: '—', via: '—', adj: '', note: '' };
         }
@@ -16802,7 +17025,11 @@ function _adaptExternalDB(dbObj, categoryLabel) {
         /* Pega a primeira dose adulta disponível */
         const doseKeys = Object.keys(result.dose);
         const adultoKey = doseKeys.find(k => /adulto/i.test(k)) || doseKeys[0];
-        doseStr = result.dose[adultoKey] || '';
+        const rawDoseVal = result.dose[adultoKey];
+        /* CRITICAL FIX: se o valor ainda for {pt,es} (G29-G31 sub-objetos), resolve agora */
+        doseStr = (rawDoseVal && typeof rawDoseVal === 'object')
+          ? (rawDoseVal[lang] || rawDoseVal.pt || rawDoseVal.es || '')
+          : (String(rawDoseVal || ''));
 
         /* Tenta extrair frequência: "8/8h", "12/12h", "1x/dia", "24/24h" */
         const freqMatch = doseStr.match(/(\d+\/\d+h|\d+x\/dia|1\s*vez\/dia|uma\s*vez\/dia|cada\s*\d+h)/i);
