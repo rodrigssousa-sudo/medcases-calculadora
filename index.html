@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- MedCases Pro — build 2026-06-12 -->
+<!-- MedCases Pro — build 2026-06-19e -->
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
   <meta name="theme-color" content="#1C2226" />
   <title>MedCases Pro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,16 +62,69 @@
       --shadow-glow:0 0 20px rgba(56,189,248,0.20);
       --transition:0.22s ease;
     }
-    html,body { height:100%; background-color:var(--bg-deep); color:var(--text-primary);
-      font-family:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;
-      font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;
-      overscroll-behavior:none; }
-    #app { max-width:500px; margin:0 auto; height:100%; display:flex;
-      flex-direction:column; position:relative; background:var(--bg-deep); }
+    /* ═══════════════════════════════════════════════════════════
+       FLEXBOX APPLICATION SHELL — iOS WebView Keyboard Fix v4.1
+       Estratégia: travar viewport no nível de html+body, deixar
+       apenas #scroll-content fazer overflow-y. Quando o teclado
+       sobe, o visualViewport encolhe → só #scroll-content comprime,
+       o GPB (flex-shrink:0) permanece fixo e visível no topo.
+    ═══════════════════════════════════════════════════════════ */
+    html {
+      height: 100%;
+      /* -webkit-fill-available: altura real do visual viewport no iOS */
+      height: -webkit-fill-available;
+      background-color: var(--bg-deep);
+      /* Bloqueia scroll no html — apenas #scroll-content rola */
+      overflow: hidden;
+    }
+    body {
+      /* Espelha a mesma trava de altura do html */
+      height: 100%;
+      height: -webkit-fill-available;
+      background-color: var(--bg-deep);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overscroll-behavior: none;
+      /* Bloqueia scroll no body — evita double-scroll em iOS */
+      overflow: hidden;
+      /* Evita que o iOS repositione o body inteiro ao focar inputs */
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    #app {
+      max-width: 500px;
+      margin: 0 auto;
+      /* 100dvh: dynamic viewport height — encolhe com teclado em iOS 15.4+ */
+      height: 100dvh;
+      /* Fallback para iOS < 15.4 */
+      height: 100vh;
+      /* Fallback WebKit: usa o visual viewport real */
+      height: -webkit-fill-available;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: var(--bg-deep);
+      /* Garante que nenhum filho vaze para fora */
+      overflow: hidden;
+    }
 
     /* ============================================================ SCROLL */
     /* Webview: sem topbar própria — conteúdo cola direto no topo nativo */
-    #scroll-content { flex:1; overflow-y:auto; padding:10px 12px 68px; scroll-behavior:smooth; }
+    /* ── Único elemento autorizado a rolar — encolhe quando teclado sobe ── */
+    #scroll-content {
+      flex: 1;
+      min-height: 0;           /* CRÍTICO: permite que flex-item encolha abaixo do conteúdo */
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      padding: 10px 12px 68px;
+      scroll-behavior: smooth;
+    }
     /* Quando a aba ativa tem .section-back-bar logo no topo, zerar o padding-top
        para que a barra cole exatamente na base do GPB sem gap visual */
     #scroll-content:has(> .section-page.active > .section-back-bar:first-child),
@@ -870,11 +923,16 @@
       background: linear-gradient(135deg, rgba(30,10,60,0.97) 0%, rgba(15,9,30,0.98) 100%);
       border-bottom: 1px solid rgba(167,139,250,0.22);
       padding: 8px 14px 8px 12px;
+      /* CRÍTICO iOS: flex-shrink:0 impede que o teclado amasse a barra */
       flex-shrink: 0;
+      /* min-height garante que a barra não desapareça mesmo com teclado aberto */
+      min-height: 0;
       position: relative;
       z-index: 50;
       /* Entrada suave */
       animation: gpbIn 0.22s ease both;
+      /* Previne que qualquer scroll interno do GPB interfira */
+      overflow: visible;
     }
     @keyframes gpbIn {
       from { opacity:0; transform:translateY(-6px); }
@@ -3113,6 +3171,304 @@
 
     /* ── Compatibilidade legada (sub-page oculta completamente) ── */
     .sub-tabs, .sub-page { display:none !important; }
+
+    /* ============================================================
+       VERIFICADOR DINÂMICO DE INTERAÇÕES — v1.0
+       Estilos isolados com prefixo .ix- para evitar colisões
+    ============================================================ */
+
+    /* Card habilitado (remove o estado --disabled do placeholder) */
+    .hm-card--interactions { opacity: 1 !important; pointer-events: all !important; }
+
+    /* Badge contador */
+    .ix-count-badge {
+      font-size: 10px; font-weight: 800; letter-spacing: 0.5px;
+      background: rgba(167,139,250,0.18);
+      border: 1px solid rgba(167,139,250,0.35);
+      border-radius: 20px; padding: 3px 9px;
+      color: #C4B5FD;
+    }
+    .ix-count-badge.ix-count-full {
+      background: rgba(251,191,36,0.15);
+      border-color: rgba(251,191,36,0.40);
+      color: #FBBF24;
+    }
+
+    /* Barra de busca */
+    .ix-search-wrap {
+      position: relative;
+      margin-top: 10px;
+    }
+    .ix-search-icon {
+      position: absolute; left: 12px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px; color: #A78BFA; pointer-events: none;
+    }
+    .ix-search {
+      width: 100%;
+      background: rgba(167,139,250,0.07);
+      border: 1.5px solid rgba(167,139,250,0.22);
+      border-radius: 12px;
+      padding: 10px 12px 10px 34px;
+      font-size: 13px; font-weight: 500;
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      -webkit-appearance: none;
+    }
+    .ix-search:focus {
+      border-color: #A78BFA;
+      box-shadow: 0 0 0 3px rgba(167,139,250,0.14);
+    }
+    .ix-search::placeholder { color: rgba(167,139,250,0.45); }
+    body.light-mode .ix-search {
+      background: rgba(124,58,237,0.06);
+      border-color: rgba(124,58,237,0.22);
+      color: #1a1a2e;
+    }
+    body.light-mode .ix-search::placeholder { color: rgba(124,58,237,0.40); }
+
+    /* Dropdown de sugestões */
+    .ix-suggestions {
+      background: #18102E;
+      border: 1px solid rgba(167,139,250,0.22);
+      border-radius: 12px;
+      margin-top: 4px;
+      overflow: hidden;
+      max-height: 220px;
+      overflow-y: auto;
+      z-index: 100;
+      animation: fadeIn 0.15s ease;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    }
+    body.light-mode .ix-suggestions {
+      background: #fff;
+      border-color: rgba(124,58,237,0.20);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .ix-suggestion-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 13px;
+      cursor: pointer;
+      transition: background 0.14s;
+      border-bottom: 1px solid rgba(167,139,250,0.08);
+    }
+    .ix-suggestion-item:last-child { border-bottom: none; }
+    .ix-suggestion-item:hover, .ix-suggestion-item.ix-highlighted {
+      background: rgba(167,139,250,0.12);
+    }
+    body.light-mode .ix-suggestion-item:hover,
+    body.light-mode .ix-suggestion-item.ix-highlighted {
+      background: rgba(124,58,237,0.08);
+    }
+    .ix-sug-icon {
+      width: 28px; height: 28px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0;
+    }
+    .ix-sug-name {
+      font-size: 13px; font-weight: 600;
+      color: var(--text-primary); flex: 1;
+    }
+    .ix-sug-class {
+      font-size: 10px; color: var(--text-muted); white-space: nowrap;
+    }
+    .ix-sug-name em {
+      color: #A78BFA; font-style: normal; font-weight: 800;
+    }
+    /* Mensagem "sem resultados" */
+    .ix-sug-empty {
+      padding: 12px 14px;
+      font-size: 12px; color: var(--text-muted); text-align: center;
+    }
+
+    /* Chips */
+    .ix-chips-wrap { margin-top: 10px; }
+    .ix-chips {
+      display: flex; flex-wrap: wrap; gap: 7px;
+    }
+    .ix-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 10px 5px 11px;
+      border-radius: 20px;
+      font-size: 12px; font-weight: 700;
+      border: 1.5px solid rgba(167,139,250,0.30);
+      background: rgba(167,139,250,0.10);
+      color: #C4B5FD;
+      animation: ixChipIn 0.18s ease both;
+    }
+    @keyframes ixChipIn {
+      from { opacity:0; transform: scale(0.85) translateY(4px); }
+      to   { opacity:1; transform: scale(1) translateY(0); }
+    }
+    .ix-chip-remove {
+      width: 16px; height: 16px; border-radius: 50%;
+      background: rgba(167,139,250,0.20);
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: #A78BFA; font-size: 10px;
+      transition: background 0.15s;
+      padding: 0; flex-shrink: 0;
+    }
+    .ix-chip-remove:active { background: rgba(248,113,113,0.30); color: #F87171; }
+
+    /* Hint */
+    .ix-hint {
+      font-size: 11px; color: var(--text-muted);
+      text-align: center; padding: 8px 4px 2px;
+      line-height: 1.5;
+      transition: opacity 0.2s;
+    }
+    .ix-hint.ix-hint--hidden { opacity: 0; pointer-events: none; height: 0; padding: 0; overflow: hidden; }
+
+    /* Botão verificar */
+    .ix-verify-btn {
+      width: 100%; margin-top: 12px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 16px;
+      border-radius: 14px; border: none;
+      background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
+      color: #fff;
+      font-size: 14px; font-weight: 800;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer; letter-spacing: 0.2px;
+      transition: opacity 0.18s, transform 0.12s, box-shadow 0.18s;
+      box-shadow: 0 4px 16px rgba(124,58,237,0.30);
+    }
+    .ix-verify-btn:disabled {
+      background: rgba(167,139,250,0.12);
+      color: rgba(167,139,250,0.45);
+      box-shadow: none; cursor: not-allowed;
+    }
+    .ix-verify-btn:not(:disabled):active {
+      transform: scale(0.97); opacity: 0.88;
+    }
+    .ix-verify-btn i { font-size: 14px; }
+
+    /* Loading */
+    .ix-loading {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 20px; color: #A78BFA; font-size: 13px; font-weight: 600;
+    }
+    .ix-loading i { animation: spin 0.9s linear infinite; }
+    @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+
+    /* Resultados — container */
+    .ix-results {
+      margin-top: 14px;
+      display: flex; flex-direction: column; gap: 10px;
+      animation: fadeIn 0.25s ease both;
+    }
+
+    /* Card de resultado — verde (sem interações) */
+    .ix-result-clear {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: rgba(52,211,153,0.08);
+      border: 1.5px solid rgba(52,211,153,0.28);
+      border-radius: 14px; padding: 14px 15px;
+    }
+    .ix-result-clear-icon {
+      font-size: 22px; flex-shrink: 0; margin-top: 1px;
+    }
+    .ix-result-clear-title {
+      font-size: 13px; font-weight: 800; color: #34D399;
+      margin-bottom: 3px;
+    }
+    .ix-result-clear-sub {
+      font-size: 11.5px; color: var(--text-secondary); line-height: 1.55;
+    }
+
+    /* Card de resultado — alerta (com interações) */
+    .ix-result-alert {
+      border-radius: 14px; overflow: hidden;
+      border-left: 4px solid #FBBF24;
+      background: rgba(251,191,36,0.07);
+      animation: fadeIn 0.2s ease both;
+    }
+    .ix-result-alert.ix-severity-high {
+      border-left-color: #F87171;
+      background: rgba(248,113,113,0.07);
+    }
+    .ix-result-alert.ix-severity-low {
+      border-left-color: #38BDF8;
+      background: rgba(56,189,248,0.07);
+    }
+    .ix-result-alert-header {
+      display: flex; align-items: center; gap: 9px;
+      padding: 11px 13px 8px;
+    }
+    .ix-alert-severity-pill {
+      font-size: 9px; font-weight: 800; letter-spacing: 1px;
+      text-transform: uppercase; border-radius: 20px; padding: 2px 8px;
+      background: rgba(251,191,36,0.18); color: #FBBF24;
+      border: 1px solid rgba(251,191,36,0.30);
+      flex-shrink: 0;
+    }
+    .ix-result-alert.ix-severity-high .ix-alert-severity-pill {
+      background: rgba(248,113,113,0.18); color: #F87171;
+      border-color: rgba(248,113,113,0.30);
+    }
+    .ix-result-alert.ix-severity-low .ix-alert-severity-pill {
+      background: rgba(56,189,248,0.15); color: #38BDF8;
+      border-color: rgba(56,189,248,0.28);
+    }
+    .ix-alert-pair-label {
+      font-size: 12.5px; font-weight: 800; color: var(--text-primary); flex: 1;
+    }
+    .ix-result-alert-body {
+      padding: 0 13px 13px;
+      display: flex; flex-direction: column; gap: 7px;
+    }
+    .ix-alert-text-item {
+      font-size: 12px; line-height: 1.6; color: var(--text-secondary);
+      background: rgba(0,0,0,0.12);
+      border-radius: 8px; padding: 8px 10px;
+      position: relative;
+    }
+    .ix-alert-text-item mark {
+      background: rgba(251,191,36,0.25); color: #FBBF24;
+      border-radius: 3px; padding: 0 2px;
+      font-weight: 700;
+    }
+    .ix-result-alert.ix-severity-high .ix-alert-text-item mark {
+      background: rgba(248,113,113,0.25); color: #F87171;
+    }
+    .ix-result-alert.ix-severity-low .ix-alert-text-item mark {
+      background: rgba(56,189,248,0.18); color: #38BDF8;
+    }
+    .ix-alert-source-tag {
+      font-size: 9.5px; font-weight: 700; letter-spacing: 0.3px;
+      color: rgba(167,139,250,0.65); text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* Divisor entre pares */
+    .ix-results-header {
+      font-size: 10px; font-weight: 800; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--text-muted);
+      padding: 4px 0 2px;
+    }
+
+    /* Toast de limite */
+    .ix-toast {
+      position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px);
+      background: rgba(30,10,60,0.97); border: 1px solid rgba(251,191,36,0.35);
+      border-radius: 12px; padding: 10px 18px;
+      font-size: 12.5px; font-weight: 700; color: #FBBF24;
+      z-index: 9999; opacity: 0; pointer-events: none;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      display: flex; align-items: center; gap: 8px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.50);
+      white-space: nowrap;
+    }
+    .ix-toast.ix-toast--show {
+      opacity: 1; transform: translateX(-50%) translateY(0);
+    }
+    body.light-mode .ix-toast {
+      background: #fff; border-color: rgba(251,191,36,0.50);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+    }
 
     /* ============================================================
        QUICK EDIT MODAL — Edição Rápida de Dados do Paciente
@@ -6049,6 +6405,16 @@
     .gpb-mini-input:focus {
       border-color: #A78BFA;
       box-shadow: 0 0 0 2px rgba(167,139,250,0.18);
+      /* Impede que o Safari reposicione a página ao focar o input */
+      outline: none;
+      /* transform: translateZ(0) cria GPU layer — elimina reflow de viewport */
+      transform: translateZ(0);
+    }
+    /* Garante que nenhum input da topbar dispare scroll na window */
+    #global-patient-bar input {
+      /* Posição fixa na camada de compositing — teclado não rola o pai */
+      -webkit-user-select: text;
+      user-select: text;
     }
     .gpb-mini-input::placeholder {
       color: rgba(167,139,250,0.45);
@@ -6264,10 +6630,479 @@
     .score-result-label  { font-size: 14px !important; }
     .score-result-interp { font-size: 15px !important; padding: 10px 19px !important; }
 
+    /* ════════════════════════════════════════════════════════════════
+       VERIFICADOR DINÂMICO DE INTERAÇÕES MEDICAMENTOSAS — v2.0
+       Motor Fármaco-Cêntrico Bidirecional · window.INTERACOES_DB
+       IDs prefixados com intx- para isolamento total de namespace
+    ════════════════════════════════════════════════════════════════ */
+
+    /* ── Input de busca do módulo de interações ── */
+    .intx-search-wrap {
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .intx-search-icon {
+      position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+      color: var(--text-muted); font-size: 13px; pointer-events: none;
+    }
+    .intx-search {
+      background: rgba(255,255,255,0.05);
+      border: 1.5px solid rgba(255,255,255,0.09);
+      border-radius: 12px;
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 13px 44px 13px 40px;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .intx-search::placeholder { color: rgba(255,255,255,0.25); font-size: 13px; }
+    .intx-search:focus {
+      border-color: rgba(167,139,250,0.55);
+      background: rgba(167,139,250,0.05);
+      box-shadow: 0 0 0 3px rgba(167,139,250,0.10);
+    }
+
+    /* ── Dropdown de sugestões ── */
+    .intx-suggestions {
+      background: #1A2235;
+      border: 1.5px solid rgba(167,139,250,0.22);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.50);
+    }
+    .intx-suggestion-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 13px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: background 0.14s ease;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .intx-suggestion-item:last-child { border-bottom: none; }
+    .intx-suggestion-item:hover,
+    .intx-suggestion-item.intx-highlighted { background: rgba(167,139,250,0.10); }
+    .intx-suggestion-item:active { background: rgba(167,139,250,0.16); }
+    .intx-sug-icon {
+      width: 32px; height: 32px; border-radius: 9px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px;
+      background: rgba(167,139,250,0.14); color: #A78BFA;
+    }
+    .intx-sug-name {
+      flex: 1; font-size: 13.5px; font-weight: 600; color: var(--text-primary);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .intx-sug-name em { color: #A78BFA; font-style: normal; font-weight: 800; }
+    .intx-sug-class {
+      font-size: 10.5px; color: var(--text-muted); white-space: nowrap;
+      flex-shrink: 0; max-width: 90px; overflow: hidden; text-overflow: ellipsis;
+    }
+    .intx-sug-empty {
+      padding: 14px 16px; font-size: 13px; color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* ── Chips / Fármacos selecionados ── */
+    .intx-chips-wrap {
+      margin-bottom: 10px;
+    }
+    .intx-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+    .intx-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 9px 7px 12px;
+      border-radius: 20px;
+      border: 1.5px solid rgba(167,139,250,0.35);
+      background: rgba(167,139,250,0.12);
+      color: #C4B5FD;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: -0.1px;
+      transition: background 0.15s, border-color 0.15s;
+      white-space: nowrap;
+      max-width: 100%;
+    }
+    .intx-chip span {
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .intx-chip-remove {
+      background: rgba(255,255,255,0.12); border: none; border-radius: 50%;
+      width: 20px; height: 20px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.55); font-size: 10px; cursor: pointer;
+      transition: background 0.14s, color 0.14s;
+      font-family: 'Inter', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .intx-chip-remove:hover { background: rgba(248,113,113,0.25); color: #F87171; }
+
+    /* Badge contador no cabeçalho do card */
+    .intx-count-badge {
+      font-size: 10.5px; font-weight: 800;
+      padding: 4px 11px; border-radius: 20px; letter-spacing: 0.3px;
+      white-space: nowrap; flex-shrink: 0;
+      background: rgba(167,139,250,0.14);
+      color: #A78BFA;
+      border: 1px solid rgba(167,139,250,0.30);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .intx-count-badge.intx-count-full {
+      background: rgba(251,191,36,0.16);
+      color: #FBBF24;
+      border-color: rgba(251,191,36,0.35);
+    }
+
+    /* ── Hint de quantidade mínima ── */
+    .intx-hint {
+      font-size: 12px; color: rgba(255,255,255,0.38);
+      padding: 8px 4px 10px;
+      line-height: 1.5;
+      transition: opacity 0.2s;
+    }
+    .intx-hint--hidden { display: none; }
+
+    /* ── Botão Verificar Interações ── */
+    .intx-verify-btn {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: 13px;
+      border: none;
+      background: linear-gradient(135deg, #6D28D9, #A78BFA);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 9px;
+      transition: background 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+      box-shadow: 0 4px 16px rgba(109,40,217,0.40);
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      margin-bottom: 4px;
+    }
+    .intx-verify-btn:not(:disabled):hover {
+      background: linear-gradient(135deg, #7C3AED, #C4B5FD);
+      box-shadow: 0 4px 20px rgba(109,40,217,0.55);
+    }
+    .intx-verify-btn:not(:disabled):active { transform: scale(0.97); box-shadow: none; }
+    .intx-verify-btn:disabled {
+      opacity: 0.38; cursor: not-allowed;
+      background: linear-gradient(135deg, #374151, #4B5563);
+      box-shadow: none;
+    }
+
+    /* ── Toast de alerta de limite ── */
+    .intx-toast {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      z-index: 9999;
+      background: rgba(30,10,60,0.96);
+      border: 1.5px solid rgba(167,139,250,0.40);
+      border-radius: 14px;
+      padding: 13px 22px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #C4B5FD;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.55);
+      opacity: 0;
+      pointer-events: none;
+      white-space: nowrap;
+      transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.34,1.4,0.64,1);
+      display: flex; align-items: center; gap: 9px;
+    }
+    .intx-toast.intx-toast--show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ── Área de resultados (container geral) ── */
+    .intx-results {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* ── Card genérico de alerta de interação ── */
+    .intx-alert-card {
+      border-radius: 14px;
+      border-left: 5px solid transparent;
+      padding: 14px 16px 13px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ── Nível 1: CONTRAINDICAÇÃO ABSOLUTA ── */
+    .intx-alert-card.intx-level-contraindicada {
+      background: #2c1e21;
+      border-left-color: #ff5252;
+      border: 1px solid rgba(255,82,82,0.20);
+      border-left: 5px solid #ff5252;
+    }
+    .intx-alert-card.intx-level-contraindicada .intx-alert-level-label {
+      color: #ff5252;
+      background: rgba(255,82,82,0.14);
+      border-color: rgba(255,82,82,0.30);
+    }
+    .intx-alert-card.intx-level-contraindicada .intx-alert-pair {
+      color: #ff8a80;
+    }
+
+    /* ── Nível 2: GRAVIDADE ALTA ── */
+    .intx-alert-card.intx-level-alta {
+      background: #2b1b1d;
+      border-left-color: #ff7675;
+      border: 1px solid rgba(255,118,117,0.18);
+      border-left: 5px solid #ff7675;
+    }
+    .intx-alert-card.intx-level-alta .intx-alert-level-label {
+      color: #ff7675;
+      background: rgba(255,118,117,0.13);
+      border-color: rgba(255,118,117,0.28);
+    }
+    .intx-alert-card.intx-level-alta .intx-alert-pair {
+      color: #ffb3b2;
+    }
+
+    /* ── Nível 3: GRAVIDADE MODERADA ── */
+    .intx-alert-card.intx-level-moderada {
+      background: #2d2a1e;
+      border-left-color: #ffeaa7;
+      border: 1px solid rgba(255,234,167,0.15);
+      border-left: 5px solid #ffeaa7;
+    }
+    .intx-alert-card.intx-level-moderada .intx-alert-level-label {
+      color: #ffeaa7;
+      background: rgba(255,234,167,0.12);
+      border-color: rgba(255,234,167,0.25);
+    }
+    .intx-alert-card.intx-level-moderada .intx-alert-pair {
+      color: #fff3cd;
+    }
+
+    /* ── Nível 4: GRAVIDADE LEVE ── */
+    .intx-alert-card.intx-level-leve {
+      background: #1e272e;
+      border-left-color: #74b9ff;
+      border: 1px solid rgba(116,185,255,0.15);
+      border-left: 5px solid #74b9ff;
+    }
+    .intx-alert-card.intx-level-leve .intx-alert-level-label {
+      color: #74b9ff;
+      background: rgba(116,185,255,0.11);
+      border-color: rgba(116,185,255,0.24);
+    }
+    .intx-alert-card.intx-level-leve .intx-alert-pair {
+      color: #b2d8ff;
+    }
+
+    /* ── Cabeçalho do card de alerta ── */
+    .intx-alert-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .intx-alert-level-label {
+      font-size: 9.5px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid transparent;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .intx-alert-pair {
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.3;
+      flex: 1;
+    }
+
+    /* ── Corpo do card de alerta ── */
+    .intx-alert-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .intx-alert-desc-label,
+    .intx-alert-conduta-label {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 2px;
+    }
+    .intx-alert-desc-text {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+    }
+    .intx-alert-conduta-block {
+      background: rgba(255,255,255,0.04);
+      border-radius: 8px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,0.07);
+      margin-top: 2px;
+    }
+    .intx-alert-conduta-text {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.80);
+      line-height: 1.65;
+    }
+
+    /* ── Card limpo (sem interações) ── */
+    .intx-result-clear {
+      background: rgba(16,48,32,0.85);
+      border: 1.5px solid rgba(34,197,94,0.28);
+      border-left: 5px solid #22C55E;
+      border-radius: 14px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .intx-result-clear-icon {
+      font-size: 24px; flex-shrink: 0; margin-top: 2px;
+    }
+    .intx-result-clear-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #22C55E;
+      margin-bottom: 5px;
+    }
+    .intx-result-clear-sub {
+      font-size: 12px;
+      color: rgba(255,255,255,0.50);
+      line-height: 1.6;
+    }
+
+    /* ── Cabeçalho de resultados (contador de pares) ── */
+    .intx-results-header {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 2px 2px 4px;
+    }
+
+    /* ── Loading state ── */
+    .intx-loading {
+      display: flex; align-items: center; gap: 10px;
+      padding: 16px;
+      font-size: 13px; color: rgba(255,255,255,0.45);
+      font-style: italic;
+    }
+    .intx-loading i { animation: intx-spin 0.9s linear infinite; color: #A78BFA; }
+    @keyframes intx-spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* ── Light mode overrides para o módulo de interações ── */
+    body.light-mode .intx-search {
+      background: rgba(0,0,0,0.04) !important;
+      border-color: rgba(124,58,237,0.20) !important;
+      color: #1A1A1A !important;
+    }
+    body.light-mode .intx-search::placeholder { color: rgba(0,0,0,0.30) !important; }
+    body.light-mode .intx-search:focus {
+      border-color: rgba(124,58,237,0.50) !important;
+      background: rgba(124,58,237,0.04) !important;
+    }
+    body.light-mode .intx-suggestions {
+      background: #FFFFFF !important;
+      border-color: rgba(124,58,237,0.20) !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
+    }
+    body.light-mode .intx-suggestion-item:hover,
+    body.light-mode .intx-suggestion-item.intx-highlighted {
+      background: rgba(124,58,237,0.07) !important;
+    }
+    body.light-mode .intx-sug-name { color: #1A1A1A !important; }
+    body.light-mode .intx-sug-class { color: #6B7280 !important; }
+    body.light-mode .intx-chip {
+      background: rgba(124,58,237,0.10) !important;
+      border-color: rgba(124,58,237,0.30) !important;
+      color: #5B21B6 !important;
+    }
+    body.light-mode .intx-hint { color: rgba(0,0,0,0.40) !important; }
+    body.light-mode .intx-alert-desc-text { color: rgba(0,0,0,0.75) !important; }
+    body.light-mode .intx-alert-conduta-text { color: rgba(0,0,0,0.80) !important; }
+    body.light-mode .intx-alert-card.intx-level-contraindicada { background: #fff0f0 !important; }
+    body.light-mode .intx-alert-card.intx-level-alta           { background: #fff3f2 !important; }
+    body.light-mode .intx-alert-card.intx-level-moderada       { background: #fffce6 !important; }
+    body.light-mode .intx-alert-card.intx-level-leve           { background: #eef6ff !important; }
+    body.light-mode .intx-alert-conduta-block {
+      background: rgba(0,0,0,0.04) !important;
+      border-color: rgba(0,0,0,0.08) !important;
+    }
+    body.light-mode .intx-result-clear {
+      background: rgba(220,252,231,0.85) !important;
+      border-color: rgba(21,128,61,0.30) !important;
+    }
+    body.light-mode .intx-result-clear-sub { color: rgba(0,0,0,0.45) !important; }
+    body.light-mode .intx-results-header { color: rgba(0,0,0,0.38) !important; }
+
+  /* ══════════════════════════════════════════════════════════════════
+     SISTEMA GLOBAL DE IDIOMA STATE-DRIVEN — data-current-lang
+     Qualquer elemento filho com .lang-pt ou .lang-es é controlado
+     pelo atributo [data-current-lang] do seu container pai mais próximo.
+     Funciona para módulo de Interações, Bomba de Infusão e futuros módulos.
+     CSS puro = imune a re-renderização do router SPA.
+  ══════════════════════════════════════════════════════════════════ */
+
+  /* Estado padrão: oculta ambos antes do JS aplicar o atributo */
+  .lang-pt, .lang-es { display: none !important; }
+
+  /* Fallback de boot: body sem atributo ainda → exibe PT globalmente
+     (evita flash de conteúdo em branco nos primeiros ~300ms antes do Watcher rodar) */
+  body:not([data-current-lang]) .lang-pt { display: inline !important; }
+  body:not([data-current-lang]) .lang-es { display: none   !important; }
+
+  /* PT ativo */
+  [data-current-lang="pt"] .lang-pt { display: inline !important; }
+  [data-current-lang="pt"] .lang-es { display: none   !important; }
+
+  /* ES ativo */
+  [data-current-lang="es"] .lang-es { display: inline !important; }
+  [data-current-lang="es"] .lang-pt { display: none   !important; }
+
+  /* Exceção: ícones FA dentro de .lang-* devem usar inline-flex */
+  [data-current-lang="pt"] .lang-pt i,
+  [data-current-lang="es"] .lang-es i { display: inline !important; }
+
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
   <link rel="stylesheet" href="css/medcases-ux-v2.css" />
+
+  <!-- ── Banco de Dados de Interações Medicamentosas — Motor Bidirecional v1.0 ── -->
+  <script src="database/interacoes.js"></script>
 </head>
 <body>
 <div id="app">
@@ -6605,34 +7440,426 @@
 
       </div><!-- /hm-card--patient -->
 
-      <!-- ── CARD 2: INTERAÇÕES (base) — placeholder ativo ── -->
-      <div class="hm-card hm-card--interactions hm-card--disabled">
+      <!-- ══════════════════════════════════════════════════════════
+           CARD: VERIFICADOR DINÂMICO DE INTERAÇÕES — v3.1
+           Motor Fármaco-Cêntrico · DRUG_ALIASES + scoreClinico 1-5
+           Min 2 · Máx 5 fármacos · Suporte PT/ES · 🔴🟠🟡
+           CSS: classes intx-* com suporte nativo light/dark mode
+      ══════════════════════════════════════════════════════════ -->
 
-        <div class="hm-card-header">
-          <div class="hm-card-header-left">
-            <div class="hm-card-icon hm-card-icon--purple">
-              <i class="fa-solid fa-circle-nodes"></i>
-            </div>
-            <div>
-              <div class="hm-card-title" data-i18n="hm_int_title">Interações Medicamentosas</div>
-              <div class="hm-card-subtitle" data-i18n="hm_int_sub">Cruzamento inteligente de fármacos</div>
-            </div>
+      <!-- ─── INTX THEME SYSTEM — classes nativas light / dark ─── -->
+      <style>
+        /* ══════════════════════════════════════════════════════
+           INTX MODULE — Sistema de Temas (Light + Dark nativo)
+           Default = DARK (body:not(.light-mode))
+           Light   = body.light-mode
+        ══════════════════════════════════════════════════════ */
+
+        /* ── Container principal ── */
+        .intx-container {
+          margin: 20px 0;
+          padding: 20px;
+          border-radius: 14px;
+          border: 1px solid #231f33;
+          background: #13101c;
+        }
+        body.light-mode .intx-container {
+          background: #ffffff;
+          border-color: #e2e8f0;
+        }
+
+        /* ── Cabeçalho: título e subtítulo ── */
+        .intx-title {
+          color: #ffffff;
+          margin: 0;
+          font-size: 19px;
+          font-weight: 700;
+          letter-spacing: -0.3px;
+        }
+        body.light-mode .intx-title { color: #1e293b; }
+
+        .intx-sub {
+          color: #7d7993;
+          font-size: 13px;
+        }
+        body.light-mode .intx-sub { color: #64748b; }
+
+        /* ── Contador (badge X/5) ── */
+        .intx-counter {
+          background: #231f33;
+          padding: 5px 12px;
+          border-radius: 20px;
+          color: #a29bfe;
+          font-size: 13px;
+          font-weight: 700;
+          white-space: nowrap;
+        }
+        body.light-mode .intx-counter {
+          background: #f1f5f9;
+          color: #6c5ce7;
+        }
+
+        /* ── Input de busca ── */
+        .intx-input {
+          width: 100%;
+          padding: 14px 14px 14px 44px;
+          background: #1c1829;
+          border: 1.5px solid #322b48;
+          border-radius: 9px;
+          color: #ffffff;
+          font-size: 15px;
+          outline: none;
+          box-sizing: border-box;
+          transition: border-color .2s;
+          font-family: inherit;
+        }
+        .intx-input::placeholder { color: rgba(255,255,255,0.35); }
+        .intx-input:focus { border-color: #6c5ce7; }
+
+        body.light-mode .intx-input {
+          background: #f8fafc;
+          border-color: #cbd5e1;
+          color: #1e293b;
+        }
+        body.light-mode .intx-input::placeholder { color: #94a3b8; }
+        body.light-mode .intx-input:focus { border-color: #6c5ce7; }
+
+        /* ── Dropdown de sugestões ── */
+        .intx-dropdown {
+          display: none;
+          position: absolute;
+          left: 0; right: 0;
+          top: calc(100% + 4px);
+          background: #1c1829;
+          border: 1.5px solid #322b48;
+          border-radius: 9px;
+          max-height: 220px;
+          overflow-y: auto;
+          z-index: 9999;
+          box-shadow: 0 8px 28px rgba(0,0,0,.55);
+        }
+        body.light-mode .intx-dropdown {
+          background: #ffffff;
+          border-color: #e2e8f0;
+          box-shadow: 0 8px 24px rgba(0,0,0,.10);
+        }
+
+        /* ── Item do dropdown ── */
+        .intx-dropdown-item {
+          padding: 11px 16px;
+          cursor: pointer;
+          color: #e0ddf0;
+          font-size: 14px;
+          border-bottom: 1px solid rgba(255,255,255,.04);
+          transition: background .15s;
+        }
+        .intx-dropdown-item:hover { background: #2d2545; }
+        .intx-dropdown-item:last-child { border-bottom: none; }
+
+        body.light-mode .intx-dropdown-item {
+          color: #1e293b;
+          border-bottom-color: #f1f5f9;
+        }
+        body.light-mode .intx-dropdown-item:hover { background: #f8fafc; }
+
+        /* ── Sem resultados no dropdown ── */
+        .intx-dropdown-empty {
+          padding: 12px 16px;
+          color: #7d7993;
+          font-size: 13px;
+        }
+        body.light-mode .intx-dropdown-empty { color: #94a3b8; }
+
+        /* ── Chips dos fármacos selecionados ── */
+        .intx-chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          padding: 7px 12px;
+          background: rgba(108,92,231,.18);
+          border: 1.5px solid rgba(108,92,231,.45);
+          border-radius: 20px;
+          color: #d6d0f7;
+          font-size: 13px;
+          font-weight: 600;
+        }
+        body.light-mode .intx-chip {
+          background: #f1f5f9;
+          border-color: #cbd5e1;
+          color: #475569;
+        }
+
+        .intx-chip-btn {
+          background: none;
+          border: none;
+          color: #a29bfe;
+          cursor: pointer;
+          font-size: 14px;
+          padding: 0;
+          line-height: 1;
+        }
+        body.light-mode .intx-chip-btn { color: #6c5ce7; }
+
+        /* ── Cards de resultado ── */
+        .intx-card {
+          padding: 18px;
+          border-radius: 10px;
+          margin-bottom: 14px;
+          box-sizing: border-box;
+          border-left-width: 6px;
+          border-left-style: solid;
+        }
+
+        /* Contraindicada 🔴 */
+        .intx-card-contra { background: #2c1519; border-left-color: #ea2027; }
+        body.light-mode .intx-card-contra { background: #fef2f2; border-left-color: #ef4444; }
+
+        /* Alta 🔴/Laranja */
+        .intx-card-alta { background: #2c1e18; border-left-color: #ee5a24; }
+        body.light-mode .intx-card-alta { background: #fff7ed; border-left-color: #f97316; }
+
+        /* Moderada 🟠 */
+        .intx-card-mod { background: #2a2615; border-left-color: #f1c40f; }
+        body.light-mode .intx-card-mod { background: #fefce8; border-left-color: #eab308; }
+
+        /* Leve 🟡 */
+        .intx-card-leve { background: #151d2a; border-left-color: #3498db; }
+        body.light-mode .intx-card-leve { background: #f0f9ff; border-left-color: #3b82f6; }
+
+        /* Seguro ✅ */
+        .intx-card-safe { background: #14271f; border-left-color: #2ecc71; }
+        body.light-mode .intx-card-safe { background: #f0fdf4; border-left-color: #22c55e; }
+
+        /* ── Cabeçalho do card (severidade + score) ── */
+        .intx-card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+          border-bottom: 1px solid rgba(255,255,255,.07);
+          padding-bottom: 9px;
+          flex-wrap: wrap;
+          gap: 6px;
+        }
+        body.light-mode .intx-card-header { border-bottom-color: rgba(0,0,0,.07); }
+
+        .intx-card-title {
+          font-weight: 800;
+          font-size: 13px;
+          letter-spacing: .6px;
+        }
+        /* A cor do título herda da borda esquerda — ver JS: style="color:var(--cor)" */
+
+        .intx-card-badges {
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+
+        .intx-badge-score {
+          color: #fff;
+          background: rgba(255,255,255,.1);
+          padding: 3px 10px;
+          border-radius: 5px;
+          font-size: 12px;
+          font-weight: 700;
+        }
+        body.light-mode .intx-badge-score {
+          background: rgba(0,0,0,.08);
+          color: #334155;
+        }
+
+        .intx-badge-via-classe {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          background: rgba(155,89,182,.25);
+          border: 1px solid rgba(155,89,182,.5);
+          color: #d7aefb;
+          padding: 2px 9px;
+          border-radius: 4px;
+          font-size: 11px;
+          font-weight: 600;
+        }
+        body.light-mode .intx-badge-via-classe {
+          background: rgba(155,89,182,.12);
+          color: #7c3aed;
+        }
+
+        .intx-badge-cls-cls {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          background: rgba(52,152,219,.2);
+          border: 1px solid rgba(52,152,219,.5);
+          color: #74c0fc;
+          padding: 2px 9px;
+          border-radius: 4px;
+          font-size: 11px;
+          font-weight: 600;
+        }
+        body.light-mode .intx-badge-cls-cls {
+          background: rgba(52,152,219,.12);
+          color: #1d4ed8;
+        }
+
+        /* ── Par de fármacos (A ✕ B) ── */
+        .intx-card-pair {
+          color: #eeeeee;
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+        body.light-mode .intx-card-pair { color: #1e293b; }
+
+        /* ── Texto de risco ── */
+        .intx-card-risco {
+          color: #cccccc;
+          font-size: 13px;
+          line-height: 1.6;
+          margin: 0 0 10px 0;
+        }
+        body.light-mode .intx-card-risco { color: #334155; }
+
+        /* ── Caixa de conduta ── */
+        .intx-conduta-box {
+          color: #ffffff;
+          font-size: 13px;
+          line-height: 1.6;
+          margin: 0;
+          background: rgba(0,0,0,.2);
+          padding: 11px;
+          border-radius: 6px;
+        }
+        body.light-mode .intx-conduta-box {
+          background: rgba(0,0,0,.04);
+          color: #334155;
+        }
+
+        /* ── Card "sem interação documentada" ── */
+        .intx-card-safe-body {
+          display: flex;
+          gap: 14px;
+          align-items: flex-start;
+        }
+        .intx-card-safe-icon { font-size: 24px; line-height: 1.2; }
+        .intx-card-safe-title {
+          color: #2ecc71;
+          margin: 0 0 6px 0;
+          font-size: 15px;
+          font-weight: 700;
+        }
+        body.light-mode .intx-card-safe-title { color: #16a34a; }
+        .intx-card-safe-desc {
+          color: #aae1c4;
+          margin: 0;
+          font-size: 13px;
+          line-height: 1.6;
+        }
+        body.light-mode .intx-card-safe-desc { color: #15803d; }
+
+        /* ── Loading spinner ── */
+        .intx-loading {
+          text-align: center;
+          padding: 20px;
+          color: #7d7993;
+          font-size: 14px;
+        }
+        body.light-mode .intx-loading { color: #94a3b8; }
+        .intx-spin { display: inline-block; animation: intxSpin 1s linear infinite; }
+        @keyframes intxSpin { to { transform: rotate(360deg); } }
+
+        /* ── Highlight de texto no dropdown ── */
+        .intx-hl { color: #a29bfe; font-weight: 700; }
+        body.light-mode .intx-hl { color: #6c5ce7; }
+
+        /* ══════════════════════════════════════════════════════════
+           SISTEMA DE IDIOMA STATE-DRIVEN — indestrutível pelo router
+           O atributo [data-current-lang] no container pai controla
+           a visibilidade dos spans bilíngues via CSS puro.
+           Nenhum innerText/textContent pode sobrescrever esse estado.
+        ══════════════════════════════════════════════════════════ */
+
+        /* Estado padrão: oculta ambos (evita flash antes do JS rodar) */
+        .intx-container .lang-pt,
+        .intx-container .lang-es { display: none !important; }
+
+        /* PT ativo */
+        .intx-container[data-current-lang="pt"] .lang-pt { display: inline !important; }
+        .intx-container[data-current-lang="pt"] .lang-es { display: none   !important; }
+
+        /* ES ativo */
+        .intx-container[data-current-lang="es"] .lang-es { display: inline !important; }
+        .intx-container[data-current-lang="es"] .lang-pt { display: none   !important; }
+
+        /* Fallback: sem atributo ainda → mostra PT (estado inicial da página) */
+        .intx-container:not([data-current-lang]) .lang-pt { display: inline !important; }
+        .intx-container:not([data-current-lang]) .lang-es { display: none   !important; }
+
+        /* Placeholder bilíngue — aplicado via JS mas assistido pelo CSS */
+      </style>
+
+      <div class="intx-container" id="card-interactions-container">
+
+        <!-- ── Cabeçalho ── -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+          <div>
+            <!-- Bilíngue state-driven: data-i18n REMOVIDO para evitar sobrescrita por applyTranslations() -->
+            <h3 id="txt-inter-titulo" class="intx-title">
+              <span class="lang-pt">Interações Medicamentosas</span>
+              <span class="lang-es">Interacciones Medicamentosas</span>
+            </h3>
+            <span id="txt-inter-sub" class="intx-sub">
+              <span class="lang-pt">Cruzamento inteligente de fármacos em polifarmácia</span>
+              <span class="lang-es">Cruce inteligente de fármacos en polifarmacia</span>
+            </span>
           </div>
-          <span class="hm-badge hm-badge--soon" data-i18n="hm_int_soon">Em breve</span>
+          <div class="intx-counter">
+            <span id="lbl-contador-meds">0</span>/5
+          </div>
         </div>
 
-        <p class="hm-coming-soon-desc" data-i18n="hm_int_desc">
-          O módulo de interações cruzará automaticamente os fármacos registrados
-          e alertará sobre combinações de risco — críticas, graves e moderadas.
-        </p>
-
-        <div class="hm-coming-soon-features">
-          <div class="hm-csf-item"><i class="fa-solid fa-triangle-exclamation"></i> <span data-i18n="hm_int_feat1">Interações críticas e contraindicadas</span></div>
-          <div class="hm-csf-item"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="hm_int_feat2">Alertas farmacológicos por perfil do paciente</span></div>
-          <div class="hm-csf-item"><i class="fa-solid fa-clock-rotate-left"></i> <span data-i18n="hm_int_feat3">Histórico de combinações verificadas</span></div>
+        <!-- ── Campo de busca + Dropdown ── -->
+        <div style="position:relative;margin-bottom:14px;">
+          <span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);pointer-events:none;font-size:16px;z-index:1;">🔍</span>
+          <input
+            type="text"
+            id="input-busca-interacao"
+            class="intx-input"
+            placeholder="Adicionar fármaco à verificação..."
+            oninput="filtrarDropdownInteracao()"
+            onfocus="mostrarDropdownInteracao()"
+            onblur="setTimeout(()=>{ const d=document.getElementById('dropdown-sugestoes-interacao'); if(d) d.style.display='none'; }, 200)"
+            autocomplete="off"
+          />
+          <div
+            id="dropdown-sugestoes-interacao"
+            class="intx-dropdown"
+            role="listbox"
+          ></div>
         </div>
 
-      </div><!-- /hm-card--interactions -->
+        <!-- ── Chips dos fármacos selecionados ── -->
+        <div id="chips-interacoes-wrapper" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;min-height:0;"></div>
+
+        <!-- ── Botão verificar ── -->
+        <button
+          id="btn-verificar-interacoes"
+          disabled
+          onclick="executarChecagemInteracoes()"
+          style="width:100%;padding:16px;background:#6c5ce7;color:#fff;border:none;border-radius:9px;font-size:16px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;justify-content:center;align-items:center;gap:8px;opacity:.45;"
+        >
+          <span>📊</span>
+          <span id="txt-btn-verificar">
+            <span class="lang-pt">Verificar Interações</span>
+            <span class="lang-es">Verificar Interacciones</span>
+          </span>
+        </button>
+
+        <!-- ── Resultados ── -->
+        <div id="resultados-interacoes-container" style="margin-top:18px;"></div>
+
+      </div><!-- /intx-container -->
 
       <!-- ── SEPARADOR OCULTO — mantém compatibilidade com elementos legados ── -->
       <div style="display:none">
@@ -7559,13 +8786,18 @@
         </div>
 
         <!-- ══ PRESETS DE PROTOCOLO PADRÃO-Ouro ══ -->
-        <div class="bic-preset-section" id="bic-preset-section" aria-live="polite">
+        <!-- bomba-infusion-container: recebe data-current-lang do Watcher global -->
+        <div class="bic-preset-section bomba-infusion-container" id="bic-preset-section" aria-live="polite">
           <div class="bic-preset-header">
             <span class="bic-preset-header-label">
-              <i class="fa-solid fa-flask-vial"></i>Diluição Padrão-Ouro
+              <i class="fa-solid fa-flask-vial"></i>
+              <span class="lang-pt">Diluição Padrão-Ouro</span>
+              <span class="lang-es">Dilución Estándar-Oro</span>
             </span>
             <span class="bic-preset-applied-badge" id="bic-preset-badge">
-              <i class="fa-solid fa-circle-check"></i> Aplicado
+              <i class="fa-solid fa-circle-check"></i>
+              <span class="lang-pt">Aplicado</span>
+              <span class="lang-es">Aplicado</span>
             </span>
           </div>
           <div class="bic-preset-chips" id="bic-preset-chips">
@@ -9234,7 +10466,8 @@ function alternarTema(){
 })();
 
 function setLang(l){
-  currentLang=l;
+  currentLang=l;          /* variável let do escopo do script */
+  window.currentLang=l;   /* CRÍTICO: sincroniza window para módulos externos (_isES, _intxRefreshLang, watcher) */
   document.documentElement.lang=l==='pt'?'pt-BR':'es';
 
   /* Disparo imediato do hint — garante idioma certo mesmo se algo depois
@@ -9318,6 +10551,8 @@ function setLang(l){
       if (proto && typeof _fillRxModal === 'function') _fillRxModal(proto);
     }
   }
+  /* Atualiza chips e placeholder do Verificador de Interações */
+  if (typeof window._ixRefreshLang === 'function') window._ixRefreshLang();
 }
 function applyTranslations(){
   document.querySelectorAll('[data-i18n]').forEach(el=>{
@@ -11704,10 +12939,13 @@ function closeQuickEdit() {
       m.style.setProperty('display', 'none', 'important');
       m.style.removeProperty('bottom'); /* limpa offset do teclado */
     }
-    /* Restaura scroll da página (iOS fix) */
-    document.body.style.overflow  = '';
-    document.body.style.position  = '';
-    document.body.style.width     = '';
+    /* Restaura scroll da página (iOS fix)
+       NOTA: body.position e body.overflow NÃO são limpos aqui porque
+       o Application Shell v4.1 mantém body{position:fixed;overflow:hidden}
+       permanentemente via CSS — limpar via JS quebraria o keyboard fix. */
+    /* document.body.style.overflow  = ''; — gerenciado pelo CSS shell */
+    /* document.body.style.position  = ''; — gerenciado pelo CSS shell */
+    /* document.body.style.width     = ''; — gerenciado pelo CSS shell */
   }, 340);
 }
 
@@ -11734,6 +12972,90 @@ function closeQuickEdit() {
     modal.style.setProperty('bottom', Math.max(0, offsetY) + 'px', 'important');
   };
   /* O listener é adicionado/removido dinamicamente em openQuickEdit/closeQuickEdit */
+})();
+
+/* ══════════════════════════════════════════════════════════════
+   iOS KEYBOARD FIX — GPB Mini-Inputs (visualViewport API)
+   Problema: quando o teclado sobe ao focar um mini-input do GPB,
+   o iOS empurra o layout para cima, cortando a barra roxa.
+   Solução: com o Application Shell (body:position:fixed + app:100dvh)
+   isso não ocorre mais — o scroll fica contido em #scroll-content.
+   Este listener é uma defesa adicional: se o teclado ainda causar
+   deslocamento, scrollamos #scroll-content para compensar sem mover
+   o GPB, e aplicamos um transform no GPB para mantê-lo visível.
+══════════════════════════════════════════════════════════════ */
+(function _initGpbViewportFix() {
+  if (!window.visualViewport) return;
+
+  let _gpbKbHandler = null;
+
+  function _onGpbInputFocus() {
+    /* Remove handler anterior se existir */
+    if (_gpbKbHandler) {
+      window.visualViewport.removeEventListener('resize', _gpbKbHandler);
+    }
+
+    _gpbKbHandler = function() {
+      const gpb = document.getElementById('global-patient-bar');
+      if (!gpb) return;
+
+      const vv = window.visualViewport;
+      /* Altura perdida = diferença entre innerHeight e o visual viewport */
+      const kbHeight = Math.max(0, window.innerHeight - vv.height - vv.offsetTop);
+
+      if (kbHeight > 100) {
+        /* Teclado aberto: eleva o GPB pelo offset do visual viewport */
+        gpb.style.transform = `translateY(${vv.offsetTop}px)`;
+        /* Garante que o GPB permaneça visível acima do teclado */
+        gpb.style.zIndex = '200';
+      } else {
+        /* Teclado fechado: restaura posição original */
+        gpb.style.transform = '';
+        gpb.style.zIndex    = '';
+      }
+    };
+
+    window.visualViewport.addEventListener('resize', _gpbKbHandler, { passive: true });
+    window.visualViewport.addEventListener('scroll', _gpbKbHandler, { passive: true });
+  }
+
+  function _onGpbInputBlur() {
+    /* Pequeno delay para distinguir blur→focus (troca de campo) de blur→fechamento */
+    setTimeout(function() {
+      const gpb = document.getElementById('global-patient-bar');
+      /* Verifica se nenhum mini-input do GPB ainda está focado */
+      const stillFocused = gpb && gpb.contains(document.activeElement)
+                           && document.activeElement.tagName === 'INPUT';
+      if (!stillFocused) {
+        if (_gpbKbHandler) {
+          window.visualViewport.removeEventListener('resize', _gpbKbHandler);
+          window.visualViewport.removeEventListener('scroll', _gpbKbHandler);
+          _gpbKbHandler = null;
+        }
+        if (gpb) {
+          gpb.style.transform = '';
+          gpb.style.zIndex    = '';
+        }
+      }
+    }, 150);
+  }
+
+  /* Delegação de eventos: escuta focus/blur em qualquer input dentro do GPB */
+  document.addEventListener('focusin', function(e) {
+    const gpb = document.getElementById('global-patient-bar');
+    if (gpb && gpb.contains(e.target) && e.target.tagName === 'INPUT') {
+      /* Impede que o iOS role a janela para o input (body está fixed) */
+      e.target.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+      _onGpbInputFocus();
+    }
+  }, { passive: true });
+
+  document.addEventListener('focusout', function(e) {
+    const gpb = document.getElementById('global-patient-bar');
+    if (gpb && gpb.contains(e.target) && e.target.tagName === 'INPUT') {
+      _onGpbInputBlur();
+    }
+  }, { passive: true });
 })();
 
 function saveQuickEdit() {
@@ -17704,6 +19026,707 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     };
   });
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   VERIFICADOR DINÂMICO DE INTERAÇÕES MEDICAMENTOSAS — v3.0
+   Motor Fármaco-Cêntrico · DRUG_ALIASES + scoreClinico 1-5
+   Algoritmo C(n,2) · Suporte PT/ES · Ordenação por score · 🔴🟠🟡
+══════════════════════════════════════════════════════════════════════ */
+(function _initIntxModule() {
+
+  /* ══════════════════════════════════════════════
+     ESTADO INTERNO
+  ══════════════════════════════════════════════ */
+  const INTX_MAX = 5;
+  const INTX_MIN = 2;
+  let _toastTimer = null;
+
+  /* Array gerenciador de strings (nomes de exibição) selecionadas */
+  const selecionadosInteracao = [];
+
+  /* ══════════════════════════════════════════════
+     LISTA ESTÁTICA DE MEDICAMENTOS DISPONÍVEIS
+     Usada para autocomplete independente do DRUG_DB
+  ══════════════════════════════════════════════ */
+  const LISTA_MEDS_DISPONIVEIS = [
+    /* ── Anticonvulsivantes ── */
+    "Ácido Valproico", "Valproato de Sódio", "Divalproato",
+    "Fenitoína", "Carbamazepina", "Lamotrigina", "Levetiracetam",
+    "Topiramato", "Gabapentina", "Pregabalina", "Fenobarbital",
+    /* ── Carbapenêmicos ── */
+    "Meropenem", "Imipenem", "Ertapenem",
+    /* ── Rifamicinas ── */
+    "Rifampicina", "Rifabutina", "Rifapentina",
+    /* ── Anticoagulantes ── */
+    "Apixabana", "Rivaroxabana", "Edoxabana", "Dabigatrana", "Varfarina",
+    /* ── Fluoroquinolonas ── */
+    "Levofloxacino", "Ciprofloxacino", "Moxifloxacino", "Norfloxacino",
+    /* ── Antiarrítmicos ── */
+    "Amiodarona", "Sotalol",
+    /* ── Aminoglicosídeos ── */
+    "Vancomicina", "Gentamicina", "Amicacina", "Tobramicina",
+    /* ── Tetraciclinas ── */
+    "Isotretinoína", "Tetraciclina", "Doxiciclina", "Minociclina",
+    /* ── Sulfonamidas ── */
+    "Sulfametoxazol Trimetoprima", "Cotrimoxazol",
+    /* ── Antimetabólitos ── */
+    "Metotrexato",
+    /* ── Álcool ── */
+    "Álcool", "Etanol",
+    /* ── Nitroimidazóis ── */
+    "Metronidazol",
+    /* ── IECAs ── */
+    "Captopril", "Enalapril", "Lisinopril", "Ramipril", "Perindopril",
+    /* ── BRAs ── */
+    "Losartana", "Valsartana", "Olmesartana", "Telmisartana", "Irbesartana", "Candesartana",
+    /* ── Diuréticos ── */
+    "Espironolactona", "Furosemida",
+    /* ── Antidiabéticos ── */
+    "Metformina",
+    /* ── Relaxantes musculares ── */
+    "Tizanidina",
+    /* ── AINEs ── */
+    "Ibuprofeno", "Diclofenaco", "Naproxeno", "Cetoprofeno",
+    "Meloxicam", "Celecoxibe", "Nimesulida", "Piroxicam",
+    /* ── IPDe5 ── */
+    "Tadalafila", "Sildenafila", "Vardenafila",
+    /* ── Nitratos ── */
+    "Isossorbida", "Nitroglicerina",
+    /* ── Oxazolidinonas ── */
+    "Linezolida", "Tedizolida",
+    /* ── ISRS ── */
+    "Sertralina", "Fluoxetina", "Escitalopram", "Citalopram",
+    "Paroxetina", "Fluvoxamina",
+    /* ── IMAOs ── */
+    "Fenelzina", "Tranilcipromina", "Selegilina", "Moclobemida",
+    /* ── Tricíclicos ── */
+    "Amitriptilina", "Nortriptilina", "Imipramina", "Clomipramina",
+    /* ── Antipsicóticos ── */
+    "Haloperidol", "Quetiapina", "Risperidona", "Olanzapina",
+    "Clozapina", "Aripiprazol", "Ziprasidona",
+    /* ── Benzodiazepínicos ── */
+    "Diazepam", "Lorazepam", "Alprazolam", "Clonazepam",
+    "Midazolam", "Bromazepam",
+    /* ── Opioides ── */
+    "Tramadol", "Morfina", "Codeína", "Oxicodona", "Fentanil", "Metadona",
+    /* ── Estatinas ── */
+    "Atorvastatina", "Sinvastatina", "Rosuvastatina", "Pravastatina",
+    /* ── IBPs ── */
+    "Omeprazol", "Pantoprazol", "Lansoprazol", "Esomeprazol",
+    /* ── Azólicos ── */
+    "Fluconazol", "Itraconazol", "Voriconazol", "Posaconazol",
+    /* ── Macrolídeos ── */
+    "Claritromicina", "Azitromicina", "Eritromicina",
+    /* ── Beta-bloqueadores ── */
+    "Propranolol", "Metoprolol", "Carvedilol", "Bisoprolol",
+    /* ── Corticosteroides ── */
+    "Prednisona", "Dexametasona", "Hidrocortisona", "Metilprednisolona",
+    /* ── Cefalosporinas ── */
+    "Ceftriaxona", "Cefepime", "Ceftazidima", "Cefdinir",
+    /* ── Outros ── */
+    "Clindamicina", "Nitrofurantoína",
+    "Fosfomicina", "Antiácido",
+    "Ferro", "Sulfato Ferroso",
+    "Vacina", "Antibiótico",
+    "Colchicina", "Digoxina"
+  ];
+
+  /* ══════════════════════════════════════════════
+     ONTOLOGIA — LOOKUP DE CLASSES DO FÁRMACO
+     Retorna array com todas as classes ($classe_X)
+     às quais o fármaco normalizado pertence.
+  ══════════════════════════════════════════════ */
+  function getClassesDeFarmaco(nomeNormalizado) {
+    const classes = window.DRUG_CLASSES || {};
+    const resultado = [];
+    for (const [classe, membros] of Object.entries(classes)) {
+      if (Array.isArray(membros) && membros.includes(nomeNormalizado)) {
+        resultado.push(classe);
+      }
+    }
+    return resultado; /* ex: ['$classe_aines', '$classe_outros'] */
+  }
+  window.getClassesDeFarmaco = getClassesDeFarmaco;
+
+  /* ══════════════════════════════════════════════
+     NORMALIZAÇÃO COM RESOLUÇÃO DE ALIASES
+  ══════════════════════════════════════════════ */
+  function normalizarFarmaco(nome) {
+    const limpo = String(nome)
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, '_')
+      .trim();
+    if (window.DRUG_ALIASES && window.DRUG_ALIASES[limpo]) {
+      return window.DRUG_ALIASES[limpo];
+    }
+    return limpo;
+  }
+  /* Expõe globalmente para uso externo */
+  window.normalizarFarmaco = normalizarFarmaco;
+
+  /* ══════════════════════════════════════════════
+     HELPERS
+  ══════════════════════════════════════════════ */
+  /* ── Leitura canônica do idioma global — sempre fresh ──
+     setLang() grava currentLang como 'pt' ou 'es' (lowercase).
+     Comparação SEMPRE em lowercase para evitar mismatch. */
+  function _isES() {
+    /* Varre as variáveis globais possíveis em ordem de prioridade */
+    const raw = (
+      (typeof window.currentLang !== 'undefined' && window.currentLang) ||
+      (typeof window.lang        !== 'undefined' && window.lang)        ||
+      localStorage.getItem('lang')                                       ||
+      localStorage.getItem('idioma')                                     ||
+      'pt'
+    );
+    return String(raw).trim().toLowerCase().startsWith('es');
+  }
+  function _getLang() { return _isES() ? 'es' : 'pt'; }
+
+  function _atualizarContador() {
+    const el = document.getElementById('lbl-contador-meds');
+    if (el) el.textContent = selecionadosInteracao.length;
+  }
+
+  function _atualizarBotao() {
+    const btn = document.getElementById('btn-verificar-interacoes');
+    if (!btn) return;
+    const pode = selecionadosInteracao.length >= INTX_MIN;
+    btn.disabled = !pode;
+    btn.style.opacity = pode ? '1' : '.45';
+    btn.style.cursor  = pode ? 'pointer' : 'not-allowed';
+  }
+
+  /* ══════════════════════════════════════════════
+     DROPDOWN — MOSTRAR / FILTRAR
+  ══════════════════════════════════════════════ */
+  window.mostrarDropdownInteracao = function() {
+    filtrarDropdownInteracao();
+  };
+
+  window.filtrarDropdownInteracao = function() {
+    const inp = document.getElementById('input-busca-interacao');
+    const dd  = document.getElementById('dropdown-sugestoes-interacao');
+    if (!inp || !dd) return;
+
+    const q   = inp.value.trim().toLowerCase();
+    const isES = _isES();
+
+    const filtered = LISTA_MEDS_DISPONIVEIS
+      .filter(m => !selecionadosInteracao.includes(m))
+      .filter(m => q.length === 0 || m.toLowerCase().includes(q))
+      .slice(0, 12);
+
+    if (filtered.length === 0) {
+      dd.innerHTML = `<div class="intx-dropdown-empty">${isES ? 'Sin resultados' : 'Sem resultados'}</div>`;
+      dd.style.display = 'block';
+      return;
+    }
+
+    const esc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    dd.innerHTML = filtered.map(nome => {
+      const hl = q.length > 0
+        ? nome.replace(new RegExp(`(${esc})`, 'gi'), '<span class="intx-hl">$1</span>')
+        : nome;
+      return `<div
+        class="intx-dropdown-item"
+        role="option"
+        onclick="adicionarChipInteracao('${nome.replace(/'/g, "\\'")}')"
+      >💊 ${hl}</div>`;
+    }).join('');
+    dd.style.display = 'block';
+  };
+
+  /* ══════════════════════════════════════════════
+     CHIPS — ADICIONAR / REMOVER / RENDERIZAR
+  ══════════════════════════════════════════════ */
+  window.adicionarChipInteracao = function(nome) {
+    const isES = _isES();
+
+    if (selecionadosInteracao.length >= INTX_MAX) {
+      _mostrarToast(isES ? '⚠️ Máximo de 5 fármacos permitido' : '⚠️ Máximo de 5 fármacos permitido');
+      return;
+    }
+    if (selecionadosInteracao.includes(nome)) return;
+
+    selecionadosInteracao.push(nome);
+
+    const inp = document.getElementById('input-busca-interacao');
+    const dd  = document.getElementById('dropdown-sugestoes-interacao');
+    if (inp) inp.value = '';
+    if (dd)  dd.style.display = 'none';
+
+    renderizarChips();
+    _atualizarContador();
+    _atualizarBotao();
+    /* Limpa resultados anteriores */
+    const res = document.getElementById('resultados-interacoes-container');
+    if (res) res.innerHTML = '';
+  };
+
+  window.removerChipInteracao = function(nome) {
+    const idx = selecionadosInteracao.indexOf(nome);
+    if (idx !== -1) selecionadosInteracao.splice(idx, 1);
+    renderizarChips();
+    _atualizarContador();
+    _atualizarBotao();
+    /* Limpa resultados anteriores */
+    const res = document.getElementById('resultados-interacoes-container');
+    if (res) res.innerHTML = '';
+  };
+
+  window.renderizarChips = function() {
+    const wrap = document.getElementById('chips-interacoes-wrapper');
+    if (!wrap) return;
+    const isES = _isES();
+
+    if (selecionadosInteracao.length === 0) {
+      wrap.innerHTML = '';
+      return;
+    }
+
+    wrap.innerHTML = selecionadosInteracao.map(nome => `
+      <div class="intx-chip">
+        💊 ${nome}
+        <button
+          class="intx-chip-btn"
+          onclick="removerChipInteracao('${nome.replace(/'/g, "\\'")}')"
+          title="${isES ? 'Eliminar' : 'Remover'}"
+        >✕</button>
+      </div>`).join('');
+  };
+
+  /* ══════════════════════════════════════════════
+     TOAST DE LIMITE
+  ══════════════════════════════════════════════ */
+  function _mostrarToast(msg) {
+    let toast = document.getElementById('intx-v3-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'intx-v3-toast';
+      toast.style.cssText = 'position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:#2d2545;color:#fff;padding:12px 22px;border-radius:30px;font-size:14px;z-index:99999;opacity:0;transition:all .3s;pointer-events:none;border:1px solid rgba(108,92,231,.5);';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = msg;
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+    clearTimeout(_toastTimer);
+    _toastTimer = setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(20px)';
+    }, 2600);
+  }
+
+  /* ══════════════════════════════════════════════
+     ENGINE PRINCIPAL — VERIFICAÇÃO BIDIRECIONAL
+     Algoritmo C(n,2) · ordenação por scoreClinico desc
+  ══════════════════════════════════════════════ */
+  window.executarChecagemInteracoes = function() {
+    if (selecionadosInteracao.length < INTX_MIN) return;
+
+    /* Lê o estado atual do idioma via _isES() — lowercase-safe, multi-fonte */
+    const isES = _isES();
+    const lang = isES ? 'es' : 'pt';
+
+    /* querySelectorAll cobre duplicatas de container geradas por router SPA */
+    const containers = Array.from(
+      document.querySelectorAll('#resultados-interacoes-container, .intx-resultados')
+    );
+    /* Garante pelo menos um container — fallback ao getElementById */
+    const container = containers[0] || document.getElementById('resultados-interacoes-container');
+    if (!container) return;
+
+    /* Propaga data-current-lang para todos os containers intx visíveis */
+    document.querySelectorAll('.intx-container, #card-interactions-container').forEach(function(c) {
+      c.setAttribute('data-current-lang', lang);
+    });
+
+    /* ── Loading visual (em todos os containers de resultado encontrados) ── */
+    const loadingHtml = `
+      <div class="intx-loading">
+        <span class="intx-spin">⟳</span>
+        &nbsp;${isES ? 'Cruzando datos clínicos...' : 'Cruzando dados clínicos...'}
+      </div>`;
+    containers.forEach(function(c) { c.innerHTML = loadingHtml; });
+
+    setTimeout(() => {
+      const db = window.INTERACOES_DB || {};
+      const interacoesEncontradas = [];
+
+      /* ══════════════════════════════════════════════════════════
+         MOTOR HIERÁRQUICO v3.1 — Ontologia Farmacológica
+         Algoritmo C(n,2) com 3 níveis de lookup (early-return):
+           Nível 1 → Direto      DB[fA][fB] | DB[fB][fA]
+           Nível 2 → Droga×Cls  DB[fA][$cls_B] | DB[fB][$cls_A]
+           Nível 3 → Cls×Cls    DB[$cls_A][$cls_B]
+      ══════════════════════════════════════════════════════════ */
+      for (let i = 0; i < selecionadosInteracao.length; i++) {
+        for (let j = i + 1; j < selecionadosInteracao.length; j++) {
+
+          const nomA = selecionadosInteracao[i];
+          const nomB = selecionadosInteracao[j];
+          const fA   = normalizarFarmaco(nomA);
+          const fB   = normalizarFarmaco(nomB);
+
+          /* Classes farmacológicas de cada fármaco */
+          const classesA = getClassesDeFarmaco(fA);
+          const classesB = getClassesDeFarmaco(fB);
+
+          let dados    = null;
+          let matchTipo = '';
+          let classeVia = '';
+
+          /* ── NÍVEL 1: Direto (Droga × Droga) ── */
+          if (!dados) {
+            if (db[fA] && db[fA][fB]) {
+              dados     = db[fA][fB];
+              matchTipo = 'direto';
+            } else if (db[fB] && db[fB][fA]) {
+              dados     = db[fB][fA];
+              matchTipo = 'direto';
+            }
+          }
+
+          /* ── NÍVEL 2: Droga × Classe ── */
+          if (!dados) {
+            /* fA → classes de fB */
+            for (const cls of classesB) {
+              if (db[fA] && db[fA][cls]) {
+                dados     = db[fA][cls];
+                matchTipo = 'droga_classe';
+                classeVia = cls;
+                break;
+              }
+            }
+          }
+          if (!dados) {
+            /* fB → classes de fA */
+            for (const cls of classesA) {
+              if (db[fB] && db[fB][cls]) {
+                dados     = db[fB][cls];
+                matchTipo = 'droga_classe';
+                classeVia = cls;
+                break;
+              }
+            }
+          }
+
+          /* ── NÍVEL 3: Classe × Classe ── */
+          if (!dados) {
+            outer:
+            for (const clsA of classesA) {
+              for (const clsB of classesB) {
+                if (db[clsA] && db[clsA][clsB]) {
+                  dados     = db[clsA][clsB];
+                  matchTipo = 'classe_classe';
+                  classeVia = `${clsA} ✕ ${clsB}`;
+                  break outer;
+                }
+                /* Bidirecional na Classe×Classe */
+                if (db[clsB] && db[clsB][clsA]) {
+                  dados     = db[clsB][clsA];
+                  matchTipo = 'classe_classe';
+                  classeVia = `${clsB} ✕ ${clsA}`;
+                  break outer;
+                }
+              }
+            }
+          }
+
+          /* ── Push sem duplicatas ── */
+          if (dados) {
+            const jaExiste = interacoesEncontradas.some(it =>
+              (it.med1 === nomA && it.med2 === nomB) ||
+              (it.med1 === nomB && it.med2 === nomA)
+            );
+            if (!jaExiste) {
+              interacoesEncontradas.push({
+                med1:      nomA,
+                med2:      nomB,
+                config:    dados,
+                matchTipo: matchTipo,
+                classeVia: classeVia
+              });
+            }
+          }
+        }
+      }
+
+      /* ── Sem interação documentada ── */
+      if (interacoesEncontradas.length === 0) {
+        const titVerde = isES
+          ? 'Ninguna interacción grave mapeada entre los fármacos seleccionados.'
+          : 'Nenhuma interação grave mapeada entre os fármacos selecionados.';
+        const descVerde = isES
+          ? 'No se encontraron cruces documentados en la base de datos clínica. Esto no excluye interacciones no incluidas en esta versión — consulte fuentes especializadas.'
+          : 'Nenhum cruzamento documentado foi encontrado na base de dados clínica. Isso não exclui interações não incluídas nesta versão — consulte fontes especializadas.';
+        const safeHtml = `
+          <div class="intx-card intx-card-safe">
+            <div class="intx-card-safe-body">
+              <span class="intx-card-safe-icon">✅</span>
+              <div>
+                <h4 class="intx-card-safe-title">${titVerde}</h4>
+                <p class="intx-card-safe-desc">${descVerde}</p>
+              </div>
+            </div>
+          </div>`;
+        containers.forEach(function(c) { c.innerHTML = safeHtml; });
+        return;
+      }
+
+      /* ── Ordenação por scoreClinico desc (mais crítico primeiro) ── */
+      interacoesEncontradas.sort((a, b) =>
+        ((b.config.scoreClinico || 0) - (a.config.scoreClinico || 0))
+      );
+
+      /* ── Renderização dos cards de alerta ── */
+      const htmlResultados = interacoesEncontradas.map(item => {
+        const score = item.config.scoreClinico || 0;
+
+        /* Classe CSS + cor do título (via CSS var inline — sem hardcode de fundo) */
+        let cardClass, corTitulo, txtTitulo;
+        switch (item.config.gravidade) {
+          case 'contraindicada':
+            cardClass  = 'intx-card-contra';
+            corTitulo  = 'var(--intx-contra-borda, #ea2027)';
+            txtTitulo  = isES ? '🔴 CONTRAINDICADO' : '🔴 CONTRAINDICADO';
+            break;
+          case 'alta':
+            cardClass  = 'intx-card-alta';
+            corTitulo  = 'var(--intx-alta-borda, #ee5a24)';
+            txtTitulo  = isES ? '🔴 ALTO RIESGO DE MUERTE O INTERNACIÓN' : '🔴 ALTO RISCO DE MORTE OU INTERNAÇÃO';
+            break;
+          case 'moderada':
+            cardClass  = 'intx-card-mod';
+            corTitulo  = 'var(--intx-mod-borda, #f1c40f)';
+            txtTitulo  = isES ? '🟠 CAMBIA CONDUCTA INMEDIATAMENTE' : '🟠 MUDA CONDUTA IMEDIATAMENTE';
+            break;
+          default:
+            cardClass  = 'intx-card-leve';
+            corTitulo  = 'var(--intx-leve-borda, #3498db)';
+            txtTitulo  = isES ? '🟡 SOLO MONITORIZACIÓN' : '🟡 APENAS MONITORIZAÇÃO';
+        }
+
+        const descricao = item.config.descricao
+          ? (item.config.descricao[lang] || item.config.descricao.pt || '')
+          : '';
+        const conduta = item.config.conduta
+          ? (item.config.conduta[lang] || item.config.conduta.pt || '')
+          : '';
+        const lblRisco   = isES ? 'Riesgo:'   : 'Risco:';
+        const lblConduta = isES ? 'Conducta:' : 'Conduta:';
+
+        /* ── Badge de match tipo (Ontologia) — usa classes CSS ── */
+        let badgeMatchHtml = '';
+        if (item.matchTipo === 'droga_classe') {
+          const rotulo = isES ? 'Vía clase' : 'Via classe';
+          const cls = item.classeVia.replace(/^\$classe_/, '').replace(/_/g, ' ');
+          badgeMatchHtml = `<span class="intx-badge-via-classe">🏷️ ${rotulo}: ${cls}</span>`;
+        } else if (item.matchTipo === 'classe_classe') {
+          const rotulo = isES ? 'Clase × Clase' : 'Classe × Classe';
+          const cls = item.classeVia.replace(/\$classe_/g, '').replace(/_/g, ' ');
+          badgeMatchHtml = `<span class="intx-badge-cls-cls">🔬 ${rotulo}: ${cls}</span>`;
+        }
+
+        return `
+          <div class="intx-card ${cardClass}">
+            <div class="intx-card-header">
+              <span class="intx-card-title" style="color:${corTitulo};">${txtTitulo}</span>
+              <div class="intx-card-badges">
+                ${badgeMatchHtml}
+                ${score > 0 ? `<span class="intx-badge-score">⭐ ${isES ? 'Impacto' : 'Impacto'}: ${score}/5</span>` : ''}
+              </div>
+            </div>
+            <div class="intx-card-pair">
+              <b>${item.med1}</b> ✕ <b>${item.med2}</b>
+            </div>
+            <p class="intx-card-risco">
+              <b>${lblRisco}</b> ${descricao}
+            </p>
+            ${conduta ? `
+            <p class="intx-conduta-box">
+              <b>${lblConduta}</b> ${conduta}
+            </p>` : ''}
+          </div>`;
+      }).join('');
+
+      /* ── Injeta HTML final em todos os containers de resultado ── */
+      /* Envolve em div com data-current-lang para que os cards já nasçam
+         com o CSS de exclusão mútua ativo (caso contenham spans .lang-*) */
+      const htmlComLang = `<div data-current-lang="${lang}">${htmlResultados}</div>`;
+      containers.forEach(function(c) { c.innerHTML = htmlComLang; });
+
+      /* ── Scroll suave para o primeiro container visível ── */
+      setTimeout(() => {
+        const primeiro = containers.find(function(c) {
+          return c.offsetParent !== null; /* visível no layout */
+        });
+        if (primeiro) primeiro.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 80);
+
+    }, 160);
+  };
+
+  /* ══════════════════════════════════════════════
+     REFRESH DE IDIOMA — reativo + defensivo
+     Chamado por setLang() via window._ixRefreshLang
+     + pelo setInterval watcher de backup.
+  ══════════════════════════════════════════════ */
+  function _intxRefreshLang() {
+    try {
+      /* ── Leitura multi-fonte (lowercase-safe) ── */
+      const isES = _isES();
+      const lang = isES ? 'es' : 'pt';
+
+      /* Diagnóstico para console */
+      const _raw = (
+        (typeof window.currentLang !== 'undefined' && window.currentLang) ||
+        (typeof window.lang        !== 'undefined' && window.lang)        ||
+        localStorage.getItem('lang') || 'pt'
+      );
+      console.log(
+        `[MedCases·Intx] _intxRefreshLang() → bruto:"${_raw}" isES:${isES} lang:"${lang}"`
+      );
+
+      /* ══════════════════════════════════════════════════════════
+         NÚCLEO STATE-DRIVEN — imune a sobrescrita do router/applyTranslations
+         Estratégia: um único setAttribute no container pai activa
+         o CSS de exclusão mútua .lang-pt / .lang-es automaticamente.
+         Nenhum innerText é tocado — o DOM não precisa ser reescrito.
+      ══════════════════════════════════════════════════════════ */
+
+      /* 1. Marca TODOS os containers intx presentes na árvore
+            (cobre duplicatas geradas por router SPA) */
+      const containers = document.querySelectorAll(
+        '.intx-container, #card-interactions-container'
+      );
+      if (containers.length === 0) {
+        console.warn('[MedCases·Intx] Container .intx-container não encontrado no DOM.');
+      }
+      containers.forEach(function(c) {
+        c.setAttribute('data-current-lang', lang);
+      });
+
+      /* 2. Placeholder do input (único elemento que não tem span filhos) */
+      document.querySelectorAll('#input-busca-interacao').forEach(function(inp) {
+        inp.placeholder = isES
+          ? 'Añadir fármaco a la verificación...'
+          : 'Adicionar fármaco à verificação...';
+      });
+
+      /* 3. Re-renderiza chips (botão ✕ muda tooltip de idioma) */
+      if (typeof renderizarChips === 'function') renderizarChips();
+
+      /* 4. Re-renderiza cards de resultado se já houver checagem visível */
+      if (window.selecionadosInteracao && window.selecionadosInteracao.length >= 2) {
+        window.executarChecagemInteracoes();
+      }
+
+    } catch (err) {
+      console.error('[MedCases·Intx] Erro em _intxRefreshLang():', err);
+    }
+  }
+  window._intxRefreshLang = _intxRefreshLang;
+
+  /* ── Aliases de compatibilidade (setLang() chama _ixRefreshLang) ── */
+  window._ixLangRefresh  = _intxRefreshLang;
+  window._ixRefreshLang  = _intxRefreshLang;
+
+  /* ── Fecha dropdown ao clicar fora do painel ── */
+  document.addEventListener('click', function(e) {
+    const card = document.getElementById('card-interactions-container');
+    if (card && !card.contains(e.target)) {
+      const dd = document.getElementById('dropdown-sugestoes-interacao');
+      if (dd) dd.style.display = 'none';
+    }
+  });
+
+  /* ── Compat: aliases legados ── */
+  window.ixVerificar         = window.executarChecagemInteracoes;
+  window._ixRefreshLang      = window._intxRefreshLang;
+  window.intxFilterSuggestions = window.filtrarDropdownInteracao;
+  window.intxSelecionarFarmaco = window.adicionarChipInteracao;
+
+  /* Stubs legados */
+  window._intxRemover    = window.removerChipInteracao;
+  window.intxSearchKeydown = function() {};
+
+  const _dbNodes     = window.INTERACOES_DB  ? Object.keys(window.INTERACOES_DB).length  : 0;
+  const _aliasCount  = window.DRUG_ALIASES   ? Object.keys(window.DRUG_ALIASES).length   : 0;
+  const _classCount  = window.DRUG_CLASSES   ? Object.keys(window.DRUG_CLASSES).length   : 0;
+  const _totalMembrs = window.DRUG_CLASSES
+    ? Object.values(window.DRUG_CLASSES).reduce((acc, arr) => acc + (Array.isArray(arr) ? arr.length : 0), 0)
+    : 0;
+  console.log(
+    `[MedCases] Motor de Interações v3.1 (Ontologia Farmacológica) inicializado.\n` +
+    `  🗃️  DB nós raiz    : ${_dbNodes}\n` +
+    `  🏷️  DRUG_CLASSES   : ${_classCount} classes · ${_totalMembrs} membros totais\n` +
+    `  🔗  DRUG_ALIASES   : ${_aliasCount} entradas\n` +
+    `  🔬  Motor hierárq. : Nível 1 (direto) → Nível 2 (droga×classe) → Nível 3 (classe×classe)`
+  );
+
+  /* ══════════════════════════════════════════════════════════════════
+     WATCHER DE AUTOCURA DOM — Arquitetura Self-Healing
+     Inspeciona o DOM físico a cada 300ms em vez de confiar em memória.
+     Se o router SPA recriar o HTML e apagar o atributo data-current-lang,
+     este watcher detecta pela AUSÊNCIA do atributo correto e força
+     _intxRefreshLang() imediatamente, curando o DOM reconstituído.
+  ══════════════════════════════════════════════════════════════════ */
+  setInterval(function _intxDOMWatcher() {
+    const lang = _getLang(); /* 'pt' | 'es' — sempre fresco, multi-fonte */
+
+    /* ── 1. Módulo de Interações ── */
+    const intxContainers = document.querySelectorAll(
+      '.intx-container, #card-interactions-container'
+    );
+    let precisaRefreshIntx = (intxContainers.length === 0);
+    intxContainers.forEach(function(c) {
+      if (c.getAttribute('data-current-lang') !== lang) precisaRefreshIntx = true;
+    });
+    if (precisaRefreshIntx) {
+      console.log(
+        `[MedCases·Intx] DOM resetado pelo router (lang="${lang}"). Autocurando...`
+      );
+      _intxRefreshLang();
+    }
+
+    /* ── 2. Bomba de Infusão ── */
+    document.querySelectorAll('.bomba-infusion-container').forEach(function(c) {
+      if (c.getAttribute('data-current-lang') !== lang) {
+        console.log(
+          `[MedCases·Bomba] Sincronizando Bomba → lang="${lang}"`
+        );
+        c.setAttribute('data-current-lang', lang);
+      }
+    });
+
+    /* ── 3. Garante que o <body> carregue o atributo também ──
+            Permite que regras CSS globais :not([data-current-lang]) funcionem
+            corretamente enquanto os módulos individuais não foram carregados */
+    if (document.body.getAttribute('data-current-lang') !== lang) {
+      document.body.setAttribute('data-current-lang', lang);
+    }
+
+  }, 300);
+
+})(); /* fim _initIntxModule */
+
+/* ─── Motor de Interações v3.0 — DRUG_ALIASES + scoreClinico 1-5 · 2026-06-19 ─── */
+
+/* ─── Stubs de compatibilidade para evitar ReferenceError em código legado ─── */
+(function _legacyIxCompat() {
+
+  /* Mantém _verificarInteracoes acessível (usado em infusion_alert_check) */
+  if (typeof window._verificarInteracoes === 'undefined') {
+    window._verificarInteracoes = function() { return []; };
+  }
+
+  /* Bloco legado removido — motor v3.0 ativo em _initIntxModule acima */
+  /* [CÓDIGO LEGADO REMOVIDO — v3.0 2026-06-19] */
+
+})(); /* fim _legacyIxCompat */
 
 document.addEventListener('DOMContentLoaded', () => {
 

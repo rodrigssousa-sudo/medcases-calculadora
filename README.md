@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-2.6.0-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-2.7.0-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-PWA%20%7C%20WebView-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/i18n-PT%20%7C%20ES-yellow?style=for-the-badge)
@@ -87,7 +87,7 @@ git push origin main
 
 ## ✅ Funcionalidades
 
-### 🏠 Aba Início — Perfil do Paciente
+### 🏠 Aba Início — Perfil do Paciente + Verificador de Interações
 
 Preencha os dados do paciente uma vez e todos os módulos consomem automaticamente:
 
@@ -102,6 +102,95 @@ Preencha os dados do paciente uma vez e todos os módulos consomem automaticamen
 - Modal de alerta crítico automático para CKD G3b/G4/G5
 - Chips de resumo rápido (BSA, ClCr, IMC, TFG) sempre visíveis
 - Acordeão de fórmulas com visualização estilo LaTeX
+
+---
+
+### ⚡ Card: Verificador Dinâmico de Interações Medicamentosas — v2.0
+
+Posicionado logo abaixo do card do paciente na aba Início. Utiliza banco de dados fármaco-cêntrico dedicado com motor bidirecional.
+
+#### Arquitetura
+
+| Componente | Detalhe |
+|---|---|
+| **Banco de dados** | `database/interacoes.js` → `window.INTERACOES_DB` |
+| **Motor** | `executarChecagemInteracoes()` — algoritmo O(n²) de pares C(n,2) |
+| **Lookup** | Bidirecional: verifica A→B e B→A automaticamente |
+| **Normalização** | `_normalizarChave()` — remove acentos, espaços e converte para minúsculas |
+| **Autocomplete** | Alimentado pelo `window.DRUG_DB` global (toda a base de fármacos) |
+| **Limite** | Min 2 / Max 5 fármacos por verificação |
+| **i18n** | Totalmente bilíngue PT/ES (descrição + conduta) |
+
+#### 4 Níveis de Gravidade com Cores Dedicadas
+
+| Nível | Cor | Significado Clínico |
+|---|---|---|
+| `contraindicada` | 🔴 Vermelho Escuro | Associação PROIBIDA — não utilizar em hipótese alguma |
+| `alta` | 🟥 Vermelho | Evitar ou monitorização ultra-estreita com ajuste de dose |
+| `moderada` | 🟡 Amarelo | Cautela e monitoramento, ajuste de dose pode ser necessário |
+| `leve` | 🔵 Azul | Monitorar se fatores de risco presentes |
+
+#### Interações Mapeadas (v1.0 — 23 pares)
+
+| Par | Gravidade |
+|---|---|
+| Captopril × Losartana | Contraindicada |
+| Enalapril × Valsartana | Contraindicada |
+| Tadalafila × Isossorbida | Contraindicada |
+| Claritromicina × Sinvastatina | Contraindicada |
+| Amiodarona × Levofloxacino | Contraindicada |
+| Captopril × Espironolactona | Alta |
+| Enalapril × Ibuprofeno | Moderada |
+| Amiodarona × Varfarina | Alta |
+| Amiodarona × Digoxina | Alta |
+| Levofloxacino × Metformina | Alta |
+| Carvedilol × Clonidina | Alta |
+| AAS × Varfarina | Alta |
+| Insulina × Atenolol | Alta |
+| Amiodarona × Sinvastatina | Moderada |
+| Furosemida × Digoxina | Moderada |
+| Metformina × Ibuprofeno | Moderada |
+| Levofloxacino × Ibuprofeno | Moderada |
+| Claritromicina × Colchicina | Alta |
+| AAS × Furosemida | Leve |
+| Metformina × Ranitidina | Leve |
+| Anlodipino × Sinvastatina | Leve |
+| Losartana × Fluconazol | Leve |
+| Atorvastatina × Omeprazol | Leve |
+
+#### IDs e Funções Públicas
+
+```javascript
+// Ponto de entrada principal
+window.executarChecagemInteracoes()
+
+// Autocomplete
+window.intxFilterSuggestions(query)
+window.intxSelecionarFarmaco(drugId)
+window.intxSearchKeydown(event)
+
+// Gestão de chips
+window._intxRemover(drugId)
+window._intxRefreshLang()       // atualiza PT↔ES em tempo real
+
+// Aliases de compatibilidade (legado v1.0)
+window.ixVerificar               // → executarChecagemInteracoes
+window.ixFilterSuggestions       // → intxFilterSuggestions
+window.ixSelectDrug              // → intxSelecionarFarmaco
+```
+
+#### IDs dos Elementos HTML (prefixo `intx-`)
+
+```html
+#intx-search-input    <!-- campo de busca de fármacos -->
+#intx-suggestions     <!-- dropdown autocomplete -->
+#intx-chips-wrap      <!-- container dos chips/badges -->
+#intx-chips           <!-- área dos chips individuais -->
+#intx-count-badge     <!-- badge contador "2/5" no header -->
+#intx-hint            <!-- texto contextual de orientação -->
+#intx-verify-btn      <!-- botão "Verificar Interações" -->
+#intx-results         <!-- área de resultados (cards por par) -->
+```
 
 ---
 
@@ -310,9 +399,13 @@ window.patientData = {
 ```
 medcases-calculadora/
 │
-├── index.html                   ← App principal (SPA completa, ~613 KB)
+├── index.html                   ← App principal (SPA completa, ~940+ KB)
 │
 ├── database/
+│   ├── interacoes.js            ← window.INTERACOES_DB
+│   │                               23 pares de interações · 4 níveis de gravidade
+│   │                               Motor bidirecional O(n²) · PT/ES nativo
+│   │
 │   ├── psicofarmacos.js         ← window.PSICOFARMACOS_DRUGS_DB
 │   │                               75+ fármacos psiquiátricos e neurológicos
 │   │                               (Antidepressivos · Ansiolíticos · Antipsicóticos ·
@@ -648,6 +741,291 @@ A partir daí, cada push para `main` dispara o pipeline automaticamente.
 ---
 
 ## 🔄 Changelog por Sessão
+
+### 2026-06-19 — v2.7.0: Verificador Dinâmico de Interações Medicamentosas v2.0
+
+#### Arquitetura Fármaco-Cêntrica Bidirecional — Substituição Completa do Módulo `ix-`
+
+**Objetivo:** Substituir o módulo de text-mining `_initIxModule()` por uma arquitetura dedicada com banco de dados próprio, namespacing limpo e motor O(n²) bidirecional.
+
+**Arquivos criados/modificados:**
+
+| Arquivo | Operação | Resumo |
+|---|---|---|
+| `database/interacoes.js` | **CRIADO** | 26.959 bytes · `window.INTERACOES_DB` · 23 pares · 4 níveis de gravidade · PT/ES nativo |
+| `index.html` | **MODIFICADO** | Script tag no `<head>` + ~420 linhas CSS `intx-` + HTML card refatorado + motor JS v2.0 |
+| `README.md` | **MODIFICADO** | Badge v2.7.0 · seção Verificador · tabela dos 23 pares · API pública documentada |
+
+**Banco de dados `database/interacoes.js`:**
+
+| Nó Raiz | Nº de Interações | Gravidades |
+|---|---|---|
+| `captopril` | 2 | contraindicada, alta |
+| `enalapril` | 2 | contraindicada, alta |
+| `amiodarona` | 4 | contraindicada (×2), alta (×2) |
+| `metformina` | 1 | contraindicada |
+| `lítio` | 2 | alta, moderada |
+| `metronidazol` | 2 | alta (×2) |
+| `fluconazol` | 2 | alta, moderada |
+| `ciprofloxacino` | 2 | alta, moderada |
+| `tramadol` | 2 | alta (×2) |
+| `clozapina` | 2 | contraindicada, alta |
+| `sildenafila` | 2 | contraindicada, moderada |
+
+**Motor JS `_initIntxModule()` — funções públicas:**
+
+| Função Global | Papel |
+|---|---|
+| `executarChecagemInteracoes()` | Ponto de entrada — dispara o O(n²) C(n,2) |
+| `intxFilterSuggestions(query)` | Autocomplete em tempo real via `DRUG_DB` |
+| `intxSelecionarFarmaco(id)` | Adiciona fármaco à seleção (max 5) |
+| `intxSearchKeydown(event)` | Navegação por teclado no dropdown |
+| `window._intxRemover(id)` | Remove chip da seleção |
+| `window._intxRefreshLang()` | Re-renderiza toda a UI ao trocar PT↔ES |
+| Aliases `ixVerificar`, `ixSelectDrug` etc. | Compatibilidade retroativa com código legado |
+
+**Validação Playwright (2026-06-19):**
+```
+[log] [MedCases] Motor de Interações v2.0 inicializado. DB: 14 nós raiz ✅
+[warn] [DRUG ADAPTER] Erro em procainamida ReferenceError: torsadesPrevias (pré-existente, não relacionado)
+Novos erros JavaScript introduzidos: 0 ✅
+IDs ix- órfãos: 0 ✅
+```
+
+---
+
+### 2026-06-17 — v2.6.6: Grupo 23 — Dipiridamol + Nitroglicerina IV em `database/cardio.js`
+
+#### Injeção do Grupo 23 — Antiagregante Vasodilatador + Nitrato IV
+
+**Arquivo:** `database/cardio.js` — inserção após linha 16.638 (pós `}); /* fim Grupo 22 */`)
+
+**Fármacos adicionados:**
+
+| Chave | Nome | Classe | Destaque clínico |
+|---|---|---|---|
+| `dipiridamol` | Dipiridamol | Antiagregante / vasodilatador | 200 mg LP + AAS (AVC) · 0,56 mg/kg IV (estresse) · roubo coronariano · potencializa adenosina |
+| `nitroglicerinaIV` | Nitroglicerina IV | Nitrato IV | 5–10 mcg/min → até 400 mcg/min · **CI absoluta: PDE-5** · IAM de VD · `pde5InteractionFatal: true` |
+
+**Conversão técnica (2 chamadas `t(lang,...)` convertidas):**
+
+| Fármaco | Campo convertido |
+|---|---|
+| `dipiridamol` | `safetyFlags.warning` |
+| `nitroglicerinaIV` | `safetyFlags.warning` |
+
+**Campos especiais:**
+- `dipiridamol`: `hemodynamicRules.holdIf` (PAS <90 · roubo coronariano) · `coronaryStealRisk: true` · uso duplo (preventivo oral + teste IV)
+- `nitroglicerinaIV`: `hemodynamicRules.holdIf` (PAS <90 · PAM <65 · IAM de VD) · `therapeuticTargets` · `ecgSafety` · `pde5InteractionFatal: true` · `calculator` (titulação por peso)
+
+**Validação estrutural:**
+```
+Arquivo após inserção: 16.951 linhas  (+ 311 linhas vs v2.6.5)
+Fecho da IIFE })();  →  linha 16.951  ✅
+Object.assign Grupo 23 fechado: linha 16.949  ✅
+t(lang,...) fora de calculate(): 0  ✅
+Novos erros JavaScript introduzidos: 0  ✅
+```
+
+---
+
+### 2026-06-17 — v2.6.5: Grupo 22 — P2Y12 Reversíveis em `database/cardio.js`
+
+#### Injeção do Grupo 22 — Antiagregantes P2Y12 Reversíveis (Oral + IV)
+
+**Arquivo:** `database/cardio.js` — inserção após linha 16.015 (pós `}); /* fim Grupo 21 */`)
+
+**Fármacos adicionados:**
+
+| Chave | Nome | Via | Destaque clínico |
+|---|---|---|---|
+| `ticagrelor` | Ticagrelor | Oral | 180 mg ataque · 90 mg 12/12h (1º ano) · 60 mg estendido · **CI hem. intracraniana** · dispneia · bradicardia · CYP3A4 |
+| `cangrelor` | Cangrelor | IV | Bolus 30 mcg/kg + infusão 4 mcg/kg/min · t½ 3–6 min · somente hospitalar · transição oral crítica |
+
+**Conversão técnica (6 chamadas `t(lang,...)` convertidas):**
+
+| Fármaco | Campo convertido |
+|---|---|
+| `ticagrelor` | `renalAdjustment.message` · `hepaticAdjustment.message` · `safetyFlags.warning` |
+| `cangrelor` | `renalAdjustment.message` · `hepaticAdjustment.message` · `safetyFlags.warning` |
+
+**Campos especiais:**
+- `ticagrelor`: `pharmacokinetics` · `priorICHContraindication` · `dyspneaRisk` · `bradyarrhythmiaRisk` · `cyp3a4InteractionRisk` · interação AAS dose alta
+- `cangrelor`: `pharmacokinetics.offset` (recuperação plaquetária) · `transitionInteractions` (clop./prasugrel vs. ticagrelor) · `hospitalUseOnly: true` · `rapidOffset` · `periPCIUse`
+
+**Validação estrutural:**
+```
+Arquivo após inserção: 16.640 linhas  (+ 623 linhas vs v2.6.4)
+Fecho da IIFE })();  →  linha 16.640  ✅
+Object.assign Grupo 22 fechado: linha 16.638  ✅
+t(lang,...) fora de calculate(): 0  ✅
+Novos erros JavaScript introduzidos: 0  ✅
+```
+
+---
+
+### 2026-06-17 — v2.6.4: Grupo 21 — Antiagregantes P2Y12 em `database/cardio.js`
+
+#### Injeção do Grupo 21 — Antiagregantes P2Y12
+
+**Arquivo:** `database/cardio.js` — inserção após linha 15.380 (pós `}); /* fim Grupo 20 */`)
+
+**Fármacos adicionados:**
+
+| Chave | Nome | Classe | Destaque clínico |
+|---|---|---|---|
+| `clopidogrel` | Clopidogrel | P2Y12 irreversível – pró-fármaco | Ativação CYP2C19 · 300–600 mg ataque · 75 mg/dia · omeprazol reduz ativação · `pharmacogenomics` · sem antídoto |
+| `prasugrel` | Prasugrel | P2Y12 irreversível – alta potência | **CI absoluta em AVC/AIT** · 60 mg ataque · 10 mg/dia · 5 mg se <60 kg · evitar ≥75 anos · sem antídoto |
+
+**Conversão técnica (6 chamadas `t(lang,...)` convertidas):**
+
+| Fármaco | Campo convertido |
+|---|---|
+| `clopidogrel` | `renalAdjustment.message` · `hepaticAdjustment.message` · `safetyFlags.warning` |
+| `prasugrel` | `renalAdjustment.message` · `hepaticAdjustment.message` · `safetyFlags.warning` |
+
+**Campos especiais:**
+- `clopidogrel`: `pharmacogenomics` (CYP2C19) · `cyp2c19ActivationRequired` · `daptMedication`
+- `prasugrel`: `priorStrokeContraindication` (absoluta) · `elderlyHighRisk` · `lowWeightDoseCaution` · `lowWeightOrElderly` na dose
+
+**Validação estrutural:**
+```
+Arquivo após inserção: 16.017 linhas  (+ 635 linhas vs v2.6.3)
+Fecho da IIFE })();  →  linha 16.017  ✅
+Object.assign Grupo 21 fechado: linha 16.015  ✅
+t(lang,...) fora de calculate(): 0  ✅
+Novos erros JavaScript introduzidos: 0  ✅
+```
+
+---
+
+### 2026-06-17 — v2.6.3: Grupo 20 — Dabigatrana + AAS em `database/cardio.js`
+
+#### Injeção do Grupo 20 — DOAC Inibidor de Trombina + Antiagregante Base
+
+**Arquivo:** `database/cardio.js` — inserção após linha 14.735 (pós `}); /* fim Grupo 19 */`)
+
+**Fármacos adicionados:**
+
+| Chave | Nome PT | Classe | Destaque clínico |
+|---|---|---|---|
+| `dabigatrana` | Dabigatrana | DOAC – inibidor direto trombina | Cápsula intacta · fortemente renal-dependente · dispepsia frequente · antídoto **idarucizumabe** · dronedarona/cetoconazol P-gp |
+| `aas` | Ácido Acetilsalicílico | Antiagregante / inibidor COX-1 irreversível | Dose carga SCA 160–325 mg · manutenção 75–100 mg · DAPT · síndrome de Reye · risco GI + asma AAS |
+
+**Conversão técnica (6 chamadas `t(lang,...)` convertidas):**
+
+| Fármaco | Campo convertido |
+|---|---|
+| `dabigatrana` | `renalAdjustment.message` · `hepaticAdjustment.message` · `safetyFlags.warning` |
+| `aas` | `renalAdjustment.message` · `hepaticAdjustment.message` · `safetyFlags.warning` |
+
+**Campos especiais:**
+- `dabigatrana`: `administration` (cápsula inteira/umidade), `dyspepsiaRisk`, `anticoagulationMonitoring.therapeuticTargets` (TTPa qualitativo)
+- `aas`: `antiplateletMonitoring`, `acsLoading`, `dapt`, `perioperativeManagement` (stent), `asthmaAERDRisk`, `highAlertInCombination`
+
+**Validação estrutural:**
+```
+Arquivo após inserção: 15.382 linhas  (+ 645 linhas vs v2.6.2)
+Fecho da IIFE })();  →  linha 15.382  ✅
+Object.assign Grupo 20 fechado: linha 15.380  ✅
+t(lang,...) fora de calculate(): 0  ✅
+Novos erros JavaScript introduzidos: 0  ✅
+```
+
+---
+
+### 2026-06-17 — v2.6.2: Grupo 19 — Anticoagulantes Orais em `database/cardio.js`
+
+#### Injeção do Grupo 19 — 4 Anticoagulantes Orais
+
+**Arquivo:** `database/cardio.js` — inserção após linha 13.539 (pós `}); /* fim Grupo 18 */`), antes de `})();`
+
+**Fármacos adicionados como `Object.assign(window.CARDIO_DRUGS_DB, { ... })` — Grupo 19:**
+
+| Chave | Nome PT | Classe | Destaque clínico |
+|---|---|---|---|
+| `varfarina` | Varfarina (AVK) | Antagonista vitamina K | INR obrigatório · janela estreita · múltiplas interações · antídotos: vit. K + PCC · contraindicada gestação |
+| `apixabana` | Apixabana (DOAC) | Inibidor direto Xa | 2 doses/dia · critérios de redução (≥2 de: idade≥80/peso≤60/Cr≥1,5) · sem INR · antídoto: andexanet alfa |
+| `rivaroxabana` | Rivaroxabana (DOAC) | Inibidor direto Xa | Doses altas com alimento · ClCr-dependente · DAC/DAP 2,5 mg · antídoto: andexanet alfa |
+| `edoxabana` | Edoxabana (DOAC) | Inibidor direto Xa | Parenteral obrigatório antes · alerta ClCr >95 em FA · antídoto: andexanet alfa |
+
+**Conversão técnica obrigatória aplicada (12 chamadas `t(lang,...)` convertidas):**
+
+| Fármaco | Campo | Tipo original → final |
+|---|---|---|
+| `varfarina` | `renalAdjustment.message` | `t(lang,...)` → `{pt,es}` |
+| `varfarina` | `hepaticAdjustment.message` | `t(lang,...)` → `{pt,es}` |
+| `varfarina` | `safetyFlags.warning` | `t(lang,...)` → `{pt,es}` |
+| `apixabana` | `renalAdjustment.message` | `t(lang,...)` → `{pt,es}` |
+| `apixabana` | `hepaticAdjustment.message` | `t(lang,...)` → `{pt,es}` |
+| `apixabana` | `safetyFlags.warning` | `t(lang,...)` → `{pt,es}` |
+| `rivaroxabana` | `renalAdjustment.message` | `t(lang,...)` → `{pt,es}` |
+| `rivaroxabana` | `hepaticAdjustment.message` | `t(lang,...)` → `{pt,es}` |
+| `rivaroxabana` | `safetyFlags.warning` | `t(lang,...)` → `{pt,es}` |
+| `edoxabana` | `renalAdjustment.message` | `t(lang,...)` → `{pt,es}` |
+| `edoxabana` | `hepaticAdjustment.message` | `t(lang,...)` → `{pt,es}` |
+| `edoxabana` | `safetyFlags.warning` | `t(lang,...)` → `{pt,es}` |
+
+**Campos especiais por fármaco:**
+- `varfarina`: `bridging`, `narrowTherapeuticIndex`, `requiresINR`, `pregnancyContraindicated`, `highInteractionRisk`
+- `apixabana`: `doseReductionCriteria`, `noINRMonitoring`, `neuraxialHematomaRisk`
+- `rivaroxabana`: `administration` (instrução com alimento), `perioperativeManagement`, `foodRequiredForHighDose`
+- `edoxabana`: `perioperativeManagement`, `highClCrReducedEfficacyRisk` (ClCr >95 em FA)
+
+**Validação estrutural:**
+```
+Arquivo após inserção: 14.737 linhas  (+ 1.196 linhas vs v2.6.1 / + 2.330 total vs v2.6.0)
+Fecho da IIFE })();  →  linha 14.737  ✅
+Object.assign Grupo 19 fechado: })(); linha 14.735  ✅
+t(lang,...) fora de calculate(): 0 ocorrências  ✅
+Novos erros JavaScript introduzidos: 0  ✅
+```
+
+---
+
+### 2026-06-17 — v2.6.1: Grupo 18 — Anticoagulantes Parenterais em `database/cardio.js`
+
+#### Injeção do Grupo 18 — 4 Anticoagulantes Parenterais
+
+**Arquivo:** `database/cardio.js` — inserção após linha 12.515 (pós `}); /* fim Grupo 17 */`), antes de `})();`
+
+**Fármacos adicionados como `Object.assign(window.CARDIO_DRUGS_DB, { ... })` — Grupo 18:**
+
+| Chave | Nome PT | Classe | Destaque clínico |
+|---|---|---|---|
+| `heparinaNaoFracionada` | Heparina Não Fracionada (HNF) | Inibidor indireto trombina + Xa | Alto risco · monitorização TTPa/anti-Xa · antídoto: protamina · preferida em DRC grave |
+| `enoxaparina` | Enoxaparina (HBPM) | Inibidor predominante Xa | Dose por peso 1 mg/kg · ajuste ClCr <30 · risco neuraxial · protamina parcial |
+| `dalteparina` | Dalteparina (HBPM) | Inibidor predominante Xa | Dose em UI/kg · indicação especial câncer (ASCO) · protamina parcial |
+| `fondaparinux` | Fondaparinux | Inibidor seletivo Xa | Contraindicado ClCr <30 · sem antídoto aprovado · preferido em HIT |
+
+**Conversão técnica obrigatória aplicada:**
+
+Todos os campos estáticos dos schemas continham chamadas `t(lang, '...', '...')` (ReferenceError fora de `calculate()`). Convertidos para objetos `{pt: '...', es: '...'}` antes da inserção:
+
+| Campo convertido | Tipo original | Tipo final |
+|---|---|---|
+| `renalAdjustment.message` | `t(lang, ...)` | `{ pt: '...', es: '...' }` |
+| `hepaticAdjustment.message` | `t(lang, ...)` | `{ pt: '...', es: '...' }` |
+| `safetyFlags.warning` | `t(lang, ...)` | `{ pt: '...', es: '...' }` |
+
+**Campos presentes em todos os 4 fármacos:**
+`name · category · class · indications · commercialNames · presentation · mechanism · dose · anticoagulationMonitoring · renalAdjustment · hepaticAdjustment · bleedingRisk · hitSafety · reversal · commonAdverseEffects · dangerousAdverseEffects · contraindications · interactions · pregnancy · lactation · elderly · monitoring · safetyFlags · auditNotes · ref`
+
+**Campos adicionais específicos:**
+- `heparinaNaoFracionada`: `therapeuticTargets`, `hospitalUseOnly`, `requiresTelemetry`, `calculator`
+- `enoxaparina`: `neuraxialHematomaRisk`, `antidoteAvailablePartial`, `calculator`
+- `fondaparinux`: `noSpecificAntidote`, `hitPreferred`, `calculator`
+
+**Validação estrutural:**
+```
+Arquivo após inserção: 13.541 linhas  (+ 1.134 linhas vs v2.6.0)
+Fecho da IIFE })(); : linha 13.541  ✅
+Object.assign Grupo 18 fechado: })(); linha 13.539  ✅
+t(lang,...) fora de calculate(): 0 ocorrências  ✅
+Novos erros JavaScript introduzidos: 0  ✅
+```
+
+---
 
 ### 2026-06-16 — v2.6.0: Contraste WCAG nos Scores + Remoção de Cabeçalho Redundante
 
