@@ -72,6 +72,12 @@
     /* ============================================================ SCROLL */
     /* Webview: sem topbar própria — conteúdo cola direto no topo nativo */
     #scroll-content { flex:1; overflow-y:auto; padding:10px 12px 68px; scroll-behavior:smooth; }
+    /* Quando a aba ativa tem .section-back-bar logo no topo, zerar o padding-top
+       para que a barra cole exatamente na base do GPB sem gap visual */
+    #scroll-content:has(> .section-page.active > .section-back-bar:first-child),
+    #scroll-content:has(> .section-page.active > .adult-sub-view.active > .section-back-bar:first-child) {
+      padding-top: 0;
+    }
     #scroll-content::-webkit-scrollbar { display:none; }
 
     /* ============================================================
@@ -2755,44 +2761,100 @@
     /* NOTA: .sub-view-back foi reativado via .section-back-bar — NÃO usar display:none aqui */
     .sub-view-header, .sub-view-header-title, .sub-view-header-icon { display:none !important; }
 
-    /* ── Barra de voltar universal (back-bar) ── */
+    /* ══════════════════════════════════════════════════════
+       BARRA DE NAVEGAÇÃO PROPORCIONAL 40/60
+       Colada na base do GPB, sem margem/padding de separação.
+       Lado esquerdo (40%): botão Voltar
+       Lado direito (60%): nome/badge da aba atual
+    ══════════════════════════════════════════════════════ */
     .section-back-bar {
       display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 4px 12px;
-      margin-bottom: 4px;
+      align-items: stretch;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg,
+        rgba(20,8,48,0.97) 0%,
+        rgba(14,6,32,0.99) 100%);
+      border-bottom: 1px solid rgba(167,139,250,0.14);
+      border-radius: 0 0 14px 14px;  /* arredondamento só na base */
+      overflow: hidden;
       position: relative;
-      z-index: 9999;
+      z-index: 49;   /* logo abaixo do GPB (z-index 50) */
+      flex-shrink: 0;
     }
+    /* ── Lado esquerdo: 40% — botão Voltar ── */
     .section-back-btn {
+      flex: 0 0 40%;
+      width: 40%;
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 22px;
-      padding: 7px 16px 7px 12px;
+      justify-content: flex-start;
+      gap: 6px;
+      padding: 11px 14px;
+      background: rgba(167,139,250,0.07);
+      border: none;
+      border-right: 1px solid rgba(167,139,250,0.14);
       font-size: 13px;
       font-weight: 600;
       color: var(--text-primary);
       cursor: pointer;
-      transition: background 0.18s, transform 0.12s;
+      transition: background 0.18s;
       -webkit-tap-highlight-color: transparent;
       user-select: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-radius: 0; /* sem arredondamento — fica dentro da barra */
     }
-    .section-back-btn:active { transform: scale(0.96); background: rgba(255,255,255,0.14); }
-    .section-back-btn i { font-size: 12px; color: #38BDF8; }
+    .section-back-btn:active { background: rgba(167,139,250,0.16); }
+    .section-back-btn i {
+      font-size: 11px;
+      color: #A78BFA;
+      flex-shrink: 0;
+    }
+    /* ── Lado direito: 60% — badge da aba (injetado por _updateSectionBadge) ── */
+    .gpb-section-badge {
+      flex: 1;               /* ocupa os 60% restantes */
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 14px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      font-size: 13px;
+      font-weight: 700;
+      color: #C4B5FD;
+      letter-spacing: -0.1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .gpb-section-badge i {
+      font-size: 12px;
+      color: #A78BFA;
+      flex-shrink: 0;
+    }
+    /* Sem separador abaixo — zeramos o padding-top herdado */
+    .section-back-bar + * { padding-top: 0; margin-top: 0; }
     /* Light mode */
-    .light-mode .section-back-btn {
-      background: rgba(0,0,0,0.05);
-      border-color: rgba(0,0,0,0.13);
+    body.light-mode .section-back-bar {
+      background: linear-gradient(180deg,
+        rgba(237,233,254,0.97) 0%,
+        rgba(221,214,254,0.95) 100%);
+      border-bottom-color: rgba(124,58,237,0.16);
+      border-color: rgba(124,58,237,0.12);
+    }
+    body.light-mode .section-back-btn {
+      background: rgba(124,58,237,0.07);
+      border-right-color: rgba(124,58,237,0.14);
       color: #1a1a2e;
     }
-    .light-mode .section-back-btn i { color: #0B83B5; }
-    .light-mode .section-back-btn:active { background: rgba(0,0,0,0.10); }
-    /* Separador slim abaixo da back-bar nas sub-views */
-    .section-back-bar + * { padding-top: 0; }
+    body.light-mode .section-back-btn:active { background: rgba(124,58,237,0.14); }
+    body.light-mode .section-back-btn i { color: #7C3AED; }
+    body.light-mode .gpb-section-badge { color: #6D28D9; }
+    body.light-mode .gpb-section-badge i { color: #7C3AED; }
 
     /* ============================================================
        DATA GUARD — Bloqueio Premium quando dados da Home ausentes
@@ -5911,6 +5973,297 @@
     body.light-mode .elec-result-value { color: #0F172A; }
     body.light-mode .elec-sex-chip { background: rgba(56,189,248,0.06); }
 
+    /* ============================================================
+       REFATORAÇÃO UI/UX — v3.0  (Sessão Junho 2026)
+       REQ 1 · REQ 2 · REQ 3 · REQ 4
+    ============================================================ */
+
+    /* ── Pilar 3 (v4.0): GPB oculto na HOME — failsafe CSS
+       O JS já seta style.display='none' para page=home.
+       Esta regra garante ocultamento mesmo em race conditions.  ── */
+    #page-home.active ~ * #global-patient-bar,
+    body:has(#page-home.active) #global-patient-bar {
+      display: none !important;
+    }
+
+    /* ── Pilar 1 (v4.0): Colar a .section-back-bar na base do GPB
+       sem nenhuma margem de separação entre eles               ── */
+    #global-patient-bar + #scroll-content .section-page.active > .section-back-bar:first-child,
+    #global-patient-bar + #scroll-content .section-page.active > .adult-sub-view.active > .section-back-bar:first-child {
+      margin-top: 0 !important;
+    }
+
+    /* ── REQ 1: Suprimir card secundário grande de paciente
+       em TODAS as abas internas — só aparece na HOME.
+       O .patient-banner dentro de updateAdultBanner() é
+       descartado visualmente; o GPB (global-patient-bar) é
+       a única fonte de verdade do contexto do paciente. ── */
+    #page-adult   .patient-banner,
+    #page-adult   .adult-patient-data-card,
+    #page-infusion .patient-banner,
+    #page-elec    .patient-banner,
+    #page-news2   .patient-banner,
+    #page-farmacos .patient-banner,
+    #page-calculators .patient-banner,
+    #page-prescriptions .patient-banner {
+      display: none !important;
+    }
+    /* O data-guard (sem paciente) das sub-views também oculto —
+       o GPB com mini-inputs substitui essa função no modo web puro */
+    #page-adult .data-guard { display: none !important; }
+
+    /* ── REQ 2 (v4.0): GPB — Barra Roxa Universal
+       Visibilidade controlada EXCLUSIVAMENTE pelo JS (_updateGlobalPatientBar):
+         • HOME          → display: none   (JS seta inline)
+         • Demais abas   → display: flex   (JS seta inline)
+       NÃO usar !important aqui para não bloquear o hide da HOME.  ── */
+    #global-patient-bar {
+      /* display gerenciado por JS via style.display */
+    }
+    /* Modo mini-inputs (classe adicionada por JS quando sem dados) */
+    #global-patient-bar.gpb-web-mode .gpb-info {
+      flex: 1;
+    }
+    .gpb-mini-inputs {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+    .gpb-mini-input {
+      background: rgba(167,139,250,0.10);
+      border: 1px solid rgba(167,139,250,0.30);
+      border-radius: 8px;
+      color: #E2E8F0;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 8px;
+      width: 54px;
+      outline: none;
+      text-align: center;
+      -webkit-appearance: none;
+      transition: border-color 0.18s;
+    }
+    .gpb-mini-input:focus {
+      border-color: #A78BFA;
+      box-shadow: 0 0 0 2px rgba(167,139,250,0.18);
+    }
+    .gpb-mini-input::placeholder {
+      color: rgba(167,139,250,0.45);
+      font-size: 10px;
+    }
+    .gpb-mini-label {
+      font-size: 9px;
+      font-weight: 700;
+      color: rgba(167,139,250,0.65);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .gpb-mini-sep {
+      width: 1px;
+      height: 18px;
+      background: rgba(167,139,250,0.20);
+      flex-shrink: 0;
+    }
+    .gpb-mini-sex-toggle {
+      display: flex;
+      gap: 3px;
+    }
+    .gpb-mini-sex-btn {
+      padding: 4px 9px;
+      border-radius: 7px;
+      border: 1px solid rgba(167,139,250,0.28);
+      background: transparent;
+      color: rgba(167,139,250,0.55);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.16s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .gpb-mini-sex-btn.active-m {
+      background: rgba(56,189,248,0.18);
+      border-color: rgba(56,189,248,0.50);
+      color: #38BDF8;
+    }
+    .gpb-mini-sex-btn.active-f {
+      background: rgba(244,114,182,0.18);
+      border-color: rgba(244,114,182,0.50);
+      color: #F472B6;
+    }
+    .gpb-mini-save-btn {
+      padding: 5px 12px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(135deg, #7C3AED, #A78BFA);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: opacity 0.18s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .gpb-mini-save-btn:active { opacity: 0.80; }
+    /* Light mode — GPB mini-inputs */
+    body.light-mode .gpb-mini-input {
+      background: rgba(124,58,237,0.08);
+      border-color: rgba(124,58,237,0.28);
+      color: #1A1A1A;
+    }
+    body.light-mode .gpb-mini-input::placeholder { color: rgba(124,58,237,0.40); }
+    body.light-mode .gpb-mini-label { color: rgba(124,58,237,0.65); }
+    body.light-mode .gpb-mini-sex-btn { border-color: rgba(124,58,237,0.22); color: rgba(124,58,237,0.50); }
+
+    /* ── REQ 3 (v4.0): A barra 40/60 já foi definida no bloco canônico acima.
+       Mantemos aqui apenas a regra de suprimir títulos redundantes abaixo dela. ── */
+
+    /* Oculta globalmente todos os cabeçalhos redundantes abaixo da back-bar */
+    .section-back-bar + .farmacos-header,
+    .section-back-bar + .news2-subtitle,
+    .section-back-bar + h2.rx-header-title,
+    .section-back-bar + .rx-header,
+    .section-back-bar + header.rx-header {
+      display: none !important;
+    }
+
+    /* ── REQ 4A: Cards da Grid de Scores/Calculadoras +20% ──────
+       .drug-card — os cards do grid SOFA, Glasgow, Wells, etc.
+       Base original: padding 10px 11px, icon 30px, title 12.5px, sub 10px
+       Após +20%:     padding 12px 13px, icon 36px, title 15px, sub 12px  ── */
+    .drug-card {
+      padding: 12px 13px !important;
+      min-height: 64px !important;
+      gap: 11px !important;
+    }
+    .drug-card-icon {
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 10px !important;
+      font-size: 17px !important;
+    }
+    .drug-card-name {
+      font-size: 15px !important;
+      font-weight: 700;
+    }
+    .drug-card-class {
+      font-size: 12px !important;
+    }
+
+    /* ── REQ 4A: calc-hub-card-v2 (grid da Central de Calculadoras) +20% ──
+       Base: padding ~12px, min-height 75px, title ~12.5px, desc ~9px
+       Após: padding ~15px, min-height ~90px, title ~15px, desc ~11px       ── */
+    .calc-hub-card-v2 {
+      padding: 15px 15px !important;
+      min-height: 90px !important;
+      gap: 12px !important;
+    }
+    .calc-hub-card-v2 .chc-icon-wrap {
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 12px !important;
+      font-size: 20px !important;
+    }
+    .calc-hub-card-v2 .chc-title {
+      font-size: 15px !important;
+      font-weight: 800 !important;
+    }
+    .calc-hub-card-v2 .chc-desc {
+      font-size: 11px !important;
+    }
+
+    /* ── REQ 4A: calc-hub-card legado (adult-dashboard-grid) +20% ──
+       Base: padding 13px, min-height 88px, title 12.5px, desc 9px  ── */
+    .calc-hub-card {
+      padding: 16px 16px 15px !important;
+      min-height: 106px !important;
+    }
+    .calc-hub-title { font-size: 15px !important; }
+    .calc-hub-desc  { font-size: 11px !important; }
+    .calc-hub-icon  { width: 43px !important; height: 43px !important; font-size: 20px !important; }
+
+    /* ── REQ 4A: cmd-card (painel adulto 2×2) +20% ── */
+    .adult-cmd-card {
+      padding: 16px 14px 14px !important;
+      min-height: 106px !important;
+      gap: 11px !important;
+    }
+    .cmd-card-icon {
+      width: 42px !important;
+      height: 42px !important;
+      border-radius: 13px !important;
+      font-size: 20px !important;
+    }
+    .cmd-card-title    { font-size: 14px !important; }
+    .cmd-card-subtitle { font-size: 11px !important; }
+
+    /* ── REQ 4B: Sub-cards e containers internos das calculadoras +20% ──
+       .score-row — linhas de critério (SOFA, Glasgow, Wells…)
+       Base: padding 8px 10px, label 12.5px / 13px, stepper 28px     ── */
+    .score-row {
+      padding: 10px 12px !important;
+      border-radius: 12px !important;
+      min-height: 48px !important;
+    }
+    .score-row-label        { font-size: 15px !important; }
+    .score-row-label strong { font-size: 15px !important; }
+    .score-row-pts          { font-size: 14px !important; }
+
+    /* Checkbox +20% */
+    .score-check {
+      width: 26px !important;
+      height: 26px !important;
+      border-radius: 7px !important;
+    }
+    .score-check:checked::after { font-size: 14px !important; }
+
+    /* Stepper +20% */
+    .stepper-btn {
+      width: 34px !important;
+      height: 34px !important;
+      font-size: 18px !important;
+      border-radius: 7px !important;
+    }
+    .stepper-val {
+      font-size: 17px !important;
+      min-width: 38px !important;
+    }
+
+    /* ── REQ 4B: news2-select +20% ── */
+    .news2-select {
+      font-size: 15px !important;
+      padding: 10px 38px 10px 13px !important;
+    }
+    .news2-param-label {
+      font-size: 13px !important;
+      margin-top: 12px !important;
+    }
+    .news2-param-score {
+      min-width: 24px !important;
+      height: 24px !important;
+      font-size: 12px !important;
+      line-height: 24px !important;
+    }
+
+    /* ── REQ 4B: input-field geral +20% ── */
+    .input-field {
+      padding: 11px 14px !important;
+      font-size: 14px !important;
+      border-radius: 12px !important;
+    }
+    .input-label { font-size: 12px !important; }
+
+    /* ── REQ 4B: score-result-box e número +20% ── */
+    .score-result-box { padding: 17px 14px 14px !important; }
+    .score-result-number { font-size: 50px !important; }
+    .score-result-label  { font-size: 14px !important; }
+    .score-result-interp { font-size: 15px !important; padding: 10px 19px !important; }
+
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
@@ -6812,7 +7165,14 @@
 
     <!-- ══ CENTRAL DE CALCULADORAS ══ -->
     <section id="page-calculators" class="section-page">
-      <!-- calc-hub-header REMOVIDO v2.6.0: topbar já exibe o título nativo -->
+
+      <!-- ── Barra de navegação: Hub de Calculadoras ── -->
+      <div class="section-back-bar" id="calculators-back-bar">
+        <button class="section-back-btn" onclick="navigate('home')" aria-label="Voltar ao Início">
+          <i class="fa-solid fa-chevron-left"></i>
+          <span data-i18n="nav_home">Início</span>
+        </button>
+      </div>
 
       <div class="calc-hub-grid-v2">
 
@@ -6921,11 +7281,6 @@
         </button>
       </div>
 
-      <div class="farmacos-header">
-        <h2>💊 Farmácos</h2>
-        <p>Bula clínica completa — sem precisar cadastrar paciente</p>
-      </div>
-
       <!-- Busca -->
       <div class="farmacos-search-wrap">
         <i class="fa-solid fa-magnifying-glass farmacos-search-icon"></i>
@@ -6961,9 +7316,6 @@
 
       <!-- Conteúdo do calculador (antigo news2-section) -->
       <div class="news2-section" id="news2-calculator" aria-label="NEWS2 Score Calculator">
-
-        <!-- Subtítulo -->
-        <div class="news2-subtitle" data-i18n="news2_subtitle" style="margin-bottom:16px;font-size:11px;color:var(--text-muted)">National Early Warning Score 2 — Deterioração Clínica</div>
 
         <!-- ── SEÇÃO: Parâmetros Vitais ── -->
         <div class="news2-sep" data-i18n="news2_sec_vital">Parâmetros Vitais</div>
@@ -7559,11 +7911,13 @@
     <!-- ══ ABA PRESCRIÇÕES GUIADAS ══ -->
     <section id="page-prescriptions" class="section-page">
 
-      <!-- Cabeçalho -->
-      <header class="rx-header">
-        <h2 class="rx-header-title" data-i18n="rx_title">Guia de Prescrições Rápidas</h2>
-        <p class="rx-header-sub" data-i18n="rx_subtitle">Protocolos clínicos prontos para copiar e prescrever</p>
-      </header>
+      <!-- ── Barra de navegação: Prescrições ── -->
+      <div class="section-back-bar" id="prescriptions-back-bar">
+        <button class="section-back-btn" onclick="navigate('calculators')" aria-label="Voltar à Central de Calculadoras">
+          <i class="fa-solid fa-chevron-left"></i>
+          <span>Calculadoras</span>
+        </button>
+      </div>
 
       <!-- Barra de pesquisa -->
       <div class="rx-search-wrap">
@@ -9634,6 +9988,25 @@ function navigate(page){
   /* REQ-2: Atualiza o card global de Paciente Atual em todas as abas */
   if (typeof _updateGlobalPatientBar === 'function') _updateGlobalPatientBar(page);
 
+  /* REQ-3: Injeta o badge de aba atual em todas as .section-back-bar da seção ativa */
+  if (typeof _updateSectionBadge === 'function') _updateSectionBadge(page);
+
+  /* Pilar 1 (v4.0): Zera padding-top do scroll-content quando a aba ativa
+     começa com uma .section-back-bar — cola a barra na base do GPB sem gap.
+     Na HOME não há back-bar, então restaura o padding padrão de 10px.      */
+  (function() {
+    const sc = document.getElementById('scroll-content');
+    if (!sc) return;
+    if (page === 'home') {
+      sc.style.paddingTop = '';   /* restaura o padrão CSS (10px) */
+      return;
+    }
+    const activeSection = document.querySelector('.section-page.active');
+    const firstChild = activeSection ? activeSection.firstElementChild : null;
+    const hasBackBarFirst = firstChild && firstChild.classList.contains('section-back-bar');
+    sc.style.paddingTop = hasBackBarFirst ? '0' : '';
+  })();
+
   if(page==='adult') {
     updateAdultBanner();
     /* Garante que o grid home está visível ao entrar no módulo adulto */
@@ -9674,6 +10047,52 @@ function navigate(page){
     if (typeof updateAdultBanner === 'function') updateAdultBanner();
   }
 }
+
+/* =========================================================
+   REQ-3 — BADGE DE ABA ATUAL NA BACK-BAR
+   _updateSectionBadge(page) — injeta ou atualiza o badge
+   com o nome/ícone da seção ativa em todas as .section-back-bar
+   presentes na seção ativa. Preserva o botão Voltar existente.
+========================================================= */
+(function() {
+  /* Mapa de páginas → { icon, label_pt, label_es } */
+  const PAGE_META = {
+    adult:        { icon:'fa-solid fa-user-doctor',     pt:'Calculadoras',           es:'Calculadoras' },
+    calculators:  { icon:'fa-solid fa-calculator',      pt:'Calculadoras Clínicas',  es:'Calculadoras Clínicas' },
+    ped:          { icon:'fa-solid fa-baby',             pt:'Pediatria',              es:'Pediatría' },
+    ob:           { icon:'fa-solid fa-person-pregnant',  pt:'Gestante',               es:'Obstetricia' },
+    infusion:     { icon:'fa-solid fa-syringe',          pt:'Infusões',               es:'Infusiones' },
+    atb:          { icon:'fa-solid fa-pills',            pt:'Antimicrobianos',         es:'Antimicrobianos' },
+    elec:         { icon:'fa-solid fa-flask-vial',       pt:'Eletrólitos',            es:'Electrolitos' },
+    news2:        { icon:'fa-solid fa-chart-line',       pt:'NEWS2',                  es:'NEWS2' },
+    farmacos:     { icon:'fa-solid fa-capsules',         pt:'Fármacos',               es:'Fármacos' },
+    prescriptions:{ icon:'fa-solid fa-file-medical',     pt:'Prescrições',            es:'Prescripciones' },
+    scores:       { icon:'fa-solid fa-stethoscope',      pt:'Scores Clínicos',        es:'Scores Clínicos' },
+  };
+
+  window._updateSectionBadge = function(page) {
+    if (!page || page === 'home') return;
+    const meta = PAGE_META[page];
+    if (!meta) return;
+    const isES = typeof currentLang !== 'undefined' && currentLang === 'es';
+    const label = isES ? meta.es : meta.pt;
+
+    /* Seleciona todas as .section-back-bar na seção ativa */
+    const activeSection = document.getElementById('page-' + page);
+    if (!activeSection) return;
+    const backBars = activeSection.querySelectorAll('.section-back-bar');
+
+    backBars.forEach(bar => {
+      /* Remove badge anterior se já existir */
+      bar.querySelectorAll('.gpb-section-badge').forEach(b => b.remove());
+      /* Cria badge */
+      const badge = document.createElement('span');
+      badge.className = 'gpb-section-badge';
+      badge.innerHTML = `<i class="${meta.icon}"></i>${label}`;
+      bar.appendChild(badge);
+    });
+  };
+})();
 
 /* =========================================================
    SUB-TABS ADULTO
@@ -9725,10 +10144,40 @@ function showAdultPanel(panel) {
   if (view) {
     view.classList.add('active');
     const sc = document.getElementById('scroll-content');
-    if (sc) setTimeout(() => sc.scrollTo({ top: 0, behavior: 'smooth' }), 40);
+    if (sc) {
+      /* Cola a sub-view na base do GPB: zera padding-top pois toda sub-view
+         começa com .section-back-bar como primeiro filho */
+      sc.style.paddingTop = '0';
+      setTimeout(() => sc.scrollTo({ top: 0, behavior: 'smooth' }), 40);
+    }
   }
 
   _activeAdultPanel = panel;
+
+  /* REQ-3: badge da sub-view ativa dentro do módulo Adulto */
+  if (typeof _updateSectionBadge === 'function') {
+    const subMeta = {
+      drugs:  { icon:'fa-solid fa-pills',      pt:'Fármacos',         es:'Fármacos' },
+      fluids: { icon:'fa-solid fa-droplet',    pt:'Fluidos',           es:'Fluidos' },
+      hemo:   { icon:'fa-solid fa-heart-pulse',pt:'Hemodinâmica',     es:'Hemodinámica' },
+      scores: { icon:'fa-solid fa-stethoscope',pt:'Scores Clínicos',  es:'Scores Clínicos' },
+    };
+    const sm = subMeta[panel];
+    if (sm) {
+      const isES = typeof currentLang !== 'undefined' && currentLang === 'es';
+      const label = isES ? sm.es : sm.pt;
+      const view = document.getElementById('subview-' + panel);
+      if (view) {
+        view.querySelectorAll('.section-back-bar').forEach(bar => {
+          bar.querySelectorAll('.gpb-section-badge').forEach(b => b.remove());
+          const badge = document.createElement('span');
+          badge.className = 'gpb-section-badge';
+          badge.innerHTML = `<i class="${sm.icon}"></i>${label}`;
+          bar.appendChild(badge);
+        });
+      }
+    }
+  }
 
   /* 3. Inicializar calculadora correspondente */
   if (panel === 'drugs') {
@@ -11383,6 +11832,44 @@ function qeEdit(context) { openQuickEdit(context || 'full'); }
    exceto Home. Lê window.patientData (ou localStorage fallback).
    Chamado por: navigate(), saveQuickEdit(), recalculate().
 ══════════════════════════════════════════════════════════════ */
+/* ── _gpbMiniSex — estado do toggle de sexo nos mini-inputs ── */
+let _gpbMiniSex = 'M';
+
+function _gpbSetMiniSex(sex) {
+  _gpbMiniSex = sex;
+  const btnM = document.getElementById('gpb-mini-btn-m');
+  const btnF = document.getElementById('gpb-mini-btn-f');
+  if (btnM) btnM.className = 'gpb-mini-sex-btn' + (sex === 'M' ? ' active-m' : '');
+  if (btnF) btnF.className = 'gpb-mini-sex-btn' + (sex === 'F' ? ' active-f' : '');
+}
+
+function _gpbMiniSave() {
+  /* Lê mini-inputs e salva como dados do paciente via openQuickEdit flow */
+  const wEl  = document.getElementById('gpb-mini-weight');
+  const aEl  = document.getElementById('gpb-mini-age');
+  const crEl = document.getElementById('gpb-mini-creat');
+  const wt   = wEl  ? parseFloat(wEl.value)  || null : null;
+  const age  = aEl  ? parseFloat(aEl.value)  || null : null;
+  const cr   = crEl ? parseFloat(crEl.value) || null : null;
+  const sex  = _gpbMiniSex;
+
+  /* Injeta nos campos da Home para disparar cálculo completo */
+  const syncHome = (id, v) => { const el = document.getElementById(id); if (el) el.value = (v != null && v > 0) ? v : ''; };
+  syncHome('inp-weight',     wt);
+  syncHome('inp-age',        age);
+  syncHome('inp-creatinine', cr);
+  /* Sincroniza sexo */
+  if (sex !== (window.patientData?.sex)) {
+    currentSex = sex;
+    document.getElementById('btn-male')?.classList.toggle('active', sex === 'M');
+    document.getElementById('btn-female')?.classList.toggle('active', sex === 'F');
+  }
+  /* Dispara recálculo completo */
+  if (typeof recalculate === 'function') recalculate();
+  /* Atualiza GPB com os novos chips */
+  setTimeout(() => _updateGlobalPatientBar(), 300);
+}
+
 function _updateGlobalPatientBar(currentPage) {
   const bar     = document.getElementById('global-patient-bar');
   const metrics = document.getElementById('gpb-metrics');
@@ -11397,6 +11884,7 @@ function _updateGlobalPatientBar(currentPage) {
   /* Na Home, esconde sempre */
   if (page === 'home') {
     bar.style.display = 'none';
+    bar.classList.remove('gpb-web-mode');
     return;
   }
 
@@ -11409,18 +11897,52 @@ function _updateGlobalPatientBar(currentPage) {
     } catch(_e) {}
   }
 
-  /* Se não há paciente com dado útil, esconde o bar */
+  const isES = typeof currentLang !== 'undefined' && currentLang === 'es';
   const hasPatient = pd && (pd.weight || pd.age || pd.clcr);
+
+  /* ── REQ 2: Modo Web Puro — sem paciente → mini-inputs embutidos ── */
   if (!hasPatient) {
-    bar.style.display = 'none';
+    bar.classList.add('gpb-web-mode');
+    bar.style.display = 'flex';
+    const avatarEl = document.getElementById('gpb-avatar');
+    if (avatarEl) avatarEl.textContent = '👤';
+    const labelEl = bar.querySelector('.gpb-label');
+    if (labelEl) labelEl.textContent = isES ? 'Paciente' : 'Paciente';
+    metrics.innerHTML = `
+      <div class="gpb-mini-inputs">
+        <span class="gpb-mini-label">${isES ? 'Peso' : 'Peso'}</span>
+        <input class="gpb-mini-input" id="gpb-mini-weight" type="number" inputmode="decimal"
+               placeholder="${isES ? 'kg' : 'kg'}" min="1" max="500"
+               style="width:48px;" />
+        <div class="gpb-mini-sep"></div>
+        <span class="gpb-mini-label">${isES ? 'Edad' : 'Idade'}</span>
+        <input class="gpb-mini-input" id="gpb-mini-age" type="number" inputmode="decimal"
+               placeholder="${isES ? 'años' : 'anos'}" min="0" max="130"
+               style="width:48px;" />
+        <div class="gpb-mini-sep"></div>
+        <span class="gpb-mini-label">ClCr</span>
+        <input class="gpb-mini-input" id="gpb-mini-creat" type="number" inputmode="decimal"
+               placeholder="Cr" min="0.1" max="30" step="0.1"
+               style="width:44px;" title="${isES ? 'Creatinina sérica (mg/dL)' : 'Creatinina sérica (mg/dL)'}" />
+        <div class="gpb-mini-sep"></div>
+        <div class="gpb-mini-sex-toggle">
+          <button class="gpb-mini-sex-btn active-m" id="gpb-mini-btn-m"
+                  onclick="_gpbSetMiniSex('M')" type="button">♂</button>
+          <button class="gpb-mini-sex-btn" id="gpb-mini-btn-f"
+                  onclick="_gpbSetMiniSex('F')" type="button">♀</button>
+        </div>
+        <button class="gpb-mini-save-btn" onclick="_gpbMiniSave()" type="button">
+          <i class="fa-solid fa-check" style="margin-right:4px;font-size:10px;"></i>${isES ? 'OK' : 'OK'}
+        </button>
+      </div>`;
     return;
   }
 
-  const isES = typeof currentLang !== 'undefined' && currentLang === 'es';
+  /* ── Modo Normal: paciente com dados — chips de resumo ── */
+  bar.classList.remove('gpb-web-mode');
+  bar.style.display = 'flex';
 
-  /* ── Chips de métricas ── */
   let chips = '';
-
   if (pd.weight) {
     chips += `<span class="gpb-chip"><i class="fa-solid fa-weight-scale"></i><span class="gpb-chip-val">${pd.weight} kg</span></span>`;
   }
@@ -11429,7 +11951,7 @@ function _updateGlobalPatientBar(currentPage) {
   }
   if (pd.sex || pd.sexo) {
     const sex = pd.sex || pd.sexo;
-    const sexLabel = sex === 'F' ? (isES ? 'Fem.' : 'Fem.') : (isES ? 'Masc.' : 'Masc.');
+    const sexLabel = sex === 'F' ? 'Fem.' : 'Masc.';
     chips += `<span class="gpb-chip"><i class="fa-solid fa-venus-mars"></i><span class="gpb-chip-val">${sexLabel}</span></span>`;
   }
   if (pd.clcr || pd.clCr) {
@@ -11448,8 +11970,12 @@ function _updateGlobalPatientBar(currentPage) {
     chips += `<span class="gpb-chip"><i class="fa-solid fa-person-pregnant" style="color:#F472B6;"></i><span class="gpb-chip-val" style="color:#F472B6;">${isES ? 'Gestante' : 'Gestante'}</span></span>`;
   }
 
-  /* Se nenhum chip foi gerado, não exibe */
-  if (!chips) { bar.style.display = 'none'; return; }
+  /* Se nenhum chip foi gerado, mostra mini-inputs como fallback */
+  if (!chips) {
+    _updateGlobalPatientBar._forceWebMode = true;
+    bar.style.display = 'none';
+    return;
+  }
 
   /* Avatar: emoji baseado em sexo/perfil */
   const avatarEl = document.getElementById('gpb-avatar');
@@ -11460,7 +11986,7 @@ function _updateGlobalPatientBar(currentPage) {
   }
 
   metrics.innerHTML = chips;
-  bar.style.display = 'block';
+  bar.style.display = 'flex';
   /* Reinicia animação de entrada */
   bar.style.animation = 'none';
   requestAnimationFrame(() => { bar.style.animation = ''; });
