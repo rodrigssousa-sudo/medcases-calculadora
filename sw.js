@@ -22,14 +22,17 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v3';
+const CACHE_VERSION   = 'medcases-v4';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
-/* ── Lista canônica de 18 assets pré-cacheados no install ─── */
+/* ── Lista canônica de 21 assets pré-cacheados no install ─── */
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './css/medcases-ux-v2.css',
   './js/medcases-ux-v2.js',
+  './js/deeplink-router.js',
+  './database/interacoes.js',
   './database/analgesicos.js',
   './database/anticoag.js',
   './database/antimicrobianos.js',
