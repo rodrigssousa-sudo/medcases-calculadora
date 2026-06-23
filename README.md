@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-3.0.0--hub-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-3.1.0--elec-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-PWA%20%7C%20WebView-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/i18n-PT%20%7C%20ES-yellow?style=for-the-badge)
@@ -741,6 +741,175 @@ A partir daí, cada push para `main` dispara o pipeline automaticamente.
 ---
 
 ## 🔄 Changelog por Sessão
+
+### 2026-06-23 — v3.2.0: Fix Motor de Interações + Fix Idioma Eletrólitos (Sessão 2)
+
+#### Fix 1 — Motor de Interações Medicamentosas (CRÍTICO)
+
+**Causa raiz:** Dois elementos com `id="card-interactions-container"` no DOM.
+- Linha ~8020: container legado `<div style="display:none">` — vazio/inativo
+- Linha ~8699: container v3 real — com todo o motor funcional
+- `_moveInteractions()` usava `getElementById()` → retornava SEMPRE o PRIMEIRO (legado, sem estado real)
+- Hub montava o container errado → chips, botão e motor operavam em nó desconectado da UI visível
+
+**Solução aplicada:**
+1. Container legado removido de `index.html` (linhas 8019-8068)
+2. Container v3 recebe `display:none` inicial (revelado pelo `_moveInteractions()`)
+3. `_moveInteractions()` refatorada com retry 15×100ms + log diagnóstico
+4. Debug logs adicionados em `executarChecagemInteracoes()`:
+   `[INTERACTIONS_DEBUG] databaseLoaded`, `selectedDrugs`, `rulesCount`, `resultsCount`
+
+**Arquivos modificados:**
+| Arquivo | Mudança |
+|---|---|
+| `index.html` | Remoção do container legado duplicado (linhas 8019-8068); `display:none` no container v3 |
+| `js/hub-accordion.js` | `_moveInteractions()` com retry 15×100ms + log diagnóstico |
+
+#### Fix 2 — Idioma Calculadora de Eletrólitos (100% i18n)
+
+**Causa raiz:** `_detectLang()` lia `window.appLang` (inexistente); sem listener de mudança de idioma; todas as 11 funções `ClinicalLogic.*` tinham strings hardcoded em PT.
+
+**Solução aplicada:**
+
+**A) Sistema de detecção de idioma multi-fonte** (`js/elec-calc.js`):
+- `_getGlobalLang()` — lê `window.currentLang` → `window.lang` → `localStorage` → URL param (espelha `_isES()` do motor de interações)
+- `_render()` sempre chama `_getGlobalLang()` antes de renderizar
+- `_hookSetLang()` — intercepta `setLang()` global + retry 50×100ms
+- `_init()` — listener `langChange` + hook retry + watcher 800ms como fallback
+
+**B) I18N expandido** (`js/elec-calc.js`):
+- ~200 strings clínicas PT+ES adicionadas ao objeto `I18N`
+- Cobertura: K, Na, Mg, Ca, P, HCO₃, Glicose, Albumina, AG, Osmolaridade, Cl
+- Strings de indicação, alertas, condutas, recontroles, acessos vasculares
+
+**C) ClinicalLogic — substituição completa de strings hardcoded** (`js/elec-calc.js`):
+- `ClinicalLogic.k()` — 8 substituições: defStr, alertas, op1-3 indicação/alerta_acesso
+- `ClinicalLogic.na()` — 12 substituições: interpretação, indicações, alertas, acessos
+- `ClinicalLogic.mg()` — 8 substituições: indicações, alertas, acessos
+- `ClinicalLogic.ca()` — 7 substituições: indicações, alertas, acessos
+- `ClinicalLogic.p()` — 7 substituições: indicações, alertas
+- `ClinicalLogic.hco3()` — 6 substituições: indicações, dilui, alertas
+- `ClinicalLogic.glicose()` — 7 substituições: indicações, alertas, acessos
+- `ClinicalLogic.albumina()` — 5 substituições: indicações, alertas, acesso
+- `ClinicalLogic.ag()` — 8 substituições: interpretação, alertas, indicação
+- `ClinicalLogic.osm()` — 7 substituições: interpretação, alertas, indicação
+- `ClinicalLogic.cl()` — 6 substituições: interpretação, alertas, indicações
+
+**Arquivos modificados:**
+| Arquivo | Mudança |
+|---|---|
+| `js/elec-calc.js` | `_getGlobalLang()`, `_hookSetLang()`, watcher 800ms, I18N +200 strings PT+ES, 74 substituições nas 11 funções ClinicalLogic |
+
+#### Ledger completo de arquivos modificados (Sessões 1 + 2)
+
+| Arquivo | Sessão | Status | Resumo |
+|---|---|---|---|
+| `index.html` | S1+S2 | **modificado** | Container legado ID duplicado removido; display:none v3; debug logs interações |
+| `js/hub-accordion.js` | S1+S2 | **modificado** | Mount eletrolitos via ElecCalc; _moveInteractions() retry 15×100ms |
+| `js/elec-calc.js` | S1+S2 | **criado/modificado** | Engine completa ~91KB; _getGlobalLang multi-fonte; I18N 200+ strings; ClinicalLogic 100% i18n |
+| `js/deeplink-router.js` | S1 | **modificado** | ELEC_CARD_ALIASES 38 aliases; handler eletrolitos com elecKey |
+| `css/medcases-ux-v2.css` | S1 | **modificado** | §16 estilos elec2-* ~400 linhas |
+| `sw.js` | S1 | **modificado** | CACHE_VERSION v5→v6; elec-calc.js pré-cacheado |
+| `database/interacoes.js` | — | **somente leitura** | Não modificado — banco clínico preservado |
+
+---
+
+### 2026-06-23 — v3.1.0: Calculadora de Eletrólitos / Meio Interno v3.0 (button-driven)
+
+#### Refatoração completa do card Eletrólitos — fluxo clínico por botões
+
+**Objetivo:** Substituir o antigo módulo de Eletrólitos (herdado de `#page-elec`, digitação manual) por uma calculadora clínica avançada button-driven — sem dependência de digitação manual para montar a correção.
+
+**Arquivos criados/modificados:**
+
+| Arquivo | Operação | Resumo |
+|---|---|---|
+| `js/elec-calc.js` | **CRIADO** | ~91 KB · Engine clínica completa — FORMULATIONS_DB, 8 fórmulas, ClinicalLogic 11 eletrólitos, ElecRender 7 blocos, ElecUI 3 etapas · API pública `window.ElecCalc` |
+| `css/medcases-ux-v2.css` | **MODIFICADO** | §16 adicionado — ~400 linhas de estilos elec2-* (grid de botões, chips de estado, blocos de output, alertas, dark/light mode) |
+| `js/hub-accordion.js` | **MODIFICADO** | Mount do card `eletrolitos` agora usa `ElecCalc.render()` + aceita `opts.elecKey` para seleção automática via deep link |
+| `js/deeplink-router.js` | **MODIFICADO** | `ELEC_CARD_ALIASES` expandido de 5 para 38 aliases · handler `eletrolitos` atualizado para passar `elecKey` ao HubAccordion |
+| `index.html` | **MODIFICADO** | `<script src="js/elec-calc.js">` adicionado antes do deeplink-router |
+| `sw.js` | **MODIFICADO** | `CACHE_VERSION` v5→v6 · `elec-calc.js` adicionado nos 23 assets pré-cacheados |
+| `README.md` | **MODIFICADO** | Badge v3.0.0-hub → v3.1.0-elec · Changelog desta sessão |
+
+#### Arquitetura `js/elec-calc.js`
+
+| Seção | Conteúdo |
+|---|---|
+| §1 `FORMULATIONS_DB` | 13 formulações: KCl 19,1%, KCl 10%, NaCl 0,9/3/23,4%, MgSO₄ 50%, NaHCO₃ 8,4%, SG 5/10/25/50%, Albumina 5/20%, Gluconato/Cloreto de Ca |
+| §2 `ELECTROLYTES` | 11 eletrólitos: K, Na, Cl, Mg, Ca, P, HCO₃, Glicose, Albumina, AG, Osm — com unidades, range normal, ícone, cor, estados contextuais |
+| §3 `_state` | Estado completo da calculadora — eletrólito, campos numéricos, presets, estado clínico, idioma |
+| §4 `Formulas` | 10 fórmulas clínicas: calcACT, calcNaCorrigido, calcDeficitNa, calcDeficitAguaLivre, calcDeficitK, calcCaCorrigido, calcOsmolaridade, calcAG, calcAGCorrigido, calcInfusao |
+| §5 `I18N` | Bilíngue completo PT/ES — 60+ strings por idioma |
+| §6 `ClinicalLogic` | 10 engines: k, na, mg, ca, p, hco3, glicose, albumina, ag, osm — retornam { estado, interpretação, op1-3, alertas, recontrole } |
+| §7 `ElecRender` | Renderização HTML dos 7 blocos: Estado, Interpretação, Opções 1-3, Alertas, Recontrole |
+| §8 `ElecUI` | Etapa 1 (grid 11 eletrólitos), Etapa 2 (campos + botões de estado), Etapa 3 (presets dose/volume/tempo/equipo), Resultado |
+| §9 Controller | `_selectElectrolyte`, `_setState`, `_calculate`, `_reset`, `_copyResult`, `_syncPatientData` |
+| §10 API pública | `window.ElecCalc.{ selectElectrolyte, setState, setField, calculate, reset, copyResult, getState, render, init }` |
+
+#### Deep Links suportados (expandidos)
+
+```
+?tab=eletrolitos                      — abre card Eletrólitos
+?tab=eletrolitos&q=potassio           — seleciona K⁺
+?tab=eletrolitos&q=sodio              — seleciona Na⁺
+?tab=eletrolitos&q=magnesio           — seleciona Mg²⁺
+?tab=eletrolitos&q=calcio             — seleciona Ca²⁺
+?tab=eletrolitos&q=fosforo            — seleciona P
+?tab=eletrolitos&q=bicarbonato        — seleciona HCO₃⁻
+?tab=eletrolitos&q=glicose            — seleciona Glicose
+?tab=eletrolitos&q=albumina           — seleciona Albumina
+?tab=eletrolitos&q=anion-gap          — seleciona Ânion Gap
+?tab=eletrolitos&q=osmolaridade       — seleciona Osmolaridade
+?lang=es&tab=eletrolitos&q=potassio   — espanhol + K⁺
+```
+
+#### Fórmulas clínicas implementadas
+
+| Fórmula | Expressão |
+|---|---|
+| Na⁺ Corrigido | `Na + 1,6 × ((Glicose – 100) / 100)` [fator 2,4 se Glicose >400] |
+| ACT Homem | `Peso × 0,60` |
+| ACT Mulher | `Peso × 0,50` |
+| ACT Idoso | `Peso × 0,45` |
+| Déficit Na⁺ | `ACT × (Na alvo – Na atual)` |
+| Déficit Água Livre | `ACT × ((Na atual / Na alvo) – 1)` |
+| Déficit K⁺ estimado | `((3,5 – K atual) / 0,3) × 100 mEq` |
+| Ca²⁺ Corrigido | `Ca medido + 0,8 × (4,0 – albumina)` |
+| Osmolaridade | `2 × Na + Glicose/18 + Ureia/2,8` |
+| Ânion Gap | `Na – (Cl + HCO₃)` |
+| AG Corrigido | `AG + 2,5 × (4,0 – albumina)` |
+| Infusão mL/h | `Volume / Tempo(h)` |
+| Macrogotas/min | `Volume × 20 / Tempo(min)` |
+| Microgotas/min | `Volume × 60 / Tempo(min)` |
+
+#### Exemplo validado — KCl 40 mEq (conforme especificação)
+
+```
+KCl 19,1%: Volume = 40 / 2,5 = 16 mL ✅
+KCl 10%:   Volume = 40 / 1,33 = 30 mL ✅
+
+Carga rápida central (1h):
+  SF 0,9% 100 mL → 100 mL/h → 33 gotas/min → 100 microgotas/min ✅
+
+Correção periférica (4h):
+  SF 0,9% 500 mL → concentração = 80 mEq/L
+  → ⚠️ ALERTA: excede limite periférico (>50 mEq/L) ✅
+  → Sugestão: 20 mEq/500 mL = 40 mEq/L (periférico seguro) ✅
+```
+
+#### Testes obrigatórios — cenários clínicos
+
+| Cenário | Resultado esperado |
+|---|---|
+| K⁺ 2,4 · peso 70 · ClCr 90 | Hipocalemia grave → Opção 1: carga central 40 mEq/100 mL/1h |
+| K⁺ 6,4 · ECG alterado | 🚨 Hipercalemia grave → Gluconato Ca + Insulina/Glicose |
+| Na⁺ 116 sintomático | 🚨 NaCl 3% 100 mL/10 min + alerta mielinólise |
+| Na⁺ 162 | Hipernatremia → SG 5% 48h ≤10 mEq/L/24h |
+| Mg²⁺ 1,1 · ClCr ≥30 | Grave → MgSO₄ 4–8 g / 12–24h |
+| Ca²⁺ 7,2 · albumina 2,0 | Ca corrigido = 7,2 + 0,8×(4,0–2,0) = 8,8 mg/dL → Normal! |
+| AG · Na 140, Cl 100, HCO₃ 12, alb 2,0 | AG = 28 → Elevado · AG corrigido = 28 + 2,5×2 = 33 |
+| `?lang=es&q=potassio` | Toda a UI exibida em espanhol |
 
 ### 2026-06-19 — v2.7.0: Verificador Dinâmico de Interações Medicamentosas v2.0
 
@@ -2697,13 +2866,14 @@ Total drogas em cardio.js: 54 (Grupos 1–17)
 ## 🚧 Próximos Passos
 
 ### Alta Prioridade
+- [ ] **Calculadora de Eletrólitos — Modo Avançado** — campos livres completos para valor sérico, peso, glicose, albumina, Na, Cl, HCO₃, ureia, Ca custom
+- [ ] **Calculadora de Eletrólitos — Protocolo Personalizado (Etapa 3)** — interface para calcular mL/h, gotas e microgotas com dose/volume/tempo customizados
+- [ ] **Sincronização com Dados do Paciente** — `window.patientData.peso/clcr/sexo` populados automaticamente nos campos da calculadora
 - [ ] **PWA Manifest** (`manifest.json` + `service-worker.js`) — instalação offline total
 - [ ] **Expandir availableFormulations** — cobrir 100% dos fármacos em `DRUG_DB` com dados comerciais reais do mercado brasileiro
 - [ ] **Módulo Interações** — card "Em breve" → cruzamento real de fármacos por lista de meds ativa
 - [ ] **Histórico de pacientes** — localStorage com até 10 perfis salvos
 - [ ] **Módulo Pediatria** — DRUG_DB infantil com doses por kg para todas as especialidades
-- [ ] **Histórico de pacientes** — localStorage com até 10 perfis salvos
-- [ ] **Módulo Interações** — card "Em breve" → cruzamento real de fármacos por lista de meds ativa
 
 ### Média Prioridade
 - [ ] **Expandir camada renal** — `psicofarmacos.js` e demais databases com `renalDose`

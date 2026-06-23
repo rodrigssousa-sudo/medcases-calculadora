@@ -1,5 +1,5 @@
 /* ============================================================
-   MedCases Pro — Service Worker v3.0
+   MedCases Pro — Service Worker v5.0
    Estratégia: STALE-WHILE-REVALIDATE (Cache-First + Background Sync)
    ─────────────────────────────────────────────────────────────
    PROBLEMA RESOLVIDO: "Cold Start Offline" na WebView Mobile.
@@ -22,15 +22,17 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v4';
+const CACHE_VERSION   = 'medcases-v6';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
-/* ── Lista canônica de 21 assets pré-cacheados no install ─── */
+/* ── Lista canônica de 23 assets pré-cacheados no install ─── */
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './css/medcases-ux-v2.css',
   './js/medcases-ux-v2.js',
+  './js/hub-accordion.js',
+  './js/elec-calc.js',
   './js/deeplink-router.js',
   './database/interacoes.js',
   './database/analgesicos.js',

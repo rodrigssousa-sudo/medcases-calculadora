@@ -7211,7 +7211,7 @@
 
         <!-- ══ ROW 1: DADOS DO PACIENTE (full-width) ══ -->
         <div class="hub-row--full">
-          <article class="hub-card" id="hub-card-patient" data-hub="patient">
+          <article class="hub-card" id="hub-card-patient" data-hub="patient" data-hub-full="true">
             <button class="hub-card-trigger" onclick="hubToggle('patient')"
                     aria-expanded="false" aria-controls="hub-body-patient">
               <div class="hub-card-ico hub-ico--patient"><i class="fa-solid fa-user-injured"></i></div>
@@ -7387,7 +7387,7 @@
 
         <!-- ══ ROW 2: ClCr RENAL (full-width) ══ -->
         <div class="hub-row--full">
-          <article class="hub-card" id="hub-card-clcr" data-hub="clcr">
+          <article class="hub-card" id="hub-card-clcr" data-hub="clcr" data-hub-full="true">
             <button class="hub-card-trigger" onclick="hubToggle('clcr')"
                     aria-expanded="false" aria-controls="hub-body-clcr">
               <div class="hub-card-ico hub-ico--clcr"><i class="fa-solid fa-kidneys"></i></div>
@@ -7554,7 +7554,7 @@
 
         <!-- ══ ROW 5: INFUSÃO (full-width) ══ -->
         <div class="hub-row--full">
-          <article class="hub-card" id="hub-card-infusao" data-hub="infusao">
+          <article class="hub-card" id="hub-card-infusao" data-hub="infusao" data-hub-full="true">
             <button class="hub-card-trigger" onclick="hubToggle('infusao')"
                     aria-expanded="false" aria-controls="hub-body-infusao">
               <div class="hub-card-ico hub-ico--infusao"><i class="fa-solid fa-syringe"></i></div>
@@ -8016,56 +8016,10 @@
         body[data-lang="es"] #hub-accordion .lang-hub-pt { display: none; }
       </style>
 
-      <!-- INTERAÇÕES — container original (preservado para o motor JS) -->
-      <div class="intx-container" id="card-interactions-container" style="display:none">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-          <div>
-            <h3 id="txt-inter-titulo" class="intx-title">
-              <span class="lang-pt">Interações Medicamentosas</span>
-              <span class="lang-es">Interacciones Medicamentosas</span>
-            </h3>
-            <span id="txt-inter-sub" class="intx-sub">
-              <span class="lang-pt">Cruzamento inteligente de fármacos em polifarmácia</span>
-              <span class="lang-es">Cruce inteligente de fármacos en polifarmacia</span>
-            </span>
-          </div>
-          <div class="intx-counter">
-            <span id="lbl-contador-meds">0</span>/5
-          </div>
-        </div>
-        <div style="position:relative;margin-bottom:12px;">
-          <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);pointer-events:none;font-size:15px;z-index:1;">🔍</span>
-          <input
-            type="text"
-            id="input-busca-interacao"
-            class="intx-input"
-            placeholder="Adicionar fármaco à verificação..."
-            oninput="filtrarDropdownInteracao()"
-            onfocus="mostrarDropdownInteracao()"
-            onblur="setTimeout(()=>{ const d=document.getElementById('dropdown-sugestoes-interacao'); if(d) d.style.display='none'; }, 200)"
-            autocomplete="off"
-          />
-          <div
-            id="dropdown-sugestoes-interacao"
-            class="intx-dropdown"
-            role="listbox"
-          ></div>
-        </div>
-        <div id="chips-interacoes-wrapper" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;min-height:0;"></div>
-        <button
-          id="btn-verificar-interacoes"
-          disabled
-          onclick="executarChecagemInteracoes()"
-          style="width:100%;padding:14px;background:#6c5ce7;color:#fff;border:none;border-radius:9px;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;justify-content:center;align-items:center;gap:8px;opacity:.45;"
-        >
-          <span>📊</span>
-          <span id="txt-btn-verificar">
-            <span class="lang-pt">Verificar Interações</span>
-            <span class="lang-es">Verificar Interacciones</span>
-          </span>
-        </button>
-        <div id="resultados-interacoes-container" style="margin-top:16px;"></div>
-      </div><!-- /intx-container -->
+      <!-- INTERAÇÕES — container legado REMOVIDO (era duplicado do container v3 na linha ~8699)
+           CAUSA DO BUG: _moveInteractions() usava getElementById() que retornava ESTE (o primeiro
+           no DOM, display:none, sem estado real) em vez do container v3 correto abaixo.
+           FIX: container legado eliminado — apenas o container v3 permanece como fonte única de verdade. -->
 
       <!-- ── SEPARADOR OCULTO — mantém compatibilidade com elementos legados ── -->
       <div style="display:none">
@@ -8696,7 +8650,8 @@
         /* Placeholder bilíngue — aplicado via JS mas assistido pelo CSS */
       </style>
 
-      <div class="intx-container" id="card-interactions-container">
+      <!-- card-interactions-container: oculto inicialmente; _moveInteractions() move para o hub-wrapper e revela -->
+      <div class="intx-container" id="card-interactions-container" style="display:none">
 
         <!-- ── Cabeçalho ── -->
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
@@ -20131,12 +20086,23 @@ function _adaptExternalDB(dbObj, categoryLabel) {
       const db = window.INTERACOES_DB || {};
       const interacoesEncontradas = [];
 
+      /* ── DEBUG LOGS (temporários — remover após validação) ── */
+      console.log('[INTERACTIONS_DEBUG] databaseLoaded=' + (Object.keys(db).length > 0));
+      console.log('[INTERACTIONS_DEBUG] selectedDrugs=' + JSON.stringify(selecionadosInteracao));
+      console.log('[INTERACTIONS_DEBUG] rulesCount=' + Object.keys(db).length);
+
       /* ══════════════════════════════════════════════════════════
-         MOTOR HIERÁRQUICO v3.1 — Ontologia Farmacológica
-         Algoritmo C(n,2) com 3 níveis de lookup (early-return):
-           Nível 1 → Direto      DB[fA][fB] | DB[fB][fA]
-           Nível 2 → Droga×Cls  DB[fA][$cls_B] | DB[fB][$cls_A]
-           Nível 3 → Cls×Cls    DB[$cls_A][$cls_B]
+         MOTOR HIERÁRQUICO v4.0 — Ontologia Farmacológica
+         Algoritmo C(n,2) com 8 caminhos bidirecionais + best-match:
+           Path 1 → DB[fA][fB]
+           Path 2 → DB[fB][fA]
+           Path 3 → DB[fA][$clsB]
+           Path 4 → DB[fB][$clsA]
+           Path 5 → DB[$clsA][fB]          ← novo
+           Path 6 → DB[$clsB][fA]          ← novo
+           Path 7 → DB[$clsA][$clsB]
+           Path 8 → DB[$clsB][$clsA]
+         Retorna o candidato de maior scoreClinico (não early-return).
       ══════════════════════════════════════════════════════════ */
       for (let i = 0; i < selecionadosInteracao.length; i++) {
         for (let j = i + 1; j < selecionadosInteracao.length; j++) {
@@ -20150,85 +20116,75 @@ function _adaptExternalDB(dbObj, categoryLabel) {
           const classesA = getClassesDeFarmaco(fA);
           const classesB = getClassesDeFarmaco(fB);
 
-          let dados    = null;
-          let matchTipo = '';
-          let classeVia = '';
+          /* Coleta TODOS os candidatos sem early-return */
+          const candidates = [];
 
-          /* ── NÍVEL 1: Direto (Droga × Droga) ── */
-          if (!dados) {
-            if (db[fA] && db[fA][fB]) {
-              dados     = db[fA][fB];
-              matchTipo = 'direto';
-            } else if (db[fB] && db[fB][fA]) {
-              dados     = db[fB][fA];
-              matchTipo = 'direto';
+          function _addCandidate(d, tipo, via) {
+            if (d && d.gravidade) {
+              candidates.push({ dados: d, matchTipo: tipo, classeVia: via });
             }
           }
 
-          /* ── NÍVEL 2: Droga × Classe ── */
-          if (!dados) {
-            /* fA → classes de fB */
-            for (const cls of classesB) {
-              if (db[fA] && db[fA][cls]) {
-                dados     = db[fA][cls];
-                matchTipo = 'droga_classe';
-                classeVia = cls;
-                break;
-              }
-            }
+          /* Path 1: drogaA → drogaB */
+          if (db[fA] && db[fA][fB]) _addCandidate(db[fA][fB], 'direto', '');
+
+          /* Path 2: drogaB → drogaA */
+          if (db[fB] && db[fB][fA]) _addCandidate(db[fB][fA], 'direto', '');
+
+          /* Path 3: drogaA → classeB */
+          for (const cls of classesB) {
+            if (db[fA] && db[fA][cls]) _addCandidate(db[fA][cls], 'droga_classe', cls);
           }
-          if (!dados) {
-            /* fB → classes de fA */
-            for (const cls of classesA) {
-              if (db[fB] && db[fB][cls]) {
-                dados     = db[fB][cls];
-                matchTipo = 'droga_classe';
-                classeVia = cls;
-                break;
-              }
+
+          /* Path 4: drogaB → classeA */
+          for (const cls of classesA) {
+            if (db[fB] && db[fB][cls]) _addCandidate(db[fB][cls], 'droga_classe', cls);
+          }
+
+          /* Path 5: classeA → drogaB */
+          for (const cls of classesA) {
+            if (db[cls] && db[cls][fB]) _addCandidate(db[cls][fB], 'droga_classe', cls);
+          }
+
+          /* Path 6: classeB → drogaA */
+          for (const cls of classesB) {
+            if (db[cls] && db[cls][fA]) _addCandidate(db[cls][fA], 'droga_classe', cls);
+          }
+
+          /* Paths 7 & 8: classeA × classeB (bidirecional) */
+          for (const clsA of classesA) {
+            for (const clsB of classesB) {
+              if (db[clsA] && db[clsA][clsB]) _addCandidate(db[clsA][clsB], 'classe_classe', `${clsA} ✕ ${clsB}`);
+              if (db[clsB] && db[clsB][clsA]) _addCandidate(db[clsB][clsA], 'classe_classe', `${clsB} ✕ ${clsA}`);
             }
           }
 
-          /* ── NÍVEL 3: Classe × Classe ── */
-          if (!dados) {
-            outer:
-            for (const clsA of classesA) {
-              for (const clsB of classesB) {
-                if (db[clsA] && db[clsA][clsB]) {
-                  dados     = db[clsA][clsB];
-                  matchTipo = 'classe_classe';
-                  classeVia = `${clsA} ✕ ${clsB}`;
-                  break outer;
-                }
-                /* Bidirecional na Classe×Classe */
-                if (db[clsB] && db[clsB][clsA]) {
-                  dados     = db[clsB][clsA];
-                  matchTipo = 'classe_classe';
-                  classeVia = `${clsB} ✕ ${clsA}`;
-                  break outer;
-                }
-              }
-            }
-          }
+          /* Seleciona o candidato de MAIOR scoreClinico */
+          if (candidates.length === 0) continue;
+
+          const best = candidates.reduce((prev, cur) =>
+            ((cur.dados.scoreClinico || 0) > (prev.dados.scoreClinico || 0)) ? cur : prev
+          );
 
           /* ── Push sem duplicatas ── */
-          if (dados) {
-            const jaExiste = interacoesEncontradas.some(it =>
-              (it.med1 === nomA && it.med2 === nomB) ||
-              (it.med1 === nomB && it.med2 === nomA)
-            );
-            if (!jaExiste) {
-              interacoesEncontradas.push({
-                med1:      nomA,
-                med2:      nomB,
-                config:    dados,
-                matchTipo: matchTipo,
-                classeVia: classeVia
-              });
-            }
+          const jaExiste = interacoesEncontradas.some(it =>
+            (it.med1 === nomA && it.med2 === nomB) ||
+            (it.med1 === nomB && it.med2 === nomA)
+          );
+          if (!jaExiste) {
+            interacoesEncontradas.push({
+              med1:      nomA,
+              med2:      nomB,
+              config:    best.dados,
+              matchTipo: best.matchTipo,
+              classeVia: best.classeVia
+            });
           }
         }
       }
+
+      /* ── DEBUG: log de resultados ── */
+      console.log('[INTERACTIONS_DEBUG] resultsCount=' + interacoesEncontradas.length);
 
       /* ── Sem interação documentada ── */
       if (interacoesEncontradas.length === 0) {
@@ -22308,6 +22264,9 @@ window.MedCasesBridge = {
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
 <script src="js/hub-accordion.js"></script>
+
+<!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
+<script src="js/elec-calc.js"></script>
 
 <!-- MedCases Deep Link Router v1.1 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
 <script src="js/deeplink-router.js"></script>

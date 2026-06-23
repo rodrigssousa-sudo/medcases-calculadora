@@ -137,17 +137,64 @@
   /* ================================================================
      MAPA DE ELETRÓLITOS — alias → id do card na página
   ================================================================ */
+  /* ELEC_CARD_ALIASES v3.0 — alias → chave interna ElecCalc (elecKey)
+     Mapeamento expandido com todos os 11 eletrólitos da Calculadora v3 */
   var ELEC_CARD_ALIASES = {
-    'sodio':     'elec-card-na',
-    'na':        'elec-card-na',
-    'potassio':  'elec-card-k',
-    'k':         'elec-card-k',
-    'magnesio':  'elec-card-mg',
-    'mg':        'elec-card-mg',
-    'calcio':    'elec-card-ca',
-    'ca':        'elec-card-ca',
-    'fosforo':   'elec-card-p',
-    'p':         'elec-card-p',
+    /* Potássio */
+    'potassio':   'k',
+    'potasio':    'k',
+    'k':          'k',
+    'kcl':        'k',
+    /* Sódio */
+    'sodio':      'na',
+    'sódio':      'na',
+    'na':         'na',
+    'nacl':       'na',
+    /* Cloro */
+    'cloro':      'cl',
+    'cl':         'cl',
+    'cloreto':    'cl',
+    /* Magnésio */
+    'magnesio':   'mg',
+    'magnésio':   'mg',
+    'mg':         'mg',
+    'mgso4':      'mg',
+    /* Cálcio */
+    'calcio':     'ca',
+    'cálcio':     'ca',
+    'ca':         'ca',
+    'calcio-total': 'ca',
+    /* Fósforo */
+    'fosforo':    'p',
+    'fósforo':    'p',
+    'p':          'p',
+    'fosfato':    'p',
+    /* Bicarbonato */
+    'bicarbonato': 'hco3',
+    'hco3':        'hco3',
+    'bicarb':      'hco3',
+    'bicarbonato-sodio': 'hco3',
+    /* Glicose */
+    'glicose':    'glicose',
+    'glucosa':    'glicose',
+    'glucose':    'glicose',
+    'sg':         'glicose',
+    'dextrose':   'glicose',
+    /* Albumina */
+    'albumina':   'albumina',
+    'albumin':    'albumina',
+    'alb':        'albumina',
+    /* Ânion Gap */
+    'anion-gap':  'ag',
+    'aniongap':   'ag',
+    'ag':         'ag',
+    'anion':      'ag',
+    'gap':        'ag',
+    /* Osmolaridade */
+    'osmolaridade': 'osm',
+    'osmolaridad':  'osm',
+    'osm':          'osm',
+    'osmolalidade': 'osm',
   };
 
   /* ================================================================
@@ -289,11 +336,25 @@
       });
     },
 
-    /* ── ELETRÓLITOS ── */
+    /* ── ELETRÓLITOS v3.0 — Calculadora button-driven ── */
     'eletrolitos': function (q) {
       _waitForHub(function () {
-        var cardId = q ? ELEC_CARD_ALIASES[_norm(q)] : null;
-        window.HubAccordion.open('eletrolitos', { scrollEl: cardId });
+        /* Resolve o alias → chave interna do ElecCalc (k, na, mg, etc.) */
+        var elecKey = q ? ELEC_CARD_ALIASES[_norm(q)] : null;
+        /* Fallback legado: IDs antigos (elec-card-na etc.) para scrollEl */
+        var legacyScrollEl = null;
+        if (!elecKey && q) {
+          /* Tenta mapeamento legado direto */
+          var legacyMap = {
+            'sodio': 'elec-card-na', 'na': 'elec-card-na',
+            'potassio': 'elec-card-k', 'k': 'elec-card-k'
+          };
+          legacyScrollEl = legacyMap[_norm(q)] || null;
+        }
+        window.HubAccordion.open('eletrolitos', {
+          elecKey: elecKey,
+          scrollEl: legacyScrollEl
+        });
       });
     },
 

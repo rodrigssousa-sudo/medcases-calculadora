@@ -100,15 +100,29 @@
   /* ────────────────────────────────────────────────────────────────
      MOVER INTERAÇÕES
      #card-interactions-container (oculto) → #card-interactions-container-wrapper
+
+     NOTAS DE SEGURANÇA (fix 2026-06-23):
+     - Após remoção do container legado duplicado (que era o primeiro no DOM
+       e causava getElementById() pegar o container errado/inativo), agora
+       existe apenas UM único #card-interactions-container — o container v3.
+     - _mounted['interacoes'] garante que o move só ocorre uma vez.
+     - Se wrapper ainda não estiver no DOM (race condition de init), retentar.
   ──────────────────────────────────────────────────────────────── */
-  function _moveInteractions() {
+  function _moveInteractions(attempt) {
     if (_mounted['interacoes']) return;
+    attempt = attempt || 0;
     var src     = document.getElementById('card-interactions-container');
     var wrapper = document.getElementById('card-interactions-container-wrapper');
     if (src && wrapper) {
       src.style.display = '';
       wrapper.appendChild(src);
       _mounted['interacoes'] = true;
+      console.log('[HubAccordion] _moveInteractions() OK — container v3 movido para wrapper.');
+    } else if (attempt < 15) {
+      /* Retry: wrapper pode não estar no DOM ainda (lazy render) */
+      setTimeout(function () { _moveInteractions(attempt + 1); }, 100);
+    } else {
+      console.warn('[HubAccordion] _moveInteractions() falhou após 15 tentativas. src=', !!src, 'wrapper=', !!wrapper);
     }
   }
 
@@ -268,27 +282,25 @@
         break;
       }
 
-      /* ── Eletrólitos ────────────────────────────────────────── */
+      /* ── Eletrólitos v3.0 — Calculadora button-driven ────────── */
       case 'eletrolitos': {
         var slot = document.getElementById('hub-elec-slot');
         if (!slot) break;
-        /* Move o conteúdo de #page-elec para o slot.
-           Os IDs originais (elec-card-na, elec-card-k etc.) são preservados
-           para que o scroll do router funcione corretamente. */
-        var elecPage = document.getElementById('page-elec');
-        if (elecPage) {
-          var bb = elecPage.querySelector('.section-back-bar');
-          if (bb) bb.remove();
-          while (elecPage.firstChild) {
-            slot.appendChild(elecPage.firstChild);
-          }
-          elecPage.innerHTML =
-            '<div style="padding:16px;text-align:center;">' +
-              '<button class="btn-primary" onclick="hubOpen(\'eletrolitos\')" style="margin:0 auto;display:block;">' +
-                '<i class="fa-solid fa-bolt"></i> Abrir Eletrólitos no Hub' +
-              '</button></div>';
+        /* Usar a nova calculadora ElecCalc se disponível */
+        if (window.ElecCalc && typeof window.ElecCalc.render === 'function') {
+          window.ElecCalc.render();
         } else {
-          slot.innerHTML = '<p style="color:var(--text-secondary);font-size:12px;">Módulo eletrólitos não encontrado.</p>';
+          /* Fallback: mover conteúdo do #page-elec legado */
+          var elecPage = document.getElementById('page-elec');
+          if (elecPage) {
+            var bb = elecPage.querySelector('.section-back-bar');
+            if (bb) bb.remove();
+            while (elecPage.firstChild) {
+              slot.appendChild(elecPage.firstChild);
+            }
+          } else {
+            slot.innerHTML = '<p style="color:var(--text-secondary);font-size:12px;padding:12px;">Calculadora de Eletrólitos carregando...</p>';
+          }
         }
         _mounted['eletrolitos'] = true;
         break;
@@ -352,6 +364,21 @@
     }
   }
 
+  /* ────────────────────────────────────────────────────────────────
+     FALLBACK :has() — browsers sem suporte (Firefox < 121)
+     Adiciona/remove .hub-accordion--expanded no container
+     para que o CSS de fallback funcione corretamente.
+  ──────────────────────────────────────────────────────────────── */
+  function _updateAccordionState(hasOpen) {
+    var nav = document.getElementById('hub-accordion');
+    if (!nav) return;
+    if (hasOpen) {
+      nav.classList.add('hub-accordion--expanded');
+    } else {
+      nav.classList.remove('hub-accordion--expanded');
+    }
+  }
+
   function _openCard_fn(id) {
     /* Lazy mount: monta conteúdo se ainda não montado */
     _lazyMount(id);
@@ -366,6 +393,9 @@
     if (trigger) {
       trigger.setAttribute('aria-expanded', 'true');
     }
+
+    /* Fallback para browsers sem :has() */
+    _updateAccordionState(true);
 
     /* Scroll até o card após abrir */
     _scrollToCard('hub-card-' + id, SCROLL_DELAY);
@@ -383,15 +413,24 @@
     }
 
     if (_openCard === id) _openCard = null;
+
+    /* Verifica se ainda há algum card aberto */
+    var stillOpen = document.querySelector('.hub-card.is-open');
+    _updateAccordionState(!!stillOpen);
   }
 
   function hubCloseAll() {
     var cards = document.querySelectorAll('.hub-card.is-open');
     cards.forEach(function (c) {
       var id = c.getAttribute('data-hub');
-      if (id) _closeCard(id);
+      if (id) {
+        c.classList.remove('is-open');
+        var trigger = c.querySelector('.hub-card-trigger');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      }
     });
     _openCard = null;
+    _updateAccordionState(false);
   }
 
   /* ────────────────────────────────────────────────────────────────
@@ -488,11 +527,18 @@
         }, 350);
       }
 
-      /* Módulo-específico: eletrólito → scroll até o card do íon */
-      if (id === 'eletrolitos' && opts.scrollEl) {
+      /* Módulo-específico: eletrólito → seleciona íon via nova API ElecCalc */
+      if (id === 'eletrolitos') {
         setTimeout(function () {
-          _scrollToEl(opts.scrollEl, 250);
-        }, 550);
+          /* opts.elecKey: chave do eletrólito (k, na, mg, etc.) — deep link */
+          if (opts.elecKey && window.ElecCalc && typeof window.ElecCalc.selectElectrolyte === 'function') {
+            window.ElecCalc.selectElectrolyte(opts.elecKey);
+          }
+          /* Fallback legado: scrollEl com ID antigo */
+          if (opts.scrollEl) {
+            _scrollToEl(opts.scrollEl, 250);
+          }
+        }, 350);
       }
 
     }, 80);
@@ -573,3 +619,4 @@
   }
 
 })();
+

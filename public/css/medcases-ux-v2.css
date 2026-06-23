@@ -1045,24 +1045,20 @@ body.light-mode .hm-urine-badge--active {
    Mobile-first · Dark/Light mode · Deep link auto-expand
 ============================================================ */
 
-/* ── Container principal do hub ── */
+/* ── Container principal do hub — grid de 2 colunas ── */
 .hub-accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  padding: 0 0 12px 0;
-}
-
-/* ── Grid de 2 colunas para cards lado a lado ── */
-.hub-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  padding: 5px 12px 0;
+  padding: 5px 12px 12px;
 }
+
+/* ── hub-row: passa a ser apenas wrapper semântico, sem layout próprio ──
+   O grid do hub-accordion já controla o posicionamento.
+   display:contents faz os filhos participarem diretamente do grid pai. */
+.hub-row,
 .hub-row--full {
-  grid-template-columns: 1fr;
-  padding: 5px 12px 0;
+  display: contents;
 }
 
 /* ── Card accordion individual ── */
@@ -1071,11 +1067,45 @@ body.light-mode .hm-urine-badge--active {
   overflow: hidden;
   border: 1.5px solid rgba(56,189,248,0.10);
   background: var(--bg-card, #1E293B);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  /* grid-column e border/shadow transitam junto com is-open */
+  grid-column: span 1;
+  min-width: 0;
+  /* SEM transition aqui — mudanças de grid-column devem ser instantâneas
+     para não criar o efeito fantasma de "card em dois lugares" */
 }
+
+/* ── Cards permanentemente full-width ── */
+.hub-card[data-hub-full="true"] {
+  grid-column: 1 / -1;
+}
+
+/* ── Card ABERTO: full-width + destaque visual ── */
 .hub-card.is-open {
+  grid-column: 1 / -1;
   border-color: rgba(56,189,248,0.30);
   box-shadow: 0 6px 28px rgba(0,0,0,0.40);
+}
+
+/* ── Quando há um card aberto: TODOS os outros também viram full-width
+   Evita que um card fechado fique sozinho em meia coluna vazia. ── */
+.hub-accordion:has(.hub-card.is-open) .hub-card {
+  grid-column: 1 / -1;
+}
+/* Fallback JS (.hub-accordion--expanded) para Firefox sem :has() */
+.hub-accordion--expanded .hub-card {
+  grid-column: 1 / -1;
+}
+
+/* Mobile: sempre 1 coluna */
+@media (max-width: 480px) {
+  .hub-accordion {
+    grid-template-columns: 1fr;
+  }
+  .hub-card,
+  .hub-card.is-open,
+  .hub-card[data-hub-full="true"] {
+    grid-column: 1 / -1;
+  }
 }
 
 /* ── Trigger (cabeçalho clicável) ── */
@@ -1369,21 +1399,44 @@ body.light-mode .hm-urine-badge--active {
   color: var(--cyan, #38BDF8);
 }
 
-/* ── Body expansível ── */
+/* ── Body expansível ──────────────────────────────────────────────────
+   DECISÃO DE ARQUITETURA (fix bug duplicação v3.1):
+
+   Problema anterior: max-height 0→4000px é ASSIMÉTRICA.
+     Abertura:  rápida  (0→4000px, praticamente instantâneo visualmente)
+     Fechamento: LENTA  (4000px→0 demora ~380ms)
+   Durante esse delay, o grid-column já voltou para span 1,
+   criando o efeito "card aberto encolhendo para meia coluna" —
+   percebido como duplicação de estado.
+
+   Solução: fechar é IMEDIATO (display:none sem transition).
+   Abrir tem fade-in suave via opacity+translateY no inner.
+   O grid-column muda sempre junto com is-open (sem delay).
+────────────────────────────────────────────────────────────────── */
 .hub-card-body {
-  max-height: 0;
+  /* Fechado: completamente fora do fluxo — zero espaço, zero flash */
+  display: none;
   overflow: hidden;
-  transition: max-height 0.38s cubic-bezier(0.4,0,0.2,1);
   background: rgba(0,0,0,0.18);
-  /* border-top removido — separação feita pelo border-bottom do trigger colorido */
 }
 .hub-card.is-open .hub-card-body {
-  max-height: 4000px;
+  /* Aberto: visível, full-width */
+  display: block;
+  width: 100%;
 }
 
 /* Inner: padding do conteúdo */
 .hub-card-inner {
   padding: 14px 13px 16px;
+  /* Fade-in suave ao abrir (apenas entrada — fechamento é display:none imediato) */
+  animation: none;
+}
+.hub-card.is-open .hub-card-inner {
+  animation: hubBodyFadeIn 0.22s ease forwards;
+}
+@keyframes hubBodyFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ── Badge "Em breve" ── */
@@ -1422,12 +1475,7 @@ body.light-mode .hub-card-body label {
   color: #1E293B !important;
 }
 
-/* ── Separador visual discreto entre rows ── */
-.hub-row + .hub-row,
-.hub-row--full + .hub-row,
-.hub-row + .hub-row--full {
-  padding-top: 10px;
-}
+/* ── Separador entre rows: não necessário — gap do grid já faz isso ── */
 
 /* ── Micro-animação: escalar ícone ao abrir ── */
 @keyframes hubIconPop {
@@ -1500,5 +1548,573 @@ body.light-mode .hub-version-footer {
   .hub-row {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================================
+   §16 — CALCULADORA DE ELETRÓLITOS v3.0 (button-driven)
+   Fluxo em 3 etapas: Eletrólito → Estado → Presets → Resultado
+   Dark/Light mode · Bilíngue PT/ES · Mobile-first
+============================================================ */
+
+/* ── Container principal ── */
+.elec2-calc {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+/* ── Etapa (step card) ── */
+.elec2-step {
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border: 1px solid rgba(167,139,250,0.15);
+}
+
+/* ── Header da etapa ── */
+.elec2-step-hd {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(109,33,217,0.25);
+  color: #DDD6FE;
+  border-bottom: 1px solid rgba(167,139,250,0.12);
+}
+body.light-mode .elec2-step-hd {
+  background: rgba(109,33,217,0.08) !important;
+  color: #5B21B6 !important;
+  border-bottom-color: rgba(109,33,217,0.15) !important;
+}
+
+/* Número da etapa */
+.elec2-step-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(167,139,250,0.30);
+  color: #DDD6FE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+body.light-mode .elec2-step-num {
+  background: rgba(109,33,217,0.15) !important;
+  color: #5B21B6 !important;
+}
+
+/* ── Grid de eletrólitos (11 botões) ── */
+.elec2-elec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 10px;
+}
+@media (max-width: 380px) {
+  .elec2-elec-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── Botão de eletrólito ── */
+.elec2-elec-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 4px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.65);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.12s ease;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 52px;
+}
+.elec2-elec-btn i {
+  font-size: 14px;
+  transition: color 0.15s ease;
+}
+.elec2-elec-btn:hover {
+  background: rgba(255,255,255,0.10);
+  border-color: var(--btn-color, rgba(167,139,250,0.40));
+  color: var(--btn-color, #DDD6FE);
+}
+.elec2-elec-btn:active { transform: scale(0.93); }
+.elec2-elec-btn--active {
+  background: color-mix(in srgb, var(--btn-color, #7C3AED) 22%, transparent);
+  border-color: var(--btn-color, #A78BFA);
+  color: var(--btn-color, #DDD6FE);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--btn-color, #7C3AED) 30%, transparent);
+}
+.elec2-elec-btn--active i { color: var(--btn-color, #DDD6FE); }
+
+body.light-mode .elec2-elec-btn {
+  background: rgba(0,0,0,0.03) !important;
+  border-color: rgba(0,0,0,0.08) !important;
+  color: #374151 !important;
+}
+body.light-mode .elec2-elec-btn:hover {
+  background: color-mix(in srgb, var(--btn-color, #7C3AED) 10%, white) !important;
+  border-color: var(--btn-color, #7C3AED) !important;
+  color: var(--btn-color, #5B21B6) !important;
+}
+body.light-mode .elec2-elec-btn--active {
+  background: color-mix(in srgb, var(--btn-color, #7C3AED) 15%, white) !important;
+  border-color: var(--btn-color, #7C3AED) !important;
+  color: var(--btn-color, #5B21B6) !important;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--btn-color, #7C3AED) 25%, transparent) !important;
+}
+
+/* ── Campos numéricos (grid 2 colunas) ── */
+.elec2-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 10px;
+}
+
+.elec2-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.elec2-field--full { grid-column: 1 / -1; }
+
+.elec2-field-lbl {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(221,214,254,0.70);
+  letter-spacing: 0.2px;
+}
+body.light-mode .elec2-field-lbl { color: #6B7280 !important; }
+
+.elec2-field-input {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(167,139,250,0.20);
+  background: rgba(255,255,255,0.06);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+.elec2-field-input:focus {
+  outline: none;
+  border-color: rgba(167,139,250,0.55);
+  background: rgba(255,255,255,0.10);
+}
+.elec2-field-input::placeholder { color: rgba(255,255,255,0.28); }
+body.light-mode .elec2-field-input {
+  background: #FFFFFF !important;
+  border-color: rgba(109,33,217,0.20) !important;
+  color: #1E293B !important;
+}
+body.light-mode .elec2-field-input:focus { border-color: rgba(109,33,217,0.50) !important; }
+body.light-mode .elec2-field-input::placeholder { color: rgba(0,0,0,0.25) !important; }
+
+/* ── Grupos de estado ── */
+.elec2-state-group {
+  padding: 8px 10px 6px;
+  border-top: 1px solid rgba(167,139,250,0.08);
+}
+
+.elec2-state-lbl {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(221,214,254,0.60);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+body.light-mode .elec2-state-lbl { color: #6B7280 !important; }
+
+/* ── Fileira de botões ── */
+.elec2-btn-row {
+  display: flex;
+  gap: 6px;
+}
+.elec2-btn-row--wrap {
+  flex-wrap: wrap;
+}
+
+/* ── Botão de estado ── */
+.elec2-state-btn {
+  flex: 1;
+  min-width: 0;
+  padding: 7px 8px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.65);
+  font-size: 10.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.15s ease;
+  font-family: 'Inter', sans-serif;
+}
+.elec2-state-btn:active { transform: scale(0.94); }
+.elec2-state-btn.active {
+  background: rgba(109,33,217,0.35);
+  border-color: rgba(167,139,250,0.55);
+  color: #DDD6FE;
+}
+
+/* Cores semafóricas do nível */
+.elec2-state-btn--nivel-baixo.active { background: rgba(59,130,246,0.30); border-color: #60A5FA; color: #BFDBFE; }
+.elec2-state-btn--nivel-normal.active { background: rgba(34,197,94,0.25); border-color: #4ADE80; color: #BBF7D0; }
+.elec2-state-btn--nivel-alto.active { background: rgba(239,68,68,0.30); border-color: #F87171; color: #FECACA; }
+.elec2-state-btn--grav-leve.active { background: rgba(234,179,8,0.25); border-color: #FCD34D; color: #FEF08A; }
+.elec2-state-btn--grav-moderado.active { background: rgba(249,115,22,0.30); border-color: #FB923C; color: #FED7AA; }
+.elec2-state-btn--grav-grave.active { background: rgba(239,68,68,0.35); border-color: #F87171; color: #FECACA; }
+.elec2-state-btn--ecg-danger { border-color: rgba(239,68,68,0.25); }
+.elec2-state-btn--ecg-danger.active { background: rgba(239,68,68,0.35); border-color: #F87171; color: #FECACA; }
+
+body.light-mode .elec2-state-btn {
+  background: rgba(0,0,0,0.03) !important;
+  border-color: rgba(0,0,0,0.09) !important;
+  color: #374151 !important;
+}
+body.light-mode .elec2-state-btn.active {
+  background: rgba(109,33,217,0.12) !important;
+  border-color: rgba(109,33,217,0.35) !important;
+  color: #5B21B6 !important;
+}
+body.light-mode .elec2-state-btn--nivel-baixo.active { background: rgba(37,99,235,0.12) !important; border-color: #3B82F6 !important; color: #1D4ED8 !important; }
+body.light-mode .elec2-state-btn--nivel-normal.active { background: rgba(22,163,74,0.12) !important; border-color: #22C55E !important; color: #15803D !important; }
+body.light-mode .elec2-state-btn--nivel-alto.active { background: rgba(220,38,38,0.12) !important; border-color: #EF4444 !important; color: #B91C1C !important; }
+body.light-mode .elec2-state-btn--grav-grave.active { background: rgba(220,38,38,0.12) !important; border-color: #EF4444 !important; color: #B91C1C !important; }
+
+/* ── Botão preset (dose/volume/tempo/formulação) ── */
+.elec2-preset-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(167,139,250,0.18);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.60);
+  font-size: 10.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.15s ease;
+  font-family: 'Inter', sans-serif;
+}
+.elec2-preset-btn:active { transform: scale(0.93); }
+.elec2-preset-btn.active {
+  background: rgba(109,33,217,0.30);
+  border-color: rgba(167,139,250,0.60);
+  color: #DDD6FE;
+  box-shadow: 0 0 0 1px rgba(167,139,250,0.25);
+}
+body.light-mode .elec2-preset-btn {
+  background: rgba(0,0,0,0.03) !important;
+  border-color: rgba(109,33,217,0.15) !important;
+  color: #4B5563 !important;
+}
+body.light-mode .elec2-preset-btn.active {
+  background: rgba(109,33,217,0.12) !important;
+  border-color: rgba(109,33,217,0.40) !important;
+  color: #5B21B6 !important;
+}
+
+/* ── Botão calcular ── */
+.elec2-calc-btn {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 10px 10px;
+  width: calc(100% - 20px);
+  border-radius: 11px;
+  border: none;
+  background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.2px;
+  -webkit-tap-highlight-color: transparent;
+  transition: filter 0.18s ease, transform 0.12s ease;
+  box-shadow: 0 4px 16px rgba(91,33,182,0.40);
+  font-family: 'Inter', sans-serif;
+}
+.elec2-calc-btn:hover { filter: brightness(1.08); }
+.elec2-calc-btn:active { transform: scale(0.97); filter: brightness(0.92); }
+body.light-mode .elec2-calc-btn {
+  box-shadow: 0 4px 16px rgba(91,33,182,0.25) !important;
+}
+
+/* ── Área de resultado ── */
+.elec2-result {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── Ações do resultado (copiar / limpar) ── */
+.elec2-result-actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 0 4px;
+}
+
+.elec2-action-btn {
+  flex: 1;
+  padding: 9px 12px;
+  border-radius: 9px;
+  border: 1.5px solid rgba(167,139,250,0.25);
+  background: rgba(109,33,217,0.12);
+  color: #C4B5FD;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.15s ease;
+  font-family: 'Inter', sans-serif;
+}
+.elec2-action-btn:hover { background: rgba(109,33,217,0.22); }
+.elec2-action-btn:active { transform: scale(0.96); }
+.elec2-action-btn--secondary {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.55);
+}
+.elec2-action-btn--copied {
+  background: rgba(52,211,153,0.18) !important;
+  border-color: rgba(52,211,153,0.40) !important;
+  color: #34D399 !important;
+}
+body.light-mode .elec2-action-btn {
+  background: rgba(109,33,217,0.07) !important;
+  border-color: rgba(109,33,217,0.20) !important;
+  color: #5B21B6 !important;
+}
+body.light-mode .elec2-action-btn--secondary {
+  background: rgba(0,0,0,0.04) !important;
+  border-color: rgba(0,0,0,0.10) !important;
+  color: #6B7280 !important;
+}
+
+/* ── Bloco de output ── */
+.elec2-bloco {
+  border-radius: 11px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--bloco-cor, #7C3AED) 25%, transparent);
+  background: color-mix(in srgb, var(--bloco-cor, #7C3AED) 8%, rgba(0,0,0,0.30));
+}
+body.light-mode .elec2-bloco {
+  background: color-mix(in srgb, var(--bloco-cor, #7C3AED) 5%, white) !important;
+  border-color: color-mix(in srgb, var(--bloco-cor, #7C3AED) 20%, transparent) !important;
+}
+
+/* Header do bloco */
+.elec2-bloco-hd {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--bloco-cor, #7C3AED) 18%, rgba(0,0,0,0.25));
+  color: color-mix(in srgb, var(--bloco-cor, #7C3AED) 80%, white);
+  border-bottom: 1px solid color-mix(in srgb, var(--bloco-cor, #7C3AED) 20%, transparent);
+}
+.elec2-bloco-hd i { font-size: 11px; }
+body.light-mode .elec2-bloco-hd {
+  background: color-mix(in srgb, var(--bloco-cor, #7C3AED) 12%, white) !important;
+  color: color-mix(in srgb, var(--bloco-cor, #7C3AED) 90%, #1E293B) !important;
+}
+
+/* Body do bloco */
+.elec2-bloco-bd {
+  padding: 8px 12px 10px;
+}
+
+/* ── Linha de dado (label: valor) ── */
+.elec2-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.elec2-row:last-child { border-bottom: none; }
+
+.elec2-row-lbl {
+  font-size: 10.5px;
+  color: rgba(255,255,255,0.55);
+  flex-shrink: 0;
+  max-width: 50%;
+}
+.elec2-row-val {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.90);
+  text-align: right;
+  word-break: break-word;
+}
+body.light-mode .elec2-row-lbl { color: #6B7280 !important; }
+body.light-mode .elec2-row-val { color: #1E293B !important; }
+body.light-mode .elec2-row { border-bottom-color: rgba(0,0,0,0.06) !important; }
+
+/* ── Chips de estado no bloco Estado ── */
+.elec2-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+.elec2-chip {
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+.elec2-chip--baixo { background: rgba(59,130,246,0.25); color: #93C5FD; border: 1px solid rgba(59,130,246,0.30); }
+.elec2-chip--normal { background: rgba(34,197,94,0.20); color: #86EFAC; border: 1px solid rgba(34,197,94,0.25); }
+.elec2-chip--alto { background: rgba(239,68,68,0.25); color: #FCA5A5; border: 1px solid rgba(239,68,68,0.30); }
+.elec2-chip--grav-leve { background: rgba(234,179,8,0.20); color: #FDE68A; border: 1px solid rgba(234,179,8,0.25); }
+.elec2-chip--grav-moderado { background: rgba(249,115,22,0.25); color: #FDBA74; border: 1px solid rgba(249,115,22,0.30); }
+.elec2-chip--grav-grave { background: rgba(239,68,68,0.30); color: #FCA5A5; border: 1px solid rgba(239,68,68,0.35); }
+.elec2-chip--danger { background: rgba(239,68,68,0.30); color: #FCA5A5; border: 1px solid rgba(239,68,68,0.35); }
+.elec2-chip--ok { background: rgba(34,197,94,0.20); color: #86EFAC; border: 1px solid rgba(34,197,94,0.25); }
+.elec2-chip--warn { background: rgba(234,179,8,0.20); color: #FDE68A; border: 1px solid rgba(234,179,8,0.25); }
+.elec2-chip--acesso-periph { background: rgba(56,189,248,0.20); color: #BAE6FD; border: 1px solid rgba(56,189,248,0.25); }
+.elec2-chip--acesso-central { background: rgba(167,139,250,0.25); color: #DDD6FE; border: 1px solid rgba(167,139,250,0.30); }
+
+body.light-mode .elec2-chip--baixo { background: rgba(37,99,235,0.10) !important; color: #1D4ED8 !important; border-color: rgba(37,99,235,0.20) !important; }
+body.light-mode .elec2-chip--normal { background: rgba(22,163,74,0.10) !important; color: #15803D !important; border-color: rgba(22,163,74,0.20) !important; }
+body.light-mode .elec2-chip--alto { background: rgba(220,38,38,0.10) !important; color: #B91C1C !important; border-color: rgba(220,38,38,0.20) !important; }
+body.light-mode .elec2-chip--grav-grave { background: rgba(220,38,38,0.10) !important; color: #B91C1C !important; border-color: rgba(220,38,38,0.20) !important; }
+
+/* ── Interpretação ── */
+.elec2-interpretacao {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.90);
+  line-height: 1.4;
+  padding: 2px 0;
+}
+.elec2-interpretacao--danger {
+  color: #FCA5A5;
+  font-size: 14px;
+}
+body.light-mode .elec2-interpretacao { color: #1E293B !important; }
+body.light-mode .elec2-interpretacao--danger { color: #B91C1C !important; }
+
+/* ── Alerta de acesso dentro das opções ── */
+.elec2-acesso-alert {
+  margin-top: 6px;
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 10.5px;
+  font-weight: 600;
+  background: rgba(251,191,36,0.12);
+  border: 1px solid rgba(251,191,36,0.22);
+  color: #FDE68A;
+  line-height: 1.4;
+}
+.elec2-acesso-alert:has([data-warn]) { background: rgba(239,68,68,0.12); }
+body.light-mode .elec2-acesso-alert {
+  background: rgba(180,83,9,0.07) !important;
+  border-color: rgba(180,83,9,0.18) !important;
+  color: #92400E !important;
+}
+
+/* ── Alertas críticos ── */
+.elec2-alert {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 9px;
+  border-radius: 7px;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+.elec2-alert:last-child { margin-bottom: 0; }
+.elec2-alert--critical {
+  background: rgba(239,68,68,0.18);
+  border: 1px solid rgba(239,68,68,0.30);
+  color: #FCA5A5;
+}
+.elec2-alert--warn {
+  background: rgba(251,191,36,0.12);
+  border: 1px solid rgba(251,191,36,0.22);
+  color: #FDE68A;
+}
+.elec2-alert--info {
+  background: rgba(56,189,248,0.10);
+  border: 1px solid rgba(56,189,248,0.18);
+  color: #BAE6FD;
+}
+body.light-mode .elec2-alert--critical {
+  background: rgba(220,38,38,0.08) !important;
+  border-color: rgba(220,38,38,0.20) !important;
+  color: #B91C1C !important;
+}
+body.light-mode .elec2-alert--warn {
+  background: rgba(180,83,9,0.07) !important;
+  border-color: rgba(180,83,9,0.18) !important;
+  color: #92400E !important;
+}
+body.light-mode .elec2-alert--info {
+  background: rgba(3,105,161,0.07) !important;
+  border-color: rgba(3,105,161,0.18) !important;
+  color: #0369A1 !important;
+}
+
+/* ── Recontrole ── */
+.elec2-recontrole {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+}
+body.light-mode .elec2-recontrole { color: #1E293B !important; }
+
+/* ── Animação de entrada dos blocos de resultado ── */
+.elec2-result .elec2-bloco {
+  animation: elecBlocoIn 0.20s ease forwards;
+}
+.elec2-result .elec2-bloco:nth-child(2) { animation-delay: 0.04s; }
+.elec2-result .elec2-bloco:nth-child(3) { animation-delay: 0.08s; }
+.elec2-result .elec2-bloco:nth-child(4) { animation-delay: 0.12s; }
+.elec2-result .elec2-bloco:nth-child(5) { animation-delay: 0.16s; }
+.elec2-result .elec2-bloco:nth-child(6) { animation-delay: 0.20s; }
+.elec2-result .elec2-bloco:nth-child(7) { animation-delay: 0.24s; }
+@keyframes elecBlocoIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
