@@ -122,7 +122,7 @@
       overflow-y: auto;
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
-      padding: 10px 12px 68px;
+      padding: 10px 12px 20px;
       scroll-behavior: smooth;
     }
     /* Quando a aba ativa tem .section-back-bar logo no topo, zerar o padding-top
@@ -7198,11 +7198,908 @@
     <section id="page-home" class="section-page active">
 
       <!-- ══════════════════════════════════════════════
-           HOME MOBILE-FIRST — v1.1 Terminal Sync
-           3 blocos verticais: Paciente · Fármacos · Interações
+           HOME HUB ACCORDION v2.0
+           Todos os módulos como cards expansíveis
+           Deep link auto-expand · PT/ES · Mobile-first
       ══════════════════════════════════════════════ -->
 
-      <!-- ── CARD 1: FÁRMACOS (topo) ── -->
+      <!-- ────────────────────────────────────────────────────────────
+           ACCORDION HUB — 8 módulos em cards expansíveis
+           Estrutura: hub-row / hub-row--full > hub-card
+      ──────────────────────────────────────────────────────────────── -->
+      <nav class="hub-accordion" id="hub-accordion" aria-label="Módulos clínicos">
+
+        <!-- ══ ROW 1: DADOS DO PACIENTE (full-width) ══ -->
+        <div class="hub-row--full">
+          <article class="hub-card" id="hub-card-patient" data-hub="patient">
+            <button class="hub-card-trigger" onclick="hubToggle('patient')"
+                    aria-expanded="false" aria-controls="hub-body-patient">
+              <div class="hub-card-ico hub-ico--patient"><i class="fa-solid fa-user-injured"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Dados do Paciente</span>
+                  <span class="lang-hub-es">Datos del Paciente</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Peso · Idade · ClCr · IMC · Sexo</span>
+                  <span class="lang-hub-es">Peso · Edad · ClCr · IMC · Sexo</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-patient" role="region">
+              <div class="hub-card-inner">
+                <!-- ─── DADOS DO PACIENTE — conteúdo original ─── -->
+                <!-- Cabeçalho do card -->
+                <div style="display:none" id="hm-fixed-badge-wrap">
+                  <span class="hm-badge hm-badge--active" id="hm-fixed-badge">
+                    <i class="fa-solid fa-lock"></i> Fixado
+                  </span>
+                </div>
+                <!-- Grid compacto de inputs -->
+                <div class="hm-input-grid">
+                  <div class="hm-input-wrap">
+                    <label class="hm-label">Peso <span class="hm-label-unit">kg</span></label>
+                    <input class="hm-input" id="hm-weight" type="number" min="1" max="500"
+                      inputmode="decimal" placeholder="70" oninput="hmUpdatePatientCardColor()" />
+                  </div>
+                  <div class="hm-input-wrap">
+                    <label class="hm-label">Idade <span class="hm-label-unit">anos</span></label>
+                    <input class="hm-input" id="hm-age" type="number" min="0" max="130"
+                      inputmode="decimal" placeholder="45" oninput="hmUpdatePatientCardColor()" />
+                  </div>
+                  <div class="hm-input-wrap">
+                    <label class="hm-label">Altura <span class="hm-label-unit">cm</span></label>
+                    <input class="hm-input" id="hm-height" type="number" min="50" max="250"
+                      inputmode="decimal" placeholder="170" />
+                  </div>
+                  <div class="hm-input-wrap">
+                    <label class="hm-label" for="hm-creatinina">Creatinina <span class="hm-label-unit">mg/dL</span></label>
+                    <input class="hm-input" id="hm-creatinina" type="number" min="0.1" max="30"
+                      inputmode="decimal" placeholder="Ex: 1.0" />
+                    <input type="hidden" id="hm-clcr" value="" />
+                  </div>
+                  <!-- Seletor de Sexo M/F -->
+                  <div class="hm-input-wrap hm-sex-wrap" style="grid-column:1/-1;">
+                    <label class="hm-label">Sexo</label>
+                    <div class="hm-sex-toggle">
+                      <button type="button" id="hm-btn-male"
+                        class="hm-sex-btn hm-sex-btn--active"
+                        onclick="hmSetSex('M')" aria-label="Masculino">
+                        <i class="fa-solid fa-mars"></i> Masc.
+                      </button>
+                      <button type="button" id="hm-btn-female"
+                        class="hm-sex-btn"
+                        onclick="hmSetSex('F')" aria-label="Feminino">
+                        <i class="fa-solid fa-venus"></i> Fem.
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Toggle Gestante (aparece só para Feminino) -->
+                  <div id="hm-preg-row" style="display:none;grid-column:1/-1;opacity:0;transform:translateY(-6px);transition:opacity 0.28s ease,transform 0.28s ease;">
+                    <div class="preg-toggle-wrap">
+                      <div class="preg-toggle-info">
+                        <div class="preg-toggle-title">
+                          <i class="fa-solid fa-person-pregnant"></i> Gestante
+                        </div>
+                        <div class="preg-toggle-sub">Ajusta alertas e precauções clínicas</div>
+                      </div>
+                      <div class="preg-switch">
+                        <button type="button" class="preg-opt active-no" id="hm-preg-no"
+                          onclick="hmSetPregnant(false)">Não</button>
+                        <button type="button" class="preg-opt" id="hm-preg-yes"
+                          onclick="hmSetPregnant(true)">Sim</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Urina 24h accordion -->
+                  <div class="hm-urine-accordion" id="hm-urine-accordion" style="grid-column:1/-1;">
+                    <button type="button" class="hm-urine-header"
+                      id="hm-urine-toggle-btn"
+                      onclick="hmToggleUrine24()"
+                      aria-expanded="false"
+                      aria-controls="hm-urine-body">
+                      <span class="hm-urine-header-left">
+                        <i class="fa-solid fa-flask-vial hm-urine-icon"></i>
+                        <span class="hm-urine-header-title" data-i18n="hm_urine24_title">Urina de 24 Horas</span>
+                        <span class="hm-urine-badge" id="hm-urine-badge">Opcional</span>
+                      </span>
+                      <span class="hm-urine-chevron" id="hm-urine-chevron">
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </span>
+                    </button>
+                    <div class="hm-urine-body" id="hm-urine-body"
+                      role="region" aria-labelledby="hm-urine-toggle-btn"
+                      style="display:none; overflow:hidden;">
+                      <div class="hm-urine-fields">
+                        <div class="hm-input-wrap">
+                          <label class="hm-label" for="hm-urine24">
+                            Volume Urina <span class="hm-label-unit">mL/24h</span>
+                          </label>
+                          <input class="hm-input" id="hm-urine24"
+                            type="number" min="50" max="15000"
+                            inputmode="decimal" placeholder="Ex: 1500"
+                            oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
+                        </div>
+                        <div class="hm-input-wrap">
+                          <label class="hm-label" for="hm-urine-creat">
+                            Creat. Urinária <span class="hm-label-unit">mg/dL</span>
+                          </label>
+                          <input class="hm-input" id="hm-urine-creat"
+                            type="number" min="1" max="800"
+                            inputmode="decimal" placeholder="Ex: 80"
+                            oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
+                        </div>
+                      </div>
+                      <p class="hm-urine-note" data-i18n="hm_urine24_note">
+                        Usa ClCr Medido corrigido por BSA: (Ur×V/Ps×1440)×(1,73/BSA).
+                        Requer Peso e Altura preenchidos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Pills de resultado rápido -->
+                <div class="hm-result-pills" id="hm-result-pills" style="display:none">
+                  <div class="hm-pill" id="hm-pill-clcr">
+                    <span class="hm-pill-val" id="hm-pv-clcr">—</span>
+                    <span class="hm-pill-lbl">ClCr</span>
+                    <span class="hm-pill-lbl" id="hm-pv-clcr-src" style="font-size:7.5px;opacity:0.55;letter-spacing:0.1px;">CG</span>
+                  </div>
+                  <div class="hm-pill" id="hm-pill-imc">
+                    <span class="hm-pill-val" id="hm-pv-imc">—</span>
+                    <span class="hm-pill-lbl">IMC</span>
+                  </div>
+                  <div class="hm-pill" id="hm-pill-peso">
+                    <span class="hm-pill-val" id="hm-pv-peso">—</span>
+                    <span class="hm-pill-lbl">Peso Ideal</span>
+                  </div>
+                  <div class="hm-pill" id="hm-pill-bsa">
+                    <span class="hm-pill-val" id="hm-pv-bsa">—</span>
+                    <span class="hm-pill-lbl">BSA m²</span>
+                  </div>
+                </div>
+                <!-- Toggle Hemodiálise -->
+                <div class="hm-hd-wrap">
+                  <label class="hm-hd-toggle" for="hm-hemodialise" id="hm-hd-label">
+                    <input type="checkbox" id="hm-hemodialise" onchange="hmToggleHemodialise(this.checked)" />
+                    <span class="hm-hd-track">
+                      <span class="hm-hd-thumb"></span>
+                    </span>
+                    <span class="hm-hd-text">
+                      <i class="fa-solid fa-droplet-slash"></i>
+                      Hemodiálise
+                    </span>
+                  </label>
+                </div>
+                <!-- Rodapé: botão Fixar + Limpar -->
+                <div class="hm-card-footer">
+                  <button class="hm-btn hm-btn--ghost" onclick="hmClearPatient()">
+                    <i class="fa-solid fa-rotate-left"></i> Limpar
+                  </button>
+                  <button class="hm-btn hm-btn--primary" id="hm-fix-btn" onclick="hmFixarDados()">
+                    <i class="fa-solid fa-thumbtack"></i> Fixar Dados
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div><!-- /hub-row--full patient -->
+
+        <!-- ══ ROW 2: ClCr RENAL (full-width) ══ -->
+        <div class="hub-row--full">
+          <article class="hub-card" id="hub-card-clcr" data-hub="clcr">
+            <button class="hub-card-trigger" onclick="hubToggle('clcr')"
+                    aria-expanded="false" aria-controls="hub-body-clcr">
+              <div class="hub-card-ico hub-ico--clcr"><i class="fa-solid fa-kidneys"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">ClCr Renal</span>
+                  <span class="lang-hub-es">ClCr Renal</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Cockcroft-Gault · Estadio DRC · BSA</span>
+                  <span class="lang-hub-es">Cockcroft-Gault · Estadio ERC · BSA</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-clcr" role="region">
+              <div class="hub-card-inner" id="hub-clcr-inner">
+                <!-- Slot preenchido pelo JS hubMountClCr() na primeira abertura -->
+                <div id="hub-clcr-slot"></div>
+              </div>
+            </div>
+          </article>
+        </div><!-- /hub-row--full clcr -->
+
+        <!-- ══ ROW 3: FÁRMACOS | INTERAÇÕES (2 colunas) ══ -->
+        <div class="hub-row">
+
+          <!-- FÁRMACOS -->
+          <article class="hub-card" id="hub-card-farmacos" data-hub="farmacos">
+            <button class="hub-card-trigger" onclick="hubToggle('farmacos')"
+                    aria-expanded="false" aria-controls="hub-body-farmacos">
+              <div class="hub-card-ico hub-ico--farmacos"><i class="fa-solid fa-pills"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Fármacos</span>
+                  <span class="lang-hub-es">Fármacos</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Dose · Renal · Bula</span>
+                  <span class="lang-hub-es">Dosis · Renal · Ficha</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-farmacos" role="region">
+              <div class="hub-card-inner">
+                <!-- Barra de busca (mirrors hm-drug-search mas é o input primário) -->
+                <div class="hm-search-wrap">
+                  <i class="fa-solid fa-magnifying-glass hm-search-icon"></i>
+                  <input class="hm-search" id="hm-drug-search" type="text"
+                    placeholder="🔍 Buscar fármaco..."
+                    oninput="hmFilterDrugs(this.value)"
+                    autocomplete="off" autocorrect="off" autocapitalize="none"
+                    spellcheck="false" />
+                  <button class="hm-search-clear" id="hm-search-clear"
+                    onclick="hmClearSearch()" style="display:none"
+                    aria-label="Limpar busca">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <span class="hm-drug-count" id="hm-drug-count" style="display:block;text-align:right;margin-top:4px;font-size:11px;">—</span>
+                <!-- Lista de resultados -->
+                <div class="hm-drug-list" id="hm-drug-list">
+                  <div class="hm-drug-empty" id="hm-drug-empty">
+                    <i class="fa-solid fa-pills" style="font-size:28px;opacity:0.18;margin-bottom:8px;"></i>
+                    <p>Digite o nome do fármaco para buscar</p>
+                  </div>
+                </div>
+                <!-- Resultado inline -->
+                <div id="hm-drug-result" style="display:none;margin-top:10px;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- INTERAÇÕES -->
+          <article class="hub-card" id="hub-card-interacoes" data-hub="interacoes">
+            <button class="hub-card-trigger" onclick="hubToggle('interacoes')"
+                    aria-expanded="false" aria-controls="hub-body-interacoes">
+              <div class="hub-card-ico hub-ico--interacoes"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Interações</span>
+                  <span class="lang-hub-es">Interacciones</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Checagem · 5 fármacos</span>
+                  <span class="lang-hub-es">Verificación · 5 fármacos</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-interacoes" role="region">
+              <div class="hub-card-inner">
+                <!-- Conteúdo das interações movido para cá -->
+                <div id="card-interactions-container-wrapper"></div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /hub-row farmacos+interacoes -->
+
+        <!-- ══ ROW 4: PEDIATRIA | GESTANTES (2 colunas) ══ -->
+        <div class="hub-row">
+
+          <!-- PEDIATRIA -->
+          <article class="hub-card" id="hub-card-pediatria" data-hub="pediatria">
+            <button class="hub-card-trigger" onclick="hubToggle('pediatria')"
+                    aria-expanded="false" aria-controls="hub-body-pediatria">
+              <div class="hub-card-ico hub-ico--ped"><i class="fa-solid fa-baby"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Pediatria</span>
+                  <span class="lang-hub-es">Pediatría</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">mg/kg · Broselow</span>
+                  <span class="lang-hub-es">mg/kg · Broselow</span>
+                </div>
+              </div>
+              <span class="hub-soon-badge">Em breve</span>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-pediatria" role="region">
+              <div class="hub-card-inner">
+                <div class="hub-coming-soon">
+                  <div class="hub-coming-soon-icon">👶</div>
+                  <div class="hub-coming-soon-title" data-i18n="calc_ped">Pediatria</div>
+                  <div class="hub-coming-soon-desc" data-i18n="calc_ped_desc">Doses por peso, Broselow, Schwartz, Holliday-Segar e calculadoras neonatais.</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- GESTANTES -->
+          <article class="hub-card" id="hub-card-gestante" data-hub="gestante">
+            <button class="hub-card-trigger" onclick="hubToggle('gestante')"
+                    aria-expanded="false" aria-controls="hub-body-gestante">
+              <div class="hub-card-ico hub-ico--gestante"><i class="fa-solid fa-person-pregnant"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Gestantes</span>
+                  <span class="lang-hub-es">Gestantes</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Módulo obstétrico</span>
+                  <span class="lang-hub-es">Módulo obstétrico</span>
+                </div>
+              </div>
+              <span class="hub-soon-badge">Em breve</span>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-gestante" role="region">
+              <div class="hub-card-inner">
+                <div class="hub-coming-soon">
+                  <div class="hub-coming-soon-icon">🤰</div>
+                  <div class="hub-coming-soon-title" data-i18n="calc_ob">Gestante</div>
+                  <div class="hub-coming-soon-desc" data-i18n="calc_ob_desc">DUM, IG, peso gestacional e scores de risco obstétrico.</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /hub-row ped+gestante -->
+
+        <!-- ══ ROW 5: INFUSÃO (full-width) ══ -->
+        <div class="hub-row--full">
+          <article class="hub-card" id="hub-card-infusao" data-hub="infusao">
+            <button class="hub-card-trigger" onclick="hubToggle('infusao')"
+                    aria-expanded="false" aria-controls="hub-body-infusao">
+              <div class="hub-card-ico hub-ico--infusao"><i class="fa-solid fa-syringe"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Infusão</span>
+                  <span class="lang-hub-es">Infusión</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Bombas · Gotejamentos · Drogas vasoativas</span>
+                  <span class="lang-hub-es">Bombas · Goteos · Drogas vasoactivas</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-infusao" role="region">
+              <div class="hub-card-inner" id="hub-infusao-inner">
+                <!-- Slot: JS move o conteúdo de #page-infusion para cá -->
+                <div id="hub-infusao-slot"></div>
+              </div>
+            </div>
+          </article>
+        </div><!-- /hub-row--full infusao -->
+
+        <!-- ══ ROW 6: HEMODINÂMICA | SCORES (2 colunas) ══ -->
+        <div class="hub-row">
+
+          <!-- HEMODINÂMICA -->
+          <article class="hub-card" id="hub-card-hemodinamica" data-hub="hemodinamica">
+            <button class="hub-card-trigger" onclick="hubToggle('hemodinamica')"
+                    aria-expanded="false" aria-controls="hub-body-hemodinamica">
+              <div class="hub-card-ico hub-ico--hemo"><i class="fa-solid fa-heart-pulse"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Hemodinâmica</span>
+                  <span class="lang-hub-es">Hemodinamia</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">PAM · Choque · SpO₂</span>
+                  <span class="lang-hub-es">PAM · Choque · SpO₂</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-hemodinamica" role="region">
+              <div class="hub-card-inner" id="hub-hemo-inner">
+                <div id="hub-hemo-slot"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SCORES -->
+          <article class="hub-card" id="hub-card-scores" data-hub="scores">
+            <button class="hub-card-trigger" onclick="hubToggle('scores')"
+                    aria-expanded="false" aria-controls="hub-body-scores">
+              <div class="hub-card-ico hub-ico--scores"><i class="fa-solid fa-chart-bar"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Scores</span>
+                  <span class="lang-hub-es">Scores</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">SOFA · Glasgow · Wells</span>
+                  <span class="lang-hub-es">SOFA · Glasgow · Wells</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-scores" role="region">
+              <div class="hub-card-inner" id="hub-scores-inner">
+                <div id="hub-scores-slot"></div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /hub-row hemo+scores -->
+
+        <!-- ══ ROW 7: FLUIDOS | ELETRÓLITOS (2 colunas) ══ -->
+        <div class="hub-row">
+
+          <!-- FLUIDOS -->
+          <article class="hub-card" id="hub-card-fluidos" data-hub="fluidos">
+            <button class="hub-card-trigger" onclick="hubToggle('fluidos')"
+                    aria-expanded="false" aria-controls="hub-body-fluidos">
+              <div class="hub-card-ico hub-ico--fluidos"><i class="fa-solid fa-droplet"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Fluidos</span>
+                  <span class="lang-hub-es">Fluidos</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Basal · Déficit · Ressuscitação</span>
+                  <span class="lang-hub-es">Basal · Déficit · Resucitación</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-fluidos" role="region">
+              <div class="hub-card-inner" id="hub-fluidos-inner">
+                <div id="hub-fluidos-slot"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ELETRÓLITOS -->
+          <article class="hub-card" id="hub-card-eletrolitos" data-hub="eletrolitos">
+            <button class="hub-card-trigger" onclick="hubToggle('eletrolitos')"
+                    aria-expanded="false" aria-controls="hub-body-eletrolitos">
+              <div class="hub-card-ico hub-ico--elec"><i class="fa-solid fa-bolt"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Eletrólitos</span>
+                  <span class="lang-hub-es">Electrolitos</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Na⁺ · K⁺ · Mg²⁺ · Ca²⁺</span>
+                  <span class="lang-hub-es">Na⁺ · K⁺ · Mg²⁺ · Ca²⁺</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-eletrolitos" role="region">
+              <div class="hub-card-inner" id="hub-elec-inner">
+                <div id="hub-elec-slot"></div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /hub-row fluidos+eletrolitos -->
+
+      </nav><!-- /hub-accordion -->
+
+      <!-- ── Versão discreta no rodapé da home ── -->
+      <p class="hub-version-footer" id="hub-version-footer">v2.0 — Hub Accordion</p>
+
+      <!-- ══════════════════════════════════════════
+           LEGACY WRAPPERS — Mantidos para compat.
+           IDs críticos usados pelo JS existente
+           (resultado-dashboard, meds-section etc.)
+      ══════════════════════════════════════════ -->
+
+      <!-- CARD 1: FÁRMACOS legacy shell (agora dentro do hub) -- mantém IDs de compat. -->
+      <div style="display:none" id="hm-drugs-card" aria-hidden="true">
+        <!-- shell vazio — IDs reais migraram para hub-card-farmacos -->
+      </div>
+
+      <!-- CARD 3: PACIENTE legacy shell -->
+      <div style="display:none" id="hm-patient-card" aria-hidden="true">
+        <!-- shell vazio — IDs reais migraram para hub-card-patient -->
+      </div>
+
+      <!-- INTX THEME SYSTEM — classes nativas light / dark ─── -->
+      <style>
+        /* ══════════════════════════════════════════════════════
+           INTX MODULE — Sistema de Temas (Light + Dark nativo)
+           Default = DARK (body:not(.light-mode))
+           Light   = body.light-mode
+        ══════════════════════════════════════════════════════ */
+
+        /* ── Container principal ── */
+        .intx-container {
+          margin: 0;
+          padding: 0;
+          border-radius: 0;
+          border: none;
+          background: transparent;
+        }
+
+        /* ── Cabeçalho: título e subtítulo ── */
+        .intx-title {
+          color: #ffffff;
+          margin: 0;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: -0.3px;
+        }
+        body.light-mode .intx-title { color: #1e293b; }
+
+        .intx-sub {
+          color: #7d7993;
+          font-size: 12px;
+        }
+        body.light-mode .intx-sub { color: #64748b; }
+
+        /* ── Contador (badge X/5) ── */
+        .intx-counter {
+          background: #231f33;
+          padding: 4px 10px;
+          border-radius: 20px;
+          color: #a29bfe;
+          font-size: 12px;
+          font-weight: 700;
+          white-space: nowrap;
+        }
+        body.light-mode .intx-counter {
+          background: #f1f5f9;
+          color: #6c5ce7;
+        }
+
+        /* ── Input de busca ── */
+        .intx-input {
+          width: 100%;
+          padding: 12px 12px 12px 40px;
+          background: #1c1829;
+          border: 1.5px solid #322b48;
+          border-radius: 9px;
+          color: #ffffff;
+          font-size: 14px;
+          outline: none;
+          box-sizing: border-box;
+          transition: border-color .2s;
+          font-family: inherit;
+        }
+        .intx-input::placeholder { color: rgba(255,255,255,0.35); }
+        .intx-input:focus { border-color: #6c5ce7; }
+
+        body.light-mode .intx-input {
+          background: #f8fafc;
+          border-color: #cbd5e1;
+          color: #1e293b;
+        }
+        body.light-mode .intx-input::placeholder { color: #94a3b8; }
+        body.light-mode .intx-input:focus { border-color: #6c5ce7; }
+
+        /* ── Dropdown de sugestões ── */
+        .intx-dropdown {
+          display: none;
+          position: absolute;
+          left: 0; right: 0;
+          top: calc(100% + 4px);
+          background: #1c1829;
+          border: 1.5px solid #322b48;
+          border-radius: 9px;
+          max-height: 200px;
+          overflow-y: auto;
+          z-index: 9999;
+          box-shadow: 0 8px 28px rgba(0,0,0,.55);
+        }
+        body.light-mode .intx-dropdown {
+          background: #ffffff;
+          border-color: #e2e8f0;
+          box-shadow: 0 8px 24px rgba(0,0,0,.10);
+        }
+
+        /* ── Item do dropdown ── */
+        .intx-dropdown-item {
+          padding: 10px 14px;
+          cursor: pointer;
+          color: #e0ddf0;
+          font-size: 13px;
+          border-bottom: 1px solid rgba(255,255,255,.04);
+          transition: background .15s;
+        }
+        .intx-dropdown-item:hover { background: #2d2545; }
+        .intx-dropdown-item:last-child { border-bottom: none; }
+
+        body.light-mode .intx-dropdown-item {
+          color: #1e293b;
+          border-bottom-color: #f1f5f9;
+        }
+        body.light-mode .intx-dropdown-item:hover { background: #f8fafc; }
+
+        /* ── Sem resultados no dropdown ── */
+        .intx-dropdown-empty {
+          padding: 11px 14px;
+          color: #7d7993;
+          font-size: 12px;
+        }
+        body.light-mode .intx-dropdown-empty { color: #94a3b8; }
+
+        /* ── Chips dos fármacos selecionados ── */
+        .intx-chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 10px;
+          background: rgba(108,92,231,.18);
+          border: 1.5px solid rgba(108,92,231,.45);
+          border-radius: 20px;
+          color: #d6d0f7;
+          font-size: 12px;
+          font-weight: 600;
+        }
+        body.light-mode .intx-chip {
+          background: #f1f5f9;
+          border-color: #cbd5e1;
+          color: #475569;
+        }
+
+        .intx-chip-btn {
+          background: none;
+          border: none;
+          color: #a29bfe;
+          cursor: pointer;
+          font-size: 13px;
+          padding: 0;
+          line-height: 1;
+        }
+        body.light-mode .intx-chip-btn { color: #6c5ce7; }
+
+        /* ── Cards de resultado ── */
+        .intx-card {
+          padding: 16px;
+          border-radius: 10px;
+          margin-bottom: 12px;
+          box-sizing: border-box;
+          border-left-width: 6px;
+          border-left-style: solid;
+        }
+
+        /* Contraindicada 🔴 */
+        .intx-card-contra { background: #2c1519; border-left-color: #ea2027; }
+        body.light-mode .intx-card-contra { background: #fef2f2; border-left-color: #ef4444; }
+
+        /* Alta 🔴/Laranja */
+        .intx-card-alta { background: #2c1e18; border-left-color: #ee5a24; }
+        body.light-mode .intx-card-alta { background: #fff7ed; border-left-color: #f97316; }
+
+        /* Moderada 🟠 */
+        .intx-card-mod { background: #2a2615; border-left-color: #f1c40f; }
+        body.light-mode .intx-card-mod { background: #fefce8; border-left-color: #eab308; }
+
+        /* Leve 🟡 */
+        .intx-card-leve { background: #151d2a; border-left-color: #3498db; }
+        body.light-mode .intx-card-leve { background: #f0f9ff; border-left-color: #3b82f6; }
+
+        /* Seguro ✅ */
+        .intx-card-safe { background: #14271f; border-left-color: #2ecc71; }
+        body.light-mode .intx-card-safe { background: #f0fdf4; border-left-color: #22c55e; }
+
+        /* ── Cabeçalho do card (severidade + score) ── */
+        .intx-card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+          border-bottom: 1px solid rgba(255,255,255,.07);
+          padding-bottom: 9px;
+          flex-wrap: wrap;
+          gap: 6px;
+        }
+        body.light-mode .intx-card-header { border-bottom-color: rgba(0,0,0,.07); }
+
+        .intx-card-title {
+          font-weight: 800;
+          font-size: 14px;
+        }
+
+        .intx-badge-sev {
+          padding: 3px 8px;
+          border-radius: 6px;
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+        }
+        .intx-badge-contra { background: rgba(234,32,39,.20); color: #ff6b6b; }
+        .intx-badge-alta   { background: rgba(238,90,36,.20); color: #ffa87d; }
+        .intx-badge-mod    { background: rgba(241,196,15,.20); color: #f9ca24; }
+        .intx-badge-leve   { background: rgba(52,152,219,.20); color: #74b9ff; }
+        .intx-badge-cls    { background: rgba(52,152,219,.12); color: #74b9ff; }
+        .intx-badge-cls-cls { background: rgba(52,152,219,.12); color: #1d4ed8; }
+
+        body.light-mode .intx-badge-contra { background: rgba(239,68,68,.12); color: #dc2626; }
+        body.light-mode .intx-badge-alta   { background: rgba(249,115,22,.12); color: #ea580c; }
+        body.light-mode .intx-badge-mod    { background: rgba(234,179,8,.12);  color: #ca8a04; }
+        body.light-mode .intx-badge-leve   { background: rgba(59,130,246,.12); color: #2563eb; }
+        body.light-mode .intx-badge-cls    { background: rgba(59,130,246,.12); color: #2563eb; }
+        body.light-mode .intx-badge-cls-cls {
+          background: rgba(52,152,219,.12);
+          color: #1d4ed8;
+        }
+
+        /* ── Par de fármacos (A ✕ B) ── */
+        .intx-card-pair {
+          color: #eeeeee;
+          font-size: 13px;
+          margin-bottom: 8px;
+        }
+        body.light-mode .intx-card-pair { color: #1e293b; }
+
+        /* ── Texto de risco ── */
+        .intx-card-risco {
+          color: #cccccc;
+          font-size: 12.5px;
+          line-height: 1.6;
+          margin: 0 0 10px 0;
+        }
+        body.light-mode .intx-card-risco { color: #334155; }
+
+        /* ── Caixa de conduta ── */
+        .intx-conduta-box {
+          color: #ffffff;
+          font-size: 12.5px;
+          line-height: 1.6;
+          margin: 0;
+          background: rgba(0,0,0,.2);
+          padding: 10px;
+          border-radius: 6px;
+        }
+        body.light-mode .intx-conduta-box {
+          background: rgba(0,0,0,.04);
+          color: #334155;
+        }
+
+        /* ── Card "sem interação documentada" ── */
+        .intx-card-safe-body {
+          display: flex;
+          gap: 12px;
+          align-items: flex-start;
+        }
+        .intx-card-safe-icon { font-size: 22px; line-height: 1.2; }
+        .intx-card-safe-title {
+          color: #2ecc71;
+          margin: 0 0 5px 0;
+          font-size: 14px;
+          font-weight: 700;
+        }
+        body.light-mode .intx-card-safe-title { color: #16a34a; }
+        .intx-card-safe-desc {
+          color: #aae1c4;
+          margin: 0;
+          font-size: 12.5px;
+          line-height: 1.6;
+        }
+        body.light-mode .intx-card-safe-desc { color: #15803d; }
+
+        /* ── Loading spinner ── */
+        .intx-loading {
+          text-align: center;
+          padding: 18px;
+          color: #7d7993;
+          font-size: 13px;
+        }
+        body.light-mode .intx-loading { color: #94a3b8; }
+        .intx-spin { display: inline-block; animation: intxSpin 1s linear infinite; }
+        @keyframes intxSpin { to { transform: rotate(360deg); } }
+
+        /* ── Highlight de texto no dropdown ── */
+        .intx-hl { color: #a29bfe; font-weight: 700; }
+        body.light-mode .intx-hl { color: #6c5ce7; }
+
+        /* ══════════════════════════════════════════════════════════
+           SISTEMA DE IDIOMA STATE-DRIVEN — indestrutível pelo router
+        ══════════════════════════════════════════════════════════ */
+        .intx-container .lang-pt,
+        .intx-container .lang-es { display: none !important; }
+        .intx-container[data-current-lang="pt"] .lang-pt { display: inline !important; }
+        .intx-container[data-current-lang="pt"] .lang-es { display: none   !important; }
+        .intx-container[data-current-lang="es"] .lang-es { display: inline !important; }
+        .intx-container[data-current-lang="es"] .lang-pt { display: none   !important; }
+        .intx-container:not([data-current-lang]) .lang-pt { display: inline !important; }
+        .intx-container:not([data-current-lang]) .lang-es { display: none   !important; }
+
+        /* ── Hub: idioma state-driven nos triggers ── */
+        #hub-accordion .lang-hub-es { display: none; }
+        #hub-accordion .lang-hub-pt { display: inline; }
+        body[data-lang="es"] #hub-accordion .lang-hub-es { display: inline; }
+        body[data-lang="es"] #hub-accordion .lang-hub-pt { display: none; }
+      </style>
+
+      <!-- INTERAÇÕES — container original (preservado para o motor JS) -->
+      <div class="intx-container" id="card-interactions-container" style="display:none">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <div>
+            <h3 id="txt-inter-titulo" class="intx-title">
+              <span class="lang-pt">Interações Medicamentosas</span>
+              <span class="lang-es">Interacciones Medicamentosas</span>
+            </h3>
+            <span id="txt-inter-sub" class="intx-sub">
+              <span class="lang-pt">Cruzamento inteligente de fármacos em polifarmácia</span>
+              <span class="lang-es">Cruce inteligente de fármacos en polifarmacia</span>
+            </span>
+          </div>
+          <div class="intx-counter">
+            <span id="lbl-contador-meds">0</span>/5
+          </div>
+        </div>
+        <div style="position:relative;margin-bottom:12px;">
+          <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);pointer-events:none;font-size:15px;z-index:1;">🔍</span>
+          <input
+            type="text"
+            id="input-busca-interacao"
+            class="intx-input"
+            placeholder="Adicionar fármaco à verificação..."
+            oninput="filtrarDropdownInteracao()"
+            onfocus="mostrarDropdownInteracao()"
+            onblur="setTimeout(()=>{ const d=document.getElementById('dropdown-sugestoes-interacao'); if(d) d.style.display='none'; }, 200)"
+            autocomplete="off"
+          />
+          <div
+            id="dropdown-sugestoes-interacao"
+            class="intx-dropdown"
+            role="listbox"
+          ></div>
+        </div>
+        <div id="chips-interacoes-wrapper" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;min-height:0;"></div>
+        <button
+          id="btn-verificar-interacoes"
+          disabled
+          onclick="executarChecagemInteracoes()"
+          style="width:100%;padding:14px;background:#6c5ce7;color:#fff;border:none;border-radius:9px;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;justify-content:center;align-items:center;gap:8px;opacity:.45;"
+        >
+          <span>📊</span>
+          <span id="txt-btn-verificar">
+            <span class="lang-pt">Verificar Interações</span>
+            <span class="lang-es">Verificar Interacciones</span>
+          </span>
+        </button>
+        <div id="resultados-interacoes-container" style="margin-top:16px;"></div>
+      </div><!-- /intx-container -->
+
+      <!-- ── SEPARADOR OCULTO — mantém compatibilidade com elementos legados ── -->
+      <div style="display:none">
+        <div class="result-dashboard sex-m" id="result-dashboard">
+
+        <!-- ClCr — Clearance Renal (SLIM) -->
+        <div class="rd-card rd-clcr" id="rd-clcr-card">
+          <span class="rd-label" data-i18n="res_label_clcr">Clearance Renal</span>
+          <div class="rd-row-main">
+            <span class="rd-value rd-clcr-color" id="rd-clcr">—</span>
+            <span class="rd-unit-inline" id="rd-clcr-unit" data-i18n="res_unit_clcr">mL/min</span>
+          </div>
+          <div class="rd-badge-row">
+            <div id="rd-ckd-badge" class="rd-ckd-badge"></div>
+          </div>
+          <!-- legados ocultos -->
+          <span id="res-clcr" style="display:none">—</span>
+          <div id="ckd-badge-container" style="display:none"></div>
+        </div>
+
+        <!-- BSA — Superfície Corporal (SLIM) -->
+        <div class="rd-card rd-bsa" id="rd-bsa-card">
+          <span class="rd-label" data-i18n="res_label_bsa">Sup. Corporal</span>
+          <div class="rd-row-main">
+            <span class="rd-value rd-bsa-color" id="rd-bsa">—</span>
+            <span class="rd-unit-inline" data-i18n="res_unit_bsa">m²</span>
+          </div>
+          <div class="rd-badge-row">
+            <span style="font-size:9px;color:var(--text-muted)">Mosteller</span>
+          </div>
+          <!-- legados -->
+          <span id="res-bsa" style="display:none">—</span>
+          <div id="res-bsa-card" style="display:none"></div>
+        </div>
       <div class="hm-card hm-card--drugs" id="hm-drugs-card">
 
         <div class="hm-card-header">
@@ -7934,154 +8831,39 @@
       </div><!-- /result-dashboard (legado oculto) -->
       </div><!-- /wrapper display:none legado -->
 
-      <!-- ══════════════════════════════════════════════
-           SEPARADOR — Dados do Paciente (legado oculto)
-      ══════════════════════════════════════════════ -->
-      <div class="home-section-sep" style="display:none">
-        <span class="home-section-sep-icon">👤</span>
-        <span class="home-section-sep-label" data-i18n="home_data_sep">Dados do Paciente</span>
-      </div>
-
-      <!-- legado oculto (card antigo de inputs — substituído pelo hm-card--patient) -->
-      <p class="section-label" style="display:none"><i class="fa-solid fa-user-nurse"></i> <span data-i18n="label_patient">Dados do Paciente</span></p>
-      <div class="card" style="display:none">
-        <div class="card-title"><i class="fa-solid fa-clipboard-list"></i><span data-i18n="card_input_title">Parâmetros Clínicos</span></div>
-        <div class="input-grid">
-          <div class="input-group">
-            <label class="input-label" data-i18n="label_age">Idade (anos)</label>
-            <input class="input-field" id="inp-age" type="number" min="0" max="130" placeholder="Ex: 65" />
-          </div>
-          <div class="input-group">
-            <label class="input-label" data-i18n="label_sex">Sexo Biológico</label>
-            <div class="sex-toggle">
-              <button class="sex-btn active" id="btn-male" onclick="setSex('M')"><i class="fa-solid fa-mars"></i> <span data-i18n="sex_m">Masc.</span></button>
-              <button class="sex-btn" id="btn-female" onclick="setSex('F')"><i class="fa-solid fa-venus"></i> <span data-i18n="sex_f">Fem.</span></button>
-            </div>
-          </div>
-          <!-- ── GESTANTE — visível somente quando Fem. ativo ── -->
-          <div id="preg-row">
-            <p class="preg-label"><i class="fa-solid fa-person-pregnant"></i><span data-i18n="label_pregnant">Paciente Gestante?</span></p>
-            <div class="preg-toggle-wrap">
-              <div class="preg-toggle-info">
-                <div class="preg-toggle-title">
-                  <i class="fa-solid fa-person-pregnant"></i>
-                  <span data-i18n="preg_question">¿Paciente Embarazada / Gestante?</span>
-                </div>
-                <div class="preg-toggle-sub" data-i18n="preg_hint">Altera ClCr de referência e alertas de fármacos</div>
-              </div>
-              <div class="preg-switch">
-                <button class="preg-opt" id="preg-yes" onclick="setPregnant(true)" data-i18n="preg_yes">Sí</button>
-                <button class="preg-opt active-no" id="preg-no" onclick="setPregnant(false)" data-i18n="preg_no">No</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="input-group">
-            <label class="input-label" data-i18n="label_weight">Peso (kg)</label>
-            <input class="input-field" id="inp-weight" type="number" min="1" max="500" placeholder="Ex: 70" />
-          </div>
-          <div class="input-group">
-            <label class="input-label" data-i18n="label_height">Altura (cm)</label>
-            <input class="input-field" id="inp-height" type="number" min="50" max="250" placeholder="Ex: 170" />
-          </div>
-          <div class="input-group full-width">
-            <label class="input-label" data-i18n="label_creatinine">Creatinina Sérica (mg/dL)</label>
-            <input class="input-field" id="inp-creatinine" type="number" min="0.1" max="30" step="0.01" placeholder="Ex: 1.0" />
-          </div>
-
-          <!-- ── SEÇÃO OPCIONAL: URINA 24H (aparece ao expandir) ── -->
-          <div class="input-group full-width" id="lab24h-section">
-            <div id="lab24h-toggle" onclick="toggleLab24h()"
-              style="display:flex;align-items:center;gap:8px;cursor:pointer;
-                     background:rgba(66,168,212,0.08);border:1px solid rgba(66,168,212,0.22);
-                     border-radius:10px;padding:9px 13px;transition:background 0.2s;">
-              <i class="fa-solid fa-flask" style="color:var(--info);font-size:13px;"></i>
-              <span style="font-size:11.5px;font-weight:700;color:var(--info);flex:1;" data-i18n="lab24h_toggle">Urina 24h (opcional — Padrão-Ouro)</span>
-              <i id="lab24h-chevron" class="fa-solid fa-chevron-down" style="color:var(--text-muted);font-size:10px;transition:transform 0.22s ease;"></i>
-            </div>
-            <div id="lab24h-body" style="display:none;margin-top:10px;display:none;">
-              <div style="font-size:10px;color:var(--text-muted);margin-bottom:10px;line-height:1.5;padding:0 2px;" data-i18n="lab24h_desc">
-                Preenchendo creatinina urinária + volume de urina 24h, o cálculo usará o <strong style="color:var(--info);">Clearance Real medido</strong>, corrigido pela superfície corporal Du Bois (1.73 m²) quando altura disponível.
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                <div class="input-group">
-                  <label class="input-label" data-i18n="label_cr_urina">Creatinina Urinária (mg/dL)</label>
-                  <input class="input-field" id="inp-cr-urina" type="number" min="1" max="600" step="0.1"
-                    placeholder="Ex: 80" />
-                </div>
-                <div class="input-group">
-                  <label class="input-label" data-i18n="label_vol24h">Volume Urina 24h (mL)</label>
-                  <input class="input-field" id="inp-vol24h" type="number" min="100" max="8000" step="10"
-                    placeholder="Ex: 1500" />
-                </div>
-              </div>
+      <!-- ── Elementos legados de controle de estado (ocultos, usados por renderResults/resetResults) ── -->
+      <div style="display:none" aria-hidden="true">
+        <span id="results-status" class="results-status waiting">Aguardando</span>
+        <div id="ckd-stage-info"><div id="ckd-stage-text"></div></div>
+        <!-- legado card de inputs antigo (IDs usados por calcularEAbrirModal, clearAll) -->
+        <input class="input-field" id="inp-age"       type="number" />
+        <input class="input-field" id="inp-weight"    type="number" />
+        <input class="input-field" id="inp-height"    type="number" />
+        <input class="input-field" id="inp-creatinine" type="number" />
+        <input class="input-field" id="inp-cr-urina"  type="number" />
+        <input class="input-field" id="inp-vol24h"    type="number" />
+        <button id="btn-male"   class="sex-btn active" onclick="setSex('M')"></button>
+        <button id="btn-female" class="sex-btn"        onclick="setSex('F')"></button>
+        <button id="preg-yes" class="preg-opt" onclick="setPregnant(true)"></button>
+        <button id="preg-no"  class="preg-opt active-no" onclick="setPregnant(false)"></button>
+        <div id="preg-row"></div>
+        <button id="btn-diagnostico" class="btn-diagnostico" onclick="openDiagnosticoModal()" style="display:none"></button>
+        <!-- meds-section legado -->
+        <div class="meds-section" id="meds-section">
+          <div id="meds-count">0</div>
+          <div id="meds-chevron"></div>
+          <div id="meds-body">
+            <input class="meds-search" id="meds-search-input" type="text" autocomplete="off" />
+            <div class="meds-autocomplete" id="meds-autocomplete"></div>
+            <div class="meds-tags" id="meds-tags-container">
+              <span class="meds-empty-hint" id="meds-empty-hint"></span>
             </div>
           </div>
         </div>
-        <div class="btn-row mt-12">
-          <button class="btn-secondary" onclick="clearAll()"><i class="fa-solid fa-rotate-left"></i> <span data-i18n="btn_clear">Limpar</span></button>
-          <button class="btn-primary" onclick="calcularEAbrirModal()"><i class="fa-solid fa-calculator"></i> <span data-i18n="btn_calc">Calcular</span></button>
-        </div>
-        <!-- Botão de diagnóstico — só aparece após cálculo com risco renal -->
-        <button id="btn-diagnostico" class="btn-diagnostico" onclick="openDiagnosticoModal()" style="display:none">
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <span data-i18n="btn_diagnostico">Ver Diagnóstico Renal</span>
-        </button>
+        <!-- fórmulas legadas -->
+        <div id="formula-body"></div>
+        <div id="formula-chevron"></div>
       </div>
-
-      <!-- elementos legados de controle de estado (ocultos, usados por renderResults/resetResults) -->
-      <span id="results-status" class="results-status waiting" style="display:none">Aguardando</span>
-      <div id="ckd-stage-info" style="display:none">
-        <div id="ckd-stage-text"></div>
-      </div>
-
-      <!-- ══════════════════════════════════════════════
-           FÁRMACOS EM USO — Central de Segurança Clínica
-      ══════════════════════════════════════════════ -->
-      <div class="meds-section" id="meds-section" style="display:none">
-        <div class="meds-section-header" onclick="toggleMedsSection()">
-          <div class="meds-section-icon"><i class="fa-solid fa-pills"></i></div>
-          <span class="meds-section-title" data-i18n="meds_title">Fármacos em Uso pelo Paciente</span>
-          <span class="meds-section-count" id="meds-count">0</span>
-          <i class="fa-solid fa-chevron-down" id="meds-chevron"
-             style="font-size:11px;color:var(--text-muted);transition:transform 0.22s ease;"></i>
-        </div>
-        <div id="meds-body" style="display:none">
-          <p style="font-size:11px;color:var(--text-muted);margin-bottom:10px;line-height:1.55;" data-i18n="meds_desc">
-            Registre os medicamentos em uso. O app cruzará com novas prescrições e alertará sobre interações clínicas relevantes.
-          </p>
-          <!-- Busca com autocomplete -->
-          <div class="meds-search-wrap" id="meds-search-wrap">
-            <i class="fa-solid fa-magnifying-glass meds-search-icon"></i>
-            <input class="meds-search" id="meds-search-input" type="text"
-              data-i18n-ph="meds_search_ph"
-              placeholder="Buscar e adicionar fármaco..."
-              oninput="filterMedsAutocomplete(this.value)"
-              onblur="setTimeout(()=>closeMedsAutocomplete(),200)"
-              autocomplete="off" />
-            <div class="meds-autocomplete" id="meds-autocomplete" style="display:none"></div>
-          </div>
-          <!-- Tags dos fármacos adicionados -->
-          <div class="meds-tags" id="meds-tags-container">
-            <span class="meds-empty-hint" id="meds-empty-hint" data-i18n="meds_empty">Nenhum fármaco registrado.</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- rodapé da home legado oculto — substituído pelos cards Mobile-First -->
-      <button class="formula-toggle" onclick="toggleFormula()" style="display:none">
-        <span><i class="fa-solid fa-book-medical" style="margin-right:7px"></i><span data-i18n="btn_formulas">Ver Fórmulas Utilizadas</span></span>
-        <i class="fa-solid fa-chevron-down" id="formula-chevron"></i>
-      </button>
-      <div class="formula-body" id="formula-body" style="display:none">
-        <div class="formula-line"><i class="fa-solid fa-circle-dot"></i><div><strong style="color:var(--text-primary)">BSA (Mosteller):</strong><br><span class="formula-highlight">BSA = √[(Peso(kg) × Altura(cm)) / 3600]</span></div></div>
-        <div class="formula-line"><i class="fa-solid fa-circle-dot"></i><div><strong style="color:var(--text-primary)">ClCr (Cockcroft-Gault):</strong><br><span class="formula-highlight">ClCr = [(140−Idade) × Peso] / [72 × Cr]</span><br><span style="font-size:11px;color:var(--text-muted)">× 0.85 se Feminino</span></div></div>
-        <div class="formula-line"><i class="fa-solid fa-circle-dot"></i><div><strong style="color:var(--text-primary)">IMC:</strong><br><span class="formula-highlight">IMC = Peso(kg) / [Altura(m)]²</span></div></div>
-        <div class="formula-line"><i class="fa-solid fa-circle-dot"></i><div><strong style="color:var(--text-primary)">Peso Ideal (Devine):</strong><br><span class="formula-highlight">Masc.: 50 + 2.3×(Altura(pol)−60)</span><br><span class="formula-highlight">Fem.: 45.5 + 2.3×(Altura(pol)−60)</span></div></div>
-      </div>
-      <div class="divider" style="display:none"></div>
-      <!-- Versão discreta no rodapé da home -->
-      <p class="hm-version-footer">v1.1 — Terminal Sync</p>
     </section>
 
     <!-- ══════════════════════════════════════════════
@@ -9167,23 +9949,17 @@
 
   </main>
 
-  <!-- BOTTOM NAV — 3 botões mestres -->
-  <nav id="bottom-nav">
-    <button class="nav-item active" onclick="navigate('home')"          id="nav-home">
+  <!-- BOTTOM NAV — ocultado v3.0: todos os módulos agora no Hub Accordion da Home -->
+  <!-- Para restaurar: remover display:none e ajustar padding-bottom do #scroll-content para 68px -->
+  <nav id="bottom-nav" style="display:none !important;" aria-hidden="true">
+    <button class="nav-item active" onclick="navigate('home')"        id="nav-home">
       <i class="fa-solid fa-house-medical"></i>
       <span data-i18n="nav_home">Início</span>
     </button>
-    <button class="nav-item"        onclick="navigate('calculators')"   id="nav-calculators">
+    <button class="nav-item"        onclick="navigate('calculators')" id="nav-calculators">
       <i class="fa-solid fa-calculator"></i>
       <span data-i18n="nav_calculators">Calculadoras</span>
     </button>
-    <!-- [MVP] Botão Prescrições removido temporariamente — módulo será refatorado em sprint futura.
-         Para restaurar: remover este comentário e reinserir o <button id="nav-prescriptions"> abaixo.
-    <button class="nav-item"        onclick="navigate('prescriptions')" id="nav-prescriptions">
-      <i class="fa-solid fa-file-medical"></i>
-      <span data-i18n="nav_prescriptions">Prescrições</span>
-    </button>
-    -->
   </nav>
 </div>
 <div id="toast"></div>
@@ -21529,6 +22305,9 @@ window.MedCasesBridge = {
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
 <script src="js/medcases-ux-v2.js"></script>
+
+<!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
+<script src="js/hub-accordion.js"></script>
 
 <!-- MedCases Deep Link Router v1.1 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
 <script src="js/deeplink-router.js"></script>

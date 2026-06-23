@@ -1,42 +1,40 @@
 /* ================================================================
-   MedCases Pro — Deep Link Router v1.1
+   MedCases Pro — Deep Link Router v2.0
    ----------------------------------------------------------------
-   Lê URLSearchParams ao carregar a página e redireciona o app
-   para o módulo correto sem alterar design, banco de dados ou
+   Lê URLSearchParams ao carregar a página e abre o card accordion
+   correto na Home Hub sem alterar design, banco de dados ou
    subdomínios.
 
+   NOVA ARQUITETURA (v2.0 — Hub Accordion):
+     Todos os módulos são cards na Home.
+     O router usa window.HubAccordion.open(id, opts) para expandir
+     o card correto. Não há mais navigate() para páginas separadas.
+
    PARÂMETROS SUPORTADOS:
-     ?lang=pt|es                → aplica idioma ANTES de abrir a aba
-     ?tab=<modulo>              → abre a aba/módulo
+     ?lang=pt|es                → aplica idioma ANTES de abrir o card
+     ?tab=<modulo>              → abre o card do módulo
      ?tab=<modulo>&q=<busca>    → abre e filtra a busca
-     ?tab=interacoes&drug1=X&drug2=Y → preenche dois fármacos
+     ?tab=interacoes&drug1=X&drug2=Y → preenche dois fármacos + checa
 
    ORDEM DE EXECUÇÃO GARANTIDA:
-     1. ler lang   → aplicar idioma (setLang)
-     2. ler tab    → abrir módulo correto
-     3. ler q      → preencher busca
+     1. ler lang   → aplicar idioma (setLang + HubAccordion.syncLang)
+     2. ler tab    → abrir card accordion correto
+     3. ler q      → preencher busca / score / droga de infusão
      4. ler drug1/drug2 → preencher interações + checar
 
-   REGRAS DE IDIOMA:
-     - Aceita apenas 'pt' e 'es' (case-insensitive)
-     - Persiste em localStorage['lang'] (chave lida por _isES())
-     - Se ausente: mantém localStorage ou fallback do sistema
-     - Retrocompatível: URLs sem ?lang continuam funcionando
-
-   MAPA DE TABS:
-     home                → navigate('home')
-     calculadoras        → navigate('calculators')
-     farmacos            → navigate('farmacos')  + busca opcional
-     interacoes          → scroll #card-interactions-container + drug1/drug2
-     scores              → showAdultPanel('scores') + selectScore()
-     renal / clcr        → navigate('calculators') + rola até ClCr
-     pediatria           → navigate('ped')
-     gestante            → navigate('ob')
-     infusao             → navigate('infusion') + bicHandleDrugInput()
-     eletrolitos         → navigate('elec')    + foco por ion
-     antimicrobianos     → navigate('atb')
-     hemodinamica        → showAdultPanel('hemo')
-     fluidos             → showAdultPanel('fluids')
+   MAPA DE TABS → CARD:
+     home                → fecha todos os cards (home limpa)
+     calculadoras        → fecha todos (home limpa)
+     farmacos            → hub-card-farmacos + q opcional
+     interacoes          → hub-card-interacoes + drug1/drug2
+     scores              → hub-card-scores + selectScore(q)
+     renal / clcr        → hub-card-clcr
+     pediatria           → hub-card-pediatria
+     gestante/ob         → hub-card-gestante
+     infusao             → hub-card-infusao + q (modo droga)
+     eletrolitos         → hub-card-eletrolitos + scroll por íon
+     hemodinamica        → hub-card-hemodinamica + scroll por q
+     fluidos             → hub-card-fluidos
 
    ALIASES DE SCORES (q=):
      wells-tep / wells-pe → wells-pe
@@ -49,13 +47,19 @@
      news2                → news2
 
    ALIASES DE ELETRÓLITOS (q=):
-     potassio / k         → rola até card de K⁺
-     sodio / na           → rola até card de Na⁺
-     magnesio / mg        → rola até card de Mg²⁺
+     potassio / k         → elec-card-k
+     sodio / na           → elec-card-na
+     magnesio / mg        → elec-card-mg
+     calcio / ca          → elec-card-ca
 
    ALIASES DE HEMODINÂMICA (q=):
-     pam / map            → rola até card PAM
-     choque               → rola até card de choque
+     pam / map            → hemo-card-pam
+     choque               → hemo-card-choque
+
+   RETROCOMPATIBILIDADE:
+     Links antigos (tab=adult, tab=calculadoras, tab=calculators)
+     continuam funcionando — são mapeados para a home limpa ou
+     para o card mais próximo.
 
 ================================================================ */
 
@@ -187,188 +191,139 @@
   };
 
   /* ================================================================
-     MAPA DE TABS — tab param → handler
+     UTIL: aguarda HubAccordion estar disponível (max 3s)
+  ================================================================ */
+  function _waitForHub(cb, attempts) {
+    attempts = attempts || 0;
+    if (window.HubAccordion && typeof window.HubAccordion.open === 'function') {
+      cb();
+      return;
+    }
+    if (attempts > 30) {
+      console.warn('[DeepLink] Timeout aguardando HubAccordion.');
+      /* Fallback: tenta mesmo assim */
+      if (typeof navigate === 'function') navigate('home');
+      return;
+    }
+    setTimeout(function () { _waitForHub(cb, attempts + 1); }, 100);
+  }
+
+  /* ================================================================
+     MAPA DE TABS v2.0 — tab param → handler Hub Accordion
   ================================================================ */
   var TAB_HANDLERS = {
 
-    /* ── HOME ── */
+    /* ── HOME (fecha todos os cards) ── */
     'home': function (q) {
-      _waitFor('navigate', function () {
-        navigate('home');
+      _waitForHub(function () {
+        if (typeof navigate === 'function') navigate('home');
+        window.HubAccordion.closeAll();
       });
     },
 
-    /* ── CALCULADORAS (hub) ── */
+    /* ── CALCULADORAS (retrocompat → home limpa) ── */
     'calculadoras': function (q) {
-      _waitFor('navigate', function () {
-        navigate('calculators');
-        /* q=clcr → rola até seção ClCr dentro do hub */
+      _waitForHub(function () {
+        if (typeof navigate === 'function') navigate('home');
+        /* q=clcr → abre card ClCr */
         if (q && _norm(q) === 'clcr') {
-          _scrollTo('calc-clcr-card', 500);
+          window.HubAccordion.open('clcr');
+        } else {
+          window.HubAccordion.closeAll();
         }
       });
     },
 
-    /* ── FÁRMACOS (página dedicada) ── */
+    /* ── FÁRMACOS ── */
     'farmacos': function (q) {
-      _waitFor('navigate', function () {
-        navigate('farmacos');
-        if (q) {
-          setTimeout(function () {
-            var inp = document.getElementById('farmacos-search-input');
-            if (inp) {
-              inp.value = q;
-              inp.dispatchEvent(new Event('input', { bubbles: true }));
-            }
-            if (typeof renderFarmacosList === 'function') {
-              renderFarmacosList(q);
-            }
-          }, 250);
-        }
+      _waitForHub(function () {
+        window.HubAccordion.open('farmacos', { q: q });
       });
     },
 
-    /* ── INTERAÇÕES (card na Home) ── */
+    /* ── INTERAÇÕES ── */
     'interacoes': function (q, drug1, drug2) {
-      _waitFor('navigate', function () {
-        /* Garante que estamos na home onde o card vive */
-        navigate('home');
-
-        setTimeout(function () {
-          /* Scroll até o card de interações */
-          var card = document.getElementById('card-interactions-container');
-          var sc   = document.getElementById('scroll-content');
-          if (card && sc) {
-            sc.scrollTo({ top: card.offsetTop - 60, behavior: 'smooth' });
-          }
-
-          /* drug1 e drug2 — preenche os dois campos */
-          if (drug1 && typeof adicionarChipInteracao === 'function') {
-            adicionarChipInteracao(_capitalize(drug1));
-          }
-          if (drug2 && typeof adicionarChipInteracao === 'function') {
-            adicionarChipInteracao(_capitalize(drug2));
-          }
-
-          /* q simples → adiciona como drug1 */
-          if (q && !drug1 && typeof adicionarChipInteracao === 'function') {
-            adicionarChipInteracao(_capitalize(q));
-          }
-
-          /* Se os dois campos foram preenchidos, executa checagem automaticamente */
-          if (drug1 && drug2) {
-            setTimeout(function () {
-              if (typeof executarChecagemInteracoes === 'function') {
-                executarChecagemInteracoes();
-              }
-            }, 400);
-          }
-        }, 350);
+      _waitForHub(function () {
+        window.HubAccordion.open('interacoes', {
+          q:     q,
+          drug1: drug1,
+          drug2: drug2
+        });
       });
     },
 
-    /* ── SCORES (sub-view do adulto) ── */
+    /* ── SCORES ── */
     'scores': function (q) {
-      _waitFor('showAdultPanel', function () {
-        navigate('adult');
-        setTimeout(function () {
-          showAdultPanel('scores');
-          if (q) {
-            var scoreKey = SCORE_ALIASES[_norm(q)] || _norm(q);
-            setTimeout(function () {
-              if (typeof selectScore === 'function') {
-                selectScore(scoreKey);
-              }
-            }, 200);
-          }
-        }, 150);
+      _waitForHub(function () {
+        var scoreKey = q ? (SCORE_ALIASES[_norm(q)] || _norm(q)) : null;
+        window.HubAccordion.open('scores', { scoreKey: scoreKey });
       });
     },
 
     /* ── RENAL / ClCr ── */
     'renal': function (q) {
-      _waitFor('navigate', function () {
-        navigate('calculators');
-        _scrollTo('calc-clcr-card', 500);
+      _waitForHub(function () {
+        window.HubAccordion.open('clcr');
       });
     },
 
     /* ── PEDIATRIA ── */
     'pediatria': function (q) {
-      _waitFor('navigate', function () {
-        navigate('ped');
+      _waitForHub(function () {
+        window.HubAccordion.open('pediatria');
       });
     },
 
     /* ── GESTANTE / OBSTETRÍCIA ── */
     'gestante': function (q) {
-      _waitFor('navigate', function () {
-        navigate('ob');
+      _waitForHub(function () {
+        window.HubAccordion.open('gestante');
       });
     },
 
     /* ── INFUSÃO ── */
     'infusao': function (q) {
-      _waitFor('navigate', function () {
-        navigate('infusion');
-        if (q) {
-          var drugName = INFUSION_ALIASES[_norm(q)] || q;
-          setTimeout(function () {
-            var inp = document.getElementById('inf-drug-search');
-            if (inp) {
-              inp.value = drugName;
-              inp.dispatchEvent(new Event('input', { bubbles: true }));
-            }
-            if (typeof bicHandleDrugInput === 'function') {
-              bicHandleDrugInput(drugName);
-            }
-          }, 350);
-        }
+      _waitForHub(function () {
+        var drugName = q ? (INFUSION_ALIASES[_norm(q)] || q) : null;
+        window.HubAccordion.open('infusao', { q: drugName });
       });
     },
 
     /* ── ELETRÓLITOS ── */
     'eletrolitos': function (q) {
-      _waitFor('navigate', function () {
-        navigate('elec');
-        if (q) {
-          var cardId = ELEC_CARD_ALIASES[_norm(q)];
-          if (cardId) {
-            _scrollTo(cardId, 500);
-          }
-        }
+      _waitForHub(function () {
+        var cardId = q ? ELEC_CARD_ALIASES[_norm(q)] : null;
+        window.HubAccordion.open('eletrolitos', { scrollEl: cardId });
       });
     },
 
-    /* ── ANTIMICROBIANOS ── */
+    /* ── ANTIMICROBIANOS (retrocompat → home limpa, módulo em breve) ── */
     'antimicrobianos': function (q) {
-      _waitFor('navigate', function () {
-        navigate('atb');
-        /* atb é "em breve" — q é ignorado mas aceito para compatibilidade */
+      _waitForHub(function () {
+        if (typeof navigate === 'function') navigate('home');
+        window.HubAccordion.closeAll();
       });
     },
 
-    /* ── HEMODINÂMICA (sub-view do adulto) ── */
+    /* ── HEMODINÂMICA ── */
     'hemodinamica': function (q) {
-      _waitFor('showAdultPanel', function () {
-        navigate('adult');
-        setTimeout(function () {
-          showAdultPanel('hemo');
-          if (q) {
-            var cardId = HEMO_CARD_ALIASES[_norm(q)];
-            if (cardId) _scrollTo(cardId, 400);
-          }
-        }, 150);
+      _waitForHub(function () {
+        var cardId = q ? HEMO_CARD_ALIASES[_norm(q)] : null;
+        window.HubAccordion.open('hemodinamica', { scrollEl: cardId });
       });
     },
 
-    /* ── FLUIDOS (sub-view do adulto) ── */
+    /* ── FLUIDOS ── */
     'fluidos': function (q) {
-      _waitFor('showAdultPanel', function () {
-        navigate('adult');
-        setTimeout(function () {
-          showAdultPanel('fluids');
-        }, 150);
+      _waitForHub(function () {
+        window.HubAccordion.open('fluidos');
+      });
+    },
+
+    /* ── DADOS DO PACIENTE ── */
+    'paciente': function (q) {
+      _waitForHub(function () {
+        window.HubAccordion.open('patient');
       });
     },
 
@@ -387,14 +342,20 @@
   TAB_HANDLERS['pediatrics']                = TAB_HANDLERS['pediatria'];
   TAB_HANDLERS['obstetrics']                = TAB_HANDLERS['gestante'];
   TAB_HANDLERS['ob']                        = TAB_HANDLERS['gestante'];
+  TAB_HANDLERS['obstetricia']               = TAB_HANDLERS['gestante'];
+  TAB_HANDLERS['gestantes']                 = TAB_HANDLERS['gestante'];
   TAB_HANDLERS['ped']                       = TAB_HANDLERS['pediatria'];
   TAB_HANDLERS['renal']                     = TAB_HANDLERS['renal'];
   TAB_HANDLERS['clcr']                      = TAB_HANDLERS['renal'];
   TAB_HANDLERS['atb']                       = TAB_HANDLERS['antimicrobianos'];
   TAB_HANDLERS['elec']                      = TAB_HANDLERS['eletrolitos'];
+  TAB_HANDLERS['electrolitos']              = TAB_HANDLERS['eletrolitos'];
   TAB_HANDLERS['hemo']                      = TAB_HANDLERS['hemodinamica'];
+  TAB_HANDLERS['hemodynamica']              = TAB_HANDLERS['hemodinamica'];
+  /* adult → retrocompat: abre home */
   TAB_HANDLERS['adult']                     = TAB_HANDLERS['calculadoras'];
   TAB_HANDLERS['scores_clinicos']           = TAB_HANDLERS['scores'];
+  TAB_HANDLERS['patient']                   = TAB_HANDLERS['paciente'];
 
   /* ── Capitaliza a primeira letra (para nomes de fármacos) ── */
   function _capitalize(s) {
@@ -562,6 +523,6 @@
     setTimeout(_dispatch, 120);
   });
 
-  console.log('[MedCases DeepLink] Router v1.1 carregado. API: window.MedCasesRouter | ?lang=pt|es suportado');
+  console.log('[MedCases DeepLink] Router v2.0 carregado. API: window.MedCasesRouter | Hub Accordion | ?lang=pt|es suportado');
 
 })();

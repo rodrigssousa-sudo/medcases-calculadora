@@ -1,0 +1,177 @@
+# =============================================================
+# .github/workflows/deploy.yml
+# MedCases Pro — CI/CD Pipeline
+#
+# Trigger: push para branch 'main'
+# Job 1: build + validate (lint HTML)
+# Job 2: deploy → GitHub Pages
+# Job 3 (opcional): deploy → DigitalOcean (via SSH + rsync)
+#
+# Para ativar DigitalOcean:
+#   1. Vá em: GitHub → Settings → Secrets → Actions
+#   2. Crie os secrets: DO_SSH_KEY, DO_HOST, DO_USER, DO_PATH
+#   3. Descomente o job "deploy-digitalocean" abaixo
+# =============================================================
+
+name: 🏥 MedCases Pro — Deploy
+
+on:
+  push:
+    branches:
+      - main
+  # Permite disparo manual pelo botão "Run workflow" no GitHub
+  workflow_dispatch:
+
+# Permissões necessárias para o GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Garante que apenas um deploy rode por vez
+# (cancela runs em andamento se um novo push chegar)
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+# ─────────────────────────────────────────────
+# JOB 1 — Validação / Build + Export de Dados
+# ─────────────────────────────────────────────
+jobs:
+  build:
+    name: ✅ Validar, Exportar & Preparar
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do repositório
+        uses: actions/checkout@v4
+
+      # ── Setup Node.js para rodar o export pipeline ──
+      - name: ⚙️  Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # ── Exportar dados clínicos estruturados ANTES do deploy ──
+      # Gera /data/manifest.json, /data/drugs_index.json, /data/drugs/*.json
+      # a partir da base farmacológica real (database/*.js)
+      - name: 💊 Exportar dados clínicos (export:data)
+        run: |
+          echo "=== Iniciando export pipeline ==="
+          node scripts/export-clinical-data.js
+          echo ""
+          echo "=== Arquivos gerados em /data ==="
+          ls -lh data/ || true
+          echo ""
+          echo "=== Contagem de fármacos exportados ==="
+          ls data/drugs/*.json 2>/dev/null | wc -l || echo "0 arquivos"
+          echo ""
+          echo "=== Manifest ==="
+          cat data/manifest.json | head -20 || true
+
+      - name: 🔍 Verificar arquivos críticos
+        run: |
+          echo "=== Verificando estrutura do projeto ==="
+          test -f index.html              && echo "✅ index.html encontrado"       || (echo "❌ index.html AUSENTE" && exit 1)
+          test -f database/cardio.js      && echo "✅ cardio.js OK"               || echo "⚠️  cardio.js ausente"
+          test -f database/psicofarmacos.js && echo "✅ psicofarmacos.js OK"      || echo "⚠️  psicofarmacos.js ausente"
+          test -f database/antimicrobianos.js && echo "✅ antimicrobianos.js OK"  || echo "⚠️  antimicrobianos.js ausente"
+          test -f data/manifest.json      && echo "✅ data/manifest.json OK"      || echo "⚠️  manifest.json não gerado"
+          test -f data/drugs_index.json   && echo "✅ data/drugs_index.json OK"   || echo "⚠️  drugs_index.json não gerado"
+          echo "=== Tamanho dos arquivos de base ==="
+          du -sh index.html database/*.js 2>/dev/null || true
+          echo "=== Tamanho dos dados exportados ==="
+          du -sh data/ 2>/dev/null || true
+          echo "=== Total de arquivos ==="
+          find . -not -path './.git/*' -type f | wc -l
+
+      - name: 📦 Preparar artefato para deploy
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Envia todo o repositório (raiz) para o GitHub Pages
+          # inclui /data/ gerado pelo export pipeline
+          path: "."
+
+  # ─────────────────────────────────────────────
+  # JOB 2 — Deploy → GitHub Pages
+  # ─────────────────────────────────────────────
+  deploy-github-pages:
+    name: 🚀 Deploy → GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 🌐 Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: 🎉 Deploy concluído
+        run: |
+          echo "============================================="
+          echo "✅ MedCases Pro publicado com sucesso!"
+          echo "🔗 URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "📅 Data: $(date '+%d/%m/%Y %H:%M:%S UTC')"
+          echo "📝 Commit: ${{ github.sha }}"
+          echo "============================================="
+
+  # ─────────────────────────────────────────────
+  # JOB 3 — Deploy → DigitalOcean (OPCIONAL)
+  # ─────────────────────────────────────────────
+  # Para ativar: remova o '#' das linhas abaixo e configure os Secrets.
+  #
+  # Secrets necessários (GitHub → Settings → Secrets → Actions → New):
+  #   DO_SSH_KEY  : conteúdo da sua chave privada SSH (id_rsa ou id_ed25519)
+  #   DO_HOST     : IP ou hostname do seu Droplet (ex: 123.456.789.0)
+  #   DO_USER     : usuário SSH (ex: root ou deploy)
+  #   DO_PATH     : caminho no servidor (ex: /var/www/medcases)
+  #
+  # deploy-digitalocean:
+  #   name: 🌊 Deploy → DigitalOcean
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   # Só executa se o deploy do GitHub Pages for bem-sucedido
+  #   # needs: deploy-github-pages
+  #
+  #   environment:
+  #     name: production
+  #     url: https://seudominio.com
+  #
+  #   steps:
+  #     - name: 📥 Checkout do repositório
+  #       uses: actions/checkout@v4
+  #
+  #     - name: 🔑 Configurar chave SSH
+  #       uses: webfactory/ssh-agent@v0.9.0
+  #       with:
+  #         ssh-private-key: ${{ secrets.DO_SSH_KEY }}
+  #
+  #     - name: 🔐 Adicionar host ao known_hosts
+  #       run: |
+  #         ssh-keyscan -H "${{ secrets.DO_HOST }}" >> ~/.ssh/known_hosts
+  #
+  #     - name: 📤 Sincronizar arquivos via rsync
+  #       run: |
+  #         rsync -avz --delete \
+  #           --exclude='.git/' \
+  #           --exclude='.github/' \
+  #           --exclude='node_modules/' \
+  #           --exclude='deploy.sh' \
+  #           --exclude='*.log' \
+  #           ./ \
+  #           "${{ secrets.DO_USER }}@${{ secrets.DO_HOST }}:${{ secrets.DO_PATH }}/"
+  #         echo "✅ Arquivos sincronizados para ${{ secrets.DO_HOST }}:${{ secrets.DO_PATH }}"
+  #
+  #     - name: ♻️ Recarregar Nginx (se aplicável)
+  #       run: |
+  #         ssh "${{ secrets.DO_USER }}@${{ secrets.DO_HOST }}" \
+  #           "sudo systemctl reload nginx && echo '✅ Nginx recarregado'"
+  #       continue-on-error: true
+  #
+  #     - name: 🎉 Deploy DigitalOcean concluído
+  #       run: |
+  #         echo "✅ MedCases Pro sincronizado para ${{ secrets.DO_HOST }}"
+  #         echo "📅 $(date '+%d/%m/%Y %H:%M:%S UTC')"
