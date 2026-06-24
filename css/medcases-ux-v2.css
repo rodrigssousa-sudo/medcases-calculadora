@@ -42,23 +42,27 @@ body:not(.light-mode) textarea::placeholder {
   color: rgba(255, 255, 255, 0.38) !important;
 }
 
-/* § 0.2 — Light mode: texto global preto */
+/* § 0.2 — Light mode: texto global preto
+   EXCEÇÃO: .hub-accordion .hub-card-trigger e descendentes NÃO recebem
+   #000 pois os cards têm gradientes escuros e precisam de texto branco.
+   A exceção é tratada no §15b com regras de alta especificidade.
+*/
 body.light-mode {
   color: #000000;
 }
-body.light-mode label,
+body.light-mode label:not(.hub-accordion *),
 body.light-mode .hm-label,
-body.light-mode input,
-body.light-mode button,
-body.light-mode select,
-body.light-mode textarea,
-body.light-mode span,
-body.light-mode p,
-body.light-mode h1,
-body.light-mode h2,
-body.light-mode h3,
-body.light-mode h4,
-body.light-mode li {
+body.light-mode input:not(.hub-accordion *),
+body.light-mode button:not(.hub-accordion .hub-card-trigger),
+body.light-mode select:not(.hub-accordion *),
+body.light-mode textarea:not(.hub-accordion *),
+body.light-mode span:not(.hub-accordion .hub-card-trigger *),
+body.light-mode p:not(.hub-accordion .hub-card-trigger *),
+body.light-mode h1:not(.hub-accordion *),
+body.light-mode h2:not(.hub-accordion *),
+body.light-mode h3:not(.hub-accordion *),
+body.light-mode h4:not(.hub-accordion *),
+body.light-mode li:not(.hub-accordion *) {
   color: #000000;
 }
 
@@ -1045,12 +1049,32 @@ body.light-mode .hm-urine-badge--active {
    Mobile-first · Dark/Light mode · Deep link auto-expand
 ============================================================ */
 
-/* ── Container principal do hub — grid de 2 colunas ── */
+/* ── Container principal do hub — grid responsivo ──
+   Mobile (<480px): 1 coluna
+   Tablet (480–767px): 2 colunas
+   iPad (768–1023px): 3 colunas
+   Desktop (1024px+): 4 colunas
+   O card aberto sempre vira full-width via grid-column: 1 / -1
+── */
 .hub-accordion {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  padding: 5px 12px 12px;
+  padding: 5px 0 12px;
+}
+@media (min-width: 768px) {
+  .hub-accordion {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 6px 0 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .hub-accordion {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    padding: 8px 0 16px;
+  }
 }
 
 /* ── hub-row: passa a ser apenas wrapper semântico, sem layout próprio ──
@@ -1096,10 +1120,11 @@ body.light-mode .hm-urine-badge--active {
   grid-column: 1 / -1;
 }
 
-/* Mobile: sempre 1 coluna */
+/* Mobile pequeno (<480px): sempre 1 coluna */
 @media (max-width: 480px) {
   .hub-accordion {
     grid-template-columns: 1fr;
+    gap: 9px;
   }
   .hub-card,
   .hub-card.is-open,
@@ -1425,7 +1450,7 @@ body.light-mode .hm-urine-badge--active {
   width: 100%;
 }
 
-/* Inner: padding do conteúdo */
+/* Inner: padding do conteúdo — responsivo */
 .hub-card-inner {
   padding: 14px 13px 16px;
   /* Fade-in suave ao abrir (apenas entrada — fechamento é display:none imediato) */
@@ -1433,6 +1458,17 @@ body.light-mode .hm-urine-badge--active {
 }
 .hub-card.is-open .hub-card-inner {
   animation: hubBodyFadeIn 0.22s ease forwards;
+}
+@media (min-width: 768px) {
+  .hub-card-inner { padding: 16px 18px 18px; }
+  .hub-card-trigger { padding: 13px 16px; min-height: 62px; }
+}
+@media (min-width: 1024px) {
+  .hub-card-inner { padding: 18px 22px 20px; }
+  .hub-card-trigger { padding: 14px 18px; min-height: 66px; }
+  .hub-card-ico { width: 40px; height: 40px; font-size: 17px; border-radius: 12px; }
+  .hub-card-name { font-size: 14px !important; }
+  .hub-card-desc { font-size: 11.5px !important; }
 }
 @keyframes hubBodyFadeIn {
   from { opacity: 0; transform: translateY(-6px); }
@@ -1473,6 +1509,150 @@ body.light-mode .hub-card-body .hm-label,
 body.light-mode .hub-card-body .hm-input,
 body.light-mode .hub-card-body label {
   color: #1E293B !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   §15b — LIGHT MODE: Texto branco nos triggers dos Hub Cards
+   ──────────────────────────────────────────────────────────────────
+   PROBLEMA: a regra global §0.2 força color:#000 em todos os
+   elementos (span, div, i, button) no light mode.
+   Os hub-cards têm gradientes escuros/coloridos que NÃO mudam
+   no light mode — portanto o texto dentro do trigger precisa
+   ser branco independente do tema.
+
+   SOLUÇÃO: sobrescrever com especificidade id+classe para cada
+   card, garantindo que .hub-card-name, .hub-card-desc, ícones
+   e chevron permaneçam brancos/legíveis sobre fundo escuro.
+══════════════════════════════════════════════════════════════════ */
+
+/* ── Regra base: todos os triggers dos hub-cards no light mode ── */
+body.light-mode #hub-card-patient   .hub-card-trigger,
+body.light-mode #hub-card-clcr      .hub-card-trigger,
+body.light-mode #hub-card-farmacos  .hub-card-trigger,
+body.light-mode #hub-card-interacoes .hub-card-trigger,
+body.light-mode #hub-card-pediatria .hub-card-trigger,
+body.light-mode #hub-card-gestante  .hub-card-trigger,
+body.light-mode #hub-card-infusao   .hub-card-trigger,
+body.light-mode #hub-card-hemodinamica .hub-card-trigger,
+body.light-mode #hub-card-scores    .hub-card-trigger,
+body.light-mode #hub-card-fluidos   .hub-card-trigger,
+body.light-mode #hub-card-eletrolitos .hub-card-trigger {
+  /* Herança de cor = branco para todos os filhos do trigger */
+  color: #FFFFFF !important;
+}
+
+/* ── hub-card-name: título principal ── */
+body.light-mode #hub-card-patient    .hub-card-name,
+body.light-mode #hub-card-clcr       .hub-card-name,
+body.light-mode #hub-card-farmacos   .hub-card-name,
+body.light-mode #hub-card-interacoes .hub-card-name,
+body.light-mode #hub-card-pediatria  .hub-card-name,
+body.light-mode #hub-card-gestante   .hub-card-name,
+body.light-mode #hub-card-infusao    .hub-card-name,
+body.light-mode #hub-card-hemodinamica .hub-card-name,
+body.light-mode #hub-card-scores     .hub-card-name,
+body.light-mode #hub-card-fluidos    .hub-card-name,
+body.light-mode #hub-card-eletrolitos .hub-card-name {
+  color: #FFFFFF !important;
+}
+
+/* ── hub-card-name spans internos (lang-hub-pt / lang-hub-es) ── */
+body.light-mode #hub-card-patient    .hub-card-name span,
+body.light-mode #hub-card-clcr       .hub-card-name span,
+body.light-mode #hub-card-farmacos   .hub-card-name span,
+body.light-mode #hub-card-interacoes .hub-card-name span,
+body.light-mode #hub-card-pediatria  .hub-card-name span,
+body.light-mode #hub-card-gestante   .hub-card-name span,
+body.light-mode #hub-card-infusao    .hub-card-name span,
+body.light-mode #hub-card-hemodinamica .hub-card-name span,
+body.light-mode #hub-card-scores     .hub-card-name span,
+body.light-mode #hub-card-fluidos    .hub-card-name span,
+body.light-mode #hub-card-eletrolitos .hub-card-name span {
+  color: #FFFFFF !important;
+}
+
+/* ── hub-card-desc: subtítulo (hierarquia) ── */
+body.light-mode #hub-card-patient    .hub-card-desc,
+body.light-mode #hub-card-clcr       .hub-card-desc,
+body.light-mode #hub-card-farmacos   .hub-card-desc,
+body.light-mode #hub-card-interacoes .hub-card-desc,
+body.light-mode #hub-card-pediatria  .hub-card-desc,
+body.light-mode #hub-card-gestante   .hub-card-desc,
+body.light-mode #hub-card-infusao    .hub-card-desc,
+body.light-mode #hub-card-hemodinamica .hub-card-desc,
+body.light-mode #hub-card-scores     .hub-card-desc,
+body.light-mode #hub-card-fluidos    .hub-card-desc,
+body.light-mode #hub-card-eletrolitos .hub-card-desc {
+  color: rgba(255,255,255,0.82) !important;
+}
+
+/* ── hub-card-desc spans internos ── */
+body.light-mode #hub-card-patient    .hub-card-desc span,
+body.light-mode #hub-card-clcr       .hub-card-desc span,
+body.light-mode #hub-card-farmacos   .hub-card-desc span,
+body.light-mode #hub-card-interacoes .hub-card-desc span,
+body.light-mode #hub-card-pediatria  .hub-card-desc span,
+body.light-mode #hub-card-gestante   .hub-card-desc span,
+body.light-mode #hub-card-infusao    .hub-card-desc span,
+body.light-mode #hub-card-hemodinamica .hub-card-desc span,
+body.light-mode #hub-card-scores     .hub-card-desc span,
+body.light-mode #hub-card-fluidos    .hub-card-desc span,
+body.light-mode #hub-card-eletrolitos .hub-card-desc span {
+  color: rgba(255,255,255,0.82) !important;
+}
+
+/* ── hub-card-chevron: seta de expansão ── */
+body.light-mode #hub-card-patient    .hub-card-chevron,
+body.light-mode #hub-card-clcr       .hub-card-chevron,
+body.light-mode #hub-card-farmacos   .hub-card-chevron,
+body.light-mode #hub-card-interacoes .hub-card-chevron,
+body.light-mode #hub-card-pediatria  .hub-card-chevron,
+body.light-mode #hub-card-gestante   .hub-card-chevron,
+body.light-mode #hub-card-infusao    .hub-card-chevron,
+body.light-mode #hub-card-hemodinamica .hub-card-chevron,
+body.light-mode #hub-card-scores     .hub-card-chevron,
+body.light-mode #hub-card-fluidos    .hub-card-chevron,
+body.light-mode #hub-card-eletrolitos .hub-card-chevron {
+  color: rgba(255,255,255,0.60) !important;
+}
+
+/* ── Chevron aberto: mais brilhante ── */
+body.light-mode #hub-card-patient.is-open    .hub-card-chevron,
+body.light-mode #hub-card-clcr.is-open       .hub-card-chevron,
+body.light-mode #hub-card-farmacos.is-open   .hub-card-chevron,
+body.light-mode #hub-card-interacoes.is-open .hub-card-chevron,
+body.light-mode #hub-card-pediatria.is-open  .hub-card-chevron,
+body.light-mode #hub-card-gestante.is-open   .hub-card-chevron,
+body.light-mode #hub-card-infusao.is-open    .hub-card-chevron,
+body.light-mode #hub-card-hemodinamica.is-open .hub-card-chevron,
+body.light-mode #hub-card-scores.is-open     .hub-card-chevron,
+body.light-mode #hub-card-fluidos.is-open    .hub-card-chevron,
+body.light-mode #hub-card-eletrolitos.is-open .hub-card-chevron {
+  color: rgba(255,255,255,0.92) !important;
+}
+
+/* ── hub-card-ico (ícone principal do card) ── */
+body.light-mode #hub-card-patient    .hub-card-ico i,
+body.light-mode #hub-card-clcr       .hub-card-ico i,
+body.light-mode #hub-card-farmacos   .hub-card-ico i,
+body.light-mode #hub-card-interacoes .hub-card-ico i,
+body.light-mode #hub-card-pediatria  .hub-card-ico i,
+body.light-mode #hub-card-gestante   .hub-card-ico i,
+body.light-mode #hub-card-infusao    .hub-card-ico i,
+body.light-mode #hub-card-hemodinamica .hub-card-ico i,
+body.light-mode #hub-card-scores     .hub-card-ico i,
+body.light-mode #hub-card-fluidos    .hub-card-ico i,
+body.light-mode #hub-card-eletrolitos .hub-card-ico i {
+  /* Mantém a cor definida por .hub-ico--* (cores vivas) */
+  /* Se o tema sobrescreve, garante pelo menos branco opaco */
+  filter: brightness(1.1);
+}
+
+/* ── Badge "Em breve" dentro dos triggers ── */
+body.light-mode .hub-card-trigger .hub-soon-badge {
+  color: #FBBF24 !important;
+  background: rgba(251,191,36,0.20) !important;
+  border-color: rgba(251,191,36,0.38) !important;
 }
 
 /* ── Separador entre rows: não necessário — gap do grid já faz isso ── */
@@ -2117,4 +2297,61 @@ body.light-mode .elec2-recontrole { color: #1E293B !important; }
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   §15c — LIGHT MODE: Reforço final — Hub-accordion triggers sempre
+   brancos. Este bloco está NO FINAL do arquivo para garantir máxima
+   precedência de cascade. Complementa §15b (linha ~1510).
+   ──────────────────────────────────────────────────────────────────
+   Cobre todos os 11 hub-cards e todos os elementos de texto dentro
+   do .hub-card-trigger: button, span, div, i (Font Awesome).
+══════════════════════════════════════════════════════════════════ */
+
+/* ── Tudo dentro de qualquer hub-card-trigger fica branco ── */
+body.light-mode .hub-accordion .hub-card-trigger,
+body.light-mode .hub-accordion .hub-card-trigger *  {
+  color: #FFFFFF !important;
+}
+
+/* ── Exceção: ícone no .hub-card-ico herda cor definida pela variante ── */
+body.light-mode .hub-accordion .hub-card-ico {
+  color: inherit !important;
+}
+
+/* ── hub-card-name: título branco ── */
+body.light-mode .hub-accordion .hub-card-name,
+body.light-mode .hub-accordion .hub-card-name span {
+  color: #FFFFFF !important;
+}
+
+/* ── hub-card-desc: subtítulo semi-transparente ── */
+body.light-mode .hub-accordion .hub-card-desc,
+body.light-mode .hub-accordion .hub-card-desc span {
+  color: rgba(255,255,255,0.82) !important;
+}
+
+/* ── hub-card-chevron: seta branca com opacidade ── */
+body.light-mode .hub-accordion .hub-card-chevron {
+  color: rgba(255,255,255,0.60) !important;
+}
+body.light-mode .hub-accordion .hub-card.is-open .hub-card-chevron {
+  color: rgba(255,255,255,0.92) !important;
+}
+
+/* ── hub-soon-badge: badge "Em breve" legível ── */
+body.light-mode .hub-accordion .hub-card-trigger .hub-soon-badge {
+  color: #FBBF24 !important;
+  background: rgba(251,191,36,0.20) !important;
+  border-color: rgba(251,191,36,0.38) !important;
+}
+
+/* ── hub-card-ico icon: mantém branco/opaco sobre fundo colorido ── */
+body.light-mode .hub-accordion .hub-card-ico i {
+  color: #FFFFFF !important;
+  opacity: 0.92;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   FIM §15c
+══════════════════════════════════════════════════════════════════ */
 

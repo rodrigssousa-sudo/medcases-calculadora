@@ -138,22 +138,18 @@
       case 'clcr': {
         var slot = document.getElementById('hub-clcr-slot');
         if (!slot) break;
-        /* O card de ClCr no hub mostra o resultado-dashboard real
-           e permite calcular direto pela home */
+        /* Card premium — sem hint longo. Resultado direto ou mensagem curta. */
         slot.innerHTML =
-          '<div style="font-size:12px;color:var(--text-secondary);margin-bottom:10px;">' +
-            '<i class="fa-solid fa-circle-info" style="color:var(--cyan);margin-right:5px;"></i>' +
-            '<span data-i18n="hub_clcr_hint">Preencha Dados do Paciente acima e clique em Fixar Dados para calcular o ClCr automaticamente.</span>' +
-          '</div>' +
           '<div id="hub-clcr-result-area"></div>' +
-          '<div style="margin-top:14px;">' +
+          '<div style="margin-top:12px;">' +
             '<button class="hm-btn hm-btn--primary" style="width:100%;" onclick="hubOpen(\'patient\')">' +
               '<i class="fa-solid fa-user-injured"></i> ' +
-              '<span data-i18n="hub_clcr_btn">Abrir Dados do Paciente</span>' +
+              '<span class="lang-hub-pt">Abrir Dados do Paciente</span>' +
+              '<span class="lang-hub-es">Abrir Datos del Paciente</span>' +
             '</button>' +
           '</div>';
 
-        /* Se já há resultado calculado, injetar pills de resultado */
+        /* Injeta resultado se já calculado */
         _syncClcrResult();
         _mounted['clcr'] = true;
         break;
@@ -315,29 +311,127 @@
   }
 
   /* ────────────────────────────────────────────────────────────────
+     HELPER — Classificação de IMC (sem alterar cálculo)
+  ──────────────────────────────────────────────────────────────── */
+  function _imcCategory(imcVal, isES) {
+    var v = parseFloat(imcVal);
+    if (isNaN(v)) return '';
+    if      (v <  18.5) return isES ? 'Bajo peso'    : 'Abaixo do peso';
+    else if (v <  25.0) return isES ? 'Normal'        : 'Normal';
+    else if (v <  30.0) return isES ? 'Sobrepeso'     : 'Sobrepeso';
+    else if (v <  35.0) return isES ? 'Obesidad I'    : 'Obesidade I';
+    else if (v <  40.0) return isES ? 'Obesidad II'   : 'Obesidade II';
+    else                return isES ? 'Obesidad III'  : 'Obesidade III';
+  }
+
+  /* ────────────────────────────────────────────────────────────────
+     HELPER — Gera HTML premium dos 3 mini-cards (Build 227)
+     Reutilizado por _syncClcrResult() e hmFixarDados() via window
+  ──────────────────────────────────────────────────────────────── */
+  function _buildMiniCards(imcVal, pesoVal, bsaVal, isES) {
+    if (!imcVal && !pesoVal && !bsaVal) return '';
+
+    var imcCat  = imcVal  ? _imcCategory(imcVal, isES)  : '';
+    var pesoLbl = isES ? 'Peso Ideal' : 'Peso Ideal';
+    var bsaLbl  = isES ? 'Área Corporal' : 'Área Corporal';
+
+    var imcCard = imcVal
+      ? '<div class="clcr-mini-card clcr-mini-card--imc">' +
+          '<div class="clcr-mini-number clcr-num-updated">' + imcVal + '</div>' +
+          '<div class="clcr-mini-unit">kg/m²</div>' +
+          '<div class="clcr-mini-title">IMC</div>' +
+          (imcCat ? '<div class="clcr-mini-sub">' + imcCat + '</div>' : '') +
+        '</div>'
+      : '';
+
+    var pesoCard = pesoVal
+      ? '<div class="clcr-mini-card clcr-mini-card--peso">' +
+          '<div class="clcr-mini-number clcr-num-updated">' + pesoVal + '</div>' +
+          '<div class="clcr-mini-unit">kg</div>' +
+          '<div class="clcr-mini-title">' + pesoLbl + '</div>' +
+          '<div class="clcr-mini-sub">Devine</div>' +
+        '</div>'
+      : '';
+
+    var bsaCard = bsaVal
+      ? '<div class="clcr-mini-card clcr-mini-card--bsa">' +
+          '<div class="clcr-mini-number clcr-num-updated">' + bsaVal + '</div>' +
+          '<div class="clcr-mini-unit">m²</div>' +
+          '<div class="clcr-mini-title">' + bsaLbl + '</div>' +
+          '<div class="clcr-mini-sub">Mosteller</div>' +
+        '</div>'
+      : '';
+
+    return '<div class="clcr-mini-grid">' + imcCard + pesoCard + bsaCard + '</div>';
+  }
+
+  /* Expõe helper para uso no hmFixarDados() em index.html */
+  window._buildMiniCards   = _buildMiniCards;
+  window._imcCategory      = _imcCategory;
+
+  /* ────────────────────────────────────────────────────────────────
      SINCRONIZAR ClCr no slot (preenche resultado se já calculado)
   ──────────────────────────────────────────────────────────────── */
   function _syncClcrResult() {
     var area = document.getElementById('hub-clcr-result-area');
     if (!area) return;
-    var clcr   = document.getElementById('hm-pv-clcr');
-    var clcrSrc= document.getElementById('hm-pv-clcr-src');
-    var imc    = document.getElementById('hm-pv-imc');
-    var bsa    = document.getElementById('hm-pv-bsa');
-    var peso   = document.getElementById('hm-pv-peso');
-    if (!clcr || clcr.textContent === '—') {
-      area.innerHTML = '<p style="font-size:12px;color:var(--text-muted);text-align:center;padding:10px 0;">' +
-        '<i class="fa-solid fa-calculator" style="margin-right:6px;opacity:0.5;"></i>' +
-        'Nenhum cálculo realizado ainda</p>';
+
+    var clcr    = document.getElementById('hm-pv-clcr');
+    var clcrSrc = document.getElementById('hm-pv-clcr-src');
+    var imc     = document.getElementById('hm-pv-imc');
+    var bsa     = document.getElementById('hm-pv-bsa');
+    var peso    = document.getElementById('hm-pv-peso');
+
+    var lang      = (typeof currentLang !== 'undefined' ? currentLang : 'pt');
+    var isES      = (lang === 'es');
+    var hasResult = clcr && clcr.textContent && clcr.textContent !== '—';
+
+    console.log('[CLCR_CARD] hasResult=' + hasResult +
+      ' clcr=' + (clcr ? clcr.textContent : 'null') +
+      ' lang=' + lang);
+
+    if (!hasResult) {
+      area.innerHTML =
+        '<p style="font-size:12px;color:var(--text-secondary);text-align:center;padding:12px 0;">' +
+          '<i class="fa-solid fa-syringe" style="margin-right:6px;opacity:0.6;"></i>' +
+          (isES
+            ? 'Ingrese la creatinina en Datos del Paciente para calcular.'
+            : 'Informe a creatinina nos Dados do Paciente para calcular.') +
+        '</p>';
       return;
     }
+
+    /* ── Categoria renal (lógica inalterada) ── */
+    var v = parseFloat(clcr.textContent);
+    var cat, rec, catColor;
+
+    if      (v >= 90) { cat = isES ? 'Función renal preservada'       : 'Função renal preservada';          catColor = '#10b981'; rec = isES ? 'Sin ajuste necesario.'                                   : 'Sem ajuste necessário.'; }
+    else if (v >= 60) { cat = isES ? 'Reducción leve'                 : 'Redução leve';                     catColor = '#34d399'; rec = isES ? 'Verificar ajuste en fármacos de eliminación renal.'      : 'Verificar ajuste em fármacos de eliminação renal.'; }
+    else if (v >= 30) { cat = isES ? 'Reducción moderada'             : 'Redução moderada';                 catColor = '#f59e0b'; rec = isES ? 'Ajustar dosis de nefrotóxicos y eliminación renal.'     : 'Ajustar dose de nefrotóxicos e eliminação renal.'; }
+    else if (v >= 15) { cat = isES ? 'Reducción grave'                : 'Redução grave';                    catColor = '#f87171'; rec = isES ? 'Ajuste significativo en la mayoría de fármacos renales.' : 'Ajuste significativo na maioria dos fármacos renais.'; }
+    else              { cat = isES ? 'Falla renal / evaluar diálisis' : 'Falência renal / avaliar diálise';  catColor = '#ef4444'; rec = isES ? 'Evitar nefrotóxicos. Evaluar diálisis.'                : 'Evitar nefrotóxicos. Avaliar diálise.'; }
+
+    console.log('[CLCR_CARD] hasResult=true clcr=' + v + ' category=' + cat);
+
+    var imcVal  = (imc  && imc.textContent  && imc.textContent  !== '—') ? imc.textContent  : null;
+    var pesoVal = (peso && peso.textContent && peso.textContent !== '—') ? peso.textContent : null;
+    var bsaVal  = (bsa  && bsa.textContent  && bsa.textContent  !== '—') ? bsa.textContent  : null;
+    var srcVal  = (clcrSrc && clcrSrc.textContent) ? clcrSrc.textContent : 'CG';
+
     area.innerHTML =
-      '<div class="hm-result-pills" style="display:flex;flex-wrap:wrap;gap:8px;">' +
-        '<div class="hm-pill"><span class="hm-pill-val" id="hub-clcr-val">' + (clcr ? clcr.textContent : '—') + '</span><span class="hm-pill-lbl">ClCr</span><span class="hm-pill-lbl" style="font-size:7.5px;opacity:0.55;">' + (clcrSrc ? clcrSrc.textContent : 'CG') + '</span></div>' +
-        '<div class="hm-pill"><span class="hm-pill-val">' + (imc ? imc.textContent : '—') + '</span><span class="hm-pill-lbl">IMC</span></div>' +
-        '<div class="hm-pill"><span class="hm-pill-val">' + (peso ? peso.textContent : '—') + '</span><span class="hm-pill-lbl">Peso Ideal</span></div>' +
-        '<div class="hm-pill"><span class="hm-pill-val">' + (bsa ? bsa.textContent : '—') + '</span><span class="hm-pill-lbl">BSA m²</span></div>' +
-      '</div>';
+      /* ── Bloco hero: ClCr principal ── */
+      '<div class="clcr-hero">' +
+        '<div class="clcr-hero-value">' +
+          '<div class="clcr-hero-number clcr-num-updated" style="color:' + catColor + ';">' + v + '</div>' +
+          '<div class="clcr-hero-unit">mL/min · ' + srcVal + '</div>' +
+        '</div>' +
+        '<div class="clcr-hero-info">' +
+          '<div class="clcr-hero-cat" style="color:' + catColor + ';">' + cat + '</div>' +
+          '<div class="clcr-hero-rec">' + rec + '</div>' +
+        '</div>' +
+      '</div>' +
+      /* ── Mini-cards premium: IMC · Peso Ideal · BSA ── */
+      _buildMiniCards(imcVal, pesoVal, bsaVal, isES);
   }
 
   /* ────────────────────────────────────────────────────────────────
