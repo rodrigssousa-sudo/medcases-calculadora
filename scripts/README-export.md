@@ -231,4 +231,3 @@ curl -s https://medcasescalcu.com/data/drugs/metoprolol.json \
 | v1.2   | Export de interações por fármaco |
 | v2.0   | Cache strategy no app + lazy loading por ID |
 | v2.1   | Versioning semântico por fármaco (hash do conteúdo) |
-

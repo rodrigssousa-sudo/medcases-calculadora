@@ -642,4 +642,3 @@ main().catch(err => {
   console.error('\n❌ Erro fatal no pipeline:', err);
   process.exit(1);
 });
-

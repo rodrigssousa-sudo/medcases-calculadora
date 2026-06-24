@@ -676,4 +676,3 @@
   console.log('[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR');
 
 })();
-

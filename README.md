@@ -3225,4 +3225,3 @@ Este aplicativo é uma ferramenta de apoio à decisão clínica destinada **excl
 *© 2026 MedCases Pro — Todos os direitos reservados.*
 
 </div>
-

@@ -587,4 +587,3 @@
   console.log('[MedCases DeepLink] Router v2.0 carregado. API: window.MedCasesRouter | Hub Accordion | ?lang=pt|es suportado');
 
 })();
-

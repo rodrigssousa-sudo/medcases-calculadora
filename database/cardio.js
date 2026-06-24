@@ -28014,4 +28014,3 @@
   }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 36 (iSGLT2: empagliflozina · canagliflozina) */
 
 })(); /* fim da IIFE do módulo cardio */
-

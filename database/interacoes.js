@@ -2854,7 +2854,7 @@ const INTERACOES_DB = {
         es: "No mezclar en la misma solución (incompatibilidad fisicoquímica). Administrar separados en el tiempo. Monitorear niveles séricos de aminoglucósido (valle y pico). En IRC grave: considerar monitoreo farmacocinético intensivo y ajuste de dosis. La combinación puede ser sinérgica microbiológicamente — el riesgo es farmacológico, no clínico-microbiológico."
       }
     }
-  }
+  },
 
   /* ═══════════════════════════════════════════════════════════════
      BLOCO PSICOFÁRMACOS v3.2 — ISRS 1/2
@@ -12700,4 +12700,3 @@ const INTERACOES_DB = {
 window.DRUG_ALIASES    = DRUG_ALIASES;
 window.DRUG_CLASSES    = DRUG_CLASSES;
 window.INTERACOES_DB   = INTERACOES_DB;
-
