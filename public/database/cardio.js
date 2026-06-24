@@ -11283,10 +11283,15 @@
                 potassio = 4.0, magnesio = 2.0,
                 clcr = null, creatinina = 1.0,
                 feve = 50, icDescompensada = false,
-                lupusAtivo = false, torsadesPrevia = false,
+                lupusAtivo = false,
+                torsadesPrevia  = false,   /* singular  — nome original */
+                torsadesPrevias = false,   /* plural    — nome usado na lógica; BUILD 232: fix ReferenceError */
                 medicamentosQT = false,
                 indicacao = 'TV', gestante = false,
                 usoDigoxina = false } = paciente;
+
+        /* BUILD 232 — normaliza singular/plural; garante que qualquer caller aciona o alerta */
+        const _torsades = Boolean(torsadesPrevias || torsadesPrevia);
 
         const alerts = [];
         let contraindicado = false;
@@ -11310,7 +11315,7 @@
         } else if (qtc > 440) {
           alerts.push({ tipo: 'warning', msg: t(lang, `⚠️ QTc ${qtc} ms — elevado. Monitorar rigorosamente. Suspender se QTc >500 ms ou QRS alarga >50%.`, `⚠️ QTc ${qtc} ms — elevado. Monitorizar rigurosamente. Suspender si QTc >500 ms o QRS ensancha >50%.`) });
         }
-        if (torsadesPrevias) {
+        if (_torsades) {
           alerts.push({ tipo: 'danger', msg: t(lang, '⛔ CONTRAINDICADO: Torsades de Pointes prévia.', '⛔ CONTRAINDICADO: Torsades de Pointes previa.') });
           contraindicado = true;
         }

@@ -1998,11 +1998,17 @@
           default: lbl = f; id = 'elec2-in-' + f; ph = '';
         }
         var val = s[f] != null ? s[f] : '';
+        /* OBJ8 BUILD 233: type="text" inputmode="decimal" — fix iOS WebView selectionStart=null
+           em type="number". pattern garante teclado numérico no Android Chrome.
+           Normalization (vírgula→ponto) ocorre APENAS no blur via ElecCalc.normalizeField. */
         html += '<div class="elec2-field">' +
           '<label class="elec2-field-lbl" for="' + id + '">' + lbl + '</label>' +
-          '<input class="elec2-field-input" type="number" id="' + id + '" ' +
-          'placeholder="' + ph + '" value="' + val + '" step="' + step + '" min="' + min + '" max="' + max + '"' +
-          ' oninput="ElecCalc.setField(\'' + f + '\', this.value)"/>' +
+          '<input class="elec2-field-input" type="text" inputmode="decimal"' +
+          ' pattern="[0-9]*[.,]?[0-9]*"' +
+          ' id="' + id + '" ' +
+          'placeholder="' + ph + '" value="' + val + '"' +
+          ' oninput="ElecCalc.setField(\'' + f + '\', this.value)"' +
+          ' onblur="ElecCalc.normalizeField(\'' + f + '\', this)"/>' +
           '</div>';
       });
 
@@ -2299,26 +2305,65 @@
     _render();
   }
 
+  /* ── OBJ8 BUILD 233: parseLocaleNumber ────────────────────────────
+     Aceita "3,5" (PT/ES) e "3.5" (EN). Retorna número ou NaN.
+     Nunca lança excepção. Usado apenas no blur (normalizeField).
+  ──────────────────────────────────────────────────────────────── */
+  function _parseLocaleNumber(str) {
+    if (str === null || str === undefined || str === '') return NaN;
+    /* Substitui vírgula por ponto para parseFloat */
+    var cleaned = String(str).replace(',', '.');
+    /* Remove caracteres não numéricos (exceto ponto e sinal) */
+    cleaned = cleaned.replace(/[^0-9.\-]/g, '');
+    var n = parseFloat(cleaned);
+    console.log('[INPUT_FIX] parseLocaleNumber("' + str + '") → ' + n);
+    return n;
+  }
+
+  /* ── OBJ8 BUILD 233: safeRestoreCursor ────────────────────────────
+     Restaura cursor numa input de texto SOMENTE se selectionStart
+     não for null (type="text" garante isso). Nunca chama
+     setSelectionRange em type="number" (iOS retorna null e corrompe).
+  ──────────────────────────────────────────────────────────────── */
+  function _safeRestoreCursor(el, start, end) {
+    if (!el || el.tagName !== 'INPUT') return;
+    /* Só chama setSelectionRange se a API estiver disponível
+       e os valores não forem null (garante type="text") */
+    if (start === null || start === undefined) {
+      console.log('[INPUT_FIX] safeRestoreCursor — selectionStart=null, pulando setSelectionRange');
+      return;
+    }
+    var len = el.value ? el.value.length : 0;
+    var s = Math.min(start, len);
+    var e = Math.min((end !== null && end !== undefined ? end : start), len);
+    try {
+      el.setSelectionRange(s, e);
+      console.log('[INPUT_FIX] safeRestoreCursor OK s=' + s + ' e=' + e);
+    } catch (ex) {
+      console.log('[INPUT_FIX] safeRestoreCursor exception: ' + ex.message);
+    }
+  }
+
   function _setField (key, value) {
-    /* Bug-fix v2: preservar foco E cursor com requestAnimationFrame.
-       slot.innerHTML mata o elemento ativo a cada keystroke.
-       setSelectionRange síncrono falha porque o browser ainda não pintou o novo DOM.
-       Solução: capturar antes do render, restaurar APÓS paint via rAF. */
+    /* OBJ8 BUILD 233: type="text" inputmode="decimal"
+       selectionStart é sempre disponível (não null) em type="text".
+       NÃO fazemos parseFloat aqui — mantemos a string como digitada.
+       Normalização (vírgula→ponto, trim) ocorre APENAS no blur
+       via normalizeField(), prevenindo reescrita do value durante input
+       que corrompia o cursor no iOS WebView. */
     var activeId    = document.activeElement ? document.activeElement.id            : null;
     var activeStart = document.activeElement ? document.activeElement.selectionStart : null;
     var activeEnd   = document.activeElement ? document.activeElement.selectionEnd   : null;
 
-    /* Atualiza estado (mantém string durante digitação — NÃO parsear aqui) */
+    /* Guarda a string bruta — NÃO parsear aqui */
     _state[key] = value;
 
-    /* Log estruturado */
-    console.log('[ELECTROLYTES_CURSOR] field=' + key +
-      ' value=' + value +
-      ' selectionStart=' + activeStart +
-      ' selectionEnd='   + activeEnd   +
-      ' restored=true');
+    console.log('[INPUT_FIX] setField key=' + key +
+      ' value="' + value + '"' +
+      ' selStart=' + activeStart +
+      ' selEnd='   + activeEnd);
 
-    /* Re-renderiza */
+    /* Re-renderiza (slot.innerHTML recria o input) */
     _render();
 
     /* Restaura foco + cursor APÓS o browser pintar o novo DOM */
@@ -2327,15 +2372,33 @@
         var el = document.getElementById(activeId);
         if (el && el.tagName === 'INPUT') {
           el.focus();
-          var newLen = el.value ? el.value.length : 0;
-          var s = (activeStart !== null && activeStart !== undefined)
-                    ? Math.min(activeStart, newLen) : newLen;
-          var e = (activeEnd   !== null && activeEnd   !== undefined)
-                    ? Math.min(activeEnd,   newLen) : newLen;
-          try { el.setSelectionRange(s, e); } catch (ex) {}
+          _safeRestoreCursor(el, activeStart, activeEnd);
         }
       });
     }
+  }
+
+  /* ── OBJ8 BUILD 233: normalizeField ──────────────────────────────
+     Chamado no blur do input. Converte vírgula→ponto, valida o número
+     e atualiza o state com o float correto (ou NaN→esvazia o campo).
+     Nunca reescreve input.value durante o oninput (evita loop iOS).
+  ──────────────────────────────────────────────────────────────── */
+  function _normalizeField(key, inputEl) {
+    var raw = inputEl ? inputEl.value : (_state[key] || '');
+    var n = _parseLocaleNumber(raw);
+    console.log('[INPUT_FIX] normalizeField key=' + key + ' raw="' + raw + '" parsed=' + n);
+    if (isNaN(n)) {
+      _state[key] = '';
+      if (inputEl) inputEl.value = '';
+    } else {
+      _state[key] = n;
+      /* Normaliza vírgula→ponto no display apenas no blur */
+      if (inputEl && String(raw).indexOf(',') !== -1) {
+        inputEl.value = String(n);
+      }
+    }
+    /* Re-renderiza para refletir o valor normalizado */
+    _render();
   }
 
   function _calculate () {
@@ -2455,6 +2518,8 @@
     selectElectrolyte: _selectElectrolyte,
     setState: _setState,
     setField: _setField,
+    /* OBJ8 BUILD 233: normalizeField exposto para onblur nos inputs */
+    normalizeField: _normalizeField,
     calculate: _calculate,
     reset: _reset,
     copyResult: _copyResult,

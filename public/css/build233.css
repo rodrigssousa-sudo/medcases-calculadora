@@ -1,0 +1,478 @@
+/* ================================================================
+   MedCases Pro — BUILD 233 CSS
+   OBJ2: Grid responsivo 11 módulos
+   OBJ3: UX polish — cores, espaçamento, modo claro
+   OBJ6: Hemodinâmica card vermelho premium
+   OBJ9: Animações suaves
+   ================================================================ */
+
+/* ================================================================
+   OBJ2 — GRID RESPONSIVO PARA MÓDULOS DO HUB
+   1 coluna mobile → 2 colunas tablet → 3/4 colunas desktop
+   Aplica ao calc-hub-grid-v2 e grids similares
+   ================================================================ */
+
+/* Hub Accordion — cards empilhados (mobile-first, já funciona) */
+.hub-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Grid do "Central de Calculadoras" */
+.calc-hub-grid-v2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 480px) {
+  .calc-hub-grid-v2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .calc-hub-grid-v2 {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .calc-hub-grid-v2 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+}
+
+/* Grid dos resultados de fármacos e eletrólitos */
+.hm-card--drugs,
+.hm-card--patient,
+.elec2-fields-grid {
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .hm-home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .hm-card--patient {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hm-home-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* ================================================================
+   OBJ3 — UX POLISH: IDENTIDADE DE COR POR MÓDULO
+   Fluidos=verde, Hemodinâmica=vermelho, Eletrólitos=roxo,
+   Infusão=ciano, Fármacos=ciano-azul, Interações=laranja,
+   ClCr=verde-azulado, Scores=amarelo, Pediatria=azul-claro
+   ================================================================ */
+
+/* ── Fluidos — identidade verde ── */
+.hub-card[data-hub="fluidos"] .hub-card-ico,
+#hub-card-fluidos .hub-card-ico {
+  background: rgba(34, 197, 94, 0.18) !important;
+  color: #22C55E !important;
+}
+#hub-card-fluidos .hub-card-trigger {
+  background: linear-gradient(135deg, #0d2818, #0a1f12) !important;
+}
+
+/* ── Hemodinâmica — identidade vermelha (ver OBJ6 abaixo) ── */
+.hub-card[data-hub="hemodinamica"] .hub-card-ico,
+#hub-card-hemodinamica .hub-card-ico {
+  background: rgba(239, 68, 68, 0.20) !important;
+  color: #EF4444 !important;
+}
+
+/* ── Eletrólitos — identidade roxa ── */
+.hub-card[data-hub="eletrolitos"] .hub-card-ico,
+#hub-card-eletrolitos .hub-card-ico {
+  background: rgba(168, 85, 247, 0.18) !important;
+  color: #A855F7 !important;
+}
+#hub-card-eletrolitos .hub-card-trigger {
+  background: linear-gradient(135deg, #1a0a2e, #140822) !important;
+}
+
+/* ── Infusão — identidade ciano ── */
+.hub-card[data-hub="infusao"] .hub-card-ico,
+#hub-card-infusao .hub-card-ico {
+  background: rgba(6, 182, 212, 0.18) !important;
+  color: #06B6D4 !important;
+}
+
+/* ── Fármacos — identidade azul ── */
+.hub-card[data-hub="farmacos"] .hub-card-ico,
+#hub-card-farmacos .hub-card-ico {
+  background: rgba(56, 189, 248, 0.18) !important;
+  color: #38BDF8 !important;
+}
+
+/* ── Interações — identidade laranja ── */
+.hub-card[data-hub="interacoes"] .hub-card-ico,
+#hub-card-interacoes .hub-card-ico {
+  background: rgba(249, 115, 22, 0.18) !important;
+  color: #F97316 !important;
+}
+
+/* ── ClCr — identidade verde-azulado ── */
+.hub-card[data-hub="clcr"] .hub-card-ico,
+#hub-card-clcr .hub-card-ico {
+  background: rgba(16, 185, 129, 0.18) !important;
+  color: #10B981 !important;
+}
+
+/* ── Scores — identidade amarelo/dourado ── */
+.hub-card[data-hub="scores"] .hub-card-ico,
+#hub-card-scores .hub-card-ico {
+  background: rgba(245, 158, 11, 0.18) !important;
+  color: #F59E0B !important;
+}
+
+/* ── Paciente — identidade azul ── */
+.hub-card[data-hub="patient"] .hub-card-ico,
+#hub-card-patient .hub-card-ico {
+  background: rgba(99, 102, 241, 0.18) !important;
+  color: #6366F1 !important;
+}
+
+/* ── Espaçamento e legibilidade ── */
+.hub-card-body {
+  padding: 0 !important;
+}
+.hub-card-inner {
+  padding: 12px 14px 14px !important;
+}
+
+/* ── Hierarquia tipográfica nos módulos ── */
+.card-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* ── Modo claro: legibilidade nos cards do módulo ── */
+body.light-mode .hub-card-inner {
+  background: rgba(255,255,255,0.04) !important;
+}
+body.light-mode .card {
+  background: rgba(255,255,255,0.92) !important;
+  border-color: rgba(0,0,0,0.10) !important;
+}
+body.light-mode .card-title {
+  color: #1e293b !important;
+}
+body.light-mode .drug-result-key {
+  color: #374151 !important;
+}
+body.light-mode .drug-result-value {
+  color: #111827 !important;
+}
+body.light-mode .drug-result-note {
+  color: #4B5563 !important;
+}
+body.light-mode .elec2-field-lbl {
+  color: #374151 !important;
+}
+body.light-mode .elec2-field-input {
+  background: #fff !important;
+  border-color: rgba(0,0,0,0.18) !important;
+  color: #111827 !important;
+}
+body.light-mode .elec2-state-btn {
+  background: rgba(0,0,0,0.07) !important;
+  color: #374151 !important;
+}
+body.light-mode .elec2-state-btn.active {
+  background: #38BDF8 !important;
+  color: #fff !important;
+}
+body.light-mode .hm-search {
+  background: #fff !important;
+  color: #111827 !important;
+  border-color: rgba(0,0,0,0.18) !important;
+}
+body.light-mode .hm-drug-item {
+  background: rgba(0,0,0,0.04) !important;
+  border-color: rgba(0,0,0,0.08) !important;
+}
+body.light-mode .hm-drug-name {
+  color: #111827 !important;
+}
+body.light-mode .hm-drug-class {
+  color: #4B5563 !important;
+}
+body.light-mode .hm-drug-sep {
+  color: #6B7280 !important;
+}
+
+/* ================================================================
+   OBJ6 — HEMODINÂMICA: CARD INTEIRO VERMELHO PREMIUM
+   Header intensamente vermelho + body dark red
+   ================================================================ */
+
+/* Slot do hub (após lazy-mount) */
+#hub-hemo-slot .card,
+#hub-body-hemodinamica .card,
+#subview-hemo .card {
+  background: linear-gradient(160deg, #1a0408, #2a0810) !important;
+  border-color: rgba(239, 68, 68, 0.35) !important;
+  box-shadow: 0 4px 24px rgba(239, 68, 68, 0.12) !important;
+}
+
+#hub-hemo-slot .card-title,
+#hub-body-hemodinamica .card-title,
+#subview-hemo .card-title {
+  color: #FCA5A5 !important;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.35), rgba(185, 28, 28, 0.25)) !important;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.25) !important;
+  margin: -14px -14px 14px -14px !important;
+  padding: 12px 14px !important;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+#hub-hemo-slot .results-grid,
+#hub-body-hemodinamica .results-grid,
+#subview-hemo .results-grid {
+  background: rgba(220, 38, 38, 0.08) !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  border: 1px solid rgba(239, 68, 68, 0.15) !important;
+}
+
+#hub-hemo-slot .result-label,
+#hub-body-hemodinamica .result-label,
+#subview-hemo .result-label {
+  color: rgba(252, 165, 165, 0.80) !important;
+}
+
+#hub-hemo-slot .result-value,
+#hub-body-hemodinamica .result-value,
+#subview-hemo .result-value {
+  color: #FCA5A5 !important;
+}
+
+/* Trigger do card hemodinâmica — fundo vermelho escuro */
+#hub-card-hemodinamica .hub-card-trigger {
+  background: linear-gradient(135deg, #2d0a10, #1a0508) !important;
+}
+
+/* Inputs da hemodinâmica — borda vermelha */
+#hub-hemo-slot input,
+#hub-body-hemodinamica input,
+#subview-hemo input {
+  border-color: rgba(239, 68, 68, 0.30) !important;
+}
+#hub-hemo-slot input:focus,
+#hub-body-hemodinamica input:focus,
+#subview-hemo input:focus {
+  border-color: rgba(239, 68, 68, 0.65) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.18) !important;
+}
+
+/* ================================================================
+   OBJ9 — ANIMAÇÕES SUAVES
+   scroll, highlight, foco visual
+   ================================================================ */
+
+/* Transições suaves gerais */
+.hub-card-trigger,
+.hub-card-body,
+.hub-card-ico,
+.hub-card-chevron {
+  transition:
+    background 0.22s ease,
+    color 0.18s ease,
+    opacity 0.18s ease,
+    box-shadow 0.22s ease !important;
+}
+
+/* Scroll content — padding-bottom suave (já existe no BUILD 232) */
+#scroll-content {
+  scroll-behavior: smooth;
+}
+
+/* Foco visual suave nos inputs */
+input:focus,
+select:focus,
+textarea:focus {
+  transition: border-color 0.18s ease, box-shadow 0.18s ease !important;
+  outline: none !important;
+}
+
+/* Highlight de campo (via _fluidHighlightField e _fluidScrollToWeight) */
+input.field-highlight {
+  outline: 2.5px solid #22C87A !important;
+  box-shadow: 0 0 0 4px rgba(34, 200, 122, 0.22) !important;
+  transition: outline 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Hub card open/close — altura animada */
+.hub-card-body {
+  transition: max-height 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.22s ease !important;
+  overflow: hidden;
+}
+
+/* Botões — clique suave */
+button {
+  transition: opacity 0.15s ease, transform 0.12s ease, background 0.18s ease !important;
+}
+button:active {
+  transform: scale(0.97) !important;
+  opacity: 0.88 !important;
+}
+
+/* Result cards — entrada suave */
+.drug-result-card,
+.card,
+.hm-card {
+  transition: box-shadow 0.22s ease, border-color 0.18s ease !important;
+}
+
+/* Inline result — fade in */
+#hm-drug-result,
+#calc-drug-result {
+  animation: b233FadeIn 0.22s ease both;
+}
+
+@keyframes b233FadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Toast — entrada suave */
+.toast-notification,
+#toast-message {
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
+}
+
+/* ================================================================
+   OBJ3 — Correções de espaçamento e inputs
+   ================================================================ */
+
+/* Inputs: aparência consistente */
+.hm-field-input,
+.elec2-field-input,
+input[type="text"].elec2-field-input {
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 16px !important; /* evita zoom automático no iOS */
+  padding: 10px 12px !important;
+  border-radius: 8px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Remove spinners de inputs numéricos */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Drug items no hub — hover suave */
+.hm-drug-item {
+  cursor: pointer;
+  transition: background 0.15s ease !important;
+}
+.hm-drug-item:hover,
+.hm-drug-item:active {
+  background: rgba(56, 189, 248, 0.10) !important;
+}
+
+/* Separadores de categoria na busca */
+.hm-drug-sep {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  padding: 10px 4px 4px;
+}
+
+/* Espaçamento interno do card de resultado inline */
+.hm-inline-result {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+.hm-inline-result-header {
+  padding: 12px 14px !important;
+}
+
+/* ================================================================
+   Responsividade geral dos cards internos dos módulos
+   ================================================================ */
+
+@media (min-width: 600px) {
+  .hub-card-inner {
+    padding: 14px 18px 16px !important;
+  }
+  .elec2-fields-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .elec2-fields-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .hub-accordion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+  }
+  /* Cards de largura total: paciente + interações */
+  #hub-card-patient,
+  #hub-card-interacoes {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hub-accordion {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #hub-card-patient,
+  #hub-card-interacoes {
+    grid-column: span 3;
+  }
+}
+
+/* ================================================================
+   Fluid module — ajustes visuais específicos
+   ================================================================ */
+.fluid-result-card,
+#fluid-result .card {
+  border-color: rgba(34, 197, 94, 0.30) !important;
+}
+#fluid-result .card-title {
+  color: #4ADE80 !important;
+}
+
+/* ================================================================
+   Patient card no hub — azul/índigo
+   ================================================================ */
+#hub-body-patient .hm-card--patient {
+  border-color: rgba(99, 102, 241, 0.30) !important;
+}
