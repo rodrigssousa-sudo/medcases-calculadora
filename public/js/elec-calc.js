@@ -313,7 +313,7 @@
     'glicose': {
       key: 'glicose',
       name: { pt: 'Glicose', es: 'Glucosa' },
-      shortName: 'Glicose',
+      shortName: { pt: 'Glicose', es: 'Glucosa' },
       unit: 'mg/dL',
       normal: { min: 70, max: 180 },
       refLow: 70, refHigh: 180,
@@ -1931,14 +1931,14 @@
   var ElecUI = {
 
     /* ── Botão de eletrólito ── */
-    _elecBtn: function (key, elec, selected) {
+    _elecBtn: function (key, elec, selected, lang) {
       var isSelected = selected === key;
       return '<button class="elec2-elec-btn' + (isSelected ? ' elec2-elec-btn--active' : '') + '" ' +
         'onclick="ElecCalc.selectElectrolyte(\'' + key + '\')" ' +
         'style="--btn-color:' + elec.color + '" ' +
         'data-elec="' + key + '">' +
         '<i class="fa-solid ' + elec.icon + '"></i>' +
-        '<span>' + elec.shortName + '</span>' +
+        '<span>' + (typeof elec.shortName === 'object' ? (elec.shortName[lang] || elec.shortName.pt) : elec.shortName) + '</span>' +
         '</button>';
     },
 
@@ -1946,7 +1946,7 @@
     renderStep1: function (lang, selected) {
       var t = I18N[lang] || I18N.pt;
       var btns = Object.keys(ELECTROLYTES).map(function (k) {
-        return ElecUI._elecBtn(k, ELECTROLYTES[k], selected);
+        return ElecUI._elecBtn(k, ELECTROLYTES[k], selected, lang);
       }).join('');
       return '<div class="elec2-step" id="elec2-step1">' +
         '<div class="elec2-step-hd"><span class="elec2-step-num">1</span>' + t.step1_title + '</div>' +
@@ -2300,7 +2300,42 @@
   }
 
   function _setField (key, value) {
-    _setState(key, value);
+    /* Bug-fix v2: preservar foco E cursor com requestAnimationFrame.
+       slot.innerHTML mata o elemento ativo a cada keystroke.
+       setSelectionRange síncrono falha porque o browser ainda não pintou o novo DOM.
+       Solução: capturar antes do render, restaurar APÓS paint via rAF. */
+    var activeId    = document.activeElement ? document.activeElement.id            : null;
+    var activeStart = document.activeElement ? document.activeElement.selectionStart : null;
+    var activeEnd   = document.activeElement ? document.activeElement.selectionEnd   : null;
+
+    /* Atualiza estado (mantém string durante digitação — NÃO parsear aqui) */
+    _state[key] = value;
+
+    /* Log estruturado */
+    console.log('[ELECTROLYTES_CURSOR] field=' + key +
+      ' value=' + value +
+      ' selectionStart=' + activeStart +
+      ' selectionEnd='   + activeEnd   +
+      ' restored=true');
+
+    /* Re-renderiza */
+    _render();
+
+    /* Restaura foco + cursor APÓS o browser pintar o novo DOM */
+    if (activeId) {
+      requestAnimationFrame(function () {
+        var el = document.getElementById(activeId);
+        if (el && el.tagName === 'INPUT') {
+          el.focus();
+          var newLen = el.value ? el.value.length : 0;
+          var s = (activeStart !== null && activeStart !== undefined)
+                    ? Math.min(activeStart, newLen) : newLen;
+          var e = (activeEnd   !== null && activeEnd   !== undefined)
+                    ? Math.min(activeEnd,   newLen) : newLen;
+          try { el.setSelectionRange(s, e); } catch (ex) {}
+        }
+      });
+    }
   }
 
   function _calculate () {

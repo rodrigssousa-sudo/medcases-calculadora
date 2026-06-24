@@ -260,4 +260,3 @@ async function handleNavigationRequest(request) {
     );
   }
 }
-

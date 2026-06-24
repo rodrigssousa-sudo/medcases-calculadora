@@ -73,7 +73,9 @@
       height: 100%;
       /* -webkit-fill-available: altura real do visual viewport no iOS */
       height: -webkit-fill-available;
-      background-color: var(--bg-deep);
+      /* Gradiente roxo premium — preenche laterais em telas grandes */
+      background: radial-gradient(ellipse at top center, #24104a 0%, #0f091e 45%, #07071180 100%);
+      background-color: var(--bg-deep); /* fallback */
       /* Bloqueia scroll no html — apenas #scroll-content rola */
       overflow: hidden;
     }
@@ -81,7 +83,9 @@
       /* Espelha a mesma trava de altura do html */
       height: 100%;
       height: -webkit-fill-available;
-      background-color: var(--bg-deep);
+      /* Gradiente roxo premium — visível nas laterais quando #app não preenche */
+      background: radial-gradient(ellipse at top center, #24104a 0%, #0f091e 45%, #070711 100%);
+      background-color: var(--bg-deep); /* fallback */
       color: var(--text-primary);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
       font-size: 15px;
@@ -97,7 +101,9 @@
       left: 0;
     }
     #app {
-      max-width: 500px;
+      /* Responsivo: 100% mobile → 1280px desktop */
+      width: 100%;
+      max-width: 1280px;
       margin: 0 auto;
       /* 100dvh: dynamic viewport height — encolhe com teclado em iOS 15.4+ */
       height: 100dvh;
@@ -108,7 +114,10 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      background: var(--bg-deep);
+      /* Fundo do app: roxo escuro — não cinza */
+      background: linear-gradient(180deg, #16093a 0%, #0f091e 40%, #070711 100%);
+      /* Bordas laterais suaves em desktop */
+      box-shadow: 0 0 80px rgba(0,0,0,0.60), inset 0 0 1px rgba(167,139,250,0.08);
       /* Garante que nenhum filho vaze para fora */
       overflow: hidden;
     }
@@ -124,6 +133,19 @@
       -webkit-overflow-scrolling: touch;
       padding: 10px 12px 20px;
       scroll-behavior: smooth;
+    }
+    /* Padding lateral responsivo do scroll — mais espaço em telas grandes */
+    @media (min-width: 600px) {
+      #scroll-content { padding: 14px 20px 24px; }
+    }
+    @media (min-width: 768px) {
+      #scroll-content { padding: 16px 28px 28px; }
+    }
+    @media (min-width: 1024px) {
+      #scroll-content { padding: 20px 36px 32px; }
+    }
+    @media (min-width: 1280px) {
+      #scroll-content { padding: 24px 48px 36px; }
     }
     /* Quando a aba ativa tem .section-back-bar logo no topo, zerar o padding-top
        para que a barra cole exatamente na base do GPB sem gap visual */
@@ -250,6 +272,15 @@
       gap: 10px;
       margin-bottom: 12px;
     }
+    /* 4 colunas em tablet/desktop — campos do paciente ficam na mesma linha */
+    @media (min-width: 768px) {
+      .hm-input-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+      /* Sexo fica em linha própria completa */
+      .hm-sex-wrap { grid-column: 1 / -1; }
+    }
 
     /* ── Wrapper de input individual ── */
     .hm-input-wrap { display: flex; flex-direction: column; gap: 4px; }
@@ -328,6 +359,192 @@
       letter-spacing: 0.2px;
       text-transform: uppercase;
       text-align: center;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       CLCR PREMIUM — Mini-cards secundários (Build 227)
+       IMC · Peso Ideal · Área Corporal
+       Linguagem visual idêntica ao card principal do ClCr.
+    ════════════════════════════════════════════════════════════ */
+
+    /* ── Container principal do ClCr: valor grande + categoria ── */
+    .clcr-hero {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .clcr-hero-value {
+      flex: 0 0 auto;
+      text-align: center;
+      min-width: 64px;
+    }
+    .clcr-hero-number {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .clcr-hero-unit {
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .clcr-hero-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .clcr-hero-cat {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .clcr-hero-rec {
+      font-size: 11px;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    /* ── Grid dos 3 mini-cards ── */
+    .clcr-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    /* Mobile muito pequeno: 2 col, último card full */
+    @media (max-width: 380px) {
+      .clcr-mini-grid { grid-template-columns: 1fr 1fr; }
+      .clcr-mini-card:last-child { grid-column: 1 / -1; }
+    }
+    /* Tablet/Desktop: mais gap e padding */
+    @media (min-width: 600px) {
+      .clcr-mini-grid { gap: 10px; }
+      .clcr-mini-card { padding: 13px 12px 12px; }
+      .clcr-mini-number { font-size: 30px; }
+    }
+    @media (min-width: 1024px) {
+      .clcr-mini-grid { gap: 12px; }
+      .clcr-mini-card { padding: 14px 14px 13px; border-radius: 14px; }
+      .clcr-mini-number { font-size: 32px; }
+    }
+
+    /* ── Card base ── */
+    .clcr-mini-card {
+      border-radius: 13px;
+      padding: 11px 10px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 3px 14px rgba(0,0,0,0.35);
+      transition: box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    /* ── Acento lateral (traço premium) ── */
+    .clcr-mini-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* ── Variante IMC — azul petróleo ── */
+    .clcr-mini-card--imc {
+      background: linear-gradient(135deg, rgba(7,32,58,0.95) 0%, rgba(10,42,72,0.90) 100%);
+      border-color: rgba(56,189,248,0.18);
+    }
+    .clcr-mini-card--imc::before { background: #38BDF8; }
+    .clcr-mini-card--imc .clcr-mini-number { color: #38BDF8; }
+    .clcr-mini-card--imc:hover { border-color: rgba(56,189,248,0.35); box-shadow: 0 4px 18px rgba(56,189,248,0.12); }
+
+    /* ── Variante Peso Ideal — azul índigo ── */
+    .clcr-mini-card--peso {
+      background: linear-gradient(135deg, rgba(14,26,66,0.95) 0%, rgba(20,38,88,0.90) 100%);
+      border-color: rgba(99,102,241,0.20);
+    }
+    .clcr-mini-card--peso::before { background: #818CF8; }
+    .clcr-mini-card--peso .clcr-mini-number { color: #A5B4FC; }
+    .clcr-mini-card--peso:hover { border-color: rgba(99,102,241,0.38); box-shadow: 0 4px 18px rgba(99,102,241,0.12); }
+
+    /* ── Variante BSA — turquesa / esmeralda ── */
+    .clcr-mini-card--bsa {
+      background: linear-gradient(135deg, rgba(5,32,28,0.95) 0%, rgba(7,45,40,0.90) 100%);
+      border-color: rgba(16,185,129,0.18);
+    }
+    .clcr-mini-card--bsa::before { background: #34D399; }
+    .clcr-mini-card--bsa .clcr-mini-number { color: #34D399; }
+    .clcr-mini-card--bsa:hover { border-color: rgba(16,185,129,0.35); box-shadow: 0 4px 18px rgba(16,185,129,0.10); }
+
+    /* ── Tipografia interna ── */
+    .clcr-mini-number {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.8px;
+      margin-top: 2px;
+    }
+    .clcr-mini-unit {
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-top: 2px;
+      letter-spacing: 0.3px;
+    }
+    .clcr-mini-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      margin-top: 7px;
+      letter-spacing: 0.1px;
+    }
+    .clcr-mini-sub {
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-top: 2px;
+      line-height: 1.3;
+      opacity: 0.85;
+    }
+
+    /* ── Light mode overrides ── */
+    body.light-mode .clcr-mini-card--imc {
+      background: linear-gradient(135deg, rgba(224,242,254,0.90) 0%, rgba(186,230,255,0.80) 100%);
+      border-color: rgba(14,165,233,0.25);
+    }
+    body.light-mode .clcr-mini-card--imc .clcr-mini-number { color: #0369A1; }
+    body.light-mode .clcr-mini-card--peso {
+      background: linear-gradient(135deg, rgba(238,242,255,0.90) 0%, rgba(224,231,255,0.80) 100%);
+      border-color: rgba(99,102,241,0.25);
+    }
+    body.light-mode .clcr-mini-card--peso .clcr-mini-number { color: #4338CA; }
+    body.light-mode .clcr-mini-card--bsa {
+      background: linear-gradient(135deg, rgba(209,250,229,0.90) 0%, rgba(167,243,208,0.80) 100%);
+      border-color: rgba(16,185,129,0.25);
+    }
+    body.light-mode .clcr-mini-card--bsa .clcr-mini-number { color: #059669; }
+    body.light-mode .clcr-mini-title { color: rgba(15,23,42,0.80); }
+    body.light-mode .clcr-mini-sub   { color: rgba(15,23,42,0.55); }
+
+    /* ── Micro-animação de atualização ──
+       Aplicada via JS: .clcr-num-updated → fade+scale por 200ms
+    ── */
+    @keyframes clcrNumPulse {
+      0%   { opacity: 0.3; transform: scale(0.88); }
+      60%  { opacity: 1;   transform: scale(1.04); }
+      100% { opacity: 1;   transform: scale(1); }
+    }
+    .clcr-num-updated {
+      animation: clcrNumPulse 0.22s cubic-bezier(0.34,1.4,0.64,1) both;
     }
 
     /* ── Rodapé do card — botões ── */
@@ -7377,8 +7594,18 @@
                     <i class="fa-solid fa-rotate-left"></i> Limpar
                   </button>
                   <button class="hm-btn hm-btn--primary" id="hm-fix-btn" onclick="hmFixarDados()">
-                    <i class="fa-solid fa-thumbtack"></i> Fixar Dados
+                    <i class="fa-solid fa-calculator"></i>
+                    <span class="lang-hub-pt">Calcular / Fixar</span>
+                    <span class="lang-hub-es">Calcular / Fijar</span>
                   </button>
+                </div>
+                <!-- Alerta inline de creatinina → aparece apenas quando campo vazio ao clicar -->
+                <div id="hm-clcr-warn" style="display:none;padding:6px 10px;margin-top:6px;border-radius:8px;
+                  background:rgba(248,113,113,0.12);border:1px solid rgba(248,113,113,0.35);
+                  font-size:11.5px;color:#f87171;">
+                  <i class="fa-solid fa-triangle-exclamation" style="margin-right:5px;"></i>
+                  <span class="lang-hub-pt">Informe a creatinina para calcular o ClCr.</span>
+                  <span class="lang-hub-es">Ingrese la creatinina para calcular el ClCr.</span>
                 </div>
               </div>
             </div>
@@ -7857,12 +8084,15 @@
 
         /* ── Cards de resultado ── */
         .intx-card {
-          padding: 16px;
+          padding: 14px 16px;
           border-radius: 10px;
-          margin-bottom: 12px;
+          margin-bottom: 10px;
           box-sizing: border-box;
-          border-left-width: 6px;
+          border-left-width: 4px;
           border-left-style: solid;
+          border-top: none;
+          border-right: none;
+          border-bottom: none;
         }
 
         /* Contraindicada 🔴 */
@@ -7947,17 +8177,18 @@
 
         /* ── Caixa de conduta ── */
         .intx-conduta-box {
-          color: #ffffff;
-          font-size: 12.5px;
+          color: #e2e8f0;
+          font-size: 12px;
           line-height: 1.6;
-          margin: 0;
-          background: rgba(0,0,0,.2);
-          padding: 10px;
-          border-radius: 6px;
+          margin: 6px 0 0 0;
+          background: transparent;
+          padding: 8px 0 0 0;
+          border-top: 1px solid rgba(255,255,255,0.07);
         }
         body.light-mode .intx-conduta-box {
-          background: rgba(0,0,0,.04);
-          color: #334155;
+          background: transparent;
+          color: #475569;
+          border-top-color: rgba(0,0,0,0.07);
         }
 
         /* ── Card "sem interação documentada" ── */
@@ -8279,13 +8510,15 @@
           </label>
         </div>
 
-        <!-- Rodapé do card: botão Fixar + botão Limpar -->
+        <!-- Rodapé do card: botão Calcular/Fixar + botão Limpar -->
         <div class="hm-card-footer">
           <button class="hm-btn hm-btn--ghost" onclick="hmClearPatient()">
             <i class="fa-solid fa-rotate-left"></i> Limpar
           </button>
           <button class="hm-btn hm-btn--primary" id="hm-fix-btn" onclick="hmFixarDados()">
-            <i class="fa-solid fa-thumbtack"></i> Fixar Dados
+            <i class="fa-solid fa-calculator"></i>
+            <span class="lang-hub-pt">Calcular / Fixar</span>
+            <span class="lang-hub-es">Calcular / Fijar</span>
           </button>
         </div>
 
@@ -8308,13 +8541,25 @@
 
         /* ── Container principal ── */
         .intx-container {
+          margin: 0;
+          padding: 16px 14px;
+          border-radius: 0;
+          border: none;
+          background: transparent;
+        }
+        body.light-mode .intx-container {
+          background: transparent;
+          border: none;
+        }
+        /* Quando standalone (fora do hub), mantém aparência de card */
+        .intx-container--standalone {
           margin: 20px 0;
           padding: 20px;
           border-radius: 14px;
           border: 1px solid #231f33;
           background: #13101c;
         }
-        body.light-mode .intx-container {
+        body.light-mode .intx-container--standalone {
           background: #ffffff;
           border-color: #e2e8f0;
         }
@@ -8682,6 +8927,7 @@
             oninput="filtrarDropdownInteracao()"
             onfocus="mostrarDropdownInteracao()"
             onblur="setTimeout(()=>{ const d=document.getElementById('dropdown-sugestoes-interacao'); if(d) d.style.display='none'; }, 200)"
+            onkeydown="if(event.key==='Enter'&&this.value.trim()){event.preventDefault();processarEntradaLivre(this.value);}"
             autocomplete="off"
           />
           <div
@@ -17433,15 +17679,37 @@ function calcHemo() {
   if (!res) return;
   if (isNaN(pas) || isNaN(pad)) { res.innerHTML = ''; return; }
 
-  const pam    = Math.round(pad + (pas - pad) / 3);
-  const pp     = pas - pad;
-  const choque = pas < 90 || pam < 65;
+  const isES = (typeof currentLang !== 'undefined' && currentLang === 'es');
+  const pam  = Math.round((pas + 2 * pad) / 3);   /* Fórmula correta: (PAS + 2×PAD) / 3 */
+  const pp   = pas - pad;
 
-  const tachycardia = !isNaN(fc)   && fc   > 100;
-  const hypoxia     = !isNaN(spo2) && spo2 < 94;
-  const fever       = !isNaN(temp) && temp >= 37.8;
+  /* ── Classificações PA ── */
+  const choque           = pas < 90 || pam < 65;
+  const criseHipert      = pas >= 180 || pad >= 120;
+  const hipertGrave      = !criseHipert && (pas >= 180 || pad >= 110);
+  const hipertModerada   = !criseHipert && !hipertGrave && (pas >= 160 || pad >= 100);
+  const hipertLeve       = !criseHipert && !hipertGrave && !hipertModerada && (pas >= 140 || pad >= 90);
+  const hipotensao       = !choque && pas < 100;
 
-  /* NEWS2 Rápido */
+  /* ── FC ── */
+  const tachycardia = !isNaN(fc) && fc > 100;
+  const bradycardia = !isNaN(fc) && fc < 50;
+
+  /* ── SpO2 ── */
+  const hipoxGrave  = !isNaN(spo2) && spo2 < 90;
+  const hipoxLeve   = !isNaN(spo2) && spo2 >= 90 && spo2 <= 93;
+  const hypoxia     = hipoxGrave || hipoxLeve;
+
+  /* ── FR ── */
+  const taquipneia  = !isNaN(fr) && fr >= 22;
+  const bradipneia  = !isNaN(fr) && fr <= 8;
+
+  /* ── Temperatura ── */
+  const febreAlta   = !isNaN(temp) && temp >= 39.0;
+  const febre       = !febreAlta && !isNaN(temp) && temp >= 38.0;
+  const hipotermia  = !isNaN(temp) && temp < 36.0;
+
+  /* ── NEWS2 ── */
   let news = 0;
   if (!isNaN(spo2)) {
     if      (spo2 <= 91) news += 3;
@@ -17468,46 +17736,157 @@ function calcHemo() {
     else if (fc <= 50 || fc >= 91)  news += 1;
   }
 
+  /* ── Log debug ── */
+  console.log('[HEMODYNAMICS] PAS=' + pas + ' PAD=' + pad + ' PAM=' + pam + ' FC=' + (isNaN(fc)?'—':fc) + ' SpO2=' + (isNaN(spo2)?'—':spo2) + ' FR=' + (isNaN(fr)?'—':fr) + ' Temp=' + (isNaN(temp)?'—':temp));
+
+  /* ── Risco / Recomendação principal ── */
+  let riscoPrincipal = '', condutaPrincipal = '', riscoCor = 'var(--green-glow)';
+
+  if (choque) {
+    riscoCor = 'var(--danger)';
+    riscoPrincipal = isES ? '🔴 CHOQUE / HIPOPERFUSIÓN' : '🔴 CHOQUE / HIPOPERFUSÃO';
+    condutaPrincipal = isES
+      ? 'Acceso venoso calibroso · cristaloide 30 mL/kg IV rápido · vasopresor si refractario · acionar UCI.'
+      : 'Acesso venoso calibroso · cristaloide 30 mL/kg IV rápido · vasopressor se refratário · acionar UTI.';
+  } else if (criseHipert) {
+    riscoCor = '#f87171';
+    riscoPrincipal = isES ? '🔴 CRISIS HIPERTENSIVA' : '🔴 CRISE HIPERTENSIVA';
+    condutaPrincipal = isES
+      ? 'Evaluar lesión de órgano diana (neurológica, renal, cardíaca). Repetir PA en 5 min. Derivar urgente si sintomático.'
+      : 'Avaliar lesão de órgão-alvo (neurológica, renal, cardíaca). Repetir PA em 5 min. Encaminhar urgente se sintomático.';
+  } else if (hipertGrave) {
+    riscoCor = '#fb923c';
+    riscoPrincipal = isES ? '🟠 HIPERTENSIÓN GRAVE' : '🟠 HIPERTENSÃO GRAVE';
+    condutaPrincipal = isES
+      ? 'Repetir medición en 15 min. Investigar síntomas neurológicos, dolor torácico, disnea. Evaluar ECG y función renal.'
+      : 'Repetir medida em 15 min. Investigar sintomas neurológicos, dor torácica, dispneia. Avaliar ECG e função renal.';
+  } else if (hipertModerada) {
+    riscoCor = '#fbbf24';
+    riscoPrincipal = isES ? '🟡 HIPERTENSIÓN MODERADA' : '🟡 HIPERTENSÃO MODERADA';
+    condutaPrincipal = isES
+      ? 'Confirmar con 2 mediciones. Optimizar antihipertensivos. Evaluar adherencia.'
+      : 'Confirmar com 2 medições. Otimizar anti-hipertensivos. Avaliar adesão.';
+  } else if (hipertLeve) {
+    riscoCor = '#a3e635';
+    riscoPrincipal = isES ? '🟢 HIPERTENSIÓN LEVE (Estadio 1)' : '🟢 HIPERTENSÃO LEVE (Estágio 1)';
+    condutaPrincipal = isES ? 'Confirmar con repetición. Orientar estilo de vida.' : 'Confirmar com repetição. Orientar estilo de vida.';
+  } else if (hipotensao) {
+    riscoCor = '#fbbf24';
+    riscoPrincipal = isES ? '🟡 PA LIMÍTROFE / HIPOTENSIÓN POSIBLE' : '🟡 PA LIMÍTROFE / HIPOTENSÃO POSSÍVEL';
+    condutaPrincipal = isES ? 'Monitorear síntomas de hipoperfusión. Revisar medicaciones.' : 'Monitorar sintomas de hipoperfusão. Revisar medicações.';
+  } else {
+    riscoCor = 'var(--green-glow)';
+    riscoPrincipal = isES ? '✅ PA DENTRO DE LO NORMAL' : '✅ PA DENTRO DO NORMAL';
+    condutaPrincipal = isES ? 'Mantener monitoreo de rutina.' : 'Manter monitoramento de rotina.';
+  }
+
   const newsCls = news <= 4 ? 'severity-low' : news <= 6 ? 'severity-mid' : 'severity-high';
   const newsTxt = news <= 4
-    ? (currentLang === 'es' ? 'Bajo riesgo (NEWS2)'         : 'Baixo risco (NEWS2)')
+    ? (isES ? 'Bajo riesgo (NEWS2)'         : 'Baixo risco (NEWS2)')
     : news <= 6
-    ? (currentLang === 'es' ? 'Riesgo intermedio (NEWS2)'   : 'Risco intermediário (NEWS2)')
-    : (currentLang === 'es' ? 'Alto riesgo — respuesta rápida (NEWS2)' : 'Alto risco — resposta rápida (NEWS2)');
+    ? (isES ? 'Riesgo intermedio (NEWS2)'   : 'Risco intermediário (NEWS2)')
+    : (isES ? 'Alto riesgo — respuesta rápida (NEWS2)' : 'Alto risco — resposta rápida (NEWS2)');
 
-  const pamColor = pam < 65 ? 'var(--danger)' : pam < 70 ? 'var(--warning)' : 'var(--green-glow)';
+  const pamColor = pam < 65 ? 'var(--danger)' : pam < 70 ? 'var(--warning)' : pam > 100 ? '#fb923c' : 'var(--green-glow)';
   const ppColor  = (pp < 25 || pp > 60) ? 'var(--warning)' : 'var(--text-primary)';
 
-  const lbl = {
-    title:  currentLang === 'es' ? 'Resultado Hemodinámico'     : 'Resultado Hemodinâmico',
-    pp:     currentLang === 'es' ? 'Presión de Pulso'           : 'Pressão de Pulso',
-    choque: currentLang === 'es'
-      ? '<strong>¡SHOCK!</strong> PAM < 65 mmHg. Acceso venoso calibroso, cristaloide 30mL/kg IV rápido, vasopresor si refractario, llamar UCI.'
-      : '<strong>CHOQUE!</strong> PAM < 65 mmHg. Acesso venoso calibroso, cristaloide 30mL/kg IV rápido, vasopressor se refratário, acionar UTI.',
-    taqui:  currentLang === 'es'
-      ? `Taquicardia (FC: ${fc} bpm) — investigar fiebre, hipovolemia, dolor, TEP, arritmia.`
-      : `Taquicardia (FC: ${fc} bpm) — investigar febre, hipovolemia, dor, TEP, arritmia.`,
-    hipo:   currentLang === 'es'
-      ? `Hipoxemia (SpO₂: ${spo2}%) — oxigenoterapia suplementaria inmediata.`
-      : `Hipoxemia (SpO₂: ${spo2}%) — oxigenoterapia suplementar imediata.`,
-    febre:  currentLang === 'es'
-      ? `Fiebre (${temp}°C) — investigar foco infeccioso, hemocultivos, ATB empírico si sepsis.`
-      : `Febre (${temp}°C) — investigar foco infeccioso, hemoculturas, ATB empírico se sepse.`
-  };
+  /* ── Alertas individuais ── */
+  const alertas = [];
+
+  if (criseHipert)
+    alertas.push({ cor: '#f87171', icon: 'fa-heart-crack',
+      txt: isES
+        ? `Crise hipertensiva (PAS ${pas} / PAD ${pad}): avaliar lesão de órgão-alvo. Repetir PA. Derivar urgente se sintomático.`
+        : `Crise hipertensiva (PAS ${pas} / PAD ${pad}): avaliar lesão de órgão-alvo. Repetir PA. Encaminhar urgente se sintomático.` });
+
+  if (hipertGrave)
+    alertas.push({ cor: '#fb923c', icon: 'fa-heart-pulse',
+      txt: isES
+        ? `Hipertensión grave (PAS ${pas} / PAD ${pad}): repetir en 15 min, ECG, función renal, síntomas neurológicos.`
+        : `Hipertensão grave (PAS ${pas} / PAD ${pad}): repetir em 15 min, ECG, função renal, sintomas neurológicos.` });
+
+  if (choque)
+    alertas.push({ cor: '#f87171', icon: 'fa-triangle-exclamation',
+      txt: isES
+        ? `SHOCK! PAM ${pam} mmHg < 65. Cristaloide 30 mL/kg IV rápido. Vasopresor si refractario. Acionar UTI.`
+        : `CHOQUE! PAM ${pam} mmHg < 65. Cristaloide 30 mL/kg IV rápido. Vasopressor se refratário. Acionar UTI.` });
+
+  if (tachycardia)
+    alertas.push({ cor: '#fb923c', icon: 'fa-heart',
+      txt: isES
+        ? `Taquicardia (FC: ${fc} bpm): investigar fiebre, hipovolemia, dolor, TEP, arritmia.`
+        : `Taquicardia (FC: ${fc} bpm): investigar febre, hipovolemia, dor, TEP, arritmia.` });
+
+  if (bradycardia)
+    alertas.push({ cor: '#fbbf24', icon: 'fa-heart',
+      txt: isES
+        ? `Bradicardia (FC: ${fc} bpm): investigar bloqueo AV, hipotiroidismo, fármacos.`
+        : `Bradicardia (FC: ${fc} bpm): investigar bloqueio AV, hipotiroidismo, fármacos.` });
+
+  if (hipoxGrave)
+    alertas.push({ cor: '#f87171', icon: 'fa-lungs',
+      txt: isES
+        ? `Hipoxemia grave (SpO₂: ${spo2}%): oxigenoterapia urgente, evaluar ventilación.`
+        : `Hipoxemia grave (SpO₂: ${spo2}%): oxigenoterapia urgente, avaliar ventilação.` });
+
+  if (hipoxLeve)
+    alertas.push({ cor: '#fb923c', icon: 'fa-lungs',
+      txt: isES
+        ? `Hipoxemia leve/moderada (SpO₂: ${spo2}%): oxigenoterapia suplementaria.`
+        : `Hipoxemia leve/moderada (SpO₂: ${spo2}%): oxigenoterapia suplementar.` });
+
+  if (taquipneia)
+    alertas.push({ cor: '#fb923c', icon: 'fa-wind',
+      txt: isES
+        ? `Taquipnea (FR: ${fr} rpm ≥ 22): criterio de alerta clínico. Considerar screening de sepsis. Evaluar causas respiratorias.`
+        : `Taquipneia (FR: ${fr} rpm ≥ 22): critério de alerta clínico. Considerar rastreio de sepse. Avaliar causas respiratórias.` });
+
+  if (bradipneia)
+    alertas.push({ cor: '#f87171', icon: 'fa-wind',
+      txt: isES
+        ? `Bradipnea (FR: ${fr} rpm ≤ 8): riesgo de depresión respiratoria. Evaluar soporte ventilatorio.`
+        : `Bradipneia (FR: ${fr} rpm ≤ 8): risco de depressão respiratória. Avaliar suporte ventilatório.` });
+
+  if (febreAlta)
+    alertas.push({ cor: '#f87171', icon: 'fa-thermometer-three-quarters',
+      txt: isES
+        ? `Fiebre alta (${temp}°C ≥ 39): investigar foco infeccioso agresivamente. Hemocultivos, procalcitonina, ATB empírico si séptico.`
+        : `Febre alta (${temp}°C ≥ 39): investigar foco infeccioso agressivamente. Hemoculturas, procalcitonina, ATB empírico se séptico.` });
+  else if (febre)
+    alertas.push({ cor: '#fbbf24', icon: 'fa-thermometer-three-quarters',
+      txt: isES
+        ? `Fiebre (${temp}°C): investigar foco infeccioso. Hemocultivos si sepsis probable.`
+        : `Febre (${temp}°C): investigar foco infeccioso. Hemoculturas se sepse provável.` });
+
+  if (hipotermia)
+    alertas.push({ cor: '#60a5fa', icon: 'fa-snowflake',
+      txt: isES
+        ? `Hipotermia (${temp}°C < 36): evaluar causas (ambiental, sépsis tardía, hipotiroidismo).`
+        : `Hipotermia (${temp}°C < 36): avaliar causas (ambiental, sepse tardia, hipotireoidismo).` });
+
+  /* Alerta de sepse se taquipneia + febre alta */
+  if (taquipneia && febreAlta)
+    alertas.push({ cor: '#f87171', icon: 'fa-bacterium',
+      txt: isES
+        ? '⚠️ SCREENING DE SEPSIS: Fiebre alta + taquipnea. Solicitar hemocultivos, lactato, hemograma, PCR. Iniciar ATB según protocolo si criterios cumplidos.'
+        : '⚠️ RASTREIO DE SEPSE: Febre alta + taquipneia. Solicitar hemoculturas, lactato, hemograma, PCR. Iniciar ATB conforme protocolo se critérios presentes.' });
+
+  /* Log alertas */
+  console.log('[HEMODYNAMICS] alerts=[' + alertas.map(a => a.icon).join(',') + '] risco=' + riscoPrincipal);
 
   res.innerHTML = `
     <div class="card" style="margin-top:0;border-color:var(--border-green);">
-      <div class="card-title"><i class="fa-solid fa-chart-area"></i>${lbl.title}</div>
+      <div class="card-title"><i class="fa-solid fa-chart-area"></i>${isES ? 'Resultado Hemodinámico' : 'Resultado Hemodinâmico'}</div>
       <div class="results-grid">
-        <div class="result-item ${!choque ? 'highlight' : ''}">
+        <div class="result-item">
           <div class="result-label">PAM</div>
           <div class="result-value" style="color:${pamColor};">${pam}</div>
-          <div class="result-unit">mmHg ${pam < 65 ? '⚠️ < 65' : '✓ ≥ 65'}</div>
+          <div class="result-unit">mmHg ${pam < 65 ? '⚠️ < 65' : '✓'}</div>
         </div>
         <div class="result-item">
-          <div class="result-label">${lbl.pp}</div>
+          <div class="result-label">${isES ? 'Presión Pulso' : 'Pressão Pulso'}</div>
           <div class="result-value" style="color:${ppColor};">${pp}</div>
-          <div class="result-unit">mmHg (PAS − PAD)</div>
+          <div class="result-unit">mmHg</div>
         </div>
         <div class="result-item" style="grid-column:1/-1;">
           <div class="result-label">NEWS2</div>
@@ -17517,10 +17896,20 @@ function calcHemo() {
           </div>
         </div>
       </div>
-      ${choque    ? `<div class="drug-alert drug-alert-danger mt-8"><i class="fa-solid fa-triangle-exclamation"></i>${lbl.choque}</div>` : ''}
-      ${tachycardia ? `<div class="drug-alert mt-8"><i class="fa-solid fa-heart"></i>${lbl.taqui}</div>` : ''}
-      ${hypoxia   ? `<div class="drug-alert drug-alert-danger mt-8"><i class="fa-solid fa-lungs"></i>${lbl.hipo}</div>` : ''}
-      ${fever     ? `<div class="drug-alert mt-8"><i class="fa-solid fa-thermometer-three-quarters"></i>${lbl.febre}</div>` : ''}
+
+      <!-- Risco principal -->
+      <div style="margin:10px 0;padding:10px 14px;border-radius:10px;
+        background:rgba(0,0,0,0.25);border-left:3px solid ${riscoCor};">
+        <div style="font-size:13px;font-weight:700;color:${riscoCor};margin-bottom:4px;">${riscoPrincipal}</div>
+        <div style="font-size:11.5px;color:var(--text-secondary);">${condutaPrincipal}</div>
+      </div>
+
+      <!-- Alertas individuais -->
+      ${alertas.map(a => `
+        <div class="drug-alert mt-8" style="border-left:3px solid ${a.cor};background:rgba(0,0,0,0.18);">
+          <i class="fa-solid ${a.icon}" style="color:${a.cor};"></i>
+          ${a.txt}
+        </div>`).join('')}
     </div>`;
 }
 
@@ -19776,91 +20165,300 @@ function _adaptExternalDB(dbObj, categoryLabel) {
   const selecionadosInteracao = [];
 
   /* ══════════════════════════════════════════════
+     DRUG_DISPLAY_NAMES — Dicionário i18n PT/ES
+     Mapeamento: chave_canônica → { pt, es }
+     Usado para exibir nome no idioma correto.
+     Busca aceita tanto o nome PT quanto ES.
+  ══════════════════════════════════════════════ */
+  const DRUG_DISPLAY_NAMES = {
+    /* BRAs */
+    'losartana':           { pt: 'Losartana',          es: 'Losartán' },
+    'valsartana':          { pt: 'Valsartana',          es: 'Valsartán' },
+    'olmesartana':         { pt: 'Olmesartana',         es: 'Olmesartán' },
+    'telmisartana':        { pt: 'Telmisartana',        es: 'Telmisartán' },
+    'irbesartana':         { pt: 'Irbesartana',         es: 'Irbesartán' },
+    'candesartana':        { pt: 'Candesartana',        es: 'Candesartán' },
+    /* IECAs */
+    'captopril':           { pt: 'Captopril',           es: 'Captopril' },
+    'enalapril':           { pt: 'Enalapril',           es: 'Enalapril' },
+    'lisinopril':          { pt: 'Lisinopril',          es: 'Lisinopril' },
+    'ramipril':            { pt: 'Ramipril',            es: 'Ramipril' },
+    'perindopril':         { pt: 'Perindopril',         es: 'Perindopril' },
+    /* Estatinas */
+    'sinvastatina':        { pt: 'Sinvastatina',        es: 'Simvastatina' },
+    'atorvastatina':       { pt: 'Atorvastatina',       es: 'Atorvastatina' },
+    'rosuvastatina':       { pt: 'Rosuvastatina',       es: 'Rosuvastatina' },
+    'pravastatina':        { pt: 'Pravastatina',        es: 'Pravastatina' },
+    'fluvastatina':        { pt: 'Fluvastatina',        es: 'Fluvastatina' },
+    /* Anticoagulantes */
+    'varfarina':           { pt: 'Varfarina',           es: 'Warfarina' },
+    'apixabana':           { pt: 'Apixabana',           es: 'Apixabán' },
+    'rivaroxabana':        { pt: 'Rivaroxabana',        es: 'Rivaroxabán' },
+    'dabigatrana':         { pt: 'Dabigatrana',         es: 'Dabigatrán' },
+    'edoxabana':           { pt: 'Edoxabana',           es: 'Edoxabán' },
+    /* AINEs */
+    'ibuprofeno':          { pt: 'Ibuprofeno',          es: 'Ibuprofeno' },
+    'diclofenaco':         { pt: 'Diclofenaco',         es: 'Diclofenaco' },
+    'naproxeno':           { pt: 'Naproxeno',           es: 'Naproxeno' },
+    'meloxicam':           { pt: 'Meloxicam',           es: 'Meloxicam' },
+    'celecoxibe':          { pt: 'Celecoxibe',          es: 'Celecoxib' },
+    'nimesulida':          { pt: 'Nimesulida',          es: 'Nimesulida' },
+    /* ISRS */
+    'sertralina':          { pt: 'Sertralina',          es: 'Sertralina' },
+    'fluoxetina':          { pt: 'Fluoxetina',          es: 'Fluoxetina' },
+    'escitalopram':        { pt: 'Escitalopram',        es: 'Escitalopram' },
+    'citalopram':          { pt: 'Citalopram',          es: 'Citalopram' },
+    'paroxetina':          { pt: 'Paroxetina',          es: 'Paroxetina' },
+    'fluvoxamina':         { pt: 'Fluvoxamina',         es: 'Fluvoxamina' },
+    /* IMAOs */
+    'selegilina':          { pt: 'Selegilina',          es: 'Selegilina' },
+    'rasagilina':          { pt: 'Rasagilina',          es: 'Rasagilina' },
+    'moclobemida':         { pt: 'Moclobemida',         es: 'Moclobemida' },
+    'fenelzina':           { pt: 'Fenelzina',           es: 'Fenelzina' },
+    'tranilcipromina':     { pt: 'Tranilcipromina',     es: 'Tranilcipromina' },
+    /* Anticonvulsivantes */
+    'acido_valproico':     { pt: 'Ácido Valproico',     es: 'Ácido Valproico' },
+    'fenitoina':           { pt: 'Fenitoína',           es: 'Fenitoína' },
+    'carbamazepina':       { pt: 'Carbamazepina',       es: 'Carbamazepina' },
+    'lamotrigina':         { pt: 'Lamotrigina',         es: 'Lamotrigina' },
+    'levetiracetam':       { pt: 'Levetiracetam',       es: 'Levetiracetam' },
+    'topiramato':          { pt: 'Topiramato',          es: 'Topiramato' },
+    'gabapentina':         { pt: 'Gabapentina',         es: 'Gabapentina' },
+    'pregabalina':         { pt: 'Pregabalina',         es: 'Pregabalina' },
+    'fenobarbital':        { pt: 'Fenobarbital',        es: 'Fenobarbital' },
+    /* Azólicos */
+    'fluconazol':          { pt: 'Fluconazol',          es: 'Fluconazol' },
+    'itraconazol':         { pt: 'Itraconazol',         es: 'Itraconazol' },
+    'voriconazol':         { pt: 'Voriconazol',         es: 'Voriconazol' },
+    'posaconazol':         { pt: 'Posaconazol',         es: 'Posaconazol' },
+    /* Macrolídeos */
+    'claritromicina':      { pt: 'Claritromicina',      es: 'Claritromicina' },
+    'azitromicina':        { pt: 'Azitromicina',        es: 'Azitromicina' },
+    'eritromicina':        { pt: 'Eritromicina',        es: 'Eritromicina' },
+    /* Nitratos / PDE5 */
+    'isossorbida':         { pt: 'Isossorbida',         es: 'Isosorbida' },
+    'nitroglicerina':      { pt: 'Nitroglicerina',      es: 'Nitroglicerina' },
+    'tadalafila':          { pt: 'Tadalafila',          es: 'Tadalafilo' },
+    'sildenafila':         { pt: 'Sildenafila',         es: 'Sildenafilo' },
+    'vardenafila':         { pt: 'Vardenafila',         es: 'Vardenafilo' },
+    /* Opioides */
+    'morfina':             { pt: 'Morfina',             es: 'Morfina' },
+    'codeina':             { pt: 'Codeína',             es: 'Codeína' },
+    'tramadol':            { pt: 'Tramadol',            es: 'Tramadol' },
+    'fentanil':            { pt: 'Fentanil',            es: 'Fentanilo' },
+    'oxicodona':           { pt: 'Oxicodona',           es: 'Oxicodona' },
+    'metadona':            { pt: 'Metadona',            es: 'Metadona' },
+    'buprenorfina':        { pt: 'Buprenorfina',        es: 'Buprenorfina' },
+    /* Antipsicóticos */
+    'haloperidol':         { pt: 'Haloperidol',         es: 'Haloperidol' },
+    'quetiapina':          { pt: 'Quetiapina',          es: 'Quetiapina' },
+    'risperidona':         { pt: 'Risperidona',         es: 'Risperidona' },
+    'olanzapina':          { pt: 'Olanzapina',          es: 'Olanzapina' },
+    'clozapina':           { pt: 'Clozapina',           es: 'Clozapina' },
+    'aripiprazol':         { pt: 'Aripiprazol',         es: 'Aripiprazol' },
+    /* BZDs */
+    'diazepam':            { pt: 'Diazepam',            es: 'Diazepam' },
+    'lorazepam':           { pt: 'Lorazepam',           es: 'Lorazepam' },
+    'alprazolam':          { pt: 'Alprazolam',          es: 'Alprazolam' },
+    'clonazepam':          { pt: 'Clonazepam',          es: 'Clonazepam' },
+    'midazolam':           { pt: 'Midazolam',           es: 'Midazolam' },
+    'bromazepam':          { pt: 'Bromazepam',          es: 'Bromazepam' },
+    /* Outros */
+    'amiodarona':          { pt: 'Amiodarona',          es: 'Amiodarona' },
+    'digoxina':            { pt: 'Digoxina',            es: 'Digoxina' },
+    'metformina':          { pt: 'Metformina',          es: 'Metformina' },
+    'metronidazol':        { pt: 'Metronidazol',        es: 'Metronidazol' },
+    'amitriptilina':       { pt: 'Amitriptilina',       es: 'Amitriptilina' },
+    'nortriptilina':       { pt: 'Nortriptilina',       es: 'Nortriptilina' },
+    'linezolida':          { pt: 'Linezolida',          es: 'Linezolid' },
+    'espironolactona':     { pt: 'Espironolactona',     es: 'Espironolactona' },
+    'furosemida':          { pt: 'Furosemida',          es: 'Furosemida' },
+    'omeprazol':           { pt: 'Omeprazol',           es: 'Omeprazol' },
+    'pantoprazol':         { pt: 'Pantoprazol',         es: 'Pantoprazol' },
+    'rifampicina':         { pt: 'Rifampicina',         es: 'Rifampicina' },
+    'meropenem':           { pt: 'Meropenem',           es: 'Meropenem' },
+    'vancomicina':         { pt: 'Vancomicina',         es: 'Vancomicina' },
+    'gentamicina':         { pt: 'Gentamicina',         es: 'Gentamicina' },
+    'levofloxacino':       { pt: 'Levofloxacino',       es: 'Levofloxacino' },
+    'sulfametoxazol_trimetoprima': { pt: 'Sulfametoxazol-Trimetoprima', es: 'Sulfametoxazol-Trimetoprima' },
+    'metotrexato':         { pt: 'Metotrexato',         es: 'Metotrexato' },
+    'colchicina':          { pt: 'Colchicina',          es: 'Colchicina' },
+    'alcool':              { pt: 'Álcool',              es: 'Alcohol' },
+    'tetraciclina':        { pt: 'Tetraciclina',        es: 'Tetraciclina' },
+    'doxiciclina':         { pt: 'Doxiciclina',         es: 'Doxiciclina' },
+    'tizanidina':          { pt: 'Tizanidina',          es: 'Tizanidina' },
+    'ceftriaxona':         { pt: 'Ceftriaxona',         es: 'Ceftriaxona' },
+    'cefepime':            { pt: 'Cefepime',            es: 'Cefepime' },
+    'propranolol':         { pt: 'Propranolol',         es: 'Propranolol' },
+    'metoprolol':          { pt: 'Metoprolol',          es: 'Metoprolol' },
+    'carvedilol':          { pt: 'Carvedilol',          es: 'Carvedilol' },
+    'bisoprolol':          { pt: 'Bisoprolol',          es: 'Bisoprolol' },
+    'prednisona':          { pt: 'Prednisona',          es: 'Prednisona' },
+    'dexametasona':        { pt: 'Dexametasona',        es: 'Dexametasona' },
+  };
+
+  /* ── Mapa inverso: nome ES normalizado → chave canônica PT ──
+     Construído automaticamente a partir de DRUG_DISPLAY_NAMES.  */
+  const DRUG_ES_TO_CANONICAL = {};
+  (function _buildEsMap() {
+    for (const [canon, names] of Object.entries(DRUG_DISPLAY_NAMES)) {
+      if (names.es) {
+        const esNorm = names.es.toLowerCase()
+          .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+          .replace(/\s+/g, '_');
+        if (esNorm !== canon) DRUG_ES_TO_CANONICAL[esNorm] = canon;
+      }
+    }
+    /* Aliases manuais adicionais para variações comuns */
+    const extras = {
+      'valsartan':          'valsartana',
+      'losartan':           'losartana',
+      'simvastatina':       'sinvastatina',
+      'warfarina':          'varfarina',
+      'fentanilo':          'fentanil',
+      'tadalafilo':         'tadalafila',
+      'sildenafilo':        'sildenafila',
+      'apixaban':           'apixabana',
+      'rivaroxaban':        'rivaroxabana',
+      'dabigatran':         'dabigatrana',
+      'sertraline':         'sertralina',
+      'phenytoin':          'fenitoina',
+      'fenitoina':          'fenitoina',
+      'valproato':          'acido_valproico',
+      'valproato_de_sodio': 'acido_valproico',
+      'valproato_de_sodio': 'acido_valproico',
+      'acido_valproico':    'acido_valproico',
+      'linezolid':          'linezolida',
+      'celecoxib':          'celecoxibe',
+    };
+    Object.assign(DRUG_ES_TO_CANONICAL, extras);
+  })();
+
+  /* ── Função: nome de exibição pelo idioma ── */
+  function _displayName(nomeLista, lang) {
+    /* nomeLista = string da lista (ex: "Valsartana", "Ácido Valproico") */
+    const canonical = normalizarFarmaco(nomeLista);
+    const entry = DRUG_DISPLAY_NAMES[canonical];
+    if (entry) {
+      const display = entry[lang] || entry.pt || nomeLista;
+      console.log('[DRUG_I18N] lang=' + lang + ' canonicalKey=' + canonical + ' displayName=' + display);
+      return display;
+    }
+    return nomeLista; /* fallback: retorna original */
+  }
+
+  /* ── Função: resolver qualquer entrada de texto para chave canônica ──
+     Aceita PT, ES, sem acentos, com sublinhado, com espaço, etc. */
+  function _resolveToCanonical(texto) {
+    const norm = String(texto)
+      .toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, '_').trim();
+    /* 1. Tenta alias direto em DRUG_ALIASES */
+    if (window.DRUG_ALIASES && window.DRUG_ALIASES[norm]) return window.DRUG_ALIASES[norm];
+    /* 2. Tenta mapa ES → canonical */
+    if (DRUG_ES_TO_CANONICAL[norm]) return DRUG_ES_TO_CANONICAL[norm];
+    /* 3. Retorna o próprio normalizado */
+    return norm;
+  }
+
+  /* ══════════════════════════════════════════════
      LISTA ESTÁTICA DE MEDICAMENTOS DISPONÍVEIS
      Usada para autocomplete independente do DRUG_DB
   ══════════════════════════════════════════════ */
-  const LISTA_MEDS_DISPONIVEIS = [
+  /* Lista bilíngue — cada item tem nome PT e ES para busca */
+  const LISTA_MEDS_DISPONIVEIS_RAW = [
     /* ── Anticonvulsivantes ── */
-    "Ácido Valproico", "Valproato de Sódio", "Divalproato",
-    "Fenitoína", "Carbamazepina", "Lamotrigina", "Levetiracetam",
-    "Topiramato", "Gabapentina", "Pregabalina", "Fenobarbital",
+    'Ácido Valproico', 'Valproato de Sódio', 'Divalproato',
+    'Fenitoína', 'Carbamazepina', 'Lamotrigina', 'Levetiracetam',
+    'Topiramato', 'Gabapentina', 'Pregabalina', 'Fenobarbital',
     /* ── Carbapenêmicos ── */
-    "Meropenem", "Imipenem", "Ertapenem",
+    'Meropenem', 'Imipenem', 'Ertapenem',
     /* ── Rifamicinas ── */
-    "Rifampicina", "Rifabutina", "Rifapentina",
+    'Rifampicina', 'Rifabutina', 'Rifapentina',
     /* ── Anticoagulantes ── */
-    "Apixabana", "Rivaroxabana", "Edoxabana", "Dabigatrana", "Varfarina",
+    'Apixabana', 'Rivaroxabana', 'Edoxabana', 'Dabigatrana', 'Varfarina',
     /* ── Fluoroquinolonas ── */
-    "Levofloxacino", "Ciprofloxacino", "Moxifloxacino", "Norfloxacino",
+    'Levofloxacino', 'Ciprofloxacino', 'Moxifloxacino', 'Norfloxacino',
     /* ── Antiarrítmicos ── */
-    "Amiodarona", "Sotalol",
+    'Amiodarona', 'Sotalol',
     /* ── Aminoglicosídeos ── */
-    "Vancomicina", "Gentamicina", "Amicacina", "Tobramicina",
+    'Vancomicina', 'Gentamicina', 'Amicacina', 'Tobramicina',
     /* ── Tetraciclinas ── */
-    "Isotretinoína", "Tetraciclina", "Doxiciclina", "Minociclina",
+    'Isotretinoína', 'Tetraciclina', 'Doxiciclina', 'Minociclina',
     /* ── Sulfonamidas ── */
-    "Sulfametoxazol Trimetoprima", "Cotrimoxazol",
+    'Sulfametoxazol Trimetoprima', 'Cotrimoxazol',
     /* ── Antimetabólitos ── */
-    "Metotrexato",
+    'Metotrexato',
     /* ── Álcool ── */
-    "Álcool", "Etanol",
+    'Álcool', 'Etanol',
     /* ── Nitroimidazóis ── */
-    "Metronidazol",
+    'Metronidazol',
     /* ── IECAs ── */
-    "Captopril", "Enalapril", "Lisinopril", "Ramipril", "Perindopril",
+    'Captopril', 'Enalapril', 'Lisinopril', 'Ramipril', 'Perindopril',
     /* ── BRAs ── */
-    "Losartana", "Valsartana", "Olmesartana", "Telmisartana", "Irbesartana", "Candesartana",
+    'Losartana', 'Valsartana', 'Olmesartana', 'Telmisartana', 'Irbesartana', 'Candesartana',
     /* ── Diuréticos ── */
-    "Espironolactona", "Furosemida",
+    'Espironolactona', 'Furosemida',
     /* ── Antidiabéticos ── */
-    "Metformina",
+    'Metformina',
     /* ── Relaxantes musculares ── */
-    "Tizanidina",
+    'Tizanidina',
     /* ── AINEs ── */
-    "Ibuprofeno", "Diclofenaco", "Naproxeno", "Cetoprofeno",
-    "Meloxicam", "Celecoxibe", "Nimesulida", "Piroxicam",
+    'Ibuprofeno', 'Diclofenaco', 'Naproxeno', 'Cetoprofeno',
+    'Meloxicam', 'Celecoxibe', 'Nimesulida', 'Piroxicam',
     /* ── IPDe5 ── */
-    "Tadalafila", "Sildenafila", "Vardenafila",
+    'Tadalafila', 'Sildenafila', 'Vardenafila',
     /* ── Nitratos ── */
-    "Isossorbida", "Nitroglicerina",
+    'Isossorbida', 'Nitroglicerina',
     /* ── Oxazolidinonas ── */
-    "Linezolida", "Tedizolida",
+    'Linezolida', 'Tedizolida',
     /* ── ISRS ── */
-    "Sertralina", "Fluoxetina", "Escitalopram", "Citalopram",
-    "Paroxetina", "Fluvoxamina",
+    'Sertralina', 'Fluoxetina', 'Escitalopram', 'Citalopram',
+    'Paroxetina', 'Fluvoxamina',
     /* ── IMAOs ── */
-    "Fenelzina", "Tranilcipromina", "Selegilina", "Moclobemida",
+    'Fenelzina', 'Tranilcipromina', 'Selegilina', 'Rasagilina', 'Moclobemida',
     /* ── Tricíclicos ── */
-    "Amitriptilina", "Nortriptilina", "Imipramina", "Clomipramina",
+    'Amitriptilina', 'Nortriptilina', 'Imipramina', 'Clomipramina',
     /* ── Antipsicóticos ── */
-    "Haloperidol", "Quetiapina", "Risperidona", "Olanzapina",
-    "Clozapina", "Aripiprazol", "Ziprasidona",
+    'Haloperidol', 'Quetiapina', 'Risperidona', 'Olanzapina',
+    'Clozapina', 'Aripiprazol', 'Ziprasidona',
     /* ── Benzodiazepínicos ── */
-    "Diazepam", "Lorazepam", "Alprazolam", "Clonazepam",
-    "Midazolam", "Bromazepam",
+    'Diazepam', 'Lorazepam', 'Alprazolam', 'Clonazepam',
+    'Midazolam', 'Bromazepam',
     /* ── Opioides ── */
-    "Tramadol", "Morfina", "Codeína", "Oxicodona", "Fentanil", "Metadona",
+    'Tramadol', 'Morfina', 'Codeína', 'Oxicodona', 'Fentanil', 'Metadona',
     /* ── Estatinas ── */
-    "Atorvastatina", "Sinvastatina", "Rosuvastatina", "Pravastatina",
+    'Atorvastatina', 'Sinvastatina', 'Rosuvastatina', 'Pravastatina',
     /* ── IBPs ── */
-    "Omeprazol", "Pantoprazol", "Lansoprazol", "Esomeprazol",
+    'Omeprazol', 'Pantoprazol', 'Lansoprazol', 'Esomeprazol',
     /* ── Azólicos ── */
-    "Fluconazol", "Itraconazol", "Voriconazol", "Posaconazol",
+    'Fluconazol', 'Itraconazol', 'Voriconazol', 'Posaconazol',
     /* ── Macrolídeos ── */
-    "Claritromicina", "Azitromicina", "Eritromicina",
+    'Claritromicina', 'Azitromicina', 'Eritromicina',
     /* ── Beta-bloqueadores ── */
-    "Propranolol", "Metoprolol", "Carvedilol", "Bisoprolol",
+    'Propranolol', 'Metoprolol', 'Carvedilol', 'Bisoprolol',
     /* ── Corticosteroides ── */
-    "Prednisona", "Dexametasona", "Hidrocortisona", "Metilprednisolona",
+    'Prednisona', 'Dexametasona', 'Hidrocortisona', 'Metilprednisolona',
     /* ── Cefalosporinas ── */
-    "Ceftriaxona", "Cefepime", "Ceftazidima", "Cefdinir",
+    'Ceftriaxona', 'Cefepime', 'Ceftazidima', 'Cefdinir',
     /* ── Outros ── */
-    "Clindamicina", "Nitrofurantoína",
-    "Fosfomicina", "Antiácido",
-    "Ferro", "Sulfato Ferroso",
-    "Vacina", "Antibiótico",
-    "Colchicina", "Digoxina"
+    'Clindamicina', 'Nitrofurantoína',
+    'Fosfomicina', 'Antiácido',
+    'Ferro', 'Sulfato Ferroso',
+    'Colchicina', 'Digoxina'
   ];
+
+  /* Função: obtém a lista de medicamentos exibida no idioma ativo */
+  function _getMedsList(lang) {
+    return LISTA_MEDS_DISPONIVEIS_RAW.map(nomePt => _displayName(nomePt, lang));
+  }
+
+  /* Compat: LISTA_MEDS_DISPONIVEIS como getter dinâmico */
+  const LISTA_MEDS_DISPONIVEIS = [
+    'Ácido Valproico', 'Fenitoína', 'Carbamazepina', 'Sertralina', 'Fluoxetina',
+    'Enalapril', 'Valsartana', 'Varfarina', 'Ibuprofeno', 'Amiodarona'
+  ]; /* compat: motor usa LISTA_MEDS_DISPONIVEIS_RAW diretamente */
 
   /* ══════════════════════════════════════════════
      ONTOLOGIA — LOOKUP DE CLASSES DO FÁRMACO
@@ -19942,13 +20540,34 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     const dd  = document.getElementById('dropdown-sugestoes-interacao');
     if (!inp || !dd) return;
 
-    const q   = inp.value.trim().toLowerCase();
-    const isES = _isES();
+    const q    = inp.value.trim();
+    const qLow = q.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const isES  = _isES();
+    const lang  = isES ? 'es' : 'pt';
 
-    const filtered = LISTA_MEDS_DISPONIVEIS
-      .filter(m => !selecionadosInteracao.includes(m))
-      .filter(m => q.length === 0 || m.toLowerCase().includes(q))
-      .slice(0, 12);
+    /* Já selecionados: canonicalizar para comparar corretamente */
+    const selectedCanon = selecionadosInteracao.map(n => normalizarFarmaco(n));
+
+    /* Constrói lista com nomes no idioma ativo, filtrando já selecionados */
+    const listaNoBusca = LISTA_MEDS_DISPONIVEIS_RAW
+      .filter(nomePt => {
+        const canon = normalizarFarmaco(nomePt);
+        return !selectedCanon.includes(canon);
+      })
+      .map(nomePt => ({
+        display: _displayName(nomePt, lang),
+        canonical: normalizarFarmaco(nomePt),
+        nomePt
+      }));
+
+    /* Filtro: aceita busca em PT, ES e sem acentos */
+    const filtered = q.length === 0
+      ? listaNoBusca.slice(0, 14)
+      : listaNoBusca.filter(item => {
+          const dispNorm = item.display.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+          const ptNorm   = item.nomePt.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+          return dispNorm.includes(qLow) || ptNorm.includes(qLow) || item.canonical.includes(qLow);
+        }).slice(0, 12);
 
     if (filtered.length === 0) {
       dd.innerHTML = `<div class="intx-dropdown-empty">${isES ? 'Sin resultados' : 'Sem resultados'}</div>`;
@@ -19956,15 +20575,17 @@ function _adaptExternalDB(dbObj, categoryLabel) {
       return;
     }
 
-    const esc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    dd.innerHTML = filtered.map(nome => {
+    const esc = qLow.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    dd.innerHTML = filtered.map(item => {
+      const dispNorm = item.display.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
       const hl = q.length > 0
-        ? nome.replace(new RegExp(`(${esc})`, 'gi'), '<span class="intx-hl">$1</span>')
-        : nome;
+        ? item.display.replace(new RegExp(`(${esc})`, 'gi'), '<span class="intx-hl">$1</span>')
+        : item.display;
+      /* Passa o nome canônico PT como argumento — o display será recalculado pelo idioma */
       return `<div
         class="intx-dropdown-item"
         role="option"
-        onclick="adicionarChipInteracao('${nome.replace(/'/g, "\\'")}')"
+        onclick="adicionarChipInteracao('${item.nomePt.replace(/'/g, "\\'")}')"
       >💊 ${hl}</div>`;
     }).join('');
     dd.style.display = 'block';
@@ -19980,8 +20601,11 @@ function _adaptExternalDB(dbObj, categoryLabel) {
       _mostrarToast(isES ? '⚠️ Máximo de 5 fármacos permitido' : '⚠️ Máximo de 5 fármacos permitido');
       return;
     }
-    if (selecionadosInteracao.includes(nome)) return;
+    /* Deduplica por chave canônica */
+    const canon = normalizarFarmaco(nome);
+    if (selecionadosInteracao.some(n => normalizarFarmaco(n) === canon)) return;
 
+    /* Armazena sempre o nome PT canônico (display se resolve depois) */
     selecionadosInteracao.push(nome);
 
     const inp = document.getElementById('input-busca-interacao');
@@ -19992,9 +20616,103 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     renderizarChips();
     _atualizarContador();
     _atualizarBotao();
-    /* Limpa resultados anteriores */
     const res = document.getElementById('resultados-interacoes-container');
     if (res) res.innerHTML = '';
+  };
+
+  /* ══════════════════════════════════════════════════════════
+     ENTRADA LIVRE — Múltiplos fármacos em texto contínuo
+     Ex: "sertralina, acido valproico, fenitoina"
+     Separadores: vírgula, ponto-e-vírgula, +, quebra de linha,
+                  " e ", " y ", " con ", " com "
+  ══════════════════════════════════════════════════════════ */
+  window.processarEntradaLivre = function(texto) {
+    const isES = _isES();
+    const lang = isES ? 'es' : 'pt';
+
+    /* Tokeniza usando múltiplos separadores */
+    const tokens = texto
+      .replace(/[\r\n]+/g, ',')
+      .split(/[,;+]|\b(?:e|y|con|com)\b/i)
+      .map(t => t.trim())
+      .filter(t => t.length > 0);
+
+    if (tokens.length === 0) return;
+
+    const resolved  = [];
+    const unresolved = [];
+
+    tokens.forEach(token => {
+      /* Normaliza o token */
+      const normToken = token.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, '_').trim();
+
+      /* Tenta resolver: alias → canonical, depois busca na lista */
+      let canon = normToken;
+      if (window.DRUG_ALIASES && window.DRUG_ALIASES[normToken]) {
+        canon = window.DRUG_ALIASES[normToken];
+      } else if (DRUG_ES_TO_CANONICAL[normToken]) {
+        canon = DRUG_ES_TO_CANONICAL[normToken];
+      }
+
+      /* Busca o nome PT original na lista */
+      const match = LISTA_MEDS_DISPONIVEIS_RAW.find(nomePt => {
+        const c = normalizarFarmaco(nomePt);
+        return c === canon || normalizarFarmaco(nomePt) === normToken;
+      });
+
+      if (match) {
+        resolved.push(match);
+      } else {
+        /* Busca parcial para fuzzy */
+        const fuzzy = LISTA_MEDS_DISPONIVEIS_RAW.find(nomePt => {
+          const c = normalizarFarmaco(nomePt);
+          return c.includes(normToken) || normToken.includes(c.substring(0, 5));
+        });
+        if (fuzzy) {
+          resolved.push(fuzzy);
+        } else {
+          unresolved.push(token);
+        }
+      }
+    });
+
+    console.log('[FREE_DRUG_INPUT] raw=' + texto + ' tokens=' + JSON.stringify(tokens) +
+      ' resolved=' + JSON.stringify(resolved) + ' unresolved=' + JSON.stringify(unresolved));
+
+    /* Adiciona chips */
+    resolved.forEach(nome => {
+      if (selecionadosInteracao.length < INTX_MAX) {
+        const canon = normalizarFarmaco(nome);
+        if (!selecionadosInteracao.some(n => normalizarFarmaco(n) === canon)) {
+          selecionadosInteracao.push(nome);
+        }
+      }
+    });
+
+    renderizarChips();
+    _atualizarContador();
+    _atualizarBotao();
+
+    const inp = document.getElementById('input-busca-interacao');
+    const dd  = document.getElementById('dropdown-sugestoes-interacao');
+    if (inp) inp.value = '';
+    if (dd)  dd.style.display = 'none';
+
+    /* Limpa resultados anteriores */
+    const resEl = document.getElementById('resultados-interacoes-container');
+    if (resEl) resEl.innerHTML = '';
+
+    /* Mostra aviso para não reconhecidos */
+    if (unresolved.length > 0) {
+      _mostrarToast((isES ? '⚠️ No reconocido: ' : '⚠️ Não reconhecido: ') + unresolved.join(', '));
+    }
+
+    /* Auto-verificar se já tem 2+ */
+    if (selecionadosInteracao.length >= INTX_MIN) {
+      setTimeout(() => window.executarChecagemInteracoes(), 150);
+    }
   };
 
   window.removerChipInteracao = function(nome) {
@@ -20012,21 +20730,25 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     const wrap = document.getElementById('chips-interacoes-wrapper');
     if (!wrap) return;
     const isES = _isES();
+    const lang = isES ? 'es' : 'pt';
 
     if (selecionadosInteracao.length === 0) {
       wrap.innerHTML = '';
       return;
     }
 
-    wrap.innerHTML = selecionadosInteracao.map(nome => `
+    wrap.innerHTML = selecionadosInteracao.map(nome => {
+      const displayNome = _displayName(nome, lang);
+      return `
       <div class="intx-chip">
-        💊 ${nome}
+        💊 ${displayNome}
         <button
           class="intx-chip-btn"
           onclick="removerChipInteracao('${nome.replace(/'/g, "\\'")}')"
           title="${isES ? 'Eliminar' : 'Remover'}"
         >✕</button>
-      </div>`).join('');
+      </div>`;
+    }).join('');
   };
 
   /* ══════════════════════════════════════════════
@@ -20272,7 +20994,7 @@ function _adaptExternalDB(dbObj, categoryLabel) {
               </div>
             </div>
             <div class="intx-card-pair">
-              <b>${item.med1}</b> ✕ <b>${item.med2}</b>
+              <b>${_displayName(item.med1, lang)}</b> ✕ <b>${_displayName(item.med2, lang)}</b>
             </div>
             <p class="intx-card-risco">
               <b>${lblRisco}</b> ${descricao}
@@ -20881,12 +21603,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isFixed) {
       card.classList.add('is-fixed');
       if (badge)    { badge.style.display = 'flex'; }
-      if (fixBtn)   { fixBtn.classList.add('is-fixed-btn'); fixBtn.innerHTML = '<i class="fa-solid fa-check"></i> Fixado'; }
+      if (fixBtn)   { fixBtn.classList.add('is-fixed-btn'); fixBtn.innerHTML = '<i class="fa-solid fa-check"></i> <span>' + ((typeof currentLang !== 'undefined' && currentLang === 'es') ? 'Fijado ✓' : 'Fixado ✓') + '</span>'; }
       if (subtitle) { subtitle.textContent = (typeof currentLang !== 'undefined' && currentLang === 'es') ? 'Datos fijados — usados en los cálculos' : 'Dados fixados — usados nos cálculos'; }
     } else {
       card.classList.remove('is-fixed');
       if (badge)    { badge.style.display = 'none'; }
-      if (fixBtn)   { fixBtn.classList.remove('is-fixed-btn'); fixBtn.innerHTML = '<i class="fa-solid fa-thumbtack"></i> Fixar Dados'; }
+      if (fixBtn)   { fixBtn.classList.remove('is-fixed-btn'); fixBtn.innerHTML = '<i class="fa-solid fa-calculator"></i> <span class="lang-hub-pt">Calcular / Fixar</span><span class="lang-hub-es">Calcular / Fijar</span>'; }
       if (subtitle) { subtitle.textContent = t('hm_patient_subtitle'); }
     }
   }
@@ -20917,6 +21639,17 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    /* Alerta visual se creatinina não foi informada */
+    const warnEl = document.getElementById('hm-clcr-warn');
+    if (warnEl) {
+      const semCreat = !data.creatinine || data.creatinine <= 0;
+      warnEl.style.display = semCreat ? '' : 'none';
+      if (semCreat) setTimeout(() => { if (warnEl) warnEl.style.display = 'none'; }, 5000);
+    }
+
+    /* Log estruturado ClCr */
+    console.log('[CLCR] peso=' + data.weight + ' idade=' + data.age + ' sexo=' + (data.sex || '?') + ' creatinina=' + data.creatinine);
+
     /* Persiste */
     try { localStorage.setItem(HM_KEY, JSON.stringify(data)); } catch(e) {}
 
@@ -20944,6 +21677,58 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof window.hmCalcCockcroft === 'function') {
       window.hmCalcCockcroft();
     }
+
+    /* Re-sync do card ClCr no Hub — Build 227: layout premium */
+    setTimeout(function() {
+      const clcrVal = document.getElementById('hm-pv-clcr');
+      const area    = document.getElementById('hub-clcr-result-area');
+      if (!area) return;
+
+      const lang  = (typeof currentLang !== 'undefined' ? currentLang : 'pt');
+      const isES  = (lang === 'es');
+
+      if (!clcrVal || !clcrVal.textContent || clcrVal.textContent === '—') return;
+
+      const v = parseFloat(clcrVal.textContent);
+      let cat, rec, catColor;
+      if      (v >= 90) { cat = isES ? 'Función renal preservada'       : 'Função renal preservada';         catColor = '#10b981'; rec = isES ? 'Sin ajuste necesario.'                                   : 'Sem ajuste necessário.'; }
+      else if (v >= 60) { cat = isES ? 'Reducción leve'                 : 'Redução leve';                    catColor = '#34d399'; rec = isES ? 'Verificar ajuste en fármacos de eliminación renal.'      : 'Verificar ajuste em fármacos de eliminação renal.'; }
+      else if (v >= 30) { cat = isES ? 'Reducción moderada'             : 'Redução moderada';                catColor = '#f59e0b'; rec = isES ? 'Ajustar dosis de nefrotóxicos y eliminación renal.'     : 'Ajustar dose de nefrotóxicos e eliminação renal.'; }
+      else if (v >= 15) { cat = isES ? 'Reducción grave'                : 'Redução grave';                   catColor = '#f87171'; rec = isES ? 'Ajuste significativo en la mayoría de fármacos renales.' : 'Ajuste significativo na maioria dos fármacos renais.'; }
+      else              { cat = isES ? 'Falla renal / evaluar diálisis' : 'Falência renal / avaliar diálise'; catColor = '#ef4444'; rec = isES ? 'Evitar nefrotóxicos. Evaluar diálisis.'                : 'Evitar nefrotóxicos. Avaliar diálise.'; }
+
+      console.log('[CLCR] resultadoClCr=' + v + ' categoriaRenal=' + cat);
+
+      const imcEl   = document.getElementById('hm-pv-imc');
+      const pesoEl  = document.getElementById('hm-pv-peso');
+      const bsaEl   = document.getElementById('hm-pv-bsa');
+      const srcEl   = document.getElementById('hm-pv-clcr-src');
+
+      const imcVal  = (imcEl  && imcEl.textContent  !== '—') ? imcEl.textContent  : null;
+      const pesoVal = (pesoEl && pesoEl.textContent !== '—') ? pesoEl.textContent : null;
+      const bsaVal  = (bsaEl  && bsaEl.textContent  !== '—') ? bsaEl.textContent  : null;
+      const srcVal  = srcEl ? srcEl.textContent : 'CG';
+
+      /* Helper exposto pelo hub-accordion.js */
+      const buildMini = (typeof window._buildMiniCards === 'function')
+        ? window._buildMiniCards(imcVal, pesoVal, bsaVal, isES)
+        : '';
+
+      area.innerHTML =
+        /* Hero ClCr */
+        '<div class="clcr-hero">' +
+          '<div class="clcr-hero-value">' +
+            '<div class="clcr-hero-number clcr-num-updated" style="color:' + catColor + ';">' + v + '</div>' +
+            '<div class="clcr-hero-unit">mL/min · ' + srcVal + '</div>' +
+          '</div>' +
+          '<div class="clcr-hero-info">' +
+            '<div class="clcr-hero-cat" style="color:' + catColor + ';">' + cat + '</div>' +
+            '<div class="clcr-hero-rec">' + rec + '</div>' +
+          '</div>' +
+        '</div>' +
+        /* Mini-cards premium */
+        buildMini;
+    }, 120);
 
     /* ── Re-render automático da aba Calculadoras (sincronização v3) ──
        Se o médico estava visualizando um fármaco na aba Calculadoras,
@@ -22286,6 +23071,430 @@ window.MedCasesBridge = {
   }
 </script>
 
+<!-- ══════════════════════════════════════════════════════════════
+     MOBILE KEYBOARD HANDLER v1.0
+     Detecta abertura/fechamento do teclado virtual no iOS/Android
+     via window.visualViewport + fallback por resize de window.
+     Ao focar input: body.keyboard-open + padding-bottom dinâmico +
+     scrollIntoView({ block:'center', behavior:'smooth' })
+     Ao perder foco: remove classe + restaura padding.
+══════════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  var _kbOpen        = false;
+  var _baseHeight    = window.innerHeight;
+  var _baseVVHeight  = (window.visualViewport ? window.visualViewport.height : window.innerHeight);
+  var _scrollContent = null;
+  var _padTarget     = null;
+  var _lastFocused   = null;
+
+  /* Threshold mínimo para considerar que o teclado abriu (px) */
+  var KB_THRESHOLD = 100;
+
+  function _getScrollEl() {
+    if (!_scrollContent) _scrollContent = document.getElementById('scroll-content');
+    return _scrollContent;
+  }
+  function _getPadTarget() {
+    if (!_padTarget) _padTarget = document.getElementById('scroll-content') || document.body;
+    return _padTarget;
+  }
+
+  function _isInput(el) {
+    if (!el) return false;
+    var tag = el.tagName;
+    return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+  }
+
+  function _openKeyboard(kbHeight, focusedEl) {
+    if (_kbOpen) return;
+    _kbOpen = true;
+    document.body.classList.add('keyboard-open');
+
+    var pad = kbHeight + 24;
+    var pt  = _getPadTarget();
+    if (pt) pt.style.paddingBottom = pad + 'px';
+
+    console.log('[MOBILE_KEYBOARD] keyboardOpen=true viewportHeight=' +
+      (window.visualViewport ? window.visualViewport.height : window.innerHeight) +
+      ' focusedInput=' + (focusedEl ? (focusedEl.id || focusedEl.tagName) : 'unknown') +
+      ' paddingAdded=' + pad + 'px');
+
+    /* Scroll para o input */
+    if (focusedEl) {
+      setTimeout(function () {
+        focusedEl.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }, 120);
+    }
+  }
+
+  function _closeKeyboard() {
+    if (!_kbOpen) return;
+    _kbOpen = false;
+    document.body.classList.remove('keyboard-open');
+
+    var pt = _getPadTarget();
+    if (pt) pt.style.paddingBottom = '';
+
+    console.log('[MOBILE_KEYBOARD] keyboardOpen=false viewportHeight=' +
+      (window.visualViewport ? window.visualViewport.height : window.innerHeight) +
+      ' focusedInput=none');
+  }
+
+  /* ── Handler principal: visualViewport resize (iOS Safari, Chrome Android) ── */
+  function _onViewportResize() {
+    var vv       = window.visualViewport;
+    var vvHeight = vv ? vv.height : window.innerHeight;
+    var diff     = _baseVVHeight - vvHeight;
+
+    if (diff > KB_THRESHOLD) {
+      _openKeyboard(diff, _lastFocused);
+    } else {
+      _closeKeyboard();
+    }
+  }
+
+  /* ── focusin: captura o input focado ── */
+  document.addEventListener('focusin', function (e) {
+    if (!_isInput(e.target)) return;
+    _lastFocused = e.target;
+
+    /* Em browsers sem visualViewport, detectamos via window resize */
+    if (!window.visualViewport) {
+      /* Aguarda o resize que vem logo após o focusin */
+      setTimeout(function () {
+        var diff = _baseHeight - window.innerHeight;
+        if (diff > KB_THRESHOLD) {
+          _openKeyboard(diff, _lastFocused);
+        }
+      }, 300);
+    }
+  }, true);
+
+  /* ── focusout: aguarda para ver se outro input tomou foco ── */
+  document.addEventListener('focusout', function (e) {
+    if (!_isInput(e.target)) return;
+    /* Delay: se outro input for focado, focusin dispara antes desse timeout */
+    setTimeout(function () {
+      if (!_isInput(document.activeElement)) {
+        _lastFocused = null;
+        _closeKeyboard();
+      }
+    }, 200);
+  }, true);
+
+  /* ── Registrar listener do visualViewport ── */
+  if (window.visualViewport) {
+    /* Recalibrar baseline quando não há teclado */
+    window.visualViewport.addEventListener('resize', _onViewportResize, { passive: true });
+    window.visualViewport.addEventListener('scroll', _onViewportResize, { passive: true });
+    /* Baseline inicial */
+    window.addEventListener('load', function () {
+      _baseVVHeight = window.visualViewport.height;
+    });
+  } else {
+    /* Fallback: window resize */
+    window.addEventListener('resize', function () {
+      var diff = _baseHeight - window.innerHeight;
+      if (diff > KB_THRESHOLD) {
+        _openKeyboard(diff, _lastFocused);
+      } else {
+        _closeKeyboard();
+      }
+    });
+  }
+
+  /* Expõe para debug */
+  window._mobileKeyboard = { isOpen: function() { return _kbOpen; } };
+
+}());
+</script>
+
+<!-- ══════════════════════════════════════════════════════════════
+     CSS RESPONSIVO FINAL — Calculadora Clínica Externa
+     Corrige: fundo cinza lateral, #app engessado em 500px,
+     hub grid adaptativo, scroll padding, light mode compatível.
+══════════════════════════════════════════════════════════════ -->
+<style>
+  /* ── Keyboard open: scroll ainda funciona ── */
+  body.keyboard-open #scroll-content {
+    overflow-y: auto !important;
+  }
+
+  /* ── dvh support ── */
+  @supports (height: 100dvh) {
+    #app { height: 100dvh; }
+  }
+
+  /* ═══════════════════════════════════════════════════
+     FUNDO LATERAL ROXO PREMIUM
+     Garante que nunca apareça cinza nas laterais quando
+     #app é mais estreito que o viewport (iPad / desktop)
+  ═══════════════════════════════════════════════════ */
+  html,
+  body {
+    background: radial-gradient(ellipse at top, #24104a 0%, #0f091e 50%, #070711 100%) !important;
+    background-attachment: fixed !important;
+  }
+  /* Light mode: gradiente claro nos laterais */
+  body.light-mode,
+  body.light-mode html {
+    background: radial-gradient(ellipse at top, #ede9f6 0%, #f3f0fb 50%, #f8f7ff 100%) !important;
+  }
+
+  /* ═══════════════════════════════════════════════════
+     #APP — RESPONSIVO
+     Mobile: 100% | Tablet: min(100%, 900px) | Desktop: 1280px
+  ═══════════════════════════════════════════════════ */
+  @media (min-width: 600px) {
+    #app {
+      max-width: min(100%, 900px);
+      /* Borda lateral sutil em telas médias */
+      border-left:  1px solid rgba(167,139,250,0.08);
+      border-right: 1px solid rgba(167,139,250,0.08);
+    }
+  }
+  @media (min-width: 768px) {
+    #app {
+      max-width: min(96vw, 1080px);
+    }
+  }
+  @media (min-width: 1024px) {
+    #app {
+      max-width: min(92vw, 1180px);
+      border-left:  1px solid rgba(167,139,250,0.12);
+      border-right: 1px solid rgba(167,139,250,0.12);
+    }
+  }
+  @media (min-width: 1280px) {
+    #app {
+      max-width: 1280px;
+      border-left:  1px solid rgba(167,139,250,0.14);
+      border-right: 1px solid rgba(167,139,250,0.14);
+    }
+  }
+
+  /* Light mode: borda discreta */
+  body.light-mode #app {
+    border-left-color:  rgba(124,58,237,0.12) !important;
+    border-right-color: rgba(124,58,237,0.12) !important;
+  }
+
+  /* ═══════════════════════════════════════════════════
+     MODAL RESPONSIVO — rx-modal, fd-modal, qe-modal
+     Modais bottom-sheet ficam max 600px em telas grandes
+  ═══════════════════════════════════════════════════ */
+  @media (min-width: 768px) {
+    #fd-modal      { max-width: 600px !important; margin: 0 auto; border-radius: 22px !important; bottom: 24px !important; }
+    #qe-modal      { max-width: 580px !important; }
+    #rx-modal      { max-width: 560px !important; }
+    #risk-modal    { max-width: 580px !important; max-height: 80dvh !important; border-radius: 20px !important; }
+  }
+
+  /* ═══════════════════════════════════════════════════
+     CARDS DE RESULTADO — mais largura em telas grandes
+  ═══════════════════════════════════════════════════ */
+  @media (min-width: 768px) {
+    .hub-card-inner { font-size: 14px; }
+    .hm-btn        { font-size: 13.5px; padding: 10px 16px; }
+    .hm-input      { font-size: 15px; padding: 10px 13px; }
+    .hm-label      { font-size: 11px; }
+    .hm-pill       { min-width: 62px; padding: 7px 10px; }
+    .hm-pill-val   { font-size: 16px; }
+  }
+  @media (min-width: 1024px) {
+    .hub-card-inner { font-size: 15px; }
+    .hm-pill-val    { font-size: 18px; }
+    .hm-pill        { min-width: 72px; }
+  }
+
+  /* ═══════════════════════════════════════════════════
+     TIPOGRAFIA — hub-card-name/desc cresce com a tela
+  ═══════════════════════════════════════════════════ */
+  @media (min-width: 768px) {
+    .hub-card-name { font-size: 14.5px !important; }
+    .hub-card-desc { font-size: 11px !important; }
+  }
+  @media (min-width: 1024px) {
+    .hub-card-name { font-size: 15px !important; }
+    .hub-card-desc { font-size: 11.5px !important; }
+  }
+
+  /* ═══════════════════════════════════════════════════
+     GLOBAL-PATIENT-BAR — centralizado como #app
+  ═══════════════════════════════════════════════════ */
+  #global-patient-bar .gpb-inner {
+    max-width: 100%;
+  }
+
+  /* ═══════════════════════════════════════════════════
+     NO HORIZONTAL SCROLL — segurança global
+  ═══════════════════════════════════════════════════ */
+  #scroll-content,
+  .section-page,
+  .hub-accordion {
+    overflow-x: hidden !important;
+  }
+</style>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     §HUB-LIGHT-FIX — LAST RESORT (inline, após todo CSS externo)
+     ────────────────────────────────────────────────────────────────
+     Este bloco é carregado DEPOIS de medcases-ux-v2.css e de todos
+     os <style> inline anteriores, garantindo máxima precedência de
+     cascade. Resolve o bug: body.light-mode span { color:#000 }
+     sobrescrevia o texto dos triggers dos hub-cards coloridos.
+
+     Os 11 hub-cards têm gradientes escuros que NÃO mudam no light
+     mode — portanto todo texto dentro do trigger deve ser branco.
+══════════════════════════════════════════════════════════════════ -->
+<style id="hub-light-fix">
+  /* ── Regra-mãe: qualquer elemento dentro de qualquer trigger ── */
+  body.light-mode .hub-accordion .hub-card-trigger {
+    color: #FFFFFF !important;
+  }
+  body.light-mode .hub-accordion .hub-card-trigger * {
+    color: #FFFFFF !important;
+  }
+
+  /* ── Título principal (hub-card-name + spans lang-hub-pt/es) ── */
+  body.light-mode .hub-accordion .hub-card-name,
+  body.light-mode .hub-accordion .hub-card-name span {
+    color: #FFFFFF !important;
+  }
+
+  /* ── Subtítulo (hub-card-desc + spans lang-hub-pt/es) ── */
+  body.light-mode .hub-accordion .hub-card-desc,
+  body.light-mode .hub-accordion .hub-card-desc span {
+    color: rgba(255, 255, 255, 0.82) !important;
+  }
+
+  /* ── Seta chevron: fechado ── */
+  body.light-mode .hub-accordion .hub-card-chevron {
+    color: rgba(255, 255, 255, 0.60) !important;
+  }
+
+  /* ── Seta chevron: aberto ── */
+  body.light-mode .hub-accordion .hub-card.is-open .hub-card-chevron {
+    color: rgba(255, 255, 255, 0.92) !important;
+  }
+
+  /* ── Ícone Font Awesome dentro de .hub-card-ico ── */
+  body.light-mode .hub-accordion .hub-card-ico i {
+    color: #FFFFFF !important;
+    opacity: 0.92;
+  }
+
+  /* ── Badge "Em breve" legível ── */
+  body.light-mode .hub-accordion .hub-card-trigger .hub-soon-badge {
+    color: #FBBF24 !important;
+    background: rgba(251, 191, 36, 0.20) !important;
+    border-color: rgba(251, 191, 36, 0.38) !important;
+  }
+
+  /* ── Por card (IDs) — máxima especificidade possível ── */
+  body.light-mode #hub-card-patient   .hub-card-trigger,
+  body.light-mode #hub-card-clcr      .hub-card-trigger,
+  body.light-mode #hub-card-farmacos  .hub-card-trigger,
+  body.light-mode #hub-card-interacoes .hub-card-trigger,
+  body.light-mode #hub-card-pediatria .hub-card-trigger,
+  body.light-mode #hub-card-gestante  .hub-card-trigger,
+  body.light-mode #hub-card-infusao   .hub-card-trigger,
+  body.light-mode #hub-card-hemodinamica .hub-card-trigger,
+  body.light-mode #hub-card-scores    .hub-card-trigger,
+  body.light-mode #hub-card-fluidos   .hub-card-trigger,
+  body.light-mode #hub-card-eletrolitos .hub-card-trigger {
+    color: #FFFFFF !important;
+  }
+
+  body.light-mode #hub-card-patient   .hub-card-trigger *,
+  body.light-mode #hub-card-clcr      .hub-card-trigger *,
+  body.light-mode #hub-card-farmacos  .hub-card-trigger *,
+  body.light-mode #hub-card-interacoes .hub-card-trigger *,
+  body.light-mode #hub-card-pediatria .hub-card-trigger *,
+  body.light-mode #hub-card-gestante  .hub-card-trigger *,
+  body.light-mode #hub-card-infusao   .hub-card-trigger *,
+  body.light-mode #hub-card-hemodinamica .hub-card-trigger *,
+  body.light-mode #hub-card-scores    .hub-card-trigger *,
+  body.light-mode #hub-card-fluidos   .hub-card-trigger *,
+  body.light-mode #hub-card-eletrolitos .hub-card-trigger * {
+    color: #FFFFFF !important;
+  }
+
+  /* ── hub-card-desc por card: hierarquia visual ── */
+  body.light-mode #hub-card-patient   .hub-card-desc,
+  body.light-mode #hub-card-patient   .hub-card-desc span,
+  body.light-mode #hub-card-clcr      .hub-card-desc,
+  body.light-mode #hub-card-clcr      .hub-card-desc span,
+  body.light-mode #hub-card-farmacos  .hub-card-desc,
+  body.light-mode #hub-card-farmacos  .hub-card-desc span,
+  body.light-mode #hub-card-interacoes .hub-card-desc,
+  body.light-mode #hub-card-interacoes .hub-card-desc span,
+  body.light-mode #hub-card-pediatria .hub-card-desc,
+  body.light-mode #hub-card-pediatria .hub-card-desc span,
+  body.light-mode #hub-card-gestante  .hub-card-desc,
+  body.light-mode #hub-card-gestante  .hub-card-desc span,
+  body.light-mode #hub-card-infusao   .hub-card-desc,
+  body.light-mode #hub-card-infusao   .hub-card-desc span,
+  body.light-mode #hub-card-hemodinamica .hub-card-desc,
+  body.light-mode #hub-card-hemodinamica .hub-card-desc span,
+  body.light-mode #hub-card-scores    .hub-card-desc,
+  body.light-mode #hub-card-scores    .hub-card-desc span,
+  body.light-mode #hub-card-fluidos   .hub-card-desc,
+  body.light-mode #hub-card-fluidos   .hub-card-desc span,
+  body.light-mode #hub-card-eletrolitos .hub-card-desc,
+  body.light-mode #hub-card-eletrolitos .hub-card-desc span {
+    color: rgba(255, 255, 255, 0.82) !important;
+  }
+
+  /* ── Chevron por card ── */
+  body.light-mode #hub-card-patient   .hub-card-chevron,
+  body.light-mode #hub-card-clcr      .hub-card-chevron,
+  body.light-mode #hub-card-farmacos  .hub-card-chevron,
+  body.light-mode #hub-card-interacoes .hub-card-chevron,
+  body.light-mode #hub-card-pediatria .hub-card-chevron,
+  body.light-mode #hub-card-gestante  .hub-card-chevron,
+  body.light-mode #hub-card-infusao   .hub-card-chevron,
+  body.light-mode #hub-card-hemodinamica .hub-card-chevron,
+  body.light-mode #hub-card-scores    .hub-card-chevron,
+  body.light-mode #hub-card-fluidos   .hub-card-chevron,
+  body.light-mode #hub-card-eletrolitos .hub-card-chevron {
+    color: rgba(255, 255, 255, 0.60) !important;
+  }
+
+  body.light-mode #hub-card-patient.is-open   .hub-card-chevron,
+  body.light-mode #hub-card-clcr.is-open      .hub-card-chevron,
+  body.light-mode #hub-card-farmacos.is-open  .hub-card-chevron,
+  body.light-mode #hub-card-interacoes.is-open .hub-card-chevron,
+  body.light-mode #hub-card-pediatria.is-open .hub-card-chevron,
+  body.light-mode #hub-card-gestante.is-open  .hub-card-chevron,
+  body.light-mode #hub-card-infusao.is-open   .hub-card-chevron,
+  body.light-mode #hub-card-hemodinamica.is-open .hub-card-chevron,
+  body.light-mode #hub-card-scores.is-open    .hub-card-chevron,
+  body.light-mode #hub-card-fluidos.is-open   .hub-card-chevron,
+  body.light-mode #hub-card-eletrolitos.is-open .hub-card-chevron {
+    color: rgba(255, 255, 255, 0.92) !important;
+  }
+
+  /* ── Ícone por card ── */
+  body.light-mode #hub-card-patient   .hub-card-ico i,
+  body.light-mode #hub-card-clcr      .hub-card-ico i,
+  body.light-mode #hub-card-farmacos  .hub-card-ico i,
+  body.light-mode #hub-card-interacoes .hub-card-ico i,
+  body.light-mode #hub-card-pediatria .hub-card-ico i,
+  body.light-mode #hub-card-gestante  .hub-card-ico i,
+  body.light-mode #hub-card-infusao   .hub-card-ico i,
+  body.light-mode #hub-card-hemodinamica .hub-card-ico i,
+  body.light-mode #hub-card-scores    .hub-card-ico i,
+  body.light-mode #hub-card-fluidos   .hub-card-ico i,
+  body.light-mode #hub-card-eletrolitos .hub-card-ico i {
+    color: #FFFFFF !important;
+    opacity: 0.92;
+    filter: brightness(1.1);
+  }
+</style>
+
 </body>
 </html>
-

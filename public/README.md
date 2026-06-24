@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-3.1.0--elec-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-3.5.1--light--fix--v2-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-PWA%20%7C%20WebView-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/i18n-PT%20%7C%20ES-yellow?style=for-the-badge)
@@ -30,6 +30,7 @@
 - [Como Adicionar Fármacos](#-como-adicionar-fármacos)
 - [Deploy Manual](#-deploy-manual)
 - [Changelog por Sessão](#-changelog-por-sessão)
+- [Changelog — Sessões Recentes](#-changelog--sessões-recentes)
 - [Próximos Passos](#-próximos-passos)
 
 ---
@@ -2863,6 +2864,301 @@ Total drogas em cardio.js: 54 (Grupos 1–17)
 
 ---
 
+## 📋 Changelog — Sessões Recentes
+
+---
+
+### 2026-06-24 — Light Mode Bug Fix v2: Hub Cards — Texto Branco Definitivo
+
+> **Escopo:** CSS only. Zero alterações em lógica clínica, cálculos, responsividade ou layout estrutural.
+
+#### Problema
+No tema claro (`body.light-mode`), os 11 hub-cards do accordion exibiam **texto preto sobre gradientes escuros/coloridos**, comprometendo gravemente a legibilidade. A causa raiz era a regra global `body.light-mode span { color: #000000 }` no §0.2 de `medcases-ux-v2.css`, que aplicava cor preta a **todos** os spans da página, incluindo os spans `lang-hub-pt/es` dentro dos triggers dos hub-cards.
+
+#### Análise de especificidade CSS
+| Regra | Especificidade | `!important` | Posição |
+|---|---|---|---|
+| `body.light-mode span { color:#000 }` §0.2 | (0,1,1) | ❌ | CSS externo L55 |
+| `body.light-mode #hub-card-X .hub-card-name span` §15b | (1,2,1) | ✅ | CSS externo L1556 |
+| `body.light-mode .hub-accordion .hub-card-trigger *` §15c | (0,3,0) | ✅ | CSS externo L2312 |
+| `body.light-mode #hub-card-X .hub-card-trigger *` §HUB-LIGHT-FIX | (1,2,0) | ✅ | index.html inline (último) |
+
+#### Solução aplicada (3 camadas de defesa)
+
+**Camada 1 — `css/medcases-ux-v2.css` §0.2 (linha ~53)**  
+Adicionado `:not()` na regra global para excluir explicitamente elementos dentro dos hub-card-triggers:
+```css
+body.light-mode span:not(.hub-accordion .hub-card-trigger *),
+body.light-mode button:not(.hub-accordion .hub-card-trigger),
+body.light-mode p:not(.hub-accordion .hub-card-trigger *) { color: #000000; }
+```
+
+**Camada 2 — `css/medcases-ux-v2.css` §15c (final do arquivo)**  
+Novo bloco ao final do CSS externo com regras `.hub-accordion`-scoped:
+- `.hub-accordion .hub-card-trigger *` → `#FFFFFF !important`
+- `.hub-accordion .hub-card-name` + spans → `#FFFFFF`
+- `.hub-accordion .hub-card-desc` + spans → `rgba(255,255,255,0.82)`
+- `.hub-accordion .hub-card-chevron` → `rgba(255,255,255,0.60)` (aberto: 0.92)
+- `.hub-accordion .hub-card-ico i` → `#FFFFFF !important`
+- `.hub-accordion .hub-soon-badge` → `#FBBF24 + bg 20%`
+
+**Camada 3 — `index.html` `<style id="hub-light-fix">` (após todo CSS externo)**  
+Bloco inline após o último `</style>` do documento — posição de maior precedência de cascade. Duplica as regras §15c com adição das regras por ID (`#hub-card-X`) para cobertura máxima.
+
+#### Cards afetados (todos os 11)
+`hub-card-patient` · `hub-card-clcr` · `hub-card-farmacos` · `hub-card-interacoes` · `hub-card-pediatria` · `hub-card-gestante` · `hub-card-infusao` · `hub-card-hemodinamica` · `hub-card-scores` · `hub-card-fluidos` · `hub-card-eletrolitos`
+
+#### Arquivos alterados
+
+| Arquivo | O que mudou |
+|---|---|
+| `css/medcases-ux-v2.css` | §0.2 atualizado com `:not(.hub-accordion .hub-card-trigger *)` para excluir triggers do reset preto; §15c adicionado ao final do arquivo com regras `.hub-accordion`-scoped |
+| `index.html` | `<style id="hub-light-fix">` adicionado como último `<style>` antes de `</body>` — máxima precedência de cascade; cobre todos os 11 cards com regras por `.hub-accordion` e por ID |
+
+#### Garantias pós-fix
+- ✅ Modo escuro: sem alterações (regras são todas `body.light-mode`-scoped)
+- ✅ Lógica clínica: intacta
+- ✅ Responsividade: intacta
+- ✅ Layout estrutural: intacto
+- ✅ Formulários internos dos cards (`.hub-card-body`): continuam com texto escuro (`#1E293B`) via `body.light-mode .hub-card-body .hm-label` — não afetados
+
+---
+
+### 2026-06-24 — Build 227: ClCr Premium UX Polish
+
+> **Escopo:** exclusivamente visual (UX/UI). Zero alterações em fórmulas, cálculos, traduções ou lógica clínica.
+
+#### Objetivo
+Elevar os mini-cards secundários (IMC, Peso Ideal, BSA) ao mesmo padrão visual premium do card principal do ClCr — criando um módulo com aparência de monitor multiparamétrico moderno.
+
+#### Arquivos alterados
+
+| Arquivo | O que mudou |
+|---|---|
+| `index.html` | CSS inline: novo bloco `.clcr-hero`, `.clcr-mini-grid`, `.clcr-mini-card` (3 variantes), tipografia hierárquica, animação `@keyframes clcrNumPulse`, light-mode overrides, breakpoints responsivos; bloco `hmFixarDados()` re-sync usa novo layout premium |
+| `js/hub-accordion.js` | Helpers `_imcCategory()` e `_buildMiniCards()` adicionados; `_syncClcrResult()` reescrito com novo HTML; ambos expostos via `window._buildMiniCards` / `window._imcCategory` |
+
+#### Componentes alterados
+
+**1. Card hero ClCr** — refatorado de flex genérico para classes semânticas:
+```html
+<div class="clcr-hero">
+  <div class="clcr-hero-value">
+    <div class="clcr-hero-number" style="color: #10b981;">72.1</div>
+    <div class="clcr-hero-unit">mL/min · CG</div>
+  </div>
+  <div class="clcr-hero-info">
+    <div class="clcr-hero-cat">Redução leve</div>
+    <div class="clcr-hero-rec">Verificar ajuste em fármacos...</div>
+  </div>
+</div>
+```
+
+**2. Mini-cards premium** — estrutura unificada:
+```html
+<div class="clcr-mini-grid">
+  <div class="clcr-mini-card clcr-mini-card--imc">
+    <div class="clcr-mini-number">31.9</div>   <!-- 28-32px, cor própria -->
+    <div class="clcr-mini-unit">kg/m²</div>
+    <div class="clcr-mini-title">IMC</div>
+    <div class="clcr-mini-sub">Obesidade I</div>  <!-- classificação auto -->
+  </div>
+  <div class="clcr-mini-card clcr-mini-card--peso">
+    <div class="clcr-mini-number">63.2</div>
+    <div class="clcr-mini-unit">kg</div>
+    <div class="clcr-mini-title">Peso Ideal</div>
+    <div class="clcr-mini-sub">Devine</div>
+  </div>
+  <div class="clcr-mini-card clcr-mini-card--bsa">
+    <div class="clcr-mini-number">2.03</div>
+    <div class="clcr-mini-unit">m²</div>
+    <div class="clcr-mini-title">Área Corporal</div>
+    <div class="clcr-mini-sub">Mosteller</div>
+  </div>
+</div>
+```
+
+#### Melhorias visuais implementadas
+
+| Aspecto | Antes | Depois |
+|---|---|---|
+| **Número** | 14px (hm-pill-val) | **28–32px**, peso 800, letter-spacing −0.8px |
+| **Hierarquia** | Plana (valor = label) | Número → unidade → título → subtítulo |
+| **Identidade** | Todos iguais (cyan genérico) | IMC=azul petróleo, Peso=índigo, BSA=turquesa |
+| **Borda** | `rgba(56,189,248,0.16)` uniforme | Cada variante tem cor própria + glow no hover |
+| **Acento** | Nenhum | Traço lateral 3px (identidade visual premium) |
+| **Subtítulo clínico** | Não existia | IMC classifica (Abaixo/Normal/Sobrepeso/Obesidade I-III), Peso exibe "Devine", BSA exibe "Mosteller" |
+| **Animação** | Nenhuma | `clcrNumPulse` 220ms (fade 30→100% + scale 88→104→100%) em cada atualização |
+| **Light mode** | Herdava cor genérica | Gradientes claros dedicados por card |
+
+#### Paleta de identidade dos mini-cards
+
+| Card | Número | Fundo | Acento |
+|---|---|---|---|
+| IMC | `#38BDF8` (cyan) | `rgba(7,32,58,0.95) → rgba(10,42,72,0.90)` | `#38BDF8` |
+| Peso Ideal | `#A5B4FC` (índigo) | `rgba(14,26,66,0.95) → rgba(20,38,88,0.90)` | `#818CF8` |
+| BSA | `#34D399` (esmeralda) | `rgba(5,32,28,0.95) → rgba(7,45,40,0.90)` | `#34D399` |
+
+#### Responsividade validada
+
+| Breakpoint | Grid mini-cards | Card padding | Número |
+|---|---|---|---|
+| < 380px | 2 col (BSA full-width) | 11px 10px | 28px |
+| 380–599px | 3 col | 11px 10px | 28px |
+| 600–1023px | 3 col | **13px 12px** | **30px** |
+| ≥ 1024px | 3 col | **14px 14px** | **32px** |
+
+#### Classificação IMC (`_imcCategory()`)
+
+| Faixa | PT | ES |
+|---|---|---|
+| < 18.5 | Abaixo do peso | Bajo peso |
+| 18.5–24.9 | Normal | Normal |
+| 25–29.9 | Sobrepeso | Sobrepeso |
+| 30–34.9 | Obesidade I | Obesidad I |
+| 35–39.9 | Obesidade II | Obesidad II |
+| ≥ 40 | Obesidade III | Obesidad III |
+
+#### Confirmação: zero alterações clínicas
+
+- ✅ `hmCalcCockcroft()` — intocado (Cockcroft-Gault + Urina 24h)
+- ✅ `_hmComputeDerived()` — intocado (IMC=peso/altura², Devine, BSA=Mosteller)
+- ✅ Categorias renais (≥90/60/30/15) — intocadas
+- ✅ Valores exibidos (lidos de `hm-pv-imc`, `hm-pv-peso`, `hm-pv-bsa`) — sem modificação
+- ✅ Traduções PT/ES — todas preservadas
+- ✅ Hub Accordion, Interações, Eletrólitos, Hemodinâmica — não tocados
+
+---
+
+### 2026-06-24 — Build Responsividade (Layout/CSS only)
+
+> **Escopo:** apenas CSS/layout — zero alterações em lógica clínica, motor de interações, ClCr, eletrólitos ou hemodinâmica.
+
+#### Problema resolvido
+Em telas iPad/desktop, o `#app` estava travado em `max-width: 500px` com fundo sólido escuro nas laterais — aparência de "app preso no centro" com paredes cinza.
+
+#### Arquivos alterados
+| Arquivo | Mudanças |
+|---|---|
+| `index.html` (CSS inline) | `html/body` → `radial-gradient` roxo premium; `#app` responsivo `100% → 1280px`; `#scroll-content` padding responsivo por breakpoint; `hm-input-grid` 4 colunas em desktop; bloco `<style>` final com todos os breakpoints |
+| `css/medcases-ux-v2.css` | `.hub-accordion` grid 2→3→4 colunas por breakpoint; `.hub-card-inner`/`.hub-card-trigger` padding cresce com tela |
+
+#### Breakpoints implementados
+
+| Largura | `#app` | Hub Grid | Padding scroll |
+|---|---|---|---|
+| < 480px | 100% | 1 coluna | 10px 12px |
+| 480–599px | 100% | 2 colunas | 10px 12px |
+| 600–767px | min(100%, 900px) | 2 colunas | 14px 20px |
+| 768–1023px (iPad) | min(96vw, 1080px) | **3 colunas** | 16px 28px |
+| 1024–1279px (iPad ↔) | min(92vw, 1180px) | **4 colunas** | 20px 36px |
+| ≥ 1280px (desktop) | **1280px** | 4 colunas | 24px 48px |
+
+#### Fundo lateral
+```css
+/* Antes: cor sólida var(--bg-deep) — aparecia cinza escuro */
+/* Depois: gradiente roxo premium — irradia do topo */
+html, body {
+  background: radial-gradient(ellipse at top, #24104a 0%, #0f091e 50%, #070711 100%);
+}
+```
+
+#### `hm-input-grid` — Campos do Paciente
+```
+mobile:   2 colunas (Peso | Idade) / (Altura | Creatinina)
+768px+:   4 colunas → Peso | Idade | Altura | Creatinina (uma linha)
+          Sexo: grid-column: 1 / -1 (linha completa)
+```
+
+---
+
+### 2026-06-24 — Sessão 3: Ajustes Pós-Teste
+
+#### Itens implementados
+
+| # | Item | Arquivo | Descrição |
+|---|---|---|---|
+| 1 | **Cursor eletrólitos — `requestAnimationFrame`** | `js/elec-calc.js` | `_setField()` reescrito com rAF: captura `activeId/selectionStart/End` antes do render, restaura APÓS paint do browser. Log `[ELECTROLYTES_CURSOR]` |
+| 2 | **ClCr card premium** | `js/hub-accordion.js` | `_lazyMount('clcr')` sem hint longo; `_syncClcrResult()` novo layout: valor grande colorido + categoria renal + pills secundárias (IMC, Peso Ideal, BSA). Log `[CLCR_CARD]` |
+| 3 | **Enter key → `processarEntradaLivre`** | `index.html` | `onkeydown` em `#input-busca-interacao`: Enter com texto → `processarEntradaLivre(this.value)` |
+| 4 | **Mobile keyboard handler** | `index.html` | IIFE no fim do `<body>`: `visualViewport.resize` detecta teclado virtual; `focusin/focusout` para `body.keyboard-open`; `padding-bottom` dinâmico; `scrollIntoView({block:'center', behavior:'smooth'})`. Log `[MOBILE_KEYBOARD]` |
+| 5 | **Drug i18n PT/ES** | `index.html` | `DRUG_DISPLAY_NAMES` (80 entradas canonical→{pt,es}); `DRUG_ES_TO_CANONICAL` (mapa reverso auto-construído + extras manuais); `_displayName(nomeLista, lang)` com log `[DRUG_I18N]`; `_resolveToCanonical(texto)` |
+| 6 | **Busca multilíngue** | `index.html` | `filtrarDropdownInteracao()` busca por display (ES), nome PT e canonical simultaneamente |
+| 7 | **`processarEntradaLivre(texto)`** | `index.html` | Tokeniza por `,;+\ne\ny\ncon\ncom`; resolve canonical; adiciona chips; auto-verifica ≥2 fármacos. Log `[FREE_DRUG_INPUT]` |
+| 8 | **Chips e resultados em idioma ativo** | `index.html` | `renderizarChips()` e card de resultado usam `_displayName(item.med1/med2, lang)` |
+
+#### Arquitetura `_setField()` — cursor fix
+```
+ANTES (buggy):
+  _render()              ← destrói input DOM
+  setSelectionRange()    ← executa antes do browser pintar → posição 0
+
+DEPOIS (correto):
+  _render()              ← destrói input DOM
+  requestAnimationFrame(function() {
+    el = getElementById(activeId)  ← input recriado no novo DOM
+    el.focus()
+    el.setSelectionRange(s, e)     ← executado após paint → cursor preservado
+  })
+```
+
+#### Card ClCr — novo layout
+```
+┌─────────────────────────────────────────────┐
+│  72.1        Redução leve                   │
+│  mL/min·CG   Verificar ajuste em fármacos   │
+│                                             │
+│  [IMC:23.1] [Peso Ideal:68kg] [BSA:1.82m²] │
+│  [      Abrir Dados do Paciente       ]     │
+└─────────────────────────────────────────────┘
+Cor do valor por categoria:
+  ≥90 → #10b981  ≥60 → #34d399  ≥30 → #f59e0b  ≥15 → #f87171  <15 → #ef4444
+```
+
+---
+
+### 2026-06-24 — Sessão 2: Build Corretiva Multi-Bug
+
+| # | Bug | Causa Raiz | Fix |
+|---|---|---|---|
+| 1 | `databaseLoaded=false`, `rulesCount=0` | Vírgula faltando na linha 2857 de `database/interacoes.js` após bloco `$classe_aminoglicosídeos` — JS parse error | Adicionou `,` |
+| 2 | Botão não calculava ClCr | `hmCalcCockcroft()` chamado mas hub card não re-sincronizado | Renomeado para "Calcular / Fixar"; `setTimeout(120ms)` re-sync com categoria + pills coloridas |
+| 3 | Alerta creatinina ausente | Sem validação | `#hm-clcr-warn` com `display` condicional |
+| 4 | Hemodinâmica incompleta | `calcHemo()` sem classificações de PAM, crise, taquipneia | Reescrita completa com PAM=(PAS+2×PAD)/3, 8+ classificações, alerta sepse |
+| 5 | Card-within-card interações | `.intx-container` com borda+fundo dentro do hub card body | CSS flatten: transparente, sem borda |
+| 6 | Eletrólitos perde foco | `slot.innerHTML` destrói input ativo a cada keystroke | Salva `activeId/selectionStart/End` antes; restaura após render (sync — melhorado na S3 com rAF) |
+| 7 | "Glicose" não traduz | `shortName: 'Glicose'` string fixa | `shortName: { pt: 'Glicose', es: 'Glucosa' }` + `_elecBtn(lang)` |
+
+---
+
+### 2026-06-24 — Sessão 1: Motor de Interações v4.0
+
+#### Problema
+Motor retornava "sem interação" para `sertralina + selegilina` e outros pares válidos.
+
+#### Causa
+- Paths 5 e 6 faltando no motor (`$classeA → drogaB` e `$classeB → drogaA`)
+- Early-return na primeira match encontrada — perdia interação com maior `scoreClinico`
+
+#### Fix — Motor Hierárquico v4.0 (8 caminhos + best-match)
+```js
+// Paths 1-2: DB[fA][fB] / DB[fB][fA]
+// Paths 3-4: DB[fA][$clsB] / DB[fB][$clsA]
+// Paths 5-6: DB[$clsA][fB] / DB[$clsB][fA]  ← NOVOS
+// Paths 7-8: DB[$clsA][$clsB] / DB[$clsB][$clsA]
+// Best-match: candidates.reduce((p,c) => c.dados.scoreClinico > p.dados.scoreClinico ? c : p)
+```
+
+#### Pares verificados após fix
+| Par digitado | Canonical resolvido | Resultado |
+|---|---|---|
+| Enalapril + Valsartana | captopril + losartana (via aliases) | ✅ CONTRAINDICADA |
+| Sertralina + Selegilina | sertralina + $classe_imaos | ✅ CONTRAINDICADA |
+| Varfarina + Ibuprofeno | varfarina + $classe_aines | ✅ ALTA |
+| Tadalafila + Isossorbida | tadalafila + isossorbida | ✅ CONTRAINDICADA |
+
+---
+
 ## 🚧 Próximos Passos
 
 ### Alta Prioridade
@@ -2929,4 +3225,3 @@ Este aplicativo é uma ferramenta de apoio à decisão clínica destinada **excl
 *© 2026 MedCases Pro — Todos os direitos reservados.*
 
 </div>
-
