@@ -1,0 +1,1997 @@
+/* ================================================================
+   MedCases Pro — BUILD 234 — PREMIUM DESIGN SYSTEM
+   style(calculator): premium design system and unified visual hierarchy
+
+   Referências: Apple HIG · Material Design 3 · Linear · Notion
+                Arc Browser · Raycast
+
+   ESCOPO: Somente UX, Layout e Design System.
+   NÃO altera: cálculos, fórmulas, banco de dados, adapters,
+               ClCr, eletrólitos, IA, lógica médica, performance.
+
+   ARQUITETURA:
+   ├── §1  CSS Custom Properties (Token System)
+   ├── §2  Hierarquia de Cards — três níveis (data-level)
+   ├── §3  Grid responsivo por nível
+   ├── §4  Paleta Nível 1 — Família Verde
+   ├── §5  Paleta Nível 2 — Família Azul Petróleo
+   ├── §6  Paleta Nível 3 — Família Cinza Chumbo
+   ├── §7  Card expandido — identidade de cor preservada
+   ├── §8  Tipografia refinada — dark/light
+   ├── §9  Componente Botão Unificado (.mc-btn)
+   ├── §10 Componente Input Unificado (.mc-input, 5 estados)
+   ├── §11 Microinterações GPU-friendly (só opacity+transform)
+   ├── §12 Modo Claro — paleta equivalente
+   ├── §13 Sombras discretas (zero glow, zero neon)
+   ├── §14 Hub-card trigger: espaçamento, tipografia, ícone
+   └── §15 Overrides de compatibilidade (substitui build233.css)
+================================================================ */
+
+
+/* ================================================================
+   §1 — CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+   Namespace --mc-* (MedCases)
+================================================================ */
+
+:root {
+  /* ── Spacing Scale ── */
+  --mc-space-1:  4px;
+  --mc-space-2:  8px;
+  --mc-space-3:  12px;
+  --mc-space-4:  16px;
+  --mc-space-5:  20px;
+  --mc-space-6:  24px;
+  --mc-space-7:  28px;
+  --mc-space-8:  32px;
+
+  /* ── Card Gap ── */
+  --mc-card-gap: 16px;
+
+  /* ── Title → Subtitle Gap ── */
+  --mc-title-sub-gap: 6px;
+
+  /* ── Internal Padding by Level ── */
+  --mc-pad-l1: 20px;    /* Level 1: Patient, ClCr, Drugs */
+  --mc-pad-l2: 16px;    /* Level 2: Interactions, Infusions, etc. */
+  --mc-pad-l3: 14px;    /* Level 3: Pediatrics, Pregnant */
+
+  /* ── Icon → Text Gap ── */
+  --mc-icon-text-gap: 16px;
+
+  /* ── Border Radius ── */
+  --mc-radius-xs:  6px;
+  --mc-radius-sm:  8px;
+  --mc-radius-md: 12px;
+  --mc-radius-lg: 16px;
+  --mc-radius-xl: 20px;
+
+  /* ── Typography ── */
+  --mc-font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                    "Inter", "Segoe UI", system-ui, sans-serif;
+
+  /* Hub card trigger */
+  --mc-card-name-size:  13.5px;
+  --mc-card-name-weight: 700;
+  --mc-card-desc-size:  10.5px;
+
+  /* Level-specific name sizes */
+  --mc-card-name-l1: 14.5px;
+  --mc-card-name-l2: 13.5px;
+  --mc-card-name-l3: 12.5px;
+
+  /* ── Dark Mode Typography ── */
+  --mc-text-title-dark:    #FFFFFF;
+  --mc-text-sub-dark:      rgba(255, 255, 255, 0.85);
+  --mc-text-muted-dark:    rgba(255, 255, 255, 0.55);
+
+  /* ── Light Mode Typography ── */
+  --mc-text-title-light:   #111827;
+  --mc-text-sub-light:     #4B5563;
+  --mc-text-muted-light:   #6B7280;
+
+  /* ── Animation Durations ── */
+  --mc-dur-fast:   100ms;  /* click scale */
+  --mc-dur-normal: 150ms;  /* accordion, fade-in */
+  --mc-dur-scroll: 200ms;  /* scroll auto */
+  --mc-dur-slow:   300ms;  /* field highlight */
+
+  /* ── Animation Easings ── */
+  --mc-ease-out:   cubic-bezier(0.0, 0.0, 0.2, 1);
+  --mc-ease-in:    cubic-bezier(0.4, 0.0, 1.0, 1);
+  --mc-ease-inout: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --mc-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Trigger Heights ── */
+  --mc-trigger-h-l1: 68px;  /* Level 1: maior destaque */
+  --mc-trigger-h-l2: 60px;  /* Level 2: padrão */
+  --mc-trigger-h-l3: 54px;  /* Level 3: discreto */
+
+  /* ── Icon Sizes ── */
+  --mc-ico-size-l1: 42px;
+  --mc-ico-size-l2: 36px;
+  --mc-ico-size-l3: 32px;
+  --mc-ico-font-l1: 18px;
+  --mc-ico-font-l2: 15px;
+  --mc-ico-font-l3: 13px;
+  --mc-ico-radius-l1: 13px;
+  --mc-ico-radius-l2: 10px;
+  --mc-ico-radius-l3: 9px;
+
+  /* ── Button ── */
+  --mc-btn-height:   40px;
+  --mc-btn-pad-v:    0px;
+  --mc-btn-pad-h:    16px;
+  --mc-btn-radius:   10px;
+  --mc-btn-font:     13.5px;
+  --mc-btn-weight:   600;
+
+  /* ── Input ── */
+  --mc-input-height:  42px;
+  --mc-input-pad-v:   10px;
+  --mc-input-pad-h:   12px;
+  --mc-input-radius:  9px;
+  --mc-input-font:    15px;  /* ≥16px para evitar zoom iOS */
+
+  /* ── Shadows (discretos, zero glow) ── */
+  --mc-shadow-sm:  0 1px 3px rgba(0,0,0,0.20), 0 1px 2px rgba(0,0,0,0.16);
+  --mc-shadow-md:  0 4px 12px rgba(0,0,0,0.22), 0 2px 6px rgba(0,0,0,0.14);
+  --mc-shadow-lg:  0 8px 24px rgba(0,0,0,0.26), 0 4px 10px rgba(0,0,0,0.16);
+
+  /* ── Level 1: Família Verde ── */
+  --mc-l1-patient-a:   #0d2416;  /* verde escuro */
+  --mc-l1-patient-b:   #0a3d22;  /* verde médio */
+  --mc-l1-clcr-a:      #072c26;  /* verde petróleo */
+  --mc-l1-clcr-b:      #0a4035;  /* verde clínico */
+  --mc-l1-drugs-a:     #0b2333;  /* verde azulado */
+  --mc-l1-drugs-b:     #0a3040;  /* verde profundo */
+
+  --mc-l1-accent-patient: #4ADE80;  /* verde vibrante para ícone/destaque */
+  --mc-l1-accent-clcr:    #34D399;  /* verde esmeralda */
+  --mc-l1-accent-drugs:   #2DD4BF;  /* verde-teal (azulado) */
+  --mc-l1-border-patient: rgba(74, 222, 128, 0.30);
+  --mc-l1-border-clcr:    rgba(52, 211, 153, 0.30);
+  --mc-l1-border-drugs:   rgba(45, 212, 191, 0.30);
+  --mc-l1-body-patient:   rgba(13, 36, 22, 0.65);
+  --mc-l1-body-clcr:      rgba(7, 44, 38, 0.65);
+  --mc-l1-body-drugs:     rgba(11, 35, 51, 0.65);
+
+  /* ── Level 2: Família Azul Petróleo ── */
+  --mc-l2-inter-a:    #0d1a2e;  /* azul petróleo */
+  --mc-l2-inter-b:    #0e2545;  /* azul clínico */
+  --mc-l2-infusao-a:  #0d1e2e;  /* azul petróleo quente */
+  --mc-l2-infusao-b:  #0f2c40;  /* azul médio */
+  --mc-l2-fluidos-a:  #082820;  /* verde-azulado */
+  --mc-l2-fluidos-b:  #0a3535;  /* azul petróleo */
+  --mc-l2-elec-a:     #0e1832;  /* azul violáceo */
+  --mc-l2-elec-b:     #111f45;  /* azul clínico */
+  --mc-l2-hemo-a:     #1a0810;  /* vinho discreto */
+  --mc-l2-hemo-b:     #0e1830;  /* azul petróleo */
+  --mc-l2-scores-a:   #111827;  /* grafite azulado */
+  --mc-l2-scores-b:   #0f1e36;  /* azul clínico */
+
+  --mc-l2-accent-inter:   #38BDF8;  /* azul clínico */
+  --mc-l2-accent-infusao: #22D3EE;  /* ciano */
+  --mc-l2-accent-fluidos: #34D399;  /* teal-verde */
+  --mc-l2-accent-elec:    #818CF8;  /* índigo */
+  --mc-l2-accent-hemo:    #FB7185;  /* rosa (legacy vermelho discreto) */
+  --mc-l2-accent-scores:  #94A3B8;  /* cinza azulado */
+
+  --mc-l2-border-inter:   rgba(56, 189, 248, 0.22);
+  --mc-l2-border-infusao: rgba(34, 211, 238, 0.22);
+  --mc-l2-border-fluidos: rgba(52, 211, 153, 0.22);
+  --mc-l2-border-elec:    rgba(129, 140, 248, 0.22);
+  --mc-l2-border-hemo:    rgba(251, 113, 133, 0.22);
+  --mc-l2-border-scores:  rgba(148, 163, 184, 0.22);
+
+  /* ── Level 3: Família Cinza Chumbo ── */
+  --mc-l3-ped-a:    #141b24;   /* grafite */
+  --mc-l3-ped-b:    #1a2433;   /* cinza profundo */
+  --mc-l3-gest-a:   #1c1e24;   /* cinza chumbo */
+  --mc-l3-gest-b:   #1e2630;   /* grafite */
+  --mc-l3-accent-ped:  #64748B;
+  --mc-l3-accent-gest: #94A3B8;
+  --mc-l3-border-ped:  rgba(100, 116, 139, 0.25);
+  --mc-l3-border-gest: rgba(148, 163, 184, 0.20);
+}
+
+
+/* ================================================================
+   §2 — HIERARQUIA DE CARDS: data-level attribute
+   Nível 1: maior peso visual
+   Nível 2: peso padrão
+   Nível 3: peso discreto
+================================================================ */
+
+/* ── Nível 1 — Trigger principal ── */
+.hub-card[data-level="1"] .hub-card-trigger {
+  min-height: var(--mc-trigger-h-l1) !important;
+  padding: 0 20px !important;
+  gap: var(--mc-icon-text-gap) !important;
+}
+
+.hub-card[data-level="1"] .hub-card-ico {
+  width:  var(--mc-ico-size-l1) !important;
+  height: var(--mc-ico-size-l1) !important;
+  font-size: var(--mc-ico-font-l1) !important;
+  border-radius: var(--mc-ico-radius-l1) !important;
+  flex-shrink: 0 !important;
+}
+
+.hub-card[data-level="1"] .hub-card-name {
+  font-size: var(--mc-card-name-l1) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.2px !important;
+}
+
+.hub-card[data-level="1"] .hub-card-desc {
+  font-size: 11px !important;
+  margin-top: var(--mc-title-sub-gap) !important;
+}
+
+.hub-card[data-level="1"] .hub-card-inner {
+  padding: var(--mc-pad-l1) !important;
+}
+
+/* ── Nível 2 — Trigger padrão ── */
+.hub-card[data-level="2"] .hub-card-trigger {
+  min-height: var(--mc-trigger-h-l2) !important;
+  padding: 0 16px !important;
+  gap: var(--mc-icon-text-gap) !important;
+}
+
+.hub-card[data-level="2"] .hub-card-ico {
+  width:  var(--mc-ico-size-l2) !important;
+  height: var(--mc-ico-size-l2) !important;
+  font-size: var(--mc-ico-font-l2) !important;
+  border-radius: var(--mc-ico-radius-l2) !important;
+  flex-shrink: 0 !important;
+}
+
+.hub-card[data-level="2"] .hub-card-name {
+  font-size: var(--mc-card-name-l2) !important;
+  font-weight: 700 !important;
+}
+
+.hub-card[data-level="2"] .hub-card-desc {
+  font-size: 10.5px !important;
+  margin-top: var(--mc-title-sub-gap) !important;
+}
+
+.hub-card[data-level="2"] .hub-card-inner {
+  padding: var(--mc-pad-l2) !important;
+}
+
+/* ── Nível 3 — Trigger discreto ── */
+.hub-card[data-level="3"] .hub-card-trigger {
+  min-height: var(--mc-trigger-h-l3) !important;
+  padding: 0 14px !important;
+  gap: 12px !important;
+}
+
+.hub-card[data-level="3"] .hub-card-ico {
+  width:  var(--mc-ico-size-l3) !important;
+  height: var(--mc-ico-size-l3) !important;
+  font-size: var(--mc-ico-font-l3) !important;
+  border-radius: var(--mc-ico-radius-l3) !important;
+  flex-shrink: 0 !important;
+}
+
+.hub-card[data-level="3"] .hub-card-name {
+  font-size: var(--mc-card-name-l3) !important;
+  font-weight: 600 !important;
+}
+
+.hub-card[data-level="3"] .hub-card-desc {
+  font-size: 10px !important;
+  margin-top: var(--mc-title-sub-gap) !important;
+}
+
+.hub-card[data-level="3"] .hub-card-inner {
+  padding: var(--mc-pad-l3) !important;
+}
+
+
+/* ================================================================
+   §3 — GRID RESPONSIVO POR NÍVEL
+   Substituição do hub-row/hub-row--full por CSS Grid inteligente
+================================================================ */
+
+/* ── Container do hub accordion ── */
+.hub-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mc-card-gap) !important;
+  width: 100%;
+}
+
+/* ── Nível 1 wraps (full-width individual no mobile) ── */
+.hub-row--full {
+  width: 100%;
+}
+
+/* ── Linhas de cards padrão (hub-row com 2 itens) ── */
+.hub-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--mc-card-gap);
+  width: 100%;
+  align-items: start;
+}
+
+/* iPhone < 360px: forçar 1 coluna no nível 2 se necessário */
+@media (max-width: 359px) {
+  .hub-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Tablet e Desktop (≥ 768px) ── */
+@media (min-width: 768px) {
+  /* Nível 1: 2 colunas — patient + clcr na mesma linha */
+  .hub-l1-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--mc-card-gap);
+    align-items: start;
+  }
+
+  /* Nível 2: 2 colunas (build235 define grid; aqui só gap/align) */
+  .hub-l2-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--mc-card-gap);
+    align-items: start;
+  }
+
+  /* Nível 3: 2 colunas (sempre) */
+  .hub-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── Desktop largo (≥ 1024px) ── */
+@media (min-width: 1024px) {
+  .hub-l2-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--mc-card-gap);
+  }
+  /* hub-card-inner padding maior em desktop */
+  .hub-card[data-level="1"] .hub-card-inner {
+    padding: 22px 24px !important;
+  }
+  .hub-card[data-level="2"] .hub-card-inner {
+    padding: 18px 20px !important;
+  }
+  .hub-card[data-level="3"] .hub-card-inner {
+    padding: 16px 18px !important;
+  }
+}
+
+
+/* ================================================================
+   §4 — PALETA NÍVEL 1 — FAMÍLIA VERDE
+   Patient (verde escuro→médio), ClCr (verde petróleo→clínico),
+   Fármacos (verde azulado→profundo)
+================================================================ */
+
+/* ── DADOS DO PACIENTE — Verde escuro ── */
+#hub-card-patient .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l1-patient-a) 0%,
+    var(--mc-l1-patient-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l1-border-patient) !important;
+}
+#hub-card-patient.is-open .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    #0f2c1c 0%,
+    #0c4528 100%
+  ) !important;
+}
+#hub-card-patient .hub-card-ico {
+  background: rgba(74, 222, 128, 0.14) !important;
+  color: var(--mc-l1-accent-patient) !important;
+}
+#hub-card-patient .hub-card-name {
+  color: #86EFAC !important;  /* verde claro, alta legibilidade */
+}
+#hub-card-patient .hub-card-desc {
+  color: rgba(134, 239, 172, 0.80) !important;
+}
+#hub-card-patient .hub-card-chevron {
+  color: rgba(134, 239, 172, 0.60) !important;
+}
+#hub-card-patient {
+  border-color: var(--mc-l1-border-patient) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-patient.is-open {
+  border-color: rgba(74, 222, 128, 0.50) !important;
+  box-shadow: var(--mc-shadow-md) !important;
+}
+/* Body preserva família verde */
+#hub-card-patient .hub-card-body {
+  background: var(--mc-l1-body-patient) !important;
+}
+
+/* ── CLCR RENAL — Verde petróleo ── */
+#hub-card-clcr .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l1-clcr-a) 0%,
+    var(--mc-l1-clcr-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l1-border-clcr) !important;
+}
+#hub-card-clcr.is-open .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    #093832 0%,
+    #0c4a3e 100%
+  ) !important;
+}
+#hub-card-clcr .hub-card-ico {
+  background: rgba(52, 211, 153, 0.14) !important;
+  color: var(--mc-l1-accent-clcr) !important;
+}
+#hub-card-clcr .hub-card-name {
+  color: #A7F3D0 !important;
+}
+#hub-card-clcr .hub-card-desc {
+  color: rgba(167, 243, 208, 0.80) !important;
+}
+#hub-card-clcr .hub-card-chevron {
+  color: rgba(167, 243, 208, 0.60) !important;
+}
+#hub-card-clcr {
+  border-color: var(--mc-l1-border-clcr) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-clcr.is-open {
+  border-color: rgba(52, 211, 153, 0.50) !important;
+  box-shadow: var(--mc-shadow-md) !important;
+}
+/* Body preserva família verde petróleo */
+#hub-card-clcr .hub-card-body {
+  background: rgba(7, 44, 38, 0.65) !important;
+}
+
+/* ── FÁRMACOS — Verde azulado ── */
+#hub-card-farmacos .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l1-drugs-a) 0%,
+    var(--mc-l1-drugs-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l1-border-drugs) !important;
+}
+#hub-card-farmacos.is-open .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    #0d2a3c 0%,
+    #0c3848 100%
+  ) !important;
+}
+#hub-card-farmacos .hub-card-ico {
+  background: rgba(45, 212, 191, 0.14) !important;
+  color: var(--mc-l1-accent-drugs) !important;
+}
+#hub-card-farmacos .hub-card-name {
+  color: #99F6E4 !important;  /* teal-verde claro */
+}
+#hub-card-farmacos .hub-card-desc {
+  color: rgba(153, 246, 228, 0.80) !important;
+}
+#hub-card-farmacos .hub-card-chevron {
+  color: rgba(153, 246, 228, 0.60) !important;
+}
+#hub-card-farmacos {
+  border-color: var(--mc-l1-border-drugs) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-farmacos.is-open {
+  border-color: rgba(45, 212, 191, 0.50) !important;
+  box-shadow: var(--mc-shadow-md) !important;
+}
+/* Body preserva família verde azulado */
+#hub-card-farmacos .hub-card-body {
+  background: rgba(11, 35, 51, 0.65) !important;
+}
+
+
+/* ================================================================
+   §5 — PALETA NÍVEL 2 — FAMÍLIA AZUL PETRÓLEO
+   Gradiente de identidade 4–8% de diferença visual.
+   Zero glow, zero neon.
+================================================================ */
+
+/* ── INTERAÇÕES — Azul petróleo clínico ── */
+#hub-card-interacoes .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l2-inter-a) 0%,
+    var(--mc-l2-inter-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l2-border-inter) !important;
+}
+#hub-card-interacoes.is-open .hub-card-trigger {
+  background: linear-gradient(148deg, #101e34 0%, #112a4e 100%) !important;
+}
+#hub-card-interacoes .hub-card-ico {
+  background: rgba(56, 189, 248, 0.12) !important;
+  color: var(--mc-l2-accent-inter) !important;
+}
+#hub-card-interacoes .hub-card-name {
+  color: #BAE6FD !important;
+}
+#hub-card-interacoes .hub-card-desc {
+  color: rgba(186, 230, 253, 0.78) !important;
+}
+#hub-card-interacoes .hub-card-chevron {
+  color: rgba(186, 230, 253, 0.55) !important;
+}
+#hub-card-interacoes {
+  border-color: var(--mc-l2-border-inter) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-interacoes.is-open {
+  border-color: rgba(56, 189, 248, 0.40) !important;
+  box-shadow: var(--mc-shadow-md) !important;
+}
+#hub-card-interacoes .hub-card-body {
+  background: rgba(13, 26, 46, 0.65) !important;
+}
+
+/* ── INFUSÃO — Azul petróleo quente ── */
+#hub-card-infusao .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l2-infusao-a) 0%,
+    var(--mc-l2-infusao-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l2-border-infusao) !important;
+}
+#hub-card-infusao.is-open .hub-card-trigger {
+  background: linear-gradient(148deg, #112232 0%, #123348 100%) !important;
+}
+#hub-card-infusao .hub-card-ico {
+  background: rgba(34, 211, 238, 0.12) !important;
+  color: var(--mc-l2-accent-infusao) !important;
+}
+#hub-card-infusao .hub-card-name {
+  color: #A5F3FC !important;
+}
+#hub-card-infusao .hub-card-desc {
+  color: rgba(165, 243, 252, 0.78) !important;
+}
+#hub-card-infusao .hub-card-chevron {
+  color: rgba(165, 243, 252, 0.55) !important;
+}
+#hub-card-infusao {
+  border-color: var(--mc-l2-border-infusao) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-infusao.is-open {
+  border-color: rgba(34, 211, 238, 0.40) !important;
+  box-shadow: var(--mc-shadow-md) !important;
+}
+#hub-card-infusao .hub-card-body {
+  background: rgba(13, 30, 46, 0.65) !important;
+}
+
+/* ── FLUIDOS — Verde azulado ── */
+#hub-card-fluidos .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l2-fluidos-a) 0%,
+    var(--mc-l2-fluidos-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l2-border-fluidos) !important;
+}
+#hub-card-fluidos.is-open .hub-card-trigger {
+  background: linear-gradient(148deg, #092e24 0%, #0c3c3c 100%) !important;
+}
+#hub-card-fluidos .hub-card-ico {
+  background: rgba(52, 211, 153, 0.12) !important;
+  color: var(--mc-l2-accent-fluidos) !important;
+}
+#hub-card-fluidos .hub-card-name {
+  color: #A7F3D0 !important;
+}
+#hub-card-fluidos .hub-card-desc {
+  color: rgba(167, 243, 208, 0.78) !important;
+}
+#hub-card-fluidos .hub-card-chevron {
+  color: rgba(167, 243, 208, 0.55) !important;
+}
+#hub-card-fluidos {
+  border-color: var(--mc-l2-border-fluidos) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-fluidos.is-open {
+  border-color: rgba(52, 211, 153, 0.40) !important;
+  box-shadow: var(--mc-shadow-md) !important;
+}
+#hub-card-fluidos .hub-card-body {
+  background: rgba(8, 40, 32, 0.65) !important;
+}
+
+/* ── ELETRÓLITOS — Azul violáceo ── */
+#hub-card-eletrolitos .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l2-elec-a) 0%,
+    var(--mc-l2-elec-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l2-border-elec) !important;
+}
+#hub-card-eletrolitos.is-open .hub-card-trigger {
+  background: linear-gradient(148deg, #111c38 0%, #142348 100%) !important;
+}
+#hub-card-eletrolitos .hub-card-ico {
+  background: rgba(129, 140, 248, 0.12) !important;
+  color: var(--mc-l2-accent-elec) !important;
+}
+#hub-card-eletrolitos .hub-card-name {
+  color: #C7D2FE !important;
+}
+#hub-card-eletrolitos .hub-card-desc {
+  color: rgba(199, 210, 254, 0.78) !important;
+}
+#hub-card-eletrolitos .hub-card-chevron {
+  color: rgba(199, 210, 254, 0.55) !important;
+}
+#hub-card-eletrolitos {
+  border-color: var(--mc-l2-border-elec) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-eletrolitos.is-open {
+  border-color: rgba(129, 140, 248, 0.40) !important;
+  box-shadow: var(--mc-shadow-md) !important;
+}
+#hub-card-eletrolitos .hub-card-body {
+  background: rgba(14, 24, 50, 0.65) !important;
+}
+
+/* ── HEMODINÂMICA — Vinho discreto → Azul petróleo ── */
+/* OBS: Preservamos o vermelho dark do Build 233 como identidade,
+   mas alinhamos o gradiente ao azul petróleo conforme spec */
+#hub-card-hemodinamica .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l2-hemo-a) 0%,
+    var(--mc-l2-hemo-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l2-border-hemo) !important;
+}
+#hub-card-hemodinamica.is-open .hub-card-trigger {
+  background: linear-gradient(148deg, #200b14 0%, #111e34 100%) !important;
+}
+#hub-card-hemodinamica .hub-card-ico {
+  background: rgba(251, 113, 133, 0.12) !important;
+  color: var(--mc-l2-accent-hemo) !important;
+}
+#hub-card-hemodinamica .hub-card-name {
+  color: #FCA5A5 !important;
+}
+#hub-card-hemodinamica .hub-card-desc {
+  color: rgba(252, 165, 165, 0.78) !important;
+}
+#hub-card-hemodinamica .hub-card-chevron {
+  color: rgba(252, 165, 165, 0.55) !important;
+}
+#hub-card-hemodinamica {
+  border-color: var(--mc-l2-border-hemo) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-hemodinamica.is-open {
+  border-color: rgba(251, 113, 133, 0.40) !important;
+  box-shadow: var(--mc-shadow-md) !important;
+}
+#hub-card-hemodinamica .hub-card-body {
+  background: rgba(26, 8, 16, 0.70) !important;
+}
+
+/* ── SCORES — Grafite azulado ── */
+#hub-card-scores .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l2-scores-a) 0%,
+    var(--mc-l2-scores-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l2-border-scores) !important;
+}
+#hub-card-scores.is-open .hub-card-trigger {
+  background: linear-gradient(148deg, #141f2c 0%, #132240 100%) !important;
+}
+#hub-card-scores .hub-card-ico {
+  background: rgba(148, 163, 184, 0.12) !important;
+  color: var(--mc-l2-accent-scores) !important;
+}
+#hub-card-scores .hub-card-name {
+  color: #CBD5E1 !important;
+}
+#hub-card-scores .hub-card-desc {
+  color: rgba(203, 213, 225, 0.78) !important;
+}
+#hub-card-scores .hub-card-chevron {
+  color: rgba(203, 213, 225, 0.55) !important;
+}
+#hub-card-scores {
+  border-color: var(--mc-l2-border-scores) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-scores.is-open {
+  border-color: rgba(148, 163, 184, 0.38) !important;
+  box-shadow: var(--mc-shadow-md) !important;
+}
+#hub-card-scores .hub-card-body {
+  background: rgba(17, 24, 39, 0.72) !important;
+}
+
+
+/* ================================================================
+   §6 — PALETA NÍVEL 3 — FAMÍLIA CINZA CHUMBO
+   Pediatria (grafite→cinza profundo), Gestantes (cinza chumbo→grafite)
+================================================================ */
+
+/* ── PEDIATRIA — Grafite → Cinza profundo ── */
+#hub-card-pediatria .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l3-ped-a) 0%,
+    var(--mc-l3-ped-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l3-border-ped) !important;
+}
+#hub-card-pediatria.is-open .hub-card-trigger {
+  background: linear-gradient(148deg, #171e28 0%, #1e2a38 100%) !important;
+}
+#hub-card-pediatria .hub-card-ico {
+  background: rgba(100, 116, 139, 0.14) !important;
+  color: var(--mc-l3-accent-ped) !important;
+}
+#hub-card-pediatria .hub-card-name {
+  color: #CBD5E1 !important;
+}
+#hub-card-pediatria .hub-card-desc {
+  color: rgba(203, 213, 225, 0.72) !important;
+}
+#hub-card-pediatria .hub-card-chevron {
+  color: rgba(203, 213, 225, 0.48) !important;
+}
+#hub-card-pediatria {
+  border-color: var(--mc-l3-border-ped) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-pediatria.is-open {
+  border-color: rgba(100, 116, 139, 0.42) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-pediatria .hub-card-body {
+  background: rgba(20, 27, 36, 0.65) !important;
+}
+
+/* ── GESTANTES — Cinza chumbo → Grafite ── */
+#hub-card-gestante .hub-card-trigger {
+  background: linear-gradient(
+    148deg,
+    var(--mc-l3-gest-a) 0%,
+    var(--mc-l3-gest-b) 100%
+  ) !important;
+  border-bottom: 1px solid var(--mc-l3-border-gest) !important;
+}
+#hub-card-gestante.is-open .hub-card-trigger {
+  background: linear-gradient(148deg, #20222a 0%, #222c38 100%) !important;
+}
+#hub-card-gestante .hub-card-ico {
+  background: rgba(148, 163, 184, 0.12) !important;
+  color: var(--mc-l3-accent-gest) !important;
+}
+#hub-card-gestante .hub-card-name {
+  color: #E2E8F0 !important;
+}
+#hub-card-gestante .hub-card-desc {
+  color: rgba(226, 232, 240, 0.68) !important;
+}
+#hub-card-gestante .hub-card-chevron {
+  color: rgba(226, 232, 240, 0.45) !important;
+}
+#hub-card-gestante {
+  border-color: var(--mc-l3-border-gest) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-gestante.is-open {
+  border-color: rgba(148, 163, 184, 0.35) !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+}
+#hub-card-gestante .hub-card-body {
+  background: rgba(28, 30, 36, 0.65) !important;
+}
+
+
+/* ================================================================
+   §7 — CARD EXPANDIDO: IDENTIDADE DE COR PRESERVADA
+   Slots internos (hub-hemo-slot, hub-clcr-slot, etc.) devem
+   herdar a família de cor do card pai.
+   REGRA: card verde → corpo verde. Nunca azul dentro de verde.
+================================================================ */
+
+/* ── Nível 1: Hemodinâmica — body interno vinho/dark ── */
+#hub-card-hemodinamica .hub-card-inner,
+#hub-hemo-slot .card {
+  background: linear-gradient(160deg, #1e0912, #14101e) !important;
+  border-color: rgba(251, 113, 133, 0.20) !important;
+}
+
+/* ── Nível 1: Patient — body interno verde escuro ── */
+#hub-card-patient .hub-card-inner {
+  background: rgba(13, 36, 22, 0.50) !important;
+}
+
+/* ── Nível 1: ClCr — body interno verde petróleo ── */
+#hub-card-clcr .hub-card-inner {
+  background: rgba(7, 44, 38, 0.50) !important;
+}
+
+/* ── Nível 1: Fármacos — body interno verde azulado ── */
+#hub-card-farmacos .hub-card-inner {
+  background: rgba(11, 35, 51, 0.50) !important;
+}
+
+/* ── Nível 2: Interações — body azul petróleo ── */
+#hub-card-interacoes .hub-card-inner {
+  background: rgba(13, 26, 46, 0.50) !important;
+}
+
+/* ── Nível 2: Infusão — body azul quente ── */
+#hub-card-infusao .hub-card-inner {
+  background: rgba(13, 30, 46, 0.50) !important;
+}
+
+/* ── Nível 2: Fluidos — body verde azulado ── */
+#hub-card-fluidos .hub-card-inner {
+  background: rgba(8, 40, 32, 0.50) !important;
+}
+
+/* ── Nível 2: Eletrólitos — body azul violáceo ── */
+#hub-card-eletrolitos .hub-card-inner {
+  background: rgba(14, 24, 50, 0.50) !important;
+}
+
+/* ── Nível 2: Scores — body grafite azulado ── */
+#hub-card-scores .hub-card-inner {
+  background: rgba(17, 24, 39, 0.50) !important;
+}
+
+/* ── Nível 3: Pediatria — body grafite ── */
+#hub-card-pediatria .hub-card-inner {
+  background: rgba(20, 27, 36, 0.50) !important;
+}
+
+/* ── Nível 3: Gestantes — body chumbo ── */
+#hub-card-gestante .hub-card-inner {
+  background: rgba(28, 30, 36, 0.50) !important;
+}
+
+/* ── Card interno do hemodinâmica (slot lazy-mounted) ── */
+#hub-hemo-slot .card,
+#hub-body-hemodinamica .card {
+  background: linear-gradient(160deg, #1e0912 0%, #12101e 100%) !important;
+  border-color: rgba(251, 113, 133, 0.22) !important;
+  box-shadow: none !important;
+}
+
+#hub-hemo-slot .card-title,
+#hub-body-hemodinamica .card-title {
+  color: #FCA5A5 !important;
+  background: linear-gradient(135deg, rgba(200, 38, 60, 0.22), rgba(150, 28, 45, 0.15)) !important;
+  border-bottom: 1px solid rgba(251, 113, 133, 0.18) !important;
+}
+
+#hub-hemo-slot .results-grid,
+#hub-body-hemodinamica .results-grid {
+  background: rgba(200, 38, 60, 0.06) !important;
+  border-color: rgba(251, 113, 133, 0.12) !important;
+}
+
+#hub-hemo-slot .result-label,
+#hub-body-hemodinamica .result-label {
+  color: rgba(252, 165, 165, 0.75) !important;
+}
+
+#hub-hemo-slot .result-value,
+#hub-body-hemodinamica .result-value {
+  color: #FCA5A5 !important;
+}
+
+/* ── Inputs da hemodinâmica ── */
+#hub-hemo-slot input,
+#hub-body-hemodinamica input {
+  border-color: rgba(251, 113, 133, 0.25) !important;
+}
+#hub-hemo-slot input:focus,
+#hub-body-hemodinamica input:focus {
+  border-color: rgba(251, 113, 133, 0.55) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Resultado fluid — família verde */
+#fluid-result .card,
+.fluid-result-card {
+  border-color: rgba(52, 211, 153, 0.22) !important;
+}
+#fluid-result .card-title {
+  color: #6EE7B7 !important;
+}
+
+
+/* ================================================================
+   §8 — TIPOGRAFIA REFINADA
+   Dark: #FFFFFF / rgba(255,255,255,0.85)
+   Light: #111827 / #4B5563
+   Nunca cinza no modo escuro.
+================================================================ */
+
+/* ── Modo escuro (padrão) — dentro dos módulos ── */
+.hub-card-body .hm-label,
+.hub-card-body label {
+  color: var(--mc-text-sub-dark) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.hub-card-body .hm-label-unit {
+  color: var(--mc-text-muted-dark) !important;
+  font-size: 10.5px !important;
+}
+
+.hub-card-body .card-title {
+  color: var(--mc-text-title-dark) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  margin-bottom: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+}
+
+/* ── Chevron — rotação ao abrir ── */
+.hub-card.is-open .hub-card-chevron {
+  transform: rotate(180deg) !important;
+  /* cor já definida por cada card acima */
+}
+
+/* ── Hub card trigger: nome e desc sempre branco no dark ── */
+.hub-card-name {
+  color: var(--mc-text-title-dark) !important;
+}
+.hub-card-desc {
+  color: var(--mc-text-sub-dark) !important;
+  margin-top: var(--mc-title-sub-gap) !important;
+}
+
+
+/* ================================================================
+   §9 — COMPONENTE BOTÃO UNIFICADO (.mc-btn)
+   Um único componente para toda a Calculadora.
+   Mesmo height, padding, radius, font, animação, estados.
+================================================================ */
+
+.mc-btn {
+  /* Layout */
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             6px;
+  height:          var(--mc-btn-height);
+  padding:         var(--mc-btn-pad-v) var(--mc-btn-pad-h);
+  border-radius:   var(--mc-btn-radius);
+  border:          none;
+  cursor:          pointer;
+  text-decoration: none;
+  white-space:     nowrap;
+  box-sizing:      border-box;
+
+  /* Tipografia */
+  font-family: var(--mc-font-family);
+  font-size:   var(--mc-btn-font);
+  font-weight: var(--mc-btn-weight);
+  line-height: 1;
+
+  /* Transição GPU-friendly: apenas opacity + transform */
+  transition:
+    opacity  var(--mc-dur-normal) var(--mc-ease-out),
+    transform var(--mc-dur-fast) var(--mc-ease-out);
+
+  /* Foco acessível */
+  outline: none;
+}
+
+/* ── Variante primária ── */
+.mc-btn--primary {
+  background: linear-gradient(135deg, #0d3d2a, #0a5235);
+  color: #86EFAC;
+  border: 1px solid rgba(74, 222, 128, 0.30);
+}
+.mc-btn--primary:hover {
+  opacity: 0.92;
+}
+.mc-btn--primary:focus-visible {
+  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.40);
+}
+.mc-btn--primary:active {
+  transform: scale(0.985);
+  opacity: 0.85;
+}
+.mc-btn--primary:disabled,
+.mc-btn--primary[disabled] {
+  opacity: 0.38;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Variante secundária / ghost ── */
+.mc-btn--ghost {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.mc-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+.mc-btn--ghost:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.20);
+}
+.mc-btn--ghost:active {
+  transform: scale(0.985);
+  opacity: 0.80;
+}
+.mc-btn--ghost:disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+}
+
+/* ── Variante danger (limpar / reset) ── */
+.mc-btn--danger {
+  background: rgba(251, 113, 133, 0.10);
+  color: #FB7185;
+  border: 1px solid rgba(251, 113, 133, 0.22);
+}
+.mc-btn--danger:hover   { opacity: 0.88; }
+.mc-btn--danger:active  { transform: scale(0.985); opacity: 0.78; }
+.mc-btn--danger:disabled { opacity: 0.32; cursor: not-allowed; }
+
+/* ── Botões legados: hm-btn, hm-btn--primary, hm-btn--ghost ── */
+/* Aplicar tokens sem quebrar lógica existente */
+.hm-btn {
+  display:         inline-flex !important;
+  align-items:     center !important;
+  justify-content: center !important;
+  gap:             6px !important;
+  height:          var(--mc-btn-height) !important;
+  padding:         0 var(--mc-btn-pad-h) !important;
+  border-radius:   var(--mc-btn-radius) !important;
+  font-family:     var(--mc-font-family) !important;
+  font-size:       var(--mc-btn-font) !important;
+  font-weight:     var(--mc-btn-weight) !important;
+  cursor:          pointer !important;
+  border:          none !important;
+  transition:
+    opacity  var(--mc-dur-normal) var(--mc-ease-out),
+    transform var(--mc-dur-fast) var(--mc-ease-out) !important;
+  white-space:     nowrap !important;
+  outline:         none !important;
+}
+.hm-btn:active {
+  transform: scale(0.985) !important;
+  opacity: 0.85 !important;
+}
+.hm-btn:disabled,
+.hm-btn[disabled] {
+  opacity: 0.36 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.hm-btn--primary {
+  background: linear-gradient(135deg, rgba(14, 60, 42, 0.95), rgba(10, 72, 50, 0.90)) !important;
+  color: #6EE7B7 !important;
+  border: 1px solid rgba(52, 211, 153, 0.28) !important;
+}
+.hm-btn--primary:hover { opacity: 0.90 !important; }
+.hm-btn--primary:focus-visible {
+  box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.35) !important;
+}
+
+.hm-btn--ghost {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+}
+.hm-btn--ghost:hover { background: rgba(255, 255, 255, 0.09) !important; }
+
+/* ── Hub trigger — clique suave ── */
+.hub-card-trigger {
+  transition:
+    opacity  var(--mc-dur-normal) var(--mc-ease-out),
+    transform var(--mc-dur-fast) var(--mc-ease-out) !important;
+  cursor: pointer !important;
+  border: none !important;
+  width: 100% !important;
+  text-align: left !important;
+  display: flex !important;
+  align-items: center !important;
+  border-radius: inherit !important;
+}
+.hub-card-trigger:active {
+  transform: scale(0.985) !important;
+  opacity: 0.90 !important;
+}
+
+
+/* ================================================================
+   §10 — COMPONENTE INPUT UNIFICADO
+   5 estados: normal, focus, filled, readonly, error
+   Todos iguais entre módulos.
+   font-size ≥ 16px para evitar zoom automático no iOS.
+================================================================ */
+
+/* ── Estado Base (normal) ── */
+.mc-input,
+.hm-input,
+.hm-field-input,
+.elec2-field-input,
+input[type="text"].elec2-field-input,
+input[type="number"].hm-input {
+  -webkit-appearance: none !important;
+  appearance:         none !important;
+  display:            block !important;
+  width:              100% !important;
+  height:             var(--mc-input-height) !important;
+  padding:            var(--mc-input-pad-v) var(--mc-input-pad-h) !important;
+  border-radius:      var(--mc-input-radius) !important;
+  border:             1px solid rgba(255, 255, 255, 0.10) !important;
+  background:         rgba(255, 255, 255, 0.05) !important;
+  color:              var(--mc-text-title-dark) !important;
+  font-family:        var(--mc-font-family) !important;
+  font-size:          var(--mc-input-font) !important;  /* ≥16px — previne zoom iOS */
+  font-weight:        400 !important;
+  line-height:        1 !important;
+  box-sizing:         border-box !important;
+  outline:            none !important;
+  /* Transição GPU-friendly: apenas opacity */
+  transition:         opacity var(--mc-dur-slow) var(--mc-ease-out) !important;
+}
+
+/* Placeholder */
+.mc-input::placeholder,
+.hm-input::placeholder,
+.hm-field-input::placeholder,
+.elec2-field-input::placeholder {
+  color: rgba(255, 255, 255, 0.28) !important;
+  font-size: 14px !important;
+}
+
+/* ── Estado Focus ── */
+.mc-input:focus,
+.hm-input:focus,
+.hm-field-input:focus,
+.elec2-field-input:focus,
+input[type="text"].elec2-field-input:focus,
+input[type="number"].hm-input:focus {
+  border-color:  rgba(255, 255, 255, 0.30) !important;
+  background:    rgba(255, 255, 255, 0.08) !important;
+  outline:       none !important;
+  box-shadow:    none !important;  /* zero glow */
+}
+
+/* ── Estado Filled (via atributo data-filled="true") ── */
+.mc-input[data-filled="true"],
+.hm-input[data-filled="true"],
+.hm-field-input[data-filled="true"] {
+  border-color:  rgba(255, 255, 255, 0.20) !important;
+  background:    rgba(255, 255, 255, 0.07) !important;
+}
+
+/* ── Estado Readonly ── */
+.mc-input[readonly],
+.hm-input[readonly],
+.hm-field-input[readonly],
+.elec2-field-input[readonly] {
+  opacity:       0.55 !important;
+  cursor:        default !important;
+  background:    rgba(255, 255, 255, 0.03) !important;
+  border-color:  rgba(255, 255, 255, 0.07) !important;
+}
+
+/* ── Estado Error ── */
+.mc-input.is-error,
+.hm-input.is-error,
+.hm-field-input.is-error,
+.elec2-field-input.is-error,
+input.field-highlight {
+  border-color:  rgba(251, 113, 133, 0.55) !important;
+  background:    rgba(251, 113, 133, 0.07) !important;
+  /* Highlight suave: fade 300ms — GPU friendly (só opacity) */
+  opacity: 1 !important;
+}
+
+/* ── Field Highlight (obrigatório não preenchido) ── */
+/* GPU-friendly: anima opacity via keyframes, não box-shadow */
+@keyframes mc-field-pulse {
+  0%, 100% { opacity: 1; }
+  40%       { opacity: 0.60; }
+}
+input.field-highlight {
+  animation: mc-field-pulse var(--mc-dur-slow) var(--mc-ease-inout) 2 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove spinners de número */
+.mc-input[type="number"]::-webkit-inner-spin-button,
+.mc-input[type="number"]::-webkit-outer-spin-button,
+.hm-input[type="number"]::-webkit-inner-spin-button,
+.hm-input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+.mc-input[type="number"],
+.hm-input[type="number"],
+input[type="number"] {
+  -moz-appearance: textfield !important;
+}
+
+
+/* ================================================================
+   §11 — MICROINTERAÇÕES GPU-FRIENDLY
+   Somente opacity + transform.
+   NUNCA: height, box-shadow, layout thrashing.
+================================================================ */
+
+/* ── Hub Card Body — fade-in ao abrir ── */
+.hub-card-body {
+  display: none !important;
+  overflow: hidden !important;
+}
+.hub-card.is-open .hub-card-body {
+  display: block !important;
+}
+.hub-card.is-open .hub-card-inner {
+  animation: mc-body-enter var(--mc-dur-normal) var(--mc-ease-out) both !important;
+}
+
+@keyframes mc-body-enter {
+  from {
+    opacity:   0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Resultado inline — fade-in 150ms ── */
+#hm-drug-result,
+#calc-drug-result,
+.hm-inline-result {
+  animation: mc-fadein var(--mc-dur-normal) var(--mc-ease-out) both !important;
+}
+
+@keyframes mc-fadein {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Resultados de cálculo — fade-in ── */
+.drug-result-card,
+.elec2-result-block,
+.hm-result-pills,
+.results-grid,
+#hm-result-pills {
+  animation: mc-fadein var(--mc-dur-normal) var(--mc-ease-out) both !important;
+}
+
+/* ── Chevron — rotate 180° smooth ── */
+.hub-card-chevron {
+  transition: transform var(--mc-dur-normal) var(--mc-ease-out),
+              opacity  var(--mc-dur-normal) var(--mc-ease-out) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* ── Hub card ícone — scale ao abrir ── */
+.hub-card.is-open .hub-card-ico {
+  transform: scale(1.06) !important;
+}
+.hub-card-ico {
+  transition: transform var(--mc-dur-normal) var(--mc-ease-spring) !important;
+}
+
+/* ── Hover em desktop (filtro brightness — não altera layout) ── */
+@media (hover: hover) {
+  .hub-card-trigger:hover {
+    filter: brightness(1.07) !important;
+  }
+}
+
+/* ── Scroll suave ── */
+#scroll-content,
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* ── Drug items — hover suave ── */
+.hm-drug-item {
+  cursor: pointer !important;
+  transition: opacity var(--mc-dur-normal) var(--mc-ease-out) !important;
+}
+.hm-drug-item:hover,
+.hm-drug-item:active {
+  opacity: 0.80 !important;
+}
+
+/* ── Toast ── */
+.toast-notification,
+#toast-message {
+  transition: opacity var(--mc-dur-normal) var(--mc-ease-out),
+              transform var(--mc-dur-normal) var(--mc-ease-out) !important;
+}
+
+/* ── Botões legados (todos os <button>) — scale 0.985 ── */
+button:not(.hub-card-trigger):active {
+  transform: scale(0.985) !important;
+  opacity: 0.88 !important;
+}
+
+
+/* ================================================================
+   §12 — MODO CLARO (body.light-mode)
+   Paleta equivalente — não invertida.
+   Verde família → pastel verde
+   Azul petróleo → azul gelo
+   Cinza grafite → cinza claro
+   Títulos: #111827 | Subtítulos: #4B5563
+================================================================ */
+
+/* ── Tipografia light mode ── */
+body.light-mode .hub-card-body .hm-label,
+body.light-mode .hub-card-body label {
+  color: var(--mc-text-sub-light) !important;
+}
+body.light-mode .hub-card-body .card-title {
+  color: var(--mc-text-title-light) !important;
+}
+
+/* ── Inputs light mode ── */
+body.light-mode .mc-input,
+body.light-mode .hm-input,
+body.light-mode .hm-field-input,
+body.light-mode .elec2-field-input,
+body.light-mode input[type="text"].elec2-field-input,
+body.light-mode input[type="number"].hm-input {
+  background:   rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(0, 0, 0, 0.14) !important;
+  color:        var(--mc-text-title-light) !important;
+}
+body.light-mode .mc-input::placeholder,
+body.light-mode .hm-input::placeholder,
+body.light-mode .hm-field-input::placeholder {
+  color: rgba(0, 0, 0, 0.32) !important;
+}
+body.light-mode .mc-input:focus,
+body.light-mode .hm-input:focus,
+body.light-mode .hm-field-input:focus {
+  border-color: rgba(0, 0, 0, 0.28) !important;
+  background:   rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ── Hub card body light mode ── */
+body.light-mode .hub-card-body {
+  background: rgba(0, 0, 0, 0.07) !important;
+}
+
+/* ── Botões light mode ── */
+body.light-mode .hm-btn--primary {
+  background: linear-gradient(135deg, #e8f5ee, #d4eedd) !important;
+  color: #0a5235 !important;
+  border-color: rgba(10, 82, 53, 0.28) !important;
+}
+body.light-mode .hm-btn--ghost {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: rgba(0, 0, 0, 0.62) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+/* ── Nível 1 Light Mode: Família Verde Pastel ── */
+/* Patient */
+body.light-mode #hub-card-patient .hub-card-trigger {
+  background: linear-gradient(148deg, #e8f5ee 0%, #d0eddc 100%) !important;
+}
+body.light-mode #hub-card-patient .hub-card-name  { color: #065f46 !important; }
+body.light-mode #hub-card-patient .hub-card-desc  { color: rgba(6, 95, 70, 0.75) !important; }
+body.light-mode #hub-card-patient .hub-card-chevron { color: rgba(6, 95, 70, 0.50) !important; }
+body.light-mode #hub-card-patient .hub-card-ico   { background: rgba(6, 95, 70, 0.10) !important; color: #059669 !important; }
+body.light-mode #hub-card-patient .hub-card-body  { background: rgba(232, 245, 238, 0.45) !important; }
+body.light-mode #hub-card-patient .hub-card-inner { background: rgba(232, 245, 238, 0.30) !important; }
+
+/* ClCr */
+body.light-mode #hub-card-clcr .hub-card-trigger {
+  background: linear-gradient(148deg, #e6f4f0 0%, #cde9e2 100%) !important;
+}
+body.light-mode #hub-card-clcr .hub-card-name  { color: #047857 !important; }
+body.light-mode #hub-card-clcr .hub-card-desc  { color: rgba(4, 120, 87, 0.75) !important; }
+body.light-mode #hub-card-clcr .hub-card-chevron { color: rgba(4, 120, 87, 0.50) !important; }
+body.light-mode #hub-card-clcr .hub-card-ico   { background: rgba(4, 120, 87, 0.10) !important; color: #10b981 !important; }
+body.light-mode #hub-card-clcr .hub-card-body  { background: rgba(230, 244, 240, 0.45) !important; }
+body.light-mode #hub-card-clcr .hub-card-inner { background: rgba(230, 244, 240, 0.30) !important; }
+
+/* Fármacos */
+body.light-mode #hub-card-farmacos .hub-card-trigger {
+  background: linear-gradient(148deg, #e4f2f0 0%, #cce7e2 100%) !important;
+}
+body.light-mode #hub-card-farmacos .hub-card-name  { color: #0d7165 !important; }
+body.light-mode #hub-card-farmacos .hub-card-desc  { color: rgba(13, 113, 101, 0.75) !important; }
+body.light-mode #hub-card-farmacos .hub-card-chevron { color: rgba(13, 113, 101, 0.50) !important; }
+body.light-mode #hub-card-farmacos .hub-card-ico   { background: rgba(13, 113, 101, 0.10) !important; color: #0d9488 !important; }
+body.light-mode #hub-card-farmacos .hub-card-body  { background: rgba(228, 242, 240, 0.45) !important; }
+body.light-mode #hub-card-farmacos .hub-card-inner { background: rgba(228, 242, 240, 0.30) !important; }
+
+/* ── Nível 2 Light Mode: Família Azul Gelo ── */
+/* Interações */
+body.light-mode #hub-card-interacoes .hub-card-trigger {
+  background: linear-gradient(148deg, #e0effa 0%, #cce4f5 100%) !important;
+}
+body.light-mode #hub-card-interacoes .hub-card-name  { color: #075985 !important; }
+body.light-mode #hub-card-interacoes .hub-card-desc  { color: rgba(7, 89, 133, 0.75) !important; }
+body.light-mode #hub-card-interacoes .hub-card-chevron { color: rgba(7, 89, 133, 0.50) !important; }
+body.light-mode #hub-card-interacoes .hub-card-ico   { background: rgba(7, 89, 133, 0.10) !important; color: #0284c7 !important; }
+body.light-mode #hub-card-interacoes .hub-card-body  { background: rgba(224, 239, 250, 0.45) !important; }
+body.light-mode #hub-card-interacoes .hub-card-inner { background: rgba(224, 239, 250, 0.30) !important; }
+
+/* Infusão */
+body.light-mode #hub-card-infusao .hub-card-trigger {
+  background: linear-gradient(148deg, #e0f5fa 0%, #cceef5 100%) !important;
+}
+body.light-mode #hub-card-infusao .hub-card-name  { color: #0e7490 !important; }
+body.light-mode #hub-card-infusao .hub-card-desc  { color: rgba(14, 116, 144, 0.75) !important; }
+body.light-mode #hub-card-infusao .hub-card-chevron { color: rgba(14, 116, 144, 0.50) !important; }
+body.light-mode #hub-card-infusao .hub-card-ico   { background: rgba(14, 116, 144, 0.10) !important; color: #06b6d4 !important; }
+body.light-mode #hub-card-infusao .hub-card-body  { background: rgba(224, 245, 250, 0.45) !important; }
+body.light-mode #hub-card-infusao .hub-card-inner { background: rgba(224, 245, 250, 0.30) !important; }
+
+/* Fluidos */
+body.light-mode #hub-card-fluidos .hub-card-trigger {
+  background: linear-gradient(148deg, #e2f5ee 0%, #ccebe0 100%) !important;
+}
+body.light-mode #hub-card-fluidos .hub-card-name  { color: #065f46 !important; }
+body.light-mode #hub-card-fluidos .hub-card-desc  { color: rgba(6, 95, 70, 0.75) !important; }
+body.light-mode #hub-card-fluidos .hub-card-chevron { color: rgba(6, 95, 70, 0.50) !important; }
+body.light-mode #hub-card-fluidos .hub-card-ico   { background: rgba(6, 95, 70, 0.10) !important; color: #059669 !important; }
+body.light-mode #hub-card-fluidos .hub-card-body  { background: rgba(226, 245, 238, 0.45) !important; }
+body.light-mode #hub-card-fluidos .hub-card-inner { background: rgba(226, 245, 238, 0.30) !important; }
+
+/* Eletrólitos */
+body.light-mode #hub-card-eletrolitos .hub-card-trigger {
+  background: linear-gradient(148deg, #e8e8f8 0%, #d8d8f4 100%) !important;
+}
+body.light-mode #hub-card-eletrolitos .hub-card-name  { color: #3730a3 !important; }
+body.light-mode #hub-card-eletrolitos .hub-card-desc  { color: rgba(55, 48, 163, 0.75) !important; }
+body.light-mode #hub-card-eletrolitos .hub-card-chevron { color: rgba(55, 48, 163, 0.50) !important; }
+body.light-mode #hub-card-eletrolitos .hub-card-ico   { background: rgba(55, 48, 163, 0.10) !important; color: #4f46e5 !important; }
+body.light-mode #hub-card-eletrolitos .hub-card-body  { background: rgba(232, 232, 248, 0.45) !important; }
+body.light-mode #hub-card-eletrolitos .hub-card-inner { background: rgba(232, 232, 248, 0.30) !important; }
+
+/* Hemodinâmica */
+body.light-mode #hub-card-hemodinamica .hub-card-trigger {
+  background: linear-gradient(148deg, #fce8eb 0%, #f9d4d8 100%) !important;
+}
+body.light-mode #hub-card-hemodinamica .hub-card-name  { color: #9f1239 !important; }
+body.light-mode #hub-card-hemodinamica .hub-card-desc  { color: rgba(159, 18, 57, 0.75) !important; }
+body.light-mode #hub-card-hemodinamica .hub-card-chevron { color: rgba(159, 18, 57, 0.50) !important; }
+body.light-mode #hub-card-hemodinamica .hub-card-ico   { background: rgba(159, 18, 57, 0.10) !important; color: #e11d48 !important; }
+body.light-mode #hub-card-hemodinamica .hub-card-body  { background: rgba(252, 232, 235, 0.45) !important; }
+body.light-mode #hub-card-hemodinamica .hub-card-inner { background: rgba(252, 232, 235, 0.30) !important; }
+
+/* Scores */
+body.light-mode #hub-card-scores .hub-card-trigger {
+  background: linear-gradient(148deg, #eff1f5 0%, #e4e8ef 100%) !important;
+}
+body.light-mode #hub-card-scores .hub-card-name  { color: #1e293b !important; }
+body.light-mode #hub-card-scores .hub-card-desc  { color: rgba(30, 41, 59, 0.70) !important; }
+body.light-mode #hub-card-scores .hub-card-chevron { color: rgba(30, 41, 59, 0.45) !important; }
+body.light-mode #hub-card-scores .hub-card-ico   { background: rgba(30, 41, 59, 0.08) !important; color: #475569 !important; }
+body.light-mode #hub-card-scores .hub-card-body  { background: rgba(239, 241, 245, 0.45) !important; }
+body.light-mode #hub-card-scores .hub-card-inner { background: rgba(239, 241, 245, 0.30) !important; }
+
+/* ── Nível 3 Light Mode: Cinza Claro ── */
+/* Pediatria */
+body.light-mode #hub-card-pediatria .hub-card-trigger {
+  background: linear-gradient(148deg, #f1f3f6 0%, #e8ecf1 100%) !important;
+}
+body.light-mode #hub-card-pediatria .hub-card-name  { color: #334155 !important; }
+body.light-mode #hub-card-pediatria .hub-card-desc  { color: rgba(51, 65, 85, 0.70) !important; }
+body.light-mode #hub-card-pediatria .hub-card-chevron { color: rgba(51, 65, 85, 0.45) !important; }
+body.light-mode #hub-card-pediatria .hub-card-ico   { background: rgba(51, 65, 85, 0.08) !important; color: #64748b !important; }
+body.light-mode #hub-card-pediatria .hub-card-body  { background: rgba(241, 243, 246, 0.45) !important; }
+body.light-mode #hub-card-pediatria .hub-card-inner { background: rgba(241, 243, 246, 0.30) !important; }
+
+/* Gestantes */
+body.light-mode #hub-card-gestante .hub-card-trigger {
+  background: linear-gradient(148deg, #f3f4f6 0%, #eaecf0 100%) !important;
+}
+body.light-mode #hub-card-gestante .hub-card-name  { color: #1f2937 !important; }
+body.light-mode #hub-card-gestante .hub-card-desc  { color: rgba(31, 41, 55, 0.68) !important; }
+body.light-mode #hub-card-gestante .hub-card-chevron { color: rgba(31, 41, 55, 0.42) !important; }
+body.light-mode #hub-card-gestante .hub-card-ico   { background: rgba(31, 41, 55, 0.07) !important; color: #6b7280 !important; }
+body.light-mode #hub-card-gestante .hub-card-body  { background: rgba(243, 244, 246, 0.45) !important; }
+body.light-mode #hub-card-gestante .hub-card-inner { background: rgba(243, 244, 246, 0.30) !important; }
+
+/* ── Conteúdo interno nos módulos — light mode ── */
+body.light-mode .hub-card-inner {
+  background: transparent !important;
+}
+body.light-mode .card {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(0, 0, 0, 0.10) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+body.light-mode .card-title {
+  color: var(--mc-text-title-light) !important;
+}
+body.light-mode .drug-result-key {
+  color: #374151 !important;
+}
+body.light-mode .drug-result-value {
+  color: #111827 !important;
+}
+body.light-mode .drug-result-note {
+  color: #4B5563 !important;
+}
+body.light-mode .elec2-field-lbl {
+  color: #374151 !important;
+}
+body.light-mode .hm-search {
+  background: rgba(0, 0, 0, 0.04) !important;
+  color: #111827 !important;
+  border-color: rgba(0, 0, 0, 0.14) !important;
+}
+body.light-mode .hm-drug-item {
+  background: rgba(0, 0, 0, 0.03) !important;
+  border-color: rgba(0, 0, 0, 0.07) !important;
+}
+body.light-mode .hm-drug-name {
+  color: #111827 !important;
+}
+body.light-mode .hm-drug-class {
+  color: #4B5563 !important;
+}
+body.light-mode .hm-drug-sep {
+  color: #6B7280 !important;
+}
+body.light-mode .elec2-state-btn {
+  background: rgba(0, 0, 0, 0.06) !important;
+  color: #374151 !important;
+}
+body.light-mode .elec2-state-btn.active {
+  background: #0284c7 !important;
+  color: #fff !important;
+}
+body.light-mode .hm-pill {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border-color: rgba(0, 0, 0, 0.10) !important;
+}
+body.light-mode .hm-pill-val {
+  color: #111827 !important;
+}
+body.light-mode .hm-pill-lbl {
+  color: #6B7280 !important;
+}
+/* Light mode: hemodinâmica interna */
+body.light-mode #hub-hemo-slot .card,
+body.light-mode #hub-body-hemodinamica .card {
+  background: rgba(255, 235, 238, 0.85) !important;
+  border-color: rgba(225, 29, 72, 0.18) !important;
+}
+body.light-mode #hub-hemo-slot .card-title,
+body.light-mode #hub-body-hemodinamica .card-title {
+  color: #9f1239 !important;
+  background: rgba(159, 18, 57, 0.07) !important;
+}
+body.light-mode #hub-hemo-slot .result-label,
+body.light-mode #hub-body-hemodinamica .result-label {
+  color: rgba(159, 18, 57, 0.75) !important;
+}
+body.light-mode #hub-hemo-slot .result-value,
+body.light-mode #hub-body-hemodinamica .result-value {
+  color: #be123c !important;
+}
+body.light-mode #hub-hemo-slot input,
+body.light-mode #hub-body-hemodinamica input {
+  border-color: rgba(225, 29, 72, 0.22) !important;
+  background: rgba(255, 255, 255, 0.70) !important;
+  color: #111827 !important;
+}
+
+
+/* ================================================================
+   §13 — SOMBRAS DISCRETAS
+   Profundidade sem espetáculo. Zero glow, zero neon.
+================================================================ */
+
+.hub-card {
+  border-radius: var(--mc-radius-md) !important;
+  overflow: hidden !important;
+  box-shadow: var(--mc-shadow-sm) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  /* Transição GPU: apenas opacity/transform via filter */
+  transition: opacity var(--mc-dur-normal) var(--mc-ease-out) !important;
+}
+
+.hub-card.is-open {
+  box-shadow: var(--mc-shadow-md) !important;
+}
+
+/* Card interno dos módulos */
+.card {
+  border-radius: var(--mc-radius-md) !important;
+  box-shadow: none !important;  /* removido glow */
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+/* Light mode */
+body.light-mode .hub-card {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.08) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+body.light-mode .hub-card.is-open {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.14), 0 2px 6px rgba(0,0,0,0.08) !important;
+}
+
+
+/* ================================================================
+   §14 — TRIGGER: ESPAÇAMENTO E ESTRUTURA BASE
+   Aplica ao .hub-card-trigger independente de nível.
+================================================================ */
+
+.hub-card-trigger {
+  display:     flex !important;
+  align-items: center !important;
+  gap:         var(--mc-icon-text-gap) !important;
+  width:       100% !important;
+  padding:     0 16px !important;
+  min-height:  var(--mc-trigger-h-l2) !important;
+  background:  transparent !important;
+  border:      none !important;
+  cursor:      pointer !important;
+  text-align:  left !important;
+}
+
+/* ── Ícone base ── */
+.hub-card-ico {
+  flex-shrink: 0 !important;
+  display:     flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width:       var(--mc-ico-size-l2) !important;
+  height:      var(--mc-ico-size-l2) !important;
+  font-size:   var(--mc-ico-font-l2) !important;
+  border-radius: var(--mc-ico-radius-l2) !important;
+}
+
+/* ── Meta (nome + desc) ── */
+.hub-card-meta {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+.hub-card-name {
+  font-size:   var(--mc-card-name-l2) !important;
+  font-weight: 700 !important;
+  color:       var(--mc-text-title-dark) !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  overflow:    hidden !important;
+  text-overflow: ellipsis !important;
+}
+.hub-card-desc {
+  font-size:   10.5px !important;
+  color:       var(--mc-text-sub-dark) !important;
+  line-height: 1.3 !important;
+  margin-top:  var(--mc-title-sub-gap) !important;
+  white-space: nowrap !important;
+  overflow:    hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* ── Chevron ── */
+.hub-card-chevron {
+  flex-shrink: 0 !important;
+  font-size:   11px !important;
+  transition:  transform var(--mc-dur-normal) var(--mc-ease-out),
+               opacity   var(--mc-dur-normal) var(--mc-ease-out) !important;
+}
+
+
+/* ================================================================
+   §15 — OVERRIDES DE COMPATIBILIDADE
+   Garante que Build 234 sobrescreva regras de Build 233
+   e de medcases-ux-v2.css onde necessário.
+================================================================ */
+
+/* ── Desativar sombras com glow do Build 233 ── */
+#hub-card-patient.is-open,
+#hub-card-clcr.is-open,
+#hub-card-farmacos.is-open,
+#hub-card-interacoes.is-open,
+#hub-card-infusao.is-open,
+#hub-card-hemodinamica.is-open,
+#hub-card-scores.is-open,
+#hub-card-fluidos.is-open,
+#hub-card-eletrolitos.is-open,
+#hub-card-pediatria.is-open,
+#hub-card-gestante.is-open {
+  /* sombra discreta, sem glow neon */
+  box-shadow: var(--mc-shadow-md) !important;
+}
+
+/* ── Resetar box-shadow de inputs (sem glow) ── */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  transition:
+    border-color var(--mc-dur-normal) var(--mc-ease-out),
+    opacity      var(--mc-dur-slow) var(--mc-ease-out) !important;
+}
+
+/* ── Desativar animação de height em build233.css ── */
+/* A animação do body é display:none/block + keyframe no inner */
+.hub-card-body {
+  max-height: none !important;
+  transition: none !important;
+}
+
+/* ── Consistência: hm-card-footer gap e align ── */
+.hm-card-footer {
+  display: flex !important;
+  gap: var(--mc-space-3) !important;
+  align-items: center !important;
+  margin-top: var(--mc-space-4) !important;
+  padding-top: var(--mc-space-4) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+body.light-mode .hm-card-footer {
+  border-top-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ── Legibilidade do conteúdo lazy-mounted ── */
+.hub-card-inner .card-title i {
+  opacity: 0.75 !important;
+}
+
+/* ── Badge "Em breve" ── */
+.hub-soon-badge {
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.4px !important;
+  padding: 2px 7px !important;
+  border-radius: 8px !important;
+  background: rgba(251, 191, 36, 0.12) !important;
+  color: #FBBF24 !important;
+  border: 1px solid rgba(251, 191, 36, 0.22) !important;
+  flex-shrink: 0 !important;
+  align-self: center !important;
+}
+
+/* ── Espaçamento entre cards internos ── */
+.hub-card-inner > * + * {
+  margin-top: var(--mc-space-3) !important;
+}
+
+/* ── Drug separators ── */
+.hm-drug-sep {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  opacity: 0.50 !important;
+  padding: 10px 4px 4px !important;
+}
+
+/* ── Inline result ── */
+.hm-inline-result {
+  border-radius: var(--mc-radius-md) !important;
+  overflow: hidden !important;
+}
+.hm-inline-result-header {
+  padding: 12px 14px !important;
+}
+
+/* ── Result pills ── */
+.hm-result-pills {
+  display: flex !important;
+  gap: var(--mc-space-2) !important;
+  flex-wrap: wrap !important;
+  margin-top: var(--mc-space-4) !important;
+}
+.hm-pill {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: var(--mc-space-2) var(--mc-space-3) !important;
+  border-radius: var(--mc-radius-sm) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  min-width: 54px !important;
+}
+.hm-pill-val {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--mc-text-title-dark) !important;
+  line-height: 1.2 !important;
+}
+.hm-pill-lbl {
+  font-size: 9.5px !important;
+  color: var(--mc-text-muted-dark) !important;
+  text-align: center !important;
+  margin-top: 2px !important;
+}
+
+/* ── Fluid module: resultado preserva família verde ── */
+#hub-fluidos-slot .card,
+#hub-body-fluidos .card {
+  border-color: rgba(52, 211, 153, 0.18) !important;
+}
+#hub-fluidos-slot .card-title,
+#hub-body-fluidos .card-title {
+  color: #6EE7B7 !important;
+}
+
+/* ── Eletrólitos: resultado preserva família violeta ── */
+#hub-elec-slot .card,
+#hub-body-eletrolitos .card {
+  border-color: rgba(129, 140, 248, 0.18) !important;
+}
+#hub-elec-slot .card-title,
+#hub-body-eletrolitos .card-title {
+  color: #C7D2FE !important;
+}
+
+/* ── Infusão: resultado preserva família ciano ── */
+#hub-infusao-slot .card,
+#hub-body-infusao .card {
+  border-color: rgba(34, 211, 238, 0.18) !important;
+}
+#hub-infusao-slot .card-title,
+#hub-body-infusao .card-title {
+  color: #A5F3FC !important;
+}
+
+/* ── Scores: resultado preserva família grafite ── */
+#hub-scores-slot .card,
+#hub-body-scores .card {
+  border-color: rgba(148, 163, 184, 0.18) !important;
+}
+#hub-scores-slot .card-title,
+#hub-body-scores .card-title {
+  color: #CBD5E1 !important;
+}
+
+/* ── Fármacos: resultado preserva família verde azulado ── */
+#hub-body-farmacos .card,
+.hm-inline-result {
+  border-color: rgba(45, 212, 191, 0.18) !important;
+}
+
+/* ── Interações: resultado preserva família azul ── */
+#hub-body-interacoes .card {
+  border-color: rgba(56, 189, 248, 0.18) !important;
+}
+
+/* ── Scroll content — padding-bottom para iOS safe area ── */
+#scroll-content {
+  padding-bottom: max(20px, var(--keyboard-safe-bottom, 0px)) !important;
+}
+
+/* ── calc-hub-grid-v2 (página separada de calculadoras, se existir) ── */
+.calc-hub-grid-v2 {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: var(--mc-card-gap) !important;
+}
+@media (min-width: 480px) {
+  .calc-hub-grid-v2 { grid-template-columns: 1fr 1fr !important; }
+}
+@media (min-width: 768px) {
+  .calc-hub-grid-v2 { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (min-width: 1024px) {
+  .calc-hub-grid-v2 { grid-template-columns: repeat(4, 1fr) !important; }
+}
+
+/* ── Responsividade do hub-card-trigger em desktop ── */
+@media (min-width: 768px) {
+  .hub-card[data-level="1"] .hub-card-trigger {
+    min-height: 74px !important;
+  }
+  .hub-card[data-level="2"] .hub-card-trigger {
+    min-height: 64px !important;
+  }
+  .hub-card[data-level="3"] .hub-card-trigger {
+    min-height: 58px !important;
+  }
+  .hub-card[data-level="1"] .hub-card-ico {
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hub-card[data-level="1"] .hub-card-trigger {
+    min-height: 78px !important;
+  }
+  .hub-card[data-level="1"] .hub-card-ico {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 21px !important;
+    border-radius: 14px !important;
+  }
+  .hub-card[data-level="1"] .hub-card-name {
+    font-size: 15.5px !important;
+  }
+  .hub-card[data-level="2"] .hub-card-name {
+    font-size: 14px !important;
+  }
+  .hub-card[data-level="2"] .hub-card-desc {
+    font-size: 11px !important;
+  }
+}
+
+/* ── elec2 fields grid responsivo ── */
+@media (min-width: 600px) {
+  .elec2-fields-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (min-width: 900px) {
+  .elec2-fields-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* ── hm-input-grid: 2 colunas compactas ── */
+.hm-input-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: var(--mc-space-3) !important;
+}
+
+/* ── Drug list ── */
+.hm-drug-list {
+  margin-top: var(--mc-space-3) !important;
+  max-height: 380px !important;
+  overflow-y: auto !important;
+}
+
+/* ── Warn inline de creatinina ── */
+#hm-clcr-warn {
+  font-size: 11.5px !important;
+  border-radius: var(--mc-radius-sm) !important;
+  padding: var(--mc-space-2) var(--mc-space-3) !important;
+}
+
+/* ================================================================
+   FIM DO BUILD 234 DESIGN SYSTEM
+   Commit: style(calculator): premium design system and unified visual hierarchy
+================================================================ */

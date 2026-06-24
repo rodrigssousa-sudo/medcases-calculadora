@@ -10,6 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
+  <link rel="stylesheet" href="css/medcases-ux-v2.css" />
+  <link rel="stylesheet" href="css/build233.css" />
+  <link rel="stylesheet" href="css/build234-design-system.css" />
+  <link rel="stylesheet" href="css/build235-layout.css" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css" />
 
   <style>
     /* ============================================================ RESET */
@@ -25,6 +31,8 @@
     :root {
       /* Safe area bottom para o visualViewport iOS handler */
       --sab: env(safe-area-inset-bottom, 0px);
+      /* BUILD 232: altura dinâmica do teclado — atualizada por applyKeyboardSafePadding() */
+      --keyboard-safe-bottom: 0px;
 
       /* ── Paleta MedCases Pro — Midnight Blue / Cyan ── */
       --bg-deep:#0F091E;        /* fundo geral: purple-midnight MedCases Pro */
@@ -63,14 +71,24 @@
       --transition:0.22s ease;
     }
     /* ═══════════════════════════════════════════════════════════
-       FLEXBOX APPLICATION SHELL — iOS WebView Keyboard Fix v4.1
-       Estratégia: travar viewport no nível de html+body, deixar
-       apenas #scroll-content fazer overflow-y. Quando o teclado
-       sobe, o visualViewport encolhe → só #scroll-content comprime,
-       o GPB (flex-shrink:0) permanece fixo e visível no topo.
+       FLEXBOX APPLICATION SHELL — iOS WebView Keyboard Fix v5.0
+       BUILD 232: Correção do bug de viewport vazia ao trocar campos.
+
+       MUDANÇAS vs v4.1:
+       • body: REMOVIDO position:fixed (causava viewport vazia no WebView
+         ao trocar campos — iOS recalculava layout ao mudar activeElement)
+       • html/body: min-height:100% em vez de apenas height:100%
+         (garante que o body nunca encolhe abaixo da tela)
+       • #app: min-height:100dvh como fallback ADICIONAL ao height
+         (previne colapso quando body não está fixed)
+       • body.keyboard-open: apenas padding-bottom via --keyboard-safe-bottom
+         NUNCA: translateY, height fixa, overflow:hidden extra
+       • #scroll-content: -webkit-overflow-scrolling:touch sempre ativo
     ═══════════════════════════════════════════════════════════ */
     html {
+      /* height: cobre tela toda; min-height: nunca encolhe */
       height: 100%;
+      min-height: 100%;
       /* -webkit-fill-available: altura real do visual viewport no iOS */
       height: -webkit-fill-available;
       /* Gradiente roxo premium — preenche laterais em telas grandes */
@@ -80,8 +98,12 @@
       overflow: hidden;
     }
     body {
-      /* Espelha a mesma trava de altura do html */
+      /* BUILD 232: REMOVIDO position:fixed — causava viewport vazia no WebView
+         iOS ao trocar de campo (focusin→focusout loop quebrava o layout).
+         Substituído por overflow:hidden que previne double-scroll sem
+         remover o body do fluxo normal. */
       height: 100%;
+      min-height: 100%;
       height: -webkit-fill-available;
       /* Gradiente roxo premium — visível nas laterais quando #app não preenche */
       background: radial-gradient(ellipse at top center, #24104a 0%, #0f091e 45%, #070711 100%);
@@ -92,13 +114,14 @@
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
       overscroll-behavior: none;
-      /* Bloqueia scroll no body — evita double-scroll em iOS */
+      /* Previne double-scroll sem travar o corpo da página */
       overflow: hidden;
-      /* Evita que o iOS repositione o body inteiro ao focar inputs */
-      position: fixed;
       width: 100%;
-      top: 0;
-      left: 0;
+    }
+    /* BUILD 232: keyboard-open — APENAS padding-bottom, nunca height/transform */
+    body.keyboard-open {
+      /* CSS var atualizada pelo applyKeyboardSafePadding() em JS */
+      /* Não aplica nada no body — o padding vai direto no #scroll-content via JS */
     }
     #app {
       /* Responsivo: 100% mobile → 1280px desktop */
@@ -111,6 +134,9 @@
       height: 100vh;
       /* Fallback WebKit: usa o visual viewport real */
       height: -webkit-fill-available;
+      /* BUILD 232: min-height garante que #app não colapsa sem position:fixed no body */
+      min-height: 100dvh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -130,9 +156,18 @@
       min-height: 0;           /* CRÍTICO: permite que flex-item encolha abaixo do conteúdo */
       overflow-y: auto;
       overflow-x: hidden;
+      /* BUILD 232: sempre ativo — garante scroll momentum no iOS WebView */
       -webkit-overflow-scrolling: touch;
       padding: 10px 12px 20px;
       scroll-behavior: smooth;
+      /* BUILD 232: transição suave no padding-bottom (teclado abre/fecha) */
+      transition: padding-bottom 0.18s ease;
+    }
+    /* BUILD 232: keyboard-open — só padding via var, nunca overflow:hidden */
+    body.keyboard-open #scroll-content {
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      /* padding-bottom é aplicado via JS diretamente no style inline */
     }
     /* Padding lateral responsivo do scroll — mais espaço em telas grandes */
     @media (min-width: 600px) {
@@ -7421,14 +7456,22 @@
       ══════════════════════════════════════════════ -->
 
       <!-- ────────────────────────────────────────────────────────────
-           ACCORDION HUB — 8 módulos em cards expansíveis
-           Estrutura: hub-row / hub-row--full > hub-card
+           HUB VISUAL — Build 236
+           Estrutura: hub-section > hub-l1/l2/l3-section > hub-card
       ──────────────────────────────────────────────────────────────── -->
       <nav class="hub-accordion" id="hub-accordion" aria-label="Módulos clínicos">
 
-        <!-- ══ ROW 1: DADOS DO PACIENTE (full-width) ══ -->
-        <div class="hub-row--full">
-          <article class="hub-card" id="hub-card-patient" data-hub="patient" data-hub-full="true">
+        <!-- ══════════════════════════════════════════════════
+             NÍVEL 1 — Módulos essenciais (full-width cada)
+             Ordem: Dados do Paciente → ClCr → Fármacos
+        ══════════════════════════════════════════════════ -->
+        <div class="hub-section">
+          <div class="hub-section-label">Nível 1 · Essenciais</div>
+          <div class="hub-l1-section">
+
+        <!-- L1-A: DADOS DO PACIENTE -->
+        <div class="hub-row--full hub-l1-row">
+          <article class="hub-card" id="hub-card-patient" data-hub="patient" data-hub-full="true" data-level="1">
             <button class="hub-card-trigger" onclick="hubToggle('patient')"
                     aria-expanded="false" aria-controls="hub-body-patient">
               <div class="hub-card-ico hub-ico--patient"><i class="fa-solid fa-user-injured"></i></div>
@@ -7610,11 +7653,11 @@
               </div>
             </div>
           </article>
-        </div><!-- /hub-row--full patient -->
+        </div><!-- /L1-A patient -->
 
-        <!-- ══ ROW 2: ClCr RENAL (full-width) ══ -->
-        <div class="hub-row--full">
-          <article class="hub-card" id="hub-card-clcr" data-hub="clcr" data-hub-full="true">
+        <!-- L1-B: ClCr RENAL -->
+        <div class="hub-row--full hub-l1-row">
+          <article class="hub-card" id="hub-card-clcr" data-hub="clcr" data-hub-full="true" data-level="1">
             <button class="hub-card-trigger" onclick="hubToggle('clcr')"
                     aria-expanded="false" aria-controls="hub-body-clcr">
               <div class="hub-card-ico hub-ico--clcr"><i class="fa-solid fa-kidneys"></i></div>
@@ -7637,13 +7680,11 @@
               </div>
             </div>
           </article>
-        </div><!-- /hub-row--full clcr -->
+        </div><!-- /L1-B clcr -->
 
-        <!-- ══ ROW 3: FÁRMACOS | INTERAÇÕES (2 colunas) ══ -->
-        <div class="hub-row">
-
-          <!-- FÁRMACOS -->
-          <article class="hub-card" id="hub-card-farmacos" data-hub="farmacos">
+        <!-- L1-C: FÁRMACOS -->
+        <div class="hub-row--full hub-l1-row">
+          <article class="hub-card" id="hub-card-farmacos" data-hub="farmacos" data-level="1">
             <button class="hub-card-trigger" onclick="hubToggle('farmacos')"
                     aria-expanded="false" aria-controls="hub-body-farmacos">
               <div class="hub-card-ico hub-ico--farmacos"><i class="fa-solid fa-pills"></i></div>
@@ -7688,9 +7729,23 @@
               </div>
             </div>
           </article>
+        </div><!-- /L1-C farmacos -->
+
+          </div><!-- /hub-l1-section -->
+        </div><!-- /hub-section nível 1 -->
+
+        <!-- ══════════════════════════════════════════════════
+             NÍVEL 2 — Ferramentas clínicas (grid 2-col)
+             Ordem: Interações | Eletrólitos
+                    Infusão    | Fluidos
+                    Hemodinâmica | Scores
+        ══════════════════════════════════════════════════ -->
+        <div class="hub-section">
+          <div class="hub-section-label">Nível 2 · Ferramentas Clínicas</div>
+          <div class="hub-l2-grid hub-l2-section" id="hub-l2-grid">
 
           <!-- INTERAÇÕES -->
-          <article class="hub-card" id="hub-card-interacoes" data-hub="interacoes">
+          <article class="hub-card" id="hub-card-interacoes" data-hub="interacoes" data-level="2">
             <button class="hub-card-trigger" onclick="hubToggle('interacoes')"
                     aria-expanded="false" aria-controls="hub-body-interacoes">
               <div class="hub-card-ico hub-ico--interacoes"><i class="fa-solid fa-triangle-exclamation"></i></div>
@@ -7708,19 +7763,144 @@
             </button>
             <div class="hub-card-body" id="hub-body-interacoes" role="region">
               <div class="hub-card-inner">
-                <!-- Conteúdo das interações movido para cá -->
                 <div id="card-interactions-container-wrapper"></div>
               </div>
             </div>
           </article>
 
-        </div><!-- /hub-row farmacos+interacoes -->
+          <!-- ELETRÓLITOS -->
+          <article class="hub-card" id="hub-card-eletrolitos" data-hub="eletrolitos" data-level="2">
+            <button class="hub-card-trigger" onclick="hubToggle('eletrolitos')"
+                    aria-expanded="false" aria-controls="hub-body-eletrolitos">
+              <div class="hub-card-ico hub-ico--elec"><i class="fa-solid fa-bolt"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Eletrólitos</span>
+                  <span class="lang-hub-es">Electrolitos</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Na⁺ · K⁺ · Mg²⁺ · Ca²⁺</span>
+                  <span class="lang-hub-es">Na⁺ · K⁺ · Mg²⁺ · Ca²⁺</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-eletrolitos" role="region">
+              <div class="hub-card-inner" id="hub-elec-inner">
+                <div id="hub-elec-slot"></div>
+              </div>
+            </div>
+          </article>
 
-        <!-- ══ ROW 4: PEDIATRIA | GESTANTES (2 colunas) ══ -->
-        <div class="hub-row">
+          <!-- INFUSÃO -->
+          <article class="hub-card" id="hub-card-infusao" data-hub="infusao" data-level="2">
+            <button class="hub-card-trigger" onclick="hubToggle('infusao')"
+                    aria-expanded="false" aria-controls="hub-body-infusao">
+              <div class="hub-card-ico hub-ico--infusao"><i class="fa-solid fa-syringe"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Infusão</span>
+                  <span class="lang-hub-es">Infusión</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Bombas · Gotejamentos · Drogas vasoativas</span>
+                  <span class="lang-hub-es">Bombas · Goteos · Drogas vasoactivas</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-infusao" role="region">
+              <div class="hub-card-inner" id="hub-infusao-inner">
+                <div id="hub-infusao-slot"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- FLUIDOS -->
+          <article class="hub-card" id="hub-card-fluidos" data-hub="fluidos" data-level="2">
+            <button class="hub-card-trigger" onclick="hubToggle('fluidos')"
+                    aria-expanded="false" aria-controls="hub-body-fluidos">
+              <div class="hub-card-ico hub-ico--fluidos"><i class="fa-solid fa-droplet"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Fluidos</span>
+                  <span class="lang-hub-es">Fluidos</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">Basal · Déficit · Ressuscitação</span>
+                  <span class="lang-hub-es">Basal · Déficit · Resucitación</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-fluidos" role="region">
+              <div class="hub-card-inner" id="hub-fluidos-inner">
+                <div id="hub-fluidos-slot"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- HEMODINÂMICA -->
+          <article class="hub-card" id="hub-card-hemodinamica" data-hub="hemodinamica" data-level="2">
+            <button class="hub-card-trigger" onclick="hubToggle('hemodinamica')"
+                    aria-expanded="false" aria-controls="hub-body-hemodinamica">
+              <div class="hub-card-ico hub-ico--hemo"><i class="fa-solid fa-heart-pulse"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Hemodinâmica</span>
+                  <span class="lang-hub-es">Hemodinamia</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">PAM · Choque · SpO₂</span>
+                  <span class="lang-hub-es">PAM · Choque · SpO₂</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-hemodinamica" role="region">
+              <div class="hub-card-inner" id="hub-hemo-inner">
+                <div id="hub-hemo-slot"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SCORES -->
+          <article class="hub-card" id="hub-card-scores" data-hub="scores" data-level="2">
+            <button class="hub-card-trigger" onclick="hubToggle('scores')"
+                    aria-expanded="false" aria-controls="hub-body-scores">
+              <div class="hub-card-ico hub-ico--scores"><i class="fa-solid fa-chart-bar"></i></div>
+              <div class="hub-card-meta">
+                <div class="hub-card-name">
+                  <span class="lang-hub-pt">Scores</span>
+                  <span class="lang-hub-es">Scores</span>
+                </div>
+                <div class="hub-card-desc">
+                  <span class="lang-hub-pt">SOFA · Glasgow · Wells</span>
+                  <span class="lang-hub-es">SOFA · Glasgow · Wells</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
+            </button>
+            <div class="hub-card-body" id="hub-body-scores" role="region">
+              <div class="hub-card-inner" id="hub-scores-inner">
+                <div id="hub-scores-slot"></div>
+              </div>
+            </div>
+          </article>
+
+          </div><!-- /hub-l2-grid hub-l2-section -->
+        </div><!-- /hub-section nível 2 -->
+
+        <!-- ══════════════════════════════════════════════════
+             NÍVEL 3 — Módulos futuros (grid 2-col discreto)
+             Ordem: Pediatria | Gestantes
+        ══════════════════════════════════════════════════ -->
+        <div class="hub-section">
+          <div class="hub-section-label">Nível 3 · Específicos</div>
+          <div class="hub-row hub-l3-row hub-l3-section">
 
           <!-- PEDIATRIA -->
-          <article class="hub-card" id="hub-card-pediatria" data-hub="pediatria">
+          <article class="hub-card" id="hub-card-pediatria" data-hub="pediatria" data-level="3">
             <button class="hub-card-trigger" onclick="hubToggle('pediatria')"
                     aria-expanded="false" aria-controls="hub-body-pediatria">
               <div class="hub-card-ico hub-ico--ped"><i class="fa-solid fa-baby"></i></div>
@@ -7749,7 +7929,7 @@
           </article>
 
           <!-- GESTANTES -->
-          <article class="hub-card" id="hub-card-gestante" data-hub="gestante">
+          <article class="hub-card" id="hub-card-gestante" data-hub="gestante" data-level="3">
             <button class="hub-card-trigger" onclick="hubToggle('gestante')"
                     aria-expanded="false" aria-controls="hub-body-gestante">
               <div class="hub-card-ico hub-ico--gestante"><i class="fa-solid fa-person-pregnant"></i></div>
@@ -7777,140 +7957,8 @@
             </div>
           </article>
 
-        </div><!-- /hub-row ped+gestante -->
-
-        <!-- ══ ROW 5: INFUSÃO (full-width) ══ -->
-        <div class="hub-row--full">
-          <article class="hub-card" id="hub-card-infusao" data-hub="infusao" data-hub-full="true">
-            <button class="hub-card-trigger" onclick="hubToggle('infusao')"
-                    aria-expanded="false" aria-controls="hub-body-infusao">
-              <div class="hub-card-ico hub-ico--infusao"><i class="fa-solid fa-syringe"></i></div>
-              <div class="hub-card-meta">
-                <div class="hub-card-name">
-                  <span class="lang-hub-pt">Infusão</span>
-                  <span class="lang-hub-es">Infusión</span>
-                </div>
-                <div class="hub-card-desc">
-                  <span class="lang-hub-pt">Bombas · Gotejamentos · Drogas vasoativas</span>
-                  <span class="lang-hub-es">Bombas · Goteos · Drogas vasoactivas</span>
-                </div>
-              </div>
-              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
-            </button>
-            <div class="hub-card-body" id="hub-body-infusao" role="region">
-              <div class="hub-card-inner" id="hub-infusao-inner">
-                <!-- Slot: JS move o conteúdo de #page-infusion para cá -->
-                <div id="hub-infusao-slot"></div>
-              </div>
-            </div>
-          </article>
-        </div><!-- /hub-row--full infusao -->
-
-        <!-- ══ ROW 6: HEMODINÂMICA | SCORES (2 colunas) ══ -->
-        <div class="hub-row">
-
-          <!-- HEMODINÂMICA -->
-          <article class="hub-card" id="hub-card-hemodinamica" data-hub="hemodinamica">
-            <button class="hub-card-trigger" onclick="hubToggle('hemodinamica')"
-                    aria-expanded="false" aria-controls="hub-body-hemodinamica">
-              <div class="hub-card-ico hub-ico--hemo"><i class="fa-solid fa-heart-pulse"></i></div>
-              <div class="hub-card-meta">
-                <div class="hub-card-name">
-                  <span class="lang-hub-pt">Hemodinâmica</span>
-                  <span class="lang-hub-es">Hemodinamia</span>
-                </div>
-                <div class="hub-card-desc">
-                  <span class="lang-hub-pt">PAM · Choque · SpO₂</span>
-                  <span class="lang-hub-es">PAM · Choque · SpO₂</span>
-                </div>
-              </div>
-              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
-            </button>
-            <div class="hub-card-body" id="hub-body-hemodinamica" role="region">
-              <div class="hub-card-inner" id="hub-hemo-inner">
-                <div id="hub-hemo-slot"></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- SCORES -->
-          <article class="hub-card" id="hub-card-scores" data-hub="scores">
-            <button class="hub-card-trigger" onclick="hubToggle('scores')"
-                    aria-expanded="false" aria-controls="hub-body-scores">
-              <div class="hub-card-ico hub-ico--scores"><i class="fa-solid fa-chart-bar"></i></div>
-              <div class="hub-card-meta">
-                <div class="hub-card-name">
-                  <span class="lang-hub-pt">Scores</span>
-                  <span class="lang-hub-es">Scores</span>
-                </div>
-                <div class="hub-card-desc">
-                  <span class="lang-hub-pt">SOFA · Glasgow · Wells</span>
-                  <span class="lang-hub-es">SOFA · Glasgow · Wells</span>
-                </div>
-              </div>
-              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
-            </button>
-            <div class="hub-card-body" id="hub-body-scores" role="region">
-              <div class="hub-card-inner" id="hub-scores-inner">
-                <div id="hub-scores-slot"></div>
-              </div>
-            </div>
-          </article>
-
-        </div><!-- /hub-row hemo+scores -->
-
-        <!-- ══ ROW 7: FLUIDOS | ELETRÓLITOS (2 colunas) ══ -->
-        <div class="hub-row">
-
-          <!-- FLUIDOS -->
-          <article class="hub-card" id="hub-card-fluidos" data-hub="fluidos">
-            <button class="hub-card-trigger" onclick="hubToggle('fluidos')"
-                    aria-expanded="false" aria-controls="hub-body-fluidos">
-              <div class="hub-card-ico hub-ico--fluidos"><i class="fa-solid fa-droplet"></i></div>
-              <div class="hub-card-meta">
-                <div class="hub-card-name">
-                  <span class="lang-hub-pt">Fluidos</span>
-                  <span class="lang-hub-es">Fluidos</span>
-                </div>
-                <div class="hub-card-desc">
-                  <span class="lang-hub-pt">Basal · Déficit · Ressuscitação</span>
-                  <span class="lang-hub-es">Basal · Déficit · Resucitación</span>
-                </div>
-              </div>
-              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
-            </button>
-            <div class="hub-card-body" id="hub-body-fluidos" role="region">
-              <div class="hub-card-inner" id="hub-fluidos-inner">
-                <div id="hub-fluidos-slot"></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- ELETRÓLITOS -->
-          <article class="hub-card" id="hub-card-eletrolitos" data-hub="eletrolitos">
-            <button class="hub-card-trigger" onclick="hubToggle('eletrolitos')"
-                    aria-expanded="false" aria-controls="hub-body-eletrolitos">
-              <div class="hub-card-ico hub-ico--elec"><i class="fa-solid fa-bolt"></i></div>
-              <div class="hub-card-meta">
-                <div class="hub-card-name">
-                  <span class="lang-hub-pt">Eletrólitos</span>
-                  <span class="lang-hub-es">Electrolitos</span>
-                </div>
-                <div class="hub-card-desc">
-                  <span class="lang-hub-pt">Na⁺ · K⁺ · Mg²⁺ · Ca²⁺</span>
-                  <span class="lang-hub-es">Na⁺ · K⁺ · Mg²⁺ · Ca²⁺</span>
-                </div>
-              </div>
-              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
-            </button>
-            <div class="hub-card-body" id="hub-body-eletrolitos" role="region">
-              <div class="hub-card-inner" id="hub-elec-inner">
-                <div id="hub-elec-slot"></div>
-              </div>
-            </div>
-          </article>
-
-        </div><!-- /hub-row fluidos+eletrolitos -->
+          </div><!-- /hub-l3-row hub-l3-section -->
+        </div><!-- /hub-section nível 3 -->
 
       </nav><!-- /hub-accordion -->
 
@@ -8300,15 +8348,15 @@
           <span class="hm-drug-count" id="hm-drug-count">—</span>
         </div>
 
-        <!-- Barra de busca -->
+        <!-- Barra de busca (BUILD 233: id corrigido — era duplicado de hm-drug-search) -->
         <div class="hm-search-wrap">
           <i class="fa-solid fa-magnifying-glass hm-search-icon"></i>
-          <input class="hm-search" id="hm-drug-search" type="text"
+          <input class="hm-search" id="hm-drug-search-calc" type="text"
             placeholder="🔍 Buscar fármaco..."
             oninput="hmFilterDrugs(this.value)"
             autocomplete="off" autocorrect="off" autocapitalize="none"
             spellcheck="false" />
-          <button class="hm-search-clear" id="hm-search-clear"
+          <button class="hm-search-clear" id="hm-search-clear-calc"
             onclick="hmClearSearch()" style="display:none"
             aria-label="Limpar busca">
             <i class="fa-solid fa-xmark"></i>
@@ -12134,7 +12182,57 @@ function calcEletrolitosAll() {
 
 }
 
+/* ── OBJ7 BUILD 233: _clearCalculatorPatientData ──────────────────
+   Limpa peso/altura/idade/sexo/creatinina quando o usuário sai da
+   calculadora (navega para home/outro módulo). NÃO é chamada ao
+   navegar entre sub-cards internos da calculadora.
+   Limpa apenas os campos visuais — patientData é preservado em
+   memória para a sessão actual, mas limpo no localStorage para
+   evitar persistência entre sessões.
+──────────────────────────────────────────────────────────────── */
+function _clearCalculatorPatientData() {
+  /* Limpa campos visuais da Home */
+  ['inp-weight','inp-height','inp-age','inp-creatinine','inp-cr-urina','inp-vol24h']
+    .forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+  /* Reseta patientData para zeros (mas mantém objeto vivo) */
+  window.patientData = {
+    age: null, sex: 'M', weight: null, height: null, creatinine: null,
+    bsa: null, clcr: null, imc: null, pesoIdeal: null, tfg: null,
+    clcrTipo: 'ESTIMADO', clcrSC: null, clcrBruto: null, clcrCorrigidoSC: false,
+    pregnant: false
+  };
+  /* Remove do localStorage */
+  try {
+    localStorage.removeItem('medcases_hm_patient_v1');
+    localStorage.removeItem('pacienteAtual');
+  } catch(e) {}
+  /* Reseta displays */
+  if (typeof resetResults === 'function') resetResults();
+  /* Notifica módulos */
+  if (typeof _onPatientDataUpdated === 'function') _onPatientDataUpdated();
+  console.log('[OBJ7] Dados do paciente limpos ao sair da calculadora.');
+}
+
+/* Páginas que são "calculadora" — não devem disparar limpeza entre si */
+var _CALC_PAGES = new Set(['calculators','adult','elec','infusion','farmacos','atb','scores']);
+
 function navigate(page){
+  /* OBJ7 BUILD 233: limpa dados do paciente ao SAIR da calculadora */
+  (function() {
+    var activeSection = document.querySelector('.section-page.active');
+    if (!activeSection) return;
+    var currentPage = activeSection.id.replace('page-','');
+    var leavingCalc = _CALC_PAGES.has(currentPage);
+    var enteringCalc = _CALC_PAGES.has(page);
+    /* Limpa apenas quando saindo da área de calculadoras para outra área */
+    if (leavingCalc && !enteringCalc && page === 'home') {
+      _clearCalculatorPatientData();
+    }
+  })();
+
   /* Oculta todas as seções */
   document.querySelectorAll('.section-page').forEach(s=>s.classList.remove('active'));
   /* Remove active de todos os botões da nav */
@@ -17191,8 +17289,9 @@ function calcDrugDose(id) {
             ? 'Complete la información del paciente en la pantalla de Inicio (peso, ClCr, edad) para obtener la dosis personalizada.'
             : 'Preencha os dados do paciente na aba Início (peso, ClCr, idade) para obter a dose personalizada.'}
         </div>
-        <button class="await-btn" onclick="openQuickEdit('full')" style="background:linear-gradient(135deg,rgba(56,189,248,0.12),rgba(56,189,248,0.06));border:1.5px solid rgba(56,189,248,0.35);color:#38BDF8;">
-          ✏ ${isES ? 'Cadastrar Datos del Paciente' : 'Cadastrar Dados do Paciente'}
+        <!-- OBJ5 BUILD 233: scroll para campo de peso sem abrir modal -->
+        <button class="await-btn" onclick="_fluidScrollToWeight()" style="background:linear-gradient(135deg,rgba(56,189,248,0.12),rgba(56,189,248,0.06));border:1.5px solid rgba(56,189,248,0.35);color:#38BDF8;">
+          ✏ ${isES ? 'Ir a Datos del Paciente' : 'Ir para Dados do Paciente'}
         </button>
       </div>`;
     return;
@@ -17971,6 +18070,58 @@ function _fluidInsens(vol24Basal, temp, taqui) {
   };
 }
 
+/* ── OBJ4 BUILD 233: Redireciona para campo de peso sem popup/modal ──
+   Tenta scroll + highlight no campo de peso do hub (hm-weight),
+   ou do modal de dados (inp-weight) como fallback.
+   Zero alert, zero modal, zero card de erro. */
+function _fluidScrollToWeight() {
+  /* IDs candidatos em ordem de prioridade */
+  var candidates = ['hm-weight', 'gpb-mini-weight', 'inp-weight', 'qe-weight'];
+  var targetEl = null;
+  for (var i = 0; i < candidates.length; i++) {
+    var el = document.getElementById(candidates[i]);
+    if (el && el.offsetParent !== null) { /* visível */
+      targetEl = el;
+      break;
+    }
+  }
+
+  if (!targetEl) {
+    /* Fallback: abre card do paciente no hub */
+    if (typeof hubOpen === 'function') {
+      hubOpen('patient');
+    }
+    setTimeout(function() {
+      var el2 = document.getElementById('hm-weight');
+      if (el2) _fluidHighlightField(el2);
+    }, 400);
+    return;
+  }
+
+  /* Scroll suave até o campo */
+  targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  /* Highlight com outline pulsante */
+  _fluidHighlightField(targetEl);
+
+  /* Foca o campo após o scroll */
+  setTimeout(function() { targetEl.focus(); }, 350);
+}
+
+/* Aplica highlight visual temporário num campo de input */
+function _fluidHighlightField(el) {
+  if (!el) return;
+  var origOutline = el.style.outline;
+  var origBoxShadow = el.style.boxShadow;
+  el.style.transition = 'outline 0.2s, box-shadow 0.2s';
+  el.style.outline = '2.5px solid #22C87A';
+  el.style.boxShadow = '0 0 0 4px rgba(34,200,122,0.22)';
+  setTimeout(function() {
+    el.style.outline = origOutline || '';
+    el.style.boxShadow = origBoxShadow || '';
+  }, 1800);
+}
+
 /* ── Chip inline de paciente no topo do card ── */
 function _fluidUpdateChip(peso) {
   const chip = document.getElementById('fluid-patient-chip');
@@ -17978,9 +18129,10 @@ function _fluidUpdateChip(peso) {
   if (!peso) { chip.style.display = 'none'; return; }
   const isES = currentLang === 'es';
   chip.style.display = '';
+  /* OBJ5 BUILD 233: botão "Editar" redireciona para o campo de peso (scroll+highlight) */
   chip.innerHTML = `<i class="fa-solid fa-weight-scale" style="color:var(--green-glow);font-size:11px"></i>
     <span style="font-size:11.5px;color:var(--text-secondary)">${isES ? 'Paciente' : 'Paciente'}: <strong style="color:var(--text-primary)">${peso} kg</strong></span>
-    <button class="qe-trigger" onclick="openQuickEdit('weight')" style="margin-left:auto;padding:3px 10px;font-size:11px">
+    <button class="qe-trigger" onclick="_fluidScrollToWeight()" style="margin-left:auto;padding:3px 10px;font-size:11px">
       <i class="fa-solid fa-pen" style="font-size:10px"></i> ${isES ? 'Editar' : 'Editar'}
     </button>`;
 }
@@ -17995,20 +18147,12 @@ function calcFluids() {
   /* Atualiza chip de paciente */
   _fluidUpdateChip(peso);
 
-  /* Guard: sem peso */
+  /* OBJ4 BUILD 233: Guard sem peso — NÃO mostra popup/modal/card vermelho.
+     Redireciona para o campo de peso do card Dados do Paciente (hub ou Home),
+     faz scroll + highlight visual. Limpa o resultado sem mensagem de erro. */
   if (!peso || isNaN(peso) || peso <= 0) {
-    const isES = currentLang === 'es';
-    res.innerHTML = `
-      <div class="data-guard" style="padding:18px 16px;gap:9px">
-        <div class="data-guard-icon">💧</div>
-        <div class="data-guard-tag">${t('guard_tag')}</div>
-        <div class="data-guard-title">${t('fluid_warn_noweight')}</div>
-        <div class="data-guard-desc">${t('fluid_warn_noweight_desc')}</div>
-        <button class="data-guard-btn" onclick="openQuickEdit('weight')"
-          style="background:linear-gradient(135deg,var(--green-mid),var(--green-bright));box-shadow:0 4px 14px rgba(34,200,122,0.25)">
-          ✏ ${t('fluid_btn_register')}
-        </button>
-      </div>`;
+    res.innerHTML = ''; /* limpa silenciosamente */
+    _fluidScrollToWeight();
     return;
   }
 
@@ -21236,6 +21380,144 @@ document.addEventListener('DOMContentLoaded', () => {
   _injectArrayDB(window.PSIQUIATRIA_DRUGS_DB);
   _injectArrayDB(window.REUMATOLOGIA_DRUGS_DB);
 
+  /* ══════════════════════════════════════════════════════════════
+     BUILD 233 — OBJ1: DRUG_DB STUB INJECTION
+     Fármacos cardiovasculares de alta prevalência que existem no
+     motor de interações (LISTA_MEDS_DISPONIVEIS_RAW) mas NÃO têm
+     entrada no CARDIO_DRUGS_DB → injetados aqui como stubs de
+     referência para que apareçam na busca.
+     Dados mínimos: id, name, class, category, colorTxt, dose stub.
+     Zero impacto em lógica clínica, fórmulas ou interações.
+  ══════════════════════════════════════════════════════════════ */
+  (function _injectCardioStubs() {
+    var stubs = [
+      {
+        id: 'captopril',
+        name: 'Captopril',
+        class: 'IECA — Inibidor da Enzima Conversora de Angiotensina',
+        category: { pt: 'Cardiovascular', es: 'Cardiovascular' },
+        icon: '💊', color: 'rgba(59,130,246,0.13)', colorTxt: '#1E40AF',
+        dose: function(p, lang) {
+          return {
+            dose: lang === 'es'
+              ? 'HTA: 12,5–25 mg VO 2–3 veces/día. Máx 150 mg/día. IC: 6,25 mg 3 veces/día → 50 mg 3 veces/día.'
+              : 'HTA: 12,5–25 mg VO 2–3x/dia. Máx 150 mg/dia. IC: 6,25 mg 3x/dia → 50 mg 3x/dia.',
+            freq: '8/8h ou 6/6h', via: 'VO',
+            adj: p.clcr < 30 ? 'Ajuste renal obrigatório em ClCr < 30 mL/min.' : '',
+            note: lang === 'es'
+              ? 'Consultar ficha completa en módulo de fármacos.'
+              : 'Consulte ficha completa no módulo de fármacos.'
+          };
+        }
+      },
+      {
+        id: 'carvedilol',
+        name: 'Carvedilol',
+        class: 'Betabloqueador não seletivo + bloqueador alfa-1',
+        category: { pt: 'Cardiovascular', es: 'Cardiovascular' },
+        icon: '🫀', color: 'rgba(239,68,68,0.13)', colorTxt: '#B91C1C',
+        dose: function(p, lang) {
+          return {
+            dose: lang === 'es'
+              ? 'IC: 3,125 mg VO 2 veces/día → 25–50 mg 2 veces/día. HTA: 12,5–25 mg 1–2 veces/día.'
+              : 'IC: 3,125 mg VO 2x/dia → 25–50 mg 2x/dia. HTA: 12,5–25 mg 1–2x/dia.',
+            freq: '12/12h', via: 'VO',
+            adj: '',
+            note: lang === 'es'
+              ? 'Consultar ficha completa en módulo de fármacos.'
+              : 'Consulte ficha completa no módulo de fármacos.'
+          };
+        }
+      },
+      {
+        id: 'amlodipino',
+        name: 'Anlodipino',
+        class: 'Bloqueador dos canais de cálcio diidropiridínico (BCC-DHP)',
+        category: { pt: 'Cardiovascular', es: 'Cardiovascular' },
+        icon: '💊', color: 'rgba(234,179,8,0.13)', colorTxt: '#A16207',
+        dose: function(p, lang) {
+          return {
+            dose: lang === 'es'
+              ? 'HTA/Angina: 5 mg VO 1 vez/día. Máx 10 mg/día.'
+              : 'HTA/Angina: 5 mg VO 1x/dia. Máx 10 mg/dia.',
+            freq: '1x/dia', via: 'VO',
+            adj: '',
+            note: lang === 'es'
+              ? 'Sin ajuste renal. Precaución en hepatopatía grave (iniciar 2,5 mg/día).'
+              : 'Sem ajuste renal. Cautela em hepatopatia grave (iniciar 2,5 mg/dia).'
+          };
+        }
+      },
+      {
+        id: 'atorvastatina',
+        name: 'Atorvastatina',
+        class: 'Estatina — Inibidor da HMG-CoA redutase',
+        category: { pt: 'Cardiovascular', es: 'Cardiovascular' },
+        icon: '💊', color: 'rgba(168,85,247,0.13)', colorTxt: '#7C3AED',
+        dose: function(p, lang) {
+          return {
+            dose: lang === 'es'
+              ? 'Dislipidemia: 10–80 mg VO 1 vez/día (noite). Alta intensidade: 40–80 mg/día.'
+              : 'Dislipidemia: 10–80 mg VO 1x/dia (noite). Alta intensidade: 40–80 mg/dia.',
+            freq: '1x/dia', via: 'VO',
+            adj: '',
+            note: lang === 'es'
+              ? 'Sin ajuste renal. Monitorar TGO/TGP. Riesgo de miopatía.'
+              : 'Sem ajuste renal. Monitorar TGO/TGP. Risco de miopatia.'
+          };
+        }
+      },
+      {
+        id: 'rosuvastatina',
+        name: 'Rosuvastatina',
+        class: 'Estatina — Inibidor da HMG-CoA redutase (alta potência)',
+        category: { pt: 'Cardiovascular', es: 'Cardiovascular' },
+        icon: '💊', color: 'rgba(168,85,247,0.13)', colorTxt: '#7C3AED',
+        dose: function(p, lang) {
+          return {
+            dose: lang === 'es'
+              ? 'Dislipidemia: 5–40 mg VO 1 vez/día. Máx 40 mg/día. Ajuste en ClCr < 30: máx 10 mg/día.'
+              : 'Dislipidemia: 5–40 mg VO 1x/dia. Máx 40 mg/dia. Ajuste em ClCr < 30: máx 10 mg/dia.',
+            freq: '1x/dia', via: 'VO',
+            adj: (p.clcr || 90) < 30 ? 'Dose máxima 10 mg/dia em ClCr < 30 mL/min.' : '',
+            note: lang === 'es'
+              ? 'Monitorar TGO/TGP. Riesgo de miopatía y rabdomiólisis.'
+              : 'Monitorar TGO/TGP. Risco de miopatia e rabdomiólise.'
+          };
+        }
+      },
+      {
+        id: 'sinvastatina',
+        name: 'Sinvastatina',
+        class: 'Estatina — Inibidor da HMG-CoA redutase',
+        category: { pt: 'Cardiovascular', es: 'Cardiovascular' },
+        icon: '💊', color: 'rgba(168,85,247,0.13)', colorTxt: '#7C3AED',
+        dose: function(p, lang) {
+          return {
+            dose: lang === 'es'
+              ? 'Dislipidemia: 10–40 mg VO 1 vez/día (noite). Máx 40 mg/día (80 mg contraindicado — riesgo de miopatía).'
+              : 'Dislipidemia: 10–40 mg VO 1x/dia (noite). Máx 40 mg/dia (80 mg contraindicado — risco de miopatia).',
+            freq: '1x/dia', via: 'VO',
+            adj: '',
+            note: lang === 'es'
+              ? 'Múltiples interacciones por CYP3A4. Evitar con amiodarona, diltiazem, amlodipino > 20 mg.'
+              : 'Múltiplas interações por CYP3A4. Evitar com amiodarona, diltiazem, anlodipino > 20 mg.'
+          };
+        }
+      }
+    ];
+
+    /* Filtra stubs que já existem no DRUG_DB (evitar duplicatas) */
+    var existingIds = DRUG_DB.map(function(d) { return d.id; });
+    var toAdd = stubs.filter(function(s) { return existingIds.indexOf(s.id) === -1; });
+    if (toAdd.length) {
+      DRUG_DB.push.apply(DRUG_DB, toAdd);
+      console.log('[SEARCH_AUDIT] BUILD233 — Stubs injetados:', toAdd.map(function(s){ return s.id; }).join(', '));
+    } else {
+      console.log('[SEARCH_AUDIT] BUILD233 — Todos os stubs já presentes no DRUG_DB.');
+    }
+  })();
+
   console.log('[MedCases] DRUG_DB populado:', DRUG_DB.length, 'fármacos');
 
   /* ── Protocolos de Prescrição (database/prescricoes.js) ── */
@@ -21914,14 +22196,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const q = _fNorm(term);
 
     /* ── Filtra usando o Objeto Mestre Global ── */
-    const results = _getMasterDB().filter(d => {
+    const masterDB = _getMasterDB();
+    console.log('[SEARCH_AUDIT] query="' + term + '" norm="' + q + '" totalDB=' + masterDB.length);
+
+    const results = masterDB.filter(d => {
       if (!d) return false;
       const npt = _fNorm(typeof d.name === 'object' ? (d.name.pt || '') : (d.name || ''));
       const nes = _fNorm(typeof d.name === 'object' ? (d.name.es || '') : '');
       const cl  = _fNorm(_fdResolveClass(d));
       const ct  = _fNorm(_fdResolveCat(d));
-      return npt.includes(q) || nes.includes(q) || cl.includes(q) || ct.includes(q);
+      const match = npt.includes(q) || nes.includes(q) || cl.includes(q) || ct.includes(q);
+      if (match) console.log('[SEARCH_AUDIT] HIT id=' + d.id + ' name="' + npt + '"');
+      return match;
     }).slice(0, 40); /* Limite de performance */
+
+    console.log('[SEARCH_AUDIT] resultados=' + results.length);
 
     if (!results.length) {
       listEl.innerHTML = `
@@ -23072,35 +23361,94 @@ window.MedCasesBridge = {
 </script>
 
 <!-- ══════════════════════════════════════════════════════════════
-     MOBILE KEYBOARD HANDLER v1.0
-     Detecta abertura/fechamento do teclado virtual no iOS/Android
-     via window.visualViewport + fallback por resize de window.
-     Ao focar input: body.keyboard-open + padding-bottom dinâmico +
-     scrollIntoView({ block:'center', behavior:'smooth' })
-     Ao perder foco: remove classe + restaura padding.
+     MOBILE KEYBOARD HANDLER v2.0  (BUILD 232)
+     ──────────────────────────────────────────────────────────────
+     CAUSA RAIZ DO BUG iOS WEBVIEW:
+       v1.0 chamava _closeKeyboard() ao detectar a queda momentânea
+       do visualViewport durante a TROCA de campo (focusin→focusout
+       dispara resize com altura cheia por ~50ms antes de comprimir
+       novamente). Isso removia keyboard-open + padding, deixando
+       o conteúdo fora do viewport enquanto o teclado continuava aberto.
+
+     CORREÇÕES v2.0:
+       • Debounce 80ms no resize handler — ignora eventos intermediários
+       • _openOrUpdateKeyboard() — sem if(_kbOpen)return — re-aplica ao
+         trocar campo mesmo com teclado já aberto
+       • focusin detecta "troca de campo" e faz scroll sem fechar/reabrir
+       • focusout delay 250ms (iOS WebView demora mais que Safari)
+       • _baseVVHeight recalibrado APENAS quando teclado fecha
+       • Threshold fechamento: diff < KB_THRESHOLD/2 (50px) — zona segura
+       • scrollIntoView delay 280ms (WebView anima teclado ~250ms)
+       • Helpers públicos: isIOSWebView(), getKeyboardHeight(),
+         applyKeyboardSafePadding()
+       • NUNCA: translateY, height fixa, remontar accordion
 ══════════════════════════════════════════════════════════════ -->
 <script>
 (function () {
   'use strict';
 
+  /* ─────────────────────────────────────────────────────────────
+     HELPERS PÚBLICOS
+  ───────────────────────────────────────────────────────────── */
+
+  /**
+   * isIOSWebView()
+   * true quando rodando dentro de UIWebView/WKWebView (não Safari puro).
+   * Safari puro inclui "Safari/" no UA; WebView omite.
+   * PWA standalone também usa comportamento de WebView para teclado.
+   */
+  function isIOSWebView() {
+    var ua = navigator.userAgent || '';
+    var isIOS = /iPhone|iPad|iPod/.test(ua);
+    if (!isIOS) return false;
+    var isSafari  = /Safari\//.test(ua) && !/CriOS|FxiOS|OPiOS/.test(ua);
+    var isStandalone = !!(window.navigator.standalone);
+    return !isSafari || isStandalone;
+  }
+
+  /**
+   * getKeyboardHeight()
+   * Altura estimada do teclado em pixels.
+   * Usa visualViewport.height vs screen.height quando possível.
+   */
+  function getKeyboardHeight() {
+    if (window.visualViewport) {
+      var vvH    = window.visualViewport.height;
+      var winH   = window.screen.height || window.innerHeight;
+      var offset = window.visualViewport.offsetTop || 0;
+      var diff   = (winH - offset) - vvH;
+      return diff > 0 ? diff : 0;
+    }
+    return Math.max(0, _baseHeight - window.innerHeight);
+  }
+
+  /**
+   * applyKeyboardSafePadding(kbHeight, el)
+   * APENAS padding-bottom no #scroll-content via CSS var.
+   * NUNCA toca em height, transform ou overflow do #app / body.
+   */
+  function applyKeyboardSafePadding(kbHeight, el) {
+    var pad = kbHeight > 0 ? (kbHeight + 20) : 0;
+    document.documentElement.style.setProperty('--keyboard-safe-bottom', pad + 'px');
+    var sc = document.getElementById('scroll-content');
+    if (sc) sc.style.paddingBottom = pad > 0 ? pad + 'px' : '';
+    console.log('[KEYBOARD_FIX] paddingBottom=' + pad +
+      'px kbHeight=' + kbHeight +
+      ' el=' + (el ? (el.id || el.name || el.tagName) : 'none'));
+  }
+
+  /* ─────────────────────────────────────────────────────────────
+     ESTADO INTERNO
+  ───────────────────────────────────────────────────────────── */
   var _kbOpen        = false;
   var _baseHeight    = window.innerHeight;
-  var _baseVVHeight  = (window.visualViewport ? window.visualViewport.height : window.innerHeight);
-  var _scrollContent = null;
-  var _padTarget     = null;
+  var _baseVVHeight  = window.visualViewport
+                         ? window.visualViewport.height
+                         : window.innerHeight;
   var _lastFocused   = null;
-
-  /* Threshold mínimo para considerar que o teclado abriu (px) */
-  var KB_THRESHOLD = 100;
-
-  function _getScrollEl() {
-    if (!_scrollContent) _scrollContent = document.getElementById('scroll-content');
-    return _scrollContent;
-  }
-  function _getPadTarget() {
-    if (!_padTarget) _padTarget = document.getElementById('scroll-content') || document.body;
-    return _padTarget;
-  }
+  var _debounceTimer = null;
+  var KB_THRESHOLD   = 100;
+  var SCROLL_DELAY   = 280;  /* ms — WebView iOS demora ~250ms para animar teclado */
 
   function _isInput(el) {
     if (!el) return false;
@@ -23108,106 +23456,164 @@ window.MedCasesBridge = {
     return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
   }
 
-  function _openKeyboard(kbHeight, focusedEl) {
-    if (_kbOpen) return;
+  /* ─────────────────────────────────────────────────────────────
+     ABRIR / ATUALIZAR — chamado ao abrir e ao TROCAR de campo
+     v1.0 tinha if(_kbOpen)return, o que impedia re-ajuste ao trocar
+  ───────────────────────────────────────────────────────────── */
+  function _openOrUpdateKeyboard(kbHeight, focusedEl) {
     _kbOpen = true;
     document.body.classList.add('keyboard-open');
+    applyKeyboardSafePadding(kbHeight, focusedEl);
 
-    var pad = kbHeight + 24;
-    var pt  = _getPadTarget();
-    if (pt) pt.style.paddingBottom = pad + 'px';
+    var vvH = window.visualViewport
+      ? window.visualViewport.height : window.innerHeight;
+    console.log('[KEYBOARD_FIX] focus field=' +
+      (focusedEl ? (focusedEl.id || focusedEl.name || focusedEl.tagName) : 'unknown'));
+    console.log('[KEYBOARD_FIX] viewportHeight=' + vvH);
+    console.log('[KEYBOARD_FIX] keyboardHeight=' + kbHeight);
 
-    console.log('[MOBILE_KEYBOARD] keyboardOpen=true viewportHeight=' +
-      (window.visualViewport ? window.visualViewport.height : window.innerHeight) +
-      ' focusedInput=' + (focusedEl ? (focusedEl.id || focusedEl.tagName) : 'unknown') +
-      ' paddingAdded=' + pad + 'px');
-
-    /* Scroll para o input */
     if (focusedEl) {
       setTimeout(function () {
-        focusedEl.scrollIntoView({ block: 'center', behavior: 'smooth' });
-      }, 120);
+        if (document.activeElement === focusedEl ||
+            document.activeElement === document.body) {
+          focusedEl.scrollIntoView({ block: 'center', behavior: 'smooth' });
+          console.log('[KEYBOARD_FIX] scrollIntoView center field=' +
+            (focusedEl.id || focusedEl.name || focusedEl.tagName));
+        }
+      }, SCROLL_DELAY);
     }
   }
 
+  /* ─────────────────────────────────────────────────────────────
+     FECHAR
+  ───────────────────────────────────────────────────────────── */
   function _closeKeyboard() {
     if (!_kbOpen) return;
     _kbOpen = false;
     document.body.classList.remove('keyboard-open');
-
-    var pt = _getPadTarget();
-    if (pt) pt.style.paddingBottom = '';
-
-    console.log('[MOBILE_KEYBOARD] keyboardOpen=false viewportHeight=' +
-      (window.visualViewport ? window.visualViewport.height : window.innerHeight) +
-      ' focusedInput=none');
+    applyKeyboardSafePadding(0, null);
+    /* Recalibra baseline após fechar */
+    setTimeout(function () {
+      if (window.visualViewport) _baseVVHeight = window.visualViewport.height;
+      _baseHeight = window.innerHeight;
+      console.log('[KEYBOARD_FIX] keyboardHeight=0 (fechado) baseVV=' + _baseVVHeight);
+    }, 150);
   }
 
-  /* ── Handler principal: visualViewport resize (iOS Safari, Chrome Android) ── */
+  /* ─────────────────────────────────────────────────────────────
+     HANDLER visualViewport resize — com debounce 80ms
+     Ignora eventos intermediários durante animação do teclado e
+     durante a troca de campo (evita flicker de _close/_open)
+  ───────────────────────────────────────────────────────────── */
   function _onViewportResize() {
-    var vv       = window.visualViewport;
-    var vvHeight = vv ? vv.height : window.innerHeight;
-    var diff     = _baseVVHeight - vvHeight;
+    clearTimeout(_debounceTimer);
+    _debounceTimer = setTimeout(function () {
+      var vv       = window.visualViewport;
+      var vvHeight = vv ? vv.height : window.innerHeight;
+      /* Usa a baseline mais alta — garante que screen.height não engane */
+      var base     = Math.max(
+        _baseVVHeight,
+        window.screen.height || _baseVVHeight
+      );
+      var diff = base - vvHeight;
 
-    if (diff > KB_THRESHOLD) {
-      _openKeyboard(diff, _lastFocused);
-    } else {
-      _closeKeyboard();
-    }
+      if (diff > KB_THRESHOLD) {
+        /* Teclado aberto — abre ou re-aplica se campo trocou */
+        _openOrUpdateKeyboard(diff, _lastFocused);
+      } else if (_kbOpen && diff < (KB_THRESHOLD / 2)) {
+        /* Teclado genuinamente fechou — zona segura < 50px */
+        _closeKeyboard();
+      }
+      /* Zona cinzenta 50–100px: pode ser scroll do visualViewport,
+         não fechar o teclado para evitar falsos negativos */
+    }, 80);
   }
 
-  /* ── focusin: captura o input focado ── */
+  /* ─────────────────────────────────────────────────────────────
+     FOCUSIN — captura campo ativo, trata troca de campo
+  ───────────────────────────────────────────────────────────── */
   document.addEventListener('focusin', function (e) {
     if (!_isInput(e.target)) return;
-    _lastFocused = e.target;
 
-    /* Em browsers sem visualViewport, detectamos via window resize */
+    var prev      = _lastFocused;
+    _lastFocused  = e.target;
+
+    console.log('[KEYBOARD_FIX] focus field=' +
+      (e.target.id || e.target.name || e.target.tagName) +
+      ' kbOpen=' + _kbOpen);
+
+    /* TROCA DE CAMPO com teclado já aberto:
+       apenas faz scroll — NÃO fecha/reabre teclado */
+    if (_kbOpen && prev && prev !== e.target) {
+      setTimeout(function () {
+        if (document.activeElement === e.target) {
+          e.target.scrollIntoView({ block: 'center', behavior: 'smooth' });
+          console.log('[KEYBOARD_FIX] scrollIntoView center (field switch)');
+          /* Garante padding atualizado */
+          var kbH = getKeyboardHeight();
+          if (kbH > KB_THRESHOLD) applyKeyboardSafePadding(kbH, e.target);
+        }
+      }, SCROLL_DELAY);
+      return;
+    }
+
+    /* Fallback para browsers sem visualViewport (Android antigo) */
     if (!window.visualViewport) {
-      /* Aguarda o resize que vem logo após o focusin */
       setTimeout(function () {
         var diff = _baseHeight - window.innerHeight;
-        if (diff > KB_THRESHOLD) {
-          _openKeyboard(diff, _lastFocused);
-        }
-      }, 300);
+        if (diff > KB_THRESHOLD) _openOrUpdateKeyboard(diff, _lastFocused);
+      }, 350);
     }
   }, true);
 
-  /* ── focusout: aguarda para ver se outro input tomou foco ── */
+  /* ─────────────────────────────────────────────────────────────
+     FOCUSOUT — só fecha se NENHUM input tomou foco após 250ms
+  ───────────────────────────────────────────────────────────── */
   document.addEventListener('focusout', function (e) {
     if (!_isInput(e.target)) return;
-    /* Delay: se outro input for focado, focusin dispara antes desse timeout */
     setTimeout(function () {
-      if (!_isInput(document.activeElement)) {
+      var ae = document.activeElement;
+      if (!_isInput(ae)) {
         _lastFocused = null;
         _closeKeyboard();
+        console.log('[KEYBOARD_FIX] focus lost — closing keyboard');
       }
-    }, 200);
+      /* Se outro input pegou foco, o focusin já tratou */
+    }, 250);
   }, true);
 
-  /* ── Registrar listener do visualViewport ── */
+  /* ─────────────────────────────────────────────────────────────
+     REGISTRAR LISTENERS
+  ───────────────────────────────────────────────────────────── */
   if (window.visualViewport) {
-    /* Recalibrar baseline quando não há teclado */
     window.visualViewport.addEventListener('resize', _onViewportResize, { passive: true });
     window.visualViewport.addEventListener('scroll', _onViewportResize, { passive: true });
-    /* Baseline inicial */
     window.addEventListener('load', function () {
-      _baseVVHeight = window.visualViewport.height;
+      setTimeout(function () {
+        _baseVVHeight = window.visualViewport.height;
+        _baseHeight   = window.innerHeight;
+        console.log('[KEYBOARD_FIX] baseline calibrated vv=' + _baseVVHeight +
+          ' win=' + _baseHeight + ' isIOSWebView=' + isIOSWebView());
+      }, 200);
     });
   } else {
-    /* Fallback: window resize */
     window.addEventListener('resize', function () {
       var diff = _baseHeight - window.innerHeight;
-      if (diff > KB_THRESHOLD) {
-        _openKeyboard(diff, _lastFocused);
-      } else {
-        _closeKeyboard();
-      }
+      if (diff > KB_THRESHOLD)    _openOrUpdateKeyboard(diff, _lastFocused);
+      else if (_kbOpen)           _closeKeyboard();
     });
   }
 
-  /* Expõe para debug */
-  window._mobileKeyboard = { isOpen: function() { return _kbOpen; } };
+  /* ─────────────────────────────────────────────────────────────
+     API PÚBLICA
+  ───────────────────────────────────────────────────────────── */
+  window._mobileKeyboard = {
+    isOpen           : function () { return _kbOpen; },
+    isIOSWebView     : isIOSWebView,
+    getKeyboardHeight: getKeyboardHeight,
+    applyPadding     : applyKeyboardSafePadding,
+    forceClose       : _closeKeyboard
+  };
 
 }());
 </script>
@@ -23218,14 +23624,32 @@ window.MedCasesBridge = {
      hub grid adaptativo, scroll padding, light mode compatível.
 ══════════════════════════════════════════════════════════════ -->
 <style>
-  /* ── Keyboard open: scroll ainda funciona ── */
+  /* ── Keyboard open: scroll sempre ativo, padding via JS ── */
+  /* BUILD 232: nunca aplicar height/transform aqui — apenas garantir scroll */
   body.keyboard-open #scroll-content {
     overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  /* Garante que accordion e conteúdo permanecem visíveis com teclado aberto */
+  body.keyboard-open #hub-accordion,
+  body.keyboard-open .hub-card.is-open,
+  body.keyboard-open .hub-card-body {
+    /* NUNCA: display:none, height:0, overflow:hidden forçado */
+    visibility: visible !important;
   }
 
-  /* ── dvh support ── */
+  /* ── dvh support: #app e min-height ── */
   @supports (height: 100dvh) {
-    #app { height: 100dvh; }
+    #app {
+      height: 100dvh;
+      min-height: 100dvh;  /* BUILD 232: previne colapso sem position:fixed no body */
+    }
+  }
+
+  /* ── html/body: min-height garante que nunca encolhem ── */
+  /* BUILD 232: complementa a remoção de position:fixed do body */
+  html, body {
+    min-height: 100% !important;
   }
 
   /* ═══════════════════════════════════════════════════

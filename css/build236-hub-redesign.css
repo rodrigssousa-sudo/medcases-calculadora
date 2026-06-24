@@ -1,0 +1,784 @@
+/* ================================================================
+   MedCases Pro — BUILD 236
+   feat(calculator): redesign calculator hub with visual hierarchy
+
+   ESCOPO EXCLUSIVO: Layout visual do HUB de entrada da Calculadora.
+   NÃO altera: cálculos, fórmulas, banco de fármacos, banco de
+               interações, lógica clínica, adapters, eventos,
+               dados do paciente, fluxo interno dos módulos.
+
+   OBJETIVO:
+   Transformar os accordions empilhados em um HUB visual moderno,
+   com hierarquia clara, scan rápido e aparência premium.
+   Referências: Nubank, Revolut, Arc, Linear, Notion.
+
+   ARQUITETURA:
+   §1  Tokens B236 — sobrescreve gaps/tamanhos
+   §2  Hub container e labels de seção
+   §3  NÍVEL 1 — cards essenciais (full-width, horizontal)
+   §4  NÍVEL 2 — grid compacto (ícone+título+linha)
+   §5  NÍVEL 3 — grid compacto discreto
+   §6  Trigger N2/N3 — layout vertical centralizado
+   §7  Linha decorativa colorida por módulo
+   §8  Estado ABERTO — card expande 100%, conteúdo aparece
+   §9  Comportamento accordion (grid→flex na abertura)
+   §10 Responsividade tablet/desktop
+   §11 Microinterações (scale 0.98, 120ms, GPU-only)
+   §12 Modo claro
+   §13 Overrides finais
+================================================================ */
+
+
+/* ================================================================
+   §1 — TOKENS BUILD 236
+================================================================ */
+:root {
+  /* Gaps e padding específicos do hub */
+  --b236-gap-outer:    14px;   /* gap entre seções de nível */
+  --b236-gap-inner:    10px;   /* gap entre cards no grid */
+  --b236-pad-section:  12px 14px 0;
+
+  /* Alturas de trigger */
+  --b236-h-l1:   88px;   /* nível 1: grande, horizontal */
+  --b236-h-l2:  104px;   /* nível 2: quadradão compacto */
+  --b236-h-l3:   92px;   /* nível 3: ligeiramente menor */
+
+  /* Ícones */
+  --b236-ico-l1: 44px;
+  --b236-ico-l2: 56px;
+  --b236-ico-l3: 48px;
+  --b236-font-ico-l1: 20px;
+  --b236-font-ico-l2: 26px;
+  --b236-font-ico-l3: 22px;
+
+  /* Tipografia trigger */
+  --b236-name-l1: 14px;
+  --b236-name-l2: 13px;
+  --b236-name-l3: 12px;
+  --b236-weight:  600;
+
+  /* Linha decorativa */
+  --b236-line-h:  2.5px;
+  --b236-line-w:  32px;
+  --b236-line-r:  2px;
+}
+
+
+/* ================================================================
+   §2 — HUB CONTAINER + LABELS DE SEÇÃO
+================================================================ */
+
+/* Container principal — flex-column entre seções */
+.hub-accordion {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: var(--b236-gap-outer) !important;
+  padding: 10px 12px 28px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Label de seção: "NÍVEL 1 · ESSENCIAIS" etc. */
+.hub-section-label {
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.09em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  padding: 0 2px 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  user-select: none !important;
+}
+
+.hub-section-label::after {
+  content: '' !important;
+  flex: 1 !important;
+  height: 1px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Wrappers de seção */
+.hub-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  width: 100% !important;
+}
+
+/* Nível 1: bloco full-width */
+.hub-l1-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: var(--b236-gap-inner) !important;
+  width: 100% !important;
+}
+
+/* Nível 2: grid 2 colunas */
+.hub-l2-section {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: var(--b236-gap-inner) !important;
+  width: 100% !important;
+}
+
+/* Nível 3: grid 2 colunas */
+.hub-l3-section {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: var(--b236-gap-inner) !important;
+  width: 100% !important;
+}
+
+
+/* ================================================================
+   §3 — NÍVEL 1: TRIGGER HORIZONTAL (ícone esquerda + meta direita)
+   Patient · ClCr · Fármacos
+   Layout: [ico] [nome / desc] [chevron]
+================================================================ */
+
+/* Card N1: bordas mais arredondadas, maior peso */
+.hub-card[data-level="1"] {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+
+/* Trigger N1: layout horizontal clássico */
+.hub-card[data-level="1"] .hub-card-trigger {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  min-height: var(--b236-h-l1) !important;
+  padding: 0 18px !important;
+  gap: 15px !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+/* Ícone N1 */
+.hub-card[data-level="1"] .hub-card-ico {
+  width: var(--b236-ico-l1) !important;
+  height: var(--b236-ico-l1) !important;
+  min-width: var(--b236-ico-l1) !important;
+  border-radius: 13px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: var(--b236-font-ico-l1) !important;
+  flex-shrink: 0 !important;
+}
+
+/* Meta N1: nome + desc, alinhados à esquerda */
+.hub-card[data-level="1"] .hub-card-meta {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+  min-width: 0 !important;
+}
+
+.hub-card[data-level="1"] .hub-card-name {
+  font-size: var(--b236-name-l1) !important;
+  font-weight: var(--b236-weight) !important;
+  color: #FFFFFF !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.2 !important;
+}
+
+.hub-card[data-level="1"] .hub-card-desc {
+  font-size: 10px !important;
+  color: rgba(255, 255, 255, 0.62) !important;
+  font-weight: 400 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Chevron N1 */
+.hub-card[data-level="1"] .hub-card-chevron {
+  font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.38) !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+  transition: transform 150ms ease-out !important;
+}
+
+.hub-card[data-level="1"].is-open .hub-card-chevron {
+  transform: rotate(180deg) !important;
+}
+
+
+/* ================================================================
+   §4 — NÍVEL 2: TRIGGER VERTICAL CENTRALIZADO
+   Layout: [ícone grande] / [título] / [linha colorida]
+   Grid: 2×3 (mobile) | 3×2 ou 4-col (tablet/desktop)
+================================================================ */
+
+/* Card N2 */
+.hub-card[data-level="2"] {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+
+/* Trigger N2: coluna centralizada */
+.hub-card[data-level="2"] .hub-card-trigger {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: var(--b236-h-l2) !important;
+  padding: 14px 10px !important;
+  gap: 8px !important;
+  width: 100% !important;
+  text-align: center !important;
+  position: relative !important;
+}
+
+/* Esconde meta-desc no N2 fechado (só ícone + título + linha) */
+.hub-card[data-level="2"]:not(.is-open) .hub-card-desc {
+  display: none !important;
+}
+
+/* Esconde chevron N2 fechado (inline — fica na linha decorativa) */
+.hub-card[data-level="2"]:not(.is-open) .hub-card-chevron {
+  display: none !important;
+}
+
+/* Ícone N2: grande, centralizado */
+.hub-card[data-level="2"] .hub-card-ico {
+  width: var(--b236-ico-l2) !important;
+  height: var(--b236-ico-l2) !important;
+  min-width: var(--b236-ico-l2) !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: var(--b236-font-ico-l2) !important;
+  flex-shrink: 0 !important;
+}
+
+/* Nome N2 */
+.hub-card[data-level="2"] .hub-card-name {
+  font-size: var(--b236-name-l2) !important;
+  font-weight: var(--b236-weight) !important;
+  color: #FFFFFF !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+
+/* Meta N2: só o nome no estado fechado */
+.hub-card[data-level="2"] .hub-card-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+
+/* ================================================================
+   §5 — NÍVEL 3: TRIGGER VERTICAL — versão discreta
+   Idêntico ao N2 mas menor (Pediatria · Gestantes)
+================================================================ */
+
+.hub-card[data-level="3"] {
+  border-radius: 13px !important;
+  overflow: hidden !important;
+}
+
+.hub-card[data-level="3"] .hub-card-trigger {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: var(--b236-h-l3) !important;
+  padding: 13px 10px !important;
+  gap: 7px !important;
+  width: 100% !important;
+  text-align: center !important;
+  position: relative !important;
+}
+
+.hub-card[data-level="3"]:not(.is-open) .hub-card-desc {
+  display: none !important;
+}
+
+.hub-card[data-level="3"]:not(.is-open) .hub-card-chevron {
+  display: none !important;
+}
+
+.hub-card[data-level="3"] .hub-card-ico {
+  width: var(--b236-ico-l3) !important;
+  height: var(--b236-ico-l3) !important;
+  min-width: var(--b236-ico-l3) !important;
+  border-radius: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: var(--b236-font-ico-l3) !important;
+  flex-shrink: 0 !important;
+}
+
+.hub-card[data-level="3"] .hub-card-name {
+  font-size: var(--b236-name-l3) !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+
+.hub-card[data-level="3"] .hub-card-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+/* Badge "Em breve" N3 */
+.hub-soon-badge {
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  font-size: 8.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.50) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 5px !important;
+  padding: 2px 5px !important;
+  line-height: 1.3 !important;
+}
+
+
+/* ================================================================
+   §6 — LINHA DECORATIVA COLORIDA
+   Aparece abaixo do título nos cards N2/N3 no estado fechado.
+   Pseudo-elemento ::after no .hub-card-name (dentro do trigger).
+   Cor específica por módulo via data-hub.
+================================================================ */
+
+/* Base: linha sob o nome nos cards N2 e N3 fechados */
+.hub-card[data-level="2"]:not(.is-open) .hub-card-name::after,
+.hub-card[data-level="3"]:not(.is-open) .hub-card-name::after {
+  content: '' !important;
+  display: block !important;
+  width: var(--b236-line-w) !important;
+  height: var(--b236-line-h) !important;
+  border-radius: var(--b236-line-r) !important;
+  margin: 5px auto 0 !important;
+  opacity: 0.75 !important;
+  background: currentColor !important;
+}
+
+/* Cores da linha por módulo */
+#hub-card-interacoes:not(.is-open) .hub-card-name::after   { color: var(--mc-l2-accent-inter) !important;   }
+#hub-card-eletrolitos:not(.is-open) .hub-card-name::after  { color: var(--mc-l2-accent-elec) !important;    }
+#hub-card-infusao:not(.is-open) .hub-card-name::after      { color: var(--mc-l2-accent-infusao) !important; }
+#hub-card-fluidos:not(.is-open) .hub-card-name::after      { color: var(--mc-l2-accent-fluidos) !important; }
+#hub-card-hemodinamica:not(.is-open) .hub-card-name::after { color: var(--mc-l2-accent-hemo) !important;    }
+#hub-card-scores:not(.is-open) .hub-card-name::after       { color: var(--mc-l2-accent-scores) !important;  }
+#hub-card-pediatria:not(.is-open) .hub-card-name::after    { color: var(--mc-l3-accent-ped) !important;     }
+#hub-card-gestante:not(.is-open) .hub-card-name::after     { color: var(--mc-l3-accent-gest) !important;    }
+
+
+/* ================================================================
+   §7 — ESTADO ABERTO: card ocupa 100%, layout completo retorna
+   Quando .is-open:
+   - Trigger volta ao layout horizontal clássico
+   - Chevron aparece e roda 180°
+   - Desc reaparece
+   - Linha desaparece (coberta pelo ::after none)
+================================================================ */
+
+/* Trigger aberto N2: vira horizontal igual N1 */
+.hub-card[data-level="2"].is-open .hub-card-trigger,
+.hub-card[data-level="3"].is-open .hub-card-trigger {
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 0 16px !important;
+  gap: 13px !important;
+  min-height: 58px !important;
+  text-align: left !important;
+}
+
+/* Ícone aberto N2/N3: volta ao tamanho normal */
+.hub-card[data-level="2"].is-open .hub-card-ico {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  border-radius: 10px !important;
+  font-size: 15px !important;
+}
+
+.hub-card[data-level="3"].is-open .hub-card-ico {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  border-radius: 9px !important;
+  font-size: 13px !important;
+}
+
+/* Meta aberto N2/N3: volta ao alinhamento esquerda */
+.hub-card[data-level="2"].is-open .hub-card-meta,
+.hub-card[data-level="3"].is-open .hub-card-meta {
+  align-items: flex-start !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+/* Desc: reaparece ao abrir */
+.hub-card[data-level="2"].is-open .hub-card-desc,
+.hub-card[data-level="3"].is-open .hub-card-desc {
+  display: block !important;
+  font-size: 10px !important;
+  color: rgba(255, 255, 255, 0.58) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Nome aberto N2/N3: alinhado esquerda */
+.hub-card[data-level="2"].is-open .hub-card-name,
+.hub-card[data-level="3"].is-open .hub-card-name {
+  text-align: left !important;
+  font-size: 13px !important;
+}
+
+.hub-card[data-level="3"].is-open .hub-card-name {
+  font-size: 12px !important;
+  color: #FFFFFF !important;
+}
+
+/* Linha: some ao abrir */
+.hub-card[data-level="2"].is-open .hub-card-name::after,
+.hub-card[data-level="3"].is-open .hub-card-name::after {
+  display: none !important;
+}
+
+/* Chevron: reaparece ao abrir e roda 180° */
+.hub-card[data-level="2"].is-open .hub-card-chevron,
+.hub-card[data-level="3"].is-open .hub-card-chevron {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 11px !important;
+  color: rgba(255, 255, 255, 0.38) !important;
+  margin-left: auto !important;
+  transform: rotate(180deg) !important;
+  flex-shrink: 0 !important;
+  transition: transform 150ms ease-out !important;
+}
+
+/* Badge some ao abrir */
+.hub-card[data-level="3"].is-open .hub-soon-badge {
+  display: none !important;
+}
+
+/* Body do card */
+.hub-card-body {
+  display: none !important;
+  width: 100% !important;
+}
+
+.hub-card.is-open .hub-card-body {
+  display: block !important;
+  width: 100% !important;
+  animation: b236BodyIn 150ms ease-out both !important;
+}
+
+@keyframes b236BodyIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ================================================================
+   §8 — GRID → FLEX NA ABERTURA (accordion full-width)
+   Quando qualquer card abre:
+   - .hub-accordion--expanded adicionado pelo JS
+   - Containers N2/N3 trocam grid por flex-column
+   - Card aberto + fechados ocupam 100%
+================================================================ */
+
+/* N2 expandido */
+.hub-accordion--expanded .hub-l2-grid,
+.hub-accordion--expanded .hub-l2-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.hub-accordion--expanded .hub-l2-grid .hub-card,
+.hub-accordion--expanded .hub-l2-section .hub-card {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* N3 expandido */
+.hub-accordion--expanded .hub-l3-row,
+.hub-accordion--expanded .hub-l3-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.hub-accordion--expanded .hub-l3-row .hub-card,
+.hub-accordion--expanded .hub-l3-section .hub-card {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* N1 já é full-width — nenhuma mudança necessária */
+.hub-accordion--expanded .hub-l1-row .hub-card,
+.hub-accordion--expanded .hub-l1-section .hub-card {
+  width: 100% !important;
+}
+
+/* Garante: grid-column não interfere */
+.hub-accordion--expanded .hub-card {
+  grid-column: auto !important;
+}
+
+
+/* ================================================================
+   §9 — MICROINTERAÇÕES
+   GPU-only: opacity + transform. Sem height, sem box-shadow.
+================================================================ */
+
+/* Trigger: escala suave ao pressionar */
+.hub-card-trigger {
+  transition:
+    opacity 120ms ease-out,
+    transform 120ms ease-out !important;
+  will-change: transform !important;
+  cursor: pointer !important;
+  outline: none !important;
+  border: none !important;
+  background: none !important;
+  width: 100% !important;
+  font-family: var(--mc-font-family, -apple-system, "Inter", sans-serif) !important;
+}
+
+.hub-card-trigger:active {
+  transform: scale(0.98) !important;
+  opacity: 0.86 !important;
+}
+
+/* Hover desktop */
+@media (hover: hover) {
+  .hub-card-trigger:hover {
+    filter: brightness(1.05) !important;
+  }
+}
+
+/* Ícone: mola ao abrir */
+.hub-card-ico {
+  transition: transform 150ms cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  will-change: transform !important;
+}
+
+.hub-card.is-open .hub-card-ico {
+  transform: scale(1.05) !important;
+}
+
+
+/* ================================================================
+   §10 — RESPONSIVIDADE TABLET / DESKTOP
+================================================================ */
+
+@media (min-width: 600px) {
+  .hub-accordion {
+    padding: 12px 16px 32px !important;
+    gap: 16px !important;
+  }
+  :root {
+    --b236-gap-inner: 12px;
+    --b236-h-l2: 110px;
+    --b236-h-l3:  98px;
+    --b236-ico-l2: 58px;
+    --b236-font-ico-l2: 27px;
+  }
+}
+
+/* Tablet/Desktop: N1 = 3 colunas, N2 = 3 colunas, N3 = 2 colunas */
+@media (min-width: 768px) {
+  .hub-accordion {
+    padding: 16px 22px 36px !important;
+    gap: 18px !important;
+  }
+
+  /* N1: 3 colunas lado a lado */
+  .hub-l1-section {
+    flex-direction: row !important;
+    gap: 14px !important;
+  }
+  .hub-l1-row {
+    /* Compatibilidade: se ainda usa hub-l1-row empilhados, em tablet mostra 3 lados */
+  }
+
+  /* N2: 3 colunas */
+  .hub-l2-section {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+  }
+  /* Retrocompat: hub-l2-grid */
+  .hub-l2-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  /* N3: 2 colunas (sem mudança) */
+  .hub-l3-section {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+  }
+  .hub-l3-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Trigger N2/N3 maiores em tablet */
+  :root {
+    --b236-h-l2: 116px;
+    --b236-h-l3: 104px;
+    --b236-ico-l2: 60px;
+    --b236-font-ico-l2: 28px;
+    --b236-ico-l3: 52px;
+    --b236-font-ico-l3: 24px;
+  }
+
+  /* N1 aberto em tablet: 3-col → flex-col */
+  .hub-accordion--expanded .hub-l1-section {
+    flex-direction: column !important;
+  }
+  /* N2 aberto em tablet: 3-col → flex-col */
+  .hub-accordion--expanded .hub-l2-grid,
+  .hub-accordion--expanded .hub-l2-section {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hub-accordion {
+    padding: 20px 28px 40px !important;
+    gap: 20px !important;
+  }
+
+  /* N2: 3 colunas (mantém — mais arrumado que 4 para cards compactos) */
+  .hub-l2-grid,
+  .hub-l2-section {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  :root {
+    --b236-h-l2: 120px;
+    --b236-ico-l2: 62px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hub-accordion {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+  }
+}
+
+
+/* ================================================================
+   §11 — MODO CLARO
+================================================================ */
+
+body.light-mode .hub-section-label {
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+body.light-mode .hub-section-label::after {
+  background: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .hub-card[data-level="1"] .hub-card-name {
+  color: #FFFFFF !important;  /* preserva branco sobre fundo verde */
+}
+
+body.light-mode .hub-card[data-level="2"] .hub-card-name,
+body.light-mode .hub-card[data-level="3"] .hub-card-name {
+  color: #FFFFFF !important;  /* branco sobre fundo azul/cinza */
+}
+
+body.light-mode .hub-soon-badge {
+  color: rgba(255, 255, 255, 0.55) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+
+/* ================================================================
+   §12 — OVERRIDES FINAIS
+   Garante que regras de builds anteriores não quebram o layout.
+================================================================ */
+
+/* Hub accordion: sempre flex-column no container raiz */
+.hub-accordion {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Cards: sem overflow por padrão (já setado acima por nível) */
+.hub-card {
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Padding interno dos cards abertos */
+.hub-card[data-level="1"] .hub-card-inner {
+  padding: 16px 18px 18px !important;
+}
+.hub-card[data-level="2"] .hub-card-inner {
+  padding: 14px 15px 16px !important;
+}
+.hub-card[data-level="3"] .hub-card-inner {
+  padding: 13px 14px 15px !important;
+}
+
+@media (min-width: 768px) {
+  .hub-card[data-level="1"] .hub-card-inner { padding: 18px 22px 20px !important; }
+  .hub-card[data-level="2"] .hub-card-inner { padding: 16px 18px 18px !important; }
+  .hub-card[data-level="3"] .hub-card-inner { padding: 14px 16px 16px !important; }
+}
+
+/* Neutraliza grid-column residual de builds anteriores */
+.hub-l2-grid .hub-card,
+.hub-l3-row .hub-card,
+.hub-l2-section .hub-card,
+.hub-l3-section .hub-card {
+  grid-column: auto !important;
+}
+
+.hub-accordion--expanded .hub-l2-grid .hub-card,
+.hub-accordion--expanded .hub-l3-row .hub-card,
+.hub-accordion--expanded .hub-l2-section .hub-card,
+.hub-accordion--expanded .hub-l3-section .hub-card {
+  grid-column: auto !important;
+}
+
+/* Hub version footer */
+.hub-version-footer {
+  text-align: center !important;
+  font-size: 10px !important;
+  color: rgba(255, 255, 255, 0.18) !important;
+  margin-top: 4px !important;
+  padding-bottom: 6px !important;
+}
+
+/* ================================================================
+   FIM DO BUILD 236
+================================================================ */

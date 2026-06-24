@@ -1,0 +1,728 @@
+/* ================================================================
+   MedCases Pro — BUILD 235 (rev3 — GRID FINAL)
+   feat(calculator): hierarchical responsive layout + full-width accordion
+
+   ESCOPO EXCLUSIVO: UX / Layout / Hierarquia / Grid / Accordion
+   NÃO altera: cálculos, fórmulas, banco de dados, ClCr,
+               eletrólitos, infusões, adapters, lógica clínica.
+
+   ╔══════════════════════════════════════════════════════════════╗
+   ║  REGRA PRINCIPAL                                             ║
+   ║  ─────────────────────────────────────────────────────────  ║
+   ║  TODOS FECHADOS  → container = CSS Grid (2 ou 4 colunas)    ║
+   ║  QUALQUER ABERTO → container = flex-column (1 coluna 100%)  ║
+   ║                    card aberto expande full-width            ║
+   ║                    demais cards empilham abaixo              ║
+   ╚══════════════════════════════════════════════════════════════╝
+
+   GRID SPEC:
+   ┌─────────────────┬──────────┬──────────────────────┐
+   │ Nível           │ Mobile   │ Tablet/Desktop ≥768px │
+   ├─────────────────┼──────────┼──────────────────────┤
+   │ N1 (3 cards)    │ 1 col    │ 1 col (cada na linha) │
+   │ N2 (6 cards)    │ 2 col    │ 4 col                 │
+   │ N3 (2 cards)    │ 2 col    │ 2 col                 │
+   └─────────────────┴──────────┴──────────────────────┘
+
+   TÉCNICA (grid→flex switch):
+   JS adiciona .hub-accordion--expanded ao <nav#hub-accordion>
+   quando qualquer card abre (_updateAccordionState(true)).
+   CSS usa esse seletor para trocar display:grid → display:flex.
+   Quando fecha, JS remove a classe e grid retorna automaticamente.
+
+   ARQUITETURA:
+   §1  Hub Accordion container
+   §2  Nível 1 — full-width, 1 col sempre
+   §3  Nível 2 — GRID: mobile 2col / tablet 4col
+   §4  Nível 3 — GRID: sempre 2col
+   §5  ESTADO EXPANDIDO — flex-column para N2 e N3
+   §6  Microinterações e triggers
+   §7  Tipografia hierárquica
+   §8  Componentes internos (botões, inputs, footers)
+   §9  Modo Claro
+   §10 Overrides finais / anti-conflito
+
+   CARREGAMENTO:
+   1. medcases-ux-v2.css
+   2. build233.css
+   3. build234-design-system.css
+   4. build235-layout.css  ← este arquivo (maior prioridade de cascade)
+================================================================ */
+
+
+/* ================================================================
+   §1 — HUB ACCORDION CONTAINER
+   O <nav> é sempre flex-column — os filhos são os wrappers de nível.
+================================================================ */
+
+.hub-accordion {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  width: 100% !important;
+  padding: 12px 14px 24px !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 600px) {
+  .hub-accordion {
+    padding: 14px 18px 28px !important;
+    gap: 14px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hub-accordion {
+    padding: 16px 22px 32px !important;
+    gap: 14px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hub-accordion {
+    padding: 20px 28px 36px !important;
+    gap: 16px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hub-accordion {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+  }
+}
+
+
+/* ================================================================
+   §2 — NÍVEL 1: SEMPRE FULL-WIDTH, SEMPRE 1 COLUNA
+   Cada .hub-l1-row contém 1 card: Patient, ClCr, Fármacos.
+   Empilhados individualmente em qualquer breakpoint.
+================================================================ */
+
+.hub-row--full,
+.hub-l1-row {
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+.hub-l1-row .hub-card {
+  width: 100% !important;
+  display: block !important;
+}
+
+
+/* ================================================================
+   §3 — NÍVEL 2: hub-l2-grid
+   ─────────────────────────────────────────────────────────────
+   ESTADO FECHADO (padrão):
+     Mobile  < 768px  → grid 2 colunas
+     Tablet  ≥ 768px  → grid 4 colunas
+     Desktop ≥ 1024px → grid 4 colunas
+
+   ESTADO EXPANDIDO → ver §5
+   ─────────────────────────────────────────────────────────────
+================================================================ */
+
+/* ── Mobile: 2 colunas ── */
+.hub-l2-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  align-items: start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ── Tablet / Desktop: 4 colunas ── */
+@media (min-width: 768px) {
+  .hub-l2-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hub-l2-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+
+/* ================================================================
+   §4 — NÍVEL 3: hub-l3-row
+   ─────────────────────────────────────────────────────────────
+   ESTADO FECHADO: sempre 2 colunas (mobile e tablet/desktop)
+   ESTADO EXPANDIDO → ver §5
+   ─────────────────────────────────────────────────────────────
+================================================================ */
+
+.hub-l3-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  align-items: start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 768px) {
+  .hub-l3-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hub-l3-row {
+    gap: 16px !important;
+  }
+}
+
+/* ── Retrocompatibilidade com .hub-row legado ── */
+.hub-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  align-items: start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 768px) {
+  .hub-row {
+    gap: 14px !important;
+  }
+}
+
+
+/* ================================================================
+   §5 — ESTADO EXPANDIDO: grid → flex-column
+   ─────────────────────────────────────────────────────────────
+   GATILHO: .hub-accordion--expanded adicionado ao <nav> pelo JS
+   (_updateAccordionState(true) em hub-accordion.js)
+
+   EFEITO:
+   - Container abandona o grid completamente
+   - Torna-se flex-column (coluna única)
+   - Card aberto (.is-open) expande naturalmente a 100%
+   - Cards fechados também ficam 100% (empilhados abaixo)
+   - Quando JS remove .hub-accordion--expanded → grid retorna
+
+   PRIORIDADE: !important + posição de cascade (carregado por último)
+   garante sobrescrever qualquer regra de grid anterior,
+   incluindo os media queries do §3.
+   ─────────────────────────────────────────────────────────────
+================================================================ */
+
+/* ── N2 expandido ── */
+.hub-accordion--expanded .hub-l2-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.hub-accordion--expanded .hub-l2-grid .hub-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* ── N3 expandido ── */
+.hub-accordion--expanded .hub-l3-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.hub-accordion--expanded .hub-l3-row .hub-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* ── .hub-row legado expandido ── */
+.hub-accordion--expanded .hub-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.hub-accordion--expanded .hub-row .hub-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* ── Garantia de media query: expandido sobrescreve 4-col em tablet ── */
+@media (min-width: 768px) {
+  .hub-accordion--expanded .hub-l2-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .hub-accordion--expanded .hub-l3-row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .hub-accordion--expanded .hub-row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hub-accordion--expanded .hub-l2-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .hub-accordion--expanded .hub-l3-row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+
+/* ================================================================
+   §6 — MICROINTERAÇÕES
+   Somente opacity + transform (GPU-friendly).
+   Sem height, sem box-shadow, sem layout animations.
+================================================================ */
+
+/* Fade-in ao abrir body do card */
+@keyframes b235BodyEnter {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hub-card.is-open .hub-card-inner {
+  animation: b235BodyEnter 150ms ease-out both !important;
+}
+
+/* Chevron 180° ao abrir */
+.hub-card-chevron {
+  transition: transform 150ms ease-out !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  will-change: transform !important;
+}
+
+.hub-card.is-open .hub-card-chevron {
+  transform: rotate(180deg) !important;
+}
+
+/* Ícone: escala suave ao abrir */
+.hub-card-ico {
+  transition: transform 150ms cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  will-change: transform !important;
+}
+
+.hub-card.is-open .hub-card-ico {
+  transform: scale(1.07) !important;
+}
+
+/* Trigger: scale ao pressionar */
+.hub-card-trigger {
+  transition:
+    opacity 150ms ease-out,
+    transform 100ms ease-out !important;
+}
+
+.hub-card-trigger:active {
+  transform: scale(0.985) !important;
+  opacity: 0.88 !important;
+}
+
+/* Hover somente em dispositivos com mouse */
+@media (hover: hover) {
+  .hub-card-trigger:hover {
+    filter: brightness(1.06) !important;
+  }
+  .hm-drug-item:hover {
+    opacity: 0.82 !important;
+  }
+}
+
+.hm-drug-item {
+  transition: opacity 150ms ease-out !important;
+}
+
+/* Resultados de cálculo: fade-in */
+@keyframes b235FadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#hm-drug-result,
+#calc-drug-result,
+.hm-inline-result,
+.drug-result-card,
+.elec2-result-block,
+#hm-result-pills,
+.results-grid {
+  animation: b235FadeIn 150ms ease-out both !important;
+}
+
+/* Scroll suave */
+html, #scroll-content {
+  scroll-behavior: smooth !important;
+}
+
+
+/* ================================================================
+   §7 — TIPOGRAFIA HIERÁRQUICA
+================================================================ */
+
+/* Base: títulos e descrições dos triggers */
+.hub-card-name,
+.hub-card-name span {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+.hub-card-desc,
+.hub-card-desc span {
+  color: rgba(255, 255, 255, 0.80) !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+}
+
+/* Nível 1: maior hierarquia */
+.hub-card[data-level="1"] .hub-card-name {
+  font-size: 15px !important;
+  letter-spacing: -0.15px !important;
+}
+
+.hub-card[data-level="1"] .hub-card-desc {
+  font-size: 11px !important;
+  color: rgba(255, 255, 255, 0.74) !important;
+}
+
+/* Nível 2: padrão */
+.hub-card[data-level="2"] .hub-card-name {
+  font-size: 13px !important;
+}
+
+.hub-card[data-level="2"] .hub-card-desc {
+  font-size: 10px !important;
+  color: rgba(255, 255, 255, 0.70) !important;
+}
+
+/* Nível 3: discreto */
+.hub-card[data-level="3"] .hub-card-name {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.hub-card[data-level="3"] .hub-card-desc {
+  font-size: 9.5px !important;
+  color: rgba(255, 255, 255, 0.60) !important;
+}
+
+/* Desktop: nomes maiores */
+@media (min-width: 768px) {
+  .hub-card[data-level="1"] .hub-card-name { font-size: 16px !important; }
+  .hub-card[data-level="2"] .hub-card-name { font-size: 13.5px !important; }
+}
+
+/* Labels internos */
+.hub-card-body label,
+.hub-card-body .hm-label {
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.80) !important;
+  letter-spacing: 0.01em !important;
+  display: block !important;
+  margin-bottom: 5px !important;
+}
+
+.hub-card-body .hm-label-unit {
+  font-size: 10px !important;
+  color: rgba(255, 255, 255, 0.48) !important;
+  font-weight: 400 !important;
+  margin-left: 2px !important;
+}
+
+.hub-card-body .card-title {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  letter-spacing: 0.01em !important;
+  margin-bottom: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+
+/* ================================================================
+   §8 — COMPONENTES INTERNOS
+================================================================ */
+
+/* ── Botão unificado ── */
+.hm-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  height: 40px !important;
+  padding: 0 16px !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  outline: none !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter",
+               system-ui, sans-serif !important;
+  transition:
+    opacity 150ms ease-out,
+    transform 100ms ease-out !important;
+}
+
+.hm-btn:active {
+  transform: scale(0.98) !important;
+  opacity: 0.82 !important;
+}
+
+.hm-btn:disabled,
+.hm-btn[disabled] {
+  opacity: 0.34 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.hm-btn--primary {
+  background: linear-gradient(135deg,
+    rgba(14, 68, 46, 0.96),
+    rgba(10, 82, 55, 0.92)) !important;
+  color: #86EFAC !important;
+  border: 1px solid rgba(74, 222, 128, 0.26) !important;
+}
+
+.hm-btn--primary:hover { opacity: 0.90 !important; }
+
+.hm-btn--ghost {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: rgba(255, 255, 255, 0.68) !important;
+  border: 1px solid rgba(255, 255, 255, 0.11) !important;
+}
+
+.hm-btn--ghost:hover { background: rgba(255, 255, 255, 0.10) !important; }
+
+/* ── Input grid interno ── */
+.hm-input-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+}
+
+@media (min-width: 768px) {
+  .hm-input-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+
+/* ── Footer do card ── */
+.hm-card-footer {
+  display: flex !important;
+  gap: 10px !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  margin-top: 14px !important;
+  padding-top: 12px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+  flex-wrap: wrap !important;
+}
+
+/* ── Coming soon ── */
+.hub-coming-soon {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px 12px !important;
+  text-align: center !important;
+  gap: 6px !important;
+}
+
+.hub-coming-soon-icon  { font-size: 28px !important; opacity: 0.65 !important; margin-bottom: 4px !important; }
+.hub-coming-soon-title { font-size: 13px !important; font-weight: 600 !important; color: rgba(255,255,255,0.80) !important; }
+.hub-coming-soon-desc  { font-size: 11px !important; color: rgba(255,255,255,0.52) !important; line-height: 1.45 !important; max-width: 240px !important; }
+
+/* ── Version footer ── */
+.hub-version-footer {
+  text-align: center !important;
+  font-size: 10px !important;
+  color: rgba(255, 255, 255, 0.22) !important;
+  margin-top: 6px !important;
+  padding-bottom: 8px !important;
+}
+
+
+/* ================================================================
+   §9 — MODO CLARO
+================================================================ */
+
+body.light-mode .hub-card-body label,
+body.light-mode .hub-card-body .hm-label {
+  color: #374151 !important;
+}
+
+body.light-mode .hub-card-body .hm-label-unit {
+  color: #6B7280 !important;
+}
+
+body.light-mode .hub-card-body .card-title {
+  color: #111827 !important;
+}
+
+body.light-mode .hm-btn--primary {
+  background: linear-gradient(135deg, #dcfce7, #d1fae5) !important;
+  color: #065f46 !important;
+  border-color: rgba(6, 95, 70, 0.24) !important;
+}
+
+body.light-mode .hm-btn--ghost {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: rgba(0, 0, 0, 0.62) !important;
+  border-color: rgba(0, 0, 0, 0.11) !important;
+}
+
+body.light-mode .hub-card-footer {
+  border-top-color: rgba(0, 0, 0, 0.07) !important;
+}
+
+body.light-mode .hub-coming-soon-title { color: #374151 !important; }
+body.light-mode .hub-coming-soon-desc  { color: #6B7280 !important; }
+
+
+/* ================================================================
+   §10 — OVERRIDES FINAIS / ANTI-CONFLITO
+   Garantia final contra regras conflitantes de builds anteriores.
+================================================================ */
+
+/* Hub accordion: sempre flex-column (nunca grid no container principal) */
+.hub-accordion {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Estrutura do card */
+.hub-card {
+  border-radius: 13px !important;
+  overflow: hidden !important;
+}
+
+/* Body do card: oculto por padrão, visível ao abrir */
+.hub-card-body {
+  display: none !important;
+  max-height: none !important;
+  transition: none !important;
+}
+
+.hub-card.is-open .hub-card-body {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Trigger: dimensões por nível */
+.hub-card[data-level="1"] .hub-card-trigger {
+  min-height: 68px !important;
+  padding: 0 20px !important;
+  gap: 16px !important;
+}
+
+.hub-card[data-level="2"] .hub-card-trigger {
+  min-height: 58px !important;
+  padding: 0 14px !important;
+  gap: 12px !important;
+}
+
+.hub-card[data-level="3"] .hub-card-trigger {
+  min-height: 52px !important;
+  padding: 0 13px !important;
+  gap: 11px !important;
+}
+
+@media (min-width: 768px) {
+  .hub-card[data-level="1"] .hub-card-trigger {
+    min-height: 74px !important;
+  }
+}
+
+/* Ícone por nível */
+.hub-card[data-level="1"] .hub-card-ico {
+  width: 42px !important;
+  height: 42px !important;
+  font-size: 18px !important;
+  border-radius: 13px !important;
+}
+
+.hub-card[data-level="2"] .hub-card-ico {
+  width: 34px !important;
+  height: 34px !important;
+  font-size: 14px !important;
+  border-radius: 10px !important;
+}
+
+.hub-card[data-level="3"] .hub-card-ico {
+  width: 30px !important;
+  height: 30px !important;
+  font-size: 12px !important;
+  border-radius: 9px !important;
+}
+
+@media (min-width: 768px) {
+  .hub-card[data-level="1"] .hub-card-ico {
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 20px !important;
+    border-radius: 14px !important;
+  }
+}
+
+/* Padding interno por nível */
+.hub-card[data-level="1"] .hub-card-inner { padding: 18px 20px 20px !important; }
+.hub-card[data-level="2"] .hub-card-inner { padding: 14px 15px 16px !important; }
+.hub-card[data-level="3"] .hub-card-inner { padding: 13px 14px 15px !important; }
+
+@media (min-width: 768px) {
+  .hub-card[data-level="1"] .hub-card-inner { padding: 20px 24px 22px !important; }
+  .hub-card[data-level="2"] .hub-card-inner { padding: 16px 18px 18px !important; }
+  .hub-card[data-level="3"] .hub-card-inner { padding: 14px 16px 16px !important; }
+}
+
+/* Neutraliza grid-column residual de builds anteriores.
+   O medcases-ux-v2.css define:
+     .hub-accordion--expanded .hub-card { grid-column: 1/-1; }
+   Isso era a técnica antiga (errada). Anulamos aqui. */
+.hub-l2-grid .hub-card,
+.hub-l3-row .hub-card,
+.hub-row .hub-card {
+  grid-column: auto !important;
+}
+
+/* Anula o grid-column: 1/-1 do medcases-ux-v2 no estado expandido.
+   No estado expandido o container já é flex-column — grid-column não tem
+   efeito em flex, mas por segurança explicitamos auto. */
+.hub-accordion--expanded .hub-l2-grid .hub-card,
+.hub-accordion--expanded .hub-l3-row .hub-card,
+.hub-accordion--expanded .hub-row .hub-card {
+  grid-column: auto !important;
+  width: 100% !important;
+}
+
+/* Anula o :has() do medcases-ux-v2:
+   .hub-accordion:has(.hub-card.is-open) .hub-card { grid-column: 1/-1 }
+   — idem: no flex-column, grid-column é irrelevante mas zerado por segurança */
+.hub-accordion:has(.hub-card.is-open) .hub-l2-grid .hub-card,
+.hub-accordion:has(.hub-card.is-open) .hub-l3-row .hub-card {
+  grid-column: auto !important;
+}
+
+/* ================================================================
+   FIM DO BUILD 235 (rev3)
+================================================================ */
