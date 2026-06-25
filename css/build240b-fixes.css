@@ -526,5 +526,124 @@ input[type="text"]::-webkit-inner-spin-button {
 
 
 /* ================================================================
+   §4 — NUKE PASTEL: Elimina TODAS as cores pastéis do build234
+   ----------------------------------------------------------------
+   build234-design-system.css §15 (linhas 1415-1537) define fundos
+   pastéis claros (#e8f5ee, #e0effa, #fce8eb, etc.) e ícones com
+   backgrounds rgba(cor, 0.10) quase transparentes — ilegíveis sobre
+   gradientes escuros sólidos do §1 deste arquivo.
+
+   ESTRATÉGIA: sobrescrever com !important após o build234 na cascade.
+   Seletores idênticos aos do build234 → mesma especificidade → last-write wins.
+   Garante:
+     - .hub-card-ico → fundo rgba(255,255,255,0.22), ícone branco
+     - .hub-card-body → fundo sólido tintado (não pastel)
+     - .hub-card-inner → fundo sólido tintado (não pastel)
+     - .hub-card-name, .hub-card-desc, .hub-card-chevron → já brancos via medcases-ux-v2 §15b
+================================================================ */
+
+/* ── Patient ── */
+body.light-mode #hub-card-patient .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-patient .hub-card-body  { background: #e6f4ef !important; }
+body.light-mode #hub-card-patient .hub-card-inner { background: #f0f9f5 !important; }
+
+/* ── ClCr ── */
+body.light-mode #hub-card-clcr .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-clcr .hub-card-body  { background: #e6f4f2 !important; }
+body.light-mode #hub-card-clcr .hub-card-inner { background: #f0f9f8 !important; }
+
+/* ── Fármacos ── */
+body.light-mode #hub-card-farmacos .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-farmacos .hub-card-body  { background: #e8eefb !important; }
+body.light-mode #hub-card-farmacos .hub-card-inner { background: #f2f5fd !important; }
+
+/* ── Interações ── */
+body.light-mode #hub-card-interacoes .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-interacoes .hub-card-body  { background: #ede8fb !important; }
+body.light-mode #hub-card-interacoes .hub-card-inner { background: #f5f2fd !important; }
+
+/* ── Eletrólitos ── */
+body.light-mode #hub-card-eletrolitos .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-eletrolitos .hub-card-body  { background: #eaebfb !important; }
+body.light-mode #hub-card-eletrolitos .hub-card-inner { background: #f3f3fd !important; }
+
+/* ── Infusão ── */
+body.light-mode #hub-card-infusao .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-infusao .hub-card-body  { background: #faf0e6 !important; }
+body.light-mode #hub-card-infusao .hub-card-inner { background: #fdf7f0 !important; }
+
+/* ── Fluidos ── */
+body.light-mode #hub-card-fluidos .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-fluidos .hub-card-body  { background: #e6f3f7 !important; }
+body.light-mode #hub-card-fluidos .hub-card-inner { background: #f0f8fb !important; }
+
+/* ── Hemodinâmica ── */
+body.light-mode #hub-card-hemodinamica .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-hemodinamica .hub-card-body  { background: #fae8ec !important; }
+body.light-mode #hub-card-hemodinamica .hub-card-inner { background: #fdf2f4 !important; }
+
+/* ── Scores ── */
+body.light-mode #hub-card-scores .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-scores .hub-card-body  { background: #eaedf1 !important; }
+body.light-mode #hub-card-scores .hub-card-inner { background: #f3f5f8 !important; }
+
+/* ── Pediatria ── */
+body.light-mode #hub-card-pediatria .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-pediatria .hub-card-body  { background: #e7edfb !important; }
+body.light-mode #hub-card-pediatria .hub-card-inner { background: #f1f5fd !important; }
+
+/* ── Gestante ── */
+body.light-mode #hub-card-gestante .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-gestante .hub-card-body  { background: #fae8f2 !important; }
+body.light-mode #hub-card-gestante .hub-card-inner { background: #fdf2f8 !important; }
+
+/* ── Ícone interno (i tag) — garante branco sobre fundo escuro ── */
+body.light-mode .hub-card-ico i {
+  color: #FFFFFF !important;
+  filter: none !important;
+}
+
+/* ── Texto do hub-card-body no light mode: escuro legível ──
+   Labels, inputs e textos dentro do body (área expandida) */
+body.light-mode .hub-card-body,
+body.light-mode .hub-card-inner {
+  color: #1e293b !important;
+}
+
+
+/* ================================================================
    FIM DO BUILD 240B (v2)
 ================================================================ */
