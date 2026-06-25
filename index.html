@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="css/build234-design-system.css" />
   <link rel="stylesheet" href="css/build235-layout.css" />
   <link rel="stylesheet" href="css/build236-hub-redesign.css" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css" />
+  <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
+  <link rel="stylesheet" href="css/build240b-fixes.css" />
 
   <style>
     /* ============================================================ RESET */
@@ -7466,7 +7470,7 @@
              Ordem: Dados do Paciente → ClCr → Fármacos
         ══════════════════════════════════════════════════ -->
         <div class="hub-section">
-          <div class="hub-section-label">Nível 1 · Essenciais</div>
+          <!-- B237A: label oculto via CSS -->
           <div class="hub-l1-section">
 
         <!-- L1-A: DADOS DO PACIENTE -->
@@ -7500,23 +7504,31 @@
                 <div class="hm-input-grid">
                   <div class="hm-input-wrap">
                     <label class="hm-label">Peso <span class="hm-label-unit">kg</span></label>
-                    <input class="hm-input" id="hm-weight" type="number" min="1" max="500"
-                      inputmode="decimal" placeholder="70" oninput="hmUpdatePatientCardColor()" />
+                    <input class="hm-input" id="hm-weight" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                      autocomplete="off" autocorrect="off" spellcheck="false"
+                      enterkeyhint="next"
+                      placeholder="70" oninput="hmUpdatePatientCardColor()" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label">Idade <span class="hm-label-unit">anos</span></label>
-                    <input class="hm-input" id="hm-age" type="number" min="0" max="130"
-                      inputmode="decimal" placeholder="45" oninput="hmUpdatePatientCardColor()" />
+                    <input class="hm-input" id="hm-age" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                      autocomplete="off" autocorrect="off" spellcheck="false"
+                      enterkeyhint="next"
+                      placeholder="45" oninput="hmUpdatePatientCardColor()" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label">Altura <span class="hm-label-unit">cm</span></label>
-                    <input class="hm-input" id="hm-height" type="number" min="50" max="250"
-                      inputmode="decimal" placeholder="170" />
+                    <input class="hm-input" id="hm-height" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                      autocomplete="off" autocorrect="off" spellcheck="false"
+                      enterkeyhint="next"
+                      placeholder="170" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label" for="hm-creatinina">Creatinina <span class="hm-label-unit">mg/dL</span></label>
-                    <input class="hm-input" id="hm-creatinina" type="number" min="0.1" max="30"
-                      inputmode="decimal" placeholder="Ex: 1.0" />
+                    <input class="hm-input" id="hm-creatinina" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                      autocomplete="off" autocorrect="off" spellcheck="false"
+                      enterkeyhint="done"
+                      placeholder="Ex: 1.0" />
                     <input type="hidden" id="hm-clcr" value="" />
                   </div>
                   <!-- Seletor de Sexo M/F -->
@@ -7577,8 +7589,10 @@
                             Volume Urina <span class="hm-label-unit">mL/24h</span>
                           </label>
                           <input class="hm-input" id="hm-urine24"
-                            type="number" min="50" max="15000"
-                            inputmode="decimal" placeholder="Ex: 1500"
+                            type="text" inputmode="decimal" pattern="[0-9.,]*"
+                            autocomplete="off" autocorrect="off" spellcheck="false"
+                            enterkeyhint="next"
+                            placeholder="Ex: 1500"
                             oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
                         </div>
                         <div class="hm-input-wrap">
@@ -7586,8 +7600,10 @@
                             Creat. Urinária <span class="hm-label-unit">mg/dL</span>
                           </label>
                           <input class="hm-input" id="hm-urine-creat"
-                            type="number" min="1" max="800"
-                            inputmode="decimal" placeholder="Ex: 80"
+                            type="text" inputmode="decimal" pattern="[0-9.,]*"
+                            autocomplete="off" autocorrect="off" spellcheck="false"
+                            enterkeyhint="done"
+                            placeholder="Ex: 80"
                             oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
                         </div>
                       </div>
@@ -7734,6 +7750,9 @@
           </div><!-- /hub-l1-section -->
         </div><!-- /hub-section nível 1 -->
 
+        <!-- B237A: separador entre N1 e N2 -->
+        <div class="hub-divider" role="separator" aria-hidden="true"></div>
+
         <!-- ══════════════════════════════════════════════════
              NÍVEL 2 — Ferramentas clínicas (grid 2-col)
              Ordem: Interações | Eletrólitos
@@ -7741,7 +7760,7 @@
                     Hemodinâmica | Scores
         ══════════════════════════════════════════════════ -->
         <div class="hub-section">
-          <div class="hub-section-label">Nível 2 · Ferramentas Clínicas</div>
+          <!-- B237A: label oculto via CSS -->
           <div class="hub-l2-grid hub-l2-section" id="hub-l2-grid">
 
           <!-- INTERAÇÕES -->
@@ -7891,12 +7910,15 @@
           </div><!-- /hub-l2-grid hub-l2-section -->
         </div><!-- /hub-section nível 2 -->
 
+        <!-- B237A: separador entre N2 e N3 -->
+        <div class="hub-divider" role="separator" aria-hidden="true"></div>
+
         <!-- ══════════════════════════════════════════════════
              NÍVEL 3 — Módulos futuros (grid 2-col discreto)
              Ordem: Pediatria | Gestantes
         ══════════════════════════════════════════════════ -->
         <div class="hub-section">
-          <div class="hub-section-label">Nível 3 · Específicos</div>
+          <!-- B237A: label oculto via CSS -->
           <div class="hub-row hub-l3-row hub-l3-section">
 
           <!-- PEDIATRIA -->
@@ -8402,26 +8424,34 @@
 
           <div class="hm-input-wrap">
             <label class="hm-label">Peso <span class="hm-label-unit">kg</span></label>
-            <input class="hm-input" id="hm-weight" type="number" min="1" max="500"
-              inputmode="decimal" placeholder="70" oninput="hmUpdatePatientCardColor()" />
+            <input class="hm-input" id="hm-weight" type="text" inputmode="decimal" pattern="[0-9.,]*"
+              autocomplete="off" autocorrect="off" spellcheck="false"
+              enterkeyhint="next"
+              placeholder="70" oninput="hmUpdatePatientCardColor()" />
           </div>
 
           <div class="hm-input-wrap">
             <label class="hm-label">Idade <span class="hm-label-unit">anos</span></label>
-            <input class="hm-input" id="hm-age" type="number" min="0" max="130"
-              inputmode="decimal" placeholder="45" oninput="hmUpdatePatientCardColor()" />
+            <input class="hm-input" id="hm-age" type="text" inputmode="decimal" pattern="[0-9.,]*"
+              autocomplete="off" autocorrect="off" spellcheck="false"
+              enterkeyhint="next"
+              placeholder="45" oninput="hmUpdatePatientCardColor()" />
           </div>
 
           <div class="hm-input-wrap">
             <label class="hm-label">Altura <span class="hm-label-unit">cm</span></label>
-            <input class="hm-input" id="hm-height" type="number" min="50" max="250"
-              inputmode="decimal" placeholder="170" />
+            <input class="hm-input" id="hm-height" type="text" inputmode="decimal" pattern="[0-9.,]*"
+              autocomplete="off" autocorrect="off" spellcheck="false"
+              enterkeyhint="next"
+              placeholder="170" />
           </div>
 
           <div class="hm-input-wrap">
             <label class="hm-label" for="hm-creatinina">Creatinina <span class="hm-label-unit">mg/dL</span></label>
-            <input class="hm-input" id="hm-creatinina" type="number" min="0.1" max="30"
-              inputmode="decimal" placeholder="Ex: 1.0" />
+            <input class="hm-input" id="hm-creatinina" type="text" inputmode="decimal" pattern="[0-9.,]*"
+              autocomplete="off" autocorrect="off" spellcheck="false"
+              enterkeyhint="done"
+              placeholder="Ex: 1.0" />
             <!-- Campo oculto: recebe ClCr calculado por Cockcroft-Gault.
                  Todo o motor JS (renal, prefetch, hmFixarDados) continua
                  lendo daqui sem nenhuma modificação. -->
@@ -8494,8 +8524,9 @@
                     Volume Urina <span class="hm-label-unit">mL/24h</span>
                   </label>
                   <input class="hm-input" id="hm-urine24"
-                    type="number" min="50" max="15000"
-                    inputmode="decimal" placeholder="Ex: 1500"
+                    type="text" inputmode="decimal" pattern="[0-9.,]*"
+                    autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                    placeholder="Ex: 1500"
                     oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
                 </div>
 
@@ -8504,8 +8535,9 @@
                     Creat. Urinária <span class="hm-label-unit">mg/dL</span>
                   </label>
                   <input class="hm-input" id="hm-urine-creat"
-                    type="number" min="1" max="800"
-                    inputmode="decimal" placeholder="Ex: 80"
+                    type="text" inputmode="decimal" pattern="[0-9.,]*"
+                    autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
+                    placeholder="Ex: 80"
                     oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
                 </div>
 
@@ -9278,7 +9310,8 @@
             <div class="input-grid" style="gap:8px;margin-bottom:9px">
               <div class="input-group">
                 <label class="input-label" data-i18n="fluid_label_temp">Temperatura (°C)</label>
-                <input class="input-field" id="fluid-temp" type="number" step="0.1"
+                <input class="input-field" id="fluid-temp" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                       autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
                        placeholder="37.0" style="padding:8px 10px;font-size:13.5px" />
               </div>
               <div class="input-group" style="justify-content:flex-end">
@@ -9327,27 +9360,39 @@
           <div class="input-grid">
             <div class="input-group">
               <label class="input-label">PAS (mmHg)</label>
-              <input class="input-field" id="h-pas" type="number" placeholder="120" oninput="calcHemo()" />
+              <input class="input-field" id="h-pas" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="120" oninput="calcHemo()" />
             </div>
             <div class="input-group">
               <label class="input-label">PAD (mmHg)</label>
-              <input class="input-field" id="h-pad" type="number" placeholder="80" oninput="calcHemo()" />
+              <input class="input-field" id="h-pad" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="80" oninput="calcHemo()" />
             </div>
             <div class="input-group">
               <label class="input-label">FC (bpm)</label>
-              <input class="input-field" id="h-fc" type="number" placeholder="80" oninput="calcHemo()" />
+              <input class="input-field" id="h-fc" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="80" oninput="calcHemo()" />
             </div>
             <div class="input-group">
               <label class="input-label">SpO₂ (%)</label>
-              <input class="input-field" id="h-spo2" type="number" placeholder="98" oninput="calcHemo()" />
+              <input class="input-field" id="h-spo2" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="98" oninput="calcHemo()" />
             </div>
             <div class="input-group">
               <label class="input-label">FR (irpm)</label>
-              <input class="input-field" id="h-fr" type="number" placeholder="18" oninput="calcHemo()" />
+              <input class="input-field" id="h-fr" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="18" oninput="calcHemo()" />
             </div>
             <div class="input-group">
               <label class="input-label">Temp (°C)</label>
-              <input class="input-field" id="h-temp" type="number" step="0.1" placeholder="37.0" oninput="calcHemo()" />
+              <input class="input-field" id="h-temp" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
+                placeholder="37.0" oninput="calcHemo()" />
             </div>
           </div>
         </div>
@@ -9869,26 +9914,32 @@
           <i class="fa-solid fa-vial"></i>
           <span data-i18n="infusion_label_amp">Concentração da Ampola</span><span style="color:var(--text-secondary);font-size:10px;margin-left:4px">(mg)</span>
         </div>
-        <input type="number" class="infusion-input" id="inf-amp-mg"
-          placeholder="Ex: 4" min="0" step="any"
-          oninput="calculateInfusion()" inputmode="decimal" />
+        <input type="text" class="infusion-input" id="inf-amp-mg"
+          inputmode="decimal" pattern="[0-9.,]*"
+          autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+          placeholder="Ex: 4"
+          oninput="calculateInfusion()" />
 
         <div class="infusion-field-label">
           <i class="fa-solid fa-flask"></i>
           <span data-i18n="infusion_label_vol">Volume do Diluente</span><span style="color:var(--text-secondary);font-size:10px;margin-left:4px">(mL)</span>
         </div>
-        <input type="number" class="infusion-input" id="inf-vol-ml"
-          placeholder="Ex: 250" min="0" step="any"
-          oninput="calculateInfusion()" inputmode="decimal" />
+        <input type="text" class="infusion-input" id="inf-vol-ml"
+          inputmode="decimal" pattern="[0-9.,]*"
+          autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+          placeholder="Ex: 250"
+          oninput="calculateInfusion()" />
 
         <div class="infusion-field-label">
           <i class="fa-solid fa-syringe"></i>
           <span data-i18n="infusion_label_dose">Dose Desejada</span>
         </div>
         <div class="infusion-unit-row">
-          <input type="number" class="infusion-input" id="inf-dose"
-            placeholder="Ex: 0.1" min="0" step="any"
-            oninput="calculateInfusion()" inputmode="decimal" />
+          <input type="text" class="infusion-input" id="inf-dose"
+            inputmode="decimal" pattern="[0-9.,]*"
+            autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+            placeholder="Ex: 0.1"
+            oninput="calculateInfusion()" />
           <select class="infusion-unit-select" id="inf-dose-unit"
             onchange="calculateInfusion()" aria-label="Unidade da dose">
             <option value="mcg/kg/min" data-i18n="infusion_unit_mcgkgmin">mcg/kg/min</option>
@@ -9904,9 +9955,11 @@
           <i class="fa-solid fa-rotate-left"></i>
           <span data-i18n="infusion_label_rate">Vazão atual da bomba</span><span style="color:var(--text-secondary);font-size:10px;margin-left:4px">(mL/h)</span>
         </div>
-        <input type="number" class="infusion-input" id="inf-current-rate"
-          placeholder="Ex: 12.5" min="0" step="any"
-          oninput="calculateInfusion()" inputmode="decimal" />
+        <input type="text" class="infusion-input" id="inf-current-rate"
+          inputmode="decimal" pattern="[0-9.,]*"
+          autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
+          placeholder="Ex: 12.5"
+          oninput="calculateInfusion()" />
 
         <!-- ── Alerta de Interação Medicamentosa (infusão) ── -->
         <div id="inf-interaction-alert"></div>
@@ -10052,23 +10105,27 @@
           <div class="elec-split-inputs">
             <div class="elec-field">
               <label class="elec-field-label" for="elec-na" data-i18n="elec_lbl_na">Na⁺ (mEq/L)</label>
-              <input class="elec-input" type="number" id="elec-na" inputmode="decimal"
-                placeholder="140" min="80" max="200" oninput="calcEletrolitosAll()" />
+              <input class="elec-input" type="text" id="elec-na" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="140" oninput="calcEletrolitosAll()" />
             </div>
             <div class="elec-field">
               <label class="elec-field-label" for="elec-glicose" data-i18n="elec_lbl_glicose">Glicose (mg/dL)</label>
-              <input class="elec-input" type="number" id="elec-glicose" inputmode="decimal"
-                placeholder="100" min="0" max="2000" oninput="calcEletrolitosAll()" />
+              <input class="elec-input" type="text" id="elec-glicose" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="100" oninput="calcEletrolitosAll()" />
             </div>
             <div class="elec-field">
               <label class="elec-field-label" for="elec-alb" data-i18n="elec_lbl_alb">Albumina (g/dL)</label>
-              <input class="elec-input" type="number" id="elec-alb" inputmode="decimal"
-                placeholder="4.0" min="0" max="10" step="0.1" oninput="calcEletrolitosAll()" />
+              <input class="elec-input" type="text" id="elec-alb" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="4.0" oninput="calcEletrolitosAll()" />
             </div>
             <div class="elec-field">
               <label class="elec-field-label" for="elec-ureia" data-i18n="elec_lbl_ureia">Ureia (mg/dL)</label>
-              <input class="elec-input" type="number" id="elec-ureia" inputmode="decimal"
-                placeholder="40" min="0" max="600" oninput="calcEletrolitosAll()" />
+              <input class="elec-input" type="text" id="elec-ureia" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
+                placeholder="40" oninput="calcEletrolitosAll()" />
             </div>
           </div>
           <!-- resultados -->
@@ -10104,18 +10161,21 @@
           <div class="elec-split-inputs">
             <div class="elec-field">
               <label class="elec-field-label" for="elec-k" data-i18n="elec_lbl_k">K⁺ (mEq/L)</label>
-              <input class="elec-input" type="number" id="elec-k" inputmode="decimal"
-                placeholder="4.0" min="0" max="12" step="0.1" oninput="calcEletrolitosAll()" />
+              <input class="elec-input" type="text" id="elec-k" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="4.0" oninput="calcEletrolitosAll()" />
             </div>
             <div class="elec-field">
               <label class="elec-field-label" for="elec-ca" data-i18n="elec_lbl_ca">Ca²⁺ (mg/dL)</label>
-              <input class="elec-input" type="number" id="elec-ca" inputmode="decimal"
-                placeholder="9.0" min="0" max="20" step="0.1" oninput="calcEletrolitosAll()" />
+              <input class="elec-input" type="text" id="elec-ca" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="9.0" oninput="calcEletrolitosAll()" />
             </div>
             <div class="elec-field">
               <label class="elec-field-label" for="elec-mg" data-i18n="elec_lbl_mg">Mg²⁺ (mg/dL)</label>
-              <input class="elec-input" type="number" id="elec-mg" inputmode="decimal"
-                placeholder="2.0" min="0" max="10" step="0.1" oninput="calcEletrolitosAll()" />
+              <input class="elec-input" type="text" id="elec-mg" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
+                placeholder="2.0" oninput="calcEletrolitosAll()" />
             </div>
           </div>
           <div class="elec-split-results">
@@ -10146,13 +10206,15 @@
           <div class="elec-split-inputs">
             <div class="elec-field">
               <label class="elec-field-label" for="elec-cl" data-i18n="elec_lbl_cl">Cl⁻ (mEq/L)</label>
-              <input class="elec-input" type="number" id="elec-cl" inputmode="decimal"
-                placeholder="104" min="0" max="200" oninput="calcEletrolitosAll()" />
+              <input class="elec-input" type="text" id="elec-cl" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+                placeholder="104" oninput="calcEletrolitosAll()" />
             </div>
             <div class="elec-field">
               <label class="elec-field-label" for="elec-hco3" data-i18n="elec_lbl_hco3">HCO₃⁻ (mEq/L)</label>
-              <input class="elec-input" type="number" id="elec-hco3" inputmode="decimal"
-                placeholder="24" min="0" max="60" oninput="calcEletrolitosAll()" />
+              <input class="elec-input" type="text" id="elec-hco3" inputmode="decimal" pattern="[0-9.,]*"
+                autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
+                placeholder="24" oninput="calcEletrolitosAll()" />
             </div>
           </div>
           <div class="elec-split-results">
@@ -10307,16 +10369,18 @@
         <label class="qe-label" for="qe-weight">
           <span class="qe-label-icon">⚖️</span> Peso
         </label>
-        <input class="qe-input" id="qe-weight" type="number" inputmode="decimal"
-          placeholder="kg" min="1" max="500" step="0.1" />
+        <input class="qe-input" id="qe-weight" type="text" inputmode="decimal" pattern="[0-9.,]*"
+          autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+          placeholder="kg" />
         <span class="qe-input-hint">kg</span>
       </div>
       <div class="qe-field">
         <label class="qe-label" for="qe-height">
           <span class="qe-label-icon">📏</span> Altura
         </label>
-        <input class="qe-input" id="qe-height" type="number" inputmode="decimal"
-          placeholder="cm" min="50" max="250" />
+        <input class="qe-input" id="qe-height" type="text" inputmode="decimal" pattern="[0-9.,]*"
+          autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+          placeholder="cm" />
         <span class="qe-input-hint">cm</span>
       </div>
     </div>
@@ -10327,16 +10391,18 @@
         <label class="qe-label" for="qe-age">
           <span class="qe-label-icon">🎂</span> Idade
         </label>
-        <input class="qe-input" id="qe-age" type="number" inputmode="numeric"
-          placeholder="anos" min="0" max="130" />
+        <input class="qe-input" id="qe-age" type="text" inputmode="numeric" pattern="[0-9]*"
+          autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
+          placeholder="anos" />
         <span class="qe-input-hint">anos</span>
       </div>
       <div class="qe-field">
         <label class="qe-label" for="qe-creatinine">
           <span class="qe-label-icon">🫘</span> Creatinina
         </label>
-        <input class="qe-input" id="qe-creatinine" type="number" inputmode="decimal"
-          placeholder="mg/dL" min="0.1" max="30" step="0.01" />
+        <input class="qe-input" id="qe-creatinine" type="text" inputmode="decimal" pattern="[0-9.,]*"
+          autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
+          placeholder="mg/dL" />
         <span class="qe-input-hint">mg/dL sérica</span>
       </div>
     </div>
@@ -23338,6 +23404,9 @@ window.MedCasesBridge = {
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
 <script src="js/hub-accordion.js"></script>
+
+<!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
+<script src="js/build240b-accordion-fix.js"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
 <script src="js/elec-calc.js"></script>

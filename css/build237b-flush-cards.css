@@ -1,0 +1,367 @@
+/* ================================================================
+   MedCases Pro — BUILD 237B
+   style(calculator): flush card layout — sem espaço lateral,
+   cards soldados entre si, separados por linha mínima.
+
+   REGRA PRINCIPAL:
+   Cards tocam as bordas laterais da tela.
+   Cards do mesmo grupo colados uns nos outros.
+   Separação interna: apenas 1px de borda compartilhada.
+   Separação entre GRUPOS (N1→N2→N3): hub-divider preservado.
+   border-radius: somente nos 4 cantos externos do grupo.
+
+   NÃO ALTERA: JS, cálculos, banco, traduções, accordion logic.
+================================================================ */
+
+
+/* ================================================================
+   §1 — CONTAINER: zero padding lateral
+================================================================ */
+
+.hub-accordion {
+  padding-left:  0 !important;
+  padding-right: 0 !important;
+  padding-top:   8px !important;
+  padding-bottom: 32px !important;
+  gap: 0 !important;
+}
+
+/* Seções e wrappers: largura total sem margem */
+.hub-section,
+.hub-l1-section,
+.hub-l2-section,
+.hub-l3-section {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ── Divider entre grupos: mantém margem lateral horizontal discreta ── */
+.hub-divider {
+  margin: 8px 0 !important;
+  width: 100% !important;
+}
+
+
+/* ================================================================
+   §2 — NÍVEL 1: bloco soldado, sem arredondamentos internos
+   Os 3 cards (Patient · ClCr · Fármacos) formam um único bloco.
+   Bordas arredondadas apenas nos cantos do conjunto.
+================================================================ */
+
+/* Remove border-radius de todos os cards N1 por padrão */
+.hub-card[data-level="1"] {
+  border-radius: 0 !important;
+  width: 100% !important;
+}
+
+/* Primeiro card do grupo N1: topo arredondado */
+.hub-l1-section .hub-l1-row:first-child .hub-card[data-level="1"] {
+  border-radius: 12px 12px 0 0 !important;
+}
+
+/* Último card do grupo N1: base arredondada */
+.hub-l1-section .hub-l1-row:last-child .hub-card[data-level="1"] {
+  border-radius: 0 0 12px 12px !important;
+}
+
+/* Único card no grupo (caso futuro): totalmente arredondado */
+.hub-l1-section .hub-l1-row:only-child .hub-card[data-level="1"] {
+  border-radius: 12px !important;
+}
+
+/* Separadores entre cards N1: borda top (linha fina compartilhada) */
+.hub-l1-section .hub-l1-row + .hub-l1-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Garante que o separador não duplica com borda do card */
+.hub-l1-section .hub-l1-row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Trigger N1: padding horizontal interno maior (compensar sem margem lateral) */
+.hub-card[data-level="1"] .hub-card-trigger {
+  padding-left:  18px !important;
+  padding-right: 18px !important;
+}
+
+
+/* ================================================================
+   §3 — NÍVEL 2: grid 2-col sem gap — bordas compartilhadas
+   Os 6 cards formam uma grade coesa.
+   Separação: 1px de borda entre células.
+================================================================ */
+
+/* Grid N2: sem gap, borda como separador */
+.hub-l2-section,
+.hub-l2-grid {
+  gap: 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;     /* garante que cantos do grupo ficam arredondados */
+  /* A borda é feita pelo outline de cada card */
+}
+
+/* Cards N2: sem border-radius próprio */
+.hub-card[data-level="2"] {
+  border-radius: 0 !important;
+  /* Borda direita: separa colunas */
+  border-right: 1px solid rgba(255, 255, 255, 0.055) !important;
+  /* Borda inferior: separa linhas */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055) !important;
+  box-sizing: border-box !important;
+}
+
+/* Remove borda direita da segunda coluna (última da linha) */
+.hub-l2-section .hub-card[data-level="2"]:nth-child(2n),
+.hub-l2-grid .hub-card[data-level="2"]:nth-child(2n) {
+  border-right: none !important;
+}
+
+/* Remove borda inferior da última linha (2 cards finais de 6) */
+.hub-l2-section .hub-card[data-level="2"]:nth-last-child(-n+2),
+.hub-l2-grid .hub-card[data-level="2"]:nth-last-child(-n+2) {
+  border-bottom: none !important;
+}
+
+
+/* ================================================================
+   §4 — NÍVEL 3: grid 2-col soldado
+   Os 2 cards (Pediatria · Gestantes) formam 1 bloco.
+================================================================ */
+
+.hub-l3-section,
+.hub-l3-row {
+  gap: 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.hub-card[data-level="3"] {
+  border-radius: 0 !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-sizing: border-box !important;
+}
+
+/* Remove borda direita do segundo card N3 */
+.hub-l3-section .hub-card[data-level="3"]:nth-child(2n),
+.hub-l3-row .hub-card[data-level="3"]:nth-child(2n) {
+  border-right: none !important;
+}
+
+
+/* ================================================================
+   §5 — ACCORDION EXPANDIDO
+   Quando qualquer card abre → flex-column, cards 100%.
+   Restaura border-radius do card aberto.
+================================================================ */
+
+/* N2 expandido: flex-column, gap mínimo */
+.hub-accordion--expanded .hub-l2-grid,
+.hub-accordion--expanded .hub-l2-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.hub-accordion--expanded .hub-l2-grid .hub-card,
+.hub-accordion--expanded .hub-l2-section .hub-card {
+  width: 100% !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055) !important;
+}
+
+/* Card aberto: sem borda inferior (o body já cria separação visual) */
+.hub-accordion--expanded .hub-l2-grid .hub-card.is-open,
+.hub-accordion--expanded .hub-l2-section .hub-card.is-open {
+  border-bottom: none !important;
+}
+
+/* Último card: sem borda inferior */
+.hub-accordion--expanded .hub-l2-grid .hub-card:last-child,
+.hub-accordion--expanded .hub-l2-section .hub-card:last-child {
+  border-bottom: none !important;
+}
+
+/* N3 expandido */
+.hub-accordion--expanded .hub-l3-row,
+.hub-accordion--expanded .hub-l3-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.hub-accordion--expanded .hub-l3-row .hub-card,
+.hub-accordion--expanded .hub-l3-section .hub-card {
+  width: 100% !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.hub-accordion--expanded .hub-l3-row .hub-card:last-child,
+.hub-accordion--expanded .hub-l3-section .hub-card:last-child {
+  border-bottom: none !important;
+}
+
+/* Garantia media queries */
+@media (min-width: 768px) {
+  .hub-accordion--expanded .hub-l2-grid,
+  .hub-accordion--expanded .hub-l2-section {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .hub-accordion--expanded .hub-l3-row,
+  .hub-accordion--expanded .hub-l3-section {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+.hub-accordion--expanded .hub-card {
+  grid-column: auto !important;
+}
+
+
+/* ================================================================
+   §6 — TABLET / DESKTOP: 3 colunas N2, N1 lado a lado
+================================================================ */
+
+@media (min-width: 768px) {
+  /* Hub: pequeno padding lateral para não colar na borda da tela toda */
+  .hub-accordion {
+    padding-left:  0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* N1 tablet: 3 cards lado a lado */
+  .hub-l1-section {
+    flex-direction: row !important;
+    gap: 0 !important;
+  }
+
+  /* Separador vertical entre cards N1 em tablet */
+  .hub-l1-section .hub-l1-row + .hub-l1-row {
+    border-top: none !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+
+  /* Cada wrapper N1 ocupa 1/3 */
+  .hub-l1-section .hub-l1-row {
+    flex: 1 !important;
+  }
+
+  /* Arredondamento N1 tablet: cantos esquerdo do primeiro, direito do último */
+  .hub-l1-section .hub-l1-row:first-child .hub-card[data-level="1"] {
+    border-radius: 12px 0 0 12px !important;
+  }
+  .hub-l1-section .hub-l1-row:last-child .hub-card[data-level="1"] {
+    border-radius: 0 12px 12px 0 !important;
+  }
+  .hub-l1-section .hub-l1-row:not(:first-child):not(:last-child) .hub-card[data-level="1"] {
+    border-radius: 0 !important;
+  }
+
+  /* N2 tablet: 3 colunas */
+  .hub-l2-section,
+  .hub-l2-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  /* Remove borda direita da 3ª coluna (3n) */
+  .hub-l2-section .hub-card[data-level="2"]:nth-child(3n),
+  .hub-l2-grid .hub-card[data-level="2"]:nth-child(3n) {
+    border-right: none !important;
+  }
+
+  /* Garante borda direita nos outros (anula regra mobile 2n) */
+  .hub-l2-section .hub-card[data-level="2"]:not(:nth-child(3n)),
+  .hub-l2-grid .hub-card[data-level="2"]:not(:nth-child(3n)) {
+    border-right: 1px solid rgba(255, 255, 255, 0.055) !important;
+  }
+
+  /* Última linha (3 cards finais): sem borda inferior */
+  .hub-l2-section .hub-card[data-level="2"]:nth-last-child(-n+3),
+  .hub-l2-grid .hub-card[data-level="2"]:nth-last-child(-n+3) {
+    border-bottom: none !important;
+  }
+
+  /* Anula "sem borda inferior" da penúltima linha que era last de mobile */
+  .hub-l2-section .hub-card[data-level="2"]:not(:nth-last-child(-n+3)),
+  .hub-l2-grid .hub-card[data-level="2"]:not(:nth-last-child(-n+3)) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hub-l2-section,
+  .hub-l2-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hub-accordion {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding-left:  0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+
+/* ================================================================
+   §7 — MODO CLARO
+================================================================ */
+
+body.light-mode .hub-l1-section .hub-l1-row + .hub-l1-row,
+body.light-mode .hub-l1-section .hub-l1-row + .hub-l1-row {
+  border-top-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-mode .hub-card[data-level="2"],
+body.light-mode .hub-card[data-level="3"] {
+  border-right-color:  rgba(0, 0, 0, 0.05) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .hub-accordion--expanded .hub-l2-grid .hub-card,
+body.light-mode .hub-accordion--expanded .hub-l2-section .hub-card,
+body.light-mode .hub-accordion--expanded .hub-l3-row .hub-card,
+body.light-mode .hub-accordion--expanded .hub-l3-section .hub-card {
+  border-bottom-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+
+/* ================================================================
+   §8 — OVERRIDE FINAL: neutraliza gaps residuais de builds anteriores
+================================================================ */
+
+/* Anula qualquer gap que builds anteriores colocaram nos grids */
+.hub-l2-grid,
+.hub-l2-section {
+  gap: 0 !important;
+}
+
+.hub-l3-row,
+.hub-l3-section {
+  gap: 0 !important;
+}
+
+/* Garante grid-column neutro */
+.hub-l2-grid .hub-card,
+.hub-l3-row .hub-card,
+.hub-l2-section .hub-card,
+.hub-l3-section .hub-card {
+  grid-column: auto !important;
+}
+
+/* ================================================================
+   FIM DO BUILD 237B
+================================================================ */

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-4.0.0--build236-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-4.3.0--build240calc-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-PWA%20%7C%20WebView-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/i18n-PT%20%7C%20ES-yellow?style=for-the-badge)
@@ -32,6 +32,203 @@
 - [Changelog por Sessão](#-changelog-por-sessão)
 - [Changelog — Sessões Recentes](#-changelog--sessões-recentes)
 - [Próximos Passos](#-próximos-passos)
+
+---
+
+## 🆕 BUILD 240-CALC — Offline Manifest Completo (2026-06-25)
+
+### Commit: `feat(calculator): generate complete offline manifest`
+
+#### Objetivo
+Criar `manifest-offline.json` canônico para o Flutter Smart Offline Engine consumir via `https://medcasescalcu.com/manifest-offline.json`. Inclui toda a base clínica — não apenas cardio.
+
+#### Arquivos Criados/Modificados
+
+| Arquivo | Ação | Descrição |
+|---------|------|-----------|
+| `manifest-offline.json` | ✨ CRIADO | Manifest completo: 31 arquivos, todas as especialidades |
+| `scripts/generate-offline-manifest.js` | ✨ CRIADO | Script Node.js para regenerar o manifest a partir da árvore real |
+| `sw.js` | ✏️ ATUALIZADO | `CACHE_VERSION` v6→v7, `ASSETS_TO_CACHE` sincronizada com manifest (31 arquivos, inclui todos CSS/JS/database) |
+
+#### Conteúdo do Manifest
+
+```
+Total: 31 arquivos
+├── Raiz (2):      index.html, sw.js
+├── css/ (8):      medcases-ux-v2, build233→237b, build240b-fixes
+├── js/ (5):       medcases-ux-v2, hub-accordion, build240b-accordion-fix, elec-calc, deeplink-router
+└── database/ (16): TODAS as especialidades
+     analgesicos, anticoag, antimicrobianos, cardio, endocrino,
+     gastro, infusoes, interacoes, nefro, neuro, obesidade,
+     pneumo, prescricoes, psicofarmacos, psiquiatria, reumatologia
+```
+
+#### Auditoria de Paths
+- ✅ Todos os paths são **relativos** (`css/arquivo.css`, `js/arquivo.js`, `database/arquivo.js`)
+- ✅ Zero paths absolutos (`/css/...` ou `https://medcasescalcu.com/...`)
+- ✅ Zero paths externos (CDNs como fonts.googleapis.com não entram no manifest)
+
+#### Como Regenerar o Manifest
+```bash
+node scripts/generate-offline-manifest.js
+```
+O script varre automaticamente: `css/`, `js/`, `database/`, `data/`, `assets/`, `images/`, `icons/`, `fonts/` — e inclui `index.html` + `sw.js` da raiz.
+
+#### Validação
+- ✅ PlaywrightConsoleCapture: zero erros JS
+- ✅ `DRUG_DB populado: 310 fármacos` — banco completo
+- ✅ `PRESCRICOES_DB carregado: 125 protocolos`
+- ✅ 11 cards Hub carregando: patient, clcr, farmacos, interacoes, pediatria, gestante, infusao, hemodinamica, scores, fluidos, eletrolitos
+
+---
+
+## BUILD 240B — Mobile UX Fix: Inputs, Accordion Scroll, Light Mode, Card-in-Card (2026-06-25)
+
+### Commit: `fix(calculator): stabilize mobile inputs, light mode and expanded card layout`
+
+#### Objetivo
+Correção de 5 regressões de UX mobile introduzidas pelas builds visuais 234–237B. Zero alterações em lógica clínica, fórmulas, banco de fármacos, interações ou deeplinks.
+
+#### Fix 1 ✅ — Teclado Correto por Tipo de Campo (`index.html`)
+- **Problema**: `type="number"` no iOS bloqueava o uso de vírgula como separador decimal
+- **Solução**: Todos os campos numéricos agora usam `type="text"` + `inputmode="decimal"` + `pattern="[0-9.,]*"` + `autocomplete="off"` + `autocorrect="off"` + `spellcheck="false"`
+- **Campos corrigidos**: peso, idade, altura, creatinina, urina 24h, creat. urinária (×2 card patient), PAS, PAD, FC, SpO2, FR, temperatura (hemodinâmica), temperatura (fluidos), amp-mg, vol-ml, dose, current-rate (infusão), Na⁺, glicose, albumina, ureia, K⁺, Ca²⁺, Mg²⁺, Cl⁻, HCO₃⁻ (eletrólitos), peso/altura/idade/creatinina (scores QE)
+- **enterkeyhint**: campos sequenciais recebem `next`, último campo recebe `done`
+- **Não quebra decimal**: vírgula nativa do iOS funciona sem inverter cursor
+
+#### Fix 2 ✅ — Animação de Accordion Estável (`js/build240b-accordion-fix.js`)
+- **Problema**: `_scrollToCard()` nativo usava `block:'start'` imediatamente após `.is-open`, causando jump visual
+- **Solução**: Override de `hubToggle` com delay de 220ms (após animação); IntersectionObserver para detectar visibilidade; usa `block:'nearest'` sempre
+- **Patch em `scrollTo`**: Intercepta chamadas ao `#scroll-content.scrollTo` — cancela se card já visível
+- **Logs de debug**: `[ACCORDION_FIX] action=open|close scrollSkipped=true|false animation=stable`
+
+#### Fix 3 ✅ — Input Focus Jump Removido (`js/build240b-accordion-fix.js`)
+- **Problema**: trocar entre campos disparava scroll/resize causando pulo sobe/desce
+- **Solução**: `visualViewport` API para detectar teclado aberto (`_keyboardOpen` flag); debounce de 120ms em todos os focus events; só rola se campo realmente oculto pelo teclado
+- **Sem remount**: nunca colapsa accordion, nunca recalcula layout global durante digitação
+- **Logs de debug**: `[KEYBOARD_STABLE] focusChange=true sameKeyboardSession=true|false scrollNeeded=true|false`
+
+#### Fix 4 ✅ — Modo Claro com Cores Vivas (`css/build240b-fixes.css`)
+- **Problema**: builds 236/237a forçavam `color:#FFFFFF` sobre fundos pastel claro → branco sobre branco
+- **Solução**: Gradientes saturados por nível; texto escuro com contraste WCAG AA ≥ 4.5:1
+  - N1 verde: esmeralda/petróleo/azul marinho vívidos + texto `#064e3b`/`#134e4a`/`#1e3a8a`
+  - N2 azul: roxo/âmbar/verde/índigo vívidos + texto escuro próprio
+  - N3 cinza: azul claro/rosa vívidos + texto `#1e3a8a`/`#831843`
+- **Inputs internos**: `background: rgba(255,255,255,0.80)` + `color: #111827`
+
+#### Fix 5 ✅ — Card-in-Card Removido (`css/build240b-fixes.css`)
+- **Problema**: `.card` / `.card-title` dentro dos módulos abertos criavam visual de card aninhado com borda, sombra e fundo independente competindo com o card pai
+- **Solução**: `.hub-card-body .card` → `background: transparent; border: none; box-shadow: none; border-radius: 0`
+- **`.card-title`**: vira label semântico — sem borda de card, apenas underline fino com cor do módulo
+- **Específico Hemodinâmica**: `#hub-hemo-slot .card` e `#hub-body-hemodinamica .card` → transparentes
+- **Específico Fluidos**: `#fluid-result .card` → transparente
+- **Todos os módulos cobertos**: Infusão, Eletrólitos, Scores, Pediatria, Gestante
+
+#### Fix 5b ✅ — Eletrólitos `.elec2-step` Card-in-Card Removido (`css/build240b-fixes.css §2b`)
+- **Problema**: `ElecCalc.render()` em `js/elec-calc.js` gera `.elec2-step#elec2-step1` com header `.elec2-step-hd` contendo "1 ELETRÓLITO" (fundo roxo `rgba(109,33,217,0.25)`, borda `rgba(167,139,250,0.15)`) — container visual desnecessário dentro do hub card
+- **Root cause**: `.elec2-step` definido em `medcases-ux-v2.css` linha 1748 com `background`, `border` e `border-radius`. Arquitetura de seção independente para a página dedicada `/page-elec`, incompatível com o hub accordion
+- **Solução**: Adicionado `§2b` em `build240b-fixes.css` — dentro de `#hub-elec-slot` / `#hub-elec-inner`:
+  - `.elec2-step` → `background: transparent; border: none; border-radius: 0; overflow: visible`
+  - `.elec2-step-hd` → `display: none` (oculta headers "1 ELETRÓLITO", "2 ESTADO", "3 PRESET")
+  - `.elec2-elec-grid` → `padding: 8px 0 4px 0` (padding próprio sem depender do container)
+  - `.elec2-fields-grid`, `.elec2-state-group` → padding zerado
+- **Resultado**: Botões K⁺, Na⁺, Cl⁻, Mg²⁺, Ca²⁺, P, HCO₃⁻, Glicose, Alb, AG, Osm aparecem direto no corpo do hub card — sem wrapper roxo aninhado
+
+#### Arquivos Criados/Modificados
+| Arquivo | Ação | Descrição |
+|---------|------|-----------|
+| `js/build240b-accordion-fix.js` | ✨ CRIADO | Fix 2+3: scroll estável + keyboard session |
+| `css/build240b-fixes.css` | ✨ CRIADO | Fix 4+5: light mode vívido + card-in-card removal + type="text" input styles |
+| `index.html` | ✏️ MODIFICADO | Fix 1: 29 inputs convertidos para type="text" + enterkeyhint; links para novos arquivos |
+
+#### Validação
+- ✅ PlaywrightConsoleCapture: **zero erros JS**
+- ✅ Todos os 11 cards carregando: patient, clcr, farmacos, interacoes, pediatria, gestante, infusao, hemodinamica, scores, fluidos, eletrolitos
+- ✅ `[ACCORDION_FIX] hubToggle patched` confirmado nos logs
+- ✅ Nenhuma lógica clínica alterada
+
+---
+
+## BUILD 237A — UX Refinement: Layout Hierárquico Premium (2026-06-25)
+
+### Commit: `style(calculator): refine hierarchical layout and premium card spacing`
+
+#### Objetivo
+Refinamento visual cirúrgico do HUB. Sem texto de nível. Hierarquia por forma, espaçamento e separadores. Sensação: app hospitalar premium.
+
+#### B237A-1 ✅ — Novo arquivo: `css/build237a-ux-refinement.css`
+- Tokens `--b237-*` para padding, gap, alturas, ícones, separadores
+- Carregado por último — maior prioridade de cascade
+
+#### B237A-2 ✅ — Separadores entre grupos (`.hub-divider`)
+- Elemento `<div class="hub-divider">` inserido entre N1→N2 e N2→N3
+- 1px height, gradiente horizontal fade: `transparent → rgba(255,255,255,0.07) → transparent`
+- Leve brilho central: `rgba(255,255,255,0.03)` no meio
+- `margin: 10px 0` — espaço aéreo discreto ao redor
+- Zero texto, zero label, zero glyph
+
+#### B237A-3 ✅ — Remoção dos labels de texto de nível
+- `.hub-section-label` → `display: none !important`
+- Labels HTML substituídos por `<!-- B237A: label oculto via CSS -->`
+- Hierarquia visual apenas por forma e cor
+
+#### B237A-4 ✅ — Separadores entre cards N1 (ritmo vertical)
+- `.hub-l1-section .hub-l1-row + .hub-l1-row`: `border-top: 1px solid rgba(255,255,255,0.055)`
+- Gap zero entre os wrappers N1 — continuidade visual total
+- Em tablet (≥768px): `border-left` (separador vertical entre os 3 cards lado a lado)
+
+#### B237A-5 ✅ — Cards N1 refinados
+- Trigger: `min-height: 80px`, `padding: 0 14px`, `gap: 14px`
+- Ícone: `42px × 42px`, `border-radius: 12px`, `font-size: 18px`
+- Nome: `14.5px / weight:600 / letter-spacing:-0.01em`
+- Desc: `10px / rgba(255,255,255,0.58) / letter-spacing:0.01em`
+- Chevron: `11px / rgba(255,255,255,0.30)`, rota 180° ao abrir
+
+#### B237A-6 ✅ — Cards N2: altura uniforme forçada
+- `height: var(--b237-trigger-h-l2)` (100px mobile → 114px desktop) em TODOS os cards N2 fechados
+- Garante que Interações, Eletrólitos, Infusão, Fluidos, Hemodinâmica, Scores têm exatamente a mesma altura
+- Ícone fechado: `52px / 24px font / border-radius:15px`
+- Nome: `12.5px / weight:600 / centralizado`
+- Linha decorativa: `28px × 2px`, opacidade 0.65
+
+#### B237A-7 ✅ — Cards N3 refinados
+- `height: 88px` uniforme
+- Ícone: `44px / 20px font / border-radius:13px`
+- Nome: `12px / rgba(255,255,255,0.80)`
+- Linha decorativa: `22px × 2px`, opacidade 0.45
+- Badge "Em breve": `7.5px / top:7px right:7px / border-radius:4px`
+
+#### B237A-8 ✅ — Estado aberto: trigger horizontal
+- N2/N3 aberto → trigger vira horizontal (igual N1)
+- `min-height: 54px`, ícone N2=34px / N3=30px
+- Nome alinhado à esquerda, desc reaparece, linha some, chevron 180°
+- Animação body: `b237BodyIn` 150ms cubic-bezier(0,0,0.2,1)
+
+#### B237A-9 ✅ — Grid N2: 2-col mobile → 3-col tablet/desktop
+- Mobile `<768px`: `1fr 1fr`, gap `9px`
+- Tablet `≥768px`: `repeat(3,1fr)`, gap `12px`
+- Desktop `≥1024px`: `repeat(3,1fr)`, gap `14px`
+- Expandido: flex-column em todos os breakpoints
+
+#### B237A-10 ✅ — Espaçamento global padronizado
+| Elemento | Mobile | Tablet | Desktop |
+|---|---|---|---|
+| Padding hub H | 14px | 16px | 24px |
+| Padding hub top | 10px | 12px | 16px |
+| Padding hub bottom | 32px | 36px | 44px |
+| Gap N2 grid | 9px | 12px | 14px |
+| Separador divisor | 10px top/bottom | 10px | 10px |
+
+#### B237A-11 ✅ — Microinterações
+- `scale(0.985) + opacity(0.84)` em 120ms — somente `transform + opacity`
+- Hover: `filter: brightness(1.06)` apenas em `(hover: hover) and (pointer: fine)`
+- Ícone: `scale(1.04)` spring 150ms ao abrir
+- `will-change: transform` em triggers e ícones
+
+#### B237A-12 ✅ — Zero regressões clínicas
+- Nenhuma alteração em JS, banco, fórmulas, traduções, navegação
+- Todos os IDs, `data-hub`, `hubToggle()`, `_updateAccordionState()` intactos
+- Accordion abre/fecha corretamente em todos os 11 módulos
 
 ---
 
