@@ -22,19 +22,39 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v6';
+const CACHE_VERSION   = 'medcases-v7';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
-/* ── Lista canônica de 23 assets pré-cacheados no install ─── */
+/* ── Lista canônica de 31 assets pré-cacheados no install ───
+   Sincronizada com manifest-offline.json (build 240)
+   Gerada por: node scripts/generate-offline-manifest.js
+   Inclui: 2 raiz + 8 css + 5 js + 16 database = 31 arquivos
+─────────────────────────────────────────────────────────── */
 const ASSETS_TO_CACHE = [
   './',
+
+  /* ── Raiz ── */
   './index.html',
+  './sw.js',
+
+  /* ── CSS (8 arquivos — todos os builds) ── */
   './css/medcases-ux-v2.css',
+  './css/build233.css',
+  './css/build234-design-system.css',
+  './css/build235-layout.css',
+  './css/build236-hub-redesign.css',
+  './css/build237a-ux-refinement.css',
+  './css/build237b-flush-cards.css',
+  './css/build240b-fixes.css',
+
+  /* ── JS (5 arquivos) ── */
   './js/medcases-ux-v2.js',
   './js/hub-accordion.js',
+  './js/build240b-accordion-fix.js',
   './js/elec-calc.js',
   './js/deeplink-router.js',
-  './database/interacoes.js',
+
+  /* ── Database (16 arquivos — base clínica COMPLETA) ── */
   './database/analgesicos.js',
   './database/anticoag.js',
   './database/antimicrobianos.js',
@@ -42,6 +62,7 @@ const ASSETS_TO_CACHE = [
   './database/endocrino.js',
   './database/gastro.js',
   './database/infusoes.js',
+  './database/interacoes.js',
   './database/nefro.js',
   './database/neuro.js',
   './database/obesidade.js',
@@ -49,7 +70,7 @@ const ASSETS_TO_CACHE = [
   './database/prescricoes.js',
   './database/psicofarmacos.js',
   './database/psiquiatria.js',
-  './database/reumatologia.js'
+  './database/reumatologia.js',
 ];
 
 /* ============================================================

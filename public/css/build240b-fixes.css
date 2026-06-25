@@ -1,0 +1,530 @@
+/* ================================================================
+   MedCases Pro — Build 240B: Light Mode Fix + Card-in-Card Fix
+   ----------------------------------------------------------------
+   Fix 4 (v2): Modo claro com FUNDOS SATURADOS + texto BRANCO
+               mantendo o padrão do medcases-ux-v2.css.
+   Fix 5: Remove card-in-card visual nos módulos abertos
+
+   DIAGNÓSTICO DO PROBLEMA ORIGINAL (v1):
+   medcases-ux-v2.css §15b força color:#FFFFFF !important
+   em todos os .hub-card-name, .hub-card-desc, .hub-card-chevron
+   no light mode usando seletor body.light-mode #hub-card-X .hub-card-name.
+   A v1 tentou sobrescrever com cores escuras, mas o texto
+   continuou branco sobre fundos pastéis claros → ilegível.
+
+   SOLUÇÃO v2 (CORRETA):
+   Manter texto BRANCO (não brigar com medcases-ux-v2).
+   Tornar FUNDOS SATURADOS E ESCUROS — cores vivas e vibrantes
+   que contrastam WCAG AA com texto branco.
+   Hierarquia clara: N1=verde, N2=azul/roxo/âmbar, N3=azul/rosa.
+
+   LOAD ORDER: último CSS → maior prioridade de cascade.
+================================================================ */
+
+
+/* ================================================================
+   §1 — FIX 4 v2: MODO CLARO — FUNDOS SATURADOS, TEXTO BRANCO
+   Gradientes escuros e vibrantes, idênticos ao dark mode mas com
+   mais saturação e leveza. Texto já é #FFFFFF via medcases-ux-v2.
+================================================================ */
+
+/* ── Garantir que ícone do hub-card sempre seja visível ──
+   O fundo claro do ícone precisa de fundo sólido e ícone contrastante */
+body.light-mode .hub-card-ico {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   NÍVEL 1 — Família Verde
+
+   Patient  → verde vivo saturado  (#059669 → #047857)
+   ClCr     → verde petróleo       (#0d9488 → #0f766e)
+   Fármacos → azul real            (#1d4ed8 → #1e40af)
+──────────────────────────────────────────────────────────────── */
+
+/* Patient — Verde esmeralda saturado */
+body.light-mode #hub-card-patient .hub-card-trigger {
+  background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%) !important;
+  border-bottom: 2px solid rgba(6, 95, 70, 0.35) !important;
+}
+body.light-mode #hub-card-patient {
+  border-color: rgba(5, 150, 105, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(5, 150, 105, 0.20) !important;
+}
+body.light-mode #hub-card-patient .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-patient .hub-card-body  { background: rgba(5, 150, 105, 0.08) !important; }
+body.light-mode #hub-card-patient .hub-card-inner { background: rgba(5, 150, 105, 0.06) !important; }
+
+/* ClCr — Verde petróleo saturado */
+body.light-mode #hub-card-clcr .hub-card-trigger {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 50%, #134e4a 100%) !important;
+  border-bottom: 2px solid rgba(19, 78, 74, 0.35) !important;
+}
+body.light-mode #hub-card-clcr {
+  border-color: rgba(13, 148, 136, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(13, 148, 136, 0.20) !important;
+}
+body.light-mode #hub-card-clcr .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-clcr .hub-card-body  { background: rgba(13, 148, 136, 0.08) !important; }
+body.light-mode #hub-card-clcr .hub-card-inner { background: rgba(13, 148, 136, 0.06) !important; }
+
+/* Fármacos — Azul royal saturado */
+body.light-mode #hub-card-farmacos .hub-card-trigger {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%) !important;
+  border-bottom: 2px solid rgba(30, 64, 175, 0.35) !important;
+}
+body.light-mode #hub-card-farmacos {
+  border-color: rgba(37, 99, 235, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.20) !important;
+}
+body.light-mode #hub-card-farmacos .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-farmacos .hub-card-body  { background: rgba(37, 99, 235, 0.07) !important; }
+body.light-mode #hub-card-farmacos .hub-card-inner { background: rgba(37, 99, 235, 0.05) !important; }
+
+/* ────────────────────────────────────────────────────────────────
+   NÍVEL 2 — Família Azul/Roxo/Âmbar/Verde/Índigo/Vermelho
+
+   Interações  → roxo violeta    (#7c3aed → #6d28d9)
+   Eletrólitos → índigo          (#4f46e5 → #4338ca)
+   Infusão     → âmbar/laranja   (#d97706 → #b45309)
+   Fluidos     → verde teal      (#059669 → #047857)
+   Hemodinâmica→ vermelho coral  (#e11d48 → #be123c)
+   Scores      → ardósia escuro  (#475569 → #334155)
+──────────────────────────────────────────────────────────────── */
+
+/* Interações — Roxo violeta saturado */
+body.light-mode #hub-card-interacoes .hub-card-trigger {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%) !important;
+  border-bottom: 2px solid rgba(91, 33, 182, 0.35) !important;
+}
+body.light-mode #hub-card-interacoes {
+  border-color: rgba(124, 58, 237, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(124, 58, 237, 0.20) !important;
+}
+body.light-mode #hub-card-interacoes .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-interacoes .hub-card-body  { background: rgba(109, 40, 217, 0.07) !important; }
+body.light-mode #hub-card-interacoes .hub-card-inner { background: rgba(109, 40, 217, 0.05) !important; }
+
+/* Eletrólitos — Índigo saturado */
+body.light-mode #hub-card-eletrolitos .hub-card-trigger {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 50%, #3730a3 100%) !important;
+  border-bottom: 2px solid rgba(55, 48, 163, 0.35) !important;
+}
+body.light-mode #hub-card-eletrolitos {
+  border-color: rgba(79, 70, 229, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(79, 70, 229, 0.20) !important;
+}
+body.light-mode #hub-card-eletrolitos .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-eletrolitos .hub-card-body  { background: rgba(67, 56, 202, 0.07) !important; }
+body.light-mode #hub-card-eletrolitos .hub-card-inner { background: rgba(67, 56, 202, 0.05) !important; }
+
+/* Infusão — Âmbar saturado */
+body.light-mode #hub-card-infusao .hub-card-trigger {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 50%, #92400e 100%) !important;
+  border-bottom: 2px solid rgba(146, 64, 14, 0.35) !important;
+}
+body.light-mode #hub-card-infusao {
+  border-color: rgba(217, 119, 6, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(217, 119, 6, 0.20) !important;
+}
+body.light-mode #hub-card-infusao .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-infusao .hub-card-body  { background: rgba(180, 83, 9, 0.07) !important; }
+body.light-mode #hub-card-infusao .hub-card-inner { background: rgba(180, 83, 9, 0.05) !important; }
+
+/* Fluidos — Teal saturado */
+body.light-mode #hub-card-fluidos .hub-card-trigger {
+  background: linear-gradient(135deg, #0891b2 0%, #0e7490 50%, #155e75 100%) !important;
+  border-bottom: 2px solid rgba(21, 94, 117, 0.35) !important;
+}
+body.light-mode #hub-card-fluidos {
+  border-color: rgba(8, 145, 178, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(8, 145, 178, 0.20) !important;
+}
+body.light-mode #hub-card-fluidos .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-fluidos .hub-card-body  { background: rgba(14, 116, 144, 0.07) !important; }
+body.light-mode #hub-card-fluidos .hub-card-inner { background: rgba(14, 116, 144, 0.05) !important; }
+
+/* Hemodinâmica — Vermelho/rosa saturado */
+body.light-mode #hub-card-hemodinamica .hub-card-trigger {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 50%, #9f1239 100%) !important;
+  border-bottom: 2px solid rgba(159, 18, 57, 0.35) !important;
+}
+body.light-mode #hub-card-hemodinamica {
+  border-color: rgba(225, 29, 72, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(225, 29, 72, 0.20) !important;
+}
+body.light-mode #hub-card-hemodinamica .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-hemodinamica .hub-card-body  { background: rgba(190, 18, 60, 0.07) !important; }
+body.light-mode #hub-card-hemodinamica .hub-card-inner { background: rgba(190, 18, 60, 0.05) !important; }
+
+/* Scores — Ardósia escuro */
+body.light-mode #hub-card-scores .hub-card-trigger {
+  background: linear-gradient(135deg, #475569 0%, #334155 50%, #1e293b 100%) !important;
+  border-bottom: 2px solid rgba(30, 41, 59, 0.35) !important;
+}
+body.light-mode #hub-card-scores {
+  border-color: rgba(71, 85, 105, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(71, 85, 105, 0.20) !important;
+}
+body.light-mode #hub-card-scores .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-scores .hub-card-body  { background: rgba(71, 85, 105, 0.07) !important; }
+body.light-mode #hub-card-scores .hub-card-inner { background: rgba(71, 85, 105, 0.05) !important; }
+
+/* ────────────────────────────────────────────────────────────────
+   NÍVEL 3
+
+   Pediatria → azul real saturado  (#2563eb → #1d4ed8)
+   Gestante  → rosa/magenta        (#db2777 → #be185d)
+──────────────────────────────────────────────────────────────── */
+
+/* Pediatria — Azul real saturado */
+body.light-mode #hub-card-pediatria .hub-card-trigger {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%) !important;
+  border-bottom: 2px solid rgba(29, 78, 216, 0.35) !important;
+}
+body.light-mode #hub-card-pediatria {
+  border-color: rgba(59, 130, 246, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.20) !important;
+}
+body.light-mode #hub-card-pediatria .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-pediatria .hub-card-body  { background: rgba(37, 99, 235, 0.07) !important; }
+body.light-mode #hub-card-pediatria .hub-card-inner { background: rgba(37, 99, 235, 0.05) !important; }
+
+/* Gestante — Rosa/Magenta saturado */
+body.light-mode #hub-card-gestante .hub-card-trigger {
+  background: linear-gradient(135deg, #db2777 0%, #be185d 50%, #9d174d 100%) !important;
+  border-bottom: 2px solid rgba(157, 23, 77, 0.35) !important;
+}
+body.light-mode #hub-card-gestante {
+  border-color: rgba(219, 39, 119, 0.50) !important;
+  box-shadow: 0 2px 12px rgba(219, 39, 119, 0.20) !important;
+}
+body.light-mode #hub-card-gestante .hub-card-ico {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+body.light-mode #hub-card-gestante .hub-card-body  { background: rgba(190, 24, 93, 0.07) !important; }
+body.light-mode #hub-card-gestante .hub-card-inner { background: rgba(190, 24, 93, 0.05) !important; }
+
+/* ────────────────────────────────────────────────────────────────
+   ACENTO DECORATIVO (linha colorida sob o nome no N2/N3 fechado)
+   Sobrescreve o currentColor para branco em fundo escuro
+──────────────────────────────────────────────────────────────── */
+body.light-mode .hub-card[data-level="2"]:not(.is-open) .hub-card-name::after,
+body.light-mode .hub-card[data-level="3"]:not(.is-open) .hub-card-name::after {
+  background: rgba(255, 255, 255, 0.65) !important;
+  opacity: 1 !important;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   HUB DIVIDER — linha separadora no light mode
+──────────────────────────────────────────────────────────────── */
+body.light-mode .hub-divider {
+  background: linear-gradient(90deg,
+    transparent 0%, rgba(0,0,0,0.12) 12%,
+    rgba(0,0,0,0.07) 50%, rgba(0,0,0,0.12) 88%,
+    transparent 100%) !important;
+  margin: 8px 0 !important;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   BORDAS DOS CARDS NO LIGHT MODE
+──────────────────────────────────────────────────────────────── */
+body.light-mode .hub-l1-section .hub-l1-row + .hub-l1-row {
+  border-top-color: rgba(0, 0, 0, 0.10) !important;
+}
+body.light-mode .hub-card[data-level="2"],
+body.light-mode .hub-card[data-level="3"] {
+  border-right-color:  rgba(0, 0, 0, 0.08) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   TIPOGRAFIA INTERNA — cards abertos no light mode
+   (hub-card-body = área expandida abaixo do trigger)
+──────────────────────────────────────────────────────────────── */
+
+body.light-mode .hub-card-body .hm-label,
+body.light-mode .hub-card-body .hm-label-unit,
+body.light-mode .hub-card-body label {
+  color: rgba(15, 23, 42, 0.80) !important;
+}
+
+/* Inputs internos light mode */
+body.light-mode .hm-input,
+body.light-mode .mc-input,
+body.light-mode .hm-field-input,
+body.light-mode .elec-input,
+body.light-mode .infusion-input,
+body.light-mode .qe-input,
+body.light-mode .input-field {
+  background:   rgba(255, 255, 255, 0.90) !important;
+  border-color: rgba(0, 0, 0, 0.20) !important;
+  color:        #111827 !important;
+}
+body.light-mode .hm-input::placeholder,
+body.light-mode .elec-input::placeholder,
+body.light-mode .infusion-input::placeholder,
+body.light-mode .qe-input::placeholder,
+body.light-mode .input-field::placeholder {
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+body.light-mode .hm-input:focus,
+body.light-mode .elec-input:focus,
+body.light-mode .infusion-input:focus,
+body.light-mode .qe-input:focus,
+body.light-mode .input-field:focus {
+  background:   rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(0, 0, 0, 0.32) !important;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* type="text" recebe os mesmos estilos (Fix 1 do Build 240B) */
+body.light-mode input[type="text"].hm-input,
+body.light-mode input[type="text"].elec-input,
+body.light-mode input[type="text"].infusion-input,
+body.light-mode input[type="text"].qe-input,
+body.light-mode input[type="text"].input-field {
+  background:   rgba(255, 255, 255, 0.90) !important;
+  border-color: rgba(0, 0, 0, 0.20) !important;
+  color:        #111827 !important;
+}
+
+/* Pills de resultado */
+body.light-mode .hm-pill {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+body.light-mode .hm-pill-val { color: #0f172a !important; }
+body.light-mode .hm-pill-lbl { color: rgba(15, 23, 42, 0.65) !important; }
+
+
+/* ================================================================
+   §2 — FIX 5: REMOÇÃO DO CARD-IN-CARD
+   .card/.card-title dentro dos hub-card bodies deve ser
+   transparente — sem border, shadow ou background independente.
+================================================================ */
+
+/* Regra global: .card dentro de hub-card-body → transparente */
+.hub-card-body .card {
+  background:    transparent !important;
+  border:        none !important;
+  box-shadow:    none !important;
+  border-radius: 0 !important;
+  padding:       0 !important;
+  margin-bottom: 12px !important;
+}
+
+/* .card-title → label semântico, não header de card */
+.hub-card-body .card-title {
+  background:    transparent !important;
+  border:        none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 0 !important;
+  padding:       0 0 8px 0 !important;
+  margin-bottom: 10px !important;
+  font-size:     11.5px !important;
+  font-weight:   600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color:         rgba(255, 255, 255, 0.55) !important;
+}
+
+body.light-mode .hub-card-body .card-title {
+  border-bottom-color: rgba(0, 0, 0, 0.12) !important;
+  color:               rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Hemodinâmica — card dentro do slot */
+#hub-hemo-slot .card,
+#hub-body-hemodinamica .card {
+  background:    transparent !important;
+  border:        none !important;
+  box-shadow:    none !important;
+  border-radius: 0 !important;
+  padding:       0 !important;
+  margin-bottom: 16px !important;
+}
+#hub-hemo-slot .card-title,
+#hub-body-hemodinamica .card-title {
+  background:    transparent !important;
+  border:        none !important;
+  border-bottom: 1px solid rgba(251, 113, 133, 0.25) !important;
+  border-radius: 0 !important;
+  padding:       0 0 8px 0 !important;
+  margin-bottom: 10px !important;
+  color:         rgba(252, 165, 165, 0.80) !important;
+  font-size:     11.5px !important;
+  font-weight:   600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+body.light-mode #hub-hemo-slot .card-title,
+body.light-mode #hub-body-hemodinamica .card-title {
+  border-bottom-color: rgba(190, 18, 60, 0.22) !important;
+  color:               rgba(136, 19, 55, 0.70) !important;
+}
+
+/* Fluidos — resultado dentro do slot */
+#fluid-result .card,
+.fluid-result-card {
+  background:    transparent !important;
+  border:        none !important;
+  box-shadow:    none !important;
+  border-radius: 0 !important;
+  padding:       0 !important;
+  margin-bottom: 12px !important;
+}
+#fluid-result .card-title {
+  background:    transparent !important;
+  border:        none !important;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.25) !important;
+  border-radius: 0 !important;
+  padding:       0 0 8px 0 !important;
+  margin-bottom: 10px !important;
+  color:         rgba(110, 231, 183, 0.85) !important;
+  font-size:     11.5px !important;
+  font-weight:   600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+body.light-mode #fluid-result .card-title {
+  border-bottom-color: rgba(5, 150, 105, 0.20) !important;
+  color:               rgba(6, 78, 59, 0.65) !important;
+}
+
+/* results-grid dentro de hemodinâmica */
+#hub-hemo-slot .results-grid,
+#hub-body-hemodinamica .results-grid {
+  background:   rgba(200, 38, 60, 0.05) !important;
+  border-color: rgba(251, 113, 133, 0.10) !important;
+  border-radius: 8px !important;
+}
+body.light-mode #hub-hemo-slot .results-grid,
+body.light-mode #hub-body-hemodinamica .results-grid {
+  background:   rgba(225, 29, 72, 0.07) !important;
+  border-color: rgba(190, 18, 60, 0.14) !important;
+}
+
+/* Outros módulos: sem card visual interno */
+#hub-infusao-slot .card,    #hub-body-infusao .card,
+#hub-eletrolitos-slot .card, #hub-body-eletrolitos .card,
+#hub-scores-slot .card,     #hub-body-scores .card,
+#hub-pediatria-slot .card,  #hub-body-pediatria .card,
+#hub-gestante-slot .card,   #hub-body-gestante .card {
+  background:    transparent !important;
+  border:        none !important;
+  box-shadow:    none !important;
+  border-radius: 0 !important;
+  padding:       0 !important;
+}
+
+
+/* ================================================================
+   §2b — FIX 5 ELETRÓLITOS: Remoção do card-in-card .elec2-step
+   O ElecCalc.render() gera .elec2-step com .elec2-step-hd "1 ELETRÓLITO".
+   Dentro do hub (hub-elec-slot), achatar: sem container, sem header.
+   Manter apenas .elec2-elec-grid (botões) e .elec2-fields-grid (inputs).
+================================================================ */
+
+/* Container .elec2-step dentro do hub → transparente, sem borda */
+#hub-elec-slot .elec2-step,
+#hub-body-eletrolitos .elec2-step,
+#hub-elec-inner .elec2-step {
+  background:    transparent !important;
+  border:        none !important;
+  box-shadow:    none !important;
+  border-radius: 0 !important;
+  overflow:      visible !important;
+  margin-bottom: 4px !important;
+  padding:       0 !important;
+}
+
+/* Header "1 ELETRÓLITO" / "2 ESTADO" / "3 PRESET" → oculto */
+#hub-elec-slot .elec2-step-hd,
+#hub-body-eletrolitos .elec2-step-hd,
+#hub-elec-inner .elec2-step-hd {
+  display: none !important;
+}
+
+/* Grid de botões: padding próprio sem depender do container */
+#hub-elec-slot .elec2-elec-grid,
+#hub-body-eletrolitos .elec2-elec-grid,
+#hub-elec-inner .elec2-elec-grid {
+  padding: 8px 0 4px 0 !important;
+}
+
+/* Campos numéricos: sem padding extra do container */
+#hub-elec-slot .elec2-fields-grid,
+#hub-body-eletrolitos .elec2-fields-grid,
+#hub-elec-inner .elec2-fields-grid {
+  padding: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+/* Grupos de estado e preset: sem padding do container */
+#hub-elec-slot .elec2-state-group,
+#hub-body-eletrolitos .elec2-state-group,
+#hub-elec-inner .elec2-state-group {
+  padding: 0 !important;
+}
+
+
+/* ================================================================
+   §3 — FIX 1 COMPLEMENTO: inputs type="text" compatíveis
+================================================================ */
+
+input[type="text"].hm-input,
+input[type="text"].elec-input,
+input[type="text"].infusion-input,
+input[type="text"].qe-input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[inputmode="decimal"],
+input[inputmode="numeric"] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+input[type="text"]::-webkit-outer-spin-button,
+input[type="text"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+/* ================================================================
+   FIM DO BUILD 240B (v2)
+================================================================ */
