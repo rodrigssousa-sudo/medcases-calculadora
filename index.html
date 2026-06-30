@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="css/build237b-flush-cards.css" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
   <link rel="stylesheet" href="css/build240b-fixes.css" />
+  <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
+  <link rel="stylesheet" href="css/build241-ux-pro.css" />
 
   <style>
     /* ============================================================ RESET */
@@ -7266,6 +7268,15 @@
       padding: 2px 2px 4px;
     }
 
+    /* ── Controle de visibilidade do container de resultados ──
+       display:none → estado padrão (sem resultados ainda).
+       .active → revelado por executarChecagemInteracoes() via JS.
+       !important garante override caso algum CSS externo interfira. */
+    #resultados-interacoes-container { display: none; }
+    #resultados-interacoes-container.active { display: block !important; }
+    .intx-resultados { display: none; }
+    .intx-resultados.active { display: block !important; }
+
     /* ── Loading state ── */
     .intx-loading {
       display: flex; align-items: center; gap: 10px;
@@ -7363,7 +7374,10 @@
 <body>
 <div id="app">
 
-  <!-- ══ SELETOR DE IDIOMA + TEMA — só visível na HOME ══ -->
+  <!-- ══ TEMA — botão fixo canto superior direito ══
+       Pílulas PT/ES removidas (motor v3.2 reage ao idioma global automaticamente).
+       Preservado apenas o toggle de Modo Claro/Escuro com id/classe/onclick intactos.
+  -->
   <div id="lang-switcher" style="
     position: fixed;
     top: 10px;
@@ -7371,31 +7385,15 @@
     z-index: 9999;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 0;
     background: rgba(11,15,25,0.90);
     border: 1px solid rgba(56,189,248,0.18);
-    border-radius: 20px;
-    padding: 4px 8px;
+    border-radius: 50%;
+    padding: 4px;
     backdrop-filter: blur(12px);
     box-shadow: 0 2px 16px rgba(0,0,0,0.45);
     transition: opacity 0.22s ease, transform 0.22s ease;
   ">
-    <!-- PT / ES compactos sem label LANG -->
-    <button id="lang-btn-pt" onclick="setLang('pt')" style="
-      font-size:10px; font-weight:800; padding:3px 9px;
-      border-radius:12px; border:none; cursor:pointer;
-      background:#38BDF8; color:#0B0F19;
-      transition:all 0.18s ease; letter-spacing:0.3px;
-    ">PT</button>
-    <button id="lang-btn-es" onclick="setLang('es')" style="
-      font-size:10px; font-weight:800; padding:3px 9px;
-      border-radius:12px; border:none; cursor:pointer;
-      background: transparent; color:var(--text-muted);
-      border:1px solid rgba(255,255,255,0.10);
-      transition:all 0.18s ease; letter-spacing:0.3px;
-    ">ES</button>
-    <!-- Divisor visual slim -->
-    <span style="width:1px;height:14px;background:rgba(255,255,255,0.10);margin:0 2px;flex-shrink:0;"></span>
     <!-- Botão de tema: ícone Sol (modo escuro ativo) / Lua (modo claro ativo) -->
     <button id="theme-btn" onclick="alternarTema()" title="Alternar tema claro/escuro" style="
       width:28px; height:28px; border-radius:50%;
@@ -7724,6 +7722,7 @@
                   <input class="hm-search" id="hm-drug-search" type="text"
                     placeholder="🔍 Buscar fármaco..."
                     oninput="hmFilterDrugs(this.value)"
+                    inputmode="search" enterkeyhint="search"
                     autocomplete="off" autocorrect="off" autocapitalize="none"
                     spellcheck="false" />
                   <button class="hm-search-clear" id="hm-search-clear"
@@ -8376,6 +8375,7 @@
           <input class="hm-search" id="hm-drug-search-calc" type="text"
             placeholder="🔍 Buscar fármaco..."
             oninput="hmFilterDrugs(this.value)"
+            inputmode="search" enterkeyhint="search"
             autocomplete="off" autocorrect="off" autocapitalize="none"
             spellcheck="false" />
           <button class="hm-search-clear" id="hm-search-clear-calc"
@@ -9034,8 +9034,8 @@
           </span>
         </button>
 
-        <!-- ── Resultados ── -->
-        <div id="resultados-interacoes-container" style="margin-top:18px;"></div>
+        <!-- ── Resultados: oculto por padrão, visível SÓ após executarChecagemInteracoes() ── -->
+        <div id="resultados-interacoes-container" style="display:none;margin-top:18px;"></div>
 
       </div><!-- /intx-container -->
 
@@ -9590,6 +9590,7 @@
         <input class="farmacos-search" id="farmacos-search-input" type="text"
                placeholder="Buscar fármaco, classe ou categoria..."
                oninput="renderFarmacosList(this.value)"
+               inputmode="search" enterkeyhint="search"
                autocomplete="off" spellcheck="false" />
       </div>
 
@@ -20113,8 +20114,22 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     const namePt  = typeof nameObj === 'object' ? (nameObj.pt || key) : nameObj;
     const nameEs  = typeof nameObj === 'object' ? (nameObj.es || namePt) : nameObj;
 
-    /* ── Resolve class (será sobrescrito pelo calculate em runtime) ── */
-    const classPt = typeof entry.class === 'object' ? (entry.class?.pt || '') : (entry.class || '');
+    /* ── Resolve class ──
+       Prioridade: (1) entry.class na raiz (string/objeto)
+                   (2) chamada de descoberta ao calculate() com parâmetros neutros
+                       — necessário para CARDIO_DRUGS_DB e ANTIMICROBIANOS_DRUGS_DB
+                         onde class só existe dentro do retorno de calculate()
+    ── */
+    let classPt = typeof entry.class === 'object' ? (entry.class?.pt || '') : (entry.class || '');
+    if (!classPt && typeof entry.calculate === 'function') {
+      try {
+        const _disc = entry.calculate({ peso: 70, idade: 40, clcr: 90, sexo: 'M',
+                                        gestante: false, lactante: false }, 'pt');
+        if (_disc && typeof _disc.class === 'string' && _disc.class) {
+          classPt = _disc.class;
+        }
+      } catch(_e) { /* silencioso — classPt fica '' */ }
+    }
 
     /* ── Resolve category ── */
     const catRaw = entry.category;
@@ -20505,6 +20520,43 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     'bisoprolol':          { pt: 'Bisoprolol',          es: 'Bisoprolol' },
     'prednisona':          { pt: 'Prednisona',          es: 'Prednisona' },
     'dexametasona':        { pt: 'Dexametasona',        es: 'Dexametasona' },
+    /* BUILD 241: entradas próprias para fármacos que eram colapsados por DRUG_ALIASES
+       mas têm identidade visual distinta no autocomplete */
+    /* Antiarrítmicos */
+    'sotalol':             { pt: 'Sotalol',             es: 'Sotalol' },
+    /* Fluoroquinolonas */
+    'ciprofloxacino':      { pt: 'Ciprofloxacino',      es: 'Ciprofloxacino' },
+    'moxifloxacino':       { pt: 'Moxifloxacino',       es: 'Moxifloxacino' },
+    'norfloxacino':        { pt: 'Norfloxacino',        es: 'Norfloxacino' },
+    /* Aminoglicosídeos */
+    'amicacina':           { pt: 'Amicacina',           es: 'Amikacina' },
+    'tobramicina':         { pt: 'Tobramicina',         es: 'Tobramicina' },
+    /* Tetraciclinas */
+    'minociclina':         { pt: 'Minociclina',         es: 'Minociclina' },
+    /* Rifamicinas */
+    'rifabutina':          { pt: 'Rifabutina',          es: 'Rifabutina' },
+    'rifapentina':         { pt: 'Rifapentina',         es: 'Rifapentina' },
+    /* Carbapenêmicos */
+    'imipenem':            { pt: 'Imipenem',            es: 'Imipenem' },
+    'ertapenem':           { pt: 'Ertapenem',           es: 'Ertapenem' },
+    /* BRAs (já existem, confirmação) */
+    'olmesartana':         { pt: 'Olmesartana',         es: 'Olmesartán' },
+    /* Nitratos */
+    'nitroglicerina':      { pt: 'Nitroglicerina',      es: 'Nitroglicerina' },
+    /* PDE5i */
+    'vardenafila':         { pt: 'Vardenafila',         es: 'Vardenafilo' },
+    /* AINEs adicionais */
+    'piroxicam':           { pt: 'Piroxicam',           es: 'Piroxicam' },
+    'cetoprofeno':         { pt: 'Cetoprofeno',         es: 'Cetoprofeno' },
+    'naproxeno':           { pt: 'Naproxeno',           es: 'Naproxeno' },
+    /* Sulfonamidas */
+    'cotrimoxazol':        { pt: 'Cotrimoxazol',        es: 'Cotrimoxazol' },
+    /* Outros */
+    'clindamicina':        { pt: 'Clindamicina',        es: 'Clindamicina' },
+    'isotretinoina':       { pt: 'Isotretinoína',       es: 'Isotretinoína' },
+    'nitrofurantoina':     { pt: 'Nitrofurantoína',     es: 'Nitrofurantoína' },
+    'fosfomicina':         { pt: 'Fosfomicina',         es: 'Fosfomicina' },
+    'tedizolida':          { pt: 'Tedizolida',          es: 'Tedizolida' },
   };
 
   /* ── Mapa inverso: nome ES normalizado → chave canônica PT ──
@@ -20545,14 +20597,43 @@ function _adaptExternalDB(dbObj, categoryLabel) {
   })();
 
   /* ── Função: nome de exibição pelo idioma ── */
+  /* ── _normSemAlias: normaliza texto para busca SEM resolver DRUG_ALIASES ──
+     Usado exclusivamente pelo autocomplete para preservar identidade do fármaco.
+     Ex: "Enalapril" → "enalapril" (NÃO → "captopril")
+         "Valsartana" → "valsartana" (NÃO → "losartana") */
+  function _normSemAlias(str) {
+    return String(str || '')
+      .toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, ' ').trim();
+  }
+
   function _displayName(nomeLista, lang) {
     /* nomeLista = string da lista (ex: "Valsartana", "Ácido Valproico") */
-    const canonical = normalizarFarmaco(nomeLista);
-    const entry = DRUG_DISPLAY_NAMES[canonical];
-    if (entry) {
-      const display = entry[lang] || entry.pt || nomeLista;
-      console.log('[DRUG_I18N] lang=' + lang + ' canonicalKey=' + canonical + ' displayName=' + display);
+    /* BUILD 241: NÃO passa por normalizarFarmaco (que resolve DRUG_ALIASES)
+       para o lookup de display. Usa a chave canônica direta sem alias-collapse,
+       senão "Enalapril" → canonical="captopril" → display="Captopril". */
+    const normDireto = _normSemAlias(nomeLista).replace(/\s+/g, '_');
+    /* Tenta lookup direto (sem alias) */
+    const entryDireto = DRUG_DISPLAY_NAMES[normDireto];
+    if (entryDireto) {
+      const display = entryDireto[lang] || entryDireto.pt || nomeLista;
       return display;
+    }
+    /* Fallback: usa canonical com alias SOMENTE para fármacos que não têm
+       entrada própria em DRUG_DISPLAY_NAMES (ex: sais, variantes de nome) */
+    const canonical = normalizarFarmaco(nomeLista);
+    const entryAlias = DRUG_DISPLAY_NAMES[canonical];
+    if (entryAlias && canonical !== normDireto) {
+      /* Só usa o alias se o canonical for DIFERENTE do nome original
+         (evita retornar "Captopril" para "Enalapril") */
+      const aliasDisplay = entryAlias[lang] || entryAlias.pt || nomeLista;
+      /* Se o display do alias é idêntico ao nomeLista → seguro usar */
+      if (aliasDisplay.toLowerCase() === nomeLista.toLowerCase()) {
+        return aliasDisplay;
+      }
+      /* Alias colapsa nome (ex: enalapril→captopril) → retorna nomeLista */
+      return nomeLista;
     }
     return nomeLista; /* fallback: retorna original */
   }
@@ -20758,25 +20839,29 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     /* Já selecionados: canonicalizar para comparar corretamente */
     const selectedCanon = selecionadosInteracao.map(n => normalizarFarmaco(n));
 
-    /* Constrói lista com nomes no idioma ativo, filtrando já selecionados */
+    /* BUILD 241: separar canonical-para-interações (com aliases) de
+       canonical-para-display (sem aliases).
+       selectedCanon usa aliases (correto — deduplicar IECAs entre si).
+       listaNoBusca.normDisplay usa _normSemAlias (preserva identidade). */
     const listaNoBusca = LISTA_MEDS_DISPONIVEIS_RAW
       .filter(nomePt => {
         const canon = normalizarFarmaco(nomePt);
         return !selectedCanon.includes(canon);
       })
       .map(nomePt => ({
-        display: _displayName(nomePt, lang),
-        canonical: normalizarFarmaco(nomePt),
+        display:      _displayName(nomePt, lang),       /* nome para exibição */
+        normDisplay:  _normSemAlias(nomePt),             /* norm SEM alias — para filtro */
+        canonical:    normalizarFarmaco(nomePt),         /* norm COM alias — para dedup motor */
         nomePt
       }));
 
-    /* Filtro: aceita busca em PT, ES e sem acentos */
+    /* Filtro: aceita busca no nome display, no nome PT original e no canonical-sem-alias.
+       NÃO filtra por canonical-com-alias para não suprimir "enalapril" por "captopril". */
     const filtered = q.length === 0
       ? listaNoBusca.slice(0, 14)
       : listaNoBusca.filter(item => {
-          const dispNorm = item.display.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-          const ptNorm   = item.nomePt.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-          return dispNorm.includes(qLow) || ptNorm.includes(qLow) || item.canonical.includes(qLow);
+          const dispNorm = _normSemAlias(item.display);
+          return dispNorm.includes(qLow) || item.normDisplay.includes(qLow);
         }).slice(0, 12);
 
     if (filtered.length === 0) {
@@ -20826,8 +20911,12 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     renderizarChips();
     _atualizarContador();
     _atualizarBotao();
-    const res = document.getElementById('resultados-interacoes-container');
-    if (res) res.innerHTML = '';
+    /* Oculta e limpa resultados anteriores ao adicionar novo chip */
+    document.querySelectorAll('#resultados-interacoes-container, .intx-resultados').forEach(function(el) {
+      el.innerHTML = '';
+      el.style.display = 'none';
+      el.classList.remove('active');
+    });
   };
 
   /* ══════════════════════════════════════════════════════════
@@ -20910,9 +20999,12 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     if (inp) inp.value = '';
     if (dd)  dd.style.display = 'none';
 
-    /* Limpa resultados anteriores */
-    const resEl = document.getElementById('resultados-interacoes-container');
-    if (resEl) resEl.innerHTML = '';
+    /* Oculta e limpa resultados anteriores (serão reabertos por executarChecagemInteracoes) */
+    document.querySelectorAll('#resultados-interacoes-container, .intx-resultados').forEach(function(el) {
+      el.innerHTML = '';
+      el.style.display = 'none';
+      el.classList.remove('active');
+    });
 
     /* Mostra aviso para não reconhecidos */
     if (unresolved.length > 0) {
@@ -20931,9 +21023,11 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     renderizarChips();
     _atualizarContador();
     _atualizarBotao();
-    /* Limpa resultados anteriores */
-    const res = document.getElementById('resultados-interacoes-container');
-    if (res) res.innerHTML = '';
+    /* Oculta e limpa resultados — só voltam a aparecer com clique explícito */
+    document.querySelectorAll('#resultados-interacoes-container, .intx-resultados').forEach(function(el) {
+      el.innerHTML = '';
+      el.style.display = 'none';
+    });
   };
 
   window.renderizarChips = function() {
@@ -21000,6 +21094,14 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     /* Garante pelo menos um container — fallback ao getElementById */
     const container = containers[0] || document.getElementById('resultados-interacoes-container');
     if (!container) return;
+
+    /* ── CONTROLE DE VISIBILIDADE: torna o container visível SÓ agora (clique explícito) ──
+       Dupla estratégia: style.display (funciona sem CSS externo) +
+       classList.active (funciona se houver regra CSS com .active) */
+    containers.forEach(function(c) {
+      c.style.display = 'block';
+      c.classList.add('active');
+    });
 
     /* Propaga data-current-lang para todos os containers intx visíveis */
     document.querySelectorAll('.intx-container, #card-interactions-container').forEach(function(c) {
@@ -21585,6 +21687,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   console.log('[MedCases] DRUG_DB populado:', DRUG_DB.length, 'fármacos');
+
 
   /* ── Protocolos de Prescrição (database/prescricoes.js) ── */
   if (window.PRESCRICOES_DB && window.PRESCRICOES_DB.length) {

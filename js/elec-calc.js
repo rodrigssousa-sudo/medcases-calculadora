@@ -1927,6 +1927,38 @@
 
   /* ================================================================
      SEÇÃO 8 — CONSTRUÇÃO DO HTML DA CALCULADORA
+     BUILD 242 — Arquitetura "Input Estável e Não-Destrutivo"
+     ─────────────────────────────────────────────────────────────
+     PRINCÍPIO FUNDAMENTAL: o DOM é dividido em DUAS ZONAS:
+
+       ZONA A — Shell de inputs (estática):
+         #elec2-step1, #elec2-step2, #elec2-step3
+         Renderizada UMA VEZ via _renderShell().
+         NUNCA re-renderizada durante digitação.
+         Botões de estado usam classList.toggle() para feedback visual.
+
+       ZONA B — Área de resultado (dinâmica):
+         #elec2-result-area
+         Atualizada via _updateResult() que só toca innerHTML
+         do container de resultado — sem destruir nenhum input.
+
+     PILAR 1 — TEXTO DO INPUT É SAGRADO:
+       _setField() armazena o valor bruto em _rawFields[key]
+       e NÃO chama render nenhum. O input.value fica intocado.
+
+     PILAR 2 — VÍRGULAS E PONTOS PERMITIDOS:
+       _parseLocaleNumber() só é chamado no blur via onblur.
+       Durante digitação, aceita "1,", "3.", "-" sem apagar.
+
+     PILAR 3 — FIM DA DESTRUIÇÃO DE NÓS:
+       Proibido innerHTML no container pai dos inputs.
+       Só _renderShell() monta inputs (uma vez por eletrólito).
+       _updateResult() só toca #elec2-result-area.
+
+     PILAR 4 — CARDS ESTÁVEIS:
+       #elec2-result-area começa display:none.
+       Visível só com dados suficientes para cálculo válido.
+       Sem oscilação — a área de resultado tem min-height fixo.
   ================================================================ */
   var ElecUI = {
 
@@ -1975,7 +2007,7 @@
       return html;
     },
 
-    /* ── Campos numéricos ── */
+    /* ── Campos numéricos — BUILD 242: inputs com oninput puro (sem render) ── */
     _renderNumericFields: function (lang, elecKey, s, t) {
       var elec = ELECTROLYTES[elecKey];
       var fields = elec ? elec.fields : [];
@@ -1983,30 +2015,37 @@
 
       var html = '<div class="elec2-fields-grid">';
       fields.forEach(function (f) {
-        var lbl, id, ph, step = '0.1', min = '0', max = '9999';
+        var lbl, id, ph;
         switch (f) {
-          case 'valor':  lbl = t.lbl_valor + ' (' + elec.unit + ')'; id = 'elec2-in-valor'; ph = elec.refLow + '–' + elec.refHigh; break;
-          case 'peso':   lbl = t.lbl_peso; id = 'elec2-in-peso'; ph = '70'; step = '1'; break;
-          case 'glicose': lbl = t.lbl_glicose; id = 'elec2-in-glicose'; ph = '100'; step = '1'; break;
-          case 'albumina': lbl = t.lbl_albumina; id = 'elec2-in-albumina'; ph = '4.0'; break;
-          case 'na':     lbl = t.lbl_na; id = 'elec2-in-na'; ph = '140'; step = '1'; break;
-          case 'cl':     lbl = t.lbl_cl; id = 'elec2-in-cl'; ph = '102'; step = '1'; break;
-          case 'hco3':   lbl = t.lbl_hco3; id = 'elec2-in-hco3'; ph = '24'; step = '1'; break;
-          case 'ureia':  lbl = t.lbl_ureia; id = 'elec2-in-ureia'; ph = '40'; step = '1'; break;
-          case 'ca':     lbl = t.lbl_ca_input; id = 'elec2-in-ca'; ph = '9.0'; break;
-          case 'clcr':   lbl = 'ClCr (mL/min)'; id = 'elec2-in-clcr'; ph = '90'; step = '1'; break;
+          case 'valor':   lbl = t.lbl_valor + ' (' + elec.unit + ')'; id = 'elec2-in-valor';   ph = elec.refLow + '–' + elec.refHigh; break;
+          case 'peso':    lbl = t.lbl_peso;    id = 'elec2-in-peso';    ph = '70';  break;
+          case 'glicose': lbl = t.lbl_glicose; id = 'elec2-in-glicose'; ph = '100'; break;
+          case 'albumina':lbl = t.lbl_albumina;id = 'elec2-in-albumina';ph = '4.0'; break;
+          case 'na':      lbl = t.lbl_na;      id = 'elec2-in-na';      ph = '140'; break;
+          case 'cl':      lbl = t.lbl_cl;      id = 'elec2-in-cl';      ph = '102'; break;
+          case 'hco3':    lbl = t.lbl_hco3;    id = 'elec2-in-hco3';    ph = '24';  break;
+          case 'ureia':   lbl = t.lbl_ureia;   id = 'elec2-in-ureia';   ph = '40';  break;
+          case 'ca':      lbl = t.lbl_ca_input;id = 'elec2-in-ca';      ph = '9.0'; break;
+          case 'clcr':    lbl = 'ClCr (mL/min)';id='elec2-in-clcr';     ph = '90';  break;
           default: lbl = f; id = 'elec2-in-' + f; ph = '';
         }
-        var val = s[f] != null ? s[f] : '';
-        /* OBJ8 BUILD 233: type="text" inputmode="decimal" — fix iOS WebView selectionStart=null
-           em type="number". pattern garante teclado numérico no Android Chrome.
-           Normalization (vírgula→ponto) ocorre APENAS no blur via ElecCalc.normalizeField. */
+        /* BUILD 242 — valor inicial: usa _rawFields se disponível (preserva digitação
+           em andamento), senão usa _state. Nunca coloca string transitional no value. */
+        var rawVal = (_rawFields && _rawFields[f] != null) ? _rawFields[f] : (s[f] != null ? s[f] : '');
+        var valStr = String(rawVal);
+        /* Remove separador trailing apenas para o atributo HTML value inicial.
+           O campo não será re-renderizado, então isso só afeta a montagem inicial. */
+        if (valStr.endsWith(',') || valStr.endsWith('.')) valStr = valStr.slice(0, -1);
+
+        /* BUILD 242 — oninput: APENAS armazena o valor bruto. NUNCA renderiza.
+           onblur: normaliza o número, atualiza _state e dispara atualização
+           do resultado. O input DOM fica INTOCADO durante digitação. */
         html += '<div class="elec2-field">' +
           '<label class="elec2-field-lbl" for="' + id + '">' + lbl + '</label>' +
           '<input class="elec2-field-input" type="text" inputmode="decimal"' +
           ' pattern="[0-9]*[.,]?[0-9]*"' +
-          ' id="' + id + '" ' +
-          'placeholder="' + ph + '" value="' + val + '"' +
+          ' id="' + id + '" data-field="' + f + '"' +
+          ' placeholder="' + ph + '" value="' + valStr + '"' +
           ' oninput="ElecCalc.setField(\'' + f + '\', this.value)"' +
           ' onblur="ElecCalc.normalizeField(\'' + f + '\', this)"/>' +
           '</div>';
@@ -2019,7 +2058,9 @@
           '<div class="elec2-btn-row">' +
           ['M', 'F', 'idoso', 'crianca'].map(function (sv) {
             var lbl2 = sv === 'M' ? t.opt_m : sv === 'F' ? t.opt_f : sv === 'idoso' ? t.opt_idoso : t.opt_crianca;
-            return '<button class="elec2-state-btn' + (s.sexo === sv ? ' active' : '') + '" onclick="ElecCalc.setState(\'sexo\',\'' + sv + '\')">' + lbl2 + '</button>';
+            return '<button class="elec2-state-btn' + (s.sexo === sv ? ' active' : '') +
+              '" data-state-key="sexo" data-state-val="' + sv + '"' +
+              ' onclick="ElecCalc.setState(\'sexo\',\'' + sv + '\')">' + lbl2 + '</button>';
           }).join('') +
           '</div></div>';
       }
@@ -2036,7 +2077,9 @@
             '<div class="elec2-state-lbl">' + t.lbl_nivel + '</div>' +
             '<div class="elec2-btn-row">' +
             ['baixo','normal','alto'].map(function (v) {
-              return '<button class="elec2-state-btn elec2-state-btn--nivel-' + v + (s.nivel === v ? ' active' : '') + '" onclick="ElecCalc.setState(\'nivel\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
+              return '<button class="elec2-state-btn elec2-state-btn--nivel-' + v + (s.nivel === v ? ' active' : '') +
+                '" data-state-key="nivel" data-state-val="' + v + '"' +
+                ' onclick="ElecCalc.setState(\'nivel\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
             }).join('') +
             '</div></div>';
           break;
@@ -2045,7 +2088,9 @@
             '<div class="elec2-state-lbl">' + t.lbl_gravidade + '</div>' +
             '<div class="elec2-btn-row">' +
             ['leve','moderado','grave'].map(function (v) {
-              return '<button class="elec2-state-btn elec2-state-btn--grav-' + v + (s.gravidade === v ? ' active' : '') + '" onclick="ElecCalc.setState(\'gravidade\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
+              return '<button class="elec2-state-btn elec2-state-btn--grav-' + v + (s.gravidade === v ? ' active' : '') +
+                '" data-state-key="gravidade" data-state-val="' + v + '"' +
+                ' onclick="ElecCalc.setState(\'gravidade\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
             }).join('') +
             '</div></div>';
           break;
@@ -2054,7 +2099,9 @@
             '<div class="elec2-state-lbl">' + t.lbl_sintomas + '</div>' +
             '<div class="elec2-btn-row">' +
             ['sintomat','assintomat'].map(function (v) {
-              return '<button class="elec2-state-btn' + (s.sintomas === v ? ' active' : '') + '" onclick="ElecCalc.setState(\'sintomas\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
+              return '<button class="elec2-state-btn' + (s.sintomas === v ? ' active' : '') +
+                '" data-state-key="sintomas" data-state-val="' + v + '"' +
+                ' onclick="ElecCalc.setState(\'sintomas\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
             }).join('') +
             '</div></div>';
           break;
@@ -2063,7 +2110,9 @@
             '<div class="elec2-state-lbl">' + t.lbl_ecg + '</div>' +
             '<div class="elec2-btn-row">' +
             ['ecg_alt','ecg_ok'].map(function (v) {
-              return '<button class="elec2-state-btn' + (v === 'ecg_alt' ? ' elec2-state-btn--ecg-danger' : '') + (s.ecg === v ? ' active' : '') + '" onclick="ElecCalc.setState(\'ecg\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
+              return '<button class="elec2-state-btn' + (v === 'ecg_alt' ? ' elec2-state-btn--ecg-danger' : '') + (s.ecg === v ? ' active' : '') +
+                '" data-state-key="ecg" data-state-val="' + v + '"' +
+                ' onclick="ElecCalc.setState(\'ecg\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
             }).join('') +
             '</div></div>';
           break;
@@ -2072,7 +2121,7 @@
             '<div class="elec2-state-lbl">' + t.lbl_clcr + '</div>' +
             '<div class="elec2-btn-row">' +
             ['lt30','gte30'].map(function (v) {
-              return '<button class="elec2-state-btn' + (s.clcrFiltro === v ? ' active' : '') + '" onclick="ElecCalc.setState(\'clcrFiltro\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
+              return '<button class="elec2-state-btn' + (s.clcrFiltro === v ? ' active' : '') + '" data-state-key="clcrFiltro" data-state-val="' + v + '" onclick="ElecCalc.setState(\'clcrFiltro\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
             }).join('') +
             '</div></div>';
           break;
@@ -2081,7 +2130,7 @@
             '<div class="elec2-state-lbl">' + t.lbl_acesso + '</div>' +
             '<div class="elec2-btn-row">' +
             ['periph','central'].map(function (v) {
-              return '<button class="elec2-state-btn' + (s.acesso === v ? ' active' : '') + '" onclick="ElecCalc.setState(\'acesso\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
+              return '<button class="elec2-state-btn' + (s.acesso === v ? ' active' : '') + '" data-state-key="acesso" data-state-val="' + v + '" onclick="ElecCalc.setState(\'acesso\',\'' + v + '\')">' + t['lbl_' + v] + '</button>';
             }).join('') +
             '</div></div>';
           break;
@@ -2107,7 +2156,7 @@
         forms.forEach(function (fk) {
           var fm = FORMULATIONS_DB[fk];
           if (!fm) return;
-          html += '<button class="elec2-preset-btn' + (s.formulacao === fk ? ' active' : '') + '" onclick="ElecCalc.setState(\'formulacao\',\'' + fk + '\')">' + fm.name[lang] + '</button>';
+          html += '<button class="elec2-preset-btn' + (s.formulacao === fk ? ' active' : '') + '" data-state-key="formulacao" data-state-val="' + fk + '" onclick="ElecCalc.setState(\'formulacao\',\'' + fk + '\')">' + fm.name[lang] + '</button>';
         });
         html += '</div></div>';
       }
@@ -2118,7 +2167,7 @@
         html += '<div class="elec2-state-lbl">' + t.lbl_dose + '</div>';
         html += '<div class="elec2-btn-row elec2-btn-row--wrap">';
         [10, 20, 40, 80].forEach(function (d) {
-          html += '<button class="elec2-preset-btn' + (s.dose === d ? ' active' : '') + '" onclick="ElecCalc.setState(\'dose\',' + d + ')">' + d + ' mEq</button>';
+          html += '<button class="elec2-preset-btn' + (s.dose === d ? ' active' : '') + '" data-state-key="dose" data-state-val="' + d + '" onclick="ElecCalc.setState(\'dose\',' + d + ')">' + d + ' mEq</button>';
         });
         html += '</div></div>';
       }
@@ -2129,7 +2178,7 @@
         html += '<div class="elec2-state-lbl">' + t.lbl_dose + '</div>';
         html += '<div class="elec2-btn-row elec2-btn-row--wrap">';
         [1, 2, 4, 6, 8].forEach(function (d) {
-          html += '<button class="elec2-preset-btn' + (s.dose === d ? ' active' : '') + '" onclick="ElecCalc.setState(\'dose\',' + d + ')">' + d + ' g</button>';
+          html += '<button class="elec2-preset-btn' + (s.dose === d ? ' active' : '') + '" data-state-key="dose" data-state-val="' + d + '" onclick="ElecCalc.setState(\'dose\',' + d + ')">' + d + ' g</button>';
         });
         html += '</div></div>';
       }
@@ -2139,7 +2188,7 @@
       html += '<div class="elec2-state-lbl">' + t.lbl_volume + '</div>';
       html += '<div class="elec2-btn-row elec2-btn-row--wrap">';
       [50, 100, 250, 500, 1000].forEach(function (v) {
-        html += '<button class="elec2-preset-btn' + (s.volume === v ? ' active' : '') + '" onclick="ElecCalc.setState(\'volume\',' + v + ')">' + v + ' mL</button>';
+        html += '<button class="elec2-preset-btn' + (s.volume === v ? ' active' : '') + '" data-state-key="volume" data-state-val="' + v + '" onclick="ElecCalc.setState(\'volume\',' + v + ')">' + v + ' mL</button>';
       });
       html += '</div></div>';
 
@@ -2153,7 +2202,7 @@
         {min: 240, lbl: '4h'}, {min: 360, lbl: '6h'}, {min: 720, lbl: '12h'}, {min: 1440, lbl: '24h'}
       ];
       tempos.forEach(function (tv) {
-        html += '<button class="elec2-preset-btn' + (s.tempo === tv.min ? ' active' : '') + '" onclick="ElecCalc.setState(\'tempo\',' + tv.min + ')">' + tv.lbl + '</button>';
+        html += '<button class="elec2-preset-btn' + (s.tempo === tv.min ? ' active' : '') + '" data-state-key="tempo" data-state-val="' + tv.min + '" onclick="ElecCalc.setState(\'tempo\',' + tv.min + ')">' + tv.lbl + '</button>';
       });
       html += '</div></div>';
 
@@ -2162,7 +2211,7 @@
       html += '<div class="elec2-state-lbl">' + t.lbl_equipo + '</div>';
       html += '<div class="elec2-btn-row">';
       [['bomba',t.eq_bomba],['macro',t.eq_macro],['micro',t.eq_micro]].forEach(function (eq) {
-        html += '<button class="elec2-preset-btn' + (s.equipo === eq[0] ? ' active' : '') + '" onclick="ElecCalc.setState(\'equipo\',\'' + eq[0] + '\')">' + eq[1] + '</button>';
+        html += '<button class="elec2-preset-btn' + (s.equipo === eq[0] ? ' active' : '') + '" data-state-key="equipo" data-state-val="' + eq[0] + '" onclick="ElecCalc.setState(\'equipo\',\'' + eq[0] + '\')">' + eq[1] + '</button>';
       });
       html += '</div></div>';
 
@@ -2171,7 +2220,7 @@
       html += '<div class="elec2-state-lbl">' + t.lbl_acesso + '</div>';
       html += '<div class="elec2-btn-row">';
       [['periph',t.lbl_periph],['central',t.lbl_central]].forEach(function (ac) {
-        html += '<button class="elec2-state-btn' + (s.acesso === ac[0] ? ' active' : '') + '" onclick="ElecCalc.setState(\'acesso\',\'' + ac[0] + '\')">' + ac[1] + '</button>';
+        html += '<button class="elec2-state-btn' + (s.acesso === ac[0] ? ' active' : '') + '" data-state-key="acesso" data-state-val="' + ac[0] + '" onclick="ElecCalc.setState(\'acesso\',\'' + ac[0] + '\')">' + ac[1] + '</button>';
       });
       html += '</div></div>';
 
@@ -2200,50 +2249,57 @@
         '</div>';
     },
 
-    /* ── Estrutura principal ── */
+    /* ── Estrutura principal — BUILD 242 ──
+       renderMain() monta o SHELL completo (steps 1+2+3 + área de resultado vazia).
+       Usado apenas em _renderShell(). NÃO é chamado durante digitação. */
     renderMain: function () {
       var lang = _state.lang;
       var t = I18N[lang] || I18N.pt;
       var ek = _state.electrolyte;
 
       var html = '<div class="elec2-calc" id="elec2-calc">';
-      /* Etapa 1 */
       html += ElecUI.renderStep1(lang, ek);
-      /* Etapa 2 */
       if (ek) html += ElecUI.renderStep2(lang, ek, _state);
-      /* Etapa 3: presets */
       if (ek) html += ElecUI.renderStep3(lang, ek, _state);
-      /* Resultado */
-      if (_state._calculated) {
-        html += ElecUI.renderResult(lang, ek, _state);
-      }
+      /* BUILD 242: área de resultado sempre presente no DOM, mas oculta.
+         Nunca re-renderiza os inputs — só atualiza este container. */
+      html += '<div id="elec2-result-area" class="elec2-result" style="display:none"></div>';
       html += '</div>';
       return html;
+    },
+
+    /* ── Conteúdo interno da área de resultado (sem o container externo) ── */
+    renderResultContent: function (lang, elecKey, s) {
+      if (!elecKey) return '';
+      var html = ElecRender.renderOutput(elecKey, s);
+      if (!html) return '';
+      var t = I18N[lang] || I18N.pt;
+      return '<div class="elec2-result-actions">' +
+        '<button class="elec2-action-btn" onclick="ElecCalc.copyResult()">' +
+        '<i class="fa-solid fa-copy"></i> ' + t.copy_result + '</button>' +
+        '<button class="elec2-action-btn elec2-action-btn--secondary" onclick="ElecCalc.reset()">' +
+        '<i class="fa-solid fa-rotate-left"></i> ' + t.limpar + '</button>' +
+        '</div>' + html;
     }
   };
 
   /* ================================================================
      SEÇÃO 9 — CONTROLLER PRINCIPAL
+     BUILD 242 — Arquitetura "Input Estável e Não-Destrutivo"
   ================================================================ */
 
-  /* ── Leitura canônica do idioma global — multi-fonte, sempre fresco ──
-     Usa exatamente o mesmo sistema que o motor de Interações (_isES()).
-     Prioridade: window.currentLang → window.lang → localStorage → URL → 'pt' */
+  /* ── Leitura canônica do idioma global ── */
   function _getGlobalLang () {
-    /* 1. window.currentLang (gravado por setLang()) */
     if (typeof window.currentLang !== 'undefined' && window.currentLang) {
       return String(window.currentLang).trim().toLowerCase().startsWith('es') ? 'es' : 'pt';
     }
-    /* 2. window.lang */
     if (typeof window.lang !== 'undefined' && window.lang) {
       return String(window.lang).trim().toLowerCase().startsWith('es') ? 'es' : 'pt';
     }
-    /* 3. localStorage */
     try {
       var ls = localStorage.getItem('lang') || localStorage.getItem('idioma');
       if (ls) return String(ls).trim().toLowerCase().startsWith('es') ? 'es' : 'pt';
     } catch (e) {}
-    /* 4. URL param */
     try {
       var params = new URLSearchParams(window.location.search);
       var l = params.get('lang');
@@ -2252,40 +2308,86 @@
     return 'pt';
   }
 
-  function _detectLang () {
-    return _getGlobalLang();
-  }
+  function _detectLang () { return _getGlobalLang(); }
 
-  function _render () {
+  /* ── _rawFields: armazena strings brutas durante digitação ──
+     Separado do _state para não contaminar os cálculos com strings
+     como "1," ou "3.". _state recebe apenas números válidos. */
+  var _rawFields = {};
+
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _renderShell()
+     Monta o DOM completo UMA VEZ (shell de inputs + área de resultado).
+     Chamado apenas quando o eletrólito muda ou no reset.
+     NUNCA chamado durante digitação.
+  ──────────────────────────────────────────────────────────────── */
+  function _renderShell () {
     var slot = document.getElementById('hub-elec-slot');
     if (!slot) return;
-    /* Sempre garantir que o idioma está atualizado antes de renderizar */
     _state.lang = _getGlobalLang();
     slot.innerHTML = ElecUI.renderMain();
   }
 
-  function _selectElectrolyte (key) {
-    if (!ELECTROLYTES[key]) return;
-    _state.electrolyte = key;
-    _state._calculated = false;
-    /* Auto-inferir nível de paciente global */
-    _syncPatientData();
-    _render();
-    /* Scroll para etapa 2 */
-    setTimeout(function () {
-      var step2 = document.getElementById('elec2-step2');
-      if (step2) step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 80);
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _updateResult()
+     Atualiza APENAS #elec2-result-area.
+     NUNCA toca nos inputs.
+     PILAR 4: oculto até haver dados válidos para cálculo.
+  ──────────────────────────────────────────────────────────────── */
+  function _updateResult () {
+    var area = document.getElementById('elec2-result-area');
+    if (!area) return;
+    var ek = _state.electrolyte;
+    if (!ek || !_state._calculated) {
+      area.style.display = 'none';
+      area.innerHTML = '';
+      return;
+    }
+    var content = ElecUI.renderResultContent(_state.lang, ek, _state);
+    if (!content) {
+      area.style.display = 'none';
+      area.innerHTML = '';
+      return;
+    }
+    area.innerHTML = content;
+    area.style.display = 'block';
   }
 
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _updateButtonStates(key, value)
+     Atualiza visualmente os botões de estado via classList.toggle()
+     SEM re-renderizar o DOM. Percorre todos os botões com
+     data-state-key=key e aplica/remove a classe 'active'.
+  ──────────────────────────────────────────────────────────────── */
+  function _updateButtonStates (key, value) {
+    var slot = document.getElementById('hub-elec-slot');
+    if (!slot) return;
+    var btns = slot.querySelectorAll('[data-state-key="' + key + '"]');
+    btns.forEach(function (btn) {
+      var btnVal = btn.getAttribute('data-state-val');
+      /* Comparação como string E como número para compatibilidade */
+      var isActive = (btnVal === String(value)) || (parseFloat(btnVal) === parseFloat(value));
+      btn.classList.toggle('active', isActive);
+    });
+    /* Eletrólito: atualiza o elec-btn ativo */
+    if (key === 'electrolyte') {
+      var elecBtns = slot.querySelectorAll('.elec2-elec-btn');
+      elecBtns.forEach(function (btn) {
+        var k = btn.getAttribute('data-elec');
+        btn.classList.toggle('elec2-elec-btn--active', k === value);
+      });
+    }
+  }
+
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _syncPatientData()
+  ──────────────────────────────────────────────────────────────── */
   function _syncPatientData () {
-    /* Tenta ler peso e ClCr do estado global do app */
     try {
       if (window.patientData) {
-        if (window.patientData.peso) _state.peso = parseFloat(window.patientData.peso);
-        if (window.patientData.clcr) _state.clcr = parseFloat(window.patientData.clcr);
-        if (window.patientData.sexo) _state.sexo = window.patientData.sexo;
-        /* Auto-classificar ClCr */
+        if (window.patientData.peso) { _state.peso = parseFloat(window.patientData.peso); }
+        if (window.patientData.clcr) { _state.clcr = parseFloat(window.patientData.clcr); }
+        if (window.patientData.sexo) { _state.sexo = window.patientData.sexo; }
         if (_state.clcr != null) {
           _state.clcrFiltro = _state.clcr < 30 ? 'lt30' : 'gte30';
         }
@@ -2293,127 +2395,165 @@
     } catch (e) {}
   }
 
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _selectElectrolyte(key)
+     Único ponto que chama _renderShell() (recria inputs inteiros).
+     Necessário porque cada eletrólito tem campos diferentes.
+  ──────────────────────────────────────────────────────────────── */
+  function _selectElectrolyte (key) {
+    if (!ELECTROLYTES[key]) return;
+    _state.electrolyte = key;
+    _state._calculated = false;
+    _rawFields = {}; /* limpa buffers de digitação ao trocar eletrólito */
+    _syncPatientData();
+    _renderShell(); /* ÚNICA chamada legítima de reconstrução do DOM */
+    _updateButtonStates('electrolyte', key);
+    setTimeout(function () {
+      var step2 = document.getElementById('elec2-step2');
+      if (step2) step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  }
+
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _setState(key, value)
+     Acionado por botões (Nível, Gravidade, Sexo, Equipo, etc.).
+     NÃO toca em inputs. Apenas:
+       1. Atualiza _state
+       2. Faz toggle visual nos botões via data-state-key
+       3. Atualiza resultado se já calculado
+  ──────────────────────────────────────────────────────────────── */
   function _setState (key, value) {
-    /* Converte para número se apropriado */
-    var numKeys = ['dose', 'volume', 'tempo', 'valor', 'peso', 'glicose', 'albumina',
-                   'na', 'cl', 'hco3', 'ureia', 'ca', 'clcr'];
+    var numKeys = ['dose', 'volume', 'tempo'];
     if (numKeys.indexOf(key) >= 0 && value !== '' && value !== null) {
       value = parseFloat(value);
     }
     _state[key] = value;
-    /* Re-renderizar sem limpar resultado */
-    _render();
+    _updateButtonStates(key, value);
+    if (_state._calculated) {
+      _updateResult();
+    }
   }
 
-  /* ── OBJ8 BUILD 233: parseLocaleNumber ────────────────────────────
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — parseLocaleNumber()
      Aceita "3,5" (PT/ES) e "3.5" (EN). Retorna número ou NaN.
-     Nunca lança excepção. Usado apenas no blur (normalizeField).
+     SEGURANÇA: strings incompletas ("3,", ".") → NaN propositalmente.
   ──────────────────────────────────────────────────────────────── */
-  function _parseLocaleNumber(str) {
+  function _parseLocaleNumber (str) {
     if (str === null || str === undefined || str === '') return NaN;
-    /* Substitui vírgula por ponto para parseFloat */
-    var cleaned = String(str).replace(',', '.');
-    /* Remove caracteres não numéricos (exceto ponto e sinal) */
+    var s = String(str).trim();
+    var cleaned = s.replace(',', '.');
     cleaned = cleaned.replace(/[^0-9.\-]/g, '');
-    var n = parseFloat(cleaned);
-    console.log('[INPUT_FIX] parseLocaleNumber("' + str + '") → ' + n);
-    return n;
+    return parseFloat(cleaned);
   }
 
-  /* ── OBJ8 BUILD 233: safeRestoreCursor ────────────────────────────
-     Restaura cursor numa input de texto SOMENTE se selectionStart
-     não for null (type="text" garante isso). Nunca chama
-     setSelectionRange em type="number" (iOS retorna null e corrompe).
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _setField(key, value)
+     PILAR 1 + 3: "O texto do input é sagrado"
+
+     REGRAS ABSOLUTAS:
+       • NÃO chama _renderShell() ou qualquer render que destrua inputs
+       • NÃO reescreve input.value
+       • NÃO usa RAF para re-render
+       • APENAS armazena o valor bruto em _rawFields[key]
+       • O input DOM fica 100% intocado — browser nativo gerencia o cursor
+
+     O cálculo em background ocorre APENAS no blur via normalizeField().
   ──────────────────────────────────────────────────────────────── */
-  function _safeRestoreCursor(el, start, end) {
-    if (!el || el.tagName !== 'INPUT') return;
-    /* Só chama setSelectionRange se a API estiver disponível
-       e os valores não forem null (garante type="text") */
-    if (start === null || start === undefined) {
-      console.log('[INPUT_FIX] safeRestoreCursor — selectionStart=null, pulando setSelectionRange');
+  function _setField (key, value) {
+    /* Armazena bruto — preserva "1,", "3.", "-", "" exatamente como está */
+    _rawFields[key] = value;
+    /* NÃO FAZ MAIS NADA — o input DOM não é tocado */
+  }
+
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — normalizeField(key, inputEl)
+     PILAR 2: Suporte total a vírgulas e pontos.
+     Chamado APENAS no onblur.
+
+     REGRAS:
+       1. Campo vazio/só sinal → limpa state, não apaga o input se
+          o usuário não quiser (mostra placeholder)
+       2. Valor incompleto (NaN) → NÃO apaga, NÃO altera input.value
+       3. Valor válido → atualiza _state com float, normaliza display
+          vírgula→ponto, atualiza resultado (sem destruir inputs)
+  ──────────────────────────────────────────────────────────────── */
+  function _normalizeField (key, inputEl) {
+    var raw = inputEl ? inputEl.value : String(_rawFields[key] || '');
+    var trimmed = raw.trim();
+
+    /* Caso 1: campo vazio */
+    if (trimmed === '' || trimmed === '-') {
+      _state[key] = null;
+      _rawFields[key] = '';
+      if (inputEl) inputEl.value = '';
+      if (_state._calculated) _updateResult();
       return;
     }
-    var len = el.value ? el.value.length : 0;
-    var s = Math.min(start, len);
-    var e = Math.min((end !== null && end !== undefined ? end : start), len);
-    try {
-      el.setSelectionRange(s, e);
-      console.log('[INPUT_FIX] safeRestoreCursor OK s=' + s + ' e=' + e);
-    } catch (ex) {
-      console.log('[INPUT_FIX] safeRestoreCursor exception: ' + ex.message);
-    }
-  }
 
-  function _setField (key, value) {
-    /* OBJ8 BUILD 233: type="text" inputmode="decimal"
-       selectionStart é sempre disponível (não null) em type="text".
-       NÃO fazemos parseFloat aqui — mantemos a string como digitada.
-       Normalização (vírgula→ponto, trim) ocorre APENAS no blur
-       via normalizeField(), prevenindo reescrita do value durante input
-       que corrompia o cursor no iOS WebView. */
-    var activeId    = document.activeElement ? document.activeElement.id            : null;
-    var activeStart = document.activeElement ? document.activeElement.selectionStart : null;
-    var activeEnd   = document.activeElement ? document.activeElement.selectionEnd   : null;
+    var n = _parseLocaleNumber(trimmed);
 
-    /* Guarda a string bruta — NÃO parsear aqui */
-    _state[key] = value;
-
-    console.log('[INPUT_FIX] setField key=' + key +
-      ' value="' + value + '"' +
-      ' selStart=' + activeStart +
-      ' selEnd='   + activeEnd);
-
-    /* Re-renderiza (slot.innerHTML recria o input) */
-    _render();
-
-    /* Restaura foco + cursor APÓS o browser pintar o novo DOM */
-    if (activeId) {
-      requestAnimationFrame(function () {
-        var el = document.getElementById(activeId);
-        if (el && el.tagName === 'INPUT') {
-          el.focus();
-          _safeRestoreCursor(el, activeStart, activeEnd);
-        }
-      });
-    }
-  }
-
-  /* ── OBJ8 BUILD 233: normalizeField ──────────────────────────────
-     Chamado no blur do input. Converte vírgula→ponto, valida o número
-     e atualiza o state com o float correto (ou NaN→esvazia o campo).
-     Nunca reescreve input.value durante o oninput (evita loop iOS).
-  ──────────────────────────────────────────────────────────────── */
-  function _normalizeField(key, inputEl) {
-    var raw = inputEl ? inputEl.value : (_state[key] || '');
-    var n = _parseLocaleNumber(raw);
-    console.log('[INPUT_FIX] normalizeField key=' + key + ' raw="' + raw + '" parsed=' + n);
+    /* Caso 2: NaN — valor ainda incompleto ou inválido. NÃO apaga. */
     if (isNaN(n)) {
-      _state[key] = '';
-      if (inputEl) inputEl.value = '';
-    } else {
-      _state[key] = n;
-      /* Normaliza vírgula→ponto no display apenas no blur */
-      if (inputEl && String(raw).indexOf(',') !== -1) {
-        inputEl.value = String(n);
-      }
+      /* Mantém exatamente o que o usuário digitou — sem tocar input.value */
+      return;
     }
-    /* Re-renderiza para refletir o valor normalizado */
-    _render();
+
+    /* Caso 3: número válido */
+    _rawFields[key] = String(n);
+    _state[key] = n;
+
+    /* Normaliza vírgula→ponto no display do campo (apenas visual) */
+    if (inputEl && trimmed.indexOf(',') !== -1) {
+      inputEl.value = String(n);
+    }
+
+    if (_state._calculated) _updateResult();
   }
 
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _calculate()
+     Botão "Calcular": normaliza todos os campos pendentes
+     (via _rawFields), executa a lógica clínica, exibe resultado.
+     NÃO destrói inputs.
+  ──────────────────────────────────────────────────────────────── */
   function _calculate () {
     if (!_state.electrolyte) return;
+
+    /* Flush de todos os _rawFields pendentes para _state */
+    var numFieldKeys = ['valor', 'peso', 'glicose', 'albumina', 'na', 'cl', 'hco3', 'ureia', 'ca', 'clcr'];
+    numFieldKeys.forEach(function (k) {
+      if (_rawFields[k] !== undefined && _rawFields[k] !== '') {
+        var n = _parseLocaleNumber(_rawFields[k]);
+        if (!isNaN(n)) {
+          _state[k] = n;
+          /* Atualiza o input no DOM com valor normalizado (vírgula→ponto) */
+          var inputEl = document.getElementById('elec2-in-' + k);
+          if (inputEl && String(_rawFields[k]).indexOf(',') !== -1) {
+            inputEl.value = String(n);
+          }
+        }
+      }
+    });
+
     _state._calculated = true;
-    _render();
-    /* Scroll para resultado */
+    _updateResult();
+
     setTimeout(function () {
       var res = document.getElementById('elec2-result-area');
-      if (res) res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (res && res.style.display !== 'none') {
+        res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }, 80);
   }
 
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _reset()
+     Limpa estado e reconstrói o shell (necessário para zerar inputs).
+  ──────────────────────────────────────────────────────────────── */
   function _reset () {
     var lang = _state.lang;
+    _rawFields = {};
     _state = {
       step: 1, electrolyte: null,
       valor: null, peso: null, sexo: 'M', clcr: null,
@@ -2425,17 +2565,39 @@
       dose: null, formulacao: null, volume: null, tempo: null, equipo: 'bomba',
       lang: lang, _calculated: false
     };
-    _render();
+    _renderShell(); /* necessário para zerar os input.value e recriar o DOM */
   }
 
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _render()
+     Mantido para compatibilidade com hub-accordion.js que chama
+     ElecCalc.render() na montagem do card.
+     Comportamento: monta o shell se ainda não montado, sem destruir
+     inputs existentes.
+  ──────────────────────────────────────────────────────────────── */
+  function _render () {
+    var slot = document.getElementById('hub-elec-slot');
+    if (!slot) return;
+    /* Se o slot já tem o elec2-calc montado, não re-renderiza
+       (protege inputs ativos). Apenas atualiza o resultado. */
+    var existing = slot.querySelector('#elec2-calc');
+    if (existing) {
+      _updateResult();
+      return;
+    }
+    /* Primeira montagem */
+    _renderShell();
+  }
+
+  /* ────────────────────────────────────────────────────────────────
+     BUILD 242 — _copyResult()
+  ──────────────────────────────────────────────────────────────── */
   function _copyResult () {
     var area = document.getElementById('elec2-result-area');
     if (!area) return;
     var text = area.innerText || area.textContent;
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () {
-        _showCopied();
-      });
+      navigator.clipboard.writeText(text).then(function () { _showCopied(); });
     } else {
       var ta = document.createElement('textarea');
       ta.value = text;
@@ -2464,24 +2626,20 @@
      SEÇÃO 10 — INICIALIZAÇÃO E API PÚBLICA
   ================================================================ */
 
-  /* ── Sincronizar idioma e re-renderizar ── */
   function _syncLangAndRender () {
     var newLang = _getGlobalLang();
     if (newLang !== _state.lang) {
       _state.lang = newLang;
-      _render();
+      /* Mudança de idioma: reconstrói shell (labels dos campos mudam) */
+      _renderShell();
     }
   }
 
-  /* ── Hook no setLang() global do app ──
-     Aguarda setLang estar disponível e o intercepta para
-     sincronizar o idioma da calculadora em tempo real. */
   function _hookSetLang () {
     var orig = window.setLang;
     if (typeof orig !== 'function') return false;
     window.setLang = function (lang) {
       orig.call(this, lang);
-      /* Sync ElecCalc após setLang() propagar */
       setTimeout(function () { _syncLangAndRender(); }, 50);
     };
     return true;
@@ -2490,50 +2648,49 @@
   function _init () {
     _state.lang = _detectLang();
 
-    /* Ouvir evento customizado 'langChange' (emitido por alguns módulos) */
     document.addEventListener('langChange', function (e) {
       var l = (e && e.detail) ? String(e.detail).toLowerCase() : _getGlobalLang();
       _state.lang = l.startsWith('es') ? 'es' : 'pt';
-      _render();
+      /* Mudança de idioma: reconstrói shell */
+      _renderShell();
     });
 
-    /* Hook no setLang() global — com retry se ainda não carregou */
     var hookAttempts = 0;
     var hookInterval = setInterval(function () {
       hookAttempts++;
-      if (_hookSetLang()) {
-        clearInterval(hookInterval);
-      }
-      if (hookAttempts > 50) clearInterval(hookInterval); /* max 5s */
+      if (_hookSetLang()) clearInterval(hookInterval);
+      if (hookAttempts > 50) clearInterval(hookInterval);
     }, 100);
 
-    /* Watcher de idioma — fallback para mudanças não capturadas pelo hook */
+    /* Watcher de idioma — sem renderização durante digitação */
     setInterval(function _elecLangWatcher () {
+      var slot = document.getElementById('hub-elec-slot');
+      var active = document.activeElement;
+      if (slot && active && slot.contains(active) && active.tagName === 'INPUT') {
+        return; /* usuário digitando — aguarda blur */
+      }
       _syncLangAndRender();
     }, 800);
   }
 
-  /* API pública exposta globalmente */
+  /* API pública */
   window.ElecCalc = {
     selectElectrolyte: _selectElectrolyte,
-    setState: _setState,
-    setField: _setField,
-    /* OBJ8 BUILD 233: normalizeField exposto para onblur nos inputs */
-    normalizeField: _normalizeField,
-    calculate: _calculate,
-    reset: _reset,
-    copyResult: _copyResult,
-    getState: function () { return _state; },
-    render: _render,
-    init: _init,
-    /* Expor constantes para testes */
-    ELECTROLYTES: ELECTROLYTES,
-    FORMULATIONS_DB: FORMULATIONS_DB,
-    Formulas: Formulas,
-    I18N: I18N
+    setState:          _setState,
+    setField:          _setField,
+    normalizeField:    _normalizeField,
+    calculate:         _calculate,
+    reset:             _reset,
+    copyResult:        _copyResult,
+    getState:          function () { return _state; },
+    render:            _render,
+    init:              _init,
+    ELECTROLYTES:      ELECTROLYTES,
+    FORMULATIONS_DB:   FORMULATIONS_DB,
+    Formulas:          Formulas,
+    I18N:              I18N
   };
 
-  /* Inicializar quando DOM estiver pronto */
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', _init);
   } else {

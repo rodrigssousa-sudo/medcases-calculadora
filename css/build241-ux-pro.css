@@ -1,0 +1,1415 @@
+/* ================================================================
+   MedCases Pro — BUILD 241C
+   style(app): UX/Layout Professionalization — sistema coerente
+
+   ESCOPO: Unificação total de tipografia, botões, inputs, labels,
+   cards, headers internos e resultados em todos os módulos.
+   REGRA ABSOLUTA: zero alterações de cor.
+   FILOSOFIA: app médico premium — Linear, Revolut Medical, Apple Health.
+
+   ARQUITETURA:
+   §1  Design Tokens Globais (241C)
+   §2  Tipografia global — escala coerente
+   §3  Inputs — padrão unificado (todos os módulos)
+   §4  Labels — padrão unificado
+   §5  Botões — padrão unificado
+   §6  Cards externos — estrutura padronizada
+   §7  Card headers internos (aberto) — padrão unificado
+   §8  Valores de resultado / métricas — padrão unificado
+   §9  Badges e pills — padrão unificado
+   §10 Separadores e seções internas
+   §11 Modal footers — botões uniformes
+   §12 Navigation bar
+   §13 Scrollbar
+   §14 Modo claro
+================================================================ */
+
+
+/* ================================================================
+   §1 — DESIGN TOKENS GLOBAIS 241C
+================================================================ */
+:root {
+  /* ── Tipografia ── */
+  --pro-font:           'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Escala de tamanho de fonte: 7 níveis */
+  --pro-fs-2xs:         8.5px;
+  --pro-fs-xs:          10px;
+  --pro-fs-sm:          11.5px;
+  --pro-fs-md:          13px;
+  --pro-fs-lg:          14.5px;
+  --pro-fs-xl:          16px;
+  --pro-fs-2xl:         20px;
+
+  /* Pesos */
+  --pro-fw-regular:     400;
+  --pro-fw-medium:      500;
+  --pro-fw-semibold:    600;
+  --pro-fw-bold:        700;
+  --pro-fw-extrabold:   800;
+
+  /* Line-heights */
+  --pro-lh-tight:       1.2;
+  --pro-lh-normal:      1.45;
+  --pro-lh-relaxed:     1.65;
+
+  /* ── Espaçamento ── */
+  --pro-space-2:        2px;
+  --pro-space-4:        4px;
+  --pro-space-6:        6px;
+  --pro-space-8:        8px;
+  --pro-space-10:       10px;
+  --pro-space-12:       12px;
+  --pro-space-14:       14px;
+  --pro-space-16:       16px;
+  --pro-space-20:       20px;
+  --pro-space-24:       24px;
+
+  /* ── Border-radius — padrão único ── */
+  --pro-radius-xs:      6px;
+  --pro-radius-sm:      10px;
+  --pro-radius-md:      12px;
+  --pro-radius-lg:      14px;
+  --pro-radius-xl:      16px;
+  --pro-radius-pill:    999px;
+
+  /* ── Input / Button: altura toque mínima (iOS HIG 44pt) ── */
+  --pro-h-input:        44px;
+  --pro-h-btn-primary:  44px;
+  --pro-h-btn-secondary: 40px;
+  --pro-h-btn-ghost:    36px;
+
+  /* ── Opacidades para textos de suporte ── */
+  --pro-text-muted-alpha:  0.52;
+  --pro-text-sub-alpha:    0.38;
+
+  /* ── Focus ring ── */
+  --pro-focus-ring-width: 3px;
+  --pro-focus-ring-alpha: 0.16;
+
+  /* ── Transição padrão ── */
+  --pro-transition:     0.18s ease;
+}
+
+
+/* ================================================================
+   §2 — TIPOGRAFIA GLOBAL
+   Escala coerente substituindo os vários tamanhos ad-hoc:
+   9px/9.5px/10px/10.5px → tokens xs/2xs
+   11px/11.5px           → --pro-fs-sm
+   12px/12.5px/13px      → --pro-fs-md
+   13.5px/14px           → --pro-fs-lg
+================================================================ */
+
+/* Font base */
+body {
+  font-family: var(--pro-font) !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+
+/* ================================================================
+   §3 — INPUTS — PADRÃO UNIFICADO
+   Todos os campos de texto recebem a mesma altura,
+   font-size, padding e border-radius.
+   Classes afetadas: .hm-input, .input-field, .hm-search,
+   .farmacos-search, .ix-search, .meds-search, .news2-select,
+   .elec2-field-input, .inf-free-drug-input
+================================================================ */
+
+/* ── Bloco de altura e base ── */
+.hm-input,
+.input-field,
+.hm-search,
+.farmacos-search,
+.ix-search,
+.meds-search,
+.elec2-field-input,
+.inf-free-drug-input,
+.intx-input {
+  height: var(--pro-h-input) !important;
+  min-height: var(--pro-h-input) !important;
+  font-size: var(--pro-fs-md) !important;
+  font-family: var(--pro-font) !important;
+  font-weight: var(--pro-fw-medium) !important;
+  border-radius: var(--pro-radius-md) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: var(--pro-space-14) !important;
+  padding-right: var(--pro-space-14) !important;
+  line-height: var(--pro-h-input) !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  transition: border-color var(--pro-transition),
+              box-shadow var(--pro-transition) !important;
+}
+
+/* Inputs com ícone prefixo — preservar o padding-left do ícone */
+.hm-search,
+.farmacos-search,
+.ix-search,
+.meds-search {
+  padding-left: 38px !important;
+}
+
+/* Placeholder */
+.hm-input::placeholder,
+.input-field::placeholder,
+.hm-search::placeholder,
+.farmacos-search::placeholder,
+.ix-search::placeholder,
+.meds-search::placeholder,
+.elec2-field-input::placeholder,
+.inf-free-drug-input::placeholder,
+.intx-input::placeholder {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-regular) !important;
+  letter-spacing: 0 !important;
+}
+
+/* Select do NEWS2 — altura e padding consistentes */
+.news2-select {
+  height: var(--pro-h-input) !important;
+  min-height: var(--pro-h-input) !important;
+  font-size: var(--pro-fs-md) !important;
+  font-family: var(--pro-font) !important;
+  font-weight: var(--pro-fw-medium) !important;
+  border-radius: var(--pro-radius-md) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: var(--pro-space-12) !important;
+  padding-right: 36px !important;
+  box-sizing: border-box !important;
+  line-height: var(--pro-h-input) !important;
+}
+
+/* ── Focus ring unificado ── */
+.hm-input:focus,
+.input-field:focus,
+.hm-search:focus,
+.farmacos-search:focus,
+.ix-search:focus,
+.meds-search:focus,
+.elec2-field-input:focus,
+.inf-free-drug-input:focus,
+.intx-input:focus,
+.news2-select:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 var(--pro-focus-ring-width)
+              rgba(56,189,248, var(--pro-focus-ring-alpha)) !important;
+}
+
+/* Eletrólito — campos empilhados (não full-height quando dentro de grid) */
+.elec2-field-input {
+  height: 40px !important;
+  min-height: 40px !important;
+  line-height: 40px !important;
+  font-size: var(--pro-fs-md) !important;
+  padding-left: var(--pro-space-12) !important;
+  padding-right: var(--pro-space-12) !important;
+}
+
+
+/* ================================================================
+   §4 — LABELS — PADRÃO UNIFICADO
+   Todas as labels de campo usam o mesmo tamanho, peso e espaçamento.
+   Classes: .hm-label, .input-label, .elec2-field-lbl,
+   .inf-free-drug-label, .news2-param-label
+================================================================ */
+
+.hm-label,
+.input-label,
+.elec2-field-lbl,
+.news2-param-label {
+  font-size: var(--pro-fs-xs) !important;   /* 10px */
+  font-weight: var(--pro-fw-bold) !important;
+  letter-spacing: 0.4px !important;
+  text-transform: uppercase !important;
+  line-height: var(--pro-lh-tight) !important;
+  margin-bottom: var(--pro-space-6) !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Subtítulos de seção (tipo "POSOLOGIA", "DOSE", etc.) */
+.dose-inner-label,
+.renal-panel-label,
+.safety-alert-label,
+.dilution-card-label,
+.fd-section-label,
+.fd-dose-hero-label,
+.fd-ref-header-left,
+.interactions-label,
+.news2-sep {
+  font-size: var(--pro-fs-xs) !important;   /* 10px */
+  font-weight: var(--pro-fw-extrabold) !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  line-height: var(--pro-lh-tight) !important;
+}
+
+/* Rótulos de campos de formulário inline */
+.fd-dose-key,
+.fd-ref-key,
+.dose-scheme-key,
+.dilution-key {
+  font-size: var(--pro-fs-2xs) !important;  /* 8.5px */
+  font-weight: var(--pro-fw-extrabold) !important;
+  letter-spacing: 0.7px !important;
+  text-transform: uppercase !important;
+}
+
+
+/* ================================================================
+   §5 — BOTÕES — PADRÃO UNIFICADO
+   Sistema de 3 níveis: Primary | Secondary | Ghost
+   Todos: mesma família, mesmo peso, mesmos radii por nível.
+   ZERO mudança de cor.
+================================================================ */
+
+/* ── Nível 1: Primary (destaque máximo) ── */
+.btn-primary,
+.hm-btn--primary,
+.mc-btn.mc-btn--primary,
+.elec2-action-btn,
+.data-guard-btn,
+.fd-btn-study,
+.fd-btn-copy,
+.inf-copy-rx-btn,
+.bic-alert-btn-abort,
+button[type="submit"],
+.hm-calc-btn {
+  height: var(--pro-h-btn-primary) !important;
+  min-height: var(--pro-h-btn-primary) !important;
+  padding-left: var(--pro-space-20) !important;
+  padding-right: var(--pro-space-20) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  font-family: var(--pro-font) !important;
+  font-size: var(--pro-fs-md) !important;          /* 13px */
+  font-weight: var(--pro-fw-extrabold) !important;
+  letter-spacing: 0.1px !important;
+  border-radius: var(--pro-radius-md) !important;  /* 12px */
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: var(--pro-space-8) !important;
+  cursor: pointer !important;
+  transition: opacity var(--pro-transition),
+              transform var(--pro-transition),
+              box-shadow var(--pro-transition) !important;
+  white-space: nowrap !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+.btn-primary:active,
+.hm-btn--primary:active,
+.elec2-action-btn:active,
+.data-guard-btn:active,
+.fd-btn-study:active,
+.fd-btn-copy:active,
+.inf-copy-rx-btn:active,
+.bic-alert-btn-abort:active,
+.hm-calc-btn:active {
+  opacity: 0.82 !important;
+  transform: scale(0.975) !important;
+}
+
+/* ── Nível 2: Secondary (outline/ghost colorido) ── */
+.btn-secondary,
+.hm-btn--secondary,
+.mc-btn.mc-btn--secondary,
+.fd-btn-close,
+.dose-copy-btn,
+.bic-alert-btn-continue {
+  height: var(--pro-h-btn-secondary) !important;
+  min-height: var(--pro-h-btn-secondary) !important;
+  padding-left: var(--pro-space-16) !important;
+  padding-right: var(--pro-space-16) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  font-family: var(--pro-font) !important;
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  letter-spacing: 0.1px !important;
+  border-radius: var(--pro-radius-md) !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: var(--pro-space-8) !important;
+  cursor: pointer !important;
+  transition: opacity var(--pro-transition),
+              background var(--pro-transition),
+              transform var(--pro-transition) !important;
+  white-space: nowrap !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+.btn-secondary:active,
+.fd-btn-close:active,
+.dose-copy-btn:active,
+.bic-alert-btn-continue:active {
+  opacity: 0.72 !important;
+  transform: scale(0.975) !important;
+}
+
+/* ── Botões sexo M/F ── */
+#btn-male,
+#btn-female {
+  height: var(--pro-h-btn-secondary) !important;
+  min-height: var(--pro-h-btn-secondary) !important;
+  font-family: var(--pro-font) !important;
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  border-radius: var(--pro-radius-md) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all var(--pro-transition) !important;
+}
+
+/* ── Full-width btn ── */
+.inf-copy-rx-btn,
+.elec2-action-btn,
+.data-guard-btn {
+  width: 100% !important;
+}
+
+/* ── Footer modal: botões lado a lado flexbox ── */
+.fd-footer {
+  display: flex !important;
+  gap: var(--pro-space-8) !important;
+  padding: var(--pro-space-10) var(--pro-space-16) var(--pro-space-14) !important;
+  align-items: stretch !important;
+}
+.fd-footer > * {
+  flex: 1 !important;
+  height: var(--pro-h-btn-primary) !important;
+  min-height: var(--pro-h-btn-primary) !important;
+  border-radius: var(--pro-radius-md) !important;
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: var(--pro-space-6) !important;
+  cursor: pointer !important;
+}
+
+
+/* ================================================================
+   §6 — CARDS EXTERNOS: estrutura padronizada
+   calc-hub-card, adult-cmd-card, farmacos-row
+   Mesmos radius e espaçamentos internos.
+================================================================ */
+
+/* Central de Calculadoras — calc-hub-card */
+.calc-hub-card {
+  border-radius: var(--pro-radius-lg) !important;    /* 14px */
+  padding: var(--pro-space-12) var(--pro-space-12) var(--pro-space-10) !important;
+  gap: var(--pro-space-8) !important;
+  min-height: 90px !important;
+}
+
+.calc-hub-icon {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: var(--pro-radius-sm) !important;    /* 10px */
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+}
+
+.calc-hub-title {
+  font-size: var(--pro-fs-md) !important;            /* 13px */
+  font-weight: var(--pro-fw-extrabold) !important;
+  line-height: var(--pro-lh-tight) !important;
+  letter-spacing: -0.1px !important;
+  margin-bottom: 2px !important;
+}
+
+.calc-hub-desc {
+  font-size: var(--pro-fs-2xs) !important;           /* 8.5px */
+  line-height: var(--pro-lh-relaxed) !important;
+}
+
+/* Dashboard do adulto — adult-cmd-card */
+.adult-cmd-card {
+  border-radius: var(--pro-radius-lg) !important;
+  padding: var(--pro-space-12) var(--pro-space-12) var(--pro-space-10) !important;
+  gap: var(--pro-space-8) !important;
+}
+
+.cmd-card-icon {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: var(--pro-radius-sm) !important;
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+}
+
+.cmd-card-title {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  line-height: var(--pro-lh-tight) !important;
+  letter-spacing: -0.1px !important;
+}
+
+.cmd-card-subtitle {
+  font-size: var(--pro-fs-2xs) !important;
+  line-height: var(--pro-lh-relaxed) !important;
+  margin-top: 2px !important;
+}
+
+/* Compact grid — card mini */
+.adult-dashboard-grid.compact-grid .adult-cmd-card {
+  min-height: 62px !important;
+  padding: var(--pro-space-8) var(--pro-space-6) var(--pro-space-8) !important;
+  border-radius: var(--pro-radius-lg) !important;
+}
+
+.adult-dashboard-grid.compact-grid .cmd-card-icon {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: var(--pro-radius-xs) !important;
+  font-size: 14px !important;
+}
+
+.adult-dashboard-grid.compact-grid .cmd-card-title {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  text-align: center !important;
+}
+
+/* Linha de fármaco (lista Fármacos) */
+.farmacos-row {
+  border-radius: var(--pro-radius-md) !important;
+  padding: var(--pro-space-10) var(--pro-space-12) !important;
+  gap: var(--pro-space-10) !important;
+  min-height: 56px !important;
+}
+
+.farmacos-row-icon {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: var(--pro-radius-sm) !important;
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+}
+
+.farmacos-row-name {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  line-height: var(--pro-lh-tight) !important;
+}
+
+.farmacos-row-class {
+  font-size: var(--pro-fs-2xs) !important;
+  margin-top: 2px !important;
+}
+
+.farmacos-row-cat {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  padding: 3px var(--pro-space-8) !important;
+  border-radius: var(--pro-radius-xs) !important;
+}
+
+
+/* ================================================================
+   §7 — CARD HEADERS INTERNOS (estado aberto do accordion)
+   Uniformiza ícone, título e subtítulo de header de cada módulo.
+================================================================ */
+
+/* Header genérico: ícone 38px, título 14px/800, desc 10px */
+.news2-icon-wrap,
+.diag-metric-icon {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: var(--pro-radius-sm) !important;
+  font-size: 17px !important;
+  flex-shrink: 0 !important;
+}
+
+.news2-title,
+.farmacos-header h2 {
+  font-size: var(--pro-fs-lg) !important;     /* 14.5px */
+  font-weight: var(--pro-fw-extrabold) !important;
+  letter-spacing: -0.15px !important;
+  line-height: var(--pro-lh-tight) !important;
+}
+
+.news2-subtitle,
+.farmacos-header p {
+  font-size: var(--pro-fs-xs) !important;     /* 10px */
+  line-height: var(--pro-lh-normal) !important;
+  margin-top: 2px !important;
+}
+
+/* Modal farmáco — header */
+.fd-header-icon {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: var(--pro-radius-sm) !important;
+  font-size: 18px !important;
+  flex-shrink: 0 !important;
+}
+
+.fd-header-name {
+  font-size: var(--pro-fs-lg) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  line-height: var(--pro-lh-tight) !important;
+}
+
+.fd-header-class {
+  font-size: var(--pro-fs-xs) !important;
+  margin-top: 2px !important;
+  line-height: var(--pro-lh-normal) !important;
+}
+
+/* Botão fechar modal */
+.fd-close {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: var(--pro-radius-pill) !important;
+  font-size: 13px !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+}
+
+/* Header meds section */
+.meds-section-icon {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: var(--pro-radius-sm) !important;
+  font-size: 15px !important;
+  flex-shrink: 0 !important;
+}
+
+.meds-section-title {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+}
+
+/* Farmácos btn na central */
+.chc-farmacos-btn-icon {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: var(--pro-radius-md) !important;
+  font-size: 19px !important;
+  flex-shrink: 0 !important;
+}
+
+.chc-farmacos-btn-title {
+  font-size: var(--pro-fs-lg) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  letter-spacing: -0.1px !important;
+  line-height: var(--pro-lh-tight) !important;
+}
+
+.chc-farmacos-btn-desc {
+  font-size: var(--pro-fs-xs) !important;
+  line-height: var(--pro-lh-normal) !important;
+}
+
+
+/* ================================================================
+   §8 — VALORES DE RESULTADO / MÉTRICAS
+   rd-value, diag-metric-value, news2-total-score, dose-hero-value
+   Escala coerente: grande (28px), médio (22px), pequeno (18px)
+================================================================ */
+
+/* Valor principal nos cards rd-card */
+.rd-value {
+  font-size: 22px !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  letter-spacing: -0.4px !important;
+  line-height: 1 !important;
+}
+
+.rd-label {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.7px !important;
+  margin-left: 6px !important;
+  margin-bottom: 2px !important;
+}
+
+.rd-unit-inline {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-medium) !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+/* Diagnóstico modal */
+.diag-metric-label {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.7px !important;
+  margin-bottom: 3px !important;
+}
+
+.diag-metric-value {
+  font-size: 22px !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  line-height: 1 !important;
+}
+
+.diag-metric-unit {
+  font-size: var(--pro-fs-sm) !important;
+  margin-left: 3px !important;
+}
+
+.diag-verdict-title {
+  font-size: var(--pro-fs-lg) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  margin-bottom: 4px !important;
+}
+
+.diag-verdict-desc {
+  font-size: var(--pro-fs-sm) !important;
+  line-height: var(--pro-lh-relaxed) !important;
+}
+
+/* NEWS2 score principal */
+.news2-total-score {
+  font-size: 34px !important;
+  font-weight: 900 !important;
+  letter-spacing: -1.5px !important;
+  line-height: 1 !important;
+}
+
+.news2-total-label {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  opacity: 0.72 !important;
+  margin-bottom: 4px !important;
+}
+
+.news2-risk-badge {
+  font-size: var(--pro-fs-sm) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  padding: 5px var(--pro-space-12) !important;
+  border-radius: var(--pro-radius-pill) !important;
+  gap: var(--pro-space-6) !important;
+  letter-spacing: 0.2px !important;
+}
+
+/* Dose hero */
+.dose-hero-value {
+  font-size: 28px !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.5px !important;
+  line-height: 1 !important;
+}
+
+.dose-hero-freq {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  margin-top: 4px !important;
+}
+
+
+/* ================================================================
+   §9 — BADGES E PILLS — PADRÃO UNIFICADO
+   Todos usam o mesmo radius e espaçamento base.
+================================================================ */
+
+/* Badges de status genéricos */
+.rd-status,
+.rd-ckd-badge,
+.ckd-badge,
+.adj-tag,
+.cdp-status-badge,
+.ix-count-badge,
+.news2-score-chip,
+.meds-section-count,
+.chc-farmacos-btn-count,
+.farmacos-stats,
+.fd-renal-adj-badge,
+.fd-renal-active-pill,
+.fd-ref-hero-badge,
+.dose-hero-adjusted-badge,
+.dose-hero-clcr-badge {
+  font-size: var(--pro-fs-2xs) !important;    /* 8.5px */
+  font-weight: var(--pro-fw-extrabold) !important;
+  padding: 3px var(--pro-space-8) !important;
+  border-radius: var(--pro-radius-xs) !important;
+  letter-spacing: 0.3px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+
+/* Pills/chips de info (não status) */
+.fd-tag,
+.dose-meta-chip,
+.cdp-chip,
+.ix-chip,
+.meds-tag,
+.preg-badge,
+.hub-soon-badge {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-semibold) !important;
+  padding: 3px var(--pro-space-10) !important;
+  border-radius: var(--pro-radius-pill) !important;
+  letter-spacing: 0.1px !important;
+  line-height: 1.4 !important;
+}
+
+/* Chip de dado da home */
+.home-data-chip-value {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+}
+
+.home-data-chip-label {
+  font-size: var(--pro-fs-sm) !important;
+}
+
+.home-data-chip-unit {
+  font-size: var(--pro-fs-sm) !important;
+}
+
+
+/* ================================================================
+   §10 — SEPARADORES E SEÇÕES INTERNAS
+================================================================ */
+
+/* Rótulos de separador de categoria (lista fármacos) */
+.farmacos-category-sep {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  letter-spacing: 0.9px !important;
+  text-transform: uppercase !important;
+  padding: var(--pro-space-6) 0 var(--pro-space-4) !important;
+  margin-top: var(--pro-space-6) !important;
+}
+
+/* Rótulos de separador NEWS2 */
+.news2-sep {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  margin: 0 0 var(--pro-space-8) !important;
+}
+
+/* Linha separadora interna (dose-inner-label) */
+.dose-inner-label {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  letter-spacing: 0.9px !important;
+  text-transform: uppercase !important;
+  margin-bottom: var(--pro-space-6) !important;
+}
+
+/* Seção interna genérica */
+.fd-section {
+  border-radius: var(--pro-radius-lg) !important;
+}
+
+.fd-section-text {
+  font-size: var(--pro-fs-md) !important;
+  line-height: var(--pro-lh-relaxed) !important;
+  padding: var(--pro-space-12) var(--pro-space-14) !important;
+}
+
+/* Valores de dose */
+.fd-dose-val,
+.fd-ref-val,
+.dose-scheme-val {
+  font-size: var(--pro-fs-md) !important;
+  line-height: var(--pro-lh-relaxed) !important;
+}
+
+.fd-dose-subval {
+  font-size: var(--pro-fs-sm) !important;
+  line-height: var(--pro-lh-relaxed) !important;
+}
+
+/* Cards de ajuste renal */
+.fd-renal-faixa {
+  padding: var(--pro-space-12) var(--pro-space-14) !important;
+  gap: var(--pro-space-8) !important;
+}
+
+.fd-renal-faixa-label {
+  font-size: var(--pro-fs-xs) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+}
+
+.fd-renal-dose-pill {
+  font-size: var(--pro-fs-sm) !important;
+  border-radius: var(--pro-radius-sm) !important;
+  padding: var(--pro-space-8) var(--pro-space-10) !important;
+}
+
+.fd-renal-dose-pill strong {
+  font-size: var(--pro-fs-md) !important;
+}
+
+/* Tabela renal */
+.renal-adj-table {
+  font-size: var(--pro-fs-sm) !important;
+}
+
+.renal-adj-table th {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  letter-spacing: 0.3px !important;
+  padding: var(--pro-space-6) var(--pro-space-8) !important;
+}
+
+.renal-adj-table td {
+  padding: var(--pro-space-8) !important;
+}
+
+/* Safety alert */
+.safety-alert-list li {
+  font-size: var(--pro-fs-sm) !important;
+  line-height: var(--pro-lh-relaxed) !important;
+}
+
+/* Dilution card */
+.dilution-row {
+  font-size: var(--pro-fs-sm) !important;
+  margin-bottom: var(--pro-space-6) !important;
+}
+
+.dilution-key {
+  font-size: var(--pro-fs-xs) !important;
+  font-weight: var(--pro-fw-semibold) !important;
+  min-width: 90px !important;
+}
+
+
+/* ================================================================
+   §11 — MODAL FOOTERS & DATA GUARD
+================================================================ */
+
+.data-guard {
+  border-radius: var(--pro-radius-xl) !important;
+  padding: var(--pro-space-20) var(--pro-space-16) !important;
+  gap: var(--pro-space-10) !important;
+}
+
+.data-guard-icon {
+  font-size: 32px !important;
+}
+
+.data-guard-tag {
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  letter-spacing: 1.2px !important;
+  padding: 3px var(--pro-space-10) !important;
+  border-radius: var(--pro-radius-pill) !important;
+}
+
+.data-guard-title {
+  font-size: var(--pro-fs-lg) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  line-height: var(--pro-lh-tight) !important;
+}
+
+.data-guard-desc {
+  font-size: var(--pro-fs-md) !important;
+  line-height: var(--pro-lh-relaxed) !important;
+}
+
+
+/* ================================================================
+   §12 — NAVIGATION BAR
+   Itens uniformes: tamanho e proporções consistentes.
+================================================================ */
+
+.nav-item {
+  font-size: var(--pro-fs-2xs) !important;  /* 8.5px */
+  font-weight: var(--pro-fw-semibold) !important;
+  letter-spacing: 0.2px !important;
+  gap: 3px !important;
+}
+
+.nav-item i {
+  font-size: 15px !important;
+  line-height: 1 !important;
+}
+
+
+/* ================================================================
+   §13 — SCROLLBAR: ocultar (mantém experiência nativa)
+================================================================ */
+
+.ix-suggestions::-webkit-scrollbar,
+.meds-autocomplete::-webkit-scrollbar,
+.fd-body::-webkit-scrollbar {
+  display: none !important;
+}
+
+
+/* ================================================================
+   §14 — MODO CLARO
+   Garante que as regras de tipografia se propagam ao modo claro.
+================================================================ */
+
+body.light-mode .rd-value,
+body.light-mode .diag-metric-value {
+  /* herda a fonte/peso do dark — cor é tratada pelas regras do light mode existentes */
+}
+
+body.light-mode .news2-total-score {
+  letter-spacing: -1.5px !important;
+}
+
+
+/* ================================================================
+   §15 — MICRO-OVERRIDES DE COERÊNCIA
+   Pequenas correções pontuais sem criar classes novas.
+================================================================ */
+
+/* Seção fármacos header */
+.farmacos-header {
+  padding: var(--pro-space-4) 0 var(--pro-space-12) !important;
+}
+
+/* NEWS2 param label com ícone */
+.news2-param-label i {
+  font-size: 10px !important;
+  opacity: 0.65 !important;
+}
+
+/* NEWS2 scale btn: altura mínima de toque */
+.news2-scale-btn {
+  min-height: 36px !important;
+  font-size: var(--pro-fs-xs) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  border-radius: var(--pro-radius-sm) !important;
+  padding: var(--pro-space-6) var(--pro-space-8) !important;
+}
+
+/* Score param inline badge */
+.news2-param-score {
+  min-width: 20px !important;
+  height: 20px !important;
+  border-radius: var(--pro-radius-xs) !important;
+  font-size: var(--pro-fs-2xs) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+  line-height: 20px !important;
+}
+
+/* IX suggestion items */
+.ix-sug-icon {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: var(--pro-radius-xs) !important;
+  font-size: 12px !important;
+}
+
+.ix-sug-name {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-semibold) !important;
+}
+
+.ix-sug-class {
+  font-size: var(--pro-fs-xs) !important;
+}
+
+/* Interações: item de autocomplete */
+.ix-suggestion-item {
+  padding: var(--pro-space-8) var(--pro-space-12) !important;
+  min-height: 40px !important;
+}
+
+/* Home data chip */
+.home-data-chip {
+  border-radius: var(--pro-radius-sm) !important;
+  padding: var(--pro-space-8) var(--pro-space-10) !important;
+  gap: var(--pro-space-6) !important;
+  font-size: var(--pro-fs-sm) !important;
+}
+
+/* Back bar de navegação interna */
+.section-back-btn,
+.gpb-section-badge {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-semibold) !important;
+}
+
+/* Meds tag */
+.meds-tag {
+  font-size: var(--pro-fs-sm) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  padding: 4px var(--pro-space-10) 4px var(--pro-space-8) !important;
+  border-radius: var(--pro-radius-pill) !important;
+}
+
+/* Interaction pair */
+.interaction-pair {
+  border-radius: var(--pro-radius-sm) !important;
+  padding: var(--pro-space-8) var(--pro-space-12) !important;
+  font-size: var(--pro-fs-sm) !important;
+  line-height: var(--pro-lh-relaxed) !important;
+}
+
+.interaction-pair-drugs {
+  font-weight: var(--pro-fw-extrabold) !important;
+  font-size: var(--pro-fs-md) !important;
+}
+
+.interaction-alert-title {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-extrabold) !important;
+}
+
+/* Toast */
+#toast {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-medium) !important;
+  border-radius: var(--pro-radius-pill) !important;
+}
+
+/* Prescrição toggle (preg) */
+.preg-toggle-title {
+  font-size: var(--pro-fs-md) !important;
+  font-weight: var(--pro-fw-semibold) !important;
+}
+
+.preg-toggle-sub {
+  font-size: var(--pro-fs-xs) !important;
+  margin-top: 2px !important;
+}
+
+.preg-opt {
+  font-size: var(--pro-fs-sm) !important;
+  font-weight: var(--pro-fw-bold) !important;
+  padding: 5px var(--pro-space-12) !important;
+  border-radius: var(--pro-radius-pill) !important;
+}
+
+/* Chip de contagem interações */
+.ix-count-badge {
+  font-size: var(--pro-fs-xs) !important;
+  padding: 3px var(--pro-space-8) !important;
+  border-radius: var(--pro-radius-pill) !important;
+}
+
+/* ================================================================
+   §16 — ELETRÓLITOS: Coerência cromática completa
+   O card externo usa acento índigo (#818CF8 / --mc-l2-accent-elec).
+   Internamente tudo deve usar o MESMO índigo — inputs, botões de
+   seleção (estado/preset), botão Calcular e botões de ação
+   (Copiar/Limpar). Foram detectadas 3 classes com borda/fundo
+   branco neutro que não seguiam o acento do card.
+
+   Token local criado aqui para manter coerência sem tocar nos
+   arquivos de base (medcases-ux-v2.css / build234).
+================================================================ */
+
+:root {
+  --elec-accent:        #818CF8;   /* índigo — igual ao --mc-l2-accent-elec */
+  --elec-accent-dark:   #6366F1;   /* um tom mais saturado para hover */
+  --elec-accent-bg:     rgba(129,140,248, 0.10);
+  --elec-accent-bg-md:  rgba(129,140,248, 0.18);
+  --elec-accent-bg-str: rgba(129,140,248, 0.28);
+  --elec-accent-border: rgba(129,140,248, 0.30);
+  --elec-accent-border-str: rgba(129,140,248, 0.55);
+  --elec-accent-text:   #C7D2FE;   /* mesmo .hub-card-name do card */
+}
+
+/* ── 1. Input de campo numérico ──────────────────────────────── */
+.elec2-field-input,
+input[type="text"].elec2-field-input {
+  border-color: var(--elec-accent-border) !important;
+  background:   rgba(129,140,248, 0.06) !important;
+}
+.elec2-field-input:focus,
+input[type="text"].elec2-field-input:focus {
+  border-color: var(--elec-accent-border-str) !important;
+  background:   var(--elec-accent-bg) !important;
+  box-shadow:   0 0 0 3px rgba(129,140,248, 0.14) !important;
+}
+
+/* ── 2. Label de campo ───────────────────────────────────────── */
+.elec2-field-lbl {
+  color: rgba(199,210,254, 0.72) !important;
+}
+
+/* ── 3. Botões de eletrólito (grid 11 botões) — estado idle ──── */
+/* Idle: borda sutil no acento, fundo quase transparente */
+.elec2-elec-btn {
+  border-color: var(--elec-accent-border) !important;
+  background:   var(--elec-accent-bg) !important;
+  color:        rgba(199,210,254, 0.75) !important;
+}
+.elec2-elec-btn i {
+  color: var(--elec-accent) !important;
+}
+.elec2-elec-btn:hover {
+  background:   var(--elec-accent-bg-md) !important;
+  border-color: var(--elec-accent-border-str) !important;
+  color:        var(--elec-accent-text) !important;
+}
+/* Ativo: preenchido com o mesmo índigo */
+.elec2-elec-btn--active {
+  background:   var(--elec-accent-bg-str) !important;
+  border-color: var(--elec-accent-border-str) !important;
+  color:        var(--elec-accent-text) !important;
+  box-shadow:   0 0 0 2px rgba(129,140,248, 0.28) !important;
+}
+.elec2-elec-btn--active i {
+  color: var(--elec-accent-text) !important;
+}
+
+/* ── 4. Botões de estado (Normal / Baixo / Alto / ECG…) ──────── */
+/* Idle: seguir o mesmo padrão do índigo */
+.elec2-state-btn {
+  border-color: var(--elec-accent-border) !important;
+  background:   var(--elec-accent-bg) !important;
+  color:        rgba(199,210,254, 0.70) !important;
+}
+.elec2-state-btn:hover {
+  background:   var(--elec-accent-bg-md) !important;
+  border-color: var(--elec-accent-border-str) !important;
+  color:        var(--elec-accent-text) !important;
+}
+/* Estado genérico ativo: índigo */
+.elec2-state-btn.active {
+  background:   var(--elec-accent-bg-str) !important;
+  border-color: var(--elec-accent-border-str) !important;
+  color:        var(--elec-accent-text) !important;
+}
+/* Semáforo: baixo/normal/alto preservam suas cores diagnósticas */
+.elec2-state-btn--nivel-baixo.active {
+  background:   rgba(59,130,246, 0.28) !important;
+  border-color: #60A5FA !important;
+  color:        #BFDBFE !important;
+}
+.elec2-state-btn--nivel-normal.active {
+  background:   rgba(34,197,94, 0.22) !important;
+  border-color: #4ADE80 !important;
+  color:        #BBF7D0 !important;
+}
+.elec2-state-btn--nivel-alto.active {
+  background:   rgba(239,68,68, 0.28) !important;
+  border-color: #F87171 !important;
+  color:        #FECACA !important;
+}
+.elec2-state-btn--grav-leve.active {
+  background:   rgba(234,179,8, 0.22) !important;
+  border-color: #FCD34D !important;
+  color:        #FEF08A !important;
+}
+.elec2-state-btn--grav-moderado.active {
+  background:   rgba(249,115,22, 0.28) !important;
+  border-color: #FB923C !important;
+  color:        #FED7AA !important;
+}
+.elec2-state-btn--grav-grave.active,
+.elec2-state-btn--ecg-danger.active {
+  background:   rgba(239,68,68, 0.32) !important;
+  border-color: #F87171 !important;
+  color:        #FECACA !important;
+}
+
+/* ── 5. Botões de preset ─────────────────────────────────────── */
+.elec2-preset-btn {
+  border-color: var(--elec-accent-border) !important;
+  background:   var(--elec-accent-bg) !important;
+  color:        rgba(199,210,254, 0.68) !important;
+}
+.elec2-preset-btn:hover {
+  background:   var(--elec-accent-bg-md) !important;
+  border-color: var(--elec-accent-border-str) !important;
+  color:        var(--elec-accent-text) !important;
+}
+.elec2-preset-btn.active {
+  background:   var(--elec-accent-bg-str) !important;
+  border-color: var(--elec-accent-border-str) !important;
+  color:        var(--elec-accent-text) !important;
+  box-shadow:   0 0 0 1px rgba(129,140,248, 0.22) !important;
+}
+
+/* ── 6. Botão CALCULAR ───────────────────────────────────────── */
+/* Gradiente mais saturado e brilhante com o índigo do card */
+.elec2-calc-btn {
+  background:   linear-gradient(135deg, #4338CA 0%, #818CF8 100%) !important;
+  box-shadow:   0 4px 18px rgba(99,102,241, 0.45) !important;
+  border:       none !important;
+  color:        #FFFFFF !important;
+}
+.elec2-calc-btn:hover {
+  filter: brightness(1.10) !important;
+}
+.elec2-calc-btn:active {
+  filter: brightness(0.90) !important;
+  transform: scale(0.97) !important;
+}
+
+/* ── 7. Botões de AÇÃO do resultado (Copiar / Limpar) ────────── */
+/* Primary action: índigo preenchido */
+.elec2-action-btn {
+  border-color: var(--elec-accent-border-str) !important;
+  background:   var(--elec-accent-bg-md) !important;
+  color:        var(--elec-accent-text) !important;
+}
+.elec2-action-btn:hover {
+  background:   var(--elec-accent-bg-str) !important;
+}
+/* Secondary action (Limpar): borda do mesmo acento, fundo neutro */
+.elec2-action-btn--secondary {
+  border-color: var(--elec-accent-border) !important;
+  background:   rgba(255,255,255,0.04) !important;
+  color:        rgba(199,210,254, 0.58) !important;
+}
+.elec2-action-btn--secondary:hover {
+  background:   var(--elec-accent-bg) !important;
+  border-color: var(--elec-accent-border-str) !important;
+  color:        var(--elec-accent-text) !important;
+}
+/* Estado "copiado": mantém o verde clínico */
+.elec2-action-btn--copied {
+  background:   rgba(52,211,153, 0.18) !important;
+  border-color: rgba(52,211,153, 0.45) !important;
+  color:        #34D399 !important;
+}
+
+/* ── 8. Separadores de grupo (elec2-state-group) ─────────────── */
+.elec2-state-group {
+  border-top-color: rgba(129,140,248, 0.12) !important;
+}
+
+/* ── 9. Label de estado ──────────────────────────────────────── */
+.elec2-state-lbl {
+  color: rgba(199,210,254, 0.62) !important;
+}
+
+/* ── 10. Modo claro: preservar o índigo mas legível ─────────── */
+body.light-mode .elec2-field-input,
+body.light-mode input[type="text"].elec2-field-input {
+  border-color: rgba(99,102,241, 0.22) !important;
+  background:   #FFFFFF !important;
+}
+body.light-mode .elec2-field-input:focus,
+body.light-mode input[type="text"].elec2-field-input:focus {
+  border-color: rgba(99,102,241, 0.50) !important;
+  box-shadow:   0 0 0 3px rgba(99,102,241, 0.12) !important;
+}
+body.light-mode .elec2-field-lbl {
+  color: #6366F1 !important;
+}
+body.light-mode .elec2-elec-btn {
+  border-color: rgba(99,102,241, 0.28) !important;
+  background:   rgba(99,102,241, 0.07) !important;
+  color:        #4338CA !important;
+}
+body.light-mode .elec2-elec-btn i {
+  color: #6366F1 !important;
+}
+body.light-mode .elec2-elec-btn:hover {
+  background:   rgba(99,102,241, 0.14) !important;
+  border-color: rgba(99,102,241, 0.50) !important;
+  color:        #3730A3 !important;
+}
+body.light-mode .elec2-elec-btn--active {
+  background:   #6366F1 !important;
+  border-color: #4F46E5 !important;
+  color:        #FFFFFF !important;
+  box-shadow:   0 2px 10px rgba(99,102,241, 0.35) !important;
+}
+body.light-mode .elec2-elec-btn--active i {
+  color:        #FFFFFF !important;
+}
+body.light-mode .elec2-state-btn {
+  border-color: rgba(99,102,241, 0.20) !important;
+  background:   rgba(99,102,241, 0.06) !important;
+  color:        #4B5563 !important;
+}
+/* Estado ativo GENÉRICO (Feminino, Masculino, Sintomático…):
+   preenchido com índigo sólido — texto branco para máximo contraste */
+body.light-mode .elec2-state-btn.active {
+  background:   #6366F1 !important;
+  border-color: #4F46E5 !important;
+  color:        #FFFFFF !important;
+  box-shadow:   0 2px 10px rgba(99,102,241, 0.35) !important;
+}
+/* Semáforos: baixo/normal/alto preservam cores diagnósticas em light */
+body.light-mode .elec2-state-btn--nivel-baixo.active {
+  background:   #2563EB !important;
+  border-color: #1D4ED8 !important;
+  color:        #FFFFFF !important;
+  box-shadow:   0 2px 8px rgba(37,99,235, 0.30) !important;
+}
+body.light-mode .elec2-state-btn--nivel-normal.active {
+  background:   #16A34A !important;
+  border-color: #15803D !important;
+  color:        #FFFFFF !important;
+  box-shadow:   0 2px 8px rgba(22,163,74, 0.28) !important;
+}
+body.light-mode .elec2-state-btn--nivel-alto.active {
+  background:   #DC2626 !important;
+  border-color: #B91C1C !important;
+  color:        #FFFFFF !important;
+  box-shadow:   0 2px 8px rgba(220,38,38, 0.28) !important;
+}
+body.light-mode .elec2-state-btn--grav-leve.active {
+  background:   #CA8A04 !important;
+  border-color: #A16207 !important;
+  color:        #FFFFFF !important;
+}
+body.light-mode .elec2-state-btn--grav-moderado.active {
+  background:   #EA580C !important;
+  border-color: #C2410C !important;
+  color:        #FFFFFF !important;
+}
+body.light-mode .elec2-state-btn--grav-grave.active,
+body.light-mode .elec2-state-btn--ecg-danger.active {
+  background:   #DC2626 !important;
+  border-color: #B91C1C !important;
+  color:        #FFFFFF !important;
+}
+body.light-mode .elec2-preset-btn {
+  border-color: rgba(99,102,241, 0.20) !important;
+  background:   rgba(99,102,241, 0.06) !important;
+  color:        #4B5563 !important;
+}
+body.light-mode .elec2-preset-btn.active {
+  background:   #6366F1 !important;
+  border-color: #4F46E5 !important;
+  color:        #FFFFFF !important;
+  box-shadow:   0 2px 8px rgba(99,102,241, 0.30) !important;
+}
+body.light-mode .elec2-calc-btn {
+  background:   linear-gradient(135deg, #4338CA 0%, #6366F1 100%) !important;
+  box-shadow:   0 4px 16px rgba(99,102,241, 0.30) !important;
+}
+body.light-mode .elec2-action-btn {
+  background:   rgba(99,102,241, 0.10) !important;
+  border-color: rgba(99,102,241, 0.30) !important;
+  color:        #4338CA !important;
+}
+body.light-mode .elec2-action-btn--secondary {
+  background:   rgba(99,102,241, 0.04) !important;
+  border-color: rgba(99,102,241, 0.16) !important;
+  color:        #6B7280 !important;
+}
+body.light-mode .elec2-state-lbl {
+  color: #6366F1 !important;
+}
+
+/* ================================================================
+   FIM DO BUILD 241C — UX Professionalization
+================================================================ */
