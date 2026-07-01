@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-4.8.1--build248hotfix3-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-4.9.1--build250-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-PWA%20%7C%20WebView-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/i18n-PT%20%7C%20ES-yellow?style=for-the-badge)
@@ -32,6 +32,109 @@
 - [Changelog por Sessão](#-changelog-por-sessão)
 - [Changelog — Sessões Recentes](#-changelog--sessões-recentes)
 - [Próximos Passos](#-próximos-passos)
+
+---
+
+## 🆕 BUILD 250 — Correção Tripla: Dados, Performance e Dívida Técnica (2026-07-01)
+
+### ✅ 3 pontos corrigidos nesta sessão (ordem de correção direta pós-auditoria)
+
+**1️⃣ Venlafaxina e classe ISRN/atípicos ausentes no autocomplete de Interações — CORRIGIDO:**
+- **Causa raiz:** o array estático `LISTA_MEDS_DISPONIVEIS_RAW` (`index.html` ~linha 20427),
+  usado EXCLUSIVAMENTE pelo autocomplete/busca livre da aba **Interações**
+  (`filtrarDropdownInteracao()`, `processarEntradaLivre()`), nunca incluiu a classe ISRN
+  e alguns atípicos — mesmo esses fármacos já existindo normalmente no motor de doses
+  (`DRUG_DB`) e no motor de interações (`INTERACOES_DB`). Por isso "existiam" no app mas
+  eram invisíveis para quem tentava digitá-los na busca de Interações.
+- **Correção:** adicionado novo bloco `/* ── ISRN e Atípicos ── */` entre os blocos ISRS e
+  IMAOs, com as 11 strings solicitadas: `Venlafaxina`, `Desvenlafaxina`, `Duloxetina`,
+  `Milnaciprana`, `Levomilnaciprano`, `Agomelatina`, `Vilazodona`, `Reboxetina`,
+  `Mirtazapina`, `Bupropiona`, `Trazodona`.
+- **Arquivo:** `index.html` (~linha 20476-20479).
+
+**2️⃣ Lag de ~5s ao digitar Peso/Idade/Altura/Creatinina — CORRIGIDO:**
+- **Causa raiz:** os listeners `input` de `#hm-weight`, `#hm-age`, `#hm-height` e
+  `#hm-creatinina` chamavam `hmCalcCockcroft()` de forma **totalmente síncrona a cada
+  tecla digitada**. Essa função dispara `dispatchEvent('input')` em `#hm-clcr`, que por
+  sua vez acorda `_renalInjectOrUpdate()` e o rebuild pesado de HTML do card de dose de
+  fármaco (`calcDrugDose()`) — tudo bloqueando a main thread em cada caractere digitado.
+- **Correção:** criado utilitário genérico `_hmDebounce(fn, delay)` e uma versão
+  debounced `_hmCalcCockcroftDebounced` (**400ms**), aplicada **somente** ao listener de
+  digitação contínua dos 4 campos citados. Chamadas pontuais e diretas a
+  `window.hmCalcCockcroft()` — botão "Fixar Dados", troca de sexo (`hmSetSex`), fechamento
+  do painel de Urina 24h e disparo inicial ao carregar a página — permanecem **síncronas**,
+  pois são eventos únicos (não fazem parte da cascata por tecla) e não geram lag perceptível.
+- **Arquivo:** `index.html` (~linha 22625-22666, função `_hmDebounce` + `_attachCGListeners()`).
+
+**3️⃣ Bloco fantasma / IDs duplicados ("LEGACY WRAPPERS") — CORRIGIDO (com ressalva de escopo, ver abaixo):**
+- **Causa raiz:** existiam DOIS blocos "SEPARADOR OCULTO" (`display:none`) no `index.html`,
+  ambos definindo IDs usados por `renderResults()`/`resetResults()` — uma bomba-relógio
+  para `getElementById()`, que sempre resolve a **primeira** ocorrência no DOM.
+- **Investigação de escopo (divergência encontrada em relação à ordem original — ver nota abaixo):**
+  os dois blocos **não eram idênticos**. O bloco mais acima no arquivo (originalmente
+  ~linha 8134-8167) era **truncado**, contendo apenas `#result-dashboard`, `#rd-clcr-card`
+  e `#rd-bsa-card` (ClCr + BSA). O bloco mais abaixo (originalmente ~linha 8709-8780 —
+  linhas citadas na ordem de correção) era o **completo**, contendo adicionalmente
+  `#rd-imc-card`, `#rd-imc`, `#imc-thumb`, `#rd-tfg-card`, `#rd-tfg`, `#rd-ckd-stage`,
+  `#res-tfg`, `#res-pi` e os `#chip-*` — todos lidos/escritos por `renderResults()`
+  (linha ~12753) e `resetResults()` (linha ~12891), e **inexistentes em qualquer outro
+  lugar do arquivo**.
+- **Decisão de engenharia:** excluir o bloco **truncado** (o que estava nas linhas
+  ~8134-8167) em vez do bloco indicado literalmente na ordem de correção (~8709-8780),
+  pois excluir este último teria **quebrado a renderização de IMC/TFG/Estágio CKD** em
+  toda a Home (regressão funcional). O objetivo real da ordem — eliminar a duplicação de
+  IDs / código morto — foi cumprido: cada ID (`#result-dashboard`, `#rd-clcr-card`,
+  `#rd-bsa-card`, `#rd-imc-card`, `#rd-tfg-card` etc.) agora aparece **exatamente uma vez**
+  no arquivo. O bloco completo (linhas ~8686-8757 após a limpeza) foi mantido como fonte
+  única de verdade, e o local do bloco removido recebeu um comentário explicativo
+  `BUILD 250 — BLOCO FANTASMA REMOVIDO`.
+- **Arquivo:** `index.html` (~linha 8133-8144, comentário no lugar do bloco excluído).
+
+**Arquivos alterados nesta build:** `index.html` (3 pontos acima) · `manifest-offline.json`
+(v286→v287) · `sw.js` (`medcases-v56`→`medcases-v57`).
+
+**Validação:** `PlaywrightConsoleCapture` executado após cada uma das 3 correções —
+zero erros/avisos de console em todas as passagens; confirmado via busca estrutural que
+nenhum ID crítico (`result-dashboard`, `rd-clcr-card`, `rd-imc-card`, `rd-tfg-card`,
+`rd-bsa-card`) permanece duplicado no arquivo.
+
+---
+
+## 🆕 BUILD 249 — Auto-Expiração (TTL) dos Dados do Paciente (2026-07-01)
+
+### ✅ Correção entregue nesta sessão — dados do paciente agora se apagam sozinhos
+
+**Problema reportado pelo usuário:** os dados do paciente (peso, idade, altura, ClCr, creatinina)
+preenchidos na Home/Quick-Edit deveriam desaparecer automaticamente "depois de alguns minutos",
+mas continuavam salvos indefinidamente — inclusive visíveis no preview lateral — pois **não
+existia nenhum mecanismo de expiração por tempo (TTL)** no app. O único "clear" existente era
+disparado apenas por **navegação** (saída da calculadora → Home), nunca por tempo decorrido.
+
+**Solução implementada — TTL de 15 minutos:**
+- Todo salvamento de dados do paciente (`hmFixarDados()` na Home e `saveQuickEdit()` no modal
+  Quick-Edit) agora grava um campo `_savedAt` (timestamp) junto com os dados em
+  `localStorage['medcases_hm_patient_v1']`.
+- Um **watcher automático** (`_hmScheduleAutoClear()` + `setInterval` de segurança a cada 30s +
+  revalidação ao voltar o foco da aba via `visibilitychange`) verifica continuamente se o tempo
+  decorrido desde `_savedAt` ultrapassou `window.HM_PATIENT_TTL_MS` (15 minutos por padrão).
+- Ao expirar, os dados são limpos **automaticamente e por completo**: memória (`window.patientData`),
+  `localStorage` (ambas as chaves, atual e legada), todos os inputs visuais (Home, Calculadoras
+  legado, Quick-Edit), badge "Fixado ✓", pills de resultado, card global "Paciente Atual" e
+  qualquer resultado de fármaco/dose exibido — via reaproveitamento de `window.hmClearPatient()`.
+- **Ao recarregar a página** (`_initPatientData()`), dados já expirados na sessão anterior nunca
+  são restaurados — descartados silenciosamente antes de qualquer render.
+- O card global "Paciente Atual" (`_updateGlobalPatientBar()`), que possuía uma leitura própria e
+  independente do `localStorage` como fallback, foi corrigido para **também respeitar o TTL**,
+  evitando que dados expirados "ressurgissem" nessa barra mesmo após a limpeza em memória.
+- Ajuste é configurável globalmente via `window.HM_PATIENT_TTL_MS` (em milissegundos), caso seja
+  necessário alterar a duração no futuro sem tocar na lógica.
+
+**Arquivos alterados:** `index.html` (múltiplos pontos: `_initPatientData()`, `hmFixarDados()`,
+`saveQuickEdit()`, `hmLoadPatient()`, `hmClearPatient()`, `_updateGlobalPatientBar()`, novo bloco
+de watcher TTL) · `manifest-offline.json` (v285→v286) · `sw.js` (`medcases-v55`→`medcases-v56`).
+
+**Validação:** `PlaywrightConsoleCapture` executado após as alterações — carregamento completo
+sem erros de console.
 
 ---
 
@@ -4284,6 +4387,45 @@ O controle de tema agora é 100% injetado pelo app nativo (`body.classList` rece
 
 #### Resultado
 Modal fecha instantaneamente sem lag perceptível; botões "X" no canto direito em todas as telas; posologia com contraste neutro (90/10); módulo de Infusão 100% legível em Light Mode; select de unidade sem corte de texto; app sem controle manual de tema (delegado ao wrapper nativo).
+
+---
+
+### 🔧 BUILD 248 — HOTFIX 4: Interceptação DeepLink × Overlay (`tab=farmacos`)
+
+> **Sintoma relatado:** `deeplink-router.js` capturava corretamente `?tab=farmacos&q=<droga>`, mas a sub-tela full-screen exibia o conteúdo de "Dados do Paciente" por cima da resposta consultiva do fármaco, bloqueando a renderização da bula/dose.
+
+#### Causa raiz — captura por valor (stale reference) em `window.HubAccordion`
+Em `js/hub-accordion.js`, o objeto público era montado assim:
+```js
+window.HubAccordion = { open: hubOpen, toggle: hubToggle, ... };
+window.hubOpen   = hubOpen;
+window.hubToggle = hubToggle;
+```
+Isso **captura a função original por valor** no momento do `_init()`. Em seguida, `js/calculator-overlay.js` faz monkey-patch em `window.hubOpen`/`window.hubToggle` (substituindo a propriedade global para injetar `openInOverlay()` — o motor da sub-tela full-screen). Como `window.HubAccordion.open` já apontava para a função **antiga**, congelada antes do patch, toda chamada feita pelo `deeplink-router.js` via `window.HubAccordion.open('farmacos', {q})` **nunca passava pelo `openInOverlay()`** — a sub-tela full-screen não era acionada para deep links, e qualquer conteúdo que já estivesse dentro de `#calculator-overlay-container` de uma interação anterior na mesma sessão (ex.: "Dados do Paciente") permanecia visível por cima da resposta pretendida.
+
+**Fix (`js/hub-accordion.js`):** `window.HubAccordion.open`/`.toggle` passam a delegar em runtime para `window.hubOpen`/`window.hubToggle` (sempre a versão mais atual, com ou sem patch), em vez de capturar a referência antiga:
+```js
+window.HubAccordion = {
+  open:   function (id, opts) { return window.hubOpen(id, opts); },
+  toggle: function (id)       { return window.hubToggle(id); },
+  close: _closeCard, closeAll: hubCloseAll, syncLang: _syncLang,
+};
+```
+
+#### Validação dos demais pontos solicitados
+- **CSS/`build246-farmaco-modal-premium.css`**: confirmado que não define nenhum estado de "paciente visível por padrão" — o modal de fármaco (`#fd-modal`) é 100% independente do card "Dados do Paciente" (`#hub-card-patient`), são elementos DOM distintos. Nenhuma alteração de CSS foi necessária aqui.
+- **Validação obrigatória de Peso/Altura**: confirmado por leitura de código que `hmFilterDrugs()`, `renderFarmacosList()` e `openFarmacoDetail()` (fluxo consultivo de bula/dose) **nunca chamam `openQuickEdit('full')`** — a dose é sempre calculada com fallback neutro (`peso:70, idade:40, clcr:90`) quando não há `patientData`. `openQuickEdit('full')` só é acionada por cliques explícitos do usuário (botão "Calcular Dose" no modal do fármaco, guard do ClCr/BSA, banners de "Paciente não cadastrado"). Arquitetura já estava correta — nenhuma alteração necessária neste ponto.
+
+#### Arquivos alterados
+| Arquivo | O que mudou |
+|---|---|
+| `js/hub-accordion.js` | `window.HubAccordion.open`/`.toggle` — de captura por valor (`hubOpen`/`hubToggle` diretos) para delegação em runtime (`function(){ return window.hubOpen(...) }`), permitindo que o patch de `calculator-overlay.js` seja respeitado em chamadas via `HubAccordion.open()` (usadas pelo deeplink-router) |
+
+#### Validação
+`PlaywrightConsoleCapture` executado após a correção — zero erros; `[CalcOverlay] v1.0 pronto` e `[HubAccordion] v2.0 pronto` inicializam na ordem esperada.
+
+#### Resultado
+Deep links `?tab=farmacos&q=<droga>` agora abrem a sub-tela full-screen correta com a bula/dose do fármaco consultado, sem qualquer sobreposição do card "Dados do Paciente" de sessões anteriores. Fluxo consultivo de fármacos confirmado livre de validação obrigatória de paciente.
 
 ---
 

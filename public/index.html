@@ -8130,41 +8130,18 @@
            no DOM, display:none, sem estado real) em vez do container v3 correto abaixo.
            FIX: container legado eliminado — apenas o container v3 permanece como fonte única de verdade. -->
 
-      <!-- ── SEPARADOR OCULTO — mantém compatibilidade com elementos legados ── -->
-      <div style="display:none">
-        <div class="result-dashboard sex-m" id="result-dashboard">
-
-        <!-- ClCr — Clearance Renal (SLIM) -->
-        <div class="rd-card rd-clcr" id="rd-clcr-card">
-          <span class="rd-label" data-i18n="res_label_clcr">Clearance Renal</span>
-          <div class="rd-row-main">
-            <span class="rd-value rd-clcr-color" id="rd-clcr">—</span>
-            <span class="rd-unit-inline" id="rd-clcr-unit" data-i18n="res_unit_clcr">mL/min</span>
-          </div>
-          <div class="rd-badge-row">
-            <div id="rd-ckd-badge" class="rd-ckd-badge"></div>
-          </div>
-          <!-- legados ocultos -->
-          <span id="res-clcr" style="display:none">—</span>
-          <div id="ckd-badge-container" style="display:none"></div>
-        </div>
-
-        <!-- BSA — Superfície Corporal (SLIM) -->
-        <div class="rd-card rd-bsa" id="rd-bsa-card">
-          <span class="rd-label" data-i18n="res_label_bsa">Sup. Corporal</span>
-          <div class="rd-row-main">
-            <span class="rd-value rd-bsa-color" id="rd-bsa">—</span>
-            <span class="rd-unit-inline" data-i18n="res_unit_bsa">m²</span>
-          </div>
-          <div class="rd-badge-row">
-            <span style="font-size:9px;color:var(--text-muted)">Mosteller</span>
-          </div>
-          <!-- legados -->
-          <span id="res-bsa" style="display:none">—</span>
-          <div id="res-bsa-card" style="display:none"></div>
-        </div>
-        </div><!-- /result-dashboard (legado oculto — bloco 1, truncado ClCr+BSA) -->
-      </div><!-- /wrapper display:none legado (bloco 1) — FIX BUILD 248-HOTFIX: tag não fechada quebrava toda a árvore DOM subsequente -->
+      <!-- ══════════════════════════════════════════════════════════
+           BUILD 250 — BLOCO FANTASMA REMOVIDO
+           Este local continha um PRIMEIRO bloco "SEPARADOR OCULTO"
+           truncado (apenas #result-dashboard/#rd-clcr-card/#rd-bsa-card
+           e derivados — SEM #rd-imc-card/#rd-tfg-card/#rd-ckd-stage),
+           duplicando os IDs do bloco completo que permanece abaixo
+           (linhas ~8709-8780 antes desta limpeza). Como getElementById
+           sempre resolve a PRIMEIRA ocorrência no DOM, este bloco
+           truncado era o código morto/redundante (bomba-relógio),
+           e o bloco completo abaixo é a fonte única de verdade
+           real usada por renderResults()/resetResults() — motivo
+           pelo qual FOI PRESERVADO integralmente, e não removido. -->
 
       <!-- ══════════════════════════════════════════════════════════
            HOTFIX BUILD 248 — CARDS ZUMBIS REMOVIDOS
@@ -11146,6 +11123,16 @@ const i18n = {
 })();
 let currentLang = window.currentLang || window._autoLang || 'pt', currentSex='M', currentPregnant=false;
 
+/* ── BUILD 249: TTL de expiração automática dos dados do paciente ──
+   Por segurança clínica, os dados fixados (peso/idade/altura/ClCr/
+   creatinina) NÃO devem persistir indefinidamente — após um período
+   de inatividade eles se apagam sozinhos, evitando que dados de um
+   paciente anterior sejam usados por engano em outro atendimento.
+   Valor default: 15 minutos. Exposto em window para ser lido pelos
+   demais pontos de leitura/escrita (hmFixarDados, saveQuickEdit,
+   _updateGlobalPatientBar, watcher periódico). ─────────────────── */
+window.HM_PATIENT_TTL_MS = window.HM_PATIENT_TTL_MS || (15 * 60 * 1000);
+
 /* ── Inicialização híbrida Web + WebView ──────────────────────────
    Ordem de prioridade:
    1. Objeto já populado pelo app nativo (WebView injetou dados)
@@ -11159,6 +11146,12 @@ let currentLang = window.currentLang || window._autoLang || 'pt', currentSex='M'
   /* Tenta recuperar da sessão anterior */
   var _saved = null;
   try { _saved = JSON.parse(localStorage.getItem('medcases_hm_patient_v1')); } catch(e) {}
+  /* BUILD 249: descarta dados expirados (TTL) — não devem ser restaurados */
+  if (_saved && _saved._savedAt && (Date.now() - _saved._savedAt >= window.HM_PATIENT_TTL_MS)) {
+    try { localStorage.removeItem('medcases_hm_patient_v1'); } catch(e) {}
+    try { localStorage.removeItem('pacienteAtual'); } catch(e) {}
+    _saved = null;
+  }
   /* Fallback legado: chave 'pacienteAtual' (compatibilidade com builds antigos) */
   if (!_saved || !_saved.weight) {
     try {
@@ -11954,6 +11947,8 @@ function _clearCalculatorPatientData() {
     localStorage.removeItem('medcases_hm_patient_v1');
     localStorage.removeItem('pacienteAtual');
   } catch(e) {}
+  /* BUILD 249: cancela watcher de auto-expiração pendente */
+  if (typeof window._hmCancelAutoClear === 'function') window._hmCancelAutoClear();
   /* Reseta displays */
   if (typeof resetResults === 'function') resetResults();
   /* Notifica módulos */
@@ -13922,7 +13917,10 @@ function saveQuickEdit() {
       let _existing = {};
       try { _existing = JSON.parse(localStorage.getItem(_HM_KEY) || '{}'); } catch(_) {}
       const _merged = Object.assign(_existing, _qeSnapshot);
+      /* BUILD 249: grava/renova timestamp para permitir expira\u00e7\u00e3o autom\u00e1tica (TTL) */
+      _merged._savedAt = Date.now();
       localStorage.setItem(_HM_KEY, JSON.stringify(_merged));
+      if (typeof _hmScheduleAutoClear === 'function') _hmScheduleAutoClear();
 
       /* Injeta de volta nos inputs da Home, Calculadoras e QE imediatamente */
       if (typeof _hmMirrorToLegacyInputs === 'function') {
@@ -14035,7 +14033,12 @@ function _updateGlobalPatientBar(currentPage) {
   if (!pd || (!pd.weight && !pd.age)) {
     try {
       const raw = localStorage.getItem('medcases_hm_patient_v1');
-      if (raw) { const saved = JSON.parse(raw); if (saved && (saved.weight || saved.age)) pd = saved; }
+      if (raw) {
+        const saved = JSON.parse(raw);
+        /* BUILD 249: ignora dados expirados (TTL) — não devem ressurgir na bar global */
+        const expired = saved && saved._savedAt && (Date.now() - saved._savedAt >= (window.HM_PATIENT_TTL_MS || Infinity));
+        if (saved && !expired && (saved.weight || saved.age)) pd = saved;
+      }
     } catch(_e) {}
   }
 
@@ -20470,6 +20473,10 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     /* ── ISRS ── */
     'Sertralina', 'Fluoxetina', 'Escitalopram', 'Citalopram',
     'Paroxetina', 'Fluvoxamina',
+    /* ── ISRN e Atípicos (BUILD 250: itens ausentes do autocomplete) ── */
+    'Venlafaxina', 'Desvenlafaxina', 'Duloxetina', 'Milnaciprana',
+    'Levomilnaciprano', 'Agomelatina', 'Vilazodona', 'Reboxetina',
+    'Mirtazapina', 'Bupropiona', 'Trazodona',
     /* ── IMAOs ── */
     'Fenelzina', 'Tranilcipromina', 'Selegilina', 'Rasagilina', 'Moclobemida',
     /* ── Tricíclicos ── */
@@ -21950,8 +21957,10 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Log estruturado ClCr */
     console.log('[CLCR] peso=' + data.weight + ' idade=' + data.age + ' sexo=' + (data.sex || '?') + ' creatinina=' + data.creatinine);
 
-    /* Persiste */
+    /* Persiste — BUILD 249: grava timestamp para permitir expira\u00e7\u00e3o autom\u00e1tica (TTL) */
+    data._savedAt = Date.now();
     try { localStorage.setItem(HM_KEY, JSON.stringify(data)); } catch(e) {}
+    _hmScheduleAutoClear();
 
     /* Sincroniza window.patientData para que openFarmacoDetail() use ClCr/Peso corretos */
     const derived = _hmComputeDerived(data);
@@ -22095,6 +22104,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 249 — AUTO-CLEAR (TTL) dos dados do paciente
+     ─────────────────────────────────────────────────────────────
+     Os dados fixados (Home, Quick-Edit) carregam um timestamp
+     "_savedAt". Um watcher periódico verifica se o tempo decorrido
+     ultrapassou window.HM_PATIENT_TTL_MS (default 15 min) e, se sim,
+     limpa automaticamente memória + localStorage + UI, garantindo
+     que o preview/app nunca continue exibindo dados de um paciente
+     antigo indefinidamente.
+  ═══════════════════════════════════════════════════════════════ */
+  let _hmAutoClearTimer = null;
+
+  function _hmGetSavedAt() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(HM_KEY) || 'null');
+      return (raw && raw._savedAt) ? raw._savedAt : null;
+    } catch(e) { return null; }
+  }
+
+  /* Verifica se os dados salvos já expiraram; se sim, limpa tudo */
+  function _hmCheckExpiry() {
+    const savedAt = _hmGetSavedAt();
+    if (!savedAt) return false;
+    const elapsed = Date.now() - savedAt;
+    if (elapsed >= window.HM_PATIENT_TTL_MS) {
+      if (typeof window.hmClearPatient === 'function') window.hmClearPatient();
+      console.log('[BUILD 249] Dados do paciente expiraram (TTL) e foram limpos automaticamente.');
+      return true;
+    }
+    return false;
+  }
+
+  /* Agenda (ou reagenda) o watcher: 1 setTimeout para o instante exato
+     da expiração + 1 setInterval de segurança para cobrir casos em que
+     a aba fica em background e o setTimeout é atrasado pelo navegador. */
+  function _hmScheduleAutoClear() {
+    if (_hmAutoClearTimer) { clearTimeout(_hmAutoClearTimer); _hmAutoClearTimer = null; }
+    const savedAt = _hmGetSavedAt();
+    if (!savedAt) return;
+    const remaining = window.HM_PATIENT_TTL_MS - (Date.now() - savedAt);
+    if (remaining <= 0) { _hmCheckExpiry(); return; }
+    _hmAutoClearTimer = setTimeout(_hmCheckExpiry, remaining + 250);
+  }
+  window._hmScheduleAutoClear = _hmScheduleAutoClear;
+  window._hmCheckExpiry = _hmCheckExpiry;
+  window._hmCancelAutoClear = function() {
+    if (_hmAutoClearTimer) { clearTimeout(_hmAutoClearTimer); _hmAutoClearTimer = null; }
+  };
+
+  /* Watcher de segurança — roda a cada 30s enquanto o app estiver aberto,
+     cobrindo casos de background-throttling do setTimeout principal */
+  setInterval(_hmCheckExpiry, 30000);
+
+  /* Revalida imediatamente quando a aba volta ao foco/visível —
+     evita "furos" caso o timer tenha sido pausado pelo navegador
+     enquanto o app estava minimizado/em background. */
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') _hmCheckExpiry();
+  });
+
   /* ─────────────────────────────────────────────
      hmLoadPatient()
      Chamada no DOMContentLoaded.
@@ -22105,6 +22174,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let data;
     try { data = JSON.parse(localStorage.getItem(HM_KEY) || 'null'); } catch(e) { data = null; }
     if (!data) return;
+
+    /* BUILD 249: dados expirados nunca são restaurados na UI */
+    if (data._savedAt && (Date.now() - data._savedAt >= window.HM_PATIENT_TTL_MS)) {
+      try { localStorage.removeItem(HM_KEY); } catch(e) {}
+      try { localStorage.removeItem('pacienteAtual'); } catch(e) {}
+      return;
+    }
+
+    /* Agenda o watcher para o restante do TTL desta sessão salva */
+    _hmScheduleAutoClear();
 
     /* Preenche os inputs da nova home */
     const fill = (id, val) => {
@@ -22147,6 +22226,8 @@ document.addEventListener('DOMContentLoaded', () => {
      Apaga dados salvos e reseta a UI.
   ───────────────────────────────────────────── */
   window.hmClearPatient = function() {
+    /* BUILD 249: cancela watcher de auto-expiração pendente (dados já foram limpos) */
+    if (_hmAutoClearTimer) { clearTimeout(_hmAutoClearTimer); _hmAutoClearTimer = null; }
     try { localStorage.removeItem(HM_KEY); } catch(e) {}
 
     ['hm-weight','hm-age','hm-height','hm-clcr','hm-creatinina'].forEach(id => {
@@ -22541,11 +22622,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  /* ── BUILD 250: Utilitário de debounce genérico ──────────────────
+     Causa raiz do lag de ~5s ao digitar peso/idade/altura/creatinina:
+     cada tecla disparava hmCalcCockcroft() → dispatchEvent('input')
+     em #hm-clcr → _renalInjectOrUpdate() + calcDrugDose() (rebuild
+     pesado de HTML do card de dose/bula) + hmShowInlineResult(),
+     tudo de forma síncrona na main thread, sem agrupamento.
+     _hmDebounce() agrupa chamadas sucessivas em uma só, executada
+     ~400ms após a última tecla digitada. ──────────────────────── */
+  function _hmDebounce(fn, delay) {
+    let timer = null;
+    return function(...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn.apply(this, args), delay);
+    };
+  }
+
+  /* Versão debounced de hmCalcCockcroft — usada SOMENTE nos listeners
+     de digitação contínua (peso/idade/altura/creatinina) abaixo.
+     Chamadas diretas e pontuais (Fixar Dados, toggle de sexo, urina
+     24h, disparo inicial) continuam síncronas via window.hmCalcCockcroft()
+     diretamente, sem atraso — não fazem parte da cascata por tecla. */
+  const _hmCalcCockcroftDebounced = _hmDebounce(function() {
+    if (typeof window.hmCalcCockcroft === 'function') window.hmCalcCockcroft();
+  }, 400);
+
   /* ── Listeners reativos para todos os campos que afetam o CG ── */
   (function _attachCGListeners() {
     ['hm-weight', 'hm-age', 'hm-height', 'hm-creatinina'].forEach(function(id) {
       var el = document.getElementById(id);
-      if (el) { el.addEventListener('input', window.hmCalcCockcroft); }
+      if (el) { el.addEventListener('input', _hmCalcCockcroftDebounced); }
     });
 
     /* Patch hmSetSex para re-calcular ao trocar sexo */

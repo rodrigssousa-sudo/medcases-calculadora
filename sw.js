@@ -22,7 +22,7 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v55';
+const CACHE_VERSION   = 'medcases-v57';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
 /* ── Lista canônica de 31 assets pré-cacheados no install ───

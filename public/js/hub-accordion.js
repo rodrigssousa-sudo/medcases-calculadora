@@ -683,18 +683,30 @@
       if (hookAttempts > 50) clearInterval(hookInterval);
     }, 100);
 
-    /* Expõe API pública */
-    window.HubAccordion = {
-      open:     hubOpen,
-      close:    _closeCard,
-      toggle:   hubToggle,
-      closeAll: hubCloseAll,
-      syncLang: _syncLang,
-    };
-
     /* Expõe hubToggle e hubOpen globalmente (usados por onclick= no HTML) */
     window.hubToggle = hubToggle;
     window.hubOpen   = hubOpen;
+
+    /* HOTFIX (Engenharia — DeepLink/Overlay): HubAccordion.open/toggle
+       NÃO podem capturar hubOpen/hubToggle por valor aqui — calculator-
+       overlay.js faz monkey-patch em window.hubOpen/window.hubToggle
+       DEPOIS deste init, e uma captura direta (open: hubOpen) ficaria
+       "congelada" na função ORIGINAL, ignorando o patch. Isso fazia
+       com que aberturas via window.HubAccordion.open() (usado pelo
+       deeplink-router.js para ?tab=farmacos etc.) NUNCA passassem por
+       openInOverlay() — a sub-tela full-screen nunca era acionada para
+       deep links, deixando qualquer conteúdo anteriormente movido para
+       #calculator-overlay-container (ex.: "Dados do Paciente" de uma
+       interação prévia na mesma sessão) visível por cima da resposta
+       do fármaco. Fix: delega em runtime para window.hubOpen/hubToggle
+       (sempre a versão mais recente, patched ou não). */
+    window.HubAccordion = {
+      open:     function (id, opts) { return window.hubOpen(id, opts); },
+      close:    _closeCard,
+      toggle:   function (id) { return window.hubToggle(id); },
+      closeAll: hubCloseAll,
+      syncLang: _syncLang,
+    };
 
     console.log('[HubAccordion] v2.0 pronto. Cards: patient, clcr, farmacos, interacoes, pediatria, gestante, infusao, hemodinamica, scores, fluidos, eletrolitos');
   }
