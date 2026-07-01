@@ -1,0 +1,108 @@
+/* ================================================================
+   MedCases Pro — BUILD 244: Navegação por Categorias Clínicas
+   ----------------------------------------------------------------
+   Vitrine horizontal de "pills" de categoria, exibida logo abaixo
+   da barra de busca de fármacos (#hm-drug-search) e acima da área
+   de resultados (#hm-drug-list). Permite explorar a base sem
+   digitar — clique na categoria lista todos os fármacos daquele
+   grupo. Desaparece com fade suave assim que o usuário digita.
+================================================================ */
+
+.hm-category-pills-wrap {
+  margin: 4px 0 10px;
+  opacity: 1;
+  max-height: 60px;
+  overflow: hidden;
+  transition: opacity 0.22s ease, max-height 0.22s ease, margin 0.22s ease;
+}
+
+/* Estado "escondido" — ativado via JS quando o usuário digita */
+.hm-category-pills-wrap.hm-cat-pills--hidden {
+  opacity: 0;
+  max-height: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+/* ── Container com rolagem horizontal nativa por toque ── */
+.hm-category-pills {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 8px;
+  padding: 4px 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;   /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge legado */
+}
+/* Esconde a barra de rolagem esteticamente (WebKit/Chrome/Safari) */
+.hm-category-pills::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Pill individual — design premium, cantos arredondados ── */
+.hm-cat-pill {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  border: 1px solid var(--border-subtle, rgba(56,189,248,0.12));
+  background: rgba(255,255,255,0.05);
+  color: var(--text-secondary, #94A3B8);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: background 0.18s ease, color 0.18s ease,
+              border-color 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+}
+.hm-cat-pill i {
+  font-size: 11px;
+  opacity: 0.85;
+}
+.hm-cat-pill:active {
+  transform: scale(0.94);
+}
+
+/* Pill ativa (categoria selecionada) */
+.hm-cat-pill.is-active {
+  background: var(--cyan-dim, rgba(56,189,248,0.15));
+  color: var(--cyan, #38BDF8);
+  border-color: rgba(56,189,248,0.45);
+  box-shadow: 0 2px 12px rgba(56,189,248,0.18);
+}
+
+/* Badge de contagem dentro da pill */
+.hm-cat-pill-count {
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.70;
+  background: rgba(255,255,255,0.10);
+  border-radius: 10px;
+  padding: 1px 6px;
+  line-height: 1.4;
+}
+.hm-cat-pill.is-active .hm-cat-pill-count {
+  background: rgba(56,189,248,0.20);
+  opacity: 0.95;
+}
+
+/* ── Light mode ── */
+body.light-mode .hm-cat-pill {
+  background: rgba(0,0,0,0.045);
+  border-color: rgba(0,0,0,0.08);
+  color: #475569;
+}
+body.light-mode .hm-cat-pill.is-active {
+  background: rgba(14,116,144,0.12);
+  color: #0E7490;
+  border-color: rgba(14,116,144,0.35);
+}
+body.light-mode .hm-cat-pill-count {
+  background: rgba(0,0,0,0.06);
+}

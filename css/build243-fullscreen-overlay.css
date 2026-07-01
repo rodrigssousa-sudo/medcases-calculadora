@@ -1,0 +1,159 @@
+/* ================================================================
+   MedCases Pro — BUILD 242: Calculator Fullscreen Overlay
+   ----------------------------------------------------------------
+   Nova arquitetura de UX: as calculadoras do Hub (Home) não mais
+   expandem inline (causava lentidão/saltos no WebView). Agora o
+   conteúdo de cada .hub-card-inner é MOVIDO (não clonado) para
+   dentro de #calculator-overlay-container, que cobre 100% da tela.
+
+   O card na Home permanece SEMPRE colapsado (apenas o header/trigger
+   é visível — "Dados do Paciente" incluso), e o formulário +
+   resultado só existem visualmente dentro da sub-tela ativa.
+================================================================ */
+
+#calculator-overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh; /* iOS dynamic viewport */
+  z-index: 9999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+  background: var(--bg-deep, #0F091E);
+  display: flex;
+  flex-direction: column;
+
+  /* Estado inicial: oculto, fora da tela (slide-up) */
+  transform: translateY(100%);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.30s cubic-bezier(0.22, 1, 0.36, 1),
+              visibility 0.30s step-end;
+}
+
+#calculator-overlay-container.is-active {
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform 0.30s cubic-bezier(0.22, 1, 0.36, 1),
+              visibility 0s;
+}
+
+/* Fundo igual ao app (mesmo gradiente roxo-midnight) */
+body:not(.light-mode) #calculator-overlay-container {
+  background: radial-gradient(ellipse at top, #1a0f38 0%, #0f091e 55%, #070711 100%);
+}
+body.light-mode #calculator-overlay-container {
+  background: radial-gradient(ellipse at top, #ede9f6 0%, #f3f0fb 50%, #f8f7ff 100%);
+}
+
+/* ── Barra de cabeçalho fixa ──
+   FIX BUILD 248 (ponto 4 — Fase 1): altura/paddings reduzidos em ~25%
+   (14px→10px vertical) para uma topbar mais fina/elegante.
+   HOTFIX (reversão): botão de fechar voltou para o lado DIREITO
+   absoluto (ver #calculator-overlay-close abaixo) — padding-right
+   reserva o espaço do botão à direita em vez de à esquerda. */
+#calculator-overlay-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  padding-top: max(10px, env(safe-area-inset-top, 0px));
+  padding-right: 58px;
+  background: rgba(15, 9, 30, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(56,189,248,0.18);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  flex-shrink: 0;
+}
+body.light-mode #calculator-overlay-header {
+  background: rgba(255,255,255,0.92);
+  border-bottom-color: rgba(0,0,0,0.08);
+}
+
+/* HOTFIX (reversão): posição ABSOLUTA no lado DIREITO da topbar,
+   mantendo o tamanho reduzido (28px) da topbar mais fina. */
+#calculator-overlay-close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(248,113,113,0.30);
+  background: rgba(248,113,113,0.12);
+  color: #F87171;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, background 0.15s ease;
+  z-index: 3;
+}
+#calculator-overlay-close:active {
+  transform: translateY(-50%) scale(0.90);
+  background: rgba(248,113,113,0.22);
+}
+
+#calculator-overlay-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--text-primary, #E2E8F0);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body.light-mode #calculator-overlay-title { color: #1e293b; }
+
+/* O close é 'position:absolute' e não ocupa mais espaço no fluxo
+   flex — o spacer fantasma que antes equilibrava o layout perdeu a
+   função e é ocultado (o padding-right de #calculator-overlay-header
+   já reserva o espaço do botão à direita). Mantido no DOM (compat.
+   com calculator-overlay.js) apenas sem ocupar largura. */
+#calculator-overlay-header .calc-overlay-spacer {
+  width: 0;
+  flex-shrink: 0;
+  display: none;
+}
+
+/* ── Corpo scrollável da sub-tela ── */
+#calculator-overlay-body {
+  flex: 1;
+  min-height: 0;
+  padding: 14px 13px 32px;
+}
+@media (min-width: 768px) {
+  #calculator-overlay-body { padding: 18px 22px 36px; max-width: 720px; margin: 0 auto; width: 100%; }
+}
+
+/* Dentro do overlay, o card some sua borda/gradiente de "trigger fechado"
+   pois agora ele é a tela inteira — apenas o conteúdo (.hub-card-inner) é exibido */
+#calculator-overlay-body .hub-card-inner {
+  padding: 0;
+  animation: none !important;
+}
+
+/* Trava o scroll de fundo (Home) enquanto a sub-tela está ativa */
+body.calc-overlay-open #scroll-content {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+/* Garante que o card na Home NUNCA exiba o body expandido —
+   toda a renderização acontece dentro do overlay. */
+.hub-card.is-open .hub-card-body {
+  display: none !important;
+}

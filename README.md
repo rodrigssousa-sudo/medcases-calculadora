@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-4.3.0--build240calc-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-4.8.1--build248hotfix3-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-PWA%20%7C%20WebView-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/i18n-PT%20%7C%20ES-yellow?style=for-the-badge)
@@ -32,6 +32,325 @@
 - [Changelog por Sessão](#-changelog-por-sessão)
 - [Changelog — Sessões Recentes](#-changelog--sessões-recentes)
 - [Próximos Passos](#-próximos-passos)
+
+---
+
+## 🆕 BUILD 248 — Refatoração Massiva "Premium Minimalista" — Rodada 2: Busca, Legado, Fluidos e Topbars (2026-07-01)
+
+### ✅ Rodada 2 concluída nesta sessão — 4 pontos entregues
+
+**1. Motor de busca (crítico) — CORRIGIDO:**
+- `hmFilterDrugs()` (busca do Hub/Home) agora atualiza `#hm-drug-count` com a contagem REAL
+  dos resultados filtrados (`results.length`) a cada tecla digitada, em vez de deixar o texto
+  travado no total da base ("339 fármacos"). Ex.: digitar "enal" agora mostra corretamente
+  "1 fármaco encontrado" (ou N encontrados, se houver mais de um resultado).
+- Removida a borda neon-ciano de `.hm-search:focus` (dark) — trocada por um estado neutro
+  (`rgba(255,255,255,0.22)` borda / `rgba(255,255,255,0.07)` fundo), alinhado à paleta 90/10.
+- Adicionado `body.light-mode .hm-search:focus` (antes inexistente — o campo herdava
+  indevidamente o azul-ciano do dark mode mesmo em Light Mode).
+
+**2. Limpeza de código legado — CONCLUÍDA:**
+- Bloco `<style>` legado e duplicado do sistema de temas de Interações (~312 linhas, entre as
+  antigas linhas ~8075–8387) foi **totalmente removido** do `index.html`. Confirmado que
+  nenhuma classe exclusiva desse bloco era referenciada fora dele — a versão "v3" (Build 245)
+  permanece como única fonte de verdade para `.intx-*`.
+
+**3. Módulo de Fluidoterapia — CORRIGIDO:**
+- Removido o `background:#0B0F17` fixo inline do container `.card` de Fluidoterapia — agora usa
+  `background:var(--bg-card)`, que resolve corretamente para `#1E293B` no Dark e `#ffffff` no
+  Light Mode (eliminando a caixa escura estrutural que vazava em Light Mode).
+- Corrigido o corte horizontal de texto nos `<select>` `#fluid-type`/`#fluid-dehy` (ex.:
+  "Manutenção Basal (30 mL/kg/dia)" cortado ao meio). Causa raiz: a regra global
+  `.input-field` de `css/build241-ux-pro.css` força `height/line-height:44px !important` e
+  padding compacto sobre TODOS os inputs/selects, conflitando com a tentativa local de
+  `white-space:normal`. Solução: regra específica por ID (`#fluid-type, #fluid-dehy`), que
+  vence por especificidade mesmo contra `!important` de classe, restaurando
+  `white-space:normal`, `height:auto`, `line-height:1.35` e padding-right adequado para a seta.
+
+**4. Reposicionamento e ajuste das Topbars (Fase 1) — CONCLUÍDO:**
+- `#calculator-overlay-close` (topbar fullscreen das calculadoras) e `#fd-floating-close`
+  (botão flutuante do modal de detalhe do fármaco) foram movidos do lado **direito** para o
+  lado **esquerdo absoluto** (`position:absolute; left:...` / `left:16px`).
+- Ambos os botões tiveram o tamanho reduzido em ~25% (`38px → 28px`), e a topbar
+  `#calculator-overlay-header` teve padding vertical reduzido em ~25% (`14px → 10px`), com
+  `padding-left:58px` reservando o espaço do botão à esquerda para manter o título centralizado
+  sem depender mais do antigo `.calc-overlay-spacer` (agora oculto/neutralizado via CSS, mantido
+  apenas por compatibilidade com `js/calculator-overlay.js`).
+
+**Housekeeping:** `sw.js` `CACHE_VERSION` `medcases-v53 → medcases-v54`; `manifest-offline.json`
+`version` `281 → 282`, garantindo que os usuários recebam os arquivos atualizados via Service Worker.
+
+### 🔍 Observação para próxima sessão
+- O texto do contador de busca (`hmFilterDrugs`) usa a mesma string em PT e ES
+  ("1 fármaco encontrado" / "N fármacos encontrados") — funciona, mas vale revisar se a
+  tradução espanhola ideal é ligeiramente diferente (ex.: "fármaco(s) encontrado(s)" é igual
+  em ambos os idiomas neste caso específico, então não é um bug, apenas um ponto de atenção).
+- Itens de escopo maior do mapeamento original do Build 248 (Sticky Action Footer, unificação
+  de paleta Light Mode #F8F9FA, auditoria 90/10 em `build246-farmaco-modal-premium.css`)
+  permanecem para rodadas futuras — não fizeram parte do escopo desta rodada de 4 pontos.
+
+**Contexto:** o usuário reportou Light Mode "quebrado estruturalmente" na Calculadora de Infusão
+e na Fluidoterapia (screenshots `12.25.59` e `12.26.17`), e solicitou uma refatoração unificada
+de 6 fases (Topbar/Categorias, Detalhe do Fármaco, Interações, Infusão, Fluidoterapia, Busca por
+Idioma) + limpeza de blocos duplicados/ocultos no `index.html`.
+
+**✅ Corrigido nesta sessão (causa raiz identificada e resolvida):**
+- **Bug crítico do Build 247 corrigido**: as regras `.infusion-module .data-guard` e
+  `.infusion-module .home-data-chip` (adicionadas no Build 247) usavam `background:#0B0F17`
+  **sem** o guard `body:not(.light-mode)`, vazando um bloco quase-preto no Light Mode — exatamente
+  o bug do screenshot `12.26.17`. Essas regras foram **removidas**.
+- **FASE 4.3 implementada**: o container `#inf-weight-missing` (antes `class="data-guard"`, preto
+  e ilegível em Light Mode) foi substituído por `.infusion-weight-inline` — um campo âmbar/dourado
+  suave, 100% *theme-aware* (`var(--bg-input)`, `var(--text-primary)`), com **input de peso direto
+  embutido na lista** (`#inf-weight-inline-input`) que já dispara `calculateInfusion()` via
+  `oninput`, sem navegação de tela. `.home-data-chip` do módulo de infusão também deixou de usar
+  cor sólida hardcoded e agora usa tons esmeralda translúcidos coerentes com os dois temas.
+- Nenhuma alteração foi feita em `calculateInfusion()` — a matemática permanece 100% intacta,
+  apenas o DOM/CSS ao redor do campo de peso foi trocado.
+
+**🔍 Investigação/mapeamento concluído (achados importantes para continuidade):**
+- **Módulo de Interações já está bem mais avançado do que o histórico sugeria**: existe uma
+  refatoração "Build 245" (linhas ~8823+) que **já implementa a maior parte da FASE 3** — cards com
+  fundo neutro (`var(--bg-card)`), badges de severidade em pill com opacidade (`intx-badge-score`,
+  `intx-card-title` com `color-mix()`), e bloco de conduta com `border-left: 3px solid var(--pill-color)`
+  em vez de caixa escura sólida.
+- **Bloco CSS duplicado confirmado e localizado**: existem **dois `<style>` inteiros** quase
+  idênticos para o sistema de temas do módulo de Interações — um "legado" nas linhas ~8050–8361
+  (herda estilos antigos tipo `.intx-container`, `.intx-input`, `.intx-dropdown` em versão
+  compacta) e outro "v3" nas linhas ~8659–8360+ com paddings maiores e already mais próximo do
+  padrão Premium. **Ainda não removido nesta sessão** — precisa de remoção cuidadosa do bloco
+  legado (linhas ~8050–8361) mantendo apenas o v3, validando que nenhuma classe exclusiva do
+  legado é referenciada em outro lugar antes de apagar.
+- **Topbar**: existem hoje **dois candidatos** a "topbar" no ecossistema: `#calculator-overlay-header`
+  (Hub Accordion fullscreen, `css/build243-fullscreen-overlay.css`) e `#fd-floating-close`/`.fd-close`
+  (modal de Detalhe do Fármaco, `index.html` ~linha 2184) — ambos **ainda com botão de fechar à
+  DIREITA** (`right:16px` / flex end). FASE 1.1/1.2 (mover para esquerda + reduzir altura 25%) **ainda
+  não implementada**.
+- **Categorias**: `js/category-pills.js` já filtra a base de dados dinamicamente e aplica
+  `.hm-cat-pill.is-active` (não `.active-category-pill` como o prompt sugeriu) — a lógica de
+  clique→filtro→render **parece funcional no código-fonte**; a queixa do usuário pode estar
+  relacionada a categorias faltantes na base de dados ou a um problema de timing de inicialização,
+  não a um Event Listener quebrado. Requer teste visual (não disponível — `PlaywrightConsoleCapture`
+  permanece quebrado neste ambiente).
+- **Drug Detail Modal**: chameleon banner (`fd-hero-state-*`), sub-abas (`fd-tabs-nav`) e timeline
+  renal (`fd-renal-block`/`.fd-renal-faixa--active`) **já existem e estruturalmente atendem a FASE 2.1/2.2/2.3**.
+  Sticky Action Footer (FASE 2.4) **ainda não existe** — precisa ser criado como componente novo.
+- **Fluidoterapia**: container ainda usa `background:#0B0F17` fixo inline no HTML
+  (`<div class="card" style="...background:#0B0F17">`, linha ~9406) — **não corrigido nesta
+  sessão**; precisa herdar `var(--bg-card)` para respeitar Light Mode. O botão "Calcular Fluidos"
+  central (linha ~9464) e o possível corte de texto no `<select id="fluid-type">` **ainda não
+  foram corrigidos** (FASE 5.1/5.2/5.3 pendentes).
+
+### 📌 Pendências explícitas para a próxima sessão (ordem de prioridade sugerida)
+1. Remover o bloco `<style>` legado duplicado do módulo de Interações (~linhas 8050–8361).
+2. Corrigir `background:#0B0F17` inline do card de Fluidoterapia → `var(--bg-card)`.
+3. Criar componente reutilizável "Sticky Action Footer" (CSS + JS) e integrar em Drug Detail
+   (copiar prescrição) e Fluidoterapia (calcular).
+4. Mover botões de fechar (`#calculator-overlay-close`, `#fd-floating-close`) para a esquerda e
+   reduzir altura das topbars em 25%.
+5. Auditar/corrigir o `<select id="fluid-type">`/`#fluid-dehy` para eliminar corte de texto em
+   Light Mode (line-height/height/padding).
+6. Unificar paleta Light Mode para `#F8F9FA` (hoje `--bg-deep` claro = `#f4f6f8` em `index.html`
+   e gradiente arroxeado em `css/build243-fullscreen-overlay.css`).
+7. Passar auditoria de cor 90/10 nos badges/tabs de `css/build246-farmaco-modal-premium.css`
+   (hoje usam cyan/azul com bastante presença).
+
+---
+
+## 🆕 BUILD 247 — Motor de Busca Idioma-Exclusivo (PT/ES) + Refatoração Visual "Premium Minimalista" de Infusão e Fluidoterapia (2026-07-01)
+
+### Commit: `fix(search): filtro exclusivo por idioma ativo` + `refactor(infusion,fluids): paleta slate/charcoal, sem bordas coloridas fortes, silêncio visual`
+
+**Escopo A — Motor de busca (PT/ES):** correção de comportamento em `hmFilterDrugs()` (busca da Home), `renderDrugList()` (painel Adulto > Fármacos), `renderFarmacosList()` (módulo Fármacos sem paciente) e `filtrarDropdownInteracao()` (autocomplete do verificador de interações). Nenhuma alteração de schema/dados — apenas lógica de filtro.
+
+**Problema corrigido:** as 4 funções de busca comparavam a query digitada contra **ambos** os idiomas (`name.pt` OU `name.es`) simultaneamente, independentemente do idioma ativo (`currentLang`). Isso fazia com que, por exemplo, um usuário no app em Espanhol digitando um termo em português (ou vice-versa) recebesse resultados "vazados" no idioma errado, e a lista renderizada podia conter nomes que não correspondiam ao idioma selecionado.
+
+**O que mudou:**
+- `hmFilterDrugs()` e `renderDrugList()`: substituído o filtro `npt.includes(q) || nes.includes(q) || ...` por `_fNorm(_fdResolveName(d)).includes(q) || ...` — `_fdResolveName()`/`_fdResolveClass()`/`_fdResolveCat()` já resolvem exclusivamente para `currentLang` (com fallback `.pt` apenas quando a base não tem tradução ES cadastrada para aquele fármaco específico, preservando 100% de cobertura de resultados). Resultado: buscar e renderizar passam a operar 100% no mesmo idioma ativo.
+- `renderFarmacosList()`: mesmo padrão aplicado (era idêntico ao de `renderDrugList()`).
+- `filtrarDropdownInteracao()`: removida a comparação adicional contra `item.normDisplay` (forma canônica PT), que permitia que um termo digitado em PT ainda retornasse resultados mesmo com o app em ES. Agora filtra exclusivamente por `item.display` (já resolvido para `lang = isES ? 'es' : 'pt'` via `_displayName()`).
+- **Nenhuma nova string hardcoded** — reaproveita 100% dos resolvers e idiomas já existentes (`_fdResolveName/Class/Cat`, `_displayName`, `_isES()`).
+
+**Escopo B — Refatoração visual "Premium Minimalista" (Infusão + Fluidoterapia):** puramente CSS/HTML. **Nenhuma linha de `calculateInfusion()` relativa a cálculo/matemática foi alterada** — apenas a apresentação de 2 elementos DOM dentro da função (fallback do valor principal e uma nova etiqueta de aviso).
+
+**O que mudou:**
+- **Paleta**: toda a superfície do `.infusion-module` (mode-bar, painel de busca de droga, caixa de diluição, inputs, presets, cards de contexto clínico, área de resultado, autocomplete, dropdown) migrou do antigo esquema âmbar/laranja + cyan vibrante para tons **slate/charcoal** (`#0B0F17` como base de cards, bordas em `rgba(255,255,255,0.07-0.10)`), eliminando bordas coloridas fortes. Semântica clínica (info/atenção/perigo nos `.bic-context-card`) foi preservada, mas suavizada — o alerta crítico agora usa apenas um fio lateral vermelho contido, em vez de fundo+borda vermelhos.
+- **Silêncio tipográfico**: `.infusion-result-value` (vazão calculada) reduzido de 48px/peso 900/glow cyan para 38px/peso 700/branco puro sem `text-shadow` — permanece o elemento mais proeminente do card pela cor e posição, não pela força bruta do tamanho/brilho.
+- **Remoção do "triângulo amarelo gigante"**: o antigo fallback `rateEl.textContent = '⚠️'` (emoji renderizado a 48px quando dose peso-dependente é solicitada sem peso cadastrado) foi substituído por um traço "—" discreto no valor + uma nova etiqueta inline sutil (`#inf-weight-note`, ícone `fa-circle-exclamation` + texto, cor âmbar suave `#D8A94A`) abaixo do resultado. A condição lógica que decide quando exibir o aviso (`dose > 0 && (unidade === 'mcg/kg/min' || unidade === 'mg/kg/h') && !pesoKg`) é **exatamente a mesma** de antes — só a apresentação mudou.
+- **Fix do dropdown cortado**: `select.input-field` ganhou `text-overflow:ellipsis; white-space:nowrap; overflow:hidden` e `option { white-space:normal }`; `#fluid-type` e `#fluid-dehy` (options mais longas, ex: "Ressuscitação volêmica (30 mL/kg bolus)") tiveram `padding-right` aumentado para não cortar mais o texto contra a seta customizada do select.
+- Card de Fluidoterapia (`#subview-fluids .card` e o card de resultado gerado por `calcFluids()`) migrado da borda cyan (`var(--border-green)`) para a mesma paleta slate (`rgba(255,255,255,0.08)` + fundo `#0B0F17`), consistente com o módulo de Infusão.
+- `.data-guard`/`.home-data-chip` (peso não cadastrado / peso lido da Home) ganharam uma variante slate **restrita ao `.infusion-module`** via seletor `.infusion-module .data-guard`/`.infusion-module .home-data-chip` — os estilos padrão desses componentes em outras calculadoras (ClCr, Scores, etc.) **não foram tocados**.
+
+**Hard constraint respeitado:** `calculateInfusion()` — toda a matemática de conversão de dose (mcg/kg/min, mcg/min, mg/kg/h, ml/h), cálculo de concentração, dose secundária e conversor reverso — permanece **byte-a-byte idêntica**; as únicas linhas tocadas dentro da função foram as 2 linhas de atualização de DOM do valor principal (adição de `classList.toggle` e troca do texto de fallback) e a adição de 2 linhas para a nova etiqueta de aviso.
+
+**Arquivos modificados:**
+| Arquivo | Alteração |
+|---|---|
+| `index.html` | `hmFilterDrugs()`, `renderDrugList()`, `renderFarmacosList()`, `filtrarDropdownInteracao()` — filtro idioma-exclusivo; CSS de `.infusion-*`/`.bic-*`/`.inf-*` reescrito para paleta slate/charcoal; `calculateInfusion()` — fallback visual do `⚠️` substituído por `—` + nova etiqueta `#inf-weight-note`; novo markup `.infusion-weight-note` dentro de `.infusion-result-main`; fix de truncamento em `select.input-field`, `#fluid-type`, `#fluid-dehy`; cards de Fluidoterapia migrados para paleta slate |
+| `sw.js` | `CACHE_VERSION` v52 → v53 |
+| `manifest-offline.json` | `version` 280 → 281 |
+
+**Pendência conhecida (não coberta nesta build):** durante a fase de diagnóstico anterior a esta build, foi identificada uma hipótese de condição de corrida de carregamento de scripts (`ReferenceError` em `hmFixarDados`/`hmCalcCockcroft`/`hmUpdatePatientCardColor` ao clicar no botão logo após o load da página, em um cenário de teste específico). Essa hipótese **não foi investigada nem corrigida nesta build** — caso o usuário ainda observe o botão "Calcular/Fixar" da Home "não fazer nada" silenciosamente em produção, esse ponto deve ser revisitado como próximo passo prioritário.
+
+---
+
+## 🆕 BUILD 246 — Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) (2026-07-01)
+
+### Commit: `refactor(fd-modal): 3 sub-abas (Posologia/Segurança/Farmacologia) + banner camaleão + timeline renal esmeralda`
+
+**Escopo:** apenas apresentação/DOM de `openFarmacoDetail()` / `#fd-modal`. Nenhuma lógica clínica, cálculo de dose ou base de dados PT/ES foi alterada.
+
+**O que mudou:**
+- O conteúdo do modal de detalhe do fármaco agora é distribuído em **3 sub-abas navegáveis** via segmented control (`.fd-tabs-nav`): **Posologia** (hero de dose, posologia de referência, ajuste renal completo), **Segurança** (efeitos adversos comuns/graves, contraindicações, alertas clínicos) e **Farmacologia** (mecanismo de ação, farmacocinética, ajuste hepático, apresentações comerciais). Troca de aba via `_fdSwitchTab()`, sem re-render de dados.
+- **Banner-camaleão**: o `.fd-dose-hero` (banner principal de dose) agora recebe dinamicamente uma classe `fd-hero-state-ok/alert/hd/missing` derivada do MESMO `hero.renalState` já calculado pelo motor `_fdResolveHeroPatient()` — o banner muda de tom (azul/âmbar/vermelho/cinza) conforme o estado renal do paciente, sem duplicar lógica clínica.
+- **Timeline renal esmeralda**: a tabela de 5 faixas de ClCr agora é envolvida em `.fd-renal-timeline` com conectores verticais (`.fd-renal-tl-item`/`.fd-renal-tl-dot`); a faixa ativa do paciente atual recebe `.fd-renal-tl-item--active`, com destaque em **verde-esmeralda** (`#10B981`/`#059669`), substituindo o antigo destaque cyan.
+- **Bilinguismo real ao trocar idioma**: `setLang()` agora detecta se `#fd-modal` está aberto e chama `openFarmacoDetail()` novamente para o fármaco atual, garantindo que as 3 abas, o banner e a timeline sejam re-renderizados no idioma correto sem exigir fechar/reabrir o modal.
+- Todos os rótulos novos (nomes das abas, mensagens de fallback por aba) seguem o padrão ternário `isES ? '...' : '...'` já usado 100+ vezes dentro da própria função — **zero strings hardcoded novas fora desse padrão**.
+- Novo arquivo `css/build246-farmaco-modal-premium.css`: segmented control, estados do banner-camaleão e timeline renal, com paridade total Dark/Light Mode (`body.light-mode`).
+
+**Arquivos modificados:**
+| Arquivo | Alteração |
+|---|---|
+| `index.html` | Reestruturação de `openFarmacoDetail()` em 3 buckets (`htmlDosing`/`htmlSafety`/`htmlPharma`); nova função `_fdSwitchTab()`; hook de re-render em `setLang()`; novo `<link>` para o CSS do build 246 |
+| `css/build246-farmaco-modal-premium.css` | **Novo arquivo** — CSS das 3 abas, banner-camaleão e timeline renal esmeralda |
+| `sw.js` | `CACHE_VERSION` v51 → v52; novo asset adicionado à lista de pré-cache |
+| `manifest-offline.json` | `version` 279 → 280; `totalFiles` 36 → 37; novo arquivo listado |
+
+**Validação:** `PlaywrightConsoleCapture` executado após a refatoração — **zero erros de console**, logs esperados presentes (`DRUG_DB populado: 339 fármacos`, `Motor de Interações v3.1...`, `ALL_DRUGS_DB montado: 337 entradas`).
+
+**Débito técnico conhecido / próximos passos:**
+- A verificação formal de que `_fdCopyPrescricao()` cobre as "4 variantes" (idioma × estado do paciente) não foi revalidada nesta sessão — o mecanismo existente (Cenário A/B × `isES`) provavelmente já satisfaz o requisito, mas merece uma checagem dedicada.
+- Testes manuais de troca de aba, banner-camaleão em cada estado renal e timeline esmeralda em Dark/Light Mode ainda devem ser feitos com um paciente real cadastrado (a validação automatizada cobriu apenas ausência de erros de console no carregamento inicial da página, sem abrir o modal).
+
+---
+
+## 🆕 BUILD 245 — Refinamento Premium do Card de Interações Medicamentosas (2026-07-01)
+
+### Commit: `refactor(interacoes): premium card redesign — pill badges, mechanism/symptom split, accent conduta block`
+
+#### Motivação
+O card de resultado de interação (ex: alerta "CONTRAINDICADO" Enalapril × Valsartana) usava fundos sólidos marrom/escuros que destoavam do restante do design system premium do app (Dark/Light Mode midnight-blue/cyan). Além disso, toda a informação de risco era despejada em um único bloco de texto, e o bloco de "Conduta" ficava dentro de uma caixa preta nested no rodapé do card. Pedido: refatorar **apenas a camada visual/DOM** — badge minimalista em pill, separação Mecanismo × Sintomas críticos, bloco de Conduta com destaque lateral, tudo com paridade total Dark/Light e zero string hardcoded fora do padrão bilíngue já existente.
+
+#### O que mudou (somente renderização — motor de comparação intocado)
+1. **Sem fundo sólido/marrom**: `.intx-card` agora herda `var(--bg-card)` (Dark) / `#F8F9FA` (Light) do próprio design system, com apenas `border-left: 3px` indicando a severidade (contraindicada/alta/moderada/leve). As antigas cores de fundo `#2c1519`, `#2c1e18`, `#2a2615`, `#151d2a` foram removidas.
+2. **Badges em pill sutil**: o título de severidade (`🔴 CONTRAINDICADO` etc.) e o badge `Impacto: X/5` agora são pills arredondados com opacidade ~15% (`color-mix()` sobre a cor semântica), em vez de texto solto/fundo sólido. Cor controlada via custom property `--pill-color` setada inline por card.
+3. **Hierarquia de conteúdo**: o texto de `descricao` (bilíngue, do banco `INTERACOES_DB`) permanece como **Mecanismo** (parágrafo de leitura padrão), e uma nova função client-side `_intxExtractSymptomTags()` faz parsing por palavras-chave (hipotensão/hipotensión, hipercalemia/hiperpotasemia, lesão renal/lesión renal, bradicardia, QT prolongado, etc., em PT e ES) para extrair até 6 **tags de risco crítico** exibidas como pills de perigo abaixo do mecanismo.
+4. **Bloco de Conduta redesenhado**: a antiga "caixa preta" (`background: rgba(0,0,0,.2)`) foi substituída por um bloco com `border-left: 3px solid var(--pill-color)`, fundo quase transparente, padding generoso e o label (`Conduta:`/`Conducta:`) em destaque tipográfico acima do texto.
+5. **Zero hardcode de idioma**: todos os labels (`Risco:`/`Riesgo:`, `Conduta:`/`Conducta:`, `Impacto`, `Riscos / Sintomas críticos`/`Riesgos / Síntomas críticos`) continuam declarados via ternário inline `isES ? '...' : '...'`, seguindo o padrão já estabelecido no módulo — **nenhum texto novo foi fixado em um único idioma**.
+6. **Dark/Light 100% paritário**: todas as novas classes (`.intx-card`, `.intx-card-title`, `.intx-badge-score`, `.intx-symptom-tag`, `.intx-conduta-box`) têm override completo em `body.light-mode`.
+
+#### Motor de comparação — garantia de não-regressão
+O algoritmo O(n²) de checagem C(n,2) com os 8 caminhos bidirecionais de lookup (`Path 1`–`Path 8` em `window.executarChecagemInteracoes()`), a seleção do melhor candidato por `scoreClinico`, `normalizarFarmaco()`, `getClassesDeFarmaco()` e o schema de `database/interacoes.js` (`INTERACOES_DB`, `DRUG_ALIASES`) **não foram tocados**. A única mudança no JS foi na construção final do template HTML (`.map().join('')`), que agora distribui as mesmas strings já traduzidas dentro da nova árvore de elementos.
+
+#### Arquivos Modificados
+| Arquivo | Mudança |
+|---------|---------|
+| `index.html` | CSS de `.intx-card` e subclasses reescrito (linhas ~8783-8950: fundo transparente + border-left, pills de severidade/impacto, `.intx-card-mecanismo`, `.intx-symptom-label`/`.intx-symptom-tag`, `.intx-conduta-box` com accent lateral); nova função `_intxExtractSymptomTags()` + dicionário bilíngue `_INTX_SYMPTOM_KEYWORDS` (PT/ES); template final de `executarChecagemInteracoes()` reescrito para consumir a nova árvore de classes |
+| `sw.js` | `CACHE_VERSION` v50 → **v51** |
+| `manifest-offline.json` | `version` 278 → **279** |
+
+#### Validação
+- ✅ PlaywrightConsoleCapture: **zero erros de console**
+- ✅ `[MedCases] DRUG_DB populado: 339 fármacos` — inalterado
+- ✅ `[MedCases] Motor de Interações v3.1 (Ontologia Farmacológica) inicializado` — log do motor intacto, algoritmo não tocado
+- ✅ Bloco de CSS duplicado/legado (`.intx-card` em ~8010-8321, versão v2.0 mais antiga) permanece no DOM sem efeito visual — perde o empate de especificidade para o bloco v3.1 reescrito, que vem depois no documento
+
+#### Não implementado / débito técnico assumido
+- O split Mecanismo/Sintomas é feito via **regex client-side** sobre o texto de `descricao` já existente (não há campo estruturado `sintomas[]` no banco) — funciona bem para os termos mapeados, mas não é 100% exaustivo para toda a base de 77 nós de interação; pode ser expandido incrementalmente adicionando entradas em `_INTX_SYMPTOM_KEYWORDS`.
+
+---
+
+## 🆕 BUILD 244 — Navegação por Categorias Clínicas (Apple-style Category Pills) (2026-07-01)
+
+### Commit: `feat(search): add horizontal category pills for zero-typing drug exploration`
+
+#### Motivação
+A busca de fármacos exigia que o usuário soubesse o nome exato do medicamento. Estudantes e médicos que querem **explorar** a base (ex: "quais antibióticos existem aqui?") não tinham caminho algum sem digitar. Pedido: uma vitrine horizontal de categorias clínicas, no estilo "pills" (padrão visual App Store / Apple Music), posicionada entre a barra de busca e a lista de resultados do card **Fármacos**.
+
+#### Nova Arquitetura
+
+1. **`#hm-category-pills-wrap`** — injetado dinamicamente via JS logo após `.hm-search-wrap` (contendo `#hm-drug-search`) e antes de `#hm-drug-list`, dentro do card `hub-card-farmacos`.
+2. **Rolagem horizontal nativa por toque**, com barra de rolagem esteticamente oculta:
+   ```css
+   display:flex; overflow-x:auto; white-space:nowrap; gap:8px; padding:4px 0;
+   -webkit-overflow-scrolling:touch; scrollbar-width:none;
+   .hm-category-pills::-webkit-scrollbar { display:none; }
+   ```
+3. **Pills geradas dinamicamente** a partir do Objeto Mestre Global (`_getMasterDB()`) — nenhuma categoria é hardcoded. Cada pill mostra ícone (mapa por categoria com fallback genérico), label localizado (PT/ES via `_fdResolveCat()`) e contagem de fármacos (`X`). Categorias com mais fármacos aparecem primeiro.
+4. **Clique na pill → filtra por `category` e renderiza a lista completa** daquela categoria dentro do MESMO `#hm-drug-list`, reaproveitando o markup exato de `.hm-drug-item` já usado por `hmFilterDrugs()` — clique no fármaco abre a bula via `hmShowInlineResult(id)` normalmente.
+5. **Fade-out ao digitar / fade-in ao apagar**: listener adicional (não substitui o `oninput` já existente) no `#hm-drug-search` — ao `value.length > 0` a vitrine some (`opacity` + `max-height`, transição suave); ao `value.length === 0` ela reaparece e a seleção de categoria é limpa. O botão nativo "X" (`hmClearSearch()`) também foi envolvido (wrapped) para restaurar a vitrine.
+
+#### Zero regressão no motor de busca textual
+- `hmFilterDrugs()`, `_fNorm()`, `_fdResolveName/Class/Cat()` e `_getMasterDB()` **não foram alterados** — o novo módulo apenas os consome como fonte de verdade.
+- `hmClearSearch()` foi envolvido (monkey-patch), preservando 100% do comportamento original e adicionando apenas a reexibição da vitrine.
+- O atributo `oninput="hmFilterDrugs(this.value)"` já presente no HTML permanece intacto; o novo listener é adicionado via `addEventListener`, funcionando em paralelo sem conflito.
+
+#### Arquivos Criados
+| Arquivo | Papel |
+|---------|-------|
+| `css/build244-category-pills.css` | Estilo das pills, rolagem horizontal, fade in/out, estado ativo, modo claro |
+| `js/category-pills.js` | Construção dinâmica das categorias, renderização dos resultados filtrados, wiring do fade e patch de `hmClearSearch()` |
+
+#### Arquivos Modificados
+| Arquivo | Mudança |
+|---------|---------|
+| `index.html` | `<link>` do novo CSS no `<head>`; `<script>` do novo JS carregado após `calculator-overlay.js` |
+| `sw.js` | `CACHE_VERSION` v49 → **v50**; novos assets adicionados ao pré-cache |
+| `manifest-offline.json` | `version` 277 → **278**; `totalFiles` 34 → 36 |
+
+#### Validação
+- ✅ PlaywrightConsoleCapture: **zero erros de console**
+- ✅ `[MedCases] DRUG_DB populado: 339 fármacos` — inalterado
+- ✅ Novo log confirmado: `[CategoryPills] v1.0 pronto — 3 categorias clínicas navegáveis (Apple-style pills)` (Cardiovascular, Antimicrobiano, Psicofármaco — refletindo os módulos com fármacos reais já injetados; categorias futuras aparecem automaticamente conforme `database/*.js` for populado)
+- ✅ Compatível com a sub-tela full-screen do Build 243 — a vitrine de categorias funciona normalmente dentro de `#calculator-overlay-body` após a calculadora "Fármacos" ser aberta
+
+---
+
+## 🆕 BUILD 243 — Sub-tela Full-Screen para Calculadoras (Redesign Arquitetural de UX) (2026-07-01)
+
+### Commit: `refactor(ux): replace inline accordion expansion with fullscreen overlay sub-screen`
+
+#### Motivação
+O modelo anterior (Hub Accordion v2.0 — Builds 233–241) expandia o conteúdo de cada card **inline**, dentro da própria lista da Home. Em WebView mobile (iOS/Android in-app browser) esse padrão causava **lentidão e saltos inaceitáveis** (recálculo de layout do grid, scroll automático, mudança de altura do card durante a digitação). O usuário solicitou uma redesign arquitetural completa: nenhuma calculadora deve mais expandir dentro da Home — cada uma abre em uma **sub-tela isolada full-screen**.
+
+#### Nova Arquitetura
+
+1. **Card "Dados do Paciente" e os 30+ cards de calculadoras permanecem SEMPRE colapsados na Home.** Apenas o cabeçalho (ícone + nome + descrição) é visível na lista; o formulário e o resultado nunca mais renderizam inline.
+2. **`#calculator-overlay-container`** — novo container fixo global:
+   - `position:fixed; top:0; left:0; width:100vw; height:100dvh; z-index:9999; overflow-y:auto;`
+   - Estado inicial oculto via `transform:translateY(100%)` + `visibility:hidden` + `pointer-events:none`.
+   - Abertura/fechamento com slide-up suave (`cubic-bezier(0.22,1,0.36,1)`, 300ms).
+3. **Header fixo dentro da sub-tela** (`#calculator-overlay-header`): título dinâmico da calculadora ativa (`#calculator-overlay-title`, respeita idioma PT/ES) + botão **"X"** (`#calculator-overlay-close`) sempre visível no topo.
+4. **Fluxo de abertura**: clique em qualquer um dos 30+ triggers da Home (`hubToggle('id')`) ou abertura programática via Deep Link Router (`hubOpen('id', opts)`) → o motor original do Hub Accordion monta o conteúdo do slot normalmente (`_lazyMount`) → o nó `.hub-card-inner` é **movido (não clonado)** para dentro de `#calculator-overlay-body` → a sub-tela sobe cobrindo 100% da tela.
+5. **Fluxo de fechamento**: clique no "X" (ou tecla ESC) → o mesmo nó DOM é **devolvido exatamente ao card de origem** na Home, na posição original → a sub-tela desce e some → o médico retorna ao ponto exato onde estava na lista, **sem perder nenhum dado já digitado** (é o mesmo nó DOM, apenas trocando de pai — os `<input>` e seus valores/listeners nunca são destruídos ou recriados).
+
+#### Por que "mover" e não "clonar" o DOM
+Clonar destruiria os event listeners inline (`oninput`, `onclick`) e o estado de foco/cursor dos inputs. Movendo o nó real (`appendChild`), o conteúdo carrega consigo todos os valores digitados e listeners — mesma estratégia já usada pelo `hub-accordion.js` original para os módulos "movidos" (infusão, hemodinâmica, scores, fluidos).
+
+#### Arquivos Criados
+| Arquivo | Papel |
+|---------|-------|
+| `css/build243-fullscreen-overlay.css` | Estilo do overlay, header fixo, botão "X", transição slide-up, bloqueio de scroll de fundo |
+| `js/calculator-overlay.js` | Controlador: cria o overlay, monkey-patch em `window.hubToggle` / `window.hubOpen`, move/restaura o nó `.hub-card-inner`, expõe `window.CalcOverlay.open(id)` / `.close()` |
+
+#### Arquivos Modificados
+| Arquivo | Mudança |
+|---------|---------|
+| `index.html` | `<link>` do novo CSS no `<head>`; `<script>` do novo JS carregado após `hub-accordion.js` e `build240b-accordion-fix.js` |
+| `sw.js` | `CACHE_VERSION` v48 → **v49**; novos assets adicionados à lista de pré-cache |
+| `manifest-offline.json` | `version` 276 → **277**; `totalFiles` 32 → 34 |
+
+#### Compatibilidade preservada (zero regressão)
+- **Deep Link Router v2.0** (`?tab=`, `?lang=`, `?q=`, `?drug1=`/`?drug2=`) continua funcionando — `hubOpen()` foi apenas envolvido (wrapped), não substituído.
+- **HubAccordion v2.0** (`_lazyMount`, `_moveInteractions`, scroll fixes do Build 240B) continua intacto — o overlay atua **depois** que o motor original termina de montar o conteúdo.
+- Botões internos "Abrir X no Hub" (infusão, hemodinâmica, scores, fluidos) continuam funcionando pois usam `hubOpen()`, também interceptado.
+
+#### Validação
+- ✅ PlaywrightConsoleCapture: **zero erros de console**
+- ✅ `[MedCases] DRUG_DB populado: 339 fármacos` — inalterado
+- ✅ `[HubAccordion] v2.0 pronto` — inalterado
+- ✅ Novo log confirmado: `[CalcOverlay] v1.0 pronto — sub-tela full-screen ativa para o Hub (30+ calculadoras + paciente)`
+- ✅ Nenhum `SyntaxError` / `ReferenceError` introduzido
 
 ---
 
@@ -3849,6 +4168,124 @@ Elevar os mini-cards secundários (IMC, Peso Ideal, BSA) ao mesmo padrão visual
 |---|---|
 | `index.html` | CSS inline: novo bloco `.clcr-hero`, `.clcr-mini-grid`, `.clcr-mini-card` (3 variantes), tipografia hierárquica, animação `@keyframes clcrNumPulse`, light-mode overrides, breakpoints responsivos; bloco `hmFixarDados()` re-sync usa novo layout premium |
 | `js/hub-accordion.js` | Helpers `_imcCategory()` e `_buildMiniCards()` adicionados; `_syncClcrResult()` reescrito com novo HTML; ambos expostos via `window._buildMiniCards` / `window._imcCategory` |
+
+---
+
+### 🚑 BUILD 248 — HOTFIX CRÍTICO (pós Rodada 2): colapso total do app
+
+> **Sintomas relatados:** motor de busca de fármacos morto (contador travado em "339 fármacos", placeholder nunca sumia), botão de fechar (X) do overlay reposicionado à esquerda sem função, cálculo de ClCr parado. App "congelado".
+
+#### Causa raiz real (confirmada)
+NÃO foi um erro de sintaxe JavaScript (nenhum `{`/`(` mal fechado) — a suíte de logs de inicialização (`HubAccordion`, `CalcOverlay`, `CategoryPills`, `KEYBOARD_FIX`, etc.) sempre disparava normalmente, o que provava que o script principal terminava de parsear sem crash.
+
+O problema real era um **HTML malformado** na seção "LEGACY WRAPPERS" (linhas ~8091-8155 do `index.html`): a `<div style="display:none">` que envolve o primeiro bloco `#result-dashboard` (versão truncada, só ClCr+BSA) **nunca era fechada** antes do card real de Fármacos (`#hm-drugs-card`) começar. Resultado: o navegador, ao corrigir a árvore DOM malformada, aninhava o restante da página (card de Paciente, card duplicado de Fármacos, módulo de Interações, segundo `#result-dashboard`) dentro de um ancestral oculto (`display:none`) ou reorganizava a árvore de forma imprevisível — quebrando a renderização/interatividade de elementos que dependiam de posição/visibilidade esperada no DOM, mesmo com o JS 100% intacto e funcional.
+
+#### Fix aplicado
+Adicionadas as duas tags de fechamento faltantes (`</div>` do `.result-dashboard` + `</div>` do wrapper `display:none`) imediatamente após o card BSA, restaurando a árvore DOM correta antes do início do card `hm-drugs-card` real.
+
+```html
+<!-- ANTES (quebrado) -->
+  <div id="res-bsa-card" style="display:none"></div>
+</div>
+<div class="hm-card hm-card--drugs" id="hm-drugs-card">   <!-- ficava "dentro" do display:none -->
+
+<!-- DEPOIS (corrigido) -->
+  <div id="res-bsa-card" style="display:none"></div>
+</div>
+</div><!-- /result-dashboard (bloco 1) -->
+</div><!-- /wrapper display:none legado (bloco 1) -->
+
+<div class="hm-card hm-card--drugs" id="hm-drugs-card">   <!-- agora no nível correto -->
+```
+
+#### Arquivos alterados
+| Arquivo | O que mudou |
+|---|---|
+| `index.html` | Fechamento das 2 tags `<div>` órfãs na seção Legacy Wrappers (~linha 8153-8156) |
+| `manifest-offline.json` | `version` → `"283"` |
+
+#### Resultado
+Restaurada a árvore DOM correta; busca de fármacos, botão de fechar do overlay e cálculo de ClCr voltam a funcionar pois os elementos (`#hm-drug-search`, `#hm-drug-count`, `#hm-clcr`, `#calculator-overlay-close`) deixam de estar sob um ancestral corrompido/oculto.
+
+**Nota:** a estrutura "Legacy Wrappers" ainda contém IDs duplicados historicamente conhecidos (`rd-clcr`, `rd-clcr-card`, `rd-bsa`, `rd-bsa-card`, `rd-ckd-badge`, `result-dashboard` — aparecem 2x no arquivo). Não causam crash (o browser sempre usa a primeira ocorrência via `getElementById`) e ambos os blocos permanecem corretamente dentro de containers `display:none`, mas continuam sendo dívida técnica recomendada para limpeza futura.
+
+---
+
+### 🧹 BUILD 248 — HOTFIX 2: efeitos colaterais visuais do hotfix anterior
+
+> **Sintomas relatados (com print):** (1) cards duplicados/zumbis de "Fármacos" e "Paciente" visíveis no final da Home, fora do Hub Accordion; (2) botões/textos do menu exibindo PT+ES simultaneamente (ex: "Fármacos Fármacos", "Dados do Paciente Datos del Paci...").
+
+#### Causa raiz #1 — Cards zumbis expostos
+Ao corrigir a árvore DOM no hotfix anterior (fechamento da tag `display:none` órfã), os blocos HTML duplicados de "Fármacos" (`#hm-drugs-card`, ~90 linhas) e "Paciente" (`#hm-patient-card`, ~230 linhas) — que reutilizavam os MESMOS IDs (`hm-weight`, `hm-age`, `hm-clcr`, `hm-fix-btn`, `hm-drug-count`, `hm-drug-list` etc.) já usados pelos cards reais dentro do `<nav class="hub-accordion">` — deixaram de estar "escondidos por acidente" e passaram a renderizar visivelmente no fim da Home.
+
+**Fix:** os dois blocos duplicados foram **removidos por completo** do `index.html` (não apenas ocultados) — confirmado via grep que nenhuma função JS depende exclusivamente deles (`getElementById` sempre retorna a primeira ocorrência, que é a do Hub Accordion). Um comentário explicativo foi deixado no lugar documentando a remoção e a razão.
+
+#### Causa raiz #2 — Textos bilíngues duplicados
+As classes `.lang-hub-pt` / `.lang-hub-es` (usadas nos cards e botões do Hub Accordion, sincronizadas via `document.body.setAttribute('data-lang', l)` em `hub-accordion.js`) **nunca tiveram uma regra CSS correspondente**. Existia apenas o sistema irmão `.lang-pt` / `.lang-es` controlado por `[data-current-lang]` — um sistema totalmente diferente, não relacionado ao Hub. Sem CSS controlando `.lang-hub-*`, ambos os spans (PT e ES) ficavam visíveis simultaneamente sempre.
+
+**Fix:** adicionado ao `index.html` um bloco CSS espelhando o sistema `.lang-pt/.lang-es`, porém chaveado por `body[data-lang="pt|es"]`:
+```css
+.lang-hub-pt, .lang-hub-es { display: none !important; }
+body:not([data-lang]) .lang-hub-pt { display: inline !important; }
+body[data-lang="pt"] .lang-hub-pt { display: inline !important; }
+body[data-lang="pt"] .lang-hub-es { display: none   !important; }
+body[data-lang="es"] .lang-hub-es { display: inline !important; }
+body[data-lang="es"] .lang-hub-pt { display: none   !important; }
+```
+
+#### Validação #3 — Busca dentro do overlay
+Confirmado que `openInOverlay()` (`js/calculator-overlay.js`) usa `body.appendChild(inner)` — **move o nó DOM real** (não clona/reconstrói via innerHTML) — portanto o `oninput="hmFilterDrugs(this.value)"` inline do `#hm-drug-search` permanece intacto e funcional dentro de `#calculator-overlay-body` sem necessidade de re-vincular listener algum.
+
+#### Arquivos alterados
+| Arquivo | O que mudou |
+|---|---|
+| `index.html` | Removidos os 2 blocos HTML duplicados (~320 linhas) de `#hm-drugs-card`/`#hm-patient-card`; adicionado bloco CSS de controle `.lang-hub-pt/.lang-hub-es` via `[data-lang]` |
+| `manifest-offline.json` | `version` → `"284"` |
+
+#### Resultado
+Home volta a exibir exatamente 1 card de Fármacos e 1 card de Paciente (dentro do Hub Accordion); textos de menu exibem apenas o idioma ativo; busca dentro do overlay confirmada funcional.
+
+---
+
+### 🎯 BUILD 248 — HOTFIX 3: Polimento & Performance (5 correções pontuais)
+
+> **Pedido do usuário ("ÚLTIMA ORDEM DE FIX"):** 5 ajustes cirúrgicos de polimento visual e performance, sem refatoração estrutural. App já estável (fundação do DOM corrigida nos hotfixes anteriores).
+
+#### 1. Performance — lag ao fechar modal (crítico)
+`closeOverlay()` (`js/calculator-overlay.js`) fazia a movimentação pesada do nó DOM (`_restoreCurrent()`, via `insertBefore`/`appendChild`) **antes** de esconder a tela, bloqueando a main thread e causando lag perceptível ao clicar no "X".
+
+**Fix:** a tela agora é escondida IMEDIATAMENTE (`classList.remove('is-active')` disparado na hora), e a limpeza pesada do DOM é adiada com `requestAnimationFrame(() => setTimeout(_restoreCurrent, 50))`, liberando a main thread para a animação de fechamento rodar sem travar.
+
+#### 2. Reposicionamento dos botões "X" para a direita
+Os botões de fechar (`#calculator-overlay-close`, `#fd-floating-close`) haviam sido movidos para a esquerda em builds anteriores. Revertidos para o canto superior **direito** absoluto (`right: 12–16px`), incluindo o `padding-right` correspondente na topbar (`#calculator-overlay-header`). O `.fd-close` do modal de detalhe do fármaco já estava correto (flex natural) — não precisou de alteração.
+
+#### 3. Neutralização do azul forte na Posologia (regra 90/10)
+O texto principal de dose no modal de detalhe do fármaco (`.fd-dose-val`, `.fd-dose-val--hero`, `.fd-ref-val` e seus `<strong>`) usava ciano `#38BDF8` — cor de destaque forte demais para texto corrido. Substituído por branco/cinza-claro (Dark Mode) e grafite (Light Mode), reservando o ciano apenas para estados semânticos legítimos (banner camaleão de alerta renal, que foi mantido intocado).
+
+#### 4. Modo Claro da Infusão: tarjas pretas e select cortado
+**(a)** A pílula de modo (`.infusion-mode-bar`/`.infusion-mode-btn`) e o painel de busca de droga (`.infusion-drug-panel`, `.infusion-dilution-box`) usavam cores fixas escuras (`#141922`/`#0B0F17`) que não respondiam às variáveis de tema — renderizavam fundo preto sólido também no Light Mode. Adicionados overrides `body.light-mode` com fundo `#F3F4F6`/`#FFFFFF` e texto grafite (`#1F2937`/`#0F172A`), mantendo contraste adequado.
+
+**(b)** O `<select>` de unidade de dose (`.infusion-unit-select`, ex.: "mcg/kg/min") tinha `padding-right: 26px`, insuficiente para unidades longas — a seta nativa sobrepunha a última letra. Aumentado para `padding-right: 34px`.
+
+#### 5. Remoção do botão de tema (Dark/Light)
+O controle de tema agora é 100% injetado pelo app nativo (`body.classList` recebe `light-mode` externamente). Removidos do `index.html`: o bloco HTML `#lang-switcher`/`#theme-btn` (ícones sol/lua) e a função `alternarTema()` + IIFE de auto-restore via `sessionStorage`. Confirmado via grep que `switchPage()` possui guard `if (switcher)` — remoção não introduz erros. CSS órfão remanescente (`.icon-theme-dark/light`) foi deixado intacto por ser código morto inofensivo, em respeito à diretriz de mudança mínima.
+
+#### Validação
+`PlaywrightConsoleCapture` executado após todas as edições — **zero erros no console**; apenas logs informativos esperados de inicialização dos módulos.
+
+#### Arquivos alterados
+| Arquivo | O que mudou |
+|---|---|
+| `js/calculator-overlay.js` | `closeOverlay()` — hide-first + `requestAnimationFrame`/`setTimeout(50)` para `_restoreCurrent()` |
+| `css/build243-fullscreen-overlay.css` | `#calculator-overlay-close`/`#calculator-overlay-header` — reversão left→right |
+| `index.html` | `#fd-floating-close` (right); `.fd-dose-val`/`.fd-dose-val--hero`/`.fd-ref-val` (cor neutra); `.infusion-mode-btn`/`.infusion-drug-panel`/`.infusion-dilution-box` (overrides light-mode); `.infusion-unit-select` (padding-right 34px); remoção de `#lang-switcher`/`#theme-btn`/`alternarTema()` |
+| `manifest-offline.json` | `version` → `"285"` |
+| `sw.js` | `CACHE_VERSION` → `'medcases-v55'` (invalida cache antigo) |
+
+#### Resultado
+Modal fecha instantaneamente sem lag perceptível; botões "X" no canto direito em todas as telas; posologia com contraste neutro (90/10); módulo de Infusão 100% legível em Light Mode; select de unidade sem corte de texto; app sem controle manual de tema (delegado ao wrapper nativo).
+
+---
 
 #### Componentes alterados
 

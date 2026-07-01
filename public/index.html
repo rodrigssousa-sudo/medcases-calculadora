@@ -22,6 +22,12 @@
   <link rel="stylesheet" href="css/build240b-fixes.css" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
   <link rel="stylesheet" href="css/build241-ux-pro.css" />
+  <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css" />
+  <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
+  <link rel="stylesheet" href="css/build244-category-pills.css" />
+  <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css" />
 
   <style>
     /* ============================================================ RESET */
@@ -661,9 +667,12 @@
       appearance: none;
     }
     .hm-search::placeholder { color: rgba(255,255,255,0.25); font-size: 13.5px; }
+    /* FIX BUILD 248: borda neon ciano removida — visual neutro combinado
+       com o resto do Design System "Premium Minimalista" (sem acento
+       cromático em elementos secund\u00e1rios de UI). */
     .hm-search:focus {
-      border-color: rgba(34,211,238,0.50);
-      background: rgba(34,211,238,0.05);
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.07);
     }
     .hm-search-clear {
       position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
@@ -1151,6 +1160,12 @@
       color: #0F172A;
     }
     body.light-mode .hm-search::placeholder { color: rgba(0,0,0,0.30); }
+    /* FIX BUILD 248: focus neutro tamb\u00e9m em light mode (antes herdava o
+       azul-ci\u00e2no do dark, quebrando a paleta 90/10) */
+    body.light-mode .hm-search:focus {
+      border-color: rgba(0,0,0,0.18);
+      background: #FFFFFF;
+    }
     body.light-mode .hm-drug-name   { color: #0F172A; }
     body.light-mode .hm-drug-class  { color: #64748B; }
     body.light-mode .hm-badge--active { background: rgba(3,105,161,0.12); color: #0369A1; border-color: rgba(3,105,161,0.25); }
@@ -1731,8 +1746,29 @@
     }
     .input-field::-webkit-inner-spin-button, .input-field::-webkit-outer-spin-button { -webkit-appearance:none; }
     select.input-field { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2322C87A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
-      background-repeat:no-repeat; background-position:right 12px center; padding-right:32px; cursor:pointer; }
-    select.input-field option { background:var(--bg-card); color:var(--text-primary); }
+      background-repeat:no-repeat; background-position:right 12px center; padding-right:32px; cursor:pointer;
+      /* Corrige truncamento de texto em opções longas (ex: fluid-type, fluid-dehy) */
+      text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+    select.input-field option { background:var(--bg-card); color:var(--text-primary); white-space:normal; }
+
+    /* FIX BUILD 248 (ponto 3): o bloco global .input-field aplicado por
+       css/build241-ux-pro.css força height/line-height/padding com
+       !important (44px / 44px / 14px), o que empurra o texto do select
+       por baixo do ícone da seta (padding-right insuficiente) e resulta
+       no corte horizontal de textos longos como "Manutenção Basal
+       (30 mL/kg/dia)". Como #fluid-type/#fluid-dehy são seletores por
+       ID (maior especificidade que a classe .input-field), a regra
+       abaixo vence mesmo com !important dos dois lados, restaurando um
+       padding-right adequado para a seta e permitindo altura livre. */
+    #fluid-type, #fluid-dehy {
+      white-space: normal !important;
+      text-overflow: clip !important;
+      overflow: visible !important;
+      height: auto !important;
+      min-height: 44px !important;
+      line-height: 1.35 !important;
+      padding: 10px 34px 10px 12px !important;
+    }
 
     .sex-toggle {
       display:flex;
@@ -2170,23 +2206,25 @@
     #fd-modal.open { transform:translateY(0); }
     #fd-modal::-webkit-scrollbar { display:none; }
 
-    /* ── v2.4.0 REQ-5: Botão X flutuante fixo no canto superior direito ──
+    /* ── v2.4.0 REQ-5: Botão X flutuante fixo ──
        Posicionado fora do #fd-modal (sem overflow), fixed ao viewport.
-       Visível APENAS quando o modal está aberto (#fd-modal-overlay flex). */
+       Visível APENAS quando o modal está aberto (#fd-modal-overlay flex).
+       HOTFIX (reversão): de volta ao canto superior DIREITO absoluto,
+       alinhado ao mesmo ajuste aplicado em #calculator-overlay-close. */
     #fd-floating-close {
       display: none; /* controlado via JS junto com o overlay */
       position: fixed;
-      top: max(18px, env(safe-area-inset-top, 18px));
+      top: max(14px, env(safe-area-inset-top, 14px));
       right: 16px;
       z-index: 10202; /* acima do fd-modal (10201) */
-      width: 38px; height: 38px;
+      width: 28px; height: 28px;
       border-radius: 50%;
       background: rgba(15, 9, 30, 0.90);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1.5px solid rgba(167,139,250,0.45);
       color: #E2E8F0;
-      font-size: 16px;
+      font-size: 13px;
       cursor: pointer;
       display: none;
       align-items: center;
@@ -2285,12 +2323,12 @@
     /* ── Valor da dose — máxima legibilidade ── */
     .fd-dose-val {
       font-size:13px; font-weight:500;
-      color:#CBD5E1;        /* slate-300 — contraste 8.9:1 ✅ */
+      color:#E2E8F0;        /* slate-200 — texto neutro claro */
       line-height:1.65;
     }
-    /* Números e unidades em destaque cyan */
+    /* Números e unidades em destaque neutro (branco puro) */
     .fd-dose-val strong {
-      color:#38BDF8;        /* cyan — contraste 5.8:1 ✅ */
+      color:#F8FAFC;        /* branco quase puro */
       font-weight:700;
     }
 
@@ -2491,10 +2529,10 @@
       letter-spacing:0.3px; color:#94A3B8;
     }
     .fd-ref-val {
-      font-size:12.5px; font-weight:500; color:#CBD5E1;
+      font-size:12.5px; font-weight:500; color:#E2E8F0;
       line-height:1.6;
     }
-    .fd-ref-val strong { color:#38BDF8; font-weight:700; }
+    .fd-ref-val strong { color:#F8FAFC; font-weight:700; }
     .fd-ref-hero-badge {
       display:inline-block; margin-left:8px;
       font-size:9px; font-weight:800; color:#38BDF8;
@@ -2647,7 +2685,7 @@
     body.light-mode .fd-ref-cat-title { color:#64748B; background:rgba(0,0,0,0.02); }
     body.light-mode .fd-ref-key { color:#64748B; }
     body.light-mode .fd-ref-val { color:#1E293B; }
-    body.light-mode .fd-ref-val strong { color:#0284C7; }
+    body.light-mode .fd-ref-val strong { color:#0F172A; }
     body.light-mode .fd-ref-row--hero { background:rgba(14,165,233,0.07); border-left-color:#0284C7; }
     body.light-mode .fd-ref-hero-badge { color:#0284C7; background:rgba(14,165,233,0.1); border-color:rgba(14,165,233,0.3); }
 
@@ -4732,7 +4770,11 @@
     }
 
     /* ============================================================
-       INFUSÕES E BOMBAS — Design System Slim
+       INFUSÕES E BOMBAS — Design System "Premium Minimalista"
+       Paleta Slate/Charcoal (#0B0F17) · sem bordas coloridas fortes ·
+       hierarquia tipográfica silenciosa. Nenhuma classe foi renomeada
+       e nenhuma lógica de cálculo foi alterada — refino puramente
+       visual/CSS sobre os mesmos seletores já consumidos pelo JS.
     ============================================================ */
 
     /* ── Página full de infusão ── */
@@ -4749,22 +4791,23 @@
     }
     .infusion-mode-btn {
       flex:1; border:none; border-radius:11px; padding:9px 10px;
-      font-size:11px; font-weight:700; cursor:pointer;
+      font-size:11px; font-weight:600; cursor:pointer;
       transition:all 0.2s ease; touch-action:manipulation;
-      background:rgba(255,255,255,0.06); color:var(--text-muted);
-      border:1.5px solid transparent; line-height:1.3; font-family:'Inter',sans-serif;
+      background:rgba(255,255,255,0.03); color:var(--text-muted);
+      border:1px solid rgba(255,255,255,0.06); line-height:1.3; font-family:'Inter',sans-serif;
     }
     .infusion-mode-btn.active {
-      background:rgba(240,168,66,0.18); color:var(--warning);
-      border-color:rgba(240,168,66,0.40);
+      background:#141922; color:var(--text-primary);
+      border-color:rgba(255,255,255,0.10);
+      box-shadow:inset 0 0 0 1px rgba(148,163,184,0.08);
     }
     .infusion-mode-btn:active { transform:scale(0.97); }
 
     /* Painel de busca de droga */
     .infusion-drug-panel {
       display:none; /* Controlado por JS */
-      background:rgba(240,168,66,0.06);
-      border:1.5px solid rgba(240,168,66,0.18);
+      background:#0B0F17;
+      border:1px solid rgba(255,255,255,0.07);
       border-radius:12px; padding:11px 11px 10px;
       margin-bottom:12px;
     }
@@ -4776,35 +4819,35 @@
       color:var(--text-muted); font-size:13px; pointer-events:none;
     }
     .infusion-drug-search {
-      width:100%; background:var(--bg-input); border:1.5px solid rgba(255,255,255,0.09);
+      width:100%; background:var(--bg-input); border:1px solid rgba(255,255,255,0.08);
       border-radius:10px; color:var(--text-primary); font-family:'Inter',sans-serif;
       font-size:13px; padding:9px 12px 9px 34px;
       transition:border-color 0.2s ease;
     }
     .infusion-drug-search:focus {
-      outline:none; border-color:rgba(240,168,66,0.45);
-      box-shadow:0 0 0 3px rgba(240,168,66,0.09);
+      outline:none; border-color:rgba(148,163,184,0.45);
+      box-shadow:0 0 0 3px rgba(148,163,184,0.08);
     }
     .infusion-drug-select {
       width:100%; background:var(--bg-input);
-      border:1.5px solid rgba(240,168,66,0.25); border-radius:10px;
+      border:1px solid rgba(255,255,255,0.08); border-radius:10px;
       color:var(--text-primary); font-family:'Inter',sans-serif;
       font-size:13px; font-weight:600; padding:9px 30px 9px 12px;
       appearance:none; -webkit-appearance:none; cursor:pointer;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23F0A842' d='M8 11L2 5h12z'/%3E%3C/svg%3E");
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%2394A3B8' d='M8 11L2 5h12z'/%3E%3C/svg%3E");
       background-repeat:no-repeat; background-position:right 10px center; background-size:13px;
     }
-    .infusion-drug-select:focus { outline:none; border-color:rgba(240,168,66,0.55); }
+    .infusion-drug-select:focus { outline:none; border-color:rgba(148,163,184,0.55); }
 
     /* Caixa de diluição padrão */
     .infusion-dilution-box {
       display:none; /* JS controla */
-      background:rgba(240,168,66,0.08); border:1px solid rgba(240,168,66,0.22);
+      background:#0B0F17; border:1px solid rgba(255,255,255,0.07);
       border-radius:11px; padding:10px 12px; margin-bottom:14px;
-      font-size:12px; color:#F5D09A; line-height:1.55;
+      font-size:12px; color:var(--text-secondary); line-height:1.55;
     }
     .infusion-dilution-box.show { display:block; }
-    .infusion-dilution-box strong { color:var(--warning); display:block; margin-bottom:2px; }
+    .infusion-dilution-box strong { color:var(--text-primary); display:block; margin-bottom:2px; font-weight:700; }
     .infusion-dilution-box small { color:var(--text-muted); font-size:11px; display:block; margin-top:3px; }
 
     /* Label de seção de parâmetros */
@@ -4815,29 +4858,29 @@
       display:flex; align-items:center; gap:8px;
     }
     .infusion-sec-label::after {
-      content:''; flex:1; height:1px; background:rgba(255,255,255,0.09);
+      content:''; flex:1; height:1px; background:rgba(255,255,255,0.07);
     }
 
     /* Label de campo */
     .infusion-field-label {
-      font-size:11px; font-weight:600; color:#E2E8F0;   /* branco suave — legível no dark */
+      font-size:11px; font-weight:600; color:var(--text-secondary);
       margin-bottom:5px; margin-top:11px;
       display:flex; align-items:center; gap:6px;
     }
-    .infusion-field-label i { font-size:12px; color:#38BDF8; opacity:0.85; }
+    .infusion-field-label i { font-size:12px; color:var(--text-muted); opacity:0.85; }
 
     /* Input de campo */
     .infusion-input {
       width:100%; background:var(--bg-input);
-      border:1.5px solid rgba(56,189,248,0.14); border-radius:10px;
-      color:#E2E8F0; font-family:'Inter',sans-serif;
+      border:1px solid rgba(255,255,255,0.08); border-radius:10px;
+      color:var(--text-primary); font-family:'Inter',sans-serif;
       font-size:13px; font-weight:500; padding:9px 11px;
       transition:border-color 0.2s ease, box-shadow 0.2s ease;
       -webkit-appearance:none; appearance:none;
     }
     .infusion-input:focus {
-      outline:none; border-color:#38BDF8;
-      box-shadow:0 0 0 3px rgba(56,189,248,0.12);
+      outline:none; border-color:rgba(148,163,184,0.55);
+      box-shadow:0 0 0 3px rgba(148,163,184,0.10);
     }
     .infusion-input::placeholder { color:var(--text-muted); font-size:12.5px; }
 
@@ -4847,15 +4890,18 @@
     }
     .infusion-unit-row .infusion-input { flex:1; }
     .infusion-unit-select {
-      background:var(--bg-input); border:1.5px solid rgba(56,189,248,0.18);
-      border-radius:10px; color:#38BDF8; font-family:'Inter',sans-serif;
-      font-size:12px; font-weight:700; padding:9px 26px 9px 10px;
+      background:var(--bg-input); border:1px solid rgba(255,255,255,0.08);
+      border-radius:10px; color:var(--text-secondary); font-family:'Inter',sans-serif;
+      /* HOTFIX BUILD 248 (ponto 4b): padding-right aumentado de 26px para
+         34px — a seta nativa do dropdown estava sobrepondo a última letra
+         de unidades longas (ex: "mcg/kg/min"). */
+      font-size:12px; font-weight:700; padding:9px 34px 9px 10px;
       appearance:none; -webkit-appearance:none; cursor:pointer; flex-shrink:0; min-width:120px;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%2338BDF8' d='M8 11L2 5h12z'/%3E%3C/svg%3E");
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%2394A3B8' d='M8 11L2 5h12z'/%3E%3C/svg%3E");
       background-repeat:no-repeat; background-position:right 8px center; background-size:12px;
     }
-    .infusion-unit-select:focus { outline:none; border-color:#38BDF8;
-      box-shadow:0 0 0 3px rgba(56,189,248,0.12); }
+    .infusion-unit-select:focus { outline:none; border-color:rgba(148,163,184,0.55);
+      box-shadow:0 0 0 3px rgba(148,163,184,0.10); }
 
     /* ============================================================
        BIC PRESETS — Componente de Protocolos Padrão-Ouro
@@ -4874,7 +4920,7 @@
       text-transform:uppercase; color:var(--text-muted);
       flex:1;
     }
-    .bic-preset-header-label i { color:#38BDF8; margin-right:4px; }
+    .bic-preset-header-label i { color:var(--text-muted); margin-right:4px; }
     /* Row de chips de protocolo */
     .bic-preset-chips {
       display:flex; flex-wrap:wrap; gap:6px;
@@ -4882,11 +4928,11 @@
     .bic-preset-chip {
       display:inline-flex; align-items:center; gap:5px;
       padding:5px 11px 5px 9px;
-      background:rgba(56,189,248,0.07);
-      border:1px solid rgba(56,189,248,0.22);
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.09);
       border-radius:20px;
       font-size:11px; font-weight:700;
-      color:#38BDF8;
+      color:var(--text-secondary);
       cursor:pointer;
       transition:background 0.17s, border-color 0.17s, transform 0.12s;
       white-space:nowrap;
@@ -4895,15 +4941,15 @@
     }
     .bic-preset-chip i { font-size:10px; }
     .bic-preset-chip:hover {
-      background:rgba(56,189,248,0.14);
-      border-color:rgba(56,189,248,0.42);
+      background:rgba(255,255,255,0.06);
+      border-color:rgba(255,255,255,0.16);
     }
     .bic-preset-chip:active { transform:scale(0.96); }
     .bic-preset-chip.active {
-      background:rgba(56,189,248,0.18);
-      border-color:#38BDF8;
-      color:#E0F7FF;
-      box-shadow:0 0 0 2px rgba(56,189,248,0.15);
+      background:#141922;
+      border-color:rgba(148,163,184,0.45);
+      color:var(--text-primary);
+      box-shadow:inset 0 0 0 1px rgba(148,163,184,0.12);
     }
     /* Badge de protocolo aplicado (toast discreto) */
     .bic-preset-applied-badge {
@@ -4931,33 +4977,33 @@
     }
     .bic-context-card.show { display:block; }
 
-    /* ── Contexto informativo (azul) ── */
+    /* ── Contexto informativo — neutro, apenas ícone assinala a semântica ── */
     .bic-context-card.ctx-info {
-      background:rgba(56,189,248,0.06);
-      border:1px solid rgba(56,189,248,0.20);
+      background:#0B0F17;
+      border:1px solid rgba(255,255,255,0.07);
     }
-    .bic-context-card.ctx-info .bic-ctx-header { background:rgba(56,189,248,0.10); }
-    .bic-context-card.ctx-info .bic-ctx-icon   { color:#38BDF8; }
-    .bic-context-card.ctx-info .bic-ctx-title  { color:#38BDF8; }
+    .bic-context-card.ctx-info .bic-ctx-header { background:rgba(255,255,255,0.03); }
+    .bic-context-card.ctx-info .bic-ctx-icon   { color:#7DA6C9; }
+    .bic-context-card.ctx-info .bic-ctx-title  { color:var(--text-secondary); }
 
-    /* ── Contexto de atenção (amarelo) ── */
+    /* ── Contexto de atenção — tom âmbar discreto (mantém semântica clínica sem "gritar") ── */
     .bic-context-card.ctx-warn {
-      background:rgba(251,191,36,0.05);
-      border:1px solid rgba(251,191,36,0.22);
+      background:#0B0F17;
+      border:1px solid rgba(251,191,36,0.16);
     }
-    .bic-context-card.ctx-warn .bic-ctx-header { background:rgba(251,191,36,0.10); }
-    .bic-context-card.ctx-warn .bic-ctx-icon   { color:#FBBF24; }
-    .bic-context-card.ctx-warn .bic-ctx-title  { color:#FBBF24; }
+    .bic-context-card.ctx-warn .bic-ctx-header { background:rgba(251,191,36,0.06); }
+    .bic-context-card.ctx-warn .bic-ctx-icon   { color:#D8A94A; }
+    .bic-context-card.ctx-warn .bic-ctx-title  { color:#D8A94A; }
 
-    /* ── Contexto crítico (vermelho) ── */
+    /* ── Contexto crítico — vermelho contido apenas no fio lateral (sinal clínico preservado) ── */
     .bic-context-card.ctx-danger {
-      background:rgba(248,113,113,0.06);
-      border:1.5px solid rgba(248,113,113,0.28);
-      border-left:3px solid #F87171;
+      background:#0B0F17;
+      border:1px solid rgba(255,255,255,0.07);
+      border-left:2px solid rgba(248,113,113,0.55);
     }
-    .bic-context-card.ctx-danger .bic-ctx-header { background:rgba(248,113,113,0.10); }
-    .bic-context-card.ctx-danger .bic-ctx-icon   { color:#F87171; }
-    .bic-context-card.ctx-danger .bic-ctx-title  { color:#FCA5A5; }
+    .bic-context-card.ctx-danger .bic-ctx-header { background:rgba(248,113,113,0.05); }
+    .bic-context-card.ctx-danger .bic-ctx-icon   { color:#E38B8B; }
+    .bic-context-card.ctx-danger .bic-ctx-title  { color:#E38B8B; }
 
     .bic-ctx-header {
       padding:8px 12px;
@@ -5008,46 +5054,57 @@
     .infusion-result-area.show { display:block; }
 
     .infusion-result-main {
-      background:linear-gradient(135deg,#091525 0%,#0C1E38 50%,#091525 100%);
-      border:1.5px solid rgba(56,189,248,0.28);
-      border-radius:14px; padding:16px 14px 14px;
+      background:#0B0F17;
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:14px; padding:18px 14px 15px;
       text-align:center; position:relative; overflow:hidden;
     }
+    /* Fio superior sutil substitui o antigo gradiente cyan vibrante */
     .infusion-result-main::before {
-      content:''; position:absolute; top:0; left:0; right:0; height:3px;
-      background:linear-gradient(90deg,#0B83B5,#38BDF8,#0B83B5);
-      border-radius:14px 14px 0 0;
+      content:''; position:absolute; top:0; left:0; right:0; height:1px;
+      background:rgba(255,255,255,0.10);
     }
     .infusion-result-glow {
       position:absolute; top:-30px; left:50%; transform:translateX(-50%);
       width:140px; height:140px;
-      background:radial-gradient(circle,rgba(56,189,248,0.10) 0%,transparent 70%);
+      background:radial-gradient(circle,rgba(255,255,255,0.035) 0%,transparent 70%);
       pointer-events:none;
     }
     .infusion-result-label {
       font-size:9.5px; font-weight:700; letter-spacing:1.8px;
-      text-transform:uppercase; color:rgba(56,189,248,0.65); margin-bottom:8px;
+      text-transform:uppercase; color:var(--text-muted); margin-bottom:9px;
     }
+    /* Silêncio visual: valor principal reduzido de 48px→38px, peso 900→700,
+       sem text-shadow/glow — permanece o elemento mais proeminente do card
+       pela cor (branco puro) e posição, não pela força bruta do tamanho. */
     .infusion-result-value {
-      font-size:48px; font-weight:900; line-height:1;
-      color:#38BDF8; letter-spacing:-2px;
-      text-shadow:0 0 32px rgba(56,189,248,0.40);
+      font-size:38px; font-weight:700; line-height:1;
+      color:#F1F5F9; letter-spacing:-1px;
     }
+    .infusion-result-value--warn { color:#D8A94A; }
     .infusion-result-unit {
-      font-size:16px; font-weight:700; color:rgba(56,189,248,0.80);
-      margin-top:5px; letter-spacing:1px;
+      font-size:13px; font-weight:600; color:var(--text-secondary);
+      margin-top:6px; letter-spacing:0.6px;
     }
     .infusion-result-conc {
-      margin-top:9px; font-size:11.5px; color:rgba(56,189,248,0.55);
-      font-weight:600; letter-spacing:0.3px;
+      margin-top:10px; font-size:11.5px; color:var(--text-muted);
+      font-weight:500; letter-spacing:0.2px;
     }
+    /* Etiqueta de aviso discreta — substitui o antigo emoji ⚠️ 48px */
+    .infusion-weight-note {
+      display:none; align-items:center; justify-content:center; gap:6px;
+      margin-top:10px; font-size:10.5px; font-weight:600;
+      color:#D8A94A; letter-spacing:0.2px;
+    }
+    .infusion-weight-note.show { display:flex; }
+    .infusion-weight-note i { font-size:10px; }
 
     /* Cards secundários de resultado */
     .infusion-secondary-row {
       display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px;
     }
     .infusion-secondary-card {
-      background:var(--bg-card); border:1px solid rgba(56,189,248,0.10);
+      background:#0B0F17; border:1px solid rgba(255,255,255,0.07);
       border-radius:12px; padding:11px 13px;
     }
     .infusion-secondary-card-label {
@@ -5055,33 +5112,33 @@
       text-transform:uppercase; color:var(--text-secondary); margin-bottom:5px;
     }
     .infusion-secondary-card-val {
-      font-size:16px; font-weight:800; color:#38BDF8; line-height:1.2;
+      font-size:16px; font-weight:700; color:var(--text-primary); line-height:1.2;
     }
     .infusion-secondary-card-unit {
-      font-size:10px; color:rgba(56,189,248,0.55); font-weight:600; margin-top:2px;
+      font-size:10px; color:var(--text-muted); font-weight:600; margin-top:2px;
     }
 
     /* Card de conversor reverso */
     .infusion-reverse-card {
-      margin-top:8px; background:rgba(66,168,212,0.08);
-      border:1px solid rgba(66,168,212,0.22); border-radius:12px; padding:12px 13px;
+      margin-top:8px; background:#0B0F17;
+      border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:12px 13px;
     }
     .infusion-reverse-label {
       font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase;
-      color:var(--info); margin-bottom:6px; display:flex; align-items:center; gap:5px;
+      color:var(--text-secondary); margin-bottom:6px; display:flex; align-items:center; gap:5px;
     }
     .infusion-reverse-label i { font-size:10px; }
     .infusion-reverse-value {
-      font-size:22px; font-weight:900; color:var(--info); letter-spacing:-0.5px;
+      font-size:20px; font-weight:700; color:var(--text-primary); letter-spacing:-0.3px;
     }
-    .infusion-reverse-unit { font-size:11px; color:rgba(66,168,212,0.70); font-weight:600; }
+    .infusion-reverse-unit { font-size:11px; color:var(--text-muted); font-weight:600; }
 
     /* Aviso educacional */
     .infusion-disclaimer {
       margin-top:14px; font-size:10.5px; color:var(--text-muted);
       line-height:1.5; text-align:center; padding:0 4px;
     }
-    .infusion-disclaimer i { color:var(--warning); font-size:10px; }
+    .infusion-disclaimer i { color:var(--text-muted); font-size:10px; }
 
     /* ============================================================
        AUTOCOMPLETE DROGAS — dropdown custom
@@ -5089,20 +5146,20 @@
     .inf-autocomplete-wrap { position:relative; }
     .inf-autocomplete-input {
       width:100%; background:var(--bg-input);
-      border:1.5px solid rgba(56,189,248,0.18); border-radius:10px;
-      color:#E2E8F0; font-family:'Inter',sans-serif;
+      border:1px solid rgba(255,255,255,0.08); border-radius:10px;
+      color:var(--text-primary); font-family:'Inter',sans-serif;
       font-size:13px; font-weight:500; padding:9px 38px 9px 38px;
       transition:border-color 0.2s, box-shadow 0.2s;
       -webkit-appearance:none; appearance:none; box-sizing:border-box;
     }
     .inf-autocomplete-input:focus {
-      outline:none; border-color:#38BDF8;
-      box-shadow:0 0 0 3px rgba(56,189,248,0.14);
+      outline:none; border-color:rgba(148,163,184,0.55);
+      box-shadow:0 0 0 3px rgba(148,163,184,0.10);
     }
     .inf-autocomplete-input::placeholder { color:var(--text-muted); }
     .inf-autocomplete-icon {
       position:absolute; left:12px; top:50%; transform:translateY(-50%);
-      color:#38BDF8; font-size:13px; pointer-events:none;
+      color:var(--text-muted); font-size:13px; pointer-events:none;
     }
     .inf-autocomplete-clear {
       position:absolute; right:10px; top:50%; transform:translateY(-50%);
@@ -5114,7 +5171,7 @@
     /* Lista suspensa */
     .inf-dropdown-list {
       position:absolute; top:calc(100% + 4px); left:0; right:0;
-      background:#1A2535; border:1.5px solid rgba(56,189,248,0.22);
+      background:#12161F; border:1px solid rgba(255,255,255,0.10);
       border-radius:11px; z-index:9000;
       max-height:220px; overflow-y:auto;
       box-shadow:0 8px 32px rgba(0,0,0,0.55);
@@ -5129,13 +5186,13 @@
     }
     .inf-dropdown-item:last-child { border-bottom:none; }
     .inf-dropdown-item:hover, .inf-dropdown-item.selected {
-      background:rgba(56,189,248,0.10);
+      background:rgba(255,255,255,0.06);
     }
     .inf-dropdown-item-name {
-      font-size:13px; font-weight:600; color:#E2E8F0; flex:1;
+      font-size:13px; font-weight:600; color:var(--text-primary); flex:1;
     }
     .inf-dropdown-item-name em {
-      color:#38BDF8; font-style:normal;
+      color:#94A3B8; font-style:normal;
     }
     .inf-dropdown-item-meta {
       font-size:10px; color:var(--text-muted); white-space:nowrap;
@@ -5236,7 +5293,53 @@
       display:flex; flex-direction:column; align-items:center; gap:8px;
       padding:24px 0 8px; color:var(--text-muted);
     }
-    .infusion-empty-hint i { font-size:28px; color:#38BDF8; opacity:0.30; }
+    .infusion-empty-hint i { font-size:26px; color:var(--text-muted); opacity:0.45; }
+
+    /* Guard de peso ausente — FASE 4.3: substituído por campo inline dourado/âmbar
+       (.infusion-weight-inline) diretamente na lista de inputs — ver regras abaixo.
+       As regras legadas .data-guard/.home-data-chip deste módulo foram REMOVIDAS
+       (eram a causa do bloco preto quebrando o Light Mode — nunca tinham scoping
+       body:not(.light-mode) e vazavam #0B0F17 sólido em qualquer tema). */
+
+    /* ── Campo inline de peso obrigatório — tom âmbar/dourado suave, 100% tema-aware ── */
+    .infusion-weight-inline {
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+      background:rgba(217,164,42,0.08);
+      border:1px solid rgba(217,164,42,0.28);
+      border-radius:12px; padding:11px 13px; margin-bottom:12px;
+    }
+    .infusion-weight-inline.hidden { display:none; }
+    .infusion-weight-inline-icon { font-size:18px; flex-shrink:0; }
+    .infusion-weight-inline-text { flex:1; min-width:140px; }
+    .infusion-weight-inline-title {
+      font-size:11.5px; font-weight:700; color:#D8A94A; margin-bottom:1px;
+    }
+    .infusion-weight-inline-desc {
+      font-size:10.5px; color:var(--text-secondary); line-height:1.4;
+    }
+    .infusion-weight-inline-input {
+      width:84px; flex-shrink:0; background:var(--bg-input);
+      border:1px solid rgba(217,164,42,0.35); border-radius:9px;
+      color:var(--text-primary); font-family:'Inter',sans-serif;
+      font-size:14px; font-weight:700; text-align:center; padding:8px 6px;
+      -webkit-appearance:none; appearance:none;
+    }
+    .infusion-weight-inline-input:focus {
+      outline:none; border-color:#D8A94A;
+      box-shadow:0 0 0 3px rgba(217,164,42,0.16);
+    }
+    body.light-mode .infusion-weight-inline {
+      background:rgba(217,164,42,0.10); border-color:rgba(180,130,20,0.30);
+    }
+    body.light-mode .infusion-weight-inline-title { color:#8A6200; }
+    /* Chip de peso lido da Home — versão tema-aware restrita ao módulo de Infusão */
+    .infusion-module .home-data-chip {
+      background:rgba(52,211,153,0.06); border:1px solid rgba(52,211,153,0.22);
+    }
+    .infusion-module .home-data-chip-value { color:var(--text-primary); }
+    body.light-mode .infusion-module .home-data-chip {
+      background:rgba(26,138,90,0.07); border-color:rgba(26,138,90,0.22);
+    }
     .infusion-empty-hint p { font-size:11.5px; text-align:center; line-height:1.5; color:var(--text-secondary); }
 
     /* ============================================================
@@ -5642,11 +5745,11 @@
     }
     .fd-dose-val--hero {
       font-size:24px !important; font-weight:900 !important;
-      color:#38BDF8 !important; letter-spacing:-0.5px;
+      color:#F1F5F9 !important; letter-spacing:-0.5px;
       line-height:1.2; display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;
     }
     .fd-dose-val--hero strong {
-      color:#38BDF8 !important;
+      color:#F8FAFC !important;
     }
 
     /* ── .fd-hero-renal-chip — chip de faixa renal inline na dose hero ── */
@@ -5908,7 +6011,7 @@
     }
     body.light-mode #fd-modal .fd-dose-key  { color:#64748B !important; }
     body.light-mode #fd-modal .fd-dose-val  { color:#1E293B !important; }
-    body.light-mode #fd-modal .fd-dose-val strong { color:#0369A1 !important; }
+    body.light-mode #fd-modal .fd-dose-val strong { color:#0F172A !important; }
     body.light-mode #fd-modal .fd-dose-item { border-bottom-color:rgba(0,0,0,0.05) !important; }
     body.light-mode #fd-modal .fd-section {
       background:rgba(0,0,0,0.02) !important;
@@ -5996,8 +6099,8 @@
       border-color:rgba(244,63,94,0.22) !important;
       color:#BE123C !important;
     }
-    body.light-mode .fd-dose-val--hero { color:#0369A1 !important; }
-    body.light-mode .fd-dose-val--hero strong { color:#0369A1 !important; }
+    body.light-mode .fd-dose-val--hero { color:#1E293B !important; }
+    body.light-mode .fd-dose-val--hero strong { color:#0F172A !important; }
     body.light-mode .fd-hero-renal-chip.fd-hero-chip--ok   { background:rgba(34,197,94,0.10) !important; color:#15803D !important; border-color:rgba(34,197,94,0.25) !important; }
     body.light-mode .fd-hero-renal-chip.fd-hero-chip--alert{ background:rgba(251,191,36,0.10) !important; color:#92400E !important; border-color:rgba(251,191,36,0.25) !important; }
     body.light-mode .fd-hero-renal-chip.fd-hero-chip--hd   { background:rgba(248,113,113,0.10) !important; color:#B91C1C !important; border-color:rgba(248,113,113,0.25) !important; }
@@ -6306,6 +6409,33 @@
       border-color:rgba(3,105,161,0.20) !important;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230369A1' d='M8 11L2 5h12z'/%3E%3C/svg%3E") !important;
     }
+
+    /* HOTFIX BUILD 248 (ponto 4a): pílula de modo e painel de busca de
+       droga do módulo de Infusão usavam cores fixas escuras
+       (#141922/#0B0F17) que não respondiam ao Light Mode — fundo
+       permanecia preto sólido. Overrides pontuais abaixo. */
+    body.light-mode .infusion-mode-btn {
+      background:#F3F4F6 !important;
+      color:#1F2937 !important;
+      border-color:rgba(3,105,161,0.18) !important;
+    }
+    body.light-mode .infusion-mode-btn.active {
+      background:#FFFFFF !important;
+      color:#0F172A !important;
+      border-color:rgba(3,105,161,0.35) !important;
+      box-shadow:inset 0 0 0 1px rgba(3,105,161,0.10) !important;
+    }
+    body.light-mode .infusion-drug-panel {
+      background:#F3F4F6 !important;
+      border-color:rgba(3,105,161,0.18) !important;
+    }
+    body.light-mode .infusion-dilution-box {
+      background:#F3F4F6 !important;
+      border-color:rgba(3,105,161,0.18) !important;
+      color:#334155 !important;
+    }
+    body.light-mode .infusion-dilution-box strong { color:#0F172A !important; }
+    body.light-mode .infusion-dilution-box small { color:#64748B !important; }
 
     /* ══ BIC PRESETS — light mode ══ */
     body.light-mode .bic-preset-header-label { color:#475569 !important; }
@@ -7363,6 +7493,33 @@
   [data-current-lang="pt"] .lang-pt i,
   [data-current-lang="es"] .lang-es i { display: inline !important; }
 
+  /* ══════════════════════════════════════════════════════════════════
+     HOTFIX BUILD 248 — SISTEMA DE IDIOMA DO HUB ACCORDION
+     .lang-hub-pt / .lang-hub-es (usados nos cards do Hub Accordion,
+     botões e mensagens) NUNCA tinham uma regra CSS de controle —
+     hub-accordion.js apenas define body[data-lang="pt|es"], mas nenhum
+     CSS escondia o idioma inativo, causando exibição simultânea de
+     PT+ES (ex: "Fármacos Fármacos"). Espelha o sistema .lang-pt/.lang-es
+     acima, porém chaveado por [data-lang] (não [data-current-lang]).
+  ══════════════════════════════════════════════════════════════════ */
+  .lang-hub-pt, .lang-hub-es { display: none !important; }
+
+  /* Fallback de boot: body sem atributo ainda → exibe PT (evita flash) */
+  body:not([data-lang]) .lang-hub-pt { display: inline !important; }
+  body:not([data-lang]) .lang-hub-es { display: none   !important; }
+
+  /* PT ativo */
+  body[data-lang="pt"] .lang-hub-pt { display: inline !important; }
+  body[data-lang="pt"] .lang-hub-es { display: none   !important; }
+
+  /* ES ativo */
+  body[data-lang="es"] .lang-hub-es { display: inline !important; }
+  body[data-lang="es"] .lang-hub-pt { display: none   !important; }
+
+  /* Ícones FA dentro de .lang-hub-* devem usar inline-flex */
+  body[data-lang="pt"] .lang-hub-pt i,
+  body[data-lang="es"] .lang-hub-es i { display: inline !important; }
+
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
@@ -7374,53 +7531,10 @@
 <body>
 <div id="app">
 
-  <!-- ══ TEMA — botão fixo canto superior direito ══
-       Pílulas PT/ES removidas (motor v3.2 reage ao idioma global automaticamente).
-       Preservado apenas o toggle de Modo Claro/Escuro com id/classe/onclick intactos.
-  -->
-  <div id="lang-switcher" style="
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 0;
-    background: rgba(11,15,25,0.90);
-    border: 1px solid rgba(56,189,248,0.18);
-    border-radius: 50%;
-    padding: 4px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 2px 16px rgba(0,0,0,0.45);
-    transition: opacity 0.22s ease, transform 0.22s ease;
-  ">
-    <!-- Botão de tema: ícone Sol (modo escuro ativo) / Lua (modo claro ativo) -->
-    <button id="theme-btn" onclick="alternarTema()" title="Alternar tema claro/escuro" style="
-      width:28px; height:28px; border-radius:50%;
-      border:1px solid rgba(56,189,248,0.20); cursor:pointer;
-      background:rgba(56,189,248,0.08);
-      transition:all 0.18s ease;
-      display:flex; align-items:center; justify-content:center;
-      padding:0; flex-shrink:0;
-    ">
-      <!-- Ícone Sol — visível quando está no modo ESCURO (clicar → vai para claro) -->
-      <svg class="icon-theme-dark" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="4"/>
-        <line x1="12" y1="2" x2="12" y2="4"/>
-        <line x1="12" y1="20" x2="12" y2="22"/>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-        <line x1="2" y1="12" x2="4" y2="12"/>
-        <line x1="20" y1="12" x2="22" y2="12"/>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-      </svg>
-      <!-- Ícone Lua — visível quando está no modo CLARO (clicar → vai para escuro) -->
-      <svg class="icon-theme-light" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-      </svg>
-    </button>
-  </div>
+  <!-- HOTFIX BUILD 248: botão manual de tema (#lang-switcher/#theme-btn)
+       REMOVIDO — o controle de tema agora é injetado 100% via app nativo
+       (body.classList 'light-mode' é definido externamente). Função
+       alternarTema() e o listener de clique associados também removidos. -->
 
   <!-- ══════════════════════════════════════════════════════════
        GLOBAL PATIENT BAR — v2.4.0
@@ -8002,319 +8116,14 @@
         <!-- shell vazio — IDs reais migraram para hub-card-patient -->
       </div>
 
-      <!-- INTX THEME SYSTEM — classes nativas light / dark ─── -->
-      <style>
-        /* ══════════════════════════════════════════════════════
-           INTX MODULE — Sistema de Temas (Light + Dark nativo)
-           Default = DARK (body:not(.light-mode))
-           Light   = body.light-mode
-        ══════════════════════════════════════════════════════ */
-
-        /* ── Container principal ── */
-        .intx-container {
-          margin: 0;
-          padding: 0;
-          border-radius: 0;
-          border: none;
-          background: transparent;
-        }
-
-        /* ── Cabeçalho: título e subtítulo ── */
-        .intx-title {
-          color: #ffffff;
-          margin: 0;
-          font-size: 16px;
-          font-weight: 700;
-          letter-spacing: -0.3px;
-        }
-        body.light-mode .intx-title { color: #1e293b; }
-
-        .intx-sub {
-          color: #7d7993;
-          font-size: 12px;
-        }
-        body.light-mode .intx-sub { color: #64748b; }
-
-        /* ── Contador (badge X/5) ── */
-        .intx-counter {
-          background: #231f33;
-          padding: 4px 10px;
-          border-radius: 20px;
-          color: #a29bfe;
-          font-size: 12px;
-          font-weight: 700;
-          white-space: nowrap;
-        }
-        body.light-mode .intx-counter {
-          background: #f1f5f9;
-          color: #6c5ce7;
-        }
-
-        /* ── Input de busca ── */
-        .intx-input {
-          width: 100%;
-          padding: 12px 12px 12px 40px;
-          background: #1c1829;
-          border: 1.5px solid #322b48;
-          border-radius: 9px;
-          color: #ffffff;
-          font-size: 14px;
-          outline: none;
-          box-sizing: border-box;
-          transition: border-color .2s;
-          font-family: inherit;
-        }
-        .intx-input::placeholder { color: rgba(255,255,255,0.35); }
-        .intx-input:focus { border-color: #6c5ce7; }
-
-        body.light-mode .intx-input {
-          background: #f8fafc;
-          border-color: #cbd5e1;
-          color: #1e293b;
-        }
-        body.light-mode .intx-input::placeholder { color: #94a3b8; }
-        body.light-mode .intx-input:focus { border-color: #6c5ce7; }
-
-        /* ── Dropdown de sugestões ── */
-        .intx-dropdown {
-          display: none;
-          position: absolute;
-          left: 0; right: 0;
-          top: calc(100% + 4px);
-          background: #1c1829;
-          border: 1.5px solid #322b48;
-          border-radius: 9px;
-          max-height: 200px;
-          overflow-y: auto;
-          z-index: 9999;
-          box-shadow: 0 8px 28px rgba(0,0,0,.55);
-        }
-        body.light-mode .intx-dropdown {
-          background: #ffffff;
-          border-color: #e2e8f0;
-          box-shadow: 0 8px 24px rgba(0,0,0,.10);
-        }
-
-        /* ── Item do dropdown ── */
-        .intx-dropdown-item {
-          padding: 10px 14px;
-          cursor: pointer;
-          color: #e0ddf0;
-          font-size: 13px;
-          border-bottom: 1px solid rgba(255,255,255,.04);
-          transition: background .15s;
-        }
-        .intx-dropdown-item:hover { background: #2d2545; }
-        .intx-dropdown-item:last-child { border-bottom: none; }
-
-        body.light-mode .intx-dropdown-item {
-          color: #1e293b;
-          border-bottom-color: #f1f5f9;
-        }
-        body.light-mode .intx-dropdown-item:hover { background: #f8fafc; }
-
-        /* ── Sem resultados no dropdown ── */
-        .intx-dropdown-empty {
-          padding: 11px 14px;
-          color: #7d7993;
-          font-size: 12px;
-        }
-        body.light-mode .intx-dropdown-empty { color: #94a3b8; }
-
-        /* ── Chips dos fármacos selecionados ── */
-        .intx-chip {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          padding: 6px 10px;
-          background: rgba(108,92,231,.18);
-          border: 1.5px solid rgba(108,92,231,.45);
-          border-radius: 20px;
-          color: #d6d0f7;
-          font-size: 12px;
-          font-weight: 600;
-        }
-        body.light-mode .intx-chip {
-          background: #f1f5f9;
-          border-color: #cbd5e1;
-          color: #475569;
-        }
-
-        .intx-chip-btn {
-          background: none;
-          border: none;
-          color: #a29bfe;
-          cursor: pointer;
-          font-size: 13px;
-          padding: 0;
-          line-height: 1;
-        }
-        body.light-mode .intx-chip-btn { color: #6c5ce7; }
-
-        /* ── Cards de resultado ── */
-        .intx-card {
-          padding: 14px 16px;
-          border-radius: 10px;
-          margin-bottom: 10px;
-          box-sizing: border-box;
-          border-left-width: 4px;
-          border-left-style: solid;
-          border-top: none;
-          border-right: none;
-          border-bottom: none;
-        }
-
-        /* Contraindicada 🔴 */
-        .intx-card-contra { background: #2c1519; border-left-color: #ea2027; }
-        body.light-mode .intx-card-contra { background: #fef2f2; border-left-color: #ef4444; }
-
-        /* Alta 🔴/Laranja */
-        .intx-card-alta { background: #2c1e18; border-left-color: #ee5a24; }
-        body.light-mode .intx-card-alta { background: #fff7ed; border-left-color: #f97316; }
-
-        /* Moderada 🟠 */
-        .intx-card-mod { background: #2a2615; border-left-color: #f1c40f; }
-        body.light-mode .intx-card-mod { background: #fefce8; border-left-color: #eab308; }
-
-        /* Leve 🟡 */
-        .intx-card-leve { background: #151d2a; border-left-color: #3498db; }
-        body.light-mode .intx-card-leve { background: #f0f9ff; border-left-color: #3b82f6; }
-
-        /* Seguro ✅ */
-        .intx-card-safe { background: #14271f; border-left-color: #2ecc71; }
-        body.light-mode .intx-card-safe { background: #f0fdf4; border-left-color: #22c55e; }
-
-        /* ── Cabeçalho do card (severidade + score) ── */
-        .intx-card-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 10px;
-          border-bottom: 1px solid rgba(255,255,255,.07);
-          padding-bottom: 9px;
-          flex-wrap: wrap;
-          gap: 6px;
-        }
-        body.light-mode .intx-card-header { border-bottom-color: rgba(0,0,0,.07); }
-
-        .intx-card-title {
-          font-weight: 800;
-          font-size: 14px;
-        }
-
-        .intx-badge-sev {
-          padding: 3px 8px;
-          border-radius: 6px;
-          font-size: 11px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.4px;
-        }
-        .intx-badge-contra { background: rgba(234,32,39,.20); color: #ff6b6b; }
-        .intx-badge-alta   { background: rgba(238,90,36,.20); color: #ffa87d; }
-        .intx-badge-mod    { background: rgba(241,196,15,.20); color: #f9ca24; }
-        .intx-badge-leve   { background: rgba(52,152,219,.20); color: #74b9ff; }
-        .intx-badge-cls    { background: rgba(52,152,219,.12); color: #74b9ff; }
-        .intx-badge-cls-cls { background: rgba(52,152,219,.12); color: #1d4ed8; }
-
-        body.light-mode .intx-badge-contra { background: rgba(239,68,68,.12); color: #dc2626; }
-        body.light-mode .intx-badge-alta   { background: rgba(249,115,22,.12); color: #ea580c; }
-        body.light-mode .intx-badge-mod    { background: rgba(234,179,8,.12);  color: #ca8a04; }
-        body.light-mode .intx-badge-leve   { background: rgba(59,130,246,.12); color: #2563eb; }
-        body.light-mode .intx-badge-cls    { background: rgba(59,130,246,.12); color: #2563eb; }
-        body.light-mode .intx-badge-cls-cls {
-          background: rgba(52,152,219,.12);
-          color: #1d4ed8;
-        }
-
-        /* ── Par de fármacos (A ✕ B) ── */
-        .intx-card-pair {
-          color: #eeeeee;
-          font-size: 13px;
-          margin-bottom: 8px;
-        }
-        body.light-mode .intx-card-pair { color: #1e293b; }
-
-        /* ── Texto de risco ── */
-        .intx-card-risco {
-          color: #cccccc;
-          font-size: 12.5px;
-          line-height: 1.6;
-          margin: 0 0 10px 0;
-        }
-        body.light-mode .intx-card-risco { color: #334155; }
-
-        /* ── Caixa de conduta ── */
-        .intx-conduta-box {
-          color: #e2e8f0;
-          font-size: 12px;
-          line-height: 1.6;
-          margin: 6px 0 0 0;
-          background: transparent;
-          padding: 8px 0 0 0;
-          border-top: 1px solid rgba(255,255,255,0.07);
-        }
-        body.light-mode .intx-conduta-box {
-          background: transparent;
-          color: #475569;
-          border-top-color: rgba(0,0,0,0.07);
-        }
-
-        /* ── Card "sem interação documentada" ── */
-        .intx-card-safe-body {
-          display: flex;
-          gap: 12px;
-          align-items: flex-start;
-        }
-        .intx-card-safe-icon { font-size: 22px; line-height: 1.2; }
-        .intx-card-safe-title {
-          color: #2ecc71;
-          margin: 0 0 5px 0;
-          font-size: 14px;
-          font-weight: 700;
-        }
-        body.light-mode .intx-card-safe-title { color: #16a34a; }
-        .intx-card-safe-desc {
-          color: #aae1c4;
-          margin: 0;
-          font-size: 12.5px;
-          line-height: 1.6;
-        }
-        body.light-mode .intx-card-safe-desc { color: #15803d; }
-
-        /* ── Loading spinner ── */
-        .intx-loading {
-          text-align: center;
-          padding: 18px;
-          color: #7d7993;
-          font-size: 13px;
-        }
-        body.light-mode .intx-loading { color: #94a3b8; }
-        .intx-spin { display: inline-block; animation: intxSpin 1s linear infinite; }
-        @keyframes intxSpin { to { transform: rotate(360deg); } }
-
-        /* ── Highlight de texto no dropdown ── */
-        .intx-hl { color: #a29bfe; font-weight: 700; }
-        body.light-mode .intx-hl { color: #6c5ce7; }
-
-        /* ══════════════════════════════════════════════════════════
-           SISTEMA DE IDIOMA STATE-DRIVEN — indestrutível pelo router
-        ══════════════════════════════════════════════════════════ */
-        .intx-container .lang-pt,
-        .intx-container .lang-es { display: none !important; }
-        .intx-container[data-current-lang="pt"] .lang-pt { display: inline !important; }
-        .intx-container[data-current-lang="pt"] .lang-es { display: none   !important; }
-        .intx-container[data-current-lang="es"] .lang-es { display: inline !important; }
-        .intx-container[data-current-lang="es"] .lang-pt { display: none   !important; }
-        .intx-container:not([data-current-lang]) .lang-pt { display: inline !important; }
-        .intx-container:not([data-current-lang]) .lang-es { display: none   !important; }
-
-        /* ── Hub: idioma state-driven nos triggers ── */
-        #hub-accordion .lang-hub-es { display: none; }
-        #hub-accordion .lang-hub-pt { display: inline; }
-        body[data-lang="es"] #hub-accordion .lang-hub-es { display: inline; }
-        body[data-lang="es"] #hub-accordion .lang-hub-pt { display: none; }
-      </style>
+      <!-- INTX THEME SYSTEM legado (duplicado) — REMOVIDO no BUILD 248.
+           O bloco <style> completo (antigas linhas ~8075–8387) foi eliminado.
+           Ele definia as MESMAS classes .intx-* (título, input, dropdown,
+           chips, cards de severidade, sistema de idioma state-driven) já
+           cobertas de forma mais completa e atualizada pelo bloco "v3"
+           (BUILD 245) que permanece abaixo, imediatamente antes de
+           #card-interactions-container. Nenhuma classe exclusiva deste
+           bloco legado era referenciada fora dele — remoção segura. -->
 
       <!-- INTERAÇÕES — container legado REMOVIDO (era duplicado do container v3 na linha ~8699)
            CAUSA DO BUG: _moveInteractions() usava getElementById() que retornava ESTE (o primeiro
@@ -8354,255 +8163,25 @@
           <span id="res-bsa" style="display:none">—</span>
           <div id="res-bsa-card" style="display:none"></div>
         </div>
-      <div class="hm-card hm-card--drugs" id="hm-drugs-card">
+        </div><!-- /result-dashboard (legado oculto — bloco 1, truncado ClCr+BSA) -->
+      </div><!-- /wrapper display:none legado (bloco 1) — FIX BUILD 248-HOTFIX: tag não fechada quebrava toda a árvore DOM subsequente -->
 
-        <div class="hm-card-header">
-          <div class="hm-card-header-left">
-            <div class="hm-card-icon hm-card-icon--cyan">
-              <i class="fa-solid fa-pills"></i>
-            </div>
-            <div>
-              <div class="hm-card-title" data-i18n="hm_card_drugs_title">Fármacos</div>
-              <div class="hm-card-subtitle" data-i18n="hm_card_drugs_sub">Busca · Dose · Ajuste Renal</div>
-            </div>
-          </div>
-          <span class="hm-drug-count" id="hm-drug-count">—</span>
-        </div>
-
-        <!-- Barra de busca (BUILD 233: id corrigido — era duplicado de hm-drug-search) -->
-        <div class="hm-search-wrap">
-          <i class="fa-solid fa-magnifying-glass hm-search-icon"></i>
-          <input class="hm-search" id="hm-drug-search-calc" type="text"
-            placeholder="🔍 Buscar fármaco..."
-            oninput="hmFilterDrugs(this.value)"
-            inputmode="search" enterkeyhint="search"
-            autocomplete="off" autocorrect="off" autocapitalize="none"
-            spellcheck="false" />
-          <button class="hm-search-clear" id="hm-search-clear-calc"
-            onclick="hmClearSearch()" style="display:none"
-            aria-label="Limpar busca">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-
-        <!-- Lista de resultados de fármacos -->
-        <div class="hm-drug-list" id="hm-drug-list">
-          <!-- Populado por hmFilterDrugs() -->
-          <div class="hm-drug-empty" id="hm-drug-empty">
-            <i class="fa-solid fa-pills" style="font-size:28px;opacity:0.18;margin-bottom:8px;"></i>
-            <p>Digite o nome do fármaco para buscar</p>
-          </div>
-        </div>
-
-        <!-- DIRETRIZ 3 — Card de resultado inline (injetado por hmShowInlineResult) -->
-        <div id="hm-drug-result" style="display:none;margin-top:10px;"></div>
-
-      </div><!-- /hm-card--drugs -->
-
-      <!-- ── CARD 3: DADOS DO PACIENTE (meio) ── -->
-      <div class="hm-card hm-card--patient" id="hm-patient-card">
-
-        <!-- Cabeçalho do card -->
-        <div class="hm-card-header">
-          <div class="hm-card-header-left">
-            <div class="hm-card-icon hm-card-icon--blue">
-              <i class="fa-solid fa-user-injured"></i>
-            </div>
-            <div>
-              <div class="hm-card-title" data-i18n="hm_patient_title">Dados do Paciente</div>
-              <div class="hm-card-subtitle" id="hm-patient-subtitle" data-i18n="hm_patient_subtitle">Preencha para calcular doses</div>
-            </div>
-          </div>
-          <!-- Badge "Fixado" — aparece após salvar -->
-          <span class="hm-badge hm-badge--active" id="hm-fixed-badge" style="display:none">
-            <i class="fa-solid fa-lock"></i> Fixado
-          </span>
-        </div>
-
-        <!-- Grid compacto de inputs -->
-        <div class="hm-input-grid">
-
-          <div class="hm-input-wrap">
-            <label class="hm-label">Peso <span class="hm-label-unit">kg</span></label>
-            <input class="hm-input" id="hm-weight" type="text" inputmode="decimal" pattern="[0-9.,]*"
-              autocomplete="off" autocorrect="off" spellcheck="false"
-              enterkeyhint="next"
-              placeholder="70" oninput="hmUpdatePatientCardColor()" />
-          </div>
-
-          <div class="hm-input-wrap">
-            <label class="hm-label">Idade <span class="hm-label-unit">anos</span></label>
-            <input class="hm-input" id="hm-age" type="text" inputmode="decimal" pattern="[0-9.,]*"
-              autocomplete="off" autocorrect="off" spellcheck="false"
-              enterkeyhint="next"
-              placeholder="45" oninput="hmUpdatePatientCardColor()" />
-          </div>
-
-          <div class="hm-input-wrap">
-            <label class="hm-label">Altura <span class="hm-label-unit">cm</span></label>
-            <input class="hm-input" id="hm-height" type="text" inputmode="decimal" pattern="[0-9.,]*"
-              autocomplete="off" autocorrect="off" spellcheck="false"
-              enterkeyhint="next"
-              placeholder="170" />
-          </div>
-
-          <div class="hm-input-wrap">
-            <label class="hm-label" for="hm-creatinina">Creatinina <span class="hm-label-unit">mg/dL</span></label>
-            <input class="hm-input" id="hm-creatinina" type="text" inputmode="decimal" pattern="[0-9.,]*"
-              autocomplete="off" autocorrect="off" spellcheck="false"
-              enterkeyhint="done"
-              placeholder="Ex: 1.0" />
-            <!-- Campo oculto: recebe ClCr calculado por Cockcroft-Gault.
-                 Todo o motor JS (renal, prefetch, hmFixarDados) continua
-                 lendo daqui sem nenhuma modificação. -->
-            <input type="hidden" id="hm-clcr" value="" />
-          </div>
-
-          <!-- DIRETRIZ 4 — Seletor de Sexo M/F -->
-          <div class="hm-input-wrap hm-sex-wrap" style="grid-column:1/-1;">
-            <label class="hm-label">Sexo</label>
-            <div class="hm-sex-toggle">
-              <button type="button" id="hm-btn-male"
-                class="hm-sex-btn hm-sex-btn--active"
-                onclick="hmSetSex('M')" aria-label="Masculino">
-                <i class="fa-solid fa-mars"></i> Masc.
-              </button>
-              <button type="button" id="hm-btn-female"
-                class="hm-sex-btn"
-                onclick="hmSetSex('F')" aria-label="Feminino">
-                <i class="fa-solid fa-venus"></i> Fem.
-              </button>
-            </div>
-          </div>
-
-          <!-- DIRETRIZ 4 — Toggle Gestante (aparece só para Feminino) -->
-          <div id="hm-preg-row" style="display:none;grid-column:1/-1;opacity:0;transform:translateY(-6px);transition:opacity 0.28s ease,transform 0.28s ease;">
-            <div class="preg-toggle-wrap">
-              <div class="preg-toggle-info">
-                <div class="preg-toggle-title">
-                  <i class="fa-solid fa-person-pregnant"></i> Gestante
-                </div>
-                <div class="preg-toggle-sub">Ajusta alertas e precauções clínicas</div>
-              </div>
-              <div class="preg-switch">
-                <button type="button" class="preg-opt active-no" id="hm-preg-no"
-                  onclick="hmSetPregnant(false)">Não</button>
-                <button type="button" class="preg-opt" id="hm-preg-yes"
-                  onclick="hmSetPregnant(true)">Sim</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── URINA 24H — Accordion opcional (ClCr Medido com correção BSA) ── -->
-          <div class="hm-urine-accordion" id="hm-urine-accordion" style="grid-column:1/-1;">
-
-            <!-- Header clicável — sempre visível -->
-            <button type="button" class="hm-urine-header"
-              id="hm-urine-toggle-btn"
-              onclick="hmToggleUrine24()"
-              aria-expanded="false"
-              aria-controls="hm-urine-body">
-              <span class="hm-urine-header-left">
-                <i class="fa-solid fa-flask-vial hm-urine-icon"></i>
-                <span class="hm-urine-header-title" data-i18n="hm_urine24_title">Urina de 24 Horas</span>
-                <span class="hm-urine-badge" id="hm-urine-badge">Opcional</span>
-              </span>
-              <span class="hm-urine-chevron" id="hm-urine-chevron">
-                <i class="fa-solid fa-chevron-down"></i>
-              </span>
-            </button>
-
-            <!-- Body colapsável — oculto por padrão -->
-            <div class="hm-urine-body" id="hm-urine-body"
-              role="region" aria-labelledby="hm-urine-toggle-btn"
-              style="display:none; overflow:hidden;">
-
-              <div class="hm-urine-fields">
-
-                <div class="hm-input-wrap">
-                  <label class="hm-label" for="hm-urine24">
-                    Volume Urina <span class="hm-label-unit">mL/24h</span>
-                  </label>
-                  <input class="hm-input" id="hm-urine24"
-                    type="text" inputmode="decimal" pattern="[0-9.,]*"
-                    autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
-                    placeholder="Ex: 1500"
-                    oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
-                </div>
-
-                <div class="hm-input-wrap">
-                  <label class="hm-label" for="hm-urine-creat">
-                    Creat. Urinária <span class="hm-label-unit">mg/dL</span>
-                  </label>
-                  <input class="hm-input" id="hm-urine-creat"
-                    type="text" inputmode="decimal" pattern="[0-9.,]*"
-                    autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
-                    placeholder="Ex: 80"
-                    oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
-                </div>
-
-              </div><!-- /hm-urine-fields -->
-
-              <!-- Nota da fórmula -->
-              <p class="hm-urine-note" data-i18n="hm_urine24_note">
-                Usa ClCr Medido corrigido por BSA: (Ur×V/Ps×1440)×(1,73/BSA).
-                Requer Peso e Altura preenchidos.
-              </p>
-
-            </div><!-- /hm-urine-body -->
-
-          </div><!-- /hm-urine-accordion -->
-
-        </div>
-
-        <!-- Pills de resultado rápido (populadas pelo JS após fixar) -->
-        <div class="hm-result-pills" id="hm-result-pills" style="display:none">
-          <div class="hm-pill" id="hm-pill-clcr">
-            <span class="hm-pill-val" id="hm-pv-clcr">—</span>
-            <span class="hm-pill-lbl">ClCr</span>
-            <span class="hm-pill-lbl" id="hm-pv-clcr-src" style="font-size:7.5px;opacity:0.55;letter-spacing:0.1px;">CG</span>
-          </div>
-          <div class="hm-pill" id="hm-pill-imc">
-            <span class="hm-pill-val" id="hm-pv-imc">—</span>
-            <span class="hm-pill-lbl">IMC</span>
-          </div>
-          <div class="hm-pill" id="hm-pill-peso">
-            <span class="hm-pill-val" id="hm-pv-peso">—</span>
-            <span class="hm-pill-lbl">Peso Ideal</span>
-          </div>
-          <div class="hm-pill" id="hm-pill-bsa">
-            <span class="hm-pill-val" id="hm-pv-bsa">—</span>
-            <span class="hm-pill-lbl">BSA m²</span>
-          </div>
-        </div>
-
-        <!-- Toggle Hemodiálise -->
-        <div class="hm-hd-wrap">
-          <label class="hm-hd-toggle" for="hm-hemodialise" id="hm-hd-label">
-            <input type="checkbox" id="hm-hemodialise" onchange="hmToggleHemodialise(this.checked)" />
-            <span class="hm-hd-track">
-              <span class="hm-hd-thumb"></span>
-            </span>
-            <span class="hm-hd-text">
-              <i class="fa-solid fa-droplet-slash"></i>
-              Hemodiálise
-            </span>
-          </label>
-        </div>
-
-        <!-- Rodapé do card: botão Calcular/Fixar + botão Limpar -->
-        <div class="hm-card-footer">
-          <button class="hm-btn hm-btn--ghost" onclick="hmClearPatient()">
-            <i class="fa-solid fa-rotate-left"></i> Limpar
-          </button>
-          <button class="hm-btn hm-btn--primary" id="hm-fix-btn" onclick="hmFixarDados()">
-            <i class="fa-solid fa-calculator"></i>
-            <span class="lang-hub-pt">Calcular / Fixar</span>
-            <span class="lang-hub-es">Calcular / Fijar</span>
-          </button>
-        </div>
-
-      </div><!-- /hm-card--patient -->
+      <!-- ══════════════════════════════════════════════════════════
+           HOTFIX BUILD 248 — CARDS ZUMBIS REMOVIDOS
+           Os blocos duplicados de "Fármacos" (#hm-drugs-card) e
+           "Paciente" (#hm-patient-card) que existiam aqui foram
+           REMOVIDOS por completo. Eles reutilizavam os MESMOS IDs
+           (hm-weight, hm-age, hm-clcr, hm-fix-btn, hm-drug-count,
+           hm-drug-list etc.) já usados pelos cards REAIS dentro do
+           Hub Accordion (#hub-card-patient / #hub-card-farmacos).
+           Antes ficavam ocultos por acidente dentro de uma tag
+           <div style="display:none"> não fechada (ver hotfix da
+           árvore DOM); ao corrigir essa tag, esses cards zumbis
+           passaram a aparecer visualmente duplicados no fim da Home.
+           Fonte única de verdade: os cards dentro do <nav class="hub-accordion">
+           (linhas ~7576-7849). Nenhuma função JS depende deste bloco
+           (confirmado via grep: getElementById sempre retorna a
+           PRIMEIRA ocorrência dos IDs, que é a do Hub Accordion). -->
 
       <!-- ══════════════════════════════════════════════════════════
            CARD: VERIFICADOR DINÂMICO DE INTERAÇÕES — v3.1
@@ -8776,55 +8355,86 @@
         }
         body.light-mode .intx-chip-btn { color: #6c5ce7; }
 
-        /* ── Cards de resultado ── */
-        .intx-card {
-          padding: 18px;
-          border-radius: 10px;
-          margin-bottom: 14px;
-          box-sizing: border-box;
-          border-left-width: 6px;
-          border-left-style: solid;
+        /* ══════════════════════════════════════════════════════════
+           BUILD 245 — REFINAMENTO PREMIUM DO CARD DE INTERAÇÃO
+           Requisitos Onda 4:
+           1) Sem preenchimento sólido/marrom — apenas borda esquerda + fundo herdado do app
+           2) Badges em pill com opacidade sutil (~15% dark / pastel light)
+           3) Mecanismo (texto corrido) separado de Sintomas/Riscos (tags)
+           4) Bloco de Conduta com accent border-left de 3px, sem "caixa preta"
+           5) Paridade total Dark/Light — zero cor hardcoded fora de var()
+        ══════════════════════════════════════════════════════════ */
+
+        /* ── Cores de severidade — single source of truth via CSS vars ── */
+        :root {
+          --intx-contra-borda: #ea2027;
+          --intx-alta-borda:   #ee5a24;
+          --intx-mod-borda:    #f1c40f;
+          --intx-leve-borda:   #3498db;
         }
 
-        /* Contraindicada 🔴 */
-        .intx-card-contra { background: #2c1519; border-left-color: #ea2027; }
-        body.light-mode .intx-card-contra { background: #fef2f2; border-left-color: #ef4444; }
+        /* ── Cards de resultado — fundo herdado do app, só borda esquerda indica severidade ── */
+        .intx-card {
+          padding: 18px;
+          border-radius: var(--radius-md, 14px);
+          margin-bottom: 14px;
+          box-sizing: border-box;
+          border-left-width: 3px;
+          border-left-style: solid;
+          background: var(--bg-card, #1E293B);
+          border-top: 1px solid var(--border-subtle, rgba(56,189,248,0.12));
+          border-right: 1px solid var(--border-subtle, rgba(56,189,248,0.12));
+          border-bottom: 1px solid var(--border-subtle, rgba(56,189,248,0.12));
+        }
+        body.light-mode .intx-card {
+          background: #F8F9FA;
+          border-top-color: rgba(0,0,0,.06);
+          border-right-color: rgba(0,0,0,.06);
+          border-bottom-color: rgba(0,0,0,.06);
+        }
 
-        /* Alta 🔴/Laranja */
-        .intx-card-alta { background: #2c1e18; border-left-color: #ee5a24; }
-        body.light-mode .intx-card-alta { background: #fff7ed; border-left-color: #f97316; }
+        /* Cor da borda esquerda por severidade — mesmo tom dark/light, sem preenchimento */
+        .intx-card-contra { border-left-color: var(--intx-contra-borda); }
+        .intx-card-alta   { border-left-color: var(--intx-alta-borda); }
+        .intx-card-mod    { border-left-color: var(--intx-mod-borda); }
+        .intx-card-leve   { border-left-color: var(--intx-leve-borda); }
 
-        /* Moderada 🟠 */
-        .intx-card-mod { background: #2a2615; border-left-color: #f1c40f; }
-        body.light-mode .intx-card-mod { background: #fefce8; border-left-color: #eab308; }
-
-        /* Leve 🟡 */
-        .intx-card-leve { background: #151d2a; border-left-color: #3498db; }
-        body.light-mode .intx-card-leve { background: #f0f9ff; border-left-color: #3b82f6; }
-
-        /* Seguro ✅ */
-        .intx-card-safe { background: #14271f; border-left-color: #2ecc71; }
-        body.light-mode .intx-card-safe { background: #f0fdf4; border-left-color: #22c55e; }
+        /* Seguro ✅ — mantém leve tonalidade esmeralda apenas na borda */
+        .intx-card-safe { background: var(--bg-card, #1E293B); border-left-color: #2ecc71; }
+        body.light-mode .intx-card-safe { background: #F8F9FA; border-left-color: #22c55e; }
 
         /* ── Cabeçalho do card (severidade + score) ── */
         .intx-card-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-bottom: 10px;
+          margin-bottom: 12px;
           border-bottom: 1px solid rgba(255,255,255,.07);
-          padding-bottom: 9px;
+          padding-bottom: 11px;
           flex-wrap: wrap;
-          gap: 6px;
+          gap: 8px;
         }
-        body.light-mode .intx-card-header { border-bottom-color: rgba(0,0,0,.07); }
+        body.light-mode .intx-card-header { border-bottom-color: rgba(0,0,0,.08); }
 
+        /* ── Título/severidade agora é um PILL minimalista (não mais texto solto) ── */
         .intx-card-title {
+          display: inline-flex;
+          align-items: center;
           font-weight: 800;
-          font-size: 13px;
-          letter-spacing: .6px;
+          font-size: 11.5px;
+          letter-spacing: .5px;
+          padding: 5px 12px;
+          border-radius: 20px;
+          color: var(--pill-color, #ea2027);
+          background: color-mix(in srgb, var(--pill-color, #ea2027) 15%, transparent);
+          border: 1px solid color-mix(in srgb, var(--pill-color, #ea2027) 35%, transparent);
         }
-        /* A cor do título herda da borda esquerda — ver JS: style="color:var(--cor)" */
+        body.light-mode .intx-card-title {
+          color: var(--pill-color, #ea2027);
+          background: color-mix(in srgb, var(--pill-color, #ea2027) 12%, white);
+          border-color: color-mix(in srgb, var(--pill-color, #ea2027) 30%, transparent);
+        }
+        /* A cor do texto/borda/fundo do pill vem de --pill-color, setada inline pelo JS (custom property no elemento) */
 
         .intx-card-badges {
           display: flex;
@@ -8833,16 +8443,21 @@
           align-items: center;
         }
 
+        /* ── Badge "Impacto: X/5" — pill sutil, sem fundo sólido ── */
         .intx-badge-score {
-          color: #fff;
-          background: rgba(255,255,255,.1);
-          padding: 3px 10px;
-          border-radius: 5px;
-          font-size: 12px;
+          display: inline-flex;
+          align-items: center;
+          color: var(--text-primary, #E2E8F0);
+          background: rgba(255,255,255,.08);
+          border: 1px solid rgba(255,255,255,.14);
+          padding: 4px 11px;
+          border-radius: 20px;
+          font-size: 11.5px;
           font-weight: 700;
         }
         body.light-mode .intx-badge-score {
-          background: rgba(0,0,0,.08);
+          background: rgba(15,23,42,.06);
+          border-color: rgba(15,23,42,.10);
           color: #334155;
         }
 
@@ -8850,16 +8465,17 @@
           display: inline-flex;
           align-items: center;
           gap: 4px;
-          background: rgba(155,89,182,.25);
-          border: 1px solid rgba(155,89,182,.5);
+          background: rgba(155,89,182,.15);
+          border: 1px solid rgba(155,89,182,.35);
           color: #d7aefb;
-          padding: 2px 9px;
-          border-radius: 4px;
+          padding: 4px 11px;
+          border-radius: 20px;
           font-size: 11px;
           font-weight: 600;
         }
         body.light-mode .intx-badge-via-classe {
-          background: rgba(155,89,182,.12);
+          background: rgba(155,89,182,.10);
+          border-color: rgba(155,89,182,.25);
           color: #7c3aed;
         }
 
@@ -8867,49 +8483,100 @@
           display: inline-flex;
           align-items: center;
           gap: 4px;
-          background: rgba(52,152,219,.2);
-          border: 1px solid rgba(52,152,219,.5);
+          background: rgba(52,152,219,.15);
+          border: 1px solid rgba(52,152,219,.35);
           color: #74c0fc;
-          padding: 2px 9px;
-          border-radius: 4px;
+          padding: 4px 11px;
+          border-radius: 20px;
           font-size: 11px;
           font-weight: 600;
         }
         body.light-mode .intx-badge-cls-cls {
-          background: rgba(52,152,219,.12);
+          background: rgba(52,152,219,.10);
+          border-color: rgba(52,152,219,.25);
           color: #1d4ed8;
         }
 
         /* ── Par de fármacos (A ✕ B) ── */
         .intx-card-pair {
-          color: #eeeeee;
-          font-size: 14px;
-          margin-bottom: 8px;
+          color: var(--text-primary, #eeeeee);
+          font-size: 14.5px;
+          font-weight: 700;
+          margin-bottom: 10px;
         }
         body.light-mode .intx-card-pair { color: #1e293b; }
 
-        /* ── Texto de risco ── */
-        .intx-card-risco {
-          color: #cccccc;
+        /* ── Mecanismo — texto corrido padrão (leitura), sem tags ── */
+        .intx-card-mecanismo {
+          color: var(--text-secondary, #cccccc);
           font-size: 13px;
-          line-height: 1.6;
-          margin: 0 0 10px 0;
+          line-height: 1.65;
+          margin: 0 0 4px 0;
         }
-        body.light-mode .intx-card-risco { color: #334155; }
+        body.light-mode .intx-card-mecanismo { color: #334155; }
+        .intx-card-mecanismo b {
+          color: var(--text-primary, #E2E8F0);
+          font-weight: 700;
+        }
+        body.light-mode .intx-card-mecanismo b { color: #0f172a; }
 
-        /* ── Caixa de conduta ── */
+        /* ── Sintomas/Riscos críticos — quick-read tag list ── */
+        .intx-symptom-label {
+          font-size: 10.5px;
+          font-weight: 800;
+          letter-spacing: .6px;
+          text-transform: uppercase;
+          color: var(--text-muted, #94A3B8);
+          margin: 12px 0 7px 0;
+        }
+        body.light-mode .intx-symptom-label { color: #64748b; }
+        .intx-symptom-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          margin-bottom: 6px;
+        }
+        .intx-symptom-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          font-size: 11.5px;
+          font-weight: 700;
+          padding: 4px 10px;
+          border-radius: 20px;
+          background: rgba(248,113,113,.15);
+          border: 1px solid rgba(248,113,113,.32);
+          color: #fca5a5;
+        }
+        body.light-mode .intx-symptom-tag {
+          background: rgba(239,68,68,.10);
+          border-color: rgba(239,68,68,.24);
+          color: #b91c1c;
+        }
+
+        /* ── Bloco de Conduta — accent lateral 3px, sem caixa preta ── */
         .intx-conduta-box {
-          color: #ffffff;
-          font-size: 13px;
-          line-height: 1.6;
-          margin: 0;
-          background: rgba(0,0,0,.2);
-          padding: 11px;
-          border-radius: 6px;
+          color: var(--text-primary, #ffffff);
+          font-size: 13.5px;
+          line-height: 1.7;
+          margin: 14px 0 0 0;
+          background: rgba(255,255,255,.03);
+          padding: 12px 16px;
+          border-left: 3px solid var(--pill-color, #6c5ce7);
+          border-radius: 0 8px 8px 0;
         }
         body.light-mode .intx-conduta-box {
-          background: rgba(0,0,0,.04);
-          color: #334155;
+          background: rgba(15,23,42,.03);
+          color: #1e293b;
+        }
+        .intx-conduta-box b {
+          display: block;
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: .5px;
+          text-transform: uppercase;
+          color: var(--pill-color, #6c5ce7);
+          margin-bottom: 4px;
         }
 
         /* ── Card "sem interação documentada" ── */
@@ -9271,11 +8938,16 @@
           </button>
         </div>
 
-        <div class="card" style="padding:11px 12px 13px;border-color:var(--border-green)">
+        <!-- FIX BUILD 248: background fixo #0B0F17 (só dark) removido —
+             agora herda var(--bg-card), que já resolve para #1E293B no
+             dark mode e #ffffff no light mode. Isso eliminava a caixa
+             estrutural escura/desalinhada em Light Mode reportada nos
+             screenshots. -->
+        <div class="card" style="padding:11px 12px 13px;border-color:rgba(255,255,255,0.08);background:var(--bg-card)">
 
           <!-- Cabeçalho compacto -->
           <div class="card-title" style="margin-bottom:10px">
-            <i class="fa-solid fa-droplet" style="color:var(--info)"></i>
+            <i class="fa-solid fa-droplet" style="color:var(--text-secondary)"></i>
             <span data-i18n="fluid_card_title">Fluidoterapia Adulto</span>
           </div>
 
@@ -9285,7 +8957,7 @@
           <!-- ── SELETOR DE MODO ── -->
           <div class="input-group" style="margin-bottom:9px">
             <label class="input-label" data-i18n="fluid_label_mode">Tipo de cálculo</label>
-            <select class="input-field" id="fluid-type" onchange="fluidModeChange()" style="padding:8px 10px;font-size:13.5px">
+            <select class="input-field" id="fluid-type" onchange="fluidModeChange()" style="padding:8px 34px 8px 10px;font-size:13.5px;white-space:normal;text-overflow:clip">
               <option value="maint"   data-i18n="fluid_opt_maint">Manutenção Basal (30 mL/kg)</option>
               <option value="resus"   data-i18n="fluid_opt_resus">Ressuscitação volêmica (30 mL/kg bolus)</option>
               <option value="deficit" data-i18n="fluid_opt_deficit">Correção de Déficit hídrico</option>
@@ -9297,7 +8969,7 @@
           <div id="fluid-deficit-panel" style="display:none">
             <div class="input-group" style="margin-bottom:9px">
               <label class="input-label" data-i18n="fluid_label_dehy">Grau de desidratação</label>
-              <select class="input-field" id="fluid-dehy" style="padding:8px 10px;font-size:13.5px">
+              <select class="input-field" id="fluid-dehy" style="padding:8px 34px 8px 10px;font-size:13.5px;white-space:normal;text-overflow:clip">
                 <option value="leve"     data-i18n="fluid_dehy_leve">Leve (~3%)</option>
                 <option value="moderada" data-i18n="fluid_dehy_mod">Moderada (~6%)</option>
                 <option value="grave"    data-i18n="fluid_dehy_grave">Grave (~9%)</option>
@@ -9901,12 +9573,16 @@
           <span class="home-data-chip-unit">kg</span>
           <button class="qe-trigger" onclick="openQuickEdit('weight')" style="padding:4px 12px;font-size:12px;"><i class="fa-solid fa-pen" style="font-size:10px;"></i> Editar</button>
         </div>
-        <div id="inf-weight-missing" class="data-guard" style="display:none">
-          <div class="data-guard-icon">⚖️</div>
-          <div class="data-guard-tag" data-i18n="guard_tag">Dado Obrigatório</div>
-          <div class="data-guard-title" data-i18n="guard_weight_title">Peso não cadastrado</div>
-          <div class="data-guard-desc" data-i18n="guard_weight_desc">Para calcular doses peso-dependentes (mcg/kg/min, mg/kg/h), preencha o peso na aba Início.</div>
-          <button class="data-guard-btn" onclick="openQuickEdit('weight')" style="background:linear-gradient(135deg,#0B83B5,#38BDF8);color:#0B0F19;box-shadow:0 4px 14px rgba(56,189,248,0.25);">✏ Cadastrar Peso Agora</button>
+        <div id="inf-weight-missing" class="infusion-weight-inline" style="display:none">
+          <span class="infusion-weight-inline-icon">⚖️</span>
+          <div class="infusion-weight-inline-text">
+            <div class="infusion-weight-inline-title" data-i18n="guard_weight_title">Peso do Paciente (Obrigatório)</div>
+            <div class="infusion-weight-inline-desc" data-i18n="guard_weight_desc">Necessário para doses peso-dependentes (mcg/kg/min, mg/kg/h).</div>
+          </div>
+          <input type="text" class="infusion-weight-inline-input" id="inf-weight-inline-input"
+            inputmode="decimal" pattern="[0-9.,]*" placeholder="kg"
+            autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
+            oninput="document.getElementById('inf-weight').value=this.value; calculateInfusion();" />
         </div>
         <!-- campo oculto mantido para compatibilidade interna do JS -->
         <input type="hidden" id="inf-weight" />
@@ -9975,6 +9651,10 @@
             <div class="infusion-result-value" id="inf-rate-result">--</div>
             <div class="infusion-result-unit">mL/h</div>
             <div class="infusion-result-conc" id="inf-conc-inline"></div>
+            <div class="infusion-weight-note" id="inf-weight-note">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span data-i18n="infusion_weight_req">Informe o peso para doses peso-dependentes.</span>
+            </div>
           </div>
 
           <!-- Linha de cards secundários -->
@@ -11544,18 +11224,9 @@ function t(k){
 }
 
 /* ── ALTERNAR TEMA CLARO / ESCURO ── */
-function alternarTema(){
-  const isLight = document.body.classList.toggle('light-mode');
-  /* Persiste preferência do usuário na sessão */
-  try { sessionStorage.setItem('medcases-theme', isLight ? 'light' : 'dark'); } catch(e){}
-}
-/* Restaura tema salvo ao carregar (dark por padrão) */
-(function(){
-  try {
-    const saved = sessionStorage.getItem('medcases-theme');
-    if(saved === 'light') document.body.classList.add('light-mode');
-  } catch(e){}
-})();
+/* HOTFIX BUILD 248: alternarTema() e o auto-restore de sessionStorage
+   foram removidos — o tema (classe body.light-mode) agora é controlado
+   100% pelo app nativo via injeção externa, sem UI manual no app. */
 
 function setLang(l){
   currentLang=l;          /* variável let do escopo do script */
@@ -11645,6 +11316,13 @@ function setLang(l){
   }
   /* Atualiza chips e placeholder do Verificador de Interações */
   if (typeof window._ixRefreshLang === 'function') window._ixRefreshLang();
+  /* BUILD 246 (Onda 3): re-renderiza a ficha do fármaco se estiver aberta,
+     garantindo bilinguismo real das 3 sub-abas sem exigir fechar/reabrir */
+  const fdModal = document.getElementById('fd-modal');
+  if (fdModal && fdModal.classList.contains('open') && fdModal.dataset.currentDrugId
+      && typeof openFarmacoDetail === 'function') {
+    openFarmacoDetail(fdModal.dataset.currentDrugId);
+  }
 }
 function applyTranslations(){
   document.querySelectorAll('[data-i18n]').forEach(el=>{
@@ -15200,12 +14878,12 @@ function renderFarmacosList(filter) {
   const q  = _fNorm(filter || '');
 
   /* ── Filtro multi-campo: nome (pt+es), classe, categoria ── */
+  /* IDIOMA-EXCLUSIVO: varre apenas a propriedade do idioma ativo (currentLang) */
   const filtered = !q ? db : db.filter(d => {
-    const npt = _fNorm(typeof d.name === 'object' ? (d.name.pt || '') : (d.name || ''));
-    const nes = _fNorm(typeof d.name === 'object' ? (d.name.es || '') : '');
-    const cl  = _fNorm(_fdResolveClass(d));
-    const ct  = _fNorm(_fdResolveCat(d));
-    return npt.includes(q) || nes.includes(q) || cl.includes(q) || ct.includes(q);
+    const nm = _fNorm(_fdResolveName(d));
+    const cl = _fNorm(_fdResolveClass(d));
+    const ct = _fNorm(_fdResolveCat(d));
+    return nm.includes(q) || cl.includes(q) || ct.includes(q);
   });
 
   /* ── Stats text ── */
@@ -15736,16 +15414,28 @@ function openFarmacoDetail(id) {
   const body = document.getElementById('fd-body');
   if (!body) return;
 
-  let html = '';
+  /* ══════════════════════════════════════════════════════════════
+     BUILD 246 (Onda 3) — conteúdo agora distribuído em 3 abas:
+       htmlDosing  → Posologia   (hero, referência, ajuste renal)
+       htmlSafety  → Segurança   (efeitos adversos, contraindicações)
+       htmlPharma  → Farmacologia (mecanismo, farmacocinética, apresentações)
+     Nenhuma lógica clínica foi alterada — apenas a distribuição do
+     mesmo HTML já gerado dentro de 3 buckets em vez de 1 único.
+  ══════════════════════════════════════════════════════════════ */
+  let htmlDosing = '';
+  let htmlSafety = '';
+  let htmlPharma = '';
 
   /* ══════════════════════════════════════════════════════════════
      BLOCO HERO — Dose Principal Recomendada (topo do modal)
      Guiada pelo motor _fdResolveHeroPatient: perfil + ClCr + sexo
+     BUILD 246: hero recebe classe fd-hero-state-* (camaleão) que
+     reaproveita o MESMO hero.renalState já calculado pelo motor.
   ══════════════════════════════════════════════════════════════ */
 
   /* ── Badge de alerta gestante (antes do hero se ativo) ── */
   if (hero.pregAlert) {
-    html += `<div class="fd-preg-alert">
+    htmlDosing += `<div class="fd-preg-alert">
       <i class="fa-solid fa-person-pregnant" style="color:#F472B6;font-size:14px;flex-shrink:0;"></i>
       <span>${hero.pregAlert}</span>
     </div>`;
@@ -15761,7 +15451,10 @@ function openFarmacoDetail(id) {
                        hero.renalState === 'alert' ? 'fd-hero-chip--alert' :
                        hero.renalState === 'missing' ? 'fd-hero-chip--missing' : 'fd-hero-chip--ok';
 
-  html += `<div class="fd-dose-hero">
+  /* BUILD 246: classe camaleão do banner de dose — mesma taxonomia dos chips */
+  const heroStateCls = 'fd-hero-state-' + (hero.renalState === 'hd' ? 'hd' : hero.renalState === 'alert' ? 'alert' : hero.renalState === 'missing' ? 'missing' : 'ok');
+
+  htmlDosing += `<div class="fd-dose-hero ${heroStateCls}">
     <div class="fd-dose-hero-label">
       <i class="fa-solid fa-${heroViaIcon}"></i>
       ${hero.isPediatric
@@ -15771,7 +15464,7 @@ function openFarmacoDetail(id) {
     </div>`;
 
   /* Dose principal */
-  html += `<div class="fd-dose-item fd-dose-item--hero">
+  htmlDosing += `<div class="fd-dose-item fd-dose-item--hero">
     <div class="fd-dose-key">
       ${hero.isPediatric
         ? (isES ? `<i class="fa-solid fa-child" style="color:#38BDF8"></i> Pediátrico`
@@ -15796,7 +15489,7 @@ function openFarmacoDetail(id) {
   /* ── Barra de contexto do paciente (dentro do hero) ── */
   if (hasRealPatient) {
     const sexLbl = hero.isFemale ? (isES ? 'Fem.' : 'Fem.') : (isES ? 'Masc.' : 'Masc.');
-    html += `<div class="fd-patient-context-bar">
+    htmlDosing += `<div class="fd-patient-context-bar">
       <i class="fa-solid fa-user-injured" style="color:var(--text-muted);font-size:10px;"></i>
       ${hero.weight ? `<span>${hero.weight} kg</span>` : ''}
       ${hero.age    ? `<span>· ${hero.age} ${isES?'años':'anos'}</span>` : ''}
@@ -15807,7 +15500,7 @@ function openFarmacoDetail(id) {
     </div>`;
   }
 
-  html += `</div>`; /* fecha fd-dose-hero */
+  htmlDosing += `</div>`; /* fecha fd-dose-hero */
 
   /* ══════════════════════════════════════════════════════════════
      BLOCO REFERÊNCIA — Todas as doses disponíveis do fármaco
@@ -15821,7 +15514,7 @@ function openFarmacoDetail(id) {
                   || (typeof doseSrc === 'string' && doseSrc !== '—');
 
   if (hasAnyRef) {
-    html += `<div class="fd-ref-block">
+    htmlDosing += `<div class="fd-ref-block">
       <div class="fd-ref-header" onclick="this.parentElement.classList.toggle('fd-ref-open')" role="button" aria-expanded="false">
         <span class="fd-ref-header-left">
           <i class="fa-solid fa-book-medical" style="color:#38BDF8;"></i>
@@ -15844,76 +15537,76 @@ function openFarmacoDetail(id) {
       /* Adulto VO */
       const adultoVO = allEntries.filter(([k]) => _isAdultoVO(k));
       if (adultoVO.length) {
-        html += `<div class="fd-ref-cat">
+        htmlDosing += `<div class="fd-ref-cat">
           <div class="fd-ref-cat-title">
             <i class="fa-solid fa-pills" style="color:#34D399;font-size:10px;"></i>
             ${isES ? 'Adulto — VO' : 'Adulto — VO'}
           </div>`;
         adultoVO.forEach(([k,v]) => {
           const isHeroKey = hero._heroKey === k;
-          html += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
+          htmlDosing += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
             <span class="fd-ref-key">${_fdFormatKey(k)}</span>
             <span class="fd-ref-val">${_fdHighlight(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
           </div>`;
         });
-        html += `</div>`;
+        htmlDosing += `</div>`;
       }
 
       /* Adulto EV */
       const adultoEV = allEntries.filter(([k]) => _isAdultoEV(k));
       if (adultoEV.length) {
-        html += `<div class="fd-ref-cat">
+        htmlDosing += `<div class="fd-ref-cat">
           <div class="fd-ref-cat-title">
             <i class="fa-solid fa-syringe" style="color:#38BDF8;font-size:10px;"></i>
             ${isES ? 'Adulto — EV/IV' : 'Adulto — EV/IV'}
           </div>`;
         adultoEV.forEach(([k,v]) => {
           const isHeroKey = hero._heroKey === k;
-          html += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
+          htmlDosing += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
             <span class="fd-ref-key">${_fdFormatKey(k)}</span>
             <span class="fd-ref-val">${_fdHighlight(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
           </div>`;
         });
-        html += `</div>`;
+        htmlDosing += `</div>`;
       }
 
       /* Pediátrico */
       const pediatrico = allEntries.filter(([k]) => _isPediatric(k));
       if (pediatrico.length) {
-        html += `<div class="fd-ref-cat">
+        htmlDosing += `<div class="fd-ref-cat">
           <div class="fd-ref-cat-title">
             <i class="fa-solid fa-child" style="color:#FBBF24;font-size:10px;"></i>
             ${isES ? 'Pediátrico' : 'Pediátrico'}
           </div>`;
         pediatrico.forEach(([k,v]) => {
           const isHeroKey = hero._heroKey === k;
-          html += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
+          htmlDosing += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
             <span class="fd-ref-key">${_fdFormatKey(k)}</span>
             <span class="fd-ref-val">${_fdHighlight(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
           </div>`;
         });
-        html += `</div>`;
+        htmlDosing += `</div>`;
       }
 
       /* Outros esquemas (profilaxia, meningite, etc.) */
       const outros = allEntries.filter(([k]) => _isOther(k));
       if (outros.length) {
-        html += `<div class="fd-ref-cat">
+        htmlDosing += `<div class="fd-ref-cat">
           <div class="fd-ref-cat-title">
             <i class="fa-solid fa-list-ul" style="color:#A78BFA;font-size:10px;"></i>
             ${isES ? 'Otros esquemas' : 'Outros esquemas'}
           </div>`;
         outros.forEach(([k,v]) => {
           const isHeroKey = hero._heroKey === k;
-          html += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
+          htmlDosing += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
             <span class="fd-ref-key">${_fdFormatKey(k)}</span>
             <span class="fd-ref-val">${_fdHighlight(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
           </div>`;
         });
-        html += `</div>`;
+        htmlDosing += `</div>`;
       }
     } else if (typeof doseSrc === 'string' && doseSrc !== '—') {
-      html += `<div class="fd-ref-cat">
+      htmlDosing += `<div class="fd-ref-cat">
         <div class="fd-ref-row"><span class="fd-ref-val">${_fdHighlight(doseSrc)}</span></div>
       </div>`;
     }
@@ -15922,22 +15615,22 @@ function openFarmacoDetail(id) {
     if (doseKg && typeof doseKg === 'object') {
       const kgEntries = Object.entries(doseKg).filter(([k,v]) => v && v !== '—');
       if (kgEntries.length) {
-        html += `<div class="fd-ref-cat">
+        htmlDosing += `<div class="fd-ref-cat">
           <div class="fd-ref-cat-title">
             <i class="fa-solid fa-weight-scale" style="color:#FB923C;font-size:10px;"></i>
             ${isES ? 'Dosis por peso (mg/kg)' : 'Dose por peso (mg/kg)'}
           </div>`;
         kgEntries.forEach(([k,v]) => {
-          html += `<div class="fd-ref-row">
+          htmlDosing += `<div class="fd-ref-row">
             <span class="fd-ref-key">${_fdFormatKey(k)}</span>
             <span class="fd-ref-val">${_fdHighlight(String(v))}</span>
           </div>`;
         });
-        html += `</div>`;
+        htmlDosing += `</div>`;
       }
     }
 
-    html += `</div></div>`; /* fecha fd-ref-body + fd-ref-block */
+    htmlDosing += `</div></div>`; /* fecha fd-ref-body + fd-ref-block */
   }
 
   /* ══════════════════════════════════════════════════════════════
@@ -15987,7 +15680,7 @@ function openFarmacoDetail(id) {
       ? (isES ? 'Requiere ajuste' : 'Requer ajuste')
       : (isES ? 'Sin ajuste habitual' : 'Sem ajuste habitual');
 
-    html += `<div class="fd-renal-block">
+    htmlDosing += `<div class="fd-renal-block">
       <div class="fd-renal-header" onclick="this.parentElement.classList.toggle('fd-renal-open')" role="button" aria-expanded="false">
         <span class="fd-renal-header-left">
           <i class="fa-solid fa-kidney" style="color:#38BDF8;"></i>
@@ -15999,15 +15692,20 @@ function openFarmacoDetail(id) {
       <div class="fd-renal-body">`;
 
     if (adjMsg) {
-      html += `<div class="fd-renal-msg"><i class="fa-solid fa-circle-info" style="color:#38BDF8;opacity:0.7;font-size:10px;"></i> ${adjMsg}</div>`;
+      htmlDosing += `<div class="fd-renal-msg"><i class="fa-solid fa-circle-info" style="color:#38BDF8;opacity:0.7;font-size:10px;"></i> ${adjMsg}</div>`;
     }
+
+    /* BUILD 246: wrapper .fd-renal-timeline — conecta as faixas com
+       linha/dot vertical; a faixa ativa recebe .fd-renal-tl-item--active
+       (destaque esmeralda, substitui o antigo cyan .fd-renal-faixa--active) */
+    htmlDosing += `<div class="fd-renal-timeline">`;
 
     faixas.forEach(({ key, label, color, icon }) => {
       const fd = rdObj[key];
       if (!fd) return;
 
       const isActive = key === activeFaixa;
-      const rowCls   = isActive ? 'fd-renal-faixa fd-renal-faixa--active' : 'fd-renal-faixa';
+      const rowCls   = 'fd-renal-faixa fd-renal-tl-item' + (isActive ? ' fd-renal-faixa--active fd-renal-tl-item--active' : '');
 
       /* Monta células VO / EV / Pediátrica */
       const voRow  = (fd.vo  && fd.vo.dose)  ? fd.vo  : null;
@@ -16015,7 +15713,8 @@ function openFarmacoDetail(id) {
       const pedRow = (fd.pediatrica && fd.pediatrica.dose) ? fd.pediatrica : null;
       const obsRow = fd.obs || null;
 
-      html += `<div class="${rowCls}">
+      htmlDosing += `<div class="${rowCls}">
+        <span class="fd-renal-tl-dot"></span>
         <div class="fd-renal-faixa-header">
           <i class="fa-solid ${icon}" style="color:${color};font-size:11px;"></i>
           <span class="fd-renal-faixa-label" style="color:${color};">${label}</span>
@@ -16023,11 +15722,11 @@ function openFarmacoDetail(id) {
         </div>`;
 
       if (voRow || evRow || pedRow) {
-        html += `<div class="fd-renal-doses">`;
+        htmlDosing += `<div class="fd-renal-doses">`;
 
         if (voRow) {
           const hasMeta = voRow.intervalo || voRow.doseMaxima;
-          html += `<div class="fd-renal-dose-pill fd-renal-dose-pill--vo">
+          htmlDosing += `<div class="fd-renal-dose-pill fd-renal-dose-pill--vo">
             <div class="dp-top">
               <span class="fd-renal-via-label">VO</span>
               <strong>${_fdHighlight(voRow.dose)}</strong>
@@ -16041,7 +15740,7 @@ function openFarmacoDetail(id) {
 
         if (evRow) {
           const hasMeta = evRow.intervalo || evRow.doseMaxima;
-          html += `<div class="fd-renal-dose-pill fd-renal-dose-pill--ev">
+          htmlDosing += `<div class="fd-renal-dose-pill fd-renal-dose-pill--ev">
             <div class="dp-top">
               <span class="fd-renal-via-label">EV</span>
               <strong>${_fdHighlight(evRow.dose)}</strong>
@@ -16055,7 +15754,7 @@ function openFarmacoDetail(id) {
 
         if (pedRow) {
           const hasMeta = pedRow.intervalo || pedRow.doseMaxima;
-          html += `<div class="fd-renal-dose-pill fd-renal-dose-pill--ped">
+          htmlDosing += `<div class="fd-renal-dose-pill fd-renal-dose-pill--ped">
             <div class="dp-top">
               <span class="fd-renal-via-label"><i class="fa-solid fa-child" style="font-size:8px;"></i> Ped</span>
               <strong>${_fdHighlight(pedRow.dose)}</strong>
@@ -16067,106 +15766,136 @@ function openFarmacoDetail(id) {
           </div>`;
         }
 
-        html += `</div>`;
+        htmlDosing += `</div>`;
       }
 
       if (obsRow) {
-        html += `<div class="fd-renal-obs"><i class="fa-solid fa-circle-info" style="font-size:9px;opacity:0.7;flex-shrink:0;"></i> ${obsRow}</div>`;
+        htmlDosing += `<div class="fd-renal-obs"><i class="fa-solid fa-circle-info" style="font-size:9px;opacity:0.7;flex-shrink:0;"></i> ${obsRow}</div>`;
       }
 
-      html += `</div>`; /* fecha fd-renal-faixa */
+      htmlDosing += `</div>`; /* fecha fd-renal-faixa / fd-renal-tl-item */
     });
 
-    html += `</div></div>`; /* fecha fd-renal-body + fd-renal-block */
+    htmlDosing += `</div>`; /* fecha fd-renal-timeline */
+
+    htmlDosing += `</div></div>`; /* fecha fd-renal-body + fd-renal-block */
   })();
 
-  /* ══ BLOCO 2 — MECANISMO DE AÇÃO ══ */
+  /* ══ BLOCO 2 — MECANISMO DE AÇÃO (→ aba Farmacologia) ══ */
   const mech = get('mechanism');
   if (mech) {
-    html += `<div class="fd-section">
+    htmlPharma += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-atom" style="color:#A78BFA;"></i> ${isES?'MECANISMO DE ACCIÓN':'MECANISMO DE AÇÃO'}</div>
       <div class="fd-section-text">${mech}</div>
     </div>`;
   }
 
-  /* ══ BLOCO 3 — FARMACOCINÉTICA ══ */
+  /* ══ BLOCO 3 — FARMACOCINÉTICA (→ aba Farmacologia) ══ */
   const onset    = get('onset');
   const halfLife = get('halfLife');
   if (onset || halfLife) {
-    html += `<div class="fd-section">
+    htmlPharma += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-clock" style="color:#38BDF8;"></i> ${isES?'FARMACOCINÉTICA':'FARMACOCINÉTICA'}</div>`;
-    if (onset)    html += `<div class="fd-adj-row"><span class="fd-adj-icon">⏱</span><span>${onset}</span></div>`;
-    if (halfLife) html += `<div class="fd-adj-row"><span class="fd-adj-icon">⏳</span><span>${halfLife}</span></div>`;
-    html += `</div>`;
+    if (onset)    htmlPharma += `<div class="fd-adj-row"><span class="fd-adj-icon">⏱</span><span>${onset}</span></div>`;
+    if (halfLife) htmlPharma += `<div class="fd-adj-row"><span class="fd-adj-icon">⏳</span><span>${halfLife}</span></div>`;
+    htmlPharma += `</div>`;
   }
 
-  /* ══ BLOCO 4 — AJUSTE HEPÁTICO ══ */
+  /* ══ BLOCO 4 — AJUSTE HEPÁTICO (→ aba Farmacologia) ══ */
   const hepatic = get('hepaticAdjustment');
   if (hepatic) {
-    html += `<div class="fd-section">
+    htmlPharma += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-heart-pulse" style="color:#F0A842;"></i> ${isES?'AJUSTE HEPÁTICO':'AJUSTE HEPÁTICO'}</div>
       <div class="fd-section-text">${hepatic}</div>
     </div>`;
   }
 
-  /* ══ BLOCO 5 — EFEITOS ADVERSOS COMUNS (lista tipográfica limpa) ══ */
+  /* ══ BLOCO 5 — EFEITOS ADVERSOS COMUNS (→ aba Segurança) ══ */
   const common = get('commonAdverseEffects');
   if (common && Array.isArray(common) && common.length) {
     const items = common.filter(Boolean);
-    html += `<div class="fd-section">
+    htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-triangle-exclamation" style="color:#F0A842;"></i> ${isES?'EF. ADVERSOS COMUNES':'EF. ADVERSOS COMUNS'} <span style="font-weight:400;color:var(--text-muted);font-size:9.5px;">(${items.length})</span></div>
       <ul class="fd-clean-list fd-clean-list--warn">${items.map(e=>`<li><span class="fd-cl-dot">●</span><span>${e}</span></li>`).join('')}</ul>
     </div>`;
   }
 
-  /* ══ BLOCO 6 — EFEITOS ADVERSOS GRAVES (lista tipográfica limpa) ══ */
+  /* ══ BLOCO 6 — EFEITOS ADVERSOS GRAVES (→ aba Segurança) ══ */
   const danger = get('dangerousAdverseEffects');
   if (danger && Array.isArray(danger) && danger.length) {
     const items = danger.filter(Boolean);
-    html += `<div class="fd-section">
+    htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-circle-exclamation" style="color:#E05C6B;"></i> ${isES?'EF. ADVERSOS GRAVES':'EF. ADVERSOS GRAVES'} <span style="font-weight:400;color:var(--text-muted);font-size:9.5px;">(${items.length})</span></div>
       <ul class="fd-clean-list fd-clean-list--danger">${items.map(e=>`<li><span class="fd-cl-dot">●</span><span>${e}</span></li>`).join('')}</ul>
     </div>`;
   }
 
-  /* ══ BLOCO 7 — CONTRAINDICAÇÕES (lista tipográfica limpa) ══ */
+  /* ══ BLOCO 7 — CONTRAINDICAÇÕES (→ aba Segurança) ══ */
   const contra = get('contraindications');
   if (contra && Array.isArray(contra) && contra.length) {
     const items = contra.filter(Boolean);
-    html += `<div class="fd-section">
+    htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-ban" style="color:#E05C6B;"></i> ${isES?'CONTRAINDICACIONES':'CONTRAINDICAÇÕES'}</div>
       <ul class="fd-clean-list fd-clean-list--danger">${items.map(e=>`<li><span class="fd-cl-dot" style="color:#F87171;">&#x25A0;</span><span>${e}</span></li>`).join('')}</ul>
     </div>`;
   }
 
-  /* ══ BLOCO 8 — ALERTAS CLÍNICOS (lista tipográfica limpa) ══ */
+  /* ══ BLOCO 8 — ALERTAS CLÍNICOS (→ aba Segurança) ══ */
   const risks = get('risksByPatient');
   if (risks && Array.isArray(risks) && risks.filter(Boolean).length) {
     const items = risks.filter(Boolean);
-    html += `<div class="fd-section">
+    htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-shield-halved" style="color:#A78BFA;"></i> ${isES?'ALERTAS CLÍNICOS':'ALERTAS CLÍNICOS'}</div>
       <ul class="fd-clean-list fd-clean-list--warn">${items.map(r=>`<li><span class="fd-cl-dot" style="color:#A78BFA;">●</span><span>${r}</span></li>`).join('')}</ul>
     </div>`;
   }
 
-  /* ══ BLOCO 9 — APRESENTAÇÕES COMERCIAIS (lista tipográfica limpa) ══ */
+  /* ══ BLOCO 9 — APRESENTAÇÕES COMERCIAIS (→ aba Farmacologia) ══ */
   const presentation = get('presentation');
   if (presentation && Array.isArray(presentation) && presentation.length) {
     const items = presentation.filter(Boolean);
-    html += `<div class="fd-section">
+    htmlPharma += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-box" style="color:#38BDF8;"></i> ${isES?'PRESENTACIONES':'APRESENTAÇÕES'}</div>
       <ul class="fd-clean-list fd-clean-list--safe">${items.map(p=>`<li><span class="fd-cl-dot">●</span><span>${p}</span></li>`).join('')}</ul>
     </div>`;
   }
 
-  /* ══ FALLBACK — nenhum dado disponível ══ */
-  if (!html) {
-    html = `<div style="text-align:center;padding:32px 20px;color:var(--text-muted);">
+  /* ══ FALLBACKS — nenhum dado disponível na aba (mensagem por aba) ══ */
+  const _fdEmptyMsg = (label) => `<div style="text-align:center;padding:32px 20px;color:var(--text-muted);">
       <i class="fa-solid fa-circle-info" style="font-size:28px;opacity:0.4;display:block;margin-bottom:12px;"></i>
-      <p style="font-size:13px;">Dados detalhados não disponíveis para este módulo.</p>
-      <p style="font-size:11px;margin-top:8px;opacity:0.7;">Use <strong>"Calcular Dose"</strong> para ver na aba Adulto.</p>
+      <p style="font-size:13px;">${isES ? 'Datos detallados no disponibles para este módulo.' : 'Dados detalhados não disponíveis para este módulo.'}</p>
+      ${label === 'dosing' ? `<p style="font-size:11px;margin-top:8px;opacity:0.7;">${isES ? 'Use' : 'Use'} <strong>"${isES?'Calcular Dosis':'Calcular Dose'}"</strong> ${isES ? 'para ver en la pestaña Adulto.' : 'para ver na aba Adulto.'}</p>` : ''}
     </div>`;
-  }
+  if (!htmlDosing) htmlDosing = _fdEmptyMsg('dosing');
+  if (!htmlSafety) htmlSafety = _fdEmptyMsg('safety');
+  if (!htmlPharma) htmlPharma = _fdEmptyMsg('pharma');
+
+  /* ══════════════════════════════════════════════════════════════
+     BUILD 246 (Onda 3) — Renderização final: 3 sub-abas navegáveis
+     (Posologia / Segurança / Farmacologia) via .fd-tabs-nav.
+     Nenhum novo texto hardcoded: rótulos seguem o padrão ternário
+     isES já usado 100+ vezes dentro desta função.
+  ══════════════════════════════════════════════════════════════ */
+  const tabLblDosing = isES ? 'Posología' : 'Posologia';
+  const tabLblSafety = isES ? 'Seguridad' : 'Segurança';
+  const tabLblPharma = isES ? 'Farmacología' : 'Farmacologia';
+
+  const html = `
+    <nav class="fd-tabs-nav" role="tablist">
+      <button type="button" class="fd-tab-btn active" data-fd-tab="dosing" role="tab" aria-selected="true" onclick="_fdSwitchTab('dosing')">
+        <i class="fa-solid fa-pills" style="margin-right:5px;"></i>${tabLblDosing}
+      </button>
+      <button type="button" class="fd-tab-btn" data-fd-tab="safety" role="tab" aria-selected="false" onclick="_fdSwitchTab('safety')">
+        <i class="fa-solid fa-shield-halved" style="margin-right:5px;"></i>${tabLblSafety}
+      </button>
+      <button type="button" class="fd-tab-btn" data-fd-tab="pharma" role="tab" aria-selected="false" onclick="_fdSwitchTab('pharma')">
+        <i class="fa-solid fa-atom" style="margin-right:5px;"></i>${tabLblPharma}
+      </button>
+    </nav>
+    <div class="fd-tab-panel active" data-fd-panel="dosing">${htmlDosing}</div>
+    <div class="fd-tab-panel" data-fd-panel="safety">${htmlSafety}</div>
+    <div class="fd-tab-panel" data-fd-panel="pharma">${htmlPharma}</div>
+  `;
 
   body.innerHTML = html;
 
@@ -16193,6 +15922,32 @@ function openFarmacoDetail(id) {
   });
   document.body.style.overflow = 'hidden';
 }
+
+/* ══════════════════════════════════════════════════════════════
+   _fdSwitchTab() — BUILD 246 (Onda 3)
+   Alterna entre as 3 sub-abas do modal de detalhe do fármaco
+   (Posologia / Segurança / Farmacologia). Apenas manipulação de
+   classes .active — não toca em nenhum dado clínico já renderizado.
+══════════════════════════════════════════════════════════════ */
+function _fdSwitchTab(tabName) {
+  const body = document.getElementById('fd-body');
+  if (!body) return;
+
+  body.querySelectorAll('.fd-tab-btn').forEach(btn => {
+    const isActive = btn.dataset.fdTab === tabName;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
+
+  body.querySelectorAll('.fd-tab-panel').forEach(panel => {
+    panel.classList.toggle('active', panel.dataset.fdPanel === tabName);
+  });
+
+  /* Rola o body do modal para o topo ao trocar de aba */
+  const modal = document.getElementById('fd-modal');
+  if (modal) modal.scrollTop = 0;
+}
+window._fdSwitchTab = _fdSwitchTab;
 
 /* Fecha o modal de detalhe */
 function closeFarmacoDetail() {
@@ -17096,13 +16851,12 @@ function renderDrugList(filter) {
   /* Usa o Objeto Mestre Global como fonte canônica */
   const db = _getMasterDB();
 
+  /* IDIOMA-EXCLUSIVO: varre apenas a propriedade do idioma ativo */
   const filtered = db.filter(d => {
-    const npt = _fNorm(typeof d.name === 'object' ? (d.name.pt || '') : (d.name || ''));
-    const nes = _fNorm(typeof d.name === 'object' ? (d.name.es || '') : '');
-    const cl  = _fNorm(_fdResolveClass(d));
-    const ct  = _fNorm(_fdResolveCat(d));
-    return npt.includes(filterLow) || nes.includes(filterLow)
-        || cl.includes(filterLow)  || ct.includes(filterLow);
+    const nm = _fNorm(_fdResolveName(d));
+    const cl = _fNorm(_fdResolveClass(d));
+    const ct = _fNorm(_fdResolveCat(d));
+    return nm.includes(filterLow) || cl.includes(filterLow) || ct.includes(filterLow);
   });
 
   if (filtered.length === 0) {
@@ -18228,9 +17982,9 @@ function calcFluids() {
   const cont   = t('fluid_continuous');
 
   /* ── Bloco de resultado base ── */
-  let html = `<div class="card" style="margin-top:0;padding:11px 12px 13px;border-color:var(--border-green)">
+  let html = `<div class="card" style="margin-top:0;padding:11px 12px 13px;border-color:rgba(255,255,255,0.08);background:#0B0F17">
     <div class="card-title" style="margin-bottom:10px">
-      <i class="fa-solid fa-droplet" style="color:var(--info)"></i>
+      <i class="fa-solid fa-droplet" style="color:var(--text-secondary)"></i>
       ${t('fluid_res_title')}
     </div>`;
 
@@ -19625,13 +19379,22 @@ function calculateInfusion() {
   if (emptyHint)  emptyHint.style.display = 'none';
   if (resultArea) resultArea.classList.add('show');
 
-  /* Vazão principal */
+  /* Vazão principal
+     Nota visual (Refatoração Premium Minimalista): quando a dose depende do
+     peso (mcg/kg/min ou mg/kg/h) e o peso não está cadastrado, o valor
+     numérico não pode ser calculado. Antes exibia-se o emoji "⚠️" em 48px
+     (visualmente pesado/"triângulo gigante"); agora exibe-se um traço "—"
+     discreto no valor, com uma etiqueta de aviso sutil abaixo (sem alterar
+     nenhum cálculo/matemática — apenas apresentação). */
+  const needsWeightNote = dose > 0 && (unidade === 'mcg/kg/min' || unidade === 'mg/kg/h') && !pesoKg;
   if (rateEl) {
+    rateEl.classList.toggle('infusion-result-value--warn', !!needsWeightNote);
     rateEl.textContent = Number.isFinite(mlHora) && mlHora > 0
       ? mlHora.toFixed(2)
-      : (dose > 0 && (unidade === 'mcg/kg/min' || unidade === 'mg/kg/h') && !pesoKg
-          ? '⚠️' : '--');
+      : (needsWeightNote ? '—' : '--');
   }
+  const weightNoteEl = document.getElementById('inf-weight-note');
+  if (weightNoteEl) weightNoteEl.classList.toggle('show', !!needsWeightNote);
 
   /* Concentração */
   const concStr = `${mcgPorMl.toFixed(2)} mcg/mL`;
@@ -20857,11 +20620,15 @@ function _adaptExternalDB(dbObj, categoryLabel) {
 
     /* Filtro: aceita busca no nome display, no nome PT original e no canonical-sem-alias.
        NÃO filtra por canonical-com-alias para não suprimir "enalapril" por "captopril". */
+    /* IDIOMA-EXCLUSIVO: filtra somente pelo nome de exibição no idioma
+       ativo (item.display, já resolvido via _displayName(nomePt, lang)).
+       Removida a comparação com item.normDisplay (forma canônica PT),
+       que permitia "vazar" resultados em PT mesmo com o app em ES. */
     const filtered = q.length === 0
       ? listaNoBusca.slice(0, 14)
       : listaNoBusca.filter(item => {
           const dispNorm = _normSemAlias(item.display);
-          return dispNorm.includes(qLow) || item.normDisplay.includes(qLow);
+          return dispNorm.includes(qLow);
         }).slice(0, 12);
 
     if (filtered.length === 0) {
@@ -21080,6 +20847,70 @@ function _adaptExternalDB(dbObj, categoryLabel) {
      ENGINE PRINCIPAL — VERIFICAÇÃO BIDIRECIONAL
      Algoritmo C(n,2) · ordenação por scoreClinico desc
   ══════════════════════════════════════════════ */
+  /* ══════════════════════════════════════════════════════════════
+     BUILD 245 — Extrator bilíngue de sintomas/riscos críticos
+     Faz parsing client-side do texto já traduzido de `descricao`
+     (NÃO altera database/interacoes.js, NÃO altera o motor de match
+     acima). Usado apenas para popular a lista de "quick-read tags"
+     no novo layout do card de interação (requisito Onda 4 #2).
+  ══════════════════════════════════════════════════════════════ */
+  const _INTX_SYMPTOM_KEYWORDS = {
+    pt: [
+      { re: /hipotens[ãa]o/i,                                    tag: '🩸 Hipotensão' },
+      { re: /hipertens[ãa]o/i,                                    tag: '🩸 Hipertensão' },
+      { re: /hipercalemia|hiperpotassemia/i,                      tag: '⚡ Hipercalemia' },
+      { re: /hipocalemia|hipopotassemia/i,                        tag: '⚡ Hipocalemia' },
+      { re: /les[ãa]o renal|insufici[êe]ncia renal|nefrotoxicidade/i, tag: '🫘 Lesão Renal' },
+      { re: /bradicardia/i,                                       tag: '💓 Bradicardia' },
+      { re: /taquicardia/i,                                       tag: '💓 Taquicardia' },
+      { re: /hipoglicemia/i,                                      tag: '🍬 Hipoglicemia' },
+      { re: /hiperglicemia/i,                                     tag: '🍬 Hiperglicemia' },
+      { re: /qt prolongado|prolonga[çc][ãa]o do (intervalo )?qt/i, tag: '📈 QT Prolongado' },
+      { re: /sangramento|hemorragia/i,                            tag: '🩹 Sangramento' },
+      { re: /seda[çc][ãa]o (excessiva|profunda)?/i,               tag: '😴 Sedação Excessiva' },
+      { re: /arritmia/i,                                          tag: '💔 Arritmia' },
+      { re: /convuls[ãa]o/i,                                      tag: '⚡ Convulsão' },
+      { re: /depress[ãa]o respirat[óo]ria/i,                      tag: '🫁 Depressão Respiratória' },
+      { re: /hepatotoxicidade|toxicidade hep[áa]tica/i,           tag: '🧪 Hepatotoxicidade' },
+      { re: /s[íi]ndrome serotonin[ée]rgic/i,                     tag: '🌀 Síndrome Serotoninérgica' },
+      { re: /rabdomi[óo]lise/i,                                   tag: '⚠️ Rabdomiólise' },
+    ],
+    es: [
+      { re: /hipotensi[óo]n/i,                                    tag: '🩸 Hipotensión' },
+      { re: /hipertensi[óo]n/i,                                    tag: '🩸 Hipertensión' },
+      { re: /hiperpotasemia|hipercalemia/i,                        tag: '⚡ Hiperpotasemia' },
+      { re: /hipopotasemia|hipocalemia/i,                          tag: '⚡ Hipopotasemia' },
+      { re: /lesi[óo]n renal|insuficiencia renal|nefrotoxicidad/i,  tag: '🫘 Lesión Renal' },
+      { re: /bradicardia/i,                                        tag: '💓 Bradicardia' },
+      { re: /taquicardia/i,                                        tag: '💓 Taquicardia' },
+      { re: /hipoglucemia/i,                                       tag: '🍬 Hipoglucemia' },
+      { re: /hiperglucemia/i,                                      tag: '🍬 Hiperglucemia' },
+      { re: /qt prolongado|prolongaci[óo]n del (intervalo )?qt/i,   tag: '📈 QT Prolongado' },
+      { re: /sangrado|hemorragia/i,                                tag: '🩹 Hemorragia' },
+      { re: /sedaci[óo]n (excesiva|profunda)?/i,                   tag: '😴 Sedación Excesiva' },
+      { re: /arritmia/i,                                           tag: '💔 Arritmia' },
+      { re: /convulsi[óo]n/i,                                       tag: '⚡ Convulsión' },
+      { re: /depresi[óo]n respiratoria/i,                          tag: '🫁 Depresión Respiratoria' },
+      { re: /hepatotoxicidad|toxicidad hep[áa]tica/i,               tag: '🧪 Hepatotoxicidad' },
+      { re: /s[íi]ndrome serotonin[ée]rgic/i,                      tag: '🌀 Síndrome Serotoninérgico' },
+      { re: /rabdomi[óo]lisis/i,                                    tag: '⚠️ Rabdomiólisis' },
+    ]
+  };
+
+  function _intxExtractSymptomTags(text, lang) {
+    if (!text) return [];
+    const list = _INTX_SYMPTOM_KEYWORDS[lang] || _INTX_SYMPTOM_KEYWORDS.pt;
+    const found = [];
+    const seen = new Set();
+    list.forEach(function(item) {
+      if (item.re.test(text) && !seen.has(item.tag)) {
+        seen.add(item.tag);
+        found.push(item.tag);
+      }
+    });
+    return found.slice(0, 6); /* limita a 6 tags para não poluir o card */
+  }
+
   window.executarChecagemInteracoes = function() {
     if (selecionadosInteracao.length < INTX_MIN) return;
 
@@ -21247,31 +21078,34 @@ function _adaptExternalDB(dbObj, categoryLabel) {
         ((b.config.scoreClinico || 0) - (a.config.scoreClinico || 0))
       );
 
-      /* ── Renderização dos cards de alerta ── */
+      /* ── Renderização dos cards de alerta (BUILD 245: árvore DOM premium) ──
+         IMPORTANTE: nenhuma alteração no algoritmo de match acima. Apenas a
+         distribuição das strings já traduzidas (descricao/conduta/labels)
+         dentro de uma nova árvore de elementos limpa foi modificada. */
       const htmlResultados = interacoesEncontradas.map(item => {
         const score = item.config.scoreClinico || 0;
 
-        /* Classe CSS + cor do título (via CSS var inline — sem hardcode de fundo) */
-        let cardClass, corTitulo, txtTitulo;
+        /* Classe CSS + cor do pill (via CSS var inline — sem hardcode de fundo) */
+        let cardClass, corPill, txtTitulo;
         switch (item.config.gravidade) {
           case 'contraindicada':
             cardClass  = 'intx-card-contra';
-            corTitulo  = 'var(--intx-contra-borda, #ea2027)';
+            corPill    = 'var(--intx-contra-borda, #ea2027)';
             txtTitulo  = isES ? '🔴 CONTRAINDICADO' : '🔴 CONTRAINDICADO';
             break;
           case 'alta':
             cardClass  = 'intx-card-alta';
-            corTitulo  = 'var(--intx-alta-borda, #ee5a24)';
+            corPill    = 'var(--intx-alta-borda, #ee5a24)';
             txtTitulo  = isES ? '🔴 ALTO RIESGO DE MUERTE O INTERNACIÓN' : '🔴 ALTO RISCO DE MORTE OU INTERNAÇÃO';
             break;
           case 'moderada':
             cardClass  = 'intx-card-mod';
-            corTitulo  = 'var(--intx-mod-borda, #f1c40f)';
+            corPill    = 'var(--intx-mod-borda, #f1c40f)';
             txtTitulo  = isES ? '🟠 CAMBIA CONDUCTA INMEDIATAMENTE' : '🟠 MUDA CONDUTA IMEDIATAMENTE';
             break;
           default:
             cardClass  = 'intx-card-leve';
-            corTitulo  = 'var(--intx-leve-borda, #3498db)';
+            corPill    = 'var(--intx-leve-borda, #3498db)';
             txtTitulo  = isES ? '🟡 SOLO MONITORIZACIÓN' : '🟡 APENAS MONITORIZAÇÃO';
         }
 
@@ -21281,8 +21115,21 @@ function _adaptExternalDB(dbObj, categoryLabel) {
         const conduta = item.config.conduta
           ? (item.config.conduta[lang] || item.config.conduta.pt || '')
           : '';
-        const lblRisco   = isES ? 'Riesgo:'   : 'Risco:';
-        const lblConduta = isES ? 'Conducta:' : 'Conduta:';
+
+        /* ── Mapeamentos bilíngues dinâmicos (não-negociável: zero hardcode fixo) ── */
+        const lblRisco    = isES ? 'Riesgo:'   : 'Risco:';
+        const lblConduta  = isES ? 'Conducta:' : 'Conduta:';
+        const lblImpacto  = isES ? 'Impacto'   : 'Impacto';
+        const lblSintomas = isES ? 'Riesgos / Síntomas críticos' : 'Riscos / Sintomas críticos';
+
+        /* ── Extração client-side de tags de sintomas a partir da `descricao` já traduzida ── */
+        const symptomTags = _intxExtractSymptomTags(descricao, lang);
+        const symptomTagsHtml = symptomTags.length
+          ? `<div class="intx-symptom-label">${lblSintomas}</div>
+             <div class="intx-symptom-tags">
+               ${symptomTags.map(tag => `<span class="intx-symptom-tag">${tag}</span>`).join('')}
+             </div>`
+          : '';
 
         /* ── Badge de match tipo (Ontologia) — usa classes CSS ── */
         let badgeMatchHtml = '';
@@ -21297,24 +21144,26 @@ function _adaptExternalDB(dbObj, categoryLabel) {
         }
 
         return `
-          <div class="intx-card ${cardClass}">
+          <div class="intx-card ${cardClass}" style="--pill-color:${corPill};">
             <div class="intx-card-header">
-              <span class="intx-card-title" style="color:${corTitulo};">${txtTitulo}</span>
+              <span class="intx-card-title">${txtTitulo}</span>
               <div class="intx-card-badges">
                 ${badgeMatchHtml}
-                ${score > 0 ? `<span class="intx-badge-score">⭐ ${isES ? 'Impacto' : 'Impacto'}: ${score}/5</span>` : ''}
+                ${score > 0 ? `<span class="intx-badge-score">⭐ ${lblImpacto}: ${score}/5</span>` : ''}
               </div>
             </div>
             <div class="intx-card-pair">
               <b>${_displayName(item.med1, lang)}</b> ✕ <b>${_displayName(item.med2, lang)}</b>
             </div>
-            <p class="intx-card-risco">
+            <p class="intx-card-mecanismo">
               <b>${lblRisco}</b> ${descricao}
             </p>
+            ${symptomTagsHtml}
             ${conduta ? `
-            <p class="intx-conduta-box">
-              <b>${lblConduta}</b> ${conduta}
-            </p>` : ''}
+            <div class="intx-conduta-box">
+              <b>${lblConduta}</b>
+              ${conduta}
+            </div>` : ''}
           </div>`;
       }).join('');
 
@@ -22364,22 +22213,34 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Normaliza a query (acentos + lowercase) */
     const q = _fNorm(term);
 
-    /* ── Filtra usando o Objeto Mestre Global ── */
+    /* ── Filtra usando o Objeto Mestre Global ──
+       IDIOMA-EXCLUSIVO: busca e exibe SOMENTE a propriedade do idioma
+       ativo (currentLang). _fdResolveName/_fdResolveClass/_fdResolveCat
+       já resolvem para o idioma ativo (com fallback .pt apenas quando a
+       tradução do idioma ativo não existir na base) — não há mais OR
+       cego entre pt+es que causava resultados no idioma errado. */
     const masterDB = _getMasterDB();
-    console.log('[SEARCH_AUDIT] query="' + term + '" norm="' + q + '" totalDB=' + masterDB.length);
 
     const results = masterDB.filter(d => {
       if (!d) return false;
-      const npt = _fNorm(typeof d.name === 'object' ? (d.name.pt || '') : (d.name || ''));
-      const nes = _fNorm(typeof d.name === 'object' ? (d.name.es || '') : '');
-      const cl  = _fNorm(_fdResolveClass(d));
-      const ct  = _fNorm(_fdResolveCat(d));
-      const match = npt.includes(q) || nes.includes(q) || cl.includes(q) || ct.includes(q);
-      if (match) console.log('[SEARCH_AUDIT] HIT id=' + d.id + ' name="' + npt + '"');
-      return match;
+      const nm = _fNorm(_fdResolveName(d));
+      const cl = _fNorm(_fdResolveClass(d));
+      const ct = _fNorm(_fdResolveCat(d));
+      return nm.includes(q) || cl.includes(q) || ct.includes(q);
     }).slice(0, 40); /* Limite de performance */
 
-    console.log('[SEARCH_AUDIT] resultados=' + results.length);
+    /* FIX BUILD 248: atualiza SEMPRE o contador com a contagem REAL da
+       busca (nunca com o total da base) — antes o contador ficava
+       preso em "339 fármacos" mesmo com resultados filtrados, pois
+       nenhum dos dois ramos abaixo chamava a atualização do contador
+       com o número de `results`. */
+    const isESCount = (typeof currentLang !== 'undefined' && currentLang === 'es');
+    const countEl = document.getElementById('hm-drug-count');
+    if (countEl) {
+      countEl.textContent = results.length === 1
+        ? (isESCount ? '1 fármaco encontrado' : '1 fármaco encontrado')
+        : (isESCount ? `${results.length} fármacos encontrados` : `${results.length} fármacos encontrados`);
+    }
 
     if (!results.length) {
       listEl.innerHTML = `
@@ -23510,6 +23371,12 @@ window.MedCasesBridge = {
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
 <script src="js/build240b-accordion-fix.js"></script>
+
+<!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
+<script src="js/calculator-overlay.js"></script>
+
+<!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
+<script src="js/category-pills.js"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
 <script src="js/elec-calc.js"></script>

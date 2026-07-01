@@ -22,7 +22,7 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v29';
+const CACHE_VERSION   = 'medcases-v55';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
 /* ── Lista canônica de 31 assets pré-cacheados no install ───
@@ -47,11 +47,16 @@ const ASSETS_TO_CACHE = [
   './css/build237b-flush-cards.css',
   './css/build240b-fixes.css',
   './css/build241-ux-pro.css',
+  './css/build243-fullscreen-overlay.css',
+  './css/build244-category-pills.css',
+  './css/build246-farmaco-modal-premium.css',
 
-  /* ── JS (5 arquivos) ── */
+  /* ── JS (7 arquivos) ── */
   './js/medcases-ux-v2.js',
   './js/hub-accordion.js',
   './js/build240b-accordion-fix.js',
+  './js/calculator-overlay.js',
+  './js/category-pills.js',
   './js/elec-calc.js',
   './js/deeplink-router.js',
 
