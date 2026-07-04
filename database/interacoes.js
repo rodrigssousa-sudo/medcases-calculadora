@@ -246,6 +246,12 @@ const DRUG_CLASSES = {
     "irbesartana", "candesartana", "azilsartana", "eprosartana"
   ],
 
+  /* Vasopressores/Inotrópicos de UTI (calculate()-based, database/cardio.js Grupo 33)
+     Criada em 2026-07-03 para suportar a interação Angiotensina II × outros vasopressores */
+  "$classe_vasopressores": [
+    "dopamina", "fenilefrina", "vasopressina", "dobutamina"
+  ],
+
   /* Beta-bloqueadores */
   "$classe_betabloqueadores": [
     "propranolol", "atenolol", "metoprolol", "bisoprolol",
@@ -334,7 +340,7 @@ const DRUG_CLASSES = {
   "$classe_antiagregantes": [
     "acido_acetilsalicilico", "aspirina", "clopidogrel", "ticagrelor",
     "prasugrel", "ticlopidina", "dipiridamol", "abciximabe",
-    "eptifibatida", "tirofibana", "cilostazol"
+    "eptifibatida", "tirofibana", "cilostazol", "vorapaxar"
   ],
 
   /* Triptanos — agonistas 5-HT1B/1D para enxaqueca */
@@ -472,6 +478,16 @@ const DRUG_CLASSES = {
   "$classe_isrn": [
     "venlafaxina", "desvenlafaxina", "duloxetina",
     "milnaciprano", "levomilnaciprano"
+  ],
+
+  /* ── Nova classe — Bloco Cardio v1 (Antianginosos): trimetazidina (2026-07-03) ──
+     Antiparkinsonianos dopaminérgicos — antagonizados pela trimetazidina,
+     que pode induzir/agravar sintomas extrapiramidais */
+  "$classe_antiparkinsonianos": [
+    "levodopa", "carbidopa", "pramipexol", "ropinirol",
+    "rotigotina", "bromocriptina", "cabergolina", "amantadina",
+    "selegilina", "rasagilina", "safinamida", "entacapona",
+    "opicapona", "biperideno", "triexifenidila"
   ]
 
 };
@@ -12682,12 +12698,1885 @@ const INTERACOES_DB = {
         es: "Monitorear sedación y caídas."
       }
     }
+  },
+
+  /* ── Bloco Inotrópicos/Inodilatadores v3.15: milrinona (2026-07-03) ── */
+  "milrinona": {
+    "disopiramida": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Efeito inotrópico e vasodilatador combinado descrito em bula, com risco de hipotensão grave e refratária.",
+        es: "Efecto inotrópico y vasodilatador combinado descrito en ficha técnica, con riesgo de hipotensión grave y refractaria."
+      },
+      conduta: {
+        pt: "Evitar associação. Se inevitável, monitorização hemodinâmica intensiva contínua em ambiente de terapia intensiva.",
+        es: "Evitar la asociación. Si es inevitable, monitorización hemodinámica intensiva continua en ambiente de cuidados intensivos."
+      }
+    },
+    "anagrelida": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Anagrelida também inibe a fosfodiesterase III, somando efeito inotrópico positivo e potencial pró-arrítmico ao da milrinona.",
+        es: "Anagrelida también inhibe la fosfodiesterasa III, sumando efecto inotrópico positivo y potencial proarrítmico al de la milrinona."
+      },
+      conduta: {
+        pt: "Evitar associação sempre que possível; se necessária, manter monitorização eletrocardiográfica contínua.",
+        es: "Evitar la asociación siempre que sea posible; si es necesaria, mantener monitorización electrocardiográfica continua."
+      }
+    },
+    "$classe_ipde5": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Vasodilatação aditiva por mecanismos convergentes de aumento de nucleotídeos cíclicos (AMPc/GMPc), com risco de hipotensão sintomática significativa.",
+        es: "Vasodilatación aditiva por mecanismos convergentes de aumento de nucleótidos cíclicos (AMPc/GMPc), con riesgo de hipotensión sintomática significativa."
+      },
+      conduta: {
+        pt: "Monitorar pressão arterial de perto durante a infusão; ajustar velocidade conforme tolerância hemodinâmica.",
+        es: "Monitorizar la presión arterial de cerca durante la infusión; ajustar la velocidad según tolerancia hemodinámica."
+      }
+    },
+    "$classe_antihipertensivos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Efeito hipotensor aditivo pela ação vasodilatadora combinada.",
+        es: "Efecto hipotensor aditivo por la acción vasodilatadora combinada."
+      },
+      conduta: {
+        pt: "Monitorar pressão arterial e ajustar doses conforme resposta hemodinâmica.",
+        es: "Monitorizar la presión arterial y ajustar dosis según respuesta hemodinámica."
+      }
+    }
+  },
+
+  /* ── Bloco Inotrópicos/Inodilatadores v3.16: levosimendana (2026-07-03) ── */
+  /* v3.17 (2026-07-03): reforço com isossorbida (droga×droga) e upgrade de
+     $classe_antihipertensivos para "alta" — risco de choque vasoplégico */
+  "levosimendana": {
+    "isossorbida": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Potencialização da vasodilatação mediada por GMPc (efeito nitrato) somada à abertura de canais de potássio dependentes de ATP pela levosimendana — mecanismo duplo e sinérgico de vasodilatação.",
+        es: "Potenciación de la vasodilatación mediada por GMPc (efecto nitrato) sumada a la apertura de canales de potasio dependientes de ATP por la levosimendana — mecanismo doble y sinérgico de vasodilatación."
+      },
+      conduta: {
+        pt: "Pode precipitar hipotensão grave e refratária. Evitar associação; se indispensável, uso apenas sob monitorização hemodinâmica invasiva estrita.",
+        es: "Puede precipitar hipotensión grave y refractaria. Evitar la asociación; si es indispensable, usar solo bajo monitorización hemodinámica invasiva estricta."
+      }
+    },
+    "$classe_nitratos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Vasodilatação aditiva (abertura de canais K-ATP + efeito nitrato) com risco de hipotensão profunda.",
+        es: "Vasodilatación aditiva (apertura de canales K-ATP + efecto nitrato) con riesgo de hipotensión profunda."
+      },
+      conduta: {
+        pt: "Evitar associação sempre que possível; se necessária, monitorização hemodinâmica intensiva contínua.",
+        es: "Evitar la asociación siempre que sea posible; si es necesaria, monitorización hemodinámica intensiva continua."
+      }
+    },
+    "$classe_antihipertensivos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Efeito vasodilatador sinérgico e aditivo (inclui vasodilatadores diretos como hidralazina, minoxidil e nitroprussiato) com risco de choque vasoplégico.",
+        es: "Efecto vasodilatador sinérgico y aditivo (incluye vasodilatadores directos como hidralazina, minoxidil y nitroprusiato) con riesgo de choque vasopléjico."
+      },
+      conduta: {
+        pt: "Evitar administração concomitante se possível, ou reduzir doses. Monitorar pressão arterial de perto e ajustar conforme resposta hemodinâmica.",
+        es: "Evitar la administración concomitante si es posible, o reducir dosis. Monitorizar la presión arterial de cerca y ajustar según respuesta hemodinámica."
+      }
+    },
+    "$classe_qt": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Aumento da suscetibilidade miocárdica a arritmias ventriculares na vigência de inotropismo e vasodilatação, especialmente em contexto de hipocalemia associada.",
+        es: "Aumento de la susceptibilidad miocárdica a arritmias ventriculares en presencia de inotropismo y vasodilatación, especialmente en contexto de hipopotasemia asociada."
+      },
+      conduta: {
+        pt: "Corrigir K⁺/Mg²⁺ antes de iniciar; manter monitorização eletrocardiográfica contínua durante a infusão e por até 7 dias após (meia-vida longa do metabólito ativo OR-1896).",
+        es: "Corregir K⁺/Mg²⁺ antes de iniciar; mantener monitorización electrocardiográfica continua durante la infusión y hasta 7 días después (vida media larga del metabolito activo OR-1896)."
+      }
+    }
+  },
+
+  /* ── Bloco Vasopressor AT1: angiotensinaii (2026-07-03) ──
+     $classe_ieca / $classe_ara_ii reais (substituem $classe_bra inexistente
+     submetido); $classe_vasopressores criada nesta rodada (dopamina,
+     fenilefrina, vasopressina, dobutamina — droga×classe) */
+  "angiotensinaii": {
+    "$classe_ieca": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A inibição prévia da ECA causa up-regulation de receptores AT1, aumentando de forma imprevisível a resposta vasopressora à angiotensina II exógena.",
+        es: "La inhibición previa de la ECA causa up-regulation de receptores AT1, aumentando de forma imprevisible la respuesta vasopresora a la angiotensina II exógena."
+      },
+      conduta: {
+        pt: "Monitorar a pressão arterial de forma invasiva. Pode ser necessária dose inicial significativamente menor de angiotensina II, com titulação mais cautelosa.",
+        es: "Monitorizar la presión arterial de forma invasiva. Puede ser necesaria una dosis inicial significativamente menor de angiotensina II, con titulación más cautelosa."
+      }
+    },
+    "$classe_ara_ii": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os bloqueadores do receptor de angiotensina (BRA/ARA-II) competem pelo mesmo receptor AT1 alvo da angiotensina II, podendo reduzir imprevisivelmente a resposta vasopressora.",
+        es: "Los bloqueadores del receptor de angiotensina (ARA-II) compiten por el mismo receptor AT1 objetivo de la angiotensina II, pudiendo reducir imprevisiblemente la respuesta vasopresora."
+      },
+      conduta: {
+        pt: "Ajustar a titulação conforme resposta hemodinâmica; considerar vasopressor de outra classe se resposta insuficiente.",
+        es: "Ajustar la titulación según respuesta hemodinámica; considerar vasopresor de otra clase si la respuesta es insuficiente."
+      }
+    },
+    "$classe_vasopressores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sinergismo na vasoconstrição periférica e aumento da resistência vascular sistêmica com outros vasopressores/inotrópicos (dopamina, fenilefrina, vasopressina, dobutamina).",
+        es: "Sinergismo en la vasoconstricción periférica y aumento de la resistencia vascular sistémica con otros vasopresores/inotrópicos (dopamina, fenilefrina, vasopresina, dobutamina)."
+      },
+      conduta: {
+        pt: "Ajustar a titulação conforme a PAM alvo. Aumenta o risco de isquemia periférica e mesentérica — monitorar perfusão distal e abdominal.",
+        es: "Ajustar la titulación según la PAM objetivo. Aumenta el riesgo de isquemia periférica y mesentérica — monitorizar perfusión distal y abdominal."
+      }
+    }
+  },
+
+  /* ── Bloco Vasopressor Adrenérgico Misto: metaraminol (2026-07-03) ──
+     $classe_imaos e $classe_triciclicos reais (submissão usava
+     $classe_imao e $classe_antidepressivos_triciclicos, inexistentes);
+     digoxina e ocitocina usadas como droga×droga (não há classe
+     agregadora "$classe_digitalicos" nem "$classe_ocitocicos" no motor) */
+  "metaraminol": {
+    "$classe_imaos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Inibidores da Monoaminoxidase impedem a degradação da norepinefrina liberada pelo metaraminol, gerando acúmulo sináptico massivo.",
+        es: "Los inhibidores de la Monoaminooxidasa impiden la degradación de la norepinefrina liberada por el metaraminol, generando acumulación sináptica masiva."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Risco extremo de crise hipertensiva severa e hemorragia intracraniana. Aguardar no mínimo 14 dias após suspensão do IMAO.",
+        es: "Asociación contraindicada. Riesgo extremo de crisis hipertensiva severa y hemorragia intracraneal. Esperar al menos 14 días tras la suspensión del IMAO."
+      }
+    },
+    "$classe_triciclicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Bloqueio da recaptação de aminas simpáticas pelos antidepressivos tricíclicos potencializa intensamente a resposta vasopressora ao metaraminol.",
+        es: "El bloqueo de la recaptación de aminas simpáticas por los antidepresivos tricíclicos potencia intensamente la respuesta vasopresora al metaraminol."
+      },
+      conduta: {
+        pt: "Evitar uso conjunto. Se absolutamente necessário, iniciar com doses mínimas e titulação rigorosa.",
+        es: "Evitar uso conjunto. Si es absolutamente necesario, iniciar con dosis mínimas y titulación rigurosa."
+      }
+    },
+    "digoxina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sensibilização do miocárdio digitalizado aos efeitos arritmogênicos de aminas simpatomiméticas como o metaraminol.",
+        es: "Sensibilización del miocardio digitalizado a los efectos arritmogénicos de aminas simpaticomiméticas como el metaraminol."
+      },
+      conduta: {
+        pt: "Monitorização eletrocardiográfica rigorosa devido ao risco aumentado de arritmias ectópicas ventriculares.",
+        es: "Monitorización electrocardiográfica rigurosa debido al riesgo aumentado de arritmias ectópicas ventriculares."
+      }
+    },
+    "ocitocina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Efeito pressor aditivo grave entre a ocitocina (em doses altas/uso obstétrico) e o metaraminol, ambos com potencial hipertensivo.",
+        es: "Efecto presor aditivo grave entre la oxitocina (en dosis altas/uso obstétrico) y el metaraminol, ambos con potencial hipertensivo."
+      },
+      conduta: {
+        pt: "Monitorar a pressão arterial de perto durante o uso concomitante; ajustar a titulação do metaraminol conforme resposta hemodinâmica.",
+        es: "Monitorizar la presión arterial de cerca durante el uso concomitante; ajustar la titulación del metaraminol según respuesta hemodinámica."
+      }
+    }
+  },
+
+  /* ── Bloco Vasopressor Adrenérgico Misto: efedrina (2026-07-03) ──
+     $classe_imaos e $classe_betabloqueadores reais; ocitocina e clonidina
+     usadas como droga×droga (sem classe agregadora equivalente no motor) */
+  "efedrina": {
+    "$classe_imaos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Inibidores da Monoaminoxidase impedem a degradação da norepinefrina liberada pela efedrina, gerando acúmulo sináptico massivo.",
+        es: "Los inhibidores de la Monoaminooxidasa impiden la degradación de la norepinefrina liberada por la efedrina, generando acumulación sináptica masiva."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Risco de crise hipertensiva letal. Aguardar no mínimo 14 dias após suspensão do IMAO.",
+        es: "Asociación contraindicada. Riesgo de crisis hipertensiva letal. Esperar al menos 14 días tras la suspensión del IMAO."
+      }
+    },
+    "ocitocina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Efeito pressor aditivo grave no período peri-parto entre a ocitocina e a efedrina, ambas com potencial hipertensivo.",
+        es: "Efecto presor aditivo grave en el periparto entre la oxitocina y la efedrina, ambas con potencial hipertensivo."
+      },
+      conduta: {
+        pt: "Monitorar a pressão arterial de perto durante o uso concomitante, especialmente em contexto obstétrico; ajustar a titulação da efedrina conforme resposta hemodinâmica.",
+        es: "Monitorizar la presión arterial de cerca durante el uso concomitante, especialmente en contexto obstétrico; ajustar la titulación de la efedrina según respuesta hemodinámica."
+      }
+    },
+    "clonidina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A clonidina reduz a liberação pré-sináptica de norepinefrina, podendo inibir o efeito vasopressor indireto da efedrina e reduzir sua eficácia.",
+        es: "La clonidina reduce la liberación presináptica de norepinefrina, pudiendo inhibir el efecto vasopresor indirecto de la efedrina y reducir su eficacia."
+      },
+      conduta: {
+        pt: "Monitorar a resposta pressórica à efedrina; considerar vasopressor de ação direta (ex.: fenilefrina) se resposta insuficiente.",
+        es: "Monitorizar la respuesta presora a la efedrina; considerar vasopresor de acción directa (ej.: fenilefrina) si la respuesta es insuficiente."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O bloqueio beta-adrenérgico reduz o efeito beta da efedrina, deixando a ação alfa sem oposição — risco de hipertensão paradoxal e vasoconstrição excessiva.",
+        es: "El bloqueo beta-adrenérgico reduce el efecto beta de la efedrina, dejando la acción alfa sin oposición — riesgo de hipertensión paradójica y vasoconstricción excesiva."
+      },
+      conduta: {
+        pt: "Monitorar a pressão arterial rigorosamente; titular a efedrina com cautela em pacientes betabloqueados.",
+        es: "Monitorizar la presión arterial rigurosamente; titular la efedrina con precaución en pacientes betabloqueados."
+      }
+    }
+  },
+
+  /* ── Bloco Antianginoso: ranolazina (2026-07-03) ──
+     $classe_azolicos, $classe_macrolídeos, $classe_antirretrovirais (inibidores
+     potentes de CYP3A4), $classe_rifamicinas e $classe_anticonvulsivantes
+     (indutores de CYP3A4), $classe_qt (prolongamento aditivo de QT) são classes
+     reais do motor. Diltiazem/verapamil, sinvastatina e metformina cadastrados
+     como droga×droga por não possuírem classe agregadora equivalente aqui. */
+  "ranolazina": {
+    "$classe_azolicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Os antifúngicos azólicos são inibidores potentes do CYP3A4, principal via de metabolização da ranolazina, elevando drasticamente seus níveis plasmáticos e o risco de prolongamento do intervalo QT e torsades de pointes.",
+        es: "Los antifúngicos azólicos son inhibidores potentes del CYP3A4, principal vía de metabolización de la ranolazina, elevando drásticamente sus niveles plasmáticos y el riesgo de prolongación del intervalo QT y torsades de pointes."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Suspender a ranolazina ou substituir o antifúngico por classe alternativa sem interação relevante com CYP3A4.",
+        es: "Asociación contraindicada. Suspender la ranolazina o sustituir el antifúngico por una clase alternativa sin interacción relevante con CYP3A4."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Claritromicina e eritromicina são inibidores potentes do CYP3A4, aumentando substancialmente a exposição sistêmica à ranolazina e o risco de prolongamento do QT.",
+        es: "Claritromicina y eritromicina son inhibidores potentes del CYP3A4, aumentando sustancialmente la exposición sistémica a la ranolazina y el riesgo de prolongación del QT."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Preferir azitromicina (inibição mínima de CYP3A4) ou outra classe de antibiótico se necessário manter a ranolazina.",
+        es: "Asociación contraindicada. Preferir azitromicina (inhibición mínima de CYP3A4) u otra clase de antibiótico si es necesario mantener la ranolazina."
+      }
+    },
+    "$classe_antirretrovirais": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Inibidores de protease como o ritonavir são inibidores potentes do CYP3A4, podendo elevar drasticamente os níveis de ranolazina e o risco de arritmias graves.",
+        es: "Los inhibidores de proteasa como el ritonavir son inhibidores potentes del CYP3A4, pudiendo elevar drásticamente los niveles de ranolazina y el riesgo de arritmias graves."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Avaliar esquema antirretroviral alternativo em conjunto com infectologia antes de manter a ranolazina.",
+        es: "Asociación contraindicada. Evaluar esquema antirretroviral alternativo junto con infectología antes de mantener la ranolazina."
+      }
+    },
+    "$classe_rifamicinas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "As rifamicinas são indutoras potentes do CYP3A4, reduzindo drasticamente os níveis plasmáticos de ranolazina e anulando seu efeito antianginoso.",
+        es: "Las rifamicinas son inductoras potentes del CYP3A4, reduciendo drásticamente los niveles plasmáticos de ranolazina y anulando su efecto antianginoso."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Considerar antianginoso alternativo enquanto durar o tratamento com rifamicina.",
+        es: "Asociación contraindicada. Considerar antianginoso alternativo mientras dure el tratamiento con rifamicina."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Fenitoína, carbamazepina e fenobarbital são indutores potentes do CYP3A4, reduzindo significativamente os níveis séricos de ranolazina e sua eficácia antianginosa.",
+        es: "Fenitoína, carbamazepina y fenobarbital son inductores potentes del CYP3A4, reduciendo significativamente los niveles séricos de ranolazina y su eficacia antianginosa."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Considerar anticonvulsivante alternativo com menor potencial de indução enzimática (ex.: levetiracetam) ou antianginoso de outra classe.",
+        es: "Asociación contraindicada. Considerar anticonvulsivante alternativo con menor potencial de inducción enzimática (ej.: levetiracetam) o antianginoso de otra clase."
+      }
+    },
+    "$classe_qt": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A ranolazina prolonga o intervalo QT de forma dose-dependente; a associação com outros fármacos que prolongam o QT aumenta o risco aditivo de torsades de pointes.",
+        es: "La ranolazina prolonga el intervalo QT de forma dosis-dependiente; la asociación con otros fármacos que prolongan el QT aumenta el riesgo aditivo de torsades de pointes."
+      },
+      conduta: {
+        pt: "Evitar a associação sempre que possível. Se inevitável, monitorar ECG (QTc) e eletrólitos (K+, Mg2+) rigorosamente.",
+        es: "Evitar la asociación siempre que sea posible. Si es inevitable, monitorizar ECG (QTc) y electrolitos (K+, Mg2+) rigurosamente."
+      }
+    },
+    "diltiazem": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Diltiazem é inibidor moderado do CYP3A4, aumentando os níveis plasmáticos de ranolazina.",
+        es: "El diltiazem es un inhibidor moderado del CYP3A4, aumentando los niveles plasmáticos de ranolazina."
+      },
+      conduta: {
+        pt: "Limitar a dose de ranolazina a 500 mg 12/12h durante o uso concomitante.",
+        es: "Limitar la dosis de ranolazina a 500 mg cada 12h durante el uso concomitante."
+      }
+    },
+    "verapamil": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Verapamil é inibidor moderado do CYP3A4, aumentando os níveis plasmáticos de ranolazina.",
+        es: "El verapamilo es un inhibidor moderado del CYP3A4, aumentando los niveles plasmáticos de ranolazina."
+      },
+      conduta: {
+        pt: "Limitar a dose de ranolazina a 500 mg 12/12h durante o uso concomitante.",
+        es: "Limitar la dosis de ranolazina a 500 mg cada 12h durante el uso concomitante."
+      }
+    },
+    "sinvastatina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A ranolazina inibe o CYP3A4 e a P-glicoproteína, aumentando os níveis séricos de sinvastatina e o risco de miopatia/rabdomiólise.",
+        es: "La ranolazina inhibe el CYP3A4 y la P-glicoproteína, aumentando los niveles séricos de simvastatina y el riesgo de miopatía/rabdomiólisis."
+      },
+      conduta: {
+        pt: "Limitar a dose de sinvastatina a 20 mg/dia durante o uso concomitante com ranolazina. Monitorar sinais de miopatia (mialgia, CK elevada).",
+        es: "Limitar la dosis de simvastatina a 20 mg/día durante el uso concomitante con ranolazina. Monitorizar signos de miopatía (mialgia, CK elevada)."
+      }
+    },
+    "metformina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A ranolazina inibe o transportador renal OCT2 (Organic Cation Transporter 2), reduzindo a depuração e aumentando os níveis plasmáticos de metformina, com risco de acúmulo e acidose láctica.",
+        es: "La ranolazina inhibe el transportador renal OCT2 (Organic Cation Transporter 2), reduciendo la depuración y aumentando los niveles plasmáticos de metformina, con riesgo de acumulación y acidosis láctica."
+      },
+      conduta: {
+        pt: "Limitar a dose máxima de metformina a 1700 mg/dia em pacientes utilizando ranolazina 1000 mg 12/12h. Monitorar função renal e sinais de toxicidade da metformina (náuseas, mal-estar, acidose).",
+        es: "Limitar la dosis máxima de metformina a 1700 mg/día en pacientes que utilizan ranolazina 1000 mg cada 12h. Monitorizar función renal y signos de toxicidad de la metformina (náuseas, malestar, acidosis)."
+      }
+    },
+    "digoxina": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "A ranolazina pode aumentar modestamente os níveis plasmáticos de digoxina por inibição da P-glicoproteína.",
+        es: "La ranolazina puede aumentar modestamente los niveles plasmáticos de digoxina por inhibición de la P-glicoproteína."
+      },
+      conduta: {
+        pt: "Monitorar sinais de toxicidade digitálica (náuseas, distúrbios visuais, arritmias); considerar dosagem sérica de digoxina se disponível.",
+        es: "Monitorizar signos de toxicidad digitálica (náuseas, trastornos visuales, arritmias); considerar dosaje sérico de digoxina si está disponible."
+      }
+    }
+  },
+
+  /* ── Bloco Antianginoso: trimetazidina (2026-07-03) ──
+     $classe_antiparkinsonianos (nova classe criada em DRUG_CLASSES) e
+     $classe_antihipertensivos (real, já existente) */
+  "trimetazidina": {
+    "$classe_antiparkinsonianos": {
+      gravidade: "contraindicada",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A trimetazidina pode induzir ou exacerbar sintomas parkinsonianos (efeitos extrapiramidais) e antagoniza o efeito de agentes dopaminérgicos como a levodopa, comprometendo o controle motor.",
+        es: "La trimetazidina puede inducir o exacerbar síntomas parkinsonianos (efectos extrapiramidales) y antagoniza el efecto de agentes dopaminérgicos como la levodopa, comprometiendo el control motor."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Evitar o uso de trimetazidina em pacientes em tratamento antiparkinsoniano; considerar antianginoso de outra classe.",
+        es: "Asociación contraindicada. Evitar el uso de trimetazidina en pacientes en tratamiento antiparkinsoniano; considerar antianginoso de otra clase."
+      }
+    },
+    "$classe_antihipertensivos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Efeito aditivo indireto sobre o risco de tontura e quedas: a trimetazidina pode causar tontura e distúrbios da marcha, que se somam ao potencial hipotensor dos anti-hipertensivos, especialmente em idosos.",
+        es: "Efecto aditivo indirecto sobre el riesgo de mareo y caídas: la trimetazidina puede causar mareo y trastornos de la marcha, que se suman al potencial hipotensor de los antihipertensivos, especialmente en ancianos."
+      },
+      conduta: {
+        pt: "Monitorar queixas de tontura, distúrbios da marcha e risco de quedas. Orientar o paciente a levantar-se lentamente (evitar hipotensão postural).",
+        es: "Monitorizar quejas de mareo, trastornos de la marcha y riesgo de caídas. Orientar al paciente a levantarse lentamente (evitar hipotensión postural)."
+      }
+    }
+  },
+
+  /* ── Bloco Antianginoso: nicorandil (2026-07-03) ──
+     $classe_ipde5, $classe_corticosteroides e $classe_aines são classes reais
+     do motor. Riociguat cadastrado como droga×droga por não possuir classe
+     agregadora equivalente (único estimulador da guanilato ciclase solúvel
+     presente no banco até o momento). */
+  "nicorandil": {
+    "$classe_ipde5": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O nicorandil é doador de óxido nítrico, estimulando a produção de GMPc. Os inibidores da PDE5 impedem a degradação do GMPc, resultando em acúmulo intracelular massivo e vasodilatação profunda.",
+        es: "El nicorandil es donante de óxido nítrico, estimulando la producción de GMPc. Los inhibidores de la PDE5 impiden la degradación del GMPc, resultando en acumulación intracelular masiva y vasodilatación profunda."
+      },
+      conduta: {
+        pt: "Associação estritamente contraindicada. Risco de hipotensão severa, choque e isquemia reflexa. Não administrar inibidor da PDE5 dentro de 24-48h da última dose de nicorandil (a depender do fármaco).",
+        es: "Asociación estrictamente contraindicada. Riesgo de hipotensión severa, choque e isquemia refleja. No administrar inhibidor de la PDE5 dentro de las 24-48h de la última dosis de nicorandil (según el fármaco)."
+      }
+    },
+    "riociguate": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Efeito sinérgico na via do óxido nítrico/GMPc entre nicorandil e riociguate, causando vasodilatação sistêmica grave.",
+        es: "Efecto sinérgico en la vía del óxido nítrico/GMPc entre nicorandil y riociguate, causando vasodilatación sistémica grave."
+      },
+      conduta: {
+        pt: "Uso concomitante contraindicado. Risco de choque vasoplégico e hipotensão refratária.",
+        es: "Uso concomitante contraindicado. Riesgo de choque vasopléjico e hipotensión refractaria."
+      }
+    },
+    "$classe_corticosteroides": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O nicorandil possui toxicidade direta sobre a mucosa e risco de ulceração em qualquer parte do trato gastrointestinal. Corticosteroides sistêmicos exacerbam este risco e podem mascarar os sintomas iniciais de perfuração.",
+        es: "El nicorandil posee toxicidad directa sobre la mucosa y riesgo de ulceración en cualquier parte del tracto gastrointestinal. Los corticosteroides sistémicos exacerban este riesgo y pueden enmascarar los síntomas iniciales de perforación."
+      },
+      conduta: {
+        pt: "Evitar associação sempre que possível. Se inevitável, monitorar sinais de dor abdominal, sangramento e perfuração; manter alto índice de suspeição mesmo na ausência de sintomas típicos.",
+        es: "Evitar la asociación siempre que sea posible. Si es inevitable, monitorizar signos de dolor abdominal, sangrado y perforación; mantener alto índice de sospecha incluso en ausencia de síntomas típicos."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Aumento do risco de lesão da mucosa gastrointestinal, ulceração e sangramento pela associação da toxicidade mucosa do nicorandil com o efeito gastrolesivo dos AINEs/AAS.",
+        es: "Aumento del riesgo de lesión de la mucosa gastrointestinal, ulceración y sangrado por la asociación de la toxicidad mucosa del nicorandil con el efecto gastrolesivo de los AINEs/AAS."
+      },
+      conduta: {
+        pt: "Monitorar sinais de sangramento gastrointestinal ou úlceras (dor abdominal, melena, anemia). Considerar proteção gástrica (IBP) se o uso concomitante for inevitável.",
+        es: "Monitorizar signos de sangrado gastrointestinal o úlceras (dolor abdominal, melena, anemia). Considerar protección gástrica (IBP) si el uso concomitante es inevitable."
+      }
+    }
+  },
+
+  /* ── Bloco Antiarrítmico Classe III: dronedarona (2026-07-03) ──
+     $classe_azolicos, $classe_macrolídeos, $classe_antirretrovirais (inibidores
+     potentes do CYP3A4 — reais, já existentes), $classe_qt (real; a própria
+     dronedarona já é membro desta classe, mas isso não gera autorreferência
+     pois aqui ela é a chave-raiz consultada, não um alvo dentro de si mesma) e
+     $classe_betabloqueadores (real, já existente — bradicardia aditiva,
+     conforme dado clínico da submissão não detalhado no motor original).
+     dabigatrana, digoxina e sinvastatina cadastradas como droga×droga
+     (mesmo padrão usado em ranolazina), com doses/limites específicos da
+     dronedarona — NÃO reutilizar/sobrescrever a entrada "sinvastatina" já
+     existente sob a chave "ranolazina" (limite de 20 mg/dia lá vs. 10 mg/dia
+     aqui). */
+  "dronedarona": {
+    "$classe_azolicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Os azólicos são inibidores potentes do CYP3A4, principal via de metabolização da dronedarona, causando acúmulo plasmático acentuado e risco de toxicidade grave (incluindo prolongamento de QT).",
+        es: "Los azólicos son inhibidores potentes del CYP3A4, principal vía de metabolización de la dronedarona, causando acumulación plasmática marcada y riesgo de toxicidad grave (incluyendo prolongación de QT)."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Considerar antifúngico de outra classe ou suspender temporariamente a dronedarona.",
+        es: "Asociación contraindicada. Considerar antifúngico de otra clase o suspender temporalmente la dronedarona."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Macrolídeos como claritromicina e eritromicina são inibidores potentes do CYP3A4, elevando substancialmente os níveis plasmáticos de dronedarona, com risco de arritmias ventriculares graves.",
+        es: "Macrólidos como claritromicina y eritromicina son inhibidores potentes del CYP3A4, elevando sustancialmente los niveles plasmáticos de dronedarona, con riesgo de arritmias ventriculares graves."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Preferir azitromicina apenas após avaliação individualizada de risco, ou optar por antibiótico de outra classe.",
+        es: "Asociación contraindicada. Preferir azitromicina solo tras evaluación individualizada de riesgo, u optar por antibiótico de otra clase."
+      }
+    },
+    "$classe_antirretrovirais": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Inibidores da protease (ex.: ritonavir) são inibidores potentes do CYP3A4, podendo elevar drasticamente os níveis de dronedarona e o risco de toxicidade cardíaca grave.",
+        es: "Los inhibidores de la proteasa (ej.: ritonavir) son inhibidores potentes del CYP3A4, pudiendo elevar drásticamente los niveles de dronedarona y el riesgo de toxicidad cardíaca grave."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Avaliar esquema antirretroviral alternativo em conjunto com infectologia antes de manter a dronedarona.",
+        es: "Asociación contraindicada. Evaluar esquema antirretroviral alternativo junto con infectología antes de mantener la dronedarona."
+      }
+    },
+    "$classe_qt": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A dronedarona já prolonga o intervalo QT por seu próprio mecanismo de ação (bloqueio de canais de potássio); a associação com outros fármacos que prolongam o QT aumenta o risco aditivo de Torsades de Pointes.",
+        es: "La dronedarona ya prolonga el intervalo QT por su propio mecanismo de acción (bloqueo de canales de potasio); la asociación con otros fármacos que prolongan el QT aumenta el riesgo aditivo de Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Associação contraindicada sempre que possível. Se inevitável, monitorar ECG (QTc) e eletrólitos (K+, Mg2+) rigorosamente.",
+        es: "Asociación contraindicada siempre que sea posible. Si es inevitable, monitorizar ECG (QTc) y electrolitos (K+, Mg2+) rigurosamente."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Efeito cronotrópico negativo aditivo entre a dronedarona e os betabloqueadores, aumentando o risco de bradicardia sintomática e bloqueio AV.",
+        es: "Efecto cronotrópico negativo aditivo entre la dronedarona y los betabloqueantes, aumentando el riesgo de bradicardia sintomática y bloqueo AV."
+      },
+      conduta: {
+        pt: "Iniciar o betabloqueador com dose baixa e titular lentamente. Monitorar FC e ECG, especialmente em idosos.",
+        es: "Iniciar el betabloqueante con dosis baja y titular lentamente. Monitorizar FC y ECG, especialmente en ancianos."
+      }
+    },
+    "dabigatrana": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A dronedarona inibe a glicoproteína-P (P-gp), aumentando significativamente a absorção e a concentração plasmática da dabigatrana, com risco elevado de sangramento.",
+        es: "La dronedarona inhibe la glicoproteína-P (P-gp), aumentando significativamente la absorción y la concentración plasmática de dabigatrán, con riesgo elevado de sangrado."
+      },
+      conduta: {
+        pt: "Associação amplamente desaconselhada. Se inevitável, ajustar a dose de dabigatrana conforme a função renal e monitorar rigorosamente sinais de sangramento.",
+        es: "Asociación ampliamente desaconsejada. Si es inevitable, ajustar la dosis de dabigatrán según la función renal y monitorizar rigurosamente signos de sangrado."
+      }
+    },
+    "digoxina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A dronedarona inibe a P-glicoproteína a nível intestinal e renal, aumentando as concentrações séricas de digoxina e potencializando os efeitos cronotrópicos negativos.",
+        es: "La dronedarona inhibe la P-glicoproteína a nivel intestinal y renal, aumentando las concentraciones séricas de digoxina y potenciando los efectos cronotrópicos negativos."
+      },
+      conduta: {
+        pt: "Reduzir a dose de digoxina pela metade ao iniciar a dronedarona. Monitorar níveis séricos, frequência cardíaca e ECG.",
+        es: "Reducir la dosis de digoxina a la mitad al iniciar la dronedarona. Monitorizar niveles séricos, frecuencia cardíaca y ECG."
+      }
+    },
+    "sinvastatina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A dronedarona inibe moderadamente o CYP3A4, reduzindo a depuração da sinvastatina e aumentando o risco de miopatia/rabdomiólise.",
+        es: "La dronedarona inhibe moderadamente el CYP3A4, reduciendo la depuración de simvastatina y aumentando el riesgo de miopatía/rabdomiólisis."
+      },
+      conduta: {
+        pt: "Não exceder 10 mg/dia de sinvastatina durante o uso concomitante com dronedarona. Monitorar sinais de miopatia (mialgia, CK elevada).",
+        es: "No exceder 10 mg/día de simvastatina durante el uso concomitante con dronedarona. Monitorizar signos de miopatía (mialgia, CK elevada)."
+      }
+    }
+  },
+
+  /* ── Bloco Antiarrítmico Seletivo Atrial (IV): vernacalanto (2026-07-03) ──
+     $classe_qt (real; corrige "antiarrítmicos classes I e III" inventado sem
+     classe agregadora própria — $classe_qt já reúne os principais
+     representantes das classes I e III: quinidina, procainamida, amiodarona,
+     sotalol, dronedarona, ibutilida, dofetilida), $classe_betabloqueadores
+     e $classe_antihipertensivos (ambas reais, já existentes). */
+  "vernacalanto": {
+    "$classe_qt": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O uso recente ou concomitante de antiarrítmicos das classes I e III (ex.: quinidina, procainamida, amiodarona, sotalol, dronedarona, ibutilida, dofetilida) associado ao vernacalanto aumenta o risco de arritmias ventriculares graves e disfunção hemodinâmica, por efeito eletrofisiológico aditivo sobre a condução e refratariedade cardíacas.",
+        es: "El uso reciente o concomitante de antiarrítmicos de las clases I y III (ej.: quinidina, procainamida, amiodarona, sotalol, dronedarona, ibutilida, dofetilida) asociado al vernacalant aumenta el riesgo de arritmias ventriculares graves y disfunción hemodinámica, por efecto electrofisiológico aditivo sobre la conducción y refractariedad cardíacas."
+      },
+      conduta: {
+        pt: "Evitar associação. Avaliar intervalo de washout adequado do antiarrítmico prévio antes de administrar vernacalanto. Se inevitável, administrar apenas em ambiente de terapia intensiva com monitorização contínua de ECG e recursos de reanimação imediatamente disponíveis.",
+        es: "Evitar la asociación. Evaluar un intervalo de lavado adecuado del antiarrítmico previo antes de administrar vernacalant. Si es inevitable, administrar solo en un entorno de cuidados intensivos con monitorización continua de ECG y recursos de reanimación inmediatamente disponibles."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Efeito aditivo de hipotensão e bradicardia entre o vernacalanto e os betabloqueadores, potencializando o risco hemodinâmico durante e após a infusão.",
+        es: "Efecto aditivo de hipotensión y bradicardia entre el vernacalant y los betabloqueantes, potenciando el riesgo hemodinámico durante y después de la infusión."
+      },
+      conduta: {
+        pt: "Monitorar pressão arterial e frequência cardíaca continuamente durante a infusão e por, no mínimo, 2 horas após o término.",
+        es: "Monitorizar presión arterial y frecuencia cardíaca continuamente durante la infusión y por, como mínimo, 2 horas tras finalizar."
+      }
+    },
+    "$classe_antihipertensivos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Risco de hipotensão exacerbada pela associação do efeito hipotensor dos anti-hipertensivos (incluindo bloqueadores de canal de cálcio) ao perfil hemodinâmico do vernacalanto.",
+        es: "Riesgo de hipotensión exacerbada por la asociación del efecto hipotensor de los antihipertensivos (incluyendo bloqueadores de canal de calcio) al perfil hemodinámico del vernacalant."
+      },
+      conduta: {
+        pt: "Monitorar pressão arterial rigorosamente durante e após a infusão. Ter recursos de suporte hemodinâmico prontamente disponíveis.",
+        es: "Monitorizar presión arterial rigurosamente durante y después de la infusión. Tener recursos de soporte hemodinámico prontamente disponibles."
+      }
+    }
+  },
+
+  /* ── Bloco Anticoagulante Oral Direto (Fator Xa): apixabana (2026-07-03) ──
+     A entrada "apixabana" JÁ EXISTIA integralmente em database/cardio.js
+     (Grupo 19 — Anticoagulantes Orais, item 19.2, com dose/contraindicações/
+     gravidez/interações textuais completas) e já constava em
+     LISTA_MEDS_DISPONIVEIS_RAW (index.html) sob "Anticoagulantes".
+     Faltava apenas o nó estruturado no motor de interações bidirecional —
+     sintetizado aqui a partir de cardio.js -> apixabana.interactions
+     (major/moderate), mapeando para classes reais já existentes no motor
+     (corrige os nomes genéricos "inibidores fortes de CYP3A4/P-gp" e
+     "indutores fortes de CYP3A4/P-gp" para $classe_azolicos/
+     $classe_antirretrovirais e $classe_rifamicinas/$classe_anticonvulsivantes,
+     respectivamente). Varfarina, rivaroxabana, edoxabana e dabigatrana já
+     cobrem suas próprias interações individuais noutros nós do banco;
+     $classe_anticoagulantes (real, já existente) é reaproveitada aqui para
+     representar "outros anticoagulantes: evitar sobreposição". */
+  "apixabana": {
+    "$classe_azolicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Cetoconazol, itraconazol e outros azólicos são inibidores potentes do CYP3A4 e da P-gp, principais vias de eliminação da apixabana, podendo aumentar significativamente seus níveis plasmáticos e o risco de sangramento.",
+        es: "Ketoconazol, itraconazol y otros azólicos son inhibidores potentes del CYP3A4 y de la P-gp, principales vías de eliminación de apixabán, pudiendo aumentar significativamente sus niveles plasmáticos y el riesgo de sangrado."
+      },
+      conduta: {
+        pt: "Evitar associação sempre que possível. Se inevitável, monitorar rigorosamente sinais de sangramento; considerar antifúngico de outra classe.",
+        es: "Evitar la asociación siempre que sea posible. Si es inevitable, monitorizar rigurosamente signos de sangrado; considerar antifúngico de otra clase."
+      }
+    },
+    "$classe_antirretrovirais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inibidores da protease (ex.: ritonavir) e cobicistate são inibidores potentes do CYP3A4/P-gp, podendo elevar substancialmente os níveis de apixabana e o risco de sangramento.",
+        es: "Los inhibidores de la proteasa (ej.: ritonavir) y cobicistat son inhibidores potentes del CYP3A4/P-gp, pudiendo elevar sustancialmente los niveles de apixabán y el riesgo de sangrado."
+      },
+      conduta: {
+        pt: "Evitar associação. Avaliar esquema antirretroviral alternativo junto com infectologia; se mantida, monitorar sinais de sangramento rigorosamente.",
+        es: "Evitar la asociación. Evaluar esquema antirretroviral alternativo junto con infectología; si se mantiene, monitorizar rigurosamente signos de sangrado."
+      }
+    },
+    "$classe_rifamicinas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A rifampicina e demais rifamicinas são indutoras potentes do CYP3A4/P-gp, podendo reduzir drasticamente os níveis plasmáticos de apixabana e comprometer sua eficácia anticoagulante, com risco de eventos tromboembólicos.",
+        es: "La rifampicina y demás rifamicinas son inductoras potentes del CYP3A4/P-gp, pudiendo reducir drásticamente los niveles plasmáticos de apixabán y comprometer su eficacia anticoagulante, con riesgo de eventos tromboembólicos."
+      },
+      conduta: {
+        pt: "Evitar associação. Se inevitável, considerar anticoagulante alternativo (ex.: heparina de baixo peso molecular ou varfarina com monitorização de INR).",
+        es: "Evitar la asociación. Si es inevitable, considerar anticoagulante alternativo (ej.: heparina de bajo peso molecular o warfarina con monitorización de INR)."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Carbamazepina, fenitoína e outros indutores enzimáticos reduzem os níveis plasmáticos de apixabana por indução do CYP3A4/P-gp, comprometendo a eficácia anticoagulante.",
+        es: "Carbamazepina, fenitoína y otros inductores enzimáticos reducen los niveles plasmáticos de apixabán por inducción del CYP3A4/P-gp, comprometiendo la eficacia anticoagulante."
+      },
+      conduta: {
+        pt: "Evitar associação sempre que possível. Se inevitável, considerar anticoagulante alternativo e monitorar sinais de trombose.",
+        es: "Evitar la asociación siempre que sea posible. Si es inevitable, considerar anticoagulante alternativo y monitorizar signos de trombosis."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "AINEs aumentam o risco de sangramento gastrointestinal quando associados à apixabana, por efeito lesivo direto sobre a mucosa somado à antiagregação plaquetária.",
+        es: "Los AINEs aumentan el riesgo de sangrado gastrointestinal cuando se asocian a apixabán, por efecto lesivo directo sobre la mucosa sumado a la antiagregación plaquetaria."
+      },
+      conduta: {
+        pt: "Evitar uso prolongado. Se inevitável, considerar proteção gástrica (IBP) e monitorar sinais de sangramento.",
+        es: "Evitar el uso prolongado. Si es inevitable, considerar protección gástrica (IBP) y monitorizar signos de sangrado."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A combinação de apixabana com antiagregantes plaquetários (AAS, clopidogrel) aumenta substancialmente o risco de sangramento maior, especialmente em idosos ou com dupla antiagregação.",
+        es: "La combinación de apixabán con antiagregantes plaquetarios (AAS, clopidogrel) aumenta sustancialmente el riesgo de sangrado mayor, especialmente en ancianos o con doble antiagregación."
+      },
+      conduta: {
+        pt: "Reservar a associação para indicações específicas (ex.: SCA com FA) com o menor tempo possível de terapia combinada. Monitorar sinais de sangramento rigorosamente.",
+        es: "Reservar la asociación para indicaciones específicas (ej.: SCA con FA) con el menor tiempo posible de terapia combinada. Monitorizar rigurosamente signos de sangrado."
+      }
+    },
+    "$classe_qt": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Amiodarona, verapamil e outros inibidores moderados de P-gp/CYP3A4 podem aumentar discretamente a exposição plasmática à apixabana em alguns pacientes.",
+        es: "Amiodarona, verapamilo y otros inhibidores moderados de P-gp/CYP3A4 pueden aumentar discretamente la exposición plasmática a apixabán en algunos pacientes."
+      },
+      conduta: {
+        pt: "Geralmente não requer ajuste de dose; monitorar sinais de sangramento em pacientes com fatores de risco adicionais.",
+        es: "Generalmente no requiere ajuste de dosis; monitorizar signos de sangrado en pacientes con factores de riesgo adicionales."
+      }
+    },
+    "$classe_isrs": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "ISRS e IRSN podem aumentar o risco de sangramento quando associados à apixabana, por depleção de serotonina plaquetária e comprometimento da agregação.",
+        es: "Los ISRS e IRSN pueden aumentar el riesgo de sangrado cuando se asocian a apixabán, por depleción de serotonina plaquetaria y compromiso de la agregación."
+      },
+      conduta: {
+        pt: "Monitorar sinais de sangramento, especialmente em idosos ou com outros fatores de risco hemorrágico associados.",
+        es: "Monitorizar signos de sangrado, especialmente en ancianos o con otros factores de riesgo hemorrágico asociados."
+      }
+    },
+    "$classe_anticoagulantes": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A sobreposição de apixabana com outro anticoagulante oral ou parenteral (varfarina, rivaroxabana, edoxabana, dabigatrana, heparina) aumenta drasticamente o risco de sangramento maior, sem benefício terapêutico adicional.",
+        es: "La superposición de apixabán con otro anticoagulante oral o parenteral (warfarina, rivaroxabán, edoxabán, dabigatrán, heparina) aumenta drásticamente el riesgo de sangrado mayor, sin beneficio terapéutico adicional."
+      },
+      conduta: {
+        pt: "Evitar sobreposição, salvo transição protocolada entre anticoagulantes (ex.: início de apixabana no horário da próxima dose de heparina/varfarina conforme protocolo de troca).",
+        es: "Evitar la superposición, salvo transición protocolizada entre anticoagulantes (ej.: inicio de apixabán en el horario de la próxima dosis de heparina/warfarina según protocolo de cambio)."
+      }
+    }
+  },
+
+  /* -- Bloco Anticoagulante Oral Direto (Fator Xa): edoxabana (2026-07-03) --
+     A entrada "edoxabana" JA EXISTIA integralmente em database/cardio.js
+     (Grupo 19, item 19.4, com dose/contraindicacoes/gravidez/interacoes
+     textuais completas) e ja constava em LISTA_MEDS_DISPONIVEIS_RAW
+     (index.html) sob a categoria "Anticoagulantes". Faltava apenas o
+     no estruturado no motor de interacoes bidirecional -- sintetizado
+     aqui a partir de cardio.js -> edoxabana.interactions (major/moderate),
+     mapeando para classes reais ja existentes no motor (corrige os nomes
+     genericos "inibidores da P-gp" e "indutores da P-gp" para
+     $classe_qt/$classe_azolicos e $classe_rifamicinas/
+     $classe_anticonvulsivantes, respectivamente -- dronedarona, amiodarona,
+     verapamil e quinidina ja sao membros de $classe_qt; ciclosporina nao
+     possui classe agregadora propria no motor, permanecendo documentada
+     apenas no texto de cardio.js). $classe_anticoagulantes (real, ja
+     existente) e reaproveitada aqui para "outros anticoagulantes: evitar
+     sobreposicao", assim como ja feito para apixabana. */
+  "edoxabana": {
+    "$classe_azolicos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Cetoconazol e outros azólicos inibem a glicoproteína-P (P-gp), principal via de efluxo intestinal da edoxabana, podendo aumentar sua absorção e concentração plasmática.",
+        es: "Ketoconazol y otros azólicos inhiben la glicoproteína-P (P-gp), principal vía de eflujo intestinal de edoxabán, pudiendo aumentar su absorción y concentración plasmática."
+      },
+      conduta: {
+        pt: "Reduzir a dose de edoxabana para 30 mg 1x/dia durante o uso concomitante. Monitorar sinais de sangramento.",
+        es: "Reducir la dosis de edoxabán a 30 mg 1 vez/día durante el uso concomitante. Monitorizar signos de sangrado."
+      }
+    },
+    "$classe_qt": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Dronedarona, amiodarona, verapamil e quinidina inibem a glicoproteína-P, aumentando a absorção intestinal e a concentração plasmática da edoxabana, com maior risco de sangramento.",
+        es: "Dronedarona, amiodarona, verapamilo y quinidina inhiben la glicoproteína-P, aumentando la absorción intestinal y la concentración plasmática de edoxabán, con mayor riesgo de sangrado."
+      },
+      conduta: {
+        pt: "Reduzir a dose de edoxabana para 30 mg 1x/dia durante o uso concomitante com dronedarona, conforme bula. Para amiodarona/verapamil/quinidina, monitorar sinais de sangramento e considerar redução de dose conforme critérios clínicos.",
+        es: "Reducir la dosis de edoxabán a 30 mg 1 vez/día durante el uso concomitante con dronedarona, según prospecto. Para amiodarona/verapamilo/quinidina, monitorizar signos de sangrado y considerar reducción de dosis según criterios clínicos."
+      }
+    },
+    "$classe_rifamicinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A rifampicina e demais rifamicinas são indutoras potentes da glicoproteína-P, podendo reduzir significativamente os níveis plasmáticos de edoxabana e comprometer sua eficácia anticoagulante.",
+        es: "La rifampicina y demás rifamicinas son inductoras potentes de la glicoproteína-P, pudiendo reducir significativamente los niveles plasmáticos de edoxabán y comprometer su eficacia anticoagulante."
+      },
+      conduta: {
+        pt: "Evitar associação. Não há dados que garantam proteção anticoagulante efetiva; considerar anticoagulante alternativo se indução enzimática for inevitável.",
+        es: "Evitar la asociación. No hay datos que garanticen protección anticoagulante efectiva; considerar anticoagulante alternativo si la inducción enzimática es inevitable."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Fenitoína e outros indutores enzimáticos aumentam a atividade da glicoproteína-P, reduzindo a exposição sistêmica à edoxabana e o risco de eficácia anticoagulante subótima.",
+        es: "Fenitoína y otros inductores enzimáticos aumentan la actividad de la glicoproteína-P, reduciendo la exposición sistémica a edoxabán y el riesgo de eficacia anticoagulante subóptima."
+      },
+      conduta: {
+        pt: "Evitar associação sempre que possível. Se inevitável, considerar anticoagulante alternativo e monitorar sinais de trombose.",
+        es: "Evitar la asociación siempre que sea posible. Si es inevitable, considerar anticoagulante alternativo y monitorizar signos de trombosis."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "AINEs aumentam o risco de sangramento gastrointestinal quando associados à edoxabana, por disfunção plaquetária somada à irritação direta da mucosa digestiva.",
+        es: "Los AINEs aumentan el riesgo de sangrado gastrointestinal cuando se asocian a edoxabán, por disfunción plaquetaria sumada a la irritación directa de la mucosa digestiva."
+      },
+      conduta: {
+        pt: "Evitar AINEs sistêmicos; preferir paracetamol para analgesia. Se inevitável, considerar proteção gástrica (IBP) e monitorar sinais de sangramento.",
+        es: "Evitar AINEs sistémicos; preferir paracetamol para analgesia. Si es inevitable, considerar protección gástrica (IBP) y monitorizar signos de sangrado."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A combinação de edoxabana com antiagregantes plaquetários (AAS, clopidogrel) aumenta substancialmente o risco de sangramento maior, especialmente em idosos ou com dupla antiagregação.",
+        es: "La combinación de edoxabán con antiagregantes plaquetarios (AAS, clopidogrel) aumenta sustancialmente el riesgo de sangrado mayor, especialmente en ancianos o con doble antiagregación."
+      },
+      conduta: {
+        pt: "Reservar a associação para indicações específicas com o menor tempo possível de terapia combinada. Monitorar sinais de sangramento rigorosamente.",
+        es: "Reservar la asociación para indicaciones específicas con el menor tiempo posible de terapia combinada. Monitorizar rigurosamente signos de sangrado."
+      }
+    },
+    "$classe_isrs": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "ISRS e IRSN podem aumentar o risco de sangramento quando associados à edoxabana, por depleção de serotonina plaquetária e comprometimento da agregação.",
+        es: "Los ISRS e IRSN pueden aumentar el riesgo de sangrado cuando se asocian a edoxabán, por depleción de serotonina plaquetaria y compromiso de la agregación."
+      },
+      conduta: {
+        pt: "Monitorar sinais de sangramento, especialmente em idosos ou com outros fatores de risco hemorrágico associados.",
+        es: "Monitorizar signos de sangrado, especialmente en ancianos o con otros factores de riesgo hemorrágico asociados."
+      }
+    },
+    "$classe_anticoagulantes": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A sobreposição de edoxabana com outro anticoagulante oral ou parenteral (varfarina, apixabana, rivaroxabana, dabigatrana, heparina) aumenta drasticamente o risco de sangramento maior, sem benefício terapêutico adicional.",
+        es: "La superposición de edoxabán con otro anticoagulante oral o parenteral (warfarina, apixabán, rivaroxabán, dabigatrán, heparina) aumenta drásticamente el riesgo de sangrado mayor, sin beneficio terapéutico adicional."
+      },
+      conduta: {
+        pt: "Evitar sobreposição, salvo transição protocolada entre anticoagulantes (ex.: início de edoxabana no horário da próxima dose de heparina/varfarina conforme protocolo de troca).",
+        es: "Evitar la superposición, salvo transición protocolizada entre anticoagulantes (ej.: inicio de edoxabán en el horario de la próxima dosis de heparina/warfarina según protocolo de cambio)."
+      }
+    }
+  },
+
+  /* ══════════════════════════════════════════════════════════════════
+     BLOCO LOTE 2 (2026-07-03) — Dabigatrana (reforço P-gp), Bivalirudina,
+     Clopidogrel, Prasugrel, Ticagrelor, Cangrelor
+     Nota de reconciliação: as SEIS entidades clínicas já possuíam objetos
+     COMPLETOS em database/cardio.js (dabigatrana Grupo 20, clopidogrel/
+     prasugrel Grupo 21, ticagrelor/cangrelor Grupo 22, bivalirudina Grupo 47)
+     e já constavam em LISTA_MEDS_DISPONIVEIS_RAW (index.html). A submissão do
+     usuário chegou com a chave incorretamente acentuada "dabigatrán" (deveria
+     ser "dabigatrana", convenção do arquivo) e com objetos cardio.js
+     integralmente redundantes — por isso NÃO foram reinseridos em cardio.js.
+     Aqui adicionamos apenas os nós-raiz de INTERACOES_DB que ainda não
+     existiam (dabigatrana já tinha sub-chave sob "rifampicina" via
+     INTERACOES_MODELOS.rifamicinas_anticoagulantes — preservada, sem
+     duplicação; o nó abaixo cobre as demais classes/fármacos ainda não
+     cobertos). Classes genéricas inventadas pelo usuário foram mapeadas para
+     classes REAIS já existentes em DRUG_CLASSES: $classe_azolicos,
+     $classe_macrolídeos, $classe_antirretrovirais, $classe_rifamicinas,
+     $classe_anticonvulsivantes, $classe_aines, $classe_antiagregantes,
+     $classe_isrs, $classe_anticoagulantes, $classe_qt. */
+  "dabigatrana": {
+    "$classe_azolicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Os azólicos (cetoconazol, itraconazol) inibem fortemente a P-glicoproteína (P-gp) intestinal e renal, via exclusiva de eliminação da dabigatrana (não há metabolismo CYP450). Isso aumenta drasticamente a absorção e reduz a excreção da dabigatrana, elevando criticamente o risco hemorrágico.",
+        es: "Los azólicos (ketoconazol, itraconazol) inhiben fuertemente la P-glicoproteína (P-gp) intestinal y renal, vía exclusiva de eliminación de dabigatrán (sin metabolismo CYP450). Esto aumenta drásticamente la absorción y reduce la excreción de dabigatrán, elevando críticamente el riesgo hemorrágico."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Evitar antifúngicos azólicos sistêmicos durante o uso de dabigatrana.",
+        es: "Asociación contraindicada. Evitar antifúngicos azólicos sistémicos durante el uso de dabigatrán."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A claritromicina inibe a P-gp, podendo aumentar os níveis plasmáticos de dabigatrana.",
+        es: "La claritromicina inhibe la P-gp, pudiendo aumentar los niveles plasmáticos de dabigatrán."
+      },
+      conduta: {
+        pt: "Monitorar clinicamente sinais de sangramento. Ajuste de dose ou antibiótico alternativo pode ser necessário, a depender da função renal.",
+        es: "Monitorizar clínicamente signos de sangrado. Un ajuste de dosis o antibiótico alternativo puede ser necesario, según la función renal."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Fenitoína e carbamazepina induzem a P-gp, podendo reduzir significativamente os níveis plasmáticos da dabigatrana e comprometer sua eficácia anticoagulante.",
+        es: "Fenitoína y carbamazepina inducen la P-gp, pudiendo reducir significativamente los niveles plasmáticos de dabigatrán y comprometer su eficacia anticoagulante."
+      },
+      conduta: {
+        pt: "Evitar a associação. Não há dados de segurança suficientes que garantam eficácia protetora na FA ou TVP/TEP com essa combinação.",
+        es: "Evitar la asociación. No hay datos de seguridad suficientes que garanticen eficacia protectora en FA o TVP/TEP con esta combinación."
+      }
+    },
+    "verapamil": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O verapamil inibe a P-gp. A administração concomitante aumenta as concentrações da dabigatrana, especialmente se o verapamil for administrado logo antes.",
+        es: "El verapamilo inhibe la P-gp. La administración concomitante aumenta las concentraciones de dabigatrán, especialmente si el verapamilo se administra justo antes."
+      },
+      conduta: {
+        pt: "Reduzir a dose de dabigatrana para 110 mg 12/12h quando prescrita junto ao verapamil. Administrar a dabigatrana pelo menos 2 horas antes do verapamil.",
+        es: "Reducir la dosis de dabigatrán a 110 mg cada 12h cuando se prescribe junto a verapamilo. Administrar el dabigatrán al menos 2 horas antes del verapamilo."
+      }
+    },
+    "amiodarona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A amiodarona inibe a P-gp e aumenta os níveis plasmáticos da dabigatrana.",
+        es: "La amiodarona inhibe la P-gp y aumenta los niveles plasmáticos de dabigatrán."
+      },
+      conduta: {
+        pt: "Geralmente não exige redução obrigatória em ClCr normal; em idosos ou ClCr limítrofe, considerar 110 mg 12/12h. Monitorar sangramentos.",
+        es: "Generalmente no exige reducción obligatoria en ClCr normal; en ancianos o ClCr limítrofe, considerar 110 mg cada 12h. Monitorizar sangrados."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "AINEs e dabigatrana compartilham alto risco de sangramento gastrointestinal por lesão da mucosa somada à disfunção plaquetária associada.",
+        es: "AINEs y dabigatrán comparten alto riesgo de sangrado gastrointestinal por lesión de la mucosa sumada a disfunción plaquetaria asociada."
+      },
+      conduta: {
+        pt: "Evitar uso. Se inevitável, proteger a mucosa com IBP e restringir o AINE ao menor tempo possível.",
+        es: "Evitar uso. Si es inevitable, proteger la mucosa con IBP y restringir el AINE al menor tiempo posible."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A sobreposição de inibição do Fator IIa com inibição plaquetária eleva substancialmente o risco de sangramento maior.",
+        es: "La superposición de inhibición del Factor IIa con inhibición plaquetaria eleva sustancialmente el riesgo de sangrado mayor."
+      },
+      conduta: {
+        pt: "Reservar para indicação cardiológica formal (ex.: pós-angioplastia) pelo menor tempo possível, com vigilância rigorosa de sangramento.",
+        es: "Reservar para indicación cardiológica formal (ej.: posangioplastia) por el menor tiempo posible, con vigilancia rigurosa de sangrado."
+      }
+    },
+    "$classe_isrs": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "ISRS/IRSN causam depleção de serotonina plaquetária e podem somar risco hemorrágico em usuários de dabigatrana.",
+        es: "ISRS/IRSN causan depleción de serotonina plaquetaria y pueden sumar riesgo hemorrágico en usuarios de dabigatrán."
+      },
+      conduta: {
+        pt: "Monitorar sinais de sangramento.",
+        es: "Monitorizar signos de sangrado."
+      }
+    }
+  },
+
+  /* Bivalirudina: interações droga×classe. Anticoagulantes/antitrombóticos já
+     cobertos textualmente em cardio.js; aqui priorizamos $classe_anticoagulantes
+     e $classe_antiagregantes (reais) para o motor bidirecional. */
+  "bivalirudina": {
+    "$classe_anticoagulantes": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A sobreposição de bivalirudina (inibidor direto da trombina parenteral) com heparinas, varfarina ou DOACs aumenta criticamente o risco de sangramento maior.",
+        es: "La superposición de bivalirudina (inhibidor directo de la trombina parenteral) con heparinas, warfarina o DOACs aumenta críticamente el riesgo de sangrado mayor."
+      },
+      conduta: {
+        pt: "Realizar washout de outros anticoagulantes antes do procedimento; suspender heparina pelo menos 30 min antes de iniciar a bivalirudina.",
+        es: "Realizar lavado de otros anticoagulantes antes del procedimiento; suspender heparina al menos 30 min antes de iniciar bivalirudina."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A associação (DAPT + bivalirudina) é padrão de cuidado em ICP, mas exige vigilância pelo risco hemorrágico sinérgico no sítio de punção.",
+        es: "La asociación (DAPT + bivalirudina) es estándar de cuidado en ICP, pero exige vigilancia por el riesgo hemorrágico sinérgico en el sitio de punción."
+      },
+      conduta: {
+        pt: "Uso protocolar em hemodinâmica. Monitorar sítio de punção; preferir acesso radial.",
+        es: "Uso protocolario en hemodinámica. Monitorizar sitio de punción; preferir acceso radial."
+      }
+    }
+  },
+
+  /* Clopidogrel: reforço droga×droga (omeprazol/esomeprazol via CYP2C19,
+     ainda não cobertos em nenhum nó existente) + droga×classe. */
+  "clopidogrel": {
+    "omeprazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O omeprazol inibe fortemente a enzima CYP2C19, necessária para converter o clopidogrel (pró-fármaco) em seu metabólito ativo, reduzindo a eficácia antiplaquetária e aumentando o risco de trombose de stent.",
+        es: "El omeprazol inhibe fuertemente la enzima CYP2C19, necesaria para convertir el clopidogrel (profármaco) en su metabolito activo, reduciendo la eficacia antiplaquetaria y aumentando el riesgo de trombosis de stent."
+      },
+      conduta: {
+        pt: "Associação amplamente desaconselhada. Substituir por pantoprazol ou lansoprazol (menor inibição do CYP2C19).",
+        es: "Asociación ampliamente desaconsejada. Sustituir por pantoprazol o lansoprazol (menor inhibición de CYP2C19)."
+      }
+    },
+    "esomeprazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inibição de CYP2C19 semelhante à do omeprazol, reduzindo a ativação do clopidogrel e elevando o risco de eventos trombóticos.",
+        es: "Inhibición de CYP2C19 similar a la de omeprazol, reduciendo la activación del clopidogrel y elevando el riesgo de eventos trombóticos."
+      },
+      conduta: {
+        pt: "Evitar associação. Preferir pantoprazol.",
+        es: "Evitar asociación. Preferir pantoprazol."
+      }
+    },
+    "$classe_anticoagulantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Risco de sangramento significativamente aumentado pela associação de antiagregante com anticoagulante (terapia dupla/tripla).",
+        es: "Riesgo de sangrado significativamente aumentado por la asociación de antiagregante con anticoagulante (terapia doble/triple)."
+      },
+      conduta: {
+        pt: "Restringir a indicação cardiológica estrita (ex.: FA + stent). Avaliar HAS-BLED e reduzir o tempo de sobreposição ao mínimo necessário.",
+        es: "Restringir a indicación cardiológica estricta (ej.: FA + stent). Evaluar HAS-BLED y reducir el tiempo de superposición al mínimo necesario."
+      }
+    }
+  },
+
+  /* Prasugrel: droga×classe complementar (já coberto textualmente em
+     cardio.js quanto a AAS/anticoagulantes/AINEs; aqui formalizamos no
+     motor bidirecional). */
+  "prasugrel": {
+    "$classe_anticoagulantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Terapia dupla/tripla com prasugrel aumenta muito o risco hemorrágico, sendo o prasugrel mais potente que o clopidogrel.",
+        es: "Terapia doble/triple con prasugrel aumenta mucho el riesgo hemorrágico, siendo el prasugrel más potente que clopidogrel."
+      },
+      conduta: {
+        pt: "A associação rotineira de DOACs/varfarina com prasugrel é geralmente evitada por diretrizes devido ao alto risco hemorrágico; preferir clopidogrel neste cenário.",
+        es: "La asociación rutinaria de DOACs/warfarina con prasugrel es generalmente evitada por directrices debido al alto riesgo hemorrágico; preferir clopidogrel en este escenario."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Risco severo de hemorragia gastrointestinal pela potente inibição plaquetária somada à lesão de mucosa causada pelo AINE.",
+        es: "Riesgo severo de hemorragia gastrointestinal por la potente inhibición plaquetaria sumada a la lesión de mucosa causada por el AINE."
+      },
+      conduta: {
+        pt: "Evitar prescrição concomitante.",
+        es: "Evitar prescripción concomitante."
+      }
+    }
+  },
+
+  /* Ticagrelor: droga×classe complementar. major interactions com azólicos/
+     macrolídeos/antirretrovirais/rifamicinas/anticonvulsivantes já constam
+     textualmente em cardio.js; aqui formalizamos no motor bidirecional
+     mapeando para classes reais. */
+  "ticagrelor": {
+    "$classe_azolicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Cetoconazol/itraconazol são inibidores potentes do CYP3A4, principal via metabólica do ticagrelor. A associação eleva drasticamente as concentrações plasmáticas do ticagrelor e o risco hemorrágico.",
+        es: "Ketoconazol/itraconazol son inhibidores potentes del CYP3A4, principal vía metabólica de ticagrelor. La asociación eleva drásticamente las concentraciones plasmáticas de ticagrelor y el riesgo hemorrágico."
+      },
+      conduta: {
+        pt: "Contraindicação absoluta.",
+        es: "Contraindicación absoluta."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A claritromicina é inibidora potente do CYP3A4, aumentando gravemente os níveis plasmáticos do ticagrelor.",
+        es: "La claritromicina es inhibidora potente del CYP3A4, aumentando gravemente los niveles plasmáticos de ticagrelor."
+      },
+      conduta: {
+        pt: "Contraindicado. Substituir o antibiótico.",
+        es: "Contraindicado. Sustituir el antibiótico."
+      }
+    },
+    "$classe_antirretrovirais": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Ritonavir é inibidor forte do CYP3A4, contraindicando o uso concomitante com ticagrelor pelo risco de sangramento incontrolável.",
+        es: "Ritonavir es inhibidor fuerte de CYP3A4, contraindicando el uso concomitante con ticagrelor por el riesgo de sangrado incontrolable."
+      },
+      conduta: {
+        pt: "Não associar.",
+        es: "No asociar."
+      }
+    },
+    "$classe_rifamicinas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A rifampicina é forte indutora do CYP3A4, reduzindo substancialmente os níveis de ticagrelor e anulando sua eficácia, com risco de trombose de stent.",
+        es: "La rifampicina es fuerte inductora del CYP3A4, reduciendo sustancialmente los niveles de ticagrelor y anulando su eficacia, con riesgo de trombosis de stent."
+      },
+      conduta: {
+        pt: "Contraindicação absoluta. Trocar por antiagregante não metabolizado exclusivamente pelo CYP3A4.",
+        es: "Contraindicación absoluta. Cambiar a antiagregante no metabolizado exclusivamente por CYP3A4."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Fenitoína e carbamazepina são indutoras potentes do CYP3A4, anulando o efeito do ticagrelor.",
+        es: "Fenitoína y carbamazepina son inductoras potentes del CYP3A4, anulando el efecto de ticagrelor."
+      },
+      conduta: {
+        pt: "Evitar associação rigorosamente.",
+        es: "Evitar asociación rigurosamente."
+      }
+    },
+    "$classe_anticoagulantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Terapia dupla/tripla envolvendo ticagrelor e DOAC/varfarina carrega risco hemorrágico muito elevado.",
+        es: "Terapia doble/triple involucrando ticagrelor y DOAC/warfarina conlleva riesgo hemorrágico muy elevado."
+      },
+      conduta: {
+        pt: "Geralmente se prefere clopidogrel se o paciente precisar de anticoagulação oral concomitante, conforme diretrizes.",
+        es: "Generalmente se prefiere clopidogrel si el paciente necesita anticoagulación oral concomitante, según directrices."
+      }
+    }
+  },
+
+  /* Cangrelor: interações específicas de sequenciamento no nível do receptor
+     P2Y12 (clopidogrel/prasugrel × ticagrelor), sem equivalente em nenhuma
+     classe agregadora existente — cadastradas droga×droga. */
+  "cangrelor": {
+    "clopidogrel": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Interação no nível do receptor: o cangrelor ligado ao P2Y12 impede a ligação do metabólito ativo do clopidogrel se administrados simultaneamente.",
+        es: "Interacción a nivel del receptor: el cangrelor unido al P2Y12 impide la unión del metabolito activo del clopidogrel si se administran simultáneamente."
+      },
+      conduta: {
+        pt: "Clopidogrel só deve ser administrado APÓS a descontinuação da infusão de cangrelor.",
+        es: "Clopidogrel solo debe administrarse DESPUÉS de la discontinuación de la infusión de cangrelor."
+      }
+    },
+    "prasugrel": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Interação no nível do receptor: o cangrelor impede a ligação irreversível do metabólito ativo do prasugrel se administrados simultaneamente.",
+        es: "Interacción a nivel del receptor: el cangrelor impide la unión irreversible del metabolito activo del prasugrel si se administran simultáneamente."
+      },
+      conduta: {
+        pt: "Prasugrel só deve ser administrado APÓS a descontinuação da infusão de cangrelor.",
+        es: "Prasugrel solo debe administrarse DESPUÉS de la discontinuación de la infusión de cangrelor."
+      }
+    },
+    "ticagrelor": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "O ticagrelor liga-se a um sítio diferente no receptor P2Y12 e não sofre inibição competitiva pela infusão de cangrelor.",
+        es: "El ticagrelor se une a un sitio diferente en el receptor P2Y12 y no sufre inhibición competitiva por la infusión de cangrelor."
+      },
+      conduta: {
+        pt: "Ticagrelor pode ser administrado a qualquer momento durante ou imediatamente após a infusão de cangrelor.",
+        es: "Ticagrelor puede administrarse en cualquier momento durante o inmediatamente después de la infusión de cangrelor."
+      }
+    }
+  },
+
+  /* ══════════════════════════════════════════════════════════════════
+     BLOCO (2026-07-03) — Vorapaxar (antagonista PAR-1)
+     Novo fármaco, genuinamente ausente de cardio.js/interacoes.js/
+     index.html antes desta submissão (confirmado por Read direto, sem
+     matches em nenhum arquivo .js/.html). Objeto completo criado em
+     cardio.js (Grupo 69). Aqui mapeamos as interações major/moderate já
+     descritas em cardio.js para classes REAIS já existentes em
+     DRUG_CLASSES: $classe_azolicos, $classe_macrolídeos,
+     $classe_antirretrovirais (inibidores potentes do CYP3A4, principal via
+     metabólica do vorapaxar), $classe_rifamicinas, $classe_anticonvulsivantes
+     (indutores potentes do CYP3A4), $classe_anticoagulantes, $classe_aines,
+     $classe_isrs. */
+  "vorapaxar": {
+    "$classe_azolicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Cetoconazol/itraconazol são inibidores potentes do CYP3A4, principal via metabólica do vorapaxar, aumentando suas concentrações plasmáticas e o risco hemorrágico.",
+        es: "Ketoconazol/itraconazol son inhibidores potentes del CYP3A4, principal vía metabólica de vorapaxar, aumentando sus concentraciones plasmáticas y el riesgo hemorrágico."
+      },
+      conduta: {
+        pt: "Evitar associação. Se inevitável, monitorar rigorosamente sinais de sangramento.",
+        es: "Evitar asociación. Si es inevitable, monitorizar rigurosamente signos de sangrado."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A claritromicina é inibidora potente do CYP3A4, podendo aumentar significativamente os níveis plasmáticos do vorapaxar.",
+        es: "La claritromicina es inhibidora potente del CYP3A4, pudiendo aumentar significativamente los niveles plasmáticos de vorapaxar."
+      },
+      conduta: {
+        pt: "Preferir antibiótico alternativo. Se inevitável, monitorar sangramento.",
+        es: "Preferir antibiótico alternativo. Si es inevitable, monitorizar sangrado."
+      }
+    },
+    "$classe_antirretrovirais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Ritonavir e outros inibidores de protease são inibidores potentes do CYP3A4, aumentando os níveis plasmáticos do vorapaxar e o risco hemorrágico.",
+        es: "Ritonavir y otros inhibidores de proteasa son inhibidores potentes del CYP3A4, aumentando los niveles plasmáticos de vorapaxar y el riesgo hemorrágico."
+      },
+      conduta: {
+        pt: "Avaliar esquema antirretroviral alternativo junto à infectologia antes de manter o vorapaxar.",
+        es: "Evaluar esquema antirretroviral alternativo junto a infectología antes de mantener vorapaxar."
+      }
+    },
+    "$classe_rifamicinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A rifampicina é indutora potente do CYP3A4, reduzindo substancialmente os níveis plasmáticos do vorapaxar e comprometendo sua eficácia antitrombótica.",
+        es: "La rifampicina es inductora potente del CYP3A4, reduciendo sustancialmente los niveles plasmáticos de vorapaxar y comprometiendo su eficacia antitrombótica."
+      },
+      conduta: {
+        pt: "Evitar associação. Considerar antiagregante alternativo não dependente exclusivamente do CYP3A4 durante o curso da rifamicina.",
+        es: "Evitar asociación. Considerar antiagregante alternativo no dependiente exclusivamente del CYP3A4 durante el curso de la rifamicina."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Fenitoína e carbamazepina são indutoras do CYP3A4, podendo reduzir os níveis plasmáticos do vorapaxar e comprometer sua eficácia.",
+        es: "Fenitoína y carbamazepina son inductoras del CYP3A4, pudiendo reducir los niveles plasmáticos de vorapaxar y comprometer su eficacia."
+      },
+      conduta: {
+        pt: "Monitorar eficácia clínica; considerar alternativa se uso crônico prolongado do anticonvulsivante.",
+        es: "Monitorizar eficacia clínica; considerar alternativa si uso crónico prolongado del anticonvulsivante."
+      }
+    },
+    "$classe_anticoagulantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A sobreposição de vorapaxar com anticoagulantes orais ou parenterais aumenta significativamente o risco de sangramento, incluindo hemorragia intracraniana.",
+        es: "La superposición de vorapaxar con anticoagulantes orales o parenterales aumenta significativamente el riesgo de sangrado, incluyendo hemorragia intracraneal."
+      },
+      conduta: {
+        pt: "Evitar associação rotineira. Reservar para indicação cardiológica/hematológica formal com vigilância rigorosa de sangramento.",
+        es: "Evitar asociación rutinaria. Reservar para indicación cardiológica/hematológica formal con vigilancia rigurosa de sangrado."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "AINEs aumentam o risco de sangramento gastrointestinal quando associados ao vorapaxar, por lesão de mucosa somada à inibição plaquetária.",
+        es: "AINEs aumentan el riesgo de sangrado gastrointestinal cuando se asocian a vorapaxar, por lesión de mucosa sumada a inhibición plaquetaria."
+      },
+      conduta: {
+        pt: "Evitar uso crônico concomitante. Se necessário, proteger a mucosa com IBP e usar pelo menor tempo possível.",
+        es: "Evitar uso crónico concomitante. Si es necesario, proteger la mucosa con IBP y usar por el menor tiempo posible."
+      }
+    },
+    "$classe_isrs": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "ISRS/IRSN causam depleção de serotonina plaquetária, podendo somar risco hemorrágico ao efeito antiplaquetário prolongado do vorapaxar.",
+        es: "ISRS/IRSN causan depleción de serotonina plaquetaria, pudiendo sumar riesgo hemorrágico al efecto antiplaquetario prolongado de vorapaxar."
+      },
+      conduta: {
+        pt: "Monitorar sinais de sangramento, especialmente em idosos ou uso prolongado.",
+        es: "Monitorizar signos de sangrado, especialmente en ancianos o uso prolongado."
+      }
+    }
+  },
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     BLOCO (2026-07-03) — Redutores de LDL-C não estatínicos:
+     acido_bempedoico, inclisiran, evolocumab, alirocumab
+     (reteplasa NÃO incluída — entrada já existente/completa em cardio.js,
+     submissão redundante descartada nesta consolidação)
+  ══════════════════════════════════════════════════════════════════════════ */
+  "acido_bempedoico": {
+    "sinvastatina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O ácido bempedoico pode aumentar as concentrações plasmáticas da sinvastatina (provavelmente por inibição do transportador OATP1B1), elevando substancialmente o risco de miopatia e rabdomiólise.",
+        es: "El ácido bempedoico puede aumentar las concentraciones plasmáticas de la simvastatina (probablemente por inhibición del transportador OATP1B1), elevando sustancialmente el riesgo de miopatía y rabdomiólisis."
+      },
+      conduta: {
+        pt: "Limitar rigidamente a dose de sinvastatina a 20 mg/dia quando utilizada junto com ácido bempedoico. Monitorar queixas de mialgia, fraqueza e níveis de creatina quinase (CK).",
+        es: "Limitar rígidamente la dosis de simvastatina a 20 mg/día cuando se utiliza junto con ácido bempedoico. Monitorizar quejas de mialgia, debilidad y niveles de creatina quinasa (CK)."
+      }
+    },
+    "pravastatina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O ácido bempedoico pode elevar moderadamente a área sob a curva (AUC) da pravastatina, aumentando seu risco de toxicidade muscular.",
+        es: "El ácido bempedoico puede elevar moderadamente el área bajo la curva (AUC) de la pravastatina, aumentando su riesgo de toxicidad muscular."
+      },
+      conduta: {
+        pt: "Limitar a dose de pravastatina a 40 mg/dia em associação. Monitorar dores e cãibras musculares.",
+        es: "Limitar la dosis de pravastatina a 40 mg/día en asociación. Monitorizar dolores y calambres musculares."
+      }
+    },
+    "$classe_fluoroquinolonas": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Ambos os fármacos possuem aviso (warning) independente sobre o risco de ruptura de tendão (especialmente tendão de Aquiles). A associação pode gerar um efeito sinérgico lesivo sobre o tecido conectivo tendíneo.",
+        es: "Ambos fármacos poseen aviso (warning) independiente sobre el riesgo de ruptura de tendón (especialmente tendón de Aquiles). La asociación puede generar un efecto sinérgico lesivo sobre el tejido conectivo tendinoso."
+      },
+      conduta: {
+        pt: "Evitar prescrição concomitante de fluoroquinolonas em pacientes utilizando ácido bempedoico, particularmente naqueles com mais de 60 anos ou usando corticosteroides sistêmicos associados.",
+        es: "Evitar prescripción concomitante de fluoroquinolonas en pacientes utilizando ácido bempedoico, particularmente en aquellos mayores de 60 años o que usen corticosteroides sistémicos asociados."
+      }
+    }
+  },
+
+  /* Agentes biológicos redutores de PCSK9 (inclisiran, evolocumab, alirocumab):
+     não utilizam vias enzimáticas (CYP450) nem transportadores celulares clássicos,
+     resultando em ausência de interações clinicamente prejudiciais estruturadas.
+     Exercem sinergia farmacodinâmica benéfica com estatinas. */
+  "inclisiran": {
+    "$classe_estatinas": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "Efeito farmacodinâmico sinérgico sem interação farmacocinética prejudicial. As estatinas aumentam a expressão da PCSK9; o inclisirán suprime a síntese da PCSK9, resultando em reduções massivas do colesterol LDL. Ausência de toxicidade miopática cruzada.",
+        es: "Efecto farmacodinámico sinérgico sin interacción farmacocinética perjudicial. Las estatinas aumentan la expresión de la PCSK9; el inclisirán suprime la síntesis de PCSK9, resultando en reducciones masivas del colesterol LDL. Ausencia de toxicidad miopática cruzada."
+      },
+      conduta: {
+        pt: "A associação é benéfica e recomendada nas diretrizes para pacientes de muito alto risco cardiovascular que não atingem a meta de LDL apenas com estatina.",
+        es: "La asociación es beneficiosa y recomendada en las directrices para pacientes de muy alto riesgo cardiovascular que no alcanzan la meta de LDL solo con estatina."
+      }
+    }
+  },
+  "evolocumab": {
+    "$classe_estatinas": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "Estudos sugerem que estatinas de alta intensidade podem aumentar o clearance (eliminação) do evolocumabe em até 20%; no entanto, esse efeito farmacocinético NÃO tem impacto na potência da redução do LDL-C nem exige ajuste de dose.",
+        es: "Estudios sugieren que estatinas de alta intensidad pueden aumentar el aclaramiento (eliminación) del evolocumab hasta en un 20%; sin embargo, este efecto farmacocinético NO tiene impacto en la potencia de la reducción del LDL-C ni exige ajuste de dosis."
+      },
+      conduta: {
+        pt: "A associação é a terapia padrão. Nenhuma conduta modificadora é necessária. Excelente perfil de segurança para fígado e músculo.",
+        es: "La asociación es la terapia estándar. Ninguna conducta modificadora es necesaria. Excelente perfil de seguridad para hígado y músculo."
+      }
+    }
+  },
+  "alirocumab": {
+    "$classe_estatinas": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "Sinergia terapêutica altamente eficaz sem aumento da toxicidade das estatinas (ex: miopatia ou hepatotoxicidade não são agravadas). A depuração do alirocumabe não sofre interferência clinicamente relevante das enzimas do sistema citocromo P450.",
+        es: "Sinergia terapéutica altamente eficaz sin aumento de la toxicidad de las estatinas (ej: miopatía o hepatotoxicidad no son agravadas). La depuración del alirocumab no sufre interferencia clínicamente relevante de las enzimas del sistema citocromo P450."
+      },
+      conduta: {
+        pt: "Associação clinicamente indicada. Não requer ajustes ou precauções especiais além do seguimento do painel lipídico.",
+        es: "Asociación clínicamente indicada. No requiere ajustes o precauciones especiales más allá del seguimiento del panel lipídico."
+      }
+    }
+  },
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     BLOCO (2026-07-03) — Redutores de LDL-C/TG (LOTE 5):
+     evinacumab, lomitapida, mipomersen, icosapento_etilo, omega_3
+  ══════════════════════════════════════════════════════════════════════════ */
+  "evinacumab": {
+    "interacoes_vazias": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "Evinacumabe é um anticorpo monoclonal — não é metabolizado por enzimas do citocromo P450, não interage com transportadores de efluxo (P-gp) e não causa indução/inibição enzimática. Ausência de interações medicamentosas estruturadas de relevância clínica.",
+        es: "Evinacumab es un anticuerpo monoclonal — no es metabolizado por enzimas del citocromo P450, no interactúa con transportadores de eflujo (P-gp) y no causa inducción/inhibición enzimática. Ausencia de interacciones medicamentosas estructuradas de relevancia clínica."
+      },
+      conduta: {
+        pt: "Apenas monitoramento padrão de sinais de anafilaxia durante e após a infusão.",
+        es: "Solo monitorización estándar de signos de anafilaxia durante y después de la infusión."
+      }
+    }
+  },
+  "lomitapida": {
+    "$classe_azolicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Cetoconazol e itraconazol são inibidores FORTES do CYP3A4. A lomitapida é extensamente metabolizada pelo CYP3A4. A associação causa elevação de até 27 vezes na concentração plasmática da lomitapida, resultando em hepatotoxicidade massiva e dano gastrointestinal fulminante.",
+        es: "Ketoconazol e itraconazol son inhibidores FUERTES del CYP3A4. La lomitapida es extensamente metabolizada por el CYP3A4. La asociación causa una elevación de hasta 27 veces en la concentración plasmática de lomitapida, resultando en hepatotoxicidad masiva y daño gastrointestinal fulminante."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Não administrar de forma alguma.",
+        es: "Asociación contraindicada. No administrar bajo ningún concepto."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Claritromicina e eritromicina são inibidores FORTES do CYP3A4, provocando elevação tóxica (exposição até 27x maior) da lomitapida.",
+        es: "Claritromicina y eritromicina son inhibidores FUERTES del CYP3A4, provocando elevación tóxica (exposición hasta 27x mayor) de lomitapida."
+      },
+      conduta: {
+        pt: "Contraindicado. Suspender lomitapida ou utilizar azitromicina (inibidor fraco) se a terapia macrolídica for necessária.",
+        es: "Contraindicado. Suspender lomitapida o utilizar azitromicina (inhibidor débil) si es necesaria la terapia con macrólidos."
+      }
+    },
+    "$classe_antirretrovirais": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Inibidores da protease (ritonavir, lopinavir, atazanavir, darunavir, cobicistate) bloqueiam fortemente o CYP3A4, causando toxicidade hepática grave pela lomitapida.",
+        es: "Los inhibidores de proteasa (ritonavir, lopinavir, atazanavir, darunavir, cobicistat) bloquean fuertemente el CYP3A4, causando toxicidad hepática grave por lomitapida."
+      },
+      conduta: {
+        pt: "Contraindicado. Avaliar substituição em conjunto com a infectologia.",
+        es: "Contraindicado. Evaluar sustitución en conjunto con infectología."
+      }
+    },
+    "diltiazem": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inibidor MODERADO do CYP3A4. Eleva a exposição à lomitapida em aproximadamente 2 a 3 vezes, aumentando substancialmente a hepatotoxicidade.",
+        es: "Inhibidor MODERADO del CYP3A4. Eleva la exposición a lomitapida en aproximadamente 2 a 3 veces, aumentando sustancialmente la hepatotoxicidad."
+      },
+      conduta: {
+        pt: "Se o paciente já utilizar lomitapida, reduzir a dose máxima para 30 mg/dia e ajustar com extrema cautela.",
+        es: "Si el paciente ya utiliza lomitapida, reducir la dosis máxima a 30 mg/día y ajustar con extrema precaución."
+      }
+    },
+    "verapamil": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inibidor MODERADO do CYP3A4, gerando acúmulo sistêmico e hepatotoxicidade da lomitapida.",
+        es: "Inhibidor MODERADO del CYP3A4, generando acumulación sistémica y hepatotoxicidad de lomitapida."
+      },
+      conduta: {
+        pt: "Limitar dose de lomitapida a 30 mg/dia. Monitorar transaminases (TGO/TGP) rigorosamente.",
+        es: "Limitar dosis de lomitapida a 30 mg/día. Monitorizar transaminasas (AST/ALT) rigurosamente."
+      }
+    },
+    "sinvastatina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A lomitapida é inibidora fraca do CYP3A4 e inibidora da P-glicoproteína. Aumenta as concentrações plasmáticas da sinvastatina (substrato sensível do CYP3A4) em até 2 vezes, com alto risco de miopatia e rabdomiólise.",
+        es: "La lomitapida es inhibidora débil del CYP3A4 e inhibidora de la P-glicoproteína. Aumenta las concentraciones plasmáticas de simvastatina (sustrato sensible del CYP3A4) hasta 2 veces, con alto riesgo de miopatía y rabdomiólisis."
+      },
+      conduta: {
+        pt: "Reduzir a dose da sinvastatina em 50% ao iniciar lomitapida. Dose máxima de sinvastatina não deve ultrapassar 20 mg/dia.",
+        es: "Reducir la dosis de simvastatina en un 50% al iniciar lomitapida. La dosis máxima de simvastatina no debe sobrepasar 20 mg/día."
+      }
+    },
+    "lovastatina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Mecanismo idêntico à sinvastatina. Lomitapida aumenta a exposição à lovastatina, elevando o risco de miopatia e lesão renal por rabdomiólise.",
+        es: "Mecanismo idéntico a la simvastatina. La lomitapida aumenta la exposición a lovastatina, elevando el riesgo de miopatía y lesión renal por rabdomiólisis."
+      },
+      conduta: {
+        pt: "Reduzir a dose de lovastatina em 50%. Monitorar CPK periodicamente e sintomas musculares.",
+        es: "Reducir la dosis de lovastatina en un 50%. Monitorizar CPK periódicamente y síntomas musculares."
+      }
+    },
+    "varfarina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A lomitapida aumenta as concentrações séricas do enantiômero R-varfarina em cerca de 30% e aumenta o tempo de protrombina (INR). Risco elevado de sangramentos.",
+        es: "La lomitapida aumenta las concentraciones séricas del enantiómero R-warfarina en cerca de un 30% y aumenta el tiempo de protrombina (INR). Riesgo elevado de sangrados."
+      },
+      conduta: {
+        pt: "Monitoramento intensivo do RNI (INR), especialmente no início do tratamento ou no reajuste de doses da lomitapida.",
+        es: "Monitorización intensiva del RNI (INR), especialmente al inicio del tratamiento o en el reajuste de dosis de la lomitapida."
+      }
+    },
+    "digoxina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Lomitapida é inibidora da P-glicoproteína intestinal. Eleva as concentrações plasmáticas da digoxina de forma clinicamente relevante.",
+        es: "Lomitapida es inhibidora de la P-glicoproteína intestinal. Eleva las concentraciones plasmáticas de digoxina de forma clínicamente relevante."
+      },
+      conduta: {
+        pt: "Se o paciente usa digoxina e iniciar lomitapida, considerar reduzir a dose de digoxina pela metade. Monitorar ECG e digoxinemia.",
+        es: "Si el paciente usa digoxina e inicia lomitapida, considerar la reducción de la dosis de digoxina a la mitad. Monitorizar ECG y digoxinemia."
+      }
+    },
+    "$classe_rifamicinas": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Rifampicina é indutora potente do CYP3A4. Reduz drasticamente as concentrações de lomitapida, anulando sua eficácia terapêutica no controle do colesterol da HFHo.",
+        es: "La rifampicina es inductora potente del CYP3A4. Reduce drásticamente las concentraciones de lomitapida, anulando su eficacia terapéutica en el control del colesterol de la HFHo."
+      },
+      conduta: {
+        pt: "Aumento de dose de lomitapida pode ser necessário, mas com extrema cautela para não causar dano hepático abrupto se o antibiótico for suspenso.",
+        es: "Puede ser necesario aumento de dosis de lomitapida, pero con extrema precaución para no causar daño hepático abrupto si se suspende el antibiótico."
+      }
+    }
+  },
+  "mipomersen": {
+    "$classe_hepatotoxicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergia de dano hepático grave. O mipomersen possui Boxed Warning para esteatose e aumento de transaminases. A associação com outros fármacos hepatotóxicos (amiodarona, isoniazida, metotrexato, valproato, cetoconazol) aumenta significativamente o risco de insuficiência hepática.",
+        es: "Sinergia de daño hepático grave. El mipomersén posee Boxed Warning para esteatosis y aumento de transaminasas. La asociación con otros fármacos hepatotóxicos (amiodarona, isoniazida, metotrexato, valproato, ketoconazol) aumenta significativamente el riesgo de insuficiencia hepática."
+      },
+      conduta: {
+        pt: "Evitar associação. Monitorar rigorosamente TGO/TGP, FA e bilirrubinas antes e mensalmente durante a terapia combinada, se indispensável.",
+        es: "Evitar asociación. Monitorizar rigurosamente AST/ALT, FA y bilirrubinas antes y mensualmente durante la terapia combinada si es indispensable."
+      }
+    },
+    "alcool": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Consumo de álcool induz dano celular hepático e esteatose, exercendo efeito sinérgico grave com a agressão hepatocelular mediada pelo mipomersen.",
+        es: "El consumo de alcohol induce daño celular hepático y esteatosis, ejerciendo efecto sinérgico grave con la agresión hepatocelular mediada por mipomersén."
+      },
+      conduta: {
+        pt: "Pacientes devem ser fortemente instruídos a limitar o consumo a, no máximo, uma dose de bebida alcoólica por dia. Idealmente, abstinência completa.",
+        es: "Los pacientes deben ser fuertemente instruidos a limitar el consumo a, como máximo, una dosis de bebida alcohólica por día. Idealmente, abstinencia completa."
+      }
+    }
+  },
+  "icosapento_etilo": {
+    "$classe_anticoagulantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Altas doses de ácidos graxos ômega-3/icosapento etílico prolongam substancialmente o tempo de sangramento por inibição parcial da agregação plaquetária. A associação com anticoagulantes orais ou parenterais exacerba severamente o risco de sangramento maior (gastrointestinal ou intracraniano).",
+        es: "Altas dosis de ácidos grasos omega-3/icosapento de etilo prolongan sustancialmente el tiempo de sangrado por inhibición parcial de la agregación plaquetaria. La asociación con anticoagulantes orales o parenterales exacerba severamente el riesgo de sangrado mayor (gastrointestinal o intracraneal)."
+      },
+      conduta: {
+        pt: "Monitorização ativa. Pacientes em uso concomitante requerem controle rigoroso para sinais de hemorragia e reavaliação contínua da indicação do perfil lipídico vs. risco de sangramento. Se uso de varfarina, vigiar o INR.",
+        es: "Monitorización activa. Pacientes en uso concomitante requieren control riguroso para signos de hemorragia y reevaluación continua de la indicación del perfil lipídico vs. riesgo de sangrado. Si usa warfarina, vigilar el INR."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sobreposição do efeito redutor da ativação plaquetária induzido por altas concentrações de EPA (4g/dia) com inibidores P2Y12 (clopidogrel, ticagrelor) e AAS, agravando a incidência de sangramentos.",
+        es: "Superposición del efecto reductor de la activación plaquetaria inducido por altas concentraciones de EPA (4g/día) con inhibidores P2Y12 (clopidogrel, ticagrelor) y AAS, agravando la incidencia de sangrados."
+      },
+      conduta: {
+        pt: "Acompanhar episódios de epistaxe, equimoses fáceis e sangramentos gastrointestinais ocultos.",
+        es: "Hacer seguimiento de episodios de epistaxis, equimosis fáciles y sangrados gastrointestinales ocultos."
+      }
+    }
+  },
+  "omega_3": {
+    "$classe_anticoagulantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Ácidos graxos poli-insaturados ômega-3, particularmente em altas doses requeridas para hipertrigliceridemia (4g/dia), inibem a atividade das plaquetas e prolongam o tempo de hemorragia sistêmica. A combinação com anticoagulantes multiplica esse efeito.",
+        es: "Ácidos grasos poliinsaturados omega-3, particularmente en altas dosis requeridas para hipertrigliceridemia (4g/día), inhiben la actividad de las plaquetas y prolongan el tiempo de hemorragia sistémica. La combinación con anticoagulantes multiplica este efecto."
+      },
+      conduta: {
+        pt: "Cautela redobrada; pacientes utilizando anticoagulantes orais concomitantemente a óleos de peixe purificados devem ser periodicamente monitorizados para sangramentos clínicos.",
+        es: "Precaución redoblada; pacientes utilizando anticoagulantes orales concomitantemente a aceites de pescado purificados deben ser periódicamente monitorizados para sangrados clínicos."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Efeito antiplaquetário sinérgico. Prolonga tempo de sangria de forma aditiva.",
+        es: "Efecto antiplaquetario sinérgico. Prolonga tiempo de sangría de forma aditiva."
+      },
+      conduta: {
+        pt: "Monitorização de eventos hemorrágicos em mucosas.",
+        es: "Monitorización de eventos hemorrágicos en mucosas."
+      }
+    }
+  },
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     BLOCO (2026-07-03) — LOTE 6: iSGLT2/iSGLT1-2 cardiorrenais +
+     estimulador sGC + ativador de miosina cardíaca:
+     dapagliflozina, empagliflozina, sotagliflozina, vericiguat, omecamtiv_mecarbil
+     (fármacos já existentes em cardio.js — apenas os nós de interação eram
+     genuinamente ausentes em INTERACOES_DB; nenhuma duplicação de cardio.js)
+  ══════════════════════════════════════════════════════════════════════════ */
+  "dapagliflozina": {
+    "insulina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A associação da dapagliflozina (que promove glicosúria constante) com insulina aumenta o risco de episódios de hipoglicemia, especialmente em pacientes idosos ou com insuficiência renal.",
+        es: "La asociación de dapagliflozina (que promueve glucosuria constante) con insulina aumenta el riesgo de episodios de hipoglucemia, especialmente en pacientes ancianos o con insuficiencia renal."
+      },
+      conduta: {
+        pt: "Considerar a redução da dose de insulina (10–20%) ao iniciar o iSGLT2. Monitorar a glicemia capilar com maior frequência.",
+        es: "Considerar la reducción de la dosis de insulina (10–20%) al iniciar el iSGLT2. Monitorizar la glucemia capilar con mayor frecuencia."
+      }
+    },
+    "glibenclamida": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A associação de secretagogos de insulina (sulfonilureias) com iSGLT2 potencializa marcadamente o risco de hipoglicemia e depleção de volume.",
+        es: "La asociación de secretagogos de insulina (sulfonilureas) con iSGLT2 potencia marcadamente el riesgo de hipoglucemia y depleción de volumen."
+      },
+      conduta: {
+        pt: "Reduzir dose da sulfonilureia e monitorar glicemia rigorosamente.",
+        es: "Reducir dosis de la sulfonilurea y monitorizar glucemia rigurosamente."
+      }
+    },
+    "glimepirida": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Efeito sinérgico no risco de hipoglicemia com sulfonilureias.",
+        es: "Efecto sinérgico en el riesgo de hipoglucemia con sulfonilureas."
+      },
+      conduta: {
+        pt: "Monitorar risco hipoglicêmico.",
+        es: "Monitorizar riesgo hipoglucémico."
+      }
+    },
+    "furosemida": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Diurese osmótica induzida pelo iSGLT2 somada à diurese de alça pode levar a depleção de volume aguda, hipotensão ortostática e lesão renal aguda pré-renal.",
+        es: "Diuresis osmótica inducida por el iSGLT2 sumada a diuresis de asa puede llevar a depleción de volumen aguda, hipotensión ortostática y lesión renal aguda prerrenal."
+      },
+      conduta: {
+        pt: "Avaliar o estado volêmico. Se o paciente estiver euvolêmico ou hipovolêmico, considerar reduzir a dose da furosemida antes de iniciar dapagliflozina.",
+        es: "Evaluar el estado volémico. Si el paciente está euvolémico o hipovolémico, considerar reducir la dosis de furosemida antes de iniciar dapagliflozina."
+      }
+    },
+    "$classe_antihipertensivos": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Os iSGLT2 provocam uma redução independente da pressão arterial (geralmente 3–5 mmHg PAS). Pode ocorrer efeito aditivo discreto de hipotensão sintomática.",
+        es: "Los iSGLT2 provocan una reducción independiente de la presión arterial (generalmente 3–5 mmHg PAS). Puede ocurrir un efecto aditivo discreto de hipotensión sintomática."
+      },
+      conduta: {
+        pt: "Monitorar PA ortostática em pacientes em uso de múltiplos anti-hipertensivos.",
+        es: "Monitorizar PA ortostática en pacientes en uso de múltiples antihipertensivos."
+      }
+    }
+  },
+  "empagliflozina": {
+    "insulina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Risco aumentado de hipoglicemia por perda urinária contínua de glicose somada à hiperinsulinemia farmacológica.",
+        es: "Riesgo aumentado de hipoglucemia por pérdida urinaria continua de glucosa sumada a la hiperinsulinemia farmacológica."
+      },
+      conduta: {
+        pt: "Reduzir dose basal de insulina e monitorar perfil glicêmico.",
+        es: "Reducir dosis basal de insulina y monitorizar perfil glucémico."
+      }
+    },
+    "furosemida": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Depleção volêmica aditiva. A empagliflozina promove contração do volume plasmático; o diurético de alça agrava o risco de lesão renal por baixo fluxo (AKI).",
+        es: "Depleción volémica aditiva. La empagliflozina promueve contracción del volumen plasmático; el diurético de asa agrava el riesgo de lesión renal por bajo flujo (AKI)."
+      },
+      conduta: {
+        pt: "Ajustar dose de diuréticos de alça (desescalonamento) se não houver sinais de congestão ativa.",
+        es: "Ajustar dosis de diuréticos de asa (desescalonamiento) si no hay signos de congestión activa."
+      }
+    },
+    "espironolactona": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "Associação geralmente benéfica e encorajada na IC. O iSGLT2 reduz levemente o risco de hipercalemia induzida pela espironolactona.",
+        es: "Asociación generalmente beneficiosa y fomentada en IC. El iSGLT2 reduce levemente el riesgo de hipercalemia inducida por espironolactona."
+      },
+      conduta: {
+        pt: "Monitorar eletrólitos de rotina; associação segura na maioria dos casos.",
+        es: "Monitorizar electrolitos de rutina; asociación segura en la mayoría de los casos."
+      }
+    }
+  },
+  "sotagliflozina": {
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A sotagliflozina atua como inibidora da P-glicoproteína (P-gp) a nível intestinal, podendo aumentar significativamente a AUC e a Cmax da digoxina, com risco de toxicidade digitálica e bloqueios AV.",
+        es: "La sotagliflozina actúa como inhibidora de la P-glicoproteína (P-gp) a nivel intestinal, pudiendo aumentar significativamente el AUC y la Cmax de la digoxina, con riesgo de toxicidad digitálica y bloqueos AV."
+      },
+      conduta: {
+        pt: "Monitoramento intensivo. Avaliar digoxinemia e reduzir a dose de digoxina preventivamente. Monitorar ECG.",
+        es: "Monitorización intensiva. Evaluar digoxinemia y reducir la dosis de digoxina preventivamente. Monitorizar ECG."
+      }
+    },
+    "insulina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O bloqueio duplo (SGLT1 intestinal + SGLT2 renal) retarda a absorção de glicose e aumenta a excreção, conferindo risco substancial de hipoglicemia severa quando associado à insulina.",
+        es: "El bloqueo doble (SGLT1 intestinal + SGLT2 renal) retrasa la absorción de glucosa y aumenta la excreción, confiriendo un riesgo sustancial de hipoglucemia severa cuando se asocia a insulina."
+      },
+      conduta: {
+        pt: "Considerar redução proativa de até 20% da insulina basal ao iniciar sotagliflozina.",
+        es: "Considerar una reducción proactiva de hasta un 20% de la insulina basal al iniciar sotagliflozina."
+      }
+    },
+    "furosemida": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Associação potencializa a depleção de volume e a hipotensão postural.",
+        es: "La asociación potencia la depleción de volumen y la hipotensión postural."
+      },
+      conduta: {
+        pt: "Ajuste diurético essencial para evitar síncope e lesão renal aguda.",
+        es: "Ajuste diurético esencial para evitar síncope y lesión renal aguda."
+      }
+    }
+  },
+  "vericiguat": {
+    "$classe_ipde5": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Sildenafila, tadalafila e afins inibem a degradação do GMPc. O vericiguat aumenta diretamente a síntese de GMPc estimulando a sGC. A coadministração provoca acúmulo excessivo de GMPc vascular, culminando em hipotensão grave e choque distributivo refratário.",
+        es: "Sildenafilo, tadalafilo y afines inhiben la degradación del GMPc. El vericiguat aumenta directamente la síntesis de GMPc estimulando la sGC. La coadministración provoca acumulación excesiva de GMPc vascular, culminando en hipotensión grave y choque distributivo refractario."
+      },
+      conduta: {
+        pt: "Associação absolutamente contraindicada. Evitar uso concomitante sob qualquer hipótese.",
+        es: "Asociación absolutamente contraindicada. Evitar uso concomitante bajo cualquier hipótesis."
+      }
+    },
+    "$classe_nitratos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Nitratos depletam precursores de NO e induzem vasodilatação. O vericiguat atua na via subsequente (sGC). A interação causa sinergia hipotensora acentuada (mesmo mecanismo do sildenafil com nitratos).",
+        es: "Los nitratos depletan precursores de NO e inducen vasodilatación. El vericiguat actúa en la vía subsecuente (sGC). La interacción causa sinergia hipotensora acentuada (mismo mecanismo del sildenafil con nitratos)."
+      },
+      conduta: {
+        pt: "Evitar associação crônica. Se o uso agudo for necessário (ex.: SCA), monitorar o paciente em UTI com suporte vasopressor imediatamente disponível.",
+        es: "Evitar asociación crónica. Si el uso agudo es necesario (ej.: SCA), monitorizar al paciente en UCI con soporte vasopresor inmediatamente disponible."
+      }
+    },
+    "$classe_antihipertensivos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O vericiguat causa uma redução adicional intrínseca da pressão arterial; anti-hipertensivos agravam o risco de síncope e hipotensão.",
+        es: "El vericiguat causa una reducción adicional intrínseca de la presión arterial; antihipertensivos agravan el riesgo de síncope e hipotensión."
+      },
+      conduta: {
+        pt: "Titular a dose do vericiguat com base na PAS (não aumentar se PAS < 100 mmHg).",
+        es: "Titular la dosis de vericiguat con base en la PAS (no aumentar si PAS < 100 mmHg)."
+      }
+    }
+  },
+  "omecamtiv_mecarbil": {
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Claritromicina e eritromicina são inibidores potentes do CYP3A4, principal via de metabolização do omecamtiv. Risco de superdosagem substancial, resultando em isquemia miocárdica por tempo sistólico prolongado (encurtamento da perfusão diastólica).",
+        es: "Claritromicina y eritromicina son inhibidores potentes del CYP3A4, principal vía de metabolización del omecamtiv. Riesgo de sobredosis sustancial, resultando en isquemia miocárdica por tiempo sistólico prolongado (acortamiento de la perfusión diastólica)."
+      },
+      conduta: {
+        pt: "Monitoramento intensivo ou suspensão temporária do ativador miocárdico, acompanhado de níveis plasmáticos quando disponível.",
+        es: "Monitorización intensiva o suspensión temporal del activador miocárdico, acompañado de niveles plasmáticos cuando disponible."
+      }
+    },
+    "$classe_azolicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Itraconazol/cetoconazol bloqueiam a depuração do omecamtiv mecarbil via CYP3A4, com risco severo de acúmulo sistêmico e impacto isquêmico nocivo ao ventrículo esquerdo.",
+        es: "Itraconazol/ketoconazol bloquean la depuración del omecamtiv mecarbil vía CYP3A4, con riesgo severo de acumulación sistémica e impacto isquémico nocivo al ventrículo izquierdo."
+      },
+      conduta: {
+        pt: "Evitar a associação.",
+        es: "Evitar la asociación."
+      }
+    },
+    "verapamil": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Inibição moderada do CYP3A4 aumenta a exposição ao omecamtiv. Além disso, há antagonismo farmacodinâmico indireto: o verapamil deprime a contratilidade, enquanto o omecamtiv a ativa.",
+        es: "Inhibición moderada del CYP3A4 aumenta la exposición al omecamtiv. Además, existe antagonismo farmacodinámico indirecto: el verapamilo deprime la contractilidad, mientras el omecamtiv la activa."
+      },
+      conduta: {
+        pt: "Associação tipicamente não recomendada em ICFEr clínica severa.",
+        es: "Asociación típicamente no recomendada en ICFEr clínica severa."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
+   v3.15 (2026-07-03) — BLOCO LOTE 2: reforço de dabigatrana (P-gp) +
+        novos nós-raiz bivalirudina, clopidogrel, prasugrel, ticagrelor,
+        cangrelor. As 6 entidades já tinham objetos completos em cardio.js
+        (não duplicados); apenas o motor de interações bidirecional foi
+        expandido, mapeando classes inventadas do usuário para classes
+        reais já existentes (ver comentário de bloco acima).
    v3.14 — Bloco BZDs 7–8: oxazepam + temazepam (2026-06-19)
         oxazepam: glucuronidação direta (UGT) — sem interações CYP; perfil seguro em hepatopatas leves
                   $classe_opioides/alcool→contraindicada(5); fenobarbital→alta(4)

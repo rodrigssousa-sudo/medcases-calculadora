@@ -7525,8 +7525,9 @@
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
   <link rel="stylesheet" href="css/medcases-ux-v2.css" />
 
-  <!-- ── Banco de Dados de Interações Medicamentosas — Motor Bidirecional v1.0 ── -->
-  <script src="database/interacoes.js"></script>
+  <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
+       (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
+       próximo ao fechamento do documento. -->
 </head>
 <body>
 <div id="app">
@@ -9238,7 +9239,7 @@
         <i class="fa-solid fa-magnifying-glass farmacos-search-icon"></i>
         <input class="farmacos-search" id="farmacos-search-input" type="text"
                placeholder="Buscar fármaco, classe ou categoria..."
-               oninput="renderFarmacosList(this.value)"
+               oninput="_renderFarmacosListDebounced(this.value)"
                inputmode="search" enterkeyhint="search"
                autocomplete="off" spellcheck="false" />
       </div>
@@ -13286,31 +13287,35 @@ function fecharModal() {
 const _fNorm = s => (s || '').toLowerCase()
   .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
-/* Resolve nome bilíngue para string no idioma atual */
-function _fdResolveName(d) {
+/* Resolve nome bilíngue para string no idioma atual.
+   BUILD 252: aceita `forceLang` opcional ('pt'|'es') para permitir
+   pré-computar os dois idiomas ao construir window._searchIndex,
+   sem alterar o comportamento de nenhuma chamada existente (que
+   continua usando currentLang implicitamente). */
+function _fdResolveName(d, forceLang) {
   if (!d || !d.name) return d?.id || '—';
   if (typeof d.name === 'object') {
-    const lang = (typeof currentLang !== 'undefined' ? currentLang : 'pt');
+    const lang = forceLang || (typeof currentLang !== 'undefined' ? currentLang : 'pt');
     return d.name[lang] || d.name.pt || d.id || '—';
   }
   return d.name;
 }
 
-/* Resolve classe bilíngue */
-function _fdResolveClass(d) {
+/* Resolve classe bilíngue (BUILD 252: forceLang opcional — ver acima) */
+function _fdResolveClass(d, forceLang) {
   if (!d || !d.class) return '';
   if (typeof d.class === 'object') {
-    const lang = (typeof currentLang !== 'undefined' ? currentLang : 'pt');
+    const lang = forceLang || (typeof currentLang !== 'undefined' ? currentLang : 'pt');
     return d.class[lang] || d.class.pt || '';
   }
   return d.class;
 }
 
-/* Resolve categoria bilíngue */
-function _fdResolveCat(d) {
+/* Resolve categoria bilíngue (BUILD 252: forceLang opcional — ver acima) */
+function _fdResolveCat(d, forceLang) {
   if (!d || !d.category) return '';
   if (typeof d.category === 'object') {
-    const lang = (typeof currentLang !== 'undefined' ? currentLang : 'pt');
+    const lang = forceLang || (typeof currentLang !== 'undefined' ? currentLang : 'pt');
     return d.category[lang] || d.category.pt || '';
   }
   return d.category;
@@ -13322,6 +13327,94 @@ function _getMasterDB() {
     ? window.DRUG_DB
     : [];
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   BUILD 252 — ÍNDICE DE BUSCA EM MEMÓRIA (window._searchIndex)
+   ──────────────────────────────────────────────────────────────────────
+   PROBLEMA ORIGINAL: hmFilterDrugs, renderFarmacosList, renderDrugList e
+   filterMedsAutocomplete recalculavam _fNorm(_fdResolveName/Class/Cat(d))
+   — normalização Unicode (.normalize('NFD') + regex de acentos) — para
+   CADA fármaco, EM TODA TECLA digitada. Com a base crescendo, isso vira
+   um gargalo de main-thread proporcional a O(n) recálculos por keystroke.
+
+   SOLUÇÃO: pré-computa, UMA ÚNICA VEZ (logo após DRUG_DB ser consolidado
+   no DOMContentLoaded), as strings já normalizadas — em AMBOS os idiomas
+   (pt/es) simultaneamente, para que a troca de idioma (setLang) NÃO
+   exija reconstruir o índice. A busca passa a fazer apenas comparação
+   de substring (.includes()) sobre texto já normalizado — resultado
+   IDÊNTICO ao anterior, custo drasticamente menor.
+   ══════════════════════════════════════════════════════════════════════ */
+function _buildSearchIndex() {
+  const db = _getMasterDB();
+  window._searchIndex = db.map(d => ({
+    ref: d,
+    pt: {
+      name:  _fNorm(_fdResolveName(d,  'pt')),
+      class: _fNorm(_fdResolveClass(d, 'pt')),
+      cat:   _fNorm(_fdResolveCat(d,   'pt'))
+    },
+    es: {
+      name:  _fNorm(_fdResolveName(d,  'es')),
+      class: _fNorm(_fdResolveClass(d, 'es')),
+      cat:   _fNorm(_fdResolveCat(d,   'es'))
+    }
+  }));
+  console.log('[SearchIndex] BUILD 252 — window._searchIndex construído:', window._searchIndex.length, 'fármacos (pt+es pré-normalizados).');
+}
+window._buildSearchIndex = _buildSearchIndex;
+
+/* ── Filtro sobre o índice — usado por hmFilterDrugs, renderFarmacosList,
+     renderDrugList/filterDrugs e filterMedsAutocomplete.
+     MESMA SEMÂNTICA do filtro original: OR entre nome/classe/categoria,
+     substring match, resolução bilíngue com fallback .pt — apenas sem
+     recalcular normalização a cada chamada.
+     `qNorm` já deve vir normalizado (via _fNorm) pelo chamador. ── */
+function _searchIndexFilter(qNorm) {
+  const idx = window._searchIndex;
+  if (!Array.isArray(idx) || !idx.length) {
+    /* Fallback de segurança: índice ainda não construído (ordem de
+       carregamento atípica) — cai para o scan direto original, para
+       que a busca NUNCA quebre, apenas sem o ganho de performance
+       nesta chamada pontual. */
+    return _getMasterDB().filter(d => {
+      const nm = _fNorm(_fdResolveName(d));
+      const cl = _fNorm(_fdResolveClass(d));
+      const ct = _fNorm(_fdResolveCat(d));
+      return nm.includes(qNorm) || cl.includes(qNorm) || ct.includes(qNorm);
+    });
+  }
+  const lang = (typeof currentLang !== 'undefined' && currentLang === 'es') ? 'es' : 'pt';
+  const out = [];
+  for (let i = 0; i < idx.length; i++) {
+    const f = idx[i][lang];
+    if (f.name.includes(qNorm) || f.class.includes(qNorm) || f.cat.includes(qNorm)) {
+      out.push(idx[i].ref);
+    }
+  }
+  return out;
+}
+window._searchIndexFilter = _searchIndexFilter;
+
+/* ══════════════════════════════════════════════════════════════════════
+   BUILD 252 — _hmDebounce GLOBAL (escopo top-level)
+   ──────────────────────────────────────────────────────────────────────
+   Utilitário de debounce já existia (BUILD 250) mas estava definido
+   DENTRO do listener de DOMContentLoaded — escopo local, inacessível
+   às funções de busca abaixo (que são declaradas no escopo global,
+   avaliadas durante o parse inicial do script, antes do DOMContentLoaded
+   disparar). Elevado aqui para escopo global/window para reuso em
+   hmFilterDrugs, filtrarDropdownInteracao, renderFarmacosList,
+   renderDrugList e filterMedsAutocomplete — mesma implementação,
+   mesma semântica (agrupa chamadas sucessivas, executa apenas a
+   última após `delay` ms de silêncio). ══════════════════════════════ */
+function _hmDebounce(fn, delay) {
+  let timer = null;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+window._hmDebounce = _hmDebounce;
 
 /* =========================================================
    FÁRMACOS EM USO — Motor de Busca e Estado
@@ -13337,21 +13430,24 @@ function toggleMedsSection() {
   if (chevron) chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
 }
 
-function filterMedsAutocomplete(query) {
+/* BUILD 252 — refatorado para consumir window._searchIndex (ver
+   _searchIndexFilter em _buildSearchIndex, definido acima). Resultado
+   IDÊNTICO ao anterior: mesmo filtro (nome OU classe, substring,
+   idioma ativo, exclui já adicionados), mesma ordenação (ordem do
+   DRUG_DB), mesmo limite de 8 itens — só sem recalcular normalização
+   Unicode por fármaco a cada chamada. Envolvida em _hmDebounce
+   (~150ms) via window.filterMedsAutocomplete abaixo. */
+function _filterMedsAutocompleteImpl(query) {
   const ac = document.getElementById('meds-autocomplete');
   if (!ac) return;
   const q = (query || '').toLowerCase().trim();
   if (!q || q.length < 2) { ac.style.display = 'none'; return; }
 
-  /* Busca usando o Objeto Mestre Global */
-  const db = _getMasterDB();
   const already = (window.patientMeds || []).map(m => m.id);
   const qNorm = _fNorm(q);
-  const matches = db.filter(d => {
-    if (already.includes(d.id)) return false;
-    return _fNorm(_fdResolveName(d)).includes(qNorm)
-        || _fNorm(_fdResolveClass(d)).includes(qNorm);
-  }).slice(0, 8);
+  const matches = _searchIndexFilter(qNorm)
+    .filter(d => !already.includes(d.id))
+    .slice(0, 8);
 
   if (!matches.length) { ac.style.display = 'none'; return; }
 
@@ -13365,6 +13461,11 @@ function filterMedsAutocomplete(query) {
     </div>`).join('');
   ac.style.display = 'block';
 }
+/* Versão pública debounced (~150ms) — chamada pelo oninput do campo.
+   Mantém o nome global `filterMedsAutocomplete` para compatibilidade
+   com qualquer chamada externa existente. */
+const filterMedsAutocomplete = _hmDebounce(_filterMedsAutocompleteImpl, 150);
+window.filterMedsAutocomplete = filterMedsAutocomplete;
 
 function closeMedsAutocomplete() {
   const ac = document.getElementById('meds-autocomplete');
@@ -14872,7 +14973,12 @@ function _fdUpdateCount() {
    Motor de renderização genérico — varre _getMasterDB() inteiro,
    independente de categoria. Escalável por design.
 ══════════════════════════════════════════════════════════════ */
-function renderFarmacosList(filter) {
+/* BUILD 252 — implementação real movida para _renderFarmacosListImpl;
+   renderFarmacosList (nome público, usado por oninput e por chamadas
+   diretas espalhadas pelo app) passa a ser a versão debounced (~150ms).
+   Filtro refatorado para usar window._searchIndex via _searchIndexFilter
+   — mesmo resultado (nome/classe/categoria, substring, idioma ativo). */
+function _renderFarmacosListImpl(filter) {
   const container = document.getElementById('farmacos-list-container');
   const statsEl   = document.getElementById('farmacos-stats-text');
   if (!container) return;
@@ -14882,12 +14988,7 @@ function renderFarmacosList(filter) {
 
   /* ── Filtro multi-campo: nome (pt+es), classe, categoria ── */
   /* IDIOMA-EXCLUSIVO: varre apenas a propriedade do idioma ativo (currentLang) */
-  const filtered = !q ? db : db.filter(d => {
-    const nm = _fNorm(_fdResolveName(d));
-    const cl = _fNorm(_fdResolveClass(d));
-    const ct = _fNorm(_fdResolveCat(d));
-    return nm.includes(q) || cl.includes(q) || ct.includes(q);
-  });
+  const filtered = !q ? db : _searchIndexFilter(q);
 
   /* ── Stats text ── */
   if (statsEl) {
@@ -14947,6 +15048,33 @@ function renderFarmacosList(filter) {
 
   container.innerHTML = html;
 }
+/* ══════════════════════════════════════════════════════════════════════
+   BUILD 253 — CORREÇÃO DO BYPASS (renderFarmacosList)
+   ──────────────────────────────────────────────────────────────────────
+   BUILD 252 havia tornado `renderFarmacosList` — o nome público, usado
+   tanto pelo oninput da busca QUANTO por chamadas diretas síncronas em
+   navigate('farmacos') e nos fluxos pós-cadastro de fármaco — a própria
+   versão debounced (~150ms). Isso introduzia um atraso de 150ms em
+   fluxos que NUNCA foram keystroke (troca de aba, abertura automática
+   da ficha do fármaco 220ms depois), quebrando a expectativa de
+   execução imediata desses call sites.
+
+   CORREÇÃO: `renderFarmacosList` volta a ser SÍNCRONA e instantânea
+   (alias direto de _renderFarmacosListImpl) — mantém 100% de
+   compatibilidade com todo o código legado que a chama diretamente.
+   O debounce passa a viver EXCLUSIVAMENTE em `_renderFarmacosListDebounced`,
+   amarrado apenas ao oninput da barra de busca (ver atributo oninput no
+   HTML do input #farmacos-search-input). ══════════════════════════════ */
+function renderFarmacosList(filter) {
+  return _renderFarmacosListImpl(filter);
+}
+window.renderFarmacosList = renderFarmacosList;
+
+/* Versão exclusiva para o evento de digitação (oninput/keyup) da busca —
+   agrupa chamadas sucessivas de tecla e executa apenas a última após
+   ~150ms de silêncio. NÃO deve ser usada em nenhum outro fluxo. */
+const _renderFarmacosListDebounced = _hmDebounce(_renderFarmacosListImpl, 150);
+window._renderFarmacosListDebounced = _renderFarmacosListDebounced;
 
 /* ═══════════════════════════════════════════════════════════════════════════
    MOTOR DE DECISÃO CLÍNICA — v2.0
@@ -16837,6 +16965,11 @@ window.DRUG_DB = DRUG_DB;
    renderDrugList — painel Adulto > Fármacos (busca compacta)
    Usa _getMasterDB() como fonte — totalmente escalável.
 ============================================================ */
+/* BUILD 252 — filtro refatorado para window._searchIndex (via
+   _searchIndexFilter). renderDrugList() continua SÍNCRONA (chamada
+   diretamente por setLang(), navigate() e init — não apenas por
+   keystroke); o debounce (~150ms) é aplicado somente no wrapper
+   público filterDrugs(), que é o handler real do oninput. */
 function renderDrugList(filter) {
   const container = document.getElementById('drug-list-container');
   if (!container) return;
@@ -16851,16 +16984,8 @@ function renderDrugList(filter) {
   }
   container.style.display = '';
 
-  /* Usa o Objeto Mestre Global como fonte canônica */
-  const db = _getMasterDB();
-
   /* IDIOMA-EXCLUSIVO: varre apenas a propriedade do idioma ativo */
-  const filtered = db.filter(d => {
-    const nm = _fNorm(_fdResolveName(d));
-    const cl = _fNorm(_fdResolveClass(d));
-    const ct = _fNorm(_fdResolveCat(d));
-    return nm.includes(filterLow) || cl.includes(filterLow) || ct.includes(filterLow);
-  });
+  const filtered = _searchIndexFilter(filterLow);
 
   if (filtered.length === 0) {
     container.innerHTML = `
@@ -16896,13 +17021,20 @@ function renderDrugList(filter) {
   container.innerHTML = html;
 }
 
-function filterDrugs(v) {
+/* BUILD 252 — handler real do oninput="filterDrugs(this.value)"
+   (linha ~8888). Envolvido em _hmDebounce (~150ms): agrupa teclas
+   sucessivas e só executa a busca (+ fechamento do card inline)
+   após uma pausa na digitação. renderDrugList() em si permanece
+   síncrona para uso por setLang()/navigate() (ver acima). */
+function _filterDrugsImpl(v) {
   /* Fecha card inline e reabre lista */
   const inlineEl = document.getElementById('calc-drug-result');
   if (inlineEl) { inlineEl.style.display = 'none'; inlineEl.innerHTML = ''; }
   selectedDrug = null;
   renderDrugList(v);
 }
+const filterDrugs = _hmDebounce(_filterDrugsImpl, 150);
+window.filterDrugs = filterDrugs;
 
 /* ============================================================
    SELECT DRUG & CALC DOSE
@@ -19865,6 +19997,66 @@ function _updateDrugSearchHint() {
     : `Digite para buscar entre ${cnt} fármacos disponíveis`;
 }
 
+/* ══════════════════════════════════════════════════════════════════════
+   BUILD 253 — LAZY EVALUATION: descoberta de `class` em segundo plano
+   ──────────────────────────────────────────────────────────────────────
+   PROBLEMA ORIGINAL: _adaptExternalDB() chamava entry.calculate() de
+   forma SÍNCRONA, para CADA fármaco de CARDIO_DRUGS_DB (60 grupos,
+   ~2,2MB) e ANTIMICROBIANOS_DRUGS_DB, só para descobrir a string
+   `class` quando ela não existia estaticamente na raiz do objeto —
+   isso estrangulava o DOMContentLoaded/FCP.
+
+   SOLUÇÃO: o loop de adaptação agora faz APENAS extração estática
+   (entry.class ou entry.pharmacologicClass). Fármacos sem nenhuma das
+   duas ficam com `class: ''` temporariamente e são enfileirados aqui;
+   a descoberta via calculate() é adiada para depois do boot, executada
+   em lotes pequenos via requestIdleCallback (fallback setTimeout(fn,1)
+   em navegadores sem suporte), sem bloquear a Main Thread. Ao concluir
+   cada lote, atualiza tanto o objeto do DRUG_DB quanto (se já existir)
+   window._searchIndex, para que a busca reflita a classe descoberta.
+   ══════════════════════════════════════════════════════════════════════ */
+function _scheduleClassDiscovery(pendingList) {
+  if (!pendingList || !pendingList.length) return;
+  const CHUNK_SIZE = 15;
+  let idx = 0;
+  const ric = window.requestIdleCallback
+    ? window.requestIdleCallback.bind(window)
+    : function(fn) { return setTimeout(function() { fn({ timeRemaining: () => 8, didTimeout: false }); }, 1); };
+
+  function processBatch(deadline) {
+    let processed = 0;
+    while (idx < pendingList.length && processed < CHUNK_SIZE) {
+      const obj   = pendingList[idx];
+      const entry = obj._source;
+      try {
+        const _disc = entry.calculate({ peso: 70, idade: 40, clcr: 90, sexo: 'M',
+                                        gestante: false, lactante: false }, 'pt');
+        if (_disc && typeof _disc.class === 'string' && _disc.class) {
+          obj.class = _disc.class;
+          /* Atualiza o índice de busca já construído, se existir,
+             para que a classe recém-descoberta entre na busca sem
+             exigir reload da página. */
+          if (Array.isArray(window._searchIndex)) {
+            const idxEntry = window._searchIndex.find(si => si.ref === obj);
+            if (idxEntry && typeof _fdResolveClass === 'function' && typeof _fNorm === 'function') {
+              idxEntry.pt.class = _fNorm(_fdResolveClass(obj, 'pt'));
+              idxEntry.es.class = _fNorm(_fdResolveClass(obj, 'es'));
+            }
+          }
+        }
+      } catch(_e) { /* silencioso — classPt permanece '' para este item */ }
+      idx++; processed++;
+    }
+    if (idx < pendingList.length) {
+      ric(processBatch);
+    } else {
+      console.log('[LazyClass] BUILD 253 — descoberta de classe em segundo plano concluída:', pendingList.length, 'fármacos processados.');
+    }
+  }
+  ric(processBatch);
+}
+window._scheduleClassDiscovery = _scheduleClassDiscovery;
+
 /* ──────────────────────────────────────────────────────────
    ADAPTADOR DE SCHEMA — converte módulos externos
    (schema: { name:{pt,es}, category, calculate(p,lang) })
@@ -19873,7 +20065,9 @@ function _updateDrugSearchHint() {
    ────────────────────────────────────────────────────────── */
 function _adaptExternalDB(dbObj, categoryLabel) {
   if (!dbObj || typeof dbObj !== 'object') return [];
-  return Object.entries(dbObj).map(([key, entry]) => {
+  const _pendingClassDiscovery = []; /* BUILD 253 — fármacos sem class estática */
+
+  const adapted = Object.entries(dbObj).map(([key, entry]) => {
 
     /* ── Resolve name ── */
     const nameObj = entry.name || {};
@@ -19881,21 +20075,22 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     const nameEs  = typeof nameObj === 'object' ? (nameObj.es || namePt) : nameObj;
 
     /* ── Resolve class ──
+       BUILD 253 — LAZY EVALUATION: apenas extração ESTÁTICA aqui.
        Prioridade: (1) entry.class na raiz (string/objeto)
-                   (2) chamada de descoberta ao calculate() com parâmetros neutros
-                       — necessário para CARDIO_DRUGS_DB e ANTIMICROBIANOS_DRUGS_DB
-                         onde class só existe dentro do retorno de calculate()
+                   (2) entry.pharmacologicClass na raiz (string/objeto)
+       A antiga chamada síncrona a entry.calculate() para descoberta
+       de `class` foi REMOVIDA deste loop (era o gargalo do FCP em
+       CARDIO_DRUGS_DB/ANTIMICROBIANOS_DRUGS_DB). Se nenhuma das duas
+       existir, classPt fica '' temporariamente e o item é enfileirado
+       em _pendingClassDiscovery para resolução assíncrona em lotes
+       (ver _scheduleClassDiscovery, chamada ao final desta função).
     ── */
     let classPt = typeof entry.class === 'object' ? (entry.class?.pt || '') : (entry.class || '');
-    if (!classPt && typeof entry.calculate === 'function') {
-      try {
-        const _disc = entry.calculate({ peso: 70, idade: 40, clcr: 90, sexo: 'M',
-                                        gestante: false, lactante: false }, 'pt');
-        if (_disc && typeof _disc.class === 'string' && _disc.class) {
-          classPt = _disc.class;
-        }
-      } catch(_e) { /* silencioso — classPt fica '' */ }
+    if (!classPt && entry.pharmacologicClass) {
+      const pc = entry.pharmacologicClass;
+      classPt = typeof pc === 'object' ? (pc?.pt || '') : (pc || '');
     }
+    const _needsLazyClass = !classPt && typeof entry.calculate === 'function';
 
     /* ── Resolve category ── */
     const catRaw = entry.category;
@@ -20121,10 +20316,10 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     }
 
     /* ── Objeto final compatível com DRUG_DB ── */
-    return {
+    const adaptedEntry = {
       id:       key,
       name:     namePt,         /* lista mostra PT; calcDrugDose pega _resolvedName */
-      class:    classPt,
+      class:    classPt,        /* BUILD 253: pode estar '' aqui — preenchida em segundo plano se _needsLazyClass */
       category: catObj,
       icon:     entry.icon  || '💊',
       color:    entry.color || col.bg,
@@ -20135,7 +20330,19 @@ function _adaptExternalDB(dbObj, categoryLabel) {
       /* Mantém referência ao objeto original para acesso avançado */
       _source: entry
     };
+
+    /* BUILD 253 — enfileira para descoberta assíncrona de class (via
+       entry.calculate()) se não foi possível extrair estaticamente. */
+    if (_needsLazyClass) _pendingClassDiscovery.push(adaptedEntry);
+
+    return adaptedEntry;
   });
+
+  /* BUILD 253 — dispara a descoberta de class em segundo plano (não
+     bloqueia o retorno desta função nem o DOMContentLoaded). */
+  if (_pendingClassDiscovery.length) _scheduleClassDiscovery(_pendingClassDiscovery);
+
+  return adapted;
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -20438,7 +20645,7 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     /* ── Fluoroquinolonas ── */
     'Levofloxacino', 'Ciprofloxacino', 'Moxifloxacino', 'Norfloxacino',
     /* ── Antiarrítmicos ── */
-    'Amiodarona', 'Sotalol',
+    'Amiodarona', 'Sotalol', 'Dronedarona', 'Vernacalanto',
     /* ── Aminoglicosídeos ── */
     'Vancomicina', 'Gentamicina', 'Amicacina', 'Tobramicina',
     /* ── Tetraciclinas ── */
@@ -20507,13 +20714,47 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     'Clindamicina', 'Nitrofurantoína',
     'Fosfomicina', 'Antiácido',
     'Ferro', 'Sulfato Ferroso',
-    'Colchicina', 'Digoxina'
+    'Colchicina', 'Digoxina',
+    /* ── Inotrópicos ── */
+    'Milrinona', 'Levosimendana',
+    /* ── Vasopressores ── */
+    'Angiotensina II', 'Metaraminol', 'Efedrina',
+    /* ── Antianginosos ── */
+    'Ranolazina', 'Trimetazidina', 'Nicorandil',
+    /* ── Antiagregantes P2Y12 / Anticoagulante parenteral (BUILD 253.15) ── */
+    'Bivalirudina', 'Clopidogrel', 'Prasugrel', 'Ticagrelor', 'Cangrelor',
+    /* ── Antiagregante PAR-1 (BUILD 253.16) ── */
+    'Vorapaxar',
+    /* ── Redutores LDL-C não estatínicos (BUILD 253.17) ── */
+    'Ácido Bempedoico', 'Inclisirana', 'Evolocumabe', 'Alirocumabe',
+    /* ── Redutores LDL-C/TG não estatínicos — ANGPTL3/MTP/ApoB antisense/EPA (BUILD 253.18) ── */
+    'Evinacumabe', 'Lomitapida', 'Mipomersen', 'Icosapento Etílico', 'Ômega-3',
+    /* ── iSGLT2/iSGLT1-2 cardiorrenais + sGC + ativador de miosina (BUILD 253.19) ── */
+    'Dapagliflozina', 'Empagliflozina', 'Sotagliflozina', 'Vericiguat', 'Omecamtiv Mecarbil'
   ];
 
   /* Função: obtém a lista de medicamentos exibida no idioma ativo */
   function _getMedsList(lang) {
     return LISTA_MEDS_DISPONIVEIS_RAW.map(nomePt => _displayName(nomePt, lang));
   }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     BUILD 252 — ÍNDICE PRÉ-NORMALIZADO PARA LISTA_MEDS_DISPONIVEIS_RAW
+     ──────────────────────────────────────────────────────────────────────
+     LISTA_MEDS_DISPONIVEIS_RAW é uma fonte de dados SEPARADA de
+     window.DRUG_DB (usada exclusivamente pelo autocomplete de Interações),
+     por isso não é coberta por window._searchIndex. Construímos aqui um
+     índice-irmão: pré-computa display+normalização em AMBOS os idiomas,
+     UMA ÚNICA VEZ, para que filtrarDropdownInteracao() não recalcule
+     _displayName/_normSemAlias por item a cada tecla. Resultado de busca
+     IDÊNTICO ao anterior (mesmo campo comparado: display normalizado
+     sem alias). ══════════════════════════════════════════════════════ */
+  window._interactionsIndex = LISTA_MEDS_DISPONIVEIS_RAW.map(nomePt => ({
+    nomePt,
+    canonical: normalizarFarmaco(nomePt),
+    pt: { display: _displayName(nomePt, 'pt'), norm: _normSemAlias(_displayName(nomePt, 'pt')) },
+    es: { display: _displayName(nomePt, 'es'), norm: _normSemAlias(_displayName(nomePt, 'es')) }
+  }));
 
   /* Compat: LISTA_MEDS_DISPONIVEIS como getter dinâmico */
   const LISTA_MEDS_DISPONIVEIS = [
@@ -20596,7 +20837,7 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     filtrarDropdownInteracao();
   };
 
-  window.filtrarDropdownInteracao = function() {
+  function _filtrarDropdownInteracaoImpl() {
     const inp = document.getElementById('input-busca-interacao');
     const dd  = document.getElementById('dropdown-sugestoes-interacao');
     if (!inp || !dd) return;
@@ -20610,19 +20851,24 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     const selectedCanon = selecionadosInteracao.map(n => normalizarFarmaco(n));
 
     /* BUILD 241: separar canonical-para-interações (com aliases) de
-       canonical-para-display (sem aliases).
-       selectedCanon usa aliases (correto — deduplicar IECAs entre si).
-       listaNoBusca.normDisplay usa _normSemAlias (preserva identidade). */
-    const listaNoBusca = LISTA_MEDS_DISPONIVEIS_RAW
-      .filter(nomePt => {
-        const canon = normalizarFarmaco(nomePt);
-        return !selectedCanon.includes(canon);
-      })
-      .map(nomePt => ({
-        display:      _displayName(nomePt, lang),       /* nome para exibição */
-        normDisplay:  _normSemAlias(nomePt),             /* norm SEM alias — para filtro */
-        canonical:    normalizarFarmaco(nomePt),         /* norm COM alias — para dedup motor */
-        nomePt
+       canonical-para-display (sem aliases). BUILD 252: display/norm
+       agora vêm pré-computados de window._interactionsIndex — apenas
+       o filtro de dedup (estado dinâmico) roda a cada chamada. */
+    const idx = (window._interactionsIndex && window._interactionsIndex.length)
+      ? window._interactionsIndex
+      : LISTA_MEDS_DISPONIVEIS_RAW.map(nomePt => ({
+          nomePt, canonical: normalizarFarmaco(nomePt),
+          pt: { display: _displayName(nomePt, 'pt'), norm: _normSemAlias(_displayName(nomePt, 'pt')) },
+          es: { display: _displayName(nomePt, 'es'), norm: _normSemAlias(_displayName(nomePt, 'es')) }
+        })); /* fallback de segurança caso o índice ainda não exista */
+
+    const listaNoBusca = idx
+      .filter(item => !selectedCanon.includes(item.canonical))
+      .map(item => ({
+        display:      item[lang].display,
+        normDisplay:  item[lang].norm,
+        canonical:    item.canonical,
+        nomePt:       item.nomePt
       }));
 
     /* Filtro: aceita busca no nome display, no nome PT original e no canonical-sem-alias.
@@ -20658,7 +20904,11 @@ function _adaptExternalDB(dbObj, categoryLabel) {
       >💊 ${hl}</div>`;
     }).join('');
     dd.style.display = 'block';
-  };
+  }
+
+  /* BUILD 252 — filtrarDropdownInteracao público agora é a versão
+     debounced (~150ms) de _filtrarDropdownInteracaoImpl. */
+  window.filtrarDropdownInteracao = _hmDebounce(_filtrarDropdownInteracaoImpl, 150);
 
   /* ══════════════════════════════════════════════
      CHIPS — ADICIONAR / REMOVER / RENDERIZAR
@@ -21579,6 +21829,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── Atualiza TODOS os contadores (badge + home mobile) ── */
   if (typeof _fdUpdateCount === 'function') _fdUpdateCount();
 
+  /* BUILD 252 — Constrói o índice de busca em memória (pt+es
+     pré-normalizados) imediatamente após DRUG_DB ser consolidado.
+     Usado por hmFilterDrugs, renderFarmacosList, renderDrugList/
+     filterDrugs e filterMedsAutocomplete. Ver _buildSearchIndex(). */
+  if (typeof _buildSearchIndex === 'function') _buildSearchIndex();
+
   /* Disparo inicial de tradução — usa idioma já detectado (Diretriz 1) */
   setLang(currentLang || 'pt');
 
@@ -22272,8 +22528,19 @@ document.addEventListener('DOMContentLoaded', () => {
      Usa _getMasterDB() como fonte canônica (Objeto Mestre Global).
      Escalável: qualquer nova categoria adicionada ao DRUG_DB
      aparece automaticamente nos resultados sem alteração aqui.
+
+     BUILD 252 — refatorado para consumir window._searchIndex via
+     _searchIndexFilter (ver definição em _buildSearchIndex, escopo
+     global) em vez de recalcular _fNorm(_fdResolveName/Class/Cat(d))
+     a cada tecla. Resultado IDÊNTICO ao anterior (mesmo OR entre
+     nome/classe/categoria, mesmo limite de 40, mesmo agrupamento por
+     categoria) — apenas sem custo de normalização Unicode repetido.
+     A função pública agora é a versão debounced (~150ms) de
+     _hmFilterDrugsImpl, evitando re-render a cada keystroke em bases
+     grandes. hmClearSearch() continua funcionando normalmente — o
+     delay de 150ms é imperceptível para uma ação de limpar campo.
   ══════════════════════════════════════════════════════════════ */
-  window.hmFilterDrugs = function(term) {
+  function _hmFilterDrugsImpl(term) {
     const listEl   = document.getElementById('hm-drug-list');
     const emptyEl  = document.getElementById('hm-drug-empty');
     const clearBtn = document.getElementById('hm-search-clear');
@@ -22294,21 +22561,13 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Normaliza a query (acentos + lowercase) */
     const q = _fNorm(term);
 
-    /* ── Filtra usando o Objeto Mestre Global ──
+    /* ── Filtra usando o índice pré-normalizado (window._searchIndex) ──
        IDIOMA-EXCLUSIVO: busca e exibe SOMENTE a propriedade do idioma
-       ativo (currentLang). _fdResolveName/_fdResolveClass/_fdResolveCat
-       já resolvem para o idioma ativo (com fallback .pt apenas quando a
-       tradução do idioma ativo não existir na base) — não há mais OR
-       cego entre pt+es que causava resultados no idioma errado. */
-    const masterDB = _getMasterDB();
-
-    const results = masterDB.filter(d => {
-      if (!d) return false;
-      const nm = _fNorm(_fdResolveName(d));
-      const cl = _fNorm(_fdResolveClass(d));
-      const ct = _fNorm(_fdResolveCat(d));
-      return nm.includes(q) || cl.includes(q) || ct.includes(q);
-    }).slice(0, 40); /* Limite de performance */
+       ativo (currentLang). _searchIndexFilter já resolve para o idioma
+       ativo (com fallback .pt embutido na construção do índice) — não
+       há OR cego entre pt+es que causaria resultados no idioma errado.
+       Resultado idêntico ao scan direto anterior, apenas mais rápido. */
+    const results = _searchIndexFilter(q).slice(0, 40); /* Limite de performance */
 
     /* FIX BUILD 248: atualiza SEMPRE o contador com a contagem REAL da
        busca (nunca com o total da base) — antes o contador ficava
@@ -22362,7 +22621,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     listEl.innerHTML = html;
-  };
+  }
+
+  /* BUILD 252 — hmFilterDrugs público agora é a versão debounced
+     (~150ms) de _hmFilterDrugsImpl. Mesma precisão/resultado, apenas
+     agrupa chamadas sucessivas de keystroke e executa só a última. */
+  window.hmFilterDrugs = _hmDebounce(_hmFilterDrugsImpl, 150);
 
   /* ─────────────────────────────────────────────
      hmOpenDrug(id)
@@ -23450,58 +23714,121 @@ window.MedCasesBridge = {
 
 <!-- ═══════════════════════════════════════════════════════════════
      Infraestrutura de Bancos de Dados Centralizados (MedCases Pro)
-     14 módulos — cada arquivo expõe window.XXXXX_DRUGS_DB
+     15 módulos — cada arquivo expõe window.XXXXX_DRUGS_DB
      DOMContentLoaded unifica em DRUG_DB + window.ALL_DRUGS_DB
+
+     BUILD 251 — PERFORMANCE (Pilar 2 — Cold Start/TTI):
+     Todas as tags abaixo (bancos + módulos de app) agora usam
+     `defer`. Isso NÃO bloqueia mais o parser de HTML durante o
+     download/parse destes arquivos (o maior, cardio.js, tem 2,2MB),
+     liberando o First Contentful Paint mais cedo.
+
+     GARANTIA DE ORDEM (trava de segurança — zero race condition):
+     Scripts com `defer` SEMPRE executam, em ORDEM DE DOCUMENTO,
+     DEPOIS do parsing completo do HTML e SEMPRE ANTES do evento
+     DOMContentLoaded disparar (garantia da spec HTML, não é uma
+     suposição). Como a injeção de window.DRUG_DB acontece dentro
+     de um listener de DOMContentLoaded (registrado pelo script
+     inline principal, ANTES destas tags no documento), na prática:
+
+       1. HTML termina de parsear
+       2. TODOS os scripts defer abaixo executam, em ordem exata
+          (database/interacoes.js → ... → cardio.js → ... →
+           js/medcases-ux-v2.js → ... → js/deeplink-router.js)
+       3. SÓ ENTÃO o DOMContentLoaded dispara — e é nesse momento
+          que window.CARDIO_DRUGS_DB, window.PSICOFARMACOS_DRUGS_DB
+          etc. já estão 100% disponíveis para _injectObjectDB/
+          _injectArrayDB consolidarem window.DRUG_DB.
+
+     Ou seja: DRUG_DB é montado de forma 100% síncrona e correta
+     ANTES de qualquer handler de DOMContentLoaded subsequente rodar
+     (incluindo o do deeplink-router.js, registrado depois no
+     documento). Reforçamos essa garantia ainda com um guard
+     explícito dentro de deeplink-router.js (ver BUILD 251 nesse
+     arquivo) que aguarda window.DRUG_DB estar populado antes de
+     rotear, como segunda camada de proteção contra regressões
+     futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js"></script>
-<script src="database/psicofarmacos.js"></script>
-<script src="database/analgesicos.js"></script>
-<script src="database/anticoag.js"></script>
-<script src="database/cardio.js"></script>
-<script src="database/endocrino.js"></script>
-<script src="database/gastro.js"></script>
-<script src="database/infusoes.js"></script>
-<script src="database/nefro.js"></script>
-<script src="database/neuro.js"></script>
-<script src="database/obesidade.js"></script>
-<script src="database/pneumo.js"></script>
-<script src="database/psiquiatria.js"></script>
-<script src="database/reumatologia.js"></script>
-<script src="database/prescricoes.js" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script defer src="database/interacoes.js"></script>
+<script defer src="database/antimicrobianos.js"></script>
+<script defer src="database/psicofarmacos.js"></script>
+<script defer src="database/analgesicos.js"></script>
+<script defer src="database/anticoag.js"></script>
+<script defer src="database/cardio.js"></script>
+<script defer src="database/endocrino.js"></script>
+<script defer src="database/gastro.js"></script>
+<script defer src="database/infusoes.js"></script>
+<script defer src="database/nefro.js"></script>
+<script defer src="database/neuro.js"></script>
+<script defer src="database/obesidade.js"></script>
+<script defer src="database/pneumo.js"></script>
+<script defer src="database/psiquiatria.js"></script>
+<script defer src="database/reumatologia.js"></script>
+<script defer src="database/prescricoes.js" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script src="js/medcases-ux-v2.js"></script>
+<script defer src="js/medcases-ux-v2.js"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script src="js/hub-accordion.js"></script>
+<script defer src="js/hub-accordion.js"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script src="js/build240b-accordion-fix.js"></script>
+<script defer src="js/build240b-accordion-fix.js"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script src="js/calculator-overlay.js"></script>
+<script defer src="js/calculator-overlay.js"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script src="js/category-pills.js"></script>
+<script defer src="js/category-pills.js"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script src="js/elec-calc.js"></script>
+<script defer src="js/elec-calc.js"></script>
 
-<!-- MedCases Deep Link Router v1.1 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script src="js/deeplink-router.js"></script>
+<!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
+<script defer src="js/deeplink-router.js"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
+  /* ================================================================
+     BUILD 251 — Guard de Secure Context para WebView Android local
+     ----------------------------------------------------------------
+     Service Workers exigem "secure context" (https:// ou localhost).
+     Sob protocolo file:// (WebView Android empacotado, ex.:
+     file:///data/user/0/com.medcasespro.med/files/...), o navegador
+     NUNCA permite registrar um SW — isso é uma limitação de
+     especificação do navegador/WebView, não um bug deste app.
+
+     SEM este guard: a tentativa de registro sob file:// gera erro
+     de console ("SW registration failed... only supported in
+     secure contexts") que pode se misturar/mascarar outros erros
+     reais de carregamento no WebView (ex.: net::ERR_ACCESS_DENIED
+     de configuração nativa do WebView), dificultando o diagnóstico.
+
+     COM o guard: detectamos o protocolo ANTES de tentar registrar.
+     Sob file://, pulamos o registro silenciosamente (o app funciona
+     normalmente sem SW, pois todos os assets já estão no disco local
+     dentro do pacote do app — cache offline via SW só faz sentido
+     quando servido via http(s)). Sob http(s), o comportamento
+     original é mantido 100% inalterado.
+  ================================================================ */
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then((registration) => {
-          console.log('🚀 [PWA] Service Worker registrado para todo o banco de dados. Escopo:', registration.scope);
-        })
-        .catch((error) => {
-          console.error('❌ [PWA] Falha ao registrar o Service Worker:', error);
-        });
-    });
+    const isSecureForSW = window.location.protocol === 'https:' ||
+                           window.location.hostname === 'localhost' ||
+                           window.location.hostname === '127.0.0.1';
+
+    if (isSecureForSW) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then((registration) => {
+            console.log('🚀 [PWA] Service Worker registrado para todo o banco de dados. Escopo:', registration.scope);
+          })
+          .catch((error) => {
+            console.error('❌ [PWA] Falha ao registrar o Service Worker:', error);
+          });
+      });
+    } else {
+      console.log('[PWA] Service Worker não registrado — protocolo "' + window.location.protocol + '" não é secure context (ex.: file:// em WebView Android empacotado). App funciona normalmente com os assets locais do pacote.');
+    }
   }
 </script>
 

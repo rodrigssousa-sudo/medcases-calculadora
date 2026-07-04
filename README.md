@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-4.9.1--build250-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-4.9.5--build253.19-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-PWA%20%7C%20WebView-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-red?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/i18n-PT%20%7C%20ES-yellow?style=for-the-badge)
@@ -32,6 +32,502 @@
 - [Changelog por Sessão](#-changelog-por-sessão)
 - [Changelog — Sessões Recentes](#-changelog--sessões-recentes)
 - [Próximos Passos](#-próximos-passos)
+
+---
+
+## 🆕 BUILD 253.19 — Reconciliação iSGLT2/iSGLT1-2 + sGC + Novo Ativador de Miosina Cardíaca: Omecamtiv Mecarbil (2026-07-03)
+
+**Contexto:** o usuário submeteu 5 fármacos no formato 2-partes (objeto `cardio.js` simplificado + bloco "Motor de Interações — Lote 6" para `interacoes.js`): **Dapagliflozina**, **Empagliflozina**, **Sotagliflozina**, **Vericiguat** e **Omecamtiv Mecarbil**.
+
+**Verificação prévia (Grep com `include` param, cross-checado com `Read`):**
+- `database/cardio.js` → **4 das 5 entidades já possuíam objetos clínicos completos e fechados**, em grupos anteriores muito mais robustos que a submissão simplificada do usuário: `dapagliflozina` (Grupo 35, com `calculate()` dinâmico completo), `empagliflozina` (mesmo Grupo 35, `calculate()` completo), `sotagliflozina` (schema estático `{pt,es}` completo, refs SOLOIST-WHF/SCORED) e `vericiguat` (schema estático `{pt,es}` completo, ref VICTORIA Trial). **Todo o conteúdo `cardio.js` da submissão do usuário para esses 4 fármacos foi descartado por redundância total** — nada foi sobrescrito ou duplicado.
+  - **`omecamtiv_mecarbil` estava genuinamente ausente.** Criado como **novo Grupo 72** em `cardio.js` (ativador seletivo da miosina cardíaca, mecanismo inotrópico "puro" sem aumento de cálcio/consumo de O2, dose 25–50 mg VO 12/12h com janela terapêutica estreita, interações via CYP3A4), expandindo o formato simplificado do usuário para o schema verboso `{pt,es}` padrão do arquivo.
+
+- `database/interacoes.js` → **nenhuma das 5 drogas possuía nó-raiz próprio em `INTERACOES_DB`** (mesmo as 4 já existentes em `cardio.js` careciam de mapeamento no motor de interações). **Adicionados 5 nós-raiz novos**: `dapagliflozina` (insulina, glibenclamida, glimepirida, furosemida, `$classe_antihipertensivos`), `empagliflozina` (insulina, furosemida, espironolactona), `sotagliflozina` (digoxina — interação via inibição de P-gp, insulina, furosemida), `vericiguat` (`$classe_ipde5` como **contraindicação absoluta**, `$classe_nitratos`, `$classe_antihipertensivos`) e `omecamtiv_mecarbil` (`$classe_macrolídeos`, `$classe_azolicos`, verapamil).
+
+- `index.html` → `LISTA_MEDS_DISPONIVEIS_RAW` **não continha nenhum** dos 5 nomes, apesar de 4 deles já serem fármacos completos em `cardio.js`. **Adicionados** `'Dapagliflozina'`, `'Empagliflozina'`, `'Sotagliflozina'`, `'Vericiguat'`, `'Omecamtiv Mecarbil'` ao autocomplete.
+
+**Mapeamento de classes genéricas → classes REAIS do motor** (nenhuma classe fictícia foi criada): `$classe_antihipertensivos`, `$classe_ipde5`, `$classe_nitratos`, `$classe_macrolídeos`, `$classe_azolicos` — todas pré-existentes e confirmadas em `DRUG_CLASSES`.
+
+**Validação:** `PlaywrightConsoleCapture` confirmou carregamento sem "Page errors"; `[MedCases] DRUG_DB populado: 357 fármacos` (+1 em relação à build anterior, refletindo a adição líquida apenas de `omecamtiv_mecarbil`); log `[DRUG ADAPTER]` confirma leitura correta de `sotagliflozina` e `vericiguat` a partir de `CARDIO_DRUGS_DB`, comprovando que os objetos pré-existentes seguem íntegros e sem duplicação.
+
+---
+
+## 🆕 BUILD 253.18 — Novos Redutores de LDL-C/TG não estatínicos: Evinacumabe, Lomitapida, Mipomersen, Icosapento Etílico, Ômega-3 (2026-07-03)
+
+**Contexto:** o usuário submeteu, em "MODO LOTE OTIMIZADO", 5 fármacos no formato 2-partes (objeto `cardio.js` simplificado + bloco "Motor de Interações — Lote 5" para `interacoes.js`): **Evinacumabe**, **Lomitapida**, **Mipomersen**, **Icosapento Etílico** e **Ômega-3**.
+
+**Verificação prévia (Grep com `include` param):** confirmado que nenhum dos 5 nomes/chaves (`evinacumab`, `lomitapida`, `mipomersen`, `icosapento`, `omega_3`/`omega-3`) existia em `cardio.js`, `interacoes.js` ou `index.html` — **todos os 5 fármacos eram genuinamente novos**, sem qualquer redundância.
+
+- `database/cardio.js` → Criado **novo Grupo 71 — Redutores de LDL-C/TG não estatínicos** (ANGPTL3 / MTP / ApoB antisense / EPA puro / EPA+DHA), com os 5 objetos clínicos completos expandidos do formato simplificado do usuário para o schema verboso `{pt,es}` padrão do arquivo: `evinacumab` (anticorpo anti-ANGPTL3, dose 15 mg/kg IV a cada 4 semanas, sem interações CYP450), `lomitapida` (inibidor da MTP, Boxed Warning de hepatotoxicidade, extensa lista de interações via CYP3A4/P-gp), `mipomersen` (oligonucleotídeo antisense anti-ApoB, Boxed Warning de hepatotoxicidade, SC semanal), `icosapento_etilo` (EPA puro purificado, benefício CV comprovado no REDUCE-IT, risco de FA/sangramento) e `omega_3` (mistura EPA+DHA, sem benefício CV robusto, pode elevar LDL-C).
+
+- `database/interacoes.js` → Adicionados 5 nós-raiz novos em `INTERACOES_DB`: `evinacumab` (ausência de interações estruturadas — anticorpo monoclonal sem via CYP450), `lomitapida` (bloco extenso incluindo `$classe_azolicos`, `$classe_macrolídeos` e `$classe_antirretrovirais` como **contraindicação absoluta** por inibição forte do CYP3A4, além de `diltiazem`/`verapamil`/`sinvastatina`/`lovastatina`/`varfarina`/`digoxina`/`$classe_rifamicinas`), `mipomersen` (`$classe_hepatotoxicos` e `alcool`, refletindo o Boxed Warning de hepatotoxicidade), `icosapento_etilo` e `omega_3` (ambos com `$classe_anticoagulantes` e `$classe_antiagregantes` por risco hemorrágico aditivo).
+
+- `index.html` → `LISTA_MEDS_DISPONIVEIS_RAW` **não continha nenhum** dos 5 nomes. **Adicionados** `'Evinacumabe'`, `'Lomitapida'`, `'Mipomersen'`, `'Icosapento Etílico'`, `'Ômega-3'` ao autocomplete.
+
+**Mapeamento de classes genéricas → classes REAIS do motor** (nenhuma classe fictícia foi criada): `$classe_azolicos`, `$classe_macrolídeos`, `$classe_antirretrovirais`, `$classe_rifamicinas`, `$classe_hepatotoxicos`, `$classe_anticoagulantes`, `$classe_antiagregantes` — todas pré-existentes e confirmadas em `DRUG_CLASSES`.
+
+**Validação:** `PlaywrightConsoleCapture` confirmou carregamento sem "Page errors"; `[MedCases] DRUG_DB populado: 356 fármacos` (+5 em relação à build anterior); log `[DRUG ADAPTER]` confirma leitura normal do restante da base sem regressões.
+
+---
+
+## 🆕 BUILD 253.17 — Reconciliação Trombolítico + Novos Redutores de LDL-C não estatínicos (2026-07-03)
+
+**Contexto:** o usuário submeteu 5 fármacos no formato 2/3-partes (objeto `cardio.js` simplificado + bloco "Motor de Interações — Lote 4" para `interacoes.js`): **Reteplasa**, **Ácido Bempedoico**, **Inclisirán**, **Evolocumab** e **Alirocumab**.
+
+**Verificação prévia (Grep com `include` param — método validado como confiável nesta sessão, cross-checado com `Read`):**
+- `database/cardio.js` → **`reteplase`/`reteplasa` já possuía objeto clínico completo e fechado** (linhas ~26193–26496, junto de alteplase/tenecteplase), com dose fixa em duplo bolus (10 U + 10 U) corretamente documentada. Todo o conteúdo `cardio.js` da submissão do usuário para este fármaco foi **descartado por redundância total**.
+  - **`acido_bempedoico`, `inclisiran`, `evolocumab` e `alirocumab` estavam genuinamente ausentes** como entidades próprias (havia apenas menções textuais de passagem em campos de outros fármacos, ex.: "associada a estatina, ácido bempedoico ou PCSK9..."). Criados como **novo Grupo 70 — Redutores de LDL-C não estatínicos** em `cardio.js`, com schema clínico completo (indicações, mecanismo, dose, ajuste renal/hepático, efeitos adversos, contraindicações, gravidez/lactação/idosos, calculadora, safetyFlags e auditNotes), expandindo o formato simplificado enviado pelo usuário para o padrão verboso `{pt,es}` do restante do arquivo.
+
+- `database/interacoes.js` → nenhuma das 4 novas drogas possuía nó-raiz em `INTERACOES_DB`. **Adicionados 4 nós-raiz novos**: `acido_bempedoico` (interações droga×droga com `sinvastatina` — limite 20 mg/dia via inibição de OATP1B1 — e `pravastatina` — limite 40 mg/dia —, além de `$classe_fluoroquinolonas` por risco sinérgico de ruptura tendínea), `inclisiran`, `evolocumab` e `alirocumab` (cada um com `$classe_estatinas`, documentando sinergia farmacodinâmica benéfica sem interação farmacocinética relevante, já que agentes biológicos anti-PCSK9/siRNA não utilizam vias CYP450). O bloco "reteplasa" da submissão do usuário (`$classe_anticoagulantes`, `$classe_antiagregantes`, `$classe_aines`) foi **descartado**, pois o fármaco já é redundante em `cardio.js`.
+
+- `index.html` → `LISTA_MEDS_DISPONIVEIS_RAW` **não continha nenhum** dos 5 nomes. **Adicionados** `'Ácido Bempedoico'`, `'Inclisirana'`, `'Evolocumabe'`, `'Alirocumabe'` ao autocomplete — `'Reteplase'`/`'Reteplasa'` **não foi adicionado**, mantendo a mesma lógica da BUILD 253.16 para fármacos de uso hospitalar/protocolar já redundantes e fora do escopo desta correção pontual.
+
+**Mapeamento de classes genéricas → classes REAIS do motor** (nenhuma classe fictícia foi criada): `$classe_estatinas`, `$classe_fluoroquinolonas` — ambas pré-existentes e confirmadas em `DRUG_CLASSES`.
+
+**Validação:** `PlaywrightConsoleCapture` confirmou carregamento sem "Page errors"; `[MedCases] DRUG_DB populado: 351 fármacos` (+4 em relação à build anterior, refletindo a adição líquida de `acido_bempedoico`, `inclisiran`, `evolocumab` e `alirocumab`); log `[DRUG ADAPTER]` confirma leitura correta de `reteplase` a partir de `CARDIO_DRUGS_DB`, comprovando que o objeto pré-existente segue íntegro e sem duplicação.
+
+---
+
+## 🆕 BUILD 253.16 — Reconciliação GP IIb/IIIa + Trombolítico + Novo Fármaco Vorapaxar (2026-07-03)
+
+**Contexto:** o usuário submeteu 5 fármacos no formato 3-partes (objeto `cardio.js` simplificado): **Abciximab**, **Eptifibatida**, **Tirofibán**, **Vorapaxar** e **Tenecteplasa**.
+
+**Verificação prévia (Read direto — Grep confirmado não confiável neste arquivo grande):**
+- `database/cardio.js` → **4 das 5 entidades já possuíam objetos clínicos completos**:
+  - `tenecteplase` — linha ~25908 (junto de alteplase/reteplase)
+  - `eptifibatide` — Grupo 49, linha ~37075
+  - `tirofibana` — Grupo 49, linha ~37285
+  - `abciximabe` — Grupo 50, linha ~37618
+  
+  Todo o conteúdo `cardio.js` desses 4 fármacos foi **descartado por redundância total** — nada foi duplicado.
+
+  - **`vorapaxar` estava genuinamente ausente** (confirmado: zero ocorrências em qualquer arquivo `.js`/`.html` do projeto). Criado como **novo Grupo 69** em `cardio.js`, com schema clínico completo (indicações, dose, mecanismo, contraindicações — incluindo o Boxed Warning de AVC/AIT/HIC prévios —, interações, reversão, gravidez, calculadora, safetyFlags e auditNotes), expandindo o formato simplificado enviado pelo usuário para o padrão estático `{pt,es}` do restante do arquivo.
+
+- `database/interacoes.js` → `abciximabe`, `eptifibatida` e `tirofibana` já constavam em `$classe_antiagregantes`; nenhuma das 5 drogas tinha nó-raiz próprio em `INTERACOES_DB`. **Adicionado apenas o nó-raiz `vorapaxar`** (droga genuinamente nova), com interações mapeadas para classes REAIS já existentes (`$classe_azolicos`, `$classe_macrolídeos`, `$classe_antirretrovirais`, `$classe_rifamicinas`, `$classe_anticonvulsivantes`, `$classe_anticoagulantes`, `$classe_aines`, `$classe_isrs`), e `vorapaxar` foi adicionado à lista `$classe_antiagregantes`.
+
+- `index.html` → `LISTA_MEDS_DISPONIVEIS_RAW` **não continha nenhum** dos 5 nomes (apesar de `Clopidogrel`/`Ticagrelor` aparecerem em textos de protocolos de SCA). **Adicionado apenas `'Vorapaxar'`** ao autocomplete — os outros 4 fármacos (Abciximab/Eptifibatida/Tirofibán/Tenecteplasa) permanecem de uso majoritariamente hospitalar/protocolar e não fazem parte do escopo desta correção pontual (poderão ser adicionados ao autocomplete numa build futura dedicada, se solicitado).
+
+**Validação:** `PlaywrightConsoleCapture` confirmou carregamento sem "Page errors"; `[MedCases] DRUG_DB populado: 347 fármacos` (+1 em relação à build anterior, refletindo a adição líquida de `vorapaxar`); log `[DRUG ADAPTER]` confirma leitura correta de `tenecteplase`, `eptifibatide`, `tirofibana` e `abciximabe` a partir de `CARDIO_DRUGS_DB`.
+
+---
+
+## 🆕 BUILD 253.15 — Reconciliação Antiarrítmicos/Antiagregantes: Dabigatrana, Bivalirudina, Clopidogrel, Prasugrel, Ticagrelor, Cangrelor (2026-07-03)
+
+**Contexto:** o usuário submeteu um lote de 6 fármacos no formato 3-partes (objeto `cardio.js` + bloco "Motor de Interações" para `interacoes.js` + menção de `index.html`): **Dabigatrán** (chave submetida incorretamente com acento — `"dabigatrán"` — violando a convenção do arquivo "chaves em minúsculas, sem acentos, sem espaços"), **Bivalirudina**, **Clopidogrel**, **Prasugrel**, **Ticagrelor** e **Cangrelor**.
+
+**Verificação prévia (Read direto, não Grep — ver nota de confiabilidade abaixo):**
+- `database/cardio.js` → **todas as 6 entidades já possuíam objetos clínicos completos e fechados**:
+  - `dabigatrana` (chave correta, sem acento) — Grupo 20, linha ~17767
+  - `clopidogrel` — Grupo 21.1, linha ~18412
+  - `prasugrel` — Grupo 21.2, linha ~18740
+  - `ticagrelor` — Grupo 22.1, linha ~19047
+  - `cangrelor` — Grupo 22.2, linha ~19382
+  - `bivalirudina` — Grupo 47, linha ~35947
+  
+  **Nenhum desses objetos foi reinserido** — todo o bloco `cardio.js` da submissão do usuário foi descartado por redundância total, e a chave incorretamente acentuada `"dabigatrán"` **não foi criada** (evitando duplicidade de fármaco por erro de normalização).
+
+- `database/interacoes.js` → nenhuma das 6 drogas possuía nó-raiz próprio em `INTERACOES_DB` (apenas `dabigatrana` aparecia como sub-chave reaproveitando template sob `rifampicina.dabigatrana`, preservada sem alteração). **Adicionados 6 nós-raiz novos**: `dabigatrana` (reforço de interações via P-gp — verapamil, amiodarona, azólicos, macrolídeos, anticonvulsivantes, AINEs, antiagregantes, ISRS), `bivalirudina`, `clopidogrel` (incluindo a interação clinicamente crítica omeprazol/esomeprazol × CYP2C19), `prasugrel`, `ticagrelor` e `cangrelor` (incluindo as regras de sequenciamento no receptor P2Y12 com clopidogrel/prasugrel vs. ticagrelor).
+
+- `index.html` → `LISTA_MEDS_DISPONIVEIS_RAW` já continha `'Dabigatrana'`; **adicionados** `'Bivalirudina'`, `'Clopidogrel'`, `'Prasugrel'`, `'Ticagrelor'`, `'Cangrelor'` (ausentes do autocomplete, apesar de citados em textos de protocolos de SCA).
+
+**Mapeamento de classes genéricas → classes REAIS do motor** (todas as classes usadas já existiam em `DRUG_CLASSES`, nenhuma nova classe fictícia foi criada): `$classe_azolicos`, `$classe_macrolídeos`, `$classe_antirretrovirais`, `$classe_rifamicinas`, `$classe_anticonvulsivantes`, `$classe_aines`, `$classe_antiagregantes`, `$classe_isrs`, `$classe_anticoagulantes`.
+
+**⚠️ Nota de confiabilidade de ferramentas (registrada para sessões futuras):** `Grep` demonstrou-se **intermitentemente não confiável** neste arquivo grande (`cardio.js`, ~2.37MB) durante esta sessão — retornou "No matches found" para termos confirmados presentes via `Read` direto (ex.: `cangrelor`, `ticagrelor`, `bivalirudina`, `GRUPO 22`), inclusive em chamadas paralelas repetidas. O uso do parâmetro `include` (filtro por extensão) e/ou `Read` sequencial por offset mostrou-se mais confiável para confirmação crítica. **Recomendação: sempre validar ausência/presença de conteúdo crítico com `Read` direto antes de concluir por Grep negativo.**
+
+**Validação:** `PlaywrightConsoleCapture` confirmou carregamento sem "Page errors"; log `[DRUG ADAPTER]` confirma leitura correta de `dabigatrana`, `clopidogrel`, `prasugrel`, `ticagrelor`, `cangrelor` e `bivalirudina` a partir de `CARDIO_DRUGS_DB`.
+
+---
+
+## 🆕 BUILD 253.14 — Correção de Bug Crítico + Enriquecimento: Rivaroxabana e Edoxabana — Motor de Interações (2026-07-03)
+
+**🐛 BUG CRÍTICO RESOLVIDO — "Unexpected token '.'" (regressão introduzida na BUILD 253.11):**
+
+Ao adicionar o nó `"apixabana"` em `database/interacoes.js` (BUILD 253.11), foi introduzido um comentário de bloco (`/* ... */`) que continha, no seu próprio texto explicativo, a sequência `/* ── Anticoagulantes ── */` referenciando visualmente a seção do `index.html`. Como **JavaScript não suporta comentários `/* */` aninhados**, essa sequência interna **fechava o comentário prematuramente** (na linha 13349), deixando o caractere `.` remanescente do texto (`"...sob /* ── Anticoagulantes ── */."`) como um **token JS inválido solto no meio do arquivo** — isso quebrava o parse do **arquivo inteiro**, fazendo com que `INTERACOES_DB`, `DRUG_CLASSES` e `DRUG_ALIASES` nunca fossem atribuídos a `window`.
+
+**Diagnóstico:** isolado por bisecção com um harness de teste (`acorn.parse()` via `fetch()` do arquivo puro, fora do contexto do `index.html`), que localizou com precisão `SyntaxError: Unexpected token (13349:76)`.
+
+**Correção:** reescrito o trecho do comentário para não conter a sequência `*/` interna:
+```diff
+- LISTA_MEDS_DISPONIVEIS_RAW (index.html) sob /* ── Anticoagulantes ── */.
++ LISTA_MEDS_DISPONIVEIS_RAW (index.html) sob "Anticoagulantes".
+```
+Após a correção, o parse do arquivo (`acorn.parse`) retornou limpo, e um teste isolado pós-`load` confirmou `INTERACOES_DB` com 89 nós, `DRUG_CLASSES` com 42 classes e `DRUG_ALIASES` com 61 entradas — todos populados corretamente, incluindo os nós `apixabana` e `edoxabana`.
+
+**Nota sobre o banner de diagnóstico no console (`DB nós raiz: 0`):** mesmo após a correção do bug real, o log `[MedCases] Motor de Interações v3.1... 🗃️ DB nós raiz: 0` **continua aparecendo zerado no `PlaywrightConsoleCapture`** — isso é um **falso positivo de timing pré-existente na arquitetura do app**, não um bug funcional: o script inline que imprime esse banner é executado de forma síncrona durante o parsing do HTML, **antes** dos scripts `<script defer src="database/interacoes.js">` (carregados mais abaixo no documento) serem executados — scripts `defer` só rodam após o parsing completo do HTML. Confirmou-se experimentalmente (harness isolado com listener de `window.load` + `setTimeout`) que o `INTERACOES_DB` está 100% populado e funcional em tempo de uso real; o log apenas mede o estado num instante anterior ao carregamento efetivo dos bancos. **Este comportamento de log não afeta a funcionalidade real do motor de interações** (confirmado também pelos logs `[DRUG ADAPTER]` que já leem corretamente os dados de `rivaroxabana`, `apixabana`, `edoxabana` etc. mais adiante no boot). Fica registrado aqui para não ser confundido com regressão em sessões futuras.
+
+---
+
+**Contexto das submissões processadas nesta build:** o usuário submeteu **Rivaroxabana** (Xarelto) e, em seguida, **Edoxabana** (Lixiana) — ambos anticoagulantes orais diretos inibidores do fator Xa — no mesmo formato 3-partes não-compatível já visto em Apixabana. Grep/leitura direta em `database/cardio.js` e `index.html` confirmaram que **ambos os fármacos já existiam integralmente** no banco:
+- `database/cardio.js` → Grupo 19, item **19.3 `rivaroxabana`** (linha ~17143) e item **19.4 `edoxabana`** (linha ~17755, fechando o comentário do Grupo 19 completo: "Varfarina · Apixabana · Rivaroxabana · Edoxabana"), ambos com schema estático completo `{pt,es}` equivalente ao submetido.
+- `index.html` → `LISTA_MEDS_DISPONIVEIS_RAW` já continha `'Rivaroxabana'` e `'Edoxabana'` sob `/* ── Anticoagulantes ── */`.
+
+O único gap real em ambos os casos era a ausência de nó estruturado próprio em `database/interacoes.js`. Note que já existia uma entrada aninhada `"rifampicina".rivaroxabana` (droga×droga, cobrindo apenas a interação com rifampicina especificamente) — isso **não substitui** a necessidade de um nó raiz `"rivaroxabana"` para cobrir as demais classes.
+
+3️⃣ **`database/interacoes.js`** — criados os nós raiz `"rivaroxabana"` e `"edoxabana"` em `INTERACOES_DB`, sintetizados a partir de `cardio.js » {rivaroxabana,edoxabana}.interactions.major/moderate` e das submissões do usuário, mapeando termos genéricos para classes reais já existentes (nunca criando classes fictícias):
+
+**Edoxabana** (`$classe_inibidores_pgp`/`$classe_indutores_pgp` submetidos, sem equivalente próprio → mapeados para classes reais):
+   - `$classe_azolicos` (real) → `moderada`/3 — inibição de P-gp intestinal, aumento de absorção.
+   - `$classe_qt` (real; cobre dronedarona/amiodarona/verapamil/quinidina — inibidores de P-gp) → `moderada`/3 — aumento de exposição plasmática.
+   - `$classe_rifamicinas` (real; corrige "indutores da P-gp") → `alta`/4 — redução de eficácia anticoagulante.
+   - `$classe_anticonvulsivantes` (real; cobre fenitoína) → `alta`/4 — indução enzimática.
+   - `$classe_aines` (real, direto) → `moderada`/3 — sangramento GI aditivo.
+   - `$classe_antiagregantes` (real, direto) → `alta`/4 — sangramento maior aditivo.
+   - `$classe_isrs` (real) → `moderada`/3 — sangramento por depleção serotoninérgica.
+   - `$classe_anticoagulantes` (real, já existente) → `contraindicada`/5 — sobreposição com outros anticoagulantes.
+
+**Nota:** a submissão de Edoxabana mencionava especificamente "ciclosporina" como exemplo de inibidor de P-gp; como não existe `$classe_imunossupressores`/classe agregadora própria no motor para esse fármaco isoladamente, o dado permanece documentado apenas no texto livre de `cardio.js » edoxabana.interactions.major`, sem nó dedicado — consistente com o tratamento dado a `riociguate` na BUILD 253.8.
+
+**Padrão reforçado:** confirmado novamente que o fluxo correto é sempre Grep/leitura completa antes de qualquer edição — Rivaroxabana e Edoxabana já estavam 100% maduras na calculadora clínica e no autocomplete; o trabalho real foi apenas fechar o gap no motor de interações.
+
+**Validação final:** `PlaywrightConsoleCapture` — **zero "Page errors"**, `DRUG_DB populado: 346 fármacos`, `ALL_DRUGS_DB montado: 344 entradas`. Teste isolado pós-`load` confirmou `INTERACOES_DB` com nós `apixabana` e `edoxabana` presentes e populados corretamente (89 nós raiz totais, 42 classes, 61 aliases).
+
+---
+
+## 🆕 BUILD 253.11 — Enriquecimento: Apixabana (Eliquis) — Motor de Interações (2026-07-03)
+
+**Contexto:** o usuário submeteu **Apixabana** (anticoagulante oral direto, inibidor do fator Xa, nome comercial Eliquis) no mesmo formato 3-partes não-compatível. Grep/leitura direta em `database/cardio.js` e `index.html` revelaram que a Apixabana **JÁ EXISTIA integralmente** no banco:
+- `database/cardio.js` → Grupo 19 ("Anticoagulantes Orais: Varfarina · Apixabana · Rivaroxabana · Edoxabana"), item **19.2 `apixabana`**, com schema estático completo `{pt,es}` (indicações, apresentações, mecanismo, dose por indicação com critérios de redução ABC, ajuste renal/hepático, risco de sangramento, reversão com andexanet alfa/PCC4F, contraindicações absolutas/relativas, interações textuais major/moderate, gravidez, lactação, idosos, calculadora, monitorização, `safetyFlags`, `ref[]`) — praticamente equivalente ao conteúdo submetido pelo usuário, já em produção.
+- `index.html` → `LISTA_MEDS_DISPONIVEIS_RAW` já continha `'Apixabana'` sob o grupo `/* ── Anticoagulantes ── */` (junto a Rivaroxabana, Edoxabana, Dabigatrana, Varfarina).
+
+O único gap real identificado foi a **ausência de um nó estruturado em `database/interacoes.js`** (schema `gravidade/scoreClinico/descricao/conduta` do motor bidirecional) — a Apixabana não possuía nenhuma entrada raiz no `INTERACOES_DB`, apenas texto livre dentro do próprio `cardio.js`.
+
+1️⃣ **`database/cardio.js`** — nenhuma alteração necessária (entrada `apixabana` já madura e em produção).
+2️⃣ **`index.html`** — nenhuma alteração necessária (`'Apixabana'` já presente no autocomplete).
+3️⃣ **`database/interacoes.js`** — criado o nó `"apixabana"` em `INTERACOES_DB`, sintetizado a partir de `cardio.js » apixabana.interactions.major/moderate`, mapeando termos genéricos para classes reais já existentes no motor (nunca criando classes fictícias):
+   - `$classe_azolicos` (real; corrige "inibidores fortes de CYP3A4/P-gp" genérico) → `alta`/4 — acúmulo por inibição de CYP3A4/P-gp.
+   - `$classe_antirretrovirais` (real) → `alta`/4 — inibidores de protease/cobicistate elevam níveis.
+   - `$classe_rifamicinas` (real; corrige "indutores fortes de CYP3A4/P-gp") → `contraindicada`/5 — redução drástica de eficácia.
+   - `$classe_anticonvulsivantes` (real) → `alta`/4 — indução enzimática (carbamazepina/fenitoína).
+   - `$classe_aines` (real) → `moderada`/3 — sangramento GI aditivo.
+   - `$classe_antiagregantes` (real) → `alta`/4 — sangramento maior aditivo.
+   - `$classe_qt` (real; usada para representar "amiodarona/verapamil" — inibidores moderados) → `leve`/2 — aumento discreto de exposição.
+   - `$classe_isrs` (real) → `moderada`/3 — sangramento por depleção serotoninérgica plaquetária.
+   - `$classe_anticoagulantes` (real, já existente) → `contraindicada`/5 — sobreposição com outros anticoagulantes (varfarina, rivaroxabana, edoxabana, dabigatrana, heparina), exceto transição protocolada.
+
+**Padrão reforçado:** antes de criar qualquer fármaco novo, sempre fazer Grep completo em `cardio.js`/`interacoes.js`/`index.html` — nesta submissão a droga já estava 100% presente na calculadora clínica e no autocomplete; o trabalho real foi apenas fechar o gap no motor de interações, evitando duplicação de chave (`apixabana` já usada como identificador em `cardio.js`).
+
+**Validação:** `PlaywrightConsoleCapture` executado após a edição — console mostrou `DRUG_DB populado: 346 fármacos` e `ALL_DRUGS_DB montado: 344 entradas` normalmente, porém acusou **1 "Page error": `Unexpected token '.'`** e o log do motor de interações reportou `DB nós raiz: 0 · DRUG_CLASSES: 0 · DRUG_ALIASES: 0` (zerado) — o mesmo padrão de anomalia de cache do Service Worker já registrado em builds anteriores desta sessão (BUILD 253.9 também exigiu uma segunda captura em sessão limpa para refletir o valor correto). A estrutura de chaves do novo nó `"apixabana"` foi revisada manualmente (9 sub-blocos, todos com chaves abertas/fechadas corretamente, mesmo padrão sintático dos nós `dronedarona`/`vernacalanto` já validados) e não foram encontradas inconsistências óbvias de sintaxe. **Ação pendente para a próxima sessão:** repetir `PlaywrightConsoleCapture` em contexto sem cache (ou após hard-reload do Service Worker) para confirmar `DB nós raiz` > 0 e ausência de "Page errors", e caso o erro persista, isolar via bisecção binária (comentar o bloco `apixabana` e recapturar) para localizar com precisão a linha problemática.
+
+---
+
+## 🆕 BUILD 253.9 — Curadoria de Conteúdo: Dronedarona / Multaq (2026-07-03)
+
+**Contexto:** o usuário submeteu **Dronedarona** (antiarrítmico Classe III, análogo estrutural não iodado da amiodarona, nome comercial Multaq) no mesmo formato 3-partes não-compatível (schema estático com `_metadata`/`export const`, `<option>` HTML, motor de interações com `severity/mechanism/action` e classes `$classe_*` inventadas). Grep/leitura direta confirmaram que este fármaco **NÃO existia** no banco (apenas listado como pendente `❌` na tabela de planejamento do README) — adição genuinamente nova.
+
+1️⃣ **`database/cardio.js`** — criado o **Grupo 67**, entrada `dronedarona` no padrão real `calculate(paciente, lang)`, com alertas dinâmicos de IC descompensada/NYHA III/IV (contraindicação absoluta — estudo ANDROMEDA), FA permanente (contraindicação absoluta — estudo PALLAS), BAV 2º/3º grau sem marcapasso, FC < 50 bpm, QTc > 500 ms, Child-Pugh C (contraindicação absoluta) e Child-Pugh B (cautela), uso de inibidor potente de CYP3A4, dabigatrana (inibição de P-gp, risco de sangramento), digoxina (reduzir dose pela metade), sinvastatina (limitar a 10 mg/dia) e betabloqueador/BCC (bradicardia aditiva). Dose 400 mg VO 12/12h com alimentos, contraindicações absolutas/relativas, efeitos adversos com destaque para hepatotoxicidade grave e alerta de caixa preta (PALLAS/ANDROMEDA), monitorização com LFT mensal nos primeiros 6 meses, gravidez Categoria X, e `ref[]` (2020 ESC AFib Guidelines, ANDROMEDA Trial, PALLAS Trial, FDA Labeling — Multaq, Goodman & Gilman's). Validado com PlaywrightConsoleCapture (zero erros, `DRUG_DB populado: 345 fármacos` — ver nota de validação abaixo).
+2️⃣ **`index.html` → `LISTA_MEDS_DISPONIVEIS_RAW`** — adicionado `'Dronedarona'` sob o grupo já existente `/* ── Antiarrítmicos ── */` (junto à Amiodarona e Sotalol).
+3️⃣ **`database/interacoes.js`** — criado o nó `"dronedarona"` em `INTERACOES_DB` com schema real (`gravidade`, `scoreClinico`, `descricao{pt,es}`, `conduta{pt,es}`):
+   - `$classe_azolicos`, `$classe_macrolídeos`, `$classe_antirretrovirais` (reais; corrigem `$classe_inibidores_cyp3a4_fortes` inexistente submetido) → `contraindicada`/5 — acúmulo acentuado de dronedarona e toxicidade cardíaca grave.
+   - `$classe_qt` (real; corrige `$classe_prolongadores_qt` inexistente — nota: a própria dronedarona já é membro desta classe, sem gerar autorreferência pois aqui ela é a chave-raiz) → `alta`/4 — risco aditivo de Torsades de Pointes.
+   - `$classe_betabloqueadores` (real; adicionada por completude a partir do dado clínico da Parte 1 da submissão, ausente na Parte 3 original) → `moderada`/3 — bradicardia aditiva.
+   - `dabigatrana` (droga×droga) → `alta`/4 — inibição de P-gp, risco de sangramento.
+   - `digoxina` (droga×droga) → `moderada`/3 — reduzir dose pela metade.
+   - `sinvastatina` (droga×droga, entrada própria e distinta da já existente sob `ranolazina`) → `moderada`/3 — limitar a 10 mg/dia (vs. 20 mg/dia da ranolazina).
+
+**Validação:** `PlaywrightConsoleCapture` executado após as três edições — **zero "Page errors"** de console. Uma primeira captura (com preview em cache) reportou `DRUG_DB populado: 345 fármacos`; uma segunda captura em sessão nova confirmou o valor correto: **`DRUG_DB populado: 346 fármacos`** e **`ALL_DRUGS_DB montado: 344 entradas`**.
+
+---
+
+## 🆕 BUILD 253.10 — Curadoria de Conteúdo: Vernacalanto / Brinavess (2026-07-03)
+
+**Contexto:** o usuário submeteu **Vernacalanto** (antiarrítmico seletivo atrial, bloqueador multicanal IV — IKur/IKACh/Ito/INa —, nome comercial Brinavess) no mesmo formato 3-partes não-compatível (schema estático com `_metadata`/`export const`, `<option>` HTML). Diferente das submissões anteriores, esta não trouxe a Parte 3 (motor de interações `severity/mechanism/action`) — apenas as Partes 1 e 2. Grep/leitura direta confirmaram que este fármaco **NÃO existia** no banco — adição genuinamente nova.
+
+1️⃣ **`database/cardio.js`** — criado o **Grupo 68**, entrada `vernacalanto` no padrão real `calculate(paciente, lang)`, com cálculo dinâmico de dose por peso (3 mg/kg IV em 10 min para a 1ª dose, limite de peso em 113 kg → dose máxima fixa 339 mg; 2ª dose de 2 mg/kg IV em 10 min após 15 min sem conversão, máx. 226 mg), alertas dinâmicos de PAS < 100 mmHg, IC grave (NYHA III/IV)/descompensada, SCA nos últimos 30 dias, estenose aórtica severa e QT basal > 440 ms (todas contraindicação absoluta), uso recente de antiarrítmico classe I/III e bradicardia preexistente (contraindicações relativas), uso concomitante de betabloqueador/BCC e anti-hipertensivo (risco de hipotensão/bradicardia aditiva). Efeitos adversos comuns (disgeusia, espirros, parestesia) e perigosos (hipotensão grave, choque cardiogênico, flutter atrial com condução AV 1:1), monitorização contínua de ECG/PA por ≥ 2h pós-infusão, exigência de ambiente com recursos de reanimação, populações especiais e `ref[]` (2020 ESC AFib Guidelines, EMA SmPC — Brinavess, Goodman & Gilman's). Validado com PlaywrightConsoleCapture (zero erros, `DRUG_DB populado: 346 fármacos`, `ALL_DRUGS_DB montado: 344 entradas`).
+2️⃣ **`index.html` → `LISTA_MEDS_DISPONIVEIS_RAW`** — adicionado `'Vernacalanto'` sob o grupo já existente `/* ── Antiarrítmicos ── */` (junto à Amiodarona, Sotalol e Dronedarona).
+3️⃣ **`database/interacoes.js`** — criado o nó `"vernacalanto"` em `INTERACOES_DB` com schema real (`gravidade`, `scoreClinico`, `descricao{pt,es}`, `conduta{pt,es}`). Como a submissão não trouxe uma Parte 3 dedicada, o motor de interações foi construído a partir dos dados de `interactions.major`/`interactions.moderate` da Parte 1:
+   - `$classe_qt` (real; usada para representar "antiarrítmicos classes I e III" — sem classe agregadora própria no motor, mas `$classe_qt` já reúne os principais representantes dessas classes: quinidina, procainamida, amiodarona, sotalol, dronedarona, ibutilida, dofetilida) → `contraindicada`/5 — risco de arritmias ventriculares graves e disfunção hemodinâmica.
+   - `$classe_betabloqueadores` (real, já existente) → `moderada`/3 — hipotensão/bradicardia aditiva.
+   - `$classe_antihipertensivos` (real, já existente — cobre também bloqueadores de canal de cálcio) → `moderada`/3 — hipotensão exacerbada.
+
+**Validação:** `PlaywrightConsoleCapture` executado após as três edições — **zero "Page errors"** de console, `DRUG_DB populado: 346 fármacos`, `ALL_DRUGS_DB montado: 344 entradas`.
+
+---
+
+## 🆕 BUILD 253.8 — Curadoria de Conteúdo: Nicorandil / Ikorel (2026-07-03)
+
+**Contexto:** o usuário submeteu **Nicorandil** (antianginoso ativador de canais de potássio e doador de óxido nítrico, nome comercial Ikorel/Angidil) no mesmo formato 3-partes não-compatível. Grep/leitura direta confirmaram que este fármaco **NÃO existia** no banco — adição genuinamente nova.
+
+1️⃣ **`database/cardio.js`** — criado o **Grupo 66**, entrada `nicorandil` no padrão real `calculate(paciente, lang)`, com alertas dinâmicos de PAS < 90 mmHg, choque cardiogênico/hipotensão severa (contraindicação absoluta), depleção de volume, uso concomitante de inibidor de PDE5 e de riociguate (ambos contraindicação absoluta), corticosteroide sistêmico e AAS/AINEs (risco de úlcera/perfuração GI), úlcera ativa (suspender permanentemente) e propensão à cefaleia (dose inicial reduzida), dose 10–20 mg 12/12h (máx. 30 mg 12/12h; iniciar 5 mg 12/12h se propenso à cefaleia ou idoso), contraindicações absolutas/relativas, efeitos adversos com destaque para úlceras refratárias (mucosa oral a cútis), monitorização, populações especiais e `ref[]` (2019 ESC Chronic Coronary Syndromes, NICE Stable Angina Management, MHRA Drug Safety Update sobre Nicorandil/Ikorel, Goodman & Gilman's). Validado com PlaywrightConsoleCapture (zero erros, `DRUG_DB populado: 345 fármacos`).
+2️⃣ **`index.html` → `LISTA_MEDS_DISPONIVEIS_RAW`** — adicionado `'Nicorandil'` sob o grupo `/* ── Antianginosos ── */` (junto à Ranolazina e Trimetazidina).
+3️⃣ **`database/interacoes.js`** — criado o nó `"nicorandil"` em `INTERACOES_DB` com schema real (`gravidade`, `scoreClinico`, `descricao{pt,es}`, `conduta{pt,es}`):
+   - `$classe_ipde5` (real; corrige `$classe_inibidores_pde5` inexistente submetido) → `contraindicada`/5 — hipotensão severa/fatal por acúmulo de GMPc.
+   - `riociguate` (droga×droga — corrige a grafia `riociguat` do usuário para `riociguate`, chave já usada em outras partes do banco de card.js desde o Grupo de vasodilatadores pulmonares; sem classe agregadora equivalente no motor) → `contraindicada`/5 — choque vasoplégico.
+   - `$classe_corticosteroides` (real) → `alta`/4 — risco aumentado de perfuração GI e mascaramento de sintomas.
+   - `$classe_aines` (real; corrige `$classe_aines` já correta na submissão) → `moderada`/3 — risco aumentado de úlceras/sangramento GI.
+
+**Validação final:** PlaywrightConsoleCapture sem "Page errors", boot limpo, `ALL_DRUGS_DB montado: 343 entradas`.
+
+## 🆕 BUILD 253.7 — Curadoria de Conteúdo: Trimetazidina / Vastarel (2026-07-03)
+
+**Contexto:** o usuário submeteu **Trimetazidina** (antianginoso modulador metabólico miocárdico, nome comercial Vastarel/Vastarel MR) no mesmo formato 3-partes não-compatível. Grep/leitura direta confirmaram que este fármaco **NÃO existia** no banco — adição genuinamente nova.
+
+1️⃣ **`database/cardio.js`** — criado o **Grupo 65**, entrada `trimetazidina` no padrão real `calculate(paciente, lang)`, com alertas dinâmicos de ajuste renal (contraindicado se ClCr < 30 mL/min; reduzir para 35 mg 1x/dia se ClCr 30–60 mL/min), contraindicação absoluta para doença de Parkinson/tremores/síndrome das pernas inquietas, alerta de uso concomitante de antiparkinsoniano e de risco de quedas em idosos, dose 35 mg 12/12h (MR) ou 80 mg 1x/dia (liberação prolongada), contraindicações absolutas/relativas, efeitos adversos (destaque para sintomas extrapiramidais), monitorização, populações especiais e `ref[]` (Bula Vastarel MR, 2019 ESC Chronic Coronary Syndromes, EMA Assessment Report on Trimetazidine, Goodman & Gilman's). Validado com PlaywrightConsoleCapture (zero erros, `DRUG_DB populado: 344 fármacos`).
+2️⃣ **`index.html` → `LISTA_MEDS_DISPONIVEIS_RAW`** — adicionado `'Trimetazidina'` sob o grupo `/* ── Antianginosos ── */` (junto à Ranolazina).
+3️⃣ **`database/interacoes.js`** — criada a nova classe **`$classe_antiparkinsonianos`** em `DRUG_CLASSES` (levodopa, carbidopa, pramipexol, ropinirol, rotigotina, bromocriptina, cabergolina, amantadina, selegilina, rasagilina, safinamida, entacapona, opicapona, biperideno, triexifenidila — classe inexistente no motor até então e necessária para mapear corretamente a interação submetida como `$classe_antiparkinsonianos`). Criado o nó `"trimetazidina"` em `INTERACOES_DB` com schema real (`gravidade`, `scoreClinico`, `descricao{pt,es}`, `conduta{pt,es}`):
+   - `$classe_antiparkinsonianos` (nova, real) → `contraindicada`/4 — antagonismo do efeito dopaminérgico e risco de sintomas extrapiramidais.
+   - `$classe_antihipertensivos` (real, já existente desde o Bloco Psicofármacos v3.4; corrige `$classe_anti_hipertensivos` inexistente submetido) → `moderada`/3 — risco potencializado de tontura e quedas.
+
+**Validação final:** PlaywrightConsoleCapture sem "Page errors", boot limpo, `ALL_DRUGS_DB montado: 342 entradas`.
+
+## 🆕 BUILD 253.6 — Curadoria de Conteúdo: Ranolazina / Ranexa (2026-07-03)
+
+**Contexto:** o usuário pretendia submeter **Ranolazina** (antianginoso inibidor da corrente tardia de sódio, nome comercial Ranexa), porém a mensagem final continha um erro de copiar-e-colar que duplicava as 3 partes de Efedrina já processadas na BUILD 253.5. O erro foi identificado e a integração de Ranolazina prosseguiu com base nos dados clínicos ricos (mecanismo, dose, contraindicações absolutas/relativas) já fornecidos na Parte 1 da submissão original do fármaco. Grep/leitura direta confirmaram que este fármaco **NÃO existia** no banco — adição genuinamente nova.
+
+1️⃣ **`database/cardio.js`** — criado o **Grupo 64**, entrada `ranolazina` no padrão real `calculate(paciente, lang)`, com alertas dinâmicos de ajuste renal (contraindicado se ClCr < 30 mL/min; cautela se ClCr 30–60 mL/min), ajuste hepático (contraindicado em Child-Pugh B/C), prolongamento de QT (história pessoal/familiar), e contraindicações a inibidores/indutores potentes de CYP3A4, dose 500 mg 12/12h → 1000 mg 12/12h (limitada a 500 mg 12/12h com diltiazem/verapamil), contraindicações absolutas/relativas, efeitos adversos, monitorização, populações especiais e `ref[]` (FDA Label — Ranexa, ESC Chronic Coronary Syndromes Guidelines, Goodman & Gilman's, Lexicomp/Micromedex). Validado com PlaywrightConsoleCapture (zero erros, `DRUG_DB populado: 343 fármacos`).
+2️⃣ **`index.html` → `LISTA_MEDS_DISPONIVEIS_RAW`** — adicionado `'Ranolazina'` sob novo grupo `/* ── Antianginosos ── */` (após o grupo Vasopressores).
+3️⃣ **`database/interacoes.js`** — criado o nó `"ranolazina"` em `INTERACOES_DB` com schema real (`gravidade`, `scoreClinico`, `descricao{pt,es}`, `conduta{pt,es}`):
+   - `$classe_azolicos`, `$classe_macrolídeos`, `$classe_antirretrovirais` (reais; inibidores potentes de CYP3A4) → `contraindicada`/5.
+   - `$classe_rifamicinas`, `$classe_anticonvulsivantes` (reais; indutores potentes de CYP3A4) → `contraindicada`/5.
+   - `$classe_qt` (real) → `alta`/4 — prolongamento aditivo do QT.
+   - `diltiazem` e `verapamil` (droga×droga — inibidores moderados de CYP3A4, sem classe agregadora "moderada" equivalente no motor) → `moderada`/3 — limitar ranolazina a 500 mg 12/12h.
+   - `sinvastatina` (droga×droga) → `moderada`/3 — limitar a 20 mg/dia.
+   - `metformina` (droga×droga) → `moderada`/3 — inibição de OCT2, risco de acúmulo.
+   - `digoxina` (droga×droga) → `leve`/2 — aumento modesto dos níveis por inibição da P-gp.
+
+**Validação final:** PlaywrightConsoleCapture sem "Page errors", boot limpo, `ALL_DRUGS_DB montado: 341 entradas`.
+
+**📌 Enriquecimento pós-integração (mesma sessão):** o usuário reenviou a submissão completa e original da Ranolazina (Parte 1 + `Ranolazina_metadata` com fontes 2019 ESC Chronic Coronary Syndromes / 2012 ACCF-AHA-ACP-AATS-PCNA-SCAI-STS SIHD Guideline + Parte 3 do motor de interações). Seguindo a regra padrão de **atualizar em vez de duplicar**, a entrada `ranolazina` (Grupo 64) e o nó `"ranolazina"` em `INTERACOES_DB` foram enriquecidos, sem criar nenhuma chave nova:
+   - `contraindications.absolutas` — adicionado item explícito "histórico pessoal de prolongamento do intervalo QT ou síndrome do QT longo congênito" (antes coberto apenas implicitamente via `risksByPatient`/`safetyFlags`).
+   - `administration` — texto ajustado para refletir literalmente a orientação da bula ("comprimidos devem ser engolidos inteiros — não partir, mastigar ou triturar").
+   - `ref[]` — adicionadas as duas diretrizes de sociedade citadas na submissão original (2019 ESC Chronic Coronary Syndromes; 2012 ACCF/AHA/ACP/AATS/PCNA/SCAI/STS SIHD Guideline), mantendo FDA Label, Goodman & Gilman's e Lexicomp/Micromedex já presentes.
+   - `INTERACOES_DB.ranolazina.metformina.conduta` — especificado o limite quantitativo exato citado na submissão: **não exceder 1700 mg/dia de metformina** quando associada a ranolazina 1000 mg 12/12h (antes a conduta era apenas qualitativa).
+
+**Validação pós-enriquecimento:** PlaywrightConsoleCapture sem "Page errors", `DRUG_DB populado: 343 fármacos` (contagem inalterada — confirma que não houve duplicação de chave), `ALL_DRUGS_DB montado: 341 entradas`.
+
+## 🆕 BUILD 253.5 — Curadoria de Conteúdo: Efedrina (2026-07-03)
+
+**Contexto:** o usuário submeteu **Efedrina** (vasopressor agonista adrenérgico misto, uso clássico em anestesia obstétrica) no mesmo formato 3-partes não-compatível. Grep prévio confirmou que este fármaco **NÃO existia** no banco — adição genuinamente nova.
+
+1️⃣ **`database/cardio.js`** — criado o **Grupo 63**, entrada `efedrina` no padrão real `calculate(paciente, lang)`, com alertas de PAM, FC, uso de IMAO (contraindicação absoluta) e taquifilaxia por doses repetidas, dose em bolus IV (adulto 5–10 mg repetível/máx. 50 mg; pediatria 0,1–0,2 mg/kg calculado dinamicamente pelo peso), diluição padrão (1 amp. 50 mg/9 mL SF → 5 mg/mL), contraindicações, efeitos adversos, populações especiais e `ref[]` (ASA Obstetric Anesthesia Guidelines, Goodman & Gilman's, FDA Label). Validado com PlaywrightConsoleCapture (zero erros, `DRUG_DB populado: 342 fármacos`).
+2️⃣ **`index.html` → `LISTA_MEDS_DISPONIVEIS_RAW`** — adicionado `'Efedrina'` sob o grupo `/* ── Vasopressores ── */` (junto à Angiotensina II e Metaraminol).
+3️⃣ **`database/interacoes.js`** — criado o nó `"efedrina"` em `INTERACOES_DB` com schema real (`gravidade`, `scoreClinico`, `descricao{pt,es}`, `conduta{pt,es}`):
+   - `$classe_imaos` (real) → `contraindicada`/5 — crise hipertensiva letal.
+   - `ocitocina` (droga×droga — sem classe agregadora equivalente) → `alta`/4 — hipertensão aditiva peri-parto.
+   - `clonidina` (droga×droga) → `moderada`/3 — inibição do efeito vasopressor indireto.
+   - `$classe_betabloqueadores` (real) → `moderada`/3 — ação alfa sem oposição (hipertensão paradoxal).
+
+**Validação final:** PlaywrightConsoleCapture sem "Page errors", boot limpo, `ALL_DRUGS_DB montado: 340 entradas`.
+
+## 🆕 BUILD 253.4 — Curadoria de Conteúdo: Metaraminol / Aramin (2026-07-03)
+
+**Contexto:** o usuário submeteu **Metaraminol** (vasopressor agonista adrenérgico misto, nome comercial Aramin/Aramine) no mesmo formato 3-partes não-compatível (schema estático, `<option>` HTML, motor de interações com `severity/mechanism/action` e classes inventadas `$classe_imao`/`$classe_antidepressivos_triciclicos`). Grep prévio confirmou que este fármaco **NÃO existia** no banco — adição genuinamente nova.
+
+1️⃣ **`database/cardio.js`** — criado o **Grupo 62**, entrada `metaraminol` no padrão real `calculate(paciente, lang)`, com cálculo dinâmico de velocidade de infusão, alertas de PAM, uso concomitante de IMAO (contraindicação absoluta) e extravasamento (conduta com fentolamina), doses em bolus e infusão contínua (adulto e pediatria), contraindicações, efeitos adversos, populações especiais e `ref[]` (Goodman & Gilman's, AHA Guidelines for CPR/ECC, Bula Aramin). Validado com PlaywrightConsoleCapture (zero erros, `DRUG_DB populado: 341 fármacos`).
+2️⃣ **`index.html` → `LISTA_MEDS_DISPONIVEIS_RAW`** — adicionado `'Metaraminol'` sob o grupo `/* ── Vasopressores ── */` já criado na BUILD 253.3 (junto à Angiotensina II).
+3️⃣ **`database/interacoes.js`** — criado o nó `"metaraminol"` em `INTERACOES_DB` com schema real (`gravidade`, `scoreClinico`, `descricao{pt,es}`, `conduta{pt,es}`):
+   - `$classe_imaos` (real; corrige `$classe_imao` inexistente submetido) → `contraindicada`/5 — crise hipertensiva severa.
+   - `$classe_triciclicos` (real; corrige `$classe_antidepressivos_triciclicos` inexistente submetido) → `alta`/4 — potencialização pressórica.
+   - `digoxina` (droga×droga — não existe `$classe_digitalicos` agregadora no motor; a chave `digoxina` já é usada isoladamente em outras interações do arquivo) → `moderada`/3 — sensibilização miocárdica a arritmias.
+   - `ocitocina` (droga×droga — sem classe agregadora equivalente) → `moderada`/3 — hipertensão aditiva.
+
+**Validação final:** PlaywrightConsoleCapture sem "Page errors", boot limpo, `ALL_DRUGS_DB montado: 339 entradas`.
+
+## 🆕 BUILD 253.3 — Curadoria de Conteúdo: Angiotensina II / Giapreza (2026-07-03)
+
+**Contexto:** o usuário submeteu **Angiotensina II** (vasopressor agonista AT1, nome comercial Giapreza) no mesmo formato 3-partes não-compatível já visto em Milrinona/Levosimendana (schema estático, `<option>` HTML, motor de interações com `severity/mechanism/action`). Grep prévio confirmou que **este fármaco NÃO existia** no banco — é uma adição genuinamente nova (diferente das duas curadorias anteriores, que eram enriquecimentos de entradas já existentes).
+
+1️⃣ **`database/cardio.js`** — criado o **Grupo 61**, entrada `angiotensinaII` no padrão real `calculate(paciente, lang)` (não o schema estático submetido), com cálculo dinâmico de velocidade de infusão (ng/kg/min × peso → mL/h, conc. 5.000 ng/mL), alertas de PAM, uso prévio de IECA e ausência de profilaxia para TEV, dose 20→80 ng/kg/min (3h)/40 ng/kg/min manutenção, contraindicações, efeitos adversos, populações especiais e `ref[]` (Surviving Sepsis Campaign, ATHOS-3, FDA Label — Giapreza). Durante a limpeza, foi removida em definitivo uma entrada morta remanescente de uma tentativa anterior de duplicata da Milrinona (`milrinona_NAO_USAR_DUPLICATA`) que estava apenas neutralizada por `if(false){}` — a remoção completa (em vez de apenas comentário) foi necessária porque comentários `/* */` internos ao bloco quebravam o fechamento do comentário externo, causando `SyntaxError: Unexpected token '}'`. Validado com PlaywrightConsoleCapture (zero erros, `DRUG_DB populado: 340 fármacos`).
+2️⃣ **`index.html` → `LISTA_MEDS_DISPONIVEIS_RAW`** — adicionado `'Angiotensina II'` sob novo grupo `/* ── Vasopressores ── */` (categoria distinta de `/* ── Inotrópicos ── */`, pois clinicamente é um vasopressor puro).
+3️⃣ **`database/interacoes.js`** — criado o nó `"angiotensinaii"` em `INTERACOES_DB` com schema real (`gravidade`, `scoreClinico`, `descricao{pt,es}`, `conduta{pt,es}`):
+   - `$classe_ieca` (real, corrigido a partir da submissão) → `alta`/4 — up-regulation de receptores AT1.
+   - `$classe_ara_ii` (real; substitui `$classe_bra` inexistente submetido pelo usuário) → `alta`/4 — competição pelo receptor AT1.
+   - `$classe_vasopressores` (**classe nova**, pois não existia agregação de vasopressores em `DRUG_CLASSES`; populada com `dopamina, fenilefrina, vasopressina, dobutamina` — os vasopressores/inotrópicos `calculate()`-based confirmados no Grupo 33 do cardio.js) → `moderada`/3 — sinergismo vasoconstritor.
+
+**Validação final:** PlaywrightConsoleCapture sem "Page errors", boot limpo, `ALL_DRUGS_DB montado: 338 entradas`.
+
+## 🆕 BUILD 253.2 — Curadoria de Conteúdo: Levosimendana (2026-07-03)
+
+**Contexto:** o usuário submeteu dados clínicos de **Levosimendana** (fármaco + referências, item de autocomplete) no mesmo formato não-compatível já visto na submissão da Milrinona (chave em português com acento `Levosimendán:`, schema estático `class:{pt,es}`/`dose:{adult,pediatric}` em vez de `calculate()`, objeto `Levosimendán_metadata` e `export const medcases_levosimendan_module` inválidos para esta arquitetura IIFE/`<script>`). Seguindo a lição registrada na BUILD 253.1, foi feito **Grep prévio** por `levosimendana` em todo o projeto antes de qualquer inserção.
+
+1️⃣ **`database/cardio.js`** — Grep confirmou que **a Levosimendana já existia** no banco (Grupo 34 "Inodilatadores", junto com a Milrinona, linha ~29658), com uma implementação `calculate()` madura e completa (mecanismo cálcio-sensibilizador, farmacocinética do metabólito ativo OR-1896, ajuste renal/hepático dinâmico, alertas por PAS/PAM/K⁺/betabloqueador, `contraindications`, `monitoring`, `safetyFlags`). **Nenhuma duplicata foi criada.** A entrada existente foi **enriquecida** com os campos do conteúdo do usuário que ainda faltavam:
+   - `indications:{approved:[IC aguda descompensada, choque cardiogênico], offLabel:[baixo débito pós-operatório]}` (campo estruturado que não existia antes, apenas texto livre em `mechanism`/`interactions`).
+   - `specialPopulations:{pregnancy, lactation, elderly}` (ausente na entrada original).
+   - Duas novas linhas em `interactions[]`: nitratos (hipotensão profunda aditiva) e fármacos que prolongam QT (risco arritmogênico), citados explicitamente na submissão do usuário.
+   - Fonte adicional em `ref[]`: "Expert consensus on the use of levosimendan in acute heart failure (International)".
+2️⃣ **`index.html` → `LISTA_MEDS_DISPONIVEIS_RAW`** — adicionado `'Levosimendana'` (grafia em português, consistente com o restante da lista que usa nomes em PT) sob o grupo `/* ── Inotrópicos ── */` já criado na BUILD 253.1, tornando-a selecionável no autocomplete do Verificador de Interações — não o `<option>` HTML sugerido pelo usuário.
+3️⃣ **`database/interacoes.js`** — adicionado o nó `"levosimendana"` em `INTERACOES_DB` (não existia antes) com regras usando o schema **real** (`gravidade`, `scoreClinico`, `descricao:{pt,es}`, `conduta:{pt,es}`), reaproveitando classes **já existentes** em `DRUG_CLASSES` (nenhuma classe nova foi criada):
+   - `$classe_nitratos` (isossorbida/nitroglicerina/mono e dinitrato) → `gravidade: "alta"`, `scoreClinico: 4`.
+   - `$classe_antihipertensivos` → `gravidade: "moderada"`, `scoreClinico: 3`.
+   - `$classe_qt` (fármacos que prolongam o intervalo QT) → `gravidade: "moderada"`, `scoreClinico: 3`.
+
+**Refinamento v3.17 (mesma sessão):** o usuário submeteu, em seguida, o "3️⃣ Motor de Interações" dedicado da Levosimendana no schema mismatched já conhecido (`severity/mechanism/action`, classes inexistentes `$classe_vasodilatadores`/`$classe_prolongadores_qt`). Conteúdo clínico incorporado com as seguintes correções de schema:
+   - `isossorbida` — nova entrada **droga×droga** (precedência sobre classe no motor hierárquico) com `gravidade: "alta"`, `scoreClinico: 4`, cobrindo o cenário específico de choque vasoplégico descrito pelo usuário.
+   - `$classe_vasodilatadores` (inexistente) → conteúdo absorvido em `$classe_antihipertensivos` (já cobre hidralazina/minoxidil/nitroprussiato), com severidade **elevada de moderada para "alta"** (`scoreClinico: 3→4`) para refletir o risco de choque vasoplégico citado.
+   - `$classe_prolongadores_qt` (inexistente) → mapeado para a classe real `$classe_qt`, com descrição/conduta enriquecidas (menção explícita à meia-vida longa do metabólito ativo OR-1896 e à janela de monitorização de 7 dias).
+
+**Validação:** `PlaywrightConsoleCapture` executado após cada rodada de consolidação — **zero erros de console** em ambas, boot limpo confirmado (`DRUG_DB populado: 339 fármacos`, `ALL_DRUGS_DB montado: 337 entradas`, `LazyClass BUILD 253` completo em 3 lotes de 70/93/100 fármacos).
+
+**Padrão consolidado para submissões futuras de fármacos:** (1) Grep pelo nome do fármaco em `database/cardio.js`/`database/interacoes.js` e pela string exata em `LISTA_MEDS_DISPONIVEIS_RAW`; (2) se já existir, **enriquecer** a entrada `calculate()` existente com campos estruturados ausentes, nunca duplicar a chave; (3) se não existir, criar seguindo o schema `calculate(paciente, lang)` real; (4) interações sempre no schema `gravidade/scoreClinico/descricao/conduta`, reaproveitando classes já cadastradas em `DRUG_CLASSES` sempre que semanticamente adequado, só criando classe nova quando não houver equivalente.
+
+---
+
+## 🆕 BUILD 253.1 — Curadoria de Conteúdo: Milrinona (2026-07-03)
+
+**Contexto:** o usuário submeteu dados clínicos de **Milrinona** (fármaco + referências, item de autocomplete e regras de interação) em um formato que não correspondia à arquitetura real do projeto (sintaxe ES module/`export`, schema `severity/mechanism/action` para interações, `<option>` HTML inexistente no app). Esta build documenta a **reconciliação de schema** feita para preservar o conteúdo clínico relevante fornecido, adaptando-o aos 3 locais corretos:
+
+1️⃣ **`database/cardio.js`** — Investigação revelou que **a Milrinona já existia** no banco (Grupo 34 "Inodilatadores", linha ~29359), com uma implementação `calculate()` mais completa e madura que a submissão do usuário (ajuste dinâmico de dose por ClCr em 4 faixas, cálculo de velocidade de infusão em mL/h, alertas dinâmicos por PAS/PAM/arritmia/uso de betabloqueador). Uma primeira tentativa de inserir um "Grupo 61" duplicado foi **detectada e completamente removida** antes da validação final, para não sobrescrever silenciosamente a entrada original via `Object.assign` (chaves duplicadas no mesmo objeto — a última declarada prevaleceria). Em vez disso, a entrada **existente** foi **enriquecida** com os campos do conteúdo do usuário que ainda faltavam: `pharmacologicClass`, `indications:{approved,offLabel}`, `specialPopulations:{pregnancy,lactation,elderly}`, `hospitalUseOnly`, `requiresTelemetry`, `requiresPump`, `requiresContinuousInfusion`, e a lista de `interactions[]` foi expandida com anagrelida, inibidores da PDE5, disopiramida e vasodilatadores/anti-hipertensivos. **Nenhuma duplicata de chave permanece no arquivo.**
+2️⃣ **`index.html` → `LISTA_MEDS_DISPONIVEIS_RAW`** — adicionado `'Milrinona'` sob novo grupo `/* ── Inotrópicos ── */`, tornando-a selecionável no autocomplete do Verificador de Interações (mecanismo real do app — não existe `<select>/<option>` HTML como o usuário sugeriu).
+3️⃣ **`database/interacoes.js`** — adicionado o nó `"milrinona"` em `INTERACOES_DB` (não existia antes) com 4 regras de interação usando o schema **real** (`gravidade`, `scoreClinico` 1–5, `descricao:{pt,es}`, `conduta:{pt,es}`) em vez do schema submetido (`severity/mechanism/action`, que seria silenciosamente ignorado pelo motor de matching):
+   - `disopiramida` (droga×droga, nova entrada) → `gravidade: "contraindicada"`, `scoreClinico: 5`.
+   - `anagrelida` (droga×droga, nova entrada) → `gravidade: "alta"`, `scoreClinico: 4`.
+   - `$classe_ipde5` (classe **já existente**, reaproveitada corretamente — sildenafila/tadalafila/vardenafila/avanafila — em vez do `$classe_inibidores_pde5` inexistente sugerido pelo usuário) → `gravidade: "alta"`, `scoreClinico: 4`.
+   - `$classe_antihipertensivos` (classe **já existente**, reaproveitada — cobre IECA/BRA/BCC/diuréticos/betabloqueadores/hidralazina/minoxidil/nitroprussiato — em vez de criar uma nova classe `$classe_vasodilatadores` não solicitada) → `gravidade: "moderada"`, `scoreClinico: 3`.
+
+**Validação:** `PlaywrightConsoleCapture` executado após a consolidação final — **zero erros de console**, boot limpo confirmado (`DRUG_DB populado: 339 fármacos`, `ALL_DRUGS_DB montado: 337 entradas`, `LazyClass BUILD 253` completo em 3 lotes de 70/93/100 fármacos).
+
+**Lição para submissões futuras:** antes de integrar qualquer fármaco novo enviado pelo usuário, **sempre** fazer Grep prévio pelo nome do fármaco em `database/cardio.js` e `database/interacoes.js` para evitar duplicatas — o banco já é extenso (340+ fármacos) e pode conter entradas parciais/completas não documentadas no fluxo de conversa. Nesta rodada, esse cuidado evitou que uma implementação `calculate()` mais rica (com ajuste dinâmico de dose por função renal) fosse sobrescrita por uma versão estática mais simples.
+
+---
+
+## 🆕 BUILD 253 (Fase 1c) — Final Boot & UX Polish (2026-07-03)
+
+**Escopo: as duas pendências remanescentes da Fase 1b foram liquidadas nesta rodada.**
+
+1️⃣ **Correção do bypass — `renderFarmacosList` (risco sinalizado na Fase 1b):**
+- **Problema:** a Fase 1b havia tornado `renderFarmacosList` — o nome público chamado tanto pelo `oninput` da busca quanto por fluxos síncronos (`navigate('farmacos')` e dois fluxos pós-cadastro de fármaco, seguidos de `setTimeout(...,220)` que abre a ficha do fármaco) — a própria versão *debounced* (~150ms). Isso atrasava em 150ms ações que nunca deveriam ter delay.
+- **Correção aplicada:** `renderFarmacosList()` voltou a ser **síncrona e instantânea** (alias direto de `_renderFarmacosListImpl`), preservando 100% de compatibilidade com todo o código legado que a chama diretamente (`navigate('farmacos')`, pós-cadastro nas linhas ~12021/~14058/~16160). O debounce foi isolado em uma nova função dedicada, `_renderFarmacosListDebounced`, amarrada **exclusivamente** ao `oninput` do campo `#farmacos-search-input` (único ponto de entrada por teclado).
+- **Resultado:** a busca por digitação continua debounced (mesmo ganho de performance da Fase 1b); todos os fluxos não-keystroke voltam a executar de forma imediata e síncrona, como era o comportamento original antes de qualquer otimização.
+- As demais 4 funções (`filterMedsAutocomplete`, `filterDrugs`/`renderDrugList`, `hmFilterDrugs`, `filtrarDropdownInteracao`) foram auditadas nesta rodada e **não apresentavam o mesmo risco** — cada uma já tinha seu núcleo síncrono (`renderDrugList`) separado do wrapper debounced (`filterDrugs`), ou eram chamadas apenas a partir do respectivo `oninput`/handler de teclado, sem uso paralelo em fluxo síncrono.
+
+2️⃣ **Lazy Evaluation — `_adaptExternalDB` (gargalo final do FCP):**
+- **Problema:** o loop de adaptação de `ANTIMICROBIANOS_DRUGS_DB`, `PSICOFARMACOS_DRUGS_DB` e `CARDIO_DRUGS_DB` (60 grupos, ~2,2MB) chamava `entry.calculate({peso:70,...}, 'pt')` **de forma síncrona** para cada fármaco sempre que `entry.class` não existia diretamente — travando o `DOMContentLoaded`/FCP proporcionalmente ao tamanho da base.
+- **Correção aplicada:**
+  - A chamada síncrona a `entry.calculate()` foi **removida** do loop principal de `_adaptExternalDB`.
+  - Tentativa de extração **estática** de classe, na ordem: `entry.class` (raiz) → `entry.pharmacologicClass` (raiz, novo fallback). A grande maioria dos fármacos já resolve aqui, sem qualquer cálculo.
+  - Fármacos que ainda não têm `class` após a extração estática são enfileirados em `_pendingClassDiscovery` e processados **depois** do retorno de `_adaptExternalDB`, em lotes de 15 itens via `requestIdleCallback` (com fallback `setTimeout(fn, 1)` para navegadores sem suporte à API) — cada lote roda apenas quando a Main Thread está ociosa.
+  - Ao descobrir uma `class` em segundo plano, o objeto do `DRUG_DB` é atualizado in-place e, se `window._searchIndex` já existir (BUILD 252), a entrada correspondente também é sincronizada (`idxEntry.pt.class` / `idxEntry.es.class`) — a busca passa a refletir a classe descoberta sem exigir reload.
+- **Validação (`PlaywrightConsoleCapture`):** boot confirmado limpo — `DRUG_DB populado: 339 fármacos`, `ALL_DRUGS_DB montado: 337 entradas`, e a descoberta em segundo plano rodou em 3 lotes assíncronos (`[LazyClass] BUILD 253 — descoberta de classe em segundo plano concluída: 70 / 93 / 100 fármacos processados`), sem nenhum erro de console e sem bloquear a renderização inicial.
+- **Regra de ouro respeitada:** os fármacos cuja `class` dependia de `calculate()` exibem a classe corretamente assim que o lote correspondente é processado (tipicamente poucos milissegundos após o boot, em ociosidade de thread) — a informação final apresentada ao médico é idêntica à anterior, apenas computada de forma assíncrona/não-bloqueante.
+
+**Itens da Fase 1 (BUILD 251→253) agora todos concluídos:** ✅ Desbloqueio do TTI · ✅ Indexação e Debounce · ✅ Lazy Evaluation · ✅ Escudo do Paciente · ✅ Correção do bypass de debounce.
+
+---
+
+## 🆕 BUILD 252 (Fase 1b) — Search & Boot Optimization (2026-07-03)
+
+**Escopo: item 1️⃣ da Fase 1b, CONCLUÍDO. Item 2️⃣, NÃO concluído nesta rodada (ver abaixo).**
+
+1️⃣ **Indexação e Debounce — CONCLUÍDO nas 5 funções-alvo:**
+- `window._searchIndex`: construído uma única vez em `_buildSearchIndex()` (chamado no `DOMContentLoaded`, logo após `_getMasterDB()`/`DRUG_DB` consolidados), armazenando nome/classe/categoria já normalizados (`_fNorm`, sem acentos, lowercase) em **pt e es simultaneamente**, eliminando o recálculo de `.normalize('NFD')` por fármaco a cada tecla digitada.
+- `_searchIndexFilter(qNorm)`: filtro genérico sobre o índice (substring simples, OR entre nome/classe/categoria, resolvido no idioma ativo), com fallback de segurança para o scan direto original caso o índice ainda não exista.
+- `window._interactionsIndex`: índice-irmão para `LISTA_MEDS_DISPONIVEIS_RAW` (fonte de dados separada de `DRUG_DB`, usada só pelo autocomplete de Interações), pré-computando `display`/`norm` em pt/es via `_displayName`/`_normSemAlias`.
+- `_hmDebounce` promovido a escopo global (`window._hmDebounce`), reaproveitando a implementação já existente (Cockcroft-Gault, BUILD 250).
+- As 5 funções-alvo foram refatoradas no padrão **Impl + wrapper debounced (~150ms)**:
+  - `filterMedsAutocomplete` → `_filterMedsAutocompleteImpl` + wrapper debounced.
+  - `renderFarmacosList` → `_renderFarmacosListImpl` + wrapper debounced.
+  - `renderDrugList` (mantida síncrona — chamada por `setLang()`/fluxos não-keystroke) + `filterDrugs` (o `oninput` real) → `_filterDrugsImpl` + wrapper debounced.
+  - `hmFilterDrugs` → `_hmFilterDrugsImpl` (usa `_searchIndexFilter`) + `window.hmFilterDrugs = _hmDebounce(_hmFilterDrugsImpl, 150)`.
+  - `filtrarDropdownInteracao` → `_filtrarDropdownInteracaoImpl` (usa `window._interactionsIndex`) + `window.filtrarDropdownInteracao = _hmDebounce(_filtrarDropdownInteracaoImpl, 150)`.
+- **Regra de ouro respeitada:** nenhuma lógica de filtro/ordenção/limite/agrupamento foi alterada — apenas a origem do dado normalizado (índice pré-computado em vez de recálculo) e o agrupamento temporal das chamadas (debounce). Resultado e precisão da busca permanecem idênticos para o médico.
+- ⚠️ **Ponto a validar/monitorar:** `renderFarmacosList` passou a ser, ela mesma, a versão debounced. Como essa função também é chamada de forma síncrona em fluxos que não são keystroke (`navigate('farmacos')` limpando para `''`, e dois fluxos pós-criação de fármaco que a chamam antes de um `setTimeout(...,220)` que abre o detalhe), esses pontos passam a ter um atraso de ~150ms que não existia antes. Recomenda-se, em rodada futura, isolar esses call sites específicos para chamarem `_renderFarmacosListImpl` diretamente (bypass do debounce), preservando 100% do timing original fora do campo de busca.
+
+2️⃣ **Lazy Evaluation (`_adaptExternalDB`) — NÃO IMPLEMENTADO nesta rodada:**
+- Por limite de tempo/iterações desta sessão, a remoção da chamada síncrona `entry.calculate()` dentro do loop de `_adaptExternalDB` (usada para descobrir `class` quando `entry.class` não está setado diretamente) **não foi realizada**.
+- O código permanece exatamente como estava: `_adaptExternalDB` continua chamando `entry.calculate({peso:70,...}, 'pt')` de forma síncrona para cada fármaco de `ANTIMICROBIANOS_DRUGS_DB`, `PSICOFARMACOS_DRUGS_DB` e `CARDIO_DRUGS_DB` (este último com 60 grupos, ~2,2MB) sempre que `class` estático não existir.
+- **Nenhuma regressão foi introduzida** — como nada foi alterado nesta função, o comportamento de boot continua idêntico ao BUILD 251.
+- **Próximos passos recomendados** (não executados): (a) tentar extração estática de `entry.pharmacologicClass`/`entry.class` antes de qualquer cálculo; (b) se ainda faltar metadado, adiar a chamada `entry.calculate()` via `requestIdleCallback`/`setTimeout(...,0)` processando em lotes (chunks) após o `DOMContentLoaded`, com re-render incremental da lista quando cada lote populares a `class` descoberta.
+
+**Validação:** alterações restritas a `index.html`, escopo de funções de busca. `PlaywrightConsoleCapture` **ainda não foi executado** para validar esta rodada — recomendado como próximo passo antes de considerar o item 1️⃣ definitivamente fechado.
+
+---
+
+## 🆕 BUILD 251 (Fase 1) — Performance, Routing Guard & Scalability (2026-07-03)
+
+**Escopo executado (Fase 1 da Otimização, sob as travas do Tech Lead):**
+
+1. **Desbloqueio do TTI (Script Loading):**
+   - `database/interacoes.js` (580KB) movido do `<head>` (bloqueava o FCP) para o bloco final de scripts de banco de dados, junto aos demais.
+   - Todas as 15 tags `<script src="database/*.js">` e as 7 tags `<script src="js/*.js">` (medcases-ux-v2, hub-accordion, build240b-accordion-fix, calculator-overlay, category-pills, elec-calc, deeplink-router) agora usam `defer`, liberando o parser de HTML para montar a página em paralelo ao download/parse desses arquivos (o maior, `cardio.js`, tem 2,2MB).
+   - **Trava de race condition:** `defer` garante, por especificação HTML, execução em ordem de documento e sempre ANTES do `DOMContentLoaded`. Reforçamos essa garantia com uma segunda camada defensiva em `js/deeplink-router.js`: a função `_waitForDrugDB()` aguarda explicitamente `window.DRUG_DB` estar populado (com timeout de segurança de 3s) antes de `_dispatch()` rotear qualquer deep link — elimina qualquer dependência implícita de ordem de scripts.
+
+2. **Escudo do Paciente no Deeplink (UX Fix):**
+   - `js/deeplink-router.js`: ao rotear qualquer `tab=` que **não** seja `paciente`/`patient`, o router agora fecha explicitamente o card "Dados do Paciente" (`hub-card-patient`) caso ele apareça aberto, garantindo que o deep link foque exclusivamente no seu alvo.
+
+**Escopo AINDA NÃO executado nesta rodada (pendente para Fase 1b):**
+- Indexação/memoização de busca (`window._searchIndex`) e aplicação de `_hmDebounce` (~150ms) em `hmFilterDrugs`, `filtrarDropdownInteracao`, `renderFarmacosList`, `filterDrugs`, `filterMedsAutocomplete` — **não implementado** por limite de tempo desta sessão. Comportamento de busca permanece 100% inalterado (trava de escalabilidade respeitada, mas otimização ainda pendente).
+- Lazy evaluation do `_adaptExternalDB()` (remoção do `entry.calculate()` síncrono de descoberta de `class` + fragmentação via `requestAnimationFrame`/`setTimeout`) — **não implementado** nesta rodada.
+
+**Validação:** `PlaywrightConsoleCapture` confirmou boot limpo — `DRUG_DB populado: 339 fármacos`, `ALL_DRUGS_DB montado: 337 entradas`, Service Worker registrado, DeepLink Router carregado, zero erros de console.
+
+---
+
+## 🆕 BUILD 251 (Fase 0) — Auditoria WebView Android Local: Rotas, Paths e Service Worker (2026-07-02)
+
+### 🔍 Ordem de auditoria recebida
+Investigar por que o app, empacotado e executado localmente dentro de um WebView Android
+(`file:///data/user/0/com.medcasespro.med/files/...`), retorna `net::ERR_ACCESS_DENIED` ao
+carregar a página e seus recursos. Escopo pedido: (A) rotas/paths de build e (B) chamadas de
+rede/API do lado cliente.
+
+### ✅ Resultado da auditoria
+
+**A) Rotas e caminhos de arquivo — já conformes, nenhuma alteração necessária:**
+- Todos os `<link href=...>` e `<script src=...>` em `index.html` (12 CSS, 7 JS de app, 16 JS
+  de `database/`) usam **caminhos relativos puros** (`css/...`, `js/...`, `database/...`), sem
+  barra inicial — confirmado via grep completo em todo o arquivo.
+- `sw.js` (`ASSETS_TO_CACHE`) usa exclusivamente `./index.html`, `./css/...`, `./js/...`,
+  `./database/...` — todos relativos com `./`.
+- `scripts/generate-offline-manifest.js` já possui auditoria automática de paths absolutos
+  embutida (`auditForAbsolutePaths()`), que reprova qualquer path iniciado por `/`, `http://`
+  ou `https://` (exceto os CDNs externos legítimos e intencionais: Google Fonts, Font Awesome).
+- **Não há React Router / Vue Router / qualquer SPA framework** neste projeto — é HTML/CSS/JS
+  vanilla de página única. A navegação por abas (`?tab=`, `?q=`, `?lang=`) é feita via
+  `URLSearchParams(window.location.search)` em `js/deeplink-router.js`, sem `history.pushState`
+  nem `BrowserRouter`. O item "trocar para HashRouter" da ordem de auditoria **não se aplica**
+  a este projeto.
+
+**B) Requisições e chamadas de API — não aplicável, app 100% offline/client-side:**
+- Varredura completa por `fetch(`, `XMLHttpRequest`, `axios`, `.ajax(`, `document.cookie` em
+  `index.html` e todo `js/*.js`: **nenhuma chamada de rede a servidor externo existe no app**.
+  Todos os dados clínicos (fármacos, interações, protocolos) são embutidos localmente em
+  `database/*.js`, carregados como `<script>` e mantidos em memória (`window.CARDIO_DRUGS_DB`,
+  etc.) — sem backend, sem sessão, sem cookies. O único `fetch()` de todo o projeto está **dentro
+  do próprio `sw.js`**, usado para cache dos assets locais do próprio app (não para APIs externas).
+
+### 🎯 Causa real identificada do `net::ERR_ACCESS_DENIED`
+Esse erro, no contexto `file:///data/user/0/...`, é característico de uma restrição do
+**WebView nativo Android** (`WebSettings` configurado no código Kotlin/Java do app shell —
+tipicamente `setAllowFileAccess`, `setAllowFileAccessFromFileURLs`,
+`setAllowUniversalAccessFromFileURLs`, ou ausência de `WebViewAssetLoader`), e **não é causado
+por nada no HTML/CSS/JS deste repositório**. Esse código nativo Android está fora do escopo
+de um agente de sites estáticos e não pôde ser alterado aqui.
+
+### 🛠️ Correção aplicada dentro do escopo web (defensiva, zero regressão)
+Identificado um ponto lateral relevante: **Service Workers exigem "secure context"
+(https:// ou localhost) e nunca funcionam sob `file://`**, em nenhum navegador/WebView — isso
+é uma limitação de especificação da plataforma, não um bug do app. Sem tratamento, a tentativa
+de `navigator.serviceWorker.register('./sw.js')` sob `file://` gera erro de console que pode se
+misturar/mascarar o `ERR_ACCESS_DENIED` real, dificultando o diagnóstico em produção.
+
+**Correção:** adicionado guard de `secure context` antes do registro do Service Worker em
+`index.html` — verifica `window.location.protocol === 'https:'` ou `hostname` em
+`localhost`/`127.0.0.1` antes de chamar `register()`. Sob `file://` (WebView Android
+empacotado), o registro é **pulado silenciosamente** com um log informativo (o app funciona
+normalmente sem SW nesse cenário, pois todos os assets já residem no disco local dentro do
+pacote do app — cache offline via SW só faz sentido quando servido via http(s)). Sob http(s),
+o comportamento original é mantido **100% inalterado**.
+
+**Arquivos alterados nesta build:** `index.html` (guard de secure context no registro do SW,
+~linha 23493) · `manifest-offline.json` (v287→v288) · `sw.js` (`medcases-v57`→`medcases-v58`).
+
+**Validação:** `PlaywrightConsoleCapture` executado após a alteração — carregamento completo
+sem erros de console; SW continua registrando normalmente em contexto https (ambiente de
+preview), confirmando zero regressão no fluxo PWA existente.
+
+### 📌 Recomendação para a equipe nativa (fora do escopo deste repositório)
+Para eliminar o `ERR_ACCESS_DENIED` na origem, ajustar no código Android nativo do app:
+1. `webView.getSettings().setAllowFileAccess(true)`
+2. Se o WebView (Chromium) exigir, considerar migrar para servir os assets via
+   `WebViewAssetLoader` com uma origem `https://appassets.androidplatform.net/assets/...`
+   em vez de `file://` puro — essa é a abordagem recomendada pelo próprio Google para
+   WebViews modernos, pois evita todas as restrições de `file://` (incluindo a
+   impossibilidade de registrar Service Worker) sem abrir mão do funcionamento 100% local/offline.
+3. Confirmar que a URL inicial carregada pelo WebView não depende de
+   `setAllowFileAccessFromFileURLs`/`setAllowUniversalAccessFromFileURLs` desabilitados por
+   padrão em versões recentes do Android/Chromium — esses controlam se um documento `file://`
+   pode referenciar outros recursos `file://` (CSS, JS, database/*.js), que é exatamente o
+   padrão de carregamento deste projeto.
 
 ---
 

@@ -97,6 +97,37 @@
     }, delay || 300);
   }
 
+  /* ================================================================
+     BUILD 251 — GUARD ANTI-RACE-CONDITION (Escalabilidade + defer)
+     ----------------------------------------------------------------
+     Com database/*.js agora carregados via `defer` (BUILD 251,
+     index.html), a execução desses scripts é garantida ANTES do
+     DOMContentLoaded — porém este router também roda em
+     DOMContentLoaded (via _ready) e a ORDEM ENTRE DOIS LISTENERS
+     de DOMContentLoaded diferentes segue a ordem de REGISTRO, que
+     por sua vez segue a ordem das tags <script> no documento.
+     Este guard elimina qualquer dependência de ordem implícita:
+     antes de rotear, aguardamos explicitamente window.DRUG_DB
+     estar populado (não vazio) OU um timeout de segurança de 3s,
+     para nunca quebrar um deep link apontando para uma calculadora
+     que dependa de fármacos (ex.: tab=farmacos&q=amiodarona). ── */
+  function _waitForDrugDB(cb, attempts) {
+    attempts = attempts || 0;
+    var ready = Array.isArray(window.DRUG_DB) && window.DRUG_DB.length > 0;
+    if (ready || typeof window._getMasterDB !== 'function') {
+      /* DRUG_DB pronto, OU _getMasterDB ainda nem existe (build sem
+         esse helper) — segue sem travar o app indefinidamente. */
+      cb();
+      return;
+    }
+    if (attempts > 30) { /* ~3s de tolerância máxima */
+      console.warn('[DeepLink] Timeout aguardando DRUG_DB — roteando mesmo assim.');
+      cb();
+      return;
+    }
+    setTimeout(function () { _waitForDrugDB(cb, attempts + 1); }, 100);
+  }
+
   /* ── Aguarda função ficar disponível no window (max 3s) ── */
   function _waitFor(fnName, cb, attempts) {
     attempts = attempts || 0;
@@ -463,12 +494,34 @@
      ORDEM GARANTIDA: lang → tab → q → drug1/drug2
   ================================================================ */
   function _dispatch() {
+    /* BUILD 251 — GUARD: aguarda DRUG_DB consolidado antes de rotear
+       qualquer tab que dependa de busca de fármacos (farmacos,
+       interacoes, infusao etc.). Ver _waitForDrugDB() acima. */
+    _waitForDrugDB(_dispatchInner);
+  }
+
+  function _dispatchInner() {
     var params = new URLSearchParams(window.location.search);
     var langParam = params.get('lang') || '';
     var tab       = _norm(params.get('tab') || '');
     var q         = params.get('q')     || '';
     var drug1     = params.get('drug1') || '';
     var drug2     = params.get('drug2') || '';
+
+    /* BUILD 251 — ESCUDO DO PACIENTE NO DEEPLINK (UX Fix):
+       Ao entrar via deeplink apontando para QUALQUER tab que não
+       seja explicitamente 'paciente'/'patient', garante que o card
+       "Dados do Paciente" comece FECHADO — o foco deve ser
+       exclusivamente o alvo do link, sem o card de paciente
+       abrindo sozinho por cima/junto. */
+    if (tab && tab !== 'paciente' && tab !== 'patient') {
+      _waitForHub(function () {
+        var patientCard = document.getElementById('hub-card-patient');
+        if (patientCard && patientCard.classList.contains('is-open')) {
+          window.HubAccordion.close('patient');
+        }
+      });
+    }
 
     /* ── ETAPA 1: Idioma (sempre primeiro) ── */
     var langApplied = false;
