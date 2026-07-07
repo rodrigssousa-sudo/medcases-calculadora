@@ -230,6 +230,25 @@ const DRUG_ALIASES = {
   "flonorm":                            "rifaximina",
   "rifaximin":                          "rifaximina",
 
+  /* BUILD 281 — Betametasona Lote 5: aliases de nomenclatura */
+  "betamethasone":                      "betametasona",
+  "diprospan":                          "betametasona",
+  "celestone":                          "betametasona",
+  "duoflam":                            "betametasona",
+
+  /* BUILD 281 — Incretinas GLP-1/GIP Lote 5: aliases de nomenclatura */
+  "semaglutide":                        "semaglutida",
+  "ozempic":                            "semaglutida",
+  "wegovy":                             "semaglutida",
+  "rybelsus":                           "semaglutida",
+  "tirzepatide":                        "tirzepatida",
+  "mounjaro":                           "tirzepatida",
+  "zepbound":                           "tirzepatida",
+  "liraglutide":                        "liraglutida",
+  "victoza":                            "liraglutida",
+  "saxenda":                            "liraglutida",
+  "levotiroxine":                       "levotiroxina",
+
   /* BUILD 280 — Corticoides Sistêmicos Lote 4: aliases de nomenclatura */
   "dexamethasone":                      "dexametasona",
   "decadron":                           "dexametasona",
@@ -635,6 +654,13 @@ const DRUG_CLASSES = {
   "$classe_anticoagulantes_orais_diretos": [
     "apixabana", "rivaroxabana", "dabigatrana", "edoxabana",
     "betrixabana"
+  ],
+
+  /* BUILD 281 — Hipoglicemiantes Secretagogos (Sulfonilureias + Glinidas)
+     para interações tirzepatida/semaglutida × hipoglicemia por privação calórica */
+  "$classe_hipoglicemiantes_secretagogos": [
+    "glibenclamida", "glimepirida", "glipizida", "gliclazida",
+    "tolbutamida", "clorpropamida", "repaglinida", "nateglinida"
   ]
 
 };
@@ -18124,6 +18150,111 @@ const INTERACOES_DB = {
       conduta: {
         pt: "A dose de deflazacorte geralmente precisa ser aumentada em 2 a 3 vezes durante o uso concomitante de rifampicina, e monitorada clinicamente pela resposta dos sintomas da doença de base. Após a suspensão da rifampicina, reduzir a dose de deflazacorte gradualmente (ao longo de 2-4 semanas) para evitar superdosagem. Informar o especialista responsável antes de iniciar rifampicina em paciente em uso de deflazacorte.",
         es: "La dosis de deflazacort generalmente necesita aumentarse 2 a 3 veces durante el uso concomitante de rifampicina, y monitorizarse clínicamente por la respuesta de los síntomas de la enfermedad de base. Tras la suspensión de la rifampicina, reducir la dosis de deflazacort gradualmente (a lo largo de 2-4 semanas) para evitar sobredosificación. Informar al especialista responsable antes de iniciar rifampicina en paciente en uso de deflazacort."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 281 — BLOCO MOTOR DE INTERAÇÕES: Betametasona & Incretinas
+     Betametasona · Semaglutida · Tirzepatida · Liraglutida
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── BETAMETASONA ── */
+  "betametasona": {
+    "vacinas_vivas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Corticoides sistêmicos de depósito (Diprospan/Duoflam) causam imunossupressão celular profunda e PROLONGADA — o efeito pode durar 3 a 4 semanas após uma única injeção IM. A administração de vacinas com vírus ou bactérias vivos atenuados (Febre Amarela, MMR/Tríplice Viral, BCG, Varicela) durante este período de imunossupressão pode gerar replicação vacinal descontrolada, resultando em infecção grave, sistêmica e potencialmente fatal pelo próprio agente da vacina.",
+        es: "Los corticoides sistémicos de depósito (Diprospan/Duoflam) causan inmunosupresión celular profunda y PROLONGADA — el efecto puede durar 3 a 4 semanas tras una sola inyección IM. La administración de vacunas con virus o bacterias vivos atenuados (Fiebre Amarilla, MMR/Triple Viral, BCG, Varicela) durante este período de inmunosupresión puede generar replicación vacunal descontrolada, resultando en infección grave, sistémica y potencialmente fatal por el propio agente de la vacuna."
+      },
+      conduta: {
+        pt: "Aguardar ao menos 1 mês após o término estimado do efeito do depósito para administrar qualquer vacina de vírus ou bactéria vivos (ex: Febre Amarela, Tríplice Viral/MMR). Documentar no prontuário a data da aplicação do corticoide de depósito para fins de rastreamento vacinal.",
+        es: "Esperar al menos 1 mes tras el término estimado del efecto del depósito para administrar cualquier vacuna de virus o bacterias vivos (ej: Fiebre Amarilla, Triple Viral/MMR). Documentar en el historial la fecha de aplicación del corticoide de depósito para fines de rastreo vacunal."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo grave na toxicidade gastrointestinal — mecanismos idênticos à associação de qualquer corticoide com AINEs (supressão de prostaglandinas citoprotectoras + inibição COX-1). Particularmente perigoso com a betametasona de depósito: o paciente muitas vezes recebe a injeção de 'Diprospan' para alívio de dor músculo-esquelética e já está em uso crônico de AINEs em casa (ibuprofeno, diclofenaco), sem comunicar ao prescritor. A combinação eleva drasticamente o risco de úlcera péptica hemorrágica.",
+        es: "Sinergismo grave en la toxicidad gastrointestinal — mecanismos idénticos a la asociación de cualquier corticoide con AINEs (supresión de prostaglandinas citoprotectoras + inhibición COX-1). Particularmente peligroso con la betametasona de depósito: el paciente muchas veces recibe la inyección de Diprospan para alivio de dolor músculo-esquelético y ya está en uso crónico de AINEs en casa (ibuprofeno, diclofenaco), sin comunicar al prescriptor. La combinación eleva drásticamente el riesgo de úlcera péptica hemorrágica."
+      },
+      conduta: {
+        pt: "Perguntar ativamente sobre uso de AINEs antes de aplicar betametasona de depósito. Prescrever Inibidor de Bomba de Prótons (IBP) profilático por pelo menos 4 semanas após a injeção de depósito se o paciente usa AINEs cronicamente. Orientar o paciente a suspender o AINE e preferir paracetamol como analgésico alternativo.",
+        es: "Preguntar activamente sobre uso de AINEs antes de aplicar betametasona de depósito. Prescribir Inhibidor de Bomba de Protones (IBP) profiláctico por al menos 4 semanas tras la inyección de depósito si el paciente usa AINEs crónicamente. Orientar al paciente a suspender el AINE y preferir paracetamol como analgésico alternativo."
+      }
+    }
+  },
+
+  /* ── SEMAGLUTIDA ── */
+  "semaglutida": {
+    "insulina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os análogos de GLP-1 isoladamente raramente causam hipoglicemia (estimulam insulina de forma GLICOSE-DEPENDENTE — param de agir quando a glicemia normaliza). Contudo, a semaglutida induz rápida supressão do apetite e restrição calórica severa, reduzindo drasticamente a ingestão alimentar. Se o paciente já usa insulina basal exógena ou sulfonilureias (que liberam insulina independentemente da glicose), essa combinação de 'menos combustível + mais insulina basal' cria um risco extremo de hipoglicemia grave, convulsões e coma — especialmente nos primeiros 2 meses de uso.",
+        es: "Los análogos de GLP-1 aisladamente raramente causan hipoglucemia (estimulan insulina de forma GLUCOSA-DEPENDIENTE — dejan de actuar cuando la glucemia se normaliza). Sin embargo, la semaglutida induce rápida supresión del apetito y restricción calórica severa, reduciendo drásticamente la ingesta alimentaria. Si el paciente ya usa insulina basal exógena o sulfonilureas (que liberan insulina independientemente de la glucosa), esa combinación de 'menos combustible + más insulina basal' crea un riesgo extremo de hipoglucemia grave, convulsiones y coma — especialmente en los primeros 2 meses de uso."
+      },
+      conduta: {
+        pt: "As doses de insulina basal (NPH, Glargina, Degludeca) DEVEM ser reduzidas empiricamente em 20% a 50% na semana em que se inicia a semaglutida, antecipando a restrição calórica. O mesmo se aplica às sulfonilureias: reduzir dose pela metade ou suspender. Monitorar glicemia capilar diariamente nas primeiras 4 semanas. Instruir o paciente e familiares sobre sinais de hipoglicemia e uso do glucagon de emergência.",
+        es: "Las dosis de insulina basal (NPH, Glargina, Degludeca) DEBEN reducirse empíricamente en 20% a 50% en la semana en que se inicia la semaglutida, anticipando la restricción calórica. Lo mismo se aplica a las sulfonilureas: reducir dosis a la mitad o suspender. Monitorear glucemia capilar diariamente en las primeras 4 semanas. Instruir al paciente y familiares sobre signos de hipoglucemia y uso del glucagón de emergencia."
+      }
+    },
+    "levotiroxina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Interação farmacocinética mecânica indireta. A levotiroxina oral exige absorção duodenal/jejunal imediata no jejum — é extremamente sensível a qualquer fator que retarde o esvaziamento gástrico. A semaglutida induz retardo do esvaziamento gástrico de forma dose-dependente (até 70-80% de redução na taxa de esvaziamento nas doses altas). Este retardo pode alterar significativamente o pico e a extensão da absorção da levotiroxina, resultando em flutuações imprevisíveis do TSH — alguns pacientes apresentam hipotireoidismo relativo, outros são assintomáticos.",
+        es: "Interacción farmacocinética mecánica indirecta. La levotiroxina oral exige absorción duodenal/yeyunal inmediata en ayunas — es extremadamente sensible a cualquier factor que retrase el vaciamiento gástrico. La semaglutida induce retraso del vaciamiento gástrico de forma dosis-dependiente (hasta 70-80% de reducción en la tasa de vaciamiento en las dosis altas). Este retraso puede alterar significativamente el pico y la extensión de la absorción de la levotiroxina, resultando en fluctuaciones impredecibles del TSH — algunos pacientes presentan hipotiroidismo relativo, otros son asintomáticos."
+      },
+      conduta: {
+        pt: "Monitorar TSH e T4 livre 6 a 8 semanas após atingir cada nova dose-alvo da semaglutida (especialmente ao passar de 0,5 para 1,0 mg e ao chegar a doses de Wegovy). Ajustar a dose de levotiroxina conforme os resultados do TSH. Orientar a paciente a manter o intervalo de 30 minutos em jejum para a levotiroxina e não alterá-lo.",
+        es: "Monitorear TSH y T4 libre 6 a 8 semanas tras alcanzar cada nueva dosis objetivo de la semaglutida (especialmente al pasar de 0,5 a 1,0 mg y al llegar a dosis de Wegovy). Ajustar la dosis de levotiroxina según los resultados del TSH. Orientar a la paciente a mantener el intervalo de 30 minutos en ayunas para la levotiroxina y no alterarlo."
+      }
+    }
+  },
+
+  /* ── TIRZEPATIDA ── */
+  "tirzepatida": {
+    "anticoncepcional_hormonal": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Interação descrita explicitamente na bula da tirzepatida (Mounjaro/Zepbound). O retardo maciço do esvaziamento gástrico induzido pela ativação dual GIP+GLP-1 é mais pronunciado nas primeiras 4 semanas de uso e nas 4 semanas seguintes a qualquer elevação de dose. Neste período, o pico de Cmax dos contraceptivos orais (etinilestradiol + progestágenos) é reduzido em até 30-40%, comprometendo a eficácia anticoncepcional e resultando em risco real de gravidez não planejada — que é contraindicada pela própria tirzepatida.",
+        es: "Interacción descrita explícitamente en el prospecto de tirzepatida (Mounjaro/Zepbound). El retraso masivo del vaciamiento gástrico inducido por la activación dual GIP+GLP-1 es más pronunciado en las primeras 4 semanas de uso y en las 4 semanas siguientes a cualquier elevación de dosis. En este período, el pico de Cmax de los anticonceptivos orales (etinilestradiol + progestágenos) se reduce hasta un 30-40%, comprometiendo la eficacia anticonceptiva y resultando en riesgo real de embarazo no planificado — que está contraindicado por la propia tirzepatida."
+      },
+      conduta: {
+        pt: "A paciente DEVE obrigatoriamente: (1) Trocar para método anticoncepcional não oral (adesivo transdérmico, injetável, DIU hormonal ou DIU de cobre, implante subcutâneo); OU (2) Usar preservativo masculino ou feminino como método de barreira simultâneo durante as 4 semanas pós-início e as 4 semanas pós qualquer escalada de dose. Documentar o aconselhamento no prontuário.",
+        es: "La paciente DEBE obligatoriamente: (1) Cambiar a método anticonceptivo no oral (parche transdérmico, inyectable, DIU hormonal o DIU de cobre, implante subcutáneo); O (2) Usar preservativo masculino o femenino como método de barrera simultáneo durante las 4 semanas pos inicio y las 4 semanas pos cualquier escalonada de dosis. Documentar el asesoramiento en el historial."
+      }
+    },
+    "$classe_hipoglicemiantes_secretagogos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "As sulfonilureias (glibenclamida, glimepirida, gliclazida) e as glinidas (repaglinida, nateglinida) estimulam a secreção pancreática de insulina de forma INDEPENDENTE da glicose (mecanismo: fechamento de canais K+ATP nas células beta). O uso conjunto com tirzepatida cria um perigoso sinergismo: a tirzepatida suprime o apetite e reduz a ingestão calórica, enquanto as sulfonilureias continuam liberando insulina — resultando em hipoglicemia grave, especialmente noturna (quando o paciente está em jejum prolongado induzido pela saciedade extrema da incretina).",
+        es: "Las sulfonilureas (glibenclamida, glimepirida, gliclazida) y las glinidas (repaglinida, nateglinida) estimulan la secreción pancreática de insulina de forma INDEPENDIENTE de la glucosa (mecanismo: cierre de canales K+ATP en células beta). El uso conjunto con tirzepatida crea un peligroso sinergismo: la tirzepatida suprime el apetito y reduce la ingesta calórica, mientras las sulfonilureas continúan liberando insulina — resultando en hipoglucemia grave, especialmente nocturna (cuando el paciente está en ayuno prolongado inducido por la saciedad extrema de la incretina)."
+      },
+      conduta: {
+        pt: "Descontinuar a sulfonilureia ou reduzir empiricamente a dose pela metade no ato de iniciar a tirzepatida. Na maioria dos pacientes com DM2 bem controlados, a tirzepatida isoladamente é suficiente para o controle glicêmico, tornando a sulfonilureia desnecessária. Monitorar glicemia capilar diariamente nas primeiras 4-8 semanas. Instruir o paciente sobre sinais/sintomas de hipoglicemia.",
+        es: "Descontinuar la sulfonilurea o reducir empíricamente la dosis a la mitad al iniciar la tirzepatida. En la mayoría de los pacientes con DM2 bien controlados, la tirzepatida aisladamente es suficiente para el control glucémico, haciendo la sulfonilurea innecesaria. Monitorear glucemia capilar diariamente en las primeras 4-8 semanas. Instruir al paciente sobre signos/síntomas de hipoglucemia."
+      }
+    }
+  },
+
+  /* ── LIRAGLUTIDA ── */
+  "liraglutida": {
+    "insulina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Mecanismo idêntico ao da semaglutida e tirzepatida: risco elevado de hipoglicemia grave pela combinação de supressão calórica intensa (liraglutida reduz a ingestão alimentar em ~20-30%) com a presença de insulina basal exógena no sangue que age independentemente da glicemia. O risco é proporcional à dose de insulina basal e à aderência do paciente à dieta hipocalórica induzida pela liraglutida. A hipoglicemia noturna é a mais perigosa.",
+        es: "Mecanismo idéntico al de la semaglutida y tirzepatida: riesgo elevado de hipoglucemia grave por la combinación de supresión calórica intensa (liraglutida reduce la ingesta alimentaria en ~20-30%) con la presencia de insulina basal exógena en sangre que actúa independientemente de la glucemia. El riesgo es proporcional a la dosis de insulina basal y a la adherencia del paciente a la dieta hipocalórica inducida por la liraglutida. La hipoglucemia nocturna es la más peligrosa."
+      },
+      conduta: {
+        pt: "Reduzir empiricamente a dose de insulina basal e/ou sulfonilureia em 20-30% no ato de iniciar a liraglutida. Monitorar glicemia capilar, especialmente pré-jantar e às 3h da madrugada nas primeiras 4 semanas. Reduzir progressivamente à medida que o controle glicêmico melhora com a incretina. Não aguardar hipoglicemia para ajustar — a redução deve ser PROATIVA.",
+        es: "Reducir empíricamente la dosis de insulina basal y/o sulfonilurea en 20-30% al iniciar la liraglutida. Monitorear glucemia capilar, especialmente pre-cena y a las 3h de la madrugada en las primeras 4 semanas. Reducir progresivamente a medida que el control glucémico mejora con la incretina. No esperar hipoglucemia para ajustar — la reducción debe ser PROACTIVA."
       }
     }
   }

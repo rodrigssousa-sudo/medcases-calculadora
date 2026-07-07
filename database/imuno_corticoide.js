@@ -239,6 +239,64 @@ window.IMUNO_CORTICOIDE_DRUGS_DB = [
       warning: { pt: 'Substituto excelente da prednisona para pacientes que precisam de corticoide crônico, mas que possuem osteoporose avançada ou diabetes melitus de difícil controle.', es: 'Sustituto excelente de la prednisona para pacientes que necesitan corticoide crónico, pero que poseen osteoporosis avanzada o diabetes mellitus de difícil control.' }
     },
     ref: 'Biggar WD et al. Ann Neurol 2006 · Bello L et al. Neurology 2015 · Reeves JD et al. Clin Rheumatol 1999 · Lexicomp 2026'
+  },
+
+  /* ══════════════════════════════════════════════════════════════
+     5. BETAMETASONA
+     Corticoide Ação Longa / Depósito — Maturação Pulmonar Fetal · Infiltração
+     BUILD 281 — Lote 5
+  ══════════════════════════════════════════════════════════════ */
+  {
+    id: 'betametasona',
+    name: { pt: 'Betametasona', es: 'Betametasona' },
+    category: 'imuno_corticoide',
+    class: { pt: 'Corticosteroide Sistêmico (Ação Longa / Alta Potência)', es: 'Corticosteroide Sistémico (Acción Larga / Alta Potencia)' },
+    indications: {
+      pt: ['Maturação pulmonar fetal na iminência de parto prematuro', 'Alergias graves e reações anafiláticas', 'Infiltração intra-articular'],
+      es: ['Maduración pulmonar fetal en inminencia de parto prematuro', 'Alergias graves y reacciones anafilácticas', 'Infiltración intraarticular']
+    },
+    commercialNames: { br: ['Celestone', 'Diprospan (Injetável de Depósito)'], ar: ['Celestone', 'Cronocorteroid'] },
+    presentation: {
+      pt: ['Ampolas IM/IV 4 mg/mL', 'Suspensão de depósito IM (Dipropionato + Fosfato) 5mg+2mg/mL', 'Comprimidos 2 mg', 'Gotas 0,5 mg/mL'],
+      es: ['Ampollas IM/IV 4 mg/mL', 'Suspensión de depósito IM (Dipropionato + Fosfato) 5mg+2mg/mL', 'Comprimidos 2 mg', 'Gotas 0,5 mg/mL']
+    },
+    mechanism: {
+      pt: 'Glicocorticoide sintético de ação prolongada, isômero da dexametasona. Não possui atividade mineralocorticoide. A formulação de depósito (Diprospan) combina um éster de absorção imediata com outro de absorção ultra-lenta, garantindo efeito por até 3 a 4 semanas com uma única injeção IM. Na obstetrícia, cruza a barreira placentária para induzir a produção de surfactante nos pulmões fetais.',
+      es: 'Glucocorticoide sintético de acción prolongada, isómero de la dexametasona. No posee actividad mineralocorticoide. La formulación de depósito combina un éster de absorción inmediata con otro de absorción ultralenta, garantizando efecto por hasta 3 a 4 semanas con una sola inyección IM. En obstetricia, cruza la barrera placentaria para inducir la producción de surfactante en los pulmones fetales.'
+    },
+    dose: {
+      adult: {
+        pt: 'Maturação Pulmonar Fetal: 12 mg IM profundo a cada 24 horas (total de 2 doses). Anti-inflamatório (Diprospan): 1 a 2 mL IM profundo, dose única.',
+        es: 'Maduración Pulmonar Fetal: 12 mg IM profundo cada 24 horas (total de 2 dosis). Antiinflamatorio (Depósito): 1 a 2 mL IM profundo, dosis única.'
+      },
+      pediatric: {
+        pt: 'Geralmente 0,02 a 0,3 mg/kg/dia (fracionado ou dose única). Evitar formulações de depósito em crianças pequenas.',
+        es: 'Generalmente 0,02 a 0,3 mg/kg/día (fraccionado o dosis única). Evitar formulaciones de depósito en niños pequeños.'
+      }
+    },
+    administration: {
+      pt: ['A formulação de depósito (Diprospan/Duoflam) NUNCA deve ser aplicada por via IV (risco de embolia e morte). Apenas IM profunda ou intra-articular.'],
+      es: ['La formulación de depósito NUNCA debe aplicarse por vía IV (riesgo de embolia y muerte). Solo IM profunda o intraarticular.']
+    },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Metabolizado no fígado; efeito pode ser prolongado na insuficiência hepática.', es: 'Metabolizado en el hígado; el efecto puede ser prolongado en insuficiencia hepática.' } },
+    commonAdverseEffects: {
+      pt: ['Irregularidade menstrual', 'Insônia transitória', 'Aumento da glicemia (persistente por semanas na forma de depósito)'],
+      es: ['Irregularidad menstrual', 'Insomnio transitorio', 'Aumento de la glucemia (persistente por semanas en la forma de depósito)']
+    },
+    dangerousAdverseEffects: {
+      pt: ['Atrofia muscular e cutânea', 'Supressão prolongada do eixo HPA (com uso de depósito)', 'Infecções oportunistas', 'Osteonecrose'],
+      es: ['Atrofia muscular y cutánea', 'Supresión prolongada del eje HPA (con uso de depósito)', 'Infecciones oportunistas', 'Osteonecrosis']
+    },
+    contraindications: {
+      absolute: { pt: ['Infecções sistêmicas ativas', 'Administração IV de formulações leitosas (suspensão de depósito)'], es: ['Infecciones sistémicas activas', 'Administración IV de formulaciones lechosas (suspensión de depósito)'] },
+      relative: { pt: ['Diabetes Mellitus descompensada', 'Hipertensão grave'], es: ['Diabetes Mellitus descompensada', 'Hipertensión grave'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+      warning: { pt: 'CUIDADO ENDÓCRINO: A aplicação de 1 ampola de corticoide de depósito descompensa o diabetes por semanas, exigindo reajuste prolongado da insulina. Não banalizar o uso para dores simples.', es: 'CUIDADO ENDOCRINO: La aplicación de 1 ampolla de corticoide de depósito descompensa la diabetes por semanas, exigiendo reajuste prolongado de la insulina. No banalizar el uso para dolores simples.' }
+    },
+    ref: 'Roberts D et al. (ACTORDS) Cochrane 2017 · Crowther CA & Harding JE. N Engl J Med 2011 · ACR Guidelines 2022 · Lexicomp 2026'
   }
 
 ]; /* fim window.IMUNO_CORTICOIDE_DRUGS_DB */
