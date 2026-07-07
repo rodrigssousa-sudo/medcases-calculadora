@@ -228,7 +228,19 @@ const DRUG_ALIASES = {
   "tiorfan":                            "racecadotril",
   "avide":                              "racecadotril",
   "flonorm":                            "rifaximina",
-  "rifaximin":                          "rifaximina"
+  "rifaximin":                          "rifaximina",
+
+  /* BUILD 280 — Corticoides Sistêmicos Lote 4: aliases de nomenclatura */
+  "dexamethasone":                      "dexametasona",
+  "decadron":                           "dexametasona",
+  "dexametazona":                       "dexametasona",
+  "prednisone":                         "prednisona",
+  "meticorten":                         "prednisona",
+  "prednisolone":                       "prednisolona",
+  "prelone":                            "prednisolona",
+  "deflazacort":                        "deflazacorte",
+  "calcort":                            "deflazacorte",
+  "azacortid":                          "deflazacorte"
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -616,6 +628,13 @@ const DRUG_CLASSES = {
   "$classe_bloqueadores_neuromusculares": [
     "rocuronio", "cisatracurio", "vecuronio", "atracurio",
     "pancuronio", "mivacurio"
+  ],
+
+  /* BUILD 280 — DOACs (Anticoagulantes Orais Diretos) — subclasse para
+     interação dexametasona×indução CYP3A4/P-gp com risco de trombose */
+  "$classe_anticoagulantes_orais_diretos": [
+    "apixabana", "rivaroxabana", "dabigatrana", "edoxabana",
+    "betrixabana"
   ]
 
 };
@@ -17964,6 +17983,147 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Uso obrigatório de IBP (de preferência pantoprazol em cardiopatas) como gastroproteção enquanto durar a terapia dupla corticoide + AINE. Avaliar substituição do AINE por paracetamol para analgesia/antipirexia. Atentar para sinais de sangramento oculto (hematócrito em queda, melena).",
         es: "Uso obligatorio de IBP (preferiblemente pantoprazol en cardiópatas) como gastroprotección mientras dure la terapia doble corticoide + AINE. Evaluar sustitución del AINE por paracetamol para analgesia/antipiréxia. Atender signos de sangrado oculto (hematocrito en descenso, melena)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 280 — BLOCO MOTOR DE INTERAÇÕES: Corticoides Sistêmicos
+     Dexametasona · Prednisona · Prednisolona · Deflazacorte
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── DEXAMETASONA ── */
+  "dexametasona": {
+    "vacinas_vivas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A dexametasona é um imunossupressor potente de ação longa (meia-vida 36-54h). A administração de vacinas de vírus ou bactérias atenuados vivos (Febre Amarela, MMR/Tríplice Viral, BCG, Varicela, Rotavírus, Poliomielite oral) durante tratamento com doses imunossupressoras pode gerar replicação viral/bacteriana descontrolada — resultando em infecção grave, sistêmica e potencialmente fatal pelo próprio agente vacinal atenuado.",
+        es: "La dexametasona es un inmunosupresor potente de acción larga (vida media 36-54h). La administración de vacunas de virus o bacterias atenuados vivos (Fiebre Amarilla, MMR/Triple Viral, BCG, Varicela, Rotavirus, Poliomielitis oral) durante tratamiento con dosis inmunosupresoras puede generar replicación viral/bacteriana descontrolada — resultando en infección grave, sistémica y potencialmente fatal por el propio agente vacunal atenuado."
+      },
+      conduta: {
+        pt: "Contraindicado se o paciente estiver em uso de doses imunossupressoras (> 20 mg/dia de prednisona equivalente por > 14 dias). Aguardar pelo menos 1 mês após a suspensão do corticoide para vacinas de vírus vivo em adultos. Para doses baixas (< 20 mg/dia por < 2 semanas), o risco é mínimo e a vacinação pode ser considerada.",
+        es: "Contraindicado si el paciente está en uso de dosis inmunosupresoras (> 20 mg/día de prednisona equivalente por > 14 días). Esperar al menos 1 mes tras la suspensión del corticoide para vacunas de virus vivo en adultos. Para dosis bajas (< 20 mg/día por < 2 semanas), el riesgo es mínimo y la vacunación puede ser considerada."
+      }
+    },
+    "$classe_anticoagulantes_orais_diretos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A dexametasona é um INDUTOR da P-glicoproteína (P-gp) e do CYP3A4 — as duas principais vias de metabolismo e eliminação dos DOACs (Anticoagulantes Orais Diretos: Rivaroxabana, Apixabana, Dabigatrana, Edoxabana). A indução enzimática acelera a eliminação plasmática dos DOACs, reduzindo significativamente seus níveis e sua eficácia anticoagulante. O paciente oncológico frequentemente recebe dexametasona (antiemético da quimioterapia) concomitantemente ao DOAC prescrito para prevenção de TEV, ficando sem proteção anticoagulante adequada.",
+        es: "La dexametasona es un INDUCTOR de la P-glicoproteína (P-gp) y del CYP3A4 — las dos principales vías de metabolismo y eliminación de los DOACs (Anticoagulantes Orales Directos: Rivaroxabán, Apixabán, Dabigatrán, Edoxabán). La inducción enzimática acelera la eliminación plasmática de los DOACs, reduciendo significativamente sus niveles y su eficacia anticoagulante. El paciente oncológico frecuentemente recibe dexametasona (antiemético de quimioterapia) concomitantemente al DOAC prescrito para prevención de TEV, quedando sin protección anticoagulante adecuada."
+      },
+      conduta: {
+        pt: "Evitar uso associado prolongado. No contexto oncológico com alto risco tromboembólico (câncer ativo + quimioterapia), considerar substituição do DOAC por Heparina de Baixo Peso Molecular (HBPM — enoxaparina) enquanto durar o ciclo com dexametasona em doses altas. Se uso esporádico (antiemético em dose única), o impacto clínico é mínimo.",
+        es: "Evitar uso asociado prolongado. En el contexto oncológico con alto riesgo tromboembólico (cáncer activo + quimioterapia), considerar sustitución del DOAC por Heparina de Bajo Peso Molecular (HBPM — enoxaparina) mientras dure el ciclo con dexametasona en dosis altas. Si uso esporádico (antiemético en dosis única), el impacto clínico es mínimo."
+      }
+    },
+    "$classe_fluoroquinolonas": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A combinação de corticosteroides sistêmicos (dexametasona) e fluoroquinolonas (ciprofloxacino, levofloxacino, moxifloxacino) multiplica sinergicamente o risco de RUPTURA DE TENDÃO — especialmente do tendão de Aquiles, mas também do tendão do quadríceps e do manguito rotador. Mecanismo: fluoroquinolonas inibem a síntese de colágeno tipo I pelos tenócitos E aumentam a atividade das metaloproteinases de matriz (MMPs); os corticoides reduzem a síntese de colágeno E inibem a proliferação fibroblástica. O risco é muito maior em idosos (> 60 anos), pacientes com IRC, e transplantados renais.",
+        es: "La combinación de corticosteroides sistémicos (dexametasona) y fluoroquinolonas (ciprofloxacino, levofloxacino, moxifloxacino) multiplica sinérgicamente el riesgo de ROTURA DE TENDÓN — especialmente el tendón de Aquiles, pero también del tendón del cuádriceps y del manguito rotador. Mecanismo: las fluoroquinolonas inhiben la síntesis de colágeno tipo I por los tenocitos Y aumentan la actividad de las metaloproteinasas de matriz (MMPs); los corticoides reducen la síntesis de colágeno E inhiben la proliferación fibroblástica. El riesgo es mucho mayor en ancianos (> 60 años), pacientes con IRC y trasplantados renales."
+      },
+      conduta: {
+        pt: "Evitar a associação sempre que possível, especialmente em idosos e nefropatas. Se inevitável, alertar o paciente sobre dor, edema ou estalos em qualquer tendão e interromper imediatamente a fluoroquinolona ao primeiro sinal. Evitar atividade física intensa durante o tratamento combinado. Considerar alternativa antibiótica (beta-lactâmico, azitromicina) se clinicamente possível.",
+        es: "Evitar la asociación siempre que sea posible, especialmente en ancianos y nefropatas. Si inevitable, alertar al paciente sobre dolor, edema o crujidos en cualquier tendón e interrumpir inmediatamente la fluoroquinolona al primer signo. Evitar actividad física intensa durante el tratamiento combinado. Considerar alternativa antibiótica (betalactámico, azitromicina) si es clínicamente posible."
+      }
+    }
+  },
+
+  /* ── PREDNISONA ── */
+  "prednisona": {
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo grave na agressão gastrointestinal — os mecanismos são distintos e aditivos. Os corticoides reduzem a síntese de prostaglandinas citoprotectoras da mucosa gástrica (PGE2, PGI2) e diminuem a proliferação do epitélio de reparo. Os AINEs inibem diretamente a COX-1 constitutiva da mucosa, suprimindo a produção de muco e bicarbonato protetores. A associação crónica aumenta o risco de úlceras pépticas complicadas (sangramento, perfuração) em mais de 10 vezes, com especial risco em idosos, nefropatas e portadores de H. pylori.",
+        es: "Sinergismo grave en la agresión gastrointestinal — los mecanismos son distintos y aditivos. Los corticoides reducen la síntesis de prostaglandinas citoprotectoras de la mucosa gástrica (PGE2, PGI2) y disminuyen la proliferación del epitelio de reparación. Los AINEs inhiben directamente la COX-1 constitutiva de la mucosa, suprimiendo la producción de moco y bicarbonato protectores. La asociación crónica aumenta el riesgo de úlceras pépticas complicadas (sangrado, perforación) en más de 10 veces, con especial riesgo en ancianos, nefropatas y portadores de H. pylori."
+      },
+      conduta: {
+        pt: "Associação muito comum em reumatologia e pneumologia ambulatorial. Profilaxia com Inibidor de Bomba de Prótons (IBP) é OBRIGATÓRIA enquanto durar a terapia dupla. Preferir pantoprazol em pacientes em uso de antiagregantes (menor interação CYP2C19 vs. omeprazol). Rastrear H. pylori e tratar se positivo antes de iniciar a corticoterapia crônica.",
+        es: "Asociación muy común en reumatología y neumología ambulatoria. La profilaxis con Inhibidor de Bomba de Protones (IBP) es OBLIGATORIA mientras dure la terapia doble. Preferir pantoprazol en pacientes en uso de antiagregantes (menor interacción CYP2C19 vs. omeprazol). Rastrear H. pylori y tratar si positivo antes de iniciar la corticoterapia crónica."
+      }
+    },
+    "$classe_diureticos_alca": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo na hipocalemia por mecanismos complementares. A prednisona possui leve atividade mineralocorticoide residual que estimula a reabsorção de sódio e a excreção de potássio no túbulo coletor renal. Os diuréticos de alça (furosemida, bumetanida, torasemida) bloqueiam o cotransportador Na-K-2Cl na alça de Henle, aumentando massivamente a excreção de potássio. A combinação pode precipitar hipocalemia grave (K+ < 2,5-3,0 mEq/L) com fraqueza muscular, paralisia e arritmias ventriculares potencialmente fatais.",
+        es: "Sinergismo en la hipopotasemia por mecanismos complementarios. La prednisona posee leve actividad mineralocorticoide residual que estimula la reabsorción de sodio y la excreción de potasio en el túbulo colector renal. Los diuréticos de asa (furosemida, bumetanida, torasemida) bloquean el cotransportador Na-K-2Cl en el asa de Henle, aumentando masivamente la excreción de potasio. La combinación puede precipitar hipopotasemia grave (K+ < 2,5-3,0 mEq/L) con debilidad muscular, parálisis y arritmias ventriculares potencialmente fatales."
+      },
+      conduta: {
+        pt: "Monitoramento de potássio sérico (a cada 1-2 semanas no início do tratamento combinado). Reposição oral rotineira de cloreto de potássio (KCl VO) quando K+ < 3,5 mEq/L. Considerar adição de diurético poupador de potássio (espironolactona) se hipocalemia recorrente. Orientar dieta rica em potássio (banana, abacate, batata).",
+        es: "Monitorización de potasio sérico (cada 1-2 semanas al inicio del tratamiento combinado). Reposición oral rutinaria de cloruro de potasio (KCl VO) cuando K+ < 3,5 mEq/L. Considerar adición de diurético ahorrador de potasio (espironolactona) si hipopotasemia recurrente. Orientar dieta rica en potasio (plátano, aguacate, patata)."
+      }
+    },
+    "insulina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Ação hiperglicemiante agressiva e dose-dependente dos corticoides sistêmicos. A prednisona estimula intensamente a gliconeogênese hepática (produção de nova glicose a partir de aminoácidos e glicerol) e induz resistência insulínica tecidual periférica (reduz a translocação do GLUT-4 nas células musculares e adiposas). O efeito hiperglicêmico dos corticoides é característico e geralmente mais pronunciado no período pós-prandial e vespertino (padrão de 'hiperglicemia esteroide pós-prandial'), podendo elevar a HbA1c e descompensar o diabético previamente controlado.",
+        es: "Acción hiperglucemiante agresiva y dosis-dependiente de los corticoides sistémicos. La prednisona estimula intensamente la gluconeogénesis hepática (producción de nueva glucosa a partir de aminoácidos y glicerol) e induce resistencia insulínica tisular periférica (reduce la translocación del GLUT-4 en células musculares y adiposas). El efecto hiperglucémico de los corticoides es característico y generalmente más pronunciado en el período postprandial y vespertino (patrón de 'hiperglucemia esteroide postprandial'), pudiendo elevar la HbA1c y descompensar al diabético previamente controlado."
+      },
+      conduta: {
+        pt: "Pacientes diabéticos em uso de prednisona frequentemente necessitam aumentar progressivamente as doses de insulina basal e rápida (especialmente a cobertura prandial do almoço e jantar). Monitorar a glicemia capilar no mínimo 2 a 4x/dia enquanto durar a corticoterapia. Reduzir gradualmente a insulina ao desmamar o corticoide para evitar hipoglicemia. Acompanhamento endocrinológico é vital em diabetes descompensada.",
+        es: "Pacientes diabéticos en uso de prednisona frecuentemente necesitan aumentar progresivamente las dosis de insulina basal y rápida (especialmente la cobertura prandial del almuerzo y cena). Monitorear la glucemia capilar como mínimo 2 a 4 veces/día mientras dure la corticoterapia. Reducir gradualmente la insulina al destetar el corticoide para evitar hipoglucemia. El seguimiento endocrinológico es vital en diabetes descompensada."
+      }
+    }
+  },
+
+  /* ── PREDNISOLONA ── */
+  "prednisolona": {
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo grave na agressão gastrointestinal — idêntico mecanismo à prednisona. Os corticoides suprimem as prostaglandinas citoprotectoras da mucosa gástrica e os AINEs inibem diretamente a COX-1. O risco de úlcera péptica hemorrágica e perfuração é clinicamente muito relevante, especialmente em pediatria (quando associado a ibuprofeno para febre).",
+        es: "Sinergismo grave en la agresión gastrointestinal — mecanismo idéntico al de la prednisona. Los corticoides suprimen las prostaglandinas citoprotectoras de la mucosa gástrica y los AINEs inhiben directamente la COX-1. El riesgo de úlcera péptica hemorrágica y perforación es clínicamente muy relevante, especialmente en pediatría (cuando se asocia ibuprofeno para fiebre)."
+      },
+      conduta: {
+        pt: "Proteção gástrica obrigatória se terapia conjunta em adultos (IBP). Em pediatria, evitar uso concomitante de prednisolona e ibuprofeno quando possível — preferir paracetamol para controle de febre durante o curso de prednisolona.",
+        es: "Protección gástrica obligatoria si terapia conjunta en adultos (IBP). En pediatría, evitar uso concomitante de prednisolona e ibuprofeno cuando sea posible — preferir paracetamol para control de fiebre durante el curso de prednisolona."
+      }
+    },
+    "vacinas_vivas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Prednisolona em doses sistêmicas imunossupressoras (> 2 mg/kg/dia em crianças, ou > 20 mg/dia em adultos, por mais de 14 dias consecutivos) inibe a resposta imune celular e humoral de forma suficiente para impedir o controle da replicação dos agentes vacinais vivos atenuados. Vacinas de vírus vivos (Poliomielite oral Sabin, BCG, Varicela, MMR/SCR, Febre Amarela) podem causar infecção fulminante sistêmica em pacientes imunodeprimidos.",
+        es: "Prednisolona en dosis sistémicas inmunosupresoras (> 2 mg/kg/día en niños, o > 20 mg/día en adultos, por más de 14 días consecutivos) inhibe la respuesta inmune celular y humoral de forma suficiente para impedir el control de la replicación de los agentes vacunales vivos atenuados. Vacunas de virus vivos (Poliomielitis oral Sabin, BCG, Varicela, MMR/SCR, Fiebre Amarilla) pueden causar infección fulminante sistémica en pacientes inmunosuprimidos."
+      },
+      conduta: {
+        pt: "Não aplicar nenhuma vacina de vírus ou bactéria vivo (Poliomielite oral, BCG, Varicela, MMR, Febre Amarela) enquanto o paciente estiver em dose imunossupressora. Idealmente vacinar ANTES do início da corticoterapia crônica. Após a suspensão: aguardar 1 mês para doses baixas/curtas; aguardar 3 meses para doses altas/longas.",
+        es: "No aplicar ninguna vacuna de virus o bacteria vivo (Poliomielitis oral, BCG, Varicela, MMR, Fiebre Amarilla) mientras el paciente esté en dosis inmunosupresora. Idealmente vacunar ANTES del inicio de la corticoterapia crónica. Tras la suspensión: esperar 1 mes para dosis bajas/cortas; esperar 3 meses para dosis altas/largas."
+      }
+    }
+  },
+
+  /* ── DEFLAZACORTE ── */
+  "deflazacorte": {
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O metabólito ativo do deflazacorte (21-desacetil-deflazacorte) é quase que exclusivamente metabolizado pelo citocromo CYP3A4. Os inibidores potentes do CYP3A4 (Claritromicina, Eritromicina e também azólicos antifúngicos como itraconazol) bloqueiam esta via metabólica, causando acúmulo exponencial do corticoide ativo no plasma. Os níveis podem dobrar ou triplicar, gerando intensificação dramática dos efeitos do corticoide: hiperglicemia grave, imunossupressão excessiva (risco infeccioso), Síndrome de Cushing iatrogênica, e supressão adrenal acelerada.",
+        es: "El metabolito activo del deflazacort (21-desacetil-deflazacort) es metabolizado casi exclusivamente por el citocromo CYP3A4. Los inhibidores potentes del CYP3A4 (Claritromicina, Eritromicina y también azólicos antifúngicos como itraconazol) bloquean esta vía metabólica, causando acumulación exponencial del corticoide activo en el plasma. Los niveles pueden doblarse o triplicarse, generando intensificación dramática de los efectos del corticoide: hiperglucemia grave, inmunosupresión excesiva (riesgo infeccioso), Síndrome de Cushing iatrogénico, y supresión adrenal acelerada."
+      },
+      conduta: {
+        pt: "Evitar uso prolongado destes antibióticos concomitantemente ao deflazacorte. Se o curso do macrolídeo for curto (≤ 5 dias), monitorar sinais de toxicidade corticoide (glicemia, pressão, agitação). Se contínuo ou recorrente, reduzir empiricamente a dose do deflazacorte em 30-50% e ajustar por sintomas. Considerar troca para azitromicina (não inibe CYP3A4 de forma significativa).",
+        es: "Evitar uso prolongado de estos antibióticos concomitantemente al deflazacort. Si el curso del macrólido es corto (≤ 5 días), monitorizar signos de toxicidad corticoide (glucemia, presión, agitación). Si continuo o recurrente, reducir empíricamente la dosis del deflazacort en 30-50% y ajustar por síntomas. Considerar cambio a azitromicina (no inhibe CYP3A4 de forma significativa)."
+      }
+    },
+    "rifampicina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A rifampicina é um dos indutores enzimáticos mais potentes do CYP3A4 conhecidos na farmacologia clínica. Ela reduz drasticamente os níveis plasmáticos do metabólito ativo do deflazacorte em até 3-5 vezes (efeito indutor completo em 7-14 dias e persistindo por semanas após a suspensão da rifampicina). O paciente em tratamento de doença grave e crônica com deflazacorte (ex: Distrofia Muscular de Duchenne, doenças reumatológicas) verá a droga se tornar praticamente inativa durante o ciclo antituberculoso ou antileprótico, levando à exacerbação e reativação da doença de base.",
+        es: "La rifampicina es uno de los inductores enzimáticos más potentes del CYP3A4 conocidos en farmacología clínica. Reduce drásticamente los niveles plasmáticos del metabolito activo del deflazacort en hasta 3-5 veces (efecto inductor completo en 7-14 días y persistiendo por semanas tras la suspensión de la rifampicina). El paciente en tratamiento de enfermedad grave y crónica con deflazacort (ej: Distrofia Muscular de Duchenne, enfermedades reumatológicas) verá la droga volverse prácticamente inactiva durante el ciclo antituberculoso o antileprótico, llevando a la exacerbación y reactivación de la enfermedad de base."
+      },
+      conduta: {
+        pt: "A dose de deflazacorte geralmente precisa ser aumentada em 2 a 3 vezes durante o uso concomitante de rifampicina, e monitorada clinicamente pela resposta dos sintomas da doença de base. Após a suspensão da rifampicina, reduzir a dose de deflazacorte gradualmente (ao longo de 2-4 semanas) para evitar superdosagem. Informar o especialista responsável antes de iniciar rifampicina em paciente em uso de deflazacorte.",
+        es: "La dosis de deflazacort generalmente necesita aumentarse 2 a 3 veces durante el uso concomitante de rifampicina, y monitorizarse clínicamente por la respuesta de los síntomas de la enfermedad de base. Tras la suspensión de la rifampicina, reducir la dosis de deflazacort gradualmente (a lo largo de 2-4 semanas) para evitar sobredosificación. Informar al especialista responsable antes de iniciar rifampicina en paciente en uso de deflazacort."
       }
     }
   }
