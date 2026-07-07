@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=275" />
-  <link rel="stylesheet" href="css/build233.css?v=275" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=275" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=275" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=275" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=275" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=275" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=276" />
+  <link rel="stylesheet" href="css/build233.css?v=276" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=276" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=276" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=276" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=276" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=276" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=275" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=276" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=275" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=276" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=275" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=276" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=275" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=276" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=275" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=276" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=275" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=276" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=275" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=276" />
 
   <style>
     /* ============================================================ RESET */
@@ -7460,7 +7460,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=275" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=276" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -17996,8 +17996,17 @@ function _fluidInsens(vol24Basal, temp, taqui) {
 /* ── OBJ4 BUILD 233: Redireciona para campo de peso sem popup/modal ──
    Tenta scroll + highlight no campo de peso do hub (hm-weight),
    ou do modal de dados (inp-weight) como fallback.
-   Zero alert, zero modal, zero card de erro. */
+   Zero alert, zero modal, zero card de erro.
+   BUILD 276: Guard de boot — só executa após interação real do usuário. */
 function _fluidScrollToWeight() {
+  /* BUILD 276: BOOT GUARD — bloqueia abertura automática do card patient
+     durante a inicialização. _appBootComplete só é setado TRUE depois que
+     o DOMContentLoaded termina completamente. Qualquer chamada vinda da
+     chain setLang()→calcFluids() no boot retorna aqui silenciosamente. */
+  if (!window._appBootComplete) {
+    console.log('[BUILD 276] _fluidScrollToWeight: bloqueado no boot (appBootComplete=false)');
+    return;
+  }
   /* IDs candidatos em ordem de prioridade */
   var candidates = ['hm-weight', 'gpb-mini-weight', 'inp-weight', 'qe-weight'];
   var targetEl = null;
@@ -18072,10 +18081,13 @@ function calcFluids() {
 
   /* OBJ4 BUILD 233: Guard sem peso — NÃO mostra popup/modal/card vermelho.
      Redireciona para o campo de peso do card Dados do Paciente (hub ou Home),
-     faz scroll + highlight visual. Limpa o resultado sem mensagem de erro. */
+     faz scroll + highlight visual. Limpa o resultado sem mensagem de erro.
+     BUILD 276: _fluidScrollToWeight() só é chamada se o boot já concluiu. */
   if (!peso || isNaN(peso) || peso <= 0) {
     res.innerHTML = ''; /* limpa silenciosamente */
-    _fluidScrollToWeight();
+    if (window._appBootComplete) {
+      _fluidScrollToWeight();
+    }
     return;
   }
 
@@ -23700,6 +23712,18 @@ document.addEventListener('DOMContentLoaded', () => {
     childList: true, subtree: true
   });
 
+  /* BUILD 276 — APP BOOT COMPLETE FLAG
+     Setada aqui, no final absoluto do DOMContentLoaded, para que
+     qualquer função chamada DURANTE a inicialização (setLang → calcFluids
+     → _fluidScrollToWeight) encontre a flag como FALSE e não abra o card
+     "Dados do Paciente" automaticamente. Somente APÓS este ponto qualquer
+     interação real do usuário poderá acionar _fluidScrollToWeight(). */
+  window._appBootComplete = false;
+  setTimeout(function() {
+    window._appBootComplete = true;
+    console.log('[BUILD 276] _appBootComplete = true (boot finalizado)');
+  }, 2000);
+
 });
 
 /* ── FIM DO BLOCO PRINCIPAL ──
@@ -23963,46 +23987,46 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script defer src="database/interacoes.js?v=275"></script>
-<script defer src="database/antimicrobianos.js?v=275"></script>
-<script defer src="database/psicofarmacos.js?v=275"></script>
-<script defer src="database/analgesicos.js?v=275"></script>
-<script defer src="database/anticoag.js?v=275"></script>
-<script defer src="database/cardio.js?v=275"></script>
-<script defer src="database/endocrino.js?v=275"></script>
-<script defer src="database/gastro.js?v=275"></script>
-<script defer src="database/infusoes.js?v=275"></script>
-<script defer src="database/nefro.js?v=275"></script>
-<script defer src="database/neuro.js?v=275"></script>
-<script defer src="database/obesidade.js?v=275"></script>
-<script defer src="database/pneumo.js?v=275"></script>
-<script defer src="database/psiquiatria.js?v=275"></script>
-<script defer src="database/reumatologia.js?v=275"></script>
-<script defer src="database/prescricoes.js?v=275" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script defer src="database/interacoes.js?v=276"></script>
+<script defer src="database/antimicrobianos.js?v=276"></script>
+<script defer src="database/psicofarmacos.js?v=276"></script>
+<script defer src="database/analgesicos.js?v=276"></script>
+<script defer src="database/anticoag.js?v=276"></script>
+<script defer src="database/cardio.js?v=276"></script>
+<script defer src="database/endocrino.js?v=276"></script>
+<script defer src="database/gastro.js?v=276"></script>
+<script defer src="database/infusoes.js?v=276"></script>
+<script defer src="database/nefro.js?v=276"></script>
+<script defer src="database/neuro.js?v=276"></script>
+<script defer src="database/obesidade.js?v=276"></script>
+<script defer src="database/pneumo.js?v=276"></script>
+<script defer src="database/psiquiatria.js?v=276"></script>
+<script defer src="database/reumatologia.js?v=276"></script>
+<script defer src="database/prescricoes.js?v=276" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=275"></script>
+<script defer src="js/medcases-ux-v2.js?v=276"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=275"></script>
+<script defer src="js/hub-accordion.js?v=276"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=275"></script>
+<script defer src="js/build240b-accordion-fix.js?v=276"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=275"></script>
+<script defer src="js/calculator-overlay.js?v=276"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=275"></script>
+<script defer src="js/category-pills.js?v=276"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=275"></script>
+<script defer src="js/elec-calc.js?v=276"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=275"></script>
+<script defer src="js/deeplink-router.js?v=276"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=275"></script>
+<script defer src="js/build272-reactive-engine.js?v=276"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>

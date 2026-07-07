@@ -784,7 +784,52 @@
       console.log('[HubAccordion] BUILD 275: ' + _bootCards.length + ' card(s) forçado(s) fechado(s) no boot (zero auto-open).');
     }
 
-    console.log('[HubAccordion] v2.1 (BUILD 275) pronto. Cards: patient, clcr, farmacos, interacoes, pediatria, gestante, infusao, hemodinamica, scores, fluidos, eletrolitos');
+    /* BUILD 276 — FORCE-CLOSE EXPLÍCITO DO HUB-CARD-PATIENT
+       Blindagem adicional e incondicional: garante que "Dados do Paciente"
+       inicie sempre fechado, mesmo que scripts legados, setLang(), calcFluids()
+       ou qualquer outro mecanismo tenha tentado abri-lo antes deste ponto.
+       Executa independentemente do guard genérico acima (que só age se
+       is-open já está presente). Cobre o caso do hubOpen() chamado APÓS
+       o guard genérico ter rodado (ex: via chain setLang→calcFluids→_fluidScrollToWeight). */
+    var _patientCard = document.getElementById('hub-card-patient');
+    if (_patientCard) {
+      _patientCard.classList.remove('is-open');
+      var _patientTrigger = _patientCard.querySelector('.hub-card-trigger');
+      if (_patientTrigger) _patientTrigger.setAttribute('aria-expanded', 'false');
+      var _patientBody = document.getElementById('hub-body-patient');
+      if (_patientBody) {
+        _patientBody.style.display = 'none';
+        /* Remove display:none após animação para não bloquear abertura manual */
+        setTimeout(function() {
+          if (_patientBody && !_patientCard.classList.contains('is-open')) {
+            _patientBody.style.display = '';
+          }
+        }, 2200);
+      }
+      if (_openCard === 'patient') { _openCard = null; _updateAccordionState(false); }
+      console.log('[HubAccordion] BUILD 276: hub-card-patient forçado fechado explicitamente no boot.');
+    }
+
+    /* BUILD 276 — INTERCEPTOR TEMPORAL DE hubOpen('patient') NO BOOT
+       Durante os primeiros 2000ms (janela de boot), intercepta qualquer
+       chamada a hubOpen('patient') vinda de scripts legados ou da chain
+       setLang→calcFluids→_fluidScrollToWeight e a bloqueia silenciosamente.
+       Após 2s o interceptor se remove e hubOpen funciona normalmente. */
+    var _origHubOpen = window.hubOpen;
+    window.hubOpen = function(id, opts) {
+      if (id === 'patient' && !window._appBootComplete) {
+        console.log('[HubAccordion] BUILD 276: hubOpen("patient") BLOQUEADO no boot.');
+        return;
+      }
+      return _origHubOpen ? _origHubOpen(id, opts) : hubOpen(id, opts);
+    };
+    /* Restaura hubOpen original após janela de boot */
+    setTimeout(function() {
+      window.hubOpen = _origHubOpen || hubOpen;
+      console.log('[HubAccordion] BUILD 276: interceptor de boot removido — hubOpen restaurado.');
+    }, 2200);
+
+    console.log('[HubAccordion] v2.2 (BUILD 276) pronto. Cards: patient, clcr, farmacos, interacoes, pediatria, gestante, infusao, hemodinamica, scores, fluidos, eletrolitos');
   }
 
   /* ── Capitaliza a primeira letra ── */
