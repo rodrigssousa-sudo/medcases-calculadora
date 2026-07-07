@@ -508,6 +508,63 @@
 
     if (_openCard === id) _openCard = null;
 
+    /* BUILD 275 — RESET DE ESTADO AO FECHAR SCORES
+       Quando o card de Scores é fechado, limpa todos os inputs
+       (textos, rádios, checkboxes) dentro do painel, e reseta o
+       estado interno do motor de scores (activeScore, scoreSelections).
+       Garante formulário zerado para o próximo paciente, sem
+       persistência de dados anteriores entre atendimentos.
+       ─────────────────────────────────────────────────────────────
+       Execução defensiva: wrapped em try/catch para não bloquear
+       o fechamento se algum seletor inesperado falhar. */
+    if (id === 'scores') {
+      try {
+        var scoreBody = document.getElementById('hub-body-scores');
+        if (scoreBody) {
+          /* Limpa todos os inputs de texto e number */
+          scoreBody.querySelectorAll('input[type="text"], input[type="number"]').forEach(function (el) {
+            el.value = '';
+          });
+          /* Desmarca todos os rádios e checkboxes */
+          scoreBody.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(function (el) {
+            el.checked = false;
+          });
+          /* Remove classe is-active dos toggle-buttons (univ-toggle-btn e score-check) */
+          scoreBody.querySelectorAll('.is-active, .selected').forEach(function (el) {
+            el.classList.remove('is-active', 'selected');
+          });
+          /* Remove seleção dos score-cards (scard-*) */
+          scoreBody.querySelectorAll('[id^="scard-"]').forEach(function (el) {
+            el.classList.remove('selected');
+          });
+          /* Oculta o result-card se estiver visível */
+          scoreBody.querySelectorAll('.univ-result-card').forEach(function (el) {
+            el.classList.remove('is-visible');
+          });
+          /* Limpa textarea do result legado, se existir */
+          scoreBody.querySelectorAll('textarea').forEach(function (el) {
+            el.value = '';
+          });
+        }
+        /* Reseta variáveis globais do motor de scores.
+           scoreSelections é um objeto mutado inline (não reatribuído),
+           então limpamos suas chaves em vez de reatribuir a referência
+           — isso garante que o scoreChange() local veja o objeto zerado. */
+        if (typeof window.activeScore !== 'undefined') window.activeScore = null;
+        if (typeof window.scoreSelections !== 'undefined') {
+          Object.keys(window.scoreSelections).forEach(function (k) {
+            delete window.scoreSelections[k];
+          });
+        }
+        /* Limpa a área de cálculo do score (bloco renderizado pelo JS) */
+        var calcArea = document.getElementById('score-calc-area');
+        if (calcArea) calcArea.innerHTML = '';
+      } catch (e) {
+        /* Reset silencioso — não bloqueia o fechamento do card */
+        console.warn('[HubAccordion] Aviso: reset de scores falhou parcialmente.', e);
+      }
+    }
+
     /* Verifica se ainda há algum card aberto */
     var stillOpen = document.querySelector('.hub-card.is-open');
     _updateAccordionState(!!stillOpen);
@@ -708,7 +765,26 @@
       syncLang: _syncLang,
     };
 
-    console.log('[HubAccordion] v2.0 pronto. Cards: patient, clcr, farmacos, interacoes, pediatria, gestante, infusao, hemodinamica, scores, fluidos, eletrolitos');
+    /* BUILD 275 — ZERO AUTO-OPEN GUARD
+       Garante tela 100% colapsada no boot, independente de qualquer
+       classe is-open que possa ter sido persistida no DOM (ex: cache
+       do browser, SSR, ou qualquer outro mecanismo não identificado).
+       Executa DEPOIS de expor window.HubAccordion para que o deeplink-
+       router.js, que roda 120ms após, ainda possa abrir sua aba alvo
+       normalmente via ?tab=. Este guard apenas limpa o estado inicial. */
+    var _bootCards = document.querySelectorAll('.hub-card.is-open');
+    if (_bootCards.length > 0) {
+      _bootCards.forEach(function (c) {
+        c.classList.remove('is-open');
+        var t = c.querySelector('.hub-card-trigger');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+      _openCard = null;
+      _updateAccordionState(false);
+      console.log('[HubAccordion] BUILD 275: ' + _bootCards.length + ' card(s) forçado(s) fechado(s) no boot (zero auto-open).');
+    }
+
+    console.log('[HubAccordion] v2.1 (BUILD 275) pronto. Cards: patient, clcr, farmacos, interacoes, pediatria, gestante, infusao, hemodinamica, scores, fluidos, eletrolitos');
   }
 
   /* ── Capitaliza a primeira letra ── */
