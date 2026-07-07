@@ -1,6 +1,7 @@
 /* ================================================================
    MedCases Pro — BUILD 272 — REACTIVE ENGINE (Pilares 2 e 3)
    BUILD 274 — Performance Audit: Debounce + MutationObserver restrito
+   BUILD 276.1 — HOTFIX: Loop infinito eliminado
    ----------------------------------------------------------------
    Regra de Ouro: "Cálculo em Tempo Real (Atrito Zero) + Tematização
    Contextual". Este módulo:
@@ -139,16 +140,32 @@
   /* ============================================================
      §C — PATCH: hmClearPatient() também deve limpar o Live Dashboard
      (monkey-patch não-destrutivo — preserva comportamento original)
+     BUILD 276.1 — LOOP INFINITO CORRIGIDO:
+       Antes: setTimeout(_patchClearPatient, 200) sem limite → loop eterno
+       se hmClearPatient nunca for definida (ex: falha de carga do módulo).
+       Agora: máximo de 20 tentativas (4s total), depois desiste silenciosamente.
   ============================================================ */
+  var _patchClearRetries = 0;
+  var _patchClearMaxRetries = 20; /* 20 × 200ms = 4s máximo */
+
   function _patchClearPatient() {
     if (typeof window.hmClearPatient !== 'function') {
-      return setTimeout(_patchClearPatient, 200);
+      _patchClearRetries++;
+      if (_patchClearRetries < _patchClearMaxRetries) {
+        setTimeout(_patchClearPatient, 200);
+      } else {
+        console.warn('[BUILD 276.1] _patchClearPatient: hmClearPatient não encontrada após 4s — patch ignorado.');
+      }
+      return;
     }
+    /* Garante que o patch só é aplicado uma vez */
+    if (window.hmClearPatient._liveDashPatched) return;
     var _origClear = window.hmClearPatient;
     window.hmClearPatient = function () {
       _origClear.apply(this, arguments);
       syncClcrLiveDashboard();
     };
+    window.hmClearPatient._liveDashPatched = true;
   }
 
   /* ============================================================
@@ -270,6 +287,7 @@
 
   /* ============================================================
      §F — MUTATIONOBSERVER — BUILD 274: ALVO CIRÚRGICO
+                             BUILD 276.1: LOOP INFINITO ELIMINADO
      ─────────────────────────────────────────────────────────────
      ANTES (BUILD 272):
        mo.observe(document.body, { childList: true, subtree: true })
@@ -278,30 +296,36 @@
          incluindo classList toggles de hover, focus, scroll, etc.
          Em dispositivos lentos: centenas de callbacks/segundo.
 
-     AGORA (BUILD 274):
+     BUILD 274:
        Target: #hub-cards-container (container dos cards do Hub)
-         → Único nó onde o lazy-mount real ocorre (hub-accordion.js
-           injeta .hub-card-body neste container).
+         → Único nó onde o lazy-mount real ocorre.
        { childList: true, subtree: false }
-         → Só monitora filhos DIRETOS do container, não a árvore
-           inteira. Mutações internas aos cards (toggles de classes,
-           renderização de resultados) NÃO disparam o callback.
+         → Só monitora filhos DIRETOS do container.
 
-       Fallback: se #hub-cards-container não existir ainda, tenta
-       novamente com um retry de 300ms (máx. 10 tentativas = 3s).
-       Se após 3s o container ainda não surgir, observa o body
-       como último recurso mas com { childList: true, subtree: false }
-       (não subtree) para minimizar o impacto.
+     BUILD 276.1 — CORREÇÕES DE LOOP:
+       1. _moMaxRetries reduzido: 10 → 3 (máx 900ms, não 3s).
+          O body do HTML está sempre disponível no DOMContentLoaded;
+          se o container não existe em 3 tentativas, não vai existir.
+       2. Fallback no body: NÃO dispara _wireAll() no boot.
+          O callback verifica window._appBootComplete antes de agir,
+          eliminando o risco de mutações fantasmas abrindo accordions.
+       3. _wireAll() removido do caminho de inicialização do observer —
+          só é chamado por mutações REAIS após boot completo.
   ============================================================ */
   function _wireAll() {
     _wirePatientReactivity();
     _wireFluidReactivity();
-    syncClcrLiveDashboard();
+    /* BUILD 276.1: syncClcrLiveDashboard só no boot se appBootComplete;
+       caso contrário a chamada pode gerar mutação no DOM que realimenta
+       o observer antes do boot terminar. */
+    if (window._appBootComplete) {
+      syncClcrLiveDashboard();
+    }
   }
 
   var _moRetryCount = 0;
-  var _moMaxRetries = 10;
-  var _mo = null; /* referência ao MutationObserver ativo */
+  var _moMaxRetries = 3;  /* BUILD 276.1: reduzido de 10 → 3 (máx 900ms) */
+  var _mo = null;         /* referência ao MutationObserver ativo */
 
   function _setupObserver() {
     /* Destrói observer anterior se já existia (evita duplicatas em retry) */
@@ -317,13 +341,28 @@
         setTimeout(_setupObserver, 300);
         return;
       }
-      /* Fallback após 10 tentativas (3s): usa o body mas SEM subtree */
-      console.warn('[BUILD 274] #hub-cards-container não encontrado após 3s. ' +
-                   'Observer em fallback (body, sem subtree).');
-      target = document.body;
+      /* BUILD 276.1 — FALLBACK SEGURO: após 3 tentativas (900ms),
+         registra aviso e NÃO instala observer em nenhum alvo alternativo.
+         Isso evita que o body inteiro seja observado e gere mutações
+         fantasmas que acionem _wireAll() durante o boot, potencialmente
+         abrindo o card "Dados do Paciente" via chain calcFluids/hubOpen.
+         O re-wire manual de inputs (patient + fluids) já foi feito em
+         _init() via _wireAll() direto — o observer serve apenas para
+         capturar lazy-mounts futuros, que não ocorrem se o container
+         nunca existiu. */
+      console.warn('[BUILD 276.1] #hub-cards-container não encontrado após 3 tentativas. ' +
+                   'Observer NÃO instalado (fail-safe ativo). ' +
+                   'Re-wire de inputs já aplicado via _wireAll() no init.');
+      return; /* ← PARA AQUI — sem observer em fallback */
     }
 
     _mo = new MutationObserver(function (mutations) {
+      /* BUILD 276.1: BOOT GUARD no callback do observer.
+         Se o boot ainda não completou, ignora mutações completamente —
+         evita que lazy-mounts do hub-accordion.js no init disparem
+         _wireAll() → syncClcrLiveDashboard() → calcFluids() → hubOpen('patient'). */
+      if (!window._appBootComplete) return;
+
       /* Filtra: só re-wira se alguma mutação adicionou nós novos
          (lazy-mount real). Mutações de atributos/characterData são ignoradas. */
       var hasNewNodes = mutations.some(function (m) {
@@ -335,23 +374,50 @@
     /* BUILD 274: subtree: false — não varre árvore interna dos cards */
     _mo.observe(target, { childList: true, subtree: false });
 
-    console.log('[BUILD 274] MutationObserver ativo — target: ' +
-                (target.id ? '#' + target.id : target.nodeName) +
-                ' | subtree: false | debounce: ' + DEBOUNCE_MS + 'ms');
+    console.log('[BUILD 274/276.1] MutationObserver ativo — target: ' +
+                '#' + target.id +
+                ' | subtree: false | debounce: ' + DEBOUNCE_MS + 'ms' +
+                ' | boot-guard: ativo');
   }
 
   /* ============================================================
      §G — INIT
+     BUILD 276.1: _wireAll() no init só conecta listeners de input
+     (patient + fluids). syncClcrLiveDashboard() é adiado para após
+     o boot para não disparar mutações fantasmas durante a init.
   ============================================================ */
   function _init() {
-    _wireAll();
+    /* Conecta listeners de input imediatamente (sem cálculos) */
+    _wirePatientReactivity();
+    _wireFluidReactivity();
+
+    /* Patch do hmClearPatient — limitado a 20 tentativas (4s) */
     _patchClearPatient();
+
+    /* Instala MutationObserver — limitado a 3 retries (900ms), sem fallback body */
     _setupObserver();
 
-    console.log('[BUILD 272/274] Reactive Engine ativo — ' +
+    /* BUILD 276.1: Live Dashboard inicial adiado para após boot completo.
+       Evita que syncClcrLiveDashboard() no boot, com patientData vazio,
+       gere mutação no DOM que realimente o observer antes de _appBootComplete. */
+    var _dashInitAttempts = 0;
+    var _dashInitTimer = setInterval(function() {
+      _dashInitAttempts++;
+      if (window._appBootComplete) {
+        clearInterval(_dashInitTimer);
+        syncClcrLiveDashboard();
+        console.log('[BUILD 276.1] Live Dashboard sincronizado após boot completo.');
+      } else if (_dashInitAttempts > 25) { /* máx 5s (25 × 200ms) */
+        clearInterval(_dashInitTimer);
+        console.warn('[BUILD 276.1] Live Dashboard: boot não completou em 5s — sync ignorado.');
+      }
+    }, 200);
+
+    console.log('[BUILD 272/274/276.1] Reactive Engine ativo — ' +
                 'Pilar 2 (zero-friction + debounce ' + DEBOUNCE_MS + 'ms) + ' +
                 'Pilar 3 (Live Dashboard ClCr) + ' +
-                'Observer cirúrgico (#hub-cards-container).');
+                'Observer cirúrgico (#hub-cards-container) + ' +
+                'Loop infinito eliminado (retries: 3×300ms / patch: 20×200ms).');
   }
 
   if (document.readyState === 'loading') {
