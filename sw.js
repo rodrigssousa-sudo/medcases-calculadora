@@ -1,15 +1,17 @@
 /* ============================================================
-   MedCases Pro — Service Worker v5.0
+   MedCases Pro — Service Worker v5.1 (BUILD 274)
    Estratégia: STALE-WHILE-REVALIDATE (Cache-First + Background Sync)
    ─────────────────────────────────────────────────────────────
-   PROBLEMA RESOLVIDO: "Cold Start Offline" na WebView Mobile.
-   A estratégia Network-First anterior bloqueava o carregamento
-   completo quando o app era aberto sem internet, pois a WebView
-   nativa barrava o request antes do fallback do SW agir.
-
-   SOLUÇÃO: Cache-First garante resposta IMEDIATA do cache local
-   em qualquer condição de rede (modo avião, rede lenta, offline).
-   A atualização ocorre em segundo plano, sem bloquear o usuário.
+   BUILD 274 — Cache Busting Implacável:
+   • CACHE_VERSION bumped para 'medcases-v274' → invalida TODOS os
+     caches anteriores (v60 e quaisquer outros) nos dispositivos reais.
+   • install: self.skipWaiting() explícito fora do .then() encadeado
+     (garante ativação imediata mesmo se o pre-cache falhar parcialmente).
+   • activate: limpeza agressiva — deleta qualquer chave que NÃO seja
+     exatamente CACHE_NAME; clients.claim() após limpeza.
+   • ASSETS_TO_CACHE agora inclui build254-critical-fixes.css,
+     build272-universal-design-system.css e build272-reactive-engine.js
+     (ausentes na lista v60).
 
    FLUXO POR CENÁRIO:
    ┌─────────────────────────────────┬───────────────────────────────┐
@@ -22,13 +24,16 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v60';
+const CACHE_VERSION   = 'medcases-v274';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
-/* ── Lista canônica de 31 assets pré-cacheados no install ───
-   Sincronizada com manifest-offline.json (build 240)
-   Gerada por: node scripts/generate-offline-manifest.js
-   Inclui: 2 raiz + 8 css + 5 js + 16 database = 31 arquivos
+/* ── Lista canônica de assets pré-cacheados no install ──────
+   BUILD 274: lista sincronizada com a stack CSS/JS real do app.
+   Adicionados: build254-critical-fixes.css,
+                build272-universal-design-system.css,
+                build272-reactive-engine.js
+   (estavam fora da lista v60 — causavam cache miss em prod)
+   Inclui: 2 raiz + 14 css + 8 js + 16 database = 40 arquivos
 ─────────────────────────────────────────────────────────── */
 const ASSETS_TO_CACHE = [
   './',
@@ -37,7 +42,7 @@ const ASSETS_TO_CACHE = [
   './index.html',
   './sw.js',
 
-  /* ── CSS (8 arquivos — todos os builds) ── */
+  /* ── CSS (14 arquivos — stack completa BUILD 274) ── */
   './css/medcases-ux-v2.css',
   './css/build233.css',
   './css/build234-design-system.css',
@@ -50,8 +55,10 @@ const ASSETS_TO_CACHE = [
   './css/build243-fullscreen-overlay.css',
   './css/build244-category-pills.css',
   './css/build246-farmaco-modal-premium.css',
+  './css/build254-critical-fixes.css',
+  './css/build272-universal-design-system.css',
 
-  /* ── JS (7 arquivos) ── */
+  /* ── JS (8 arquivos — stack completa BUILD 274) ── */
   './js/medcases-ux-v2.js',
   './js/hub-accordion.js',
   './js/build240b-accordion-fix.js',
@@ -59,6 +66,7 @@ const ASSETS_TO_CACHE = [
   './js/category-pills.js',
   './js/elec-calc.js',
   './js/deeplink-router.js',
+  './js/build272-reactive-engine.js',
 
   /* ── Database (16 arquivos — base clínica COMPLETA) ── */
   './database/analgesicos.js',
@@ -87,14 +95,17 @@ const ASSETS_TO_CACHE = [
 self.addEventListener('install', (event) => {
   console.log(`[SW ${CACHE_VERSION}] Install: pré-cacheando ${ASSETS_TO_CACHE.length} assets.`);
 
+  /* BUILD 274: skipWaiting() chamado IMEDIATAMENTE (fora do .then encadeado)
+     Garante que o SW entre em ativação mesmo se o pre-cache falhar parcialmente.
+     A estratégia stale-while-revalidate tolera cache miss individual — não
+     precisamos bloquear toda a ativação por um asset que falhou no pre-cache. */
+  self.skipWaiting();
+
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(ASSETS_TO_CACHE))
       .then(() => {
-        console.log(`[SW ${CACHE_VERSION}] Pre-cache concluído. Ativando imediatamente.`);
-        /* skipWaiting força ativação imediata mesmo com aba já aberta,
-           garantindo que o novo SW tome controle sem aguardar reload */
-        return self.skipWaiting();
+        console.log(`[SW ${CACHE_VERSION}] Pre-cache concluído (${ASSETS_TO_CACHE.length} assets).`);
       })
       .catch((err) => {
         /* Falha no pre-cache é logada mas NÃO cancela a instalação —
@@ -111,22 +122,29 @@ self.addEventListener('install', (event) => {
    abertas IMEDIATAMENTE, sem precisar de refresh do usuário.
 ============================================================ */
 self.addEventListener('activate', (event) => {
-  console.log(`[SW ${CACHE_VERSION}] Activate: limpando caches obsoletos.`);
+  console.log(`[SW ${CACHE_VERSION}] Activate: limpeza agressiva de caches obsoletos.`);
 
   event.waitUntil(
     caches.keys()
-      .then((cacheNames) =>
-        Promise.all(
-          cacheNames.map((name) => {
-            if (name !== CACHE_NAME) {
-              console.log(`[SW ${CACHE_VERSION}] Expurgando cache obsoleto: "${name}"`);
-              return caches.delete(name);
-            }
-          })
-        )
-      )
+      .then((cacheNames) => {
+        /* BUILD 274: limpeza AGRESSIVA — deleta qualquer cache que não seja
+           exatamente CACHE_NAME, sem exceções. Isso invalida:
+           - medcases-calc-medcases-v60 (versão anterior)
+           - qualquer outro nome gerado por versões mais antigas
+           Resultado: dispositivos antigos sempre recebem a versão nova. */
+        const deletePromises = cacheNames
+          .filter((name) => name !== CACHE_NAME)
+          .map((name) => {
+            console.log(`[SW ${CACHE_VERSION}] Expurgando cache obsoleto: "${name}"`);
+            return caches.delete(name);
+          });
+        return Promise.all(deletePromises);
+      })
       .then(() => {
-        console.log(`[SW ${CACHE_VERSION}] Ativo. Assumindo controle de todos os clients.`);
+        console.log(`[SW ${CACHE_VERSION}] Limpeza concluída. Assumindo controle de todos os clients.`);
+        /* clients.claim() faz este SW assumir controle de TODAS as abas abertas
+           imediatamente, sem aguardar reload — essencial para dispositivos que
+           ficam com a aba do app aberta por horas (uso clínico). */
         return self.clients.claim();
       })
   );
