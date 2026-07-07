@@ -7721,30 +7721,19 @@
           </article>
         </div><!-- /L1-A patient -->
 
-        <!-- L1-B: ClCr RENAL — BUILD 272: LIVE DASHBOARD (Pilar 3) -->
+        <!-- L1-B: ClCr RENAL — BUILD 275: HEADER REMOVIDO — display estático fixo
+             O botão accordion foi eliminado. O grid 2x2 fica sempre visível e
+             não-clicável, funcionando como painel de leitura passiva reativo
+             aos inputs de Dados do Paciente. IDs dos quadrantes preservados
+             intactos para não quebrar o Reactive Engine (build272-reactive-engine.js). -->
         <div class="hub-row--full hub-l1-row">
-          <article class="hub-card theme-renal" id="hub-card-clcr" data-hub="clcr" data-hub-full="true" data-level="1">
-            <button class="hub-card-trigger" onclick="hubToggle('clcr')"
-                    aria-expanded="false" aria-controls="hub-body-clcr">
-              <div class="hub-card-ico hub-ico--clcr"><i class="fa-solid fa-kidneys"></i></div>
-              <div class="hub-card-meta">
-                <div class="hub-card-name">
-                  <span class="lang-hub-pt">ClCr Renal</span>
-                  <span class="lang-hub-es">ClCr Renal</span>
-                </div>
-                <div class="hub-card-desc">
-                  <span class="lang-hub-pt">Cockcroft-Gault · Estadio DRC · BSA</span>
-                  <span class="lang-hub-es">Cockcroft-Gault · Estadio ERC · BSA</span>
-                </div>
-              </div>
-              <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
-            </button>
+          <article class="hub-card theme-renal hub-card--static" id="hub-card-clcr" data-hub="clcr" data-hub-full="true" data-level="1">
 
-            <!-- ══ LIVE DASHBOARD — SEMPRE VISÍVEL, mesmo com o card colapsado ══
+            <!-- ══ LIVE DASHBOARD — display estático, não expansível (BUILD 275) ══
                  Grid 2x2 simétrico: ClCr · IMC · Peso Ideal · BSA.
-                 Escuta window.patientData via _clcrLiveDashboardSync() e
-                 exibe "---" nos 4 quadrantes quando os dados estão vazios. -->
-            <div class="clcr-live-dashboard" id="clcr-live-dashboard">
+                 Atualizado em tempo real via _clcrLiveDashboardSync() (Reactive Engine).
+                 Exibe "---" enquanto Dados do Paciente não forem preenchidos. -->
+            <div class="clcr-live-dashboard clcr-live-dashboard--standalone" id="clcr-live-dashboard">
               <div class="clcr-live-quad" id="clcr-live-q-clcr">
                 <div class="clcr-live-quad-val is-empty" id="clcr-live-v-clcr">---</div>
                 <div class="clcr-live-quad-lbl">ClCr mL/min</div>
@@ -7766,13 +7755,6 @@
               </div>
             </div>
 
-            <div class="hub-card-body" id="hub-body-clcr" role="region">
-              <div class="hub-card-inner" id="hub-clcr-inner">
-                <!-- Slot preenchido pelo JS _lazyMount('clcr') na primeira abertura:
-                     categoria renal + conduta clínica + atalho para editar dados. -->
-                <div id="hub-clcr-slot"></div>
-              </div>
-            </div>
           </article>
         </div><!-- /L1-B clcr -->
 
@@ -16518,6 +16500,8 @@ function closeRxModal() {
    ██████████ SCORES ██████████
 ========================================================= */
 let activeScore=null;
+/* BUILD 275: expõe no window para o reset do hub-accordion.js (_closeCard 'scores') */
+window.activeScore = null;
 
 /* ─────────────────────────────────────────────────────────────
    SCORES DB — bilíngue (pt / es) com interpret() usando currentLang
@@ -16756,11 +16740,19 @@ const SCORES={
   }
 };
 
-let scoreSelections={};
+/* BUILD 275: scoreSelections e activeScore são o objeto CANÔNICO no window.
+   O hub-accordion.js (_closeCard 'scores') limpa as chaves deste objeto diretamente.
+   Usar window.scoreSelections como fonte de verdade garante que a referência
+   local e a externa apontem para o MESMO objeto — mutações de qualquer lado
+   são imediatamente visíveis. */
+window.scoreSelections = window.scoreSelections || {};
+let scoreSelections = window.scoreSelections;   /* alias local = mesma referência */
 
 function selectScore(key){
   activeScore=key;
-  scoreSelections={};
+  window.activeScore=key;           /* BUILD 275: mantém window em sincronia */
+  /* Zera as chaves sem quebrar a referência (hub-accordion pode estar observando) */
+  Object.keys(scoreSelections).forEach(function(k){ delete scoreSelections[k]; });
   // Highlight card
   document.querySelectorAll('[id^="scard-"]').forEach(c=>c.classList.remove('selected'));
   const sc=document.getElementById('scard-'+key);if(sc)sc.classList.add('selected');

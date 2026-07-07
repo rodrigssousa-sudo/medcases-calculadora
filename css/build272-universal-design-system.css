@@ -279,9 +279,26 @@ body.light-mode .univ-result-conduct { color:#1E293B; background:rgba(0,0,0,0.03
 
 /* ================================================================
    §5 — LIVE DASHBOARD ClCr (Pilar 3) — Grid 2x2 simétrico
-   ClCr · IMC · Peso Ideal · BSA — visível SEMPRE (mesmo com o
-   card colapsado), sem precisar abrir nenhuma tela.
+   ClCr · IMC · Peso Ideal · BSA — visível SEMPRE.
+   BUILD 275: card estático — header accordion removido.
+   .hub-card--static suprime cursor/hover/chevron do article pai.
+   .clcr-live-dashboard--standalone ajusta padding para exibição
+   sem o button trigger acima.
 ================================================================ */
+
+/* Card estático: sem hover de botão, sem cursor pointer */
+.hub-card--static {
+  cursor: default;
+}
+.hub-card--static .hub-card-trigger {
+  display: none !important; /* segurança: oculta se o JS reconectar */
+}
+
+/* Dashboard standalone: padding superior para compensar ausência do header */
+.clcr-live-dashboard--standalone {
+  padding-top: 14px;
+}
+
 .clcr-live-dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr;
