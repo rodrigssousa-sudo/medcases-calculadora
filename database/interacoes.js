@@ -249,6 +249,12 @@ const DRUG_ALIASES = {
   "saxenda":                            "liraglutida",
   "levotiroxine":                       "levotiroxina",
 
+  /* BUILD 284 — Unificação grafia Anvisa: amlodipina → anlodipino */
+  "amlodipina":                         "anlodipino",
+  "amlodipine":                         "anlodipino",
+  "norvasc":                            "anlodipino",
+  "pressat":                            "anlodipino",
+
   /* BUILD 280 — Corticoides Sistêmicos Lote 4: aliases de nomenclatura */
   "dexamethasone":                      "dexametasona",
   "decadron":                           "dexametasona",
