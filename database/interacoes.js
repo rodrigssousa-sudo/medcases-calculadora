@@ -203,6 +203,21 @@ const DRUG_ALIASES = {
   "farlac":                             "lactulose",
   "omeprazol_iv":                       "omeprazol",
 
+  /* BUILD 279 — Gastro Lote 3 & Corticoides: aliases de nomenclatura */
+  "mesalazina_5asa":                    "mesalazina",
+  "5asa":                               "mesalazina",
+  "acido_5_aminossalicilico":           "mesalazina",
+  "mesacol":                            "mesalazina",
+  "pentasa":                            "mesalazina",
+  "sufentanilo":                        "sufentanil",
+  "fastfen":                            "sufentanil",
+  "sufenta":                            "sufentanil",
+  "hidrocortisone":                     "hidrocortisona",
+  "solu_cortef":                        "hidrocortisona",
+  "cortisol":                           "hidrocortisona",
+  "methylprednisolone":                 "metilprednisolona",
+  "solu_medrol":                        "metilprednisolona",
+
   /* BUILD 278 — Gastro Lote 2: aliases de nomenclatura */
   "pantoprazol_iv":                     "pantoprazol",
   "pantocal_iv":                        "pantoprazol",
@@ -589,6 +604,18 @@ const DRUG_CLASSES = {
   "$classe_antiarritmicos_qt": [
     "amiodarona", "sotalol", "dofetilida", "ibutilida",
     "quinidina", "disopiramida", "procainamida"
+  ],
+
+  /* BUILD 279 — Diuréticos de alça — para interação hidrocortisona×hipocalemia */
+  "$classe_diureticos_alca": [
+    "furosemida", "bumetanida", "torasemida", "acido_etacrinico"
+  ],
+
+  /* BUILD 279 — Bloqueadores Neuromusculares não-despolarizantes (BNM)
+     para interação metilprednisolona×miopatia do doente crítico */
+  "$classe_bloqueadores_neuromusculares": [
+    "rocuronio", "cisatracurio", "vecuronio", "atracurio",
+    "pancuronio", "mivacurio"
   ]
 
 };
@@ -17824,6 +17851,119 @@ const INTERACOES_DB = {
       conduta: {
         pt: "EVITAR a associação. Em pacientes em uso contínuo de IECA, substituir o racecadotril por loperamida ou soro de reidratação oral (SRO) como antidiarreico. Se a associação for inevitável em contexto de emergência, monitorar sinais precoces de angioedema (prurido orofaríngeo, disfagia, estridor) e ter adrenalina 1:1000 IM disponível.",
         es: "EVITAR la asociación. En pacientes en uso continuo de IECA, sustituir el racecadotrilo por loperamida o suero de rehidratación oral (SRO) como antidiarreico. Si la asociación es inevitable en contexto de emergencia, monitorar signos precoces de angioedema (prurito orofaríngeo, disfagia, estridor) y tener adrenalina 1:1000 IM disponible."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES: Gastro Lote 3 & Corticoides Sistêmicos
+     BUILD 279 — Mesalazina, Sufentanil, Hidrocortisona, Metilprednisolona
+  ═══════════════════════════════════════════════════════════════ */
+
+  "mesalazina": {
+    "azatioprina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A mesalazina inibe a enzima TPMT (Tiopurina Metiltransferase), responsável pela inativação da azatioprina e da mercaptopurina. O uso associado (muito comum em Doença Inflamatória Intestinal — azatioprina como poupador de esteroide + mesalazina como manutenção) resulta num aumento extremo dos metabólitos citotóxicos (6-Tioguanina Nucleotídeos, 6-TGN), gerando pancitopenia e supressão aguda da medula óssea.",
+        es: "La mesalazina inhibe la enzima TPMT (Tiopurina Metiltransferasa), responsable de la inactivación de la azatioprina y la mercaptopurina. El uso asociado (muy común en Enfermedad Inflamatoria Intestinal — azatioprina como ahorrador de esteroides + mesalazina como mantenimiento) resulta en un aumento extremo de los metabolitos citotóxicos (6-Tioguanina Nucleótidos, 6-TGN), generando pancitopenia y supresión aguda de la médula ósea."
+      },
+      conduta: {
+        pt: "Monitoramento hematológico estrito: hemograma completo quinzenal nas primeiras 8 semanas, depois mensal. Geralmente exige redução empírica da dose de azatioprina em 25-50% ao iniciar mesalazina. Considerar dosagem da atividade da TPMT antes da associação em pacientes com risco aumentado.",
+        es: "Monitorización hematológica estricta: hemograma completo quincenal en las primeras 8 semanas, luego mensual. Generalmente exige reducción empírica de la dosis de azatioprina en 25-50% al iniciar mesalazina. Considerar dosaje de la actividad de la TPMT antes de la asociación en pacientes con riesgo aumentado."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A mesalazina é um derivado salicilato com potencial nefrotóxico idiossincrático (nefrite intersticial aguda) via mecanismo imuno-mediado. Os AINEs possuem nefrotoxicidade direta pela inibição das prostaglandinas renais (vasoconstrição da arteríola aferente). A associação contínua aditiva das duas nefrotoxicidades aumenta significativamente o risco de insuficiência renal aguda e pode acelerar a progressão para Doença Renal Crônica.",
+        es: "La mesalazina es un derivado salicilato con potencial nefrotóxico idiosincrásico (nefritis intersticial aguda) vía mecanismo inmunemediado. Los AINEs poseen nefrotoxicidad directa por inhibición de las prostaglandinas renales (vasoconstricción de la arteriola aferente). La asociación continua aditiva de las dos nefrotoxicidades aumenta significativamente el riesgo de insuficiencia renal aguda y puede acelerar la progresión a Enfermedad Renal Crónica."
+      },
+      conduta: {
+        pt: "Monitorar creatinina e EAS periodicamente (a cada 3-6 meses durante uso crônico). Evitar AINEs crônicos em pacientes usando mesalazina, especialmente com TFG < 60 mL/min/1,73m². Preferir paracetamol para controle de dor.",
+        es: "Monitorizar creatinina y sedimento urinario periódicamente (cada 3-6 meses durante uso crónico). Evitar AINEs crónicos en pacientes usando mesalazina, especialmente con TFG < 60 mL/min/1,73m². Preferir paracetamol para control del dolor."
+      }
+    }
+  },
+
+  "sufentanil": {
+    "$classe_benzodiazepinicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Associação de uso padrão na sedação em UTI (Midazolam + Sufentanil), porém o sinergismo depressor do SNC é violento e não-linear. Causa apneia imediata, depressão respiratória profunda, hipotensão acentuada e coma prolongado por efeitos aditivos nos receptores GABA (benzodiazepínico) e opioides mu (sufentanil). Mesmo doses aparentemente seguras de cada fármaco individualmente podem ser fatais quando combinadas sem via aérea protegida.",
+        es: "Asociación de uso estándar en la sedación en UCI (Midazolam + Sufentanilo), sin embargo el sinergismo depresor del SNC es violento y no lineal. Causa apnea inmediata, depresión respiratoria profunda, hipotensión acentuada y coma prolongado por efectos aditivos en los receptores GABA (benzodiacepínico) y opioides mu (sufentanilo). Incluso dosis aparentemente seguras de cada fármaco individualmente pueden ser fatales al combinarse sin vía aérea protegida."
+      },
+      conduta: {
+        pt: "Utilizar APENAS sob via aérea artificial garantida (paciente intubado e sob ventilação mecânica). Reduzir as doses de ambos em até 50% quando combinados. Monitorar pressão arterial contínua e capnografia. Naloxona deve estar disponível à beira do leito.",
+        es: "Utilizar SOLO bajo vía aérea artificial garantizada (paciente intubado y bajo ventilación mecánica). Reducir las dosis de ambos hasta un 50% cuando combinados. Monitorear presión arterial continua y capnografía. La naloxona debe estar disponible a la cabecera del paciente."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os inibidores potentes do CYP3A4 (Claritromicina, Eritromicina) e também os azólicos antifúngicos bloqueiam o metabolismo hepático do sufentanil via CYP3A4. Como o sufentanil é altamente lipofílico, o acúmulo sistêmico causado pela inibição do metabolismo torna o 'despertar' da sedação de UTI incrivelmente prolongado — o paciente pode permanecer em coma induzido residual por dias após a suspensão da bomba, dificultando o desmame ventilatório.",
+        es: "Los inhibidores potentes del CYP3A4 (Claritromicina, Eritromicina) y también los azólicos antifúngicos bloquean el metabolismo hepático del sufentanilo vía CYP3A4. Como el sufentanilo es altamente lipofílico, la acumulación sistémica causada por la inhibición del metabolismo hace que el 'despertar' de la sedación de UCI sea increíblemente prolongado — el paciente puede permanecer en coma inducido residual por días tras la suspensión de la bomba, dificultando el destete ventilatorio."
+      },
+      conduta: {
+        pt: "Iniciar desmame gradual da sedação dias antes do previsto para extubação quando macrolídeo estiver em uso. Considerar trocar antibiótico para alternativa sem inibição de CYP3A4 se o paciente não acorda adequadamente. Monitorar escalas de sedação (RASS) com mais frequência.",
+        es: "Iniciar destete gradual de la sedación días antes de lo previsto para extubación cuando el macrólido esté en uso. Considerar cambiar antibiótico por alternativa sin inhibición de CYP3A4 si el paciente no despierta adecuadamente. Monitorear escalas de sedación (RASS) con mayor frecuencia."
+      }
+    }
+  },
+
+  "hidrocortisona": {
+    "insulina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Efeito contrarregulador intenso e de início rápido. A hidrocortisona estimula profundamente a gliconeogênese hepática (produção de nova glicose a partir de aminoácidos/lactato) e induz resistência insulínica tecidual periférica (reduz translocação de GLUT-4), gerando picos hiperglicêmicos de difícil controle no paciente séptico. O efeito hiperglicêmico da hidrocortisona é ainda mais intenso que o de outros corticoides devido à sua forte atividade mineralocorticoide adicional.",
+        es: "Efecto contrarregulador intenso y de inicio rápido. La hidrocortisona estimula profundamente la gluconeogénesis hepática (producción de nueva glucosa a partir de aminoácidos/lactato) e induce resistencia insulínica tisular periférica (reduce translocación de GLUT-4), generando picos hiperglucémicos de difícil control en el paciente séptico. El efecto hiperglucémico de la hidrocortisona es aún más intenso que el de otros corticoides debido a su fuerte actividad mineralocorticoide adicional."
+      },
+      conduta: {
+        pt: "Prever necessidade de aumentar substancialmente as doses de insulina (frequentemente 2-3x a dose basal). Implementar protocolo de infusão contínua de insulina IV em UTI (alvo glicemia 140-180 mg/dL, Surviving Sepsis Campaign). HGT a cada 2-4h nas primeiras 24h e após qualquer ajuste de dose de corticoide.",
+        es: "Prever necesidad de aumentar sustancialmente las dosis de insulina (frecuentemente 2-3x la dosis basal). Implementar protocolo de infusión continua de insulina IV en UCI (objetivo glucemia 140-180 mg/dL, Surviving Sepsis Campaign). HGT cada 2-4h en las primeras 24h y tras cualquier ajuste de dosis de corticoide."
+      }
+    },
+    "$classe_diureticos_alca": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A hidrocortisona, ao contrário de outros corticoides, possui forte componente mineralocorticoide (atividade = 1x aldosterona) que retém sódio e EXCRETA ativamente potássio e magnésio nos túbulos renais distais. O uso simultâneo de diuréticos de alça (furosemida, bumetanida) agrava dramaticamente a depleção de potássio, podendo precipitar hipocalemia grave (K+ < 2,5 mEq/L) com arritmias cardíacas potencialmente fatais.",
+        es: "La hidrocortisona, a diferencia de otros corticoides, posee fuerte componente mineralocorticoide (actividad = 1x aldosterona) que retiene sodio y EXCRETA activamente potasio y magnesio en los túbulos renales distales. El uso simultáneo de diuréticos de asa (furosemida, bumetanida) agrava dramáticamente la depleción de potasio, pudiendo precipitar hipopotasemia grave (K+ < 2,5 mEq/L) con arritmias cardíacas potencialmente fatales."
+      },
+      conduta: {
+        pt: "Monitorar K+ e Mg²+ seriados (a cada 12-24h na UTI). Iniciar reposição proativa de cloreto de potássio IV se K+ < 3,5 mEq/L. Suplementar sulfato de magnésio se Mg²+ < 1,2 mg/dL. Rever necessidade do diurético de alça durante o ciclo com hidrocortisona.",
+        es: "Monitorizar K+ y Mg²+ seriados (cada 12-24h en UCI). Iniciar reposición proactiva de cloruro de potasio IV si K+ < 3,5 mEq/L. Suplementar sulfato de magnesio si Mg²+ < 1,2 mg/dL. Revisar necesidad del diurético de asa durante el ciclo con hidrocortisona."
+      }
+    }
+  },
+
+  "metilprednisolona": {
+    "$classe_bloqueadores_neuromusculares": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O uso simultâneo de altas doses de corticoides (metilprednisolona ≥ 1 mg/kg/dia) com bloqueadores neuromusculares não-despolarizantes (Rocurônio, Cisatracúrio, Vecurônio) na UTI deflagra um risco dramático de Miopatia Aguda do Doente Crítico (MADC). A MADC se manifesta como tetraplegia flácida, elevação da CPK e paralisia prolongada que dificulta drasticamente o desmame do ventilador e a reabilitação do paciente. Fisiopatologia: inibição do metabolismo proteico muscular + bloqueio neuromuscular prolongado aditivo.",
+        es: "El uso simultáneo de altas dosis de corticoides (metilprednisolona ≥ 1 mg/kg/día) con bloqueadores neuromusculares no despolarizantes (Rocuronio, Cisatracurio, Vecuronio) en la UCI desencadena un riesgo dramático de Miopatía Aguda del Enfermo Crítico (MAEC). La MAEC se manifiesta como tetraplejía flácida, elevación de la CPK y parálisis prolongada que dificulta drásticamente el destete del ventilador y la rehabilitación del paciente. Fisiopatología: inhibición del metabolismo proteico muscular + bloqueo neuromuscular prolongado aditivo."
+      },
+      conduta: {
+        pt: "Evitar a associação na UTI sempre que possível. Se necessário (ex: Asma grave intubada, SDRA com dissincronismo), usar o BNM pelo menor tempo estritamente viável (< 48 horas). Monitorar força muscular periférica com trem-de-quatro (TOF). Fisioterapia motora intensiva precoce após descontinuação.",
+        es: "Evitar la asociación en UCI siempre que sea posible. Si necesario (ej: Asma grave intubada, SDRA con disincronismo), usar el BNM por el menor tiempo estrictamente viable (< 48 horas). Monitorear fuerza muscular periférica con tren de cuatro (TOF). Fisioterapia motora intensiva precoz tras discontinuación."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sinergismo na toxicidade gastrointestinal por mecanismos distintos e aditivos. Corticoides reduzem a síntese de prostaglandinas protetoras da mucosa gástrica e diminuem a proliferação epitelial de reparo. AINEs inibem diretamente a COX-1 gástrica, reduzindo o muco e o bicarbonato protetores. A associação eleva 15 vezes o risco de úlcera péptica complicada (sangramento ou perfuração) em comparação com nenhum dos dois.",
+        es: "Sinergismo en la toxicidad gastrointestinal por mecanismos distintos y aditivos. Los corticoides reducen la síntesis de prostaglandinas protectoras de la mucosa gástrica y disminuyen la proliferación epitelial de reparación. Los AINEs inhiben directamente la COX-1 gástrica, reduciendo el moco y el bicarbonato protectores. La asociación eleva 15 veces el riesgo de úlcera péptica complicada (sangrado o perforación) en comparación con ninguno de los dos."
+      },
+      conduta: {
+        pt: "Uso obrigatório de IBP (de preferência pantoprazol em cardiopatas) como gastroproteção enquanto durar a terapia dupla corticoide + AINE. Avaliar substituição do AINE por paracetamol para analgesia/antipirexia. Atentar para sinais de sangramento oculto (hematócrito em queda, melena).",
+        es: "Uso obligatorio de IBP (preferiblemente pantoprazol en cardiópatas) como gastroprotección mientras dure la terapia doble corticoide + AINE. Evaluar sustitución del AINE por paracetamol para analgesia/antipiréxia. Atender signos de sangrado oculto (hematocrito en descenso, melena)."
       }
     }
   }
