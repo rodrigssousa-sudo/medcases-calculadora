@@ -1,5 +1,6 @@
 /* ================================================================
    MedCases Pro — Build 240B: Accordion Scroll Fix + Keyboard Stable
+   BUILD 283 — HOTFIX MOBILE: KEYBOARD_FIX suavizado
    ----------------------------------------------------------------
    Fix 2: Remove jump ao abrir/fechar card (scrollIntoView agressivo)
    Fix 3: Remove pulo ao trocar inputs (keyboard session tracking)
@@ -12,9 +13,12 @@
      só rola se >80% do card estiver fora da viewport.
      Sempre usa block:'nearest' (nunca 'start').
      Delay mínimo de 220ms (após animação de 180ms terminar).
-   - Para Fix 3: track de keyboard session com visualViewport API.
-     Focus events debounced 120ms.
-     Scroll ao trocar input apenas se campo estiver oculto pelo teclado.
+   - Para Fix 3 (BUILD 283 — HOTFIX MOBILE):
+     _initKeyboardTracking e _initFocusTracking DESATIVADOS.
+     O rastreamento de foco via visualViewport causava loops de
+     altura de viewport + saltos de tela + bloqueio de foco em
+     campos de Altura e Creatinina no WebView iOS/Android.
+     O foco do SO nativo é livre — sem interceptação JS.
    - Zero alterações em lógica clínica, fórmulas, banco de dados.
 ================================================================ */
 
@@ -220,120 +224,45 @@
 
   /* ────────────────────────────────────────────────────────────────
      FIX 3: Keyboard Session Tracking via visualViewport
+     BUILD 283 — HOTFIX MOBILE: DESATIVADO.
+     O tracking de viewport causava loops de altura + saltos de tela
+     + bloqueio de foco em campos Altura e Creatinina no WebView.
+     Mantida como no-op para não quebrar chamadas existentes.
   ──────────────────────────────────────────────────────────────── */
   function _initKeyboardTracking() {
-    if (!window.visualViewport) {
-      /* Fallback: window resize para detectar teclado */
-      var _lastWindowH = window.innerHeight;
-      window.addEventListener('resize', function () {
-        var newH = window.innerHeight;
-        var diff = _lastWindowH - newH;
-        if (diff > KEYBOARD_THRESH) {
-          _keyboardOpen   = true;
-          _keyboardHeight = diff;
-          console.log('[KEYBOARD_STABLE] keyboardOpen=true height=' + _keyboardHeight);
-        } else if (diff < -KEYBOARD_THRESH || newH > _lastWindowH + 60) {
-          _keyboardOpen   = false;
-          _keyboardHeight = 0;
-          console.log('[KEYBOARD_STABLE] keyboardOpen=false');
-        }
-        _lastWindowH = newH;
-      }, { passive: true });
-      return;
-    }
-
-    /* visualViewport API — mais preciso no iOS/Android */
-    var _lastVpH = window.visualViewport.height;
-    window.visualViewport.addEventListener('resize', function () {
-      var newH = window.visualViewport.height;
-      var diff = _lastVpH - newH;
-
-      if (diff > KEYBOARD_THRESH) {
-        _keyboardOpen   = true;
-        _keyboardHeight = diff;
-        console.log('[KEYBOARD_STABLE] keyboardOpen=true height=' + _keyboardHeight);
-      } else if (newH > _lastVpH + 60) {
-        _keyboardOpen   = false;
-        _keyboardHeight = 0;
-        console.log('[KEYBOARD_STABLE] keyboardOpen=false');
-      }
-      _lastVpH = newH;
-    }, { passive: true });
+    /* BUILD 283 — HOTFIX: rastreamento de viewport desativado.
+       Variáveis _keyboardOpen/_keyboardHeight permanecem false/0.
+       O SO gerencia o reposicionamento de campos sob o teclado nativamente. */
+    console.log('[KEYBOARD_STABLE] BUILD 283: keyboard tracking DESATIVADO (hotfix mobile)');
   }
 
   /* ────────────────────────────────────────────────────────────────
-     FIX 3: Focus Debounce — evita pulo ao trocar entre inputs
+     FIX 3: Focus Debounce — BUILD 283: DESATIVADO
+     Sem interceptação de foco durante digitação em inputs.
+     O foco do SO nativo é livre, sem loops ou saltos de scroll.
   ──────────────────────────────────────────────────────────────── */
   function _handleInputFocus(e) {
-    var el = e.target;
-    if (!el || (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA' && el.tagName !== 'SELECT')) return;
-
-    /* Cancela timer anterior */
-    if (_focusTimer) {
-      clearTimeout(_focusTimer);
-      _focusTimer = null;
-    }
-
-    var prevEl  = _lastFocusEl;
-    _lastFocusEl = el;
-
-    _focusTimer = setTimeout(function () {
-      /* Detecta se é troca dentro do mesmo card (mesma keyboard session) */
-      var sameSession = _keyboardOpen && prevEl !== null;
-
-      if (sameSession) {
-        /* Teclado já está aberto: só rola se campo estiver oculto pelo teclado */
-        var needsScroll = _isHiddenByKeyboard(el);
-        console.log('[KEYBOARD_STABLE] focusChange=true sameKeyboardSession=true scrollNeeded=' + needsScroll);
-
-        if (needsScroll) {
-          _scrollInputIntoView(el);
-        }
-        /* Não faz NADA mais — sem remount, sem collapse, sem scroll global */
-      } else {
-        /* Primeira abertura de teclado: scroll suave se oculto */
-        var needsScroll = _isHiddenByKeyboard(el);
-        console.log('[KEYBOARD_STABLE] focusChange=true sameKeyboardSession=false scrollNeeded=' + needsScroll);
-
-        if (needsScroll) {
-          _scrollInputIntoView(el);
-        }
-      }
-    }, FOCUS_DEBOUNCE);
+    /* BUILD 283 — HOTFIX: sem interceptação de foco em inputs.
+       Preservado como stub para não quebrar referências. */
   }
 
   /* ────────────────────────────────────────────────────────────────
      UTIL: Rola input para ficar visível acima do teclado
+     BUILD 283 — mantido, mas nunca chamado (keyboard tracking off)
   ──────────────────────────────────────────────────────────────── */
   function _scrollInputIntoView(el) {
-    var sc = document.getElementById(SCROLL_CONTAINER);
-    if (sc) {
-      var elRect = el.getBoundingClientRect();
-      var scRect = sc.getBoundingClientRect();
-      var vpH    = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-
-      /* Target: campo visível com 24px de margem acima do teclado */
-      var fieldBottom = elRect.bottom;
-      var safeBottom  = vpH - 24;
-
-      if (fieldBottom > safeBottom) {
-        var scrollDelta = fieldBottom - safeBottom + 8;
-        sc.scrollTo({
-          top: sc.scrollTop + scrollDelta,
-          behavior: 'smooth'
-        });
-      }
-    } else {
-      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
+    /* BUILD 283 — HOTFIX: não executado (keyboard tracking desativado). */
   }
 
   /* ────────────────────────────────────────────────────────────────
-     FIX 3: Bind focus listener em capture phase (pega todos os inputs)
+     FIX 3: Bind focus listener — BUILD 283: DESATIVADO
+     Não instala listener de focus capture para não interceptar
+     o foco nativo do SO em inputs de texto.
   ──────────────────────────────────────────────────────────────── */
   function _initFocusTracking() {
-    document.addEventListener('focus', _handleInputFocus, true);
-    console.log('[KEYBOARD_STABLE] focus tracking active — debounce=' + FOCUS_DEBOUNCE + 'ms');
+    /* BUILD 283 — HOTFIX: focus tracking DESATIVADO.
+       Foco nativo do iOS/Android é livre, sem interceptação JS. */
+    console.log('[KEYBOARD_STABLE] BUILD 283: focus tracking DESATIVADO (hotfix mobile)');
   }
 
   /* ────────────────────────────────────────────────────────────────
@@ -374,7 +303,7 @@
     /* Focus debounce */
     _initFocusTracking();
 
-    console.log('[ACCORDION_FIX] Build 240B — accordion fix + keyboard stable initialized');
+    console.log('[ACCORDION_FIX] Build 240B/283 — accordion fix init | keyboard-tracking: DISABLED (mobile hotfix)');
   }
 
   /* ────────────────────────────────────────────────────────────────
