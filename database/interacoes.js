@@ -191,7 +191,17 @@ const DRUG_ALIASES = {
      PT feminina do nome comercial) normalizado para a chave em inglês
      "inotersen" usada em cardio.js. */
   "vutrisirán":                         "vutrisiran",
-  "inotersena":                         "inotersen"
+  "inotersena":                         "inotersen",
+
+  /* BUILD 278 — Gastro Lote 1: aliases de nomenclatura */
+  "octreotida":                         "octreotide",
+  "sandostatin":                        "octreotide",
+  "terlipresina":                       "terlipressina",
+  "glypressin":                         "terlipressina",
+  "lactulona":                          "lactulose",
+  "lactulosa":                          "lactulose",
+  "farlac":                             "lactulose",
+  "omeprazol_iv":                       "omeprazol"
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -549,6 +559,24 @@ const DRUG_CLASSES = {
     "rotigotina", "bromocriptina", "cabergolina", "amantadina",
     "selegilina", "rasagilina", "safinamida", "entacapona",
     "opicapona", "biperideno", "triexifenidila"
+  ],
+
+  /* BUILD 278 — Gastro Lote 1 */
+
+  /* Análogos da somatostatina */
+  "$classe_analogos_somatostatina": [
+    "octreotide", "lanreotide", "pasireotide"
+  ],
+
+  /* Análogos da vasopressina/terlipressina */
+  "$classe_analogos_vasopressina": [
+    "terlipressina", "vasopressina", "desmopressina", "lypressin"
+  ],
+
+  /* Antiarrítmicos prolongadores de QT — superset para interações terlipressina */
+  "$classe_antiarritmicos_qt": [
+    "amiodarona", "sotalol", "dofetilida", "ibutilida",
+    "quinidina", "disopiramida", "procainamida"
   ]
 
 };
@@ -17533,6 +17561,144 @@ const INTERACOES_DB = {
       conduta: {
         pt: "A associação com agentes alquilantes severos como ciclofosfamida não é recomendada.",
         es: "La asociación con agentes alquilantes severos como ciclofosfamida no es recomendada."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES: Gastroenterologia & Hepatologia Lote 1
+     BUILD 278 — Octreotide, Terlipressina, Lactulose, Omeprazol IV
+     Arquitetura fármaco-cêntrica bidirecional v3.0
+  ═══════════════════════════════════════════════════════════════ */
+
+  "octreotide": {
+    "ciclosporina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O octreotide reduz a absorção intestinal de ciclosporina ao inibir a motilidade gastrointestinal e suprimir a secreção de ácidos biliares, diminuindo a biodisponibilidade oral do imunossupressor em até 30-50%. Há relatos de rejeição aguda de transplantes por queda dos níveis séricos de ciclosporina.",
+        es: "El octreotide reduce la absorción intestinal de ciclosporina al inhibir la motilidad gastrointestinal y suprimir la secreción de ácidos biliares, disminuyendo la biodisponibilidad oral del inmunosupresor hasta un 30-50%. Hay informes de rechazo agudo de trasplantes por caída de los niveles séricos de ciclosporina."
+      },
+      conduta: {
+        pt: "Monitorar níveis séricos de ciclosporina com maior frequência durante o uso concomitante. Considerar ajuste de dose da ciclosporina. Em pacientes transplantados, vigilância rigorosa para sinais de rejeição aguda.",
+        es: "Monitorear niveles séricos de ciclosporina con mayor frecuencia durante el uso concomitante. Considerar ajuste de dosis de ciclosporina. En pacientes trasplantados, vigilancia estricta para signos de rechazo agudo."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O octreotide pode potencializar os efeitos bradicardizantes dos betabloqueadores por efeito aditivo sobre o automatismo sinusal e a condução AV. O análogo da somatostatina reduz o débito cardíaco e a frequência cardíaca de forma independente, podendo causar bradicardia sinusal sintomática quando associado a betabloqueadores.",
+        es: "El octreotide puede potenciar los efectos bradicardizantes de los betabloqueadores por efecto aditivo sobre el automatismo sinusal y la conducción AV. El análogo de la somatostatina reduce el gasto cardíaco y la frecuencia cardíaca de forma independiente, pudiendo causar bradicardia sinusal sintomática al asociarse con betabloqueadores."
+      },
+      conduta: {
+        pt: "Monitorar frequência cardíaca e pressão arterial durante a infusão de octreotide. Em pacientes com bradicardia basal ou bloqueio AV de 1° grau, avaliar suspensão temporária do betabloqueador. ECG seriado na HDA grave.",
+        es: "Monitorear frecuencia cardíaca y presión arterial durante la infusión de octreotide. En pacientes con bradicardia basal o bloqueo AV de 1° grado, evaluar suspensión temporal del betabloqueador. ECG seriado en HDA grave."
+      }
+    },
+    "insulina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O octreotide suprime a secreção de insulina e glucagon pelo pâncreas endócrino, desregulando o equilíbrio glicêmico. Pode causar hipoglicemia paradoxal (por supressão preferencial do glucagon, hormônio contra-regulador) ou hiperglicemia (por inibição direta da insulina). O efeito dominante varia conforme a dose e o contexto clínico.",
+        es: "El octreotide suprime la secreción de insulina y glucagón por el páncreas endócrino, desregulando el equilibrio glucémico. Puede causar hipoglucemia paradójica (por supresión preferencial del glucagón, hormona contra-reguladora) o hiperglucemia (por inhibición directa de la insulina). El efecto dominante varía según la dosis y el contexto clínico."
+      },
+      conduta: {
+        pt: "Monitorar glicemia capilar a cada 4-6h durante infusão de octreotide em pacientes diabéticos. Ajustar dose de insulina conforme resposta glicêmica. Manter glicose IV disponível para correção de hipoglicemia.",
+        es: "Monitorear glucemia capilar cada 4-6h durante infusión de octreotide en pacientes diabéticos. Ajustar dosis de insulina según respuesta glucémica. Mantener glucosa IV disponible para corrección de hipoglucemia."
+      }
+    }
+  },
+
+  "terlipressina": {
+    "fentanil": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A terlipressina causa vasoconstrição esplâncnica e sistêmica, reduzindo o fluxo sanguíneo hepático e a perfusão intestinal. O fentanil, metabolizado extensamente pelo CYP3A4 hepático, pode ter seu clearance reduzido em contexto de baixo fluxo hepático, levando ao acúmulo e risco de depressão respiratória prolongada. Adicionalmente, ambos os fármacos podem potencializar bradicardia.",
+        es: "La terlipresina causa vasoconstricción esplácnica y sistémica, reduciendo el flujo sanguíneo hepático y la perfusión intestinal. El fentanilo, metabolizado extensamente por el CYP3A4 hepático, puede tener su clearance reducido en contexto de bajo flujo hepático, llevando a acumulación y riesgo de depresión respiratoria prolongada. Adicionalmente, ambos fármacos pueden potenciar bradicardia."
+      },
+      conduta: {
+        pt: "Reduzir dose de fentanil em 25-30% na vigência de terlipressina IV. Monitorar saturação de oxigênio e frequência respiratória. Ter naloxona disponível. Em hepatopatas graves, preferir analgésicos com menor dependência de metabolismo hepático.",
+        es: "Reducir dosis de fentanilo en 25-30% durante terlipresina IV. Monitorear saturación de oxígeno y frecuencia respiratoria. Tener naloxona disponible. En hepatópatas graves, preferir analgésicos con menor dependencia de metabolismo hepático."
+      }
+    },
+    "$classe_antiarritmicos_qt": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A terlipressina pode prolongar o intervalo QT/QTc por mecanismo direto de bloqueio dos canais de potássio cardíacos (IKr/hERG). A associação com antiarrítmicos que também prolongam o QT (amiodarona, sotalol, dofetilida, quinidina, procainamida, disopiramida) cria risco aditivo de prolongamento crítico do QTc (>500ms) e torsades de pointes, arritmia ventricular potencialmente fatal.",
+        es: "La terlipresina puede prolongar el intervalo QT/QTc por mecanismo directo de bloqueo de los canales de potasio cardíacos (IKr/hERG). La asociación con antiarrítmicos que también prolongan el QT (amiodarona, sotalol, dofetilida, quinidina, procainamida, disopiramida) crea riesgo aditivo de prolongación crítica del QTc (>500ms) y torsades de pointes, arritmia ventricular potencialmente fatal."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO RELATIVA. Evitar associação sempre que possível. Se necessária, monitorar ECG contínuo. Manter QTc <500ms; suspender terlipressina se QTc >500ms ou aumento >60ms. Corrigir distúrbios eletrolíticos (K⁺, Mg²⁺) antes e durante o uso.",
+        es: "CONTRAINDICACIÓN RELATIVA. Evitar asociación siempre que sea posible. Si necesaria, monitorear ECG continuo. Mantener QTc <500ms; suspender terlipresina si QTc >500ms o aumento >60ms. Corregir trastornos electrolíticos (K⁺, Mg²⁺) antes y durante el uso."
+      }
+    }
+  },
+
+  "lactulose": {
+    "antiacido": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os antiácidos que contêm alumínio ou magnésio podem neutralizar o ambiente ácido do cólon necessário para a ação da lactulose. A lactulose depende da fermentação bacteriana colônica (produzindo ácido lático e ácido acético) para acidificar o lúmen intestinal, converter NH₃ em NH₄⁺ (não absorvível) e exercer seu efeito laxativo osmótico. Antiácidos alcalinizantes antagonizam diretamente este mecanismo, reduzindo a eficácia na encefalopatia hepática.",
+        es: "Los antiácidos que contienen aluminio o magnesio pueden neutralizar el ambiente ácido del colon necesario para la acción de la lactulosa. La lactulosa depende de la fermentación bacteriana colónica (produciendo ácido láctico y ácido acético) para acidificar el lumen intestinal, convertir NH₃ en NH₄⁺ (no absorbible) y ejercer su efecto laxante osmótico. Los antiácidos alcalinizantes antagonizan directamente este mecanismo, reduciendo la eficacia en la encefalopatia hepática."
+      },
+      conduta: {
+        pt: "Evitar uso concomitante de antiácidos com lactulose, especialmente no tratamento da encefalopatia hepática. Se antiácido for necessário, usar após intervalo mínimo de 2h. Preferir antiácidos com menor efeito alcalinizante sistêmico.",
+        es: "Evitar uso concomitante de antiácidos con lactulosa, especialmente en el tratamiento de la encefalopatía hepática. Si el antiácido es necesario, usar tras intervalo mínimo de 2h. Preferir antiácidos con menor efecto alcalinizante sistémico."
+      }
+    },
+    "$classe_diureticos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A lactulose causa perda fecal de água e eletrólitos (principalmente K⁺ e Mg²⁺) pelo seu efeito osmótico laxativo. Os diuréticos, especialmente os de alça (furosemida) e tiazídicos (hidroclorotiazida), aumentam a excreção urinária de potássio. A associação pode causar hipocalemia grave, hipomagnesemia e alcalose metabólica hipocalêmica, que paradoxalmente piora a encefalopatia hepática ao aumentar a conversão de NH₄⁺ em NH₃ (forma não ionizada, atravessa a barreira hematoencefálica).",
+        es: "La lactulosa causa pérdida fecal de agua y electrólitos (principalmente K⁺ y Mg²⁺) por su efecto osmótico laxante. Los diuréticos, especialmente los de asa (furosemida) y tiazídicos (hidroclorotiazida), aumentan la excreción urinaria de potasio. La asociación puede causar hipocalemia grave, hipomagnesemia y alcalosis metabólica hipocalémica, que paradójicamente empeora la encefalopatía hepática al aumentar la conversión de NH₄⁺ en NH₃ (forma no ionizada, atraviesa la barrera hematoencefálica)."
+      },
+      conduta: {
+        pt: "Monitorar eletrólitos (K⁺, Na⁺, Mg²⁺) a cada 48-72h. Suplementar potássio se K⁺ <3,5 mEq/L. Ajustar dose de lactulose para 2-3 evacuações moles/dia (evitar diarreia franca). Monitorar nível de consciência — piora pode indicar hipocalemia paradoxal.",
+        es: "Monitorear electrólitos (K⁺, Na⁺, Mg²⁺) cada 48-72h. Suplementar potasio si K⁺ <3,5 mEq/L. Ajustar dosis de lactulosa para 2-3 evacuaciones blandas/día (evitar diarrea franca). Monitorear nivel de conciencia — empeoramiento puede indicar hipocalemia paradójica."
+      }
+    }
+  },
+
+  "omeprazol_iv": {
+    "clopidogrel": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O omeprazol é um potente inibidor do CYP2C19, enzima responsável pela bioativação do clopidogrel (pró-fármaco) em seu metabólito ativo tiolato. A inibição do CYP2C19 pelo omeprazol reduz em 40-50% a formação do metabólito ativo do clopidogrel, diminuindo a inibição plaquetária e o efeito antiagregante. Estudos COGENT e dados observacionais confirmam aumento do risco de eventos cardiovasculares maiores (MACE) em pacientes com SCA ou stents coronários.",
+        es: "El omeprazol es un potente inhibidor del CYP2C19, enzima responsable de la bioactivación del clopidogrel (profármaco) en su metabolito activo tiolato. La inhibición del CYP2C19 por omeprazol reduce en un 40-50% la formación del metabolito activo del clopidogrel, disminuyendo la inhibición plaquetaria y el efecto antiagregante. Estudios COGENT y datos observacionales confirman aumento del riesgo de eventos cardiovasculares mayores (MACE) en pacientes con SCA o stents coronarios."
+      },
+      conduta: {
+        pt: "Preferir pantoprazol (menor inibição de CYP2C19) ou rabeprazol quando IBP for necessário em pacientes em uso de clopidogrel. Se omeprazol IV for indispensável (ex.: HDA ativa), usar pelo menor tempo possível e monitorar eventos isquêmicos. Discutir risco/benefício com equipe cardíaca.",
+        es: "Preferir pantoprazol (menor inhibición de CYP2C19) o rabeprazol cuando IBP sea necesario en pacientes con clopidogrel. Si omeprazol IV es indispensable (ej.: HDA activa), usar por el menor tiempo posible y monitorear eventos isquémicos. Discutir riesgo/beneficio con equipo cardiológico."
+      }
+    },
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os IBPs, incluindo o omeprazol, elevam o pH gástrico e urinário e inibem transportadores renais (OAT1/OAT3, ABCG2/BCRP) envolvidos na excreção tubular do metotrexato. O resultado é redução do clearance renal do metotrexato em até 30-40%, com acúmulo do fármaco e de seu metabólito 7-hidroximetotrexato. Há risco de toxicidade grave: mucosite, mielossupressão, nefrotoxicidade e hepatotoxicidade, especialmente com doses intermediárias/altas de metotrexato.",
+        es: "Los IBPs, incluido el omeprazol, elevan el pH gástrico y urinario e inhiben transportadores renales (OAT1/OAT3, ABCG2/BCRP) involucrados en la excreción tubular del metotrexato. El resultado es reducción del clearance renal del metotrexato hasta un 30-40%, con acumulación del fármaco y de su metabolito 7-hidroximetotrexato. Existe riesgo de toxicidad grave: mucositis, mielosupresión, nefrotoxicidad y hepatotoxicidad, especialmente con dosis intermedias/altas de metotrexato."
+      },
+      conduta: {
+        pt: "Suspender omeprazol IV pelo menos 48-72h antes de doses intermediárias/altas de metotrexato, se clinicamente viável. Monitorar níveis séricos de metotrexato nas horas 24, 48 e 72 pós-infusão. Resgate com leucovorina ajustado conforme níveis. Hidratação vigorosa e alcalinização urinária (pH urinário >7).",
+        es: "Suspender omeprazol IV al menos 48-72h antes de dosis intermedias/altas de metotrexato, si clínicamente viable. Monitorear niveles séricos de metotrexato a las 24, 48 y 72h post-infusión. Rescate con leucovorina ajustado según niveles. Hidratación vigorosa y alcalinización urinaria (pH urinario >7)."
+      }
+    },
+    "itraconazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O omeprazol eleva o pH gástrico de forma sustentada, prejudicando gravemente a dissolução e absorção do itraconazol (cápsulas), que requer pH ácido para solubilização adequada. Estudos farmacocinéticos demonstram redução de até 60-70% na AUC do itraconazol cápsula quando co-administrado com IBPs. Isso pode resultar em falha terapêutica no tratamento de micoses invasivas (aspergilose, candidíase profunda), com risco de mortalidade em pacientes imunossuprimidos.",
+        es: "El omeprazol eleva el pH gástrico de forma sostenida, perjudicando gravemente la disolución y absorción del itraconazol (cápsulas), que requiere pH ácido para adecuada solubilización. Estudios farmacocinéticos demuestran reducción de hasta un 60-70% en la AUC del itraconazol cápsula cuando se co-administra con IBPs. Esto puede resultar en fracaso terapéutico en el tratamiento de micosis invasivas (aspergilosis, candidiasis profunda), con riesgo de mortalidad en pacientes inmunosuprimidos."
+      },
+      conduta: {
+        pt: "Preferir formulação líquida de itraconazol (solução oral em ciclodextrina), que tem absorção independente do pH gástrico. Se cápsula for a única opção disponível, administrar com bebida ácida (cola/suco de laranja) e afastar omeprazol por ≥2h. Monitorar níveis séricos de itraconazol quando disponível (alvo >0,5 mg/L para profilaxia; >1 mg/L para tratamento).",
+        es: "Preferir formulación líquida de itraconazol (solución oral en ciclodextrina), cuya absorción es independiente del pH gástrico. Si la cápsula es la única opción disponible, administrar con bebida ácida (cola/jugo de naranja) y separar omeprazol por ≥2h. Monitorear niveles séricos de itraconazol cuando disponible (objetivo >0,5 mg/L para profilaxis; >1 mg/L para tratamiento)."
       }
     }
   }
