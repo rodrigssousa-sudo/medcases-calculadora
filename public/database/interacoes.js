@@ -191,7 +191,81 @@ const DRUG_ALIASES = {
      PT feminina do nome comercial) normalizado para a chave em inglês
      "inotersen" usada em cardio.js. */
   "vutrisirán":                         "vutrisiran",
-  "inotersena":                         "inotersen"
+  "inotersena":                         "inotersen",
+
+  /* BUILD 278 — Gastro Lote 1: aliases de nomenclatura */
+  "octreotida":                         "octreotide",
+  "sandostatin":                        "octreotide",
+  "terlipresina":                       "terlipressina",
+  "glypressin":                         "terlipressina",
+  "lactulona":                          "lactulose",
+  "lactulosa":                          "lactulose",
+  "farlac":                             "lactulose",
+  "omeprazol_iv":                       "omeprazol",
+
+  /* BUILD 279 — Gastro Lote 3 & Corticoides: aliases de nomenclatura */
+  "mesalazina_5asa":                    "mesalazina",
+  "5asa":                               "mesalazina",
+  "acido_5_aminossalicilico":           "mesalazina",
+  "mesacol":                            "mesalazina",
+  "pentasa":                            "mesalazina",
+  "sufentanilo":                        "sufentanil",
+  "fastfen":                            "sufentanil",
+  "sufenta":                            "sufentanil",
+  "hidrocortisone":                     "hidrocortisona",
+  "solu_cortef":                        "hidrocortisona",
+  "cortisol":                           "hidrocortisona",
+  "methylprednisolone":                 "metilprednisolona",
+  "solu_medrol":                        "metilprednisolona",
+
+  /* BUILD 278 — Gastro Lote 2: aliases de nomenclatura */
+  "pantoprazol_iv":                     "pantoprazol",
+  "pantocal_iv":                        "pantoprazol",
+  "zurcal_iv":                          "pantoprazol",
+  "stilamin":                           "somatostatina",
+  "somatostatin":                       "somatostatina",
+  "racecadotrilo":                      "racecadotril",
+  "tiorfan":                            "racecadotril",
+  "avide":                              "racecadotril",
+  "flonorm":                            "rifaximina",
+  "rifaximin":                          "rifaximina",
+
+  /* BUILD 281 — Betametasona Lote 5: aliases de nomenclatura */
+  "betamethasone":                      "betametasona",
+  "diprospan":                          "betametasona",
+  "celestone":                          "betametasona",
+  "duoflam":                            "betametasona",
+
+  /* BUILD 281 — Incretinas GLP-1/GIP Lote 5: aliases de nomenclatura */
+  "semaglutide":                        "semaglutida",
+  "ozempic":                            "semaglutida",
+  "wegovy":                             "semaglutida",
+  "rybelsus":                           "semaglutida",
+  "tirzepatide":                        "tirzepatida",
+  "mounjaro":                           "tirzepatida",
+  "zepbound":                           "tirzepatida",
+  "liraglutide":                        "liraglutida",
+  "victoza":                            "liraglutida",
+  "saxenda":                            "liraglutida",
+  "levotiroxine":                       "levotiroxina",
+
+  /* BUILD 284 — Unificação grafia Anvisa: amlodipina → anlodipino */
+  "amlodipina":                         "anlodipino",
+  "amlodipine":                         "anlodipino",
+  "norvasc":                            "anlodipino",
+  "pressat":                            "anlodipino",
+
+  /* BUILD 280 — Corticoides Sistêmicos Lote 4: aliases de nomenclatura */
+  "dexamethasone":                      "dexametasona",
+  "decadron":                           "dexametasona",
+  "dexametazona":                       "dexametasona",
+  "prednisone":                         "prednisona",
+  "meticorten":                         "prednisona",
+  "prednisolone":                       "prednisolona",
+  "prelone":                            "prednisolona",
+  "deflazacort":                        "deflazacorte",
+  "calcort":                            "deflazacorte",
+  "azacortid":                          "deflazacorte"
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -549,6 +623,50 @@ const DRUG_CLASSES = {
     "rotigotina", "bromocriptina", "cabergolina", "amantadina",
     "selegilina", "rasagilina", "safinamida", "entacapona",
     "opicapona", "biperideno", "triexifenidila"
+  ],
+
+  /* BUILD 278 — Gastro Lote 1 */
+
+  /* Análogos da somatostatina */
+  "$classe_analogos_somatostatina": [
+    "octreotide", "lanreotide", "pasireotide"
+  ],
+
+  /* Análogos da vasopressina/terlipressina */
+  "$classe_analogos_vasopressina": [
+    "terlipressina", "vasopressina", "desmopressina", "lypressin"
+  ],
+
+  /* Antiarrítmicos prolongadores de QT — superset para interações terlipressina */
+  "$classe_antiarritmicos_qt": [
+    "amiodarona", "sotalol", "dofetilida", "ibutilida",
+    "quinidina", "disopiramida", "procainamida"
+  ],
+
+  /* BUILD 279 — Diuréticos de alça — para interação hidrocortisona×hipocalemia */
+  "$classe_diureticos_alca": [
+    "furosemida", "bumetanida", "torasemida", "acido_etacrinico"
+  ],
+
+  /* BUILD 279 — Bloqueadores Neuromusculares não-despolarizantes (BNM)
+     para interação metilprednisolona×miopatia do doente crítico */
+  "$classe_bloqueadores_neuromusculares": [
+    "rocuronio", "cisatracurio", "vecuronio", "atracurio",
+    "pancuronio", "mivacurio"
+  ],
+
+  /* BUILD 280 — DOACs (Anticoagulantes Orais Diretos) — subclasse para
+     interação dexametasona×indução CYP3A4/P-gp com risco de trombose */
+  "$classe_anticoagulantes_orais_diretos": [
+    "apixabana", "rivaroxabana", "dabigatrana", "edoxabana",
+    "betrixabana"
+  ],
+
+  /* BUILD 281 — Hipoglicemiantes Secretagogos (Sulfonilureias + Glinidas)
+     para interações tirzepatida/semaglutida × hipoglicemia por privação calórica */
+  "$classe_hipoglicemiantes_secretagogos": [
+    "glibenclamida", "glimepirida", "glipizida", "gliclazida",
+    "tolbutamida", "clorpropamida", "repaglinida", "nateglinida"
   ]
 
 };
@@ -17533,6 +17651,616 @@ const INTERACOES_DB = {
       conduta: {
         pt: "A associação com agentes alquilantes severos como ciclofosfamida não é recomendada.",
         es: "La asociación con agentes alquilantes severos como ciclofosfamida no es recomendada."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES: Gastroenterologia & Hepatologia Lote 1
+     BUILD 278 — Octreotide, Terlipressina, Lactulose, Omeprazol IV
+     Arquitetura fármaco-cêntrica bidirecional v3.0
+  ═══════════════════════════════════════════════════════════════ */
+
+  "octreotide": {
+    "ciclosporina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O octreotide reduz a absorção intestinal de ciclosporina ao inibir a motilidade gastrointestinal e suprimir a secreção de ácidos biliares, diminuindo a biodisponibilidade oral do imunossupressor em até 30-50%. Há relatos de rejeição aguda de transplantes por queda dos níveis séricos de ciclosporina.",
+        es: "El octreotide reduce la absorción intestinal de ciclosporina al inhibir la motilidad gastrointestinal y suprimir la secreción de ácidos biliares, disminuyendo la biodisponibilidad oral del inmunosupresor hasta un 30-50%. Hay informes de rechazo agudo de trasplantes por caída de los niveles séricos de ciclosporina."
+      },
+      conduta: {
+        pt: "Monitorar níveis séricos de ciclosporina com maior frequência durante o uso concomitante. Considerar ajuste de dose da ciclosporina. Em pacientes transplantados, vigilância rigorosa para sinais de rejeição aguda.",
+        es: "Monitorear niveles séricos de ciclosporina con mayor frecuencia durante el uso concomitante. Considerar ajuste de dosis de ciclosporina. En pacientes trasplantados, vigilancia estricta para signos de rechazo agudo."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O octreotide pode potencializar os efeitos bradicardizantes dos betabloqueadores por efeito aditivo sobre o automatismo sinusal e a condução AV. O análogo da somatostatina reduz o débito cardíaco e a frequência cardíaca de forma independente, podendo causar bradicardia sinusal sintomática quando associado a betabloqueadores.",
+        es: "El octreotide puede potenciar los efectos bradicardizantes de los betabloqueadores por efecto aditivo sobre el automatismo sinusal y la conducción AV. El análogo de la somatostatina reduce el gasto cardíaco y la frecuencia cardíaca de forma independiente, pudiendo causar bradicardia sinusal sintomática al asociarse con betabloqueadores."
+      },
+      conduta: {
+        pt: "Monitorar frequência cardíaca e pressão arterial durante a infusão de octreotide. Em pacientes com bradicardia basal ou bloqueio AV de 1° grau, avaliar suspensão temporária do betabloqueador. ECG seriado na HDA grave.",
+        es: "Monitorear frecuencia cardíaca y presión arterial durante la infusión de octreotide. En pacientes con bradicardia basal o bloqueo AV de 1° grado, evaluar suspensión temporal del betabloqueador. ECG seriado en HDA grave."
+      }
+    },
+    "insulina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O octreotide suprime a secreção de insulina e glucagon pelo pâncreas endócrino, desregulando o equilíbrio glicêmico. Pode causar hipoglicemia paradoxal (por supressão preferencial do glucagon, hormônio contra-regulador) ou hiperglicemia (por inibição direta da insulina). O efeito dominante varia conforme a dose e o contexto clínico.",
+        es: "El octreotide suprime la secreción de insulina y glucagón por el páncreas endócrino, desregulando el equilibrio glucémico. Puede causar hipoglucemia paradójica (por supresión preferencial del glucagón, hormona contra-reguladora) o hiperglucemia (por inhibición directa de la insulina). El efecto dominante varía según la dosis y el contexto clínico."
+      },
+      conduta: {
+        pt: "Monitorar glicemia capilar a cada 4-6h durante infusão de octreotide em pacientes diabéticos. Ajustar dose de insulina conforme resposta glicêmica. Manter glicose IV disponível para correção de hipoglicemia.",
+        es: "Monitorear glucemia capilar cada 4-6h durante infusión de octreotide en pacientes diabéticos. Ajustar dosis de insulina según respuesta glucémica. Mantener glucosa IV disponible para corrección de hipoglucemia."
+      }
+    }
+  },
+
+  "terlipressina": {
+    "fentanil": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A terlipressina causa vasoconstrição esplâncnica e sistêmica, reduzindo o fluxo sanguíneo hepático e a perfusão intestinal. O fentanil, metabolizado extensamente pelo CYP3A4 hepático, pode ter seu clearance reduzido em contexto de baixo fluxo hepático, levando ao acúmulo e risco de depressão respiratória prolongada. Adicionalmente, ambos os fármacos podem potencializar bradicardia.",
+        es: "La terlipresina causa vasoconstricción esplácnica y sistémica, reduciendo el flujo sanguíneo hepático y la perfusión intestinal. El fentanilo, metabolizado extensamente por el CYP3A4 hepático, puede tener su clearance reducido en contexto de bajo flujo hepático, llevando a acumulación y riesgo de depresión respiratoria prolongada. Adicionalmente, ambos fármacos pueden potenciar bradicardia."
+      },
+      conduta: {
+        pt: "Reduzir dose de fentanil em 25-30% na vigência de terlipressina IV. Monitorar saturação de oxigênio e frequência respiratória. Ter naloxona disponível. Em hepatopatas graves, preferir analgésicos com menor dependência de metabolismo hepático.",
+        es: "Reducir dosis de fentanilo en 25-30% durante terlipresina IV. Monitorear saturación de oxígeno y frecuencia respiratoria. Tener naloxona disponible. En hepatópatas graves, preferir analgésicos con menor dependencia de metabolismo hepático."
+      }
+    },
+    "$classe_antiarritmicos_qt": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A terlipressina pode prolongar o intervalo QT/QTc por mecanismo direto de bloqueio dos canais de potássio cardíacos (IKr/hERG). A associação com antiarrítmicos que também prolongam o QT (amiodarona, sotalol, dofetilida, quinidina, procainamida, disopiramida) cria risco aditivo de prolongamento crítico do QTc (>500ms) e torsades de pointes, arritmia ventricular potencialmente fatal.",
+        es: "La terlipresina puede prolongar el intervalo QT/QTc por mecanismo directo de bloqueo de los canales de potasio cardíacos (IKr/hERG). La asociación con antiarrítmicos que también prolongan el QT (amiodarona, sotalol, dofetilida, quinidina, procainamida, disopiramida) crea riesgo aditivo de prolongación crítica del QTc (>500ms) y torsades de pointes, arritmia ventricular potencialmente fatal."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO RELATIVA. Evitar associação sempre que possível. Se necessária, monitorar ECG contínuo. Manter QTc <500ms; suspender terlipressina se QTc >500ms ou aumento >60ms. Corrigir distúrbios eletrolíticos (K⁺, Mg²⁺) antes e durante o uso.",
+        es: "CONTRAINDICACIÓN RELATIVA. Evitar asociación siempre que sea posible. Si necesaria, monitorear ECG continuo. Mantener QTc <500ms; suspender terlipresina si QTc >500ms o aumento >60ms. Corregir trastornos electrolíticos (K⁺, Mg²⁺) antes y durante el uso."
+      }
+    }
+  },
+
+  "lactulose": {
+    "antiacido": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os antiácidos que contêm alumínio ou magnésio podem neutralizar o ambiente ácido do cólon necessário para a ação da lactulose. A lactulose depende da fermentação bacteriana colônica (produzindo ácido lático e ácido acético) para acidificar o lúmen intestinal, converter NH₃ em NH₄⁺ (não absorvível) e exercer seu efeito laxativo osmótico. Antiácidos alcalinizantes antagonizam diretamente este mecanismo, reduzindo a eficácia na encefalopatia hepática.",
+        es: "Los antiácidos que contienen aluminio o magnesio pueden neutralizar el ambiente ácido del colon necesario para la acción de la lactulosa. La lactulosa depende de la fermentación bacteriana colónica (produciendo ácido láctico y ácido acético) para acidificar el lumen intestinal, convertir NH₃ en NH₄⁺ (no absorbible) y ejercer su efecto laxante osmótico. Los antiácidos alcalinizantes antagonizan directamente este mecanismo, reduciendo la eficacia en la encefalopatia hepática."
+      },
+      conduta: {
+        pt: "Evitar uso concomitante de antiácidos com lactulose, especialmente no tratamento da encefalopatia hepática. Se antiácido for necessário, usar após intervalo mínimo de 2h. Preferir antiácidos com menor efeito alcalinizante sistêmico.",
+        es: "Evitar uso concomitante de antiácidos con lactulosa, especialmente en el tratamiento de la encefalopatía hepática. Si el antiácido es necesario, usar tras intervalo mínimo de 2h. Preferir antiácidos con menor efecto alcalinizante sistémico."
+      }
+    },
+    "$classe_diureticos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A lactulose causa perda fecal de água e eletrólitos (principalmente K⁺ e Mg²⁺) pelo seu efeito osmótico laxativo. Os diuréticos, especialmente os de alça (furosemida) e tiazídicos (hidroclorotiazida), aumentam a excreção urinária de potássio. A associação pode causar hipocalemia grave, hipomagnesemia e alcalose metabólica hipocalêmica, que paradoxalmente piora a encefalopatia hepática ao aumentar a conversão de NH₄⁺ em NH₃ (forma não ionizada, atravessa a barreira hematoencefálica).",
+        es: "La lactulosa causa pérdida fecal de agua y electrólitos (principalmente K⁺ y Mg²⁺) por su efecto osmótico laxante. Los diuréticos, especialmente los de asa (furosemida) y tiazídicos (hidroclorotiazida), aumentan la excreción urinaria de potasio. La asociación puede causar hipocalemia grave, hipomagnesemia y alcalosis metabólica hipocalémica, que paradójicamente empeora la encefalopatía hepática al aumentar la conversión de NH₄⁺ en NH₃ (forma no ionizada, atraviesa la barrera hematoencefálica)."
+      },
+      conduta: {
+        pt: "Monitorar eletrólitos (K⁺, Na⁺, Mg²⁺) a cada 48-72h. Suplementar potássio se K⁺ <3,5 mEq/L. Ajustar dose de lactulose para 2-3 evacuações moles/dia (evitar diarreia franca). Monitorar nível de consciência — piora pode indicar hipocalemia paradoxal.",
+        es: "Monitorear electrólitos (K⁺, Na⁺, Mg²⁺) cada 48-72h. Suplementar potasio si K⁺ <3,5 mEq/L. Ajustar dosis de lactulosa para 2-3 evacuaciones blandas/día (evitar diarrea franca). Monitorear nivel de conciencia — empeoramiento puede indicar hipocalemia paradójica."
+      }
+    }
+  },
+
+  "omeprazol_iv": {
+    "clopidogrel": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O omeprazol é um potente inibidor do CYP2C19, enzima responsável pela bioativação do clopidogrel (pró-fármaco) em seu metabólito ativo tiolato. A inibição do CYP2C19 pelo omeprazol reduz em 40-50% a formação do metabólito ativo do clopidogrel, diminuindo a inibição plaquetária e o efeito antiagregante. Estudos COGENT e dados observacionais confirmam aumento do risco de eventos cardiovasculares maiores (MACE) em pacientes com SCA ou stents coronários.",
+        es: "El omeprazol es un potente inhibidor del CYP2C19, enzima responsable de la bioactivación del clopidogrel (profármaco) en su metabolito activo tiolato. La inhibición del CYP2C19 por omeprazol reduce en un 40-50% la formación del metabolito activo del clopidogrel, disminuyendo la inhibición plaquetaria y el efecto antiagregante. Estudios COGENT y datos observacionales confirman aumento del riesgo de eventos cardiovasculares mayores (MACE) en pacientes con SCA o stents coronarios."
+      },
+      conduta: {
+        pt: "Preferir pantoprazol (menor inibição de CYP2C19) ou rabeprazol quando IBP for necessário em pacientes em uso de clopidogrel. Se omeprazol IV for indispensável (ex.: HDA ativa), usar pelo menor tempo possível e monitorar eventos isquêmicos. Discutir risco/benefício com equipe cardíaca.",
+        es: "Preferir pantoprazol (menor inhibición de CYP2C19) o rabeprazol cuando IBP sea necesario en pacientes con clopidogrel. Si omeprazol IV es indispensable (ej.: HDA activa), usar por el menor tiempo posible y monitorear eventos isquémicos. Discutir riesgo/beneficio con equipo cardiológico."
+      }
+    },
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os IBPs, incluindo o omeprazol, elevam o pH gástrico e urinário e inibem transportadores renais (OAT1/OAT3, ABCG2/BCRP) envolvidos na excreção tubular do metotrexato. O resultado é redução do clearance renal do metotrexato em até 30-40%, com acúmulo do fármaco e de seu metabólito 7-hidroximetotrexato. Há risco de toxicidade grave: mucosite, mielossupressão, nefrotoxicidade e hepatotoxicidade, especialmente com doses intermediárias/altas de metotrexato.",
+        es: "Los IBPs, incluido el omeprazol, elevan el pH gástrico y urinario e inhiben transportadores renales (OAT1/OAT3, ABCG2/BCRP) involucrados en la excreción tubular del metotrexato. El resultado es reducción del clearance renal del metotrexato hasta un 30-40%, con acumulación del fármaco y de su metabolito 7-hidroximetotrexato. Existe riesgo de toxicidad grave: mucositis, mielosupresión, nefrotoxicidad y hepatotoxicidad, especialmente con dosis intermedias/altas de metotrexato."
+      },
+      conduta: {
+        pt: "Suspender omeprazol IV pelo menos 48-72h antes de doses intermediárias/altas de metotrexato, se clinicamente viável. Monitorar níveis séricos de metotrexato nas horas 24, 48 e 72 pós-infusão. Resgate com leucovorina ajustado conforme níveis. Hidratação vigorosa e alcalinização urinária (pH urinário >7).",
+        es: "Suspender omeprazol IV al menos 48-72h antes de dosis intermedias/altas de metotrexato, si clínicamente viable. Monitorear niveles séricos de metotrexato a las 24, 48 y 72h post-infusión. Rescate con leucovorina ajustado según niveles. Hidratación vigorosa y alcalinización urinaria (pH urinario >7)."
+      }
+    },
+    "itraconazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O omeprazol eleva o pH gástrico de forma sustentada, prejudicando gravemente a dissolução e absorção do itraconazol (cápsulas), que requer pH ácido para solubilização adequada. Estudos farmacocinéticos demonstram redução de até 60-70% na AUC do itraconazol cápsula quando co-administrado com IBPs. Isso pode resultar em falha terapêutica no tratamento de micoses invasivas (aspergilose, candidíase profunda), com risco de mortalidade em pacientes imunossuprimidos.",
+        es: "El omeprazol eleva el pH gástrico de forma sostenida, perjudicando gravemente la disolución y absorción del itraconazol (cápsulas), que requiere pH ácido para adecuada solubilización. Estudios farmacocinéticos demuestran reducción de hasta un 60-70% en la AUC del itraconazol cápsula cuando se co-administra con IBPs. Esto puede resultar en fracaso terapéutico en el tratamiento de micosis invasivas (aspergilosis, candidiasis profunda), con riesgo de mortalidad en pacientes inmunosuprimidos."
+      },
+      conduta: {
+        pt: "Preferir formulação líquida de itraconazol (solução oral em ciclodextrina), que tem absorção independente do pH gástrico. Se cápsula for a única opção disponível, administrar com bebida ácida (cola/suco de laranja) e afastar omeprazol por ≥2h. Monitorar níveis séricos de itraconazol quando disponível (alvo >0,5 mg/L para profilaxia; >1 mg/L para tratamento).",
+        es: "Preferir formulación líquida de itraconazol (solución oral en ciclodextrina), cuya absorción es independiente del pH gástrico. Si la cápsula es la única opción disponible, administrar con bebida ácida (cola/jugo de naranja) y separar omeprazol por ≥2h. Monitorear niveles séricos de itraconazol cuando disponible (objetivo >0,5 mg/L para profilaxis; >1 mg/L para tratamiento)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES: Gastroenterologia Lote 2
+     BUILD 278 — Pantoprazol IV, Somatostatina, Rifaximina, Racecadotril
+  ═══════════════════════════════════════════════════════════════ */
+
+  "pantoprazol": {
+    "clopidogrel": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "Diferente do Omeprazol, o Pantoprazol possui afinidade muito baixa pelo CYP2C19. NÃO inibe de forma clínica a transformação do clopidogrel na sua forma ativa, mantendo o efeito cardioprotetor (antiagregante) preservado. Estudos farmacodinâmicos (FAMOUS, OCLA) e metanálises confirmam que o impacto clínico na função plaquetária é clinicamente insignificante quando comparado ao omeprazol.",
+        es: "A diferencia del Omeprazol, el Pantoprazol posee afinidad muy baja por el CYP2C19. NO inhibe de forma clínica la transformación del clopidogrel a su forma activa, manteniendo el efecto cardioprotector (antiagregante) preservado. Estudios farmacodinámicos (FAMOUS, OCLA) y metaanálisis confirman que el impacto clínico en la función plaquetaria es clínicamente insignificante en comparación con el omeprazol."
+      },
+      conduta: {
+        pt: "É o IBP seguro e de escolha para proteção gástrica em pacientes em terapia antiagregante dupla (DAPT) após síndrome coronariana aguda ou implante de stent. Não há necessidade de ajuste.",
+        es: "Es el IBP seguro y de elección para protección gástrica en pacientes en terapia antiplaquetaria doble (DAPT) tras síndrome coronario agudo o implante de stent. No hay necesidad de ajuste."
+      }
+    },
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Apesar de ter menor interação via citocromo, todos os IBPs (incluindo o pantoprazol) inibem os transportadores renais de secreção ativa de ânions (BCRP/OAT3). Isso impede a eliminação do metotrexato em altas doses oncológicas, resultando em acúmulo tóxico com risco de mucosite grave, mielossupressão e nefrotoxicidade.",
+        es: "A pesar de tener menor interacción vía citocromo, todos los IBPs (incluyendo el pantoprazol) inhiben los transportadores renales de secreción activa de aniones (BCRP/OAT3). Esto impide la eliminación del metotrexato en altas dosis oncológicas, resultando en acumulación tóxica con riesgo de mucositis grave, mielosupresión y nefrotoxicidad."
+      },
+      conduta: {
+        pt: "Suspender pantoprazol IV pelo menos 48-72h antes de doses intermediárias/altas de metotrexato oncológico. Substituir por bloqueadores H2 (ranitidina/famotidina), que não inibem os transportadores renais do MTX. Monitorar níveis séricos de metotrexato nas 24h, 48h e 72h pós-infusão.",
+        es: "Suspender pantoprazol IV al menos 48-72h antes de dosis intermedias/altas de metotrexato oncológico. Sustituir por bloqueadores H2 (ranitidina/famotidina), que no inhiben los transportadores renales del MTX. Monitorear niveles séricos de metotrexato a las 24h, 48h y 72h post-infusión."
+      }
+    },
+    "atazanavir": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O Atazanavir (antirretroviral do HIV, inibidor de protease) exige um pH intragástrico extremamente ácido (pH < 3) para ser absorvido e solubilizado. O bloqueio irreversível da bomba de prótons pelo pantoprazol aumenta o pH gástrico acima de 4-5 de forma sustentada, zerando a absorção do antiviral. Isso gera falha virológica, queda do CD4 e emergência de resistência viral — consequências potencialmente irreversíveis.",
+        es: "El Atazanavir (antirretroviral del VIH, inhibidor de proteasa) exige un pH intragástrico extremadamente ácido (pH < 3) para ser absorbido y solubilizado. El bloqueo irreversible de la bomba de protones por el pantoprazol aumenta el pH gástrico por encima de 4-5 de forma sostenida, anulando la absorción del antiviral. Esto genera fracaso virológico, caída del CD4 y emergencia de resistencia viral — consecuencias potencialmente irreversibles."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA. Nunca associar. Pacientes HIV com HDA severa exigem manejo especialista conjunto (infectologia + gastroenterologia) para definição da TARV e proteção gástrica alternativa (antagonistas H2 com menor impacto sobre pH).",
+        es: "CONTRAINDICACIÓN ABSOLUTA. Nunca asociar. Pacientes VIH con HDA severa exigen manejo especialista conjunto (infectología + gastroenterología) para definición de TARV y protección gástrica alternativa (antagonistas H2 con menor impacto sobre pH)."
+      }
+    }
+  },
+
+  "somatostatina": {
+    "insulina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A somatostatina inibe simultaneamente a secreção pancreática de insulina E de glucagon. No paciente crítico em infusão contínua, isso desregula completamente o controle glicêmico: a supressão preferencial do glucagon (principal hormônio contra-regulador da hipoglicemia) pode precipitar hipoglicemias súbitas graves, enquanto a inibição da insulina pode causar hiperglicemia rebote. O efeito dominante é imprevisível e varia com a dose e o contexto metabólico.",
+        es: "La somatostatina inhibe simultáneamente la secreción pancreática de insulina Y de glucagón. En el paciente crítico en infusión continua, esto desregula completamente el control glucémico: la supresión preferencial del glucagón (principal hormona contra-reguladora de la hipoglucemia) puede precipitar hipoglucemias súbitas graves, mientras que la inhibición de la insulina puede causar hiperglucemia de rebote. El efecto dominante es imprevisible y varía con la dosis y el contexto metabólico."
+      },
+      conduta: {
+        pt: "Hemoglicoteste (HGT) a cada 2h durante as primeiras 12h de infusão e a cada 4h posteriormente. Titular bombas de insulina em paralelo. Manter glicose IV disponível para correção de hipoglicemia. Ajuste dinâmico indispensável.",
+        es: "Hemoglucotest (HGT) cada 2h durante las primeras 12h de infusión y cada 4h posteriormente. Titular bombas de insulina en paralelo. Mantener glucosa IV disponible para corrección de hipoglucemia. Ajuste dinámico indispensable."
+      }
+    },
+    "ciclosporina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Mecanismo idêntico ao octreotide: a infusão de somatostatina inibe a motilidade gastrointestinal e suprime a secreção biliar, prejudicando mecanicamente a absorção intestinal da ciclosporina oral. O resultado é redução significativa da AUC da ciclosporina (até 30-50%), com risco de subterapêutica e rejeição aguda de órgão transplantado.",
+        es: "Mecanismo idéntico al octreotide: la infusión de somatostatina inhibe la motilidad gastrointestinal y suprime la secreción biliar, perjudicando mecánicamente la absorción intestinal de la ciclosporina oral. El resultado es reducción significativa de la AUC de la ciclosporina (hasta 30-50%), con riesgo de subterapéutica y rechazo agudo de órgano trasplantado."
+      },
+      conduta: {
+        pt: "Requer acompanhamento por TDM (therapeutic drug monitoring) urgente: dosagem de ciclosporinemia nas 24h seguintes ao início da somatostatina. Considerar administração IV da ciclosporina durante infusão de somatostatina para contornar o problema de absorção.",
+        es: "Requiere seguimiento por TDM (therapeutic drug monitoring) urgente: dosaje de ciclosporinemia en las 24h siguientes al inicio de la somatostatina. Considerar administración IV de la ciclosporina durante infusión de somatostatina para sortear el problema de absorción."
+      }
+    }
+  },
+
+  "rifaximina": {
+    "lactulose": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO BENÉFICA — SINERGISMO CLÍNICO DESEJÁVEL. A associação entre lactulose (mecanismo osmótico: reduz pH colônico e aprisiona amônia como NH₄⁺ não absorvível) e rifaximina (mecanismo antibiótico: erradica bactérias colônicas produtoras de amônia) constitui o tratamento padrão-ouro para encefalopatia hepática refratária de grau II a IV. Os dois mecanismos são complementares e aditivos.",
+        es: "INTERACCIÓN BENÉFICA — SINERGISMO CLÍNICO DESEABLE. La asociación entre lactulosa (mecanismo osmótico: reduce pH colónico y atrapa amoníaco como NH₄⁺ no absorbible) y rifaximina (mecanismo antibiótico: erradica bacterias colónicas productoras de amoníaco) constituye el tratamiento estándar de oro para encefalopatía hepática refractaria de grado II a IV. Los dos mecanismos son complementarios y aditivos."
+      },
+      conduta: {
+        pt: "Associação clinicamente encorajada e protocolada em UTI Hepatológica e Ambulatório de Cirrose. Titular lactulose para 2-3 evacuações moles/dia. Manter rifaximina 550 mg 12/12h de forma contínua.",
+        es: "Asociación clínicamente fomentada y protocolizada en UTI Hepatológica y Ambulatorio de Cirrosis. Titular lactulosa para 2-3 evacuaciones blandas/día. Mantener rifaximina 550 mg cada 12h de forma continua."
+      }
+    },
+    "varfarina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Embora a rifaximina não seja absorvida sistemicamente (<1%), a alteração massiva da flora bacteriana intestinal (que produz Vitamina K₂ endógena, necessária para a carboxilação dos fatores de coagulação) pode reduzir os níveis de Vitamina K disponível, potencializando o efeito anticoagulante da varfarina. Há relatos de elevação do RNI (razão normalizada internacional) e episódios de sangramento durante os primeiros ciclos de rifaximina.",
+        es: "Aunque la rifaximina no se absorba sistémicamente (<1%), la alteración masiva de la flora bacteriana intestinal (que produce Vitamina K₂ endógena, necesaria para la carboxilación de los factores de coagulación) puede reducir los niveles de Vitamina K disponible, potenciando el efecto anticoagulante de la warfarina. Hay informes de elevación del RNI (razón normalizada internacional) y episodios de sangrado durante los primeros ciclos de rifaximina."
+      },
+      conduta: {
+        pt: "Monitoramento do RNI na 1ª semana e na 2ª semana após início da rifaximina. Ajustar dose de varfarina se necessário. Orientar o paciente sobre sinais de sangramento (equimoses fáceis, hematúria, melena).",
+        es: "Monitorización del RNI en la 1ª semana y en la 2ª semana tras el inicio de la rifaximina. Ajustar dosis de warfarina si es necesario. Orientar al paciente sobre signos de sangrado (equimosis fáciles, hematuria, melena)."
+      }
+    }
+  },
+
+  "racecadotril": {
+    "$classe_ieca": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O racecadotril inibe a enzima encefalinase (NEP / neprilisina), que é responsável pela degradação da bradicinina no tecido intestinal e pulmonar. Os IECAs (captopril, enalapril, lisinopril, ramipril) inibem a ECA (enzima conversora de angiotensina), que também degrada bradicinina. A associação cria um BLOQUEIO DUPLO da eliminação da bradicinina: via NEP (bloqueada pelo racecadotril) e via ECA (bloqueada pelo IECA). O acúmulo massivo de bradicinina tecidual pode deflagrar angioedema severo de laringe/glote, com risco de asfixia e morte.",
+        es: "El racecadotrilo inhibe la enzima encefalinasa (NEP / neprilisina), responsable de la degradación de la bradicinina en el tejido intestinal y pulmonar. Los IECAs (captopril, enalapril, lisinopril, ramipril) inhiben la ECA (enzima convertidora de angiotensina), que también degrada bradicinina. La asociación crea un BLOQUEO DOBLE de la eliminación de la bradicinina: vía NEP (bloqueada por el racecadotrilo) y vía ECA (bloqueada por el IECA). La acumulación masiva de bradicinina tisular puede desencadenar angioedema severo de laringe/glotis, con riesgo de asfixia y muerte."
+      },
+      conduta: {
+        pt: "EVITAR a associação. Em pacientes em uso contínuo de IECA, substituir o racecadotril por loperamida ou soro de reidratação oral (SRO) como antidiarreico. Se a associação for inevitável em contexto de emergência, monitorar sinais precoces de angioedema (prurido orofaríngeo, disfagia, estridor) e ter adrenalina 1:1000 IM disponível.",
+        es: "EVITAR la asociación. En pacientes en uso continuo de IECA, sustituir el racecadotrilo por loperamida o suero de rehidratación oral (SRO) como antidiarreico. Si la asociación es inevitable en contexto de emergencia, monitorar signos precoces de angioedema (prurito orofaríngeo, disfagia, estridor) y tener adrenalina 1:1000 IM disponible."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES: Gastro Lote 3 & Corticoides Sistêmicos
+     BUILD 279 — Mesalazina, Sufentanil, Hidrocortisona, Metilprednisolona
+  ═══════════════════════════════════════════════════════════════ */
+
+  "mesalazina": {
+    "azatioprina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A mesalazina inibe a enzima TPMT (Tiopurina Metiltransferase), responsável pela inativação da azatioprina e da mercaptopurina. O uso associado (muito comum em Doença Inflamatória Intestinal — azatioprina como poupador de esteroide + mesalazina como manutenção) resulta num aumento extremo dos metabólitos citotóxicos (6-Tioguanina Nucleotídeos, 6-TGN), gerando pancitopenia e supressão aguda da medula óssea.",
+        es: "La mesalazina inhibe la enzima TPMT (Tiopurina Metiltransferasa), responsable de la inactivación de la azatioprina y la mercaptopurina. El uso asociado (muy común en Enfermedad Inflamatoria Intestinal — azatioprina como ahorrador de esteroides + mesalazina como mantenimiento) resulta en un aumento extremo de los metabolitos citotóxicos (6-Tioguanina Nucleótidos, 6-TGN), generando pancitopenia y supresión aguda de la médula ósea."
+      },
+      conduta: {
+        pt: "Monitoramento hematológico estrito: hemograma completo quinzenal nas primeiras 8 semanas, depois mensal. Geralmente exige redução empírica da dose de azatioprina em 25-50% ao iniciar mesalazina. Considerar dosagem da atividade da TPMT antes da associação em pacientes com risco aumentado.",
+        es: "Monitorización hematológica estricta: hemograma completo quincenal en las primeras 8 semanas, luego mensual. Generalmente exige reducción empírica de la dosis de azatioprina en 25-50% al iniciar mesalazina. Considerar dosaje de la actividad de la TPMT antes de la asociación en pacientes con riesgo aumentado."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A mesalazina é um derivado salicilato com potencial nefrotóxico idiossincrático (nefrite intersticial aguda) via mecanismo imuno-mediado. Os AINEs possuem nefrotoxicidade direta pela inibição das prostaglandinas renais (vasoconstrição da arteríola aferente). A associação contínua aditiva das duas nefrotoxicidades aumenta significativamente o risco de insuficiência renal aguda e pode acelerar a progressão para Doença Renal Crônica.",
+        es: "La mesalazina es un derivado salicilato con potencial nefrotóxico idiosincrásico (nefritis intersticial aguda) vía mecanismo inmunemediado. Los AINEs poseen nefrotoxicidad directa por inhibición de las prostaglandinas renales (vasoconstricción de la arteriola aferente). La asociación continua aditiva de las dos nefrotoxicidades aumenta significativamente el riesgo de insuficiencia renal aguda y puede acelerar la progresión a Enfermedad Renal Crónica."
+      },
+      conduta: {
+        pt: "Monitorar creatinina e EAS periodicamente (a cada 3-6 meses durante uso crônico). Evitar AINEs crônicos em pacientes usando mesalazina, especialmente com TFG < 60 mL/min/1,73m². Preferir paracetamol para controle de dor.",
+        es: "Monitorizar creatinina y sedimento urinario periódicamente (cada 3-6 meses durante uso crónico). Evitar AINEs crónicos en pacientes usando mesalazina, especialmente con TFG < 60 mL/min/1,73m². Preferir paracetamol para control del dolor."
+      }
+    }
+  },
+
+  "sufentanil": {
+    "$classe_benzodiazepinicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Associação de uso padrão na sedação em UTI (Midazolam + Sufentanil), porém o sinergismo depressor do SNC é violento e não-linear. Causa apneia imediata, depressão respiratória profunda, hipotensão acentuada e coma prolongado por efeitos aditivos nos receptores GABA (benzodiazepínico) e opioides mu (sufentanil). Mesmo doses aparentemente seguras de cada fármaco individualmente podem ser fatais quando combinadas sem via aérea protegida.",
+        es: "Asociación de uso estándar en la sedación en UCI (Midazolam + Sufentanilo), sin embargo el sinergismo depresor del SNC es violento y no lineal. Causa apnea inmediata, depresión respiratoria profunda, hipotensión acentuada y coma prolongado por efectos aditivos en los receptores GABA (benzodiacepínico) y opioides mu (sufentanilo). Incluso dosis aparentemente seguras de cada fármaco individualmente pueden ser fatales al combinarse sin vía aérea protegida."
+      },
+      conduta: {
+        pt: "Utilizar APENAS sob via aérea artificial garantida (paciente intubado e sob ventilação mecânica). Reduzir as doses de ambos em até 50% quando combinados. Monitorar pressão arterial contínua e capnografia. Naloxona deve estar disponível à beira do leito.",
+        es: "Utilizar SOLO bajo vía aérea artificial garantizada (paciente intubado y bajo ventilación mecánica). Reducir las dosis de ambos hasta un 50% cuando combinados. Monitorear presión arterial continua y capnografía. La naloxona debe estar disponible a la cabecera del paciente."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os inibidores potentes do CYP3A4 (Claritromicina, Eritromicina) e também os azólicos antifúngicos bloqueiam o metabolismo hepático do sufentanil via CYP3A4. Como o sufentanil é altamente lipofílico, o acúmulo sistêmico causado pela inibição do metabolismo torna o 'despertar' da sedação de UTI incrivelmente prolongado — o paciente pode permanecer em coma induzido residual por dias após a suspensão da bomba, dificultando o desmame ventilatório.",
+        es: "Los inhibidores potentes del CYP3A4 (Claritromicina, Eritromicina) y también los azólicos antifúngicos bloquean el metabolismo hepático del sufentanilo vía CYP3A4. Como el sufentanilo es altamente lipofílico, la acumulación sistémica causada por la inhibición del metabolismo hace que el 'despertar' de la sedación de UCI sea increíblemente prolongado — el paciente puede permanecer en coma inducido residual por días tras la suspensión de la bomba, dificultando el destete ventilatorio."
+      },
+      conduta: {
+        pt: "Iniciar desmame gradual da sedação dias antes do previsto para extubação quando macrolídeo estiver em uso. Considerar trocar antibiótico para alternativa sem inibição de CYP3A4 se o paciente não acorda adequadamente. Monitorar escalas de sedação (RASS) com mais frequência.",
+        es: "Iniciar destete gradual de la sedación días antes de lo previsto para extubación cuando el macrólido esté en uso. Considerar cambiar antibiótico por alternativa sin inhibición de CYP3A4 si el paciente no despierta adecuadamente. Monitorear escalas de sedación (RASS) con mayor frecuencia."
+      }
+    }
+  },
+
+  "hidrocortisona": {
+    "insulina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Efeito contrarregulador intenso e de início rápido. A hidrocortisona estimula profundamente a gliconeogênese hepática (produção de nova glicose a partir de aminoácidos/lactato) e induz resistência insulínica tecidual periférica (reduz translocação de GLUT-4), gerando picos hiperglicêmicos de difícil controle no paciente séptico. O efeito hiperglicêmico da hidrocortisona é ainda mais intenso que o de outros corticoides devido à sua forte atividade mineralocorticoide adicional.",
+        es: "Efecto contrarregulador intenso y de inicio rápido. La hidrocortisona estimula profundamente la gluconeogénesis hepática (producción de nueva glucosa a partir de aminoácidos/lactato) e induce resistencia insulínica tisular periférica (reduce translocación de GLUT-4), generando picos hiperglucémicos de difícil control en el paciente séptico. El efecto hiperglucémico de la hidrocortisona es aún más intenso que el de otros corticoides debido a su fuerte actividad mineralocorticoide adicional."
+      },
+      conduta: {
+        pt: "Prever necessidade de aumentar substancialmente as doses de insulina (frequentemente 2-3x a dose basal). Implementar protocolo de infusão contínua de insulina IV em UTI (alvo glicemia 140-180 mg/dL, Surviving Sepsis Campaign). HGT a cada 2-4h nas primeiras 24h e após qualquer ajuste de dose de corticoide.",
+        es: "Prever necesidad de aumentar sustancialmente las dosis de insulina (frecuentemente 2-3x la dosis basal). Implementar protocolo de infusión continua de insulina IV en UCI (objetivo glucemia 140-180 mg/dL, Surviving Sepsis Campaign). HGT cada 2-4h en las primeras 24h y tras cualquier ajuste de dosis de corticoide."
+      }
+    },
+    "$classe_diureticos_alca": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A hidrocortisona, ao contrário de outros corticoides, possui forte componente mineralocorticoide (atividade = 1x aldosterona) que retém sódio e EXCRETA ativamente potássio e magnésio nos túbulos renais distais. O uso simultâneo de diuréticos de alça (furosemida, bumetanida) agrava dramaticamente a depleção de potássio, podendo precipitar hipocalemia grave (K+ < 2,5 mEq/L) com arritmias cardíacas potencialmente fatais.",
+        es: "La hidrocortisona, a diferencia de otros corticoides, posee fuerte componente mineralocorticoide (actividad = 1x aldosterona) que retiene sodio y EXCRETA activamente potasio y magnesio en los túbulos renales distales. El uso simultáneo de diuréticos de asa (furosemida, bumetanida) agrava dramáticamente la depleción de potasio, pudiendo precipitar hipopotasemia grave (K+ < 2,5 mEq/L) con arritmias cardíacas potencialmente fatales."
+      },
+      conduta: {
+        pt: "Monitorar K+ e Mg²+ seriados (a cada 12-24h na UTI). Iniciar reposição proativa de cloreto de potássio IV se K+ < 3,5 mEq/L. Suplementar sulfato de magnésio se Mg²+ < 1,2 mg/dL. Rever necessidade do diurético de alça durante o ciclo com hidrocortisona.",
+        es: "Monitorizar K+ y Mg²+ seriados (cada 12-24h en UCI). Iniciar reposición proactiva de cloruro de potasio IV si K+ < 3,5 mEq/L. Suplementar sulfato de magnesio si Mg²+ < 1,2 mg/dL. Revisar necesidad del diurético de asa durante el ciclo con hidrocortisona."
+      }
+    }
+  },
+
+  "metilprednisolona": {
+    "$classe_bloqueadores_neuromusculares": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O uso simultâneo de altas doses de corticoides (metilprednisolona ≥ 1 mg/kg/dia) com bloqueadores neuromusculares não-despolarizantes (Rocurônio, Cisatracúrio, Vecurônio) na UTI deflagra um risco dramático de Miopatia Aguda do Doente Crítico (MADC). A MADC se manifesta como tetraplegia flácida, elevação da CPK e paralisia prolongada que dificulta drasticamente o desmame do ventilador e a reabilitação do paciente. Fisiopatologia: inibição do metabolismo proteico muscular + bloqueio neuromuscular prolongado aditivo.",
+        es: "El uso simultáneo de altas dosis de corticoides (metilprednisolona ≥ 1 mg/kg/día) con bloqueadores neuromusculares no despolarizantes (Rocuronio, Cisatracurio, Vecuronio) en la UCI desencadena un riesgo dramático de Miopatía Aguda del Enfermo Crítico (MAEC). La MAEC se manifiesta como tetraplejía flácida, elevación de la CPK y parálisis prolongada que dificulta drásticamente el destete del ventilador y la rehabilitación del paciente. Fisiopatología: inhibición del metabolismo proteico muscular + bloqueo neuromuscular prolongado aditivo."
+      },
+      conduta: {
+        pt: "Evitar a associação na UTI sempre que possível. Se necessário (ex: Asma grave intubada, SDRA com dissincronismo), usar o BNM pelo menor tempo estritamente viável (< 48 horas). Monitorar força muscular periférica com trem-de-quatro (TOF). Fisioterapia motora intensiva precoce após descontinuação.",
+        es: "Evitar la asociación en UCI siempre que sea posible. Si necesario (ej: Asma grave intubada, SDRA con disincronismo), usar el BNM por el menor tiempo estrictamente viable (< 48 horas). Monitorear fuerza muscular periférica con tren de cuatro (TOF). Fisioterapia motora intensiva precoz tras discontinuación."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sinergismo na toxicidade gastrointestinal por mecanismos distintos e aditivos. Corticoides reduzem a síntese de prostaglandinas protetoras da mucosa gástrica e diminuem a proliferação epitelial de reparo. AINEs inibem diretamente a COX-1 gástrica, reduzindo o muco e o bicarbonato protetores. A associação eleva 15 vezes o risco de úlcera péptica complicada (sangramento ou perfuração) em comparação com nenhum dos dois.",
+        es: "Sinergismo en la toxicidad gastrointestinal por mecanismos distintos y aditivos. Los corticoides reducen la síntesis de prostaglandinas protectoras de la mucosa gástrica y disminuyen la proliferación epitelial de reparación. Los AINEs inhiben directamente la COX-1 gástrica, reduciendo el moco y el bicarbonato protectores. La asociación eleva 15 veces el riesgo de úlcera péptica complicada (sangrado o perforación) en comparación con ninguno de los dos."
+      },
+      conduta: {
+        pt: "Uso obrigatório de IBP (de preferência pantoprazol em cardiopatas) como gastroproteção enquanto durar a terapia dupla corticoide + AINE. Avaliar substituição do AINE por paracetamol para analgesia/antipirexia. Atentar para sinais de sangramento oculto (hematócrito em queda, melena).",
+        es: "Uso obligatorio de IBP (preferiblemente pantoprazol en cardiópatas) como gastroprotección mientras dure la terapia doble corticoide + AINE. Evaluar sustitución del AINE por paracetamol para analgesia/antipiréxia. Atender signos de sangrado oculto (hematocrito en descenso, melena)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 280 — BLOCO MOTOR DE INTERAÇÕES: Corticoides Sistêmicos
+     Dexametasona · Prednisona · Prednisolona · Deflazacorte
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── DEXAMETASONA ── */
+  "dexametasona": {
+    "vacinas_vivas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A dexametasona é um imunossupressor potente de ação longa (meia-vida 36-54h). A administração de vacinas de vírus ou bactérias atenuados vivos (Febre Amarela, MMR/Tríplice Viral, BCG, Varicela, Rotavírus, Poliomielite oral) durante tratamento com doses imunossupressoras pode gerar replicação viral/bacteriana descontrolada — resultando em infecção grave, sistêmica e potencialmente fatal pelo próprio agente vacinal atenuado.",
+        es: "La dexametasona es un inmunosupresor potente de acción larga (vida media 36-54h). La administración de vacunas de virus o bacterias atenuados vivos (Fiebre Amarilla, MMR/Triple Viral, BCG, Varicela, Rotavirus, Poliomielitis oral) durante tratamiento con dosis inmunosupresoras puede generar replicación viral/bacteriana descontrolada — resultando en infección grave, sistémica y potencialmente fatal por el propio agente vacunal atenuado."
+      },
+      conduta: {
+        pt: "Contraindicado se o paciente estiver em uso de doses imunossupressoras (> 20 mg/dia de prednisona equivalente por > 14 dias). Aguardar pelo menos 1 mês após a suspensão do corticoide para vacinas de vírus vivo em adultos. Para doses baixas (< 20 mg/dia por < 2 semanas), o risco é mínimo e a vacinação pode ser considerada.",
+        es: "Contraindicado si el paciente está en uso de dosis inmunosupresoras (> 20 mg/día de prednisona equivalente por > 14 días). Esperar al menos 1 mes tras la suspensión del corticoide para vacunas de virus vivo en adultos. Para dosis bajas (< 20 mg/día por < 2 semanas), el riesgo es mínimo y la vacunación puede ser considerada."
+      }
+    },
+    "$classe_anticoagulantes_orais_diretos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A dexametasona é um INDUTOR da P-glicoproteína (P-gp) e do CYP3A4 — as duas principais vias de metabolismo e eliminação dos DOACs (Anticoagulantes Orais Diretos: Rivaroxabana, Apixabana, Dabigatrana, Edoxabana). A indução enzimática acelera a eliminação plasmática dos DOACs, reduzindo significativamente seus níveis e sua eficácia anticoagulante. O paciente oncológico frequentemente recebe dexametasona (antiemético da quimioterapia) concomitantemente ao DOAC prescrito para prevenção de TEV, ficando sem proteção anticoagulante adequada.",
+        es: "La dexametasona es un INDUCTOR de la P-glicoproteína (P-gp) y del CYP3A4 — las dos principales vías de metabolismo y eliminación de los DOACs (Anticoagulantes Orales Directos: Rivaroxabán, Apixabán, Dabigatrán, Edoxabán). La inducción enzimática acelera la eliminación plasmática de los DOACs, reduciendo significativamente sus niveles y su eficacia anticoagulante. El paciente oncológico frecuentemente recibe dexametasona (antiemético de quimioterapia) concomitantemente al DOAC prescrito para prevención de TEV, quedando sin protección anticoagulante adecuada."
+      },
+      conduta: {
+        pt: "Evitar uso associado prolongado. No contexto oncológico com alto risco tromboembólico (câncer ativo + quimioterapia), considerar substituição do DOAC por Heparina de Baixo Peso Molecular (HBPM — enoxaparina) enquanto durar o ciclo com dexametasona em doses altas. Se uso esporádico (antiemético em dose única), o impacto clínico é mínimo.",
+        es: "Evitar uso asociado prolongado. En el contexto oncológico con alto riesgo tromboembólico (cáncer activo + quimioterapia), considerar sustitución del DOAC por Heparina de Bajo Peso Molecular (HBPM — enoxaparina) mientras dure el ciclo con dexametasona en dosis altas. Si uso esporádico (antiemético en dosis única), el impacto clínico es mínimo."
+      }
+    },
+    "$classe_fluoroquinolonas": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A combinação de corticosteroides sistêmicos (dexametasona) e fluoroquinolonas (ciprofloxacino, levofloxacino, moxifloxacino) multiplica sinergicamente o risco de RUPTURA DE TENDÃO — especialmente do tendão de Aquiles, mas também do tendão do quadríceps e do manguito rotador. Mecanismo: fluoroquinolonas inibem a síntese de colágeno tipo I pelos tenócitos E aumentam a atividade das metaloproteinases de matriz (MMPs); os corticoides reduzem a síntese de colágeno E inibem a proliferação fibroblástica. O risco é muito maior em idosos (> 60 anos), pacientes com IRC, e transplantados renais.",
+        es: "La combinación de corticosteroides sistémicos (dexametasona) y fluoroquinolonas (ciprofloxacino, levofloxacino, moxifloxacino) multiplica sinérgicamente el riesgo de ROTURA DE TENDÓN — especialmente el tendón de Aquiles, pero también del tendón del cuádriceps y del manguito rotador. Mecanismo: las fluoroquinolonas inhiben la síntesis de colágeno tipo I por los tenocitos Y aumentan la actividad de las metaloproteinasas de matriz (MMPs); los corticoides reducen la síntesis de colágeno E inhiben la proliferación fibroblástica. El riesgo es mucho mayor en ancianos (> 60 años), pacientes con IRC y trasplantados renales."
+      },
+      conduta: {
+        pt: "Evitar a associação sempre que possível, especialmente em idosos e nefropatas. Se inevitável, alertar o paciente sobre dor, edema ou estalos em qualquer tendão e interromper imediatamente a fluoroquinolona ao primeiro sinal. Evitar atividade física intensa durante o tratamento combinado. Considerar alternativa antibiótica (beta-lactâmico, azitromicina) se clinicamente possível.",
+        es: "Evitar la asociación siempre que sea posible, especialmente en ancianos y nefropatas. Si inevitable, alertar al paciente sobre dolor, edema o crujidos en cualquier tendón e interrumpir inmediatamente la fluoroquinolona al primer signo. Evitar actividad física intensa durante el tratamiento combinado. Considerar alternativa antibiótica (betalactámico, azitromicina) si es clínicamente posible."
+      }
+    }
+  },
+
+  /* ── PREDNISONA ── */
+  "prednisona": {
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo grave na agressão gastrointestinal — os mecanismos são distintos e aditivos. Os corticoides reduzem a síntese de prostaglandinas citoprotectoras da mucosa gástrica (PGE2, PGI2) e diminuem a proliferação do epitélio de reparo. Os AINEs inibem diretamente a COX-1 constitutiva da mucosa, suprimindo a produção de muco e bicarbonato protetores. A associação crónica aumenta o risco de úlceras pépticas complicadas (sangramento, perfuração) em mais de 10 vezes, com especial risco em idosos, nefropatas e portadores de H. pylori.",
+        es: "Sinergismo grave en la agresión gastrointestinal — los mecanismos son distintos y aditivos. Los corticoides reducen la síntesis de prostaglandinas citoprotectoras de la mucosa gástrica (PGE2, PGI2) y disminuyen la proliferación del epitelio de reparación. Los AINEs inhiben directamente la COX-1 constitutiva de la mucosa, suprimiendo la producción de moco y bicarbonato protectores. La asociación crónica aumenta el riesgo de úlceras pépticas complicadas (sangrado, perforación) en más de 10 veces, con especial riesgo en ancianos, nefropatas y portadores de H. pylori."
+      },
+      conduta: {
+        pt: "Associação muito comum em reumatologia e pneumologia ambulatorial. Profilaxia com Inibidor de Bomba de Prótons (IBP) é OBRIGATÓRIA enquanto durar a terapia dupla. Preferir pantoprazol em pacientes em uso de antiagregantes (menor interação CYP2C19 vs. omeprazol). Rastrear H. pylori e tratar se positivo antes de iniciar a corticoterapia crônica.",
+        es: "Asociación muy común en reumatología y neumología ambulatoria. La profilaxis con Inhibidor de Bomba de Protones (IBP) es OBLIGATORIA mientras dure la terapia doble. Preferir pantoprazol en pacientes en uso de antiagregantes (menor interacción CYP2C19 vs. omeprazol). Rastrear H. pylori y tratar si positivo antes de iniciar la corticoterapia crónica."
+      }
+    },
+    "$classe_diureticos_alca": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo na hipocalemia por mecanismos complementares. A prednisona possui leve atividade mineralocorticoide residual que estimula a reabsorção de sódio e a excreção de potássio no túbulo coletor renal. Os diuréticos de alça (furosemida, bumetanida, torasemida) bloqueiam o cotransportador Na-K-2Cl na alça de Henle, aumentando massivamente a excreção de potássio. A combinação pode precipitar hipocalemia grave (K+ < 2,5-3,0 mEq/L) com fraqueza muscular, paralisia e arritmias ventriculares potencialmente fatais.",
+        es: "Sinergismo en la hipopotasemia por mecanismos complementarios. La prednisona posee leve actividad mineralocorticoide residual que estimula la reabsorción de sodio y la excreción de potasio en el túbulo colector renal. Los diuréticos de asa (furosemida, bumetanida, torasemida) bloquean el cotransportador Na-K-2Cl en el asa de Henle, aumentando masivamente la excreción de potasio. La combinación puede precipitar hipopotasemia grave (K+ < 2,5-3,0 mEq/L) con debilidad muscular, parálisis y arritmias ventriculares potencialmente fatales."
+      },
+      conduta: {
+        pt: "Monitoramento de potássio sérico (a cada 1-2 semanas no início do tratamento combinado). Reposição oral rotineira de cloreto de potássio (KCl VO) quando K+ < 3,5 mEq/L. Considerar adição de diurético poupador de potássio (espironolactona) se hipocalemia recorrente. Orientar dieta rica em potássio (banana, abacate, batata).",
+        es: "Monitorización de potasio sérico (cada 1-2 semanas al inicio del tratamiento combinado). Reposición oral rutinaria de cloruro de potasio (KCl VO) cuando K+ < 3,5 mEq/L. Considerar adición de diurético ahorrador de potasio (espironolactona) si hipopotasemia recurrente. Orientar dieta rica en potasio (plátano, aguacate, patata)."
+      }
+    },
+    "insulina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Ação hiperglicemiante agressiva e dose-dependente dos corticoides sistêmicos. A prednisona estimula intensamente a gliconeogênese hepática (produção de nova glicose a partir de aminoácidos e glicerol) e induz resistência insulínica tecidual periférica (reduz a translocação do GLUT-4 nas células musculares e adiposas). O efeito hiperglicêmico dos corticoides é característico e geralmente mais pronunciado no período pós-prandial e vespertino (padrão de 'hiperglicemia esteroide pós-prandial'), podendo elevar a HbA1c e descompensar o diabético previamente controlado.",
+        es: "Acción hiperglucemiante agresiva y dosis-dependiente de los corticoides sistémicos. La prednisona estimula intensamente la gluconeogénesis hepática (producción de nueva glucosa a partir de aminoácidos y glicerol) e induce resistencia insulínica tisular periférica (reduce la translocación del GLUT-4 en células musculares y adiposas). El efecto hiperglucémico de los corticoides es característico y generalmente más pronunciado en el período postprandial y vespertino (patrón de 'hiperglucemia esteroide postprandial'), pudiendo elevar la HbA1c y descompensar al diabético previamente controlado."
+      },
+      conduta: {
+        pt: "Pacientes diabéticos em uso de prednisona frequentemente necessitam aumentar progressivamente as doses de insulina basal e rápida (especialmente a cobertura prandial do almoço e jantar). Monitorar a glicemia capilar no mínimo 2 a 4x/dia enquanto durar a corticoterapia. Reduzir gradualmente a insulina ao desmamar o corticoide para evitar hipoglicemia. Acompanhamento endocrinológico é vital em diabetes descompensada.",
+        es: "Pacientes diabéticos en uso de prednisona frecuentemente necesitan aumentar progresivamente las dosis de insulina basal y rápida (especialmente la cobertura prandial del almuerzo y cena). Monitorear la glucemia capilar como mínimo 2 a 4 veces/día mientras dure la corticoterapia. Reducir gradualmente la insulina al destetar el corticoide para evitar hipoglucemia. El seguimiento endocrinológico es vital en diabetes descompensada."
+      }
+    }
+  },
+
+  /* ── PREDNISOLONA ── */
+  "prednisolona": {
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo grave na agressão gastrointestinal — idêntico mecanismo à prednisona. Os corticoides suprimem as prostaglandinas citoprotectoras da mucosa gástrica e os AINEs inibem diretamente a COX-1. O risco de úlcera péptica hemorrágica e perfuração é clinicamente muito relevante, especialmente em pediatria (quando associado a ibuprofeno para febre).",
+        es: "Sinergismo grave en la agresión gastrointestinal — mecanismo idéntico al de la prednisona. Los corticoides suprimen las prostaglandinas citoprotectoras de la mucosa gástrica y los AINEs inhiben directamente la COX-1. El riesgo de úlcera péptica hemorrágica y perforación es clínicamente muy relevante, especialmente en pediatría (cuando se asocia ibuprofeno para fiebre)."
+      },
+      conduta: {
+        pt: "Proteção gástrica obrigatória se terapia conjunta em adultos (IBP). Em pediatria, evitar uso concomitante de prednisolona e ibuprofeno quando possível — preferir paracetamol para controle de febre durante o curso de prednisolona.",
+        es: "Protección gástrica obligatoria si terapia conjunta en adultos (IBP). En pediatría, evitar uso concomitante de prednisolona e ibuprofeno cuando sea posible — preferir paracetamol para control de fiebre durante el curso de prednisolona."
+      }
+    },
+    "vacinas_vivas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Prednisolona em doses sistêmicas imunossupressoras (> 2 mg/kg/dia em crianças, ou > 20 mg/dia em adultos, por mais de 14 dias consecutivos) inibe a resposta imune celular e humoral de forma suficiente para impedir o controle da replicação dos agentes vacinais vivos atenuados. Vacinas de vírus vivos (Poliomielite oral Sabin, BCG, Varicela, MMR/SCR, Febre Amarela) podem causar infecção fulminante sistêmica em pacientes imunodeprimidos.",
+        es: "Prednisolona en dosis sistémicas inmunosupresoras (> 2 mg/kg/día en niños, o > 20 mg/día en adultos, por más de 14 días consecutivos) inhibe la respuesta inmune celular y humoral de forma suficiente para impedir el control de la replicación de los agentes vacunales vivos atenuados. Vacunas de virus vivos (Poliomielitis oral Sabin, BCG, Varicela, MMR/SCR, Fiebre Amarilla) pueden causar infección fulminante sistémica en pacientes inmunosuprimidos."
+      },
+      conduta: {
+        pt: "Não aplicar nenhuma vacina de vírus ou bactéria vivo (Poliomielite oral, BCG, Varicela, MMR, Febre Amarela) enquanto o paciente estiver em dose imunossupressora. Idealmente vacinar ANTES do início da corticoterapia crônica. Após a suspensão: aguardar 1 mês para doses baixas/curtas; aguardar 3 meses para doses altas/longas.",
+        es: "No aplicar ninguna vacuna de virus o bacteria vivo (Poliomielitis oral, BCG, Varicela, MMR, Fiebre Amarilla) mientras el paciente esté en dosis inmunosupresora. Idealmente vacunar ANTES del inicio de la corticoterapia crónica. Tras la suspensión: esperar 1 mes para dosis bajas/cortas; esperar 3 meses para dosis altas/largas."
+      }
+    }
+  },
+
+  /* ── DEFLAZACORTE ── */
+  "deflazacorte": {
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O metabólito ativo do deflazacorte (21-desacetil-deflazacorte) é quase que exclusivamente metabolizado pelo citocromo CYP3A4. Os inibidores potentes do CYP3A4 (Claritromicina, Eritromicina e também azólicos antifúngicos como itraconazol) bloqueiam esta via metabólica, causando acúmulo exponencial do corticoide ativo no plasma. Os níveis podem dobrar ou triplicar, gerando intensificação dramática dos efeitos do corticoide: hiperglicemia grave, imunossupressão excessiva (risco infeccioso), Síndrome de Cushing iatrogênica, e supressão adrenal acelerada.",
+        es: "El metabolito activo del deflazacort (21-desacetil-deflazacort) es metabolizado casi exclusivamente por el citocromo CYP3A4. Los inhibidores potentes del CYP3A4 (Claritromicina, Eritromicina y también azólicos antifúngicos como itraconazol) bloquean esta vía metabólica, causando acumulación exponencial del corticoide activo en el plasma. Los niveles pueden doblarse o triplicarse, generando intensificación dramática de los efectos del corticoide: hiperglucemia grave, inmunosupresión excesiva (riesgo infeccioso), Síndrome de Cushing iatrogénico, y supresión adrenal acelerada."
+      },
+      conduta: {
+        pt: "Evitar uso prolongado destes antibióticos concomitantemente ao deflazacorte. Se o curso do macrolídeo for curto (≤ 5 dias), monitorar sinais de toxicidade corticoide (glicemia, pressão, agitação). Se contínuo ou recorrente, reduzir empiricamente a dose do deflazacorte em 30-50% e ajustar por sintomas. Considerar troca para azitromicina (não inibe CYP3A4 de forma significativa).",
+        es: "Evitar uso prolongado de estos antibióticos concomitantemente al deflazacort. Si el curso del macrólido es corto (≤ 5 días), monitorizar signos de toxicidad corticoide (glucemia, presión, agitación). Si continuo o recurrente, reducir empíricamente la dosis del deflazacort en 30-50% y ajustar por síntomas. Considerar cambio a azitromicina (no inhibe CYP3A4 de forma significativa)."
+      }
+    },
+    "rifampicina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A rifampicina é um dos indutores enzimáticos mais potentes do CYP3A4 conhecidos na farmacologia clínica. Ela reduz drasticamente os níveis plasmáticos do metabólito ativo do deflazacorte em até 3-5 vezes (efeito indutor completo em 7-14 dias e persistindo por semanas após a suspensão da rifampicina). O paciente em tratamento de doença grave e crônica com deflazacorte (ex: Distrofia Muscular de Duchenne, doenças reumatológicas) verá a droga se tornar praticamente inativa durante o ciclo antituberculoso ou antileprótico, levando à exacerbação e reativação da doença de base.",
+        es: "La rifampicina es uno de los inductores enzimáticos más potentes del CYP3A4 conocidos en farmacología clínica. Reduce drásticamente los niveles plasmáticos del metabolito activo del deflazacort en hasta 3-5 veces (efecto inductor completo en 7-14 días y persistiendo por semanas tras la suspensión de la rifampicina). El paciente en tratamiento de enfermedad grave y crónica con deflazacort (ej: Distrofia Muscular de Duchenne, enfermedades reumatológicas) verá la droga volverse prácticamente inactiva durante el ciclo antituberculoso o antileprótico, llevando a la exacerbación y reactivación de la enfermedad de base."
+      },
+      conduta: {
+        pt: "A dose de deflazacorte geralmente precisa ser aumentada em 2 a 3 vezes durante o uso concomitante de rifampicina, e monitorada clinicamente pela resposta dos sintomas da doença de base. Após a suspensão da rifampicina, reduzir a dose de deflazacorte gradualmente (ao longo de 2-4 semanas) para evitar superdosagem. Informar o especialista responsável antes de iniciar rifampicina em paciente em uso de deflazacorte.",
+        es: "La dosis de deflazacort generalmente necesita aumentarse 2 a 3 veces durante el uso concomitante de rifampicina, y monitorizarse clínicamente por la respuesta de los síntomas de la enfermedad de base. Tras la suspensión de la rifampicina, reducir la dosis de deflazacort gradualmente (a lo largo de 2-4 semanas) para evitar sobredosificación. Informar al especialista responsable antes de iniciar rifampicina en paciente en uso de deflazacort."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 281 — BLOCO MOTOR DE INTERAÇÕES: Betametasona & Incretinas
+     Betametasona · Semaglutida · Tirzepatida · Liraglutida
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── BETAMETASONA ── */
+  "betametasona": {
+    "vacinas_vivas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Corticoides sistêmicos de depósito (Diprospan/Duoflam) causam imunossupressão celular profunda e PROLONGADA — o efeito pode durar 3 a 4 semanas após uma única injeção IM. A administração de vacinas com vírus ou bactérias vivos atenuados (Febre Amarela, MMR/Tríplice Viral, BCG, Varicela) durante este período de imunossupressão pode gerar replicação vacinal descontrolada, resultando em infecção grave, sistêmica e potencialmente fatal pelo próprio agente da vacina.",
+        es: "Los corticoides sistémicos de depósito (Diprospan/Duoflam) causan inmunosupresión celular profunda y PROLONGADA — el efecto puede durar 3 a 4 semanas tras una sola inyección IM. La administración de vacunas con virus o bacterias vivos atenuados (Fiebre Amarilla, MMR/Triple Viral, BCG, Varicela) durante este período de inmunosupresión puede generar replicación vacunal descontrolada, resultando en infección grave, sistémica y potencialmente fatal por el propio agente de la vacuna."
+      },
+      conduta: {
+        pt: "Aguardar ao menos 1 mês após o término estimado do efeito do depósito para administrar qualquer vacina de vírus ou bactéria vivos (ex: Febre Amarela, Tríplice Viral/MMR). Documentar no prontuário a data da aplicação do corticoide de depósito para fins de rastreamento vacinal.",
+        es: "Esperar al menos 1 mes tras el término estimado del efecto del depósito para administrar cualquier vacuna de virus o bacterias vivos (ej: Fiebre Amarilla, Triple Viral/MMR). Documentar en el historial la fecha de aplicación del corticoide de depósito para fines de rastreo vacunal."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo grave na toxicidade gastrointestinal — mecanismos idênticos à associação de qualquer corticoide com AINEs (supressão de prostaglandinas citoprotectoras + inibição COX-1). Particularmente perigoso com a betametasona de depósito: o paciente muitas vezes recebe a injeção de 'Diprospan' para alívio de dor músculo-esquelética e já está em uso crônico de AINEs em casa (ibuprofeno, diclofenaco), sem comunicar ao prescritor. A combinação eleva drasticamente o risco de úlcera péptica hemorrágica.",
+        es: "Sinergismo grave en la toxicidad gastrointestinal — mecanismos idénticos a la asociación de cualquier corticoide con AINEs (supresión de prostaglandinas citoprotectoras + inhibición COX-1). Particularmente peligroso con la betametasona de depósito: el paciente muchas veces recibe la inyección de Diprospan para alivio de dolor músculo-esquelético y ya está en uso crónico de AINEs en casa (ibuprofeno, diclofenaco), sin comunicar al prescriptor. La combinación eleva drásticamente el riesgo de úlcera péptica hemorrágica."
+      },
+      conduta: {
+        pt: "Perguntar ativamente sobre uso de AINEs antes de aplicar betametasona de depósito. Prescrever Inibidor de Bomba de Prótons (IBP) profilático por pelo menos 4 semanas após a injeção de depósito se o paciente usa AINEs cronicamente. Orientar o paciente a suspender o AINE e preferir paracetamol como analgésico alternativo.",
+        es: "Preguntar activamente sobre uso de AINEs antes de aplicar betametasona de depósito. Prescribir Inhibidor de Bomba de Protones (IBP) profiláctico por al menos 4 semanas tras la inyección de depósito si el paciente usa AINEs crónicamente. Orientar al paciente a suspender el AINE y preferir paracetamol como analgésico alternativo."
+      }
+    }
+  },
+
+  /* ── SEMAGLUTIDA ── */
+  "semaglutida": {
+    "insulina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os análogos de GLP-1 isoladamente raramente causam hipoglicemia (estimulam insulina de forma GLICOSE-DEPENDENTE — param de agir quando a glicemia normaliza). Contudo, a semaglutida induz rápida supressão do apetite e restrição calórica severa, reduzindo drasticamente a ingestão alimentar. Se o paciente já usa insulina basal exógena ou sulfonilureias (que liberam insulina independentemente da glicose), essa combinação de 'menos combustível + mais insulina basal' cria um risco extremo de hipoglicemia grave, convulsões e coma — especialmente nos primeiros 2 meses de uso.",
+        es: "Los análogos de GLP-1 aisladamente raramente causan hipoglucemia (estimulan insulina de forma GLUCOSA-DEPENDIENTE — dejan de actuar cuando la glucemia se normaliza). Sin embargo, la semaglutida induce rápida supresión del apetito y restricción calórica severa, reduciendo drásticamente la ingesta alimentaria. Si el paciente ya usa insulina basal exógena o sulfonilureas (que liberan insulina independientemente de la glucosa), esa combinación de 'menos combustible + más insulina basal' crea un riesgo extremo de hipoglucemia grave, convulsiones y coma — especialmente en los primeros 2 meses de uso."
+      },
+      conduta: {
+        pt: "As doses de insulina basal (NPH, Glargina, Degludeca) DEVEM ser reduzidas empiricamente em 20% a 50% na semana em que se inicia a semaglutida, antecipando a restrição calórica. O mesmo se aplica às sulfonilureias: reduzir dose pela metade ou suspender. Monitorar glicemia capilar diariamente nas primeiras 4 semanas. Instruir o paciente e familiares sobre sinais de hipoglicemia e uso do glucagon de emergência.",
+        es: "Las dosis de insulina basal (NPH, Glargina, Degludeca) DEBEN reducirse empíricamente en 20% a 50% en la semana en que se inicia la semaglutida, anticipando la restricción calórica. Lo mismo se aplica a las sulfonilureas: reducir dosis a la mitad o suspender. Monitorear glucemia capilar diariamente en las primeras 4 semanas. Instruir al paciente y familiares sobre signos de hipoglucemia y uso del glucagón de emergencia."
+      }
+    },
+    "levotiroxina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Interação farmacocinética mecânica indireta. A levotiroxina oral exige absorção duodenal/jejunal imediata no jejum — é extremamente sensível a qualquer fator que retarde o esvaziamento gástrico. A semaglutida induz retardo do esvaziamento gástrico de forma dose-dependente (até 70-80% de redução na taxa de esvaziamento nas doses altas). Este retardo pode alterar significativamente o pico e a extensão da absorção da levotiroxina, resultando em flutuações imprevisíveis do TSH — alguns pacientes apresentam hipotireoidismo relativo, outros são assintomáticos.",
+        es: "Interacción farmacocinética mecánica indirecta. La levotiroxina oral exige absorción duodenal/yeyunal inmediata en ayunas — es extremadamente sensible a cualquier factor que retrase el vaciamiento gástrico. La semaglutida induce retraso del vaciamiento gástrico de forma dosis-dependiente (hasta 70-80% de reducción en la tasa de vaciamiento en las dosis altas). Este retraso puede alterar significativamente el pico y la extensión de la absorción de la levotiroxina, resultando en fluctuaciones impredecibles del TSH — algunos pacientes presentan hipotiroidismo relativo, otros son asintomáticos."
+      },
+      conduta: {
+        pt: "Monitorar TSH e T4 livre 6 a 8 semanas após atingir cada nova dose-alvo da semaglutida (especialmente ao passar de 0,5 para 1,0 mg e ao chegar a doses de Wegovy). Ajustar a dose de levotiroxina conforme os resultados do TSH. Orientar a paciente a manter o intervalo de 30 minutos em jejum para a levotiroxina e não alterá-lo.",
+        es: "Monitorear TSH y T4 libre 6 a 8 semanas tras alcanzar cada nueva dosis objetivo de la semaglutida (especialmente al pasar de 0,5 a 1,0 mg y al llegar a dosis de Wegovy). Ajustar la dosis de levotiroxina según los resultados del TSH. Orientar a la paciente a mantener el intervalo de 30 minutos en ayunas para la levotiroxina y no alterarlo."
+      }
+    }
+  },
+
+  /* ── TIRZEPATIDA ── */
+  "tirzepatida": {
+    "anticoncepcional_hormonal": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Interação descrita explicitamente na bula da tirzepatida (Mounjaro/Zepbound). O retardo maciço do esvaziamento gástrico induzido pela ativação dual GIP+GLP-1 é mais pronunciado nas primeiras 4 semanas de uso e nas 4 semanas seguintes a qualquer elevação de dose. Neste período, o pico de Cmax dos contraceptivos orais (etinilestradiol + progestágenos) é reduzido em até 30-40%, comprometendo a eficácia anticoncepcional e resultando em risco real de gravidez não planejada — que é contraindicada pela própria tirzepatida.",
+        es: "Interacción descrita explícitamente en el prospecto de tirzepatida (Mounjaro/Zepbound). El retraso masivo del vaciamiento gástrico inducido por la activación dual GIP+GLP-1 es más pronunciado en las primeras 4 semanas de uso y en las 4 semanas siguientes a cualquier elevación de dosis. En este período, el pico de Cmax de los anticonceptivos orales (etinilestradiol + progestágenos) se reduce hasta un 30-40%, comprometiendo la eficacia anticonceptiva y resultando en riesgo real de embarazo no planificado — que está contraindicado por la propia tirzepatida."
+      },
+      conduta: {
+        pt: "A paciente DEVE obrigatoriamente: (1) Trocar para método anticoncepcional não oral (adesivo transdérmico, injetável, DIU hormonal ou DIU de cobre, implante subcutâneo); OU (2) Usar preservativo masculino ou feminino como método de barreira simultâneo durante as 4 semanas pós-início e as 4 semanas pós qualquer escalada de dose. Documentar o aconselhamento no prontuário.",
+        es: "La paciente DEBE obligatoriamente: (1) Cambiar a método anticonceptivo no oral (parche transdérmico, inyectable, DIU hormonal o DIU de cobre, implante subcutáneo); O (2) Usar preservativo masculino o femenino como método de barrera simultáneo durante las 4 semanas pos inicio y las 4 semanas pos cualquier escalonada de dosis. Documentar el asesoramiento en el historial."
+      }
+    },
+    "$classe_hipoglicemiantes_secretagogos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "As sulfonilureias (glibenclamida, glimepirida, gliclazida) e as glinidas (repaglinida, nateglinida) estimulam a secreção pancreática de insulina de forma INDEPENDENTE da glicose (mecanismo: fechamento de canais K+ATP nas células beta). O uso conjunto com tirzepatida cria um perigoso sinergismo: a tirzepatida suprime o apetite e reduz a ingestão calórica, enquanto as sulfonilureias continuam liberando insulina — resultando em hipoglicemia grave, especialmente noturna (quando o paciente está em jejum prolongado induzido pela saciedade extrema da incretina).",
+        es: "Las sulfonilureas (glibenclamida, glimepirida, gliclazida) y las glinidas (repaglinida, nateglinida) estimulan la secreción pancreática de insulina de forma INDEPENDIENTE de la glucosa (mecanismo: cierre de canales K+ATP en células beta). El uso conjunto con tirzepatida crea un peligroso sinergismo: la tirzepatida suprime el apetito y reduce la ingesta calórica, mientras las sulfonilureas continúan liberando insulina — resultando en hipoglucemia grave, especialmente nocturna (cuando el paciente está en ayuno prolongado inducido por la saciedad extrema de la incretina)."
+      },
+      conduta: {
+        pt: "Descontinuar a sulfonilureia ou reduzir empiricamente a dose pela metade no ato de iniciar a tirzepatida. Na maioria dos pacientes com DM2 bem controlados, a tirzepatida isoladamente é suficiente para o controle glicêmico, tornando a sulfonilureia desnecessária. Monitorar glicemia capilar diariamente nas primeiras 4-8 semanas. Instruir o paciente sobre sinais/sintomas de hipoglicemia.",
+        es: "Descontinuar la sulfonilurea o reducir empíricamente la dosis a la mitad al iniciar la tirzepatida. En la mayoría de los pacientes con DM2 bien controlados, la tirzepatida aisladamente es suficiente para el control glucémico, haciendo la sulfonilurea innecesaria. Monitorear glucemia capilar diariamente en las primeras 4-8 semanas. Instruir al paciente sobre signos/síntomas de hipoglucemia."
+      }
+    }
+  },
+
+  /* ── LIRAGLUTIDA ── */
+  "liraglutida": {
+    "insulina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Mecanismo idêntico ao da semaglutida e tirzepatida: risco elevado de hipoglicemia grave pela combinação de supressão calórica intensa (liraglutida reduz a ingestão alimentar em ~20-30%) com a presença de insulina basal exógena no sangue que age independentemente da glicemia. O risco é proporcional à dose de insulina basal e à aderência do paciente à dieta hipocalórica induzida pela liraglutida. A hipoglicemia noturna é a mais perigosa.",
+        es: "Mecanismo idéntico al de la semaglutida y tirzepatida: riesgo elevado de hipoglucemia grave por la combinación de supresión calórica intensa (liraglutida reduce la ingesta alimentaria en ~20-30%) con la presencia de insulina basal exógena en sangre que actúa independientemente de la glucemia. El riesgo es proporcional a la dosis de insulina basal y a la adherencia del paciente a la dieta hipocalórica inducida por la liraglutida. La hipoglucemia nocturna es la más peligrosa."
+      },
+      conduta: {
+        pt: "Reduzir empiricamente a dose de insulina basal e/ou sulfonilureia em 20-30% no ato de iniciar a liraglutida. Monitorar glicemia capilar, especialmente pré-jantar e às 3h da madrugada nas primeiras 4 semanas. Reduzir progressivamente à medida que o controle glicêmico melhora com a incretina. Não aguardar hipoglicemia para ajustar — a redução deve ser PROATIVA.",
+        es: "Reducir empíricamente la dosis de insulina basal y/o sulfonilurea en 20-30% al iniciar la liraglutida. Monitorear glucemia capilar, especialmente pre-cena y a las 3h de la madrugada en las primeras 4 semanas. Reducir progresivamente a medida que el control glucémico mejora con la incretina. No esperar hipoglucemia para ajustar — la reducción debe ser PROACTIVA."
       }
     }
   }

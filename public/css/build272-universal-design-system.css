@@ -299,26 +299,56 @@ body.light-mode .univ-result-conduct { color:#1E293B; background:rgba(0,0,0,0.03
   padding-top: 14px;
 }
 
+/* BUILD 283 — HOTFIX MOBILE: Grid 2×2 explícito com fundo escuro fixo.
+   Usa grid-template-areas para garantir layout 2 colunas × 2 linhas
+   em WebView iOS/Android sem colapso em texto corrido.
+   min-width: 0 nos filhos evita overflow em containers flex/grid. */
 .clcr-live-dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "clcr imc"
+    "peso bsa";
   gap: 8px;
-  padding: 0 16px 14px;
+  padding: 10px 12px 14px;
+  /* Fundo escuro fixo BUILD 277 — não depende de variável de tema para manter
+     contraste garantido em WebView onde CSS vars podem não ser aplicadas */
+  background: rgba(10, 14, 26, 0.55);
+  border-radius: 14px;
+  /* Força box-sizing para evitar colapso de largura em WebView */
+  box-sizing: border-box;
+  width: 100%;
 }
+
+/* Atribuição explícita de grid-area para cada quadrante */
+#clcr-live-q-clcr { grid-area: clcr; }
+#clcr-live-q-imc  { grid-area: imc;  }
+#clcr-live-q-peso { grid-area: peso; }
+#clcr-live-q-bsa  { grid-area: bsa;  }
+
 .clcr-live-quad {
-  background: rgba(var(--theme-accent-rgb), 0.07);
-  border: 1px solid rgba(var(--theme-accent-rgb), 0.20);
-  border-radius: 12px;
-  padding: 10px 8px 9px;
+  /* min-width: 0 previne overflow em contexto grid */
+  min-width: 0;
+  background: rgba(var(--theme-accent-rgb, 56, 189, 248), 0.08);
+  border: 1px solid rgba(var(--theme-accent-rgb, 56, 189, 248), 0.22);
+  border-radius: 10px;
+  padding: 10px 6px 9px;
   text-align: center;
+  box-sizing: border-box;
+  /* Previne que WebView comprima o quadrante */
+  overflow: hidden;
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 .clcr-live-quad-val {
+  display: block;
   font-size: 20px;
   font-weight: 800;
-  color: var(--theme-accent);
+  color: var(--theme-accent, #38bdf8);
   line-height: 1;
   letter-spacing: -0.4px;
+  /* white-space: nowrap evita quebra de linha do valor numérico */
+  white-space: nowrap;
   transition: color 0.3s ease;
 }
 .clcr-live-quad-val.is-empty {
@@ -326,15 +356,20 @@ body.light-mode .univ-result-conduct { color:#1E293B; background:rgba(0,0,0,0.03
   font-weight: 700;
 }
 .clcr-live-quad-lbl {
+  display: block;
   font-size: 8px;
   font-weight: 800;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.42);
   margin-top: 4px;
+  white-space: nowrap;
 }
 body.light-mode .clcr-live-quad-val.is-empty { color: rgba(0,0,0,0.20); }
 body.light-mode .clcr-live-quad-lbl { color: rgba(0,0,0,0.42); }
+body.light-mode .clcr-live-dashboard {
+  background: rgba(220, 230, 245, 0.45);
+}
 
 @media (min-width: 600px) {
   .clcr-live-quad-val { font-size: 22px; }

@@ -11661,11 +11661,11 @@
        BCC DHP · HAS · Angina estável · Raynaud · 1ª linha HAS
        ASCOT · CAMELOT · ESC/AHA Guidelines
     ══════════════════════════════════════════════════════════════ */
-    amlodipina: {
-      id: 'amlodipina',
-      name: 'Amlodipina',
+    anlodipino: {
+      id: 'anlodipino',
+      name: 'Anlodipino', /* BUILD 284: grafia Anvisa — unificado de amlodipina */
       category: 'cardio',
-      commercialNames: ['Norvasc', 'Pressat', 'Amlodipina genérica'],
+      commercialNames: ['Norvasc', 'Pressat', 'Anlodipino genérico'],
 
       calculate(paciente, lang = 'pt') {
         const peso  = paciente?.peso  || 70;
@@ -11699,8 +11699,8 @@
         }
 
         return {
-          id:       'amlodipina',
-          name:     'Amlodipina',
+          id:       'anlodipino',
+          name:     'Anlodipino',
           class:    t(lang, 'Bloqueador dos canais de cálcio diidropiridínico', 'Bloqueador de los canales de calcio dihidropiridínico'),
           category: 'cardio',
 
