@@ -654,6 +654,99 @@
   }
 
   /* ============================================================
+     §K — ENTER-TO-NEXT-FIELD (BUILD 254)
+     Intercepta Enter/Go do teclado virtual nos inputs de
+     calculadora e avança o foco para o próximo campo visível
+     dentro do mesmo grupo (form/card). Se for o último campo
+     do grupo, apenas fecha o teclado (blur) em vez de tentar
+     avançar para um campo inexistente.
+
+     Cobre também inputs injetados dinamicamente (elec-calc.js,
+     hub-accordion.js, calculator-overlay.js etc.) porque o
+     listener é registrado em document (delegação via capture),
+     não em cada input individualmente.
+
+     Além disso, aplica enterkeyhint="next"/"done" via JS a
+     qualquer input numérico/texto que ainda não tenha o
+     atributo, garantindo cobertura total mesmo em campos
+     montados após o carregamento inicial da página.
+  ============================================================ */
+  function _initEnterKeyNav() {
+    var SELECTOR = '.input-field, .drug-search, .hm-input, .hm-search, ' +
+                   '.elec2-field input, input[type="number"], ' +
+                   'input[type="text"], input[type="tel"], input[type="search"]';
+
+    function _isFocusable(el) {
+      if (!el) return false;
+      if (el.disabled || el.readOnly) return false;
+      if (el.type === 'hidden' || el.type === 'checkbox' || el.type === 'radio' || el.type === 'button') return false;
+      var style = window.getComputedStyle(el);
+      if (style.display === 'none' || style.visibility === 'hidden') return false;
+      /* offsetParent null = display:none em algum ancestral (card fechado, etc.) */
+      if (el.offsetParent === null) return false;
+      return true;
+    }
+
+    function _getFieldGroup(current) {
+      /* Prioriza o container mais próximo (card aberto, form, bloco de campos);
+         fallback: documento inteiro */
+      var scope = current.closest(
+        'form, .hub-card-body, .hub-card-inner, .elec2-fields-grid, .hm-input-grid, #app'
+      ) || document;
+      return Array.prototype.filter.call(
+        scope.querySelectorAll(SELECTOR),
+        _isFocusable
+      );
+    }
+
+    /* Aplica enterkeyhint dinamicamente a qualquer input elegível que
+       ainda não o possua — cobre campos montados depois do load inicial. */
+    function _applyEnterKeyHints() {
+      var all = document.querySelectorAll(SELECTOR);
+      all.forEach(function (el) {
+        if (!_isFocusable(el)) return;
+        if (el.hasAttribute('enterkeyhint')) return;
+        var group = _getFieldGroup(el);
+        var idx = group.indexOf(el);
+        var isLast = (idx === -1) || (idx === group.length - 1);
+        el.setAttribute('enterkeyhint', isLast ? 'done' : 'next');
+        if (!el.hasAttribute('inputmode') && el.type !== 'search') {
+          el.setAttribute('inputmode', 'decimal');
+        }
+      });
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter') return;
+      var current = e.target;
+      if (!current || !current.matches || !current.matches(SELECTOR)) return;
+
+      e.preventDefault(); /* impede submit acidental de <form> */
+
+      var group = _getFieldGroup(current);
+      var idx = group.indexOf(current);
+      if (idx === -1) return;
+
+      var next = group[idx + 1];
+      if (next) {
+        next.focus();
+        if (typeof next.select === 'function' && next.type !== 'button') {
+          try { next.select(); } catch (_e) {}
+        }
+      } else {
+        current.blur(); /* último campo do grupo → fecha teclado */
+      }
+    }, true); /* capture:true — intercepta antes de handlers que parem propagação */
+
+    /* Aplica hints iniciais + observa novos campos injetados dinamicamente */
+    _applyEnterKeyHints();
+    var _mo = new MutationObserver(function () { _applyEnterKeyHints(); });
+    _mo.observe(document.body, { childList: true, subtree: true });
+
+    console.log('[MedCases UX v2] Enter-to-Next-Field ativo (BUILD 254)');
+  }
+
+  /* ============================================================
      §I — INICIALIZAÇÃO
   ============================================================ */
   let _initDone = false;
@@ -663,7 +756,8 @@
     _initDone = true;
     _patchHmShowInlineResult();
     _initPullToRefresh();
-    console.log('[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh');
+    _initEnterKeyNav();            /* BUILD 254: Enter avança para o próximo campo */
+    console.log('[MedCases UX v2] Módulo iniciado: Diretriz 3 (formulações) + Diretriz 6 (copiar Rx) + Pull-to-Refresh + Enter-Nav (BUILD 254)');
   }
 
   if (document.readyState === 'loading') {
@@ -673,6 +767,6 @@
   }
   window.addEventListener('load', _init);
 
-  console.log('[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR');
+  console.log('[MedCases UX v2] Módulo carregado: CG-motor (inline) + Diretriz 3 + Diretriz 6 + PTR + Enter-Nav (BUILD 254)');
 
 })();

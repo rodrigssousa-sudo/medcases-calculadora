@@ -31,6 +31,11 @@
    Mapeamento: chave_normalizada → chave_canônica_no_banco
 ═══════════════════════════════════════════════════════════════ */
 const DRUG_ALIASES = {
+  /* Ácido acetilsalicílico — sigla popular (BUILD 254: blindagem da
+     checagem Clopidogrel + AAS, que retornava falso-negativo de
+     "seguro" quando o termo de busca era literalmente "aas") */
+  "aas":                                 "acido_acetilsalicilico",
+
   /* Ácido valproico e sais */
   "valproato_de_sodio":                 "acido_valproico",
   "divalproato":                        "acido_valproico",
@@ -120,9 +125,73 @@ const DRUG_ALIASES = {
   "dinitrato_de_isossorbida":           "isossorbida",
   "nitroglicerina":                     "isossorbida",
 
-  /* Inibidores PDE5 — alias */
-  "sildenafila":                        "tadalafila",
-  "vardenafila":                        "tadalafila"
+  /* BUILD 257 — FIM DO ALIAS PDE5: "sildenafila"/"vardenafila" deixaram de
+     apontar para "tadalafila". Motivo: LOTE 7 (2026-07-05) trouxe dados
+     clínicos DISTINTOS e ricos para sildenafila (meia-vida 4h, cruzamento
+     específico com $classe_macrolídeos) e tadalafila (meia-vida 17,5h,
+     janela de 48h p/ nitratos) — fundir os dois sob uma única chave
+     mascarava informação clínica real. Cada IPDE5 agora tem nó próprio
+     em INTERACOES_DB. "vardenafila" segue sem nó dedicado (nenhum dado
+     específico submetido ainda) — cai no fallback de $classe_ipde5. */
+
+  /* Hipertensão Arterial Pulmonar (HAP) — ERAs / sGC / Prostaciclina
+     BUILD 257 (2026-07-05): grafias em espanhol do LOTE 7/8 normalizadas
+     para as chaves canônicas em PT já usadas em cardio.js/DRUG_CLASSES. */
+  "sildenafilo":                        "sildenafila",
+  "tadalafilo":                         "tadalafila",
+  "bosentán":                           "bosentana",
+  "bosentan":                           "bosentana",
+  "ambrisentán":                        "ambrisentana",
+  "ambrisentan":                        "ambrisentana",
+  "macitentán":                         "macitentana",
+  "macitentan":                         "macitentana",
+  "riociguat":                          "riociguate",
+  "selexipag":                          "selexipague",
+  "iloprost":                           "iloprosta",
+
+  /* BUILD 257 — LOTE 8: "gemfibrozila" (grafia usada nos textos clínicos
+     PT do LOTE 8) normalizada para a chave canônica já usada em
+     cardio.js ("gemfibrozil", sem "a" final). */
+  "gemfibrozila":                       "gemfibrozil",
+
+  /* BUILD 258 — LOTE 9: "idarucizumab" e "andexanet_alfa" da submissão
+     original identificados como DUPLICATAS das entradas JÁ EXISTENTES em
+     cardio.js (Grupo 31): "idarucizumabe" e "andexanetAlfa" (camelCase).
+     Aliases normalizam as grafias da submissão para as chaves canônicas
+     em produção, evitando fragmentação de dados no motor de interações. */
+  "idarucizumab":                       "idarucizumabe",
+  "andexanet_alfa":                     "andexanetAlfa",
+  "andexanet":                          "andexanetAlfa",
+
+  /* BUILD 259 — LOTE 10: "complejo_protrombinico_4f" da submissão original
+     identificado como DUPLICATA da entrada JÁ EXISTENTE em cardio.js
+     (Grupo 31): "pcc4f". Alias normaliza a grafia da submissão para a
+     chave canônica em produção, evitando fragmentação de dados no motor
+     de interações. Nota: "tafamidis" da submissão já usa a própria chave
+     canônica existente (Grupo 46), não necessitando de alias. */
+  "complejo_protrombinico_4f":          "pcc4f",
+
+  /* BUILD 259 — LOTE 10: aliases de reconciliação nome-display → chave
+     canônica. A chave "digoxin_immune_fab" não deriva diretamente da
+     normalização do nome PT de exibição ("Anticorpos Antidigoxina"), e
+     "patisiran" difere de "Patisirana" (nome PT com "a" final) apenas
+     por flexão de gênero. Sem estes aliases, normalizarFarmaco()/
+     _displayName() (index.html) e o motor de interações falhariam em
+     resolver a busca por texto para a chave correta em cardio.js/
+     INTERACOES_DB. */
+  "anticorpos_antidigoxina":            "digoxin_immune_fab",
+  "anticuerpos_antidigoxina":           "digoxin_immune_fab",
+  "patisirana":                         "patisiran",
+
+  /* BUILD 260 — LOTE 11: "vutrisirán" (grafia com acento usada na
+     submissão original, tanto na seção de fármaco quanto no bloco de
+     interações) normalizado para a chave canônica sem acento usada em
+     cardio.js ("vutrisiran"), consistente com o padrão de outros
+     siRNA/ASO já cadastrados (ex.: "patisiran"). "inotersena" (forma
+     PT feminina do nome comercial) normalizado para a chave em inglês
+     "inotersen" usada em cardio.js. */
+  "vutrisirán":                         "vutrisiran",
+  "inotersena":                         "inotersen"
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -183,19 +252,11 @@ const DRUG_CLASSES = {
     "desipramina", "doxepina", "trimipramina"
   ],
 
-  /* Benzodiazepínicos */
-  "$classe_benzodiazepinicos": [
-    "diazepam", "lorazepam", "alprazolam", "clonazepam",
-    "midazolam", "bromazepam", "clobazam", "flunitrazepam",
-    "nitrazepam", "temazepam", "triazolam"
-  ],
-
-  /* Opiáceos / Opioides */
-  "$classe_opioides": [
-    "morfina", "codeina", "tramadol", "fentanil", "oxicodona",
-    "hidromorfona", "metadona", "buprenorfina", "tapentadol",
-    "meperidina", "petidina"
-  ],
+  /* BUILD 256 — FIX A1: definições "mortas"/duplicadas de
+     $classe_benzodiazepinicos e $classe_opioides REMOVIDAS deste ponto.
+     Eram sobrescritas silenciosamente pelas definições mais completas
+     no Bloco Psicofármacos v3.5 (ver abaixo), portanto nunca estiveram
+     ativas em produção — mantidas ali como única fonte de verdade. */
 
   /* Estatinas — Inibidores da HMG-CoA redutase */
   "$classe_estatinas": [
@@ -500,6 +561,159 @@ const DRUG_CLASSES = {
 const INTERACOES_DB = {
 
   /* ─────────────────────────────────────────────────────────────
+     BUILD 254 — AUDITORIA DE SEGURANÇA CLÍNICA
+     $classe_antiagregantes × $classe_antiagregantes (auto-cruzamento)
+     Corrige falso-negativo "seguro" para Clopidogrel + AAS (DAPT).
+     O motor de 8 caminhos (Path 7/8: Classe×Classe) já resolvia
+     corretamente pares de classes DIFERENTES, mas não existia nó
+     para uma classe cruzada com ELA MESMA — caso de Clopidogrel e
+     AAS, ambos membros de $classe_antiagregantes.
+  ───────────────────────────────────────────────────────────── */
+  "$classe_antiagregantes": {
+    "$classe_antiagregantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Associação de dois ou mais antiagregantes plaquetários (ex.: AAS + Clopidogrel — Dupla Terapia Antiagregante/DAPT) aumenta o risco de sangramento (GI, intracraniano, em sítio cirúrgico) de forma dose/tempo-dependente. Pode ser uma combinação TERAPÊUTICA INTENCIONAL (ex.: pós-SCA, pós-stent coronariano), mas exige monitorização e conduta explícita — não deve ser tratada como interação neutra/silenciosa.",
+        es: "La asociación de dos o más antiagregantes plaquetarios (ej.: AAS + Clopidogrel — Terapia Antiagregante Dual/DAPT) aumenta el riesgo de sangrado (GI, intracraneal, en sitio quirúrgico) de forma dosis/tiempo-dependiente. Puede ser una combinación TERAPÉUTICA INTENCIONAL (ej.: post-SCA, post-stent coronario), pero exige monitorización y conducta explícita — no debe tratarse como interacción neutra/silenciosa."
+      },
+      conduta: {
+        pt: "Se DAPT intencional (SCA/stent): manter conforme diretriz (geralmente 6-12 meses), com IBP profilático se risco de sangramento GI. Monitorar sinais de sangramento (Hb/Ht, melena, hematúria). Se associação NÃO intencional (ex.: AAS de automedicação + Clopidogrel prescrito): reavaliar indicação e suspender o agente redundante. Avaliar score de risco hemorrágico (ex. HAS-BLED/PRECISE-DAPT) antes de procedimentos invasivos.",
+        es: "Si DAPT intencional (SCA/stent): mantener según guía (generalmente 6-12 meses), con IBP profiláctico si hay riesgo de sangrado GI. Monitorizar signos de sangrado (Hb/Ht, melena, hematuria). Si la asociación NO es intencional (ej.: AAS de automedicación + Clopidogrel prescrito): reevaluar indicación y suspender el agente redundante. Evaluar score de riesgo hemorrágico (ej. HAS-BLED/PRECISE-DAPT) antes de procedimientos invasivos."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     BUILD 255 — ADDITIVE RISK EXPANSION
+     $classe_anticoagulantes × $classe_anticoagulantes (auto-cruzamento)
+     Duplicação terapêutica de anticoagulantes (ex.: Varfarina + DOAC,
+     ou dois DOACs simultâneos) — risco extremo de hemorragia grave,
+     sem qualquer benefício antitrombótico incremental comprovado.
+  ───────────────────────────────────────────────────────────── */
+  "$classe_anticoagulantes": {
+    "$classe_anticoagulantes": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A combinação de dois ou mais anticoagulantes orais (ex.: Varfarina + Apixabana/Rivaroxabana, ou dois DOACs simultâneos) NÃO possui benefício antitrombótico incremental estabelecido e eleva de forma extrema o risco de hemorragia grave — intracraniana, gastrointestinal ou em sítio cirúrgico — podendo ser fatal. Situação quase sempre decorrente de erro de prescrição/transição inadequada entre anticoagulantes (bridging mal conduzido), e não de indicação terapêutica legítima.",
+        es: "La combinación de dos o más anticoagulantes orales (ej.: Warfarina + Apixabán/Rivaroxabán, o dos ACOD simultáneos) NO posee beneficio antitrombótico incremental establecido y eleva de forma extrema el riesgo de hemorragia grave — intracraneal, gastrointestinal o en sitio quirúrgico — pudiendo ser fatal. Situación casi siempre derivada de error de prescripción/transición inadecuada entre anticoagulantes (bridging mal conducido), y no de indicación terapéutica legítima."
+      },
+      conduta: {
+        pt: "Associação CONTRAINDICADA de forma absoluta, exceto em janelas de transição estritamente protocoladas (ex.: suspensão de varfarina com sobreposição mínima até INR terapêutico, sob supervisão). Suspender imediatamente um dos dois agentes se identificado uso concomitante não intencional. Avaliar Hb/Ht, função renal e sinais de sangramento ativo. Considerar reversão (vitamina K, PCC4F, idarucizumabe/andexanet alfa conforme o agente) se sangramento manifesto.",
+        es: "Asociación CONTRAINDICADA de forma absoluta, excepto en ventanas de transición estrictamente protocolizadas (ej.: suspensión de warfarina con superposición mínima hasta INR terapéutico, bajo supervisión). Suspender inmediatamente uno de los dos agentes si se identifica uso concomitante no intencional. Evaluar Hb/Ht, función renal y signos de sangrado activo. Considerar reversión (vitamina K, CCP4F, idarucizumab/andexanet alfa según el agente) si hay sangrado manifiesto."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     BUILD 255 — ADDITIVE RISK EXPANSION
+     $classe_aines × $classe_aines (auto-cruzamento)
+     Duplicação de AINEs — risco de sangramento GI e lesão renal
+     aguda, sem ganho analgésico/anti-inflamatório adicional.
+  ───────────────────────────────────────────────────────────── */
+  "$classe_aines": {
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O uso concomitante de dois ou mais AINEs (ex.: Ibuprofeno + Diclofenaco, ou AINE de automedicação + AINE prescrito) NÃO amplia o efeito analgésico/anti-inflamatório de forma clinicamente relevante, mas soma os riscos de toxicidade: sangramento gastrointestinal (erosões, úlcera péptica, hemorragia digestiva), lesão renal aguda (especialmente em desidratados, idosos, nefropatas ou em uso de IECA/BRA/diuréticos — 'tríade nefrotóxica') e elevação do risco cardiovascular.",
+        es: "El uso concomitante de dos o más AINEs (ej.: Ibuprofeno + Diclofenaco, o AINE de automedicación + AINE prescrito) NO amplía el efecto analgésico/antiinflamatorio de forma clínicamente relevante, pero suma los riesgos de toxicidad: sangrado gastrointestinal (erosiones, úlcera péptica, hemorragia digestiva), lesión renal aguda (especialmente en deshidratados, ancianos, nefrópatas o en uso de IECA/ARA-II/diuréticos — 'tríada nefrotóxica') y elevación del riesgo cardiovascular."
+      },
+      conduta: {
+        pt: "Evitar a duplicação — manter apenas UM AINE na menor dose eficaz pelo menor tempo possível. Investigar automedicação (perguntar ativamente sobre uso de AINEs de venda livre). Se uso concomitante identificado: suspender um dos agentes, avaliar função renal (creatinina/ureia) e considerar gastroproteção com IBP se manutenção for inevitável. Atenção redobrada em idosos, DRC, ICC descompensada e uso conjunto de IECA/BRA/diuréticos.",
+        es: "Evitar la duplicación — mantener solo UN AINE en la menor dosis eficaz durante el menor tiempo posible. Investigar automedicación (preguntar activamente sobre uso de AINEs de venta libre). Si se identifica uso concomitante: suspender uno de los agentes, evaluar función renal (creatinina/urea) y considerar gastroprotección con IBP si el mantenimiento es inevitable. Atención redoblada en ancianos, ERC, ICC descompensada y uso conjunto de IECA/ARA-II/diuréticos."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     BUILD 255 — ADDITIVE RISK EXPANSION
+     $classe_isrs × $classe_isrs (auto-cruzamento)
+     Duplicação de ISRS — risco de Síndrome Serotoninérgica severa,
+     sem racional farmacológico de associação.
+  ───────────────────────────────────────────────────────────── */
+  "$classe_isrs": {
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A combinação de dois ISRS (ex.: Sertralina + Escitalopram, frequentemente por troca de antidepressivo sem washout ou por prescrições duplicadas de serviços diferentes) não tem racional farmacológico — ambos atuam pelo mesmo mecanismo — e eleva significativamente o risco de Síndrome Serotoninérgica (agitação, hipertermia, rigidez muscular, clônus, instabilidade autonômica), especialmente durante a fase de transição/superposição.",
+        es: "La combinación de dos ISRS (ej.: Sertralina + Escitalopram, frecuentemente por cambio de antidepresivo sin lavado farmacológico o por prescripciones duplicadas de servicios diferentes) no tiene racional farmacológico — ambos actúan por el mismo mecanismo — y eleva significativamente el riesgo de Síndrome Serotoninérgico (agitación, hipertermia, rigidez muscular, clonus, inestabilidad autonómica), especialmente durante la fase de transición/superposición."
+      },
+      conduta: {
+        pt: "Evitar sobreposição — ao trocar de ISRS, respeitar período de washout apropriado (variável conforme meia-vida do agente; atenção especial à fluoxetina, que tem meia-vida longa e metabólito ativo). Se uso concomitante identificado: suspender um dos agentes imediatamente. Rastrear ativamente sinais de Síndrome Serotoninérgica (tríade: alteração do estado mental, disfunção autonômica, anormalidades neuromusculares). Em caso de suspeita, suporte em ambiente monitorizado e considerar ciproeptadina.",
+        es: "Evitar la superposición — al cambiar de ISRS, respetar período de lavado apropiado (variable según la vida media del agente; atención especial a la fluoxetina, que tiene vida media larga y metabolito activo). Si se identifica uso concomitante: suspender uno de los agentes inmediatamente. Rastrear activamente signos de Síndrome Serotoninérgico (tríada: alteración del estado mental, disfunción autonómica, anormalidades neuromusculares). En caso de sospecha, soporte en ambiente monitorizado y considerar ciproheptadina."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     BUILD 255 — ADDITIVE RISK EXPANSION
+     $classe_benzodiazepinicos × $classe_benzodiazepinicos (auto-cruzamento)
+     Duplicação de benzodiazepínicos — sedação excessiva e risco de
+     depressão respiratória, sem benefício ansiolítico/hipnótico adicional.
+  ───────────────────────────────────────────────────────────── */
+  "$classe_benzodiazepinicos": {
+    "$classe_benzodiazepinicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O uso concomitante de dois ou mais benzodiazepínicos (ex.: Diazepam + Alprazolam, comum em prescrições de múltiplos serviços ou automedicação) soma os efeitos depressores do SNC sem ganho terapêutico proporcional, aumentando o risco de sedação excessiva, comprometimento cognitivo/psicomotor, quedas (especialmente em idosos) e, em doses altas ou associado a outros depressores, depressão respiratória.",
+        es: "El uso concomitante de dos o más benzodiacepinas (ej.: Diazepam + Alprazolam, común en prescripciones de múltiples servicios o automedicación) suma los efectos depresores del SNC sin ganancia terapéutica proporcional, aumentando el riesgo de sedación excesiva, deterioro cognitivo/psicomotor, caídas (especialmente en ancianos) y, en dosis altas o asociado a otros depresores, depresión respiratoria."
+      },
+      conduta: {
+        pt: "Evitar a duplicação — manter apenas UM benzodiazepínico, preferencialmente na menor dose eficaz. Investigar prescrições de outros serviços/automedicação. Se identificado uso concomitante crônico, planejar desmame gradual de um dos agentes (nunca suspensão abrupta, risco de convulsão). Atenção redobrada em idosos (critérios de Beers) e em associação com opioides/álcool (ver $classe_depressoras_snc).",
+        es: "Evitar la duplicación — mantener solo UNA benzodiacepina, preferentemente en la menor dosis eficaz. Investigar prescripciones de otros servicios/automedicación. Si se identifica uso concomitante crónico, planificar retiro gradual de uno de los agentes (nunca suspensión abrupta, riesgo de convulsión). Atención redoblada en ancianos (criterios de Beers) y en asociación con opioides/alcohol (ver $classe_depressoras_snc)."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     BUILD 255 — ADDITIVE RISK EXPANSION
+     $classe_depressoras_snc × $classe_depressoras_snc (auto-cruzamento)
+     Cobertura mais ampla que benzodiazepínicos: inclui opioides,
+     antipsicóticos sedativos, relaxantes musculares, hipnóticos-Z.
+     Risco máximo de depressão respiratória / coma quando dois ou
+     mais membros dessa classe são somados.
+  ───────────────────────────────────────────────────────────── */
+  "$classe_depressoras_snc": {
+    "$classe_depressoras_snc": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A associação de dois ou mais depressores do SNC de classes farmacológicas distintas dentro deste grupo (ex.: Opioide + Benzodiazepínico, Opioide + Antipsicótico sedativo, Z-drug + Benzodiazepínico) tem efeito sinérgico — não apenas aditivo — sobre a depressão do SNC, elevando drasticamente o risco de sedação profunda, depressão respiratória, hipoxemia, coma e óbito. É uma das combinações mais associadas a mortes por overdose acidental na literatura (ex.: opioide+benzodiazepínico).",
+        es: "La asociación de dos o más depresores del SNC de clases farmacológicas distintas dentro de este grupo (ej.: Opioide + Benzodiacepina, Opioide + Antipsicótico sedante, Z-drug + Benzodiacepina) tiene efecto sinérgico — no solo aditivo — sobre la depresión del SNC, elevando drásticamente el riesgo de sedación profunda, depresión respiratoria, hipoxemia, coma y muerte. Es una de las combinaciones más asociadas a muertes por sobredosis accidental en la literatura (ej.: opioide+benzodiacepina)."
+      },
+      conduta: {
+        pt: "Evitar associação sempre que possível — reavaliar indicação de cada agente e buscar alternativas não sedativas. Se clinicamente indispensável (ex.: cuidados paliativos, manejo de abstinência), usar as menores doses eficazes, com monitorização contínua de nível de consciência, frequência respiratória e SpO₂, preferencialmente em ambiente com capacidade de suporte ventilatório. Ter naloxona (se opioide envolvido) e flumazenil (se benzodiazepínico envolvido, com cautela em dependentes crônicos) disponíveis. Orientar paciente/família sobre sinais de alarme e evitar álcool.",
+        es: "Evitar la asociación siempre que sea posible — reevaluar la indicación de cada agente y buscar alternativas no sedantes. Si es clínicamente indispensable (ej.: cuidados paliativos, manejo de abstinencia), usar las menores dosis eficaces, con monitorización continua del nivel de consciencia, frecuencia respiratoria y SpO₂, preferentemente en ambiente con capacidad de soporte ventilatorio. Tener naloxona (si hay opioide involucrado) y flumazenil (si hay benzodiacepina involucrada, con cautela en dependientes crónicos) disponibles. Orientar al paciente/familia sobre signos de alarma y evitar el alcohol."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     BUILD 255 — ADDITIVE RISK EXPANSION
+     $classe_ipde5 × $classe_ipde5 (auto-cruzamento)
+     Duplicação de inibidores da PDE5 — risco de hipotensão
+     refratária, priapismo e efeitos visuais/auditivos aditivos.
+  ───────────────────────────────────────────────────────────── */
+  "$classe_ipde5": {
+    "$classe_ipde5": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O uso concomitante de dois inibidores da fosfodiesterase-5 (ex.: Sildenafila + Tadalafila) — situação geralmente decorrente de automedicação/uso recreacional sem orientação médica — soma o efeito vasodilatador sem qualquer benefício terapêutico adicional, aumentando o risco de hipotensão significativa/refratária (especialmente se houver uso concomitante de nitratos, alfa-bloqueadores ou anti-hipertensivos), síncope, priapismo prolongado e efeitos adversos visuais/auditivos (distúrbios visuais transitórios, perda auditiva súbita).",
+        es: "El uso concomitante de dos inhibidores de la fosfodiesterasa-5 (ej.: Sildenafil + Tadalafil) — situación generalmente derivada de automedicación/uso recreativo sin orientación médica — suma el efecto vasodilatador sin ningún beneficio terapéutico adicional, aumentando el riesgo de hipotensión significativa/refractaria (especialmente si hay uso concomitante de nitratos, alfabloqueantes o antihipertensivos), síncope, priapismo prolongado y efectos adversos visuales/auditivos (trastornos visuales transitorios, pérdida auditiva súbita)."
+      },
+      conduta: {
+        pt: "Associação sem indicação terapêutica — suspender um dos agentes imediatamente. Investigar ativamente uso recreacional/automedicação (pergunta direta e não julgadora). Reforçar contraindicação ABSOLUTA e independente desta interação de associar qualquer iPDE5 a nitratos (risco de colapso cardiovascular). Monitorar PA em pacientes com uso concomitante de anti-hipertensivos ou alfabloqueadores. Orientar sobre sinais de alarme: priapismo >4h (emergência urológica) e perda súbita de visão/audição (suspender e buscar avaliação imediata).",
+        es: "Asociación sin indicación terapéutica — suspender uno de los agentes inmediatamente. Investigar activamente uso recreativo/automedicación (pregunta directa y no enjuiciadora). Reforzar la contraindicación ABSOLUTA e independiente de esta interacción de asociar cualquier iPDE5 con nitratos (riesgo de colapso cardiovascular). Monitorizar PA en pacientes con uso concomitante de antihipertensivos o alfabloqueantes. Orientar sobre signos de alarma: priapismo >4h (emergencia urológica) y pérdida súbita de visión/audición (suspender y buscar evaluación inmediata)."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
      MEROPENEM (representa toda a classe carbapenêmica via alias)
   ───────────────────────────────────────────────────────────── */
   "meropenem": {
@@ -801,6 +1015,43 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Não associar, especialmente em idosos e pacientes com insuficiência renal. Se inevitável, reduzir drasticamente a dose da colchicina e monitorar sinais de toxicidade (dor muscular, fraqueza, diarreia).",
         es: "No asociar, especialmente en ancianos y pacientes con insuficiencia renal. Si es inevitable, reducir drásticamente la dosis de colchicina y monitorear signos de toxicidad (dolor muscular, debilidad, diarrea)."
+      }
+    },
+    /* BUILD 268 — alvos mesclados ao nó "colchicina" pré-existente (não
+       duplicado). $classe_macrolídeos aqui é redundante com o alvo
+       "claritromicina" acima (claritromicina é membro dessa classe),
+       mas mantido pois cobre também azitromicina/eritromicina/etc. */
+    "$classe_macrolídeos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Macrolídeos (claritromicina, eritromicina) inibem fortemente o CYP3A4 e a P-glicoproteína, vias responsáveis pela depuração da colchicina. Aumento importante dos níveis séricos com risco de toxicidade potencialmente fatal (neuromuscular e falência multiorgânica).",
+        es: "Los macrólidos (claritromicina, eritromicina) inhiben fuertemente el CYP3A4 y la P-glicoproteína, vías responsables del aclaramiento de la colchicina. Aumento importante de los niveles séricos con riesgo de toxicidad potencialmente fatal (neuromuscular y falla multiorgánica)."
+      },
+      conduta: {
+        pt: "ASSOCIAÇÃO ABSOLUTAMENTE CONTRAINDICADA. Caso necessite tratar infecção, utilizar azitromicina (inibidor mais fraco) ou outra classe de antibiótico.",
+        es: "ASOCIACIÓN ABSOLUTAMENTE CONTRAINDICADA. Si necesita tratar infección, utilizar azitromicina (inhibidor más débil) u otra clase de antibiótico."
+      }
+    },
+    "$classe_azolicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Itraconazol e cetoconazol (inibidores CYP3A4/P-gp) acumulam colchicina a níveis tóxicos fulminantes.",
+        es: "Itraconazol y ketoconazol (inhibidores CYP3A4/P-gp) acumulan colchicina a niveles tóxicos fulminantes."
+      },
+      conduta: { pt: "Contraindicado.", es: "Contraindicado." }
+    },
+    "$classe_estatinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A colchicina pode causar miopatia e rabdomiólise isoladamente. O uso concomitante com estatinas (especialmente sinvastatina/atorvastatina) aumenta severamente o risco de destruição muscular grave e insuficiência renal aguda secundária.",
+        es: "La colchicina puede causar miopatía y rabdomiólisis aisladamente. El uso concomitante con estatinas (especialmente simvastatina/atorvastatina) aumenta severamente el riesgo de destrucción muscular grave e insuficiencia renal aguda secundaria."
+      },
+      conduta: {
+        pt: "Monitoramento extremo. Se a colchicina for de uso crônico, a dose de estatina deve ser reduzida e a vigilância da CPK (creatinoquinase) deve ser rigorosa.",
+        es: "Monitorización extrema. Si la colchicina es de uso crónico, la dosis de estatina debe ser reducida y la vigilancia de la CPK (creatinquinasa) debe ser rigurosa."
       }
     },
     "amiodarona": {
@@ -1920,7 +2171,12 @@ const INTERACOES_DB = {
   },
 
   /* ─────────────────────────────────────────────────────────────
-     TADALAFILA (representa inibidores PDE5 via alias)
+     TADALAFILA
+     BUILD 257 (2026-07-05): nó MESCLADO — a entrada original
+     "isossorbida" (pré-existente, preservada 100%) + conteúdo do
+     LOTE 7 (riociguate, $classe_antihipertensivos, $classe_azolicos).
+     Alias "sildenafila"→"tadalafila" REMOVIDO (ver DRUG_ALIASES) —
+     sildenafila agora possui nó próprio abaixo.
   ───────────────────────────────────────────────────────────── */
   "tadalafila": {
     "isossorbida": {
@@ -1933,6 +2189,254 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Contraindicação absoluta. Não administrar nitratos se o paciente utilizou tadalafila nas últimas 48 horas.",
         es: "Contraindicación absoluta. No administrar nitratos si el paciente utilizó tadalafilo en las últimas 48 horas."
+      }
+    },
+    "$classe_nitratos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A tadalafila impede a degradação do GMPc gerado pelos nitratos. A combinação deflagra colapso hemodinâmico, isquemia miocárdica grave e risco de morte. Devido à sua MEIA-VIDA LONGA (17,5h), a janela de risco é estendida.",
+        es: "El tadalafilo impide la degradación del GMPc generado por los nitratos. La combinación desencadena colapso hemodinámico, isquemia miocárdica grave y riesgo de muerte. Debido a su VIDA MEDIA LARGA (17,5h), la ventana de riesgo es extendida."
+      },
+      conduta: {
+        pt: "ASSOCIAÇÃO CONTRAINDICADA. Não administrar nitratos de qualquer via por PELO MENOS 48 HORAS após a última dose de tadalafila.",
+        es: "ASOCIACIÓN CONTRAINDICADA. No administrar nitratos de cualquier vía por AL MENOS 48 HORAS tras la última dosis de tadalafilo."
+      }
+    },
+    "riociguate": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Sinergia fatal na via GMPc. Choque hipotensivo extremo.",
+        es: "Sinergia fatal en la vía GMPc. Choque hipotensivo extremo."
+      },
+      conduta: {
+        pt: "Contraindicação absoluta.",
+        es: "Contraindicación absoluta."
+      }
+    },
+    "$classe_antihipertensivos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Ação vasodilatadora aditiva (especialmente com alfa-bloqueadores). A tadalafila associada a doxazosina possui forte alerta para síncope.",
+        es: "Acción vasodilatadora aditiva (especialmente con alfa-bloqueadores). Tadalafilo asociado a doxazosina posee fuerte alerta por síncope."
+      },
+      conduta: {
+        pt: "Evitar uso com doxazosina. Com outros agentes, monitorar a hipotensão postural.",
+        es: "Evitar uso con doxazosina. Con otros agentes, monitorizar la hipotensión postural."
+      }
+    },
+    "$classe_azolicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inibição de CYP3A4 por ketoconazol aumenta drasticamente a exposição à tadalafila (AUC aumenta mais de 300%).",
+        es: "La inhibición de CYP3A4 por ketoconazol aumenta drásticamente la exposición a tadalafilo (AUC aumenta más del 300%)."
+      },
+      conduta: {
+        pt: "Para HAP: Evitar a combinação. Se imprescindível, reduzir a tadalafila para 20 mg/dia.",
+        es: "Para HAP: Evitar la combinación. Si es imprescindible, reducir tadalafilo a 20 mg/día."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     SILDENAFILA
+     BUILD 257 (2026-07-05) — LOTE 7. Nó próprio e independente,
+     separado de tadalafila (fim do alias — ver nota em DRUG_ALIASES).
+  ───────────────────────────────────────────────────────────── */
+  "sildenafila": {
+    "$classe_nitratos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A coadministração de inibidores da PDE5 com doadores de óxido nítrico (nitratos orgânicos) causa uma amplificação sinérgica do GMPc intracelular. Resulta em hipotensão profunda, refratária, isquemia miocárdica e choque letal.",
+        es: "La coadministración de inhibidores de la PDE5 con donantes de óxido nítrico (nitratos orgánicos) causa una amplificación sinérgica del GMPc intracelular. Resulta en hipotensión profunda, refractaria, isquemia miocárdica y choque letal."
+      },
+      conduta: {
+        pt: "ASSOCIAÇÃO ABSOLUTAMENTE CONTRAINDICADA. Não administrar nitratos de curta ou longa ação por pelo menos 24 HORAS após a última dose de sildenafila.",
+        es: "ASOCIACIÓN ABSOLUTAMENTE CONTRAINDICADA. No administrar nitratos de corta o larga acción por al menos 24 HORAS tras la última dosis de sildenafilo."
+      }
+    },
+    "riociguate": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A inibição da PDE5 (sildenafila) associada ao estímulo direto da guanilato ciclase (riociguate) cria sinergia fatal na via do NO/GMPc, causando hipotensão extrema.",
+        es: "La inhibición de la PDE5 (sildenafilo) asociada al estímulo directo de la guanilato ciclasa (riociguat) crea sinergia fatal en la vía del NO/GMPc, causando hipotensión extrema."
+      },
+      conduta: {
+        pt: "Contraindicado. Evitar o uso simultâneo em HAP.",
+        es: "Contraindicado. Evitar el uso simultáneo en HAP."
+      }
+    },
+    "$classe_antihipertensivos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sildenafila atua como vasodilatador sistêmico leve a moderado. Associação com anti-hipertensivos, especialmente ALFA-BLOQUEADORES (doxazosina, tansulosina), aumenta o risco de hipotensão postural sintomática.",
+        es: "Sildenafilo actúa como vasodilatador sistémico leve a moderado. La asociación con antihipertensivos, especialmente ALFA-BLOQUEADORES (doxazosina, tamsulosina), aumenta el riesgo de hipotensión postural sintomática."
+      },
+      conduta: {
+        pt: "Pacientes devem estar estáveis hemodinamicamente na terapia anti-hipertensiva antes de iniciar sildenafila. Ajustar doses se ocorrer tontura.",
+        es: "Los pacientes deben estar estables hemodinámicamente en la terapia antihipertensiva antes de iniciar sildenafilo. Ajustar dosis si ocurre mareo."
+      }
+    },
+    "$classe_azolicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Cetoconazol/itraconazol são inibidores potentes do CYP3A4, principal via de eliminação do sildenafil. Aumentam drasticamente a AUC e Cmax do inibidor PDE5, com alto risco de priapismo, distúrbio visual e hipotensão.",
+        es: "Ketoconazol/itraconazol son inhibidores potentes del CYP3A4, principal vía de eliminación de sildenafilo. Aumentan drásticamente el AUC y Cmax del inhibidor PDE5, con alto riesgo de priapismo, trastorno visual e hipotensión."
+      },
+      conduta: {
+        pt: "Reduzir a dose de sildenafila pela metade ou estender intervalo. Monitorar rigorosamente.",
+        es: "Reducir la dosis de sildenafilo a la mitad o extender intervalo. Monitorizar rigurosamente."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Claritromicina/Eritromicina inibem CYP3A4, resultando em acúmulo sistêmico do sildenafil.",
+        es: "Claritromicina/Eritromicina inhiben CYP3A4, resultando en acumulación sistémica de sildenafilo."
+      },
+      conduta: {
+        pt: "Ajustar dose para o limite mínimo e monitorar pressão arterial e efeitos adversos (visão azulada, cefaleia intensa).",
+        es: "Ajustar dosis al límite mínimo y monitorizar presión arterial y efectos adversos (visión azulada, cefalea intensa)."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     BOSENTANA
+     BUILD 257 (2026-07-05) — LOTE 7. Chave canônica PT (grafia
+     original submetida: "bosentán" — normalizada via DRUG_ALIASES).
+  ───────────────────────────────────────────────────────────── */
+  "bosentana": {
+    "ciclosporina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A ciclosporina inibe OATP e CYP3A4. Causa elevação inicial drástica nos níveis de bosentana (aumento de 3 a 4x). Ao mesmo tempo, a bosentana (indutora forte) reduz as concentrações de ciclosporina em 50%. A toxicidade hepática da bosentana explode e o enxerto transplantado entra em risco.",
+        es: "La ciclosporina inhibe OATP y CYP3A4. Causa elevación inicial drástica en los niveles de bosentán (aumento de 3 a 4x). Al mismo tiempo, bosentán (inductor fuerte) reduce las concentraciones de ciclosporina en 50%. La toxicidad hepática de bosentán explota y el injerto trasplantado entra en riesgo."
+      },
+      conduta: {
+        pt: "Coadministração absolutamente contraindicada.",
+        es: "Coadministración absolutamente contraindicada."
+      }
+    },
+    "glibenclamida": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A associação gera inibição competitiva da bomba de exportação de sais biliares, aumentando drasticamente o risco de hepatotoxicidade sistêmica e transaminases muito alteradas.",
+        es: "La asociación genera inhibición competitiva de la bomba de exportación de sales biliares, aumentando drásticamente el riesgo de hepatotoxicidad sistémica y transaminasas muy alteradas."
+      },
+      conduta: {
+        pt: "Associação contraindicada. Trocar o antidiabético oral.",
+        es: "Asociación contraindicada. Cambiar el antidiabético oral."
+      }
+    },
+    "anticoncepcional_hormonal": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A bosentana é um forte indutor do CYP3A4 e CYP2C9, acelerando o clearance de hormônios contraceptivos orais, inibindo sua eficácia e permitindo gravidez (categoria X).",
+        es: "El bosentán es un fuerte inductor del CYP3A4 y CYP2C9, acelerando el aclaramiento de hormonas anticonceptivas orales, inhibiendo su eficacia y permitiendo embarazo (categoría X)."
+      },
+      conduta: {
+        pt: "Obrigatório uso de DOIS métodos contraceptivos não-hormonais confiáveis simultaneamente em mulheres em idade fértil (REMS). Contraceptivo oral sozinho é inútil.",
+        es: "Obligatorio uso de DOS métodos anticonceptivos no hormonales confiables simultáneamente en mujeres en edad fértil (REMS). Anticonceptivo oral solo es inútil."
+      }
+    },
+    "$classe_estatinas": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Indução de CYP3A4 reduz os níveis de sinvastatina, lovastatina e atorvastatina pela metade.",
+        es: "La inducción de CYP3A4 reduce los niveles de simvastatina, lovastatina y atorvastatina a la mitad."
+      },
+      conduta: {
+        pt: "Monitorar perfil lipídico. Preferir pravastatina ou rosuvastatina (não metabolizadas via CYP3A4).",
+        es: "Monitorizar perfil lipídico. Preferir pravastatina o rosuvastatina (no metabolizadas vía CYP3A4)."
+      }
+    },
+    "sildenafila": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Interação farmacocinética bidirecional. Sildenafila aumenta AUC da bosentana em 50%. A bosentana reduz o AUC do sildenafil em 50%. Ambos os fármacos agem na HAP (associação comum e estudada), mas exigem monitorização de disfunção hepática.",
+        es: "Interacción farmacocinética bidireccional. Sildenafilo aumenta AUC de bosentán en 50%. Bosentán reduce el AUC de sildenafilo en 50%. Ambos fármacos actúan en HAP (asociación común y estudiada), pero exigen monitorización de disfunción hepática."
+      },
+      conduta: {
+        pt: "Associação permitida. Aumentar a vigilância de enzimas hepáticas (TGO/TGP) em caso de uso combinado.",
+        es: "Asociación permitida. Aumentar la vigilancia de enzimas hepáticas (AST/ALT) en caso de uso combinado."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     AMBRISENTANA
+     BUILD 257 (2026-07-05) — LOTE 7. Chave canônica PT (grafia
+     original submetida: "ambrisentán" — normalizada via DRUG_ALIASES).
+  ───────────────────────────────────────────────────────────── */
+  "ambrisentana": {
+    "ciclosporina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A ciclosporina é um inibidor da P-gp e dos polipeptídios transportadores de ânions orgânicos (OATP), o que eleva substancialmente a exposição da ambrisentana sistêmica.",
+        es: "La ciclosporina es un inhibidor de P-gp y de polipéptidos transportadores de aniones orgánicos (OATP), lo que eleva sustancialmente la exposición de ambrisentán sistémica."
+      },
+      conduta: {
+        pt: "Se necessário associar, LIMITAR a dose máxima de ambrisentana a 5 mg/dia e monitorar ativamente por edema periférico intenso e reações adversas.",
+        es: "Si es necesario asociar, LIMITAR la dosis máxima de ambrisentán a 5 mg/día y monitorizar activamente por edema periférico intenso y reacciones adversas."
+      }
+    },
+    "$classe_azolicos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A ambrisentana é parcialmente metabolizada por CYP3A4. O uso de inibidores potentes (cetoconazol) aumenta modestamente seus níveis.",
+        es: "El ambrisentán es parcialmente metabolizado por CYP3A4. El uso de inhibidores potentes (ketoconazol) aumenta modestamente sus niveles."
+      },
+      conduta: {
+        pt: "Geralmente não exige ajuste, mas a tolerabilidade deve ser monitorada.",
+        es: "Generalmente no exige ajuste, pero la tolerabilidad debe ser monitorizada."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     MACITENTANA
+     BUILD 257 (2026-07-05) — LOTE 7. Chave canônica PT (grafia
+     original submetida: "macitentán" — normalizada via DRUG_ALIASES).
+  ───────────────────────────────────────────────────────────── */
+  "macitentana": {
+    "$classe_azolicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Ketoconazol inibe fortemente CYP3A4, duplicando a exposição ao macitentán plasmático (aumento da AUC). Aumenta risco de hepatotoxicidade e de retenção de fluidos (edema e anemia).",
+        es: "Ketoconazol inhibe fuertemente CYP3A4, duplicando la exposición al macitentán plasmático (aumento del AUC). Aumenta riesgo de hepatotoxicidad y de retención de fluidos (edema y anemia)."
+      },
+      conduta: {
+        pt: "Evitar uso concomitante forte de inibidores do CYP3A4 (ex: cetoconazol, itraconazol, ritonavir). Considerar antifúngico diferente.",
+        es: "Evitar uso concomitante fuerte de inhibidores del CYP3A4 (ej: ketoconazol, itraconazol, ritonavir). Considerar antifúngico diferente."
+      }
+    },
+    "$classe_rifamicinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Indutores fortes de CYP3A4 reduzem maciçamente as concentrações ativas de macitentán (redução de 79%), resultando em falha terapêutica e piora rápida da HAP.",
+        es: "Inductores fuertes de CYP3A4 reducen masivamente las concentraciones activas de macitentán (reducción del 79%), resultando en falla terapéutica y empeoramiento rápido de HAP."
+      },
+      conduta: {
+        pt: "Evitar o uso de rifampicina/carbamazepina com macitentán.",
+        es: "Evitar el uso de rifampicina/carbamazepina con macitentán."
       }
     }
   },
@@ -2849,6 +3353,303 @@ const INTERACOES_DB = {
       conduta: {
         pt: "EVITAR AINEs em pacientes em metotrexato oncológico (doses > 500mg/m²). Em doses baixas (artrite reumatoide, psoríase): evitar preferencialmente, mas se necessário, usar menor dose de AINE, monitorar hemograma, creatinina e transaminases semanalmente. Preferir paracetamol ou celecoxibe (menor interferência renal). Atenção após leucovorina (resgate).",
         es: "EVITAR AINEs en pacientes en metotrexato oncológico (dosis > 500mg/m²). En dosis bajas (artritis reumatoide, psoriasis): evitar preferentemente, pero si es necesario, usar menor dosis de AINE, monitorear hemograma, creatinina y transaminasas semanalmente. Preferir paracetamol o celecoxib (menor interferencia renal). Atención tras leucovorina (rescate)."
+      }
+    },
+    /* BUILD 269 — novo alvo mesclado ao nó pré-existente (Regra 1: os
+       alvos "$classe_aines" [idêntico], "sulfametoxazol_trimetoprima"
+       [já coberto na direção inversa por sulfametoxazol_trimetoprima→
+       metotrexato, linha ~1798] e "leflunomida" [par duplicado dentro
+       do próprio lote — mantido apenas sob o nó "leflunomida" abaixo]
+       foram OMITIDOS por redundância/duplicata bidirecional). */
+    "omeprazol": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Inibidores da bomba de prótons (IBPs) interferem na eliminação ativa do metotrexato pelas vias renais, elevando as concentrações séricas do MTX e prolongando sua toxicidade celular.",
+        es: "Inhibidores de la bomba de protones (IBPs) interfieren en la eliminación activa del metotrexato por las vías renales, elevando las concentraciones séricas de MTX y prolongando su toxicidad celular."
+      },
+      conduta: {
+        pt: "Para doses baixas, monitorar toxicidade (mucosite). Para doses altas de quimioterapia, suspender IBPs temporariamente e usar bloqueador H2 (ranitidina).",
+        es: "Para dosis bajas, monitorizar toxicidad (mucositis). Para dosis altas de quimioterapia, suspender IBPs temporalmente y usar bloqueador H2 (ranitidina)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES — BUILD 269 (2026-07-06): Reumatologia
+     (Grupo 8, database/analgesicos.js): Sulfassalazina, Leflunomida,
+     Azatioprina, Ciclosporina, Benzbromarona, Pegloticase, Metotrexato
+     e Hidroxicloroquina. Executado sob o SOP de Autonomia Total.
+
+     CORREÇÕES DE GRAFIA/CLASSE (Regra 4):
+       • "$classe_macrolideos" (sem acento, ciclosporina e
+         hidroxicloroquina) → corrigido para "$classe_macrolídeos"
+         (grafia real em DRUG_CLASSES).
+       • "$classe_antipsicoticos" (sem acento, hidroxicloroquina) →
+         corrigido para "$classe_antipsicóticos" (grafia real).
+       • "$classe_antibioticos_orais" (sulfassalazina) → classe NÃO
+         EXISTE em DRUG_CLASSES. Redirecionado aos fármacos concretos
+         já cadastrados "amoxicilina" e "ciprofloxacino" (exemplos
+         citados na própria descrição submetida), preservando o dado
+         clínico sem inventar uma classe nova não solicitada.
+       • "febuxostat" (azatioprina, pegloticase) → renomeado para a
+         chave canônica "febuxostate" (precedente BUILD 268).
+
+     ANTI-DUPLICATA BIDIRECIONAL (Regra 1/2):
+       • "azatioprina"×"alopurinol" → JÁ COBERTO na direção inversa
+         por "alopurinol"→"azatioprina" (BUILD 268, contraindicada/5)
+         — OMITIDO.
+       • "azatioprina"×"febuxostat(e)" → JÁ COBERTO na direção inversa
+         por "febuxostate"→"azatioprina" (BUILD 268, contraindicada/5)
+         — OMITIDO.
+       • "metotrexato"×"sulfametoxazol_trimetoprima" → JÁ COBERTO na
+         direção inversa por "sulfametoxazol_trimetoprima"→
+         "metotrexato" (pré-existente, contraindicada/5) — OMITIDO.
+       • "metotrexato"×"leflunomida" / "leflunomida"×"metotrexato" →
+         par duplicado DENTRO do próprio lote submetido — mantido uma
+         única vez, sob o nó "leflunomida" (ver abaixo).
+       • "metotrexato"×"$classe_aines" → idêntico ao nó já existente
+         (ver acima) — OMITIDO.
+
+     GENUINAMENTE NOVOS: "azatioprina"×"$classe_ieca" (não coberto por
+     nenhuma herança de classe pré-existente); "ciclosporina" (nó-raiz
+     criado pela primeira vez — confirmado ausente em INTERACOES_DB);
+     "sulfassalazina", "leflunomida", "benzbromarona", "pegloticase",
+     "hidroxicloroquina" (nós-raiz genuinamente novos).
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── SULFASSALAZINA ── */
+  "sulfassalazina": {
+    "digoxina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A sulfassalazina inibe e diminui significativamente a absorção entérica da digoxina de forma mecânica (alterando a mucosa), resultando em níveis subclínicos e perda do controle de arritmias ou ICC.",
+        es: "La sulfasalazina inhibe y disminuye significativamente la absorción entérica de la digoxina de forma mecánica (alterando la mucosa), resultando en niveles subclínicos y pérdida del control de arritmias o ICC."
+      },
+      conduta: {
+        pt: "Monitorar níveis séricos de digoxina rigorosamente ao iniciar, ajustar ou parar a sulfassalazina.",
+        es: "Monitorizar niveles séricos de digoxina rigurosamente al iniciar, ajustar o detener la sulfasalazina."
+      }
+    },
+    "amoxicilina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Antibióticos de amplo espectro por via oral (ex: amoxicilina, ciprofloxacino) erradicam a flora bacteriana intestinal. Sem as bactérias, a sulfassalazina não pode ser clivada nas suas formas ativas (sulfapiridina e 5-ASA), levando à perda completa da eficácia clínica do DMARD.",
+        es: "Antibióticos de amplio espectro por vía oral (ej: amoxicilina, ciprofloxacino) erradican la flora bacteriana intestinal. Sin las bacterias, la sulfasalazina no puede escindirse en sus formas activas (sulfapiridina y 5-ASA), llevando a la pérdida completa de la eficacia clínica del FAME."
+      },
+      conduta: {
+        pt: "Reavaliar o paciente reumatológico por risco de recaída/crise se usar antibióticos prolongados. A eficácia retorna quando a flora é reestabelecida.",
+        es: "Reevaluar al paciente reumatológico por riesgo de recaída/crisis si usa antibióticos prolongados. La eficacia regresa cuando la flora es restablecida."
+      }
+    },
+    "ciprofloxacino": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Mesmo mecanismo do alvo amoxicilina acima: erradicação da flora intestinal impede a clivagem bacteriana da sulfassalazina, anulando a liberação de sulfapiridina/5-ASA.",
+        es: "Mismo mecanismo del objetivo amoxicilina anterior: la erradicación de la flora intestinal impide la escisión bacteriana de la sulfasalazina, anulando la liberación de sulfapiridina/5-ASA."
+      },
+      conduta: {
+        pt: "Reavaliar o paciente reumatológico por risco de recaída/crise se usar antibióticos prolongados.",
+        es: "Reevaluar al paciente reumatológico por riesgo de recaída/crisis si usa antibióticos prolongados."
+      }
+    }
+  },
+
+  /* ── LEFLUNOMIDA ── */
+  "leflunomida": {
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A combinação de leflunomida e metotrexato possui sinergismo clínico excelente em Artrite Reumatoide, MAS o risco de hepatotoxicidade fulminante é severamente multiplicado (ambos causam dano hepatocelular).",
+        es: "La combinación de leflunomida y metotrexato posee sinergismo clínico excelente en Artritis Reumatoide, PERO el riesgo de hepatotoxicidad fulminante se multiplica severamente (ambos causan daño hepatocelular)."
+      },
+      conduta: {
+        pt: "Uso combinado estritamente realizado por reumatologista. Exige monitoramento mensal das transaminases (TGO/TGP) inegociável nos primeiros 6 meses.",
+        es: "Uso combinado estrictamente realizado por reumatólogo. Exige monitorización mensual de las transaminasas (AST/ALT) innegociable en los primeros 6 meses."
+      }
+    },
+    "colestiramina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INTERAÇÃO DE RESGATE (Benéfica). A colestiramina (resina sequestradora) se liga ao metabólito ativo da leflunomida no intestino, interrompendo a circulação êntero-hepática e eliminando o fármaco rapidamente. Sem isso, a meia-vida da leflunomida pode durar 2 anos.",
+        es: "INTERACCIÓN DE RESCATE (Benéfica). La colestiramina (resina secuestradora) se une al metabolito activo de la leflunomida en el intestino, interrumpiendo la circulación enterohepática y eliminando el fármaco rápidamente. Sin esto, la vida media de la leflunomida puede durar 2 años."
+      },
+      conduta: {
+        pt: "Em caso de toxicidade severa ou desejo de gravidez, administrar Colestiramina 8g 3x/dia por 11 dias como antídoto para 'lavar' a leflunomida do corpo.",
+        es: "En caso de toxicidad severa o deseo de embarazo, administrar Colestiramina 8g 3 veces/día por 11 días como antídoto para 'lavar' la leflunomida del cuerpo."
+      }
+    }
+  },
+
+  /* ── AZATIOPRINA ── */
+  "azatioprina": {
+    /* "alopurinol" e "febuxostate" OMITIDOS aqui: já cobertos na
+       direção inversa pelos nós-raiz "alopurinol"→"azatioprina" e
+       "febuxostate"→"azatioprina" (ambos BUILD 268, contraindicada/5).
+       O motor bidirecional já resolve a busca em ambos os sentidos. */
+    "$classe_ieca": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O uso concomitante de inibidores da ECA com azatioprina está associado a um risco aumentado e idiopático de induzir leucopenia grave e anemia profunda.",
+        es: "El uso concomitante de inhibidores de la ECA con azatioprina está asociado a un riesgo aumentado e idiopático de inducir leucopenia grave y anemia profunda."
+      },
+      conduta: {
+        pt: "Monitorar o hemograma se a associação for implementada.",
+        es: "Monitorizar el hemograma si la asociación es implementada."
+      }
+    }
+  },
+
+  /* ── CICLOSPORINA (nó-raiz criado pela primeira vez) ── */
+  "ciclosporina": {
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Eritromicina e Claritromicina (inibidores fortes do CYP3A4) reduzem agressivamente o metabolismo hepático da ciclosporina, elevando rapidamente as concentrações do imunossupressor para a faixa tóxica (nefrotoxicidade e neurotoxicidade aguda).",
+        es: "Eritromicina y Claritromicina (inhibidores fuertes del CYP3A4) reducen agresivamente el metabolismo hepático de la ciclosporina, elevando rápidamente las concentraciones del inmunosupresor a la franja tóxica (nefrotoxicidad y neurotoxicidad aguda)."
+      },
+      conduta: {
+        pt: "Evitar a associação. Substituir o antibiótico (ex: Azitromicina não possui essa interação severa). Se associado, a dose da ciclosporina deve ser reduzida empiricamente e o nível de TDM checado no dia 3.",
+        es: "Evitar la asociación. Sustituir el antibiótico (ej: Azitromicina no posee esta interacción severa). Si se asocia, la dosis de la ciclosporina debe reducirse empíricamente y el nivel de TDM revisado el día 3."
+      }
+    },
+    "$classe_azolicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Itraconazol, Cetoconazol e Fluconazol induzem acúmulo sistêmico profundo da ciclosporina (inibição do CYP3A4 e P-gp). Níveis séricos tóxicos podem causar destruição renal irreversível no enxerto transplantado.",
+        es: "Itraconazol, Ketoconazol y Fluconazol inducen acumulación sistémica profunda de la ciclosporina (inhibición de CYP3A4 y P-gp). Niveles séricos tóxicos pueden causar destrucción renal irreversible en el injerto trasplantado."
+      },
+      conduta: {
+        pt: "Mesmo manejo dos macrolídeos. (Frequentemente usado de propósito no transplante para 'economizar' droga, reduzindo a ciclosporina pela metade, mas exige controle rigoroso).",
+        es: "Mismo manejo de los macrólidos. (Frecuentemente usado a propósito en trasplante para 'ahorrar' droga, reduciendo la ciclosporina a la mitad, pero exige control riguroso)."
+      }
+    },
+    "$classe_estatinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A ciclosporina inibe a via de depuração de estatinas (transportador OATP1B1 e CYP3A4). O nível de estatina (especialmente sinvastatina/atorvastatina) aumenta de 5 a 10 vezes, gerando altíssimo risco de rabdomiólise e destruição renal tubular (mioglobinúria).",
+        es: "La ciclosporina inhibe la vía de depuración de estatinas (transportador OATP1B1 y CYP3A4). El nivel de estatina (especialmente simvastatina/atorvastatina) aumenta de 5 a 10 veces, generando altísimo riesgo de rabdomiólisis y destrucción renal tubular (mioglobinuria)."
+      },
+      conduta: {
+        pt: "Evitar sinvastatina. Usar rosuvastatina ou pravastatina em doses muito baixas (máx 5-10mg/dia) com monitorização de CPK e dor muscular.",
+        es: "Evitar simvastatina. Usar rosuvastatina o pravastatina en dosis muy bajas (máx 5-10mg/día) con monitorización de CPK y dolor muscular."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A ciclosporina induz naturalmente uma vasoconstrição extrema da arteríola aferente renal. Ao se administrar um AINE (ex: diclofenaco, ibuprofeno), as prostaglandinas que tentam defender a perfusão glomerular são cortadas. Sinergismo gera Infarto Renal / Isquemia tubular severa.",
+        es: "La ciclosporina induce naturalmente una vasoconstricción extrema de la arteriola aferente renal. Al administrar un AINE (ej: diclofenaco, ibuprofeno), las prostaglandinas que intentan defender la perfusión glomerular se cortan. El sinergismo genera Infarto Renal / Isquemia tubular severa."
+      },
+      conduta: {
+        pt: "AINEs sistêmicos devem ser fortemente evitados em pacientes recebendo ciclosporina.",
+        es: "AINEs sistémicos deben ser fuertemente evitados en pacientes recibiendo ciclosporina."
+      }
+    }
+  },
+
+  /* ── BENZBROMARONA ── */
+  "benzbromarona": {
+    "acido_acetilsalicilico": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A aspirina (mesmo em baixas doses) atua antagonizando severamente o efeito uricosúrico da benzbromarona no transportador tubular renal. Pode desencadear um efeito paradoxal de retenção de ácido úrico e crise de gota.",
+        es: "La aspirina (incluso en dosis bajas) actúa antagonizando severamente el efecto uricosúrico de la benzbromarona en el transportador tubular renal. Puede desencadenar un efecto paradójico de retención de ácido úrico y crisis de gota."
+      },
+      conduta: {
+        pt: "Evitar o uso simultâneo. Preferir outros analgésicos ou agentes para gota em pacientes que necessitam compulsoriamente de AAS.",
+        es: "Evitar el uso simultáneo. Preferir otros analgésicos o agentes para gota en pacientes que necesitan obligatoriamente AAS."
+      }
+    },
+    "$classe_anticoagulantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Inibição do metabolismo hepático (CYP2C9) da varfarina, resultando em elevação grave do RNI e risco de sangramento.",
+        es: "Inhibición del metabolismo hepático (CYP2C9) de la warfarina, resultando en elevación grave del RNI y riesgo de sangrado."
+      },
+      conduta: {
+        pt: "Reduzir dose da varfarina e checar RNI 3 dias após a introdução da benzbromarona.",
+        es: "Reducir dosis de warfarina y revisar RNI 3 días tras la introducción de benzbromarona."
+      }
+    }
+  },
+
+  /* ── PEGLOTICASE ── */
+  "pegloticase": {
+    "alopurinol": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INTERAÇÃO DE SEGURANÇA. A administração simultânea de terapias hipouricemiantes orais (alopurinol, febuxostate) MASCARA o aumento do ácido úrico sérico. Esse aumento sérico é o biomarcador principal de que o paciente está produzindo anticorpos contra a pegloticase, o que prenuncia uma ANAFILAXIA severa na próxima infusão.",
+        es: "INTERACCIÓN DE SEGURIDAD. La administración simultánea de terapias hipouricemiantes orales (alopurinol, febuxostat) ENMASCARA el aumento del ácido úrico sérico. Este aumento sérico es el biomarcador principal de que el paciente está produciendo anticuerpos contra la pegloticasa, lo que anuncia una ANAFILAXIA severa en la próxima infusión."
+      },
+      conduta: {
+        pt: "ABSOLUTAMENTE CONTRAINDICADO o uso de alopurinol ou febuxostate durante o tratamento com pegloticase. Eles devem ser suspensos antes do início.",
+        es: "ABSOLUTAMENTE CONTRAINDICADO el uso de alopurinol o febuxostat durante el tratamiento con pegloticasa. Deben ser suspendidos antes del inicio."
+      }
+    },
+    "febuxostate": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Mesmo risco descrito com o alopurinol; impede a detecção da falha terapêutica que antecede o choque anafilático.",
+        es: "Mismo riesgo descrito con el alopurinol; impide la detección del fallo terapéutico que antecede el choque anafiláctico."
+      },
+      conduta: {
+        pt: "Contraindicado.",
+        es: "Contraindicado."
+      }
+    }
+  },
+
+  /* ── HIDROXICLOROQUINA ── */
+  "hidroxicloroquina": {
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A hidroxicloroquina prolonga o intervalo QT do coração. Macrolídeos (especialmente azitromicina e claritromicina) também bloqueiam os canais de potássio HERG miocárdicos. Risco maciço de arritmia Torsades de Pointes e morte súbita.",
+        es: "La hidroxicloroquina prolonga el intervalo QT del corazón. Macrólidos (especialmente azitromicina y claritromicina) también bloquean los canales de potasio HERG miocárdicos. Riesgo masivo de arritmia Torsades de Pointes y muerte súbita."
+      },
+      conduta: {
+        pt: "Evitar a associação rigorosamente. Realizar ECG basal se imprescindível.",
+        es: "Evitar la asociación rigurosamente. Realizar ECG basal si es imprescindible."
+      }
+    },
+    "amiodarona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Risco grave de prolongamento do intervalo QT. Amiodarona possui ação crônica que potencializa a toxicidade cardíaca do antimalárico.",
+        es: "Riesgo grave de prolongación del intervalo QT. Amiodarona posee acción crónica que potencia la toxicidad cardíaca del antimalárico."
+      },
+      conduta: {
+        pt: "Realizar ECG frequente ou buscar imunossupressor alternativo. Risco de Torsades de Pointes.",
+        es: "Realizar ECG frecuente o buscar inmunosupresor alternativo. Riesgo de Torsades de Pointes."
+      }
+    },
+    "$classe_antipsicóticos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Adição de risco ao prolongamento de intervalo QTc e possível exacerbação de limiar convulsivo (menos prevalente que em antimaláricos antigos, mas existente).",
+        es: "Adición de riesgo a la prolongación de intervalo QTc y posible exacerbación de umbral convulsivo (menos prevalente que en antimaláricos antiguos, pero existente)."
+      },
+      conduta: {
+        pt: "Monitoramento por Eletrocardiograma.",
+        es: "Monitorización por Electrocardiograma."
       }
     }
   },
@@ -14565,12 +15366,2186 @@ const INTERACOES_DB = {
         es: "Asociación típicamente no recomendada en ICFEr clínica severa."
       }
     }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES LOTE 8 (2026-07-05): Riociguate,
+     Selexipague, Epoprostenol, Treprostinil, Iloprosta.
+     BUILD 257 — chaves-raiz normalizadas para grafia canônica PT
+     (submissão original em ES: riociguat, selexipag, iloprost —
+     ver aliases correspondentes já registrados em DRUG_ALIASES).
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ─────────────────────────────────────────────────────────────
+     RIOCIGUATE
+  ───────────────────────────────────────────────────────────── */
+  "riociguate": {
+    "$classe_ipde5": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A coadministração de riociguate (estimulador da sGC) com inibidores da PDE5 (sildenafila, tadalafila) causa um efeito sinérgico maciço na via do NO/GMPc. Resulta em hipotensão profunda, refratária e colapso circulatório fatal.",
+        es: "La coadministración de riociguat (estimulador de sGC) con inhibidores de PDE5 (sildenafilo, tadalafilo) causa un efecto sinérgico masivo en la vía del NO/GMPc. Resulta en hipotensión profunda, refractaria y colapso circulatorio fatal."
+      },
+      conduta: {
+        pt: "ASSOCIAÇÃO CONTRAINDICADA. Não devem ser administrados sob qualquer hipótese simultaneamente.",
+        es: "ASOCIACIÓN CONTRAINDICADA. No deben administrarse bajo ninguna hipótesis simultáneamente."
+      }
+    },
+    "$classe_nitratos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Nitratos doam NO endógeno, enquanto o riociguate estimula diretamente a sGC. O acúmulo extremo de GMPc provoca vasodilatação sistêmica letal e síncope.",
+        es: "Los nitratos donan NO endógeno, mientras que el riociguat estimula directamente la sGC. La acumulación extrema de GMPc provoca vasodilatación sistémica letal y síncope."
+      },
+      conduta: {
+        pt: "Associação contraindicada.",
+        es: "Asociación contraindicada."
+      }
+    },
+    "antiacido": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Antiácidos à base de alumínio e magnésio reduzem substancialmente a absorção oral do riociguate (redução de até 50% na concentração máxima).",
+        es: "Los antiácidos a base de aluminio y magnesio reducen sustancialmente la absorción oral del riociguat (reducción de hasta 50% en la concentración máxima)."
+      },
+      conduta: {
+        pt: "Os antiácidos devem ser administrados com, no mínimo, 1 hora de distância do riociguate.",
+        es: "Los antiácidos deben administrarse con, al menos, 1 hora de distancia del riociguat."
+      }
+    },
+    "$classe_azolicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inibidores fortes de CYP3A4 e P-gp (cetoconazol, itraconazol) diminuem muito o clearance do riociguate, expondo o paciente a hipotensão ortostática e síncope.",
+        es: "Inhibidores fuertes de CYP3A4 y P-gp (ketoconazol, itraconazol) disminuyen mucho el aclaramiento del riociguat, exponiendo al paciente a hipotensión ortostática y síncope."
+      },
+      conduta: {
+        pt: "Considerar redução da dose inicial de riociguate para 0,5 mg 3x/dia. Monitorar ativamente PA.",
+        es: "Considerar reducción de la dosis inicial de riociguat a 0,5 mg 3 veces/día. Monitorizar activamente PA."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     SELEXIPAGUE
+  ───────────────────────────────────────────────────────────── */
+  "selexipague": {
+    "gemfibrozil": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A gemfibrozila é um INIBIDOR FORTE DO CYP2C8, a principal via metabólica do selexipague. Aumenta a exposição do fármaco e de seu metabólito ativo em mais de 10 VEZES, gerando vasodilatação extrema, hipotensão, cefaleia intratável e risco letal.",
+        es: "El gemfibrozilo es un INHIBIDOR FUERTE DEL CYP2C8, la principal vía metabólica del selexipag. Aumenta la exposición del fármaco y de su metabolito activo en más de 10 VECES, generando vasodilatación extrema, hipotensión, cefalea intratable y riesgo letal."
+      },
+      conduta: {
+        pt: "ASSOCIAÇÃO CONTRAINDICADA. Não administrar gemfibrozila a pacientes utilizando selexipague. Substituir o fibrato.",
+        es: "ASOCIACIÓN CONTRAINDICADA. No administrar gemfibrozilo a pacientes utilizando selexipag. Sustituir el fibrato."
+      }
+    },
+    "clopidogrel": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O clopidogrel (e seu metabólito) também inibe moderadamente/fortemente o CYP2C8 in vivo, podendo elevar expressivamente a exposição global ao selexipague.",
+        es: "El clopidogrel (y su metabolito) también inhibe moderada/fuertemente el CYP2C8 in vivo, pudiendo elevar expresivamente la exposición global al selexipag."
+      },
+      conduta: {
+        pt: "Quando administrado com clopidogrel, a dose de selexipague deve ser administrada APENAS 1 VEZ AO DIA (e não a cada 12h) conforme restrição de bula.",
+        es: "Cuando se administra con clopidogrel, la dosis de selexipag debe ser administrada SOLO 1 VEZ AL DÍA (y no cada 12h) según restricción de prospecto."
+      }
+    },
+    "rifampicina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Indutor forte de CYP2C8 e CYP3A4. Reduz drasticamente a meia-vida e as concentrações séricas de selexipague e seu metabólito ativo, levando à perda completa de eficácia na HAP.",
+        es: "Inductor fuerte de CYP2C8 y CYP3A4. Reduce drásticamente la vida media y las concentraciones séricas de selexipag y su metabolito activo, llevando a pérdida completa de eficacia en la HAP."
+      },
+      conduta: {
+        pt: "Pode ser necessário o DOBRO da dose de selexipague e escalonamento diário; descontinuar a rifampicina pode gerar superdosagem aguda se a dose de selexipague não for prontamente reduzida.",
+        es: "Puede ser necesario el DOBLE de la dosis de selexipag y escalonamiento diario; discontinuar la rifampicina puede generar sobredosis aguda si la dosis de selexipag no se reduce prontamente."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     EPOPROSTENOL
+  ───────────────────────────────────────────────────────────── */
+  "epoprostenol": {
+    "$classe_antihipertensivos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O epoprostenol possui efeito vasodilatador arterial pulmonar sistêmico fulminante. A associação com drogas anti-hipertensivas sistêmicas aumenta o risco de hipotensão severa, colapso hemodinâmico e síncope.",
+        es: "El epoprostenol posee efecto vasodilatador arterial pulmonar sistémico fulminante. La asociación con drogas antihipertensivas sistémicas aumenta el riesgo de hipotensión severa, colapso hemodinámico y síncope."
+      },
+      conduta: {
+        pt: "Requer monitorização intensiva de UTI no início. Suspender e evitar anti-hipertensivos desnecessários durante a introdução.",
+        es: "Requiere monitorización intensiva de UCI al inicio. Suspender y evitar antihipertensivos innecesarios durante la introducción."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O epoprostenol inibe inatamente e profundamente a agregação plaquetária. Associado a antiagregantes plaquetários orais aumenta de forma aditiva o risco de sangramento não controlável.",
+        es: "El epoprostenol inhibe innata y profundamente la agregación plaquetaria. Asociado a antiagregantes plaquetarios orales aumenta de forma aditiva el riesgo de sangrado no controlable."
+      },
+      conduta: {
+        pt: "Monitoramento hematológico restrito. Suspender dupla antiagregação sem indicação primária (SCA/stent).",
+        es: "Monitorización hematológica estricta. Suspender doble antiagregación sin indicación primaria (SCA/stent)."
+      }
+    },
+    "$classe_anticoagulantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo na disfunção da hemostasia sistêmica e capilar.",
+        es: "Sinergismo en la disfunción de la hemostasia sistémica y capilar."
+      },
+      conduta: {
+        pt: "Acompanhar estreitamente INR/TTPa e eventuais sangramentos mucosos/epistaxe.",
+        es: "Seguir estrechamente INR/TTPa y eventuales sangrados mucosos/epistaxis."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     TREPROSTINIL
+  ───────────────────────────────────────────────────────────── */
+  "treprostinil": {
+    "gemfibrozil": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Gemfibrozila (inibidor de CYP2C8) dobra a concentração plasmática do treprostinil (via oral), provocando cefaleia intensa, flushing, diarreia e síncope por hipotensão.",
+        es: "Gemfibrozilo (inhibidor de CYP2C8) duplica la concentración plasmática de treprostinil (vía oral), provocando cefalea intensa, flushing, diarrea y síncope por hipotensión."
+      },
+      conduta: {
+        pt: "Reduzir a dose de treprostinil oral se não for possível evitar o fibrato. Monitorar pressão arterial sistêmica.",
+        es: "Reducir la dosis de treprostinil oral si no es posible evitar el fibrato. Monitorizar presión arterial sistémica."
+      }
+    },
+    "rifampicina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Rifampicina (indutor de CYP2C8) aumenta drasticamente o clareamento do treprostinil (vía oral), anulando a terapêutica na HAP.",
+        es: "Rifampicina (inductor de CYP2C8) aumenta drásticamente el aclaramiento de treprostinil (vía oral), anulando la terapéutica en HAP."
+      },
+      conduta: {
+        pt: "Evitar a associação. Requerer titulação de aumento acentuada de treprostinil, sob monitoramento da equipe.",
+        es: "Evitar la asociación. Requerir titulación de aumento acentuada de treprostinil, bajo monitorización del equipo."
+      }
+    },
+    "$classe_antihipertensivos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Risco aumentado de hipotensão severa em combinações com medicamentos hipotensores (mesma dinâmica da prostaciclina sistêmica).",
+        es: "Riesgo aumentado de hipotensión severa en combinaciones con medicamentos hipotensores (misma dinámica de la prostaciclina sistémica)."
+      },
+      conduta: {
+        pt: "Monitorar hemodinâmica rotineiramente.",
+        es: "Monitorizar hemodinámica rutinariamente."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Treprostinil possui ação antiplaquetária. Adiciona risco hemorrágico em pacientes com agentes antiplaquetários associados.",
+        es: "Treprostinil posee acción antiplaquetaria. Añade riesgo hemorrágico en pacientes con agentes antiplaquetarios asociados."
+      },
+      conduta: {
+        pt: "Revisão ativa e monitoramento para epistaxe e sangramentos gastrintestinais.",
+        es: "Revisión activa y monitorización para epistaxis y sangrados gastrointestinales."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     ILOPROSTA
+  ───────────────────────────────────────────────────────────── */
+  "iloprosta": {
+    "$classe_antihipertensivos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Apesar do uso inalatório ser mais focado no leito pulmonar, parte da medicação entra no compartimento sistêmico, podendo precipitar quedas pressóricas graves e síncopes (especialmente com nitratos ou IECA/BRA).",
+        es: "A pesar de que el uso inhalatorio esté más enfocado en el lecho pulmonar, parte de la medicación entra en el compartimento sistémico, pudiendo precipitar caídas presoras graves y síncopes (especialmente con nitratos o IECA/ARA II)."
+      },
+      conduta: {
+        pt: "Os pacientes devem ser testados no primeiro uso por hipotensão sintomática. Monitoramento pressórico é fundamental na inalação.",
+        es: "Los pacientes deben ser probados en el primer uso por hipotensión sintomática. La monitorización presora es fundamental en la inhalación."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "As prostaciclinas, em todas as suas formulações, interagem inibindo a agregação e ativando AMPc nas plaquetas.",
+        es: "Las prostaciclinas, en todas sus formulaciones, interactúan inhibiendo la agregación y activando AMPc en las plaquetas."
+      },
+      conduta: {
+        pt: "Supervisionar sangramentos da via aérea (hemoptise microscópica relatada em HAP) e epistasia.",
+        es: "Supervisar sangrados de la vía aérea (hemoptisis microscópica reportada en HAP) y epistaxis."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES LOTE 9 (2026-07-06): Midodrina,
+     Fludrocortisona, Droxidopa, Idarucizumabe, Andexanet Alfa.
+     BUILD 258 — "idarucizumab"/"andexanet_alfa" da submissão original
+     identificados como duplicatas de fármacos JÁ EXISTENTES em cardio.js
+     (Grupo 31): "idarucizumabe" e "andexanetAlfa". Os nós abaixo usam as
+     chaves canônicas em produção; aliases correspondentes já registrados
+     em DRUG_ALIASES (ver acima). Midodrina/Fludrocortisona/Droxidopa são
+     nós-raiz genuinamente novos (fármacos novos no Grupo 74 de cardio.js).
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ─────────────────────────────────────────────────────────────
+     MIDODRINA
+  ───────────────────────────────────────────────────────────── */
+  "midodrina": {
+    "$classe_simpatomimeticos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A coadministração de midodrina com outros simpatomiméticos ou vasoconstritores (pseudoefedrina, fenilefrina, efedrina, metilfenidato) provoca sinergismo alfa-adrenérgico agudo, disparando o risco de crises hipertensivas severas e isquemia miocárdica.",
+        es: "La coadministración de midodrina con otros simpaticomiméticos o vasoconstrictores (pseudoefedrina, fenilefrina, efedrina, metilfenidato) provoca sinergismo alfa-adrenérgico agudo, disparando el riesgo de crisis hipertensivas severas e isquemia miocárdica."
+      },
+      conduta: {
+        pt: "Evitar o uso concomitante, inclusive em formulações de venda livre para resfriados. Monitorar a PA rigidamente se associação inevitável.",
+        es: "Evitar el uso concomitante, inclusive en formulaciones de venta libre para resfriados. Monitorizar la PA rígidamente si la asociación es inevitable."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O efeito alfa vasoconstritor da midodrina gera bradicardia reflexa vagal. A presença de betabloqueadores anula a compensação cronotrópica cardíaca, podendo precipitar bradicardia severa, bloqueio AV e parada sinusal.",
+        es: "El efecto alfa vasoconstrictor de la midodrina genera bradicardia refleja vagal. La presencia de betabloqueantes anula la compensación cronotrópica cardíaca, pudiendo precipitar bradicardia severa, bloqueo AV y paro sinusal."
+      },
+      conduta: {
+        pt: "Usar com extrema cautela. Monitorar rigorosamente a frequência cardíaca basal e o ECG.",
+        es: "Usar con extrema precaución. Monitorizar rigurosamente la frecuencia cardíaca basal y el ECG."
+      }
+    },
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A digoxina potencializa o tônus vagal e induz bradicardia; o sinergismo com a bradicardia reflexa induzida pela midodrina aumenta marcadamente o risco de bloqueios de condução cardíaca.",
+        es: "La digoxina potencia el tono vagal e induce bradicardia; el sinergismo con la bradicardia refleja inducida por la midodrina aumenta marcadamente el riesgo de bloqueos de conducción cardíaca."
+      },
+      conduta: {
+        pt: "Evitar ou monitorar rigorosamente a FC. Contraindicado se bloqueio AV pré-existente.",
+        es: "Evitar o monitorizar rigurosamente la FC. Contraindicado si hay bloqueo AV preexistente."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     FLUDROCORTISONA
+  ───────────────────────────────────────────────────────────── */
+  "fludrocortisona": {
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A potente ação mineralocorticoide da fludrocortisona induz depleção de potássio (hipocalemia) nos túbulos renais. A hipocalemia sérica aumenta drasticamente a toxicidade miocárdica da digoxina, precipitando arritmias ventriculares graves e fatais.",
+        es: "La potente acción mineralocorticoide de la fludrocortisona induce depleción de potasio (hipopotasemia) en los túbulos renales. La hipopotasemia sérica aumenta drásticamente la toxicidad miocárdica de la digoxina, precipitando arritmias ventriculares graves y fatales."
+      },
+      conduta: {
+        pt: "Monitorar o potássio sérico semanalmente na introdução. Repor potássio preventivamente para manter K+ > 4,0 mEq/L. Monitorar ECG.",
+        es: "Monitorizar el potasio sérico semanalmente en la introducción. Reponer potasio preventivamente para mantener K+ > 4,0 mEq/L. Monitorizar ECG."
+      }
+    },
+    "furosemida": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Efeito caliurético duplo e sinérgico. A furosemida (diurético de alça) e a fludrocortisona aumentam a excreção renal de potássio, gerando hipocalemia grave e refratária de rápida instalação.",
+        es: "Efecto caliurético doble y sinérgico. La furosemida (diurético de asa) y la fludrocortisona aumentan la excreción renal de potasio, generando hipopotasemia grave y refractaria de rápida instalación."
+      },
+      conduta: {
+        pt: "Monitorar estritamente eletrólitos. Suplementação oral de cloreto de potássio é quase universalmente obrigatória nessa associação.",
+        es: "Monitorizar estrictamente electrolitos. La suplementación oral de cloruro de potasio es casi universalmente obligatoria en esta asociación."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     DROXIDOPA
+  ───────────────────────────────────────────────────────────── */
+  "droxidopa": {
+    "$classe_simpatomimeticos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Como a droxidopa é convertida diretamente em noradrenalina, o uso conjunto com outros estimulantes adrenérgicos (anfetaminas, pseudoefedrina, metilfenidato) causa sobrecarga adrenárgica extrema, levando a crises hipertensivas com risco de AVC e taquiarritmias ventriculares.",
+        es: "Como la droxidopa se convierte directamente en noradrenalina, el uso conjunto con otros estimulantes adrenérgicos (anfetaminas, pseudoefedrina, metilfenidato) causa sobrecarga adrenérgica extrema, llevando a crisis hipertensivas con riesgo de ACV y taquiarritmias ventriculares."
+      },
+      conduta: {
+        pt: "Evitar a associação. Contraindicar o uso de descongestionantes sistêmicos de venda livre.",
+        es: "Evitar la asociación. Contraindicar el uso de descongestionantes sistémicos de venta libre."
+      }
+    },
+    "$classe_imaos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Os IMAOs impedem a degradação da noradrenalina recém-sintetizada a partir da droxidopa, gerando acúmulo sináptico catastrófico de catecolaminas. Risco imediato de crise hipertensiva maligna e hemorragia intracraniana.",
+        es: "Los IMAOs impiden la degradación de la noradrenalina recién sintetizada a partir de la droxidopa, generando acumulación sináptica catastrófica de catecolaminas. Riesgo inmediato de crisis hipertensiva maligna e hemorragia intracraneal."
+      },
+      conduta: {
+        pt: "ASSOCIAÇÃO CONTRAINDICADA. Respeitar washout de 14 dias.",
+        es: "ASOCIACIÓN CONTRAINDICADA. Respetar washout de 14 días."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     IDARUCIZUMABE (chave canônica de cardio.js — submissão original
+     usava "idarucizumab", normalizado via DRUG_ALIASES)
+     Nota: sendo um fragmento de anticorpo de uso emergencial dose única,
+     as interações são estritamente dinâmicas com o retorno da indicação
+     anticoagulante (reinício da dabigatrana pós-reversão).
+  ───────────────────────────────────────────────────────────── */
+  "idarucizumabe": {
+    "dabigatrana": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A administração de dabigatrana logo após o idarucizumabe será neutralizada se ainda houver antídoto circulante (meia-vida de ~45 min). No entanto, o atraso prolongado expõe o paciente ao risco trombótico basal.",
+        es: "La administración de dabigatrán justo después del idarucizumab será neutralizada si aún hay antídoto circulante (vida media de ~45 min). Sin embargo, el retraso prolongado expone al paciente al riesgo trombótico basal."
+      },
+      conduta: {
+        pt: "A anticoagulação com dabigatrana pode ser reiniciada com segurança 24 horas após a administração do idarucizumabe, se o paciente estiver estável.",
+        es: "La anticoagulación con dabigatrán puede ser reiniciada con seguridad 24 horas después de la administración del idarucizumab, si el paciente está estable."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     ANDEXANET ALFA (chave canônica camelCase de cardio.js — submissão
+     original usava "andexanet_alfa", normalizado via DRUG_ALIASES)
+  ───────────────────────────────────────────────────────────── */
+  "andexanetAlfa": {
+    "apixabana": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O andexanet alfa reverte imediatamente a apixabana. Reintroduzir a apixabana precocemente (antes de 24h) re-eleva o risco de neutralização cruzada, mas atrasar o reinício gera um estado rebote altamente trombótico induzido pelo antídoto.",
+        es: "El andexanet alfa revierte inmediatamente el apixabán. Reintroducir el apixabán precozmente (antes de 24h) vuelve a elevar el riesgo de neutralización cruzada, pero retrasar el reinicio genera un estado rebote altamente trombótico inducido por el antídoto."
+      },
+      conduta: {
+        pt: "Reiniciar a anticoagulação conforme protocolo clínico cirúrgico/hemostático, monitorando rigidamente a estabilização do sangramento.",
+        es: "Reiniciar la anticoagulación según protocolo clínico quirúrgico/hemostático, monitorizando rígidamente la estabilización del sangrado."
+      }
+    },
+    "rivaroxabana": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Mecanismo idêntico à apixabana. A reversão abrupta da rivaroxabana gera cessação do efeito antitrombótico e indução pró-coagulante via ligação do TFPI pelo andexanet.",
+        es: "Mecanismo idéntico al apixabán. La reversión abrupta de rivaroxabán genera cese del efecto antitrombótico e inducción procoagulante vía unión del TFPI por el andexanet."
+      },
+      conduta: {
+        pt: "Vigiar ativamente sinais de trombose sistêmica/arterial (AVC, IAM) pós-infusão do antídoto.",
+        es: "Vigilar activamente signos de trombosis sistémica/arterial (ACV, IAM) posinfusión del antídoto."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES LOTE 10 (2026-07-06): Complejo
+     Protrombínico 4F, Digoxin Immune Fab, Tafamidis, Acoramidis,
+     Patisirán.
+     BUILD 259 — "complejo_protrombinico_4f" da submissão original
+     identificado como duplicata do fármaco JÁ EXISTENTE em cardio.js
+     (Grupo 31): "pcc4f". "tafamidis" da submissão é duplicata do
+     fármaco já existente em cardio.js (Grupo 46), usando a MESMA chave
+     ("tafamidis"). Nenhum dos dois possuía nó-raiz prévio em
+     INTERACOES_DB, portanto os nós abaixo são criados pela primeira vez
+     sob as chaves canônicas em produção (alias "complejo_protrombinico_4f
+     → pcc4f" já registrado em DRUG_ALIASES). Digoxin Immune Fab,
+     Acoramidis e Patisirán são nós-raiz genuinamente novos (fármacos
+     novos no Grupo 75 de cardio.js).
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ─────────────────────────────────────────────────────────────
+     PCC4F (chave canônica de cardio.js — submissão original usava
+     "complejo_protrombinico_4f", normalizado via DRUG_ALIASES)
+  ───────────────────────────────────────────────────────────── */
+  "pcc4f": {
+    "$classe_anticoagulantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Ação de reversão direta (antagonismo de alvo). O Complexo Protrombínico repõe maciçamente os fatores de coagulação inativos ou não sintetizados pelo paciente anticoagulado (varfarina) ou inibidos circulantes (rivaroxabana/apixabana). Reverte agudamente a proteção antitrombótica, gerando estado pró-coagulante hiperativo de rebote.",
+        es: "Acción de reversión directa (antagonismo de objetivo). El Complejo Protrombínico repone masivamente los factores de coagulación inactivos o no sintetizados por el paciente anticoagulado (warfarina) o inhibidos circulantes (rivaroxabán/apixabán). Revierte agudamente la protección antitrombótica, generando estado procoagulante hiperactivo de rebote."
+      },
+      conduta: {
+        pt: "Utilizar apenas em sangramento ativo com risco de morte. Monitorar ativamente sinais de isquemia miocárdica, AVC e TEP. A anticoagulação do paciente deverá ser reiniciada assim que a hemostasia estiver clinicamente garantida.",
+        es: "Utilizar solo en sangrado activo con riesgo vital. Monitorizar activamente signos de isquemia miocárdica, ACV y TEP. La anticoagulación del paciente deberá ser reiniciada en cuanto la hemostasia esté clínicamente garantizada."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     DIGOXIN IMMUNE FAB
+  ───────────────────────────────────────────────────────────── */
+  "digoxin_immune_fab": {
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Reversão completa e aguda da terapia digitálica. Pode resultar em piora rápida da insuficiência cardíaca (perda inotrópica) ou reaparecimento de fibrilação atrial com resposta ventricular excessivamente rápida.",
+        es: "Reversión completa y aguda de la terapia digitálica. Puede resultar en empeoramiento rápido de la insuficiencia cardíaca (pérdida inotrópica) o reaparición de fibrilación auricular con respuesta ventricular excesivamente rápida."
+      },
+      conduta: {
+        pt: "Monitorar hemodinâmica e frequência cardíaca. Não re-administrar digoxina imediatamente após o resgate. Tratar arritmias de descompensação com outras classes de fármacos.",
+        es: "Monitorizar hemodinámica y frecuencia cardíaca. No readministrar digoxina inmediatamente después del rescate. Tratar arritmias de descompensación con otras clases de fármacos."
+      }
+    },
+    "furosemida": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A reversão da intoxicação digitálica reativa imediatamente a bomba Na+/K+-ATPase miocárdica, causando entrada celular maciça de potássio (hipocalemia aguda). Diuréticos de alça aumentam a excreção de K+, potencializando arritmias fatais induzidas pela hipocalemia.",
+        es: "La reversión de la intoxicación digitálica reactiva inmediatamente la bomba Na+/K+-ATPase miocárdica, causando entrada celular masiva de potasio (hipopotasemia aguda). Los diuréticos de asa aumentan la excreción de K+, potenciando arritmias fatales inducidas por la hipopotasemia."
+      },
+      conduta: {
+        pt: "Monitorar potássio sérico a cada 2-4 horas após o antídoto. Reposição de potássio costuma ser imperativa, a menos que o paciente seja anúrico.",
+        es: "Monitorizar potasio sérico cada 2-4 horas tras el antídoto. La reposición de potasio suele ser imperativa, a menos que el paciente sea anúrico."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     TAFAMIDIS (chave canônica já existente em cardio.js — Grupo 46;
+     nó-raiz de interações criado pela primeira vez neste LOTE 10)
+  ───────────────────────────────────────────────────────────── */
+  "tafamidis": {
+    "rosuvastatina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O Tafamidis inibe a proteína de resistência ao câncer de mama (BCRP - transportador de efluxo intestinal/hepático). Como a rosuvastatina é substrato da BCRP, seus níveis plasmáticos aumentam em até 2 vezes, com maior risco de miopatia.",
+        es: "El Tafamidis inhibe la proteína de resistencia al cáncer de mama (BCRP - transportador de eflujo intestinal/hepático). Como la rosuvastatina es sustrato de la BCRP, sus niveles plasmáticos aumentan hasta 2 veces, con mayor riesgo de miopatía."
+      },
+      conduta: {
+        pt: "Reduzir dose da rosuvastatina ou monitorar ativamente dores musculares e CK sérica. Preferir outra estatina não mediada fortemente por BCRP se possível.",
+        es: "Reducir dosis de rosuvastatina o monitorizar activamente dolores musculares y CK sérica. Preferir otra estatina no mediada fuertemente por BCRP si es posible."
+      }
+    },
+    "metotrexato": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O Tafamidis inibe a BCRP e transportadores de ânions orgânicos, o que teoricamente pode retardar o clearance renal/hepatobiliar do metotrexato, elevando toxicidade sistêmica.",
+        es: "El Tafamidis inhibe la BCRP y transportadores de aniones orgánicos, lo que teóricamente puede retrasar el aclaramiento renal/hepatobiliar del metotrexato, elevando toxicidad sistémica."
+      },
+      conduta: {
+        pt: "Usar com cautela em pacientes recebendo altas doses de metotrexato e monitorar toxicidade medular e hepática.",
+        es: "Usar con precaución en pacientes recibiendo altas dosis de metotrexato y monitorizar toxicidad medular y hepática."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     ACORAMIDIS
+     Nota: agente altamente limpo farmacocineticamente; poucas
+     interações reportadas. Precaução de classe (BCRP/OATP teórica)
+     registrada como moderada/leve pela similitude com outros
+     estabilizadores de TTR.
+  ───────────────────────────────────────────────────────────── */
+  "acoramidis": {
+    "rosuvastatina": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Potencial teórico de interação via inibição de transportadores de efluxo hepático/intestinal, podendo elevar discretamente as estatinas lipofílicas.",
+        es: "Potencial teórico de interacción vía inhibición de transportadores de eflujo hepático/intestinal, pudiendo elevar discretamente las estatinas lipofílicas."
+      },
+      conduta: {
+        pt: "Monitorar perfil muscular em pacientes em altas doses de estatinas.",
+        es: "Monitorizar perfil muscular en pacientes en altas dosis de estatinas."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     PATISIRÁN
+     Nota: o próprio Patisiran, sendo um oligonucleotídeo siRNA, não
+     inibe nem induz enzimas do CYP450. As interações abaixo decorrem
+     do protocolo OBRIGATÓRIO de PRÉ-MEDICAÇÃO (Dexametasona 10mg IV,
+     Bloqueadores H1/H2) no dia da infusão, não do siRNA em si.
+  ───────────────────────────────────────────────────────────── */
+  "patisiran": {
+    "insulina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Interação decorrente da PRÉ-MEDICAÇÃO OBRIGATÓRIA (Dexametasona 10 mg IV). A forte carga glicocorticoide a cada 3 semanas causa descontrole glicêmico agudo severo em diabéticos descompensados ou em uso de insulina.",
+        es: "Interacción derivada de la PREMEDICACIÓN OBLIGATORIA (Dexametasona 10 mg IV). La fuerte carga glucocorticoide cada 3 semanas causa descontrol glucémico agudo severo en diabéticos descompensados o en uso de insulina."
+      },
+      conduta: {
+        pt: "Ajustar dose de insulina (esquema de correção) no dia da infusão do Patisirán e nas 24-48 horas seguintes.",
+        es: "Ajustar dosis de insulina (esquema de corrección) el día de la infusión de Patisirán y en las 24-48 horas siguientes."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Interação decorrente da pré-medicação. O uso concomitante de AINE crônico com o pulso de Dexametasona IV eleva transitoriamente o risco de sangramento de úlcera péptica ativa.",
+        es: "Interacción derivada de la premedicación. El uso concomitante de AINE crónico con el pulso de Dexametasona IV eleva transitoriamente el riesgo de sangrado de úlcera péptica activa."
+      },
+      conduta: {
+        pt: "Evitar AINEs no dia e dia seguinte à infusão, ou garantir IBP protetor.",
+        es: "Evitar AINEs en el día y el día siguiente a la infusión, o garantizar IBP protector."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES LOTE 11 (2026-07-06): Vutrisirana,
+     Inotersena, Mavacamten, Aficamten, Cilostazol, Pentoxifilina.
+     BUILD 260 — "cilostazol" e "pentoxifilina" da submissão original
+     identificados como duplicatas de fármacos JÁ EXISTENTES em cardio.js
+     (Grupos 43 e 44, respectivamente). Nenhum dos dois possuía nó-raiz
+     prévio em INTERACOES_DB, portanto os nós abaixo são criados pela
+     primeira vez sob as chaves canônicas em produção (mesma grafia da
+     submissão — sem necessidade de alias). Vutrisirana, Inotersena,
+     Mavacamten e Aficamten são nós-raiz genuinamente novos (fármacos
+     novos no Grupo 76 de cardio.js).
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ─────────────────────────────────────────────────────────────
+     VUTRISIRANA (chave canônica de cardio.js — submissão original
+     usava "vutrisirán" com acento, normalizado via DRUG_ALIASES)
+     Nota: agente sem metabolismo CYP450 relevante; nó registrado
+     apenas para reforço educativo sobre a ausência de interações
+     farmacocinéticas e a obrigatoriedade da suplementação de
+     Vitamina A. Chave "interacoes_vazias" é puramente informativa
+     e não corresponde a nenhum fármaco/classe real — não é
+     disparada pelo motor de checagem cruzada Droga×Droga.
+  ───────────────────────────────────────────────────────────── */
+  "vutrisiran": {
+    "interacoes_vazias": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "Não apresenta interações farmacocinéticas significativas via citocromo P450 ou transportadores.",
+        es: "No presenta interacciones farmacocinéticas significativas vía citocromo P450 o transportadores."
+      },
+      conduta: {
+        pt: "Garantir a suplementação de Vitamina A obrigatória para o bloqueio da TTR.",
+        es: "Garantizar la suplementación de Vitamina A obligatoria para el bloqueo de la TTR."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     INOTERSENA
+  ───────────────────────────────────────────────────────────── */
+  "inotersen": {
+    "$classe_anticoagulantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A Inotersena possui um Boxed Warning severo para Trombocitopenia profunda. O uso concomitante de anticoagulantes sistêmicos eleva catastroficamente o risco de sangramento intracraniano e fatal se as plaquetas caírem abruptamente.",
+        es: "El inotersen posee un Boxed Warning severo para Trombocitopenia profunda. El uso concomitante de anticoagulantes sistémicos eleva catastróficamente el riesgo de sangrado intracraneal y fatal si las plaquetas caen abruptamente."
+      },
+      conduta: {
+        pt: "Extrema cautela. Monitoramento plaquetário deve ser semanal. Se plaquetas < 50.000, considerar suspender anticoagulante imediatamente conforme avaliação hematológica.",
+        es: "Extrema precaución. Monitorización plaquetaria debe ser semanal. Si plaquetas < 50.000, considerar suspender anticoagulante inmediatamente según evaluación hematológica."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergia de disfunção da hemostasia com o risco latente de trombocitopenia severa induzida pelo ASO.",
+        es: "Sinergia de disfunción de la hemostasia con el riesgo latente de trombocitopenia severa inducida por el ASO."
+      },
+      conduta: {
+        pt: "Pausar Inotersena se plaquetas caírem em pacientes que necessitam manter antiagregação mandatória (ex: Stent recente).",
+        es: "Pausar Inotersen si las plaquetas caen en pacientes que necesitan mantener antiagregación obligatoria (ej: Stent reciente)."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inotersena tem risco de glomerulonefrite aguda. AINEs causam disfunção hemodinâmica renal e nefrotoxicidade direta, além de agravarem o risco hemorrágico.",
+        es: "Inotersen tiene riesgo de glomerulonefritis aguda. Los AINEs causan disfunción hemodinámica renal y nefrotoxicidad directa, además de agravar el riesgo hemorrágico."
+      },
+      conduta: {
+        pt: "Evitar uso de AINEs. Monitorar taxa de filtração glomerular e EAS (proteinúria) a cada 2-3 semanas.",
+        es: "Evitar uso de AINEs. Monitorizar tasa de filtración glomerular y sedimento urinario (proteinuria) cada 2-3 semanas."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     MAVACAMTEN
+  ───────────────────────────────────────────────────────────── */
+  "mavacamten": {
+    "omeprazol": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O omeprazol é inibidor do CYP2C19, enzima primária do metabolismo do mavacamten. O aumento da exposição do inibidor de miosina induz redução abrupta da FEVE, precipitando choque sistólico/Insuficiência Cardíaca aguda.",
+        es: "El omeprazol es inhibidor del CYP2C19, enzima primaria del metabolismo del mavacamten. El aumento de la exposición del inhibidor de miosina induce reducción abrupta de la FEVI, precipitando choque sistólico/Insuficiencia Cardíaca aguda."
+      },
+      conduta: {
+        pt: "Contraindicado! O paciente não pode receber inibidores moderados/fortes de CYP2C19. Se IBP for necessário, usar pantoprazol (inibidor fraco) com liberação da equipe REMS.",
+        es: "¡Contraindicado! El paciente no puede recibir inhibidores moderados/fuertes de CYP2C19. Si se necesita IBP, usar pantoprazol (inhibidor débil) con autorización del equipo REMS."
+      }
+    },
+    "$classe_azolicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Inibidores fortes de CYP3A4 (cetoconazol, itraconazol) aumentam agudamente os níveis de mavacamten, bloqueando a contratilidade sistólica ventricular de forma fatal.",
+        es: "Inhibidores fuertes de CYP3A4 (ketoconazol, itraconazol) aumentan agudamente los niveles de mavacamten, bloqueando la contractilidad sistólica ventricular de forma fatal."
+      },
+      conduta: {
+        pt: "Contraindicado de forma absoluta.",
+        es: "Contraindicado de forma absoluta."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Inibição potente de CYP3A4 (claritromicina/eritromicina) eleva mavacamten e risco de depressão contrátil irreversível.",
+        es: "Inhibición potente de CYP3A4 (claritromicina/eritromicina) eleva mavacamten y riesgo de depresión contráctil irreversible."
+      },
+      conduta: {
+        pt: "Não prescrever macrolídeos nestes pacientes.",
+        es: "No prescribir macrólidos en estos pacientes."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Ação inotrópica negativa aditiva perigosa. Embora o uso combinado seja muito comum no tratamento de CMHO, a adição de mavacamten em um miocárdio muito betabloqueado pode despencar a FEVE.",
+        es: "Acción inotrópica negativa aditiva peligrosa. Aunque el uso combinado es muy común en el tratamiento de CMHO, la adición de mavacamten en un miocardio muy betabloqueado puede desplomar la FEVI."
+      },
+      conduta: {
+        pt: "Acompanhamento em centro avançado. Ecocardiograma deve autorizar qualquer titulação ascendente quando o paciente usa betabloqueador (ou diltiazem/verapamil).",
+        es: "Seguimiento en centro avanzado. Ecocardiograma debe autorizar cualquier titulación ascendente cuando el paciente usa betabloqueante (o diltiazem/verapamilo)."
+      }
+    },
+    "verapamil": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Verapamil possui efeito inotrópico negativo direto E inibe moderadamente CYP3A4, criando um sinergismo perigoso duplo para indução de falência sistólica com mavacamten.",
+        es: "El verapamilo posee efecto inotrópico negativo directo E inhibe moderadamente CYP3A4, creando un sinergismo peligroso doble para inducción de falla sistólica con mavacamten."
+      },
+      conduta: {
+        pt: "Exige monitorização ecocardiográfica ultraestrita e ajuste das doses de base. Se o paciente tolerar mal, interromper o BCC antes do Mavacamten.",
+        es: "Exige monitorización ecocardiográfica ultraestricta y ajuste de las dosis base. Si el paciente tolera mal, interrumpir el BCC antes del Mavacamten."
+      }
+    },
+    "diltiazem": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Mesma dinâmica do verapamil (Inotropismo negativo + inibição moderada de CYP3A4).",
+        es: "Misma dinámica del verapamilo (Inotropismo negativo + inhibición moderada de CYP3A4)."
+      },
+      conduta: {
+        pt: "Reduzir doses. Titulação de mavacamten estendida.",
+        es: "Reducir dosis. Titulación de mavacamten extendida."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     AFICAMTEN
+  ───────────────────────────────────────────────────────────── */
+  "aficamten": {
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Aficamten tem menor influência metabólica que mavacamten, mas o inotropismo negativo é o cerne terapêutico. A soma com betabloqueadores reduz severamente a função contrátil se mal dosado.",
+        es: "Aficamten tiene menor influencia metabólica que mavacamten, pero el inotropismo negativo es el núcleo terapéutico. La suma con betabloqueantes reduce severamente la función contráctil si se dosifica mal."
+      },
+      conduta: {
+        pt: "Titulação progressiva embasada unicamente por controle ecocardiográfico periódico.",
+        es: "Titulación progresiva basada únicamente por control ecocardiográfico periódico."
+      }
+    },
+    "verapamil": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Risco inotrópico aditivo. Menor impacto via CYP que mavacamten, mas a depressão mecânica ventricular é cumulativa.",
+        es: "Riesgo inotrópico aditivo. Menor impacto vía CYP que mavacamten, pero la depresión mecánica ventricular es acumulativa."
+      },
+      conduta: {
+        pt: "Usar com extrema cautela e Eco de controle constante.",
+        es: "Usar con extrema precaución y Eco de control constante."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     CILOSTAZOL (chave canônica já existente em cardio.js — Grupo 43;
+     nó-raiz de interações criado pela primeira vez neste LOTE 11)
+  ───────────────────────────────────────────────────────────── */
+  "cilostazol": {
+    "omeprazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Omeprazol é inibidor do CYP2C19, via vital para o cilostazol. Aumenta massivamente os metabólitos ativos do cilostazol, deflagrando cefaleia incapacitante, taquicardia e arritmias.",
+        es: "Omeprazol es inhibidor de CYP2C19, vía vital para el cilostazol. Aumenta masivamente los metabolitos activos del cilostazol, desencadenando cefalea incapacitante, taquicardia y arritmias."
+      },
+      conduta: {
+        pt: "Reduzir dose de cilostazol para 50 mg 12/12h se omeprazol for mantido.",
+        es: "Reducir dosis de cilostazol a 50 mg cada 12h si el omeprazol se mantiene."
+      }
+    },
+    "$classe_azolicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Bloqueio do CYP3A4 triplica os níveis do cilostazol, exacerbando sangramentos, palpitações e cefaleias severas.",
+        es: "Bloqueo del CYP3A4 triplica los niveles de cilostazol, exacerbando sangrados, palpitaciones y cefaleas severas."
+      },
+      conduta: {
+        pt: "Evitar associação ou reduzir a dose de cilostazol para 50 mg 12/12h.",
+        es: "Evitar asociación o reducir la dosis de cilostazol a 50 mg cada 12h."
+      }
+    },
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A inibição de CYP3A4 por eritromicina/claritromicina aumenta o nível do cilostazol e seus efeitos vasodilatadores agressivos.",
+        es: "La inhibición de CYP3A4 por eritromicina/claritromicina aumenta el nivel de cilostazol y sus efectos vasodilatadores agresivos."
+      },
+      conduta: {
+        pt: "Reduzir dose para 50 mg 12/12h.",
+        es: "Reducir dosis a 50 mg cada 12h."
+      }
+    },
+    "diltiazem": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Diltiazem inibe moderadamente o CYP3A4. Aumento da AUC do cilostazol em mais de 50%.",
+        es: "Diltiazem inhibe moderadamente el CYP3A4. Aumento del AUC del cilostazol en más de 50%."
+      },
+      conduta: {
+        pt: "Reduzir a dose de cilostazol pela metade (50 mg 12/12h).",
+        es: "Reducir la dosis de cilostazol a la mitad (50 mg cada 12h)."
+      }
+    },
+    "$classe_antiagregantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Cilostazol em terapia dupla com aspirina e/ou clopidogrel aumenta drasticamente o risco de hemorragias maiores.",
+        es: "Cilostazol en terapia doble con aspirina y/o clopidogrel aumenta drásticamente el riesgo de hemorragias mayores."
+      },
+      conduta: {
+        pt: "Uso combinado apenas sob supervisão vascular e monitoramento agressivo de sinais de sangramento.",
+        es: "Uso combinado solo bajo supervisión vascular y monitoreo agresivo de signos de sangrado."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     PENTOXIFILINA (chave canônica já existente em cardio.js —
+     Grupo 44; nó-raiz de interações criado pela primeira vez
+     neste LOTE 11)
+  ───────────────────────────────────────────────────────────── */
+  "pentoxifilina": {
+    "teofilina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A pentoxifilina é um derivado da xantina. Seu uso combinado com a teofilina pode elevar perigosamente os níveis plasmáticos da teofilina, gerando arritmias, nervosismo e convulsões.",
+        es: "La pentoxifilina es un derivado de la xantina. Su uso combinado con la teofilina puede elevar peligrosamente los niveles plasmáticos de teofilina, generando arritmias, nerviosismo y convulsiones."
+      },
+      conduta: {
+        pt: "Reduzir a dose de teofilina sob monitorização de níveis séricos rigorosos.",
+        es: "Reducir la dosis de teofilina bajo monitorización de niveles séricos rigurosos."
+      }
+    },
+    "$classe_anticoagulantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Pentoxifilina possui leve efeito inibitório sobre a agregação plaquetária e altera o fibrinogênio. Com varfarina/DOACs aumenta o risco de sangramento de pele e mucosas.",
+        es: "Pentoxifilina posee leve efecto inhibitorio sobre la agregación plaquetaria y altera el fibrinógeno. Con warfarina/DOACs aumenta el riesgo de sangrado de piel y mucosas."
+      },
+      conduta: {
+        pt: "Monitoramento de RNI e episódios hemorrágicos.",
+        es: "Monitorización de RNI y episodios hemorrágicos."
+      }
+    },
+    "$classe_antihipertensivos": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Efeito hipotensor aditivo discreto na microcirculação.",
+        es: "Efecto hipotensor aditivo discreto en la microcirculación."
+      },
+      conduta: {
+        pt: "Ajuste ocasional de anti-hipertensivos pode ser necessário se houver queixa de tontura.",
+        es: "Ajuste ocasional de antihipertensivos puede ser necesario si hay queja de mareo."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES — BUILD 262 (2026-07-06): Analgésicos/
+     Antipiréticos Não Opioides (Grupo 1, database/analgesicos.js):
+     Paracetamol (Acetaminofén), Metamizol (Dipirona).
+     Verificação anti-duplicação: nenhum dos dois possuía nó-raiz
+     prévio em INTERACOES_DB (havia apenas uma menção a "paracetamol"
+     como ALVO dentro do nó "agomelatina" — isso não constitui
+     duplicata de cadastro, é apenas mantido intacto).
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ─────────────────────────────────────────────────────────────
+     PARACETAMOL (ACETAMINOFÉN)
+  ───────────────────────────────────────────────────────────── */
+  "paracetamol": {
+    "varfarina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Doses diárias contínuas de paracetamol (> 2g/dia por vários dias) podem inibir a metabolização hepática da varfarina, elevando o tempo de protrombina (INR) e o risco de sangramento.",
+        es: "Dosis diarias continuas de paracetamol (> 2g/día por varios días) pueden inhibir la metabolización hepática de warfarina, elevando el tiempo de protrombina (INR) y el riesgo de sangrado."
+      },
+      conduta: {
+        pt: "Monitorar INR 3 a 5 dias após iniciar o uso regular. Uso esporádico é seguro e preferível aos AINEs.",
+        es: "Monitorizar INR 3 a 5 días tras iniciar el uso regular. Uso esporádico es seguro y preferible a los AINEs."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Fenitoína, carbamazepina e fenobarbital são potentes indutores enzimáticos (CYP2E1 e CYP3A4). Eles aceleram a conversão do paracetamol no seu metabólito altamente tóxico (NAPQI), reduzindo o limite de dose segura e aumentando o risco de necrose hepática aguda.",
+        es: "Fenitoína, carbamazepina y fenobarbital son potentes inductores enzimáticos (CYP2E1 y CYP3A4). Aceleran la conversión del paracetamol en su metabolito altamente tóxico (NAPQI), reduciendo el límite de dosis segura y aumentando el riesgo de necrosis hepática aguda."
+      },
+      conduta: {
+        pt: "Limitar a dose de paracetamol a no máximo 2g/dia. Em caso de overdose, a N-acetilcisteína deve ser iniciada rapidamente, pois a falência hepática ocorre com doses menores que o habitual.",
+        es: "Limitar la dosis de paracetamol a un máximo de 2g/día. En caso de sobredosis, la N-acetilcisteína debe iniciarse rápidamente, ya que el fallo hepático ocurre con dosis menores a lo habitual."
+      }
+    },
+    "isoniazida": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A isoniazida induz o CYP2E1 (via principal de toxicidade do paracetamol) e causa hepatotoxicidade intrínseca. A associação eleva drasticamente a produção de NAPQI, podendo desencadear insuficiência hepática fulminante mesmo com doses terapêuticas altas.",
+        es: "La isoniazida induce el CYP2E1 (vía principal de toxicidad del paracetamol) y causa hepatotoxicidad intrínseca. La asociación eleva drásticamente la producción de NAPQI, pudiendo desencadenar insuficiencia hepática fulminante incluso con dosis terapéuticas altas."
+      },
+      conduta: {
+        pt: "Evitar uso regular de paracetamol ou limitar rigorosamente a dose (< 2g/dia). Monitorar enzimas hepáticas (TGO/TGP).",
+        es: "Evitar uso regular de paracetamol o limitar rigurosamente la dosis (< 2g/día). Monitorizar enzimas hepáticas (AST/ALT)."
+      }
+    },
+    "alcool": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O alcoolismo crônico depletou os estoques hepáticos de glutationa (que neutraliza o metabólito tóxico NAPQI) e induz o CYP2E1. Risco massivo de lesão hepática com doses normais/altas.",
+        es: "El alcoholismo crónico ha deplecionado las reservas hepáticas de glutatión (que neutraliza el metabolito tóxico NAPQI) e induce el CYP2E1. Riesgo masivo de lesión hepática con dosis normales/altas."
+      },
+      conduta: {
+        pt: "Contraindicado uso > 2g/dia. Evitar ingerir álcool com a medicação.",
+        es: "Contraindicado uso > 2g/día. Evitar ingerir alcohol con la medicación."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     METAMIZOL (DIPIRONA)
+  ───────────────────────────────────────────────────────────── */
+  "metamizol": {
+    "ciclosporina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O metamizol reduz rapidamente as concentrações séricas da ciclosporina por indução enzimática ou interações absortivas. Risco direto de falência imunossupressora e rejeição de enxerto em pacientes transplantados.",
+        es: "El metamizol reduce rápidamente las concentraciones séricas de ciclosporina por inducción enzimática o interacciones absortivas. Riesgo directo de fallo inmunosupresor y rechazo de injerto en pacientes trasplantados."
+      },
+      conduta: {
+        pt: "Evitar o uso de dipirona em pacientes em uso de ciclosporina. Se inevitável, monitorar níveis sanguíneos da ciclosporina agressivamente.",
+        es: "Evitar el uso de dipirona en pacientes en uso de ciclosporina. Si es inevitable, monitorizar niveles sanguíneos de ciclosporina agresivamente."
+      }
+    },
+    "acido_acetilsalicilico": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O metamizol (dipirona) tem afinidade pela enzima COX-1 plaquetária. Se administrado ANTES do AAS, ele ocupa o sítio de ligação e impede que o AAS gere a inibição irreversível, anulando o efeito cardioprotetor antiplaquetário.",
+        es: "El metamizol (dipirona) tiene afinidad por la enzima COX-1 plaquetaria. Si se administra ANTES del AAS, ocupa el sitio de unión e impide que el AAS genere la inhibición irreversible, anulando el efecto cardioprotector antiplaquetario."
+      },
+      conduta: {
+        pt: "Aspirina (AAS) DEVE ser tomada pelo menos 30 minutos ANTES da administração do metamizol (dipirona) em pacientes com risco cardiovascular.",
+        es: "Aspirina (AAS) DEBE tomarse al menos 30 minutos ANTES de la administración del metamizol (dipirona) en pacientes con riesgo cardiovascular."
+      }
+    },
+    "bupropiona": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O metamizol pode atuar como um indutor do CYP2B6, reduzindo as concentrações séricas da bupropiona e comprometendo seu efeito clínico (antidepressivo/cessação do tabagismo).",
+        es: "El metamizol puede actuar como un inductor del CYP2B6, reduciendo las concentraciones séricas de bupropión y comprometiendo su efecto clínico (antidepresivo/cesación del tabaquismo)."
+      },
+      conduta: {
+        pt: "Monitorar perda de eficácia da bupropiona. Ajustes de dose podem ser necessários em tratamentos crônicos combinados.",
+        es: "Monitorizar pérdida de eficacia del bupropión. Ajustes de dosis pueden ser necesarios en tratamientos crónicos combinados."
+      }
+    },
+    "clorpromazina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O uso simultâneo de metamizol e clorpromazina (ou outros fenotiazínicos) pode causar hipotermia grave.",
+        es: "El uso simultáneo de metamizol y clorpromazina (u otras fenotiazinas) puede causar hipotermia grave."
+      },
+      conduta: {
+        pt: "Evitar associação rigorosamente, monitorar temperatura corporal caso a exposição ocorra de forma aguda.",
+        es: "Evitar asociación rigurosamente, monitorizar temperatura corporal si la exposición ocurre de forma aguda."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES — BUILD 263 (2026-07-06): AINEs
+     (Grupo 2, database/analgesicos.js): Ácido Acetilsalicílico (AAS),
+     Ibuprofeno.
+
+     NOTA TÉCNICA DE RECONCILIAÇÃO DE CHAVE — AAS:
+     A chave canônica usada NESTE motor (INTERACOES_DB) para o Ácido
+     Acetilsalicílico é "acido_acetilsalicilico" (NÃO "aas"). Isso é
+     confirmado por: (1) DRUG_ALIASES["aas"] → "acido_acetilsalicilico"
+     já existente desde o BUILD 254 (linha ~37 deste arquivo) — ou seja,
+     ao normalizar a entrada do usuário "AAS", o motor resolve para
+     "acido_acetilsalicilico" e busca ESSA chave em INTERACOES_DB;
+     (2) o nó "metamizol" → "acido_acetilsalicilico" já ativo em
+     produção desde o BUILD 262 usa exatamente essa mesma chave. A
+     chave "aas" (sem alias) é usada apenas no DRUG_DB/ALL_DRUGS_DB
+     (schema clínico de cardio.js, Grupo 20.2) — um namespace
+     COMPLETAMENTE SEPARADO do motor de interações. Portanto, os nós
+     abaixo foram ancorados em "acido_acetilsalicilico" para garantir
+     que o alias "aas" resolva corretamente até aqui.
+
+     ANTI-REDUNDÂNCIA (inteligência de classes já cobre 4 dos 8
+     alvos originalmente submetidos para Ibuprofeno):
+       • ibuprofeno × metotrexato    → JÁ COBERTO por "metotrexato" →
+         "$classe_aines" (linha ~3308; ibuprofeno é membro de
+         $classe_aines) — NÃO duplicado.
+       • ibuprofeno × $classe_ieca   → JÁ COBERTO por "$classe_aines" →
+         "$classe_ieca" (linha ~3190, Classe×Classe) — NÃO duplicado.
+       • ibuprofeno × $classe_ara_ii → JÁ COBERTO por "$classe_aines" →
+         "$classe_ara_ii" (linha ~3202, Classe×Classe) — NÃO duplicado.
+       • ibuprofeno × $classe_isrs   → JÁ COBERTO individualmente por
+         cada ISRS (fluoxetina/sertralina/escitalopram/citalopram/
+         paroxetina) → "$classe_aines" (nós Droga×Classe pré-existentes,
+         gravidade moderada/3) — NÃO duplicado.
+     Único alvo genuinamente NÃO coberto por regra de classe: LÍTIO
+     (não há nó $classe_aines × litio nem litio × $classe_aines em
+     nenhum ponto do arquivo) — mantido como nó Droga×Droga explícito.
+
+     Para o AAS, os 4 alvos submetidos (ibuprofeno, metotrexato,
+     $classe_anticoagulantes, heparina) são todos genuinamente novos:
+     AAS pertence a $classe_antiagregantes (NÃO a $classe_aines), logo
+     não herda a cobertura de metotrexato×$classe_aines; e não existe
+     nó $classe_antiagregantes × $classe_anticoagulantes nem qualquer
+     nó envolvendo "heparina" como alvo direto em todo o arquivo.
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ─────────────────────────────────────────────────────────────
+     ÁCIDO ACETILSALICÍLICO (AAS) — chave canônica: acido_acetilsalicilico
+     (resolve via DRUG_ALIASES["aas"]). Entrada rica do fármaco em si
+     permanece em cardio.js (chave "aas", Grupo 20.2) — aqui apenas o
+     motor de interações bidirecional é expandido.
+  ───────────────────────────────────────────────────────────── */
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES — BUILD 264 (2026-07-06): AINEs
+     (Grupo 3, database/analgesicos.js): Naproxeno, Diclofenaco.
+     Executado sob o novo SOP de AUTONOMIA TOTAL (auditoria +
+     execução na mesma iteração, sem etapa de aprovação intermediária).
+
+     ANTI-REDUNDÂNCIA (herança de classe $classe_aines — naproxeno e
+     diclofenaco já são membros dessa classe em DRUG_CLASSES):
+       • naproxeno   × $classe_ieca            → JÁ COBERTO por
+         "$classe_aines" → "$classe_ieca" (linha ~3190, Classe×Classe)
+         — OMITIDO, não duplicado.
+       • naproxeno   × $classe_ara_ii          → JÁ COBERTO por
+         "$classe_aines" → "$classe_ara_ii" (linha ~3202, Classe×Classe)
+         — OMITIDO, não duplicado.
+       • naproxeno   × $classe_isrs            → JÁ COBERTO
+         individualmente por cada ISRS (fluoxetina/sertralina/
+         escitalopram/citalopram/paroxetina) → "$classe_aines" (nós
+         Droga×Classe pré-existentes, gravidade moderada/3) — OMITIDO,
+         mesmo padrão usado para ibuprofeno×$classe_isrs no BUILD 263.
+       • diclofenaco × metotrexato             → JÁ COBERTO por
+         "metotrexato" → "$classe_aines" (linha ~3308, Droga×Classe)
+         — OMITIDO, não duplicado.
+       • diclofenaco × $classe_ieca            → JÁ COBERTO por
+         "$classe_aines" → "$classe_ieca" (mesmo nó acima) — OMITIDO.
+       • diclofenaco × $classe_anticoagulantes → JÁ COBERTO por
+         "$classe_aines" → "$classe_anticoagulantes" (linha ~3178,
+         Classe×Classe) — OMITIDO, não duplicado.
+
+     GENUINAMENTE NOVOS (nenhuma regra de classe pré-existente cobre):
+       • naproxeno   × litio                 → nó Droga×Droga (mesmo
+         gap identificado para ibuprofeno×litio no BUILD 263: não
+         existe $classe_aines × litio em nenhum ponto do arquivo).
+       • diclofenaco × litio                 → idem.
+       • diclofenaco × ciclosporina          → nó Droga×Droga (nenhuma
+         classe mapeada cobre ciclosporina como alvo).
+       • naproxeno   × acido_acetilsalicilico → não existe
+         $classe_antiagregantes × $classe_aines em nenhum ponto do
+         arquivo (confirmado via Grep). Seguindo o precedente do
+         BUILD 263 (ibuprofeno×AAS como nó individual dentro do node
+         "acido_acetilsalicilico"), o node abaixo foi ESTENDIDO com uma
+         nova chave "naproxeno".
+  ═══════════════════════════════════════════════════════════════ */
+
+  "acido_acetilsalicilico": {
+    "naproxeno": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inibição competitiva e bloqueio de cardioproteção. Assim como o ibuprofeno, o naproxeno liga-se de forma reversível à COX-1 plaquetária, impedindo que o AAS (que precisa se ligar primeiro) exerça sua inibição irreversível. Isso anula a proteção contra infarto e AVC em pacientes coronariopatas, além de somar risco de lesão gástrica severa.",
+        es: "Inhibición competitiva y bloqueo de cardioprotección. Al igual que el ibuprofeno, el naproxeno se une de forma reversible a la COX-1 plaquetaria, impidiendo que el AAS (que necesita unirse primero) ejerza su inhibición irreversible. Esto anula la protección contra infarto y ACV en pacientes coronariópatas, además de sumar riesgo de lesión gástrica severa."
+      },
+      conduta: {
+        pt: "Aspirina DEVE ser tomada pelo menos 30 a 120 minutos ANTES ou 8 horas DEPOIS do naproxeno. Avaliar substituição do naproxeno por paracetamol para analgesia em pacientes de risco CV.",
+        es: "La aspirina DEBE tomarse al menos 30 a 120 minutos ANTES o 8 horas DESPUÉS del naproxeno. Evaluar sustitución del naproxeno por paracetamol para analgesia en pacientes de riesgo CV."
+      }
+    },
+    "ibuprofeno": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inibição competitiva e bloqueio de cardioproteção. O ibuprofeno liga-se de forma reversível à COX-1 plaquetária, impedindo que o AAS (que precisa se ligar primeiro) exerça sua inibição irreversível. Isso anula a proteção contra infarto e AVC em pacientes coronariopatas, além de somar risco de lesão gástrica severa.",
+        es: "Inhibición competitiva y bloqueo de cardioprotección. El ibuprofeno se une de forma reversible a la COX-1 plaquetaria, impidiendo que el AAS (que necesita unirse primero) ejerza su inhibición irreversible. Esto anula la protección contra infarto y ACV en pacientes coronariópatas, además de sumar riesgo de lesión gástrica severa."
+      },
+      conduta: {
+        pt: "Aspirina DEVE ser tomada pelo menos 30 a 120 minutos ANTES ou 8 horas DEPOIS do ibuprofeno. Avaliar substituição do ibuprofeno por paracetamol para analgesia em pacientes de risco CV.",
+        es: "La aspirina DEBE tomarse al menos 30 a 120 minutos ANTES o 8 horas DESPUÉS del ibuprofeno. Evaluar sustitución del ibuprofeno por paracetamol para analgesia en pacientes de riesgo CV."
+      }
+    },
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "AAS (e outros AINEs) reduzem o clearance tubular renal do metotrexato (por competição no transportador OAT) e deslocam o metotrexato das proteínas plasmáticas. Isso gera um acúmulo sistêmico brutal do imunossupressor, precipitando pancitopenia, mucosite e nefrotoxicidade fatal.",
+        es: "AAS (y otros AINEs) reducen el aclaramiento tubular renal de metotrexato (por competencia en el transportador OAT) y desplazan el metotrexato de las proteínas plasmáticas. Esto genera una acumulación sistémica brutal del inmunosupresor, precipitando pancitopenia, mucositis y nefrotoxicidad fatal."
+      },
+      conduta: {
+        pt: "AAS em doses analgésicas (>500mg) é ABSOLUTAMENTE CONTRAINDICADO. Em doses cardíacas (100mg) o risco é menor, mas exige monitorização hematológica estrita (hemograma e creatinina frequentes).",
+        es: "AAS en dosis analgésicas (>500mg) está ABSOLUTAMENTE CONTRAINDICADO. En dosis cardíacas (100mg) el riesgo es menor, pero exige monitorización hematológica estricta (hemograma y creatinina frecuentes)."
+      }
+    },
+    "$classe_anticoagulantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Terapia Dupla/Tripla. A disfunção plaquetária irreversível induzida pelo AAS, combinada com anticoagulação plena (varfarina, NOACs, heparinas), eleva substancialmente o risco de hemorragias maiores (gastrointestinal e cerebral).",
+        es: "Terapia Doble/Triple. La disfunción plaquetaria irreversible inducida por AAS, combinada con anticoagulación plena (warfarina, NOACs, heparinas), eleva sustancialmente el riesgo de hemorragias mayores (gastrointestinal y cerebral)."
+      },
+      conduta: {
+        pt: "Uso combinado reservado estritamente para cenários cardiológicos indicados (ex: pós-ICP recente). Prescrever IBP para proteção gástrica e monitorar agressivamente.",
+        es: "Uso combinado reservado estrictamente para escenarios cardiológicos indicados (ej: pos-ICP reciente). Prescribir IBP para protección gástrica y monitorizar agresivamente."
+      }
+    },
+    "heparina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O AAS intensifica o risco hemorrágico sistêmico das heparinas. Mais perigoso ainda: o AAS pode deslocar a heparina e exacerbar a resposta imune no caso raro de Trombocitopenia Induzida por Heparina (HIT).",
+        es: "El AAS intensifica el riesgo hemorrágico sistémico de las heparinas. Más peligroso aún: el AAS puede desplazar la heparina y exacerbar la respuesta inmune en el caso raro de Trombocitopenia Inducida por Heparina (HIT)."
+      },
+      conduta: {
+        pt: "Indicado clinicamente na SCA, mas exige controle rigoroso de TTPa e hemograma (plaquetas).",
+        es: "Indicado clínicamente en el SCA, pero exige control riguroso de TTPa y hemograma (plaquetas)."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     IBUPROFENO — único nó Droga×Droga genuinamente novo (Lítio).
+     Interações com metotrexato/$classe_ieca/$classe_ara_ii/$classe_isrs
+     já cobertas via herança de classe ($classe_aines) — ver nota acima.
+  ───────────────────────────────────────────────────────────── */
+  "ibuprofeno": {
+    "litio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A inibição da síntese de prostaglandinas renais pelo ibuprofeno diminui a filtração e aumenta drasticamente a reabsorção tubular do lítio. Resulta em elevação dos níveis séricos de lítio em 25% a 50%, provocando toxicidade neurológica (tremores, confusão, coma) e falência renal.",
+        es: "La inhibición de la síntesis de prostaglandinas renales por el ibuprofeno disminuye la filtración y aumenta drásticamente la reabsorción tubular del litio. Resulta en elevación de los niveles séricos de litio en 25% a 50%, provocando toxicidad neurológica (temblores, confusión, coma) y falla renal."
+      },
+      conduta: {
+        pt: "Evitar a associação. Substituir ibuprofeno por paracetamol para dor. Se uso obrigatório, monitorar litemia em 3-5 dias e reduzir a dose de lítio.",
+        es: "Evitar la asociación. Sustituir ibuprofeno por paracetamol para el dolor. Si uso obligatorio, monitorizar litemia en 3-5 días y reducir la dosis de litio."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     NAPROXENO — nó Droga×Droga genuinamente novo (Lítio).
+     Interações com $classe_ieca/$classe_ara_ii/$classe_isrs já
+     cobertas via herança de classe ($classe_aines) — ver nota BUILD 264
+     acima. Interação com AAS foi ancorada no node "acido_acetilsalicilico"
+     (ver acima), seguindo o padrão bidirecional já usado para ibuprofeno.
+  ───────────────────────────────────────────────────────────── */
+  "naproxeno": {
+    "litio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A inibição da síntese de prostaglandinas renais pelo naproxeno diminui a filtração e aumenta drasticamente a reabsorção tubular do lítio. Resulta em elevação dos níveis séricos de lítio em 25% a 50%, provocando toxicidade neurológica (tremores, confusão, coma) e falência renal.",
+        es: "La inhibición de la síntesis de prostaglandinas renales por el naproxeno disminuye la filtración y aumenta drásticamente la reabsorción tubular del litio. Resulta en elevación de los niveles séricos de litio en 25% a 50%, provocando toxicidad neurológica (temblores, confusión, coma) y falla renal."
+      },
+      conduta: {
+        pt: "Evitar a associação. Substituir naproxeno por paracetamol para dor. Se uso obrigatório, monitorar litemia em 3-5 dias e reduzir a dose de lítio.",
+        es: "Evitar la asociación. Sustituir naproxeno por paracetamol para el dolor. Si uso obligatorio, monitorizar litemia en 3-5 días y reducir la dosis de litio."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     DICLOFENACO — 2 nós Droga×Droga genuinamente novos (Lítio,
+     Ciclosporina). Interações com metotrexato/$classe_ieca/
+     $classe_anticoagulantes já cobertas via herança de classe
+     ($classe_aines) — ver nota BUILD 264 acima.
+  ───────────────────────────────────────────────────────────── */
+  "diclofenaco": {
+    "litio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A inibição da síntese de prostaglandinas renais pelo diclofenaco diminui a filtração e aumenta drasticamente a reabsorção tubular do lítio. Resulta em elevação dos níveis séricos de lítio em 25% a 50%, provocando toxicidade neurológica (tremores, confusão, coma) e falência renal.",
+        es: "La inhibición de la síntesis de prostaglandinas renales por el diclofenaco disminuye la filtración y aumenta drásticamente la reabsorción tubular del litio. Resulta en elevación de los niveles séricos de litio en 25% a 50%, provocando toxicidad neurológica (temblores, confusión, coma) y falla renal."
+      },
+      conduta: {
+        pt: "Evitar a associação. Substituir diclofenaco por paracetamol para dor. Se uso obrigatório, monitorar litemia em 3-5 dias e reduzir a dose de lítio.",
+        es: "Evitar la asociación. Sustituir diclofenaco por paracetamol para el dolor. Si uso obligatorio, monitorizar litemia en 3-5 días y reducir la dosis de litio."
+      }
+    },
+    "ciclosporina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O diclofenaco pode elevar os níveis séricos de ciclosporina (mecanismo de inibição competitiva de metabolismo/transporte) e, adicionalmente, ambos os fármacos são nefrotóxicos por vias independentes (inibição de prostaglandinas renais pelo AINE + vasoconstrição da arteríola aferente pela ciclosporina), potencializando o risco de lesão renal aguda.",
+        es: "El diclofenaco puede elevar los niveles séricos de ciclosporina (mecanismo de inhibición competitiva de metabolismo/transporte) y, adicionalmente, ambos fármacos son nefrotóxicos por vías independientes (inhibición de prostaglandinas renales por el AINE + vasoconstricción de la arteriola aferente por la ciclosporina), potenciando el riesgo de lesión renal aguda."
+      },
+      conduta: {
+        pt: "Evitar a associação sempre que possível. Se imprescindível, monitorar função renal (creatinina) e nível sérico de ciclosporina rigorosamente, com ajuste de dose conforme necessário.",
+        es: "Evitar la asociación siempre que sea posible. Si es imprescindible, monitorizar función renal (creatinina) y nivel sérico de ciclosporina rigurosamente, con ajuste de dosis según sea necesario."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES — BUILD 265 (2026-07-06): AINEs
+     (Grupo 4, database/analgesicos.js): Cetorolaco, Cetoprofeno,
+     Meloxicam, Piroxicam. Executado sob o SOP de Autonomia Total.
+
+     ANTI-REDUNDÂNCIA (herança de classe $classe_aines — cetoprofeno,
+     meloxicam e piroxicam já são membros dessa classe em DRUG_CLASSES;
+     cetorolaco NÃO é membro, por decisão de manter separado seu perfil
+     de risco excepcionalmente mais grave — modelado explicitamente via
+     nó cetorolaco→$classe_aines abaixo):
+       • cetoprofeno × $classe_ieca            → o lote também submeteu
+         este alvo, MAS já é coberto por "$classe_aines"→"$classe_ieca"
+         (Classe×Classe, linha ~3190) — OMITIDO, não duplicado.
+       • cetoprofeno × $classe_anticoagulantes → também coberto por
+         "$classe_aines"→"$classe_anticoagulantes" (linha ~3178) —
+         OMITIDO, não duplicado.
+       • cetoprofeno × metotrexato             → também coberto por
+         "metotrexato"→"$classe_aines" (linha ~3308, Droga×Classe) —
+         OMITIDO, não duplicado.
+       • meloxicam × $classe_anticoagulantes   → também coberto por
+         "$classe_aines"→"$classe_anticoagulantes" — OMITIDO.
+       • meloxicam × $classe_ieca              → também coberto por
+         "$classe_aines"→"$classe_ieca" — OMITIDO.
+       • piroxicam × $classe_anticoagulantes   → também coberto por
+         "$classe_aines"→"$classe_anticoagulantes" — OMITIDO (a
+         gravidade "contraindicada" específica do piroxicam, embora
+         clinicamente relevante, converge para a mesma decisão de
+         conduta da regra de classe já ativa; o motor seleciona sempre
+         o candidato de maior scoreClinico entre os caminhos válidos).
+       • piroxicam × $classe_ieca              → também coberto por
+         "$classe_aines"→"$classe_ieca" — OMITIDO.
+
+     GENUINAMENTE NOVOS (mantidos como nós Droga×Droga ou Droga×Classe
+     explícitos, pois nenhuma regra de classe pré-existente cobre):
+       • cetorolaco × $classe_aines            → cetorolaco NÃO é membro
+         de $classe_aines (mantido fora da lista por gravidade
+         excepcional); nenhuma regra herdada cobriria esta associação
+         crítica, logo o nó Droga×Classe explícito é indispensável.
+       • cetorolaco × $classe_anticoagulantes  → idem (cetorolaco fora
+         de $classe_aines, não herda "$classe_aines"→"$classe_anticoagulantes").
+       • cetorolaco × litio                    → não existe regra
+         $classe_aines×litio nem cetorolaco pertence a $classe_aines.
+       • cetorolaco × metotrexato              → cetorolaco fora de
+         $classe_aines, não herda "metotrexato"→"$classe_aines".
+       • cetoprofeno × litio                   → não existe regra
+         $classe_aines×litio em nenhum ponto do arquivo (mesmo gap já
+         identificado para ibuprofeno/naproxeno/diclofenaco).
+       • meloxicam × litio                     → idem.
+       • piroxicam × litio                     → idem.
+       • piroxicam × $classe_isrs              → NÃO coberto pelas
+         regras individuais de cada ISRS→$classe_aines? Na verdade
+         piroxicam JÁ herdaria essa cobertura via $classe_aines (é
+         membro da classe) — porém a gravidade "alta"/4 submetida pelo
+         usuário é clinicamente mais conservadora/específica que a
+         regra genérica "moderada"/3 dos nós ISRS→$classe_aines. Como
+         o motor seleciona o candidato de MAIOR scoreClinico entre
+         todos os caminhos válidos (ver index.html ~21389-21394), este
+         nó explícito de maior gravidade PREVALECE automaticamente
+         sobre a regra genérica sem precisar removê-la — mantido como
+         reforço clínico intencional, não como duplicata redundante.
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ─────────────────────────────────────────────────────────────
+     CETOROLACO — mantido FORA de $classe_aines (perfil de risco
+     excepcional); todos os 4 alvos submetidos são genuinamente novos.
+  ───────────────────────────────────────────────────────────── */
+  "cetorolaco": {
+    "$classe_aines": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ASSOCIAÇÃO ABSOLUTAMENTE CONTRAINDICADA. O cetorolaco é um inibidor ultra-potente da COX; associar qualquer outro AINE (incluindo aspirina analgésica) promove sinergismo tóxico, precipitando falência renal oligúrica e úlcera gástrica sangrante fulminante.",
+        es: "ASOCIACIÓN ABSOLUTAMENTE CONTRAINDICADA. El ketorolac es un inhibidor ultra potente de la COX; asociar cualquier otro AINE (incluyendo aspirina analgésica) promueve sinergismo tóxico, precipitando falla renal oligúrica y úlcera gástrica sangrante fulminante."
+      },
+      conduta: {
+        pt: "NUNCA prescrever cetorolaco junto com ibuprofeno, diclofenaco, cetoprofeno, naproxeno ou AAS em altas doses. Paracetamol ou dipirona são permitidos para potencialização.",
+        es: "NUNCA prescribir ketorolac junto con ibuprofeno, diclofenaco, ketoprofeno, naproxeno o AAS en altas dosis. Paracetamol o dipirona están permitidos para potenciación."
+      }
+    },
+    "$classe_anticoagulantes": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O cetorolaco exerce profunda inibição sobre a agregação plaquetária e mucosa gástrica (tão intensa quanto a aspirina, mas não irreversível). O uso associado com heparina plena, varfarina ou NOACs causa risco inaceitável de hemorragia fatal (gastrointestinal, pós-cirúrgica).",
+        es: "El ketorolac ejerce profunda inhibición sobre la agregación plaquetaria y mucosa gástrica (tan intensa como la aspirina, pero no irreversible). El uso asociado con heparina plena, warfarina o NOACs causa riesgo inaceptable de hemorragia fatal (gastrointestinal, posquirúrgica)."
+      },
+      conduta: {
+        pt: "Evitar uso profilático ou rotineiro. No pós-operatório (DVT profilaxia em heparina baixa dose), o risco é tolerável sob monitoramento estrito, mas a anticoagulação sistêmica terapêutica é contraindicação severa.",
+        es: "Evitar uso profiláctico o rutinario. En el posoperatorio (DVT profilaxis en heparina dosis baja), el riesgo es tolerable bajo monitorización estricta, pero la anticoagulación sistémica terapéutica es contraindicación severa."
+      }
+    },
+    "litio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Cetorolaco diminui agressivamente o clearance renal do lítio, elevando-o a níveis séricos tóxicos em menos de 24 horas.",
+        es: "Ketorolac disminuye agresivamente el aclaramiento renal de litio, elevándolo a niveles séricos tóxicos en menos de 24 horas."
+      },
+      conduta: {
+        pt: "Contraindicado. Substituir por opioides ou paracetamol em vigência de dor aguda.",
+        es: "Contraindicado. Sustituir por opioides o paracetamol en vigencia de dolor agudo."
+      }
+    },
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Interação severa por competição na depuração renal, gerando acúmulo tóxico rápido do metotrexato (supressão medular letal).",
+        es: "Interacción severa por competencia en la depuración renal, generando acumulación tóxica rápida del metotrexato (supresión medular letal)."
+      },
+      conduta: {
+        pt: "Contraindicado em pacientes oncológicos. Reumatologia: extrema cautela, idealmente evitar.",
+        es: "Contraindicado en pacientes oncológicos. Reumatología: extrema precaución, idealmente evitar."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     CETOPROFENO — apenas litio é genuinamente novo (cetoprofeno×
+     metotrexato/$classe_ieca/$classe_anticoagulantes já cobertos por
+     herança de classe — ver nota acima).
+  ───────────────────────────────────────────────────────────── */
+  "cetoprofeno": {
+    "litio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A inibição da síntese de prostaglandinas renais pelo cetoprofeno diminui a filtração e aumenta a reabsorção tubular do lítio, elevando seus níveis séricos e provocando toxicidade neurológica e falência renal.",
+        es: "La inhibición de la síntesis de prostaglandinas renales por el ketoprofeno disminuye la filtración y aumenta la reabsorción tubular del litio, elevando sus niveles séricos y provocando toxicidad neurológica y falla renal."
+      },
+      conduta: {
+        pt: "Evitar a associação. Substituir cetoprofeno por paracetamol para dor. Se uso obrigatório, monitorar litemia e reduzir a dose de lítio.",
+        es: "Evitar la asociación. Sustituir ketoprofeno por paracetamol para el dolor. Si uso obligatorio, monitorizar litemia y reducir la dosis de litio."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     MELOXICAM — apenas litio é genuinamente novo (meloxicam×
+     $classe_ieca/$classe_anticoagulantes já cobertos por herança de
+     classe — ver nota acima).
+  ───────────────────────────────────────────────────────────── */
+  "meloxicam": {
+    "litio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Reduz a depuração renal do lítio, elevando toxicidade sérica central.",
+        es: "Reduce la depuración renal del litio, elevando toxicidad sérica central."
+      },
+      conduta: {
+        pt: "Monitorar litemia se associado por mais de 4 dias. Preferencialmente evitar.",
+        es: "Monitorizar litemia si asociado por más de 4 días. Preferiblemente evitar."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     PIROXICAM — litio genuinamente novo. $classe_isrs mantido como
+     reforço clínico intencional de maior gravidade (ver nota acima);
+     $classe_anticoagulantes/$classe_ieca omitidos por herança de classe.
+  ───────────────────────────────────────────────────────────── */
+  "piroxicam": {
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A disfunção plaquetária induzida pelo ISRS associada ao piroxicam (altamente gastro-lesivo) deflagra hemorragias digestivas graves.",
+        es: "La disfunción plaquetaria inducida por el ISRS asociada al piroxicam (altamente gastro-lesivo) desencadena hemorragias digestivas graves."
+      },
+      conduta: {
+        pt: "Evitar uso. Se imprescindível reumatologicamente, a profilaxia OBRIGATÓRIA com inibidor de bomba de prótons (IBP) deve ser adotada.",
+        es: "Evitar uso. Si es imprescindible reumatológicamente, la profilaxis OBLIGATORIA con inhibidor de bomba de protones (IBP) debe ser adoptada."
+      }
+    },
+    "litio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O piroxicam bloqueia a filtração glomerular de lítio; por sua meia-vida de 50h, a intoxicação no paciente psiquiátrico ocorre mais rápido e demora semanas para fazer 'wash-out'.",
+        es: "El piroxicam bloquea la filtración glomerular del litio; por su vida media de 50h, la intoxicación en el paciente psiquiátrico ocurre más rápido y demora semanas para hacer 'wash-out'."
+      },
+      conduta: {
+        pt: "Absolutamente não recomendado a associação.",
+        es: "Absolutamente no recomendada la asociación."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES — BUILD 266 (2026-07-06): AINEs
+     clássicos + Coxibes (Grupo 5, database/analgesicos.js):
+     Indometacina, Aceclofenaco, Etoricoxibe, Celecoxibe. Executado
+     sob o SOP de Autonomia Total.
+
+     GRAFIA CANÔNICA: nós ancorados em "etoricoxibe"/"celecoxibe"
+     (chaves já usadas em DRUG_CLASSES["$classe_aines"], linha ~227),
+     NÃO "etoricoxib"/"celecoxib" (grafia ES/EN da submissão original).
+
+     ANTI-REDUNDÂNCIA (indometacina, etoricoxibe e celecoxibe já são
+     membros de $classe_aines; aceclofenaco mantido fora dessa lista):
+       • indometacina × $classe_ieca            → JÁ COBERTO por
+         "$classe_aines"→"$classe_ieca" (linha ~3190) — OMITIDO.
+       • indometacina × $classe_anticoagulantes → JÁ COBERTO por
+         "$classe_aines"→"$classe_anticoagulantes" (linha ~3178) —
+         OMITIDO.
+       • etoricoxibe × $classe_ieca              → JÁ COBERTO por
+         "$classe_aines"→"$classe_ieca" — OMITIDO.
+       • etoricoxibe × $classe_anticoagulantes   → JÁ COBERTO por
+         "$classe_aines"→"$classe_anticoagulantes" (gravidade "alta"/4
+         na regra herdada, MAIS conservadora que a "moderada"/3
+         submetida — a regra de classe já cobre com folga) — OMITIDO.
+       • aceclofenaco × metotrexato e × $classe_ieca → aceclofenaco NÃO
+         é membro de $classe_aines (decisão deliberada), logo NÃO
+         herdaria "metotrexato"→"$classe_aines" nem
+         "$classe_aines"→"$classe_ieca" automaticamente — ambos os nós
+         MANTIDOS como Droga×Droga/Droga×Classe explícitos abaixo.
+
+     GENUINAMENTE NOVOS / MANTIDOS EXPLICITAMENTE:
+       • indometacina × litio                  (gap $classe_aines×litio
+         já conhecido desde BUILD 263).
+       • aceclofenaco × metotrexato             (aceclofenaco fora de
+         $classe_aines — não há herança).
+       • aceclofenaco × $classe_ieca            (idem).
+       • etoricoxibe × anticoncepcional_hormonal (mecanismo específico
+         de inibição do metabolismo do etinilestradiol — não coberto
+         por nenhuma regra de classe existente).
+       • celecoxibe × fluconazol                (interação CYP2C9
+         específica — não coberta por regra de classe).
+       • celecoxibe × $classe_betabloqueadores  (inibição CYP2D6 —
+         classe já existente em DRUG_CLASSES, linha ~317).
+       • celecoxibe × $classe_triciclicos       (CORREÇÃO DE GRAFIA:
+         submissão original usava "$classe_antidepressivos_triciclicos",
+         classe INEXISTENTE em DRUG_CLASSES. Remapeada para a chave
+         canônica real "$classe_triciclicos", já usada em nós recentes
+         de fluoxetina/linezolida — linhas ~2108, ~3465).
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ─────────────────────────────────────────────────────────────
+     INDOMETACINA — apenas litio é genuinamente novo (indometacina×
+     $classe_ieca/$classe_anticoagulantes já cobertos por herança de
+     classe $classe_aines).
+  ───────────────────────────────────────────────────────────── */
+  "indometacina": {
+    "litio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A indometacina é um dos AINEs que mais reduz drasticamente a taxa de depuração renal do lítio, elevando os níveis séricos do paciente psiquiátrico a zonas de coma e convulsão sistêmica.",
+        es: "La indometacina es uno de los AINEs que más reduce drásticamente la tasa de depuración renal del litio, elevando los niveles séricos del paciente psiquiátrico a zonas de coma y convulsión sistémica."
+      },
+      conduta: {
+        pt: "ASSOCIAÇÃO FORTEMENTE DESACONSELHADA. Recomenda-se buscar alternativas que não afetem a função renal.",
+        es: "ASOCIACIÓN FUERTEMENTE DESACONSEJADA. Se recomienda buscar alternativas que no afecten la función renal."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     ACECLOFENACO — mantido FORA de $classe_aines; ambos os alvos
+     submetidos (metotrexato, $classe_ieca) são genuinamente novos,
+     pois não há herança de classe para este fármaco.
+  ───────────────────────────────────────────────────────────── */
+  "aceclofenaco": {
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Como metabólito da família do diclofenaco, reduz a secreção tubular do metotrexato (OAT), acumulando-o até níveis mielossupressores fatais.",
+        es: "Como metabolito de la familia del diclofenaco, reduce la secreción tubular del metotrexato (OAT), acumulándolo hasta niveles mielosupresores fatales."
+      },
+      conduta: {
+        pt: "Contraindicado uso com doses oncológicas. Reumatologia: monitoramento rigoroso e se possível evitar.",
+        es: "Contraindicado uso con dosis oncológicas. Reumatología: monitorización rigurosa y si es posible evitar."
+      }
+    },
+    "$classe_ieca": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Risco de lesão renal aguda prérrenal pela anulação das prostaglandinas de defesa glomerular, agravando estados de hipovolemia (Triple Whammy se houver diurético).",
+        es: "Riesgo de lesión renal aguda prerrenal por la anulación de las prostaglandinas de defensa glomerular, agravando estados de hipovolemia (Triple Whammy si hay diurético)."
+      },
+      conduta: {
+        pt: "Evitar uso prolongado (>5 dias) em pacientes geriátricos hipertensos.",
+        es: "Evitar uso prolongado (>5 días) en pacientes geriátricos hipertensos."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     ETORICOXIBE (chave canônica; submissão original: "etoricoxib").
+     $classe_ieca e $classe_anticoagulantes OMITIDOS por herança de
+     $classe_aines (ver nota acima). Apenas anticoncepcional_hormonal
+     é genuinamente novo (mecanismo CYP específico).
+  ───────────────────────────────────────────────────────────── */
+  "etoricoxibe": {
+    "anticoncepcional_hormonal": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O etoricoxibe eleva substancialmente (em até 60%) a concentração sistêmica de etinilestradiol presente nos contraceptivos. Isso amplifica vertiginosamente o risco de Eventos Tromboembólicos (TVP/TEP/AVC), que já são o calcanhar de Aquiles deste coxibe.",
+        es: "El etoricoxib eleva sustancialmente (hasta en 60%) la concentración sistémica de etinilestradiol presente en los anticonceptivos. Esto amplifica vertiginosamente el riesgo de Eventos Tromboembólicos (TVP/TEP/ACV), que ya son el talón de Aquiles de este coxib."
+      },
+      conduta: {
+        pt: "Considerar alteração da via de contracepção ou da analgesia, ou monitorar ativamente sinais de trombose venosa nos membros.",
+        es: "Considerar alteración de la vía de anticoncepción o de la analgesia, o monitorizar activamente signos de trombosis venosa en los miembros."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     CELECOXIBE (chave canônica; submissão original: "celecoxib").
+     Todos os 3 alvos submetidos são genuinamente novos (mecanismos
+     de inibição enzimática CYP2C9/CYP2D6 específicos do celecoxibe,
+     não cobertos por nenhuma regra de classe $classe_aines).
+  ───────────────────────────────────────────────────────────── */
+  "celecoxibe": {
+    "fluconazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O celecoxibe é metabolizado predominantemente pela enzima CYP2C9 no fígado. O fluconazol é um inibidor forte do CYP2C9. A associação duplica os níveis de celecoxibe plasmático, elevando a toxicidade cardíaca e renal.",
+        es: "El celecoxib es metabolizado predominantemente por la enzima CYP2C9 en el hígado. El fluconazol es un inhibidor fuerte del CYP2C9. La asociación duplica los niveles de celecoxib plasmático, elevando la toxicidad cardíaca y renal."
+      },
+      conduta: {
+        pt: "A dose do celecoxibe DEVE ser reduzida pela metade caso o fluconazol seja introduzido.",
+        es: "La dosis del celecoxib DEBE ser reducida a la mitad si el fluconazol es introducido."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O celecoxibe atua como um INIBIDOR moderado do CYP2D6. Betabloqueadores (como metoprolol, carvedilol e propranolol) são metabolizados por esta enzima, resultando em acúmulo sistêmico, bradicardia acentuada e hipotensão excessiva.",
+        es: "El celecoxib actúa como un INHIBIDOR moderado del CYP2D6. Betabloqueantes (como metoprolol, carvedilol y propranolol) son metabolizados por esta enzima, resultando en acumulación sistémica, bradicardia acentuada e hipotensión excesiva."
+      },
+      conduta: {
+        pt: "Se paciente apresentar bradicardia e fraqueza, reduzir a dose do betabloqueador.",
+        es: "Si el paciente presenta bradicardia y debilidad, reducir la dosis del betabloqueante."
+      }
+    },
+    "$classe_triciclicos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Mesmo mecanismo dos betabloqueadores. O celecoxibe inibe o CYP2D6, reduzindo a depuração dos tricíclicos (amitriptilina, nortriptilina). Aumento da toxicidade anticolinérgica e cardíaca (prolongamento do QT).",
+        es: "Mismo mecanismo de los betabloqueantes. El celecoxib inhibe el CYP2D6, reduciendo la depuración de los tricíclicos (amitriptilina, nortriptilina). Aumento de la toxicidad anticolinérgica y cardíaca (prolongación del QT)."
+      },
+      conduta: {
+        pt: "Ficar alerta para boca seca intensa, retenção urinária ou arritmias. Pode ser necessário ajuste do antidepressivo.",
+        es: "Estar alerta a boca seca intensa, retención urinaria o arritmias. Puede ser necesario ajuste del antidepresivo."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES — BUILD 267 (2026-07-06): AINE
+     Hepatotóxico + Dor Neuropática (Grupo 6, database/analgesicos.js):
+     Nimesulida, Gabapentina, Pregabalina, Lidocaína. Executado sob o
+     SOP de Autonomia Total.
+
+     ANTI-REDUNDÂNCIA:
+       • nimesulida × $classe_anticoagulantes → JÁ COBERTO por
+         "$classe_aines"→"$classe_anticoagulantes" (linha ~3178),
+         pois nimesulida é membro de $classe_aines — OMITIDO.
+       • nimesulida × metotrexato             → JÁ COBERTO por
+         "metotrexato"→"$classe_aines" (linha ~3309) — OMITIDO.
+       • nimesulida × $classe_hepatotoxicos   → nimesulida NÃO é
+         membro de $classe_hepatotoxicos (confirmado em DRUG_CLASSES,
+         linha ~519) — GENUINAMENTE NOVO, mantido.
+       • gabapentina × $classe_opioides       → JÁ COBERTO com
+         gravidade máxima pelo auto-cruzamento
+         "$classe_depressoras_snc"×"$classe_depressoras_snc" (BUILD
+         255, linha ~680), pois gabapentina e todos os opioides
+         (morfina, tramadol, fentanil, oxicodona etc.) são membros de
+         $classe_depressoras_snc — OMITIDO (confirmado pelo usuário).
+       • pregabalina × $classe_opioides       → idem acima, mesma
+         herança via $classe_depressoras_snc×$classe_depressoras_snc
+         — OMITIDO (confirmado pelo usuário).
+       • pregabalina × $classe_benzodiazepínicos → mesma lógica:
+         pregabalina e todos os benzodiazepínicos também são membros
+         de $classe_depressoras_snc, logo já cobertos pelo mesmo
+         auto-cruzamento de classe — OMITIDO.
+
+     GENUINAMENTE NOVOS / MANTIDOS EXPLICITAMENTE:
+       • nimesulida × $classe_hepatotoxicos    (ver acima).
+       • gabapentina × antiacido                (redução de absorção
+         GI — mecanismo farmacocinético específico, sem cobertura de
+         classe prévia).
+       • lidocaina × amiodarona                 (ambos antiarrítmicos
+         + inibição do metabolismo hepático — sem nó prévio).
+       • lidocaina × fluvoxamina                 (inibição de CYP1A2
+         — sem nó prévio).
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ─────────────────────────────────────────────────────────────
+     NIMESULIDA — apenas $classe_hepatotoxicos é genuinamente novo
+     (nimesulida×metotrexato/$classe_anticoagulantes já cobertos por
+     herança de classe $classe_aines — ver nota acima).
+  ───────────────────────────────────────────────────────────── */
+  "nimesulida": {
+    "$classe_hepatotoxicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A nimesulida tem um potencial intrínseco elevado para causar necrose hepática letal (idiossincrática e dose/tempo-dependente). A associação com outros fármacos hepatotóxicos (amiodarona, isoniazida, cetoconazol, fluconazol) multiplica o risco de insuficiência hepática fulminante.",
+        es: "La nimesulida tiene un potencial intrínseco elevado para causar necrosis hepática letal (idiosincrásica y dosis/tiempo-dependiente). La asociación con otros fármacos hepatotóxicos (amiodarona, isoniazida, ketoconazol, fluconazol) multiplica el riesgo de insuficiencia hepática fulminante."
+      },
+      conduta: {
+        pt: "Não associar. Preferir alternativas analgésicas desprovidas de alerta de toxicidade hepática sistêmica.",
+        es: "No asociar. Preferir alternativas analgésicas desprovistas de alerta de toxicidad hepática sistémica."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     GABAPENTINA — apenas antiacido é genuinamente novo (gabapentina×
+     $classe_opioides já coberto por herança do auto-cruzamento
+     $classe_depressoras_snc×$classe_depressoras_snc — ver nota acima).
+  ───────────────────────────────────────────────────────────── */
+  "gabapentina": {
+    "antiacido": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Antiácidos contendo alumínio e magnésio (hidróxido de alumínio/magnésio) diminuem substancialmente a absorção gastrointestinal da gabapentina (redução de biodisponibilidade de até 20-30%).",
+        es: "Antiácidos conteniendo aluminio y magnesio (hidróxido de aluminio/magnesio) disminuyen sustancialmente la absorción gastrointestinal de la gabapentina (reducción de biodisponibilidad de hasta 20-30%)."
+      },
+      conduta: {
+        pt: "A gabapentina deve ser tomada pelo menos 2 horas APÓS a administração do antiácido.",
+        es: "La gabapentina debe tomarse al menos 2 horas DESPUÉS de la administración del antiácido."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     PREGABALINA — sem alvos genuinamente novos neste lote:
+     pregabalina×$classe_opioides e pregabalina×$classe_benzodiazepínicos
+     já cobertos por herança do auto-cruzamento
+     $classe_depressoras_snc×$classe_depressoras_snc (ver nota acima).
+     Nenhum nó-raiz próprio necessário neste build.
+  ───────────────────────────────────────────────────────────── */
+
+  /* ─────────────────────────────────────────────────────────────
+     LIDOCAÍNA — ambos os alvos submetidos (amiodarona, fluvoxamina)
+     são genuinamente novos.
+  ───────────────────────────────────────────────────────────── */
+  "lidocaina": {
+    "amiodarona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A amiodarona diminui a metabolização hepática da lidocaína (inibição enzimática) e ambas são antiarrítmicos com efeito depressor cardíaco. A absorção sistêmica excessiva de lidocaína (ex: calor sobre o adesivo ou múltiplas doses SC/IV) gerará toxicidade cardíaca e neurológica.",
+        es: "La amiodarona disminuye la metabolización hepática de la lidocaína (inhibición enzimática) y ambas son antiarrítmicos con efecto depresor cardíaco. La absorción sistémica excesiva de lidocaína (ej: calor sobre el parche o múltiples dosis SC/IV) generará toxicidad cardíaca y neurológica."
+      },
+      conduta: {
+        pt: "Para adesivo, o risco é menor, mas exige adesão estrita ao regime de '12 horas sem adesivo' e sem fontes de calor. Em via sistêmica, monitorar ECG constante.",
+        es: "Para parche, el riesgo es menor, pero exige adhesión estricta al régimen de '12 horas sin parche' y sin fuentes de calor. En vía sistémica, monitorizar ECG constante."
+      }
+    },
+    "fluvoxamina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Fluvoxamina é um inibidor forte do CYP1A2, enzima crucial na eliminação da lidocaína. Pode causar elevação significativa nos níveis sistêmicos de lidocaína, predispondo à LAST (Toxicidade Sistêmica por Anestésicos Locais).",
+        es: "Fluvoxamina es un inhibidor fuerte del CYP1A2, enzima crucial en la eliminación de la lidocaína. Puede causar elevación significativa en los niveles sistémicos de lidocaína, predisponiendo a LAST (Toxicidad Sistémica por Anestésicos Locales)."
+      },
+      conduta: {
+        pt: "Atenção a sintomas como formigamento perioral, confusão, zumbidos ou tremores se em uso associado de grandes doses tópicas/infiltrativas.",
+        es: "Atención a síntomas como hormigueo perioral, confusión, zumbidos o temblores si en uso asociado de grandes dosis tópicas/infiltrativas."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES — BUILD 268 (2026-07-06): Gota/
+     Hiperuricemia (colchicina, alopurinol, febuxostate, probenecida) +
+     Analgésicos Tópicos/Antagonistas Opioides (capsaicina, naloxona,
+     naltrexona, nalmefeno). Executado sob o SOP de Autonomia Total.
+
+     CORREÇÕES DE GRAFIA/CLASSE (Regra 4 + precedente BUILD 266):
+       • Submissão usava "$classe_macrolideos" (sem acento) — corrigido
+         para "$classe_macrolídeos" (grafia real em DRUG_CLASSES,
+         linha ~281: claritromicina, azitromicina, eritromicina etc.).
+       • Submissão usava "$classe_penicilinas" para probenecida — esta
+         classe NÃO EXISTE em DRUG_CLASSES (nenhuma classe de
+         penicilinas foi definida no motor). Corrigido para o alvo
+         concreto "amoxicilina" (penicilina já presente em
+         antimicrobianos.js), preservando o dado clínico submetido sem
+         inventar uma classe nova não solicitada.
+       • "colchicina" já possui nó-raiz ativo neste arquivo (linha
+         ~1008, alvo "claritromicina" via BUILD anterior) — os novos
+         alvos (classe_macrolídeos, classe_azolicos, classe_estatinas)
+         são MESCLADOS ao nó existente, não duplicados.
+
+     ANTI-REDUNDÂNCIA:
+       • Nenhum dos alvos de alopurinol/febuxostate/probenecida/
+         capsaicina/naloxona/naltrexona/nalmefeno já era coberto por
+         herança de classe pré-existente — todos mantidos como
+         genuinamente novos.
+       • naloxona, naltrexona e nalmefeno × $classe_opioides: mantidos
+         como nós individuais (antagonismo farmacológico direto —
+         mecanismo distinto de qualquer entrada aditiva pré-existente
+         para $classe_opioides; sem conflito de dados).
+
+     DUPLICATA DE SCHEMA (Regra 2): a colchicina submetida como
+     schema completo em database/analgesicos.js foi isolada em
+     variável morta (_grupo7_colchicina_duplicata_NAO_USAR) — a
+     entrada rica de database/cardio.js (Grupo 45) permanece única
+     fonte de verdade para o schema clínico. Este nó de interações
+     abaixo é independente do arquivo de schema e permanece válido.
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── ALOPURINOL ── */
+  "alopurinol": {
+    "azatioprina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INTERAÇÃO LETAL. O alopurinol bloqueia a xantina oxidase, enzima vital responsável pela degradação/inativação da azatioprina e do seu metabólito ativo (mercaptopurina). A inibição dessa via causa um acúmulo sistêmico massivo do imunossupressor, culminando em mielossupressão profunda e pancitopenia rapidamente fatal.",
+        es: "INTERACCIÓN LETAL. El alopurinol bloquea la xantina oxidasa, enzima vital responsable de la degradación/inactivación de la azatioprina y de su metabolito activo (mercaptopurina). La inhibición de esta vía causa una acumulación sistémica masiva del inmunosupresor, culminando en mielosupresión profunda y pancitopenia rápidamente fatal."
+      },
+      conduta: {
+        pt: "EVITAR ABSOLUTAMENTE. Se a associação for imperativa sob cuidado reumatológico estrito, a dose de azatioprina DEVE ser reduzida para 25% a 33% da dose usual original.",
+        es: "EVITAR ABSOLUTAMENTE. Si la asociación es imperativa bajo cuidado reumatológico estricto, la dosis de azatioprina DEBE ser reducida al 25% a 33% de la dosis usual original."
+      }
+    },
+    "mercaptopurina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Idêntico à azatioprina. Risco iminente de colapso medular fatal se não houver ajuste dramático de dose.",
+        es: "Idéntico a la azatioprina. Riesgo inminente de colapso medular fatal si no hay ajuste dramático de dosis."
+      },
+      conduta: {
+        pt: "Reduzir a mercaptopurina para 25% da dose ou suspender.",
+        es: "Reducir la mercaptopurina al 25% de la dosis o suspender."
+      }
+    },
+    "$classe_ieca": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O uso concomitante de alopurinol com inibidores da ECA (ex: captopril, enalapril) aumenta significativamente o risco de reações de hipersensibilidade severa ao alopurinol, incluindo Síndrome de Stevens-Johnson, especialmente em pacientes com déficit renal prévio.",
+        es: "El uso concomitante de alopurinol con inhibidores de la ECA (ej: captopril, enalapril) aumenta significativamente el riesgo de reacciones de hipersensibilidad severa al alopurinol, incluyendo Síndrome de Stevens-Johnson, especialmente en pacientes con déficit renal previo."
+      },
+      conduta: {
+        pt: "Atentar rigorosamente para surgimento de rash cutâneo, febre ou lesões em mucosas e instruir o paciente a suspender o alopurinol imediatamente ao primeiro sinal.",
+        es: "Atender rigurosamente a la aparición de rash cutáneo, fiebre o lesiones en mucosas e instruir al paciente a suspender el alopurinol inmediatamente al primer signo."
+      }
+    },
+    "amoxicilina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O uso simultâneo de amoxicilina e alopurinol eleva drasticamente a incidência de rash cutâneo maculopapular difuso induzido pelo antibiótico (não é uma alergia letal cruzada, mas sim uma reação idiossincrática frequente).",
+        es: "El uso simultáneo de amoxicilina y alopurinol eleva drásticamente la incidencia de rash cutáneo maculopapular difuso inducido por el antibiótico (no es una alergia letal cruzada, sino una reacción idiosincrásica frecuente)."
+      },
+      conduta: {
+        pt: "Monitoramento e orientação. O rash não exige suspensão do alopurinol se não houver sinais de SSJ/DRESS, mas deve ser avaliado por médico.",
+        es: "Monitorización y orientación. El rash no exige suspensión del alopurinol si no hay signos de SJS/DRESS, pero debe ser evaluado por médico."
+      }
+    }
+  },
+
+  /* ── FEBUXOSTATE (submissão original: "febuxostat") ── */
+  "febuxostate": {
+    "azatioprina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Mesmo perigo de interação que o alopurinol. A inibição robusta e prolongada da Xantina Oxidase bloqueia a inativação de azatioprina e 6-mercaptopurina, provocando toxicidade hematopoética grave e fatal.",
+        es: "Mismo peligro de interacción que el alopurinol. La inhibición robusta y prolongada de la Xantina Oxidasa bloquea la inactivación de azatioprina y 6-mercaptopurina, provocando toxicidad hematopoyética grave y fatal."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA (Bula: Não administrar juntos).",
+        es: "CONTRAINDICACIÓN ABSOLUTA (Prospecto: No administrar juntos)."
+      }
+    },
+    "mercaptopurina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Inibição de depuração gerando parada medular iminente.",
+        es: "Inhibición de depuración generando paro medular inminente."
+      },
+      conduta: {
+        pt: "Totalmente contraindicado.",
+        es: "Totalmente contraindicado."
+      }
+    }
+  },
+
+  /* ── PROBENECIDA ── */
+  "probenecida": {
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A probenecida inibe o transporte de secreção tubular renal, que é a mesma via pela qual o metotrexato é eliminado. A associação retém o metotrexato de forma severa, levando à toxicidade hematológica letal.",
+        es: "La probenecida inhibe el transporte de secreción tubular renal, que es la misma vía por la cual el metotrexato es eliminado. La asociación retiene el metotrexato de forma severa, llevando a toxicidad hematológica letal."
+      },
+      conduta: {
+        pt: "Contraindicado o uso conjunto.",
+        es: "Contraindicado el uso conjunto."
+      }
+    },
+    /* Correção de classe (ver nota de bloco): submissão usava
+       "$classe_penicilinas", que não existe em DRUG_CLASSES. Redirecionado
+       ao alvo concreto "amoxicilina" (penicilina já cadastrada em
+       antimicrobianos.js), preservando o dado clínico submetido. */
+    "amoxicilina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A probenecida inibe ativamente a secreção tubular das penicilinas (ex: amoxicilina), aumentando e prolongando marcadamente seus níveis plasmáticos (Interação intencional em tratamentos de sífilis ou gonorreia graves, mas potencialmente perigosa em doses comuns).",
+        es: "La probenecida inhibe activamente la secreción tubular de las penicilinas (ej: amoxicilina), aumentando y prolongando marcadamente sus niveles plasmáticos (Interacción intencional en tratamientos de sífilis o gonorrea graves, pero potencialmente peligrosa en dosis comunes)."
+      },
+      conduta: {
+        pt: "Efeito terapêutico almejado em infecções específicas. Cautela apenas se não for o objetivo.",
+        es: "Efecto terapéutico deseado en infecciones específicas. Precaución solo si no es el objetivo."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A probenecida inibe a excreção renal de vários AINEs (como indometacina, cetorolaco e naproxeno), aumentando a meia-vida e a toxicidade (gastrointestinal e neurológica) desses analgésicos.",
+        es: "La probenecida inhibe la excreción renal de varios AINEs (como indometacina, ketorolaco y naproxeno), aumentando la vida media y la toxicidad (gastrointestinal y neurológica) de estos analgésicos."
+      },
+      conduta: {
+        pt: "Se necessário associar um AINE à probenecida, a dose do AINE deve ser substancialmente reduzida e monitorada.",
+        es: "Si es necesario asociar un AINE a la probenecida, la dosis del AINE debe ser sustancialmente reducida y monitorizada."
+      }
+    }
+  },
+
+  /* ── CAPSAICINA ── */
+  "capsaicina": {
+    "$classe_antihipertensivos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A aplicação do adesivo de capsaicina de alta concentração (8%) provoca dor cutânea e queimação severa imediata. Isso gera reflexo simpático que neutraliza temporariamente o efeito dos anti-hipertensivos, causando picos de pressão arterial sistólica elevados nas primeiras 1 a 2 horas.",
+        es: "La aplicación del parche de capsaicina de alta concentración (8%) provoca dolor cutáneo y quemazón severa inmediata. Esto genera reflejo simpático que neutraliza temporalmente el efecto de los antihipertensivos, causando picos de presión arterial sistólica elevados en las primeras 1 a 2 horas."
+      },
+      conduta: {
+        pt: "Monitorar a pressão arterial (PA) e o controle basal antes do procedimento (não aplicar se hipertenso descompensado). Resfriamento local pode aliviar o estímulo.",
+        es: "Monitorizar la presión arterial (PA) y el control basal antes del procedimiento (no aplicar si hipertenso descompensado). El enfriamiento local puede aliviar el estímulo."
+      }
+    }
+  },
+
+  /* ── NALOXONA ── */
+  "naloxona": {
+    "$classe_opioides": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A naloxona é o ANTÍDOTO DIRETO e exerce antagonismo absoluto sobre a ação dos opioides no receptor mu. O uso precipita IMEDIATAMENTE e VIOLENTAMENTE a síndrome de abstinência (taquicardia, PA disparada, dor agonizante, vômitos em jato, piloereção) e anula qualquer analgesia prévia.",
+        es: "La naloxona es el ANTÍDOTO DIRECTO y ejerce antagonismo absoluto sobre la acción de los opioides en el receptor mu. El uso precipita INMEDIATA Y VIOLENTAMENTE el síndrome de abstinencia (taquicardia, PA disparada, dolor agonizante, vómitos en chorro, piloerección) y anula cualquier analgesia previa."
+      },
+      conduta: {
+        pt: "Uso ESTRITAMENTE para SALVAMENTO DE VIDA (depressão respiratória severa e parada). A administração pós-cirúrgica apenas para 'acordar' o paciente deve ser minuciosa, gota a gota, para evitar tempestade adrenérgica, ruptura de suturas ou infarto reflexo.",
+        es: "Uso ESTRICTAMENTE para SALVAMENTO DE VIDA (depresión respiratoria severa y paro). La administración posquirúrgica solo para 'despertar' al paciente debe ser minuciosa, gota a gota, para evitar tormenta adrenérgica, ruptura de suturas o infarto reflejo."
+      }
+    }
+  },
+
+  /* ── NALTREXONA ── */
+  "naltrexona": {
+    "$classe_opioides": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Antagonista mu irreversível funcional em curto prazo. Pacientes dependentes de opioides (incluindo metadona e buprenorfina) que tomarem naltrexona sofrerão síndrome de abstinência imediata, brutal e incontrolável com risco de choque por tempestade simpática.",
+        es: "Antagonista mu irreversible funcional a corto plazo. Pacientes dependientes de opioides (incluyendo metadona y buprenorfina) que tomen naltrexona sufrirán síndrome de abstinencia inmediata, brutal e incontrolable con riesgo de choque por tormenta simpática."
+      },
+      conduta: {
+        pt: "ABSOLUTAMENTE CONTRAINDICADO. Paciente precisa passar por 'washout' garantido e limpo (exame de urina) de pelo menos 7 a 14 dias livres de opioides antes de iniciar naltrexona.",
+        es: "ABSOLUTAMENTE CONTRAINDICADO. El paciente necesita pasar por 'washout' garantizado y limpio (examen de orina) de al menos 7 a 14 días libres de opioides antes de iniciar naltrexona."
+      }
+    },
+    "$classe_hepatotoxicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Naltrexona é dose-dependente hepatotóxica. A combinação com outro insulto hepático (ex. metotrexato, isoniazida) ou grandes volumes de álcool na recaída precipitam insuficiência hepática rapidamente.",
+        es: "Naltrexona es dosis-dependiente hepatotóxica. La combinación con otro insulto hepático (ej. metotrexato, isoniazida) o grandes volúmenes de alcohol en la recaída precipitan insuficiencia hepática rápidamente."
+      },
+      conduta: {
+        pt: "Monitoramento das enzimas hepáticas (TGO, TGP e Bilirrubinas) na admissão e mensalmente no primeiro trimestre.",
+        es: "Monitorización de las enzimas hepáticas (AST, ALT y Bilirrubinas) en la admisión y mensualmente en el primer trimestre."
+      }
+    }
+  },
+
+  /* ── NALMEFENO ── */
+  "nalmefeno": {
+    "$classe_opioides": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Idêntico à naltrexona. Como antagonista dos receptores mu opioides, reverte agressivamente a analgesia e induz uma crise de abstinência massiva, repentina e dolorosa em pacientes dependentes ou em uso crônico de analgésicos opioides.",
+        es: "Idéntico a la naltrexona. Como antagonista de los receptores mu opioides, revierte agresivamente la analgesia e induce una crisis de abstinencia masiva, repentina y dolorosa en pacientes dependientes o en uso crónico de analgésicos opioides."
+      },
+      conduta: {
+        pt: "Contraindicado. Se um paciente necessitar de cirurgia emergencial ou analgesia opioide, o bloqueio gerado pelo nalmefeno será quase impossível de superar com doses seguras de opioides.",
+        es: "Contraindicado. Si un paciente necesita cirugía de emergencia o analgesia opioide, el bloqueo generado por el nalmefeno será casi imposible de superar con dosis seguras de opioides."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES — BUILD 271 (2026-07-06): Reumatologia/
+     Transplante (Grupo 9, database/analgesicos.js): Tacrolimo,
+     Micofenolato de Mofetila, Ciclofosfamida, Adalimumabe.
+     Executado sob o SOP de Autonomia Total.
+
+     AUDITORIA (Regra 1/2 — Anti-Redundância/Duplicatas):
+       • "tacrolimo" NÃO possuía nó-raiz próprio em INTERACOES_DB —
+         existia apenas como ALVO dentro de outros nós (rifampicina,
+         claritromicina, gentamicina, vancomicina, teicoplanina,
+         colistina, polimixina_b, ceftriaxona, piperacilina_tazobactam).
+         Nó-raiz "tacrolimo" abaixo é criado pela primeira vez; os
+         3 alvos submetidos ($classe_macrolídeos, $classe_azolicos,
+         $classe_aines) são genuinamente novos nesta direção (o motor
+         já cobria a direção inversa para os antibióticos citados
+         acima, mas macrolídeos/azólicos/AINEs como classe nunca
+         haviam sido registrados a partir de tacrolimo).
+       • "micofenolato_mofetila", "ciclofosfamida", "adalimumabe":
+         nenhum possuía nó-raiz nem aparecia como alvo em nenhum nó
+         pré-existente — confirmados 100% novos (Grep em todo o
+         arquivo, zero ocorrências antes desta build).
+       • Todos os alvos submetidos para os 4 fármacos são genuinamente
+         novos — nenhuma omissão por redundância necessária neste lote.
+
+     REGRA 3 (Autocomplete) — gaps identificados e corrigidos em
+     index.html: "tacrolimo", "micofenolato_mofetila", "ciclofosfamida",
+     "adalimumabe" (fármacos novos) e "aciclovir" (alvo de
+     micofenolato_mofetila, usado apenas como texto livre em cardio.js/
+     antimicrobianos.js, sem chave própria em DRUG_DISPLAY_NAMES).
+     "antiacido" já possuía aliases em DRUG_ALIASES e o rótulo
+     'Antiácido' em LISTA_MEDS_DISPONIVEIS_RAW, mas NUNCA teve chave
+     própria em DRUG_DISPLAY_NAMES — corrigida (gap de exibição, não
+     de dado). "ciclosporina", "digoxina", "omeprazol", "amiodarona",
+     "alopurinol", "febuxostate" já existiam em ambos os dicionários —
+     nenhuma ação necessária. "vacinas_vivas", "anakinra", "abatacepte"
+     são chaves conceituais/de classe terapêutica sem dose própria
+     (mesmo padrão de "interacoes_vazias" já usado em vutrisiran) — não
+     representam fármacos individuais navegáveis no autocomplete,
+     portanto não exigem entrada em DRUG_DISPLAY_NAMES.
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── TACROLIMO (nó-raiz criado pela primeira vez) ── */
+  "tacrolimo": {
+    "$classe_macrolídeos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A claritromicina e a eritromicina são inibidores fortíssimos do CYP3A4, enzima primária que metaboliza o tacrolimo. O bloqueio leva ao acúmulo sistêmico profundo do tacrolimo, provocando nefrotoxicidade rapidamente letal e convulsões.",
+        es: "La claritromicina y la eritromicina son inhibidores fortísimos del CYP3A4, enzima primaria que metaboliza el tacrolimus. El bloqueo lleva a la acumulación sistémica profunda del tacrolimus, provocando nefrotoxicidad rápidamente letal y convulsiones."
+      },
+      conduta: {
+        pt: "Substituir macrolídeo ou realizar redução empírica imediata da dose de tacrolimo sob monitorização laboratorial diária (TDM).",
+        es: "Sustituir macrólido o realizar reducción empírica inmediata de la dosis de tacrolimus bajo monitorización de laboratorio diaria (TDM)."
+      }
+    },
+    "$classe_azolicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Itraconazol, cetoconazol e voriconazol bloqueiam CYP3A4 e P-gp. Níveis de tacrolimo podem aumentar em até 5 a 10 vezes.",
+        es: "Itraconazol, ketoconazol y voriconazol bloquean CYP3A4 y P-gp. Niveles de tacrolimus pueden aumentar hasta en 5 a 10 veces."
+      },
+      conduta: {
+        pt: "Reduzir dose de tacrolimo e checar TDM constantemente. O uso profilático de fluconazol no transplante exige essa prática.",
+        es: "Reducir dosis de tacrolimus y revisar TDM constantemente. El uso profiláctico de fluconazol en el trasplante exige esta práctica."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Ação nefro-destrutiva sinérgica. O tacrolimo por si só contrai a arteríola aferente (hemodinâmica renal). AINEs exacerbam essa falta de perfusão, promovendo infarto renal no paciente enxertado.",
+        es: "Acción nefro-destructiva sinérgica. El tacrolimus por sí solo contrae la arteriola aferente (hemodinámica renal). AINEs exacerban esta falta de perfusión, promoviendo infarto renal en el paciente injertado."
+      },
+      conduta: {
+        pt: "Evitar completamente os AINEs. Usar analgésicos alternativos.",
+        es: "Evitar completamente los AINEs. Usar analgésicos alternativos."
+      }
+    }
+  },
+
+  /* ── MICOFENOLATO DE MOFETILA (nó-raiz genuinamente novo) ── */
+  "micofenolato_mofetila": {
+    "antiacido": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Antiácidos que contêm alumínio/magnésio e IBPs (como omeprazol) reduzem acentuadamente a absorção do micofenolato de mofetila (pois a molécula exige pH gástrico ácido para dissolução inicial).",
+        es: "Antiácidos que contienen aluminio/magnesio e IBPs (como omeprazol) reducen acentuadamente la absorción del micofenolato de mofetilo (pues la molécula exige pH gástrico ácido para disolución inicial)."
+      },
+      conduta: {
+        pt: "Administrar micofenolato 2h antes ou 2h depois dos antiácidos. Evitar uso rotineiro e excessivo de IBPs se os níveis do fármaco caírem.",
+        es: "Administrar micofenolato 2h antes o 2h después de los antiácidos. Evitar uso rutinario y excesivo de IBPs si los niveles del fármaco caen."
+      }
+    },
+    "aciclovir": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O micofenolato (via metabólito MPAG) e o aciclovir/ganciclovir competem pela secreção ativa nos túbulos renais. Na presença de disfunção renal, os níveis de ambas as drogas sobem e a toxicidade (medular e renal) dispara.",
+        es: "El micofenolato (vía metabolito MPAG) y el aciclovir/ganciclovir compiten por la secreción activa en los túbulos renales. En presencia de disfunción renal, los niveles de ambas drogas suben y la toxicidad (medular y renal) se dispara."
+      },
+      conduta: {
+        pt: "Acompanhamento hematológico constante, comum no manejo do citomegalovírus (CMV) em transplantes.",
+        es: "Seguimiento hematológico constante, común en el manejo del citomegalovirus (CMV) en trasplantes."
+      }
+    }
+  },
+
+  /* ── CICLOFOSFAMIDA (nó-raiz genuinamente novo) ── */
+  "ciclofosfamida": {
+    "alopurinol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O alopurinol aumenta as concentrações séricas e a taxa de formação dos metabólitos citotóxicos da ciclofosfamida. Isso agrava severamente o risco de pancitopenia e aplasia medular fatal.",
+        es: "El alopurinol aumenta las concentraciones séricas y la tasa de formación de los metabolitos citotóxicos de la ciclofosfamida. Esto agrava severamente el riesgo de pancitopenia y aplasia medular fatal."
+      },
+      conduta: {
+        pt: "Associação evitada em protocolos modernos ou exige redução cautelosa do quimioterápico. Hemograma rigoroso pós-pulso.",
+        es: "Asociación evitada en protocolos modernos o exige reducción cautelosa del quimioterápico. Hemograma riguroso pos-pulso."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Indutores hepáticos (como fenitoína, carbamazepina) aceleram a metabolização da ciclofosfamida em seus produtos ativos e tóxicos (como a acroleína), intensificando a cistite hemorrágica e toxicidade aguda.",
+        es: "Inductores hepáticos (como fenitoína, carbamazepina) aceleran la metabolización de la ciclofosfamida en sus productos activos y tóxicos (como la acroleína), intensificando la cistitis hemorrágica y toxicidad aguda."
+      },
+      conduta: {
+        pt: "Garantir hidratação e hiperdosagem do resgate com MESNA caso a associação seja inseparável.",
+        es: "Garantizar hidratación e hiperdosificación del rescate con MESNA si la asociación es inseparable."
+      }
+    }
+  },
+
+  /* ── ADALIMUMABE (nó-raiz genuinamente novo) ── */
+  "adalimumabe": {
+    "vacinas_vivas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O adalimumabe promove uma supressão seletiva e intensa do sistema imunológico bloqueando o TNF-alfa (defesa primária). A administração de vacinas de agentes atenuados vivos (febre amarela, MMR, varicela) gera infecção sistêmica desenfreada e fatal pela própria vacina.",
+        es: "El adalimumab promueve una supresión selectiva e intensa del sistema inmunológico bloqueando el TNF-alfa (defensa primaria). La administración de vacunas de agentes atenuados vivos (fiebre amarilla, MMR, varicela) genera infección sistémica desenfrenada y fatal por la propia vacuna."
+      },
+      conduta: {
+        pt: "VACINAS VIVAS SÃO CONTRAINDICADAS DURANTE O USO E ATÉ MESES APÓS A SUSPENSÃO. Atualizar carteira vacinal antes de iniciar o biológico.",
+        es: "VACUNAS VIVAS ESTÁN CONTRAINDICADAS DURANTE EL USO Y HASTA MESES DESPUÉS DE LA SUSPENSIÓN. Actualizar cartilla de vacunación antes de iniciar el biológico."
+      }
+    },
+    "anakinra": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Associação de um anti-TNF-alfa (adalimumabe) com um anti-IL-1 (anakinra) paralisa vias paralelas e vitais da imunidade inata, gerando risco extremo e inaceitável de sepse grave oportunista, sem adicionar benefício reumatológico extra.",
+        es: "Asociación de un anti-TNF-alfa (adalimumab) con un anti-IL-1 (anakinra) paraliza vías paralelas y vitales de la inmunidad innata, generando riesgo extremo e inaceptable de sepsis grave oportunista, sin agregar beneficio reumatológico extra."
+      },
+      conduta: {
+        pt: "Uso concomitante estritamente contraindicado pela FDA/EMA.",
+        es: "Uso concomitante estrictamente contraindicado por la FDA/EMA."
+      }
+    },
+    "abatacepte": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Mesmo risco descrito do Anakinra (excesso de biológicos não gera sinergia para artrite, apenas para o perigo de infecções oportunistas fulminantes).",
+        es: "Mismo riesgo descrito de Anakinra (exceso de biológicos no genera sinergia para artritis, solo para el peligro de infecciones oportunistas fulminantes)."
+      },
+      conduta: {
+        pt: "Contraindicado uso simultâneo de terapias biológicas direcionadas.",
+        es: "Contraindicado uso simultáneo de terapias biológicas dirigidas."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES — BUILD 272 (2026-07-06): Reumatologia
+     (Grupo 10, database/analgesicos.js): Etanercepte. Executado sob o
+     SOP de Autonomia Total.
+
+     AUDITORIA (Regra 1/2 — Anti-Redundância/Duplicatas):
+       • "etanercepte" NÃO possuía nó-raiz nem aparecia como alvo em
+         nenhum nó pré-existente — confirmado GENUINAMENTE NOVO (Grep
+         em todo o arquivo, zero ocorrências antes desta build).
+       • Todos os 4 alvos submetidos ("vacinas_vivas", "anakinra",
+         "abatacepte", "ciclofosfamida") já são chaves ATIVAS no motor
+         (criadas nas BUILDs 269/271 como alvos de adalimumabe/nó-raiz
+         de ciclofosfamida) — nenhuma classe nova precisou ser
+         inventada, e não há herança de classe pré-existente que já
+         cobrisse "etanercepte" nessas direções (etanercepte não é
+         membro de nenhuma classe farmacológica com regra ativa).
+         Todos os 4 alvos são portanto genuinamente novos NESTA direção
+         (etanercepte→X); nenhuma omissão por redundância necessária.
+
+     REGRA 3 (Autocomplete): "etanercepte" é o único fármaco novo deste
+     lote — adicionado a DRUG_DISPLAY_NAMES/LISTA_MEDS_DISPONIVEIS_RAW
+     em index.html. Os 4 alvos ("vacinas_vivas", "anakinra",
+     "abatacepte", "ciclofosfamida") já estavam tratados: os 3
+     primeiros são chaves conceituais/de classe terapêutica sem
+     entrada de autocomplete própria (mesmo padrão de
+     "interacoes_vazias"), e "ciclofosfamida" já foi adicionada ao
+     autocomplete na BUILD 271.
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── ETANERCEPTE (nó-raiz genuinamente novo) ── */
+  "etanercepte": {
+    "vacinas_vivas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A neutralização do fator de necrose tumoral (TNF) destrói a resposta imune celular mediada por macrófagos. A aplicação de vacinas atenuadas (vírus vivo) deflagra uma infecção disseminada grave induzida pela própria cepa vacinal.",
+        es: "La neutralización del factor de necrosis tumoral (TNF) destruye la respuesta inmune celular mediada por macrófagos. La aplicación de vacunas atenuadas (virus vivo) desencadena una infección diseminada grave inducida por la propia cepa vacinal."
+      },
+      conduta: {
+        pt: "CONTRAINDICADO. As vacinas vivas (Febre Amarela, Tríplice Viral, Varicela) devem ser administradas 4 semanas ANTES do início do biológico ou meses após a suspensão. Vacinas inativadas (Gripe, COVID, Pneumo) são seguras e recomendadas.",
+        es: "CONTRAINDICADO. Las vacunas vivas (Fiebre Amarilla, Triple Viral, Varicela) deben ser administradas 4 semanas ANTES del inicio del biológico o meses tras la suspensión. Vacunas inactivadas (Gripe, COVID, Neumo) son seguras y recomendadas."
+      }
+    },
+    "anakinra": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A terapia combinada de antagonista de TNF (etanercepte) com antagonista do receptor de interleucina-1 (anakinra) não proporciona benefício clínico adicional, mas aumenta de forma inaceitável e perigosa o risco de infecções oportunistas graves e neutropenia profunda.",
+        es: "La terapia combinada de antagonista de TNF (etanercept) con antagonista del receptor de interleucina-1 (anakinra) no proporciona beneficio clínico adicional, pero aumenta de forma inaceptable y peligrosa el riesgo de infecciones oportunistas graves y neutropenia profunda."
+      },
+      conduta: {
+        pt: "ASSOCIAÇÃO CONTRAINDICADA na prática reumatológica.",
+        es: "ASOCIACIÓN CONTRAINDICADA en la práctica reumatológica."
+      }
+    },
+    "abatacepte": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A associação de etanercepte ao abatacepte (modulador de coestimulação de células T) acarreta incidência significativamente maior de infecções graves sem ganho terapêutico comprovado.",
+        es: "La asociación de etanercept al abatacept (modulador de coestimulación de células T) acarrea incidencia significativamente mayor de infecciones graves sin ganancia terapéutica comprobada."
+      },
+      conduta: {
+        pt: "Jamais associar diferentes classes de DMARDs biológicos potentes em simultâneo.",
+        es: "Jamás asociar diferentes clases de FAMEs biológicos potentes en simultáneo."
+      }
+    },
+    "ciclofosfamida": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Dados clínicos em pacientes com granulomatose de Wegener mostraram que adicionar etanercepte à terapia padrão com ciclofosfamida aumentou a incidência de tumores sólidos (câncer) e infecções descontroladas sem melhora da vasculite.",
+        es: "Datos clínicos en pacientes con granulomatosis de Wegener mostraron que agregar etanercept a la terapia estándar con ciclofosfamida aumentó la incidencia de tumores sólidos (cáncer) e infecciones descontroladas sin mejora de la vasculitis."
+      },
+      conduta: {
+        pt: "A associação com agentes alquilantes severos como ciclofosfamida não é recomendada.",
+        es: "La asociación con agentes alquilantes severos como ciclofosfamida no es recomendada."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
+   v3.16 (BUILD 254) — AUDITORIA DE SEGURANÇA CLÍNICA:
+        + alias "aas" → acido_acetilsalicilico em DRUG_ALIASES
+        + nó auto-cruzado $classe_antiagregantes × $classe_antiagregantes
+          em INTERACOES_DB (corrige falso-negativo "seguro" para
+          Clopidogrel + AAS / DAPT — gravidade moderada, score 3)
    v3.15 (2026-07-03) — BLOCO LOTE 2: reforço de dabigatrana (P-gp) +
         novos nós-raiz bivalirudina, clopidogrel, prasugrel, ticagrelor,
         cangrelor. As 6 entidades já tinham objetos completos em cardio.js

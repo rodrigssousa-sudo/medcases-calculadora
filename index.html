@@ -28,6 +28,10 @@
   <link rel="stylesheet" href="css/build244-category-pills.css" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
   <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css" />
+  <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
+  <link rel="stylesheet" href="css/build254-critical-fixes.css" />
+  <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
+  <link rel="stylesheet" href="css/build272-universal-design-system.css" />
 
   <style>
     /* ============================================================ RESET */
@@ -4000,58 +4004,14 @@
       font-size:12px; color:var(--warning); display:flex; align-items:center; gap:8px; font-weight:500; }
 
     /* ============================================================
-       SCORE CARD
+       SCORE CARD — BUILD 273: markup nativo migrado para
+       .univ-score-section / .univ-toggle-btn / .univ-result-card
+       (ver css/build272-universal-design-system.css §8).
+       Mantidos aqui apenas os badges de severidade (interp.cls),
+       reutilizados dentro de .univ-result-sub.
     ============================================================ */
-    .score-section { margin-bottom:20px; }
-    .score-group-title { font-size:11px; font-weight:700; color:var(--text-muted);
-      letter-spacing:1px; text-transform:uppercase; margin-bottom:10px;
-      display:flex; align-items:center; gap:6px; }
-    .score-group-title::before { content:''; width:3px; height:14px; border-radius:2px;
-      background:linear-gradient(var(--green-mid),var(--green-bright)); }
 
-    /* Linhas de score (checkboxes e steppers) */
-    .score-row { background:var(--bg-card2); border:1px solid var(--border);
-      border-radius:var(--radius-sm); padding:8px 10px; margin-bottom:5px;
-      display:flex; align-items:center; justify-content:space-between; gap:10px;
-      transition:border-color var(--transition); }
-    .score-row.selected { border-color:var(--border-green); background:rgba(14,90,58,0.12); }
-    .score-row-label { font-size:12.5px; color:var(--text-secondary); font-weight:500; flex:1; line-height:1.4; }
-    .score-row-label strong { color:var(--text-primary); font-weight:600; display:block; font-size:13px; }
-    .score-row-pts { font-size:12px; font-weight:700; color:var(--text-muted); flex-shrink:0; }
-
-    /* Custom checkbox */
-    .score-check { appearance:none; -webkit-appearance:none; width:22px; height:22px;
-      border:2px solid var(--border); border-radius:6px; background:var(--bg-input);
-      cursor:pointer; flex-shrink:0; transition:all var(--transition); position:relative; }
-    .score-check:checked { background:linear-gradient(135deg,var(--green-mid),var(--green-bright)); border-color:transparent; }
-    .score-check:checked::after { content:'✓'; position:absolute; top:50%; left:50%;
-      transform:translate(-50%,-50%); font-size:12px; color:white; font-weight:800; }
-
-    /* Stepper para Glasgow */
-    .stepper { display:flex; align-items:center; gap:0; }
-    .stepper-btn { width:28px; height:28px; border:1px solid var(--border); background:var(--bg-input);
-      color:var(--text-secondary); font-size:15px; font-weight:700; border-radius:6px;
-      cursor:pointer; display:flex; align-items:center; justify-content:center;
-      font-family:'Inter',sans-serif; transition:all var(--transition); }
-    .stepper-btn:active { background:rgba(14,90,58,0.15); color:var(--green-glow); }
-    .stepper-val { min-width:32px; text-align:center; font-size:14px; font-weight:700;
-      color:var(--text-primary); padding:0 4px; }
-
-    /* ── Resultado do score — v2.6.0: contraste WCAG AA forçado sobre fundo verde escuro ── */
-    .score-result-box { background:linear-gradient(135deg,#0A2A1A 0%,#0F3525 100%);
-      border:1px solid rgba(34,200,122,0.25); border-radius:var(--radius-md);
-      padding:14px 12px 12px; margin-top:10px; text-align:center; }
-    .score-result-number { font-size:42px; font-weight:800; color:#4ADE80;
-      line-height:1; letter-spacing:-2px;
-      text-shadow: 0 0 18px rgba(74,222,128,0.35); }
-    /* FIX CONTRASTE: era var(--text-secondary)=#94A3B8 → invisível sobre verde escuro */
-    .score-result-label  { font-size:12px; font-weight:600;
-      color: rgba(255,255,255,0.90);
-      margin-top:4px; }
-    .score-result-interp { font-size:13px; font-weight:700; margin-top:10px; padding:8px 16px;
-      border-radius:10px; display:inline-block; }
-
-    /* Severity badges — fundos semi-opacos com texto SEMPRE branco sobre verde escuro */
+    /* Severity badges — fundos semi-opacos com texto SEMPRE branco sobre fundo escuro */
     .severity-low    { background:rgba(34,200,122,0.22); color:#ffffff; border:1px solid rgba(34,200,122,0.40);
       text-shadow:0 1px 3px rgba(0,0,0,0.45); }
     .severity-mid    { background:rgba(240,168,66,0.25);  color:#ffffff; border:1px solid rgba(240,168,66,0.45);
@@ -4062,29 +4022,6 @@
       text-shadow:0 1px 3px rgba(0,0,0,0.45); }
     .severity-info   { background:rgba(66,168,212,0.28);  color:#ffffff; border:1px solid rgba(66,168,212,0.45);
       text-shadow:0 1px 3px rgba(0,0,0,0.45); }
-
-    /* FIX CONTRASTE: sub-note era var(--text-muted)=#475569 → quase invisível */
-    .score-sub-note { font-size:11px;
-      color: rgba(255,255,255,0.80);
-      margin-top:8px; line-height:1.5; }
-    /* FIX CONTRASTE: action-tip era var(--text-secondary) sobre fundo azul escuro → ilegível */
-    .score-action-tip {
-      background: rgba(56,189,248,0.12);
-      border: 1px solid rgba(56,189,248,0.28);
-      border-radius:8px; padding:10px 12px; margin-top:10px; font-size:12px;
-      color: rgba(255,255,255,0.92);
-      line-height:1.6; text-align:left; }
-    .score-action-tip strong { color:#7DD3FC; } /* cyan-300 — contraste alto sobre qualquer fundo escuro */
-    /* Light mode: reverte para texto escuro (fundo fica claro) */
-    body.light-mode .score-result-box {
-      background: linear-gradient(135deg,#E8FAF1 0%,#D4F5E2 100%);
-      border-color: rgba(34,200,122,0.35);
-    }
-    body.light-mode .score-result-label  { color: #065F46 !important; }
-    body.light-mode .score-sub-note      { color: #047857 !important; }
-    body.light-mode .score-action-tip    { background:rgba(6,95,70,0.08); border-color:rgba(6,95,70,0.20); color:#065F46 !important; }
-    body.light-mode .score-action-tip strong { color:#065F46 !important; }
-    body.light-mode .score-result-number { color:#059669 !important; text-shadow:none; }
     body.light-mode .severity-low    { background:rgba(34,200,122,0.18); color:#065F46 !important; text-shadow:none; }
     body.light-mode .severity-mid    { background:rgba(240,168,66,0.18);  color:#78350F !important; text-shadow:none; }
     body.light-mode .severity-high   { background:rgba(224,92,107,0.18);  color:#7F1D1D !important; text-shadow:none; }
@@ -7784,9 +7721,9 @@
           </article>
         </div><!-- /L1-A patient -->
 
-        <!-- L1-B: ClCr RENAL -->
+        <!-- L1-B: ClCr RENAL — BUILD 272: LIVE DASHBOARD (Pilar 3) -->
         <div class="hub-row--full hub-l1-row">
-          <article class="hub-card" id="hub-card-clcr" data-hub="clcr" data-hub-full="true" data-level="1">
+          <article class="hub-card theme-renal" id="hub-card-clcr" data-hub="clcr" data-hub-full="true" data-level="1">
             <button class="hub-card-trigger" onclick="hubToggle('clcr')"
                     aria-expanded="false" aria-controls="hub-body-clcr">
               <div class="hub-card-ico hub-ico--clcr"><i class="fa-solid fa-kidneys"></i></div>
@@ -7802,9 +7739,37 @@
               </div>
               <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
             </button>
+
+            <!-- ══ LIVE DASHBOARD — SEMPRE VISÍVEL, mesmo com o card colapsado ══
+                 Grid 2x2 simétrico: ClCr · IMC · Peso Ideal · BSA.
+                 Escuta window.patientData via _clcrLiveDashboardSync() e
+                 exibe "---" nos 4 quadrantes quando os dados estão vazios. -->
+            <div class="clcr-live-dashboard" id="clcr-live-dashboard">
+              <div class="clcr-live-quad" id="clcr-live-q-clcr">
+                <div class="clcr-live-quad-val is-empty" id="clcr-live-v-clcr">---</div>
+                <div class="clcr-live-quad-lbl">ClCr mL/min</div>
+              </div>
+              <div class="clcr-live-quad" id="clcr-live-q-imc">
+                <div class="clcr-live-quad-val is-empty" id="clcr-live-v-imc">---</div>
+                <div class="clcr-live-quad-lbl">IMC kg/m²</div>
+              </div>
+              <div class="clcr-live-quad" id="clcr-live-q-peso">
+                <div class="clcr-live-quad-val is-empty" id="clcr-live-v-peso">---</div>
+                <div class="clcr-live-quad-lbl">
+                  <span class="lang-hub-pt">Peso Ideal kg</span>
+                  <span class="lang-hub-es">Peso Ideal kg</span>
+                </div>
+              </div>
+              <div class="clcr-live-quad" id="clcr-live-q-bsa">
+                <div class="clcr-live-quad-val is-empty" id="clcr-live-v-bsa">---</div>
+                <div class="clcr-live-quad-lbl">BSA m²</div>
+              </div>
+            </div>
+
             <div class="hub-card-body" id="hub-body-clcr" role="region">
               <div class="hub-card-inner" id="hub-clcr-inner">
-                <!-- Slot preenchido pelo JS hubMountClCr() na primeira abertura -->
+                <!-- Slot preenchido pelo JS _lazyMount('clcr') na primeira abertura:
+                     categoria renal + conduta clínica + atalho para editar dados. -->
                 <div id="hub-clcr-slot"></div>
               </div>
             </div>
@@ -7902,7 +7867,7 @@
           </article>
 
           <!-- ELETRÓLITOS -->
-          <article class="hub-card" id="hub-card-eletrolitos" data-hub="eletrolitos" data-level="2">
+          <article class="hub-card theme-eletro" id="hub-card-eletrolitos" data-hub="eletrolitos" data-level="2">
             <button class="hub-card-trigger" onclick="hubToggle('eletrolitos')"
                     aria-expanded="false" aria-controls="hub-body-eletrolitos">
               <div class="hub-card-ico hub-ico--elec"><i class="fa-solid fa-bolt"></i></div>
@@ -7950,7 +7915,7 @@
           </article>
 
           <!-- FLUIDOS -->
-          <article class="hub-card" id="hub-card-fluidos" data-hub="fluidos" data-level="2">
+          <article class="hub-card theme-fluidos" id="hub-card-fluidos" data-hub="fluidos" data-level="2">
             <button class="hub-card-trigger" onclick="hubToggle('fluidos')"
                     aria-expanded="false" aria-controls="hub-body-fluidos">
               <div class="hub-card-ico hub-ico--fluidos"><i class="fa-solid fa-droplet"></i></div>
@@ -7974,7 +7939,7 @@
           </article>
 
           <!-- HEMODINÂMICA -->
-          <article class="hub-card" id="hub-card-hemodinamica" data-hub="hemodinamica" data-level="2">
+          <article class="hub-card theme-hemo" id="hub-card-hemodinamica" data-hub="hemodinamica" data-level="2">
             <button class="hub-card-trigger" onclick="hubToggle('hemodinamica')"
                     aria-expanded="false" aria-controls="hub-body-hemodinamica">
               <div class="hub-card-ico hub-ico--hemo"><i class="fa-solid fa-heart-pulse"></i></div>
@@ -7998,7 +7963,7 @@
           </article>
 
           <!-- SCORES -->
-          <article class="hub-card" id="hub-card-scores" data-hub="scores" data-level="2">
+          <article class="hub-card theme-scores" id="hub-card-scores" data-hub="scores" data-level="2">
             <button class="hub-card-trigger" onclick="hubToggle('scores')"
                     aria-expanded="false" aria-controls="hub-body-scores">
               <div class="hub-card-ico hub-ico--scores"><i class="fa-solid fa-chart-bar"></i></div>
@@ -8906,7 +8871,7 @@
       <!-- ═══════════════════════════════════════════════════════
            SUB-VIEW: FLUIDOS E HIDRATAÇÃO ADULTO
       ═══════════════════════════════════════════════════════ -->
-      <div class="adult-sub-view" id="subview-fluids">
+      <div class="adult-sub-view theme-fluidos" id="subview-fluids">
 
         <!-- ── Voltar ao grid do módulo Adulto ── -->
         <div class="section-back-bar">
@@ -8978,13 +8943,11 @@
             </div>
           </div>
 
-          <!-- ── BOTÃO CALCULAR ── -->
-          <button class="btn-primary" onclick="calcFluids()"
-                  style="font-size:13px;padding:10px 18px;margin-top:4px;width:100%">
-            <i class="fa-solid fa-calculator"></i>
-            <span data-i18n="fluid_btn_calc">Calcular Fluidos</span>
-          </button>
-
+          <!-- BUILD 272 — PILAR 2: botão "Calcular Fluidos" removido.
+               O cálculo agora dispara em tempo real (Reactive Engine)
+               via js/build272-reactive-engine.js, que escuta oninput/
+               onchange de #fluid-type, #fluid-dehy, #fluid-temp e o
+               toggle de taquipneia, chamando calcFluids() instantaneamente. -->
         </div><!-- /card -->
 
         <!-- Área de resultado injetada por JS -->
@@ -9052,7 +9015,7 @@
       <!-- ══════════════════════════════════════════════════════════
            SUB-VIEW: SCORES CLÍNICOS
       ══════════════════════════════════════════════════════════ -->
-      <div class="adult-sub-view" id="subview-scores">
+      <div class="adult-sub-view theme-scores" id="subview-scores">
 
         <!-- ── Voltar ao grid do módulo Adulto ── -->
         <div class="section-back-bar">
@@ -11193,7 +11156,7 @@ window.ANTIMICROBIANOS_DRUGS_DB  = window.ANTIMICROBIANOS_DRUGS_DB  || {};
 window.PSICOFARMACOS_DRUGS_DB    = window.PSICOFARMACOS_DRUGS_DB    || {};
 window.CARDIO_DRUGS_DB           = window.CARDIO_DRUGS_DB           || {}; /* ← {calculate} schema — NÃO array */
 /* Schema array [] — lista de entries com dose() nativo */
-window.ANALGESICOS_DRUGS_DB      = window.ANALGESICOS_DRUGS_DB      || [];
+window.ANALGESICOS_DRUGS_DB      = window.ANALGESICOS_DRUGS_DB      || {}; /* BUILD 262: {calculate/estático} schema — NÃO array */
 window.ANTICOAG_DRUGS_DB         = window.ANTICOAG_DRUGS_DB         || [];
 window.ENDOCRINO_DRUGS_DB        = window.ENDOCRINO_DRUGS_DB        || [];
 window.GASTRO_DRUGS_DB           = window.GASTRO_DRUGS_DB           || [];
@@ -16828,36 +16791,40 @@ function renderScoreCalc(key){
         <span>${sc.icon} ${scName} <span style="font-weight:400;font-size:11px;color:var(--text-muted)">— ${scSubtitle}</span></span>
       </div>`;
 
+  /* BUILD 273 — Missão 1: HTML nativo .univ-toggle-btn / .is-active
+     Substitui .score-row/.score-check legados. */
   if(sc.stepper){
     scSteppers.forEach(st=>{
       const curVal=scoreSelections[st.key]!==undefined?scoreSelections[st.key]:st.val;
       const descIdx=curVal-st.min;
       const descTxt=st.desc[descIdx]||'';
       html+=`
-        <div class="score-section">
-          <div class="score-group-title">${st.label}</div>
-          <div class="score-row" style="justify-content:space-between">
-            <div class="score-row-label"><strong>${descTxt}</strong></div>
-            <div class="stepper">
-              <button class="stepper-btn" onclick="stepperChange('${key}','${st.key}',${st.min},${st.max},-1)">−</button>
-              <span class="stepper-val" id="sv-${key}-${st.key}">${curVal}</span>
-              <button class="stepper-btn" onclick="stepperChange('${key}','${st.key}',${st.min},${st.max},1)">+</button>
+        <div class="univ-score-section">
+          <div class="univ-score-group-title">${st.label}</div>
+          <div class="univ-toggle-btn univ-toggle-btn--stepper is-active">
+            <div class="univ-toggle-label"><strong id="sv-desc-${key}-${st.key}">${descTxt}</strong></div>
+            <div class="univ-stepper">
+              <button type="button" class="univ-stepper-btn" onclick="stepperChange('${key}','${st.key}',${st.min},${st.max},-1)" aria-label="−">−</button>
+              <span class="univ-stepper-val" id="sv-${key}-${st.key}">${curVal}</span>
+              <button type="button" class="univ-stepper-btn" onclick="stepperChange('${key}','${st.key}',${st.min},${st.max},1)" aria-label="+">+</button>
             </div>
           </div>
         </div>`;
     });
   } else {
     scGroups.forEach(g=>{
-      html+=`<div class="score-section"><div class="score-group-title">${g.label}</div>`;
+      html+=`<div class="univ-score-section"><div class="univ-score-group-title">${g.label}</div>`;
       g.items.forEach((item,idx)=>{
         const selKey=g.key+'_'+idx;
-        const checked=scoreSelections[selKey]?'checked':'';
+        const isActive=!!scoreSelections[selKey];
+        const checked=isActive?'checked':'';
         const ptsLabel=item.pts>0?`+${item.pts}`:(item.pts<0?item.pts:'0');
         html+=`
-          <label class="score-row ${scoreSelections[selKey]?'selected':''}">
-            <div class="score-row-label">${item.label}</div>
-            <span class="score-row-pts">${ptsLabel}pt</span>
-            <input type="${g.single?'radio':'checkbox'}" class="score-check"
+          <label class="univ-toggle-btn${isActive?' is-active':''}">
+            <div class="univ-toggle-label"><strong>${item.label}</strong></div>
+            <span class="univ-toggle-pts">${ptsLabel}pt</span>
+            <input type="${g.single?'radio':'checkbox'}" class="univ-toggle-input"
+              style="position:absolute;opacity:0;width:0;height:0;pointer-events:none"
               name="sg_${key}_${g.key}" ${checked}
               onchange="scoreChange('${key}','${g.key}',${idx},${item.pts},${g.single?'true':'false'},this)" />
           </label>`;
@@ -16868,16 +16835,17 @@ function renderScoreCalc(key){
 
   const score=calcScoreTotal(key);
   const interp=sc.interpret(score);
+  /* BUILD 273 — .univ-result-card nativo, sempre visível (scores sempre têm
+     resultado, mesmo 0). Herda --theme-accent/--theme-bg de .theme-scores/
+     .theme-hemo/.theme-renal no ancestral #subview-scores. */
   html+=`
-    <button class="btn-primary mt-12" onclick="selectScore('${key}')">
-      <i class="fa-solid fa-rotate-right"></i> ${lblRecalc}
-    </button>
-    <div class="score-result-box" id="score-result-${key}">
-      <div class="score-result-number">${score}</div>
-      <div class="score-result-label">${lblScore} ${scName}</div>
-      <div class="score-result-interp ${interp.cls}">${interp.txt}</div>
-      ${scNote?`<div class="score-sub-note">${scNote}</div>`:''}
-      ${scAction?`<div class="score-action-tip"><strong>${lblConduta}</strong> ${scAction}</div>`:''}
+    <div class="univ-result-card is-visible" id="score-result-${key}">
+      <div class="univ-result-card-inner">
+        <div class="univ-result-header"><i class="fa-solid fa-chart-simple"></i> ${lblScore} ${scName}</div>
+        <div class="univ-result-number">${score}</div>
+        <div class="univ-result-sub ${interp.cls}">${interp.txt}</div>
+        ${(scNote||scAction)?`<div class="univ-result-conduct">${scNote?`${scNote}`:''}${(scNote&&scAction)?'<br>':''}${scAction?`<strong>${lblConduta}</strong> ${scAction}`:''}</div>`:''}
+      </div>
     </div>
   </div>`;
 
@@ -16892,14 +16860,17 @@ function scoreChange(scoreKey,groupKey,itemIdx,pts,isSingle,el){
     // Se desmarcando radio (não faz sentido, mas por segurança)
     const rawPts=parseFloat(pts);
     scoreSelections[selKey]=el.checked?rawPts:0;
+    // BUILD 273: single-choice — remove is-active dos irmãos do mesmo grupo
+    const wrap=el.closest('.univ-score-section');
+    if(wrap) wrap.querySelectorAll('.univ-toggle-btn').forEach(b=>b.classList.remove('is-active'));
   } else {
     const rawPts=parseFloat(pts);
     if(el.checked) scoreSelections[selKey]=rawPts;
     else delete scoreSelections[selKey];
   }
   updateScoreResult(scoreKey);
-  // Atualiza classe da row
-  el.closest('.score-row').classList.toggle('selected',el.checked);
+  // BUILD 273: toggle nativo .univ-toggle-btn / .is-active
+  el.closest('.univ-toggle-btn').classList.toggle('is-active',el.checked);
 }
 
 function stepperChange(scoreKey,stepKey,min,max,delta){
@@ -16912,8 +16883,8 @@ function stepperChange(scoreKey,stepKey,min,max,delta){
   scoreSelections[stepKey]=cur;
   const valEl=document.getElementById('sv-'+scoreKey+'-'+stepKey);
   if(valEl) valEl.textContent=cur;
-  // Atualiza descrição (bilíngue — desc[] já vem via _sl)
-  const descEl=valEl?.closest('.score-row')?.querySelector('.score-row-label strong');
+  // BUILD 273: descrição agora fica em #sv-desc-{key}-{stepKey} (univ-toggle-label strong)
+  const descEl=document.getElementById('sv-desc-'+scoreKey+'-'+stepKey);
   if(descEl) descEl.textContent=st.desc[cur-min]||'';
   updateScoreResult(scoreKey);
 }
@@ -16943,12 +16914,16 @@ function updateScoreResult(key){
   const scAction = typeof sc.action === 'function' ? sc.action() : (sc.action||'');
   const lblScore   = _sl('Pontuação','Puntuación');
   const lblConduta = _sl('💡 Conduta:','💡 Conducta:');
+  /* BUILD 273: regenera apenas o conteúdo do .univ-result-card-inner
+     (o wrapper #score-result-{key} JA' é o .univ-result-card is-visible). */
+  box.classList.add('is-visible');
   box.innerHTML=`
-    <div class="score-result-number">${score}</div>
-    <div class="score-result-label">${lblScore} ${scName}</div>
-    <div class="score-result-interp ${interp.cls}">${interp.txt}</div>
-    ${scNote?`<div class="score-sub-note">${scNote}</div>`:''}
-    ${scAction?`<div class="score-action-tip"><strong>${lblConduta}</strong> ${scAction}</div>`:''}`;
+    <div class="univ-result-card-inner">
+      <div class="univ-result-header"><i class="fa-solid fa-chart-simple"></i> ${lblScore} ${scName}</div>
+      <div class="univ-result-number">${score}</div>
+      <div class="univ-result-sub ${interp.cls}">${interp.txt}</div>
+      ${(scNote||scAction)?`<div class="univ-result-conduct">${scNote?`${scNote}`:''}${(scNote&&scAction)?'<br>':''}${scAction?`<strong>${lblConduta}</strong> ${scAction}`:''}</div>`:''}
+    </div>`;
 }
 
 /* ============================================================
@@ -20399,8 +20374,23 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     'diclofenaco':         { pt: 'Diclofenaco',         es: 'Diclofenaco' },
     'naproxeno':           { pt: 'Naproxeno',           es: 'Naproxeno' },
     'meloxicam':           { pt: 'Meloxicam',           es: 'Meloxicam' },
+    /* BUILD 265 — Cetorolaco: genuinamente ausente do autocomplete
+       (cetoprofeno, meloxicam, piroxicam já existentes) */
+    'cetorolaco':          { pt: 'Cetorolaco',          es: 'Ketorolac' },
     'celecoxibe':          { pt: 'Celecoxibe',          es: 'Celecoxib' },
     'nimesulida':          { pt: 'Nimesulida',          es: 'Nimesulida' },
+    /* BUILD 266 — Grupo 5 (indometacina, aceclofenaco, etoricoxibe):
+       genuinamente ausentes do autocomplete. "celecoxibe" já existia
+       (linha acima). Grafia canônica PT-BR sem acento (Regra 4 do SOP). */
+    'indometacina':        { pt: 'Indometacina',        es: 'Indometacina' },
+    'aceclofenaco':        { pt: 'Aceclofenaco',        es: 'Aceclofenaco' },
+    'etoricoxibe':         { pt: 'Etoricoxibe',          es: 'Etoricoxib' },
+    /* BUILD 266 — alvo de interação (etoricoxibe×anticoncepcional_hormonal)
+       sem entrada prévia em nenhum ponto do autocomplete/UI. */
+    'anticoncepcional_hormonal': { pt: 'Anticoncepcional Hormonal', es: 'Anticonceptivo Hormonal' },
+    /* BUILD 267 — Grupo 6 (lidocaina): genuinamente ausente do
+       autocomplete. nimesulida/gabapentina/pregabalina já existiam. */
+    'lidocaina':           { pt: 'Lidocaína',           es: 'Lidocaína' },
     /* ISRS */
     'sertralina':          { pt: 'Sertralina',          es: 'Sertralina' },
     'fluoxetina':          { pt: 'Fluoxetina',          es: 'Fluoxetina' },
@@ -20482,6 +20472,54 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     'metotrexato':         { pt: 'Metotrexato',         es: 'Metotrexato' },
     'colchicina':          { pt: 'Colchicina',          es: 'Colchicina' },
     'alcool':              { pt: 'Álcool',              es: 'Alcohol' },
+    /* ── BUILD 268 — Grupo 7 (database/analgesicos.js): Gota/Hiperuricemia +
+       Analgésicos Tópicos e Antagonistas Opioides. ── */
+    'alopurinol':          { pt: 'Alopurinol',          es: 'Alopurinol' },
+    'febuxostate':         { pt: 'Febuxostate',         es: 'Febuxostat' },
+    'probenecida':         { pt: 'Probenecida',         es: 'Probenecida' },
+    'capsaicina':          { pt: 'Capsaicina',          es: 'Capsaicina' },
+    'naloxona':            { pt: 'Naloxona',            es: 'Naloxona' },
+    'naltrexona':          { pt: 'Naltrexona',          es: 'Naltrexona' },
+    'nalmefeno':           { pt: 'Nalmefeno',           es: 'Nalmefeno' },
+    'azatioprina':         { pt: 'Azatioprina',         es: 'Azatioprina' },
+    'mercaptopurina':      { pt: 'Mercaptopurina',      es: 'Mercaptopurina' },
+    'amoxicilina':         { pt: 'Amoxicilina',         es: 'Amoxicilina' },
+    /* ── BUILD 269 — Grupo 8 (database/analgesicos.js): Reumatologia —
+       DMARDs/Imunossupressores/Uricosúricos. "Azatioprina" (acima,
+       BUILD 268), "Ciclosporina" (BUILD 262) e "Metotrexato" (bloco
+       pré-existente) já tinham entrada — não duplicados aqui. ── */
+    'sulfassalazina':      { pt: 'Sulfassalazina',      es: 'Sulfasalazina' },
+    'leflunomida':         { pt: 'Leflunomida',         es: 'Leflunomida' },
+    'benzbromarona':       { pt: 'Benzbromarona',       es: 'Benzbromarona' },
+    'pegloticase':         { pt: 'Pegloticase',         es: 'Pegloticasa' },
+    'hidroxicloroquina':   { pt: 'Hidroxicloroquina',   es: 'Hidroxicloroquina' },
+    /* ── BUILD 270 — Bloco INTERACOES_DB do Grupo 8 (reumato): gaps de
+       autocomplete (Regra 3) identificados nos alvos de interação
+       submetidos para leflunomida→colestiramina e sulfassalazina→
+       ciprofloxacino. 'ciprofloxacino' já existia em
+       LISTA_MEDS_DISPONIVEIS_RAW (bucket Fluoroquinolonas) mas nunca
+       tinha chave própria em DRUG_DISPLAY_NAMES — corrigido aqui.
+       'colestiramina' possui schema completo em database/cardio.js
+       (Grupo 57) mas nunca teve entrada de autocomplete — corrigido. ── */
+    'colestiramina':       { pt: 'Colestiramina',       es: 'Colestiramina' },
+    'ciprofloxacino':      { pt: 'Ciprofloxacino',      es: 'Ciprofloxacino' },
+    /* ── BUILD 271 — Grupo 9 (database/analgesicos.js): Reumatologia/
+       Transplante — Tacrolimo, Micofenolato de Mofetila, Ciclofosfamida,
+       Adalimumabe + alvo de interação "aciclovir" (gap de exibição) e
+       "antiacido" (já possuía aliases em DRUG_ALIASES e rótulo em
+       LISTA_MEDS_DISPONIVEIS_RAW, mas nunca teve chave própria aqui).
+       "Ciclosporina" (Grupo 8) já existia — não duplicada. ── */
+    'tacrolimo':           { pt: 'Tacrolimo',           es: 'Tacrolimus' },
+    'micofenolato_mofetila': { pt: 'Micofenolato de Mofetila', es: 'Micofenolato de Mofetilo' },
+    'ciclofosfamida':      { pt: 'Ciclofosfamida',       es: 'Ciclofosfamida' },
+    'adalimumabe':         { pt: 'Adalimumabe',          es: 'Adalimumab' },
+    'aciclovir':           { pt: 'Aciclovir',            es: 'Aciclovir' },
+    'antiacido':           { pt: 'Antiácido',            es: 'Antiácido' },
+    /* ── BUILD 272 — Grupo 10 (database/analgesicos.js): Reumatologia —
+       Etanercepte (Imunobiológico Anti-TNF). Alvos de interação
+       (vacinas_vivas, anakinra, abatacepte, ciclofosfamida) já
+       tratados em builds anteriores — sem ação adicional necessária. ── */
+    'etanercepte':         { pt: 'Etanercepte',          es: 'Etanercept' },
     'tetraciclina':        { pt: 'Tetraciclina',        es: 'Tetraciclina' },
     'doxiciclina':         { pt: 'Doxiciclina',         es: 'Doxiciclina' },
     'tizanidina':          { pt: 'Tizanidina',          es: 'Tizanidina' },
@@ -20521,7 +20559,9 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     /* AINEs adicionais */
     'piroxicam':           { pt: 'Piroxicam',           es: 'Piroxicam' },
     'cetoprofeno':         { pt: 'Cetoprofeno',         es: 'Cetoprofeno' },
-    'naproxeno':           { pt: 'Naproxeno',           es: 'Naproxeno' },
+    /* 'naproxeno' removido daqui — chave duplicada (BUILD 264 QA):
+       já definida acima na linha ~20402 com valor idêntico. Consolidado
+       em uma única definição para eliminar redundância de código. */
     /* Sulfonamidas */
     'cotrimoxazol':        { pt: 'Cotrimoxazol',        es: 'Cotrimoxazol' },
     /* Outros */
@@ -20530,6 +20570,64 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     'nitrofurantoina':     { pt: 'Nitrofurantoína',     es: 'Nitrofurantoína' },
     'fosfomicina':         { pt: 'Fosfomicina',         es: 'Fosfomicina' },
     'tedizolida':          { pt: 'Tedizolida',          es: 'Tedizolida' },
+    /* Hipertensão Arterial Pulmonar (Grupo 73) */
+    'bosentana':           { pt: 'Bosentana',           es: 'Bosentán' },
+    'ambrisentana':        { pt: 'Ambrisentana',        es: 'Ambrisentán' },
+    'macitentana':         { pt: 'Macitentana',         es: 'Macitentán' },
+    'riociguate':          { pt: 'Riociguate',          es: 'Riociguat' },
+    'selexipague':         { pt: 'Selexipague',         es: 'Selexipag' },
+    'epoprostenol':        { pt: 'Epoprostenol',        es: 'Epoprostenol' },
+    'treprostinil':        { pt: 'Treprostinil',        es: 'Treprostinil' },
+    'iloprosta':           { pt: 'Iloprosta',           es: 'Iloprost' },
+    /* Falência Autonômica / Hipotensão Ortostática Neurogênica (Grupo 74 — LOTE 9) */
+    'midodrina':           { pt: 'Midodrina',           es: 'Midodrina' },
+    'fludrocortisona':     { pt: 'Fludrocortisona',     es: 'Fludrocortisona' },
+    'droxidopa':           { pt: 'Droxidopa',           es: 'Droxidopa' },
+    /* Antídotos/Amiloidose Cardíaca — siRNA/TTR (Grupo 75 — LOTE 10) */
+    'digoxin_immune_fab':  { pt: 'Anticorpos Antidigoxina', es: 'Anticuerpos Antidigoxina' },
+    'acoramidis':          { pt: 'Acoramidis',          es: 'Acoramidis' },
+    'patisiran':           { pt: 'Patisirana',           es: 'Patisirán' },
+    /* Amiloidose TTR siRNA/ASO 2ª geração + Inibidores de Miosina Cardíaca (Grupo 76 — LOTE 11) */
+    'vutrisiran':          { pt: 'Vutrisirana',          es: 'Vutrisirán' },
+    'inotersen':           { pt: 'Inotersena',           es: 'Inotersen' },
+    'mavacamten':          { pt: 'Mavacamten',           es: 'Mavacamten' },
+    'aficamten':           { pt: 'Aficamten',            es: 'Aficamten' },
+    /* BUILD 261 — ajuste pós-LOTE 11: fármacos já existentes em cardio.js
+       (Grupos 41/42/43/44) e/ou já usados como alvo em INTERACOES_DB, mas
+       que NUNCA tinham entrada em DRUG_DISPLAY_NAMES/LISTA_MEDS_DISPONIVEIS_RAW
+       — portanto eram invisíveis/inacessíveis no autocomplete do verificador
+       de interações. "teofilina" não possui schema de dose próprio (nunca
+       existiu em nenhum banco de fármacos), mas já é citada como alvo de
+       interação em múltiplos nós desde builds anteriores; entrada adicionada
+       aqui apenas para fins de seleção no motor de interações. */
+    'cilostazol':          { pt: 'Cilostazol',           es: 'Cilostazol' },
+    'pentoxifilina':       { pt: 'Pentoxifilina',        es: 'Pentoxifilina' },
+    'verapamil':           { pt: 'Verapamil',            es: 'Verapamilo' },
+    'diltiazem':           { pt: 'Diltiazem',            es: 'Diltiazem' },
+    'teofilina':           { pt: 'Teofilina',            es: 'Teofilina' },
+    /* BUILD 262 — Grupo 1 (database/analgesicos.js): Paracetamol/Metamizol
+       + fármacos já existentes em outros bancos (antimicrobianos.js:
+       isoniazida; psicofarmacos.js: clorpromazina, bupropiona; cardio.js:
+       acido_acetilsalicilico) e/ou citados como alvo em INTERACOES_DB
+       (ciclosporina, sem schema de dose próprio em nenhum banco), mas
+       ausentes do autocomplete do verificador de interações. */
+    'paracetamol':         { pt: 'Paracetamol',          es: 'Paracetamol / Acetaminofén' },
+    'metamizol':           { pt: 'Dipirona',             es: 'Metamizol' },
+    'isoniazida':          { pt: 'Isoniazida',           es: 'Isoniazida' },
+    'ciclosporina':        { pt: 'Ciclosporina',         es: 'Ciclosporina' },
+    'acido_acetilsalicilico': { pt: 'Ácido Acetilsalicílico (AAS)', es: 'Ácido Acetilsalicílico (AAS)' },
+    'clorpromazina':       { pt: 'Clorpromazina',        es: 'Clorpromazina' },
+    'bupropiona':          { pt: 'Bupropiona',           es: 'Bupropión' },
+    /* BUILD 263 — Grupo 2 (database/analgesicos.js): Ibuprofeno ativado
+       (AAS isolado como duplicata — ver database/analgesicos.js). Lítio
+       e Heparina adicionados por serem alvos de interação de builds
+       anteriores (fluoxetina→litio, AAS→heparina, etc.) que, até então,
+       nunca tinham entrada própria em DRUG_DISPLAY_NAMES/
+       LISTA_MEDS_DISPONIVEIS_RAW — mesma lacuna identificada no BUILD 261.
+       "ibuprofeno" já possuía entrada própria desde antes deste build
+       (bloco AINEs, linha ~20400) — não duplicado aqui. */
+    'litio':               { pt: 'Lítio',                es: 'Litio' },
+    'heparina':            { pt: 'Heparina',             es: 'Heparina' },
   };
 
   /* ── Mapa inverso: nome ES normalizado → chave canônica PT ──
@@ -20670,7 +20768,10 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     'Tizanidina',
     /* ── AINEs ── */
     'Ibuprofeno', 'Diclofenaco', 'Naproxeno', 'Cetoprofeno',
-    'Meloxicam', 'Celecoxibe', 'Nimesulida', 'Piroxicam',
+    'Meloxicam', 'Celecoxibe', 'Nimesulida', 'Piroxicam', 'Cetorolaco',
+    'Indometacina', 'Aceclofenaco', 'Etoricoxibe',
+    /* ── Anestésicos locais (BUILD 267) ── */
+    'Lidocaína',
     /* ── IPDe5 ── */
     'Tadalafila', 'Sildenafila', 'Vardenafila',
     /* ── Nitratos ── */
@@ -20730,7 +20831,79 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     /* ── Redutores LDL-C/TG não estatínicos — ANGPTL3/MTP/ApoB antisense/EPA (BUILD 253.18) ── */
     'Evinacumabe', 'Lomitapida', 'Mipomersen', 'Icosapento Etílico', 'Ômega-3',
     /* ── iSGLT2/iSGLT1-2 cardiorrenais + sGC + ativador de miosina (BUILD 253.19) ── */
-    'Dapagliflozina', 'Empagliflozina', 'Sotagliflozina', 'Vericiguat', 'Omecamtiv Mecarbil'
+    'Dapagliflozina', 'Empagliflozina', 'Sotagliflozina', 'Vericiguat', 'Omecamtiv Mecarbil',
+    /* ── Hipertensão Arterial Pulmonar — ERA / sGC / IP-agonista / Prostanoides (Grupo 73) ── */
+    'Bosentana', 'Ambrisentana', 'Macitentana', 'Riociguate', 'Selexipague',
+    'Epoprostenol', 'Treprostinil', 'Iloprosta',
+    /* ── Falência Autonômica / Hipotensão Ortostática Neurogênica (Grupo 74 — LOTE 9) ── */
+    'Midodrina', 'Fludrocortisona', 'Droxidopa',
+    /* ── Antídotos/Amiloidose Cardíaca — siRNA/TTR (Grupo 75 — LOTE 10) ── */
+    'Anticorpos Antidigoxina', 'Acoramidis', 'Patisirana',
+    /* ── Amiloidose TTR siRNA/ASO 2ª geração + Inibidores de Miosina Cardíaca (Grupo 76 — LOTE 11) ── */
+    'Vutrisirana', 'Inotersena', 'Mavacamten', 'Aficamten',
+    /* ── BUILD 261 — fármacos pré-existentes em cardio.js (Grupos 41/42/43/44)
+       e/ou já usados como alvo em INTERACOES_DB, ausentes até então do
+       autocomplete do verificador de interações ── */
+    'Cilostazol', 'Pentoxifilina', 'Verapamil', 'Diltiazem', 'Teofilina',
+    /* ── BUILD 262 — Analgésicos/Antipiréticos não opioides (Grupo 1,
+       database/analgesicos.js) + alvos de interação ausentes do
+       autocomplete (isoniazida, ciclosporina, AAS, clorpromazina).
+       Nota: "Bupropiona" já existe na lista (bloco ISRN/Atípicos,
+       BUILD 250) — não duplicada aqui. ── */
+    'Paracetamol', 'Dipirona', 'Isoniazida', 'Ciclosporina',
+    'Ácido Acetilsalicílico', 'Clorpromazina',
+    /* ── BUILD 263 — Grupo 2 (database/analgesicos.js): AINEs.
+       Nota: "Ibuprofeno" já existe na lista (bloco AINEs, linha ~20722)
+       — não duplicado aqui. "Lítio" e "Heparina" adicionados por serem
+       alvos de interação ausentes do autocomplete (lição do BUILD 261
+       aplicada preventivamente). ── */
+    'Lítio', 'Heparina',
+    /* ── BUILD 266 — Grupo 5 (database/analgesicos.js): AINEs clássicos +
+       Coxibes (indometacina, aceclofenaco, etoricoxibe, celecoxibe).
+       "Celecoxibe" já existe na lista (bloco AINEs, linha ~20738) — não
+       duplicada aqui. "Anticoncepcional Hormonal" adicionado por ser
+       alvo de interação (etoricoxibe×anticoncepcional_hormonal)
+       genuinamente ausente do autocomplete até então. ── */
+    'Anticoncepcional Hormonal',
+    /* ── BUILD 267 — Grupo 6 (database/analgesicos.js): AINE hepatotóxico +
+       dor neuropática (nimesulida, gabapentina, pregabalina, lidocaína).
+       "Nimesulida", "Gabapentina" e "Pregabalina" já existem na lista
+       (blocos AINEs e Anticonvulsivantes) — não duplicadas aqui.
+       "Lidocaína" adicionada por ser genuinamente ausente até então. ── */
+    /* ── BUILD 268 — Grupo 7 (database/analgesicos.js): Gota/Hiperuricemia +
+       Analgésicos Tópicos e Antagonistas Opioides (alopurinol, febuxostate,
+       probenecida, capsaicina, naloxona, naltrexona, nalmefeno) + alvos de
+       interação (azatioprina, mercaptopurina, amoxicilina). "Colchicina" e
+       "Metotrexato" já existiam na lista — não duplicados aqui. ── */
+    'Alopurinol', 'Febuxostate', 'Probenecida', 'Capsaicina', 'Naloxona',
+    'Naltrexona', 'Nalmefeno', 'Azatioprina', 'Mercaptopurina', 'Amoxicilina',
+    /* ── BUILD 269 — Grupo 8 (database/analgesicos.js): Reumatologia —
+       DMARDs/Imunossupressores/Uricosúricos (sulfassalazina, leflunomida,
+       azatioprina, ciclosporina, benzbromarona, pegloticase, metotrexato,
+       hidroxicloroquina). "Azatioprina", "Ciclosporina" e "Metotrexato"
+       já existiam na lista — não duplicados aqui. Nenhum bloco
+       INTERACOES_DB foi submetido com este lote. ── */
+    'Sulfassalazina', 'Leflunomida', 'Benzbromarona', 'Pegloticase',
+    'Hidroxicloroquina',
+    /* ── BUILD 270 — Bloco INTERACOES_DB do Grupo 8 (reumato): 'Colestiramina'
+       (alvo de leflunomida→colestiramina) possui schema completo em
+       database/cardio.js (Grupo 57) mas nunca teve entrada nesta lista de
+       autocomplete — corrigido (Regra 3). 'Ciprofloxacino' já constava
+       acima (bucket Fluoroqu inolonas). ── */
+    'Colestiramina',
+    /* ── BUILD 271 — Grupo 9 (database/analgesicos.js): Reumatologia/
+       Transplante — Tacrolimo, Micofenolato de Mofetila, Ciclofosfamida,
+       Adalimumabe, além do alvo de interação 'Aciclovir' (gap de
+       exibição). 'Ciclosporina' já constava na lista (bucket próprio) —
+       não duplicada. 'Antiácido' já constava (linha ~20826) — apenas a
+       chave normalizada 'antiacido' estava faltando em
+       DRUG_DISPLAY_NAMES (corrigida acima), sem necessidade de
+       duplicar o rótulo aqui. ── */
+    'Tacrolimo', 'Micofenolato de Mofetila', 'Ciclofosfamida', 'Adalimumabe',
+    'Aciclovir',
+    /* ── BUILD 272 — Grupo 10 (database/analgesicos.js): Reumatologia —
+       Etanercepte (Imunobiológico Anti-TNF). ── */
+    'Etanercepte',
   ];
 
   /* Função: obtém a lista de medicamentos exibida no idioma ativo */
@@ -21030,9 +21203,19 @@ function _adaptExternalDB(dbObj, categoryLabel) {
       el.classList.remove('active');
     });
 
-    /* Mostra aviso para não reconhecidos */
+    /* ══════════════════════════════════════════════════════════════
+       BUILD 256 — FIX A4/A5: feedback visual explícito para tokens
+       digitados em texto livre que NÃO foram encontrados na base de
+       fármacos (nem por alias, nem por match exato/fuzzy). Antes,
+       esses termos eram apenas logados no console (invisível para o
+       usuário final) e silenciosamente descartados — o médico podia
+       digitar 3 fármacos, errar a grafia de 1, e a checagem rodar
+       normalmente com apenas 2, sem qualquer aviso de perda de dado.
+    ══════════════════════════════════════════════════════════════ */
     if (unresolved.length > 0) {
-      _mostrarToast((isES ? '⚠️ No reconocido: ' : '⚠️ Não reconhecido: ') + unresolved.join(', '));
+      const msgPt = `⚠️ Os seguintes termos não foram encontrados e foram ignorados: ${unresolved.join(', ')}`;
+      const msgEs = `⚠️ Los siguientes términos no fueron encontrados y fueron ignorados: ${unresolved.join(', ')}`;
+      _mostrarToast(isES ? msgEs : msgPt);
     }
 
     /* Auto-verificar se já tem 2+ */
@@ -21087,17 +21270,26 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     if (!toast) {
       toast = document.createElement('div');
       toast.id = 'intx-v3-toast';
-      toast.style.cssText = 'position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:#2d2545;color:#fff;padding:12px 22px;border-radius:30px;font-size:14px;z-index:99999;opacity:0;transition:all .3s;pointer-events:none;border:1px solid rgba(108,92,231,.5);';
+      /* BUILD 256 — FIX A4/A5: max-width + white-space:normal + line-height
+         adicionados para suportar mensagens mais longas (lista de termos
+         não reconhecidos), sem estourar a tela em mobile. O pill original
+         (largura livre, texto em linha única) só era seguro para avisos
+         curtos como "Máximo de 5 fármacos permitido". */
+      toast.style.cssText = 'position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:#2d2545;color:#fff;padding:12px 22px;border-radius:18px;font-size:14px;line-height:1.4;z-index:99999;opacity:0;transition:all .3s;pointer-events:none;border:1px solid rgba(108,92,231,.5);max-width:min(92vw,420px);white-space:normal;text-align:center;box-shadow:0 8px 28px rgba(0,0,0,0.35);';
       document.body.appendChild(toast);
     }
     toast.textContent = msg;
     toast.style.opacity = '1';
     toast.style.transform = 'translateX(-50%) translateY(0)';
     clearTimeout(_toastTimer);
+    /* Duração proporcional ao tamanho da mensagem (mín. 2600ms, +35ms/char
+       além de 40 chars, teto de 5200ms) — dá tempo de ler avisos com
+       múltiplos termos não reconhecidos sem prender o toast na tela. */
+    const dur = Math.min(5200, Math.max(2600, 2600 + (msg.length - 40) * 35));
     _toastTimer = setTimeout(() => {
       toast.style.opacity = '0';
       toast.style.transform = 'translateX(-50%) translateY(20px)';
-    }, 2600);
+    }, dur);
   }
 
   /* ══════════════════════════════════════════════
@@ -21640,9 +21832,13 @@ document.addEventListener('DOMContentLoaded', () => {
   _injectObjectDB(window.ANTIMICROBIANOS_DRUGS_DB, 'Antimicrobiano');
   _injectObjectDB(window.PSICOFARMACOS_DRUGS_DB,   'Psicofármaco');
   _injectObjectDB(window.CARDIO_DRUGS_DB,           'Cardiovascular'); /* ← bug corrigido */
+  /* BUILD 262 — ANALGESICOS_DRUGS_DB migrado de schema [] (nunca populado)
+     para schema {chave: {...}} estático (padrão dos Grupos 73–76 de
+     cardio.js), portanto passa a usar _injectObjectDB em vez de
+     _injectArrayDB. Ver database/analgesicos.js para detalhes. */
+  _injectObjectDB(window.ANALGESICOS_DRUGS_DB,      'Analgésico e Antipirético');
 
   /* ── Schema [] ── */
-  _injectArrayDB(window.ANALGESICOS_DRUGS_DB);
   _injectArrayDB(window.ANTICOAG_DRUGS_DB);
   _injectArrayDB(window.ENDOCRINO_DRUGS_DB);
   _injectArrayDB(window.GASTRO_DRUGS_DB);
@@ -21812,7 +22008,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ...(window.ANTIMICROBIANOS_DRUGS_DB || {}),
     ...(window.PSICOFARMACOS_DRUGS_DB   || {}),
     ...(window.CARDIO_DRUGS_DB          || {}),
-    ...Object.fromEntries((window.ANALGESICOS_DRUGS_DB  || []).filter(d=>d?.id).map(d=>[d.id, d])),
+    ...(window.ANALGESICOS_DRUGS_DB      || {}), /* BUILD 262: schema objeto-mapa */
     ...Object.fromEntries((window.ANTICOAG_DRUGS_DB     || []).filter(d=>d?.id).map(d=>[d.id, d])),
     ...Object.fromEntries((window.ENDOCRINO_DRUGS_DB    || []).filter(d=>d?.id).map(d=>[d.id, d])),
     ...Object.fromEntries((window.GASTRO_DRUGS_DB       || []).filter(d=>d?.id).map(d=>[d.id, d])),
@@ -22078,18 +22274,32 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof initInfusionDatabase === 'function') initInfusionDatabase();
   if (typeof setInfusionMode === 'function') setInfusionMode('free');
 
-  /* ── FIX 2: ScrollIntoView + padding dinâmico para teclado virtual WebView ── */
+  /* ── FIX 2 (BUILD 254): scrollIntoView REMOVIDO — causava o "drama da
+     acomodação" (tela pulando/descendo sempre que um input recebia foco,
+     em TODOS os campos da aplicação, com 320ms de delay + animação
+     smooth/center). A compensação de espaço para o teclado virtual
+     continua sendo feita apenas via padding-bottom dinâmico; o
+     travamento de overscroll e a altura segura (dvh) agora ficam a
+     cargo do CSS em css/build254-critical-fixes.css. ── */
   const scrollEl = document.getElementById('scroll-content');
   const allInputs = document.querySelectorAll('.input-field, .drug-search, input, textarea');
 
-  allInputs.forEach(inp => {
+  /* ════════════════════════════════════════════════════════════════════════════
+     BUILD 256 — FIX C1: guarda `data-focus-bound` (fonte única de verdade)
+     Evita double-binding de focus/blur quando o MESMO nó DOM é
+     alcançado tanto por este loop estático (boot) quanto pelo
+     `inputObserver` (MutationObserver, mais abaixo neste arquivo) —
+     ambos agora chamam `_bindInputFocusPadding()`, que só anexa os
+     listeners UMA única vez por elemento, mesmo que a função seja
+     chamada novamente para o mesmo input.
+  ════════════════════════════════════════════════════════════════════════════ */
+  function _bindInputFocusPadding(inp) {
+    if (!inp || inp.dataset.focusBound === '1') return; /* já vinculado — ignora */
+    inp.dataset.focusBound = '1';
     inp.addEventListener('focus', () => {
       /* Padding extra para que o teclado não cubra o campo */
       if(scrollEl) scrollEl.style.paddingBottom = '40vh';
-      /* Delay pequeno para o teclado terminar de abrir */
-      setTimeout(() => {
-        inp.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 320);
+      /* BUILD 254: scrollIntoView removido — ver README changelog */
     });
     inp.addEventListener('blur', () => {
       /* Restaura padding original ao fechar teclado */
@@ -22097,7 +22307,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if(scrollEl) scrollEl.style.paddingBottom = '90px';
       }, 200);
     });
-  });
+  }
+  window._bindInputFocusPadding = _bindInputFocusPadding;
+
+  allInputs.forEach(_bindInputFocusPadding);
 
   /* ═══════════════════════════════════════════════════════════════
      HOME MOBILE-FIRST — Módulo JS v1.1
@@ -22153,6 +22366,12 @@ document.addEventListener('DOMContentLoaded', () => {
       pillsEl.style.display = 'grid';
     }
   }
+
+  /* BUILD 272 — expõe os helpers internos para o motor reativo
+     (js/build272-reactive-engine.js) reutilizar a MESMA matemática
+     de _hmComputeDerived()/_hmUpdatePills() em vez de duplicá-la. */
+  window._hmComputeDerived = _hmComputeDerived;
+  window._hmUpdatePills    = _hmUpdatePills;
 
   /* ─── Estado visual "fixado" do card ─── */
   function _hmSetFixedState(isFixed) {
@@ -23462,7 +23681,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  /* Observador para inputs adicionados dinamicamente (drug-search, sub-views) */
+  /* Observador para inputs adicionados dinamicamente (drug-search, sub-views)
+     BUILD 256 — FIX C1: agora delega para `_bindInputFocusPadding()`, a MESMA
+     função usada no loop estático do boot acima — fonte única de verdade.
+     O guard `data-focus-bound` garante que um input que já recebeu o
+     binding (seja pelo loop estático, seja por uma passada anterior deste
+     mesmo observer) NUNCA seja vinculado duas vezes, eliminando o risco
+     de handlers duplicados de focus/blur acumulando em re-renders
+     (innerHTML) que reaproveitam ou recriam inputs repetidamente. */
   const inputObserver = new MutationObserver(mutations => {
     mutations.forEach(m => {
       m.addedNodes.forEach(node => {
@@ -23471,13 +23697,9 @@ document.addEventListener('DOMContentLoaded', () => {
           ? [node]
           : [...node.querySelectorAll('input, textarea')];
         dynInputs.forEach(inp => {
-          inp.addEventListener('focus', () => {
-            if(scrollEl) scrollEl.style.paddingBottom = '40vh';
-            setTimeout(() => inp.scrollIntoView({ behavior: 'smooth', block: 'center' }), 320);
-          });
-          inp.addEventListener('blur', () => {
-            setTimeout(() => { if(scrollEl) scrollEl.style.paddingBottom = '90px'; }, 200);
-          });
+          if (typeof window._bindInputFocusPadding === 'function') {
+            window._bindInputFocusPadding(inp);
+          }
         });
       });
     });
@@ -23786,6 +24008,9 @@ window.MedCasesBridge = {
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
 <script defer src="js/deeplink-router.js"></script>
+
+<!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
+<script defer src="js/build272-reactive-engine.js"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>

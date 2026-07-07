@@ -48264,4 +48264,1159 @@
 
   }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 72 (Ativador seletivo da miosina cardíaca: omecamtiv_mecarbil) */
 
+  /* ══════════════════════════════════════════════════════════════════════════════
+     [REMOVIDO — ver nota abaixo] GRUPO 73 — HIPERTENSÃO ARTERIAL PULMONAR (HAP)
+     iPDE5 · Antagonistas do Receptor de Endotelina (ERA) · Estimulador de sGC ·
+     Agonista do Receptor de Prostaciclina (IP) · Prostanoides
+     Schema estático {pt,es} — sem calculate() — compatível com fallback
+     sintético do adaptador (_adaptExternalDB, index.html ~L20164).
+     NOTA DE INTEGRAÇÃO: dose.adult foi aninhada sob a subchave "standard"
+     (em vez de {pt,es} direto na raiz de adult) para que o adaptador
+     resolva corretamente o idioma ativo (PT/ES) — ver adultSubs em
+     _adaptExternalDB. Nenhum conteúdo clínico foi alterado.
+  ══════════════════════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ── SILDENAFILA ────────────────────────────────────────────────────── */
+    "sildenafila": {
+      name: { pt: 'Sildenafila', es: 'Sildenafilo' },
+      category: 'cardio',
+      class: { pt: 'Inibidor da Fosfodiesterase tipo 5 (PDE5)', es: 'Inhibidor de la Fosfodiesterasa tipo 5 (PDE5)' },
+      indications: {
+        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunção erétil'],
+        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunción eréctil']
+      },
+      commercialNames: { br: ['Revatio', 'Viagra'], ar: ['Revatio', 'Viagra'] },
+      presentation: { pt: ['Comprimidos 20 mg', '50 mg', '100 mg', 'Solução injetável 10 mg/12,5 mL'], es: ['Comprimidos 20 mg', '50 mg', '100 mg', 'Solución inyectable 10 mg/12,5 mL'] },
+      mechanism: {
+        pt: 'Inibe especificamente a PDE5, enzima responsável pela degradação do GMPc nos tecidos vasculares. O acúmulo de GMPc amplifica a via do óxido nítrico (NO), resultando em relaxamento do músculo liso e vasodilatação (potente no leito pulmonar e corpo cavernoso).',
+        es: 'Inhibe específicamente la PDE5, enzima responsable de la degradación del GMPc en los tejidos vasculares. La acumulación de GMPc amplifica la vía del óxido nítrico (NO), resultando en relajación del músculo liso y vasodilatación (potente en el lecho pulmonar y cuerpo cavernoso).'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'HAP: 20 mg VO 3x/dia (a cada 8h). (Doses maiores, 40-80 mg 3x/dia, usadas off-label em HAP refratária). IV: 10 mg 3x/dia.',
+            es: 'HAP: 20 mg VO 3 veces/día (cada 8h). (Dosis mayores, 40-80 mg 3 veces/día, usadas off-label en HAP refractaria). IV: 10 mg 3 veces/día.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Com ou sem alimentos. (Refeições hiperlipídicas retardam a absorção).'], es: ['Con o sin alimentos. (Las comidas ricas en grasas retrasan la absorción).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose em HAP.', es: 'Sin necesidad de ajuste de dosis en HAP.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Child-Pugh C: Não estudado. Cautela em disfunção grave.', es: 'Child-Pugh C: No estudiado. Precaución en disfunción grave.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Rubor facial', 'Epistaxe', 'Dispepsia', 'Alterações visuais (cianopsia - visão azulada)'], es: ['Cefalea', 'Rubor facial', 'Epistaxis', 'Dispepsia', 'Alteraciones visuales (cianopsia - visión azulada)'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão grave', 'Neuropatia Óptica Isquêmica Anterior Não Arterítica (NOIA-NA)', 'Priapismo', 'Perda súbita de audição'], es: ['Hipotensión grave', 'Neuropatía Óptica Isquémica Anterior No Arterítica (NOIA-NA)', 'Priapismo', 'Pérdida súbita de audición'] },
+      contraindications: {
+        absolute: { pt: ['Uso concomitante de NITRATOS de qualquer forma', 'Uso concomitante com estimuladores da sGC (riociguate)', 'Doença veno-oclusiva pulmonar (risco de edema pulmonar fatal)'], es: ['Uso concomitante de NITRATOS de cualquier forma', 'Uso concomitante con estimuladores de sGC (riociguat)', 'Enfermedad venooclusiva pulmonar (riesgo de edema pulmonar fatal)'] },
+        relative: { pt: ['Hipotensão basal grave', 'Retinite pigmentosa'], es: ['Hipotensión basal grave', 'Retinitis pigmentosa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Risco de colapso circulatório fatal se combinado com doadores de NO (nitratos). Aguardar 24h pós-sildenafila para dar nitrato.', es: 'Riesgo de colapso circulatorio fatal si se combina con donantes de NO (nitratos). Esperar 24h pos-sildenafilo para dar nitrato.' }
+      }
+    },
+
+    /* ── TADALAFILA ─────────────────────────────────────────────────────── */
+    "tadalafila": {
+      name: { pt: 'Tadalafila', es: 'Tadalafilo' },
+      category: 'cardio',
+      class: { pt: 'Inibidor da Fosfodiesterase tipo 5 (PDE5)', es: 'Inhibidor de la Fosfodiesterasa tipo 5 (PDE5)' },
+      indications: {
+        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunção erétil', 'Hiperplasia Prostática Benigna (HPB)'],
+        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunción eréctil', 'Hiperplasia Prostática Benigna (HPB)']
+      },
+      commercialNames: { br: ['Adcirca', 'Cialis'], ar: ['Adcirca', 'Cialis'] },
+      presentation: { pt: ['Comprimidos 5 mg', '20 mg'], es: ['Comprimidos 5 mg', '20 mg'] },
+      mechanism: {
+        pt: 'Inibidor reversível e seletivo da PDE5. Idêntico à sildenafila, mas possui uma meia-vida substancialmente mais longa (17,5 horas vs 4 horas), permitindo administração em dose única diária.',
+        es: 'Inhibidor reversible y selectivo de la PDE5. Idéntico al sildenafilo, pero posee una vida media sustancialmente más larga (17,5 horas vs 4 horas), permitiendo administración en dosis única diaria.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'HAP: 40 mg VO 1x/dia (dois comprimidos de 20 mg tomados juntos). Não dividir a dose.',
+            es: 'HAP: 40 mg VO 1 vez/día (dos comprimidos de 20 mg tomados juntos). No dividir la dosis.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Independente das refeições.'], es: ['Independiente de las comidas.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr 31-50: 20 mg/dia. ClCr < 30 ou Diálise: Evitar em HAP.', es: 'ClCr 31-50: 20 mg/día. ClCr < 30 o Diálisis: Evitar en HAP.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Child-Pugh A/B: Considerar 20 mg/dia. Child C: Evitar.', es: 'Child-Pugh A/B: Considerar 20 mg/día. Child C: Evitar.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Mialgia / Dor nas costas (mais comum que sildenafila devido à inibição leve da PDE11 do músculo esquelético)', 'Rubor'], es: ['Cefalea', 'Mialgia / Dolor de espalda (más común que sildenafilo debido a inhibición leve de PDE11 del músculo esquelético)', 'Rubor'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão severa', 'Priapismo', 'Alterações visuais isquêmicas'], es: ['Hipotensión severa', 'Priapismo', 'Alteraciones visuales isquémicas'] },
+      contraindications: {
+        absolute: { pt: ['Uso de NITRATOS', 'Uso de Riociguate'], es: ['Uso de NITRATOS', 'Uso de Riociguat'] },
+        relative: { pt: ['Retinite pigmentosa', 'Uso de alfa-bloqueadores (exceto tansulosina em dose baixa)'], es: ['Retinitis pigmentosa', 'Uso de bloqueadores alfa (excepto tamsulosina en dosis baja)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Devido à meia-vida longa, NITRATOS estão estritamente contraindicados por 48 HORAS após a última dose de tadalafila (diferente das 24h da sildenafila).', es: 'Debido a la vida media larga, los NITRATOS están estrictamente contraindicados por 48 HORAS tras la última dosis de tadalafilo (diferente a las 24h de sildenafilo).' }
+      }
+    }
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 73 (HAP: sildenafila · tadalafila — nomenclatura canônica sem sufixo HAP) */
+
+  /* ══════════════════════════════════════════════════════════════════════════════
+     BLOCO DESATIVADO — bosentana, ambrisentana, macitentana, riociguate,
+     selexipague, epoprostenol, treprostinil e iloprosta JÁ EXISTIAM nos
+     Grupos 26-28 deste arquivo com fichas técnicas MAIS COMPLETAS
+     (hemodynamicRules, pulmonaryHypertensionMonitoring, calculator,
+     pharmacokinetics, etc.). Para evitar sobrescrever esses dados mais
+     ricos, o bloco duplicado abaixo foi isolado em uma variável local
+     morta (nunca atribuída a window.CARDIO_DRUGS_DB) e portanto não tem
+     nenhum efeito em tempo de execução. Mantido apenas como histórico
+     da submissão original.
+  ══════════════════════════════════════════════════════════════════════════════ */
+  var _grupo73_duplicatas_desativadas_NAO_USAR = {
+
+    "bosentana": {
+      name: { pt: 'Bosentana', es: 'Bosentán' },
+      category: 'cardio',
+      class: { pt: 'Antagonista do Receptor de Endotelina (ERA) Não-seletivo', es: 'Antagonista del Receptor de Endotelina (ERA) No selectivo' },
+      indications: {
+        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS)'],
+        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS)']
+      },
+      commercialNames: { br: ['Tracleer'], ar: ['Tracleer'] },
+      presentation: { pt: ['Comprimidos 62,5 mg', '125 mg'], es: ['Comprimidos 62,5 mg', '125 mg'] },
+      mechanism: {
+        pt: 'Bloqueia competitivamente a ligação da endotelina-1 (potente vasoconstritor endógeno) aos receptores ETA e ETB no endotélio e músculo liso vascular pulmonar. O bloqueio resulta em vasodilatação pulmonar e redução da hipertrofia da parede vascular.',
+        es: 'Bloquea competitivamente la unión de la endotelina-1 (potente vasoconstrictor endógeno) a los receptores ETA y ETB en el endotelio y músculo liso vascular pulmonar. El bloqueo resulta en vasodilatación pulmonar y reducción de la hipertrofia de la pared vascular.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Inicial: 62,5 mg VO 12/12h por 4 semanas. Manutenção: 125 mg VO 12/12h.',
+            es: 'Inicial: 62,5 mg VO cada 12h por 4 semanas. Mantenimiento: 125 mg VO cada 12h.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Pela manhã e à noite, com ou sem alimentos.'], es: ['Por la mañana y por la noche, con o sin alimentos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em elevações de transaminases > 3x LSN ou disfunção hepática moderada/grave (Child-Pugh B e C).', es: 'Evitar en elevaciones de transaminasas > 3x LSN o disfunción hepática moderada/grave (Child-Pugh B y C).' } },
+      commonAdverseEffects: { pt: ['Edema periférico', 'Cefaleia', 'Congestão nasal', 'Palpitações'], es: ['Edema periférico', 'Cefalea', 'Congestión nasal', 'Palpitaciones'] },
+      dangerousAdverseEffects: { pt: ['Hepatotoxicidade dose-dependente (frequente)', 'Anemia severa', 'Teratogenicidade fetal grave'], es: ['Hepatotoxicidad dosis-dependiente (frecuente)', 'Anemia severa', 'Teratogenicidad fetal grave'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez (Categoria X)', 'Doença hepática pré-existente ou aminotransferases elevadas', 'Uso com ciclosporina A', 'Uso com glibenclamida'], es: ['Embarazo (Categoría X)', 'Enfermedad hepática preexistente o aminotransferasas elevadas', 'Uso con ciclosporina A', 'Uso con glibenclamida'] },
+        relative: { pt: ['Anemia basal (Hb < 10)'], es: ['Anemia basal (Hb < 10)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Boxed Warning: Hepatotoxicidade e Teratogenicidade. TGO/TGP devem ser dosadas MENSALMENTE. Controle de gravidez rigoroso obrigatório.', es: 'Boxed Warning: Hepatotoxicidad y Teratogenicidad. AST/ALT deben ser medidas MENSUALMENTE. Control de embarazo riguroso obligatorio.' }
+      }
+    },
+
+    /* ── AMBRISENTANA ───────────────────────────────────────────────────── */
+    "ambrisentana": {
+      name: { pt: 'Ambrisentana', es: 'Ambrisentán' },
+      category: 'cardio',
+      class: { pt: 'Antagonista do Receptor de Endotelina (ERA) Seletivo', es: 'Antagonista del Receptor de Endotelina (ERA) Selectivo' },
+      indications: {
+        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS)'],
+        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS)']
+      },
+      commercialNames: { br: ['Volibris'], ar: ['Volibris'] },
+      presentation: { pt: ['Comprimidos 5 mg', '10 mg'], es: ['Comprimidos 5 mg', '10 mg'] },
+      mechanism: {
+        pt: 'Bloqueador altamente SELETIVO para o receptor ETA de endotelina. Permite que o receptor ETB permaneça ativo, preservando a produção endotelial de óxido nítrico e prostaciclina (vasodilatadores) e a depuração de endotelina.',
+        es: 'Bloqueador altamente SELECTIVO para el receptor ETA de endotelina. Permite que el receptor ETB permanezca activo, preservando la producción endotelial de óxido nítrico y prostaciclina (vasodilatadores) y la depuración de endotelina.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Inicial: 5 mg VO 1x/dia. Pode ser titulada para 10 mg 1x/dia se tolerada.',
+            es: 'Inicial: 5 mg VO 1 vez/día. Puede titularse a 10 mg 1 vez/día si es tolerada.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Não dividir, esmagar ou mastigar o comprimido.'], es: ['No dividir, aplastar o masticar el comprimido.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em DRC grave.', es: 'Sin necesidad de ajuste en ERC grave.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em disfunção hepática grave. Risco de hepatotoxicidade MENOR que bosentana, mas requer atenção.', es: 'Evitar en disfunción hepática grave. Riesgo de hepatotoxicidad MENOR que bosentán, pero requiere atención.' } },
+      commonAdverseEffects: { pt: ['Edema periférico e retenção hídrica (mais intenso que outros ERAs)', 'Cefaleia', 'Anemia'], es: ['Edema periférico y retención hídrica (más intenso que otros ERAs)', 'Cefalea', 'Anemia'] },
+      dangerousAdverseEffects: { pt: ['Exacerbação de insuficiência cardíaca direita por retenção de fluidos', 'Teratogenicidade'], es: ['Exacerbación de insuficiencia cardíaca derecha por retención de fluidos', 'Teratogenicidad'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez (Categoria X)', 'Fibrose Pulmonar Idiopática (aumenta risco de progressão da doença)'], es: ['Embarazo (Categoría X)', 'Fibrosis Pulmonar Idiopática (aumenta riesgo de progresión de la enfermedad)'] },
+        relative: { pt: ['Anemia basal importante'], es: ['Anemia basal importante'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Risco Teratogênico (Boxed Warning). Testes de gravidez mensais exigidos em mulheres em idade fértil.', es: 'Riesgo Teratogénico (Boxed Warning). Pruebas de embarazo mensuales exigidas en mujeres en edad fértil.' }
+      }
+    },
+
+    /* ── MACITENTANA ────────────────────────────────────────────────────── */
+    "macitentana": {
+      name: { pt: 'Macitentana', es: 'Macitentán' },
+      category: 'cardio',
+      class: { pt: 'Antagonista do Receptor de Endotelina (ERA) Duplo/Otimizado', es: 'Antagonista del Receptor de Endotelina (ERA) Doble/Optimizado' },
+      indications: {
+        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS) para atrasar progressão da doença'],
+        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS) para retrasar progresión de la enfermedad']
+      },
+      commercialNames: { br: ['Opsumit'], ar: ['Opsumit'] },
+      presentation: { pt: ['Comprimidos 10 mg'], es: ['Comprimidos 10 mg'] },
+      mechanism: {
+        pt: 'Antagonista duplo (ETA/ETB) desenvolvido especificamente para maior eficácia e segurança tecidual. Possui lipofilicidade aprimorada e alta penetração no tecido pulmonar, prolongando o tempo de ocupação do receptor.',
+        es: 'Antagonista doble (ETA/ETB) desarrollado específicamente para mayor eficacia y seguridad tisular. Posee lipofilicidad mejorada y alta penetración en el tejido pulmonar, prolongando el tiempo de ocupación del receptor.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: '10 mg VO 1x/dia.',
+            es: '10 mg VO 1 vez/día.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Com ou sem alimentos.'], es: ['Con o sin alimentos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Nenhum ajuste necessário.', es: 'Ningún ajuste necesario.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar iniciar se transaminases > 3x LSN. Risco hepático MENOR que bosentana.', es: 'Evitar iniciar si transaminasas > 3x LSN. Riesgo hepático MENOR que bosentán.' } },
+      commonAdverseEffects: { pt: ['Nasofaringite', 'Cefaleia', 'Anemia (declínio de Hb é comum)', 'Bronquite'], es: ['Nasofaringitis', 'Cefalea', 'Anemia (declive de Hb es común)', 'Bronquitis'] },
+      dangerousAdverseEffects: { pt: ['Teratogenicidade (comum a toda a classe)', 'Edema periférico grave'], es: ['Teratogenicidad (común a toda la clase)', 'Edema periférico grave'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez (Categoria X)'], es: ['Embarazo (Categoría X)'] },
+        relative: { pt: ['Anemia grave basal'], es: ['Anemia basal grave'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Monitorar Hemoglobina basal, 1 mês e 3 meses após o início (declínio de 1 a 1,5 g/dL é esperado). REMS program para gravidez.', es: 'Monitorizar Hemoglobina basal, 1 mes y 3 meses tras el inicio (declive de 1 a 1,5 g/dL es esperado). Programa REMS para embarazo.' }
+      }
+    },
+
+    /* ── RIOCIGUATE ─────────────────────────────────────────────────────── */
+    "riociguate": {
+      name: { pt: 'Riociguate', es: 'Riociguat' },
+      category: 'cardio',
+      class: { pt: 'Estimulador da Guanilato Ciclase Solúvel (sGC)', es: 'Estimulador de la Guanilato Ciclasa Soluble (sGC)' },
+      indications: {
+        pt: ['Hipertensão Pulmonar Tromboembólica Crônica (HPTEC - Grupo 4) inoperável ou persistente pós-cirurgia', 'Hipertensão Arterial Pulmonar (HAP - Grupo 1)'],
+        es: ['Hipertensión Pulmonar Tromboembólica Crónica (HPTEC - Grupo 4) inoperable o persistente poscirugía', 'Hipertensión Arterial Pulmonar (HAP - Grupo 1)']
+      },
+      commercialNames: { br: ['Adempas'], ar: ['Adempas'] },
+      presentation: { pt: ['Comprimidos revestidos 0,5 mg', '1 mg', '1,5 mg', '2 mg', '2,5 mg'], es: ['Comprimidos recubiertos 0,5 mg', '1 mg', '1,5 mg', '2 mg', '2,5 mg'] },
+      mechanism: {
+        pt: 'Estimula diretamente a sGC de modo independente do óxido nítrico (NO) E sensibiliza a sGC ao NO endógeno. Aumenta a geração de GMPc intracelular, provocando vasodilatação pulmonar e sistêmica, além de efeitos antiproliferativos e antifibróticos.',
+        es: 'Estimula directamente la sGC de modo independiente del óxido nítrico (NO) Y sensibiliza la sGC al NO endógeno. Aumenta la generación de GMPc intracelular, provocando vasodilatación pulmonar y sistémica, además de efectos antiproliferativos y antifibróticos.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Inicial: 1 mg VO 3x/dia (a cada 8h). Titular a cada 2 semanas (+0,5 mg/dose) até máximo de 2,5 mg 3x/dia, dependendo da pressão arterial.',
+            es: 'Inicial: 1 mg VO 3 veces/día (cada 8h). Titular cada 2 semanas (+0,5 mg/dosis) hasta máximo de 2,5 mg 3 veces/día, dependiendo de la presión arterial.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Com ou sem alimentos.', 'Em caso de interrupção > 3 dias, reiniciar com 1 mg 3x/dia e retitular.'], es: ['Con o sin alimentos.', 'En caso de interrupción > 3 días, reiniciar con 1 mg 3 veces/día y retitular.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar se ClCr < 15 mL/min ou em diálise (falta de dados).', es: 'Evitar si ClCr < 15 mL/min o en diálisis (falta de datos).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em Child-Pugh C (insuficiência hepática grave).', es: 'Contraindicado en Child-Pugh C (insuficiencia hepática grave).' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Tontura', 'Dispepsia', 'Hipotensão', 'Vômitos'], es: ['Cefalea', 'Mareos', 'Dispepsia', 'Hipotensión', 'Vómitos'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão grave/síncope', 'Hemorragia pulmonar (hemoptise grave)', 'Teratogenicidade'], es: ['Hipotensión grave/síncope', 'Hemorragia pulmonar (hemoptisis grave)', 'Teratogenicidad'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez (Categoria X)', 'Uso concomitante de inibidores da PDE5 (sildenafila, tadalafila)', 'Uso de nitratos', 'Pneumonia intersticial idiopática com hipertensão pulmonar'], es: ['Embarazo (Categoría X)', 'Uso concomitante de inhibidores de la PDE5 (sildenafilo, tadalafilo)', 'Uso de nitratos', 'Neumonía intersticial idiopática con hipertensión pulmonar'] },
+        relative: { pt: ['Hipotensão sistêmica severa basal', 'Hemoptise recente'], es: ['Hipotensión sistémica severa basal', 'Hemoptisis reciente'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Boxed Warning para toxicidade embriofetal (exige testes mensais de gravidez). Contraindicado categoricamente com inibidores PDE5 e nitratos (colapso hemodinâmico). O tabagismo diminui os níveis séricos em até 60%.', es: 'Boxed Warning para toxicidad embriofetal (exige pruebas mensuales de embarazo). Contraindicado categóricamente con inhibidores PDE5 y nitratos (colapso hemodinámico). El tabaquismo disminuye los niveles séricos hasta en un 60%.' }
+      }
+    },
+
+    /* ── SELEXIPAGUE ────────────────────────────────────────────────────── */
+    "selexipague": {
+      name: { pt: 'Selexipague', es: 'Selexipag' },
+      category: 'cardio',
+      class: { pt: 'Agonista do Receptor de Prostaciclina (IP) (Não-prostanoide)', es: 'Agonista del Receptor de Prostaciclina (IP) (No prostanoide)' },
+      indications: {
+        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS) para retardar a progressão da doença'],
+        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS) para retrasar la progresión de la enfermedad']
+      },
+      commercialNames: { br: ['Uptravi'], ar: ['Uptravi'] },
+      presentation: { pt: ['Comprimidos 200, 400, 600, 800, 1000, 1200, 1400 e 1600 mcg'], es: ['Comprimidos 200, 400, 600, 800, 1000, 1200, 1400 y 1600 mcg'] },
+      mechanism: {
+        pt: 'Pró-fármaco. O fármaco e seu metabólito ativo são agonistas altamente seletivos do receptor IP da prostaciclina. Promovem vasodilatação pulmonar e inibem a proliferação do músculo liso vascular, superando a deficiência endógena de prostaciclina na HAP.',
+        es: 'Profármaco. El fármaco y su metabolito activo son agonistas altamente selectivos del receptor IP de la prostaciclina. Promueven vasodilatación pulmonar e inhiben la proliferación del músculo liso vascular, superando la deficiencia endógena de prostaciclina en la HAP.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Inicial: 200 mcg VO 12/12h. Titular a cada semana (incrementos de 200 mcg 12/12h) até o máximo tolerado (teto de 1600 mcg 12/12h).',
+            es: 'Inicial: 200 mcg VO cada 12h. Titular cada semana (incrementos de 200 mcg cada 12h) hasta el máximo tolerado (techo de 1600 mcg cada 12h).'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Tomar COM ALIMENTOS para melhorar a tolerabilidade e reduzir picos do fármaco que causam cefaleia e náusea.', 'Não partir ou mastigar.'], es: ['Tomar CON ALIMENTOS para mejorar la tolerabilidad y reducir picos del fármaco que causan cefalea y náusea.', 'No partir ni masticar.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr < 30 mL/min: Iniciar com 200 mcg 1x/dia. Faltam dados em diálise.', es: 'ClCr < 30 mL/min: Iniciar con 200 mcg 1 vez/día. Faltan datos en diálisis.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Child-Pugh B: Iniciar 200 mcg 1x/dia. Child-Pugh C: Contraindicado.', es: 'Child-Pugh B: Iniciar 200 mcg 1 vez/día. Child-Pugh C: Contraindicado.' } },
+      commonAdverseEffects: { pt: ['Cefaleia (muito comum)', 'Diarreia', 'Dor mandibular', 'Náuseas', 'Mialgia', 'Eritema/Rubor'], es: ['Cefalea (muy común)', 'Diarrea', 'Dolor mandibular', 'Náuseas', 'Mialgia', 'Eritema/Rubor'] },
+      dangerousAdverseEffects: { pt: ['Edema pulmonar em pacientes com doença veno-oclusiva pulmonar subjacente'], es: ['Edema pulmonar en pacientes con enfermedad venooclusiva pulmonar subyacente'] },
+      contraindications: {
+        absolute: { pt: ['Uso concomitante de inibidores potentes do CYP2C8 (ex: genfibrozila)'], es: ['Uso concomitante de inhibidores potentes del CYP2C8 (ej: gemfibrozilo)'] },
+        relative: { pt: ['Doença hepática severa'], es: ['Enfermedad hepática severa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Diferente dos prostanoides IV/SC, não há efeito rebote catastrófico na suspensão oral, mas a titulação exige tolerância aos efeitos colaterais.', es: 'A diferencia de los prostanoides IV/SC, no hay efecto rebote catastrófico en la suspensión oral, pero la titulación exige tolerancia a los efectos secundarios.' }
+      }
+    },
+
+    /* ── EPOPROSTENOL ───────────────────────────────────────────────────── */
+    "epoprostenol": {
+      name: { pt: 'Epoprostenol', es: 'Epoprostenol' },
+      category: 'cardio',
+      class: { pt: 'Prostanoide Sintético (Prostaciclina / PGI2)', es: 'Prostanoide Sintético (Prostaciclina / PGI2)' },
+      indications: {
+        pt: ['Hipertensão Arterial Pulmonar (HAP) grave (Classe Funcional III-IV)', 'Ponte para transplante de pulmão'],
+        es: ['Hipertensión Arterial Pulmonar (HAP) grave (Clase Funcional III-IV)', 'Puente para trasplante de pulmón']
+      },
+      commercialNames: { br: ['Flolan', 'Veletri'], ar: ['Flolan', 'Veletri'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 0,5 mg', '1,5 mg'], es: ['Vial liofilizado 0,5 mg', '1,5 mg'] },
+      mechanism: {
+        pt: 'Sal sintético da prostaciclina natural (PGI2). Provoca vasodilatação direta intensa no leito arterial pulmonar e sistêmico. Também atua como um inibidor muito potente da agregação plaquetária.',
+        es: 'Sal sintética de la prostaciclina natural (PGI2). Provoca vasodilatación directa intensa en el lecho arterial pulmonar y sistémico. También actúa como un inhibidor muy potente de la agregación plaquetaria.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Inicial: Infusão IV de 2 ng/kg/min. Titular a cada 15 min (+1 a 2 ng/kg/min) até o aparecimento de efeitos limitantes (cefaleia, náusea, hipotensão). Dose de manutenção típica varia de 20 a 40 ng/kg/min.',
+            es: 'Inicial: Infusión IV de 2 ng/kg/min. Titular cada 15 min (+1 a 2 ng/kg/min) hasta la aparición de efectos limitantes (cefalea, náusea, hipotensión). Dosis de mantenimiento típica varía de 20 a 40 ng/kg/min.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Infusão IV CONTÍNUA obrigatória através de cateter venoso central dedicado.', 'Meia-vida de apenas 3 a 5 MINUTOS. Necessita de bomba de infusão portátil ambulatorial.', 'Nunca interromper abruptamente.'], es: ['Infusión IV CONTINUA obligatoria a través de catéter venoso central dedicado.', 'Vida media de solo 3 a 5 MINUTOS. Necesita de bomba de infusión portátil ambulatoria.', 'Nunca interrumpir abruptamente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste específico formulado, porém clareamento pode estar reduzido.', es: 'Sin ajuste específico formulado, pero el aclaramiento puede estar reducido.' } },
+      commonAdverseEffects: { pt: ['Dor na mandíbula', 'Cefaleia', 'Eritema facial intenso', 'Diarreia', 'Dor óssea/muscular'], es: ['Dolor en la mandíbula', 'Cefalea', 'Eritema facial intenso', 'Diarrea', 'Dolor óseo/muscular'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão fatal', 'Hipertensão pulmonar de rebote e morte súbita (se interrupção da bomba)', 'Sepse de cateter central'], es: ['Hipotensión fatal', 'Hipertensión pulmonar de rebote y muerte súbita (si interrupción de la bomba)', 'Sepsis de catéter central'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência cardíaca sistólica esquerda com baixo débito crônico', 'Edema pulmonar na fase de teste da dose (indica doença veno-oclusiva pulmonar)'], es: ['Insuficiencia cardíaca sistólica izquierda con bajo gasto crónico', 'Edema pulmonar en la fase de prueba de dosis (indica enfermedad venooclusiva pulmonar)'] },
+        relative: { pt: ['Incapacidade do paciente de gerenciar a bomba de infusão'], es: ['Incapacidad del paciente de manejar la bomba de infusión'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ALERTA MÁXIMO: Uma falha na bomba de infusão ou obstrução do cateter causa rebote pulmonar fatal em minutos. Paciente DEVE carregar bomba e cateter de reserva (backup). Alto risco de sangramento aditivo.', es: 'ALERTA MÁXIMO: Una falla en la bomba de infusión u obstrucción del catéter causa rebote pulmonar fatal en minutos. El paciente DEBE cargar bomba y catéter de reserva (backup). Alto riesgo de sangrado aditivo.' }
+      }
+    },
+
+    /* ── TREPROSTINIL ───────────────────────────────────────────────────── */
+    "treprostinil": {
+      name: { pt: 'Treprostinil', es: 'Treprostinil' },
+      category: 'cardio',
+      class: { pt: 'Analogo da Prostaciclina (PGI2)', es: 'Análogo de la Prostaciclina (PGI2)' },
+      indications: {
+        pt: ['HAP (Classe Funcional II a IV) para diminuição dos sintomas', 'Apresentações Inalatória/Parenteral/Oral disponíveis'],
+        es: ['HAP (Clase Funcional II a IV) para disminución de los síntomas', 'Presentaciones Inhalatoria/Parenteral/Oral disponibles']
+      },
+      commercialNames: { br: ['Remodulin', 'Tyvaso'], ar: ['Remodulin'] },
+      presentation: { pt: ['Solução para infusão 1, 2, 5 e 10 mg/mL', 'Solução para inalação', 'Comprimidos liberação prolongada'], es: ['Solución para infusión 1, 2, 5 y 10 mg/mL', 'Solución para inhalación', 'Comprimidos liberación prolongada'] },
+      mechanism: {
+        pt: 'Análogo estável da prostaciclina. Promove potente vasodilatação dos leitos vasculares arterial sistêmico e pulmonar, e inibe a agregação plaquetária. Vantagem crítica: meia-vida de eliminação de ~4 horas (muito superior ao epoprostenol), o que reduz o risco de rebote súbito fatal.',
+        es: 'Análogo estable de la prostaciclina. Promueve potente vasodilatación de los lechos vasculares arterial sistémico y pulmonar, e inhibe la agregación plaquetaria. Ventaja crítica: vida media de eliminación de ~4 horas (muy superior al epoprostenol), lo que reduce el riesgo de rebote súbito fatal.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Infusão SC ou IV contínua: Iniciar a 1,25 ng/kg/min, titular +1,25 ng/kg/min por semana de acordo com clínica e efeitos colaterais.',
+            es: 'Infusión SC o IV continua: Iniciar a 1,25 ng/kg/min, titular +1,25 ng/kg/min por semana de acuerdo con clínica y efectos colaterales.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Infusão subcutânea (SC) contínua é a via preferencial (evita risco de sepse de cateter IV).', 'Dor no local da injeção SC é muito intensa e limitante.'], es: ['Infusión subcutánea (SC) continua es la vía preferencial (evita riesgo de sepsis de catéter IV).', 'Dolor en el sitio de inyección SC es muy intenso y limitante.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Child-Pugh A/B: Reduzir dose inicial consideravelmente e titular com lentidão extrema. Child-Pugh C: Evitar.', es: 'Child-Pugh A/B: Reducir dosis inicial considerablemente y titular con lentitud extrema. Child-Pugh C: Evitar.' } },
+      commonAdverseEffects: { pt: ['Dor severa no local de infusão (SC)', 'Cefaleia', 'Diarreia', 'Dor maxilar'], es: ['Dolor severo en el lugar de infusión (SC)', 'Cefalea', 'Diarrea', 'Dolor maxilar'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão sintomática', 'Risco de infecção de corrente sanguínea (se via IV)'], es: ['Hipotensión sintomática', 'Riesgo de infección del torrente sanguíneo (si vía IV)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave'], es: ['Hipersensibilidad grave'] },
+        relative: { pt: ['Pacientes com alto risco hemorrágico não controlado'], es: ['Pacientes con alto riesgo hemorrágico no controlado'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A interrupção acidental pode causar exacerbação de HAP, mas a janela de ação para restaurar a infusão é maior do que no epoprostenol. A dor SC exige gerenciamento agressivo da dor tópica/sistêmica.', es: 'La interrupción accidental puede causar exacerbación de HAP, pero la ventana de acción para restaurar la infusión es mayor que en epoprostenol. El dolor SC exige manejo agresivo del dolor tópico/sistémico.' }
+      }
+    },
+
+    /* ── ILOPROSTA ──────────────────────────────────────────────────────── */
+    "iloprosta": {
+      name: { pt: 'Iloprosta', es: 'Iloprost' },
+      category: 'cardio',
+      class: { pt: 'Analogo da Prostaciclina Inalatório', es: 'Análogo de la Prostaciclina Inhalatorio' },
+      indications: {
+        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS) em pacientes de classe funcional III para melhoria da tolerância ao exercício'],
+        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS) en pacientes de clase funcional III para mejoría de la tolerancia al ejercicio']
+      },
+      commercialNames: { br: ['Ventavis'], ar: ['Ventavis'] },
+      presentation: { pt: ['Solução para inalação (ampolas de 10 mcg/mL ou 20 mcg/mL)'], es: ['Solución para inhalación (ampollas de 10 mcg/mL o 20 mcg/mL)'] },
+      mechanism: {
+        pt: 'Análogo sintético da prostaciclina PGI2. A via inalatória dilata primariamente os leitos vasculares que ventilaram (ação seletiva pulmonar local), otimizando a relação ventilação-perfusão (V/Q) e minimizando a hipotensão sistêmica grave observada nos análogos intravenosos.',
+        es: 'Análogo sintético de la prostaciclina PGI2. La vía inhalatoria dilata primariamente los lechos vasculares que ventilaron (acción selectiva pulmonar local), optimizando la relación ventilación-perfusión (V/Q) y minimizando la hipotensión sistémica grave observada en los análogos intravenosos.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Inalação inicial de 2,5 mcg. Se tolerado, aumentar para 5 mcg por inalação. Frequência: 6 a 9 vezes por dia, sem exceder inalações a cada 2 horas (enquanto o paciente estiver acordado).',
+            es: 'Inhalación inicial de 2,5 mcg. Si es tolerado, aumentar a 5 mcg por inhalación. Frecuencia: 6 a 9 veces por día, sin exceder inhalaciones cada 2 horas (mientras el paciente esté despierto).'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Administrar exclusivamente via nebulizador específico recomendado (AAD - Adaptive Aerosol Delivery).', 'Evitar contato com os olhos e a pele.'], es: ['Administrar exclusivamente vía nebulizador específico recomendado (AAD - Adaptive Aerosol Delivery).', 'Evitar contacto con los ojos y la piel.'] },
+      renalAdjustment: { required: false, message: { pt: 'Nenhum ajuste formal, mas eliminar toxinas com cautela em DRC terminal.', es: 'Ningún ajuste formal, pero eliminar toxinas con precaución en ERC terminal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Em hepatopatia crônica (Child-Pugh A/B): Iniciar com 2,5 mcg com espaçamento maior. Child C: Evitar.', es: 'En hepatopatía crónica (Child-Pugh A/B): Iniciar con 2,5 mcg con espaciamiento mayor. Child C: Evitar.' } },
+      commonAdverseEffects: { pt: ['Rubor (flushing)', 'Tosse / Irritação orofaríngea', 'Cefaleia', 'Espasmo muscular mandibular'], es: ['Rubor (flushing)', 'Tos / Irritación orofaríngea', 'Cefalea', 'Espasmo muscular mandibular'] },
+      dangerousAdverseEffects: { pt: ['Broncoespasmo grave', 'Síncope (vasodilatação excessiva)'], es: ['Broncoespasmo grave', 'Síncope (vasodilatación excesiva)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave', 'Risco elevado de sangramento (úlcera, AVE hemorrágico recente)', 'Edema pulmonar grave secundário a doença cardíaca esquerda'], es: ['Hipersensibilidad grave', 'Alto riesgo de sangrado (úlcera, ACV hemorrágico reciente)', 'Edema pulmonar grave secundario a enfermedad cardíaca izquierda'] },
+        relative: { pt: ['Asma grave ou DPOC com hiperreatividade brônquica'], es: ['Asma grave o EPOC con hiperreactividad bronquial'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Apresenta inibição da agregação plaquetária; cautela ao administrar com anticoagulantes. Requer nebulizador inteligente para garantir dose exata pulmonar.', es: 'Presenta inhibición de la agregación plaquetaria; precaución al administrar con anticoagulantes. Requiere nebulizador inteligente para garantizar dosis exacta pulmonar.' }
+      }
+    }
+
+  }; /* fim bloco desativado _grupo73_duplicatas_desativadas_NAO_USAR — sem efeito, nunca atribuído a window.CARDIO_DRUGS_DB */
+
+  /* ══════════════════════════════════════════════════════════════════════════════
+     GRUPO 74 — LOTE 9: FALÊNCIA AUTONÔMICA / HIPOTENSÃO ORTOSTÁTICA NEUROGÊNICA
+     Midodrina · Fludrocortisona · Droxidopa
+     Schema estático {pt,es} — sem calculate() — compatível com fallback
+     sintético do adaptador (_adaptExternalDB, index.html).
+     NOTA DE INTEGRAÇÃO (BUILD 258): "idarucizumab" e "andexanet_alfa" da
+     submissão original do LOTE 9 foram identificados como DUPLICATAS das
+     entradas JÁ EXISTENTES e MAIS RICAS "idarucizumabe" e "andexanetAlfa"
+     (ambas no Grupo 31 — Trombolíticos/Antídotos, com monitoring/calculator/
+     interactions/reversalScope completos). Seguindo a disciplina de
+     "check antes de escrever" (mesma aplicada ao Grupo 73), essas 2
+     submissões duplicadas foram isoladas em variável morta abaixo, NUNCA
+     atribuída a window.CARDIO_DRUGS_DB — zero efeito em runtime. Apenas os
+     3 fármacos genuinamente novos (midodrina, fludrocortisona, droxidopa)
+     foram efetivamente ativados no banco.
+  ══════════════════════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ── MIDODRINA ──────────────────────────────────────────────────────── */
+    "midodrina": {
+      name: { pt: 'Midodrina', es: 'Midodrina' },
+      category: 'cardio',
+      class: { pt: 'Vasopressor (Agonista Alfa-1 Adrenérgico Seletivo)', es: 'Vasopresor (Agonista Alfa-1 Adrenérgico Selectivo)' },
+      indications: {
+        pt: ['Tratamento da hipotensão ortostática neurogênica grave secundária a falência autonômica (ex.: Doença de Parkinson, Atrofia de Múltiplos Sistemas, Neuropatia Diabética)'],
+        es: ['Tratamiento de la hipotensión ortostática neurogénica grave secundaria a falla autonómica (ej.: Enfermedad de Parkinson, Atrofia de Múltiples Sistemas, Neuropatía Diabética)']
+      },
+      commercialNames: { br: ['Gutron'], ar: ['Gutron', 'Midodrina'] },
+      presentation: { pt: ['Comprimidos 2,5 mg', '5 mg', '10 mg'], es: ['Comprimidos 2,5 mg', '5 mg', '10 mg'] },
+      mechanism: {
+        pt: 'Pró-fármaco convertido no metabólito ativo desglimidrina. Atua como agonista seletivo e potente dos receptores alfa-1 adrenérgicos na musculatura lisa vascular. Promove aumento da resistência vascular sistêmica arteriolar e venosa, elevando a pressão arterial e reduzindo o represamento venoso supino.',
+        es: 'Profármaco convertido en el metabolito activo desglimidrina. Actúa como agonista selectivo y potente de los receptores alfa-1 adrenérgicos en la musculatura lisa vascular. Promueve el aumento de la resistencia vascular sistémica arteriolar y venosa, elevando la presión arterial y reduciendo el estancamiento venoso supino.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Inicial: 2,5 mg VO 3x/dia (durante o período acordado/ativo). Pode ser titulada até 10 mg VO 3x/dia. Espaçar as doses em 3 a 4 horas. Última dose obrigatoriamente 4h antes de deitar.',
+            es: 'Inicial: 2,5 mg VO 3 veces/día (durante el período despierto/activo). Puede ser titulada hasta 10 mg VO 3 veces/día. Espaciar las dosis 3 a 4 horas. Última dosis obligatoriamente 4h antes de acostarse.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Tomar estritamente durante o período em que o paciente estiver na posição vertical (em pé/acordado).', 'NUNCA administrar antes de deitar ou no meio da noite para dormir.'], es: ['Tomar estrictamente durante el período en que el paciente esté en posición vertical (de pie/despierto).', 'NUNCE administrar antes de acostarse o en medio de la noche para dormir.'] },
+      renalAdjustment: {
+        required: true,
+        message: {
+          pt: 'Excreção ativa renal. Iniciar com 2,5 mg por dose e titular com cautela extrema se ClCr < 30 mL/min.',
+          es: 'Excreción activa renal. Iniciar con 2,5 mg por dosis y titular con precaución extrema si ClCr < 30 mL/min.'
+        }
+      },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste específico formulado.', es: 'Sin necesidad de ajuste específico formulado.' } },
+      commonAdverseEffects: { pt: ['Piloereção (arrepios na pele)', 'Prurido no couro cabeludo', 'Disúria / Retenção urinária', 'Parestesias'], es: ['Piloerección (escalofríos en la piel)', 'Prurito en el cuero cabelludo', 'Disuria / Retención urinaria', 'Parestesias'] },
+      dangerousAdverseEffects: { pt: ['Hipertensão supina severa (PAS > 180 mmHg ao deitar)', 'Bradicardia reflexa grave', 'Isquemia miocárdica'], es: ['Hipertensión supina severa (PAS > 180 mmHg al acostarse)', 'Bradicardia refleja grave', 'Isquemia miocárdica'] },
+      contraindications: {
+        absolute: { pt: ['Doença cardíaca orgânica grave', 'Insuficiência renal aguda ou nefropatia avançada', 'Retenção urinária aguda ou obstrução do colo vesical', 'Feocromocitoma', 'Hipertensão arterial supina persistente e grave'], es: ['Enfermedad cardíaca orgánica grave', 'Insuficiencia renal aguda o nefropatía avanzada', 'Retención urinaria aguda u obstrucción del cuello vesical', 'Feocromocitoma', 'Hipertensión arterial supina persistente y grave'] },
+        relative: { pt: ['Diabetes Mellitus (risco de distúrbio de esvaziamento vesical)'], es: ['Diabetes Mellitus (riesgo de trastorno de vaciado vesical)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ALERTA DE CAIXA PRETA: Pode causar elevação acentuada da PA em posição supina. Monitorar PA em pé e deitado. Elevar a cabeceira da cama em pelo menos 15-20 graus à noite.', es: 'ALERTA DE CAJA NEGRA: Puede causar elevación marcada de la PA en posición supina. Monitorizar PA de pie y acostado. Elevar la cabecera de la cama al menos 15-20 grados por la noche.' }
+      }
+    },
+
+    /* ── FLUDROCORTISONA ──────────────────────────────────────────────────── */
+    "fludrocortisona": {
+      name: { pt: 'Fludrocortisona', es: 'Fludrocortisona' },
+      category: 'cardio',
+      class: { pt: 'Mineralocorticoide Potente', es: 'Mineralocorticoide Potente' },
+      indications: {
+        pt: ['Insuficiência adrenocortical primária (Doença de Addison)', 'Tratamento da hipotensão ortostática neurogênica refratária (uso off-label consagrado)'],
+        es: ['Insuficiencia adrenocortical primaria (Enfermedad de Addison)', 'Tratamiento de la hipotensión ortostática neurogénica refractaria (uso off-label consagrado)']
+      },
+      commercialNames: { br: ['Florinefe'], ar: ['Florinef'] },
+      presentation: { pt: ['Comprimidos 0,1 mg'], es: ['Comprimidos 0,1 mg'] },
+      mechanism: {
+        pt: 'Corticosteroide sintético com atividade mineralocorticoreceptora extremamente potente. Promove aumento acentuado da reabsorção de sódio e água nos túbulos distais renais, expandindo o volume de fluido extracelular e plasmático, elevando a PA e induzindo excreção de potássio.',
+        es: 'Corticosteroide sintético con actividad mineralocorticoide extremadamente potente. Promueve un aumento marcado de la reabsorción de sodio y agua en los túbulos distales renales, expandiendo el volumen de fluido extracelular y plasmático, elevando la PA e induciendo la excreción de potasio.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Hipotensão ortostática: 0,1 mg VO 1x/dia (pela manhã). Pode ser titulada de 0,1 mg a 0,2 mg/dia. Monitorar peso e eletrólitos.',
+            es: 'Hipotensión ortostática: 0,1 mg VO 1 vez/día (por la mañana). Puede ser titulada de 0,1 mg a 0,2 mg/día. Monitorizar peso y electrolitos.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Administrar preferencialmente pela manhã.', 'Restrição moderada de sódio na dieta pode ser necessária se ocorrer edema excessivo.'], es: ['Administrar preferentemente por la mañana.', 'Restricción moderada de sodio en la dieta puede ser necesaria si ocurre edema excesivo.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose, mas monitorar retenção hídrica na DRC.', es: 'Sin necesidad de ajuste de dosis, pero monitorizar retención hídrica en ERC.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste específico.', es: 'Sin necesidad de ajuste específico.' } },
+      commonAdverseEffects: { pt: ['Hipocalemia (muito comum)', 'Edema periférico', 'Cefaleia', 'Ganho de peso'], es: ['Hipopotasemia (muy común)', 'Edema periférico', 'Cefalea', 'Ganancia de peso'] },
+      dangerousAdverseEffects: { pt: ['Insuficiência cardíaca congestiva (precipitada por sobrecarga volêmica)', 'Hipertensão severa', 'Hipocalemia grave arritmogênica'], es: ['Insuficiencia cardíaca congestiva (precipitada por sobrecarga volémica)', 'Hipertensión severa', 'Hipopotasemia grave arritmogénica'] },
+      contraindications: {
+        absolute: { pt: ['Infecções fúngicas sistêmicas não tratadas', 'Hipertensão arterial grave não controlada', 'Insuficiência cardíaca descompensada'], es: ['Infecciones fúngicas sistémicas no tratadas', 'Hipertensión arterial grave no controlada', 'Insuficiencia cardíaca descompensada'] },
+        relative: { pt: ['Diabetes Mellitus', 'Oesteoporose severa'], es: ['Diabetes Mellitus', 'Osteoporosis severa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Monitorar Potássio Sérico a cada 1-2 semanas no início e periodicamente. Suplementação de potássio é frequentemente necessária.', es: 'Monitorizar Potasio Sérico cada 1-2 semanas al inicio y periódicamente. La suplementación de potasio es frecuentemente necesaria.' }
+      }
+    },
+
+    /* ── DROXIDOPA ──────────────────────────────────────────────────────── */
+    "droxidopa": {
+      name: { pt: 'Droxidopa', es: 'Droxidopa' },
+      category: 'cardio',
+      class: { pt: 'Vasopressor (Precursor Sintético da Noradrenalina)', es: 'Vasopresor (Precursor Sintético de la Noradrenalina)' },
+      indications: {
+        pt: ['Tratamento da hipotensão ortostática neurogênica sintomática associada a falência autonômica primária.'],
+        es: ['Tratamiento de la hipotensión ortostática neurogénica sintomática asociada a falla autonómica primaria.']
+      },
+      commercialNames: { br: ['Northera'], ar: ['Northera'] },
+      presentation: { pt: ['Cápsulas 100 mg', '200 mg', '300 mg'], es: ['Cápsulas 100 mg', '200 mg', '300 mg'] },
+      mechanism: {
+        pt: 'Aminoácido sintético que atua como pró-fármaco. É clivado diretamente pela enzima dopa-descarboxilase (tanto central quanto perifericamente) sendo convertido em NORADRENALINA. Eleva os estoques sinápticos de noradrenalina, promovendo vasoconstrição periférica e aumento do tônus vascular.',
+        es: 'Aminoácido sintético que actúa como profármaco. Es escindido directamente por la enzima dopa-descarboxilasa (tanto central como periféricamente) siendo convertido en NORADRENALINA. Eleva los depósitos sinápticos de noradrenalina, promoviendo vasoconstricción periférica y aumento del tono vascular.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Inicial: 100 mg VO 3x/dia (manhã, meio-dia e tarde). Titular a cada 24-48h em incrementos de 100 mg 3x/dia até dose máxima de 600 mg VO 3x/dia. Última dose obrigatoriamente antes das 18h.',
+            es: 'Inicial: 100 mg VO 3 veces/día (mañana, mediodía y tarde). Titular cada 24-48h en incrementos de 100 mg 3 veces/día hasta dosis máxima de 600 mg VO 3 veces/día. Última dosis obligatoriamente antes de las 18h.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Tomar acordado, espaçando ao longo do dia.', 'Manter última dose pelo menos 4h antes de deitar para evitar picos hipertensivos supinos.'], es: ['Tomar despierto, espaciando a lo largo del día.', 'Mantener la última dosis al menos 4h antes de acostarse para evitar picos hipertensivos supinos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não estudado em ClCr < 30 mL/min. Usar com extrema cautela na DRC avançada.', es: 'No estudiado en ClCr < 30 mL/min. Usar con extrema precaución en ERC avanzada.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste específico formulado.', es: 'Sin necesidad de ajuste específico formulado.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Tontura', 'Náuseas', 'Hipertensão'], es: ['Cefalea', 'Mareos', 'Náuseas', 'Hipertensión'] },
+      dangerousAdverseEffects: { pt: ['Hipertensão supina grave', 'Isquemia coronariana ou cerebral reflexa', 'Exacerbação de arritmias cardíacas'], es: ['Hipertensión supina grave', 'Isquemia coronaria o cerebral refleja', 'Exacerbación de arritmias cardíacas'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave à droxidopa'], es: ['Hipersensibilidad grave a la droxidopa'] },
+        relative: { pt: ['Doença isquêmica cardíaca', 'Histórico de arritmias ventriculares'], es: ['Enfermedad isquémica cardíaca', 'Historial de arritmias ventriculares'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Boxed Warning: Risco crítico de Hipertensão Supina severa. Elevar a cabeceira da cama à noite. Avaliar PA supina antes e durante a titulação.', es: 'Boxed Warning: Riesgo crítico de Hipertensión Supina severa. Elevar la cabecera de la cama por la noche. Evaluar PA supina antes y durante la titulación.' }
+      }
+    }
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 74 (Falência Autonômica: midodrina · fludrocortisona · droxidopa) */
+
+  /* ══════════════════════════════════════════════════════════════════════════════
+     [DUPLICATAS DESATIVADAS — LOTE 9] idarucizumab · andexanet_alfa
+     Ambas as submissões abaixo são DUPLICATAS de entradas já existentes e mais
+     ricas em CARDIO_DRUGS_DB: "idarucizumabe" e "andexanetAlfa" (Grupo 31 —
+     Trombolíticos/Antídotos, com monitoring/calculator/interactions/
+     reversalScope completos). Isoladas nesta variável morta — NUNCA atribuída
+     a window.CARDIO_DRUGS_DB — para preservar o registro de auditoria da
+     submissão original sem sobrescrever os dados mais completos já em produção.
+  ══════════════════════════════════════════════════════════════════════════════ */
+  const _grupo74_duplicatas_desativadas_NAO_USAR = {
+
+    /* ── IDARUCIZUMAB (duplicata de "idarucizumabe", Grupo 31) ────────────── */
+    "idarucizumab": {
+      name: { pt: 'Idarucizumabe', es: 'Idarucizumab' },
+      category: 'cardio',
+      class: { pt: 'Antídoto Específico / Fragmento de Anticorpo Monoclonal Antidabigatrana', es: 'Antídoto Específico / Fragmento de Anticuerpo Monoclonal Antidabigatrán' },
+      indications: {
+        pt: ['Reversão específica dos efeitos anticoagulantes da dabigatrana em adultos quando: 1) Cirurgia de urgência/procedimento de emergência for necessário; 2) Sangramento ativo ameaçador à vida ou não controlado.'],
+        es: ['Reversión específica de los efectos anticoagulantes del dabigatrán en adultos cuando: 1) Cirugía de urgencia/procedimiento de emergencia sea necesario; 2) Sangrado activo amenazante para la vida o no controlado.']
+      },
+      commercialNames: { br: ['Praxbind'], ar: ['Praxbind'] },
+      presentation: { pt: ['Solução injetável 2,5 g/50 mL (embalagem com 2 frascos de 50 mL)'], es: ['Solución inyectable 2,5 g/50 mL (empaque con 2 viales de 50 mL)'] },
+      mechanism: {
+        pt: 'Fragmento de anticorpo monoclonal humanizado (Fab). Liga-se especificamente e com afinidade extrema à dabigatrana livre e neutraliza seu efeito inibitório sobre a trombina imediatamente, sem exercer efeito pró-coagulante intrínseco. A afinidade é ~350 vezes maior que a da dabigatrana pela trombina.',
+        es: 'Fragmento de anticuerpo monoclonal humanizado (Fab). Se une específicamente y con afinidad extrema al dabigatrán libre y neutraliza su efecto inhibitório sobre la trombina inmediatamente, sin ejercer efecto procoagulante intrínseco. La afinidad es ~350 veces mayor que la del dabigatrán por la trombina.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: '5 gramas IV, administrados em duas doses consecutivas de 2,5 g (50 mL) cada, por infusão IV rápida ou injeção em bólus direto.',
+            es: '5 gramos IV, administrados en dos dosis consecutivas de 2,5 g (50 mL) cada una, por infusión IV rápida o inyección en bolo directo.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Uso IV exclusivo.', 'Infundir o segundo frasco imediatamente após o término do primeiro.', 'Lavar a via de acesso com SF 0,9% antes da administração.'], es: ['Uso IV exclusivo.', 'Infundir el segundo vial inmediatamente después de terminar el primero.', 'Lavar la vía de acceso con SF 0,9% antes de la administración.'] },
+      renalAdjustment: { required: false, message: { pt: 'Nenhum ajuste necessário (embora o clearance de creatinina baixo reduza a eliminação do complexo, a reversão inicial é idêntica).', es: 'Ningún ajuste necesario (aunque el aclaramiento de creatinina bajo reduzca la eliminación del complejo, la reversión inicial es idéntica).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste de dosis.' } },
+      commonAdverseEffects: { pt: ['Hipocalemia', 'Constipação', 'Febre', 'Cefaleia'], es: ['Hipopotasemia', 'Estreñimiento', 'Fiebre', 'Cefalea'] },
+      dangerousAdverseEffects: { pt: ['Eventos tromboembólicos (devido à suspensão da anticoagulação e retorno ao estado protrombótico basal do paciente)'], es: ['Eventos tromboembólicos (debido a la suspensión de la anticoagulación y retorno al estado protrombótico basal del paciente)'] },
+      contraindications: {
+        absolute: { pt: ['Nenhuma contraindicação formal em situações de emergência com risco de morte'], es: ['Ninguna contraindicación formal en situaciones de emergencia con riesgo vital'] },
+        relative: { pt: ['Hipersensibilidade hereditária à frutose (contém sorbitol como excipiente)'], es: ['Hipersensibilidad hereditaria a la fructosa (contiene sorbitol como excipiente)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A reversão ocorre em MINUTOS. Reiniciar a anticoagulação com dabigatrana assim que clinicamente viável (ex.: 24h após o procedimento/estabilização) para evitar rebote trombótico.', es: 'La reversión ocurre en MINUTOS. Reiniciar la anticoagulación con dabigatrán tan pronto como sea clínicamente viable (ej.: 24h tras el procedimiento/estabilización) para evitar rebote trombótico.' }
+      }
+    },
+
+    /* ── ANDEXANET ALFA (duplicata de "andexanetAlfa", Grupo 31) ──────────── */
+    "andexanet_alfa": {
+      name: { pt: 'Andexanet Alfa', es: 'Andexanet alfa' },
+      category: 'cardio',
+      class: { pt: 'Antídoto Específico / Fator Xa Recombinante Inativado', es: 'Antídoto Específico / Factor Xa Recombinante Inactivado' },
+      indications: {
+        pt: ['Reversão da anticoagulação induzida por inibidores diretos do Fator Xa (Apixabana ou Rivaroxabana) em adultos enfrentando sangramento ativo com risco de morte ou não controlado.'],
+        es: ['Reversión de la anticoagulación inducida por inhibidores directos del Factor Xa (Apixabán o Rivaroxabán) en adultos enfrentando sangrado activo con riesgo vital o no controlado.']
+      },
+      commercialNames: { br: ['Ondexxya'], ar: ['Andexxa'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 200 mg'], es: ['Vial liofilizado 200 mg'] },
+      mechanism: {
+        pt: 'Proteína recombinante modificada que atua como um engodo (decoy). É estruturalmente idêntica ao Fator Xa humano, porém modificada para não clivar a protrombinase. Liga-se com afinidade altíssima aos inibidores de Xa livres (apixabana e rivaroxabana), sequestrando-os e liberando o Fator Xa nativo para restaurar a cascata de coagulação.',
+        es: 'Proteína recombinante modificada que actúa como un señuelo (decoy). Es estructuralmente idéntica al Factor Xa humano, pero modificada para no escindir la protrombinasa. Se une con afinidad altísima a los inhibidores de Xa libres (apixabán y rivaroxabán), secuestrándolos y liberando el Factor Xa nativo para restaurar la cascada de coagulación.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Dose depende do fármaco e tempo da última dose. Dose Baixa: Bolus IV 400 mg (30 mg/min) + infusão 4 mg/min por 120 min. Dose Alta: Bolus IV 800 mg (30 mg/min) + infusão 8 mg/min por 120 min.',
+            es: 'Dosis depende del fármaco y tiempo de la última dosis. Dosis Baja: Bolo IV 400 mg (30 mg/min) + infusión 4 mg/min por 120 min. Dosis Alta: Bolo IV 800 mg (30 mg/min) + infusión 8 mg/min por 120 min.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Uso IV contínuo exclusivo.', 'Reconstituir com água para injetáveis utilizando protocolo de dissolução suave (não agitar). Infusão contínua deve seguir imediatamente após o bólus.'], es: ['Uso IV continuo exclusivo.', 'Reconstituir con agua para inyectables utilizando protocolo de disolución suave (no agitar). La infusión continua debe seguir inmediatamente después del bolo.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste de dosis.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste de dosis.' } },
+      commonAdverseEffects: { pt: ['Rubor', 'Sensação de calor', 'Reações infusionais leves', 'Elevação transitória de D-Dímero'], es: ['Rubor', 'Sensación de calor', 'Reacciones infusionales leves', 'Elevación transitoria de Dímero-D'] },
+      dangerousAdverseEffects: { pt: ['Eventos trombóticos arteriais e venosos graves (AVC, IAM, TEP)', 'Parada cardíaca'], es: ['Eventos trombóticos arteriales y venosos graves (ACV, IAM, TEP)', 'Paro cardíaco'] },
+      contraindications: {
+        absolute: { pt: ['Nenhuma contraindicação formal em cenários de emergência com risco de morte'], es: ['Ninguna contraindicación formal en escenarios de emergencia con riesgo de muerte'] },
+        relative: { pt: ['Hipersensibilidade conhecida a proteínas de hamster (usadas na fabricação)'], es: ['Hipersensibilidad conocida a proteínas de hámster (usadas en la fabricación)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Boxed Warning: Risco aumentado de eventos trombóticos graves e isquemia. O andexanet liga-se também ao Inibidor do TFPI endógeno, promovendo um estado pró-coagulante temporário além da simples reversão.', es: 'Boxed Warning: Riesgo aumentado de eventos trombóticos graves e isquemia. El andexanet se une también al Inhibidor del TFPI endógeno, promoviendo un estado procoagulante temporario más allá de la simple reversión.' }
+      }
+    }
+
+  }; /* fim bloco desativado _grupo74_duplicatas_desativadas_NAO_USAR — sem efeito, nunca atribuído a window.CARDIO_DRUGS_DB */
+
+  /* ══════════════════════════════════════════════════════════════════════════════
+     GRUPO 75 — LOTE 10: ANTÍDOTOS/REVERSÃO + AMILOIDOSE CARDÍACA (siRNA/TTR)
+     Digoxin Immune Fab (Anticorpos Antidigoxina) · Acoramidis · Patisirana
+     Schema estático {pt,es} — sem calculate() — compatível com fallback
+     sintético do adaptador (_adaptExternalDB, index.html). dose.adult
+     envolvido em subchave "standard" seguindo a convenção do Grupo 74.
+     NOTA DE INTEGRAÇÃO (BUILD 259): "complejo_protrombinico_4f" e
+     "tafamidis" da submissão original do LOTE 10 foram identificados como
+     DUPLICATAS de entradas JÁ EXISTENTES e MAIS RICAS em CARDIO_DRUGS_DB:
+     "pcc4f" (Grupo 31 — Trombolíticos/Antídotos) e "tafamidis" (Grupo 46 —
+     Estabilizador TTR), ambas com pharmacokinetics/monitoring/calculator/
+     auditNotes completos. Seguindo a disciplina de "check antes de
+     escrever" (mesma aplicada aos Grupos 73 e 74), essas 2 submissões
+     duplicadas foram isoladas em variável morta abaixo, NUNCA atribuída a
+     window.CARDIO_DRUGS_DB — zero efeito em runtime. Apenas os 3 fármacos
+     genuinamente novos (digoxin_immune_fab, acoramidis, patisiran) foram
+     efetivamente ativados no banco.
+  ══════════════════════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ── ANTICORPOS ANTIDIGOXINA (DIGOXIN IMMUNE FAB) ─────────────────────── */
+    "digoxin_immune_fab": {
+      name: { pt: 'Anticorpos Antidigoxina', es: 'Anticuerpos Antidigoxina' },
+      category: 'cardio',
+      class: { pt: 'Antídoto Específico (Fragmentos Fab)', es: 'Antídoto Específico (Fragmentos Fab)' },
+      indications: {
+        pt: ['Intoxicação digitálica com risco de morte (arritmias ventriculares refratárias, bradicardia não responsiva a atropina, hipercalemia > 5,0-5,5 mEq/L)'],
+        es: ['Intoxicación digitálica con riesgo de muerte (arritmias ventriculares refractarias, bradicardia no responsiva a atropina, hiperpotasemia > 5,0-5,5 mEq/L)']
+      },
+      commercialNames: { br: ['Digifab'], ar: ['Digifab'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 40 mg'], es: ['Vial liofilizado 40 mg'] },
+      mechanism: {
+        pt: 'Fragmentos Fab de anticorpos ovinos purificados. Possuem afinidade pela digoxina muito superior à afinidade do fármaco pelo receptor Na+/K+-ATPase miocárdico. Ligam-se à digoxina livre no sangue, extraindo-a dos tecidos para o espaço intravascular; o complexo Fab-digoxina inativo é então excretado pelos rins.',
+        es: 'Fragmentos Fab de anticuerpos ovinos purificados. Poseen afinidad por la digoxina muy superior a la afinidad del fármaco por el receptor Na+/K+-ATPase miocárdico. Se unen a la digoxina libre en sangre, extrayéndola de los tejidos hacia el espacio intravascular; el complejo Fab-digoxina inactivo es luego excretado por los riñones.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: '1 frasco (40 mg) liga-se a ~0,5 mg de digoxina. Cálculo pela ingestão crônica (Nível sérico ng/mL x Peso kg / 100) = nº de frascos. Intoxicação aguda empírica: 10 a 20 frascos.',
+            es: '1 vial (40 mg) se une a ~0,5 mg de digoxina. Cálculo por ingesta crónica (Nivel sérico ng/mL x Peso kg / 100) = nº de viales. Intoxicación aguda empírica: 10 a 20 viales.'
+          }
+        },
+        pediatric: {
+          pt: 'Calculado pelo mesmo método (dose proporcional ao peso e nível sérico).',
+          es: 'Calculado por el mismo método (dosis proporcional al peso y nivel sérico).'
+        }
+      },
+      administration: { pt: ['Infusão IV ao longo de 30 minutos (ou bolus rápido se parada cardíaca iminente).', 'Filtro de 0,22 mícron recomendado.'], es: ['Infusión IV a lo largo de 30 minutos (o bolo rápido si paro cardíaco inminente).', 'Filtro de 0,22 micras recomendado.'] },
+      renalAdjustment: { required: true, message: { pt: 'A dose de Fab não muda, mas a eliminação do complexo inativo falha em DRC/diálise. Risco de "rebote" de toxicidade após 2-3 dias se os anticorpos degradarem antes da eliminação.', es: 'La dosis de Fab no cambia, pero la eliminación del complejo inactivo falla en ERC/diálisis. Riesgo de "rebote" de toxicidad tras 2-3 días si los anticuerpos se degradan antes de la eliminación.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Reação infusional', 'Exacerbação da insuficiência cardíaca de base (por perda do inotropismo da digoxina)'], es: ['Reacción infusional', 'Exacerbación de la insuficiencia cardíaca de base (por pérdida del inotropismo de digoxina)'] },
+      dangerousAdverseEffects: { pt: ['Hipocalemia grave de rápida instalação', 'Fibrilação atrial com alta resposta ventricular (perda do bloqueio AV digitálico)'], es: ['Hipopotasemia grave de rápida instalación', 'Fibrilación auricular con alta respuesta ventricular (pérdida del bloqueo AV digitálico)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida grave a proteínas ovinas'], es: ['Hipersensibilidad conocida grave a proteínas ovinas'] },
+        relative: { pt: [], es: [] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'NÃO dosar digoxina sérica após administrar o antídoto (o laboratório mede a digoxina total ligada ao Fab, dando falsos níveis extremante altos). Monitorar potássio rigorosamente, a reversão reativa a bomba Na/K e causa hipocalemia súbita.', es: 'NO medir digoxina sérica tras administrar el antídoto (el laboratorio mide la digoxina total unida al Fab, dando falsos niveles extremadamente altos). Monitorizar potasio rigurosamente, la reversión reactiva la bomba Na/K y causa hipopotasemia súbita.' }
+      }
+    },
+
+    /* ── ACORAMIDIS ─────────────────────────────────────────────────────── */
+    "acoramidis": {
+      name: { pt: 'Acoramidis', es: 'Acoramidis' },
+      category: 'cardio',
+      class: { pt: 'Estabilizador de Transtirretina de Alta Afinidade (TTR)', es: 'Estabilizador de Transtirretina de Alta Afinidad (TTR)' },
+      indications: {
+        pt: ['Cardiomiopatia amiloide por transtirretina (ATTR-CM) de tipo selvagem ou variante, para redução de mortalidade CV e morbidade (avaliação regulatória recente/contínua).'],
+        es: ['Cardiomiopatía amiloide por transtirretina (ATTR-CM) de tipo salvaje o variante, para reducción de mortalidad CV y morbilidad (evaluación regulatoria reciente/continua).']
+      },
+      commercialNames: { br: ['Acoramidis'], ar: ['Acoramidis'] },
+      presentation: { pt: ['Comprimidos 400 mg (apresentação clínica típica do ATTRibute-CM)'], es: ['Comprimidos 400 mg (presentación clínica típica de ATTRibute-CM)'] },
+      mechanism: {
+        pt: 'Molécula pequena que mimetiza estruturalmente a mutação estabilizadora protetora (T119M) da transtirretina. Liga-se de forma quase irreversível aos dois sítios da T4 no tetrâmero de TTR, proporcionando estabilização termodinâmica completa que previne a dissociação patológica e agregação amiloide.',
+        es: 'Molécula pequeña que mimetiza estructuralmente la mutación estabilizadora protectora (T119M) de la transtirretina. Se une de forma casi irreversible a los dos sitios de la T4 en el tetrámero de TTR, proporcionando estabilización termodinámica completa que previene la disociación patológica y agregación amiloide.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: '800 mg VO 12/12h (Dose padrão nos ensaios fase III).',
+            es: '800 mg VO cada 12h (Dosis estándar en los ensayos fase III).'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Administração oral contínua.'], es: ['Administración oral continua.'] },
+      renalAdjustment: { required: false, message: { pt: 'Nenhum ajuste recomendado clinicamente reportado até o momento.', es: 'Ningún ajuste recomendado clínicamente reportado hasta el momento.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste basal.', es: 'Sin necesidad de ajuste basal.' } },
+      commonAdverseEffects: { pt: ['Desconforto gástrico leve', 'Muito bem tolerado (perfil comparável ao placebo no ATTRibute-CM)'], es: ['Molestia gástrica leve', 'Muy bien tolerado (perfil comparable al placebo en ATTRibute-CM)'] },
+      dangerousAdverseEffects: { pt: ['Nenhum efeito sistêmico perigoso específico associado nos ensaios pivotais.'], es: ['Ningún efecto sistémico peligroso específico asociado en los ensayos pivotales.'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade'], es: ['Hipersensibilidad'] },
+        relative: { pt: [], es: [] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Terapia altamente promissora de alta afinidade; monitoramento ambulatorial cardiológico padrão. Sem alertas crônicos maiores.', es: 'Terapia altamente prometedora de alta afinidad; monitorización ambulatoria cardiológica estándar. Sin alertas crónicas mayores.' }
+      }
+    },
+
+    /* ── PATISIRANA ─────────────────────────────────────────────────────── */
+    "patisiran": {
+      name: { pt: 'Patisirana', es: 'Patisirán' },
+      category: 'cardio',
+      class: { pt: 'Pequeno RNA de Interferência (siRNA) Inibidor de TTR', es: 'Pequeño ARN de Interferencia (siRNA) Inhibidor de TTR' },
+      indications: {
+        pt: ['Amiloidose Hereditária por Transtirretina (hATTR) em adultos com polineuropatia estágio 1 ou 2 (Uso em ATTR-CM isolada off-label ou sob ensaio)'],
+        es: ['Amiloidosis Hereditaria por Transtirretina (hATTR) en adultos con polineuropatía estadio 1 o 2 (Uso en ATTR-CM aislada off-label o bajo ensayo)']
+      },
+      commercialNames: { br: ['Onpattro'], ar: ['Onpattro'] },
+      presentation: { pt: ['Frasco-ampola solução lipídica 2 mg/mL (10 mL)'], es: ['Vial solución lipídica 2 mg/mL (10 mL)'] },
+      mechanism: {
+        pt: 'Molécula de siRNA formulada em nanopartículas lipídicas que se direcionam ao fígado. O siRNA degrada o RNA mensageiro responsável pela produção da proteína transtirretina (mutante e selvagem), reduzindo drasticamente (>80%) as concentrações séricas da proteína TTR e freando o depósito amiloide tissular.',
+        es: 'Molécula de siRNA formulada en nanopartículas lipídicas que se dirigen al hígado. El siRNA degrada el ARN mensajero responsable de la producción de la proteína transtirretina (mutante y salvaje), reduciendo drásticamente (>80%) las concentraciones séricas de la proteína TTR y frenando el depósito amiloide tisular.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: '0,3 mg/kg IV a CADA 3 SEMANAS. (Se peso > 100 kg: dose máxima fixa de 30 mg).',
+            es: '0,3 mg/kg IV CADA 3 SEMANAS. (Si peso > 100 kg: dosis máxima fija de 30 mg).'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Infusão IV de 80 minutos.', 'PRÉ-MEDICAÇÃO OBRIGATÓRIA 60 min antes: Corticoide IV (dexametasona 10mg), Paracetamol VO, Bloqueador H1 (difendramina) e Bloqueador H2 (ranitidina) para evitar reação infusional.'], es: ['Infusión IV de 80 minutos.', 'PREMEDICACIÓN OBLIGATORIA 60 min antes: Corticoide IV (dexametasona 10mg), Paracetamol VO, Bloqueador H1 (difenhidramina) y Bloqueador H2 (ranitidina) para evitar reacción infusional.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste (DRC leve a moderada).', es: 'Sin necesidad de ajuste (ERC leve a moderada).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em disfunção hepática leve.', es: 'Sin necesidad de ajuste en disfunción hepática leve.' } },
+      commonAdverseEffects: { pt: ['Reações relacionadas à infusão (dor nas costas, rubor, náusea)', 'Edema periférico', 'Infecção respiratória alta', 'Deficiência severa de Vitamina A'], es: ['Reacciones relacionadas con la infusión (dolor de espalda, rubor, náusea)', 'Edema periférico', 'Infección respiratoria alta', 'Deficiencia severa de Vitamina A'] },
+      dangerousAdverseEffects: { pt: ['Reações anafiláticas e infusionais graves (hipotensão severa)', 'Bloqueio cardíaco associado a ATTR'], es: ['Reacciones anafilácticas e infusionales graves (hipotensión severa)', 'Bloqueo cardíaco asociado a ATTR'] },
+      contraindications: {
+        absolute: { pt: ['Anafilaxia aos componentes lipídicos da nanopartícula'], es: ['Anafilaxia a los componentes lipídicos de la nanopartícula'] },
+        relative: { pt: ['Deficiência basal grave de Vitamina A não corrigida'], es: ['Deficiencia basal grave de Vitamina A no corregida'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Reduz substancialmente os níveis de Vitamina A (proteína TTR transporta retinol). SUPLEMENTAÇÃO DIÁRIA de Vitamina A (2500 a 3000 UI/dia) é obrigatória. Risco oftálmico por avitaminose.', es: 'Reduce sustancialmente los niveles de Vitamina A (proteína TTR transporta retinol). SUPLEMENTACIÓN DIARIA de Vitamina A (2500 a 3000 UI/día) es obligatoria. Riesgo oftálmico por avitaminosis.' }
+      }
+    }
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 75 (Antídotos/Amiloidose Cardíaca: digoxin_immune_fab · acoramidis · patisiran) */
+
+  /* ══════════════════════════════════════════════════════════════════════════════
+     [DUPLICATAS DESATIVADAS — LOTE 10] complejo_protrombinico_4f · tafamidis
+     Ambas as submissões abaixo são DUPLICATAS de entradas já existentes e mais
+     ricas em CARDIO_DRUGS_DB: "pcc4f" (Grupo 31 — Trombolíticos/Antídotos, com
+     monitoring/calculator/interactions completos) e "tafamidis" (Grupo 46 —
+     Estabilizador TTR, com pharmacokinetics/pathophysiology/diagnosisAlgorithm/
+     monitoring/calculator/auditNotes completos). Isoladas nesta variável morta —
+     NUNCA atribuída a window.CARDIO_DRUGS_DB — para preservar o registro de
+     auditoria da submissão original sem sobrescrever os dados mais completos
+     já em produção.
+  ══════════════════════════════════════════════════════════════════════════════ */
+  const _grupo75_duplicatas_desativadas_NAO_USAR = {
+
+    /* ── COMPLEJO PROTROMBÍNICO 4F (duplicata de "pcc4f", Grupo 31) ──────── */
+    "complejo_protrombinico_4f": {
+      name: { pt: 'Complexo Protrombínico 4F', es: 'Complejo Protrombínico 4F' },
+      category: 'cardio',
+      class: { pt: 'Hemoderivado / Concentrado de Fatores de Coagulação', es: 'Hemoderivado / Concentrado de Factores de Coagulación' },
+      indications: {
+        pt: ['Reversão urgente da anticoagulação adquirida por antagonistas da Vitamina K (varfarina) em sangramento grave ou cirurgia de emergência', 'Reversão de Inibidores do Fator Xa (off-label, se andexanet alfa indisponível)'],
+        es: ['Reversión urgente de la anticoagulación adquirida por antagonistas de la Vitamina K (warfarina) en sangrado grave o cirugía de emergencia', 'Reversión de Inhibidores del Factor Xa (off-label, si andexanet alfa no está disponible)']
+      },
+      commercialNames: { br: ['Beriplex P/N', 'Octaplex', 'Prothromplex'], ar: ['Beriplex', 'Octaplex'] },
+      presentation: { pt: ['Frasco-ampola liofilizado contendo 500 UI ou 1000 UI de Fator IX (mais fatores II, VII, X, proteínas C e S)'], es: ['Vial liofilizado conteniendo 500 UI o 1000 UI de Factor IX (más factores II, VII, X, proteínas C y S)'] },
+      mechanism: {
+        pt: 'Concentrado plasmático purificado e liofilizado. Fornece reposição imediata e maciça dos fatores de coagulação dependentes de vitamina K (II, VII, IX, X) e anticoagulantes naturais (Proteínas C e S), restaurando a homeostasia instantaneamente, sem necessitar de síntese hepática.',
+        es: 'Concentrado plasmático purificado y liofilizado. Proporciona reposición inmediata y masiva de los factores de coagulación dependientes de vitamina K (II, VII, IX, X) y anticoagulantes naturales (Proteínas C y S), restaurando la hemostasia instantáneamente, sin necesitar síntesis hepática.'
+      },
+      dose: {
+        adult: {
+          pt: 'Varfarina: Dose baseada no INR atual e peso (máx 100kg). INR 2 a 3.9: 25 UI/kg. INR 4 a 6: 35 UI/kg. INR > 6: 50 UI/kg. Administrar CONJUNTAMENTE com Vitamina K 5-10 mg IV.',
+          es: 'Warfarina: Dosis basada en INR actual y peso (máx 100kg). INR 2 a 3.9: 25 UI/kg. INR 4 a 6: 35 UI/kg. INR > 6: 50 UI/kg. Administrar CONJUNTAMENTE con Vitamina K 5-10 mg IV.'
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Infusão IV a uma taxa máxima de 8 mL/min (3 a 4 min por frasco).'], es: ['Infusión IV a una tasa máxima de 8 mL/min (3 a 4 min por vial).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Monitoramento, pois pacientes com insuficiência hepática podem ter alto risco trombótico.', es: 'Monitorización, pues pacientes con insuficiencia hepática pueden tener alto riesgo trombótico.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Elevação da temperatura', 'Náuseas'], es: ['Cefalea', 'Elevación de la temperatura', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Eventos tromboembólicos graves (IAM, AVC, TEP, trombose venosa profunda)', 'CIVD', 'Anafilaxia'], es: ['Eventos tromboembólicos graves (IAM, ACV, TEP, trombosis venosa profunda)', 'CID', 'Anafilaxia'] },
+      contraindications: {
+        absolute: { pt: ['Alergia conhecida à heparina (produto contém traços)', 'Histórico de trombocitopenia induzida por heparina (HIT)', 'Coagulação Intravascular Disseminada (CIVD) não revertida'], es: ['Alergia conocida a la heparina (producto contiene trazas)', 'Historial de trombocitopenia inducida por heparina (HIT)', 'Coagulación Intravascular Diseminada (CID) no revertida'] },
+        relative: { pt: ['Risco trombótico basal extremamente alto (IAM recente < 3 meses)'], es: ['Riesgo trombótico basal extremadamente alto (IAM reciente < 3 meses)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Boxed Warning para risco de complicações tromboembólicas fatais. A meia-vida do complexo é de horas; a Vitamina K IV é obrigatória para manter a reversão sustentada.', es: 'Boxed Warning para riesgo de complicaciones tromboembólicas fatales. La vida media del complejo es de horas; la Vitamina K IV es obligatoria para mantener la reversión sostenida.' }
+      }
+    },
+
+    /* ── TAFAMIDIS (duplicata do "tafamidis" já existente, Grupo 46) ─────── */
+    "tafamidis": {
+      name: { pt: 'Tafamidis', es: 'Tafamidis' },
+      category: 'cardio',
+      class: { pt: 'Estabilizador da Transtirretina (TTR)', es: 'Estabilizador de la Transtirretina (TTR)' },
+      indications: {
+        pt: ['Cardiomiopatia amiloide por transtirretina (ATTR-CM) de tipo selvagem ou hereditária, para redução da mortalidade CV e hospitalizações.'],
+        es: ['Cardiomiopatía amiloide por transtirretina (ATTR-CM) de tipo salvaje o hereditaria, para reducción de la mortalidad CV y hospitalizaciones.']
+      },
+      commercialNames: { br: ['Vyndaqel', 'Vyndamax'], ar: ['Vyndaqel'] },
+      presentation: { pt: ['Cápsulas 20 mg (Tafamidis Meglumina)', 'Cápsulas 61 mg (Tafamidis ácido livre)'], es: ['Cápsulas 20 mg (Tafamidis Meglumina)', 'Cápsulas 61 mg (Tafamidis ácido libre)'] },
+      mechanism: {
+        pt: 'Liga-se de forma seletiva aos locais de fixação da tiroxina na proteína transtirretina (TTR) tetramérica nativa. Essa ligação estabiliza o tetrâmero, impedindo sua dissociação em monômeros que sofrem misfolding (dobramento incorreto) e formam depósitos amiloides no miocárdio.',
+        es: 'Se une selectivamente a los sitios de fijación de tiroxina en la proteína transtirretina (TTR) tetramérica nativa. Esta unión estabiliza el tetrámero, impidiendo su disociación en monómeros que sufren misfolding (plegamiento incorrecto) y forman depósitos amiloides en el miocardio.'
+      },
+      dose: {
+        adult: {
+          pt: 'Vyndaqel (meglumina): 80 mg VO 1x/dia (quatro cápsulas de 20 mg). Vyndamax (ácido livre): 61 mg VO 1x/dia (uma cápsula).',
+          es: 'Vyndaqel (meglumina): 80 mg VO 1 vez/día (cuatro cápsulas de 20 mg). Vyndamax (ácido libre): 61 mg VO 1 vez/día (una cápsula).'
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Cápsulas devem ser engolidas inteiras. Com ou sem alimentos.'], es: ['Las cápsulas deben tragarse enteras. Con o sin alimentos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste de dosis.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em disfunção leve a moderada.', es: 'Sin necesidad de ajuste en disfunción leve a moderada.' } },
+      commonAdverseEffects: { pt: ['Geralmente muito bem tolerado', 'Diarreia', 'Infeccções do trato urinário', 'Dor abdominal'], es: ['Generalmente muy bien tolerado', 'Diarrea', 'Infecciones del tracto urinario', 'Dolor abdominal'] },
+      dangerousAdverseEffects: { pt: ['Sem eventos adversos graves expressivos atribuídos unicamente à droga nos ensaios.'], es: ['Sin eventos adversos graves expresivos atribuidos únicamente a la droga en los ensayos.'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave'], es: ['Hipersensibilidad grave'] },
+        relative: { pt: [], es: [] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'As formulações de tafamidis meglumina (Vyndaqel) e tafamidis ácido livre (Vyndamax) não são intercambiáveis mg por mg. Tafamidis é um inibidor da BCRP, podendo interagir com certas estatinas.', es: 'Las formulaciones de tafamidis meglumina (Vyndaqel) y tafamidis ácido libre (Vyndamax) no son intercambiables mg por mg. Tafamidis es un inhibidor de BCRP, pudiendo interactuar con ciertas estatinas.' }
+      }
+    }
+
+  }; /* fim bloco desativado _grupo75_duplicatas_desativadas_NAO_USAR — sem efeito, nunca atribuído a window.CARDIO_DRUGS_DB */
+
+  /* ══════════════════════════════════════════════════════════════════════════════
+     GRUPO 76 — LOTE 11: AMILOIDOSE TTR (siRNA/ASO 2ª geração) + CARDIOMIOPATIA
+     HIPERTRÓFICA OBSTRUTIVA (Inibidores de Miosina Cardíaca)
+     Vutrisirana · Inotersena · Mavacamten · Aficamten
+     Schema estático {pt,es} — sem calculate() — compatível com fallback
+     sintético do adaptador (_adaptExternalDB, index.html). dose.adult
+     envolvido em subchave "standard" seguindo a convenção dos Grupos 74/75.
+     NOTA DE INTEGRAÇÃO (BUILD 260): "cilostazol" e "pentoxifilina" da
+     submissão original do LOTE 11 foram identificados como DUPLICATAS de
+     entradas JÁ EXISTENTES e MAIS RICAS em CARDIO_DRUGS_DB: "cilostazol"
+     (Grupo 43, com hemodynamicRules/therapeuticTargets/interactions
+     completos) e "pentoxifilina" (Grupo 44, com therapeuticTargets/
+     interactions completos). Seguindo a disciplina de "check antes de
+     escrever" (mesma aplicada aos Grupos 73/74/75), essas 2 submissões
+     duplicadas foram isoladas em variável morta abaixo, NUNCA atribuída a
+     window.CARDIO_DRUGS_DB — zero efeito em runtime. Apenas os 4 fármacos
+     genuinamente novos (vutrisiran, inotersen, mavacamten, aficamten)
+     foram efetivamente ativados no banco.
+  ══════════════════════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ── VUTRISIRANA ────────────────────────────────────────────────────── */
+    "vutrisiran": {
+      name: { pt: 'Vutrisirana', es: 'Vutrisirán' },
+      category: 'cardio',
+      class: { pt: 'Pequeno RNA de Interferência (siRNA) Inibidor de TTR', es: 'Pequeño ARN de Interferencia (siRNA) Inhibidor de TTR' },
+      indications: {
+        pt: ['Amiloidose Hereditária por Transtirretina (hATTR) em adultos com polineuropatia (Estudos para ATTR-CM em andamento/expansão)'],
+        es: ['Amiloidosis Hereditaria por Transtirretina (hATTR) en adultos con polineuropatía (Estudios para ATTR-CM en marcha/expansión)']
+      },
+      commercialNames: { br: ['Amvuttra'], ar: ['Amvuttra'] },
+      presentation: { pt: ['Seringa preenchida 25 mg/0,5 mL'], es: ['Jeringa prellenada 25 mg/0,5 mL'] },
+      mechanism: {
+        pt: 'siRNA de 2ª geração conjugado a GalNAc (direcionamento hepático específico). Degrada o RNA mensageiro da transtirretina, bloqueando a síntese de TTR mutante e selvagem no fígado. Diferente do patisiran, não usa nanopartículas lipídicas, dispensando pré-medicação e permitindo administração SC trimestral.',
+        es: 'siRNA de 2ª generación conjugado a GalNAc (direccionamiento hepático específico). Degrada el ARN mensajero de la transtirretina, bloqueando la síntesis de TTR mutante y salvaje en el hígado. A diferencia del patisirán, no usa nanopartículas lipídicas, dispensando premedicación y permitiendo administración SC trimestral.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: '25 mg via subcutânea (SC) a CADA 3 MESES.',
+            es: '25 mg vía subcutánea (SC) CADA 3 MESES.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Administração SC por profissional de saúde (abdome, coxa ou braço).', 'NÃO requer pré-medicação com corticoides/anti-histamínicos.'], es: ['Administración SC por profesional de salud (abdomen, muslo o brazo).', 'NO requiere premedicación con corticoides/antihistamínicos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em DRC leve/moderada.', es: 'Sin necesidad de ajuste en ERC leve/moderada.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em disfunção hepática leve.', es: 'Sin necesidad de ajuste en disfunción hepática leve.' } },
+      commonAdverseEffects: { pt: ['Artralgia', 'Dor nas extremidades', 'Dispneia', 'Redução drástica de Vitamina A'], es: ['Artralgia', 'Dolor en las extremidades', 'Disnea', 'Reducción drástica de Vitamina A'] },
+      dangerousAdverseEffects: { pt: ['Bloqueio AV (frequentemente associado à progressão da doença de base)'], es: ['Bloqueo AV (frecuentemente asociado a la progresión de la enfermedad de base)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade severa à vutrisirana'], es: ['Hipersensibilidad severa a vutrisirán'] },
+        relative: { pt: ['Deficiência severa não tratada de Vitamina A'], es: ['Deficiencia severa no tratada de Vitamina A'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Suplementação DIÁRIA de Vitamina A (aprox. 2500 a 3000 UI/dia) é obrigatória para evitar xeroftalmia e cegueira noturna (a TTR transporta retinol).', es: 'Suplementación DIARIA de Vitamina A (aprox. 2500 a 3000 UI/día) es obligatoria para evitar xeroftalmia y ceguera nocturna (la TTR transporta retinol).' }
+      }
+    },
+
+    /* ── INOTERSENA ─────────────────────────────────────────────────────── */
+    "inotersen": {
+      name: { pt: 'Inotersena', es: 'Inotersen' },
+      category: 'cardio',
+      class: { pt: 'Oligonucleotídeo Antissense (ASO) Inibidor de TTR', es: 'Oligonucleótido Antisentido (ASO) Inhibidor de TTR' },
+      indications: {
+        pt: ['Polineuropatia de estágio 1 ou 2 em adultos com amiloidose hereditária por transtirretina (hATTR)'],
+        es: ['Polineuropatía de estadio 1 o 2 en adultos con amiloidosis hereditaria por transtirretina (hATTR)']
+      },
+      commercialNames: { br: ['Tegsedi'], ar: ['Tegsedi'] },
+      presentation: { pt: ['Seringa preenchida 284 mg/1,5 mL'], es: ['Jeringa prellenada 284 mg/1,5 mL'] },
+      mechanism: {
+        pt: 'Oligonucleotídeo antissense (ASO) que se liga ao mRNA da TTR, induzindo a clivagem do mRNA pela enzima RNase H1. Impede a tradução e reduz os níveis séricos da proteína TTR (mutante e selvagem) responsável pelos depósitos de amiloide.',
+        es: 'Oligonucleótido antisentido (ASO) que se une al mRNA de la TTR, induciendo la escisión del mRNA por la enzima RNasa H1. Impide la traducción y reduce los niveles séricos de la proteína TTR (mutante y salvaje) responsable de los depósitos de amiloide.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: '284 mg via subcutânea (SC) 1 VEZ POR SEMANA.',
+            es: '284 mg vía subcutánea (SC) 1 VEZ POR SEMANA.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Autoadministração SC viável.', 'Avaliar plaquetas e função renal ANTES de cada dose semanal.'], es: ['Autoadministración SC viable.', 'Evaluar plaquetas y función renal ANTES de cada dosis semanal.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar em pacientes com histórico de glomerulonefrite ou declínio rápido inexplicado de ClCr.', es: 'Evitar en pacientes con historial de glomerulonefritis o declive rápido inexplicado de ClCr.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em disfunção leve.', es: 'Sin necesidad de ajuste en disfunción leve.' } },
+      commonAdverseEffects: { pt: ['Reações no local de injeção', 'Náusea', 'Fadiga', 'Febre', 'Anemia', 'Redução de Vitamina A'], es: ['Reacciones en el sitio de inyección', 'Náusea', 'Fatiga', 'Fiebre', 'Anemia', 'Reducción de Vitamina A'] },
+      dangerousAdverseEffects: { pt: ['Trombocitopenia grave/fatal (imunomediada)', 'Glomerulonefrite aguda (risco de falência renal)'], es: ['Trombocitopenia grave/fatal (inmunomediada)', 'Glomerulonefritis aguda (riesgo de falla renal)'] },
+      contraindications: {
+        absolute: { pt: ['Contagem de plaquetas < 100.000/mm³ basal', 'Taxa de proteinúria (UPCR) ≥ 1000 mg/g', 'Histórico de rejeição a ASO'], es: ['Recuento de plaquetas < 100.000/mm³ basal', 'Tasa de proteinuria (UPCR) ≥ 1000 mg/g', 'Historial de rechazo a ASO'] },
+        relative: { pt: ['Uso de antiagregantes e anticoagulantes (devido ao risco de trombocitopenia súbita)'], es: ['Uso de antiagregantes y anticoagulantes (debido al riesgo de trombocitopenia súbita)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Boxed Warning: Risco de Trombocitopenia Severa e Glomerulonefrite. Controle rigoroso de plaquetas a cada semana. Suplementar Vitamina A.', es: 'Boxed Warning: Riesgo de Trombocitopenia Severa y Glomerulonefritis. Control riguroso de plaquetas cada semana. Suplementar Vitamina A.' }
+      }
+    },
+
+    /* ── MAVACAMTEN ─────────────────────────────────────────────────────── */
+    "mavacamten": {
+      name: { pt: 'Mavacamten', es: 'Mavacamten' },
+      category: 'cardio',
+      class: { pt: 'Inibidor Seletivo da Miosina Cardíaca', es: 'Inhibidor Selectivo de la Miosina Cardíaca' },
+      indications: {
+        pt: ['Cardiomiopatia Hipertrófica Obstrutiva (CMHO) sintomática (Classe NYHA II-III) para melhorar capacidade funcional e sintomas'],
+        es: ['Cardiomiopatía Hipertrófica Obstructiva (CMHO) sintomática (Clase NYHA II-III) para mejorar capacidad funcional y síntomas']
+      },
+      commercialNames: { br: ['Camzyos'], ar: ['Camzyos'] },
+      presentation: { pt: ['Cápsulas 2,5 mg', '5 mg', '10 mg', '15 mg'], es: ['Cápsulas 2,5 mg', '5 mg', '10 mg', '15 mg'] },
+      mechanism: {
+        pt: 'Modulador alostérico reversível da miosina cardíaca. Diminui o número de pontes cruzadas ativas entre actina e miosina (estado de geração de força), reduzindo a hipercontratilidade miocárdica excessiva e melhorando a complacência/relaxamento diastólico sem afetar negativamente o cronotropismo.',
+        es: 'Modulador alostérico reversible de la miosina cardíaca. Disminuye el número de puentes cruzados activos entre actina y miosina (estado de generación de fuerza), reduciendo la hipercontractilidad miocárdica excesiva y mejorando la distensibilidad/relajación diastólica sin afectar negativamente el cronotropismo.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Inicial: 5 mg VO 1x/dia. Titulação rigorosa (semanas 4, 8 e 12) baseada em ecocardiograma (gradiente de VSVE e Fração de Ejeção). Máximo 15 mg/dia.',
+            es: 'Inicial: 5 mg VO 1 vez/día. Titulación rigurosa (semanas 4, 8 y 12) basada en ecocardiograma (gradiente de TSVI y Fracción de Eyección). Máximo 15 mg/día.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Dose única diária. Engolir inteira.', 'Se a FEVE cair para < 50%, o medicamento DEVE SER INTERROMPIDO imediatamente.'], es: ['Dosis única diaria. Tragar entera.', 'Si la FEVI cae a < 50%, el medicamento DEBE SER INTERRUMPIDO inmediatamente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem dados em insuficiência renal grave; usar com cautela.', es: 'Sin datos en insuficiencia renal grave; usar con precaución.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em Child-Pugh B e C (aumento expressivo da exposição ao fármaco).', es: 'Evitar en Child-Pugh B y C (aumento expresivo de la exposición al fármaco).' } },
+      commonAdverseEffects: { pt: ['Tontura', 'Síncope', 'Fadiga'], es: ['Mareos', 'Síncope', 'Fatiga'] },
+      dangerousAdverseEffects: { pt: ['Insuficiência cardíaca sistólica grave (choque cardiogênico por redução exagerada da FE)'], es: ['Insuficiencia cardíaca sistólica grave (choque cardiogénico por reducción exagerada de la FE)'] },
+      contraindications: {
+        absolute: { pt: ['Fração de ejeção < 55% antes do início', 'Uso de inibidores moderados/fortes de CYP2C19 ou inibidores fortes de CYP3A4'], es: ['Fracción de eyección < 55% antes del inicio', 'Uso de inhibidores moderados/fuertes de CYP2C19 o inhibidores fuertes de CYP3A4'] },
+        relative: { pt: ['Infecção aguda grave (risco de descompensação sistólica)'], es: ['Infección aguda grave (riesgo de descompensación sistólica)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Boxed Warning para Risco de Insuficiência Cardíaca. REMS program exigido. Monitorização por Ecocardiograma é estritamente OBRIGATÓRIA antes da prescrição e durante cada etapa de titulação.', es: 'Boxed Warning para Riesgo de Insuficiencia Cardíaca. REMS program exigido. La monitorización por Ecocardiograma es estrictamente OBLIGATORIA antes de la prescripción y durante cada etapa de titulación.' }
+      }
+    },
+
+    /* ── AFICAMTEN ──────────────────────────────────────────────────────── */
+    "aficamten": {
+      name: { pt: 'Aficamten', es: 'Aficamten' },
+      category: 'cardio',
+      class: { pt: 'Inibidor Seletivo da Miosina Cardíaca (Próxima Geração)', es: 'Inhibidor Selectivo de la Miosina Cardíaca (Próxima Generación)' },
+      indications: {
+        pt: ['Cardiomiopatia Hipertrófica Obstrutiva (CMHO) sintomática (fase de avaliação regulatória baseada no SEQUOIA-HCM)'],
+        es: ['Cardiomiopatía Hipertrófica Obstructiva (CMHO) sintomática (fase de evaluación regulatoria basada en SEQUOIA-HCM)']
+      },
+      commercialNames: { br: ['Aficamten'], ar: ['Aficamten'] },
+      presentation: { pt: ['Comprimidos 5 mg', '10 mg', '15 mg'], es: ['Comprimidos 5 mg', '10 mg', '15 mg'] },
+      mechanism: {
+        pt: 'Inibidor de miosina cardíaca projetado com meia-vida mais curta e menor impacto metabólico hepático (CYP) que o mavacamten. Diminui a hipercontratilidade e reduz o gradiente da VSVE com rápido início de ação (wash-in) e rápida reversibilidade (wash-out).',
+        es: 'Inhibidor de miosina cardíaca diseñado con vida media más corta y menor impacto metabólico hepático (CYP) que el mavacamten. Disminuye la hipercontractilidad y reduce el gradiente del TSVI con rápido inicio de acción (wash-in) y rápida reversibilidad (wash-out).'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: 'Inicial: 5 mg VO 1x/dia. Titulação a cada 2 semanas para 10 mg, 15 mg e máximo de 20 mg, guiado por ecocardiograma (gradiente e FE).',
+            es: 'Inicial: 5 mg VO 1 vez/día. Titulación cada 2 semanas a 10 mg, 15 mg y máximo de 20 mg, guiado por ecocardiograma (gradiente y FE).'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Dose diária, ajuste escalonado guiado por FEVE e gradiente de VSVE.'], es: ['Dosis diaria, ajuste escalonado guiado por FEVI y gradiente del TSVI.'] },
+      renalAdjustment: { required: false, message: { pt: 'Aguardando bula definitiva, impacto renal direto não esperado na excreção.', es: 'Esperando prospecto definitivo, impacto renal directo no esperado en la excreción.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Menor dependência de CYP comparado ao mavacamten, mas requer atenção na disfunção severa.', es: 'Menor dependencia de CYP comparado al mavacamten, pero requiere atención en disfunción severa.' } },
+      commonAdverseEffects: { pt: ['Tontura', 'Declínio transitório da fração de ejeção'], es: ['Mareos', 'Declive transitorio de la fracción de eyección'] },
+      dangerousAdverseEffects: { pt: ['Risco de disfunção sistólica grave (embora de reversão mais rápida que mavacamten)'], es: ['Riesgo de disfunción sistólica grave (aunque de reversión más rápida que mavacamten)'] },
+      contraindications: {
+        absolute: { pt: ['FEVE basal < 55%'], es: ['FEVI basal < 55%'] },
+        relative: { pt: [], es: [] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Por ter meia-vida mais curta, a recuperação de uma queda acidental de FEVE ocorre em dias (vs semanas do mavacamten). Monitoração ecocardiográfica continua essencial.', es: 'Por tener vida media más corta, la recuperación de una caída accidental de FEVI ocurre en días (vs semanas del mavacamten). Monitorización ecocardiográfica sigue siendo esencial.' }
+      }
+    }
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 76 (Amiloidose TTR siRNA/ASO 2ª geração + Inibidores de Miosina Cardíaca: vutrisiran · inotersen · mavacamten · aficamten) */
+
+  /* ══════════════════════════════════════════════════════════════════════════════
+     [DUPLICATAS DESATIVADAS — LOTE 11] cilostazol · pentoxifilina
+     Ambas as submissões abaixo são DUPLICATAS de entradas já existentes e mais
+     ricas em CARDIO_DRUGS_DB: "cilostazol" (Grupo 43, com hemodynamicRules/
+     therapeuticTargets/interactions completos) e "pentoxifilina" (Grupo 44, com
+     therapeuticTargets/interactions completos). Isoladas nesta variável morta —
+     NUNCA atribuída a window.CARDIO_DRUGS_DB — para preservar o registro de
+     auditoria da submissão original sem sobrescrever os dados mais completos
+     já em produção.
+  ══════════════════════════════════════════════════════════════════════════════ */
+  const _grupo76_duplicatas_desativadas_NAO_USAR = {
+
+    /* ── CILOSTAZOL (duplicata do "cilostazol" já existente, Grupo 43) ───── */
+    "cilostazol": {
+      name: { pt: 'Cilostazol', es: 'Cilostazol' },
+      category: 'cardio',
+      class: { pt: 'Inibidor da Fosfodiesterase III (Antiagregante/Vasodilatador)', es: 'Inhibidor de la Fosfodiesterasa III (Antiagregante/Vasodilatador)' },
+      indications: {
+        pt: ['Claudicação intermitente em pacientes com Doença Arterial Periférica (para melhoria da distância de caminhada)'],
+        es: ['Claudicación intermitente en pacientes con Enfermedad Arterial Periférica (para mejoría de la distancia de caminata)']
+      },
+      commercialNames: { br: ['Vascer', 'Cebralat', 'Cilostazol'], ar: ['Clauditas'] },
+      presentation: { pt: ['Comprimidos 50 mg', '100 mg'], es: ['Comprimidos 50 mg', '100 mg'] },
+      mechanism: {
+        pt: 'Inibe a PDE3, aumentando a concentração intracelular de AMPc nas plaquetas e vasos sanguíneos. Resulta em inibição da agregação plaquetária e promove forte vasodilatação arterial nos leitos periféricos (membros inferiores).',
+        es: 'Inhibe la PDE3, aumentando la concentración intracelular de AMPc en plaquetas y vasos sanguíneos. Resulta en inhibición de la agregación plaquetaria y promueve fuerte vasodilatación arterial en los lechos periféricos (miembros inferiores).'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: '100 mg VO 12/12h.',
+            es: '100 mg VO cada 12h.'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Tomar 30 minutos antes ou 2 horas após o café da manhã e o jantar (alimento hiperlipídico aumenta exageradamente a absorção).'], es: ['Tomar 30 minutos antes o 2 horas después del desayuno y la cena (alimento rico en grasas aumenta exageradamente la absorción).'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr < 25 mL/min: Contraindicado ou reduzir dose. Evitar na falência renal severa.', es: 'ClCr < 25 mL/min: Contraindicado o reducir dosis. Evitar en falla renal severa.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Disfunção hepática moderada/grave: Contraindicado.', es: 'Disfunción hepática moderada/grave: Contraindicado.' } },
+      commonAdverseEffects: { pt: ['Cefaleia palpitatória (muito comum)', 'Diarreia', 'Palpitações / Taquicardia', 'Tontura'], es: ['Cefalea palpitante (muy común)', 'Diarrea', 'Palpitaciones / Taquicardia', 'Mareos'] },
+      dangerousAdverseEffects: { pt: ['Exacerbação de arritmias ventriculares', 'Hemorragia', 'Trombocitopenia/agranulocitose (raro)'], es: ['Exacerbación de arritmias ventriculares', 'Hemorragia', 'Trombocitopenia/agranulocitosis (raro)'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência cardíaca congestiva de QUALQUER grau (Black Box Warning)', 'Hemorragia ativa ou propensão a sangramento'], es: ['Insuficiencia cardíaca congestiva de CUALQUIER grado (Black Box Warning)', 'Hemorragia activa o propensión a sangrado'] },
+        relative: { pt: ['Taquiarritmias graves', 'Uso concomitante com DAPT pesado'], es: ['Taquiarritmias graves', 'Uso concomitante con DAPT pesado'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ALERTA MAXIMO (Boxed Warning): O cilostazol reduz a sobrevida em pacientes com insuficiência cardíaca (IC) classes I a IV. É totalmente contraindicado em pacientes que possuam IC sintomática ou FEVE reduzida.', es: 'ALERTA MÁXIMA (Boxed Warning): El cilostazol reduce la supervivencia en pacientes con insuficiencia cardíaca (IC) clases I a IV. Está totalmente contraindicado en pacientes que posean IC sintomática o FEVI reducida.' }
+      }
+    },
+
+    /* ── PENTOXIFILINA (duplicata da "pentoxifilina" já existente, Grupo 44) ── */
+    "pentoxifilina": {
+      name: { pt: 'Pentoxifilina', es: 'Pentoxifilina' },
+      category: 'cardio',
+      class: { pt: 'Agente Hemorreológico (Derivado da Xantina)', es: 'Agente Hemorreológico (Derivado de la Xantina)' },
+      indications: {
+        pt: ['Claudicação intermitente na Doença Arterial Periférica', 'Doenças vasculares periféricas crônicas'],
+        es: ['Claudicación intermitente en la Enfermedad Arterial Periférica', 'Enfermedades vasculares periféricas crónicas']
+      },
+      commercialNames: { br: ['Trental'], ar: ['Trental'] },
+      presentation: { pt: ['Comprimidos de liberação prolongada 400 mg'], es: ['Comprimidos de liberación prolongada 400 mg'] },
+      mechanism: {
+        pt: 'Melhora o fluxo sanguíneo reduzindo a viscosidade do sangue (efeito hemorreológico). Melhora a flexibilidade e deformabilidade dos eritrócitos (facilitando a microcirculação), reduz os níveis de fibrinogênio e inibe a agregação plaquetária.',
+        es: 'Mejora el flujo sanguíneo reduciendo la viscosidad de la sangre (efecto hemorreológico). Mejora la flexibilidad y deformabilidad de los eritrocitos (facilitando la microcirculación), reduce los niveles de fibrinógeno e inhibe la agregación plaquetaria.'
+      },
+      dose: {
+        adult: {
+          standard: {
+            pt: '400 mg VO 8/8h ou 12/12h (2 a 3 vezes ao dia).',
+            es: '400 mg VO cada 8h o cada 12h (2 a 3 veces al día).'
+          }
+        },
+        pediatric: null
+      },
+      administration: { pt: ['Tomar com as refeições para reduzir a intolerância gastrointestinal.', 'Não partir ou mastigar comprimidos de liberação prolongada.'], es: ['Tomar con las comidas para reducir la intolerancia gastrointestinal.', 'No partir ni masticar comprimidos de liberación prolongada.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr < 30 mL/min: Reduzir dose para 400 mg 1x ou 2x ao dia.', es: 'ClCr < 30 mL/min: Reducir dosis a 400 mg 1 o 2 veces al día.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Disfunção hepática grave: Redução de dose exigida.', es: 'Disfunción hepática grave: Reducción de dosis exigida.' } },
+      commonAdverseEffects: { pt: ['Náusea e Vômito', 'Tontura', 'Cefaleia', 'Agitação / Tremor'], es: ['Náusea y Vómito', 'Mareos', 'Cefalea', 'Agitación / Temblor'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia maior (em associação com anticoagulantes)', 'Anafilaxia (reação cruzada a metilxantinas)'], es: ['Hemorragia mayor (en asociación con anticoagulantes)', 'Anafilaxia (reacción cruzada a metilxantinas)'] },
+      contraindications: {
+        absolute: { pt: ['Hemorragia cerebral ou retiniana recente', 'Intolerância a outras xantinas (cafeína, teofilina)'], es: ['Hemorragia cerebral o retiniana reciente', 'Intolerancia a otras xantinas (cafeína, teofilina)'] },
+        relative: { pt: ['Uso de múltiplos anticoagulantes/antiagregantes'], es: ['Uso de múltiples anticoagulantes/antiagregantes'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Requer semanas de tratamento (2 a 4 semanas) para se observar o efeito inicial na claudicação. Monitorar sangramentos.', es: 'Requiere semanas de tratamiento (2 a 4 semanas) para observar el efecto inicial en la claudicación. Monitorizar sangrados.' }
+      }
+    }
+
+  }; /* fim bloco desativado _grupo76_duplicatas_desativadas_NAO_USAR — sem efeito, nunca atribuído a window.CARDIO_DRUGS_DB */
+
 })(); /* fim da IIFE do módulo cardio */

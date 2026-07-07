@@ -1,0 +1,89 @@
+/* ================================================================
+   MedCases Pro — BUILD 254: UX Rescue & Interaction Audit
+   ----------------------------------------------------------------
+   Correções críticas de produção (3 UX mobile + 1 estrutural CSS):
+
+   1) "Drama da acomodação" — trava overscroll e usa dvh (altura
+      dinâmica de viewport) para impedir que o teclado virtual force
+      scroll/zoom/pulo de tela ao focar inputs.
+   2) Anti-zoom automático iOS — inputs com font-size < 16px disparam
+      zoom automático ao focar no Safari/WebView iOS.
+   3) Grid 2 colunas — garante que os grids de cards/botões (Nível 2,
+      Nível 3, campos de eletrólitos) NUNCA colapsem para 1 coluna em
+      mobile, mesmo que alguma classe de estado (.hub-accordion--expanded)
+      force flex-direction:column indevidamente em containers que não
+      deveriam colapsar. O card .is-open continua expandindo sozinho
+      (full-width) normalmente.
+
+   NÃO ALTERA: JS de negócio, banco de dados, cálculos clínicos.
+   Carregado por ÚLTIMO no <head> — prioridade máxima de cascade.
+================================================================ */
+
+/* ================================================================
+   §1 — ANTI "DRAMA DA ACOMODAÇÃO" (screen jump ao focar input)
+================================================================ */
+html, body {
+  overscroll-behavior: none;
+  overscroll-behavior-y: contain;
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+#scroll-content {
+  overscroll-behavior: contain;
+  height: 100dvh;
+  max-height: 100dvh;
+  scroll-behavior: auto; /* evita "smooth" nativo competindo com o JS de padding dinâmico */
+}
+
+/* ================================================================
+   §2 — ANTI-ZOOM AUTOMÁTICO iOS
+   Inputs com font-size < 16px disparam zoom automático ao focar
+   no Safari/WebView iOS — isso também contribui para a sensação
+   de "tela pulando".
+================================================================ */
+input, textarea, select {
+  font-size: max(16px, 1rem) !important;
+}
+
+/* ================================================================
+   §3 — GRID 2 COLUNAS FORÇADO (mobile) — BUG "1 coluna em vez de 2"
+   Não afeta o card .is-open (que deve continuar full-width).
+================================================================ */
+.hub-l2-grid,
+.hub-l2-section,
+.elec2-fields-grid,
+.elec2-elec-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 10px !important;
+}
+
+.hub-l3-row,
+.hub-l3-section {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 10px !important;
+}
+
+/* Quando o accordion está expandido: SÓ o card aberto deve virar
+   full-width — os demais containers de grid mantêm 2 colunas. */
+.hub-accordion--expanded .hub-l2-grid,
+.hub-accordion--expanded .hub-l2-section,
+.hub-accordion--expanded .hub-l3-row,
+.hub-accordion--expanded .hub-l3-section {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+/* Card aberto: ocupa as 2 colunas (full-width dentro do próprio grid) */
+.hub-l2-grid .hub-card.is-open,
+.hub-l2-section .hub-card.is-open,
+.hub-l3-row .hub-card.is-open,
+.hub-l3-section .hub-card.is-open {
+  grid-column: 1 / -1 !important;
+}
+
+/* ================================================================
+   FIM DO BUILD 254
+================================================================ */

@@ -2268,18 +2268,56 @@
       return html;
     },
 
-    /* ── Conteúdo interno da área de resultado (sem o container externo) ── */
+    /* ── Conteúdo interno da área de resultado (sem o container externo) ──
+       BUILD 273 — Missão 2: ejeta o .univ-result-card nativo (header/number/
+       sub/conduct) tematizado via .theme-eletro herdado de #hub-card-eletrolitos.
+       Reaproveita ElecRender._bloco/_opCard/_estadoBloco (pipeline clínico
+       validado) apenas como conteúdo do bloco .univ-result-conduct — nunca
+       toca nos inputs (Pilar "Input Estável e Não-Destrutivo"). */
     renderResultContent: function (lang, elecKey, s) {
       if (!elecKey) return '';
-      var html = ElecRender.renderOutput(elecKey, s);
-      if (!html) return '';
+      var elec = ELECTROLYTES[elecKey];
+      if (!elec) return '';
+      var logic = ClinicalLogic[elecKey];
+      if (!logic) return '<div class="univ-result-card is-visible"><div class="univ-result-card-inner"><div class="univ-result-sub">Módulo em desenvolvimento</div></div></div>';
       var t = I18N[lang] || I18N.pt;
-      return '<div class="elec2-result-actions">' +
-        '<button class="elec2-action-btn" onclick="ElecCalc.copyResult()">' +
-        '<i class="fa-solid fa-copy"></i> ' + t.copy_result + '</button>' +
-        '<button class="elec2-action-btn elec2-action-btn--secondary" onclick="ElecCalc.reset()">' +
-        '<i class="fa-solid fa-rotate-left"></i> ' + t.limpar + '</button>' +
-        '</div>' + html;
+      var out = logic(s, t);
+      var elecName = typeof elec.name === 'object' ? (elec.name[lang] || elec.name.pt) : elec.name;
+      var numberVal = (s.valor !== null && s.valor !== undefined) ? s.valor : '—';
+      var unitTxt = elec.unit || '';
+
+      /* Conteúdo detalhado — estado + opções terapêuticas + alertas + recontrole */
+      var detailHtml = '';
+      detailHtml += ElecRender._bloco(t.blk_estado, elec.color, ElecRender._estadoBloco(out.estado, elec, t, lang), 'fa-chart-line');
+      if (out.op1) detailHtml += ElecRender._opCard(t.blk_op1, out.op1, t, elec.color);
+      if (out.op2) detailHtml += ElecRender._opCard(t.blk_op2, out.op2, t, elec.color);
+      if (out.op3) detailHtml += ElecRender._opCard(t.blk_op3, out.op3, t, elec.color);
+      if (out.alertas && out.alertas.length > 0) {
+        var alertContent = out.alertas.map(function (a) {
+          var cls = a.indexOf('🚨') >= 0 ? 'elec2-alert--critical' : (a.indexOf('⚠️') >= 0 ? 'elec2-alert--warn' : 'elec2-alert--info');
+          return '<div class="elec2-alert ' + cls + '">' + a + '</div>';
+        }).join('');
+        detailHtml += ElecRender._bloco(t.blk_alertas, '#EF4444', alertContent, 'fa-triangle-exclamation');
+      }
+      if (out.recontrole) {
+        detailHtml += ElecRender._bloco(t.blk_recontrole, '#34D399', '<div class="elec2-recontrole">' + out.recontrole + '</div>', 'fa-clock-rotate-left');
+      }
+
+      return '<div class="univ-result-card is-visible">' +
+        '<div class="univ-result-card-inner">' +
+          '<div class="univ-result-header"><i class="fa-solid ' + elec.icon + '"></i> ' + elecName + '</div>' +
+          '<div class="univ-result-number">' + numberVal +
+            '<span style="font-size:15px;font-weight:700;opacity:0.65;margin-left:5px;letter-spacing:0">' + unitTxt + '</span></div>' +
+          (out.interpretacao ? '<div class="univ-result-sub">' + out.interpretacao + '</div>' : '') +
+          '<div class="univ-result-conduct">' + detailHtml + '</div>' +
+          '<div class="elec2-result-actions" style="margin-top:12px">' +
+            '<button class="elec2-action-btn" onclick="ElecCalc.copyResult()">' +
+            '<i class="fa-solid fa-copy"></i> ' + t.copy_result + '</button>' +
+            '<button class="elec2-action-btn elec2-action-btn--secondary" onclick="ElecCalc.reset()">' +
+            '<i class="fa-solid fa-rotate-left"></i> ' + t.limpar + '</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
     }
   };
 

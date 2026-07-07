@@ -1,0 +1,382 @@
+/* ================================================================
+   MedCases Pro — BUILD 272 — UNIVERSAL DESIGN SYSTEM & REACTIVE ENGINE
+   ----------------------------------------------------------------
+   Regra de Ouro: "Cálculo em Tempo Real (Atrito Zero) + Tematização
+   Contextual".
+
+   ESCOPO:
+   ├── §1  Temas Contextuais (--theme-accent / --theme-bg por módulo)
+   ├── §2  .univ-input-group  — input padrão com unidade fixa
+   ├── §3  .univ-toggle-btn   — botão de seleção de score (+1pt)
+   ├── §4  .univ-result-card  — card de resultado definitivo
+   ├── §5  Live Dashboard ClCr — grid 2x2 (Pilar 3)
+   ├── §6  Pontes de compatibilidade (score-row, fluid-result, etc.)
+   ├── §7  Fade-genérico para containers de resultado legados
+================================================================ */
+
+
+/* ================================================================
+   §1 — TEMAS CONTEXTUAIS
+   Aplicar a classe .theme-* no contêiner pai (card/section) para que
+   todo o subtree (inputs, toggles, result-card) herde a cor do módulo.
+================================================================ */
+:root {
+  /* Fallback: cyan oficial MedCases (usado se nenhum .theme-* estiver presente) */
+  --theme-accent: #38BDF8;
+  --theme-accent-rgb: 56, 189, 248;
+  --theme-bg: rgba(56, 189, 248, 0.08);
+}
+
+/* Renal / ClCr — Verde esmeralda */
+.theme-renal {
+  --theme-accent: #10B981;
+  --theme-accent-rgb: 16, 185, 129;
+  --theme-bg: rgba(16, 185, 129, 0.09);
+}
+
+/* Hemodinâmica / Risco Hemorrágico (HAS-BLED, CHA2DS2, TIMI, Wells) — Rosa/Vermelho */
+.theme-hemo {
+  --theme-accent: #FB7185;
+  --theme-accent-rgb: 251, 113, 133;
+  --theme-bg: rgba(251, 113, 133, 0.09);
+}
+
+/* Eletrólitos / Meio Interno — Azul/Roxo */
+.theme-eletro {
+  --theme-accent: #A78BFA;
+  --theme-accent-rgb: 167, 139, 250;
+  --theme-bg: rgba(167, 139, 250, 0.09);
+}
+
+/* Fluidoterapia — Azul ciano */
+.theme-fluidos {
+  --theme-accent: #38BDF8;
+  --theme-accent-rgb: 56, 189, 248;
+  --theme-bg: rgba(56, 189, 248, 0.09);
+}
+
+/* Scores gerais (SOFA, Glasgow, CURB-65, Child-Pugh, NEWS2) — Âmbar clínico */
+.theme-scores {
+  --theme-accent: #FBBF24;
+  --theme-accent-rgb: 251, 191, 36;
+  --theme-bg: rgba(251, 191, 36, 0.09);
+}
+
+
+/* ================================================================
+   §2 — .univ-input-group
+   Contêiner padrão para inputs de calculadora: label claro + unidade
+   de medida FIXA à direita, dentro do próprio input.
+================================================================ */
+.univ-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.univ-input-group .univ-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-secondary, #94A3B8);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.univ-input-group .univ-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.univ-input-group .univ-input {
+  width: 100%;
+  background: var(--bg-input, #141C2B);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 56px 12px 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary, #E2E8F0);
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.univ-input-group .univ-input::placeholder { color: rgba(255,255,255,0.25); font-weight: 500; }
+.univ-input-group .univ-input:focus {
+  outline: none;
+  border-color: var(--theme-accent);
+  box-shadow: 0 0 0 3px rgba(var(--theme-accent-rgb), 0.18);
+}
+.univ-input-group .univ-input-unit {
+  position: absolute;
+  right: 14px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--theme-accent);
+  pointer-events: none;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.18);
+  padding: 3px 7px;
+  border-radius: 7px;
+}
+body.light-mode .univ-input-group .univ-input { background:#F1F5F9; color:#0F172A; border-color:rgba(0,0,0,0.08); }
+body.light-mode .univ-input-group .univ-input-unit { background:rgba(255,255,255,0.6); }
+
+
+/* ================================================================
+   §3 — .univ-toggle-btn
+   Padrão para botões de seleção de score (toggles "+1pt").
+================================================================ */
+.univ-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  background: var(--bg-card2, #243044);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary, #94A3B8);
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.1s ease;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+}
+.univ-toggle-btn:active { transform: scale(0.98); }
+.univ-toggle-btn .univ-toggle-label { flex: 1; }
+.univ-toggle-btn .univ-toggle-label strong {
+  display: block; color: var(--text-primary, #E2E8F0); font-weight: 700; font-size: 13.5px;
+}
+.univ-toggle-btn .univ-toggle-pts {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text-muted, #475569);
+  flex-shrink: 0;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+}
+.univ-toggle-btn.is-active {
+  border-color: var(--theme-accent);
+  background: var(--theme-bg);
+  color: var(--text-primary, #E2E8F0);
+  box-shadow: 0 0 0 1px var(--theme-accent) inset;
+}
+.univ-toggle-btn.is-active .univ-toggle-pts {
+  background: var(--theme-accent);
+  color: #0B0F17;
+}
+
+
+/* ================================================================
+   §3b — BUILD 273: .univ-score-section / stepper nativo (Glasgow)
+   Migração nativa de renderScoreCalc() — substitui .score-section/
+   .score-row/.score-check/.stepper legados.
+================================================================ */
+.univ-score-section { margin-bottom: 16px; }
+.univ-score-group-title {
+  font-size: 11px; font-weight: 700; color: var(--text-muted, #475569);
+  letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.univ-score-group-title::before {
+  content: ''; width: 3px; height: 14px; border-radius: 2px;
+  background: var(--theme-accent);
+}
+.univ-toggle-btn--stepper { cursor: default; }
+.univ-toggle-btn--stepper:active { transform: none; }
+.univ-stepper { display: flex; align-items: center; gap: 0; flex-shrink: 0; }
+.univ-stepper-btn {
+  width: 28px; height: 28px; border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.22); color: var(--text-secondary, #94A3B8);
+  font-size: 15px; font-weight: 700; border-radius: 6px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Inter', sans-serif; transition: all 0.15s ease;
+}
+.univ-stepper-btn:active { background: var(--theme-bg); color: var(--theme-accent); }
+.univ-stepper-val {
+  min-width: 32px; text-align: center; font-size: 14px; font-weight: 800;
+  color: var(--text-primary, #E2E8F0); padding: 0 6px;
+}
+body.light-mode .univ-stepper-btn { background: rgba(0,0,0,0.05); }
+
+
+/* ================================================================
+   §4 — .univ-result-card
+   Componente definitivo de resultado. Substitui a mistura de cards
+   verde/vermelho/preto. Inicia oculto e aparece com fade-in suave.
+================================================================ */
+.univ-result-card {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transform: translateY(-8px);
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.35s ease,
+              transform 0.35s ease,
+              margin-top 0.35s ease;
+}
+.univ-result-card.is-visible {
+  max-height: 900px;
+  opacity: 1;
+  margin-top: 14px;
+  transform: translateY(0);
+}
+.univ-result-card-inner {
+  background: linear-gradient(160deg, rgba(var(--theme-accent-rgb), 0.16) 0%, rgba(10, 14, 23, 0.92) 55%);
+  border: 1px solid rgba(var(--theme-accent-rgb), 0.32);
+  border-radius: 18px;
+  padding: 18px 16px 16px;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.38);
+}
+.univ-result-header {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.univ-result-number {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  color: var(--theme-accent);
+  text-shadow: 0 0 24px rgba(var(--theme-accent-rgb), 0.35);
+}
+.univ-result-sub {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+  margin-top: 8px;
+}
+.univ-result-conduct {
+  margin-top: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(var(--theme-accent-rgb), 0.28);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: left;
+}
+.univ-result-conduct strong { color: var(--theme-accent); }
+body.light-mode .univ-result-card-inner { background: linear-gradient(160deg, rgba(var(--theme-accent-rgb),0.14) 0%, #ffffff 60%); }
+body.light-mode .univ-result-sub { color:#0F172A; }
+body.light-mode .univ-result-conduct { color:#1E293B; background:rgba(0,0,0,0.03); }
+
+
+/* ================================================================
+   §5 — LIVE DASHBOARD ClCr (Pilar 3) — Grid 2x2 simétrico
+   ClCr · IMC · Peso Ideal · BSA — visível SEMPRE (mesmo com o
+   card colapsado), sem precisar abrir nenhuma tela.
+================================================================ */
+.clcr-live-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0 16px 14px;
+}
+.clcr-live-quad {
+  background: rgba(var(--theme-accent-rgb), 0.07);
+  border: 1px solid rgba(var(--theme-accent-rgb), 0.20);
+  border-radius: 12px;
+  padding: 10px 8px 9px;
+  text-align: center;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.clcr-live-quad-val {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--theme-accent);
+  line-height: 1;
+  letter-spacing: -0.4px;
+  transition: color 0.3s ease;
+}
+.clcr-live-quad-val.is-empty {
+  color: rgba(255, 255, 255, 0.22);
+  font-weight: 700;
+}
+.clcr-live-quad-lbl {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.42);
+  margin-top: 4px;
+}
+body.light-mode .clcr-live-quad-val.is-empty { color: rgba(0,0,0,0.20); }
+body.light-mode .clcr-live-quad-lbl { color: rgba(0,0,0,0.42); }
+
+@media (min-width: 600px) {
+  .clcr-live-quad-val { font-size: 22px; }
+}
+
+
+/* ================================================================
+   §6 — PONTES DE COMPATIBILIDADE
+   Aplica a tematização contextual a componentes legados sem precisar
+   reescrever seu HTML (score-row, score-result-box, hm-input focado).
+================================================================ */
+
+/* Toggles de score (HAS-BLED / SOFA / Glasgow) herdam --theme-accent */
+.score-row.selected {
+  border-color: var(--theme-accent, var(--border-green)) !important;
+  background: var(--theme-bg, rgba(14,90,58,0.12)) !important;
+}
+.score-check:checked {
+  background: var(--theme-accent, linear-gradient(135deg,var(--green-mid),var(--green-bright))) !important;
+}
+.stepper-btn:active { color: var(--theme-accent, var(--green-glow)) !important; }
+
+/* Result box de scores tematizado via data-theme herdado da .theme-* wrapper */
+.score-result-box.theme-hemo,
+.score-result-box.theme-scores,
+.score-result-box.theme-renal,
+.score-result-box.theme-eletro {
+  background: linear-gradient(160deg, rgba(var(--theme-accent-rgb),0.18) 0%, #0A0E17 65%) !important;
+  border-color: rgba(var(--theme-accent-rgb),0.35) !important;
+}
+.score-result-box.theme-hemo   .score-result-number,
+.score-result-box.theme-scores .score-result-number,
+.score-result-box.theme-renal  .score-result-number,
+.score-result-box.theme-eletro .score-result-number {
+  color: var(--theme-accent) !important;
+  text-shadow: 0 0 20px rgba(var(--theme-accent-rgb),0.35) !important;
+}
+
+/* Input focado herda a cor do módulo (Pilar 1 — tematização do foco) */
+.hm-input:focus, .input-field:focus, #fluid-temp:focus {
+  border-color: var(--theme-accent, var(--cyan)) !important;
+  box-shadow: 0 0 0 3px rgba(var(--theme-accent-rgb), 0.18) !important;
+}
+
+
+/* ================================================================
+   §7 — FADE GENÉRICO para containers de resultado legados
+   (fluid-result, hub-clcr-result-area) — aparecem suavemente assim
+   que o JS injeta o HTML, sem precisar de um botão "Calcular".
+================================================================ */
+#fluid-result,
+#hub-clcr-result-area > *,
+.score-result-box {
+  transition: opacity 0.32s ease, transform 0.32s ease;
+}
+#fluid-result:empty { opacity: 0; }
+#fluid-result:not(:empty) { animation: univFadeIn 0.38s ease; }
+
+@keyframes univFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
