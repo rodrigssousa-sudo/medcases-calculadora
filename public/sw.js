@@ -2,16 +2,13 @@
    MedCases Pro — Service Worker v5.1 (BUILD 274)
    Estratégia: STALE-WHILE-REVALIDATE (Cache-First + Background Sync)
    ─────────────────────────────────────────────────────────────
-   BUILD 274 — Cache Busting Implacável:
-   • CACHE_VERSION bumped para 'medcases-v274' → invalida TODOS os
-     caches anteriores (v60 e quaisquer outros) nos dispositivos reais.
-   • install: self.skipWaiting() explícito fora do .then() encadeado
-     (garante ativação imediata mesmo se o pre-cache falhar parcialmente).
-   • activate: limpeza agressiva — deleta qualquer chave que NÃO seja
-     exatamente CACHE_NAME; clients.claim() após limpeza.
-   • ASSETS_TO_CACHE agora inclui build254-critical-fixes.css,
-     build272-universal-design-system.css e build272-reactive-engine.js
-     (ausentes na lista v60).
+   BUILD 274 — Cache Busting Implacável (ver histórico)
+   BUILD 275.1 — Force Cache Bust:
+   • CACHE_VERSION bumped para 'medcases-v275' → invalida medcases-v274
+     e quaisquer outros caches anteriores em dispositivos reais.
+   • ASSETS_TO_CACHE com query string ?v=275 sincronizada com index.html.
+   • Mantém: skipWaiting() incondicional, limpeza agressiva no activate,
+     clients.claim() após limpeza.
 
    FLUXO POR CENÁRIO:
    ┌─────────────────────────────────┬───────────────────────────────┐
@@ -24,15 +21,11 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v274';
+const CACHE_VERSION   = 'medcases-v275';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
 /* ── Lista canônica de assets pré-cacheados no install ──────
-   BUILD 274: lista sincronizada com a stack CSS/JS real do app.
-   Adicionados: build254-critical-fixes.css,
-                build272-universal-design-system.css,
-                build272-reactive-engine.js
-   (estavam fora da lista v60 — causavam cache miss em prod)
+   BUILD 275.1: query strings sincronizadas com ?v=275 do index.html.
    Inclui: 2 raiz + 14 css + 8 js + 16 database = 40 arquivos
 ─────────────────────────────────────────────────────────── */
 const ASSETS_TO_CACHE = [
@@ -42,49 +35,49 @@ const ASSETS_TO_CACHE = [
   './index.html',
   './sw.js',
 
-  /* ── CSS (14 arquivos — stack completa BUILD 274) ── */
-  './css/medcases-ux-v2.css',
-  './css/build233.css',
-  './css/build234-design-system.css',
-  './css/build235-layout.css',
-  './css/build236-hub-redesign.css',
-  './css/build237a-ux-refinement.css',
-  './css/build237b-flush-cards.css',
-  './css/build240b-fixes.css',
-  './css/build241-ux-pro.css',
-  './css/build243-fullscreen-overlay.css',
-  './css/build244-category-pills.css',
-  './css/build246-farmaco-modal-premium.css',
-  './css/build254-critical-fixes.css',
-  './css/build272-universal-design-system.css',
+  /* ── CSS (14 arquivos — stack completa BUILD 275.1) ── */
+  './css/medcases-ux-v2.css?v=275',
+  './css/build233.css?v=275',
+  './css/build234-design-system.css?v=275',
+  './css/build235-layout.css?v=275',
+  './css/build236-hub-redesign.css?v=275',
+  './css/build237a-ux-refinement.css?v=275',
+  './css/build237b-flush-cards.css?v=275',
+  './css/build240b-fixes.css?v=275',
+  './css/build241-ux-pro.css?v=275',
+  './css/build243-fullscreen-overlay.css?v=275',
+  './css/build244-category-pills.css?v=275',
+  './css/build246-farmaco-modal-premium.css?v=275',
+  './css/build254-critical-fixes.css?v=275',
+  './css/build272-universal-design-system.css?v=275',
 
-  /* ── JS (8 arquivos — stack completa BUILD 274) ── */
-  './js/medcases-ux-v2.js',
-  './js/hub-accordion.js',
-  './js/build240b-accordion-fix.js',
-  './js/calculator-overlay.js',
-  './js/category-pills.js',
-  './js/elec-calc.js',
-  './js/deeplink-router.js',
-  './js/build272-reactive-engine.js',
+  /* ── JS (8 arquivos — stack completa BUILD 275.1) ── */
+  './js/medcases-ux-v2.js?v=275',
+  './js/hub-accordion.js?v=275',
+  './js/build240b-accordion-fix.js?v=275',
+  './js/calculator-overlay.js?v=275',
+  './js/category-pills.js?v=275',
+  './js/elec-calc.js?v=275',
+  './js/deeplink-router.js?v=275',
+  './js/build272-reactive-engine.js?v=275',
 
   /* ── Database (16 arquivos — base clínica COMPLETA) ── */
-  './database/analgesicos.js',
-  './database/anticoag.js',
-  './database/antimicrobianos.js',
-  './database/cardio.js',
-  './database/endocrino.js',
-  './database/gastro.js',
-  './database/infusoes.js',
-  './database/interacoes.js',
-  './database/nefro.js',
-  './database/neuro.js',
-  './database/obesidade.js',
-  './database/pneumo.js',
-  './database/prescricoes.js',
-  './database/psicofarmacos.js',
-  './database/psiquiatria.js',
-  './database/reumatologia.js',
+  './database/analgesicos.js?v=275',
+  './database/anticoag.js?v=275',
+  './database/antimicrobianos.js?v=275',
+  './database/cardio.js?v=275',
+  './database/endocrino.js?v=275',
+  './database/gastro.js?v=275',
+  './database/infusoes.js?v=275',
+  './database/interacoes.js?v=275',
+  './database/nefro.js?v=275',
+  './database/neuro.js?v=275',
+  './database/obesidade.js?v=275',
+  './database/pneumo.js?v=275',
+  './database/prescricoes.js?v=275',
+  './database/psicofarmacos.js?v=275',
+  './database/psiquiatria.js?v=275',
+  './database/reumatologia.js?v=275',
 ];
 
 /* ============================================================

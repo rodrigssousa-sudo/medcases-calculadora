@@ -508,6 +508,25 @@
     var drug1     = params.get('drug1') || '';
     var drug2     = params.get('drug2') || '';
 
+    /* BUILD 275.1 — STATIC HOME GUARD:
+       Se não há nenhum ?tab= na URL, a Home deve carregar completamente
+       estática e fechada — zero abertura de card, zero scroll automático.
+       Retorno imediato aqui garante que nenhum TAB_HANDLER seja chamado
+       acidentalmente (ex: por app nativo que omite ?tab= mas dispara
+       o router de outra forma). O guard de idioma (?lang= sem ?tab=)
+       continua funcionando — só o roteamento de aba é bloqueado. */
+    var _rawTab = (new URLSearchParams(window.location.search)).get('tab');
+    if (!_rawTab || !_rawTab.trim()) {
+      /* Sem ?tab= — aplica idioma se presente, depois encerra sem abrir nada */
+      if (langParam) {
+        _applyLang(langParam);
+        console.log('[DeepLink] BUILD 275.1: apenas lang= detectado — idioma aplicado, home estática.');
+      } else {
+        console.log('[DeepLink] BUILD 275.1: sem parâmetros — home estática e fechada.');
+      }
+      return;
+    }
+
     /* BUILD 251 — ESCUDO DO PACIENTE NO DEEPLINK (UX Fix):
        Ao entrar via deeplink apontando para QUALQUER tab que não
        seja explicitamente 'paciente'/'patient', garante que o card
@@ -532,8 +551,10 @@
       }
     }
 
-    /* ── ETAPA 2–4: Roteamento de aba (sem parâmetros → home) ── */
+    /* ── ETAPA 2–4: Roteamento de aba (com parâmetros) ── */
     if (!tab) {
+      /* Fallback defensivo: não deve chegar aqui após o guard acima,
+         mas mantido como segurança extra */
       if (langApplied) {
         console.log('[DeepLink] Apenas lang= detectado — idioma aplicado, aba: Home.');
       } else {

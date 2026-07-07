@@ -33,6 +33,26 @@
   var _focusTimer     = null;
   var _lastFocusEl    = null;
 
+  /* BUILD 275.1 — BOOT SCROLL GUARD
+     Janela de proteção: nos primeiros BOOT_LOCK_MS após o init, qualquer
+     scroll automático para cards específicos (clcr, patient, scores) é
+     bloqueado. Isso impede que o log "action=scroll card=hub-card-clcr"
+     seja gerado por abertura programática não-solicitada pelo usuário
+     (ex: app nativo injetando ?tab=clcr via WebView logo no boot).
+     Após BOOT_LOCK_MS, scrolls disparados por interação real do usuário
+     (hubToggle via click) funcionam normalmente.
+     Cards protegidos: aqueles que o BUILD 275 tornou estáticos (clcr)
+     ou que NÃO devem ter scroll automático no boot (patient). */
+  var BOOT_LOCK_MS  = 1800; /* ms após _init — cobre o delay do deeplink-router (120ms) + margem */
+  var _bootLocked   = true;
+  var _BOOT_LOCKED_CARDS = { 'hub-card-clcr': true, 'hub-card-patient': true };
+
+  /* Libera o lock após a janela de boot */
+  setTimeout(function () {
+    _bootLocked = false;
+    console.log('[ACCORDION_FIX] BUILD 275.1: boot scroll lock liberado após ' + BOOT_LOCK_MS + 'ms');
+  }, BOOT_LOCK_MS);
+
   /* ────────────────────────────────────────────────────────────────
      UTIL: Verifica se elemento está suficientemente visível
      Retorna true se o card está >= 40% visível na viewport
@@ -78,6 +98,15 @@
   ──────────────────────────────────────────────────────────────── */
   function _stableScrollToCard(cardId, delay) {
     var effectiveDelay = Math.max(delay || 0, ANIM_DURATION);
+
+    /* BUILD 275.1 — Boot Scroll Guard:
+       Bloqueia scroll para cards protegidos durante a janela de boot.
+       Evita o log "action=scroll card=hub-card-clcr" gerado por
+       abertura programática não-solicitada (app nativo / deeplink). */
+    if (_bootLocked && _BOOT_LOCKED_CARDS[cardId]) {
+      console.log('[ACCORDION_FIX] BUILD 275.1: scroll bloqueado no boot para', cardId);
+      return;
+    }
 
     setTimeout(function () {
       var card = document.getElementById(cardId);
