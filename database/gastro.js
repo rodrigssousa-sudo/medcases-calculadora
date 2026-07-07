@@ -447,6 +447,184 @@ window.GASTRO_DRUGS_DB = [
     },
 
     ref: 'Barkun AN et al. Ann Intern Med 2019 · Laine L et al. Gut 2021 · ASGE Standards of Practice 2020 · FDA Prilosec IV label · Lexicomp 2026'
+  },
+
+  /* ── BUILD 278 Lote 2 ──────────────────────────────────────────────── */
+
+  {
+    id: 'pantoprazol_iv',
+    name: { pt: 'Pantoprazol IV', es: 'Pantoprazol IV' },
+    category: 'gastro',
+    class: { pt: 'Inibidor da Bomba de Prótons (IBP)', es: 'Inhibidor de la Bomba de Protones (IBP)' },
+    indications: {
+      pt: ['Hemorragia Digestiva Alta (HDA) não varicosa', 'Profilaxia de úlcera de estresse em pacientes críticos', 'Pacientes coronariopatas com sangramento TGI (alternativa ao Omeprazol)'],
+      es: ['Hemorragia Digestiva Alta (HDA) no varicosa', 'Profilaxis de úlcera de estrés en pacientes críticos', 'Pacientes coronariópatas con sangrado TGI (alternativa al Omeprazol)']
+    },
+    commercialNames: { br: ['Pantocal IV', 'Zurcal IV'], ar: ['Pantus IV', 'Zurcal'] },
+    presentation: { pt: ['Frasco-ampola liofilizado 40 mg'], es: ['Vial liofilizado 40 mg'] },
+    mechanism: {
+      pt: 'Pró-fármaco ativado em meio ácido. Liga-se covalentemente à H+/K+ ATPase na célula parietal gástrica. A grande vantagem do pantoprazol sobre o omeprazol é sua menor afinidade pelo citocromo CYP2C19, causando muito menos interações medicamentosas sistêmicas, especialmente com antiagregantes plaquetários.',
+      es: 'Profármaco activado en medio ácido. Se une covalentemente a la H+/K+ ATPase en la célula parietal gástrica. La gran ventaja del pantoprazol sobre el omeprazol es su menor afinidad por el citocromo CYP2C19, causando mucho menos interacciones medicamentosas sistémicas, especialmente con antiagregantes plaquetarios.'
+    },
+    dose: {
+      adult: {
+        pt: 'HDA Úlcera Péptica Sangrante: Bolus IV de 80 mg (2 ampolas), seguido de infusão contínua de 8 mg/h por 72 horas. Profilaxia UTI: 40 mg IV 1x/dia.',
+        es: 'HDA Úlcera Péptica Sangrante: Bolo IV de 80 mg (2 ampollas), seguido de infusión continua de 8 mg/h por 72 horas. Profilaxis UCI: 40 mg IV 1 vez/día.'
+      },
+      pediatric: {
+        pt: 'Uso hospitalar: 1 a 2 mg/kg/dia IV (máx 40 mg).',
+        es: 'Uso hospitalario: 1 a 2 mg/kg/día IV (máx 40 mg).'
+      }
+    },
+    administration: {
+      pt: ['Bolus IV direto deve ser lento (mínimo 2 minutos).', 'Infusão contínua: diluir 80 mg em 100 mL de SF 0,9%.'],
+      es: ['El bolo IV directo debe ser lento (mínimo 2 minutos).', 'Infusión continua: diluir 80 mg en 100 mL de SF 0,9%.']
+    },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em falência renal.', es: 'Sin necesidad de ajuste en falla renal.' } },
+    hepaticAdjustment: { required: true, message: { pt: 'Na insuficiência hepática grave (Child-Pugh C), reduzir dose diária ou usar em dias alternados (ex: 20 mg/dia) após fase aguda de HDA.', es: 'En insuficiencia hepática grave (Child-Pugh C), reducir dosis diaria o usar en días alternos (ej: 20 mg/día) tras fase aguda de HDA.' } },
+    commonAdverseEffects: { pt: ['Cefaleia', 'Tromboflebite (via IV)', 'Diarreia'], es: ['Cefalea', 'Tromboflebitis (vía IV)', 'Diarrea'] },
+    dangerousAdverseEffects: { pt: ['Pneumonia associada à ventilação mecânica (PAV)', 'Infecção por Clostridium difficile', 'Hipomagnesemia severa'], es: ['Neumonía asociada a la ventilación mecánica (NAV)', 'Infección por Clostridium difficile', 'Hipomagnesemia severa'] },
+    contraindications: {
+      absolute: { pt: ['Anafilaxia ou hipersensibilidade a derivados benzimidazólicos'], es: ['Anafilaxia o hipersensibilidad a derivados benzimidazólicos'] },
+      relative: { pt: ['Risco elevado de infecções hospitalares oportunistas'], es: ['Riesgo elevado de infecciones hospitalarias oportunistas'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+      warning: { pt: 'É o IBP DE ESCOLHA em pacientes com síndrome coronariana aguda ou recém-estentados em uso de Clopidogrel, pois não inibe a ativação do antiagregante.', es: 'Es el IBP DE ELECCIÓN en pacientes con síndrome coronario agudo o recién estentados en uso de Clopidogrel, pues no inhibe la activación del antiagregante.' }
+    },
+    ref: 'Barkun AN et al. Ann Intern Med 2019 · Lanza FL et al. Am J Gastroenterol 2009 · Focks JJ et al. BMJ 2013 · AHA/ACC Focused Update 2016 · Lexicomp 2026'
+  },
+
+  {
+    id: 'somatostatina',
+    name: { pt: 'Somatostatina', es: 'Somatostatina' },
+    category: 'gastro',
+    class: { pt: 'Hormônio Peptídico / Inibidor de Secreção', es: 'Hormona Peptídica / Inhibidor de Secreción' },
+    indications: {
+      pt: ['Hemorragia Digestiva Alta varicosa severa', 'Fístulas pancreáticas e intestinais (reduz secreção)', 'Prevenção de complicações pós-CPRE'],
+      es: ['Hemorragia Digestiva Alta varicosa severa', 'Fístulas pancreáticas e intestinales (reduce secreción)', 'Prevención de complicaciones pos-CPRE']
+    },
+    commercialNames: { br: ['Stilamin'], ar: ['Somatostatina'] },
+    presentation: { pt: ['Frasco-ampola liofilizado 3 mg'], es: ['Vial liofilizado 3 mg'] },
+    mechanism: {
+      pt: 'Hormônio endógeno com efeitos inibitórios massivos. Reduz a secreção de ácido gástrico, pepsina, suco pancreático e fluxo sanguíneo esplâncnico (via inibição da vasodilatação local). Essa potente vasoconstrição local diminui rapidamente a pressão portal e cessa o sangramento varicoso.',
+      es: 'Hormona endógena con efectos inhibitorios masivos. Reduce la secreción de ácido gástrico, pepsina, jugo pancreático y flujo sanguíneo esplácnico (vía inhibición de la vasodilatación local). Esta potente vasoconstricción local disminuye rápidamente la presión portal y cesa el sangrado varicoso.'
+    },
+    dose: {
+      adult: {
+        pt: 'HDA Varicosa: Bolus IV de 250 mcg, seguido de infusão contínua ININTERRUPTA de 250 mcg/hora por 3 a 5 dias.',
+        es: 'HDA Varicosa: Bolo IV de 250 mcg, seguido de infusión continua ININTERRUMPIDA de 250 mcg/hora por 3 a 5 días.'
+      },
+      pediatric: {
+        pt: 'Uso restrito. Geralmente infusão de 3,5 a 5 mcg/kg/hora.',
+        es: 'Uso restringido. Generalmente infusión de 3,5 a 5 mcg/kg/hora.'
+      }
+    },
+    administration: {
+      pt: ['A meia-vida da somatostatina é ULTRA CURTA (1 a 3 minutos). Se a bomba de infusão parar por apenas 3 minutos, a pressão portal sobe subitamente e a variz volta a sangrar em jato. Exige equipo de bomba perfeito.'],
+      es: ['La vida media de la somatostatina es ULTRA CORTA (1 a 3 minutos). Si la bomba de infusión se detiene por solo 3 minutos, la presión portal sube súbitamente y la várice vuelve a sangrar en chorro. Exige equipo de bomba perfecto.']
+    },
+    renalAdjustment: { required: true, message: { pt: 'Pacientes com ClCr < 30 mL/min podem requerer redução de dose (metabolismo plasmático e renal).', es: 'Pacientes con ClCr < 30 mL/min pueden requerir reducción de dosis (metabolismo plasmático y renal).' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Seguro e indicado na insuficiência hepática aguda/cirrose.', es: 'Seguro e indicado en insuficiencia hepática aguda/cirrosis.' } },
+    commonAdverseEffects: { pt: ['Náuseas / Vômitos', 'Flushing (rubor facial)', 'Dor abdominal'], es: ['Náuseas / Vómitos', 'Flushing (rubor facial)', 'Dolor abdominal'] },
+    dangerousAdverseEffects: { pt: ['Hiperglicemia severa ou hipoglicemia aguda', 'Bradicardia', 'Arritmias'], es: ['Hiperglucemia severa o hipoglucemia aguda', 'Bradicardia', 'Arritmias'] },
+    contraindications: {
+      absolute: { pt: ['Hipersensibilidade grave'], es: ['Hipersensibilidad grave'] },
+      relative: { pt: ['Gravidez (risco de espasmo uterino e asfixia fetal)', 'Diabetes lábil não monitorada'], es: ['Embarazo (riesgo de espasmo uterino y asfixia fetal)', 'Diabetes lábil no monitorizada'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+      warning: { pt: 'FALHA DE BOMBA É FATAL: O paciente NUNCA pode ficar sem a infusão. Uma nova ampola/seringa deve estar pronta antes que a atual termine. Monitorar glicemia a cada 4h.', es: 'FALLO DE BOMBA ES FATAL: El paciente NUNCA puede quedarse sin la infusión. Una nueva ampolla/jeringa debe estar lista antes de que la actual termine. Monitorizar glucemia cada 4h.' }
+    },
+    ref: 'García-Pagán JC et al. N Engl J Med 2010 · Ioannou GN et al. Hepatology 2003 · de Franchis R (Baveno VI) J Hepatol 2015 · Lexicomp 2026'
+  },
+
+  {
+    id: 'rifaximina',
+    name: { pt: 'Rifaximina', es: 'Rifaximina' },
+    category: 'gastro',
+    class: { pt: 'Antibiótico não-absorvível (Derivado Rifamicina)', es: 'Antibiótico no absorbible (Derivado Rifamicina)' },
+    indications: {
+      pt: ['Prevenção e Tratamento da Encefalopatia Hepática (redução de recaídas)', 'Diarreia do Viajante (E. coli não invasiva)', 'Síndrome de Supercrescimento Bacteriano do Intestino Delgado (SIBO)'],
+      es: ['Prevención y Tratamiento de la Encefalopatía Hepática (reducción de recaídas)', 'Diarrea del Viajero (E. coli no invasiva)', 'Síndrome de Sobrecrecimiento Bacteriano del Intestino Delgado (SIBO)']
+    },
+    commercialNames: { br: ['Flonorm'], ar: ['Lumen', 'Rifaximina'] },
+    presentation: { pt: ['Comprimidos 200 mg', 'Comprimidos 550 mg'], es: ['Comprimidos 200 mg', 'Comprimidos 550 mg'] },
+    mechanism: {
+      pt: 'Liga-se irreversivelmente à subunidade beta da RNA polimerase dependente de DNA das bactérias entéricas, inibindo a síntese de RNA. No cirrótico, erradica as bactérias do cólon produtoras de amônia. Sua absorção sistêmica é inferior a 1%, agindo exclusivamente dentro da luz intestinal com baixíssimo risco sistêmico.',
+      es: 'Se une irreversiblemente a la subunidad beta de la ARN polimerasa dependiente de ADN de las bacterias entéricas, inhibiendo la síntesis de ARN. En el cirrótico, erradica las bacterias del colon productoras de amoníaco. Su absorción sistémica es inferior al 1%, actuando exclusivamente dentro de la luz intestinal con bajísimo riesgo sistémico.'
+    },
+    dose: {
+      adult: {
+        pt: 'Encefalopatia Hepática: 550 mg VO a cada 12 horas (uso contínuo associado ou não à lactulose). SIBO/Diarreia: 400 mg 8/8h por 14 dias.',
+        es: 'Encefalopatía Hepática: 550 mg VO cada 12 horas (uso continuo asociado o no a la lactulosa). SIBO/Diarrea: 400 mg cada 8h por 14 días.'
+      },
+      pediatric: {
+        pt: 'Uso não rotineiro em crianças (na diarreia do viajante > 12 anos: 200 mg 8/8h).',
+        es: 'Uso no rutinario en niños (en diarrea del viajero > 12 años: 200 mg cada 8h).'
+      }
+    },
+    administration: {
+      pt: ['Via oral, com ou sem alimentos.'],
+      es: ['Vía oral, con o sin alimentos.']
+    },
+    renalAdjustment: { required: false, message: { pt: 'Sem absorção sistêmica relevante, não requer ajuste.', es: 'Sin absorción sistémica relevante, no requiere ajuste.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Desenvolvido especificamente para pacientes com cirrose avançada. Sem ajuste.', es: 'Desarrollado específicamente para pacientes con cirrosis avanzada. Sin ajuste.' } },
+    commonAdverseEffects: { pt: ['Edema periférico', 'Náusea', 'Flatulência', 'Tontura leve'], es: ['Edema periférico', 'Náusea', 'Flatulencia', 'Mareo leve'] },
+    dangerousAdverseEffects: { pt: ['Infecção por Clostridium difficile (C. diff)', 'Reações de hipersensibilidade'], es: ['Infección por Clostridium difficile (C. diff)', 'Reacciones de hipersensibilidad'] },
+    contraindications: {
+      absolute: { pt: ['Hipersensibilidade a qualquer derivado da rifamicina (Rifampicina)'], es: ['Hipersensibilidad a cualquier derivado de la rifamicina (Rifampicina)'] },
+      relative: { pt: ['Diarreia invasiva (com febre ou sangue oculto — falha terapêutica)', 'Obstrução intestinal'], es: ['Diarrea invasiva (con fiebre o sangre oculta — fallo terapéutico)', 'Obstrucción intestinal'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+      warning: { pt: 'Diferente da Rifampicina, a Rifaximina não induz o CYP450 de forma clinicamente relevante in vivo devido à sua não absorção. Tratamento de alto custo.', es: 'A diferencia de la Rifampicina, la Rifaximina no induce el CYP450 de forma clínicamente relevante in vivo debido a su no absorción. Tratamiento de alto costo.' }
+    },
+    ref: 'Bass NM et al. N Engl J Med 2010 · Mullen KD et al. Clin Gastroenterol Hepatol 2014 · Dupont HL et al. Ann Intern Med 2001 · Lexicomp 2026'
+  },
+
+  {
+    id: 'racecadotril',
+    name: { pt: 'Racecadotril', es: 'Racecadotrilo' },
+    category: 'gastro',
+    class: { pt: 'Antidiarreico / Inibidor da Encefalinase', es: 'Antidiarreico / Inhibidor de la Encefalinasa' },
+    indications: {
+      pt: ['Tratamento sintomático da diarreia aguda aquosa (em adultos e crianças)'],
+      es: ['Tratamiento sintomático de la diarrea aguda acuosa (en adultos y niños)']
+    },
+    commercialNames: { br: ['Tiorfan', 'Avide'], ar: ['Tiorfan'] },
+    presentation: { pt: ['Cápsulas 100 mg', 'Granulado pediátrico 10 mg', 'Granulado pediátrico 30 mg'], es: ['Cápsulas 100 mg', 'Granulado pediátrico 10 mg', 'Granulado pediátrico 30 mg'] },
+    mechanism: {
+      pt: 'Pró-fármaco (tiorfano). Inibe a enzima encefalinase periférica (localizada no epitélio do intestino delgado). Isso impede a degradação das encefalinas endógenas, que reduzem ativamente a hipersecreção de água e eletrólitos induzida por toxinas virais/bacterianas. A grande vantagem é ser PURAMENTE antissecretor, não afetando a motilidade intestinal basal (não causa distensão nem constipação rebote, diferentemente da Loperamida).',
+      es: 'Profármaco (tiorfano). Inhibe la enzima encefalinasa periférica (localizada en el epitelio del intestino delgado). Esto impide la degradación de las encefalinas endógenas, que reducen activamente la hipersecreción de agua y electrolitos inducida por toxinas virales/bacterianas. La gran ventaja es ser PURAMENTE antisecretor, no afectando la motilidad intestinal basal (no causa distensión ni constipación rebote, a diferencia de la Loperamida).'
+    },
+    dose: {
+      adult: {
+        pt: '100 mg VO 3x/dia, idealmente antes das refeições principais. O tratamento não deve ultrapassar 7 dias.',
+        es: '100 mg VO 3 veces/día, idealmente antes de las comidas principales. El tratamiento no debe superar los 7 días.'
+      },
+      pediatric: {
+        pt: '1,5 mg/kg/dose VO 3x/dia (usar as formulações em sachê/granulado de 10 mg/30 mg).',
+        es: '1,5 mg/kg/dosis VO 3 veces/día (usar las formulaciones en sobre/granulado de 10 mg/30 mg).'
+      }
+    },
+    administration: {
+      pt: ['O primeiro comprimido pode ser tomado em qualquer momento, os subsequentes antes das refeições.', 'Interromper o uso assim que as fezes voltarem à consistência normal ou houver 2 evacuações normais.'],
+      es: ['El primer comprimido puede tomarse en cualquier momento, los subsecuentes antes de las comidas.', 'Interrumpir el uso una vez que las heces vuelvan a consistencia normal o haya 2 evacuaciones normales.']
+    },
+    renalAdjustment: { required: false, message: { pt: 'Falta de dados em insuficiência renal grave; recomenda-se cautela.', es: 'Falta de datos en insuficiencia renal grave; se recomienda precaución.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Falta de dados em disfunção hepática grave; usar com cautela.', es: 'Falta de datos en disfunción hepática grave; usar con precaución.' } },
+    commonAdverseEffects: { pt: ['Cefaleia', 'Eritema cutâneo (rash)'], es: ['Cefalea', 'Eritema cutáneo (rash)'] },
+    dangerousAdverseEffects: { pt: ['Angioedema (raro, mas potencialmente fatal)', 'Reações anafiláticas'], es: ['Angioedema (raro, pero potencialmente fatal)', 'Reacciones anafilácticas'] },
+    contraindications: {
+      absolute: { pt: ['Hipersensibilidade ao fármaco', 'Diarreia sanguinolenta ou purulenta com febre alta (invasiva)', 'Diarreia induzida por antibióticos (colite pseudomembranosa)'], es: ['Hipersensibilidad al fármaco', 'Diarrea sanguinolenta o purulenta con fiebre alta (invasiva)', 'Diarrea inducida por antibióticos (colitis pseudomembranosa)'] },
+      relative: { pt: ['Uso concomitante com inibidores da ECA'], es: ['Uso concomitante con inhibidores de la ECA'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+      warning: { pt: 'Sempre prescrever o Racecadotril JUNTO COM Sais de Reidratação Oral (SRO). O fármaco é adjuvante, e não substitui a reidratação.', es: 'Siempre prescribir el Racecadotrilo JUNTO CON Sales de Rehidratación Oral (SRO). El fármaco es adyuvante, y no sustituye la rehidratación.' }
+    },
+    ref: 'Lehert P et al. Acta Paediatr 2011 · Salazar-Lindo E et al. N Engl J Med 2000 · Lehert P et al. BMC Gastroenterol 2011 · ANSM France · Lexicomp 2026'
   }
 
 ]; /* fim window.GASTRO_DRUGS_DB */

@@ -201,7 +201,19 @@ const DRUG_ALIASES = {
   "lactulona":                          "lactulose",
   "lactulosa":                          "lactulose",
   "farlac":                             "lactulose",
-  "omeprazol_iv":                       "omeprazol"
+  "omeprazol_iv":                       "omeprazol",
+
+  /* BUILD 278 — Gastro Lote 2: aliases de nomenclatura */
+  "pantoprazol_iv":                     "pantoprazol",
+  "pantocal_iv":                        "pantoprazol",
+  "zurcal_iv":                          "pantoprazol",
+  "stilamin":                           "somatostatina",
+  "somatostatin":                       "somatostatina",
+  "racecadotrilo":                      "racecadotril",
+  "tiorfan":                            "racecadotril",
+  "avide":                              "racecadotril",
+  "flonorm":                            "rifaximina",
+  "rifaximin":                          "rifaximina"
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -17699,6 +17711,119 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Preferir formulação líquida de itraconazol (solução oral em ciclodextrina), que tem absorção independente do pH gástrico. Se cápsula for a única opção disponível, administrar com bebida ácida (cola/suco de laranja) e afastar omeprazol por ≥2h. Monitorar níveis séricos de itraconazol quando disponível (alvo >0,5 mg/L para profilaxia; >1 mg/L para tratamento).",
         es: "Preferir formulación líquida de itraconazol (solución oral en ciclodextrina), cuya absorción es independiente del pH gástrico. Si la cápsula es la única opción disponible, administrar con bebida ácida (cola/jugo de naranja) y separar omeprazol por ≥2h. Monitorear niveles séricos de itraconazol cuando disponible (objetivo >0,5 mg/L para profilaxis; >1 mg/L para tratamiento)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES: Gastroenterologia Lote 2
+     BUILD 278 — Pantoprazol IV, Somatostatina, Rifaximina, Racecadotril
+  ═══════════════════════════════════════════════════════════════ */
+
+  "pantoprazol": {
+    "clopidogrel": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "Diferente do Omeprazol, o Pantoprazol possui afinidade muito baixa pelo CYP2C19. NÃO inibe de forma clínica a transformação do clopidogrel na sua forma ativa, mantendo o efeito cardioprotetor (antiagregante) preservado. Estudos farmacodinâmicos (FAMOUS, OCLA) e metanálises confirmam que o impacto clínico na função plaquetária é clinicamente insignificante quando comparado ao omeprazol.",
+        es: "A diferencia del Omeprazol, el Pantoprazol posee afinidad muy baja por el CYP2C19. NO inhibe de forma clínica la transformación del clopidogrel a su forma activa, manteniendo el efecto cardioprotector (antiagregante) preservado. Estudios farmacodinámicos (FAMOUS, OCLA) y metaanálisis confirman que el impacto clínico en la función plaquetaria es clínicamente insignificante en comparación con el omeprazol."
+      },
+      conduta: {
+        pt: "É o IBP seguro e de escolha para proteção gástrica em pacientes em terapia antiagregante dupla (DAPT) após síndrome coronariana aguda ou implante de stent. Não há necessidade de ajuste.",
+        es: "Es el IBP seguro y de elección para protección gástrica en pacientes en terapia antiplaquetaria doble (DAPT) tras síndrome coronario agudo o implante de stent. No hay necesidad de ajuste."
+      }
+    },
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Apesar de ter menor interação via citocromo, todos os IBPs (incluindo o pantoprazol) inibem os transportadores renais de secreção ativa de ânions (BCRP/OAT3). Isso impede a eliminação do metotrexato em altas doses oncológicas, resultando em acúmulo tóxico com risco de mucosite grave, mielossupressão e nefrotoxicidade.",
+        es: "A pesar de tener menor interacción vía citocromo, todos los IBPs (incluyendo el pantoprazol) inhiben los transportadores renales de secreción activa de aniones (BCRP/OAT3). Esto impide la eliminación del metotrexato en altas dosis oncológicas, resultando en acumulación tóxica con riesgo de mucositis grave, mielosupresión y nefrotoxicidad."
+      },
+      conduta: {
+        pt: "Suspender pantoprazol IV pelo menos 48-72h antes de doses intermediárias/altas de metotrexato oncológico. Substituir por bloqueadores H2 (ranitidina/famotidina), que não inibem os transportadores renais do MTX. Monitorar níveis séricos de metotrexato nas 24h, 48h e 72h pós-infusão.",
+        es: "Suspender pantoprazol IV al menos 48-72h antes de dosis intermedias/altas de metotrexato oncológico. Sustituir por bloqueadores H2 (ranitidina/famotidina), que no inhiben los transportadores renales del MTX. Monitorear niveles séricos de metotrexato a las 24h, 48h y 72h post-infusión."
+      }
+    },
+    "atazanavir": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O Atazanavir (antirretroviral do HIV, inibidor de protease) exige um pH intragástrico extremamente ácido (pH < 3) para ser absorvido e solubilizado. O bloqueio irreversível da bomba de prótons pelo pantoprazol aumenta o pH gástrico acima de 4-5 de forma sustentada, zerando a absorção do antiviral. Isso gera falha virológica, queda do CD4 e emergência de resistência viral — consequências potencialmente irreversíveis.",
+        es: "El Atazanavir (antirretroviral del VIH, inhibidor de proteasa) exige un pH intragástrico extremadamente ácido (pH < 3) para ser absorbido y solubilizado. El bloqueo irreversible de la bomba de protones por el pantoprazol aumenta el pH gástrico por encima de 4-5 de forma sostenida, anulando la absorción del antiviral. Esto genera fracaso virológico, caída del CD4 y emergencia de resistencia viral — consecuencias potencialmente irreversibles."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA. Nunca associar. Pacientes HIV com HDA severa exigem manejo especialista conjunto (infectologia + gastroenterologia) para definição da TARV e proteção gástrica alternativa (antagonistas H2 com menor impacto sobre pH).",
+        es: "CONTRAINDICACIÓN ABSOLUTA. Nunca asociar. Pacientes VIH con HDA severa exigen manejo especialista conjunto (infectología + gastroenterología) para definición de TARV y protección gástrica alternativa (antagonistas H2 con menor impacto sobre pH)."
+      }
+    }
+  },
+
+  "somatostatina": {
+    "insulina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A somatostatina inibe simultaneamente a secreção pancreática de insulina E de glucagon. No paciente crítico em infusão contínua, isso desregula completamente o controle glicêmico: a supressão preferencial do glucagon (principal hormônio contra-regulador da hipoglicemia) pode precipitar hipoglicemias súbitas graves, enquanto a inibição da insulina pode causar hiperglicemia rebote. O efeito dominante é imprevisível e varia com a dose e o contexto metabólico.",
+        es: "La somatostatina inhibe simultáneamente la secreción pancreática de insulina Y de glucagón. En el paciente crítico en infusión continua, esto desregula completamente el control glucémico: la supresión preferencial del glucagón (principal hormona contra-reguladora de la hipoglucemia) puede precipitar hipoglucemias súbitas graves, mientras que la inhibición de la insulina puede causar hiperglucemia de rebote. El efecto dominante es imprevisible y varía con la dosis y el contexto metabólico."
+      },
+      conduta: {
+        pt: "Hemoglicoteste (HGT) a cada 2h durante as primeiras 12h de infusão e a cada 4h posteriormente. Titular bombas de insulina em paralelo. Manter glicose IV disponível para correção de hipoglicemia. Ajuste dinâmico indispensável.",
+        es: "Hemoglucotest (HGT) cada 2h durante las primeras 12h de infusión y cada 4h posteriormente. Titular bombas de insulina en paralelo. Mantener glucosa IV disponible para corrección de hipoglucemia. Ajuste dinámico indispensable."
+      }
+    },
+    "ciclosporina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Mecanismo idêntico ao octreotide: a infusão de somatostatina inibe a motilidade gastrointestinal e suprime a secreção biliar, prejudicando mecanicamente a absorção intestinal da ciclosporina oral. O resultado é redução significativa da AUC da ciclosporina (até 30-50%), com risco de subterapêutica e rejeição aguda de órgão transplantado.",
+        es: "Mecanismo idéntico al octreotide: la infusión de somatostatina inhibe la motilidad gastrointestinal y suprime la secreción biliar, perjudicando mecánicamente la absorción intestinal de la ciclosporina oral. El resultado es reducción significativa de la AUC de la ciclosporina (hasta 30-50%), con riesgo de subterapéutica y rechazo agudo de órgano trasplantado."
+      },
+      conduta: {
+        pt: "Requer acompanhamento por TDM (therapeutic drug monitoring) urgente: dosagem de ciclosporinemia nas 24h seguintes ao início da somatostatina. Considerar administração IV da ciclosporina durante infusão de somatostatina para contornar o problema de absorção.",
+        es: "Requiere seguimiento por TDM (therapeutic drug monitoring) urgente: dosaje de ciclosporinemia en las 24h siguientes al inicio de la somatostatina. Considerar administración IV de la ciclosporina durante infusión de somatostatina para sortear el problema de absorción."
+      }
+    }
+  },
+
+  "rifaximina": {
+    "lactulose": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO BENÉFICA — SINERGISMO CLÍNICO DESEJÁVEL. A associação entre lactulose (mecanismo osmótico: reduz pH colônico e aprisiona amônia como NH₄⁺ não absorvível) e rifaximina (mecanismo antibiótico: erradica bactérias colônicas produtoras de amônia) constitui o tratamento padrão-ouro para encefalopatia hepática refratária de grau II a IV. Os dois mecanismos são complementares e aditivos.",
+        es: "INTERACCIÓN BENÉFICA — SINERGISMO CLÍNICO DESEABLE. La asociación entre lactulosa (mecanismo osmótico: reduce pH colónico y atrapa amoníaco como NH₄⁺ no absorbible) y rifaximina (mecanismo antibiótico: erradica bacterias colónicas productoras de amoníaco) constituye el tratamiento estándar de oro para encefalopatía hepática refractaria de grado II a IV. Los dos mecanismos son complementarios y aditivos."
+      },
+      conduta: {
+        pt: "Associação clinicamente encorajada e protocolada em UTI Hepatológica e Ambulatório de Cirrose. Titular lactulose para 2-3 evacuações moles/dia. Manter rifaximina 550 mg 12/12h de forma contínua.",
+        es: "Asociación clínicamente fomentada y protocolizada en UTI Hepatológica y Ambulatorio de Cirrosis. Titular lactulosa para 2-3 evacuaciones blandas/día. Mantener rifaximina 550 mg cada 12h de forma continua."
+      }
+    },
+    "varfarina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Embora a rifaximina não seja absorvida sistemicamente (<1%), a alteração massiva da flora bacteriana intestinal (que produz Vitamina K₂ endógena, necessária para a carboxilação dos fatores de coagulação) pode reduzir os níveis de Vitamina K disponível, potencializando o efeito anticoagulante da varfarina. Há relatos de elevação do RNI (razão normalizada internacional) e episódios de sangramento durante os primeiros ciclos de rifaximina.",
+        es: "Aunque la rifaximina no se absorba sistémicamente (<1%), la alteración masiva de la flora bacteriana intestinal (que produce Vitamina K₂ endógena, necesaria para la carboxilación de los factores de coagulación) puede reducir los niveles de Vitamina K disponible, potenciando el efecto anticoagulante de la warfarina. Hay informes de elevación del RNI (razón normalizada internacional) y episodios de sangrado durante los primeros ciclos de rifaximina."
+      },
+      conduta: {
+        pt: "Monitoramento do RNI na 1ª semana e na 2ª semana após início da rifaximina. Ajustar dose de varfarina se necessário. Orientar o paciente sobre sinais de sangramento (equimoses fáceis, hematúria, melena).",
+        es: "Monitorización del RNI en la 1ª semana y en la 2ª semana tras el inicio de la rifaximina. Ajustar dosis de warfarina si es necesario. Orientar al paciente sobre signos de sangrado (equimosis fáciles, hematuria, melena)."
+      }
+    }
+  },
+
+  "racecadotril": {
+    "$classe_ieca": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O racecadotril inibe a enzima encefalinase (NEP / neprilisina), que é responsável pela degradação da bradicinina no tecido intestinal e pulmonar. Os IECAs (captopril, enalapril, lisinopril, ramipril) inibem a ECA (enzima conversora de angiotensina), que também degrada bradicinina. A associação cria um BLOQUEIO DUPLO da eliminação da bradicinina: via NEP (bloqueada pelo racecadotril) e via ECA (bloqueada pelo IECA). O acúmulo massivo de bradicinina tecidual pode deflagrar angioedema severo de laringe/glote, com risco de asfixia e morte.",
+        es: "El racecadotrilo inhibe la enzima encefalinasa (NEP / neprilisina), responsable de la degradación de la bradicinina en el tejido intestinal y pulmonar. Los IECAs (captopril, enalapril, lisinopril, ramipril) inhiben la ECA (enzima convertidora de angiotensina), que también degrada bradicinina. La asociación crea un BLOQUEO DOBLE de la eliminación de la bradicinina: vía NEP (bloqueada por el racecadotrilo) y vía ECA (bloqueada por el IECA). La acumulación masiva de bradicinina tisular puede desencadenar angioedema severo de laringe/glotis, con riesgo de asfixia y muerte."
+      },
+      conduta: {
+        pt: "EVITAR a associação. Em pacientes em uso contínuo de IECA, substituir o racecadotril por loperamida ou soro de reidratação oral (SRO) como antidiarreico. Se a associação for inevitável em contexto de emergência, monitorar sinais precoces de angioedema (prurido orofaríngeo, disfagia, estridor) e ter adrenalina 1:1000 IM disponível.",
+        es: "EVITAR la asociación. En pacientes en uso continuo de IECA, sustituir el racecadotrilo por loperamida o suero de rehidratación oral (SRO) como antidiarreico. Si la asociación es inevitable en contexto de emergencia, monitorar signos precoces de angioedema (prurito orofaríngeo, disfagia, estridor) y tener adrenalina 1:1000 IM disponible."
       }
     }
   }
