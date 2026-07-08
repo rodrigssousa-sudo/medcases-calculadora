@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=300" />
-  <link rel="stylesheet" href="css/build233.css?v=300" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=300" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=300" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=300" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=300" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=300" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=302" />
+  <link rel="stylesheet" href="css/build233.css?v=302" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=302" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=302" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=302" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=302" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=302" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=300" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=302" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=300" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=302" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=300" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=302" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=300" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=302" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=300" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=302" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=300" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=302" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=300" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=302" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=300" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=302" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -17094,9 +17094,7 @@ let selectedDrug = null;
 
 function selectDrug(id) {
   selectedDrug = id;
-  /* Colapsa a lista e injeta card inline logo abaixo do input de busca */
-  const listEl = document.getElementById('drug-list-container');
-  if (listEl) listEl.style.display = 'none';
+  /* BUILD 302: NÃO colapsa a lista — o card é injetado após #dcard-${id} dentro da lista */
   calcShowInlineResult(id);
 }
 
@@ -17106,11 +17104,17 @@ function selectDrug(id) {
    Usa o mesmo motor _fdResolveHeroPatient com window.patientData
 ═══════════════════════════════════════════════════════════════════ */
 function calcShowInlineResult(drugId) {
-  const resultEl = document.getElementById('calc-drug-result');
-  if (!resultEl) return;
+  /* ── BUILD 302: Node Injection — injeta card LOGO ABAIXO do item #dcard-${drugId} ── */
+
+  /* 1. Remove qualquer card inline anterior */
+  document.querySelectorAll('.calc-drug-inline-card').forEach(function(el){ el.remove(); });
 
   const drug = DRUG_DB.find(d => d.id === drugId);
-  if (!drug) { resultEl.style.display = 'none'; return; }
+  if (!drug) return;
+
+  /* 2. Âncora: a linha da lista que recebeu o clique */
+  const anchor = document.getElementById('dcard-' + drugId);
+  if (!anchor) return;
 
   const lang  = currentLang || 'pt';
   const isES  = lang === 'es';
@@ -17125,6 +17129,8 @@ function calcShowInlineResult(drugId) {
   const drugIcon     = drug.icon    || '💊';
   const drugColor    = drug.color   || 'rgba(56,189,248,0.15)';
   const drugColorTxt = drug.colorTxt || '#38BDF8';
+
+  let cardHTML = '';
 
   /* ── Sem paciente — card de estudo com dose padrão adulto (BUILD 300) ── */
   const hasPatient = pd && (pd.weight != null || pd.age != null || pd.clcr != null);
@@ -17173,7 +17179,7 @@ function calcShowInlineResult(drugId) {
       ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'DOSE MANUTENÇÃO:' : 'DOSE MANUTENÇÃO:'}</span><span class="hm300-val hm300-val--sub">${doseMantencao}</span></div>`
       : '';
 
-    resultEl.innerHTML = `
+    cardHTML = `
       <div class="hm-inline-result hm-inline-bula hm300-card">
         <div class="hm-inline-result-header">
           <span class="hm-inline-drug-icon" style="background:${drugColor};color:${drugColorTxt}">${drugIcon}</span>
@@ -17204,111 +17210,110 @@ function calcShowInlineResult(drugId) {
           </button>
         </div>
       </div>`;
-    resultEl.style.display = 'block';
-    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    return;
-  }
-
+  } else {
   /* ── COM PACIENTE — motor _fdResolveHeroPatient ── */
-  const hero = _fdResolveHeroPatient(drug, pd, lang);
+    const hero = _fdResolveHeroPatient(drug, pd, lang);
 
-  const clcrColor = hero.clcr < 10 ? '#F87171' : hero.clcr < 30 ? '#FBBF24' : hero.clcr < 50 ? '#FB923C' : '#38BDF8';
-  const sexLbl    = hero.isFemale ? (isES ? 'Fem.' : 'Fem.') : (isES ? 'Masc.' : 'Masc.');
+    const clcrColor = hero.clcr < 10 ? '#F87171' : hero.clcr < 30 ? '#FBBF24' : hero.clcr < 50 ? '#FB923C' : '#38BDF8';
+    const sexLbl    = hero.isFemale ? (isES ? 'Fem.' : 'Fem.') : (isES ? 'Masc.' : 'Masc.');
 
-  /* Badge renal */
-  let renalHtml = '';
-  if (hero.renalFaixa) {
-    const badgeCls = hero.renalState === 'hd'   ? 'hm-renal-badge--hd'
-                   : hero.renalState === 'alert' ? 'hm-renal-badge--alert'
-                   :                              'hm-renal-badge--ok';
-    let renalDoseTxt = '';
-    if (hero.renalAdj && hero.renalDados && !hero.renalDados._isLegacy) {
-      const rd = hero.renalDados;
-      if (rd.dose || rd.intervalo) {
-        renalDoseTxt = [rd.dose, rd.intervalo].filter(Boolean).join(' · ');
-      } else if (rd.obs) {
-        renalDoseTxt = String(rd.obs).substring(0, 80);
+    /* Badge renal */
+    let renalHtml = '';
+    if (hero.renalFaixa) {
+      const badgeCls = hero.renalState === 'hd'   ? 'hm-renal-badge--hd'
+                     : hero.renalState === 'alert' ? 'hm-renal-badge--alert'
+                     :                              'hm-renal-badge--ok';
+      let renalDoseTxt = '';
+      if (hero.renalAdj && hero.renalDados && !hero.renalDados._isLegacy) {
+        const rd = hero.renalDados;
+        if (rd.dose || rd.intervalo) {
+          renalDoseTxt = [rd.dose, rd.intervalo].filter(Boolean).join(' · ');
+        } else if (rd.obs) {
+          renalDoseTxt = String(rd.obs).substring(0, 80);
+        }
+      } else if (hero.renalDados && hero.renalDados.obs) {
+        renalDoseTxt = String(hero.renalDados.obs).substring(0, 80);
       }
-    } else if (hero.renalDados && hero.renalDados.obs) {
-      renalDoseTxt = String(hero.renalDados.obs).substring(0, 80);
+      renalHtml = `
+        <div class="hm-inline-renal">
+          <span class="hm-renal-badge ${badgeCls}">
+            <i class="fa-solid fa-kidney"></i> ${hero.renalFaixa}
+          </span>
+          ${renalDoseTxt ? `<span class="hm-renal-dose">${renalDoseTxt}</span>` : ''}
+        </div>`;
     }
-    renalHtml = `
-      <div class="hm-inline-renal">
-        <span class="hm-renal-badge ${badgeCls}">
-          <i class="fa-solid fa-kidney"></i> ${hero.renalFaixa}
-        </span>
-        ${renalDoseTxt ? `<span class="hm-renal-dose">${renalDoseTxt}</span>` : ''}
+
+    /* Badge gestante */
+    const pregHtml = hero.pregAlert
+      ? `<div class="hm-inline-preg-alert">
+           <i class="fa-solid fa-person-pregnant" style="color:#F472B6;"></i>
+           <span>${hero.pregAlert}</span>
+         </div>`
+      : '';
+
+    /* Label perfil pediátrico */
+    const profileLabel = hero.isPediatric
+      ? `<span class="hm-inline-pedi-badge">
+           <i class="fa-solid fa-child"></i>
+           ${isES ? `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} años`
+                  : `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} anos`}
+         </span>`
+      : '';
+
+    /* Cálculo mg absoluto */
+    const calcHtml = (hero.isPediatric && hero.calcDoseMgKg && hero.weight)
+      ? `<div class="hm-inline-calc-row">
+           <i class="fa-solid fa-calculator" style="color:#38BDF8;font-size:9px;"></i>
+           <span>${isES ? 'Calculado:' : 'Calculado:'} ${hero.weight} kg × ${isES ? 'dosis/kg' : 'dose/kg'} = <strong style="color:#38BDF8;">${hero.calcDoseMgKg} mg</strong></span>
+         </div>`
+      : '';
+
+    cardHTML = `
+      <div class="hm-inline-result hm-inline-patient${hero.isPediatric ? ' hm-inline-pedi' : ''}">
+        <div class="hm-inline-result-header">
+          <span class="hm-inline-drug-icon" style="background:${drugColor};color:${drugColorTxt}">${drugIcon}</span>
+          <div class="hm-inline-drug-info">
+            <div class="hm-inline-drug-name">${dName}</div>
+            <div class="hm-inline-drug-class">${drugClass}</div>
+          </div>
+          <button class="hm-inline-close" onclick="calcCloseInlineResult()" aria-label="Fechar">✕</button>
+        </div>
+        ${pregHtml}
+        <div class="hm-inline-patient-bar">
+          ${hero.clcr != null ? `<span style="color:${clcrColor};"><i class="fa-solid fa-tint" style="font-size:9px;"></i> ClCr ${hero.clcr} mL/min</span>` : ''}
+          ${hero.weight != null ? `<span>· ${hero.weight} kg</span>` : ''}
+          ${hero.age    != null ? `<span>· ${hero.age} ${isES?'años':'anos'}</span>` : ''}
+          <span>· ${sexLbl}</span>
+          ${hero.isPregnant ? `<span style="color:#F472B6;">· <i class="fa-solid fa-person-pregnant" style="font-size:9px;"></i> ${isES?'Gest.':'Gest.'}</span>` : ''}
+        </div>
+        ${profileLabel}
+        <div class="hm-inline-dose-hero">
+          <div class="hm-inline-dose-val">${hero.heroDose || '—'}</div>
+          ${hero.heroFreq ? `<div class="hm-inline-dose-freq"><i class="fa-solid fa-rotate" style="font-size:10px;"></i> ${hero.heroFreq}</div>` : ''}
+          ${hero.heroVia  ? `<span class="hm-inline-dose-via">${hero.heroVia}</span>` : ''}
+        </div>
+        ${calcHtml}
+        ${renalHtml}
+        <button class="hm-inline-detail-btn" onclick="openFarmacoDetail('${drugId}')">
+          <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ficha completa + Ajuste Renal' : 'Bula completa + Ajuste Renal'}
+        </button>
       </div>`;
   }
 
-  /* Badge gestante */
-  const pregHtml = hero.pregAlert
-    ? `<div class="hm-inline-preg-alert">
-         <i class="fa-solid fa-person-pregnant" style="color:#F472B6;"></i>
-         <span>${hero.pregAlert}</span>
-       </div>`
-    : '';
+  /* 3. Cria nó DOM e injeta IMEDIATAMENTE após a linha do fármaco */
+  const cardNode = document.createElement('div');
+  cardNode.className = 'calc-drug-inline-card';
+  cardNode.setAttribute('data-drug-id', drugId);
+  cardNode.innerHTML = cardHTML;
+  anchor.after(cardNode);
 
-  /* Label perfil pediátrico */
-  const profileLabel = hero.isPediatric
-    ? `<span class="hm-inline-pedi-badge">
-         <i class="fa-solid fa-child"></i>
-         ${isES ? `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} años`
-                : `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} anos`}
-       </span>`
-    : '';
-
-  /* Cálculo mg absoluto */
-  const calcHtml = (hero.isPediatric && hero.calcDoseMgKg && hero.weight)
-    ? `<div class="hm-inline-calc-row">
-         <i class="fa-solid fa-calculator" style="color:#38BDF8;font-size:9px;"></i>
-         <span>${isES ? 'Calculado:' : 'Calculado:'} ${hero.weight} kg × ${isES ? 'dosis/kg' : 'dose/kg'} = <strong style="color:#38BDF8;">${hero.calcDoseMgKg} mg</strong></span>
-       </div>`
-    : '';
-
-  resultEl.innerHTML = `
-    <div class="hm-inline-result hm-inline-patient${hero.isPediatric ? ' hm-inline-pedi' : ''}">
-      <div class="hm-inline-result-header">
-        <span class="hm-inline-drug-icon" style="background:${drugColor};color:${drugColorTxt}">${drugIcon}</span>
-        <div class="hm-inline-drug-info">
-          <div class="hm-inline-drug-name">${dName}</div>
-          <div class="hm-inline-drug-class">${drugClass}</div>
-        </div>
-        <button class="hm-inline-close" onclick="calcCloseInlineResult()" aria-label="Fechar">✕</button>
-      </div>
-      ${pregHtml}
-      <div class="hm-inline-patient-bar">
-        ${hero.clcr != null ? `<span style="color:${clcrColor};"><i class="fa-solid fa-tint" style="font-size:9px;"></i> ClCr ${hero.clcr} mL/min</span>` : ''}
-        ${hero.weight != null ? `<span>· ${hero.weight} kg</span>` : ''}
-        ${hero.age    != null ? `<span>· ${hero.age} ${isES?'años':'anos'}</span>` : ''}
-        <span>· ${sexLbl}</span>
-        ${hero.isPregnant ? `<span style="color:#F472B6;">· <i class="fa-solid fa-person-pregnant" style="font-size:9px;"></i> ${isES?'Gest.':'Gest.'}</span>` : ''}
-      </div>
-      ${profileLabel}
-      <div class="hm-inline-dose-hero">
-        <div class="hm-inline-dose-val">${hero.heroDose || '—'}</div>
-        ${hero.heroFreq ? `<div class="hm-inline-dose-freq"><i class="fa-solid fa-rotate" style="font-size:10px;"></i> ${hero.heroFreq}</div>` : ''}
-        ${hero.heroVia  ? `<span class="hm-inline-dose-via">${hero.heroVia}</span>` : ''}
-      </div>
-      ${calcHtml}
-      ${renalHtml}
-      <button class="hm-inline-detail-btn" onclick="openFarmacoDetail('${drugId}')">
-        <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ficha completa + Ajuste Renal' : 'Bula completa + Ajuste Renal'}
-      </button>
-    </div>`;
-  resultEl.style.display = 'block';
-  resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  /* 4. Scroll suave para o card */
+  cardNode.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 function calcCloseInlineResult() {
-  const el = document.getElementById('calc-drug-result');
-  if (el) { el.style.display = 'none'; el.innerHTML = ''; }
-  /* Reabre a lista de resultados caso esteja colapsada */
-  const listEl = document.getElementById('drug-list-container');
-  if (listEl && document.getElementById('drug-search-input') &&
-      document.getElementById('drug-search-input').value.trim().length >= 2) {
-    listEl.style.display = 'block';
-  }
+  /* BUILD 302: remove todos os cards injetados via node injection */
+  document.querySelectorAll('.calc-drug-inline-card').forEach(function(el){ el.remove(); });
 }
 
 function calcDrugDose(id) {
@@ -20778,12 +20783,18 @@ document.addEventListener('DOMContentLoaded', () => {
      abaixo da lista de busca, com dose para o perfil do paciente.
   ============================================================ */
   window.hmShowInlineResult = function(drugId) {
-    const resultEl = document.getElementById('hm-drug-result');
-    if (!resultEl) return;
+    /* ── BUILD 302: Node Injection — injeta card LOGO ABAIXO do item clicado ── */
+
+    /* 1. Remove qualquer card inline anterior */
+    document.querySelectorAll('.hm-drug-inline-card').forEach(function(el){ el.remove(); });
 
     const db   = window.DRUG_DB || [];
     const drug = db.find(d => d.id === drugId);
-    if (!drug) { resultEl.style.display = 'none'; return; }
+    if (!drug) return;
+
+    /* 2. Âncora: o item da lista que recebeu o clique */
+    const anchor = document.getElementById('hm-di-' + drugId);
+    if (!anchor) return;
 
     const lang = currentLang || 'pt';
     const isES = lang === 'es';
@@ -20798,6 +20809,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const drugIcon  = drug.icon  || '💊';
     const drugColor = drug.color || 'rgba(56,189,248,0.15)';
     const drugColorTxt = drug.colorTxt || '#38BDF8';
+
+    let cardHTML = '';
 
     /* ── Sem paciente — card de estudo com dose padrão adulto (BUILD 300) ── */
     const hasPatient = pd && (pd.weight != null || pd.age != null || pd.clcr != null);
@@ -20846,7 +20859,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'DOSE MANUTENÇÃO:' : 'DOSE MANUTENÇÃO:'}</span><span class="hm300-val hm300-val--sub">${doseMantencao}</span></div>`
         : '';
 
-      resultEl.innerHTML = `
+      cardHTML = `
         <div class="hm-inline-result hm-inline-bula hm300-card">
           <div class="hm-inline-result-header">
             <span class="hm-inline-drug-icon" style="background:${drugColor};color:${drugColorTxt}">${drugIcon}</span>
@@ -20877,110 +20890,115 @@ document.addEventListener('DOMContentLoaded', () => {
             </button>
           </div>
         </div>`;
-      resultEl.style.display = 'block';
-      resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      return;
-    }
-
+    } else {
     /* ═══════════════════════════════════════════════════════════════
        COM PACIENTE — usa motor _fdResolveHeroPatient para garantir
        hierarquia correta: Pediátrico (< 12a) → dose pediátrica
                            Adulto (>= 12a)   → dose adulta + ajuste renal
     ═══════════════════════════════════════════════════════════════ */
-    const hero = _fdResolveHeroPatient(drug, pd, lang);
+      const hero = _fdResolveHeroPatient(drug, pd, lang);
 
-    /* Barra de contexto do paciente */
-    const clcrColor = hero.clcr < 10 ? '#F87171' : hero.clcr < 30 ? '#FBBF24' : hero.clcr < 50 ? '#FB923C' : '#38BDF8';
-    const sexLbl    = hero.isFemale ? 'Fem.' : 'Masc.';
+      /* Barra de contexto do paciente */
+      const clcrColor = hero.clcr < 10 ? '#F87171' : hero.clcr < 30 ? '#FBBF24' : hero.clcr < 50 ? '#FB923C' : '#38BDF8';
+      const sexLbl    = hero.isFemale ? 'Fem.' : 'Masc.';
 
-    /* Badge renal */
-    let renalHtml = '';
-    if (hero.renalFaixa) {
-      const badgeCls = hero.renalState === 'hd'    ? 'hm-renal-badge--hd'
-                     : hero.renalState === 'alert'  ? 'hm-renal-badge--alert'
-                     :                               'hm-renal-badge--ok';
-      let renalDoseTxt = '';
-      if (hero.renalAdj && hero.renalDados && !hero.renalDados._isLegacy) {
-        const rd = hero.renalDados;
-        if (rd.dose || rd.intervalo) {
-          renalDoseTxt = [rd.dose, rd.intervalo].filter(Boolean).join(' · ');
-        } else if (rd.obs) {
-          renalDoseTxt = String(rd.obs).substring(0, 80);
+      /* Badge renal */
+      let renalHtml = '';
+      if (hero.renalFaixa) {
+        const badgeCls = hero.renalState === 'hd'    ? 'hm-renal-badge--hd'
+                       : hero.renalState === 'alert'  ? 'hm-renal-badge--alert'
+                       :                               'hm-renal-badge--ok';
+        let renalDoseTxt = '';
+        if (hero.renalAdj && hero.renalDados && !hero.renalDados._isLegacy) {
+          const rd = hero.renalDados;
+          if (rd.dose || rd.intervalo) {
+            renalDoseTxt = [rd.dose, rd.intervalo].filter(Boolean).join(' · ');
+          } else if (rd.obs) {
+            renalDoseTxt = String(rd.obs).substring(0, 80);
+          }
+        } else if (hero.renalDados && hero.renalDados.obs) {
+          renalDoseTxt = String(hero.renalDados.obs).substring(0, 80);
         }
-      } else if (hero.renalDados && hero.renalDados.obs) {
-        renalDoseTxt = String(hero.renalDados.obs).substring(0, 80);
+        renalHtml = `
+          <div class="hm-inline-renal">
+            <span class="hm-renal-badge ${badgeCls}">
+              <i class="fa-solid fa-kidney"></i> ${hero.renalFaixa}
+            </span>
+            ${renalDoseTxt ? `<span class="hm-renal-dose">${renalDoseTxt}</span>` : ''}
+          </div>`;
       }
-      renalHtml = `
-        <div class="hm-inline-renal">
-          <span class="hm-renal-badge ${badgeCls}">
-            <i class="fa-solid fa-kidney"></i> ${hero.renalFaixa}
-          </span>
-          ${renalDoseTxt ? `<span class="hm-renal-dose">${renalDoseTxt}</span>` : ''}
+
+      /* Badge de alerta gestante (compacto) */
+      const pregHtml = hero.pregAlert
+        ? `<div class="hm-inline-preg-alert">
+             <i class="fa-solid fa-person-pregnant" style="color:#F472B6;"></i>
+             <span>${hero.pregAlert}</span>
+           </div>`
+        : '';
+
+      /* Label de perfil pediátrico */
+      const profileLabel = hero.isPediatric
+        ? `<span class="hm-inline-pedi-badge">
+             <i class="fa-solid fa-child"></i>
+             ${isES ? `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} años`
+                    : `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} anos`}
+           </span>`
+        : '';
+
+      /* Dose calculada mg/kg (só pediátrico) */
+      const calcHtml = (hero.isPediatric && hero.calcDoseMgKg && hero.weight)
+        ? `<div class="hm-inline-calc-row">
+             <i class="fa-solid fa-calculator" style="color:#38BDF8;font-size:9px;"></i>
+             <span>${isES ? 'Calculado:' : 'Calculado:'} ${hero.weight} kg × ${isES ? 'dosis/kg' : 'dose/kg'} = <strong style="color:#38BDF8;">${hero.calcDoseMgKg} mg</strong></span>
+           </div>`
+        : '';
+
+      cardHTML = `
+        <div class="hm-inline-result hm-inline-patient${hero.isPediatric ? ' hm-inline-pedi' : ''}">
+          <div class="hm-inline-result-header">
+            <span class="hm-inline-drug-icon" style="background:${drugColor};color:${drugColorTxt}">${drugIcon}</span>
+            <div class="hm-inline-drug-info">
+              <div class="hm-inline-drug-name">${dName}</div>
+              <div class="hm-inline-drug-class">${drugClass}</div>
+            </div>
+            <button class="hm-inline-close" onclick="hmCloseInlineResult()" aria-label="Fechar">✕</button>
+          </div>
+          ${pregHtml}
+          <div class="hm-inline-patient-bar">
+            ${hero.clcr != null ? `<span style="color:${clcrColor};"><i class="fa-solid fa-tint" style="font-size:9px;"></i> ClCr ${hero.clcr} mL/min</span>` : ''}
+            ${hero.weight != null ? `<span>· ${hero.weight} kg</span>` : ''}
+            ${hero.age    != null ? `<span>· ${hero.age} ${isES?'años':'anos'}</span>` : ''}
+            <span>· ${sexLbl}</span>
+            ${hero.isPregnant ? `<span style="color:#F472B6;">· <i class="fa-solid fa-person-pregnant" style="font-size:9px;"></i> ${isES?'Gest.':'Gest.'}</span>` : ''}
+          </div>
+          ${profileLabel}
+          <div class="hm-inline-dose-hero">
+            <div class="hm-inline-dose-val">${hero.heroDose || '—'}</div>
+            ${hero.heroFreq ? `<div class="hm-inline-dose-freq"><i class="fa-solid fa-rotate" style="font-size:10px;"></i> ${hero.heroFreq}</div>` : ''}
+            ${hero.heroVia  ? `<span class="hm-inline-dose-via">${hero.heroVia}</span>` : ''}
+          </div>
+          ${calcHtml}
+          ${renalHtml}
+          <button class="hm-inline-detail-btn" onclick="hmOpenDrug('${drugId}')">
+            <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ficha completa + Ajuste Renal' : 'Bula completa + Ajuste Renal'}
+          </button>
         </div>`;
     }
 
-    /* Badge de alerta gestante (compacto) */
-    const pregHtml = hero.pregAlert
-      ? `<div class="hm-inline-preg-alert">
-           <i class="fa-solid fa-person-pregnant" style="color:#F472B6;"></i>
-           <span>${hero.pregAlert}</span>
-         </div>`
-      : '';
+    /* 3. Cria nó DOM e injeta IMEDIATAMENTE após o item clicado */
+    const cardNode = document.createElement('div');
+    cardNode.className = 'hm-drug-inline-card';
+    cardNode.setAttribute('data-drug-id', drugId);
+    cardNode.innerHTML = cardHTML;
+    anchor.after(cardNode);
 
-    /* Label de perfil pediátrico */
-    const profileLabel = hero.isPediatric
-      ? `<span class="hm-inline-pedi-badge">
-           <i class="fa-solid fa-child"></i>
-           ${isES ? `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} años`
-                  : `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} anos`}
-         </span>`
-      : '';
-
-    /* Dose calculada mg/kg (só pediátrico) */
-    const calcHtml = (hero.isPediatric && hero.calcDoseMgKg && hero.weight)
-      ? `<div class="hm-inline-calc-row">
-           <i class="fa-solid fa-calculator" style="color:#38BDF8;font-size:9px;"></i>
-           <span>${isES ? 'Calculado:' : 'Calculado:'} ${hero.weight} kg × ${isES ? 'dosis/kg' : 'dose/kg'} = <strong style="color:#38BDF8;">${hero.calcDoseMgKg} mg</strong></span>
-         </div>`
-      : '';
-
-    resultEl.innerHTML = `
-      <div class="hm-inline-result hm-inline-patient${hero.isPediatric ? ' hm-inline-pedi' : ''}">
-        <div class="hm-inline-result-header">
-          <span class="hm-inline-drug-icon" style="background:${drugColor};color:${drugColorTxt}">${drugIcon}</span>
-          <div class="hm-inline-drug-info">
-            <div class="hm-inline-drug-name">${dName}</div>
-            <div class="hm-inline-drug-class">${drugClass}</div>
-          </div>
-          <button class="hm-inline-close" onclick="hmCloseInlineResult()" aria-label="Fechar">✕</button>
-        </div>
-        ${pregHtml}
-        <div class="hm-inline-patient-bar">
-          ${hero.clcr != null ? `<span style="color:${clcrColor};"><i class="fa-solid fa-tint" style="font-size:9px;"></i> ClCr ${hero.clcr} mL/min</span>` : ''}
-          ${hero.weight != null ? `<span>· ${hero.weight} kg</span>` : ''}
-          ${hero.age    != null ? `<span>· ${hero.age} ${isES?'años':'anos'}</span>` : ''}
-          <span>· ${sexLbl}</span>
-          ${hero.isPregnant ? `<span style="color:#F472B6;">· <i class="fa-solid fa-person-pregnant" style="font-size:9px;"></i> ${isES?'Gest.':'Gest.'}</span>` : ''}
-        </div>
-        ${profileLabel}
-        <div class="hm-inline-dose-hero">
-          <div class="hm-inline-dose-val">${hero.heroDose || '—'}</div>
-          ${hero.heroFreq ? `<div class="hm-inline-dose-freq"><i class="fa-solid fa-rotate" style="font-size:10px;"></i> ${hero.heroFreq}</div>` : ''}
-          ${hero.heroVia  ? `<span class="hm-inline-dose-via">${hero.heroVia}</span>` : ''}
-        </div>
-        ${calcHtml}
-        ${renalHtml}
-        <button class="hm-inline-detail-btn" onclick="hmOpenDrug('${drugId}')">
-          <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ficha completa + Ajuste Renal' : 'Bula completa + Ajuste Renal'}
-        </button>
-      </div>`;
-    resultEl.style.display = 'block';
-    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    /* 4. Scroll suave para o card (não para o rodapé da página) */
+    cardNode.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   };
 
   window.hmCloseInlineResult = function() {
-    const el = document.getElementById('hm-drug-result');
-    if (el) el.style.display = 'none';
+    /* BUILD 302: remove todos os cards injetados via node injection */
+    document.querySelectorAll('.hm-drug-inline-card').forEach(function(el){ el.remove(); });
   };
 
   /* ============================================================
@@ -21614,7 +21632,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dispClass = _fdResolveClass(d);
         const safeId = (d.id || '').replace(/'/g, "\\'");
         html += `
-          <div class="hm-drug-item" onclick="hmShowInlineResult('${safeId}')" role="button" aria-label="${dispName}">
+          <div class="hm-drug-item" id="hm-di-${safeId}" onclick="hmShowInlineResult('${safeId}')" role="button" aria-label="${dispName}">
             <div class="hm-drug-dot" style="background:${colorTxt}"></div>
             <div class="hm-drug-info">
               <div class="hm-drug-name">${dispName}</div>
@@ -21817,15 +21835,12 @@ document.addEventListener('DOMContentLoaded', () => {
     window.patientData.creatinine = creat;
     window.patientData.clcrMethod = method;
 
-    /* ── Re-render inline result se visível ── */
-    const resultEl = document.getElementById('hm-drug-result');
-    if (resultEl && resultEl.style.display !== 'none') {
-      const detailBtn = resultEl.querySelector('[onclick*="hmOpenDrug"]');
-      if (detailBtn) {
-        const m = (detailBtn.getAttribute('onclick') || '').match(/hmOpenDrug\('([^']+)'\)/);
-        if (m && m[1] && typeof window.hmShowInlineResult === 'function') {
-          window.hmShowInlineResult(m[1]);
-        }
+    /* ── Re-render inline result se visível (BUILD 302: detecta via .hm-drug-inline-card) ── */
+    const activeCard = document.querySelector('.hm-drug-inline-card');
+    if (activeCard) {
+      const drugIdAttr = activeCard.getAttribute('data-drug-id');
+      if (drugIdAttr && typeof window.hmShowInlineResult === 'function') {
+        window.hmShowInlineResult(drugIdAttr);
       }
     }
   };
@@ -22299,20 +22314,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    /* 4. Re-renderiza inline result da Home ─────────────────────────── */
-    const resultEl = document.getElementById('hm-drug-result');
-    if (resultEl && resultEl.style.display !== 'none') {
-      /* Determina qual drug está exibido pelo botão "Ver bula completa" */
-      const detailBtn = resultEl.querySelector('[onclick*="hmOpenDrug"]');
-      if (detailBtn) {
-        const m = detailBtn.getAttribute('onclick')?.match(/hmOpenDrug\('([^']+)'\)/);
-        if (m && m[1]) {
-          setTimeout(() => {
-            if (typeof window.hmShowInlineResult === 'function') {
-              window.hmShowInlineResult(m[1]);
-            }
-          }, 50);
-        }
+    /* 4. Re-renderiza inline result da Home (BUILD 302: detecta via .hm-drug-inline-card) ── */
+    const activeHmCard = document.querySelector('.hm-drug-inline-card');
+    if (activeHmCard) {
+      const drugIdAttr = activeHmCard.getAttribute('data-drug-id');
+      if (drugIdAttr) {
+        setTimeout(() => {
+          if (typeof window.hmShowInlineResult === 'function') {
+            window.hmShowInlineResult(drugIdAttr);
+          }
+        }, 50);
       }
     }
 
@@ -22506,6 +22517,48 @@ document.addEventListener('DOMContentLoaded', () => {
     window._appBootComplete = true;
     console.log('[BUILD 276] _appBootComplete = true (boot finalizado)');
   }, 2000);
+
+  /* ── BUILD 302: Blindagem do .clcr-live-dashboard ──────────────────
+     Intercepta qualquer tentativa de escrever innerHTML no container
+     do grid de 4 quadrantes ClCr/IMC/Peso/BSA e cancela silenciosamente.
+     Somente atualizações via innerText nos IDs-folha são permitidas.
+  ─────────────────────────────────────────────────────────────────── */
+  (function _shieldClcrDashboard() {
+    var dash = document.querySelector('.clcr-live-dashboard');
+    if (!dash) return;
+    /* Guarda o HTML original para restauração de emergência */
+    var _pristineHTML = dash.innerHTML;
+    try {
+      Object.defineProperty(dash, 'innerHTML', {
+        get: function() {
+          /* Retorna o conteúdo real via outerHTML diferencial */
+          return dash.outerHTML.replace(/^<[^>]+>/, '').replace(/<\/[^>]+>$/, '');
+        },
+        set: function(val) {
+          /* Bloqueia qualquer reescrita e restaura se necessário */
+          console.warn('[BUILD 302] innerHTML write BLOCKED on .clcr-live-dashboard — use innerText on leaf IDs only');
+          /* Se o grid foi destruído por outro caminho, restaura */
+          if (!dash.querySelector('#clcr-live-val-clcr')) {
+            dash.insertAdjacentHTML('afterbegin', _pristineHTML);
+          }
+        },
+        configurable: true
+      });
+    } catch(e) {
+      /* Fallback: MutationObserver para restaurar estrutura se destruída */
+      console.warn('[BUILD 302] Object.defineProperty unavailable, using MutationObserver fallback');
+      var _obs = new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+          if (m.type === 'childList' && !dash.querySelector('#clcr-live-val-clcr')) {
+            _obs.disconnect();
+            dash.innerHTML = _pristineHTML;
+            _obs.observe(dash, { childList: true, subtree: false });
+          }
+        });
+      });
+      _obs.observe(dash, { childList: true, subtree: false });
+    }
+  })();
 
 });
 
@@ -22770,52 +22823,52 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script defer src="database/interacoes.js?v=300"></script>
-<script defer src="database/antimicrobianos.js?v=300"></script>
-<script defer src="database/psicofarmacos.js?v=300"></script>
-<script defer src="database/analgesicos.js?v=300"></script>
-<script defer src="database/anticoag.js?v=300"></script>
-<script defer src="database/cardio.js?v=300"></script>
-<script defer src="database/endocrino.js?v=300"></script>
-<script defer src="database/gastro.js?v=300"></script>
-<script defer src="database/gastro_imuno.js?v=300"></script>
-<script defer src="database/imuno_corticoide.js?v=300"></script>
-<script defer src="database/endocrino_glp1.js?v=300"></script>
-<script defer src="database/infusoes.js?v=300"></script>
-<script defer src="database/nefro.js?v=300"></script>
-<script defer src="database/neuro.js?v=300"></script>
-<script defer src="database/obesidade.js?v=300"></script>
-<script defer src="database/pneumo.js?v=300"></script>
-<script defer src="database/psiquiatria.js?v=300"></script>
-<script defer src="database/reumatologia.js?v=300"></script>
-<script defer src="database/prescricoes.js?v=300" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script defer src="database/interacoes.js?v=302"></script>
+<script defer src="database/antimicrobianos.js?v=302"></script>
+<script defer src="database/psicofarmacos.js?v=302"></script>
+<script defer src="database/analgesicos.js?v=302"></script>
+<script defer src="database/anticoag.js?v=302"></script>
+<script defer src="database/cardio.js?v=302"></script>
+<script defer src="database/endocrino.js?v=302"></script>
+<script defer src="database/gastro.js?v=302"></script>
+<script defer src="database/gastro_imuno.js?v=302"></script>
+<script defer src="database/imuno_corticoide.js?v=302"></script>
+<script defer src="database/endocrino_glp1.js?v=302"></script>
+<script defer src="database/infusoes.js?v=302"></script>
+<script defer src="database/nefro.js?v=302"></script>
+<script defer src="database/neuro.js?v=302"></script>
+<script defer src="database/obesidade.js?v=302"></script>
+<script defer src="database/pneumo.js?v=302"></script>
+<script defer src="database/psiquiatria.js?v=302"></script>
+<script defer src="database/reumatologia.js?v=302"></script>
+<script defer src="database/prescricoes.js?v=302" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=300"></script>
+<script defer src="js/medcases-ux-v2.js?v=302"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=300"></script>
+<script defer src="js/hub-accordion.js?v=302"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=300"></script>
+<script defer src="js/build240b-accordion-fix.js?v=302"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=300"></script>
+<script defer src="js/calculator-overlay.js?v=302"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=300"></script>
+<script defer src="js/category-pills.js?v=302"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=300"></script>
+<script defer src="js/elec-calc.js?v=302"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=300"></script>
+<script defer src="js/deeplink-router.js?v=302"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=300"></script>
+<script defer src="js/build272-reactive-engine.js?v=302"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=300"></script>
+<script defer src="js/build283-accessory-bar.js?v=302"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
