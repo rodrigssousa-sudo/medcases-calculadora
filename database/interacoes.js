@@ -20380,6 +20380,90 @@ const INTERACOES_DB = {
         es: "La asociación requiere coordinación de equipo de Trauma y Hematología en choque hemorrágico gravísimo masivo (Protocolo de Transfusión Masiva). El uso simultáneo es de alto riesgo letal. Evitar en pacientes que no están activamente perdiendo toda la sangre."
       }
     }
+  }, // vírgula adicionada; BUILD 352 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Gastroenterologia Crítica e Hemorragias
+   Omeprazol, Pantoprazol, Lactulose, Terlipressina, Octreotide
+   BUILD 352 — 4 entradas / 5 pares
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── INIBIDORES DA BOMBA DE PRÓTONS (OMEPRAZOL vs PANTOPRAZOL) ── */
+  "omeprazol": {
+    "clopidogrel": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A GRANDE INTERAÇÃO DA CARDIOLOGIA. O Clopidogrel é um pró-fármaco inativo que precisa EXCLUSIVAMENTE da enzima CYP2C19 no fígado para se transformar em sua forma ativa (que inibe as plaquetas e salva o stent). O Omeprazol é um bloqueador implacável do CYP2C19. Se prescritos juntos, o Clopidogrel não é ativado, a plaqueta continua solta, e o Stent Coronariano do paciente irá TROMBOSAR subitamente, causando um infarto fulminante.",
+        es: "LA GRAN INTERACCIÓN DE LA CARDIOLOGÍA. El Clopidogrel es un profármaco inactivo que necesita EXCLUSIVAMENTE la enzima CYP2C19 en el hígado para transformarse en su forma activa (que inhibe plaquetas y salva el stent). El Omeprazol es un bloqueador implacable del CYP2C19. Si se prescriben juntos, el Clopidogrel no se activa, la plaqueta sigue suelta, y el Stent Coronario del paciente se TROMBOZARÁ súbitamente, causando un infarto fulminante."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO MUNDIAL (Alerta FDA). Se o paciente que infartou/usa Clopidogrel necessitar de proteção gástrica, você DEVE prescrever PANTOPRAZOL (que não atinge a enzima CYP2C19 e deixa o Clopidogrel agir livremente).",
+        es: "CONTRAINDICACIÓN MUNDIAL (Alerta FDA). Si el paciente que infartó/usa Clopidogrel necesita protección gástrica, DEBES prescribir PANTOPRAZOL (que no ataca la enzima CYP2C19 y deja al Clopidogrel actuar libremente)."
+      }
+    }
+  },
+
+  "$classe_ibp": {
+    "itraconazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Itraconazol e o Posaconazol (em cápsulas orais) ou Cetoconazol exigem um banho de Ácido Clorídrico puro (pH baixo) para se dissolverem e entrarem na corrente sanguínea. Se o IBP (Omeprazol/Pantoprazol) zera o ácido do estômago, o antifúngico vira cimento não absorvível, resultando em falência da terapia fúngica.",
+        es: "El Itraconazol y el Posaconazol (en cápsulas orales) o Ketoconazol exigen un baño de Ácido Clorhídrico puro (pH bajo) para disolverse y entrar en el torrente sanguíneo. Si el IBP (Omeprazol/Pantoprazol) anula el ácido del estómago, el antifúngico se vuelve cemento no absorbible, resultando en falla de la terapia fúngica."
+      },
+      conduta: {
+        pt: "Suspender temporariamente o IBP. Se absolutamente impossível, dar o antifúngico oral acompanhado de 1 copo de Coca-Cola pura para gerar pico ácido forçado imediato.",
+        es: "Suspender temporalmente el IBP. Si es absolutamente imposible, dar el antifúngico oral acompañado de 1 vaso de Coca-Cola pura para generar pico ácido forzado inmediato."
+      }
+    }
+  },
+
+  /* ── TERLIPRESSINA E OCTREOTIDE (Vasoconstritores Esplâncnicos) ── */
+  "terlipressina": {
+    "$classe_aminas_adrenergicas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Isquêmico Catastrófico. A terlipressina induz oclusão vigorosa dos leitos esplâncnicos e coronários. Se associada à Noradrenalina ou Dopamina (em ambiente de choque séptico duplo), a vasoconstrição cruzada atinge níveis onde a gangrena mesentérica (morte de todo o intestino) e a isquemia das pontas dos dedos e nariz são quase certas.",
+        es: "Sinergismo Isquémico Catastrófico. La terlipresina induce oclusión vigorosa de los lechos esplácnicos y coronarios. Si se asocia a Noradrenalina o Dopamina (en ambiente de choque séptico doble), la vasoconstricción cruzada alcanza niveles donde la gangrena mesentérica (muerte de todo el intestino) y la isquemia de las puntas de los dedos y nariz son casi seguras."
+      },
+      conduta: {
+        pt: "Restringir estritamente. Em UTI, apenas o Intensivista sênior deve mesclar Terlipressina com Noradrenalina, geralmente reduzindo agressivamente a dose de ambos, sob monitorização de lactato arterial a cada 2h.",
+        es: "Restringir estrictamente. En UCI, solo el Intensivista senior debe mezclar Terlipresina con Noradrenalina, generalmente reduciendo agresivamente la dosis de ambos, bajo monitorización de lactato arterial cada 2h."
+      }
+    }
+  },
+
+  "octreotide": {
+    "$classe_antidiabeticos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A Octreotida (somatostatina) é a 'desligadora universal' do pâncreas. Ela paralisa a secreção tanto da Insulina quanto do Glucagon. Isso significa que o paciente diabético que usa hipoglicemiantes orais ou Insulina e recebe bomba de Octreotide entrará em uma gangorra glicêmica caótica, experimentando episódios súbitos de Hipoglicemia e Hiperglicemia.",
+        es: "La Octreotida (somatostatina) es el 'apagador universal' del páncreas. Paraliza la secreción tanto de la Insulina como del Glucagón. Esto significa que el paciente diabético que usa hipoglucemiantes orales o Insulina y recibe bomba de Octreotida entrará en un balancín glucémico caótico, experimentando episodios súbitos de Hipoglucemia e Hiperglucemia."
+      },
+      conduta: {
+        pt: "Suspender antidiabéticos orais (ex: Glimepirida/Gliclazida) enquanto a bomba de Octreotide estiver ligada. Gerenciar a glicose na UTI apenas com soro e Insulina Rápida injetável se necessário, medindo a glicemia a cada 4 horas.",
+        es: "Suspender antidiabéticos orales (ej: Glimepirida/Gliclazida) mientras la bomba de Octreotida esté encendida. Gestionar la glucosa en la UCI solo con suero e Insulina Rápida inyectable si es necesario, midiendo la glucemia cada 4 horas."
+      }
+    }
+  },
+
+  /* ── LACTULOSE ── */
+  "lactulose": {
+    "neomicina": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Interação Paradoxal/Controversa. A neomicina e a rifaximina (antibióticos orais) matam a flora intestinal para reduzir as bactérias que produzem amônia no coma hepático. Porém, a Lactulose PRECISA dessa flora bacteriana viva para ser fermentada e gerar o efeito osmótico que limpa o intestino. Se o antibiótico matar as bactérias antes, a lactulose pode perder o efeito.",
+        es: "Interacción Paradójica/Controvertida. La neomicina y la rifaximina (antibióticos orales) matan la flora intestinal para reducir las bacterias que producen amoníaco en el coma hepático. Pero, la Lactulosa NECESITA esa flora bacteriana viva para ser fermentada y generar el efecto osmótico que limpia el intestino. Si el antibiótico mata las bacterias antes, la lactulosa puede perder el efecto."
+      },
+      conduta: {
+        pt: "Apesar dessa interação teórica, ensaios clínicos mostram que o uso associado (Lactulose + Antibiótico Enteral) é altamente benéfico. O protocolo mundial MANTÉM a associação nos casos refratários de encefalopatia.",
+        es: "A pesar de esta interacción teórica, ensayos clínicos muestran que el uso asociado (Lactulosa + Antibiótico Enteral) es altamente benéfico. El protocolo mundial MANTIENE la asociación en los casos refractarios de encefalopatía."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
