@@ -19713,6 +19713,128 @@ const INTERACOES_DB = {
         es: "Uso liberado sin ajustes necesarios, incluso con inmunosupresores (Tacrolimus/Ciclosporina), con los cuales los otros antifúngicos (Azólicos) tienen interacciones mortales."
       }
     }
+  }, // comma added; BUILD 338 Lote 2 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Infectologia Fúngica
+   Caspofungina, Micafungina, Fluconazol, Itraconazol, Voriconazol
+   BUILD 338 Lote 2
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── CASPOFUNGINA ── */
+  "caspofungina": {
+    "ciclosporina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A ciclosporina aumenta a Área Sob a Curva (AUC) da caspofungina em cerca de 35% ao bloquear sua captação hepática. A associação induz frequentemente uma hepatite medicamentosa aguda (disparo da TGO/TGP).",
+        es: "La ciclosporina aumenta el Área Bajo la Curva (AUC) de la caspofungina en cerca del 35% al bloquear su captación hepática. La asociación induce frecuentemente una hepatitis medicamentosa aguda (disparo de la AST/ALT)."
+      },
+      conduta: {
+        pt: "Uso conjunto não recomendado a menos que não haja opção. Monitorar transaminases DIARIAMENTE em transplantados.",
+        es: "Uso conjunto no recomendado a menos que no haya opción. Monitorizar transaminasas DIARIAMENTE en trasplantados."
+      }
+    },
+    "$classe_indutores_enzimaticos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Drogas como Rifampicina, Fenitoína e Dexametasona ativam maciçamente o clearance de caspofungina. A caspofungina sumirá do sangue, causando FALHA TERAPÊUTICA na sepse fúngica.",
+        es: "Drogas como Rifampicina, Fenitoína y Dexametasona activan masivamente el clearance de caspofungina. La caspofungina desaparecerá de la sangre, causando FALLA TERAPÉUTICA en la sepsis fúngica."
+      },
+      conduta: {
+        pt: "A dose de Manutenção da Caspofungina deve ser OBRIGATORIAMENTE elevada de 50 mg para 70 mg por dia enquanto o paciente usar o indutor.",
+        es: "La dosis de Mantenimiento de la Caspofungina debe ser OBLIGATORIAMENTE elevada de 50 mg a 70 mg por día mientras el paciente use el inductor."
+      }
+    }
+  },
+
+  /* ── MICAFUNGINA ── */
+  "micafungina": {
+    "sirolimo": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "A micafungina é um inibidor muito leve do citocromo CYP3A4. Causa elevações clínicas mínimas ou nulas na concentração de imunossupressores como sirolimo ou tacrolimus (diferente dos azólicos que causam overdoses mortais).",
+        es: "La micafungina es un inhibidor muy leve del citocromo CYP3A4. Causa elevaciones clínicas mínimas o nulas en la concentración de inmunosupresores como sirolimus o tacrolimus (a diferencia de los azólicos que causan sobredosis mortales)."
+      },
+      conduta: {
+        pt: "Seguro prescrever em transplantados. Monitorar nível do imunossupressor apenas por protocolo padrão.",
+        es: "Seguro prescribir en trasplantados. Monitorizar nivel del inmunosupresor solo por protocolo estándar."
+      }
+    }
+  },
+
+  /* ── FLUCONAZOL ── */
+  "fluconazol": {
+    "varfarina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Sinergismo Hemorrágico Absoluto. O Fluconazol paralisa a enzima CYP2C9, que é a ÚNICA rota de eliminação da Varfarina (S-Varfarina). O uso oral de fluconazol (mesmo que por 3 dias para corrimento vaginal) fará o RNI do paciente disparar de 2.0 para > 8.0, gerando hemorragias cerebrais mortais.",
+        es: "Sinergismo Hemorrágico Absoluto. El Fluconazol paraliza la enzima CYP2C9, que es la ÚNICA ruta de eliminación de la Warfarina (S-Warfarina). El uso oral de fluconazol (aunque sea por 3 días para flujo vaginal) hará que el RNI del paciente se dispare de 2.0 a > 8.0, generando hemorragias cerebrales mortales."
+      },
+      conduta: {
+        pt: "Evitar ao máximo. Se obrigatório, a dose de Varfarina deve ser REDUZIDA em 50 a 60% e o RNI dosado a cada 48h.",
+        es: "Evitar al máximo. Si es obligatorio, la dosis de Warfarina debe REDUCIRSE en 50 a 60% y el RNI dosificarse cada 48h."
+      }
+    },
+    "$classe_estatinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Bloqueio do CYP3A4. O fluconazol impede a degradação da Sinvastatina e Atorvastatina. O acúmulo da estatina causa lesão direta e dissolução do músculo esquelético (Rabdomiólise) com falência renal aguda colateral.",
+        es: "Bloqueo del CYP3A4. El fluconazol impide la degradación de Simvastatina y Atorvastatina. La acumulación de la estatina causa lesión directa y disolución del músculo esquelético (Rabdomiólisis) con falla renal aguda colateral."
+      },
+      conduta: {
+        pt: "Suspender a estatina profilaticamente durante toda a duração do tratamento com Fluconazol.",
+        es: "Suspender la estatina profilácticamente durante toda la duración del tratamiento con Fluconazol."
+      }
+    }
+  },
+
+  /* ── ITRACONAZOL ── */
+  "itraconazol": {
+    "$classe_ibp": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INIBIÇÃO DE ABSORÇÃO. A cápsula de Itraconazol precisa mergulhar num estômago com ácido gástrico em grau máximo (pH < 3) para se dissolver e ser absorvida. Se o paciente usar Omeprazol, Pantoprazol ou Famotidina, o pH gástrico sobe e a cápsula passa intacta pelas fezes. Falha total contra fungos.",
+        es: "INHIBICIÓN DE ABSORCIÓN. La cápsula de Itraconazol necesita sumergirse en un estómago con ácido gástrico en grado máximo (pH < 3) para disolverse y ser absorbida. Si el paciente usa Omeprazol, Pantoprazol o Famotidina, el pH gástrico sube y la cápsula pasa intacta por las heces. Falla total contra hongos."
+      },
+      conduta: {
+        pt: "Descontinuar o inibidor de bomba de prótons. Caso irretirável, orientar o paciente a tomar o Itraconazol com Coca-Cola Clássica (bebida de extremo baixo pH) para forçar a dissolução.",
+        es: "Descontinuar el inhibidor de bomba de protones. Si es irretirable, orientar al paciente a tomar el Itraconazol con Coca-Cola Clásica (bebida de extremo bajo pH) para forzar la disolución."
+      }
+    }
+  },
+
+  /* ── VORICONAZOL ── */
+  "voriconazol": {
+    "tacrolimus": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O voriconazol inibe de forma monstruosa o CYP3A4 e CYP2C19. Se prescrito em um paciente transplantado, os níveis de Tacrolimus (ou Ciclosporina/Sirolimo) aumentarão de 3 a 10 vezes em poucos dias. Isso causa nefropatia tóxica anúrica e neurotoxicidade fulminantes.",
+        es: "El voriconazol inhibe de forma monstruosa el CYP3A4 y CYP2C19. Si se prescribe en un paciente trasplantado, los niveles de Tacrolimus (o Ciclosporina/Sirolimus) aumentarán de 3 a 10 veces en pocos días. Esto causa nefropatía tóxica anúrica y neurotoxicidad fulminantes."
+      },
+      conduta: {
+        pt: "É UMA REGRA ABSOLUTA DO TRANSPLANTE: No mesmo dia que você iniciar o Voriconazol, você OBRIGATORIAMENTE deve REDUZIR a dose do Tacrolimus a 1/3 (um terço) do original (Reduzir a Ciclosporina à metade). Dosar o nível sérico na manhã seguinte.",
+        es: "ES UNA REGLA ABSOLUTA DEL TRASPLANTE: El mismo día que inicies el Voriconazol, OBLIGATORIAMENTE debes REDUCIR la dosis de Tacrolimus a 1/3 (un tercio) del original (Reducir la Ciclosporina a la mitad). Dosificar el nivel sérico a la mañana siguiente."
+      }
+    },
+    "$classe_antiarritmicos_qt": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Voriconazol em si mesmo alonga o intervalo QT, mas também paralisa a degradação no fígado de qualquer outra droga que alongue o QT (ex: Amiodarona, Haloperidol, Quetiapina). Risco gravíssimo de Torsades de Pointes.",
+        es: "El Voriconazol por sí mismo alarga el intervalo QT, pero también paraliza la degradación en el hígado de cualquier otra droga que alargue el QT (ej: Amiodarona, Haloperidol, Quetiapina). Riesgo gravísimo de Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Evitar a associação ou realizar Eletrocardiograma a cada 48 horas no paciente de UTI.",
+        es: "Evitar la asociación o realizar Electrocardiograma cada 48 horas en el paciente de UCI."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
