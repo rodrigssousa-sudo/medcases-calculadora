@@ -20035,6 +20035,94 @@ const INTERACOES_DB = {
         es: "Verificar la lista completa de interacciones en el prospecto para todo paciente que inicie Paxlovid. Entre los más críticos: Tacrolimus, Ergotamina, Salmeterol, Diazepam, Alfuzosina y Clopidogrel."
       }
     }
+  }, // vírgula adicionada; BUILD 344 Lote 5 blocks follow
+
+  /* ── GLICOPEPTÍDEOS / LIPOGLICOPEPTÍDEOS (Dalbavancina e Teicoplanina) ── */
+  "$classe_glicopeptideos_anti_mrsa": {
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Apesar da Teicoplanina e Dalbavancina serem notavelmente menos nefrotóxicas que a Vancomicina, a coadministração em UTI com drogas que destroem o túbulo renal (Amicacina, Gentamicina, Polimixina B) restabelece grave sinergismo de Lesão Renal Aguda, aumentando a incidência de necrose tubular.",
+        es: "A pesar de que la Teicoplanina y Dalbavancina son notablemente menos nefrotóxicas que la Vancomicina, la coadministración en UCI con drogas que destruyen el túbulo renal (Amikacina, Gentamicina, Polimixina B) restablece grave sinergismo de Lesión Renal Aguda, aumentando la incidencia de necrosis tubular."
+      },
+      conduta: {
+        pt: "Vigilância rigorosa e hidratação sistêmica. Ajustar a Teicoplanina via clearance de creatinina caso as escórias renais se elevem.",
+        es: "Vigilancia rigurosa e hidratación sistémica. Ajustar la Teicoplanina vía clearance de creatinina si las escorias renales se elevan."
+      }
+    }
+  },
+
+  /* ── CEFTOBIPROLE ── */
+  "ceftobiprole": {
+    "vacina_bcg_e_colera": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Inibição de vacinas vivas (efeito cruzado típico dos beta-lactâmicos sistêmicos). O antibiótico pode inativar as cepas bacterianas atenuadas das vacinas orais ou intradérmicas (BCG, vacina viva da cólera ou tifoide), impedindo a resposta imunológica.",
+        es: "Inhibición de vacunas vivas (efecto cruzado típico de los betalactámicos sistémicos). El antibiótico puede inactivar las cepas bacterianas atenuadas de las vacunas orales o intradérmicas (BCG, vacuna viva del cólera o tifoidea), impidiendo la respuesta inmunológica."
+      },
+      conduta: {
+        pt: "Adiar imunizações com bactérias vivas até pelo menos 72 horas após o término da antibioticoterapia.",
+        es: "Posponer inmunizaciones con bacterias vivas hasta al menos 72 horas después de terminar la antibioticoterapia."
+      }
+    }
+  },
+
+  /* ── ONDANSETRONA ── */
+  "ondansetrona": {
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Síndrome Serotoninérgica Exacerbada. A ondansetrona bloqueia receptores 5-HT3 periféricos e centrais. O uso sistêmico concomitante com antidepressivos que inundam o cérebro de serotonina (Fluoxetina, Escitalopram, Duloxetina ou Tramadol) pode gerar tremores, hipertermia, rigidez muscular e confusão letal.",
+        es: "Síndrome Serotoninérgico Exacerbado. El ondansetrón bloquea receptores 5-HT3 periféricos y centrales. El uso sistémico concomitante con antidepresivos que inundan el cerebro de serotonina (Fluoxetina, Escitalopram, Duloxetina o Tramadol) puede generar temblores, hipertermia, rigidez muscular y confusión letal."
+      },
+      conduta: {
+        pt: "Cautela ao tratar náuseas em pacientes psiquiátricos crônicos. Alternativas como corticoides (dexametasona antiemética) podem ser mais seguras dependendo do perfil.",
+        es: "Precaución al tratar náuseas en pacientes psiquiátricos crónicos. Alternativas como corticoides (dexametasona antiemética) pueden ser más seguras dependiendo del perfil."
+      }
+    },
+    "$classe_antiarritmicos_qt": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A ondansetrona em doses endovenosas rápidas atua diretamente nos canais iônicos do miocárdio, causando prolongamento do intervalo QT dose-dependente. A associação com amiodarona, macrolídeos ou antipsicóticos potencializa o risco de Torsades de Pointes.",
+        es: "El ondansetrón en dosis endovenosas rápidas actúa directamente en los canales iónicos del miocardio, causando prolongación del intervalo QT dosis-dependiente. La asociación con amiodarona, macrólidos o antipsicóticos potencia el riesgo de Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Limitar a dose em cardiopatas (máx 4 mg). Diluir a ampola e realizar infusão em 10 minutos para minimizar o pico plasmático cardíaco.",
+        es: "Limitar la dosis en cardiópatas (máx 4 mg). Diluir la ampolla y realizar infusión en 10 minutos para minimizar el pico plasmático cardíaco."
+      }
+    }
+  },
+
+  /* ── METOCLOPRAMIDA ── */
+  "metoclopramida": {
+    "$classe_antipsicoticos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Duplo bloqueio dopaminérgico e parkinsonismo grave. A metoclopramida bloqueia os mesmos receptores D2 que o haloperidol e a risperidona. A associação causa colapso da via extrapiramidal: o paciente não consegue engolir, os olhos reviram, a musculatura trava e ocorre agitação incontrolável.",
+        es: "Doble bloqueo dopaminérgico y parkinsonismo grave. La metoclopramida bloquea los mismos receptores D2 que el haloperidol y la risperidona. La asociación causa colapso de la vía extrapiramidal: el paciente no puede tragar, los ojos se viran, la musculatura se traba y ocurre agitación incontrolable."
+      },
+      conduta: {
+        pt: "Nunca tratar náusea com metoclopramida em pacientes com esquizofrenia, transtorno bipolar ou sob sedação com haloperidol na UTI. O uso da ondansetrona é obrigatório nesse cenário.",
+        es: "Nunca tratar náusea con metoclopramida en pacientes con esquizofrenia, trastorno bipolar o bajo sedación con haloperidol en UCI. El uso del ondansetrón es obligatorio en este escenario."
+      }
+    },
+    "$classe_opioides_fortes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Antagonismo motórico. A morfina e o fentanil congelam o trânsito gastrointestinal (íleo paralítico opioide). A metoclopramida tenta estimular o esvaziamento gástrico, mas sua eficácia pró-cinética é fortemente anulada pelo uso simultâneo de opioides pesados.",
+        es: "Antagonismo motor. La morfina y el fentanilo congelan el tránsito gastrointestinal (íleo paralítico opioide). La metoclopramida intenta estimular el vaciamiento gástrico, pero su eficacia procinética es fuertemente anulada por el uso simultáneo de opioides pesados."
+      },
+      conduta: {
+        pt: "Se o objetivo for apenas antiemético, o efeito neurocentral ainda funcionará. Se o objetivo for tratar íleo ou gastroparesia, é necessário suspender o opioide para a medicação ter sucesso.",
+        es: "Si el objetivo es solo antiemético, el efecto neurocentral aún funcionará. Si el objetivo es tratar íleo o gastroparesia, es necesario suspender el opioide para que la medicación tenga éxito."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */

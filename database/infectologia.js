@@ -772,3 +772,134 @@
   }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — Grupo 4 (ganciclovir · valganciclovir · oseltamivir · remdesivir · paxlovid — BUILD 342 Lote 4) */
 
 })();
+
+/* ── GRUPO 5: Antimicrobianos de Última Geração — BUILD 344 Lote 5 ── */
+(function () {
+  'use strict';
+  if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null) return;
+
+  Object.assign(window.INFECTOLOGIA_DRUGS_DB, {
+
+    /* ── CEFTOBIPROLE ───────────────────────────────────────────────────── */
+    "ceftobiprole": {
+      name: { pt: 'Ceftobiprole', es: 'Ceftobiprol' },
+      category: 'infectologia',
+      class: { pt: 'Antibiótico Beta-lactâmico (Cefalosporina de 5ª Geração)', es: 'Antibiótico Betalactámico (Cefalosporina de 5ª Generación)' },
+      indications: {
+        pt: ['Pneumonia adquirida no hospital (PAH) excluindo associada à ventilação (PAV)', 'Pneumonia adquirida na comunidade (PAC) severa', 'Infecções complicadas de pele e tecidos moles por MRSA'],
+        es: ['Neumonía adquirida en el hospital (NAH) excluyendo asociada a ventilación (NAV)', 'Neumonía adquirida en la comunidad (NAC) severa', 'Infecciones complicadas de piel y tejidos blandos por MRSA']
+      },
+      commercialNames: { br: ['Zevtera'], ar: ['Zevtera'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 500 mg'], es: ['Vial liofilizado 500 mg'] },
+      mechanism: {
+        pt: 'Diferente de todas as cefalosporinas anteriores, liga-se fortemente à PBP2a (a proteína mutante que confere resistência à meticilina ao MRSA) e à PBP2x (do pneumococo resistente). Paralisa a síntese da parede celular bacteriana, cobrindo MRSA, cepas sensíveis de Enterococcus faecalis e mantendo excelente cobertura Gram-negativa (Pseudomonas inconstante).',
+        es: 'A diferencia de todas las cefalosporinas anteriores, se une fuertemente a la PBP2a (la proteína mutante que confiere resistencia a la meticilina al MRSA) y a la PBP2x (del neumococo resistente). Paraliza la síntesis de la pared celular bacteriana, cubriendo MRSA, cepas sensibles de Enterococcus faecalis y manteniendo excelente cobertura Gram-negativa (Pseudomonas inconstante).'
+      },
+      dose: {
+        adult: {
+          pt: '500 mg IV a cada 8 horas (infusão estendida de 2 horas).',
+          es: '500 mg IV cada 8 horas (infusión extendida de 2 horas).'
+        },
+        pediatric: {
+          pt: 'Segurança não totalmente estabelecida. Uso off-label guiado por infectologia.',
+          es: 'Seguridad no totalmente establecida. Uso off-label guiado por infectología.'
+        }
+      },
+      administration: { pt: ['Administrar em infusão endovenosa de no mínimo 2 horas para garantir tempo acima da MIC (farmacocinética T>MIC típica dos beta-lactâmicos).'], es: ['Administrar en infusión endovenosa de al menos 2 horas para garantizar tiempo por encima de la MIC (farmacocinética T>MIC típica de los betalactámicos).'] },
+      renalAdjustment: { required: true, message: { pt: 'Depurado pelos rins. ClCr 30-50: 500 mg a cada 12h. ClCr 15-29: 250 mg a cada 12h. ClCr < 15: 250 mg a cada 24h.', es: 'Depurado por los riñones. ClCr 30-50: 500 mg cada 12h. ClCr 15-29: 250 mg cada 12h. ClCr < 15: 250 mg cada 24h.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Disgeusia (alteração intensa do paladar, gosto de metal ou caramelo)', 'Náuseas e vômitos', 'Flebite'], es: ['Disgeusia (alteración intensa del gusto, sabor a metal o caramelo)', 'Náuseas y vómitos', 'Flebitis'] },
+      dangerousAdverseEffects: { pt: ['Anafilaxia', 'Convulsões e encefalopatia mioclônica (se não houver ajuste de dose na insuficiência renal)', 'Colite por C. difficile'], es: ['Anafilaxia', 'Convulsiones y encefalopatía mioclónica (si no hay ajuste de dosis en la insuficiencia renal)', 'Colitis por C. difficile'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave a cefalosporinas ou histórico de anafilaxia à penicilina'], es: ['Hipersensibilidad grave a cefalosporinas o historial de anafilaxia a la penicilina'] },
+        relative: { pt: ['Histórico de epilepsia ou convulsões não controladas'], es: ['Historial de epilepsia o convulsiones no controladas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Possui risco cruzado de alergia com as penicilinas. É um substituto premium para pacientes que não toleram Vancomicina ou Teicoplanina para cobrir MRSA pulmonar.', es: 'Posee riesgo cruzado de alergia con las penicilinas. Es un sustituto premium para pacientes que no toleran Vancomicina o Teicoplanina para cubrir MRSA pulmonar.' }
+      }
+    },
+
+    /* ── DALBAVANCINA ───────────────────────────────────────────────────── */
+    "dalbavancina": {
+      name: { pt: 'Dalbavancina', es: 'Dalbavancina' },
+      category: 'infectologia',
+      class: { pt: 'Antibiótico Lipoglicopeptídeo', es: 'Antibiótico Lipoglucopéptido' },
+      indications: {
+        pt: ['Infecções bacterianas agudas de pele e tecidos moles (SSTI) causadas por Gram-positivos multirresistentes (MRSA)', 'Osteomielite crônica e Endocardite (off-label em regimes longos)'],
+        es: ['Infecciones bacterianas agudas de piel y tejidos blandos (SSTI) causadas por Gram-positivos multirresistentes (MRSA)', 'Osteomielitis crónica y Endocarditis (off-label en regímenes largos)']
+      },
+      commercialNames: { br: ['Dalvance (importação)'], ar: ['Dalvance'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 500 mg'], es: ['Vial liofilizado 500 mg'] },
+      mechanism: {
+        pt: 'Mecanismo similar ao da Vancomicina (liga-se aos resíduos D-alanil-D-alanina impedindo a formação da parede bacteriana), porém sua molécula possui uma cauda lipofílica extra que ancora o antibiótico na membrana da bactéria. Isso confere meia-vida de eliminação de quase 15 dias. O paciente toma uma única dose e fica tratado por semanas.',
+        es: 'Mecanismo similar al de la Vancomicina (se une a los residuos D-alanil-D-alanina impidiendo la formación de la pared bacteriana), pero su molécula posee una cola lipofílica extra que ancla el antibiótico en la membrana de la bacteria. Esto le confiere una vida media de eliminación de casi 15 días. El paciente toma una sola dosis y queda tratado por semanas.'
+      },
+      dose: {
+        adult: {
+          pt: 'Regime de Dose Única: 1.500 mg IV (1 vez). Regime Duplo: 1.000 mg IV no Dia 1, seguido de 500 mg IV no Dia 8.',
+          es: 'Régimen de Dosis Única: 1.500 mg IV (1 vez). Régimen Doble: 1.000 mg IV en el Día 1, seguido de 500 mg IV en el Día 8.'
+        },
+        pediatric: {
+          pt: 'Aprovado para crianças em algumas agências. Exige cálculo estrito de mg/kg.',
+          es: 'Aprobado para niños en algunas agencias. Exige cálculo estricto de mg/kg.'
+        }
+      },
+      administration: { pt: ['Infusão IV lenta em no mínimo 30 minutos.', 'A infusão rápida pode causar a Síndrome do Homem Vermelho (liberação de histamina).'], es: ['Infusión IV lenta en al menos 30 minutos.', 'La infusión rápida puede causar el Síndrome del Hombre Rojo (liberación de histamina).'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min (não dialítico): reduzir a dose de ataque única para 1.125 mg IV.', es: 'Si ClCr < 30 mL/min (no dialítico): reducir la dosis de ataque única a 1.125 mg IV.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Evitar em cirrose classe C, sem ajuste necessário para classe A ou B.', es: 'Evitar en cirrosis clase C, sin ajuste necesario para clase A o B.' } },
+      commonAdverseEffects: { pt: ['Náusea e diarreia', 'Cefaleia', 'Prurido e rash leve'], es: ['Náusea y diarrea', 'Cefalea', 'Prurito y rash leve'] },
+      dangerousAdverseEffects: { pt: ['Aumento transitório de TGO/TGP (hepatotoxicidade assintomática)', 'Colite por C. difficile'], es: ['Aumento transitorio de AST/ALT (hepatotoxicidad asintomática)', 'Colitis por C. difficile'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave a glicopeptídeos (vancomicina)'], es: ['Hipersensibilidad grave a glucopéptidos (vancomicina)'] },
+        relative: { pt: ['Ausência de infecção documentada por Gram-positivos'], es: ['Ausencia de infección documentada por Gram-positivos'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Estratégia de desospitalização: o paciente com celulite grave internado toma uma bolsa de Dalbavancina e tem alta no mesmo dia, curado do MRSA por semanas, sem internação prolongada.', es: 'Estrategia de deshospitalización: el paciente con celulitis grave internado toma una bolsa de Dalbavancina y es dado de alta el mismo día, curado del MRSA por semanas, sin internación prolongada.' }
+      }
+    },
+
+    /* ── TEICOPLANINA ───────────────────────────────────────────────────── */
+    "teicoplanina": {
+      name: { pt: 'Teicoplanina', es: 'Teicoplanina' },
+      category: 'infectologia',
+      class: { pt: 'Antibiótico Glicopeptídeo', es: 'Antibiótico Glucopéptido' },
+      indications: {
+        pt: ['Infecções severas por Gram-positivos (MRSA, Enterococcus, S. epidermidis)', 'Infecções de osso e articulação (Osteomielite) e Endocardite', 'Peritonite em pacientes em Diálise Peritoneal Ambulatorial Contínua (CAPD)'],
+        es: ['Infecciones severas por Gram-positivos (MRSA, Enterococcus, S. epidermidis)', 'Infecciones de hueso y articulación (Osteomielitis) y Endocarditis', 'Peritonitis en pacientes en Diálisis Peritoneal Ambulatoria Continua (CAPD)']
+      },
+      commercialNames: { br: ['Targocid'], ar: ['Targocid'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 200 mg, 400 mg'], es: ['Vial liofilizado 200 mg, 400 mg'] },
+      mechanism: {
+        pt: 'Mecanismo idêntico ao da Vancomicina (inibe a parede de Gram-positivos ao ligar-se à extremidade D-ala-D-ala). Possui maior afinidade pelos tecidos, especialmente ossos, e meia-vida de eliminação imensamente maior (até 150 horas). Grande vantagem sobre a vancomicina: nefrotoxicidade muito menor (quase zero).',
+        es: 'Mecanismo idéntico al de la Vancomicina (inhibe la pared de Gram-positivos al unirse al extremo D-ala-D-ala). Posee mayor afinidad por los tejidos, especialmente huesos, y vida media de eliminación inmensamente mayor (hasta 150 horas). Gran ventaja sobre la vancomicina: nefrotoxicidad mucho menor (casi cero).'
+      },
+      dose: {
+        adult: {
+          pt: 'Infecções graves: 6 a 12 mg/kg IV a cada 12 horas por 3 a 5 doses de ataque. Manutenção: 6 a 12 mg/kg IV uma vez ao dia.',
+          es: 'Infecciones graves: 6 a 12 mg/kg IV cada 12 horas por 3 a 5 dosis de ataque. Mantenimiento: 6 a 12 mg/kg IV una vez al día.'
+        },
+        pediatric: {
+          pt: 'Ataque: 10 mg/kg 12/12h por 3 doses. Manutenção: 6 a 10 mg/kg/dia.',
+          es: 'Ataque: 10 mg/kg 12/12h por 3 dosis. Mantenimiento: 6 a 10 mg/kg/día.'
+        }
+      },
+      administration: { pt: ['Grande diferencial: pode ser aplicada por via INTRAMUSCULAR (IM) em ambulatório, ou IV direto em 3 a 5 minutos, sem causar a Síndrome do Homem Vermelho da vancomicina.'], es: ['Gran diferencial: puede ser aplicada por vía INTRAMUSCULAR (IM) en ambulatorio, o IV directo en 3 a 5 minutos, sin causar el Síndrome del Hombre Rojo de la vancomicina.'] },
+      renalAdjustment: { required: true, message: { pt: 'Reduzir dose em DRC após o 4º dia de tratamento (geralmente metade da dose para ClCr 40-60, ou 1/3 se ClCr < 40).', es: 'Reducir dosis en ERC tras el 4º día de tratamiento (generalmente mitad de la dosis para ClCr 40-60, o 1/3 si ClCr < 40).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      commonAdverseEffects: { pt: ['Dor no local da injeção IM', 'Eritema leve'], es: ['Dolor en el sitio de inyección IM', 'Eritema leve'] },
+      dangerousAdverseEffects: { pt: ['Ototoxicidade (zumbido ou surdez), mais rara que com vancomicina', 'Trombocitopenia reversível', 'Anafilaxia'], es: ['Ototoxicidad (zumbido o sordera), más rara que con vancomicina', 'Trombocitopenia reversible', 'Anafilaxia'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida grave à teicoplanina'], es: ['Hipersensibilidad conocida grave a la teicoplanina'] },
+        relative: { pt: ['Alergia prévia à vancomicina (risco de alergia cruzada)'], es: ['Alergia previa a vancomicina (riesgo de alergia cruzada)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ERRO TERAPÊUTICO COMUM: esquecer de fazer as doses de ataque (a cada 12h) nos primeiros dois dias. O remédio demora muitos dias para atingir o nível sérico eficaz se as doses de ataque forem puladas.', es: 'ERROR TERAPÉUTICO COMÚN: olvidar hacer las dosis de ataque (cada 12h) en los primeros dos días. El remedio tarda muchos días en alcanzar el nivel sérico eficaz si las dosis de ataque se saltan.' }
+      }
+    }
+
+  }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — Grupo 5 (ceftobiprole · dalbavancina · teicoplanina — BUILD 344 Lote 5) */
+
+})();
