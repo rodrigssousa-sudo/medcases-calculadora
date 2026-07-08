@@ -19537,6 +19537,88 @@ const INTERACOES_DB = {
         es: "Reducir inmediatamente la dosis de la digoxina a la mitad (50%) tan pronto como se inicie el verapamilo. Dosificar Digoxinemia seriadamente."
       }
     }
+  }, // comma added; BUILD 334 Lote 1 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Toxicologia e Antídotos de Resgate
+   Flumazenil, Acetilcisteína, Fomepizol, Pralidoxima, Deferoxamina
+   BUILD 334 Lote 1
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── FLUMAZENIL ── */
+  "flumazenil": {
+    "$classe_antidepressivos_triciclicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "AFASTAMENTO DO LIMIAR CONVULSIVO (Mortal). Pacientes que chegam em coma no PS por tentativa de suicídio frequentemente usam um coquetel de Benzodiazepínicos e Antidepressivos Tricíclicos (Amitriptilina, Imipramina). Os tricíclicos causam alto risco de convulsão, que está escondida porque o paciente também tomou o benzodiazepínico (que protege contra a convulsão). Se você administrar Flumazenil, você arranca a proteção anticonvulsivante de uma vez, e o cérebro do paciente deflagra Status Epilepticus refratário imediato.",
+        es: "ALEJAMIENTO DEL UMBRAL CONVULSIVO (Mortal). Pacientes que llegan en coma a urgencias por intento de suicidio frecuentemente usan un cóctel de Benzodiazepinas y Antidepresivos Tricíclicos. Los tricíclicos causan alto riesgo de convulsión, que está escondida porque el paciente también tomó la benzodiazepina (que protege). Si administras Flumazenilo, arrancas la protección anticonvulsiva de una vez, y el cerebro desencadena Status Epilepticus refractario inmediato."
+      },
+      conduta: {
+        pt: "NEGAR o uso de Flumazenil em intoxicações desconhecidas ou overdose mista. Preferir intubação orotraqueal e suporte até depuração das drogas.",
+        es: "NEGAR el uso de Flumazenilo en intoxicaciones desconocidas o sobredosis mixta. Preferir intubación orotraqueal y soporte hasta depuración de las drogas."
+      }
+    },
+    "$classe_benzodiazepinicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Uso em pacientes DEPENDENTES CRÔNICOS. Se um paciente faz uso diário de Diazepam/Clonazepam há meses, o cérebro se adaptou à inibição. A administração aguda de Flumazenil causará Crise de Abstinência Benzodiazepínica fulminante, com tempestade simpática, agitação extrema e convulsões de difícil tratamento.",
+        es: "Uso en pacientes DEPENDIENTES CRÓNICOS. Si un paciente hace uso diario de Diazepam/Clonazepam hace meses, el cerebro se adaptó a la inhibición. La administración aguda de Flumazenilo causará Crisis de Abstinencia Benzodiazepínica fulminante, con tormenta simpática, agitación extrema y convulsiones."
+      },
+      conduta: {
+        pt: "O Flumazenil é essencialmente seguro apenas para reverter sedações iatrogênicas limpas (anestesia/endoscopia) em pessoas normais.",
+        es: "El Flumazenilo es esencialmente seguro solo para revertir sedaciones iatrogénicas limpias (anestesia/endoscopia) en personas normales."
+      }
+    }
+  },
+
+  /* ── ACETILCISTEÍNA (NAC) ── */
+  "acetilcisteina": {
+    "nitroglicerina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Vasodilatador Grave. A Acetilcisteína contém grupos sulfidrila livres. Esses grupos reagem diretamente com a Nitroglicerina, amplificando maciçamente sua conversão em Óxido Nítrico (NO). Isso deflagra uma dilatação sistêmica violenta, gerando hipotensão severa e cefaleia pulsátil insuportável no paciente.",
+        es: "Sinergismo Vasodilatador Grave. La Acetilcisteína contiene grupos sulfhidrilo libres. Estos grupos reaccionan directamente con la Nitroglicerina, amplificando masivamente su conversión en Óxido Nítrico (NO). Esto desencadena una dilatación sistémica violenta, generando hipotensión severa y cefalea pulsátil insoportable."
+      },
+      conduta: {
+        pt: "Monitorar PA rigorosamente se a associação for inescapável. Geralmente exige suspensão do nitrato.",
+        es: "Monitorizar PA rigurosamente si la asociación es ineludible. Generalmente exige suspensión del nitrato."
+      }
+    }
+  },
+
+  /* ── PRALIDOXIMA ── */
+  "pralidoxima": {
+    "atropina": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO MANDATÓRIA (Regra de Salvamento). A pralidoxima reativa as colinesterases, mas nos primeiros minutos de injeção ela pode causar uma leve e passageira estimulação de receptores que agrava o acúmulo de secreções e bradicardia. A Atropina deve sempre limpar o terreno (secar o paciente) antes.",
+        es: "INTERACCIÓN MANDATORIA (Regla de Salvamento). La pralidoxima reactiva las colinesterasas, pero en los primeros minutos de inyección puede causar una leve y pasajera estimulación de receptores que agrava la acumulación de secreciones y bradicardia. La Atropina debe siempre limpiar el terreno (secar al paciente) antes."
+      },
+      conduta: {
+        pt: "Jamais administrar pralidoxima sem antes administrar doses maciças de Atropina IV (até o paciente ter pupilas dilatadas e taquicardia - sinal de atropinização).",
+        es: "Jamás administrar pralidoxima sin antes administrar dosis masivas de Atropina IV (hasta que el paciente tenga pupilas dilatadas y taquicardia - signo de atropinización)."
+      }
+    }
+  },
+
+  /* ── DEFEROXAMINA ── */
+  "deferoxamina": {
+    "vitamina_c": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sinergismo Paradoxal Tóxico no Coração. A Vitamina C (ácido ascórbico) atua reduzindo as pontes de ferro nos tecidos, facilitando que a deferoxamina acesse e capture o ferro oculto nos órgãos. Porém, se a vitamina C for dada ANTES da deferoxamina, o ferro mobilizado cai agudamente no sangue e ataca o coração antes de ser quelado, causando insuficiência cardíaca letal.",
+        es: "Sinergismo Paradójico Tóxico en el Corazón. La Vitamina C (ácido ascórbico) actúa reduciendo los puentes de hierro en los tejidos, facilitando que la deferoxamina acceda y capture el hierro oculto en los órganos. Pero, si la vitamina C se da ANTES de la deferoxamina, el hierro movilizado cae agudamente en la sangre y ataca el corazón antes de ser quelado, causando falla cardíaca."
+      },
+      conduta: {
+        pt: "Se for usar Vitamina C (para melhorar o rendimento da diálise de ferro em casos crônicos), ela SÓ PODE SER INICIADA 1 a 2 semanas DEPOIS do início da bomba de deferoxamina (quando a circulação já está saturada de quelante).",
+        es: "Si se va a usar Vitamina C (para mejorar el rendimiento de la diálisis de hierro en casos crónicos), SOLO PUEDE INICIARSE 1 a 2 semanas DESPUÉS del inicio de la bomba de deferoxamina."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */

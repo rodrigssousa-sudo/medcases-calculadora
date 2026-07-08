@@ -892,8 +892,208 @@
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
         warning: { pt: 'Sempre co-prescrever um laxante forte (como Bisacodil) se o paciente for utilizar a morfina por mais de 3 dias, pois o íleo paralítico é garantido. Antídoto direto é a Naloxona.', es: 'Siempre coprescribir un laxante fuerte (como Bisacodilo) si el paciente va a utilizar la morfina por más de 3 días, pues el íleo paralítico está garantizado. Antídoto directo es la Naloxona.' }
       }
-    }  // end morfina
+    },  // end morfina
 
-  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 324 Lote 1+2+3+4+5 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides) */
+/* ── FLUMAZENIL ─────────────────────────────────────────────────────── */
+    "flumazenil": {
+      name: { pt: 'Flumazenil', es: 'Flumazenilo' },
+      category: 'emergencia',
+      class: { pt: 'Antídoto / Antagonista de Receptor GABA-A', es: 'Antídoto / Antagonista de Receptor GABA-A' },
+      indications: {
+        pt: ['Reversão de sedação por Benzodiazepínicos em procedimentos (ex: endoscopias)', 'Intoxicação aguda EXCLUSIVAMENTE por Benzodiazepínicos em pacientes "naïve" (não usuários crônicos)'],
+        es: ['Reversión de sedación por Benzodiazepinas en procedimientos (ej: endoscopias)', 'Intoxicación aguda EXCLUSIVAMENTE por Benzodiazepinas en pacientes "naïve" (no usuarios crónicos)']
+      },
+      commercialNames: { br: ['Lanexat'], ar: ['Lanexat'] },
+      presentation: { pt: ['Ampolas IV 0,1 mg/mL (5 mL)'], es: ['Ampollas IV 0,1 mg/mL (5 mL)'] },
+      mechanism: {
+        pt: 'Antagonista competitivo puro dos receptores benzodiazepínicos no complexo GABA-A do sistema nervoso central. Ele "expulsa" o benzodiazepínico do receptor e bloqueia seu efeito inibitório, restaurando a consciência e o drive respiratório em 1 a 2 minutos. Possui meia-vida muito curta (cerca de 40 a 80 minutos).',
+        es: 'Antagonista competitivo puro de los receptores benzodiazepínicos en el complejo GABA-A del sistema nervioso central. "Expulsa" la benzodiazepina del receptor y bloquea su efecto inhibitorio, restaurando la consciencia y el drive respiratorio en 1 a 2 minutos. Posee vida media muy corta (cerca de 40 a 80 minutos).'
+      },
+      dose: {
+        adult: {
+          pt: '0,2 mg IV em 15 segundos. Se não acordar, repetir 0,1 mg a 0,2 mg a cada minuto, até o máximo de 1 mg (em sedações) ou 3 mg (em overdoses absolutas).',
+          es: '0,2 mg IV en 15 segundos. Si no despierta, repetir 0,1 mg a 0,2 mg cada minuto, hasta un máximo de 1 mg (en sedaciones) o 3 mg (en sobredosis absolutas).'
+        },
+        pediatric: {
+          pt: '0,01 mg/kg IV (máx 0,2 mg/dose), repetido a cada minuto se necessário.',
+          es: '0,01 mg/kg IV (máx 0,2 mg/dosis), repetido cada minuto si es necesario.'
+        }
+      },
+      administration: { pt: ['Administrar em bolus IV direto.', 'Se o paciente não responder após 3 mg a 5 mg totais, a causa do coma NÃO É benzodiazepínico.'], es: ['Administrar en bolo IV directo.', 'Si el paciente no responde tras 3 mg a 5 mg totales, la causa del coma NO ES benzodiazepina.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste na emergência.', es: 'Sin necesidad de ajuste en la emergencia.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'A depuração é reduzida em hepatopatas graves, prolongando o efeito.', es: 'El aclaramiento se reduce en hepatópatas graves, prolongando el efecto.' } },
+      commonAdverseEffects: { pt: ['Agitação psicomotora súbita', 'Náuseas e vômitos ao acordar', 'Tontura'], es: ['Agitación psicomotora súbita', 'Náuseas y vómitos al despertar', 'Mareo'] },
+      dangerousAdverseEffects: { pt: ['CONVULSÕES INTRACTÁVEIS E STATUS EPILEPTICUS (se administrado em usuários crônicos de benzodiazepínicos ou dependentes)', 'Arritmias cardíacas'], es: ['CONVULSIONES INTRATABLES Y STATUS EPILEPTICUS (si administrado en usuarios crónicos de benzodiazepinas o dependientes)', 'Arritmias cardíacas'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes em uso crônico de Benzodiazepínicos para controle de Epilepsia', 'Co-intoxicação com Antidepressivos Tricíclicos (desencadeará convulsão letal imediata)'], es: ['Pacientes en uso crónico de Benzodiazepinas para control de Epilepsia', 'Cointoxicación con Antidepresivos Tricíclicos (desencadenará convulsión letal inmediata)'] },
+        relative: { pt: ['Hipertensão craniana severa'], es: ['Hipertensión craneal severa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'FENÔMENO DE RE-SEDAÇÃO: A meia-vida do flumazenil (1h) é MUITO MAIS CURTA que a do Diazepam (até 48h). O paciente vai acordar e, 2 horas depois, entrará em coma respiratório novamente quando o antídoto perder o efeito. Vigilância intensiva obrigatória.', es: 'FENÓMENO DE RESEDACIÓN: La vida media del flumazenilo (1h) es MUCHO MÁS CORTA que la del Diazepam (hasta 48h). El paciente despertará y, 2 horas después, entrará en coma respiratorio nuevamente cuando el antídoto pierda el efecto. Vigilancia intensiva obligatoria.' }
+      }
+    },
+
+/* ── ACETILCISTEÍNA IV ──────────────────────────────────────────────── */
+    "acetilcisteina": {
+      name: { pt: 'Acetilcisteína IV (NAC)', es: 'Acetilcisteína IV (NAC)' },
+      category: 'emergencia',
+      class: { pt: 'Antídoto / Doador de Sulfidrila', es: 'Antídoto / Donador de Sulfhidrilo' },
+      indications: {
+        pt: ['Intoxicação aguda por Paracetamol (Acetaminofeno)', 'Prevenção de nefropatia induzida por contraste (uso controverso atual)', 'Falência hepática fulminante não-paracetamol (suporte)'],
+        es: ['Intoxicación aguda por Paracetamol (Acetaminofén)', 'Prevención de nefropatía inducida por contraste (uso controvertido actual)', 'Fallo hepático fulminante no paracetamol (soporte)']
+      },
+      commercialNames: { br: ['Fluimucil IV', 'Acetilcisteína Injetável'], ar: ['Acemuk IV'] },
+      presentation: { pt: ['Ampolas IV 100 mg/mL (3 mL = 300mg) ou frascos 20%'], es: ['Ampollas IV 100 mg/mL (3 mL = 300mg) o viales 20%'] },
+      mechanism: {
+        pt: 'Na overdose de paracetamol, o fígado esgota seus estoques de glutationa, levando ao acúmulo do metabólito altamente tóxico NAPQI, que destrói o fígado. A Acetilcisteína (NAC) atua como um substituto direto da glutationa, doando grupamentos sulfidrila (-SH) que se ligam ao NAPQI, neutralizando-o e permitindo sua excreção segura pela urina. Salva o fígado se iniciada em até 8 horas da ingestão.',
+        es: 'En la sobredosis de paracetamol, el hígado agota sus reservas de glutatión, llevando a la acumulación del metabolito altamente tóxico NAPQI, que destruye el hígado. La Acetilcisteína (NAC) actúa como un sustituto directo del glutatión, donando grupos sulfhidrilo (-SH) que se unen al NAPQI, neutralizándolo y permitiendo su excreción segura por la orina. Salva el hígado si se inicia hasta 8 horas tras la ingesta.'
+      },
+      dose: {
+        adult: {
+          pt: 'Protocolo de 21 horas IV: Dose de Ataque: 150 mg/kg em 1 hora. Segunda dose: 50 mg/kg em 4 horas. Terceira dose: 100 mg/kg em 16 horas. Total: 300 mg/kg.',
+          es: 'Protocolo de 21 horas IV: Dosis de Ataque: 150 mg/kg en 1 hora. Segunda dosis: 50 mg/kg en 4 horas. Tercera dosis: 100 mg/kg en 16 horas. Total: 300 mg/kg.'
+        },
+        pediatric: {
+          pt: 'Mesmas dosagens em mg/kg do adulto, mas atentar rigidamente ao volume de diluente para não causar sobrecarga hídrica.',
+          es: 'Mismas dosis en mg/kg que el adulto, pero atentar rígidamente al volumen de diluyente para no causar sobrecarga hídrica.'
+        }
+      },
+      administration: { pt: ['Obrigatória diluição em SG 5% ou SF 0,9%.', 'A infusão da primeira dose (em 1h) requer muita vigilância pela alta taxa de anafilaxia química.'], es: ['Obligatoria dilución en SG 5% o SF 0,9%.', 'La infusión de la primera dosis (en 1h) requiere mucha vigilancia por la alta tasa de anafilaxia química.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste.', es: 'Sin ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'O alvo primário é o fígado. Não necessita ajuste.', es: 'El objetivo primario es el hígado. No necesita ajuste.' } },
+      commonAdverseEffects: { pt: ['Flushing (vermelhidão facial intensa)', 'Erupção cutânea / Prurido', 'Vômitos'], es: ['Flushing (enrojecimiento facial intenso)', 'Erupción cutánea / Prurito', 'Vómitos'] },
+      dangerousAdverseEffects: { pt: ['Reação anafilactoide severa (broncoespasmo, hipotensão e angioedema) ocorrendo quase sempre na primeira hora de infusão rápida.'], es: ['Reacción anafilactoide severa (broncoespasmo, hipotensión y angioedema) ocurriendo casi siempre en la primera hora de infusión rápida.'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade documentada extrema (anafilaxia prévia)'], es: ['Hipersensibilidad documentada extrema (anafilaxia previa)'] },
+        relative: { pt: ['Asma brônquica (risco de broncoespasmo induzido por liberação de histamina inespecífica)'], es: ['Asma bronquial (riesgo de broncoespasmo inducido por liberación de histamina inespecífica)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Se o paciente desenvolver anafilaxia (rash, chiado) na dose de ataque, PARE a infusão, administre anti-histamínicos (Difenidramina) e retome a infusão de NAC de forma muito mais lenta. O antídoto não pode ser abandonado, pois a falência hepática matará o paciente.', es: 'Si el paciente desarrolla anafilaxia (rash, sibilancias) en la dosis de ataque, DETENGA la infusión, administre antihistamínicos y retome la infusión de NAC de forma mucho más lenta. El antídoto no puede ser abandonado, pues el fallo hepático matará al paciente.' }
+      }
+    },
+
+/* ── FOMEPIZOL ──────────────────────────────────────────────────────── */
+    "fomepizol": {
+      name: { pt: 'Fomepizol', es: 'Fomepizol' },
+      category: 'emergencia',
+      class: { pt: 'Antídoto / Inibidor da Álcool Desidrogenase', es: 'Antídoto / Inhibidor de la Alcohol Deshidrogenasa' },
+      indications: {
+        pt: ['Intoxicação confirmada ou suspeita por Etilenoglicol (líquido de arrefecimento de motores/anticongelante)', 'Intoxicação por Metanol (álcool de madeira / bebidas falsificadas)'],
+        es: ['Intoxicación confirmada o sospechosa por Etilenglicol (líquido anticongelante)', 'Intoxicación por Metanol (alcohol de madera / bebidas falsificadas)']
+      },
+      commercialNames: { br: ['Antizol (Importação/Difícil Acesso no BR)'], ar: ['Antizol'] },
+      presentation: { pt: ['Frascos-ampola 1 g/mL (1,5 mL)'], es: ['Viales 1 g/mL (1,5 mL)'] },
+      mechanism: {
+        pt: 'O metanol e o etilenoglicol não são altamente tóxicos por si sós, mas a enzima hepática Álcool Desidrogenase (ADH) os transforma em metabólitos letais (ácido fórmico, que causa cegueira, e ácido oxálico, que causa falência renal cristalina). O Fomepizol bloqueia a enzima ADH competitivamente, com uma afinidade 8.000 vezes maior que a do metanol. Assim, os tóxicos param de ser metabolizados e são excretados inofensivamente pelos rins.',
+        es: 'El metanol y el etilenglicol no son altamente tóxicos por sí solos, pero la enzima hepática Alcohol Deshidrogenasa (ADH) los transforma en metabolitos letales (ácido fórmico, que causa ceguera, y ácido oxálico, que causa falla renal cristalina). El Fomepizol bloquea la enzima ADH competitivamente, con una afinidad 8.000 veces mayor que la del metanol. Así, los tóxicos dejan de metabolizarse y son excretados inofensivamente por los riñones.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose de ataque: 15 mg/kg IV (diluída em 100 mL de SF/SG, correr em 30 min). Manutenção: 10 mg/kg IV a cada 12 horas por 4 doses.',
+          es: 'Dosis de ataque: 15 mg/kg IV (diluida en 100 mL de SF/SG, pasar en 30 min). Mantenimiento: 10 mg/kg IV cada 12 horas por 4 dosis.'
+        },
+        pediatric: {
+          pt: 'Doses idênticas ao adulto (15 mg/kg ataque).',
+          es: 'Dosis idénticas al adulto (15 mg/kg ataque).'
+        }
+      },
+      administration: { pt: ['Injeção IV lenta ao longo de 30 minutos.', 'NUNCA administrar em bolus não diluído (causa necrose).'], es: ['Inyección IV lenta a lo largo de 30 minutos.', 'NUNCA administrar en bolo no diluido (causa necrosis).'] },
+      renalAdjustment: { required: true, message: { pt: 'Fomepizol é dialisável. Se o paciente necessitar de hemodiálise para limpar a intoxicação, as doses do antídoto devem ser dadas a cada 4 horas durante a máquina.', es: 'Fomepizol es dializable. Si el paciente necesita hemodiálisis para limpiar la intoxicación, las dosis del antídoto deben darse cada 4 horas durante la máquina.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste inicial.', es: 'Sin necesidad de ajuste inicial.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Náuseas e alteração do paladar', 'Tontura e sonolência'], es: ['Cefalea', 'Náuseas y alteración del gusto', 'Mareo y somnolencia'] },
+      dangerousAdverseEffects: { pt: ['Convulsões (raras)', 'Eosinofilia e bradicardia severa'], es: ['Convulsiones (raras)', 'Eosinofilia y bradicardia severa'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave ao fomepizol ou a pirazóis'], es: ['Hipersensibilidad grave al fomepizol o a pirazoles'] },
+        relative: { pt: ['Gestação (avaliar risco-benefício, pois a intoxicação é letal para mãe e feto)'], es: ['Gestación (evaluar riesgo-beneficio, pues la intoxicación es letal para madre y feto)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Substituiu o uso de injeções de Etanol (álcool absoluto) nas UTIs devido à sua imensa superioridade de segurança (o Etanol embriaga e seda o paciente, exigindo intubação). Contudo, devido ao alto custo e falta crônica em hospitais periféricos, o Etanol IV ou VO (Cachaça pura via SNG) ainda é o improviso salva-vidas na ausência do Fomepizol.', es: 'Sustituyó el uso de inyecciones de Etanol (alcohol absoluto) en las UCIs debido a su inmensa superioridad de seguridad (el Etanol embriaga y seda al paciente, exigiendo intubación). Sin embargo, por el alto costo y falta crónica, el Etanol IV o VO aún es la improvisación salvavidas en ausencia del Fomepizol.' }
+      }
+    },
+
+/* ── PRALIDOXIMA ────────────────────────────────────────────────────── */
+    "pralidoxima": {
+      name: { pt: 'Pralidoxima', es: 'Pralidoxima' },
+      category: 'emergencia',
+      class: { pt: 'Antídoto / Reativador de Colinesterase', es: 'Antídoto / Reactivador de Colinesterasa' },
+      indications: {
+        pt: ['Intoxicação severa por defensivos agrícolas Organofosforados (Pesticidas/Inseticidas)', 'Tratamento de envenenamento por gases de guerra neurotóxicos (Sarin, VX)'],
+        es: ['Intoxicación severa por pesticidas Organofosforados (Insecticidas)', 'Tratamiento de envenenamiento por gases de guerra neurotóxicos (Sarín, VX)']
+      },
+      commercialNames: { br: ['Contration (Raro)'], ar: ['Contration'] },
+      presentation: { pt: ['Ampolas liofilizadas 1 g'], es: ['Ampollas liofilizadas 1 g'] },
+      mechanism: {
+        pt: 'Os organofosforados ligam-se covalentemente à enzima Acetilcolinesterase, destruindo-a e causando paralisia por excesso de acetilcolina. A pralidoxima age como uma "chave de fenda" molecular: se administrada cedo (antes da enzima sofrer o fenômeno irreversível chamado "aging" ou envelhecimento, que ocorre em cerca de 24 a 48h), a pralidoxima se liga ao fosfato do veneno e o "arranca" da enzima, ressuscitando a colinesterase nativa e revertendo a paralisia respiratória muscular.',
+        es: 'Los organofosforados se unen covalentemente a la enzima Acetilcolinesterasa, destruyéndola y causando parálisis por exceso de acetilcolina. La pralidoxima actúa como un "destornillador" molecular: si se administra temprano (antes de que la enzima sufra el fenómeno irreversible llamado "aging", que ocurre en unas 24-48h), se une al fosfato del veneno y lo "arranca" de la enzima, resucitando la colinesterasa nativa y revirtiendo la parálisis respiratoria.'
+      },
+      dose: {
+        adult: {
+          pt: 'Bolus IV: 1 a 2 g diluídos em 100 mL de SF (correr em 15 a 30 min). Manutenção: Infusão contínua de 8 mg/kg/h ou repetir 1g a cada 6h.',
+          es: 'Bolo IV: 1 a 2 g diluidos en 100 mL de SF (pasar en 15 a 30 min). Mantenimiento: Infusión continua de 8 mg/kg/h o repetir 1g cada 6h.'
+        },
+        pediatric: {
+          pt: '20 a 50 mg/kg IV (máx 2 g/dose).',
+          es: '20 a 50 mg/kg IV (máx 2 g/dosis).'
+        }
+      },
+      administration: { pt: ['Sempre diluída e administrada lentamente. Bolus rápido causa laringoespasmo e taquicardia severa.', 'DEVE ser administrada junto ou LOGO APÓS a Atropina.'], es: ['Siempre diluida y administrada lentamente. Bolo rápido causa laringoespasmo y taquicardia severa.', 'DEBE ser administrada junto o JUSTO DESPUÉS de la Atropina.'] },
+      renalAdjustment: { required: true, message: { pt: 'Depurada puramente pelos rins. Reduzir dose em DRC aguda ou crônica.', es: 'Depurada puramente por los riñones. Reducir dosis en ERC aguda o crónica.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Visão turva e diplopia', 'Tontura e Cefaleia', 'Taquicardia paradoxal'], es: ['Visión borrosa y diplopía', 'Mareo y Cefalea', 'Taquicardia paradójica'] },
+      dangerousAdverseEffects: { pt: ['Laringoespasmo e rigidez muscular', 'Parada Cardíaca (se injetado em < 5 minutos)'], es: ['Laringoespasmo y rigidez muscular', 'Paro Cardíaco (si inyectado en < 5 minutos)'] },
+      contraindications: {
+        absolute: { pt: ['Intoxicação por Carbamatos (Aldicarb/Chumbinho) sem evidência de organofosforado. Nos carbamatos a enzima se solta sozinha e a pralidoxima PODE PIORAR a intoxicação aumentando a toxicidade da droga.'], es: ['Intoxicación por Carbamatos (Chumbinho) sin evidencia de organofosforado. En los carbamatos la enzima se suelta sola y la pralidoxima PUEDE EMPEORAR la intoxicación.'] },
+        relative: { pt: ['Miastenia Gravis'], es: ['Miastenia Gravis'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'REGRA CADEADO: NUNCA inicie Pralidoxima antes de "atropinizar" completamente o paciente (secar os pulmões com Atropina IV massiva). Se a pralidoxima for dada primeiro, a ativação colinérgica agravará a asfixia em segundos.', es: 'REGLA CANDADO: NUNCA inicie Pralidoxima antes de "atropinizar" completamente al paciente (secar los pulmones con Atropina IV masiva). Si la pralidoxima se da primero, la activación colinérgica agravará la asfixia en segundos.' }
+      }
+    },
+
+/* ── DEFEROXAMINA ───────────────────────────────────────────────────── */
+    "deferoxamina": {
+      name: { pt: 'Deferoxamina', es: 'Deferoxamina' },
+      category: 'emergencia',
+      class: { pt: 'Antídoto / Agente Quelante de Ferro', es: 'Antídoto / Agente Quelante de Hierro' },
+      indications: {
+        pt: ['Intoxicação aguda por suplementos de Ferro (pediatria e tentamen)', 'Sobrecarga crônica de ferro (Hemocromatose secundária a transfusões múltiplas)'],
+        es: ['Intoxicación aguda por suplementos de Hierro (pediatría y suicidio)', 'Sobrecarga crónica de hierro (Hemocromatosis secundaria a transfusiones múltiples)']
+      },
+      commercialNames: { br: ['Desferal'], ar: ['Desferal'] },
+      presentation: { pt: ['Frascos-ampola liofilizados 500 mg'], es: ['Viales liofilizados 500 mg'] },
+      mechanism: {
+        pt: 'Molécula orgânica que atua como um "ímã" implacável pelo Ferro (Fe3+). Circula no sangue e agarra íons livres de ferro no plasma e nas células (sem arrancar o ferro do centro da hemoglobina vital). Ao encapsular o ferro, forma um complexo solúvel chamado FERRIOXAMINA, que é transportado pelo sangue e excretado na urina (deixando a urina com uma cor vermelho-vinho ou alaranjada muito característica, chamada de urina Vin Rosé).',
+        es: 'Molécula orgánica que actúa como un "imán" implacable por el Hierro (Fe3+). Circula en la sangre y atrapa iones libres de hierro en el plasma y en las células. Al encapsular el hierro, forma un complejo soluble llamado FERRIOXAMINA, que es transportado por la sangre y excretado en la orina (dejando la orina con un color rojo-vino muy característico).'
+      },
+      dose: {
+        adult: {
+          pt: 'Intoxicação Aguda: 15 mg/kg/HORA em infusão IV contínua. Dose máxima de 80 mg/kg em 24h.',
+          es: 'Intoxicación Aguda: 15 mg/kg/HORA en infusión IV continua. Dosis máxima de 80 mg/kg en 24h.'
+        },
+        pediatric: {
+          pt: '15 mg/kg/HORA IV. O tratamento é encerrado quando o ferro sérico cair e a urina perder a cor avermelhada.',
+          es: '15 mg/kg/HORA IV. El tratamiento se encierra cuando el hierro sérico caiga y la orina pierda el color rojizo.'
+        }
+      },
+      administration: { pt: ['Infusão IV contínua obrigatória.', 'Bolus são absolutamente contraindicados pelo risco de choque vasodilatador.'], es: ['Infusión IV continua obligatoria.', 'Bolos están absolutamente contraindicados por el riesgo de choque vasodilatador.'] },
+      renalAdjustment: { required: true, message: { pt: 'O complexo quelado de ferro é 100% depurado pelos rins. Em falência renal/anúricos, o complexo acumula e a toxicidade do ferro retorna. Terapia de substituição renal pode ser necessária.', es: 'El complejo quelado de hierro es 100% depurado por los riñones. En falla renal/anúricos, el complejo se acumula y la toxicidad vuelve. Terapia de sustitución renal puede ser necesaria.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      commonAdverseEffects: { pt: ['Urina Vermelho-Alaranjada (Sinal terapêutico esperado)', 'Dor e eritema no local da infusão', 'Reações alérgicas'], es: ['Orina Rojo-Anaranjada (Signo terapéutico esperado)', 'Dolor y eritema en el lugar de infusión', 'Reacciones alérgicas'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão profunda e choque (se taxa de infusão for rápida > 15 mg/kg/h)', 'Síndrome do Desconforto Respiratório Agudo - SDRA (se a infusão for mantida por mais de 24-48 horas)'], es: ['Hipotensión profunda y choque (si tasa de infusión es rápida > 15 mg/kg/h)', 'Síndrome de Dificultad Respiratoria Aguda - SDRA (si la infusión se mantiene por más de 24-48 horas)'] },
+      contraindications: {
+        absolute: { pt: ['Anúria severa (insuficiência renal terminal sem diálise)'], es: ['Anuria severa (insuficiencia renal terminal sin diálisis)'] },
+        relative: { pt: ['Gestação (Teratogênico em animais, porém em intoxicação grave a vida da mãe exige o tratamento)'], es: ['Gestación (Teratogénico en animales, pero en intoxicación grave la vida de la madre exige el tratamiento)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Risco Pulmonar Crítico: O uso prolongado (> 24h ininterruptas) de deferoxamina intravenosa induz toxidade pulmonar direta (Pulmão de Choque). O tratamento ideal de desintoxicação deve ser agressivo nas primeiras horas e cessado tão logo haja melhora metabólica.', es: 'Riesgo Pulmonar Crítico: El uso prolongado (> 24h ininterrumpidas) de deferoxamina intravenosa induce toxicidad pulmonar directa (Pulmón de Choque). El tratamiento ideal de desintoxicación debe ser agresivo en las primeras horas y cesado tan pronto haya mejora metabólica.' }
+      }
+    }
+
+  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 334 Lote 1+2+3+4+5+6 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides + Toxicologia/Antídotos) */
 
 })();
