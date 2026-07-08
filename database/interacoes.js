@@ -18792,6 +18792,93 @@ const INTERACOES_DB = {
         es: "Asociación fomentada en la Intubación de Secuencia Rápida."
       }
     }
+  },  // comma added; BNM blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Bloqueadores Neuromusculares (BNMs)
+   Rocurônio, Succinilcolina, Cisatracúrio, Atracúrio, Pancurônio
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── INTERAÇÕES DE CLASSE (Todos os BNMs ADESPOLARIZANTES) ──
+     (Rocurônio, Cisatracúrio, Atracúrio, Pancurônio) */
+
+  "$classe_bnm_adespolarizantes": {
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Antibióticos aminoglicosídeos (Amicacina, Gentamicina) e Clindamicina bloqueiam fisiologicamente os canais de cálcio da membrana pré-sináptica nervosa. Isso diminui a liberação natural de acetilcolina. O sinergismo com o BNM aprofunda drasticamente e prolonga a paralisia muscular de forma imprevisível.",
+        es: "Antibióticos aminoglucósidos (Amikacina, Gentamicina) y Clindamicina bloquean fisiológicamente los canales de calcio de la membrana presináptica nerviosa. Esto disminuye la liberación natural de acetilcolina. El sinergismo con el BNM profundiza drásticamente y prolonga la parálisis muscular de forma impredecible."
+      },
+      conduta: {
+        pt: "Garantir monitorização com 'Train of Four' (TOF) em UTI. O tempo de extubação após a suspensão da bomba será substancialmente maior no paciente séptico em uso desses antibióticos.",
+        es: "Garantizar monitorización con 'Train of Four' (TOF) en UCI. El tiempo de extubación tras la suspensión de la bomba será sustancialmente mayor en el paciente séptico en uso de estos antibióticos."
+      }
+    },
+    "sulfato_de_magnesio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Magnésio (MgSO4) em doses altas (ex: pré-eclâmpsia ou crises asmáticas) age como um bloqueador dos canais de cálcio presinápticos e também deprime a excitabilidade muscular. A paralisia gerada pelo BNM será exponencialmente mais potente e refratária aos antídotos convencionais.",
+        es: "El Magnesio (MgSO4) en altas dosis (ej: preeclampsia o crisis asmáticas) actúa como un bloqueador de los canales de calcio presinápticos y también deprime la excitabilidad muscular. La parálisis generada por el BNM será exponencialmente más potente y refractaria a los antídotos convencionales."
+      },
+      conduta: {
+        pt: "Se for realizar anestesia em gestantes com Eclâmpsia (infundindo magnésio), as doses do bloqueador neuromuscular devem ser reduzidas à metade do habitual e a monitorização rigorosa.",
+        es: "Si se va a realizar anestesia en gestantes con Eclampsia (infundiendo magnesio), las dosis del bloqueador neuromuscular deben ser reducidas a la mitad de lo habitual y la monitorización rigurosa."
+      }
+    },
+    "$classe_corticosteroides": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A coadministração em UTI (infusão de Rocurônio/Cisatracúrio contínua + Metilprednisolona/Dexametasona em altas doses) causa Miopatia Aguda do Doente Crítico. Ocorre destruição irreversível dos filamentos de miosina, gerando tetraplegia flácida meses após o paciente se curar da doença basal.",
+        es: "La coadministración en UCI (infusión de Rocuronio/Cisatracurio continua + Metilprednisolona/Dexametasona en altas dosis) causa Miopatía Aguda del Enfermo Crítico. Ocurre destrucción irreversible de los filamentos de miosina, generando tetraplejía flácida meses después de que el paciente se cure de la enfermedad basal."
+      },
+      conduta: {
+        pt: "Restringir o bloqueio neuromuscular contínuo a < 48h sempre que possível e utilizar exames diários de férias de sedação/bloqueio (desligar a bomba).",
+        es: "Restringir el bloqueo neuromuscular continuo a < 48h siempre que sea posible y utilizar exámenes diarios de vacaciones de sedación/bloqueo (apagar la bomba)."
+      }
+    }
+  },
+
+  /* ── SUCCINILCOLINA ── */
+  "succinilcolina": {
+    "neostigmina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ERRO CLÁSSICO E LETAL (Interação de Fase 1). A Neostigmina inibe a enzima que degrada a acetilcolina. Se for dada para 'tentar reverter' o bloqueio da Succinilcolina na sua fase despolarizante (Fase 1), ela também inibirá a pseudocolinesterase, PROLONGANDO MASSIVAMENTE o bloqueio do paciente, aprofundando o coma e a apneia.",
+        es: "ERROR CLÁSICO Y LETAL (Interacción de Fase 1). La Neostigmina inhibe la enzima que degrada la acetilcolina. Si se da para 'intentar revertir' el bloqueo de la Succinilcolina en su fase despolarizante (Fase 1), también inhibirá la pseudocolinesterasa, PROLONGANDO MASIVAMENTE el bloqueo del paciente, profundizando el coma y la apnea."
+      },
+      conduta: {
+        pt: "A Succinilcolina NÃO TEM ANTÍDOTO NA FASE 1. NUNCA aplique neostigmina/sugamadex para reverter succinilcolina. Apenas manter a ventilação mecânica e aguardar a metabolização.",
+        es: "La Succinilcolina NO TIENE ANTÍDOTO EN LA FASE 1. NUNCA aplique neostigmina/sugamadex para revertir succinilcolina. Solo mantener la ventilación mecánica y esperar la metabolización."
+      }
+    },
+    "$classe_anestesicos_inalatorios": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "GATILHO DE HIPERTERMIA MALIGNA. O uso de Succinilcolina associado a um Gás Halogenado (Halotano, Isoflurano, Sevoflurano) em pacientes geneticamente suscetíveis dispara o receptor de rianodina no músculo. O cálcio intra-celular inunda o miócito, gerando rigidez extrema de masseter, febre que sobe 1 grau a cada 5 min (até >42ºC), rabdomiólise fulminante e parada cardíaca.",
+        es: "GATILLO DE HIPERTERMIA MALIGNA. El uso de Succinilcolina asociado a un Gas Halogenado (Halotano, Isoflurano, Sevoflurano) en pacientes genéticamente susceptibles dispara el receptor de rianodina en el músculo. El calcio intracelular inunda el miocito, generando rigidez extrema de masetero, fiebre que sube 1 grado cada 5 min (hasta >42ºC), rabdomiólisis fulminante y paro cardíaco."
+      },
+      conduta: {
+        pt: "Acionar protocolo de emergência imediato (suspender gatilhos, hiperventilar com O2 a 100%, esfriar o corpo e buscar DANTROLENO endovenoso urgente).",
+        es: "Activar protocolo de emergencia inmediato (suspender gatillos, hiperventilar con O2 al 100%, enfriar el cuerpo y buscar DANTROLENO endovenoso urgente)."
+      }
+    },
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Pacientes intoxicados com digoxina já estão propensos a arritmias e hipercalemia basal. O bolus de succinilcolina pode gerar um efluxo de potássio das células musculares súbito que atinge o limiar de assistolia ou fibrilação ventricular na emergência.",
+        es: "Pacientes intoxicados con digoxina ya están propensos a arritmias e hiperpotasemia basal. El bolo de succinilcolina puede generar un eflujo de potasio de las células musculares súbito que alcanza el umbral de asistolia o fibrilación ventricular en la emergencia."
+      },
+      conduta: {
+        pt: "Se o paciente usa digitálicos e precisa de Intubação Rápida, o ROCURÔNIO é uma escolha infinitamente mais segura.",
+        es: "Si el paciente usa digitálicos y necesita Intubación Rápida, el ROCURONIO es una elección infinitamente más segura."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
