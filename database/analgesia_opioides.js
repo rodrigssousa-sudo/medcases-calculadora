@@ -123,7 +123,87 @@
         bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'A "Tríplice Mortal do Rim": É erro gravíssimo prescrever um AINE (Cetoprofeno) para um paciente idoso que já toma em casa um IECA/BRA (Losartana/Enalapril) + Um Diurético (Furosemida/Hidroclorotiazida). Essa combinação tritura o rim, desligando todas as válvulas de pressão de filtração simultaneamente.', es: 'La "Triple Mortal del Riñón": Es error gravísimo prescribir un AINE (Ketoprofeno) para un anciano que ya toma en casa un IECA/ARAII (Losartán/Enalapril) + Un Diurético (Furosemida/Hidroclorotiazida). Esta combinación tritura el riñón, apagando todas las válvulas de presión de filtración.' }
       }
+    }, // vírgula adicionada; BUILD 362 Lote 2 blocos seguem
+
+/* ── IBUPROFENO ─────────────────────────────────────────────────────── */
+    "ibuprofeno": {
+      name: { pt: 'Ibuprofeno', es: 'Ibuprofeno' },
+      category: 'analgesia',
+      class: { pt: 'Anti-inflamatório Não Esteroidal (AINE)', es: 'Antiinflamatorio No Esteroideo (AINE)' },
+      indications: {
+        pt: ['Dor e Febre leve a moderada (Especialmente pediatria e ortopedia)', 'Fechamento do canal arterial pérvio em neonatos', 'Dismenorreia primária'],
+        es: ['Dolor y Fiebre leve a moderada (Especialmente pediatría y ortopedia)', 'Cierre del conducto arterioso persistente en neonatos', 'Dismenorrea primaria']
+      },
+      commercialNames: { br: ['Alivium', 'Advil', 'Motrin'], ar: ['Ibuprofeno', 'Actron'] },
+      presentation: { pt: ['Comprimidos/Cápsulas 200 mg, 400 mg, 600 mg', 'Suspensão oral 50 mg/mL, 100 mg/mL'], es: ['Comprimidos/Cápsulas 200 mg, 400 mg, 600 mg', 'Suspensión oral 50 mg/mL, 100 mg/mL'] },
+      mechanism: {
+        pt: 'Bloqueador reversível das enzimas COX-1 e COX-2. Impede a conversão do ácido araquidônico em prostaglandinas, substâncias que geram dor, dilatam vasos na inflamação e regulam a febre no cérebro. É o AINE com o melhor perfil de segurança gastrointestinal e renal (embora os riscos existam), sendo amplamente prescrito.',
+        es: 'Bloqueador reversible de las enzimas COX-1 y COX-2. Impide la conversión del ácido araquidónico en prostaglandinas, sustancias que generan dolor, dilatan vasos en la inflamación y regulan la fiebre en el cerebro. Es el AINE con el mejor perfil de seguridad gastrointestinal y renal.'
+      },
+      dose: {
+        adult: {
+          pt: '400 a 600 mg VO a cada 6 ou 8 horas. Dose máxima diária: 3.200 mg.',
+          es: '400 a 600 mg VO cada 6 u 8 horas. Dosis máxima diaria: 3.200 mg.'
+        },
+        pediatric: {
+          pt: '5 a 10 mg/kg/dose a cada 6 ou 8 horas. (Excelente antitérmico para > 6 meses).',
+          es: '5 a 10 mg/kg/dosis cada 6 u 8 horas. (Excelente antitérmico para > 6 meses).'
+        }
+      },
+      administration: { pt: ['Tomar com alimentos para minimizar a irritação gástrica direta.'], es: ['Tomar con alimentos para minimizar la irritación gástrica directa.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar em ClCr < 30 mL/min e em pacientes com insuficiência cardíaca congestiva severa.', es: 'Evitar en ClCr < 30 mL/min y en pacientes con insuficiencia cardíaca congestiva severa.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Seguro em uso de curto prazo.', es: 'Seguro en uso de corto plazo.' } },
+      commonAdverseEffects: { pt: ['Azia (Pirose) e dor de estômago', 'Zumbido leve'], es: ['Acidez y dolor de estómago', 'Zumbido leve'] },
+      dangerousAdverseEffects: { pt: ['Úlcera gástrica perfurada / Hemorragia', 'Insuficiência Renal Aguda', 'Aumento de risco trombótico cardiovascular (se uso em doses altíssimas crônicas)'], es: ['Úlcera gástrica perforada / Hemorragia', 'Insuficiencia Renal Aguda', 'Aumento de riesgo trombótico cardiovascular (si uso en dosis altísimas crónicas)'] },
+      contraindications: {
+        absolute: { pt: ['Alergia a AAS (Risco de crise de asma fatal cruzada)', 'Terceiro trimestre de gravidez (Fecha prematuramente o coração do feto)'], es: ['Alergia a AAS (Riesgo de crisis de asma fatal cruzada)', 'Tercer trimestre de embarazo (Cierra prematuramente el corazón del feto)'] },
+        relative: { pt: ['Idosos desidratados'], es: ['Ancianos deshidratados'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Atenção Pediátrica: Ao prescrever Ibuprofeno gotas, instrua claramente os pais. As concentrações variam (50 mg/mL ou 100 mg/mL). Errar a gota significa dar o dobro ou metade da dose para o bebê.', es: 'Atención Pediátrica: Al prescribir Ibuprofeno gotas, instruya claramente a los padres. Las concentraciones varían (50 mg/mL o 100 mg/mL). Equivocarse en la gota significa dar el doble o mitad de la dosis al bebé.' }
+      }
+    },
+
+/* ── CETOROLACO (TORAGESIC) ─────────────────────────────────────────── */
+    "cetorolaco": {
+      name: { pt: 'Cetorolaco (Trometamol Cetorolaco)', es: 'Ketorolaco' },
+      category: 'analgesia',
+      class: { pt: 'Anti-inflamatório Não Esteroidal (Potência Analgésica Elevada)', es: 'Antiinflamatorio No Esteroideo (Potencia Analgésica Elevada)' },
+      indications: {
+        pt: ['Dor aguda de moderada a severa (Cólicas renais puras, traumas, pós-operatório cirúrgico)', 'Poupador agressivo de opioides'],
+        es: ['Dolor agudo de moderado a severo (Cólicos renales puros, traumas, posoperatorio quirúrgico)', 'Ahorrador agresivo de opioides']
+      },
+      commercialNames: { br: ['Toragesic'], ar: ['Sinalgia', 'Dolten'] },
+      presentation: { pt: ['Ampolas IV/IM 30 mg/mL', 'Comprimidos Sublinguais 10 mg'], es: ['Ampollas IV/IM 30 mg/mL', 'Comprimidos Sublinguales 10 mg'] },
+      mechanism: {
+        pt: 'AINE extremamente agressivo. Bloqueia COX-1 e COX-2. Seu diferencial é ter um poder analgésico sistêmico equivalente ao de 10 mg de Morfina injetável, mas SEM causar depressão respiratória ou dependência. O preço desse poder é uma inibição violenta da função plaquetária e risco altíssimo de hemorragia gástrica.',
+        es: 'AINE extremadamente agresivo. Bloquea COX-1 y COX-2. Su diferencial es tener un poder analgésico sistémico equivalente al de 10 mg de Morfina inyectable, pero SIN causar depresión respiratoria o dependencia. El precio de este poder es una inhibición violenta de la función plaquetaria y altísimo riesgo de hemorragia.'
+      },
+      dose: {
+        adult: {
+          pt: 'IV ou IM: 30 mg a cada 8 horas. VO/Sublingual: 10 a 20 mg a cada 6 ou 8 horas.',
+          es: 'IV o IM: 30 mg cada 8 horas. VO/Sublingual: 10 a 20 mg cada 6 u 8 horas.'
+        },
+        pediatric: {
+          pt: '0,5 mg/kg IV ou IM em dose única ou a cada 6h (Máx 15mg/dose).',
+          es: '0,5 mg/kg IV o IM en dosis única o cada 6h (Máx 15mg/dosis).'
+        }
+      },
+      administration: { pt: ['Bolus IV direto (puro ou diluído) lentamente em 15 segundos.', 'O Comprimido Sublingual age quase na mesma velocidade que a injeção.'], es: ['Bolo IV directo (puro o diluido) lentamente en 15 segundos.', 'El Comprimido Sublingual actúa casi a la misma velocidad que la inyección.'] },
+      renalAdjustment: { required: true, message: { pt: 'Altamente nefrotóxico em doses plenas crônicas. Em idosos (> 65 anos) ou peso < 50 kg ou DRC leve: REDUZIR A DOSE para 15 mg IV a cada 8h. ClCr < 30: CONTRAINDICADO.', es: 'Altamente nefrotóxico en dosis plenas crónicas. En ancianos (> 65 años) o peso < 50 kg o ERC leve: REDUCIR LA DOSIS a 15 mg IV cada 8h. ClCr < 30: CONTRAINDICADO.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste agudo.', es: 'Sin necesidad de ajuste agudo.' } },
+      commonAdverseEffects: { pt: ['Dor e ardor no local da injeção', 'Dispepsia e azia'], es: ['Dolor y ardor en el sitio de inyección', 'Dispepsia y acidez'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia digestiva catastrófica', 'Insuficiência Renal Aguda (se paciente desidratado)', 'Sangramento do sítio cirúrgico'], es: ['Hemorragia digestiva catastrófica', 'Insuficiencia Renal Aguda (si paciente deshidratado)', 'Sangrado del sitio quirúrgico'] },
+      contraindications: {
+        absolute: { pt: ['REGRA DOS 5 DIAS: O uso total de cetorolaco (injetável + oral combinados) NUNCA PODE ULTRAPASSAR 5 DIAS corridos. Após o 5º dia, a taxa de hemorragia fatal dispara.', 'Sangramento ativo, cirurgias de alto risco de sangramento'], es: ['REGLA DE LOS 5 DÍAS: El uso total de ketorolaco (inyectable + oral) NUNCA PUEDE SUPERAR 5 DÍAS. Tras el 5º día, la tasa de hemorragia fatal se dispara.', 'Sangrado activo, cirugías de alto riesgo'] },
+        relative: { pt: ['Uso associado de varfarina ou heparina'], es: ['Uso asociado de warfarina o heparina'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Maravilhoso no Pronto-Socorro para tirar com a mão a dor da cólica renal, substituindo opioides. Mas nunca deixe o paciente ir para casa com uma caixa de Toragesic sem frisar que ele deve jogar a caixa fora após 5 dias de uso contínuo.', es: 'Maravilloso en Urgencias para quitar el dolor del cólico renal, sustituyendo opioides. Pero nunca deje que el paciente vaya a casa con una caja de Toragesic sin enfatizar que debe tirarla tras 5 días.' }
+      }
     }
 
-  }); /* fim Object.assign ANALGESIA_OPIOIDES_DRUGS_DB — BUILD 356 Lote 1 (Analgésicos Básicos: Dipirona/Paracetamol/Cetoprofeno) */
+  }); /* fim Object.assign ANALGESIA_OPIOIDES_DRUGS_DB — BUILD 356 Lote 1 (Analgésicos Básicos: Dipirona/Paracetamol/Cetoprofeno) + BUILD 362 Lote 2 (Ibuprofeno + Cetorolaco) */
 })();

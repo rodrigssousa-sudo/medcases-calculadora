@@ -212,8 +212,48 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'O Haldol salva a vida das equipes no combate a agressões na emergência, mas MATA por morte súbita cardíaca se injetado na veia (IV) em pacientes com o potássio/magnésio baixo ou que usam drogas que alongam o QT (amiodarona, fluconazol). Tenha sempre a Biperideno/Fenergan para resgatar o paciente que contorcer o pescoço (Distonia).', es: 'El Haldol salva la vida de los equipos en el combate a agresiones en emergencia, pero MATA por muerte súbita cardíaca si inyectado en la vena (IV) en pacientes con potasio/magnesio bajo o que usan drogas que alargan el QT (amiodarona, fluconazol). Tenga siempre Biperideno/Fenergan para rescatar al paciente que contuerza el cuello (Distonía).' }
       }
+    }, // vírgula adicionada; BUILD 362 Lote 2 blocos seguem
+
+/* ── QUETIAPINA ─────────────────────────────────────────────────────── */
+    "quetiapina": {
+      name: { pt: 'Quetiapina', es: 'Quetiapina' },
+      category: 'sedacao_neurologia',
+      class: { pt: 'Antipsicótico Atípico', es: 'Antipsicótico Atípico' },
+      indications: {
+        pt: ['Controle de Delirium Hipoativo e Hiperativo na UTI (facilita desmame ventilatório)', 'Esquizofrenia e Transtorno Bipolar', 'Insônia refratária no paciente crítico (uso off-label comum)'],
+        es: ['Control de Delirium Hipoactivo e Hiperactivo en la UCI (facilita destete ventilatorio)', 'Esquizofrenia y Trastorno Bipolar', 'Insomnio refractario en el paciente crítico (uso off-label común)']
+      },
+      commercialNames: { br: ['Seroquel'], ar: ['Seroquel'] },
+      presentation: { pt: ['Comprimidos 25 mg, 100 mg, 200 mg (Ação rápida e Prolongada - XR)'], es: ['Comprimidos 25 mg, 100 mg, 200 mg (Acción rápida y Prolongada - XR)'] },
+      mechanism: {
+        pt: 'Antagonista de receptores de Serotonina (5-HT2) e Dopamina (D2), além de forte bloqueio Histamínico (H1). Diferente do Haloperidol que se liga ao D2 como super-cola (causando distonia e travando o paciente), a Quetiapina se liga e solta rapidamente (efeito "kiss and run"). Isso acalma o cérebro em Delirium SEM causar Parkinsonismo medicamentoso.',
+        es: 'Antagonista de receptores de Serotonina (5-HT2) y Dopamina (D2), además de fuerte bloqueo Histamínico (H1). A diferencia del Haloperidol que se une al D2 como pegamento (causando distonía), la Quetiapina se une y suelta rápidamente. Esto calma el cerebro en Delirium SIN causar Parkinsonismo medicamentoso.'
+      },
+      dose: {
+        adult: {
+          pt: 'Delirium na UTI: 25 a 50 mg VO a cada 12 horas (Titulando rápido se necessário até 200mg/dia). Psiquiatria: 300 a 800 mg/dia.',
+          es: 'Delirium en UCI: 25 a 50 mg VO cada 12 horas (Titulando rápido si necesario hasta 200mg/día). Psiquiatría: 300 a 800 mg/día.'
+        },
+        pediatric: {
+          pt: 'Uso não rotineiro em UTI pediátrica.',
+          es: 'Uso no rutinario en UCI pediátrica.'
+        }
+      },
+      administration: { pt: ['Exclusivamente Oral ou Sonda Nasoentérica (os comprimidos simples podem ser triturados para a sonda, os XR não).'], es: ['Exclusivamente Oral o Sonda Nasoentérica (los comprimidos simples pueden ser triturados para la sonda, los XR no).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em falência renal.', es: 'Sin necesidad de ajuste en falla renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Inicia com dose reduzida (25 mg/dia) em cirróticos graves.', es: 'Inicia con dosis reducida (25 mg/día) en cirróticos graves.' } },
+      commonAdverseEffects: { pt: ['Sedação profunda e sonolência diurna', 'Hipotensão postural (devido a bloqueio alfa-1)', 'Ganho de peso rápido (uso crônico)'], es: ['Sedación profunda y somnolencia diurna', 'Hipotensión postural (debido a bloqueo alfa-1)', 'Aumento de peso rápido (uso crónico)'] },
+      dangerousAdverseEffects: { pt: ['Prolongamento do intervalo QT', 'Síndrome Neuroléptica Maligna (muito raro em relação ao Haldol)'], es: ['Prolongación del intervalo QT', 'Síndrome Neuroléptico Maligno (muy raro en relación al Haldol)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida'], es: ['Hipersensibilidad conocida'] },
+        relative: { pt: ['Pacientes com demência relacionada à idade avançada (aumenta o risco de morte súbita, alerta da FDA, embora na UTI o uso agudo seja salvo pelo custo-benefício)'], es: ['Pacientes con demencia relacionada a la edad avanzada (aumenta el riesgo de muerte súbita, alerta de la FDA, aunque en UCI el uso agudo es salvado por el costo-beneficio)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Na transição de pacientes saindo da ventilação mecânica que estão agressivos, a Quetiapina é superior ao Haldol porque o Haldol prolonga o tempo no ventilador e embota o paciente. A Quetiapina ajuda a regular o ciclo sono-vigília e tem baixíssimo risco extrapiramidal.', es: 'En la transición de pacientes saliendo de la ventilación mecánica que están agresivos, la Quetiapina es superior al Haldol porque el Haldol prolonga el tiempo en el ventilador y embota al paciente. La Quetiapina ayuda a regular el ciclo sueño-vigilia.' }
+      }
     }
 
-  }); /* fim Object.assign SEDACAO_DRUGS_DB — BUILD 348 Lote 1 (Propofol + Midazolam + Dexmedetomidina + Diazepam + Haloperidol) */
+  }); /* fim Object.assign SEDACAO_DRUGS_DB — BUILD 348 Lote 1 (Propofol + Midazolam + Dexmedetomidina + Diazepam + Haloperidol) + BUILD 362 Lote 2 (Quetiapina) */
 
 })();

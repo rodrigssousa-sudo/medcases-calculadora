@@ -1452,8 +1452,88 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
         warning: { pt: 'Para anafilaxia, a Hidrocortisona age de forma EXTREMAMENTE LENTA nas vias moleculares (demora horas para o pico anti-inflamatório). Ela NÃO serve para resgatar o paciente sufocando no minuto zero (isso é papel da Adrenalina). A hidro previne a "recaída" da alergia 12 horas depois.', es: 'Para anafilaxia, la Hidrocortisona actúa de forma EXTREMADAMENTE LENTA en las vías moleculares (tarda horas para el pico antiinflamatorio). NO sirve para rescatar al paciente asfixiándose en el minuto cero (ese es papel de la Adrenalina). La hidro previene la "recaída" de la alergia 12 horas después.' }
       }
+    }, // vírgula adicionada; BUILD 362 Lote 10 blocos seguem
+
+/* ── METILPREDNISOLONA ──────────────────────────────────────────────── */
+    "metilprednisolona": {
+      name: { pt: 'Metilprednisolona', es: 'Metilprednisolona' },
+      category: 'emergencia',
+      class: { pt: 'Corticosteroide Sistêmico (Pulsoterapia)', es: 'Corticosteroide Sistémico (Pulsoterapia)' },
+      indications: {
+        pt: ['Pulsoterapia para doenças autoimunes graves (Lúpus com nefrite, Esclerose Múltipla)', 'Trauma Raquimedular agudo (uso controverso, mas ainda protocolo em alguns centros)', 'Asma severa e DPOC refratários'],
+        es: ['Pulsoterapia para enfermedades autoinmunes graves (Lupus con nefritis, Esclerosis Múltiple)', 'Trauma Raquimedular agudo (uso controvertido, pero aún protocolo en algunos centros)', 'Asma severa y EPOC refractarios']
+      },
+      commercialNames: { br: ['Solu-Medrol'], ar: ['Solu-Medrol'] },
+      presentation: { pt: ['Frasco-ampola IV liofilizado 40 mg, 125 mg, 500 mg, 1 g'], es: ['Vial IV liofilizado 40 mg, 125 mg, 500 mg, 1 g'] },
+      mechanism: {
+        pt: 'Potente glicocorticoide sintético. Possui ação anti-inflamatória e imunossupressora 5 vezes maior que o cortisol natural, com muito pouca retenção de sódio e água. Em doses maciças (Pulsoterapia), ele não apenas desliga a transcrição de genes inflamatórios, mas altera fisicamente a membrana das células imunes, "congelando" a destruição autoimune em horas.',
+        es: 'Potente glucocorticoide sintético. Posee acción antiinflamatoria e inmunosupresora 5 veces mayor que el cortisol natural, con muy poca retención de sodio y agua. En dosis masivas (Pulsoterapia), no solo apaga la transcripción de genes inflamatorios, sino que altera físicamente la membrana de las células inmunes, "congelando" la destrucción autoinmune en horas.'
+      },
+      dose: {
+        adult: {
+          pt: 'Exacerbação Pulmonar: 40 a 60 mg IV a cada 6h ou 12h. Pulsoterapia Autoimune: 1 Grama (1.000 mg) IV 1x/dia por 3 a 5 dias.',
+          es: 'Exacerbación Pulmonar: 40 a 60 mg IV cada 6h o 12h. Pulsoterapia Autoinmune: 1 Gramo (1.000 mg) IV 1 vez/día por 3 a 5 días.'
+        },
+        pediatric: {
+          pt: 'Asma severa: 1 a 2 mg/kg/dia IV. Pulsoterapia: 30 mg/kg IV 1x/dia (Máx 1g).',
+          es: 'Asma severa: 1 a 2 mg/kg/día IV. Pulsoterapia: 30 mg/kg IV 1 vez/día (Máx 1g).'
+        }
+      },
+      administration: { pt: ['Pulsoterapia (Doses > 250mg) DEVE ser infundida LENTAMENTE em 1 a 2 horas. Bolus rápido causa arritmias fatais e colapso cardiovascular.'], es: ['Pulsoterapia (Dosis > 250mg) DEBE ser infundida LENTAMENTE en 1 a 2 horas. Bolo rápido causa arritmias fatales y colapso cardiovascular.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      commonAdverseEffects: { pt: ['Euforia, Insônia e Agitação', 'Sabor metálico forte na boca durante a infusão', 'Hiperglicemia aguda'], es: ['Euforia, Insomnio y Agitación', 'Sabor metálico fuerte en la boca durante la infusión', 'Hiperglucemia aguda'] },
+      dangerousAdverseEffects: { pt: ['Parada Cardíaca (se infusão rápida na pulsoterapia)', 'Infecções oportunistas fulminantes', 'Hemorragia digestiva'], es: ['Paro Cardíaco (si infusión rápida en la pulsoterapia)', 'Infecciones oportunistas fulminantes', 'Hemorragia digestiva'] },
+      contraindications: {
+        absolute: { pt: ['Infecção sistêmica ativa não tratada (exceto se a indicação for o próprio choque)'], es: ['Infección sistémica activa no tratada (excepto si la indicación es el propio choque)'] },
+        relative: { pt: ['Diabetes descompensada severa', 'Glaucoma'], es: ['Diabetes descompensada severa', 'Glaucoma'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O DESMAME (TAPER): Diferente do uso por 5 dias que pode ser cortado subitamente, se o paciente usar a medicação em doses médias/altas por mais de 14 dias, o Eixo Suprarrenal atrofia. A droga deve ser reduzida gradativamente (desmame) ao longo de semanas, senão o paciente terá uma Crise Adrenal letal.', es: 'EL DESTETE (TAPER): A diferencia del uso por 5 días que puede cortarse súbitamente, si el paciente usa la medicación en dosis altas por más de 14 días, el Eje Suprarrenal se atrofia. La droga debe reducirse gradualmente a lo largo de semanas, de lo contrario tendrá Crisis Adrenal letal.' }
+      }
+    },
+
+/* ── PROMETAZINA (FENERGAN) ─────────────────────────────────────────── */
+    "prometazina": {
+      name: { pt: 'Prometazina (Fenergan)', es: 'Prometazina' },
+      category: 'emergencia',
+      class: { pt: 'Anti-histamínico H1 / Fenotiazina (Antiemético e Sedativo)', es: 'Antihistamínico H1 / Fenotiazina (Antiemético y Sedante)' },
+      indications: {
+        pt: ['Reações alérgicas severas (como coadjuvante na anafilaxia)', 'Tratamento imediato de DISTONIA AGUDA (Reações extrapiramidais causadas por Plasil ou Haldol)', 'Vômitos e Enjoos de movimento (Cinose)'],
+        es: ['Reacciones alérgicas severas (como coadyuvante en la anafilaxia)', 'Tratamiento inmediato de DISTONÍA AGUDA (Reacciones extrapiramidales causadas por Plasil o Haldol)', 'Vómitos y Mareos de movimiento']
+      },
+      commercialNames: { br: ['Fenergan'], ar: ['Fenergan'] },
+      presentation: { pt: ['Ampolas IM (exclusivo) 25 mg/mL (2 mL = 50 mg)', 'Comprimidos 25 mg'], es: ['Ampollas IM (exclusivo) 25 mg/mL (2 mL = 50 mg)', 'Comprimidos 25 mg'] },
+      mechanism: {
+        pt: 'Bloqueia competitivamente os receptores de Histamina (H1), impedindo o inchaço, coceira e vasodilatação da alergia. Também cruza fortemente a barreira hematoencefálica com poderosa ação Anticolinérgica (que reequilibra a via do movimento travada pelos antipsicóticos, curando a distonia). Gera forte bloqueio dopaminérgico leve e sedação alfa-adrenérgica profunda.',
+        es: 'Bloquea competitivamente los receptores de Histamina (H1), impidiendo hinchazón y picor de la alergia. También cruza fuertemente la barrera hematoencefálica con poderosa acción Anticolinérgica (que reequilibra la vía del movimiento trabada por los antipsicóticos, curando la distonía). Genera sedación profunda.'
+      },
+      dose: {
+        adult: {
+          pt: 'Alergia/Distonia: 25 a 50 mg INTRAMUSCULAR profundo. Dose oral: 25 mg a cada 8h ou 12h.',
+          es: 'Alergia/Distonía: 25 a 50 mg INTRAMUSCULAR profundo. Dosis oral: 25 mg cada 8h o 12h.'
+        },
+        pediatric: {
+          pt: 'Contraindicado em < 2 anos (risco de parada respiratória fatal). Acima de 2 anos: 0,1 mg/kg/dose IM.',
+          es: 'Contraindicado en < 2 años (riesgo de paro respiratorio fatal). Por encima de 2 años: 0,1 mg/kg/dosis IM.'
+        }
+      },
+      administration: { pt: ['A injeção é ESTRITAMENTE INTRAMUSCULAR (profunda no glúteo).', 'NUNCA administrar via Subcutânea ou Intra-Arterial (Gera gangrena imediata do membro e amputação). A via IV é fortemente desaconselhada pela FDA pelos danos teciduais severos.'], es: ['La inyección es ESTRICTAMENTE INTRAMUSCULAR (profunda en el glúteo).', 'NUNCA administrar vía Subcutánea o Intraarterial (Genera gangrena inmediata del miembro y amputación). La vía IV está fuertemente desaconsejada por la FDA.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolismo hepático intenso, usar menores doses na cirrose grave.', es: 'Metabolismo hepático intenso, usar menores dosis en la cirrosis grave.' } },
+      commonAdverseEffects: { pt: ['Sedação e Sonolência extremas (o paciente "capota" no PS)', 'Boca seca e visão borrada', 'Hipotensão'], es: ['Sedación y Somnolencia extremas (el paciente se desploma en Urgencias)', 'Boca seca y visión borrosa', 'Hipotensión'] },
+      dangerousAdverseEffects: { pt: ['Necrose de tecidos por injeção intravascular errada', 'Depressão respiratória severa em crianças', 'Síndrome Neuroléptica Maligna'], es: ['Necrosis de tejidos por inyección intravascular errónea', 'Depresión respiratoria severa en niños', 'Síndrome Neuroléptico Maligno'] },
+      contraindications: {
+        absolute: { pt: ['Crianças menores de 2 anos de idade (Risco de apneia súbita infantil)', 'Injeção subcutânea'], es: ['Niños menores de 2 años de edad (Riesgo de apnea súbita infantil)', 'Inyección subcutánea'] },
+        relative: { pt: ['Glaucoma de ângulo fechado', 'Retenção urinária severa (Hiperplasia Prostática)'], es: ['Glaucoma de ángulo cerrado', 'Retención urinaria severa (Hiperplasia Prostática)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'RESGATE ABSOLUTO: Se você prescrever Plasil (Metoclopramida) ou Haldol na veia, e o paciente repentinamente contorcer a mandíbula, virar os olhos para cima e não conseguir falar (Crise Oculógira / Distonia), injete Fenergan IM. A crise cede magicamente em 5 a 10 minutos.', es: 'RESCATE ABSOLUTO: Si prescribe Plasil o Haldol en la vena, y el paciente repentinamente contuerce la mandíbula, gira los ojos hacia arriba y no puede hablar (Crisis Oculógira / Distonía), inyecte Fenergan IM. La crisis cede mágicamente en 5 a 10 minutos.' }
+      }
     }
 
-  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 336 Lote 1+2+3+4+5+6+7 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides + Toxicologia/Antídotos + Azul_Metileno/Carvão) + BUILD 346 Lote 8 (Vasopressores/Aminas Vasoativas) + BUILD 354 Lote 9 (Corticosteroides: Dexametasona/Hidrocortisona) */
+  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 336 Lote 1+2+3+4+5+6+7 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides + Toxicologia/Antídotos + Azul_Metileno/Carvão) + BUILD 346 Lote 8 (Vasopressores/Aminas Vasoativas) + BUILD 354 Lote 9 (Corticosteroides: Dexametasona/Hidrocortisona) + BUILD 362 Lote 10 (Metilprednisolona + Prometazina) */
 
 })();

@@ -16953,6 +16953,18 @@ const INTERACOES_DB = {
         pt: "Contraindicado em pacientes oncológicos. Reumatologia: extrema cautela, idealmente evitar.",
         es: "Contraindicado en pacientes oncológicos. Reumatología: extrema precaución, idealmente evitar."
       }
+    },
+    "$classe_ieca_bra": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ISQUEMIA RENAL IMEDIATA. O Cetorolaco oblitera as prostaglandinas da arteríola de entrada do rim (vasoconstrição aferente). Os IECAs (Enalapril, Captopril) e BRAs (Losartana) abrem a arteríola de saída (vasodilatação eferente). Em 2 a 3 dias de injeções consecutivas, a pressão interna de filtração do rim despenca a zero, precipitando Necrose Tubular Aguda e Insuficiência Renal que pode exigir diálise de urgência.",
+        es: "ISQUEMIA RENAL INMEDIATA. El Ketorolaco oblitera las prostaglandinas de la arteriola de entrada del riñón (vasoconstricción aferente). Los IECAs (Enalapril, Captopril) y ARAIIs (Losartán) abren la arteriola de salida (vasodilatación eferente). En 2 a 3 días de inyecciones consecutivas, la presión interna de filtración del riñón se desploma a cero, precipitando Necrosis Tubular Aguda e Insuficiencia Renal que puede exigir diálisis."
+      },
+      conduta: {
+        pt: "Nunca exceder 5 dias de uso total. Em pacientes nefropatas ou idosos usuários de anti-hipertensivos (especialmente IECAs/BRAs), o Cetorolaco injetável é extremamente desaconselhado. Considerar Morfina ou Tramadol IV como alternativa analgésica.",
+        es: "Nunca exceder 5 días de uso total. En pacientes nefrópatas o ancianos usuarios de antihipertensivos (especialmente IECAs/ARAIIs), el Ketorolaco inyectable es extremadamente desaconsejado. Considerar Morfina o Tramadol IV como alternativa analgésica."
+      }
     }
   },
 
@@ -20891,9 +20903,90 @@ const INTERACOES_DB = {
         es: "Monitorización con monitor de bloqueo (TOF). El anestesiólogo debe estar consciente de que el paciente puede fallar la extubación o exigir dosis extras de Sugammadex/Neostigmina."
       }
     }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     QUETIAPINA
+     BUILD 362 (2026-07-08): quetiapina → amiodarona · $classe_hipotensores
+  ───────────────────────────────────────────────────────────── */
+  "quetiapina": {
+    "amiodarona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SOMA DE PROLONGAMENTO DO QT. A Quetiapina alonga o tempo de recarga elétrica do coração (Intervalo QTc). A Amiodarona faz o mesmo de forma profunda e persistente (meia-vida de semanas). O uso concomitante cria um ambiente perfeito para o surgimento da arritmia fatal Torsades de Pointes no paciente que internou na UTI com delirium + arritmia.",
+        es: "SUMA DE PROLONGACIÓN DEL QT. La Quetiapina alarga el tiempo de recarga eléctrica del corazón (Intervalo QTc). La Amiodarona hace lo mismo de forma profunda y persistente (vida media de semanas). El uso concomitante crea un ambiente perfecto para el surgimiento de la arritmia fatal Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Evitar a associação se o QTc basal for > 450 ms. Se necessário controlar a agitação de um paciente já usando amiodarona, preferir Dexmedetomidina (Precedex) ou Propofol. Monitorar ECG contínuo se uso inevitável.",
+        es: "Evitar la asociación si el QTc basal es > 450 ms. Si es necesario controlar la agitación de un paciente ya usando amiodarona, preferir Dexmedetomidina (Precedex) o Propofol. Monitorar ECG continuo si uso inevitable."
+      }
+    },
+    "$classe_hipotensores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A Quetiapina bloqueia muito bem os receptores Alfa-1 nos vasos sanguíneos, inibindo a vasoconstrição natural do corpo ao levantar-se (causando hipotensão ortostática aguda). Se o idoso usar remédios para pressão (Losartana, Anlodipino, Enalapril), o risco de síncope (desmaio), queda e fratura de fêmur à noite é altíssimo.",
+        es: "La Quetiapina bloquea muy bien los receptores Alfa-1 en los vasos sanguíneos, inhibiendo la vasoconstricción natural del cuerpo al levantarse. Si el anciano usa remedios para la presión (Losartán, Amlodipino, Enalapril), el riesgo de síncope, caída y fractura de fémur por la noche es altísimo."
+      },
+      conduta: {
+        pt: "Orientar o paciente/enfermagem a levantar-se em etapas lentas na primeira semana de uso de Quetiapina. Monitorar pressão arterial na posição ortostática. Reduzir doses de anti-hipertensivos se necessário.",
+        es: "Orientar al paciente/enfermería a levantarse en etapas lentas en la primera semana de uso de Quetiapina. Monitorizar presión arterial en posición ortostática. Reducir dosis de antihipertensivos si necesario."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     PROMETAZINA
+     BUILD 362 (2026-07-08): prometazina → adrenalina · $classe_sedativos_gaba
+  ───────────────────────────────────────────────────────────── */
+  "prometazina": {
+    "adrenalina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "REVERSÃO VASOMOTORA DA EPINEFRINA (Efeito Paradóxico). A Prometazina possui forte atividade bloqueadora Alfa-1. Se um paciente chocado tomar Prometazina e depois receber Adrenalina para subir a pressão, o efeito Alfa da Adrenalina estará bloqueado. A adrenalina atuará apenas no Beta-2 (vasodilatação periférica), fazendo a pressão do paciente CAIR AINDA MAIS em vez de subir.",
+        es: "REVERSIÓN VASOMOTORA DE LA EPINEFRINA (Efecto Paradójico). La Prometazina posee fuerte actividad bloqueadora Alfa-1. Si un paciente en choque recibe Prometazina y luego Adrenalina para subir la presión, el efecto Alfa de la Adrenalina estará bloqueado. La adrenalina actuará solo en el Beta-2 (vasodilatación periférica), haciendo que la presión CAIGA AÚN MÁS."
+      },
+      conduta: {
+        pt: "Na anafilaxia severa com hipotensão (Choque anafilático), administrar a Adrenalina PRIMEIRO. Reservar a Prometazina apenas para controle de sintomas secundários (coceira/urticária) quando a pressão já estiver estabilizada. Se necessitar de vasopressor adicional, preferir Noradrenalina.",
+        es: "En la anafilaxia severa con hipotensión, administrar la Adrenalina PRIMERO. Reservar la Prometazina solo para el control de síntomas secundarios (picor/urticaria) cuando la presión ya esté estabilizada. Si necesita vasopresor adicional, preferir Noradrenalina."
+      }
+    },
+    "$classe_sedativos_gaba": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "COMA IATROGÊNICO. A Prometazina é um sedativo monstruoso do sistema nervoso central por via histaminérgica e anticolinérgica. Somada a Midazolam, Propofol, Morfina ou Álcool, o paciente entra em letargia profunda com depressão respiratória não intencional e risco real de parada respiratória na enfermaria.",
+        es: "COMA IATROGÉNICO. La Prometazina es un sedante monstruoso del sistema nervioso central por vía histaminérgica y anticolinérgica. Sumada a Midazolam, Propofol, Morfina o Alcohol, el paciente entra en letargo profundo con depresión respiratoria no intencional y riesgo real de paro respiratorio en sala."
+      },
+      conduta: {
+        pt: "O uso da Prometazina como antiemético ou calmante no pré/pós-operatório exige redução imediata da dose de opioides (em pelo menos 30 a 50%) para evitar que o paciente pare de respirar. Ter Naloxona (Narcan) disponível à beira-leito.",
+        es: "El uso de la Prometazina como antiemético o calmante en el pre/posoperatorio exige reducción inmediata de la dosis de opioides (en al menos 30 a 50%) para evitar que el paciente deje de respirar. Tener Naloxona (Narcan) disponible a la cabecera."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     $CLASSE_CORTICOSTEROIDES_PULSOTERAPIA
+     BUILD 362 (2026-07-08): metilprednisolona/corticosteroides → furosemida
+  ───────────────────────────────────────────────────────────── */
+  "$classe_corticosteroides_pulsoterapia": {
+    "furosemida": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "DEPLETAMENTO DE POTÁSSIO SEVERO. Altas doses de Metilprednisolona e Hidrocortisona possuem efeito mineralocorticoide residual que estimula a expulsão de potássio na urina (mecanismo aldosterona-like). A Furosemida já causa intensa hipocalemia naturalmente. Em ambiente de UTI, o potássio plasmático pode cair abaixo de 2,5 mEq/L, deflagrando fraqueza muscular respiratória e arritmias malignas.",
+        es: "DEPLETAMIENTO DE POTASIO SEVERO. Altas dosis de Metilprednisolona e Hidrocortisona poseen efecto mineralocorticoide residual que estimula la expulsión de potasio en la orina. La Furosemida ya causa intensa hipopotasemia naturalmente. En UCI, el potasio plasmático puede caer por debajo de 2,5 mEq/L, desencadenando arritmias malignas."
+      },
+      conduta: {
+        pt: "Monitorar eletrólitos de 12 em 12 horas durante a Pulsoterapia se o paciente for usuário de diuréticos de alça. Repor Cloreto de Potássio (KCl) agressivamente via endovenosa. Considerar suplementação de Magnésio concomitante.",
+        es: "Monitorizar electrolitos cada 12 horas durante la Pulsoterapia si el paciente es usuario de diuréticos de asa. Reponer Cloruro de Potasio (KCl) agresivamente vía endovenosa. Considerar suplementación de Magnesio concomitante."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 360 Lote 7 (Antibióticos Reserva/Direcionados: linezolida+rifampicina · polimixina_b+aminoglicosídeos · smx_tmp+hipercalemia · tigeciclina · clindamicina) */
+}; /* fim INTERACOES_DB — BUILD 362 Lote 8 (Analgésicos/Sedação Atípica/Alergia: cetorolaco+IECA·BRA · quetiapina · prometazina · corticosteroides_pulsoterapia) */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
