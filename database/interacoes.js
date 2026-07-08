@@ -19205,6 +19205,99 @@ const INTERACOES_DB = {
         es: "Reducir activamente la dosis de oxicodona en 50% si se inician terapias con potentes inhibidores del citocromo."
       }
     }
+  },  // comma added; BUILD 328 Lote 2 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Analgesia Opioide Avançada, Anestésicos e Trombolítico
+   Hidromorfona, Buprenorfina, Bupivacaína, Ropivacaína, Tenecteplase
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── HIDROMORFONA ── */
+  "hidromorfona": {
+    "$classe_benzodiazepinicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo mortal de Depressão do Sistema Nervoso Central. A Hidromorfona é profundamente potente e, associada a depressores como Diazepam, Midazolam ou Álcool, o risco de parada respiratória por depressão do drive bulbar é multiplicado exponencialmente.",
+        es: "Sinergismo mortal de Depresión del Sistema Nervioso Central. La Hidromorfona es profundamente potente y, asociada a depresores como Diazepam, Midazolam o Alcohol, el riesgo de paro respiratorio por depresión del drive bulbar se multiplica exponencialmente."
+      },
+      conduta: {
+        pt: "A FDA exige Boxed Warning. Reduzir doses de ambas as drogas, priorizar monitoramento de SpO2 contínuo, e preferir alternativas não-opioides ou não-benzodiazepínicas se possível.",
+        es: "La FDA exige Boxed Warning. Reducir dosis de ambas drogas, priorizar monitorización de SpO2 continua, y preferir alternativas no opioides o no benzodiazepínicas si es posible."
+      }
+    }
+  },
+
+  /* ── BUPRENORFINA ── */
+  "buprenorfina": {
+    "fentanil": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CRISE DE ABSTINÊNCIA PRECIPITADA E BLOQUEIO ANALGÉSICO. A Buprenorfina tem uma afinidade quase invencível pelo receptor Mu, mas atividade analgésica parcial. Se injetada em um paciente de UTI dependente ou recebendo infusão de Fentanil, ela empurrará o fentanil para fora do receptor, precipitando abstinência explosiva. Inversamente, se o paciente usa buprenorfina crônica, o Fentanil NÃO CONSEGUE se ligar aos receptores, resultando em falha total da anestesia para cirurgias.",
+        es: "CRISIS DE ABSTINENCIA PRECIPITADA Y BLOQUEO ANALGÉSICO. La Buprenorfina tiene una afinidad casi invencible por el receptor Mu, pero actividad analgésica parcial. Si se inyecta en un paciente de UCI dependiente o recibiendo infusión de Fentanilo, empujará al fentanilo fuera del receptor, precipitando abstinencia explosiva. Inversamente, si el paciente usa buprenorfina crónica, el Fentanilo NO LOGRA unirse a los receptores, resultando en falla total de la anestesia para cirugías."
+      },
+      conduta: {
+        pt: "A transição de/para Buprenorfina exige protocolos estritos de desmame. Em caso de cirurgia urgente em usuário de buprenorfina (adesivo), usar Ketamina, Dexmedetomidina ou Bloqueios Regionais, pois opioides tradicionais não farão efeito.",
+        es: "La transición de/para Buprenorfina exige protocolos estrictos de destete. En caso de cirugía urgente en usuario de buprenorfina (parche), usar Ketamina, Dexmedetomidina o Bloqueos Regionales, pues opioides tradicionales no harán efecto."
+      }
+    }
+  },
+
+  /* ── ANESTÉSICOS LOCAIS AMIDA (BUPIVACAÍNA E ROPIVACAÍNA) ── */
+  "$classe_anestesicos_locais_amida": {
+    "amiodarona": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sinergismo Arritmogênico. Se houver injeção intravascular inadvertida do anestésico local durante o bloqueio, a associação com Amiodarona potencializa o bloqueio dos canais de sódio no miocárdio, facilitando colapso cardiovascular e fibrilação ventricular.",
+        es: "Sinergismo Arritmogénico. Si hay inyección intravascular inadvertida del anestésico local durante el bloqueo, la asociación con Amiodarona potencia el bloqueo de los canales de sodio en el miocardio, facilitando colapso cardiovascular y fibrilación ventricular."
+      },
+      conduta: {
+        pt: "O anestesiologista deve ser avisado sobre o uso crônico de antiarrítmicos. Emulsão Lipídica a 20% (Intralipid) deve estar disponível na sala de bloqueio.",
+        es: "El anestesiólogo debe ser avisado sobre el uso crónico de antiarrítmicos. Emulsión Lipídica al 20% (Intralipid) debe estar disponible en la sala de bloqueo."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O propranolol e metoprolol reduzem o fluxo sanguíneo hepático e inibem as enzimas citocromiais. Isso diminui drasticamente o clearance da bupivacaína/ropivacaína (que são amidas metabolizadas pelo fígado). Se altas doses locais forem usadas, o nível plasmático tóxico pode ser alcançado.",
+        es: "El propranolol y metoprolol reducen el flujo sanguíneo hepático e inhiben las enzimas citocromiales. Esto disminuye drásticamente el clearance de la bupivacaína/ropivacaína (que son amidas metabolizadas por el hígado). Si se usan altas dosis locales, el nivel plasmático tóxico puede alcanzarse."
+      },
+      conduta: {
+        pt: "Evitar atingir os limites máximos de dose de anestésico local em pacientes usando betabloqueadores em doses altas.",
+        es: "Evitar alcanzar los límites máximos de dosis de anestésico local en pacientes usando betabloqueantes en dosis altas."
+      }
+    }
+  },
+
+  /* ── TENECTEPLASE (E Fibrinolíticos Sistêmicos) ── */
+  "tenecteplase": {
+    "clopidogrel": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo de Sangramento (Benefício vs Risco). A terapia padrão do IAMCSST exige o uso de terapia antiplaquetária dupla (AAS + Clopidogrel) em conjunto com a Tenecteplase. Essa tríade dissolve o trombo coronariano com excelência, mas eleva o risco de hemorragias sistêmicas (especialmente gastrointestinais e urinárias).",
+        es: "Sinergismo de Sangrado (Beneficio vs Riesgo). La terapia estándar del IAMCEST exige el uso de terapia antiplaquetaria doble (AAS + Clopidogrel) en conjunto con la Tenecteplasa. Esta tríada disuelve el trombo coronario con excelencia, pero eleva el riesgo de hemorragias sistémicas (especialmente gastrointestinales y urinarias)."
+      },
+      conduta: {
+        pt: "Interação obrigatória por protocolo para o Infarto do Miocárdio. Vigilância contínua para queda de hemoglobina, hematêmese ou hematúria nas próximas 24 horas na UTI Coronariana.",
+        es: "Interacción obligatoria por protocolo para el Infarto de Miocardio. Vigilancia continua para caída de hemoglobina, hematemesis o hematuria en las próximas 24 horas en la Unidad Coronaria."
+      }
+    },
+    "$classe_anticoagulantes_orais_diretos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Risco Hemorrágico Extremo. A administração de Tenecteplase (especialmente na dose para AVC isquêmico) em um paciente que tomou DOACs (Rivaroxabana, Apixabana) ou Varfarina (com RNI > 1.7) nas últimas 48 horas deflagra Hemorragia Intracraniana fatal de forma quase mandatória.",
+        es: "Riesgo Hemorrágico Extremo. La administración de Tenecteplasa (especialmente en la dosis para ACV isquémico) en un paciente que tomó DOACs (Rivaroxabán, Apixabán) o Warfarina (con RNI > 1.7) en las últimas 48 horas desencadena Hemorragia Intracraneal fatal de forma casi mandatoria."
+      },
+      conduta: {
+        pt: "A fibrinólise no AVC está ABSOLUTAMENTE CONTRAINDICADA se o paciente usar DOACs (a menos que o uso da reversão com antídotos específicos seja validada nos últimos minutos ou testes de coagulação específicos estejam normais, protocolo de exceção neurológica).",
+        es: "La fibrinólisis en el ACV está ABSOLUTAMENTE CONTRAINDICADA si el paciente usa DOACs (a menos que el uso de la reversión con antídotos específicos sea validada en los últimos minutos o pruebas de coagulación específicas estén normales, protocolo de excepción neurológica)."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */

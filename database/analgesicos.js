@@ -2188,4 +2188,219 @@
 
 })();
 
+/* ─── GRUPO 12 — Opioide Avançado, Anestésicos Locais e Trombolítico ─
+   BUILD 328 Lote 2: hidromorfona · buprenorfina · bupivacaina · ropivacaina · tenecteplase
+   category: 'analgesia' (hidromorfona/buprenorfina/bupivacaina/ropivacaina) | 'cardiologia' (tenecteplase)
+──────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+  if (typeof window.ANALGESICOS_DRUGS_DB !== 'object' || Array.isArray(window.ANALGESICOS_DRUGS_DB)) {
+    window.ANALGESICOS_DRUGS_DB = {};
+  }
+  Object.assign(window.ANALGESICOS_DRUGS_DB, {
+
+/* ── HIDROMORFONA ───────────────────────────────────────────────────── */
+    "hidromorfona": {
+      name: { pt: 'Hidromorfona', es: 'Hidromorfona' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Forte Sintético', es: 'Analgésico Opioide Fuerte Sintético' },
+      indications: {
+        pt: ['Dor aguda ou crônica de forte intensidade', 'Alternativa direta à Morfina em pacientes com Doença Renal Crônica', 'Manejo de dor oncológica severa'],
+        es: ['Dolor agudo o crónico de fuerte intensidad', 'Alternativa directa a la Morfina en pacientes con Enfermedad Renal Crónica', 'Manejo de dolor oncológico severo']
+      },
+      commercialNames: { br: ['Jurnista'], ar: ['Jurnista'] },
+      presentation: { pt: ['Ampolas IV/IM/SC 2 mg/mL', 'Comprimidos OROS (liberação prolongada) 8 mg, 16 mg, 32 mg'], es: ['Ampollas IV/IM/SC 2 mg/mL', 'Comprimidos OROS (liberación prolongada) 8 mg, 16 mg, 32 mg'] },
+      mechanism: {
+        pt: 'Agonista opioide Mu puro, derivado semissintético da morfina. É cerca de 5 a 7 vezes mais potente que a morfina (1 mg de hidromorfona IV = 7 mg de morfina IV). Sua grande vantagem é que seu metabolismo hepático não gera metabólitos ativos significativos (como o M6G da morfina), tornando-a muito mais segura em pacientes idosos e com falência renal, sem o risco de acúmulo neurotóxico.',
+        es: 'Agonista opioide Mu puro, derivado semisintético de la morfina. Es cerca de 5 a 7 veces más potente que la morfina (1 mg de hidromorfona IV = 7 mg de morfina IV). Su gran ventaja es que su metabolismo hepático no genera metabolitos activos significativos (como el M6G de la morfina), haciéndola mucho más segura en pacientes ancianos y con fallo renal, sin el riesgo de acumulación neurotóxica.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dor aguda: 0,2 a 1 mg IV a cada 2-3 horas (titulado conforme resposta). Uso oral (comprimido OROS): 8 mg a cada 24 horas (nunca partir o comprimido).',
+          es: 'Dolor agudo: 0,2 a 1 mg IV cada 2-3 horas (titulado según respuesta). Uso oral (comprimido OROS): 8 mg cada 24 horas (nunca partir el comprimido).'
+        },
+        pediatric: {
+          pt: '0,015 mg/kg IV a cada 4 horas.',
+          es: '0,015 mg/kg IV cada 4 horas.'
+        }
+      },
+      administration: { pt: ['Injeção IV muito lenta (2 a 3 minutos).', 'Os comprimidos de liberação osmótica (OROS) são rígidos e a casca é eliminada intacta nas fezes (avisar o paciente).'], es: ['Inyección IV muy lenta (2 a 3 minutos).', 'Los comprimidos de liberación osmótica (OROS) son rígidos y la cáscara se elimina intacta en las heces (avisar al paciente).'] },
+      renalAdjustment: { required: false, message: { pt: 'Opioide de escolha (junto com fentanil/metadona) na DRC, pois não acumula metabólitos ativos. Ajustes leves apenas por precaução.', es: 'Opioide de elección (junto con fentanilo/metadona) en ERC, pues no acumula metabolitos activos. Ajustes leves solo por precaución.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir a dose em insuficiência hepática moderada a grave.', es: 'Reducir la dosis en insuficiencia hepática moderada a grave.' } },
+      commonAdverseEffects: { pt: ['Constipação (menos náusea e prurido que a morfina)', 'Sonolência'], es: ['Constipación (menos náusea y prurito que la morfina)', 'Somnolencia'] },
+      dangerousAdverseEffects: { pt: ['Depressão respiratória grave e apneia', 'Hipotensão severa se injetado rapidamente em pacientes hipovolêmicos'], es: ['Depresión respiratoria grave y apnea', 'Hipotensión severa si se inyecta rápidamente en pacientes hipovolémicos'] },
+      contraindications: {
+        absolute: { pt: ['Depressão respiratória não monitorada', 'Asma aguda severa'], es: ['Depresión respiratoria no monitorizada', 'Asma aguda severa'] },
+        relative: { pt: ['Traumatismo craniano (aumento da PIC associado ao aumento de CO2)'], es: ['Traumatismo craneal (aumento de la PIC asociado al aumento de CO2)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'Devido à sua extrema potência em doses numericamente pequenas, erros de prescrição (confundir dose de morfina com hidromorfona) resultam em morte imediata por overdose.', es: 'Debido a su extrema potencia en dosis numéricamente pequeñas, errores de prescripción (confundir dosis de morfina con hidromorfona) resultan en muerte inmediata por sobredosis.' }
+      }
+    },
+
+/* ── BUPRENORFINA ───────────────────────────────────────────────────── */
+    "buprenorfina": {
+      name: { pt: 'Buprenorfina', es: 'Buprenorfina' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Forte (Agonista Parcial Mu)', es: 'Analgésico Opioide Fuerte (Agonista Parcial Mu)' },
+      indications: {
+        pt: ['Dor crônica oncológica e não oncológica moderada a severa', 'Tratamento de manutenção do Transtorno por Uso de Opioides (desintoxicação de heroína/fentanil)'],
+        es: ['Dolor crónico oncológico y no oncológico moderado a severo', 'Tratamiento de mantenimiento del Trastorno por Uso de Opioides (desintoxicación de heroína/fentanilo)']
+      },
+      commercialNames: { br: ['Restiva (Adesivo)', 'Temgesic'], ar: ['Suboxone', 'Restiva'] },
+      presentation: { pt: ['Adesivos transdérmicos 5, 10, 20 mcg/h', 'Comprimidos sublinguais 0,2 mg, 2 mg, 8 mg'], es: ['Parches transdérmicos 5, 10, 20 mcg/h', 'Comprimidos sublinguales 0,2 mg, 2 mg, 8 mg'] },
+      mechanism: {
+        pt: 'Possui afinidade monstruosa pelo receptor Mu, aderindo a ele mais fortemente que fentanil, morfina ou até mesmo a naloxona (antídoto). Contudo, é um AGONISTA PARCIAL (só ativa o receptor em 40-50%). Isso gera excelente analgesia de base, mas cria um "efeito teto" perfeito para a depressão respiratória (aumentar a dose não mata o paciente de asfixia).',
+        es: 'Posee afinidad monstruosa por el receptor Mu, adhiriéndose a él más fuertemente que fentanilo, morfina o incluso la naloxona (antídoto). Sin embargo, es un AGONISTA PARCIAL (solo activa el receptor en 40-50%). Esto genera excelente analgesia de base, pero crea un "efecto techo" perfecto para la depresión respiratoria (aumentar la dosis no mata al paciente de asfixia).'
+      },
+      dose: {
+        adult: {
+          pt: 'Adesivo transdérmico: Trocar a cada 7 DIAS. Uso Sublingual: 0,2 a 0,4 mg a cada 6-8 horas para dor.',
+          es: 'Parche transdérmico: Cambiar cada 7 DÍAS. Uso Sublingual: 0,2 a 0,4 mg cada 6-8 horas para dolor.'
+        },
+        pediatric: {
+          pt: 'Não recomendado rotineiramente < 18 anos fora de centros especializados.',
+          es: 'No recomendado rutinariamente < 18 años fuera de centros especializados.'
+        }
+      },
+      administration: { pt: ['Comprimidos sublinguais não devem ser mastigados nem engolidos (destruídos pelo fígado se ingeridos).', 'O adesivo age por 7 dias, deve ser colocado em pele sem pelos.'], es: ['Comprimidos sublinguales no deben ser masticados ni tragados (destruidos por el hígado si ingeridos).', 'El parche actúa por 7 días, debe ser colocado en piel sin vellos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Altamente segura. Excreção primariamente biliar/fecal. Sem ajuste na DRC.', es: 'Altamente segura. Excreción primariamente biliar/fecal. Sin ajuste en ERC.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar ou reduzir agressivamente na insuficiência hepática severa.', es: 'Evitar o reducir agresivamente en insuficiencia hepática severa.' } },
+      commonAdverseEffects: { pt: ['Náusea e Vômitos (especialmente na fase de adaptação)', 'Constipação', 'Eritema no local do adesivo'], es: ['Náusea y Vómitos (especialmente en fase de adaptación)', 'Constipación', 'Eritema en el sitio del parche'] },
+      dangerousAdverseEffects: { pt: ['Síndrome de abstinência precipitada grave (se o paciente já usar outros opioides plenos)', 'Prolongamento do intervalo QT'], es: ['Síndrome de abstinencia precipitada grave (si el paciente ya usa otros opioides plenos)', 'Prolongación del intervalo QT'] },
+      contraindications: {
+        absolute: { pt: ['Miastenia Gravis, Íleo paralítico'], es: ['Miastenia Gravis, Íleo paralítico'] },
+        relative: { pt: ['Pacientes em uso agudo de doses maciças de agonistas Mu puros (Fentanil/Morfina)'], es: ['Pacientes en uso agudo de dosis masivas de agonistas Mu puros (Fentanilo/Morfina)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Atenção Anestesistas: Se o paciente que usa buprenorfina crônica precisar de cirurgia, a morfina ou fentanil tradicionais NÃO FARÃO EFEITO, pois a buprenorfina "blinda" o receptor e não os deixa entrar. Requer técnicas analgésicas avançadas (bloqueio regional ou cetamina).', es: 'Atención Anestesiólogos: Si el paciente que usa buprenorfina crónica necesita cirugía, la morfina o fentanilo tradicionales NO HARÁN EFECTO, pues la buprenorfina "blinda" el receptor y no los deja entrar. Requiere técnicas analgésicas avanzadas (bloqueo regional o ketamina).' }
+      }
+    },
+
+/* ── BUPIVACAÍNA ────────────────────────────────────────────────────── */
+    "bupivacaina": {
+      name: { pt: 'Bupivacaína', es: 'Bupivacaína' },
+      category: 'analgesia',
+      class: { pt: 'Anestésico Local tipo Amida (Ação Longa)', es: 'Anestésico Local tipo Amida (Acción Larga)' },
+      indications: {
+        pt: ['Anestesia regional/Espinhal (Raquianestesia, Peridural)', 'Bloqueio de nervos periféricos', 'Infiltração local para analgesia pós-operatória prolongada'],
+        es: ['Anestesia regional/Espinal (Raquianestesia, Peridural)', 'Bloqueo de nervios periféricos', 'Infiltración local para analgesia posoperatoria prolongada']
+      },
+      commercialNames: { br: ['Neocaína', 'Marcaína'], ar: ['Marcaína'] },
+      presentation: { pt: ['Frascos-ampola 0,25%, 0,5% e 0,75% (com ou sem vasoconstritor/epinefrina)', 'Ampolas pesadas (hiperbáricas) para Raquianestesia'], es: ['Viales 0,25%, 0,5% y 0,75% (con o sin vasoconstrictor/epinefrina)', 'Ampollas pesadas (hiperbáricas) para Raquianestesia'] },
+      mechanism: {
+        pt: 'Bloqueia reversivelmente a condução nervosa ao diminuir a permeabilidade da membrana neuronal aos íons de SÓDIO. Possui altíssima lipofilicidade, resultando em um bloqueio anestésico e motor muito potente e de longa duração (até 6 a 8 horas). A recuperação motora costuma demorar mais do que a sensorial.',
+        es: 'Bloquea reversiblemente la conducción nerviosa al disminuir la permeabilidad de la membrana neuronal a los iones de SODIO. Posee altísima lipofilicidad, resultando en un bloqueo anestésico y motor muy potente y de larga duración (hasta 6 a 8 horas). La recuperación motora suele tardar más que la sensorial.'
+      },
+      dose: {
+        adult: {
+          pt: 'A dose varia conforme a técnica. Limite de segurança: 2,5 mg/kg (sem epinefrina) ou 3 mg/kg (com epinefrina) em um período de 4 horas.',
+          es: 'La dosis varía según la técnica. Límite de seguridad: 2,5 mg/kg (sin epinefrina) o 3 mg/kg (con epinefrina) en un período de 4 horas.'
+        },
+        pediatric: {
+          pt: 'Máximo de 2 mg/kg para infiltração.',
+          es: 'Máximo de 2 mg/kg para infiltración.'
+        }
+      },
+      administration: { pt: ['Injeção perineural, peridural ou espinhal.', 'NUNCA injetar intravascular (realizar aspiração prévia rigorosa).'], es: ['Inyección perineural, peridural o espinal.', 'NUNCA inyectar intravascular (realizar aspiración previa rigurosa).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito, mas cuidar com uremia que altera ligação proteica.', es: 'Sin necesidad de ajuste estricto, pero cuidar con uremia que altera unión proteica.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizada pelo fígado. Reduzir doses de repetição em cirróticos graves.', es: 'Metabolizada por el hígado. Reducir dosis de repetición en cirróticos graves.' } },
+      commonAdverseEffects: { pt: ['Hipotensão e bradicardia (quando usada em raquianestesia por bloqueio simpático)', 'Retenção urinária'], es: ['Hipotensión y bradicardia (cuando usada en raquianestesia por bloqueo simpático)', 'Retención urinaria'] },
+      dangerousAdverseEffects: { pt: ['TOXICIDADE SISTÊMICA DOS ANESTÉSICOS LOCAIS (LAST): Convulsões, Coma e Parada Cardíaca Refratária (Assistolia/Fibrilação Ventricular) se atingir a corrente sanguínea.'], es: ['TOXICIDAD SISTÉMICA DE LOS ANESTÉSICOS LOCALES (LAST): Convulsiones, Coma y Paro Cardíaco Refractario (Asistolia/Fibrilación Ventricular) si alcanza el torrente sanguíneo.'] },
+      contraindications: {
+        absolute: { pt: ['Injeção Intravenosa Regional (Bloqueio de Bier - uso estritamente letal)', 'Hipersensibilidade a amidas'], es: ['Inyección Intravenosa Regional (Bloqueo de Bier - uso estrictamente letal)', 'Hipersensibilidad a amidas'] },
+        relative: { pt: ['Uso da formulação 0,75% em obstetrícia peridural (proibido pela FDA por risco de PCR refratária)'], es: ['Uso de formulación 0,75% en obstetricia peridural (prohibido por la FDA por riesgo de RCP refractaria)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'ANTÍDOTO DE EMERGÊNCIA: A bupivacaína liga-se fortemente aos canais de sódio do coração, causando parada cardíaca indestrutível aos choques e epinefrina. A única salvação é a infusão imediata de EMULSÃO LIPÍDICA A 20% (Intralipid) IV, que funciona como um "dreno lipídico" puxando a bupivacaína para fora do miocárdio.', es: 'ANTÍDOTO DE EMERGENCIA: La bupivacaína se une fuertemente a los canales de sodio del corazón, causando paro cardíaco indestructible a los choques y epinefrina. La única salvación es la infusión inmediata de EMULSIÓN LIPÍDICA AL 20% (Intralipid) IV, que funciona como un "drenaje lipídico" sacando la bupivacaína del miocardio.' }
+      }
+    },
+
+/* ── ROPIVACAÍNA ────────────────────────────────────────────────────── */
+    "ropivacaina": {
+      name: { pt: 'Ropivacaína', es: 'Ropivacaína' },
+      category: 'analgesia',
+      class: { pt: 'Anestésico Local tipo Amida (Ação Longa)', es: 'Anestésico Local tipo Amida (Acción Larga)' },
+      indications: {
+        pt: ['Analgesia epidural para trabalho de parto (escolha de ouro)', 'Bloqueio de nervos periféricos', 'Infiltração local'],
+        es: ['Analgesia epidural para trabajo de parto (elección de oro)', 'Bloqueo de nervios periféricos', 'Infiltración local']
+      },
+      commercialNames: { br: ['Naropin'], ar: ['Naropin'] },
+      presentation: { pt: ['Frascos-ampola 0,2%, 0,75% e 1%'], es: ['Viales 0,2%, 0,75% y 1%'] },
+      mechanism: {
+        pt: 'Bloqueador dos canais de sódio. Estruturalmente similar à bupivacaína, mas sintetizada puramente em seu enantiômero S (-). Isso lhe confere dois grandes diferenciais de segurança: 1) É significativamente MENOS CARDIOTÓXICA que a bupivacaína em caso de injeção venosa acidental; 2) Gera um bloqueio SENSORIAL intenso (tira a dor) mas com menor bloqueio MOTOR (a gestante consegue empurrar o bebê ou andar no pós-operatório).',
+        es: 'Bloqueador de los canales de sodio. Estructuralmente similar a la bupivacaína, pero sintetizada puramente en su enantiómero S (-). Esto le confiere dos grandes diferenciales de seguridad: 1) Es significativamente MENOS CARDIOTÓXICA que la bupivacaína en caso de inyección venosa accidental; 2) Genera un bloqueo SENSORIAL intenso (quita el dolor) pero con menor bloqueo MOTOR (la gestante puede empujar al bebé o caminar en el posoperatorio).'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose máxima de segurança: 3 mg/kg. Dose e concentração variam absurdamente conforme o local de bloqueio.',
+          es: 'Dosis máxima de seguridad: 3 mg/kg. Dosis y concentración varían absurdamente según el sitio de bloqueo.'
+        },
+        pediatric: {
+          pt: 'Bloqueios caudais ou peridurais (2 a 3 mg/kg limite seguro).',
+          es: 'Bloqueos caudales o peridurales (2 a 3 mg/kg límite seguro).'
+        }
+      },
+      administration: { pt: ['Exclusivamente via regional/infiltração. JAMAIS intravenosa.'], es: ['Exclusivamente vía regional/infiltración. JAMÁS intravenosa.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizada pelo fígado CYP1A2. Exige redução em cirrose.', es: 'Metabolizada por el hígado CYP1A2. Exige reducción en cirrosis.' } },
+      commonAdverseEffects: { pt: ['Hipotensão (bloqueio simpático)', 'Náuseas e tontura', 'Parestesia na área bloqueada'], es: ['Hipotensión (bloqueo simpático)', 'Náuseas y mareos', 'Parestesia en el área bloqueada'] },
+      dangerousAdverseEffects: { pt: ['Convulsões e neurotoxicidade se atingir via IV', 'Toxicidade cardíaca (menos grave que bupivacaína, mas possível)'], es: ['Convulsiones y neurotoxicidad si alcanza vía IV', 'Toxicidad cardíaca (menos grave que bupivacaína, pero posible)'] },
+      contraindications: {
+        absolute: { pt: ['Injeção intravenosa regional', 'Hipersensibilidade a anestésicos amida'], es: ['Inyección intravenosa regional', 'Hipersensibilidad a anestésicos amida'] },
+        relative: { pt: ['Hipovolemia severa (se usado no neuro-eixo)'], es: ['Hipovolemia severa (si se usa en neuroeje)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'É a escolha perfeita (na formulação 0,2%) para o Walking Epidural (Analgesia de parto onde a mãe pode caminhar), pois preserva a força das pernas e tira as dores da contração.', es: 'Es la elección perfecta (en la formulación 0,2%) para la Epidural Ambulante (Analgesia de parto donde la madre puede caminar), pues preserva la fuerza de las piernas y quita los dolores de la contracción.' }
+      }
+    },
+
+/* ── TENECTEPLASE (AVCi / IAM) ──────────────────────────────────────── */
+    "tenecteplase": {
+      name: { pt: 'Tenecteplase', es: 'Tenecteplasa' },
+      category: 'cardiologia',
+      class: { pt: 'Fibrinolítico / Trombolítico de 3ª Geração', es: 'Fibrinolítico / Trombolítico de 3ª Generación' },
+      indications: {
+        pt: ['Infarto Agudo do Miocárdio com Supradesnivelamento de ST (IAMCSST) se intervenção percutânea (cateterismo) indisponível em < 120 min', 'Acidente Vascular Cerebral Isquêmico (AVCi) Agudo nas primeiras 4,5 horas (substituindo a Alteplase em muitos protocolos mundiais)'],
+        es: ['Infarto Agudo de Miocardio con Elevación del ST (IAMCEST) si intervención percutánea (cateterismo) indisponible en < 120 min', 'Accidente Cerebrovascular Isquémico (ACVi) Agudo en las primeras 4,5 horas (sustituyendo a la Alteplasa en muchos protocolos mundiales)']
+      },
+      commercialNames: { br: ['Metalyse'], ar: ['Metalyse'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 40 mg, 50 mg (com seringa preenchida com diluente)'], es: ['Vial liofilizado 40 mg, 50 mg (con jeringa prellenada con diluyente)'] },
+      mechanism: {
+        pt: 'Ativador do plasminogênio tecidual recombinante mutante (r-tPA). Possui a mais alta especificidade pela FIBRINA (só age onde o coágulo está formado) e alta resistência à degradação pelo inibidor PAI-1. Ele converte o plasminogênio aprisionado no trombo em plasmina, que dissolve agressivamente a rede de fibrina, desobstruindo a artéria coronária ou cerebral. Graças à sua meia-vida longa, pode ser dado em bolus ÚNICO de 5 segundos.',
+        es: 'Activador del plasminógeno tisular recombinante mutante (r-tPA). Posee la más alta especificidad por la FIBRINA (solo actúa donde está formado el coágulo) y alta resistencia a la degradación por el inhibidor PAI-1. Convierte el plasminógeno atrapado en el trombo en plasmina, que disuelve agresivamente la red de fibrina, desobstruyendo la arteria coronaria o cerebral. Gracias a su vida media larga, se puede dar en bolo ÚNICO de 5 segundos.'
+      },
+      dose: {
+        adult: {
+          pt: 'IAM: Ajustado pelo peso. (Ex: <60kg=30mg; 70kg=35mg; 80kg=40mg; 90kg=45mg; >90kg=50mg). AVCi: 0,25 mg/kg IV (Dose máxima de 25 mg - ATENÇÃO: a dose do AVCi é quase METADE da dose do Infarto).',
+          es: 'IAM: Ajustado por peso. (Ej: <60kg=30mg; 70kg=35mg; 80kg=40mg; 90kg=45mg; >90kg=50mg). ACVi: 0,25 mg/kg IV (Dosis máxima de 25 mg - ATENCIÓN: la dosis del ACVi es casi la MITAD de la dosis del Infarto).'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Bolus IV direto RÁPIDO, em torno de 5 a 10 segundos. Lavar o acesso venoso com SF 0,9% antes e depois.'], es: ['Bolo IV directo RÁPIDO, en torno de 5 a 10 segundos. Lavar el acceso venoso con SF 0,9% antes y después.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste (metabolismo plasmático e hepático).', es: 'Sin necesidad de ajuste (metabolismo plasmático y hepático).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Risco de sangramento catastrófico aumenta em cirrose/coagulopatia grave basal.', es: 'Riesgo de sangrado catastrófico aumenta en cirrosis/coagulopatía grave basal.' } },
+      commonAdverseEffects: { pt: ['Sangramento de acesso venoso ou gengiva', 'Hipotensão transitória', 'Arritmias de reperfusão (ex: RIVA) quando o vaso abre'], es: ['Sangrado de acceso venoso o encía', 'Hipotensión transitoria', 'Arritmias de reperfusión (ej: RIVA) cuando el vaso abre'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia Intracraniana (HIC) fatal', 'Hemorragia gastrointestinal grave', 'Angioedema orolingual (raro)'], es: ['Hemorragia Intracraneal (HIC) fatal', 'Hemorragia gastrointestinal grave', 'Angioedema orolingual (raro)'] },
+      contraindications: {
+        absolute: { pt: ['Hemorragia intracraniana prévia', 'Sangramento ativo interno', 'Cirurgia craniana/espinhal nos últimos 3 meses', 'PA sistólica > 185 mmHg no AVCi (precisa abaixar a PA antes)'], es: ['Hemorragia intracraneal previa', 'Sangrado activo interno', 'Cirugía craneal/espinal en los últimos 3 meses', 'PA sistólica > 185 mmHg en ACVi (necesita bajar la PA antes)'] },
+        relative: { pt: ['Uso ativo de anticoagulantes orais (DOACs ou Varfarina com INR > 1.7)', 'Cirurgia de grande porte nos últimos 14 dias'], es: ['Uso activo de anticoagulantes orales (DOACs o Warfarina con INR > 1.7)', 'Cirugía mayor en los últimos 14 días'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ERRO FATAL NA EMERGÊNCIA: A dosagem para AVC isquêmico (0,25 mg/kg) é muito inferior à do Infarto do Miocárdio (0,5 mg/kg). Aplicar a dose do infarto no AVC causará explosão hemorrágica cerebral e morte imediata.', es: 'ERROR FATAL EN EMERGENCIA: La dosis para ACV isquémico (0,25 mg/kg) es muy inferior a la del Infarto de Miocardio (0,5 mg/kg). Aplicar la dosis del infarto en el ACV causará explosión hemorrágica cerebral y muerte inmediata.' }
+      }
+    }
+
+  }); /* fim Object.assign ANALGESICOS_DRUGS_DB — Grupo 12 (hidromorfona · buprenorfina · bupivacaina · ropivacaina · tenecteplase — BUILD 328 Lote 2) */
+
+})();
+
 })(); /* fim da IIFE do módulo analgésicos */
