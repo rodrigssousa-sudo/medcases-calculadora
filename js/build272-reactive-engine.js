@@ -326,7 +326,7 @@
   }
 
   var _moRetryCount = 0;
-  var _moMaxRetries = 3;  /* BUILD 276.1: reduzido de 10 → 3 (máx 900ms) */
+  var _moMaxRetries = 1;  /* BUILD 368: reduzido de 3 → 1 (300ms max) — container não existe mais */
   var _mo = null;         /* referência ao MutationObserver ativo */
 
   function _setupObserver() {
@@ -352,9 +352,10 @@
          _init() via _wireAll() direto — o observer serve apenas para
          capturar lazy-mounts futuros, que não ocorrem se o container
          nunca existiu. */
-      console.warn('[BUILD 276.1] #hub-cards-container não encontrado após 3 tentativas. ' +
-                   'Observer NÃO instalado (fail-safe ativo). ' +
-                   'Re-wire de inputs já aplicado via _wireAll() no init.');
+      /* BUILD 368: silencia warning — #hub-cards-container não existe
+         na estrutura atual (removido em BUILD 306+). Comportamento
+         esperado e seguro: observer simplesmente não é instalado.
+         Re-wire de inputs já foi feito via _wireAll() no _init(). */
       return; /* ← PARA AQUI — sem observer em fallback */
     }
 
@@ -409,13 +410,14 @@
         clearInterval(_dashInitTimer);
         syncClcrLiveDashboard();
         console.log('[BUILD 276.1] Live Dashboard sincronizado após boot completo.');
-      } else if (_dashInitAttempts > 25) { /* máx 5s (25 × 200ms) */
+      } else if (_dashInitAttempts > 15) { /* BUILD 368: máx 3s (15 × 200ms) — safety-net garante boot */
         clearInterval(_dashInitTimer);
-        console.warn('[BUILD 276.1] Live Dashboard: boot não completou em 5s — sync ignorado.');
+        /* BUILD 368: silencia — o safety-net externo seta _appBootComplete
+           independentemente; se chegamos aqui, o boot foi lento mas seguro. */
       }
     }, 200);
 
-    console.log('[BUILD 272/274/276.1] Reactive Engine ativo — ' +
+    console.log('[BUILD 272/274/276.1/368] Reactive Engine ativo — ' +
                 'Pilar 2 (zero-friction + debounce ' + DEBOUNCE_MS + 'ms) + ' +
                 'Pilar 3 (Live Dashboard ClCr) + ' +
                 'Observer cirúrgico (#hub-cards-container) + ' +
