@@ -18263,6 +18263,94 @@ const INTERACOES_DB = {
         es: "Reducir empíricamente la dosis de insulina basal y/o sulfonilurea en 20-30% al iniciar la liraglutida. Monitorear glucemia capilar, especialmente pre-cena y a las 3h de la madrugada en las primeras 4 semanas. Reducir progresivamente a medida que el control glucémico mejora con la incretina. No esperar hipoglucemia para ajustar — la reducción debe ser PROACTIVA."
       }
     }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES: Endocrinologia (Insulinas Basais e Prandiais)
+     BUILD 308 — Glargina, Detemir, Degludeca, Asparte, Lispro
+     (Mapeadas majoritariamente pela classe farmacológica cruzada)
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA GERAL PARA TODAS AS INSULINAS (Basais e Rápidas) ── */
+  "$classe_insulinas": {
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SÍNDROME DA HIPOGLICEMIA SILENCIOSA. Betabloqueadores (como propranolol e metoprolol) bloqueiam completamente os receptores beta-1 e beta-2 adrenérgicos simpáticos. Quando a insulina causa hipoglicemia severa, o corpo tenta avisar o paciente com taquicardia, tremores e palpitações, mas esses sinais não ocorrerão. O paciente entra em coma hipoglicêmico súbito. (O único sinal que não é bloqueado é a SUDORESE profusa).",
+        es: "SÍNDROME DE HIPOGLUCEMIA SILENCIOSA. Betabloqueantes (como propranolol y metoprolol) bloquean completamente los receptores beta-1 y beta-2 adrenérgicos simpáticos. Cuando la insulina causa hipoglucemia severa, el cuerpo intenta avisar al paciente con taquicardia, temblores y palpitaciones, pero estos signos no ocurrirán. El paciente entra en coma hipoglucémico súbito. (El único signo que no se bloquea es la SUDORACIÓN profusa)."
+      },
+      conduta: {
+        pt: "Obrigatório educar o paciente ambulatorial. Na UTI, aferição estrita da glicemia capilar (HGT) a cada 4 horas se o paciente estiver usando ambas as terapias.",
+        es: "Obligatorio educar al paciente ambulatorio. En UCI, medición estricta de la glucemia capilar (HGT) cada 4 horas si el paciente está usando ambas terapias."
+      }
+    },
+    "$classe_corticosteroides": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ANTAGONISMO DE EFICÁCIA (Hiperglicemia induzida). Corticosteroides sistêmicos em doses altas (ex: Prednisona, Metilprednisolona, Dexametasona) causam resistência insulínica maciça nos tecidos periféricos e forçam o fígado a produzir glicose em excesso. O efeito terapêutico da insulina é neutralizado, deflagrando hiperglicemia explosiva (>300 a 400 mg/dL).",
+        es: "ANTAGONISMO DE EFICACIA (Hiperglucemia inducida). Corticosteroides sistémicos en altas dosis (ej: Prednisona, Metilprednisolona, Dexametasona) causan resistencia insulínica masiva en los tejidos periféricos y fuerzan al hígado a producir glucosa en exceso. El efecto terapéutico de la insulina se neutraliza, desencadenando hiperglucemia explosiva (>300 a 400 mg/dL)."
+      },
+      conduta: {
+        pt: "A dose total diária de insulina (basal e rápida) geralmente precisará ser aumentada empiricamente entre 30% e 50% enquanto o paciente estiver em corticoterapia pulsada ou imunossupressora.",
+        es: "La dosis total diaria de insulina (basal y rápida) generalmente necesitará ser aumentada empíricamente entre 30% y 50% mientras el paciente esté en corticoterapia pulsada o inmunosupresora."
+      }
+    },
+    "$classe_diureticos_tiazidicos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Tiazídicos (Hidroclorotiazida, Clortalidona) pioram a secreção basal endógena de insulina e diminuem a sensibilidade tecidual, antagonizando de forma leve a moderada o efeito das insulinas injetáveis.",
+        es: "Tiazídicos (Hidroclorotiazida, Clortalidona) empeoran la secreción basal endógena de insulina y disminuyen la sensibilidad tisular, antagonizando de forma leve a moderada el efecto de las insulinas inyectables."
+      },
+      conduta: {
+        pt: "Acompanhar controle glicêmico ao introduzir anti-hipertensivos. Pode requerer pequenos ajustes na dose da insulina Basal (Glargina/Degludeca).",
+        es: "Seguir control glucémico al introducir antihipertensivos. Puede requerir pequeños ajustes en la dosis de insulina Basal (Glargina/Degludec)."
+      }
+    },
+    "alcool": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "RISCO FATAL DE HIPOGLICEMIA RETARDADA. O fígado prioriza a metabolização do álcool em vez da gliconeogênese (produção de glicose). Se o paciente ingerir insulina (especialmente ultra-rápidas) e beber álcool em excesso sem carboidratos suficientes, o fígado será incapaz de resgatá-lo de uma hipoglicemia severa durante a madrugada.",
+        es: "RIESGO FATAL DE HIPOGLUCEMIA RETARDADA. El hígado prioriza la metabolización del alcohol en lugar de la gluconeogénesis (producción de glucosa). Si el paciente ingiere insulina (especialmente ultra-rápidas) y bebe alcohol en exceso sin carbohidratos suficientes, el hígado será incapaz de rescatarlo de una hipoglucemia severa durante la madrugada."
+      },
+      conduta: {
+        pt: "Orientação rigorosa ao paciente jovem com DM1. O álcool deve sempre ser acompanhado da ingestão de carboidratos, e a dose noturna da basal avaliada.",
+        es: "Orientación rigurosa al paciente joven con DM1. El alcohol debe siempre acompañarse de la ingesta de carbohidratos, y la dosis nocturna de la basal evaluada."
+      }
+    }
+  },
+
+  /* ── INTERAÇÕES CRÍTICAS NA EMERGÊNCIA (INSULINAS ULTRA-RÁPIDAS) ── */
+  "insulina_asparte": {
+    "salbutamol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SINERGISMO ELETROLÍTICO GRAVE. A insulina asparte/lispro ativa diretamente a bomba de sódio-potássio (Na+/K+ ATPase) celular. Agonistas Beta-2 adrenérgicos em altas doses (Salbutamol IV ou múltiplas nebulizações para asma/DPOC) fazem exatamente o mesmo. Juntos, forçam o potássio sérico para dentro das células rapidamente, causando HIPOCALEMIA letal, ondas U no ECG, e assistolia.",
+        es: "SINERGISMO ELECTROLÍTICO GRAVE. La insulina aspart/lispro activa directamente la bomba de sodio-potasio (Na+/K+ ATPase) celular. Agonistas Beta-2 adrenérgicos en altas dosis (Salbutamol IV o múltiples nebulizaciones para asma/EPOC) hacen exactamente lo mismo. Juntos, fuerzan el potasio sérico hacia dentro de las células rápidamente, causando HIPOPOTASEMIA letal, ondas U en el ECG, y asistolia."
+      },
+      conduta: {
+        pt: "Na cetoacidose diabética (CAD), onde insulina IV é exigida, o potássio DEVE ser dosado de hora em hora. Se o paciente também precisar de Salbutamol contínuo, a reposição imediata e agressiva de Cloreto de Potássio (KCl) endovenoso é inegociável.",
+        es: "En la cetoacidosis diabética (CAD), donde se exige insulina IV, el potasio DEBE ser dosado cada hora. Si el paciente también necesita Salbutamol continuo, la reposición inmediata y agresiva de Cloruro de Potasio (KCl) endovenoso es innegociable."
+      }
+    }
+  },
+  "insulina_lispro": {
+    "salbutamol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Mesmo sinergismo letal de indução de hipocalemia severa relatado com a Insulina Asparte.",
+        es: "Mismo sinergismo letal de inducción de hipopotasemia severa reportado con la Insulina Aspart."
+      },
+      conduta: {
+        pt: "Monitorar Potássio rigorosamente na Terapia Intensiva se ambas as drogas estiverem correndo no paciente.",
+        es: "Monitorizar Potasio rigurosamente en Terapia Intensiva si ambas drogas están corriendo en el paciente."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
