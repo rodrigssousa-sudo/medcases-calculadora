@@ -292,8 +292,208 @@
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
         warning: { pt: 'Em franco DESUSO na UTI médica moderna devido à longa duração e dificuldade de reversão (nem sempre a neostigmina reverte totalmente e o Sugamadex tem fraca afinidade por ele).', es: 'En franco DESUSO en la UCI médica moderna debido a la larga duración y dificultad de reversión (no siempre la neostigmina revierte totalmente y el Sugamadex tiene débil afinidad por él).' }
       }
-    }  // end pancuronio
+    },  // end pancuronio
 
-  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 318 Lote 1+2 (Anestésicos ISR + Bloqueadores Neuromusculares) */
+/* ── VECURÔNIO ──────────────────────────────────────────────────────── */
+    "vecuronio": {
+      name: { pt: 'Vecurônio', es: 'Vecuronio' },
+      category: 'emergencia',
+      class: { pt: 'Bloqueador Neuromuscular Adespolarizante (Aminosteroide)', es: 'Bloqueador Neuromuscular No Despolarizante (Aminosteroide)' },
+      indications: {
+        pt: ['Relaxamento muscular em cirurgias de média e longa duração', 'Manutenção do bloqueio neuromuscular em UTI'],
+        es: ['Relajación muscular en cirugías de media y larga duración', 'Mantenimiento del bloqueo neuromuscular en UCI']
+      },
+      commercialNames: { br: ['Norcuron'], ar: ['Norcuron'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 10 mg', '4 mg'], es: ['Vial liofilizado 10 mg', '4 mg'] },
+      mechanism: {
+        pt: 'Aminosteroide como o rocurônio, atua competindo pelos receptores colinérgicos nicotínicos na placa motora. Diferente do pancurônio, não possui efeito vagolítico significativo (não causa taquicardia) e não libera histamina de forma relevante. Sua duração é intermediária (30 a 40 minutos por bolus), mas o início de ação é mais lento (2 a 3 minutos), não sendo o ideal para Intubação de Sequência Rápida (ISR).',
+        es: 'Aminosteroide como el rocuronio, actúa compitiendo por los receptores colinérgicos nicotínicos en la placa motora. A diferencia del pancuronio, no posee efecto vagolítico significativo (no causa taquicardia) y no libera histamina de forma relevante. Su duración es intermedia (30 a 40 minutos por bolo), pero el inicio de acción es más lento (2 a 3 minutos), no siendo el ideal para Intubación de Secuencia Rápida (ISR).'
+      },
+      dose: {
+        adult: {
+          pt: 'Intubação Eletiva: 0,08 a 0,1 mg/kg IV. Manutenção em UTI: Infusão de 0,8 a 1,2 mcg/kg/min.',
+          es: 'Intubación Electiva: 0,08 a 0,1 mg/kg IV. Mantenimiento en UCI: Infusión de 0,8 a 1,2 mcg/kg/min.'
+        },
+        pediatric: {
+          pt: '0,1 mg/kg IV.',
+          es: '0,1 mg/kg IV.'
+        }
+      },
+      administration: { pt: ['Reconstituição do liofilizado com água destilada. Injeção IV em bolus.'], es: ['Reconstitución del liofilizado con agua destilada. Inyección IV en bolo.'] },
+      renalAdjustment: { required: true, message: { pt: 'Cerca de 30% da eliminação é renal. Em DRC, a duração do bloqueio é prolongada. Reduzir infusões de manutenção.', es: 'Cerca del 30% de la eliminación es renal. En ERC, la duración del bloqueo es prolongada. Reducir infusiones de mantenimiento.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Eliminação primariamente biliar/hepática. Acumula rapidamente na cirrose, exigindo doses de manutenção menores.', es: 'Eliminación primariamente biliar/hepática. Se acumula rápidamente en cirrosis, exigiendo dosis de mantenimiento menores.' } },
+      commonAdverseEffects: { pt: ['Recuperação prolongada do bloqueio (hipoventilação pós-operatória)'], es: ['Recuperación prolongada del bloqueo (hipoventilación posoperatoria)'] },
+      dangerousAdverseEffects: { pt: ['Anafilaxia', 'Miopatia aguda do doente crítico (se uso crônico em UTI associado a corticoides)'], es: ['Anafilaxia', 'Miopatía aguda del enfermo crítico (si uso crónico en UCI asociado a corticoides)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade a brometo de vecurônio'], es: ['Hipersensibilidad a bromuro de vecuronio'] },
+        relative: { pt: ['Doenças neuromusculares (Miastenia Gravis, Síndrome de Eaton-Lambert)'], es: ['Enfermedades neuromusculares (Miastenia Gravis, Síndrome de Eaton-Lambert)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'O vecurônio tende a se depositar no tecido adiposo e muscular após infusões de vários dias na UTI, o que pode causar paralisia residual refratária de vários dias após desligar a bomba.', es: 'El vecuronio tiende a depositarse en el tejido adiposo y muscular tras infusiones de varios días en la UCI, lo que puede causar parálisis residual refractaria de varios días tras apagar la bomba.' }
+      }
+    },  // end vecuronio
+
+/* ── SUGAMADEX ──────────────────────────────────────────────────────── */
+    "sugamadex": {
+      name: { pt: 'Sugamadex', es: 'Sugammadex' },
+      category: 'emergencia',
+      class: { pt: 'Reversor Seletivo de Bloqueio Neuromuscular (Ciclodextrina)', es: 'Reversor Selectivo de Bloqueo Neuromuscular (Ciclodextrina)' },
+      indications: {
+        pt: ['Reversão de emergência ou eletiva do bloqueio neuromuscular induzido EXCLUSIVAMENTE por Rocurônio ou Vecurônio', 'Cenário "Não consigo intubar, não consigo ventilar"'],
+        es: ['Reversión de emergencia o electiva del bloqueo neuromuscular inducido EXCLUSIVAMENTE por Rocuronio o Vecuronio', 'Escenario "No puedo intubar, no puedo ventilar"']
+      },
+      commercialNames: { br: ['Bridion'], ar: ['Bridion'] },
+      presentation: { pt: ['Ampolas IV 100 mg/mL (2 mL e 5 mL)'], es: ['Ampollas IV 100 mg/mL (2 mL y 5 mL)'] },
+      mechanism: {
+        pt: 'Revolução farmacológica. É uma gama-ciclodextrina modificada que atua puramente no plasma. Ela age como uma "esponja" que engolfa e encapsula fisicamente as moléculas livres de Rocurônio e Vecurônio no sangue. Ao zerar o rocurônio livre no sangue, cria-se um gradiente de concentração que puxa as moléculas da placa motora de volta para o plasma, revertendo a paralisia muscular completamente em menos de 3 minutos, INDEPENDENTE da profundidade do bloqueio.',
+        es: 'Revolución farmacológica. Es una gamma-ciclodextrina modificada que actúa puramente en el plasma. Actúa como una "esponja" que envuelve y encapsula físicamente las moléculas libres de Rocuronio y Vecuronio en la sangre. Al vaciar el rocuronio libre en la sangre, se crea un gradiente de concentración que arrastra las moléculas de la placa motora de vuelta al plasma, revirtiendo la parálisis muscular completamente en menos de 3 minutos, INDEPENDIENTEMENTE de la profundidad del bloqueo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Reversão rotineira (TOF 2 contagens): 2 mg/kg IV. Reversão profunda (TOF 0): 4 mg/kg IV. Reversão imediata PÓS-FALHA DE INTUBAÇÃO (resgate de vida): 16 mg/kg IV em bolus rápido.',
+          es: 'Reversión rutinaria (TOF 2 conteos): 2 mg/kg IV. Reversión profunda (TOF 0): 4 mg/kg IV. Reversión inmediata POST-FALLA DE INTUBACIÓN (rescate de vida): 16 mg/kg IV en bolo rápido.'
+        },
+        pediatric: {
+          pt: 'Uso pediátrico > 2 anos. Reversão rotineira: 2 mg/kg IV.',
+          es: 'Uso pediátrico > 2 años. Reversión rutinaria: 2 mg/kg IV.'
+        }
+      },
+      administration: { pt: ['Bolus IV direto rápido (em cerca de 10 segundos).'], es: ['Bolo IV directo rápido (en unos 10 segundos).'] },
+      renalAdjustment: { required: true, message: { pt: 'O complexo Sugamadex-Rocurônio é excretado 100% pelos rins. Em insuficiência renal grave (ClCr < 30 mL/min), o uso é CONTRAINDICADO pela bula, pois o complexo não é depurado.', es: 'El complejo Sugammadex-Rocuronio es excretado 100% por los riñones. En insuficiencia renal grave (ClCr < 30 mL/min), el uso está CONTRAINDICADO por prospecto, pues el complejo no es depurado.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Disgeusia (gosto amargo ou metálico transitório)', 'Tosse e movimentos durante o despertar (recuperação abrupta)'], es: ['Disgeusia (sabor amargo o metálico transitorio)', 'Tos y movimientos durante el despertar (recuperación abrupta)'] },
+      dangerousAdverseEffects: { pt: ['Bradicardia severa imediata (risco de parada cardíaca; relatórios recentes do FDA pedem atenção)', 'Anafilaxia grave (1 em 300 pacientes)'], es: ['Bradicardia severa inmediata (riesgo de paro cardíaco; reportes recientes de la FDA piden atención)', 'Anafilaxia grave (1 en 300 pacientes)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade', 'Uso para reverter bloqueios de Cisatracúrio, Atracúrio ou Succinilcolina (NÃO POSSUI NENHUM EFEITO nessas drogas)'], es: ['Hipersensibilidad', 'Uso para revertir bloqueos de Cisatracurio, Atracurio o Succinilcolina (NO POSEE NINGÚN EFECTO en estas drogas)'] },
+        relative: { pt: ['DRC Dialítica'], es: ['ERC Dialítica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Se for necessário reintubar um paciente minutos após ele ter recebido o Sugamadex, NÃO use Rocurônio novamente (ele será imediatamente encapsulado e o paciente não vai paralisar). Use Succinilcolina ou Cisatracúrio.', es: 'Si es necesario reintubar a un paciente minutos después de que haya recibido Sugammadex, NO use Rocuronio nuevamente (será inmediatamente encapsulado y el paciente no se paralizará). Use Succinilcolina o Cisatracurio.' }
+      }
+    },  // end sugamadex
+
+/* ── NEOSTIGMINA ────────────────────────────────────────────────────── */
+    "neostigmina": {
+      name: { pt: 'Neostigmina', es: 'Neostigmina' },
+      category: 'emergencia',
+      class: { pt: 'Inibidor da Acetilcolinesterase', es: 'Inhibidor de la Acetilcolinesterasa' },
+      indications: {
+        pt: ['Reversão de Bloqueadores Neuromusculares Adespolarizantes', 'Tratamento sintomático da Miastenia Gravis', 'Íleo paralítico ou retenção urinária aguda no pós-operatório'],
+        es: ['Reversión de Bloqueadores Neuromusculares No Despolarizantes', 'Tratamiento sintomático de la Miastenia Gravis', 'Íleo paralítico o retención urinaria aguda en el posoperatorio']
+      },
+      commercialNames: { br: ['Prostigmine'], ar: ['Prostigmin'] },
+      presentation: { pt: ['Ampolas IV/IM/SC 0,5 mg/mL (1 mL)', 'Comprimidos 15 mg'], es: ['Ampollas IV/IM/SC 0,5 mg/mL (1 mL)', 'Comprimidos 15 mg'] },
+      mechanism: {
+        pt: 'Inibe reversivelmente a enzima acetilcolinesterase. Isso impede a destruição da acetilcolina endógena nas fendas sinápticas. O acúmulo maciço de acetilcolina na placa motora vence os Bloqueadores Neuromusculares por "competição" numérica, restaurando a contração muscular. No entanto, o excesso de acetilcolina sistêmica ativa fortemente o sistema nervoso parassimpático (receptores muscarínicos).',
+        es: 'Inhibe reversiblemente la enzima acetilcolinesterasa. Esto impide la destrucción de la acetilcolina endógena en las hendiduras sinápticas. La acumulación masiva de acetilcolina en la placa motora vence a los Bloqueadores Neuromusculares por "competición" numérica, restaurando la contracción muscular. Sin embargo, el exceso de acetilcolina sistémica activa fuertemente el sistema nervioso parasimpático (receptores muscarínicos).'
+      },
+      dose: {
+        adult: {
+          pt: 'Reversão de BNM: 0,04 a 0,07 mg/kg IV (máx 5 mg). Sempre precedido de Atropina. Miastenia: 15 a 150 mg/dia VO.',
+          es: 'Reversión de BNM: 0,04 a 0,07 mg/kg IV (máx 5 mg). Siempre precedido de Atropina. Miastenia: 15 a 150 mg/día VO.'
+        },
+        pediatric: {
+          pt: 'Reversão BNM: 0,05 mg/kg IV associado a Atropina.',
+          es: 'Reversión BNM: 0,05 mg/kg IV asociado a Atropina.'
+        }
+      },
+      administration: { pt: ['IV lento em 1 a 2 minutos.', 'É REGRA ANESTÉSICA MUNDIAL: A neostigmina venosa NUNCA deve ser infundida sozinha. Deve ser acompanhada de ATROPINA (0,015 mg/kg) na mesma seringa ou instantes antes, para evitar Parada Cardíaca.'], es: ['IV lento en 1 a 2 minutos.', 'ES REGLA ANESTÉSICA MUNDIAL: La neostigmina venosa NUNCA debe ser infundida sola. Debe ser acompañada de ATROPINA (0,015 mg/kg) en la misma jeringa o instantes antes, para evitar Paro Cardíaco.'] },
+      renalAdjustment: { required: true, message: { pt: 'Sua meia-vida aumenta substancialmente na DRC. Reduzir dose para evitar bloqueio excessivo tardio.', es: 'Su vida media aumenta sustancialmente en ERC. Reducir dosis para evitar bloqueo excesivo tardío.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      commonAdverseEffects: { pt: ['Sialorreia massiva (muita saliva) e aumento das secreções brônquicas', 'Cólicas abdominais e náuseas', 'Fasciculações'], es: ['Sialorrea masiva (mucha saliva) y aumento de secreciones bronquiales', 'Cólicos abdominales y náuseas', 'Fasciculaciones'] },
+      dangerousAdverseEffects: { pt: ['Bradicardia profunda e Parada em Assistolia (se feita sem Atropina)', 'Broncoespasmo severo (crise asmática induzida)'], es: ['Bradicardia profunda y Paro en Asistolia (si se hace sin Atropina)', 'Broncoespasmo severo (crisis asmática inducida)'] },
+      contraindications: {
+        absolute: { pt: ['Obstrução intestinal ou urinária mecânica', 'Peritonite aguda'], es: ['Obstrucción intestinal o urinaria mecánica', 'Peritonitis aguda'] },
+        relative: { pt: ['Asma brônquica (risco de broncoespasmo colinérgico)', 'Bradicardia basal severa'], es: ['Asma bronquial (riesgo de broncoespasmo colinérgico)', 'Bradicardia basal severa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'NÃO FUNCIONA e PROLONGA O COMA se usada contra a Succinilcolina ou quando o bloqueio adespolarizante for muito profundo (TOF = 0). O paciente deve ter pelo menos alguma tentativa de contração (respirar) antes do uso.', es: 'NO FUNCIONA y PROLONGA EL COMA si se usa contra la Succinilcolina o cuando el bloqueo no despolarizante sea muy profundo (TOF = 0). El paciente debe tener al menos algún intento de contracción (respirar) antes del uso.' }
+      }
+    },  // end neostigmina
+
+/* ── ATROPINA ───────────────────────────────────────────────────────── */
+    "atropina": {
+      name: { pt: 'Atropina', es: 'Atropina' },
+      category: 'emergencia',
+      class: { pt: 'Antagonista Muscarínico / Anticolinérgico', es: 'Antagonista Muscarínico / Anticolinérgico' },
+      indications: {
+        pt: ['Bradicardia sinusal sintomática (PCR em AESP/Bradicardia)', 'Antídoto na intoxicação por Organofosforados/Carbamatos', 'Prevenção de reflexo vagal cirúrgico e reversão neuromuscular (com neostigmina)'],
+        es: ['Bradicardia sinusal sintomática (RCP en AESP/Bradicardia)', 'Antídoto en la intoxicación por Organofosforados/Carbamatos', 'Prevención de reflejo vagal quirúrgico y reversión neuromuscular (con neostigmina)']
+      },
+      commercialNames: { br: ['Atropion', 'Sulfato de Atropina'], ar: ['Atropina'] },
+      presentation: { pt: ['Ampolas IV/IM/SC 0,25 mg/mL, 0,5 mg/mL e 1 mg/mL'], es: ['Ampollas IV/IM/SC 0,25 mg/mL, 0,5 mg/mL y 1 mg/mL'] },
+      mechanism: {
+        pt: 'Antagonista competitivo dos receptores muscarínicos da acetilcolina. Bloqueia agressivamente o sistema nervoso parassimpático. No coração, inibe o nervo vago (nervo pneumogástrico) sobre o nodo sinusal e AV, aumentando rapidamente a frequência cardíaca. Também resseca intensamente as secreções salivares, brônquicas e reduz o tônus do trato gastrointestinal.',
+        es: 'Antagonista competitivo de los receptores muscarínicos de la acetilcolina. Bloquea agresivamente el sistema nervioso parasimpático. En el corazón, inhibe el nervio vago (nervio neumogástrico) sobre el nodo sinusal y AV, aumentando rápidamente la frecuencia cardíaca. También reseca intensamente las secreciones salivales, bronquiales y reduce el tono del tracto gastrointestinal.'
+      },
+      dose: {
+        adult: {
+          pt: 'Bradicardia sintomática: 0,5 a 1 mg IV a cada 3 a 5 min (máx de 3 mg - bloqueio vagal total). Intoxicação Organofosforado: 2 a 4 mg IV (doses massivas repetidas até secar secreções pulmonares).',
+          es: 'Bradicardia sintomática: 0,5 a 1 mg IV cada 3 a 5 min (máx de 3 mg - bloqueo vagal total). Intoxicación Organofosforado: 2 a 4 mg IV (dosis masivas repetidas hasta secar secreciones pulmonares).'
+        },
+        pediatric: {
+          pt: 'Bradicardia: 0,02 mg/kg IV (dose mínima 0,1 mg para evitar bradicardia paradoxal).',
+          es: 'Bradicardia: 0,02 mg/kg IV (dosis mínima 0,1 mg para evitar bradicardia paradójica).'
+        }
+      },
+      administration: { pt: ['IV direto rápido. Em caso de parada cardíaca, pode ser administrada pelo tubo endotraqueal (dose dobrada).'], es: ['IV directo rápido. En caso de paro cardíaco, puede administrarse por tubo endotraqueal (dosis doblada).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste na emergência.', es: 'Sin necesidad de ajuste en la emergencia.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Boca extremamente seca e sede', 'Taquicardia excessiva', 'Midríase (pupilas dilatadas) e visão turva', 'Retenção urinária aguda'], es: ['Boca extremadamente seca y sed', 'Taquicardia excesiva', 'Midriasis (pupilas dilatadas) y visión borrosa', 'Retención urinaria aguda'] },
+      dangerousAdverseEffects: { pt: ['Infarto agudo do miocárdio (devido ao aumento abrupto do consumo de O2 miocárdico pela taquicardia)', 'Fibrilação ventricular', 'Delirium anticolinérgico (Síndrome Anticolinérgica Central)'], es: ['Infarto agudo de miocardio (debido al aumento abrupto del consumo de O2 miocárdico por la taquicardia)', 'Fibrilación ventricular', 'Delirium anticolinérgico (Síndrome Anticolinérgico Central)'] },
+      contraindications: {
+        absolute: { pt: ['Glaucoma de ângulo fechado pré-existente', 'No contexto de Parada Cardíaca ou Intoxicação fatal, não há contraindicações.'], es: ['Glaucoma de ángulo cerrado preexistente', 'En contexto de Paro Cardíaco o Intoxicación fatal, no hay contraindicaciones.'] },
+        relative: { pt: ['Isquemia miocárdica (risco de piora da injúria)', 'Obstrução de saída da bexiga (hiperplasia prostática)'], es: ['Isquemia miocárdica (riesgo de empeoramiento de la lesión)', 'Obstrucción de salida de vejiga (hiperplasia prostática)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ERRO TÉCNICO: Doses intravenosas de atropina MENORES do que 0,5 mg no adulto (ou injeção muito lenta) causam um efeito paradoxal inicial mediado por estímulo vagal central, gerando BRADICARDIA PIOR que a original. Sempre usar bolus efetivos rápidos.', es: 'ERROR TÉCNICO: Dosis intravenosas de atropina MENORES a 0,5 mg en adulto (o inyección muy lenta) causan un efecto paradójico inicial mediado por estímulo vagal central, generando BRADICARDIA PEOR que la original. Siempre usar bolos efectivos rápidos.' }
+      }
+    },  // end atropina
+
+/* ── SULFATO DE MAGNÉSIO ────────────────────────────────────────────── */
+    "sulfato_magnesio": {
+      name: { pt: 'Sulfato de Magnésio', es: 'Sulfato de Magnesio' },
+      category: 'emergencia',
+      class: { pt: 'Eletrólito / Anticonvulsivante / Bloqueador de Canal de Cálcio Fisiológico', es: 'Electrolito / Anticonvulsivo / Bloqueador de Canal de Calcio Fisiológico' },
+      indications: {
+        pt: ['Eclâmpsia e Pré-eclâmpsia grave (Profilaxia e Tratamento de convulsões)', 'Torsades de Pointes (Arritmia ventricular)', 'Crise de asma refratária grave', 'Hipomagnesemia'],
+        es: ['Eclampsia y Preeclampsia grave (Profilaxis y Tratamiento de convulsiones)', 'Torsades de Pointes (Arritmia ventricular)', 'Crisis de asma refractaria grave', 'Hipomagnesemia']
+      },
+      commercialNames: { br: ['Sulfato de Magnésio a 10% ou 50%'], ar: ['Sulfato de Magnesio'] },
+      presentation: { pt: ['Ampolas IV 10% (100 mg/mL - 10 mL = 1g)', 'Ampolas IV/IM 50% (500 mg/mL - 10 mL = 5g)'], es: ['Ampollas IV 10% (100 mg/mL - 10 mL = 1g)', 'Ampollas IV/IM 50% (500 mg/mL - 10 mL = 5g)'] },
+      mechanism: {
+        pt: 'Cofator vital que bloqueia fisiologicamente os canais de cálcio. No útero, bloqueia a contração, atuando como tocolítico (retarda o parto). No SNC, antagoniza o receptor NMDA (bloqueia o glutamato excitatório), impedindo e abortando convulsões em gestantes. No pulmão e vasos sanguíneos, relaxa o músculo liso, revertendo a asma refratária e reduzindo a pressão arterial.',
+        es: 'Cofactor vital que bloquea fisiológicamente los canales de calcio. En el útero, bloquea la contracción, actuando como tocolítico (retrasa el parto). En el SNC, antagoniza el receptor NMDA (bloquea el glutamato excitatorio), impidiendo y abortando convulsiones en gestantes. En pulmón y vasos sanguíneos, relaja el músculo liso, revirtiendo el asma refractaria y reduciendo la presión arterial.'
+      },
+      dose: {
+        adult: {
+          pt: 'Eclâmpsia (Esquema Pritchard): Ataque de 4g IV (em 15 min) + 10g IM profundo. Manutenção 5g IM a cada 4h. Torsades de Pointes / Asma: Bolus IV de 1 a 2 g em 5 a 15 min.',
+          es: 'Eclampsia (Esquema Pritchard): Ataque de 4g IV (en 15 min) + 10g IM profundo. Mantenimiento 5g IM cada 4h. Torsades de Pointes / Asma: Bolo IV de 1 a 2 g en 5 a 15 min.'
+        },
+        pediatric: {
+          pt: 'Asma severa: 25 a 50 mg/kg IV (máx 2g) correndo em 20 a 30 minutos.',
+          es: 'Asma severa: 25 a 50 mg/kg IV (máx 2g) pasando en 20 a 30 minutos.'
+        }
+      },
+      administration: { pt: ['A formulação a 50% é extremamente concentrada. Para uso IV, deve ser obrigatoriamente diluída (em SF ou SG). Uso direto da a 50% só é permitido via Intramuscular Profunda.'], es: ['La formulación al 50% es extremadamente concentrada. Para uso IV, debe ser obligatoriamente diluida (en SF o SG). Uso directo del 50% solo está permitido vía Intramuscular Profunda.'] },
+      renalAdjustment: { required: true, message: { pt: 'Risco de hipermagnesemia letal em insuficiência renal. A excreção é puramente renal. Reduzir a dose em DRC severa.', es: 'Riesgo de hipermagnesemia letal en insuficiencia renal. La excreción es puramente renal. Reducir la dosis en ERC severa.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Ondas de calor intensas (Flushing) no bolus IV', 'Sudorese e letargia', 'Fraqueza muscular leve'], es: ['Oleadas de calor intensas (Flushing) en el bolo IV', 'Sudoración y letargo', 'Debilidad muscular leve'] },
+      dangerousAdverseEffects: { pt: ['Depressão e Parada Respiratória (se Nível Sérico > 12 mEq/L)', 'Bloqueio cardíaco, assistolia (se Nível Sérico > 15 mEq/L)', 'Abolição severa de reflexos patelares (primeiro sinal de intoxicação)'], es: ['Depresión y Paro Respiratorio (si Nivel Sérico > 12 mEq/L)', 'Bloqueo cardíaco, asistolia (si Nivel Sérico > 15 mEq/L)', 'Abolición severa de reflejos rotulianos (primer signo de intoxicación)'] },
+      contraindications: {
+        absolute: { pt: ['Miastenia Gravis (desencadeia crise miastênica fatal por bloqueio colinérgico)', 'Bloqueios cardíacos avançados'], es: ['Miastenia Gravis (desencadena crisis miasténica fatal por bloqueo colinérgico)', 'Bloqueos cardíacos avanzados'] },
+        relative: { pt: ['Insuficiência renal anúrica'], es: ['Insuficiencia renal anúrica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'INTOXICAÇÃO POR MAGNÉSIO: Se a gestante perder os reflexos profundos (patelar) ou apresentar frequência respiratória < 12 ipm, SUSPENDER a infusão imediatamente. O Antídoto OBRIGATÓRIO é o Gluconato de Cálcio 10% IV (1 ampola direto).', es: 'INTOXICACIÓN POR MAGNESIO: Si la gestante pierde los reflejos profundos (rotuliano) o presenta frecuencia respiratoria < 12 rpm, SUSPENDER la infusión inmediatamente. El Antídoto OBLIGATORIO es el Gluconato de Calcio al 10% IV (1 ampolla directo).' }
+      }
+    }  // end sulfato_magnesio
+
+  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 320 Lote 1+2+3 (Anestésicos ISR + BNMs + Reversores/Emergência) */
 
 })();

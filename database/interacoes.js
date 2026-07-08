@@ -18879,6 +18879,83 @@ const INTERACOES_DB = {
         es: "Si el paciente usa digitálicos y necesita Intubación Rápida, el ROCURONIO es una elección infinitamente más segura."
       }
     }
+  },  // comma added; Lote 3 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Emergência e Bloqueadores/Reversores
+   Sugamadex, Neostigmina, Atropina, Sulfato de Magnésio
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── SUGAMADEX ── */
+  "sugamadex": {
+    "anticoncepcional_hormonal": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "FALHA CONTRACEPTIVA. O Sugamadex encapsula moléculas no plasma não apenas o rocurônio, mas também os hormônios contidos nos contraceptivos hormonais (ex: levonorgestrel, etinilestradiol). Uma única dose IV equivale à paciente ter ESQUECIDO de tomar o contraceptivo oral daquele dia, abrindo uma janela de fertilidade e risco de gravidez indesejada.",
+        es: "FALLA ANTICONCEPTIVA. El Sugammadex encapsula moléculas en el plasma no solo el rocuronio, sino también las hormonas contenidas en los anticonceptivos hormonales (ej: levonorgestrel, etinilestradiol). Una sola dosis IV equivale a que la paciente haya OLVIDADO tomar el anticonceptivo oral de ese día, abriendo una ventana de fertilidad y riesgo de embarazo no deseado."
+      },
+      conduta: {
+        pt: "OBRIGATÓRIO ALERTAR A PACIENTE no pós-operatório. A mulher deve adotar um método contraceptivo não hormonal de barreira adicional por 7 dias consecutivos após receber Sugamadex.",
+        es: "OBLIGATORIO ALERTAR A LA PACIENTE en el posoperatorio. La mujer debe adoptar un método anticonceptivo no hormonal de barrera adicional por 7 días consecutivos tras recibir Sugammadex."
+      }
+    }
+  },
+
+  /* ── NEOSTIGMINA ── */
+  "neostigmina": {
+    "atropina": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO PROPOSITAL E VITAL. A Neostigmina aumenta os níveis de acetilcolina causando bradicardia e parada cardíaca (efeito muscarínico sistêmico). A Atropina deve ser infundida junto com a neostigmina para bloquear esse efeito colateral mortal no coração, permitindo que a neostigmina atue apenas nos músculos.",
+        es: "INTERACCIÓN A PROPÓSITO Y VITAL. La Neostigmina aumenta los niveles de acetilcolina causando bradicardia y paro cardíaco (efecto muscarínico sistémico). La Atropina debe ser infundida junto con la neostigmina para bloquear este efecto colateral mortal en el corazón, permitiendo que la neostigmina actúe solo en los músculos."
+      },
+      conduta: {
+        pt: "Misturar na mesma seringa ou infundir a Atropina 1-2 minutos antes da Neostigmina. Jamais fazer neostigmina isolada.",
+        es: "Mezclar en la misma jeringa o infundir la Atropina 1-2 minutos antes de la Neostigmina. Jamás hacer neostigmina aislada."
+      }
+    },
+    "succinilcolina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A neostigmina paralisa a enzima pseudocolinesterase plasmática (que normalmente degrada a succinilcolina). Ao usar juntos, a meia-vida da succinilcolina passa de 5 minutos para HORAS. Ocorre uma apneia iatrogênica catastrófica.",
+        es: "La neostigmina paraliza la enzima pseudocolinesterasa plasmática (que normalmente degrada la succinilcolina). Al usar juntos, la vida media de la succinilcolina pasa de 5 minutos a HORAS. Ocurre una apnea iatrogénica catastrófica."
+      },
+      conduta: {
+        pt: "Nunca utilizar reversão farmacológica anticolinesterásica para bloqueios despolarizantes (succinilcolina) recém aplicados.",
+        es: "Nunca utilizar reversión farmacológica anticolinesterásica para bloqueos despolarizantes (succinilcolina) recién aplicados."
+      }
+    }
+  },
+
+  /* ── SULFATO DE MAGNÉSIO ── */
+  "sulfato_magnesio": {
+    "nifedipina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A nifedipina é um Bloqueador de Canal de Cálcio artificial; o Magnésio age como Bloqueador de Canal de Cálcio fisiológico. A associação na obstetrícia (ambos muito usados em eclâmpsia/pré-eclâmpsia) gera profundo sinergismo vasoplégico e depressor miocárdico, causando HIPOTENSÃO GRAVE e colapso materno.",
+        es: "La nifedipina es un Bloqueador de Canal de Calcio artificial; el Magnesio actúa como Bloqueador de Canal de Calcio fisiológico. La asociación en obstetricia (ambos muy usados en eclampsia/preeclampsia) genera profundo sinergismo vasopléjico y depresor miocárdico, causando HIPOTENSIÓN GRAVE y colapso materno."
+      },
+      conduta: {
+        pt: "A associação (Nifedipina VO + Sulfato de Magnésio IV) deve ser feita com EXTREMA cautela sob monitorização contínua de PA. Se houver queda severa da PA, suspender a nifedipina e repor fluidos.",
+        es: "La asociación (Nifedipina VO + Sulfato de Magnesio IV) debe hacerse con EXTREMA precaución bajo monitorización continua de PA. Si hay caída severa de PA, suspender la nifedipina y reponer fluidos."
+      }
+    },
+    "$classe_bnm_adespolarizantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Magnésio deprime a placa neuromuscular. Quando associado a bloqueadores neuromusculares (Rocurônio, Cisatracúrio) em intubações de gestantes, a potência e a duração do bloqueio são exponencialmente ampliadas.",
+        es: "El Magnesio deprime la placa neuromuscular. Cuando se asocia a bloqueadores neuromusculares (Rocuronio, Cisatracurio) en intubaciones de gestantes, la potencia y la duración del bloqueo se amplían exponencialmente."
+      },
+      conduta: {
+        pt: "Reduzir a dose de BNMs não-despolarizantes se o paciente estiver recebendo Sulfato de Magnésio IV. Monitorar com estimulador de nervo periférico (TOF).",
+        es: "Reducir la dosis de BNMs no despolarizantes si el paciente está recibiendo Sulfato de Magnesio IV. Monitorizar con estimulador de nervio periférico (TOF)."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
