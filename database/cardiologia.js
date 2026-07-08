@@ -123,7 +123,87 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
         warning: { pt: 'O cérebro avisa antes da convulsão. Se o paciente recebendo infusão de lidocaína na UTI começar a falar embolado (disartria), ficar confuso ou reclamar de formigamento nos lábios, PARE a bomba. Ele está a minutos de convulsionar.', es: 'El cerebro avisa antes de la convulsión. Si el paciente recibiendo infusión de lidocaína en la UCI empieza a hablar confuso (disartria), se confunde o se queja de hormigueo en los labios, PARE la bomba. Está a minutos de convulsionar.' }
       }
+    }, // vírgula adicionada; BUILD 356 blocos seguem
+
+/* ── NITROPRUSSIATO DE SÓDIO (NIPRIDE) ──────────────────────────────── */
+    "nitroprussiato_sodio": {
+      name: { pt: 'Nitroprussiato de Sódio', es: 'Nitroprusiato de Sodio' },
+      category: 'cardiologia',
+      class: { pt: 'Vasodilatador Misto Direto (Arterial e Venoso)', es: 'Vasodilatador Mixto Directo (Arterial y Venoso)' },
+      indications: {
+        pt: ['Emergências Hipertensivas Severas (com lesão de órgão-alvo aguda)', 'Dissecção Aguda de Aorta (associado a betabloqueadores)', 'Insuficiência Cardíaca Aguda com grave aumento da pós-carga'],
+        es: ['Emergencias Hipertensivas Severas (con lesión de órgano diana aguda)', 'Disección Aguda de Aorta (asociado a betabloqueantes)', 'Insuficiencia Cardíaca Aguda con grave aumento de la poscarga']
+      },
+      commercialNames: { br: ['Nipride'], ar: ['Nipride'] },
+      presentation: { pt: ['Frasco-ampola IV liofilizado 50 mg (com diluente)'], es: ['Vial IV liofilizado 50 mg (con diluyente)'] },
+      mechanism: {
+        pt: 'A molécula contém 5 grupos cianeto e 1 grupo óxido nítrico (NO). No sangue, ele libera imediatamente o Óxido Nítrico, que entra na musculatura lisa dos vasos e ativa o GMPc, causando um relaxamento BRUTAL, simultâneo e igual de artérias (derruba a pós-carga) e veias (derruba a pré-carga). O efeito inicia em segundos e SOME em 2 minutos após desligar a bomba.',
+        es: 'La molécula contiene 5 grupos cianuro y 1 grupo óxido nítrico (NO). En la sangre, libera inmediatamente el Óxido Nítrico, que entra en la musculatura lisa de los vasos y activa el GMPc, causando una relajación BRUTAL, simultánea e igual de arterias (derrumba la poscarga) y venas (derrumba la precarga). El efecto inicia en segundos y DESAPARECE en 2 minutos tras apagar la bomba.'
+      },
+      dose: {
+        adult: {
+          pt: 'Infusão IV contínua: Iniciar com 0,25 a 0,5 mcg/kg/min e titular para cima a cada 5 minutos (Máximo absoluto 10 mcg/kg/min por não mais de 10 minutos).',
+          es: 'Infusión IV continua: Iniciar con 0,25 a 0,5 mcg/kg/min y titular hacia arriba cada 5 minutos (Máximo absoluto 10 mcg/kg/min por no más de 10 minutos).'
+        },
+        pediatric: {
+          pt: '0,3 a 0,5 mcg/kg/min IV contínuo. (Máximo 5 mcg/kg/min).',
+          es: '0,3 a 0,5 mcg/kg/min IV continuo. (Máximo 5 mcg/kg/min).'
+        }
+      },
+      administration: { pt: ['Exige monitorização de PA invasiva (Cateter Arterial) se possível.', 'FOTOSSENSÍVEL: O frasco e o equipo devem estar obrigatoriamente protegidos da luz por capa escura opaca (senão a molécula degrada e libera cianeto puro na bolsa).'], es: ['Exige monitorización de PA invasiva (Catéter Arterial) si es posible.', 'FOTOSENSIBLE: El vial y el equipo deben estar obligatoriamente protegidos de la luz por funda oscura opaca (sino la molécula se degrada y libera cianuro puro en la bolsa).'] },
+      renalAdjustment: { required: true, message: { pt: 'O subproduto tóxico (Tiocianato) é depurado pelos rins. Em falência renal, intoxica o paciente em < 48 horas.', es: 'El subproducto tóxico (Tiocianato) es depurado por los riñones. En falla renal, intoxica al paciente en < 48 horas.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'O fígado é responsável por transformar o Cianeto tóxico do Nipride em Tiocianato. Falência hepática causa intoxicação imediata por Cianeto.', es: 'El hígado es responsable de transformar el Cianuro tóxico del Nipride en Tiocianato. La falla hepática causa intoxicación inmediata por Cianuro.' } },
+      commonAdverseEffects: { pt: ['Hipotensão severa precipitada', 'Cefaleia e Náuseas'], es: ['Hipotensión severa precipitada', 'Cefalea y Náuseas'] },
+      dangerousAdverseEffects: { pt: ['INTOXICAÇÃO POR CIANETO (Acidose metabólica severa refratária, arritmias, coma, sangue excessivamente vermelho venoso)', 'Roubo Coronariano (piora a isquemia em pacientes com infarto ativo, preferir Tridil)'], es: ['INTOXICACIÓN POR CIANURO (Acidosis metabólica severa refractaria, arritmias, coma, sangre venosa excesivamente roja)', 'Robo Coronario (empeora la isquemia en pacientes con infarto activo, preferir Tridil)'] },
+      contraindications: {
+        absolute: { pt: ['Infarto Agudo do Miocárdio no estágio inicial com instabilidade', 'Uso concomitante com inibidores da fosfodiesterase (Sildenafil)'], es: ['Infarto Agudo de Miocardio en la etapa inicial con inestabilidad', 'Uso concomitante con inhibidores de la fosfodiesterasa (Sildenafilo)'] },
+        relative: { pt: ['Aumento extremo de Pressão Intracraniana (ele dilata as veias cerebrais e incha o cérebro)'], es: ['Aumento extremo de Presión Intracraneal (dilata las venas cerebrales e hincha el cerebro)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'ANTÍDOTO/PREVENÇÃO: Em infusões que passarão de 48 horas ou em doses muito altas, o médico deve associar "Hipossulfito de Sódio" (Tiosulfato) junto ao Nipride. O fígado usa o tiosulfato para desarmar o cianeto.', es: 'ANTÍDOTO/PREVENCIÓN: En infusiones que pasarán de 48 horas o en dosis muy altas, el médico debe asociar "Hiposulfito de Sodio" (Tiosulfato) junto al Nipride. El hígado usa el tiosulfato para desarmar el cianuro.' }
+      }
+    },
+
+/* ── NITROGLICERINA (TRIDIL) ────────────────────────────────────────── */
+    "nitroglicerina": {
+      name: { pt: 'Nitroglicerina (Tridil)', es: 'Nitroglicerina' },
+      category: 'cardiologia',
+      class: { pt: 'Vasodilatador (Predominantemente Venoso / Coronariano)', es: 'Vasodilatador (Predominantemente Venoso / Coronario)' },
+      indications: {
+        pt: ['Infarto Agudo do Miocárdio e Angina Instável (reduz dor e isquemia)', 'Edema Agudo de Pulmão Cardiogênico (reduz a água que volta pro coração)', 'Emergências hipertensivas'],
+        es: ['Infarto Agudo de Miocardio y Angina Inestable (reduce dolor e isquemia)', 'Edema Agudo de Pulmón Cardiogénico (reduce el agua que vuelve al corazón)', 'Emergencias hipertensivas']
+      },
+      commercialNames: { br: ['Tridil'], ar: ['Nitro-Dur'] },
+      presentation: { pt: ['Ampolas IV 5 mg/mL (10 mL = 50 mg)', 'Comprimidos Sublinguais 0,4 mg', 'Adesivos transdérmicos'], es: ['Ampollas IV 5 mg/mL (10 mL = 50 mg)', 'Comprimidos Sublinguales 0,4 mg', 'Parches transdérmicos'] },
+      mechanism: {
+        pt: 'Converte-se em Óxido Nítrico livre. Em doses BAIXAS (< 50 mcg/min), causa dilatação massiva das VEIAS, o que sequestra o sangue nas pernas e abdome, aliviando o coração afogado no Edema de Pulmão. Em doses ALTAS (> 100 mcg/min), passa a dilatar também as artérias, caindo a pressão arterial de forma agressiva. Ao contrário do Nipride, dilata ativamente e melhora o fluxo nas coronárias doentes.',
+        es: 'Se convierte en Óxido Nítrico libre. En dosis BAJAS (< 50 mcg/min), causa dilatación masiva de las VENAS, lo que secuestra la sangre en piernas y abdomen, aliviando al corazón ahogado en Edema de Pulmón. En dosis ALTAS (> 100 mcg/min), pasa a dilatar también las arterias, bajando la presión arterial agresivamente. A diferencia del Nipride, dilata activamente y mejora el flujo en coronarias enfermas.'
+      },
+      dose: {
+        adult: {
+          pt: 'Infusão IV contínua: Iniciar com 5 a 10 mcg/min. Aumentar de 5 a 10 mcg a cada 5-10 minutos até resposta clínica (Máx 200 mcg/min). Angina: 0,4 mg sublingual a cada 5 min (máx 3x).',
+          es: 'Infusión IV continua: Iniciar con 5 a 10 mcg/min. Aumentar de 5 a 10 mcg cada 5-10 minutos hasta respuesta clínica (Máx 200 mcg/min). Angina: 0,4 mg sublingual cada 5 min (máx 3x).'
+        },
+        pediatric: {
+          pt: 'Raramente usada (0,25 a 0,5 mcg/kg/min).',
+          es: 'Raramente usada (0,25 a 0,5 mcg/kg/min).'
+        }
+      },
+      administration: { pt: ['Usar equipo específico para Tridil (Polietileno/PVC de baixa absorção), pois o plástico comum dos equipos absorve a nitroglicerina e o paciente não recebe a dose.', 'NÃO precisa de proteção contra a luz (capa opaca) como o Nipride.'], es: ['Usar equipo específico para Tridil (Polietileno/PVC de baja absorción), pues el plástico común absorbe la nitroglicerina y el paciente no recibe la dosis.', 'NO necesita protección contra la luz (funda opaca) como el Nipride.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Extenso metabolismo hepático (efeito de 1ª passagem zera a biodisponibilidade oral, por isso existe apenas IV, adesivo e sublingual).', es: 'Extenso metabolismo hepático (efecto de 1ª pasada anula biodisponibilidad oral, por eso solo existe IV, parche y sublingual).' } },
+      commonAdverseEffects: { pt: ['Cefaleia P latejante severa (sinal de que a droga está funcionando e dilatando as meninges)', 'Taquicardia reflexa leve'], es: ['Cefalea pulsátil severa (signo de que la droga está funcionando y dilatando las meninges)', 'Taquicardia refleja leve'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão severa e Síncope', 'Meta-hemoglobinemia (rara em doses usuais)'], es: ['Hipotensión severa y Síncope', 'Metahemoglobinemia (rara en dosis usuales)'] },
+      contraindications: {
+        absolute: { pt: ['Uso nas últimas 24 a 48h de Sildenafila ou Tadalafila (RISCO DE CHOQUE VASOPLÉGICO IRREVERSÍVEL)', 'Infarto do Ventrículo Direito (paciente é dependente de pré-carga; se tirar a pré-carga, a pressão cai a zero e ele morre)'], es: ['Uso en las últimas 24 a 48h de Sildenafilo o Tadalafilo (RIESGO DE CHOQUE VASOPLÉJICO IRREVERSIBLE)', 'Infarto del Ventrículo Derecho (paciente es dependiente de precarga; si quitas la precarga, la presión cae a cero y muere)'] },
+        relative: { pt: ['Glaucoma', 'Cardiomiopatia restritiva hipertrófica'], es: ['Glaucoma', 'Miocardiopatía restrictiva hipertrófica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'FENÔMENO DA TAQUIFILAXIA: O corpo humano esgota suas reservas de grupo sulfidrila (SH) usados para ativar o Tridil. Após 24h a 48h de infusão contínua, o remédio perde o efeito (tolerância aguda). É necessário fazer "janelas" sem nitrato ou desligar a bomba o mais cedo possível.', es: 'FENÓMENO DE LA TAQUIFILAXIA: El cuerpo humano agota sus reservas de grupo sulfhidrilo (SH) usados para activar el Tridil. Tras 24h a 48h de infusión continua, el remedio pierde el efecto (tolerancia aguda). Es necesario hacer "ventanas" sin nitrato o apagar la bomba lo más temprano posible.' }
+      }
     }
 
-  }); /* fim Object.assign CARDIOLOGIA_DRUGS_DB — BUILD 354 Lote 1 (Antiarrítmicos: Amiodarona/Adenosina/Lidocaína IV) */
+  }); /* fim Object.assign CARDIOLOGIA_DRUGS_DB — BUILD 354 Lote 1 (Antiarrítmicos: Amiodarona/Adenosina/Lidocaína IV) + BUILD 356 Lote 2 (Vasodilatadores: Nitroprussiato/Nitroglicerina) */
 })();

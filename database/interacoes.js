@@ -20570,6 +20570,84 @@ const INTERACOES_DB = {
         es: "Protección Gástrica OBLIGATORIA. Si es ineludible asociarlos (ej: ortopedia), el paciente debe estar bajo protección diaria de Omeprazol o Pantoprazol para no sufrir úlcera perforada aguda."
       }
     }
+  }, // vírgula adicionada; BUILD 356 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Vasodilatadores, Analgésicos Básicos e AINEs
+   Nitroprussiato, Nitroglicerina, Dipirona, Paracetamol, Cetoprofeno
+   BUILD 356 — 3 entradas / 5 pares
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── NITRATOS E VASODILATADORES DIRETOS (Nipride e Tridil) ── */
+  "$classe_nitratos_diretos": {
+    "$classe_inibidores_pde5": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CHOQUE IRREVERSÍVEL (Sinergismo GMPc Letal). Nitratos (Tridil/Nipride) enchem a musculatura do vaso de GMP cíclico, o mensageiro da vasodilatação. Os medicamentos para disfunção erétil (Sildenafila/Viagra, Tadalafila/Cialis) impedem a enzima Fosfodiesterase-5 (PDE5) de destruir esse GMPc. Juntos, os vasos dilatam ao máximo e a pressão arterial do paciente despenca até parar o coração, não respondendo a Adrenalina ou Noradrenalina.",
+        es: "CHOQUE IRREVERSIBLE (Sinergismo GMPc Letal). Nitratos (Tridil/Nipride) llenan la musculatura del vaso de GMP cíclico, el mensajero de vasodilatación. Los medicamentos para disfunción eréctil (Sildenafilo/Viagra, Tadalafilo) impiden a la enzima Fosfodiesterasa-5 (PDE5) destruir este GMPc. Juntos, los vasos dilatan al máximo y la presión arterial se desploma hasta parar el corazón, no respondiendo a Adrenalina o Noradrenalina."
+      },
+      conduta: {
+        pt: "REGRA DE EMERGÊNCIA GLOBAL: É PROIBIDO prescrever Nitroglicerina, Nipride ou Isossorbida se o homem relatar uso de Sildenafila (Viagra) nas últimas 24 horas ou Tadalafila nas últimas 48 horas. Se ele infartar agora, não usar nitratos.",
+        es: "REGLA DE EMERGENCIA GLOBAL: ES PROHIBIDO prescribir Nitroglicerina, Nipride o Isosorbida si el hombre relata uso de Sildenafilo (Viagra) en las últimas 24 horas o Tadalafilo en las últimas 48 horas. Si se infarta ahora, no usar nitratos."
+      }
+    }
+  },
+
+  /* ── PARACETAMOL ── */
+  "paracetamol": {
+    "alcool_etilico": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INFERNO HEPÁTICO. O álcool consumido cronicamente 'hipertrofia' a enzima CYP2E1 no fígado. Quando o paciente alcoolizado (ou bebedor diário crônico) toma doses comuns de paracetamol (ex: curar a ressaca), essa enzima super ativada converte quase todo o paracetamol no metabólito venenoso (NAPQI), causando falência hepática com uma dosagem que seria inofensiva num fígado virgem.",
+        es: "INFIERNO HEPÁTICO. El alcohol consumido crónicamente 'hipertrofia' la enzima CYP2E1 en el hígado. Cuando el paciente alcoholizado (o bebedor diario crónico) toma dosis comunes de paracetamol (ej: curar la resaca), esta enzima súper activada convierte casi todo el paracetamol en el metabolito venenoso (NAPQI), causando fallo hepático con una dosis que sería inofensiva en un hígado virgen."
+      },
+      conduta: {
+        pt: "Limitar agressivamente o uso de paracetamol para no máximo 2 gramas/dia em usuários crônicos de álcool. Orientar nunca misturar em 'ressacas'.",
+        es: "Limitar agresivamente el uso de paracetamol a un máximo de 2 gramos/día en usuarios crónicos de alcohol. Orientar a nunca mezclar en 'resacas'."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Mesma via do álcool. Drogas como Fenitoína e Fenobarbital turbinam a destruição do paracetamol para vias tóxicas. Reduz a janela de segurança terapêutica do analgésico.",
+        es: "Misma vía del alcohol. Drogas como Fenitoína y Fenobarbital aceleran la destrucción del paracetamol hacia vías tóxicas. Reduce la ventana de seguridad terapéutica del analgésico."
+      },
+      conduta: {
+        pt: "Usar com cautela prolongada em epiléticos e não exceder a dose nominal.",
+        es: "Usar con precaución prolongada en epilépticos y no exceder la dosis nominal."
+      }
+    }
+  },
+
+  /* ── AINEs — TRÍPLICE MORTAL + ISRS ── */
+  "$classe_aines": {
+    "interacao_triplice_renal": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A TRÍPLICE MORTAL (TRIPLE WHAMMY). Os rins dependem das Prostaglandinas para abrir a torneira de entrada de sangue (Arteríola Aferente) e dependem da Angiotensina para fechar a torneira de saída (Arteríola Eferente) para manter a pressão interna e filtrar urina. O AINE desliga as Prostaglandinas (fecha a entrada de sangue). O IECA/BRA (Losartana, Enalapril) desliga a Angiotensina (abre a saída, vazando a pressão). E o Diurético (Furosemida) rouba o volume de água total do corpo. RESULTADO: O rim seca instantaneamente por falta de pressão e sangue, gerando Insuficiência Renal Aguda que pode exigir diálise permanente.",
+        es: "LA TRIPLE MORTAL (TRIPLE WHAMMY). Los riñones dependen de las Prostaglandinas para abrir la llave de entrada de sangre (Arteriola Aferente) y de la Angiotensina para cerrar la llave de salida (Arteriola Eferente) para mantener la presión interna y filtrar orina. El AINE apaga las Prostaglandinas (cierra la entrada). El IECA/ARAII (Losartán, Enalapril) apaga la Angiotensina (abre la salida, fugando presión). Y el Diurético roba volumen. RESULTADO: El riñón se seca instantáneamente por falta de presión, generando Insuficiencia Renal Aguda que puede exigir diálisis permanente."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO PRÁTICA. JAMAIS prescrever Diclofenaco/Cetoprofeno no PA para idosos hipertensos em uso de IECA+Diurético. Use Dipirona, Paracetamol, Tramadol ou opioides puros.",
+        es: "CONTRAINDICACIÓN PRÁCTICA. JAMÁS prescribir Diclofenaco/Ketoprofeno en Urgencias para ancianos hipertensos en uso de IECA+Diurético. Use Metamizol, Paracetamol, Tramadol u opioides puros."
+      }
+    },
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Aumento Sinérgico de Sangramento Oculto. As plaquetas dependem da serotonina absorvida do sangue para se ativarem e causarem o tampão hemostático. Os antidepressivos (Fluoxetina, Sertralina, Venlafaxina) impedem a plaqueta de pegar a serotonina, deixando a plaqueta 'meio fraca'. O AINE desliga a COX da plaqueta, deixando ela totalmente inativa. O uso de ambos aumenta de 3 a 5 vezes o risco de hemorragias gástricas.",
+        es: "Aumento Sinérgico de Sangrado Oculto. Las plaquetas dependen de la serotonina absorbida de la sangre para activarse. Los antidepresivos (Fluoxetina, Sertralina) impiden a la plaqueta tomar la serotonina, dejándola 'medio débil'. El AINE apaga la COX de la plaqueta, dejándola inactiva. El uso de ambos aumenta de 3 a 5 veces el riesgo de hemorragias gástricas."
+      },
+      conduta: {
+        pt: "Alerte os pacientes usuários de antidepressivos crônicos a não usar Ibuprofeno/Diclofenaco para dores corriqueiras sem proteção (IBP), e sim analgésicos comuns.",
+        es: "Alerte a los pacientes usuarios de antidepresivos crónicos a no usar Ibuprofeno/Diclofenaco para dolores rutinarios sin protección (IBP), sino analgésicos comunes."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
