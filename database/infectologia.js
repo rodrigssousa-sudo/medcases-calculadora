@@ -561,3 +561,214 @@
   }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — Grupo 3 (posaconazol · isavuconazol · nistatina · aciclovir · valaciclovir — BUILD 340 Lote 3) */
 
 })();
+
+/* ── GRUPO 4: Antivirais Sistêmicos Complexos — BUILD 342 Lote 4 ── */
+(function () {
+  'use strict';
+  if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null) return;
+
+  Object.assign(window.INFECTOLOGIA_DRUGS_DB, {
+
+    /* ── GANCICLOVIR ────────────────────────────────────────────────────── */
+    "ganciclovir": {
+      name: { pt: 'Ganciclovir', es: 'Ganciclovir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral (Análogo de Nucleosídeo)', es: 'Antiviral (Análogo de Nucleósido)' },
+      indications: {
+        pt: ['Tratamento da Retinite por Citomegalovírus (CMV) em pacientes com AIDS', 'Prevenção e Tratamento de Doença por CMV em transplantados de órgãos sólidos e medula óssea'],
+        es: ['Tratamiento de la Retinitis por Citomegalovirus (CMV) en pacientes con SIDA', 'Prevención y Tratamiento de Enfermedad por CMV en trasplantados de órganos sólidos y médula ósea']
+      },
+      commercialNames: { br: ['Cymevene'], ar: ['Cymevene'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 500 mg'], es: ['Vial liofilizado 500 mg'] },
+      mechanism: {
+        pt: 'Pró-fármaco ativado inicialmente pela enzima quinase viral UL97 do Citomegalovírus (CMV). Uma vez trifosforilado, compete com o nucleotídeo natural (GTP) e se incorpora ao DNA do vírus. Ao entrar na fita, paralisa a DNA polimerase viral e impede a replicação do CMV. É de 10 a 100 vezes mais potente contra o CMV do que o Aciclovir.',
+        es: 'Profármaco activado inicialmente por la enzima quinasa viral UL97 del Citomegalovirus (CMV). Una vez trifosforilado, compite con el nucleótido natural (GTP) y se incorpora al ADN del virus. Al entrar en la cadena, paraliza la ADN polimerasa viral e impide la replicación del CMV. Es de 10 a 100 veces más potente contra el CMV que el Aciclovir.'
+      },
+      dose: {
+        adult: {
+          pt: 'Indução (Tratamento ativo): 5 mg/kg IV a cada 12 horas por 14 a 21 dias. Manutenção/Profilaxia: 5 mg/kg IV 1x ao dia (frequentemente por meses).',
+          es: 'Inducción (Tratamiento activo): 5 mg/kg IV cada 12 horas por 14 a 21 días. Mantenimiento/Profilaxis: 5 mg/kg IV 1 vez al día (frecuentemente por meses).'
+        },
+        pediatric: {
+          pt: '5 mg/kg IV a cada 12 horas.',
+          es: '5 mg/kg IV cada 12 horas.'
+        }
+      },
+      administration: { pt: ['Administrar em infusão IV lenta de 1 hora.', 'O pó liofilizado é extremamente tóxico e irritante. O preparo exige paramentação rigorosa (risco carcinogênico e teratogênico na manipulação). Se extravasar na veia, causa necrose.'], es: ['Administrar en infusión IV lenta de 1 hora.', 'El polvo liofilizado es extremadamente tóxico e irritante. La preparación exige indumentaria rigurosa (riesgo carcinogénico y teratogénico en la manipulación). Si se extravasa en la vena, causa necrosis.'] },
+      renalAdjustment: { required: true, message: { pt: 'Altamente dependente do rim. ClCr 25-49: 2,5 mg/kg 12/12h. ClCr 10-24: 2,5 mg/kg 1x/dia. ClCr < 10: 1,25 mg/kg 1x/dia.', es: 'Altamente dependiente del riñón. ClCr 25-49: 2,5 mg/kg 12/12h. ClCr 10-24: 2,5 mg/kg 1 vez/día. ClCr < 10: 1,25 mg/kg 1 vez/día.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Flebite', 'Febre', 'Aumento de creatinina'], es: ['Flebitis', 'Fiebre', 'Aumento de creatinina'] },
+      dangerousAdverseEffects: { pt: ['Supressão massiva da medula óssea (Neutropenia grave, Anemia, Trombocitopenia) ocorrendo em até 40% dos pacientes', 'Teratogenicidade e Infertilidade (Azoospermia)'], es: ['Supresión masiva de la médula ósea (Neutropenia grave, Anemia, Trombocitopenia) ocurriendo en hasta 40% de los pacientes', 'Teratogenicidad e Infertilidad (Azoospermia)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade', 'Contagem de Neutrófilos < 500/mm³ ou Plaquetas < 25.000/mm³ (a droga esmagará ainda mais a medula)'], es: ['Hipersensibilidad', 'Recuento de Neutrófilos < 500/mm³ o Plaquetas < 25.000/mm³ (la droga aplastará aún más la médula)'] },
+        relative: { pt: ['Uso associado de Zidovudina (AZT) ou Imipenem'], es: ['Uso asociado de Zidovudina (AZT) o Imipenem'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ALERTA HEMATOLÓGICO: A neutropenia induzida pelo Ganciclovir muitas vezes obriga o uso conjunto de Filgrastim (G-CSF) na UTI ou a interrupção da terapia, pois deixa o paciente severamente vulnerável a sepses bacterianas superpostas.', es: 'ALERTA HEMATOLÓGICA: La neutropenia inducida por el Ganciclovir muchas veces obliga al uso conjunto de Filgrastim (G-CSF) en la UCI o a la interrupción de la terapia, pues deja al paciente severamente vulnerable a sepsis bacterianas superpuestas.' }
+      }
+    },
+
+    /* ── VALGANCICLOVIR ─────────────────────────────────────────────────── */
+    "valganciclovir": {
+      name: { pt: 'Valganciclovir', es: 'Valganciclovir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral (Pró-fármaco do Ganciclovir)', es: 'Antiviral (Profármaco del Ganciclovir)' },
+      indications: {
+        pt: ['Prevenção e Tratamento da doença por CMV (transição da via venosa para tratamento ambulatorial/domiciliar)'],
+        es: ['Prevención y Tratamiento de la enfermedad por CMV (transición de la vía venosa para tratamiento ambulatorio/domiciliario)']
+      },
+      commercialNames: { br: ['Valcyte'], ar: ['Valcyte'] },
+      presentation: { pt: ['Comprimidos revestidos 450 mg'], es: ['Comprimidos recubiertos 450 mg'] },
+      mechanism: {
+        pt: 'Faz para o Ganciclovir o mesmo que o Valaciclovir faz para o Aciclovir. Adicionou-se uma Valina à molécula para turbinar a absorção intestinal. No fígado e parede do intestino, enzimas clivam a molécula, liberando Ganciclovir puro no sangue com biodisponibilidade de 60% (vs 5% do ganciclovir oral antigo). Substitui perfeitamente a internação hospitalar venosa.',
+        es: 'Hace para el Ganciclovir lo mismo que el Valaciclovir hace para el Aciclovir. Se añadió una Valina a la molécula para potenciar la absorción intestinal. En el hígado y pared del intestino, enzimas escinden la molécula, liberando Ganciclovir puro en la sangre con biodisponibilidad del 60% (vs 5% del ganciclovir oral antiguo). Sustituye perfectamente la internación hospitalaria venosa.'
+      },
+      dose: {
+        adult: {
+          pt: 'Indução: 900 mg VO (2 comp de 450 mg) a cada 12 horas por 21 dias. Profilaxia/Manutenção: 900 mg VO 1x ao dia.',
+          es: 'Inducción: 900 mg VO (2 comp de 450 mg) cada 12 horas por 21 días. Profilaxis/Mantenimiento: 900 mg VO 1 vez al día.'
+        },
+        pediatric: {
+          pt: 'Calculada por fórmula específica usando Área de Superfície Corporal (BSA) e clearance de creatinina (fórmula de Schwartz).',
+          es: 'Calculada por fórmula específica usando Área de Superficie Corporal (BSA) y clearance de creatinina (fórmula de Schwartz).'
+        }
+      },
+      administration: { pt: ['Deve ser ingerido COM ALIMENTOS para maximizar a absorção.', 'Os comprimidos NÃO DEVEM ser quebrados ou triturados (alta toxicidade da poeira inalada).'], es: ['Debe ser ingerido CON ALIMENTOS para maximizar la absorción.', 'Los comprimidos NO DEBEN ser rotos o triturados (alta toxicidad del polvo inhalado).'] },
+      renalAdjustment: { required: true, message: { pt: 'Mandatório. ClCr 40-59: 450 mg 12/12h (ataque). ClCr 25-39: 450 mg 1x/dia. ClCr 10-24: 450 mg a cada 48h. ClCr < 10: CONTRAINDICADO.', es: 'Mandatorio. ClCr 40-59: 450 mg 12/12h (ataque). ClCr 25-39: 450 mg 1 vez/día. ClCr 10-24: 450 mg cada 48h. ClCr < 10: CONTRAINDICADO.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste.', es: 'Sin ajuste.' } },
+      commonAdverseEffects: { pt: ['Diarreia e Náuseas', 'Cefaleia', 'Tremores'], es: ['Diarrea y Náuseas', 'Cefalea', 'Temblores'] },
+      dangerousAdverseEffects: { pt: ['Supressão de medula (Neutropenia e Trombocitopenia severas) igual ao ganciclovir venoso', 'Descolamento de retina (rara associação)'], es: ['Supresión de médula (Neutropenia y Trombocitopenia severas) igual al ganciclovir venoso', 'Desprendimiento de retina (rara asociación)'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes em hemodiálise (ClCr < 10 mL/min)', 'Citopenias graves (Neutrófilos < 500)'], es: ['Pacientes en hemodiálisis (ClCr < 10 mL/min)', 'Citopenias graves (Neutrófilos < 500)'] },
+        relative: { pt: ['Uso associado a Micofenolato Mofetil (soma de toxicidade medular em transplantados)'], es: ['Uso asociado a Micofenolato Mofetilo (suma de toxicidad medular en trasplantados)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Por se tratar de um antiviral de uso contínuo no pós-transplante, monitoramento de hemograma a cada 2 a 4 semanas é obrigatório para não deixar o paciente entrar em aplasia medular silenciosa.', es: 'Al tratarse de un antiviral de uso continuo en el post-trasplante, la monitorización del hemograma cada 2 a 4 semanas es obligatoria para no dejar que el paciente entre en aplasia medular silenciosa.' }
+      }
+    },
+
+    /* ── OSELTAMIVIR ────────────────────────────────────────────────────── */
+    "oseltamivir": {
+      name: { pt: 'Oseltamivir', es: 'Oseltamivir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral (Inibidor da Neuraminidase)', es: 'Antiviral (Inhibidor de la Neuraminidasa)' },
+      indications: {
+        pt: ['Tratamento e Profilaxia do vírus Influenza A e B (Gripe)', 'Uso empírico obrigatório na Síndrome Respiratória Aguda Grave (SRAG)'],
+        es: ['Tratamiento y Profilaxis del virus Influenza A y B (Gripe)', 'Uso empírico obligatorio en el Síndrome Respiratorio Agudo Grave (SRAG)']
+      },
+      commercialNames: { br: ['Tamiflu'], ar: ['Tamiflu', 'Agucort'] },
+      presentation: { pt: ['Cápsulas 30 mg, 45 mg e 75 mg', 'Pó para suspensão oral'], es: ['Cápsulas 30 mg, 45 mg y 75 mg', 'Polvo para suspensión oral'] },
+      mechanism: {
+        pt: 'A neuraminidase é a enzima viral que age como uma tesoura, cortando as ligações que prendem as novas cópias do vírus da gripe à célula infectada. O Oseltamivir bloqueia essa enzima. Como resultado, os novos vírus recém-formados ficam colados na superfície da célula doente e não conseguem se espalhar para o restante do pulmão, limitando o avanço da doença.',
+        es: 'La neuraminidasa es la enzima viral que actúa como una tijera, cortando los enlaces que sujetan las nuevas copias del virus de la gripe a la célula infectada. El Oseltamivir bloquea esta enzima. Como resultado, los nuevos virus recién formados quedan pegados a la superficie de la célula enferma y no pueden propagarse al resto del pulmón, limitando el avance de la enfermedad.'
+      },
+      dose: {
+        adult: {
+          pt: 'Tratamento: 75 mg VO a cada 12 horas por 5 dias. Profilaxia (após contato): 75 mg VO 1x ao dia por 10 dias.',
+          es: 'Tratamiento: 75 mg VO cada 12 horas por 5 días. Profilaxis (tras contacto): 75 mg VO 1 vez al día por 10 días.'
+        },
+        pediatric: {
+          pt: 'Ajustado pelo peso. > 40 kg: 75 mg 12/12h; 23-40 kg: 60 mg 12/12h; 15-23 kg: 45 mg 12/12h.',
+          es: 'Ajustado por peso. > 40 kg: 75 mg 12/12h; 23-40 kg: 60 mg 12/12h; 15-23 kg: 45 mg 12/12h.'
+        }
+      },
+      administration: { pt: ['Tomar com as refeições para minimizar náuseas.', 'Em pacientes entubados, diluir a cápsula e administrar pela sonda nasogástrica.'], es: ['Tomar con las comidas para minimizar náuseas.', 'En pacientes entubados, diluir la cápsula y administrar por la sonda nasogástrica.'] },
+      renalAdjustment: { required: true, message: { pt: 'O metabólito ativo acumula. ClCr 30-60: Tratamento 30 mg 12/12h. ClCr 10-30: 30 mg 1x/dia. ClCr < 10: Não recomendado.', es: 'El metabolito activo se acumula. ClCr 30-60: Tratamiento 30 mg 12/12h. ClCr 10-30: 30 mg 1 vez/día. ClCr < 10: No recomendado.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Náuseas e Vômitos frequentes (10 a 15% dos casos)', 'Cefaleia', 'Insônia'], es: ['Náuseas y Vómitos frecuentes (10 a 15% de los casos)', 'Cefalea', 'Insomnio'] },
+      dangerousAdverseEffects: { pt: ['Eventos neuropsiquiátricos anormais (Delírios, Alucinações, Automutilação e comportamento suicida) — especialmente descrito em crianças e adolescentes no Japão.'], es: ['Eventos neuropsiquiátricos anormales (Delirios, Alucinaciones, Automutilación y comportamiento suicida) — especialmente descrito en niños y adolescentes en Japón.'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave'], es: ['Hipersensibilidad grave'] },
+        relative: { pt: ['Pacientes com doença renal em estágio terminal sem diálise'], es: ['Pacientes con enfermedad renal en etapa terminal sin diálisis'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A regra de ouro do Oseltamivir é o TEMPO. Ele reduz a gravidade e o risco de intubação apenas se iniciado nas primeiras 48 horas de sintomas. Iniciar o remédio no 5º dia de febre não muda o desfecho clínico, exceto em doentes muito graves ou hospitalizados.', es: 'La regla de oro del Oseltamivir es el TIEMPO. Reduce la gravedad y el riesgo de intubación solo si se inicia en las primeras 48 horas de síntomas. Iniciar el remedio en el 5º día de fiebre no cambia el desenlace clínico, excepto en enfermos muy graves u hospitalizados.' }
+      }
+    },
+
+    /* ── REMDESIVIR ─────────────────────────────────────────────────────── */
+    "remdesivir": {
+      name: { pt: 'Remdesivir', es: 'Remdesivir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral (Análogo de Nucleotídeo / Inibidor da RNA Polimerase)', es: 'Antiviral (Análogo de Nucleótido / Inhibidor de la ARN Polimerasa)' },
+      indications: {
+        pt: ['Tratamento da COVID-19 em pacientes internados com pneumonia e necessidade de suplementação de oxigênio (não em VNI ou ECMO)'],
+        es: ['Tratamiento de la COVID-19 en pacientes internados con neumonía y necesidad de suplementación de oxígeno (no en VNI o ECMO)']
+      },
+      commercialNames: { br: ['Veklury'], ar: ['Veklury'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 100 mg'], es: ['Vial liofilizado 100 mg'] },
+      mechanism: {
+        pt: 'Pró-fármaco ativado intracelularmente em trifosfato de nucleotídeo (análogo da adenosina). Infiltra-se na cadeia de RNA que o SARS-CoV-2 está montando através da RNA polimerase dependente de RNA (RdRp). Após incorporar a falsa adenosina, a enzima tenta adicionar mais três bases, mas a estrutura paralisa (terminação de cadeia atrasada), freando a replicação viral.',
+        es: 'Profármaco activado intracelularmente en trifosfato de nucleótido (análogo de la adenosina). Se infiltra en la cadena de ARN que el SARS-CoV-2 está montando a través de la ARN polimerasa dependiente de ARN (RdRp). Tras incorporar la falsa adenosina, la enzima intenta añadir tres bases más, pero la estructura se paraliza (terminación de cadena retrasada), frenando la replicación viral.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose de Ataque: 200 mg IV no Dia 1. Manutenção: 100 mg IV 1x/dia (geralmente por 5 dias, máximo de 10 dias).',
+          es: 'Dosis de Ataque: 200 mg IV en el Día 1. Mantenimiento: 100 mg IV 1 vez/día (generalmente por 5 días, máximo de 10 días).'
+        },
+        pediatric: {
+          pt: 'Crianças > 40 kg: mesma dose do adulto. < 40 kg: 5 mg/kg ataque, 2,5 mg/kg manutenção.',
+          es: 'Niños > 40 kg: misma dosis que el adulto. < 40 kg: 5 mg/kg ataque, 2,5 mg/kg mantenimiento.'
+        }
+      },
+      administration: { pt: ['Infusão IV lenta ao longo de 30 a 120 minutos (para prevenir reações de hipersensibilidade e hipotensão).'], es: ['Infusión IV lenta a lo largo de 30 a 120 minutos (para prevenir reacciones de hipersensibilidad e hipotensión).'] },
+      renalAdjustment: { required: false, message: { pt: 'Diretrizes iniciais proibiam em ClCr < 30 pelo acúmulo do excipiente SBECD. Estudos recentes reverteram isso: pode ser usado em DRC ou diálise, pois o benefício no COVID supera o risco teórico do veículo.', es: 'Las directrices iniciales prohibían en ClCr < 30 por la acumulación del excipiente SBECD. Estudios recientes revirtieron esto: puede usarse en ERC o diálisis, pues el beneficio en COVID supera el riesgo teórico del vehículo.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Descontinuar se a TGO/TGP subir mais de 5 vezes o limite superior do normal ou se houver icterícia ativa.', es: 'Descontinuar si la AST/ALT sube más de 5 veces el límite superior de lo normal o si hay ictericia activa.' } },
+      commonAdverseEffects: { pt: ['Aumento assintomático das transaminases hepáticas', 'Náusea'], es: ['Aumento asintomático de las transaminasas hepáticas', 'Náusea'] },
+      dangerousAdverseEffects: { pt: ['Bradicardia severa induzida pela droga', 'Reações anafiláticas e hipotensão na infusão rápida'], es: ['Bradicardia severa inducida por la droga', 'Reacciones anafilácticas e hipotensión en la infusión rápida'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade'], es: ['Hipersensibilidad'] },
+        relative: { pt: ['Uso associado de Cloroquina ou Hidroxicloroquina (antagonismo laboratorial)'], es: ['Uso asociado de Cloroquina o Hidroxicloroquina (antagonismo de laboratorio)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ALERTA DE FASE: O Remdesivir ataca o vírus. Logo, ele só funciona na primeira semana de doença (fase de replicação viral). Usá-lo no paciente gravemente entubado no D14, onde a inflamação e a fibrose já assumiram o quadro, é inútil.', es: 'ALERTA DE FASE: El Remdesivir ataca al virus. Por tanto, solo funciona en la primera semana de enfermedad (fase de replicación viral). Usarlo en el paciente gravemente entubado en el D14, donde la inflamación y la fibrosis ya asumieron el cuadro, es inútil.' }
+      }
+    },
+
+    /* ── NIRMATRELVIR + RITONAVIR (PAXLOVID) ────────────────────────────── */
+    "paxlovid": {
+      name: { pt: 'Nirmatrelvir + Ritonavir (Paxlovid)', es: 'Nirmatrelvir + Ritonavir (Paxlovid)' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral (Inibidor da Protease Principal Mpro do SARS-CoV-2) + Booster Farmacocinético', es: 'Antiviral (Inhibidor de la Proteasa Principal Mpro del SARS-CoV-2) + Booster Farmacocinético' },
+      indications: {
+        pt: ['Tratamento de COVID-19 leve a moderada em adultos de alto risco de progressão para quadro severo (não internados)'],
+        es: ['Tratamiento de COVID-19 leve a moderada en adultos de alto riesgo de progresión a cuadro severo (no internados)']
+      },
+      commercialNames: { br: ['Paxlovid'], ar: ['Paxlovid'] },
+      presentation: { pt: ['Cartela com comprimidos co-embalados: 2 comprimidos rosas (Nirmatrelvir 150 mg) + 1 comprimido branco (Ritonavir 100 mg) por dose.'], es: ['Blíster con comprimidos co-empaquetados: 2 comprimidos rosas (Nirmatrelvir 150 mg) + 1 comprimido blanco (Ritonavir 100 mg) por dosis.'] },
+      mechanism: {
+        pt: 'Terapia combinada. O Nirmatrelvir inibe a protease principal (3CLpro / Mpro) do coronavírus, impedindo que corte suas poliproteínas em proteínas funcionais ativas, esterilizando a fábrica do vírus. O Ritonavir não tem ação contra o COVID; atua puramente como booster farmacocinético. O Ritonavir inibe o CYP3A4 hepático, impedindo que o fígado destrua o Nirmatrelvir e mantendo-o em concentrações eficazes. Esse bloqueio enzimático gera centenas de interações medicamentosas potencialmente fatais.',
+        es: 'Terapia combinada. El Nirmatrelvir inhibe la proteasa principal (3CLpro / Mpro) del coronavirus, impidiendo que corte sus poliproteínas en proteínas funcionales activas, esterilizando la fábrica del virus. El Ritonavir no tiene acción contra el COVID; actúa puramente como booster farmacocinético. El Ritonavir inhibe el CYP3A4 hepático, impidiendo que el hígado destruya el Nirmatrelvir y manteniéndolo en concentraciones eficaces. Este bloqueo enzimático genera cientos de interacciones medicamentosas potencialmente fatales.'
+      },
+      dose: {
+        adult: {
+          pt: '2 comp de Nirmatrelvir (300 mg) + 1 comp de Ritonavir (100 mg) tomados juntos a cada 12 horas, por 5 dias corridos.',
+          es: '2 comp de Nirmatrelvir (300 mg) + 1 comp de Ritonavir (100 mg) tomados juntos cada 12 horas, por 5 días seguidos.'
+        },
+        pediatric: {
+          pt: 'Não autorizado para menores de 18 anos ou < 40 kg na maioria dos protocolos.',
+          es: 'No autorizado para menores de 18 años o < 40 kg en la mayoría de los protocolos.'
+        }
+      },
+      administration: { pt: ['Tomar os três comprimidos da dose matinal juntos e os três da dose noturna juntos. Engolir inteiros.', 'Obrigatório iniciar nos primeiros 5 dias após o início dos sintomas de COVID.'], es: ['Tomar los tres comprimidos de la dosis matinal juntos y los tres de la dosis nocturna juntos. Tragar enteros.', 'Obligatorio iniciar en los primeros 5 días tras el inicio de los síntomas de COVID.'] },
+      renalAdjustment: { required: true, message: { pt: 'TFG 30-59 mL/min: retirar um comprimido rosa. Tomar 150 mg Nirmatrelvir + 100 mg Ritonavir a cada 12h. TFG < 30 mL/min: CONTRAINDICADO.', es: 'TFG 30-59 mL/min: retirar un comprimido rosa. Tomar 150 mg Nirmatrelvir + 100 mg Ritonavir cada 12h. TFG < 30 mL/min: CONTRAINDICADO.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em insuficiência hepática grave (Child-Pugh C).', es: 'Contraindicado en insuficiencia hepática grave (Child-Pugh C).' } },
+      commonAdverseEffects: { pt: ['Disgeusia (gosto muito amargo, metálico na boca — quase universal, cessa após o tratamento)', 'Diarreia', 'Hipertensão leve'], es: ['Disgeusia (sabor muy amargo, metálico en la boca — casi universal, cesa tras el tratamiento)', 'Diarrea', 'Hipertensión leve'] },
+      dangerousAdverseEffects: { pt: ['Hepatotoxicidade aguda', 'Efeito Rebote da COVID-19 (COVID Rebound) — o paciente testa negativo e, dias após o fim dos 5 dias, os sintomas voltam e o teste positivа novamente'], es: ['Hepatotoxicidad aguda', 'Efecto Rebote de la COVID-19 (COVID Rebound) — el paciente da negativo y, días tras el fin de los 5 días, los síntomas vuelven y la prueba da positiva nuevamente'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes em uso de medicamentos dependentes do CYP3A4 que não podem ser suspensos (Rivaroxabana, Amiodarona, Tacrolimus, Quetiapina, Sinvastatina) — verificar bula sempre.'], es: ['Pacientes en uso de medicamentos dependientes del CYP3A4 que no pueden ser suspendidos (Rivaroxabán, Amiodarona, Tacrolimus, Quetiapina, Simvastatina) — verificar prospecto siempre.'] },
+        relative: { pt: ['Uso concomitante com indutores que anulam o Ritonavir (Rifampicina, Erva de São João)'], es: ['Uso concomitante con inductores que anulan el Ritonavir (Rifampicina, Hierba de San Juan)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'CAMPEÃO MUNDIAL DE INTERAÇÕES MEDICAMENTOSAS DE RISCO DE MORTE. O Ritonavir blinda o fígado por 5 dias. Inúmeros remédios comuns do idoso vão se acumular causando hemorragia, arritmias ou rabdomiólise. A revisão de toda a lista de medicamentos habituais é o passo 1 obrigatório antes de prescrever.', es: 'CAMPEÓN MUNDIAL DE INTERACCIONES MEDICAMENTOSAS DE RIESGO DE MUERTE. El Ritonavir blinda el hígado por 5 días. Numerosos remedios comunes del anciano se acumularán causando hemorragia, arritmias o rabdomiólisis. La revisión de toda la lista de medicamentos habituales es el paso 1 obligatorio antes de prescribir.' }
+      }
+    }
+
+  }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — Grupo 4 (ganciclovir · valganciclovir · oseltamivir · remdesivir · paxlovid — BUILD 342 Lote 4) */
+
+})();

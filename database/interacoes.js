@@ -19935,6 +19935,106 @@ const INTERACOES_DB = {
         es: "Monitorizar toxicidad asociada en pacientes sometidos a trasplante renal."
       }
     }
+  }, // vírgula adicionada; BUILD 342 Lote 4 blocks follow
+
+  /* ── GANCICLOVIR / VALGANCICLOVIR ── */
+  "$classe_antivirais_cmv": {
+    "zidovudina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Medular Destrutivo. Ambas as drogas causam severa supressão da medula óssea (especialmente neutropenia profunda e anemia). O uso conjunto eleva o risco de aplasia funcional para mais de 80%, deixando o paciente vulnerável a sepses fulminantes.",
+        es: "Sinergismo Medular Destructivo. Ambas drogas causan severa supresión de la médula ósea (especialmente neutropenia profunda y anemia). El uso conjunto eleva el riesgo de aplasia funcional a más del 80%, dejando al paciente vulnerable a sepsis fulminantes."
+      },
+      conduta: {
+        pt: "Contraindicado. A Zidovudina (AZT) do esquema do HIV deve ser temporariamente substituída por outro antirretroviral (como Tenofovir ou Abacavir) enquanto o paciente tratar a retinite por CMV.",
+        es: "Contraindicado. La Zidovudina (AZT) del esquema del VIH debe ser temporalmente sustituida por otro antirretroviral (como Tenofovir o Abacavir) mientras el paciente trata la retinitis por CMV."
+      }
+    },
+    "imipenem": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Convulsivante. O Ganciclovir penetra a barreira hematoencefálica e o Imipenem sabidamente abaixa o limiar convulsivo cortical. Há numerosos relatos de crises epilépticas generalizadas refratárias quando essas duas drogas se encontram no plasma de doentes graves.",
+        es: "Sinergismo Convulsivante. El Ganciclovir penetra la barrera hematoencefálica y el Imipenem comprobadamente baja el umbral convulsivo cortical. Hay numerosos reportes de crisis epilépticas generalizadas refractarias cuando estas dos drogas se encuentran en el plasma de enfermos graves."
+      },
+      conduta: {
+        pt: "A associação é formalmente proibida pelo FDA. Trocar o Imipenem por Meropenem ou Ceftazidima em transplantados de UTI com CMV ativo.",
+        es: "La asociación está formalmente prohibida por la FDA. Cambiar Imipenem por Meropenem o Ceftazidima en trasplantados de UCI con CMV activo."
+      }
+    }
+  },
+
+  /* ── OSELTAMIVIR ── */
+  "oseltamivir": {
+    "vacina_influenza_atenuada": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Inibição de Imunização. A vacina da gripe intranasal (rara no Brasil, comum nos EUA) contém vírus vivo atenuado. O Oseltamivir em circulação no corpo atacará o vírus vacinal e o destruirá antes que gere memória imunológica, invalidando a vacina.",
+        es: "Inhibición de Inmunización. La vacuna de la gripe intranasal (rara en Brasil, común en EE.UU.) contiene virus vivo atenuado. El Oseltamivir en circulación en el cuerpo atacará al virus vacunal y lo destruirá antes de que genere memoria inmunológica, invalidando la vacuna."
+      },
+      conduta: {
+        pt: "Não dar Oseltamivir até 2 semanas após a vacina de vírus vivo atenuado, ou não dar a vacina até 48h após terminar o Oseltamivir. As vacinas injetáveis anuais são de vírus morto inativado e não apresentam essa interação.",
+        es: "No dar Oseltamivir hasta 2 semanas tras la vacuna de virus vivo atenuado, o no dar la vacuna hasta 48h tras terminar el Oseltamivir. Las vacunas inyectables anuales son de virus muerto inactivado y no presentan esta interacción."
+      }
+    }
+  },
+
+  /* ── REMDESIVIR ── */
+  "remdesivir": {
+    "hidroxicloroquina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Antagonismo Celular Comprovado in vitro. A Cloroquina e a Hidroxicloroquina interferem na fosforilação intracelular do Remdesivir. O antiviral perderá grande parte da sua eficácia contra a RNA polimerase do SARS-CoV-2 se a cloroquina estiver bloqueando sua ativação.",
+        es: "Antagonismo Celular Comprobado in vitro. La Cloroquina e Hidroxicloroquina interfieren en la fosforilación intracelular del Remdesivir. El antiviral perderá gran parte de su eficacia contra la ARN polimerasa del SARS-CoV-2 si la cloroquina está bloqueando su activación."
+      },
+      conduta: {
+        pt: "A coadministração não é recomendada nas diretrizes de manejo do COVID-19. Suspender cloroquina se for iniciar Remdesivir.",
+        es: "La coadministración no es recomendada en las directrices de manejo del COVID-19. Suspender cloroquina si se va a iniciar Remdesivir."
+      }
+    }
+  },
+
+  /* ── PAXLOVID (RITONAVIR + NIRMATRELVIR) ── */
+  "paxlovid": {
+    "$classe_estatinas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Bloqueio de Clearance (Rabdomiólise). O Ritonavir inibe brutalmente o CYP3A4. A Sinvastatina e a Lovastatina dependem 100% dessa via. No 3º dia de Paxlovid, a estatina acumula a níveis tóxicos fulminantes, causando rabdomiólise e paralisia renal por mioglobinúria.",
+        es: "Bloqueo de Clearance (Rabdomiólisis). El Ritonavir inhibe brutalmente el CYP3A4. La Simvastatina y la Lovastatina dependen 100% de esta vía. En el 3º día de Paxlovid, la estatina se acumula a niveles tóxicos fulminantes, causando rabdomiólisis y parálisis renal por mioglobinuria."
+      },
+      conduta: {
+        pt: "Suspender absolutamente a Sinvastatina e Lovastatina no Dia 1 e retornar somente 3 dias após o fim dos 5 dias de Paxlovid. A Atorvastatina também deve ser evitada.",
+        es: "Suspender absolutamente la Simvastatina y Lovastatina en el Día 1 y retornar solo 3 días después del fin de los 5 días de Paxlovid. La Atorvastatina también debe ser evitada."
+      }
+    },
+    "$classe_anticoagulantes_orais_diretos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O metabolismo da Rivaroxabana (Xarelto) e Apixabana será interrompido. A anticoagulação no sangue subirá astronomicamente, deflagrando hemorragias cerebrais ou gastrointestinais graves em pacientes idosos.",
+        es: "El metabolismo del Rivaroxabán (Xarelto) y Apixabán será interrumpido. La anticoagulación en la sangre subirá astronómicamente, desencadenando hemorragias cerebrales o gastrointestinales graves en pacientes ancianos."
+      },
+      conduta: {
+        pt: "Contraindicado. Se o paciente não puder trocar o anticoagulante provisoriamente para HBPM (Clexane), não poderá tomar Paxlovid para COVID. O risco de vida excede o benefício.",
+        es: "Contraindicado. Si el paciente no puede cambiar el anticoagulante provisionalmente a HBPM (Clexane), no podrá tomar Paxlovid para COVID. El riesgo de vida excede el beneficio."
+      }
+    },
+    "amiodarona": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O acúmulo de amiodarona induzido pelo bloqueio do CYP3A4 gera toxicidade miocárdica súbita e bloqueios cardíacos avançados refratários. Adicionalmente, pró-fármacos como o Clopidogrel necessitam do CYP para serem ativados — com o CYP bloqueado, a proteção do stent falha e o infarto ocorre.",
+        es: "La acumulación de amiodarona inducida por el bloqueo del CYP3A4 genera toxicidad miocárdica súbita y bloqueos cardíacos avanzados refractarios. Adicionalmente, profármacos como el Clopidogrel necesitan del CYP para ser activados — con el CYP bloqueado, la protección del stent falla y el infarto ocurre."
+      },
+      conduta: {
+        pt: "Verificar a lista completa de interações na bula para todo paciente que iniciar Paxlovid. Entre os mais críticos: Tacrolimus, Ergotamina, Salmeterol, Diazepam, Alfuzosina e Clopidogrel.",
+        es: "Verificar la lista completa de interacciones en el prospecto para todo paciente que inicie Paxlovid. Entre los más críticos: Tacrolimus, Ergotamina, Salmeterol, Diazepam, Alfuzosina y Clopidogrel."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
