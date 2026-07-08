@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=364" />
-  <link rel="stylesheet" href="css/build233.css?v=364" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=364" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=364" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=364" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=364" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=364" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=366" />
+  <link rel="stylesheet" href="css/build233.css?v=366" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=366" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=366" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=366" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=366" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=366" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=364" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=366" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=364" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=366" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=364" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=366" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=364" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=366" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=364" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=366" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=364" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=366" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=364" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=366" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=364" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=366" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -17230,10 +17230,10 @@ function calcShowInlineResult(drugId) {
       ? indicList.map(i => `<li>${i}</li>`).join('')
       : `<li>${isES ? 'Ver ficha completa' : 'Ver bula completa'}</li>`;
     const viaDisplay = viaAdm
-      ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'VIA DE ADM:' : 'VIA DE ADM:'}</span><span class="hm300-val">${viaAdm}</span></div>`
+      ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'VÍA DE ADM:' : 'VIA DE ADM:'}</span><span class="hm300-val">${viaAdm}</span></div>`
       : '';
     const mantDisplay = doseMantencao
-      ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'DOSE MANUTENÇÃO:' : 'DOSE MANUTENÇÃO:'}</span><span class="hm300-val hm300-val--sub">${doseMantencao}</span></div>`
+      ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'DOSIS MANTENIMIENTO:' : 'DOSE DE MANUTENÇÃO:'}</span><span class="hm300-val hm300-val--sub">${doseMantencao}</span></div>`
       : '';
 
     cardHTML = `
@@ -19741,6 +19741,8 @@ function _adaptExternalDB(dbObj, categoryLabel) {
      Nível 3: nome canônico → heurística por sufixo farmacológico
   ════════════════════════════════════════════════════════════════════ */
   function getClassesDeFarmaco(nomeNormalizado) {
+    /* BUILD 366: outer guard — nenhum erro de propriedade nula escapa */
+    if (!nomeNormalizado || typeof nomeNormalizado !== 'string') return [];
     const seen = new Set();
     const resultado = [];
 
@@ -20658,11 +20660,11 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     ? Object.values(window.DRUG_CLASSES).reduce((acc, arr) => acc + (Array.isArray(arr) ? arr.length : 0), 0)
     : 0;
   console.log(
-    `[MedCases] Motor de Interações v4.1-BUILD364 (Ontologia Tri-Nível) inicializado.\n` +
+    `[MedCases] Motor de Interações v4.2-BUILD366 (Ontologia Tri-Nível) inicializado.\n` +
     `  🗃️  DB nós raiz    : ${_dbNodes}\n` +
     `  🏷️  DRUG_CLASSES   : ${_classCount} classes · ${_totalMembrs} membros totais\n` +
     `  🔗  DRUG_ALIASES   : ${_aliasCount} entradas\n` +
-    `  🔬  Motor: 8-paths C(n,2) · getClassesDeFarmaco tri-nível · try/catch por par\n` +
+    `  🔬  Motor: 8-paths C(n,2) · getClassesDeFarmaco tri-nível · try/catch por par · iOS guard BUILD366\n` +
     `  📋  Card: Gravidade · Score · Mecanismo Fisiopatológico · Conduta Médica`
   );
 
@@ -21059,10 +21061,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ? indicList.map(i => `<li>${i}</li>`).join('')
         : `<li>${isES ? 'Ver ficha completa' : 'Ver bula completa'}</li>`;
       const viaDisplay = viaAdm
-        ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'VIA DE ADM:' : 'VIA DE ADM:'}</span><span class="hm300-val">${viaAdm}</span></div>`
+        ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'VÍA DE ADM:' : 'VIA DE ADM:'}</span><span class="hm300-val">${viaAdm}</span></div>`
         : '';
       const mantDisplay = doseMantencao
-        ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'DOSE MANUTENÇÃO:' : 'DOSE MANUTENÇÃO:'}</span><span class="hm300-val hm300-val--sub">${doseMantencao}</span></div>`
+        ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'DOSIS MANTENIMIENTO:' : 'DOSE DE MANUTENÇÃO:'}</span><span class="hm300-val hm300-val--sub">${doseMantencao}</span></div>`
         : '';
 
       cardHTML = `
@@ -21077,13 +21079,13 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="hm300-body">
             <div class="hm300-row hm300-row--hero">
-              <span class="hm300-lbl">${isES ? 'DOSE INICIAL:' : 'DOSE INICIAL:'}</span>
+              <span class="hm300-lbl">${isES ? 'DOSIS INICIAL:' : 'DOSE INICIAL:'}</span>
               <span class="hm300-val hm300-val--big">${doseInicial}</span>
             </div>
             ${mantDisplay}
             ${viaDisplay}
             <div class="hm300-row hm300-row--indic">
-              <span class="hm300-lbl">${isES ? 'INDICAÇÃO:' : 'INDICAÇÃO:'}</span>
+              <span class="hm300-lbl">${isES ? 'INDICACIÓN:' : 'INDICAÇÃO:'}</span>
               <ul class="hm300-indic-list">${indicHtml}</ul>
             </div>
           </div>
@@ -21191,29 +21193,45 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>`;
     }
 
-    /* 3. Cria nó DOM e injeta IMEDIATAMENTE após o item clicado (ou no fallback) */
+    /* 3. Cria nó DOM e injeta IMEDIATAMENTE após o item clicado (ou no fallback)
+          BUILD 366: try/catch absoluto protege anchor.after() de erros DOM iOS */
     const cardNode = document.createElement('div');
     cardNode.className = 'hm-drug-inline-card';
     cardNode.setAttribute('data-drug-id', drugId);
     cardNode.innerHTML = cardHTML;
 
-    if (anchor) {
-      /* Injeção ideal: logo abaixo do item clicado na lista */
-      anchor.after(cardNode);
-    } else {
-      /* Fallback: usa o container estático #hm-drug-result */
-      const fallback = document.getElementById('hm-drug-result');
-      if (fallback) {
-        fallback.innerHTML = '';
-        fallback.appendChild(cardNode);
-        fallback.style.display = 'block';
+    try {
+      if (anchor) {
+        /* Injeção ideal: elementoClicado.after(cardHTML) — BUILD 366 */
+        anchor.after(cardNode);
       } else {
-        return; /* sem destino disponível */
+        /* Fallback: usa o container estático #hm-drug-result */
+        const fallback = document.getElementById('hm-drug-result');
+        if (fallback) {
+          fallback.innerHTML = '';
+          fallback.appendChild(cardNode);
+          fallback.style.display = 'block';
+        } else {
+          return; /* sem destino disponível */
+        }
       }
+    } catch(injErr) {
+      /* Fallback de emergência: insere no body se anchor falhou */
+      console.warn('[hmShowInlineResult] anchor.after falhou, usando fallback body:', injErr.message);
+      try {
+        const fb = document.getElementById('hm-drug-result') || document.getElementById('hm-drug-list');
+        if (fb) { fb.appendChild(cardNode); }
+      } catch(e2) { return; }
     }
 
-    /* 4. Scroll suave para o card (não para o rodapé da página) */
-    cardNode.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    /* 4. Scroll suave para o card — BUILD 366: isolado em try/catch
+          para não crashar iOS WebView quando o contêiner não suporta
+          smooth scrolling nativo. */
+    try {
+      cardNode.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } catch(scrollErr) {
+      try { cardNode.scrollIntoView(false); } catch(e2) { /* silencioso */ }
+    }
   };
 
   window.hmCloseInlineResult = function() {
@@ -21993,6 +22011,9 @@ document.addEventListener('DOMContentLoaded', () => {
        • window.patientData.clcr
   ============================================================ */
   window.hmCalcCockcroft = function() {
+    /* BUILD 366: outer try/catch — nenhum erro de propriedade nula
+       pode congelar o painel de dados do paciente */
+    try {
 
     /* ── Leituras de DOM ── */
     /* BUILD 283 — sanitização vírgula→ponto para decimais pt-BR / es */
@@ -22105,6 +22126,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (drugIdAttr && typeof window.hmShowInlineResult === 'function') {
         window.hmShowInlineResult(drugIdAttr);
       }
+    }
+
+    } catch(calcErr) {
+      /* BUILD 366: falha silenciosa — exibe '—' nos quadrantes */
+      console.warn('[hmCalcCockcroft] erro capturado:', calcErr.message);
+      try {
+        const pv = document.getElementById('hm-pv-clcr');
+        if (pv) pv.textContent = '—';
+      } catch(e2) { /* silencioso */ }
     }
   };
 
@@ -23048,59 +23078,59 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script defer src="database/interacoes.js?v=364"></script>
-<script defer src="database/antimicrobianos.js?v=364"></script>
-<script defer src="database/psicofarmacos.js?v=364"></script>
-<script defer src="database/analgesicos.js?v=364"></script>
-<script defer src="database/anticoag.js?v=364"></script>
-<script defer src="database/cardio.js?v=364"></script>
-<script defer src="database/endocrino.js?v=364"></script>
-<script defer src="database/gastro.js?v=364"></script>
-<script defer src="database/gastro_imuno.js?v=364"></script>
-<script defer src="database/imuno_corticoide.js?v=364"></script>
-<script defer src="database/endocrino_glp1.js?v=364"></script>
-<script defer src="database/infusoes.js?v=364"></script>
-<script defer src="database/nefro.js?v=364"></script>
-<script defer src="database/neuro.js?v=364"></script>
-<script defer src="database/obesidade.js?v=364"></script>
-<script defer src="database/pneumo.js?v=364"></script>
-<script defer src="database/psiquiatria.js?v=364"></script>
-<script defer src="database/reumatologia.js?v=364"></script>
-<script defer src="database/emergencia.js?v=364"></script>
-<script defer src="database/infectologia.js?v=364"></script>
-<script defer src="database/sedacao.js?v=364"></script>
-<script defer src="database/hematologia.js?v=364"></script>
-<script defer src="database/gastroenterologia.js?v=364"></script>
-<script defer src="database/cardiologia.js?v=364"></script>
-<script defer src="database/analgesia_opioides.js?v=364"></script>
-<script defer src="database/prescricoes.js?v=364" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script defer src="database/interacoes.js?v=366"></script>
+<script defer src="database/antimicrobianos.js?v=366"></script>
+<script defer src="database/psicofarmacos.js?v=366"></script>
+<script defer src="database/analgesicos.js?v=366"></script>
+<script defer src="database/anticoag.js?v=366"></script>
+<script defer src="database/cardio.js?v=366"></script>
+<script defer src="database/endocrino.js?v=366"></script>
+<script defer src="database/gastro.js?v=366"></script>
+<script defer src="database/gastro_imuno.js?v=366"></script>
+<script defer src="database/imuno_corticoide.js?v=366"></script>
+<script defer src="database/endocrino_glp1.js?v=366"></script>
+<script defer src="database/infusoes.js?v=366"></script>
+<script defer src="database/nefro.js?v=366"></script>
+<script defer src="database/neuro.js?v=366"></script>
+<script defer src="database/obesidade.js?v=366"></script>
+<script defer src="database/pneumo.js?v=366"></script>
+<script defer src="database/psiquiatria.js?v=366"></script>
+<script defer src="database/reumatologia.js?v=366"></script>
+<script defer src="database/emergencia.js?v=366"></script>
+<script defer src="database/infectologia.js?v=366"></script>
+<script defer src="database/sedacao.js?v=366"></script>
+<script defer src="database/hematologia.js?v=366"></script>
+<script defer src="database/gastroenterologia.js?v=366"></script>
+<script defer src="database/cardiologia.js?v=366"></script>
+<script defer src="database/analgesia_opioides.js?v=366"></script>
+<script defer src="database/prescricoes.js?v=366" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=364"></script>
+<script defer src="js/medcases-ux-v2.js?v=366"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=364"></script>
+<script defer src="js/hub-accordion.js?v=366"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=364"></script>
+<script defer src="js/build240b-accordion-fix.js?v=366"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=364"></script>
+<script defer src="js/calculator-overlay.js?v=366"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=364"></script>
+<script defer src="js/category-pills.js?v=366"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=364"></script>
+<script defer src="js/elec-calc.js?v=366"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=364"></script>
+<script defer src="js/deeplink-router.js?v=366"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=364"></script>
+<script defer src="js/build272-reactive-engine.js?v=366"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=364"></script>
+<script defer src="js/build283-accessory-bar.js?v=366"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
