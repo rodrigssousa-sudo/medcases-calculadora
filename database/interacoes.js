@@ -19112,6 +19112,99 @@ const INTERACOES_DB = {
         es: "Titular bombas de infusión individualmente (no hacer bolos rápidos conjuntos)."
       }
     }
+  },  // comma added; BUILD 326 Lote 1 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Analgésicos Opioides Atípicos
+   Metadona, Codeína, Tramadol, Nalbufina, Oxicodona
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── METADONA ── */
+  "metadona": {
+    "$classe_antiarritmicos_qt": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A metadona por si só causa inibição direta dos canais cardíacos hERG (canais de potássio), retardando a repolarização ventricular (aumenta o intervalo QT de forma drástica). Associada a Amiodarona, Sotalol ou Haloperidol, deflagra inevitavelmente a arritmia letal Torsades de Pointes.",
+        es: "La metadona por sí sola causa inhibición directa de los canales cardíacos hERG (canales de potasio), retrasando la repolarización ventricular (aumenta el intervalo QT de forma drástica). Asociada a Amiodarona, Sotalol o Haloperidol, desencadena inevitablemente la arritmia letal Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Obrigatório ECG basal e seriado no ajuste da dose de metadona. Suspender a droga se QTc > 500 ms.",
+        es: "Obligatorio ECG basal y seriado en el ajuste de la dosis de metadona. Suspender la droga si QTc > 500 ms."
+      }
+    },
+    "$classe_antirretrovirais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Fármacos como Lopinavir e Ritonavir induzem fortemente enzimas hepáticas (e bloqueiam outras). O metabolismo da metadona acelera-se brutalmente, derrubando seus níveis sanguíneos para quase zero, precipitando crise severa de abstinência (sudorese, dor extrema, taquicardia) no paciente em clínica de dor ou dependência.",
+        es: "Fármacos como Lopinavir y Ritonavir inducen fuertemente enzimas hepáticas (y bloquean otras). El metabolismo de la metadona se acelera brutalmente, derrumbando sus niveles sanguíneos a casi cero, precipitando crisis severa de abstinencia (sudoración, dolor extremo, taquicardia) en el paciente en clínica del dolor o dependencia."
+      },
+      conduta: {
+        pt: "Geralmente exige dobrar ou triplicar a dose diária de Metadona se o paciente iniciar tratamento para HIV com esses regimes.",
+        es: "Generalmente exige doblar o triplicar la dosis diaria de Metadona si el paciente inicia tratamiento para VIH con estos regímenes."
+      }
+    }
+  },
+
+  /* ── CODEÍNA E TRAMADOL (As Pró-drogas do CYP2D6) ── */
+  "$classe_opioides_fracos_cyp2d6": {
+    "fluoxetina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INIBIÇÃO DE ATIVAÇÃO. A Fluoxetina e a Paroxetina (ISRS) são potentes inibidoras da enzima hepática CYP2D6. A Codeína precisa dessa enzima para virar Morfina, e o Tramadol precisa dela para virar O-desmetiltramadol. Se o paciente usar esses antidepressivos, os analgésicos NÃO FUNCIONARÃO. Ficarão inertes no sangue.",
+        es: "INHIBICIÓN DE ACTIVACIÓN. La Fluoxetina y la Paroxetina (ISRS) son potentes inhibidoras de la enzima hepática CYP2D6. La Codeína necesita de esta enzima para volverse Morfina, y el Tramadol la necesita para volverse O-desmetiltramadol. Si el paciente usa estos antidepresivos, los analgésicos NO FUNCIONARÁN. Quedarán inertes en la sangre."
+      },
+      conduta: {
+        pt: "Evitar completamente a prescrição de Codeína e Tramadol em pacientes que usam Fluoxetina ou Paroxetina. Escolher outro analgésico ou mudar o antidepressivo (ex: Sertralina/Escitalopram interferem menos).",
+        es: "Evitar completamente la prescripción de Codeína y Tramadol en pacientes que usan Fluoxetina o Paroxetina. Elegir otro analgésico o cambiar el antidepresivo (ej: Sertralina/Escitalopram interfieren menos)."
+      }
+    },
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "(RISCO ESPECÍFICO DO TRAMADOL) SÍNDROME SEROTONINÉRGICA. O Tramadol também inibe ativamente a recaptação de serotonina na medula e cérebro. Associado a qualquer ISRS (Sertralina, Citalopram, etc) ou Venlafaxina, causa excesso sináptico de serotonina, gerando hipertermia, tremores, rigidez e convulsão.",
+        es: "(RIESGO ESPECÍFICO DEL TRAMADOL) SÍNDROME SEROTONINÉRGICO. El Tramadol también inhibe activamente la recaptación de serotonina en la médula y cerebro. Asociado a cualquier ISRS (Sertralina, Citalopram, etc) o Venlafaxina, causa exceso sináptico de serotonina, generando hipertermia, temblores, rigidez y convulsión."
+      },
+      conduta: {
+        pt: "Associação muito comum na clínica médica, mas requer cautela severa. Idosos costumam apresentar tremores intensos e agitação. Evitar doses altas de Tramadol.",
+        es: "Asociación muy común en clínica médica, pero requiere precaución severa. Ancianos suelen presentar temblores intensos y agitación. Evitar dosis altas de Tramadol."
+      }
+    }
+  },
+
+  /* ── NALBUFINA (Opioide Misto Agonista/Antagonista) ── */
+  "nalbufina": {
+    "fentanil": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "EFEITO REVERSOR INDESEJADO. A Nalbufina, sendo antagonista Mu, atua como uma 'Naloxona fraca'. Se injetada em um paciente de UTI sedado/analgesiado com bomba de Fentanil ou Morfina, ela 'arranca' o opioide puro dos receptores do cérebro. O paciente acorda instantaneamente, perde toda a analgesia profunda e entra em Crise de Abstinência Aguda (hipertensão, taquicardia, agressividade).",
+        es: "EFECTO REVERSOR INDESEADO. La Nalbufina, siendo antagonista Mu, actúa como una 'Naloxona débil'. Si inyectada en un paciente de UCI sedado/analgesiado con bomba de Fentanilo o Morfina, 'arranca' el opioide puro de los receptores del cerebro. El paciente despierta instantáneamente, pierde toda la analgesia profunda y entra en Crisis de Abstinencia Aguda (hipertensión, taquicardia, agresividad)."
+      },
+      conduta: {
+        pt: "NUNCA injetar analgésicos mistos (Nalbufina, Buprenorfina) em pacientes com uso ativo ou crônico de opioides puros (Fentanil/Morfina).",
+        es: "NUNCA inyectar analgésicos mixtos (Nalbufina, Buprenorfina) en pacientes con uso activo o crónico de opioides puros (Fentanilo/Morfina)."
+      }
+    }
+  },
+
+  /* ── OXICODONA ── */
+  "oxicodona": {
+    "$classe_macrolideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A oxicodona é puramente metabolizada pela via hepática CYP3A4. Inibidores dessa enzima (como a Claritromicina ou Itraconazol) travam a limpeza da oxicodona do corpo. A concentração da droga pode subir 2 a 3 vezes, transformando uma dose analgésica segura numa overdose fatal por asfixia induzida.",
+        es: "La oxicodona es puramente metabolizada por la vía hepática CYP3A4. Inhibidores de esta enzima (como la Claritromicina o Itraconazol) bloquean la limpieza de la oxicodona del cuerpo. La concentración de la droga puede subir 2 a 3 veces, transformando una dosis analgésica segura en una sobredosis fatal por asfixia inducida."
+      },
+      conduta: {
+        pt: "Reduzir ativamente a dose de oxicodona em 50% se iniciar terapias com potentes inibidores do citocromo.",
+        es: "Reducir activamente la dosis de oxicodona en 50% si se inician terapias con potentes inhibidores del citocromo."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */

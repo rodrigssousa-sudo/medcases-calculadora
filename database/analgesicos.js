@@ -1973,4 +1973,219 @@
 
   }); /* fim Object.assign ANALGESICOS_DRUGS_DB — Grupo 10 (etanercepte — ativo) */
 
+/* ─── GRUPO 11 — Analgésicos Opioides Atípicos ───────────────────────
+   BUILD 326 Lote 1: metadona · codeina · tramadol · nalbufina · oxicodona
+   category: 'analgesia'
+──────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+  if (typeof window.ANALGESICOS_DRUGS_DB !== 'object' || Array.isArray(window.ANALGESICOS_DRUGS_DB)) {
+    window.ANALGESICOS_DRUGS_DB = {};
+  }
+  Object.assign(window.ANALGESICOS_DRUGS_DB, {
+
+/* ── METADONA ───────────────────────────────────────────────────────── */
+    "metadona": {
+      name: { pt: 'Metadona', es: 'Metadona' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Forte Sintético (Agonista Mu / Antagonista NMDA)', es: 'Analgésico Opioide Fuerte Sintético (Agonista Mu / Antagonista NMDA)' },
+      indications: {
+        pt: ['Dor crônica refratária severa e dor oncológica', 'Dor neuropática (devido à ação NMDA)', 'Desmame de opioides na UTI e tratamento de dependência química'],
+        es: ['Dolor crónico refractario severo y dolor oncológico', 'Dolor neuropático (debido a la acción NMDA)', 'Destete de opioides en la UCI y tratamiento de dependencia química']
+      },
+      commercialNames: { br: ['Mythedone'], ar: ['Metadona'] },
+      presentation: { pt: ['Comprimidos 5 mg, 10 mg', 'Ampolas IV/SC 10 mg/mL'], es: ['Comprimidos 5 mg, 10 mg', 'Ampollas IV/SC 10 mg/mL'] },
+      mechanism: {
+        pt: 'Mecanismo triplo excepcional: 1) Agonista potente dos receptores Mu; 2) Antagonista do receptor NMDA (bloqueia o glutamato, o que reduz a tolerância ao opioide e alivia dor neuropática); 3) Inibe a recaptação de serotonina e noradrenalina. Possui uma meia-vida plasmática brutalmente longa e imprevisível (15 a 60 horas), que não coincide com sua analgesia (que dura apenas 6 a 8 horas).',
+        es: 'Mecanismo triple excepcional: 1) Agonista potente de los receptores Mu; 2) Antagonista del receptor NMDA (bloquea el glutamato, lo que reduce la tolerancia al opioide y alivia dolor neuropático); 3) Inhibe la recaptación de serotonina y noradrenalina. Posee una vida media plasmática brutalmente larga e impredecible (15 a 60 horas), que no coincide con su analgesia (que dura solo 6 a 8 horas).'
+      },
+      dose: {
+        adult: {
+          pt: 'Dor: 2,5 a 10 mg VO a cada 8h ou 12h. A titulação deve ser EXTREMAMENTE LENTA (aguardar 5 a 7 dias para ajustar a dose, tempo para atingir o steady-state).',
+          es: 'Dolor: 2,5 a 10 mg VO cada 8h o 12h. La titulación debe ser EXTREMADAMENTE LENTA (esperar 5 a 7 días para ajustar la dosis, tiempo para alcanzar el steady-state).'
+        },
+        pediatric: {
+          pt: 'Uso complexo. Desmame em UTI pediátrica guiado por especialista (geralmente 0,05 a 0,1 mg/kg/dose).',
+          es: 'Uso complejo. Destete en UCI pediátrica guiado por especialista (generalmente 0,05 a 0,1 mg/kg/dosis).'
+        }
+      },
+      administration: { pt: ['Via Oral tem altíssima biodisponibilidade (quase 80%).', 'Evitar uso endovenoso intermitente rápido pelo risco de arritmias.'], es: ['Vía Oral tiene altísima biodisponibilidad (casi 80%).', 'Evitar uso endovenoso intermitente rápido por el riesgo de arritmias.'] },
+      renalAdjustment: { required: false, message: { pt: 'O opioide forte mais SEGURO na Doença Renal Crônica avançada, pois é depurado quase exclusivamente pelas fezes.', es: 'El opioide fuerte más SEGURO en la Enfermedad Renal Crónica avanzada, pues se depura casi exclusivamente por las heces.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolismo hepático intenso (CYP3A4/CYP2B6). Evitar em insuficiência hepática grave.', es: 'Metabolismo hepático intenso (CYP3A4/CYP2B6). Evitar en insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['Constipação (menos grave que a morfina)', 'Sudorese excessiva', 'Tontura e Sedação inicial'], es: ['Constipación (menos grave que la morfina)', 'Sudoración excesiva', 'Mareo y Sedación inicial'] },
+      dangerousAdverseEffects: { pt: ['Prolongamento do Intervalo QT (risco de Torsades de Pointes / morte súbita)', 'Depressão respiratória de início TARDIO (o acúmulo ocorre após dias de uso)'], es: ['Prolongación del Intervalo QT (riesgo de Torsades de Pointes / muerte súbita)', 'Depresión respiratoria de inicio TARDÍO (la acumulación ocurre tras días de uso)'] },
+      contraindications: {
+        absolute: { pt: ['Prolongamento do QT basal (> 500 ms)'], es: ['Prolongación del QT basal (> 500 ms)'] },
+        relative: { pt: ['Histórico de arritmias ventriculares', 'Asma brônquica aguda'], es: ['Historial de arritmias ventriculares', 'Asma bronquial aguda'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'CUIDADO: A analgesia da metadona passa em 8 horas, mas o efeito depressor respiratório dura mais de 30 horas. Pacientes frequentemente pedem mais doses por dor e evoluem para parada respiratória noturna por acúmulo sistêmico.', es: 'CUIDADO: La analgesia de la metadona pasa en 8 horas, pero el efecto depresor respiratorio dura más de 30 horas. Pacientes frecuentemente piden más dosis por dolor y evolucionan a paro respiratorio nocturno por acumulación sistémica.' }
+      }
+    },
+
+/* ── CODEÍNA ────────────────────────────────────────────────────────── */
+    "codeina": {
+      name: { pt: 'Codeína', es: 'Codeína' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Fraco', es: 'Analgésico Opioide Débil' },
+      indications: {
+        pt: ['Dor aguda e crônica de intensidade leve a moderada', 'Tosse seca refratária (ação antitússica)'],
+        es: ['Dolor agudo y crónico de intensidad leve a moderada', 'Tos seca refractaria (acción antitusiva)']
+      },
+      commercialNames: { br: ['Paco (c/ Paracetamol)', 'Tylex'], ar: ['Codeína', 'Termofren C'] },
+      presentation: { pt: ['Comprimidos 30 mg (frequentemente associada a 500 mg de Paracetamol)', 'Xarope 3 mg/mL'], es: ['Comprimidos 30 mg (frecuentemente asociada a 500 mg de Paracetamol)', 'Jarabe 3 mg/mL'] },
+      mechanism: {
+        pt: 'A codeína é um PRÓ-FÁRMACO puro. Por si só, tem baixíssima afinidade pelos receptores opioides. Precisa ser convertida no fígado (pela enzima CYP2D6) no seu metabólito ativo: a MORFINA (cerca de 10% da dose é convertida). A ação supressora da tosse ocorre por ação direta no centro bulbar.',
+        es: 'La codeína es un PROFÁRMACO puro. Por sí sola, tiene bajísima afinidad por los receptores opioides. Necesita ser convertida en el hígado (por la enzima CYP2D6) en su metabolito activo: la MORFINA (cerca del 10% de la dosis se convierte). La acción supresora de la tos ocurre por acción directa en el centro bulbar.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dor: 30 a 60 mg VO a cada 6h. Antitússico: 10 a 20 mg a cada 6h.',
+          es: 'Dolor: 30 a 60 mg VO cada 6h. Antitusivo: 10 a 20 mg cada 6h.'
+        },
+        pediatric: {
+          pt: 'CONTRAINDICADA em crianças < 12 anos. Restrita e com muita cautela entre 12-18 anos.',
+          es: 'CONTRAINDICADA en niños < 12 años. Restringida y con mucha precaución entre 12-18 años.'
+        }
+      },
+      administration: { pt: ['Via oral. Pode ser tomada com ou sem alimentos.'], es: ['Vía oral. Puede ser tomada con o sin alimentos.'] },
+      renalAdjustment: { required: true, message: { pt: 'Aumentar o intervalo das doses na insuficiência renal (risco de acúmulo dos metabólitos da morfina).', es: 'Aumentar el intervalo de las dosis en la insuficiencia renal (riesgo de acumulación de los metabolitos de la morfina).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Na insuficiência hepática, a conversão para morfina pode não ocorrer, falhando a analgesia.', es: 'En la insuficiencia hepática, la conversión a morfina puede no ocurrir, fallando la analgesia.' } },
+      commonAdverseEffects: { pt: ['Constipação intestinal GRAVE', 'Tontura e sonolência leve', 'Náuseas'], es: ['Constipación intestinal GRAVE', 'Mareo y somnolencia leve', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Depressão respiratória fatal em "Metabolizadores Ultra-Rápidos" (pacientes com genética que converte quase 100% da droga em morfina)'], es: ['Depresión respiratoria fatal en "Metabolizadores Ultra-Rápidos" (pacientes con genética que convierte casi el 100% de la droga en morfina)'] },
+      contraindications: {
+        absolute: { pt: ['Crianças menores de 12 anos (risco de parada respiratória)', 'Amamentação (passa no leite materno como morfina e intoxica o bebê)'], es: ['Niños menores de 12 años (riesgo de paro respiratorio)', 'Lactancia (pasa en la leche materna como morfina e intoxica al bebé)'] },
+        relative: { pt: ['Idosos debilitados', 'Asma brônquica aguda'], es: ['Ancianos debilitados', 'Asma bronquial aguda'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: false,
+        warning: { pt: 'Atenção farmacogenética: Cerca de 10% da população branca não possui a enzima CYP2D6 (Metabolizadores Lentos). Nesses pacientes, a Codeína será um "comprimido de farinha", não causando nenhum alívio da dor.', es: 'Atención farmacogenética: Cerca del 10% de la población blanca no posee la enzima CYP2D6 (Metabolizadores Lentos). En estos pacientes, la Codeína será una "pastilla de harina", no causando ningún alivio del dolor.' }
+      }
+    },
+
+/* ── TRAMADOL ───────────────────────────────────────────────────────── */
+    "tramadol": {
+      name: { pt: 'Tramadol', es: 'Tramadol' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Fraco (Atípico)', es: 'Analgésico Opioide Débil (Atípico)' },
+      indications: {
+        pt: ['Dor aguda ou crônica de intensidade moderada a severa', 'Dores neuropáticas (adjuvante)'],
+        es: ['Dolor agudo o crónico de intensidad moderada a severa', 'Dolores neuropáticos (adyuvante)']
+      },
+      commercialNames: { br: ['Tramal', 'Sylador'], ar: ['Calmador', 'Tramadol'] },
+      presentation: { pt: ['Ampolas IV/IM/SC 50 mg/mL', 'Cápsulas/Comprimidos 50 mg, 100 mg'], es: ['Ampollas IV/IM/SC 50 mg/mL', 'Cápsulas/Comprimidos 50 mg, 100 mg'] },
+      mechanism: {
+        pt: 'Mecanismo duplo central: 1) Agonista fraco do receptor opioide Mu (a droga-mãe é fraca, mas seu metabólito hepático O-desmetiltramadol é 6 vezes mais potente); 2) Inibe a recaptação neuronal de Serotonina e Noradrenalina nas vias descendentes da dor na medula espinhal, bloqueando a transmissão do sinal doloroso. Possui menor risco de depressão respiratória que a morfina.',
+        es: 'Mecanismo doble central: 1) Agonista débil del receptor opioide Mu (la droga madre es débil, pero su metabolito hepático O-desmetiltramadol es 6 veces más potente); 2) Inhibe la recaptación neuronal de Serotonina y Noradrenalina en las vías descendentes del dolor en la médula espinal, bloqueando la transmisión de la señal dolorosa. Posee menor riesgo de depresión respiratoria que la morfina.'
+      },
+      dose: {
+        adult: {
+          pt: '50 a 100 mg VO, IV ou IM a cada 6h ou 8h (Máximo 400 mg/dia).',
+          es: '50 a 100 mg VO, IV o IM cada 6h o 8h (Máximo 400 mg/día).'
+        },
+        pediatric: {
+          pt: 'Contraindicado para < 12 anos. Excepcionalmente 1 a 2 mg/kg/dose > 12 anos.',
+          es: 'Contraindicado para < 12 años. Excepcionalmente 1 a 2 mg/kg/dosis > 12 años.'
+        }
+      },
+      administration: { pt: ['A injeção IV deve ser feita LENTAMENTE (em 2 a 3 minutos). A injeção rápida causa vômito em jato quase instantâneo.'], es: ['La inyección IV debe hacerse LENTAMENTE (en 2 a 3 minutos). La inyección rápida causa vómito en chorro casi instantáneo.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min, aumentar intervalo para 12h e limitar a 200 mg/dia.', es: 'Si ClCr < 30 mL/min, aumentar intervalo a 12h y limitar a 200 mg/día.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em cirrose grave; dependente da conversão hepática para analgesia real.', es: 'Evitar en cirrosis grave; dependiente de la conversión hepática para analgesia real.' } },
+      commonAdverseEffects: { pt: ['Náusea extrema e vômitos (muito comum)', 'Tontura e vertigem', 'Constipação e boca seca'], es: ['Náusea extrema y vómitos (muy común)', 'Mareo y vértigo', 'Constipación y boca seca'] },
+      dangerousAdverseEffects: { pt: ['Convulsões epilépticas (especialmente se limite de dose for excedido)', 'Síndrome Serotoninérgica'], es: ['Convulsiones epilépticas (especialmente si se excede el límite de dosis)', 'Síndrome Serotoninérgico'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com Epilepsia não controlada', 'Uso concomitante ou recente (14 dias) de Inibidores da MAO'], es: ['Pacientes con Epilepsia no controlada', 'Uso concomitante o reciente (14 días) de Inhibidores de la MAO'] },
+        relative: { pt: ['Uso associado com antidepressivos (risco serotoninérgico)'], es: ['Uso asociado con antidepresivos (riesgo serotoninérgico)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: false,
+        warning: { pt: 'O Tramadol BAIXA O LIMIAR CONVULSIVO da via cerebral. Nunca associe a outras drogas que também causem isso (ex: Bupropiona) sem cautela.', es: 'El Tramadol BAJA EL UMBRAL CONVULSIVO de la vía cerebral. Nunca asocie a otras drogas que también causen esto (ej: Bupropión) sin precaución.' }
+      }
+    },
+
+/* ── NALBUFINA ──────────────────────────────────────────────────────── */
+    "nalbufina": {
+      name: { pt: 'Nalbufina', es: 'Nalbufina' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Misto (Agonista-Antagonista)', es: 'Analgésico Opioide Mixto (Agonista-Antagonista)' },
+      indications: {
+        pt: ['Dor moderada a severa (especialmente pós-operatório e obstetrícia)', 'Reversão do prurido (coceira) induzido por fentanil ou morfina espinhal'],
+        es: ['Dolor moderado a severo (especialmente posoperatorio y obstetricia)', 'Reversión del prurito (picazón) inducido por fentanilo o morfina espinal']
+      },
+      commercialNames: { br: ['Nubain'], ar: ['Nubain'] },
+      presentation: { pt: ['Ampolas IV/IM/SC 10 mg/mL (1 mL)'], es: ['Ampollas IV/IM/SC 10 mg/mL (1 mL)'] },
+      mechanism: {
+        pt: 'Ação dupla e contraditória: É um potente AGONISTA dos receptores Kappa (fornecendo forte analgesia espinhal e sedação pesada), mas é um ANTAGONISTA dos receptores Mu (bloqueando a euforia e a depressão respiratória excessiva). Essa característica confere à Nalbufina um "Efeito Teto" (ceiling effect): a partir de certa dose (30mg), o aumento da droga não aprofunda a depressão respiratória.',
+        es: 'Acción doble y contradictoria: Es un potente AGONISTA de los receptores Kappa (proporcionando fuerte analgesia espinal y sedación pesada), pero es un ANTAGONISTA de los receptores Mu (bloqueando la euforia y la depresión respiratoria excesiva). Esta característica confiere a la Nalbufina un "Efecto Techo" (ceiling effect): a partir de cierta dosis (30mg), el aumento de la droga no profundiza la depresión respiratoria.'
+      },
+      dose: {
+        adult: {
+          pt: 'Analgesia: 10 a 20 mg IV, IM ou SC a cada 3 a 6 horas. Reversão de Prurido: 2,5 a 5 mg IV em pequenos bolus.',
+          es: 'Analgesia: 10 a 20 mg IV, IM o SC cada 3 a 6 horas. Reversión de Prurito: 2,5 a 5 mg IV en pequeños bolos.'
+        },
+        pediatric: {
+          pt: '0,1 a 0,2 mg/kg IV ou IM.',
+          es: '0,1 a 0,2 mg/kg IV o IM.'
+        }
+      },
+      administration: { pt: ['Injeção IV lenta.'], es: ['Inyección IV lenta.'] },
+      renalAdjustment: { required: false, message: { pt: 'Uso cauteloso, mas menos restritivo que a morfina.', es: 'Uso cauteloso, pero menos restrictivo que la morfina.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir dose em insuficiência hepática (metabolismo de primeira passagem).', es: 'Reducir dosis en insuficiencia hepática (metabolismo de primer paso).' } },
+      commonAdverseEffects: { pt: ['Sedação/Sonolência muito mais intensa que a morfina (marcador da ação Kappa)', 'Suores frios e tontura', 'Náuseas'], es: ['Sedación/Somnolencia mucho más intensa que la morfina (marcador de la acción Kappa)', 'Sudores fríos y mareos', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Efeitos dismórficos/psicomiméticos (ansiedade, alucinações, sensação de flutuação) - comum em agonistas Kappa', 'Síndrome de Abstinência induzida'], es: ['Efectos dismórficos/psicomiméticos (ansiedad, alucinaciones, sensación de flotación) - común en agonistas Kappa', 'Síndrome de Abstinencia inducida'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes cronicamente dependentes de heroína, morfina ou fentanil (desencadeará abstinência explosiva)'], es: ['Pacientes crónicamente dependientes de heroína, morfina o fentanilo (desencadenará abstinencia explosiva)'] },
+        relative: { pt: ['Transtornos psiquiátricos com histórico de psicose'], es: ['Trastornos psiquiátricos con historial de psicosis'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'Extremamente segura na obstetrícia (partos) pois cruza a placenta, mas causa pouca ou nenhuma depressão respiratória no recém-nascido graças ao seu efeito teto Mu-antagonista.', es: 'Extremamente segura en obstetricia (partos) pues cruza la placenta, pero causa poca o ninguna depresión respiratoria en el recién nacido gracias a su efecto techo Mu-antagonista.' }
+      }
+    },
+
+/* ── OXICODONA ──────────────────────────────────────────────────────── */
+    "oxicodona": {
+      name: { pt: 'Oxicodona', es: 'Oxicodona' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Forte Sintético', es: 'Analgésico Opioide Fuerte Sintético' },
+      indications: {
+        pt: ['Dor moderada a severa (especialmente pós-operatório ortopédico e câncer)', 'Dor crônica refratária'],
+        es: ['Dolor moderado a severo (especialmente posoperatorio ortopédico y cáncer)', 'Dolor crónico refractario']
+      },
+      commercialNames: { br: ['OxyContin', 'Targin (c/ Naloxona)'], ar: ['OxyContin', 'Oxicodal'] },
+      presentation: { pt: ['Comprimidos de Liberação Controlada (LC) 10 mg, 20 mg, 40 mg'], es: ['Comprimidos de Liberación Controlada (LC) 10 mg, 20 mg, 40 mg'] },
+      mechanism: {
+        pt: 'Agonista Mu e Kappa puro e muito potente. Via oral, possui uma biodisponibilidade imensamente superior à da morfina (quase 60 a 87% chegam ao sangue). É considerada 1,5 a 2 vezes mais forte que a morfina oral. Exerce excelente controle em dores viscerais e ósseas profundas.',
+        es: 'Agonista Mu y Kappa puro y muy potente. Vía oral, posee una biodisponibilidad inmensamente superior a la de la morfina (casi 60 a 87% llegan a la sangre). Es considerada 1,5 a 2 veces más fuerte que la morfina oral. Ejerce excelente control en dolores viscerales y óseos profundos.'
+      },
+      dose: {
+        adult: {
+          pt: '10 a 20 mg VO a cada 12 horas (comprimidos de ação prolongada). Pacientes já tolerantes a opioides necessitam de doses maiores.',
+          es: '10 a 20 mg VO cada 12 horas (comprimidos de acción prolongada). Pacientes ya tolerantes a opioides necesitan dosis mayores.'
+        },
+        pediatric: {
+          pt: 'Não recomendado o uso rotineiro em crianças.',
+          es: 'No recomendado el uso rutinario en niños.'
+        }
+      },
+      administration: { pt: ['Comprimidos de liberação prolongada (OxyContin) NÃO PODEM ser partidos, mastigados ou esmagados. Ingerir a pílula alterada libera toda a carga de 12 horas de uma vez, causando overdose fatal.'], es: ['Comprimidos de liberación prolongada (OxyContin) NO PUEDEN ser partidos, masticados o aplastados. Ingerir la píldora alterada libera toda la carga de 12 horas de una vez, causando sobredosis fatal.'] },
+      renalAdjustment: { required: true, message: { pt: 'Depuração diminuída. Iniciar com 1/3 a 1/2 da dose e monitorar depressão respiratória.', es: 'Depuración disminuida. Iniciar con 1/3 a 1/2 de la dosis y monitorizar depresión respiratoria.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Mesma conduta da renal; risco de acúmulo da droga ativa.', es: 'Misma conducta que la renal; riesgo de acumulación de la droga activa.' } },
+      commonAdverseEffects: { pt: ['Constipação severa (o Targin associa naloxona para agir localmente no intestino e evitar isso)', 'Sonolência pesada e sedação', 'Náusea'], es: ['Constipación severa (el Targin asocia naloxona para actuar localmente en el intestino y evitar esto)', 'Somnolencia pesada y sedación', 'Náusea'] },
+      dangerousAdverseEffects: { pt: ['Depressão respiratória grave', 'Dependência física, abuso e vício (potencial euforizante altíssimo)'], es: ['Depresión respiratoria grave', 'Dependencia física, abuso y adicción (potencial euforizante altísimo)'] },
+      contraindications: {
+        absolute: { pt: ['Asma brônquica severa em crise', 'Íleo paralítico suspeito ou documentado'], es: ['Asma bronquial severa en crisis', 'Íleo paralítico sospechoso o documentado'] },
+        relative: { pt: ['Histórico de abuso de substâncias ou alcoolismo'], es: ['Historial de abuso de sustancias o alcoholismo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'DROGA DE ABUSO: A oxicodona é a principal responsável pela epidemia de opioides moderna devido ao seu forte efeito euforizante e dependência rápida. Prescrever apenas a quantidade exata para o pós-operatório estrito.', es: 'DROGA DE ABUSO: La oxicodona es la principal responsable de la epidemia de opioides moderna debido a su fuerte efecto euforizante y dependencia rápida. Prescribir solo la cantidad exacta para el posoperatorio estricto.' }
+      }
+    }
+
+  }); /* fim Object.assign ANALGESICOS_DRUGS_DB — Grupo 11 (metadona · codeina · tramadol · nalbufina · oxicodona — BUILD 326 Lote 1) */
+
+})();
+
 })(); /* fim da IIFE do módulo analgésicos */
