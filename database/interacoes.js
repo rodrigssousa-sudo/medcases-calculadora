@@ -19033,6 +19033,85 @@ const INTERACOES_DB = {
         es: "Solo reponer KCl bajo dosaje sérico diario o cada 12h si el paciente está usando espironolactona en la sala."
       }
     }
+  },  // comma added; BUILD 324 Lote 5 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Suporte Metabólico e Analgesia (Opioides)
+   Glicose Hipertônica, Tiamina, Fentanil, Remifentanil, Morfina
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── GLICOSE HIPERTÔNICA E TIAMINA ── */
+  "glicose_hipertonica": {
+    "tiamina": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "INTERAÇÃO FISIOLÓGICA DE RESGATE. O metabolismo cerebral de uma alta carga de glicose exige o cofator Tiamina. Se o paciente for um etilista crônico desnutrido, o bolus de glicose sem a tiamina prévia desencadeará uma Encefalopatia de Wernicke iatrogênica (lesão neuronal por acúmulo de lactato).",
+        es: "INTERACCIÓN FISIOLÓGICA DE RESCATE. El metabolismo cerebral de una alta carga de glucosa exige el cofactor Tiamina. Si el paciente es un etilista crónico desnutrido, el bolo de glucosa sin la tiamina previa desencadenará una Encefalopatía de Wernicke iatrogénica (lesión neuronal por acumulación de lactato)."
+      },
+      conduta: {
+        pt: "Protocolo rígido de PSIQUIATRIA/EMERGÊNCIA: Em pacientes alcoólatras, a infusão de 100-300 mg de Tiamina IV DEVE ocorrer minutos ANTES do bolus de Glicose Hipertônica.",
+        es: "Protocolo rígido de PSIQUIATRÍA/EMERGENCIA: En pacientes alcohólicos, la infusión de 100-300 mg de Tiamina IV DEBE ocurrir minutos ANTES del bolo de Glucosa Hipertónica."
+      }
+    }
+  },
+
+  /* ── OPIOIDES FORTES (FENTANIL, REMIFENTANIL E MORFINA) ── */
+  "$classe_opioides_fortes": {
+    "$classe_benzodiazepinicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Depressor Severo (Alerta Boxed FDA). A associação de qualquer opioide (Fentanil/Morfina) com benzodiazepínicos (Midazolam/Diazepam/Clonazepam) gera uma potencialização exponencial da depressão do sistema nervoso central, resultando em apneia letal, coma e morte.",
+        es: "Sinergismo Depresor Severo (Alerta Boxed FDA). La asociación de cualquier opioide (Fentanilo/Morfina) con benzodiazepinas (Midazolam/Diazepam/Clonazepam) genera una potenciación exponencial de la depresión del sistema nervioso central, resultando en apnea letal, coma y muerte."
+      },
+      conduta: {
+        pt: "Exige monitoramento ventilatório contínuo em UTI (oximetria/capnografia). Doses devem ser tituladas individualmente; pacientes ambulatoriais devem ser orientados a não usar ambos juntos.",
+        es: "Exige monitorización ventilatoria continua en UCI (oximetría/capnografía). Las dosis deben titularse individualmente; pacientes ambulatorios deben ser orientados a no usar ambos juntos."
+      }
+    },
+    "$classe_inibidores_p2y12": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INTERAÇÃO GASTROINTESTINAL CRÍTICA NA CARDIOLOGIA. A morfina e o fentanil paralisam a motilidade gástrica (atraso no esvaziamento). Quando dados no Infarto Agudo do Miocárdio (IAM), impedem o paciente de absorver o Clopidogrel/Ticagrelor administrados via oral para salvar o stent. As plaquetas do paciente continuam não-inibidas por horas após a dose.",
+        es: "INTERACCIÓN GASTROINTESTINAL CRÍTICA EN CARDIOLOGÍA. La morfina y el fentanilo paralizan la motilidad gástrica (retraso en el vaciamiento). Cuando se dan en el Infarto Agudo de Miocardio (IAM), impiden al paciente absorber el Clopidogrel/Ticagrelor administrados vía oral para salvar el stent. Las plaquetas del paciente continúan no inhibidas por horas tras la dosis."
+      },
+      conduta: {
+        pt: "Limitar o uso de opioides no Infarto apenas para dores refratárias extremas. Estudos mais recentes recomendam não usar morfina rotineiramente antes dos antiplaquetários.",
+        es: "Limitar el uso de opioides en el Infarto solo para dolores refractarios extremos. Estudios más recientes recomiendan no usar morfina rutinariamente antes de los antiplaquetarios."
+      }
+    }
+  },
+
+  "fentanil": {
+    "$classe_macrolideos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Antibióticos como claritromicina e inibidores azólicos inibem fortemente o CYP3A4, bloqueando a principal via de limpeza do fentanil. Causa aumento significativo do risco de sedação prolongada e depressão respiratória em pacientes de UTI.",
+        es: "Antibióticos como claritromicina e inhibidores azólicos inhiben fuertemente el CYP3A4, bloqueando la principal vía de limpieza del fentanilo. Causa aumento significativo del riesgo de sedación prolongada y depresión respiratoria en pacientes de UCI."
+      },
+      conduta: {
+        pt: "Reduzir dose da bomba de infusão de fentanil e avaliar despertar tardio.",
+        es: "Reducir dosis de la bomba de infusión de fentanilo y evaluar despertar tardío."
+      }
+    }
+  },
+
+  "remifentanil": {
+    "propofol": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A clássica 'TIVA' (Anestesia Venosa Total). O sinergismo hipnótico e analgésico permite o uso de sub-doses de ambas as drogas. Contudo, há um forte sinergismo hemodinâmico negativo, gerando quedas maciças de pressão arterial e bradicardia severa se injetados juntos em bolus.",
+        es: "La clásica 'TIVA' (Anestesia Venosa Total). El sinergismo hipnótico y analgésico permite el uso de subdosis de ambas drogas. Sin embargo, hay un fuerte sinergismo hemodinámico negativo, generando caídas masivas de presión arterial y bradicardia severa si se inyectan juntos en bolo."
+      },
+      conduta: {
+        pt: "Titular bombas de infusão individualmente (não fazer bolus rápidos conjuntos).",
+        es: "Titular bombas de infusión individualmente (no hacer bolos rápidos conjuntos)."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */

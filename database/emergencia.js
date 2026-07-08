@@ -692,8 +692,208 @@
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'A CORREÇÃO DO SÓDIO TEM LIMITE DIÁRIO. Se a hiponatremia do paciente for CRÔNICA, a reposição rápida causará a Síndrome de Desmielinização Osmótica (tetraplegia irreversível, coma e morte dias após). Regra de Ouro: não ultrapassar o aumento de 8 a 10 mEq/L de sódio nas primeiras 24 horas.', es: 'LA CORRECCIÓN DEL SODIO TIENE LÍMITE DIARIO. Si la hiponatremia del paciente es CRÓNICA, la reposición rápida causará el Síndrome de Desmielinización Osmótica (tetraplejía irreversible, coma y muerte días después). Regla de Oro: no superar el aumento de 8 a 10 mEq/L de sodio en las primeras 24 horas.' }
       }
-    }  // end sodio_hipertonico
+    },  // end sodio_hipertonico
 
-  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 322 Lote 1+2+3+4 (ISR + BNMs + Reversores + Eletrólitos) */
+/* ── GLICOSE HIPERTÔNICA ────────────────────────────────────────────── */
+    "glicose_hipertonica": {
+      name: { pt: 'Glicose Hipertônica 50%', es: 'Glucosa Hipertónica 50%' },
+      category: 'emergencia',
+      class: { pt: 'Suplemento Calórico / Antídoto', es: 'Suplemento Calórico / Antídoto' },
+      indications: {
+        pt: ['Coma hipoglicêmico ou hipoglicemia sintomática grave', 'Tratamento de hipercalemia (em conjunto com Insulina Regular)'],
+        es: ['Coma hipoglucémico o hipoglucemia sintomática grave', 'Tratamiento de hiperpotasemia (en conjunto con Insulina Regular)']
+      },
+      commercialNames: { br: ['Glicose 50%'], ar: ['Glucosa al 50%'] },
+      presentation: { pt: ['Ampolas IV 50% (10 mL ou 20 mL)'], es: ['Ampollas IV 50% (10 mL o 20 mL)'] },
+      mechanism: {
+        pt: 'Fornece D-glicose (dextrose) de forma imediata à corrente sanguínea, restaurando os níveis de energia do sistema nervoso central, que depende quase exclusivamente da glicose cerebral para manter a consciência e o metabolismo basal. Na hipercalemia, a glicose hipertônica serve apenas como "veículo" de segurança para permitir a injeção de Insulina (que empurra o potássio para dentro da célula) sem causar choque hipoglicêmico.',
+        es: 'Proporciona D-glucosa (dextrosa) de forma inmediata al torrente sanguíneo, restaurando los niveles de energía del sistema nervioso central, que depende casi exclusivamente de la glucosa cerebral para mantener la consciencia y el metabolismo basal. En hiperpotasemia, la glucosa hipertónica sirve solo como "vehículo" de seguridad para permitir la inyección de Insulina (que empuja el potasio hacia dentro de la célula) sin causar choque hipoglucémico.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hipoglicemia grave: Bolus IV de 40 a 50 mL de Glicose 50% (ou 4 a 5 ampolas de 10mL). Polarizante (K+): 50g de Glicose + 10 UI Insulina Regular.',
+          es: 'Hipoglucemia grave: Bolo IV de 40 a 50 mL de Glucosa 50% (o 4 a 5 ampollas de 10mL). Polarizante (K+): 50g de Glucosa + 10 UI Insulina Regular.'
+        },
+        pediatric: {
+          pt: 'Evitar 50%. Preferir Glicose 25% (2 a 4 mL/kg) ou Glicose 10% (5 a 10 mL/kg) IV lento.',
+          es: 'Evitar 50%. Preferir Glucosa 25% (2 a 4 mL/kg) o Glucosa 10% (5 a 10 mL/kg) IV lento.'
+        }
+      },
+      administration: { pt: ['Administrar IV direto lentamente.', 'A solução a 50% é extremamente irritante e hiperosmolar. Se extravasar, causa necrose isquêmica tecidual.'], es: ['Administrar IV directo lentamente.', 'La solución al 50% es extremadamente irritante e hiperosmolar. Si se extravasa, causa necrosis isquémica tisular.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Pilar do resgate em cirróticos que perdem a capacidade de gliconeogênese.', es: 'Pilar del rescate en cirróticos que pierden la capacidad de gluconeogénesis.' } },
+      commonAdverseEffects: { pt: ['Dor e flebite no local da injeção', 'Hiperglicemia rebote'], es: ['Dolor y flebitis en el sitio de inyección', 'Hiperglucemia rebote'] },
+      dangerousAdverseEffects: { pt: ['Síndrome de Wernicke (se não precedida por tiamina em desnutridos)', 'Necrose tecidual severa por extravasamento', 'Hipocalemia iatrogênica (o pico de insulina endógena gerado empurra o K+ para as células)'], es: ['Síndrome de Wernicke (si no es precedida por tiamina en desnutridos)', 'Necrosis tisular severa por extravasación', 'Hipopotasemia iatrogénica (el pico de insulina endógena generado empuja el K+ a las células)'] },
+      contraindications: {
+        absolute: { pt: ['Hemorragia intracraniana aguda ou isquemia aguda com hiperglicemia prévia (a glicose agrava a lesão cerebral focal)'], es: ['Hemorragia intracraneal aguda o isquemia aguda con hiperglucemia previa (la glucosa agrava la lesión cerebral focal)'] },
+        relative: { pt: ['Delirium tremens sem administração de Tiamina conjunta'], es: ['Delirium tremens sin administración de Tiamina conjunta'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Não confie na Glicose Hipertônica para tratar hipoglicemias causadas por Sulfonilureias de meia-vida longa. A injeção vai acordar o paciente, mas a alta carga de açúcar fará o pâncreas liberar ainda mais insulina, gerando um coma rebote pior horas depois. Internar o paciente com soro glicosado contínuo.', es: 'No confíe en la Glucosa Hipertónica para tratar hipoglucemias causadas por Sulfonilureas de vida media larga. La inyección despertará al paciente, pero la alta carga de azúcar hará que el páncreas libere aún más insulina, generando un coma rebote peor horas después. Internar al paciente con suero glucosado continuo.' }
+      }
+    },  // end glicose_hipertonica
+
+/* ── TIAMINA (VITAMINA B1) ──────────────────────────────────────────── */
+    "tiamina": {
+      name: { pt: 'Tiamina (Vitamina B1)', es: 'Tiamina (Vitamina B1)' },
+      category: 'emergencia',
+      class: { pt: 'Vitamina Hidrossolúvel / Coenzima Metabólica', es: 'Vitamina Hidrosoluble / Coenzima Metabólica' },
+      indications: {
+        pt: ['Prevenção e Tratamento da Encefalopatia de Wernicke e Síndrome de Korsakoff (Alcoólatras)', 'Beribéri', 'Acidose lática não explicada em nutrição parenteral total'],
+        es: ['Prevención y Tratamiento de la Encefalopatía de Wernicke y Síndrome de Korsakoff (Alcohólicos)', 'Beriberi', 'Acidosis láctica no explicada en nutrición parenteral total']
+      },
+      commercialNames: { br: ['Benerva'], ar: ['Benerva'] },
+      presentation: { pt: ['Comprimidos 300 mg', 'Ampolas IV/IM 100 mg/mL ou 300 mg/mL'], es: ['Comprimidos 300 mg', 'Ampollas IV/IM 100 mg/mL o 300 mg/mL'] },
+      mechanism: {
+        pt: 'A tiamina é o cofator da enzima piruvato desidrogenase. É vital para a entrada da glicose no Ciclo de Krebs para gerar ATP. Se o paciente (desnutrido/alcoólatra) receber glicose sem ter Tiamina no corpo, a glicose não consegue entrar no ciclo mitocondrial e é fermentada ativamente em Ácido Lático, causando destruição fulminante dos neurônios (Wernicke-Korsakoff).',
+        es: 'La tiamina es el cofactor de la enzima piruvato deshidrogenasa. Es vital para la entrada de la glucosa en el Ciclo de Krebs para generar ATP. Si el paciente (desnutrido/alcohólico) recibe glucosa sin tener Tiamina en el cuerpo, la glucosa no logra entrar en el ciclo mitocondrial y es fermentada activamente en Ácido Láctico, causando destrucción fulminante de las neuronas (Wernicke-Korsakoff).'
+      },
+      dose: {
+        adult: {
+          pt: 'Wernicke instalado ou suspeito: 500 mg IV 3x/dia por 2 a 3 dias, seguido de 250 mg IV/IM por 3 a 5 dias. Profilaxia (Alcoolismo em abstinência): 100 a 300 mg/dia.',
+          es: 'Wernicke instalado o sospechoso: 500 mg IV 3 veces/día por 2 a 3 días, seguido de 250 mg IV/IM por 3 a 5 días. Profilaxis (Alcoholismo en abstinencia): 100 a 300 mg/día.'
+        },
+        pediatric: {
+          pt: 'Beribéri: 10 a 25 mg IV/IM (Doses raras, guiadas por especialistas).',
+          es: 'Beriberi: 10 a 25 mg IV/IM (Dosis raras, guiadas por especialistas).'
+        }
+      },
+      administration: { pt: ['Injeção IV lenta (diluída em 50 a 100 mL de SF0,9% em 30 min). Bolus rápido aumenta o risco de choque anafilático.'], es: ['Inyección IV lenta (diluida en 50 a 100 mL de SF0,9% en 30 min). Bolo rápido aumenta el riesgo de choque anafiláctico.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste. Fundamental na cirrose alcoólica.', es: 'Sin necesidad de ajuste. Fundamental en la cirrosis alcohólica.' } },
+      commonAdverseEffects: { pt: ['Dor e irritação no local da injeção IM', 'Sensação de calor/Formigamento'], es: ['Dolor e irritación en el lugar de inyección IM', 'Sensación de calor/Hormigueo'] },
+      dangerousAdverseEffects: { pt: ['Anafilaxia / Colapso cardiovascular (muito raro, geralmente associado ao veículo da ampola em injeções em bolus diretas)'], es: ['Anafilaxia / Colapso cardiovascular (muy raro, generalmente asociado al vehículo de la ampolla en inyecciones en bolo directas)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave comprovada'], es: ['Hipersensibilidad grave comprobada'] },
+        relative: { pt: ['Nenhuma no cenário de salvamento neurológico.'], es: ['Ninguna en el escenario de salvamento neurológico.'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'REGRA DE OURO DA EMERGÊNCIA: A Tiamina DEVE OBRIGATORIAMENTE SER ADMINISTRADA ANTES ou simultaneamente a qualquer infusão de Glicose em pacientes desnutridos ou com abuso crônico de álcool.', es: 'REGLA DE ORO DE LA EMERGENCIA: La Tiamina DEBE OBLIGATORIAMENTE ADMINISTRARSE ANTES o simultáneamente a cualquier infusión de Glucosa en pacientes desnutridos o con abuso crónico de alcohol.' }
+      }
+    },  // end tiamina
+
+/* ── FENTANIL ───────────────────────────────────────────────────────── */
+    "fentanil": {
+      name: { pt: 'Fentanil', es: 'Fentanilo' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Forte Sintético (Agonista Mu)', es: 'Analgésico Opioide Fuerte Sintético (Agonista Mu)' },
+      indications: {
+        pt: ['Analgesia e sedação profunda em pacientes sob ventilação mecânica (UTI)', 'Indução e manutenção de anestesia geral', 'Manejo de dor aguda extrema severa'],
+        es: ['Analgesia y sedación profunda en pacientes bajo ventilación mecánica (UCI)', 'Inducción y mantenimiento de anestesia general', 'Manejo de dolor agudo extremo severo']
+      },
+      commercialNames: { br: ['Fentanil', 'Fentanyl'], ar: ['Fentanilo'] },
+      presentation: { pt: ['Ampolas IV/IM/Epidural 50 mcg/mL (2 mL, 5 mL e 10 mL)', 'Adesivos transdérmicos (Durogesic)'], es: ['Ampollas IV/IM/Epidural 50 mcg/mL (2 mL, 5 mL y 10 mL)', 'Parches transdérmicos (Durogesic)'] },
+      mechanism: {
+        pt: 'Agonista altamente seletivo e potente dos receptores opioides Mu no cérebro e na medula espinhal. É aproximadamente 100 vezes mais potente que a morfina. Graças à sua altíssima lipofilicidade, atravessa a barreira hematoencefálica em segundos, provendo um início de ação fulminante (1 a 2 minutos). Ao contrário da morfina, NÃO libera histamina, garantindo estabilidade hemodinâmica (não causa hipotensão significativa).',
+        es: 'Agonista altamente selectivo y potente de los receptores opioides Mu en el cerebro y en la médula espinal. Es aproximadamente 100 veces más potente que la morfina. Gracias a su altísima lipofilicidad, atraviesa la barrera hematoencefálica en segundos, proveyendo un inicio de acción fulminante (1 a 2 minutos). A diferencia de la morfina, NO libera histamina, garantizando estabilidad hemodinámica (no causa hipotensión significativa).'
+      },
+      dose: {
+        adult: {
+          pt: 'Bolus Analgésico: 1 a 2 mcg/kg IV (início ISR). Infusão em UTI: 1 a 5 mcg/kg/hora. Anestesia Geral: 2 a 50 mcg/kg (dependendo do procedimento).',
+          es: 'Bolo Analgésico: 1 a 2 mcg/kg IV (inicio ISR). Infusión en UCI: 1 a 5 mcg/kg/hora. Anestesia General: 2 a 50 mcg/kg (dependiendo del procedimiento).'
+        },
+        pediatric: {
+          pt: 'Analgesia/Sedação: 1 a 2 mcg/kg IV. Infusão: 1 a 3 mcg/kg/h.',
+          es: 'Analgesia/Sedación: 1 a 2 mcg/kg IV. Infusión: 1 a 3 mcg/kg/h.'
+        }
+      },
+      administration: { pt: ['A injeção em bolus direto deve ser feita lentamente. Injeções em bolus ultra-rápidas disparam rigidez da musculatura torácica.'], es: ['La inyección en bolo directo debe hacerse lentamente. Inyecciones en bolo ultra-rápidas disparan rigidez de la musculatura torácica.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem metabólitos ativos clinicamente relevantes. Mais seguro que a morfina na DRC.', es: 'Sin metabolitos activos clínicamente relevantes. Más seguro que la morfina en ERC.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Extensamente metabolizado pelo CYP3A4. Cirróticos acumularão a droga de forma prolongada.', es: 'Extensamente metabolizado por el CYP3A4. Cirróticos acumularán la droga de forma prolongada.' } },
+      commonAdverseEffects: { pt: ['Náusea e vômitos pós-operatórios', 'Íleo paralítico / Constipação grave', 'Prurido facial (coceira no nariz/rosto)'], es: ['Náusea y vómitos posoperatorios', 'Íleo paralítico / Constipación grave', 'Prurito facial (picazón en la nariz/cara)'] },
+      dangerousAdverseEffects: { pt: ['Depressão respiratória grave (apneia induzida)', 'Rigidez Torácica de Madeira (impede a ventilação do paciente pelo ambu, exigindo uso de bloqueador neuromuscular para salvar a vida)', 'Bradicardia vagal'], es: ['Depresión respiratoria grave (apnea inducida)', 'Rigidez Torácica de Madera (impide la ventilación del paciente por el ambú, exigiendo uso de bloqueador neuromuscular para salvar la vida)', 'Bradicardia vagal'] },
+      contraindications: {
+        absolute: { pt: ['Uso sem acesso à via aérea definitiva (intubação/ambu)', 'Depressão respiratória não tratada'], es: ['Uso sin acceso a vía aérea definitiva (intubación/ambú)', 'Depresión respiratoria no tratada'] },
+        relative: { pt: ['Hipotensão extrema (embora mais seguro que morfina)', 'Hipertensão intracraniana se o paciente estiver hipoventilando (acumula CO2 e piora a PIC)'], es: ['Hipotensión extrema (aunque más seguro que morfina)', 'Hipertensión intracraneal si el paciente está hipoventilando (acumula CO2 y empeora la PIC)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'O Fentanil sofre REDISTRIBUIÇÃO. Se a bomba de infusão da UTI ficar ligada por mais de 24h, a droga satura a gordura corporal. Ao desligar a bomba, o fentanil sai da gordura para o sangue, mantendo o paciente em coma sedado por DIAS. Requer planejamento de desmame.', es: 'El Fentanilo sufre REDISTRIBUCIÓN. Si la bomba de infusión de la UCI queda encendida por más de 24h, la droga satura la grasa corporal. Al apagar la bomba, el fentanilo sale de la grasa hacia la sangre, manteniendo al paciente en coma sedado por DÍAS. Requiere planificación de destete.' }
+      }
+    },  // end fentanil
+
+/* ── REMIFENTANIL ───────────────────────────────────────────────────── */
+    "remifentanil": {
+      name: { pt: 'Remifentanil', es: 'Remifentanilo' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Ultra-Curto', es: 'Analgésico Opioide Ultra-Corto' },
+      indications: {
+        pt: ['Anestesia Venosa Total (TIVA)', 'Sedação para procedimentos curtos com necessidade de despertar neurológico imediato (ex: Neurocirurgias)'],
+        es: ['Anestesia Venosa Total (TIVA)', 'Sedación para procedimientos cortos con necesidad de despertar neurológico inmediato (ej: Neurocirugías)']
+      },
+      commercialNames: { br: ['Ultiva'], ar: ['Ultiva'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 2 mg, 5 mg'], es: ['Vial liofilizado 2 mg, 5 mg'] },
+      mechanism: {
+        pt: 'Mecanismo revolucionário. Possui a mesma potência anestésica no receptor Mu que o Fentanil, PORÉM possui uma ligação éster na sua molécula. Essa ligação faz com que o remifentanil seja DESTRUÍDO POR ESTERASES DO SANGUE E DOS TECIDOS em apenas 3 a 5 minutos, INDEPENDENTE do fígado ou dos rins. Não importa se a bomba correu por 1 hora ou por 10 dias, o paciente acorda sem dor em exatos 5 minutos após desligar.',
+        es: 'Mecanismo revolucionario. Posee la misma potencia anestésica en el receptor Mu que el Fentanilo, PERO posee un enlace éster en su molécula. Este enlace hace que el remifentanilo sea DESTRUIDO POR ESTERASAS DE LA SANGRE Y DE LOS TEJIDOS en solo 3 a 5 minutos, INDEPENDIENTEMENTE del hígado o los riñones. No importa si la bomba corrió por 1 hora o por 10 días, el paciente despierta sin dolor en exactos 5 minutos tras apagarla.'
+      },
+      dose: {
+        adult: {
+          pt: 'Infusão contínua: 0,1 a 0,5 mcg/kg/min (Notar que a dose é por MINUTO, diferente do fentanil que é por HORA).',
+          es: 'Infusión continua: 0,1 a 0,5 mcg/kg/min (Notar que la dosis es por MINUTO, a diferencia del fentanilo que es por HORA).'
+        },
+        pediatric: {
+          pt: '0,05 a 0,3 mcg/kg/min IV.',
+          es: '0,05 a 0,3 mcg/kg/min IV.'
+        }
+      },
+      administration: { pt: ['Apenas uso IV contínuo em Bomba de Infusão. Incompatível em bolus puros no paciente acordado devido à potência letal.'], es: ['Solo uso IV continuo en Bomba de Infusión. Incompatible en bolos puros en el paciente despierto debido a la potencia letal.'] },
+      renalAdjustment: { required: false, message: { pt: 'Totalmente independente dos rins (degradado no sangue).', es: 'Totalmente independiente de los riñones (degradado en la sangre).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Totalmente independente do fígado.', es: 'Totalmente independiente del hígado.' } },
+      commonAdverseEffects: { pt: ['Hipotensão arterial frequente (mais que o fentanil)', 'Bradicardia', 'Náusea / Vômitos'], es: ['Hipotensión arterial frecuente (más que el fentanilo)', 'Bradicardia', 'Náusea / Vómitos'] },
+      dangerousAdverseEffects: { pt: ['Depressão respiratória massiva em segundos', 'Hiperalgesia Aguda Induzida por Opioide (ao desligar a bomba, o paciente acorda berrando com a "pior dor da vida" se não tiver sido medicado previamente com outro analgésico de longa duração)'], es: ['Depresión respiratoria masiva en segundos', 'Hiperalgesia Aguda Inducida por Opioide (al apagar la bomba, el paciente despierta gritando con el "peor dolor de su vida" si no ha sido medicado previamente con otro analgésico de larga duración)'] },
+      contraindications: {
+        absolute: { pt: ['Uso peridural ou intratecal (a formulação contém glicina, que é neurotóxica na espinha)'], es: ['Uso epidural o intratecal (la formulación contiene glicina, que es neurotóxica en la espina)'] },
+        relative: { pt: ['Ausência de suporte ventilatório'], es: ['Ausencia de soporte ventilatorio'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'Atenção às unidades: Fentanil é prescrito em mcg/kg/HORA. Remifentanil é prescrito em mcg/kg/MINUTO (a bomba gira 60 vezes mais rápido numérico). O paciente precisa receber morfina ou dipirona 20 min ANTES de desligar o remifentanil, senão a dor no despertar será insuportável.', es: 'Atención a las unidades: Fentanilo se prescribe en mcg/kg/HORA. Remifentanilo se prescribe en mcg/kg/MINUTO (la bomba gira 60 veces más rápido numérico). El paciente necesita recibir morfina o dipirona 20 min ANTES de apagar el remifentanilo, de lo contrario el dolor al despertar será insoportable.' }
+      }
+    },  // end remifentanil
+
+/* ── MORFINA ────────────────────────────────────────────────────────── */
+    "morfina": {
+      name: { pt: 'Morfina', es: 'Morfina' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Forte Natural', es: 'Analgésico Opioide Fuerte Natural' },
+      indications: {
+        pt: ['Dor aguda e crônica intensa', 'Infarto Agudo do Miocárdio (reduz a dor, a ansiedade e a pré-carga cardíaca)', 'Edema Agudo de Pulmão', 'Cuidados Paliativos oncológicos'],
+        es: ['Dolor agudo y crónico intenso', 'Infarto Agudo de Miocardio (reduce el dolor, la ansiedad y la precarga cardíaca)', 'Edema Agudo de Pulmón', 'Cuidados Paliativos oncológicos']
+      },
+      commercialNames: { br: ['Dimorf'], ar: ['Morfina'] },
+      presentation: { pt: ['Ampolas IV/IM/SC 10 mg/mL, 2 mg/mL', 'Comprimidos e Cápsulas LC 10 mg, 30 mg'], es: ['Ampollas IV/IM/SC 10 mg/mL, 2 mg/mL', 'Comprimidos y Cápsulas LC 10 mg, 30 mg'] },
+      mechanism: {
+        pt: 'Alcaloide primário do ópio. Agonista Mu e Kappa. Reduz a transmissão do estímulo doloroso bloqueando canais de cálcio pré-sinápticos e abrindo canais de potássio pós-sinápticos. Peculiaridade: a Morfina induz liberação endógena de HISTAMINA pelos mastócitos, o que causa franca VENODILATAÇÃO (excelente no edema agudo de pulmão para diminuir a água voltando ao coração) mas pode causar broncoespasmo e prurido (coceira).',
+        es: 'Alcaloide primario del opio. Agonista Mu y Kappa. Reduce la transmisión del estímulo doloroso bloqueando canales de calcio presinápticos y abriendo canales de potasio postsinápticos. Peculiaridad: la Morfina induce liberación endógena de HISTAMINA por los mastocitos, lo que causa franca VENODILATACIÓN (excelente en el edema agudo de pulmón para disminuir el agua volviendo al corazón) pero puede causar broncoespasmo y prurito (picazón).'
+      },
+      dose: {
+        adult: {
+          pt: 'Dor aguda: 2 a 10 mg IV (diluído, lento a cada 4 horas). Via oral crônica: 10 a 30 mg a cada 4 horas (a dose oral é muito maior que a IV devido ao grande metabolismo de primeira passagem no fígado).',
+          es: 'Dolor agudo: 2 a 10 mg IV (diluido, lento cada 4 horas). Vía oral crónica: 10 a 30 mg cada 4 horas (la dosis oral es mucho mayor que la IV debido al gran metabolismo de primer paso en el hígado).'
+        },
+        pediatric: {
+          pt: '0,1 a 0,2 mg/kg IV ou SC a cada 4 horas (máx 10 a 15 mg).',
+          es: '0,1 a 0,2 mg/kg IV o SC cada 4 horas (máx 10 a 15 mg).'
+        }
+      },
+      administration: { pt: ['IV diluído em 9 mL de SF0,9% administrado em 2 a 4 minutos.', 'Pode ser infundida via subcutânea em cuidados paliativos (hipodermóclise).'], es: ['IV diluido en 9 mL de SF0,9% administrado en 2 a 4 minutos.', 'Puede ser infundida vía subcutánea en cuidados paliativos (hipodermoclisis).'] },
+      renalAdjustment: { required: true, message: { pt: 'O metabólito Morfina-6-Glicuronídeo (M6G) é tão potente quanto a morfina e tem clearance puramente renal. Em doentes renais, ele se acumula rapidamente causando coma letal. Preferir Fentanil ou Metadona.', es: 'El metabolito Morfina-6-Glucurónido (M6G) es tan potente como la morfina y tiene clearance puramente renal. En enfermos renales, se acumula rápidamente causando coma letal. Preferir Fentanilo o Metadona.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Necessário redução de dose na cirrose grave.', es: 'Necesaria reducción de dosis en cirrosis grave.' } },
+      commonAdverseEffects: { pt: ['Constipação (efeito que NUNCA gera tolerância, persiste pro resto da vida)', 'Prurido / Urticária no tronco e face (pela histamina)', 'Náuseas / Êmese (estimula a zona de gatilho quimiorreceptora no tronco encefálico)'], es: ['Constipación (efecto que NUNCA genera tolerancia, persiste de por vida)', 'Prurito / Urticaria en el tronco y cara (por la histamina)', 'Náuseas / Émesis (estimula la zona gatillo quimiorreceptora en el tronco encefálico)'] },
+      dangerousAdverseEffects: { pt: ['Depressão respiratória grave (reduz o drive do tronco cerebral para o CO2)', 'Hipotensão sistêmica', 'Retenção urinária aguda'], es: ['Depresión respiratoria grave (reduce el drive del tronco cerebral hacia el CO2)', 'Hipotensión sistémica', 'Retención urinaria aguda'] },
+      contraindications: {
+        absolute: { pt: ['Depressão respiratória não controlada', 'Asma brônquica aguda (a histamina piora a crise)'], es: ['Depresión respiratoria no controlada', 'Asma bronquial aguda (la histamina empeora la crisis)'] },
+        relative: { pt: ['Traumatismo cranioencefálico / Hipertensão intracraniana (aumenta PCO2 e PIC)', 'Insuficiência renal grave (ClCr < 30)'], es: ['Traumatismo craneoencefálico / Hipertensión intracraneal (aumenta PCO2 y PIC)', 'Insuficiencia renal grave (ClCr < 30)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'Sempre co-prescrever um laxante forte (como Bisacodil) se o paciente for utilizar a morfina por mais de 3 dias, pois o íleo paralítico é garantido. Antídoto direto é a Naloxona.', es: 'Siempre coprescribir un laxante fuerte (como Bisacodilo) si el paciente va a utilizar la morfina por más de 3 días, pues el íleo paralítico está garantizado. Antídoto directo es la Naloxona.' }
+      }
+    }  // end morfina
+
+  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 324 Lote 1+2+3+4+5 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides) */
 
 })();
