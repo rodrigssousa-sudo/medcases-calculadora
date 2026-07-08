@@ -2403,4 +2403,219 @@
 
 })();
 
+/* ─── GRUPO 13 — Cardiologia Crítica e Hemodinâmica ─────────────────
+   BUILD 330 Lote 3: alteplase · levosimendana · isoproterenol · esmolol · metoprolol_iv
+   category: 'cardiologia'
+──────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+  if (typeof window.ANALGESICOS_DRUGS_DB !== 'object' || Array.isArray(window.ANALGESICOS_DRUGS_DB)) {
+    window.ANALGESICOS_DRUGS_DB = {};
+  }
+  Object.assign(window.ANALGESICOS_DRUGS_DB, {
+
+/* ── ALTEPLASE (rt-PA) ──────────────────────────────────────────────── */
+    "alteplase": {
+      name: { pt: 'Alteplase', es: 'Alteplasa' },
+      category: 'cardiologia',
+      class: { pt: 'Fibrinolítico / Ativador do Plasminogênio Tecidual (t-PA)', es: 'Fibrinolítico / Activador del Plasminógeno Tisular (t-PA)' },
+      indications: {
+        pt: ['Tromboembolismo Pulmonar (TEP) Maciço com instabilidade hemodinâmica', 'Acidente Vascular Cerebral Isquêmico (AVCi) Agudo (< 4,5h)', 'IAMCSST (quando Tenecteplase indisponível)'],
+        es: ['Tromboembolismo Pulmonar (TEP) Masivo con inestabilidad hemodinámica', 'Accidente Cerebrovascular Isquémico (ACVi) Agudo (< 4,5h)', 'IAMCEST (cuando Tenecteplasa indisponible)']
+      },
+      commercialNames: { br: ['Actilyse'], ar: ['Actilyse'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 50 mg (com diluente)'], es: ['Vial liofilizado 50 mg (con diluyente)'] },
+      mechanism: {
+        pt: 'Enzima glicoproteica recombinante idêntica ao t-PA humano. Liga-se à fibrina no coágulo (ação trombo-específica) e converte o plasminogênio aprisionado em plasmina. A plasmina, por sua vez, "corta" e dissolve a rede de fibrina, desmanchando o trombo estrutural. Possui meia-vida muito curta (5 minutos), exigindo infusão contínua após o bolus inicial.',
+        es: 'Enzima glucoproteica recombinante idéntica al t-PA humano. Se une a la fibrina en el coágulo (acción trombo-específica) y convierte el plasminógeno atrapado en plasmina. La plasmina, a su vez, "corta" y disuelve la red de fibrina, deshaciendo el trombo estructural. Posee vida media muy corta (5 minutos), exigiendo infusión continua tras el bolo inicial.'
+      },
+      dose: {
+        adult: {
+          pt: 'TEP Maciço: 100 mg IV ao longo de 2 horas (ou 0,6 mg/kg em bolus em parada cardíaca). AVCi: 0,9 mg/kg IV (máx 90mg) -> 10% da dose em bolus de 1 min e 90% em bomba por 60 min.',
+          es: 'TEP Masivo: 100 mg IV a lo largo de 2 horas (o 0,6 mg/kg en bolo en paro cardíaco). ACVi: 0,9 mg/kg IV (máx 90mg) -> 10% de la dosis en bolo de 1 min y 90% en bomba por 60 min.'
+        },
+        pediatric: {
+          pt: 'Uso excepcional em tromboses massivas (0,1 a 0,5 mg/kg/h).',
+          es: 'Uso excepcional en trombosis masivas (0,1 a 0,5 mg/kg/h).'
+        }
+      },
+      administration: { pt: ['Bomba de Infusão Contínua estrita para a fase de manutenção.', 'Evitar punções venosas ou arteriais não compressíveis (ex: jugular, subclávia) após o início da infusão.'], es: ['Bomba de Infusión Continua estricta para la fase de mantenimiento.', 'Evitar punciones venosas o arteriales no compresibles (ej: yugular, subclavia) tras el inicio de la infusión.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em doença hepática severa com coagulopatia ativa.', es: 'Evitar en enfermedad hepática severa con coagulopatía activa.' } },
+      commonAdverseEffects: { pt: ['Sangramento superficial (gengiva, sítios de punção)', 'Equimoses'], es: ['Sangrado superficial (encía, sitios de punción)', 'Equimosis'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia Intracraniana (HIC) severa', 'Hemorragia retroperitoneal e gastrointestinal maciça', 'Angioedema orolingual (especialmente se o paciente usar IECA)'], es: ['Hemorragia Intracraneal (HIC) severa', 'Hemorragia retroperitoneal y gastrointestinal masiva', 'Angioedema orolingual (especialmente si el paciente usa IECA)'] },
+      contraindications: {
+        absolute: { pt: ['Hemorragia intracraniana prévia', 'Neoplasia do SNC', 'Sangramento interno ativo', 'PA > 185/110 mmHg no AVCi'], es: ['Hemorragia intracraneal previa', 'Neoplasia del SNC', 'Sangrado interno activo', 'PA > 185/110 mmHg en ACVi'] },
+        relative: { pt: ['Uso de anticoagulantes orais', 'Gestação', 'Ressuscitação cardiopulmonar traumática prolongada (> 10 min)'], es: ['Uso de anticoagulantes orales', 'Embarazo', 'Reanimación cardiopulmonar traumática prolongada (> 10 min)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'ANTÍDOTO DE RESGATE: Em caso de explosão hemorrágica, parar a bomba imediatamente e administrar Ácido Tranexâmico (Transamin) IV e Crioprecipitado/Plasma fresco.', es: 'ANTÍDOTO DE RESCATE: En caso de explosión hemorrágica, parar la bomba inmediatamente y administrar Ácido Tranexámico (Transamin) IV y Crioprecipitado/Plasma fresco.' }
+      }
+    },
+
+/* ── LEVOSIMENDANA ──────────────────────────────────────────────────── */
+    "levosimendana": {
+      name: { pt: 'Levosimendana', es: 'Levosimendán' },
+      category: 'cardiologia',
+      class: { pt: 'Inodilatador / Sensibilizador de Cálcio', es: 'Inodilatador / Sensibilizador de Calcio' },
+      indications: {
+        pt: ['Insuficiência Cardíaca Aguda Descompensada severa', 'Choque cardiogênico refratário', 'Desmame difícil de circulação extracorpórea (CEC)'],
+        es: ['Insuficiencia Cardíaca Aguda Descompensada severa', 'Choque cardiogénico refractario', 'Destete difícil de circulación extracorpórea (CEC)']
+      },
+      commercialNames: { br: ['Simdax'], ar: ['Simdax'] },
+      presentation: { pt: ['Ampolas IV 2,5 mg/mL (5 mL)'], es: ['Ampollas IV 2,5 mg/mL (5 mL)'] },
+      mechanism: {
+        pt: 'Mecanismo duplo fantástico: 1) Liga-se à troponina C do miocárdio, tornando a fibra muscular mais sensível ao cálcio já existente, AUMENTANDO a força de contração (inotropismo) SEM aumentar o consumo de oxigênio do coração (ao contrário da dobutamina). 2) Abre os canais de potássio sensíveis ao ATP na musculatura lisa vascular, causando VASODILATAÇÃO coronariana e sistêmica severa (reduz pré e pós-carga).',
+        es: 'Mecanismo doble fantástico: 1) Se une a la troponina C del miocardio, haciendo la fibra muscular más sensible al calcio ya existente, AUMENTANDO la fuerza de contracción (inotropismo) SIN aumentar el consumo de oxígeno del corazón (a diferencia de la dobutamina). 2) Abre los canales de potasio sensibles al ATP en la musculatura lisa vascular, causando VASODILATACIÓN coronaria y sistémica severa (reduce pre y poscarga).'
+      },
+      dose: {
+        adult: {
+          pt: 'Infusão IV Contínua: 0,05 a 0,2 mcg/kg/min por 24 horas. (A dose de ataque em bolus foi amplamente ABANDONADA pelo risco de choque hipotensivo letal).',
+          es: 'Infusión IV Continua: 0,05 a 0,2 mcg/kg/min por 24 horas. (La dosis de ataque en bolo fue ampliamente ABANDONADA por el riesgo de choque hipotensivo letal).'
+        },
+        pediatric: {
+          pt: 'Uso especializado em UTI Pediátrica Cardíaca (0,05 a 0,1 mcg/kg/min).',
+          es: 'Uso especializado en UCI Pediátrica Cardíaca (0,05 a 0,1 mcg/kg/min).'
+        }
+      },
+      administration: { pt: ['Infusão em bomba por exatamente 24 horas.', 'Seu metabólito ativo (OR-1896) tem meia-vida de 80 horas. O paciente continua tendo o benefício (e o risco) cardíaco por até 7 a 9 DIAS após desligar a bomba.'], es: ['Infusión en bomba por exactamente 24 horas.', 'Su metabolito activo (OR-1896) tiene vida media de 80 horas. El paciente sigue teniendo el beneficio (y el riesgo) cardíaco por hasta 7 a 9 DÍAS tras apagar la bomba.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar em insuficiência renal grave (ClCr < 30). O metabólito ativo se acumula drasticamente.', es: 'Evitar en insuficiencia renal grave (ClCr < 30). El metabolito activo se acumula drásticamente.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em hepatopatia grave.', es: 'Evitar en hepatopatía grave.' } },
+      commonAdverseEffects: { pt: ['Cefaleia (devido à intensa vasodilatação cerebral)', 'Hipotensão leve'], es: ['Cefalea (debido a la intensa vasodilatación cerebral)', 'Hipotensión leve'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão Arterial Refratária / Choque Vasoplégico', 'Fibrilação Atrial e Arritmias Ventriculares', 'Hipocalemia (devido ao mecanismo dos canais de K+)'], es: ['Hipotensión Arterial Refractaria / Choque Vasopléjico', 'Fibrilación Auricular y Arritmias Ventriculares', 'Hipopotasemia (debido al mecanismo de los canales de K+)'] },
+      contraindications: {
+        absolute: { pt: ['Hipotensão severa pré-existente (PAS < 85 mmHg) sem uso prévio de Noradrenalina', 'Obstrução mecânica da saída do VE (Estenose Aórtica severa)'], es: ['Hipotensión severa preexistente (PAS < 85 mmHg) sin uso previo de Noradrenalina', 'Obstrucción mecánica de la salida del VI (Estenosis Aórtica severa)'] },
+        relative: { pt: ['Arritmias ventriculares não controladas'], es: ['Arritmias ventriculares no controladas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'REGRA DE UTI: A levosimendana NUNCA deve ser ligada em um paciente hipotenso sem que haja uma bomba de Noradrenalina correndo junto para segurar a pressão, pois a vasodilatação causada por ela é muito agressiva.', es: 'REGLA DE UCI: El levosimendán NUNCA debe encenderse en un paciente hipotenso sin que haya una bomba de Noradrenalina corriendo junto para sostener la presión, pues la vasodilatación que causa es muy agresiva.' }
+      }
+    },
+
+/* ── ISOPROTERENOL ──────────────────────────────────────────────────── */
+    "isoproterenol": {
+      name: { pt: 'Isoproterenol / Isoprenalina', es: 'Isoproterenol / Isoprenalina' },
+      category: 'cardiologia',
+      class: { pt: 'Agonista Adrenérgico Beta Puro (B1 e B2)', es: 'Agonista Adrenérgico Beta Puro (B1 y B2)' },
+      indications: {
+        pt: ['Bradicardia refratária grave ou Bloqueio Atrioventricular (BAVT) enquanto aguarda marcapasso', 'Arritmia Torsades de Pointes induzida por bradicardia (como ponte / overdrive químico)', 'Intoxicação por betabloqueadores'],
+        es: ['Bradicardia refractaria grave o Bloqueo Auriculoventricular (BAVC) mientras se espera marcapasos', 'Arritmia Torsades de Pointes inducida por bradicardia (como puente / overdrive químico)', 'Intoxicación por betabloqueantes']
+      },
+      commercialNames: { br: ['Isoprel', 'Aleudrina'], ar: ['Isoprenalina'] },
+      presentation: { pt: ['Ampolas IV 0,2 mg/mL (1 mL)'], es: ['Ampollas IV 0,2 mg/mL (1 mL)'] },
+      mechanism: {
+        pt: 'Estimula EXCLUSIVAMENTE os receptores Beta-1 e Beta-2 adrenérgicos (ação Alfa nula). No Beta-1 (coração), gera inotropismo (força) e cronotropismo (frequência) absurdamente positivos. No Beta-2 (vasos e brônquios), gera forte vasodilatação periférica e broncodilatação. O resultado final é um CORAÇÃO ACELERADO batendo contra VASOS RELAXADOS (aumenta o débito, mas pode derrubar a pressão diastólica e isquemiar o coração).',
+        es: 'Estimula EXCLUSIVAMENTE los receptores Beta-1 y Beta-2 adrenérgicos (acción Alfa nula). En el Beta-1 (corazón), genera inotropismo (fuerza) y cronotropismo (frecuencia) absurdamente positivos. En el Beta-2 (vasos y bronquios), genera fuerte vasodilatación periférica y broncodilatación. El resultado final es un CORAZÓN ACELERADO latiendo contra VASOS RELAJADOS (aumenta el gasto, pero puede derrumbar la presión diastólica e isquemiar el corazón).'
+      },
+      dose: {
+        adult: {
+          pt: 'Infusão IV Contínua: 2 a 10 mcg/min (titulado rigorosamente pelo alvo de frequência cardíaca).',
+          es: 'Infusión IV Continua: 2 a 10 mcg/min (titulado rigurosamente por el objetivo de frecuencia cardíaca).'
+        },
+        pediatric: {
+          pt: '0,05 a 2 mcg/kg/min IV.',
+          es: '0,05 a 2 mcg/kg/min IV.'
+        }
+      },
+      administration: { pt: ['Diluir em SF ou SG e usar em bomba de infusão. Monitorização eletrocardiográfica ininterrupta obrigatória.'], es: ['Diluir en SF o SG y usar en bomba de infusión. Monitorización electrocardiográfica ininterrumpida obligatoria.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Metabolizado pelas enzimas COMT. Sem ajuste.', es: 'Metabolizado por las enzimas COMT. Sin ajuste.' } },
+      commonAdverseEffects: { pt: ['Palpitações severas', 'Tremores e ansiedade', 'Flushing (vermelhidão/calor)'], es: ['Palpitaciones severas', 'Temblores y ansiedad', 'Flushing (enrojecimiento/calor)'] },
+      dangerousAdverseEffects: { pt: ['Taquicardia Ventricular / Fibrilação Ventricular (pelo extremo estímulo cardíaco)', 'Isquemia miocárdica fatal (aumenta brutalmente o consumo de oxigênio cardíaco ao mesmo tempo que dilata os vasos e rouba fluxo coronariano)', 'Hipotensão diastólica grave'], es: ['Taquicardia Ventricular / Fibrilación Ventricular (por el extremo estímulo cardíaco)', 'Isquemia miocárdica fatal (aumenta brutalmente el consumo de oxígeno cardíaco al mismo tiempo que dilata los vasos y roba flujo coronario)', 'Hipotensión diastólica grave'] },
+      contraindications: {
+        absolute: { pt: ['Infarto Agudo do Miocárdio ativo (o coração vai necrosar devido ao aumento do consumo de oxigênio)', 'Taquicardias prévias', 'Intoxicação digitálica'], es: ['Infarto Agudo de Miocardio activo (el corazón va a necrosar debido al aumento del consumo de oxígeno)', 'Taquicardias previas', 'Intoxicación digitálica'] },
+        relative: { pt: ['Hipertireoidismo severo'], es: ['Hipertiroidismo severo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Ponte pura para o marcapasso definitivo/temporário em emergências de bradicardia. NÃO deve ser usado a longo prazo. O uso excessivo queima as reservas do miocárdio.', es: 'Puente puro para el marcapasos definitivo/temporal en emergencias de bradicardia. NO debe ser usado a largo plazo. El uso excesivo quema las reservas del miocardio.' }
+      }
+    },
+
+/* ── ESMOLOL IV ─────────────────────────────────────────────────────── */
+    "esmolol": {
+      name: { pt: 'Esmolol IV', es: 'Esmolol IV' },
+      category: 'cardiologia',
+      class: { pt: 'Betabloqueador Cardioseletivo (B1) de Ação Ultra-Curta', es: 'Betabloqueante Cardioselectivo (B1) de Acción Ultra-Corta' },
+      indications: {
+        pt: ['Dissecção Aguda de Aorta (para controle imediato do dP/dt - cisalhamento do vaso)', 'Crise Tireotóxica na UTI', 'Taquicardia supraventricular intraoperatória ou emergencial'],
+        es: ['Disección Aguda de Aorta (para control inmediato del dP/dt - cizallamiento del vaso)', 'Crisis Tirotoxicósica en la UCI', 'Taquicardia supraventricular intraoperatoria o de emergencia']
+      },
+      commercialNames: { br: ['Brevibloc'], ar: ['Brevibloc'] },
+      presentation: { pt: ['Frasco-ampola IV 10 mg/mL (10 mL = 100 mg) ou bolsas prontas de 250 mL'], es: ['Vial IV 10 mg/mL (10 mL = 100 mg) o bolsas listas de 250 mL'] },
+      mechanism: {
+        pt: 'Antagonista competitivo puro dos receptores Beta-1 no coração. Reduz rapidamente a frequência cardíaca (cronotropismo negativo) e a força de contração. O seu brilhantismo: É hidrolisado rapidamente por esterases presentes nas hemácias (glóbulos vermelhos). Isso confere ao Esmolol uma meia-vida incrivelmente curta de APENAS 9 MINUTOS. É a droga perfeita para controle minuto a minuto (liga a bomba a FC cai, desliga a bomba a FC volta ao normal em 15 min).',
+        es: 'Antagonista competitivo puro de los receptores Beta-1 en el corazón. Reduce rápidamente la frecuencia cardíaca (cronotropismo negativo) y la fuerza de contracción. Su brillantez: Es hidrolizado rápidamente por esterasas presentes en los hematíes (glóbulos rojos). Esto confiere al Esmolol una vida media increíblemente corta de SOLO 9 MINUTOS. Es la droga perfecta para control minuto a minuto (enciende la bomba la FC cae, apaga la bomba la FC vuelve a la normalidad en 15 min).'
+      },
+      dose: {
+        adult: {
+          pt: 'Bolus de ataque: 500 mcg/kg em 1 minuto. Manutenção: Infusão IV contínua de 50 a 200 mcg/kg/min.',
+          es: 'Bolo de ataque: 500 mcg/kg en 1 minuto. Mantenimiento: Infusión IV continua de 50 a 200 mcg/kg/min.'
+        },
+        pediatric: {
+          pt: 'Bolus 100-500 mcg/kg seguido de infusão 25-100 mcg/kg/min.',
+          es: 'Bolo 100-500 mcg/kg seguido de infusión 25-100 mcg/kg/min.'
+        }
+      },
+      administration: { pt: ['Bomba de infusão contínua exclusiva. Titulação agressiva e rápida permitida.'], es: ['Bomba de infusión continua exclusiva. Titulación agresiva y rápida permitida.'] },
+      renalAdjustment: { required: false, message: { pt: 'Metabolismo dependente do sangue (esterases). Seguro em falência renal aguda.', es: 'Metabolismo dependiente de la sangre (esterasas). Seguro en falla renal aguda.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Independente do fígado.', es: 'Independiente del hígado.' } },
+      commonAdverseEffects: { pt: ['Hipotensão arterial (muito frequente, porém de fácil reversão reduzindo a bomba)', 'Flebite na punção'], es: ['Hipotensión arterial (muy frecuente, pero de fácil reversión reduciendo la bomba)', 'Flebitis en la punción'] },
+      dangerousAdverseEffects: { pt: ['Bradicardia severa', 'Broncoespasmo (embora seja seletivo B1, em altas doses pode bloquear o pulmão B2)', 'Choque cardiogênico induzido'], es: ['Bradicardia severa', 'Broncoespasmo (aunque sea selectivo B1, en altas dosis puede bloquear el pulmón B2)', 'Choque cardiogénico inducido'] },
+      contraindications: {
+        absolute: { pt: ['Choque cardiogênico prévio / Insuficiência cardíaca descompensada', 'Bloqueio Atrioventricular de 2º ou 3º grau', 'Doença do Nó Sinusal'], es: ['Choque cardiogénico previo / Insuficiencia cardíaca descompensada', 'Bloqueo Auriculoventricular de 2º o 3º grado', 'Enfermedad del Nodo Sinusal'] },
+        relative: { pt: ['Asma brônquica severa em atividade'], es: ['Asma bronquial severa en actividad'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'Na Dissecção de Aorta, o Esmolol DEVE SER LIGADO ANTES do Nitroprussiato de Sódio. Se você der um vasodilatador primeiro, ocorrerá taquicardia reflexa que rasgará o restante da aorta. Primeiro bloqueie o coração (Esmolol), depois dilate o vaso.', es: 'En la Disección de Aorta, el Esmolol DEBE ENCENDERSE ANTES que el Nitroprusiato de Sodio. Si das un vasodilatador primero, ocurrirá taquicardia refleja que rasgará el resto de la aorta. Primero bloquea el corazón (Esmolol), luego dilata el vaso.' }
+      }
+    },
+
+/* ── METOPROLOL IV ──────────────────────────────────────────────────── */
+    "metoprolol_iv": {
+      name: { pt: 'Metoprolol IV', es: 'Metoprolol IV' },
+      category: 'cardiologia',
+      class: { pt: 'Betabloqueador Cardioseletivo (B1)', es: 'Betabloqueante Cardioselectivo (B1)' },
+      indications: {
+        pt: ['Controle agudo da Frequência Cardíaca na Fibrilação Atrial e Flutter Atrial', 'Infarto Agudo do Miocárdio (reduzir dor, isquemia e risco de fibrilação)', 'Emergências hipertensivas associadas a síndromes coronarianas'],
+        es: ['Control agudo de la Frecuencia Cardíaca en la Fibrilación Auricular y Flutter Auricular', 'Infarto Agudo de Miocardio (reducir dolor, isquemia y riesgo de fibrilación)', 'Emergencias hipertensivas asociadas a síndromes coronarios']
+      },
+      commercialNames: { br: ['Seloken IV'], ar: ['Beloc IV', 'Metoprolol'] },
+      presentation: { pt: ['Ampolas IV 1 mg/mL (5 mL = 5 mg)'], es: ['Ampollas IV 1 mg/mL (5 mL = 5 mg)'] },
+      mechanism: {
+        pt: 'Bloqueador competitivo altamente seletivo dos receptores Beta-1 no coração. Diminui a frequência sinusal, lentifica a condução do nódulo atrioventricular (AV) e reduz a contratilidade (Inotrópico e Cronotrópico negativos). Diferente do esmolol, possui meia-vida duradoura no plasma (3 a 4 horas), sendo ideal para estabilização de longo prazo.',
+        es: 'Bloqueador competitivo altamente selectivo de los receptores Beta-1 en el corazón. Disminuye la frecuencia sinusal, lentifica la conducción del nódulo auriculoventricular (AV) y reduce la contractilidad (Inotrópico y Cronotrópico negativos). A diferencia del esmolol, posee vida media duradera en el plasma (3 a 4 horas), siendo ideal para estabilización a largo plazo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Bolus IV Lento: 2,5 mg a 5 mg administrados em 2 minutos. Avaliar PA/FC e repetir a cada 5 minutos, até o limite MÁXIMO de 15 mg (3 ampolas).',
+          es: 'Bolo IV Lento: 2,5 mg a 5 mg administrados en 2 minutos. Evaluar PA/FC y repetir cada 5 minutos, hasta el límite MÁXIMO de 15 mg (3 ampollas).'
+        },
+        pediatric: {
+          pt: '0,1 a 0,2 mg/kg IV lento (Uso muito restrito e raro).',
+          es: '0,1 a 0,2 mg/kg IV lento (Uso muy restringido y raro).'
+        }
+      },
+      administration: { pt: ['IV direto SEM diluição, infundido a uma taxa de 1 mg por minuto. Monitoração de ECG ininterrupta obrigatória.'], es: ['IV directo SIN dilución, infundido a una tasa de 1 mg por minuto. Monitorización de ECG ininterrumpida obligatoria.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolismo hepático severo (CYP2D6). Usar as menores doses (ex: bolus de 2,5mg) em cirróticos.', es: 'Metabolismo hepático severo (CYP2D6). Usar las menores dosis (ej: bolo de 2,5mg) en cirróticos.' } },
+      commonAdverseEffects: { pt: ['Hipotensão postural e tontura', 'Fadiga', 'Extremidades frias'], es: ['Hipotensión postural y mareo', 'Fatiga', 'Extremidades frías'] },
+      dangerousAdverseEffects: { pt: ['Choque cardiogênico irreversível (se dado num coração já em falência, ex: Killip III/IV)', 'Bradicardia extrema / Bloqueio AV total', 'Broncoespasmo agudo em asmáticos sensíveis'], es: ['Choque cardiogénico irreversible (si se da en un corazón ya en fallo, ej: Killip III/IV)', 'Bradicardia extrema / Bloqueo AV total', 'Broncoespasmo agudo en asmáticos sensibles'] },
+      contraindications: {
+        absolute: { pt: ['Frequência Cardíaca < 45 bpm', 'PAS < 100 mmHg basal', 'Insuficiência Cardíaca Aguda com congestão pulmonar auscultável ativa (crepitações)', 'Uso recente de Verapamil/Diltiazem IV'], es: ['Frecuencia Cardíaca < 45 lpm', 'PAS < 100 mmHg basal', 'Insuficiencia Cardíaca Aguda con congestión pulmonar auscultable activa (crepitaciones)', 'Uso reciente de Verapamilo/Diltiazem IV'] },
+        relative: { pt: ['Asma brônquica / DPOC com broncoespasmo ativo'], es: ['Asma bronquial / EPOC con broncoespasmo activo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'Não force a mão. Se após as 3 ampolas (15 mg totais) a Fibrilação Atrial não controlar a frequência, o paciente necessita de Amiodarona ou Cardioversão Elétrica. O Antídoto para intoxicação maciça por betabloqueadores é o GLUCAGON IV.', es: 'No fuerce la mano. Si tras las 3 ampollas (15 mg totales) la Fibrilación Auricular no controla la frecuencia, el paciente necesita Amiodarona o Cardioversión Eléctrica. El Antídoto para intoxicación masiva por betabloqueantes es el GLUCAGÓN IV.' }
+      }
+    }
+
+  }); /* fim Object.assign ANALGESICOS_DRUGS_DB — Grupo 13 (alteplase · levosimendana · isoproterenol · esmolol · metoprolol_iv — BUILD 330 Lote 3) */
+
+})();
+
 })(); /* fim da IIFE do módulo analgésicos */

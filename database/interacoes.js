@@ -19298,6 +19298,123 @@ const INTERACOES_DB = {
         es: "La fibrinólisis en el ACV está ABSOLUTAMENTE CONTRAINDICADA si el paciente usa DOACs (a menos que el uso de la reversión con antídotos específicos sea validada en los últimos minutos o pruebas de coagulación específicas estén normales, protocolo de excepción neurológica)."
       }
     }
+  },  // comma added; BUILD 330 Lote 3 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Cardiologia Crítica e Hemodinâmica
+   Alteplase, Levosimendana, Isoproterenol, Esmolol, Metoprolol IV
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── ALTEPLASE (Fibrinolíticos) ── */
+  "alteplase": {
+    "$classe_anticoagulantes_orais_diretos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A alteplase dissolve todos os coágulos sistêmicos. Se o paciente possuir o sistema de coagulação inativado por DOACs (Rivaroxabana/Apixabana) ou Varfarina nas últimas 48 horas, as lesões microvasculares cerebrais sofrerão explosão hemorrágica contínua. Mortalidade neurológica inaceitável.",
+        es: "La alteplasa disuelve todos los coágulos sistémicos. Si el paciente posee el sistema de coagulación inactivado por DOACs (Rivaroxabán/Apixabán) o Warfarina en las últimas 48 horas, las lesiones microvasculares cerebrales sufrirán explosión hemorrágica continua. Mortalidad neurológica inaceptable."
+      },
+      conduta: {
+        pt: "Trombólise é CONTRAINDICADA no Acidente Vascular Cerebral Isquêmico (AVCi) de pacientes que tomaram anticoagulantes plenos recentemente.",
+        es: "Trombólisis está CONTRAINDICADA en el Accidente Cerebrovascular Isquémico (ACVi) de pacientes que tomaron anticoagulantes plenos recientemente."
+      }
+    },
+    "$classe_ieca": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Tanto a Alteplase quanto os IECAs (Enalapril, Captopril) estimulam indiretamente e exacerbam a liberação de cininas teciduais (bradicinina). A associação multiplica por 3x a chance do paciente evoluir com Angioedema Orolingual severo durante a infusão do trombolítico, podendo exigir intubação de emergência.",
+        es: "Tanto la Alteplasa como los IECAs (Enalapril, Captopril) estimulan indirectamente y exacerban la liberación de cininas tisulares (bradicinina). La asociación multiplica por 3x la posibilidad del paciente de evolucionar con Angioedema Orolingual severo durante la infusión del trombolítico, pudiendo exigir intubación de emergencia."
+      },
+      conduta: {
+        pt: "Permitido uso, porém vigilância estrita das vias aéreas (inchaço de lábios e língua) durante a trombólise em pacientes usuários de IECA.",
+        es: "Permitido uso, pero vigilancia estricta de las vías respiratorias (hinchazón de labios y lengua) durante la trombólisis en pacientes usuarios de IECA."
+      }
+    }
+  },
+
+  /* ── LEVOSIMENDANA ── */
+  "levosimendana": {
+    "milrinona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Vasoplégico Fatal. Ambas as drogas causam intensa vasodilatação periférica via canais de K+ e PDE3, respectivamente. O uso conjunto pode derrubar a pressão arterial sistêmica do paciente a zero, induzindo choque irreversível.",
+        es: "Sinergismo Vasopléjico Fatal. Ambas drogas causan intensa vasodilatación periférica vía canales de K+ y PDE3, respectivamente. El uso conjunto puede derrumbar la presión arterial sistémica del paciente a cero, induciendo choque irreversible."
+      },
+      conduta: {
+        pt: "Evitar a associação simultânea de inodilatadores. Intercalar ou substituir.",
+        es: "Evitar la asociación simultánea de inodilatadores. Intercalar o sustituir."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO BENÉFICA (Ajuste Fisiológico Positivo). Ao contrário da dobutamina (que perde seu efeito se o paciente usa betabloqueadores), a Levosimendana atua após o receptor (direto na fibra miocárdica). Logo, ela consegue salvar e aumentar a força do coração MESMO que o coração esteja betabloqueado.",
+        es: "INTERACCIÓN BENÉFICA (Ajuste Fisiológico Positivo). A diferencia de la dobutamina (que pierde su efecto si el paciente usa betabloqueantes), la Levosimendana actúa después del receptor (directo en la fibra miocárdica). Por lo tanto, logra salvar y aumentar la fuerza del corazón AUNQUE el corazón esté betabloqueado."
+      },
+      conduta: {
+        pt: "A levosimendana é a droga INOTRÓPICA DE ESCOLHA para o choque cardiogênico em pacientes previamente betabloqueados.",
+        es: "La levosimendana es la droga INOTRÓPICA DE ELECCIÓN para el choque cardiogénico en pacientes previamente betabloqueados."
+      }
+    }
+  },
+
+  /* ── ISOPROTERENOL ── */
+  "isoproterenol": {
+    "amiodarona": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO BENÉFICA (Resgate de Torsades). Drogas como a Amiodarona e Sotalol alongam o intervalo QT, podendo gerar a arritmia letal Torsades de Pointes. O isoproterenol, ao acelerar massivamente a frequência cardíaca (overdrive químico), ENCURTA mecanicamente o intervalo QT, abortando a arritmia.",
+        es: "INTERACCIÓN BENÉFICA (Rescate de Torsades). Drogas como Amiodarona y Sotalol alargan el intervalo QT, pudiendo generar la arritmia letal Torsades de Pointes. El isoproterenol, al acelerar masivamente la frecuencia cardíaca (overdrive químico), ACORTA mecánicamente el intervalo QT, abortando la arritmia."
+      },
+      conduta: {
+        pt: "Uso terapêutico padrão em emergências arritmogênicas bradicárdicas.",
+        es: "Uso terapéutico estándar en emergencias arritmogénicas bradicárdicas."
+      }
+    },
+    "adrenalina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Sinergismo adrenérgico fulminante. A associação de Isoproterenol (Agonista B puro) com Adrenalina ou Dobutamina fará o miocárdio bater numa frequência insustentável (fibrilação ventricular) e consumirá todo o oxigênio do músculo, gerando infarto miocárdico maciço.",
+        es: "Sinergismo adrenérgico fulminante. La asociación de Isoproterenol (Agonista B puro) con Adrenalina o Dobutamina hará que el miocardio lata a una frecuencia insostenible (fibrilación ventricular) y consumirá todo el oxígeno del músculo, generando infarto miocárdico masivo."
+      },
+      conduta: {
+        pt: "Nunca associar. O isoproterenol deve ser usado exclusivamente sozinho em bomba.",
+        es: "Nunca asociar. El isoproterenol debe ser usado exclusivamente solo en bomba."
+      }
+    }
+  },
+
+  /* ── BETABLOQUEADORES VENOSOS (Esmolol, Metoprolol IV) ── */
+  "$classe_betabloqueadores_iv": {
+    "$classe_bcc_nao_diidropiridinicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ASSOCIAÇÃO CARDIOPLÉGICA FATAL. O uso conjunto de Betabloqueadores Venosos com Bloqueadores de Canal de Cálcio como Verapamil ou Diltiazem causa dupla inibição profunda e simultânea do nó sinusal e do nó AV. O coração do paciente pode simplesmente parar de bater (Assistolia) ou entrar em choque cardiogênico intratável.",
+        es: "ASOCIACIÓN CARDIOPLÉJICA FATAL. El uso conjunto de Betabloqueantes Venosos con Bloqueadores de Canal de Calcio como Verapamilo o Diltiazem causa doble inhibición profunda y simultánea del nodo sinusal y del nodo AV. El corazón del paciente puede simplemente dejar de latir (Asistolia) o entrar en choque cardiogénico intratable."
+      },
+      conduta: {
+        pt: "MANDATÓRIO aguardar de 2 a 4 horas antes de infundir um após o uso prévio do outro na emergência (na dúvida, escolher apenas um para controle de FA).",
+        es: "MANDATORIO esperar de 2 a 4 horas antes de infundir uno tras el uso previo del otro en urgencias (en duda, elegir solo uno para control de FA)."
+      }
+    },
+    "$classe_beta2_agonistas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Antagonismo de receptores no pulmão. Apesar do Esmolol e Metoprolol serem cardioseletivos (Beta-1), em doses endovenosas na emergência essa seletividade é perdida. Eles irão bloquear os receptores Beta-2 pulmonares, anulando o efeito do salbutamol/fenoterol e precipitando broncoespasmo agudo asfixiante.",
+        es: "Antagonismo de receptores en pulmón. A pesar de que Esmolol y Metoprolol son cardioselectivos (Beta-1), en dosis endovenosas de emergencia esta selectividad se pierde. Bloquearán los receptores Beta-2 pulmonares, anulando el efecto del salbutamol/fenoterol y precipitando broncoespasmo agudo asfixiante."
+      },
+      conduta: {
+        pt: "Evitar betabloqueadores venosos em pacientes asmáticos ou DPOC exacerbados. Preferir Diltiazem IV ou Amiodarona para controle de frequência nestes casos.",
+        es: "Evitar betabloqueantes venosos en pacientes asmáticos o EPOC exacerbados. Preferir Diltiazem IV o Amiodarona para control de frecuencia en estos casos."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
