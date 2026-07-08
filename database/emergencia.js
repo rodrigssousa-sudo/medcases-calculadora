@@ -1172,8 +1172,208 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'MEMORIZE OS METAIS: O Carvão Ativado NÃO FUNCIONA (não gruda) em Lítio, Ferro, Chumbo e Álcool. Administrar carvão para essas intoxicações fará o paciente vomitar sem nenhum benefício desintoxicante.', es: 'MEMORICE LOS METALES: El Carbón Activado NO FUNCIONA (no se pega) en Litio, Hierro, Plomo y Alcohol. Administrar carbón para estas intoxicaciones hará al paciente vomitar sin ningún beneficio desintoxicante.' }
       }
+    }, // vírgula adicionada; BUILD 346 vasopressores seguem
+
+/* ── NORADRENALINA (NOREPINEFRINA) ──────────────────────────────────── */
+    "noradrenalina": {
+      name: { pt: 'Noradrenalina / Norepinefrina', es: 'Noradrenalina / Norepinefrina' },
+      category: 'emergencia',
+      class: { pt: 'Amina Simpatomimética (Agonista Alfa-1 predominante)', es: 'Amina Simpatomimética (Agonista Alfa-1 predominante)' },
+      indications: {
+        pt: ['Choque Séptico (Vasopressor de Primeira Linha absoluto)', 'Choque Cardiogênico (para manter pressão de perfusão coronariana)', 'Hipotensão refratária severa'],
+        es: ['Choque Séptico (Vasopresor de Primera Línea absoluto)', 'Choque Cardiogénico (para mantener presión de perfusión coronaria)', 'Hipotensión refractaria severa']
+      },
+      commercialNames: { br: ['Levophed', 'Hyponor'], ar: ['Noradrenalina'] },
+      presentation: { pt: ['Ampolas IV 4 mg/4 mL ou 8 mg/4 mL (Bissulfato ou Hemitartarato)'], es: ['Ampollas IV 4 mg/4 mL o 8 mg/4 mL'] },
+      mechanism: {
+        pt: 'Estimula fortemente os receptores Alfa-1 adrenérgicos (causando intensa vasoconstrição periférica e aumento da resistência vascular sistêmica) e possui leve efeito Beta-1 (discreto aumento da contratilidade cardíaca). Eleva agressivamente a Pressão Arterial Média (PAM) para perfundir órgãos vitais.',
+        es: 'Estimula fuertemente los receptores Alfa-1 adrenérgicos (causando intensa vasoconstricción periférica y aumento de la resistencia vascular sistémica) y posee leve efecto Beta-1 (discreto aumento de la contractilidad cardíaca). Eleva agresivamente la Presión Arterial Media (PAM) para perfundir órganos vitales.'
+      },
+      dose: {
+        adult: {
+          pt: 'Infusão IV Contínua: 0,01 a 3 mcg/kg/min (Alguns protocolos vão até limites mais altos no choque refratário, mas aumenta risco de isquemia digital).',
+          es: 'Infusión IV Continua: 0,01 a 3 mcg/kg/min (Algunos protocolos van hasta límites más altos en el choque refractario, pero aumenta riesgo de isquemia digital).'
+        },
+        pediatric: {
+          pt: '0,05 a 1 mcg/kg/min IV contínuo.',
+          es: '0,05 a 1 mcg/kg/min IV continuo.'
+        }
+      },
+      administration: { pt: ['OBRIGATÓRIO uso de Bomba de Infusão Contínua.', 'PREFERENCIALMENTE em Acesso Venoso Central. O uso em veia periférica deve ser temporário (até pegar acesso central) devido ao risco de extravasamento e necrose.'], es: ['OBLIGATORIO uso de Bomba de Infusión Continua.', 'PREFERENTEMENTE en Acceso Venoso Central. El uso en vena periférica debe ser temporal (hasta coger acceso central) debido al riesgo de extravasación y necrosis.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Palpitações e tremores', 'Ansiedade severa (se o paciente estiver acordado)'], es: ['Palpitaciones y temblores', 'Ansiedad severa (si el paciente está despierto)'] },
+      dangerousAdverseEffects: { pt: ['Isquemia de extremidades (necrose de dedos e ponta do nariz nas altas doses)', 'Arritmias cardíacas', 'Necrose tecidual por extravasamento periférico'], es: ['Isquemia de extremidades (necrosis de dedos y punta de la nariz en altas dosis)', 'Arritmias cardíacas', 'Necrosis tisular por extravasación periférica'] },
+      contraindications: {
+        absolute: { pt: ['Hipotensão por hipovolemia absoluta não corrigida (a droga vai espremer vasos vazios, causando isquemia total)'], es: ['Hipotensión por hipovolemia absoluta no corregida (la droga va a exprimir vasos vacíos, causando isquemia total)'] },
+        relative: { pt: ['Trombose mesentérica suspeita (a vasoconstrição pode necrosar o intestino)'], es: ['Trombosis mesentérica sospechosa (la vasoconstricción puede necrosar el intestino)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'ANTÍDOTO DE EXTRAVASAMENTO: Se a Noradrenalina vazar para fora da veia, a pele ficará branca/isquêmica e apodrecerá. Deve-se infiltrar imediatamente a área com FENTOLAMINA (bloqueador alfa) para dilatar os vasos locais e salvar o membro.', es: 'ANTÍDOTO DE EXTRAVASACIÓN: Si la Noradrenalina se sale de la vena, la piel quedará blanca/isquémica y se pudrirá. Se debe infiltrar inmediatamente el área con FENTOLAMINA (bloqueador alfa) para dilatar los vasos locales y salvar el miembro.' }
+      }
+    },
+
+/* ── ADRENALINA (EPINEFRINA) ────────────────────────────────────────── */
+    "adrenalina": {
+      name: { pt: 'Adrenalina / Epinefrina', es: 'Adrenalina / Epinefrina' },
+      category: 'emergencia',
+      class: { pt: 'Amina Simpatomimética (Agonista Alfa e Beta puro)', es: 'Amina Simpatomimética (Agonista Alfa y Beta puro)' },
+      indications: {
+        pt: ['Parada Cardiorrespiratória (PCR - Fibrilação, Assistolia, AESP)', 'Choque Anafilático (Tratamento Ouro)', 'Asma Severa Refratária', 'Choque séptico refratário a noradrenalina'],
+        es: ['Paro Cardiorrespiratorio (RCP - Fibrilación, Asistolia, AESP)', 'Choque Anafiláctico (Tratamiento Oro)', 'Asma Severa Refractaria', 'Choque séptico refractario a noradrenalina']
+      },
+      commercialNames: { br: ['Epinefrina', 'EpiPen (auto-injetor)'], ar: ['Adrenalina'] },
+      presentation: { pt: ['Ampolas 1 mg/mL (1 mL = 1:1.000)'], es: ['Ampollas 1 mg/mL (1 mL = 1:1.000)'] },
+      mechanism: {
+        pt: 'Estimula todos os receptores adrenérgicos. No Alfa-1 (Vasos): Vasoconstrição potente (eleva PA na PCR). No Beta-1 (Coração): Aumenta drasticamente a frequência e a força contrátil. No Beta-2 (Pulmão): Promove relaxamento e broncodilatação imediata da árvore brônquica asfixiada pela anafilaxia.',
+        es: 'Estimula todos los receptores adrenérgicos. En el Alfa-1 (Vasos): Vasoconstricción potente (eleva PA en RCP). En el Beta-1 (Corazón): Aumenta drásticamente la frecuencia y la fuerza contráctil. En el Beta-2 (Pulmón): Promueve relajación y broncodilatación inmediata del árbol bronquial asfixiado por la anafilaxia.'
+      },
+      dose: {
+        adult: {
+          pt: 'PCR: 1 mg IV a cada 3 a 5 minutos. Anafilaxia: 0,3 a 0,5 mg INTRAMUSCULAR (no vasto lateral da coxa). Bomba de Infusão (Choque): 0,01 a 0,5 mcg/kg/min.',
+          es: 'RCP: 1 mg IV cada 3 a 5 minutos. Anafilaxia: 0,3 a 0,5 mg INTRAMUSCULAR (en el vasto lateral del muslo). Bomba de Infusión (Choque): 0,01 a 0,5 mcg/kg/min.'
+        },
+        pediatric: {
+          pt: 'PCR: 0,01 mg/kg IV. Anafilaxia: 0,01 mg/kg IM (máx 0,3 mg).',
+          es: 'RCP: 0,01 mg/kg IV. Anafilaxia: 0,01 mg/kg IM (máx 0,3 mg).'
+        }
+      },
+      administration: { pt: ['NA ANAFILAXIA A VIA É INTRAMUSCULAR. Fazer adrenalina pura IV no paciente acordado com anafilaxia causará fibrilação ventricular letal.', 'Na PCR, faz-se o bolus de 1 mg IV puro seguido de 20mL de SF e elevação do membro.'], es: ['EN ANAFILAXIA LA VÍA ES INTRAMUSCULAR. Hacer adrenalina pura IV en el paciente despierto con anafilaxia causará fibrilación ventricular letal.', 'En RCP, se hace el bolo de 1 mg IV puro seguido de 20mL de SF y elevación del miembro.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Hiperlactatemia metabólica tipo B (o lactato sobe sem ser isquemia, assustando o médico inexperiente)', 'Hiperglicemia (estimula glicogenólise)', 'Ansiedade e taquicardia'], es: ['Hiperlactatemia metabólica tipo B (el lactato sube sin ser isquemia, asustando al médico inexperto)', 'Hiperglucemia (estimula glucogenólisis)', 'Ansiedad y taquicardia'] },
+      dangerousAdverseEffects: { pt: ['Infarto Agudo do Miocárdio (devido ao consumo brutal de O2 miocárdico)', 'Acidente Vascular Cerebral Hemorrágico (pelo pico pressórico)', 'Fibrilação Ventricular'], es: ['Infarto Agudo de Miocardio (debido al consumo brutal de O2 miocárdico)', 'Accidente Cerebrovascular Hemorrágico (por el pico presórico)', 'Fibrilación Ventricular'] },
+      contraindications: {
+        absolute: { pt: ['NENHUMA em cenários de Parada Cardíaca ou Anafilaxia Severa (droga salvadora universal).'], es: ['NINGUNA en escenarios de Paro Cardíaco o Anafilaxia Severa (droga salvadora universal).'] },
+        relative: { pt: ['Uso associado com anestésicos halogenados (sensibiliza o miocárdio)'], es: ['Uso asociado con anestésicos halogenados (sensibiliza el miocardio)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A adrenalina é o MAIOR ACELERADOR METABÓLICO DO CORPO. Ela não resolve a causa do choque séptico, apenas força o coração a bater ao limite absoluto. Na UTI, é sempre a segunda ou terceira droga a entrar na bomba, nunca a primeira (privilégio da noradrenalina).', es: 'La adrenalina es el MAYOR ACELERADOR METABÓLICO DEL CUERPO. No resuelve la causa del choque séptico, solo fuerza al corazón a latir al límite absoluto. En UCI, siempre es la segunda o tercera droga en entrar a la bomba, nunca la primera (privilegio de la noradrenalina).' }
+      }
+    },
+
+/* ── DOPAMINA ───────────────────────────────────────────────────────── */
+    "dopamina": {
+      name: { pt: 'Dopamina', es: 'Dopamina' },
+      category: 'emergencia',
+      class: { pt: 'Amina Simpatomimética / Precursora da Noradrenalina', es: 'Amina Simpatomimética / Precursora de la Noradrenalina' },
+      indications: {
+        pt: ['Choque Cardiogênico (uso em queda, perdendo espaço)', 'Choque Séptico em pacientes com bradicardia relativa (como 2ª linha)', 'Bradicardia sintomática refratária'],
+        es: ['Choque Cardiogénico (uso en caída, perdiendo espacio)', 'Choque Séptico en pacientes con bradicardia relativa (como 2ª línea)', 'Bradicardia sintomática refractaria']
+      },
+      commercialNames: { br: ['Revivan'], ar: ['Dopamina'] },
+      presentation: { pt: ['Ampolas IV 50 mg/10 mL (5 mg/mL)'], es: ['Ampollas IV 50 mg/10 mL (5 mg/mL)'] },
+      mechanism: {
+        pt: 'Mecanismo Dose-Dependente peculiar: Em Doses Baixas (1-2 mcg): Age em receptores Dopaminérgicos D1, dilatando vasos renais (a antiga e desmentida "dose renal"). Em Doses Médias (5-10 mcg): Estimula Beta-1, aumentando força e frequência cardíaca. Em Doses Altas (>10 mcg): Comporta-se como Noradrenalina, estimulando Alfa-1 e causando vasoconstrição severa.',
+        es: 'Mecanismo Dosis-Dependiente peculiar: En Dosis Bajas (1-2 mcg): Actúa en receptores Dopaminérgicos D1, dilatando vasos renales (la antigua y desmentida "dosis renal"). En Dosis Medias (5-10 mcg): Estimula Beta-1, aumentando fuerza y frecuencia cardíaca. En Dosis Altas (>10 mcg): Se comporta como Noradrenalina, estimulando Alfa-1 y causando vasoconstricción severa.'
+      },
+      dose: {
+        adult: {
+          pt: 'Infusão IV Contínua: 2 a 20 mcg/kg/min (Ajustado pelo efeito desejado).',
+          es: 'Infusión IV Continua: 2 a 20 mcg/kg/min (Ajustado por el efecto deseado).'
+        },
+        pediatric: {
+          pt: '2 a 20 mcg/kg/min.',
+          es: '2 a 20 mcg/kg/min.'
+        }
+      },
+      administration: { pt: ['Obrigatório uso em Bomba de Infusão.', 'Acesso central preferencial pelo risco de extravasamento.'], es: ['Obligatorio uso en Bomba de Infusión.', 'Acceso central preferencial por el riesgo de extravasación.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste necessário.', es: 'Sin ajuste necesario.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste.', es: 'Sin ajuste.' } },
+      commonAdverseEffects: { pt: ['Taquicardia sinusal', 'Náuseas e vômitos', 'Cefaleia'], es: ['Taquicardia sinusal', 'Náuseas y vómitos', 'Cefalea'] },
+      dangerousAdverseEffects: { pt: ['Taquiarritmias graves (Fibrilação Atrial, Taquicardia Ventricular) - OCORREM MUITO MAIS do que com a noradrenalina', 'Necrose isquêmica tecidual periférica'], es: ['Taquiarritmias graves (Fibrilación Auricular, Taquicardia Ventricular) - OCURREN MUCHO MÁS que con la noradrenalina', 'Necrosis isquémica tisular periférica'] },
+      contraindications: {
+        absolute: { pt: ['Fibrilação Ventricular não corrigida', 'Feocromocitoma', 'Taquiarritmias ativas'], es: ['Fibrilación Ventricular no corregida', 'Feocromocitoma', 'Taquiarritmias activas'] },
+        relative: { pt: ['Uso associado com inibidores da MAO'], es: ['Uso asociado con inhibidores de la MAO'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'MUDANÇA DE PARADIGMA: A Dopamina não é mais a droga de escolha para o choque séptico há anos. Ensaios clínicos provaram que ela causa o dobro de arritmias letais em comparação com a Noradrenalina, com maior mortalidade geral. A lenda da "dose renal" para proteger os rins também já foi refutada pela ciência.', es: 'CAMBIO DE PARADIGMA: La Dopamina ya no es la droga de elección para el choque séptico desde hace años. Ensayos clínicos demostraron que causa el doble de arritmias letales en comparación con la Noradrenalina, con mayor mortalidad general. La leyenda de la "dosis renal" para proteger los riñones también ha sido refutada por la ciencia.' }
+      }
+    },
+
+/* ── DOBUTAMINA ─────────────────────────────────────────────────────── */
+    "dobutamina": {
+      name: { pt: 'Dobutamina', es: 'Dobutamina' },
+      category: 'emergencia',
+      class: { pt: 'Agonista Beta-1 Adrenérgico Sintético (Inotrópico Positivo)', es: 'Agonista Beta-1 Adrenérgico Sintético (Inotrópico Positivo)' },
+      indications: {
+        pt: ['Choque Cardiogênico (Disfunção contrátil severa do Ventrículo Esquerdo)', 'Insuficiência Cardíaca Aguda Descompensada (Perfil C - Frio e Úmido)', 'Choque séptico com disfunção miocárdica associada (para aumentar débito cardíaco)'],
+        es: ['Choque Cardiogénico (Disfunción contráctil severa del Ventrículo Izquierdo)', 'Insuficiencia Cardíaca Aguda Descompensada (Perfil C - Frío y Húmedo)', 'Choque séptico con disfunción miocárdica asociada (para aumentar gasto cardíaco)']
+      },
+      commercialNames: { br: ['Dobutrex'], ar: ['Dobutamina'] },
+      presentation: { pt: ['Ampolas IV 12,5 mg/mL (20 mL = 250 mg)'], es: ['Ampollas IV 12,5 mg/mL (20 mL = 250 mg)'] },
+      mechanism: {
+        pt: 'Estimula predominantemente os receptores Beta-1 no coração, aumentando agressivamente a contratilidade (inotrópico positivo forte). Possui também leve estímulo Beta-2 periférico, o que causa discreta VASODILATAÇÃO sistêmica. Diferente da noradrenalina, ELA NÃO AUMENTA A PRESSÃO ARTERIAL DIRETAMENTE (inclusive, pode cair a pressão se o paciente estiver desidratado). O aumento da PAM ocorre apenas se o coração passar a bombear melhor o sangue.',
+        es: 'Estimula predominantemente los receptores Beta-1 en el corazón, aumentando agresivamente la contractilidad (inotrópico positivo fuerte). Posee también leve estímulo Beta-2 periférico, lo que causa discreta VASODILATACIÓN sistémica. A diferencia de la noradrenalina, NO AUMENTA LA PRESIÓN ARTERIAL DIRECTAMENTE (incluso, puede caer la presión si el paciente está deshidratado). El aumento de la PAM ocurre solo si el corazón pasa a bombear mejor la sangre.'
+      },
+      dose: {
+        adult: {
+          pt: 'Infusão IV Contínua: 2 a 20 mcg/kg/min (Titulado pelo Débito Cardíaco e sinais de perfusão).',
+          es: 'Infusión IV Continua: 2 a 20 mcg/kg/min (Titulado por el Gasto Cardíaco y signos de perfusión).'
+        },
+        pediatric: {
+          pt: '2 a 20 mcg/kg/min.',
+          es: '2 a 20 mcg/kg/min.'
+        }
+      },
+      administration: { pt: ['Obrigatório uso em Bomba de Infusão Contínua.', 'Não deve ser infundida na mesma via que o Bicarbonato de Sódio (inativação química).'], es: ['Obligatorio uso en Bomba de Infusión Continua.', 'No debe ser infundida en la misma vía que el Bicarbonato de Sodio (inactivación química).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Metabolizada por enzimas hepáticas COMT, mas sem necessidade de ajuste na emergência.', es: 'Metabolizada por enzimas hepáticas COMT, pero sin necesidad de ajuste en la emergencia.' } },
+      commonAdverseEffects: { pt: ['Taquicardia induzida (comum e esperada)', 'Cefaleia', 'Hipotensão inicial (se hipovolemia prévia)'], es: ['Taquicardia inducida (común y esperada)', 'Cefalea', 'Hipotensión inicial (si hipovolemia previa)'] },
+      dangerousAdverseEffects: { pt: ['Isquemia do miocárdio / Infarto (o músculo bate muito forte e rápido, consumindo todo o O2)', 'Arritmias ventriculares graves', 'Fibrilação Atrial'], es: ['Isquemia del miocardio / Infarto (el músculo late muy fuerte y rápido, consumiendo todo el O2)', 'Arritmias ventriculares graves', 'Fibrilación Auricular'] },
+      contraindications: {
+        absolute: { pt: ['Estenose Aórtica Severa', 'Cardiomiopatia Hipertrófica Obstrutiva (vai obstruir ainda mais a saída do sangue)'], es: ['Estenosis Aórtica Severa', 'Miocardiopatía Hipertrófica Obstructiva (va a obstruir aún más la salida de la sangre)'] },
+        relative: { pt: ['Fibrilação Atrial com alta resposta ventricular basal'], es: ['Fibrilación Auricular con alta respuesta ventricular basal'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A Dobutamina serve apenas para uma coisa: FORÇA. Se o paciente estiver em choque séptico puro com os vasos sanguíneos abertos (vasoplegia), colocar dobutamina pode MATAR o paciente por queda fatal da pressão. Só associe a dobuta quando a Noradrenalina já estiver segurando a resistência vascular.', es: 'La Dobutamina sirve solo para una cosa: FUERZA. Si el paciente está en choque séptico puro con los vasos sanguíneos abiertos (vasoplejía), poner dobutamina puede MATAR al paciente por caída fatal de la presión. Solo asocie la dobutamina cuando la Noradrenalina ya esté sosteniendo la resistencia vascular.' }
+      }
+    },
+
+/* ── VASOPRESSINA ───────────────────────────────────────────────────── */
+    "vasopressina": {
+      name: { pt: 'Vasopressina (ADH)', es: 'Vasopresina (ADH)' },
+      category: 'emergencia',
+      class: { pt: 'Peptídeo Vasoativo (Hormônio Antidiurético)', es: 'Péptido Vasoactivo (Hormona Antidiurética)' },
+      indications: {
+        pt: ['Choque Séptico Refratário (adicionado à Noradrenalina para poupar dose e reduzir a toxicidade adrenérgica)', 'Choque Hemorrágico ou Vasoplégico refratário', 'Sangramento de Varizes Esofágicas (embora a Terlipressina seja mais usada para isso)'],
+        es: ['Choque Séptico Refractario (añadido a la Noradrenalina para ahorrar dosis y reducir la toxicidad adrenérgica)', 'Choque Hemorrágico o Vasopléjico refractario', 'Sangrado de Várices Esofágicas (aunque la Terlipresina sea más usada para esto)']
+      },
+      commercialNames: { br: ['Encrise'], ar: ['Vasopresina'] },
+      presentation: { pt: ['Ampolas IV 20 UI/mL (1 mL)'], es: ['Ampollas IV 20 UI/mL (1 mL)'] },
+      mechanism: {
+        pt: 'Aja de forma totalmente independente da via adrenérgica da noradrenalina/adrenalina. Estimula diretamente os receptores V1 no músculo liso vascular, causando intensa vasoconstrição sistêmica e esplâncnica. A grande vantagem é que, enquanto as aminas (Nora) perdem sua força no sangue ácido (acidose metabólica severa da sepse), a Vasopressina continua constringindo os vasos perfeitamente mesmo no ambiente mais ácido, salvando a pressão do paciente.',
+        es: 'Actúa de forma totalmente independiente de la vía adrenérgica de la noradrenalina/adrenalina. Estimula directamente los receptores V1 en el músculo liso vascular, causando intensa vasoconstricción sistémica y esplácnica. La gran ventaja es que, mientras las aminas (Nora) pierden su fuerza en la sangre ácida (acidosis metabólica severa de la sepsis), la Vasopresina continúa constriñendo los vasos perfectamente incluso en el ambiente más ácido, salvando la presión del paciente.'
+      },
+      dose: {
+        adult: {
+          pt: 'Choque Séptico: Infusão contínua fixa de 0,01 a 0,04 UI/min (Diferente da nora, a dose geralmente não é titulada, ela entra em taxa fixa contínua).',
+          es: 'Choque Séptico: Infusión continua fija de 0,01 a 0,04 UI/min (A diferencia de la nora, la dosis generalmente no es titulada, entra en tasa fija continua).'
+        },
+        pediatric: {
+          pt: '0,0003 a 0,002 UI/kg/min (Uso estritamente guiado por intensivos).',
+          es: '0,0003 a 0,002 UI/kg/min (Uso estrictamente guiado por intensivos).'
+        }
+      },
+      administration: { pt: ['Bomba de infusão contínua obrigatória em via venosa central.'], es: ['Bomba de infusión continua obligatoria en vía venosa central.'] },
+      renalAdjustment: { required: false, message: { pt: 'Ao estimular o receptor V2, pode causar forte retenção de água livre.', es: 'Al estimular el receptor V2, puede causar fuerte retención de agua libre.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      commonAdverseEffects: { pt: ['Palidez extrema (vasoconstrição de pele)', 'Náuseas e cólicas abdominais (por isquemia leve)'], es: ['Palidez extrema (vasoconstricción de piel)', 'Náuseas y cólicos abdominales (por isquemia leve)'] },
+      dangerousAdverseEffects: { pt: ['Isquemia Mesentérica e Necrose Intestinal (frequentemente o intestino morre se a dose for > 0,04 UI/min)', 'Infarto Agudo do Miocárdio', 'Intoxicação Hídrica (Hiponatremia grave por diluição)'], es: ['Isquemia Mesentérica y Necrosis Intestinal (frecuentemente el intestino muere si la dosis es > 0,04 UI/min)', 'Infarto Agudo de Miocardio', 'Intoxicación Hídrica (Hiponatremia grave por dilución)'] },
+      contraindications: {
+        absolute: { pt: ['Nenhuma absoluta em cenário de choque refratário mortal.'], es: ['Ninguna absoluta en escenario de choque refractario mortal.'] },
+        relative: { pt: ['Doença arterial coronariana ativa', 'Insuficiência cardíaca descompensada (pelo aumento brutal da pós-carga)'], es: ['Enfermedad arterial coronaria activa', 'Insuficiencia cardíaca descompensada (por el aumento brutal de la poscarga)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Estratégia de Desmame (UTI): A Vasopressina e a Noradrenalina devem ser desmamadas com cautela. Geralmente, reduz-se a Noradrenalina primeiro. Desligar a Vasopressina subitamente no paciente crítico frequentemente causa colapso pressórico rebote em poucos minutos.', es: 'Estrategia de Destete (UCI): La Vasopresina y la Noradrenalina deben ser destetadas con precaución. Generalmente, se reduce la Noradrenalina primero. Apagar la Vasopresina súbitamente en el paciente crítico frecuentemente causa colapso presórico rebote en pocos minutos.' }
+      }
     }
 
-  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 336 Lote 1+2+3+4+5+6+7 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides + Toxicologia/Antídotos + Azul_Metileno/Carvão) */
+  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 336 Lote 1+2+3+4+5+6+7 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides + Toxicologia/Antídotos + Azul_Metileno/Carvão) + BUILD 346 Lote 8 (Vasopressores/Aminas Vasoativas) */
 
 })();

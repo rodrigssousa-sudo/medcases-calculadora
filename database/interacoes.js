@@ -20123,6 +20123,88 @@ const INTERACOES_DB = {
         es: "Si el objetivo es solo antiemético, el efecto neurocentral aún funcionará. Si el objetivo es tratar íleo o gastroparesia, es necesario suspender el opioide para que la medicación tenga éxito."
       }
     }
+  }, // vírgula adicionada; BUILD 346 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Aminas Vasoativas e Choque
+   Noradrenalina, Adrenalina, Dopamina, Dobutamina, Vasopressina
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── INTERAÇÃO UNIVERSAL DAS AMINAS ADRENÉRGICAS ──
+     (Nora, Adrenalina, Dopamina e Dobutamina) */
+  "$classe_aminas_adrenergicas": {
+    "bicarbonato_sodio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INATIVAÇÃO POR PH. Todas as catecolaminas (noradrenalina, adrenalina, dobutamina, dopamina) oxidam e são quimicamente desativadas e destruídas quase instantaneamente se expostas a soluções de pH altamente alcalino (como o Bicarbonato de Sódio).",
+        es: "INACTIVACIÓN POR PH. Todas las catecolaminas (noradrenalina, adrenalina, dobutamina, dopamina) se oxidan y son químicamente desactivadas y destruidas casi instantáneamente si se exponen a soluciones de pH altamente alcalino (como el Bicarbonato de Sodio)."
+      },
+      conduta: {
+        pt: "A infusão contínua de Aminas DEVE OBRIGATORIAMENTE ocorrer em uma via venosa/lúmen completamente isolado e diferente do Bicarbonato de Sódio durante a ressuscitação do paciente séptico.",
+        es: "La infusión continua de Aminas DEBE OBLIGATORIAMENTE ocurrir en una vía venosa/lumen completamente aislado y diferente del Bicarbonato de Sodio durante la reanimación del paciente séptico."
+      }
+    },
+    "$classe_imao": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CRISE HIPERTENSIVA FULMINANTE. A enzima Monoamina Oxidase (MAO) é responsável por destruir as catecolaminas do sangue. Se o paciente usar inibidores da MAO (Tranilcipromina, Selegilina, Linezolida, Azul de Metileno), as aminas injetadas não serão destruídas, acumulando-se agressivamente e causando hemorragia intracraniana por picos pressóricos > 250 mmHg.",
+        es: "CRISIS HIPERTENSIVA FULMINANTE. La enzima Monoamino Oxidasa (MAO) es responsable de destruir las catecolaminas de la sangre. Si el paciente usa inhibidores de la MAO (Tranilcipromina, Selegilina, Linezolid, Azul de Metileno), las aminas inyectadas no serán destruidas, acumulándose agresivamente y causando hemorragia intracraneal por picos presóricos > 250 mmHg."
+      },
+      conduta: {
+        pt: "Extrema cautela na titulação. Começar as bombas com doses fracionadas se houver inibidores de MAO na jogada (Nota: A Linezolida é um antibiótico usado na UTI que é um IMAO oculto e frequentemente cruza com a noradrenalina, aumentando inexplicavelmente a pressão do paciente).",
+        es: "Extrema precaución en la titulación. Comenzar las bombas con dosis fraccionadas si hay inhibidores de MAO en juego (Nota: El Linezolid es un antibiótico usado en UCI que es un IMAO oculto y frecuentemente se cruza con la noradrenalina, aumentando inexplicablemente la presión del paciente)."
+      }
+    }
+  },
+
+  /* ── ADRENALINA (EPINEFRINA) ── */
+  "adrenalina": {
+    "$classe_betabloqueadores_nao_seletivos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "EFEITO ALFA ISOLADO (Oclusão vascular). Se um paciente sob uso de Propranolol sofrer um Choque Anafilático e receber Adrenalina IM, os receptores Beta (que dilatam) estarão trancados. A Adrenalina agirá EXCLUSIVAMENTE nos receptores Alfa (que apertam). Isso gera uma vasoconstrição maciça sem oponente, causando Crise Hipertensiva aguda paradoxal acompanhada de Bradicardia Reflexa vagal profunda, piorando o choque.",
+        es: "EFECTO ALFA AISLADO (Oclusión vascular). Si un paciente bajo uso de Propranolol sufre un Choque Anafiláctico y recibe Adrenalina IM, los receptores Beta (que dilatan) estarán bloqueados. La Adrenalina actuará EXCLUSIVAMENTE en los receptores Alfa (que aprietan). Esto genera una vasoconstricción masiva sin oponente, causando Crisis Hipertensiva aguda paradójica acompañada de Bradicardia Refleja vagal profunda, empeorando el choque."
+      },
+      conduta: {
+        pt: "Se o paciente usa Propranolol e não responde à Adrenalina na Anafilaxia, o tratamento de resgate exige a administração de GLUCAGON (pois ele age criando a resposta inotrópica burlando os receptores bloqueados).",
+        es: "Si el paciente usa Propranolol y no responde a la Adrenalina en la Anafilaxia, el tratamiento de rescate exige la administración de GLUCAGÓN (pues actúa creando la respuesta inotrópica burlando los receptores bloqueados)."
+      }
+    }
+  },
+
+  /* ── DOBUTAMINA ── */
+  "dobutamina": {
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ANTAGONISMO DE SÍTIO. A dobutamina atua diretamente no receptor Beta-1 para fazer o coração bater mais forte. O Betabloqueador (Bisoprolol, Carvedilol) está ali fisicamente 'tampando' o buraco da fechadura. Resultado: A dobutamina falha, o coração não aumenta a força, e a insuficiência cardíaca persiste no paciente da UTI.",
+        es: "ANTAGONISMO DE SITIO. La dobutamina actúa directamente en el receptor Beta-1 para hacer que el corazón lata más fuerte. El Betabloqueante (Bisoprolol, Carvedilol) está allí físicamente 'tapando' el ojo de la cerradura. Resultado: La dobutamina falla, el corazón no aumenta la fuerza, y la insuficiencia cardíaca persiste en el paciente de UCI."
+      },
+      conduta: {
+        pt: "Em pacientes cronicamente betabloqueados que internam em choque cardiogênico, a Dobutamina é de pouca utilidade. A medicação de escolha INOTRÓPICA nesses pacientes deve ser a LEVOSIMENDANA (ou Milrinona), pois elas agem dentro da célula, ignorando a porta bloqueada.",
+        es: "En pacientes crónicamente betabloqueados que internan en choque cardiogénico, la Dobutamina es de poca utilidad. La medicación de elección INOTRÓPICA en estos pacientes debe ser el LEVOSIMENDÁN (o Milrinona), pues actúan dentro de la célula, ignorando la puerta bloqueada."
+      }
+    }
+  },
+
+  /* ── VASOPRESSINA ── */
+  "vasopressina": {
+    "$classe_nitratos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Antagonismo Funcional Cruzado. A vasopressina constringe ferozmente, os nitratos (Nitroglicerina) relaxam fortemente pelo Óxido Nítrico. Porém, na parede do intestino (esplâncnica) ou no coração (coronárias), o uso das duas drogas pode desequilibrar a perfusão localizada, exigindo titulação microscópica.",
+        es: "Antagonismo Funcional Cruzado. La vasopresina constriñe ferozmente, los nitratos (Nitroglicerina) relajan fuertemente por el Óxido Nítrico. Pero, en la pared del intestino (esplácnica) o en el corazón (coronarias), el uso de las dos drogas puede desequilibrar la perfusión localizada, exigiendo titulación microscópica."
+      },
+      conduta: {
+        pt: "Na hemorragia digestiva, onde usa-se análogos de vasopressina, os nitratos às vezes são associados PROPOSITALMENTE para proteger o coração da isquemia gerada pela vasopressina. Exige cuidado de intensivista.",
+        es: "En la hemorragia digestiva, donde se usan análogos de vasopresina, los nitratos a veces se asocian A PROPÓSITO para proteger el corazón de la isquemia generada por la vasopresina. Exige cuidado de intensivista."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
