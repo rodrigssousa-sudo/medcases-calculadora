@@ -1,22 +1,22 @@
 /* ================================================================
-   MedCases Pro — BUILD 283 — MOBILE ACCESSORY BAR
+   MedCases Pro — BUILD 298 — MOBILE ACCESSORY BAR (REWRITE)
    ----------------------------------------------------------------
-   Implementa uma barra acessória fixa (Sticky Accessory Bar) que
-   aparece acima do teclado virtual quando qualquer campo de dados
-   do paciente recebe foco em WebView iOS/Android.
+   Barra acessória fixa (Sticky Accessory Bar) acima do teclado
+   virtual. BUILD 298: removida navegação sequencial (Anterior/Próximo).
+   Mantido apenas um botão "OK" / "Hecho" alinhado à direita que
+   chama blur() e fecha o teclado.
 
    COMPORTAMENTO:
-   - Aparece ao focar um input do formulário de dados do paciente
-   - Botões "‹ Anterior" e "Próximo ›" avançam/retrocedem o foco
-     entre os campos SEM fechar o teclado
-   - Botão "✓ Feito" chama blur() + fecha a barra
+   - Aparece ao focar QUALQUER um dos 4 inputs do paciente
+   - Botão único "OK" / "Hecho" chama blur() → fecha teclado + barra
+   - O médico pode tocar diretamente em qualquer campo sem restrição
    - Posição: fixed na parte inferior da visualViewport (acima do teclado)
    - Suporta visualViewport API (iOS ≥ 13, Android Chrome ≥ 62)
      com fallback para window.innerHeight
 
    CAMPOS COBERTOS: hm-weight, hm-age, hm-height, hm-creatinina
 
-   ZERO impacto em lógica clínica — apenas UI de navegação.
+   ZERO impacto em lógica clínica — apenas UI de fechamento de teclado.
 ================================================================ */
 ;(function (window) {
   'use strict';
@@ -26,9 +26,8 @@
   var BAR_ID    = 'mc-accessory-bar';
 
   /* ── Estado ── */
-  var _currentIndex = -1;
-  var _bar          = null;
-  var _visible      = false;
+  var _bar     = null;
+  var _visible = false;
 
   /* ────────────────────────────────────────────────────────────────
      CRIAÇÃO DA BARRA
@@ -39,7 +38,7 @@
     var bar = document.createElement('div');
     bar.id = BAR_ID;
     bar.setAttribute('role', 'toolbar');
-    bar.setAttribute('aria-label', 'Navegação entre campos');
+    bar.setAttribute('aria-label', 'Fechar teclado');
 
     /* Estilos inline — independentes de qualquer CSS do app */
     bar.style.cssText = [
@@ -50,29 +49,20 @@
       'z-index: 99999',
       'display: none',          /* começa oculta */
       'align-items: center',
-      'justify-content: space-between',
+      'justify-content: flex-end',
       'padding: 6px 12px',
       'background: #1a2035',
       'border-top: 1px solid rgba(56,189,248,0.25)',
       'box-shadow: 0 -2px 12px rgba(0,0,0,0.45)',
-      'gap: 8px',
       /* Evita que o iOS encolha a barra sob o safe-area */
       'padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px))',
       'box-sizing: border-box',
       '-webkit-tap-highlight-color: transparent'
     ].join(';');
 
-    /* Botões */
-    var btnPrev = _mkBtn('‹ Anterior', 'mc-acc-prev', _focusPrev);
-    var btnNext = _mkBtn('Próximo ›',  'mc-acc-next', _focusNext);
-    var btnDone = _mkBtn('✓ Feito',    'mc-acc-done', _dismiss,  true);
+    /* Botão único OK/Hecho */
+    var btnDone = _mkBtn('OK', 'mc-acc-done', _dismiss);
 
-    var navGroup = document.createElement('div');
-    navGroup.style.cssText = 'display:flex;gap:6px;';
-    navGroup.appendChild(btnPrev);
-    navGroup.appendChild(btnNext);
-
-    bar.appendChild(navGroup);
     bar.appendChild(btnDone);
 
     document.body.appendChild(bar);
@@ -81,13 +71,13 @@
     /* Posiciona acima do teclado via visualViewport */
     _bindViewport();
 
-    console.log('[ACCESSORY_BAR] BUILD 283: barra criada e montada no DOM');
+    console.log('[ACCESSORY_BAR] BUILD 298: barra criada — botão único OK');
   }
 
   /* ────────────────────────────────────────────────────────────────
      HELPER: cria botão da barra
   ──────────────────────────────────────────────────────────────── */
-  function _mkBtn(label, id, handler, isDone) {
+  function _mkBtn(label, id, handler) {
     var btn = document.createElement('button');
     btn.id   = id;
     btn.type = 'button';
@@ -95,16 +85,15 @@
     btn.style.cssText = [
       'border: none',
       'border-radius: 8px',
-      'padding: 8px 16px',
-      'font-size: 14px',
+      'padding: 8px 20px',
+      'font-size: 15px',
       'font-weight: 700',
       'cursor: pointer',
       'min-height: 36px',
-      'min-width: 80px',
+      'min-width: 64px',
       '-webkit-tap-highlight-color: transparent',
-      isDone
-        ? 'background:#38bdf8;color:#0a0e1a;'
-        : 'background:rgba(255,255,255,0.09);color:rgba(255,255,255,0.85);'
+      'background: #38bdf8',
+      'color: #0a0e1a'
     ].join(';');
 
     /* touchstart para resposta imediata no iOS */
@@ -152,78 +141,24 @@
   /* ────────────────────────────────────────────────────────────────
      SHOW / HIDE
   ──────────────────────────────────────────────────────────────── */
-  function _show(index) {
+  function _show() {
     if (!_bar) return;
-    _currentIndex = index;
-    _visible      = true;
+    _visible = true;
     _bar.style.display = 'flex';
     _updateBarPosition();
-    _updateBtnState();
   }
 
   function _hide() {
     if (!_bar) return;
     _visible = false;
     _bar.style.display = 'none';
-    _currentIndex = -1;
   }
 
   function _dismiss() {
-    /* Fecha teclado e barra */
-    var el = _getInputAt(_currentIndex);
-    if (el) el.blur();
+    /* Fecha teclado via blur no elemento ativo */
+    var active = document.activeElement;
+    if (active && typeof active.blur === 'function') active.blur();
     _hide();
-  }
-
-  /* ────────────────────────────────────────────────────────────────
-     NAVEGAÇÃO ENTRE CAMPOS
-  ──────────────────────────────────────────────────────────────── */
-  function _getInputAt(idx) {
-    if (idx < 0 || idx >= INPUT_IDS.length) return null;
-    return document.getElementById(INPUT_IDS[idx]);
-  }
-
-  function _focusNext() {
-    var next = _currentIndex + 1;
-    if (next >= INPUT_IDS.length) {
-      /* Último campo: dismiss */
-      _dismiss();
-      return;
-    }
-    var el = _getInputAt(next);
-    if (el) {
-      _currentIndex = next;
-      el.focus();
-      /* Seleciona todo o texto para facilitar re-digitação */
-      try { el.select(); } catch (e) {}
-      _updateBtnState();
-    }
-  }
-
-  function _focusPrev() {
-    var prev = _currentIndex - 1;
-    if (prev < 0) return;
-    var el = _getInputAt(prev);
-    if (el) {
-      _currentIndex = prev;
-      el.focus();
-      try { el.select(); } catch (e) {}
-      _updateBtnState();
-    }
-  }
-
-  /* Atualiza estado visual dos botões prev/next */
-  function _updateBtnState() {
-    var btnPrev = document.getElementById('mc-acc-prev');
-    var btnNext = document.getElementById('mc-acc-next');
-    if (btnPrev) {
-      btnPrev.style.opacity  = _currentIndex <= 0 ? '0.35' : '1';
-      btnPrev.style.pointerEvents = _currentIndex <= 0 ? 'none' : 'auto';
-    }
-    if (btnNext) {
-      var isLast = _currentIndex >= INPUT_IDS.length - 1;
-      btnNext.textContent = isLast ? '✓ Feito' : 'Próximo ›';
-    }
   }
 
   /* ────────────────────────────────────────────────────────────────
@@ -232,10 +167,9 @@
   function _onFocus(e) {
     var el = e.target;
     if (!el || el.tagName !== 'INPUT') return;
-    var idx = INPUT_IDS.indexOf(el.id);
-    if (idx === -1) return;
+    if (INPUT_IDS.indexOf(el.id) === -1) return;
     /* Pequeno delay para iOS terminar de reposicionar viewport */
-    setTimeout(function () { _show(idx); }, 80);
+    setTimeout(function () { _show(); }, 80);
   }
 
   function _onBlur(e) {
@@ -244,7 +178,7 @@
     if (INPUT_IDS.indexOf(el.id) === -1) return;
 
     /* Oculta barra somente se o novo foco NÃO for outro campo da lista
-       e NÃO for um botão da própria barra. */
+       e NÃO for o botão OK da própria barra. */
     setTimeout(function () {
       var active = document.activeElement;
       if (!active) { _hide(); return; }
@@ -252,7 +186,7 @@
       /* Mantém barra se foco foi para outro input da lista */
       if (active.tagName === 'INPUT' && INPUT_IDS.indexOf(active.id) !== -1) return;
 
-      /* Mantém barra se foco foi para um dos botões da barra */
+      /* Mantém barra se foco foi para o botão OK da barra */
       if (_bar && _bar.contains(active)) return;
 
       _hide();
@@ -269,7 +203,7 @@
     document.addEventListener('focus', _onFocus, true);
     document.addEventListener('blur',  _onBlur,  true);
 
-    console.log('[ACCESSORY_BAR] BUILD 283: Sticky Accessory Bar ativa — campos: ' + INPUT_IDS.join(', '));
+    console.log('[ACCESSORY_BAR] BUILD 298: Sticky Accessory Bar ativa (botão OK único) — campos: ' + INPUT_IDS.join(', '));
   }
 
   /* Boot */
