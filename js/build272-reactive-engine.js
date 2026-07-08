@@ -106,6 +106,9 @@
      dados do paciente mudam — independente do card estar aberto
      ou fechado.
   ============================================================ */
+  /* ── BUILD 306: syncClcrLiveDashboard atualizado para IDs home-live-* ──
+     IDs anteriores (clcr-live-val-*) substituídos por (home-live-*) no HTML.
+     Atualização direta via getElementById — sem observer, sem cascade.       */
   function syncClcrLiveDashboard() {
     var pd = window.patientData || {};
 
@@ -120,15 +123,13 @@
       bsa:  derived.bsa  != null ? _fmt(derived.bsa, 2)  : (pd.bsa  != null ? _fmt(pd.bsa, 2)  : null)
     };
 
+    /* BUILD 306: IDs mapeados para home-live-* */
+    var idMap = { clcr: 'home-live-clcr', imc: 'home-live-imc', peso: 'home-live-peso', bsa: 'home-live-bsa' };
     ['clcr', 'imc', 'peso', 'bsa'].forEach(function (key) {
-      var el = $('clcr-live-val-' + key);
+      var el = document.getElementById(idMap[key]);
       if (!el) return;
       var v = vals[key];
-      if (v) {
-        el.innerText = v;
-      } else {
-        el.innerText = '---';
-      }
+      el.innerText = v || '---';
     });
   }
 
