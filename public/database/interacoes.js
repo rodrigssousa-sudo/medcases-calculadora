@@ -98,7 +98,7 @@ const DRUG_ALIASES = {
   "minociclina":                        "tetraciclina",
   "omadaciclina":                       "tetraciclina",
   "eravaciclina":                       "tetraciclina",
-  "tigeciclina":                        "tetraciclina",
+  /* tigeciclina: alias removido em BUILD 360 — bloco próprio em INTERACOES_DB (glicilciclina com farmacocinética distinta) */
 
   /* IECA — agrupados sob captopril */
   "enalapril":                          "captopril",
@@ -1457,6 +1457,30 @@ const INTERACOES_DB = {
         pt: "Evitar em pacientes com cardiopatia de base ou QT prolongado. Monitorar ECG se associação for inevitável e corrigir eletrólitos.",
         es: "Evitar en pacientes con cardiopatía de base o QT prolongado. Monitorear ECG si la asociación es inevitable y corregir electrolitos."
       }
+    },
+    "colchicina": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "A azitromicina tem uma interação mais leve com a colchicina do que a claritromicina (que é mortal), mas ainda pode aumentar os níveis de colchicina no sangue por competição intestinal do transportador P-gp.",
+        es: "La azitromicina tiene una interacción más leve con la colchicina que la claritromicina (que es mortal), pero aún puede aumentar los niveles de colchicina en la sangre por competición intestinal."
+      },
+      conduta: {
+        pt: "Monitorar toxicidade gastrointestinal e neuromuscular da colchicina se usados juntos.",
+        es: "Monitorizar toxicidad gastrointestinal y neuromuscular de la colchicina si se usan juntos."
+      }
+    },
+    "$classe_antiarritmicos_qt": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Risco de Morte Súbita. A azitromicina bloqueia ativamente os canais de potássio miocárdicos retardando a repolarização (Alongamento do intervalo QT). Associá-la à Amiodarona, Haloperidol, Ondansetrona ou Fluconazol gera um risco inaceitável de deflagrar Torsades de Pointes.",
+        es: "Riesgo de Muerte Súbita. La azitromicina bloquea activamente los canales de potasio miocárdicos retrasando la repolarización (Alargamiento del QT). Asociarla a Amiodarona, Haloperidol u Ondansetrón genera un riesgo inaceptable de desencadenar Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Nunca associar na UTI sem Eletrocardiograma basal. A azitromicina deve ser imediatamente suspensa se o QTc ultrapassar 500 ms.",
+        es: "Nunca asociar en la UCI sin Electrocardiograma basal. La azitromicina debe suspenderse inmediatamente si el QTc supera 500 ms."
+      }
     }
   },
 
@@ -1793,6 +1817,30 @@ const INTERACOES_DB = {
         pt: "Monitorar creatinina e débito urinário antes e após o contraste. Hidratação adequada obrigatória. Evitar outros nefrotóxicos concomitantes.",
         es: "Monitorear creatinina y diuresis antes y después del contraste. Hidratación adecuada obligatoria. Evitar otros nefrotóxicos concomitantes."
       }
+    },
+    "furosemida": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SINERGISMO OTOTÓXICO E NEFROTÓXICO MASSIVO. A Amicacina agride ativamente as células ciliadas da orelha interna. A Furosemida em doses venosas também causa ototoxicidade direta pela alteração iônica do labirinto. A associação fulmina o ouvido do paciente, gerando surdez neurosensorial irreversível rapidamente, além de agravar a isquemia renal pela desidratação (Furosemida) no túbulo já envenenado (Amicacina).",
+        es: "SINERGISMO OTOTÓXICO Y NEFROTÓXICO MASIVO. La Amikacina agrede activamente las células ciliadas del oído interno. La Furosemida en dosis venosas también causa ototoxicidad directa. La asociación fulmina el oído del paciente, generando sordera neurosensorial irreversible rápidamente, además de agravar la isquemia renal por deshidratación."
+      },
+      conduta: {
+        pt: "Uso concomitante deve ser extremamente restrito e com dosagem mínima. Dosar Ureia e Creatinina diariamente e hidratar ativamente se não houver congestão franca.",
+        es: "Uso concomitante debe ser extremadamente restringido. Dosificar Urea y Creatinina diariamente e hidratar activamente si no hay congestión franca."
+      }
+    },
+    "$classe_bnm_adespolarizantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "BLOQUEIO RESPIRATÓRIO PROLONGADO. A Amicacina bloqueia a liberação de Acetilcolina na placa motora e se liga aos mesmos receptores pós-sinápticos dos bloqueadores neuromusculares (Rocurônio, Atracúrio). O efeito curarizante soma-se, e o paciente pode sofrer paralisia muscular e apneia sustentada impossível de ser revertida pela Neostigmina no fim da cirurgia.",
+        es: "BLOQUEO RESPIRATORIO PROLONGADO. La Amikacina bloquea la liberación de Acetilcolina en la placa motora y se une a los mismos receptores postsinápticos de los bloqueadores neuromusculares. El efecto se suma, y el paciente puede sufrir parálisis muscular y apnea sostenida imposible de ser revertida por Neostigmina."
+      },
+      conduta: {
+        pt: "Avisar imediatamente o Anestesiologista se o paciente estiver usando Aminoglicosídeos e for para o bloco cirúrgico. O desmame ventilatório exigirá observação minuciosa.",
+        es: "Avisar inmediatamente al Anestesiólogo si el paciente está usando Aminoglucósidos y va al quirófano. El destete ventilatorio exigirá observación minuciosa."
+      }
     }
   },
 
@@ -2020,6 +2068,18 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Monitorar hemograma completo, sinais de hemólise (icterícia, palidez) e cianose (meta-hemoglobinemia). Evitar associação em pacientes com G6PD deficiente.",
         es: "Monitorear hemograma completo, signos de hemólisis (ictericia, palidez) y cianosis (metahemoglobinemia). Evitar asociación en pacientes con G6PD deficiente."
+      }
+    },
+    "$classe_diureticos_poupadores_potassio": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "PARADA CARDÍACA POR HIPERCALEMIA. A Trimetoprima fecha os canais de sódio (ENaC) no rim da exata mesma maneira que o diurético Amilorida/Espironolactona. Se o paciente (especialmente idoso) tomar os dois juntos ou usar um IECA (Enalapril), o potássio do sangue ficará totalmente preso no corpo. Níveis de Potássio > 7.0 ocorrem frequentemente, gerando Bloqueio AV total e Morte Súbita.",
+        es: "PARO CARDÍACO POR HIPERPOTASEMIA. La Trimetoprima cierra los canales de sodio en el riñón de la misma manera que el diurético Amilorida/Espironolactona. Si el paciente toma los dos juntos o usa un IECA, el potasio de la sangre quedará totalmente preso. Niveles de Potasio > 7.0 ocurren frecuentemente, generando Muerte Súbita."
+      },
+      conduta: {
+        pt: "Evitar Bactrim em idosos usuários de Espironolactona, IECA ou BRA (Losartana). Alternativamente, realizar Eletrocardiograma e dosar Potássio sanguíneo no Dia 3 do tratamento.",
+        es: "Evitar Bactrim en ancianos usuarios de Espironolactona, IECA o ARAII (Losartán). Alternativamente, realizar Electrocardiograma y dosificar Potasio sanguíneo en el Día 3 de tratamiento."
       }
     }
   },
@@ -2284,6 +2344,18 @@ const INTERACOES_DB = {
       conduta: {
         pt: "ABSOLUTAMENTE CONTRAINDICADO. Intervalo mínimo de 14 dias entre qualquer IMAO e linezolida (em qualquer sentido). Monitorar em UTI se exposição inadvertida; suporte hemodinâmico e uso de ciproeptadina.",
         es: "ABSOLUTAMENTE CONTRAINDICADO. Intervalo mínimo de 14 días entre cualquier IMAO y linezolida (en cualquier sentido). Monitorear en UCI si exposición inadvertida; soporte hemodinámico y uso de ciproheptadina."
+      }
+    },
+    "rifampicina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A Rifampicina induz agressivamente enzimas que clareiam a Linezolida do sangue. A Área Sob a Curva (AUC) da Linezolida despenca em até 40%, reduzindo seus níveis sanguíneos abaixo da Concentração Inibitória Mínima (CIM), resultando em falha catastrófica contra o MRSA.",
+        es: "La Rifampicina induce agresivamente enzimas que limpian el Linezolid de la sangre. El Área Bajo la Curva (AUC) del Linezolid se desploma hasta en un 40%, reduciendo sus niveles sanguíneos por debajo de la Concentración Inhibitoria Mínima (CIM)."
+      },
+      conduta: {
+        pt: "Não associar. Caso o paciente necessite de cobertura MRSA e use Rifampicina (ex: tratamento de Tuberculose ou infecção de prótese óssea), substituir a Linezolida por Vancomicina ou Teicoplanina.",
+        es: "No asociar. Si el paciente necesita cobertura MRSA y usa Rifampicina, sustituir el Linezolid por Vancomicina o Teicoplanina."
       }
     }
   },
@@ -2798,6 +2870,18 @@ const INTERACOES_DB = {
         pt: "Hidratar adequadamente antes e após o contraste. Monitorar creatinina e débito urinário. Avaliar risco-benefício do contraste em pacientes em vancomicina com função renal limítrofe.",
         es: "Hidratar adecuadamente antes y después del contraste. Monitorear creatinina y diuresis. Evaluar riesgo-beneficio del contraste en pacientes en vancomicina con función renal limítrofe."
       }
+    },
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Surdez e Falência Renal. A associação de Vancomicina com Amicacina ou Gentamicina aumenta de forma estrondosa o dano às células ciliadas do ouvido interno (Risco de zumbido e surdez neurológica irreversível) e ao túbulo contorcido proximal (Nefrotoxicidade isquêmica).",
+        es: "Sordera y Falla Renal. La asociación de Vancomicina con Amikacina o Gentamicina aumenta de forma estruendosa el daño a las células ciliadas del oído interno (Riesgo de zumbido y sordera neurológica irreversible) y al túbulo contorneado proximal (Nefrotoxicidad isquémica)."
+      },
+      conduta: {
+        pt: "A associação exige justificativa microbiológica e não deve ultrapassar 5 a 7 dias. Monitorização da creatinina deve ser diária e suspender a Amicacina ao primeiro sinal de elevação dos marcadores renais.",
+        es: "La asociación exige justificación microbiológica y no debe superar 5 a 7 días. La monitorización de la creatinina debe ser diaria y suspender la Amikacina a la primera señal de elevación de los marcadores renales."
+      }
     }
   },
 
@@ -2923,6 +3007,18 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Evitar uso concomitante. Usar anfotericina lipossomal como alternativa de menor toxicidade renal.",
         es: "Evitar uso concomitante. Usar anfotericina liposomal como alternativa de menor toxicidad renal."
+      }
+    },
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "FALÊNCIA RENAL AGUDA TUBULOTÓXICA (Duplo Ataque de Membrana). Ambas as drogas atacam diretamente as células do túbulo contorcido proximal. A Polimixina dissolve as membranas celulares por efeito detergente e o Aminoglicosídeo (Amicacina/Gentamicina) induz apoptose mitocondrial. A associação na UTI destrói a função renal do paciente em menos de 72 horas.",
+        es: "FALLO RENAL AGUDO TUBULOTÓXICO (Doble Ataque de Membrana). Ambas drogas atacan directamente las células del túbulo contorneado proximal. La Polimixina disuelve las membranas celulares por efecto detergente y el Aminoglucósido induce apoptosis mitocondrial. La asociación destruye la función renal en menos de 72 horas."
+      },
+      conduta: {
+        pt: "Evitar completamente a associação, a menos que seja o último recurso guiado por antibiograma em infecções por super-bactérias Pan-Resistentes. Se inevitável, o paciente deve entrar em protocolo de hidratação e monitoramento metabólico de 12/12h.",
+        es: "Evitar completamente la asociación, a menos que sea el último recurso guiado por antibiograma en infecciones por superbacterias Pan-Resistentes."
       }
     }
   },
@@ -3086,6 +3182,18 @@ const INTERACOES_DB = {
         pt: "Monitorar função renal e níveis do imunossupressor se indicado clínicamente.",
         es: "Monitorear función renal y niveles del inmunosupresor si está indicado clínicamente."
       }
+    },
+    "calcio_endovenoso": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CRISTALIZAÇÃO LETAL. A Ceftriaxona liga-se fortemente aos sais de Cálcio (Gluconato de Cálcio, Cloreto de Cálcio, ou *Ringer Lactato*) formando microcristais insolúveis de Ceftriaxona Cálcica no sangue. Esses cristais viajam para os pulmões e rins, gerando embolia mecânica fatal, especialmente documentada como causa de morte em recém-nascidos.",
+        es: "CRISTALIZACIÓN LETAL. La Ceftriaxona se une fuertemente a las sales de Calcio (Gluconato de Calcio, Cloruro de Calcio, o *Ringer Lactato*) formando microcristales insolubles en la sangre. Estos cristales viajan a pulmones y riñones, generando embolia mecánica fatal, especialmente documentada como causa de muerte en recién nacidos."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA DE ADMINISTRAÇÃO SIMULTÂNEA. Não pendurar no mesmo acesso em Y (nem mesmo em adultos). Lavar vigorosamente a veia com 20mL de SF antes e depois. *NUNCA* diluir ceftriaxona no Soro Ringer Lactato.",
+        es: "CONTRAINDICACIÓN ABSOLUTA DE ADMINISTRACIÓN SIMULTÁNEA. No colgar en el mismo acceso en Y (ni siquiera en adultos). Lavar vigorosamente la vena con 20mL de SF antes y después. *NUNCA* diluir ceftriaxona en Suero Ringer Lactato."
+      }
     }
   },
 
@@ -3212,6 +3320,30 @@ const INTERACOES_DB = {
         pt: "Em pacientes transplantados, monitorar sinais de rejeição e considerar contato com a equipe de transplante para ajuste do imunossupressor.",
         es: "En pacientes trasplantados, monitorear signos de rechazo y considerar contacto con el equipo de trasplante para ajuste del inmunosupresor."
       }
+    },
+    "vancomicina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SINERGISMO DE NEFROTOXICIDADE DA UTI. A Associação 'Vanco + Pip-Tazo' é o empirismo mais comum da UTI (cobre MRSA e Pseudomonas juntos). O problema: a incidência de Lesão Renal Aguda triplica (aumenta 300%) quando essas drogas são feitas juntas, comparado com Vanco + Meropenem ou Vanco + Cefepime.",
+        es: "SINERGISMO DE NEFROTOXICIDAD DE UCI. La Asociación 'Vanco + Pip-Tazo' es el empirismo más común de la UCI (cubre MRSA y Pseudomonas juntos). El problema: la incidencia de Lesión Renal Aguda se triplica (aumenta 300%) cuando estas drogas se hacen juntas, comparado con Vanco + Meropenem."
+      },
+      conduta: {
+        pt: "Protocolo rígido de hidratação venosa. O clínico DEVE acompanhar a Creatinina diariamente. Se houver salto de creatinina (Ex: de 0.8 para 1.5), considere trocar o Tazocin por Cefepime ou Meropenem.",
+        es: "Protocolo rígido de hidratación venosa. El clínico DEBE acompañar la Creatinina diariamente. Si hay salto de creatinina (Ej: de 0.8 a 1.5), considere cambiar el Tazocin por Cefepime o Meropenem."
+      }
+    },
+    "$classe_bnm_adespolarizantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A piperacilina demonstrou em estudos clínicos prolongar clinicamente a ação do bloqueio neuromuscular adespolarizante (Vecurônio, Rocurônio). Pacientes em anestesia geral demorarão mais tempo para recuperar a ventilação espontânea e retornar os reflexos no pós-operatório.",
+        es: "La piperacilina demostró en estudios clínicos prolongar clínicamente la acción del bloqueo neuromuscular no despolarizante (Vecuronio, Rocuronio). Pacientes en anestesia general tardarán más tiempo en recuperar la ventilación espontánea y retornar los reflejos."
+      },
+      conduta: {
+        pt: "Monitoramento por Trem de Quatro (TOF) estrito durante a anestesia. Extubação com cautela.",
+        es: "Monitorización por Tren de Cuatro (TOF) estricto durante la anestesia. Extubación con precaución."
+      }
     }
   },
 
@@ -3241,6 +3373,30 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Orientar método contraceptivo adicional (barômetro) apenas se houver má absorção gastrointestinal durante o tratamento.",
         es: "Orientar método anticonceptivo adicional (barómetro) solo si hay malabsorción gastrointestinal durante el tratamiento."
+      }
+    },
+    "alopurinol": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Aumento Massivo de Reações Cutâneas. A administração de amoxicilina em pacientes que fazem uso crônico de Alopurinol (para Gota/Ácido úrico) aumenta a incidência de rash cutâneo maculopapular assustador (mas não letal) em até 20% a 30%.",
+        es: "Aumento Masivo de Reacciones Cutáneas. La administración de amoxicilina en pacientes que hacen uso crónico de Alopurinol (para Gota/Ácido úrico) aumenta la incidencia de rash cutáneo maculopapular asustador en hasta 20% a 30%."
+      },
+      conduta: {
+        pt: "Monitorar o aparecimento de erupções pelo corpo. Explicar ao paciente que isso geralmente não é anafilaxia ou 'alergia à penicilina verdadeira', mas se houver descamação da pele/acometimento de mucosas, suspender imediatamente.",
+        es: "Monitorizar la aparición de erupciones. Explicar al paciente que esto generalmente no es anafilaxia o 'alergia a la penicilina verdadera', pero si hay descamación/afectación de mucosas, suspender inmediatamente."
+      }
+    },
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "As penicilinas competem com a secreção tubular renal do Metotrexato. O acúmulo de Metotrexato pode desencadear aplasia de medula e mucosite tóxica grave em pacientes com artrite reumatoide ou quimioterapia.",
+        es: "Las penicilinas compiten con la secreción tubular renal del Metotrexato. La acumulación de Metotrexato puede desencadenar aplasia de médula y mucositis tóxica grave en pacientes con artritis reumatoide o quimioterapia."
+      },
+      conduta: {
+        pt: "Evitar o uso se o paciente usar doses oncológicas altas de metotrexato. Se o uso for de baixa dose reumatológica, monitorar hemograma.",
+        es: "Evitar el uso si el paciente usa dosis oncológicas altas de metotrexato. Si el uso es de baja dosis reumatológica, monitorizar hemograma."
       }
     }
   },
@@ -16797,6 +16953,18 @@ const INTERACOES_DB = {
         pt: "Contraindicado em pacientes oncológicos. Reumatologia: extrema cautela, idealmente evitar.",
         es: "Contraindicado en pacientes oncológicos. Reumatología: extrema precaución, idealmente evitar."
       }
+    },
+    "$classe_ieca_bra": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ISQUEMIA RENAL IMEDIATA. O Cetorolaco oblitera as prostaglandinas da arteríola de entrada do rim (vasoconstrição aferente). Os IECAs (Enalapril, Captopril) e BRAs (Losartana) abrem a arteríola de saída (vasodilatação eferente). Em 2 a 3 dias de injeções consecutivas, a pressão interna de filtração do rim despenca a zero, precipitando Necrose Tubular Aguda e Insuficiência Renal que pode exigir diálise de urgência.",
+        es: "ISQUEMIA RENAL INMEDIATA. El Ketorolaco oblitera las prostaglandinas de la arteriola de entrada del riñón (vasoconstricción aferente). Los IECAs (Enalapril, Captopril) y ARAIIs (Losartán) abren la arteriola de salida (vasodilatación eferente). En 2 a 3 días de inyecciones consecutivas, la presión interna de filtración del riñón se desploma a cero, precipitando Necrosis Tubular Aguda e Insuficiencia Renal que puede exigir diálisis."
+      },
+      conduta: {
+        pt: "Nunca exceder 5 dias de uso total. Em pacientes nefropatas ou idosos usuários de anti-hipertensivos (especialmente IECAs/BRAs), o Cetorolaco injetável é extremamente desaconselhado. Considerar Morfina ou Tramadol IV como alternativa analgésica.",
+        es: "Nunca exceder 5 días de uso total. En pacientes nefrópatas o ancianos usuarios de antihipertensivos (especialmente IECAs/ARAIIs), el Ketorolaco inyectable es extremadamente desaconsejado. Considerar Morfina o Tramadol IV como alternativa analgésica."
+      }
     }
   },
 
@@ -18263,9 +18431,2562 @@ const INTERACOES_DB = {
         es: "Reducir empíricamente la dosis de insulina basal y/o sulfonilurea en 20-30% al iniciar la liraglutida. Monitorear glucemia capilar, especialmente pre-cena y a las 3h de la madrugada en las primeras 4 semanas. Reducir progresivamente a medida que el control glucémico mejora con la incretina. No esperar hipoglucemia para ajustar — la reducción debe ser PROACTIVA."
       }
     }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES: Endocrinologia (Insulinas Basais e Prandiais)
+     BUILD 308 — Glargina, Detemir, Degludeca, Asparte, Lispro
+     (Mapeadas majoritariamente pela classe farmacológica cruzada)
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA GERAL PARA TODAS AS INSULINAS (Basais e Rápidas) ── */
+  "$classe_insulinas": {
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SÍNDROME DA HIPOGLICEMIA SILENCIOSA. Betabloqueadores (como propranolol e metoprolol) bloqueiam completamente os receptores beta-1 e beta-2 adrenérgicos simpáticos. Quando a insulina causa hipoglicemia severa, o corpo tenta avisar o paciente com taquicardia, tremores e palpitações, mas esses sinais não ocorrerão. O paciente entra em coma hipoglicêmico súbito. (O único sinal que não é bloqueado é a SUDORESE profusa).",
+        es: "SÍNDROME DE HIPOGLUCEMIA SILENCIOSA. Betabloqueantes (como propranolol y metoprolol) bloquean completamente los receptores beta-1 y beta-2 adrenérgicos simpáticos. Cuando la insulina causa hipoglucemia severa, el cuerpo intenta avisar al paciente con taquicardia, temblores y palpitaciones, pero estos signos no ocurrirán. El paciente entra en coma hipoglucémico súbito. (El único signo que no se bloquea es la SUDORACIÓN profusa)."
+      },
+      conduta: {
+        pt: "Obrigatório educar o paciente ambulatorial. Na UTI, aferição estrita da glicemia capilar (HGT) a cada 4 horas se o paciente estiver usando ambas as terapias.",
+        es: "Obligatorio educar al paciente ambulatorio. En UCI, medición estricta de la glucemia capilar (HGT) cada 4 horas si el paciente está usando ambas terapias."
+      }
+    },
+    "$classe_corticosteroides": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ANTAGONISMO DE EFICÁCIA (Hiperglicemia induzida). Corticosteroides sistêmicos em doses altas (ex: Prednisona, Metilprednisolona, Dexametasona) causam resistência insulínica maciça nos tecidos periféricos e forçam o fígado a produzir glicose em excesso. O efeito terapêutico da insulina é neutralizado, deflagrando hiperglicemia explosiva (>300 a 400 mg/dL).",
+        es: "ANTAGONISMO DE EFICACIA (Hiperglucemia inducida). Corticosteroides sistémicos en altas dosis (ej: Prednisona, Metilprednisolona, Dexametasona) causan resistencia insulínica masiva en los tejidos periféricos y fuerzan al hígado a producir glucosa en exceso. El efecto terapéutico de la insulina se neutraliza, desencadenando hiperglucemia explosiva (>300 a 400 mg/dL)."
+      },
+      conduta: {
+        pt: "A dose total diária de insulina (basal e rápida) geralmente precisará ser aumentada empiricamente entre 30% e 50% enquanto o paciente estiver em corticoterapia pulsada ou imunossupressora.",
+        es: "La dosis total diaria de insulina (basal y rápida) generalmente necesitará ser aumentada empíricamente entre 30% y 50% mientras el paciente esté en corticoterapia pulsada o inmunosupresora."
+      }
+    },
+    "$classe_diureticos_tiazidicos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Tiazídicos (Hidroclorotiazida, Clortalidona) pioram a secreção basal endógena de insulina e diminuem a sensibilidade tecidual, antagonizando de forma leve a moderada o efeito das insulinas injetáveis.",
+        es: "Tiazídicos (Hidroclorotiazida, Clortalidona) empeoran la secreción basal endógena de insulina y disminuyen la sensibilidad tisular, antagonizando de forma leve a moderada el efecto de las insulinas inyectables."
+      },
+      conduta: {
+        pt: "Acompanhar controle glicêmico ao introduzir anti-hipertensivos. Pode requerer pequenos ajustes na dose da insulina Basal (Glargina/Degludeca).",
+        es: "Seguir control glucémico al introducir antihipertensivos. Puede requerir pequeños ajustes en la dosis de insulina Basal (Glargina/Degludec)."
+      }
+    },
+    "alcool": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "RISCO FATAL DE HIPOGLICEMIA RETARDADA. O fígado prioriza a metabolização do álcool em vez da gliconeogênese (produção de glicose). Se o paciente ingerir insulina (especialmente ultra-rápidas) e beber álcool em excesso sem carboidratos suficientes, o fígado será incapaz de resgatá-lo de uma hipoglicemia severa durante a madrugada.",
+        es: "RIESGO FATAL DE HIPOGLUCEMIA RETARDADA. El hígado prioriza la metabolización del alcohol en lugar de la gluconeogénesis (producción de glucosa). Si el paciente ingiere insulina (especialmente ultra-rápidas) y bebe alcohol en exceso sin carbohidratos suficientes, el hígado será incapaz de rescatarlo de una hipoglucemia severa durante la madrugada."
+      },
+      conduta: {
+        pt: "Orientação rigorosa ao paciente jovem com DM1. O álcool deve sempre ser acompanhado da ingestão de carboidratos, e a dose noturna da basal avaliada.",
+        es: "Orientación rigurosa al paciente joven con DM1. El alcohol debe siempre acompañarse de la ingesta de carbohidratos, y la dosis nocturna de la basal evaluada."
+      }
+    }
+  },
+
+  /* ── INTERAÇÕES CRÍTICAS NA EMERGÊNCIA (INSULINAS ULTRA-RÁPIDAS) ── */
+  "insulina_asparte": {
+    "salbutamol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SINERGISMO ELETROLÍTICO GRAVE. A insulina asparte/lispro ativa diretamente a bomba de sódio-potássio (Na+/K+ ATPase) celular. Agonistas Beta-2 adrenérgicos em altas doses (Salbutamol IV ou múltiplas nebulizações para asma/DPOC) fazem exatamente o mesmo. Juntos, forçam o potássio sérico para dentro das células rapidamente, causando HIPOCALEMIA letal, ondas U no ECG, e assistolia.",
+        es: "SINERGISMO ELECTROLÍTICO GRAVE. La insulina aspart/lispro activa directamente la bomba de sodio-potasio (Na+/K+ ATPase) celular. Agonistas Beta-2 adrenérgicos en altas dosis (Salbutamol IV o múltiples nebulizaciones para asma/EPOC) hacen exactamente lo mismo. Juntos, fuerzan el potasio sérico hacia dentro de las células rápidamente, causando HIPOPOTASEMIA letal, ondas U en el ECG, y asistolia."
+      },
+      conduta: {
+        pt: "Na cetoacidose diabética (CAD), onde insulina IV é exigida, o potássio DEVE ser dosado de hora em hora. Se o paciente também precisar de Salbutamol contínuo, a reposição imediata e agressiva de Cloreto de Potássio (KCl) endovenoso é inegociável.",
+        es: "En la cetoacidosis diabética (CAD), donde se exige insulina IV, el potasio DEBE ser dosado cada hora. Si el paciente también necesita Salbutamol continuo, la reposición inmediata y agresiva de Cloruro de Potasio (KCl) endovenoso es innegociable."
+      }
+    }
+  },
+  "insulina_lispro": {
+    "salbutamol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Mesmo sinergismo letal de indução de hipocalemia severa relatado com a Insulina Asparte.",
+        es: "Mismo sinergismo letal de inducción de hipopotasemia severa reportado con la Insulina Aspart."
+      },
+      conduta: {
+        pt: "Monitorar Potássio rigorosamente na Terapia Intensiva se ambas as drogas estiverem correndo no paciente.",
+        es: "Monitorizar Potasio rigurosamente en Terapia Intensiva si ambas drogas están corriendo en el paciente."
+      }
+    }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Endocrinologia — BUILD 310 Lote 2
+   Glulisina, NPH, Dulaglutida, Retatrutida, Glucagon
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── INSULINA NPH & GLULISINA ── */
+  "insulina_nph": {
+    "insulina_glulisina": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "REGRA DE MISTURA (Interação Farmacêutica). Quando prescritas juntas na mesma seringa, a insulina de ação rápida/ultra-rápida (Regular, Glulisina, Asparte, Lispro) DEVE SER PUXADA PRIMEIRO. Se o frasco da rápida for contaminado pela NPH turva, ela perderá sua ação rápida irremediavelmente.",
+        es: "REGLA DE MEZCLA (Interacción Farmacéutica). Cuando se prescriben juntas en la misma jeringa, la insulina de acción rápida/ultra-rápida (Regular, Glulisina, Aspart, Lispro) DEBE SER EXTRAÍDA PRIMERO. Si el vial de la rápida se contamina con la NPH turbia, perderá su acción rápida irremediablemente."
+      },
+      conduta: {
+        pt: "Instruir equipe técnica e paciente: 'Injetar ar na NPH -> Injetar ar na Rápida -> Puxar a Rápida -> Puxar a NPH'. Misturar e aplicar em menos de 5 minutos.",
+        es: "Instruir equipo técnico y paciente: 'Inyectar aire en la NPH -> Inyectar aire en la Rápida -> Extraer la Rápida -> Extraer la NPH'. Mezclar y aplicar en menos de 5 minutos."
+      }
+    }
+  },
+
+  /* ── DULAGLUTIDA ── */
+  "dulaglutida": {
+    "anticoncepcional_hormonal": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A dulaglutida (assim como outros análogos de GLP-1) retarda o esvaziamento gástrico, reduzindo a taxa de absorção de medicamentos orais. Pode diminuir transitoriamente o pico sérico de pílulas anticoncepcionais orais, embora menos agressivo que a tirzepatida.",
+        es: "La dulaglutida (así como otros análogos de GLP-1) retrasa el vaciamiento gástrico, reduciendo la tasa de absorción de medicamentos orales. Puede disminuir transitoriamente el pico sérico de píldoras anticonceptivas orales, aunque menos agresivo que la tirzepatida."
+      },
+      conduta: {
+        pt: "Acompanhar paciente e considerar método de barreira nas primeiras 4 semanas da introdução da droga.",
+        es: "Seguir paciente y considerar método de barrera en las primeras 4 semanas de la introducción de la droga."
+      }
+    },
+    "$classe_hipoglicemiantes_secretagogos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo de alto risco se combinado com Sulfonilureias (Glibenclamida, Gliclazida). A supressão calórica causada pelo efeito anorexígeno do GLP-1 cruza com o hiperinsulinismo da sulfonilureia, gerando hipoglicemia severa.",
+        es: "Sinergismo de alto riesgo si se combina con Sulfonilureas (Glibenclamida, Gliclazida). La supresión calórica causada por el efecto anorexígeno del GLP-1 cruza con el hiperinsulinismo de la sulfonilurea, generando hipoglucemia severa."
+      },
+      conduta: {
+        pt: "Obrigatório reduzir a sulfonilureia pela metade ou suspender quando iniciar a Dulaglutida.",
+        es: "Obligatorio reducir la sulfonilurea a la mitad o suspender cuando se inicie la Dulaglutida."
+      }
+    }
+  },
+
+  /* ── RETATRUTIDA ── */
+  "retatrutida": {
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A retatrutida ativa fortemente receptores de Glucagon endógenos, o que exerce efeito inotrópico e cronotrópico cardíaco positivo (acelera os batimentos). O uso simultâneo de betabloqueadores pode criar um conflito autonômico hemodinâmico, exigindo ajuste da terapia cardiovascular e monitoramento de arritmias.",
+        es: "La retatrutida activa fuertemente receptores de Glucagón endógenos, lo que ejerce efecto inotrópico y cronotrópico cardíaco positivo (acelera los latidos). El uso simultáneo de betabloqueantes puede crear un conflicto autonómico hemodinámico, exigiendo ajuste de la terapia cardiovascular y monitorización de arritmias."
+      },
+      conduta: {
+        pt: "Droga em fase investigacional (Fase 3). Estreita vigilância cardiológica obrigatória.",
+        es: "Droga en fase investigacional (Fase 3). Estrecha vigilancia cardiológica obligatoria."
+      }
+    }
+  },
+
+  /* ── GLUCAGON ── */
+  "glucagon": {
+    "$classe_betabloqueadores": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO DE RESGATE VITAL (Uso Intencional). Betabloqueadores em dose tóxica paralisam o coração e as vias adrenérgicas padrão são inúteis. O glucagon age nos próprios receptores miocárdicos, ativando AMPc de forma independente, servindo como o ANTÍDOTO de escolha para intoxicações por propranolol, atenolol, etc.",
+        es: "INTERACCIÓN DE RESCATE VITAL (Uso Intencional). Betabloqueantes en dosis tóxica paralizan el corazón y las vías adrenérgicas estándar son inútiles. El glucagón actúa en sus propios receptores miocárdicos, activando AMPc de forma independiente, sirviendo como el ANTÍDOTO de elección para intoxicaciones por propranolol, atenolol, etc."
+      },
+      conduta: {
+        pt: "Bolus IV em massa (até 10 mg) em ambiente de sala de emergência para resgate cardíaco.",
+        es: "Bolo IV en masa (hasta 10 mg) en ambiente de sala de emergencias para rescate cardíaco."
+      }
+    },
+    "varfarina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Altas doses de glucagon IV (para resgates) podem exacerbar potentemente o efeito hipoprotrombinêmico da varfarina, levando a sangramentos agudos não explicados.",
+        es: "Altas dosis de glucagón IV (para rescates) pueden exacerbar potentemente el efecto hipoprotrombinémico de la warfarina, llevando a sangrados agudos no explicados."
+      },
+      conduta: {
+        pt: "Acompanhar paciente anticoagulado nas horas seguintes ao resgate.",
+        es: "Seguir paciente anticoagulado en las horas siguientes al rescate."
+      }
+    },
+    "alcool": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "FALHA TERAPÊUTICA LETAL. O metabolismo massivo do etanol no fígado paralisa as enzimas da gliconeogênese. Se o paciente alcoolizado (em coma alcoólico) sofrer hipoglicemia e receber injeção de glucagon, o fígado NÃO VAI RESPONDER. O paciente pode morrer de hipoglicemia se a equipe aguardar o efeito.",
+        es: "FALLO TERAPÉUTICO LETAL. El metabolismo masivo del etanol en el hígado paraliza las enzimas de la gluconeogénesis. Si el paciente alcoholizado (en coma alcohólico) sufre hipoglucemia y recibe inyección de glucagón, el hígado NO VA A RESPONDER. El paciente puede morir de hipoglucemia si el equipo espera el efecto."
+      },
+      conduta: {
+        pt: "NUNCA usar glucagon para resgate de hipoglicemia associada ao uso abusivo de álcool. O único resgate efetivo e imediato é a Glicose Hipertônica 50% via endovenosa.",
+        es: "NUNCA usar glucagón para rescate de hipoglucemia asociada al uso abusivo de alcohol. El único rescate efectivo e inmediato es la Glucosa Hipertónica al 50% vía endovenosa."
+      }
+    }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Antidiabéticos Orais — BUILD 312 Lote 3
+   Metformina, Gliclazida, Glimepirida, Sitagliptina, Linagliptina
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── METFORMINA ── */
+  "metformina": {
+    "contraste_iodado": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A administração de meios de contraste iodados IV (usados em Tomografias e Cateterismos) causa uma nefropatia tóxica e isquêmica transitória aguda. Se o paciente usar metformina e o rim falhar subitamente devido ao contraste, a metformina vai acumular brutalmente, deflagrando ACIDOSE LÁTICA LETAL (uma condição com mais de 50% de mortalidade).",
+        es: "La administración de medios de contraste yodados IV (usados en Tomografías y Cateterismos) causa una nefropatía tóxica e isquémica transitoria aguda. Si el paciente usa metformina y el riñón falla súbitamente debido al contraste, la metformina se acumulará brutalmente, desencadenando ACIDOSIS LÁCTICA LETAL (una condición con más del 50% de mortalidad)."
+      },
+      conduta: {
+        pt: "SUSPENDER a metformina 48 horas ANTES do exame eletivo (ou imediatamente na emergência) e só retornar o uso 48 horas DEPOIS, mediante comprovação laboratorial de que a creatinina não se alterou.",
+        es: "SUSPENDER la metformina 48 horas ANTES del examen electivo (o inmediatamente en la emergencia) y solo retomar el uso 48 horas DESPUÉS, mediante comprobación de laboratorio de que la creatinina no se alteró."
+      }
+    },
+    "alcool": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A intoxicação alcoólica aguda bloqueia a gliconeogênese hepática e altera o metabolismo mitocondrial favorecendo a produção de lactato. Associada à metformina, multiplica-se exponencialmente o risco de Acidose Lática severa.",
+        es: "La intoxicación alcohólica aguda bloquea la gluconeogénesis hepática y altera el metabolismo mitocondrial favoreciendo la producción de lactato. Asociada a metformina, se multiplica exponencialmente el riesgo de Acidosis Láctica severa."
+      },
+      conduta: {
+        pt: "Uso terminantemente contraindicado em pacientes alcoólatras ou em quadros de \"binge drinking\" (bebedeira extrema episódica).",
+        es: "Uso terminantemente contraindicado en pacientes alcohólicos o en cuadros de 'binge drinking' (borrachera extrema episódica)."
+      }
+    }
+  },
+
+  /* ── SULFONILUREIAS (GLICLAZIDA E GLIMEPIRIDA) ── */
+  "$classe_hipoglicemiantes_secretagogos": {
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Bloqueio mortal do alerta adrenérgico. As sulfonilureias causam hipoglicemias profundas que duram 24h. O betabloqueador (Atenolol, Carvedilol) mascarará a taquicardia e os tremores. O paciente desmaiará repentinamente sem qualquer aviso prévio. Adicionalmente, bloqueadores beta não seletivos pioram e prolongam a própria hipoglicemia.",
+        es: "Bloqueo mortal de la alerta adrenérgica. Las sulfonilureas causan hipoglucemias profundas que duran 24h. El betabloqueante (Atenolol, Carvedilol) enmascarará la taquicardia y los temblores. El paciente se desmayará repentinamente sin previo aviso. Adicionalmente, bloqueadores beta no selectivos empeoran y prolongan la propia hipoglucemia."
+      },
+      conduta: {
+        pt: "Acompanhamento estrito. Se usar BB, alertar o paciente que a SUDORESE é o único aviso que restará do estado hipoglicêmico. Reduzir as metas glicêmicas no idoso.",
+        es: "Seguimiento estricto. Si usa BB, alertar al paciente que la SUDORACIÓN es el único aviso que quedará del estado hipoglucémico. Reducir las metas glucémicas en el anciano."
+      }
+    },
+    "fluconazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os azólicos inibem as enzimas hepáticas (CYP2C9) responsáveis por metabolizar as sulfonilureias (especialmente glimepirida). O bloqueio enzimático prolonga a meia-vida do antidiabético, provocando comas hipoglicêmicos incontroláveis.",
+        es: "Los azólicos inhiben las enzimas hepáticas (CYP2C9) responsables de metabolizar las sulfonilureas (especialmente glimepirida). El bloqueo enzimático prolonga la vida media del antidiabético, provocando comas hipoglucémicos incontrolables."
+      },
+      conduta: {
+        pt: "Evitar uso conjunto ou monitorar glicemia 4 vezes ao dia. O tratamento da candidíase oral simples (uso de 1 semana) já é suficiente para causar o evento.",
+        es: "Evitar uso conjunto o monitorizar glucemia 4 veces al día. El tratamiento de candidiasis oral simple (uso de 1 semana) ya es suficiente para causar el evento."
+      }
+    },
+    "$classe_fibratos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Fibratos (Gemfibrozila, Fenofibrato) deslocam as sulfonilureias das proteínas plasmáticas no sangue, aumentando bruscamente a sua fração 'livre' e ativa, propiciando quedas bruscas de glicemia.",
+        es: "Fibratos (Gemfibrozilo, Fenofibrato) desplazan las sulfonilureas de las proteínas plasmáticas en la sangre, aumentando bruscamente su fracción 'libre' y activa, propiciando caídas bruscas de glucemia."
+      },
+      conduta: {
+        pt: "Reduzir a dose da sulfonilureia no início da terapia antidislipidêmica.",
+        es: "Reducir la dosis de la sulfonilurea al inicio de la terapia antidislipidémica."
+      }
+    }
+  },
+
+  /* ── INIBIDORES DA DPP-4 (SITAGLIPTINA E LINAGLIPTINA) ── */
+  "$classe_inibidores_dpp4": {
+    "digoxina": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "A sitagliptina aumenta levemente as concentrações séricas e a área sob a curva (AUC) da digoxina. O impacto clínico real é pequeno, mas em pacientes já próximos ao limite tóxico, pode gerar náuseas ou arritmias.",
+        es: "La sitagliptina aumenta levemente las concentraciones séricas y el área bajo la curva (AUC) de la digoxina. El impacto clínico real es pequeño, pero en pacientes ya cercanos al límite tóxico, puede generar náuseas o arritmias."
+      },
+      conduta: {
+        pt: "Não requer mudança de dose proativa, mas deve-se monitorar toxicidade digitálica.",
+        es: "No requiere cambio de dosis proactivo, pero se debe monitorizar toxicidad digitálica."
+      }
+    },
+    "$classe_ieca": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Tanto os inibidores da DPP-4 quanto os Inibidores da ECA (Captopril/Enalapril) atuam em enzimas que inativam cininas vasoativas (como a Substância P e Bradicinina). Há relatos de um risco estatisticamente superior, porém raro, de deflagrar Angioedema facial quando usados em terapia dupla.",
+        es: "Tanto los inhibidores de la DPP-4 como los Inhibidores de la ECA (Captopril/Enalapril) actúan en enzimas que inactivan cininas vasoactivas (como la Sustancia P y Bradicinina). Hay reportes de un riesgo estadísticamente superior, aunque raro, de desencadenar Angioedema facial cuando se usan en terapia doble."
+      },
+      conduta: {
+        pt: "Prescrição é normal, mas deve-se alertar o paciente a buscar PS em caso de inchaço na boca, língua ou face.",
+        es: "La prescripción es normal, pero se debe alertar al paciente a buscar urgencias en caso de hinchazón en la boca, lengua o cara."
+      }
+    }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Endocrinologia — BUILD 314 Lote 4
+   Vildagliptina, Pioglitazona, Levotiroxina, Propiltiouracil, Metimazol
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── VILDAGLIPTINA (interação específica além da classe DPP-4) ── */
+  "vildagliptina": {
+    "$classe_ieca": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A vildagliptina (como inibidora de DPP-4) inibe a degradação de vários peptídeos, incluindo as cininas. IECAs (Enalapril, Captopril) também impedem a degradação das cininas (bradicinina). Essa via bloqueada duplamente aumenta substancialmente o risco de ANGIOEDEMA facial e de vias aéreas superiores.",
+        es: "La vildagliptina (como inhibidora de DPP-4) inhibe la degradación de varios péptidos, incluyendo las cininas. IECAs (Enalapril, Captopril) también impiden la degradación de las cininas (bradicinina). Esta vía bloqueada doblemente aumenta sustancialmente el riesgo de ANGIOEDEMA facial y de vías respiratorias superiores."
+      },
+      conduta: {
+        pt: "Uso permitido, mas o paciente deve ser alertado sobre sinais de inchaço nos lábios/língua e procurar PS imediatamente. A incidência de angioedema é estatisticamente maior se o paciente usa IECA simultaneamente.",
+        es: "Uso permitido, pero el paciente debe ser alertado sobre signos de hinchazón en labios/lengua y acudir a urgencias inmediatamente. La incidencia de angioedema es estadísticamente mayor si el paciente usa IECA simultáneamente."
+      }
+    }
+  },
+
+  /* ── PIOGLITAZONA ── */
+  "pioglitazona": {
+    "insulina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo perigoso na retenção hídrica e insuficiência cardíaca. A pioglitazona estimula a reabsorção tubular renal de sódio (via ENaC). O uso concomitante de Insulina exacerba massivamente essa retenção de fluidos, precipitando edema agudo de pulmão (EAP) e descompensação da ICC NYHA III/IV.",
+        es: "Sinergismo peligroso en la retención hídrica e insuficiencia cardíaca. La pioglitazona estimula la reabsorción tubular renal de sodio (vía ENaC). El uso concomitante de Insulina exacerba masivamente esta retención de fluidos, precipitando edema agudo de pulmón (EAP) y descompensación de la ICC NYHA III/IV."
+      },
+      conduta: {
+        pt: "A associação na bula é contraindicada ou exige redução de dose da pioglitazona e monitoramento restrito de peso e dispneia diários.",
+        es: "La asociación en el prospecto está contraindicada o exige reducción de dosis de pioglitazona y monitorización estricta de peso y disnea diarios."
+      }
+    },
+    "gemfibrozila": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A gemfibrozila é um potente inibidor da enzima CYP2C8, via exclusiva pela qual a pioglitazona é inativada. O uso combinado pode triplicar a concentração da pioglitazona, levando a eventos cardiovasculares e hipoglicemia.",
+        es: "El gemfibrozilo es un potente inhibidor de la enzima CYP2C8, vía exclusiva por la cual la pioglitazona es inactivada. El uso combinado puede triplicar la concentración de pioglitazona, llevando a eventos cardiovasculares e hipoglucemia."
+      },
+      conduta: {
+        pt: "A dose máxima de pioglitazona DEVE ser restrita a 15 mg/dia caso o uso conjunto seja inescapável.",
+        es: "La dosis máxima de pioglitazona DEBE estar restringida a 15 mg/día en caso de que el uso conjunto sea ineludible."
+      }
+    }
+  },
+
+  /* ── LEVOTIROXINA ── */
+  "levotiroxina": {
+    "antiacido": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Interação Mecânica Intensa. Sais de cálcio (carbonato), hidróxido de alumínio/magnésio e IBPs (Omeprazol) alteram o pH gástrico ou quelam fisicamente a levotiroxina no estômago, anulando completamente sua absorção.",
+        es: "Interacción Mecánica Intensa. Sales de calcio (carbonato), hidróxido de aluminio/magnesio e IBPs (Omeprazol) alteran el pH gástrico o quelan físicamente la levotiroxina en el estómago, anulando completamente su absorción."
+      },
+      conduta: {
+        pt: "Os suplementos e antiácidos devem ser tomados com um intervalo DE NO MÍNIMO 4 HORAS do hormônio tireoidiano.",
+        es: "Los suplementos y antiácidos deben ser tomados con un intervalo DE AL MENOS 4 HORAS de la hormona tiroidea."
+      }
+    },
+    "sulfato_ferroso": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Idêntico aos antiácidos. O ferro forma complexos insolúveis com a T4 no lúmen intestinal, impedindo a absorção e descompensando o hipotireoidismo agudamente.",
+        es: "Idéntico a los antiácidos. El hierro forma complejos insolubles con la T4 en el lumen intestinal, impidiendo la absorción y descompensando el hipotiroidismo agudamente."
+      },
+      conduta: {
+        pt: "Distanciamento obrigatório de 4 horas.",
+        es: "Distanciamiento obligatorio de 4 horas."
+      }
+    },
+    "amiodarona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A amiodarona contém altíssimas cargas de Iodo em sua molécula e, além disso, bloqueia diretamente a enzima 5-desiodase periférica (impedindo que a Levotiroxina-T4 se transforme na ativa T3). Pode causar hipotireoidismo iatrogênico profundo mesmo com o paciente usando Levotiroxina.",
+        es: "La amiodarona contiene altísimas cargas de Yodo en su molécula y, además, bloquea directamente la enzima 5-desyodasa periférica (impidiendo que la Levotiroxina-T4 se transforme en la activa T3). Puede causar hipotiroidismo iatrogénico profundo incluso con el paciente usando Levotiroxina."
+      },
+      conduta: {
+        pt: "Monitoramento de TSH/T4L regular. As doses de Levotiroxina geralmente precisarão ser aumentadas se o paciente usar amiodarona cronicamente.",
+        es: "Monitorización de TSH/T4L regular. Las dosis de Levotiroxina generalmente necesitarán ser aumentadas si el paciente usa amiodarona crónicamente."
+      }
+    }
+  },
+
+  /* ── ANTITIREOIDIANOS (Propiltiouracil e Metimazol) ── */
+  "$classe_antitireoidianos": {
+    "varfarina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O hipertireoidismo acelera naturalmente a degradação dos fatores de coagulação dependentes de Vitamina K. Quando o PTU ou Metimazol começam a funcionar e o paciente se torna eutireoidiano, a degradação diminui, levando à RESISTÊNCIA à varfarina pré-estipulada (o RNI cai, aumentando risco de trombose).",
+        es: "El hipertiroidismo acelera naturalmente la degradación de los factores de coagulación dependientes de Vitamina K. Cuando el PTU o Metimazol comienzan a funcionar y el paciente se vuelve eutiroideo, la degradación disminuye, llevando a RESISTENCIA a la warfarina preestipulada (el RNI cae, aumentando el riesgo de trombosis)."
+      },
+      conduta: {
+        pt: "Ao reverter o hipertireoidismo, a dose do anticoagulante frequentemente terá que ser aumentada progressivamente sob estrito controle de RNI.",
+        es: "Al revertir el hipertiroidismo, la dosis del anticoagulante frecuentemente tendrá que ser aumentada progresivamente bajo estricto control de RNI."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Em pacientes tireotóxicos, o clearance (eliminação) de betabloqueadores (como propranolol) está massivamente acelerado. Ao instituir o tratamento antitireoidiano, a eliminação normaliza, e as doses de betabloqueador antes exigidas tornam-se tóxicas (causando bradicardia).",
+        es: "En pacientes tirotoxicósicos, el clearance (eliminación) de betabloqueantes (como propranolol) está masivamente acelerado. Al instituir el tratamiento antitiroideo, la eliminación se normaliza, y las dosis de betabloqueante antes exigidas se vuelven tóxicas (causando bradicardia)."
+      },
+      conduta: {
+        pt: "Desmamar as doses de betabloqueadores à medida que o paciente atinge o eutireoidismo com Tioamidas.",
+        es: "Destetar las dosis de betabloqueantes a medida que el paciente alcanza el eutiroidismo con Tioamidas."
+      }
+    }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Hipófise e Anestesia Emergencial
+   BUILD 316 Lote 5 — Desmopressina, Cabergolina, Bromocriptina,
+   Cetamina, Etomidato
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── DESMOPRESSINA (DDAVP) ── */
+  "desmopressina": {
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inibidores Seletivos da Recaptação de Serotonina (ISRS como fluoxetina, sertralina) estimulam de forma independente a secreção de hormônio antidiurético (causando SIADH). A associação com desmopressina leva à retenção hídrica dupla, deflagrando hiponatremia severa, edema cerebral e convulsão.",
+        es: "Inhibidores Selectivos de la Recaptación de Serotonina (ISRS como fluoxetina, sertralina) estimulan de forma independiente la secreción de hormona antidiurética (causando SIADH). La asociación con desmopresina lleva a retención hídrica doble, desencadenando hiponatremia severa, edema cerebral y convulsión."
+      },
+      conduta: {
+        pt: "Monitorar Sódio Sérico diário se as drogas forem prescritas simultaneamente. Restrição hídrica agressiva.",
+        es: "Monitorizar Sodio Sérico diario si las drogas se prescriben simultáneamente. Restricción hídrica agresiva."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Os AINEs (ibuprofeno, naproxeno) inibem as prostaglandinas renais que naturalmente antagonizam o efeito do ADH. Logo, os AINEs potencializam violentamente a ação antidiurética da desmopressina.",
+        es: "Los AINEs (ibuprofeno, naproxeno) inhiben las prostaglandinas renales que naturalmente antagonizan el efecto de la ADH. Por ende, los AINEs potencian violentamente la acción antidiurética de la desmopresina."
+      },
+      conduta: {
+        pt: "Evitar uso profilático de AINEs em pacientes usando DDAVP para enurese noturna.",
+        es: "Evitar uso profiláctico de AINEs en pacientes usando DDAVP para enuresis nocturna."
+      }
+    }
+  },
+
+  /* ── CABERGOLINA E BROMOCRIPTINA (Agonistas Dopaminérgicos) ── */
+  "$classe_agonistas_dopaminergicos": {
+    "$classe_antipsicoticos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ANTAGONISMO DIRETO ABSOLUTO. Antipsicóticos (Haloperidol, Risperidona, Clorpromazina, Olanzapina) atuam bloqueando os receptores dopaminérgicos D2. A Cabergolina e a Bromocriptina necessitam do D2 livre para suprimir o prolactinoma. Usá-los juntos anula o tratamento tumoral e exacerba a síndrome extrapiramidal psiquiátrica.",
+        es: "ANTAGONISMO DIRECTO ABSOLUTO. Antipsicóticos (Haloperidol, Risperidona, Clorpromazina, Olanzapina) actúan bloqueando los receptores dopaminérgicos D2. La Cabergolina y la Bromocriptina necesitan el D2 libre para suprimir el prolactinoma. Usarlos juntos anula el tratamiento tumoral y exacerba el síndrome extrapiramidal psiquiátrico."
+      },
+      conduta: {
+        pt: "Contraindicação clássica. Se o paciente psiquiátrico desenvolver um Prolactinoma (ou hiperprolactinemia medicamentosa), deve-se trocar o antipsicótico por Aripiprazol ou Quetiapina (que poupam a via túbero-infundibular) antes de introduzir a cabergolina.",
+        es: "Contraindicación clásica. Si el paciente psiquiátrico desarrolla un Prolactinoma (o hiperprolactinemia medicamentosa), se debe cambiar el antipsicótico por Aripiprazol o Quetiapina (que preservan la vía tuberoinfundibular) antes de introducir la cabergolina."
+      }
+    },
+    "$classe_macrolideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Eritromicina e Claritromicina inibem o metabolismo hepático (CYP3A4) dos derivados do Ergot. A cabergolina e a bromocriptina acumulam no sangue, causando hipotensão severa, náuseas incontroláveis, isquemia periférica (ergotismo) e alucinações.",
+        es: "Eritromicina y Claritromicina inhiben el metabolismo hepático (CYP3A4) de los derivados del Ergot. La cabergolina y la bromocriptina se acumulan en la sangre, causando hipotensión severa, náuseas incontrolables, isquemia periférica (ergotismo) y alucinaciones."
+      },
+      conduta: {
+        pt: "Evitar antibióticos inibidores do CYP3A4. Usar azitromicina ou outras classes (cefalosporinas).",
+        es: "Evitar antibióticos inhibidores del CYP3A4. Usar azitromicina u otras clases (cefalosporinas)."
+      }
+    }
+  },
+
+  /* ── CETAMINA ── */
+  "cetamina": {
+    "teofilina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sinergismo simpático grave. O uso simultâneo de cetamina (libera catecolaminas endógenas) e teofilina/aminofilina reduz bruscamente o limiar convulsivo e pode deflagrar taquiarritmias ventriculares refratárias.",
+        es: "Sinergismo simpático grave. El uso simultáneo de ketamina (libera catecolaminas endógenas) y teofilina/aminofilina reduce bruscamente el umbral convulsivo y puede desencadenar taquiarritmias ventriculares refractarias."
+      },
+      conduta: {
+        pt: "Cuidado redobrado em pacientes asmáticos graves que vêm em uso crônico de teofilina e serão entubados com cetamina.",
+        es: "Cuidado redoblado en pacientes asmáticos graves que vienen en uso crónico de teofilina y serán intubados con ketamina."
+      }
+    },
+    "halotano": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A associação da cetamina com gases anestésicos halogenados pode sensibilizar o miocárdio às catecolaminas liberadas pela cetamina, prolongando a meia-vida da droga e causando depressão miocárdica paradoxal.",
+        es: "La asociación de ketamina con gases anestésicos halogenados puede sensibilizar el miocardio a las catecolaminas liberadas por la ketamina, prolongando la vida media de la droga y causando depresión miocárdica paradójica."
+      },
+      conduta: {
+        pt: "Restrito ao anestesiologista de sala operatória com monitoramento invasivo.",
+        es: "Restringido al anestesiólogo de quirófano con monitorización invasiva."
+      }
+    }
+  },
+
+  /* ── ETOMIDATO ── */
+  "etomidato": {
+    "$classe_corticosteroides": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Interação Fisiológica (Benefício/Ajuste). Como o etomidato bloqueia transitoriamente a síntese de cortisol na suprarrenal, em pacientes criticamente doentes (sepse), a ausência desse pico de estresse pode precipitar choque vasoplégico. O uso de hidrocortisona empírica pós-intubação é uma estratégia de proteção discutida em UTI.",
+        es: "Interacción Fisiológica (Beneficio/Ajuste). Como el etomidato bloquea transitoriamente la síntesis de cortisol en la suprarrenal, en pacientes críticamente enfermos (sepsis), la ausencia de este pico de estrés puede precipitar choque vasopléjico. El uso de hidrocortisona empírica pos-intubación es una estrategia de protección discutida en UCI."
+      },
+      conduta: {
+        pt: "Vigiar pressão arterial pós-intubação nas horas subsequentes. Considerar hidrocortisona IV se o paciente mantiver choque refratário após a indução com etomidato.",
+        es: "Vigilar presión arterial pos-intubación en las horas subsecuentes. Considerar hidrocortisona IV si el paciente mantiene choque refractario tras la inducción con etomidato."
+      }
+    },
+    "$classe_benzodiazepinicos": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "A coadministração de midazolam ou fentanil antes do etomidato é extremamente benéfica para inibir a mioclonia muscular severa (tremores que simulam convulsões) típica do etomidato.",
+        es: "La coadministración de midazolam o fentanilo antes del etomidato es extremadamente benéfica para inhibir la mioclonía muscular severa (temblores que simulan convulsiones) típica del etomidato."
+      },
+      conduta: {
+        pt: "Associação encorajada na Intubação de Sequência Rápida.",
+        es: "Asociación fomentada en la Intubación de Secuencia Rápida."
+      }
+    }
+  },  // comma added; BNM blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Bloqueadores Neuromusculares (BNMs)
+   Rocurônio, Succinilcolina, Cisatracúrio, Atracúrio, Pancurônio
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── INTERAÇÕES DE CLASSE (Todos os BNMs ADESPOLARIZANTES) ──
+     (Rocurônio, Cisatracúrio, Atracúrio, Pancurônio) */
+
+  "$classe_bnm_adespolarizantes": {
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Antibióticos aminoglicosídeos (Amicacina, Gentamicina) e Clindamicina bloqueiam fisiologicamente os canais de cálcio da membrana pré-sináptica nervosa. Isso diminui a liberação natural de acetilcolina. O sinergismo com o BNM aprofunda drasticamente e prolonga a paralisia muscular de forma imprevisível.",
+        es: "Antibióticos aminoglucósidos (Amikacina, Gentamicina) y Clindamicina bloquean fisiológicamente los canales de calcio de la membrana presináptica nerviosa. Esto disminuye la liberación natural de acetilcolina. El sinergismo con el BNM profundiza drásticamente y prolonga la parálisis muscular de forma impredecible."
+      },
+      conduta: {
+        pt: "Garantir monitorização com 'Train of Four' (TOF) em UTI. O tempo de extubação após a suspensão da bomba será substancialmente maior no paciente séptico em uso desses antibióticos.",
+        es: "Garantizar monitorización con 'Train of Four' (TOF) en UCI. El tiempo de extubación tras la suspensión de la bomba será sustancialmente mayor en el paciente séptico en uso de estos antibióticos."
+      }
+    },
+    "sulfato_de_magnesio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Magnésio (MgSO4) em doses altas (ex: pré-eclâmpsia ou crises asmáticas) age como um bloqueador dos canais de cálcio presinápticos e também deprime a excitabilidade muscular. A paralisia gerada pelo BNM será exponencialmente mais potente e refratária aos antídotos convencionais.",
+        es: "El Magnesio (MgSO4) en altas dosis (ej: preeclampsia o crisis asmáticas) actúa como un bloqueador de los canales de calcio presinápticos y también deprime la excitabilidad muscular. La parálisis generada por el BNM será exponencialmente más potente y refractaria a los antídotos convencionales."
+      },
+      conduta: {
+        pt: "Se for realizar anestesia em gestantes com Eclâmpsia (infundindo magnésio), as doses do bloqueador neuromuscular devem ser reduzidas à metade do habitual e a monitorização rigorosa.",
+        es: "Si se va a realizar anestesia en gestantes con Eclampsia (infundiendo magnesio), las dosis del bloqueador neuromuscular deben ser reducidas a la mitad de lo habitual y la monitorización rigurosa."
+      }
+    },
+    "$classe_corticosteroides": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A coadministração em UTI (infusão de Rocurônio/Cisatracúrio contínua + Metilprednisolona/Dexametasona em altas doses) causa Miopatia Aguda do Doente Crítico. Ocorre destruição irreversível dos filamentos de miosina, gerando tetraplegia flácida meses após o paciente se curar da doença basal.",
+        es: "La coadministración en UCI (infusión de Rocuronio/Cisatracurio continua + Metilprednisolona/Dexametasona en altas dosis) causa Miopatía Aguda del Enfermo Crítico. Ocurre destrucción irreversible de los filamentos de miosina, generando tetraplejía flácida meses después de que el paciente se cure de la enfermedad basal."
+      },
+      conduta: {
+        pt: "Restringir o bloqueio neuromuscular contínuo a < 48h sempre que possível e utilizar exames diários de férias de sedação/bloqueio (desligar a bomba).",
+        es: "Restringir el bloqueo neuromuscular continuo a < 48h siempre que sea posible y utilizar exámenes diarios de vacaciones de sedación/bloqueo (apagar la bomba)."
+      }
+    }
+  },
+
+  /* ── SUCCINILCOLINA ── */
+  "succinilcolina": {
+    "neostigmina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ERRO CLÁSSICO E LETAL (Interação de Fase 1). A Neostigmina inibe a enzima que degrada a acetilcolina. Se for dada para 'tentar reverter' o bloqueio da Succinilcolina na sua fase despolarizante (Fase 1), ela também inibirá a pseudocolinesterase, PROLONGANDO MASSIVAMENTE o bloqueio do paciente, aprofundando o coma e a apneia.",
+        es: "ERROR CLÁSICO Y LETAL (Interacción de Fase 1). La Neostigmina inhibe la enzima que degrada la acetilcolina. Si se da para 'intentar revertir' el bloqueo de la Succinilcolina en su fase despolarizante (Fase 1), también inhibirá la pseudocolinesterasa, PROLONGANDO MASIVAMENTE el bloqueo del paciente, profundizando el coma y la apnea."
+      },
+      conduta: {
+        pt: "A Succinilcolina NÃO TEM ANTÍDOTO NA FASE 1. NUNCA aplique neostigmina/sugamadex para reverter succinilcolina. Apenas manter a ventilação mecânica e aguardar a metabolização.",
+        es: "La Succinilcolina NO TIENE ANTÍDOTO EN LA FASE 1. NUNCA aplique neostigmina/sugamadex para revertir succinilcolina. Solo mantener la ventilación mecánica y esperar la metabolización."
+      }
+    },
+    "$classe_anestesicos_inalatorios": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "GATILHO DE HIPERTERMIA MALIGNA. O uso de Succinilcolina associado a um Gás Halogenado (Halotano, Isoflurano, Sevoflurano) em pacientes geneticamente suscetíveis dispara o receptor de rianodina no músculo. O cálcio intra-celular inunda o miócito, gerando rigidez extrema de masseter, febre que sobe 1 grau a cada 5 min (até >42ºC), rabdomiólise fulminante e parada cardíaca.",
+        es: "GATILLO DE HIPERTERMIA MALIGNA. El uso de Succinilcolina asociado a un Gas Halogenado (Halotano, Isoflurano, Sevoflurano) en pacientes genéticamente susceptibles dispara el receptor de rianodina en el músculo. El calcio intracelular inunda el miocito, generando rigidez extrema de masetero, fiebre que sube 1 grado cada 5 min (hasta >42ºC), rabdomiólisis fulminante y paro cardíaco."
+      },
+      conduta: {
+        pt: "Acionar protocolo de emergência imediato (suspender gatilhos, hiperventilar com O2 a 100%, esfriar o corpo e buscar DANTROLENO endovenoso urgente).",
+        es: "Activar protocolo de emergencia inmediato (suspender gatillos, hiperventilar con O2 al 100%, enfriar el cuerpo y buscar DANTROLENO endovenoso urgente)."
+      }
+    },
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Pacientes intoxicados com digoxina já estão propensos a arritmias e hipercalemia basal. O bolus de succinilcolina pode gerar um efluxo de potássio das células musculares súbito que atinge o limiar de assistolia ou fibrilação ventricular na emergência.",
+        es: "Pacientes intoxicados con digoxina ya están propensos a arritmias e hiperpotasemia basal. El bolo de succinilcolina puede generar un eflujo de potasio de las células musculares súbito que alcanza el umbral de asistolia o fibrilación ventricular en la emergencia."
+      },
+      conduta: {
+        pt: "Se o paciente usa digitálicos e precisa de Intubação Rápida, o ROCURÔNIO é uma escolha infinitamente mais segura.",
+        es: "Si el paciente usa digitálicos y necesita Intubación Rápida, el ROCURONIO es una elección infinitamente más segura."
+      }
+    }
+  },  // comma added; Lote 3 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Emergência e Bloqueadores/Reversores
+   Sugamadex, Neostigmina, Atropina, Sulfato de Magnésio
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── SUGAMADEX ── */
+  "sugamadex": {
+    "anticoncepcional_hormonal": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "FALHA CONTRACEPTIVA. O Sugamadex encapsula moléculas no plasma não apenas o rocurônio, mas também os hormônios contidos nos contraceptivos hormonais (ex: levonorgestrel, etinilestradiol). Uma única dose IV equivale à paciente ter ESQUECIDO de tomar o contraceptivo oral daquele dia, abrindo uma janela de fertilidade e risco de gravidez indesejada.",
+        es: "FALLA ANTICONCEPTIVA. El Sugammadex encapsula moléculas en el plasma no solo el rocuronio, sino también las hormonas contenidas en los anticonceptivos hormonales (ej: levonorgestrel, etinilestradiol). Una sola dosis IV equivale a que la paciente haya OLVIDADO tomar el anticonceptivo oral de ese día, abriendo una ventana de fertilidad y riesgo de embarazo no deseado."
+      },
+      conduta: {
+        pt: "OBRIGATÓRIO ALERTAR A PACIENTE no pós-operatório. A mulher deve adotar um método contraceptivo não hormonal de barreira adicional por 7 dias consecutivos após receber Sugamadex.",
+        es: "OBLIGATORIO ALERTAR A LA PACIENTE en el posoperatorio. La mujer debe adoptar un método anticonceptivo no hormonal de barrera adicional por 7 días consecutivos tras recibir Sugammadex."
+      }
+    }
+  },
+
+  /* ── NEOSTIGMINA ── */
+  "neostigmina": {
+    "atropina": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO PROPOSITAL E VITAL. A Neostigmina aumenta os níveis de acetilcolina causando bradicardia e parada cardíaca (efeito muscarínico sistêmico). A Atropina deve ser infundida junto com a neostigmina para bloquear esse efeito colateral mortal no coração, permitindo que a neostigmina atue apenas nos músculos.",
+        es: "INTERACCIÓN A PROPÓSITO Y VITAL. La Neostigmina aumenta los niveles de acetilcolina causando bradicardia y paro cardíaco (efecto muscarínico sistémico). La Atropina debe ser infundida junto con la neostigmina para bloquear este efecto colateral mortal en el corazón, permitiendo que la neostigmina actúe solo en los músculos."
+      },
+      conduta: {
+        pt: "Misturar na mesma seringa ou infundir a Atropina 1-2 minutos antes da Neostigmina. Jamais fazer neostigmina isolada.",
+        es: "Mezclar en la misma jeringa o infundir la Atropina 1-2 minutos antes de la Neostigmina. Jamás hacer neostigmina aislada."
+      }
+    },
+    "succinilcolina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A neostigmina paralisa a enzima pseudocolinesterase plasmática (que normalmente degrada a succinilcolina). Ao usar juntos, a meia-vida da succinilcolina passa de 5 minutos para HORAS. Ocorre uma apneia iatrogênica catastrófica.",
+        es: "La neostigmina paraliza la enzima pseudocolinesterasa plasmática (que normalmente degrada la succinilcolina). Al usar juntos, la vida media de la succinilcolina pasa de 5 minutos a HORAS. Ocurre una apnea iatrogénica catastrófica."
+      },
+      conduta: {
+        pt: "Nunca utilizar reversão farmacológica anticolinesterásica para bloqueios despolarizantes (succinilcolina) recém aplicados.",
+        es: "Nunca utilizar reversión farmacológica anticolinesterásica para bloqueos despolarizantes (succinilcolina) recién aplicados."
+      }
+    }
+  },
+
+  /* ── SULFATO DE MAGNÉSIO ── */
+  "sulfato_magnesio": {
+    "nifedipina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A nifedipina é um Bloqueador de Canal de Cálcio artificial; o Magnésio age como Bloqueador de Canal de Cálcio fisiológico. A associação na obstetrícia (ambos muito usados em eclâmpsia/pré-eclâmpsia) gera profundo sinergismo vasoplégico e depressor miocárdico, causando HIPOTENSÃO GRAVE e colapso materno.",
+        es: "La nifedipina es un Bloqueador de Canal de Calcio artificial; el Magnesio actúa como Bloqueador de Canal de Calcio fisiológico. La asociación en obstetricia (ambos muy usados en eclampsia/preeclampsia) genera profundo sinergismo vasopléjico y depresor miocárdico, causando HIPOTENSIÓN GRAVE y colapso materno."
+      },
+      conduta: {
+        pt: "A associação (Nifedipina VO + Sulfato de Magnésio IV) deve ser feita com EXTREMA cautela sob monitorização contínua de PA. Se houver queda severa da PA, suspender a nifedipina e repor fluidos.",
+        es: "La asociación (Nifedipina VO + Sulfato de Magnesio IV) debe hacerse con EXTREMA precaución bajo monitorización continua de PA. Si hay caída severa de PA, suspender la nifedipina y reponer fluidos."
+      }
+    },
+    "$classe_bnm_adespolarizantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Magnésio deprime a placa neuromuscular. Quando associado a bloqueadores neuromusculares (Rocurônio, Cisatracúrio) em intubações de gestantes, a potência e a duração do bloqueio são exponencialmente ampliadas.",
+        es: "El Magnesio deprime la placa neuromuscular. Cuando se asocia a bloqueadores neuromusculares (Rocuronio, Cisatracurio) en intubaciones de gestantes, la potencia y la duración del bloqueo se amplían exponencialmente."
+      },
+      conduta: {
+        pt: "Reduzir a dose de BNMs não-despolarizantes se o paciente estiver recebendo Sulfato de Magnésio IV. Monitorar com estimulador de nervo periférico (TOF).",
+        es: "Reducir la dosis de BNMs no despolarizantes si el paciente está recibiendo Sulfato de Magnesio IV. Monitorizar con estimulador de nervio periférico (TOF)."
+      }
+    }
+  },  // comma added; Lote 4 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Repositores Eletrolíticos e Suporte de Vida
+   Gluconato/Cloreto de Cálcio, Bicarbonato, KCl, Salina 3%
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── CÁLCIO (GLUCONATO E CLORETO) ── */
+  "$classe_calcio_intravenoso": {
+    "ceftriaxona": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INCOMPATIBILIDADE QUÍMICA FATAL. O cálcio reage com a ceftriaxona formando um precipitado cristalino indissolúvel (sal de cálcio-ceftriaxona). No sangue, esses cristais causam embolia pulmonar maciça e microinfartos renais. Essa reação já gerou óbitos imediatos, especialmente em recém-nascidos e neonatos.",
+        es: "INCOMPATIBILIDAD QUÍMICA FATAL. El calcio reacciona con la ceftriaxona formando un precipitado cristalino indisoluble (sal de calcio-ceftriaxona). En la sangre, estos cristales causan embolia pulmonar masiva y microinfartos renales. Esta reacción ya ha generado muertes inmediatas, especialmente en recién nacidos y neonatos."
+      },
+      conduta: {
+        pt: "NUNCA administrar na mesma via (equipo) nem na mesma bomba. Em neonatos (<28 dias), é CONTRAINDICADO o uso de ambas as drogas num intervalo de 48 horas, mesmo em vias diferentes. Lave a via exaustivamente em adultos se for indispensável o uso sequencial.",
+        es: "NUNCA administrar en la misma vía (equipo) ni en la misma bomba. En neonatos (<28 días), está CONTRAINDICADO el uso de ambas drogas en un intervalo de 48 horas, incluso en vías diferentes. Lave la vía exhaustivamente en adultos si es indispensable el uso secuencial."
+      }
+    },
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A digoxina satura a célula miocárdica com cálcio para gerar inotropismo. A administração IV rápida de Cálcio em um paciente digitalizado pode sobrecarregar a célula e deflagrar a síndrome do 'Coração de Pedra' (Stone Heart), com parada cardíaca em sístole irreversível.",
+        es: "La digoxina satura la célula miocárdica con calcio para generar inotropismo. La administración IV rápida de Calcio en un paciente digitalizado puede sobrecargar la célula y desencadenar el síndrome del 'Corazón de Piedra' (Stone Heart), con paro cardíaco en sístole irreversible."
+      },
+      conduta: {
+        pt: "Extrema cautela. Se o paciente hipercalêmico estiver sob uso de digoxina, a injeção de cálcio deve ser feita lentamente em 30 min, apenas se a arritmia ameaçar a vida.",
+        es: "Extrema precaución. Si el paciente hiperpotasémico está en uso de digoxina, la inyección de calcio debe hacerse lentamente en 30 min, solo si la arritmia amenaza la vida."
+      }
+    },
+    "bicarbonato_sodio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Precipitação física e química na via. Quando Bicarbonato e Cálcio se encontram na mesma mangueira ou lúmen do cateter, eles formam Carbonato de Cálcio (giz insolúvel), que entope o cateter e emboliza.",
+        es: "Precipitación física y química en la vía. Cuando Bicarbonato y Calcio se encuentran en la misma manguera o lumen del catéter, forman Carbonato de Calcio (tiza insoluble), que obstruye el catéter y emboliza."
+      },
+      conduta: {
+        pt: "Durante a ressuscitação (PCR), lave a via venosa com SF 0,9% abundantemente (flushes de 20 mL) entre a administração de cálcio e bicarbonato.",
+        es: "Durante la reanimación (RCP), lave la vía venosa con SF 0,9% abundantemente (flushes de 20 mL) entre la administración de calcio y bicarbonato."
+      }
+    }
+  },
+
+  /* ── BICARBONATO DE SÓDIO ── */
+  "bicarbonato_sodio": {
+    "$classe_aminas_vasoativas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inativação química aguda por pH. O Bicarbonato de Sódio possui pH extremamente alcalino. Aminas como Noradrenalina, Adrenalina e Dopamina perdem imediatamente sua bioatividade se expostas a meios alcalinos, cortando o suporte vasopressor do paciente em choque.",
+        es: "Inactivación química aguda por pH. El Bicarbonato de Sodio posee pH extremadamente alcalino. Aminas como Noradrenalina, Adrenalina y Dopamina pierden inmediatamente su bioactividad si se exponen a medios alcalinos, cortando el soporte vasopresor del paciente en choque."
+      },
+      conduta: {
+        pt: "É proibitivo infundir bicarbonato de sódio na mesma via / lúmen de acesso venoso central por onde correm as aminas vasopressoras.",
+        es: "Es prohibitivo infundir bicarbonato de sodio en la misma vía / lumen de acceso venoso central por donde corren las aminas vasopresoras."
+      }
+    }
+  },
+
+  /* ── CLORETO DE POTÁSSIO (KCl) ── */
+  "cloreto_potassio": {
+    "$classe_diureticos_poupadores_potassio": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A reposição endovenosa de Potássio concomitante com diuréticos como Espironolactona (ou IECAs/BRAs em altas doses com DRC oculta) multiplica as chances de hipercalemia iatrogênica em pacientes idosos e com ICC, evoluindo para assistolia.",
+        es: "La reposición endovenosa de Potasio concomitante con diuréticos como Espironolactona (o IECAs/ARAs en altas dosis con ERC oculta) multiplica las posibilidades de hiperpotasemia iatrogénica en pacientes ancianos y con ICC, evolucionando a asistolia."
+      },
+      conduta: {
+        pt: "Apenas repor KCl sob dosagem sérica diária ou 12/12h se o paciente estiver usando espironolactona na enfermaria.",
+        es: "Solo reponer KCl bajo dosaje sérico diario o cada 12h si el paciente está usando espironolactona en la sala."
+      }
+    }
+  },  // comma added; BUILD 324 Lote 5 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Suporte Metabólico e Analgesia (Opioides)
+   Glicose Hipertônica, Tiamina, Fentanil, Remifentanil, Morfina
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── GLICOSE HIPERTÔNICA E TIAMINA ── */
+  "glicose_hipertonica": {
+    "tiamina": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "INTERAÇÃO FISIOLÓGICA DE RESGATE. O metabolismo cerebral de uma alta carga de glicose exige o cofator Tiamina. Se o paciente for um etilista crônico desnutrido, o bolus de glicose sem a tiamina prévia desencadeará uma Encefalopatia de Wernicke iatrogênica (lesão neuronal por acúmulo de lactato).",
+        es: "INTERACCIÓN FISIOLÓGICA DE RESCATE. El metabolismo cerebral de una alta carga de glucosa exige el cofactor Tiamina. Si el paciente es un etilista crónico desnutrido, el bolo de glucosa sin la tiamina previa desencadenará una Encefalopatía de Wernicke iatrogénica (lesión neuronal por acumulación de lactato)."
+      },
+      conduta: {
+        pt: "Protocolo rígido de PSIQUIATRIA/EMERGÊNCIA: Em pacientes alcoólatras, a infusão de 100-300 mg de Tiamina IV DEVE ocorrer minutos ANTES do bolus de Glicose Hipertônica.",
+        es: "Protocolo rígido de PSIQUIATRÍA/EMERGENCIA: En pacientes alcohólicos, la infusión de 100-300 mg de Tiamina IV DEBE ocurrir minutos ANTES del bolo de Glucosa Hipertónica."
+      }
+    }
+  },
+
+  /* ── OPIOIDES FORTES (FENTANIL, REMIFENTANIL E MORFINA) ── */
+  "$classe_opioides_fortes": {
+    "$classe_benzodiazepinicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Depressor Severo (Alerta Boxed FDA). A associação de qualquer opioide (Fentanil/Morfina) com benzodiazepínicos (Midazolam/Diazepam/Clonazepam) gera uma potencialização exponencial da depressão do sistema nervoso central, resultando em apneia letal, coma e morte.",
+        es: "Sinergismo Depresor Severo (Alerta Boxed FDA). La asociación de cualquier opioide (Fentanilo/Morfina) con benzodiazepinas (Midazolam/Diazepam/Clonazepam) genera una potenciación exponencial de la depresión del sistema nervioso central, resultando en apnea letal, coma y muerte."
+      },
+      conduta: {
+        pt: "Exige monitoramento ventilatório contínuo em UTI (oximetria/capnografia). Doses devem ser tituladas individualmente; pacientes ambulatoriais devem ser orientados a não usar ambos juntos.",
+        es: "Exige monitorización ventilatoria continua en UCI (oximetría/capnografía). Las dosis deben titularse individualmente; pacientes ambulatorios deben ser orientados a no usar ambos juntos."
+      }
+    },
+    "$classe_inibidores_p2y12": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INTERAÇÃO GASTROINTESTINAL CRÍTICA NA CARDIOLOGIA. A morfina e o fentanil paralisam a motilidade gástrica (atraso no esvaziamento). Quando dados no Infarto Agudo do Miocárdio (IAM), impedem o paciente de absorver o Clopidogrel/Ticagrelor administrados via oral para salvar o stent. As plaquetas do paciente continuam não-inibidas por horas após a dose.",
+        es: "INTERACCIÓN GASTROINTESTINAL CRÍTICA EN CARDIOLOGÍA. La morfina y el fentanilo paralizan la motilidad gástrica (retraso en el vaciamiento). Cuando se dan en el Infarto Agudo de Miocardio (IAM), impiden al paciente absorber el Clopidogrel/Ticagrelor administrados vía oral para salvar el stent. Las plaquetas del paciente continúan no inhibidas por horas tras la dosis."
+      },
+      conduta: {
+        pt: "Limitar o uso de opioides no Infarto apenas para dores refratárias extremas. Estudos mais recentes recomendam não usar morfina rotineiramente antes dos antiplaquetários.",
+        es: "Limitar el uso de opioides en el Infarto solo para dolores refractarios extremos. Estudios más recientes recomiendan no usar morfina rutinariamente antes de los antiplaquetarios."
+      }
+    }
+  },
+
+  "fentanil": {
+    "$classe_macrolideos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Antibióticos como claritromicina e inibidores azólicos inibem fortemente o CYP3A4, bloqueando a principal via de limpeza do fentanil. Causa aumento significativo do risco de sedação prolongada e depressão respiratória em pacientes de UTI.",
+        es: "Antibióticos como claritromicina e inhibidores azólicos inhiben fuertemente el CYP3A4, bloqueando la principal vía de limpieza del fentanilo. Causa aumento significativo del riesgo de sedación prolongada y depresión respiratoria en pacientes de UCI."
+      },
+      conduta: {
+        pt: "Reduzir dose da bomba de infusão de fentanil e avaliar despertar tardio.",
+        es: "Reducir dosis de la bomba de infusión de fentanilo y evaluar despertar tardío."
+      }
+    }
+  },
+
+  "remifentanil": {
+    "propofol": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A clássica 'TIVA' (Anestesia Venosa Total). O sinergismo hipnótico e analgésico permite o uso de sub-doses de ambas as drogas. Contudo, há um forte sinergismo hemodinâmico negativo, gerando quedas maciças de pressão arterial e bradicardia severa se injetados juntos em bolus.",
+        es: "La clásica 'TIVA' (Anestesia Venosa Total). El sinergismo hipnótico y analgésico permite el uso de subdosis de ambas drogas. Sin embargo, hay un fuerte sinergismo hemodinámico negativo, generando caídas masivas de presión arterial y bradicardia severa si se inyectan juntos en bolo."
+      },
+      conduta: {
+        pt: "Titular bombas de infusão individualmente (não fazer bolus rápidos conjuntos).",
+        es: "Titular bombas de infusión individualmente (no hacer bolos rápidos conjuntos)."
+      }
+    }
+  },  // comma added; BUILD 326 Lote 1 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Analgésicos Opioides Atípicos
+   Metadona, Codeína, Tramadol, Nalbufina, Oxicodona
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── METADONA ── */
+  "metadona": {
+    "$classe_antiarritmicos_qt": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A metadona por si só causa inibição direta dos canais cardíacos hERG (canais de potássio), retardando a repolarização ventricular (aumenta o intervalo QT de forma drástica). Associada a Amiodarona, Sotalol ou Haloperidol, deflagra inevitavelmente a arritmia letal Torsades de Pointes.",
+        es: "La metadona por sí sola causa inhibición directa de los canales cardíacos hERG (canales de potasio), retrasando la repolarización ventricular (aumenta el intervalo QT de forma drástica). Asociada a Amiodarona, Sotalol o Haloperidol, desencadena inevitablemente la arritmia letal Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Obrigatório ECG basal e seriado no ajuste da dose de metadona. Suspender a droga se QTc > 500 ms.",
+        es: "Obligatorio ECG basal y seriado en el ajuste de la dosis de metadona. Suspender la droga si QTc > 500 ms."
+      }
+    },
+    "$classe_antirretrovirais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Fármacos como Lopinavir e Ritonavir induzem fortemente enzimas hepáticas (e bloqueiam outras). O metabolismo da metadona acelera-se brutalmente, derrubando seus níveis sanguíneos para quase zero, precipitando crise severa de abstinência (sudorese, dor extrema, taquicardia) no paciente em clínica de dor ou dependência.",
+        es: "Fármacos como Lopinavir y Ritonavir inducen fuertemente enzimas hepáticas (y bloquean otras). El metabolismo de la metadona se acelera brutalmente, derrumbando sus niveles sanguíneos a casi cero, precipitando crisis severa de abstinencia (sudoración, dolor extremo, taquicardia) en el paciente en clínica del dolor o dependencia."
+      },
+      conduta: {
+        pt: "Geralmente exige dobrar ou triplicar a dose diária de Metadona se o paciente iniciar tratamento para HIV com esses regimes.",
+        es: "Generalmente exige doblar o triplicar la dosis diaria de Metadona si el paciente inicia tratamiento para VIH con estos regímenes."
+      }
+    }
+  },
+
+  /* ── CODEÍNA E TRAMADOL (As Pró-drogas do CYP2D6) ── */
+  "$classe_opioides_fracos_cyp2d6": {
+    "fluoxetina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INIBIÇÃO DE ATIVAÇÃO. A Fluoxetina e a Paroxetina (ISRS) são potentes inibidoras da enzima hepática CYP2D6. A Codeína precisa dessa enzima para virar Morfina, e o Tramadol precisa dela para virar O-desmetiltramadol. Se o paciente usar esses antidepressivos, os analgésicos NÃO FUNCIONARÃO. Ficarão inertes no sangue.",
+        es: "INHIBICIÓN DE ACTIVACIÓN. La Fluoxetina y la Paroxetina (ISRS) son potentes inhibidoras de la enzima hepática CYP2D6. La Codeína necesita de esta enzima para volverse Morfina, y el Tramadol la necesita para volverse O-desmetiltramadol. Si el paciente usa estos antidepresivos, los analgésicos NO FUNCIONARÁN. Quedarán inertes en la sangre."
+      },
+      conduta: {
+        pt: "Evitar completamente a prescrição de Codeína e Tramadol em pacientes que usam Fluoxetina ou Paroxetina. Escolher outro analgésico ou mudar o antidepressivo (ex: Sertralina/Escitalopram interferem menos).",
+        es: "Evitar completamente la prescripción de Codeína y Tramadol en pacientes que usan Fluoxetina o Paroxetina. Elegir otro analgésico o cambiar el antidepresivo (ej: Sertralina/Escitalopram interfieren menos)."
+      }
+    },
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "(RISCO ESPECÍFICO DO TRAMADOL) SÍNDROME SEROTONINÉRGICA. O Tramadol também inibe ativamente a recaptação de serotonina na medula e cérebro. Associado a qualquer ISRS (Sertralina, Citalopram, etc) ou Venlafaxina, causa excesso sináptico de serotonina, gerando hipertermia, tremores, rigidez e convulsão.",
+        es: "(RIESGO ESPECÍFICO DEL TRAMADOL) SÍNDROME SEROTONINÉRGICO. El Tramadol también inhibe activamente la recaptación de serotonina en la médula y cerebro. Asociado a cualquier ISRS (Sertralina, Citalopram, etc) o Venlafaxina, causa exceso sináptico de serotonina, generando hipertermia, temblores, rigidez y convulsión."
+      },
+      conduta: {
+        pt: "Associação muito comum na clínica médica, mas requer cautela severa. Idosos costumam apresentar tremores intensos e agitação. Evitar doses altas de Tramadol.",
+        es: "Asociación muy común en clínica médica, pero requiere precaución severa. Ancianos suelen presentar temblores intensos y agitación. Evitar dosis altas de Tramadol."
+      }
+    }
+  },
+
+  /* ── NALBUFINA (Opioide Misto Agonista/Antagonista) ── */
+  "nalbufina": {
+    "fentanil": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "EFEITO REVERSOR INDESEJADO. A Nalbufina, sendo antagonista Mu, atua como uma 'Naloxona fraca'. Se injetada em um paciente de UTI sedado/analgesiado com bomba de Fentanil ou Morfina, ela 'arranca' o opioide puro dos receptores do cérebro. O paciente acorda instantaneamente, perde toda a analgesia profunda e entra em Crise de Abstinência Aguda (hipertensão, taquicardia, agressividade).",
+        es: "EFECTO REVERSOR INDESEADO. La Nalbufina, siendo antagonista Mu, actúa como una 'Naloxona débil'. Si inyectada en un paciente de UCI sedado/analgesiado con bomba de Fentanilo o Morfina, 'arranca' el opioide puro de los receptores del cerebro. El paciente despierta instantáneamente, pierde toda la analgesia profunda y entra en Crisis de Abstinencia Aguda (hipertensión, taquicardia, agresividad)."
+      },
+      conduta: {
+        pt: "NUNCA injetar analgésicos mistos (Nalbufina, Buprenorfina) em pacientes com uso ativo ou crônico de opioides puros (Fentanil/Morfina).",
+        es: "NUNCA inyectar analgésicos mixtos (Nalbufina, Buprenorfina) en pacientes con uso activo o crónico de opioides puros (Fentanilo/Morfina)."
+      }
+    }
+  },
+
+  /* ── OXICODONA ── */
+  "oxicodona": {
+    "$classe_macrolideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A oxicodona é puramente metabolizada pela via hepática CYP3A4. Inibidores dessa enzima (como a Claritromicina ou Itraconazol) travam a limpeza da oxicodona do corpo. A concentração da droga pode subir 2 a 3 vezes, transformando uma dose analgésica segura numa overdose fatal por asfixia induzida.",
+        es: "La oxicodona es puramente metabolizada por la vía hepática CYP3A4. Inhibidores de esta enzima (como la Claritromicina o Itraconazol) bloquean la limpieza de la oxicodona del cuerpo. La concentración de la droga puede subir 2 a 3 veces, transformando una dosis analgésica segura en una sobredosis fatal por asfixia inducida."
+      },
+      conduta: {
+        pt: "Reduzir ativamente a dose de oxicodona em 50% se iniciar terapias com potentes inibidores do citocromo.",
+        es: "Reducir activamente la dosis de oxicodona en 50% si se inician terapias con potentes inhibidores del citocromo."
+      }
+    }
+  },  // comma added; BUILD 328 Lote 2 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Analgesia Opioide Avançada, Anestésicos e Trombolítico
+   Hidromorfona, Buprenorfina, Bupivacaína, Ropivacaína, Tenecteplase
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── HIDROMORFONA ── */
+  "hidromorfona": {
+    "$classe_benzodiazepinicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo mortal de Depressão do Sistema Nervoso Central. A Hidromorfona é profundamente potente e, associada a depressores como Diazepam, Midazolam ou Álcool, o risco de parada respiratória por depressão do drive bulbar é multiplicado exponencialmente.",
+        es: "Sinergismo mortal de Depresión del Sistema Nervioso Central. La Hidromorfona es profundamente potente y, asociada a depresores como Diazepam, Midazolam o Alcohol, el riesgo de paro respiratorio por depresión del drive bulbar se multiplica exponencialmente."
+      },
+      conduta: {
+        pt: "A FDA exige Boxed Warning. Reduzir doses de ambas as drogas, priorizar monitoramento de SpO2 contínuo, e preferir alternativas não-opioides ou não-benzodiazepínicas se possível.",
+        es: "La FDA exige Boxed Warning. Reducir dosis de ambas drogas, priorizar monitorización de SpO2 continua, y preferir alternativas no opioides o no benzodiazepínicas si es posible."
+      }
+    }
+  },
+
+  /* ── BUPRENORFINA ── */
+  "buprenorfina": {
+    "fentanil": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CRISE DE ABSTINÊNCIA PRECIPITADA E BLOQUEIO ANALGÉSICO. A Buprenorfina tem uma afinidade quase invencível pelo receptor Mu, mas atividade analgésica parcial. Se injetada em um paciente de UTI dependente ou recebendo infusão de Fentanil, ela empurrará o fentanil para fora do receptor, precipitando abstinência explosiva. Inversamente, se o paciente usa buprenorfina crônica, o Fentanil NÃO CONSEGUE se ligar aos receptores, resultando em falha total da anestesia para cirurgias.",
+        es: "CRISIS DE ABSTINENCIA PRECIPITADA Y BLOQUEO ANALGÉSICO. La Buprenorfina tiene una afinidad casi invencible por el receptor Mu, pero actividad analgésica parcial. Si se inyecta en un paciente de UCI dependiente o recibiendo infusión de Fentanilo, empujará al fentanilo fuera del receptor, precipitando abstinencia explosiva. Inversamente, si el paciente usa buprenorfina crónica, el Fentanilo NO LOGRA unirse a los receptores, resultando en falla total de la anestesia para cirugías."
+      },
+      conduta: {
+        pt: "A transição de/para Buprenorfina exige protocolos estritos de desmame. Em caso de cirurgia urgente em usuário de buprenorfina (adesivo), usar Ketamina, Dexmedetomidina ou Bloqueios Regionais, pois opioides tradicionais não farão efeito.",
+        es: "La transición de/para Buprenorfina exige protocolos estrictos de destete. En caso de cirugía urgente en usuario de buprenorfina (parche), usar Ketamina, Dexmedetomidina o Bloqueos Regionales, pues opioides tradicionales no harán efecto."
+      }
+    }
+  },
+
+  /* ── ANESTÉSICOS LOCAIS AMIDA (BUPIVACAÍNA E ROPIVACAÍNA) ── */
+  "$classe_anestesicos_locais_amida": {
+    "amiodarona": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sinergismo Arritmogênico. Se houver injeção intravascular inadvertida do anestésico local durante o bloqueio, a associação com Amiodarona potencializa o bloqueio dos canais de sódio no miocárdio, facilitando colapso cardiovascular e fibrilação ventricular.",
+        es: "Sinergismo Arritmogénico. Si hay inyección intravascular inadvertida del anestésico local durante el bloqueo, la asociación con Amiodarona potencia el bloqueo de los canales de sodio en el miocardio, facilitando colapso cardiovascular y fibrilación ventricular."
+      },
+      conduta: {
+        pt: "O anestesiologista deve ser avisado sobre o uso crônico de antiarrítmicos. Emulsão Lipídica a 20% (Intralipid) deve estar disponível na sala de bloqueio.",
+        es: "El anestesiólogo debe ser avisado sobre el uso crónico de antiarrítmicos. Emulsión Lipídica al 20% (Intralipid) debe estar disponible en la sala de bloqueo."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O propranolol e metoprolol reduzem o fluxo sanguíneo hepático e inibem as enzimas citocromiais. Isso diminui drasticamente o clearance da bupivacaína/ropivacaína (que são amidas metabolizadas pelo fígado). Se altas doses locais forem usadas, o nível plasmático tóxico pode ser alcançado.",
+        es: "El propranolol y metoprolol reducen el flujo sanguíneo hepático e inhiben las enzimas citocromiales. Esto disminuye drásticamente el clearance de la bupivacaína/ropivacaína (que son amidas metabolizadas por el hígado). Si se usan altas dosis locales, el nivel plasmático tóxico puede alcanzarse."
+      },
+      conduta: {
+        pt: "Evitar atingir os limites máximos de dose de anestésico local em pacientes usando betabloqueadores em doses altas.",
+        es: "Evitar alcanzar los límites máximos de dosis de anestésico local en pacientes usando betabloqueantes en dosis altas."
+      }
+    }
+  },
+
+  /* ── TENECTEPLASE (E Fibrinolíticos Sistêmicos) ── */
+  "tenecteplase": {
+    "clopidogrel": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo de Sangramento (Benefício vs Risco). A terapia padrão do IAMCSST exige o uso de terapia antiplaquetária dupla (AAS + Clopidogrel) em conjunto com a Tenecteplase. Essa tríade dissolve o trombo coronariano com excelência, mas eleva o risco de hemorragias sistêmicas (especialmente gastrointestinais e urinárias).",
+        es: "Sinergismo de Sangrado (Beneficio vs Riesgo). La terapia estándar del IAMCEST exige el uso de terapia antiplaquetaria doble (AAS + Clopidogrel) en conjunto con la Tenecteplasa. Esta tríada disuelve el trombo coronario con excelencia, pero eleva el riesgo de hemorragias sistémicas (especialmente gastrointestinales y urinarias)."
+      },
+      conduta: {
+        pt: "Interação obrigatória por protocolo para o Infarto do Miocárdio. Vigilância contínua para queda de hemoglobina, hematêmese ou hematúria nas próximas 24 horas na UTI Coronariana.",
+        es: "Interacción obligatoria por protocolo para el Infarto de Miocardio. Vigilancia continua para caída de hemoglobina, hematemesis o hematuria en las próximas 24 horas en la Unidad Coronaria."
+      }
+    },
+    "$classe_anticoagulantes_orais_diretos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Risco Hemorrágico Extremo. A administração de Tenecteplase (especialmente na dose para AVC isquêmico) em um paciente que tomou DOACs (Rivaroxabana, Apixabana) ou Varfarina (com RNI > 1.7) nas últimas 48 horas deflagra Hemorragia Intracraniana fatal de forma quase mandatória.",
+        es: "Riesgo Hemorrágico Extremo. La administración de Tenecteplasa (especialmente en la dosis para ACV isquémico) en un paciente que tomó DOACs (Rivaroxabán, Apixabán) o Warfarina (con RNI > 1.7) en las últimas 48 horas desencadena Hemorragia Intracraneal fatal de forma casi mandatoria."
+      },
+      conduta: {
+        pt: "A fibrinólise no AVC está ABSOLUTAMENTE CONTRAINDICADA se o paciente usar DOACs (a menos que o uso da reversão com antídotos específicos seja validada nos últimos minutos ou testes de coagulação específicos estejam normais, protocolo de exceção neurológica).",
+        es: "La fibrinólisis en el ACV está ABSOLUTAMENTE CONTRAINDICADA si el paciente usa DOACs (a menos que el uso de la reversión con antídotos específicos sea validada en los últimos minutos o pruebas de coagulación específicas estén normales, protocolo de excepción neurológica)."
+      }
+    }
+  },  // comma added; BUILD 330 Lote 3 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Cardiologia Crítica e Hemodinâmica
+   Alteplase, Levosimendana, Isoproterenol, Esmolol, Metoprolol IV
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── ALTEPLASE (Fibrinolíticos) ── */
+  "alteplase": {
+    "$classe_anticoagulantes_orais_diretos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A alteplase dissolve todos os coágulos sistêmicos. Se o paciente possuir o sistema de coagulação inativado por DOACs (Rivaroxabana/Apixabana) ou Varfarina nas últimas 48 horas, as lesões microvasculares cerebrais sofrerão explosão hemorrágica contínua. Mortalidade neurológica inaceitável.",
+        es: "La alteplasa disuelve todos los coágulos sistémicos. Si el paciente posee el sistema de coagulación inactivado por DOACs (Rivaroxabán/Apixabán) o Warfarina en las últimas 48 horas, las lesiones microvasculares cerebrales sufrirán explosión hemorrágica continua. Mortalidad neurológica inaceptable."
+      },
+      conduta: {
+        pt: "Trombólise é CONTRAINDICADA no Acidente Vascular Cerebral Isquêmico (AVCi) de pacientes que tomaram anticoagulantes plenos recentemente.",
+        es: "Trombólisis está CONTRAINDICADA en el Accidente Cerebrovascular Isquémico (ACVi) de pacientes que tomaron anticoagulantes plenos recientemente."
+      }
+    },
+    "$classe_ieca": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Tanto a Alteplase quanto os IECAs (Enalapril, Captopril) estimulam indiretamente e exacerbam a liberação de cininas teciduais (bradicinina). A associação multiplica por 3x a chance do paciente evoluir com Angioedema Orolingual severo durante a infusão do trombolítico, podendo exigir intubação de emergência.",
+        es: "Tanto la Alteplasa como los IECAs (Enalapril, Captopril) estimulan indirectamente y exacerban la liberación de cininas tisulares (bradicinina). La asociación multiplica por 3x la posibilidad del paciente de evolucionar con Angioedema Orolingual severo durante la infusión del trombolítico, pudiendo exigir intubación de emergencia."
+      },
+      conduta: {
+        pt: "Permitido uso, porém vigilância estrita das vias aéreas (inchaço de lábios e língua) durante a trombólise em pacientes usuários de IECA.",
+        es: "Permitido uso, pero vigilancia estricta de las vías respiratorias (hinchazón de labios y lengua) durante la trombólisis en pacientes usuarios de IECA."
+      }
+    }
+  },
+
+  /* ── LEVOSIMENDANA ── */
+  "levosimendana": {
+    "milrinona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Vasoplégico Fatal. Ambas as drogas causam intensa vasodilatação periférica via canais de K+ e PDE3, respectivamente. O uso conjunto pode derrubar a pressão arterial sistêmica do paciente a zero, induzindo choque irreversível.",
+        es: "Sinergismo Vasopléjico Fatal. Ambas drogas causan intensa vasodilatación periférica vía canales de K+ y PDE3, respectivamente. El uso conjunto puede derrumbar la presión arterial sistémica del paciente a cero, induciendo choque irreversible."
+      },
+      conduta: {
+        pt: "Evitar a associação simultânea de inodilatadores. Intercalar ou substituir.",
+        es: "Evitar la asociación simultánea de inodilatadores. Intercalar o sustituir."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO BENÉFICA (Ajuste Fisiológico Positivo). Ao contrário da dobutamina (que perde seu efeito se o paciente usa betabloqueadores), a Levosimendana atua após o receptor (direto na fibra miocárdica). Logo, ela consegue salvar e aumentar a força do coração MESMO que o coração esteja betabloqueado.",
+        es: "INTERACCIÓN BENÉFICA (Ajuste Fisiológico Positivo). A diferencia de la dobutamina (que pierde su efecto si el paciente usa betabloqueantes), la Levosimendana actúa después del receptor (directo en la fibra miocárdica). Por lo tanto, logra salvar y aumentar la fuerza del corazón AUNQUE el corazón esté betabloqueado."
+      },
+      conduta: {
+        pt: "A levosimendana é a droga INOTRÓPICA DE ESCOLHA para o choque cardiogênico em pacientes previamente betabloqueados.",
+        es: "La levosimendana es la droga INOTRÓPICA DE ELECCIÓN para el choque cardiogénico en pacientes previamente betabloqueados."
+      }
+    }
+  },
+
+  /* ── ISOPROTERENOL ── */
+  "isoproterenol": {
+    "amiodarona": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO BENÉFICA (Resgate de Torsades). Drogas como a Amiodarona e Sotalol alongam o intervalo QT, podendo gerar a arritmia letal Torsades de Pointes. O isoproterenol, ao acelerar massivamente a frequência cardíaca (overdrive químico), ENCURTA mecanicamente o intervalo QT, abortando a arritmia.",
+        es: "INTERACCIÓN BENÉFICA (Rescate de Torsades). Drogas como Amiodarona y Sotalol alargan el intervalo QT, pudiendo generar la arritmia letal Torsades de Pointes. El isoproterenol, al acelerar masivamente la frecuencia cardíaca (overdrive químico), ACORTA mecánicamente el intervalo QT, abortando la arritmia."
+      },
+      conduta: {
+        pt: "Uso terapêutico padrão em emergências arritmogênicas bradicárdicas.",
+        es: "Uso terapéutico estándar en emergencias arritmogénicas bradicárdicas."
+      }
+    },
+    "adrenalina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Sinergismo adrenérgico fulminante. A associação de Isoproterenol (Agonista B puro) com Adrenalina ou Dobutamina fará o miocárdio bater numa frequência insustentável (fibrilação ventricular) e consumirá todo o oxigênio do músculo, gerando infarto miocárdico maciço.",
+        es: "Sinergismo adrenérgico fulminante. La asociación de Isoproterenol (Agonista B puro) con Adrenalina o Dobutamina hará que el miocardio lata a una frecuencia insostenible (fibrilación ventricular) y consumirá todo el oxígeno del músculo, generando infarto miocárdico masivo."
+      },
+      conduta: {
+        pt: "Nunca associar. O isoproterenol deve ser usado exclusivamente sozinho em bomba.",
+        es: "Nunca asociar. El isoproterenol debe ser usado exclusivamente solo en bomba."
+      }
+    }
+  },
+
+  /* ── BETABLOQUEADORES VENOSOS (Esmolol, Metoprolol IV) ── */
+  "$classe_betabloqueadores_iv": {
+    "$classe_bcc_nao_diidropiridinicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ASSOCIAÇÃO CARDIOPLÉGICA FATAL. O uso conjunto de Betabloqueadores Venosos com Bloqueadores de Canal de Cálcio como Verapamil ou Diltiazem causa dupla inibição profunda e simultânea do nó sinusal e do nó AV. O coração do paciente pode simplesmente parar de bater (Assistolia) ou entrar em choque cardiogênico intratável.",
+        es: "ASOCIACIÓN CARDIOPLÉJICA FATAL. El uso conjunto de Betabloqueantes Venosos con Bloqueadores de Canal de Calcio como Verapamilo o Diltiazem causa doble inhibición profunda y simultánea del nodo sinusal y del nodo AV. El corazón del paciente puede simplemente dejar de latir (Asistolia) o entrar en choque cardiogénico intratable."
+      },
+      conduta: {
+        pt: "MANDATÓRIO aguardar de 2 a 4 horas antes de infundir um após o uso prévio do outro na emergência (na dúvida, escolher apenas um para controle de FA).",
+        es: "MANDATORIO esperar de 2 a 4 horas antes de infundir uno tras el uso previo del otro en urgencias (en duda, elegir solo uno para control de FA)."
+      }
+    },
+    "$classe_beta2_agonistas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Antagonismo de receptores no pulmão. Apesar do Esmolol e Metoprolol serem cardioseletivos (Beta-1), em doses endovenosas na emergência essa seletividade é perdida. Eles irão bloquear os receptores Beta-2 pulmonares, anulando o efeito do salbutamol/fenoterol e precipitando broncoespasmo agudo asfixiante.",
+        es: "Antagonismo de receptores en pulmón. A pesar de que Esmolol y Metoprolol son cardioselectivos (Beta-1), en dosis endovenosas de emergencia esta selectividad se pierde. Bloquearán los receptores Beta-2 pulmonares, anulando el efecto del salbutamol/fenoterol y precipitando broncoespasmo agudo asfixiante."
+      },
+      conduta: {
+        pt: "Evitar betabloqueadores venosos em pacientes asmáticos ou DPOC exacerbados. Preferir Diltiazem IV ou Amiodarona para controle de frequência nestes casos.",
+        es: "Evitar betabloqueantes venosos en pacientes asmáticos o EPOC exacerbados. Preferir Diltiazem IV o Amiodarona para control de frecuencia en estos casos."
+      }
+    }
+  }, // comma added; BUILD 332 Lote 4 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Cardiologia (Fase 2)
+   Hidralazina, Enalaprilato, Milrinona, Mexiletina, Verapamil
+   BUILD 332 Lote 4
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── HIDRALAZINA ── */
+  "hidralazina_iv": {
+    "$classe_nitratos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Vasodilatador Extremo. A hidralazina relaxa primariamente as artérias, enquanto os nitratos (Nitroglicerina, Isossorbida) relaxam maciçamente as veias. O uso conjunto abrupto derruba tanto a pré-carga quanto a pós-carga a zero, gerando choque hipotensivo irreversível com isquemia multiorgânica.",
+        es: "Sinergismo Vasodilatador Extremo. La hidralazina relaja primariamente las arterias, mientras los nitratos (Nitroglicerina, Isosorbida) relajan masivamente las venas. El uso conjunto abrupto derrumba tanto la precarga como la poscarga a cero, generando choque hipotensivo irreversible con isquemia multiorgánica."
+      },
+      conduta: {
+        pt: "Nunca prescrever ambos em bolus na mesma janela de horário na emergência (usar com monitoração contínua de PA invasiva em UTI).",
+        es: "Nunca prescribir ambos en bolo en la misma ventana de horario en emergencia (usar con monitorización continua de PA invasiva en UCI)."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO BENÉFICA PROPOSITAL. A hidralazina causa profunda taquicardia reflexa que consome O2 do miocárdio. O uso rotineiro de betabloqueadores (como propranolol) inibe esse reflexo taquicárdico nefasto, estabilizando o coração.",
+        es: "INTERACCIÓN BENÉFICA A PROPÓSITO. La hidralazina causa profunda taquicardia refleja que consume O2 del miocardio. El uso rutinario de betabloqueantes (como propranolol) inhibe este reflejo taquicárdico nefasto, estabilizando el corazón."
+      },
+      conduta: {
+        pt: "Obrigatório associar o betabloqueador em tratamentos crônicos para evitar infartos subendocárdicos induzidos pela hidralazina.",
+        es: "Obligatorio asociar el betabloqueante en tratamientos crónicos para evitar infartos subendocárdicos inducidos por la hidralazina."
+      }
+    }
+  },
+
+  /* ── ENALAPRILATO IV ── */
+  "enalaprilato": {
+    "$classe_diureticos_poupadores_potassio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo retentor de Potássio. O IECA bloqueia a aldosterona (responsável por eliminar K+ na urina), enquanto a espironolactona bloqueia ativamente o receptor da mesma aldosterona. Juntos, causam acúmulo sistêmico massivo de potássio. Em ambiente de UTI/doente crítico, a hipercalemia fatal (bloqueio AV) é comum.",
+        es: "Sinergismo retenedor de Potasio. El IECA bloquea la aldosterona (responsable de eliminar K+ en la orina), mientras la espironolactona bloquea activamente el receptor de la misma aldosterona. Juntos, causan acumulación sistémica masiva de potasio. En ambiente de UCI/enfermo crítico, la hiperpotasemia fatal (bloqueo AV) es común."
+      },
+      conduta: {
+        pt: "Dosar eletrólitos de 12 em 12h. O uso deve ser validado para insuficiência cardíaca crônica compensada, não para fase aguda grave no PS.",
+        es: "Dosificar electrolitos cada 12h. El uso debe ser validado para insuficiencia cardíaca crónica compensada, no para fase aguda grave en urgencias."
+      }
+    }
+  },
+
+  /* ── MILRINONA ── */
+  "milrinona": {
+    "furosemida": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INCOMPATIBILIDADE QUÍMICA DE VIA VENOSA. Se as infusões de Furosemida contínua e Milrinona se encontram no mesmo cateter/equipo, os dois fármacos reagem imediatamente formando um precipitado cristalino insolúvel que oblitera a via e pode ser bombeado para o pulmão, causando embolia química.",
+        es: "INCOMPATIBILIDAD QUÍMICA DE VÍA VENOSA. Si las infusiones de Furosemida continua y Milrinona se encuentran en el mismo catéter/equipo, los dos fármacos reaccionan inmediatamente formando un precipitado cristalino insoluble que oblitera la vía y puede ser bombeado al pulmón, causando embolia química."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA de infusão simultânea. Exigem lúmens de cateter venoso central completamente distintos e lavagem rigorosa.",
+        es: "CONTRAINDICACIÓN ABSOLUTA de infusión simultánea. Exigen lúmenes de catéter venoso central completamente distintos y lavado riguroso."
+      }
+    }
+  },
+
+  /* ── MEXILETINA ── */
+  "mexiletina": {
+    "amiodarona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A amiodarona é inibidora metabólica de vários citocromos que clareiam a mexiletina. O uso conjunto eleva o nível plasmático da mexiletina para a faixa tóxica rapidamente, deflagrando ataxia, disartria, convulsões e prolongamento arrítmico excessivo do QT e QRS.",
+        es: "La amiodarona es inhibidora metabólica de varios citocromos que limpian la mexiletina. El uso conjunto eleva el nivel plasmático de la mexiletina al rango tóxico rápidamente, desencadenando ataxia, disartria, convulsiones y prolongación arrítmica excesiva del QT y QRS."
+      },
+      conduta: {
+        pt: "Exige dosagem sérica seriada de mexiletina (TDM) ou redução da dose para 50% quando amiodarona é iniciada.",
+        es: "Exige dosificación sérica seriada de mexiletina (TDM) o reducción de la dosis al 50% cuando se inicia amiodarona."
+      }
+    },
+    "$classe_indutores_enzimaticos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Fenitoína, Fenobarbital e Rifampicina turbinam o fígado (CYP1A2). O fígado passa a destruir a mexiletina no sangue tão rapidamente que os níveis de proteção antiarrítmica zeram, deixando o paciente totalmente vulnerável a Taquicardias Ventriculares (Choques pelo CDI).",
+        es: "Fenitoína, Fenobarbital y Rifampicina estimulan el hígado (CYP1A2). El hígado pasa a destruir la mexiletina en la sangre tan rápidamente que los niveles de protección antiarrítmica bajan a cero, dejando al paciente totalmente vulnerable a Taquicardias Ventriculares (Choques por el CDI)."
+      },
+      conduta: {
+        pt: "Monitorar as arritmias. Fibrilações precisarão de doses dobradas ou triplicadas de mexiletina se o paciente usar anticonvulsivantes/rifampicina.",
+        es: "Monitorizar las arritmias. Fibrilaciones necesitarán dosis dobladas o triplicadas de mexiletina si el paciente usa anticonvulsivos/rifampicina."
+      }
+    }
+  },
+
+  /* ── VERAPAMIL ── */
+  "verapamil_iv": {
+    "$classe_betabloqueadores_iv": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "BLOQUEIO SINUSAL E AV LETAL. A injeção endovenosa de Verapamil em um paciente já tratado com doses endovenosas de um betabloqueador (Esmolol, Metoprolol) suprime e desliga totalmente a geração de impulsos do Nó Sinusal. O paciente entrará em Parada Cardíaca por Assistolia irreversível às pressas.",
+        es: "BLOQUEO SINUSAL Y AV LETAL. La inyección endovenosa de Verapamilo en un paciente ya tratado con dosis endovenosas de un betabloqueante (Esmolol, Metoprolol) suprime y apaga totalmente la generación de impulsos del Nodo Sinusal. El paciente entrará en Paro Cardíaco por Asistolia irreversible a toda prisa."
+      },
+      conduta: {
+        pt: "É UMA REGRA DA EMERGÊNCIA: JAMAIS aplicar BB e BCC venosos simultaneamente no mesmo paciente para controle de Fibrilação Atrial. Aguardar no mínimo horas (ou dias) após suspender um para usar o outro.",
+        es: "ES UNA REGLA DE EMERGENCIA: JAMÁS aplicar BB y BCC venosos simultáneamente en el mismo paciente para control de Fibrilación Auricular. Esperar como mínimo horas (o días) tras suspender uno para usar el otro."
+      }
+    },
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Verapamil inibe o transportador P-glicoproteína nos túbulos renais e intestinos, impedindo a excreção física da Digoxina. O nível sérico de digoxina vai subir violentamente (em até 75%), culminando em intoxicação digitálica (halos visuais, vômitos, extrassístoles polimórficas). Além disso, ambos bloqueiam a condução AV.",
+        es: "El Verapamilo inhibe el transportador P-glicoproteína en los túbulos renales e intestinos, impidiendo la excreción física de la Digoxina. El nivel sérico de digoxina va a subir violentamente (hasta un 75%), culminando en intoxicación digitálica (halos visuales, vómitos, extrasístoles polimórficas). Además, ambos bloquean la conducción AV."
+      },
+      conduta: {
+        pt: "Reduzir imediatamente a dose da digoxina para a metade (50%) assim que o verapamil for iniciado. Dosar Digoxinemia seriadamente.",
+        es: "Reducir inmediatamente la dosis de la digoxina a la mitad (50%) tan pronto como se inicie el verapamilo. Dosificar Digoxinemia seriadamente."
+      }
+    }
+  }, // comma added; BUILD 334 Lote 1 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Toxicologia e Antídotos de Resgate
+   Flumazenil, Acetilcisteína, Fomepizol, Pralidoxima, Deferoxamina
+   BUILD 334 Lote 1
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── FLUMAZENIL ── */
+  "flumazenil": {
+    "$classe_antidepressivos_triciclicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "AFASTAMENTO DO LIMIAR CONVULSIVO (Mortal). Pacientes que chegam em coma no PS por tentativa de suicídio frequentemente usam um coquetel de Benzodiazepínicos e Antidepressivos Tricíclicos (Amitriptilina, Imipramina). Os tricíclicos causam alto risco de convulsão, que está escondida porque o paciente também tomou o benzodiazepínico (que protege contra a convulsão). Se você administrar Flumazenil, você arranca a proteção anticonvulsivante de uma vez, e o cérebro do paciente deflagra Status Epilepticus refratário imediato.",
+        es: "ALEJAMIENTO DEL UMBRAL CONVULSIVO (Mortal). Pacientes que llegan en coma a urgencias por intento de suicidio frecuentemente usan un cóctel de Benzodiazepinas y Antidepresivos Tricíclicos. Los tricíclicos causan alto riesgo de convulsión, que está escondida porque el paciente también tomó la benzodiazepina (que protege). Si administras Flumazenilo, arrancas la protección anticonvulsiva de una vez, y el cerebro desencadena Status Epilepticus refractario inmediato."
+      },
+      conduta: {
+        pt: "NEGAR o uso de Flumazenil em intoxicações desconhecidas ou overdose mista. Preferir intubação orotraqueal e suporte até depuração das drogas.",
+        es: "NEGAR el uso de Flumazenilo en intoxicaciones desconocidas o sobredosis mixta. Preferir intubación orotraqueal y soporte hasta depuración de las drogas."
+      }
+    },
+    "$classe_benzodiazepinicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Uso em pacientes DEPENDENTES CRÔNICOS. Se um paciente faz uso diário de Diazepam/Clonazepam há meses, o cérebro se adaptou à inibição. A administração aguda de Flumazenil causará Crise de Abstinência Benzodiazepínica fulminante, com tempestade simpática, agitação extrema e convulsões de difícil tratamento.",
+        es: "Uso en pacientes DEPENDIENTES CRÓNICOS. Si un paciente hace uso diario de Diazepam/Clonazepam hace meses, el cerebro se adaptó a la inhibición. La administración aguda de Flumazenilo causará Crisis de Abstinencia Benzodiazepínica fulminante, con tormenta simpática, agitación extrema y convulsiones."
+      },
+      conduta: {
+        pt: "O Flumazenil é essencialmente seguro apenas para reverter sedações iatrogênicas limpas (anestesia/endoscopia) em pessoas normais.",
+        es: "El Flumazenilo es esencialmente seguro solo para revertir sedaciones iatrogénicas limpias (anestesia/endoscopia) en personas normales."
+      }
+    }
+  },
+
+  /* ── ACETILCISTEÍNA (NAC) ── */
+  "acetilcisteina": {
+    "nitroglicerina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Vasodilatador Grave. A Acetilcisteína contém grupos sulfidrila livres. Esses grupos reagem diretamente com a Nitroglicerina, amplificando maciçamente sua conversão em Óxido Nítrico (NO). Isso deflagra uma dilatação sistêmica violenta, gerando hipotensão severa e cefaleia pulsátil insuportável no paciente.",
+        es: "Sinergismo Vasodilatador Grave. La Acetilcisteína contiene grupos sulfhidrilo libres. Estos grupos reaccionan directamente con la Nitroglicerina, amplificando masivamente su conversión en Óxido Nítrico (NO). Esto desencadena una dilatación sistémica violenta, generando hipotensión severa y cefalea pulsátil insoportable."
+      },
+      conduta: {
+        pt: "Monitorar PA rigorosamente se a associação for inescapável. Geralmente exige suspensão do nitrato.",
+        es: "Monitorizar PA rigurosamente si la asociación es ineludible. Generalmente exige suspensión del nitrato."
+      }
+    }
+  },
+
+  /* ── PRALIDOXIMA ── */
+  "pralidoxima": {
+    "atropina": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO MANDATÓRIA (Regra de Salvamento). A pralidoxima reativa as colinesterases, mas nos primeiros minutos de injeção ela pode causar uma leve e passageira estimulação de receptores que agrava o acúmulo de secreções e bradicardia. A Atropina deve sempre limpar o terreno (secar o paciente) antes.",
+        es: "INTERACCIÓN MANDATORIA (Regla de Salvamento). La pralidoxima reactiva las colinesterasas, pero en los primeros minutos de inyección puede causar una leve y pasajera estimulación de receptores que agrava la acumulación de secreciones y bradicardia. La Atropina debe siempre limpiar el terreno (secar al paciente) antes."
+      },
+      conduta: {
+        pt: "Jamais administrar pralidoxima sem antes administrar doses maciças de Atropina IV (até o paciente ter pupilas dilatadas e taquicardia - sinal de atropinização).",
+        es: "Jamás administrar pralidoxima sin antes administrar dosis masivas de Atropina IV (hasta que el paciente tenga pupilas dilatadas y taquicardia - signo de atropinización)."
+      }
+    }
+  },
+
+  /* ── DEFEROXAMINA ── */
+  "deferoxamina": {
+    "vitamina_c": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sinergismo Paradoxal Tóxico no Coração. A Vitamina C (ácido ascórbico) atua reduzindo as pontes de ferro nos tecidos, facilitando que a deferoxamina acesse e capture o ferro oculto nos órgãos. Porém, se a vitamina C for dada ANTES da deferoxamina, o ferro mobilizado cai agudamente no sangue e ataca o coração antes de ser quelado, causando insuficiência cardíaca letal.",
+        es: "Sinergismo Paradójico Tóxico en el Corazón. La Vitamina C (ácido ascórbico) actúa reduciendo los puentes de hierro en los tejidos, facilitando que la deferoxamina acceda y capture el hierro oculto en los órganos. Pero, si la vitamina C se da ANTES de la deferoxamina, el hierro movilizado cae agudamente en la sangre y ataca el corazón antes de ser quelado, causando falla cardíaca."
+      },
+      conduta: {
+        pt: "Se for usar Vitamina C (para melhorar o rendimento da diálise de ferro em casos crônicos), ela SÓ PODE SER INICIADA 1 a 2 semanas DEPOIS do início da bomba de deferoxamina (quando a circulação já está saturada de quelante).",
+        es: "Si se va a usar Vitamina C (para mejorar el rendimiento de la diálisis de hierro en casos crónicos), SOLO PUEDE INICIARSE 1 a 2 semanas DESPUÉS del inicio de la bomba de deferoxamina."
+      }
+    }
+  }, // comma added; BUILD 336 Lote 1 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Antídotos Finais e Antifúngicos Poliênicos
+   Azul de Metileno, Carvão Ativado, Anfotericina (L e D), Anidulafungina
+   BUILD 336 Lote 1
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── AZUL DE METILENO ── */
+  "azul_metileno": {
+    "$classe_isrs": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "RISCO DE MORTE. O Azul de Metileno é, por natureza molecular, um Inibidor da Monoamina Oxidase (IMAO) extremamente potente. Se injetado em um paciente que usa inibidores de recaptação de serotonina (Fluoxetina, Sertralina), a serotonina cerebral subirá a níveis absurdos, causando SÍNDROME SEROTONINÉRGICA fulminante (hipertermia, rigidez muscular, coma e morte).",
+        es: "RIESGO DE MUERTE. El Azul de Metileno es, por naturaleza molecular, un Inhibidor de la Monoamino Oxidasa (IMAO) extremadamente potente. Si se inyecta en un paciente que usa inhibidores de recaptación de serotonina (Fluoxetina, Sertralina), la serotonina cerebral subirá a niveles absurdos, causando SÍNDROME SEROTONINÉRGICO fulminante (hipertermia, rigidez muscular, coma y muerte)."
+      },
+      conduta: {
+        pt: "No tratamento da meta-hemoglobinemia, se o paciente for usuário de ISRS, monitorar agressivamente ou considerar alternativas (Ácido Ascórbico/Vitamina C em altas doses - embora mais lento), a depender do risco de vida.",
+        es: "En el tratamiento de la metahemoglobinemia, si el paciente es usuario de ISRS, monitorizar agresivamente o considerar alternativas (Ácido Ascórbico/Vitamina C en altas dosis - aunque más lento), dependiendo del riesgo de vida."
+      }
+    }
+  },
+
+  /* ── CARVÃO ATIVADO ── */
+  "carvao_ativado": {
+    "$qualquer_medicamento_oral": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ADSORÇÃO UNIVERSAL. O Carvão Ativado não é seletivo; ele adsorve fisicamente (gruda na sua superfície por forças de Van der Waals) quase qualquer medicamento ingerido, impedindo totalmente a sua absorção gástrica.",
+        es: "ADSORCIÓN UNIVERSAL. El Carbón Activado no es selectivo; adsorbe físicamente (se pega a su superficie por fuerzas de Van der Waals) casi cualquier medicamento ingerido, impidiendo totalmente su absorción gástrica."
+      },
+      conduta: {
+        pt: "Se o paciente precisou tomar o carvão como antídoto, ele não pode tomar NENHUM outro medicamento oral (ex: analgésicos, anti-hipertensivos) por pelo menos 2 a 4 HORAS APÓS a administração do carvão. Se precisar de medicação urgente, usar via Endovenosa.",
+        es: "Si el paciente necesitó tomar el carbón como antídoto, no puede tomar NINGÚN otro medicamento oral (ej: analgésicos, antihipertensivos) por al menos 2 a 4 HORAS TRAS la administración del carbón. Si necesita medicación urgente, usar vía Endovenosa."
+      }
+    }
+  },
+
+  /* ── ANFOTERICINA B (LIPOSSOMAL E DESOXICOLATO) ── */
+  "$classe_anfotericina_b": {
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo de Nefrotoxicidade Direta. A Anfotericina ataca o túbulo contorcido proximal (buracos de colesterol), enquanto os Aminoglicosídeos (Amicacina/Gentamicina) induzem apoptose celular nas mesmas células tubulares. Usá-los juntos na UTI garante quase 100% de chance de Lesão Renal Aguda oligoanúrica severa.",
+        es: "Sinergismo de Nefrotoxicidad Directa. La Anfotericina ataca el túbulo contorneado proximal (agujeros de colesterol), mientras los Aminoglucósidos (Amikacina/Gentamicina) inducen apoptosis celular en las mismas células tubulares. Usarlos juntos en la UCI garantiza casi 100% de posibilidad de Lesión Renal Aguda oligoanúrica severa."
+      },
+      conduta: {
+        pt: "Evitar ao máximo. Se a associação for imperativa para salvar a vida (ex: Sepse Mista Fungo-Bactéria Resistente), a Anfotericina DEVE obrigatoriamente ser a Lipossomal, aliada a hidratação agressiva.",
+        es: "Evitar al máximo. Si la asociación es imperativa para salvar la vida (ej: Sepsis Mixta Hongo-Bacteria Resistente), la Anfotericina DEBE obligatoriamente ser la Liposomal, unida a hidratación agresiva."
+      }
+    },
+    "digoxina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A Anfotericina B destrói os poros dos túbulos, causando um vazamento massivo de Potássio na urina. A hipocalemia profunda resultante aumenta dramaticamente a afinidade da Digoxina pelo coração, deflagrando arritmias tóxicas digitálicas.",
+        es: "La Anfotericina B destruye los poros de los túbulos, causando una fuga masiva de Potasio en la orina. La hipopotasemia profunda resultante aumenta dramáticamente la afinidad de la Digoxina por el corazón, desencadenando arritmias tóxicas digitálicas."
+      },
+      conduta: {
+        pt: "Se o paciente usa Digoxina e iniciar Anfotericina, ele precisará de dosagens de Potássio a cada 12 horas e forte reposição de KCl endovenosa contínua.",
+        es: "Si el paciente usa Digoxina e inicia Anfotericina, necesitará dosificaciones de Potasio cada 12 horas y fuerte reposición de KCl endovenosa continua."
+      }
+    },
+    "$classe_corticosteroides": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Corticoides sistêmicos agravam as perdas de potássio na urina (efeito mineralocorticoide periférico) e podem piorar a imunossupressão, exacerbando a infecção fúngica basal.",
+        es: "Corticoides sistémicos agravan las pérdidas de potasio en la orina (efecto mineralocorticoide periférico) y pueden empeorar la inmunosupresión, exacerbando la infección fúngica basal."
+      },
+      conduta: {
+        pt: "Monitorar eletrólitos de perto. Baixas doses de Hidrocortisona são prescrição obrigatória antes de infundir Anfotericina Desoxicolato para impedir calafrios severos. Essa microdose prévia é permitida.",
+        es: "Monitorizar electrolitos de cerca. Bajas dosis de Hidrocortisona son prescripción obligatoria antes de infundir Anfotericina Desoxicolato para impedir escalofríos severos. Esta microdosis previa está permitida."
+      }
+    }
+  },
+
+  /* ── ANIDULAFUNGINA ── */
+  "anidulafungina": {
+    "interacoes_vazias_marcador": {
+      gravidade: "leve",
+      scoreClinico: 0,
+      descricao: {
+        pt: "Perfil Farmacocinético Exemplar. Como a anidulafungina sofre degradação química espontânea em pH neutro no sangue (não usa o fígado CYP450 nem os rins), ela não possui interações medicamentosas clinicamente significativas de bloqueio ou indução com nenhum outro fármaco de UTI. É uma das drogas mais seguras para pacientes politratados.",
+        es: "Perfil Farmacocinético Ejemplar. Como la anidulafungina sufre degradación química espontánea a pH neutro en la sangre (no usa el hígado CYP450 ni los riñones), no posee interacciones medicamentosas clínicamente significativas de bloqueo o inducción con ningún otro fármaco de UCI. Es una de las drogas más seguras para pacientes politratados."
+      },
+      conduta: {
+        pt: "Uso liberado sem ajustes necessários, inclusive com imunossupressores (Tacrolimus/Ciclosporina), com os quais os outros antifúngicos (Azólicos) têm interações mortais.",
+        es: "Uso liberado sin ajustes necesarios, incluso con inmunosupresores (Tacrolimus/Ciclosporina), con los cuales los otros antifúngicos (Azólicos) tienen interacciones mortales."
+      }
+    }
+  }, // comma added; BUILD 338 Lote 2 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Infectologia Fúngica
+   Caspofungina, Micafungina, Fluconazol, Itraconazol, Voriconazol
+   BUILD 338 Lote 2
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── CASPOFUNGINA ── */
+  "caspofungina": {
+    "ciclosporina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A ciclosporina aumenta a Área Sob a Curva (AUC) da caspofungina em cerca de 35% ao bloquear sua captação hepática. A associação induz frequentemente uma hepatite medicamentosa aguda (disparo da TGO/TGP).",
+        es: "La ciclosporina aumenta el Área Bajo la Curva (AUC) de la caspofungina en cerca del 35% al bloquear su captación hepática. La asociación induce frecuentemente una hepatitis medicamentosa aguda (disparo de la AST/ALT)."
+      },
+      conduta: {
+        pt: "Uso conjunto não recomendado a menos que não haja opção. Monitorar transaminases DIARIAMENTE em transplantados.",
+        es: "Uso conjunto no recomendado a menos que no haya opción. Monitorizar transaminasas DIARIAMENTE en trasplantados."
+      }
+    },
+    "$classe_indutores_enzimaticos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Drogas como Rifampicina, Fenitoína e Dexametasona ativam maciçamente o clearance de caspofungina. A caspofungina sumirá do sangue, causando FALHA TERAPÊUTICA na sepse fúngica.",
+        es: "Drogas como Rifampicina, Fenitoína y Dexametasona activan masivamente el clearance de caspofungina. La caspofungina desaparecerá de la sangre, causando FALLA TERAPÉUTICA en la sepsis fúngica."
+      },
+      conduta: {
+        pt: "A dose de Manutenção da Caspofungina deve ser OBRIGATORIAMENTE elevada de 50 mg para 70 mg por dia enquanto o paciente usar o indutor.",
+        es: "La dosis de Mantenimiento de la Caspofungina debe ser OBLIGATORIAMENTE elevada de 50 mg a 70 mg por día mientras el paciente use el inductor."
+      }
+    }
+  },
+
+  /* ── MICAFUNGINA ── */
+  "micafungina": {
+    "sirolimo": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "A micafungina é um inibidor muito leve do citocromo CYP3A4. Causa elevações clínicas mínimas ou nulas na concentração de imunossupressores como sirolimo ou tacrolimus (diferente dos azólicos que causam overdoses mortais).",
+        es: "La micafungina es un inhibidor muy leve del citocromo CYP3A4. Causa elevaciones clínicas mínimas o nulas en la concentración de inmunosupresores como sirolimus o tacrolimus (a diferencia de los azólicos que causan sobredosis mortales)."
+      },
+      conduta: {
+        pt: "Seguro prescrever em transplantados. Monitorar nível do imunossupressor apenas por protocolo padrão.",
+        es: "Seguro prescribir en trasplantados. Monitorizar nivel del inmunosupresor solo por protocolo estándar."
+      }
+    }
+  },
+
+  /* ── FLUCONAZOL ── */
+  "fluconazol": {
+    "varfarina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Sinergismo Hemorrágico Absoluto. O Fluconazol paralisa a enzima CYP2C9, que é a ÚNICA rota de eliminação da Varfarina (S-Varfarina). O uso oral de fluconazol (mesmo que por 3 dias para corrimento vaginal) fará o RNI do paciente disparar de 2.0 para > 8.0, gerando hemorragias cerebrais mortais.",
+        es: "Sinergismo Hemorrágico Absoluto. El Fluconazol paraliza la enzima CYP2C9, que es la ÚNICA ruta de eliminación de la Warfarina (S-Warfarina). El uso oral de fluconazol (aunque sea por 3 días para flujo vaginal) hará que el RNI del paciente se dispare de 2.0 a > 8.0, generando hemorragias cerebrales mortales."
+      },
+      conduta: {
+        pt: "Evitar ao máximo. Se obrigatório, a dose de Varfarina deve ser REDUZIDA em 50 a 60% e o RNI dosado a cada 48h.",
+        es: "Evitar al máximo. Si es obligatorio, la dosis de Warfarina debe REDUCIRSE en 50 a 60% y el RNI dosificarse cada 48h."
+      }
+    },
+    "$classe_estatinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Bloqueio do CYP3A4. O fluconazol impede a degradação da Sinvastatina e Atorvastatina. O acúmulo da estatina causa lesão direta e dissolução do músculo esquelético (Rabdomiólise) com falência renal aguda colateral.",
+        es: "Bloqueo del CYP3A4. El fluconazol impide la degradación de Simvastatina y Atorvastatina. La acumulación de la estatina causa lesión directa y disolución del músculo esquelético (Rabdomiólisis) con falla renal aguda colateral."
+      },
+      conduta: {
+        pt: "Suspender a estatina profilaticamente durante toda a duração do tratamento com Fluconazol.",
+        es: "Suspender la estatina profilácticamente durante toda la duración del tratamiento con Fluconazol."
+      }
+    }
+  },
+
+  /* ── ITRACONAZOL ── */
+  "itraconazol": {
+    "$classe_ibp": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INIBIÇÃO DE ABSORÇÃO. A cápsula de Itraconazol precisa mergulhar num estômago com ácido gástrico em grau máximo (pH < 3) para se dissolver e ser absorvida. Se o paciente usar Omeprazol, Pantoprazol ou Famotidina, o pH gástrico sobe e a cápsula passa intacta pelas fezes. Falha total contra fungos.",
+        es: "INHIBICIÓN DE ABSORCIÓN. La cápsula de Itraconazol necesita sumergirse en un estómago con ácido gástrico en grado máximo (pH < 3) para disolverse y ser absorbida. Si el paciente usa Omeprazol, Pantoprazol o Famotidina, el pH gástrico sube y la cápsula pasa intacta por las heces. Falla total contra hongos."
+      },
+      conduta: {
+        pt: "Descontinuar o inibidor de bomba de prótons. Caso irretirável, orientar o paciente a tomar o Itraconazol com Coca-Cola Clássica (bebida de extremo baixo pH) para forçar a dissolução.",
+        es: "Descontinuar el inhibidor de bomba de protones. Si es irretirable, orientar al paciente a tomar el Itraconazol con Coca-Cola Clásica (bebida de extremo bajo pH) para forzar la disolución."
+      }
+    }
+  },
+
+  /* ── VORICONAZOL ── */
+  "voriconazol": {
+    "tacrolimus": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O voriconazol inibe de forma monstruosa o CYP3A4 e CYP2C19. Se prescrito em um paciente transplantado, os níveis de Tacrolimus (ou Ciclosporina/Sirolimo) aumentarão de 3 a 10 vezes em poucos dias. Isso causa nefropatia tóxica anúrica e neurotoxicidade fulminantes.",
+        es: "El voriconazol inhibe de forma monstruosa el CYP3A4 y CYP2C19. Si se prescribe en un paciente trasplantado, los niveles de Tacrolimus (o Ciclosporina/Sirolimus) aumentarán de 3 a 10 veces en pocos días. Esto causa nefropatía tóxica anúrica y neurotoxicidad fulminantes."
+      },
+      conduta: {
+        pt: "É UMA REGRA ABSOLUTA DO TRANSPLANTE: No mesmo dia que você iniciar o Voriconazol, você OBRIGATORIAMENTE deve REDUZIR a dose do Tacrolimus a 1/3 (um terço) do original (Reduzir a Ciclosporina à metade). Dosar o nível sérico na manhã seguinte.",
+        es: "ES UNA REGLA ABSOLUTA DEL TRASPLANTE: El mismo día que inicies el Voriconazol, OBLIGATORIAMENTE debes REDUCIR la dosis de Tacrolimus a 1/3 (un tercio) del original (Reducir la Ciclosporina a la mitad). Dosificar el nivel sérico a la mañana siguiente."
+      }
+    },
+    "$classe_antiarritmicos_qt": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Voriconazol em si mesmo alonga o intervalo QT, mas também paralisa a degradação no fígado de qualquer outra droga que alongue o QT (ex: Amiodarona, Haloperidol, Quetiapina). Risco gravíssimo de Torsades de Pointes.",
+        es: "El Voriconazol por sí mismo alarga el intervalo QT, pero también paraliza la degradación en el hígado de cualquier otra droga que alargue el QT (ej: Amiodarona, Haloperidol, Quetiapina). Riesgo gravísimo de Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Evitar a associação ou realizar Eletrocardiograma a cada 48 horas no paciente de UTI.",
+        es: "Evitar la asociación o realizar Electrocardiograma cada 48 horas en el paciente de UCI."
+      }
+    }
+  }, // vírgula adicionada; BUILD 340 Lote 3 blocks follow
+
+  /* ── POSACONAZOL ── */
+  "posaconazol": {
+    "$classe_ibp": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INIBIÇÃO FISIO-QUÍMICA. Se o paciente usar a SUSPENSÃO ORAL do Posaconazol juntamente com um Inibidor de Bomba de Prótons (Omeprazol, Pantoprazol), a falta de ácido no estômago reduzirá a absorção do xarope em até 80%. O paciente perderá a profilaxia e poderá desenvolver uma sepse fúngica invasiva.",
+        es: "INHIBICIÓN FISIOQUÍMICA. Si el paciente usa la SUSPENSIÓN ORAL de Posaconazol junto con un Inhibidor de Bomba de Protones (Omeprazol, Pantoprazol), la falta de ácido en el estómago reducirá la absorción del jarabe hasta en un 80%. El paciente perderá la profilaxis y podrá desarrollar una sepsis fúngica invasiva."
+      },
+      conduta: {
+        pt: "Obrigatório trocar a suspensão para a versão em COMPRIMIDO DE LIBERAÇÃO RETARDADA (GR), cuja absorção é independente do pH gástrico e não sofre essa interação.",
+        es: "Obligatorio cambiar la suspensión por la versión en COMPRIMIDO DE LIBERACIÓN RETARDADA (GR), cuya absorción es independiente del pH gástrico y no sufre esta interacción."
+      }
+    },
+    "$classe_estatinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Posaconazol é um inibidor ferrenho do CYP3A4. Estatinas (Sinvastatina, Atorvastatina) terão seu metabolismo travado. A concentração da estatina dispara em poucos dias, levando à Rabdomiólise severa e lesão renal por mioglobinúria.",
+        es: "El Posaconazol es un inhibidor férreo del CYP3A4. Estatinas (Simvastatina, Atorvastatina) tendrán su metabolismo bloqueado. La concentración de la estatina se dispara en pocos días, llevando a Rabdomiólisis severa y lesión renal por mioglobinuria."
+      },
+      conduta: {
+        pt: "Suspender temporariamente a estatina enquanto o paciente usar azólicos profiláticos/terapêuticos na hematologia.",
+        es: "Suspender temporalmente la estatina mientras el paciente use azólicos profilácticos/terapéuticos en la hematología."
+      }
+    }
+  },
+
+  /* ── ISAVUCONAZOL ── */
+  "isavuconazol": {
+    "rifampicina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INDUÇÃO MASSIVA. A Rifampicina é o maior indutor do CYP3A4. O Isavuconazol será eliminado pelo fígado em velocidade recorde, fazendo com que sua concentração no sangue e nos pulmões desapareça. O fungo se multiplica livremente.",
+        es: "INDUCCIÓN MASIVA. La Rifampicina es el mayor inductor del CYP3A4. El Isavuconazol será eliminado por el hígado a velocidad récord, haciendo que su concentración en la sangre y pulmones desaparezca. El hongo se multiplica libremente."
+      },
+      conduta: {
+        pt: "Contraindicado. Escolher tratamento alternativo para a Tuberculose ou trocar o antifúngico para Anidulafungina/Anfotericina (que não usam a via do CYP hepático).",
+        es: "Contraindicado. Elegir tratamiento alternativo para la Tuberculosis o cambiar el antifúngico a Anidulafungina/Anfotericina (que no usan la vía del CYP hepático)."
+      }
+    },
+    "$classe_macrolideos": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "O Isavuconazol é o único da família dos Azóis que encurta o intervalo QT. Logo, se o paciente receber drogas que alongam o QT (como macrolídeos ou fluoroquinolonas), o Isavuconazol não irá sinergizar esse risco, oferecendo perfil de segurança cardíaca espetacular no doente crítico.",
+        es: "El Isavuconazol es el único de la familia de los Azoles que acorta el intervalo QT. Por tanto, si el paciente recibe drogas que alargan el QT (como macrólidos o fluoroquinolonas), el Isavuconazol no sinergizará este riesgo, ofreciendo perfil de seguridad cardíaca espectacular en el enfermo crítico."
+      },
+      conduta: {
+        pt: "Sem contraindicações cardíacas para associações habituais. Uma imensa vantagem na UTI.",
+        es: "Sin contraindicaciones cardíacas para asociaciones habituales. Una inmensa ventaja en la UCI."
+      }
+    }
+  },
+
+  /* ── NISTATINA ── */
+  "nistatina": {
+    "interacoes_vazias_marcador": {
+      gravidade: "leve",
+      scoreClinico: 0,
+      descricao: {
+        pt: "Isenta de Interações Sistêmicas. Como a nistatina NÃO é absorvida pelo intestino para a corrente sanguínea, passa inofensivamente pelo trato digestivo e é excretada nas fezes. Por definição, não pode interagir no fígado (CYP450) ou nos rins com nenhuma medicação que o paciente toma.",
+        es: "Exenta de Interacciones Sistémicas. Como la nistatina NO es absorbida por el intestino hacia el torrente sanguíneo, pasa inofensivamente por el tracto digestivo y es excretada en las heces. Por definición, no puede interactuar en el hígado (CYP450) o en los riñones con ninguna medicación que el paciente toma."
+      },
+      conduta: {
+        pt: "Prescrição totalmente segura, mesmo em pacientes politratados graves ou em uso de varfarina/imunossupressores.",
+        es: "Prescripción totalmente segura, incluso en pacientes politratados graves o en uso de warfarina/inmunosupresores."
+      }
+    }
+  },
+
+  /* ── ACICLOVIR E VALACICLOVIR ── */
+  "$classe_antivirais_herpeticos": {
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Agudo de Falência Renal. O Aciclovir intravenoso cristaliza nos túbulos renais. Aminoglicosídeos (Amicacina/Gentamicina) causam necrose tubular tóxica. O choque dessas duas injúrias frequentemente paralisa os rins, exigindo hemodiálise de emergência em imunossuprimidos.",
+        es: "Sinergismo Agudo de Falla Renal. El Aciclovir intravenoso se cristaliza en los túbulos renales. Aminoglucósidos (Amikacina/Gentamicina) causan necrosis tubular tóxica. El choque de estas dos injurias frecuentemente paraliza los riñones, exigiendo hemodiálisis de emergencia en inmunosuprimidos."
+      },
+      conduta: {
+        pt: "Hidratação agressiva obrigatória com SF 0,9% antes, durante e após a infusão de Aciclovir. Ajustar a dose pelo ClCr diário.",
+        es: "Hidratación agresiva obligatoria con SF 0,9% antes, durante y después de la infusión de Aciclovir. Ajustar la dosis por el ClCr diario."
+      }
+    },
+    "micofenolato_mofetil": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Competição de secreção tubular. Ambos os fármacos competem pelas bombas de excreção ativas nos túbulos renais. O resultado é o acúmulo do Aciclovir e do metabólito do Micofenolato no sangue, elevando o risco de neurotoxicidade e imunossupressão excessiva.",
+        es: "Competición de secreción tubular. Ambos fármacos compiten por las bombas de excreción activas en los túbulos renales. El resultado es la acumulación del Aciclovir y del metabolito del Micofenolato en la sangre, elevando el riesgo de neurotoxicidad e inmunosupresión excesiva."
+      },
+      conduta: {
+        pt: "Monitorar toxicidade associada em pacientes submetidos a transplante renal.",
+        es: "Monitorizar toxicidad asociada en pacientes sometidos a trasplante renal."
+      }
+    }
+  }, // vírgula adicionada; BUILD 342 Lote 4 blocks follow
+
+  /* ── GANCICLOVIR / VALGANCICLOVIR ── */
+  "$classe_antivirais_cmv": {
+    "zidovudina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Medular Destrutivo. Ambas as drogas causam severa supressão da medula óssea (especialmente neutropenia profunda e anemia). O uso conjunto eleva o risco de aplasia funcional para mais de 80%, deixando o paciente vulnerável a sepses fulminantes.",
+        es: "Sinergismo Medular Destructivo. Ambas drogas causan severa supresión de la médula ósea (especialmente neutropenia profunda y anemia). El uso conjunto eleva el riesgo de aplasia funcional a más del 80%, dejando al paciente vulnerable a sepsis fulminantes."
+      },
+      conduta: {
+        pt: "Contraindicado. A Zidovudina (AZT) do esquema do HIV deve ser temporariamente substituída por outro antirretroviral (como Tenofovir ou Abacavir) enquanto o paciente tratar a retinite por CMV.",
+        es: "Contraindicado. La Zidovudina (AZT) del esquema del VIH debe ser temporalmente sustituida por otro antirretroviral (como Tenofovir o Abacavir) mientras el paciente trata la retinitis por CMV."
+      }
+    },
+    "imipenem": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Convulsivante. O Ganciclovir penetra a barreira hematoencefálica e o Imipenem sabidamente abaixa o limiar convulsivo cortical. Há numerosos relatos de crises epilépticas generalizadas refratárias quando essas duas drogas se encontram no plasma de doentes graves.",
+        es: "Sinergismo Convulsivante. El Ganciclovir penetra la barrera hematoencefálica y el Imipenem comprobadamente baja el umbral convulsivo cortical. Hay numerosos reportes de crisis epilépticas generalizadas refractarias cuando estas dos drogas se encuentran en el plasma de enfermos graves."
+      },
+      conduta: {
+        pt: "A associação é formalmente proibida pelo FDA. Trocar o Imipenem por Meropenem ou Ceftazidima em transplantados de UTI com CMV ativo.",
+        es: "La asociación está formalmente prohibida por la FDA. Cambiar Imipenem por Meropenem o Ceftazidima en trasplantados de UCI con CMV activo."
+      }
+    }
+  },
+
+  /* ── OSELTAMIVIR ── */
+  "oseltamivir": {
+    "vacina_influenza_atenuada": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Inibição de Imunização. A vacina da gripe intranasal (rara no Brasil, comum nos EUA) contém vírus vivo atenuado. O Oseltamivir em circulação no corpo atacará o vírus vacinal e o destruirá antes que gere memória imunológica, invalidando a vacina.",
+        es: "Inhibición de Inmunización. La vacuna de la gripe intranasal (rara en Brasil, común en EE.UU.) contiene virus vivo atenuado. El Oseltamivir en circulación en el cuerpo atacará al virus vacunal y lo destruirá antes de que genere memoria inmunológica, invalidando la vacuna."
+      },
+      conduta: {
+        pt: "Não dar Oseltamivir até 2 semanas após a vacina de vírus vivo atenuado, ou não dar a vacina até 48h após terminar o Oseltamivir. As vacinas injetáveis anuais são de vírus morto inativado e não apresentam essa interação.",
+        es: "No dar Oseltamivir hasta 2 semanas tras la vacuna de virus vivo atenuado, o no dar la vacuna hasta 48h tras terminar el Oseltamivir. Las vacunas inyectables anuales son de virus muerto inactivado y no presentan esta interacción."
+      }
+    }
+  },
+
+  /* ── REMDESIVIR ── */
+  "remdesivir": {
+    "hidroxicloroquina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Antagonismo Celular Comprovado in vitro. A Cloroquina e a Hidroxicloroquina interferem na fosforilação intracelular do Remdesivir. O antiviral perderá grande parte da sua eficácia contra a RNA polimerase do SARS-CoV-2 se a cloroquina estiver bloqueando sua ativação.",
+        es: "Antagonismo Celular Comprobado in vitro. La Cloroquina e Hidroxicloroquina interfieren en la fosforilación intracelular del Remdesivir. El antiviral perderá gran parte de su eficacia contra la ARN polimerasa del SARS-CoV-2 si la cloroquina está bloqueando su activación."
+      },
+      conduta: {
+        pt: "A coadministração não é recomendada nas diretrizes de manejo do COVID-19. Suspender cloroquina se for iniciar Remdesivir.",
+        es: "La coadministración no es recomendada en las directrices de manejo del COVID-19. Suspender cloroquina si se va a iniciar Remdesivir."
+      }
+    }
+  },
+
+  /* ── PAXLOVID (RITONAVIR + NIRMATRELVIR) ── */
+  "paxlovid": {
+    "$classe_estatinas": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Bloqueio de Clearance (Rabdomiólise). O Ritonavir inibe brutalmente o CYP3A4. A Sinvastatina e a Lovastatina dependem 100% dessa via. No 3º dia de Paxlovid, a estatina acumula a níveis tóxicos fulminantes, causando rabdomiólise e paralisia renal por mioglobinúria.",
+        es: "Bloqueo de Clearance (Rabdomiólisis). El Ritonavir inhibe brutalmente el CYP3A4. La Simvastatina y la Lovastatina dependen 100% de esta vía. En el 3º día de Paxlovid, la estatina se acumula a niveles tóxicos fulminantes, causando rabdomiólisis y parálisis renal por mioglobinuria."
+      },
+      conduta: {
+        pt: "Suspender absolutamente a Sinvastatina e Lovastatina no Dia 1 e retornar somente 3 dias após o fim dos 5 dias de Paxlovid. A Atorvastatina também deve ser evitada.",
+        es: "Suspender absolutamente la Simvastatina y Lovastatina en el Día 1 y retornar solo 3 días después del fin de los 5 días de Paxlovid. La Atorvastatina también debe ser evitada."
+      }
+    },
+    "$classe_anticoagulantes_orais_diretos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O metabolismo da Rivaroxabana (Xarelto) e Apixabana será interrompido. A anticoagulação no sangue subirá astronomicamente, deflagrando hemorragias cerebrais ou gastrointestinais graves em pacientes idosos.",
+        es: "El metabolismo del Rivaroxabán (Xarelto) y Apixabán será interrumpido. La anticoagulación en la sangre subirá astronómicamente, desencadenando hemorragias cerebrales o gastrointestinales graves en pacientes ancianos."
+      },
+      conduta: {
+        pt: "Contraindicado. Se o paciente não puder trocar o anticoagulante provisoriamente para HBPM (Clexane), não poderá tomar Paxlovid para COVID. O risco de vida excede o benefício.",
+        es: "Contraindicado. Si el paciente no puede cambiar el anticoagulante provisionalmente a HBPM (Clexane), no podrá tomar Paxlovid para COVID. El riesgo de vida excede el beneficio."
+      }
+    },
+    "amiodarona": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "O acúmulo de amiodarona induzido pelo bloqueio do CYP3A4 gera toxicidade miocárdica súbita e bloqueios cardíacos avançados refratários. Adicionalmente, pró-fármacos como o Clopidogrel necessitam do CYP para serem ativados — com o CYP bloqueado, a proteção do stent falha e o infarto ocorre.",
+        es: "La acumulación de amiodarona inducida por el bloqueo del CYP3A4 genera toxicidad miocárdica súbita y bloqueos cardíacos avanzados refractarios. Adicionalmente, profármacos como el Clopidogrel necesitan del CYP para ser activados — con el CYP bloqueado, la protección del stent falla y el infarto ocurre."
+      },
+      conduta: {
+        pt: "Verificar a lista completa de interações na bula para todo paciente que iniciar Paxlovid. Entre os mais críticos: Tacrolimus, Ergotamina, Salmeterol, Diazepam, Alfuzosina e Clopidogrel.",
+        es: "Verificar la lista completa de interacciones en el prospecto para todo paciente que inicie Paxlovid. Entre los más críticos: Tacrolimus, Ergotamina, Salmeterol, Diazepam, Alfuzosina y Clopidogrel."
+      }
+    }
+  }, // vírgula adicionada; BUILD 344 Lote 5 blocks follow
+
+  /* ── GLICOPEPTÍDEOS / LIPOGLICOPEPTÍDEOS (Dalbavancina e Teicoplanina) ── */
+  "$classe_glicopeptideos_anti_mrsa": {
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Apesar da Teicoplanina e Dalbavancina serem notavelmente menos nefrotóxicas que a Vancomicina, a coadministração em UTI com drogas que destroem o túbulo renal (Amicacina, Gentamicina, Polimixina B) restabelece grave sinergismo de Lesão Renal Aguda, aumentando a incidência de necrose tubular.",
+        es: "A pesar de que la Teicoplanina y Dalbavancina son notablemente menos nefrotóxicas que la Vancomicina, la coadministración en UCI con drogas que destruyen el túbulo renal (Amikacina, Gentamicina, Polimixina B) restablece grave sinergismo de Lesión Renal Aguda, aumentando la incidencia de necrosis tubular."
+      },
+      conduta: {
+        pt: "Vigilância rigorosa e hidratação sistêmica. Ajustar a Teicoplanina via clearance de creatinina caso as escórias renais se elevem.",
+        es: "Vigilancia rigurosa e hidratación sistémica. Ajustar la Teicoplanina vía clearance de creatinina si las escorias renales se elevan."
+      }
+    }
+  },
+
+  /* ── CEFTOBIPROLE ── */
+  "ceftobiprole": {
+    "vacina_bcg_e_colera": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Inibição de vacinas vivas (efeito cruzado típico dos beta-lactâmicos sistêmicos). O antibiótico pode inativar as cepas bacterianas atenuadas das vacinas orais ou intradérmicas (BCG, vacina viva da cólera ou tifoide), impedindo a resposta imunológica.",
+        es: "Inhibición de vacunas vivas (efecto cruzado típico de los betalactámicos sistémicos). El antibiótico puede inactivar las cepas bacterianas atenuadas de las vacunas orales o intradérmicas (BCG, vacuna viva del cólera o tifoidea), impidiendo la respuesta inmunológica."
+      },
+      conduta: {
+        pt: "Adiar imunizações com bactérias vivas até pelo menos 72 horas após o término da antibioticoterapia.",
+        es: "Posponer inmunizaciones con bacterias vivas hasta al menos 72 horas después de terminar la antibioticoterapia."
+      }
+    }
+  },
+
+  /* ── ONDANSETRONA ── */
+  "ondansetrona": {
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Síndrome Serotoninérgica Exacerbada. A ondansetrona bloqueia receptores 5-HT3 periféricos e centrais. O uso sistêmico concomitante com antidepressivos que inundam o cérebro de serotonina (Fluoxetina, Escitalopram, Duloxetina ou Tramadol) pode gerar tremores, hipertermia, rigidez muscular e confusão letal.",
+        es: "Síndrome Serotoninérgico Exacerbado. El ondansetrón bloquea receptores 5-HT3 periféricos y centrales. El uso sistémico concomitante con antidepresivos que inundan el cerebro de serotonina (Fluoxetina, Escitalopram, Duloxetina o Tramadol) puede generar temblores, hipertermia, rigidez muscular y confusión letal."
+      },
+      conduta: {
+        pt: "Cautela ao tratar náuseas em pacientes psiquiátricos crônicos. Alternativas como corticoides (dexametasona antiemética) podem ser mais seguras dependendo do perfil.",
+        es: "Precaución al tratar náuseas en pacientes psiquiátricos crónicos. Alternativas como corticoides (dexametasona antiemética) pueden ser más seguras dependiendo del perfil."
+      }
+    },
+    "$classe_antiarritmicos_qt": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A ondansetrona em doses endovenosas rápidas atua diretamente nos canais iônicos do miocárdio, causando prolongamento do intervalo QT dose-dependente. A associação com amiodarona, macrolídeos ou antipsicóticos potencializa o risco de Torsades de Pointes.",
+        es: "El ondansetrón en dosis endovenosas rápidas actúa directamente en los canales iónicos del miocardio, causando prolongación del intervalo QT dosis-dependiente. La asociación con amiodarona, macrólidos o antipsicóticos potencia el riesgo de Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Limitar a dose em cardiopatas (máx 4 mg). Diluir a ampola e realizar infusão em 10 minutos para minimizar o pico plasmático cardíaco.",
+        es: "Limitar la dosis en cardiópatas (máx 4 mg). Diluir la ampolla y realizar infusión en 10 minutos para minimizar el pico plasmático cardíaco."
+      }
+    }
+  },
+
+  /* ── METOCLOPRAMIDA ── */
+  "metoclopramida": {
+    "$classe_antipsicoticos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Duplo bloqueio dopaminérgico e parkinsonismo grave. A metoclopramida bloqueia os mesmos receptores D2 que o haloperidol e a risperidona. A associação causa colapso da via extrapiramidal: o paciente não consegue engolir, os olhos reviram, a musculatura trava e ocorre agitação incontrolável.",
+        es: "Doble bloqueo dopaminérgico y parkinsonismo grave. La metoclopramida bloquea los mismos receptores D2 que el haloperidol y la risperidona. La asociación causa colapso de la vía extrapiramidal: el paciente no puede tragar, los ojos se viran, la musculatura se traba y ocurre agitación incontrolable."
+      },
+      conduta: {
+        pt: "Nunca tratar náusea com metoclopramida em pacientes com esquizofrenia, transtorno bipolar ou sob sedação com haloperidol na UTI. O uso da ondansetrona é obrigatório nesse cenário.",
+        es: "Nunca tratar náusea con metoclopramida en pacientes con esquizofrenia, trastorno bipolar o bajo sedación con haloperidol en UCI. El uso del ondansetrón es obligatorio en este escenario."
+      }
+    },
+    "$classe_opioides_fortes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Antagonismo motórico. A morfina e o fentanil congelam o trânsito gastrointestinal (íleo paralítico opioide). A metoclopramida tenta estimular o esvaziamento gástrico, mas sua eficácia pró-cinética é fortemente anulada pelo uso simultâneo de opioides pesados.",
+        es: "Antagonismo motor. La morfina y el fentanilo congelan el tránsito gastrointestinal (íleo paralítico opioide). La metoclopramida intenta estimular el vaciamiento gástrico, pero su eficacia procinética es fuertemente anulada por el uso simultáneo de opioides pesados."
+      },
+      conduta: {
+        pt: "Se o objetivo for apenas antiemético, o efeito neurocentral ainda funcionará. Se o objetivo for tratar íleo ou gastroparesia, é necessário suspender o opioide para a medicação ter sucesso.",
+        es: "Si el objetivo es solo antiemético, el efecto neurocentral aún funcionará. Si el objetivo es tratar íleo o gastroparesia, es necesario suspender el opioide para que la medicación tenga éxito."
+      }
+    }
+  }, // vírgula adicionada; BUILD 346 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Aminas Vasoativas e Choque
+   Noradrenalina, Adrenalina, Dopamina, Dobutamina, Vasopressina
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── INTERAÇÃO UNIVERSAL DAS AMINAS ADRENÉRGICAS ──
+     (Nora, Adrenalina, Dopamina e Dobutamina) */
+  "$classe_aminas_adrenergicas": {
+    "bicarbonato_sodio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INATIVAÇÃO POR PH. Todas as catecolaminas (noradrenalina, adrenalina, dobutamina, dopamina) oxidam e são quimicamente desativadas e destruídas quase instantaneamente se expostas a soluções de pH altamente alcalino (como o Bicarbonato de Sódio).",
+        es: "INACTIVACIÓN POR PH. Todas las catecolaminas (noradrenalina, adrenalina, dobutamina, dopamina) se oxidan y son químicamente desactivadas y destruidas casi instantáneamente si se exponen a soluciones de pH altamente alcalino (como el Bicarbonato de Sodio)."
+      },
+      conduta: {
+        pt: "A infusão contínua de Aminas DEVE OBRIGATORIAMENTE ocorrer em uma via venosa/lúmen completamente isolado e diferente do Bicarbonato de Sódio durante a ressuscitação do paciente séptico.",
+        es: "La infusión continua de Aminas DEBE OBLIGATORIAMENTE ocurrir en una vía venosa/lumen completamente aislado y diferente del Bicarbonato de Sodio durante la reanimación del paciente séptico."
+      }
+    },
+    "$classe_imao": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CRISE HIPERTENSIVA FULMINANTE. A enzima Monoamina Oxidase (MAO) é responsável por destruir as catecolaminas do sangue. Se o paciente usar inibidores da MAO (Tranilcipromina, Selegilina, Linezolida, Azul de Metileno), as aminas injetadas não serão destruídas, acumulando-se agressivamente e causando hemorragia intracraniana por picos pressóricos > 250 mmHg.",
+        es: "CRISIS HIPERTENSIVA FULMINANTE. La enzima Monoamino Oxidasa (MAO) es responsable de destruir las catecolaminas de la sangre. Si el paciente usa inhibidores de la MAO (Tranilcipromina, Selegilina, Linezolid, Azul de Metileno), las aminas inyectadas no serán destruidas, acumulándose agresivamente y causando hemorragia intracraneal por picos presóricos > 250 mmHg."
+      },
+      conduta: {
+        pt: "Extrema cautela na titulação. Começar as bombas com doses fracionadas se houver inibidores de MAO na jogada (Nota: A Linezolida é um antibiótico usado na UTI que é um IMAO oculto e frequentemente cruza com a noradrenalina, aumentando inexplicavelmente a pressão do paciente).",
+        es: "Extrema precaución en la titulación. Comenzar las bombas con dosis fraccionadas si hay inhibidores de MAO en juego (Nota: El Linezolid es un antibiótico usado en UCI que es un IMAO oculto y frecuentemente se cruza con la noradrenalina, aumentando inexplicablemente la presión del paciente)."
+      }
+    }
+  },
+
+  /* ── ADRENALINA (EPINEFRINA) ── */
+  "adrenalina": {
+    "$classe_betabloqueadores_nao_seletivos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "EFEITO ALFA ISOLADO (Oclusão vascular). Se um paciente sob uso de Propranolol sofrer um Choque Anafilático e receber Adrenalina IM, os receptores Beta (que dilatam) estarão trancados. A Adrenalina agirá EXCLUSIVAMENTE nos receptores Alfa (que apertam). Isso gera uma vasoconstrição maciça sem oponente, causando Crise Hipertensiva aguda paradoxal acompanhada de Bradicardia Reflexa vagal profunda, piorando o choque.",
+        es: "EFECTO ALFA AISLADO (Oclusión vascular). Si un paciente bajo uso de Propranolol sufre un Choque Anafiláctico y recibe Adrenalina IM, los receptores Beta (que dilatan) estarán bloqueados. La Adrenalina actuará EXCLUSIVAMENTE en los receptores Alfa (que aprietan). Esto genera una vasoconstricción masiva sin oponente, causando Crisis Hipertensiva aguda paradójica acompañada de Bradicardia Refleja vagal profunda, empeorando el choque."
+      },
+      conduta: {
+        pt: "Se o paciente usa Propranolol e não responde à Adrenalina na Anafilaxia, o tratamento de resgate exige a administração de GLUCAGON (pois ele age criando a resposta inotrópica burlando os receptores bloqueados).",
+        es: "Si el paciente usa Propranolol y no responde a la Adrenalina en la Anafilaxia, el tratamiento de rescate exige la administración de GLUCAGÓN (pues actúa creando la respuesta inotrópica burlando los receptores bloqueados)."
+      }
+    }
+  },
+
+  /* ── DOBUTAMINA ── */
+  "dobutamina": {
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ANTAGONISMO DE SÍTIO. A dobutamina atua diretamente no receptor Beta-1 para fazer o coração bater mais forte. O Betabloqueador (Bisoprolol, Carvedilol) está ali fisicamente 'tampando' o buraco da fechadura. Resultado: A dobutamina falha, o coração não aumenta a força, e a insuficiência cardíaca persiste no paciente da UTI.",
+        es: "ANTAGONISMO DE SITIO. La dobutamina actúa directamente en el receptor Beta-1 para hacer que el corazón lata más fuerte. El Betabloqueante (Bisoprolol, Carvedilol) está allí físicamente 'tapando' el ojo de la cerradura. Resultado: La dobutamina falla, el corazón no aumenta la fuerza, y la insuficiencia cardíaca persiste en el paciente de UCI."
+      },
+      conduta: {
+        pt: "Em pacientes cronicamente betabloqueados que internam em choque cardiogênico, a Dobutamina é de pouca utilidade. A medicação de escolha INOTRÓPICA nesses pacientes deve ser a LEVOSIMENDANA (ou Milrinona), pois elas agem dentro da célula, ignorando a porta bloqueada.",
+        es: "En pacientes crónicamente betabloqueados que internan en choque cardiogénico, la Dobutamina es de poca utilidad. La medicación de elección INOTRÓPICA en estos pacientes debe ser el LEVOSIMENDÁN (o Milrinona), pues actúan dentro de la célula, ignorando la puerta bloqueada."
+      }
+    }
+  },
+
+  /* ── VASOPRESSINA ── */
+  "vasopressina": {
+    "$classe_nitratos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Antagonismo Funcional Cruzado. A vasopressina constringe ferozmente, os nitratos (Nitroglicerina) relaxam fortemente pelo Óxido Nítrico. Porém, na parede do intestino (esplâncnica) ou no coração (coronárias), o uso das duas drogas pode desequilibrar a perfusão localizada, exigindo titulação microscópica.",
+        es: "Antagonismo Funcional Cruzado. La vasopresina constriñe ferozmente, los nitratos (Nitroglicerina) relajan fuertemente por el Óxido Nítrico. Pero, en la pared del intestino (esplácnica) o en el corazón (coronarias), el uso de las dos drogas puede desequilibrar la perfusión localizada, exigiendo titulación microscópica."
+      },
+      conduta: {
+        pt: "Na hemorragia digestiva, onde usa-se análogos de vasopressina, os nitratos às vezes são associados PROPOSITALMENTE para proteger o coração da isquemia gerada pela vasopressina. Exige cuidado de intensivista.",
+        es: "En la hemorragia digestiva, donde se usan análogos de vasopresina, los nitratos a veces se asocian A PROPÓSITO para proteger el corazón de la isquemia generada por la vasopresina. Exige cuidado de intensivista."
+      }
+    }
+  }, // vírgula adicionada; BUILD 348 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Sedação, Hipnose e Neurointensivismo
+   Propofol, Midazolam, Dexmedetomidina, Diazepam, Haloperidol
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── INTERAÇÃO DE CLASSE: SEDATIVOS CENTRAIS E OPIOIDES ──
+     (Propofol, Midazolam, Diazepam) */
+  "$classe_sedativos_gaba": {
+    "$classe_opioides_fortes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Respiratório e Hemodinâmico Potencialmente Fatal. A combinação de drogas ativadoras GABA-A (Propofol, Midazolam) com opioides (Fentanil, Morfina, Remifentanil) suprime os centros de disparo respiratório no bulbo. Além disso, destroem a resistência vascular sistêmica. O paciente em minutos entra em apneia profunda e choca (PA inaudível).",
+        es: "Sinergismo Respiratorio y Hemodinámico Potencialmente Fatal. La combinación de drogas activadoras GABA-A (Propofol, Midazolam) con opioides (Fentanilo, Morfina, Remifentanilo) suprime los centros de disparo respiratorio en el bulbo. Además, destruyen la resistencia vascular sistémica. El paciente en minutos entra en apnea profunda y choca (PA inaudible)."
+      },
+      conduta: {
+        pt: "A base da anestesia moderna é justamente essa combinação, mas ela EXIGE suporte de oxigênio avançado, intubação pronta e titulação da bomba (diminuir as doses em 30-50% quando associadas).",
+        es: "La base de la anestesia moderna es justamente esta combinación, pero EXIGE soporte de oxígeno avanzado, intubación lista y titulación de la bomba (disminuir las dosis en 30-50% cuando asociadas)."
+      }
+    }
+  },
+
+  /* ── MIDAZOLAM / DIAZEPAM (Metabolismo CYP3A4) ── */
+  "$classe_benzodiazepinicos_cyp3a4": {
+    "$classe_inibidores_protease_hiv": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "BLOQUEIO DE DEGRADAÇÃO FATAL. Inibidores de protease (Ritonavir, Lopinavir, Nirmatrelvir) bloqueiam totalmente o citocromo CYP3A4. Se o paciente usar Midazolam (especialmente oral), a droga nunca será degradada, acumulando no sangue de forma exponencial até causar sedação prolongada de dias e parada respiratória irreversível pelo Flumazenil.",
+        es: "BLOQUEO DE DEGRADACIÓN FATAL. Inhibidores de proteasa (Ritonavir, Lopinavir, Nirmatrelvir) bloquean totalmente el citocromo CYP3A4. Si el paciente usa Midazolam (especialmente oral), la droga nunca será degradada, acumulando en la sangre de forma exponencial hasta causar sedación prolongada de días y paro respiratorio irreversible por el Flumazenilo."
+      },
+      conduta: {
+        pt: "O uso de Midazolam Oral e Diazepam é ABSOLUTAMENTE CONTRAINDICADO em pacientes usando Paxlovid ou Ritonavir. Midazolam IV pode ser usado em UTI apenas sob titulação agressiva e extubação tardia.",
+        es: "El uso de Midazolam Oral y Diazepam está ABSOLUTAMENTE CONTRAINDICADO en pacientes usando Paxlovid o Ritonavir. Midazolam IV puede usarse en UCI solo bajo titulación agresiva y extubación tardía."
+      }
+    }
+  },
+
+  /* ── DEXMEDETOMIDINA ── */
+  "dexmedetomidina": {
+    "$classe_betabloqueadores_iv": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Simpatolítico Massivo. A Dexmedetomidina (ação alfa-2 central) anula a liberação de noradrenalina no corpo, causando naturalmente bradicardia forte. Se associada a um bloqueador Beta puro (Esmolol, Metoprolol), o coração fica totalmente sem defesa, podendo entrar em Bloqueio Atrioventricular Total ou Assistolia e Hipotensão vasoplégica.",
+        es: "Sinergismo Simpatolítico Masivo. La Dexmedetomidina (acción alfa-2 central) anula la liberación de noradrenalina en el cuerpo, causando naturalmente bradicardia fuerte. Si se asocia a un bloqueador Beta puro (Esmolol, Metoprolol), el corazón queda totalmente sin defensa, pudiendo entrar en Bloqueo Auriculoventricular Total o Asistolia e Hipotensión vasopléjica."
+      },
+      conduta: {
+        pt: "Nunca associar para controle ágil na UTI se não houver um marcapasso em stand-by e infusão contínua de drogas adrenérgicas.",
+        es: "Nunca asociar para control ágil en la UCI si no hay un marcapasos en stand-by e infusión continua de drogas adrenérgicas."
+      }
+    }
+  },
+
+  /* ── HALOPERIDOL ── */
+  "haloperidol": {
+    "$classe_antiarritmicos_qt": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "PICO DE TORSADES DE POINTES. O Haloperidol Injetável Venoso é um bloqueador ferrenho dos canais hERG de potássio no miocárdio, prolongando assustadoramente o intervalo QT. Ao ser misturado com Amiodarona, Metadona, Fluconazol ou Ondansetrona, o miocárdio entra em Taquicardia Ventricular Polimórfica fulminante, matando subitamente o paciente que estava apenas agitado na cama.",
+        es: "PICO DE TORSADES DE POINTES. El Haloperidol Inyectable Venoso es un bloqueador férreo de los canales hERG de potasio en el miocardio, prolongando asustadoramente el intervalo QT. Al ser mezclado con Amiodarona, Metadona, Fluconazol u Ondansetrón, el miocardio entra en Taquicardia Ventricular Polimórfica fulminante, matando súbitamente al paciente que estaba solo agitado en la cama."
+      },
+      conduta: {
+        pt: "Realizar Eletrocardiograma ANTES de injetar o Haldol na veia na UTI. Se QTc > 500ms ou paciente sob Amiodarona, NEGAR o uso do Haldol e sedar a agitação com Midazolam, Propofol ou Precedex.",
+        es: "Realizar Electrocardiograma ANTES de inyectar el Haldol en la vena en la UCI. Si QTc > 500ms o paciente bajo Amiodarona, NEGAR el uso del Haldol y sedar la agitación con Midazolam, Propofol o Precedex."
+      }
+    },
+    "$classe_dopaminergicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ANTAGONISMO DIRETO. O Haloperidol fecha todos os receptores D2 do cérebro. Se dado a um paciente com Doença de Parkinson usando Levodopa/Carbidopa ou Pramipexol, o Haldol ANULA completamente o tratamento do Parkinson em minutos. O paciente trava como uma estátua e perde a capacidade de respirar e engolir a própria saliva.",
+        es: "ANTAGONISMO DIRECTO. El Haloperidol cierra todos los receptores D2 del cerebro. Si se da a un paciente con Enfermedad de Parkinson usando Levodopa/Carbidopa o Pramipexol, el Haldol ANULA completamente el tratamiento del Parkinson en minutos. El paciente se traba como una estatua y pierde la capacidad de respirar y tragar su propia saliva."
+      },
+      conduta: {
+        pt: "Haloperidol é CONTRAINDICADO em pacientes com Doença de Parkinson e Doença de Corpos de Lewy. Apenas o antipsicótico atípico Quetiapina deve ser usado se estritamente necessário para controlar psicose nesses pacientes.",
+        es: "Haloperidol está CONTRAINDICADO en pacientes con Enfermedad de Parkinson y Enfermedad de Cuerpos de Lewy. Solo el antipsicótico atípico Quetiapina debe ser usado si estrictamente necesario para controlar psicosis en estos pacientes."
+      }
+    }
+  }, // vírgula adicionada; BUILD 350 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Hematologia, Anticoagulantes e Hemostáticos
+   Heparina (HNF/HBPM), Varfarina, Rivaroxabana, Ácido Tranexâmico
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── HEPARINA NÃO FRACIONADA & ENOXAPARINA (HBPM) ── */
+  "$classe_heparinas": {
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "AINEs (Cetoprofeno, Ibuprofeno, Diclofenaco) bloqueiam as plaquetas (antiagregação irreversível ou reversível) e inflamam a mucosa gástrica. Associar AINEs com Heparina em doses de tratamento aumenta exponencialmente a chance de Hemorragia Digestiva Alta (HDA) maciça e sangramentos sistêmicos intratáveis.",
+        es: "AINEs (Ketoprofeno, Ibuprofeno, Diclofenaco) bloquean las plaquetas y inflaman la mucosa gástrica. Asociar AINEs con Heparina en dosis de tratamiento aumenta exponencialmente la chance de Hemorragia Digestiva Alta (HDA) masiva y sangrados sistémicos intratables."
+      },
+      conduta: {
+        pt: "AINEs são estritamente CONTRAINDICADOS em pacientes sob tratamento anticoagulante venoso ou subcutâneo terapêutico na UTI. Usar Dipirona ou Paracetamol para dor/febre.",
+        es: "AINEs están estrictamente CONTRAINDICADOS en pacientes bajo tratamiento anticoagulante venoso o subcutáneo terapéutico en UCI. Usar Dipirona o Paracetamol para dolor/fiebre."
+      }
+    }
+  },
+
+  /* ── VARFARINA ── */
+  "varfarina": {
+    "amiodarona": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A Amiodarona inibe profundamente a enzima hepática CYP2C9 e CYP3A4, bloqueando quase toda a destruição da Varfarina. Apenas alguns dias após iniciar a amiodarona, a taxa de anticoagulação (RNI) do paciente salta de 2.5 para > 10. O paciente pode morrer subitamente de hemorragia cerebral espontânea (derrame).",
+        es: "La Amiodarona inhibe profundamente la enzima hepática CYP2C9 y CYP3A4, bloqueando casi toda la destrucción de la Warfarina. Apenas unos días tras iniciar la amiodarona, la tasa de anticoagulación (RNI) del paciente salta de 2.5 a > 10. El paciente puede morir súbitamente de hemorragia cerebral espontánea."
+      },
+      conduta: {
+        pt: "REGRA DE PRESCRIÇÃO: No mesmo dia que você prescrever Amiodarona, você OBRIGATORIAMENTE DEVE REDUZIR a dose oral da Varfarina em 30% a 50%, e o paciente deve realizar um RNI de controle após 4 dias.",
+        es: "REGLA DE PRESCRIPCIÓN: El mismo día que prescribas Amiodarona, OBLIGATORIAMENTE DEBES REDUCIR la dosis oral de la Warfarina en 30% a 50%, y el paciente debe realizar un RNI de control tras 4 días."
+      }
+    },
+    "$classe_macrolideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Antimicrobianos como Azitromicina, Claritromicina, Eritromicina e o Fluconazol inibem a via metabólica do fígado e erradicam as bactérias da flora intestinal (que produzem Vitamina K de forma endógena natural). Essa dupla ação anula a vitamina K do paciente, elevando violentamente o RNI.",
+        es: "Antimicrobianos como Azitromicina, Claritromicina, Eritromicina y el Fluconazol inhiben la vía metabólica del hígado y erradican las bacterias de la flora intestinal (que producen Vit. K de forma endógena). Esta doble acción anula la vitamina K del paciente, elevando violentamente el RNI."
+      },
+      conduta: {
+        pt: "Paciente usuário crônico de Varfarina que tratar uma pneumonia ou fungo DEVE colher o RNI em 3 dias e reduzir a dose de Marevan preventivamente.",
+        es: "Paciente usuario crónico de Warfarina que trate una neumonía u hongo DEBE extraer el RNI en 3 días y reducir la dosis preventiva."
+      }
+    }
+  },
+
+  /* ── RIVAROXABANA (DOACs) ── */
+  "rivaroxabana": {
+    "paxlovid": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "COLAPSO DO CLEARANCE. O Ritonavir (contido no Paxlovid) bloqueia totalmente as enzimas CYP3A4 e o transportador intestinal P-glicoproteína (P-gp). Como o Xarelto/Rivaroxabana depende 100% dessa via dupla para sair do corpo, ele não sai mais. A concentração do anticoagulante alcança níveis letais fulminantes.",
+        es: "COLAPSO DEL CLEARANCE. El Ritonavir (contenido en el Paxlovid) bloquea totalmente las enzimas CYP3A4 y el transportador intestinal P-glicoproteína (P-gp). Como el Rivaroxabán depende 100% de esta vía doble para salir del cuerpo, ya no sale. La concentración del anticoagulante alcanza niveles letales fulminantes."
+      },
+      conduta: {
+        pt: "A ASSOCIAÇÃO É ABSOLUTAMENTE CONTRAINDICADA. Não há como ajustar a dose da Rivaroxabana com segurança. Suspender o DOAC ou não usar o Paxlovid para COVID-19.",
+        es: "LA ASOCIACIÓN ES ABSOLUTAMENTE CONTRAINDICADA. No hay forma de ajustar la dosis de Rivaroxabán con seguridad. Suspender el DOAC o no usar el Paxlovid para COVID-19."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Indução massiva de CYP3A4 e P-gp. Fenitoína, Carbamazepina e Fenobarbital turbinam as enzimas de eliminação do fígado e intestino. O DOAC (Rivaroxabana) é triturado e jogado na urina e fezes de forma extremamente acelerada. A cobertura anticoagulante DESAPARECE e o paciente infarta ou tem um AVC por um coágulo súbito.",
+        es: "Inducción masiva de CYP3A4 y P-gp. Fenitoína, Carbamazepina y Fenobarbital aceleran las enzimas de eliminación del hígado e intestino. El DOAC es triturado y arrojado en la orina y heces de forma extremadamente acelerada. La cobertura anticoagulante DESAPARECE y el paciente infarta o tiene un ACV por un coágulo."
+      },
+      conduta: {
+        pt: "Contraindicado o uso de Rivaroxabana/Apixabana em epiléticos que usam Fenitoína ou Carbamazepina. O tratamento DEVE ser convertido para Varfarina, onde a dosagem do RNI permite ajustar o sangue corretamente.",
+        es: "Contraindicado el uso de Rivaroxabán/Apixabán en epilépticos que usan Fenitoína o Carbamazepina. El tratamiento DEBE ser convertido a Warfarina, donde la dosificación del RNI permite ajustar la sangre correctamente."
+      }
+    }
+  },
+
+  /* ── ÁCIDO TRANEXÂMICO ── */
+  "acido_tranexamico": {
+    "complexo_protrombinico": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Sinergismo Trombótico Extremo (Tornado Hemostático). O Complexo Protrombínico injeta Fatores de Coagulação puros na veia para criar dezenas de coágulos rapidamente. O Ácido Tranexâmico 'plastifica' e proíbe a dissolução de todos os coágulos formados. Juntos em ambiente de emergência incontrolada, eles causam Coagulação Intravascular Disseminada (CIVD) ou Embolia Pulmonar Maciça.",
+        es: "Sinergismo Trombótico Extremo (Tornado Hemostático). El Complejo Protrombínico inyecta Factores de Coagulación puros en la vena para crear decenas de coágulos rápidamente. El Ácido Tranexámico 'plastifica' y prohíbe la disolución de todos los coágulos formados. Juntos en ambiente de emergencia incontrolada, causan Coagulación Intravascular Diseminada o Embolia Pulmonar Masiva."
+      },
+      conduta: {
+        pt: "A associação requer coordenação de equipe de Trauma e Hematologia em choque hemorrágico gravíssimo maciço (Protocolo de Transfusão Maciça). O uso simultâneo é de alto risco letal. Evitar em pacientes que não estão ativamente perdendo o sangue inteiro.",
+        es: "La asociación requiere coordinación de equipo de Trauma y Hematología en choque hemorrágico gravísimo masivo (Protocolo de Transfusión Masiva). El uso simultáneo es de alto riesgo letal. Evitar en pacientes que no están activamente perdiendo toda la sangre."
+      }
+    }
+  }, // vírgula adicionada; BUILD 352 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Gastroenterologia Crítica e Hemorragias
+   Omeprazol, Pantoprazol, Lactulose, Terlipressina, Octreotide
+   BUILD 352 — 4 entradas / 5 pares
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── INIBIDORES DA BOMBA DE PRÓTONS (OMEPRAZOL vs PANTOPRAZOL) ── */
+  "omeprazol": {
+    "clopidogrel": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A GRANDE INTERAÇÃO DA CARDIOLOGIA. O Clopidogrel é um pró-fármaco inativo que precisa EXCLUSIVAMENTE da enzima CYP2C19 no fígado para se transformar em sua forma ativa (que inibe as plaquetas e salva o stent). O Omeprazol é um bloqueador implacável do CYP2C19. Se prescritos juntos, o Clopidogrel não é ativado, a plaqueta continua solta, e o Stent Coronariano do paciente irá TROMBOSAR subitamente, causando um infarto fulminante.",
+        es: "LA GRAN INTERACCIÓN DE LA CARDIOLOGÍA. El Clopidogrel es un profármaco inactivo que necesita EXCLUSIVAMENTE la enzima CYP2C19 en el hígado para transformarse en su forma activa (que inhibe plaquetas y salva el stent). El Omeprazol es un bloqueador implacable del CYP2C19. Si se prescriben juntos, el Clopidogrel no se activa, la plaqueta sigue suelta, y el Stent Coronario del paciente se TROMBOZARÁ súbitamente, causando un infarto fulminante."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO MUNDIAL (Alerta FDA). Se o paciente que infartou/usa Clopidogrel necessitar de proteção gástrica, você DEVE prescrever PANTOPRAZOL (que não atinge a enzima CYP2C19 e deixa o Clopidogrel agir livremente).",
+        es: "CONTRAINDICACIÓN MUNDIAL (Alerta FDA). Si el paciente que infartó/usa Clopidogrel necesita protección gástrica, DEBES prescribir PANTOPRAZOL (que no ataca la enzima CYP2C19 y deja al Clopidogrel actuar libremente)."
+      }
+    }
+  },
+
+  "$classe_ibp": {
+    "itraconazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Itraconazol e o Posaconazol (em cápsulas orais) ou Cetoconazol exigem um banho de Ácido Clorídrico puro (pH baixo) para se dissolverem e entrarem na corrente sanguínea. Se o IBP (Omeprazol/Pantoprazol) zera o ácido do estômago, o antifúngico vira cimento não absorvível, resultando em falência da terapia fúngica.",
+        es: "El Itraconazol y el Posaconazol (en cápsulas orales) o Ketoconazol exigen un baño de Ácido Clorhídrico puro (pH bajo) para disolverse y entrar en el torrente sanguíneo. Si el IBP (Omeprazol/Pantoprazol) anula el ácido del estómago, el antifúngico se vuelve cemento no absorbible, resultando en falla de la terapia fúngica."
+      },
+      conduta: {
+        pt: "Suspender temporariamente o IBP. Se absolutamente impossível, dar o antifúngico oral acompanhado de 1 copo de Coca-Cola pura para gerar pico ácido forçado imediato.",
+        es: "Suspender temporalmente el IBP. Si es absolutamente imposible, dar el antifúngico oral acompañado de 1 vaso de Coca-Cola pura para generar pico ácido forzado inmediato."
+      }
+    }
+  },
+
+  /* ── TERLIPRESSINA E OCTREOTIDE (Vasoconstritores Esplâncnicos) ── */
+  "terlipressina": {
+    "$classe_aminas_adrenergicas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Isquêmico Catastrófico. A terlipressina induz oclusão vigorosa dos leitos esplâncnicos e coronários. Se associada à Noradrenalina ou Dopamina (em ambiente de choque séptico duplo), a vasoconstrição cruzada atinge níveis onde a gangrena mesentérica (morte de todo o intestino) e a isquemia das pontas dos dedos e nariz são quase certas.",
+        es: "Sinergismo Isquémico Catastrófico. La terlipresina induce oclusión vigorosa de los lechos esplácnicos y coronarios. Si se asocia a Noradrenalina o Dopamina (en ambiente de choque séptico doble), la vasoconstricción cruzada alcanza niveles donde la gangrena mesentérica (muerte de todo el intestino) y la isquemia de las puntas de los dedos y nariz son casi seguras."
+      },
+      conduta: {
+        pt: "Restringir estritamente. Em UTI, apenas o Intensivista sênior deve mesclar Terlipressina com Noradrenalina, geralmente reduzindo agressivamente a dose de ambos, sob monitorização de lactato arterial a cada 2h.",
+        es: "Restringir estrictamente. En UCI, solo el Intensivista senior debe mezclar Terlipresina con Noradrenalina, generalmente reduciendo agresivamente la dosis de ambos, bajo monitorización de lactato arterial cada 2h."
+      }
+    }
+  },
+
+  "octreotide": {
+    "$classe_antidiabeticos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A Octreotida (somatostatina) é a 'desligadora universal' do pâncreas. Ela paralisa a secreção tanto da Insulina quanto do Glucagon. Isso significa que o paciente diabético que usa hipoglicemiantes orais ou Insulina e recebe bomba de Octreotide entrará em uma gangorra glicêmica caótica, experimentando episódios súbitos de Hipoglicemia e Hiperglicemia.",
+        es: "La Octreotida (somatostatina) es el 'apagador universal' del páncreas. Paraliza la secreción tanto de la Insulina como del Glucagón. Esto significa que el paciente diabético que usa hipoglucemiantes orales o Insulina y recibe bomba de Octreotida entrará en un balancín glucémico caótico, experimentando episodios súbitos de Hipoglucemia e Hiperglucemia."
+      },
+      conduta: {
+        pt: "Suspender antidiabéticos orais (ex: Glimepirida/Gliclazida) enquanto a bomba de Octreotide estiver ligada. Gerenciar a glicose na UTI apenas com soro e Insulina Rápida injetável se necessário, medindo a glicemia a cada 4 horas.",
+        es: "Suspender antidiabéticos orales (ej: Glimepirida/Gliclazida) mientras la bomba de Octreotida esté encendida. Gestionar la glucosa en la UCI solo con suero e Insulina Rápida inyectable si es necesario, midiendo la glucemia cada 4 horas."
+      }
+    }
+  },
+
+  /* ── LACTULOSE ── */
+  "lactulose": {
+    "neomicina": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Interação Paradoxal/Controversa. A neomicina e a rifaximina (antibióticos orais) matam a flora intestinal para reduzir as bactérias que produzem amônia no coma hepático. Porém, a Lactulose PRECISA dessa flora bacteriana viva para ser fermentada e gerar o efeito osmótico que limpa o intestino. Se o antibiótico matar as bactérias antes, a lactulose pode perder o efeito.",
+        es: "Interacción Paradójica/Controvertida. La neomicina y la rifaximina (antibióticos orales) matan la flora intestinal para reducir las bacterias que producen amoníaco en el coma hepático. Pero, la Lactulosa NECESITA esa flora bacteriana viva para ser fermentada y generar el efecto osmótico que limpia el intestino. Si el antibiótico mata las bacterias antes, la lactulosa puede perder el efecto."
+      },
+      conduta: {
+        pt: "Apesar dessa interação teórica, ensaios clínicos mostram que o uso associado (Lactulose + Antibiótico Enteral) é altamente benéfico. O protocolo mundial MANTÉM a associação nos casos refratários de encefalopatia.",
+        es: "A pesar de esta interacción teórica, ensayos clínicos muestran que el uso asociado (Lactulosa + Antibiótico Enteral) es altamente benéfico. El protocolo mundial MANTIENE la asociación en los casos refractarios de encefalopatía."
+      }
+    }
+  }, // vírgula adicionada; BUILD 354 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Antiarrítmicos Sistêmicos e Corticoides
+   Amiodarona, Adenosina, Lidocaína IV, Dexametasona, Hidrocortisona
+   BUILD 354 — 5 entradas / 7 pares
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── AMIODARONA ── */
+  "amiodarona": {
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INIBIÇÃO DE CLEARANCE. A Amiodarona é uma inibidora agressiva da P-glicoproteína (transportador de efluxo intestinal e renal). Ao associar as duas drogas, a Digoxina simplesmente não consegue sair do corpo. Seus níveis plasmáticos DOBRAM em poucos dias, levando invariavelmente a toxicidade digitálica (extrassístoles de alto grau, náuseas e halos visuais amarelos).",
+        es: "INHIBICIÓN DE CLEARANCE. La Amiodarona es una inhibidora agresiva de la P-glicoproteína (transportador de eflujo intestinal y renal). Al asociar las dos drogas, la Digoxina simplemente no logra salir del cuerpo. Sus niveles plasmáticos se DUPLICAN en pocos días, llevando invariablemente a toxicidad digitálica (extrasístoles de alto grado, náuseas y halos visuales amarillos)."
+      },
+      conduta: {
+        pt: "É REGRA ESTRITA: Reduzir a dose da Digoxina em 50% IMEDIATAMENTE no dia em que a Amiodarona for introduzida na prescrição.",
+        es: "ES REGLA ESTRICTA: Reducir la dosis de la Digoxina en 50% INMEDIATAMENTE en el día en que la Amiodarona sea introducida en la prescripción."
+      }
+    },
+    "$classe_estatinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A Amiodarona inibe o citocromo CYP3A4 no fígado. A Sinvastatina e a Lovastatina dependem desse citocromo. O acúmulo da estatina resultante deflagrará Miosite Tóxica severa e risco iminente de Rabdomiólise com falência renal aguda.",
+        es: "La Amiodarona inhibe el citocromo CYP3A4 en el hígado. La Simvastatina y la Lovastatina dependen de este citocromo. La acumulación de la estatina resultante desencadenará Miositis Tóxica severa y riesgo inminente de Rabdomiólisis con falla renal aguda."
+      },
+      conduta: {
+        pt: "Limitar a Sinvastatina a no máximo 20 mg/dia em usuários de amiodarona. O ideal é trocar a estatina para Rosuvastatina ou Pravastatina (que usam outras vias de limpeza).",
+        es: "Limitar la Simvastatina a un máximo de 20 mg/día en usuarios de amiodarona. Lo ideal es cambiar la estatina a Rosuvastatina o Pravastatina (que usan otras vías de limpieza)."
+      }
+    }
+  },
+
+  /* ── ADENOSINA ── */
+  "adenosina": {
+    "aminofilina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ANTAGONISMO DE RECEPTOR DIRETO. As metilxantinas (Aminofilina, Teofilina e grandes quantidades de Cafeína) são bloqueadores perfeitos do receptor de Adenosina no coração. Se o paciente injetar a Adenosina para reverter uma taquicardia, ela não encontrará o receptor (que está tapado). O remédio falha complementamente na dose padrão.",
+        es: "ANTAGONISMO DE RECEPTOR DIRECTO. Las metilxantinas (Aminofilina, Teofilina y grandes cantidades de Cafeína) son bloqueadores perfectos del receptor de Adenosina en el corazón. Si el paciente inyecta la Adenosina para revertir una taquicardia, no encontrará el receptor (que está tapado). El remedio falla completamente en la dosis estándar."
+      },
+      conduta: {
+        pt: "Pacientes em uso de Aminofilina/Teofilina necessitarão de DOSES DOBRADAS E MACIÇAS de Adenosina (ex: começar logo com 12 mg a 18 mg) para tentar vencer o bloqueio por competição e parar a taquicardia.",
+        es: "Pacientes en uso de Aminofilina/Teofilina necesitarán de DOSIS DOBLADAS Y MASIVAS de Adenosina (ej: empezar luego con 12 mg a 18 mg) para intentar vencer el bloqueo por competición y parar la taquicardia."
+      }
+    },
+    "dipiridamol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SUPER POTENCIALIZAÇÃO. O Dipiridamol e a Carbamazepina bloqueiam a captação da adenosina do sangue para dentro da célula, deixando todo o remédio ativo na corrente sanguínea. Isso magnifica violentamente o efeito da Adenosina, causando bradicardias severas prolongadas ou bloqueios cardíacos refratários perigosos.",
+        es: "SUPER POTENCIACIÓN. El Dipiridamol y la Carbamazepina bloquean la captación de la adenosina de la sangre hacia dentro de la célula, dejando todo el remedio activo en el torrente sanguíneo. Esto magnifica violentamente el efecto de la Adenosina, causando bradicardias severas prolongadas o bloqueos cardíacos refractarios peligrosos."
+      },
+      conduta: {
+        pt: "Reduzir rigorosamente a dose de Adenosina para METADE (ex: dose inicial de 3 mg em vez de 6 mg) em usuários de Dipiridamol.",
+        es: "Reducir rigurosamente la dosis de Adenosina a MITAD (ej: dosis inicial de 3 mg en vez de 6 mg) en usuarios de Dipiridamol."
+      }
+    }
+  },
+
+  /* ── LIDOCAÍNA IV ── */
+  "lidocaina_iv": {
+    "$classe_betabloqueadores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "REDUÇÃO DO FLUXO HEPÁTICO. A destruição da lidocaína depende puramente do sangue passando pelo fígado. Os betabloqueadores (ex: Propranolol, Metoprolol) diminuem fortemente o débito cardíaco e o fluxo de sangue que lava o fígado. A Lidocaína vai parar de ser depurada, acumulando no sangue até causar uma convulsão iatrogênica inesperada.",
+        es: "REDUCCIÓN DEL FLUJO HEPÁTICO. La destrucción de la lidocaína depende puramente de la sangre pasando por el hígado. Los betabloqueantes (ej: Propranolol, Metoprolol) disminuyen fuertemente el gasto cardíaco y el flujo de sangre que lava el hígado. La Lidocaína dejará de ser depurada, acumulándose en la sangre hasta causar una convulsión iatrogénica inesperada."
+      },
+      conduta: {
+        pt: "Reduzir a infusão de manutenção da Lidocaína na bomba se o paciente internado estiver em uso de doses altas de betabloqueadores e vigiar sinais de toxicidade oral (formigamento de boca).",
+        es: "Reducir la infusión de mantenimiento de la Lidocaína en la bomba si el paciente internado está en uso de dosis altas de betabloqueantes y vigilar signos de toxicidad oral (hormigueo de boca)."
+      }
+    }
+  },
+
+  /* ── CORTICOSTEROIDES (DEXAMETASONA / HIDROCORTISONA) ── */
+  "$classe_corticosteroides": {
+    "$classe_bnm_adespolarizantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "DESTRUIÇÃO NEUROMUSCULAR (Miopatia do Doente Crítico). A administração simultânea de altas doses de corticoides (Dexametasona/Hidrocortisona) e infusão contínua de Bloqueadores Neuromusculares (Rocurônio, Cisatracúrio) em pacientes na UTI causa catabolismo muscular brutal e desintegração das fibras de miosina, levando a tetraplegia motora flácida prolongada que persiste meses após a alta hospitalar.",
+        es: "DESTRUCCIÓN NEUROMUSCULAR (Miopatía del Enfermo Crítico). La administración simultánea de altas dosis de corticoides (Dexametasona/Hidrocortisona) e infusión continua de Bloqueadores Neuromusculares (Rocuronio, Cisatracurio) en pacientes en la UCI causa catabolismo muscular brutal y desintegración de las fibras de miosina, llevando a tetraplejía motora flácida prolongada que persiste meses tras el alta."
+      },
+      conduta: {
+        pt: "Suspender bloqueadores neuromusculares continuamente em 48h no máximo se o paciente estiver usando corticoterapia sistêmica para COVID-19 grave ou Choque Séptico.",
+        es: "Suspender bloqueadores neuromusculares continuamente en 48h como máximo si el paciente está usando corticoterapia sistémica para COVID-19 grave o Choque Séptico."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Ulcerogênico Profundo. Tanto os corticoides (que desligam a fosfolipase A2 de cura) quanto os AINEs (que desligam a COX-1 protetora gástrica) retiram as defesas da mucosa do estômago. O uso conjunto de Ibuprofeno/Cetoprofeno/AAS com Dexametasona/Prednisona aumenta exponencialmente o risco de Hemorragia Digestiva e perfuração letal.",
+        es: "Sinergismo Ulcerogénico Profundo. Tanto los corticoides (que apagan la fosfolipasa A2 de cura) como los AINEs (que apagan la COX-1 protectora gástrica) retiran las defensas de la mucosa del estómago. El uso conjunto de Ibuprofeno/Ketoprofeno/AAS con Dexametasona/Prednisona aumenta exponencialmente el riesgo de Hemorragia Digestiva y perforación letal."
+      },
+      conduta: {
+        pt: "Proteção Gástrica OBRIGATÓRIA. Se for inescapável associá-los (ex: ortopedia), o paciente deve estar sob proteção diária de Omeprazol ou Pantoprazol para não sofrer úlcera perfurada aguda.",
+        es: "Protección Gástrica OBLIGATORIA. Si es ineludible asociarlos (ej: ortopedia), el paciente debe estar bajo protección diaria de Omeprazol o Pantoprazol para no sufrir úlcera perforada aguda."
+      }
+    }
+  }, // vírgula adicionada; BUILD 356 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Vasodilatadores, Analgésicos Básicos e AINEs
+   Nitroprussiato, Nitroglicerina, Dipirona, Paracetamol, Cetoprofeno
+   BUILD 356 — 3 entradas / 5 pares
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── NITRATOS E VASODILATADORES DIRETOS (Nipride e Tridil) ── */
+  "$classe_nitratos_diretos": {
+    "$classe_inibidores_pde5": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CHOQUE IRREVERSÍVEL (Sinergismo GMPc Letal). Nitratos (Tridil/Nipride) enchem a musculatura do vaso de GMP cíclico, o mensageiro da vasodilatação. Os medicamentos para disfunção erétil (Sildenafila/Viagra, Tadalafila/Cialis) impedem a enzima Fosfodiesterase-5 (PDE5) de destruir esse GMPc. Juntos, os vasos dilatam ao máximo e a pressão arterial do paciente despenca até parar o coração, não respondendo a Adrenalina ou Noradrenalina.",
+        es: "CHOQUE IRREVERSIBLE (Sinergismo GMPc Letal). Nitratos (Tridil/Nipride) llenan la musculatura del vaso de GMP cíclico, el mensajero de vasodilatación. Los medicamentos para disfunción eréctil (Sildenafilo/Viagra, Tadalafilo) impiden a la enzima Fosfodiesterasa-5 (PDE5) destruir este GMPc. Juntos, los vasos dilatan al máximo y la presión arterial se desploma hasta parar el corazón, no respondiendo a Adrenalina o Noradrenalina."
+      },
+      conduta: {
+        pt: "REGRA DE EMERGÊNCIA GLOBAL: É PROIBIDO prescrever Nitroglicerina, Nipride ou Isossorbida se o homem relatar uso de Sildenafila (Viagra) nas últimas 24 horas ou Tadalafila nas últimas 48 horas. Se ele infartar agora, não usar nitratos.",
+        es: "REGLA DE EMERGENCIA GLOBAL: ES PROHIBIDO prescribir Nitroglicerina, Nipride o Isosorbida si el hombre relata uso de Sildenafilo (Viagra) en las últimas 24 horas o Tadalafilo en las últimas 48 horas. Si se infarta ahora, no usar nitratos."
+      }
+    }
+  },
+
+  /* ── PARACETAMOL ── */
+  "paracetamol": {
+    "alcool_etilico": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INFERNO HEPÁTICO. O álcool consumido cronicamente 'hipertrofia' a enzima CYP2E1 no fígado. Quando o paciente alcoolizado (ou bebedor diário crônico) toma doses comuns de paracetamol (ex: curar a ressaca), essa enzima super ativada converte quase todo o paracetamol no metabólito venenoso (NAPQI), causando falência hepática com uma dosagem que seria inofensiva num fígado virgem.",
+        es: "INFIERNO HEPÁTICO. El alcohol consumido crónicamente 'hipertrofia' la enzima CYP2E1 en el hígado. Cuando el paciente alcoholizado (o bebedor diario crónico) toma dosis comunes de paracetamol (ej: curar la resaca), esta enzima súper activada convierte casi todo el paracetamol en el metabolito venenoso (NAPQI), causando fallo hepático con una dosis que sería inofensiva en un hígado virgen."
+      },
+      conduta: {
+        pt: "Limitar agressivamente o uso de paracetamol para no máximo 2 gramas/dia em usuários crônicos de álcool. Orientar nunca misturar em 'ressacas'.",
+        es: "Limitar agresivamente el uso de paracetamol a un máximo de 2 gramos/día en usuarios crónicos de alcohol. Orientar a nunca mezclar en 'resacas'."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Mesma via do álcool. Drogas como Fenitoína e Fenobarbital turbinam a destruição do paracetamol para vias tóxicas. Reduz a janela de segurança terapêutica do analgésico.",
+        es: "Misma vía del alcohol. Drogas como Fenitoína y Fenobarbital aceleran la destrucción del paracetamol hacia vías tóxicas. Reduce la ventana de seguridad terapéutica del analgésico."
+      },
+      conduta: {
+        pt: "Usar com cautela prolongada em epiléticos e não exceder a dose nominal.",
+        es: "Usar con precaución prolongada en epilépticos y no exceder la dosis nominal."
+      }
+    }
+  },
+
+  /* ── AINEs — TRÍPLICE MORTAL + ISRS ── */
+  "$classe_aines": {
+    "interacao_triplice_renal": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A TRÍPLICE MORTAL (TRIPLE WHAMMY). Os rins dependem das Prostaglandinas para abrir a torneira de entrada de sangue (Arteríola Aferente) e dependem da Angiotensina para fechar a torneira de saída (Arteríola Eferente) para manter a pressão interna e filtrar urina. O AINE desliga as Prostaglandinas (fecha a entrada de sangue). O IECA/BRA (Losartana, Enalapril) desliga a Angiotensina (abre a saída, vazando a pressão). E o Diurético (Furosemida) rouba o volume de água total do corpo. RESULTADO: O rim seca instantaneamente por falta de pressão e sangue, gerando Insuficiência Renal Aguda que pode exigir diálise permanente.",
+        es: "LA TRIPLE MORTAL (TRIPLE WHAMMY). Los riñones dependen de las Prostaglandinas para abrir la llave de entrada de sangre (Arteriola Aferente) y de la Angiotensina para cerrar la llave de salida (Arteriola Eferente) para mantener la presión interna y filtrar orina. El AINE apaga las Prostaglandinas (cierra la entrada). El IECA/ARAII (Losartán, Enalapril) apaga la Angiotensina (abre la salida, fugando presión). Y el Diurético roba volumen. RESULTADO: El riñón se seca instantáneamente por falta de presión, generando Insuficiencia Renal Aguda que puede exigir diálisis permanente."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO PRÁTICA. JAMAIS prescrever Diclofenaco/Cetoprofeno no PA para idosos hipertensos em uso de IECA+Diurético. Use Dipirona, Paracetamol, Tramadol ou opioides puros.",
+        es: "CONTRAINDICACIÓN PRÁCTICA. JAMÁS prescribir Diclofenaco/Ketoprofeno en Urgencias para ancianos hipertensos en uso de IECA+Diurético. Use Metamizol, Paracetamol, Tramadol u opioides puros."
+      }
+    },
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Aumento Sinérgico de Sangramento Oculto. As plaquetas dependem da serotonina absorvida do sangue para se ativarem e causarem o tampão hemostático. Os antidepressivos (Fluoxetina, Sertralina, Venlafaxina) impedem a plaqueta de pegar a serotonina, deixando a plaqueta 'meio fraca'. O AINE desliga a COX da plaqueta, deixando ela totalmente inativa. O uso de ambos aumenta de 3 a 5 vezes o risco de hemorragias gástricas.",
+        es: "Aumento Sinérgico de Sangrado Oculto. Las plaquetas dependen de la serotonina absorbida de la sangre para activarse. Los antidepresivos (Fluoxetina, Sertralina) impiden a la plaqueta tomar la serotonina, dejándola 'medio débil'. El AINE apaga la COX de la plaqueta, dejándola inactiva. El uso de ambos aumenta de 3 a 5 veces el riesgo de hemorragias gástricas."
+      },
+      conduta: {
+        pt: "Alerte os pacientes usuários de antidepressivos crônicos a não usar Ibuprofeno/Diclofenaco para dores corriqueiras sem proteção (IBP), e sim analgésicos comuns.",
+        es: "Alerte a los pacientes usuarios de antidepresivos crónicos a no usar Ibuprofeno/Diclofenaco para dolores rutinarios sin protección (IBP), sino analgésicos comunes."
+      }
+    }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BUILD 358 — INFECTOLOGIA AVANÇADA
+   Quinolonas, Azitromicina/QT, Amicacina/Orelha, Cefepima Neurológica
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── QUINOLONAS (CIPROFLOXACINO / LEVOFLOXACINO) ── */
+  "$classe_quinolonas": {
+    "$classe_antiacidos_e_cations": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "QUELAÇÃO FATAL (Cimento Gástrico). Quinolonas e Tetraciclinas ligam-se quimicamente a íons divalentes e trivalentes (Cálcio, Alumínio, Magnésio, Zinco, Ferro). Se o paciente tomar o comprimido de Ciprofloxacino/Levofloxacino junto com Leite (Cálcio), Antiácidos (Mylanta/Pepsamar) ou Sulfato Ferroso, o antibiótico formará um complexo pedregoso no estômago, reduzindo a absorção para QUASE ZERO. A pneumonia ou infecção urinária não será tratada.",
+        es: "QUELACIÓN FATAL (Cemento Gástrico). Quinolonas y Tetraciclinas se unen químicamente a iones divalentes y trivalentes (Calcio, Aluminio, Magnesio, Zinc, Hierro). Si el paciente toma el comprimido junto con Leche (Calcio), Antiácidos o Sulfato Ferroso, el antibiótico formará un complejo en el estómago, reduciendo la absorción a CASI CERO. La infección no será tratada."
+      },
+      conduta: {
+        pt: "Obrigatório separar a tomada do antibiótico em NO MÍNIMO 2 horas ANTES ou 6 horas DEPOIS de leite, antiácidos, complexos vitamínicos e sulfato ferroso.",
+        es: "Obligatorio separar la toma del antibiótico en AL MENOS 2 horas ANTES o 6 horas DESPUÉS de leche, antiácidos, complejos vitamínicos y sulfato ferroso."
+      }
+    },
+    "$classe_corticosteroides": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "RUPTURA TENDÍNEA AGUDA. Ambos os fármacos destroem ativamente as fibras de colágeno, inibindo a tenócito-reparação. A prescrição simultânea de Quinolonas com Glicocorticoides sistêmicos (ex: Prednisona, Dexametasona) multiplica em 46 vezes o risco de ruptura espontânea do Tendão de Aquiles, especialmente em pacientes acima de 60 anos.",
+        es: "RUPTURA TENDINOSA AGUDA. Ambos fármacos destruyen activamente las fibras de colágeno. La prescripción simultánea de Quinolonas con Glucocorticoides sistémicos (ej: Prednisona) multiplica en 46 veces el riesgo de ruptura espontánea del Tendón de Aquiles, especialmente en pacientes mayores de 60 años."
+      },
+      conduta: {
+        pt: "Evitar completamente a prescrição de Cipro/Levofloxacino para idosos que fazem uso contínuo de corticoides (ex: asma crônica/reumatologia). Escolher outro antibiótico (ex: Ceftriaxona).",
+        es: "Evitar completamente la prescripción de Cipro/Levofloxacino para ancianos que hacen uso continuo de corticoides. Elegir otro antibiótico (ej: Ceftriaxona)."
+      }
+    }
+  },
+
+  /* ── CEFEPIMA ── */
+  "cefepima": {
+    "interacao_neurologica_marcador": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "AVISO FARMACOCINÉTICO LETAL: A Cefepima possui uma característica infeliz entre as cefalosporinas. Ela cruza a barreira hematoencefálica ativamente e antagoniza os receptores inibitórios GABA-A no cérebro. Se os rins falharem e a dose não for reduzida pela METADE, a concentração cerebral dispara. O paciente evolui para Estado de Mal Epiléptico Não-Convulsivo, entra em coma inexplicável e sofre abalos musculares profundos (Mioclonias). A letalidade do não ajuste é severa.",
+        es: "AVISO FARMACOCINÉTICO LETAL: La Cefepima cruza la barrera hematoencefálica activamente y antagoniza los receptores inhibitorios GABA-A en el cerebro. Si los riñones fallan y la dosis no se reduce a la MITAD, la concentración cerebral se dispara. El paciente evoluciona a Estado de Mal Epiléptico No Convulsivo y entra en coma inexplicable."
+      },
+      conduta: {
+        pt: "O ajuste pelo Clearance de Creatinina diário é uma regra de ouro imutável. Se o paciente sob cefepime rebaixar a consciência sem foco aparente ou apresentar tremores faciais, SUSPENDA a cefepime IMEDIATAMENTE (e prescreva antiepilépticos/diálise se o coma não reverter).",
+        es: "El ajuste por el Clearance de Creatinina diario es una regla de oro inmutable. Si el paciente bajo cefepime baja la consciencia sin foco aparente o presenta temblores faciales, SUSPENDA la cefepima INMEDIATAMENTE."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     TIGECICLINA
+     BUILD 360 (2026-07-08): tigeciclina → varfarina
+  ───────────────────────────────────────────────────────────── */
+  "tigeciclina": {
+    "varfarina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A Tigeciclina diminui o clearance metabólico da Varfarina no fígado de forma secundária, mas o seu principal risco é induzir hipofibrinogenemia (destruição do fibrinogênio do sangue). Isso soma-se à falta de fatores de coagulação da Varfarina, gerando um prolongamento imprevisível do TAP e risco crítico de hemorragias.",
+        es: "La Tigeciclina disminuye el clearance metabólico de la Warfarina en el hígado de forma secundaria, pero su principal riesgo es inducir hipofibrinogenemia. Esto se suma a la falta de factores de coagulación de la Warfarina, generando un riesgo crítico de hemorragias."
+      },
+      conduta: {
+        pt: "Monitorar o Coagulograma (TAP/RNI e Fibrinogênio plasmático) a cada 48 horas caso as duas medicações sejam feitas juntas em pacientes graves na UTI.",
+        es: "Monitorear el Coagulograma (TAP/RNI y Fibrinógeno plasmático) cada 48 horas si las dos medicaciones se hacen juntas en pacientes graves en la UCI."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     CLINDAMICINA
+     BUILD 360 (2026-07-08): clindamicina → $classe_bnm_adespolarizantes
+  ───────────────────────────────────────────────────────────── */
+  "clindamicina": {
+    "$classe_bnm_adespolarizantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "POTENCIALIZAÇÃO DE BLOQUEIO NEUROMUSCULAR. A Clindamicina atua deprimindo diretamente as terminações nervosas pré e pós-sinápticas. Durante cirurgias (onde a droga é comum na ortopedia para cobrir MRSA do osso), ela soma-se agressivamente aos bloqueadores neuromusculares (Rocurônio, Atracúrio), prolongando a paralisia do músculo diafragma.",
+        es: "POTENCIACIÓN DE BLOQUEO NEUROMUSCULAR. La Clindamicina actúa deprimiendo directamente las terminaciones nerviosas. Durante cirugías, se suma agresivamente a los bloqueadores neuromusculares, prolongando la parálisis del músculo diafragma."
+      },
+      conduta: {
+        pt: "Monitoramento com monitor de bloqueio (TOF). O anestesiologista deve estar ciente de que o paciente pode falhar a extubação ou exigir doses extras de Sugamadex/Neostigmina para acordar a musculatura.",
+        es: "Monitorización con monitor de bloqueo (TOF). El anestesiólogo debe estar consciente de que el paciente puede fallar la extubación o exigir dosis extras de Sugammadex/Neostigmina."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     QUETIAPINA
+     BUILD 362 (2026-07-08): quetiapina → amiodarona · $classe_hipotensores
+  ───────────────────────────────────────────────────────────── */
+  "quetiapina": {
+    "amiodarona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SOMA DE PROLONGAMENTO DO QT. A Quetiapina alonga o tempo de recarga elétrica do coração (Intervalo QTc). A Amiodarona faz o mesmo de forma profunda e persistente (meia-vida de semanas). O uso concomitante cria um ambiente perfeito para o surgimento da arritmia fatal Torsades de Pointes no paciente que internou na UTI com delirium + arritmia.",
+        es: "SUMA DE PROLONGACIÓN DEL QT. La Quetiapina alarga el tiempo de recarga eléctrica del corazón (Intervalo QTc). La Amiodarona hace lo mismo de forma profunda y persistente (vida media de semanas). El uso concomitante crea un ambiente perfecto para el surgimiento de la arritmia fatal Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Evitar a associação se o QTc basal for > 450 ms. Se necessário controlar a agitação de um paciente já usando amiodarona, preferir Dexmedetomidina (Precedex) ou Propofol. Monitorar ECG contínuo se uso inevitável.",
+        es: "Evitar la asociación si el QTc basal es > 450 ms. Si es necesario controlar la agitación de un paciente ya usando amiodarona, preferir Dexmedetomidina (Precedex) o Propofol. Monitorar ECG continuo si uso inevitable."
+      }
+    },
+    "$classe_hipotensores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A Quetiapina bloqueia muito bem os receptores Alfa-1 nos vasos sanguíneos, inibindo a vasoconstrição natural do corpo ao levantar-se (causando hipotensão ortostática aguda). Se o idoso usar remédios para pressão (Losartana, Anlodipino, Enalapril), o risco de síncope (desmaio), queda e fratura de fêmur à noite é altíssimo.",
+        es: "La Quetiapina bloquea muy bien los receptores Alfa-1 en los vasos sanguíneos, inhibiendo la vasoconstricción natural del cuerpo al levantarse. Si el anciano usa remedios para la presión (Losartán, Amlodipino, Enalapril), el riesgo de síncope, caída y fractura de fémur por la noche es altísimo."
+      },
+      conduta: {
+        pt: "Orientar o paciente/enfermagem a levantar-se em etapas lentas na primeira semana de uso de Quetiapina. Monitorar pressão arterial na posição ortostática. Reduzir doses de anti-hipertensivos se necessário.",
+        es: "Orientar al paciente/enfermería a levantarse en etapas lentas en la primera semana de uso de Quetiapina. Monitorizar presión arterial en posición ortostática. Reducir dosis de antihipertensivos si necesario."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     PROMETAZINA
+     BUILD 362 (2026-07-08): prometazina → adrenalina · $classe_sedativos_gaba
+  ───────────────────────────────────────────────────────────── */
+  "prometazina": {
+    "adrenalina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "REVERSÃO VASOMOTORA DA EPINEFRINA (Efeito Paradóxico). A Prometazina possui forte atividade bloqueadora Alfa-1. Se um paciente chocado tomar Prometazina e depois receber Adrenalina para subir a pressão, o efeito Alfa da Adrenalina estará bloqueado. A adrenalina atuará apenas no Beta-2 (vasodilatação periférica), fazendo a pressão do paciente CAIR AINDA MAIS em vez de subir.",
+        es: "REVERSIÓN VASOMOTORA DE LA EPINEFRINA (Efecto Paradójico). La Prometazina posee fuerte actividad bloqueadora Alfa-1. Si un paciente en choque recibe Prometazina y luego Adrenalina para subir la presión, el efecto Alfa de la Adrenalina estará bloqueado. La adrenalina actuará solo en el Beta-2 (vasodilatación periférica), haciendo que la presión CAIGA AÚN MÁS."
+      },
+      conduta: {
+        pt: "Na anafilaxia severa com hipotensão (Choque anafilático), administrar a Adrenalina PRIMEIRO. Reservar a Prometazina apenas para controle de sintomas secundários (coceira/urticária) quando a pressão já estiver estabilizada. Se necessitar de vasopressor adicional, preferir Noradrenalina.",
+        es: "En la anafilaxia severa con hipotensión, administrar la Adrenalina PRIMERO. Reservar la Prometazina solo para el control de síntomas secundarios (picor/urticaria) cuando la presión ya esté estabilizada. Si necesita vasopresor adicional, preferir Noradrenalina."
+      }
+    },
+    "$classe_sedativos_gaba": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "COMA IATROGÊNICO. A Prometazina é um sedativo monstruoso do sistema nervoso central por via histaminérgica e anticolinérgica. Somada a Midazolam, Propofol, Morfina ou Álcool, o paciente entra em letargia profunda com depressão respiratória não intencional e risco real de parada respiratória na enfermaria.",
+        es: "COMA IATROGÉNICO. La Prometazina es un sedante monstruoso del sistema nervioso central por vía histaminérgica y anticolinérgica. Sumada a Midazolam, Propofol, Morfina o Alcohol, el paciente entra en letargo profundo con depresión respiratoria no intencional y riesgo real de paro respiratorio en sala."
+      },
+      conduta: {
+        pt: "O uso da Prometazina como antiemético ou calmante no pré/pós-operatório exige redução imediata da dose de opioides (em pelo menos 30 a 50%) para evitar que o paciente pare de respirar. Ter Naloxona (Narcan) disponível à beira-leito.",
+        es: "El uso de la Prometazina como antiemético o calmante en el pre/posoperatorio exige reducción inmediata de la dosis de opioides (en al menos 30 a 50%) para evitar que el paciente deje de respirar. Tener Naloxona (Narcan) disponible a la cabecera."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     $CLASSE_CORTICOSTEROIDES_PULSOTERAPIA
+     BUILD 362 (2026-07-08): metilprednisolona/corticosteroides → furosemida
+  ───────────────────────────────────────────────────────────── */
+  "$classe_corticosteroides_pulsoterapia": {
+    "furosemida": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "DEPLETAMENTO DE POTÁSSIO SEVERO. Altas doses de Metilprednisolona e Hidrocortisona possuem efeito mineralocorticoide residual que estimula a expulsão de potássio na urina (mecanismo aldosterona-like). A Furosemida já causa intensa hipocalemia naturalmente. Em ambiente de UTI, o potássio plasmático pode cair abaixo de 2,5 mEq/L, deflagrando fraqueza muscular respiratória e arritmias malignas.",
+        es: "DEPLETAMIENTO DE POTASIO SEVERO. Altas dosis de Metilprednisolona e Hidrocortisona poseen efecto mineralocorticoide residual que estimula la expulsión de potasio en la orina. La Furosemida ya causa intensa hipopotasemia naturalmente. En UCI, el potasio plasmático puede caer por debajo de 2,5 mEq/L, desencadenando arritmias malignas."
+      },
+      conduta: {
+        pt: "Monitorar eletrólitos de 12 em 12 horas durante a Pulsoterapia se o paciente for usuário de diuréticos de alça. Repor Cloreto de Potássio (KCl) agressivamente via endovenosa. Considerar suplementação de Magnésio concomitante.",
+        es: "Monitorizar electrolitos cada 12 horas durante la Pulsoterapia si el paciente es usuario de diuréticos de asa. Reponer Cloruro de Potasio (KCl) agresivamente vía endovenosa. Considerar suplementación de Magnesio concomitante."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB */
+}; /* fim INTERACOES_DB — BUILD 362 Lote 8 (Analgésicos/Sedação Atípica/Alergia: cetorolaco+IECA·BRA · quetiapina · prometazina · corticosteroides_pulsoterapia) */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

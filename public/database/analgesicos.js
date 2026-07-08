@@ -1973,4 +1973,862 @@
 
   }); /* fim Object.assign ANALGESICOS_DRUGS_DB — Grupo 10 (etanercepte — ativo) */
 
+/* ─── GRUPO 11 — Analgésicos Opioides Atípicos ───────────────────────
+   BUILD 326 Lote 1: metadona · codeina · tramadol · nalbufina · oxicodona
+   category: 'analgesia'
+──────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+  if (typeof window.ANALGESICOS_DRUGS_DB !== 'object' || Array.isArray(window.ANALGESICOS_DRUGS_DB)) {
+    window.ANALGESICOS_DRUGS_DB = {};
+  }
+  Object.assign(window.ANALGESICOS_DRUGS_DB, {
+
+/* ── METADONA ───────────────────────────────────────────────────────── */
+    "metadona": {
+      name: { pt: 'Metadona', es: 'Metadona' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Forte Sintético (Agonista Mu / Antagonista NMDA)', es: 'Analgésico Opioide Fuerte Sintético (Agonista Mu / Antagonista NMDA)' },
+      indications: {
+        pt: ['Dor crônica refratária severa e dor oncológica', 'Dor neuropática (devido à ação NMDA)', 'Desmame de opioides na UTI e tratamento de dependência química'],
+        es: ['Dolor crónico refractario severo y dolor oncológico', 'Dolor neuropático (debido a la acción NMDA)', 'Destete de opioides en la UCI y tratamiento de dependencia química']
+      },
+      commercialNames: { br: ['Mythedone'], ar: ['Metadona'] },
+      presentation: { pt: ['Comprimidos 5 mg, 10 mg', 'Ampolas IV/SC 10 mg/mL'], es: ['Comprimidos 5 mg, 10 mg', 'Ampollas IV/SC 10 mg/mL'] },
+      mechanism: {
+        pt: 'Mecanismo triplo excepcional: 1) Agonista potente dos receptores Mu; 2) Antagonista do receptor NMDA (bloqueia o glutamato, o que reduz a tolerância ao opioide e alivia dor neuropática); 3) Inibe a recaptação de serotonina e noradrenalina. Possui uma meia-vida plasmática brutalmente longa e imprevisível (15 a 60 horas), que não coincide com sua analgesia (que dura apenas 6 a 8 horas).',
+        es: 'Mecanismo triple excepcional: 1) Agonista potente de los receptores Mu; 2) Antagonista del receptor NMDA (bloquea el glutamato, lo que reduce la tolerancia al opioide y alivia dolor neuropático); 3) Inhibe la recaptación de serotonina y noradrenalina. Posee una vida media plasmática brutalmente larga e impredecible (15 a 60 horas), que no coincide con su analgesia (que dura solo 6 a 8 horas).'
+      },
+      dose: {
+        adult: {
+          pt: 'Dor: 2,5 a 10 mg VO a cada 8h ou 12h. A titulação deve ser EXTREMAMENTE LENTA (aguardar 5 a 7 dias para ajustar a dose, tempo para atingir o steady-state).',
+          es: 'Dolor: 2,5 a 10 mg VO cada 8h o 12h. La titulación debe ser EXTREMADAMENTE LENTA (esperar 5 a 7 días para ajustar la dosis, tiempo para alcanzar el steady-state).'
+        },
+        pediatric: {
+          pt: 'Uso complexo. Desmame em UTI pediátrica guiado por especialista (geralmente 0,05 a 0,1 mg/kg/dose).',
+          es: 'Uso complejo. Destete en UCI pediátrica guiado por especialista (generalmente 0,05 a 0,1 mg/kg/dosis).'
+        }
+      },
+      administration: { pt: ['Via Oral tem altíssima biodisponibilidade (quase 80%).', 'Evitar uso endovenoso intermitente rápido pelo risco de arritmias.'], es: ['Vía Oral tiene altísima biodisponibilidad (casi 80%).', 'Evitar uso endovenoso intermitente rápido por el riesgo de arritmias.'] },
+      renalAdjustment: { required: false, message: { pt: 'O opioide forte mais SEGURO na Doença Renal Crônica avançada, pois é depurado quase exclusivamente pelas fezes.', es: 'El opioide fuerte más SEGURO en la Enfermedad Renal Crónica avanzada, pues se depura casi exclusivamente por las heces.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolismo hepático intenso (CYP3A4/CYP2B6). Evitar em insuficiência hepática grave.', es: 'Metabolismo hepático intenso (CYP3A4/CYP2B6). Evitar en insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['Constipação (menos grave que a morfina)', 'Sudorese excessiva', 'Tontura e Sedação inicial'], es: ['Constipación (menos grave que la morfina)', 'Sudoración excesiva', 'Mareo y Sedación inicial'] },
+      dangerousAdverseEffects: { pt: ['Prolongamento do Intervalo QT (risco de Torsades de Pointes / morte súbita)', 'Depressão respiratória de início TARDIO (o acúmulo ocorre após dias de uso)'], es: ['Prolongación del Intervalo QT (riesgo de Torsades de Pointes / muerte súbita)', 'Depresión respiratoria de inicio TARDÍO (la acumulación ocurre tras días de uso)'] },
+      contraindications: {
+        absolute: { pt: ['Prolongamento do QT basal (> 500 ms)'], es: ['Prolongación del QT basal (> 500 ms)'] },
+        relative: { pt: ['Histórico de arritmias ventriculares', 'Asma brônquica aguda'], es: ['Historial de arritmias ventriculares', 'Asma bronquial aguda'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'CUIDADO: A analgesia da metadona passa em 8 horas, mas o efeito depressor respiratório dura mais de 30 horas. Pacientes frequentemente pedem mais doses por dor e evoluem para parada respiratória noturna por acúmulo sistêmico.', es: 'CUIDADO: La analgesia de la metadona pasa en 8 horas, pero el efecto depresor respiratorio dura más de 30 horas. Pacientes frecuentemente piden más dosis por dolor y evolucionan a paro respiratorio nocturno por acumulación sistémica.' }
+      }
+    },
+
+/* ── CODEÍNA ────────────────────────────────────────────────────────── */
+    "codeina": {
+      name: { pt: 'Codeína', es: 'Codeína' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Fraco', es: 'Analgésico Opioide Débil' },
+      indications: {
+        pt: ['Dor aguda e crônica de intensidade leve a moderada', 'Tosse seca refratária (ação antitússica)'],
+        es: ['Dolor agudo y crónico de intensidad leve a moderada', 'Tos seca refractaria (acción antitusiva)']
+      },
+      commercialNames: { br: ['Paco (c/ Paracetamol)', 'Tylex'], ar: ['Codeína', 'Termofren C'] },
+      presentation: { pt: ['Comprimidos 30 mg (frequentemente associada a 500 mg de Paracetamol)', 'Xarope 3 mg/mL'], es: ['Comprimidos 30 mg (frecuentemente asociada a 500 mg de Paracetamol)', 'Jarabe 3 mg/mL'] },
+      mechanism: {
+        pt: 'A codeína é um PRÓ-FÁRMACO puro. Por si só, tem baixíssima afinidade pelos receptores opioides. Precisa ser convertida no fígado (pela enzima CYP2D6) no seu metabólito ativo: a MORFINA (cerca de 10% da dose é convertida). A ação supressora da tosse ocorre por ação direta no centro bulbar.',
+        es: 'La codeína es un PROFÁRMACO puro. Por sí sola, tiene bajísima afinidad por los receptores opioides. Necesita ser convertida en el hígado (por la enzima CYP2D6) en su metabolito activo: la MORFINA (cerca del 10% de la dosis se convierte). La acción supresora de la tos ocurre por acción directa en el centro bulbar.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dor: 30 a 60 mg VO a cada 6h. Antitússico: 10 a 20 mg a cada 6h.',
+          es: 'Dolor: 30 a 60 mg VO cada 6h. Antitusivo: 10 a 20 mg cada 6h.'
+        },
+        pediatric: {
+          pt: 'CONTRAINDICADA em crianças < 12 anos. Restrita e com muita cautela entre 12-18 anos.',
+          es: 'CONTRAINDICADA en niños < 12 años. Restringida y con mucha precaución entre 12-18 años.'
+        }
+      },
+      administration: { pt: ['Via oral. Pode ser tomada com ou sem alimentos.'], es: ['Vía oral. Puede ser tomada con o sin alimentos.'] },
+      renalAdjustment: { required: true, message: { pt: 'Aumentar o intervalo das doses na insuficiência renal (risco de acúmulo dos metabólitos da morfina).', es: 'Aumentar el intervalo de las dosis en la insuficiencia renal (riesgo de acumulación de los metabolitos de la morfina).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Na insuficiência hepática, a conversão para morfina pode não ocorrer, falhando a analgesia.', es: 'En la insuficiencia hepática, la conversión a morfina puede no ocurrir, fallando la analgesia.' } },
+      commonAdverseEffects: { pt: ['Constipação intestinal GRAVE', 'Tontura e sonolência leve', 'Náuseas'], es: ['Constipación intestinal GRAVE', 'Mareo y somnolencia leve', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Depressão respiratória fatal em "Metabolizadores Ultra-Rápidos" (pacientes com genética que converte quase 100% da droga em morfina)'], es: ['Depresión respiratoria fatal en "Metabolizadores Ultra-Rápidos" (pacientes con genética que convierte casi el 100% de la droga en morfina)'] },
+      contraindications: {
+        absolute: { pt: ['Crianças menores de 12 anos (risco de parada respiratória)', 'Amamentação (passa no leite materno como morfina e intoxica o bebê)'], es: ['Niños menores de 12 años (riesgo de paro respiratorio)', 'Lactancia (pasa en la leche materna como morfina e intoxica al bebé)'] },
+        relative: { pt: ['Idosos debilitados', 'Asma brônquica aguda'], es: ['Ancianos debilitados', 'Asma bronquial aguda'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: false,
+        warning: { pt: 'Atenção farmacogenética: Cerca de 10% da população branca não possui a enzima CYP2D6 (Metabolizadores Lentos). Nesses pacientes, a Codeína será um "comprimido de farinha", não causando nenhum alívio da dor.', es: 'Atención farmacogenética: Cerca del 10% de la población blanca no posee la enzima CYP2D6 (Metabolizadores Lentos). En estos pacientes, la Codeína será una "pastilla de harina", no causando ningún alivio del dolor.' }
+      }
+    },
+
+/* ── TRAMADOL ───────────────────────────────────────────────────────── */
+    "tramadol": {
+      name: { pt: 'Tramadol', es: 'Tramadol' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Fraco (Atípico)', es: 'Analgésico Opioide Débil (Atípico)' },
+      indications: {
+        pt: ['Dor aguda ou crônica de intensidade moderada a severa', 'Dores neuropáticas (adjuvante)'],
+        es: ['Dolor agudo o crónico de intensidad moderada a severa', 'Dolores neuropáticos (adyuvante)']
+      },
+      commercialNames: { br: ['Tramal', 'Sylador'], ar: ['Calmador', 'Tramadol'] },
+      presentation: { pt: ['Ampolas IV/IM/SC 50 mg/mL', 'Cápsulas/Comprimidos 50 mg, 100 mg'], es: ['Ampollas IV/IM/SC 50 mg/mL', 'Cápsulas/Comprimidos 50 mg, 100 mg'] },
+      mechanism: {
+        pt: 'Mecanismo duplo central: 1) Agonista fraco do receptor opioide Mu (a droga-mãe é fraca, mas seu metabólito hepático O-desmetiltramadol é 6 vezes mais potente); 2) Inibe a recaptação neuronal de Serotonina e Noradrenalina nas vias descendentes da dor na medula espinhal, bloqueando a transmissão do sinal doloroso. Possui menor risco de depressão respiratória que a morfina.',
+        es: 'Mecanismo doble central: 1) Agonista débil del receptor opioide Mu (la droga madre es débil, pero su metabolito hepático O-desmetiltramadol es 6 veces más potente); 2) Inhibe la recaptación neuronal de Serotonina y Noradrenalina en las vías descendentes del dolor en la médula espinal, bloqueando la transmisión de la señal dolorosa. Posee menor riesgo de depresión respiratoria que la morfina.'
+      },
+      dose: {
+        adult: {
+          pt: '50 a 100 mg VO, IV ou IM a cada 6h ou 8h (Máximo 400 mg/dia).',
+          es: '50 a 100 mg VO, IV o IM cada 6h o 8h (Máximo 400 mg/día).'
+        },
+        pediatric: {
+          pt: 'Contraindicado para < 12 anos. Excepcionalmente 1 a 2 mg/kg/dose > 12 anos.',
+          es: 'Contraindicado para < 12 años. Excepcionalmente 1 a 2 mg/kg/dosis > 12 años.'
+        }
+      },
+      administration: { pt: ['A injeção IV deve ser feita LENTAMENTE (em 2 a 3 minutos). A injeção rápida causa vômito em jato quase instantâneo.'], es: ['La inyección IV debe hacerse LENTAMENTE (en 2 a 3 minutos). La inyección rápida causa vómito en chorro casi instantáneo.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min, aumentar intervalo para 12h e limitar a 200 mg/dia.', es: 'Si ClCr < 30 mL/min, aumentar intervalo a 12h y limitar a 200 mg/día.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em cirrose grave; dependente da conversão hepática para analgesia real.', es: 'Evitar en cirrosis grave; dependiente de la conversión hepática para analgesia real.' } },
+      commonAdverseEffects: { pt: ['Náusea extrema e vômitos (muito comum)', 'Tontura e vertigem', 'Constipação e boca seca'], es: ['Náusea extrema y vómitos (muy común)', 'Mareo y vértigo', 'Constipación y boca seca'] },
+      dangerousAdverseEffects: { pt: ['Convulsões epilépticas (especialmente se limite de dose for excedido)', 'Síndrome Serotoninérgica'], es: ['Convulsiones epilépticas (especialmente si se excede el límite de dosis)', 'Síndrome Serotoninérgico'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com Epilepsia não controlada', 'Uso concomitante ou recente (14 dias) de Inibidores da MAO'], es: ['Pacientes con Epilepsia no controlada', 'Uso concomitante o reciente (14 días) de Inhibidores de la MAO'] },
+        relative: { pt: ['Uso associado com antidepressivos (risco serotoninérgico)'], es: ['Uso asociado con antidepresivos (riesgo serotoninérgico)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: false,
+        warning: { pt: 'O Tramadol BAIXA O LIMIAR CONVULSIVO da via cerebral. Nunca associe a outras drogas que também causem isso (ex: Bupropiona) sem cautela.', es: 'El Tramadol BAJA EL UMBRAL CONVULSIVO de la vía cerebral. Nunca asocie a otras drogas que también causen esto (ej: Bupropión) sin precaución.' }
+      }
+    },
+
+/* ── NALBUFINA ──────────────────────────────────────────────────────── */
+    "nalbufina": {
+      name: { pt: 'Nalbufina', es: 'Nalbufina' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Misto (Agonista-Antagonista)', es: 'Analgésico Opioide Mixto (Agonista-Antagonista)' },
+      indications: {
+        pt: ['Dor moderada a severa (especialmente pós-operatório e obstetrícia)', 'Reversão do prurido (coceira) induzido por fentanil ou morfina espinhal'],
+        es: ['Dolor moderado a severo (especialmente posoperatorio y obstetricia)', 'Reversión del prurito (picazón) inducido por fentanilo o morfina espinal']
+      },
+      commercialNames: { br: ['Nubain'], ar: ['Nubain'] },
+      presentation: { pt: ['Ampolas IV/IM/SC 10 mg/mL (1 mL)'], es: ['Ampollas IV/IM/SC 10 mg/mL (1 mL)'] },
+      mechanism: {
+        pt: 'Ação dupla e contraditória: É um potente AGONISTA dos receptores Kappa (fornecendo forte analgesia espinhal e sedação pesada), mas é um ANTAGONISTA dos receptores Mu (bloqueando a euforia e a depressão respiratória excessiva). Essa característica confere à Nalbufina um "Efeito Teto" (ceiling effect): a partir de certa dose (30mg), o aumento da droga não aprofunda a depressão respiratória.',
+        es: 'Acción doble y contradictoria: Es un potente AGONISTA de los receptores Kappa (proporcionando fuerte analgesia espinal y sedación pesada), pero es un ANTAGONISTA de los receptores Mu (bloqueando la euforia y la depresión respiratoria excesiva). Esta característica confiere a la Nalbufina un "Efecto Techo" (ceiling effect): a partir de cierta dosis (30mg), el aumento de la droga no profundiza la depresión respiratoria.'
+      },
+      dose: {
+        adult: {
+          pt: 'Analgesia: 10 a 20 mg IV, IM ou SC a cada 3 a 6 horas. Reversão de Prurido: 2,5 a 5 mg IV em pequenos bolus.',
+          es: 'Analgesia: 10 a 20 mg IV, IM o SC cada 3 a 6 horas. Reversión de Prurito: 2,5 a 5 mg IV en pequeños bolos.'
+        },
+        pediatric: {
+          pt: '0,1 a 0,2 mg/kg IV ou IM.',
+          es: '0,1 a 0,2 mg/kg IV o IM.'
+        }
+      },
+      administration: { pt: ['Injeção IV lenta.'], es: ['Inyección IV lenta.'] },
+      renalAdjustment: { required: false, message: { pt: 'Uso cauteloso, mas menos restritivo que a morfina.', es: 'Uso cauteloso, pero menos restrictivo que la morfina.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir dose em insuficiência hepática (metabolismo de primeira passagem).', es: 'Reducir dosis en insuficiencia hepática (metabolismo de primer paso).' } },
+      commonAdverseEffects: { pt: ['Sedação/Sonolência muito mais intensa que a morfina (marcador da ação Kappa)', 'Suores frios e tontura', 'Náuseas'], es: ['Sedación/Somnolencia mucho más intensa que la morfina (marcador de la acción Kappa)', 'Sudores fríos y mareos', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Efeitos dismórficos/psicomiméticos (ansiedade, alucinações, sensação de flutuação) - comum em agonistas Kappa', 'Síndrome de Abstinência induzida'], es: ['Efectos dismórficos/psicomiméticos (ansiedad, alucinaciones, sensación de flotación) - común en agonistas Kappa', 'Síndrome de Abstinencia inducida'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes cronicamente dependentes de heroína, morfina ou fentanil (desencadeará abstinência explosiva)'], es: ['Pacientes crónicamente dependientes de heroína, morfina o fentanilo (desencadenará abstinencia explosiva)'] },
+        relative: { pt: ['Transtornos psiquiátricos com histórico de psicose'], es: ['Trastornos psiquiátricos con historial de psicosis'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'Extremamente segura na obstetrícia (partos) pois cruza a placenta, mas causa pouca ou nenhuma depressão respiratória no recém-nascido graças ao seu efeito teto Mu-antagonista.', es: 'Extremamente segura en obstetricia (partos) pues cruza la placenta, pero causa poca o ninguna depresión respiratoria en el recién nacido gracias a su efecto techo Mu-antagonista.' }
+      }
+    },
+
+/* ── OXICODONA ──────────────────────────────────────────────────────── */
+    "oxicodona": {
+      name: { pt: 'Oxicodona', es: 'Oxicodona' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Forte Sintético', es: 'Analgésico Opioide Fuerte Sintético' },
+      indications: {
+        pt: ['Dor moderada a severa (especialmente pós-operatório ortopédico e câncer)', 'Dor crônica refratária'],
+        es: ['Dolor moderado a severo (especialmente posoperatorio ortopédico y cáncer)', 'Dolor crónico refractario']
+      },
+      commercialNames: { br: ['OxyContin', 'Targin (c/ Naloxona)'], ar: ['OxyContin', 'Oxicodal'] },
+      presentation: { pt: ['Comprimidos de Liberação Controlada (LC) 10 mg, 20 mg, 40 mg'], es: ['Comprimidos de Liberación Controlada (LC) 10 mg, 20 mg, 40 mg'] },
+      mechanism: {
+        pt: 'Agonista Mu e Kappa puro e muito potente. Via oral, possui uma biodisponibilidade imensamente superior à da morfina (quase 60 a 87% chegam ao sangue). É considerada 1,5 a 2 vezes mais forte que a morfina oral. Exerce excelente controle em dores viscerais e ósseas profundas.',
+        es: 'Agonista Mu y Kappa puro y muy potente. Vía oral, posee una biodisponibilidad inmensamente superior a la de la morfina (casi 60 a 87% llegan a la sangre). Es considerada 1,5 a 2 veces más fuerte que la morfina oral. Ejerce excelente control en dolores viscerales y óseos profundos.'
+      },
+      dose: {
+        adult: {
+          pt: '10 a 20 mg VO a cada 12 horas (comprimidos de ação prolongada). Pacientes já tolerantes a opioides necessitam de doses maiores.',
+          es: '10 a 20 mg VO cada 12 horas (comprimidos de acción prolongada). Pacientes ya tolerantes a opioides necesitan dosis mayores.'
+        },
+        pediatric: {
+          pt: 'Não recomendado o uso rotineiro em crianças.',
+          es: 'No recomendado el uso rutinario en niños.'
+        }
+      },
+      administration: { pt: ['Comprimidos de liberação prolongada (OxyContin) NÃO PODEM ser partidos, mastigados ou esmagados. Ingerir a pílula alterada libera toda a carga de 12 horas de uma vez, causando overdose fatal.'], es: ['Comprimidos de liberación prolongada (OxyContin) NO PUEDEN ser partidos, masticados o aplastados. Ingerir la píldora alterada libera toda la carga de 12 horas de una vez, causando sobredosis fatal.'] },
+      renalAdjustment: { required: true, message: { pt: 'Depuração diminuída. Iniciar com 1/3 a 1/2 da dose e monitorar depressão respiratória.', es: 'Depuración disminuida. Iniciar con 1/3 a 1/2 de la dosis y monitorizar depresión respiratoria.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Mesma conduta da renal; risco de acúmulo da droga ativa.', es: 'Misma conducta que la renal; riesgo de acumulación de la droga activa.' } },
+      commonAdverseEffects: { pt: ['Constipação severa (o Targin associa naloxona para agir localmente no intestino e evitar isso)', 'Sonolência pesada e sedação', 'Náusea'], es: ['Constipación severa (el Targin asocia naloxona para actuar localmente en el intestino y evitar esto)', 'Somnolencia pesada y sedación', 'Náusea'] },
+      dangerousAdverseEffects: { pt: ['Depressão respiratória grave', 'Dependência física, abuso e vício (potencial euforizante altíssimo)'], es: ['Depresión respiratoria grave', 'Dependencia física, abuso y adicción (potencial euforizante altísimo)'] },
+      contraindications: {
+        absolute: { pt: ['Asma brônquica severa em crise', 'Íleo paralítico suspeito ou documentado'], es: ['Asma bronquial severa en crisis', 'Íleo paralítico sospechoso o documentado'] },
+        relative: { pt: ['Histórico de abuso de substâncias ou alcoolismo'], es: ['Historial de abuso de sustancias o alcoholismo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'DROGA DE ABUSO: A oxicodona é a principal responsável pela epidemia de opioides moderna devido ao seu forte efeito euforizante e dependência rápida. Prescrever apenas a quantidade exata para o pós-operatório estrito.', es: 'DROGA DE ABUSO: La oxicodona es la principal responsable de la epidemia de opioides moderna debido a su fuerte efecto euforizante y dependencia rápida. Prescribir solo la cantidad exacta para el posoperatorio estricto.' }
+      }
+    }
+
+  }); /* fim Object.assign ANALGESICOS_DRUGS_DB — Grupo 11 (metadona · codeina · tramadol · nalbufina · oxicodona — BUILD 326 Lote 1) */
+
+})();
+
+/* ─── GRUPO 12 — Opioide Avançado, Anestésicos Locais e Trombolítico ─
+   BUILD 328 Lote 2: hidromorfona · buprenorfina · bupivacaina · ropivacaina · tenecteplase
+   category: 'analgesia' (hidromorfona/buprenorfina/bupivacaina/ropivacaina) | 'cardiologia' (tenecteplase)
+──────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+  if (typeof window.ANALGESICOS_DRUGS_DB !== 'object' || Array.isArray(window.ANALGESICOS_DRUGS_DB)) {
+    window.ANALGESICOS_DRUGS_DB = {};
+  }
+  Object.assign(window.ANALGESICOS_DRUGS_DB, {
+
+/* ── HIDROMORFONA ───────────────────────────────────────────────────── */
+    "hidromorfona": {
+      name: { pt: 'Hidromorfona', es: 'Hidromorfona' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Forte Sintético', es: 'Analgésico Opioide Fuerte Sintético' },
+      indications: {
+        pt: ['Dor aguda ou crônica de forte intensidade', 'Alternativa direta à Morfina em pacientes com Doença Renal Crônica', 'Manejo de dor oncológica severa'],
+        es: ['Dolor agudo o crónico de fuerte intensidad', 'Alternativa directa a la Morfina en pacientes con Enfermedad Renal Crónica', 'Manejo de dolor oncológico severo']
+      },
+      commercialNames: { br: ['Jurnista'], ar: ['Jurnista'] },
+      presentation: { pt: ['Ampolas IV/IM/SC 2 mg/mL', 'Comprimidos OROS (liberação prolongada) 8 mg, 16 mg, 32 mg'], es: ['Ampollas IV/IM/SC 2 mg/mL', 'Comprimidos OROS (liberación prolongada) 8 mg, 16 mg, 32 mg'] },
+      mechanism: {
+        pt: 'Agonista opioide Mu puro, derivado semissintético da morfina. É cerca de 5 a 7 vezes mais potente que a morfina (1 mg de hidromorfona IV = 7 mg de morfina IV). Sua grande vantagem é que seu metabolismo hepático não gera metabólitos ativos significativos (como o M6G da morfina), tornando-a muito mais segura em pacientes idosos e com falência renal, sem o risco de acúmulo neurotóxico.',
+        es: 'Agonista opioide Mu puro, derivado semisintético de la morfina. Es cerca de 5 a 7 veces más potente que la morfina (1 mg de hidromorfona IV = 7 mg de morfina IV). Su gran ventaja es que su metabolismo hepático no genera metabolitos activos significativos (como el M6G de la morfina), haciéndola mucho más segura en pacientes ancianos y con fallo renal, sin el riesgo de acumulación neurotóxica.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dor aguda: 0,2 a 1 mg IV a cada 2-3 horas (titulado conforme resposta). Uso oral (comprimido OROS): 8 mg a cada 24 horas (nunca partir o comprimido).',
+          es: 'Dolor agudo: 0,2 a 1 mg IV cada 2-3 horas (titulado según respuesta). Uso oral (comprimido OROS): 8 mg cada 24 horas (nunca partir el comprimido).'
+        },
+        pediatric: {
+          pt: '0,015 mg/kg IV a cada 4 horas.',
+          es: '0,015 mg/kg IV cada 4 horas.'
+        }
+      },
+      administration: { pt: ['Injeção IV muito lenta (2 a 3 minutos).', 'Os comprimidos de liberação osmótica (OROS) são rígidos e a casca é eliminada intacta nas fezes (avisar o paciente).'], es: ['Inyección IV muy lenta (2 a 3 minutos).', 'Los comprimidos de liberación osmótica (OROS) son rígidos y la cáscara se elimina intacta en las heces (avisar al paciente).'] },
+      renalAdjustment: { required: false, message: { pt: 'Opioide de escolha (junto com fentanil/metadona) na DRC, pois não acumula metabólitos ativos. Ajustes leves apenas por precaução.', es: 'Opioide de elección (junto con fentanilo/metadona) en ERC, pues no acumula metabolitos activos. Ajustes leves solo por precaución.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir a dose em insuficiência hepática moderada a grave.', es: 'Reducir la dosis en insuficiencia hepática moderada a grave.' } },
+      commonAdverseEffects: { pt: ['Constipação (menos náusea e prurido que a morfina)', 'Sonolência'], es: ['Constipación (menos náusea y prurito que la morfina)', 'Somnolencia'] },
+      dangerousAdverseEffects: { pt: ['Depressão respiratória grave e apneia', 'Hipotensão severa se injetado rapidamente em pacientes hipovolêmicos'], es: ['Depresión respiratoria grave y apnea', 'Hipotensión severa si se inyecta rápidamente en pacientes hipovolémicos'] },
+      contraindications: {
+        absolute: { pt: ['Depressão respiratória não monitorada', 'Asma aguda severa'], es: ['Depresión respiratoria no monitorizada', 'Asma aguda severa'] },
+        relative: { pt: ['Traumatismo craniano (aumento da PIC associado ao aumento de CO2)'], es: ['Traumatismo craneal (aumento de la PIC asociado al aumento de CO2)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'Devido à sua extrema potência em doses numericamente pequenas, erros de prescrição (confundir dose de morfina com hidromorfona) resultam em morte imediata por overdose.', es: 'Debido a su extrema potencia en dosis numéricamente pequeñas, errores de prescripción (confundir dosis de morfina con hidromorfona) resultan en muerte inmediata por sobredosis.' }
+      }
+    },
+
+/* ── BUPRENORFINA ───────────────────────────────────────────────────── */
+    "buprenorfina": {
+      name: { pt: 'Buprenorfina', es: 'Buprenorfina' },
+      category: 'analgesia',
+      class: { pt: 'Analgésico Opioide Forte (Agonista Parcial Mu)', es: 'Analgésico Opioide Fuerte (Agonista Parcial Mu)' },
+      indications: {
+        pt: ['Dor crônica oncológica e não oncológica moderada a severa', 'Tratamento de manutenção do Transtorno por Uso de Opioides (desintoxicação de heroína/fentanil)'],
+        es: ['Dolor crónico oncológico y no oncológico moderado a severo', 'Tratamiento de mantenimiento del Trastorno por Uso de Opioides (desintoxicación de heroína/fentanilo)']
+      },
+      commercialNames: { br: ['Restiva (Adesivo)', 'Temgesic'], ar: ['Suboxone', 'Restiva'] },
+      presentation: { pt: ['Adesivos transdérmicos 5, 10, 20 mcg/h', 'Comprimidos sublinguais 0,2 mg, 2 mg, 8 mg'], es: ['Parches transdérmicos 5, 10, 20 mcg/h', 'Comprimidos sublinguales 0,2 mg, 2 mg, 8 mg'] },
+      mechanism: {
+        pt: 'Possui afinidade monstruosa pelo receptor Mu, aderindo a ele mais fortemente que fentanil, morfina ou até mesmo a naloxona (antídoto). Contudo, é um AGONISTA PARCIAL (só ativa o receptor em 40-50%). Isso gera excelente analgesia de base, mas cria um "efeito teto" perfeito para a depressão respiratória (aumentar a dose não mata o paciente de asfixia).',
+        es: 'Posee afinidad monstruosa por el receptor Mu, adhiriéndose a él más fuertemente que fentanilo, morfina o incluso la naloxona (antídoto). Sin embargo, es un AGONISTA PARCIAL (solo activa el receptor en 40-50%). Esto genera excelente analgesia de base, pero crea un "efecto techo" perfecto para la depresión respiratoria (aumentar la dosis no mata al paciente de asfixia).'
+      },
+      dose: {
+        adult: {
+          pt: 'Adesivo transdérmico: Trocar a cada 7 DIAS. Uso Sublingual: 0,2 a 0,4 mg a cada 6-8 horas para dor.',
+          es: 'Parche transdérmico: Cambiar cada 7 DÍAS. Uso Sublingual: 0,2 a 0,4 mg cada 6-8 horas para dolor.'
+        },
+        pediatric: {
+          pt: 'Não recomendado rotineiramente < 18 anos fora de centros especializados.',
+          es: 'No recomendado rutinariamente < 18 años fuera de centros especializados.'
+        }
+      },
+      administration: { pt: ['Comprimidos sublinguais não devem ser mastigados nem engolidos (destruídos pelo fígado se ingeridos).', 'O adesivo age por 7 dias, deve ser colocado em pele sem pelos.'], es: ['Comprimidos sublinguales no deben ser masticados ni tragados (destruidos por el hígado si ingeridos).', 'El parche actúa por 7 días, debe ser colocado en piel sin vellos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Altamente segura. Excreção primariamente biliar/fecal. Sem ajuste na DRC.', es: 'Altamente segura. Excreción primariamente biliar/fecal. Sin ajuste en ERC.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar ou reduzir agressivamente na insuficiência hepática severa.', es: 'Evitar o reducir agresivamente en insuficiencia hepática severa.' } },
+      commonAdverseEffects: { pt: ['Náusea e Vômitos (especialmente na fase de adaptação)', 'Constipação', 'Eritema no local do adesivo'], es: ['Náusea y Vómitos (especialmente en fase de adaptación)', 'Constipación', 'Eritema en el sitio del parche'] },
+      dangerousAdverseEffects: { pt: ['Síndrome de abstinência precipitada grave (se o paciente já usar outros opioides plenos)', 'Prolongamento do intervalo QT'], es: ['Síndrome de abstinencia precipitada grave (si el paciente ya usa otros opioides plenos)', 'Prolongación del intervalo QT'] },
+      contraindications: {
+        absolute: { pt: ['Miastenia Gravis, Íleo paralítico'], es: ['Miastenia Gravis, Íleo paralítico'] },
+        relative: { pt: ['Pacientes em uso agudo de doses maciças de agonistas Mu puros (Fentanil/Morfina)'], es: ['Pacientes en uso agudo de dosis masivas de agonistas Mu puros (Fentanilo/Morfina)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Atenção Anestesistas: Se o paciente que usa buprenorfina crônica precisar de cirurgia, a morfina ou fentanil tradicionais NÃO FARÃO EFEITO, pois a buprenorfina "blinda" o receptor e não os deixa entrar. Requer técnicas analgésicas avançadas (bloqueio regional ou cetamina).', es: 'Atención Anestesiólogos: Si el paciente que usa buprenorfina crónica necesita cirugía, la morfina o fentanilo tradicionales NO HARÁN EFECTO, pues la buprenorfina "blinda" el receptor y no los deja entrar. Requiere técnicas analgésicas avanzadas (bloqueo regional o ketamina).' }
+      }
+    },
+
+/* ── BUPIVACAÍNA ────────────────────────────────────────────────────── */
+    "bupivacaina": {
+      name: { pt: 'Bupivacaína', es: 'Bupivacaína' },
+      category: 'analgesia',
+      class: { pt: 'Anestésico Local tipo Amida (Ação Longa)', es: 'Anestésico Local tipo Amida (Acción Larga)' },
+      indications: {
+        pt: ['Anestesia regional/Espinhal (Raquianestesia, Peridural)', 'Bloqueio de nervos periféricos', 'Infiltração local para analgesia pós-operatória prolongada'],
+        es: ['Anestesia regional/Espinal (Raquianestesia, Peridural)', 'Bloqueo de nervios periféricos', 'Infiltración local para analgesia posoperatoria prolongada']
+      },
+      commercialNames: { br: ['Neocaína', 'Marcaína'], ar: ['Marcaína'] },
+      presentation: { pt: ['Frascos-ampola 0,25%, 0,5% e 0,75% (com ou sem vasoconstritor/epinefrina)', 'Ampolas pesadas (hiperbáricas) para Raquianestesia'], es: ['Viales 0,25%, 0,5% y 0,75% (con o sin vasoconstrictor/epinefrina)', 'Ampollas pesadas (hiperbáricas) para Raquianestesia'] },
+      mechanism: {
+        pt: 'Bloqueia reversivelmente a condução nervosa ao diminuir a permeabilidade da membrana neuronal aos íons de SÓDIO. Possui altíssima lipofilicidade, resultando em um bloqueio anestésico e motor muito potente e de longa duração (até 6 a 8 horas). A recuperação motora costuma demorar mais do que a sensorial.',
+        es: 'Bloquea reversiblemente la conducción nerviosa al disminuir la permeabilidad de la membrana neuronal a los iones de SODIO. Posee altísima lipofilicidad, resultando en un bloqueo anestésico y motor muy potente y de larga duración (hasta 6 a 8 horas). La recuperación motora suele tardar más que la sensorial.'
+      },
+      dose: {
+        adult: {
+          pt: 'A dose varia conforme a técnica. Limite de segurança: 2,5 mg/kg (sem epinefrina) ou 3 mg/kg (com epinefrina) em um período de 4 horas.',
+          es: 'La dosis varía según la técnica. Límite de seguridad: 2,5 mg/kg (sin epinefrina) o 3 mg/kg (con epinefrina) en un período de 4 horas.'
+        },
+        pediatric: {
+          pt: 'Máximo de 2 mg/kg para infiltração.',
+          es: 'Máximo de 2 mg/kg para infiltración.'
+        }
+      },
+      administration: { pt: ['Injeção perineural, peridural ou espinhal.', 'NUNCA injetar intravascular (realizar aspiração prévia rigorosa).'], es: ['Inyección perineural, peridural o espinal.', 'NUNCA inyectar intravascular (realizar aspiración previa rigurosa).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito, mas cuidar com uremia que altera ligação proteica.', es: 'Sin necesidad de ajuste estricto, pero cuidar con uremia que altera unión proteica.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizada pelo fígado. Reduzir doses de repetição em cirróticos graves.', es: 'Metabolizada por el hígado. Reducir dosis de repetición en cirróticos graves.' } },
+      commonAdverseEffects: { pt: ['Hipotensão e bradicardia (quando usada em raquianestesia por bloqueio simpático)', 'Retenção urinária'], es: ['Hipotensión y bradicardia (cuando usada en raquianestesia por bloqueo simpático)', 'Retención urinaria'] },
+      dangerousAdverseEffects: { pt: ['TOXICIDADE SISTÊMICA DOS ANESTÉSICOS LOCAIS (LAST): Convulsões, Coma e Parada Cardíaca Refratária (Assistolia/Fibrilação Ventricular) se atingir a corrente sanguínea.'], es: ['TOXICIDAD SISTÉMICA DE LOS ANESTÉSICOS LOCALES (LAST): Convulsiones, Coma y Paro Cardíaco Refractario (Asistolia/Fibrilación Ventricular) si alcanza el torrente sanguíneo.'] },
+      contraindications: {
+        absolute: { pt: ['Injeção Intravenosa Regional (Bloqueio de Bier - uso estritamente letal)', 'Hipersensibilidade a amidas'], es: ['Inyección Intravenosa Regional (Bloqueo de Bier - uso estrictamente letal)', 'Hipersensibilidad a amidas'] },
+        relative: { pt: ['Uso da formulação 0,75% em obstetrícia peridural (proibido pela FDA por risco de PCR refratária)'], es: ['Uso de formulación 0,75% en obstetricia peridural (prohibido por la FDA por riesgo de RCP refractaria)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'ANTÍDOTO DE EMERGÊNCIA: A bupivacaína liga-se fortemente aos canais de sódio do coração, causando parada cardíaca indestrutível aos choques e epinefrina. A única salvação é a infusão imediata de EMULSÃO LIPÍDICA A 20% (Intralipid) IV, que funciona como um "dreno lipídico" puxando a bupivacaína para fora do miocárdio.', es: 'ANTÍDOTO DE EMERGENCIA: La bupivacaína se une fuertemente a los canales de sodio del corazón, causando paro cardíaco indestructible a los choques y epinefrina. La única salvación es la infusión inmediata de EMULSIÓN LIPÍDICA AL 20% (Intralipid) IV, que funciona como un "drenaje lipídico" sacando la bupivacaína del miocardio.' }
+      }
+    },
+
+/* ── ROPIVACAÍNA ────────────────────────────────────────────────────── */
+    "ropivacaina": {
+      name: { pt: 'Ropivacaína', es: 'Ropivacaína' },
+      category: 'analgesia',
+      class: { pt: 'Anestésico Local tipo Amida (Ação Longa)', es: 'Anestésico Local tipo Amida (Acción Larga)' },
+      indications: {
+        pt: ['Analgesia epidural para trabalho de parto (escolha de ouro)', 'Bloqueio de nervos periféricos', 'Infiltração local'],
+        es: ['Analgesia epidural para trabajo de parto (elección de oro)', 'Bloqueo de nervios periféricos', 'Infiltración local']
+      },
+      commercialNames: { br: ['Naropin'], ar: ['Naropin'] },
+      presentation: { pt: ['Frascos-ampola 0,2%, 0,75% e 1%'], es: ['Viales 0,2%, 0,75% y 1%'] },
+      mechanism: {
+        pt: 'Bloqueador dos canais de sódio. Estruturalmente similar à bupivacaína, mas sintetizada puramente em seu enantiômero S (-). Isso lhe confere dois grandes diferenciais de segurança: 1) É significativamente MENOS CARDIOTÓXICA que a bupivacaína em caso de injeção venosa acidental; 2) Gera um bloqueio SENSORIAL intenso (tira a dor) mas com menor bloqueio MOTOR (a gestante consegue empurrar o bebê ou andar no pós-operatório).',
+        es: 'Bloqueador de los canales de sodio. Estructuralmente similar a la bupivacaína, pero sintetizada puramente en su enantiómero S (-). Esto le confiere dos grandes diferenciales de seguridad: 1) Es significativamente MENOS CARDIOTÓXICA que la bupivacaína en caso de inyección venosa accidental; 2) Genera un bloqueo SENSORIAL intenso (quita el dolor) pero con menor bloqueo MOTOR (la gestante puede empujar al bebé o caminar en el posoperatorio).'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose máxima de segurança: 3 mg/kg. Dose e concentração variam absurdamente conforme o local de bloqueio.',
+          es: 'Dosis máxima de seguridad: 3 mg/kg. Dosis y concentración varían absurdamente según el sitio de bloqueo.'
+        },
+        pediatric: {
+          pt: 'Bloqueios caudais ou peridurais (2 a 3 mg/kg limite seguro).',
+          es: 'Bloqueos caudales o peridurales (2 a 3 mg/kg límite seguro).'
+        }
+      },
+      administration: { pt: ['Exclusivamente via regional/infiltração. JAMAIS intravenosa.'], es: ['Exclusivamente vía regional/infiltración. JAMÁS intravenosa.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizada pelo fígado CYP1A2. Exige redução em cirrose.', es: 'Metabolizada por el hígado CYP1A2. Exige reducción en cirrosis.' } },
+      commonAdverseEffects: { pt: ['Hipotensão (bloqueio simpático)', 'Náuseas e tontura', 'Parestesia na área bloqueada'], es: ['Hipotensión (bloqueo simpático)', 'Náuseas y mareos', 'Parestesia en el área bloqueada'] },
+      dangerousAdverseEffects: { pt: ['Convulsões e neurotoxicidade se atingir via IV', 'Toxicidade cardíaca (menos grave que bupivacaína, mas possível)'], es: ['Convulsiones y neurotoxicidad si alcanza vía IV', 'Toxicidad cardíaca (menos grave que bupivacaína, pero posible)'] },
+      contraindications: {
+        absolute: { pt: ['Injeção intravenosa regional', 'Hipersensibilidade a anestésicos amida'], es: ['Inyección intravenosa regional', 'Hipersensibilidad a anestésicos amida'] },
+        relative: { pt: ['Hipovolemia severa (se usado no neuro-eixo)'], es: ['Hipovolemia severa (si se usa en neuroeje)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'É a escolha perfeita (na formulação 0,2%) para o Walking Epidural (Analgesia de parto onde a mãe pode caminhar), pois preserva a força das pernas e tira as dores da contração.', es: 'Es la elección perfecta (en la formulación 0,2%) para la Epidural Ambulante (Analgesia de parto donde la madre puede caminar), pues preserva la fuerza de las piernas y quita los dolores de la contracción.' }
+      }
+    },
+
+/* ── TENECTEPLASE (AVCi / IAM) ──────────────────────────────────────── */
+    "tenecteplase": {
+      name: { pt: 'Tenecteplase', es: 'Tenecteplasa' },
+      category: 'cardiologia',
+      class: { pt: 'Fibrinolítico / Trombolítico de 3ª Geração', es: 'Fibrinolítico / Trombolítico de 3ª Generación' },
+      indications: {
+        pt: ['Infarto Agudo do Miocárdio com Supradesnivelamento de ST (IAMCSST) se intervenção percutânea (cateterismo) indisponível em < 120 min', 'Acidente Vascular Cerebral Isquêmico (AVCi) Agudo nas primeiras 4,5 horas (substituindo a Alteplase em muitos protocolos mundiais)'],
+        es: ['Infarto Agudo de Miocardio con Elevación del ST (IAMCEST) si intervención percutánea (cateterismo) indisponible en < 120 min', 'Accidente Cerebrovascular Isquémico (ACVi) Agudo en las primeras 4,5 horas (sustituyendo a la Alteplasa en muchos protocolos mundiales)']
+      },
+      commercialNames: { br: ['Metalyse'], ar: ['Metalyse'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 40 mg, 50 mg (com seringa preenchida com diluente)'], es: ['Vial liofilizado 40 mg, 50 mg (con jeringa prellenada con diluyente)'] },
+      mechanism: {
+        pt: 'Ativador do plasminogênio tecidual recombinante mutante (r-tPA). Possui a mais alta especificidade pela FIBRINA (só age onde o coágulo está formado) e alta resistência à degradação pelo inibidor PAI-1. Ele converte o plasminogênio aprisionado no trombo em plasmina, que dissolve agressivamente a rede de fibrina, desobstruindo a artéria coronária ou cerebral. Graças à sua meia-vida longa, pode ser dado em bolus ÚNICO de 5 segundos.',
+        es: 'Activador del plasminógeno tisular recombinante mutante (r-tPA). Posee la más alta especificidad por la FIBRINA (solo actúa donde está formado el coágulo) y alta resistencia a la degradación por el inhibidor PAI-1. Convierte el plasminógeno atrapado en el trombo en plasmina, que disuelve agresivamente la red de fibrina, desobstruyendo la arteria coronaria o cerebral. Gracias a su vida media larga, se puede dar en bolo ÚNICO de 5 segundos.'
+      },
+      dose: {
+        adult: {
+          pt: 'IAM: Ajustado pelo peso. (Ex: <60kg=30mg; 70kg=35mg; 80kg=40mg; 90kg=45mg; >90kg=50mg). AVCi: 0,25 mg/kg IV (Dose máxima de 25 mg - ATENÇÃO: a dose do AVCi é quase METADE da dose do Infarto).',
+          es: 'IAM: Ajustado por peso. (Ej: <60kg=30mg; 70kg=35mg; 80kg=40mg; 90kg=45mg; >90kg=50mg). ACVi: 0,25 mg/kg IV (Dosis máxima de 25 mg - ATENCIÓN: la dosis del ACVi es casi la MITAD de la dosis del Infarto).'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Bolus IV direto RÁPIDO, em torno de 5 a 10 segundos. Lavar o acesso venoso com SF 0,9% antes e depois.'], es: ['Bolo IV directo RÁPIDO, en torno de 5 a 10 segundos. Lavar el acceso venoso con SF 0,9% antes y después.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste (metabolismo plasmático e hepático).', es: 'Sin necesidad de ajuste (metabolismo plasmático y hepático).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Risco de sangramento catastrófico aumenta em cirrose/coagulopatia grave basal.', es: 'Riesgo de sangrado catastrófico aumenta en cirrosis/coagulopatía grave basal.' } },
+      commonAdverseEffects: { pt: ['Sangramento de acesso venoso ou gengiva', 'Hipotensão transitória', 'Arritmias de reperfusão (ex: RIVA) quando o vaso abre'], es: ['Sangrado de acceso venoso o encía', 'Hipotensión transitoria', 'Arritmias de reperfusión (ej: RIVA) cuando el vaso abre'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia Intracraniana (HIC) fatal', 'Hemorragia gastrointestinal grave', 'Angioedema orolingual (raro)'], es: ['Hemorragia Intracraneal (HIC) fatal', 'Hemorragia gastrointestinal grave', 'Angioedema orolingual (raro)'] },
+      contraindications: {
+        absolute: { pt: ['Hemorragia intracraniana prévia', 'Sangramento ativo interno', 'Cirurgia craniana/espinhal nos últimos 3 meses', 'PA sistólica > 185 mmHg no AVCi (precisa abaixar a PA antes)'], es: ['Hemorragia intracraneal previa', 'Sangrado activo interno', 'Cirugía craneal/espinal en los últimos 3 meses', 'PA sistólica > 185 mmHg en ACVi (necesita bajar la PA antes)'] },
+        relative: { pt: ['Uso ativo de anticoagulantes orais (DOACs ou Varfarina com INR > 1.7)', 'Cirurgia de grande porte nos últimos 14 dias'], es: ['Uso activo de anticoagulantes orales (DOACs o Warfarina con INR > 1.7)', 'Cirugía mayor en los últimos 14 días'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ERRO FATAL NA EMERGÊNCIA: A dosagem para AVC isquêmico (0,25 mg/kg) é muito inferior à do Infarto do Miocárdio (0,5 mg/kg). Aplicar a dose do infarto no AVC causará explosão hemorrágica cerebral e morte imediata.', es: 'ERROR FATAL EN EMERGENCIA: La dosis para ACV isquémico (0,25 mg/kg) es muy inferior a la del Infarto de Miocardio (0,5 mg/kg). Aplicar la dosis del infarto en el ACV causará explosión hemorrágica cerebral y muerte inmediata.' }
+      }
+    }
+
+  }); /* fim Object.assign ANALGESICOS_DRUGS_DB — Grupo 12 (hidromorfona · buprenorfina · bupivacaina · ropivacaina · tenecteplase — BUILD 328 Lote 2) */
+
+})();
+
+/* ─── GRUPO 13 — Cardiologia Crítica e Hemodinâmica ─────────────────
+   BUILD 330 Lote 3: alteplase · levosimendana · isoproterenol · esmolol · metoprolol_iv
+   category: 'cardiologia'
+──────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+  if (typeof window.ANALGESICOS_DRUGS_DB !== 'object' || Array.isArray(window.ANALGESICOS_DRUGS_DB)) {
+    window.ANALGESICOS_DRUGS_DB = {};
+  }
+  Object.assign(window.ANALGESICOS_DRUGS_DB, {
+
+/* ── ALTEPLASE (rt-PA) ──────────────────────────────────────────────── */
+    "alteplase": {
+      name: { pt: 'Alteplase', es: 'Alteplasa' },
+      category: 'cardiologia',
+      class: { pt: 'Fibrinolítico / Ativador do Plasminogênio Tecidual (t-PA)', es: 'Fibrinolítico / Activador del Plasminógeno Tisular (t-PA)' },
+      indications: {
+        pt: ['Tromboembolismo Pulmonar (TEP) Maciço com instabilidade hemodinâmica', 'Acidente Vascular Cerebral Isquêmico (AVCi) Agudo (< 4,5h)', 'IAMCSST (quando Tenecteplase indisponível)'],
+        es: ['Tromboembolismo Pulmonar (TEP) Masivo con inestabilidad hemodinámica', 'Accidente Cerebrovascular Isquémico (ACVi) Agudo (< 4,5h)', 'IAMCEST (cuando Tenecteplasa indisponible)']
+      },
+      commercialNames: { br: ['Actilyse'], ar: ['Actilyse'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 50 mg (com diluente)'], es: ['Vial liofilizado 50 mg (con diluyente)'] },
+      mechanism: {
+        pt: 'Enzima glicoproteica recombinante idêntica ao t-PA humano. Liga-se à fibrina no coágulo (ação trombo-específica) e converte o plasminogênio aprisionado em plasmina. A plasmina, por sua vez, "corta" e dissolve a rede de fibrina, desmanchando o trombo estrutural. Possui meia-vida muito curta (5 minutos), exigindo infusão contínua após o bolus inicial.',
+        es: 'Enzima glucoproteica recombinante idéntica al t-PA humano. Se une a la fibrina en el coágulo (acción trombo-específica) y convierte el plasminógeno atrapado en plasmina. La plasmina, a su vez, "corta" y disuelve la red de fibrina, deshaciendo el trombo estructural. Posee vida media muy corta (5 minutos), exigiendo infusión continua tras el bolo inicial.'
+      },
+      dose: {
+        adult: {
+          pt: 'TEP Maciço: 100 mg IV ao longo de 2 horas (ou 0,6 mg/kg em bolus em parada cardíaca). AVCi: 0,9 mg/kg IV (máx 90mg) -> 10% da dose em bolus de 1 min e 90% em bomba por 60 min.',
+          es: 'TEP Masivo: 100 mg IV a lo largo de 2 horas (o 0,6 mg/kg en bolo en paro cardíaco). ACVi: 0,9 mg/kg IV (máx 90mg) -> 10% de la dosis en bolo de 1 min y 90% en bomba por 60 min.'
+        },
+        pediatric: {
+          pt: 'Uso excepcional em tromboses massivas (0,1 a 0,5 mg/kg/h).',
+          es: 'Uso excepcional en trombosis masivas (0,1 a 0,5 mg/kg/h).'
+        }
+      },
+      administration: { pt: ['Bomba de Infusão Contínua estrita para a fase de manutenção.', 'Evitar punções venosas ou arteriais não compressíveis (ex: jugular, subclávia) após o início da infusão.'], es: ['Bomba de Infusión Continua estricta para la fase de mantenimiento.', 'Evitar punciones venosas o arteriales no compresibles (ej: yugular, subclavia) tras el inicio de la infusión.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em doença hepática severa com coagulopatia ativa.', es: 'Evitar en enfermedad hepática severa con coagulopatía activa.' } },
+      commonAdverseEffects: { pt: ['Sangramento superficial (gengiva, sítios de punção)', 'Equimoses'], es: ['Sangrado superficial (encía, sitios de punción)', 'Equimosis'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia Intracraniana (HIC) severa', 'Hemorragia retroperitoneal e gastrointestinal maciça', 'Angioedema orolingual (especialmente se o paciente usar IECA)'], es: ['Hemorragia Intracraneal (HIC) severa', 'Hemorragia retroperitoneal y gastrointestinal masiva', 'Angioedema orolingual (especialmente si el paciente usa IECA)'] },
+      contraindications: {
+        absolute: { pt: ['Hemorragia intracraniana prévia', 'Neoplasia do SNC', 'Sangramento interno ativo', 'PA > 185/110 mmHg no AVCi'], es: ['Hemorragia intracraneal previa', 'Neoplasia del SNC', 'Sangrado interno activo', 'PA > 185/110 mmHg en ACVi'] },
+        relative: { pt: ['Uso de anticoagulantes orais', 'Gestação', 'Ressuscitação cardiopulmonar traumática prolongada (> 10 min)'], es: ['Uso de anticoagulantes orales', 'Embarazo', 'Reanimación cardiopulmonar traumática prolongada (> 10 min)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'ANTÍDOTO DE RESGATE: Em caso de explosão hemorrágica, parar a bomba imediatamente e administrar Ácido Tranexâmico (Transamin) IV e Crioprecipitado/Plasma fresco.', es: 'ANTÍDOTO DE RESCATE: En caso de explosión hemorrágica, parar la bomba inmediatamente y administrar Ácido Tranexámico (Transamin) IV y Crioprecipitado/Plasma fresco.' }
+      }
+    },
+
+/* ── LEVOSIMENDANA ──────────────────────────────────────────────────── */
+    "levosimendana": {
+      name: { pt: 'Levosimendana', es: 'Levosimendán' },
+      category: 'cardiologia',
+      class: { pt: 'Inodilatador / Sensibilizador de Cálcio', es: 'Inodilatador / Sensibilizador de Calcio' },
+      indications: {
+        pt: ['Insuficiência Cardíaca Aguda Descompensada severa', 'Choque cardiogênico refratário', 'Desmame difícil de circulação extracorpórea (CEC)'],
+        es: ['Insuficiencia Cardíaca Aguda Descompensada severa', 'Choque cardiogénico refractario', 'Destete difícil de circulación extracorpórea (CEC)']
+      },
+      commercialNames: { br: ['Simdax'], ar: ['Simdax'] },
+      presentation: { pt: ['Ampolas IV 2,5 mg/mL (5 mL)'], es: ['Ampollas IV 2,5 mg/mL (5 mL)'] },
+      mechanism: {
+        pt: 'Mecanismo duplo fantástico: 1) Liga-se à troponina C do miocárdio, tornando a fibra muscular mais sensível ao cálcio já existente, AUMENTANDO a força de contração (inotropismo) SEM aumentar o consumo de oxigênio do coração (ao contrário da dobutamina). 2) Abre os canais de potássio sensíveis ao ATP na musculatura lisa vascular, causando VASODILATAÇÃO coronariana e sistêmica severa (reduz pré e pós-carga).',
+        es: 'Mecanismo doble fantástico: 1) Se une a la troponina C del miocardio, haciendo la fibra muscular más sensible al calcio ya existente, AUMENTANDO la fuerza de contracción (inotropismo) SIN aumentar el consumo de oxígeno del corazón (a diferencia de la dobutamina). 2) Abre los canales de potasio sensibles al ATP en la musculatura lisa vascular, causando VASODILATACIÓN coronaria y sistémica severa (reduce pre y poscarga).'
+      },
+      dose: {
+        adult: {
+          pt: 'Infusão IV Contínua: 0,05 a 0,2 mcg/kg/min por 24 horas. (A dose de ataque em bolus foi amplamente ABANDONADA pelo risco de choque hipotensivo letal).',
+          es: 'Infusión IV Continua: 0,05 a 0,2 mcg/kg/min por 24 horas. (La dosis de ataque en bolo fue ampliamente ABANDONADA por el riesgo de choque hipotensivo letal).'
+        },
+        pediatric: {
+          pt: 'Uso especializado em UTI Pediátrica Cardíaca (0,05 a 0,1 mcg/kg/min).',
+          es: 'Uso especializado en UCI Pediátrica Cardíaca (0,05 a 0,1 mcg/kg/min).'
+        }
+      },
+      administration: { pt: ['Infusão em bomba por exatamente 24 horas.', 'Seu metabólito ativo (OR-1896) tem meia-vida de 80 horas. O paciente continua tendo o benefício (e o risco) cardíaco por até 7 a 9 DIAS após desligar a bomba.'], es: ['Infusión en bomba por exactamente 24 horas.', 'Su metabolito activo (OR-1896) tiene vida media de 80 horas. El paciente sigue teniendo el beneficio (y el riesgo) cardíaco por hasta 7 a 9 DÍAS tras apagar la bomba.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar em insuficiência renal grave (ClCr < 30). O metabólito ativo se acumula drasticamente.', es: 'Evitar en insuficiencia renal grave (ClCr < 30). El metabolito activo se acumula drásticamente.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em hepatopatia grave.', es: 'Evitar en hepatopatía grave.' } },
+      commonAdverseEffects: { pt: ['Cefaleia (devido à intensa vasodilatação cerebral)', 'Hipotensão leve'], es: ['Cefalea (debido a la intensa vasodilatación cerebral)', 'Hipotensión leve'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão Arterial Refratária / Choque Vasoplégico', 'Fibrilação Atrial e Arritmias Ventriculares', 'Hipocalemia (devido ao mecanismo dos canais de K+)'], es: ['Hipotensión Arterial Refractaria / Choque Vasopléjico', 'Fibrilación Auricular y Arritmias Ventriculares', 'Hipopotasemia (debido al mecanismo de los canales de K+)'] },
+      contraindications: {
+        absolute: { pt: ['Hipotensão severa pré-existente (PAS < 85 mmHg) sem uso prévio de Noradrenalina', 'Obstrução mecânica da saída do VE (Estenose Aórtica severa)'], es: ['Hipotensión severa preexistente (PAS < 85 mmHg) sin uso previo de Noradrenalina', 'Obstrucción mecánica de la salida del VI (Estenosis Aórtica severa)'] },
+        relative: { pt: ['Arritmias ventriculares não controladas'], es: ['Arritmias ventriculares no controladas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'REGRA DE UTI: A levosimendana NUNCA deve ser ligada em um paciente hipotenso sem que haja uma bomba de Noradrenalina correndo junto para segurar a pressão, pois a vasodilatação causada por ela é muito agressiva.', es: 'REGLA DE UCI: El levosimendán NUNCA debe encenderse en un paciente hipotenso sin que haya una bomba de Noradrenalina corriendo junto para sostener la presión, pues la vasodilatación que causa es muy agresiva.' }
+      }
+    },
+
+/* ── ISOPROTERENOL ──────────────────────────────────────────────────── */
+    "isoproterenol": {
+      name: { pt: 'Isoproterenol / Isoprenalina', es: 'Isoproterenol / Isoprenalina' },
+      category: 'cardiologia',
+      class: { pt: 'Agonista Adrenérgico Beta Puro (B1 e B2)', es: 'Agonista Adrenérgico Beta Puro (B1 y B2)' },
+      indications: {
+        pt: ['Bradicardia refratária grave ou Bloqueio Atrioventricular (BAVT) enquanto aguarda marcapasso', 'Arritmia Torsades de Pointes induzida por bradicardia (como ponte / overdrive químico)', 'Intoxicação por betabloqueadores'],
+        es: ['Bradicardia refractaria grave o Bloqueo Auriculoventricular (BAVC) mientras se espera marcapasos', 'Arritmia Torsades de Pointes inducida por bradicardia (como puente / overdrive químico)', 'Intoxicación por betabloqueantes']
+      },
+      commercialNames: { br: ['Isoprel', 'Aleudrina'], ar: ['Isoprenalina'] },
+      presentation: { pt: ['Ampolas IV 0,2 mg/mL (1 mL)'], es: ['Ampollas IV 0,2 mg/mL (1 mL)'] },
+      mechanism: {
+        pt: 'Estimula EXCLUSIVAMENTE os receptores Beta-1 e Beta-2 adrenérgicos (ação Alfa nula). No Beta-1 (coração), gera inotropismo (força) e cronotropismo (frequência) absurdamente positivos. No Beta-2 (vasos e brônquios), gera forte vasodilatação periférica e broncodilatação. O resultado final é um CORAÇÃO ACELERADO batendo contra VASOS RELAXADOS (aumenta o débito, mas pode derrubar a pressão diastólica e isquemiar o coração).',
+        es: 'Estimula EXCLUSIVAMENTE los receptores Beta-1 y Beta-2 adrenérgicos (acción Alfa nula). En el Beta-1 (corazón), genera inotropismo (fuerza) y cronotropismo (frecuencia) absurdamente positivos. En el Beta-2 (vasos y bronquios), genera fuerte vasodilatación periférica y broncodilatación. El resultado final es un CORAZÓN ACELERADO latiendo contra VASOS RELAJADOS (aumenta el gasto, pero puede derrumbar la presión diastólica e isquemiar el corazón).'
+      },
+      dose: {
+        adult: {
+          pt: 'Infusão IV Contínua: 2 a 10 mcg/min (titulado rigorosamente pelo alvo de frequência cardíaca).',
+          es: 'Infusión IV Continua: 2 a 10 mcg/min (titulado rigurosamente por el objetivo de frecuencia cardíaca).'
+        },
+        pediatric: {
+          pt: '0,05 a 2 mcg/kg/min IV.',
+          es: '0,05 a 2 mcg/kg/min IV.'
+        }
+      },
+      administration: { pt: ['Diluir em SF ou SG e usar em bomba de infusão. Monitorização eletrocardiográfica ininterrupta obrigatória.'], es: ['Diluir en SF o SG y usar en bomba de infusión. Monitorización electrocardiográfica ininterrumpida obligatoria.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Metabolizado pelas enzimas COMT. Sem ajuste.', es: 'Metabolizado por las enzimas COMT. Sin ajuste.' } },
+      commonAdverseEffects: { pt: ['Palpitações severas', 'Tremores e ansiedade', 'Flushing (vermelhidão/calor)'], es: ['Palpitaciones severas', 'Temblores y ansiedad', 'Flushing (enrojecimiento/calor)'] },
+      dangerousAdverseEffects: { pt: ['Taquicardia Ventricular / Fibrilação Ventricular (pelo extremo estímulo cardíaco)', 'Isquemia miocárdica fatal (aumenta brutalmente o consumo de oxigênio cardíaco ao mesmo tempo que dilata os vasos e rouba fluxo coronariano)', 'Hipotensão diastólica grave'], es: ['Taquicardia Ventricular / Fibrilación Ventricular (por el extremo estímulo cardíaco)', 'Isquemia miocárdica fatal (aumenta brutalmente el consumo de oxígeno cardíaco al mismo tiempo que dilata los vasos y roba flujo coronario)', 'Hipotensión diastólica grave'] },
+      contraindications: {
+        absolute: { pt: ['Infarto Agudo do Miocárdio ativo (o coração vai necrosar devido ao aumento do consumo de oxigênio)', 'Taquicardias prévias', 'Intoxicação digitálica'], es: ['Infarto Agudo de Miocardio activo (el corazón va a necrosar debido al aumento del consumo de oxígeno)', 'Taquicardias previas', 'Intoxicación digitálica'] },
+        relative: { pt: ['Hipertireoidismo severo'], es: ['Hipertiroidismo severo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Ponte pura para o marcapasso definitivo/temporário em emergências de bradicardia. NÃO deve ser usado a longo prazo. O uso excessivo queima as reservas do miocárdio.', es: 'Puente puro para el marcapasos definitivo/temporal en emergencias de bradicardia. NO debe ser usado a largo plazo. El uso excesivo quema las reservas del miocardio.' }
+      }
+    },
+
+/* ── ESMOLOL IV ─────────────────────────────────────────────────────── */
+    "esmolol": {
+      name: { pt: 'Esmolol IV', es: 'Esmolol IV' },
+      category: 'cardiologia',
+      class: { pt: 'Betabloqueador Cardioseletivo (B1) de Ação Ultra-Curta', es: 'Betabloqueante Cardioselectivo (B1) de Acción Ultra-Corta' },
+      indications: {
+        pt: ['Dissecção Aguda de Aorta (para controle imediato do dP/dt - cisalhamento do vaso)', 'Crise Tireotóxica na UTI', 'Taquicardia supraventricular intraoperatória ou emergencial'],
+        es: ['Disección Aguda de Aorta (para control inmediato del dP/dt - cizallamiento del vaso)', 'Crisis Tirotoxicósica en la UCI', 'Taquicardia supraventricular intraoperatoria o de emergencia']
+      },
+      commercialNames: { br: ['Brevibloc'], ar: ['Brevibloc'] },
+      presentation: { pt: ['Frasco-ampola IV 10 mg/mL (10 mL = 100 mg) ou bolsas prontas de 250 mL'], es: ['Vial IV 10 mg/mL (10 mL = 100 mg) o bolsas listas de 250 mL'] },
+      mechanism: {
+        pt: 'Antagonista competitivo puro dos receptores Beta-1 no coração. Reduz rapidamente a frequência cardíaca (cronotropismo negativo) e a força de contração. O seu brilhantismo: É hidrolisado rapidamente por esterases presentes nas hemácias (glóbulos vermelhos). Isso confere ao Esmolol uma meia-vida incrivelmente curta de APENAS 9 MINUTOS. É a droga perfeita para controle minuto a minuto (liga a bomba a FC cai, desliga a bomba a FC volta ao normal em 15 min).',
+        es: 'Antagonista competitivo puro de los receptores Beta-1 en el corazón. Reduce rápidamente la frecuencia cardíaca (cronotropismo negativo) y la fuerza de contracción. Su brillantez: Es hidrolizado rápidamente por esterasas presentes en los hematíes (glóbulos rojos). Esto confiere al Esmolol una vida media increíblemente corta de SOLO 9 MINUTOS. Es la droga perfecta para control minuto a minuto (enciende la bomba la FC cae, apaga la bomba la FC vuelve a la normalidad en 15 min).'
+      },
+      dose: {
+        adult: {
+          pt: 'Bolus de ataque: 500 mcg/kg em 1 minuto. Manutenção: Infusão IV contínua de 50 a 200 mcg/kg/min.',
+          es: 'Bolo de ataque: 500 mcg/kg en 1 minuto. Mantenimiento: Infusión IV continua de 50 a 200 mcg/kg/min.'
+        },
+        pediatric: {
+          pt: 'Bolus 100-500 mcg/kg seguido de infusão 25-100 mcg/kg/min.',
+          es: 'Bolo 100-500 mcg/kg seguido de infusión 25-100 mcg/kg/min.'
+        }
+      },
+      administration: { pt: ['Bomba de infusão contínua exclusiva. Titulação agressiva e rápida permitida.'], es: ['Bomba de infusión continua exclusiva. Titulación agresiva y rápida permitida.'] },
+      renalAdjustment: { required: false, message: { pt: 'Metabolismo dependente do sangue (esterases). Seguro em falência renal aguda.', es: 'Metabolismo dependiente de la sangre (esterasas). Seguro en falla renal aguda.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Independente do fígado.', es: 'Independiente del hígado.' } },
+      commonAdverseEffects: { pt: ['Hipotensão arterial (muito frequente, porém de fácil reversão reduzindo a bomba)', 'Flebite na punção'], es: ['Hipotensión arterial (muy frecuente, pero de fácil reversión reduciendo la bomba)', 'Flebitis en la punción'] },
+      dangerousAdverseEffects: { pt: ['Bradicardia severa', 'Broncoespasmo (embora seja seletivo B1, em altas doses pode bloquear o pulmão B2)', 'Choque cardiogênico induzido'], es: ['Bradicardia severa', 'Broncoespasmo (aunque sea selectivo B1, en altas dosis puede bloquear el pulmón B2)', 'Choque cardiogénico inducido'] },
+      contraindications: {
+        absolute: { pt: ['Choque cardiogênico prévio / Insuficiência cardíaca descompensada', 'Bloqueio Atrioventricular de 2º ou 3º grau', 'Doença do Nó Sinusal'], es: ['Choque cardiogénico previo / Insuficiencia cardíaca descompensada', 'Bloqueo Auriculoventricular de 2º o 3º grado', 'Enfermedad del Nodo Sinusal'] },
+        relative: { pt: ['Asma brônquica severa em atividade'], es: ['Asma bronquial severa en actividad'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'Na Dissecção de Aorta, o Esmolol DEVE SER LIGADO ANTES do Nitroprussiato de Sódio. Se você der um vasodilatador primeiro, ocorrerá taquicardia reflexa que rasgará o restante da aorta. Primeiro bloqueie o coração (Esmolol), depois dilate o vaso.', es: 'En la Disección de Aorta, el Esmolol DEBE ENCENDERSE ANTES que el Nitroprusiato de Sodio. Si das un vasodilatador primero, ocurrirá taquicardia refleja que rasgará el resto de la aorta. Primero bloquea el corazón (Esmolol), luego dilata el vaso.' }
+      }
+    },
+
+/* ── METOPROLOL IV ──────────────────────────────────────────────────── */
+    "metoprolol_iv": {
+      name: { pt: 'Metoprolol IV', es: 'Metoprolol IV' },
+      category: 'cardiologia',
+      class: { pt: 'Betabloqueador Cardioseletivo (B1)', es: 'Betabloqueante Cardioselectivo (B1)' },
+      indications: {
+        pt: ['Controle agudo da Frequência Cardíaca na Fibrilação Atrial e Flutter Atrial', 'Infarto Agudo do Miocárdio (reduzir dor, isquemia e risco de fibrilação)', 'Emergências hipertensivas associadas a síndromes coronarianas'],
+        es: ['Control agudo de la Frecuencia Cardíaca en la Fibrilación Auricular y Flutter Auricular', 'Infarto Agudo de Miocardio (reducir dolor, isquemia y riesgo de fibrilación)', 'Emergencias hipertensivas asociadas a síndromes coronarios']
+      },
+      commercialNames: { br: ['Seloken IV'], ar: ['Beloc IV', 'Metoprolol'] },
+      presentation: { pt: ['Ampolas IV 1 mg/mL (5 mL = 5 mg)'], es: ['Ampollas IV 1 mg/mL (5 mL = 5 mg)'] },
+      mechanism: {
+        pt: 'Bloqueador competitivo altamente seletivo dos receptores Beta-1 no coração. Diminui a frequência sinusal, lentifica a condução do nódulo atrioventricular (AV) e reduz a contratilidade (Inotrópico e Cronotrópico negativos). Diferente do esmolol, possui meia-vida duradoura no plasma (3 a 4 horas), sendo ideal para estabilização de longo prazo.',
+        es: 'Bloqueador competitivo altamente selectivo de los receptores Beta-1 en el corazón. Disminuye la frecuencia sinusal, lentifica la conducción del nódulo auriculoventricular (AV) y reduce la contractilidad (Inotrópico y Cronotrópico negativos). A diferencia del esmolol, posee vida media duradera en el plasma (3 a 4 horas), siendo ideal para estabilización a largo plazo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Bolus IV Lento: 2,5 mg a 5 mg administrados em 2 minutos. Avaliar PA/FC e repetir a cada 5 minutos, até o limite MÁXIMO de 15 mg (3 ampolas).',
+          es: 'Bolo IV Lento: 2,5 mg a 5 mg administrados en 2 minutos. Evaluar PA/FC y repetir cada 5 minutos, hasta el límite MÁXIMO de 15 mg (3 ampollas).'
+        },
+        pediatric: {
+          pt: '0,1 a 0,2 mg/kg IV lento (Uso muito restrito e raro).',
+          es: '0,1 a 0,2 mg/kg IV lento (Uso muy restringido y raro).'
+        }
+      },
+      administration: { pt: ['IV direto SEM diluição, infundido a uma taxa de 1 mg por minuto. Monitoração de ECG ininterrupta obrigatória.'], es: ['IV directo SIN dilución, infundido a una tasa de 1 mg por minuto. Monitorización de ECG ininterrumpida obligatoria.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolismo hepático severo (CYP2D6). Usar as menores doses (ex: bolus de 2,5mg) em cirróticos.', es: 'Metabolismo hepático severo (CYP2D6). Usar las menores dosis (ej: bolo de 2,5mg) en cirróticos.' } },
+      commonAdverseEffects: { pt: ['Hipotensão postural e tontura', 'Fadiga', 'Extremidades frias'], es: ['Hipotensión postural y mareo', 'Fatiga', 'Extremidades frías'] },
+      dangerousAdverseEffects: { pt: ['Choque cardiogênico irreversível (se dado num coração já em falência, ex: Killip III/IV)', 'Bradicardia extrema / Bloqueio AV total', 'Broncoespasmo agudo em asmáticos sensíveis'], es: ['Choque cardiogénico irreversible (si se da en un corazón ya en fallo, ej: Killip III/IV)', 'Bradicardia extrema / Bloqueo AV total', 'Broncoespasmo agudo en asmáticos sensibles'] },
+      contraindications: {
+        absolute: { pt: ['Frequência Cardíaca < 45 bpm', 'PAS < 100 mmHg basal', 'Insuficiência Cardíaca Aguda com congestão pulmonar auscultável ativa (crepitações)', 'Uso recente de Verapamil/Diltiazem IV'], es: ['Frecuencia Cardíaca < 45 lpm', 'PAS < 100 mmHg basal', 'Insuficiencia Cardíaca Aguda con congestión pulmonar auscultable activa (crepitaciones)', 'Uso reciente de Verapamilo/Diltiazem IV'] },
+        relative: { pt: ['Asma brônquica / DPOC com broncoespasmo ativo'], es: ['Asma bronquial / EPOC con broncoespasmo activo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'Não force a mão. Se após as 3 ampolas (15 mg totais) a Fibrilação Atrial não controlar a frequência, o paciente necessita de Amiodarona ou Cardioversão Elétrica. O Antídoto para intoxicação maciça por betabloqueadores é o GLUCAGON IV.', es: 'No fuerce la mano. Si tras las 3 ampollas (15 mg totales) la Fibrilación Auricular no controla la frecuencia, el paciente necesita Amiodarona o Cardioversión Eléctrica. El Antídoto para intoxicación masiva por betabloqueantes es el GLUCAGÓN IV.' }
+      }
+    }
+
+  }); /* fim Object.assign ANALGESICOS_DRUGS_DB — Grupo 13 (alteplase · levosimendana · isoproterenol · esmolol · metoprolol_iv — BUILD 330 Lote 3) */
+
+})();
+
+/* ─────────────────────────────────────────────────────────────────────────
+   GRUPO 14 — Cardiologia Fase 2 (hidralazina_iv · enalaprilato · milrinona · mexiletina · verapamil_iv)
+   BUILD 332 Lote 4 — _injectObjectDB()
+───────────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+
+  Object.assign(window.ANALGESICOS_DRUGS_DB, {
+
+/* ── HIDRALAZINA IV ─────────────────────────────────────────────────── */
+    "hidralazina_iv": {
+      name: { pt: 'Hidralazina IV', es: 'Hidralazina IV' },
+      category: 'cardiologia',
+      class: { pt: 'Vasodilatador Arterial Direto', es: 'Vasodilatador Arterial Directo' },
+      indications: {
+        pt: ['Emergências hipertensivas associadas à gestação (Pré-eclâmpsia grave e Eclâmpsia)', 'Pós-operatório de cirurgia cardíaca e controle de crise hipertensiva severa'],
+        es: ['Emergencias hipertensivas asociadas a la gestación (Preeclampsia grave y Eclampsia)', 'Posoperatorio de cirugía cardíaca y control de crisis hipertensiva severa']
+      },
+      commercialNames: { br: ['Apresolina IV', 'Nepresol'], ar: ['Apresolina'] },
+      presentation: { pt: ['Ampolas IV/IM 20 mg/mL (1 mL)'], es: ['Ampollas IV/IM 20 mg/mL (1 mL)'] },
+      mechanism: {
+        pt: 'Atua diretamente no relaxamento do músculo liso ARTERIAL (não atua nas veias), promovendo forte queda na resistência vascular sistêmica e na pressão arterial. O cérebro responde a essa queda ativando o sistema nervoso simpático, o que gera aumento brutal da frequência cardíaca e contratilidade miocárdica (taquicardia reflexa profunda).',
+        es: 'Actúa directamente en la relajación del músculo liso ARTERIAL (no actúa en las venas), promoviendo fuerte caída en la resistencia vascular sistémica y en la presión arterial. El cerebro responde a esta caída activando el sistema nervioso simpático, lo que genera aumento brutal de la frecuencia cardíaca y contractilidad miocárdica (taquicardia refleja profunda).'
+      },
+      dose: {
+        adult: {
+          pt: 'Crise Hipertensiva / Eclâmpsia: 5 a 20 mg IV LENTO. Pode ser repetido a cada 20-30 minutos (Máximo de 40 mg por dose).',
+          es: 'Crisis Hipertensiva / Eclampsia: 5 a 20 mg IV LENTO. Puede repetirse cada 20-30 minutos (Máximo de 40 mg por dosis).'
+        },
+        pediatric: {
+          pt: '0,1 a 0,5 mg/kg/dose IV a cada 6 a 8 horas.',
+          es: '0,1 a 0,5 mg/kg/dosis IV cada 6 a 8 horas.'
+        }
+      },
+      administration: { pt: ['Administrar IV direto lento em 1 a 2 minutos.', 'Pico de ação ocorre em 10 a 20 minutos. Não redosar antes de 20 minutos para evitar hipotensão acumulada fatal.'], es: ['Administrar IV directo lento en 1 a 2 minutos.', 'El pico de acción ocurre en 10 a 20 minutos. No redosificar antes de 20 minutos para evitar hipotensión acumulada fatal.'] },
+      renalAdjustment: { required: true, message: { pt: 'Aumentar intervalo entre as doses (cada 8-12h) se ClCr < 10 mL/min, para evitar acúmulo.', es: 'Aumentar intervalo entre las dosis (cada 8-12h) si ClCr < 10 mL/min, para evitar acumulación.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Acetilação lenta no fígado. Reduzir dose em cirróticos.', es: 'Acetilación lenta en el hígado. Reducir dosis en cirróticos.' } },
+      commonAdverseEffects: { pt: ['Taquicardia severa induzida', 'Cefaleia pulsátil', 'Flushing (calor e vermelhidão facial)'], es: ['Taquicardia severa inducida', 'Cefalea pulsátil', 'Flushing (calor y enrojecimiento facial)'] },
+      dangerousAdverseEffects: { pt: ['Isquemia miocárdica (o coração acelera e precisa de oxigênio, mas a PA caiu demais para perfundir a coronária)', 'Síndrome Lupus-Like induzida por fármaco (uso crônico)'], es: ['Isquemia miocárdica (el corazón acelera y necesita oxígeno, pero la PA cayó demasiado para perfundir la coronaria)', 'Síndrome Lupus-Like inducido por fármaco (uso crónico)'] },
+      contraindications: {
+        absolute: { pt: ['Dissecção Aguda da Aorta (o inotropismo gerado rasga ainda mais a artéria)', 'Doença arterial coronariana severa / Infarto agudo'], es: ['Disección Aguda de la Aorta (el inotropismo generado rasga aún más la arteria)', 'Enfermedad arterial coronaria severa / Infarto agudo'] },
+        relative: { pt: ['Lupus Eritematoso Sistêmico prévio', 'Aneurismas cerebrais instáveis'], es: ['Lupus Eritematoso Sistémico previo', 'Aneurismas cerebrales inestables'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A Hidralazina injetável NUNCA deve ser a primeira escolha para crise hipertensiva no paciente cardiopata/infartado (preferir Nitroglicerina), pelo altíssimo risco de agravar isquemias devido à taquicardia reflexa incontrolável.', es: 'La Hidralazina inyectable NUNCA debe ser la primera elección para crisis hipertensiva en el paciente cardiópata/infartado (preferir Nitroglicerina), por el altísimo riesgo de agravar isquemias debido a la taquicardia refleja incontrolable.' }
+      }
+    },
+
+/* ── ENALAPRILATO IV ────────────────────────────────────────────────── */
+    "enalaprilato": {
+      name: { pt: 'Enalaprilato IV', es: 'Enalaprilat IV' },
+      category: 'cardiologia',
+      class: { pt: 'Inibidor da ECA (Enzima Conversora de Angiotensina) Ativo', es: 'Inhibidor de la ECA (Enzima Convertidora de Angiotensina) Activo' },
+      indications: {
+        pt: ['Emergências hipertensivas (especialmente em Insuficiência Cardíaca, IAM ou Encefalopatia Hipertensiva)', 'Pacientes impossibilitados de receber medicações orais'],
+        es: ['Emergencias hipertensivas (especialmente en Insuficiencia Cardíaca, IAM o Encefalopatía Hipertensiva)', 'Pacientes imposibilitados de recibir medicaciones orales']
+      },
+      commercialNames: { br: ['Enalaprilato IV'], ar: ['Enalaprilato'] },
+      presentation: { pt: ['Ampolas IV 1,25 mg/mL (1 mL)'], es: ['Ampollas IV 1,25 mg/mL (1 mL)'] },
+      mechanism: {
+        pt: 'A forma endovenosa ATIVA do enalapril (pró-fármaco oral). Como não precisa passar pelo fígado para ser ativado, inibe imediata e drasticamente a conversão de Angiotensina I em Angiotensina II no plasma. Bloqueia o sistema renina-angiotensina-aldosterona (SRAA), causando vasodilatação potente, redução do volume sanguíneo (queda da aldosterona) e inibição da degradação da bradicinina.',
+        es: 'La forma endovenosa ACTIVA del enalapril (profármaco oral). Como no necesita pasar por el hígado para ser activado, inhibe inmediata y drásticamente la conversión de Angiotensina I en Angiotensina II en el plasma. Bloquea el sistema renina-angiotensina-aldosterona (SRAA), causando vasodilatación potente, reducción del volumen sanguíneo (caída de la aldosterona) e inhibición de la degradación de la bradicinina.'
+      },
+      dose: {
+        adult: {
+          pt: '1,25 a 5 mg IV a cada 6 horas. Iniciar com dose menor (0,625 mg) em pacientes em uso de diuréticos potentes.',
+          es: '1,25 a 5 mg IV cada 6 horas. Iniciar con dosis menor (0,625 mg) en pacientes en uso de diuréticos potentes.'
+        },
+        pediatric: {
+          pt: '5 a 10 mcg/kg IV a cada 8 a 24 horas (máx 1,25 mg/dose).',
+          es: '5 a 10 mcg/kg IV cada 8 a 24 horas (máx 1,25 mg/dosis).'
+        }
+      },
+      administration: { pt: ['Injeção IV LENTA (em pelo menos 5 minutos). O uso RÁPIDO causa colapso pressórico.'], es: ['Inyección IV LENTA (en al menos 5 minutos). El uso RÁPIDO causa colapso presórico.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min, iniciar com a dose reduzida de 0,625 mg. Risco severo de falência renal aguda isquêmica.', es: 'Si ClCr < 30 mL/min, iniciar con la dosis reducida de 0,625 mg. Riesgo severo de falla renal aguda isquémica.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Como já é a molécula ativa (não precisa do fígado), é plenamente eficaz na cirrose hepática severa.', es: 'Como ya es la molécula activa (no necesita del hígado), es plenamente eficaz en la cirrosis hepática severa.' } },
+      commonAdverseEffects: { pt: ['Hipotensão postural prolongada', 'Tosse seca', 'Piora aguda e transitória da creatinina'], es: ['Hipotensión postural prolongada', 'Tos seca', 'Empeoramiento agudo y transitorio de la creatinina'] },
+      dangerousAdverseEffects: { pt: ['Hipercalemia grave (arritmias)', 'Angioedema orolingual (risco de asfixia)', 'Lesão Renal Aguda oligoanúrica'], es: ['Hiperpotasemia grave (arritmias)', 'Angioedema orolingual (riesgo de asfixia)', 'Lesión Renal Aguda oligoanúrica'] },
+      contraindications: {
+        absolute: { pt: ['Estenose bilateral da artéria renal', 'Gravidez (Teratogênico - agenesia renal fetal)', 'Histórico de Angioedema por IECA'], es: ['Estenosis bilateral de la arteria renal', 'Embarazo (Teratogénico - agenesia renal fetal)', 'Historial de Angioedema por IECA'] },
+        relative: { pt: ['Hipercalemia basal severa (> 5.5 mEq/L)'], es: ['Hiperpotasemia basal severa (> 5.5 mEq/L)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O Enalaprilato tem duração de ação de até 24 horas. Se o paciente evoluir com choque séptico ou hemorrágico pouco após a dose, a pressão será virtualmente irrecuperável mesmo com altas doses de noradrenalina, devido ao bloqueio maciço do SRAA.', es: 'El Enalaprilat tiene duración de acción de hasta 24 horas. Si el paciente evoluciona con choque séptico o hemorrágico poco después de la dosis, la presión será virtualmente irrecuperable incluso con altas dosis de noradrenalina, debido al bloqueo masivo del SRAA.' }
+      }
+    },
+
+/* ── MILRINONA ──────────────────────────────────────────────────────── */
+    "milrinona": {
+      name: { pt: 'Milrinona', es: 'Milrinona' },
+      category: 'cardiologia',
+      class: { pt: 'Inibidor da Fosfodiesterase 3 (PDE3) / Inodilatador', es: 'Inhibidor de la Fosfodiesterasa 3 (PDE3) / Inodilatador' },
+      indications: {
+        pt: ['Choque Cardiogênico com alta resistência vascular (frio e pálido)', 'Insuficiência Cardíaca Aguda Descompensada', 'Hipertensão Pulmonar severa no pós-operatório'],
+        es: ['Choque Cardiogénico con alta resistencia vascular (frío y pálido)', 'Insuficiencia Cardíaca Aguda Descompensada', 'Hipertensión Pulmonar severa en el posoperatorio']
+      },
+      commercialNames: { br: ['Primacor'], ar: ['Corotrope'] },
+      presentation: { pt: ['Ampolas IV 1 mg/mL (10 mL ou 20 mL)'], es: ['Ampollas IV 1 mg/mL (10 mL o 20 mL)'] },
+      mechanism: {
+        pt: 'Inibe seletivamente a enzima Fosfodiesterase III, responsável por destruir o AMPc no coração e nos vasos. Com altos níveis de AMPc, o coração se contrai MUITO MAIS FORTE (inotropismo positivo) e relaxa muito melhor na diástole (lusitropismo). Em contrapartida, os vasos sanguíneos (incluindo o pulmão) dilatam severamente. É chamada de Inodilatador. Como age DENTRO da célula, não depende dos receptores beta (não é bloqueada por betabloqueadores).',
+        es: 'Inhibe selectivamente la enzima Fosfodiesterasa III, responsable de destruir el AMPc en el corazón y en los vasos. Con altos niveles de AMPc, el corazón se contrae MUCHO MÁS FUERTE (inotropismo positivo) y se relaja mucho mejor en la diástole (lusitropismo). En contrapartida, los vasos sanguíneos (incluyendo el pulmón) se dilatan severamente. Es llamada Inodilatador. Como actúa DENTRO de la célula, no depende de los receptores beta (no es bloqueada por betabloqueantes).'
+      },
+      dose: {
+        adult: {
+          pt: 'Ataque: Bolus de 50 mcg/kg IV (frequentemente EVITADO em UTI médica pelo risco de hipotensão aguda). Manutenção: 0,375 a 0,75 mcg/kg/min em infusão contínua.',
+          es: 'Ataque: Bolo de 50 mcg/kg IV (frecuentemente EVITADO en UCI médica por el riesgo de hipotensión aguda). Mantenimiento: 0,375 a 0,75 mcg/kg/min en infusión continua.'
+        },
+        pediatric: {
+          pt: 'Bolus (0 a 50 mcg/kg) seguido de 0,25 a 0,75 mcg/kg/min.',
+          es: 'Bolo (0 a 50 mcg/kg) seguido de 0,25 a 0,75 mcg/kg/min.'
+        }
+      },
+      administration: { pt: ['Exclusivamente Bomba de Infusão Contínua.'], es: ['Exclusivamente Bomba de Infusión Continua.'] },
+      renalAdjustment: { required: true, message: { pt: 'Depuração estritamente renal. Reduzir a dose de manutenção de forma agressiva (até 0,2 mcg/kg/min) se ClCr < 30, senão o paciente terá vasoplegia prolongada.', es: 'Depuración estrictamente renal. Reducir la dosis de mantenimiento de forma agresiva (hasta 0,2 mcg/kg/min) si ClCr < 30, de lo contrario el paciente tendrá vasoplejía prolongada.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      commonAdverseEffects: { pt: ['Hipotensão arterial marcante (o maior desafio do seu uso)', 'Dor de cabeça'], es: ['Hipotensión arterial marcada (el mayor desafío de su uso)', 'Dolor de cabeza'] },
+      dangerousAdverseEffects: { pt: ['Arritmias ventriculares (Taq. Ventricular, Extrassístoles) pelo aumento do cálcio intra-miocárdico', 'Trombocitopenia (rara na milrinona, mas de classe)'], es: ['Arritmias ventriculares (Taq. Ventricular, Extrasístoles) por el aumento del calcio intra-miocárdico', 'Trombocitopenia (rara en la milrinona, pero de clase)'] },
+      contraindications: {
+        absolute: { pt: ['Hipotensão profunda basal não suportada por noradrenalina', 'Estenose Aórtica ou Pulmonar severa (qualquer obstrutiva crônica)'], es: ['Hipotensión profunda basal no soportada por noradrenalina', 'Estenosis Aórtica o Pulmonar severa (cualquier obstructiva crónica)'] },
+        relative: { pt: ['Uso isolado pós IAM recente (pode aumentar o consumo de O2 e arritmias)'], es: ['Uso aislado pos IAM reciente (puede aumentar el consumo de O2 y arritmias)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'INCOMPATIBILIDADE DE VIA: A Milrinona NUNCA PODE ser infundida na mesma via que a Furosemida (diurético), pois ocorre precipitação imediata formando cristais que causam embolia pulmonar.', es: 'INCOMPATIBILIDAD DE VÍA: La Milrinona NUNCA PUEDE ser infundida en la misma vía que la Furosemida (diurético), pues ocurre precipitación inmediata formando cristales que causan embolia pulmonar.' }
+      }
+    },
+
+/* ── MEXILETINA ─────────────────────────────────────────────────────── */
+    "mexiletina": {
+      name: { pt: 'Mexiletina', es: 'Mexiletina' },
+      category: 'cardiologia',
+      class: { pt: 'Antiarrítmico Classe IB (Equivalente Oral da Lidocaína)', es: 'Antiarrítmico Clase IB (Equivalente Oral de la Lidocaína)' },
+      indications: {
+        pt: ['Taquicardias ventriculares severas e Extrassístoles ventriculares sintomáticas', 'Tratamento crônico de Síndromes de QT Longo (especialmente o LQT3)', 'Dores neuropáticas refratárias (off-label)'],
+        es: ['Taquicardias ventriculares severas y Extrasístoles ventriculares sintomáticas', 'Tratamiento crónico de Síndromes de QT Largo (especialmente el LQT3)', 'Dolores neuropáticos refractarios (off-label)']
+      },
+      commercialNames: { br: ['Mexitil (Importação Especial)'], ar: ['Mexitil'] },
+      presentation: { pt: ['Cápsulas 150 mg, 200 mg', 'Ampolas IV (Raras)'], es: ['Cápsulas 150 mg, 200 mg', 'Ampollas IV (Raras)'] },
+      mechanism: {
+        pt: 'Bloqueador potente e rápido dos canais de Sódio miocárdicos (Fase 0 do potencial de ação). Acelera a repolarização celular e encurta a duração do potencial de ação e do intervalo QT. É essencialmente a versão "via oral" da lidocaína venosa. Exerce poderoso efeito estabilizador de membrana, bloqueando circuitos de reentrada nos ventrículos.',
+        es: 'Bloqueador potente y rápido de los canales de Sodio miocárdicos (Fase 0 del potencial de acción). Acelera la repolarización celular y acorta la duración del potencial de acción y del intervalo QT. Es esencialmente la versión "vía oral" de la lidocaína venosa. Ejerce poderoso efecto estabilizador de membrana, bloqueando circuitos de reentrada en los ventrículos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciar com 150 mg VO a cada 8 horas. (Titular a cada 3 dias). Dose máxima de manutenção: 1.200 mg/dia.',
+          es: 'Iniciar con 150 mg VO cada 8 horas. (Titular cada 3 días). Dosis máxima de mantenimiento: 1.200 mg/día.'
+        },
+        pediatric: {
+          pt: 'Arritmias graves congênitas: 2 a 5 mg/kg/dose VO a cada 8h.',
+          es: 'Arritmias graves congénitas: 2 a 5 mg/kg/dosis VO cada 8h.'
+        }
+      },
+      administration: { pt: ['Tomar sempre COM ALIMENTOS ou leite. A intolerância gástrica (vômito violento) de estômago vazio é regra.'], es: ['Tomar siempre CON ALIMENTOS o leche. La intolerancia gástrica (vómito violento) con estómago vacío es regla.'] },
+      renalAdjustment: { required: false, message: { pt: 'Evitar em ClCr < 10 mL/min sem monitorização plasmática rigorosa.', es: 'Evitar en ClCr < 10 mL/min sin monitorización plasmática rigurosa.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Extensamente metabolizada no fígado (CYP1A2 e CYP2D6). Reduzir agressivamente a dose na cirrose hepática a 25-30% do normal.', es: 'Extensamente metabolizada en el hígado (CYP1A2 y CYP2D6). Reducir agresivamente la dosis en la cirrosis hepática a 25-30% de lo normal.' } },
+      commonAdverseEffects: { pt: ['Náuseas muito intensas e Azia', 'Tremores de extremidades', 'Tontura e marcha atáxica (embriaguez)'], es: ['Náuseas muy intensas y Acidez', 'Temblores de extremidades', 'Mareo y marcha atáxica (embriaguez)'] },
+      dangerousAdverseEffects: { pt: ['Toxicidade do SNC (Convulsões intratáveis e Coma em overdoses)', 'Piora paradoxal de arritmias ventriculares', 'Hepatotoxicidade'], es: ['Toxicidad del SNC (Convulsiones intratables y Coma en sobredosis)', 'Empeoramiento paradójico de arritmias ventriculares', 'Hepatotoxicidad'] },
+      contraindications: {
+        absolute: { pt: ['Choque Cardiogênico', 'Bloqueio AV de 2º e 3º grau pré-existentes sem marcapasso'], es: ['Choque Cardiogénico', 'Bloqueo AV de 2º y 3º grado preexistentes sin marcapasos'] },
+        relative: { pt: ['Disfunção hepática grave', 'Transtornos convulsivos refratários'], es: ['Disfunción hepática grave', 'Trastornos convulsivos refractarios'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Atenção na pediatria cardiológica. Possui margem terapêutica extremamente estreita (Nível tóxico > 2 mcg/mL). Se o paciente começar a apresentar tremores finos e fala arrastada, o medicamento está intoxicando o cérebro.', es: 'Atención en la pediatría cardiológica. Posee margen terapéutico extremadamente estrecho (Nivel tóxico > 2 mcg/mL). Si el paciente empieza a presentar temblores finos y habla arrastrada, el medicamento está intoxicando el cerebro.' }
+      }
+    },
+
+/* ── VERAPAMIL IV ───────────────────────────────────────────────────── */
+    "verapamil_iv": {
+      name: { pt: 'Verapamil IV', es: 'Verapamilo IV' },
+      category: 'cardiologia',
+      class: { pt: 'Bloqueador de Canal de Cálcio Não-Diidropiridínico (Antiarrítmico Classe IV)', es: 'Bloqueador de Canal de Calcio No-Dihidropiridínico (Antiarrítmico Clase IV)' },
+      indications: {
+        pt: ['Reversão ágil de Taquicardia Supraventricular Paroxística (TSVP) no PS', 'Controle crônico de frequência na Fibrilação Atrial e Flutter Atrial', 'Tratamento de Cefaleia em Salvas refratária (Cluster headache)'],
+        es: ['Reversión ágil de Taquicardia Supraventricular Paroxística (TSVP) en Urgencias', 'Control crónico de frecuencia en la Fibrilación Auricular y Flutter Auricular', 'Tratamiento de Cefalea en Racimos refractaria (Cluster headache)']
+      },
+      commercialNames: { br: ['Dilacoron'], ar: ['Isoptin'] },
+      presentation: { pt: ['Ampolas IV 2,5 mg/mL (2 mL)'], es: ['Ampollas IV 2,5 mg/mL (2 mL)'] },
+      mechanism: {
+        pt: 'Bloqueia seletivamente a entrada de cálcio nos canais do tipo L das células do músculo cardíaco e liso. Concentra sua ação no Nódulo Sinusal (SA) e Atrioventricular (AV), atrasando drasticamente a condução elétrica cardíaca e quebrando circuitos de taquicardia de reentrada. Diferente do anlodipino, DEPRIME A FORÇA DE CONTRAÇÃO do coração (inotrópico e cronotrópico negativo violento).',
+        es: 'Bloquea selectivamente la entrada de calcio en los canales de tipo L de las células del músculo cardíaco y liso. Concentra su acción en el Nódulo Sinusal (SA) y Auriculoventricular (AV), retrasando drásticamente la conducción eléctrica cardíaca y rompiendo circuitos de taquicardia de reentrada. A diferencia del amlodipino, DEPRIME LA FUERZA DE CONTRACCIÓN del corazón (inotrópico y cronotrópico negativo violento).'
+      },
+      dose: {
+        adult: {
+          pt: 'Reversão de TSVP: 2,5 a 5 mg IV lento. Se não reverter, dar nova dose de 5 a 10 mg após 15 a 30 min. (Máximo total de 20 mg).',
+          es: 'Reversión de TSVP: 2,5 a 5 mg IV lento. Si no revierte, dar nueva dosis de 5 a 10 mg tras 15 a 30 min. (Máximo total de 20 mg).'
+        },
+        pediatric: {
+          pt: '0,1 a 0,3 mg/kg IV lento (Uso restrito sob monitorização de UTI).',
+          es: '0,1 a 0,3 mg/kg IV lento (Uso restringido bajo monitorización de UCI).'
+        }
+      },
+      administration: { pt: ['Injeção IV LENTA (em pelo menos 2 a 3 minutos).', 'Monitorização Eletrocardiográfica obrigatória para detectar bloqueios AV súbitos.'], es: ['Inyección IV LENTA (en al menos 2 a 3 minutos).', 'Monitorización Electrocardiográfica obligatoria para detectar bloqueos AV súbitos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito agudo.', es: 'Sin necesidad de ajuste estricto agudo.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Altíssimo metabolismo de primeira passagem hepático. Reduzir a dose severamente na insuficiência hepática.', es: 'Altísimo metabolismo de primer paso hepático. Reducir la dosis severamente en insuficiencia hepática.' } },
+      commonAdverseEffects: { pt: ['Hipotensão aguda e tontura', 'Constipação Intestinal (muito frequente no uso crônico)', 'Edema de membros inferiores'], es: ['Hipotensión aguda y mareo', 'Constipación Intestinal (muy frecuente en el uso crónico)', 'Edema de miembros inferiores'] },
+      dangerousAdverseEffects: { pt: ['Choque cardiogênico / Edema Agudo de Pulmão (se aplicado em coração fraco)', 'Bloqueio AV total e Assistolia', 'Taquicardia ventricular maligna (se aplicado de forma errada no paciente com WPW e FA)'], es: ['Choque cardiogénico / Edema Agudo de Pulmón (si aplicado en corazón débil)', 'Bloqueo AV total y Asistolia', 'Taquicardia ventricular maligna (si aplicado de forma incorrecta en el paciente con WPW y FA)'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência Cardíaca Congestiva descompensada ou Fração de Ejeção Baixa (<40%)', 'Síndrome de Wolff-Parkinson-White associado a Fibrilação Atrial (causa morte súbita)', 'Uso IV conjunto com betabloqueadores'], es: ['Insuficiencia Cardíaca Congestiva descompensada o Fracción de Eyección Baja (<40%)', 'Síndrome de Wolff-Parkinson-White asociado a Fibrilación Auricular (causa muerte súbita)', 'Uso IV conjunto con betabloqueantes'] },
+        relative: { pt: ['Hipotensão basal severa'], es: ['Hipotensión basal severa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'ERRO TÉCNICO LETAL: Se um paciente tiver Fibrilação Atrial + Síndrome de WPW e receber Verapamil, o nódulo AV trava. Os impulsos dos átrios (>300 bpm) descem inteiramente pelo Feixe Acessório de Kent, fazendo os ventrículos baterem a 300 bpm, gerando Fibrilação Ventricular imediata. Antídoto base: Gluconato de Cálcio.', es: 'ERROR TÉCNICO LETAL: Si un paciente tiene Fibrilación Auricular + Síndrome de WPW y recibe Verapamilo, el nódulo AV se traba. Los impulsos de las aurículas (>300 lpm) bajan enteramente por el Haz Accesorio de Kent, haciendo que los ventrículos latan a 300 lpm, generando Fibrilación Ventricular inmediata. Antídoto base: Gluconato de Calcio.' }
+      }
+    }
+
+  }); /* fim Object.assign ANALGESICOS_DRUGS_DB — Grupo 14 (hidralazina_iv · enalaprilato · milrinona · mexiletina · verapamil_iv — BUILD 332 Lote 4) */
+
+})();
+
 })(); /* fim da IIFE do módulo analgésicos */
