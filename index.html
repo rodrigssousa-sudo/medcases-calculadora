@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=368" />
-  <link rel="stylesheet" href="css/build233.css?v=368" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=368" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=368" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=368" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=368" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=368" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=370" />
+  <link rel="stylesheet" href="css/build233.css?v=370" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=370" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=370" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=370" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=370" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=370" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=368" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=370" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=368" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=370" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=368" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=370" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=368" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=370" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=368" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=370" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=368" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=370" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=368" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=370" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=368" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=370" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -7650,7 +7650,7 @@
                       autocomplete="off" autocorrect="off" spellcheck="false"
                       step="any"
                       enterkeyhint="done"
-                      placeholder="70" oninput="this.value=this.value.replace(/,/g,'.');hmUpdatePatientCardColor()" />
+                      placeholder="70" oninput="this.value=this.value.replace(/,/g,'.');window.hmUpdatePatientCardColor&&hmUpdatePatientCardColor()" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label">Idade <span class="hm-label-unit">anos</span></label>
@@ -7658,7 +7658,7 @@
                       autocomplete="off" autocorrect="off" spellcheck="false"
                       step="any"
                       enterkeyhint="done"
-                      placeholder="45" oninput="this.value=this.value.replace(/,/g,'.');hmUpdatePatientCardColor()" />
+                      placeholder="45" oninput="this.value=this.value.replace(/,/g,'.');window.hmUpdatePatientCardColor&&hmUpdatePatientCardColor()" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label">Altura <span class="hm-label-unit">cm</span></label>
@@ -18432,7 +18432,7 @@ function calcFluids() {
    BUILD 284 — MIGRADO para database/infusoes.js
    Todas as funções (calculateInfusion, setInfusionMode, bic*,
    initInfusionDatabase, etc.) estão em database/infusoes.js,
-   carregado via <script defer src="database/infusoes.js">.
+   carregado via <script src="database/infusoes.js">.
    As exposições window.* garantem compatibilidade com onclick/oninput.
 ============================================================ */
 /* ============================================================
@@ -20729,6 +20729,31 @@ function _adaptExternalDB(dbObj, categoryLabel) {
 
 })(); /* fim _legacyIxCompat */
 
+/* ═══════════════════════════════════════════════════════════════
+   BUILD 370 — PRE-STUB SÍNCRONO: funções chamadas por oninput/onclick
+   antes do DOMContentLoaded completar. Definidas aqui como stubs
+   seguros (no-op) para evitar ReferenceError. A implementação real
+   definida dentro do DOMContentLoaded sobrescreve estas entradas.
+═══════════════════════════════════════════════════════════════ */
+if (typeof window.hmUpdatePatientCardColor !== 'function') {
+  window.hmUpdatePatientCardColor = function() { /* pre-stub: aguardando DOMContentLoaded */ };
+}
+if (typeof window.hmCalcCockcroft !== 'function') {
+  window.hmCalcCockcroft = function() { /* pre-stub: aguardando DOMContentLoaded */ };
+}
+if (typeof window.hmShowInlineResult !== 'function') {
+  window.hmShowInlineResult = function() { /* pre-stub: aguardando DOMContentLoaded */ };
+}
+if (typeof window.hmCloseInlineResult !== 'function') {
+  window.hmCloseInlineResult = function() { /* pre-stub: aguardando DOMContentLoaded */ };
+}
+if (typeof window.hmFixarDados !== 'function') {
+  window.hmFixarDados = function() { /* pre-stub: aguardando DOMContentLoaded */ };
+}
+if (typeof window.hmFilterDrugs !== 'function') {
+  window.hmFilterDrugs = function() { /* pre-stub: aguardando DOMContentLoaded */ };
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ═══════════════════════════════════════════════════════════════════
@@ -22831,7 +22856,7 @@ document.addEventListener('DOMContentLoaded', () => {
    ReferenceError, mesmo que o DOMContentLoaded tenha quebrado
    antes de registrar as funções. Executado fora do callback,
    imediatamente após o fechamento do DOMContentLoaded, com
-   reintentos a cada 100ms por até 3s.
+   reintentos a cada 100ms por até 6s (BUILD 370: ampliado de 3s).
    ─────────────────────────────────────────────────────────────
    Por que fora do DOMContentLoaded?
    Se qualquer linha anterior no DOMContentLoaded throw um erro
@@ -22860,10 +22885,12 @@ document.addEventListener('DOMContentLoaded', () => {
     'hmClearPatient',
     'hmLoadPatient',
     '_updateHomeLiveDash',
+    'hmUpdatePatientCardColor', /* BUILD 370: adicionado — chamado por oninput */
+    'hmFilterDrugs',             /* BUILD 370: adicionado — chamado por oninput da busca */
   ];
 
   var _attempts = 0;
-  var _maxAttempts = 30; /* 30 × 100ms = 3s */
+  var _maxAttempts = 60; /* BUILD 370: 60 × 100ms = 6s (era 30×100ms=3s) */
 
   function _checkAndExport() {
     _attempts++;
@@ -22878,7 +22905,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (missing.length === 0) {
       /* Todas as funções confirmadas no window */
       window._appBootComplete = true;
-      console.log('[BUILD 368] Safety-net: todas as funções críticas confirmadas no window. _appBootComplete=true');
+      console.log('[BUILD 370] Safety-net: todas as funções críticas confirmadas no window. _appBootComplete=true');
       return;
     }
 
@@ -22895,7 +22922,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       /* Força boot complete para desbloquear reactive engine */
       window._appBootComplete = true;
-      console.warn('[BUILD 368] Safety-net timeout (3s): stubs injetados para ' + missing.join(', '));
+      console.warn('[BUILD 370] Safety-net timeout (6s): stubs injetados para ' + missing.join(', '));
     }
   }
 
@@ -23165,59 +23192,59 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script defer src="database/interacoes.js?v=368"></script>
-<script defer src="database/antimicrobianos.js?v=368"></script>
-<script defer src="database/psicofarmacos.js?v=368"></script>
-<script defer src="database/analgesicos.js?v=368"></script>
-<script defer src="database/anticoag.js?v=368"></script>
-<script defer src="database/cardio.js?v=368"></script>
-<script defer src="database/endocrino.js?v=368"></script>
-<script defer src="database/gastro.js?v=368"></script>
-<script defer src="database/gastro_imuno.js?v=368"></script>
-<script defer src="database/imuno_corticoide.js?v=368"></script>
-<script defer src="database/endocrino_glp1.js?v=368"></script>
-<script defer src="database/infusoes.js?v=368"></script>
-<script defer src="database/nefro.js?v=368"></script>
-<script defer src="database/neuro.js?v=368"></script>
-<script defer src="database/obesidade.js?v=368"></script>
-<script defer src="database/pneumo.js?v=368"></script>
-<script defer src="database/psiquiatria.js?v=368"></script>
-<script defer src="database/reumatologia.js?v=368"></script>
-<script defer src="database/emergencia.js?v=368"></script>
-<script defer src="database/infectologia.js?v=368"></script>
-<script defer src="database/sedacao.js?v=368"></script>
-<script defer src="database/hematologia.js?v=368"></script>
-<script defer src="database/gastroenterologia.js?v=368"></script>
-<script defer src="database/cardiologia.js?v=368"></script>
-<script defer src="database/analgesia_opioides.js?v=368"></script>
-<script defer src="database/prescricoes.js?v=368" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/interacoes.js?v=370"></script>
+<script src="database/antimicrobianos.js?v=370"></script>
+<script src="database/psicofarmacos.js?v=370"></script>
+<script src="database/analgesicos.js?v=370"></script>
+<script src="database/anticoag.js?v=370"></script>
+<script src="database/cardio.js?v=370"></script>
+<script src="database/endocrino.js?v=370"></script>
+<script src="database/gastro.js?v=370"></script>
+<script src="database/gastro_imuno.js?v=370"></script>
+<script src="database/imuno_corticoide.js?v=370"></script>
+<script src="database/endocrino_glp1.js?v=370"></script>
+<script src="database/infusoes.js?v=370"></script>
+<script src="database/nefro.js?v=370"></script>
+<script src="database/neuro.js?v=370"></script>
+<script src="database/obesidade.js?v=370"></script>
+<script src="database/pneumo.js?v=370"></script>
+<script src="database/psiquiatria.js?v=370"></script>
+<script src="database/reumatologia.js?v=370"></script>
+<script src="database/emergencia.js?v=370"></script>
+<script src="database/infectologia.js?v=370"></script>
+<script src="database/sedacao.js?v=370"></script>
+<script src="database/hematologia.js?v=370"></script>
+<script src="database/gastroenterologia.js?v=370"></script>
+<script src="database/cardiologia.js?v=370"></script>
+<script src="database/analgesia_opioides.js?v=370"></script>
+<script src="database/prescricoes.js?v=370" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=368"></script>
+<script defer src="js/medcases-ux-v2.js?v=370"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=368"></script>
+<script defer src="js/hub-accordion.js?v=370"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=368"></script>
+<script defer src="js/build240b-accordion-fix.js?v=370"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=368"></script>
+<script defer src="js/calculator-overlay.js?v=370"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=368"></script>
+<script defer src="js/category-pills.js?v=370"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=368"></script>
+<script defer src="js/elec-calc.js?v=370"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=368"></script>
+<script defer src="js/deeplink-router.js?v=370"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=368"></script>
+<script defer src="js/build272-reactive-engine.js?v=370"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=368"></script>
+<script defer src="js/build283-accessory-bar.js?v=370"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
