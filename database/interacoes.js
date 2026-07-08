@@ -1457,6 +1457,30 @@ const INTERACOES_DB = {
         pt: "Evitar em pacientes com cardiopatia de base ou QT prolongado. Monitorar ECG se associação for inevitável e corrigir eletrólitos.",
         es: "Evitar en pacientes con cardiopatía de base o QT prolongado. Monitorear ECG si la asociación es inevitable y corregir electrolitos."
       }
+    },
+    "colchicina": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "A azitromicina tem uma interação mais leve com a colchicina do que a claritromicina (que é mortal), mas ainda pode aumentar os níveis de colchicina no sangue por competição intestinal do transportador P-gp.",
+        es: "La azitromicina tiene una interacción más leve con la colchicina que la claritromicina (que es mortal), pero aún puede aumentar los niveles de colchicina en la sangre por competición intestinal."
+      },
+      conduta: {
+        pt: "Monitorar toxicidade gastrointestinal e neuromuscular da colchicina se usados juntos.",
+        es: "Monitorizar toxicidad gastrointestinal y neuromuscular de la colchicina si se usan juntos."
+      }
+    },
+    "$classe_antiarritmicos_qt": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Risco de Morte Súbita. A azitromicina bloqueia ativamente os canais de potássio miocárdicos retardando a repolarização (Alongamento do intervalo QT). Associá-la à Amiodarona, Haloperidol, Ondansetrona ou Fluconazol gera um risco inaceitável de deflagrar Torsades de Pointes.",
+        es: "Riesgo de Muerte Súbita. La azitromicina bloquea activamente los canales de potasio miocárdicos retrasando la repolarización (Alargamiento del QT). Asociarla a Amiodarona, Haloperidol u Ondansetrón genera un riesgo inaceptable de desencadenar Torsades de Pointes."
+      },
+      conduta: {
+        pt: "Nunca associar na UTI sem Eletrocardiograma basal. A azitromicina deve ser imediatamente suspensa se o QTc ultrapassar 500 ms.",
+        es: "Nunca asociar en la UCI sin Electrocardiograma basal. La azitromicina debe suspenderse inmediatamente si el QTc supera 500 ms."
+      }
     }
   },
 
@@ -1792,6 +1816,30 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Monitorar creatinina e débito urinário antes e após o contraste. Hidratação adequada obrigatória. Evitar outros nefrotóxicos concomitantes.",
         es: "Monitorear creatinina y diuresis antes y después del contraste. Hidratación adecuada obligatoria. Evitar otros nefrotóxicos concomitantes."
+      }
+    },
+    "furosemida": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SINERGISMO OTOTÓXICO E NEFROTÓXICO MASSIVO. A Amicacina agride ativamente as células ciliadas da orelha interna. A Furosemida em doses venosas também causa ototoxicidade direta pela alteração iônica do labirinto. A associação fulmina o ouvido do paciente, gerando surdez neurosensorial irreversível rapidamente, além de agravar a isquemia renal pela desidratação (Furosemida) no túbulo já envenenado (Amicacina).",
+        es: "SINERGISMO OTOTÓXICO Y NEFROTÓXICO MASIVO. La Amikacina agrede activamente las células ciliadas del oído interno. La Furosemida en dosis venosas también causa ototoxicidad directa. La asociación fulmina el oído del paciente, generando sordera neurosensorial irreversible rápidamente, además de agravar la isquemia renal por deshidratación."
+      },
+      conduta: {
+        pt: "Uso concomitante deve ser extremamente restrito e com dosagem mínima. Dosar Ureia e Creatinina diariamente e hidratar ativamente se não houver congestão franca.",
+        es: "Uso concomitante debe ser extremadamente restringido. Dosificar Urea y Creatinina diariamente e hidratar activamente si no hay congestión franca."
+      }
+    },
+    "$classe_bnm_adespolarizantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "BLOQUEIO RESPIRATÓRIO PROLONGADO. A Amicacina bloqueia a liberação de Acetilcolina na placa motora e se liga aos mesmos receptores pós-sinápticos dos bloqueadores neuromusculares (Rocurônio, Atracúrio). O efeito curarizante soma-se, e o paciente pode sofrer paralisia muscular e apneia sustentada impossível de ser revertida pela Neostigmina no fim da cirurgia.",
+        es: "BLOQUEO RESPIRATORIO PROLONGADO. La Amikacina bloquea la liberación de Acetilcolina en la placa motora y se une a los mismos receptores postsinápticos de los bloqueadores neuromusculares. El efecto se suma, y el paciente puede sufrir parálisis muscular y apnea sostenida imposible de ser revertida por Neostigmina."
+      },
+      conduta: {
+        pt: "Avisar imediatamente o Anestesiologista se o paciente estiver usando Aminoglicosídeos e for para o bloco cirúrgico. O desmame ventilatório exigirá observação minuciosa.",
+        es: "Avisar inmediatamente al Anestesiólogo si el paciente está usando Aminoglucósidos y va al quirófano. El destete ventilatorio exigirá observación minuciosa."
       }
     }
   },
@@ -2798,6 +2846,18 @@ const INTERACOES_DB = {
         pt: "Hidratar adequadamente antes e após o contraste. Monitorar creatinina e débito urinário. Avaliar risco-benefício do contraste em pacientes em vancomicina com função renal limítrofe.",
         es: "Hidratar adecuadamente antes y después del contraste. Monitorear creatinina y diuresis. Evaluar riesgo-beneficio del contraste en pacientes en vancomicina con función renal limítrofe."
       }
+    },
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Surdez e Falência Renal. A associação de Vancomicina com Amicacina ou Gentamicina aumenta de forma estrondosa o dano às células ciliadas do ouvido interno (Risco de zumbido e surdez neurológica irreversível) e ao túbulo contorcido proximal (Nefrotoxicidade isquêmica).",
+        es: "Sordera y Falla Renal. La asociación de Vancomicina con Amikacina o Gentamicina aumenta de forma estruendosa el daño a las células ciliadas del oído interno (Riesgo de zumbido y sordera neurológica irreversible) y al túbulo contorneado proximal (Nefrotoxicidad isquémica)."
+      },
+      conduta: {
+        pt: "A associação exige justificativa microbiológica e não deve ultrapassar 5 a 7 dias. Monitorização da creatinina deve ser diária e suspender a Amicacina ao primeiro sinal de elevação dos marcadores renais.",
+        es: "La asociación exige justificación microbiológica y no debe superar 5 a 7 días. La monitorización de la creatinina debe ser diaria y suspender la Amikacina a la primera señal de elevación de los marcadores renales."
+      }
     }
   },
 
@@ -3086,6 +3146,18 @@ const INTERACOES_DB = {
         pt: "Monitorar função renal e níveis do imunossupressor se indicado clínicamente.",
         es: "Monitorear función renal y niveles del inmunosupresor si está indicado clínicamente."
       }
+    },
+    "calcio_endovenoso": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CRISTALIZAÇÃO LETAL. A Ceftriaxona liga-se fortemente aos sais de Cálcio (Gluconato de Cálcio, Cloreto de Cálcio, ou *Ringer Lactato*) formando microcristais insolúveis de Ceftriaxona Cálcica no sangue. Esses cristais viajam para os pulmões e rins, gerando embolia mecânica fatal, especialmente documentada como causa de morte em recém-nascidos.",
+        es: "CRISTALIZACIÓN LETAL. La Ceftriaxona se une fuertemente a las sales de Calcio (Gluconato de Calcio, Cloruro de Calcio, o *Ringer Lactato*) formando microcristales insolubles en la sangre. Estos cristales viajan a pulmones y riñones, generando embolia mecánica fatal, especialmente documentada como causa de muerte en recién nacidos."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA DE ADMINISTRAÇÃO SIMULTÂNEA. Não pendurar no mesmo acesso em Y (nem mesmo em adultos). Lavar vigorosamente a veia com 20mL de SF antes e depois. *NUNCA* diluir ceftriaxona no Soro Ringer Lactato.",
+        es: "CONTRAINDICACIÓN ABSOLUTA DE ADMINISTRACIÓN SIMULTÁNEA. No colgar en el mismo acceso en Y (ni siquiera en adultos). Lavar vigorosamente la vena con 20mL de SF antes y después. *NUNCA* diluir ceftriaxona en Suero Ringer Lactato."
+      }
     }
   },
 
@@ -3212,6 +3284,30 @@ const INTERACOES_DB = {
         pt: "Em pacientes transplantados, monitorar sinais de rejeição e considerar contato com a equipe de transplante para ajuste do imunossupressor.",
         es: "En pacientes trasplantados, monitorear signos de rechazo y considerar contacto con el equipo de trasplante para ajuste del inmunosupresor."
       }
+    },
+    "vancomicina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SINERGISMO DE NEFROTOXICIDADE DA UTI. A Associação 'Vanco + Pip-Tazo' é o empirismo mais comum da UTI (cobre MRSA e Pseudomonas juntos). O problema: a incidência de Lesão Renal Aguda triplica (aumenta 300%) quando essas drogas são feitas juntas, comparado com Vanco + Meropenem ou Vanco + Cefepime.",
+        es: "SINERGISMO DE NEFROTOXICIDAD DE UCI. La Asociación 'Vanco + Pip-Tazo' es el empirismo más común de la UCI (cubre MRSA y Pseudomonas juntos). El problema: la incidencia de Lesión Renal Aguda se triplica (aumenta 300%) cuando estas drogas se hacen juntas, comparado con Vanco + Meropenem."
+      },
+      conduta: {
+        pt: "Protocolo rígido de hidratação venosa. O clínico DEVE acompanhar a Creatinina diariamente. Se houver salto de creatinina (Ex: de 0.8 para 1.5), considere trocar o Tazocin por Cefepime ou Meropenem.",
+        es: "Protocolo rígido de hidratación venosa. El clínico DEBE acompañar la Creatinina diariamente. Si hay salto de creatinina (Ej: de 0.8 a 1.5), considere cambiar el Tazocin por Cefepime o Meropenem."
+      }
+    },
+    "$classe_bnm_adespolarizantes": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A piperacilina demonstrou em estudos clínicos prolongar clinicamente a ação do bloqueio neuromuscular adespolarizante (Vecurônio, Rocurônio). Pacientes em anestesia geral demorarão mais tempo para recuperar a ventilação espontânea e retornar os reflexos no pós-operatório.",
+        es: "La piperacilina demostró en estudios clínicos prolongar clínicamente la acción del bloqueo neuromuscular no despolarizante (Vecuronio, Rocuronio). Pacientes en anestesia general tardarán más tiempo en recuperar la ventilación espontánea y retornar los reflejos."
+      },
+      conduta: {
+        pt: "Monitoramento por Trem de Quatro (TOF) estrito durante a anestesia. Extubação com cautela.",
+        es: "Monitorización por Tren de Cuatro (TOF) estricto durante la anestesia. Extubación con precaución."
+      }
     }
   },
 
@@ -3241,6 +3337,30 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Orientar método contraceptivo adicional (barômetro) apenas se houver má absorção gastrointestinal durante o tratamento.",
         es: "Orientar método anticonceptivo adicional (barómetro) solo si hay malabsorción gastrointestinal durante el tratamiento."
+      }
+    },
+    "alopurinol": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Aumento Massivo de Reações Cutâneas. A administração de amoxicilina em pacientes que fazem uso crônico de Alopurinol (para Gota/Ácido úrico) aumenta a incidência de rash cutâneo maculopapular assustador (mas não letal) em até 20% a 30%.",
+        es: "Aumento Masivo de Reacciones Cutáneas. La administración de amoxicilina en pacientes que hacen uso crónico de Alopurinol (para Gota/Ácido úrico) aumenta la incidencia de rash cutáneo maculopapular asustador en hasta 20% a 30%."
+      },
+      conduta: {
+        pt: "Monitorar o aparecimento de erupções pelo corpo. Explicar ao paciente que isso geralmente não é anafilaxia ou 'alergia à penicilina verdadeira', mas se houver descamação da pele/acometimento de mucosas, suspender imediatamente.",
+        es: "Monitorizar la aparición de erupciones. Explicar al paciente que esto generalmente no es anafilaxia o 'alergia a la penicilina verdadera', pero si hay descamación/afectación de mucosas, suspender inmediatamente."
+      }
+    },
+    "metotrexato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "As penicilinas competem com a secreção tubular renal do Metotrexato. O acúmulo de Metotrexato pode desencadear aplasia de medula e mucosite tóxica grave em pacientes com artrite reumatoide ou quimioterapia.",
+        es: "Las penicilinas compiten con la secreción tubular renal del Metotrexato. La acumulación de Metotrexato puede desencadenar aplasia de médula y mucositis tóxica grave en pacientes con artritis reumatoide o quimioterapia."
+      },
+      conduta: {
+        pt: "Evitar o uso se o paciente usar doses oncológicas altas de metotrexato. Se o uso for de baixa dose reumatológica, monitorar hemograma.",
+        es: "Evitar el uso si el paciente usa dosis oncológicas altas de metotrexato. Si el uso es de baja dosis reumatológica, monitorizar hemograma."
       }
     }
   },
@@ -20648,9 +20768,58 @@ const INTERACOES_DB = {
         es: "Alerte a los pacientes usuarios de antidepresivos crónicos a no usar Ibuprofeno/Diclofenaco para dolores rutinarios sin protección (IBP), sino analgésicos comunes."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BUILD 358 — INFECTOLOGIA AVANÇADA
+   Quinolonas, Azitromicina/QT, Amicacina/Orelha, Cefepima Neurológica
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── QUINOLONAS (CIPROFLOXACINO / LEVOFLOXACINO) ── */
+  "$classe_quinolonas": {
+    "$classe_antiacidos_e_cations": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "QUELAÇÃO FATAL (Cimento Gástrico). Quinolonas e Tetraciclinas ligam-se quimicamente a íons divalentes e trivalentes (Cálcio, Alumínio, Magnésio, Zinco, Ferro). Se o paciente tomar o comprimido de Ciprofloxacino/Levofloxacino junto com Leite (Cálcio), Antiácidos (Mylanta/Pepsamar) ou Sulfato Ferroso, o antibiótico formará um complexo pedregoso no estômago, reduzindo a absorção para QUASE ZERO. A pneumonia ou infecção urinária não será tratada.",
+        es: "QUELACIÓN FATAL (Cemento Gástrico). Quinolonas y Tetraciclinas se unen químicamente a iones divalentes y trivalentes (Calcio, Aluminio, Magnesio, Zinc, Hierro). Si el paciente toma el comprimido junto con Leche (Calcio), Antiácidos o Sulfato Ferroso, el antibiótico formará un complejo en el estómago, reduciendo la absorción a CASI CERO. La infección no será tratada."
+      },
+      conduta: {
+        pt: "Obrigatório separar a tomada do antibiótico em NO MÍNIMO 2 horas ANTES ou 6 horas DEPOIS de leite, antiácidos, complexos vitamínicos e sulfato ferroso.",
+        es: "Obligatorio separar la toma del antibiótico en AL MENOS 2 horas ANTES o 6 horas DESPUÉS de leche, antiácidos, complejos vitamínicos y sulfato ferroso."
+      }
+    },
+    "$classe_corticosteroides": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "RUPTURA TENDÍNEA AGUDA. Ambos os fármacos destroem ativamente as fibras de colágeno, inibindo a tenócito-reparação. A prescrição simultânea de Quinolonas com Glicocorticoides sistêmicos (ex: Prednisona, Dexametasona) multiplica em 46 vezes o risco de ruptura espontânea do Tendão de Aquiles, especialmente em pacientes acima de 60 anos.",
+        es: "RUPTURA TENDINOSA AGUDA. Ambos fármacos destruyen activamente las fibras de colágeno. La prescripción simultánea de Quinolonas con Glucocorticoides sistémicos (ej: Prednisona) multiplica en 46 veces el riesgo de ruptura espontánea del Tendón de Aquiles, especialmente en pacientes mayores de 60 años."
+      },
+      conduta: {
+        pt: "Evitar completamente a prescrição de Cipro/Levofloxacino para idosos que fazem uso contínuo de corticoides (ex: asma crônica/reumatologia). Escolher outro antibiótico (ex: Ceftriaxona).",
+        es: "Evitar completamente la prescripción de Cipro/Levofloxacino para ancianos que hacen uso continuo de corticoides. Elegir otro antibiótico (ej: Ceftriaxona)."
+      }
+    }
+  },
+
+  /* ── CEFEPIMA ── */
+  "cefepima": {
+    "interacao_neurologica_marcador": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "AVISO FARMACOCINÉTICO LETAL: A Cefepima possui uma característica infeliz entre as cefalosporinas. Ela cruza a barreira hematoencefálica ativamente e antagoniza os receptores inibitórios GABA-A no cérebro. Se os rins falharem e a dose não for reduzida pela METADE, a concentração cerebral dispara. O paciente evolui para Estado de Mal Epiléptico Não-Convulsivo, entra em coma inexplicável e sofre abalos musculares profundos (Mioclonias). A letalidade do não ajuste é severa.",
+        es: "AVISO FARMACOCINÉTICO LETAL: La Cefepima cruza la barrera hematoencefálica activamente y antagoniza los receptores inhibitorios GABA-A en el cerebro. Si los riñones fallan y la dosis no se reduce a la MITAD, la concentración cerebral se dispara. El paciente evoluciona a Estado de Mal Epiléptico No Convulsivo y entra en coma inexplicable."
+      },
+      conduta: {
+        pt: "O ajuste pelo Clearance de Creatinina diário é uma regra de ouro imutável. Se o paciente sob cefepime rebaixar a consciência sem foco aparente ou apresentar tremores faciais, SUSPENDA a cefepime IMEDIATAMENTE (e prescreva antiepilépticos/diálise se o coma não reverter).",
+        es: "El ajuste por el Clearance de Creatinina diario es una regla de oro inmutable. Si el paciente bajo cefepime baja la consciencia sin foco aparente o presenta temblores faciales, SUSPENDA la cefepima INMEDIATAMENTE."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB */
+}; /* fim INTERACOES_DB — BUILD 358 Lote 6 (Infectologia Avançada: Quinolonas/Cefepima/Nefrotoxicidade UTI) */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

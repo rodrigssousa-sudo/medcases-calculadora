@@ -898,8 +898,208 @@
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'ERRO TERAPÊUTICO COMUM: esquecer de fazer as doses de ataque (a cada 12h) nos primeiros dois dias. O remédio demora muitos dias para atingir o nível sérico eficaz se as doses de ataque forem puladas.', es: 'ERROR TERAPÉUTICO COMÚN: olvidar hacer las dosis de ataque (cada 12h) en los primeros dos días. El remedio tarda muchos días en alcanzar el nivel sérico eficaz si las dosis de ataque se saltan.' }
       }
+    }, // vírgula adicionada; BUILD 358 Grupo 6 blocos seguem
+
+/* ── AMOXICILINA + CLAVULANATO ──────────────────────────────────────── */
+    "amoxicilina_clavulanato": {
+      name: { pt: 'Amoxicilina + Clavulanato', es: 'Amoxicilina + Ácido Clavulánico' },
+      category: 'infectologia',
+      class: { pt: 'Penicilina de Amplo Espectro + Inibidor de Beta-lactamase', es: 'Penicilina de Amplio Espectro + Inhibidor de Betalactamasa' },
+      indications: {
+        pt: ['Pneumonia Adquirida na Comunidade (PAC)', 'Infecções de pele e tecidos moles (mordeduras de animais, celulite)', 'Infecções de vias aéreas superiores (Otite, Sinusite) refratárias'],
+        es: ['Neumonía Adquirida en la Comunidad (NAC)', 'Infecciones de piel y tejidos blandos (mordeduras de animales, celulitis)', 'Infecciones de vías respiratorias superiores (Otitis, Sinusitis) refractarias']
+      },
+      commercialNames: { br: ['Clavulin', 'Sigma-Clav'], ar: ['Optamox'] },
+      presentation: { pt: ['Comprimidos 875/125 mg, 500/125 mg', 'Suspensão oral 400/57 mg por 5 mL', 'Frasco-ampola IV 1000/200 mg'], es: ['Comprimidos 875/125 mg, 500/125 mg', 'Suspensión oral 400/57 mg por 5 mL', 'Vial IV 1000/200 mg'] },
+      mechanism: {
+        pt: 'A Amoxicilina (um beta-lactâmico) inibe a síntese da parede celular bacteriana ligando-se às PBPs (levando a bactéria à lise). No entanto, muitas bactérias produzem a enzima "Beta-lactamase", que destrói a amoxicilina. O Ácido Clavulánico age como um "escudo suicida": ele se liga à enzima da bactéria e a inativa, permitindo que a amoxicilina sobreviva e destrua o patógeno. (Não tem ação contra MRSA ou Pseudomonas).',
+        es: 'La Amoxicilina (un betalactámico) inhibe la síntesis de la pared celular bacteriana uniéndose a las PBP (llevando a la bacteria a la lisis). Sin embargo, muchas bacterias producen la enzima "Betalactamasa", que destruye la amoxicilina. El Ácido Clavulánico actúa como un "escudo suicida": se une a la enzima de la bacteria y la inactiva, permitiendo que la amoxicilina sobreviva y destruya el patógeno. (No tiene acción contra MRSA o Pseudomonas).'
+      },
+      dose: {
+        adult: {
+          pt: 'Oral: 875/125 mg a cada 12 horas. Infecção grave (IV): 1g/200 mg a cada 8 horas.',
+          es: 'Oral: 875/125 mg cada 12 horas. Infección grave (IV): 1g/200 mg cada 8 horas.'
+        },
+        pediatric: {
+          pt: '45 a 90 mg/kg/dia de amoxicilina (dividido a cada 12h ou 8h).',
+          es: '45 a 90 mg/kg/día de amoxicilina (dividido cada 12h u 8h).'
+        }
+      },
+      administration: { pt: ['Tomar NO INÍCIO DAS REFEIÇÕES (minimiza os severos efeitos gastrointestinais do clavulanato).', 'Forma IV deve ser infundida em 30 a 40 minutos (nunca bolus rápido).'], es: ['Tomar AL INICIO DE LAS COMIDAS (minimiza los severos efectos gastrointestinales del clavulánico).', 'La forma IV debe infundirse en 30 a 40 minutos (nunca bolo rápido).'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr 10-30 mL/min: Usar 500/125 mg 12/12h (Evitar comp de 875mg). Se ClCr < 10: 500/125 mg 1x/dia.', es: 'Si ClCr 10-30 mL/min: Usar 500/125 mg 12/12h (Evitar comp de 875mg). Si ClCr < 10: 500/125 mg 1 vez/día.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar se o paciente teve histórico prévio de lesão hepática (icterícia) associada ao uso desta droga.', es: 'Evitar si el paciente tuvo historial previo de lesión hepática (ictericia) asociada al uso de esta droga.' } },
+      commonAdverseEffects: { pt: ['Diarreia marcante (efeito direto do ácido clavulânico na motilidade)', 'Náuseas', 'Candidíase vaginal oportunista'], es: ['Diarrea marcada (efecto directo del ácido clavulánico en la motilidad)', 'Náuseas', 'Candidiasis vaginal oportunista'] },
+      dangerousAdverseEffects: { pt: ['Hepatite Colestática / Icterícia (pode surgir até SEMANAS após parar o remédio, mais comum em idosos homens)', 'Anafilaxia grave (Alergia cruzada às penicilinas)'], es: ['Hepatitis Colestásica / Ictericia (puede surgir hasta SEMANAS tras parar el remedio, más común en ancianos hombres)', 'Anafilaxia grave (Alergia cruzada a penicilinas)'] },
+      contraindications: {
+        absolute: { pt: ['Alergia a Penicilinas', 'Histórico de disfunção hepática prévia por Amoxicilina/Clavulanato'], es: ['Alergia a Penicilinas', 'Historial de disfunción hepática previa por Amoxicilina/Clavulánico'] },
+        relative: { pt: ['Mononucleose Infecciosa ativa (Vírus Epstein-Barr) - deflagra Rash cutâneo violento em 100% dos casos, confundindo com alergia.'], es: ['Mononucleosis Infecciosa activa (Virus Epstein-Barr) - desencadena Rash cutáneo violento en el 100% de los casos, confundiéndose con alergia.'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Cuidado com a Doses Duplas: Se o médico prescrever a posologia de "500 mg 8/8h" e o paciente tomar a caixa de "875 mg", ele receberá o DOBRO da dose permitida de Clavulanato, o que causará forte intoxicação gástrica (vômitos e diarreia incoercíveis).', es: 'Cuidado con las Dosis Dobles: Si el médico prescribe la posología de "500 mg 8/8h" y el paciente toma la caja de "875 mg", recibirá el DOBLE de la dosis permitida de Clavulánico, lo que causará fuerte intoxicación gástrica.' }
+      }
+    },
+
+/* ── PIPERACILINA + TAZOBACTAM (TAZOCIN) ────────────────────────────── */
+    "piperacilina_tazobactam": {
+      name: { pt: 'Piperacilina + Tazobactam', es: 'Piperacilina + Tazobactam' },
+      category: 'infectologia',
+      class: { pt: 'Ureidopenicilina Antipseudomonas + Inibidor de Beta-lactamase', es: 'Ureidopenicilina Antipseudomonas + Inhibidor de Betalactamasa' },
+      indications: {
+        pt: ['Sepse hospitalar e Choque Séptico intra-abdominal (cobre anaeróbios perfeitamente)', 'Pneumonia Associada à Ventilação (PAV)', 'Neutropenia Febril'],
+        es: ['Sepsis hospitalaria y Choque Séptico intraabdominal (cubre anaerobios perfectamente)', 'Neumonía Asociada a Ventilación (NAV)', 'Neutropenia Febril']
+      },
+      commercialNames: { br: ['Tazocin'], ar: ['Tazocin'] },
+      presentation: { pt: ['Frasco-ampola IV liofilizado 4 g / 0,5 g (Total de 4,5 g)'], es: ['Vial IV liofilizado 4 g / 0,5 g (Total de 4,5 g)'] },
+      mechanism: {
+        pt: 'Uma bazuca antibiótica. A Piperacilina é uma penicilina desenhada especificamente para furar as barreiras da temida *Pseudomonas aeruginosa* (bactéria fatal de UTI). O Tazobactam é o escudo protetor. Juntos, exterminam quase tudo (Gram-positivos, Gram-negativos e Anaeróbios como *Bacteroides fragilis*). Falha contra: MRSA, VRE e cepas produtoras de KPC ou ESBL.',
+        es: 'Un cañón antibiótico. La Piperacilina es una penicilina diseñada específicamente para perforar las barreras de la temida *Pseudomonas aeruginosa* (bacteria fatal de UCI). El Tazobactam es el escudo protector. Juntos, exterminan casi todo (Gram-positivos, Gram-negativos y Anaerobios como *Bacteroides fragilis*). Falla contra: MRSA, VRE y cepas productoras de KPC o ESBL.'
+      },
+      dose: {
+        adult: {
+          pt: '4,5 g IV a cada 8 horas ou 6 horas. (Infusão estendida de 4 horas é o padrão-ouro mundial de eficácia).',
+          es: '4,5 g IV cada 8 horas o 6 horas. (Infusión extendida de 4 horas es el patrón oro mundial de eficacia).'
+        },
+        pediatric: {
+          pt: 'Acima de 2 meses: 80 a 100 mg/kg da piperacilina IV a cada 8h (Máx 16g/dia).',
+          es: 'Por encima de 2 meses: 80 a 100 mg/kg de piperacilina IV cada 8h (Máx 16g/día).'
+        }
+      },
+      administration: { pt: ['A INFUSÃO ESTENDIDA (fazer a bolsa correr em 3 a 4 horas ao invés de 30 min) salva 30% a mais de vidas na sepse grave, pois a droga precisa de TEMPO de exposição contínua na bactéria, não de pico rápido.', 'Não misturar no mesmo equipo que Vancomicina (inativação química).'], es: ['LA INFUSIÓN EXTENDIDA (hacer que la bolsa pase en 3 a 4 horas en lugar de 30 min) salva 30% más vidas en la sepsis grave, pues la droga necesita TIEMPO de exposición continua en la bacteria, no pico rápido.', 'No mezclar en el mismo equipo que Vancomicina (inactivación química).'] },
+      renalAdjustment: { required: true, message: { pt: 'Altamente retido em lesão renal. ClCr 20-40: 4,5g a cada 8h (se não fizer uso de 6/6h). ClCr < 20 (ou diálise): 4,5g a cada 12h.', es: 'Altamente retenido en lesión renal. ClCr 20-40: 4,5g cada 8h. ClCr < 20 (o diálisis): 4,5g cada 12h.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Nenhum ajuste necessário.', es: 'Ningún ajuste necesario.' } },
+      commonAdverseEffects: { pt: ['Diarreia e candidíase', 'Erupção cutânea maculopapular', 'Flebite'], es: ['Diarrea y candidiasis', 'Erupción cutánea maculopapular', 'Flebitis'] },
+      dangerousAdverseEffects: { pt: ['Anafilaxia fulminante cruzada', 'Lesão Renal Aguda severa (especialmente se combinado com Vancomicina)', 'Trombocitopenia (queda de plaquetas em uso prolongado > 10 dias)'], es: ['Anafilaxia fulminante cruzada', 'Lesión Renal Aguda severa (especialmente si se combina con Vancomicina)', 'Trombocitopenia (caída de plaquetas en uso prolongado > 10 días)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade a Penicilinas ou Cefalosporinas (alergia cruzada grave)'], es: ['Hipersensibilidad a Penicilinas o Cefalosporinas (alergia cruzada grave)'] },
+        relative: { pt: ['Fibrose Cística (aumenta muito o risco de febre e rash pela droga)'], es: ['Fibrosis Quística (aumenta mucho el riesgo de fiebre y rash por la droga)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O Tazocin tem uma carga oculta e massiva de SÓDIO (quase 300 mEq por dia num regime 6/6h). Cuidado com pacientes com Insuficiência Cardíaca na UTI, eles podem desenvolver Edema Agudo de Pulmão "inexplicável" devido a essa carga de sal injetada no antibiótico.', es: 'El Tazocin tiene una carga oculta y masiva de SODIO (casi 300 mEq por día en régimen 6/6h). Cuidado con pacientes con Insuficiencia Cardíaca en UCI, pueden desarrollar Edema Agudo de Pulmón "inexplicable" debido a esta carga de sal inyectada en el antibiótico.' }
+      }
+    },
+
+/* ── CEFTRIAXONA ────────────────────────────────────────────────────── */
+    "ceftriaxona": {
+      name: { pt: 'Ceftriaxona', es: 'Ceftriaxona' },
+      category: 'infectologia',
+      class: { pt: 'Cefalosporina de 3ª Geração', es: 'Cefalosporina de 3ª Generación' },
+      indications: {
+        pt: ['Pneumonia Adquirida na Comunidade (PAC) severa / Internação', 'Meningite Bacteriana Aguda (cobre pneumococo e meningococo)', 'Infecções do Trato Urinário complicadas (Pielonefrite) e Gonorreia'],
+        es: ['Neumonía Adquirida en la Comunidad (NAC) severa / Internación', 'Meningitis Bacteriana Aguda (cubre neumococo y meningococo)', 'Infecciones del Tracto Urinario complicadas (Pielonefritis) y Gonorrea']
+      },
+      commercialNames: { br: ['Rocefin', 'Triaxin'], ar: ['Acantex', 'Rocephin'] },
+      presentation: { pt: ['Frasco-ampola IV/IM liofilizado 1g'], es: ['Vial IV/IM liofilizado 1g'] },
+      mechanism: {
+        pt: 'Liga-se de forma letal às PBPs (Proteínas Ligadoras de Penicilina) na parede celular bacteriana. Resiste fortemente às enzimas destrutivas (beta-lactamases) que as bactérias simples produzem. Tem excelente capacidade de atravessar a Barreira Hematoencefálica (cérebro). O mais único: sua meia-vida é imensa (cerca de 8h), permitindo usar apenas UMA INJEÇÃO POR DIA na maioria das doenças, facilitando alta hospitalar (Day Clinic). (Não cobre Pseudomonas nem MRSA).',
+        es: 'Se une de forma letal a las PBPs en la pared celular bacteriana. Resiste fuertemente a las enzimas destructivas que las bacterias simples producen. Tiene excelente capacidad de atravesar la Barrera Hematoencefálica (cerebro). Lo más único: su vida media es inmensa, permitiendo usar solo UNA INYECCIÓN AL DÍA en la mayoría de las enfermedades. (No cubre Pseudomonas ni MRSA).'
+      },
+      dose: {
+        adult: {
+          pt: 'Geral: 1 a 2 g IV/IM 1x ao dia. Meningite: 2 g IV a cada 12 horas. Gonorreia: 500 mg IM Dose Única.',
+          es: 'General: 1 a 2 g IV/IM 1 vez al día. Meningitis: 2 g IV cada 12 horas. Gonorrea: 500 mg IM Dosis Única.'
+        },
+        pediatric: {
+          pt: 'Geral: 50 a 75 mg/kg IV 1x/dia. Meningite: 100 mg/kg/dia IV (dividido em 1 ou 2x, máx 4g/dia).',
+          es: 'General: 50 a 75 mg/kg IV 1 vez/día. Meningitis: 100 mg/kg/día IV (dividido en 1 o 2x, máx 4g/día).'
+        }
+      },
+      administration: { pt: ['Diluição para IV deve ser em SF 0,9% ou SG 5% (PROIBIDO RINGER LACTATO). Infusão em 30 min.', 'Via Intramuscular (IM) é EXTREMAMENTE dolorosa. A ampola IM própria já vem diluída em Lidocaína a 1% para aliviar a dor (Aviso: Nunca faça a ampola que contém lidocaína na veia!).'], es: ['Dilución para IV debe ser en SF 0,9% o SG 5% (PROHIBIDO RINGER LACTATO).', 'Vía Intramuscular (IM) es EXTREMADAMENTE dolorosa. La ampolla IM ya viene diluida en Lidocaína al 1% (¡Aviso: Nunca inyecte la ampolla con lidocaína en la vena!).'] },
+      renalAdjustment: { required: false, message: { pt: 'A ÚNICA Cefalosporina que NÃO requer ajuste na insuficiência renal. É excretada de forma mista (rim e bile).', es: 'LA ÚNICA Cefalosporina que NO requiere ajuste en insuficiencia renal. Es excretada de forma mixta (riñón y bilis).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Se o paciente tiver falência Renal E Hepática juntas, a dose não pode ultrapassar 2g/dia.', es: 'Si el paciente tiene falla Renal Y Hepática juntas, la dosis no puede superar 2g/día.' } },
+      commonAdverseEffects: { pt: ['Eosinofilia e diarreia leve', 'Aumento assintomático de transaminases'], es: ['Eosinofilia y diarrea leve', 'Aumento asintomático de transaminasas'] },
+      dangerousAdverseEffects: { pt: ['Lama Biliar e Pseudolitíase biliar (O cálcio se une ao remédio e forma uma "pedra falsa" dolorosa na vesícula biliar, que some meses depois)', 'Precipitação fatal nos pulmões/rins em neonatos', 'Kernicterus em recém-nascidos'], es: ['Barro Biliar y Pseudolitiasis biliar (El calcio se une al remedio y forma una "piedra falsa" en la vesícula, que desaparece meses después)', 'Precipitación fatal en pulmones/riñones en neonatos', 'Kernicterus en recién nacidos'] },
+      contraindications: {
+        absolute: { pt: ['Recém-nascidos (< 28 dias) prematuros ou com icterícia (a ceftriaxona solta a bilirrubina, que vai pro cérebro da criança e causa dano irreversível - Kernicterus)', 'Uso IV conjunto com Soluções de Cálcio em recém-nascidos (Morte por precipitação)'], es: ['Recién nacidos (< 28 días) prematuros o con ictericia (la ceftriaxona suelta la bilirrubina, que va al cerebro y causa Kernicterus)', 'Uso IV conjunto con Soluciones de Calcio en recién nacidos (Muerte por precipitación)'] },
+        relative: { pt: ['Doença da Vesícula Biliar ativa (Lama biliar sintomática)'], es: ['Enfermedad de la Vesícula Biliar activa (Barro biliar sintomático)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O Ringer Lactato contém Cálcio na sua composição. Se você diluir a Ceftriaxona com Ringer Lactato (ou pendurá-los no mesmo acesso Y), a química cria "cristais de areia" que vão embolizar o pulmão do paciente (Reação Letal).', es: 'El Ringer Lactato contiene Calcio. Si diluyes Ceftriaxona con Ringer Lactato (o los cuelgas en el mismo acceso Y), la química crea "cristales de arena" que embolizarán el pulmón del paciente (Reacción Letal).' }
+      }
+    },
+
+/* ── MEROPENEM ──────────────────────────────────────────────────────── */
+    "meropenem": {
+      name: { pt: 'Meropenem', es: 'Meropenem' },
+      category: 'infectologia',
+      class: { pt: 'Antibiótico Beta-lactâmico (Carbapenêmico)', es: 'Antibiótico Betalactámico (Carbapenémico)' },
+      indications: {
+        pt: ['Infecções multirresistentes severas (Bactérias produtoras de ESBL - K. pneumoniae, E. coli)', 'Sepse Intra-abdominal hospitalar complexa', 'Meningite Bacteriana Nosocomial'],
+        es: ['Infecciones multirresistentes severas (Bacterias productoras de BLEE - K. pneumoniae, E. coli)', 'Sepsis Intraabdominal hospitalaria compleja', 'Meningitis Bacteriana Nosocomial']
+      },
+      commercialNames: { br: ['Merrem'], ar: ['Meronem'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 500 mg, 1 g'], es: ['Vial liofilizado 500 mg, 1 g'] },
+      mechanism: {
+        pt: 'O "tanque de guerra" da UTI. Possui uma blindagem molecular que as beta-lactamases comuns (e ESBL) não conseguem penetrar nem quebrar. Liga-se às PBPs de forma fulminante causando explosão (lise) das bactérias resistentes. Cobre maravilhosamente Gram-positivos, Gram-negativos e Anaeróbios, INCLUINDO Pseudomonas. Não cobre MRSA, e hoje sofre a ameaça das superbactérias produtoras de KPC (Klebsiella Pneumoniae Carbapenemase).',
+        es: 'El "tanque de guerra" de la UCI. Posee un blindaje molecular que las betalactamasas comunes (y BLEE) no logran penetrar ni romper. Se une a las PBPs de forma fulminante causando lisis de las bacterias resistentes. Cubre maravillosamente Gram-positivos, Gram-negativos y Anaerobios, INCLUYENDO Pseudomonas. No cubre MRSA, y hoy sufre la amenaza de las superbacterias productoras de KPC (Carbapenemasa).'
+      },
+      dose: {
+        adult: {
+          pt: 'Geral e Sepse: 1 g IV a cada 8 horas (Infusão prolongada de 3 horas). Meningite: 2 g IV a cada 8 horas.',
+          es: 'General y Sepsis: 1 g IV cada 8 horas (Infusión prolongada de 3 horas). Meningitis: 2 g IV cada 8 horas.'
+        },
+        pediatric: {
+          pt: '20 a 40 mg/kg IV a cada 8 horas (Máx 2 g por dose na meningite).',
+          es: '20 a 40 mg/kg IV cada 8 horas (Máx 2 g por dosis en meningitis).'
+        }
+      },
+      administration: { pt: ['Padrão Ouro em UTI: Infusão contínua Estendida (fazer a bolsa gotejar lentamente em 3 horas). Garante taxa de morte bacteriana otimizada e supera resistência leve de Pseudomonas.'], es: ['Patrón Oro en UCI: Infusión continua Extendida (hacer gotear lentamente en 3 horas). Garantiza tasa de muerte bacteriana optimizada y supera resistencia leve de Pseudomonas.'] },
+      renalAdjustment: { required: true, message: { pt: 'Altamente retido na DRC. ClCr 26-50: 1g 12/12h. ClCr 10-25: 500mg 12/12h. ClCr < 10: 500mg 24/24h.', es: 'Altamente retenido en ERC. ClCr 26-50: 1g 12/12h. ClCr 10-25: 500mg 12/12h. ClCr < 10: 500mg 24/24h.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Diarreia', 'Erupção cutânea maculopapular leve', 'Cefaleia e Náuseas'], es: ['Diarrea', 'Erupción cutánea maculopapular leve', 'Cefalea y Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Convulsões e rebaixamento do limiar epiléptico (muito menor risco do que o Imipenem, mas ainda real nas altas doses para Meningite)', 'Colite grave por C. difficile'], es: ['Convulsiones y disminución del umbral epiléptico (mucho menor riesgo que el Imipenem, pero aún real en altas dosis para Meningitis)', 'Colitis grave por C. difficile'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de reações alérgicas anafiláticas aos Carbapenêmicos ou Penicilinas'], es: ['Historial de reacciones alérgicas anafilácticas a los Carbapenémicos o Penicilinas'] },
+        relative: { pt: ['Status epilepticus recente ou não controlado'], es: ['Status epilepticus reciente o no controlado'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Evite prescrever Meropenem "só por segurança" em infecções leves (escalonamento sem critério). O uso indiscriminado desta medicação criou a superbactéria KPC, que varreu as UTIs da década matando milhares por não ter mais antibióticos viáveis de resgate até anos recentes.', es: 'Evite prescribir Meropenem "solo por seguridad" en infecciones leves (escalamiento sin criterio). El uso indiscriminado creó la superbacteria KPC, que barrió las UCIs matando a miles por no tener antibióticos de rescate.' }
+      }
+    },
+
+/* ── VANCOMICINA ────────────────────────────────────────────────────── */
+    "vancomicina": {
+      name: { pt: 'Vancomicina', es: 'Vancomicina' },
+      category: 'infectologia',
+      class: { pt: 'Antibiótico Glicopeptídeo', es: 'Antibiótico Glucopéptido' },
+      indications: {
+        pt: ['Ouro padrão contra MRSA (Staphylococcus aureus Resistente à Meticilina): Sepse, Endocardite, Pneumonia Hospitalar', 'Infecção severa por Clostridioides difficile (EXCLUSIVAMENTE USO ORAL)'],
+        es: ['Oro patrón contra MRSA (Staphylococcus aureus Resistente a la Meticilina): Sepsis, Endocarditis, Neumonía Hospitalaria', 'Infección severa por Clostridioides difficile (EXCLUSIVAMENTE USO ORAL)']
+      },
+      commercialNames: { br: ['Vancocina', 'Vancocin'], ar: ['Vancocina'] },
+      presentation: { pt: ['Frasco-ampola IV liofilizado 500 mg, 1 g'], es: ['Vial IV liofilizado 500 mg, 1 g'] },
+      mechanism: {
+        pt: 'Molécula gigante (parece um "tijolo"). Ela se prende violentamente à terminação "D-alanil-D-alanina" dos blocos de construção da parede celular da bactéria Gram-positiva. Como o tijolo está ali, as enzimas da bactéria não conseguem terminar de montar a parede. Sem parede, a pressão da água arrebenta a bactéria. Cobre quase todos os cocos Gram-positivos. (Zero ação em Gram-negativos).',
+        es: 'Molécula gigante (parece un "ladrillo"). Se une violentamente a la terminación "D-alanil-D-alanina" de los bloques de construcción de la pared celular de la bacteria Gram-positiva. Como el ladrillo está allí, las enzimas no logran terminar la pared. Sin pared, la presión del agua revienta la bacteria. Cubre casi todos los cocos Gram-positivos. (Cero acción en Gram-negativos).'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose IV (Sistêmica): 15 a 20 mg/kg a cada 12 horas ou 8 horas. Dose Oral (para C. difficile): 125 mg VO a cada 6 horas por 10 dias.',
+          es: 'Dosis IV (Sistémica): 15 a 20 mg/kg cada 12 horas u 8 horas. Dosis Oral (para C. difficile): 125 mg VO cada 6 horas por 10 días.'
+        },
+        pediatric: {
+          pt: '15 mg/kg IV a cada 6h (As crianças metabolizam vancomicina muito mais rápido que os adultos).',
+          es: '15 mg/kg IV cada 6h (Los niños metabolizan vancomicina mucho más rápido que los adultos).'
+        }
+      },
+      administration: { pt: ['DILUIÇÃO ABUNDANTE e INFUSÃO LENTA: Máximo de 10 mg por minuto. (Uma bolsa de 1g DEVE correr em pelo menos 1 a 2 horas).', 'Via Intramuscular PROIBIDA (causa necrose). Via Oral só tem efeito no intestino, não cura pneumonia.'], es: ['DILUCIÓN ABUNDANTE e INFUSIÓN LENTA: Máximo de 10 mg por minuto. (Una bolsa de 1g DEBE correr en al menos 1 a 2 horas).', 'Vía Intramuscular PROHIBIDA (causa necrosis). Vía Oral solo tiene efecto en el intestino, no cura neumonía.'] },
+      renalAdjustment: { required: true, message: { pt: 'Puramente renal. ClCr 20-49: Aumentar intervalo para 24h. ClCr < 20 (ou diálise): Dose de ataque fixa baseada no nível sanguíneo, e redosada apenas quando o nível cai após a diálise.', es: 'Puramente renal. ClCr 20-49: Aumentar intervalo a 24h. ClCr < 20 (o diálisis): Dosis de ataque fija basada en el nivel sanguíneo, y redosada solo cuando el nivel cae tras diálisis.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Flebite severa no acesso venoso periférico', 'Hipotensão transitória', 'Calafrios'], es: ['Flebitis severa en el acceso venoso periférico', 'Hipotensión transitoria', 'Escalofríos'] },
+      dangerousAdverseEffects: { pt: ['NEFROTOXICIDADE GRAVE (Mata os rins, exige dosagem do nível da droga no sangue - Vancocidemia Trough - de 15 a 20 mcg/mL)', 'Síndrome da Infusão da Vancomicina (antiga Síndrome do Homem Vermelho)', 'Ototoxicidade (Surdez/Zumbido)'], es: ['NEFROTOXICIDAD GRAVE (Mata los riñones, exige dosificación del nivel de droga en sangre de 15 a 20 mcg/mL)', 'Síndrome de Infusión de la Vancomicina (antiguo Síndrome del Hombre Rojo)', 'Ototoxicidad (Sordera/Zumbido)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade documentada extrema'], es: ['Hipersensibilidad documentada extrema'] },
+        relative: { pt: ['Pacientes já em Insuficiência Renal Aguda grave (considerar Linezolida ou Daptomicina se possível)'], es: ['Pacientes ya en Insuficiencia Renal Aguda grave (considerar Linezolid o Daptomicina si es posible)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A Síndrome do Homem Vermelho NÃO É ALERGIA: Se a enfermagem pendurar a Vancomicina e deixar correr em 15 minutos, a droga "explode" os mastócitos do corpo inteiro do paciente. Ele fica vermelho rubi, incha, o pescoço coça e a pressão cai a zero (liberação massiva de histamina). O tratamento é PARAR a bomba, dar Difenidramina e voltar a infusão bem devagar.', es: 'El Síndrome del Hombre Rojo NO ES ALERGIA: Si la enfermería cuelga la Vancomicina y la deja correr en 15 minutos, la droga "explota" los mastocitos del cuerpo. El paciente se pone rojo rubí, se hincha y la presión cae a cero (liberación masiva de histamina). El tratamiento es PARAR la bomba, dar Difenhidramina y volver a infundir muy despacio.' }
+      }
     }
 
-  }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — Grupo 5 (ceftobiprole · dalbavancina · teicoplanina — BUILD 344 Lote 5) */
+  }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — Grupo 6 (amoxicilina_clavulanato · piperacilina_tazobactam · ceftriaxona · meropenem · vancomicina — BUILD 358 Lote 6) */
 
 })();
