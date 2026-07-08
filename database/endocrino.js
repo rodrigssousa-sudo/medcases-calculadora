@@ -428,8 +428,208 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'O glucagon NÃO FUNCIONA em hipoglicemias induzidas por BEBEDEIRAS (álcool). O álcool bloqueia a gliconeogênese, e o fígado não responderá ao glucagon. Utilizar Ampolas de Glicose Hipertônica IV.', es: 'El glucagón NO FUNCIONA en hipoglucemias inducidas por BORRACHERAS (alcohol). El alcohol bloquea la gluconeogénesis, y el hígado no responderá al glucagón. Utilizar Ampollas de Glucosa Hipertónica IV.' }
       }
-    }  // end glucagon
+    },  // end glucagon
 
-  }); /* fim Object.assign ENDOCRINO_DRUGS_DB — BUILD 310 Lote 1+2 (Insulinas Análogas + NPH/Incretinas/Glucagon) */
+/* ── METFORMINA ─────────────────────────────────────────────────────── */
+    "metformina": {
+      name: { pt: 'Metformina', es: 'Metformina' },
+      category: 'endocrino',
+      class: { pt: 'Antidiabético Oral (Biguanida)', es: 'Antidiabético Oral (Biguanida)' },
+      indications: {
+        pt: ['Diabetes Mellitus Tipo 2 (1ª linha de tratamento)', 'Síndrome dos Ovários Policísticos (SOP)', 'Resistência insulínica e Pré-diabetes'],
+        es: ['Diabetes Mellitus Tipo 2 (1ª línea de tratamiento)', 'Síndrome de Ovarios Poliquísticos (SOP)', 'Resistencia insulínica y Prediabetes']
+      },
+      commercialNames: { br: ['Glifage', 'Glifage XR', 'Dimefor'], ar: ['DBI', 'Glucophage'] },
+      presentation: { pt: ['Comprimidos 500 mg, 850 mg, 1000 mg', 'Comprimidos de Liberação Prolongada (XR) 500, 750 e 1000 mg'], es: ['Comprimidos 500 mg, 850 mg, 1000 mg', 'Comprimidos de Liberación Prolongada (XR) 500, 750 y 1000 mg'] },
+      mechanism: {
+        pt: 'Ativadora da enzima AMPK (Proteína Quinase Ativada por AMP). Sua ação principal é a inibição potente da gliconeogênese hepática (reduz a produção de glicose pelo fígado). Secundariamente, aumenta a sensibilidade periférica à insulina no músculo esquelético e reduz a absorção intestinal de glicose. NÃO estimula a secreção de insulina (não causa hipoglicemia isoladamente).',
+        es: 'Activadora de la enzima AMPK (Proteína Quinasa Activada por AMP). Su acción principal es la inhibición potente de la gluconeogénesis hepática (reduce la producción de glucosa por el hígado). Secundariamente, aumenta la sensibilidad periférica a la insulina en el músculo esquelético y reduce la absorción intestinal de glucosa. NO estimula la secreción de insulina (no causa hipoglucemia aisladamente).'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciar 500 mg 1 a 2x/dia (ou 500mg XR à noite). Titular gradualmente a cada 1-2 semanas. Dose alvo: 1500 a 2000 mg/dia. Dose máxima: 2550 mg/dia.',
+          es: 'Iniciar 500 mg 1 a 2 veces/día (o 500mg XR por la noche). Titular gradualmente cada 1-2 semanas. Dosis objetivo: 1500 a 2000 mg/día. Dosis máxima: 2550 mg/día.'
+        },
+        pediatric: {
+          pt: 'Aprovado para crianças > 10 anos com DM2. Início 500mg 1x/dia, max 2000mg/dia.',
+          es: 'Aprobado para niños > 10 años con DM2. Inicio 500mg 1 vez/día, máx 2000mg/día.'
+        }
+      },
+      administration: { pt: ['Tomar JUNTO COM AS REFEIÇÕES ou imediatamente após (minimiza os severos efeitos gastrointestinais).', 'Comprimidos XR (prolongados) não devem ser partidos nem mastigados.'], es: ['Tomar JUNTO CON LAS COMIDAS o inmediatamente después (minimiza los severos efectos gastrointestinales).', 'Comprimidos XR (prolongados) no deben ser partidos ni masticados.'] },
+      renalAdjustment: { required: true, message: { pt: 'TFG 30-45 mL/min: Dose máxima 1000 mg/dia. TFG < 30 mL/min: CONTRAINDICADA. Risco de acidose lática letal por acúmulo da droga.', es: 'TFG 30-45 mL/min: Dosis máxima 1000 mg/día. TFG < 30 mL/min: CONTRAINDICADA. Riesgo de acidosis láctica letal por acumulación de la droga.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em doença hepática severa/alcoolismo devido ao alto risco de precipitar acidose lática.', es: 'Evitar en enfermedad hepática severa/alcoholismo debido al alto riesgo de precipitar acidosis láctica.' } },
+      commonAdverseEffects: { pt: ['Diarreia aquosa e cólicas (muito comum no início)', 'Náusea e gosto metálico', 'Deficiência de Vitamina B12 (uso crônico)'], es: ['Diarrea acuosa y cólicos (muy común al inicio)', 'Náusea y sabor metálico', 'Deficiencia de Vitamina B12 (uso crónico)'] },
+      dangerousAdverseEffects: { pt: ['Acidose Lática (rara, porém letal, mortalidade de 50%)'], es: ['Acidosis Láctica (rara, pero letal, mortalidad del 50%)'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência Renal Grave (ClCr < 30)', 'Choque, Sepse, IAM agudo, Insuficiência Cardíaca descompensada (estados de hipóxia)', 'Alcoolismo ativo'], es: ['Insuficiencia Renal Grave (ClCr < 30)', 'Choque, Sepsis, IAM agudo, Insuficiencia Cardíaca descompensada (estados de hipoxia)', 'Alcoholismo activo'] },
+        relative: { pt: ['Uso de contrastes iodados (suspender o uso temporariamente)'], es: ['Uso de contrastes yodados (suspender el uso temporalmente)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'CONTRASTE IODADO: A metformina DEVE ser suspensa 48 horas antes ou, no mínimo, no momento de exames com contraste iodado, e só deve ser retomada 48 horas depois se a função renal estiver preservada.', es: 'CONTRASTE YODADO: La metformina DEBE suspenderse 48 horas antes o, como mínimo, en el momento de exámenes con contraste yodado, y solo debe retomarse 48 horas después si la función renal está preservada.' }
+      }
+    },  // end metformina
+
+/* ── GLICLAZIDA ─────────────────────────────────────────────────────── */
+    "gliclazida": {
+      name: { pt: 'Gliclazida', es: 'Gliclazida' },
+      category: 'endocrino',
+      class: { pt: 'Antidiabético Oral (Sulfonilureia de 2ª Geração)', es: 'Antidiabético Oral (Sulfonilurea de 2ª Generación)' },
+      indications: {
+        pt: ['Diabetes Mellitus Tipo 2 não controlada com metformina (fármaco secretagogo)'],
+        es: ['Diabetes Mellitus Tipo 2 no controlada con metformina (fármaco secretagogo)']
+      },
+      commercialNames: { br: ['Diamicron MR', 'Azukon MR'], ar: ['Diamicron'] },
+      presentation: { pt: ['Comprimidos de Liberação Modificada (MR) 30 mg e 60 mg'], es: ['Comprimidos de Liberación Modificada (MR) 30 mg y 60 mg'] },
+      mechanism: {
+        pt: 'Liga-se aos receptores SUR1 nas células beta pancreáticas, fechando os canais de potássio dependentes de ATP. Isso despolariza a membrana, abrindo canais de cálcio e causando a exocitose massiva das vesículas de insulina. Estimula a secreção de insulina independentemente dos níveis de glicose do paciente.',
+        es: 'Se une a los receptores SUR1 en las células beta pancreáticas, cerrando los canales de potasio dependientes de ATP. Esto despolariza la membrana, abriendo canales de calcio y causando la exocitosis masiva de las vesículas de insulina. Estimula la secreción de insulina independientemente de los niveles de glucosa del paciente.'
+      },
+      dose: {
+        adult: {
+          pt: 'Formulação MR (Liberação Modificada): 30 a 120 mg/dia em dose única no café da manhã.',
+          es: 'Formulación MR (Liberación Modificada): 30 a 120 mg/día en dosis única en el desayuno.'
+        },
+        pediatric: {
+          pt: 'Não recomendada (DM1 não possui células beta ativas).',
+          es: 'No recomendada (DM1 no posee células beta activas).'
+        }
+      },
+      administration: { pt: ['Deve ser ingerida com o café da manhã. NUNCA tomar se for pular a refeição.', 'Os comprimidos de 60 mg podem ser partidos na metade, mas nunca triturados ou mastigados.'], es: ['Debe ingerirse con el desayuno. NUNCA tomar si va a saltarse la comida.', 'Los comprimidos de 60 mg pueden partirse a la mitad, pero nunca triturarse o masticarse.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar em TFG < 30 mL/min (acúmulo do fármaco gera risco de hipoglicemia severa não contrarregulada).', es: 'Evitar en TFG < 30 mL/min (acumulación del fármaco genera riesgo de hipoglucemia severa no contrarregulada).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado na insuficiência hepática grave.', es: 'Contraindicado en insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['Hipoglicemia leve a moderada', 'Ganho de peso', 'Desconforto gástrico'], es: ['Hipoglucemia leve a moderada', 'Ganancia de peso', 'Molestia gástrica'] },
+      dangerousAdverseEffects: { pt: ['Coma hipoglicêmico prolongado (pode durar dias em idosos)', 'Alergia cruzada com Sulfonamidas'], es: ['Coma hipoglucémico prolongado (puede durar días en ancianos)', 'Alergia cruzada con Sulfonamidas'] },
+      contraindications: {
+        absolute: { pt: ['Diabetes Mellitus Tipo 1', 'Cetoacidose Diabética', 'Insuficiência Renal Grave'], es: ['Diabetes Mellitus Tipo 1', 'Cetoacidosis Diabética', 'Insuficiencia Renal Grave'] },
+        relative: { pt: ['Idosos frágeis que moram sozinhos e não se alimentam direito'], es: ['Ancianos frágiles que viven solos y no se alimentan bien'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Hipoglicemias por Sulfonilureias são perigosas e refratárias. Não basta dar glicose na hora; o fármaco continuará secretando insulina por 24h. O paciente frequentemente precisa de internação e infusão contínua de glicose endovenosa.', es: 'Hipoglucemias por Sulfonilureas son peligrosas y refractarias. No basta dar glucosa en el momento; el fármaco continuará secretando insulina por 24h. El paciente frecuentemente necesita internación e infusión continua de glucosa endovenosa.' }
+      }
+    },  // end gliclazida
+
+/* ── GLIMEPIRIDA ────────────────────────────────────────────────────── */
+    "glimepirida": {
+      name: { pt: 'Glimepirida', es: 'Glimepirida' },
+      category: 'endocrino',
+      class: { pt: 'Antidiabético Oral (Sulfonilureia de 3ª Geração)', es: 'Antidiabético Oral (Sulfonilurea de 3ª Generación)' },
+      indications: {
+        pt: ['Diabetes Mellitus Tipo 2 não controlada'],
+        es: ['Diabetes Mellitus Tipo 2 no controlada']
+      },
+      commercialNames: { br: ['Amaryl'], ar: ['Amaryl'] },
+      presentation: { pt: ['Comprimidos 1 mg, 2 mg, 4 mg'], es: ['Comprimidos 1 mg, 2 mg, 4 mg'] },
+      mechanism: {
+        pt: 'Mecanismo similar à gliclazida (fecha canal de K+ e despolariza a célula beta), porém possui maior potência, meia-vida longa (cerca de 24h de ação) e atinge os receptores de forma mais persistente. Gera um risco de hipoglicemia consideravelmente maior que a gliclazida MR.',
+        es: 'Mecanismo similar a la gliclazida (cierra canal de K+ y despolariza la célula beta), pero posee mayor potencia, vida media larga (cerca de 24h de acción) y alcanza los receptores de forma más persistente. Genera un riesgo de hipoglucemia considerablemente mayor que la gliclazida MR.'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciar com 1 a 2 mg/dia VO no café da manhã. Titular a cada 1-2 semanas. Dose máxima: 4 a 6 mg/dia.',
+          es: 'Iniciar con 1 a 2 mg/día VO en el desayuno. Titular cada 1-2 semanas. Dosis máxima: 4 a 6 mg/día.'
+        },
+        pediatric: {
+          pt: 'Não indicada.',
+          es: 'No indicada.'
+        }
+      },
+      administration: { pt: ['Tomar inteiro com a primeira refeição principal do dia.', 'Omissão de refeição = omitir a dose.'], es: ['Tomar entero con la primera comida principal del día.', 'Omisión de comida = omitir la dosis.'] },
+      renalAdjustment: { required: true, message: { pt: 'Metabólitos ativos se acumulam na DRC. Risco extremo de hipoglicemia letal se ClCr < 30. Descontinuar.', es: 'Metabolitos activos se acumulan en ERC. Riesgo extremo de hipoglucemia letal si ClCr < 30. Descontinuar.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Descontinuar na falência hepática severa.', es: 'Descontinuar en falla hepática severa.' } },
+      commonAdverseEffects: { pt: ['Hipoglicemia frequente', 'Ganho de peso substancial', 'Náusea / Tontura'], es: ['Hipoglucemia frecuente', 'Ganancia de peso sustancial', 'Náusea / Mareo'] },
+      dangerousAdverseEffects: { pt: ['Hipoglicemia cerebral severa / Coma'], es: ['Hipoglucemia cerebral severa / Coma'] },
+      contraindications: {
+        absolute: { pt: ['DM1', 'Alergia grave a sulfas', 'Doença renal terminal'], es: ['DM1', 'Alergia grave a sulfas', 'Enfermedad renal terminal'] },
+        relative: { pt: ['Idosos (> 65 anos) - As diretrizes Beers desaconselham glimepirida em idosos pelo altíssimo risco de queda e coma hipoglicêmico.'], es: ['Ancianos (> 65 años) - Las directrices Beers desaconsejan glimepirida en ancianos por el altísimo riesgo de caída y coma hipoglucémico.'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Evitar o uso em idosos a todo custo. Em emergências hipoglicêmicas por glimepirida, a infusão de glicose pode precisar ser mantida por até 48-72 horas, além do uso de Octreotide para inibir a secreção pancreática de insulina bloqueada pela sulfa.', es: 'Evitar el uso en ancianos a toda costa. En emergencias hipoglucémicas por glimepirida, la infusión de glucosa puede necesitar mantenerse por hasta 48-72 horas, además del uso de Octreotide para inhibir la secreción pancreática de insulina bloqueada por la sulfa.' }
+      }
+    },  // end glimepirida
+
+/* ── SITAGLIPTINA ───────────────────────────────────────────────────── */
+    "sitagliptina": {
+      name: { pt: 'Sitagliptina', es: 'Sitagliptina' },
+      category: 'endocrino',
+      class: { pt: 'Antidiabético Oral (Inibidor da DPP-4)', es: 'Antidiabético Oral (Inhibidor de la DPP-4)' },
+      indications: {
+        pt: ['Diabetes Mellitus Tipo 2 (terapia adjuvante sem risco de hipoglicemia e peso-neutra)'],
+        es: ['Diabetes Mellitus Tipo 2 (terapia adyuvante sin riesgo de hipoglucemia y peso-neutra)']
+      },
+      commercialNames: { br: ['Januvia', 'Janumet (c/ Metformina)'], ar: ['Januvia'] },
+      presentation: { pt: ['Comprimidos 25 mg, 50 mg, 100 mg'], es: ['Comprimidos 25 mg, 50 mg, 100 mg'] },
+      mechanism: {
+        pt: 'Inibe a enzima Dipeptidil Peptidase-4 (DPP-4), que normalmente degrada as incretinas endógenas (GLP-1 e GIP). Ao inibir a degradação, prolonga a meia-vida do GLP-1 produzido pelo intestino após a refeição. Isso aumenta a secreção de insulina e inibe a secreção de glucagon de forma puramente glicose-dependente (se a glicose estiver normal, não age, logo, não causa hipoglicemia).',
+        es: 'Inhibe la enzima Dipeptidil Peptidasa-4 (DPP-4), que normalmente degrada las incretinas endógenas (GLP-1 y GIP). Al inhibir la degradación, prolonga la vida media del GLP-1 producido por el intestino tras la comida. Esto aumenta la secreción de insulina e inhibe la secreción de glucagón de forma puramente glucosa-dependiente (si la glucosa está normal, no actúa, por lo tanto, no causa hipoglucemia).'
+      },
+      dose: {
+        adult: {
+          pt: '100 mg VO 1x/dia.',
+          es: '100 mg VO 1 vez/día.'
+        },
+        pediatric: {
+          pt: 'Não aprovada em pediatria.',
+          es: 'No aprobada en pediatría.'
+        }
+      },
+      administration: { pt: ['Independente das refeições.'], es: ['Independiente de las comidas.'] },
+      renalAdjustment: { required: true, message: { pt: 'OBRIGATÓRIO AJUSTAR. ClCr 30-45: 50 mg/dia. ClCr < 30 ou Diálise: 25 mg/dia.', es: 'OBLIGATORIO AJUSTAR. ClCr 30-45: 50 mg/día. ClCr < 30 o Diálisis: 25 mg/día.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em disfunção leve/moderada.', es: 'Sin necesidad de ajuste en disfunción leve/moderada.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Nasofaringite (infecções das vias aéreas superiores)'], es: ['Cefalea', 'Nasofaringitis (infecciones de las vías respiratorias superiores)'] },
+      dangerousAdverseEffects: { pt: ['Pancreatite Aguda (evento adverso clássico da classe)', 'Dores articulares severas (artralgia incapacitante - Alerta FDA)', 'Penfigoide bolhoso (reação autoimune rara)'], es: ['Pancreatitis Aguda (evento adverso clásico de la clase)', 'Dolores articulares severos (artralgia incapacitante - Alerta FDA)', 'Penfigoide ampolloso (reacción autoinmune rara)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave', 'Cetoacidose diabética'], es: ['Hipersensibilidad grave', 'Cetoacidosis diabética'] },
+        relative: { pt: ['Histórico de pancreatite prévia'], es: ['Historial de pancreatitis previa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A Sitagliptina é peso-neutra (não engorda nem emagrece) e tem altíssima segurança contra hipoglicemias, sendo ideal para idosos (desde que ajustada pela TFG).', es: 'La Sitagliptina es peso-neutra (no engorda ni adelgaza) y tiene altísima seguridad contra hipoglucemias, siendo ideal para ancianos (siempre que se ajuste por la TFG).' }
+      }
+    },  // end sitagliptina
+
+/* ── LINAGLIPTINA ───────────────────────────────────────────────────── */
+    "linagliptina": {
+      name: { pt: 'Linagliptina', es: 'Linagliptina' },
+      category: 'endocrino',
+      class: { pt: 'Antidiabético Oral (Inibidor da DPP-4)', es: 'Antidiabético Oral (Inhibidor de la DPP-4)' },
+      indications: {
+        pt: ['Diabetes Mellitus Tipo 2 (especialmente em pacientes com Doença Renal Crônica)'],
+        es: ['Diabetes Mellitus Tipo 2 (especialmente en pacientes con Enfermedad Renal Crónica)']
+      },
+      commercialNames: { br: ['Trayenta', 'Trayenta Duo (c/ Metformina)'], ar: ['Trayenta'] },
+      presentation: { pt: ['Comprimidos 5 mg'], es: ['Comprimidos 5 mg'] },
+      mechanism: {
+        pt: 'Mecanismo idêntico ao da sitagliptina (inibe a degradação do GLP-1 endógeno bloqueando a DPP-4). O grande diferencial da linagliptina é puramente farmacocinético: ela NÃO é eliminada pelos rins. Mais de 90% da droga é excretada de forma inalterada pela bile e fezes.',
+        es: 'Mecanismo idéntico al de la sitagliptina (inhibe la degradación del GLP-1 endógeno bloqueando la DPP-4). El gran diferencial de la linagliptina es puramente farmacocinético: NO es eliminada por los riñones. Más del 90% de la droga se excreta de forma inalterada por la bilis y las heces.'
+      },
+      dose: {
+        adult: {
+          pt: '5 mg VO 1x/dia.',
+          es: '5 mg VO 1 vez/día.'
+        },
+        pediatric: {
+          pt: 'Não recomendada.',
+          es: 'No recomendada.'
+        }
+      },
+      administration: { pt: ['Independente das refeições.', 'Apenas 1 dose fixa possível (não exige titulação).'], es: ['Independiente de las comidas.', 'Solo 1 dosis fija posible (no exige titulación).'] },
+      renalAdjustment: { required: false, message: { pt: 'A ÚNICA DPP-4 QUE NÃO PRECISA DE AJUSTE RENAL. Pode ser usada em dose plena (5mg) até mesmo em pacientes em hemodiálise.', es: 'LA ÚNICA DPP-4 QUE NO NECESITA AJUSTE RENAL. Puede ser usada en dosis plena (5mg) incluso en pacientes en hemodiálisis.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, apesar da excreção biliar.', es: 'Sin necesidad de ajuste, a pesar de la excreción biliar.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Tosse / Nasofaringite'], es: ['Cefalea', 'Tos / Nasofaringitis'] },
+      dangerousAdverseEffects: { pt: ['Pancreatite Aguda', 'Artralgias incapacitantes', 'Penfigoide bolhoso'], es: ['Pancreatitis Aguda', 'Artralgias incapacitantes', 'Penfigoide ampolloso'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave'], es: ['Hipersensibilidad grave'] },
+        relative: { pt: ['Histórico de Pancreatite'], es: ['Historial de Pancreatitis'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Trata-se da opção oral mais segura e confortável da endocrinologia para o paciente diabético idoso com insuficiência renal avançada, evitando o risco de toxicidade medicamentosa.', es: 'Se trata de la opción oral más segura y cómoda de la endocrinología para el paciente diabético anciano con insuficiencia renal avanzada, evitando el riesgo de toxicidad medicamentosa.' }
+      }
+    }  // end linagliptina
+
+  }); /* fim Object.assign ENDOCRINO_DRUGS_DB — BUILD 312 Lote 1+2+3 (Insulinas + NPH/Incretinas/Glucagon + Antidiabéticos Orais) */
 
 })();

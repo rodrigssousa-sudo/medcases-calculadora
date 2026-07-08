@@ -18456,6 +18456,107 @@ const INTERACOES_DB = {
         es: "NUNCA usar glucagón para rescate de hipoglucemia asociada al uso abusivo de alcohol. El único rescate efectivo e inmediato es la Glucosa Hipertónica al 50% vía endovenosa."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Antidiabéticos Orais — BUILD 312 Lote 3
+   Metformina, Gliclazida, Glimepirida, Sitagliptina, Linagliptina
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── METFORMINA ── */
+  "metformina": {
+    "contraste_iodado": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A administração de meios de contraste iodados IV (usados em Tomografias e Cateterismos) causa uma nefropatia tóxica e isquêmica transitória aguda. Se o paciente usar metformina e o rim falhar subitamente devido ao contraste, a metformina vai acumular brutalmente, deflagrando ACIDOSE LÁTICA LETAL (uma condição com mais de 50% de mortalidade).",
+        es: "La administración de medios de contraste yodados IV (usados en Tomografías y Cateterismos) causa una nefropatía tóxica e isquémica transitoria aguda. Si el paciente usa metformina y el riñón falla súbitamente debido al contraste, la metformina se acumulará brutalmente, desencadenando ACIDOSIS LÁCTICA LETAL (una condición con más del 50% de mortalidad)."
+      },
+      conduta: {
+        pt: "SUSPENDER a metformina 48 horas ANTES do exame eletivo (ou imediatamente na emergência) e só retornar o uso 48 horas DEPOIS, mediante comprovação laboratorial de que a creatinina não se alterou.",
+        es: "SUSPENDER la metformina 48 horas ANTES del examen electivo (o inmediatamente en la emergencia) y solo retomar el uso 48 horas DESPUÉS, mediante comprobación de laboratorio de que la creatinina no se alteró."
+      }
+    },
+    "alcool": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A intoxicação alcoólica aguda bloqueia a gliconeogênese hepática e altera o metabolismo mitocondrial favorecendo a produção de lactato. Associada à metformina, multiplica-se exponencialmente o risco de Acidose Lática severa.",
+        es: "La intoxicación alcohólica aguda bloquea la gluconeogénesis hepática y altera el metabolismo mitocondrial favoreciendo la producción de lactato. Asociada a metformina, se multiplica exponencialmente el riesgo de Acidosis Láctica severa."
+      },
+      conduta: {
+        pt: "Uso terminantemente contraindicado em pacientes alcoólatras ou em quadros de \"binge drinking\" (bebedeira extrema episódica).",
+        es: "Uso terminantemente contraindicado en pacientes alcohólicos o en cuadros de 'binge drinking' (borrachera extrema episódica)."
+      }
+    }
+  },
+
+  /* ── SULFONILUREIAS (GLICLAZIDA E GLIMEPIRIDA) ── */
+  "$classe_hipoglicemiantes_secretagogos": {
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Bloqueio mortal do alerta adrenérgico. As sulfonilureias causam hipoglicemias profundas que duram 24h. O betabloqueador (Atenolol, Carvedilol) mascarará a taquicardia e os tremores. O paciente desmaiará repentinamente sem qualquer aviso prévio. Adicionalmente, bloqueadores beta não seletivos pioram e prolongam a própria hipoglicemia.",
+        es: "Bloqueo mortal de la alerta adrenérgica. Las sulfonilureas causan hipoglucemias profundas que duran 24h. El betabloqueante (Atenolol, Carvedilol) enmascarará la taquicardia y los temblores. El paciente se desmayará repentinamente sin previo aviso. Adicionalmente, bloqueadores beta no selectivos empeoran y prolongan la propia hipoglucemia."
+      },
+      conduta: {
+        pt: "Acompanhamento estrito. Se usar BB, alertar o paciente que a SUDORESE é o único aviso que restará do estado hipoglicêmico. Reduzir as metas glicêmicas no idoso.",
+        es: "Seguimiento estricto. Si usa BB, alertar al paciente que la SUDORACIÓN es el único aviso que quedará del estado hipoglucémico. Reducir las metas glucémicas en el anciano."
+      }
+    },
+    "fluconazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Os azólicos inibem as enzimas hepáticas (CYP2C9) responsáveis por metabolizar as sulfonilureias (especialmente glimepirida). O bloqueio enzimático prolonga a meia-vida do antidiabético, provocando comas hipoglicêmicos incontroláveis.",
+        es: "Los azólicos inhiben las enzimas hepáticas (CYP2C9) responsables de metabolizar las sulfonilureas (especialmente glimepirida). El bloqueo enzimático prolonga la vida media del antidiabético, provocando comas hipoglucémicos incontrolables."
+      },
+      conduta: {
+        pt: "Evitar uso conjunto ou monitorar glicemia 4 vezes ao dia. O tratamento da candidíase oral simples (uso de 1 semana) já é suficiente para causar o evento.",
+        es: "Evitar uso conjunto o monitorizar glucemia 4 veces al día. El tratamiento de candidiasis oral simple (uso de 1 semana) ya es suficiente para causar el evento."
+      }
+    },
+    "$classe_fibratos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Fibratos (Gemfibrozila, Fenofibrato) deslocam as sulfonilureias das proteínas plasmáticas no sangue, aumentando bruscamente a sua fração 'livre' e ativa, propiciando quedas bruscas de glicemia.",
+        es: "Fibratos (Gemfibrozilo, Fenofibrato) desplazan las sulfonilureas de las proteínas plasmáticas en la sangre, aumentando bruscamente su fracción 'libre' y activa, propiciando caídas bruscas de glucemia."
+      },
+      conduta: {
+        pt: "Reduzir a dose da sulfonilureia no início da terapia antidislipidêmica.",
+        es: "Reducir la dosis de la sulfonilurea al inicio de la terapia antidislipidémica."
+      }
+    }
+  },
+
+  /* ── INIBIDORES DA DPP-4 (SITAGLIPTINA E LINAGLIPTINA) ── */
+  "$classe_inibidores_dpp4": {
+    "digoxina": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "A sitagliptina aumenta levemente as concentrações séricas e a área sob a curva (AUC) da digoxina. O impacto clínico real é pequeno, mas em pacientes já próximos ao limite tóxico, pode gerar náuseas ou arritmias.",
+        es: "La sitagliptina aumenta levemente las concentraciones séricas y el área bajo la curva (AUC) de la digoxina. El impacto clínico real es pequeño, pero en pacientes ya cercanos al límite tóxico, puede generar náuseas o arritmias."
+      },
+      conduta: {
+        pt: "Não requer mudança de dose proativa, mas deve-se monitorar toxicidade digitálica.",
+        es: "No requiere cambio de dosis proactivo, pero se debe monitorizar toxicidad digitálica."
+      }
+    },
+    "$classe_ieca": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Tanto os inibidores da DPP-4 quanto os Inibidores da ECA (Captopril/Enalapril) atuam em enzimas que inativam cininas vasoativas (como a Substância P e Bradicinina). Há relatos de um risco estatisticamente superior, porém raro, de deflagrar Angioedema facial quando usados em terapia dupla.",
+        es: "Tanto los inhibidores de la DPP-4 como los Inhibidores de la ECA (Captopril/Enalapril) actúan en enzimas que inactivan cininas vasoactivas (como la Sustancia P y Bradicinina). Hay reportes de un riesgo estadísticamente superior, aunque raro, de desencadenar Angioedema facial cuando se usan en terapia doble."
+      },
+      conduta: {
+        pt: "Prescrição é normal, mas deve-se alertar o paciente a buscar PS em caso de inchaço na boca, língua ou face.",
+        es: "La prescripción es normal, pero se debe alertar al paciente a buscar urgencias en caso de hinchazón en la boca, lengua o cara."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
