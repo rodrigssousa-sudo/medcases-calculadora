@@ -828,8 +828,128 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'ORIENTAÇÃO OBRIGATÓRIA: O paciente deve ser instruído a suspender imediatamente a medicação e buscar um pronto-socorro para colher Hemograma se apresentar FEBRE ou DOR DE GARGANTA aguda (suspeita de agranulocitose).', es: 'ORIENTACIÓN OBLIGATORIA: El paciente debe ser instruido a suspender inmediatamente la medicación y buscar urgencias para extraer Hemograma si presenta FIEBRE o DOLOR DE GARGANTA agudo (sospecha de agranulocitosis).' }
       }
-    }  // end metimazol
+    },  // end metimazol
 
-  }); /* fim Object.assign ENDOCRINO_DRUGS_DB — BUILD 314 Lote 1+2+3+4 (Insulinas + NPH/Incretinas/Glucagon + Antidiabéticos Orais + Tireoide) */
+/* ── DESMOPRESSINA (DDAVP) ──────────────────────────────────────────── */
+    "desmopressina": {
+      name: { pt: 'Desmopressina (DDAVP)', es: 'Desmopresina (DDAVP)' },
+      category: 'endocrino',
+      class: { pt: 'Análogo Sintético da Vasopressina (ADH)', es: 'Análogo Sintético de la Vasopresina (ADH)' },
+      indications: {
+        pt: ['Diabetes Insipidus Central', 'Doença de von Willebrand (Tipo 1)', 'Hemofilia A leve', 'Enurese noturna primária'],
+        es: ['Diabetes Insípida Central', 'Enfermedad de von Willebrand (Tipo 1)', 'Hemofilia A leve', 'Enuresis nocturna primaria']
+      },
+      commercialNames: { br: ['DDAVP', 'Octostim'], ar: ['Octostim', 'Desmopresina'] },
+      presentation: { pt: ['Ampolas IV/SC 4 mcg/mL', 'Spray Nasal 10 mcg/dose', 'Comprimidos 0,1 mg, 0,2 mg'], es: ['Ampollas IV/SC 4 mcg/mL', 'Spray Nasal 10 mcg/dose', 'Comprimidos 0,1 mg, 0,2 mg'] },
+      mechanism: {
+        pt: 'Análogo do hormônio antidiurético (ADH). Possui potente ação nos receptores V2 renais, aumentando a reabsorção de água (efeito antidiurético massivo) sem o efeito vasoconstritor (V1) da vasopressina natural. Na hematologia, a ativação V2 extra-renal promove a liberação imediata de Fator VIII e Fator de von Willebrand do endotélio vascular (células de Weibel-Palade) para o sangue.',
+        es: 'Análogo de la hormona antidiurética (ADH). Posee potente acción en los receptores V2 renales, aumentando la reabsorción de agua (efecto antidiurético masivo) sin el efecto vasoconstrictor (V1) de la vasopresina natural. En hematología, la activación V2 extrarrenal promueve la liberación inmediata de Factor VIII y Factor de von Willebrand del endotelio vascular (células de Weibel-Palade) hacia la sangre.'
+      },
+      dose: {
+        adult: {
+          pt: 'Diabetes Insipidus: 0,1 a 0,2 mg VO 2 a 3x/dia ou 1 a 2 mcg IV/SC a cada 12h. Hematologia: 0,3 mcg/kg IV (diluído em SF) infundido em 30 min antes de cirurgias.',
+          es: 'Diabetes Insípida: 0,1 a 0,2 mg VO 2 a 3 veces/día o 1 a 2 mcg IV/SC cada 12h. Hematología: 0,3 mcg/kg IV (diluido en SF) infundido en 30 min antes de cirugías.'
+        },
+        pediatric: {
+          pt: 'Enurese: 0,2 mg VO ao deitar (restringir líquidos 1h antes).',
+          es: 'Enuresis: 0,2 mg VO al acostarse (restringir líquidos 1h antes).'
+        }
+      },
+      administration: { pt: ['Na indicação de enurese, OBRIGATÓRIA a restrição hídrica (não beber água de 1h antes até 8h após a dose) para evitar intoxicação hídrica.'], es: ['En la indicación de enuresis, OBLIGATORIA la restricción hídrica (no beber agua desde 1h antes hasta 8h después de la dosis) para evitar intoxicación hídrica.'] },
+      renalAdjustment: { required: true, message: { pt: 'CONTRAINDICADA se ClCr < 50 mL/min (Risco letal de retenção hídrica e hiponatremia dilucional aguda).', es: 'CONTRAINDICADA si ClCr < 50 mL/min (Riesgo letal de retención hídrica e hiponatremia dilucional aguda).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Rubor facial (Flushing)', 'Náuseas'], es: ['Cefalea', 'Rubor facial (Flushing)', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Hiponatremia severa (intoxicação hídrica)', 'Convulsões e Coma (edema cerebral secundário à hiponatremia)', 'Trombose (em pacientes com alto risco cardiovascular devido ao aumento do Fator VIII)'], es: ['Hiponatremia severa (intoxicación hídrica)', 'Convulsiones y Coma (edema cerebral secundario a la hiponatremia)', 'Trombosis (en pacientes con alto riesgo cardiovascular debido al aumento del Factor VIII)'] },
+      contraindications: {
+        absolute: { pt: ['Hiponatremia basal', 'Insuficiência Cardíaca Congestiva (ICC)', 'Polidipsia psicogênica ou habitual'], es: ['Hiponatremia basal', 'Insuficiencia Cardíaca Congestiva (ICC)', 'Polidipsia psicogénica o habitual'] },
+        relative: { pt: ['Hipertensão não controlada', 'Doença arterial coronariana'], es: ['Hipertensión no controlada', 'Enfermedad arterial coronaria'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ALERTA NEUROLÓGICO: Monitoramento rigoroso do Sódio Sérico (Na+) é mandatório nos primeiros dias de uso e em ajustes de dose. Quedas abruptas de sódio causam edema cerebral letal.', es: 'ALERTA NEUROLÓGICA: Monitorización rigurosa del Sodio Sérico (Na+) es mandatoria en los primeros días de uso y en ajustes de dosis. Caídas abruptas de sodio causan edema cerebral letal.' }
+      }
+    },  // end desmopressina
+
+/* ── CABERGOLINA ────────────────────────────────────────────────────── */
+    "cabergolina": {
+      name: { pt: 'Cabergolina', es: 'Cabergolina' },
+      category: 'endocrino',
+      class: { pt: 'Agonista Dopaminérgico D2 (Derivado do Ergot)', es: 'Agonista Dopaminérgico D2 (Derivado del Ergot)' },
+      indications: {
+        pt: ['Hiperprolactinemia idiopática ou por Prolactinomas (Micro/Macroadenomas)', 'Inibição/Supressão da lactação fisiológica (pós-parto ou aborto)'],
+        es: ['Hiperprolactinemia idiopática o por Prolactinomas (Micro/Macroadenomas)', 'Inhibición/Supresión de la lactancia fisiológica (posparto o aborto)']
+      },
+      commercialNames: { br: ['Dostinex', 'Cabertrix'], ar: ['Dostinex'] },
+      presentation: { pt: ['Comprimidos 0,5 mg'], es: ['Comprimidos 0,5 mg'] },
+      mechanism: {
+        pt: 'Estimula de forma direta, altamente seletiva e prolongada os receptores dopaminérgicos D2 nos lactotrofos da hipófise anterior. Como a dopamina é o inibidor natural da prolactina (PIF), a droga suprime drasticamente a secreção de prolactina e induz apoptose/redução tumoral nos prolactinomas. Possui meia-vida plasmática ultralonga (65 horas).',
+        es: 'Estimula de forma directa, altamente selectiva y prolongada los receptores dopaminérgicos D2 en los lactotrofos de la hipófisis anterior. Como la dopamina es el inhibidor natural de la prolactina (PIF), la droga suprime drásticamente la secreción de prolactina e induce apoptosis/reducción tumoral en los prolactinomas. Posee vida media plasmática ultralarga (65 horas).'
+      },
+      dose: {
+        adult: {
+          pt: 'Prolactinomas/Hiperprolactinemia: Iniciar 0,25 mg 2x/semana. Aumentar mensalmente se necessário (geralmente 1 mg/semana). Inibição da lactação (1º dia pós-parto): 1 mg VO dose única.',
+          es: 'Prolactinomas/Hiperprolactinemia: Iniciar 0,25 mg 2 veces/semana. Aumentar mensualmente si es necesario (generalmente 1 mg/semana). Inhibición de la lactancia (1º día posparto): 1 mg VO dosis única.'
+        },
+        pediatric: {
+          pt: 'Não recomendada para < 16 anos (exceto casos raros de macroadenomas sob protocolo estrito).',
+          es: 'No recomendada para < 16 años (excepto casos raros de macroadenomas bajo protocolo estricto).'
+        }
+      },
+      administration: { pt: ['Tomar sempre COM ALIMENTOS para evitar náusea severa.', 'Em tumores, a dose semanal deve ser dividida em 2 tomadas (ex: metade terça, metade sexta).'], es: ['Tomar siempre CON ALIMENTOS para evitar náusea severa.', 'En tumores, la dosis semanal debe dividirse en 2 tomas (ej: mitad martes, mitad viernes).'] },
+      renalAdjustment: { required: false, message: { pt: 'Extensamente metabolizada no fígado; sem ajuste renal.', es: 'Extensamente metabolizada en el hígado; sin ajuste renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Pacientes com insuficiência hepática grave exigem doses muito menores (droga se acumula).', es: 'Pacientes con insuficiencia hepática grave exigen dosis mucho menores (droga se acumula).' } },
+      commonAdverseEffects: { pt: ['Náusea (muito comum)', 'Hipotensão ortostática (tontura ao levantar)', 'Cefaleia', 'Astenia'], es: ['Náusea (muy común)', 'Hipotensión ortostática (mareo al levantarse)', 'Cefalea', 'Astenia'] },
+      dangerousAdverseEffects: { pt: ['Valvulopatia cardíaca fibrótica (refluxo mitral/aórtico) no uso crônico em altas doses', 'Alucinações / Psicose', 'Derrame pleural / Fibrose pulmonar'], es: ['Valvulopatía cardíaca fibrótica (reflujo mitral/aórtico) en el uso crónico en altas dosis', 'Alucinaciones / Psicosis', 'Derrame pleural / Fibrosis pulmonar'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de valvulopatia cardíaca', 'Hipertensão não controlada pós-parto / Pré-eclâmpsia (risco de AVC)', 'Hipersensibilidade a derivados do Ergot'], es: ['Historial de valvulopatía cardíaca', 'Hipertensión no controlada posparto / Preeclampsia (riesgo de ACV)', 'Hipersensibilidad a derivados del Ergot'] },
+        relative: { pt: ['Histórico de doença psiquiátrica grave (esquizofrenia)'], es: ['Historial de enfermedad psiquiátrica grave (esquizofrenia)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ECOCARDIOGRAMA DE CONTROLE: Obrigatório antes de iniciar o tratamento crônico e anualmente depois, devido ao risco de fibrose nas válvulas cardíacas induzida por ativação de receptores serotoninérgicos (5-HT2B).', es: 'ECOCARDIOGRAMA DE CONTROL: Obligatorio antes de iniciar el tratamiento crónico y anualmente después, debido al riesgo de fibrosis en las válvulas cardíacas inducida por activación de receptores serotoninérgicos (5-HT2B).' }
+      }
+    },  // end cabergolina
+
+/* ── BROMOCRIPTINA ──────────────────────────────────────────────────── */
+    "bromocriptina": {
+      name: { pt: 'Bromocriptina', es: 'Bromocriptina' },
+      category: 'endocrino',
+      class: { pt: 'Agonista Dopaminérgico (Derivado do Ergot)', es: 'Agonista Dopaminérgico (Derivado del Ergot)' },
+      indications: {
+        pt: ['Hiperprolactinemia', 'Acromegalia (terapia adjuvante)', 'Doença de Parkinson (não preferencial)', 'Diabetes Mellitus Tipo 2 (formulação de liberação rápida Cycloset)'],
+        es: ['Hiperprolactinemia', 'Acromegalia (terapia adyuvante)', 'Enfermedad de Parkinson (no preferencial)', 'Diabetes Mellitus Tipo 2 (formulación de liberación rápida Cycloset)']
+      },
+      commercialNames: { br: ['Parlodel'], ar: ['Parlodel'] },
+      presentation: { pt: ['Comprimidos 2,5 mg', 'Cápsulas 5 mg'], es: ['Comprimidos 2,5 mg', 'Cápsulas 5 mg'] },
+      mechanism: {
+        pt: 'Agonista dos receptores de dopamina D2. Assim como a cabergolina, suprime a prolactina hipofisária. No entanto, possui meia-vida muito mais curta, exigindo administração diária (frequentemente várias vezes ao dia). No DM2, atua modulando o relógio biológico hipotalâmico, reduzindo a resistência insulínica.',
+        es: 'Agonista de los receptores de dopamina D2. Al igual que la cabergolina, suprime la prolactina hipofisaria. Sin embargo, posee vida media mucho más corta, exigiendo administración diaria (frecuentemente varias veces al día). En DM2, actúa modulando el reloj biológico hipotalámico, reduciendo la resistencia insulínica.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hiperprolactinemia: 1,25 a 2,5 mg/dia, até 15 mg/dia divididos em 2 a 3 tomadas. Acromegalia: 10 a 30 mg/dia.',
+          es: 'Hiperprolactinemia: 1,25 a 2,5 mg/día, hasta 15 mg/día divididos en 2 a 3 tomas. Acromegalia: 10 a 30 mg/día.'
+        },
+        pediatric: {
+          pt: '1,25 a 2,5 mg/dia para prolactinomas > 11 anos.',
+          es: '1,25 a 2,5 mg/día para prolactinomas > 11 años.'
+        }
+      },
+      administration: { pt: ['Deve ser ingerida sempre com as refeições (alta incidência de náusea).'], es: ['Debe ingerirse siempre con las comidas (alta incidencia de náusea).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste renal.', es: 'Sin necesidad de ajuste renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir dose em insuficiência hepática (metabolismo hepático via CYP3A4).', es: 'Reducir dosis en insuficiencia hepática (metabolismo hepático vía CYP3A4).' } },
+      commonAdverseEffects: { pt: ['Náuseas / Vômitos intensos', 'Cefaleia', 'Hipotensão postural grave (síncope da primeira dose)', 'Congestão nasal'], es: ['Náuseas / Vómitos intensos', 'Cefalea', 'Hipotensión postural grave (síncope de la primera dosis)', 'Congestión nasal'] },
+      dangerousAdverseEffects: { pt: ['Infarto agudo do miocárdio / AVC (em uso pós-parto, sendo por isso contraindicada para secar o leite atualmente)', 'Alucinações / Confusão', 'Fibrose retroperitoneal'], es: ['Infarto agudo de miocardio / ACV (en uso posparto, siendo por ello contraindicada para secar la leche actualmente)', 'Alucinaciones / Confusión', 'Fibrosis retroperitoneal'] },
+      contraindications: {
+        absolute: { pt: ['Hipertensão descontrolada', 'Hipertensão induzida pela gravidez (Pré-eclâmpsia/Eclâmpsia)', 'Doença isquêmica do coração severa'], es: ['Hipertensión descontrolada', 'Hipertensión inducida por el embarazo (Preeclampsia/Eclampsia)', 'Enfermedad isquémica del corazón severa'] },
+        relative: { pt: ['Úlcera péptica', 'Uso concomitante com inibidores fortes do CYP3A4'], es: ['Úlcera péptica', 'Uso concomitante con inhibidores fuertes del CYP3A4'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'DIFERENÇA CLÍNICA: A Cabergolina substituiu quase inteiramente a bromocriptina no tratamento de tumores devido à maior eficácia e perfil muito menor de náuseas. Bromocriptina não deve mais ser prescrita rotineiramente para suprimir lactação por mortes maternas relatadas.', es: 'DIFERENCIA CLÍNICA: La Cabergolina sustituyó casi enteramente a la bromocriptina en el tratamiento de tumores debido a la mayor eficacia y perfil mucho menor de náuseas. La bromocriptina ya no debe prescribirse rutinariamente para suprimir lactancia por muertes maternas reportadas.' }
+      }
+    }  // end bromocriptina
+
+  }); /* fim Object.assign ENDOCRINO_DRUGS_DB — BUILD 316 Lote 1+2+3+4+5 (Insulinas + NPH/Incretinas/Glucagon + Antidiabéticos Orais + Tireoide + Hipófise) */
 
 })();

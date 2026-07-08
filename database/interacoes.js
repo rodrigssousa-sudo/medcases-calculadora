@@ -18674,6 +18674,124 @@ const INTERACOES_DB = {
         es: "Destetar las dosis de betabloqueantes a medida que el paciente alcanza el eutiroidismo con Tioamidas."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Hipófise e Anestesia Emergencial
+   BUILD 316 Lote 5 — Desmopressina, Cabergolina, Bromocriptina,
+   Cetamina, Etomidato
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── DESMOPRESSINA (DDAVP) ── */
+  "desmopressina": {
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inibidores Seletivos da Recaptação de Serotonina (ISRS como fluoxetina, sertralina) estimulam de forma independente a secreção de hormônio antidiurético (causando SIADH). A associação com desmopressina leva à retenção hídrica dupla, deflagrando hiponatremia severa, edema cerebral e convulsão.",
+        es: "Inhibidores Selectivos de la Recaptación de Serotonina (ISRS como fluoxetina, sertralina) estimulan de forma independiente la secreción de hormona antidiurética (causando SIADH). La asociación con desmopresina lleva a retención hídrica doble, desencadenando hiponatremia severa, edema cerebral y convulsión."
+      },
+      conduta: {
+        pt: "Monitorar Sódio Sérico diário se as drogas forem prescritas simultaneamente. Restrição hídrica agressiva.",
+        es: "Monitorizar Sodio Sérico diario si las drogas se prescriben simultáneamente. Restricción hídrica agresiva."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Os AINEs (ibuprofeno, naproxeno) inibem as prostaglandinas renais que naturalmente antagonizam o efeito do ADH. Logo, os AINEs potencializam violentamente a ação antidiurética da desmopressina.",
+        es: "Los AINEs (ibuprofeno, naproxeno) inhiben las prostaglandinas renales que naturalmente antagonizan el efecto de la ADH. Por ende, los AINEs potencian violentamente la acción antidiurética de la desmopresina."
+      },
+      conduta: {
+        pt: "Evitar uso profilático de AINEs em pacientes usando DDAVP para enurese noturna.",
+        es: "Evitar uso profiláctico de AINEs en pacientes usando DDAVP para enuresis nocturna."
+      }
+    }
+  },
+
+  /* ── CABERGOLINA E BROMOCRIPTINA (Agonistas Dopaminérgicos) ── */
+  "$classe_agonistas_dopaminergicos": {
+    "$classe_antipsicoticos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ANTAGONISMO DIRETO ABSOLUTO. Antipsicóticos (Haloperidol, Risperidona, Clorpromazina, Olanzapina) atuam bloqueando os receptores dopaminérgicos D2. A Cabergolina e a Bromocriptina necessitam do D2 livre para suprimir o prolactinoma. Usá-los juntos anula o tratamento tumoral e exacerba a síndrome extrapiramidal psiquiátrica.",
+        es: "ANTAGONISMO DIRECTO ABSOLUTO. Antipsicóticos (Haloperidol, Risperidona, Clorpromazina, Olanzapina) actúan bloqueando los receptores dopaminérgicos D2. La Cabergolina y la Bromocriptina necesitan el D2 libre para suprimir el prolactinoma. Usarlos juntos anula el tratamiento tumoral y exacerba el síndrome extrapiramidal psiquiátrico."
+      },
+      conduta: {
+        pt: "Contraindicação clássica. Se o paciente psiquiátrico desenvolver um Prolactinoma (ou hiperprolactinemia medicamentosa), deve-se trocar o antipsicótico por Aripiprazol ou Quetiapina (que poupam a via túbero-infundibular) antes de introduzir a cabergolina.",
+        es: "Contraindicación clásica. Si el paciente psiquiátrico desarrolla un Prolactinoma (o hiperprolactinemia medicamentosa), se debe cambiar el antipsicótico por Aripiprazol o Quetiapina (que preservan la vía tuberoinfundibular) antes de introducir la cabergolina."
+      }
+    },
+    "$classe_macrolideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Eritromicina e Claritromicina inibem o metabolismo hepático (CYP3A4) dos derivados do Ergot. A cabergolina e a bromocriptina acumulam no sangue, causando hipotensão severa, náuseas incontroláveis, isquemia periférica (ergotismo) e alucinações.",
+        es: "Eritromicina y Claritromicina inhiben el metabolismo hepático (CYP3A4) de los derivados del Ergot. La cabergolina y la bromocriptina se acumulan en la sangre, causando hipotensión severa, náuseas incontrolables, isquemia periférica (ergotismo) y alucinaciones."
+      },
+      conduta: {
+        pt: "Evitar antibióticos inibidores do CYP3A4. Usar azitromicina ou outras classes (cefalosporinas).",
+        es: "Evitar antibióticos inhibidores del CYP3A4. Usar azitromicina u otras clases (cefalosporinas)."
+      }
+    }
+  },
+
+  /* ── CETAMINA ── */
+  "cetamina": {
+    "teofilina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Sinergismo simpático grave. O uso simultâneo de cetamina (libera catecolaminas endógenas) e teofilina/aminofilina reduz bruscamente o limiar convulsivo e pode deflagrar taquiarritmias ventriculares refratárias.",
+        es: "Sinergismo simpático grave. El uso simultáneo de ketamina (libera catecolaminas endógenas) y teofilina/aminofilina reduce bruscamente el umbral convulsivo y puede desencadenar taquiarritmias ventriculares refractarias."
+      },
+      conduta: {
+        pt: "Cuidado redobrado em pacientes asmáticos graves que vêm em uso crônico de teofilina e serão entubados com cetamina.",
+        es: "Cuidado redoblado en pacientes asmáticos graves que vienen en uso crónico de teofilina y serán intubados con ketamina."
+      }
+    },
+    "halotano": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A associação da cetamina com gases anestésicos halogenados pode sensibilizar o miocárdio às catecolaminas liberadas pela cetamina, prolongando a meia-vida da droga e causando depressão miocárdica paradoxal.",
+        es: "La asociación de ketamina con gases anestésicos halogenados puede sensibilizar el miocardio a las catecolaminas liberadas por la ketamina, prolongando la vida media de la droga y causando depresión miocárdica paradójica."
+      },
+      conduta: {
+        pt: "Restrito ao anestesiologista de sala operatória com monitoramento invasivo.",
+        es: "Restringido al anestesiólogo de quirófano con monitorización invasiva."
+      }
+    }
+  },
+
+  /* ── ETOMIDATO ── */
+  "etomidato": {
+    "$classe_corticosteroides": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Interação Fisiológica (Benefício/Ajuste). Como o etomidato bloqueia transitoriamente a síntese de cortisol na suprarrenal, em pacientes criticamente doentes (sepse), a ausência desse pico de estresse pode precipitar choque vasoplégico. O uso de hidrocortisona empírica pós-intubação é uma estratégia de proteção discutida em UTI.",
+        es: "Interacción Fisiológica (Beneficio/Ajuste). Como el etomidato bloquea transitoriamente la síntesis de cortisol en la suprarrenal, en pacientes críticamente enfermos (sepsis), la ausencia de este pico de estrés puede precipitar choque vasopléjico. El uso de hidrocortisona empírica pos-intubación es una estrategia de protección discutida en UCI."
+      },
+      conduta: {
+        pt: "Vigiar pressão arterial pós-intubação nas horas subsequentes. Considerar hidrocortisona IV se o paciente mantiver choque refratário após a indução com etomidato.",
+        es: "Vigilar presión arterial pos-intubación en las horas subsecuentes. Considerar hidrocortisona IV si el paciente mantiene choque refractario tras la inducción con etomidato."
+      }
+    },
+    "$classe_benzodiazepinicos": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "A coadministração de midazolam ou fentanil antes do etomidato é extremamente benéfica para inibir a mioclonia muscular severa (tremores que simulam convulsões) típica do etomidato.",
+        es: "La coadministración de midazolam o fentanilo antes del etomidato es extremadamente benéfica para inhibir la mioclonía muscular severa (temblores que simulan convulsiones) típica del etomidato."
+      },
+      conduta: {
+        pt: "Associação encorajada na Intubação de Sequência Rápida.",
+        es: "Asociación fomentada en la Intubación de Secuencia Rápida."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
