@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=362" />
-  <link rel="stylesheet" href="css/build233.css?v=362" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=362" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=362" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=362" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=362" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=362" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=364" />
+  <link rel="stylesheet" href="css/build233.css?v=364" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=364" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=364" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=364" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=364" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=364" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=362" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=364" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=362" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=364" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=362" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=364" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=362" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=364" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=362" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=364" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=362" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=364" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=362" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=364" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=362" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=364" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -8621,6 +8621,50 @@
         /* ── Highlight de texto no dropdown ── */
         .intx-hl { color: #a29bfe; font-weight: 700; }
         body.light-mode .intx-hl { color: #6c5ce7; }
+
+        /* ── BUILD 364: Novos campos do card 4 campos ── */
+        .intx-score-row {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin: 6px 0 2px;
+        }
+        .intx-risk-group {
+          font-size: 11px;
+          color: var(--text-secondary, rgba(255,255,255,0.55));
+          font-style: italic;
+        }
+        body.light-mode .intx-risk-group { color: rgba(15,23,42,0.50); }
+        .intx-mecanismo-box {
+          background: rgba(0,0,0,0.04);
+          border-radius: 8px;
+          padding: 10px 12px;
+          margin: 8px 0 4px;
+        }
+        body.light-mode .intx-mecanismo-box { background: rgba(0,0,0,0.03); }
+        .intx-mecanismo-text {
+          margin: 2px 0 0;
+          font-size: 13px;
+          line-height: 1.5;
+          color: var(--text-primary, #ffffff);
+        }
+        body.light-mode .intx-mecanismo-text { color: #1e293b; }
+        .intx-field-label {
+          font-size: 11px;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: .5px;
+          margin: 0 0 4px;
+          opacity: .7;
+          color: inherit;
+        }
+        .intx-conduta-text {
+          font-size: 13px;
+          line-height: 1.5;
+          color: var(--text-primary, #ffffff);
+        }
+        body.light-mode .intx-conduta-text { color: #1e293b; }
 
         /* ══════════════════════════════════════════════════════════
            SISTEMA DE IDIOMA STATE-DRIVEN — indestrutível pelo router
@@ -19690,15 +19734,106 @@ function _adaptExternalDB(dbObj, categoryLabel) {
      Retorna array com todas as classes ($classe_X)
      às quais o fármaco normalizado pertence.
   ══════════════════════════════════════════════ */
+  /* ═══════════════════════════════════════════════════════════════════
+     getClassesDeFarmaco — BUILD 364: Ontologia tri-nível
+     Nível 1: DRUG_CLASSES lookup (membro explícito)
+     Nível 2: ALL_DRUGS_DB .class string/object → inferência de $classe_
+     Nível 3: nome canônico → heurística por sufixo farmacológico
+  ════════════════════════════════════════════════════════════════════ */
   function getClassesDeFarmaco(nomeNormalizado) {
-    const classes = window.DRUG_CLASSES || {};
+    const seen = new Set();
     const resultado = [];
-    for (const [classe, membros] of Object.entries(classes)) {
-      if (Array.isArray(membros) && membros.includes(nomeNormalizado)) {
-        resultado.push(classe);
-      }
+
+    function _add(cls) {
+      if (cls && !seen.has(cls)) { seen.add(cls); resultado.push(cls); }
     }
-    return resultado; /* ex: ['$classe_aines', '$classe_outros'] */
+
+    /* Nível 1 — DRUG_CLASSES explícito */
+    try {
+      const classes = window.DRUG_CLASSES || {};
+      for (const [classe, membros] of Object.entries(classes)) {
+        if (Array.isArray(membros) && membros.includes(nomeNormalizado)) {
+          _add(classe);
+        }
+      }
+    } catch(e) { /* sem classes → continua */ }
+
+    /* Nível 2 — ALL_DRUGS_DB .class property inference */
+    try {
+      const allDB = window.ALL_DRUGS_DB || {};
+      const entry = allDB[nomeNormalizado];
+      if (entry && entry.class) {
+        /* .class pode ser string ou { pt, es } */
+        const rawClass = typeof entry.class === 'object'
+          ? (entry.class.pt || entry.class.es || '')
+          : String(entry.class);
+        const lc = rawClass.toLowerCase()
+          .normalize('NFD').replace(/[̀-ͯ]/g, '');
+        /* Mapeia texto clínico → $classe_ canônica */
+        const _DB_CLASS_MAP = [
+          [/aine|anti-?inflamat|nsaid/,              '$classe_aines'],
+          [/ieca|eca|enzima conversora/,              '$classe_ieca_bra'],
+          [/bra|bloqueador.*angiotensina/,            '$classe_ieca_bra'],
+          [/aminoglicos[íi]deo/,                     '$classe_aminoglicosideos'],
+          [/tetraciclin/,                            '$classe_tetraciclinas'],
+          [/corticosteroide|glicocorticoide/,        '$classe_corticosteroides'],
+          [/opio[íi]de|opiaceo|opioide/,             '$classe_opioides'],
+          [/diur[ée]tico.*poupador|poupador.*pot[áa]ssio/, '$classe_diureticos_poupadores_potassio'],
+          [/diur[ée]tico.*al[çc]a|al[çc]a.*diur/,  '$classe_diureticos_alca'],
+          [/betabloq|beta-?bloq|beta.bloq/,          '$classe_betabloqueadores'],
+          [/bloq.*canal.*c[áa]lcio|bcc/,             '$classe_bcc'],
+          [/isrs|inibidor.*serotonina/,              '$classe_isrs'],
+          [/antipsic[óo]tico/,                       '$classe_antipsicóticos'],
+          [/benzo/,                                   '$classe_benzodiazepinicos'],
+          [/anticoagulante/,                          '$classe_anticoagulantes'],
+          [/antif[úu]ng/,                            '$classe_antifungicos_azolicos'],
+          [/estatina|hmg/,                            '$classe_estatinas'],
+          [/pde.?5|fosfod/,                          '$classe_pde5'],
+          [/bloqueador.*neuromusc/,                  '$classe_bnm_adespolarizantes'],
+          [/hipotensor|anti-?hiperten/,              '$classe_hipotensores'],
+          [/sedativo.*gaba|hipn[óo]tico/,            '$classe_sedativos_gaba'],
+          [/imunossupressor/,                        '$classe_imunossupressores'],
+        ];
+        for (const [rx, cls] of _DB_CLASS_MAP) {
+          if (rx.test(lc)) _add(cls);
+        }
+      }
+    } catch(e) { /* ALL_DRUGS_DB ainda não montado → ignora */ }
+
+    /* Nível 3 — heurística por nome canônico */
+    const _NAME_CLASS_MAP = [
+      [/^(ibuprofeno|diclofenaco|naproxeno|cetoprofeno|meloxicam|cetorolaco|indometacina|aceclofenaco|etoricoxibe|piroxicam|nimesulida|celecoxibe|acido_acetilsalicilico|metamizol|dipirona)$/, '$classe_aines'],
+      [/^(captopril|enalapril|lisinopril|ramipril|perindopril|benazepril|fosinopril|quinapril|trandolapril|cilazapril|zofenopril)$/, '$classe_ieca_bra'],
+      [/^(losartana|valsartana|olmesartana|telmisartana|irbesartana|candesartana|eprosartana|azilsartana)$/, '$classe_ieca_bra'],
+      [/^(gentamicina|amicacina|tobramicina|netilmicina|estreptomicina|plazomicina)$/, '$classe_aminoglicosideos'],
+      [/^(doxiciclina|tetraciclina|minociclina|tigeciclina|omadaciclina|eravaciclina)$/, '$classe_tetraciclinas'],
+      [/^(dexametasona|prednisona|prednisolona|hidrocortisona|metilprednisolona|betametasona|deflazacorte|fludrocortisona)$/, '$classe_corticosteroides'],
+      [/^(morfina|codeina|tramadol|fentanil|sufentanil|remifentanil|oxicodona|metadona|buprenorfina|hidromorfona|nalbufina)$/, '$classe_opioides'],
+      [/^(espironolactona|eplerenona|amilorida|triantereno)$/, '$classe_diureticos_poupadores_potassio'],
+      [/^(furosemida|bumetanida|torasemida|torsemida|acido_etacrinico)$/, '$classe_diureticos_alca'],
+      [/^(propranolol|metoprolol|atenolol|carvedilol|bisoprolol|nebivolol|esmolol|sotalol|nadolol|labetalol)$/, '$classe_betabloqueadores'],
+      [/^(anlodipino|nifedipina|felodipina|lercanidipina|verapamil|diltiazem|nicardipina|clevidipina)$/, '$classe_bcc'],
+      [/^(sertralina|fluoxetina|escitalopram|citalopram|paroxetina|fluvoxamina)$/, '$classe_isrs'],
+      [/^(haloperidol|quetiapina|risperidona|olanzapina|clozapina|aripiprazol|ziprasidona|paliperidona|asenapina|lurasidona|cariprazina|brexpiprazol|amisulprida|clorpromazina|levomepromazina|prometazina)$/, '$classe_antipsicóticos'],
+      [/^(diazepam|lorazepam|alprazolam|clonazepam|midazolam|bromazepam|oxazepam|temazepam|nitrazepam|triazolam|flurazepam|clordiazepoxido)$/, '$classe_benzodiazepinicos'],
+      [/^(varfarina|acenocumarol)$/, '$classe_anticoagulantes'],
+      [/^(apixabana|rivaroxabana|edoxabana|dabigatrana)$/, '$classe_anticoagulantes_orais_diretos'],
+      [/^(fluconazol|itraconazol|voriconazol|posaconazol|isavuconazol|cetoconazol)$/, '$classe_antifungicos_azolicos'],
+      [/^(atorvastatina|sinvastatina|rosuvastatina|pravastatina|pitavastatina|fluvastatina|lovastatina)$/, '$classe_estatinas'],
+      [/^(sildenafila|tadalafila|vardenafila|avanafila)$/, '$classe_pde5'],
+      [/^(rocuronio|vecuronio|pancuronio|atracurio|cisatracurio)$/, '$classe_bnm_adespolarizantes'],
+      [/^(succinilcolina)$/, '$classe_bnm_despolarizantes'],
+      [/^(noradrenalina|adrenalina|dopamina|fenilefrina|vasopressina|efedrina|metaraminol)$/, '$classe_hipotensores'],
+      [/^(propofol|midazolam|dexmedetomidina|diazepam|lorazepam|cetamina|etomidato)$/, '$classe_sedativos_gaba'],
+      [/^(sulfametoxazol_trimetoprim|sulfametoxazol_trimetoprima|cotrimoxazol|smx_tmp)$/, '$classe_sulfonamidas'],
+      [/^(ciclosporina|tacrolimo|sirolimo|everolimo)$/, '$classe_imunossupressores'],
+      [/^(dexametasona|metilprednisolona|hidrocortisona|prednisona|prednisolona|betametasona)$/, '$classe_corticosteroides_pulsoterapia'],
+    ];
+    for (const [rx, cls] of _NAME_CLASS_MAP) {
+      if (rx.test(nomeNormalizado)) _add(cls);
+    }
+
+    return resultado;
   }
   window.getClassesDeFarmaco = getClassesDeFarmaco;
 
@@ -20150,11 +20285,6 @@ function _adaptExternalDB(dbObj, categoryLabel) {
       const db = window.INTERACOES_DB || {};
       const interacoesEncontradas = [];
 
-      /* ── DEBUG LOGS (temporários — remover após validação) ── */
-      console.log('[INTERACTIONS_DEBUG] databaseLoaded=' + (Object.keys(db).length > 0));
-      console.log('[INTERACTIONS_DEBUG] selectedDrugs=' + JSON.stringify(selecionadosInteracao));
-      console.log('[INTERACTIONS_DEBUG] rulesCount=' + Object.keys(db).length);
-
       /* ══════════════════════════════════════════════════════════
          MOTOR HIERÁRQUICO v4.0 — Ontologia Farmacológica
          Algoritmo C(n,2) com 8 caminhos bidirecionais + best-match:
@@ -20170,13 +20300,17 @@ function _adaptExternalDB(dbObj, categoryLabel) {
       ══════════════════════════════════════════════════════════ */
       for (let i = 0; i < selecionadosInteracao.length; i++) {
         for (let j = i + 1; j < selecionadosInteracao.length; j++) {
-
+          /* ── Blindagem por par: erro isolado nunca aborta os demais ── */
+          try {
           const nomA = selecionadosInteracao[i];
           const nomB = selecionadosInteracao[j];
-          const fA   = normalizarFarmaco(nomA);
-          const fB   = normalizarFarmaco(nomB);
+          if (!nomA || !nomB) continue;          /* guarda undefined/null */
 
-          /* Classes farmacológicas de cada fármaco */
+          const fA = normalizarFarmaco(nomA);
+          const fB = normalizarFarmaco(nomB);
+          if (!fA || !fB) continue;
+
+          /* Classes farmacológicas de cada fármaco — tri-nível BUILD 364 */
           const classesA = getClassesDeFarmaco(fA);
           const classesB = getClassesDeFarmaco(fB);
 
@@ -20244,11 +20378,14 @@ function _adaptExternalDB(dbObj, categoryLabel) {
               classeVia: best.classeVia
             });
           }
+          } catch(pairErr) {
+            /* par isolado com erro → ignora silenciosamente, não bloqueia os outros */
+            console.warn('[MedCases·Intx] Erro ao processar par (' +
+              (selecionadosInteracao[i]||'?') + ' × ' +
+              (selecionadosInteracao[j]||'?') + '):', pairErr.message);
+          }
         }
       }
-
-      /* ── DEBUG: log de resultados ── */
-      console.log('[INTERACTIONS_DEBUG] resultsCount=' + interacoesEncontradas.length);
 
       /* ── Sem interação documentada ── */
       if (interacoesEncontradas.length === 0) {
@@ -20281,48 +20418,82 @@ function _adaptExternalDB(dbObj, categoryLabel) {
          IMPORTANTE: nenhuma alteração no algoritmo de match acima. Apenas a
          distribuição das strings já traduzidas (descricao/conduta/labels)
          dentro de uma nova árvore de elementos limpa foi modificada. */
+      /* ══════════════════════════════════════════════════════════════
+         BUILD 364 — Card de Interação: estrutura de retorno ESTRITA
+         Campo 1: GRAVIDADE (badge colorido + rótulo clínico)
+         Campo 2: SCORE CLÍNICO (⭐ N/5) + agrupamento de risco
+         Campo 3: MECANISMO FISIOPATOLÓGICO (como a interação ocorre)
+         Campo 4: CONDUTA MÉDICA OBJETIVA (o que o médico deve fazer)
+         Sintomas críticos: tags auto-extraídas de descricao
+      ══════════════════════════════════════════════════════════════ */
       const htmlResultados = interacoesEncontradas.map(item => {
+        /* ── Campo 1: GRAVIDADE — badge + classe CSS ── */
         const score = item.config.scoreClinico || 0;
+        let cardClass, corPill, txtGravidade, riskGroup;
 
-        /* Classe CSS + cor do pill (via CSS var inline — sem hardcode de fundo) */
-        let cardClass, corPill, txtTitulo;
         switch (item.config.gravidade) {
           case 'contraindicada':
-            cardClass  = 'intx-card-contra';
-            corPill    = 'var(--intx-contra-borda, #ea2027)';
-            txtTitulo  = isES ? '🔴 CONTRAINDICADO' : '🔴 CONTRAINDICADO';
+            cardClass   = 'intx-card-contra';
+            corPill     = 'var(--intx-contra-borda, #ea2027)';
+            txtGravidade = isES
+              ? '🔴 CONTRAINDICADO — Combinação proibida'
+              : '🔴 CONTRAINDICADO — Combinação proibida';
+            riskGroup   = isES ? 'Riesgo máximo · Evitar absolutamente'
+                                : 'Risco máximo · Evitar absolutamente';
             break;
           case 'alta':
-            cardClass  = 'intx-card-alta';
-            corPill    = 'var(--intx-alta-borda, #ee5a24)';
-            txtTitulo  = isES ? '🔴 ALTO RIESGO DE MUERTE O INTERNACIÓN' : '🔴 ALTO RISCO DE MORTE OU INTERNAÇÃO';
+            cardClass   = 'intx-card-alta';
+            corPill     = 'var(--intx-alta-borda, #ee5a24)';
+            txtGravidade = isES
+              ? '🔴 GRAVIDADE ALTA — Riesgo de muerte o internación'
+              : '🔴 GRAVIDADE ALTA — Risco de morte ou internação';
+            riskGroup   = isES ? 'Riesgo grave · Requiere intervención urgente'
+                                : 'Risco grave · Requer intervenção urgente';
             break;
           case 'moderada':
-            cardClass  = 'intx-card-mod';
-            corPill    = 'var(--intx-mod-borda, #f1c40f)';
-            txtTitulo  = isES ? '🟠 CAMBIA CONDUCTA INMEDIATAMENTE' : '🟠 MUDA CONDUTA IMEDIATAMENTE';
+            cardClass   = 'intx-card-mod';
+            corPill     = 'var(--intx-mod-borda, #f1c40f)';
+            txtGravidade = isES
+              ? '🟠 GRAVIDADE MODERADA — Cambia conducta'
+              : '🟠 GRAVIDADE MODERADA — Muda conduta';
+            riskGroup   = isES ? 'Riesgo moderado · Monitorización estrecha'
+                                : 'Risco moderado · Monitorização estreita';
             break;
           default:
-            cardClass  = 'intx-card-leve';
-            corPill    = 'var(--intx-leve-borda, #3498db)';
-            txtTitulo  = isES ? '🟡 SOLO MONITORIZACIÓN' : '🟡 APENAS MONITORIZAÇÃO';
+            cardClass   = 'intx-card-leve';
+            corPill     = 'var(--intx-leve-borda, #3498db)';
+            txtGravidade = isES
+              ? '🟡 GRAVIDADE LEVE — Solo monitorización'
+              : '🟡 GRAVIDADE LEVE — Apenas monitorização';
+            riskGroup   = isES ? 'Riesgo bajo · Vigilar en consulta'
+                                : 'Risco baixo · Vigiar em consulta';
         }
 
-        const descricao = item.config.descricao
+        /* ── Campo 2: SCORE CLÍNICO + agrupamento ── */
+        const lblScore = isES ? 'Score clínico' : 'Score clínico';
+        const scoreHtml = score > 0
+          ? `<div class="intx-score-row">
+               <span class="intx-badge-score">⭐ ${lblScore}: ${score}/5</span>
+               <span class="intx-risk-group">${riskGroup}</span>
+             </div>`
+          : `<div class="intx-score-row"><span class="intx-risk-group">${riskGroup}</span></div>`;
+
+        /* ── Campo 3: MECANISMO FISIOPATOLÓGICO ── */
+        /* descricao → mecanismo (como a interação ocorre, dados já traduzidos) */
+        const mecanismo = item.config.descricao
           ? (item.config.descricao[lang] || item.config.descricao.pt || '')
           : '';
+        const lblMecanismo = isES ? '🔬 Mecanismo fisiopatológico:' : '🔬 Mecanismo fisiopatológico:';
+
+        /* ── Campo 4: CONDUTA MÉDICA OBJETIVA ── */
         const conduta = item.config.conduta
           ? (item.config.conduta[lang] || item.config.conduta.pt || '')
           : '';
+        const lblConduta = isES ? '📋 Conduta médica:' : '📋 Conduta médica:';
 
-        /* ── Mapeamentos bilíngues dinâmicos (não-negociável: zero hardcode fixo) ── */
-        const lblRisco    = isES ? 'Riesgo:'   : 'Risco:';
-        const lblConduta  = isES ? 'Conducta:' : 'Conduta:';
-        const lblImpacto  = isES ? 'Impacto'   : 'Impacto';
-        const lblSintomas = isES ? 'Riesgos / Síntomas críticos' : 'Riscos / Sintomas críticos';
-
-        /* ── Extração client-side de tags de sintomas a partir da `descricao` já traduzida ── */
-        const symptomTags = _intxExtractSymptomTags(descricao, lang);
+        /* ── Tags de sintomas críticos (auto-extraídas de mecanismo) ── */
+        const lblSintomas = isES ? 'Riscos / Síntomas críticos' : 'Riscos / Sintomas críticos';
+        const symptomTags = _intxExtractSymptomTags(mecanismo, lang);
         const symptomTagsHtml = symptomTags.length
           ? `<div class="intx-symptom-label">${lblSintomas}</div>
              <div class="intx-symptom-tags">
@@ -20330,39 +20501,52 @@ function _adaptExternalDB(dbObj, categoryLabel) {
              </div>`
           : '';
 
-        /* ── Badge de match tipo (Ontologia) — usa classes CSS ── */
+        /* ── Badge de match tipo (Ontologia) ── */
         let badgeMatchHtml = '';
         if (item.matchTipo === 'droga_classe') {
           const rotulo = isES ? 'Vía clase' : 'Via classe';
-          const cls = item.classeVia.replace(/^\$classe_/, '').replace(/_/g, ' ');
+          const cls = (item.classeVia || '').replace(/^\$classe_/, '').replace(/_/g, ' ');
           badgeMatchHtml = `<span class="intx-badge-via-classe">🏷️ ${rotulo}: ${cls}</span>`;
         } else if (item.matchTipo === 'classe_classe') {
           const rotulo = isES ? 'Clase × Clase' : 'Classe × Classe';
-          const cls = item.classeVia.replace(/\$classe_/g, '').replace(/_/g, ' ');
+          const cls = (item.classeVia || '').replace(/\$classe_/g, '').replace(/_/g, ' ');
           badgeMatchHtml = `<span class="intx-badge-cls-cls">🔬 ${rotulo}: ${cls}</span>`;
         }
 
         return `
           <div class="intx-card ${cardClass}" style="--pill-color:${corPill};">
+
+            <!-- CAMPO 1: GRAVIDADE -->
             <div class="intx-card-header">
-              <span class="intx-card-title">${txtTitulo}</span>
-              <div class="intx-card-badges">
-                ${badgeMatchHtml}
-                ${score > 0 ? `<span class="intx-badge-score">⭐ ${lblImpacto}: ${score}/5</span>` : ''}
-              </div>
+              <span class="intx-card-title">${txtGravidade}</span>
+              ${badgeMatchHtml ? `<div class="intx-card-badges">${badgeMatchHtml}</div>` : ''}
             </div>
+
+            <!-- Par de fármacos -->
             <div class="intx-card-pair">
-              <b>${_displayName(item.med1, lang)}</b> ✕ <b>${_displayName(item.med2, lang)}</b>
+              💊 <b>${_displayName(item.med1, lang)}</b>
+              &nbsp;✕&nbsp;
+              💊 <b>${_displayName(item.med2, lang)}</b>
             </div>
-            <p class="intx-card-mecanismo">
-              <b>${lblRisco}</b> ${descricao}
-            </p>
-            ${symptomTagsHtml}
+
+            <!-- CAMPO 2: SCORE CLÍNICO / AGRUPAMENTO DE RISCO -->
+            ${scoreHtml}
+
+            <!-- CAMPO 3: MECANISMO FISIOPATOLÓGICO -->
+            ${mecanismo ? `
+            <div class="intx-mecanismo-box">
+              <p class="intx-field-label">${lblMecanismo}</p>
+              <p class="intx-mecanismo-text">${mecanismo}</p>
+              ${symptomTagsHtml}
+            </div>` : ''}
+
+            <!-- CAMPO 4: CONDUTA MÉDICA OBJETIVA -->
             ${conduta ? `
             <div class="intx-conduta-box">
-              <b>${lblConduta}</b>
-              ${conduta}
+              <p class="intx-field-label">${lblConduta}</p>
+              <div class="intx-conduta-text">${conduta}</div>
             </div>` : ''}
+
           </div>`;
       }).join('');
 
@@ -20474,11 +20658,12 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     ? Object.values(window.DRUG_CLASSES).reduce((acc, arr) => acc + (Array.isArray(arr) ? arr.length : 0), 0)
     : 0;
   console.log(
-    `[MedCases] Motor de Interações v3.1 (Ontologia Farmacológica) inicializado.\n` +
+    `[MedCases] Motor de Interações v4.1-BUILD364 (Ontologia Tri-Nível) inicializado.\n` +
     `  🗃️  DB nós raiz    : ${_dbNodes}\n` +
     `  🏷️  DRUG_CLASSES   : ${_classCount} classes · ${_totalMembrs} membros totais\n` +
     `  🔗  DRUG_ALIASES   : ${_aliasCount} entradas\n` +
-    `  🔬  Motor hierárq. : Nível 1 (direto) → Nível 2 (droga×classe) → Nível 3 (classe×classe)`
+    `  🔬  Motor: 8-paths C(n,2) · getClassesDeFarmaco tri-nível · try/catch por par\n` +
+    `  📋  Card: Gravidade · Score · Mecanismo Fisiopatológico · Conduta Médica`
   );
 
   /* ══════════════════════════════════════════════════════════════════
@@ -22863,59 +23048,59 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script defer src="database/interacoes.js?v=362"></script>
-<script defer src="database/antimicrobianos.js?v=362"></script>
-<script defer src="database/psicofarmacos.js?v=362"></script>
-<script defer src="database/analgesicos.js?v=362"></script>
-<script defer src="database/anticoag.js?v=362"></script>
-<script defer src="database/cardio.js?v=362"></script>
-<script defer src="database/endocrino.js?v=362"></script>
-<script defer src="database/gastro.js?v=362"></script>
-<script defer src="database/gastro_imuno.js?v=362"></script>
-<script defer src="database/imuno_corticoide.js?v=362"></script>
-<script defer src="database/endocrino_glp1.js?v=362"></script>
-<script defer src="database/infusoes.js?v=362"></script>
-<script defer src="database/nefro.js?v=362"></script>
-<script defer src="database/neuro.js?v=362"></script>
-<script defer src="database/obesidade.js?v=362"></script>
-<script defer src="database/pneumo.js?v=362"></script>
-<script defer src="database/psiquiatria.js?v=362"></script>
-<script defer src="database/reumatologia.js?v=362"></script>
-<script defer src="database/emergencia.js?v=362"></script>
-<script defer src="database/infectologia.js?v=362"></script>
-<script defer src="database/sedacao.js?v=362"></script>
-<script defer src="database/hematologia.js?v=362"></script>
-<script defer src="database/gastroenterologia.js?v=362"></script>
-<script defer src="database/cardiologia.js?v=362"></script>
-<script defer src="database/analgesia_opioides.js?v=362"></script>
-<script defer src="database/prescricoes.js?v=362" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script defer src="database/interacoes.js?v=364"></script>
+<script defer src="database/antimicrobianos.js?v=364"></script>
+<script defer src="database/psicofarmacos.js?v=364"></script>
+<script defer src="database/analgesicos.js?v=364"></script>
+<script defer src="database/anticoag.js?v=364"></script>
+<script defer src="database/cardio.js?v=364"></script>
+<script defer src="database/endocrino.js?v=364"></script>
+<script defer src="database/gastro.js?v=364"></script>
+<script defer src="database/gastro_imuno.js?v=364"></script>
+<script defer src="database/imuno_corticoide.js?v=364"></script>
+<script defer src="database/endocrino_glp1.js?v=364"></script>
+<script defer src="database/infusoes.js?v=364"></script>
+<script defer src="database/nefro.js?v=364"></script>
+<script defer src="database/neuro.js?v=364"></script>
+<script defer src="database/obesidade.js?v=364"></script>
+<script defer src="database/pneumo.js?v=364"></script>
+<script defer src="database/psiquiatria.js?v=364"></script>
+<script defer src="database/reumatologia.js?v=364"></script>
+<script defer src="database/emergencia.js?v=364"></script>
+<script defer src="database/infectologia.js?v=364"></script>
+<script defer src="database/sedacao.js?v=364"></script>
+<script defer src="database/hematologia.js?v=364"></script>
+<script defer src="database/gastroenterologia.js?v=364"></script>
+<script defer src="database/cardiologia.js?v=364"></script>
+<script defer src="database/analgesia_opioides.js?v=364"></script>
+<script defer src="database/prescricoes.js?v=364" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=362"></script>
+<script defer src="js/medcases-ux-v2.js?v=364"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=362"></script>
+<script defer src="js/hub-accordion.js?v=364"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=362"></script>
+<script defer src="js/build240b-accordion-fix.js?v=364"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=362"></script>
+<script defer src="js/calculator-overlay.js?v=364"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=362"></script>
+<script defer src="js/category-pills.js?v=364"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=362"></script>
+<script defer src="js/elec-calc.js?v=364"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=362"></script>
+<script defer src="js/deeplink-router.js?v=364"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=362"></script>
+<script defer src="js/build272-reactive-engine.js?v=364"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=362"></script>
+<script defer src="js/build283-accessory-bar.js?v=364"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
