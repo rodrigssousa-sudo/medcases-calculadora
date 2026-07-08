@@ -19415,6 +19415,128 @@ const INTERACOES_DB = {
         es: "Evitar betabloqueantes venosos en pacientes asmáticos o EPOC exacerbados. Preferir Diltiazem IV o Amiodarona para control de frecuencia en estos casos."
       }
     }
+  }, // comma added; BUILD 332 Lote 4 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Cardiologia (Fase 2)
+   Hidralazina, Enalaprilato, Milrinona, Mexiletina, Verapamil
+   BUILD 332 Lote 4
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── HIDRALAZINA ── */
+  "hidralazina_iv": {
+    "$classe_nitratos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Vasodilatador Extremo. A hidralazina relaxa primariamente as artérias, enquanto os nitratos (Nitroglicerina, Isossorbida) relaxam maciçamente as veias. O uso conjunto abrupto derruba tanto a pré-carga quanto a pós-carga a zero, gerando choque hipotensivo irreversível com isquemia multiorgânica.",
+        es: "Sinergismo Vasodilatador Extremo. La hidralazina relaja primariamente las arterias, mientras los nitratos (Nitroglicerina, Isosorbida) relajan masivamente las venas. El uso conjunto abrupto derrumba tanto la precarga como la poscarga a cero, generando choque hipotensivo irreversible con isquemia multiorgánica."
+      },
+      conduta: {
+        pt: "Nunca prescrever ambos em bolus na mesma janela de horário na emergência (usar com monitoração contínua de PA invasiva em UTI).",
+        es: "Nunca prescribir ambos en bolo en la misma ventana de horario en emergencia (usar con monitorización continua de PA invasiva en UCI)."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO BENÉFICA PROPOSITAL. A hidralazina causa profunda taquicardia reflexa que consome O2 do miocárdio. O uso rotineiro de betabloqueadores (como propranolol) inibe esse reflexo taquicárdico nefasto, estabilizando o coração.",
+        es: "INTERACCIÓN BENÉFICA A PROPÓSITO. La hidralazina causa profunda taquicardia refleja que consume O2 del miocardio. El uso rutinario de betabloqueantes (como propranolol) inhibe este reflejo taquicárdico nefasto, estabilizando el corazón."
+      },
+      conduta: {
+        pt: "Obrigatório associar o betabloqueador em tratamentos crônicos para evitar infartos subendocárdicos induzidos pela hidralazina.",
+        es: "Obligatorio asociar el betabloqueante en tratamientos crónicos para evitar infartos subendocárdicos inducidos por la hidralazina."
+      }
+    }
+  },
+
+  /* ── ENALAPRILATO IV ── */
+  "enalaprilato": {
+    "$classe_diureticos_poupadores_potassio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo retentor de Potássio. O IECA bloqueia a aldosterona (responsável por eliminar K+ na urina), enquanto a espironolactona bloqueia ativamente o receptor da mesma aldosterona. Juntos, causam acúmulo sistêmico massivo de potássio. Em ambiente de UTI/doente crítico, a hipercalemia fatal (bloqueio AV) é comum.",
+        es: "Sinergismo retenedor de Potasio. El IECA bloquea la aldosterona (responsable de eliminar K+ en la orina), mientras la espironolactona bloquea activamente el receptor de la misma aldosterona. Juntos, causan acumulación sistémica masiva de potasio. En ambiente de UCI/enfermo crítico, la hiperpotasemia fatal (bloqueo AV) es común."
+      },
+      conduta: {
+        pt: "Dosar eletrólitos de 12 em 12h. O uso deve ser validado para insuficiência cardíaca crônica compensada, não para fase aguda grave no PS.",
+        es: "Dosificar electrolitos cada 12h. El uso debe ser validado para insuficiencia cardíaca crónica compensada, no para fase aguda grave en urgencias."
+      }
+    }
+  },
+
+  /* ── MILRINONA ── */
+  "milrinona": {
+    "furosemida": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INCOMPATIBILIDADE QUÍMICA DE VIA VENOSA. Se as infusões de Furosemida contínua e Milrinona se encontram no mesmo cateter/equipo, os dois fármacos reagem imediatamente formando um precipitado cristalino insolúvel que oblitera a via e pode ser bombeado para o pulmão, causando embolia química.",
+        es: "INCOMPATIBILIDAD QUÍMICA DE VÍA VENOSA. Si las infusiones de Furosemida continua y Milrinona se encuentran en el mismo catéter/equipo, los dos fármacos reaccionan inmediatamente formando un precipitado cristalino insoluble que oblitera la vía y puede ser bombeado al pulmón, causando embolia química."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA de infusão simultânea. Exigem lúmens de cateter venoso central completamente distintos e lavagem rigorosa.",
+        es: "CONTRAINDICACIÓN ABSOLUTA de infusión simultánea. Exigen lúmenes de catéter venoso central completamente distintos y lavado riguroso."
+      }
+    }
+  },
+
+  /* ── MEXILETINA ── */
+  "mexiletina": {
+    "amiodarona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A amiodarona é inibidora metabólica de vários citocromos que clareiam a mexiletina. O uso conjunto eleva o nível plasmático da mexiletina para a faixa tóxica rapidamente, deflagrando ataxia, disartria, convulsões e prolongamento arrítmico excessivo do QT e QRS.",
+        es: "La amiodarona es inhibidora metabólica de varios citocromos que limpian la mexiletina. El uso conjunto eleva el nivel plasmático de la mexiletina al rango tóxico rápidamente, desencadenando ataxia, disartria, convulsiones y prolongación arrítmica excesiva del QT y QRS."
+      },
+      conduta: {
+        pt: "Exige dosagem sérica seriada de mexiletina (TDM) ou redução da dose para 50% quando amiodarona é iniciada.",
+        es: "Exige dosificación sérica seriada de mexiletina (TDM) o reducción de la dosis al 50% cuando se inicia amiodarona."
+      }
+    },
+    "$classe_indutores_enzimaticos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Fenitoína, Fenobarbital e Rifampicina turbinam o fígado (CYP1A2). O fígado passa a destruir a mexiletina no sangue tão rapidamente que os níveis de proteção antiarrítmica zeram, deixando o paciente totalmente vulnerável a Taquicardias Ventriculares (Choques pelo CDI).",
+        es: "Fenitoína, Fenobarbital y Rifampicina estimulan el hígado (CYP1A2). El hígado pasa a destruir la mexiletina en la sangre tan rápidamente que los niveles de protección antiarrítmica bajan a cero, dejando al paciente totalmente vulnerable a Taquicardias Ventriculares (Choques por el CDI)."
+      },
+      conduta: {
+        pt: "Monitorar as arritmias. Fibrilações precisarão de doses dobradas ou triplicadas de mexiletina se o paciente usar anticonvulsivantes/rifampicina.",
+        es: "Monitorizar las arritmias. Fibrilaciones necesitarán dosis dobladas o triplicadas de mexiletina si el paciente usa anticonvulsivos/rifampicina."
+      }
+    }
+  },
+
+  /* ── VERAPAMIL ── */
+  "verapamil_iv": {
+    "$classe_betabloqueadores_iv": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "BLOQUEIO SINUSAL E AV LETAL. A injeção endovenosa de Verapamil em um paciente já tratado com doses endovenosas de um betabloqueador (Esmolol, Metoprolol) suprime e desliga totalmente a geração de impulsos do Nó Sinusal. O paciente entrará em Parada Cardíaca por Assistolia irreversível às pressas.",
+        es: "BLOQUEO SINUSAL Y AV LETAL. La inyección endovenosa de Verapamilo en un paciente ya tratado con dosis endovenosas de un betabloqueante (Esmolol, Metoprolol) suprime y apaga totalmente la generación de impulsos del Nodo Sinusal. El paciente entrará en Paro Cardíaco por Asistolia irreversible a toda prisa."
+      },
+      conduta: {
+        pt: "É UMA REGRA DA EMERGÊNCIA: JAMAIS aplicar BB e BCC venosos simultaneamente no mesmo paciente para controle de Fibrilação Atrial. Aguardar no mínimo horas (ou dias) após suspender um para usar o outro.",
+        es: "ES UNA REGLA DE EMERGENCIA: JAMÁS aplicar BB y BCC venosos simultáneamente en el mismo paciente para control de Fibrilación Auricular. Esperar como mínimo horas (o días) tras suspender uno para usar el otro."
+      }
+    },
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Verapamil inibe o transportador P-glicoproteína nos túbulos renais e intestinos, impedindo a excreção física da Digoxina. O nível sérico de digoxina vai subir violentamente (em até 75%), culminando em intoxicação digitálica (halos visuais, vômitos, extrassístoles polimórficas). Além disso, ambos bloqueiam a condução AV.",
+        es: "El Verapamilo inhibe el transportador P-glicoproteína en los túbulos renales e intestinos, impidiendo la excreción física de la Digoxina. El nivel sérico de digoxina va a subir violentamente (hasta un 75%), culminando en intoxicación digitálica (halos visuales, vómitos, extrasístoles polimórficas). Además, ambos bloquean la conducción AV."
+      },
+      conduta: {
+        pt: "Reduzir imediatamente a dose da digoxina para a metade (50%) assim que o verapamil for iniciado. Dosar Digoxinemia seriadamente.",
+        es: "Reducir inmediatamente la dosis de la digoxina a la mitad (50%) tan pronto como se inicie el verapamilo. Dosificar Digoxinemia seriadamente."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */

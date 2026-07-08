@@ -2618,4 +2618,217 @@
 
 })();
 
+/* ─────────────────────────────────────────────────────────────────────────
+   GRUPO 14 — Cardiologia Fase 2 (hidralazina_iv · enalaprilato · milrinona · mexiletina · verapamil_iv)
+   BUILD 332 Lote 4 — _injectObjectDB()
+───────────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+
+  Object.assign(window.ANALGESICOS_DRUGS_DB, {
+
+/* ── HIDRALAZINA IV ─────────────────────────────────────────────────── */
+    "hidralazina_iv": {
+      name: { pt: 'Hidralazina IV', es: 'Hidralazina IV' },
+      category: 'cardiologia',
+      class: { pt: 'Vasodilatador Arterial Direto', es: 'Vasodilatador Arterial Directo' },
+      indications: {
+        pt: ['Emergências hipertensivas associadas à gestação (Pré-eclâmpsia grave e Eclâmpsia)', 'Pós-operatório de cirurgia cardíaca e controle de crise hipertensiva severa'],
+        es: ['Emergencias hipertensivas asociadas a la gestación (Preeclampsia grave y Eclampsia)', 'Posoperatorio de cirugía cardíaca y control de crisis hipertensiva severa']
+      },
+      commercialNames: { br: ['Apresolina IV', 'Nepresol'], ar: ['Apresolina'] },
+      presentation: { pt: ['Ampolas IV/IM 20 mg/mL (1 mL)'], es: ['Ampollas IV/IM 20 mg/mL (1 mL)'] },
+      mechanism: {
+        pt: 'Atua diretamente no relaxamento do músculo liso ARTERIAL (não atua nas veias), promovendo forte queda na resistência vascular sistêmica e na pressão arterial. O cérebro responde a essa queda ativando o sistema nervoso simpático, o que gera aumento brutal da frequência cardíaca e contratilidade miocárdica (taquicardia reflexa profunda).',
+        es: 'Actúa directamente en la relajación del músculo liso ARTERIAL (no actúa en las venas), promoviendo fuerte caída en la resistencia vascular sistémica y en la presión arterial. El cerebro responde a esta caída activando el sistema nervioso simpático, lo que genera aumento brutal de la frecuencia cardíaca y contractilidad miocárdica (taquicardia refleja profunda).'
+      },
+      dose: {
+        adult: {
+          pt: 'Crise Hipertensiva / Eclâmpsia: 5 a 20 mg IV LENTO. Pode ser repetido a cada 20-30 minutos (Máximo de 40 mg por dose).',
+          es: 'Crisis Hipertensiva / Eclampsia: 5 a 20 mg IV LENTO. Puede repetirse cada 20-30 minutos (Máximo de 40 mg por dosis).'
+        },
+        pediatric: {
+          pt: '0,1 a 0,5 mg/kg/dose IV a cada 6 a 8 horas.',
+          es: '0,1 a 0,5 mg/kg/dosis IV cada 6 a 8 horas.'
+        }
+      },
+      administration: { pt: ['Administrar IV direto lento em 1 a 2 minutos.', 'Pico de ação ocorre em 10 a 20 minutos. Não redosar antes de 20 minutos para evitar hipotensão acumulada fatal.'], es: ['Administrar IV directo lento en 1 a 2 minutos.', 'El pico de acción ocurre en 10 a 20 minutos. No redosificar antes de 20 minutos para evitar hipotensión acumulada fatal.'] },
+      renalAdjustment: { required: true, message: { pt: 'Aumentar intervalo entre as doses (cada 8-12h) se ClCr < 10 mL/min, para evitar acúmulo.', es: 'Aumentar intervalo entre las dosis (cada 8-12h) si ClCr < 10 mL/min, para evitar acumulación.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Acetilação lenta no fígado. Reduzir dose em cirróticos.', es: 'Acetilación lenta en el hígado. Reducir dosis en cirróticos.' } },
+      commonAdverseEffects: { pt: ['Taquicardia severa induzida', 'Cefaleia pulsátil', 'Flushing (calor e vermelhidão facial)'], es: ['Taquicardia severa inducida', 'Cefalea pulsátil', 'Flushing (calor y enrojecimiento facial)'] },
+      dangerousAdverseEffects: { pt: ['Isquemia miocárdica (o coração acelera e precisa de oxigênio, mas a PA caiu demais para perfundir a coronária)', 'Síndrome Lupus-Like induzida por fármaco (uso crônico)'], es: ['Isquemia miocárdica (el corazón acelera y necesita oxígeno, pero la PA cayó demasiado para perfundir la coronaria)', 'Síndrome Lupus-Like inducido por fármaco (uso crónico)'] },
+      contraindications: {
+        absolute: { pt: ['Dissecção Aguda da Aorta (o inotropismo gerado rasga ainda mais a artéria)', 'Doença arterial coronariana severa / Infarto agudo'], es: ['Disección Aguda de la Aorta (el inotropismo generado rasga aún más la arteria)', 'Enfermedad arterial coronaria severa / Infarto agudo'] },
+        relative: { pt: ['Lupus Eritematoso Sistêmico prévio', 'Aneurismas cerebrais instáveis'], es: ['Lupus Eritematoso Sistémico previo', 'Aneurismas cerebrales inestables'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A Hidralazina injetável NUNCA deve ser a primeira escolha para crise hipertensiva no paciente cardiopata/infartado (preferir Nitroglicerina), pelo altíssimo risco de agravar isquemias devido à taquicardia reflexa incontrolável.', es: 'La Hidralazina inyectable NUNCA debe ser la primera elección para crisis hipertensiva en el paciente cardiópata/infartado (preferir Nitroglicerina), por el altísimo riesgo de agravar isquemias debido a la taquicardia refleja incontrolable.' }
+      }
+    },
+
+/* ── ENALAPRILATO IV ────────────────────────────────────────────────── */
+    "enalaprilato": {
+      name: { pt: 'Enalaprilato IV', es: 'Enalaprilat IV' },
+      category: 'cardiologia',
+      class: { pt: 'Inibidor da ECA (Enzima Conversora de Angiotensina) Ativo', es: 'Inhibidor de la ECA (Enzima Convertidora de Angiotensina) Activo' },
+      indications: {
+        pt: ['Emergências hipertensivas (especialmente em Insuficiência Cardíaca, IAM ou Encefalopatia Hipertensiva)', 'Pacientes impossibilitados de receber medicações orais'],
+        es: ['Emergencias hipertensivas (especialmente en Insuficiencia Cardíaca, IAM o Encefalopatía Hipertensiva)', 'Pacientes imposibilitados de recibir medicaciones orales']
+      },
+      commercialNames: { br: ['Enalaprilato IV'], ar: ['Enalaprilato'] },
+      presentation: { pt: ['Ampolas IV 1,25 mg/mL (1 mL)'], es: ['Ampollas IV 1,25 mg/mL (1 mL)'] },
+      mechanism: {
+        pt: 'A forma endovenosa ATIVA do enalapril (pró-fármaco oral). Como não precisa passar pelo fígado para ser ativado, inibe imediata e drasticamente a conversão de Angiotensina I em Angiotensina II no plasma. Bloqueia o sistema renina-angiotensina-aldosterona (SRAA), causando vasodilatação potente, redução do volume sanguíneo (queda da aldosterona) e inibição da degradação da bradicinina.',
+        es: 'La forma endovenosa ACTIVA del enalapril (profármaco oral). Como no necesita pasar por el hígado para ser activado, inhibe inmediata y drásticamente la conversión de Angiotensina I en Angiotensina II en el plasma. Bloquea el sistema renina-angiotensina-aldosterona (SRAA), causando vasodilatación potente, reducción del volumen sanguíneo (caída de la aldosterona) e inhibición de la degradación de la bradicinina.'
+      },
+      dose: {
+        adult: {
+          pt: '1,25 a 5 mg IV a cada 6 horas. Iniciar com dose menor (0,625 mg) em pacientes em uso de diuréticos potentes.',
+          es: '1,25 a 5 mg IV cada 6 horas. Iniciar con dosis menor (0,625 mg) en pacientes en uso de diuréticos potentes.'
+        },
+        pediatric: {
+          pt: '5 a 10 mcg/kg IV a cada 8 a 24 horas (máx 1,25 mg/dose).',
+          es: '5 a 10 mcg/kg IV cada 8 a 24 horas (máx 1,25 mg/dosis).'
+        }
+      },
+      administration: { pt: ['Injeção IV LENTA (em pelo menos 5 minutos). O uso RÁPIDO causa colapso pressórico.'], es: ['Inyección IV LENTA (en al menos 5 minutos). El uso RÁPIDO causa colapso presórico.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min, iniciar com a dose reduzida de 0,625 mg. Risco severo de falência renal aguda isquêmica.', es: 'Si ClCr < 30 mL/min, iniciar con la dosis reducida de 0,625 mg. Riesgo severo de falla renal aguda isquémica.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Como já é a molécula ativa (não precisa do fígado), é plenamente eficaz na cirrose hepática severa.', es: 'Como ya es la molécula activa (no necesita del hígado), es plenamente eficaz en la cirrosis hepática severa.' } },
+      commonAdverseEffects: { pt: ['Hipotensão postural prolongada', 'Tosse seca', 'Piora aguda e transitória da creatinina'], es: ['Hipotensión postural prolongada', 'Tos seca', 'Empeoramiento agudo y transitorio de la creatinina'] },
+      dangerousAdverseEffects: { pt: ['Hipercalemia grave (arritmias)', 'Angioedema orolingual (risco de asfixia)', 'Lesão Renal Aguda oligoanúrica'], es: ['Hiperpotasemia grave (arritmias)', 'Angioedema orolingual (riesgo de asfixia)', 'Lesión Renal Aguda oligoanúrica'] },
+      contraindications: {
+        absolute: { pt: ['Estenose bilateral da artéria renal', 'Gravidez (Teratogênico - agenesia renal fetal)', 'Histórico de Angioedema por IECA'], es: ['Estenosis bilateral de la arteria renal', 'Embarazo (Teratogénico - agenesia renal fetal)', 'Historial de Angioedema por IECA'] },
+        relative: { pt: ['Hipercalemia basal severa (> 5.5 mEq/L)'], es: ['Hiperpotasemia basal severa (> 5.5 mEq/L)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O Enalaprilato tem duração de ação de até 24 horas. Se o paciente evoluir com choque séptico ou hemorrágico pouco após a dose, a pressão será virtualmente irrecuperável mesmo com altas doses de noradrenalina, devido ao bloqueio maciço do SRAA.', es: 'El Enalaprilat tiene duración de acción de hasta 24 horas. Si el paciente evoluciona con choque séptico o hemorrágico poco después de la dosis, la presión será virtualmente irrecuperable incluso con altas dosis de noradrenalina, debido al bloqueo masivo del SRAA.' }
+      }
+    },
+
+/* ── MILRINONA ──────────────────────────────────────────────────────── */
+    "milrinona": {
+      name: { pt: 'Milrinona', es: 'Milrinona' },
+      category: 'cardiologia',
+      class: { pt: 'Inibidor da Fosfodiesterase 3 (PDE3) / Inodilatador', es: 'Inhibidor de la Fosfodiesterasa 3 (PDE3) / Inodilatador' },
+      indications: {
+        pt: ['Choque Cardiogênico com alta resistência vascular (frio e pálido)', 'Insuficiência Cardíaca Aguda Descompensada', 'Hipertensão Pulmonar severa no pós-operatório'],
+        es: ['Choque Cardiogénico con alta resistencia vascular (frío y pálido)', 'Insuficiencia Cardíaca Aguda Descompensada', 'Hipertensión Pulmonar severa en el posoperatorio']
+      },
+      commercialNames: { br: ['Primacor'], ar: ['Corotrope'] },
+      presentation: { pt: ['Ampolas IV 1 mg/mL (10 mL ou 20 mL)'], es: ['Ampollas IV 1 mg/mL (10 mL o 20 mL)'] },
+      mechanism: {
+        pt: 'Inibe seletivamente a enzima Fosfodiesterase III, responsável por destruir o AMPc no coração e nos vasos. Com altos níveis de AMPc, o coração se contrai MUITO MAIS FORTE (inotropismo positivo) e relaxa muito melhor na diástole (lusitropismo). Em contrapartida, os vasos sanguíneos (incluindo o pulmão) dilatam severamente. É chamada de Inodilatador. Como age DENTRO da célula, não depende dos receptores beta (não é bloqueada por betabloqueadores).',
+        es: 'Inhibe selectivamente la enzima Fosfodiesterasa III, responsable de destruir el AMPc en el corazón y en los vasos. Con altos niveles de AMPc, el corazón se contrae MUCHO MÁS FUERTE (inotropismo positivo) y se relaja mucho mejor en la diástole (lusitropismo). En contrapartida, los vasos sanguíneos (incluyendo el pulmón) se dilatan severamente. Es llamada Inodilatador. Como actúa DENTRO de la célula, no depende de los receptores beta (no es bloqueada por betabloqueantes).'
+      },
+      dose: {
+        adult: {
+          pt: 'Ataque: Bolus de 50 mcg/kg IV (frequentemente EVITADO em UTI médica pelo risco de hipotensão aguda). Manutenção: 0,375 a 0,75 mcg/kg/min em infusão contínua.',
+          es: 'Ataque: Bolo de 50 mcg/kg IV (frecuentemente EVITADO en UCI médica por el riesgo de hipotensión aguda). Mantenimiento: 0,375 a 0,75 mcg/kg/min en infusión continua.'
+        },
+        pediatric: {
+          pt: 'Bolus (0 a 50 mcg/kg) seguido de 0,25 a 0,75 mcg/kg/min.',
+          es: 'Bolo (0 a 50 mcg/kg) seguido de 0,25 a 0,75 mcg/kg/min.'
+        }
+      },
+      administration: { pt: ['Exclusivamente Bomba de Infusão Contínua.'], es: ['Exclusivamente Bomba de Infusión Continua.'] },
+      renalAdjustment: { required: true, message: { pt: 'Depuração estritamente renal. Reduzir a dose de manutenção de forma agressiva (até 0,2 mcg/kg/min) se ClCr < 30, senão o paciente terá vasoplegia prolongada.', es: 'Depuración estrictamente renal. Reducir la dosis de mantenimiento de forma agresiva (hasta 0,2 mcg/kg/min) si ClCr < 30, de lo contrario el paciente tendrá vasoplejía prolongada.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      commonAdverseEffects: { pt: ['Hipotensão arterial marcante (o maior desafio do seu uso)', 'Dor de cabeça'], es: ['Hipotensión arterial marcada (el mayor desafío de su uso)', 'Dolor de cabeza'] },
+      dangerousAdverseEffects: { pt: ['Arritmias ventriculares (Taq. Ventricular, Extrassístoles) pelo aumento do cálcio intra-miocárdico', 'Trombocitopenia (rara na milrinona, mas de classe)'], es: ['Arritmias ventriculares (Taq. Ventricular, Extrasístoles) por el aumento del calcio intra-miocárdico', 'Trombocitopenia (rara en la milrinona, pero de clase)'] },
+      contraindications: {
+        absolute: { pt: ['Hipotensão profunda basal não suportada por noradrenalina', 'Estenose Aórtica ou Pulmonar severa (qualquer obstrutiva crônica)'], es: ['Hipotensión profunda basal no soportada por noradrenalina', 'Estenosis Aórtica o Pulmonar severa (cualquier obstructiva crónica)'] },
+        relative: { pt: ['Uso isolado pós IAM recente (pode aumentar o consumo de O2 e arritmias)'], es: ['Uso aislado pos IAM reciente (puede aumentar el consumo de O2 y arritmias)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'INCOMPATIBILIDADE DE VIA: A Milrinona NUNCA PODE ser infundida na mesma via que a Furosemida (diurético), pois ocorre precipitação imediata formando cristais que causam embolia pulmonar.', es: 'INCOMPATIBILIDAD DE VÍA: La Milrinona NUNCA PUEDE ser infundida en la misma vía que la Furosemida (diurético), pues ocurre precipitación inmediata formando cristales que causan embolia pulmonar.' }
+      }
+    },
+
+/* ── MEXILETINA ─────────────────────────────────────────────────────── */
+    "mexiletina": {
+      name: { pt: 'Mexiletina', es: 'Mexiletina' },
+      category: 'cardiologia',
+      class: { pt: 'Antiarrítmico Classe IB (Equivalente Oral da Lidocaína)', es: 'Antiarrítmico Clase IB (Equivalente Oral de la Lidocaína)' },
+      indications: {
+        pt: ['Taquicardias ventriculares severas e Extrassístoles ventriculares sintomáticas', 'Tratamento crônico de Síndromes de QT Longo (especialmente o LQT3)', 'Dores neuropáticas refratárias (off-label)'],
+        es: ['Taquicardias ventriculares severas y Extrasístoles ventriculares sintomáticas', 'Tratamiento crónico de Síndromes de QT Largo (especialmente el LQT3)', 'Dolores neuropáticos refractarios (off-label)']
+      },
+      commercialNames: { br: ['Mexitil (Importação Especial)'], ar: ['Mexitil'] },
+      presentation: { pt: ['Cápsulas 150 mg, 200 mg', 'Ampolas IV (Raras)'], es: ['Cápsulas 150 mg, 200 mg', 'Ampollas IV (Raras)'] },
+      mechanism: {
+        pt: 'Bloqueador potente e rápido dos canais de Sódio miocárdicos (Fase 0 do potencial de ação). Acelera a repolarização celular e encurta a duração do potencial de ação e do intervalo QT. É essencialmente a versão "via oral" da lidocaína venosa. Exerce poderoso efeito estabilizador de membrana, bloqueando circuitos de reentrada nos ventrículos.',
+        es: 'Bloqueador potente y rápido de los canales de Sodio miocárdicos (Fase 0 del potencial de acción). Acelera la repolarización celular y acorta la duración del potencial de acción y del intervalo QT. Es esencialmente la versión "vía oral" de la lidocaína venosa. Ejerce poderoso efecto estabilizador de membrana, bloqueando circuitos de reentrada en los ventrículos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciar com 150 mg VO a cada 8 horas. (Titular a cada 3 dias). Dose máxima de manutenção: 1.200 mg/dia.',
+          es: 'Iniciar con 150 mg VO cada 8 horas. (Titular cada 3 días). Dosis máxima de mantenimiento: 1.200 mg/día.'
+        },
+        pediatric: {
+          pt: 'Arritmias graves congênitas: 2 a 5 mg/kg/dose VO a cada 8h.',
+          es: 'Arritmias graves congénitas: 2 a 5 mg/kg/dosis VO cada 8h.'
+        }
+      },
+      administration: { pt: ['Tomar sempre COM ALIMENTOS ou leite. A intolerância gástrica (vômito violento) de estômago vazio é regra.'], es: ['Tomar siempre CON ALIMENTOS o leche. La intolerancia gástrica (vómito violento) con estómago vacío es regla.'] },
+      renalAdjustment: { required: false, message: { pt: 'Evitar em ClCr < 10 mL/min sem monitorização plasmática rigorosa.', es: 'Evitar en ClCr < 10 mL/min sin monitorización plasmática rigurosa.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Extensamente metabolizada no fígado (CYP1A2 e CYP2D6). Reduzir agressivamente a dose na cirrose hepática a 25-30% do normal.', es: 'Extensamente metabolizada en el hígado (CYP1A2 y CYP2D6). Reducir agresivamente la dosis en la cirrosis hepática a 25-30% de lo normal.' } },
+      commonAdverseEffects: { pt: ['Náuseas muito intensas e Azia', 'Tremores de extremidades', 'Tontura e marcha atáxica (embriaguez)'], es: ['Náuseas muy intensas y Acidez', 'Temblores de extremidades', 'Mareo y marcha atáxica (embriaguez)'] },
+      dangerousAdverseEffects: { pt: ['Toxicidade do SNC (Convulsões intratáveis e Coma em overdoses)', 'Piora paradoxal de arritmias ventriculares', 'Hepatotoxicidade'], es: ['Toxicidad del SNC (Convulsiones intratables y Coma en sobredosis)', 'Empeoramiento paradójico de arritmias ventriculares', 'Hepatotoxicidad'] },
+      contraindications: {
+        absolute: { pt: ['Choque Cardiogênico', 'Bloqueio AV de 2º e 3º grau pré-existentes sem marcapasso'], es: ['Choque Cardiogénico', 'Bloqueo AV de 2º y 3º grado preexistentes sin marcapasos'] },
+        relative: { pt: ['Disfunção hepática grave', 'Transtornos convulsivos refratários'], es: ['Disfunción hepática grave', 'Trastornos convulsivos refractarios'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Atenção na pediatria cardiológica. Possui margem terapêutica extremamente estreita (Nível tóxico > 2 mcg/mL). Se o paciente começar a apresentar tremores finos e fala arrastada, o medicamento está intoxicando o cérebro.', es: 'Atención en la pediatría cardiológica. Posee margen terapéutico extremadamente estrecho (Nivel tóxico > 2 mcg/mL). Si el paciente empieza a presentar temblores finos y habla arrastrada, el medicamento está intoxicando el cerebro.' }
+      }
+    },
+
+/* ── VERAPAMIL IV ───────────────────────────────────────────────────── */
+    "verapamil_iv": {
+      name: { pt: 'Verapamil IV', es: 'Verapamilo IV' },
+      category: 'cardiologia',
+      class: { pt: 'Bloqueador de Canal de Cálcio Não-Diidropiridínico (Antiarrítmico Classe IV)', es: 'Bloqueador de Canal de Calcio No-Dihidropiridínico (Antiarrítmico Clase IV)' },
+      indications: {
+        pt: ['Reversão ágil de Taquicardia Supraventricular Paroxística (TSVP) no PS', 'Controle crônico de frequência na Fibrilação Atrial e Flutter Atrial', 'Tratamento de Cefaleia em Salvas refratária (Cluster headache)'],
+        es: ['Reversión ágil de Taquicardia Supraventricular Paroxística (TSVP) en Urgencias', 'Control crónico de frecuencia en la Fibrilación Auricular y Flutter Auricular', 'Tratamiento de Cefalea en Racimos refractaria (Cluster headache)']
+      },
+      commercialNames: { br: ['Dilacoron'], ar: ['Isoptin'] },
+      presentation: { pt: ['Ampolas IV 2,5 mg/mL (2 mL)'], es: ['Ampollas IV 2,5 mg/mL (2 mL)'] },
+      mechanism: {
+        pt: 'Bloqueia seletivamente a entrada de cálcio nos canais do tipo L das células do músculo cardíaco e liso. Concentra sua ação no Nódulo Sinusal (SA) e Atrioventricular (AV), atrasando drasticamente a condução elétrica cardíaca e quebrando circuitos de taquicardia de reentrada. Diferente do anlodipino, DEPRIME A FORÇA DE CONTRAÇÃO do coração (inotrópico e cronotrópico negativo violento).',
+        es: 'Bloquea selectivamente la entrada de calcio en los canales de tipo L de las células del músculo cardíaco y liso. Concentra su acción en el Nódulo Sinusal (SA) y Auriculoventricular (AV), retrasando drásticamente la conducción eléctrica cardíaca y rompiendo circuitos de taquicardia de reentrada. A diferencia del amlodipino, DEPRIME LA FUERZA DE CONTRACCIÓN del corazón (inotrópico y cronotrópico negativo violento).'
+      },
+      dose: {
+        adult: {
+          pt: 'Reversão de TSVP: 2,5 a 5 mg IV lento. Se não reverter, dar nova dose de 5 a 10 mg após 15 a 30 min. (Máximo total de 20 mg).',
+          es: 'Reversión de TSVP: 2,5 a 5 mg IV lento. Si no revierte, dar nueva dosis de 5 a 10 mg tras 15 a 30 min. (Máximo total de 20 mg).'
+        },
+        pediatric: {
+          pt: '0,1 a 0,3 mg/kg IV lento (Uso restrito sob monitorização de UTI).',
+          es: '0,1 a 0,3 mg/kg IV lento (Uso restringido bajo monitorización de UCI).'
+        }
+      },
+      administration: { pt: ['Injeção IV LENTA (em pelo menos 2 a 3 minutos).', 'Monitorização Eletrocardiográfica obrigatória para detectar bloqueios AV súbitos.'], es: ['Inyección IV LENTA (en al menos 2 a 3 minutos).', 'Monitorización Electrocardiográfica obligatoria para detectar bloqueos AV súbitos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito agudo.', es: 'Sin necesidad de ajuste estricto agudo.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Altíssimo metabolismo de primeira passagem hepático. Reduzir a dose severamente na insuficiência hepática.', es: 'Altísimo metabolismo de primer paso hepático. Reducir la dosis severamente en insuficiencia hepática.' } },
+      commonAdverseEffects: { pt: ['Hipotensão aguda e tontura', 'Constipação Intestinal (muito frequente no uso crônico)', 'Edema de membros inferiores'], es: ['Hipotensión aguda y mareo', 'Constipación Intestinal (muy frecuente en el uso crónico)', 'Edema de miembros inferiores'] },
+      dangerousAdverseEffects: { pt: ['Choque cardiogênico / Edema Agudo de Pulmão (se aplicado em coração fraco)', 'Bloqueio AV total e Assistolia', 'Taquicardia ventricular maligna (se aplicado de forma errada no paciente com WPW e FA)'], es: ['Choque cardiogénico / Edema Agudo de Pulmón (si aplicado en corazón débil)', 'Bloqueo AV total y Asistolia', 'Taquicardia ventricular maligna (si aplicado de forma incorrecta en el paciente con WPW y FA)'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência Cardíaca Congestiva descompensada ou Fração de Ejeção Baixa (<40%)', 'Síndrome de Wolff-Parkinson-White associado a Fibrilação Atrial (causa morte súbita)', 'Uso IV conjunto com betabloqueadores'], es: ['Insuficiencia Cardíaca Congestiva descompensada o Fracción de Eyección Baja (<40%)', 'Síndrome de Wolff-Parkinson-White asociado a Fibrilación Auricular (causa muerte súbita)', 'Uso IV conjunto con betabloqueantes'] },
+        relative: { pt: ['Hipotensão basal severa'], es: ['Hipotensión basal severa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'ERRO TÉCNICO LETAL: Se um paciente tiver Fibrilação Atrial + Síndrome de WPW e receber Verapamil, o nódulo AV trava. Os impulsos dos átrios (>300 bpm) descem inteiramente pelo Feixe Acessório de Kent, fazendo os ventrículos baterem a 300 bpm, gerando Fibrilação Ventricular imediata. Antídoto base: Gluconato de Cálcio.', es: 'ERROR TÉCNICO LETAL: Si un paciente tiene Fibrilación Auricular + Síndrome de WPW y recibe Verapamilo, el nódulo AV se traba. Los impulsos de las aurículas (>300 lpm) bajan enteramente por el Haz Accesorio de Kent, haciendo que los ventrículos latan a 300 lpm, generando Fibrilación Ventricular inmediata. Antídoto base: Gluconato de Calcio.' }
+      }
+    }
+
+  }); /* fim Object.assign ANALGESICOS_DRUGS_DB — Grupo 14 (hidralazina_iv · enalaprilato · milrinona · mexiletina · verapamil_iv — BUILD 332 Lote 4) */
+
+})();
+
 })(); /* fim da IIFE do módulo analgésicos */
