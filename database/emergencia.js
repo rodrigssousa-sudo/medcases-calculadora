@@ -1372,8 +1372,88 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'Estratégia de Desmame (UTI): A Vasopressina e a Noradrenalina devem ser desmamadas com cautela. Geralmente, reduz-se a Noradrenalina primeiro. Desligar a Vasopressina subitamente no paciente crítico frequentemente causa colapso pressórico rebote em poucos minutos.', es: 'Estrategia de Destete (UCI): La Vasopresina y la Noradrenalina deben ser destetadas con precaución. Generalmente, se reduce la Noradrenalina primero. Apagar la Vasopresina súbitamente en el paciente crítico frecuentemente causa colapso presórico rebote en pocos minutos.' }
       }
+    }, // vírgula adicionada; BUILD 354 blocos seguem
+
+/* ── DEXAMETASONA ───────────────────────────────────────────────────── */
+    "dexametasona": {
+      name: { pt: 'Dexametasona', es: 'Dexametasona' },
+      category: 'emergencia',
+      class: { pt: 'Corticosteroide Sistêmico (Glicocorticoide Puro de Longa Ação)', es: 'Corticosteroide Sistémico (Glucocorticoide Puro de Larga Acción)' },
+      indications: {
+        pt: ['Edema cerebral (Tumores de SNC / Traumatismo, devido à alta penetração no líquor)', 'Síndrome da Angústia Respiratória Aguda (COVID-19 grave e SRAG)', 'Prevenção de Náuseas e Vômitos no pós-operatório (profilaxia)', 'Laringite estridulosa grave (Crupe) em pediatria'],
+        es: ['Edema cerebral (Tumores de SNC / Traumatismo, debido a la alta penetración en LCR)', 'Síndrome de Dificultad Respiratoria Aguda (COVID-19 grave y SRAG)', 'Prevención de Náuseas y Vómitos en el posoperatorio (profilaxis)', 'Laringitis estridulosa grave (Crup) en pediatría']
+      },
+      commercialNames: { br: ['Decadron'], ar: ['Decadron'] },
+      presentation: { pt: ['Ampolas IV/IM 2 mg/mL e 4 mg/mL', 'Comprimidos 0,5 mg e 4 mg', 'Elixir'], es: ['Ampollas IV/IM 2 mg/mL y 4 mg/mL', 'Comprimidos 0,5 mg y 4 mg', 'Elixir'] },
+      mechanism: {
+        pt: 'Potentíssimo modulador genético anti-inflamatório (cerca de 25 a 30 vezes mais potente que a hidrocortisona). Sua imensa virtude em UTI neurológica é que ele é um Glicocorticoide PURO: possui ZERO efeito mineralocorticoide (não retém sódio nem água), portanto não incha o paciente nem aumenta agressivamente a pressão arterial, sendo perfeito para reduzir inflamação dentro do cérebro. Tempo de ação biológica é gigantesco (36 a 72 horas).',
+        es: 'Potentísimo modulador genético antiinflamatorio (cerca de 25 a 30 veces más potente que la hidrocortisona). Su inmensa virtud en la UCI neurológica es que es un Glucocorticoide PURO: posee CERO efecto mineralocorticoide (no retiene sodio ni agua), por lo tanto no hincha al paciente ni aumenta agresivamente la presión arterial, siendo perfecto para reducir la inflamación dentro del cerebro. El tiempo de acción biológica es gigantesco (36 a 72 horas).'
+      },
+      dose: {
+        adult: {
+          pt: 'Edema Cerebral: Ataque IV 10 mg, depois 4 mg 6/6h. COVID-19 Severo (Recovery Trial): 6 mg IV/VO 1x ao dia por até 10 dias. Antiemético NVPO: 4 a 8 mg IV indução.',
+          es: 'Edema Cerebral: Ataque IV 10 mg, luego 4 mg 6/6h. COVID-19 Severo (Recovery Trial): 6 mg IV/VO 1 vez al día por hasta 10 días. Antiemético NVPO: 4 a 8 mg IV inducción.'
+        },
+        pediatric: {
+          pt: 'Laringite/Crupe aguda: 0,6 mg/kg (Máx 16 mg) IM, IV ou VO em DOSE ÚNICA (efeito "salva-vias aéreas").',
+          es: 'Laringitis/Crup aguda: 0,6 mg/kg (Máx 16 mg) IM, IV o VO en DOSIS ÚNICA (efecto "salva-vías respiratorias").'
+        }
+      },
+      administration: { pt: ['A injeção IV rápida (bolus em segundos) causa intensa queimação no ânus, períneo e genitália do paciente (reação inofensiva, mas extremamente desconfortável). Infunda em pelo menos 3 a 5 minutos.'], es: ['La inyección IV rápida (bolo en segundos) causa intenso ardor en el ano, perineo y genitales del paciente (reacción inofensiva, pero extremadamente incómoda). Infunda en al menos 3 a 5 minutos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste formal.', es: 'Sin necesidad de ajuste formal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'A meia-vida pode dobrar na cirrose, mas raramente exige ajuste na emergência.', es: 'La vida media puede doblarse en la cirrosis, pero raramente exige ajuste en urgencias.' } },
+      commonAdverseEffects: { pt: ['Hiperglicemia aguda (descontrola diabetes instantaneamente)', 'Insônia e agitação psicomotora', 'Aumento de apetite'], es: ['Hiperglucemia aguda (descontrola diabetes instantáneamente)', 'Insomnio y agitación psicomotora', 'Aumento de apetito'] },
+      dangerousAdverseEffects: { pt: ['Imunossupressão profunda em uso prolongado', 'Psicose induzida por corticoide', 'Hemorragia digestiva alta (risco moderado)'], es: ['Inmunosupresión profunda en uso prolongado', 'Psicosis inducida por corticoide', 'Hemorragia digestiva alta (riesgo moderado)'] },
+      contraindications: {
+        absolute: { pt: ['Infecções fúngicas sistêmicas não tratadas', 'Uso concomitante com vacinas de vírus vivo (se terapia de alta dose)'], es: ['Infecciones fúngicas sistémicas no tratadas', 'Uso concomitante con vacunas de virus vivo (si terapia de alta dosis)'] },
+        relative: { pt: ['Glaucoma', 'Úlcera péptica ativa sem proteção com IBP'], es: ['Glaucoma', 'Úlcera péptica activa sin protección con IBP'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'NUNCA prescreva a Dexametasona como corticoide de reposição no Choque Séptico! Como ela não tem o poder mineralocorticoide de segurar sódio e água (efeito da aldosterona), ela falha em manter a pressão do paciente chocado. Para o choque, usa-se a Hidrocortisona.', es: '¡NUNCA prescriba la Dexametasona como corticoide de reposición en el Choque Séptico! Como no tiene el poder mineralocorticoide de retener sodio y agua (efecto de la aldosterona), falla en mantener la presión del paciente en choque. Para el choque, se usa la Hidrocortisona.' }
+      }
+    },
+
+/* ── HIDROCORTISONA ─────────────────────────────────────────────────── */
+    "hidrocortisona": {
+      name: { pt: 'Hidrocortisona', es: 'Hidrocortisona' },
+      category: 'emergencia',
+      class: { pt: 'Corticosteroide Sistêmico (Glico e Mineralocorticoide de Curta Ação)', es: 'Corticosteroide Sistémico (Gluco y Mineralocorticoide de Corta Acción)' },
+      indications: {
+        pt: ['Choque Séptico refratário a vasopressores (Reposição de corticoide em UTI)', 'Crise Adrenal Aguda (Insuficiência Suprarrenal severa)', 'Asma Severa e Exacerbação de DPOC', 'Choque Anafilático (profilaxia do componente tardio)'],
+        es: ['Choque Séptico refractario a vasopresores (Reposición de corticoide en UCI)', 'Crisis Adrenal Aguda (Insuficiencia Suprarrenal severa)', 'Asma Severa y Exacerbación de EPOC', 'Choque Anafiláctico (profilaxis del componente tardío)']
+      },
+      commercialNames: { br: ['Solu-Cortef', 'Flebocortid'], ar: ['Solu-Cortef'] },
+      presentation: { pt: ['Frasco-ampola IV liofilizado 100 mg e 500 mg'], es: ['Vial IV liofilizado 100 mg y 500 mg'] },
+      mechanism: {
+        pt: 'É a versão farmacêutica idêntica ao Cortisol humano natural. Possui igual e fortíssima atividade GLICOCORTICOIDE (anti-inflamatória, aumenta a glicose) e MINERALOCORTICOIDE (retém sódio e água nos rins, expulsando potássio, o que sobe ativamente a pressão arterial e a volemia). Por isso é o "Rei" no tratamento de choques vasodilatadores e doença de Addison. Meia-vida biológica curta (8 a 12 horas).',
+        es: 'Es la versión farmacéutica idéntica al Cortisol humano natural. Posee igual y fortísima actividad GLUCOCORTICOIDE (antiinflamatoria, aumenta la glucosa) y MINERALOCORTICOIDE (retiene sodio y agua en los riñones, expulsando potasio, lo que sube activamente la presión arterial y la volemia). Por eso es el "Rey" en el tratamiento de choques vasodilatadores y enfermedad de Addison. Vida media biológica corta (8 a 12 horas).'
+      },
+      dose: {
+        adult: {
+          pt: 'Choque Séptico: 200 mg/dia (Idealmente em Infusão Contínua de 200mg em 24h, ou 50 mg IV a cada 6h). Asma/Anafilaxia: Bolus 250 a 500 mg IV.',
+          es: 'Choque Séptico: 200 mg/día (Idealmente en Infusión Continua de 200mg en 24h, o 50 mg IV cada 6h). Asma/Anafilaxia: Bolo 250 a 500 mg IV.'
+        },
+        pediatric: {
+          pt: 'Asma severa: 2 a 4 mg/kg IV a cada 6h (Máx 250mg/dose).',
+          es: 'Asma severa: 2 a 4 mg/kg IV cada 6h (Máx 250mg/dosis).'
+        }
+      },
+      administration: { pt: ['Reconstituição do frasco pó com diluente estéril apropriado. O uso em bolus rápido é tolerado nas emergências (1 a 2 min).'], es: ['Reconstitución del vial polvo con diluyente estéril apropiado. El uso en bolo rápido es tolerado en las emergencias (1 a 2 min).'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste em disfunção renal crônica aguda.', es: 'No requiere ajuste en disfunción renal crónica aguda.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste emergencial.', es: 'Sin necesidad de ajuste emergencial.' } },
+      commonAdverseEffects: { pt: ['Hiperglicemia quase obrigatória na UTI (exige monitoração com fita capilar e insulina regular)', 'Hipernatremia (excesso de sódio) e Hipocalemia (perda de potássio)', 'Retenção de fluidos (edema generalizado)'], es: ['Hiperglucemia casi obligatoria en la UCI (exige monitorización con cinta capilar e insulina regular)', 'Hipernatremia (exceso de sodio) e Hipopotasemia (pérdida de potasio)', 'Retención de fluidos (edema generalizado)'] },
+      dangerousAdverseEffects: { pt: ['Miopatia do doente crítico (se associado a bloqueadores neuromusculares)', 'Delirium induzido por corticoide', 'Aumento de suscetibilidade a infecções oportunistas intra-hospitalares'], es: ['Miopatía del enfermo crítico (si asociado a bloqueadores neuromusculares)', 'Delirium inducido por corticoide', 'Aumento de susceptibilidad a infecciones oportunistas intrahospitalarias'] },
+      contraindications: {
+        absolute: { pt: ['Nenhuma absoluta nos quadros agudos de risco de vida (choque/anafilaxia).'], es: ['Ninguna absoluta en los cuadros agudos de riesgo de vida (choque/anafilaxia).'] },
+        relative: { pt: ['Infecções sistêmicas ativas sem cobertura antibiótica correspondente'], es: ['Infecciones sistémicas activas sin cobertura antibiótica correspondiente'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Para anafilaxia, a Hidrocortisona age de forma EXTREMAMENTE LENTA nas vias moleculares (demora horas para o pico anti-inflamatório). Ela NÃO serve para resgatar o paciente sufocando no minuto zero (isso é papel da Adrenalina). A hidro previne a "recaída" da alergia 12 horas depois.', es: 'Para anafilaxia, la Hidrocortisona actúa de forma EXTREMADAMENTE LENTA en las vías moleculares (tarda horas para el pico antiinflamatorio). NO sirve para rescatar al paciente asfixiándose en el minuto cero (ese es papel de la Adrenalina). La hidro previene la "recaída" de la alergia 12 horas después.' }
+      }
     }
 
-  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 336 Lote 1+2+3+4+5+6+7 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides + Toxicologia/Antídotos + Azul_Metileno/Carvão) + BUILD 346 Lote 8 (Vasopressores/Aminas Vasoativas) */
+  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 336 Lote 1+2+3+4+5+6+7 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides + Toxicologia/Antídotos + Azul_Metileno/Carvão) + BUILD 346 Lote 8 (Vasopressores/Aminas Vasoativas) + BUILD 354 Lote 9 (Corticosteroides: Dexametasona/Hidrocortisona) */
 
 })();

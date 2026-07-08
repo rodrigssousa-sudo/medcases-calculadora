@@ -20464,6 +20464,112 @@ const INTERACOES_DB = {
         es: "A pesar de esta interacción teórica, ensayos clínicos muestran que el uso asociado (Lactulosa + Antibiótico Enteral) es altamente benéfico. El protocolo mundial MANTIENE la asociación en los casos refractarios de encefalopatía."
       }
     }
+  }, // vírgula adicionada; BUILD 354 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Antiarrítmicos Sistêmicos e Corticoides
+   Amiodarona, Adenosina, Lidocaína IV, Dexametasona, Hidrocortisona
+   BUILD 354 — 5 entradas / 7 pares
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── AMIODARONA ── */
+  "amiodarona": {
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INIBIÇÃO DE CLEARANCE. A Amiodarona é uma inibidora agressiva da P-glicoproteína (transportador de efluxo intestinal e renal). Ao associar as duas drogas, a Digoxina simplesmente não consegue sair do corpo. Seus níveis plasmáticos DOBRAM em poucos dias, levando invariavelmente a toxicidade digitálica (extrassístoles de alto grau, náuseas e halos visuais amarelos).",
+        es: "INHIBICIÓN DE CLEARANCE. La Amiodarona es una inhibidora agresiva de la P-glicoproteína (transportador de eflujo intestinal y renal). Al asociar las dos drogas, la Digoxina simplemente no logra salir del cuerpo. Sus niveles plasmáticos se DUPLICAN en pocos días, llevando invariablemente a toxicidad digitálica (extrasístoles de alto grado, náuseas y halos visuales amarillos)."
+      },
+      conduta: {
+        pt: "É REGRA ESTRITA: Reduzir a dose da Digoxina em 50% IMEDIATAMENTE no dia em que a Amiodarona for introduzida na prescrição.",
+        es: "ES REGLA ESTRICTA: Reducir la dosis de la Digoxina en 50% INMEDIATAMENTE en el día en que la Amiodarona sea introducida en la prescripción."
+      }
+    },
+    "$classe_estatinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A Amiodarona inibe o citocromo CYP3A4 no fígado. A Sinvastatina e a Lovastatina dependem desse citocromo. O acúmulo da estatina resultante deflagrará Miosite Tóxica severa e risco iminente de Rabdomiólise com falência renal aguda.",
+        es: "La Amiodarona inhibe el citocromo CYP3A4 en el hígado. La Simvastatina y la Lovastatina dependen de este citocromo. La acumulación de la estatina resultante desencadenará Miositis Tóxica severa y riesgo inminente de Rabdomiólisis con falla renal aguda."
+      },
+      conduta: {
+        pt: "Limitar a Sinvastatina a no máximo 20 mg/dia em usuários de amiodarona. O ideal é trocar a estatina para Rosuvastatina ou Pravastatina (que usam outras vias de limpeza).",
+        es: "Limitar la Simvastatina a un máximo de 20 mg/día en usuarios de amiodarona. Lo ideal es cambiar la estatina a Rosuvastatina o Pravastatina (que usan otras vías de limpieza)."
+      }
+    }
+  },
+
+  /* ── ADENOSINA ── */
+  "adenosina": {
+    "aminofilina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ANTAGONISMO DE RECEPTOR DIRETO. As metilxantinas (Aminofilina, Teofilina e grandes quantidades de Cafeína) são bloqueadores perfeitos do receptor de Adenosina no coração. Se o paciente injetar a Adenosina para reverter uma taquicardia, ela não encontrará o receptor (que está tapado). O remédio falha complementamente na dose padrão.",
+        es: "ANTAGONISMO DE RECEPTOR DIRECTO. Las metilxantinas (Aminofilina, Teofilina y grandes cantidades de Cafeína) son bloqueadores perfectos del receptor de Adenosina en el corazón. Si el paciente inyecta la Adenosina para revertir una taquicardia, no encontrará el receptor (que está tapado). El remedio falla completamente en la dosis estándar."
+      },
+      conduta: {
+        pt: "Pacientes em uso de Aminofilina/Teofilina necessitarão de DOSES DOBRADAS E MACIÇAS de Adenosina (ex: começar logo com 12 mg a 18 mg) para tentar vencer o bloqueio por competição e parar a taquicardia.",
+        es: "Pacientes en uso de Aminofilina/Teofilina necesitarán de DOSIS DOBLADAS Y MASIVAS de Adenosina (ej: empezar luego con 12 mg a 18 mg) para intentar vencer el bloqueo por competición y parar la taquicardia."
+      }
+    },
+    "dipiridamol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SUPER POTENCIALIZAÇÃO. O Dipiridamol e a Carbamazepina bloqueiam a captação da adenosina do sangue para dentro da célula, deixando todo o remédio ativo na corrente sanguínea. Isso magnifica violentamente o efeito da Adenosina, causando bradicardias severas prolongadas ou bloqueios cardíacos refratários perigosos.",
+        es: "SUPER POTENCIACIÓN. El Dipiridamol y la Carbamazepina bloquean la captación de la adenosina de la sangre hacia dentro de la célula, dejando todo el remedio activo en el torrente sanguíneo. Esto magnifica violentamente el efecto de la Adenosina, causando bradicardias severas prolongadas o bloqueos cardíacos refractarios peligrosos."
+      },
+      conduta: {
+        pt: "Reduzir rigorosamente a dose de Adenosina para METADE (ex: dose inicial de 3 mg em vez de 6 mg) em usuários de Dipiridamol.",
+        es: "Reducir rigurosamente la dosis de Adenosina a MITAD (ej: dosis inicial de 3 mg en vez de 6 mg) en usuarios de Dipiridamol."
+      }
+    }
+  },
+
+  /* ── LIDOCAÍNA IV ── */
+  "lidocaina_iv": {
+    "$classe_betabloqueadores": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "REDUÇÃO DO FLUXO HEPÁTICO. A destruição da lidocaína depende puramente do sangue passando pelo fígado. Os betabloqueadores (ex: Propranolol, Metoprolol) diminuem fortemente o débito cardíaco e o fluxo de sangue que lava o fígado. A Lidocaína vai parar de ser depurada, acumulando no sangue até causar uma convulsão iatrogênica inesperada.",
+        es: "REDUCCIÓN DEL FLUJO HEPÁTICO. La destrucción de la lidocaína depende puramente de la sangre pasando por el hígado. Los betabloqueantes (ej: Propranolol, Metoprolol) disminuyen fuertemente el gasto cardíaco y el flujo de sangre que lava el hígado. La Lidocaína dejará de ser depurada, acumulándose en la sangre hasta causar una convulsión iatrogénica inesperada."
+      },
+      conduta: {
+        pt: "Reduzir a infusão de manutenção da Lidocaína na bomba se o paciente internado estiver em uso de doses altas de betabloqueadores e vigiar sinais de toxicidade oral (formigamento de boca).",
+        es: "Reducir la infusión de mantenimiento de la Lidocaína en la bomba si el paciente internado está en uso de dosis altas de betabloqueantes y vigilar signos de toxicidad oral (hormigueo de boca)."
+      }
+    }
+  },
+
+  /* ── CORTICOSTEROIDES (DEXAMETASONA / HIDROCORTISONA) ── */
+  "$classe_corticosteroides": {
+    "$classe_bnm_adespolarizantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "DESTRUIÇÃO NEUROMUSCULAR (Miopatia do Doente Crítico). A administração simultânea de altas doses de corticoides (Dexametasona/Hidrocortisona) e infusão contínua de Bloqueadores Neuromusculares (Rocurônio, Cisatracúrio) em pacientes na UTI causa catabolismo muscular brutal e desintegração das fibras de miosina, levando a tetraplegia motora flácida prolongada que persiste meses após a alta hospitalar.",
+        es: "DESTRUCCIÓN NEUROMUSCULAR (Miopatía del Enfermo Crítico). La administración simultánea de altas dosis de corticoides (Dexametasona/Hidrocortisona) e infusión continua de Bloqueadores Neuromusculares (Rocuronio, Cisatracurio) en pacientes en la UCI causa catabolismo muscular brutal y desintegración de las fibras de miosina, llevando a tetraplejía motora flácida prolongada que persiste meses tras el alta."
+      },
+      conduta: {
+        pt: "Suspender bloqueadores neuromusculares continuamente em 48h no máximo se o paciente estiver usando corticoterapia sistêmica para COVID-19 grave ou Choque Séptico.",
+        es: "Suspender bloqueadores neuromusculares continuamente en 48h como máximo si el paciente está usando corticoterapia sistémica para COVID-19 grave o Choque Séptico."
+      }
+    },
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Ulcerogênico Profundo. Tanto os corticoides (que desligam a fosfolipase A2 de cura) quanto os AINEs (que desligam a COX-1 protetora gástrica) retiram as defesas da mucosa do estômago. O uso conjunto de Ibuprofeno/Cetoprofeno/AAS com Dexametasona/Prednisona aumenta exponencialmente o risco de Hemorragia Digestiva e perfuração letal.",
+        es: "Sinergismo Ulcerogénico Profundo. Tanto los corticoides (que apagan la fosfolipasa A2 de cura) como los AINEs (que apagan la COX-1 protectora gástrica) retiran las defensas de la mucosa del estómago. El uso conjunto de Ibuprofeno/Ketoprofeno/AAS con Dexametasona/Prednisona aumenta exponencialmente el riesgo de Hemorragia Digestiva y perforación letal."
+      },
+      conduta: {
+        pt: "Proteção Gástrica OBRIGATÓRIA. Se for inescapável associá-los (ex: ortopedia), o paciente deve estar sob proteção diária de Omeprazol ou Pantoprazol para não sofrer úlcera perfurada aguda.",
+        es: "Protección Gástrica OBLIGATORIA. Si es ineludible asociarlos (ej: ortopedia), el paciente debe estar bajo protección diaria de Omeprazol o Pantoprazol para no sufrir úlcera perforada aguda."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
