@@ -20205,6 +20205,88 @@ const INTERACOES_DB = {
         es: "En la hemorragia digestiva, donde se usan análogos de vasopresina, los nitratos a veces se asocian A PROPÓSITO para proteger el corazón de la isquemia generada por la vasopresina. Exige cuidado de intensivista."
       }
     }
+  }, // vírgula adicionada; BUILD 348 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Sedação, Hipnose e Neurointensivismo
+   Propofol, Midazolam, Dexmedetomidina, Diazepam, Haloperidol
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── INTERAÇÃO DE CLASSE: SEDATIVOS CENTRAIS E OPIOIDES ──
+     (Propofol, Midazolam, Diazepam) */
+  "$classe_sedativos_gaba": {
+    "$classe_opioides_fortes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Respiratório e Hemodinâmico Potencialmente Fatal. A combinação de drogas ativadoras GABA-A (Propofol, Midazolam) com opioides (Fentanil, Morfina, Remifentanil) suprime os centros de disparo respiratório no bulbo. Além disso, destroem a resistência vascular sistêmica. O paciente em minutos entra em apneia profunda e choca (PA inaudível).",
+        es: "Sinergismo Respiratorio y Hemodinámico Potencialmente Fatal. La combinación de drogas activadoras GABA-A (Propofol, Midazolam) con opioides (Fentanilo, Morfina, Remifentanilo) suprime los centros de disparo respiratorio en el bulbo. Además, destruyen la resistencia vascular sistémica. El paciente en minutos entra en apnea profunda y choca (PA inaudible)."
+      },
+      conduta: {
+        pt: "A base da anestesia moderna é justamente essa combinação, mas ela EXIGE suporte de oxigênio avançado, intubação pronta e titulação da bomba (diminuir as doses em 30-50% quando associadas).",
+        es: "La base de la anestesia moderna es justamente esta combinación, pero EXIGE soporte de oxígeno avanzado, intubación lista y titulación de la bomba (disminuir las dosis en 30-50% cuando asociadas)."
+      }
+    }
+  },
+
+  /* ── MIDAZOLAM / DIAZEPAM (Metabolismo CYP3A4) ── */
+  "$classe_benzodiazepinicos_cyp3a4": {
+    "$classe_inibidores_protease_hiv": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "BLOQUEIO DE DEGRADAÇÃO FATAL. Inibidores de protease (Ritonavir, Lopinavir, Nirmatrelvir) bloqueiam totalmente o citocromo CYP3A4. Se o paciente usar Midazolam (especialmente oral), a droga nunca será degradada, acumulando no sangue de forma exponencial até causar sedação prolongada de dias e parada respiratória irreversível pelo Flumazenil.",
+        es: "BLOQUEO DE DEGRADACIÓN FATAL. Inhibidores de proteasa (Ritonavir, Lopinavir, Nirmatrelvir) bloquean totalmente el citocromo CYP3A4. Si el paciente usa Midazolam (especialmente oral), la droga nunca será degradada, acumulando en la sangre de forma exponencial hasta causar sedación prolongada de días y paro respiratorio irreversible por el Flumazenilo."
+      },
+      conduta: {
+        pt: "O uso de Midazolam Oral e Diazepam é ABSOLUTAMENTE CONTRAINDICADO em pacientes usando Paxlovid ou Ritonavir. Midazolam IV pode ser usado em UTI apenas sob titulação agressiva e extubação tardia.",
+        es: "El uso de Midazolam Oral y Diazepam está ABSOLUTAMENTE CONTRAINDICADO en pacientes usando Paxlovid o Ritonavir. Midazolam IV puede usarse en UCI solo bajo titulación agresiva y extubación tardía."
+      }
+    }
+  },
+
+  /* ── DEXMEDETOMIDINA ── */
+  "dexmedetomidina": {
+    "$classe_betabloqueadores_iv": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Simpatolítico Massivo. A Dexmedetomidina (ação alfa-2 central) anula a liberação de noradrenalina no corpo, causando naturalmente bradicardia forte. Se associada a um bloqueador Beta puro (Esmolol, Metoprolol), o coração fica totalmente sem defesa, podendo entrar em Bloqueio Atrioventricular Total ou Assistolia e Hipotensão vasoplégica.",
+        es: "Sinergismo Simpatolítico Masivo. La Dexmedetomidina (acción alfa-2 central) anula la liberación de noradrenalina en el cuerpo, causando naturalmente bradicardia fuerte. Si se asocia a un bloqueador Beta puro (Esmolol, Metoprolol), el corazón queda totalmente sin defensa, pudiendo entrar en Bloqueo Auriculoventricular Total o Asistolia e Hipotensión vasopléjica."
+      },
+      conduta: {
+        pt: "Nunca associar para controle ágil na UTI se não houver um marcapasso em stand-by e infusão contínua de drogas adrenérgicas.",
+        es: "Nunca asociar para control ágil en la UCI si no hay un marcapasos en stand-by e infusión continua de drogas adrenérgicas."
+      }
+    }
+  },
+
+  /* ── HALOPERIDOL ── */
+  "haloperidol": {
+    "$classe_antiarritmicos_qt": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "PICO DE TORSADES DE POINTES. O Haloperidol Injetável Venoso é um bloqueador ferrenho dos canais hERG de potássio no miocárdio, prolongando assustadoramente o intervalo QT. Ao ser misturado com Amiodarona, Metadona, Fluconazol ou Ondansetrona, o miocárdio entra em Taquicardia Ventricular Polimórfica fulminante, matando subitamente o paciente que estava apenas agitado na cama.",
+        es: "PICO DE TORSADES DE POINTES. El Haloperidol Inyectable Venoso es un bloqueador férreo de los canales hERG de potasio en el miocardio, prolongando asustadoramente el intervalo QT. Al ser mezclado con Amiodarona, Metadona, Fluconazol u Ondansetrón, el miocardio entra en Taquicardia Ventricular Polimórfica fulminante, matando súbitamente al paciente que estaba solo agitado en la cama."
+      },
+      conduta: {
+        pt: "Realizar Eletrocardiograma ANTES de injetar o Haldol na veia na UTI. Se QTc > 500ms ou paciente sob Amiodarona, NEGAR o uso do Haldol e sedar a agitação com Midazolam, Propofol ou Precedex.",
+        es: "Realizar Electrocardiograma ANTES de inyectar el Haldol en la vena en la UCI. Si QTc > 500ms o paciente bajo Amiodarona, NEGAR el uso del Haldol y sedar la agitación con Midazolam, Propofol o Precedex."
+      }
+    },
+    "$classe_dopaminergicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ANTAGONISMO DIRETO. O Haloperidol fecha todos os receptores D2 do cérebro. Se dado a um paciente com Doença de Parkinson usando Levodopa/Carbidopa ou Pramipexol, o Haldol ANULA completamente o tratamento do Parkinson em minutos. O paciente trava como uma estátua e perde a capacidade de respirar e engolir a própria saliva.",
+        es: "ANTAGONISMO DIRECTO. El Haloperidol cierra todos los receptores D2 del cerebro. Si se da a un paciente con Enfermedad de Parkinson usando Levodopa/Carbidopa o Pramipexol, el Haldol ANULA completamente el tratamiento del Parkinson en minutos. El paciente se traba como una estatua y pierde la capacidad de respirar y tragar su propia saliva."
+      },
+      conduta: {
+        pt: "Haloperidol é CONTRAINDICADO em pacientes com Doença de Parkinson e Doença de Corpos de Lewy. Apenas o antipsicótico atípico Quetiapina deve ser usado se estritamente necessário para controlar psicose nesses pacientes.",
+        es: "Haloperidol está CONTRAINDICADO en pacientes con Enfermedad de Parkinson y Enfermedad de Cuerpos de Lewy. Solo el antipsicótico atípico Quetiapina debe ser usado si estrictamente necesario para controlar psicosis en estos pacientes."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
