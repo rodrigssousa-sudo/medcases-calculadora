@@ -1092,8 +1092,88 @@
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'Risco Pulmonar Crítico: O uso prolongado (> 24h ininterruptas) de deferoxamina intravenosa induz toxidade pulmonar direta (Pulmão de Choque). O tratamento ideal de desintoxicação deve ser agressivo nas primeiras horas e cessado tão logo haja melhora metabólica.', es: 'Riesgo Pulmonar Crítico: El uso prolongado (> 24h ininterrumpidas) de deferoxamina intravenosa induce toxicidad pulmonar directa (Pulmón de Choque). El tratamiento ideal de desintoxicación debe ser agresivo en las primeras horas y cesado tan pronto haya mejora metabólica.' }
       }
+    },
+
+/* ── AZUL DE METILENO ───────────────────────────────────────────────── */
+    "azul_metileno": {
+      name: { pt: 'Azul de Metileno', es: 'Azul de Metileno' },
+      category: 'emergencia',
+      class: { pt: 'Antídoto / Corante Tiazínico', es: 'Antídoto / Colorante Tiazínico' },
+      indications: {
+        pt: ['Meta-hemoglobinemia tóxica (ex: intoxicação por dapsona, benzocaína ou nitratos)', 'Choque vasoplégico refratário na UTI ou no pós-operatório de cirurgia cardíaca (off-label)'],
+        es: ['Metahemoglobinemia tóxica (ej: intoxicación por dapsona, benzocaína o nitratos)', 'Choque vasopléjico refractario en la UCI o en el posoperatorio de cirugía cardíaca (off-label)']
+      },
+      commercialNames: { br: ['Azul de Metileno 1%'], ar: ['Azul de Metileno'] },
+      presentation: { pt: ['Ampolas IV 1% (10 mg/mL)'], es: ['Ampollas IV 1% (10 mg/mL)'] },
+      mechanism: {
+        pt: 'Mecanismo duplo: 1) Na Meta-hemoglobinemia (onde o ferro do sangue oxida para Fe3+ e não solta o oxigênio), ele age como doador de elétrons junto com a enzima NADPH redutase, devolvendo o ferro à forma normal (Fe2+) e restaurando a oxigenação. 2) No Choque Vasoplégico, ele inibe diretamente a enzima Óxido Nítrico Sintase (NOS) e a Guanilato Ciclase, impedindo a produção de óxido nítrico e restaurando agressivamente o tônus dos vasos sanguíneos.',
+        es: 'Mecanismo doble: 1) En la Metahemoglobinemia (donde el hierro de la sangre se oxida a Fe3+ y no suelta el oxígeno), actúa como donador de electrones junto con la enzima NADPH reductasa, devolviendo el hierro a la forma normal (Fe2+) y restaurando la oxigenación. 2) En el Choque Vasopléjico, inhibe directamente la enzima Óxido Nítrico Sintasa (NOS) y la Guanilato Ciclasa, impidiendo la producción de óxido nítrico y restaurando agresivamente el tono de los vasos sanguíneos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Meta-hemoglobinemia: 1 a 2 mg/kg IV (ao longo de 5 min). Choque vasoplégico: 2 mg/kg em bolus, seguido ou não de infusão (0,25 - 2 mg/kg/h).',
+          es: 'Metahemoglobinemia: 1 a 2 mg/kg IV (a lo largo de 5 min). Choque vasopléjico: 2 mg/kg en bolo, seguido o no de infusión (0,25 - 2 mg/kg/h).'
+        },
+        pediatric: {
+          pt: '1 a 2 mg/kg IV lentamente.',
+          es: '1 a 2 mg/kg IV lentamente.'
+        }
+      },
+      administration: { pt: ['Administrar IV lento (3 a 5 minutos).', 'Lavar o acesso com SF 0,9% abundantemente (é altamente irritante). O paciente e a urina ficarão azul-esverdeados.'], es: ['Administrar IV lento (3 a 5 minutos).', 'Lavar el acceso con SF 0,9% abundantemente (es altamente irritante). El paciente y la orina quedarán azul-verdosos.'] },
+      renalAdjustment: { required: true, message: { pt: 'Depurado pelos rins. Usar com muita cautela na insuficiência renal grave.', es: 'Depurado por los riñones. Usar con mucha precaución en la insuficiencia renal grave.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      commonAdverseEffects: { pt: ['Coloração azulada da pele, urina, fezes e mucosas', 'Falsa queda na oximetria de pulso (o corante cega o leitor do aparelho do dedo)', 'Náuseas'], es: ['Coloración azulada de la piel, orina, heces y mucosas', 'Falsa caída en la oximetría de pulso (el colorante ciega el lector del aparato del dedo)', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Anemia hemolítica letal se dado em pacientes com deficiência da enzima G6PD', 'Síndrome Serotoninérgica (ele atua como um potente IMAO)'], es: ['Anemia hemolítica letal si se da en pacientes con deficiencia de la enzima G6PD', 'Síndrome Serotoninérgico (actúa como un potente IMAO)'] },
+      contraindications: {
+        absolute: { pt: ['Deficiência de Glicose-6-Fosfato Desidrogenase (G6PD) - CAUSA HEMÓLISE MACIÇA'], es: ['Deficiencia de Glucosa-6-Fosfato Deshidrogenasa (G6PD) - CAUSA HEMÓLISIS MASIVA'] },
+        relative: { pt: ['Uso concomitante com inibidores de recaptação de serotonina (ISRS)'], es: ['Uso concomitante con inhibidores de recaptación de serotonina (ISRS)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Se a oximetria do paciente cair abruptamente para 65% logo após a injeção do Azul de Metileno, NÃO se desespere. O corante azul absorve a mesma luz que o oxímetro usa para ler a hemoglobina. Fiar-se exclusivamente pela gasometria arterial.', es: 'Si la oximetría del paciente cae abruptamente al 65% justo después de la inyección del Azul de Metileno, NO se desespere. El colorante azul absorbe la misma luz que el oxímetro usa para leer la hemoglobina. Fiarse exclusivamente por la gasometría arterial.' }
+      }
+    },
+
+/* ── CARVÃO ATIVADO ─────────────────────────────────────────────────── */
+    "carvao_ativado": {
+      name: { pt: 'Carvão Ativado', es: 'Carbón Activado' },
+      category: 'emergencia',
+      class: { pt: 'Antídoto Gastrointestinal / Adsorvente Universal', es: 'Antídoto Gastrointestinal / Adsorbente Universal' },
+      indications: {
+        pt: ['Descontaminação gastrointestinal em intoxicações orais agudas (< 1 a 2 horas da ingestão)'],
+        es: ['Descontaminación gastrointestinal en intoxicaciones orales agudas (< 1 a 2 horas de la ingesta)']
+      },
+      commercialNames: { br: ['Carvão Ativado Pó', 'Carbomax'], ar: ['Carbón Activado'] },
+      presentation: { pt: ['Pó liofilizado em frascos para suspensão (geralmente 50g)'], es: ['Polvo liofilizado en viales para suspensión (generalmente 50g)'] },
+      mechanism: {
+        pt: 'Pó fino superaquecido e tratado para possuir uma área de superfície de absorção monstruosa (1 grama de carvão tem a superfície de uma quadra de tênis). Ele percorre o trato gastrointestinal e liga-se quimicamente (adsorve) à esmagadora maioria dos medicamentos e toxinas orais, impedindo que passem para o sangue, sendo eliminados nas fezes.',
+        es: 'Polvo fino sobrecalentado y tratado para poseer un área de superficie de absorción monstruosa (1 gramo de carbón tiene la superficie de una cancha de tenis). Recorre el tracto gastrointestinal y se une químicamente (adsorbe) a la inmensa mayoría de los medicamentos y toxinas orales, impidiendo que pasen a la sangre, siendo eliminados en las heces.'
+      },
+      dose: {
+        adult: {
+          pt: '50 a 100 gramas em dose única VO ou por Sonda Nasogástrica. Misturar com 250 a 500 mL de água pura.',
+          es: '50 a 100 gramos en dosis única VO o por Sonda Nasogástrica. Mezclar con 250 a 500 mL de agua pura.'
+        },
+        pediatric: {
+          pt: '1 a 2 g/kg (máx 50g) misturado em água.',
+          es: '1 a 2 g/kg (máx 50g) mezclado en agua.'
+        }
+      },
+      administration: { pt: ['Administrar por via oral (se paciente desperto e colaborativo) ou via Sonda Nasogástrica (SNG).', 'CUIDADO EXTREMO para garantir que a SNG está no estômago e não no pulmão antes de injetar.'], es: ['Administrar por vía oral (si paciente despierto y colaborativo) o vía Sonda Nasogástrica (SNG).', 'CUIDADO EXTREMO para asegurar que la SNG está en el estómago y no en el pulmón antes de inyectar.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não é absorvido sistemicamente. Ação puramente local no TGI.', es: 'No es absorbido sistémicamente. Acción puramente local en TGI.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não é absorvido sistemicamente.', es: 'No es absorbido sistémicamente.' } },
+      commonAdverseEffects: { pt: ['Vômitos intensos (devido ao aspecto de lama e volume de líquido ingerido)', 'Fezes negras por dias', 'Constipação transitória'], es: ['Vómitos intensos (debido al aspecto de barro y volumen de líquido ingerido)', 'Heces negras por días', 'Constipación transitoria'] },
+      dangerousAdverseEffects: { pt: ['BRONCOASPIRAÇÃO FATAL (se o paciente vomitar e o carvão for para o pulmão, causa pneumonite química obstrutiva letal)', 'Obstrução intestinal'], es: ['BRONCOASPIRACIÓN FATAL (si el paciente vomita y el carbón va al pulmón, causa neumonitis química obstructiva letal)', 'Obstrucción intestinal'] },
+      contraindications: {
+        absolute: { pt: ['Vias aéreas desprotegidas (Paciente com RNC / Glasgow < 8 sem estar intubado)', 'Ingestão de cáusticos (ácidos/bases) ou Hidrocarbonetos (gasolina/querosene) - Risco alto de perfuração ou asfixia.', 'Íleo paralítico'], es: ['Vías respiratorias desprotegidas (Paciente con alteración del nivel de consciencia / Glasgow < 8 sin estar intubado)', 'Ingesta de cáusticos (ácidos/bases) o Hidrocarburos (gasolina/queroseno) - Riesgo alto de perforación o asfixia.', 'Íleo paralítico'] },
+        relative: { pt: ['Ingestão após 2 horas (eficácia nula, exceto para drogas de liberação prolongada)'], es: ['Ingesta después de 2 horas (eficacia nula, excepto para drogas de liberación prolongada)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'MEMORIZE OS METAIS: O Carvão Ativado NÃO FUNCIONA (não gruda) em Lítio, Ferro, Chumbo e Álcool. Administrar carvão para essas intoxicações fará o paciente vomitar sem nenhum benefício desintoxicante.', es: 'MEMORICE LOS METALES: El Carbón Activado NO FUNCIONA (no se pega) en Litio, Hierro, Plomo y Alcohol. Administrar carbón para estas intoxicaciones hará al paciente vomitar sin ningún beneficio desintoxicante.' }
+      }
     }
 
-  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 334 Lote 1+2+3+4+5+6 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides + Toxicologia/Antídotos) */
+  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 336 Lote 1+2+3+4+5+6+7 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides + Toxicologia/Antídotos + Azul_Metileno/Carvão) */
 
 })();

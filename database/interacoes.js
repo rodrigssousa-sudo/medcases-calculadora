@@ -19619,6 +19619,100 @@ const INTERACOES_DB = {
         es: "Si se va a usar Vitamina C (para mejorar el rendimiento de la diálisis de hierro en casos crónicos), SOLO PUEDE INICIARSE 1 a 2 semanas DESPUÉS del inicio de la bomba de deferoxamina."
       }
     }
+  }, // comma added; BUILD 336 Lote 1 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Antídotos Finais e Antifúngicos Poliênicos
+   Azul de Metileno, Carvão Ativado, Anfotericina (L e D), Anidulafungina
+   BUILD 336 Lote 1
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── AZUL DE METILENO ── */
+  "azul_metileno": {
+    "$classe_isrs": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "RISCO DE MORTE. O Azul de Metileno é, por natureza molecular, um Inibidor da Monoamina Oxidase (IMAO) extremamente potente. Se injetado em um paciente que usa inibidores de recaptação de serotonina (Fluoxetina, Sertralina), a serotonina cerebral subirá a níveis absurdos, causando SÍNDROME SEROTONINÉRGICA fulminante (hipertermia, rigidez muscular, coma e morte).",
+        es: "RIESGO DE MUERTE. El Azul de Metileno es, por naturaleza molecular, un Inhibidor de la Monoamino Oxidasa (IMAO) extremadamente potente. Si se inyecta en un paciente que usa inhibidores de recaptación de serotonina (Fluoxetina, Sertralina), la serotonina cerebral subirá a niveles absurdos, causando SÍNDROME SEROTONINÉRGICO fulminante (hipertermia, rigidez muscular, coma y muerte)."
+      },
+      conduta: {
+        pt: "No tratamento da meta-hemoglobinemia, se o paciente for usuário de ISRS, monitorar agressivamente ou considerar alternativas (Ácido Ascórbico/Vitamina C em altas doses - embora mais lento), a depender do risco de vida.",
+        es: "En el tratamiento de la metahemoglobinemia, si el paciente es usuario de ISRS, monitorizar agresivamente o considerar alternativas (Ácido Ascórbico/Vitamina C en altas dosis - aunque más lento), dependiendo del riesgo de vida."
+      }
+    }
+  },
+
+  /* ── CARVÃO ATIVADO ── */
+  "carvao_ativado": {
+    "$qualquer_medicamento_oral": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ADSORÇÃO UNIVERSAL. O Carvão Ativado não é seletivo; ele adsorve fisicamente (gruda na sua superfície por forças de Van der Waals) quase qualquer medicamento ingerido, impedindo totalmente a sua absorção gástrica.",
+        es: "ADSORCIÓN UNIVERSAL. El Carbón Activado no es selectivo; adsorbe físicamente (se pega a su superficie por fuerzas de Van der Waals) casi cualquier medicamento ingerido, impidiendo totalmente su absorción gástrica."
+      },
+      conduta: {
+        pt: "Se o paciente precisou tomar o carvão como antídoto, ele não pode tomar NENHUM outro medicamento oral (ex: analgésicos, anti-hipertensivos) por pelo menos 2 a 4 HORAS APÓS a administração do carvão. Se precisar de medicação urgente, usar via Endovenosa.",
+        es: "Si el paciente necesitó tomar el carbón como antídoto, no puede tomar NINGÚN otro medicamento oral (ej: analgésicos, antihipertensivos) por al menos 2 a 4 HORAS TRAS la administración del carbón. Si necesita medicación urgente, usar vía Endovenosa."
+      }
+    }
+  },
+
+  /* ── ANFOTERICINA B (LIPOSSOMAL E DESOXICOLATO) ── */
+  "$classe_anfotericina_b": {
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo de Nefrotoxicidade Direta. A Anfotericina ataca o túbulo contorcido proximal (buracos de colesterol), enquanto os Aminoglicosídeos (Amicacina/Gentamicina) induzem apoptose celular nas mesmas células tubulares. Usá-los juntos na UTI garante quase 100% de chance de Lesão Renal Aguda oligoanúrica severa.",
+        es: "Sinergismo de Nefrotoxicidad Directa. La Anfotericina ataca el túbulo contorneado proximal (agujeros de colesterol), mientras los Aminoglucósidos (Amikacina/Gentamicina) inducen apoptosis celular en las mismas células tubulares. Usarlos juntos en la UCI garantiza casi 100% de posibilidad de Lesión Renal Aguda oligoanúrica severa."
+      },
+      conduta: {
+        pt: "Evitar ao máximo. Se a associação for imperativa para salvar a vida (ex: Sepse Mista Fungo-Bactéria Resistente), a Anfotericina DEVE obrigatoriamente ser a Lipossomal, aliada a hidratação agressiva.",
+        es: "Evitar al máximo. Si la asociación es imperativa para salvar la vida (ej: Sepsis Mixta Hongo-Bacteria Resistente), la Anfotericina DEBE obligatoriamente ser la Liposomal, unida a hidratación agresiva."
+      }
+    },
+    "digoxina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A Anfotericina B destrói os poros dos túbulos, causando um vazamento massivo de Potássio na urina. A hipocalemia profunda resultante aumenta dramaticamente a afinidade da Digoxina pelo coração, deflagrando arritmias tóxicas digitálicas.",
+        es: "La Anfotericina B destruye los poros de los túbulos, causando una fuga masiva de Potasio en la orina. La hipopotasemia profunda resultante aumenta dramáticamente la afinidad de la Digoxina por el corazón, desencadenando arritmias tóxicas digitálicas."
+      },
+      conduta: {
+        pt: "Se o paciente usa Digoxina e iniciar Anfotericina, ele precisará de dosagens de Potássio a cada 12 horas e forte reposição de KCl endovenosa contínua.",
+        es: "Si el paciente usa Digoxina e inicia Anfotericina, necesitará dosificaciones de Potasio cada 12 horas y fuerte reposición de KCl endovenosa continua."
+      }
+    },
+    "$classe_corticosteroides": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Corticoides sistêmicos agravam as perdas de potássio na urina (efeito mineralocorticoide periférico) e podem piorar a imunossupressão, exacerbando a infecção fúngica basal.",
+        es: "Corticoides sistémicos agravan las pérdidas de potasio en la orina (efecto mineralocorticoide periférico) y pueden empeorar la inmunosupresión, exacerbando la infección fúngica basal."
+      },
+      conduta: {
+        pt: "Monitorar eletrólitos de perto. Baixas doses de Hidrocortisona são prescrição obrigatória antes de infundir Anfotericina Desoxicolato para impedir calafrios severos. Essa microdose prévia é permitida.",
+        es: "Monitorizar electrolitos de cerca. Bajas dosis de Hidrocortisona son prescripción obligatoria antes de infundir Anfotericina Desoxicolato para impedir escalofríos severos. Esta microdosis previa está permitida."
+      }
+    }
+  },
+
+  /* ── ANIDULAFUNGINA ── */
+  "anidulafungina": {
+    "interacoes_vazias_marcador": {
+      gravidade: "leve",
+      scoreClinico: 0,
+      descricao: {
+        pt: "Perfil Farmacocinético Exemplar. Como a anidulafungina sofre degradação química espontânea em pH neutro no sangue (não usa o fígado CYP450 nem os rins), ela não possui interações medicamentosas clinicamente significativas de bloqueio ou indução com nenhum outro fármaco de UTI. É uma das drogas mais seguras para pacientes politratados.",
+        es: "Perfil Farmacocinético Ejemplar. Como la anidulafungina sufre degradación química espontánea a pH neutro en la sangre (no usa el hígado CYP450 ni los riñones), no posee interacciones medicamentosas clínicamente significativas de bloqueo o inducción con ningún otro fármaco de UCI. Es una de las drogas más seguras para pacientes politratados."
+      },
+      conduta: {
+        pt: "Uso liberado sem ajustes necessários, inclusive com imunossupressores (Tacrolimus/Ciclosporina), com os quais os outros antifúngicos (Azólicos) têm interações mortais.",
+        es: "Uso liberado sin ajustes necesarios, incluso con inmunosupresores (Tacrolimus/Ciclosporina), con los cuales los otros antifúngicos (Azólicos) tienen interacciones mortales."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
