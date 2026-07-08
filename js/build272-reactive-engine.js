@@ -172,7 +172,10 @@
      para proteger a UI thread de cálculos síncronos por keystroke.
      Listener de 'change' permanece direto (evento único, sem burst).
   ============================================================ */
-  var PATIENT_FIELDS = ['hm-weight', 'hm-age', 'hm-height', 'hm-creatinina'];
+  /* BUILD 304: hm-clcr adicionado — garante que o hidden input do CG
+     (preenchido por hmCalcCockcroft via dispatchEvent) aciona o sync
+     do Live Dashboard imediatamente após cada cálculo.               */
+  var PATIENT_FIELDS = ['hm-weight', 'hm-age', 'hm-height', 'hm-creatinina', 'hm-clcr'];
 
   function _liveVal(id) {
     var el = $(id);
