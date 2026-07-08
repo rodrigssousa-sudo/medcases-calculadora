@@ -20287,6 +20287,99 @@ const INTERACOES_DB = {
         es: "Haloperidol está CONTRAINDICADO en pacientes con Enfermedad de Parkinson y Enfermedad de Cuerpos de Lewy. Solo el antipsicótico atípico Quetiapina debe ser usado si estrictamente necesario para controlar psicosis en estos pacientes."
       }
     }
+  }, // vírgula adicionada; BUILD 350 blocos seguem
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Hematologia, Anticoagulantes e Hemostáticos
+   Heparina (HNF/HBPM), Varfarina, Rivaroxabana, Ácido Tranexâmico
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── HEPARINA NÃO FRACIONADA & ENOXAPARINA (HBPM) ── */
+  "$classe_heparinas": {
+    "$classe_aines": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "AINEs (Cetoprofeno, Ibuprofeno, Diclofenaco) bloqueiam as plaquetas (antiagregação irreversível ou reversível) e inflamam a mucosa gástrica. Associar AINEs com Heparina em doses de tratamento aumenta exponencialmente a chance de Hemorragia Digestiva Alta (HDA) maciça e sangramentos sistêmicos intratáveis.",
+        es: "AINEs (Ketoprofeno, Ibuprofeno, Diclofenaco) bloquean las plaquetas y inflaman la mucosa gástrica. Asociar AINEs con Heparina en dosis de tratamiento aumenta exponencialmente la chance de Hemorragia Digestiva Alta (HDA) masiva y sangrados sistémicos intratables."
+      },
+      conduta: {
+        pt: "AINEs são estritamente CONTRAINDICADOS em pacientes sob tratamento anticoagulante venoso ou subcutâneo terapêutico na UTI. Usar Dipirona ou Paracetamol para dor/febre.",
+        es: "AINEs están estrictamente CONTRAINDICADOS en pacientes bajo tratamiento anticoagulante venoso o subcutáneo terapéutico en UCI. Usar Dipirona o Paracetamol para dolor/fiebre."
+      }
+    }
+  },
+
+  /* ── VARFARINA ── */
+  "varfarina": {
+    "amiodarona": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A Amiodarona inibe profundamente a enzima hepática CYP2C9 e CYP3A4, bloqueando quase toda a destruição da Varfarina. Apenas alguns dias após iniciar a amiodarona, a taxa de anticoagulação (RNI) do paciente salta de 2.5 para > 10. O paciente pode morrer subitamente de hemorragia cerebral espontânea (derrame).",
+        es: "La Amiodarona inhibe profundamente la enzima hepática CYP2C9 y CYP3A4, bloqueando casi toda la destrucción de la Warfarina. Apenas unos días tras iniciar la amiodarona, la tasa de anticoagulación (RNI) del paciente salta de 2.5 a > 10. El paciente puede morir súbitamente de hemorragia cerebral espontánea."
+      },
+      conduta: {
+        pt: "REGRA DE PRESCRIÇÃO: No mesmo dia que você prescrever Amiodarona, você OBRIGATORIAMENTE DEVE REDUZIR a dose oral da Varfarina em 30% a 50%, e o paciente deve realizar um RNI de controle após 4 dias.",
+        es: "REGLA DE PRESCRIPCIÓN: El mismo día que prescribas Amiodarona, OBLIGATORIAMENTE DEBES REDUCIR la dosis oral de la Warfarina en 30% a 50%, y el paciente debe realizar un RNI de control tras 4 días."
+      }
+    },
+    "$classe_macrolideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Antimicrobianos como Azitromicina, Claritromicina, Eritromicina e o Fluconazol inibem a via metabólica do fígado e erradicam as bactérias da flora intestinal (que produzem Vitamina K de forma endógena natural). Essa dupla ação anula a vitamina K do paciente, elevando violentamente o RNI.",
+        es: "Antimicrobianos como Azitromicina, Claritromicina, Eritromicina y el Fluconazol inhiben la vía metabólica del hígado y erradican las bacterias de la flora intestinal (que producen Vit. K de forma endógena). Esta doble acción anula la vitamina K del paciente, elevando violentamente el RNI."
+      },
+      conduta: {
+        pt: "Paciente usuário crônico de Varfarina que tratar uma pneumonia ou fungo DEVE colher o RNI em 3 dias e reduzir a dose de Marevan preventivamente.",
+        es: "Paciente usuario crónico de Warfarina que trate una neumonía u hongo DEBE extraer el RNI en 3 días y reducir la dosis preventiva."
+      }
+    }
+  },
+
+  /* ── RIVAROXABANA (DOACs) ── */
+  "rivaroxabana": {
+    "paxlovid": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "COLAPSO DO CLEARANCE. O Ritonavir (contido no Paxlovid) bloqueia totalmente as enzimas CYP3A4 e o transportador intestinal P-glicoproteína (P-gp). Como o Xarelto/Rivaroxabana depende 100% dessa via dupla para sair do corpo, ele não sai mais. A concentração do anticoagulante alcança níveis letais fulminantes.",
+        es: "COLAPSO DEL CLEARANCE. El Ritonavir (contenido en el Paxlovid) bloquea totalmente las enzimas CYP3A4 y el transportador intestinal P-glicoproteína (P-gp). Como el Rivaroxabán depende 100% de esta vía doble para salir del cuerpo, ya no sale. La concentración del anticoagulante alcanza niveles letales fulminantes."
+      },
+      conduta: {
+        pt: "A ASSOCIAÇÃO É ABSOLUTAMENTE CONTRAINDICADA. Não há como ajustar a dose da Rivaroxabana com segurança. Suspender o DOAC ou não usar o Paxlovid para COVID-19.",
+        es: "LA ASOCIACIÓN ES ABSOLUTAMENTE CONTRAINDICADA. No hay forma de ajustar la dosis de Rivaroxabán con seguridad. Suspender el DOAC o no usar el Paxlovid para COVID-19."
+      }
+    },
+    "$classe_anticonvulsivantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Indução massiva de CYP3A4 e P-gp. Fenitoína, Carbamazepina e Fenobarbital turbinam as enzimas de eliminação do fígado e intestino. O DOAC (Rivaroxabana) é triturado e jogado na urina e fezes de forma extremamente acelerada. A cobertura anticoagulante DESAPARECE e o paciente infarta ou tem um AVC por um coágulo súbito.",
+        es: "Inducción masiva de CYP3A4 y P-gp. Fenitoína, Carbamazepina y Fenobarbital aceleran las enzimas de eliminación del hígado e intestino. El DOAC es triturado y arrojado en la orina y heces de forma extremadamente acelerada. La cobertura anticoagulante DESAPARECE y el paciente infarta o tiene un ACV por un coágulo."
+      },
+      conduta: {
+        pt: "Contraindicado o uso de Rivaroxabana/Apixabana em epiléticos que usam Fenitoína ou Carbamazepina. O tratamento DEVE ser convertido para Varfarina, onde a dosagem do RNI permite ajustar o sangue corretamente.",
+        es: "Contraindicado el uso de Rivaroxabán/Apixabán en epilépticos que usan Fenitoína o Carbamazepina. El tratamiento DEBE ser convertido a Warfarina, donde la dosificación del RNI permite ajustar la sangre correctamente."
+      }
+    }
+  },
+
+  /* ── ÁCIDO TRANEXÂMICO ── */
+  "acido_tranexamico": {
+    "complexo_protrombinico": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "Sinergismo Trombótico Extremo (Tornado Hemostático). O Complexo Protrombínico injeta Fatores de Coagulação puros na veia para criar dezenas de coágulos rapidamente. O Ácido Tranexâmico 'plastifica' e proíbe a dissolução de todos os coágulos formados. Juntos em ambiente de emergência incontrolada, eles causam Coagulação Intravascular Disseminada (CIVD) ou Embolia Pulmonar Maciça.",
+        es: "Sinergismo Trombótico Extremo (Tornado Hemostático). El Complejo Protrombínico inyecta Factores de Coagulación puros en la vena para crear decenas de coágulos rápidamente. El Ácido Tranexámico 'plastifica' y prohíbe la disolución de todos los coágulos formados. Juntos en ambiente de emergencia incontrolada, causan Coagulación Intravascular Diseminada o Embolia Pulmonar Masiva."
+      },
+      conduta: {
+        pt: "A associação requer coordenação de equipe de Trauma e Hematologia em choque hemorrágico gravíssimo maciço (Protocolo de Transfusão Maciça). O uso simultâneo é de alto risco letal. Evitar em pacientes que não estão ativamente perdendo o sangue inteiro.",
+        es: "La asociación requiere coordinación de equipo de Trauma y Hematología en choque hemorrágico gravísimo masivo (Protocolo de Transfusión Masiva). El uso simultáneo es de alto riesgo letal. Evitar en pacientes que no están activamente perdiendo toda la sangre."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */
