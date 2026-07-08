@@ -98,7 +98,7 @@ const DRUG_ALIASES = {
   "minociclina":                        "tetraciclina",
   "omadaciclina":                       "tetraciclina",
   "eravaciclina":                       "tetraciclina",
-  "tigeciclina":                        "tetraciclina",
+  /* tigeciclina: alias removido em BUILD 360 — bloco próprio em INTERACOES_DB (glicilciclina com farmacocinética distinta) */
 
   /* IECA — agrupados sob captopril */
   "enalapril":                          "captopril",
@@ -2069,6 +2069,18 @@ const INTERACOES_DB = {
         pt: "Monitorar hemograma completo, sinais de hemólise (icterícia, palidez) e cianose (meta-hemoglobinemia). Evitar associação em pacientes com G6PD deficiente.",
         es: "Monitorear hemograma completo, signos de hemólisis (ictericia, palidez) y cianosis (metahemoglobinemia). Evitar asociación en pacientes con G6PD deficiente."
       }
+    },
+    "$classe_diureticos_poupadores_potassio": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "PARADA CARDÍACA POR HIPERCALEMIA. A Trimetoprima fecha os canais de sódio (ENaC) no rim da exata mesma maneira que o diurético Amilorida/Espironolactona. Se o paciente (especialmente idoso) tomar os dois juntos ou usar um IECA (Enalapril), o potássio do sangue ficará totalmente preso no corpo. Níveis de Potássio > 7.0 ocorrem frequentemente, gerando Bloqueio AV total e Morte Súbita.",
+        es: "PARO CARDÍACO POR HIPERPOTASEMIA. La Trimetoprima cierra los canales de sodio en el riñón de la misma manera que el diurético Amilorida/Espironolactona. Si el paciente toma los dos juntos o usa un IECA, el potasio de la sangre quedará totalmente preso. Niveles de Potasio > 7.0 ocurren frecuentemente, generando Muerte Súbita."
+      },
+      conduta: {
+        pt: "Evitar Bactrim em idosos usuários de Espironolactona, IECA ou BRA (Losartana). Alternativamente, realizar Eletrocardiograma e dosar Potássio sanguíneo no Dia 3 do tratamento.",
+        es: "Evitar Bactrim en ancianos usuarios de Espironolactona, IECA o ARAII (Losartán). Alternativamente, realizar Electrocardiograma y dosificar Potasio sanguíneo en el Día 3 de tratamiento."
+      }
     }
   },
 
@@ -2332,6 +2344,18 @@ const INTERACOES_DB = {
       conduta: {
         pt: "ABSOLUTAMENTE CONTRAINDICADO. Intervalo mínimo de 14 dias entre qualquer IMAO e linezolida (em qualquer sentido). Monitorar em UTI se exposição inadvertida; suporte hemodinâmico e uso de ciproeptadina.",
         es: "ABSOLUTAMENTE CONTRAINDICADO. Intervalo mínimo de 14 días entre cualquier IMAO y linezolida (en cualquier sentido). Monitorear en UCI si exposición inadvertida; soporte hemodinámico y uso de ciproheptadina."
+      }
+    },
+    "rifampicina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A Rifampicina induz agressivamente enzimas que clareiam a Linezolida do sangue. A Área Sob a Curva (AUC) da Linezolida despenca em até 40%, reduzindo seus níveis sanguíneos abaixo da Concentração Inibitória Mínima (CIM), resultando em falha catastrófica contra o MRSA.",
+        es: "La Rifampicina induce agresivamente enzimas que limpian el Linezolid de la sangre. El Área Bajo la Curva (AUC) del Linezolid se desploma hasta en un 40%, reduciendo sus niveles sanguíneos por debajo de la Concentración Inhibitoria Mínima (CIM)."
+      },
+      conduta: {
+        pt: "Não associar. Caso o paciente necessite de cobertura MRSA e use Rifampicina (ex: tratamento de Tuberculose ou infecção de prótese óssea), substituir a Linezolida por Vancomicina ou Teicoplanina.",
+        es: "No asociar. Si el paciente necesita cobertura MRSA y usa Rifampicina, sustituir el Linezolid por Vancomicina o Teicoplanina."
       }
     }
   },
@@ -2983,6 +3007,18 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Evitar uso concomitante. Usar anfotericina lipossomal como alternativa de menor toxicidade renal.",
         es: "Evitar uso concomitante. Usar anfotericina liposomal como alternativa de menor toxicidad renal."
+      }
+    },
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "FALÊNCIA RENAL AGUDA TUBULOTÓXICA (Duplo Ataque de Membrana). Ambas as drogas atacam diretamente as células do túbulo contorcido proximal. A Polimixina dissolve as membranas celulares por efeito detergente e o Aminoglicosídeo (Amicacina/Gentamicina) induz apoptose mitocondrial. A associação na UTI destrói a função renal do paciente em menos de 72 horas.",
+        es: "FALLO RENAL AGUDO TUBULOTÓXICO (Doble Ataque de Membrana). Ambas drogas atacan directamente las células del túbulo contorneado proximal. La Polimixina disuelve las membranas celulares por efecto detergente y el Aminoglucósido induce apoptosis mitocondrial. La asociación destruye la función renal en menos de 72 horas."
+      },
+      conduta: {
+        pt: "Evitar completamente a associação, a menos que seja o último recurso guiado por antibiograma em infecções por super-bactérias Pan-Resistentes. Se inevitável, o paciente deve entrar em protocolo de hidratação e monitoramento metabólico de 12/12h.",
+        es: "Evitar completamente la asociación, a menos que sea el último recurso guiado por antibiograma en infecciones por superbacterias Pan-Resistentes."
       }
     }
   },
@@ -20817,9 +20853,47 @@ const INTERACOES_DB = {
         es: "El ajuste por el Clearance de Creatinina diario es una regla de oro inmutable. Si el paciente bajo cefepime baja la consciencia sin foco aparente o presenta temblores faciales, SUSPENDA la cefepima INMEDIATAMENTE."
       }
     }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     TIGECICLINA
+     BUILD 360 (2026-07-08): tigeciclina → varfarina
+  ───────────────────────────────────────────────────────────── */
+  "tigeciclina": {
+    "varfarina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A Tigeciclina diminui o clearance metabólico da Varfarina no fígado de forma secundária, mas o seu principal risco é induzir hipofibrinogenemia (destruição do fibrinogênio do sangue). Isso soma-se à falta de fatores de coagulação da Varfarina, gerando um prolongamento imprevisível do TAP e risco crítico de hemorragias.",
+        es: "La Tigeciclina disminuye el clearance metabólico de la Warfarina en el hígado de forma secundaria, pero su principal riesgo es inducir hipofibrinogenemia. Esto se suma a la falta de factores de coagulación de la Warfarina, generando un riesgo crítico de hemorragias."
+      },
+      conduta: {
+        pt: "Monitorar o Coagulograma (TAP/RNI e Fibrinogênio plasmático) a cada 48 horas caso as duas medicações sejam feitas juntas em pacientes graves na UTI.",
+        es: "Monitorear el Coagulograma (TAP/RNI y Fibrinógeno plasmático) cada 48 horas si las dos medicaciones se hacen juntas en pacientes graves en la UCI."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     CLINDAMICINA
+     BUILD 360 (2026-07-08): clindamicina → $classe_bnm_adespolarizantes
+  ───────────────────────────────────────────────────────────── */
+  "clindamicina": {
+    "$classe_bnm_adespolarizantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "POTENCIALIZAÇÃO DE BLOQUEIO NEUROMUSCULAR. A Clindamicina atua deprimindo diretamente as terminações nervosas pré e pós-sinápticas. Durante cirurgias (onde a droga é comum na ortopedia para cobrir MRSA do osso), ela soma-se agressivamente aos bloqueadores neuromusculares (Rocurônio, Atracúrio), prolongando a paralisia do músculo diafragma.",
+        es: "POTENCIACIÓN DE BLOQUEO NEUROMUSCULAR. La Clindamicina actúa deprimiendo directamente las terminaciones nerviosas. Durante cirugías, se suma agresivamente a los bloqueadores neuromusculares, prolongando la parálisis del músculo diafragma."
+      },
+      conduta: {
+        pt: "Monitoramento com monitor de bloqueio (TOF). O anestesiologista deve estar ciente de que o paciente pode falhar a extubação ou exigir doses extras de Sugamadex/Neostigmina para acordar a musculatura.",
+        es: "Monitorización con monitor de bloqueo (TOF). El anestesiólogo debe estar consciente de que el paciente puede fallar la extubación o exigir dosis extras de Sugammadex/Neostigmina."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 358 Lote 6 (Infectologia Avançada: Quinolonas/Cefepima/Nefrotoxicidade UTI) */
+}; /* fim INTERACOES_DB — BUILD 360 Lote 7 (Antibióticos Reserva/Direcionados: linezolida+rifampicina · polimixina_b+aminoglicosídeos · smx_tmp+hipercalemia · tigeciclina · clindamicina) */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
