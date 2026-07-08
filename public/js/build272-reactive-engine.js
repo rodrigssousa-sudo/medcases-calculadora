@@ -121,15 +121,13 @@
     };
 
     ['clcr', 'imc', 'peso', 'bsa'].forEach(function (key) {
-      var el = $('clcr-live-v-' + key);
+      var el = $('clcr-live-val-' + key);
       if (!el) return;
       var v = vals[key];
       if (v) {
-        el.textContent = v;
-        el.classList.remove('is-empty');
+        el.innerText = v;
       } else {
-        el.textContent = '---';
-        el.classList.add('is-empty');
+        el.innerText = '---';
       }
     });
   }

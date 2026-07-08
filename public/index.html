@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=290" />
-  <link rel="stylesheet" href="css/build233.css?v=290" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=290" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=290" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=290" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=290" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=290" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=300" />
+  <link rel="stylesheet" href="css/build233.css?v=300" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=300" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=300" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=300" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=300" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=300" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=290" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=300" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=290" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=300" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=290" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=300" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=290" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=300" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=290" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=300" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=290" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=300" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=290" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=300" />
 
   <style>
     /* ============================================================ RESET */
@@ -5650,6 +5650,98 @@
       display:flex; align-items:center; justify-content:center; gap:7px;
     }
 
+    /* ================================================================
+       §BUILD-300 — CARD DE ESTUDO (hm300-card)
+       Card padronizado exibido quando não há dados do paciente.
+       Hierarquia: DOSE INICIAL → DOSE MANUTENÇÃO → VIA → INDICAÇÃO
+       + botões [Copiar Rx] [Ficha Completa]
+    ================================================================ */
+    .hm300-card { }
+    .hm300-body {
+      padding: 10px 14px 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .hm300-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hm300-row--hero {
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      margin-bottom: 2px;
+    }
+    .hm300-row--indic { margin-top: 2px; }
+    .hm300-lbl {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      color: rgba(148,163,184,0.7);
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .hm300-val {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+    .hm300-val--big {
+      font-size: 15px;
+      font-weight: 800;
+      color: #38BDF8;
+      line-height: 1.3;
+    }
+    .hm300-val--sub {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    .hm300-indic-list {
+      margin: 2px 0 0 14px;
+      padding: 0;
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .hm300-indic-list li { margin-bottom: 1px; }
+    .hm300-actions {
+      display: flex;
+      gap: 8px;
+      padding: 8px 14px 12px;
+    }
+    .hm300-btn {
+      flex: 1;
+      padding: 9px 8px;
+      border-radius: 10px;
+      border: none;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .hm300-btn--copy {
+      background: rgba(37,211,102,0.15);
+      color: #25D366;
+      border: 1px solid rgba(37,211,102,0.3);
+    }
+    .hm300-btn--detail {
+      background: linear-gradient(135deg,#0B83B5,#38BDF8);
+      color: #0B0F19;
+    }
+    body.light-mode .hm300-lbl { color: rgba(71,85,105,0.75); }
+    body.light-mode .hm300-val { color: var(--text-primary); }
+    body.light-mode .hm300-val--big { color: #0284C7; }
+    body.light-mode .hm300-val--sub { color: #475569; }
+    body.light-mode .hm300-indic-list { color: #475569; }
+    body.light-mode .hm300-row--hero { border-bottom-color: rgba(0,0,0,0.08); }
+
     /* ── Tab colors fd-modal (Diretriz 5) ── */
     .fd-renal-block        { border-left:3px solid #38BDF8; }
     .fd-section[data-tab="adverse"] { border-left:3px solid #F87171; }
@@ -7460,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=290" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=300" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -7557,24 +7649,24 @@
                     <input class="hm-input" id="hm-weight" type="text" inputmode="decimal" pattern="[0-9.,]*"
                       autocomplete="off" autocorrect="off" spellcheck="false"
                       step="any"
-                      enterkeyhint="next"
-                      placeholder="70" oninput="hmUpdatePatientCardColor()" />
+                      enterkeyhint="done"
+                      placeholder="70" oninput="this.value=this.value.replace(/,/g,'.');hmUpdatePatientCardColor()" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label">Idade <span class="hm-label-unit">anos</span></label>
                     <input class="hm-input" id="hm-age" type="text" inputmode="decimal" pattern="[0-9.,]*"
                       autocomplete="off" autocorrect="off" spellcheck="false"
                       step="any"
-                      enterkeyhint="next"
-                      placeholder="45" oninput="hmUpdatePatientCardColor()" />
+                      enterkeyhint="done"
+                      placeholder="45" oninput="this.value=this.value.replace(/,/g,'.');hmUpdatePatientCardColor()" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label">Altura <span class="hm-label-unit">cm</span></label>
                     <input class="hm-input" id="hm-height" type="text" inputmode="decimal" pattern="[0-9.,]*"
                       autocomplete="off" autocorrect="off" spellcheck="false"
                       step="any"
-                      enterkeyhint="next"
-                      placeholder="170" />
+                      enterkeyhint="done"
+                      placeholder="170" oninput="this.value=this.value.replace(/,/g,'.')" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label" for="hm-creatinina">Creatinina <span class="hm-label-unit">mg/dL</span></label>
@@ -7582,7 +7674,7 @@
                       autocomplete="off" autocorrect="off" spellcheck="false"
                       step="any"
                       enterkeyhint="done"
-                      placeholder="Ex: 1.0" />
+                      placeholder="Ex: 1.0" oninput="this.value=this.value.replace(/,/g,'.')" />
                     <input type="hidden" id="hm-clcr" value="" />
                   </div>
                   <!-- Seletor de Sexo M/F -->
@@ -7737,26 +7829,11 @@
                  Grid 2x2 simétrico: ClCr · IMC · Peso Ideal · BSA.
                  Atualizado em tempo real via _clcrLiveDashboardSync() (Reactive Engine).
                  Exibe "---" enquanto Dados do Paciente não forem preenchidos. -->
-            <div class="clcr-live-dashboard clcr-live-dashboard--standalone" id="clcr-live-dashboard">
-              <div class="clcr-live-quad" id="clcr-live-q-clcr">
-                <div class="clcr-live-quad-val is-empty" id="clcr-live-v-clcr">---</div>
-                <div class="clcr-live-quad-lbl">ClCr mL/min</div>
-              </div>
-              <div class="clcr-live-quad" id="clcr-live-q-imc">
-                <div class="clcr-live-quad-val is-empty" id="clcr-live-v-imc">---</div>
-                <div class="clcr-live-quad-lbl">IMC kg/m²</div>
-              </div>
-              <div class="clcr-live-quad" id="clcr-live-q-peso">
-                <div class="clcr-live-quad-val is-empty" id="clcr-live-v-peso">---</div>
-                <div class="clcr-live-quad-lbl">
-                  <span class="lang-hub-pt">Peso Ideal kg</span>
-                  <span class="lang-hub-es">Peso Ideal kg</span>
-                </div>
-              </div>
-              <div class="clcr-live-quad" id="clcr-live-q-bsa">
-                <div class="clcr-live-quad-val is-empty" id="clcr-live-v-bsa">---</div>
-                <div class="clcr-live-quad-lbl">BSA m²</div>
-              </div>
+            <div class="clcr-live-dashboard" style="display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; padding: 12px !important;">
+                <div class="grid-card-clcr"><span class="grid-card-title">CLCR ML/MIN</span><span id="clcr-live-val-clcr" class="grid-card-value">---</span></div>
+                <div class="grid-card-clcr"><span class="grid-card-title">IMC KG/M²</span><span id="clcr-live-val-imc" class="grid-card-value">---</span></div>
+                <div class="grid-card-clcr"><span class="grid-card-title">PESO IDEAL KG</span><span id="clcr-live-val-peso" class="grid-card-value">---</span></div>
+                <div class="grid-card-clcr"><span class="grid-card-title">BSA M²</span><span id="clcr-live-val-bsa" class="grid-card-value">---</span></div>
             </div>
 
           </article>
@@ -17044,24 +17121,60 @@ function calcShowInlineResult(drugId) {
     ? (drug.name[lang] || drug.name.pt || drugId)
     : (drug.name || drugId);
 
-  const drugClass    = drug.class   || '';
+  const drugClass    = _fdResolveClass(drug);
   const drugIcon     = drug.icon    || '💊';
   const drugColor    = drug.color   || 'rgba(56,189,248,0.15)';
   const drugColorTxt = drug.colorTxt || '#38BDF8';
 
-  /* ── Sem paciente — mostra dose padrão adulto neutro ── */
+  /* ── Sem paciente — card de estudo com dose padrão adulto (BUILD 300) ── */
   const hasPatient = pd && (pd.weight != null || pd.age != null || pd.clcr != null);
   if (!hasPatient) {
-    let doseTxt = '—', freqTxt = '';
+    let doseInicial = '—', doseMantencao = '', viaAdm = '', indicList = [];
     try {
-      const neutral = { weight:70, age:40, sex:'M', height:170, creatinine:1.0,
-        clcr:90, imc:24, pesoIdeal:70, pregnant:false,
-        peso:70, idade:40, sexo:'M', gestante:false, lactante:false, hepatopatia:false };
-      const r = (typeof drug.dose === 'function') ? drug.dose(neutral, lang) : null;
-      if (r) { doseTxt = r.dose || '—'; freqTxt = r.freq || ''; }
-    } catch(e) {}
+      if (typeof drug.dose === 'function') {
+        const neutral = { weight:70, age:40, sex:'M', height:170, creatinine:1.0,
+          clcr:90, imc:24, pesoIdeal:70, pregnant:false,
+          peso:70, idade:40, sexo:'M', gestante:false, lactante:false, hepatopatia:false };
+        const r = drug.dose(neutral, lang);
+        if (r) { doseInicial = r.dose || '—'; doseMantencao = r.freq || ''; viaAdm = r.via || ''; }
+      } else if (drug.dose && drug.dose.adult) {
+        const adultDose = typeof drug.dose.adult === 'object'
+          ? (drug.dose.adult[lang] || drug.dose.adult.pt || '')
+          : String(drug.dose.adult || '');
+        const parts = adultDose.split(/;|seguido de|,\s*seguido/i);
+        doseInicial   = (parts[0] || '').trim() || '—';
+        doseMantencao = parts.length > 1 ? parts.slice(1).join('; ').trim() : '';
+      }
+      if (drug.administration) {
+        const admArr = Array.isArray(drug.administration)
+          ? drug.administration
+          : (drug.administration[lang] || drug.administration.pt || []);
+        viaAdm = Array.isArray(admArr) ? (admArr[0] || '') : String(admArr || '');
+      }
+      if (!viaAdm) {
+        const viaMatch = (doseInicial + ' ' + doseMantencao).match(/\b(IV|EV|VO|IM|SC|SL|oral)\b/i);
+        if (viaMatch) viaAdm = viaMatch[0].toUpperCase();
+      }
+      if (drug.indications) {
+        const ind = Array.isArray(drug.indications)
+          ? drug.indications
+          : (drug.indications[lang] || drug.indications.pt || []);
+        indicList = Array.isArray(ind) ? ind.slice(0, 3) : [];
+      }
+    } catch(e) { console.warn('[calcShowInlineResult] parse error:', drugId, e); }
+
+    const indicHtml = indicList.length
+      ? indicList.map(i => `<li>${i}</li>`).join('')
+      : `<li>${isES ? 'Ver ficha completa' : 'Ver bula completa'}</li>`;
+    const viaDisplay = viaAdm
+      ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'VIA DE ADM:' : 'VIA DE ADM:'}</span><span class="hm300-val">${viaAdm}</span></div>`
+      : '';
+    const mantDisplay = doseMantencao
+      ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'DOSE MANUTENÇÃO:' : 'DOSE MANUTENÇÃO:'}</span><span class="hm300-val hm300-val--sub">${doseMantencao}</span></div>`
+      : '';
+
     resultEl.innerHTML = `
-      <div class="hm-inline-result hm-inline-bula">
+      <div class="hm-inline-result hm-inline-bula hm300-card">
         <div class="hm-inline-result-header">
           <span class="hm-inline-drug-icon" style="background:${drugColor};color:${drugColorTxt}">${drugIcon}</span>
           <div class="hm-inline-drug-info">
@@ -17070,17 +17183,29 @@ function calcShowInlineResult(drugId) {
           </div>
           <button class="hm-inline-close" onclick="calcCloseInlineResult()" aria-label="Fechar">✕</button>
         </div>
-        <div class="hm-inline-no-patient">
-          <i class="fa-solid fa-circle-info"></i>
-          <span>${isES ? 'Dosis estándar (sin datos del paciente):' : 'Dose padrão (sem dados do paciente):'}
-            <strong>${doseTxt}</strong>${freqTxt ? ' — ' + freqTxt : ''}</span>
+        <div class="hm300-body">
+          <div class="hm300-row hm300-row--hero">
+            <span class="hm300-lbl">${isES ? 'DOSE INICIAL:' : 'DOSE INICIAL:'}</span>
+            <span class="hm300-val hm300-val--big">${doseInicial}</span>
+          </div>
+          ${mantDisplay}
+          ${viaDisplay}
+          <div class="hm300-row hm300-row--indic">
+            <span class="hm300-lbl">${isES ? 'INDICAÇÃO:' : 'INDICAÇÃO:'}</span>
+            <ul class="hm300-indic-list">${indicHtml}</ul>
+          </div>
         </div>
-        <button class="hm-inline-detail-btn" onclick="openFarmacoDetail('${drugId}')">
-          <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ver ficha completa' : 'Ver bula completa'}
-        </button>
+        <div class="hm300-actions">
+          <button class="hm300-btn hm300-btn--copy" onclick="hmCopyPrescription('${drugId}')">
+            <i class="fa-brands fa-whatsapp"></i> ${isES ? 'Copiar Rx' : 'Copiar Rx'}
+          </button>
+          <button class="hm300-btn hm300-btn--detail" onclick="openFarmacoDetail('${drugId}')">
+            <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ficha Completa' : 'Ficha Completa'}
+          </button>
+        </div>
       </div>`;
     resultEl.style.display = 'block';
-    resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     return;
   }
 
@@ -17172,7 +17297,7 @@ function calcShowInlineResult(drugId) {
       </button>
     </div>`;
   resultEl.style.display = 'block';
-  resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function calcCloseInlineResult() {
@@ -17235,8 +17360,8 @@ function calcDrugDose(id) {
   const result  = hero.result || { dose:'—', freq:'—', via:'—', adj:'', note:'' };
   const rich    = hero.rich   || {};
   const source  = hero.source || {};
-  const dName   = (result._resolvedName)  || drug.name;
-  const dClass  = (result._resolvedClass) || drug.class || '';
+  const dName   = (result._resolvedName)  || _fdResolveName(drug);
+  const dClass  = (result._resolvedClass) || _fdResolveClass(drug);
 
   /* Flags de perfil extraídos do hero */
   const isPediatric  = hero.isPediatric;
@@ -20669,24 +20794,60 @@ document.addEventListener('DOMContentLoaded', () => {
       ? (drug.name[lang] || drug.name.pt || drugId)
       : (drug.name || drugId);
 
-    const drugClass = drug.class || '';
+    const drugClass = _fdResolveClass(drug);
     const drugIcon  = drug.icon  || '💊';
     const drugColor = drug.color || 'rgba(56,189,248,0.15)';
     const drugColorTxt = drug.colorTxt || '#38BDF8';
 
-    /* ── Sem paciente — mostra dose padrão adulto (neutro) ── */
+    /* ── Sem paciente — card de estudo com dose padrão adulto (BUILD 300) ── */
     const hasPatient = pd && (pd.weight != null || pd.age != null || pd.clcr != null);
     if (!hasPatient) {
-      let doseTxt = '—', freqTxt = '';
+      let doseInicial = '—', doseMantencao = '', viaAdm = '', indicList = [];
       try {
-        const neutral = { weight:70, age:40, sex:'M', height:170, creatinine:1.0,
-          clcr:90, imc:24, pesoIdeal:70, pregnant:false,
-          peso:70, idade:40, sexo:'M', gestante:false, lactante:false, hepatopatia:false };
-        const r = (typeof drug.dose === 'function') ? drug.dose(neutral, lang) : null;
-        if (r) { doseTxt = r.dose || '—'; freqTxt = r.freq || ''; }
-      } catch(e) {}
+        if (typeof drug.dose === 'function') {
+          const neutral = { weight:70, age:40, sex:'M', height:170, creatinine:1.0,
+            clcr:90, imc:24, pesoIdeal:70, pregnant:false,
+            peso:70, idade:40, sexo:'M', gestante:false, lactante:false, hepatopatia:false };
+          const r = drug.dose(neutral, lang);
+          if (r) { doseInicial = r.dose || '—'; doseMantencao = r.freq || ''; viaAdm = r.via || ''; }
+        } else if (drug.dose && drug.dose.adult) {
+          const adultDose = typeof drug.dose.adult === 'object'
+            ? (drug.dose.adult[lang] || drug.dose.adult.pt || '')
+            : String(drug.dose.adult || '');
+          const parts = adultDose.split(/;|seguido de|,\s*seguido/i);
+          doseInicial   = (parts[0] || '').trim() || '—';
+          doseMantencao = parts.length > 1 ? parts.slice(1).join('; ').trim() : '';
+        }
+        if (drug.administration) {
+          const admArr = Array.isArray(drug.administration)
+            ? drug.administration
+            : (drug.administration[lang] || drug.administration.pt || []);
+          viaAdm = Array.isArray(admArr) ? (admArr[0] || '') : String(admArr || '');
+        }
+        if (!viaAdm) {
+          const viaMatch = (doseInicial + ' ' + doseMantencao).match(/\b(IV|EV|VO|IM|SC|SL|oral)\b/i);
+          if (viaMatch) viaAdm = viaMatch[0].toUpperCase();
+        }
+        if (drug.indications) {
+          const ind = Array.isArray(drug.indications)
+            ? drug.indications
+            : (drug.indications[lang] || drug.indications.pt || []);
+          indicList = Array.isArray(ind) ? ind.slice(0, 3) : [];
+        }
+      } catch(e) { console.warn('[hmShowInlineResult] parse error:', drugId, e); }
+
+      const indicHtml = indicList.length
+        ? indicList.map(i => `<li>${i}</li>`).join('')
+        : `<li>${isES ? 'Ver ficha completa' : 'Ver bula completa'}</li>`;
+      const viaDisplay = viaAdm
+        ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'VIA DE ADM:' : 'VIA DE ADM:'}</span><span class="hm300-val">${viaAdm}</span></div>`
+        : '';
+      const mantDisplay = doseMantencao
+        ? `<div class="hm300-row"><span class="hm300-lbl">${isES ? 'DOSE MANUTENÇÃO:' : 'DOSE MANUTENÇÃO:'}</span><span class="hm300-val hm300-val--sub">${doseMantencao}</span></div>`
+        : '';
+
       resultEl.innerHTML = `
-        <div class="hm-inline-result hm-inline-bula">
+        <div class="hm-inline-result hm-inline-bula hm300-card">
           <div class="hm-inline-result-header">
             <span class="hm-inline-drug-icon" style="background:${drugColor};color:${drugColorTxt}">${drugIcon}</span>
             <div class="hm-inline-drug-info">
@@ -20695,17 +20856,29 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <button class="hm-inline-close" onclick="hmCloseInlineResult()" aria-label="Fechar">✕</button>
           </div>
-          <div class="hm-inline-no-patient">
-            <i class="fa-solid fa-circle-info"></i>
-            <span>${isES ? 'Dose estándar (sin datos del paciente):' : 'Dose padrão (sem dados do paciente):'}
-              <strong>${doseTxt}</strong>${freqTxt ? ' — ' + freqTxt : ''}</span>
+          <div class="hm300-body">
+            <div class="hm300-row hm300-row--hero">
+              <span class="hm300-lbl">${isES ? 'DOSE INICIAL:' : 'DOSE INICIAL:'}</span>
+              <span class="hm300-val hm300-val--big">${doseInicial}</span>
+            </div>
+            ${mantDisplay}
+            ${viaDisplay}
+            <div class="hm300-row hm300-row--indic">
+              <span class="hm300-lbl">${isES ? 'INDICAÇÃO:' : 'INDICAÇÃO:'}</span>
+              <ul class="hm300-indic-list">${indicHtml}</ul>
+            </div>
           </div>
-          <button class="hm-inline-detail-btn" onclick="hmOpenDrug('${drugId}')">
-            <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ver ficha completa' : 'Ver bula completa'}
-          </button>
+          <div class="hm300-actions">
+            <button class="hm300-btn hm300-btn--copy" onclick="hmCopyPrescription('${drugId}')">
+              <i class="fa-brands fa-whatsapp"></i> ${isES ? 'Copiar Rx' : 'Copiar Rx'}
+            </button>
+            <button class="hm300-btn hm300-btn--detail" onclick="hmOpenDrug('${drugId}')">
+              <i class="fa-solid fa-book-medical"></i> ${isES ? 'Ficha Completa' : 'Ficha Completa'}
+            </button>
+          </div>
         </div>`;
       resultEl.style.display = 'block';
-      resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
       return;
     }
 
@@ -20802,7 +20975,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </button>
       </div>`;
     resultEl.style.display = 'block';
-    resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   window.hmCloseInlineResult = function() {
@@ -22597,52 +22770,52 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script defer src="database/interacoes.js?v=290"></script>
-<script defer src="database/antimicrobianos.js?v=290"></script>
-<script defer src="database/psicofarmacos.js?v=290"></script>
-<script defer src="database/analgesicos.js?v=290"></script>
-<script defer src="database/anticoag.js?v=290"></script>
-<script defer src="database/cardio.js?v=290"></script>
-<script defer src="database/endocrino.js?v=290"></script>
-<script defer src="database/gastro.js?v=290"></script>
-<script defer src="database/gastro_imuno.js?v=290"></script>
-<script defer src="database/imuno_corticoide.js?v=290"></script>
-<script defer src="database/endocrino_glp1.js?v=290"></script>
-<script defer src="database/infusoes.js?v=290"></script>
-<script defer src="database/nefro.js?v=290"></script>
-<script defer src="database/neuro.js?v=290"></script>
-<script defer src="database/obesidade.js?v=290"></script>
-<script defer src="database/pneumo.js?v=290"></script>
-<script defer src="database/psiquiatria.js?v=290"></script>
-<script defer src="database/reumatologia.js?v=290"></script>
-<script defer src="database/prescricoes.js?v=290" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script defer src="database/interacoes.js?v=300"></script>
+<script defer src="database/antimicrobianos.js?v=300"></script>
+<script defer src="database/psicofarmacos.js?v=300"></script>
+<script defer src="database/analgesicos.js?v=300"></script>
+<script defer src="database/anticoag.js?v=300"></script>
+<script defer src="database/cardio.js?v=300"></script>
+<script defer src="database/endocrino.js?v=300"></script>
+<script defer src="database/gastro.js?v=300"></script>
+<script defer src="database/gastro_imuno.js?v=300"></script>
+<script defer src="database/imuno_corticoide.js?v=300"></script>
+<script defer src="database/endocrino_glp1.js?v=300"></script>
+<script defer src="database/infusoes.js?v=300"></script>
+<script defer src="database/nefro.js?v=300"></script>
+<script defer src="database/neuro.js?v=300"></script>
+<script defer src="database/obesidade.js?v=300"></script>
+<script defer src="database/pneumo.js?v=300"></script>
+<script defer src="database/psiquiatria.js?v=300"></script>
+<script defer src="database/reumatologia.js?v=300"></script>
+<script defer src="database/prescricoes.js?v=300" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=290"></script>
+<script defer src="js/medcases-ux-v2.js?v=300"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=290"></script>
+<script defer src="js/hub-accordion.js?v=300"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=290"></script>
+<script defer src="js/build240b-accordion-fix.js?v=300"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=290"></script>
+<script defer src="js/calculator-overlay.js?v=300"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=290"></script>
+<script defer src="js/category-pills.js?v=300"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=290"></script>
+<script defer src="js/elec-calc.js?v=300"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=290"></script>
+<script defer src="js/deeplink-router.js?v=300"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=290"></script>
+<script defer src="js/build272-reactive-engine.js?v=300"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=290"></script>
+<script defer src="js/build283-accessory-bar.js?v=300"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>

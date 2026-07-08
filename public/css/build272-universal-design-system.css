@@ -432,3 +432,44 @@ body.light-mode .clcr-live-dashboard {
   from { opacity: 0; transform: translateY(-8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+
+/* ================================================================
+   §BUILD-298 — CLCR LIVE DASHBOARD — STATIC GRID CARDS
+   Estilos para os novos .grid-card-clcr introduzidos no BUILD 298.
+   O container usa inline style="display:grid !important" para
+   blindagem contra reset de JS no WebView iOS/Android.
+================================================================ */
+.grid-card-clcr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(56, 189, 248, 0.07);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 10px;
+  padding: 10px 8px;
+  min-width: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.grid-card-title {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(148, 163, 184, 0.75);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.grid-card-value {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: #38bdf8;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
