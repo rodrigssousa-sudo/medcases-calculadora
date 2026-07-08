@@ -19835,6 +19835,106 @@ const INTERACOES_DB = {
         es: "Evitar la asociación o realizar Electrocardiograma cada 48 horas en el paciente de UCI."
       }
     }
+  }, // vírgula adicionada; BUILD 340 Lote 3 blocks follow
+
+  /* ── POSACONAZOL ── */
+  "posaconazol": {
+    "$classe_ibp": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INIBIÇÃO FISIO-QUÍMICA. Se o paciente usar a SUSPENSÃO ORAL do Posaconazol juntamente com um Inibidor de Bomba de Prótons (Omeprazol, Pantoprazol), a falta de ácido no estômago reduzirá a absorção do xarope em até 80%. O paciente perderá a profilaxia e poderá desenvolver uma sepse fúngica invasiva.",
+        es: "INHIBICIÓN FISIOQUÍMICA. Si el paciente usa la SUSPENSIÓN ORAL de Posaconazol junto con un Inhibidor de Bomba de Protones (Omeprazol, Pantoprazol), la falta de ácido en el estómago reducirá la absorción del jarabe hasta en un 80%. El paciente perderá la profilaxis y podrá desarrollar una sepsis fúngica invasiva."
+      },
+      conduta: {
+        pt: "Obrigatório trocar a suspensão para a versão em COMPRIMIDO DE LIBERAÇÃO RETARDADA (GR), cuja absorção é independente do pH gástrico e não sofre essa interação.",
+        es: "Obligatorio cambiar la suspensión por la versión en COMPRIMIDO DE LIBERACIÓN RETARDADA (GR), cuya absorción es independiente del pH gástrico y no sufre esta interacción."
+      }
+    },
+    "$classe_estatinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Posaconazol é um inibidor ferrenho do CYP3A4. Estatinas (Sinvastatina, Atorvastatina) terão seu metabolismo travado. A concentração da estatina dispara em poucos dias, levando à Rabdomiólise severa e lesão renal por mioglobinúria.",
+        es: "El Posaconazol es un inhibidor férreo del CYP3A4. Estatinas (Simvastatina, Atorvastatina) tendrán su metabolismo bloqueado. La concentración de la estatina se dispara en pocos días, llevando a Rabdomiólisis severa y lesión renal por mioglobinuria."
+      },
+      conduta: {
+        pt: "Suspender temporariamente a estatina enquanto o paciente usar azólicos profiláticos/terapêuticos na hematologia.",
+        es: "Suspender temporalmente la estatina mientras el paciente use azólicos profilácticos/terapéuticos en la hematología."
+      }
+    }
+  },
+
+  /* ── ISAVUCONAZOL ── */
+  "isavuconazol": {
+    "rifampicina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INDUÇÃO MASSIVA. A Rifampicina é o maior indutor do CYP3A4. O Isavuconazol será eliminado pelo fígado em velocidade recorde, fazendo com que sua concentração no sangue e nos pulmões desapareça. O fungo se multiplica livremente.",
+        es: "INDUCCIÓN MASIVA. La Rifampicina es el mayor inductor del CYP3A4. El Isavuconazol será eliminado por el hígado a velocidad récord, haciendo que su concentración en la sangre y pulmones desaparezca. El hongo se multiplica libremente."
+      },
+      conduta: {
+        pt: "Contraindicado. Escolher tratamento alternativo para a Tuberculose ou trocar o antifúngico para Anidulafungina/Anfotericina (que não usam a via do CYP hepático).",
+        es: "Contraindicado. Elegir tratamiento alternativo para la Tuberculosis o cambiar el antifúngico a Anidulafungina/Anfotericina (que no usan la vía del CYP hepático)."
+      }
+    },
+    "$classe_macrolideos": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "O Isavuconazol é o único da família dos Azóis que encurta o intervalo QT. Logo, se o paciente receber drogas que alongam o QT (como macrolídeos ou fluoroquinolonas), o Isavuconazol não irá sinergizar esse risco, oferecendo perfil de segurança cardíaca espetacular no doente crítico.",
+        es: "El Isavuconazol es el único de la familia de los Azoles que acorta el intervalo QT. Por tanto, si el paciente recibe drogas que alargan el QT (como macrólidos o fluoroquinolonas), el Isavuconazol no sinergizará este riesgo, ofreciendo perfil de seguridad cardíaca espectacular en el enfermo crítico."
+      },
+      conduta: {
+        pt: "Sem contraindicações cardíacas para associações habituais. Uma imensa vantagem na UTI.",
+        es: "Sin contraindicaciones cardíacas para asociaciones habituales. Una inmensa ventaja en la UCI."
+      }
+    }
+  },
+
+  /* ── NISTATINA ── */
+  "nistatina": {
+    "interacoes_vazias_marcador": {
+      gravidade: "leve",
+      scoreClinico: 0,
+      descricao: {
+        pt: "Isenta de Interações Sistêmicas. Como a nistatina NÃO é absorvida pelo intestino para a corrente sanguínea, passa inofensivamente pelo trato digestivo e é excretada nas fezes. Por definição, não pode interagir no fígado (CYP450) ou nos rins com nenhuma medicação que o paciente toma.",
+        es: "Exenta de Interacciones Sistémicas. Como la nistatina NO es absorbida por el intestino hacia el torrente sanguíneo, pasa inofensivamente por el tracto digestivo y es excretada en las heces. Por definición, no puede interactuar en el hígado (CYP450) o en los riñones con ninguna medicación que el paciente toma."
+      },
+      conduta: {
+        pt: "Prescrição totalmente segura, mesmo em pacientes politratados graves ou em uso de varfarina/imunossupressores.",
+        es: "Prescripción totalmente segura, incluso en pacientes politratados graves o en uso de warfarina/inmunosupresores."
+      }
+    }
+  },
+
+  /* ── ACICLOVIR E VALACICLOVIR ── */
+  "$classe_antivirais_herpeticos": {
+    "$classe_aminoglicosideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo Agudo de Falência Renal. O Aciclovir intravenoso cristaliza nos túbulos renais. Aminoglicosídeos (Amicacina/Gentamicina) causam necrose tubular tóxica. O choque dessas duas injúrias frequentemente paralisa os rins, exigindo hemodiálise de emergência em imunossuprimidos.",
+        es: "Sinergismo Agudo de Falla Renal. El Aciclovir intravenoso se cristaliza en los túbulos renales. Aminoglucósidos (Amikacina/Gentamicina) causan necrosis tubular tóxica. El choque de estas dos injurias frecuentemente paraliza los riñones, exigiendo hemodiálisis de emergencia en inmunosuprimidos."
+      },
+      conduta: {
+        pt: "Hidratação agressiva obrigatória com SF 0,9% antes, durante e após a infusão de Aciclovir. Ajustar a dose pelo ClCr diário.",
+        es: "Hidratación agresiva obligatoria con SF 0,9% antes, durante y después de la infusión de Aciclovir. Ajustar la dosis por el ClCr diario."
+      }
+    },
+    "micofenolato_mofetil": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Competição de secreção tubular. Ambos os fármacos competem pelas bombas de excreção ativas nos túbulos renais. O resultado é o acúmulo do Aciclovir e do metabólito do Micofenolato no sangue, elevando o risco de neurotoxicidade e imunossupressão excessiva.",
+        es: "Competición de secreción tubular. Ambos fármacos compiten por las bombas de excreción activas en los túbulos renales. El resultado es la acumulación del Aciclovir y del metabolito del Micofenolato en la sangre, elevando el riesgo de neurotoxicidad e inmunosupresión excesiva."
+      },
+      conduta: {
+        pt: "Monitorar toxicidade associada em pacientes submetidos a transplante renal.",
+        es: "Monitorizar toxicidad asociada en pacientes sometidos a trasplante renal."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */

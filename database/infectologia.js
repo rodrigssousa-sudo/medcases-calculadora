@@ -350,3 +350,214 @@
   }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — Grupo 2 (caspofungina · micafungina · fluconazol · itraconazol · voriconazol — BUILD 338 Lote 2) */
 
 })();
+
+/* ── GRUPO 3: Antifúngicos Avançados + Antivirais Herpéticos — BUILD 340 Lote 3 ── */
+(function () {
+  'use strict';
+  if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null) return;
+
+  Object.assign(window.INFECTOLOGIA_DRUGS_DB, {
+
+    /* ── POSACONAZOL ────────────────────────────────────────────────────── */
+    "posaconazol": {
+      name: { pt: 'Posaconazol', es: 'Posaconazol' },
+      category: 'infectologia',
+      class: { pt: 'Antifúngico Triazólico de 2ª Geração (Largo Espectro)', es: 'Antifúngico Triazólico de 2ª Generación (Amplio Espectro)' },
+      indications: {
+        pt: ['Profilaxia de infecções fúngicas invasivas em pacientes de altíssimo risco (Leucemia Mieloide Aguda, GVHD crônico)', 'Tratamento de resgate da Mucormicose e Aspergilose invasiva', 'Candidíase orofaríngea severa'],
+        es: ['Profilaxis de infecciones fúngicas invasivas en pacientes de altísimo riesgo (Leucemia Mieloide Aguda, GVHD crónico)', 'Tratamiento de rescate de la Mucormicosis y Aspergilosis invasiva', 'Candidiasis orofaríngea severa']
+      },
+      commercialNames: { br: ['Noxafil'], ar: ['Noxafil'] },
+      presentation: { pt: ['Suspensão oral 40 mg/mL', 'Comprimidos de Liberação Retardada (GR) 100 mg', 'Frasco-ampola IV 300 mg'], es: ['Suspensión oral 40 mg/mL', 'Comprimidos de Liberación Retardada (GR) 100 mg', 'Vial IV 300 mg'] },
+      mechanism: {
+        pt: 'Mecanismo azólico (inibe 14-alfa-desmetilase). Extremamente lipofílico e potente. Exerce ação contra fungos muito resistentes, sendo uma das raras opções de backup contra os temidos Mucorales (fungos negros). Ao contrário de outros azólicos, ele é metabolizado majoritariamente por glicuronidação (fase 2) e pouco pelo citocromo P450, embora seja um forte inibidor do CYP3A4.',
+        es: 'Mecanismo azólico (inhibe 14-alfa-desmetilasa). Extremadamente lipofílico y potente. Ejerce acción contra hongos muy resistentes, siendo una de las raras opciones de backup contra los temidos Mucorales (hongos negros). A diferencia de otros azólicos, es metabolizado mayoritariamente por glucuronidación (fase 2) y poco por el citocromo P450, aunque sí es un fuerte inhibidor del CYP3A4.'
+      },
+      dose: {
+        adult: {
+          pt: 'Comprimidos: 300 mg VO 12/12h (Ataque dia 1), depois 300 mg VO 1x/dia. Suspensão (Profilaxia): 200 mg VO 3x/dia.',
+          es: 'Comprimidos: 300 mg VO 12/12h (Ataque día 1), luego 300 mg VO 1 vez/día. Suspensión (Profilaxis): 200 mg VO 3 veces/día.'
+        },
+        pediatric: {
+          pt: 'Uso > 13 anos. Doses idênticas ao adulto. < 13 anos: Uso restrito compassivo.',
+          es: 'Uso > 13 años. Dosis idénticas al adulto. < 13 años: Uso restringido compasivo.'
+        }
+      },
+      administration: { pt: ['A SUSPENSÃO ORAL exige administração com refeição extremamente gordurosa (lipidada) para ser absorvida.', 'Os COMPRIMIDOS têm tecnologia de absorção estendida e NÃO dependem de gordura ou pH gástrico (devem ser engolidos inteiros).'], es: ['La SUSPENSIÓN ORAL exige administración con comida extremadamente grasosa (lipidada) para ser absorbida.', 'Los COMPRIMIDOS tienen tecnología de absorción extendida y NO dependen de grasa o pH gástrico (deben ser tragados enteros).'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar a formulação IV em ClCr < 50 mL/min (contém excipiente nefrotóxico SBECD, assim como o Voriconazol). Via oral segura.', es: 'Evitar la formulación IV en ClCr < 50 mL/min (contiene excipiente nefrotóxico SBECD, así como el Voriconazol). Vía oral segura.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Usar com precaução na insuficiência hepática severa (risco de acúmulo).', es: 'Usar con precaución en la insuficiencia hepática severa (riesgo de acumulación).' } },
+      commonAdverseEffects: { pt: ['Diarreia e náuseas', 'Febre', 'Hipocalemia'], es: ['Diarrea y náuseas', 'Fiebre', 'Hipopotasemia'] },
+      dangerousAdverseEffects: { pt: ['Prolongamento do intervalo QT (embora menos intenso que voriconazol)', 'Hepatotoxicidade'], es: ['Prolongación del intervalo QT (aunque menos intenso que voriconazol)', 'Hepatotoxicidad'] },
+      contraindications: {
+        absolute: { pt: ['Uso concomitante com substratos do CYP3A4 de margem estreita (Pimozida, Quinidina, Alcaloides do ergot, Halofantrina)'], es: ['Uso concomitante con sustratos del CYP3A4 de margen estrecho (Pimozida, Quinidina, Alcaloides del ergot, Halofantrina)'] },
+        relative: { pt: ['Arritmias cardíacas prévias com QT longo'], es: ['Arritmias cardíacas previas con QT largo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ERRO DE PRESCRIÇÃO COMUM: A dose da suspensão oral NÃO é intercambiável miligrama a miligrama com a dose do comprimido. Trocar as formulações sem recalcular a dose gera falha terapêutica ou toxicidade profunda.', es: 'ERROR DE PRESCRIPCIÓN COMÚN: La dosis de la suspensión oral NO es intercambiable miligramo a miligramo con la dosis del comprimido. Cambiar las formulaciones sin recalcular la dosis genera falla terapéutica o toxicidad profunda.' }
+      }
+    },
+
+    /* ── ISAVUCONAZOL ───────────────────────────────────────────────────── */
+    "isavuconazol": {
+      name: { pt: 'Isavuconazol', es: 'Isavuconazol' },
+      category: 'infectologia',
+      class: { pt: 'Antifúngico Triazólico de Amplo Espectro', es: 'Antifúngico Triazólico de Amplio Espectro' },
+      indications: {
+        pt: ['Aspergilose invasiva (não inferior ao voriconazol, com menor toxicidade)', 'Mucormicose (em pacientes onde a anfotericina B é inadequada)'],
+        es: ['Aspergilosis invasiva (no inferior al voriconazol, con menor toxicidad)', 'Mucormicosis (en pacientes donde la anfotericina B es inadecuada)']
+      },
+      commercialNames: { br: ['Cresemba'], ar: ['Cresemba'] },
+      presentation: { pt: ['Frasco-ampola IV 200 mg', 'Cápsulas duras 200 mg'], es: ['Vial IV 200 mg', 'Cápsulas duras 200 mg'] },
+      mechanism: {
+        pt: 'Pró-fármaco (Sulfato de Isavuconazônio) que é clivado rapidamente pelas esterases do sangue na molécula ativa Isavuconazol. Inibe a 14-alfa-desmetilase fúngica. Grande diferencial da classe: ao contrário de todos os outros azólicos que aumentam o intervalo QT, o Isavuconazol possui um efeito de encurtar o intervalo QT.',
+        es: 'Profármaco (Sulfato de Isavuconazonio) que es escindido rápidamente por las esterasas de la sangre en la molécula activa Isavuconazol. Inhibe la 14-alfa-desmetilasa fúngica. Gran diferencial de la clase: a diferencia de todos los otros azólicos que aumentan el intervalo QT, el Isavuconazol posee un efecto de acortar el intervalo QT.'
+      },
+      dose: {
+        adult: {
+          pt: 'Ataque: 200 mg IV ou VO a cada 8 horas por 6 doses (2 dias). Manutenção: 200 mg IV ou VO 1 vez ao dia (a partir do dia 3).',
+          es: 'Ataque: 200 mg IV o VO cada 8 horas por 6 dosis (2 días). Mantenimiento: 200 mg IV o VO 1 vez al día (a partir del día 3).'
+        },
+        pediatric: {
+          pt: 'Uso compassivo ou fora de bula na pediatria severa.',
+          es: 'Uso compasivo o fuera de prospecto en la pediatría severa.'
+        }
+      },
+      administration: { pt: ['Via IV: Não contém o excipiente SBECD (pode ser usado livremente em falência renal). Requer filtro em linha de 0,2 a 1,2 micra para infusão.', 'Cápsulas podem ser tomadas com ou sem alimentos.'], es: ['Vía IV: No contiene el excipiente SBECD (puede usarse libremente en falla renal). Requiere filtro en línea de 0,2 a 1,2 micras para infusión.', 'Cápsulas pueden ser tomadas con o sin alimentos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Totalmente isento de ajuste renal (tanto VO quanto IV).', es: 'Totalmente exento de ajuste renal (tanto VO como IV).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Não testado em cirrose Child-Pugh C (evitar). Em Child A/B, monitorar transaminases.', es: 'No probado en cirrosis Child-Pugh C (evitar). En Child A/B, monitorizar transaminasas.' } },
+      commonAdverseEffects: { pt: ['Náusea e Vômitos', 'Hipocalemia', 'Dispneia'], es: ['Náusea y Vómitos', 'Hipopotasemia', 'Disnea'] },
+      dangerousAdverseEffects: { pt: ['Hepatotoxicidade (elevação de transaminases)', 'Encurtamento sintomático do QT (raro, mas único da droga)'], es: ['Hepatotoxicidad (elevación de transaminasas)', 'Acortamiento sintomático del QT (raro, pero único de la droga)'] },
+      contraindications: {
+        absolute: { pt: ['Síndrome do QT Curto familiar', 'Uso com indutores potentes do CYP3A4 (ex: Rifampicina, Fenitoína)'], es: ['Síndrome del QT Corto familiar', 'Uso con inductores potentes del CYP3A4 (ej: Rifampicina, Fenitoína)'] },
+        relative: { pt: ['Hepatopatia grave'], es: ['Hepatopatía grave'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'É a escolha mais limpa e moderna para tratar aspergilose invasiva no doente de UTI com falência renal aguda, superando o Voriconazol por não gerar toxicidade renal pela ampola nem exigir monitoramento de nível sérico rígido.', es: 'Es la elección más limpia y moderna para tratar aspergilosis invasiva en el enfermo de UCI con falla renal aguda, superando al Voriconazol por no generar toxicidad renal por la ampolla ni exigir monitorización de nivel sérico rígida.' }
+      }
+    },
+
+    /* ── NISTATINA ──────────────────────────────────────────────────────── */
+    "nistatina": {
+      name: { pt: 'Nistatina', es: 'Nistatina' },
+      category: 'infectologia',
+      class: { pt: 'Antifúngico Poliênico (Ação Tópica/Gastrointestinal)', es: 'Antifúngico Poliénico (Acción Tópica/Gastrointestinal)' },
+      indications: {
+        pt: ['Candidíase oral (sapinho)', 'Candidíase intestinal', 'Candidíase vulvovaginal e intertrigo moniliásico (assaduras)'],
+        es: ['Candidiasis oral (muguet)', 'Candidiasis intestinal', 'Candidiasis vulvovaginal e intertrigo moniliásico (rozaduras)']
+      },
+      commercialNames: { br: ['Micostatin'], ar: ['Micostatin'] },
+      presentation: { pt: ['Suspensão oral 100.000 UI/mL', 'Creme/Pomada ginecológica 100.000 UI/g'], es: ['Suspensión oral 100.000 UI/mL', 'Crema/Pomada ginecológica 100.000 UI/g'] },
+      mechanism: {
+        pt: 'Mecanismo idêntico ao da Anfotericina B (liga-se ao ergosterol e perfura a membrana do fungo). Porém, é tóxica se atingir a corrente sanguínea, por isso seu uso endovenoso é proibido. Não é absorvida pela pele, nem pelas mucosas e tem absorção zero no trato gastrointestinal, exercendo apenas efeito local.',
+        es: 'Mecanismo idéntico al de la Anfotericina B (se une al ergosterol y perfora la membrana del hongo). Sin embargo, es tóxica si alcanza el torrente sanguíneo, por eso su uso endovenoso está prohibido. No es absorbida por la piel, ni por las mucosas y tiene absorción cero en el tracto gastrointestinal, ejerciendo solo efecto local.'
+      },
+      dose: {
+        adult: {
+          pt: 'Suspensão: 4 a 6 mL (400.000 a 600.000 UI) bochechar por longo tempo e engolir, 4x ao dia.',
+          es: 'Suspensión: 4 a 6 mL (400.000 a 600.000 UI) enjuagar por largo tiempo y tragar, 4 veces al día.'
+        },
+        pediatric: {
+          pt: 'Lactentes: 1 a 2 mL (100.000 a 200.000 UI) aplicados em cada lado da boca, 4x ao dia.',
+          es: 'Lactantes: 1 a 2 mL (100.000 a 200.000 UI) aplicados en cada lado de la boca, 4 veces al día.'
+        }
+      },
+      administration: { pt: ['Na candidíase oral, o paciente deve reter a suspensão na boca o maior tempo possível antes de engolir.', 'Uso exclusivamente TÓPICO ou ORAL (para agir na luz intestinal). NUNCA INJETÁVEL.'], es: ['En la candidiasis oral, el paciente debe retener la suspensión en la boca el mayor tiempo posible antes de tragar.', 'Uso exclusivamente TÓPICO u ORAL (para actuar en la luz intestinal). NUNCA INYECTABLE.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não possui absorção sistêmica, portanto não requer ajuste.', es: 'No posee absorción sistémica, por lo tanto no requiere ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não possui absorção sistêmica.', es: 'No posee absorción sistémica.' } },
+      commonAdverseEffects: { pt: ['Gosto amargo desagradável', 'Náusea e diarreia (se engolida em grandes doses)'], es: ['Sabor amargo desagradable', 'Náusea y diarrea (si es tragada en grandes dosis)'] },
+      dangerousAdverseEffects: { pt: ['Síndrome de Stevens-Johnson (extremamente raro, por hipersensibilidade alérgica)'], es: ['Síndrome de Stevens-Johnson (extremadamente raro, por hipersensibilidad alérgica)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade ao produto'], es: ['Hipersensibilidad al producto'] },
+        relative: { pt: ['Nenhuma clinicamente relevante.'], es: ['Ninguna clínicamente relevante.'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Não prescreva Nistatina para Candidíase Sistêmica ou Esofagite Grave. Como ela não é absorvida pelo sangue, não terá nenhum efeito além da garganta. A esofagite exige Fluconazol sistêmico.', es: 'No prescriba Nistatina para Candidiasis Sistémica o Esofagitis Grave. Como no es absorbida por la sangre, no tendrá ningún efecto más allá de la garganta. La esofagitis exige Fluconazol sistémico.' }
+      }
+    },
+
+    /* ── ACICLOVIR ──────────────────────────────────────────────────────── */
+    "aciclovir": {
+      name: { pt: 'Aciclovir', es: 'Aciclovir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral (Análogo de Nucleosídeo)', es: 'Antiviral (Análogo de Nucleósido)' },
+      indications: {
+        pt: ['Encefalite Herpética (Uso IV obrigatório)', 'Infecções severas por Herpes Simplex (HSV) 1 e 2', 'Varicela e Herpes Zoster', 'Profilaxia em imunossuprimidos'],
+        es: ['Encefalitis Herpética (Uso IV obligatorio)', 'Infecciones severas por Herpes Simplex (HSV) 1 y 2', 'Varicela y Herpes Zóster', 'Profilaxis en inmunosuprimidos']
+      },
+      commercialNames: { br: ['Zovirax'], ar: ['Zovirax', 'Aciclovir'] },
+      presentation: { pt: ['Frasco-ampola IV 250 mg', 'Comprimidos 200 mg, 400 mg', 'Creme 5%'], es: ['Vial IV 250 mg', 'Comprimidos 200 mg, 400 mg', 'Crema 5%'] },
+      mechanism: {
+        pt: 'Uma falsa peça de DNA. Ao entrar na célula, o aciclovir só é ativado se for fosforilado pela enzima Timidina Quinase VIRAL (ou seja, só vira veneno dentro da célula que tem o vírus do Herpes). Uma vez ativado, incorpora-se ao DNA viral em formação. Como a molécula do aciclovir não tem continuidade química, a DNA polimerase viral não consegue adicionar a próxima base, interrompendo a replicação (terminação de cadeia).',
+        es: 'Una falsa pieza de ADN. Al entrar en la célula, el aciclovir solo se activa si es fosforilado por la enzima Timidina Quinasa VIRAL (es decir, solo se vuelve veneno dentro de la célula que tiene el virus del Herpes). Una vez activado, se incorpora al ADN viral en formación. Como la molécula del aciclovir no tiene continuidad química, la ADN polimerasa viral no logra añadir la siguiente base, interrumpiendo la replicación (terminación de cadena).'
+      },
+      dose: {
+        adult: {
+          pt: 'Encefalite/Infecção grave: 10 mg/kg IV a cada 8 horas (infusão de 1 hora). Herpes Zoster VO: 800 mg 5x/dia por 7 dias.',
+          es: 'Encefalitis/Infección grave: 10 mg/kg IV cada 8 horas (infusión de 1 hora). Herpes Zóster VO: 800 mg 5 veces/día por 7 días.'
+        },
+        pediatric: {
+          pt: 'Encefalite Herpética: 20 mg/kg IV a cada 8 horas (doses agressivas para transpor a barreira hematoencefálica).',
+          es: 'Encefalitis Herpética: 20 mg/kg IV cada 8 horas (dosis agresivas para transponer la barrera hematoencefálica).'
+        }
+      },
+      administration: { pt: ['A INFUSÃO IV DEVE SER LENTA (1 a 2 horas).', 'O paciente deve ser vigorosamente hidratado com Soro Fisiológico antes e durante a infusão IV para evitar que a droga cristalize no rim.'], es: ['LA INFUSIÓN IV DEBE SER LENTA (1 a 2 horas).', 'El paciente debe ser vigorosamente hidratado con Suero Fisiológico antes y durante la infusión IV para evitar que la droga se cristalice en el riñón.'] },
+      renalAdjustment: { required: true, message: { pt: 'Altamente dependente dos rins. ClCr < 50: aumentar intervalo para 12h. ClCr < 25: intervalo de 24h. ClCr < 10: cortar dose à metade a cada 24h.', es: 'Altamente dependiente de los riñones. ClCr < 50: aumentar el intervalo a 12h. ClCr < 25: intervalo de 24h. ClCr < 10: cortar dosis a la mitad cada 24h.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Flebite severa (devido ao pH muito alcalino da ampola)', 'Náusea/Diarreia no uso oral', 'Elevação leve de ureia/creatinina'], es: ['Flebitis severa (debido al pH muy alcalino de la ampolla)', 'Náusea/Diarrea en el uso oral', 'Elevación leve de urea/creatinina'] },
+      dangerousAdverseEffects: { pt: ['Nefropatia por Cristais (falência renal aguda obstrutiva se o paciente estiver desidratado e o aciclovir precipitar nos túbulos)', 'Neurotoxicidade aguda (confusão, tremores, coma — ocorre se não for feito o ajuste renal e a droga acumular no sangue)'], es: ['Nefropatía por Cristales (fallo renal agudo obstructivo si el paciente está deshidratado y el aciclovir precipita en los túbulos)', 'Neurotoxicidad aguda (confusión, temblores, coma — ocurre si no se hace el ajuste renal y la droga se acumula en la sangre)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida'], es: ['Hipersensibilidad conocida'] },
+        relative: { pt: ['Desidratação severa (corrigir antes de infundir a droga IV)'], es: ['Deshidratación severa (corregir antes de infundir la droga IV)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Atenção na posologia oral: a biodisponibilidade do Aciclovir oral é baixa (apenas 15 a 20%), exigindo prescrições de 5 tomadas por dia (ex: 800 mg a cada 4 horas). Pacientes frequentemente não aderem e o tratamento falha.', es: 'Atención en la posología oral: la biodisponibilidad del Aciclovir oral es baja (solo 15 a 20%), exigiendo prescripciones de 5 tomas por día (ej: 800 mg cada 4 horas). Pacientes frecuentemente no adhieren y el tratamiento falla.' }
+      }
+    },
+
+    /* ── VALACICLOVIR ───────────────────────────────────────────────────── */
+    "valaciclovir": {
+      name: { pt: 'Valaciclovir', es: 'Valaciclovir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral (Pró-fármaco do Aciclovir)', es: 'Antiviral (Profármaco del Aciclovir)' },
+      indications: {
+        pt: ['Herpes Zoster (Cobreiro)', 'Herpes Genital primário ou recorrente', 'Profilaxia de Citomegalovírus (CMV) pós-transplante'],
+        es: ['Herpes Zóster (Culebrilla)', 'Herpes Genital primario o recurrente', 'Profilaxis de Citomegalovirus (CMV) post-trasplante']
+      },
+      commercialNames: { br: ['Valtrex', 'Herpesil'], ar: ['Valtrex'] },
+      presentation: { pt: ['Comprimidos 500 mg, 1000 mg'], es: ['Comprimidos 500 mg, 1000 mg'] },
+      mechanism: {
+        pt: 'Para resolver o problema da péssima absorção do aciclovir, a indústria anexou um aminoácido (valina) à molécula. O Valaciclovir é ativamente transportado pelo intestino e, ao chegar no fígado, enzimas removem a valina, liberando aciclovir puro na corrente sanguínea em altas concentrações. Atinge níveis plasmáticos comparáveis aos do Aciclovir Endovenoso.',
+        es: 'Para resolver el problema de la pésima absorción del aciclovir, la industria le anexó un aminoácido (valina) a la molécula. El Valaciclovir es transportado activamente por el intestino y, al llegar al hígado, enzimas remueven la valina, liberando aciclovir puro en el torrente sanguíneo en altas concentraciones. Alcanza niveles plasmáticos comparables a los del Aciclovir Endovenoso.'
+      },
+      dose: {
+        adult: {
+          pt: 'Herpes Zoster: 1000 mg VO a cada 8 horas (3x ao dia) por 7 dias. Herpes Genital (Surto): 500 mg VO 12/12h.',
+          es: 'Herpes Zóster: 1000 mg VO cada 8 horas (3 veces al día) por 7 días. Herpes Genital (Brote): 500 mg VO 12/12h.'
+        },
+        pediatric: {
+          pt: 'Uso não rotineiro < 12 anos. Exceção para Herpes Zoster em imunocomprometidos.',
+          es: 'Uso no rutinario < 12 años. Excepción para Herpes Zóster en inmunocomprometidos.'
+        }
+      },
+      administration: { pt: ['Administração puramente ORAL.', 'O paciente deve ser encorajado a beber muita água para garantir hidratação renal.'], es: ['Administración puramente ORAL.', 'El paciente debe ser alentado a beber mucha agua para garantizar hidratación renal.'] },
+      renalAdjustment: { required: true, message: { pt: 'Altamente retido na insuficiência renal. ClCr < 50: 1000 mg a cada 12h. ClCr < 30: 1000 mg a cada 24h. Risco de coma se não ajustado.', es: 'Altamente retenido en la insuficiencia renal. ClCr < 50: 1000 mg cada 12h. ClCr < 30: 1000 mg cada 24h. Riesgo de coma si no se ajusta.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'A conversão para aciclovir ocorre sem problemas na disfunção hepática leve/moderada.', es: 'La conversión a aciclovir ocurre sin problemas en la disfunción hepática leve/moderada.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Náuseas e dores abdominais', 'Tontura'], es: ['Cefalea', 'Náuseas y dolores abdominales', 'Mareo'] },
+      dangerousAdverseEffects: { pt: ['Síndrome Hemolítico-Urêmica / Púrpura Trombocitopênica Trombótica (SHU/PTT) em pacientes gravemente imunossuprimidos (ex: HIV avançado)', 'Neurotoxicidade aguda em idosos que não ajustam a dose renal'], es: ['Síndrome Hemolítico-Urémico / Púrpura Trombocitopénica Trombótica (SHU/PTT) en pacientes gravemente inmunosuprimidos (ej: VIH avanzado)', 'Neurotoxicidad aguda en ancianos que no ajustan la dosis renal'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade ao valaciclovir ou aciclovir'], es: ['Hipersensibilidad al valaciclovir o aciclovir'] },
+        relative: { pt: ['Desidratação não corrigida', 'Doença renal crônica terminal não dialítica'], es: ['Deshidratación no corregida', 'Enfermedad renal crónica terminal no dialítica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Garante adesão infinitamente superior à do Aciclovir oral (3 comprimidos/dia contra 5 comprimidos/dia), sendo o tratamento de escolha para o Herpes Zoster em ambulatório.', es: 'Garantiza adherencia infinitamente superior a la del Aciclovir oral (3 comprimidos/día frente a 5 comprimidos/día), siendo el tratamiento de elección para el Herpes Zóster en ambulatorio.' }
+      }
+    }
+
+  }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — Grupo 3 (posaconazol · isavuconazol · nistatina · aciclovir · valaciclovir — BUILD 340 Lote 3) */
+
+})();
