@@ -18956,6 +18956,83 @@ const INTERACOES_DB = {
         es: "Reducir la dosis de BNMs no despolarizantes si el paciente está recibiendo Sulfato de Magnesio IV. Monitorizar con estimulador de nervio periférico (TOF)."
       }
     }
+  },  // comma added; Lote 4 blocks follow
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Repositores Eletrolíticos e Suporte de Vida
+   Gluconato/Cloreto de Cálcio, Bicarbonato, KCl, Salina 3%
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── CÁLCIO (GLUCONATO E CLORETO) ── */
+  "$classe_calcio_intravenoso": {
+    "ceftriaxona": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INCOMPATIBILIDADE QUÍMICA FATAL. O cálcio reage com a ceftriaxona formando um precipitado cristalino indissolúvel (sal de cálcio-ceftriaxona). No sangue, esses cristais causam embolia pulmonar maciça e microinfartos renais. Essa reação já gerou óbitos imediatos, especialmente em recém-nascidos e neonatos.",
+        es: "INCOMPATIBILIDAD QUÍMICA FATAL. El calcio reacciona con la ceftriaxona formando un precipitado cristalino indisoluble (sal de calcio-ceftriaxona). En la sangre, estos cristales causan embolia pulmonar masiva y microinfartos renales. Esta reacción ya ha generado muertes inmediatas, especialmente en recién nacidos y neonatos."
+      },
+      conduta: {
+        pt: "NUNCA administrar na mesma via (equipo) nem na mesma bomba. Em neonatos (<28 dias), é CONTRAINDICADO o uso de ambas as drogas num intervalo de 48 horas, mesmo em vias diferentes. Lave a via exaustivamente em adultos se for indispensável o uso sequencial.",
+        es: "NUNCA administrar en la misma vía (equipo) ni en la misma bomba. En neonatos (<28 días), está CONTRAINDICADO el uso de ambas drogas en un intervalo de 48 horas, incluso en vías diferentes. Lave la vía exhaustivamente en adultos si es indispensable el uso secuencial."
+      }
+    },
+    "digoxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A digoxina satura a célula miocárdica com cálcio para gerar inotropismo. A administração IV rápida de Cálcio em um paciente digitalizado pode sobrecarregar a célula e deflagrar a síndrome do 'Coração de Pedra' (Stone Heart), com parada cardíaca em sístole irreversível.",
+        es: "La digoxina satura la célula miocárdica con calcio para generar inotropismo. La administración IV rápida de Calcio en un paciente digitalizado puede sobrecargar la célula y desencadenar el síndrome del 'Corazón de Piedra' (Stone Heart), con paro cardíaco en sístole irreversible."
+      },
+      conduta: {
+        pt: "Extrema cautela. Se o paciente hipercalêmico estiver sob uso de digoxina, a injeção de cálcio deve ser feita lentamente em 30 min, apenas se a arritmia ameaçar a vida.",
+        es: "Extrema precaución. Si el paciente hiperpotasémico está en uso de digoxina, la inyección de calcio debe hacerse lentamente en 30 min, solo si la arritmia amenaza la vida."
+      }
+    },
+    "bicarbonato_sodio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Precipitação física e química na via. Quando Bicarbonato e Cálcio se encontram na mesma mangueira ou lúmen do cateter, eles formam Carbonato de Cálcio (giz insolúvel), que entope o cateter e emboliza.",
+        es: "Precipitación física y química en la vía. Cuando Bicarbonato y Calcio se encuentran en la misma manguera o lumen del catéter, forman Carbonato de Calcio (tiza insoluble), que obstruye el catéter y emboliza."
+      },
+      conduta: {
+        pt: "Durante a ressuscitação (PCR), lave a via venosa com SF 0,9% abundantemente (flushes de 20 mL) entre a administração de cálcio e bicarbonato.",
+        es: "Durante la reanimación (RCP), lave la vía venosa con SF 0,9% abundantemente (flushes de 20 mL) entre la administración de calcio y bicarbonato."
+      }
+    }
+  },
+
+  /* ── BICARBONATO DE SÓDIO ── */
+  "bicarbonato_sodio": {
+    "$classe_aminas_vasoativas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Inativação química aguda por pH. O Bicarbonato de Sódio possui pH extremamente alcalino. Aminas como Noradrenalina, Adrenalina e Dopamina perdem imediatamente sua bioatividade se expostas a meios alcalinos, cortando o suporte vasopressor do paciente em choque.",
+        es: "Inactivación química aguda por pH. El Bicarbonato de Sodio posee pH extremadamente alcalino. Aminas como Noradrenalina, Adrenalina y Dopamina pierden inmediatamente su bioactividad si se exponen a medios alcalinos, cortando el soporte vasopresor del paciente en choque."
+      },
+      conduta: {
+        pt: "É proibitivo infundir bicarbonato de sódio na mesma via / lúmen de acesso venoso central por onde correm as aminas vasopressoras.",
+        es: "Es prohibitivo infundir bicarbonato de sodio en la misma vía / lumen de acceso venoso central por donde corren las aminas vasopresoras."
+      }
+    }
+  },
+
+  /* ── CLORETO DE POTÁSSIO (KCl) ── */
+  "cloreto_potassio": {
+    "$classe_diureticos_poupadores_potassio": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A reposição endovenosa de Potássio concomitante com diuréticos como Espironolactona (ou IECAs/BRAs em altas doses com DRC oculta) multiplica as chances de hipercalemia iatrogênica em pacientes idosos e com ICC, evoluindo para assistolia.",
+        es: "La reposición endovenosa de Potasio concomitante con diuréticos como Espironolactona (o IECAs/ARAs en altas dosis con ERC oculta) multiplica las posibilidades de hiperpotasemia iatrogénica en pacientes ancianos y con ICC, evolucionando a asistolia."
+      },
+      conduta: {
+        pt: "Apenas repor KCl sob dosagem sérica diária ou 12/12h se o paciente estiver usando espironolactona na enfermaria.",
+        es: "Solo reponer KCl bajo dosaje sérico diario o cada 12h si el paciente está usando espironolactona en la sala."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */

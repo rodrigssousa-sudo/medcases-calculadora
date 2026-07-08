@@ -492,8 +492,208 @@
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
         warning: { pt: 'INTOXICAÇÃO POR MAGNÉSIO: Se a gestante perder os reflexos profundos (patelar) ou apresentar frequência respiratória < 12 ipm, SUSPENDER a infusão imediatamente. O Antídoto OBRIGATÓRIO é o Gluconato de Cálcio 10% IV (1 ampola direto).', es: 'INTOXICACIÓN POR MAGNESIO: Si la gestante pierde los reflejos profundos (rotuliano) o presenta frecuencia respiratoria < 12 rpm, SUSPENDER la infusión inmediatamente. El Antídoto OBLIGATORIO es el Gluconato de Calcio al 10% IV (1 ampolla directo).' }
       }
-    }  // end sulfato_magnesio
+    },  // end sulfato_magnesio
 
-  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 320 Lote 1+2+3 (Anestésicos ISR + BNMs + Reversores/Emergência) */
+/* ── GLUCONATO DE CÁLCIO ────────────────────────────────────────────── */
+    "gluconato_calcio": {
+      name: { pt: 'Gluconato de Cálcio', es: 'Gluconato de Calcio' },
+      category: 'emergencia',
+      class: { pt: 'Eletrólito / Estabilizador de Membrana / Antídoto', es: 'Electrolito / Estabilizador de Membrana / Antídoto' },
+      indications: {
+        pt: ['Estabilização miocárdica na Hipercalemia (Potássio alto) grave', 'Antídoto para intoxicação por Sulfato de Magnésio', 'Antídoto para intoxicação por Bloqueadores de Canal de Cálcio', 'Hipocalcemia sintomática aguda'],
+        es: ['Estabilización miocárdica en la Hiperpotasemia (Potasio alto) grave', 'Antídoto para intoxicación por Sulfato de Magnesio', 'Antídoto para intoxicación por Bloqueadores de Canal de Calcio', 'Hipocalcemia sintomática aguda']
+      },
+      commercialNames: { br: ['Gluconato de Cálcio 10%'], ar: ['Gluconato de Calcio 10%'] },
+      presentation: { pt: ['Ampolas IV 10% (100 mg/mL - 10 mL = 1g)'], es: ['Ampollas IV 10% (100 mg/mL - 10 mL = 1g)'] },
+      mechanism: {
+        pt: 'Na hipercalemia, não abaixa o nível de potássio, mas antagoniza a toxicidade do K+ nas membranas celulares do miocárdio, estabilizando o limiar de potencial de ação e prevenindo arritmias letais (fibrilação ventricular). Como reposição, fornece cálcio elementar de forma mais segura para veias periféricas do que o cloreto de cálcio.',
+        es: 'En la hiperpotasemia, no baja el nivel de potasio, pero antagoniza la toxicidad del K+ en las membranas celulares del miocardio, estabilizando el umbral de potencial de acción y previniendo arritmias letales (fibrilación ventricular). Como reposición, proporciona calcio elemental de forma más segura para venas periféricas que el cloruro de calcio.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hipercalemia/Intoxicações: 1 a 2 ampolas (1g a 2g) IV administradas ao longo de 5 a 10 minutos (pode ser repetido em 5-10 min se ECG não melhorar).',
+          es: 'Hiperpotasemia/Intoxicaciones: 1 a 2 ampollas (1g a 2g) IV administradas a lo largo de 5 a 10 minutos (puede repetirse en 5-10 min si el ECG no mejora).'
+        },
+        pediatric: {
+          pt: '100 a 200 mg/kg IV (1 a 2 mL/kg da solução a 10%). Máximo 2g por dose.',
+          es: '100 a 200 mg/kg IV (1 a 2 mL/kg de la solución al 10%). Máximo 2g por dosis.'
+        }
+      },
+      administration: { pt: ['Administrar IV direto lentamente (máximo 1 a 2 mL/min). A injeção rápida pode causar hipotensão, bradicardia e parada em sístole.', 'NUNCA administrar via IM ou SC (risco de necrose tecidual severa).'], es: ['Administrar IV directo lentamente (máximo 1 a 2 mL/min). La inyección rápida puede causar hipotensión, bradicardia y paro en sístole.', 'NUNCA administrar vía IM o SC (riesgo de necrosis tisular severa).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste para doses de emergência.', es: 'Sin necesidad de ajuste para dosis de emergencia.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Ondas de calor', 'Vasodilatação periférica', 'Gosto de giz na boca'], es: ['Oleadas de calor', 'Vasodilatación periférica', 'Sabor a tiza en la boca'] },
+      dangerousAdverseEffects: { pt: ['Necrose tecidual por extravasamento', 'Parada cardíaca (se injetado muito rapidamente)'], es: ['Necrosis tisular por extravasación', 'Paro cardíaco (si se inyecta muy rápidamente)'] },
+      contraindications: {
+        absolute: { pt: ['Fibrilação ventricular associada à toxicidade digitálica', 'Hipercalcemia ativa'], es: ['Fibrilación ventricular asociada a toxicidad digitálica', 'Hipercalcemia activa'] },
+        relative: { pt: ['Uso concomitante com glicosídeos cardíacos (digoxina)'], es: ['Uso concomitante con glucósidos cardíacos (digoxina)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: '10 mL de Gluconato de Cálcio 10% fornecem apenas 90 mg de cálcio elementar. É mais seguro e menos irritante para veias periféricas do que o Cloreto de Cálcio.', es: '10 mL de Gluconato de Calcio 10% proporcionan solo 90 mg de calcio elemental. Es más seguro y menos irritante para venas periféricas que el Cloruro de Calcio.' }
+      }
+    },  // end gluconato_calcio
+
+/* ── CLORETO DE CÁLCIO ──────────────────────────────────────────────── */
+    "cloreto_calcio": {
+      name: { pt: 'Cloreto de Cálcio', es: 'Cloruro de Calcio' },
+      category: 'emergencia',
+      class: { pt: 'Eletrólito / Inotrópico', es: 'Electrolito / Inotrópico' },
+      indications: {
+        pt: ['Parada Cardíaca (PCR) associada a hipercalemia, hipocalcemia ou hipermagnesemia', 'Choque vasoplégico pós-circulação extracorpórea (Cirurgia Cardíaca)', 'Intoxicação maciça por bloqueadores de canal de cálcio'],
+        es: ['Paro Cardíaco (RCP) asociada a hiperpotasemia, hipocalcemia o hipermagnesemia', 'Choque vasopléjico pos-circulación extracorpórea (Cirugía Cardíaca)', 'Intoxicación masiva por bloqueadores de canal de calcio']
+      },
+      commercialNames: { br: ['Cloreto de Cálcio 10%'], ar: ['Cloruro de Calcio 10%'] },
+      presentation: { pt: ['Ampolas IV 10% (100 mg/mL - 10 mL = 1g)'], es: ['Ampollas IV 10% (100 mg/mL - 10 mL = 1g)'] },
+      mechanism: {
+        pt: 'Fornece cálcio iônico de forma IMEDIATA. Ao contrário do gluconato (que requer passagem pelo fígado para liberar todo o cálcio), o cloreto de cálcio fornece 3 VEZES MAIS cálcio elementar por ampola (270 mg vs 90 mg do gluconato). Age aumentando a força de contração miocárdica (inotrópico positivo) e restaurando o limiar de excitabilidade cardíaca em PCR.',
+        es: 'Proporciona calcio iónico de forma INMEDIATA. A diferencia del gluconato (que requiere paso por el hígado para liberar todo el calcio), el cloruro de calcio proporciona 3 VECES MÁS calcio elemental por ampolla (270 mg vs 90 mg del gluconato). Actúa aumentando la fuerza de contracción miocárdica (inotrópico positivo) y restaurando el umbral de excitabilidad cardíaca en RCP.'
+      },
+      dose: {
+        adult: {
+          pt: 'Na PCR ou estado crítico de emergência extrema: 0,5 a 1 g IV (5 a 10 mL da ampola 10%) em bolus rápido.',
+          es: 'En RCP o estado crítico de emergencia extrema: 0,5 a 1 g IV (5 a 10 mL de la ampolla 10%) en bolo rápido.'
+        },
+        pediatric: {
+          pt: 'PCR: 20 mg/kg (0,2 mL/kg) IV direto. Máximo 1g.',
+          es: 'RCP: 20 mg/kg (0,2 mL/kg) IV directo. Máximo 1g.'
+        }
+      },
+      administration: { pt: ['EXTREMAMENTE IRRITANTE PARA AS VEIAS. O uso DEVE preferencialmente ser feito em Acesso Venoso Central. Se feito em veia periférica durante a PCR e houver extravasamento, causará necrose tecidual e esfacelamento de tecidos (necessitando amputação/debridamento).'], es: ['EXTREMAMENTE IRRITANTE PARA LAS VENAS. El uso DEBE preferentemente hacerse en Acceso Venoso Central. Si se hace en vena periférica durante RCP y hay extravasación, causará necrosis tisular y desprendimiento de tejidos (necesitando amputación/desbridamiento).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste na emergência.', es: 'Sin necesidad de ajuste en la emergencia.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Bradicardia (se injeção excessivamente rápida no paciente acordado)'], es: ['Bradicardia (si inyección excesivamente rápida en el paciente despierto)'] },
+      dangerousAdverseEffects: { pt: ['Necrose isquêmica extensa por extravasamento (dano tecidual catastrófico)', 'Fibrilação ventricular (raro)'], es: ['Necrosis isquémica extensa por extravasación (daño tisular catastrófico)', 'Fibrilación ventricular (raro)'] },
+      contraindications: {
+        absolute: { pt: ['Intoxicação digitálica grave'], es: ['Intoxicación digitálica grave'] },
+        relative: { pt: ['Ausência de acesso venoso central calibroso (quando paciente acordado e estável, usar Gluconato)'], es: ['Ausencia de acceso venoso central de gran calibre (cuando el paciente está despierto y estable, usar Gluconato)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Na prática da UTI: Se paciente em Parada Cardíaca -> CLORETO. Se paciente acordado hipercalêmico no PS -> GLUCONATO.', es: 'En la práctica de UCI: Si paciente en Paro Cardíaco -> CLORURO. Si paciente despierto hiperpotasémico en Urgencias -> GLUCONATO.' }
+      }
+    },  // end cloreto_calcio
+
+/* ── BICARBONATO DE SÓDIO ───────────────────────────────────────────── */
+    "bicarbonato_sodio": {
+      name: { pt: 'Bicarbonato de Sódio', es: 'Bicarbonato de Sodio' },
+      category: 'emergencia',
+      class: { pt: 'Agente Alcalinizante / Eletrólito', es: 'Agente Alcalinizante / Electrolito' },
+      indications: {
+        pt: ['Intoxicação por Antidepressivos Tricíclicos (alarga QRS)', 'Acidose metabólica severa com hipercalemia', 'Alcalinização da urina (intoxicação por salicilatos)', 'Parada Cardíaca prolongada (uso de exceção baseada em gasometria)'],
+        es: ['Intoxicación por Antidepresivos Tricíclicos (ensancha QRS)', 'Acidosis metabólica severa con hiperpotasemia', 'Alcalinización de la orina (intoxicación por salicilatos)', 'Paro Cardíaco prolongado (uso de excepción basada en gasometría)']
+      },
+      commercialNames: { br: ['Bicarbonato de Sódio 8,4% (1mEq/mL)'], ar: ['Bicarbonato de Sodio 8,4%'] },
+      presentation: { pt: ['Ampolas IV 8,4% (1 mEq/mL - 10 mL ou frascos 250 mL)'], es: ['Ampollas IV 8,4% (1 mEq/mL - 10 mL o viales 250 mL)'] },
+      mechanism: {
+        pt: 'Age como tampão sistêmico imediato, combinando-se com os íons hidrogênio (H+) para formar ácido carbônico, que se dissocia em água e CO2. Na intoxicação por tricíclicos, o sódio da fórmula sobrepuja o bloqueio dos canais rápidos de sódio cardíacos e a alcalemia favorece a forma não ionizada da droga, estreitando o QRS e prevenindo arritmias ventriculares.',
+        es: 'Actúa como tampón sistémico inmediato, combinándose con los iones hidrógeno (H+) para formar ácido carbónico, que se disocia en agua y CO2. En intoxicación por tricíclicos, el sodio de la fórmula supera el bloqueo de los canales rápidos de sodio cardíacos y la alcalemia favorece la forma no ionizada de la droga, estrechando el QRS y previniendo arritmias ventriculares.'
+      },
+      dose: {
+        adult: {
+          pt: 'Intoxicação por Tricíclicos: 1 a 2 mEq/kg IV em bolus rápido (1 a 2 mL/kg da solução a 8,4%). Acidose grave: Reposição baseada na fórmula do Déficit de Base (BE x Peso x 0,3).',
+          es: 'Intoxicación por Tricíclicos: 1 a 2 mEq/kg IV en bolo rápido (1 a 2 mL/kg de la solución al 8,4%). Acidosis grave: Reposición basada en la fórmula del Déficit de Base (BE x Peso x 0,3).'
+        },
+        pediatric: {
+          pt: '1 mEq/kg IV lento. Em neonatos, DEVE-SE usar a formulação pediátrica diluída (4,2%) para evitar hemorragia intraventricular.',
+          es: '1 mEq/kg IV lento. En neonatos, SE DEBE usar la formulación pediátrica diluida (4,2%) para evitar hemorragia intraventricular.'
+        }
+      },
+      administration: { pt: ['A injeção IV rápida só é indicada na Parada Cardíaca ou nas arritmias por Tricíclicos. Nos demais casos de acidose, a infusão deve ser gotejada lentamente.', 'O paciente DEVE estar sendo ventilado adequadamente, pois o bicarbonato gera excesso de CO2, que precisa ser exalado pelo pulmão.'], es: ['La inyección IV rápida solo está indicada en Paro Cardíaco o en arritmias por Tricíclicos. En los demás casos de acidosis, la infusión debe gotear lentamente.', 'El paciente DEBE estar siendo ventilado adecuadamente, ya que el bicarbonato genera exceso de CO2, que necesita ser exhalado por el pulmón.'] },
+      renalAdjustment: { required: false, message: { pt: 'Pilar do tratamento na hipercalemia da insuficiência renal aguda.', es: 'Pilar del tratamiento en hiperpotasemia de la insuficiencia renal aguda.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Aumento transitório de CO2 no sangue', 'Sobrecarga de volume e sódio'], es: ['Aumento transitorio de CO2 en la sangre', 'Sobrecarga de volumen y sodio'] },
+      dangerousAdverseEffects: { pt: ['Alcalose metabólica iatrogênica grave', 'Hipocalcemia aguda tetânica (o pH alcalino faz o cálcio se ligar massivamente à albumina)', 'Hemorragia intracraniana (em injeção rápida hiperosmolar em bebês)'], es: ['Alcalosis metabólica iatrogénica grave', 'Hipocalcemia aguda tetánica (el pH alcalino hace que el calcio se una masivamente a la albúmina)', 'Hemorragia intracraneal (en inyección rápida hiperosmolar en bebés)'] },
+      contraindications: {
+        absolute: { pt: ['Alcalose metabólica prévia', 'Hipocalcemia sintomática não corrigida', 'Edema Agudo de Pulmão (pela sobrecarga de sal)'], es: ['Alcalosis metabólica previa', 'Hipocalcemia sintomática no corregida', 'Edema Agudo de Pulmón (por sobrecarga de sal)'] },
+        relative: { pt: ['Ventilação ineficaz/Asma grave (incapacidade de expelir o CO2 gerado)'], es: ['Ventilación ineficaz/Asma grave (incapacidad de expeler el CO2 generado)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Não possui mais indicação na ressuscitação cardiopulmonar (RCP) de rotina! O uso rotineiro em PCR piora o desfecho neurológico. Usar apenas se PCR for decorrente de intoxicação por tricíclicos, hipercalemia prévia severa ou acidose lática preexistente.', es: '¡Ya no posee indicación en la reanimación cardiopulmonar (RCP) de rutina! El uso rutinario en RCP empeora el desenlace neurológico. Usar solo si RCP es por intoxicación por tricíclicos, hiperpotasemia previa severa o acidosis láctica preexistente.' }
+      }
+    },  // end bicarbonato_sodio
+
+/* ── CLORETO DE POTÁSSIO ────────────────────────────────────────────── */
+    "cloreto_potassio": {
+      name: { pt: 'Cloreto de Potássio (KCl)', es: 'Cloruro de Potasio (KCl)' },
+      category: 'emergencia',
+      class: { pt: 'Eletrólito intracelular vital', es: 'Electrolito intracelular vital' },
+      indications: {
+        pt: ['Tratamento da hipocalemia moderada a severa', 'Reposição contínua na Cetoacidose Diabética (junto com a insulina)', 'Correção de arritmias induzidas por hipocalemia ou intoxicação digitálica'],
+        es: ['Tratamiento de la hipopotasemia moderada a severa', 'Reposición continua en Cetoacidosis Diabética (junto con la insulina)', 'Corrección de arritmias inducidas por hipopotasemia o intoxicación digitálica']
+      },
+      commercialNames: { br: ['KCl 10%', 'KCl 19,1%'], ar: ['Cloruro de Potasio'] },
+      presentation: { pt: ['Ampolas IV 10% (1,34 mEq/mL)', 'Ampolas IV 19,1% (2,5 mEq/mL - Mais comum no BR)'], es: ['Ampollas IV 10% (1,34 mEq/mL)', 'Ampollas IV 19,1% (2,5 mEq/mL)'] },
+      mechanism: {
+        pt: 'Reposição direta do principal cátion intracelular. O potássio é fundamental para a condução do impulso nervoso, contração do músculo cardíaco, liso e esquelético, e manutenção do potencial de repouso celular normal.',
+        es: 'Reposición directa del principal catión intracelular. El potasio es fundamental para la conducción del impulso nervioso, contracción del músculo cardíaco, liso y esquelético, y mantenimiento del potencial de reposo celular normal.'
+      },
+      dose: {
+        adult: {
+          pt: 'Depende estritamente do nível sérico de K+. Reposição empírica IV: 10 a 20 mEq por HORA. (Ex: 1 ampola de KCl 19,1% tem ~25 mEq). Máximo absoluto: 40 mEq/hora em UTI.',
+          es: 'Depende estrictamente del nivel sérico de K+. Reposición empírica IV: 10 a 20 mEq por HORA. (Ej: 1 ampolla de KCl 19,1% tiene ~25 mEq). Máximo absoluto: 40 mEq/hora en UCI.'
+        },
+        pediatric: {
+          pt: '0,5 a 1 mEq/kg infundidos em 1 a 2 horas. Máximo 20 mEq por dose.',
+          es: '0,5 a 1 mEq/kg infundidos en 1 a 2 horas. Máximo 20 mEq por dosis.'
+        }
+      },
+      administration: { pt: ['A INFUSÃO RÁPIDA (BOLUS IV DIRETO) É LETAL. Causa parada cardíaca em assistolia irreversível.', 'VEIA PERIFÉRICA: Diluir no máximo 40 a 60 mEq em 1 Litro de SF/SG. Infundir máximo 10 mEq/hora (acima disso queima as veias e causa flebite severa).', 'VEIA CENTRAL: Pode-se concentrar mais e infundir até 20 a 40 mEq/hora sob monitorização por ECG obrigatória.'], es: ['LA INFUSIÓN RÁPIDA (BOLO IV DIRECTO) ES LETAL. Causa paro cardíaco en asistolia irreversible.', 'VENA PERIFÉRICA: Diluir máximo 40 a 60 mEq en 1 Litro de SF/SG. Infundir máximo 10 mEq/hora (por encima de eso quema las venas y causa flebitis severa).', 'VENA CENTRAL: Se puede concentrar más e infundir hasta 20 a 40 mEq/hora bajo monitorización por ECG obligatoria.'] },
+      renalAdjustment: { required: true, message: { pt: 'Na Doença Renal Crônica, reduzir drasticamente a reposição (o potássio não será excretado). Evitar exceto se documentadamente baixo e sintomático.', es: 'En Enfermedad Renal Crónica, reducir drásticamente la reposición (el potasio no será excretado). Evitar excepto si documentadamente bajo y sintomático.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Em cirróticos graves, manter níveis ideais de K+ (hipocalemia piora encefalopatia).', es: 'En cirróticos graves, mantener niveles ideales de K+ (la hipopotasemia empeora encefalopatía).' } },
+      commonAdverseEffects: { pt: ['Flebite e Dor intensa no membro ao infundir perifericamente (necessário reduzir a velocidade da bomba)'], es: ['Flebitis y Dolor intenso en el miembro al infundir periféricamente (necesario reducir velocidad de bomba)'] },
+      dangerousAdverseEffects: { pt: ['Hipercalemia iatrogênica', 'Bloqueio Atrioventricular, Fibrilação Ventricular e Assistolia'], es: ['Hiperpotasemia iatrogénica', 'Bloqueo Auriculoventricular, Fibrilación Ventricular y Asistolia'] },
+      contraindications: {
+        absolute: { pt: ['Infusão em bolus sem diluição (INJEÇÃO LETAL)', 'Hipercalemia', 'Insuficiência renal grave anúrica com potássio basal normal'], es: ['Infusión en bolo sin diluir (INYECCIÓN LETAL)', 'Hiperpotasemia', 'Insuficiencia renal grave anúrica con potasio basal normal'] },
+        relative: { pt: ['Uso associado com diuréticos poupadores de potássio (Espironolactona) sem exame de laboratório recente'], es: ['Uso asociado con diuréticos ahorradores de potasio (Espironolactona) sin examen de laboratorio reciente'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'DROGA MAIS MORTAL DA UTI POR ERRO DE ENFERMAGEM. A ampola de KCl NUNCA pode estar ao lado da ampola de SF 0,9% não identificada. Se injetada na seringa diretamente na veia do paciente, causará morte em 30 segundos.', es: 'DROGA MÁS MORTAL DE LA UCI POR ERROR DE ENFERMERÍA. La ampolla de KCl NUNCA puede estar al lado de la ampolla de SF 0,9% no identificada. Si se inyecta en jeringa directamente en la vena, causará muerte en 30 segundos.' }
+      }
+    },  // end cloreto_potassio
+
+/* ── CLORETO DE SÓDIO HIPERTÔNICO 3% ────────────────────────────────── */
+    "sodio_hipertonico": {
+      name: { pt: 'Cloreto de Sódio Hipertônico (NaCl 3% / Salina Hipertônica)', es: 'Cloruro de Sodio Hipertónico (NaCl 3% / Solución Salina Hipertónica)' },
+      category: 'emergencia',
+      class: { pt: 'Agente Osmótico / Eletrólito Concentrado', es: 'Agente Osmótico / Electrolito Concentrado' },
+      indications: {
+        pt: ['Hiponatremia aguda grave e SINTOMÁTICA (ex: convulsões ou coma hiponatrêmico)', 'Hipertensão Intracraniana (Edema cerebral por Trauma Cranioencefálico - TCE)'],
+        es: ['Hiponatremia aguda grave y SINTOMÁTICA (ej: convulsiones o coma hiponatrémico)', 'Hipertensión Intracraneal (Edema cerebral por Traumatismo Craneoencefálico - TCE)']
+      },
+      commercialNames: { br: ['Solução Salina Hipertônica 3% (ou feita via ampolas a 20%)'], ar: ['Solución Salina Hipertónica'] },
+      presentation: { pt: ['Bolsas de NaCl 3%', 'Preparação manual na UTI: Juntar 890 mL de SG 5% ou água destilada + 110 mL de NaCl 20% (cada ampola tem 10mL).'], es: ['Bolsas de NaCl 3%', 'Preparación manual en UCI: Juntar 890 mL de SG 5% o agua destilada + 110 mL de NaCl 20% (cada ampolla tiene 10mL).'] },
+      mechanism: {
+        pt: 'Solução com altíssima força osmótica. Na hipertensão intracraniana, atua como um ímã osmótico impermeável à barreira hematoencefálica intacta, "puxando" o excesso de água do parênquima cerebral para dentro dos vasos sanguíneos, reduzindo o edema. Na hiponatremia, repõe ativamente os níveis de sódio sérico para prevenir convulsões e herniação cerebral.',
+        es: 'Solución con altísima fuerza osmótica. En la hipertensión intracraneal, actúa como un imán osmótico impermeable a la barrera hematoencefálica intacta, "tirando" el exceso de agua del parénquima cerebral hacia dentro de los vasos sanguíneos, reduciendo el edema. En hiponatremia, repone activamente los niveles de sodio sérico para prevenir convulsiones y herniación cerebral.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hiponatremia sintomática (Convulsão): Bolus IV de 100 a 150 mL (em 10-15 min). Repetir até melhora neurológica. Hipertensão Intracraniana: Bolus IV de 250 mL seguido de alvo laboratorial de Na+ (145-155 mEq/L).',
+          es: 'Hiponatremia sintomática (Convulsión): Bolo IV de 100 a 150 mL (en 10-15 min). Repetir hasta mejora neurológica. Hipertensión Intracraneal: Bolo IV de 250 mL seguido de objetivo de Na+ (145-155 mEq/L).'
+        },
+        pediatric: {
+          pt: 'Hiponatremia com convulsão: Bolus de 3 a 5 mL/kg IV (ao longo de 10 a 20 min).',
+          es: 'Hiponatremia con convulsión: Bolo de 3 a 5 mL/kg IV (a lo largo de 10 a 20 min).'
+        }
+      },
+      administration: { pt: ['Preferencialmente via Acesso Venoso Central (altamente irritante para veias periféricas).', 'Uso OBRIGATÓRIO de Bomba de Infusão para garantir controle rígido de MLs infundidos.'], es: ['Preferentemente vía Acceso Venoso Central (altamente irritante para venas periféricas).', 'Uso OBLIGATORIO de Bomba de Infusión para garantizar control rígido de MLs infundidos.'] },
+      renalAdjustment: { required: true, message: { pt: 'Risco de sobrecarga hídrica massiva em anúricos. Fazer com extrema cautela guiado por sinais clínicos e eletrólitos.', es: 'Riesgo de sobrecarga hídrica masiva en anúricos. Hacer con extrema precaución guiado por signos clínicos y electrolitos.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Cuidado em cirróticos com ascite grave/edema maciço.', es: 'Cuidado en cirróticos con ascitis grave/edema masivo.' } },
+      commonAdverseEffects: { pt: ['Hipernatremia e Hiperosmolaridade esperadas', 'Flebite periférica', 'Acidose hiperclorêmica (o Cloreto acompanha o sódio na solução)'], es: ['Hipernatremia e Hiperosmolaridad esperadas', 'Flebitis periférica', 'Acidosis hiperclorémica (el Cloruro acompaña al sodio en la solución)'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME DE DESMIELINIZAÇÃO OSMÓTICA (Mielinólise Pontina Central)', 'Sobrecarga de volume e Edema Agudo de Pulmão', 'Lesão Renal Aguda'], es: ['SÍNDROME DE DESMIELINIZACIÓN OSMÓTICA (Mielinólisis Pontina Central)', 'Sobrecarga de volumen y Edema Agudo de Pulmón', 'Lesión Renal Aguda'] },
+      contraindications: {
+        absolute: { pt: ['Hiponatremia crônica assintomática (RISCO ABSOLUTO DE MORTE NEUROLÓGICA SE CORRIGIDA COM 3%)'], es: ['Hiponatremia crónica asintomática (RIESGO ABSOLUTO DE MUERTE NEUROLÓGICA SI SE CORRIGE CON 3%)'] },
+        relative: { pt: ['Edema pulmonar não cardiogênico / Insuficiência cardíaca descompensada'], es: ['Edema pulmonar no cardiogénico / Insuficiencia cardíaca descompensada'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A CORREÇÃO DO SÓDIO TEM LIMITE DIÁRIO. Se a hiponatremia do paciente for CRÔNICA, a reposição rápida causará a Síndrome de Desmielinização Osmótica (tetraplegia irreversível, coma e morte dias após). Regra de Ouro: não ultrapassar o aumento de 8 a 10 mEq/L de sódio nas primeiras 24 horas.', es: 'LA CORRECCIÓN DEL SODIO TIENE LÍMITE DIARIO. Si la hiponatremia del paciente es CRÓNICA, la reposición rápida causará el Síndrome de Desmielinización Osmótica (tetraplejía irreversible, coma y muerte días después). Regla de Oro: no superar el aumento de 8 a 10 mEq/L de sodio en las primeras 24 horas.' }
+      }
+    }  // end sodio_hipertonico
+
+  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 322 Lote 1+2+3+4 (ISR + BNMs + Reversores + Eletrólitos) */
 
 })();
