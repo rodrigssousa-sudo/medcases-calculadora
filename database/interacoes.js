@@ -18351,6 +18351,111 @@ const INTERACOES_DB = {
         es: "Monitorizar Potasio rigurosamente en Terapia Intensiva si ambas drogas están corriendo en el paciente."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Endocrinologia — BUILD 310 Lote 2
+   Glulisina, NPH, Dulaglutida, Retatrutida, Glucagon
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── INSULINA NPH & GLULISINA ── */
+  "insulina_nph": {
+    "insulina_glulisina": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "REGRA DE MISTURA (Interação Farmacêutica). Quando prescritas juntas na mesma seringa, a insulina de ação rápida/ultra-rápida (Regular, Glulisina, Asparte, Lispro) DEVE SER PUXADA PRIMEIRO. Se o frasco da rápida for contaminado pela NPH turva, ela perderá sua ação rápida irremediavelmente.",
+        es: "REGLA DE MEZCLA (Interacción Farmacéutica). Cuando se prescriben juntas en la misma jeringa, la insulina de acción rápida/ultra-rápida (Regular, Glulisina, Aspart, Lispro) DEBE SER EXTRAÍDA PRIMERO. Si el vial de la rápida se contamina con la NPH turbia, perderá su acción rápida irremediablemente."
+      },
+      conduta: {
+        pt: "Instruir equipe técnica e paciente: 'Injetar ar na NPH -> Injetar ar na Rápida -> Puxar a Rápida -> Puxar a NPH'. Misturar e aplicar em menos de 5 minutos.",
+        es: "Instruir equipo técnico y paciente: 'Inyectar aire en la NPH -> Inyectar aire en la Rápida -> Extraer la Rápida -> Extraer la NPH'. Mezclar y aplicar en menos de 5 minutos."
+      }
+    }
+  },
+
+  /* ── DULAGLUTIDA ── */
+  "dulaglutida": {
+    "anticoncepcional_hormonal": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A dulaglutida (assim como outros análogos de GLP-1) retarda o esvaziamento gástrico, reduzindo a taxa de absorção de medicamentos orais. Pode diminuir transitoriamente o pico sérico de pílulas anticoncepcionais orais, embora menos agressivo que a tirzepatida.",
+        es: "La dulaglutida (así como otros análogos de GLP-1) retrasa el vaciamiento gástrico, reduciendo la tasa de absorción de medicamentos orales. Puede disminuir transitoriamente el pico sérico de píldoras anticonceptivas orales, aunque menos agresivo que la tirzepatida."
+      },
+      conduta: {
+        pt: "Acompanhar paciente e considerar método de barreira nas primeiras 4 semanas da introdução da droga.",
+        es: "Seguir paciente y considerar método de barrera en las primeras 4 semanas de la introducción de la droga."
+      }
+    },
+    "$classe_hipoglicemiantes_secretagogos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo de alto risco se combinado com Sulfonilureias (Glibenclamida, Gliclazida). A supressão calórica causada pelo efeito anorexígeno do GLP-1 cruza com o hiperinsulinismo da sulfonilureia, gerando hipoglicemia severa.",
+        es: "Sinergismo de alto riesgo si se combina con Sulfonilureas (Glibenclamida, Gliclazida). La supresión calórica causada por el efecto anorexígeno del GLP-1 cruza con el hiperinsulinismo de la sulfonilurea, generando hipoglucemia severa."
+      },
+      conduta: {
+        pt: "Obrigatório reduzir a sulfonilureia pela metade ou suspender quando iniciar a Dulaglutida.",
+        es: "Obligatorio reducir la sulfonilurea a la mitad o suspender cuando se inicie la Dulaglutida."
+      }
+    }
+  },
+
+  /* ── RETATRUTIDA ── */
+  "retatrutida": {
+    "$classe_betabloqueadores": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A retatrutida ativa fortemente receptores de Glucagon endógenos, o que exerce efeito inotrópico e cronotrópico cardíaco positivo (acelera os batimentos). O uso simultâneo de betabloqueadores pode criar um conflito autonômico hemodinâmico, exigindo ajuste da terapia cardiovascular e monitoramento de arritmias.",
+        es: "La retatrutida activa fuertemente receptores de Glucagón endógenos, lo que ejerce efecto inotrópico y cronotrópico cardíaco positivo (acelera los latidos). El uso simultáneo de betabloqueantes puede crear un conflicto autonómico hemodinámico, exigiendo ajuste de la terapia cardiovascular y monitorización de arritmias."
+      },
+      conduta: {
+        pt: "Droga em fase investigacional (Fase 3). Estreita vigilância cardiológica obrigatória.",
+        es: "Droga en fase investigacional (Fase 3). Estrecha vigilancia cardiológica obligatoria."
+      }
+    }
+  },
+
+  /* ── GLUCAGON ── */
+  "glucagon": {
+    "$classe_betabloqueadores": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "INTERAÇÃO DE RESGATE VITAL (Uso Intencional). Betabloqueadores em dose tóxica paralisam o coração e as vias adrenérgicas padrão são inúteis. O glucagon age nos próprios receptores miocárdicos, ativando AMPc de forma independente, servindo como o ANTÍDOTO de escolha para intoxicações por propranolol, atenolol, etc.",
+        es: "INTERACCIÓN DE RESCATE VITAL (Uso Intencional). Betabloqueantes en dosis tóxica paralizan el corazón y las vías adrenérgicas estándar son inútiles. El glucagón actúa en sus propios receptores miocárdicos, activando AMPc de forma independiente, sirviendo como el ANTÍDOTO de elección para intoxicaciones por propranolol, atenolol, etc."
+      },
+      conduta: {
+        pt: "Bolus IV em massa (até 10 mg) em ambiente de sala de emergência para resgate cardíaco.",
+        es: "Bolo IV en masa (hasta 10 mg) en ambiente de sala de emergencias para rescate cardíaco."
+      }
+    },
+    "varfarina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "Altas doses de glucagon IV (para resgates) podem exacerbar potentemente o efeito hipoprotrombinêmico da varfarina, levando a sangramentos agudos não explicados.",
+        es: "Altas dosis de glucagón IV (para rescates) pueden exacerbar potentemente el efecto hipoprotrombinémico de la warfarina, llevando a sangrados agudos no explicados."
+      },
+      conduta: {
+        pt: "Acompanhar paciente anticoagulado nas horas seguintes ao resgate.",
+        es: "Seguir paciente anticoagulado en las horas siguientes al rescate."
+      }
+    },
+    "alcool": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "FALHA TERAPÊUTICA LETAL. O metabolismo massivo do etanol no fígado paralisa as enzimas da gliconeogênese. Se o paciente alcoolizado (em coma alcoólico) sofrer hipoglicemia e receber injeção de glucagon, o fígado NÃO VAI RESPONDER. O paciente pode morrer de hipoglicemia se a equipe aguardar o efeito.",
+        es: "FALLO TERAPÉUTICO LETAL. El metabolismo masivo del etanol en el hígado paraliza las enzimas de la gluconeogénesis. Si el paciente alcoholizado (en coma alcohólico) sufre hipoglucemia y recibe inyección de glucagón, el hígado NO VA A RESPONDER. El paciente puede morir de hipoglucemia si el equipo espera el efecto."
+      },
+      conduta: {
+        pt: "NUNCA usar glucagon para resgate de hipoglicemia associada ao uso abusivo de álcool. O único resgate efetivo e imediato é a Glicose Hipertônica 50% via endovenosa.",
+        es: "NUNCA usar glucagón para rescate de hipoglucemia asociada al uso abusivo de alcohol. El único rescate efectivo e inmediato es la Glucosa Hipertónica al 50% vía endovenosa."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */

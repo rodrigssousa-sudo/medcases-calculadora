@@ -228,8 +228,208 @@
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
         warning: { pt: 'CUIDADO AO MISTURAR: Ao contrário das basais (Glargina/Degludeca) que não podem ser misturadas, a Lispro PODE ser misturada na seringa com NPH, contanto que seja injetada imediatamente após a mistura.', es: 'CUIDADO AL MEZCLAR: A diferencia de las basales (Glargina/Degludec) que no pueden ser mezcladas, la Lispro PUEDE ser mezclada en la jeringa con NPH, siempre que se inyecte inmediatamente tras la mezcla.' }
       }
-    }
+    },  // end insulina_lispro
 
-  }); /* fim Object.assign ENDOCRINO_DRUGS_DB — BUILD 308 Lote 1 (Insulinas Análogas) */
+/* ── INSULINA GLULISINA ─────────────────────────────────────────────── */
+    "insulina_glulisina": {
+      name: { pt: 'Insulina Glulisina', es: 'Insulina Glulisina' },
+      category: 'endocrino',
+      class: { pt: 'Insulina Análoga Prandial Ultra-Rápida', es: 'Insulina Análoga Prandial Ultra-Rápida' },
+      indications: {
+        pt: ['Controle glicêmico periprandial', 'Correção de hiperglicemias agudas', 'Bomba de infusão contínua de insulina (CSII)'],
+        es: ['Control glucémico periprandial', 'Corrección de hiperglucemias agudas', 'Bomba de infusión continua de insulina (CSII)']
+      },
+      commercialNames: { br: ['Apidra'], ar: ['Apidra'] },
+      presentation: { pt: ['Caneta/Refil SC 100 UI/mL', 'Frasco-ampola SC/IV 100 UI/mL'], es: ['Pluma/Cartucho SC 100 UI/mL', 'Vial SC/IV 100 UI/mL'] },
+      mechanism: {
+        pt: 'Semelhante à asparte e à lispro, a glulisina possui troca de aminoácidos (asparagina por lisina na posição B3, e lisina por ácido glutâmico na posição B29). Diferencial: É a única insulina ultra-rápida isenta de zinco, o que permite um início de ação e absorção ligeiramente mais consistentes em pacientes com diferentes espessuras de tecido adiposo (obesidade).',
+        es: 'Similar a aspart y lispro, la glulisina posee intercambio de aminoácidos (asparagina por lisina en la posición B3, y lisina por ácido glutámico en la posición B29). Diferencial: Es la única insulina ultra-rápida libre de zinc, lo que permite un inicio de acción y absorción ligeramente más consistentes en pacientes con diferentes grosores de tejido adiposo (obesidad).'
+      },
+      dose: {
+        adult: {
+          pt: 'Geralmente 50% da dose total diária (junto com 50% basal), dividida nas refeições, guiada por contagem de carboidratos.',
+          es: 'Geralmente 50% de la dosis total diaria (junto con 50% basal), dividida en las comidas, guiada por conteo de carbohidratos.'
+        },
+        pediatric: {
+          pt: 'Aprovada para > 4 anos. Dose titulada conforme sensibilidade e alimentação.',
+          es: 'Aprobada para > 4 años. Dosis titulada según sensibilidad y alimentación.'
+        }
+      },
+      administration: { pt: ['Aplicar de 0 a 15 minutos ANTES da refeição, ou logo após a ingestão.', 'Via SC, ou IV (em ambiente de UTI).'], es: ['Aplicar de 0 a 15 minutos ANTES de la comida, o justo después de la ingesta.', 'Vía SC, o IV (en ambiente de UCI).'] },
+      renalAdjustment: { required: true, message: { pt: 'Insulinas não são degradadas em insuficiência renal. Necessidade cai; reduzir dose empiricamente para evitar hipoglicemia.', es: 'Las insulinas no se degradan en insuficiencia renal. La necesidad cae; reducir dosis empíricamente para evitar hipoglucemia.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Necessidade reduzida na cirrose hepática (menor gliconeogênese).', es: 'Necesidad reducida en cirrosis hepática (menor gluconeogénesis).' } },
+      commonAdverseEffects: { pt: ['Hipoglicemia leve peri-prandial', 'Lipodistrofia se não rodiziar local'], es: ['Hipoglucemia leve periprandial', 'Lipodistrofia si no se rota el lugar'] },
+      dangerousAdverseEffects: { pt: ['Choque hipoglicêmico', 'Hipocalemia (se infusão IV)'], es: ['Choque hipoglucémico', 'Hipopotasemia (si infusión IV)'] },
+      contraindications: {
+        absolute: { pt: ['Hipoglicemia no momento do uso'], es: ['Hipoglucemia en el momento del uso'] },
+        relative: { pt: ['Nenhuma formal se prescrita corretamente.'], es: ['Ninguna formal si se prescribe correctamente.'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'COMPATIBILIDADE: Se for misturada com insulina NPH na seringa, a glulisina DEVE ser puxada para dentro da seringa PRIMEIRO. A mistura deve ser injetada imediatamente.', es: 'COMPATIBILIDAD: Si se mezcla con insulina NPH en la jeringa, la glulisina DEBE ser extraída dentro de la jeringa PRIMERO. La mezcla debe inyectarse inmediatamente.' }
+      }
+    },  // end insulina_glulisina
+
+/* ── INSULINA NPH ───────────────────────────────────────────────────── */
+    "insulina_nph": {
+      name: { pt: 'Insulina NPH', es: 'Insulina NPH' },
+      category: 'endocrino',
+      class: { pt: 'Insulina Humana de Ação Intermediária', es: 'Insulina Humana de Acción Intermedia' },
+      indications: {
+        pt: ['Controle glicêmico basal em DM1 e DM2', 'DM Gestacional (insulina de escolha pela vasta segurança clínica histórica)'],
+        es: ['Control glucémico basal en DM1 y DM2', 'DM Gestacional (insulina de elección por la vasta seguridad clínica histórica)']
+      },
+      commercialNames: { br: ['Novolin N', 'Humulin N', 'Insulina NPH SUS'], ar: ['Insulatard', 'Humulin N'] },
+      presentation: { pt: ['Frasco-ampola ou Caneta SC 100 UI/mL (Suspensão leitosa)'], es: ['Vial o Pluma SC 100 UI/mL (Suspensión lechosa)'] },
+      mechanism: {
+        pt: 'Neutral Protamine Hagedorn (NPH). É a insulina humana regular combinada com zinco e protamina (uma proteína extraída do esperma do salmão) em pH neutro. Essa combinação atrasa a absorção subcutânea. Início de ação em 1-2h, possui um PICO claro entre 4-12h e duração de 12-18h. Não cobre as 24 horas do dia sozinha.',
+        es: 'Neutral Protamine Hagedorn (NPH). Es la insulina humana regular combinada con zinc y protamina (una proteína extraída del esperma del salmón) en pH neutro. Esta combinación retrasa la absorción subcutánea. Inicio de acción en 1-2h, posee un PICO claro entre 4-12h y duración de 12-18h. No cubre las 24 horas del día por sí sola.'
+      },
+      dose: {
+        adult: {
+          pt: 'Geralmente 0,1 a 0,2 UI/kg/dia para iniciar em DM2. Como não dura 24h, a dose total é usualmente dividida em 2/3 de manhã e 1/3 à noite (ao deitar, "bedtime").',
+          es: 'Geralmente 0,1 a 0,2 UI/kg/día para iniciar en DM2. Como no dura 24h, la dosis total se divide usualmente en 2/3 por la mañana y 1/3 en la noche (al acostarse, "bedtime").'
+        },
+        pediatric: {
+          pt: 'Muito comum em DM1 infantil no SUS. Doses ajustadas rigorosamente por peso e fase de crescimento.',
+          es: 'Muy común en DM1 infantil (sistema público). Dosis ajustadas rigurosamente por peso y fase de crecimiento.'
+        }
+      },
+      administration: { pt: ['Por ser uma suspensão, deve ser HOMOGENEIZADA rolando o frasco entre as mãos 10 a 20 vezes antes do uso (nunca sacudir vigorosamente).', 'Somente via SC. NUNCA fazer NPH via endovenosa.'], es: ['Al ser una suspensión, debe ser HOMOGENEIZADA rodando el vial entre las manos 10 a 20 veces antes del uso (nunca agitar vigorosamente).', 'Solo vía SC. NUNCA administrar NPH vía endovenosa.'] },
+      renalAdjustment: { required: true, message: { pt: 'Reduzir dose na DRC progressiva para evitar hipoglicemia noturna.', es: 'Reducir dosis en ERC progresiva para evitar hipoglucemia nocturna.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Necessidades menores em cirróticos.', es: 'Necesidades menores en cirróticos.' } },
+      commonAdverseEffects: { pt: ['Ganho de peso (maior que os análogos)', 'Eritema local', 'Lipohipertrofia'], es: ['Ganancia de peso (mayor que los análogos)', 'Eritema local', 'Lipohipertrofia'] },
+      dangerousAdverseEffects: { pt: ['Hipoglicemia noturna/madrugada severa (devido ao pico de ação coincidir com o jejum noturno)', 'Alergia à protamina (rara, mas severa)'], es: ['Hipoglucemia nocturna/madrugada severa (debido a que el pico de acción coincide con el ayuno nocturno)', 'Alergia a la protamina (rara, pero severa)'] },
+      contraindications: {
+        absolute: { pt: ['Hipoglicemia ativa', 'Via IV'], es: ['Hipoglucemia activa', 'Vía IV'] },
+        relative: { pt: ['Pacientes com história de hipoglicemia noturna assintomática (preferir análogos como Glargina/Degludeca)'], es: ['Pacientes con historia de hipoglucemia nocturna asintomática (preferir análogos como Glargina/Degludec)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'RISCO NOTURNO: Se a NPH noturna for aplicada antes do jantar (ex: 18h), seu PICO de ação máxima ocorrerá por volta das 2h da madrugada, gerando hipoglicemias ocultas graves. Orientar sempre a aplicação ao deitar (22h-23h) e consumo de um lanche ceia.', es: 'RIESGO NOCTURNO: Si la NPH nocturna se aplica antes de la cena (ej: 18h), su PICO de acción máxima ocurrirá alrededor de las 2h de la madrugada, generando hipoglucemias ocultas graves. Orientar siempre la aplicación al acostarse (22h-23h) y consumo de un refrigerio.' }
+      }
+    },  // end insulina_nph
+
+/* ── DULAGLUTIDA ────────────────────────────────────────────────────── */
+    "dulaglutida": {
+      name: { pt: 'Dulaglutida', es: 'Dulaglutida' },
+      category: 'endocrino',
+      class: { pt: 'Agonista do Receptor de GLP-1', es: 'Agonista del Receptor de GLP-1' },
+      indications: {
+        pt: ['Diabetes Mellitus Tipo 2 (redução de glicemia e risco cardiovascular)', 'Redução de MACE (eventos cardiovasculares maiores) em diabéticos'],
+        es: ['Diabetes Mellitus Tipo 2 (reducción de glucemia y riesgo cardiovascular)', 'Reducción de MACE (eventos cardiovasculares mayores) en diabéticos']
+      },
+      commercialNames: { br: ['Trulicity'], ar: ['Trulicity'] },
+      presentation: { pt: ['Caneta SC dose única 0,75 mg, 1,5 mg'], es: ['Pluma SC dosis única 0,75 mg, 1,5 mg'] },
+      mechanism: {
+        pt: 'Molécula de GLP-1 fundida a um fragmento Fc de IgG4 modificada, protegendo-a da degradação pela enzima DPP-4 e retardando a eliminação renal. Exerce ação de estimulação de insulina, inibição de glucagon e retardo do esvaziamento gástrico, com meia-vida de cerca de 5 dias.',
+        es: 'Molécula de GLP-1 fusionada a un fragmento Fc de IgG4 modificada, protegiéndola de la degradación por la enzima DPP-4 y retrasando la eliminación renal. Ejerce acción de estimulación de insulina, inhibición de glucagón y retraso del vaciamiento gástrico, con vida media de unos 5 días.'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciar com 0,75 mg 1x/semana. Pode ser aumentada para 1,5 mg/semana para controle adicional.',
+          es: 'Iniciar con 0,75 mg 1 vez/semana. Puede aumentarse a 1,5 mg/semana para control adicional.'
+        },
+        pediatric: {
+          pt: 'Aprovada para > 10 anos com DM2 (não como droga de emagrecimento principal).',
+          es: 'Aprobada para > 10 años con DM2 (no como droga de adelgazamiento principal).'
+        }
+      },
+      administration: { pt: ['Aplicação subcutânea 1 VEZ POR SEMANA.', 'A caneta não exige manuseio de agulha pelo paciente (agulha oculta que injeta e retrai automaticamente).'], es: ['Aplicación subcutánea 1 VEZ POR SEMANA.', 'La pluma no exige manipulación de aguja por el paciente (aguja oculta que inyecta y se retrae automáticamente).'] },
+      renalAdjustment: { required: false, message: { pt: 'Nenhum ajuste necessário em DRC. Hidratação recomendada devido aos vômitos iniciais.', es: 'Ningún ajuste necesario en ERC. Hidratación recomendada debido a los vómitos iniciales.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Náusea (diminui ao longo de 2-4 semanas)', 'Diarreia e Vômitos', 'Fadiga'], es: ['Náusea (disminuye a lo largo de 2-4 semanas)', 'Diarrea y Vómitos', 'Fatiga'] },
+      dangerousAdverseEffects: { pt: ['Pancreatite Aguda', 'Risco potencial (em roedores) de Carcinoma Medular de Tireoide'], es: ['Pancreatitis Aguda', 'Riesgo potencial (en roedores) de Carcinoma Medular de Tiroides'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de CMT (Carcinoma Medular de Tireoide) ou NEM-2', 'Gravidez'], es: ['Historial de CMT (Carcinoma Medular de Tiroides) o NEM-2', 'Embarazo'] },
+        relative: { pt: ['Gastroparésia pré-existente'], es: ['Gastroparesia preexistente'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Possui indicação formal (em bula) de superioridade cardioprotetora, assim como a semaglutida. Perda de peso gerada é considerável, porém inferior à semaglutida/tirzepatida.', es: 'Posee indicación formal (en prospecto) de superioridad cardioprotectora, así como la semaglutida. La pérdida de peso generada es considerable, pero inferior a la semaglutida/tirzepatida.' }
+      }
+    },  // end dulaglutida
+
+/* ── RETATRUTIDA ────────────────────────────────────────────────────── */
+    "retatrutida": {
+      name: { pt: 'Retatrutida', es: 'Retatrutida' },
+      category: 'endocrino',
+      class: { pt: 'Triplo Agonista (GLP-1 / GIP / Glucagon)', es: 'Triple Agonista (GLP-1 / GIP / Glucagón)' },
+      indications: {
+        pt: ['(Fronteira/Pesquisa) Obesidade mórbida / Manejo de peso extremo', 'Doença Hepática Estesteatótica associada à Disfunção Metabólica (MASLD/NASH) severa'],
+        es: ['(Frontera/Investigación) Obesidad mórbida / Manejo de peso extremo', 'Enfermedad Hepática Esteatótica asociada a Disfunción Metabólica (MASLD/NASH) severa']
+      },
+      commercialNames: { br: ['(Ainda sob pesquisa clínica - Fase 3 / Eli Lilly)'], ar: ['(Investigación)'] },
+      presentation: { pt: ['Em desenvolvimento (Canetas SC)'], es: ['En desarrollo (Plumas SC)'] },
+      mechanism: {
+        pt: 'Molécula de fronteira absoluta. Atua simultaneamente em TRÊS receptores: GLP-1 (sacia e aumenta insulina), GIP (melhora sensibilidade e queima gordura branca) e RECEPTOR DE GLUCAGON. A ativação do glucagon aumenta o gasto energético basal (termogênese) e gera eliminação agressiva de gordura ectópica (limpa a gordura do fígado/esteatose quase que completamente). É o agente mais potente já criado, induzindo perdas de até 25% do peso corporal.',
+        es: 'Molécula de frontera absoluta. Actúa simultáneamente en TRES receptores: GLP-1 (sacia y aumenta insulina), GIP (mejora sensibilidad y quema grasa blanca) y RECEPTOR DE GLUCAGÓN. La activación del glucagón aumenta el gasto energético basal (termogénesis) y genera eliminación agresiva de grasa ectópica (limpia la grasa del hígado/esteatosis casi por completo). Es el agente más potente jamás creado, induciendo pérdidas de hasta 25% del peso corporal.'
+      },
+      dose: {
+        adult: {
+          pt: 'SC Semanal. Titulação lenta sendo validada em ensaios (geralmente iniciando em 1-2 mg até 12 mg).',
+          es: 'SC Semanal. Titulación lenta siendo validada en ensayos (generalmente iniciando en 1-2 mg hasta 12 mg).'
+        },
+        pediatric: {
+          pt: 'Sem dados aplicáveis ainda.',
+          es: 'Sin datos aplicables aún.'
+        }
+      },
+      administration: { pt: ['Administração subcutânea semanal pretendida.'], es: ['Administración subcutánea semanal pretendida.'] },
+      renalAdjustment: { required: false, message: { pt: 'Dados de Fase 3 definirão protocolos.', es: 'Datos de Fase 3 definirán protocolos.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Demonstra potencial reverso maciço para cirrose não-alcoólica (MASLD).', es: 'Demuestra potencial reverso masivo para cirrosis no alcohólica (MASLD).' } },
+      commonAdverseEffects: { pt: ['Náusea extrema e vômitos', 'Aumento basal da frequência cardíaca (efeito do glucagon/cronotropismo)', 'Arritmias leves'], es: ['Náusea extrema y vómitos', 'Aumento basal de la frecuencia cardíaca (efecto del glucagón/cronotropismo)', 'Arritmias leves'] },
+      dangerousAdverseEffects: { pt: ['Taquicardia sustentada e exacerbação cardiovascular aguda (em estudo)', 'Pancreatite'], es: ['Taquicardia sostenida y exacerbación cardiovascular aguda (en estudio)', 'Pancreatitis'] },
+      contraindications: {
+        absolute: { pt: ['Provavelmente as mesmas (NEM-2, CMT) e pacientes com taquiarritmias graves não controladas.'], es: ['Probablemente las mismas (NEM-2, CMT) y pacientes con taquiarritmias graves no controladas.'] },
+        relative: { pt: ['Uso associado a inotrópicos ou simpaticomiméticos'], es: ['Uso asociado a inotrópicos o simpaticomiméticos'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'MEDICAMENTO EM DESENVOLVIMENTO: O agonismo do Glucagon gera preocupações sobre o cronotropismo cardíaco (acelera o coração em até 10-15 bpm de forma basal). Monitoramento cardiovascular será crítico em aprovação.', es: 'MEDICAMENTO EN DESARROLLO: El agonismo del Glucagón genera preocupaciones sobre el cronotropismo cardíaco (acelera el corazón hasta 10-15 lpm de forma basal). Monitorización cardiovascular será crítica en aprobación.' }
+      }
+    },  // end retatrutida
+
+/* ── GLUCAGON ───────────────────────────────────────────────────────── */
+    "glucagon": {
+      name: { pt: 'Glucagon', es: 'Glucagón' },
+      category: 'endocrino',
+      class: { pt: 'Hormônio Hiperglicemiante / Antídoto', es: 'Hormona Hiperglucemiante / Antídoto' },
+      indications: {
+        pt: ['Hipoglicemia severa em pacientes sem acesso venoso', 'Intoxicação grave / Overdose por Betabloqueadores e Bloqueadores de Canal de Cálcio'],
+        es: ['Hipoglucemia severa en pacientes sin acceso venoso', 'Intoxicación grave / Sobredosis por Betabloqueantes y Bloqueadores de Canal de Calcio']
+      },
+      commercialNames: { br: ['GlucaGen HypoKit'], ar: ['GlucaGen'] },
+      presentation: { pt: ['Frasco-ampola liofilizado 1 mg (1 mg = 1 UI) com seringa de diluente'], es: ['Vial liofilizado 1 mg (1 mg = 1 UI) con jeringa de diluyente'] },
+      mechanism: {
+        pt: 'Hormônio endógeno contra-regulador da insulina. Liga-se aos receptores hepáticos de glucagon, ativando a adenilciclase e gerando AMPc. Isso induz glicogenólise maciça (quebra de glicogênio armazenado) e liberação de glicose para o sangue. Como antídoto cardíaco: O aumento de AMPc no coração pelo glucagon ocorre de forma INDEPENDENTE dos receptores beta-adrenérgicos, revertendo bradicardia e choque por betabloqueadores.',
+        es: 'Hormona endógena contrarreguladora de la insulina. Se une a los receptores hepáticos de glucagón, activando la adenilciclasa y generando AMPc. Esto induce glucogenólisis masiva (ruptura de glucógeno almacenado) y liberación de glucosa a la sangre. Como antídoto cardíaco: El aumento de AMPc en el corazón por el glucagón ocurre de forma INDEPENDIENTE a los receptores beta-adrenérgicos, revirtiendo bradicardia y choque por betabloqueantes.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hipoglicemia: 1 mg SC ou IM profundo. Antídoto BB/BCC: Bolus IV de 3 a 10 mg (doses massivas), seguido de infusão de 3 a 5 mg/hora.',
+          es: 'Hipoglucemia: 1 mg SC o IM profundo. Antídoto BB/BCC: Bolo IV de 3 a 10 mg (dosis masivas), seguido de infusión de 3 a 5 mg/hora.'
+        },
+        pediatric: {
+          pt: 'Hipoglicemia (crianças < 25 kg): 0,5 mg IM/SC.',
+          es: 'Hipoglucemia (niños < 25 kg): 0,5 mg IM/SC.'
+        }
+      },
+      administration: { pt: ['No kit hipoglicêmico ambulatorial, instruir a família a injetar na coxa/braço de forma imediata quando o diabético desmaiar.', 'Recupera consciência em 10-15 min. Após acordar, DEVE comer carboidratos imediatamente.'], es: ['En el kit hipoglucémico ambulatorio, instruir a la familia a inyectar en el muslo/brazo de forma inmediata cuando el diabético se desmaye.', 'Recupera consciencia en 10-15 min. Tras despertar, DEBE comer carbohidratos inmediatamente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Pacientes com falência hepática (cirróticos) NÃO TÊM RESERVAS de glicogênio. O glucagon SERÁ INÚTIL para tratar hipoglicemia nesses casos. Exigem glicose IV.', es: 'Pacientes con falla hepática (cirróticos) NO TIENEN RESERVAS de glucógeno. El glucagón SERÁ INÚTIL para tratar hipoglucemia en estos casos. Exigen glucosa IV.' } },
+      commonAdverseEffects: { pt: ['Vômitos intensos (comum após acordar do choque, risco de broncoaspiração)', 'Taquicardia e hipertensão reativa', 'Hipoglicemia rebote severa (se não comer carboidratos após o uso)'], es: ['Vómitos intensos (común tras despertar del choque, riesgo de broncoaspiración)', 'Taquicardia e hipertensión reactiva', 'Hipoglucemia rebote severa (si no come carbohidratos tras el uso)'] },
+      dangerousAdverseEffects: { pt: ['Crise hipertensiva fulminante (em pacientes com Feocromocitoma não diagnosticado)'], es: ['Crisis hipertensiva fulminante (en pacientes con Feocromocitoma no diagnosticado)'] },
+      contraindications: {
+        absolute: { pt: ['Feocromocitoma', 'Insulinoma (pode estimular secreção fatal de insulina)'], es: ['Feocromocitoma', 'Insulinoma (puede estimular secreción fatal de insulina)'] },
+        relative: { pt: ['Jejum prolongado, Desnutrição grave ou Alcoolismo (não fará efeito pela falta de glicogênio)'], es: ['Ayuno prolongado, Desnutrición grave o Alcoholismo (no hará efecto por la falta de glucógeno)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O glucagon NÃO FUNCIONA em hipoglicemias induzidas por BEBEDEIRAS (álcool). O álcool bloqueia a gliconeogênese, e o fígado não responderá ao glucagon. Utilizar Ampolas de Glicose Hipertônica IV.', es: 'El glucagón NO FUNCIONA en hipoglucemias inducidas por BORRACHERAS (alcohol). El alcohol bloquea la gluconeogénesis, y el hígado no responderá al glucagón. Utilizar Ampollas de Glucosa Hipertónica IV.' }
+      }
+    }  // end glucagon
+
+  }); /* fim Object.assign ENDOCRINO_DRUGS_DB — BUILD 310 Lote 1+2 (Insulinas Análogas + NPH/Incretinas/Glucagon) */
 
 })();
