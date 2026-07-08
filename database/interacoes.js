@@ -18557,6 +18557,123 @@ const INTERACOES_DB = {
         es: "La prescripción es normal, pero se debe alertar al paciente a buscar urgencias en caso de hinchazón en la boca, lengua o cara."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Endocrinologia — BUILD 314 Lote 4
+   Vildagliptina, Pioglitazona, Levotiroxina, Propiltiouracil, Metimazol
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── VILDAGLIPTINA (interação específica além da classe DPP-4) ── */
+  "vildagliptina": {
+    "$classe_ieca": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A vildagliptina (como inibidora de DPP-4) inibe a degradação de vários peptídeos, incluindo as cininas. IECAs (Enalapril, Captopril) também impedem a degradação das cininas (bradicinina). Essa via bloqueada duplamente aumenta substancialmente o risco de ANGIOEDEMA facial e de vias aéreas superiores.",
+        es: "La vildagliptina (como inhibidora de DPP-4) inhibe la degradación de varios péptidos, incluyendo las cininas. IECAs (Enalapril, Captopril) también impiden la degradación de las cininas (bradicinina). Esta vía bloqueada doblemente aumenta sustancialmente el riesgo de ANGIOEDEMA facial y de vías respiratorias superiores."
+      },
+      conduta: {
+        pt: "Uso permitido, mas o paciente deve ser alertado sobre sinais de inchaço nos lábios/língua e procurar PS imediatamente. A incidência de angioedema é estatisticamente maior se o paciente usa IECA simultaneamente.",
+        es: "Uso permitido, pero el paciente debe ser alertado sobre signos de hinchazón en labios/lengua y acudir a urgencias inmediatamente. La incidencia de angioedema es estadísticamente mayor si el paciente usa IECA simultáneamente."
+      }
+    }
+  },
+
+  /* ── PIOGLITAZONA ── */
+  "pioglitazona": {
+    "insulina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Sinergismo perigoso na retenção hídrica e insuficiência cardíaca. A pioglitazona estimula a reabsorção tubular renal de sódio (via ENaC). O uso concomitante de Insulina exacerba massivamente essa retenção de fluidos, precipitando edema agudo de pulmão (EAP) e descompensação da ICC NYHA III/IV.",
+        es: "Sinergismo peligroso en la retención hídrica e insuficiencia cardíaca. La pioglitazona estimula la reabsorción tubular renal de sodio (vía ENaC). El uso concomitante de Insulina exacerba masivamente esta retención de fluidos, precipitando edema agudo de pulmón (EAP) y descompensación de la ICC NYHA III/IV."
+      },
+      conduta: {
+        pt: "A associação na bula é contraindicada ou exige redução de dose da pioglitazona e monitoramento restrito de peso e dispneia diários.",
+        es: "La asociación en el prospecto está contraindicada o exige reducción de dosis de pioglitazona y monitorización estricta de peso y disnea diarios."
+      }
+    },
+    "gemfibrozila": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A gemfibrozila é um potente inibidor da enzima CYP2C8, via exclusiva pela qual a pioglitazona é inativada. O uso combinado pode triplicar a concentração da pioglitazona, levando a eventos cardiovasculares e hipoglicemia.",
+        es: "El gemfibrozilo es un potente inhibidor de la enzima CYP2C8, vía exclusiva por la cual la pioglitazona es inactivada. El uso combinado puede triplicar la concentración de pioglitazona, llevando a eventos cardiovasculares e hipoglucemia."
+      },
+      conduta: {
+        pt: "A dose máxima de pioglitazona DEVE ser restrita a 15 mg/dia caso o uso conjunto seja inescapável.",
+        es: "La dosis máxima de pioglitazona DEBE estar restringida a 15 mg/día en caso de que el uso conjunto sea ineludible."
+      }
+    }
+  },
+
+  /* ── LEVOTIROXINA ── */
+  "levotiroxina": {
+    "antiacido": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Interação Mecânica Intensa. Sais de cálcio (carbonato), hidróxido de alumínio/magnésio e IBPs (Omeprazol) alteram o pH gástrico ou quelam fisicamente a levotiroxina no estômago, anulando completamente sua absorção.",
+        es: "Interacción Mecánica Intensa. Sales de calcio (carbonato), hidróxido de aluminio/magnesio e IBPs (Omeprazol) alteran el pH gástrico o quelan físicamente la levotiroxina en el estómago, anulando completamente su absorción."
+      },
+      conduta: {
+        pt: "Os suplementos e antiácidos devem ser tomados com um intervalo DE NO MÍNIMO 4 HORAS do hormônio tireoidiano.",
+        es: "Los suplementos y antiácidos deben ser tomados con un intervalo DE AL MENOS 4 HORAS de la hormona tiroidea."
+      }
+    },
+    "sulfato_ferroso": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Idêntico aos antiácidos. O ferro forma complexos insolúveis com a T4 no lúmen intestinal, impedindo a absorção e descompensando o hipotireoidismo agudamente.",
+        es: "Idéntico a los antiácidos. El hierro forma complejos insolubles con la T4 en el lumen intestinal, impidiendo la absorción y descompensando el hipotiroidismo agudamente."
+      },
+      conduta: {
+        pt: "Distanciamento obrigatório de 4 horas.",
+        es: "Distanciamiento obligatorio de 4 horas."
+      }
+    },
+    "amiodarona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A amiodarona contém altíssimas cargas de Iodo em sua molécula e, além disso, bloqueia diretamente a enzima 5-desiodase periférica (impedindo que a Levotiroxina-T4 se transforme na ativa T3). Pode causar hipotireoidismo iatrogênico profundo mesmo com o paciente usando Levotiroxina.",
+        es: "La amiodarona contiene altísimas cargas de Yodo en su molécula y, además, bloquea directamente la enzima 5-desyodasa periférica (impidiendo que la Levotiroxina-T4 se transforme en la activa T3). Puede causar hipotiroidismo iatrogénico profundo incluso con el paciente usando Levotiroxina."
+      },
+      conduta: {
+        pt: "Monitoramento de TSH/T4L regular. As doses de Levotiroxina geralmente precisarão ser aumentadas se o paciente usar amiodarona cronicamente.",
+        es: "Monitorización de TSH/T4L regular. Las dosis de Levotiroxina generalmente necesitarán ser aumentadas si el paciente usa amiodarona crónicamente."
+      }
+    }
+  },
+
+  /* ── ANTITIREOIDIANOS (Propiltiouracil e Metimazol) ── */
+  "$classe_antitireoidianos": {
+    "varfarina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O hipertireoidismo acelera naturalmente a degradação dos fatores de coagulação dependentes de Vitamina K. Quando o PTU ou Metimazol começam a funcionar e o paciente se torna eutireoidiano, a degradação diminui, levando à RESISTÊNCIA à varfarina pré-estipulada (o RNI cai, aumentando risco de trombose).",
+        es: "El hipertiroidismo acelera naturalmente la degradación de los factores de coagulación dependientes de Vitamina K. Cuando el PTU o Metimazol comienzan a funcionar y el paciente se vuelve eutiroideo, la degradación disminuye, llevando a RESISTENCIA a la warfarina preestipulada (el RNI cae, aumentando el riesgo de trombosis)."
+      },
+      conduta: {
+        pt: "Ao reverter o hipertireoidismo, a dose do anticoagulante frequentemente terá que ser aumentada progressivamente sob estrito controle de RNI.",
+        es: "Al revertir el hipertiroidismo, la dosis del anticoagulante frecuentemente tendrá que ser aumentada progresivamente bajo estricto control de RNI."
+      }
+    },
+    "$classe_betabloqueadores": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "Em pacientes tireotóxicos, o clearance (eliminação) de betabloqueadores (como propranolol) está massivamente acelerado. Ao instituir o tratamento antitireoidiano, a eliminação normaliza, e as doses de betabloqueador antes exigidas tornam-se tóxicas (causando bradicardia).",
+        es: "En pacientes tirotoxicósicos, el clearance (eliminación) de betabloqueantes (como propranolol) está masivamente acelerado. Al instituir el tratamiento antitiroideo, la eliminación se normaliza, y las dosis de betabloqueante antes exigidas se vuelven tóxicas (causando bradicardia)."
+      },
+      conduta: {
+        pt: "Desmamar as doses de betabloqueadores à medida que o paciente atinge o eutireoidismo com Tioamidas.",
+        es: "Destetar las dosis de betabloqueantes a medida que el paciente alcanza el eutiroidismo con Tioamidas."
+      }
+    }
   }
 
 }; /* fim INTERACOES_DB */

@@ -628,8 +628,208 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
         warning: { pt: 'Trata-se da opção oral mais segura e confortável da endocrinologia para o paciente diabético idoso com insuficiência renal avançada, evitando o risco de toxicidade medicamentosa.', es: 'Se trata de la opción oral más segura y cómoda de la endocrinología para el paciente diabético anciano con insuficiencia renal avanzada, evitando el riesgo de toxicidad medicamentosa.' }
       }
-    }  // end linagliptina
+    },  // end linagliptina
 
-  }); /* fim Object.assign ENDOCRINO_DRUGS_DB — BUILD 312 Lote 1+2+3 (Insulinas + NPH/Incretinas/Glucagon + Antidiabéticos Orais) */
+/* ── VILDAGLIPTINA ──────────────────────────────────────────────────── */
+    "vildagliptina": {
+      name: { pt: 'Vildagliptina', es: 'Vildagliptina' },
+      category: 'endocrino',
+      class: { pt: 'Antidiabético Oral (Inibidor da DPP-4)', es: 'Antidiabético Oral (Inhibidor de la DPP-4)' },
+      indications: {
+        pt: ['Diabetes Mellitus Tipo 2 (monoterapia ou combinada)'],
+        es: ['Diabetes Mellitus Tipo 2 (monoterapia o combinada)']
+      },
+      commercialNames: { br: ['Galvus', 'Galvus Met (c/ Metformina)'], ar: ['Galvus'] },
+      presentation: { pt: ['Comprimidos 50 mg'], es: ['Comprimidos 50 mg'] },
+      mechanism: {
+        pt: 'Inibidor competitivo e reversível da enzima DPP-4. Evita a degradação rápida das incretinas (GLP-1 e GIP), prolongando a estimulação da síntese de insulina e a supressão do glucagon de forma dependente dos níveis de glicose, sem risco de hipoglicemia inerente.',
+        es: 'Inhibidor competitivo y reversible de la enzima DPP-4. Evita la degradación rápida de las incretinas (GLP-1 y GIP), prolongando la estimulación de la síntesis de insulina y la supresión del glucagón de forma dependiente de los niveles de glucosa, sin riesgo de hipoglucemia inherente.'
+      },
+      dose: {
+        adult: {
+          pt: 'Monoterapia ou com metformina: 50 mg VO 2x/dia (100 mg/dia). Com sulfonilureia: 50 mg VO 1x/dia pela manhã.',
+          es: 'Monoterapia o con metformina: 50 mg VO 2 veces/día (100 mg/día). Con sulfonilurea: 50 mg VO 1 vez/día por la mañana.'
+        },
+        pediatric: {
+          pt: 'Não recomendada em pediatria.',
+          es: 'No recomendada en pediatría.'
+        }
+      },
+      administration: { pt: ['Administrar independentemente das refeições.'], es: ['Administrar independientemente de las comidas.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr < 50 mL/min (moderada a grave/diálise): Reduzir a dose máxima para 50 mg 1x/dia.', es: 'ClCr < 50 mL/min (moderada a grave/diálisis): Reducir la dosis máxima a 50 mg 1 vez/día.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADA em pacientes com disfunção hepática prévia ou se TGO/TGP estiverem > 3x o limite superior do normal.', es: 'CONTRAINDICADA en pacientes con disfunción hepática previa o si AST/ALT están > 3x el límite superior de lo normal.' } },
+      commonAdverseEffects: { pt: ['Tontura', 'Cefaleia', 'Constipação', 'Tremores'], es: ['Mareos', 'Cefalea', 'Constipación', 'Temblores'] },
+      dangerousAdverseEffects: { pt: ['Hepatite medicamentosa (DILI)', 'Pancreatite aguda', 'Edema angioneurótico'], es: ['Hepatitis medicamentosa (DILI)', 'Pancreatitis aguda', 'Edema angioneurótico'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência hepática ou transaminases elevadas', 'Hipersensibilidade grave'], es: ['Insuficiencia hepática o transaminasas elevadas', 'Hipersensibilidad grave'] },
+        relative: { pt: ['Insuficiência cardíaca grave (NYHA IV)'], es: ['Insuficiencia cardíaca grave (NYHA IV)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ALERTA HEPÁTICO: Única DPP-4 que exige monitoramento de transaminases (TGO/TGP) antes do início, a cada 3 meses no primeiro ano e periodicamente depois.', es: 'ALERTA HEPÁTICA: Única DPP-4 que exige monitorización de transaminasas (AST/ALT) antes del inicio, cada 3 meses en el primer año y periódicamente después.' }
+      }
+    },  // end vildagliptina
+
+/* ── PIOGLITAZONA ───────────────────────────────────────────────────── */
+    "pioglitazona": {
+      name: { pt: 'Pioglitazona', es: 'Pioglitazona' },
+      category: 'endocrino',
+      class: { pt: 'Antidiabético Oral (Tiazolidinediona / Glitazona)', es: 'Antidiabético Oral (Tiazolidinediona / Glitazona)' },
+      indications: {
+        pt: ['Diabetes Mellitus Tipo 2 (terapia de 2ª ou 3ª linha)', 'Esteato-hepatite não alcoólica - NASH (off-label)'],
+        es: ['Diabetes Mellitus Tipo 2 (terapia de 2ª o 3ª línea)', 'Esteatohepatitis no alcohólica - NASH (off-label)']
+      },
+      commercialNames: { br: ['Actos', 'Piotaz'], ar: ['Actos'] },
+      presentation: { pt: ['Comprimidos 15 mg, 30 mg, 45 mg'], es: ['Comprimidos 15 mg, 30 mg, 45 mg'] },
+      mechanism: {
+        pt: 'Sensibilizador de insulina. Atua como agonista seletivo do receptor nuclear PPAR-gama. Modula a transcrição de genes sensíveis à insulina envolvidos no controle da glicose e dos lipídios. Aumenta massivamente a captação de glicose no músculo esquelético e tecido adiposo e diminui a produção hepática.',
+        es: 'Sensibilizador de insulina. Actúa como agonista selectivo del receptor nuclear PPAR-gamma. Modula la transcripción de genes sensibles a la insulina involucrados en el control de la glucosa y los lípidos. Aumenta masivamente la captación de glucosa en el músculo esquelético y tejido adiposo y disminuye la producción hepática.'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciar com 15 a 30 mg VO 1x/dia. Dose máxima de 45 mg/dia.',
+          es: 'Iniciar con 15 a 30 mg VO 1 vez/día. Dosis máxima de 45 mg/día.'
+        },
+        pediatric: {
+          pt: 'Não aprovada nem recomendada.',
+          es: 'No aprobada ni recomendada.'
+        }
+      },
+      administration: { pt: ['Tomar 1x ao dia, com ou sem alimentos.'], es: ['Tomar 1 vez al día, con o sin alimentos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste em DRC, mas devido à retenção de fluidos intrínseca, deve ser evitada em DRC avançada por risco de edema/EAP.', es: 'No requiere ajuste en ERC, pero debido a la retención de fluidos intrínseca, debe ser evitada en ERC avanzada por riesgo de edema/EAP.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em disfunção hepática ou se TGO/TGP > 2,5x o limite normal.', es: 'Evitar en disfunción hepática o si AST/ALT > 2,5x el límite normal.' } },
+      commonAdverseEffects: { pt: ['Retenção de líquidos (Edema periférico marcante)', 'Aumento de peso adiposo', 'Mialgia'], es: ['Retención de líquidos (Edema periférico marcado)', 'Aumento de peso adiposo', 'Mialgia'] },
+      dangerousAdverseEffects: { pt: ['Insuficiência Cardíaca Congestiva (ICC) induzida pela sobrecarga hídrica', 'Fraturas ósseas (osteoporose no uso crônico)', 'Câncer de bexiga (risco controverso em uso > 1 ano)'], es: ['Insuficiencia Cardíaca Congestiva (ICC) inducida por la sobrecarga hídrica', 'Fracturas óseas (osteoporosis en el uso crónico)', 'Cáncer de vejiga (riesgo controvertido en uso > 1 año)'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência Cardíaca NYHA III e IV', 'Câncer de bexiga ativo ou histórico macro-hematúria inexplicada', 'Hepatopatia ativa'], es: ['Insuficiencia Cardíaca NYHA III y IV', 'Cáncer de vejiga activo o historial de macrohematuria inexplicada', 'Hepatopatía activa'] },
+        relative: { pt: ['Osteoporose grave em mulheres pós-menopausa'], es: ['Osteoporosis grave en mujeres posmenopáusicas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'BOXED WARNING (FDA): Pode causar ou exacerbar a Insuficiência Cardíaca Congestiva. O edema causado pelas glitazonas NÃO responde bem a diuréticos. O paciente deve ser monitorado para ganho de peso rápido, dispneia e edema.', es: 'BOXED WARNING (FDA): Puede causar o exacerbar la Insuficiencia Cardíaca Congestiva. El edema causado por las glitazonas NO responde bien a diuréticos. El paciente debe ser monitorizado para ganancia de peso rápida, disnea y edema.' }
+      }
+    },  // end pioglitazona
+
+/* ── LEVOTIROXINA ───────────────────────────────────────────────────── */
+    "levotiroxina": {
+      name: { pt: 'Levotiroxina Sódica', es: 'Levotiroxina Sódica' },
+      category: 'endocrino',
+      class: { pt: 'Hormônio Tireoidiano (T4 Sintético)', es: 'Hormona Tiroidea (T4 Sintética)' },
+      indications: {
+        pt: ['Hipotireoidismo primário, secundário ou congênito', 'Supressão de TSH em carcinoma diferenciado de tireoide', 'Coma mixedematoso (via IV)'],
+        es: ['Hipotiroidismo primario, secundario o congénito', 'Supresión de TSH en carcinoma diferenciado de tiroides', 'Coma mixedematoso (vía IV)']
+      },
+      commercialNames: { br: ['Puran T4', 'Synthroid', 'Euthyrox', 'Levoid'], ar: ['T4 Montpellier', 'Synthroid'] },
+      presentation: { pt: ['Comprimidos de 12.5 mcg até 300 mcg', 'Ampolas IV 200 mcg (Restrito Hospitalar)'], es: ['Comprimidos de 12.5 mcg hasta 300 mcg', 'Ampollas IV 200 mcg (Restringido Hospitalario)'] },
+      mechanism: {
+        pt: 'Forma sintética da tiroxina (T4), idêntica à produzida pela glândula tireoide humana. No organismo, é desiodada periféricamente para formar a T3 (tri-iodotironina), que é a forma ativa celular, regulando o metabolismo basal, crescimento e desenvolvimento.',
+        es: 'Forma sintética de la tiroxina (T4), idéntica a la producida por la glándula tiroidea humana. En el organismo, es desyodada periféricamente para formar la T3 (triyodotironina), que es la forma activa celular, regulando el metabolismo basal, crecimiento y desarrollo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hipotireoidismo: 1,6 mcg/kg/dia VO. Idosos ou coronariopatas: Iniciar com 12,5 a 25 mcg/dia e tatear. Coma Mixedematoso: 200 a 400 mcg IV (bolus lento).',
+          es: 'Hipotiroidismo: 1,6 mcg/kg/día VO. Ancianos o coronariópatas: Iniciar con 12,5 a 25 mcg/día y tantear. Coma Mixedematoso: 200 a 400 mcg IV (bolo lento).'
+        },
+        pediatric: {
+          pt: 'Hipotireoidismo congênito (Neonato): 10 a 15 mcg/kg/dia (urgência para evitar déficit neurológico).',
+          es: 'Hipotiroidismo congénito (Neonato): 10 a 15 mcg/kg/día (urgencia para evitar déficit neurológico).'
+        }
+      },
+      administration: { pt: ['TOMAR EM JEJUM RÍGIDO: Pelo menos 30 a 60 minutos antes do café da manhã, ou à noite deitar (se em jejum de 3h). Qualquer alimento ou café interfere violentamente na absorção.', 'Manter sempre a mesma marca se possível (margem terapêutica estreita).'], es: ['TOMAR EN AYUNAS RÍGIDO: Al menos 30 a 60 minutos antes del desayuno, o por la noche al acostarse (si ayuno de 3h). Cualquier alimento o café interfiere violentamente en la absorción.', 'Mantener siempre la misma marca si es posible (margen terapéutico estrecho).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Geralmente ocorrem apenas por superdosagem (hipertireoidismo iatrogênico): Palpitações, tremores, insônia, perda de peso'], es: ['Generalmente ocurren solo por sobredosis (hipertiroidismo iatrogénico): Palpitaciones, temblores, insomnio, pérdida de peso'] },
+      dangerousAdverseEffects: { pt: ['Fibrilação atrial ou Arritmias graves', 'Isquemia miocárdica / Infarto (se introduzida subitamente em dose cheia em idosos)', 'Crise tireotóxica'], es: ['Fibrilación auricular o Arritmias graves', 'Isquemia miocárdica / Infarto (si es introducida súbitamente en dosis plena en ancianos)', 'Crisis tirotoxicósica'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência adrenal aguda não tratada (o T4 acelera o metabolismo dos corticoides remanescentes e precipita choque adrenal fatal)', 'Tireotoxicose', 'Infarto agudo do miocárdio recente'], es: ['Insuficiencia adrenal aguda no tratada (el T4 acelera el metabolismo de los corticoides remanentes y precipita choque adrenal fatal)', 'Tirotoxicosis', 'Infarto agudo de miocardio reciente'] },
+        relative: { pt: ['Coronariopatia grave (requer titulação microscópica)'], es: ['Coronariopatía grave (requiere titulación microscópica)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'INTERAÇÃO ENDÓCRINA: Nunca inicie levotiroxina em um paciente com pan-hipopituitarismo sem ANTES repor o eixo do Cortisol (Glicocorticoides), sob risco de choque adrenal agudo irreversível.', es: 'INTERACCIÓN ENDOCRINA: Nunca inicie levotiroxina en un paciente con panhipopituitarismo sin ANTES reponer el eje del Cortisol (Glucocorticoides), bajo riesgo de choque adrenal agudo irreversible.' }
+      }
+    },  // end levotiroxina
+
+/* ── PROPILTIOURACIL ────────────────────────────────────────────────── */
+    "propiltiouracil": {
+      name: { pt: 'Propiltiouracil (PTU)', es: 'Propiltiouracilo (PTU)' },
+      category: 'endocrino',
+      class: { pt: 'Agente Antitireoidiano (Tioamida)', es: 'Agente Antitiroideo (Tioamida)' },
+      indications: {
+        pt: ['Hipertireoidismo (Doença de Graves) NO PRIMEIRO TRIMESTRE da gravidez', 'Crise Tireotóxica (Tireotoxicose grave na UTI)', 'Intolerância ao metimazol'],
+        es: ['Hipertiroidismo (Enfermedad de Graves) EN EL PRIMER TRIMESTRE del embarazo', 'Crisis Tirotoxicósica (Tirotoxicosis grave en UCI)', 'Intolerancia al metimazol']
+      },
+      commercialNames: { br: ['Propil'], ar: ['Propiltiouracilo'] },
+      presentation: { pt: ['Comprimidos 100 mg'], es: ['Comprimidos 100 mg'] },
+      mechanism: {
+        pt: 'Inibe a enzima Tireoide Peroxidase (TPO), bloqueando a oxidação do iodo e sua incorporação na tireoglobulina (impede a síntese de T3 e T4). SEU GRANDE DIFERENCIAL NA UTI: O PTU também inibe a enzima 5-desiodase, bloqueando a conversão periférica de T4 para T3 (o hormônio mais ativo). Por isso é a escolha na Tempestade Tireoidiana.',
+        es: 'Inhibe la enzima Tiroide Peroxidasa (TPO), bloqueando la oxidación del yodo y su incorporación en la tiroglobulina (impide la síntesis de T3 y T4). SU GRAN DIFERENCIAL EN UCI: El PTU también inhibe la enzima 5-desyodasa, bloqueando la conversión periférica de T4 a T3 (la hormona más activa). Por eso es la elección en la Tormenta Tiroidea.'
+      },
+      dose: {
+        adult: {
+          pt: 'Graves (1º Tri Gestação): 50 a 150 mg 8/8h. Crise Tireotóxica: 200 a 400 mg 8/8h (Dose de ataque pode chegar a 1000 mg na emergência).',
+          es: 'Graves (1º Tri Embarazo): 50 a 150 mg cada 8h. Crisis Tirotoxicósica: 200 a 400 mg cada 8h (Dosis de ataque puede llegar a 1000 mg en emergencia).'
+        },
+        pediatric: {
+          pt: 'Geralmente evitado devido a alta hepatotoxicidade (Metimazol é preferido).',
+          es: 'Generalmente evitado debido a alta hepatotoxicidad (Metimazol es preferido).'
+        }
+      },
+      administration: { pt: ['Devido à meia-vida curta (1 a 2 horas), DEVE ser administrado a cada 8 horas (3 vezes ao dia).'], es: ['Debido a la vida media corta (1 a 2 horas), DEBE administrarse cada 8 horas (3 veces al día).'] },
+      renalAdjustment: { required: true, message: { pt: 'Reduzir dose em 25-50% se ClCr < 50 mL/min.', es: 'Reducir dosis en 25-50% si ClCr < 50 mL/min.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Drogas altamente hepatotóxicas. Suspender se transaminases subirem > 3x ou sinais clínicos de hepatite.', es: 'Drogas altamente hepatotóxicas. Suspender si transaminasas suben > 3x o signos clínicos de hepatitis.' } },
+      commonAdverseEffects: { pt: ['Erupção cutânea (Rash) / Prurido', 'Artralgia (dores nas articulações)', 'Desconforto gástrico'], es: ['Erupción cutánea (Rash) / Prurito', 'Artralgia (dolores en las articulaciones)', 'Molestia gástrica'] },
+      dangerousAdverseEffects: { pt: ['HEPATOTOXICIDADE FULMINANTE (Boxed Warning)', 'Agranulocitose (queda severa de leucócitos - risco de sepse)', 'Vasculite ANCA-positiva'], es: ['HEPATOTOXICIDAD FULMINANTE (Boxed Warning)', 'Agranulocitosis (caída severa de leucocitos - riesgo de sepsis)', 'Vasculitis ANCA-positiva'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade', 'Insuficiência hepática aguda', 'Agranulocitose prévia induzida por tioamidas'], es: ['Hipersensibilidad', 'Insuficiencia hepática aguda', 'Agranulocitosis previa inducida por tioamidas'] },
+        relative: { pt: ['Uso pediátrico de rotina (não indicado)'], es: ['Uso pediátrico de rutina (no indicado)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'Risco de Hepatite Fulminante letal. Reservado APENAS para o 1º trimestre da gestação e Crise Tireotóxica na UTI. Nos demais casos, o METIMAZOL é a escolha.', es: 'Riesgo de Hepatitis Fulminante letal. Reservado SOLO para el 1º trimestre del embarazo y Crisis Tirotoxicósica en UCI. En los demás casos, el METIMAZOL es la elección.' }
+      }
+    },  // end propiltiouracil
+
+/* ── METIMAZOL / TIAMAZOL ───────────────────────────────────────────── */
+    "metimazol": {
+      name: { pt: 'Metimazol / Tiamazol', es: 'Metimazol / Tiamazol' },
+      category: 'endocrino',
+      class: { pt: 'Agente Antitireoidiano (Tioamida)', es: 'Agente Antitiroideo (Tioamida)' },
+      indications: {
+        pt: ['Tratamento padrão do Hipertireoidismo (Doença de Graves)', 'Preparo para tireoidectomia ou terapia com iodo radioativo'],
+        es: ['Tratamiento estándar del Hipertiroidismo (Enfermedad de Graves)', 'Preparación para tiroidectomía o terapia con yodo radiactivo']
+      },
+      commercialNames: { br: ['Tapazol'], ar: ['Danantizol'] },
+      presentation: { pt: ['Comprimidos 5 mg, 10 mg'], es: ['Comprimidos 5 mg, 10 mg'] },
+      mechanism: {
+        pt: 'Inibe a Tireoide Peroxidase (TPO), impedindo a síntese de novos hormônios tireoidianos (T3 e T4). É cerca de 10 vezes mais potente que o PTU e possui meia-vida muito mais longa (6 a 8 horas, permitindo efeito clínico de 24h). NÃO inibe a conversão periférica de T4 para T3.',
+        es: 'Inhibe la Tiroide Peroxidasa (TPO), impidiendo la síntesis de nuevas hormonas tiroideas (T3 y T4). Es cerca de 10 veces más potente que el PTU y posee vida media mucho más larga (6 a 8 horas, permitiendo efecto clínico de 24h). NO inhibe la conversión periférica de T4 a T3.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose inicial: 10 a 40 mg/dia em DOSE ÚNICA ou dividida 12/12h. Manutenção: 5 a 15 mg/dia.',
+          es: 'Dosis inicial: 10 a 40 mg/día en DOSIS ÚNICA o dividida cada 12h. Mantenimiento: 5 a 15 mg/día.'
+        },
+        pediatric: {
+          pt: '0,4 a 0,7 mg/kg/dia inicial. Droga de escolha na pediatria.',
+          es: '0,4 a 0,7 mg/kg/día inicial. Droga de elección en pediatría.'
+        }
+      },
+      administration: { pt: ['Administrado preferencialmente 1x ao dia (grande vantagem de adesão sobre o PTU).'], es: ['Administrado preferentemente 1 vez al día (gran ventaja de adhesión sobre el PTU).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Embora cause menos hepatite fulminante que o PTU, pode causar icterícia colestática. Suspender se TGO/TGP > 3x o normal.', es: 'Aunque causa menos hepatitis fulminante que el PTU, puede causar ictericia colestásica. Suspender si AST/ALT > 3x lo normal.' } },
+      commonAdverseEffects: { pt: ['Rash maculopapular e urticária (frequentes)', 'Artralgia', 'Distúrbios do paladar e olfato'], es: ['Rash maculopapular y urticaria (frecuentes)', 'Artralgia', 'Disturbios del gusto y olfato'] },
+      dangerousAdverseEffects: { pt: ['Agranulocitose (0,2 a 0,5% dos casos, surge subitamente com febre e dor de garganta)', 'Hepatite colestática', 'Aplasia cutis congênita (teratogenicidade)'], es: ['Agranulocitosis (0,2 a 0,5% de los casos, surge súbitamente con fiebre y dolor de garganta)', 'Hepatitis colestásica', 'Aplasia cutis congénita (teratogenicidad)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade', 'Agranulocitose prévia a tioamidas', 'PRIMEIRO trimestre de gravidez (Causa malformações graves como aplasia cutis no feto)'], es: ['Hipersensibilidad', 'Agranulocitosis previa a tioamidas', 'PRIMER trimestre de embarazo (Causa malformaciones graves como aplasia cutis en el feto)'] },
+        relative: { pt: ['Disfunção hepática moderada'], es: ['Disfunción hepática moderada'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ORIENTAÇÃO OBRIGATÓRIA: O paciente deve ser instruído a suspender imediatamente a medicação e buscar um pronto-socorro para colher Hemograma se apresentar FEBRE ou DOR DE GARGANTA aguda (suspeita de agranulocitose).', es: 'ORIENTACIÓN OBLIGATORIA: El paciente debe ser instruido a suspender inmediatamente la medicación y buscar urgencias para extraer Hemograma si presenta FIEBRE o DOLOR DE GARGANTA agudo (sospecha de agranulocitosis).' }
+      }
+    }  // end metimazol
+
+  }); /* fim Object.assign ENDOCRINO_DRUGS_DB — BUILD 314 Lote 1+2+3+4 (Insulinas + NPH/Incretinas/Glucagon + Antidiabéticos Orais + Tireoide) */
 
 })();
