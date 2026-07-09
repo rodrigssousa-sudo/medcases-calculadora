@@ -970,16 +970,209 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'ERRO IATROGÊNICO DO ADESIVO: Idosos dementes frequentemente colam um novo adesivo sem tirar o velho. Ao acumular 2, 3 ou 4 adesivos no corpo, o paciente sofre um envenenamento colinérgico letal (salivação maciça, parada cardíaca, coma). SEMPRE TIRE O VELHO ANTES DE COLAR O NOVO.', es: 'ERROR IATROGÉNICO DEL PARCHE: Ancianos dementes frecuentemente pegan un nuevo parche sin quitar el viejo. Al acumular 3 o 4 parches, sufren un envenenamiento colinérgico letal. SIEMPRE QUITE EL VIEJO ANTES DE PEGAR EL NUEVO.' }
       }
+    },
+
+    /* ── BUILD 400 — Demência avançada + Esclerose Múltipla ── */
+
+    /* ── GALANTAMINA ────────────────────────────────────────────────────── */
+    "galantamina": {
+      id: 'galantamina',
+      name: { pt: 'Galantamina (Bromidrato de)', es: 'Galantamina (Bromhidrato de)' },
+      category: 'neurologia',
+      class: { pt: 'Inibidor da Acetilcolinesterase / Modulador Nicotínico', es: 'Inhibidor de la Acetilcolinesterasa / Modulador Nicotínico' },
+      indications: {
+        pt: ['Demência da Doença de Alzheimer (leve a moderadamente grave)'],
+        es: ['Demencia de la Enfermedad de Alzheimer (leve a moderadamente grave)']
+      },
+      commercialNames: { br: ['Reminyl', 'Cogmed'], ar: ['Reminyl'] },
+      presentation: { pt: ['Cápsulas de liberação prolongada (ER) 8 mg, 16 mg e 24 mg', 'Comprimidos convencionais 4 mg, 8 mg e 12 mg'], es: ['Cápsulas de liberación prolongada (ER) 8 mg, 16 mg y 24 mg', 'Comprimidos convencionales 4 mg, 8 mg y 12 mg'] },
+      mechanism: {
+        pt: 'Ação DUPLA e exclusiva. Como a Donepezila, inibe a acetilcolinesterase. Mas o seu grande diferencial é agir como "Modulador Alostérico Positivo" nos receptores Nicotínicos: ela se liga no receptor e faz com que ele abra mais facilmente, turbinando a transmissão colinérgica pré e pós-sináptica na memória.',
+        es: 'Acción DOBLE y exclusiva. Como el Donepezilo, inhibe la acetilcolinesterasa. Pero su gran diferencial es actuar como "Modulador Alostérico Positivo" en los receptores Nicotínicos: hace que el receptor se abra más fácilmente, turbinando la transmisión colinérgica.'
+      },
+      dose: {
+        adult: {
+          pt: 'Cápsulas ER: Iniciar com 8 mg UMA VEZ ao dia (de manhã) por 4 semanas. Se bem tolerado, subir para 16 mg/dia. Dose máxima de 24 mg/dia.',
+          es: 'Cápsulas ER: Iniciar con 8 mg UNA VEZ al día (por la mañana) por 4 semanas. Si se tolera bien, subir a 16 mg/día. Dosis máxima 24 mg/día.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Administrar de preferência com o café da manhã (cápsula ER). Monitorar perda de apetite e peso mensal.'], es: ['Administrar de preferencia con el desayuno (cápsula ER). Monitorizar pérdida de apetito y peso mensual.'] },
+      renalAdjustment: { required: true, message: { pt: 'Reduzir dose máx. para 16 mg/dia se ClCr entre 9-59 mL/min. Contraindicado em ClCr < 9.', es: 'Reducir dosis máx. a 16 mg/día si ClCr entre 9-59 mL/min. Contraindicado en ClCr < 9.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Máximo 16 mg/dia em insuficiência moderada. Contraindicado em Child-Pugh C.', es: 'Máximo 16 mg/día en insuficiencia moderada. Contraindicado en Child-Pugh C.' } },
+      commonAdverseEffects: { pt: ['Náuseas e vômitos (principal motivo de abandono)', 'Perda de peso involuntária e anorexia', 'Tontura e tremor'], es: ['Náuseas y vómitos (principal motivo de abandono)', 'Pérdida de peso involuntaria y anorexia', 'Mareo y temblor'] },
+      dangerousAdverseEffects: { pt: ['Síncope por bradicardia severa', 'Síndrome de Stevens-Johnson (raro)'], es: ['Síncope por bradicardia severa', 'Síndrome de Stevens-Johnson (raro)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade', 'Insuficiência renal e hepática severas simultâneas'], es: ['Hipersensibilidad', 'Insuficiencia renal y hepática severas simultáneas'] },
+        relative: { pt: ['Uso associado com betabloqueadores (risco de parada sinusal)'], es: ['Uso asociado con betabloqueantes (riesgo de parada sinusal)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'CUIDADO COM A DOENÇA CARDÍACA: A Galantamina força o sistema parassimpático e o nervo vago "freia" o coração intensamente. Em idosos com doença no Nó Sinusal, isso pode causar bloqueio total e parada cardíaca transitória.', es: 'CUIDADO CON LA ENFERMEDAD CARDÍACA: La Galantamina fuerza el sistema parasimpático. En ancianos con enfermedad en el Nodo Sinusal, puede causar bloqueo total y parada cardíaca transitoria.' }
+      }
+    },
+
+    /* ── MEMANTINA ──────────────────────────────────────────────────────── */
+    "memantina": {
+      id: 'memantina',
+      name: { pt: 'Memantina (Cloridrato de)', es: 'Memantina (Clorhidrato de)' },
+      category: 'neurologia',
+      class: { pt: 'Antagonista do Receptor NMDA (Neuroprotetor)', es: 'Antagonista del Receptor NMDA (Neuroprotector)' },
+      indications: {
+        pt: ['Doença de Alzheimer moderada a GRAVE (frequentemente associada à Donepezila)'],
+        es: ['Enfermedad de Alzheimer moderada a GRAVE (frecuentemente asociada a Donepezilo)']
+      },
+      commercialNames: { br: ['Alois', 'Ebix', 'Heimer'], ar: ['Akatinol'] },
+      presentation: { pt: ['Comprimidos 10 mg e 20 mg', 'Solução oral 10 mg/mL'], es: ['Comprimidos 10 mg y 20 mg', 'Solución oral 10 mg/mL'] },
+      mechanism: {
+        pt: 'Mecanismo revolucionário não-colinérgico. No Alzheimer, células doentes vazam glutamato sem parar. O excesso mantém os receptores NMDA sempre abertos, permitindo entrada excessiva de cálcio nos neurônios sadios — "excitotoxicidade" (neurônio queima e morre). A Memantina funciona como uma "rolha de baixa afinidade" no canal: bloqueia o vazamento letal de fundo, mas sai quando o cérebro precisa criar uma memória real. Salva neurônios sem sedar.',
+        es: 'Mecanismo no colinérgico. En el Alzheimer, células enfermas gotean glutamato. El exceso mantiene receptores NMDA abiertos, quemando neuronas (excitotoxicidad). La Memantina funciona como un "tapón": bloquea el goteo letal de fondo, pero cede cuando el cerebro necesita crear una memoria. Salva neuronas.'
+      },
+      dose: {
+        adult: {
+          pt: 'Titulação LENTA obrigatória: 5 mg/dia na Semana 1 → 10 mg/dia Semana 2 → 15 mg/dia Semana 3 → 20 mg/dia Semana 4 (dose-alvo: 10 mg 2x/dia).',
+          es: 'Titulación LENTA obligatoria: 5 mg/día Semana 1 → 10 mg/día Semana 2 → 15 mg/día Semana 3 → 20 mg/día Semana 4 (dosis objetivo: 10 mg 2x/día).'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Com ou sem alimentos. Titulação gradual é OBRIGATÓRIA para evitar surtos de confusão/tontura.'], es: ['Con o sin alimentos. Titulación gradual es OBLIGATORIA para evitar brotes de confusión/mareo.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr < 30 mL/min: dose MÁXIMA 10 mg/dia (eliminação quase puramente renal).', es: 'ClCr < 30 mL/min: dosis MÁXIMA 10 mg/día (eliminación puramente renal).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico na cirrose.', es: 'Sin necesidad de ajuste clínico en cirrosis.' } },
+      commonAdverseEffects: { pt: ['Tontura e cefaleia', 'Constipação', 'Confusão mental nos primeiros dias da introdução'], es: ['Mareo y cefalea', 'Constipación', 'Confusión mental en los primeros días'] },
+      dangerousAdverseEffects: { pt: ['Alucinações e delírios intensos (se a dose for aumentada muito rapidamente)'], es: ['Alucinaciones y delirios intensos (si la dosis se aumenta muy rápido)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave'], es: ['Hipersensibilidad grave'] },
+        relative: { pt: ['Epilepsia ou histórico de convulsões', 'ITU por bactérias desdobradoras de ureia (alcalinizam urina — ver interações)'], es: ['Epilepsia o historial de convulsiones', 'ITU por bacterias que alcalinizan orina (ver interacciones)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'TERAPIA COMBINADA OBRIGATÓRIA NA FASE GRAVE: A diretriz moderna dita que o Alzheimer severo deve usar Donepezila E Memantina juntas. Uma droga dá mais acetilcolina (combustível) e a outra protege contra o glutamato (tóxico). A união estabiliza a agressividade e retarda o declínio.', es: 'TERAPIA COMBINADA EN FASE GRAVE: La directriz moderna dicta usar Donepezilo Y Memantina juntos. Una da acetilcolina y la otra protege del glutamato. Estabiliza la agresividad y retrasa el declive.' }
+      }
+    },
+
+    /* ── LECANEMABE ─────────────────────────────────────────────────────── */
+    "lecanemabe": {
+      id: 'lecanemabe',
+      name: { pt: 'Lecanemabe', es: 'Lecanemab' },
+      category: 'neurologia',
+      class: { pt: 'Anticorpo Monoclonal Anti-Amiloide (Antiamiloide — Ligante de Protofibrila)', es: 'Anticuerpo Monoclonal Anti-Amiloide (Antiamiloide — Ligante de Protofibrila)' },
+      indications: {
+        pt: ['Doença de Alzheimer precoce (Comprometimento Cognitivo Leve ou Demência Leve) com PRESENÇA CONFIRMADA de placas beta-amiloide'],
+        es: ['Enfermedad de Alzheimer precoz (Deterioro Cognitivo Leve o Demencia Leve) con PRESENCIA CONFIRMADA de placas beta-amiloide']
+      },
+      commercialNames: { br: ['Leqembi'], ar: ['Leqembi'] },
+      presentation: { pt: ['Frasco-ampola IV 500 mg/5 mL'], es: ['Vial IV 500 mg/5 mL'] },
+      mechanism: {
+        pt: 'A Droga que Muda a Doença. O Alzheimer é causado pelo acúmulo de proteínas beta-amiloide que formam placas e esmagam neurônios. O Lecanemabe identifica as protofibrilas amiloides (a fase mais tóxica antes de virar placa), liga-se a elas e sinaliza aos macrófagos cerebrais para "comer e limpar" o lixo. Remove as placas, retardando o declínio cognitivo em 27% — pela primeira vez na história.',
+        es: 'La Droga que Cambia la Enfermedad. El Lecanemab identifica las protofibrillas amiloides (la fase más tóxica antes de volverse placa), se une a ellas y señaliza a los macrófagos para "comer y limpiar". Remueve las placas, retrasando el declive cognitivo en 27%.'
+      },
+      dose: {
+        adult: {
+          pt: '10 mg/kg de peso corporal via Infusão Intravenosa a cada 2 SEMANAS.',
+          es: '10 mg/kg de peso corporal vía Infusión Intravenosa cada 2 SEMANAS.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Infusão IV em 1 hora. Requer PET-Scan amiloide positivo ou LCR positivo antes de iniciar — sem confirmação, o remédio é inútil. RM obrigatória antes da 5ª, 7ª e 14ª doses para rastrear ARIA.'], es: ['Infusión IV en 1 hora. Requiere PET-Scan amiloide positivo o LCR positivo antes de iniciar. RM obligatoria antes de la 5ª, 7ª y 14ª dosis para rastrear ARIA.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Reação à infusão (febre, calafrios, dores no corpo)', 'Cefaleia', 'Tosse e diarreia'], es: ['Reacción a la infusión (fiebre, escalofríos)', 'Cefalea', 'Tos y diarrea'] },
+      dangerousAdverseEffects: { pt: ['ARIA-E (edema cerebral visível na RM — confusão aguda)', 'ARIA-H (hemorragia cerebral severa e micro-sangramentos)'], es: ['ARIA-E (edema cerebral visible en RM)', 'ARIA-H (hemorragia cerebral severa y microsangramientos)'] },
+      contraindications: {
+        absolute: { pt: ['Anticoagulantes orais ou sistêmicos (risco de hemorragia cerebral fatal)', 'Micro-hemorragias severas prévias na RM basal'], es: ['Anticoagulantes orales o sistémicos (riesgo de hemorragia cerebral fatal)', 'Microhemorragias severas previas en RM basal'] },
+        relative: { pt: ['Portadores homozigotos do gene APOE4 (risco altíssimo de ARIA)'], es: ['Portadores homocigotos del gen APOE4 (riesgo altísimo de ARIA)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A CAIXA PRETA DAS HEMORRAGIAS: Limpar a placa amiloide é perigoso porque a placa muitas vezes está grudada na parede das veias cerebrais. Ao "arrancar" a placa, o vaso rasga e o paciente tem sangramento (ARIA-H). RM é OBRIGATÓRIA antes de iniciar e em datas fixas durante o tratamento.', es: 'LA CAJA NEGRA DE HEMORRAGIAS: Limpiar la placa es peligroso porque muchas veces está pegada en la pared de las venas cerebrales. Al "arrancar" la placa, el vaso se rasga. RM es OBLIGATORIA antes de iniciar y en fechas fijas durante el tratamiento.' }
+      }
+    },
+
+    /* ── DONANEMABE ─────────────────────────────────────────────────────── */
+    "donanemabe": {
+      id: 'donanemabe',
+      name: { pt: 'Donanemabe', es: 'Donanemab' },
+      category: 'neurologia',
+      class: { pt: 'Anticorpo Monoclonal Anti-Amiloide (Alvo N3pG-Amiloide)', es: 'Anticuerpo Monoclonal Anti-Amiloide (Blanco N3pG-Amiloide)' },
+      indications: {
+        pt: ['Doença de Alzheimer precoce e Comprometimento Cognitivo Leve com presença patológica comprovada de placas beta-amiloide'],
+        es: ['Enfermedad de Alzheimer precoz y Deterioro Cognitivo Leve con presencia comprobada de placas beta-amiloide']
+      },
+      commercialNames: { br: ['Kisunla'], ar: ['Kisunla'] },
+      presentation: { pt: ['Frasco-ampola IV para infusão'], es: ['Vial IV para infusión'] },
+      mechanism: {
+        pt: 'Diferente do Lecanemabe (que mira na protofibrila flutuante), o Donanemabe é ultra-específico: mira APENAS nas placas maduras e endurecidas já estabelecidas (resíduo N3pG). Induz varredura maciça por fagocitose microglial. Seu grande diferencial clínico é a "Terapia com Prazo Final": limpa a placa tão agressivamente que, se o PET-Scan mostrar que o cérebro "limpou", o tratamento PODE SER PARADO — diferente de outros que são para o resto da vida.',
+        es: 'A diferencia del Lecanemab, apunta SOLO a las placas maduras y endurecidas (N3pG). Induce un barrido masivo por fagocitosis microglial. Su gran diferencial es la "Terapia con Plazo Final": limpia la placa tan rápido que, si el PET-Scan muestra el cerebro "limpio", el tratamiento PUEDE SER DETENIDO.'
+      },
+      dose: {
+        adult: {
+          pt: 'IV a CADA 4 SEMANAS (mensal): 700 mg nas 3 primeiras infusões → 1400 mg nas seguintes.',
+          es: 'IV CADA 4 SEMANAS (mensual): 700 mg en las 3 primeras infusiones → 1400 mg en las siguientes.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Infusão IV ao longo de 30 minutos a cada 4 semanas. RM obrigatória para rastreamento de ARIA antes de iniciar e periodicamente.'], es: ['Infusión IV en 30 minutos cada 4 semanas. RM obligatoria para rastreo de ARIA antes de iniciar y periódicamente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Reação sistêmica à infusão', 'Dores de cabeça', 'Náuseas'], es: ['Reacción sistémica a la infusión', 'Dolores de cabeza', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['ARIA-E (edema e inchaço cerebral sintomático, confusão mental aguda)', 'ARIA-H (hemorragia cerebral franca com risco de morte)'], es: ['ARIA-E (edema cerebral sintomático, confusión mental aguda)', 'ARIA-H (hemorragia cerebral franca con riesgo de muerte)'] },
+      contraindications: {
+        absolute: { pt: ['Anticoagulantes, histórico de AVC hemorrágico', 'Múltiplas anormalidades isquêmicas na RM basal'], es: ['Anticoagulantes, historial de ACV hemorrágico', 'Múltiples anormalidades isquémicas en la RM basal'] },
+        relative: { pt: ['Ausência de triagem genética para APOE ε4 (portadores têm risco monstruoso de edema cerebral)'], es: ['Ausencia de triaje genético para APOE ε4 (portadores tienen riesgo enorme de edema cerebral)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O CHOQUE DE REALIDADE: Lecanemabe e Donanemabe NÃO CURAM a memória já perdida e NÃO SÃO para pacientes graves (acamados). Só funcionam no Alzheimer inicial para evitar que o quadro piore. Usar na fase grave só arrisca causar hemorragia fatal num cérebro já frágil.', es: 'EL CHOQUE DE REALIDAD: No curan la memoria perdida y NO SON para pacientes graves (postrados). Solo funcionan en el Alzheimer inicial. Usarlos en fase grave solo arriesga causar hemorragia fatal.' }
+      }
+    },
+
+    /* ── INTERFERON BETA-1A ─────────────────────────────────────────────── */
+    "interferon_beta_1a": {
+      id: 'interferon_beta_1a',
+      name: { pt: 'Interferon beta-1a', es: 'Interferón beta-1a' },
+      category: 'neurologia',
+      class: { pt: 'Imunomodulador do Sistema Nervoso Central', es: 'Inmunomodulador del Sistema Nervioso Central' },
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente-Remitente (tratamento modificador — reduz número e severidade dos surtos)', 'Primeiro evento desmielinizante isolado com risco de EM'],
+        es: ['Esclerosis Múltiple Recurrente-Remitente (tratamiento modificador)', 'Primer evento desmielinizante aislado con riesgo de EM']
+      },
+      commercialNames: { br: ['Avonex', 'Rebif'], ar: ['Avonex', 'Rebif'] },
+      presentation: { pt: ['Seringa/Caneta IM 30 mcg (Avonex — 1x/semana)', 'Seringa SC 22 mcg e 44 mcg (Rebif — 3x/semana)'], es: ['Jeringa/Pluma IM 30 mcg (Avonex — 1x/semana)', 'Jeringa SC 22 mcg y 44 mcg (Rebif — 3x/semana)'] },
+      mechanism: {
+        pt: 'A EM ocorre quando células T autoimunes invadem o cérebro e destroem a mielina. O Interferon Beta-1a é uma proteína natural que modula o sistema imune: diminui a apresentação de antígenos, bloqueia as células T no sangue e fortifica a barreira hematoencefálica, "trancando as portas" do cérebro para impedir que leucócitos entrem e ataquem a mielina.',
+        es: 'La EM ocurre cuando células T autoinmunes invaden el cerebro y destruyen la mielina. El Interferón Beta-1a modula el sistema inmune: bloquea las células T en sangre y fortifica la barrera hematoencefálica, "cerrando las puertas" para impedir que ataquen la mielina.'
+      },
+      dose: {
+        adult: {
+          pt: 'Avonex (IM): 30 mcg UMA VEZ POR SEMANA. Rebif (SC): 44 mcg TRÊS VEZES POR SEMANA (dias não consecutivos).',
+          es: 'Avonex (IM): 30 mcg UNA VEZ POR SEMANA. Rebif (SC): 44 mcg TRES VECES POR SEMANA (días no consecutivos).'
+        },
+        pediatric: { pt: 'Pode ser usado em adolescentes em casos selecionados (ajuste especializado).', es: 'Puede usarse en adolescentes en casos seleccionados.' }
+      },
+      administration: { pt: ['No dia da injeção, OBRIGATÓRIO prescrever Paracetamol ou Ibuprofeno preventivo para cortar a Síndrome Gripal induzida pela droga.'], es: ['El día de la inyección, OBLIGATORIO prescribir Paracetamol o Ibuprofeno para cortar el Síndrome Gripal inducido.'] },
+      renalAdjustment: { required: false, message: { pt: 'Precaução em DRC severa (monitorar albuminúria).', es: 'Precaución en ERC severa (monitorizar albuminuria).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Monitoramento hepático rigoroso — risco de hepatotoxicidade autoimune e medicamentosa.', es: 'Monitorización hepática rigurosa — riesgo de hepatotoxicidad autoinmune y medicamentosa.' } },
+      commonAdverseEffects: { pt: ['SÍNDROME GRIPAL SEVERA (febre 39°C, calafrios, dores intensas 2-6h após CADA injeção)', 'Reação cutânea no local da injeção', 'Depressão'], es: ['SÍNDROME GRIPAL SEVERA (fiebre, escalofríos, dolores intensos 2-6h tras CADA inyección)', 'Reacción cutánea', 'Depresión'] },
+      dangerousAdverseEffects: { pt: ['Ideação suicida e suicídio consumado (efeito colateral psiquiátrico negro da medicação)', 'Lesão hepática grave e falência hepática', 'Leucopenia sistêmica'], es: ['Ideación suicida y suicidio consumado', 'Lesión hepática grave', 'Leucopenia sistémica'] },
+      contraindications: {
+        absolute: { pt: ['Depressão ativa severa e ideação suicida prévia', 'Doença hepática descompensada'], es: ['Depresión activa severa e ideación suicida previa', 'Enfermedad hepática descompensada'] },
+        relative: { pt: ['Epilepsia com convulsões não controladas'], es: ['Epilepsia con convulsiones no controladas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'DEPRESSÃO DA ESCLEROSE: O paciente com EM já sofre alta taxa de depressão e fadiga. O Interferon injetável destrói o humor com síndrome gripal crônica e pode induzir surto suicida violento. Monitoramento psiquiátrico mensal é inegociável.', es: 'DEPRESIÓN DE LA ESCLEROSIS: El paciente con EM ya sufre alta tasa de depresión. El Interferón injetável destruye el humor y puede inducir un brote suicida. Monitoreo psiquiátrico mensual es innegociable.' }
+      }
     }
 
-  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 399
+  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 400
          BUILD 396 — Triptanos: Sumatriptana, Zolmitriptana, Rizatriptana, Naratriptana, Eletriptana
          BUILD 397 — Triptanos+Ergot: Almotriptana, Frovatriptana, Ergotamina, DHE, Erenumabe
          BUILD 398 — Anti-CGRP+Gepantos: Fremanezumabe, Galcanezumabe, Eptinezumabe, Ubrogepanta, Rimegepanta
-         BUILD 399 — Gepantos+Ditano+Demência:
-                     Atogepanta (Qulipta) — Gepanto profilático oral diário
-                     Zavegepanta (Zavzpret) — Gepanto nasal ultrarrápido, Disgeusia
-                     Lasmiditana (Reyvow) — Ditano 5-HT1F, ⚠ Regra 8h, highAlert
-                     Donepezila (Eranz) — AChE-I Alzheimer, ⚠ highAlert
-                     Rivastigmina (Exelon/Patch) — AChE-I duplo, Parkinson+Alzheimer, ⚠ highAlert */
+         BUILD 399 — Gepantos+Ditano+Demência: Atogepanta, Zavegepanta, Lasmiditana, Donepezila, Rivastigmina
+         BUILD 400 — Demência avançada + Esclerose Múltipla:
+                     Galantamina (Reminyl) — AChE-I duplo nicotínico, ⚠ highAlert
+                     Memantina (Alois/Ebix) — NMDA bloqueador, renalHighRisk
+                     Lecanemabe (Leqembi) — Anti-amiloide IV 2sem, ⚠ ARIA-H, bleedingRisk, highAlert
+                     Donanemabe (Kisunla) — Anti-amiloide IV mensal, ⚠ ARIA-H, bleedingRisk, highAlert
+                     Interferon beta-1a (Avonex/Rebif) — EM Recorrente-Remitente, ⚠ suicídio, highAlert */
 })();

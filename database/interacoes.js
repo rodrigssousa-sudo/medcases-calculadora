@@ -308,6 +308,23 @@ const DRUG_ALIASES = {
   "rivastigmine":                       "rivastigmina",
   "exelon":                             "rivastigmina",
 
+  /* BUILD 400 — Galantamina, Memantina, Anticorpos Anti-amiloide, Interferon EM */
+  "galantamine":                        "galantamina",
+  "reminyl":                            "galantamina",
+  "cogmed":                             "galantamina",
+  "memantine":                          "memantina",
+  "alois":                              "memantina",
+  "ebix":                               "memantina",
+  "heimer":                             "memantina",
+  "akatinol":                           "memantina",
+  "lecanemab":                          "lecanemabe",
+  "leqembi":                            "lecanemabe",
+  "donanemab":                          "donanemabe",
+  "kisunla":                            "donanemabe",
+  "interferon-beta-1a":                 "interferon_beta_1a",
+  "avonex":                             "interferon_beta_1a",
+  "rebif":                              "interferon_beta_1a",
+
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4: aliases */
   "nintedanib":                         "nintedanibe",
   "ofev":                               "nintedanibe",
@@ -856,7 +873,13 @@ const DRUG_CLASSES = {
 
   /* Inibidores da Colinesterase (AChE-I) — demência; bradicardia + antagonismo anticolinérgico. */
   "$classe_inibidores_colinesterase": [
-    "donepezila", "rivastigmina"
+    "donepezila", "rivastigmina", "galantamina"
+  ],
+
+  /* BUILD 400 — Anticorpos Anti-amiloide (Lecanemabe, Donanemabe) */
+  /* Anticorpos monoclonais que limpam placas beta-amiloides; risco ARIA-H fatal com anticoagulantes. */
+  "$classe_anticorpos_antiamiloide": [
+    "lecanemabe", "donanemabe"
   ],
 
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4 */
@@ -22372,9 +22395,63 @@ const INTERACOES_DB = {
         es: "Monitorizar electrolitos cada 12 horas durante la Pulsoterapia si el paciente es usuario de diuréticos de asa. Reponer Cloruro de Potasio (KCl) agresivamente vía endovenosa. Considerar suplementación de Magnesio concomitante."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES — BUILD 400
+   Alzheimer (Memantina/Anticorpos Anti-amiloide) e Esclerose Múltipla
+   Galantamina, Memantina, Lecanemabe, Donanemabe, Interferon Beta-1a
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── MEMANTINA (Risco Renal pelo pH da Urina) ── */
+  "memantina": {
+    "$classe_alcalinizantes_urinarios_inibidores_anidrase": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INTOXICAÇÃO PELO PH URINÁRIO. A Memantina é excretada intacta pelo rim. PORÉM, se a urina do paciente ficar alcalina (pH muito alto), o rim reabsorve a droga de volta para o sangue em vez de jogá-la na privada (reabsorção tubular). O uso de Bicarbonato de Sódio, Topiramato, Acetazolamida ou dietas extremas (muitas frutas cítricas) alcaliniza a urina. A Memantina acumula maciçamente no sangue, induzindo um surto de delírio agudo, alucinações e hiperatividade num idoso com Alzheimer.",
+        es: "INTOXICACIÓN POR EL PH URINARIO. La Memantina se excreta intacta por el riñón. PERO, si la orina queda alcalina (pH muy alto), el riñón reabsorbe la droga. El uso de Bicarbonato de Sodio, Topiramato, Acetazolamida o dietas extremas alcaliniza la orina. La Memantina se acumula macizamente, induciendo un brote de delirio agudo y alucinaciones en un anciano."
+      },
+      conduta: {
+        pt: "Cuidado absoluto na prescrição conjunta com Topiramato ou em pacientes com infecções urinárias severas por bactérias desdobradoras de ureia (Proteus), que alcalinizam a urina natural do idoso e causarão acúmulo da memantina.",
+        es: "Cuidado absoluto en prescripción con Topiramato o en infecciones urinarias por bacterias que alcalinizan la orina y causarán acumulo de la memantina."
+      }
+    }
+  },
+
+  /* ── ANTICORPOS ANTI-AMILOIDE (Lecanemabe, Donanemabe) ── */
+  "$classe_anticorpos_antiamiloide": {
+    "$classe_anticoagulantes_tromboliticos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "HEMORRAGIA CEREBRAL LETAL (Choque ARIA-H). Anticorpos que limpam placas beta-amiloides enfraquecem fisicamente as paredes das artérias cerebrais que estavam revestidas pela placa. O cérebro fica com dezenas de 'micro-rasgos' invisíveis durante as semanas de infusão. Se o paciente ingerir Anticoagulantes (Apixabana, Varfarina) ou Trombolíticos (Alteplase) para um AVC/Infarto, as artérias do cérebro explodem simultaneamente causando Morte ou Coma Hemorrágico irreversível.",
+        es: "HEMORRAGIA CEREBRAL LETAL (Choque ARIA-H). Anticuerpos que limpian placas beta-amiloides debilitan físicamente las paredes de las arterias cerebrales. El cerebro queda con micro-rasguños. Si el paciente ingiere Anticoagulantes (Apixabán, Warfarina) o Trombolíticos, las arterias del cerebro explotan causando Muerte Hemorrágica."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA E MEDICO-LEGAL. O tratamento com Donanemabe ou Lecanemabe é sumariamente vedado e proibido para pacientes que tenham Fibrilação Atrial e dependam do uso de anticoagulantes orais para evitar derrame. Risco fatal e imediato.",
+        es: "CONTRAINDICACIÓN ABSOLUTA Y MÉDICO-LEGAL. El tratamiento con Donanemab o Lecanemab está sumariamente vedado para pacientes que tengan Fibrilación Auricular y dependan del uso de anticoagulantes orales."
+      }
+    }
+  },
+
+  /* ── INTERFERON BETA-1A ── */
+  "interferon_beta_1a": {
+    "zidovudina_agentes_hepatotoxicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "FALÊNCIA HEPÁTICA AGUDA E SUPRESSÃO MEDULAR. O Interferon possui uma pesada carga de imunossupressão e agressão às transaminases. Associações com medicamentos agressivos ao fígado e à medula (Zidovudina, Amiodarona, Quimioterápicos) resultam em sinergismo destrutivo das funções hepáticas e neutropenia grave (Paciente fica sem defesas e morre de infecção).",
+        es: "FALLA HEPÁTICA AGUDA Y SUPRESIÓN MEDULAR. El Interferón posee una pesada carga de inmunosupresión y agresión a las transaminasas. Asociaciones con medicamentos agresivos al hígado resultan en sinergismo destructivo y neutropenia grave (el paciente queda sin defensas)."
+      },
+      conduta: {
+        pt: "Monitorar TGO/TGP e Hemograma mensalmente no início do tratamento com Interferon. Suspender imediatamente a terapia se as transaminases passarem de 5x o limite superior ou ocorrer icterícia.",
+        es: "Monitorizar AST/ALT y Hemograma mensualmente. Suspender inmediatamente la terapia si las transaminasas superan 5x el límite superior o ocurre ictericia."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 362 Lote 8 (Analgésicos/Sedação Atípica/Alergia: cetorolaco+IECA·BRA · quetiapina · prometazina · corticosteroides_pulsoterapia) */
+}; /* fim INTERACOES_DB — BUILD 400 (Neurologia: Memantina×alcalinizantes, Anticorpos Anti-amiloide×anticoagulantes ARIA-H, Interferon beta-1a×hepatotóxicos) */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
