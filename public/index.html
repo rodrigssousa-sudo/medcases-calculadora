@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=394" />
-  <link rel="stylesheet" href="css/build233.css?v=394" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=394" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=394" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=394" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=394" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=394" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=395" />
+  <link rel="stylesheet" href="css/build233.css?v=395" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=395" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=395" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=395" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=395" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=395" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=394" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=395" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=394" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=395" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=394" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=395" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=394" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=395" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=394" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=395" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=394" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=395" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=394" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=395" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=394" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=395" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -21103,15 +21103,30 @@ document.addEventListener('DOMContentLoaded', () => {
   ═══════════════════════════════════════════════════════════════════ */
 
   /* ── Helpers de injeção (DRY, evitam repetição de if/push) ── */
+  /* BUILD 395 PATCH A — cada helper blindado com try/catch individual:
+     se um módulo tiver schema inesperado (ex: ENDOCRINO_DRUGS_DB chegando
+     como objeto em vez de array), o erro é capturado e logado sem matar
+     os módulos seguintes nem interromper o boot do app. */
   function _injectObjectDB(db, category) {
     /* Para DBs do tipo {chave: {calculate(p,lang)}} */
-    if (db && typeof db === 'object' && !Array.isArray(db) && Object.keys(db).length > 0)
-      DRUG_DB.push(..._adaptExternalDB(db, category));
+    try {
+      if (db && typeof db === 'object' && !Array.isArray(db) && Object.keys(db).length > 0)
+        DRUG_DB.push(..._adaptExternalDB(db, category));
+    } catch(e) {
+      console.error('[Boot DB] _injectObjectDB falhou para categoria "' + category + '":', e.message);
+    }
   }
-  function _injectArrayDB(db) {
-    /* Para DBs do tipo [{id, dose(p,lang), ...}] */
-    if (Array.isArray(db) && db.length > 0)
-      DRUG_DB.push(...db);
+  function _injectArrayDB(db, label) {
+    /* Para DBs do tipo [{id, dose(p,lang), ...}]
+       BUILD 395: aceita também formato Object-DB silenciosamente (Object.values) */
+    try {
+      if (!db) return;
+      var arr = Array.isArray(db) ? db
+              : (typeof db === 'object' ? Object.values(db) : null);
+      if (arr && arr.length > 0) DRUG_DB.push(...arr);
+    } catch(e) {
+      console.error('[Boot DB] _injectArrayDB falhou' + (label ? ' para "' + label + '"' : '') + ':', e.message);
+    }
   }
 
   /* ── Schema {calculate} ── */
@@ -21125,19 +21140,19 @@ document.addEventListener('DOMContentLoaded', () => {
   _injectObjectDB(window.ANALGESICOS_DRUGS_DB,      'Analgésico e Antipirético');
 
   /* ── Schema [] ── */
-  _injectArrayDB(window.ANTICOAG_DRUGS_DB);
-  _injectArrayDB(window.ENDOCRINO_DRUGS_DB);
-  _injectArrayDB(window.GASTRO_DRUGS_DB);
-  _injectArrayDB(window.GASTRO_IMUNO_DRUGS_DB); /* BUILD 279: mesalazina, sufentanil, hidrocortisona, metilprednisolona */
-  _injectArrayDB(window.IMUNO_CORTICOIDE_DRUGS_DB); /* BUILD 280+281: dexametasona, prednisona, prednisolona, deflazacorte, betametasona */
-  _injectArrayDB(window.ENDOCRINO_GLP1_DRUGS_DB);  /* BUILD 281: semaglutida, tirzepatida, liraglutida */
-  _injectArrayDB(window.INFUSOES_DRUGS_DB);
-  _injectArrayDB(window.NEFRO_DRUGS_DB);
-  _injectArrayDB(window.NEURO_DRUGS_DB);
-  _injectArrayDB(window.OBESIDADE_DRUGS_DB);
-  _injectArrayDB(window.PNEUMO_DRUGS_DB);
-  _injectArrayDB(window.PSIQUIATRIA_DRUGS_DB);
-  _injectArrayDB(window.REUMATOLOGIA_DRUGS_DB);
+  _injectArrayDB(window.ANTICOAG_DRUGS_DB,          'ANTICOAG');
+  _injectArrayDB(window.ENDOCRINO_DRUGS_DB,          'ENDOCRINO');
+  _injectArrayDB(window.GASTRO_DRUGS_DB,             'GASTRO');
+  _injectArrayDB(window.GASTRO_IMUNO_DRUGS_DB,       'GASTRO_IMUNO');    /* BUILD 279 */
+  _injectArrayDB(window.IMUNO_CORTICOIDE_DRUGS_DB,   'IMUNO_CORTICOIDE'); /* BUILD 280+281 */
+  _injectArrayDB(window.ENDOCRINO_GLP1_DRUGS_DB,     'ENDOCRINO_GLP1');   /* BUILD 281 */
+  _injectArrayDB(window.INFUSOES_DRUGS_DB,            'INFUSOES');
+  _injectArrayDB(window.NEFRO_DRUGS_DB,               'NEFRO');
+  _injectArrayDB(window.NEURO_DRUGS_DB,               'NEURO');
+  _injectArrayDB(window.OBESIDADE_DRUGS_DB,            'OBESIDADE');
+  _injectArrayDB(window.PNEUMO_DRUGS_DB,               'PNEUMO');
+  _injectArrayDB(window.PSIQUIATRIA_DRUGS_DB,          'PSIQUIATRIA');
+  _injectArrayDB(window.REUMATOLOGIA_DRUGS_DB,         'REUMATOLOGIA');
   _injectObjectDB(window.EMERGENCIA_DRUGS_DB, 'Emergência');
 
   /* ── BUILD 388-HOTFIX PATCH B: 6 módulos Object-DB ausentes da injeção ──
@@ -21308,25 +21323,44 @@ document.addEventListener('DOMContentLoaded', () => {
      Mantido para compatibilidade com módulos que fazem busca por chave.
      A fonte de verdade para busca e contagem é DRUG_DB (via _getMasterDB).
   ═══════════════════════════════════════════════════════════════════ */
-  window.ALL_DRUGS_DB = {
-    ...(window.ANTIMICROBIANOS_DRUGS_DB || {}),
-    ...(window.PSICOFARMACOS_DRUGS_DB   || {}),
-    ...(window.CARDIO_DRUGS_DB          || {}),
-    ...(window.ANALGESICOS_DRUGS_DB      || {}), /* BUILD 262: schema objeto-mapa */
-    ...Object.fromEntries((window.ANTICOAG_DRUGS_DB     || []).filter(d=>d?.id).map(d=>[d.id, d])),
-    ...Object.fromEntries((window.ENDOCRINO_DRUGS_DB    || []).filter(d=>d?.id).map(d=>[d.id, d])),
-    ...Object.fromEntries((window.GASTRO_DRUGS_DB       || []).filter(d=>d?.id).map(d=>[d.id, d])),
-    ...Object.fromEntries((window.GASTRO_IMUNO_DRUGS_DB     || []).filter(d=>d?.id).map(d=>[d.id, d])), /* BUILD 279 */
-    ...Object.fromEntries((window.IMUNO_CORTICOIDE_DRUGS_DB || []).filter(d=>d?.id).map(d=>[d.id, d])), /* BUILD 280+281 */
-    ...Object.fromEntries((window.ENDOCRINO_GLP1_DRUGS_DB   || []).filter(d=>d?.id).map(d=>[d.id, d])), /* BUILD 281 */
-    ...Object.fromEntries((window.INFUSOES_DRUGS_DB         || []).filter(d=>d?.id).map(d=>[d.id, d])),
-    ...Object.fromEntries((window.NEFRO_DRUGS_DB        || []).filter(d=>d?.id).map(d=>[d.id, d])),
-    ...Object.fromEntries((window.NEURO_DRUGS_DB        || []).filter(d=>d?.id).map(d=>[d.id, d])),
-    ...Object.fromEntries((window.OBESIDADE_DRUGS_DB    || []).filter(d=>d?.id).map(d=>[d.id, d])),
-    ...Object.fromEntries((window.PNEUMO_DRUGS_DB       || []).filter(d=>d?.id).map(d=>[d.id, d])),
-    ...Object.fromEntries((window.PSIQUIATRIA_DRUGS_DB  || []).filter(d=>d?.id).map(d=>[d.id, d])),
-    ...Object.fromEntries((window.REUMATOLOGIA_DRUGS_DB || []).filter(d=>d?.id).map(d=>[d.id, d]))
-  };
+  /* BUILD 395 PATCH A — helper blindado: aceita array OU objeto sem crashar.
+     Causa raiz do "Uncaught TypeError: .filter is not a function" (linha 21317):
+     ENDOCRINO_DRUGS_DB (e outros) podem carregar como Object-DB (objeto-mapa)
+     em vez de array quando o schema do arquivo muda entre builds.
+     _safeArr(db) normaliza qualquer formato → array de entries com .id válido. */
+  function _safeArr(db) {
+    try {
+      if (!db) return [];
+      const arr = Array.isArray(db) ? db : Object.values(db);
+      return arr.filter(d => d && d.id);
+    } catch(e) { return []; }
+  }
+  /* Monta ALL_DRUGS_DB com try/catch absoluto: se um DB específico crashar,
+     o erro é isolado e não destrói o mapa inteiro nem o boot do app. */
+  try {
+    window.ALL_DRUGS_DB = {
+      ...(window.ANTIMICROBIANOS_DRUGS_DB || {}),
+      ...(window.PSICOFARMACOS_DRUGS_DB   || {}),
+      ...(window.CARDIO_DRUGS_DB          || {}),
+      ...(window.ANALGESICOS_DRUGS_DB      || {}), /* BUILD 262: schema objeto-mapa */
+      ...Object.fromEntries(_safeArr(window.ANTICOAG_DRUGS_DB    ).map(d=>[d.id, d])),
+      ...Object.fromEntries(_safeArr(window.ENDOCRINO_DRUGS_DB   ).map(d=>[d.id, d])),
+      ...Object.fromEntries(_safeArr(window.GASTRO_DRUGS_DB      ).map(d=>[d.id, d])),
+      ...Object.fromEntries(_safeArr(window.GASTRO_IMUNO_DRUGS_DB    ).map(d=>[d.id, d])), /* BUILD 279 */
+      ...Object.fromEntries(_safeArr(window.IMUNO_CORTICOIDE_DRUGS_DB).map(d=>[d.id, d])), /* BUILD 280+281 */
+      ...Object.fromEntries(_safeArr(window.ENDOCRINO_GLP1_DRUGS_DB  ).map(d=>[d.id, d])), /* BUILD 281 */
+      ...Object.fromEntries(_safeArr(window.INFUSOES_DRUGS_DB        ).map(d=>[d.id, d])),
+      ...Object.fromEntries(_safeArr(window.NEFRO_DRUGS_DB       ).map(d=>[d.id, d])),
+      ...Object.fromEntries(_safeArr(window.NEURO_DRUGS_DB       ).map(d=>[d.id, d])),
+      ...Object.fromEntries(_safeArr(window.OBESIDADE_DRUGS_DB   ).map(d=>[d.id, d])),
+      ...Object.fromEntries(_safeArr(window.PNEUMO_DRUGS_DB      ).map(d=>[d.id, d])),
+      ...Object.fromEntries(_safeArr(window.PSIQUIATRIA_DRUGS_DB ).map(d=>[d.id, d])),
+      ...Object.fromEntries(_safeArr(window.REUMATOLOGIA_DRUGS_DB).map(d=>[d.id, d]))
+    };
+  } catch(e) {
+    console.error('[Boot DB] Erro ao montar ALL_DRUGS_DB — usando mapa parcial:', e.message);
+    if (!window.ALL_DRUGS_DB) window.ALL_DRUGS_DB = {};
+  }
   console.log('[MedCases] ALL_DRUGS_DB montado:', Object.keys(window.ALL_DRUGS_DB).length, 'entradas');
 
   /* ── Atualiza TODOS os contadores (badge + home mobile) ── */
@@ -23421,47 +23455,55 @@ document.addEventListener('DOMContentLoaded', () => {
     'hmFilterDrugs',             /* BUILD 370: adicionado — chamado por oninput da busca */
   ];
 
+  /* BUILD 395 PATCH B — DESTRUIÇÃO DA PILHA RECURSIVA:
+     Reduzido de 60 tentativas (6s) → 20 tentativas (2s). O boot completo
+     do DOMContentLoaded ocorre em < 1s na maioria dos dispositivos.
+     Se após 2s ainda há funções ausentes, é falha de carregamento — logar
+     e encerrar SEM re-agendar, cortando a pilha recursiva. */
   var _attempts = 0;
-  var _maxAttempts = 60; /* BUILD 370: 60 × 100ms = 6s (era 30×100ms=3s) */
+  var _maxAttempts = 20; /* BUILD 395: 20 × 100ms = 2s máximo, sem inundar console */
+  var _safeNetDone = false; /* flag única: evita execução dupla */
 
   function _checkAndExport() {
+    /* Guarda de reentrância: se já concluiu (sucesso ou timeout), não re-executa */
+    if (_safeNetDone) return;
     _attempts++;
-    var missing = [];
 
+    var missing = [];
     _CRITICAL_FNS.forEach(function(name) {
-      /* Se já está no window E é uma function, nada a fazer */
       if (typeof window[name] === 'function') return;
       missing.push(name);
     });
 
     if (missing.length === 0) {
-      /* Todas as funções confirmadas no window */
+      /* ✅ Todas as funções registradas — encerra limpo */
+      _safeNetDone = true;
       window._appBootComplete = true;
-      console.log('[BUILD 370] Safety-net: todas as funções críticas confirmadas no window. _appBootComplete=true');
+      console.log('[BUILD 395] Safety-net: boot OK — todas as funções críticas no window.');
       return;
     }
 
     if (_attempts < _maxAttempts) {
-      setTimeout(_checkAndExport, 100);
-    } else {
-      /* BUILD 394 PATCH D — EXTINÇÃO DOS STUBS DE TIMEOUT MOBILE:
-         O safety-net anterior sobrescrevia funções ausentes com stubs vazios
-         (function(){}), matando silenciosamente hmOpenDrug, hmShowInlineResult, etc.
-         no mobile quando o DOMContentLoaded atrasava > 6s.
-         NOVA CONDUTA: NUNCA sobrescrever — apenas logar as funções ainda ausentes
-         e forçar _appBootComplete para desbloquear o reactive engine.
-         Se uma função ainda estiver ausente aqui, é bug de ordem de carregamento
-         a ser corrigido na fonte, não mascarado com stub vazio. */
-      if (missing.length > 0) {
-        console.warn('[BUILD 394] Safety-net timeout (6s): funções ainda não registradas: ' + missing.join(', ')
-          + ' — NÃO foram substituídas por stubs. Verifique a ordem de carregamento dos scripts.');
+      /* Retenta apenas se ainda dentro do limite e boot não concluiu */
+      if (!window._appBootComplete) {
+        setTimeout(_checkAndExport, 100);
+      } else {
+        /* Boot já completou por outro caminho — encerra */
+        _safeNetDone = true;
       }
-      /* Força boot complete para desbloquear reactive engine */
+    } else {
+      /* BUILD 394+395 PATCH D+B — timeout sem stubs, sem recursão residual:
+         Loga UMA VEZ e encerra. Nunca sobrescreve funções. Nunca re-agenda. */
+      _safeNetDone = true;
+      if (missing.length > 0) {
+        console.warn('[BUILD 395] Safety-net: timeout 2s — funções não registradas: '
+          + missing.join(', ') + ' — boot.crash corrigido por PATCH A (Array guard).');
+      }
       window._appBootComplete = true;
     }
   }
 
-  /* Inicia verificação após DOMContentLoaded */
+  /* Inicia verificação após DOMContentLoaded — única entrada no loop */
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       setTimeout(_checkAndExport, 150);
@@ -23727,8 +23769,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=394"></script>
-<script src="database/analgesicos.js?v=394"></script>
+<script src="database/antimicrobianos.js?v=395"></script>
+<script src="database/analgesicos.js?v=395"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -23842,9 +23884,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=394', 'psico');
-    _loadScript('database/cardio.js?v=394',        'cardio');
-    _loadScript('database/interacoes.js?v=394',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=395', 'psico');
+    _loadScript('database/cardio.js?v=395',        'cardio');
+    _loadScript('database/interacoes.js?v=395',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -23854,50 +23896,50 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=394"></script>
-<script src="database/gastro.js?v=394"></script>
-<script src="database/gastro_imuno.js?v=394"></script>
-<script src="database/imuno_corticoide.js?v=394"></script>
-<script src="database/endocrino_glp1.js?v=394"></script>
-<script src="database/infusoes.js?v=394"></script>
-<script src="database/emergencia.js?v=394"></script>
-<script src="database/infectologia.js?v=394"></script>
-<script src="database/sedacao.js?v=394"></script>
-<script src="database/hematologia.js?v=394"></script>
-<script src="database/pneumologia.js?v=394"></script>
-<script src="database/gastroenterologia.js?v=394"></script>
-<script src="database/cardiologia.js?v=394"></script>
-<script src="database/analgesia_opioides.js?v=394"></script>
-<script src="database/alergia_imunologia.js?v=394"></script>
-<script src="database/pneumologia_otorrino.js?v=394"></script>
-<script src="database/prescricoes.js?v=394" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=395"></script>
+<script src="database/gastro.js?v=395"></script>
+<script src="database/gastro_imuno.js?v=395"></script>
+<script src="database/imuno_corticoide.js?v=395"></script>
+<script src="database/endocrino_glp1.js?v=395"></script>
+<script src="database/infusoes.js?v=395"></script>
+<script src="database/emergencia.js?v=395"></script>
+<script src="database/infectologia.js?v=395"></script>
+<script src="database/sedacao.js?v=395"></script>
+<script src="database/hematologia.js?v=395"></script>
+<script src="database/pneumologia.js?v=395"></script>
+<script src="database/gastroenterologia.js?v=395"></script>
+<script src="database/cardiologia.js?v=395"></script>
+<script src="database/analgesia_opioides.js?v=395"></script>
+<script src="database/alergia_imunologia.js?v=395"></script>
+<script src="database/pneumologia_otorrino.js?v=395"></script>
+<script src="database/prescricoes.js?v=395" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=394"></script>
+<script defer src="js/medcases-ux-v2.js?v=395"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=394"></script>
+<script defer src="js/hub-accordion.js?v=395"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=394"></script>
+<script defer src="js/build240b-accordion-fix.js?v=395"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=394"></script>
+<script defer src="js/calculator-overlay.js?v=395"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=394"></script>
+<script defer src="js/category-pills.js?v=395"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=394"></script>
+<script defer src="js/elec-calc.js?v=395"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=394"></script>
+<script defer src="js/deeplink-router.js?v=395"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=394"></script>
+<script defer src="js/build272-reactive-engine.js?v=395"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=394"></script>
+<script defer src="js/build283-accessory-bar.js?v=395"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
