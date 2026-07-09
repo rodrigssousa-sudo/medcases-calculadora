@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=374" />
-  <link rel="stylesheet" href="css/build233.css?v=374" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=374" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=374" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=374" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=374" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=374" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=376" />
+  <link rel="stylesheet" href="css/build233.css?v=376" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=376" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=376" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=376" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=376" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=376" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=374" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=376" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=374" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=376" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=374" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=376" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=374" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=376" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=374" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=376" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=374" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=376" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=374" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=376" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=374" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=376" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -11280,6 +11280,10 @@ window.OBESIDADE_DRUGS_DB        = window.OBESIDADE_DRUGS_DB        || [];
 window.PNEUMO_DRUGS_DB           = window.PNEUMO_DRUGS_DB           || [];
 window.PSIQUIATRIA_DRUGS_DB      = window.PSIQUIATRIA_DRUGS_DB      || [];
 window.REUMATOLOGIA_DRUGS_DB     = window.REUMATOLOGIA_DRUGS_DB     || [];
+/* BUILD 376 PATCH B: NEFRO/NEURO/OBESIDADE/PNEUMO/PSIQUIATRIA/REUMATOLOGIA/ANTICOAG
+   eram stubs vazios (~500 B cada). Seus <script> tags foram removidos do HTML.
+   Os arrays acima garantem inicialização segura sem roundtrip HTTP. */
+
 window.EMERGENCIA_DRUGS_DB       = window.EMERGENCIA_DRUGS_DB       || {};
 window.SEDACAO_DRUGS_DB          = window.SEDACAO_DRUGS_DB          || {}; /* BUILD 348: sedação UTI + neurointensivismo */
 window.HEMATOLOGIA_DRUGS_DB      = window.HEMATOLOGIA_DRUGS_DB      || {}; /* BUILD 350: hematologia/anticoagulação */
@@ -21514,6 +21518,9 @@ document.addEventListener('DOMContentLoaded', () => {
     set('home-live-bsa',   bsaVal);
   }
   window._updateHomeLiveDash = _updateHomeLiveDash;
+  /* BUILD 376 PATCH A: expose injection helpers for lazy-loader */
+  window._injectObjectDB = _injectObjectDB;
+  window._injectArrayDB  = _injectArrayDB;
 
   /* ─── Estado visual "fixado" do card ─── */
   function _hmSetFixedState(isFixed) {
@@ -22326,6 +22333,56 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       window.hmSetSex._cgPatched = true;
     }
+  })();
+
+  /* ════════════════════════════════════════════════════════════════
+     BUILD 376 PATCH C — LIVE SEX COSMETIC UPDATE
+     Ao clicar em Masc./Fem., atualiza imediatamente:
+       1. #hm-patient-card → hm-profile-female / hm-profile-male
+       2. #home-live-clcr  → cor ciano (M) ou rosa (F)
+       3. #result-dashboard→ sex-m / sex-f (para rd-clcr-color)
+     Independente do clique em "Fixar" — reatividade visual imediata.
+  ════════════════════════════════════════════════════════════════ */
+  (function _hmLiveSexCosmeticBind() {
+    function _hmLiveSexUpdate(sex) {
+      var isF = (sex === 'F');
+      /* 1. Patient card profile color */
+      var card = document.getElementById('hm-patient-card');
+      if (card) {
+        var age = parseFloat(
+          (document.getElementById('hm-age') || {}).value || '0'
+        ) || 0;
+        card.classList.remove('hm-profile-pedia', 'hm-profile-female', 'hm-profile-male');
+        if (age > 0 && age < 12) {
+          card.classList.add('hm-profile-pedia');
+        } else {
+          card.classList.add(isF ? 'hm-profile-female' : 'hm-profile-male');
+        }
+      }
+      /* 2. Dashboard 2x2: home-live-clcr font color */
+      var clcrEl = document.getElementById('home-live-clcr');
+      if (clcrEl) clcrEl.style.color = isF ? '#F472B6' : '#38BDF8';
+      /* 3. result-dashboard sex class (for rd-clcr-color CSS) */
+      var dash = document.getElementById('result-dashboard');
+      if (dash) {
+        dash.classList.toggle('sex-m', !isF);
+        dash.classList.toggle('sex-f', isF);
+      }
+    }
+
+    /* Wrap hmSetSex once — guarded against double-wrap */
+    if (window.hmSetSex && !window.hmSetSex._376sexPatch) {
+      var _prev376 = window.hmSetSex;
+      window.hmSetSex = function(sex) {
+        _prev376.call(this, sex);
+        _hmLiveSexUpdate(sex);
+      };
+      window.hmSetSex._cgPatched   = true;  /* preserve existing flag */
+      window.hmSetSex._376sexPatch = true;
+    }
+
+    /* Run once on load to sync with current state (default M) */
+    _hmLiveSexUpdate(typeof currentSex !== 'undefined' ? currentSex : 'M');
   })();
 
   /* Disparo inicial: se localStorage já tinha creatinina, calcula agora */
@@ -23297,59 +23354,105 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/interacoes.js?v=374"></script>
-<script src="database/antimicrobianos.js?v=374"></script>
-<script src="database/psicofarmacos.js?v=374"></script>
-<script src="database/analgesicos.js?v=374"></script>
-<script src="database/anticoag.js?v=374"></script>
-<script src="database/cardio.js?v=374"></script>
-<script src="database/endocrino.js?v=374"></script>
-<script src="database/gastro.js?v=374"></script>
-<script src="database/gastro_imuno.js?v=374"></script>
-<script src="database/imuno_corticoide.js?v=374"></script>
-<script src="database/endocrino_glp1.js?v=374"></script>
-<script src="database/infusoes.js?v=374"></script>
-<script src="database/nefro.js?v=374"></script>
-<script src="database/neuro.js?v=374"></script>
-<script src="database/obesidade.js?v=374"></script>
-<script src="database/pneumo.js?v=374"></script>
-<script src="database/psiquiatria.js?v=374"></script>
-<script src="database/reumatologia.js?v=374"></script>
-<script src="database/emergencia.js?v=374"></script>
-<script src="database/infectologia.js?v=374"></script>
-<script src="database/sedacao.js?v=374"></script>
-<script src="database/hematologia.js?v=374"></script>
-<script src="database/gastroenterologia.js?v=374"></script>
-<script src="database/cardiologia.js?v=374"></script>
-<script src="database/analgesia_opioides.js?v=374"></script>
-<script src="database/prescricoes.js?v=374" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/interacoes.js?v=376"></script>
+<script src="database/antimicrobianos.js?v=376"></script>
+<script src="database/analgesicos.js?v=376"></script>
+
+<!-- BUILD 376 PATCH A — LAZY LOAD (requestIdleCallback)
+     cardio.js  (2.5 MB) e psicofarmacos.js (756 KB) são diferidos para
+     depois do primeiro render, liberando a thread principal no boot.
+     Após a carga assíncrona, _injectObjectDB injeta os dados em DRUG_DB
+     e reconstrói o índice de busca — transparente para o usuário.
+     Fallback: setTimeout 500ms para browsers sem rIC (Safari < 16). -->
+<script>
+(function _hmLazyLoadHeavyDBs() {
+  var _loaded = { cardio: false, psico: false };
+
+  function _onBothLoaded() {
+    /* Aguarda DOMContentLoaded ter rodado (DRUG_DB já existe) */
+    if (typeof window.DRUG_DB === 'undefined') return; /* segurança extra */
+    /* Re-injeta após carga lazy */
+    if (typeof window._injectObjectDB === 'function') {
+      window._injectObjectDB(window.PSICOFARMACOS_DRUGS_DB, 'Psicofármaco');
+      window._injectObjectDB(window.CARDIO_DRUGS_DB,        'Cardiovascular');
+    }
+    /* Reconstrói índice de busca */
+    if (typeof window._buildSearchIndex === 'function') window._buildSearchIndex();
+    /* Atualiza contadores */
+    if (typeof window._fdUpdateCount    === 'function') window._fdUpdateCount();
+    /* Atualiza hint de quantidade */
+    if (typeof window._updateDrugSearchHint === 'function') window._updateDrugSearchHint();
+    console.log('[MedCases] BUILD 376: lazy DBs injetados — cardio + psicofarmacos prontos.');
+  }
+
+  function _loadScript(src, key) {
+    var s = document.createElement('script');
+    s.src = src;
+    s.onload = function() {
+      _loaded[key] = true;
+      if (_loaded.cardio && _loaded.psico) _onBothLoaded();
+    };
+    s.onerror = function() {
+      console.warn('[MedCases] BUILD 376: falha ao carregar lazy DB:', src);
+      _loaded[key] = true; /* marca como "tentado" para não bloquear o outro */
+      if (_loaded.cardio && _loaded.psico) _onBothLoaded();
+    };
+    document.head.appendChild(s);
+  }
+
+  function _doLoad() {
+    _loadScript('database/psicofarmacos.js?v=376', 'psico');
+    _loadScript('database/cardio.js?v=376',        'cardio');
+  }
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(_doLoad, { timeout: 500 });
+  } else {
+    setTimeout(_doLoad, 500);
+  }
+})();
+</script>
+<script src="database/endocrino.js?v=376"></script>
+<script src="database/gastro.js?v=376"></script>
+<script src="database/gastro_imuno.js?v=376"></script>
+<script src="database/imuno_corticoide.js?v=376"></script>
+<script src="database/endocrino_glp1.js?v=376"></script>
+<script src="database/infusoes.js?v=376"></script>
+<script src="database/emergencia.js?v=376"></script>
+<script src="database/infectologia.js?v=376"></script>
+<script src="database/sedacao.js?v=376"></script>
+<script src="database/hematologia.js?v=376"></script>
+<script src="database/gastroenterologia.js?v=376"></script>
+<script src="database/cardiologia.js?v=376"></script>
+<script src="database/analgesia_opioides.js?v=376"></script>
+<script src="database/prescricoes.js?v=376" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=374"></script>
+<script defer src="js/medcases-ux-v2.js?v=376"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=374"></script>
+<script defer src="js/hub-accordion.js?v=376"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=374"></script>
+<script defer src="js/build240b-accordion-fix.js?v=376"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=374"></script>
+<script defer src="js/calculator-overlay.js?v=376"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=374"></script>
+<script defer src="js/category-pills.js?v=376"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=374"></script>
+<script defer src="js/elec-calc.js?v=376"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=374"></script>
+<script defer src="js/deeplink-router.js?v=376"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=374"></script>
+<script defer src="js/build272-reactive-engine.js?v=376"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=374"></script>
+<script defer src="js/build283-accessory-bar.js?v=376"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
