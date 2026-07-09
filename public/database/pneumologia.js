@@ -1009,6 +1009,206 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'REQUISITO MÉDICO OBRIGATÓRIO: É um crime médico prescrever Mepolizumabe sem antes olhar o Hemograma do paciente. Ele SÓ funciona se a asma do paciente for induzida por Eosinófilos (geralmente > 150 a 300 células/mcL no sangue). Se a asma for neutrofílica, o remédio (que custa fortunas) não fará absolutamente nada.', es: 'REQUISITO MÉDICO OBLIGATORIO: Es un crimen médico prescribir Mepolizumab sin antes mirar el Hemograma. SOLO funciona si el asma es inducida por Eosinófilos. Si el asma es neutrofílica, el remedio no hará absolutamente nada.' }
       }
+    },
+
+/* ── RESLIZUMABE ────────────────────────────────────────────────────── */
+    "reslizumabe": {
+      name: { pt: 'Reslizumabe', es: 'Reslizumab' },
+      category: 'pneumologia',
+      class: { pt: 'Anticorpo Monoclonal (Anti-Interleucina 5 / Anti-IL-5)', es: 'Anticuerpo Monoclonal (Anti-Interleucina 5 / Anti-IL-5)' },
+      indications: {
+        pt: ['Asma Eosinofílica Grave (terapia adicional de manutenção em adultos não controlados)'],
+        es: ['Asma Eosinofílica Grave (terapia adicional de mantenimiento en adultos no controlados)']
+      },
+      commercialNames: { br: ['Cinqair'], ar: ['Cinqair'] },
+      presentation: { pt: ['Frasco-ampola para uso IV (10 mg/mL)'], es: ['Vial para uso IV (10 mg/mL)'] },
+      mechanism: {
+        pt: 'Liga-se especificamente à Interleucina-5 (IL-5) livre no sangue do paciente, neutralizando-a. Como a IL-5 é o hormônio vital de sobrevivência e proliferação dos eosinófilos, o Reslizumabe corta o "suprimento de comida" dessas células. O eosinófilo murcha e sofre apoptose (morte celular programada), esvaziando o pulmão da inflamação. Diferente do Mepolizumabe (que é subcutâneo), este fármaco é puramente endovenoso.',
+        es: 'Se une específicamente a la Interleucina-5 (IL-5) libre en la sangre, neutralizándola. Como la IL-5 es la hormona vital de supervivencia de los eosinófilos, el Reslizumab corta el "suministro de comida" de estas células. El eosinófilo se marchita y sufre apoptosis, vaciando el pulmón de inflamación.'
+      },
+      dose: {
+        adult: {
+          pt: '3 mg/kg administrados por infusão Intravenosa (IV) a CADA 4 SEMANAS (1 vez ao mês).',
+          es: '3 mg/kg administrados por infusión Intravenosa (IV) CADA 4 SEMANAS (1 vez al mes).'
+        },
+        pediatric: {
+          pt: 'Não recomendado (restrito a maiores de 18 anos devido ao risco de anafilaxia).',
+          es: 'No recomendado (restringido a mayores de 18 años debido al riesgo de anafilaxia).'
+        }
+      },
+      administration: { pt: ['Administração ESTRITAMENTE ENDOVENOSA. A infusão deve correr ao longo de 20 a 50 minutos. Acesso venoso obrigatório.'], es: ['Administración ESTRICTAMENTE ENDOVENOSA. La infusión debe correr a lo largo de 20 a 50 minutos. Acceso venoso obligatorio.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Degradação proteolítica natural.', es: 'Degradación proteolítica natural.' } },
+      commonAdverseEffects: { pt: ['Dor e reação no local da punção IV', 'Elevação da creatina quinase (CPK) muscular', 'Dores no corpo (Mialgia)'], es: ['Dolor y reacción en el sitio de punción IV', 'Elevación de creatina quinasa (CPK) muscular', 'Dolores en el cuerpo (Mialgia)'] },
+      dangerousAdverseEffects: { pt: ['Anafilaxia fatal durante a infusão venosa ou imediatamente após', 'Risco teórico aumentado de neoplasias (câncer) em longo prazo'], es: ['Anafilaxia fatal durante la infusión venosa o inmediatamente después', 'Riesgo teórico aumentado de neoplasias (cáncer) a largo plazo'] },
+      contraindications: {
+        absolute: { pt: ['Tratamento de status asthmaticus agudo'], es: ['Tratamiento de status asthmaticus agudo'] },
+        relative: { pt: ['Infecções helmínticas ativas não tratadas'], es: ['Infecciones helmínticas activas no tratadas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'BLACK BOX WARNING: O Reslizumabe possui um alerta grave na FDA por causar Anafilaxia em até 0,3% dos pacientes (taxa muito alta para um imunobiológico). A infusão deve ser feita num centro médico com carrinho de parada, e o paciente monitorado de perto por 30 a 60 min após o fim do gotejamento.', es: 'BLACK BOX WARNING: El Reslizumab posee una alerta grave en la FDA por causar Anafilaxia en hasta 0,3% de los pacientes. La infusión debe hacerse en un centro médico con carro de paro.' }
+      }
+    },
+
+/* ── BENRALIZUMABE ──────────────────────────────────────────────────── */
+    "benralizumabe": {
+      name: { pt: 'Benralizumabe', es: 'Benralizumab' },
+      category: 'pneumologia',
+      class: { pt: 'Anticorpo Monoclonal (Anti-Receptor Alfa da IL-5)', es: 'Anticuerpo Monoclonal (Anti-Receptor Alfa de IL-5)' },
+      indications: {
+        pt: ['Asma Eosinofílica Grave não controlada (Manutenção)'],
+        es: ['Asma Eosinofílica Grave no controlada (Mantenimiento)']
+      },
+      commercialNames: { br: ['Fasenra'], ar: ['Fasenra'] },
+      presentation: { pt: ['Seringa ou caneta preenchida SC 30 mg'], es: ['Jeringa o pluma prellenada SC 30 mg'] },
+      mechanism: {
+        pt: 'O "Exterminador Direto". Diferente do Mepolizumabe e Reslizumabe (que sequestram a IL-5 flutuando no sangue), o Benralizumabe mira na própria célula: ele se liga fisicamente ao RECEPTOR da IL-5 na superfície do eosinófilo. Ao grudar ali, ele age como um sinalizador luminoso para as células "Natural Killer" (NK) do sistema imune do paciente. As NK chegam e explodem o eosinófilo (Citotoxicidade Celular Dependente de Anticorpos - ADCC). Isso ZERA os eosinófilos do sangue em 24 horas.',
+        es: 'El "Exterminador Directo". A diferencia del Mepolizumab y Reslizumab (que secuestran la IL-5 en sangre), el Benralizumab apunta a la propia célula: se une físicamente al RECEPTOR de IL-5 en el eosinófilo. Al pegarse, actúa como señalizador para las células "Natural Killer" (NK). Las NK llegan y explotan al eosinófilo. Esto PONE A CERO los eosinófilos en 24 horas.'
+      },
+      dose: {
+        adult: {
+          pt: '30 mg via Subcutânea a cada 4 semanas nas primeiras 3 doses. DEPOIS: 30 mg a CADA 8 SEMANAS (1 injeção a cada 2 meses).',
+          es: '30 mg vía Subcutánea cada 4 semanas en las primeras 3 dosis. DESPUÉS: 30 mg CADA 8 SEMANAS (1 inyección cada 2 meses).'
+        },
+        pediatric: {
+          pt: 'Uso a partir de 12 anos: mesma dose do adulto (30 mg SC).',
+          es: 'Uso a partir de 12 años: misma dosis del adulto (30 mg SC).'
+        }
+      },
+      administration: { pt: ['Injeção exclusivamente Subcutânea (braço, coxa, abdome). O espaçamento a cada 8 semanas na manutenção é seu maior atrativo comercial (maior conforto ao paciente).'], es: ['Inyección exclusivamente Subcutánea. El espaciamiento cada 8 semanas en el mantenimiento es su mayor atractivo comercial (mayor confort al paciente).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste renal.', es: 'Sin necesidad de ajuste renal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não requer ajuste em disfunção hepática.', es: 'No requiere ajuste en disfunción hepática.' } },
+      commonAdverseEffects: { pt: ['Dor de garganta (Faringite)', 'Febre leve transitória pós-injeção', 'Dor de cabeça'], es: ['Dolor de garganta (Faringitis)', 'Fiebre leve transitoria posinyección', 'Dolor de cabeza'] },
+      dangerousAdverseEffects: { pt: ['Reação anafilática ou urticária severa', 'Redução total da defesa contra helmintos (vermes)'], es: ['Reacción anafiláctica o urticaria severa', 'Reducción total de la defensa contra helmintos (gusanos)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade documentada', 'Crise aguda de asfixia (Broncoespasmo ativo)'], es: ['Hipersensibilidad documentada', 'Crisis aguda de asfixia (Broncoespasmo activo)'] },
+        relative: { pt: ['Pacientes residentes em zonas de altíssima prevalência de parasitoses intestinais e sistêmicas'], es: ['Pacientes residentes en zonas de altísima prevalencia de parasitosis intestinales y sistémicas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'EFEITO "ZERO EOSINÓFILOS": Se você pedir um hemograma após a primeira dose de Benralizumabe, a contagem de Eosinófilos será literalmente 0. Isso não é um erro do laboratório e não deve assustar o médico; é o exato mecanismo de ação da droga operando.', es: 'EFECTO "CERO EOSINÓFILOS": Si usted pide un hemograma tras la primera dosis de Benralizumab, el conteo de Eosinófilos será literalmente 0. Esto no es un error del laboratorio; es el exacto mecanismo de acción de la droga operando.' }
+      }
+    },
+
+/* ── DUPILUMABE ─────────────────────────────────────────────────────── */
+    "dupilumabe": {
+      name: { pt: 'Dupilumabe', es: 'Dupilumab' },
+      category: 'pneumologia',
+      class: { pt: 'Anticorpo Monoclonal (Anti-Receptor de IL-4 e IL-13)', es: 'Anticuerpo Monoclonal (Anti-Receptor de IL-4 e IL-13)' },
+      indications: {
+        pt: ['Asma Tipo 2 Severa (Eosinofílica ou com FeNO elevado)', 'Dermatite Atópica (Eczema) grave refratária', 'Rinossinusite crônica com Polipose Nasal severa', 'Esofagite Eosinofílica'],
+        es: ['Asma Tipo 2 Severa (Eosinofílica o con FeNO elevado)', 'Dermatitis Atópica (Eczema) grave refractaria', 'Rinosinusitis crónica con Poliposis Nasal severa', 'Esofagitis Eosinofílica']
+      },
+      commercialNames: { br: ['Dupixent'], ar: ['Dupixent'] },
+      presentation: { pt: ['Seringa preenchida SC 200 mg e 300 mg'], es: ['Jeringa prellenada SC 200 mg y 300 mg'] },
+      mechanism: {
+        pt: 'O "Rei da Inflamação Tipo 2". Liga-se especificamente à cadeia alfa do receptor da Interleucina-4 (IL-4Rα). Como esse receptor é compartilhado, o Dupilumabe inibe SIMULTANEAMENTE duas vias gigantescas: a IL-4 e a IL-13. Essas duas citocinas são as "gerentes" das alergias no corpo inteiro. Ao bloqueá-las, o remédio desinflama o pulmão (Asma), desinflama a pele (Dermatite) e encolhe pólipos do nariz ao mesmo tempo.',
+        es: 'El "Rey de la Inflamación Tipo 2". Se une específicamente a la cadena alfa del receptor de la Interleucina-4 (IL-4Rα). Como este receptor es compartido, el Dupilumab inhibe SIMULTÁNEAMENTE dos vías gigantescas: IL-4 e IL-13. Estas dos citocinas son las "gerentes" de las alergias. Al bloquearlas, desinflama el pulmón, la piel y la nariz al mismo tiempo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Asma severa: Dose de ataque de 400 mg ou 600 mg SC, seguida de 200 mg ou 300 mg a CADA 2 SEMANAS (quinzenalmente).',
+          es: 'Asma severa: Dosis de ataque de 400 mg o 600 mg SC, seguida de 200 mg o 300 mg CADA 2 SEMANAS (quincenalmente).'
+        },
+        pediatric: {
+          pt: 'Pode ser usado em crianças > 6 anos para Asma/Dermatite (doses ajustadas por peso, 100 mg a 300 mg).',
+          es: 'Puede usarse en niños > 6 años para Asma/Dermatitis (dosis ajustadas por peso, 100 mg a 300 mg).'
+        }
+      },
+      administration: { pt: ['Injeção Subcutânea em braços, coxas ou abdome. O paciente é instruído a rodiziar o local e pode aplicar em casa.'], es: ['Inyección Subcutánea en brazos, muslos o abdomen. El paciente es instruido a rotar el lugar y puede aplicar en casa.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste na DRC.', es: 'Sin necesidad de ajuste en la ERC.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste clínico.', es: 'Sin ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Conjuntivite alérgica e olho seco (Efeito paradoxal marcante da droga, comum em quem trata dermatite)', 'Reação na área da injeção', 'Herpes labial oportunista'], es: ['Conjuntivitis alérgica y ojo seco (Efecto paradójico marcado, común en quien trata dermatitis)', 'Reacción en el área de la inyección', 'Herpes labial oportunista'] },
+      dangerousAdverseEffects: { pt: ['Eosinofilia Sanguínea Transitória Severa (Ao bloquear o pulmão, os eosinófilos ficam represados no sangue temporariamente)', 'Reações anafiláticas'], es: ['Eosinofilia Sanguínea Transitoria Severa (Al bloquear el pulmón, los eosinófilos quedan represados en la sangre temporalmente)', 'Reacciones anafilácticas'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave aos componentes da seringa'], es: ['Hipersensibilidad grave a los componentes de la jeringa'] },
+        relative: { pt: ['Uso associado com vacinas de vírus vivos', 'Alergias oftalmológicas preexistentes graves (Ceratite)'], es: ['Uso asociado con vacunas de virus vivos', 'Alergias oftalmológicas preexistentes graves (Queratitis)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'VANTAGEM FENOTÍPICA: Diferente do Mepolizumabe e Benralizumabe (que exigem que o paciente tenha eosinófilos no sangue), o Dupilumabe funciona brilhantemente mesmo se o paciente tiver poucos eosinófilos, desde que ele exale alto teor de Óxido Nítrico (FeNO) no sopro.', es: 'VENTAJA FENOTÍPICA: A diferencia del Mepolizumab y Benralizumab (que exigen que el paciente tenga eosinófilos en sangre), el Dupilumab funciona brillantemente incluso si el paciente tiene pocos eosinófilos, siempre que exhale alto Óxido Nítrico (FeNO).' }
+      }
+    },
+
+/* ── TEZEPELUMABE ───────────────────────────────────────────────────── */
+    "tezepelumabe": {
+      name: { pt: 'Tezepelumabe', es: 'Tezepelumab' },
+      category: 'pneumologia',
+      class: { pt: 'Anticorpo Monoclonal (Anti-Alarmina / Anti-TSLP)', es: 'Anticuerpo Monoclonal (Anti-Alarmina / Anti-TSLP)' },
+      indications: {
+        pt: ['Asma Severa em adultos e adolescentes (Terceira Linha de Terapia Biológica)', 'Excelente para a "Asma Não-T2" ou asma com baixo nível de eosinófilos'],
+        es: ['Asma Severa en adultos y adolescentes (Tercera Línea de Terapia Biológica)', 'Excelente para el "Asma No-T2" o asma con bajo nivel de eosinófilos']
+      },
+      commercialNames: { br: ['Tezspire'], ar: ['Tezspire'] },
+      presentation: { pt: ['Seringa preenchida ou caneta SC 210 mg'], es: ['Jeringa prellenada o pluma SC 210 mg'] },
+      mechanism: {
+        pt: 'Ataca o "Topo da Pirâmide" inflamatória. Ele bloqueia a TSLP (Linfopoietina Estromal do Timo), uma "alarmina". Quando o pulmão do asmático entra em contato com poeira ou cigarro, as células do próprio pulmão soltam a alarmina TSLP para gritar por socorro, iniciando toda a cascata (que depois chamará a IL-4, IL-5 e eosinófilos). O Tezepelumabe corta o sinal inicial. Por causa disso, ele funciona até na Asma do Fumante e na Asma de pessoas que não têm eosinófilos altos (O calcanhar de Aquiles dos outros biológicos).',
+        es: 'Ataca la "Cima de la Pirámide" inflamatoria. Bloquea la TSLP, una "alarmina". Cuando el pulmón entra en contacto con polvo, las células sueltan TSLP para gritar por auxilio, iniciando toda la cascada. El Tezepelumab corta la señal inicial. Funciona incluso en el Asma del Fumador y en pacientes sin eosinófilos altos.'
+      },
+      dose: {
+        adult: {
+          pt: '210 mg via Subcutânea a CADA 4 SEMANAS (1 vez ao mês).',
+          es: '210 mg vía Subcutánea CADA 4 SEMANAS (1 vez al mes).'
+        },
+        pediatric: {
+          pt: 'Aprovado para adolescentes > 12 anos: mesma dose do adulto (210 mg SC).',
+          es: 'Aprobado para adolescentes > 12 años: misma dosis del adulto (210 mg SC).'
+        }
+      },
+      administration: { pt: ['Injeção subcutânea na coxa, abdome ou braço. Cuidado para não injetar na cintura ou em locais de atrito de roupa.'], es: ['Inyección subcutánea en muslo, abdomen o brazo. Cuidado de no inyectar en la cintura o en lugares de fricción de ropa.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico na doença renal crônica.', es: 'Sin necesidad de ajuste clínico en la enfermedad renal crónica.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Degradação proteolítica em peptídeos pequenos, sem depender do fígado.', es: 'Degradación proteolítica en péptidos pequeños, sin depender del hígado.' } },
+      commonAdverseEffects: { pt: ['Faringite e dores nas articulações', 'Erupção cutânea no local da injeção', 'Dor lombar'], es: ['Faringitis y dolores articulares', 'Erupción cutánea en el sitio de inyección', 'Dolor lumbar'] },
+      dangerousAdverseEffects: { pt: ['Anafilaxia e choque anafilático', 'Reações adversas cardíacas (em investigação pós-mercado)'], es: ['Anafilaxia y choque anafiláctico', 'Reacciones adversas cardíacas (en investigación poscomercialización)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade ativa aos componentes'], es: ['Hipersensibilidad activa a los componentes'] },
+        relative: { pt: ['Tratamento de ataques agudos de broncoespasmo (início lento de ação)'], es: ['Tratamiento de ataques agudos de broncoespasmo (inicio lento de acción)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O DESMAME DO CORTICOIDE (OFERTA ENGANOSA): Cuidado ao iniciar imunobiológicos e tentar retirar os corticoides ORAIS que o paciente já toma de forma bruta. A retirada do corticoide deve ser lentíssima (durante meses), pois o eixo adrenal do paciente está "adormecido" e ele pode ter uma crise adrenal se o médico cortar a pílula confiando apenas na nova injeção.', es: 'EL DESTETE DEL CORTICOIDE: Cuidado al iniciar inmunobiológicos y retirar los corticoides ORALES bruscamente. La retirada debe ser lentísima (durante meses), pues el eje adrenal está "dormido" y el paciente puede tener crisis adrenal.' }
+      }
+    },
+
+/* ── BROMEXINA ──────────────────────────────────────────────────────── */
+    "bromexina": {
+      name: { pt: 'Bromexina (Cloridrato de)', es: 'Bromhexina (Clorhidrato de)' },
+      category: 'pneumologia',
+      class: { pt: 'Expectorante Mucolítico', es: 'Expectorante Mucolítico' },
+      indications: {
+        pt: ['Doenças broncopulmonares agudas e crônicas associadas à secreção mucosa espessa (Bronquite, Traqueobronquite)', 'Tosse produtiva intensa com dificuldade de expectorar'],
+        es: ['Enfermedades broncopulmonares agudas y crónicas asociadas a secreción mucosa espesa (Bronquitis, Traqueobronquitis)', 'Tos productiva intensa con dificultad de expectorar']
+      },
+      commercialNames: { br: ['Bisolvon'], ar: ['Bisolvon', 'Bisolvon Expectorante'] },
+      presentation: { pt: ['Xarope Adulto 8 mg/5 mL', 'Xarope Pediátrico 4 mg/5 mL', 'Solução Inalatória/Gotas'], es: ['Jarabe Adulto 8 mg/5 mL', 'Jarabe Pediátrico 4 mg/5 mL', 'Solución Inhalatoria/Gotas'] },
+      mechanism: {
+        pt: 'Aumenta a proporção de secreção brônquica serosa (líquida) no pulmão. A Bromexina ativa as glândulas mucosas e fragmenta fisicamente as fibras de mucopolissacarídeos ácidos que deixam o catarro duro e "grudento". Com o catarro liquefeito e as fibras cortadas, o batimento ciliar da traqueia consegue varrer o muco para cima com facilidade durante a tosse. A bromexina estimula a produção endógena de surfactante alveolar.',
+        es: 'Aumenta la proporción de secreción bronquial serosa (líquida). La Bromhexina activa las glándulas mucosas y fragmenta físicamente las fibras de mucopolisacáridos ácidos que dejan el catarro duro. Con el catarro licuado, el latido ciliar logra barrer el moco hacia arriba con facilidad.'
+      },
+      dose: {
+        adult: {
+          pt: '8 mg (1 copo medida de 5 mL do xarope adulto) 3 vezes ao dia (a cada 8 horas).',
+          es: '8 mg (1 vaso medida de 5 mL del jarabe adulto) 3 veces al día (cada 8 horas).'
+        },
+        pediatric: {
+          pt: 'Crianças 2 a 5 anos: 4 mg a cada 8h (Usar xarope pediátrico). Crianças 6 a 12 anos: 8 mg a cada 8h.',
+          es: 'Niños 2 a 5 años: 4 mg cada 8h (Usar jarabe pediátrico). Niños 6 a 12 años: 8 mg cada 8h.'
+        }
+      },
+      administration: { pt: ['MANDATÓRIO: Aumentar absurdamente a ingestão de ÁGUA durante o uso. O remédio precisa puxar a água do corpo para liquidificar o catarro. Usar o xarope desidratado não funciona.'], es: ['OBLIGATORIO: Aumentar absurdamente la ingestión de AGUA durante el uso. El remedio necesita sacar agua del cuerpo para licuar el catarro. Usar el jarabe deshidratado no funciona.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste (metabólitos podem acumular, mas toxicidade é muito baixa).', es: 'Sin necesidad de ajuste (metabolitos pueden acumular, pero toxicidad es muy baja).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Pacientes com hepatopatia severa têm clearance reduzido de bromexina, usar com cautela e intervalos maiores.', es: 'Pacientes con hepatopatía severa tienen clearance reducido de bromhexina, usar con cautela e intervalos mayores.' } },
+      commonAdverseEffects: { pt: ['Irritação e desconforto gástrico leve', 'Náuseas e diarreia leve', 'Aumento de suor'], es: ['Irritación y malestar gástrico leve', 'Náuseas y diarrea leve', 'Aumento de sudor'] },
+      dangerousAdverseEffects: { pt: ['Choque anafilático severo e Angioedema (raríssimo, mas descrito)', 'Reações cutâneas graves (SCARs)'], es: ['Choque anafiláctico severo y Angioedema (rarísimo, pero descrito)', 'Reacciones cutáneas graves (SCARs)'] },
+      contraindications: {
+        absolute: { pt: ['Úlcera gastroduodenal ativa (A secreção gástrica também fica alterada e a proteção estomacal cai)', 'Crianças menores de 2 anos (risco de afogamento no excesso de secreção líquida)'], es: ['Úlcera gastroduodenal activa (La secreción gástrica también se altera y la protección estomacal cae)', 'Niños menores de 2 años (riesgo de ahogamiento en el exceso de secreción líquida)'] },
+        relative: { pt: ['Pacientes incapazes de expectorar ou tossir com força (Neuropatas cerebrais, miastenia gravis)'], es: ['Pacientes incapaces de expectorar o toser con fuerza (Neurópatas cerebrales, miastenia gravis)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'NÃO TRAVE A TOSSE: É um erro conceitual e perigoso associar Bromexina (que "amolece" o catarro para ser expulso) com Antitussígenos como a Codeína ou Dextrometorfano (que inibem o reflexo de tosse). O catarro vai ficar líquido no pulmão, o paciente não vai tossir, e ocorrerá um "afogamento em secreção" com pneumonia associada.', es: 'NO TRABE LA TOS: Es un error peligroso asociar Bromhexina (que "ablanda" el catarro para ser expulsado) con Antitusivos (que inhiben la tos). El catarro quedará líquido en el pulmón, el paciente no toserá y se "ahogará en secreción" con neumonía.' }
+      }
     }
 
   });

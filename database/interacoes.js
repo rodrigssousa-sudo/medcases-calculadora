@@ -1055,6 +1055,67 @@ const INTERACOES_DB = {
     }
   },
 
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 391 — IMUNOBIOLÓGICOS RESPIRATÓRIOS + MUCOLÍTICOS
+     Reslizumabe, Benralizumabe, Dupilumabe, Tezepelumabe, Bromexina
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA DE CLASSE: ANTICORPOS MONOCLONAIS (Imunossupressores de Alvo) ── */
+  "$classe_imunobiologicos_respiratorios": {
+    "$classe_vacinas_virus_vivo": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INFECÇÃO VACINAL DISSEMINADA. Imunobiológicos alteram respostas do sistema imunológico profundo (IL-4, IL-5, IL-13, TSLP). Ao administrar Vacinas de Vírus Vivo Atenuado (Febre Amarela, Tríplice Viral, Varicela, Pólio), o corpo pode não conseguir conter o vírus atenuado da injeção. O vírus se multiplica sem freios, deflagrando a própria doença letalmente no paciente.",
+        es: "INFECCIÓN VACUNAL DISEMINADA. Inmunobiológicos alteran respuestas del sistema inmunológico. Al administrar Vacunas de Virus Vivo Atenuado (Fiebre Amarilla, Triple Viral, Varicela), el cuerpo puede no lograr contener el virus atenuado. El virus se multiplica sin frenos, desencadenando la propia enfermedad."
+      },
+      conduta: {
+        pt: "As vacinas de vírus vivo estão estritamente CONTRAINDICADAS durante o tratamento com Dupilumabe, Benralizumabe, Reslizumabe e Tezepelumabe. O calendário vacinal vivo deve ser completado semanas antes do início do medicamento biológico.",
+        es: "Las vacunas de virus vivo están estrictamente CONTRAINDICADAS durante el tratamiento con Dupilumab, Benralizumab y Tezepelumab. El calendario vacunal vivo debe completarse semanas antes del inicio del medicamento."
+      }
+    },
+    "$classe_antiparasitarios": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "CONFLITO DE IMUNIDADE (Helmintos). Os Eosinófilos são a principal tropa de choque que o corpo humano possui para matar vermes e parasitas intestinais (Ascaris, Strongyloides). Como o Benralizumabe e Reslizumabe exterminam os Eosinófilos, o paciente perde 100% da defesa contra parasitas. Uma infecção por verme preexistente pode se disseminar pelo sangue para o cérebro/pulmão (Hiperinfecção letal).",
+        es: "CONFLICTO DE INMUNIDAD (Helmintos). Los Eosinófilos son la principal tropa de choque para matar gusanos y parásitos intestinales. Como el Benralizumab extermina los Eosinófilos, el paciente pierde el 100% de la defensa. Una infección por gusano puede diseminarse por la sangre al cerebro/pulmón (Hiperinfección letal)."
+      },
+      conduta: {
+        pt: "Antes de iniciar os imunobiológicos (anti-IL5) em países em desenvolvimento, o paciente DEVE tomar antiparasitários preventivos (Albendazol/Ivermectina). Se uma infecção por verme ocorrer durante a terapia biológica e não responder ao vermífugo, o anticorpo biológico deve ser interrompido.",
+        es: "Antes de iniciar los inmunobiológicos en países en desarrollo, el paciente DEBE tomar antiparasitarios preventivos. Si ocurre una infección durante la terapia y no responde, el anticuerpo debe ser interrumpido."
+      }
+    }
+  },
+
+  /* ── BROMEXINA (Mucolítico Expectorante) ── */
+  "bromexina": {
+    "$classe_antibioticos_beta_macrolideos": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "SINERGISMO E CONCENTRAÇÃO POSITIVA DE ANTIBIÓTICOS. A Bromexina causa um efeito peculiar e extremamente desejável: ela aumenta em mais de 20% a concentração de antibióticos comuns (Amoxicilina, Eritromicina, Cefuroxima, Oxitetraciclina) diretamente no escarro e tecido pulmonar, facilitando a cura da pneumonia.",
+        es: "SINERGISMO Y CONCENTRACIÓN POSITIVA DE ANTIBIÓTICOS. La Bromhexina causa un efecto peculiar y muy deseable: aumenta en más de 20% la concentración de antibióticos comunes en el esputo y tejido pulmonar, facilitando la cura de la neumonía."
+      },
+      conduta: {
+        pt: "Interação benéfica intencional. É altamente vantajoso associar Bromexina quando prescrever Amoxicilina/Clavulanato para infecções respiratórias ricas em muco purulento, otimizando a penetração tissular da penicilina.",
+        es: "Interacción benéfica intencional. Es altamente ventajoso asociar Bromhexina cuando prescribe Amoxicilina para infecciones respiratorias ricas en moco purulento, optimizando la penetración tisular."
+      }
+    },
+    "$classe_antitussigenos_centrais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "AFOGAMENTO MECÂNICO POR SECREÇÃO. A Bromexina destrói a viscosidade do catarro e aumenta a secreção de água nos pulmões para que seja varrida para fora pela tosse. Remédios como a Codeína ou o Dextrometorfano inibem e paralisam o reflexo da tosse no cérebro (bulbo). O paciente não tosse, o muco liquefeito acumula como uma piscina nos pulmões, induzindo sufocamento e pneumonia bacteriana de estase.",
+        es: "AHOGAMIENTO MECÁNICO POR SECRECIÓN. La Bromhexina destruye la viscosidad del catarro y aumenta el agua en los pulmones para ser barrida por la tos. Remedios como Codeína inhiben el reflejo de la tos en el cerebro. El paciente no tose, el moco licuado se acumula como una piscina, induciendo asfixia y neumonía."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO PRÁTICA. NUNCA associe um mucolítico potente com antitussígenos puros no mesmo receituário ou tratamento.",
+        es: "CONTRAINDICACIÓN PRÁCTICA. NUNCA asocie un mucolítico potente con antitusivos puros en la misma receta o tratamiento."
+      }
+    }
+  },
+
   /* ─────────────────────────────────────────────────────────────
      BUILD 255 — ADDITIVE RISK EXPANSION
      $classe_depressoras_snc × $classe_depressoras_snc (auto-cruzamento)
