@@ -953,6 +953,59 @@ const INTERACOES_DB = {
     }
   },
 
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 389 — BLOCO MOTOR DE INTERAÇÕES: Pneumologia Imunomoduladores
+     Fluticasona, Mometasona, Ciclesonida, Montelucaste, Zafirlucaste
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── FLUTICASONA (Corticosteroide Inalatório Altamente Sensível ao CYP3A4) ── */
+  "fluticasona": {
+    "ritonavir": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A 'CUSHING' FULMINANTE DO HIV. O Ritonavir (antirretroviral) e o Cobicistate são os inibidores mais potentes do citocromo CYP3A4 já conhecidos pelo homem. A Fluticasona engolida que cai no estômago deveria ser 99% destruída pelo CYP3A4 no fígado. Sem o CYP3A4, a Fluticasona invade o sangue em concentrações extremas. Em poucas semanas, o paciente imunossuprimido desenvolve Síndrome de Cushing profunda e supressão fatal das glândulas adrenais.",
+        es: "EL 'CUSHING' FULMINANTE DEL VIH. El Ritonavir (antirretroviral) es el inhibidor más potente del citocromo CYP3A4. La Fluticasona tragada debería ser 99% destruida por el CYP3A4 en el hígado. Sin el CYP3A4, la Fluticasona invade la sangre en concentraciones extremas. En pocas semanas, el paciente desarrolla Síndrome de Cushing profundo."
+      },
+      conduta: {
+        pt: "ASSOCIAÇÃO CONTRAINDICADA. Para pacientes com HIV usando Inibidores de Protease, OBRIGATORIAMENTE trocar o spray de asma para Beclometasona, que tem uma rota metabólica diferente e não causa Cushing na mesma magnitude.",
+        es: "ASOCIACIÓN CONTRAINDICADA. Para pacientes con VIH usando Inhibidores de Proteasa, OBLIGATORIAMENTE cambiar el spray de asma a Beclometasona, que tiene una ruta metabólica diferente."
+      }
+    }
+  },
+
+  /* ── MONTELUCASTE ── */
+  "montelucaste": {
+    "gemfibrozila": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ACÚMULO NEUROPSIQUIÁTRICO. O Montelucaste é eliminado pelo citocromo CYP2C8. A Gemfibrozila (droga para triglicerídeos altíssimos) é um inibidor ferrenho do CYP2C8. O nível de Montelucaste no sangue sobe em mais de 4 vezes. Embora a droga em si não seja letal no sangue, o excesso penetra a Barreira Hematoencefálica com mais força, aumentando abruptamente os riscos de Pesadelos, Surto Psiquiátrico e Ideação Suicida.",
+        es: "ACUMULACIÓN NEUROPSIQUIÁTRICA. El Montelukast es eliminado por el citocromo CYP2C8. El Gemfibrozilo (droga para triglicéridos) es un inhibidor férreo del CYP2C8. El nivel de Montelukast en sangre sube más de 4 veces, aumentando abruptamente los riesgos de Pesadillas, Brote Psiquiátrico e Ideación Suicida."
+      },
+      conduta: {
+        pt: "Acompanhamento psiquiátrico imediato se as drogas forem associadas. O paciente ou cuidador deve ser instruído a suspender a droga se ocorrer alteração abrupta de humor. Ideal trocar Gemfibrozila por Fenofibrato.",
+        es: "Acompañamiento psiquiátrico inmediato si las drogas son asociadas. El paciente debe suspender la droga si ocurre alteración abrupta de humor."
+      }
+    }
+  },
+
+  /* ── ZAFIRLUCASTE ── */
+  "zafirlucaste": {
+    "varfarina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O Zafirlucaste é um Inibidor clássico do citocromo CYP2C9 no fígado. A Varfarina (S-varfarina) depende puramente do CYP2C9 para não virar veneno no sangue. O uso de Zafirlucaste em pacientes anticoagulados estica violentamente o TAP/RNI (Tempo de Protrombina), gerando risco de hemorragias gástricas e intracranianas em poucos dias.",
+        es: "El Zafirlukast es un Inhibidor clásico del citocromo CYP2C9. La Warfarina depende puramente del CYP2C9 para no volverse veneno. El uso de Zafirlukast en pacientes anticoagulados estira violentamente el TAP/RNI, generando riesgo de hemorragias gástricas e intracraneales."
+      },
+      conduta: {
+        pt: "A dose da Varfarina precisará de redução drástica durante o uso e monitorização por coagulograma a cada 48 horas. A melhor conduta na modernidade é simplesmente NÃO USAR Zafirlucaste, preferindo Montelucaste ou ICS puro.",
+        es: "La dosis de la Warfarina necesitará reducción drástica durante el uso y monitorización por coagulograma cada 48 horas. La mejor conducta es simplemente NO USAR Zafirlukast, prefiriendo Montelukast."
+      }
+    }
+  },
+
   /* ─────────────────────────────────────────────────────────────
      BUILD 255 — ADDITIVE RISK EXPANSION
      $classe_depressoras_snc × $classe_depressoras_snc (auto-cruzamento)

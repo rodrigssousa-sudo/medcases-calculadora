@@ -609,6 +609,206 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
         warning: { pt: 'A SALVAÇÃO DA PEDIATRIA: Bebês com "Crupe" (Laringite Estridulosa) chegam de madrugada no PS tossindo feito "cachorro" e asfixiando por edema de traqueia. A nebulização em dose alta de Budesonida (2mg) reduz o inchaço quase como mágica, evitando a intubação na sala vermelha.', es: 'LA SALVACIÓN DE LA PEDIATRÍA: Bebés con "Crup" llegan de madrugada tosiendo como "perro" y asfixiándose por edema de tráquea. La nebulización en dosis alta de Budesonida (2mg) reduce la hinchazón casi como magia, evitando la intubación.' }
       }
+    },
+
+    /* ── FLUTICASONA ────────────────────────────────────────────────────── */
+    "fluticasona": {
+      name: { pt: 'Fluticasona (Propionato / Furoato)', es: 'Fluticasona (Propionato / Furoato)' },
+      category: 'pneumologia',
+      class: { pt: 'Corticosteroide Inalatório / Nasal', es: 'Corticosteroide Inhalatorio / Nasal' },
+      indications: {
+        pt: ['Tratamento de manutenção profilática da Asma severa', 'Doença Pulmonar Obstrutiva Crônica (DPOC) em terapias combinadas', 'Rinite alérgica grave (uso nasal)'],
+        es: ['Tratamiento de mantenimiento profiláctico del Asma severa', 'Enfermedad Pulmonar Obstructiva Crónica (EPOC) en terapias combinadas', 'Rinitis alérgica grave (uso nasal)']
+      },
+      commercialNames: { br: ['Flixotide', 'Seretide (Assoc)', 'Avamys'], ar: ['Flixotide', 'Seretide'] },
+      presentation: { pt: ['Spray Inalatório HFA 50 e 250 mcg/dose', 'Pó Inalatório (Diskus) 50, 100 e 250 mcg', 'Spray Nasal'], es: ['Spray Inhalatorio HFA 50 y 250 mcg/dosis', 'Polvo Inhalatorio (Diskus) 50, 100 y 250 mcg', 'Spray Nasal'] },
+      mechanism: {
+        pt: 'Glicocorticoide sintético de potência anti-inflamatória altíssima (muito superior à beclometasona). Possui uma afinidade extrema pelos receptores de glicocorticoides no pulmão. Sua lipofilicidade faz com que ele "grude" no tecido pulmonar e fique agindo por longos períodos. O que é engolido sofre metabolismo de primeira passagem quase total (99%) no fígado, minimizando efeitos no resto do corpo.',
+        es: 'Glucocorticoide sintético de potencia antiinflamatoria altísima. Posee una afinidad extrema por los receptores de glucocorticoides en el pulmón. Su lipofilicidad hace que se "pegue" al tejido pulmonar y actúe por largos períodos. Lo que se traga sufre metabolismo de primera pasada casi total (99%) en el hígado, minimizando efectos en el resto del cuerpo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Asma: 100 a 500 mcg a cada 12 horas. (Geralmente prescrito em inaladores combinados com Salmeterol ou Vilanterol).',
+          es: 'Asma: 100 a 500 mcg cada 12 horas. (Generalmente prescrito en inhaladores combinados con Salmeterol o Vilanterol).'
+        },
+        pediatric: {
+          pt: '50 a 100 mcg a cada 12 horas (Acima de 4 anos).',
+          es: '50 a 100 mcg cada 12 horas (Por encima de 4 años).'
+        }
+      },
+      administration: { pt: ['Mandatório lavar a boca ou escovar os dentes imediatamente após o uso para não desenvolver fungos na orofaringe.'], es: ['Obligatorio lavar la boca o cepillarse los dientes inmediatamente después del uso para no desarrollar hongos en la orofaringe.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Em cirrose severa, o remédio que é engolido não é destruído e cai no sangue, causando síndrome de Cushing metabólica iatrogênica.', es: 'En cirrosis severa, el remedio que se traga no es destruido y cae en la sangre, causando síndrome de Cushing metabólico iatrogénico.' } },
+      commonAdverseEffects: { pt: ['Candidíase oral (incidência muito alta se não usar espaçador/lavar a boca)', 'Rouquidão (Miopatia vocal)'], es: ['Candidiasis oral (incidencia muy alta si no se usa espaciador/lavar la boca)', 'Ronquera (Miopatía vocal)'] },
+      dangerousAdverseEffects: { pt: ['Pneumonia adquirida na comunidade (Em pacientes com DPOC avançada que usam altas doses diárias)', 'Supressão Adrenal aguda se interrompido abruptamente'], es: ['Neumonía adquirida en la comunidad (En pacientes con EPOC avanzada que usan altas dosis diarias)', 'Supresión Adrenal aguda si se interrumpe abruptamente'] },
+      contraindications: {
+        absolute: { pt: ['Tratamento de crise aguda de asma/broncoespasmo como droga isolada de alívio'], es: ['Tratamiento de crisis aguda de asma/broncoespasmo como droga aislada de alivio'] },
+        relative: { pt: ['Infecção não controlada no trato respiratório'], es: ['Infección no controlada en el tracto respiratorio'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A fluticasona é o corticoide inalatório MAIS SUSCETÍVEL à interação medicamentosa letal com inibidores do HIV (Ritonavir) e antifúngicos (Itraconazol). O uso associado trava o fígado e inunda o corpo com corticoide em níveis tóxicos fulminantes.', es: 'La fluticasona es el corticoide inhalatorio MÁS SUSCEPTIBLE a la interacción medicamentosa letal con inhibidores del VIH (Ritonavir) y antifúngicos. El uso asociado traba el hígado e inunda el cuerpo con corticoide en niveles tóxicos.' }
+      }
+    },
+
+    /* ── MOMETASONA ─────────────────────────────────────────────────────── */
+    "mometasona": {
+      name: { pt: 'Mometasona (Furoato de)', es: 'Mometasona (Furoato de)' },
+      category: 'pneumologia',
+      class: { pt: 'Corticosteroide Inalatório / Tópico Nasal', es: 'Corticosteroide Inhalatorio / Tópico Nasal' },
+      indications: {
+        pt: ['Rinite Alérgica Perene e Sazonal', 'Pólipos Nasais', 'Asma persistente (profilaxia inalatória)'],
+        es: ['Rinitis Alérgica Perenne y Estacional', 'Pólipos Nasales', 'Asma persistente (profilaxis inhalatoria)']
+      },
+      commercialNames: { br: ['Nasonex', 'Oximax (Assoc)'], ar: ['Nasonex'] },
+      presentation: { pt: ['Spray Nasal Aquoso 50 mcg/dose', 'Pó Inalatório Oral 200 mcg/dose'], es: ['Spray Nasal Acuoso 50 mcg/dosis', 'Polvo Inhalatorio Oral 200 mcg/dosis'] },
+      mechanism: {
+        pt: 'Corticoide incrivelmente potente (um dos mais fortes do mercado tópico) com a vantagem brutal de ter uma biodisponibilidade sistêmica INDETECTÁVEL (< 0,1%). Ou seja, mesmo se o paciente usar na pele, no nariz ou no pulmão, praticamente NADA entra na corrente sanguínea. É a droga de escolha para tratamentos prolongados em crianças sem afetar a altura.',
+        es: 'Corticoide increíblemente potente con la ventaja brutal de tener una biodisponibilidad sistémica INDETECTABLE (< 0,1%). O sea, incluso si el paciente lo usa en la piel, nariz o pulmón, prácticamente NADA entra en el torrente sanguíneo. Es la droga de elección para tratamientos prolongados en niños sin afectar la altura.'
+      },
+      dose: {
+        adult: {
+          pt: 'Rinite (Nasal): 2 jatos em cada narina 1x ao dia. Asma (Pulmonar): 200 a 400 mcg 1x ao dia (frequentemente à noite).',
+          es: 'Rinitis (Nasal): 2 puffs en cada fosa nasal 1 vez al día. Asma (Pulmonar): 200 a 400 mcg 1 vez al día (frecuentemente a la noche).'
+        },
+        pediatric: {
+          pt: 'Nasal (> 2 anos): 1 jato em cada narina 1x ao dia.',
+          es: 'Nasal (> 2 años): 1 puff en cada fosa nasal 1 vez al día.'
+        }
+      },
+      administration: { pt: ['No uso nasal, o jato deve ser direcionado para a LATERAL do nariz (parede externa) e não para o septo (meio), para evitar sangramentos e perfuração do septo.'], es: ['En el uso nasal, el chorro debe dirigirse hacia el LATERAL de la nariz (pared externa) y no hacia el tabique, para evitar sangrados y perforación del tabique.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem absorção sistêmica, sem ajuste.', es: 'Sin absorción sistémica, sin ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não atinge o fígado em níveis clínicos.', es: 'No alcanza el hígado en niveles clínicos.' } },
+      commonAdverseEffects: { pt: ['Epistaxe (Sangramento nasal frequente no uso de spray mal aplicado)', 'Dor de cabeça e ardência nasal'], es: ['Epistaxis (Sangrado nasal frecuente en el uso de spray mal aplicado)', 'Dolor de cabeza y ardor nasal'] },
+      dangerousAdverseEffects: { pt: ['Perfuração do septo nasal (uso crônico mal direcionado)', 'Ulceração mucosa'], es: ['Perforación del tabique nasal (uso crónico mal dirigido)', 'Ulceración mucosa'] },
+      contraindications: {
+        absolute: { pt: ['Trauma ou cirurgia nasal recente (até a cicatrização, pois os corticoides impedem a cicatrização da ferida)'], es: ['Trauma o cirugía nasal reciente (hasta la cicatrización, pues los corticoides impiden la cicatrización de la herida)'] },
+        relative: { pt: ['Infecções ativas da mucosa nasal (Herpes simplex, fungos)'], es: ['Infecciones activas de la mucosa nasal (Herpes simplex, hongos)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A "Rinite do Corticoide": Alerte os pais de que o spray nasal de Mometasona NÃO desentope o nariz na hora (como o Neosoro). É uma droga de efeito progressivo que pode demorar até 1 semana para surtir o efeito anti-inflamatório máximo.', es: 'Alerta a los padres que el spray nasal de Mometasona NO destapa la nariz en el momento. Es una droga de efecto progresivo que puede tardar hasta 1 semana en surtir el efecto máximo.' }
+      }
+    },
+
+    /* ── CICLESONIDA ────────────────────────────────────────────────────── */
+    "ciclesonida": {
+      name: { pt: 'Ciclesonida', es: 'Ciclesonida' },
+      category: 'pneumologia',
+      class: { pt: 'Corticosteroide Inalatório (Pró-fármaco de Ativação Local)', es: 'Corticosteroide Inhalatorio (Profármaco de Activación Local)' },
+      indications: {
+        pt: ['Tratamento de manutenção da Asma persistente'],
+        es: ['Tratamiento de mantenimiento del Asma persistente']
+      },
+      commercialNames: { br: ['Alvesco'], ar: ['Alvesco'] },
+      presentation: { pt: ['Spray Inalatório HFA 80 e 160 mcg/dose'], es: ['Spray Inhalatorio HFA 80 y 160 mcg/dosis'] },
+      mechanism: {
+        pt: 'Uma obra-prima da farmacologia: É administrada inativa. Quando bate no fundo da garganta, continua inativa (risco QUASE ZERO de candidíase/sapinho oral). Ela SÓ É ATIVADA quando entra no pulmão e é cortada pelas "esterases", enzimas presentes no tecido pulmonar inflamado. Isso direciona 100% da força do corticoide para a via aérea doente e anula efeitos colaterais na orofaringe e no sangue.',
+        es: 'Una obra maestra de la farmacología: Se administra inactiva. Cuando golpea el fondo de la garganta, sigue inactiva (riesgo CASI CERO de candidiasis oral). SOLO SE ACTIVA cuando entra al pulmón y es cortada por las esterasas, enzimas presentes en el tejido pulmonar inflamado. Esto dirige el 100% de la fuerza al área enferma.'
+      },
+      dose: {
+        adult: {
+          pt: '80 a 160 mcg inalado UMA VEZ ao dia (geralmente à noite) ou duas vezes ao dia em casos severos.',
+          es: '80 a 160 mcg inhalado UNA VEZ al día (generalmente a la noche) o dos veces al día en casos severos.'
+        },
+        pediatric: {
+          pt: 'Crianças de 4 a 11 anos: 80 mcg UMA VEZ ao dia.',
+          es: 'Niños de 4 a 11 años: 80 mcg UNA VEZ al día.'
+        }
+      },
+      administration: { pt: ['Administração via inalador pressurizado. Menor necessidade rigorosa de gargarejos pós-uso quando comparada a outros corticoides (embora a higiene oral continue sendo boa prática).'], es: ['Administración vía inhalador presurizado. Menor necesidad rigurosa de gárgaras posuso comparada a otros corticoides (aunque la higiene oral sigue siendo buena práctica).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste.', es: 'Sin ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste.', es: 'Sin ajuste.' } },
+      commonAdverseEffects: { pt: ['Tosse leve após uso', 'Disfonia (raríssima com ciclesonida, mas possível)'], es: ['Tos leve tras uso', 'Disfonía (rarísima con ciclesonida, pero posible)'] },
+      dangerousAdverseEffects: { pt: ['Broncoespasmo paradoxal imediatamente após inalação'], es: ['Broncoespasmo paradójico inmediatamente tras inhalación'] },
+      contraindications: {
+        absolute: { pt: ['Uso no resgate do broncoespasmo agudo', 'Hipersensibilidade grave'], es: ['Uso en el rescate del broncoespasmo agudo', 'Hipersensibilidad grave'] },
+        relative: { pt: ['Tuberculose ou infecção pulmonar sistêmica grave sem terapia específica'], es: ['Tuberculosis o infección pulmonar sistémica grave sin terapia específica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O Inalador Mais Limpo: Excelente para cantores, professores e pacientes com rouquidão crônica ou aftas de repetição induzidas por outros corticoides (budesonida/fluticasona), pois preserva completamente as cordas vocais.', es: 'El Inhalador Más Limpio: Excelente para cantantes, profesores y pacientes con ronquera crónica o aftas de repetición inducidas por otros corticoides, pues preserva completamente las cuerdas vocales.' }
+      }
+    },
+
+    /* ── MONTELUCASTE ───────────────────────────────────────────────────── */
+    "montelucaste": {
+      name: { pt: 'Montelucaste (de Sódio)', es: 'Montelukast (de Sodio)' },
+      category: 'pneumologia',
+      class: { pt: 'Antagonista dos Receptores de Leucotrienos (LTRA)', es: 'Antagonista de los Receptores de Leucotrienos (LTRA)' },
+      indications: {
+        pt: ['Prevenção e controle da Asma em longo prazo (Alternativa ou coadjuvante aos corticoides)', 'Prevenção de asma induzida pelo exercício', 'Rinite Alérgica (Perene e Sazonal)'],
+        es: ['Prevención y control del Asma a largo plazo (Alternativa o coadyuvante a los corticoides)', 'Prevención de asma inducida por ejercicio', 'Rinitis Alérgica (Perenne y Estacional)']
+      },
+      commercialNames: { br: ['Singulair', 'Piemonte'], ar: ['Singulair'] },
+      presentation: { pt: ['Comprimidos revestidos 10 mg', 'Comprimidos mastigáveis 4 mg, 5 mg', 'Granulado oral 4 mg'], es: ['Comprimidos recubiertos 10 mg', 'Comprimidos masticables 4 mg, 5 mg', 'Granulado oral 4 mg'] },
+      mechanism: {
+        pt: 'Diferente dos anti-histamínicos, o Montelucaste bloqueia o receptor CysLT1 no pulmão. Os leucotrienos são moléculas inflamatórias ferozes secretadas por mastócitos e eosinófilos que causam inchaço, produção de catarro espesso e fechamento do brônquio. O Montelucaste fecha a "porta" para essas moléculas. Efeito exclusivamente preventivo e não broncodilatador direto.',
+        es: 'A diferencia de los antihistamínicos, el Montelukast bloquea el receptor CysLT1 en el pulmón. Los leucotrienos son moléculas inflamatorias feroces que causan hinchazón y producción de catarro. El Montelukast cierra la "puerta" a estas moléculas. Efecto exclusivamente preventivo y no broncodilatador directo.'
+      },
+      dose: {
+        adult: {
+          pt: '10 mg VO UMA VEZ ao dia (Sempre recomendado tomar à noite, perto de dormir).',
+          es: '10 mg VO UNA VEZ al día (Siempre recomendado tomar a la noche, cerca de dormir).'
+        },
+        pediatric: {
+          pt: '2 a 5 anos: 4 mg mastigável/granulado 1x à noite. 6 a 14 anos: 5 mg mastigável 1x à noite.',
+          es: '2 a 5 años: 4 mg masticable/granulado 1x a la noche. 6 a 14 años: 5 mg masticable 1x a la noche.'
+        }
+      },
+      administration: { pt: ['Deve ser tomado à noite para ter sua concentração máxima de bloqueio nas madrugadas (quando os leucotrienos mais atacam e a asma piora). O granulado pediátrico pode ser misturado na papinha fria (não misturar em líquidos quentes).'], es: ['Debe ser tomado a la noche para tener su concentración máxima en las madrugadas. El granulado pediátrico puede ser mezclado en papilla fría (no mezclar en líquidos calientes).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste renal (eliminação biliar/fecal).', es: 'Sin necesidad de ajuste renal (eliminación biliar/fecal).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Seguro em insuficiência hepática leve a moderada.', es: 'Seguro en insuficiencia hepática leve a moderada.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Dor abdominal e Náuseas leves', 'Agitação e hiperatividade em crianças pequenas'], es: ['Cefalea', 'Dolor abdominal y Náuseas leves', 'Agitación e hiperactividad en niños pequeños'] },
+      dangerousAdverseEffects: { pt: ['EVENTOS NEUROPSIQUIÁTRICOS (Depressão, Ideação suicida, pesadelos terríveis e terror noturno)', 'Síndrome de Churg-Strauss (Vasculite eosinofílica sistêmica, rara)'], es: ['EVENTOS NEUROPSIQUIÁTRICOS (Depresión, Ideación suicida, pesadillas terribles y terror nocturno)', 'Síndrome de Churg-Strauss (Vasculitis eosinofílica sistémica, rara)'] },
+      contraindications: {
+        absolute: { pt: ['Reversão de broncoespasmo agudo (Não é droga de resgate!)'], es: ['Reversión de broncoespasmo agudo (¡No es droga de rescate!)'] },
+        relative: { pt: ['Pacientes com transtornos psiquiátricos basais não controlados (Depressão severa, Transtorno Bipolar)'], es: ['Pacientes con trastornos psiquiátricos basales no controlados (Depresión severa, Trastorno Bipolar)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'BLACK BOX WARNING DA FDA: O FDA publicou um alerta máximo exigindo que médicos avisem pacientes e pais sobre graves alterações de humor, alucinações, agressividade e comportamento suicida que podem surgir dias ou meses após iniciar o Montelucaste. Se a criança tiver pesadelos súbitos e terror noturno constante, suspenda a droga.', es: 'BLACK BOX WARNING DE LA FDA: La FDA publicó una alerta máxima exigiendo que los médicos avisen sobre graves alteraciones de humor, alucinaciones y comportamiento suicida que pueden surgir tras iniciar el Montelukast. Si el niño tiene pesadillas súbitas, suspenda la droga.' }
+      }
+    },
+
+    /* ── ZAFIRLUCASTE ───────────────────────────────────────────────────── */
+    "zafirlucaste": {
+      name: { pt: 'Zafirlucaste', es: 'Zafirlukast' },
+      category: 'pneumologia',
+      class: { pt: 'Antagonista dos Receptores de Leucotrienos (LTRA)', es: 'Antagonista de los Receptores de Leucotrienos (LTRA)' },
+      indications: {
+        pt: ['Prevenção e Tratamento crônico da Asma (Pouco utilizado hoje em dia, quase integralmente substituído pelo Montelucaste)'],
+        es: ['Prevención y Tratamiento crónico del Asma (Poco utilizado hoy en día, casi integralmente sustituido por Montelukast)']
+      },
+      commercialNames: { br: ['Accolate'], ar: ['Accolate'] },
+      presentation: { pt: ['Comprimidos 20 mg'], es: ['Comprimidos 20 mg'] },
+      mechanism: {
+        pt: 'Possui o mesmo mecanismo do montelucaste (bloqueio do receptor CysLT1 no pulmão para inibir a asfixia imunológica causada pelos leucotrienos). No entanto, o Zafirlucaste possui graves desvantagens farmacocinéticas: precisa ser tomado 2 vezes ao dia, tem sua absorção esmagada pela comida e é um potente inibidor do citocromo p450 hepático.',
+        es: 'Posee el mismo mecanismo del montelukast (bloqueo del receptor CysLT1). Sin embargo, el Zafirlukast posee graves desventajas farmacocinéticas: necesita ser tomado 2 veces al día, tiene su absorción aplastada por la comida y es un potente inhibidor del citocromo p450 hepático.'
+      },
+      dose: {
+        adult: {
+          pt: '20 mg VO a cada 12 horas (Dose máxima de 40 mg/dia).',
+          es: '20 mg VO cada 12 horas (Dosis máxima de 40 mg/día).'
+        },
+        pediatric: {
+          pt: '5 a 11 anos: 10 mg a cada 12 horas.',
+          es: '5 a 11 años: 10 mg cada 12 horas.'
+        }
+      },
+      administration: { pt: ['MANDATÓRIO: Tomar de ESTÔMAGO VAZIO (pelo menos 1 hora antes ou 2 horas depois das refeições). A comida corta sua absorção pela metade.'], es: ['OBLIGATORIO: Tomar con ESTÓMAGO VACÍO (al menos 1 hora antes o 2 horas después de las comidas). La comida corta su absorción a la mitad.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste renal.', es: 'Sin necesidad de ajuste renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em pacientes com insuficiência hepática ou cirrose.', es: 'Contraindicado en pacientes con insuficiencia hepática o cirrosis.' } },
+      commonAdverseEffects: { pt: ['Cefaleia marcante', 'Distúrbios gastrointestinais', 'Infecções respiratórias virais de repetição'], es: ['Cefalea marcada', 'Disturbios gastrointestinales', 'Infecciones respiratorias virales de repetición'] },
+      dangerousAdverseEffects: { pt: ['Hepatotoxicidade idiossincrática letal (Falência hepática fulminante rara, exigindo dosagem regular de TGO/TGP)', 'Síndrome de Churg-Strauss'], es: ['Hepatotoxicidad idiosincrásica letal (Falla hepática fulminante rara, exigiendo dosificación regular de AST/ALT)', 'Síndrome de Churg-Strauss'] },
+      contraindications: {
+        absolute: { pt: ['Disfunção hepática ativa', 'Uso no ataque agudo da asma'], es: ['Disfunción hepática activa', 'Uso en el ataque agudo del asma'] },
+        relative: { pt: ['Uso associado de Varfarina'], es: ['Uso asociado de Warfarina'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O FATOR DO FÍGADO: O Zafirlucaste "perdeu a guerra" das vendas para o Montelucaste exatamente pela comodidade. O Montelucaste não ataca o fígado e é dose única. Se prescrever Zafirlucaste, monitore o fígado do paciente no primeiro trimestre.', es: 'EL FACTOR DEL HÍGADO: El Zafirlukast "perdió la guerra" de ventas frente al Montelukast exactamente por la comodidad. El Montelukast no ataca el hígado y es dosis única.' }
+      }
     }
 
   });
