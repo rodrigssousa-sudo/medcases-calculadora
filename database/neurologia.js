@@ -1162,9 +1162,216 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'DEPRESSÃO DA ESCLEROSE: O paciente com EM já sofre alta taxa de depressão e fadiga. O Interferon injetável destrói o humor com síndrome gripal crônica e pode induzir surto suicida violento. Monitoramento psiquiátrico mensal é inegociável.', es: 'DEPRESIÓN DE LA ESCLEROSIS: El paciente con EM ya sufre alta tasa de depresión. El Interferón injetável destruye el humor y puede inducir un brote suicida. Monitoreo psiquiátrico mensual es innegociable.' }
       }
+    },
+
+    /* ── BUILD 401 — Imunomoduladores EM: Interferons + S1P ── */
+
+    /* ── INTERFERON BETA-1B ─────────────────────────────────────────────── */
+    "interferon_beta_1b": {
+      id: 'interferon_beta_1b',
+      name: { pt: 'Interferon beta-1b', es: 'Interferón beta-1b' },
+      category: 'neurologia',
+      class: { pt: 'Imunomodulador do Sistema Nervoso Central', es: 'Inmunomodulador del Sistema Nervioso Central' },
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente-Remitente', 'Síndrome Clinicamente Isolada (primeiro ataque de EM)'],
+        es: ['Esclerosis Múltiple Recurrente-Remitente', 'Síndrome Clínicamente Aislado (primer ataque de EM)']
+      },
+      commercialNames: { br: ['Betaferon', 'Extavia'], ar: ['Betaferon'] },
+      presentation: { pt: ['Frasco-ampola com pó liofilizado para injeção SC 0,3 mg (250 mcg ou 8 milhões de UI)'], es: ['Vial con polvo liofilizado para inyección SC 0,3 mg (250 mcg)'] },
+      mechanism: {
+        pt: 'Mecanismo imunorregulador idêntico ao do interferon beta-1a, inibindo a expressão de moléculas inflamatórias e bloqueando a migração de linfócitos T reativos para dentro do cérebro. A principal diferença farmacológica é a posologia e a estrutura proteica ligeiramente alterada (produzida em bactérias E. coli em vez de células de mamíferos), o que exige aplicações mais frequentes.',
+        es: 'Mecanismo inmunorregulador idéntico al interferón beta-1a. La principal diferencia farmacológica es la posología y la estructura proteica (producida en bacterias E. coli en vez de células de mamíferos), lo que exige aplicaciones más frecuentes.'
+      },
+      dose: {
+        adult: {
+          pt: '250 mcg (1 injeção completa) por via Subcutânea em DIAS ALTERNADOS (Dia sim, Dia não).',
+          es: '250 mcg (1 inyección) por vía Subcutánea en DÍAS ALTERNOS (Día sí, Día no).'
+        },
+        pediatric: {
+          pt: 'Uso aprovado a partir de 12 anos em casos severos.',
+          es: 'Uso aprobado a partir de 12 años en casos severos.'
+        }
+      },
+      administration: { pt: ['Injeção Subcutânea. DEVE-SE rodiziar estritamente os locais de injeção (coxa, abdome, braço, nádegas) para evitar necrose severa da pele. Tomar analgésico preventivo.'], es: ['Inyección Subcutánea. SE DEBE rotar estrictamente los lugares de inyección para evitar necrosis de piel. Tomar analgésico preventivo.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Avaliar transaminases rotineiramente. Risco de injúria hepática medicamentosa.', es: 'Evaluar transaminasas rutinariamente. Riesgo de injuria hepática.' } },
+      commonAdverseEffects: { pt: ['Síndrome Flu-like (Febre, mialgia, calafrios - ocorre em quase 60% dos pacientes nos primeiros meses)', 'Reação local (Vermelhidão e dor)'], es: ['Síndrome Flu-like (Fiebre, mialgia, escalofríos - en casi 60% de pacientes)', 'Reacción local (Enrojecimiento y dolor)'] },
+      dangerousAdverseEffects: { pt: ['Necrose profunda no local da injeção (O tecido morre e escurece, exigindo desbridamento)', 'Depressão maior e Suicídio'], es: ['Necrosis profunda en el lugar de la inyección (El tejido muere y oscurece)', 'Depresión mayor y Suicidio'] },
+      contraindications: {
+        absolute: { pt: ['Depressão grave ou ideação suicida', 'Hipersensibilidade', 'Insuficiência hepática descompensada'], es: ['Depresión grave o ideación suicida', 'Hipersensibilidad', 'Insuficiencia hepática descompensada'] },
+        relative: { pt: ['Doenças autoimunes da tireoide (Pode deflagrar hipotireoidismo agudo)'], es: ['Enfermedades autoinmunes de la tiroides'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ALERTA DE NECROSE: O Interferon beta-1b tem a perigosa capacidade de causar microtromboses na pele onde é injetado. O paciente NÃO DEVE injetar em locais que estejam doloridos, com hematomas ou nós duros. Se a pele ficar preta, a injeção deve ser imediatamente transferida de área.', es: 'ALERTA DE NECROSIS: El Interferón beta-1b puede causar microtrombosis en la piel. El paciente NO DEBE inyectar en lugares con hematomas o nódulos. Si la piel se pone negra, transferir de área inmediatamente.' }
+      }
+    },
+
+    /* ── ACETATO DE GLATIRÂMER ──────────────────────────────────────────── */
+    "glatiramer": {
+      id: 'glatiramer',
+      name: { pt: 'Acetato de Glatirâmer', es: 'Acetato de Glatirámero' },
+      category: 'neurologia',
+      class: { pt: 'Polipeptídeo Sintético Imunomodulador (Falso-Alvo)', es: 'Polipéptido Sintético Inmunomodulador (Falso Blanco)' },
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente-Remitente (Excelente opção de 1ª linha de baixíssimo risco sistêmico)'],
+        es: ['Esclerosis Múltiple Recurrente-Remitente (Excelente opción de 1ª línea de bajísimo riesgo sistémico)']
+      },
+      commercialNames: { br: ['Copaxone'], ar: ['Copaxone'] },
+      presentation: { pt: ['Seringas preenchidas SC 20 mg/mL e 40 mg/mL'], es: ['Jeringas prellenadas SC 20 mg/mL y 40 mg/mL'] },
+      mechanism: {
+        pt: 'Um mecanismo genial de distração imunológica. É uma proteína sintética que "imita" a Proteína Básica de Mielina (o tecido que os leucócitos do paciente com EM estão atacando no cérebro). Quando injetada sob a pele, os linfócitos T do corpo são atraídos por esse "falso-alvo" e atacam a droga na perna/braço, esquecendo de atacar a mielina verdadeira no cérebro. Reduz em 30% os surtos de EM sem ser imunossupressor real.',
+        es: 'Un mecanismo genial de distracción inmunológica. Proteína sintética que "imita" la Proteína Básica de Mielina. Al inyectarse bajo la piel, los linfocitos T son atraídos por este "falso blanco" en la pierna, olvidando atacar la mielina en el cerebro. Reduce en 30% los brotes sin ser inmunosupresor real.'
+      },
+      dose: {
+        adult: {
+          pt: '20 mg SC UMA VEZ AO DIA (Diário) OU 40 mg SC TRÊS VEZES NA SEMANA (A formulação de 40mg melhorou imensamente a qualidade de vida).',
+          es: '20 mg SC UNA VEZ AL DÍA (Diario) O 40 mg SC TRES VECES A LA SEMANA.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Injeção subcutânea. Devido ao mecanismo, reações locais severas (Lipoatrofia - buracos na pele) são extremamente comuns se não rodiziar.'], es: ['Inyección subcutánea. Reacciones locales severas (Lipoatrofia - agujeros en la piel) son muy comunes si no se rota el lugar.'] },
+      renalAdjustment: { required: false, message: { pt: 'Totalmente degradado por hidrólise enzimática local em aminoácidos. Sem ajuste.', es: 'Degradado por hidrólisis local. Sin ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Lipoatrofia (A gordura embaixo da injeção derrete, formando "covas" na pele)', 'Vermelhidão e dor crônica no braço/perna'], es: ['Lipoatrofia (La grasa bajo la inyección se derrite, formando "hoyos")', 'Enrojecimiento y dolor crónico en el brazo/pierna'] },
+      dangerousAdverseEffects: { pt: ['REAÇÃO PÓS-INJEÇÃO IMEDIATA (Efeito vasoespástico transitório e aterrorizante)'], es: ['REACCIÓN POSINYECCIÓN INMEDIATA (Efecto vasoespástico transitorio y aterrador)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave à droga ou ao manitol'], es: ['Hipersensibilidad grave a la droga o al manitol'] },
+        relative: { pt: ['Nenhuma relevante clinicamente. É a droga mais segura de toda a classe de Esclerose Múltipla, inclusive frequentemente mantida na gravidez.'], es: ['Es la droga más segura de toda la clase de EM, frecuentemente mantenida en el embarazo.'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O FALSO INFARTO: O paciente DEVE ser avisado de que, logo após aplicar a injeção, ele pode ter um espasmo vascular sistêmico. Ele sentirá o peito apertar violentamente, falta de ar, taquicardia e pânico de morte iminente. Isso DURA 15 MINUTOS e some sozinho sem deixar sequelas. Se não for avisado, ele correrá para a emergência achando que infartou.', es: 'EL FALSO INFARTO: El paciente DEBE saber que, tras aplicar la inyección, puede sentir que el pecho se aprieta violentamente, falta de aire y pánico de muerte. Esto DURA 15 MINUTOS y desaparece solo sin secuelas. Si no se avisa, correrá a Urgencias creyendo que infartó.' }
+      }
+    },
+
+    /* ── FINGOLIMODE ────────────────────────────────────────────────────── */
+    "fingolimode": {
+      id: 'fingolimode',
+      name: { pt: 'Fingolimode', es: 'Fingolimod' },
+      category: 'neurologia',
+      class: { pt: 'Modulador do Receptor de Esfingosina 1-Fosfato (S1P)', es: 'Modulador del Receptor de Esfingosina 1-Fosfato (S1P)' },
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente-Remitente altamente ativa (A primeira pílula oral da história contra a EM, para quem odeia ou falhou nas injeções)'],
+        es: ['Esclerosis Múltiple Recurrente-Remitente altamente activa (La primera píldora oral de la historia contra la EM)']
+      },
+      commercialNames: { br: ['Gilenya'], ar: ['Gilenya'] },
+      presentation: { pt: ['Cápsulas duras 0,5 mg'], es: ['Cápsulas duras 0,5 mg'] },
+      mechanism: {
+        pt: 'A "Prisão de Linfócitos". O Fingolimode liga-se aos receptores S1P nos linfonodos (gânglios). Ao fazer isso, ele impede fisicamente que os linfócitos T saiam dos gânglios linfáticos para o sangue. Os leucócitos doentes ficam "presos e trancados" nos gânglios e nunca conseguem chegar ao cérebro para atacar a mielina. A inflamação cerebral desaba, mas o paciente fica imensamente imunossuprimido no sangue periférico.',
+        es: 'La "Prisión de Linfocitos". El Fingolimod se une a receptores S1P en los ganglios. Al hacerlo, impide físicamente que los linfocitos T salgan a la sangre. Los leucocitos enfermos quedan "presos y encerrados" en los ganglios y nunca logran llegar al cerebro para atacar la mielina.'
+      },
+      dose: {
+        adult: {
+          pt: '0,5 mg via oral UMA VEZ ao dia, continuamente.',
+          es: '0,5 mg vía oral UNA VEZ al día, continuamente.'
+        },
+        pediatric: {
+          pt: 'Aprovado para crianças/adolescentes (> 10 anos): 0,25 mg ou 0,5 mg conforme peso corporal.',
+          es: 'Aprobado para niños/adolescentes (> 10 años): 0,25 mg o 0,5 mg según peso corporal.'
+        }
+      },
+      administration: { pt: ['A PRIMEIRA DOSE do paciente deve obrigatoriamente ser tomada no Hospital com monitoramento contínuo por 6 horas!'], es: ['LA PRIMERA DOSIS del paciente debe obligatoriamente ser tomada en el Hospital con monitorización continua por 6 horas!'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste clínico necessário.', es: 'Sin ajuste clínico necesario.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Não recomendado na insuficiência hepática grave (Child-Pugh C). Risco grave ao fígado basal.', es: 'No recomendado en insuficiencia hepática grave (Child-Pugh C).' } },
+      commonAdverseEffects: { pt: ['Gripes severas de repetição, diarreia, dor nas costas', 'Linfopenia severa (Queda agressiva dos leucócitos na contagem sanguínea - esperado)'], es: ['Gripes severas de repetición, diarrea, dolor de espalda', 'Linfopenia severa (Caída agresiva de leucocitos - esperado)'] },
+      dangerousAdverseEffects: { pt: ['BRADICARDIA FATAL e Bloqueio Atrioventricular (Principalmente nas primeiras doses)', 'Edema Macular (Cegueira central no olho)', 'Leucoencefalopatia Multifocal Progressiva (PML) e Herpes Zoster disseminado'], es: ['BRADICARDIA FATAL y Bloqueo AV (Principalmente en las primeras dosis)', 'Edema Macular (Ceguera central)', 'Leucoencefalopatía Multifocal Progresiva (PML)'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de Infarto, Insuficiência Cardíaca, ou Arritmias/Bloqueios nos últimos 6 meses', 'Uso prolongado de medicamentos bloqueadores de nódulo sinusal (Beta-bloqueadores)'], es: ['Historial de Infarto, Insuficiencia Cardíaca o Arritmias en los últimos 6 meses', 'Uso prolongado de betabloqueantes'] },
+        relative: { pt: ['Pacientes sem vacinação contra o vírus Varicela Zoster (Cata-Pora) - a droga pode causar encefalite viral fatal por Zoster'], es: ['Pacientes sin vacunación contra el virus Varicela Zoster - la droga puede causar encefalitis viral fatal'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O RITUAL DE 6 HORAS: Os receptores S1P também existem no coração. Ao tomar a 1ª cápsula, o coração do paciente desacelera assustadoramente. Por lei, a primeira dose de Fingolimode tem que ser dada sob ECG contínuo por 6 horas. Se o paciente parar de tomar a droga por 2 semanas, ele tem que FAZER O RITUAL DE ECG TUDO DE NOVO.', es: 'EL RITUAL DE 6 HORAS: Los receptores S1P existen en el corazón. Al tomar la 1ª cápsula, el corazón desacelera asustadoramente. Por ley, la primera dosis debe darse bajo ECG por 6 horas. Si pausa por 2 semanas, DEBE REPETIR EL RITUAL.' }
+      }
+    },
+
+    /* ── SIPONIMODE ─────────────────────────────────────────────────────── */
+    "siponimode": {
+      id: 'siponimode',
+      name: { pt: 'Siponimode', es: 'Siponimod' },
+      category: 'neurologia',
+      class: { pt: 'Modulador Seletivo do Receptor de S1P (Foco nos subtipos 1 e 5)', es: 'Modulador Selectivo del Receptor de S1P (Foco en subtipos 1 y 5)' },
+      indications: {
+        pt: ['Esclerose Múltipla SECUNDARIAMENTE PROGRESSIVA (A primeira droga aprovada para pacientes que pararam de ter surtos e começaram a paralisar progressivamente)', 'Esclerose Múltipla Recorrente-Remitente'],
+        es: ['Esclerosis Múltiple SECUNDARIAMENTE PROGRESIVA (La primera droga aprobada para pacientes que empezaron a paralizar progresivamente)', 'Esclerosis Múltiple Recurrente-Remitente']
+      },
+      commercialNames: { br: ['Mayzent'], ar: ['Mayzent'] },
+      presentation: { pt: ['Comprimidos revestidos 0,25 mg e 2 mg'], es: ['Comprimidos recubiertos 0,25 mg y 2 mg'] },
+      mechanism: {
+        pt: 'A evolução do Fingolimode. O Siponimode mira APENAS os receptores S1P tipo 1 e 5 (ignorando o tipo 3). Isso tranca os linfócitos doentes nos gânglios (como a droga antiga), MAS minimiza muito os danos ao coração. Além disso, ele cruza perfeitamente a barreira hematoencefálica e se liga aos oligodendrócitos, forçando-os a reconstruir parte da mielina destruída.',
+        es: 'La evolución del Fingolimod. Apunta SOLO a los receptores S1P tipo 1 y 5. Esto encierra los linfocitos enfermos, PERO minimiza mucho los daños al corazón. Además, cruza al cerebro y fuerza a los oligodendrocitos a reconstruir la mielina.'
+      },
+      dose: {
+        adult: {
+          pt: 'Escalonamento obrigatório (Dias 1 e 2: 0,25mg; Dia 3: 0,5mg; Dia 4: 0,75mg; Dia 5: 1,25mg). Manutenção a partir do dia 6: 2 mg/dia ou 1 mg/dia (A DOSE DEPENDE EXATAMENTE DO GENÉTICA DO PACIENTE).',
+          es: 'Escalonamiento obligatorio (Días 1 y 2: 0,25mg; Día 3: 0,5mg...). Mantenimiento: 2 mg/día o 1 mg/día (LA DOSIS DEPENDE DE LA GENÉTICA DEL PACIENTE).'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['O paciente NÃO precisa do ritual de 6 horas de ECG do Fingolimode, *desde que* não tenha doença cardíaca prévia grave.'], es: ['El paciente NO necesita el ritual de 6 horas de ECG del Fingolimod, *siempre que* no tenga enfermedad cardíaca previa.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em insuficiência hepática severa (Child-Pugh C).', es: 'Contraindicado en insuficiencia hepática severa.' } },
+      commonAdverseEffects: { pt: ['Edema de mácula no olho', 'Hipertensão leve', 'Aumento de transaminases hepáticas'], es: ['Edema de mácula en el ojo', 'Hipertensión leve', 'Aumento de transaminasas hepáticas'] },
+      dangerousAdverseEffects: { pt: ['Infecções fúngicas criptocócicas no cérebro (Meningite) devido à imunossupressão profunda', 'Leucoencefalopatia Multifocal Progressiva (PML)'], es: ['Infecciones fúngicas criptocócicas en cerebro (Meningitis) debido a inmunosupresión profunda', 'Leucoencefalopatía Multifocal Progresiva (PML)'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com o Genótipo CYP2C9 *3/*3 (Mutação genética grave)', 'Infarto, AVC ou Arritmias severas nos últimos 6 meses'], es: ['Pacientes con el Genotipo CYP2C9 *3/*3 (Mutación genética grave)', 'Infarto, ACV o Arritmias severas en los últimos 6 meses'] },
+        relative: { pt: ['Uso associado de imunossupressores oncológicos'], es: ['Uso asociado de inmunosupresores oncológicos'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O REMÉDIO DE DNA: É proibido por lei iniciar Siponimode sem antes colher o exame de Genotipagem Hepática do paciente. Se o paciente for CYP2C9 *1/*3 ou *2/*3, a dose máxima é 1mg (reduzida). Se ele for *3/*3 (metabolizador pobre), o remédio é CONTRAINDICADO e letal.', es: 'EL REMEDIO DE ADN: Está prohibido iniciar Siponimod sin antes recolectar el examen de Genotipificación Hepática del paciente. Si es *3/*3, el remedio es CONTRAINDICADO y letal.' }
+      }
+    },
+
+    /* ── OZANIMODE ──────────────────────────────────────────────────────── */
+    "ozanimode": {
+      id: 'ozanimode',
+      name: { pt: 'Ozanimode', es: 'Ozanimod' },
+      category: 'neurologia',
+      class: { pt: 'Modulador Seletivo do Receptor de S1P (Foco subtipos 1 e 5)', es: 'Modulador Selectivo del Receptor de S1P (Foco subtipos 1 y 5)' },
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente-Remitente', 'Retocolite Ulcerativa moderada a grave (Aprovações gastrointestinais pela forte inibição de linfócitos no intestino)'],
+        es: ['Esclerosis Múltiple Recurrente-Remitente', 'Colitis Ulcerosa moderada a grave (Aprobaciones gastrointestinales por fuerte inhibición de linfocitos en el intestino)']
+      },
+      commercialNames: { br: ['Zeposia'], ar: ['Zeposia'] },
+      presentation: { pt: ['Cápsulas 0,23 mg (início), 0,46 mg (titulação) e 0,92 mg (manutenção)'], es: ['Cápsulas 0,23 mg, 0,46 mg y 0,92 mg'] },
+      mechanism: {
+        pt: 'Age exatamente como o Siponimode (S1P seletivo 1 e 5), trancando as células autoimunes nos gânglios. Seu grande triunfo comercial: Tem uma meia-vida incrivelmente curta comparado ao fingolimode. Se o paciente com EM tiver uma infecção cerebral mortal, o médico suspende o Ozanimode e em poucos dias os leucócitos do corpo voltam ao normal para combater a bactéria (com o Fingolimode demoraria meses).',
+        es: 'Actúa como el Siponimod, encerrando células autoinmunes. Su triunfo: Tiene una vida media increíblemente corta comparado al fingolimod. Si el paciente tiene una infección cerebral mortal, se suspende y en pocos días los leucocitos vuelven a la normalidad para combatir.'
+      },
+      dose: {
+        adult: {
+          pt: 'Kit de Titulação: Dias 1 a 4 (0,23 mg); Dias 5 a 7 (0,46 mg); A partir do Dia 8: Manutenção de 0,92 mg UMA VEZ ao dia.',
+          es: 'Kit de Titulación: Días 1 a 4 (0,23 mg); Días 5 a 7 (0,46 mg); Desde Día 8: 0,92 mg UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Tomar inteiro com ou sem alimentos. Assim como o Siponimode, o escalonamento previne a bradicardia grave da primeira dose.'], es: ['Tomar entero con o sin alimentos. El escalonamiento previene la bradicardia grave.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar ou contraindicar em insuficiência hepática severa.', es: 'Evitar o contraindicar en insuficiencia hepática severa.' } },
+      commonAdverseEffects: { pt: ['Infecções respiratórias superiores', 'Aumento do risco de herpes zoster', 'Cefaleia e lombalgia'], es: ['Infecciones respiratorias superiores', 'Aumento de riesgo de herpes zoster', 'Cefalea y lumbalgia'] },
+      dangerousAdverseEffects: { pt: ['Encefalopatia Posterior Reversível (PRES)', 'Bradicardia sintomática na dose inicial se mal titulado'], es: ['Encefalopatía Posterior Reversible (PRES)', 'Bradicardia sintomática en dosis inicial si es mal titulado'] },
+      contraindications: {
+        absolute: { pt: ['Infarto/Arritmias severas em 6 meses', 'Uso concomitante com inibidores da MAO (Tranilcipromina, Linezolida)'], es: ['Infarto/Arritmias severas en 6 meses', 'Uso concomitante con inhibidores de la MAO'] },
+        relative: { pt: ['Pacientes com Síndrome de Apneia do Sono grave sem suporte'], es: ['Pacientes con Síndrome de Apnea del Sueño grave sin soporte'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O FATOR TIRAMINA: Diferente dos outros S1Ps, o Ozanimode possui metabólitos ativos que inibem fracamente a MAO no corpo humano. O paciente NÃO DEVE consumir queijos muito envelhecidos, vinhos tintos fermentados ou carnes curadas (alimentos com tiramina > 150mg) em grandes quantidades, sob risco de crise hipertensiva severa.', es: 'EL FACTOR TIRAMINA: El Ozanimod posee metabolitos que inhiben débilmente la MAO. El paciente NO DEBE consumir quesos muy añejados, vinos o carnes curadas (alimentos con tiramina) en grandes cantidades, bajo riesgo de crisis hipertensiva.' }
+      }
     }
 
-  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 400
+  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 401
          BUILD 396 — Triptanos: Sumatriptana, Zolmitriptana, Rizatriptana, Naratriptana, Eletriptana
          BUILD 397 — Triptanos+Ergot: Almotriptana, Frovatriptana, Ergotamina, DHE, Erenumabe
          BUILD 398 — Anti-CGRP+Gepantos: Fremanezumabe, Galcanezumabe, Eptinezumabe, Ubrogepanta, Rimegepanta
@@ -1174,5 +1381,11 @@
                      Memantina (Alois/Ebix) — NMDA bloqueador, renalHighRisk
                      Lecanemabe (Leqembi) — Anti-amiloide IV 2sem, ⚠ ARIA-H, bleedingRisk, highAlert
                      Donanemabe (Kisunla) — Anti-amiloide IV mensal, ⚠ ARIA-H, bleedingRisk, highAlert
-                     Interferon beta-1a (Avonex/Rebif) — EM Recorrente-Remitente, ⚠ suicídio, highAlert */
+                     Interferon beta-1a (Avonex/Rebif) — EM Recorrente-Remitente, ⚠ suicídio, highAlert
+         BUILD 401 — Imunomoduladores EM (Interferons + S1P):
+                     Interferon beta-1b (Betaferon/Extavia) — EM RRMS, ⚠ necrose SC, highAlert
+                     Glatirâmer (Copaxone) — Falso-alvo mielínico, ⚠ Falso Infarto 15min
+                     Fingolimode (Gilenya) — S1P oral, ⚠ Ritual ECG 6h, highAlert
+                     Siponimode (Mayzent) — S1P seletivo EMSP, ⚠ CYP2C9 DNA, highAlert
+                     Ozanimode (Zeposia) — S1P curta meia-vida, ⚠ Tiramina/MAO, highAlert */
 })();

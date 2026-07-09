@@ -325,6 +325,20 @@ const DRUG_ALIASES = {
   "avonex":                             "interferon_beta_1a",
   "rebif":                              "interferon_beta_1a",
 
+  /* BUILD 401 — Interferon beta-1b, Glatirâmer, Fingolimode, Siponimode, Ozanimode */
+  "interferon-beta-1b":                 "interferon_beta_1b",
+  "betaferon":                          "interferon_beta_1b",
+  "extavia":                            "interferon_beta_1b",
+  "glatiramer_acetate":                 "glatiramer",
+  "copaxone":                           "glatiramer",
+  "acetato_glatiramer":                 "glatiramer",
+  "fingolimod":                         "fingolimode",
+  "gilenya":                            "fingolimode",
+  "siponimod":                          "siponimode",
+  "mayzent":                            "siponimode",
+  "ozanimod":                           "ozanimode",
+  "zeposia":                            "ozanimode",
+
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4: aliases */
   "nintedanib":                         "nintedanibe",
   "ofev":                               "nintedanibe",
@@ -880,6 +894,16 @@ const DRUG_CLASSES = {
   /* Anticorpos monoclonais que limpam placas beta-amiloides; risco ARIA-H fatal com anticoagulantes. */
   "$classe_anticorpos_antiamiloide": [
     "lecanemabe", "donanemabe"
+  ],
+
+  /* BUILD 401 — Moduladores S1P e Interferons da Esclerose Múltipla */
+  /* Moduladores S1P: trancam linfócitos nos gânglios; bradicardia 1ª dose + linfopenia + PML. */
+  "$classe_moduladores_s1p": [
+    "fingolimode", "siponimode", "ozanimode"
+  ],
+  /* Interferons EM injetáveis: síndrome gripal, necrose SC, hepatotoxicidade, suicídio. */
+  "$classe_interferons_em": [
+    "interferon_beta_1a", "interferon_beta_1b"
   ],
 
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4 */
@@ -22451,7 +22475,73 @@ const INTERACOES_DB = {
     }
   }
 
-}; /* fim INTERACOES_DB — BUILD 400 (Neurologia: Memantina×alcalinizantes, Anticorpos Anti-amiloide×anticoagulantes ARIA-H, Interferon beta-1a×hepatotóxicos) */
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES — BUILD 401
+   Esclerose Múltipla: Imunomoduladores S1P (Fingolimode, Siponimode, Ozanimode)
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── MODULADORES S1P E RISCO CARDÍACO ── */
+  ,
+  "$classe_moduladores_s1p": {
+    "$classe_betabloqueadores_bradicardizantes": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "PARADA SINUSAL IATROGÊNICA. Todos os moduladores S1P (Fingolimode e, em menor grau, Siponimode e Ozanimode) causam uma hiperestimulação vagal maciça no coração quando a primeira dose atinge o sangue, fazendo os batimentos despencarem violentamente (Efeito de Primeira Dose). Se o paciente utilizar Betabloqueadores (Propranolol, Atenolol) ou Bloqueadores de Cálcio não-di-hidropiridínicos (Verapamil/Diltiazem), não haverá reserva de segurança e o coração pode entrar em Assistolia completa ou Bloqueio AV de 3º grau.",
+        es: "PARADA SINUSAL IATROGÉNICA. Todos los moduladores S1P causan una hiperestimulación vagal masiva cuando la primera dosis llega a la sangre, haciendo que los latidos caigan violentamente. Si el paciente utiliza Betabloqueantes o Verapamil/Diltiazem, el corazón puede entrar en Asistolia completa."
+      },
+      conduta: {
+        pt: "A associação é CONTRAINDICADA. O cardiologista deve obrigatoriamente trocar a medicação da hipertensão ou arritmia para Diuréticos ou Análogos Di-hidropiridínicos (Amlodipino) por pelo menos semanas antes de iniciar as pílulas de Esclerose Múltipla.",
+        es: "La asociación es CONTRAINDICADA. El cardiólogo debe obligatoriamente cambiar la medicación de hipertensión por Diuréticos o Amlodipino semanas antes de iniciar la EM."
+      }
+    },
+    "$classe_vacinas_virus_vivo": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ENCEFALITE VACINAL LETAL. Estas drogas trancam os linfócitos T de memória imunológica dentro dos gânglios. O sangue periférico do paciente fica virtualmente sem defesa antiviral celular (Linfopenia severa induzida). A administração de vacinas de vírus vivos (Febre Amarela, Varicela) causará a proliferação mortal do vírus da vacina em todo o corpo e cérebro.",
+        es: "ENCEFALITIS VACUNAL LETAL. Estas drogas encierran los linfocitos T de memoria en los ganglios. La sangre periférica queda sin defensa antiviral (Linfopenia severa). Administrar vacunas de virus vivos causará proliferación mortal del virus."
+      },
+      conduta: {
+        pt: "Pacientes em uso de fingolimode/siponimode/ozanimode NÃO PODEM receber vacinas de vírus vivos e não devem conviver ativamente com crianças que acabaram de tomar a vacina da gotinha (Pólio oral VOP).",
+        es: "Pacientes en uso de estas drogas NO PUEDEN recibir vacunas de virus vivos."
+      }
+    }
+  },
+
+  /* ── SIPONIMODE (A Interação Farmacogenômica Extrema) ── */
+  "siponimode": {
+    "fluconazol_macrolideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "TOXICIDADE POR BLOQUEIO DE CYP2C9. O Siponimode é destruído quase exclusivamente pela enzima CYP2C9 no fígado. Antifúngicos fortes (Fluconazol) são Inibidores Potentes de CYP2C9. Se combinados, a concentração de Siponimode no sangue sofre um pico imediato (AUC sobe 2 vezes), elevando severamente o risco de hepatotoxicidade aguda, bradicardia residual e imunossupressão fatal por linfopenia.",
+        es: "TOXICIDAD POR BLOQUEO DE CYP2C9. Siponimod es destruido casi exclusivamente por la enzima CYP2C9. Antifúngicos fuertes (Fluconazol) son Inhibidores Potentes de CYP2C9. Si combinados, la concentración de Siponimod sufre un pico inmediato."
+      },
+      conduta: {
+        pt: "Associação não recomendada. Se o paciente necessitar de tratamento para infecção fúngica sistêmica ou vaginal, suspender o Siponimode e consultar o Neurologista sobre o risco de rebote de EM, ou usar tratamentos tópicos não absorvíveis.",
+        es: "Asociación no recomendada. Si el paciente necesita tratamiento para infección fúngica sistémica o vaginal, suspender Siponimod."
+      }
+    }
+  },
+
+  /* ── OZANIMODE (O Bloqueio de MAO Secundário) ── */
+  "ozanimode": {
+    "$classe_imao": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "SOMAÇÃO TÓXICA DA MONOAMINA OXIDASE. Os metabólitos do Ozanimode (CC112273) inibem as enzimas MAO-B nativas. Iniciar Ozanimode em pacientes que usam inibidores clássicos da MAO (Selegilina, Tranilcipromina) vai deflagrar um bloqueio absoluto das monoaminas no cérebro. O paciente sofrerá uma tempestade catecolaminérgica: Pressão arterial estourando (> 200 mmHg), taquicardia severa e risco de AVC hemorrágico em minutos.",
+        es: "SUMA TÓXICA DE LA MAO. Los metabolitos de Ozanimod inhiben las enzimas MAO-B. Iniciar Ozanimod en pacientes que usan inhibidores de la MAO desencadenará un bloqueo absoluto. El paciente sufrirá una tormenta catecolaminérgica con riesgo de ACV hemorrágico."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO FORMAL DE BULA. Não prescrever medicamentos com ação MAO para pacientes em tratamento com Zeposia. Observar o cuidado com dieta rica em tiramina (queijos fedidos, embutidos) se ingeridos em excesso (> 150g/dia).",
+        es: "CONTRAINDICACIÓN FORMAL. No prescribir medicamentos con acción MAO para pacientes en tratamiento con Zeposia. Observar el cuidado con dieta rica en tiramina."
+      }
+    }
+  }
+
+}; /* fim INTERACOES_DB — BUILD 401 (EM S1P: $classe_moduladores_s1p×betabloqueadores/vacinas·vivo, siponimode×CYP2C9·fluconazol, ozanimode×IMAO·tiramina) */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
