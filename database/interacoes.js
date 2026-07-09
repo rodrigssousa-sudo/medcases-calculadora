@@ -249,6 +249,26 @@ const DRUG_ALIASES = {
   "saxenda":                            "liraglutida",
   "levotiroxine":                       "levotiroxina",
 
+  /* BUILD 396 — Descongestionantes (Otorrino) + ICS/LABA (Pneumologia): aliases */
+  "oxymetazoline":                      "oximetazolina",
+  "afrin":                              "oximetazolina",
+  "aturgyl":                            "oximetazolina",
+  "iliadin":                            "oximetazolina",
+  "xylometazoline":                     "xilometazolina",
+  "otrivina":                           "xilometazolina",
+  "naphazoline":                        "nafazolina",
+  "neosoro":                            "nafazolina",
+  "sorine":                             "nafazolina",
+  "naridrin":                           "nafazolina",
+  "pseudoephedrine":                    "pseudoefedrina",
+  "allegra_d":                          "pseudoefedrina",
+  "claritin_d":                         "pseudoefedrina",
+  "tylenol_sinus":                      "pseudoefedrina",
+  "budesonide_formoterol":              "budesonida_formoterol",
+  "symbicort":                          "budesonida_formoterol",
+  "alenia":                             "budesonida_formoterol",
+  "vannair":                            "budesonida_formoterol",
+
   /* BUILD 395 — Anti-histamínicos H1 Lote 2 (Alergia/Imunologia): aliases de nomenclatura */
   "bilastine":                          "bilastina",
   "alektos":                            "bilastina",
@@ -697,6 +717,17 @@ const DRUG_CLASSES = {
   "$classe_hipoglicemiantes_secretagogos": [
     "glibenclamida", "glimepirida", "glipizida", "gliclazida",
     "tolbutamida", "clorpropamida", "repaglinida", "nateglinida"
+  ],
+
+  /* BUILD 396 — Descongestionantes adrenérgicos (tópicos + sistêmicos) */
+
+  /* Descongestionantes tópicos nasais (agonistas alfa diretos — imidazolínicos)
+     e sistêmicos (simpaticomiméticos orais).
+     Contraindicados com IMAO. Vasoconstrição generalizada. */
+  "$classe_descongestionantes_adrenergicos": [
+    "oximetazolina", "xilometazolina", "nafazolina",
+    "pseudoefedrina", "efedrina", "fenilefrina",
+    "tramazolina", "tetrizolina"
   ],
 
   /* BUILD 395 — Anti-histamínicos H1 1ª Geração + Bilastina/Rupatadina */
@@ -1419,6 +1450,55 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Monitorar ECG (Intervalo QTc) se a associação for inevitável. Evitar a prescrição simultânea em pacientes coronariopatas, com arritmia basal severa ou hipocalemia. Nesse contexto, preferir Fexofenadina (sem metabolismo CYP hepático) ou Desloratadina (já ativada, independente do CYP3A4).",
         es: "Monitorear ECG (Intervalo QTc) si la asociación es inevitable. Evitar la prescripción simultánea en coronariopatas, con arritmia basal severa o hipopotasemia. En este contexto, preferir Fexofenadina (sin metabolismo CYP hepático) o Desloratadina (ya activada, independiente del CYP3A4)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 396 — BLOCO MOTOR DE INTERAÇÕES: Descongestionantes e Terapia Asmática (MART)
+     Oximetazolina, Xilometazolina, Nafazolina, Pseudoefedrina, Budesonida/Formoterol
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA DE DESCONGESTIONANTES TÓPICOS E SISTÊMICOS ── */
+  "$classe_descongestionantes_adrenergicos": {
+    "$classe_imao": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "TEMPESTADE ADRENÉRGICA MORTAL. Inibidores da MAO (Tranilcipromina, Selegilina, Linezolida) impedem a destruição da noradrenalina no cérebro e no corpo. Descongestionantes como a Pseudoefedrina (Sistêmica) e Nafazolina (Tópica) forçam a liberação maciça ou agem como noradrenalina. Juntos, causam uma Crise Hipertensiva Hiperaguda. A pressão arterial sobe a níveis catastróficos (ex: 250x140 mmHg), rasgando vasos e causando Acidente Vascular Cerebral Hemorrágico e Morte.",
+        es: "TORMENTA ADRENÉRGICA MORTAL. Inhibidores de la MAO impiden la destrucción de la noradrenalina. Descongestionantes como la Pseudoefedrina y Nafazolina fuerzan la liberación o actúan como noradrenalina. Juntos, causan una Crisis Hipertensiva Hiperaguda, rasgando vasos y causando ACV Hemorrágico y Muerte."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA E VITAL. Nunca associar nenhum remédio de gripe 'com a letra D' (Allegra D) ou gotas nasais (Neosoro) a pacientes em uso de antidepressivos IMAO. O risco permanece por 14 dias após a parada do IMAO.",
+        es: "CONTRAINDICACIÓN ABSOLUTA Y VITAL. Nunca asociar remedios de gripe 'con la letra D' o gotas nasales a pacientes en uso de antidepresivos IMAO. El riesgo permanece por 14 días tras parar el IMAO."
+      }
+    },
+    "ergotamina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "GANGRENA DE EXTREMIDADES (Isquemia Periférica). Derivados do Ergot (drogas antigas para enxaqueca pesada) e Pseudoefedrina causam vasoconstrição aguda e profunda nas artérias periféricas. O uso simultâneo 'estrangula' o fluxo sanguíneo para os dedos das mãos e pés, podendo causar necrose isquêmica tecidual.",
+        es: "GANGRENA DE EXTREMIDADES (Isquemia Periférica). Derivados del Ergot (drogas para migraña) y Pseudoefedrina causan vasoconstricción aguda y profunda. El uso simultáneo 'estrangula' el flujo sanguíneo a los dedos de las manos y pies, pudiendo causar necrosis isquémica tisular."
+      },
+      conduta: {
+        pt: "Uso conjunto vetado. Se o paciente usar Ergotamina, o entupimento do nariz deve ser tratado exclusivamente com lavagem salina hipertrônica e corticoides nasais tópicos (Budesonida/Mometasona).",
+        es: "Uso conjunto vetado. Si el paciente usa Ergotamina, el taponamiento de nariz debe ser tratado exclusivamente con lavado salino y corticoides nasales tópicos."
+      }
+    }
+  },
+
+  /* ── BUDESONIDA + FORMOTEROL (Lembrete de Estratégia MART) ── */
+  "budesonida_formoterol": {
+    "interacao_mart_abuso": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INTOXICAÇÃO POR RESGATE DESCONTROLADO. Na nova estratégia MART, o paciente usa esta droga tanto para prevenção quanto para resgate. Se a asma piorar e o paciente, ansioso, fizer mais de 12 inalações no mesmo dia na tentativa de respirar, ele atingirá doses tóxicas do Formoterol. O Formoterol ativará as bombas Na+/K+, sugando o potássio do sangue. O paciente dará entrada na emergência com Hipocalemia Grave (< 2.5), tremores intensos e taquicardia incontrolável, simulando um infarto.",
+        es: "INTOXICACIÓN POR RESCATE DESCONTROLADO. En la nueva estrategia MART, el paciente usa esta droga para prevención y rescate. Si el asma empeora y hace más de 12 inhalaciones en un día, alcanzará dosis tóxicas de Formoterol. El paciente ingresará a emergencias con Hipopotasemia Grave (< 2.5) y taquicardia incontrolable."
+      },
+      conduta: {
+        pt: "Instruir OBRIGATORIAMENTE o limite diário de inalações da caneta (Geralmente 8 para concentrações altas, 12 para concentrações baixas). Se o paciente ultrapassou isso, não libere-o do PS sem colher um Eletrólitos/Potássio plasmático e um ECG.",
+        es: "Instruir OBLIGATORIAMENTE el límite diario de inhalaciones de la pluma. Si el paciente lo superó, no lo libere de Urgencias sin extraer Electrolitos/Potasio y un ECG."
       }
     }
   },
