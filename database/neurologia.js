@@ -1369,23 +1369,213 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'O FATOR TIRAMINA: Diferente dos outros S1Ps, o Ozanimode possui metabólitos ativos que inibem fracamente a MAO no corpo humano. O paciente NÃO DEVE consumir queijos muito envelhecidos, vinhos tintos fermentados ou carnes curadas (alimentos com tiramina > 150mg) em grandes quantidades, sob risco de crise hipertensiva severa.', es: 'EL FACTOR TIRAMINA: El Ozanimod posee metabolitos que inhiben débilmente la MAO. El paciente NO DEBE consumir quesos muy añejados, vinos o carnes curadas (alimentos con tiramina) en grandes cantidades, bajo riesgo de crisis hipertensiva.' }
       }
+    },
+
+    /* ── BUILD 402 — Neuroimunologia EM: Ponesimode + Fumaratos + Natalizumabe ── */
+
+    /* ── PONESIMODE ─────────────────────────────────────────────────────── */
+    "ponesimode": {
+      id: 'ponesimode',
+      name: { pt: 'Ponesimode', es: 'Ponesimod' },
+      category: 'neurologia',
+      class: { pt: 'Modulador Selecionado do Receptor de Esfingosina 1-Fosfato (S1P1)', es: 'Modulador Seleccionado del Receptor de Esfingosina 1-Fosfato (S1P1)' },
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente-Remitente ativa em adultos'],
+        es: ['Esclerosis Múltiple Recurrente-Remitente activa en adultos']
+      },
+      commercialNames: { br: ['Ponvory'], ar: ['Ponvory'] },
+      presentation: { pt: ['Comprimidos revestidos 20 mg', 'Kit de início para escalonamento gradual (2 mg a 10 mg)'], es: ['Comprimidos recubiertos 20 mg', 'Kit de inicio para escalonamiento gradual (2 mg a 10 mg)'] },
+      mechanism: {
+        pt: 'Atua como um bloqueador seletivo e específico do receptor S1P tipo 1. Ele sequestra os linfócitos agressores dentro dos linfonodos, impedindo-os de circular no sangue e invadir o cérebro. Seu diferencial supremo em relação ao Fingolimode é a eliminação rápida do corpo: se o paciente tiver uma infecção severa e parar o remédio, em apenas 1 SEMANA o sistema imune volta ao normal (no Fingolimode demoraria 2 meses).',
+        es: 'Actúa como bloqueador selectivo del receptor S1P tipo 1. Secuestra los linfocitos agresores dentro de los linfonodos, impidiéndoles invadir el cerebro. Su diferencial supremo es la eliminación rápida: si el paciente tiene una infección severa y para el remedio, en solo 1 SEMANA el sistema imune vuelve a la normalidad.'
+      },
+      dose: {
+        adult: {
+          pt: 'Kit de Escalonamento de 14 dias (iniciando com 2 mg e subindo até 10 mg). A partir do Dia 15: Manutenção fixa de 20 mg VO UMA VEZ ao dia.',
+          es: 'Kit de Escalonamiento de 14 días (iniciando con 2 mg y subiendo a 10 mg). Desde el Día 15: Mantenimiento fijo de 20 mg VO UNA VEZ al día.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Via oral pura com ou sem alimentos. Exige monitoramento por ECG na primeira dose APENAS se o paciente tiver histórico prévio de bradicardia ou infarto.'], es: ['Vía oral pura con o sin alimentos. Exige monitoreo por ECG en la primera dosis SOLO si el paciente tiene historial previo de bradicardia.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste na insuficiência renal crônica.', es: 'No requiere ajuste en insuficiencia renal crónica.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em insuficiência hepática moderada a grave (Child-Pugh B e C).', es: 'Contraindicado en insuficiencia hepática moderada a grave (Child-Pugh B y C).' } },
+      commonAdverseEffects: { pt: ['Elevação de transaminases (TGO/TGP)', 'Nasofaringite e infecções respiratórias', 'Alopecia leve (queda de cabelo)'], es: ['Elevación de transaminasas (AST/ALT)', 'Nasofaringitis e infecciones respiratorias', 'Alopecia leve (caída de cabello)'] },
+      dangerousAdverseEffects: { pt: ['Bradicardia severa inicial (se não for feito o escalonamento correto)', 'Hipertensão arterial severa', 'Edema Macular (cegueira em borrão central)'], es: ['Bradicardia severa inicial', 'Hipertensión arterial severa', 'Edema Macular (ceguera en borrón central)'] },
+      contraindications: {
+        absolute: { pt: ['Bloqueio AV de 2º ou 3º grau ou doença do nó sinusal sem marcapasso funcional', 'Infarto ou AVC nos últimos 6 meses'], es: ['Bloqueo AV de 2º o 3º grado o enfermedad del nodo sinusal sin marcapasos', 'Infarto o ACV en los últimos 6 meses'] },
+        relative: { pt: ['Pacientes asmáticos graves (pode causar leve broncoconstrição mecânica nas primeiras doses)'], es: ['Pacientes asmáticos graves (puede causar leve broncocontricción)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O RETORNO DA FERTILIDADE: Como o Ponesimode limpa do sangue em apenas 7 dias, ele é o S1P de escolha para mulheres jovens com Esclerose Múltipla agressiva que planejam engravidar em breve, pois o tempo de espera pós-suspensão é mínimo se comparado aos outros.', es: 'EL RETORNO DE LA FERTILIDAD: Como el Ponesimod limpia de la sangre en solo 7 días, es el S1P de elección para mujeres jóvenes que planean quedar embarazadas pronto, pues el tiempo de espera tras suspenderlo es mínimo.' }
+      }
+    },
+
+    /* ── DIMETILFUMARATO ────────────────────────────────────────────────── */
+    "dimetilfumarato": {
+      id: 'dimetilfumarato',
+      name: { pt: 'Dimetilfumarato', es: 'Dimetilfumarato' },
+      category: 'neurologia',
+      class: { pt: 'Ativador da Via Nrf2 / Imunomodulador Oral', es: 'Activador de la Vía Nrf2 / Inmunomodulador Oral' },
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente-Remitente (Excelente eficácia oral com perfil de segurança de longo prazo estabelecido)'],
+        es: ['Esclerosis Múltiple Recurrente-Remitente (Excelente eficacia oral con perfil de seguridad establecido)']
+      },
+      commercialNames: { br: ['Tecfidera'], ar: ['Tecfidera'] },
+      presentation: { pt: ['Cápsulas gastro-resistentes 120 mg e 240 mg'], es: ['Cápsulas gastrorresistentes 120 mg y 240 mg'] },
+      mechanism: {
+        pt: 'Mecanismo citoprotetor avançado. Ao entrar no corpo, ele se converte em Monometilfumarato e ativa a via de transcrição celular Nrf2 (o sensor mestre de estresse do corpo). Isso força as células do cérebro a produzirem antioxidantes maciços, blindando os oligodendrócitos e neurônios contra os ataques inflamatórios do sistema imune e reduzindo a perda de mielina.',
+        es: 'Mecanismo citoprotector avanzado. Se convierte en Monometilfumarato y activa la vía Nrf2 (el sensor maestro de estrés). Esto fuerza a las células del cerebro a producir antioxidantes masivos, blindando neuronas contra ataques inflamatorios.'
+      },
+      dose: {
+        adult: {
+          pt: 'Semana 1: 120 mg via oral a cada 12 horas (2x ao dia). A partir da Semana 2: Manutenção fixa de 240 mg VO a cada 12 horas.',
+          es: 'Semana 1: 120 mg vía oral cada 12 horas (2x al día). Desde la Semana 2: Mantenimiento fijo de 240 mg VO cada 12 horas.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['MANDATÓRIO: Ingerir sempre JUNTO COM ALIMENTOS (Idealmente uma refeição rica em gordura, como queijo ou carne). Isso reduz drasticamente o terrível efeito de Fogacho (vermelhidão com calor) e cólicas gástricas.'], es: ['OBLIGATORIO: Ingerir siempre JUNTO CON ALIMENTOS (Idealmente una comida rica en grasa). Esto reduce drásticamente el terrible efecto de Sofoco (enrojecimiento con calor) y cólicos gástricos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste (Eliminação predominantemente respiratória exalada como CO2).', es: 'Sin necesidad de ajuste (Eliminación predominantemente respiratoria exhalada como CO2).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      commonAdverseEffects: { pt: ['FLUSHING / FOGACHO (A pele do rosto, pescoço e peito fica vermelho-brasa e queima com coceira intensa 30 min após a dose)', 'Diarreia e dor abdominal severa nos primeiros dias'], es: ['FLUSHING / SOFOCO (La piel del rostro queda rojo brasa y quema con picor intenso 30 min tras la dosis)', 'Diarrea y dolor abdominal severo'] },
+      dangerousAdverseEffects: { pt: ['Linfopenia Progressiva Severa (Se os linfócitos caírem abaixo de 500 por > 6 meses, o paciente corre risco imenso de contrair PML - infecção cerebral oportunista fatal)'], es: ['Linfopenia Progresiva Severa (Si los linfocitos caen bajo 500 por > 6 meses, corre riesgo de PML - infección cerebral oportunista fatal)'] },
+      contraindications: {
+        absolute: { pt: ['Suspeita ou diagnóstico de Leucoencefalopatia Multifocal Progressiva (PML) ativa'], es: ['Sospecha o diagnóstico de Leucoencefalopatía Multifocal Progresiva (PML) activa'] },
+        relative: { pt: ['Contagem basal de Linfócitos < 500 células/mcL (Risco iminente de infecção cerebral por vírus JC)'], es: ['Conteo basal de Linfocitos < 500 células/mcL'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O TRUQUE DA ASPIRINA: Se o seu paciente com EM está abandonando o Tecfidera porque o rosto fica vermelho e "queimando", oriente-o a tomar 1 comprimido de AAS (Aspirina 100mg) 30 minutos antes do Dimetilfumarato. A aspirina bloqueia as prostaglandinas da pele e corta o flushing.', es: 'EL TRUCO DE LA ASPIRINA: Si el paciente abandona el Tecfidera porque el rostro queda rojo y quemando, oriéntelo a tomar 1 comprimido de AAS (Aspirina 100mg) 30 minutos antes del Dimetilfumarato. La aspirina bloquea las prostaglandinas y corta el sofoco.' }
+      }
+    },
+
+    /* ── DIROXIMEL FUMARATO ─────────────────────────────────────────────── */
+    "diroximel_fumarato": {
+      id: 'diroximel_fumarato',
+      name: { pt: 'Diroximel fumarato', es: 'Diroximel fumarato' },
+      category: 'neurologia',
+      class: { pt: 'Ativador da Via Nrf2 / Imunomodulador Oral', es: 'Activador de la Vía Nrf2 / Inmunomodulador Oral' },
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente-Remitente (Formulada especificamente para pacientes com intolerância gastrointestinal ao dimetilfumarato)'],
+        es: ['Esclerosis Múltiple Recurrente-Remitente (Formulada específicamente para pacientes con intolerancia gastrointestinal al dimetilfumarato)']
+      },
+      commercialNames: { br: ['Vumerity'], ar: ['Vumerity'] },
+      presentation: { pt: ['Cápsulas duras gastro-resistentes 231 mg'], es: ['Cápsulas duras gastrorresistentes 231 mg'] },
+      mechanism: {
+        pt: 'É um pró-fármaco de segunda geração de fumarato. Na veia e no cérebro, ele se quebra e libera EXATAMENTE o mesmo princípio ativo do medicamento antigo (o Monometilfumarato), ativando a via de proteção celular Nrf2. PORÉM, a sua estrutura química estrutural estomacal foi modificada para produzir metabólitos menos irritantes na mucosa do estômago, reduzindo a diarreia e as cólicas em 50%.',
+        es: 'Es un profármaco de segunda generación de fumarato. En vena y cerebro, libera EXACTAMENTE el mismo principio activo del medicamento antiguo, activando la vía Nrf2. PERO, su estructura estomacal fue modificada para producir metabolitos menos irritantes en el estómago, reduciendo la diarrea y cólicos al 50%.'
+      },
+      dose: {
+        adult: {
+          pt: 'Semana 1: 231 mg via oral 2 vezes ao dia (a cada 12h). A partir da Semana 2: Manutenção fixa de 462 mg VO (2 cápsulas de 231mg juntas) 2 vezes ao dia (Total: 4 cápsulas/dia).',
+          es: 'Semana 1: 231 mg vía oral 2 veces al día. Desde la Semana 2: Mantenimiento fijo de 462 mg VO (2 cápsulas juntas) 2 veces al día (Total: 4 cápsulas/día).'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Uso oral. Embora seja muito mais leve no estômago que a Tecfidera, ainda se recomenda ingerir junto com alimentos leves para mitigar qualquer risco de flushing cutâneo.'], es: ['Uso oral. Aunque es mucho más leve en el estómago que Tecfidera, aún se recomienda ingerir junto con alimentos ligeros para mitigar el sofoco cutáneo.'] },
+      renalAdjustment: { required: true, message: { pt: 'DIFERENCIAL: Diferente do antigo, o Diroximel possui um excipiente que se acumula no rim. USO NÃO RECOMENDADO em Insuficiência Renal Crônica grave (ClCr < 30 mL/min).', es: 'DIFERENCIAL: A diferencia del antiguo, el Diroximel posee un excipiente que se acumula en el riñón. USO NO RECOMENDADO en Insuficiencia Renal Crónica grave (ClCr < 30 mL/min).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste de dosis.' } },
+      commonAdverseEffects: { pt: ['Flushing / Vermelhidão facial (mais leve que o dimetilfumarato)', 'Náuseas leves'], es: ['Flushing / Enrojecimiento facial (más leve que el dimetilfumarato)', 'Náuseas leves'] },
+      dangerousAdverseEffects: { pt: ['Linfopenia progressiva crônica com risco de infecção oportunista cerebral (PML)'], es: ['Linfopenia progresiva crónica con riesgo de infección oportunista cerebral (PML)'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência Renal Crônica severa (ClCr < 30 mL/min)', 'PML suspeita ou ativa'], es: ['Insuficiencia Renal Crónica severa (ClCr < 30 mL/min)', 'PML sospechosa o activa'] },
+        relative: { pt: ['Linfócitos basais baixos'], es: ['Linfocitos basales bajos'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O PREÇO DO CONFORTO: O Vumerity resolveu a dor de estômago dos pacientes com Esclerose Múltipla, mas o monitoramento do sangue CONTRA A LEUCOENCEFALOPATIA (PML) continua idêntico. O clínico deve colher Hemograma com contagem de linfócitos a cada 6 meses obrigatoriamente.', es: 'EL PRECIO DEL CONFORT: Vumerity resolvió el dolor de estómago, pero el monitoreo de sangre CONTRA LA LEUCOENCEFALOPATÍA (PML) sigue idéntico. El clínico debe extraer Hemograma con conteo de linfocitos cada 6 meses.' }
+      }
+    },
+
+    /* ── TERIFLUNOMIDA ──────────────────────────────────────────────────── */
+    "teriflunomida": {
+      id: 'teriflunomida',
+      name: { pt: 'Teriflunomida', es: 'Teriflunomida' },
+      category: 'neurologia',
+      class: { pt: 'Inibidor da Síntese de Pirimidina / Imunomodulador Oral', es: 'Inhibidor de la Síntesis de Pirimidina / Inmunomodulador Oral' },
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente-Remitente em adultos (Droga oral de dose única diária muito cômoda)'],
+        es: ['Esclerosis Múltiple Recurrente-Remitente en adultos (Droga oral de dosis única diaria muy cómoda)']
+      },
+      commercialNames: { br: ['Aubagio'], ar: ['Aubagio'] },
+      presentation: { pt: ['Comprimidos revestidos 14 mg'], es: ['Comprimidos recubiertos 14 mg'] },
+      mechanism: {
+        pt: 'O bloqueio metabólico de defesa. É o metabólito ativo da Leflunomida (droga da artrite). A Teriflunomida bloqueia especificamente a enzima mitocondrial DHODH. Esta enzima é a única chave que os linfócitos T e B ativados possuem para fabricar "Pirimidina" (um bloco de construção do DNA). Sem pirimidina, os linfócitos autoimunes não conseguem se multiplicar aos milhões para invadir o cérebro, parando a doença.',
+        es: 'El bloqueo metabólico de defensa. Es el metabolito activo de la Leflunomida. La Teriflunomida bloquea específicamente la enzima mitocondrial DHODH. Esta enzima es la única llave que los linfocitos T y B activados poseen para fabricar "Pirimidina" (un bloque de ADN). Sin pirimidina, los linfocitos no logran multiplicarse.'
+      },
+      dose: {
+        adult: {
+          pt: '14 mg via oral UMA VEZ ao dia, continuamente.',
+          es: '14 mg vía oral UNA VEZ al día, continuamente.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Via oral pura com ou sem alimentos.'], es: ['Vía oral pura con o sin alimentos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste na DRC leve a moderada.', es: 'Sin necesidad de ajuste en ERC leve a moderada.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADO em insuficiência hepática grave (Child-Pugh C). Monitoramento de TGO/TGP deve ser quinzenal nos primeiros 6 meses!', es: 'CONTRAINDICADO en insuficiencia hepática grave (Child-Pugh C). ¡Monitoreo de AST/ALT debe ser quincenal en los primeros 6 meses!' } },
+      commonAdverseEffects: { pt: ['Alopecia marcante (O cabelo afina e cai em mechas nos primeiros 3 meses, depois estabiliza)', 'Diarreia e Náuseas', 'Aumento de Transaminases'], es: ['Alopecia marcada (El cabello afina y cae en mechones los primeros 3 meses)', 'Diarrea y Náuseas', 'Aumento de Transaminasas'] },
+      dangerousAdverseEffects: { pt: ['TERATOGENICIDADE EXTREMA (Má-formação fetal severa incompatível com a vida)', 'Hepatotoxicidade fulminante com necrose hepática aguda', 'Hipertensão severa aguda'], es: ['TERATOGENICIDAD EXTREMA (Malformación fetal severa)', 'Hepatotoxicidad fulminante con necrosis hepática', 'Hipertensión severa aguda'] },
+      contraindications: {
+        absolute: { pt: ['Mulheres grávidas ou em idade fértil que NÃO usem métodos anticoncepcionais altamente eficazes duplos', 'Insuficiência hepática grave'], es: ['Mujeres embarazadas o en edad fértil que NO usen métodos anticonceptivos altamente eficaces dobles', 'Insuficiencia hepática grave'] },
+        relative: { pt: ['Pacientes com neuropatia periférica preexistente grave'], es: ['Pacientes con neuropatía periférica preexistente grave'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'A BOMBA RELÓGIO DE 2 ANOS: A Teriflunomida gruda tão intensamente nas proteínas do sangue que, se a paciente parar de tomar o remédio hoje, a droga DEMORA ATÉ 2 ANOS para sair do corpo naturalmente. Se uma paciente engravidar por acidente nesse período, o bebê nascerá com deformidades. Requer o PROCEDIMENTO DE LAVADO RÁPIDO (Washout) com Colestiramina para arrancar o remédio em 11 dias.', es: 'LA BOMBA DE TIEMPO DE 2 AÑOS: La Teriflunomida se pega tanto a las proteínas que, si la paciente para el remedio hoy, TARDA HASTA 2 AÑOS en salir del cuerpo. Si queda embarazada, el bebé nacerá con deformidades. Requiere el PROCEDIMIENTO DE LAVADO RÁPIDO con Colestiramina para arrancar el remedio en 11 días.' }
+      }
+    },
+
+    /* ── NATALIZUMABE ───────────────────────────────────────────────────── */
+    "natalizumabe": {
+      id: 'natalizumabe',
+      name: { pt: 'Natalizumabe', es: 'Natalizumab' },
+      category: 'neurologia',
+      class: { pt: 'Anticorpo Monoclonal Anti-Alfa-4 Integrina (Inibidor de Tráfego Leucocitário)', es: 'Anticuerpo Monoclonal Anti-Alfa-4 Integrina (Inhibidor de Tráfico Leucocitario)' },
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente-Remitente ALTAMENTE AGRESSIVA e rapidamente progressiva (Droga de alta eficácia de 2ª linha)'],
+        es: ['Esclerosis Múltiple Recurrente-Remitente ALTAMENTE AGRESIVA y rápidamente progresiva (Droga de alta eficacia de 2ª línea)']
+      },
+      commercialNames: { br: ['Tysabri'], ar: ['Tysabri'] },
+      presentation: { pt: ['Frasco-ampola para infusão IV 300 mg/15 mL'], es: ['Vial para infusión IV 300 mg/15 mL'] },
+      mechanism: {
+        pt: 'A "Blindagem Total" do cérebro. Para que os linfócitos doentes ataquem o cérebro, eles precisam usar uma "garra" chamada Alfa-4-Integrina para se agarrarem na parede do vaso e atravessarem a Barreira Hematoencefálica. O Natalizumabe é um anticorpo que gruda e "encapa" essa garra. O linfócito passa direto pelo vaso sanguíneo e não consegue entrar no cérebro. A Esclerose Múltipla simplesmente PARA de progredir instantaneamente. O preço: o cérebro fica 100% sem nenhuma defesa imunológica de vigília.',
+        es: 'El "Blindaje Total" del cerebro. Para que los linfocitos ataquen el cerebro, usan una "garra" llamada Alfa-4-Integrina para cruzar la Barrera Hematoencefálica. El Natalizumab "encapucha" esa garra. El linfocito pasa de largo y no logra entrar. La EM simplemente SE DETIENE al instante. El precio: el cerebro se queda 100% sin defensas.'
+      },
+      dose: {
+        adult: {
+          pt: '300 mg via Infusão Intravenosa (IV) a CADA 4 SEMANAS (Mensal).',
+          es: '300 mg vía Infusión Intravenosa (IV) CADA 4 SEMANAS (Mensal).'
+        },
+        pediatric: { pt: 'Uso não recomendado em crianças de rotina.', es: 'Uso no recomendado en niños de rutina.' }
+      },
+      administration: { pt: ['Uso estritamente hospitalar/clínico. Infundido em 1 hora em bomba. O paciente deve ser observado por mais 1 hora após o fim da infusão pelo alto risco de anafilaxia biológica.'], es: ['Uso estrictamente hospitalario. Infundido en 1 hora. Debe observarse por 1 hora más tras la infusión por el alto riesgo de anafilaxia biológica.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Fadiga extrema nos dias pós-infusão', 'Infecção urinária e dor de garganta', 'Tontura e náuseas'], es: ['Fatiga extrema en los días posinfusión', 'Infección urinaria y dolor de garganta', 'Mareo y náuseas'] },
+      dangerousAdverseEffects: { pt: ['LEUCOENCEFALOPATIA MULTIFOCAL PROGRESSIVA / PML (Infecção oportunista cerebral letal e incurável causada pela ativação do Vírus JC no cérebro sem defesas)', 'Hepatotoxicidade severa', 'Anafilaxia de choque no gotejamento'], es: ['LEUCOENCEFALOPATÍA MULTIFOCAL PROGRESIVA / PML (Infección oportunista cerebral letal e incurable causada por la activación del Virus JC)', 'Hepatotoxicidad severa', 'Anafilaxia de choque'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com Diagnóstico ou suspeita de PML ativa', 'Uso associado com outros imunossupressores sistêmicos (Azatioprina, Ciclofosfamida)'], es: ['Pacientes con Diagnóstico o sospecha de PML activa', 'Uso asociado con otros inmunosupresores sistémicos'] },
+        relative: { pt: ['Pacientes Soropositivos para o VÍRUS JC com alto índice de anticorpos (> 0.9 ou > 1.5 - Risco estratosférico de morte por PML)'], es: ['Pacientes Seropositivos para el VIRUS JC con alto índice de anticuerpos (> 0.9 - Riesgo estratosférico de muerte por PML)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O PACTO COM O VÍRUS JC: O Tysabri é a droga mais eficaz da neurologia, mas exige a dosagem do Vírus JC (exame de sangue) a cada 6 meses. Se o índice do paciente for negativo, o risco de PML é zero. Se o vírus acordar e o índice subir acima de 1.5 após 2 anos de uso, a droga deve ser SUSPENSA IMEDIATAMENTE, ou o vírus JC vai derreter o cérebro do paciente letalmente.', es: 'EL PACTO CON EL VIRUS JC: Tysabri exige la dosificación del Virus JC cada 6 meses. Si el virus despierta y el índice sube arriba de 1.5 tras 2 años de uso, la droga debe SUSPENDERSE INMEDIATAMENTE, o el virus JC derretirá el cerebro del paciente de forma letal.' }
+      }
     }
 
-  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 401
+  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 402
          BUILD 396 — Triptanos: Sumatriptana, Zolmitriptana, Rizatriptana, Naratriptana, Eletriptana
          BUILD 397 — Triptanos+Ergot: Almotriptana, Frovatriptana, Ergotamina, DHE, Erenumabe
          BUILD 398 — Anti-CGRP+Gepantos: Fremanezumabe, Galcanezumabe, Eptinezumabe, Ubrogepanta, Rimegepanta
          BUILD 399 — Gepantos+Ditano+Demência: Atogepanta, Zavegepanta, Lasmiditana, Donepezila, Rivastigmina
          BUILD 400 — Demência avançada + Esclerose Múltipla:
-                     Galantamina (Reminyl) — AChE-I duplo nicotínico, ⚠ highAlert
-                     Memantina (Alois/Ebix) — NMDA bloqueador, renalHighRisk
-                     Lecanemabe (Leqembi) — Anti-amiloide IV 2sem, ⚠ ARIA-H, bleedingRisk, highAlert
-                     Donanemabe (Kisunla) — Anti-amiloide IV mensal, ⚠ ARIA-H, bleedingRisk, highAlert
-                     Interferon beta-1a (Avonex/Rebif) — EM Recorrente-Remitente, ⚠ suicídio, highAlert
+                     Galantamina, Memantina, Lecanemabe, Donanemabe, Interferon beta-1a
          BUILD 401 — Imunomoduladores EM (Interferons + S1P):
-                     Interferon beta-1b (Betaferon/Extavia) — EM RRMS, ⚠ necrose SC, highAlert
-                     Glatirâmer (Copaxone) — Falso-alvo mielínico, ⚠ Falso Infarto 15min
-                     Fingolimode (Gilenya) — S1P oral, ⚠ Ritual ECG 6h, highAlert
-                     Siponimode (Mayzent) — S1P seletivo EMSP, ⚠ CYP2C9 DNA, highAlert
-                     Ozanimode (Zeposia) — S1P curta meia-vida, ⚠ Tiramina/MAO, highAlert */
+                     Interferon beta-1b, Glatirâmer, Fingolimode, Siponimode, Ozanimode
+         BUILD 402 — Neuroimunologia EM (S1P + Fumaratos + Monoclonal):
+                     Ponesimode (Ponvory) — S1P1 seletivo meia-vida 7d, ⚠ hepaticCaution, highAlert
+                     Dimetilfumarato (Tecfidera) — Nrf2 oral, ⚠ PML linfopenia, highAlert
+                     Diroximel fumarato (Vumerity) — Nrf2 GI-safe, ⚠ PML/renal, renalHighRisk, highAlert
+                     Teriflunomida (Aubagio) — DHODH oral, ⚠ Washout 2anos, teratogênica, highAlert
+                     Natalizumabe (Tysabri) — Anti-integrina IV mensal, ⚠ PML VírusJC, highAlert */
 })();

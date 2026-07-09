@@ -339,6 +339,18 @@ const DRUG_ALIASES = {
   "ozanimod":                           "ozanimode",
   "zeposia":                            "ozanimode",
 
+  /* BUILD 402 — Ponesimode, Dimetilfumarato, Diroximel fumarato, Teriflunomida, Natalizumabe */
+  "ponesimod":                          "ponesimode",
+  "ponvory":                            "ponesimode",
+  "dimethyl_fumarate":                  "dimetilfumarato",
+  "tecfidera":                          "dimetilfumarato",
+  "diroximel_fumarate":                 "diroximel_fumarato",
+  "vumerity":                           "diroximel_fumarato",
+  "teriflunomide":                      "teriflunomida",
+  "aubagio":                            "teriflunomida",
+  "natalizumab":                        "natalizumabe",
+  "tysabri":                            "natalizumabe",
+
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4: aliases */
   "nintedanib":                         "nintedanibe",
   "ofev":                               "nintedanibe",
@@ -904,6 +916,12 @@ const DRUG_CLASSES = {
   /* Interferons EM injetáveis: síndrome gripal, necrose SC, hepatotoxicidade, suicídio. */
   "$classe_interferons_em": [
     "interferon_beta_1a", "interferon_beta_1b"
+  ],
+
+  /* BUILD 402 — Fumaratos orais e Anticorpo monoclonal anti-integrina */
+  /* Fumaratos ativam via Nrf2; risco compartilhado de linfopenia + PML por vírus JC. */
+  "$classe_fumaratos_orais": [
+    "dimetilfumarato", "diroximel_fumarato"
   ],
 
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4 */
@@ -22541,7 +22559,73 @@ const INTERACOES_DB = {
     }
   }
 
-}; /* fim INTERACOES_DB — BUILD 401 (EM S1P: $classe_moduladores_s1p×betabloqueadores/vacinas·vivo, siponimode×CYP2C9·fluconazol, ozanimode×IMAO·tiramina) */
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES — BUILD 402
+   Cierre de Neuroimunología: Ponesimode, Fumaratos, Teriflunomida, Natalizumabe
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── FUMARATOS ORAIS (Risco de Falência Medular e PML) ── */
+  ,
+  "$classe_fumaratos_orais": {
+    "$classe_imunossupressores_antineoplasicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "IMUNOSSUPRESSÃO COMBINADA E RISCO DE PML. Fumaratos reduzem a contagem de linfócitos T de forma seletiva crônica. A associação com imunossupressores oncológicos ou reumatológicos pesados (Metotrexato, Azatioprina, Micofenolato de Mofetila) esmaga as defesas do sangue de tal maneira que a contagem de linfócitos desaba a níveis críticos (< 200 células). O vírus oportunista JC invade o cérebro desprotegido do paciente, causando Leucoencefalopatia Multifocal Progressiva (PML), uma infecção cerebral que destrói a massa branca e mata em meses.",
+        es: "INMUNOSSUPRESIÓN COMBINADA Y RIESGO DE PML. Los fumaratos reducen linfocitos T. La asociación con inmunosupresores pesados (Metotrexato, Azatioprina) aplasta las defensas. El virus oportunista JC invade el cerebro desprotegido, causando Leucoencefalopatía Multifocal Progresiva (PML), una infección cerebral que destruye la masa blanca y mata."
+      },
+      conduta: {
+        pt: "A ASSOCIAÇÃO É PROIBIDA. Caso o paciente mude de terapia para Esclerose Múltipla, é obrigatório realizar um período de 'washout' e colher um Hemograma para provar que os Linfócitos subiram acima de 800 células antes de iniciar o fumarato.",
+        es: "LA ASOCIACIÓN ES PROHIBIDA. Si el paciente cambia de terapia para EM, es obligatorio realizar un período de 'washout' y extraer Hemograma para probar que los Linfocitos subieron antes de iniciar."
+      }
+    }
+  },
+
+  /* ── TERIFLUNOMIDA (Washout Farmacocinético + Varfarina) ── */
+  "teriflunomida": {
+    "colestiramina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "PROCEDIMENTO DE ELIMINAÇÃO ACELERADA (Washout Ativo). A Teriflunomida sofre uma intensa recirculação entero-hepática (o fígado joga a droga na bile, o intestino absorve de volta, num ciclo de 2 anos). A Colestiramina (resina de troca) ou o Carvão Ativado ligam-se fisicamente à medicação dentro do intestino e impedem a reabsorção, quebrando o ciclo e forçando a eliminação total do fármaco pelas fezes.",
+        es: "PROCEDIMIENTO DE ELIMINACIÓN ACELERADA (Washout Activo). La Teriflunomida sufre una intensa recirculación enterohepática (el hígado tira la droga en la bilis, el intestino la absorbe de vuelta, en un ciclo de 2 años). La Colestiramina se une físicamente a la medicación en el intestino e impide la reabsorción."
+      },
+      conduta: {
+        pt: "Interação benéfica de resgate mandatória caso a mulher decida engravidar ou sofra hepatotoxicidade. O protocolo exige: 8g de Colestiramina via oral de 8 em 8 horas por 11 dias seguidos, reduzindo o nível da droga no sangue a níveis seguros em tempo recorde.",
+        es: "Interación benéfica de rescate obligatoria si la mujer decide quedar embarazada. El protocolo exige: 8g de Colestiramina vía oral cada 8 horas por 11 días seguidos, reduciendo el nivel a rangos seguros."
+      }
+    },
+    "varfarina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "QUEDA BRUTA DO RNI (Risco de Trombose). A Teriflunomida induz secundariamente o clearance da Varfarina. Em menos de 10 dias de uso conjunto, o RNI do paciente anticoagulado despenca em até 25%, deixando o sangue grosso e propenso a formar coágulos em válvulas cardíacas ou veias profundas.",
+        es: "CAÍDA BRUTA DEL RNI (Riesgo de Trombosis). La Teriflunomida induce secundariamente el clearance de la Warfarina. En menos de 10 días de uso conjunto, el RNI del paciente anticoagulado se desploma hasta un 25%, dejando la sangre propensa a formar coágulos."
+      },
+      conduta: {
+        pt: "Monitoramento rígido do Coagulograma (TAP/RNI). Sempre que iniciar ou suspender a Teriflunomida em um paciente usuário de Varfarina, o RNI deve ser colhido semanalmente para ajustar a dose do anticoagulante para cima.",
+        es: "Monitoreo rígido del Coagulograma (TAP/RNI). Siempre que inicie o suspenda Teriflunomida en un paciente usuario de Warfarina, el RNI debe ser extraído semanalmente."
+      }
+    }
+  },
+
+  /* ── NATALIZUMABE (Risco de PML por Corticoterapia Prolongada) ── */
+  "natalizumabe": {
+    "$classe_corticosteroides_pulsoterapia": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "POTENCIALIZAÇÃO DO RISCO DE PML. O Natalizumabe tranca as portas do cérebro para as células de defesa. Se o paciente sofrer um surto e o médico aplicar altas doses de Corticoides (Pulsoterapia com Metilprednisolona) por longos períodos em cima do Natalizumabe, a paralisia do sistema imune cerebral se torna total. O risco de desenvolvimento da infecção mortal PML pelo Vírus JC quintuplica durante os meses seguintes.",
+        es: "POTENCIACIÓN DEL RIESGO DE PML. El Natalizumab cierra las puertas del cerebro para las células de defensa. Si el médico aplica altas dosis de Corticoides (Pulsoterapia con Metilprednisolona) por largos períodos encima del Natalizumab, la parálisis inmune cerebral se vuelve total, quintuplicando el riesgo de PML."
+      },
+      conduta: {
+        pt: "Pulsoterapias curtas (3 a 5 dias) para reverter surtos de EM são autorizadas, mas o clínico deve evitar tratamentos crônicos orais com Prednisona em pacientes que recebem as infusões mensais de Tysabri.",
+        es: "Pulsoterapias cortas (3 a 5 días) para revertir brotes de EM son autorizadas, pero se deben evitar tratamientos crónicos orales con Prednisona."
+      }
+    }
+  }
+
+}; /* fim INTERACOES_DB — BUILD 402 (Neuroimunologia: $classe_fumaratos_orais×imunossupressores/PML, teriflunomida×colestiramina/varfarina, natalizumabe×corticoides/PML) */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
