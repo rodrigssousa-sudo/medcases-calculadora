@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=390" />
-  <link rel="stylesheet" href="css/build233.css?v=390" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=390" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=390" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=390" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=390" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=390" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=392" />
+  <link rel="stylesheet" href="css/build233.css?v=392" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=392" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=392" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=392" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=392" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=392" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=390" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=392" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=390" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=392" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=390" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=392" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=390" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=392" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=390" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=392" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=390" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=392" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=390" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=392" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=390" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=392" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -15081,11 +15081,21 @@ function filterPrescriptions(v) { renderPrescriptions(v); }
 
 /* ── Atualiza TODOS os contadores de fármacos na UI ── */
 function _fdUpdateCount() {
-  const total = _getMasterDB().length;
+  /* BUILD 392 — usa o máximo entre as três fontes de contagem disponíveis
+     para que chamadas precoces (antes do lazy-load completar) não congelem
+     o contador em um valor parcial.
+     _getMasterDB() → window.DRUG_DB (fonte canônica, cresce com lazy-load)
+     window.DRUG_DB.length → mesma fonte, acesso direto
+     Object.keys(ALL_DRUGS_DB).length → merge BUILD 390, cobre race conditions */
+  const total = Math.max(
+    (typeof _getMasterDB === 'function' && Array.isArray(_getMasterDB())) ? _getMasterDB().length : 0,
+    (Array.isArray(window.DRUG_DB))    ? window.DRUG_DB.length                  : 0,
+    (window.ALL_DRUGS_DB)              ? Object.keys(window.ALL_DRUGS_DB).length : 0
+  );
   const isES  = (typeof currentLang !== 'undefined' && currentLang === 'es');
   const countStr = total > 0 ? `${total} fármacos` : '—';
 
-  /* Subtítulo do card Fármacos na Central de Calculadoras (agora é o desc) */
+  /* Subtítulo do card Fármacos na Central de Calculadoras */
   const descEl = document.getElementById('farmacos-total-count');
   if (descEl) {
     if (total > 0) {
@@ -15100,6 +15110,9 @@ function _fdUpdateCount() {
   const hmEl = document.getElementById('hm-drug-count');
   if (hmEl) hmEl.textContent = countStr;
 }
+/* BUILD 392 — exposição explícita no window para que o lazy-loader IIFE
+   e qualquer módulo externo chamem window._fdUpdateCount() com segurança */
+window._fdUpdateCount = _fdUpdateCount;
 
 /* ══════════════════════════════════════════════════════════════
    renderFarmacosList(filter)
@@ -18734,8 +18747,13 @@ function _updateDrugSearchHint() {
   const ht = document.getElementById('drug-search-hint-text');
   if (!ht) return;
   const isEs = (typeof currentLang !== 'undefined') && currentLang === 'es';
-  /* Usa _getMasterDB() — fonte canônica única */
-  const cnt = _getMasterDB().length;
+  /* BUILD 392 — mesma lógica Math.max de _fdUpdateCount: garante que o
+     hint sempre reflita o maior valor conhecido, mesmo antes do lazy-load. */
+  const cnt = Math.max(
+    (typeof _getMasterDB === 'function' && Array.isArray(_getMasterDB())) ? _getMasterDB().length : 0,
+    (Array.isArray(window.DRUG_DB))    ? window.DRUG_DB.length                  : 0,
+    (window.ALL_DRUGS_DB)              ? Object.keys(window.ALL_DRUGS_DB).length : 0
+  );
   ht.textContent = isEs
     ? `Escriba para buscar entre ${cnt} fármacos disponibles`
     : `Digite para buscar entre ${cnt} fármacos disponíveis`;
@@ -23657,8 +23675,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=390"></script>
-<script src="database/analgesicos.js?v=390"></script>
+<script src="database/antimicrobianos.js?v=392"></script>
+<script src="database/analgesicos.js?v=392"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -23751,7 +23769,7 @@ window.MedCasesBridge = {
     if (typeof window._fdUpdateCount        === 'function') window._fdUpdateCount();
     if (typeof window._updateDrugSearchHint === 'function') window._updateDrugSearchHint();
 
-    console.log('[MedCases] BUILD 390: lazy DBs prontos — cardio + psicofarmacos + interacoes. '
+    console.log('[MedCases] BUILD 392: lazy DBs prontos — cardio + psicofarmacos + interacoes. '
       + 'DRUG_DB: ' + window.DRUG_DB.length + ' fármacos. '
       + 'ALL_DRUGS_DB: ' + Object.keys(window.ALL_DRUGS_DB || {}).length + ' entradas.');
   }
@@ -23772,9 +23790,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=390', 'psico');
-    _loadScript('database/cardio.js?v=390',        'cardio');
-    _loadScript('database/interacoes.js?v=390',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=392', 'psico');
+    _loadScript('database/cardio.js?v=392',        'cardio');
+    _loadScript('database/interacoes.js?v=392',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -23784,50 +23802,50 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=390"></script>
-<script src="database/gastro.js?v=390"></script>
-<script src="database/gastro_imuno.js?v=390"></script>
-<script src="database/imuno_corticoide.js?v=390"></script>
-<script src="database/endocrino_glp1.js?v=390"></script>
-<script src="database/infusoes.js?v=390"></script>
-<script src="database/emergencia.js?v=390"></script>
-<script src="database/infectologia.js?v=390"></script>
-<script src="database/sedacao.js?v=390"></script>
-<script src="database/hematologia.js?v=390"></script>
-<script src="database/pneumologia.js?v=390"></script>
-<script src="database/gastroenterologia.js?v=390"></script>
-<script src="database/cardiologia.js?v=390"></script>
-<script src="database/analgesia_opioides.js?v=390"></script>
-<script src="database/alergia_imunologia.js?v=390"></script>
-<script src="database/pneumologia_otorrino.js?v=390"></script>
-<script src="database/prescricoes.js?v=390" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=392"></script>
+<script src="database/gastro.js?v=392"></script>
+<script src="database/gastro_imuno.js?v=392"></script>
+<script src="database/imuno_corticoide.js?v=392"></script>
+<script src="database/endocrino_glp1.js?v=392"></script>
+<script src="database/infusoes.js?v=392"></script>
+<script src="database/emergencia.js?v=392"></script>
+<script src="database/infectologia.js?v=392"></script>
+<script src="database/sedacao.js?v=392"></script>
+<script src="database/hematologia.js?v=392"></script>
+<script src="database/pneumologia.js?v=392"></script>
+<script src="database/gastroenterologia.js?v=392"></script>
+<script src="database/cardiologia.js?v=392"></script>
+<script src="database/analgesia_opioides.js?v=392"></script>
+<script src="database/alergia_imunologia.js?v=392"></script>
+<script src="database/pneumologia_otorrino.js?v=392"></script>
+<script src="database/prescricoes.js?v=392" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=390"></script>
+<script defer src="js/medcases-ux-v2.js?v=392"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=390"></script>
+<script defer src="js/hub-accordion.js?v=392"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=390"></script>
+<script defer src="js/build240b-accordion-fix.js?v=392"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=390"></script>
+<script defer src="js/calculator-overlay.js?v=392"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=390"></script>
+<script defer src="js/category-pills.js?v=392"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=390"></script>
+<script defer src="js/elec-calc.js?v=392"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=390"></script>
+<script defer src="js/deeplink-router.js?v=392"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=390"></script>
+<script defer src="js/build272-reactive-engine.js?v=392"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=390"></script>
+<script defer src="js/build283-accessory-bar.js?v=392"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
