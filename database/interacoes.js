@@ -249,6 +249,20 @@ const DRUG_ALIASES = {
   "saxenda":                            "liraglutida",
   "levotiroxine":                       "levotiroxina",
 
+  /* BUILD 397 — Associações Inalatórias ICS/LABA + LAMA/LABA: aliases */
+  "beclomethasone_formoterol":          "beclometasona_formoterol",
+  "fostair":                            "beclometasona_formoterol",
+  "foster":                             "beclometasona_formoterol",
+  "fluticasone_salmeterol":             "fluticasona_salmeterol",
+  "seretide":                           "fluticasona_salmeterol",
+  "advair":                             "fluticasona_salmeterol",
+  "fluticasone_vilanterol":             "fluticasona_vilanterol",
+  "relvar":                             "fluticasona_vilanterol",
+  "umeclidinium_vilanterol":            "umeclidinio_vilanterol",
+  "anoro":                              "umeclidinio_vilanterol",
+  "tiotropium_olodaterol":              "tiotropio_olodaterol",
+  "spiolto":                            "tiotropio_olodaterol",
+
   /* BUILD 396 — Descongestionantes (Otorrino) + ICS/LABA (Pneumologia): aliases */
   "oxymetazoline":                      "oximetazolina",
   "afrin":                              "oximetazolina",
@@ -717,6 +731,26 @@ const DRUG_CLASSES = {
   "$classe_hipoglicemiantes_secretagogos": [
     "glibenclamida", "glimepirida", "glipizida", "gliclazida",
     "tolbutamida", "clorpropamida", "repaglinida", "nateglinida"
+  ],
+
+  /* BUILD 397 — Associações Inalatórias para DPOC e Asma */
+
+  /* LAMA + LABA combinados (dupla broncodilatação sem corticoide)
+     Umeclidínio/Vilanterol (Anoro) e Tiotrópio/Olodaterol (Spiolto).
+     Usados exclusivamente na DPOC. Contraindicados na Asma. */
+  "$classe_lama_laba_combinados": [
+    "umeclidinio_vilanterol", "tiotropio_olodaterol",
+    "aclidinio_formoterol", "glicopirronio_indacaterol"
+  ],
+
+  /* ICS + LABA combinados (corticoide + broncodilatador longo)
+     Engloba todas as bombinhas ICS/LABA de manutenção.
+     Fluticasona+Salmeterol (Seretide), Beclometasona+Formoterol (Fostair),
+     Fluticasona+Vilanterol (Relvar), Budesonida+Formoterol (Symbicort/Alenia). */
+  "$classe_ics_laba_combinados": [
+    "fluticasona_salmeterol", "beclometasona_formoterol",
+    "fluticasona_vilanterol", "budesonida_formoterol",
+    "mometasona_formoterol", "ciclesonida_formoterol"
   ],
 
   /* BUILD 396 — Descongestionantes adrenérgicos (tópicos + sistêmicos) */
@@ -1450,6 +1484,55 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Monitorar ECG (Intervalo QTc) se a associação for inevitável. Evitar a prescrição simultânea em pacientes coronariopatas, com arritmia basal severa ou hipocalemia. Nesse contexto, preferir Fexofenadina (sem metabolismo CYP hepático) ou Desloratadina (já ativada, independente do CYP3A4).",
         es: "Monitorear ECG (Intervalo QTc) si la asociación es inevitable. Evitar la prescripción simultánea en coronariopatas, con arritmia basal severa o hipopotasemia. En este contexto, preferir Fexofenadina (sin metabolismo CYP hepático) o Desloratadina (ya activada, independiente del CYP3A4)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 397 — BLOCO MOTOR DE INTERAÇÕES: Associações Inalatórias LAMA/LABA e ICS/LABA
+     (Fostair, Seretide, Relvar, Anoro, Spiolto)
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── ASSOCIAÇÕES LAMA + LABA (Dupla Broncodilatação sem Corticoide) ── */
+  "$classe_lama_laba_combinados": {
+    "$classe_anticolinergicos_triciclicos_imao": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A 'TEMPESTADE ANTICOLINÉRGICA'. Dispositivos de dupla broncodilatação já contêm doses cavalares de antimuscarínicos inalatórios. Se o idoso com DPOC utilizar a bombinha (Umeclidínio/Tiotrópio) e ingerir à noite Antidepressivos Tricíclicos (Amitriptilina) ou Antialérgicos Sedativos (Prometazina, Dexclorfeniramina), a carga anticolinérgica no sangue explode. O idoso acordará de madrugada em Delirium furioso, cego (cicloplegia) e com a bexiga prestes a estourar de urina retida.",
+        es: "LA 'TORMENTA ANTICOLINÉRGICA'. Dispositivos de doble broncodilatación ya contienen dosis altas de antimuscarínicos. Si el anciano con EPOC usa el inhalador e ingiere Antidepresivos Tricíclicos (Amitriptilina) o Antialérgicos Sedantes (Prometazina), la carga anticolinérgica explota. El anciano despertará en Delirium, ciego y con la vejiga a punto de estallar de orina."
+      },
+      conduta: {
+        pt: "Revisão Imediata de Prescrição Gerontológica (Critérios de Beers). Pacientes em uso de LAMA/LABA para DPOC têm indicação forte de suspensão/desmame de qualquer outro remédio oral que cause efeito anticolinérgico.",
+        es: "Revisión Inmediata de Prescripción Gerontológica (Criterios de Beers). Pacientes en uso de LAMA/LABA tienen indicación fuerte de suspensión de cualquier otro remedio oral que cause efecto anticolinérgico."
+      }
+    },
+    "$classe_betabloqueadores_oftalmicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ASFIXIA POR COLÍRIO. O componente LABA da bombinha (Vilanterol/Olodaterol) tem a missão de abrir o pulmão estimulando receptores beta-2. Se o paciente idoso usar Colírios Betabloqueadores para Glaucoma (Timolol), o colírio escorrega pelo ducto nasolacrimal para o nariz e é absorvido sistemicamente. O colírio anula totalmente a bombinha de asma, e o paciente sofre um grave sufocamento respiratório 'sem explicação'.",
+        es: "ASFIXIA POR COLIRIO. El componente LABA tiene la misión de abrir el pulmón estimulando beta-2. Si el paciente anciano usa Colirios Betabloqueantes para Glaucoma (Timolol), el colirio cae por el conducto nasolagrimal y se absorbe. El colirio anula totalmente el inhalador de EPOC, y el paciente sufre sofocamiento grave 'sin explicación'."
+      },
+      conduta: {
+        pt: "Jamais associar Colírio de Timolol em pacientes portadores de Asma ou DPOC sintomática grave. Solicitar ao Oftalmologista a troca do tratamento do glaucoma para Análogos de Prostaglandinas (Latanoprosta) ou Inibidores da Anidrase Carbônica (Dorzolamida).",
+        es: "Jamás asociar Colirio de Timolol en pacientes con Asma o EPOC sintomática. Solicitar al Oftalmólogo el cambio del tratamiento del glaucoma a Análogos de Prostaglandinas o Inhibidores de la Anhidrasa Carbónica."
+      }
+    }
+  },
+
+  /* ── ASSOCIAÇÕES ICS + LABA (Fluticasona+Salmeterol, Budesonida+Formoterol) ── */
+  "$classe_ics_laba_combinados": {
+    "$classe_inibidores_fortes_cyp3a4": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "TOXICIDADE BIFÁSICA. O uso de Inibidores de Protease (Ritonavir) ou Antifúngicos Triazólicos (Itraconazol) trava o fígado de uma vez só para os dois componentes da caneta (tanto para o corticoide quanto para o LABA). O Corticoide (Fluticasona) subirá e causará Síndrome de Cushing (engordamento letal, perda de imunidade), e o LABA (Salmeterol) subirá induzindo Fibrilação Atrial e isquemia cardíaca no paciente.",
+        es: "TOXICIDAD BIFÁSICA. El uso de Inhibidores de Proteasa (Ritonavir) o Antifúngicos (Itraconazol) traba el hígado de una vez para los dos componentes (corticoide y LABA). El Corticoide (Fluticasona) subirá y causará Síndrome de Cushing, y el LABA (Salmeterol) subirá induciendo Fibrilación Auricular."
+      },
+      conduta: {
+        pt: "A Fluticasona (Seretide/Relvar) deve ser banida se o paciente entrar em terapia com inibidores potentes de CYP. O tratamento profilático respiratório do paciente com HIV ou infecção fúngica severa deve ser obrigatoriamente revisto pelo especialista.",
+        es: "La Fluticasona (Seretide/Relvar) debe ser prohibida si el paciente entra en terapia con inhibidores de CYP. El tratamiento profiláctico respiratorio del paciente con VIH debe ser revisado por el especialista."
       }
     }
   },

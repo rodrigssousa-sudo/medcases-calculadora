@@ -1609,7 +1609,208 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
         warning: { pt: 'FIM DO SONO: É o antialérgico ideal para motoristas, pilotos e trabalhadores diurnos. Diferente da Prometazina ou Dexclorfeniramina (Polaramine) que "desmaiam" o paciente de sono, a Loratadina permite a cura da coriza mantendo a vigilância intacta.', es: 'FIN DEL SUEÑO: Es el antialérgico ideal para conductores y trabajadores. A diferencia de la Prometazina que "desmaya" al paciente de sueño, la Loratadina permite curar la coriza manteniendo la vigilancia intacta.' }
       }
+    },
+
+
+    /* ── BUILD 397 — Associações Inalatórias: ICS/LABA + LAMA/LABA ── */
+
+    "beclometasona_formoterol": {
+      name: { pt: 'Beclometasona + Formoterol', es: 'Beclometasona + Formoterol' },
+      category: 'pneumologia',
+      class: { pt: 'Associação Corticosteroide Inalatório + Agonista Beta-2 (ICS/LABA)', es: 'Asociación Corticosteroide Inhalatorio + Agonista Beta-2 (ICS/LABA)' },
+      indications: {
+        pt: ['Estratégia MART (Manutenção e Resgate da Asma) - Droga Ouro GINA', 'Manutenção crônica da DPOC severa'],
+        es: ['Estrategia MART (Mantenimiento y Rescate del Asma) - Droga Oro GINA', 'Mantenimiento crónico de la EPOC severa']
+      },
+      commercialNames: { br: ['Fostair'], ar: ['Foster'] },
+      presentation: { pt: ['Spray Inalatório HFA 100/6 mcg e 200/6 mcg por jato', 'Pó Inalatório (NEXThaler)'], es: ['Spray Inhalatorio HFA 100/6 mcg y 200/6 mcg por puff', 'Polvo Inhalatorio (NEXThaler)'] },
+      mechanism: {
+        pt: 'Uma obra de arte da nanotecnologia. A formulação HFA desta associação cria partículas "extrafinas". Enquanto as bombinhas comuns ficam presas na garganta e grandes brônquios, essa medicação penetra profundamente nas "pequenas vias aéreas" (bronquíolos distais), que são o epicentro silencioso da inflamação asmática. O formoterol abre o caminho em 3 minutos, e a beclometasona extrafina apaga o fogo pulmonar profundo.',
+        es: 'Una obra de arte de la nanotecnología. La formulación HFA crea partículas "extrafinas". Mientras los inhaladores comunes se atascan en la garganta, esta medicación penetra profundamente en las "pequeñas vías aéreas" (bronquiolos distales). El formoterol abre el camino en 3 minutos, y la beclometasona apaga el fuego.'
+      },
+      dose: {
+        adult: {
+          pt: 'Asma (Manutenção): 1 a 2 inalações a cada 12 horas. Asma (MART Resgate): 1 jato extra sob demanda na crise (Máx 8 jatos/dia).',
+          es: 'Asma (Mantenimiento): 1 a 2 inhalaciones cada 12 horas. Asma (MART Rescate): 1 puff extra a demanda en la crisis (Máx 8 puffs/día).'
+        },
+        pediatric: {
+          pt: 'Não recomendado rotineiramente < 18 anos na formulação extrafina, embora uso off-label especializado exista.',
+          es: 'No recomendado rutinariamente < 18 años en formulación extrafina, aunque existe uso off-label especializado.'
+        }
+      },
+      administration: { pt: ['Higiene oral rigorosa após o uso para evitar candidíase. Quando usado em spray (HFA), recomenda-se uso de espaçador para otimizar ainda mais o depósito.'], es: ['Higiene oral rigurosa tras el uso para evitar candidiasis. Cuando se usa en spray (HFA), se recomienda uso de espaciador.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Ajuste mínimo, metabolismo local pulmonar elevado.', es: 'Ajuste mínimo, metabolismo local pulmonar elevado.' } },
+      commonAdverseEffects: { pt: ['Candidíase orofaríngea', 'Tremores (pelo formoterol) e palpitação', 'Disfonia'], es: ['Candidiasis orofaríngea', 'Temblores (por formoterol) y palpitación', 'Disfonía'] },
+      dangerousAdverseEffects: { pt: ['Pneumonia em idosos com DPOC', 'Hipocalemia (se abuso de resgates)'], es: ['Neumonía en ancianos con EPOC', 'Hipopotasemia (si abuso de rescates)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave aos ativos'], es: ['Hipersensibilidad grave a los activos'] },
+        relative: { pt: ['Cardiopatias descompensadas (limitar os jatos de resgate)'], es: ['Cardiopatías descompensadas (limitar los puffs de rescate)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ALERTA DE DOSE: Como a partícula é extrafina e chega 100% ao pulmão, 100 mcg de Beclometasona extrafina equivalem à força de 250 mcg da Beclometasona comum (Clenil). Nunca dobre a dose achando que "100 é pouco".', es: 'ALERTA DE DOSIS: Como la partícula es extrafina, 100 mcg de Beclometasona extrafina equivalen a la fuerza de 250 mcg de Beclometasona común. Nunca doble la dosis creyendo que "100 es poco".' }
+      }
+    },
+
+    "fluticasona_salmeterol": {
+      name: { pt: 'Fluticasona + Salmeterol', es: 'Fluticasona + Salmeterol' },
+      category: 'pneumologia',
+      class: { pt: 'Associação Corticosteroide Inalatório + Agonista Beta-2 (ICS/LABA)', es: 'Asociación Corticosteroide Inhalatorio + Agonista Beta-2 (ICS/LABA)' },
+      indications: {
+        pt: ['Tratamento de MANUTENÇÃO (Prevenção) da Asma Crônica', 'Tratamento de DPOC grave com exacerbações'],
+        es: ['Tratamiento de MANTENIMIENTO (Prevención) del Asma Crónica', 'Tratamiento de EPOC grave con exacerbaciones']
+      },
+      commercialNames: { br: ['Seretide'], ar: ['Seretide'] },
+      presentation: { pt: ['Spray Inalatório 50/25, 125/25, 250/25 mcg', 'Pó inalatório (Diskus) 100/50, 250/50, 500/50 mcg'], es: ['Spray Inhalatorio 50/25, 125/25, 250/25 mcg', 'Polvo inhalatorio (Diskus) 100/50, 250/50, 500/50 mcg'] },
+      mechanism: {
+        pt: 'A associação pioneira mais famosa do mundo. A Fluticasona é um corticoide potente que fica "grudado" no pulmão agindo por 12 horas. O Salmeterol é um broncodilatador de cauda longa que mantém as vias aéreas abertas por 12 horas. O grande detalhe clínico: o Salmeterol demora meia hora para abrir o brônquio. Logo, essa bombinha não serve para crise aguda de sufocamento.',
+        es: 'La asociación pionera más famosa del mundo. La Fluticasona es un corticoide potente que queda "pegado" en el pulmón. El Salmeterol es un broncodilatador de cola larga que mantiene las vías abiertas por 12 horas. El gran detalle clínico: el Salmeterol tarda media hora en abrir el bronquio. Luego, este inhalador no sirve para crisis aguda.'
+      },
+      dose: {
+        adult: {
+          pt: 'Spray: 2 jatos a cada 12 horas. Diskus: 1 inalação a cada 12 horas.',
+          es: 'Spray: 2 puffs cada 12 horas. Diskus: 1 inhalación cada 12 horas.'
+        },
+        pediatric: {
+          pt: 'Acima de 4 anos: Spray 50/25 mcg (2 jatos 12/12h) ou Diskus 100/50 (1 inalação 12/12h).',
+          es: 'Por encima de 4 años: Spray 50/25 mcg (2 puffs 12/12h) o Diskus 100/50 (1 inhalación 12/12h).'
+        }
+      },
+      administration: { pt: ['Lavagem orofaríngea rigorosa após uso. JAMAIS aumentar as doses ou intervalos por conta própria na crise.'], es: ['Lavado orofaríngeo riguroso tras uso. JAMÁS aumentar las dosis o intervalos por cuenta propia en la crisis.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'O metabolismo da fluticasona engolida depende 100% do fígado. Cautela severa em cirrose descompensada.', es: 'El metabolismo de la fluticasona tragada depende 100% del hígado. Cautela severa en cirrosis descompensada.' } },
+      commonAdverseEffects: { pt: ['Candidíase oral e rouquidão (A Fluticasona é o ICS que mais causa isso pela sua alta lipofilicidade nas cordas vocais)', 'Cefaleia'], es: ['Candidiasis oral y ronquera (La Fluticasona es el ICS que más causa esto por su alta lipofilicidad en las cuerdas vocales)', 'Cefalea'] },
+      dangerousAdverseEffects: { pt: ['Pneumonia em DPOC', 'Crise asmática fatal por uso errado como resgate'], es: ['Neumonía en EPOC', 'Crisis asmática fatal por uso erróneo como rescate'] },
+      contraindications: {
+        absolute: { pt: ['Alívio imediato do broncoespasmo agudo (Status Asthmaticus)'], es: ['Alivio inmediato del broncoespasmo agudo (Status Asthmaticus)'] },
+        relative: { pt: ['Pacientes com infecção oral/fúngica ativa', 'Uso de Inibidores de Protease do HIV (Ritonavir)'], es: ['Pacientes con infección oral/fúngica activa', 'Uso de Inhibidores de Proteasa del VIH (Ritonavir)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'DIFERENÇA VITAL: O paciente DEVE ENTENDER a diferença entre "Manutenção" e "Resgate". O Seretide (Salmeterol) NÃO É MART. Se ele tiver falta de ar e puxar o Seretide, a droga vai demorar 30 minutos para agir, tempo suficiente para morrer asfixiado. O paciente PRECISA ter um Salbutamol separado no bolso.', es: 'DIFERENCIA VITAL: El paciente DEBE ENTENDER la diferencia entre "Mantenimiento" y "Rescate". Seretide NO ES MART. Si tiene falta de aire y usa Seretide, tardará 30 min en actuar. El paciente NECESITA tener un Salbutamol separado.' }
+      }
+    },
+
+    "fluticasona_vilanterol": {
+      name: { pt: 'Fluticasona (Furoato) + Vilanterol', es: 'Fluticasona (Furoato) + Vilanterol' },
+      category: 'pneumologia',
+      class: { pt: 'Associação Corticosteroide Inalatório + Ultra-LABA (ICS/LABA de Ação Ultra-Longa)', es: 'Asociación Corticosteroide Inhalatorio + Ultra-LABA (ICS/LABA de Acción Ultra Larga)' },
+      indications: {
+        pt: ['Asma em adultos e adolescentes a partir de 12 anos', 'Doença Pulmonar Obstrutiva Crônica (DPOC) em pacientes que exigem combo ICS/LABA'],
+        es: ['Asma en adultos y adolescentes a partir de 12 años', 'Enfermedad Pulmonar Obstructiva Crónica (EPOC) en pacientes que exigen combo ICS/LABA']
+      },
+      commercialNames: { br: ['Relvar Ellipta'], ar: ['Relvar'] },
+      presentation: { pt: ['Pó Inalatório (Dispositivo Ellipta) 100/22 mcg e 200/22 mcg'], es: ['Polvo Inhalatorio (Dispositivo Ellipta) 100/22 mcg y 200/22 mcg'] },
+      mechanism: {
+        pt: 'A evolução máxima para os esquecidos. A mudança química de "Propionato" para "Furoato" de Fluticasona fez com que o corticoide ficasse ativo por incríveis 24 horas ininterruptas. Somado ao Vilanterol (Ultra-LABA de 24 horas), esta caneta fornece o tratamento basal inteiro de um dia com um único clique e inalação. Aumentou a adesão do paciente drasticamente.',
+        es: 'La evolución máxima para los olvidadizos. El cambio químico de "Propionato" a "Furoato" hizo que el corticoide quede activo por increíbles 24 horas. Sumado al Vilanterol (Ultra-LABA), esta pluma provee el tratamiento basal entero de un día con un solo clic.'
+      },
+      dose: {
+        adult: {
+          pt: '1 inalação (100/22 ou 200/22 mcg) UMA VEZ ao dia, sempre na mesma hora do dia.',
+          es: '1 inhalación (100/22 o 200/22 mcg) UNA VEZ al día, siempre a la misma hora del día.'
+        },
+        pediatric: {
+          pt: 'Adolescentes > 12 anos: 1 inalação de 100/22 mcg UMA VEZ ao dia.',
+          es: 'Adolescentes > 12 años: 1 inhalación de 100/22 mcg UNA VEZ al día.'
+        }
+      },
+      administration: { pt: ['Abra o bocal, inspire fortemente e feche. Não é necessário segurar a respiração de forma asfixiante, mas profunda. Lavar a boca e bochecho obrigatórios.'], es: ['Abra la boquilla, inspire fuertemente y cierre. Lavar la boca y enjuague obligatorios.'] },
+      renalAdjustment: { required: false, message: { pt: 'Nenhum ajuste sistêmico requerido.', es: 'Ningún ajuste sistémico requerido.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Pacientes com doença hepática moderada ou grave não devem ultrapassar a dose de 100/22 mcg/dia (risco de supressão adrenal sistêmica pela fluticasona).', es: 'Pacientes con enfermedad hepática moderada/grave no deben superar dosis de 100/22 mcg/día.' } },
+      commonAdverseEffects: { pt: ['Candidíase orofaríngea (Extremamente comum se o paciente não lavar a boca e cuspir a água)', 'Faringite e Cefaleia'], es: ['Candidiasis orofaríngea (Extremamente común si el paciente no lava la boca y escupe el agua)', 'Faringitis y Cefalea'] },
+      dangerousAdverseEffects: { pt: ['Maior incidência de pneumonia severa documentada em pacientes idosos com DPOC avançada.'], es: ['Mayor incidencia de neumonía severa documentada en pacientes ancianos con EPOC avanzada.'] },
+      contraindications: {
+        absolute: { pt: ['Tratamento de asma como medicação de resgate agudo', 'Crianças menores de 12 anos'], es: ['Tratamiento de asma como medicación de rescate agudo', 'Niños menores de 12 años'] },
+        relative: { pt: ['Tuberculose latente/ativa, infecção fúngica'], es: ['Tuberculosis latente/activa, infección fúngica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'CUIDADO: Se o paciente sentir falta de ar crônica à tarde, NUNCA prescreva para ele inalar "mais uma dose" de Relvar. A medicação já está atuando 24 horas no receptor. Usar uma segunda dose causará toxicidade cardíaca e acúmulo de corticoide, sem melhora respiratória.', es: 'CUIDADO: Si el paciente siente falta de aire a la tarde, NUNCA prescriba inhalar "una dosis más" de Relvar. La medicación ya actúa 24 horas. Usar una segunda dosis causará toxicidad cardíaca.' }
+      }
+    },
+
+    "umeclidinio_vilanterol": {
+      name: { pt: 'Umeclidínio + Vilanterol', es: 'Umeclidinio + Vilanterol' },
+      category: 'pneumologia',
+      class: { pt: 'Associação LAMA + Ultra-LABA (Dupla Broncodilatação Sem Corticoide)', es: 'Asociación LAMA + Ultra-LABA (Doble Broncodilatación Sin Corticoide)' },
+      indications: {
+        pt: ['Terapia broncodilatadora de manutenção contínua da DPOC (A escolha inicial moderna para pacientes muito sintomáticos sem excesso de inflamação)'],
+        es: ['Terapia broncodilatadora de mantenimiento continuo de la EPOC (La elección inicial moderna para pacientes muy sintomáticos sin exceso de inflamación)']
+      },
+      commercialNames: { br: ['Anoro Ellipta'], ar: ['Anoro'] },
+      presentation: { pt: ['Pó Inalatório (Dispositivo Ellipta) 62,5/25 mcg'], es: ['Polvo Inhalatorio (Dispositivo Ellipta) 62,5/25 mcg'] },
+      mechanism: {
+        pt: 'A "Britadeira" do DPOC. A associação de um anticolinérgico de ação ultra-longa (LAMA - Umeclidínio) com um agonista beta-2 ultra-longo (Ultra-LABA - Vilanterol) causa o grau MÁXIMO de abertura física do brônquio que a medicina moderna conhece, bloqueando a contração vagal e ativando o relaxamento beta simultaneamente por 24 horas, tudo ISSO SEM USAR CORTICOIDES (protegendo o paciente DPOC de pneumonias).',
+        es: 'El "Taladro" del EPOC. La asociación de un anticolinérgico LAMA con un Ultra-LABA causa el grado MÁXIMO de apertura física del bronquio que la medicina conoce, todo ESTO SIN USAR CORTICOIDES (protegiendo al EPOC de neumonías).'
+      },
+      dose: {
+        adult: {
+          pt: '1 inalação UMA VEZ ao dia.',
+          es: '1 inhalación UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: 'Uso vetado em pediatria e no tratamento da asma.',
+          es: 'Uso vetado en pediatría y en el tratamiento del asma.'
+        }
+      },
+      administration: { pt: ['Uso inalatório via Ellipta.'], es: ['Uso inhalatorio vía Ellipta.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Uso cauteloso em falência severa (ausência de dados concretos).', es: 'Uso cauteloso en falla severa.' } },
+      commonAdverseEffects: { pt: ['Boca seca (Xerostomia) e gosto alterado', 'Dor de cabeça e tosse inicial', 'Dor nas costas (Lombalgia espasmódica)'], es: ['Boca seca (Xerostomía) y sabor alterado', 'Dolor de cabeza y tos inicial', 'Dolor de espalda (Lumbalgia espasmódica)'] },
+      dangerousAdverseEffects: { pt: ['Fibrilação Atrial e arritmias paradoxais', 'Retenção urinária severa em idosos prostáticos', 'Glaucoma agudo precipitado'], es: ['Fibrilación Auricular y arritmias paradójicas', 'Retención urinaria severa en ancianos prostáticos', 'Glaucoma agudo precipitado'] },
+      contraindications: {
+        absolute: { pt: ['Tratamento de pacientes com ASMA (Se prescrito para asmático, mascara a inflamação e leva ao choque asmático letal)'], es: ['Tratamiento de pacientes con ASMA (Si prescrito para asmático, enmascara la inflamación y lleva a choque asmático letal)'] },
+        relative: { pt: ['Hiperplasia prostática benigna sintomática', 'Alergia severa à lactose da formulação'], es: ['Hiperplasia prostática benigna sintomática', 'Alergia severa a la lactosa de la formulación'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'DIFERENCIAL DPOC vs ASMA: Essa medicação JAMAIS deve ser usada na Asma. A DPOC é uma doença de destruição arquitetônica (precisa abrir a via). A Asma é uma doença celular inflamatória (precisa de corticoide). Usar Anoro num asmático é dilatar o pulmão inflamado até ele colapsar repentinamente.', es: 'DIFERENCIAL EPOC vs ASMA: Esta medicación JAMÁS debe ser usada en el Asma. El EPOC necesita abrir la vía. El Asma necesita corticoide. Usar Anoro en un asmático es dilatar el pulmón inflamado hasta que colapsa repentinamente.' }
+      }
+    },
+
+    "tiotropio_olodaterol": {
+      name: { pt: 'Tiotrópio + Olodaterol', es: 'Tiotropio + Olodaterol' },
+      category: 'pneumologia',
+      class: { pt: 'Associação LAMA + Ultra-LABA (Dupla Broncodilatação Contínua)', es: 'Asociación LAMA + Ultra-LABA (Doble Broncodilatación Continua)' },
+      indications: {
+        pt: ['Terapia de manutenção a longo prazo para o alívio profundo de sintomas na Doença Pulmonar Obstrutiva Crônica (DPOC)'],
+        es: ['Terapia de mantenimiento a largo plazo para el alivio profundo de síntomas en la Enfermedad Pulmonar Obstructiva Crónica (EPOC)']
+      },
+      commercialNames: { br: ['Spiolto Respimat'], ar: ['Spiolto'] },
+      presentation: { pt: ['Solução inalante por névoa suave (Respimat) 2,5/2,5 mcg por jato'], es: ['Solución inhalante por niebla suave (Respimat) 2,5/2,5 mcg por puff'] },
+      mechanism: {
+        pt: 'A associação do LAMA padrão-ouro (Tiotrópio) com um LABA de ação em 5 minutos (Olodaterol). O grande truque de genialidade deste fármaco não está apenas na molécula, mas no DISPOSITIVO (Respimat). O Respimat não usa "gás de espirro" nem "pó seco". Ele gera uma "névoa em câmera lenta". Pacientes idosos com DPOC avançada frequentemente não têm força muscular para puxar o pó do inalador. A névoa suave do Respimat entra no pulmão do idoso frágil sem exigir nenhum esforço pulmonar.',
+        es: 'La asociación del LAMA patrón oro (Tiotropio) con un LABA rápido (Olodaterol). El gran truco de genialidad no está solo en la molécula, sino en el DISPOSITIVO (Respimat). Genera una "niebla en cámara lenta". Pacientes ancianos con EPOC avanzada frecuentemente no tienen fuerza para tirar el polvo. La niebla entra sin esfuerzo.'
+      },
+      dose: {
+        adult: {
+          pt: '2 jatos (duas inalações consecutivas) UMA VEZ ao dia.',
+          es: '2 puffs (dos inhalaciones consecutivas) UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: 'Uso não indicado.',
+          es: 'Uso no indicado.'
+        }
+      },
+      administration: { pt: ['Não agitar bruscamente o aparelho. Rodar a base, abrir a tampa, pressionar o botão e inalar lentamente a névoa.'], es: ['No agitar bruscamente. Girar la base, abrir la tapa, presionar el botón e inhalar lentamente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste para a dose terapêutica.', es: 'Sin necesidad de ajuste para la dosis terapéutica.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste clínico.', es: 'Sin ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Boca seca', 'Tontura leve após a aplicação', 'Nasofaringite'], es: ['Boca seca', 'Mareo leve tras la aplicación', 'Nasofaringitis'] },
+      dangerousAdverseEffects: { pt: ['Descompensação de Glaucoma (Se a névoa for jogada nos olhos acidentalmente)', 'Arritmias supraventriculares (Fibrilação) em pacientes de alto risco isquêmico'], es: ['Descompensación de Glaucoma (Si la niebla cae en los ojos)', 'Arritmias supraventriculares (Fibrilación)'] },
+      contraindications: {
+        absolute: { pt: ['Tratamento agudo de asfixia (A droga é de manutenção)', 'Asma brônquica (Monoterapia sem corticoide mata o asmático)'], es: ['Tratamiento agudo de asfixia', 'Asma bronquial (Monoterapia sin corticoide mata al asmático)'] },
+        relative: { pt: ['Hiperplasia prostática benigna severa (retenção hídrica cruzada)'], es: ['Hiperplasia prostática benigna severa (retención hídrica cruzada)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'SÓ DEPENDE DO CORPO: O paciente geriátrico frequentemente joga todo o remédio do spray de asma comum na parede da boca por falta de coordenação (bater o botão e puxar o ar junto). Com o Respimat, a nuvem dura quase 2 segundos no ar. Ele tem tempo de sobra para respirar. Ensine-o a usar a tecnologia a seu favor.', es: 'SOLO DEPENDE DEL CUERPO: El paciente geriátrico frecuentemente tira todo el remedio del spray en la boca por falta de coordinación. Con Respimat, la nube dura casi 2 segundos. Tiene tiempo de sobra para respirar.' }
+      }
     }
 
-  });
+  }); /* fim Object.assign PNEUMOLOGIA_DRUGS_DB — BUILD 397
+         ICS/LABA: Beclometasona+Formoterol (Fostair), Fluticasona+Salmeterol (Seretide),
+                   Fluticasona+Vilanterol (Relvar)
+         LAMA/LABA: Umeclidínio+Vilanterol (Anoro), Tiotrópio+Olodaterol (Spiolto) */
 })();
