@@ -1006,6 +1006,55 @@ const INTERACOES_DB = {
     }
   },
 
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 390 — BLOCO MOTOR DE INTERAÇÕES: Xantinas e Imunobiológicos Pulmonares
+     Teofilina, Aminofilina, Roflumilaste, Omalizumabe, Mepolizumabe
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── XANTINAS (TEOFILINA E AMINOFILINA) ── */
+  "$classe_metilxantinas": {
+    "$classe_inibidores_fortes_cyp1a2": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INTOXICAÇÃO FULMINANTE POR BLOQUEIO HEPÁTICO. A Teofilina/Aminofilina é destruída no fígado primariamente pela enzima CYP1A2. Fármacos como o Ciprofloxacino, Fluvoxamina (Antidepressivo) ou Macrolídeos (Claritromicina) trancam completamente essa enzima. Como a janela de segurança da Teofilina é mínima, a droga acumula em poucos dias no sangue, levando a um colapso neurológico: Vômitos em jato, Taquicardia Ventricular e Convulsão Refratária na UTI.",
+        es: "INTOXICACIÓN FULMINANTE POR BLOQUEO HEPÁTICO. La Teofilina/Aminofilina es destruida en el hígado primariamente por la enzima CYP1A2. Fármacos como Ciprofloxacino, Fluvoxamina o Macrólidos traban completamente esta enzima. Como la ventana de seguridad de la Teofilina es mínima, la droga se acumula en pocos días, llevando a un colapso neurológico: Vómitos, Taquicardia Ventricular y Convulsión Refractaria."
+      },
+      conduta: {
+        pt: "CONTRAINDICADO. Nunca prescreva Ciprofloxacino para tratar uma pneumonia no idoso que usa Teofilina em casa. Se a associação for inquestionável na UTI, a dose da Aminofilina na bomba deve ser reduzida pela METADE e a teofilinemia (sangue) dosada a cada 24 horas.",
+        es: "CONTRAINDICADO. Nunca prescriba Ciprofloxacino para tratar una neumonía en el anciano que usa Teofilina. Si la asociación es incuestionable, la dosis de Aminofilina en bomba debe reducirse a la MITAD y la teofilinemia dosificada cada 24 horas."
+      }
+    },
+    "$classe_indutores_cyp450": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "FALHA E ASFIXIA (Clearance Acelerado). Se o paciente que usa Teofilina receber drogas como Fenitoína, Carbamazepina ou Rifampicina (ou se for Fumante Inveterado, que acelera a enzima via fumaça), o fígado triturará a Teofilina rápido demais. O nível no sangue cai a zero e o paciente tem uma crise letal de asma sem o medicamento ativo no corpo.",
+        es: "FALLO Y ASFIXIA (Clearance Acelerado). Si el paciente que usa Teofilina recibe drogas como Fenitoína, Carbamazepina o Rifampicina (o si es Fumador, que acelera la enzima), el hígado triturará la Teofilina demasiado rápido. El nivel en sangre cae a cero y el paciente tiene una crisis de asma."
+      },
+      conduta: {
+        pt: "Aumentar a dose da Teofilina gradativamente guiada por exames de sangue. Alerta ao idoso com DPOC: Se ele parar de fumar de repente no hospital, a enzima hepática desacelera, a dose antiga da Teofilina vira 'superdose' e ele pode sofrer intoxicação.",
+        es: "Aumentar la dosis de la Teofilina gradualmente guiada por exámenes. Alerta al anciano con EPOC: Si deja de fumar de repente en el hospital, la enzima hepática desacelera, la dosis antigua de Teofilina se vuelve tóxica."
+      }
+    }
+  },
+
+  /* ── ROFLUMILASTE (Inibidor PDE4) ── */
+  "roflumilaste": {
+    "$classe_indutores_fortes_cyp3a4": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "PERDA DO EFEITO ANTI-INFLAMATÓRIO. O Roflumilaste é metabolizado à sua forma ativa (roflumilaste N-óxido) por enzimas hepáticas. Indutores fortes (Rifampicina, Fenobarbital, Erva-de-São-João) destroem a droga antes que ela possa se converter à sua forma terapêutica plena, anulando sua proteção contra exacerbações de DPOC.",
+        es: "PÉRDIDA DEL EFECTO ANTIINFLAMATORIO. El Roflumilast es metabolizado a su forma activa por enzimas hepáticas. Inductores fuertes (Rifampicina, Fenobarbital) destruyen la droga antes de que pueda convertirse a su forma terapéutica, anulando su protección contra exacerbaciones de EPOC."
+      },
+      conduta: {
+        pt: "O uso conjunto não é recomendado. Avaliar troca do imunossupressor ou uso profilático via inalatória intensa (ICS).",
+        es: "El uso conjunto no es recomendado. Evaluar cambio del inmunosupresor o uso profiláctico vía inhalatoria intensa (ICS)."
+      }
+    }
+  },
+
   /* ─────────────────────────────────────────────────────────────
      BUILD 255 — ADDITIVE RISK EXPANSION
      $classe_depressoras_snc × $classe_depressoras_snc (auto-cruzamento)

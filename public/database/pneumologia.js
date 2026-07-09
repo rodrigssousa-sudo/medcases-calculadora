@@ -809,6 +809,206 @@
         bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'O FATOR DO FÍGADO: O Zafirlucaste "perdeu a guerra" das vendas para o Montelucaste exatamente pela comodidade. O Montelucaste não ataca o fígado e é dose única. Se prescrever Zafirlucaste, monitore o fígado do paciente no primeiro trimestre.', es: 'EL FACTOR DEL HÍGADO: El Zafirlukast "perdió la guerra" de ventas frente al Montelukast exactamente por la comodidad. El Montelukast no ataca el hígado y es dosis única.' }
       }
+    },
+
+    /* ── TEOFILINA ──────────────────────────────────────────────────────── */
+    "teofilina": {
+      name: { pt: 'Teofilina', es: 'Teofilina' },
+      category: 'pneumologia',
+      class: { pt: 'Broncodilatador Metilxantina', es: 'Broncodilatador Metilxantina' },
+      indications: {
+        pt: ['Asma crônica grave (como terapia adjuvante de 3ª linha)', 'Doença Pulmonar Obstrutiva Crônica (DPOC) refratária'],
+        es: ['Asma crónica grave (como terapia adyuvante de 3ª línea)', 'Enfermedad Pulmonar Obstructiva Crónica (EPOC) refractaria']
+      },
+      commercialNames: { br: ['Talofilina', 'Teolong'], ar: ['Teofilina'] },
+      presentation: { pt: ['Cápsulas/Comprimidos de liberação prolongada 100 mg, 200 mg, 300 mg', 'Xarope'], es: ['Cápsulas/Comprimidos de liberación prolongada 100 mg, 200 mg, 300 mg', 'Jarabe'] },
+      mechanism: {
+        pt: 'Ação dupla e complexa: Inibe a enzima Fosfodiesterase (PDE), causando acúmulo de AMPc e GMPc (o que gera relaxamento do brônquio). Simultaneamente, é um forte ANTAGONISTA dos receptores de Adenosina no corpo. Esse bloqueio da adenosina estimula violentamente o Sistema Nervoso Central (como uma super-dose de cafeína) e acelera o coração. A janela entre a dose que cura a asma e a dose que mata é minúscula.',
+        es: 'Acción doble y compleja: Inhibe la enzima Fosfodiesterasa (PDE), causando acumulación de AMPc y GMPc (lo que genera relajación del bronquio). Simultáneamente, es un fuerte ANTAGONISTA de los receptores de Adenosina. Este bloqueo de la adenosina estimula violentamente el Sistema Nervioso Central y acelera el corazón. La ventana entre la dosis que cura y la que mata es minúscula.'
+      },
+      dose: {
+        adult: {
+          pt: 'Manutenção: 300 a 600 mg/dia divididos a cada 12 horas. (Exige exame de sangue constante "Teofilinemia", o nível deve ficar entre 10 e 15 mcg/mL).',
+          es: 'Mantenimiento: 300 a 600 mg/día divididos cada 12 horas. (Exige examen de sangre constante "Teofilinemia", el nivel debe quedar entre 10 y 15 mcg/mL).'
+        },
+        pediatric: {
+          pt: 'Acima de 1 ano: 10 a 16 mg/kg/dia divididos a cada 12h. (Maior risco de intoxicação infantil).',
+          es: 'Por encima de 1 año: 10 a 16 mg/kg/día divididos cada 12h. (Mayor riesgo de intoxicación infantil).'
+        }
+      },
+      administration: { pt: ['Comprimidos de liberação lenta não devem ser partidos ou mastigados.', 'Evitar consumo excessivo de café ou energéticos (potencializam a toxicidade).'], es: ['Comprimidos de liberación lenta no deben ser partidos o masticados.', 'Evitar consumo excesivo de café o energéticos (potencian la toxicidad).'] },
+      renalAdjustment: { required: false, message: { pt: 'Depuração hepática dominante.', es: 'Depuración hepática dominante.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Atenção máxima. Se o fígado falhar, a teofilina não é destruída e o paciente entra em convulsão. Reduzir dose na cirrose.', es: 'Atención máxima. Si el hígado falla, la teofilina no es destruida y el paciente entra en convulsión. Reducir dosis en cirrosis.' } },
+      commonAdverseEffects: { pt: ['Náuseas severas e vômitos incontroláveis (sinal precoce de toxicidade)', 'Insônia e agitação extrema', 'Taquicardia'], es: ['Náuseas severas y vómitos incontrolables (signo precoz de toxicidad)', 'Insomnio y agitación extrema', 'Taquicardia'] },
+      dangerousAdverseEffects: { pt: ['CONVULSÕES REFRATÁRIAS AO DIAZEPAM (Se nível sanguíneo > 20 mcg/mL)', 'Arritmias Ventriculares e Fibrilação'], es: ['CONVULSIONES REFRACTARIAS AL DIAZEPAM (Si nivel sanguíneo > 20 mcg/mL)', 'Arritmias Ventriculares y Fibrilación'] },
+      contraindications: {
+        absolute: { pt: ['Úlcera péptica ativa severa', 'Arritmias não controladas'], es: ['Úlcera péptica activa severa', 'Arritmias no controladas'] },
+        relative: { pt: ['Epilepsia preexistente'], es: ['Epilepsia preexistente'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A DROGA DE JANELA ESTREITA: A teofilina foi quase abandonada pela medicina moderna pelo seu risco. Qualquer virose, febre ou introdução de um antibiótico novo no paciente faz o nível da droga explodir no sangue, causando vômitos em jato seguidos de convulsão e morte cerebral.', es: 'LA DROGA DE VENTANA ESTRECHA: La teofilina fue casi abandonada por la medicina moderna por su riesgo. Cualquier virosis, fiebre o introducción de un antibiótico nuevo hace que el nivel de la droga explote en la sangre, causando vómitos en chorro y convulsión.' }
+      }
+    },
+
+    /* ── AMINOFILINA ────────────────────────────────────────────────────── */
+    "aminofilina": {
+      name: { pt: 'Aminofilina', es: 'Aminofilina' },
+      category: 'pneumologia',
+      class: { pt: 'Broncodilatador Metilxantina Endovenoso', es: 'Broncodilatador Metilxantina Endovenoso' },
+      indications: {
+        pt: ['Asma aguda grave e Status Asthmaticus na UTI (Resgate de última linha quando inaladores e corticoide falharam)', 'Tratamento de apneia da prematuridade em UTIN'],
+        es: ['Asma aguda grave y Status Asthmaticus en UCI (Rescate de última línea cuando inhaladores y corticoide fallaron)', 'Tratamiento de apnea de la prematuridad en UCIN']
+      },
+      commercialNames: { br: ['Aminofilina Ampolas'], ar: ['Aminofilina'] },
+      presentation: { pt: ['Ampolas IV 24 mg/mL (10 mL = 240 mg)'], es: ['Ampollas IV 24 mg/mL (10 mL = 240 mg)'] },
+      mechanism: {
+        pt: 'É um complexo salino que contém cerca de 80% de Teofilina Pura misturada com etilenodiamina (que a torna solúvel em água para injeção na veia). Na corrente sanguínea, ela solta a Teofilina livre, bloqueando receptores de adenosina e forçando o brônquio travado a relaxar sob força bruta sistêmica. Aumenta diretamente o drive e a força do músculo diafragma.',
+        es: 'Es un complejo salino que contiene un 80% de Teofilina Pura mezclada con etilendiamina (que la hace soluble en agua para inyección). En la sangre, suelta la Teofilina libre, bloqueando receptores de adenosina y forzando el bronquio a relajarse. Aumenta directamente la fuerza del músculo diafragma.'
+      },
+      dose: {
+        adult: {
+          pt: 'Ataque: 5 a 6 mg/kg IV (LENTO, correr em 30 min). Manutenção: Infusão contínua de 0,5 mg/kg/hora. (Reduzir a dose de ataque se paciente já usar teofilina oral em casa!).',
+          es: 'Ataque: 5 a 6 mg/kg IV (LENTO, correr en 30 min). Mantenimiento: Infusión continua de 0,5 mg/kg/hora. (¡Reducir dosis si paciente usa teofilina oral!).'
+        },
+        pediatric: {
+          pt: 'Apneia Neonatal: 5 a 6 mg/kg IV ataque, seguido de manutenção.',
+          es: 'Apnea Neonatal: 5 a 6 mg/kg IV ataque, seguido de mantenimiento.'
+        }
+      },
+      administration: { pt: ['NUNCA FAZER EM BOLUS RÁPIDO. O paciente terá uma parada cardíaca súbita e convulsão na mesa. A dose de ataque deve correr na bomba ou microgotas por no mínimo 30 minutos.'], es: ['NUNCA HACER EN BOLO RÁPIDO. El paciente tendrá un paro cardíaco súbito y convulsión en la mesa. La dosis de ataque debe correr en bomba por al menos 30 minutos.'] },
+      renalAdjustment: { required: false, message: { pt: 'O metabolismo é hepático, sem ajuste direto na DRC.', es: 'Metabolismo es hepático, sin ajuste directo en la ERC.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Pacientes com Cor Pulmonale severo (DPOC) frequentemente têm fígado congestionado. A dose de manutenção deve ser reduzida pela metade para não matar o paciente intoxicado.', es: 'Pacientes con Cor Pulmonale severo (EPOC) frecuentemente tienen hígado congestionado. La dosis de mantenimiento debe reducirse a la mitad para no matar al paciente.' } },
+      commonAdverseEffects: { pt: ['Rubor e sensação de calor na injeção', 'Agitação e confusão mental', 'Taquicardia sinusal'], es: ['Rubor y sensación de calor en la inyección', 'Agitación y confusión mental', 'Taquicardia sinusal'] },
+      dangerousAdverseEffects: { pt: ['Estado de Mal Epiléptico induzido (Status Epilepticus)', 'Taquicardia Ventricular / Fibrilação Ventricular', 'Vômitos em borra de café (Isquemia mucosa)'], es: ['Estado de Mal Epiléptico inducido', 'Taquicardia Ventricular / Fibrilación Ventricular', 'Vómitos en posos de café (Isquemia mucosa)'] },
+      contraindications: {
+        absolute: { pt: ['Uso associado a bloqueadores Beta-1/Beta-2 não seletivos (antagonismo fatal)'], es: ['Uso asociado a bloqueadores Beta-1/Beta-2 no selectivos (antagonismo fatal)'] },
+        relative: { pt: ['Infarto Agudo do Miocárdio ativo (o coração vai consumir muito oxigênio e necrosar)'], es: ['Infarto Agudo de Miocardio activo (el corazón consumirá mucho oxígeno y se necrosará)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O INIMIGO DA ADENOSINA: Se o paciente na UTI desenvolvendo taquicardia por Aminofilina sofrer uma arritmia SVT (Supraventricular) e o médico aplicar Adenosina para "resetar" o coração, a adenosina NÃO FARÁ EFEITO. A Aminofilina blinda os receptores do coração, inutilizando a adenosina.', es: 'EL ENEMIGO DE LA ADENOSINA: Si el paciente en la UCI hace taquicardia por Aminofilina y sufre una SVT, y el médico aplica Adenosina para "resetear", la adenosina NO HARÁ EFECTO. La Aminofilina blinda los receptores.' }
+      }
+    },
+
+    /* ── ROFLUMILASTE ───────────────────────────────────────────────────── */
+    "roflumilaste": {
+      name: { pt: 'Roflumilaste', es: 'Roflumilast' },
+      category: 'pneumologia',
+      class: { pt: 'Inibidor Seletivo da Fosfodiesterase-4 (PDE4)', es: 'Inhibidor Selectivo de la Fosfodiesterasa-4 (PDE4)' },
+      indications: {
+        pt: ['Manutenção na DPOC grave associada a BRONQUITE CRÔNICA com histórico de exacerbações frequentes (Não serve para Enfisema puro sem catarro)'],
+        es: ['Mantenimiento en EPOC grave asociada a BRONQUITIS CRÓNICA con historial de exacerbaciones frecuentes (No sirve para Enfisema puro sin catarro)']
+      },
+      commercialNames: { br: ['Daxas'], ar: ['Daxas'] },
+      presentation: { pt: ['Comprimidos revestidos 500 mcg'], es: ['Comprimidos recubiertos 500 mcg'] },
+      mechanism: {
+        pt: 'Diferente da Teofilina (que inibe todas as PDEs), o Roflumilaste inibe APENAS a PDE-4, enzima encontrada principalmente nas células imunes (neutrófilos, macrófagos) do pulmão do fumante. Isso causa um acúmulo de AMPc DENTRO da célula de defesa, paralisando a liberação de catarro espesso e a inflamação obstrutiva. NÃO É broncodilatador, sua função é impedir a bronquite.',
+        es: 'A diferencia de la Teofilina, el Roflumilast inhibe SOLO la PDE-4, enzima encontrada en las células inmunes del pulmón del fumador. Esto causa acumulación de AMPc DENTRO de la célula de defensa, paralizando la liberación de catarro espeso. NO ES broncodilatador, su función es impedir la bronquitis.'
+      },
+      dose: {
+        adult: {
+          pt: '500 mcg VO UMA VEZ ao dia de forma contínua.',
+          es: '500 mcg VO UNA VEZ al día de forma continua.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Comprimido oral. Deve sempre ser usado em combinação com um broncodilatador inalatório (LAMA ou LABA), nunca sozinho.'], es: ['Comprimido oral. Debe siempre usarse en combinación con un broncodilatador inhalatorio (LAMA o LABA), nunca solo.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste renal.', es: 'Sin necesidad de ajuste renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em pacientes com insuficiência hepática moderada a grave (Child-Pugh B e C).', es: 'Contraindicado en pacientes con insuficiencia hepática moderada a grave (Child-Pugh B y C).' } },
+      commonAdverseEffects: { pt: ['Diarreia grave (frequentemente causa abandono do tratamento nos primeiros 30 dias)', 'Perda de peso involuntária', 'Náuseas e insônia'], es: ['Diarrea grave (frecuentemente causa abandono del tratamiento en los primeros 30 días)', 'Pérdida de peso involuntaria', 'Náuseas e insomnio'] },
+      dangerousAdverseEffects: { pt: ['Reações psiquiátricas graves (Depressão, ansiedade aguda, pensamentos suicidas e suicídio consumado)', 'Desnutrição e caquexia induzida (pela perda de peso extrema em idosos já frágeis)'], es: ['Reacciones psiquiátricas graves (Depresión, ansiedad aguda, pensamientos suicidas y suicidio consumado)', 'Desnutrición y caquexia inducida (por pérdida de peso extrema en ancianos frágiles)'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de depressão grave não tratada ou ideação suicida prévia', 'Imunossupressão grave ou câncer ativo'], es: ['Historial de depresión grave no tratada o ideación suicida previa', 'Inmunosupresión grave o cáncer activo'] },
+        relative: { pt: ['Desnutrição basal (Baixo IMC) antes do tratamento'], es: ['Desnutrición basal (Bajo IMC) antes del tratamiento'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ALERTA PSIQUIÁTRICO E NUTRICIONAL: O idoso com DPOC grave comumente já é emagrecido (Sarcopenia) e isolado em casa (Risco de Depressão). O Roflumilaste intensifica a perda de peso e detona gatilhos suicidas na mente. O paciente deve ser pesado mensalmente e a família alertada para vigiar o comportamento.', es: 'ALERTA PSIQUIÁTRICA Y NUTRICIONAL: El anciano con EPOC grave comúnmente ya es delgado y asilado. El Roflumilast intensifica la pérdida de peso y detona gatillos suicidas. El paciente debe ser pesado mensualmente y la familia alertada.' }
+      }
+    },
+
+    /* ── OMALIZUMABE ────────────────────────────────────────────────────── */
+    "omalizumabe": {
+      name: { pt: 'Omalizumabe', es: 'Omalizumab' },
+      category: 'pneumologia',
+      class: { pt: 'Anticorpo Monoclonal (Anti-IgE)', es: 'Anticuerpo Monoclonal (Anti-IgE)' },
+      indications: {
+        pt: ['Asma Alérgica Grave persistente que não responde a doses altas de corticoides', 'Urticária Crônica Espontânea severa refratária a anti-histamínicos', 'Pólipos nasais severos'],
+        es: ['Asma Alérgica Grave persistente que no responde a dosis altas de corticoides', 'Urticaria Crónica Espontánea severa refractaria a antihistamínicos', 'Pólipos nasales severos']
+      },
+      commercialNames: { br: ['Xolair'], ar: ['Xolair'] },
+      presentation: { pt: ['Seringas preenchidas SC 75 mg e 150 mg', 'Frasco-ampola liofilizado 150 mg'], es: ['Jeringas prellenadas SC 75 mg y 150 mg', 'Vial liofilizado 150 mg'] },
+      mechanism: {
+        pt: 'Terapia "Alvo-Guiada". É um anticorpo criado em laboratório que caça e se liga especificamente às imunoglobulinas E (IgE) livres circulantes no sangue do paciente alérgico. Ao capturar o IgE, ele impede que este se conecte aos mastócitos. O mastócito, sem receber a chave (IgE), simplesmente "desliga" e para de vomitar histamina e substâncias que fecham o pulmão na asma. Quebra a raiz primária da alergia.',
+        es: 'Terapia "Diana-Guiada". Es un anticuerpo creado en laboratorio que caza y se une específicamente a las inmunoglobulinas E (IgE) libres circulantes. Al capturar el IgE, impide que se conecte a los mastocitos. El mastocito, sin la llave (IgE), se "apaga" y deja de vomitar histamina en el asma.'
+      },
+      dose: {
+        adult: {
+          pt: 'Altamente variável: 75 mg a 600 mg Subcutâneo a cada 2 ou 4 semanas. (A dose e a frequência são calculadas EXATAMENTE com base no peso do paciente e no exame de sangue "IgE total basal").',
+          es: 'Altamente variable: 75 mg a 600 mg Subcutáneo cada 2 o 4 semanas. (La dosis y frecuencia se calculan EXACTAMENTE con base en el peso del paciente y el IgE total basal).'
+        },
+        pediatric: {
+          pt: 'Asma alérgica grave (> 6 anos): Dose calculada por nomograma (Peso x IgE) a cada 2 a 4 semanas.',
+          es: 'Asma alérgica grave (> 6 años): Dosis calculada por nomograma (Peso x IgE) cada 2 a 4 semanas.'
+        }
+      },
+      administration: { pt: ['Exclusivamente Subcutânea (SC). Nunca aplicar via IV (risco de choque fulminante).', 'A injeção é dolorosa e a medicação é altamente viscosa.'], es: ['Exclusivamente Subcutánea (SC). Nunca aplicar vía IV (riesgo de choque fulminante).', 'La inyección es dolorosa y la medicación es altamente viscosa.'] },
+      renalAdjustment: { required: false, message: { pt: 'Degradado pelo sistema reticuloendotelial (não altera na DRC).', es: 'Degradado por el sistema reticuloendotelial (no altera en la ERC).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Reação no local da injeção (Vermelhidão, inchaço e dor no braço/coxa)', 'Cefaleia e dores nas articulações'], es: ['Reacción en el lugar de la inyección (Enrojecimiento, hinchazón y dolor)', 'Cefalea y dolores articulares'] },
+      dangerousAdverseEffects: { pt: ['ANAFILAXIA DE INÍCIO TARDIO (Pode ocorrer choque anafilático até 2 horas ou dias após a injeção, mesmo em pacientes que já usavam o remédio há meses)', 'Risco teórico aumentado de parasitoses (pois o IgE defende contra vermes)'], es: ['ANAFILAXIA DE INICIO TARDÍO (Puede ocurrir choque anafiláctico hasta 2 horas o días después de la inyección, incluso en pacientes que ya lo usaban)', 'Riesgo teórico aumentado de parasitosis'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave aos componentes biológicos da fórmula', 'Uso no ataque agudo da asma'], es: ['Hipersensibilidad grave a los componentes biológicos', 'Uso en el ataque agudo del asma'] },
+        relative: { pt: ['Pacientes vivendo em áreas endêmicas de doenças parasitárias severas (Helmintos) sem tratamento prévio'], es: ['Pacientes viviendo en áreas endémicas de enfermedades parasitarias severas (Helmintos) sin tratamiento previo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'OBSERVAÇÃO OBRIGATÓRIA: Após receber a injeção de Omalizumabe, o paciente é OBRIGADO a aguardar dentro do hospital/clínica por pelo menos 2 horas na primeira dose, e 30 min nas demais. O médico deve ter Adrenalina IM engatilhada, pois a reação alérgica à proteína sintética do remédio não perdoa.', es: 'OBSERVACIÓN OBLIGATORIA: Tras recibir la inyección, el paciente está OBLIGADO a esperar en el hospital al menos 2 horas en la primera dosis. El médico debe tener Adrenalina IM lista.' }
+      }
+    },
+
+    /* ── MEPOLIZUMABE ───────────────────────────────────────────────────── */
+    "mepolizumabe": {
+      name: { pt: 'Mepolizumabe', es: 'Mepolizumab' },
+      category: 'pneumologia',
+      class: { pt: 'Anticorpo Monoclonal (Anti-Interleucina 5 / Anti-IL-5)', es: 'Anticuerpo Monoclonal (Anti-Interleucina 5 / Anti-IL-5)' },
+      indications: {
+        pt: ['Asma Eosinofílica Grave e Refratária', 'Pólipos nasais severos com rinossinusite crônica', 'Síndrome Hipereosinofílica e Granulomatose Eosinofílica com Poliangiite'],
+        es: ['Asma Eosinofílica Grave y Refractaria', 'Pólipos nasales severos con rinosinusitis crónica', 'Síndrome Hipereosinofílico']
+      },
+      commercialNames: { br: ['Nucala'], ar: ['Nucala'] },
+      presentation: { pt: ['Seringas ou canetas preenchidas SC 100 mg'], es: ['Jeringas o plumas prellenadas SC 100 mg'] },
+      mechanism: {
+        pt: 'Arma de destruição biológica seletiva. Muitos pacientes têm "Asma Eosinofílica", onde o sangue produz milhões de eosinófilos que invadem o pulmão. A Interleucina-5 (IL-5) é a única "comida/hormônio" que mantém o eosinófilo vivo. O Mepolizumabe sequestra a IL-5 circulante. Sem IL-5, os eosinófilos morrem de fome no sangue e a asma se cura radicalmente em poucos dias.',
+        es: 'Arma de destrucción biológica selectiva. Muchos pacientes tienen "Asma Eosinofílica", donde la sangre produce millones de eosinófilos que invaden el pulmón. La IL-5 es la única hormona que mantiene vivo al eosinófilo. El Mepolizumab secuestra la IL-5. Sin IL-5, los eosinófilos mueren y el asma se cura radicalmente.'
+      },
+      dose: {
+        adult: {
+          pt: 'Asma severa: 100 mg via Subcutânea a CADA 4 SEMANAS (1 injeção mensal). Síndromes Eosinofílicas sistêmicas: 300 mg SC a cada 4 semanas.',
+          es: 'Asma severa: 100 mg vía Subcutánea CADA 4 SEMANAS (1 inyección mensual). Síndromes Eosinofílicos sistémicos: 300 mg SC cada 4 semanas.'
+        },
+        pediatric: {
+          pt: 'Asma (> 6 anos): 40 mg SC a cada 4 semanas.',
+          es: 'Asma (> 6 años): 40 mg SC cada 4 semanas.'
+        }
+      },
+      administration: { pt: ['Injeção subcutânea na parte superior do braço, coxa ou abdome. Diferente do omalizumabe, o paciente frequentemente pode autoaplicar em casa (tipo caneta de insulina) após treinamento.'], es: ['Inyección subcutánea en la parte superior del brazo, muslo o abdomen. A diferencia del omalizumab, el paciente frecuentemente puede autoaplicarse en casa.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste.', es: 'Sin ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste clínico necessário.', es: 'Sin ajuste clínico necesario.' } },
+      commonAdverseEffects: { pt: ['Cefaleia intensa nos dias após a injeção', 'Dor intensa nas costas e espasmos (lombalgia)', 'Reações de dor na pele da injeção'], es: ['Cefalea intensa en los días tras la inyección', 'Dolor intenso en la espalda y espasmos (lumbalgia)', 'Reacciones de dolor en la piel de inyección'] },
+      dangerousAdverseEffects: { pt: ['Reação de Hipersensibilidade Imunológica severa (Anafilaxia)', 'Infecção oportunista por herpes zoster'], es: ['Reacción de Hipersensibilidad Inmunológica severa (Anafilaxia)', 'Infección oportunista por herpes zoster'] },
+      contraindications: {
+        absolute: { pt: ['Resgate imediato de broncoespasmo'], es: ['Rescate inmediato de broncoespasmo'] },
+        relative: { pt: ['Infecção parasitária (vermes) ativa não tratada (pois os eosinófilos são as armas do corpo contra os vermes. Destruir os eosinófilos permite que os vermes invadam o corpo inteiro).'], es: ['Infección parasitaria (gusanos) activa no tratada (pues los eosinófilos son las armas contra los gusanos. Destruirlos permite que los gusanos invadan todo el cuerpo).'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'REQUISITO MÉDICO OBRIGATÓRIO: É um crime médico prescrever Mepolizumabe sem antes olhar o Hemograma do paciente. Ele SÓ funciona se a asma do paciente for induzida por Eosinófilos (geralmente > 150 a 300 células/mcL no sangue). Se a asma for neutrofílica, o remédio (que custa fortunas) não fará absolutamente nada.', es: 'REQUISITO MÉDICO OBLIGATORIO: Es un crimen médico prescribir Mepolizumab sin antes mirar el Hemograma. SOLO funciona si el asma es inducida por Eosinófilos. Si el asma es neutrofílica, el remedio no hará absolutamente nada.' }
+      }
     }
 
   });
