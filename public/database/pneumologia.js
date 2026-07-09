@@ -1409,6 +1409,206 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'A MAIOR CONTRAINDICAÇÃO DA PNEUMOLOGIA: Jamais deprima o centro da tosse de um paciente com infecção bacteriana, DPOC ou catarro abundante. Tossir salva a vida do doente. Dar Dextrometorfano para o pulmão "cheio" vai travar o catarro lá dentro e induzir uma asfixia purulenta letal.', es: 'LA MAYOR CONTRAINDICACIÓN: Jamás deprima el centro de la tos de un paciente con infección bacteriana o catarro abundante. Toser salva la vida. Dar Dextrometorfano para un pulmón "lleno" trabará el catarro e inducirá asfixia.' }
       }
+    },
+
+    /* ── LEVODROPROPIZINA ───────────────────────────────────────────────── */
+    "levodropropizina": {
+      name: { pt: 'Levodropropizina', es: 'Levodropropizina' },
+      category: 'pneumologia',
+      class: { pt: 'Antitussígeno de Ação Periférica', es: 'Antitusivo de Acción Periférica' },
+      indications: {
+        pt: ['Tosse seca, irritativa e não produtiva de qualquer origem (viral, alérgica, inflamatória)'],
+        es: ['Tos seca, irritativa y no productiva de cualquier origen (viral, alérgica, inflamatoria)']
+      },
+      commercialNames: { br: ['Antux'], ar: ['Levotuss'] },
+      presentation: { pt: ['Xarope Adulto 30 mg/5 mL', 'Xarope Pediátrico 15 mg/5 mL', 'Gotas'], es: ['Jarabe Adulto 30 mg/5 mL', 'Jarabe Pediátrico 15 mg/5 mL', 'Gotas'] },
+      mechanism: {
+        pt: 'A grande evolução do tratamento da tosse. Diferente da Codeína ou Dextrometorfano (que agem no cérebro e causam sono/dependência), a Levodropropizina atua DIRETAMENTE no pulmão. Ela "anestesia" e modula as Fibras-C aferentes nas vias respiratórias. Ou seja, ela desliga o sensor que avisa ao cérebro que há uma irritação, parando a tosse sem alterar o sistema nervoso central.',
+        es: 'La gran evolución del tratamiento de la tos. A diferencia de la Codeína (que actúa en el cerebro y causa sueño), la Levodropropizina actúa DIRECTAMENTE en el pulmón. "Anestesia" y modula las Fibras-C aferentes en las vías respiratorias. Apaga el sensor que avisa al cerebro de la irritación, sin alterar el SNC.'
+      },
+      dose: {
+        adult: {
+          pt: '60 mg (10 mL do xarope adulto) via oral a cada 8 horas.',
+          es: '60 mg (10 mL del jarabe adulto) vía oral cada 8 horas.'
+        },
+        pediatric: {
+          pt: 'Crianças > 2 anos: 1 mg/kg/dose a cada 8 horas.',
+          es: 'Niños > 2 años: 1 mg/kg/dosis cada 8 horas.'
+        }
+      },
+      administration: { pt: ['Administrar preferencialmente entre as refeições (estômago vazio otimiza absorção).'], es: ['Administrar preferentemente entre las comidas (estómago vacío optimiza absorción).'] },
+      renalAdjustment: { required: true, message: { pt: 'Precaução em falência renal grave (ClCr < 35 mL/min), aumentar intervalo.', es: 'Precaución en falla renal grave (ClCr < 35 mL/min), aumentar intervalo.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico agudo.', es: 'Sin necesidad de ajuste clínico agudo.' } },
+      commonAdverseEffects: { pt: ['Náuseas e desconforto epigástrico leve', 'Cansaço passageiro'], es: ['Náuseas y malestar epigástrico leve', 'Cansancio pasajero'] },
+      dangerousAdverseEffects: { pt: ['Reações de hipersensibilidade alérgica (raras)'], es: ['Reacciones de hipersensibilidad alérgica (raras)'] },
+      contraindications: {
+        absolute: { pt: ['Tosse PRODUTIVA (com catarro abundante)', 'Crianças menores de 2 anos', 'Hipersecreção brônquica ou Síndrome de Kartagener'], es: ['Tos PRODUCTIVA (con catarro abundante)', 'Niños menores de 2 años', 'Hipersecreción bronquial o Síndrome de Kartagener'] },
+        relative: { pt: ['Pacientes com disfunção mucociliar severa'], es: ['Pacientes con disfunción mucociliar severa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ANTITUSSÍGENO SEGURO: Por não deprimir o cérebro, é a droga de eleição na pediatria e geriatria para tossinha chata de pós-gripe que não deixa o paciente dormir, sem o risco de parar a respiração do doente.', es: 'EL ANTITUSIVO SEGURO: Al no deprimir el cerebro, es la droga de elección en pediatría y geriatría para tos molesta de posgripe, sin el riesgo de parar la respiración del paciente.' }
+      }
+    },
+
+    /* ── DROPROPIZINA ───────────────────────────────────────────────────── */
+    "dropropizina": {
+      name: { pt: 'Dropropizina', es: 'Dropropizina' },
+      category: 'pneumologia',
+      class: { pt: 'Antitussígeno de Ação Periférica', es: 'Antitusivo de Acción Periférica' },
+      indications: {
+        pt: ['Tosse seca irritativa não-produtiva'],
+        es: ['Tos seca irritativa no productiva']
+      },
+      commercialNames: { br: ['Atossion', 'Dropropizina'], ar: ['Dropropizina'] },
+      presentation: { pt: ['Xarope Adulto 30 mg/5 mL', 'Xarope Pediátrico 15 mg/5 mL'], es: ['Jarabe Adulto 30 mg/5 mL', 'Jarabe Pediátrico 15 mg/5 mL'] },
+      mechanism: {
+        pt: 'Molécula original "racêmica" da qual a levodropropizina foi extraída. Tem exatamente o mesmo mecanismo (bloqueio de receptores de estiramento nas vias aéreas). A diferença é que, por não ser purificada (possui as formas D e L da molécula), tem um risco ligeiramente maior de causar sonolência do que a sua sucessora.',
+        es: 'Molécula original "racémica" de la que se extrajo la levodropropizina. Tiene exactamente el mismo mecanismo (bloqueo periférico). La diferencia es que, al no ser purificada, tiene un riesgo ligeramente mayor de causar somnolencia.'
+      },
+      dose: {
+        adult: {
+          pt: '30 mg (1 copo-medida) via oral a cada 6 ou 8 horas.',
+          es: '30 mg (1 vaso-medida) vía oral cada 6 u 8 horas.'
+        },
+        pediatric: {
+          pt: 'Crianças de 2 a 12 anos: 0,5 a 1 mg/kg/dose a cada 8 horas.',
+          es: 'Niños de 2 a 12 años: 0,5 a 1 mg/kg/dosis cada 8 horas.'
+        }
+      },
+      administration: { pt: ['Via oral. Não deve ser usado por mais de 5 a 7 dias seguidos sem investigação da causa da tosse.'], es: ['Vía oral. No debe usarse por más de 5 a 7 días seguidos sin investigación de la causa de la tos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Ajuste empírico em insuficiência renal grave (aumentar intervalo).', es: 'Ajuste empírico en insuficiencia renal grave (aumentar intervalo).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Metabolismo hepático severo exige cautela na cirrose.', es: 'Metabolismo hepático severo exige cautela en cirrosis.' } },
+      commonAdverseEffects: { pt: ['Sonolência leve a moderada', 'Náuseas'], es: ['Somnolencia leve a moderada', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão em doses suprafarmacológicas'], es: ['Hipotensión en dosis suprafarmacológicas'] },
+      contraindications: {
+        absolute: { pt: ['Tosse produtiva', 'Crianças < 2 anos'], es: ['Tos productiva', 'Niños < 2 años'] },
+        relative: { pt: ['Glaucoma', 'Pacientes idosos frágeis com histórico de quedas (pela leve sedação)'], es: ['Glaucoma', 'Pacientes ancianos frágiles con historial de caídas (por leve sedación)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Evite a mistura de fórmulas: Por ser muito comum e barato, muitos pacientes tomam xaropes com Dropropizina junto com antialérgicos orais (Loratadina/Dexclorfeniramina). A soma dos efeitos pode deixar o paciente muito sonolento durante o dia.', es: 'Evite la mezcla de fórmulas: Por ser muy común, muchos pacientes toman Dropropizina junto con antialérgicos orales. La suma de los efectos puede dejar al paciente muy somnoliento durante el día.' }
+      }
+    },
+
+    /* ── CLOPERASTINA ───────────────────────────────────────────────────── */
+    "cloperastina": {
+      name: { pt: 'Cloperastina', es: 'Cloperastina' },
+      category: 'pneumologia',
+      class: { pt: 'Antitussígeno Misto (Ação Central e Periférica)', es: 'Antitusivo Mixto (Acción Central y Periférica)' },
+      indications: {
+        pt: ['Tosse seca de predomínio noturno', 'Tosse de origem alérgica (por sua atividade anti-histamínica associada)'],
+        es: ['Tos seca de predominio nocturno', 'Tos de origen alérgico (por su actividad antihistamínica asociada)']
+      },
+      commercialNames: { br: ['Seki'], ar: ['Sek'] },
+      presentation: { pt: ['Xarope 3,54 mg/mL', 'Suspensão/Gotas'], es: ['Jarabe 3,54 mg/mL', 'Suspensión/Gotas'] },
+      mechanism: {
+        pt: 'Fármaco de "Duplo Combate". Ele age no Centro da Tosse no cérebro (inibindo o espasmo) e possui um bloqueio Anti-histamínico H1 e espasmolítico nos brônquios. É perfeito para aquela tosse seca que ataca quando o paciente deita na cama para dormir e a alergia/coriza escorre pela garganta (Gotejamento Pós-Nasal).',
+        es: 'Fármaco de "Doble Combate". Actúa en el Centro de la Tos en el cerebro y posee un bloqueo Antihistamínico H1 y espasmolítico en los bronquios. Es perfecto para aquella tos seca que ataca cuando el paciente se acuesta para dormir y la alergia escurre por la garganta (Goteo Posnasal).'
+      },
+      dose: {
+        adult: {
+          pt: '10 mL (1 copo-medida) via oral, 3 vezes ao dia.',
+          es: '10 mL (1 vaso-medida) vía oral, 3 veces al día.'
+        },
+        pediatric: {
+          pt: 'Crianças de 2 a 12 anos: 0,5 a 1 mg/kg/dia divididos em 3 tomadas.',
+          es: 'Niños de 2 a 12 años: 0,5 a 1 mg/kg/día divididos en 3 tomas.'
+        }
+      },
+      administration: { pt: ['Via oral. Ideal se administrado à noite antes de dormir devido ao seu leve efeito sedativo benéfico.'], es: ['Vía oral. Ideal si administrado a la noche antes de dormir debido a su leve efecto sedante benéfico.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Metabolizado no fígado, precaução na cirrose.', es: 'Metabolizado en hígado, precaución en cirrosis.' } },
+      commonAdverseEffects: { pt: ['Sonolência (efeito do bloqueio H1)', 'Boca seca', 'Tontura leve'], es: ['Somnolencia (efecto del bloqueo H1)', 'Boca seca', 'Mareo leve'] },
+      dangerousAdverseEffects: { pt: ['Retenção urinária (em pacientes com hiperplasia prostática devido ao efeito anticolinérgico)'], es: ['Retención urinaria (en pacientes con hiperplasia prostática debido al efecto anticolinérgico)'] },
+      contraindications: {
+        absolute: { pt: ['Crianças menores de 2 anos', 'Tosse associada à asma descompensada ou produtiva abundante'], es: ['Niños menores de 2 años', 'Tos asociada al asma descompensada o productiva abundante'] },
+        relative: { pt: ['Glaucoma', 'Idosos com demência avançada (risco de delírio anticolinérgico)'], es: ['Glaucoma', 'Ancianos con demencia avanzada (riesgo de delirio anticolinérgico)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'SEDAÇÃO INTENCIONAL: Como tem efeito anti-histamínico, a Cloperastina "dá um soninho". Oriente pacientes adultos a terem cautela ao operar máquinas pesadas ou dirigir após tomarem a dose da manhã.', es: 'SEDACIÓN INTENCIONAL: Como tiene efecto antihistamínico, la Cloperastina "da un sueñito". Oriente a pacientes adultos a tener precaución al operar máquinas pesadas tras la dosis de la mañana.' }
+      }
+    },
+
+    /* ── BUTAMIRATO ─────────────────────────────────────────────────────── */
+    "butamirato": {
+      name: { pt: 'Butamirato (Citrato de)', es: 'Butamirato (Citrato de)' },
+      category: 'pneumologia',
+      class: { pt: 'Antitussígeno Central Não-Opioide', es: 'Antitusivo Central No Opioide' },
+      indications: {
+        pt: ['Tosse seca aguda (frequentemente usado no período pré e pós-operatório ou laringoscopia para suprimir reflexo tossígeno)'],
+        es: ['Tos seca aguda (frecuentemente usado en periodo pre y posoperatorio o laringoscopia para suprimir reflejo tusígeno)']
+      },
+      commercialNames: { br: ['Sintocalmy', 'Besedan'], ar: ['Sintus'] },
+      presentation: { pt: ['Xarope 1,5 mg/mL', 'Gotas 5 mg/mL'], es: ['Jarabe 1,5 mg/mL', 'Gotas 5 mg/mL'] },
+      mechanism: {
+        pt: 'Atua no sistema nervoso central para inibir a tosse, mas é química e farmacologicamente totalmente diferente dos alcaloides opioides (como a codeína). Além de parar a tosse no bulbo, ele possui um efeito broncoespasmolítico leve adicional (ajuda a dar uma pequena relaxada no brônquio) e reduz a resistência das vias aéreas.',
+        es: 'Actúa en el sistema nervioso central para inhibir la tos, pero es química y farmacológicamente diferente a los opioides (como la codeína). Además de parar la tos en el bulbo, posee un efecto broncoespasmolítico leve adicional y reduce la resistencia de las vías respiratorias.'
+      },
+      dose: {
+        adult: {
+          pt: 'Xarope: 15 mL (1 copo) 3 a 4 vezes ao dia.',
+          es: 'Jarabe: 15 mL (1 vaso) 3 a 4 veces al día.'
+        },
+        pediatric: {
+          pt: '3 a 6 anos: 5 mL 3x/dia. 6 a 12 anos: 10 mL 3x/dia.',
+          es: '3 a 6 años: 5 mL 3x/día. 6 a 12 años: 10 mL 3x/día.'
+        }
+      },
+      administration: { pt: ['Via oral pura. Não deve ser usado por longos períodos (máximo 7 dias).'], es: ['Vía oral pura. No debe ser usado por largos periodos (máximo 7 días).'] },
+      renalAdjustment: { required: false, message: { pt: 'Depuração renal de metabólitos inativos. Sem necessidade de ajuste agressivo.', es: 'Depuración renal de metabolitos inactivos. Sin necesidad de ajuste agresivo.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico agudo.', es: 'Sin necesidad de ajuste clínico agudo.' } },
+      commonAdverseEffects: { pt: ['Sonolência passageira', 'Vertigem', 'Exantema (vermelhidão na pele)'], es: ['Somnolencia pasajera', 'Vértigo', 'Exantema (enrojecimiento de la piel)'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão (se superdosagem)'], es: ['Hipotensión (si sobredosis)'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez (Primeiro Trimestre) e Lactação', 'Tosse Produtiva intensa'], es: ['Embarazo (Primer Trimestre) y Lactancia', 'Tos Productiva intensa'] },
+        relative: { pt: ['Nenhuma expressiva dentro da dose segura'], es: ['Ninguna expresiva dentro de la dosis segura'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A grande vantagem do Butamirato sobre a Codeína/Dextrometorfano é a ausência absoluta de depressão respiratória. Pode ser usado com segurança em pacientes com pulmões limite (asma leve) que desenvolveram tosse irritativa por mudança de tempo.', es: 'La gran ventaja del Butamirato sobre Codeína es la ausencia absoluta de depresión respiratoria. Puede ser usado con seguridad en pacientes con asma leve que desarrollaron tos irritativa por cambio de tiempo.' }
+      }
+    },
+
+    /* ── LORATADINA ─────────────────────────────────────────────────────── */
+    "loratadina": {
+      name: { pt: 'Loratadina', es: 'Loratadina' },
+      category: 'alergia_imunologia',
+      class: { pt: 'Anti-histamínico H1 de 2ª Geração (Não Sedativo)', es: 'Antihistamínico H1 de 2ª Generación (No Sedante)' },
+      indications: {
+        pt: ['Rinite alérgica sazonal e perene', 'Urticária crônica idiopática', 'Alívio rápido de coceira, espirros e coriza nasal'],
+        es: ['Rinitis alérgica estacional y perenne', 'Urticaria crónica idiopática', 'Alivio rápido de picor, estornudos y secreción nasal']
+      },
+      commercialNames: { br: ['Claritin', 'Loratamed'], ar: ['Aerotina'] },
+      presentation: { pt: ['Comprimidos 10 mg', 'Xarope 1 mg/mL'], es: ['Comprimidos 10 mg', 'Jarabe 1 mg/mL'] },
+      mechanism: {
+        pt: 'Bloqueador potente, de longa duração e EXTREMAMENTE SELETIVO dos receptores periféricos de Histamina (H1). Como a molécula foi desenhada para ser "gorda e grande", ela NÃO CONSEGUE atravessar a Barreira Hematoencefálica. Ou seja, ela bloqueia a alergia na pele, nariz e pulmão, mas não atinge o cérebro (logo, não dá sono na esmagadora maioria dos pacientes).',
+        es: 'Bloqueador potente, de larga duración y EXTREMADAMENTE SELECTIVO de los receptores periféricos de Histamina (H1). Como la molécula fue diseñada para ser "gorda y grande", NO LOGRA atravesar la Barrera Hematoencefálica. Es decir, bloquea la alergia, pero no alcanza el cerebro (no da sueño en la mayoría de los pacientes).'
+      },
+      dose: {
+        adult: {
+          pt: '10 mg via oral UMA VEZ ao dia.',
+          es: '10 mg vía oral UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: '2 a 12 anos (< 30 kg): 5 mg (5 mL) 1x ao dia. Acima de 30 kg: 10 mg (10 mL) 1x ao dia.',
+          es: '2 a 12 años (< 30 kg): 5 mg (5 mL) 1x al día. Por encima de 30 kg: 10 mg (10 mL) 1x al día.'
+        }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos. Efeito dura 24 horas.'], es: ['Puede ser tomado con o sin alimentos. Efecto dura 24 horas.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min: Dar a dose de 10 mg em dias alternados (1 dia sim, 1 dia não).', es: 'Si ClCr < 30 mL/min: Dar la dosis de 10 mg en días alternos (1 día sí, 1 día no).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Em insuficiência hepática grave, usar 10 mg em dias alternados.', es: 'En insuficiencia hepática grave, usar 10 mg en días alternos.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Boca seca leve (xerostomia)', 'Fadiga residual (em menos de 4% dos pacientes)'], es: ['Cefalea', 'Boca seca leve (xerostomía)', 'Fatiga residual (en menos de 4% de los pacientes)'] },
+      dangerousAdverseEffects: { pt: ['Nenhum efeito sistêmico vital comum. Muito segura em sobredosagem acidental.'], es: ['Ningún efecto sistémico vital común. Muy segura en sobredosis accidental.'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave aos componentes da fórmula'], es: ['Hipersensibilidad grave a los componentes de la fórmula'] },
+        relative: { pt: ['Uso associado com inibidores potentes do CYP3A4 (Pode aumentar o nível da loratadina, embora sem consequências fatais como nos de 1ª geração)'], es: ['Uso asociado con inhibidores potentes del CYP3A4 (Puede aumentar el nivel de la loratadina, aunque sin consecuencias fatales)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'FIM DO SONO: É o antialérgico ideal para motoristas, pilotos e trabalhadores diurnos. Diferente da Prometazina ou Dexclorfeniramina (Polaramine) que "desmaiam" o paciente de sono, a Loratadina permite a cura da coriza mantendo a vigilância intacta.', es: 'FIN DEL SUEÑO: Es el antialérgico ideal para conductores y trabajadores. A diferencia de la Prometazina que "desmaya" al paciente de sueño, la Loratadina permite curar la coriza manteniendo la vigilancia intacta.' }
+      }
     }
 
   });

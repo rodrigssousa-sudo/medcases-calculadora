@@ -1181,6 +1181,59 @@ const INTERACOES_DB = {
     }
   },
 
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 393 — ANTITUSSÍGENOS PERIFÉRICOS E ANTI-HISTAMÍNICOS
+     Levodropropizina, Dropropizina, Cloperastina, Butamirato, Loratadina
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA DE CLASSE: ANTITUSSÍGENOS PERIFÉRICOS × MUCOLÍTICOS ── */
+  "$classe_antitussigenos_perifericos": {
+    "$classe_mucoliticos_orais": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A 'PISCINA' PULMONAR IATROGÊNICA. Mesmo os antitussígenos que não dão sono (Levodropropizina, Dropropizina, Butamirato) bloqueiam O REFLEXO mecânico de tossir. Se o paciente usar concomitantemente Xaropes Mucolíticos/Expectorantes (Ambroxol, Carbocisteína) que liquidificam o catarro, o pulmão ficará encharcado de secreção rala e o paciente não terá o espasmo protetor para expeli-la. Isso causa pneumonia lobar asfixiante.",
+        es: "LA 'PISCINA' PULMONAR IATROGÉNICA. Incluso los antitusivos periféricos bloquean EL REFLEJO mecánico de toser. Si el paciente usa Xarabes Mucolíticos (Ambroxol, Carbocisteína) que licuan el catarro, el pulmón quedará encharcado de secreción rala y el paciente no tendrá el espasmo protector para expulsarla, causando neumonía asfixiante."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO PRÁTICA. JAMAIS combine xaropes que amolecem catarro com xaropes que cortam a tosse.",
+        es: "CONTRAINDICACIÓN PRÁCTICA. JAMÁS combine jarabes que ablandan el catarro con jarabes que cortan la tos."
+      }
+    }
+  },
+
+  /* ── ANTITUSSÍGENOS COM SEDAÇÃO (Cloperastina / Dropropizina) ── */
+  "$classe_antitussigenos_com_sedacao": {
+    "$classe_sedativos_gaba": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SEDAÇÃO PROFUNDA SINÉRGICA. Diferente da Levodropropizina pura, a Cloperastina possui ação anti-histamínica e a Dropropizina possui ação sedativa cruzada. Se o paciente tomar esses xaropes em conjunto com Diazepam, Clonazepam (Rivotril) ou Álcool, o sistema nervoso rebaixará intensamente. O paciente pode apagar, sofrer quedas perigosas (idosos) e não acordar facilmente no dia seguinte.",
+        es: "SEDACIÓN PROFUNDA SINÉRGICA. A diferencia de la Levodropropizina pura, la Cloperastina posee acción antihistamínica. Si el paciente toma estos jarabes en conjunto con Diazepam, Clonazepam o Alcohol, el sistema nervioso bajará intensamente. El paciente puede sufrir caídas peligrosas (ancianos)."
+      },
+      conduta: {
+        pt: "Avisar ativamente o paciente para não dirigir. Se o paciente já usa medicações psiquiátricas pesadas, opte preferencialmente por Levodropropizina (que não penetra a barreira cerebral) para tratar a tosse.",
+        es: "Avisar activamente al paciente para no conducir. Si el paciente ya usa medicaciones psiquiátricas pesadas, opte por Levodropropizina (que no penetra la barrera cerebral) para tratar la tos."
+      }
+    }
+  },
+
+  /* ── LORATADINA (Anti-H1 de 2ª Geração) ── */
+  "loratadina": {
+    "cetoconazol": {
+      gravidade: "leve",
+      scoreClinico: 2,
+      descricao: {
+        pt: "INIBIÇÃO DE CYP3A4. Antifúngicos (Cetoconazol, Itraconazol) e Macrolídeos bloqueiam a enzima hepática que destrói a Loratadina. Os níveis de Loratadina no sangue podem subir mais de 300%. NO ENTANTO, diferentemente dos antialérgicos mortais do passado (Terfenadina, que causava arritmia fatal quando acumulava), o acúmulo de Loratadina provou ser incrivelmente seguro no coração, gerando apenas um leve aumento da eficácia ou boca seca.",
+        es: "INHIBICIÓN DE CYP3A4. Antifúngicos (Ketoconazol) y Macrólidos bloquean la enzima hepática que destruye la Loratadina. Los niveles de Loratadina pueden subir más de 300%. SIN EMBARGO, a diferencia de los antialérgicos mortales del pasado, la acumulación de Loratadina demostró ser increíblemente segura en el corazón."
+      },
+      conduta: {
+        pt: "Pode ser coadministrado com segurança clínica, embora haja um discreto aumento da frequência de efeitos colaterais menores (cefaleia). Nenhuma alteração no ECG é esperada.",
+        es: "Puede ser coadministrado con seguridad clínica. Ninguna alteración en el ECG es esperada."
+      }
+    }
+  },
+
   /* ─────────────────────────────────────────────────────────────
      BUILD 255 — ADDITIVE RISK EXPANSION
      $classe_depressoras_snc × $classe_depressoras_snc (auto-cruzamento)
