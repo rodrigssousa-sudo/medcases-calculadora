@@ -109,21 +109,35 @@
   /* ── BUILD 306: syncClcrLiveDashboard atualizado para IDs home-live-* ──
      IDs anteriores (clcr-live-val-*) substituídos por (home-live-*) no HTML.
      Atualização direta via getElementById — sem observer, sem cascade.       */
+  /* BUILD 378 PATCH B — syncClcrLiveDashboard: fonte primária window.hmPatientState
+     Se hmFixarDados() foi chamado (ps._savedAt presente), usa seus valores calculados
+     (inclui Devine sex-aware do BUILD 374). Fallback para window.patientData legacy.
+     Elimina conflito de leitura identificado no diagnóstico 360°. */
   function syncClcrLiveDashboard() {
-    var pd = window.patientData || {};
+    var ps = window.hmPatientState || {};
+    var pd = (ps._savedAt) ? ps : (window.patientData || {});
 
+    /* _hmComputeDerived agora recebe sexo para Devine sex-aware (BUILD 374) */
     var derived = (typeof window._hmComputeDerived === 'function')
       ? window._hmComputeDerived(pd)
       : {};
 
+    /* ClCr: prefere hmPatientState.clcr se disponível */
+    var clcrSrc  = (ps._savedAt && ps.clcr      != null) ? ps.clcr      : pd.clcr;
+    var imcSrc   = (ps._savedAt && ps.imc       != null) ? ps.imc       :
+                   (derived.imc      != null ? derived.imc      : pd.imc);
+    var pesoSrc  = (ps._savedAt && ps.pesoIdeal != null) ? ps.pesoIdeal :
+                   (derived.pesoIdeal != null ? derived.pesoIdeal : pd.pesoIdeal);
+    var bsaSrc   = (ps._savedAt && ps.bsa       != null) ? ps.bsa       :
+                   (derived.bsa      != null ? derived.bsa      : pd.bsa);
+
     var vals = {
-      clcr: pd.clcr != null ? _fmt(pd.clcr, 0) : null,
-      imc:  derived.imc  != null ? _fmt(derived.imc, 1)  : (pd.imc  != null ? _fmt(pd.imc, 1)  : null),
-      peso: derived.pesoIdeal != null ? _fmt(derived.pesoIdeal, 1) : (pd.pesoIdeal != null ? _fmt(pd.pesoIdeal, 1) : null),
-      bsa:  derived.bsa  != null ? _fmt(derived.bsa, 2)  : (pd.bsa  != null ? _fmt(pd.bsa, 2)  : null)
+      clcr: clcrSrc  != null ? _fmt(clcrSrc,  0) : null,
+      imc:  imcSrc   != null ? _fmt(imcSrc,   1) : null,
+      peso: pesoSrc  != null ? _fmt(pesoSrc,  1) : null,
+      bsa:  bsaSrc   != null ? _fmt(bsaSrc,   2) : null
     };
 
-    /* BUILD 306: IDs mapeados para home-live-* */
     var idMap = { clcr: 'home-live-clcr', imc: 'home-live-imc', peso: 'home-live-peso', bsa: 'home-live-bsa' };
     ['clcr', 'imc', 'peso', 'bsa'].forEach(function (key) {
       var el = document.getElementById(idMap[key]);
