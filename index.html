@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=378" />
-  <link rel="stylesheet" href="css/build233.css?v=378" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=378" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=378" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=378" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=378" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=378" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=380" />
+  <link rel="stylesheet" href="css/build233.css?v=380" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=380" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=380" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=380" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=380" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=380" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=378" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=380" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=378" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=380" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=378" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=380" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=378" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=380" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=378" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=380" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=378" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=380" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=378" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=380" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=378" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=380" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -20304,6 +20304,31 @@ function _adaptExternalDB(dbObj, categoryLabel) {
   window.executarChecagemInteracoes = function() {
     if (selecionadosInteracao.length < INTX_MIN) return;
 
+    /* ── BUILD 380 PATCH A — LAZY-LOAD GUARD ──────────────────────────────
+       interacoes.js (1.2 MB) é carregado de forma lazy (BUILD 378).
+       Se o médico clicar em 'Verificar' antes do término da carga,
+       INTERACOES_DB estará vazio → falso negativo (card verde incorreto).
+       Solução: detectar DB vazio, exibir spinner e reagendar em 200 ms.
+       A função se auto-reagenda até o DB estar disponível.
+    ── ──────────────────────────────────────────────────────────────────── */
+    if (!window.INTERACOES_DB || Object.keys(window.INTERACOES_DB).length === 0) {
+      var _lazyContainers = document.querySelectorAll(
+        '#resultados-interacoes-container, .intx-resultados'
+      );
+      var _lazyIsES = _isES();
+      _lazyContainers.forEach(function(c) {
+        c.style.display  = 'block';
+        c.classList.add('active');
+        c.innerHTML = '<div class="intx-loading">' +
+          '<span class="intx-spin">⧳</span>' +
+          '&nbsp;' + (_lazyIsES ? 'Cargando base de datos...' : 'Carregando base de dados...') +
+          '</div>';
+      });
+      /* Re-agenda com 200 ms — mesmo intervalo do padrão de retry do motor */
+      setTimeout(window.executarChecagemInteracoes, 200);
+      return;
+    }
+
     /* Lê o estado atual do idioma via _isES() — lowercase-safe, multi-fonte */
     const isES = _isES();
     const lang = isES ? 'es' : 'pt';
@@ -20343,15 +20368,25 @@ function _adaptExternalDB(dbObj, categoryLabel) {
 
       /* ══════════════════════════════════════════════════════════
          MOTOR HIERÁRQUICO v4.0 — Ontologia Farmacológica
+         BUILD 380 PATCH B — PERFORMANCE O(1) CONFIRMADA:
+           Paths 1-2 (droga→droga): acesso direto a propriedade de
+           objeto JS — hash-map nativo O(1), hardened com
+           hasOwnProperty para segurança contra prototype pollution.
+           Paths 3-8 (droga→classe / classe→classe): iteram apenas
+           classesA/classesB (arrays de ~1-4 itens por fármaco) →
+           custo prático O(k²) onde k<<n — negligível.
+           Fallback de classe: getClassesDeFarmaco tri-nível BUILD 364
+           (DRUG_CLASSES → ALL_DRUGS_DB.class → heurística de nome).
+         ──────────────────────────────────────────────────────────
          Algoritmo C(n,2) com 8 caminhos bidirecionais + best-match:
-           Path 1 → DB[fA][fB]
-           Path 2 → DB[fB][fA]
-           Path 3 → DB[fA][$clsB]
-           Path 4 → DB[fB][$clsA]
-           Path 5 → DB[$clsA][fB]          ← novo
-           Path 6 → DB[$clsB][fA]          ← novo
-           Path 7 → DB[$clsA][$clsB]
-           Path 8 → DB[$clsB][$clsA]
+           Path 1 → DB[fA][fB]       (direto, O(1) hasOwnProperty)
+           Path 2 → DB[fB][fA]       (direto, O(1) hasOwnProperty)
+           Path 3 → DB[fA][$clsB]    (droga→classe)
+           Path 4 → DB[fB][$clsA]    (droga→classe)
+           Path 5 → DB[$clsA][fB]    (classe→droga)
+           Path 6 → DB[$clsB][fA]    (classe→droga)
+           Path 7 → DB[$clsA][$clsB] (classe→classe)
+           Path 8 → DB[$clsB][$clsA] (classe→classe)
          Retorna o candidato de maior scoreClinico (não early-return).
       ══════════════════════════════════════════════════════════ */
       for (let i = 0; i < selecionadosInteracao.length; i++) {
@@ -20379,11 +20414,15 @@ function _adaptExternalDB(dbObj, categoryLabel) {
             }
           }
 
-          /* Path 1: drogaA → drogaB */
-          if (db[fA] && db[fA][fB]) _addCandidate(db[fA][fB], 'direto', '');
+          /* Path 1: drogaA → drogaB  (O(1) hasOwnProperty — prototype-safe) */
+          if (Object.prototype.hasOwnProperty.call(db, fA) &&
+              Object.prototype.hasOwnProperty.call(db[fA], fB))
+            _addCandidate(db[fA][fB], 'direto', '');
 
-          /* Path 2: drogaB → drogaA */
-          if (db[fB] && db[fB][fA]) _addCandidate(db[fB][fA], 'direto', '');
+          /* Path 2: drogaB → drogaA  (O(1) hasOwnProperty — prototype-safe) */
+          if (Object.prototype.hasOwnProperty.call(db, fB) &&
+              Object.prototype.hasOwnProperty.call(db[fB], fA))
+            _addCandidate(db[fB][fA], 'direto', '');
 
           /* Path 3: drogaA → classeB */
           for (const cls of classesB) {
@@ -23401,8 +23440,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=378"></script>
-<script src="database/analgesicos.js?v=378"></script>
+<script src="database/antimicrobianos.js?v=380"></script>
+<script src="database/analgesicos.js?v=380"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -23469,9 +23508,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=378', 'psico');
-    _loadScript('database/cardio.js?v=378',        'cardio');
-    _loadScript('database/interacoes.js?v=378',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=380', 'psico');
+    _loadScript('database/cardio.js?v=380',        'cardio');
+    _loadScript('database/interacoes.js?v=380',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -23481,47 +23520,47 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=378"></script>
-<script src="database/gastro.js?v=378"></script>
-<script src="database/gastro_imuno.js?v=378"></script>
-<script src="database/imuno_corticoide.js?v=378"></script>
-<script src="database/endocrino_glp1.js?v=378"></script>
-<script src="database/infusoes.js?v=378"></script>
-<script src="database/emergencia.js?v=378"></script>
-<script src="database/infectologia.js?v=378"></script>
-<script src="database/sedacao.js?v=378"></script>
-<script src="database/hematologia.js?v=378"></script>
-<script src="database/gastroenterologia.js?v=378"></script>
-<script src="database/cardiologia.js?v=378"></script>
-<script src="database/analgesia_opioides.js?v=378"></script>
-<script src="database/prescricoes.js?v=378" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=380"></script>
+<script src="database/gastro.js?v=380"></script>
+<script src="database/gastro_imuno.js?v=380"></script>
+<script src="database/imuno_corticoide.js?v=380"></script>
+<script src="database/endocrino_glp1.js?v=380"></script>
+<script src="database/infusoes.js?v=380"></script>
+<script src="database/emergencia.js?v=380"></script>
+<script src="database/infectologia.js?v=380"></script>
+<script src="database/sedacao.js?v=380"></script>
+<script src="database/hematologia.js?v=380"></script>
+<script src="database/gastroenterologia.js?v=380"></script>
+<script src="database/cardiologia.js?v=380"></script>
+<script src="database/analgesia_opioides.js?v=380"></script>
+<script src="database/prescricoes.js?v=380" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=378"></script>
+<script defer src="js/medcases-ux-v2.js?v=380"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=378"></script>
+<script defer src="js/hub-accordion.js?v=380"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=378"></script>
+<script defer src="js/build240b-accordion-fix.js?v=380"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=378"></script>
+<script defer src="js/calculator-overlay.js?v=380"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=378"></script>
+<script defer src="js/category-pills.js?v=380"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=378"></script>
+<script defer src="js/elec-calc.js?v=380"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=378"></script>
+<script defer src="js/deeplink-router.js?v=380"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=378"></script>
+<script defer src="js/build272-reactive-engine.js?v=380"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=378"></script>
+<script defer src="js/build283-accessory-bar.js?v=380"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
