@@ -249,6 +249,22 @@ const DRUG_ALIASES = {
   "saxenda":                            "liraglutida",
   "levotiroxine":                       "levotiroxina",
 
+  /* BUILD 394 — Anti-histamínicos H1 (Alergia/Imunologia): aliases de nomenclatura */
+  "desloratadine":                      "desloratadina",
+  "desalex":                            "desloratadina",
+  "aerius":                             "desloratadina",
+  "cetirizine":                         "cetirizina",
+  "zyrtec":                             "cetirizina",
+  "levocetirizine":                     "levocetirizina",
+  "zyxem":                              "levocetirizina",
+  "xuzal":                              "levocetirizina",
+  "xyzal":                              "levocetirizina",
+  "fexofenadine":                       "fexofenadina",
+  "allegra":                            "fexofenadina",
+  "telfast":                            "fexofenadina",
+  "ebastin":                            "ebastina",
+  "ebastel":                            "ebastina",
+
   /* BUILD 284 — Unificação grafia Anvisa: amlodipina → anlodipino */
   "amlodipina":                         "anlodipino",
   "amlodipine":                         "anlodipino",
@@ -667,6 +683,41 @@ const DRUG_CLASSES = {
   "$classe_hipoglicemiantes_secretagogos": [
     "glibenclamida", "glimepirida", "glipizida", "gliclazida",
     "tolbutamida", "clorpropamida", "repaglinida", "nateglinida"
+  ],
+
+  /* BUILD 394 — Anti-histamínicos H1 de 2ª/3ª Geração */
+
+  /* Piperazinas anti-histamínicas — H1 com leve penetração central
+     (Cetirizina e Levocetirizina — levemente sedativos; sedação potencializada
+     por depressores do SNC e álcool) */
+  "$classe_antihistaminicos_piperazinas": [
+    "cetirizina", "levocetirizina"
+  ],
+
+  /* Sucos de frutas ácidas — bloqueadores do transportador OATP1A2
+     Reduzem absorção intestinal de fármacos transportador-dependentes
+     (ex: Fexofenadina, alguns beta-bloqueadores e estatinas) */
+  "$classe_sucos_de_fruta": [
+    "suco_de_maca", "suco_de_laranja", "suco_de_grapefruit",
+    "suco_de_toranja", "suco_de_pomelo", "suco_fruta_acida"
+  ],
+
+  /* Antiácidos com Al³⁺/Mg²⁺ — quelação física de fármacos catiônicos
+     no trato GI (reduzem absorção de fluoroquinolonas, tetraciclinas,
+     fexofenadina, levotiroxina, ferro, etc.) */
+  "$classe_antiacidos_aluminio_magnesio": [
+    "antiacido", "hidroxido_de_aluminio", "hidroxido_de_magnesio",
+    "antiacido_aluminio_magnesio", "antiacido_magnesio",
+    "bicarbonato_de_sodio", "carbonato_de_calcio"
+  ],
+
+  /* Inibidores fortes de CYP3A4 — bloqueiam metabolização de pró-fármacos
+     como Ebastina (→ Carebastina) e corticosteroides inalatórios,
+     podendo causar acúmulo tóxico do pró-fármaco não processado */
+  "$classe_inibidores_fortes_cyp3a4": [
+    "cetoconazol", "itraconazol", "voriconazol", "posaconazol",
+    "fluconazol", "claritromicina", "eritromicina", "telitromicina",
+    "ritonavir", "cobicistat", "nefazodona", "mibefradil"
   ]
 
 };
@@ -1230,6 +1281,83 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Pode ser coadministrado com segurança clínica, embora haja um discreto aumento da frequência de efeitos colaterais menores (cefaleia). Nenhuma alteração no ECG é esperada.",
         es: "Puede ser coadministrado con seguridad clínica. Ninguna alteración en el ECG es esperada."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 394 — BLOCO MOTOR DE INTERAÇÕES: Anti-histamínicos H1
+     Desloratadina, Cetirizina, Levocetirizina, Fexofenadina, Ebastina
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── FEXOFENADINA — Interações por bloqueio de transportador OATP e quelação ── */
+  "fexofenadina": {
+    "$classe_sucos_de_fruta": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "BLOQUEIO DE TRANSPORTADOR OATP (Anulação Terapêutica). Uma das interações alimentares mais impressionantes da medicina: Sucos de frutas ácidas (Maçã, Laranja e principalmente Toranja/Grapefruit) contêm flavonoides que se grudam e fecham o transportador intestinal OATP1A2. A Fexofenadina precisa desse transportador ativo para entrar na circulação sanguínea. Se o paciente tomar o comprimido de Allegra com um copo de Suco de Maçã, a absorção da droga despenca em até 70% e o remédio sai direto nas fezes, falhando totalmente em curar a alergia.",
+        es: "BLOQUEO DE TRANSPORTADOR OATP (Anulación Terapéutica). Los jugos de frutas ácidas (Manzana, Naranja y Pomelo/Grapefruit) contienen flavonoides que cierran el transportador intestinal OATP1A2. La Fexofenadina necesita de este transportador para entrar a la sangre. Si se toma con Jugo de Manzana, la absorción cae hasta 70% y el remedio sale directo en las heces, fallando totalmente en tratar la alergia."
+      },
+      conduta: {
+        pt: "REGRA ESTRITA: Fexofenadina (Allegra) DEVE SER TOMADA EXCLUSIVAMENTE COM ÁGUA. É estritamente proibido ingerir suco de maçã, laranja ou pomelo nas 4 horas antes ou 1 a 2 horas após tomar a pílula. Orientar ativamente o paciente nessa regra na prescrição.",
+        es: "REGLA ESTRICTA: Fexofenadina (Allegra) DEBE SER TOMADA EXCLUSIVAMENTE CON AGUA. Está prohibido ingerir jugo de manzana, naranja o pomelo 4 horas antes o 1 a 2 horas después de la píldora. Orientar activamente al paciente en esta regla."
+      }
+    },
+    "$classe_antiacidos_aluminio_magnesio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "QUELAÇÃO DIRETA NO ESTÔMAGO. Antiácidos à base de hidróxido de alumínio e magnésio (Pepsamar, Mylanta, Maalox) ligam-se quimicamente à molécula da fexofenadina no estômago, transformando o antialérgico em uma 'pedra' inabsorvível que o intestino não consegue capturar. Resulta em redução drástica da biodisponibilidade e falha terapêutica clínica.",
+        es: "QUELACIÓN DIRECTA EN EL ESTÓMAGO. Antiácidos a base de hidróxido de aluminio y magnesio (Maalox) se unen químicamente a la fexofenadina en el estómago, transformándola en una 'piedra' inabsorbible. Resulta en reducción drástica de biodisponibilidad y falla terapéutica clínica."
+      },
+      conduta: {
+        pt: "Aguardar NO MÍNIMO 2 HORAS entre a administração do antiácido e da fexofenadina. Orientar o paciente a sempre tomar o Allegra com água pura, longe de antiácidos.",
+        es: "Esperar AL MENOS 2 HORAS entre la administración del antiácido y la fexofenadina. Orientar al paciente a tomar siempre el Allegra con agua pura, lejos de antiácidos."
+      }
+    }
+  },
+
+  /* ── CETIRIZINA / LEVOCETIRIZINA — Sedação cruzada por penetração central parcial ── */
+  "$classe_antihistaminicos_piperazinas": {
+    "$classe_depressoras_snc": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "SEDAÇÃO CENTRAL CRUZADA. Embora a Cetirizina e a Levocetirizina sejam da 2ª/3ª Geração, elas ainda conservam uma leve capacidade de cruzar a barreira hematoencefálica (afetando sono em até 15% dos pacientes). O uso associado a benzodiazepínicos (Clonazepam, Diazepam), Zolpidem, Opioides ou Álcool amplifica fortemente a depressão neurológica central, causando letargia marcante, redução dos reflexos e risco aumentado de quedas (especialmente em idosos).",
+        es: "SEDACIÓN CENTRAL CRUZADA. Aunque la Cetirizina y la Levocetirizina son de 2ª/3ª Generación, conservan una leve capacidad de cruzar la barrera hematoencefálica (afectan el sueño en hasta 15% de los pacientes). La asociación con benzodiacepinas, Zolpidem, Opioides o Alcohol amplifica la depresión neurológica, causando letargia, reducción de reflejos y mayor riesgo de caídas (especialmente ancianos)."
+      },
+      conduta: {
+        pt: "Pacientes que tomam Cetirizina/Levocetirizina e relatam sonolência NÃO DEVEM consumir álcool, e devem ter atenção redobrada ao uso de medicações psiquiátricas. Transferir a dose do antialérgico obrigatoriamente para o período noturno (antes de dormir). Preferir Fexofenadina ou Desloratadina em pacientes com necessidade de alerta cognitivo pleno.",
+        es: "Pacientes que toman Cetirizina/Levocetirizina y relatan somnolencia NO DEBEN consumir alcohol, y deben tener atención redoblada al usar medicaciones psiquiátricas. Transferir la dosis del antialérgico al período nocturno (antes de dormir). Preferir Fexofenadina o Desloratadina en pacientes con necesidad de alerta cognitivo pleno."
+      }
+    },
+    "alcool": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "POTENCIALIZAÇÃO DO EFEITO SEDATIVO. Mesmo doses moderadas de álcool (1-2 doses) somadas à Cetirizina/Levocetirizina amplificam a sonolência de forma imprevisível. Risco de amnésia temporária matinal e coordenação motora comprometida.",
+        es: "POTENCIACIÓN DEL EFECTO SEDATIVO. Incluso dosis moderadas de alcohol (1-2 copas) sumadas a la Cetirizina/Levocetirizina amplífica la somnolencia de forma impredecible. Riesgo de amnesia temporaria matutina y coordinación motora comprometida."
+      },
+      conduta: {
+        pt: "Evitar consumo de álcool nas horas seguintes à ingestão do antialérgico. Advertir claramente o paciente se tomar o comprimido antes de eventos sociais com bebidas.",
+        es: "Evitar consumo de alcohol en las horas siguientes a la ingestión del antialérgico. Advertir claramente al paciente si toma el comprimido antes de eventos sociales con bebidas."
+      }
+    }
+  },
+
+  /* ── EBASTINA — Bloqueio de pró-fármaco por inibição de CYP3A4 ── */
+  "ebastina": {
+    "$classe_inibidores_fortes_cyp3a4": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "BLOQUEIO DE PRÓ-FÁRMACO COM RISCO DE PROLONGAMENTO DO QTc. A Ebastina é um pró-fármaco que precisa do CYP3A4 hepático para ser convertida à 'Carebastina' ativa (que cura a alergia). Se o paciente usar macrolídeos (Claritromicina, Eritromicina) ou antifúngicos sistêmicos (Cetoconazol, Itraconazol) — inibidores potentes de CYP3A4 —, a metabolização é bloqueada. O nível de Ebastina original não processada acumula no plasma e há risco de prolongamento do intervalo QTc, especialmente em pacientes com hipocalemia ou cardiopatia basal.",
+        es: "BLOQUEO DE PROFÁRMACO CON RIESGO DE PROLONGACIÓN DEL QTc. La Ebastina es un profármaco que necesita del CYP3A4 hepático para convertirse en 'Carebastina' activa. Con macrólidos (Claritromicina) o antifúngicos (Ketoconazol, Itraconazol), el nivel de Ebastina original se acumula en plasma y hay riesgo de prolongación del intervalo QTc, especialmente en pacientes con hipopotasemia o cardiopatía basal."
+      },
+      conduta: {
+        pt: "Monitorar ECG (Intervalo QTc) se a associação for inevitável. Evitar a prescrição simultânea em pacientes coronariopatas, com arritmia basal severa ou hipocalemia. Nesse contexto, preferir Fexofenadina (sem metabolismo CYP hepático) ou Desloratadina (já ativada, independente do CYP3A4).",
+        es: "Monitorear ECG (Intervalo QTc) si la asociación es inevitable. Evitar la prescripción simultánea en coronariopatas, con arritmia basal severa o hipopotasemia. En este contexto, preferir Fexofenadina (sin metabolismo CYP hepático) o Desloratadina (ya activada, independiente del CYP3A4)."
       }
     }
   },

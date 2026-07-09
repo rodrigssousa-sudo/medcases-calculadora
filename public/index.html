@@ -19752,6 +19752,10 @@ function _adaptExternalDB(dbObj, categoryLabel) {
        Betametasona genuinamente nova (depósito/obstétrico).
        Semaglutida, Tirzepatida, Liraglutida genuinamente novas no autocomplete. ── */
     'Betametasona', 'Semaglutida', 'Tirzepatida', 'Liraglutida',
+    /* ── BUILD 394 — Anti-histamínicos H1 (Alergia/Imunologia) ──
+       Desloratadina, Cetirizina, Levocetirizina, Fexofenadina, Ebastina
+       genuinamente novos no autocomplete de interações. ── */
+    'Desloratadina', 'Cetirizina', 'Levocetirizina', 'Fexofenadina', 'Ebastina',
   ];
 
   /* Função: obtém a lista de medicamentos exibida no idioma ativo */
@@ -21034,8 +21038,9 @@ document.addEventListener('DOMContentLoaded', () => {
   _injectObjectDB(window.HEMATOLOGIA_DRUGS_DB,       'Hematologia/Anticoagulação');
   _injectObjectDB(window.GASTROENTEROLOGIA_DRUGS_DB, 'Gastroenterologia');
   _injectObjectDB(window.CARDIOLOGIA_DRUGS_DB,       'Cardiologia');
-  _injectObjectDB(window.ANALGESIA_OPIOIDES_DRUGS_DB,'Analgesia/Opioides');
-  _injectObjectDB(window.PNEUMOLOGIA_DRUGS_DB,       'Pneumologia');
+  _injectObjectDB(window.ANALGESIA_OPIOIDES_DRUGS_DB,   'Analgesia/Opioides');
+  _injectObjectDB(window.PNEUMOLOGIA_DRUGS_DB,          'Pneumologia');
+  _injectObjectDB(window.ALERGIA_IMUNOLOGIA_DRUGS_DB,   'Alergia/Imunologia'); /* BUILD 394 */
 
   /* ══════════════════════════════════════════════════════════════
      BUILD 233 — OBJ1: DRUG_DB STUB INJECTION
@@ -21740,10 +21745,11 @@ document.addEventListener('DOMContentLoaded', () => {
       _injectObjectDB(window.HEMATOLOGIA_DRUGS_DB,       'Hematologia/Anticoagulação');
       _injectObjectDB(window.GASTROENTEROLOGIA_DRUGS_DB, 'Gastroenterologia');
       _injectObjectDB(window.CARDIOLOGIA_DRUGS_DB,       'Cardiologia');
-      _injectObjectDB(window.ANALGESIA_OPIOIDES_DRUGS_DB,'Analgesia/Opioides');
-      _injectObjectDB(window.PNEUMOLOGIA_DRUGS_DB,       'Pneumologia');
-      _injectObjectDB(window.PSICOFARMACOS_DRUGS_DB,    'Psicofármaco');
-      _injectObjectDB(window.CARDIO_DRUGS_DB,            'Cardiovascular');
+      _injectObjectDB(window.ANALGESIA_OPIOIDES_DRUGS_DB,   'Analgesia/Opioides');
+      _injectObjectDB(window.PNEUMOLOGIA_DRUGS_DB,          'Pneumologia');
+      _injectObjectDB(window.ALERGIA_IMUNOLOGIA_DRUGS_DB,   'Alergia/Imunologia');
+      _injectObjectDB(window.PSICOFARMACOS_DRUGS_DB,        'Psicofármaco');
+      _injectObjectDB(window.CARDIO_DRUGS_DB,               'Cardiovascular');
       var _added = window.DRUG_DB.length - _sizeBefore;
       if (_added > 0) {
         /* Indexa incrementalmente apenas os recém-adicionados */
@@ -23698,6 +23704,7 @@ window.MedCasesBridge = {
 <script src="database/gastroenterologia.js?v=388hotfix"></script>
 <script src="database/cardiologia.js?v=388hotfix"></script>
 <script src="database/analgesia_opioides.js?v=388hotfix"></script>
+<script src="database/alergia_imunologia.js?v=388hotfix"></script>
 <script src="database/prescricoes.js?v=388hotfix" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
