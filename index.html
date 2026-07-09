@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=372" />
-  <link rel="stylesheet" href="css/build233.css?v=372" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=372" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=372" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=372" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=372" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=372" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=374" />
+  <link rel="stylesheet" href="css/build233.css?v=374" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=374" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=374" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=374" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=374" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=374" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=372" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=374" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=372" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=374" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=372" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=374" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=372" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=374" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=372" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=374" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=372" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=374" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=372" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=374" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=372" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=374" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -7801,9 +7801,7 @@
                     <i class="fa-solid fa-rotate-left"></i> Limpar
                   </button>
                   <button class="hm-btn hm-btn--primary" id="hm-fix-btn"
-                    onclick="hmFixarDados()"
-                    ontouchend="event.preventDefault();window.hmFixarDados&&hmFixarDados();"
-                    onmousedown="window.hmFixarDados&&hmFixarDados();">
+                    onclick="hmFixarDados()">
                     <i class="fa-solid fa-calculator"></i>
                     <span class="lang-hub-pt">Calcular / Fixar</span>
                     <span class="lang-hub-es">Calcular / Fijar</span>
@@ -21393,6 +21391,12 @@ document.addEventListener('DOMContentLoaded', () => {
   ════════════════════════════════════════════════════════════════════════════ */
   function _bindInputFocusPadding(inp) {
     if (!inp || inp.dataset.focusBound === '1') return; /* já vinculado — ignora */
+    /* BUILD 374 PATCH C: inputs do #hm-patient-form são gerenciados pelo
+       KEYBOARD_FIX global (applyKeyboardSafePadding proporcional).
+       Vincular _bindInputFocusPadding aqui causaria conflito de padding
+       ('40vh' fixo vs valor dinâmico do KEYBOARD_FIX), deixando 90px
+       permanentes no scroll-content após fechar o teclado. */
+    if (inp.closest && inp.closest('#hm-patient-form')) return;
     inp.dataset.focusBound = '1';
     inp.addEventListener('focus', () => {
       /* Padding extra para que o teclado não cubra o campo */
@@ -21437,7 +21441,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (data.weight && data.height) {
       derived.imc = +(data.weight / Math.pow(data.height / 100, 2)).toFixed(1);
       const htIn = data.height / 2.54;
-      derived.pesoIdeal = +(50 + 2.3 * (htIn - 60)).toFixed(1); // Devine Masc (default)
+      /* BUILD 374 PATCH A: Devine sex-aware — 50 kg masc / 45.5 kg fem
+         data.sex é preenchido por hmFixarDados() via window.hmPatientState */
+      const _isMasc = (data.sex || 'M') !== 'F';
+      derived.pesoIdeal = +((_isMasc ? 50 : 45.5) + 2.3 * (htIn - 60)).toFixed(1);
       derived.bsa = +(Math.sqrt((data.weight * data.height) / 3600)).toFixed(2);
     }
     return derived;
@@ -22901,15 +22908,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── BUILD 372 PATCH 2b (runtime): reforça touchend/mousedown via JS
      para garantir interceptação mesmo em WebViews que ignoram atributos ── */
+  /* ── BUILD 374 PATCH B: _hmFixBtnTouchGuard com flag de lock ──
+     Garante EXATAMENTE 1 disparo por intenção do usuário, qualquer env.
+     touchend + mousedown interceptam antes do blur do teclado iOS;
+     _fixLock(300ms) bloqueia re-entradas (onclick residual, duplo-tap).
+     onclick no HTML fica como fallback para desktop sem touch.         */
   (function _hmFixBtnTouchGuard() {
     var btn = document.getElementById('hm-fix-btn');
     if (!btn) return;
+    var _fixLock = false;
     function _fireFixar(e) {
-      /* Só dispara se não foi acionado por click já processado */
+      if (_fixLock) { e.preventDefault(); return; }
+      _fixLock = true;
       e.preventDefault();
       if (typeof window.hmFixarDados === 'function') window.hmFixarDados();
+      setTimeout(function() { _fixLock = false; }, 300);
     }
     btn.addEventListener('touchend',  _fireFixar, { passive: false });
+    /* mousedown: intercepta em desktop antes que onclick duplique */
     btn.addEventListener('mousedown', _fireFixar, { passive: false });
   })();
 
@@ -23281,59 +23297,59 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/interacoes.js?v=372"></script>
-<script src="database/antimicrobianos.js?v=372"></script>
-<script src="database/psicofarmacos.js?v=372"></script>
-<script src="database/analgesicos.js?v=372"></script>
-<script src="database/anticoag.js?v=372"></script>
-<script src="database/cardio.js?v=372"></script>
-<script src="database/endocrino.js?v=372"></script>
-<script src="database/gastro.js?v=372"></script>
-<script src="database/gastro_imuno.js?v=372"></script>
-<script src="database/imuno_corticoide.js?v=372"></script>
-<script src="database/endocrino_glp1.js?v=372"></script>
-<script src="database/infusoes.js?v=372"></script>
-<script src="database/nefro.js?v=372"></script>
-<script src="database/neuro.js?v=372"></script>
-<script src="database/obesidade.js?v=372"></script>
-<script src="database/pneumo.js?v=372"></script>
-<script src="database/psiquiatria.js?v=372"></script>
-<script src="database/reumatologia.js?v=372"></script>
-<script src="database/emergencia.js?v=372"></script>
-<script src="database/infectologia.js?v=372"></script>
-<script src="database/sedacao.js?v=372"></script>
-<script src="database/hematologia.js?v=372"></script>
-<script src="database/gastroenterologia.js?v=372"></script>
-<script src="database/cardiologia.js?v=372"></script>
-<script src="database/analgesia_opioides.js?v=372"></script>
-<script src="database/prescricoes.js?v=372" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/interacoes.js?v=374"></script>
+<script src="database/antimicrobianos.js?v=374"></script>
+<script src="database/psicofarmacos.js?v=374"></script>
+<script src="database/analgesicos.js?v=374"></script>
+<script src="database/anticoag.js?v=374"></script>
+<script src="database/cardio.js?v=374"></script>
+<script src="database/endocrino.js?v=374"></script>
+<script src="database/gastro.js?v=374"></script>
+<script src="database/gastro_imuno.js?v=374"></script>
+<script src="database/imuno_corticoide.js?v=374"></script>
+<script src="database/endocrino_glp1.js?v=374"></script>
+<script src="database/infusoes.js?v=374"></script>
+<script src="database/nefro.js?v=374"></script>
+<script src="database/neuro.js?v=374"></script>
+<script src="database/obesidade.js?v=374"></script>
+<script src="database/pneumo.js?v=374"></script>
+<script src="database/psiquiatria.js?v=374"></script>
+<script src="database/reumatologia.js?v=374"></script>
+<script src="database/emergencia.js?v=374"></script>
+<script src="database/infectologia.js?v=374"></script>
+<script src="database/sedacao.js?v=374"></script>
+<script src="database/hematologia.js?v=374"></script>
+<script src="database/gastroenterologia.js?v=374"></script>
+<script src="database/cardiologia.js?v=374"></script>
+<script src="database/analgesia_opioides.js?v=374"></script>
+<script src="database/prescricoes.js?v=374" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=372"></script>
+<script defer src="js/medcases-ux-v2.js?v=374"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=372"></script>
+<script defer src="js/hub-accordion.js?v=374"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=372"></script>
+<script defer src="js/build240b-accordion-fix.js?v=374"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=372"></script>
+<script defer src="js/calculator-overlay.js?v=374"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=372"></script>
+<script defer src="js/category-pills.js?v=374"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=372"></script>
+<script defer src="js/elec-calc.js?v=374"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=372"></script>
+<script defer src="js/deeplink-router.js?v=374"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=372"></script>
+<script defer src="js/build272-reactive-engine.js?v=374"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=372"></script>
+<script defer src="js/build283-accessory-bar.js?v=374"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
