@@ -586,19 +586,207 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
         warning: { pt: 'NÃO PREVINE TODAS, MAS ABORTA: O Erenumabe não é um analgésico e pode demorar 2 a 3 meses de injeções para reduzir a inflamação de base do cérebro. Mas os pacientes migram de 15 dias de dor para 2 dias de dor ao mês. E, diferente dos Triptanos, o Erenumabe NÃO CONTRAI artérias e NUNCA CAUSA ISQUEMIA, sendo maravilhoso para idosos com enxaqueca.', es: 'NO PREVIENE TODAS: Puede tardar 2 a 3 meses en reducir la inflamación de base del cerebro. Pero los pacientes migran de 15 días de dolor a 2 días al mes. Y a diferencia de Triptanos, NO CONTRAE arterias y NUNCA CAUSA ISQUEMIA.' }
       }
+    },
+
+    /* ── BUILD 398 — Anti-CGRP Monoclonais adicionais + Gepantos Orais ── */
+
+    /* ── FREMANEZUMABE ──────────────────────────────────────────────────── */
+    "fremanezumabe": {
+      id: 'fremanezumabe',
+      name: { pt: 'Fremanezumabe', es: 'Fremanezumab' },
+      category: 'neurologia',
+      class: { pt: 'Anticorpo Monoclonal (Antagonista do Ligante CGRP)', es: 'Anticuerpo Monoclonal (Antagonista del Ligando CGRP)' },
+      indications: {
+        pt: ['Profilaxia da enxaqueca (crônica e episódica) em adultos com 4 ou mais dias de dor por mês'],
+        es: ['Profilaxis de la migraña (crónica y episódica) en adultos con 4 o más días de dolor al mes']
+      },
+      commercialNames: { br: ['Ajovy'], ar: ['Ajovy'] },
+      presentation: { pt: ['Seringa ou caneta preenchida SC 225 mg/1,5 mL'], es: ['Jeringa o pluma prellenada SC 225 mg/1,5 mL'] },
+      mechanism: {
+        pt: 'Diferente do Erenumabe (que tampa o receptor no cérebro), o Fremanezumabe é um "caçador". Ele patrulha o sangue e se liga fisicamente à própria molécula do CGRP (o peptídeo que causa a dor) antes que ela consiga alcançar o receptor. Neutraliza a inflamação e a dilatação craniana sem contrair ativamente nenhum vaso sanguíneo, evitando isquemia cardíaca.',
+        es: 'A diferencia del Erenumab (que tapa el receptor), el Fremanezumab es un "cazador". Patrulla la sangre y se une físicamente a la propia molécula del CGRP antes de que alcance el receptor. Neutraliza la inflamación sin contraer ningún vaso sanguíneo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Regime Mensal: 225 mg Subcutâneo 1 vez ao mês. Regime Trimestral: 675 mg (3 injeções de 225 mg simultâneas no mesmo dia) a cada 3 meses.',
+          es: 'Régimen Mensual: 225 mg Subcutáneo 1 vez al mes. Régimen Trimestral: 675 mg (3 inyecciones simultáneas) cada 3 meses.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Injeção Subcutânea no abdome, coxa ou braço. O diferencial Trimestral permite que o paciente esqueça o tratamento por 90 dias.'], es: ['Inyección Subcutánea en abdomen, muslo o brazo. El diferencial Trimestral permite 90 días sin pensar en el tratamiento.'] },
+      renalAdjustment: { required: false, message: { pt: 'Degradação proteolítica, não sofre acúmulo renal.', es: 'Degradación proteolítica, no sufre acúmulo renal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não requer ajuste (não passa pelo sistema citocromo P450).', es: 'No requiere ajuste (no pasa por sistema citocromo P450).' } },
+      commonAdverseEffects: { pt: ['Reação no local da injeção (eritema, dor, inchaço — em até 40% dos pacientes)'], es: ['Reacción en el sitio de inyección (eritema, dolor, hinchazón — en hasta 40% de los pacientes)'] },
+      dangerousAdverseEffects: { pt: ['Reações de hipersensibilidade sistêmica (Anafilaxia rara)'], es: ['Reacciones de hipersensibilidad sistémica (Anafilaxia rara)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida ao fremanezumabe'], es: ['Hipersensibilidad conocida al fremanezumab'] },
+        relative: { pt: ['Gravidez (evitar — CGRP regula vasodilatação feto-placentária)'], es: ['Embarazo (evitar — CGRP regula vasodilatación feto-placentaria)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A IMUNIDADE DO FÍGADO: O maior triunfo dos imunobiológicos como o Ajovy é que são proteínas, não compostos químicos. O paciente pode tomar antibióticos, anticonvulsivantes ou pílulas de câncer sem que nenhum deles interfira no preventivo da enxaqueca.', es: 'LA INMUNIDAD DEL HÍGADO: Son proteínas, no compuestos químicos. El paciente puede tomar antibióticos o anticonvulsivantes sin que interfieran con el preventivo de la migraña.' }
+      }
+    },
+
+    /* ── GALCANEZUMABE ──────────────────────────────────────────────────── */
+    "galcanezumabe": {
+      id: 'galcanezumabe',
+      name: { pt: 'Galcanezumabe', es: 'Galcanezumab' },
+      category: 'neurologia',
+      class: { pt: 'Anticorpo Monoclonal (Antagonista do Ligante CGRP)', es: 'Anticuerpo Monoclonal (Antagonista del Ligando CGRP)' },
+      indications: {
+        pt: ['Profilaxia da Enxaqueca (crônica e episódica)', 'Profilaxia da Cefaleia em Salvas Episódica (Cluster Headache)'],
+        es: ['Profilaxis de la Migraña (crónica y episódica)', 'Profilaxis de la Cefalea en Racimos Episódica (Cluster Headache)']
+      },
+      commercialNames: { br: ['Emgality'], ar: ['Emgality'] },
+      presentation: { pt: ['Caneta/Seringa preenchida SC 120 mg', 'Seringa preenchida SC 100 mg (específica para Cefaleia em Salvas)'], es: ['Pluma/Jeringa prellenada SC 120 mg', 'Jeringa prellenada SC 100 mg (para Racimos)'] },
+      mechanism: {
+        pt: 'Igual ao Fremanezumabe: captura e inativa a molécula de CGRP circulante. Seu grande destaque em estudos foi a aprovação como a primeira droga focada na Cefaleia em Salvas (a "Dor do Suicídio"), que é mediada por altíssimas cargas de CGRP liberadas pelo trigêmeo atrás dos olhos.',
+        es: 'Al igual que el Fremanezumab, captura e inactiva la molécula de CGRP. Su gran destaque fue la aprobación como la primera droga enfocada en la Cefalea en Racimos ("Dolor del Suicidio"), mediada por altísimas cargas de CGRP detrás del ojo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Enxaqueca: Dose de ataque 240 mg (2 injeções de 120 mg) no mês 1, depois 120 mg SC/mês. Cefaleia em Salvas: 300 mg (3 injeções de 100 mg) no início do período, repetindo mensalmente.',
+          es: 'Migraña: Dosis de ataque 240 mg (2 inyecciones) en mes 1, luego 120 mg SC/mes. Racimos: 300 mg (3 inyecciones de 100 mg) al inicio, repitiendo mensualmente.'
+        },
+        pediatric: { pt: 'Uso não recomendado.', es: 'Uso no recomendado.' }
+      },
+      administration: { pt: ['As injeções de ataque (quando mais de 1 for necessária) devem ser aplicadas em locais anatômicos diferentes.'], es: ['Las inyecciones de ataque deben aplicarse en lugares anatómicos diferentes.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Dor local, vermelhidão e nódulo na área da injeção', 'Vertigem leve'], es: ['Dolor local, enrojecimiento y nódulo en el área', 'Vértigo leve'] },
+      dangerousAdverseEffects: { pt: ['Reação anafilática ou angioedema (Raro)'], es: ['Reacción anafiláctica o angioedema (Raro)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave ao galcanezumabe'], es: ['Hipersensibilidad grave al galcanezumab'] },
+        relative: { pt: ['Sem contraindicações relevantes fora alergias'], es: ['Sin contraindicaciones relevantes fuera de alergias'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ATAQUE INTENSO: Não esqueça que o Galcanezumabe para enxaqueca exige 2 injeções de uma vez só no primeiro mês (Dose de ataque). Se o paciente tomar apenas uma de 120 mg, a droga demorará 3 meses para atingir o nível preventivo eficaz.', es: 'EL ATAQUE INTENSO: El Galcanezumab exige 2 inyecciones de una sola vez en el primer mes. Si toma solo una, tardará 3 meses en alcanzar nivel preventivo eficaz.' }
+      }
+    },
+
+    /* ── EPTINEZUMABE ───────────────────────────────────────────────────── */
+    "eptinezumabe": {
+      id: 'eptinezumabe',
+      name: { pt: 'Eptinezumabe', es: 'Eptinezumab' },
+      category: 'neurologia',
+      class: { pt: 'Anticorpo Monoclonal (Antagonista do Ligante CGRP Endovenoso)', es: 'Anticuerpo Monoclonal (Antagonista del Ligando CGRP Endovenoso)' },
+      indications: {
+        pt: ['Prevenção de enxaqueca episódica e crônica em adultos (especialmente quando os subcutâneos falharam ou quando alívio imediato é crítico)'],
+        es: ['Prevención de migraña episódica y crónica en adultos (especialmente cuando los subcutáneos fallaron o el alivio inmediato es crítico)']
+      },
+      commercialNames: { br: ['Vyepti'], ar: ['Vyepti'] },
+      presentation: { pt: ['Frasco-ampola IV 100 mg/mL'], es: ['Vial IV 100 mg/mL'] },
+      mechanism: {
+        pt: 'A versão endovenosa dos caçadores de CGRP. Por ser aplicado diretamente na veia, sua biodisponibilidade é 100% imediata (os subcutâneos demoram até 10 dias para distribuir-se pelo sangue). Isso significa que, no mesmo dia da infusão, a prevenção da enxaqueca já está ativada. Liga-se ao ligante de CGRP bloqueando a dor.',
+        es: 'La versión endovenosa de los cazadores de CGRP. Al ser aplicado en vena, biodisponibilidad 100% inmediata (los subcutáneos tardan hasta 10 días). El mismo día de la infusión, la prevención ya está activada.'
+      },
+      dose: {
+        adult: {
+          pt: '100 mg por infusão IV a cada 12 SEMANAS (Trimestral). Em casos refratários: 300 mg a cada 12 semanas.',
+          es: '100 mg por infusión IV cada 12 SEMANAS (Trimestral). En casos refractarios: 300 mg cada 12 semanas.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Uso estritamente hospitalar ou em clínica de infusão. Diluído em 100 mL de SF e infundido em 30 minutos.'], es: ['Uso estrictamente hospitalario o en clínica de infusión. Diluido en 100 mL de SF e infundido en 30 minutos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Nasofaringite e reações de infusão locais', 'Fadiga no dia da infusão'], es: ['Nasofaringitis y reacciones de infusión locales', 'Fatiga el día de la infusión'] },
+      dangerousAdverseEffects: { pt: ['Reação severa infusional anafilática (como ocorre com qualquer anticorpo humanizado IV)'], es: ['Reacción severa infusional anafiláctica'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de hipersensibilidade ao eptinezumabe'], es: ['Historial de hipersensibilidad al eptinezumab'] },
+        relative: { pt: ['Uso durante a gravidez não estabelecido (segurança feto-vascular incerta)'], es: ['Uso durante el embarazo no establecido'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A ESCOLHA DO DESESPERO: Quando o paciente com enxaqueca crônica diária está prestes a perder o emprego porque não consegue esperar 3 meses para o Erenumabe/Ajovy agir, a infusão IV de Eptinezumabe é a cartada mestra para um efeito protetor no dia seguinte.', es: 'LA ELECCIÓN DEL DESESPERO: Cuando el paciente no puede esperar 3 meses, la infusión IV es la carta maestra para un efecto protector al día siguiente.' }
+      }
+    },
+
+    /* ── UBROGEPANTA ────────────────────────────────────────────────────── */
+    "ubrogepanta": {
+      id: 'ubrogepanta',
+      name: { pt: 'Ubrogepanta', es: 'Ubrogepant' },
+      category: 'neurologia',
+      class: { pt: 'Antagonista Oral do Receptor de CGRP (Gepanto)', es: 'Antagonista Oral del Receptor de CGRP (Gepanto)' },
+      indications: {
+        pt: ['Tratamento AGUDO de crises de Enxaqueca com ou sem aura (Para abortar a dor, não prevenir)'],
+        es: ['Tratamiento AGUDO de crisis de Migraña con o sin aura (Para abortar el dolor, no prevenir)']
+      },
+      commercialNames: { br: ['Ubrelvy'], ar: ['Ubrelvy'] },
+      presentation: { pt: ['Comprimidos 50 mg e 100 mg'], es: ['Comprimidos 50 mg y 100 mg'] },
+      mechanism: {
+        pt: 'A Revolução Oral "Sem Isquemia". O Ubrogepanta é um inibidor do receptor de CGRP em versão comprimido (pequena molécula, não é anticorpo). Interrompe a cascata de inflamação e dor neurogênica na mesma hora. A glória desta droga: ELA NÃO CAUSA VASOCONSTRIÇÃO. Pacientes que já infartaram ou tiveram AVC e não podiam usar Triptanos, agora podem usar Gepantos com segurança.',
+        es: 'La Revolución Oral "Sin Isquemia". Inhibidor del receptor CGRP en comprimido. NO CAUSA VASOCONSTRICCIÓN. Pacientes infartados o con ACV que no podían usar Triptanos, ahora pueden usar Gepantos con seguridad.'
+      },
+      dose: {
+        adult: {
+          pt: '50 mg a 100 mg via oral no início da crise. Segunda dose possível 2 horas depois (Máximo 200 mg/dia).',
+          es: '50 mg a 100 mg vía oral al inicio de la crisis. Segunda dosis posible tras 2 horas (Máximo 200 mg/día).'
+        },
+        pediatric: { pt: 'Não aprovado para uso pediátrico.', es: 'No aprobado para uso pediátrico.' }
+      },
+      administration: { pt: ['Uso oral sob demanda. Diferente dos triptanos, preserva a segurança coronariana.'], es: ['Uso oral a demanda. A diferencia de los triptanos, preserva la seguridad coronaria.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr < 30 mL/min: dose máxima 50 mg.', es: 'ClCr < 30 mL/min: dosis máxima 50 mg.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Child-Pugh C (cirrose grave): dose máxima 50 mg.', es: 'Child-Pugh C (cirrosis grave): dosis máxima 50 mg.' } },
+      commonAdverseEffects: { pt: ['Náuseas', 'Sonolência e Boca Seca'], es: ['Náuseas', 'Somnolencia y Boca Seca'] },
+      dangerousAdverseEffects: { pt: ['Hepatotoxicidade em raros casos (problema de classe dos gepantos antigos, em observação contínua)'], es: ['Hepatotoxicidad en raros casos (problema de los gepantos antiguos, en observación continua)'] },
+      contraindications: {
+        absolute: { pt: ['Uso associado com inibidores potentes do CYP3A4 (Cetoconazol, Claritromicina, Ritonavir)'], es: ['Uso asociado con inhibidores potentes del CYP3A4 (Ketoconazol, Claritromicina, Ritonavir)'] },
+        relative: { pt: ['Uso frequente (mais de 8 vezes ao mês — não serve para profilaxia e pode sobrecarregar o fígado)'], es: ['Uso frecuente (más de 8 veces al mes — no sirve para profilaxis y puede sobrecargar el hígado)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O RETORNO DO FÍGADO: Diferente dos anticorpos monoclonais de CGRP (Ajovy/Emgality) que são imunes a interações, os Gepantos em pílula VOLTAM a depender fortemente da via CYP3A4 do fígado e interagem com dezenas de outros remédios.', es: 'EL RETORNO DEL HÍGADO: A diferencia de los anticuerpos monoclonales, los Gepantos en píldora VUELVEN a depender del CYP3A4 e interactúan con decenas de remedios.' }
+      }
+    },
+
+    /* ── RIMEGEPANTA ────────────────────────────────────────────────────── */
+    "rimegepanta": {
+      id: 'rimegepanta',
+      name: { pt: 'Rimegepanta', es: 'Rimegepant' },
+      category: 'neurologia',
+      class: { pt: 'Antagonista Oral do Receptor de CGRP (Gepanto — Dupla Função)', es: 'Antagonista Oral del Receptor de CGRP (Gepanto — Doble Función)' },
+      indications: {
+        pt: ['Tratamento AGUDO da enxaqueca (aborto de crise)', 'Profilaxia (PREVENÇÃO) da enxaqueca episódica (dias alternados)'],
+        es: ['Tratamiento AGUDO de la migraña (aborto de crisis)', 'Profilaxis (PREVENCIÓN) de la migraña episódica (días alternos)']
+      },
+      commercialNames: { br: ['Nurtec ODT', 'Vydura'], ar: ['Nurtec ODT'] },
+      presentation: { pt: ['Comprimidos de desintegração oral (ODT) 75 mg'], es: ['Comprimidos de desintegración oral (ODT) 75 mg'] },
+      mechanism: {
+        pt: 'O "Coringa" moderno. Primeiro medicamento oral do mundo aprovado TANTO para tratar a dor na hora da crise QUANTO para tomar em dias alternados para evitar que a dor aconteça. Bloqueia o receptor de CGRP, não restringe os vasos sanguíneos (Zero isquemia) e desfaz a neuroinflamação meníngea imediatamente.',
+        es: 'El "Comodín" moderno. Primer medicamento oral aprobado TANTO para tratar la crisis COMO para tomar a días alternos para prevenir. Bloquea el receptor CGRP, no restringe vasos (Cero isquemia) y deshace la neuroinflamación.'
+      },
+      dose: {
+        adult: {
+          pt: 'Tratamento Agudo (Crise): 75 mg (1 comprimido ODT) dose ÚNICA em 24h. Profilaxia: 75 mg a CADA 48 HORAS (dia sim, dia não).',
+          es: 'Tratamiento Agudo (Crisis): 75 mg (1 comprimido ODT) dosis ÚNICA en 24h. Profilaxis: 75 mg CADA 48 HORAS (día sí, día no).'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Comprimido ODT: colocar sobre a língua e deixar derreter, sem precisar beber água. Facilita uso imediato no trânsito ou no trabalho.'], es: ['Comprimido ODT: colocar sobre la lengua y dejar derretir, sin necesidad de beber agua.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar em doença renal terminal (ClCr < 15 mL/min).', es: 'Evitar en enfermedad renal terminal (ClCr < 15 mL/min).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em insuficiência hepática grave (Child-Pugh C).', es: 'Evitar en insuficiencia hepática grave (Child-Pugh C).' } },
+      commonAdverseEffects: { pt: ['Náuseas', 'Dor abdominal e queimação', 'Infecção urinária (relatada em ensaios de uso contínuo)'], es: ['Náuseas', 'Dolor abdominal y quemazón', 'Infección urinaria (relatada en ensayos de uso continuo)'] },
+      dangerousAdverseEffects: { pt: ['Hipersensibilidade grave (erupção cutânea, dispneia) — pode ocorrer até dias após a dose'], es: ['Hipersensibilidad grave (erupción cutánea, disnea) — puede ocurrir hasta días después de la dosis'] },
+      contraindications: {
+        absolute: { pt: ['Associação com inibidores fortes do CYP3A4', 'Uso como prevenção em pacientes que já tomam inibidores de CGRP injetáveis (saturação de alvo)'], es: ['Asociación con inhibidores fuertes del CYP3A4', 'Uso como prevención en pacientes que ya usan inyectables de CGRP (saturación de blanco)'] },
+        relative: { pt: ['Indutores fortes do CYP3A4 (Rifampicina/Carbamazepina farão o Nurtec falhar completamente)'], es: ['Inductores fuertes del CYP3A4 (Rifampicina/Carbamazepina harán fallar el Nurtec completamente)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O FIM DOS TRIPTANOS? Para pacientes com alto risco cardiovascular, o Nurtec ODT e o Ubrelvy substituíram os Triptanos como primeira linha, eliminando o medo de "ter um infarto tratando a dor de cabeça".', es: '¿EL FIN DE LOS TRIPTANOS? Para pacientes con alto riesgo cardiovascular, Nurtec y Ubrelvy sustituyeron a los Triptanos, eliminando el miedo de sufrir infarto tratando el dolor.' }
+      }
     }
 
-  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 397
-         BUILD 396 — Triptanos (Antimigranosos):
-                     Sumatriptana (Imigran/Sumax) — Pioneiro, 5-HT1B/1D
-                     Zolmitriptana (Zomig) — 2ª Geração, lipofílico, ODT
-                     Rizatriptana (Maxalt) — Ultra-Rápido, ODT, ⚠ Propranolol
-                     Naratriptana (Naramig) — Ação Lenta, Gentil, Menstrual
-                     Eletriptana (Relpax) — Potente, ⚠ CYP3A4, refratários
-         BUILD 397 — Antimigranosos/Ergot (continuação):
-                     Almotriptana (Almogran) — 2ª Geração, baixo colateral
-                     Frovatriptana — Ação Ultra-Longa 26h, mini-profilaxia menstrual
-                     Ergotamina (Cefalium/Tonopan) — ⚠ Ergotismo, highAlert
-                     Di-hidroergotamina (DHE) — Hospitalar, Status Migrainosus, highAlert
-                     Erenumabe (Pasurta/Aimovig) — Anti-CGRP, profilaxia crônica */
+  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 398
+         BUILD 396 — Triptanos: Sumatriptana, Zolmitriptana, Rizatriptana, Naratriptana, Eletriptana
+         BUILD 397 — Triptanos+Ergot: Almotriptana, Frovatriptana, Ergotamina, DHE, Erenumabe
+         BUILD 398 — Anti-CGRP + Gepantos:
+                     Fremanezumabe (Ajovy) — Caçador CGRP, SC mensal/trimestral
+                     Galcanezumabe (Emgality) — Caçador CGRP, Cluster Headache
+                     Eptinezumabe (Vyepti) — IV trimestral, efeito imediato
+                     Ubrogepanta (Ubrelvy) — Gepanto oral agudo, ⚠ CYP3A4
+                     Rimegepanta (Nurtec ODT) — Gepanto dupla-função, ⚠ CYP3A4 */
 })();

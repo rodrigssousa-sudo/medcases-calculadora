@@ -281,6 +281,19 @@ const DRUG_ALIASES = {
   "aimovig":                            "erenumabe",
   "pasurta":                            "erenumabe",
 
+  /* BUILD 398 — Anti-CGRP adicionais (Monoclonais) + Gepantos Orais: aliases */
+  "fremanezumab":                       "fremanezumabe",
+  "ajovy":                              "fremanezumabe",
+  "galcanezumab":                       "galcanezumabe",
+  "emgality":                           "galcanezumabe",
+  "eptinezumab":                        "eptinezumabe",
+  "vyepti":                             "eptinezumabe",
+  "ubrogepant":                         "ubrogepanta",
+  "ubrelvy":                            "ubrogepanta",
+  "rimegepant":                         "rimegepanta",
+  "nurtec":                             "rimegepanta",
+  "vydura":                             "rimegepanta",
+
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4: aliases */
   "nintedanib":                         "nintedanibe",
   "ofev":                               "nintedanibe",
@@ -806,9 +819,15 @@ const DRUG_CLASSES = {
   ],
 
   /* Anti-CGRP (Anticorpos Monoclonais) — profilaxia de enxaqueca crônica.
-     Classe nova; não compartilham das interações dos triptanos. */
+     Não utilizam CYP450; virtualmente sem interações medicamentosas. */
   "$classe_anticgrp_monoclonal": [
-    "erenumabe"
+    "erenumabe", "fremanezumabe", "galcanezumabe", "eptinezumabe"
+  ],
+
+  /* Gepantos Orais — antagonistas orais do receptor CGRP (pequena molécula).
+     Dependem do CYP3A4 hepático → interações com inibidores/indutores. */
+  "$classe_gepantos_orais": [
+    "ubrogepanta", "rimegepanta"
   ],
 
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4 */
@@ -1911,6 +1930,55 @@ const INTERACOES_DB = {
       conduta: {
         pt: "CONTRAINDICAÇÃO ABSOLUTA. Intervalo mínimo de 24 horas entre qualquer ergotamínico e qualquer triptano — em qualquer ordem. Documentar no prontuário.",
         es: "CONTRAINDICACIÓN ABSOLUTA. Intervalo mínimo de 24 horas entre cualquier ergotamínico y cualquier triptano — en cualquier orden. Documentar en el expediente."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 398 — BLOCO MOTOR DE INTERAÇÕES: Profilaxia Monoclonal CGRP + Gepantos Orais
+     Erenumabe, Fremanezumabe, Galcanezumabe, Eptinezumabe, Ubrogepanta, Rimegepanta
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── ANTICORPOS MONOCLONAIS CGRP — Blindagem Metabólica Biológica ── */
+  "$classe_anticgrp_monoclonal": {
+    "qualquer_droga_cyp450": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "A BLINDAGEM METABÓLICA BIOLÓGICA. Os anticorpos monoclonais Anti-CGRP (Erenumabe, Galcanezumabe, Fremanezumabe, Eptinezumabe) são macromoléculas de proteína degradadas pelo sistema reticuloendotelial e macrófagos, não utilizando as vias hepáticas CYP450 nem a via renal para excreção. Eles virtualmente não interagem com medicamentos orais comuns.",
+        es: "EL BLINDAJE METABÓLICO BIOLÓGICO. Los anticuerpos monoclonales Anti-CGRP son macromoléculas degradadas por macrófagos, no utilizan vías hepáticas CYP450 ni renales. Virtualmente no interactúan con medicamentos orales comunes."
+      },
+      conduta: {
+        pt: "Livres para associação segura com Triptanos, Anticonvulsivantes, Antidepressivos e Analgésicos. Não há necessidade de ajuste de dose de outras medicações profiláticas que o paciente já utilize.",
+        es: "Libres para asociación segura con Triptanos, Anticonvulsivantes, Antidepresivos y Analgésicos. No hay necesidad de ajustar dosis de otras medicaciones profilácticas."
+      }
+    }
+  },
+
+  /* ── GEPANTOS ORAIS — Calcanhar de Aquiles: CYP3A4 ── */
+  "$classe_gepantos_orais": {
+    "$classe_inibidores_potentes_cyp3a4": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INTOXICAÇÃO HEPÁTICA (O Calcanhar de Aquiles dos Gepantos). Diferente dos anticorpos em seringa, o Ubrogepanta e o Rimegepanta são moléculas orais ativamente oxidadas pelo citocromo CYP3A4 no fígado. Se o paciente contrair uma infecção e ingerir Claritromicina ou Itraconazol, o CYP3A4 trava e as concentrações do Gepanto no sangue multiplicam exponencialmente, causando sedação severa e risco de hepatotoxicidade fulminante.",
+        es: "INTOXICACIÓN HEPÁTICA (El Talón de Aquiles de los Gepantos). A diferencia de los anticuerpos, Ubrogepant y Rimegepant son moléculas orales oxidadas por el CYP3A4. Claritromicina o Itraconazol traban el CYP3A4 y las concentraciones se multiplican, causando hepatotoxicidad fulminante."
+      },
+      conduta: {
+        pt: "O uso simultâneo de Rimegepanta/Ubrogepanta com inibidores fortes do CYP3A4 é formalmente CONTRAINDICADO. Suspender os Gepantos se esses antibióticos forem prescritos; migrar para terapia injetável (Erenumabe/Fremanezumabe) ou Triptanos se o risco CV permitir.",
+        es: "El uso simultáneo con inhibidores fuertes del CYP3A4 está formalmente CONTRAINDICADO. Suspender Gepantos si se prescriben estos antibióticos; migrar a terapia inyectable o Triptanos si el riesgo CV lo permite."
+      }
+    },
+    "$classe_indutores_fortes_cyp3a4": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ANULAÇÃO TERAPÊUTICA (Falha Completa). Indutores hepáticos agressivos como Fenitoína, Carbamazepina (frequentemente usados em Neurologia) e Rifampicina aceleram o CYP3A4 ao limite. Destroem o Ubrogepanta e o Rimegepanta no estômago e fígado antes que consigam chegar ao cérebro. O remédio falhará completamente em curar ou prevenir a enxaqueca.",
+        es: "ANULACIÓN TERAPÉUTICA (Fallo Completo). Inductores agresivos como Fenitoína, Carbamazepina y Rifampicina aceleran el CYP3A4. Destruyen el Ubrogepant antes de llegar al cerebro. El remedio fallará completamente."
+      },
+      conduta: {
+        pt: "Evitar a prescrição de Gepantos para pacientes epilépticos usando Carbamazepina/Fenitoína. Migrar esses pacientes para terapias injetáveis Anti-CGRP (Ajovy/Emgality) ou bloqueadores beta/Topiramato para a profilaxia.",
+        es: "Evitar Gepantos en epilépticos usando Carbamazepina/Fenitoína. Migrar a terapias inyectables Anti-CGRP o betabloqueadores/Topiramato para profilaxis."
       }
     }
   },
