@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=393" />
-  <link rel="stylesheet" href="css/build233.css?v=393" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=393" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=393" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=393" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=393" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=393" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=394" />
+  <link rel="stylesheet" href="css/build233.css?v=394" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=394" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=394" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=394" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=394" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=394" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=393" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=394" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=393" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=394" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=393" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=394" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=393" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=394" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=393" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=394" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=393" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=394" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=393" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=394" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=393" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=394" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -21574,8 +21574,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       if (anchor) {
-        /* Injeção ideal: elementoClicado.after(cardHTML) — BUILD 366 */
-        anchor.after(cardNode);
+        /* BUILD 394 PATCH C — insertAdjacentElement('afterend') obrigatório:
+           expande o card suavemente logo abaixo do item clicado, empurrando
+           os fármacos seguintes para baixo e mantendo o contexto visual exato.
+           Substitui anchor.after() para garantia máxima de compatibilidade
+           cross-browser (Safari iOS, Android WebView, Chrome mobile). */
+        anchor.insertAdjacentElement('afterend', cardNode);
       } else {
         /* Fallback: usa o container estático #hm-drug-result */
         const fallback = document.getElementById('hm-drug-result');
@@ -21589,7 +21593,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } catch(injErr) {
       /* Fallback de emergência: insere no body se anchor falhou */
-      console.warn('[hmShowInlineResult] anchor.after falhou, usando fallback body:', injErr.message);
+      console.warn('[hmShowInlineResult] insertAdjacentElement falhou, usando fallback body:', injErr.message);
       try {
         const fb = document.getElementById('hm-drug-result') || document.getElementById('hm-drug-list');
         if (fb) { fb.appendChild(cardNode); }
@@ -23388,14 +23392,12 @@ document.addEventListener('DOMContentLoaded', () => {
    imediatamente após o fechamento do DOMContentLoaded, com
    reintentos a cada 100ms por até 6s (BUILD 370: ampliado de 3s).
    ─────────────────────────────────────────────────────────────
-   Por que fora do DOMContentLoaded?
-   Se qualquer linha anterior no DOMContentLoaded throw um erro
-   não capturado (incluindo template literals com propriedades
-   nulas), o callback para imediatamente e as funções definidas
-   depois (como hmShowInlineResult na L~20986) nunca chegam ao
-   window. Este bloco roda num contexto independente e aguarda
-   até as funções aparecerem no window, re-exportando-as com
-   seus aliases de onclick.
+   BUILD 394 PATCH D: timeout não injeta mais stubs vazios.
+   Funções ausentes ao timeout são apenas logadas — NUNCA
+   sobrescritas por function(){} que matam silenciosamente a
+   funcionalidade no mobile. Stubs vazios eram a causa raiz do
+   "[BUILD 378] Safety-net timeout (6s): stubs injetados para
+   hmOpenDrug..." capturado nos logs DevTools mobile.
 ═══════════════════════════════════════════════════════════════ */
 (function _hmBootSafetyNet() {
   'use strict';
@@ -23442,17 +23444,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (_attempts < _maxAttempts) {
       setTimeout(_checkAndExport, 100);
     } else {
-      /* Timeout: injeta stubs seguros para evitar ReferenceError */
-      missing.forEach(function(name) {
-        if (typeof window[name] !== 'function') {
-          window[name] = function() {
-            console.warn('[BUILD 368] Stub chamado para ' + name + ' — função original não encontrada. Recarregue o app.');
-          };
-        }
-      });
+      /* BUILD 394 PATCH D — EXTINÇÃO DOS STUBS DE TIMEOUT MOBILE:
+         O safety-net anterior sobrescrevia funções ausentes com stubs vazios
+         (function(){}), matando silenciosamente hmOpenDrug, hmShowInlineResult, etc.
+         no mobile quando o DOMContentLoaded atrasava > 6s.
+         NOVA CONDUTA: NUNCA sobrescrever — apenas logar as funções ainda ausentes
+         e forçar _appBootComplete para desbloquear o reactive engine.
+         Se uma função ainda estiver ausente aqui, é bug de ordem de carregamento
+         a ser corrigido na fonte, não mascarado com stub vazio. */
+      if (missing.length > 0) {
+        console.warn('[BUILD 394] Safety-net timeout (6s): funções ainda não registradas: ' + missing.join(', ')
+          + ' — NÃO foram substituídas por stubs. Verifique a ordem de carregamento dos scripts.');
+      }
       /* Força boot complete para desbloquear reactive engine */
       window._appBootComplete = true;
-      console.warn('[BUILD 370] Safety-net timeout (6s): stubs injetados para ' + missing.join(', '));
     }
   }
 
@@ -23722,8 +23727,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=393"></script>
-<script src="database/analgesicos.js?v=393"></script>
+<script src="database/antimicrobianos.js?v=394"></script>
+<script src="database/analgesicos.js?v=394"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -23837,9 +23842,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=393', 'psico');
-    _loadScript('database/cardio.js?v=393',        'cardio');
-    _loadScript('database/interacoes.js?v=393',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=394', 'psico');
+    _loadScript('database/cardio.js?v=394',        'cardio');
+    _loadScript('database/interacoes.js?v=394',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -23849,50 +23854,50 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=393"></script>
-<script src="database/gastro.js?v=393"></script>
-<script src="database/gastro_imuno.js?v=393"></script>
-<script src="database/imuno_corticoide.js?v=393"></script>
-<script src="database/endocrino_glp1.js?v=393"></script>
-<script src="database/infusoes.js?v=393"></script>
-<script src="database/emergencia.js?v=393"></script>
-<script src="database/infectologia.js?v=393"></script>
-<script src="database/sedacao.js?v=393"></script>
-<script src="database/hematologia.js?v=393"></script>
-<script src="database/pneumologia.js?v=393"></script>
-<script src="database/gastroenterologia.js?v=393"></script>
-<script src="database/cardiologia.js?v=393"></script>
-<script src="database/analgesia_opioides.js?v=393"></script>
-<script src="database/alergia_imunologia.js?v=393"></script>
-<script src="database/pneumologia_otorrino.js?v=393"></script>
-<script src="database/prescricoes.js?v=393" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=394"></script>
+<script src="database/gastro.js?v=394"></script>
+<script src="database/gastro_imuno.js?v=394"></script>
+<script src="database/imuno_corticoide.js?v=394"></script>
+<script src="database/endocrino_glp1.js?v=394"></script>
+<script src="database/infusoes.js?v=394"></script>
+<script src="database/emergencia.js?v=394"></script>
+<script src="database/infectologia.js?v=394"></script>
+<script src="database/sedacao.js?v=394"></script>
+<script src="database/hematologia.js?v=394"></script>
+<script src="database/pneumologia.js?v=394"></script>
+<script src="database/gastroenterologia.js?v=394"></script>
+<script src="database/cardiologia.js?v=394"></script>
+<script src="database/analgesia_opioides.js?v=394"></script>
+<script src="database/alergia_imunologia.js?v=394"></script>
+<script src="database/pneumologia_otorrino.js?v=394"></script>
+<script src="database/prescricoes.js?v=394" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=393"></script>
+<script defer src="js/medcases-ux-v2.js?v=394"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=393"></script>
+<script defer src="js/hub-accordion.js?v=394"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=393"></script>
+<script defer src="js/build240b-accordion-fix.js?v=394"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=393"></script>
+<script defer src="js/calculator-overlay.js?v=394"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=393"></script>
+<script defer src="js/category-pills.js?v=394"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=393"></script>
+<script defer src="js/elec-calc.js?v=394"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=393"></script>
+<script defer src="js/deeplink-router.js?v=394"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=393"></script>
+<script defer src="js/build272-reactive-engine.js?v=394"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=393"></script>
+<script defer src="js/build283-accessory-bar.js?v=394"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
