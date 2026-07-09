@@ -215,7 +215,11 @@
         var hid = $('hm-clcr');
         var v = hid ? parseFloat(hid.value) : NaN;
         return isNaN(v) ? null : v;
-      })()
+      })(),
+      /* BUILD 382 PATCH B — real-time sex for Devine formula (no Fixar needed) */
+      sex: (document.getElementById('hm-btn-female') &&
+            document.getElementById('hm-btn-female').classList.contains('hm-sex-btn--active'))
+           ? 'F' : 'M'
     };
 
     var derived = (typeof window._hmComputeDerived === 'function') ? window._hmComputeDerived(data) : {};

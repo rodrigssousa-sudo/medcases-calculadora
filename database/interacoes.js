@@ -689,15 +689,15 @@ const INTERACOES_DB = {
   ───────────────────────────────────────────────────────────── */
   "$classe_antiagregantes": {
     "$classe_antiagregantes": {
-      gravidade: "moderada",
-      scoreClinico: 3,
+      gravidade: "alta",
+      scoreClinico: 4,
       descricao: {
-        pt: "Associação de dois ou mais antiagregantes plaquetários (ex.: AAS + Clopidogrel — Dupla Terapia Antiagregante/DAPT) aumenta o risco de sangramento (GI, intracraniano, em sítio cirúrgico) de forma dose/tempo-dependente. Pode ser uma combinação TERAPÊUTICA INTENCIONAL (ex.: pós-SCA, pós-stent coronariano), mas exige monitorização e conduta explícita — não deve ser tratada como interação neutra/silenciosa.",
-        es: "La asociación de dos o más antiagregantes plaquetarios (ej.: AAS + Clopidogrel — Terapia Antiagregante Dual/DAPT) aumenta el riesgo de sangrado (GI, intracraneal, en sitio quirúrgico) de forma dosis/tiempo-dependiente. Puede ser una combinación TERAPÉUTICA INTENCIONAL (ej.: post-SCA, post-stent coronario), pero exige monitorización y conducta explícita — no debe tratarse como interacción neutra/silenciosa."
+        pt: "Risco somatório de sangramento gastrointestinal e sistêmico severo. A associação de dois ou mais antiagregantes plaquetários (ex.: AAS + Clopidogrel — Dupla Terapia Antiagregante/DAPT) aumenta o risco de sangramento (GI, intracraniano, em sítio cirúrgico) de forma dose/tempo-dependente. Pode ser uma combinação TERAPÊUTICA INTENCIONAL (ex.: pós-SCA, pós-stent coronariano), mas exige monitorização ativa e avaliação de proteção gástrica com IBP — não deve ser tratada como interação neutra/silenciosa.",
+        es: "Riesgo sumatorio de sangrado gastrointestinal y sistémico severo. La asociación de dos o más antiagregantes plaquetarios (ej.: AAS + Clopidogrel — Terapia Antiagregante Dual/DAPT) aumenta el riesgo de sangrado (GI, intracraneal, en sitio quirúrgico) de forma dosis/tiempo-dependiente. Puede ser una combinación TERAPÉUTICA INTENCIONAL (ej.: post-SCA, post-stent coronario), pero exige monitorización activa y evaluación de protección gástrica con IBP — no debe tratarse como interacción neutra/silenciosa."
       },
       conduta: {
-        pt: "Se DAPT intencional (SCA/stent): manter conforme diretriz (geralmente 6-12 meses), com IBP profilático se risco de sangramento GI. Monitorar sinais de sangramento (Hb/Ht, melena, hematúria). Se associação NÃO intencional (ex.: AAS de automedicação + Clopidogrel prescrito): reavaliar indicação e suspender o agente redundante. Avaliar score de risco hemorrágico (ex. HAS-BLED/PRECISE-DAPT) antes de procedimentos invasivos.",
-        es: "Si DAPT intencional (SCA/stent): mantener según guía (generalmente 6-12 meses), con IBP profiláctico si hay riesgo de sangrado GI. Monitorizar signos de sangrado (Hb/Ht, melena, hematuria). Si la asociación NO es intencional (ej.: AAS de automedicación + Clopidogrel prescrito): reevaluar indicación y suspender el agente redundante. Evaluar score de riesgo hemorrágico (ej. HAS-BLED/PRECISE-DAPT) antes de procedimientos invasivos."
+        pt: "Monitorar ativamente e avaliar proteção gástrica com IBP. Se DAPT intencional (SCA/stent): manter conforme diretriz (geralmente 6-12 meses), com IBP profilático obrigatório se risco de sangramento GI. Monitorar sinais de sangramento (Hb/Ht, melena, hematúria). Se associação NÃO intencional (ex.: AAS de automedicação + Clopidogrel prescrito): reavaliar indicação e suspender o agente redundante. Avaliar score de risco hemorrágico (ex. HAS-BLED/PRECISE-DAPT) antes de procedimentos invasivos.",
+        es: "Monitorear activamente y evaluar protección gástrica con IBP. Si DAPT intencional (SCA/stent): mantener según guía (generalmente 6-12 meses), con IBP profiláctico obligatorio si hay riesgo de sangrado GI. Monitorizar signos de sangrado (Hb/Ht, melena, hematuria). Si la asociación NO es intencional (ej.: AAS de automedicación + Clopidogrel prescrito): reevaluar indicación y suspender el agente redundante. Evaluar score de riesgo hemorrágico (ej. HAS-BLED/PRECISE-DAPT) antes de procedimientos invasivos."
       }
     }
   },
@@ -732,11 +732,11 @@ const INTERACOES_DB = {
   ───────────────────────────────────────────────────────────── */
   "$classe_aines": {
     "$classe_aines": {
-      gravidade: "alta",
-      scoreClinico: 4,
+      gravidade: "moderada",
+      scoreClinico: 3,
       descricao: {
-        pt: "O uso concomitante de dois ou mais AINEs (ex.: Ibuprofeno + Diclofenaco, ou AINE de automedicação + AINE prescrito) NÃO amplia o efeito analgésico/anti-inflamatório de forma clinicamente relevante, mas soma os riscos de toxicidade: sangramento gastrointestinal (erosões, úlcera péptica, hemorragia digestiva), lesão renal aguda (especialmente em desidratados, idosos, nefropatas ou em uso de IECA/BRA/diuréticos — 'tríade nefrotóxica') e elevação do risco cardiovascular.",
-        es: "El uso concomitante de dos o más AINEs (ej.: Ibuprofeno + Diclofenaco, o AINE de automedicación + AINE prescrito) NO amplía el efecto analgésico/antiinflamatorio de forma clínicamente relevante, pero suma los riesgos de toxicidad: sangrado gastrointestinal (erosiones, úlcera péptica, hemorragia digestiva), lesión renal aguda (especialmente en deshidratados, ancianos, nefrópatas o en uso de IECA/ARA-II/diuréticos — 'tríada nefrotóxica') y elevación del riesgo cardiovascular."
+        pt: "Bloqueio duplo de COX sem benefício terapêutico. O uso concomitante de dois ou mais AINEs (ex.: Ibuprofeno + Diclofenaco, ou AINE de automedicação + AINE prescrito) NÃO amplia o efeito analgésico/anti-inflamatório de forma clinicamente relevante, mas representa aumento crítico do risco de Lesão Renal Aguda (LRA) e úlcera gástrica: sangramento gastrointestinal (erosões, úlcera péptica, hemorragia digestiva), lesão renal aguda (especialmente em desidratados, idosos, nefropatas ou em uso de IECA/BRA/diuréticos — 'tríade nefrotóxica') e elevação do risco cardiovascular.",
+        es: "Bloqueo doble de COX sin beneficio terapéutico. El uso concomitante de dos o más AINEs (ej.: Ibuprofeno + Diclofenaco, o AINE de automedicación + AINE prescrito) NO amplía el efecto analgésico/antiinflamatorio de forma clínicamente relevante, pero representa aumento crítico del riesgo de Lesión Renal Aguda (LRA) y úlcera gástrica: sangrado gastrointestinal (erosiones, úlcera péptica, hemorragia digestiva), lesión renal aguda (especialmente en deshidratados, ancianos, nefrópatas o en uso de IECA/ARA-II/diuréticos — 'tríada nefrotóxica') y elevación del riesgo cardiovascular."
       },
       conduta: {
         pt: "Evitar a duplicação — manter apenas UM AINE na menor dose eficaz pelo menor tempo possível. Investigar automedicação (perguntar ativamente sobre uso de AINEs de venda livre). Se uso concomitante identificado: suspender um dos agentes, avaliar função renal (creatinina/ureia) e considerar gastroproteção com IBP se manutenção for inevitável. Atenção redobrada em idosos, DRC, ICC descompensada e uso conjunto de IECA/BRA/diuréticos.",
@@ -753,15 +753,15 @@ const INTERACOES_DB = {
   ───────────────────────────────────────────────────────────── */
   "$classe_isrs": {
     "$classe_isrs": {
-      gravidade: "alta",
-      scoreClinico: 4,
+      gravidade: "contraindicada",
+      scoreClinico: 5,
       descricao: {
-        pt: "A combinação de dois ISRS (ex.: Sertralina + Escitalopram, frequentemente por troca de antidepressivo sem washout ou por prescrições duplicadas de serviços diferentes) não tem racional farmacológico — ambos atuam pelo mesmo mecanismo — e eleva significativamente o risco de Síndrome Serotoninérgica (agitação, hipertermia, rigidez muscular, clônus, instabilidade autonômica), especialmente durante a fase de transição/superposição.",
-        es: "La combinación de dos ISRS (ej.: Sertralina + Escitalopram, frecuentemente por cambio de antidepresivo sin lavado farmacológico o por prescripciones duplicadas de servicios diferentes) no tiene racional farmacológico — ambos actúan por el mismo mecanismo — y eleva significativamente el riesgo de Síndrome Serotoninérgico (agitación, hipertermia, rigidez muscular, clonus, inestabilidad autonómica), especialmente durante la fase de transición/superposición."
+        pt: "Risco grave de Síndrome Serotoninérgica cumulativa (hipertermia, rigidez, alterações mentais). A combinação de dois ISRS (ex.: Sertralina + Escitalopram, frequentemente por troca de antidepressivo sem washout adequado ou por prescrições duplicadas de serviços diferentes) não possui racional farmacológico — ambos atuam pelo mesmo mecanismo — e eleva de forma crítica o risco de Síndrome Serotoninérgica (agitação, hipertermia, rigidez muscular, clônus, instabilidade autonômica), especialmente durante a fase de transição/superposição. Evitar associação.",
+        es: "Riesgo grave de Síndrome Serotoninérgico cumulativo (hipertermia, rigidez, cambios mentales). La combinación de dos ISRS (ej.: Sertralina + Escitalopram, frecuentemente por cambio de antidepresivo sin lavado farmacológico adecuado o por prescripciones duplicadas de servicios diferentes) no tiene racional farmacológico — ambos actúan por el mismo mecanismo — y eleva de forma crítica el riesgo de Síndrome Serotoninérgico (agitación, hipertermia, rigidez muscular, clonus, inestabilidad autonómica), especialmente durante la fase de transición/superposición. Evitar asociación."
       },
       conduta: {
-        pt: "Evitar sobreposição — ao trocar de ISRS, respeitar período de washout apropriado (variável conforme meia-vida do agente; atenção especial à fluoxetina, que tem meia-vida longa e metabólito ativo). Se uso concomitante identificado: suspender um dos agentes imediatamente. Rastrear ativamente sinais de Síndrome Serotoninérgica (tríade: alteração do estado mental, disfunção autonômica, anormalidades neuromusculares). Em caso de suspeita, suporte em ambiente monitorizado e considerar ciproeptadina.",
-        es: "Evitar la superposición — al cambiar de ISRS, respetar período de lavado apropiado (variable según la vida media del agente; atención especial a la fluoxetina, que tiene vida media larga y metabolito activo). Si se identifica uso concomitante: suspender uno de los agentes inmediatamente. Rastrear activamente signos de Síndrome Serotoninérgico (tríada: alteración del estado mental, disfunción autonómica, anormalidades neuromusculares). En caso de sospecha, soporte en ambiente monitorizado y considerar ciproheptadina."
+        pt: "Associação CONTRAINDICADA — evitar sobreposição de dois ISRS. Ao trocar de ISRS, respeitar período de washout apropriado (variável conforme meia-vida do agente; atenção especial à fluoxetina, com meia-vida longa e metabólito ativo). Se uso concomitante identificado: suspender um dos agentes imediatamente. Rastrear ativamente sinais de Síndrome Serotoninérgica (tríade: alteração do estado mental, disfunção autonômica, anormalidades neuromusculares). Em caso de suspeita, suporte em ambiente monitorizado e considerar ciproeptadina.",
+        es: "Asociación CONTRAINDICADA — evitar superposición de dos ISRS. Al cambiar de ISRS, respetar período de lavado apropiado (variable según la vida media del agente; atención especial a la fluoxetina, con vida media larga y metabolito activo). Si se identifica uso concomitante: suspender uno de los agentes inmediatamente. Rastrear activamente signos de Síndrome Serotoninérgico (tríada: alteración del estado mental, disfunción autonómica, anormalidades neuromusculares). En caso de sospecha, soporte en ambiente monitorizado y considerar ciproheptadina."
       }
     }
   },
@@ -783,6 +783,28 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Evitar a duplicação — manter apenas UM benzodiazepínico, preferencialmente na menor dose eficaz. Investigar prescrições de outros serviços/automedicação. Se identificado uso concomitante crônico, planejar desmame gradual de um dos agentes (nunca suspensão abrupta, risco de convulsão). Atenção redobrada em idosos (critérios de Beers) e em associação com opioides/álcool (ver $classe_depressoras_snc).",
         es: "Evitar la duplicación — mantener solo UNA benzodiacepina, preferentemente en la menor dosis eficaz. Investigar prescripciones de otros servicios/automedicación. Si se identifica uso concomitante crónico, planificar retiro gradual de uno de los agentes (nunca suspensión abrupta, riesgo de convulsión). Atención redoblada en ancianos (criterios de Beers) y en asociación con opioides/alcohol (ver $classe_depressoras_snc)."
+      }
+    }
+  },
+
+  /* ─────────────────────────────────────────────────────────────
+     BUILD 382 — CLASS DUPLICATION EXPANSION
+     $classe_anticonvulsivantes × $classe_anticonvulsivantes (auto-cruzamento)
+     Duplicação terapêutica de anticonvulsivantes — competição por
+     ligação proteica plasmática e depressão central acumulada, sem
+     benefício antiepiléptico proporcional em monoterapia equivalente.
+  ───────────────────────────────────────────────────────────── */
+  "$classe_anticonvulsivantes": {
+    "$classe_anticonvulsivantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "Competição por ligação proteica plasmática e depressão central acumulada. A associação de dois ou mais anticonvulsivantes (ex.: Valproato + Carbamazepina, Fenitoína + Fenobarbital) pode ocorrer em politerapia epiléptica intencional sob supervisão neurológica, mas gera múltiplas interações farmacocinéticas — indução/inibição enzimática mútua, competição por ligação à albumina — que alteram imprevidentemente os níveis séricos livres de ambos os fármacos, aumentando o risco de toxicidade (ataxia, sedação, diplopia, hepatotoxicidade) sem necessariamente ampliar o controle das crises.",
+        es: "Competición por unión proteica plasmática y depresión central acumulada. La asociación de dos o más anticonvulsivantes (ej.: Valproato + Carbamazepina, Fenitoína + Fenobarbital) puede ocurrir en politerapia epiléptica intencional bajo supervisión neurológica, pero genera múltiples interacciones farmacocinéticas — inducción/inhibición enzimática mutua, competición por unión a la albúmina — que alteran imprevisiblemente los niveles séricos libres de ambos fármacos, aumentando el riesgo de toxicidad (ataxia, sedación, diplopía, hepatotoxicidad) sin necesariamente ampliar el control de las crisis."
+      },
+      conduta: {
+        pt: "Monitorar níveis séricos livres e toxicidade. Se politerapia intencional (epilepsia refratária): manter sob supervisão neurológica especializada, com monitorização regular dos níveis séricos livres (especialmente valproato, fenitoína e fenobarbital) e vigilância ativa de sinais de toxicidade (função hepática, hematopoese, nível de consciência). Ajustar doses conforme variação cinética resultante da interação. Se associação não intencional ou desnecessária: simplificar para monoterapia otimizada.",
+        es: "Monitorear niveles séricos libres y toxicidad. Si politerapia intencional (epilepsia refractaria): mantener bajo supervisión neurológica especializada, con monitorización regular de los niveles séricos libres (especialmente valproato, fenitoína y fenobarbital) y vigilancia activa de signos de toxicidad (función hepática, hematopoyesis, nivel de consciencia). Ajustar dosis según la variación cinética resultante de la interacción. Si la asociación es no intencional o innecesaria: simplificar a monoterapia optimizada."
       }
     }
   },
