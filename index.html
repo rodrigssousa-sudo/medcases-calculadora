@@ -19777,6 +19777,69 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     es: { display: _displayName(nomePt, 'es'), norm: _normSemAlias(_displayName(nomePt, 'es')) }
   }));
 
+  /* ══════════════════════════════════════════════════════════════════════
+     BUILD 388-HOTFIX PATCH D — SINCRONIZAÇÃO DRUG_DB → _interactionsIndex
+     ──────────────────────────────────────────────────────────────────────
+     PROBLEMA: O dropdown de Interações era alimentado exclusivamente por
+     LISTA_MEDS_DISPONIVEIS_RAW (~200 entradas hardcoded). Qualquer fármaco
+     presente em DRUG_DB mas ausente dessa lista (Insulinas, Pneumologia,
+     Sedação, Hematologia, etc.) nunca aparecia no autocomplete de Interações.
+
+     SOLUÇÃO: _hmSyncInteractionsIndex() percorre window.DRUG_DB e anexa ao
+     _interactionsIndex todo fármaco cujo canonical (id) ainda não esteja
+     representado — idempotente, O(DRUG_DB), segura para chamadas repetidas.
+     Chamada:
+       1. Imediatamente após _buildSearchIndex() no DOMContentLoaded
+       2. No _onAllLoaded() após injetar os lazy-DBs (cardio + psico)
+       3. No _hmEmergencyReconcile() para cobrir race conditions de clique
+  ══════════════════════════════════════════════════════════════════════ */
+  window._hmSyncInteractionsIndex = function() {
+    if (!Array.isArray(window._interactionsIndex)) window._interactionsIndex = [];
+    if (!Array.isArray(window.DRUG_DB) || window.DRUG_DB.length === 0) return;
+
+    /* Conjunto de canonicals já presentes — busca O(1) */
+    var _existingCanonicals = Object.create(null);
+    window._interactionsIndex.forEach(function(item) {
+      _existingCanonicals[item.canonical] = true;
+    });
+
+    var _added = 0;
+    window.DRUG_DB.forEach(function(drug) {
+      if (!drug || !drug.id) return;
+
+      /* Canonical do fármaco no DRUG_DB é o seu próprio id */
+      var canon = drug.id;
+      if (_existingCanonicals[canon]) return; /* já presente — pular */
+
+      /* Resolve nome de exibição PT e ES a partir do entry de DRUG_DB */
+      var namePt = (drug.name && typeof drug.name === 'object')
+        ? (drug.name.pt || drug.id)
+        : (drug.name || drug.id);
+      var nameEs = (drug.name && typeof drug.name === 'object')
+        ? (drug.name.es || namePt)
+        : namePt;
+
+      /* Capitaliza primeira letra para consistência visual com LISTA_MEDS_DISPONIVEIS_RAW */
+      function _cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+      namePt = _cap(namePt);
+      nameEs = _cap(nameEs);
+
+      window._interactionsIndex.push({
+        nomePt:    namePt,
+        canonical: canon,
+        pt: { display: namePt, norm: _normSemAlias(namePt) },
+        es: { display: nameEs, norm: _normSemAlias(nameEs) }
+      });
+      _existingCanonicals[canon] = true;
+      _added++;
+    });
+
+    if (_added > 0) {
+      console.log('[MedCases] PATCH D: _interactionsIndex sincronizado com DRUG_DB — +'
+        + _added + ' entradas. Total: ' + window._interactionsIndex.length);
+    }
+  };
+
   /* Compat: LISTA_MEDS_DISPONIVEIS como getter dinâmico */
   const LISTA_MEDS_DISPONIVEIS = [
     'Ácido Valproico', 'Fenitoína', 'Carbamazepina', 'Sertralina', 'Fluoxetina',
@@ -21158,6 +21221,11 @@ document.addEventListener('DOMContentLoaded', () => {
      filterDrugs e filterMedsAutocomplete. Ver _buildSearchIndex(). */
   if (typeof _buildSearchIndex === 'function') _buildSearchIndex();
 
+  /* BUILD 388-HOTFIX PATCH D — sincroniza o dropdown de Interações com
+     DRUG_DB completo (inclui Insulinas, Pneumologia, Sedação, etc.
+     que nunca estiveram em LISTA_MEDS_DISPONIVEIS_RAW). */
+  if (typeof window._hmSyncInteractionsIndex === 'function') window._hmSyncInteractionsIndex();
+
   /* Disparo inicial de tradução — usa idioma já detectado (Diretriz 1) */
   setLang(currentLang || 'pt');
 
@@ -21685,8 +21753,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (typeof window._buildSearchIndex === 'function') {
           window._buildSearchIndex();
         }
-        if (typeof window._fdUpdateCount        === 'function') window._fdUpdateCount();
-        if (typeof window._updateDrugSearchHint === 'function') window._updateDrugSearchHint();
+        if (typeof window._fdUpdateCount          === 'function') window._fdUpdateCount();
+        if (typeof window._updateDrugSearchHint   === 'function') window._updateDrugSearchHint();
+        /* PATCH D: sincroniza dropdown de interações após reconciliação */
+        if (typeof window._hmSyncInteractionsIndex === 'function') window._hmSyncInteractionsIndex();
         console.log('[MedCases] HOTFIX _hmEmergencyReconcile: +' + _added + ' fármacos reconciliados. Total: ' + window.DRUG_DB.length);
       }
       if (typeof callback === 'function') callback();
@@ -23574,6 +23644,9 @@ window.MedCasesBridge = {
 
     /* interacoes.js não adiciona ao DRUG_DB — apenas popula INTERACOES_DB,
        DRUG_ALIASES e DRUG_CLASSES. Nenhuma ação de índice necessária. */
+
+    /* PATCH D — sincroniza dropdown de Interações com os lazy-DBs recém-carregados */
+    if (typeof window._hmSyncInteractionsIndex === 'function') window._hmSyncInteractionsIndex();
 
     /* Atualiza contadores e hint de busca */
     if (typeof window._fdUpdateCount        === 'function') window._fdUpdateCount();
