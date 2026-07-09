@@ -809,6 +809,63 @@ const INTERACOES_DB = {
     }
   },
 
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 386 — BLOCO MOTOR DE INTERAÇÕES: Pneumologia e Vias Aéreas
+     Salbutamol, Fenoterol, Terbutalina, Salmeterol, Formoterol (Agonistas B2)
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA DE CLASSE: AGONISTAS BETA-2 ADRENÉRGICOS ── */
+  "$classe_agonistas_beta2": {
+    "$classe_betabloqueadores_nao_seletivos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ANTAGONISMO DIRETO E ASFIXIA (Bloqueio Físico). Fármacos como o Propranolol e Carvedilol bloqueiam cegamente os receptores Beta-1 (coração) e Beta-2 (pulmões). Ao aplicar um broncodilatador (Salbutamol, Formoterol), ele não encontrará receptores livres no pulmão do paciente asmático/DPOC. O remédio não faz efeito e o betabloqueador gera um broncoespasmo paradoxal refratário, podendo matar o paciente por asfixia.",
+        es: "ANTAGONISMO DIRECTO Y ASFIXIA (Bloqueo Físico). Fármacos como Propranolol y Carvedilol bloquean ciegamente los receptores Beta-1 (corazón) y Beta-2 (pulmones). Al aplicar un broncodilatador, no encontrará receptores libres en el pulmón del asmático. El remedio no hace efecto y el betabloqueante genera un broncoespasmo paradójico refractario, pudiendo asfixiar al paciente."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO FORMAL. Pacientes asmáticos ou com DPOC espástica NUNCA devem usar Betabloqueadores Não-Seletivos (Propranolol). Se necessitarem muito para o coração, usar betabloqueadores CARDIOSELETIVOS (Atenolol, Bisoprolol) em baixas doses, com cautela e sob observação rigorosa.",
+        es: "CONTRAINDICACIÓN FORMAL. Pacientes asmáticos o con EPOC espástica NUNCA deben usar Betabloqueantes No Selectivos (Propranolol). Si lo necesitan para el corazón, usar CARDIOSELECTIVOS (Atenolol, Bisoprolol) en dosis bajas y bajo observación."
+      }
+    },
+    "$classe_diureticos_perdedores_potassio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "HIPOCALEMIA SINÉRGICA MALIGNA. O Salbutamol e o Fenoterol, especialmente quando nebulizados repetidamente em uma crise de asma no PA, ativam a bomba Na+/K+ATPase, empurrando o potássio do sangue para dentro das células. Se o paciente usar Furosemida ou Hidroclorotiazida (que expulsam o potássio pela urina), o sangue do paciente ficará perigosamente sem potássio (< 2.5 mEq/L), desencadeando paralisia e arritmias cardíacas severas.",
+        es: "HIPOPOTASEMIA SINÉRGICA MALIGNA. El Salbutamol y el Fenoterol, al ser nebulizados repetidamente en una crisis, activan la bomba Na+/K+ATPasa, empujando el potasio hacia dentro de las células. Si el paciente usa Furosemida o Hidroclorotiazida (que expulsan potasio por orina), la sangre quedará peligrosamente sin potasio (< 2.5 mEq/L), desencadenando parálisis y arritmias."
+      },
+      conduta: {
+        pt: "Em emergências de Asma severa exigindo nebulizações consecutivas, é OBRIGATÓRIO dosar o Potássio sérico (K+) se o paciente for usuário de diuréticos. Pode ser necessária reposição IV de cloreto de potássio na sala vermelha.",
+        es: "En emergencias de Asma severa exigiendo nebulizaciones consecutivas, es OBLIGATORIO dosificar el Potasio sérico (K+) si el paciente usa diuréticos. Puede ser necesaria reposición IV de cloruro de potasio en la sala roja."
+      }
+    },
+    "$classe_imao": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "POTENCIALIZAÇÃO CARDIOVASCULAR EXTREMA. Inibidores da MAO (Tranilcipromina, Selegilina) impedem a destruição de aminas vasoativas. A associação com beta-agonistas (mesmo inalatórios, que caem parte no sangue) turbina a ação adrenérgica, induzindo taquicardia sinusal > 140 bpm, isquemia miocárdica e pico hipertensivo grave.",
+        es: "POTENCIACIÓN CARDIOVASCULAR EXTREMA. Inhibidores de la MAO impiden la destrucción de aminas vasoactivas. La asociación con beta-agonistas (incluso inhalatorios) acelera la acción adrenérgica, induciendo taquicardia sinusal > 140 lpm, isquemia miocárdica y pico hipertensivo grave."
+      },
+      conduta: {
+        pt: "Aguardar um período de 'washout' (limpeza) de 14 dias após a suspensão de um IMAO antes de iniciar terapias pesadas com LABA. Nebulizações no PS devem ser extremamente espaçadas e com ECG contínuo.",
+        es: "Esperar un período de 'washout' (limpieza) de 14 días tras la suspensión de un IMAO antes de iniciar terapias pesadas con LABA. Nebulizaciones en Urgencias deben ser muy espaciadas y con ECG continuo."
+      }
+    },
+    "digoxina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "FALHA E INTOXICAÇÃO CRUZADA. Os agonistas beta-2 tendem a reduzir levemente o nível de digoxina no sangue (aumentando a contratilidade mas competindo em fluidos). PORÉM, a real ameaça é que a hipocalemia (falta de potássio) gerada pelas nebulizações com Salbutamol deixa o miocárdio incrivelmente sensível à toxicidade da Digoxina, gerando bloqueios e extrassístoles graves.",
+        es: "FALLO E INTOXICACIÓN CRUZADA. Los agonistas beta-2 tienden a reducir levemente el nivel de digoxina en la sangre. PERO, la amenaza real es que la hipopotasemia generada por las nebulizaciones con Salbutamol deja al miocardio increíblemente sensible a la toxicidad de la Digoxina, generando bloqueos."
+      },
+      conduta: {
+        pt: "Monitoramento de potássio obrigatório. Manter o potássio sérico sempre na casa dos 4.0 mEq/L em usuários de digoxina para evitar que ela mate o coração durante a crise asmática.",
+        es: "Monitorización de potasio obligatoria. Mantener el potasio sérico siempre en torno a los 4.0 mEq/L en usuarios de digoxina para evitar que mate el corazón durante la crisis asmática."
+      }
+    }
+  },
+
   /* ─────────────────────────────────────────────────────────────
      BUILD 255 — ADDITIVE RISK EXPANSION
      $classe_depressoras_snc × $classe_depressoras_snc (auto-cruzamento)
