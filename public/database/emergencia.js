@@ -1212,8 +1212,133 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'RESGATE ABSOLUTO: Se você prescrever Plasil (Metoclopramida) ou Haldol na veia, e o paciente repentinamente contorcer a mandíbula, virar os olhos para cima e não conseguir falar (Crise Oculógira / Distonia), injete Fenergan IM. A crise cede magicamente em 5 a 10 minutos.', es: 'RESCATE ABSOLUTO: Si prescribe Plasil o Haldol en la vena, y el paciente repentinamente contuerce la mandíbula, gira los ojos hacia arriba y no puede hablar (Crisis Oculógira / Distonía), inyecte Fenergan IM. La crisis cede mágicamente en 5 a 10 minutos.' }
       }
+    },
+
+/* ── BUILD 403 — Anestesiologia: Indução e Manutenção ── */
+
+/* ── KETAMINA ───────────────────────────────────────────────────────── */
+    "ketamina": {
+      id: 'ketamina',
+      name: { pt: 'Cetamina (Ketamina)', es: 'Ketamina' },
+      category: 'emergencia',
+      class: { pt: 'Anestésico Dissociativo (Antagonista de Receptores NMDA)', es: 'Anestésico Disociativo (Antagonista de Receptores NMDA)' },
+      indications: {
+        pt: ['Indução anestésica em pacientes com CHOQUE HEMORRÁGICO ou trauma grave', 'Sedação para procedimentos dolorosos em crianças (Redução de fraturas, queimaduras)', 'Status Asthmaticus na UTI (Indução e broncodilatação)', 'Depressão refratária com risco de suicídio eminente (off-label psiquiátrico)'],
+        es: ['Inducción anestésica en pacientes con CHOQUE HEMORRÁGICO o trauma grave', 'Sedación para procedimientos dolorosos en niños', 'Status Asthmaticus en la UCI (Inducción y broncodilatación)', 'Depresión refractaria con riesgo de suicidio (off-label)']
+      },
+      commercialNames: { br: ['Ketalar', 'Ketamin'], ar: ['Ketolar'] },
+      presentation: { pt: ['Ampolas Injetáveis 50 mg/mL (10 mL) - Exige restrição e guarda de psicotrópico'], es: ['Ampollas Inyectables 50 mg/mL (10 mL) - Exige restricción'] },
+      mechanism: {
+        pt: 'A "Droga do Transe". Ao bloquear o receptor NMDA (glutamato) no cérebro, ela "dissocia" (corta os fios) entre o Tálamo (centro das sensações) e o Córtex Límbico (centro da consciência e memória). O paciente parece acordado: fica de olhos abertos, engole saliva e respira SOZINHO, mas está em "transe cósmico" (catalepsia), totalmente incapaz de sentir a faca cortando a perna. É a ÚNICA droga anestésica que AUMENTA a pressão arterial e a frequência cardíaca (liberando noradrenalina), o que a torna a salvadora da pátria para anestesiar o paciente politraumatizado sangrando.',
+        es: 'La "Droga del Trance". Al bloquear el receptor NMDA, "disocia" el Tálamo del Córtex. El paciente parece despierto: ojos abiertos, respira SOLO, pero está en "trance cósmico" (catalepsia), incapaz de sentir el bisturí. Es la ÚNICA droga anestésica que AUMENTA la presión arterial, salvando al paciente politraumatizado.'
+      },
+      dose: {
+        adult: {
+          pt: 'Indução IV: 1 a 2 mg/kg (Ação em 30 a 60 segundos). Sedação e Analgesia (PS): 0,1 a 0,3 mg/kg IV.',
+          es: 'Inducción IV: 1 a 2 mg/kg (Acción en 30 a 60 segundos). Sedación y Analgesia (Urgencias): 0,1 a 0,3 mg/kg IV.'
+        },
+        pediatric: {
+          pt: 'Sedação profunda para procedimento: 1 a 2 mg/kg IV (frequentemente com midazolam).',
+          es: 'Sedación profunda para procedimiento: 1 a 2 mg/kg IV (frecuentemente con midazolam).'
+        }
+      },
+      administration: { pt: ['Intravenosa ou Intramuscular (Dose IM é muito maior, 4 a 10 mg/kg, ideal para criança incontrolável sem acesso venoso). Pode causar aumento de secreção (sialorreia), exigir atropina prévia.'], es: ['Intravenosa o Intramuscular. Puede causar aumento de secreción (sialorrea), exigir atropina previa.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade no uso em bólus.', es: 'Sin necesidad en uso en bolo.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizada no fígado em norketamina. Reduzir dose em disfunção severa.', es: 'Metabolizada en hígado en norketamina. Reducir dosis en disfunción severa.' } },
+      commonAdverseEffects: { pt: ['Taquicardia maciça e Hipertensão', 'Nistagmo (Olhos tremendo de um lado pro outro)', 'Sialorreia (Salivação abundante que pode engasgar)'], es: ['Taquicardia masiva e Hipertensión', 'Nistagmo (Ojos temblando rápido)', 'Sialorrea (Salivación abundante)'] },
+      dangerousAdverseEffects: { pt: ['DELÍRIO DE EMERGÊNCIA (Ao acordar da anestesia, o paciente adulto sofre alucinações aterrorizantes, gritos, pânico de morte iminente e distorção da realidade. Afeta até 30% dos adultos)', 'Aumento da Pressão Intracraniana e Intraocular', 'Laringoespasmo (se muito catarro no fundo da garganta)'], es: ['DELIRIO DE EMERGENCIA (Al despertar, el paciente adulto sufre alucinaciones aterradoras, gritos y pánico)', 'Aumento de Presión Intracraneal e Intraocular', 'Laringoespasmo'] },
+      contraindications: {
+        absolute: { pt: ['Doenças onde aumento de pressão arterial seja fatal (Aneurismas não rotos, Dissecção de Aorta)', 'Glaucoma, Traumas Oculares Perfurantes (A pressão do olho estoura)', 'Esquizofrenia ativa'], es: ['Enfermedades donde aumento de presión sea fatal (Aneurismas, Disección de Aorta)', 'Glaucoma, Traumas Oculares Perforantes', 'Esquizofrenia activa'] },
+        relative: { pt: ['Trauma cranioencefálico grave com aumento agudo da PIC (Embora literaturas novas venham mitigando essa regra, na prova é risco)'], es: ['Trauma craneoencefálico grave con aumento de PIC'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O PROTOCOLO DO TERROR: Para evitar que o adulto acorde da Ketamina lutando com demônios imaginários (Delírio de Emergência), é OBRIGATÓRIO na anestesia aplicar 1 ou 2 mg de Midazolam (Benzodiazepínico) na mesma seringa. O Midazolam apaga a memória da alucinação do cérebro límbico.', es: 'EL PROTOCOLO DEL TERROR: Para evitar que el adulto despierte de la Ketamina luchando con demonios imaginarios, es OBLIGATORIO aplicar 1 o 2 mg de Midazolam en la misma jeringa para borrar la memoria de la alucinación.' }
+      }
+    },
+
+/* ── TIOPENTAL ──────────────────────────────────────────────────────── */
+    "tiopental": {
+      id: 'tiopental',
+      name: { pt: 'Tiopental Sódico', es: 'Tiopental Sódico' },
+      category: 'emergencia',
+      class: { pt: 'Barbitúrico de Ação Ultra-Curta', es: 'Barbitúrico de Acción Ultra-Corta' },
+      indications: {
+        pt: ['Indução clássica da Anestesia Geral', 'Controle do "Estado de Mal Epiléptico" refratário a tudo (Coma Barbitúrico)', 'Redução aguda e agressiva da Hipertensão Intracraniana (Trauma cerebral maciço)'],
+        es: ['Inducción clásica de la Anestesia General', 'Control del "Estado de Mal Epiléptico" refractario a todo (Coma Barbitúrico)', 'Reducción aguda de la Hipertensión Intracraneal (Trauma cerebral)']
+      },
+      commercialNames: { br: ['Thiopentax'], ar: ['Pentothal'] },
+      presentation: { pt: ['Frasco-ampola com PÓ Liofilizado de 0,5g e 1g (Exige diluição com água ou SF)'], es: ['Vial con POLVO Liofilizado de 0,5g y 1g (Exige dilución)'] },
+      mechanism: {
+        pt: 'O clássico "Soro da Verdade". Como todo barbitúrico pesado, o Tiopental gruda no receptor GABA-A no cérebro e O MANTÉM ABERTO (não apenas facilita como os benzos, ele tranca a porta aberta). Isso inunda o cérebro de cloreto inibitório, apagando o paciente em 10 a 20 segundos (tempo de 1 braço ao cérebro). A droga desliga o metabolismo elétrico do cérebro, protegendo-o de morrer sem oxigênio, mas afunda violentamente a pressão do coração.',
+        es: 'El clásico "Suero de la Verdad". El Tiopental se pega al receptor GABA-A en el cerebro y LO MANTIENE ABIERTO. Esto inunda el cerebro de cloruro, apagando al paciente en 10 a 20 segundos. La droga apaga el metabolismo eléctrico del cerebro (neuroprotección), pero hunde violentamente la presión del corazón.'
+      },
+      dose: {
+        adult: {
+          pt: 'Indução Anestésica: 3 a 5 mg/kg IV bolus. Coma Barbitúrico (UTI): Bolus seguido de infusão contínua pesada.',
+          es: 'Inducción Anestésica: 3 a 5 mg/kg IV bolo. Coma Barbitúrico (UCI): Bolo seguido de infusión continua pesada.'
+        },
+        pediatric: {
+          pt: 'Indução: 5 a 6 mg/kg IV.',
+          es: 'Inducción: 5 a 6 mg/kg IV.'
+        }
+      },
+      administration: { pt: ['O pó amarelo liofilizado tem um cheiro característico de alho e um pH absurdamente ALCALINO (pH 10.5). Misturar com drogas ácidas na mesma linha IV formará pedras e cristais de cálcio. DEVE SER FEITO EM VEIA CALIBROSA.'], es: ['El polvo amarillo tiene un pH absurdamente ALCALINO (pH 10.5). Mezclar con drogas ácidas en la misma línea IV formará piedras y cristales. DEBE HACERSE EN VENA CALIBRE.'] },
+      renalAdjustment: { required: false, message: { pt: 'Cuidado em uremia (maior fração livre da droga, risco de overdose no rim parado).', es: 'Cuidado en uremia (mayor fracción libre de la droga).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'O despertar precoce se deve a "redistribuição para a gordura". A queima e eliminação real dependem do fígado; infusões contínuas saturam o fígado e o paciente demora semanas para acordar.', es: 'El despertar precoz se debe a "redistribución a la grasa". La eliminación real depende del hígado.' } },
+      commonAdverseEffects: { pt: ['Sabor de alho/cebola na boca na hora da injeção', 'Apneia imediata e central (Parada respiratória esperada na indução)', 'Hipotensão aguda no centro cirúrgico'], es: ['Sabor de ajo/cebolla en la boca en la inyección', 'Apnea inmediata y central (Parada respiratoria esperada)', 'Hipotensión aguda'] },
+      dangerousAdverseEffects: { pt: ['NECROSE TISSULAR E AMPUTAÇÃO SE INJEÇÃO INTRA-ARTERIAL ACIDENTAL', 'Vasodilatação letal em pacientes hipovolêmicos (Hemorragia)', 'Depressão Miocárdica Direta (O coração perde força de contração)'], es: ['NECROSIS TISULAR Y AMPUTACIÓN SI INYECCIÓN INTRA-ARTERIAL ACCIDENTAL', 'Vasodilatación letal en pacientes hipovolémicos', 'Depresión Miocárdica Directa'] },
+      contraindications: {
+        absolute: { pt: ['PORFIRIA INTERMITENTE AGUDA (A droga aciona enzimas do sangue que deflagram uma crise dolorosa paralisante e morte na porfiria)', 'Ausência de via aérea garantida (intubação) e ventilador'], es: ['PORFIRIA INTERMITENTE AGUDA (La droga desencadena crisis dolorosa paralizante y muerte)', 'Ausencia de vía aérea garantizada y ventilador'] },
+        relative: { pt: ['Asma grave (Ele estimula liberação leve de histamina, podendo deflagrar broncoespasmo)', 'Choque descompensado grave'], es: ['Asma grave (estimula liberación leve de histamina, pudiendo desencadenar broncoespasmo)', 'Choque descompensado grave'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ERRO MAIS CARO DA ANESTESIA: A injeção na Artéria em vez da Veia. Se o anestesista errar a punção e aplicar Tiopental (pH 10.5) numa ARTÉRIA (ex: artéria braquial no cotovelo), a droga cristaliza instantaneamente, destruindo todo o endotélio capilar da mão. O braço do paciente fica azul e gangrena em poucas horas, necessitando de amputação total do braço.', es: 'EL ERROR MÁS CARO DE LA ANESTESIA: Inyectar en Arteria en vez de Vena. Si se aplica Tiopental (pH 10.5) en una ARTÉRIA, la droga cristaliza instantáneamente, destruyendo todo el endotelio. El brazo queda azul y gangrena, necesitando amputación total.' }
+      }
+    },
+
+/* ── ISOFLURANO ─────────────────────────────────────────────────────── */
+    "isoflurano": {
+      id: 'isoflurano',
+      name: { pt: 'Isoflurano', es: 'Isoflurano' },
+      category: 'emergencia',
+      class: { pt: 'Anestésico Inalatório (Hidrocarboneto Halogenado)', es: 'Anestésico Inhalatorio (Hidrocarburo Halogenado)' },
+      indications: {
+        pt: ['Manutenção da Anestesia Geral no Centro Cirúrgico em intubados', 'Indução da anestesia geral (historicamente, mas abandonada devido ao odor)'],
+        es: ['Mantenimiento de la Anestesia General en Quirófano en intubados', 'Inducción de la anestesia general (abandonada debido al olor)']
+      },
+      commercialNames: { br: ['Forane', 'Isoflurano'], ar: ['Forane'] },
+      presentation: { pt: ['Frascos com líquido volátil (Para ser derramado dentro do vaporizador específico da máquina de anestesia, cor da tampa e faixa: ROXA)'], es: ['Frascos con líquido volátil (Color de la tapa y franja: MORADA)'] },
+      mechanism: {
+        pt: 'O vaporizador transforma o líquido em gás. O gás entra nos alvéolos, vai pro sangue e alcança o cérebro. Ele afunda em todas as membranas lipídicas dos neurônios, promovendo depressão cerebral global (Amnésia, Inconsciência e Imobilidade). Ele garante que o paciente não vai acordar "no meio da cirurgia". O isoflurano dilata brutalmente as coronárias do coração (efeito de "Roubo Coronariano") e paralisa a musculatura.',
+        es: 'El vaporizador transforma el líquido en gas. Entra a los alvéolos, va a la sangre y al cerebro. Promueve depresión cerebral global (Amnesia, Inconsciencia e Inmovilidad), garantizando que el paciente no despertará "en medio de la cirugía". Dilata las coronarias y paraliza los músculos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Manutenção da anestesia: 1 a 2,5% do volume inspirado, titulado pela Concentração Alveolar Mínima (CAM do Isoflurano é de ~1,15%).',
+          es: 'Mantenimiento de la anestesia: 1 a 2,5% del volumen inspirado, titulado por la Concentración Alveolar Mínima (CAM ~1,15%).'
+        },
+        pediatric: {
+          pt: 'Manutenção: Proporcional à CAM pediátrica (que costuma ser levemente maior, em torno de 1,6%).',
+          es: 'Mantenimiento: Proporcional a la CAM pediátrica (~1,6%).'
+        }
+      },
+      administration: { pt: ['APENAS POR VAPORIZADORES CALIBRADOS E ESPECÍFICOS PARA ISOFLURANO (Sistema de rosca de segurança cor-de-rosa/roxa). O gás exalado do paciente deve ser recolhido por sistema de exaustão.'], es: ['SOLO POR VAPORIZADORES CALIBRADOS Y ESPECÍFICOS PARA ISOFLURANO (rosca morada). El gas exhalado debe ser recogido por sistema de escape.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mais de 99% do isoflurano entra e sai intacto pelos pulmões respirando. Quase nada vira metabólito nos rins (muito seguro para o rim).', es: 'Más del 99% del isoflurano entra y sale intacto por los pulmones respirando. Muy seguro para el riñón.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Taxa de metabolismo hepático microscópica (0,2%). Muito inferior ao antigo Halotano (que causava hepatite fulminante).', es: 'Tasa de metabolismo hepático microscópica (0,2%).' } },
+      commonAdverseEffects: { pt: ['Hipotensão (Causa muita vasodilatação sistêmica na mesa de cirurgia)', 'Depressão respiratória grave (O ventilador mecânico fará o trabalho)', 'Tremores pós-operatórios na sala de recuperação'], es: ['Hipotensión (Causa mucha vasodilatación en la mesa de cirugía)', 'Depresión respiratoria grave (El ventilador mecánico hará el trabajo)', 'Temblores posoperatorios'] },
+      dangerousAdverseEffects: { pt: ['HIPERTERMIA MALIGNA (Reação genética letal que "frita" os músculos do paciente, gerando febre de 42°C na mesa de cirurgia)', 'Roubo Coronariano (Isquemia em áreas do coração sem fluxo na doença coronária)'], es: ['HIPERTERMIA MALIGNA (Reacción genética letal que "fríe" los músculos, generando fiebre de 42°C en la mesa)', 'Robo Coronario (Isquemia en áreas del corazón sin flujo)'] },
+      contraindications: {
+        absolute: { pt: ['Histórico familiar ou pessoal comprovado de HIPERTERMIA MALIGNA', 'Cirurgias sem máquina de anestesia com absorvedor de cal sodada'], es: ['Historial familiar o personal comprobado de HIPERTERMIA MALIGNA', 'Cirugías sin máquina de anestesia con absorbedor de cal sodada'] },
+        relative: { pt: ['Indução inalatória com máscara em crianças pequenas e agitadas (Ele é extremamente "pungente" / fedorento e irritante para a garganta. O bebê prenderá a respiração, tossirá, fará laringoespasmo e ficará cianótico. Para indução inalatória em criança, USE SEVOFLURANO).'], es: ['Inducción inhalatoria con máscara en niños (Es extremadamente irritante. El bebé hará laringoespasmo. USE SEVOFLURANO).'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'O ANTÍDOTO DO FOGO MUSCULAR: Se, durante a anestesia com Isoflurano, o paciente começar a ficar duro (rigidez de masseter), a temperatura subir loucamente e o nível de CO2 explodir no monitor... O paciente está tendo Hipertermia Maligna. A ÚNICA salvação é desligar o vaporizador de isoflurano e injetar DANTROLENO IV.', es: 'EL ANTÍDOTO DEL FUEGO MUSCULAR: Si durante la anestesia, la temperatura sube locamente y el nivel de CO2 explota... El paciente está teniendo Hipertermia Maligna. La ÚNICA salvación es apagar el isoflurano e inyectar DANTROLENO IV.' }
+      }
     }
 
-  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 336 Lote 1+2+3+4+5+6+7 (ISR + BNMs + Reversores + Eletrólitos + Metabólico/Opioides + Toxicologia/Antídotos + Azul_Metileno/Carvão) + BUILD 346 Lote 8 (Vasopressores/Aminas Vasoativas) + BUILD 354 Lote 9 (Corticosteroides: Dexametasona/Hidrocortisona) + BUILD 362 Lote 10 (Metilprednisolona + Prometazina) */
+  }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 403 (Anestesia: ketamina + tiopental + isoflurano) */
 
 })();

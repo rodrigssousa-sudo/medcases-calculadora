@@ -351,6 +351,20 @@ const DRUG_ALIASES = {
   "natalizumab":                        "natalizumabe",
   "tysabri":                            "natalizumabe",
 
+  /* BUILD 403 — Gastro/Infectologia/Cardiologia/Anestesia */
+  "digedrat":                           "trimebutina",
+  "trimeb":                             "trimebutina",
+  "luftal":                             "simeticona",
+  "flagass":                            "simeticona",
+  "nizoral":                            "cetoconazol_oral",
+  "ketoconazol":                        "cetoconazol_oral",
+  "lasix":                              "furosemida_iv",
+  "ketalar":                            "ketamina",
+  "ketamin":                            "ketamina",
+  "thiopentax":                         "tiopental",
+  "pentothal":                          "tiopental",
+  "forane":                             "isoflurano",
+
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4: aliases */
   "nintedanib":                         "nintedanibe",
   "ofev":                               "nintedanibe",
@@ -1071,6 +1085,32 @@ const DRUG_CLASSES = {
     "cetoconazol", "itraconazol", "voriconazol", "posaconazol",
     "fluconazol", "claritromicina", "eritromicina", "telitromicina",
     "ritonavir", "cobicistat", "nefazodona", "mibefradil"
+  ],
+
+  /* BUILD 403 — Novos grupos farmacológicos para motor de interações */
+  /* Inibidores de Bomba de Prótons + Bloqueadores H2 — anulam absorção de azóis ácido-dependentes */
+  "$classe_inibidores_h2_ibp": [
+    "omeprazol", "pantoprazol", "lansoprazol", "rabeprazol", "esomeprazol",
+    "ranitidina", "famotidina", "cimetidina",
+    "antiácido", "bicarbonato_de_sodio", "carbonato_de_calcio"
+  ],
+  /* Fármacos metabolizados pelo CYP3A4 — substrato do cetoconazol que os acumula em excesso */
+  "$classe_metabolizados_cyp3a4": [
+    "atorvastatina", "sinvastatina", "lovastatina", "rosuvastatina",
+    "midazolam", "triazolam", "alprazolam",
+    "ciclosporina", "tacrolimus", "sirolimus",
+    "amiodarona", "quinidina", "domperidona",
+    "sildenafila", "tadalafila",
+    "metadona", "fentanila", "oxicodona",
+    "carbamazepina", "fenitoína"
+  ],
+  /* Aminoglicosídeos injetáveis — ototóxicos + nefrotóxicos com furosemida IV */
+  "$classe_aminoglicosideos": [
+    "amicacina", "gentamicina", "tobramicina", "estreptomicina", "neomicina"
+  ],
+  /* Bloqueadores D2 dopaminérgicos — somação com proclorperazina = distonia aguda */
+  "$classe_metoclopramida_haldol": [
+    "metoclopramida", "haloperidol", "droperidol", "domperidona"
   ]
 
 };
@@ -22623,9 +22663,90 @@ const INTERACOES_DB = {
         es: "Pulsoterapias cortas (3 a 5 días) para revertir brotes de EM son autorizadas, pero se deben evitar tratamientos crónicos orales con Prednisona."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES — BUILD 403
+   Anestesia (Hipertermia Maligna), Infectologia (CYP3A4/IBP), Cardiologia (Ototoxicidade), Gastrologia (D2-Distonia)
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── ISOFLURANO (O Gatilho da Hipertermia Maligna) ── */
+  "isoflurano": {
+    "succinilcolina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A 'EXPLOSÃO' METABÓLICA (HIPERTERMIA MALIGNA). O paciente geneticamente suscetível possui um defeito no receptor de Rianodina no músculo. Se o anestesista der o gás Isoflurano para mantê-lo dormindo e injetar Succinilcolina (relaxante muscular) para intubar, os dois remédios destravam violentamente a liberação de cálcio no músculo do paciente. Todos os músculos contraem ao mesmo tempo, gerando calor brutal (43°C em minutos), acidose láctica maciça, potássio matando o coração e rigidez completa.",
+        es: "LA 'EXPLOSIÓN' METABÓLICA (HIPERTERMIA MALIGNA). El paciente genéticamente susceptible posee un defecto en el receptor de Rianodina. Si el anestesista da gas Isoflurano e inyecta Succinilcolina para intubar, los dos remedios destraban violentamente el calcio en el músculo. Todos los músculos se contraen, generando calor brutal (43°C), acidosis masiva y potasio matando el corazón."
+      },
+      conduta: {
+        pt: "Nunca associar em caso de suspeita ou histórico familiar de Hipertermia Maligna. Se ocorrer, a conduta Imediata de Salvamento é: Desligar o gás (usar Propofol venoso se precisar), hiperventilar a 100% de O2, resfriamento com gelo e DANTROLENO Intravenoso de urgência em doses cavalares.",
+        es: "Nunca asociar en caso de sospecha familiar de Hipertermia Maligna. Si ocurre: Apagar el gas, hiperventilar a 100% O2 y aplicar DANTROLENO Intravenoso de urgencia."
+      }
+    }
+  },
+
+  /* ── CETOCONAZOL ORAL (O Maior Inibidor de Enzimas) ── */
+  "cetoconazol_oral": {
+    "$classe_inibidores_h2_ibp": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O VETO DO ÁCIDO (Anulação de Absorção). O comprimido de Cetoconazol é duro como uma pedra e necessita de um 'banho de ácido' puro no estômago para se dissolver e entrar no sangue. Se o paciente ingerir Antiácidos, Omeprazol, Pantoprazol, ou Ranitidina, o estômago fica com pH básico (sem ácido). O comprimido inteiro passa direto para as fezes e não cura a infecção fúngica mortal.",
+        es: "EL VETO DEL ÁCIDO (Anulación de Absorción). El comprimido de Ketoconazol necesita un 'baño de ácido' puro en el estómago para disolverse. Si el paciente ingiere Omeprazol o Antiácidos, el comprimido pasa directo a las heces y no cura la infección fúngica mortal."
+      },
+      conduta: {
+        pt: "Jamais associar Inibidores de Bomba de Prótons a Cetoconazol/Itraconazol oral. Se for o único antifúngico disponível para o paciente, ele deve engolir a pílula de cetoconazol tomando REFRIGERANTE DE COLA (pH super ácido) para forçar a dissolução.",
+        es: "Jamás asociar IBP a Ketoconazol oral. Si es el único antifúngico disponible, debe tragar la píldora tomando BEBIDA DE COLA (pH super ácido) para forzar la disolución."
+      }
+    },
+    "$classe_metabolizados_cyp3a4": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A OVERDOSE FARMACOLÓGICA ABSOLUTA. O Cetoconazol destrói completamente o citocromo hepático CYP3A4 (a lixeira do fígado) e bloqueia a Glicoproteína-P. Qualquer remédio que o paciente tomar junto vai acumular 10x, 20x mais no sangue. Estatinas causarão Rabdomiólise destruindo os rins. Amiodarona/Domperidona causarão Arritmia Torsades de Pointes. Triptanos causarão vasoespasmo e infarto.",
+        es: "LA SOBREDOSIS FARMACOLÓGICA ABSOLUTA. El Ketoconazol destruye completamente el citocromo hepático CYP3A4 y bloquea la Glicoproteína-P. Cualquier remedio que tome junto acumulará 10x, 20x más en sangre. Estatinas causarán Rabdomiólisis. Amiodarona causará Arritmia Torsades de Pointes."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO MUNDIAL. O Cetoconazol oral é proibido em pacientes polimedicados em ambulatório exatamente por bloquear quase metade da farmácia inteira do corpo humano.",
+        es: "CONTRAINDICACIÓN MUNDIAL. El Ketoconazol oral está prohibido en pacientes polimedicados exactamente por bloquear casi la mitad de la farmacia entera del cuerpo humano."
+      }
+    }
+  },
+
+  /* ── FUROSEMIDA INTRAVENOSA ── */
+  "furosemida_iv": {
+    "$classe_aminoglicosideos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A SURDEZ QUÍMICA IRREVERSÍVEL. Ambos os medicamentos atacam as células ciliadas da cóclea e o ramo ascendente da alça de Henle. O uso de Furosemida Intravenosa 'lava' a barreira no labirinto do ouvido, permitindo que a Amicacina ou Gentamicina (Antibióticos Aminoglicosídeos) entrem maciçamente e matem o nervo auditivo de forma imediata e para sempre.",
+        es: "LA SORDERA QUÍMICA IRREVERSIBLE. Ambos medicamentos atacan las células ciliadas de la cóclea. El uso de Furosemida Intravenosa 'lava' la barrera en el laberinto del oído, permitiendo que la Amikacina o Gentamicina entren macizamente y maten el nervio auditivo de forma inmediata y para siempre."
+      },
+      conduta: {
+        pt: "Evitar completamente administrar Furosemida IV na mesma janela de tempo que Amicacina na UTI, especialmente injetada em bolus rápido.",
+        es: "Evitar completamente administrar Furosemida IV en la misma ventana de tiempo que Amikacina en UCI, especialmente en bolo rápido."
+      }
+    }
+  },
+
+  /* ── PROCLORPERAZINA ── */
+  "proclorperazina": {
+    "$classe_metoclopramida_haldol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O TRAVAMENTO NEUROLÓGICO. A Proclorperazina e a Metoclopramida/Haloperidol são fortes bloqueadores do receptor D2 de dopamina nas vias motoras nigroestriatais do cérebro. Somar essas drogas para curar um vômito ou enxaqueca zera a dopamina motora do paciente. Ocorre Distonia Aguda Imediata: os músculos das costas travam (opistótono), a mandíbula entorta e o paciente não consegue falar.",
+        es: "EL BLOQUEO NEUROLÓGICO. La Proclorperazina y Metoclopramida/Haldol son fuertes bloqueadores del receptor D2 de dopamina. Sumar estas drogas para curar un vómito o migraña pone a cero la dopamina motora. Ocurre Distonía Aguda Inmediata: los músculos de la espalda se traban (opistótonos) y la mandíbula se tuerce."
+      },
+      conduta: {
+        pt: "Regra de Ouro do Pronto-Socorro: Se fez um bloqueador D2 e o paciente continuar vomitando, NUNCA prescreva 'outro' bloqueador D2 (Ex: deu Plasil, não deu certo, não prescreva Haldol ou Proclorperazina). Mude a classe para Ondansetrona (5-HT3) ou Dexametasona.",
+        es: "Regla de Oro de Urgencias: Si usó un bloqueador D2 y el paciente sigue vomitando, NUNCA prescriba 'otro' bloqueador D2. Cambie a Ondansetrón o Dexametasona."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 402 (Neuroimunologia: $classe_fumaratos_orais×imunossupressores/PML, teriflunomida×colestiramina/varfarina, natalizumabe×corticoides/PML) */
+}; /* fim INTERACOES_DB — BUILD 403 (Anestesia: isoflurano×succinilcolina/HM, Infectologia: cetoconazol×CYP3A4/IBP, Cardiologia: furosemida_iv×aminoglicosideos, Gastrologia: proclorperazina×D2-bloqueadores) */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

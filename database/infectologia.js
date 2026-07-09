@@ -1098,8 +1098,51 @@
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'A Síndrome do Homem Vermelho NÃO É ALERGIA: Se a enfermagem pendurar a Vancomicina e deixar correr em 15 minutos, a droga "explode" os mastócitos do corpo inteiro do paciente. Ele fica vermelho rubi, incha, o pescoço coça e a pressão cai a zero (liberação massiva de histamina). O tratamento é PARAR a bomba, dar Difenidramina e voltar a infusão bem devagar.', es: 'El Síndrome del Hombre Rojo NO ES ALERGIA: Si la enfermería cuelga la Vancomicina y la deja correr en 15 minutos, la droga "explota" los mastocitos del cuerpo. El paciente se pone rojo rubí, se hincha y la presión cae a cero (liberación masiva de histamina). El tratamiento es PARAR la bomba, dar Difenhidramina y volver a infundir muy despacio.' }
       }
+    },
+
+/* ── BUILD 403 — Infectologia Antifúngica ── */
+
+/* ── CETOCONAZOL ORAL ───────────────────────────────────────────────── */
+    "cetoconazol_oral": {
+      id: 'cetoconazol_oral',
+      name: { pt: 'Cetoconazol Oral', es: 'Ketoconazol Oral' },
+      category: 'infectologia',
+      class: { pt: 'Antifúngico Sistêmico (Derivado Imidazólico)', es: 'Antifúngico Sistémico (Derivado Imidazólico)' },
+      indications: {
+        pt: ['Infecções fúngicas sistêmicas graves QUANDO as outras terapias falharam (Uso muito restrito pela toxicidade)', 'Off-label: Síndrome de Cushing severa para suprimir a produção de cortisol na adrenal', 'Câncer de Próstata avançado (castração química adjuvante)'],
+        es: ['Infecciones fúngicas sistémicas graves CUANDO las otras terapias fallaron (Uso muy restringido por la toxicidad)', 'Off-label: Síndrome de Cushing severo para suprimir producción de cortisol', 'Cáncer de Próstata avanzado (castración química adyuvante)']
+      },
+      commercialNames: { br: ['Nizoral (Apenas comprimido)'], ar: ['Ketoconazol'] },
+      presentation: { pt: ['Comprimidos 200 mg'], es: ['Comprimidos 200 mg'] },
+      mechanism: {
+        pt: 'Uma bomba enzimática não-seletiva. Destrói o fungo inibindo a enzima 14-alfa-desmetilase, bloqueando a criação do ergosterol (parede da célula do fungo). O GRANDE PERIGO: Diferente dos azóis modernos (Fluconazol), o Cetoconazol humano destrói e inibe dezenas de enzimas do paciente, incluindo o citocromo P450 (CYP3A4) no fígado e as enzimas adrenais que fabricam Testosterona e Cortisol.',
+        es: 'Una bomba enzimática no selectiva. Destruye el hongo inhibiendo la enzima 14-alfa-desmetilasa. EL GRAN PELIGRO: A diferencia del Fluconazol, el Ketoconazol humano destruye e inhibe decenas de enzimas del paciente, incluyendo el CYP3A4 en el hígado y las enzimas que fabrican Testosterona y Cortisol.'
+      },
+      dose: {
+        adult: {
+          pt: 'Micoses: 200 a 400 mg UMA VEZ ao dia. Síndrome de Cushing: Doses altíssimas sob rigoroso acompanhamento endócrino (600 a 1200 mg/dia).',
+          es: 'Micosis: 200 a 400 mg UNA VEZ al día. Síndrome de Cushing: Dosis altísimas bajo riguroso acompañamiento endocrino (600 a 1200 mg/día).'
+        },
+        pediatric: {
+          pt: 'Não recomendado rotineiramente por hepatotoxicidade letal.',
+          es: 'No recomendado rutinariamente por hepatotoxicidad letal.'
+        }
+      },
+      administration: { pt: ['EXIGE ÁCIDO NO ESTÔMAGO. Deve ser tomado com uma refeição pesada ou com refrigerante de cola (Coca-Cola) para dissolver a pílula. Antiácidos anulam 100% da droga.'], es: ['EXIGE ÁCIDO EN EL ESTÓMAGO. Debe ser tomado con una comida pesada o bebida de cola para disolver la píldora. Los antiácidos anulan 100% la droga.'] },
+      renalAdjustment: { required: false, message: { pt: 'Excretado massivamente pela bile e fezes, sem ajuste renal.', es: 'Excretado masivamente por bilis y heces, sin ajuste renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADO em insuficiência hepática. É uma das drogas mais hepatotóxicas da medicina.', es: 'CONTRAINDICADO en insuficiencia hepática. Es una de las drogas más hepatotóxicas de la medicina.' } },
+      commonAdverseEffects: { pt: ['Náuseas severas e vômitos', 'Ginecomastia (Crescimento de mamas no homem) e Impotência sexual', 'Irregularidade menstrual nas mulheres'], es: ['Náuseas severas y vómitos', 'Ginecomastia (Crecimiento de mamas en el hombre) e Impotencia sexual', 'Irregularidad menstrual en mujeres'] },
+      dangerousAdverseEffects: { pt: ['Hepatite Fulminante Letal (Pode ocorrer nos primeiros dias e exigir transplante de fígado)', 'Insuficiência Adrenal Aguda (Morte por choque por falta de cortisol)', 'Prolongamento fatal do QT (Torsades de Pointes)'], es: ['Hepatitis Fulminante Letal (Puede ocurrir en los primeros días y exigir trasplante)', 'Insuficiencia Adrenal Aguda (Muerte por choque por falta de cortisol)', 'Prolongación fatal del QT (Torsades de Pointes)'] },
+      contraindications: {
+        absolute: { pt: ['Doença hepática ativa ou enzimas elevadas', 'Co-administração com estatinas, cisaprida, metadona e dezenas de outros (ver interações)'], es: ['Enfermedad hepática activa o enzimas elevadas', 'Coadministración con estatinas, metadona y decenas de otros'] },
+        relative: { pt: ['Acloridria (Ausência de ácido no estômago)'], es: ['Aclorhidria (Ausencia de ácido en el estómago)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ALERTA MUNDIAL FDA/EMA: O Cetoconazol oral foi banido da Europa e teve indicação duramente restrita nos EUA para fungos de unha ou pele. O risco de o paciente morrer de hepatite ou arritmia é absurdamente maior do que o benefício de tratar uma micose superficial. Use Terbinafina ou Itraconazol.', es: 'ALERTA MUNDIAL FDA/EMA: El Ketoconazol oral fue prohibido en Europa y restringido duramente en EE.UU. El riesgo de morir de hepatitis o arritmia es absurdamente mayor que el beneficio de tratar una micosis. Use Terbinafina o Itraconazol.' }
+      }
     }
 
-  }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — Grupo 6 (amoxicilina_clavulanato · piperacilina_tazobactam · ceftriaxona · meropenem · vancomicina — BUILD 358 Lote 6) */
+  }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 403 (cetoconazol_oral) */
 
 })();

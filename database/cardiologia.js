@@ -203,7 +203,50 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'FENÔMENO DA TAQUIFILAXIA: O corpo humano esgota suas reservas de grupo sulfidrila (SH) usados para ativar o Tridil. Após 24h a 48h de infusão contínua, o remédio perde o efeito (tolerância aguda). É necessário fazer "janelas" sem nitrato ou desligar a bomba o mais cedo possível.', es: 'FENÓMENO DE LA TAQUIFILAXIA: El cuerpo humano agota sus reservas de grupo sulfhidrilo (SH) usados para activar el Tridil. Tras 24h a 48h de infusión continua, el remedio pierde el efecto (tolerancia aguda). Es necesario hacer "ventanas" sin nitrato o apagar la bomba lo más temprano posible.' }
       }
+    },
+
+/* ── BUILD 403 — Cardiologia Emergencial ── */
+
+/* ── FUROSEMIDA IV ──────────────────────────────────────────────────── */
+    "furosemida_iv": {
+      id: 'furosemida_iv',
+      name: { pt: 'Furosemida IV', es: 'Furosemida IV' },
+      category: 'cardiologia',
+      class: { pt: 'Diurético de Alça de Ação Rápida', es: 'Diurético de Asa de Acción Rápida' },
+      indications: {
+        pt: ['Edema Agudo de Pulmão (EAP - O paciente está "afogando" no próprio líquido)', 'Insuficiência Cardíaca Congestiva descompensada', 'Emergências Hipertensivas hipervolêmicas', 'Hipercalemia aguda (Potássio tóxico no sangue)'],
+        es: ['Edema Agudo de Pulmón (EAP - El paciente se está "ahogando" en su propio líquido)', 'Insuficiencia Cardíaca Congestiva descompensada', 'Emergencias Hipertensivas hipervolémicas', 'Hiperpotasemia aguda (Potasio tóxico en sangre)']
+      },
+      commercialNames: { br: ['Lasix (Ampolas)'], ar: ['Lasix', 'Nuriban'] },
+      presentation: { pt: ['Ampolas Intravenosas 20 mg/2 mL'], es: ['Ampollas Intravenosas 20 mg/2 mL'] },
+      mechanism: {
+        pt: 'A "Válvula de Escape" da UTI. Atua inibindo o transportador simporte Na+-K+-2Cl- na Alça de Henle, impedindo que os rins reabsorvam sal e água (o paciente urina baldes). O GRANDE TRUQUE DO IV: Quando feita na veia em um paciente sufocando no Edema de Pulmão, a furosemida causa uma VENODILATAÇÃO sistêmica em apenas 5 minutos, "escondendo" o sangue nas pernas e tirando a pressão do pulmão ANTES MESMO do paciente fazer a primeira gota de urina.',
+        es: 'La "Válvula de Escape" de la UCI. Inhibe el transportador Na+-K+-2Cl- en el Asa de Henle, impidiendo reabsorber sal y agua. EL GRAN TRUCO DEL IV: En vena en un paciente asfixiándose, causa una VENODILATACIÓN sistémica en solo 5 minutos, sacando la presión del pulmón ANTES INCLUSO de hacer la primera gota de orina.'
+      },
+      dose: {
+        adult: {
+          pt: 'Ataque em Edema de Pulmão: 20 a 40 mg Intravenoso LENTO (ou dobrar a dose se o paciente já usa comprimido crônico em casa). Pode-se montar bomba de infusão contínua em IRA.',
+          es: 'Ataque en Edema de Pulmón: 20 a 40 mg Intravenoso LENTO (o doblar dosis si ya usa comprimido en casa). Se puede montar bomba de infusión continua en IRA.'
+        },
+        pediatric: {
+          pt: '1 a 2 mg/kg IV lento.',
+          es: '1 a 2 mg/kg IV lento.'
+        }
+      },
+      administration: { pt: ['INFUSÃO LENTA É VITAL: A Furosemida nunca deve ser feita em "push" rápido puro, mas administrada a uma taxa não superior a 4 mg por minuto. Injetar rápido destrói o nervo auditivo do paciente.'], es: ['INFUSIÓN LENTA ES VITAL: Nunca debe ser hecha en "push" rápido, sino administrada a una tasa no superior a 4 mg por minuto. Inyectar rápido destruye el nervio auditivo del paciente.'] },
+      renalAdjustment: { required: true, message: { pt: 'A ironia é que a Furosemida "trabalha de dentro do tubo". Em falência renal severa (DRC 4/5), pouca droga chega no tubo do rim. Exige doses IV maciças (até 200mg/dose) para "bater e funcionar" no rim doente.', es: 'La ironía es que Furosemida "trabaja desde dentro del tubo". En falla renal severa, poca droga llega al tubo. Exige dosis IV masivas (hasta 200mg/dosis) para funcionar.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Atenção na Cirrose e Ascite (Pode desidratar o vaso, baixar a perfusão do fígado e precipitar Síndrome Hepatorrenal fatal).', es: 'Atención en Cirrosis y Ascitis (Puede deshidratar el vaso, precipitando Síndrome Hepatorrenal fatal).' } },
+      commonAdverseEffects: { pt: ['Hipocalemia (Potássio baixo com câimbras intensas)', 'Hipovolemia aguda e Hipotensão ortostática', 'Hipomagnesemia e Hiperuricemia (crise de gota)'], es: ['Hipopotasemia (Potasio bajo con calambres intensos)', 'Hipovolemia aguda e Hipotensión ortostática', 'Hipomagnesemia e Hiperuricemia (crisis de gota)'] },
+      dangerousAdverseEffects: { pt: ['OTOTOXICIDADE SURDEZ IRREVERSÍVEL (Ocorre por lesão direta do nervo vestibulococlear se a injeção IV for muito rápida na veia)', 'Colapso circulatório por desidratação maciça'], es: ['OTOTOXICIDAD SORDERA IRREVERSIBLE (Ocurre por lesión directa del nervio si la inyección IV es muy rápida)', 'Colapso circulatorio por deshidratación masiva'] },
+      contraindications: {
+        absolute: { pt: ['Anúria total com falência renal aguda irresponsiva', 'Coma hepático e depleção severa de eletrólitos não corrigida'], es: ['Anuria total con falla renal aguda irresponsiva', 'Coma hepático y depleción severa de electrolitos no corregida'] },
+        relative: { pt: ['Alergia a sulfonamidas (Embora reações cruzadas reais sejam raras, a furosemida possui grupo sulfamídico)'], es: ['Alergia a sulfonamidas (Furosemida posee grupo sulfamídico)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'NUNCA USE PARA "MIJAR" NO CHOQUE: É um crime médico administrar Furosemida em um paciente internado com Insuficiência Renal Aguda que está "oligúrico" (sem urinar) devido a DESIDRATAÇÃO ou SEPSE. Se falta água, forçar o rim com Lasix destrói os néfrons por hipoperfusão (Necrose Tubular Aguda irreversível).', es: 'NUNCA USE PARA "ORINAR" EN CHOQUE: Es un crimen médico administrar Furosemida en un paciente con Falla Renal Aguda oligúrico por DESHIDRATACIÓN o SEPSIS. Forzar el riñón destruye las nefronas (Necrosis Tubular Aguda).' }
+      }
     }
 
-  }); /* fim Object.assign CARDIOLOGIA_DRUGS_DB — BUILD 354 Lote 1 (Antiarrítmicos: Amiodarona/Adenosina/Lidocaína IV) + BUILD 356 Lote 2 (Vasodilatadores: Nitroprussiato/Nitroglicerina) */
+  }); /* fim Object.assign CARDIOLOGIA_DRUGS_DB — BUILD 403 (furosemida_iv) */
 })();
