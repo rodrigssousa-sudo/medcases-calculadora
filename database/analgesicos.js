@@ -219,45 +219,6 @@
      Preservada aqui apenas para rastreabilidade/auditoria do lote recebido.
   ══════════════════════════════════════════════════════════════════════════════ */
   const _grupo2_aas_duplicata_NAO_USAR = {
-    /* ── ÁCIDO ACETILSALICÍLICO (AAS) — DUPLICATA de `aas` em cardio.js Grupo 20.2 ── */
-    "acido_acetilsalicilico": {
-      name: { pt: 'Ácido Acetilsalicílico (AAS)', es: 'Ácido Acetilsalicílico (AAS)' },
-      category: 'analgesia',
-      class: { pt: 'AINE / Antiagregante Plaquetário', es: 'AINE / Antiagregante Plaquetario' },
-      indications: {
-        pt: ['Prevenção primária e secundária de eventos cardiovasculares (doses baixas)', 'SCA aguda', 'Dor leve a moderada, febre e inflamação (doses altas)'],
-        es: ['Prevención primaria y secundaria de eventos cardiovasculares (dosis bajas)', 'SCA aguda', 'Dolor leve a moderado, fiebre e inflamación (dosis altas)']
-      },
-      commercialNames: { br: ['AAS', 'Aspirina', 'SomALGIN'], ar: ['Aspirina', 'Aspirineta'] },
-      presentation: { pt: ['Comprimidos 100 mg (AAS Infantil/Protect)', '500 mg'], es: ['Comprimidos 100 mg (Aspirineta/Protect)', '500 mg'] },
-      mechanism: {
-        pt: 'Inibe de forma IRREVERSÍVEL as enzimas COX-1 e COX-2 por acetilação. Em doses baixas (75-100mg), inibe seletivamente a COX-1 nas plaquetas, bloqueando a síntese de Tromboxano A2 (TXA2) por toda a vida útil da plaqueta (7 a 10 dias). Em doses altas (>500mg), possui efeito analgésico e anti-inflamatório, mas aumenta toxicidade.',
-        es: 'Inhibe de forma IRREVERSIBLE las enzimas COX-1 y COX-2 por acetilación. En dosis bajas (75-100mg), inhibe selectivamente la COX-1 en las plaquetas, bloqueando la síntesis de Tromboxano A2 (TXA2) por toda la vida útil de la plaqueta (7 a 10 días). En dosis altas (>500mg), posee efecto analgésico y antiinflamatorio, pero aumenta la toxicidad.'
-      },
-      dose: {
-        adult: {
-          pt: 'Antiagregação crônica: 75 a 100 mg VO 1x/dia. SCA aguda: 300 mg VO mastigados. Analgesia/Febre: 500 a 1000 mg a cada 4 a 6 horas (Máx 4g/dia).',
-          es: 'Antiagregación crónica: 75 a 100 mg VO 1 vez/día. SCA aguda: 300 mg VO masticados. Analgesia/Fiebre: 500 a 1000 mg cada 4 a 6 horas (Máx 4g/día).'
-        },
-        pediatric: {
-          pt: 'Uso restrito! Apenas na Doença de Kawasaki ou Febre Reumática. Contraindicado em infecções virais pelo risco de Síndrome de Reye.',
-          es: '¡Uso restringido! Solo en Enfermedad de Kawasaki o Fiebre Reumática. Contraindicado en infecciones virales por riesgo de Síndrome de Reye.'
-        }
-      },
-      administration: { pt: ['Doses analgésicas devem ser tomadas com alimentos.', 'Na suspeita de Infarto (SCA), o comprimido NÃO DEVE ser de revestimento entérico e DEVE SER MASTIGADO.'], es: ['Dosis analgésicas deben tomarse con alimentos.', 'En sospecha de Infarto (SCA), el comprimido NO DEBE ser de cubierta entérica y DEBE SER MASTICADO.'] },
-      renalAdjustment: { required: true, message: { pt: 'Evitar doses elevadas (analgésicas) no ClCr < 30 mL/min. Doses baixas (cardíacas) são geralmente seguras.', es: 'Evitar dosis elevadas (analgésicas) en ClCr < 30 mL/min. Dosis bajas (cardíacas) son generalmente seguras.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Evitar na insuficiência hepática grave devido ao risco de sangramento e coagulopatia.', es: 'Evitar en insuficiencia hepática grave debido al riesgo de sangrado y coagulopatía.' } },
-      commonAdverseEffects: { pt: ['Dispepsia', 'Pirose', 'Sangramento gengival leve', 'Equimoses'], es: ['Dispepsia', 'Pirosis', 'Sangrado gingival leve', 'Equimosis'] },
-      dangerousAdverseEffects: { pt: ['Hemorragia gastrointestinal grave', 'Úlcera péptica perfurada', 'Hemorragia intracraniana', 'Broncoespasmo (asma induzida por AAS)', 'Síndrome de Reye (em crianças)'], es: ['Hemorragia gastrointestinal grave', 'Úlcera péptica perforada', 'Hemorragia intracraneal', 'Broncoespasmo (asma inducida por AAS)', 'Síndrome de Reye (en niños)'] },
-      contraindications: {
-        absolute: { pt: ['Úlcera péptica ativa', 'Déficits de coagulação graves / Hemofilia', 'Tríade de Samter (Asma, pólipos nasais e alergia a AAS)', 'Uso em crianças com infecção viral'], es: ['Úlcera péptica activa', 'Déficits de coagulación graves / Hemofilia', 'Tríada de Samter (Asma, pólipos nasales y alergia a AAS)', 'Uso en niños con infección viral'] },
-        relative: { pt: ['Insuficiência renal grave', 'Terceiro trimestre de gravidez'], es: ['Insuficiencia renal grave', 'Tercer trimestre de embarazo'] }
-      },
-      safetyFlags: {
-        bleedingRisk: true, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'O AAS interage de forma competitiva no receptor da COX-1 com outros AINEs (como Ibuprofeno e Dipirona), o que anula seu efeito cardioprotetor se administrado na ordem errada.', es: 'El AAS interactúa de forma competitiva en el receptor de la COX-1 con otros AINEs (como Ibuprofeno y Dipirona), lo que anula su efecto cardioprotector si se administra en el orden incorrecto.' }
-      }
-    }
   }; /* fim _grupo2_aas_duplicata_NAO_USAR — NUNCA atribuída a window.ANALGESICOS_DRUGS_DB */
 
   /* ══════════════════════════════════════════════════════════════════════════════
@@ -2454,46 +2415,6 @@
       }
     },
 
-/* ── LEVOSIMENDANA ──────────────────────────────────────────────────── */
-    "levosimendana": {
-      name: { pt: 'Levosimendana', es: 'Levosimendán' },
-      category: 'cardiologia',
-      class: { pt: 'Inodilatador / Sensibilizador de Cálcio', es: 'Inodilatador / Sensibilizador de Calcio' },
-      indications: {
-        pt: ['Insuficiência Cardíaca Aguda Descompensada severa', 'Choque cardiogênico refratário', 'Desmame difícil de circulação extracorpórea (CEC)'],
-        es: ['Insuficiencia Cardíaca Aguda Descompensada severa', 'Choque cardiogénico refractario', 'Destete difícil de circulación extracorpórea (CEC)']
-      },
-      commercialNames: { br: ['Simdax'], ar: ['Simdax'] },
-      presentation: { pt: ['Ampolas IV 2,5 mg/mL (5 mL)'], es: ['Ampollas IV 2,5 mg/mL (5 mL)'] },
-      mechanism: {
-        pt: 'Mecanismo duplo fantástico: 1) Liga-se à troponina C do miocárdio, tornando a fibra muscular mais sensível ao cálcio já existente, AUMENTANDO a força de contração (inotropismo) SEM aumentar o consumo de oxigênio do coração (ao contrário da dobutamina). 2) Abre os canais de potássio sensíveis ao ATP na musculatura lisa vascular, causando VASODILATAÇÃO coronariana e sistêmica severa (reduz pré e pós-carga).',
-        es: 'Mecanismo doble fantástico: 1) Se une a la troponina C del miocardio, haciendo la fibra muscular más sensible al calcio ya existente, AUMENTANDO la fuerza de contracción (inotropismo) SIN aumentar el consumo de oxígeno del corazón (a diferencia de la dobutamina). 2) Abre los canales de potasio sensibles al ATP en la musculatura lisa vascular, causando VASODILATACIÓN coronaria y sistémica severa (reduce pre y poscarga).'
-      },
-      dose: {
-        adult: {
-          pt: 'Infusão IV Contínua: 0,05 a 0,2 mcg/kg/min por 24 horas. (A dose de ataque em bolus foi amplamente ABANDONADA pelo risco de choque hipotensivo letal).',
-          es: 'Infusión IV Continua: 0,05 a 0,2 mcg/kg/min por 24 horas. (La dosis de ataque en bolo fue ampliamente ABANDONADA por el riesgo de choque hipotensivo letal).'
-        },
-        pediatric: {
-          pt: 'Uso especializado em UTI Pediátrica Cardíaca (0,05 a 0,1 mcg/kg/min).',
-          es: 'Uso especializado en UCI Pediátrica Cardíaca (0,05 a 0,1 mcg/kg/min).'
-        }
-      },
-      administration: { pt: ['Infusão em bomba por exatamente 24 horas.', 'Seu metabólito ativo (OR-1896) tem meia-vida de 80 horas. O paciente continua tendo o benefício (e o risco) cardíaco por até 7 a 9 DIAS após desligar a bomba.'], es: ['Infusión en bomba por exactamente 24 horas.', 'Su metabolito activo (OR-1896) tiene vida media de 80 horas. El paciente sigue teniendo el beneficio (y el riesgo) cardíaco por hasta 7 a 9 DÍAS tras apagar la bomba.'] },
-      renalAdjustment: { required: true, message: { pt: 'Evitar em insuficiência renal grave (ClCr < 30). O metabólito ativo se acumula drasticamente.', es: 'Evitar en insuficiencia renal grave (ClCr < 30). El metabolito activo se acumula drásticamente.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Evitar em hepatopatia grave.', es: 'Evitar en hepatopatía grave.' } },
-      commonAdverseEffects: { pt: ['Cefaleia (devido à intensa vasodilatação cerebral)', 'Hipotensão leve'], es: ['Cefalea (debido a la intensa vasodilatación cerebral)', 'Hipotensión leve'] },
-      dangerousAdverseEffects: { pt: ['Hipotensão Arterial Refratária / Choque Vasoplégico', 'Fibrilação Atrial e Arritmias Ventriculares', 'Hipocalemia (devido ao mecanismo dos canais de K+)'], es: ['Hipotensión Arterial Refractaria / Choque Vasopléjico', 'Fibrilación Auricular y Arritmias Ventriculares', 'Hipopotasemia (debido al mecanismo de los canales de K+)'] },
-      contraindications: {
-        absolute: { pt: ['Hipotensão severa pré-existente (PAS < 85 mmHg) sem uso prévio de Noradrenalina', 'Obstrução mecânica da saída do VE (Estenose Aórtica severa)'], es: ['Hipotensión severa preexistente (PAS < 85 mmHg) sin uso previo de Noradrenalina', 'Obstrucción mecánica de la salida del VI (Estenosis Aórtica severa)'] },
-        relative: { pt: ['Arritmias ventriculares não controladas'], es: ['Arritmias ventriculares no controladas'] }
-      },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'REGRA DE UTI: A levosimendana NUNCA deve ser ligada em um paciente hipotenso sem que haja uma bomba de Noradrenalina correndo junto para segurar a pressão, pois a vasodilatação causada por ela é muito agressiva.', es: 'REGLA DE UCI: El levosimendán NUNCA debe encenderse en un paciente hipotenso sin que haya una bomba de Noradrenalina corriendo junto para sostener la presión, pues la vasodilatación que causa es muy agresiva.' }
-      }
-    },
-
 /* ── ISOPROTERENOL ──────────────────────────────────────────────────── */
     "isoproterenol": {
       name: { pt: 'Isoproterenol / Isoprenalina', es: 'Isoproterenol / Isoprenalina' },
@@ -2704,46 +2625,6 @@
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'O Enalaprilato tem duração de ação de até 24 horas. Se o paciente evoluir com choque séptico ou hemorrágico pouco após a dose, a pressão será virtualmente irrecuperável mesmo com altas doses de noradrenalina, devido ao bloqueio maciço do SRAA.', es: 'El Enalaprilat tiene duración de acción de hasta 24 horas. Si el paciente evoluciona con choque séptico o hemorrágico poco después de la dosis, la presión será virtualmente irrecuperable incluso con altas dosis de noradrenalina, debido al bloqueo masivo del SRAA.' }
-      }
-    },
-
-/* ── MILRINONA ──────────────────────────────────────────────────────── */
-    "milrinona": {
-      name: { pt: 'Milrinona', es: 'Milrinona' },
-      category: 'cardiologia',
-      class: { pt: 'Inibidor da Fosfodiesterase 3 (PDE3) / Inodilatador', es: 'Inhibidor de la Fosfodiesterasa 3 (PDE3) / Inodilatador' },
-      indications: {
-        pt: ['Choque Cardiogênico com alta resistência vascular (frio e pálido)', 'Insuficiência Cardíaca Aguda Descompensada', 'Hipertensão Pulmonar severa no pós-operatório'],
-        es: ['Choque Cardiogénico con alta resistencia vascular (frío y pálido)', 'Insuficiencia Cardíaca Aguda Descompensada', 'Hipertensión Pulmonar severa en el posoperatorio']
-      },
-      commercialNames: { br: ['Primacor'], ar: ['Corotrope'] },
-      presentation: { pt: ['Ampolas IV 1 mg/mL (10 mL ou 20 mL)'], es: ['Ampollas IV 1 mg/mL (10 mL o 20 mL)'] },
-      mechanism: {
-        pt: 'Inibe seletivamente a enzima Fosfodiesterase III, responsável por destruir o AMPc no coração e nos vasos. Com altos níveis de AMPc, o coração se contrai MUITO MAIS FORTE (inotropismo positivo) e relaxa muito melhor na diástole (lusitropismo). Em contrapartida, os vasos sanguíneos (incluindo o pulmão) dilatam severamente. É chamada de Inodilatador. Como age DENTRO da célula, não depende dos receptores beta (não é bloqueada por betabloqueadores).',
-        es: 'Inhibe selectivamente la enzima Fosfodiesterasa III, responsable de destruir el AMPc en el corazón y en los vasos. Con altos niveles de AMPc, el corazón se contrae MUCHO MÁS FUERTE (inotropismo positivo) y se relaja mucho mejor en la diástole (lusitropismo). En contrapartida, los vasos sanguíneos (incluyendo el pulmón) se dilatan severamente. Es llamada Inodilatador. Como actúa DENTRO de la célula, no depende de los receptores beta (no es bloqueada por betabloqueantes).'
-      },
-      dose: {
-        adult: {
-          pt: 'Ataque: Bolus de 50 mcg/kg IV (frequentemente EVITADO em UTI médica pelo risco de hipotensão aguda). Manutenção: 0,375 a 0,75 mcg/kg/min em infusão contínua.',
-          es: 'Ataque: Bolo de 50 mcg/kg IV (frecuentemente EVITADO en UCI médica por el riesgo de hipotensión aguda). Mantenimiento: 0,375 a 0,75 mcg/kg/min en infusión continua.'
-        },
-        pediatric: {
-          pt: 'Bolus (0 a 50 mcg/kg) seguido de 0,25 a 0,75 mcg/kg/min.',
-          es: 'Bolo (0 a 50 mcg/kg) seguido de 0,25 a 0,75 mcg/kg/min.'
-        }
-      },
-      administration: { pt: ['Exclusivamente Bomba de Infusão Contínua.'], es: ['Exclusivamente Bomba de Infusión Continua.'] },
-      renalAdjustment: { required: true, message: { pt: 'Depuração estritamente renal. Reduzir a dose de manutenção de forma agressiva (até 0,2 mcg/kg/min) se ClCr < 30, senão o paciente terá vasoplegia prolongada.', es: 'Depuración estrictamente renal. Reducir la dosis de mantenimiento de forma agresiva (hasta 0,2 mcg/kg/min) si ClCr < 30, de lo contrario el paciente tendrá vasoplejía prolongada.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
-      commonAdverseEffects: { pt: ['Hipotensão arterial marcante (o maior desafio do seu uso)', 'Dor de cabeça'], es: ['Hipotensión arterial marcada (el mayor desafío de su uso)', 'Dolor de cabeza'] },
-      dangerousAdverseEffects: { pt: ['Arritmias ventriculares (Taq. Ventricular, Extrassístoles) pelo aumento do cálcio intra-miocárdico', 'Trombocitopenia (rara na milrinona, mas de classe)'], es: ['Arritmias ventriculares (Taq. Ventricular, Extrasístoles) por el aumento del calcio intra-miocárdico', 'Trombocitopenia (rara en la milrinona, pero de clase)'] },
-      contraindications: {
-        absolute: { pt: ['Hipotensão profunda basal não suportada por noradrenalina', 'Estenose Aórtica ou Pulmonar severa (qualquer obstrutiva crônica)'], es: ['Hipotensión profunda basal no soportada por noradrenalina', 'Estenosis Aórtica o Pulmonar severa (cualquier obstructiva crónica)'] },
-        relative: { pt: ['Uso isolado pós IAM recente (pode aumentar o consumo de O2 e arritmias)'], es: ['Uso aislado pos IAM reciente (puede aumentar el consumo de O2 y arritmias)'] }
-      },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'INCOMPATIBILIDADE DE VIA: A Milrinona NUNCA PODE ser infundida na mesma via que a Furosemida (diurético), pois ocorre precipitação imediata formando cristais que causam embolia pulmonar.', es: 'INCOMPATIBILIDAD DE VÍA: La Milrinona NUNCA PUEDE ser infundida en la misma vía que la Furosemida (diurético), pues ocurre precipitación inmediata formando cristales que causan embolia pulmonar.' }
       }
     },
 
