@@ -916,6 +916,43 @@ const INTERACOES_DB = {
     }
   },
 
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 388 — BLOCO MOTOR DE INTERAÇÕES: Anticolinérgicos e Corticoides Inalatórios
+     Aclidínio, Glicopirrônio, Umeclidínio, Beclometasona, Budesonida
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── CORTICOSTEROIDES INALATÓRIOS (ICS — Budesonida, Beclometasona, Fluticasona) ── */
+  "$classe_corticosteroides_inalatorios": {
+    "$classe_inibidores_potentes_cyp3a4": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A 'CUSHING' INALATÓRIA. Os corticoides inalatórios dependem de serem instantaneamente destruídos no fígado pela enzima CYP3A4 caso sejam engolidos (efeito de primeira passagem), para que não ajam no resto do corpo. Se o paciente contrair HIV (usando Ritonavir) ou um Fungo (usando Itraconazol/Cetoconazol), essas drogas travam o CYP3A4. A Budesonida/Fluticasona inalada acumula absurdamente no sangue. O paciente 'do nada' ganha peso, o rosto fica redondo (Fácies de Lua Cheia), a pressão sobe e as adrenais morrem (Síndrome de Cushing Iatrogênica).",
+        es: "EL 'CUSHING' INHALATORIO. Los corticoides inhalatorios dependen de ser instantáneamente destruidos en el hígado por la enzima CYP3A4 si se tragan. Si el paciente contrae VIH (usando Ritonavir) o un Hongo (Itraconazol), estas drogas traban el CYP3A4. La Budesonida/Fluticasona inhalada se acumula absurdamente en la sangre. El paciente 'de la nada' gana peso, la cara se pone redonda (Facies de Luna Llena), la presión sube y las suprarrenales mueren (Síndrome de Cushing Iatrogénico)."
+      },
+      conduta: {
+        pt: "O uso de Corticoides inalatórios em pacientes usando Inibidores de Protease (Ritonavir, Paxlovid) deve ser extremamente cauteloso, optando pelas doses mais baixas possíveis. Beclometasona tem uma leve vantagem de segurança sobre Fluticasona nesse cenário.",
+        es: "El uso de Corticoides inhalatorios en pacientes usando Inhibidores de Proteasa (Ritonavir, Paxlovid) debe ser extremadamente cauteloso, optando por las dosis más bajas posibles. Beclometasona tiene una leve ventaja de seguridad sobre Fluticasona en este escenario."
+      }
+    }
+  },
+
+  /* ── LAMAS AVANÇADOS (Aclidínio, Glicopirrônio, Umeclidínio — motor muscarínico complementar) ── */
+  "$classe_lamas_avancados": {
+    "donepezila_rivastigmina": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "ANTAGONISMO NEUROLÓGICO (Alzheimer vs DPOC). Medicamentos para Doença de Alzheimer (Donepezila, Rivastigmina, Galantamina) funcionam aumentando a Acetilcolina no cérebro. Todos os LAMAs do DPOC (Umeclidínio, Glicopirrônio) funcionam BLOQUEANDO a Acetilcolina. Se uma parcela do LAMA cair no sangue e cruzar o cérebro (especialmente idosos com barreira hematoencefálica fraca), eles vão ANULAR o tratamento do Alzheimer, piorando a demência rapidamente.",
+        es: "ANTAGONISMO NEUROLÓGICO (Alzheimer vs EPOC). Medicamentos para Enfermedad de Alzheimer funcionan aumentando la Acetilcolina en el cerebro. Todos los LAMAs del EPOC funcionan BLOQUEANDO la Acetilcolina. Si una parcela del LAMA cae en la sangre y cruza al cerebro, van a ANULAR el tratamiento del Alzheimer, empeorando la demencia rápidamente."
+      },
+      conduta: {
+        pt: "Preferir o Aclidínio (que se desintegra no sangue antes de chegar ao cérebro) para tratar a DPOC em pacientes geriátricos com Alzheimer ativo em uso de anticolinesterásicos.",
+        es: "Preferir el Aclidinio (que se desintegra en la sangre antes de llegar al cerebro) para tratar la EPOC en pacientes geriátricos con Alzheimer activo en uso de anticolinesterásicos."
+      }
+    }
+  },
+
   /* ─────────────────────────────────────────────────────────────
      BUILD 255 — ADDITIVE RISK EXPANSION
      $classe_depressoras_snc × $classe_depressoras_snc (auto-cruzamento)

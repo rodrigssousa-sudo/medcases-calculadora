@@ -409,6 +409,206 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
         warning: { pt: 'O SALVADOR DO DPOC: Enquanto os asmáticos dependem da vida e da morte de Corticoides, os pacientes com DPOC (fumantes graves crônicos) não respondem bem aos corticoides. O Tiotrópio (LAMA) é a principal droga capaz de abrir o brônquio cicatrizado do fumante, devendo ser a base do tratamento do enfisema.', es: 'EL SALVADOR DEL EPOC: Mientras los asmáticos dependen de los Corticoides, los pacientes con EPOC (fumadores crónicos) no responden bien a los corticoides. El Tiotropio (LAMA) es la principal droga capaz de abrir el bronquio cicatrizado del fumador, debiendo ser la base del tratamiento del enfisema.' }
       }
+    },
+
+    /* ── ACLIDÍNIO ──────────────────────────────────────────────────────── */
+    "aclidinio": {
+      name: { pt: 'Aclidínio (Brometo de Aclidínio)', es: 'Aclidinio (Bromuro de Aclidinio)' },
+      category: 'pneumologia',
+      class: { pt: 'Antagonista Muscarínico de Longa Duração (LAMA)', es: 'Antagonista Muscarínico de Larga Duración (LAMA)' },
+      indications: {
+        pt: ['Tratamento de manutenção sintomática da Doença Pulmonar Obstrutiva Crônica (DPOC)'],
+        es: ['Tratamiento de mantenimiento sintomático de la Enfermedad Pulmonar Obstructiva Crónica (EPOC)']
+      },
+      commercialNames: { br: ['Bretaris Genuair'], ar: ['Bretaris'] },
+      presentation: { pt: ['Pó inalatório (Dispositivo Genuair) 400 mcg/dose'], es: ['Polvo inhalatorio (Dispositivo Genuair) 400 mcg/dosis'] },
+      mechanism: {
+        pt: 'Liga-se de forma competitiva e reversível aos receptores muscarínicos M3 no músculo liso brônquico. Seu grande diferencial: Diferente do Tiotrópio (que dura 24h), o Aclidínio dura cerca de 12h e é rapidamente hidrolisado no plasma humano. Isso significa que, se a droga for engolida ou cair no sangue, ela é destruída em minutos, gerando risco QUASE ZERO de efeitos colaterais sistêmicos (como boca seca intensa e retenção urinária).',
+        es: 'Se une de forma competitiva y reversible a los receptores muscarínicos M3 en el músculo liso bronquial. Su gran diferencial: A diferencia del Tiotropio, el Aclidinio dura unas 12h y es rápidamente hidrolizado en el plasma humano. Si la droga es tragada o cae en la sangre, se destruye en minutos, generando riesgo CASI CERO de efectos colaterales sistémicos.'
+      },
+      dose: {
+        adult: {
+          pt: '1 inalação de 400 mcg a cada 12 horas (Diferente da maioria dos LAMAs modernos que são 1x ao dia, este exige 2 tomadas).',
+          es: '1 inhalación de 400 mcg cada 12 horas (A diferencia de la mayoría de los LAMAs modernos que son 1x al día, este exige 2 tomas).'
+        },
+        pediatric: {
+          pt: 'Não indicado para menores de 18 anos.',
+          es: 'No indicado para menores de 18 años.'
+        }
+      },
+      administration: { pt: ['Inalação via dispositivo Genuair (possui um "clique" sonoro e um visor de cor que confirma se o paciente inalou corretamente a dose).'], es: ['Inhalación vía dispositivo Genuair (posee un "clic" sonoro y un visor de color que confirma si el paciente inhaló correctamente la dosis).'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste em insuficiência renal.', es: 'No requiere ajuste en insuficiencia renal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não requer ajuste (metabolismo puramente hidrolítico plasmático).', es: 'No requiere ajuste (metabolismo puramente hidrolítico plasmático).' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Tosse irritativa pós-inalação', 'Boca seca (muito mais leve que o tiotrópio)'], es: ['Cefalea', 'Tos irritativa posinhalación', 'Boca seca (mucho más leve que el tiotropio)'] },
+      dangerousAdverseEffects: { pt: ['Broncoespasmo paradoxal (raro)'], es: ['Broncoespasmo paradójico (raro)'] },
+      contraindications: {
+        absolute: { pt: ['Tratamento de Asma', 'Episódios agudos de broncoespasmo'], es: ['Tratamiento de Asma', 'Episodios agudos de broncoespasmo'] },
+        relative: { pt: ['Glaucoma de ângulo estreito instável'], es: ['Glaucoma de ángulo estrecho inestable'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'É a droga de escolha (LAMA) para o paciente idoso com DPOC que sofre de Hiperplasia Prostática Benigna (HPB) grave, pois o risco de causar retenção urinária obstrutiva é virtualmente ausente se comparado ao Tiotrópio.', es: 'Es la droga de elección (LAMA) para el paciente anciano con EPOC que sufre de Hiperplasia Prostática Benigna (HPB) grave, pues el riesgo de causar retención urinaria obstructiva es virtualmente ausente en comparación al Tiotropio.' }
+      }
+    },
+
+    /* ── GLICOPIRRÔNIO ──────────────────────────────────────────────────── */
+    "glicopirronio": {
+      name: { pt: 'Glicopirrônio (Brometo de)', es: 'Glicopirronio (Bromuro de)' },
+      category: 'pneumologia',
+      class: { pt: 'Antagonista Muscarínico de Longa Duração (LAMA)', es: 'Antagonista Muscarínico de Larga Duración (LAMA)' },
+      indications: {
+        pt: ['Manutenção em DPOC', 'Pré-medicação anestésica (via injetável) para secar secreções', 'Sialorreia (excesso de baba) severa em doenças neurológicas (off-label)'],
+        es: ['Mantenimiento en EPOC', 'Premedicación anestésica (vía inyectable) para secar secreciones', 'Sialorrea (exceso de baba) severa en enfermedades neurológicas (off-label)']
+      },
+      commercialNames: { br: ['Seebri', 'Ultibro (Assoc)'], ar: ['Seebri'] },
+      presentation: { pt: ['Cápsulas inalatórias 50 mcg', 'Ampolas injetáveis 0,2 mg/mL (uso anestésico)'], es: ['Cápsulas inhalatorias 50 mcg', 'Ampollas inyectables 0,2 mg/mL (uso anestésico)'] },
+      mechanism: {
+        pt: 'Bloqueador muscarínico competitivo. No pulmão (inalatório), ele possui um início de ação extremamente rápido (5 minutos) em comparação ao tiotrópio, mas mantém o efeito de duração de 24 horas. Na via sistêmica (injetável), é usado pelo anestesista para bloquear os efeitos vagais (bradicardia) e "secar" completamente a boca e os brônquios do paciente antes de entubar.',
+        es: 'Bloqueador muscarínico competitivo. En el pulmón (inhalatorio), posee un inicio de acción extremadamente rápido (5 minutos) en comparación al tiotropio, pero mantiene el efecto de duración de 24 horas. En la vía sistémica (inyectable), es usado por el anestesista para bloquear los efectos vagales y "secar" completamente la boca y los bronquios antes de entubar.'
+      },
+      dose: {
+        adult: {
+          pt: 'DPOC: 1 inalação de 50 mcg UMA VEZ ao dia. Controle de Secreção (SC/IV): 0,1 a 0,2 mg repetidos conforme necessário.',
+          es: 'EPOC: 1 inhalación de 50 mcg UNA VEZ al día. Control de Secreción (SC/IV): 0,1 a 0,2 mg repetidos según necesidad.'
+        },
+        pediatric: {
+          pt: 'Uso injetável/oral para controle de salivação em paralisia cerebral: 0,01 a 0,02 mg/kg.',
+          es: 'Uso inyectable/oral para control de salivación en parálisis cerebral: 0,01 a 0,02 mg/kg.'
+        }
+      },
+      administration: { pt: ['Inalação diária no mesmo horário via dispositivo (Breezhaler).'], es: ['Inhalación diaria en el mismo horario vía dispositivo (Breezhaler).'] },
+      renalAdjustment: { required: true, message: { pt: 'Atenção: Diferente do Aclidínio, o Glicopirrônio sofre depuração renal agressiva. Pacientes com DRC grave (ClCr < 30) acumulam a droga e sofrem fortes efeitos anticolinérgicos colaterais.', es: 'Atención: A diferencia del Aclidinio, el Glicopirronio sufre depuración renal agresiva. Pacientes con ERC grave (ClCr < 30) acumulan la droga y sufren fuertes efectos anticolinérgicos.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Boca seca', 'Infecções do trato urinário', 'Tosse'], es: ['Boca seca', 'Infecciones del tracto urinario', 'Tos'] },
+      dangerousAdverseEffects: { pt: ['Retenção Urinária Obstrutiva aguda', 'Agravamento de Glaucoma de Ângulo Estreito', 'Taquicardia severa (via IV)'], es: ['Retención Urinaria Obstructiva aguda', 'Agravamiento de Glaucoma de Ángulo Estrecho', 'Taquicardia severa (vía IV)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida'], es: ['Hipersensibilidad conocida'] },
+        relative: { pt: ['Cardiopatia isquêmica instável (via venosa)'], es: ['Cardiopatía isquémica inestable (vía venosa)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'DUPLA FUNÇÃO CLÍNICA: O Glicopirrônio é uma excelente arma na medicina paliativa. Aplicado debaixo da língua ou via SC no paciente terminal (Sororoca da Morte), ele seca a abundante secreção pulmonar em minutos, aliviando o ruído aterrorizante do fim de vida sem rebaixar o cérebro (pois não cruza a Barreira Hematoencefálica).', es: 'DOBLE FUNCIÓN CLÍNICA: El Glicopirronio es una excelente arma en medicina paliativa. Aplicado debajo de la lengua o vía SC en el paciente terminal (Estertor de Muerte), seca la abundante secreción pulmonar en minutos, aliviando el ruido sin deprimir el cerebro.' }
+      }
+    },
+
+    /* ── UMECLIDÍNIO ────────────────────────────────────────────────────── */
+    "umeclidinio": {
+      name: { pt: 'Umeclidínio', es: 'Umeclidinio' },
+      category: 'pneumologia',
+      class: { pt: 'Antagonista Muscarínico de Longa Duração (LAMA)', es: 'Antagonista Muscarínico de Larga Duración (LAMA)' },
+      indications: {
+        pt: ['Tratamento de manutenção a longo prazo da DPOC', 'Asma de difícil controle (em terapia tripla)'],
+        es: ['Tratamiento de mantenimiento a largo plazo de la EPOC', 'Asma de difícil control (en terapia triple)']
+      },
+      commercialNames: { br: ['Incruse', 'Anoro (Assoc)', 'Trelegy (Tripla)'], ar: ['Incruse'] },
+      presentation: { pt: ['Pó inalatório (Dispositivo Ellipta) 62,5 mcg/dose'], es: ['Polvo inhalatorio (Dispositivo Ellipta) 62,5 mcg/dosis'] },
+      mechanism: {
+        pt: 'LAMA de última geração. Bloqueia os receptores muscarínicos M3 com alta afinidade e altíssima meia-vida de dissociação, mantendo as vias aéreas hiperinsufladas abertas por 24 horas. Geralmente comercializado em canetas de terapia dupla (com Vilanterol) ou terapia tripla (Fluticasona + Umeclidínio + Vilanterol), facilitando a adesão máxima ao unificar tudo num clique só.',
+        es: 'LAMA de última generación. Bloquea los receptores muscarínicos M3 con alta afinidad y altísima vida media de disociación, manteniendo las vías aéreas hiperinsufladas abiertas por 24 horas. Generalmente comercializado en plumas de terapia doble o triple, facilitando la adhesión máxima al unificar todo en un solo clic.'
+      },
+      dose: {
+        adult: {
+          pt: '1 inalação de 62,5 mcg UMA VEZ ao dia.',
+          es: '1 inhalación de 62,5 mcg UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: 'Não recomendado (restrito a adultos).',
+          es: 'No recomendado (restringido a adultos).'
+        }
+      },
+      administration: { pt: ['Dispositivo Ellipta: Não exige coordenação entre apertar e inspirar (como os sprays antigos). O paciente apenas puxa o ar fortemente.'], es: ['Dispositivo Ellipta: No exige coordinación entre apretar e inspirar. El paciente solo aspira fuertemente el aire.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste (fármaco de eliminação predominantemente fecal/biliar).', es: 'Sin ajuste (fármaco de eliminación predominantemente fecal/biliar).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Nasofaringite', 'Infecção do trato respiratório superior', 'Taquicardia leve'], es: ['Nasofaringitis', 'Infección del tracto respiratorio superior', 'Taquicardia leve'] },
+      dangerousAdverseEffects: { pt: ['Efeitos obstrutivos urinários graves (em superdosagem)', 'Fibrilação Atrial (relatos isolados em doentes graves)'], es: ['Efectos obstructivos urinarios graves (en sobredosis)', 'Fibrilación Auricular (relatos aislados en enfermos graves)'] },
+      contraindications: {
+        absolute: { pt: ['Crise aguda (não serve para broncoespasmo imediato)'], es: ['Crisis aguda (no sirve para broncoespasmo inmediato)'] },
+        relative: { pt: ['Glaucoma', 'Alergia grave à proteína do leite (pois o pó inalatório contém lactose como excipiente veicular)'], es: ['Glaucoma', 'Alergia grave a la proteína de la leche (pues el polvo inhalatorio contiene lactosa como excipiente vehicular)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ALERTA DE ALERGIA: Se o paciente tiver anafilaxia ou alergia severa à PROTEÍNA DO LEITE DE VACA (APLV), os inaladores de pó seco (Ellipta, Diskus) podem deflagrar uma anafilaxia letal no paciente, pois a droga é micronizada sobre partículas de lactose láctea. Nesses pacientes, deve-se usar spray aerossol (HFA).', es: 'ALERTA DE ALERGIA: Si el paciente tiene anafilaxia o alergia severa a la PROTEÍNA DE LA LECHE DE VACA (APLV), los inhaladores de polvo seco pueden desencadenar una anafilaxia letal, pues la droga es micronizada sobre partículas de lactosa láctea. En estos pacientes, debe usarse spray aerosol (HFA).' }
+      }
+    },
+
+    /* ── BECLOMETASONA ──────────────────────────────────────────────────── */
+    "beclometasona": {
+      name: { pt: 'Beclometasona (Dipropionato)', es: 'Beclometasona (Dipropionato)' },
+      category: 'pneumologia',
+      class: { pt: 'Corticosteroide Inalatório (ICS)', es: 'Corticosteroide Inhalatorio (ICS)' },
+      indications: {
+        pt: ['Tratamento de base (manutenção) da ASMA brônquica em todos os degraus', 'Profilaxia de Rinite Alérgica (spray nasal)'],
+        es: ['Tratamiento de base (mantenimiento) del ASMA bronquial en todos los escalones', 'Profilaxis de Rinitis Alérgica (spray nasal)']
+      },
+      commercialNames: { br: ['Clenil', 'Fostair (Assoc)'], ar: ['Beclometasona'] },
+      presentation: { pt: ['Spray inalatório HFA 50, 200 e 250 mcg/dose', 'Spray Nasal 50 mcg/jato'], es: ['Spray inhalatorio HFA 50, 200 y 250 mcg/dosis', 'Spray Nasal 50 mcg/puff'] },
+      mechanism: {
+        pt: 'Anti-inflamatório esteroidal tópico. É um pró-fármaco ativado pelas enzimas do pulmão. Uma vez inalado, desliga a transcrição de citocinas inflamatórias, bloqueia a migração de eosinófilos e reduz o edema crônico da parede do brônquio. É o "extintor de incêndio" que apaga a inflamação basal da asma. Diferente do corticoide oral/venoso, a absorção para a corrente sanguínea é mínima, tornando o uso diário seguro por anos.',
+        es: 'Antiinflamatorio esteroideo tópico. Es un profármaco activado por las enzimas del pulmón. Una vez inhalado, apaga la transcripción de citocinas inflamatorias, bloquea la migración de eosinófilos y reduce el edema crónico de la pared bronquial. A diferencia del corticoide oral/venoso, la absorción a la sangre es mínima, haciendo el uso diario seguro por años.'
+      },
+      dose: {
+        adult: {
+          pt: 'Asma (Inalatório): 200 a 800 mcg/dia (dividido em 2 doses).',
+          es: 'Asma (Inhalatorio): 200 a 800 mcg/día (dividido en 2 dosis).'
+        },
+        pediatric: {
+          pt: '100 a 400 mcg/dia (dividido em 2 doses).',
+          es: '100 a 400 mcg/día (dividido en 2 dosis).'
+        }
+      },
+      administration: { pt: ['MANDATÓRIO: O paciente DEVE lavar a boca, escovar os dentes ou gargarejar rigorosamente LOGO APÓS usar a bombinha. O pó que fica na garganta baixa a imunidade local e causa proliferação de fungos.', 'Usar espaçador aumenta em 40% a chegada da droga no pulmão e diminui o risco de candidíase.'], es: ['OBLIGATORIO: El paciente DEBE lavar la boca, cepillarse los dientes o hacer gárgaras rigurosamente JUSTO DESPUÉS de usar el inhalador.', 'Usar espaciador aumenta en 40% la llegada al pulmón.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Cuidado em cirróticos apenas em doses maciças inalatórias prolongadas (risco de supressão adrenal leve).', es: 'Cuidado en cirróticos solo en dosis masivas inhalatorias prolongadas (riesgo de supresión adrenal leve).' } },
+      commonAdverseEffects: { pt: ['Candidíase orofaríngea (Sapinho)', 'Disfonia (Rouquidão persistente por miopatia das cordas vocais induzida pelo corticoide)', 'Tosse seca na aplicação'], es: ['Candidiasis orofaríngea (Muguet)', 'Disfonía (Ronquera persistente por miopatía de las cuerdas vocales inducida por el corticoide)', 'Tos seca en la aplicación'] },
+      dangerousAdverseEffects: { pt: ['Supressão do Eixo Hipotálamo-Hipófise-Adrenal (em altas doses diárias prolongadas)', 'Retardo no crescimento estatural de crianças (discutível e milimétrico, mas monitorado)'], es: ['Supresión del Eje Hipotálamo-Hipófisis-Adrenal (en altas dosis diarias prolongadas)', 'Retraso en el crecimiento estatural de niños (discutible y milimétrico, pero monitoreado)'] },
+      contraindications: {
+        absolute: { pt: ['Tratamento agudo de crise asmática severa se usado isoladamente (pois demora 1 semana para fazer o efeito anti-inflamatório máximo).'], es: ['Tratamiento agudo de crisis asmática severa si se usa aisladamente (pues tarda 1 semana para hacer el efecto antiinflamatorio máximo).'] },
+        relative: { pt: ['Infecções fúngicas ou tuberculosas ativas não tratadas no pulmão'], es: ['Infecciones fúngicas o tuberculosas activas no tratadas en el pulmón'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'MUDANÇA DE CONDUTA GINA: O asmático leve não usa mais "só salbutamol" na crise. Ele agora deve inalar a Beclometasona JUNTO com o Salbutamol na hora da falta de ar, provando que tratar a inflamação é mais vital que apenas abrir o brônquio temporariamente.', es: 'CAMBIO DE CONDUCTA GINA: El asmático leve ya no usa "solo salbutamol" en la crisis. Ahora debe inhalar Beclometasona JUNTO con Salbutamol en el momento de asfixia, probando que tratar la inflamación es más vital que solo abrir el bronquio.' }
+      }
+    },
+
+    /* ── BUDESONIDA ─────────────────────────────────────────────────────── */
+    "budesonida": {
+      name: { pt: 'Budesonida', es: 'Budesonida' },
+      category: 'pneumologia',
+      class: { pt: 'Corticosteroide Inalatório / Tópico', es: 'Corticosteroide Inhalatorio / Tópico' },
+      indications: {
+        pt: ['Asma brônquica crônica e exacerbações', 'Crupe Viral / Laringotraqueobronquite em Pediatria (Nebulização de resgate para inflamação de via aérea alta)', 'Rinite Alérgica (Nasal)', 'Doença de Crohn (Cápsulas orais)'],
+        es: ['Asma bronquial crónica y exacerbaciones', 'Crup Viral / Laringotraqueobronquitis en Pediatría (Nebulización de rescate para inflamación de vía aérea alta)', 'Rinitis Alérgica (Nasal)', 'Enfermedad de Crohn (Cápsulas orales)']
+      },
+      commercialNames: { br: ['Busonid', 'Pulmicort', 'Alenia (Assoc)'], ar: ['Neumocort', 'Budesonide'] },
+      presentation: { pt: ['Spray Inalatório 50 e 200 mcg/dose', 'Suspensão para nebulização (Gotas ou Flaconetes) 0,25 e 0,5 mg/mL', 'Cápsulas gastro-resistentes 3mg'], es: ['Spray Inhalatorio 50 y 200 mcg/dosis', 'Suspensión para nebulización 0,25 y 0,5 mg/mL', 'Cápsulas gastrorresistentes 3mg'] },
+      mechanism: {
+        pt: 'Potentíssimo anti-inflamatório local. O "Truque de Mestre" da Budesonida é que, mesmo se o paciente não lavar a boca e engolir o remédio, ele passa pelo fígado e sofre um Metabolismo de Primeira Passagem de 90%. O fígado destrói a droga engolida antes dela atingir o corpo inteiro. Isso garante que a Budesonida seja absurdamente potente no pulmão, mas virtualmente sem efeitos sistêmicos (não engorda, não causa diabetes).',
+        es: 'Potentísimo antiinflamatorio local. El "Truco Maestro" de la Budesonida es que, incluso si el paciente no se lava la boca y traga el remedio, pasa por el hígado y sufre un Metabolismo de Primera Pasada del 90%. El hígado destruye la droga tragada antes de que alcance el cuerpo entero. Esto garantiza que sea absurdamente potente en el pulmón, pero sin efectos sistémicos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Asma (Inalatório): 400 a 800 mcg/dia (dividido em 2x). Estratégia MART (junto c/ formoterol): Inalar em cada crise. Cápsula (Crohn): 9 mg/dia.',
+          es: 'Asma (Inhalatorio): 400 a 800 mcg/día (dividido en 2x). Estrategia MART (junto c/ formoterol): Inhalar en cada crisis. Cápsula (Crohn): 9 mg/día.'
+        },
+        pediatric: {
+          pt: 'Crupe (Estridor em bebês): 2 miligramas (Nebulização Maciça de Resgate no PS em dose única ou 2x de 1mg). Asma profilaxia: 100-200 mcg 2x/dia.',
+          es: 'Crup (Estridor en bebés): 2 miligramos (Nebulización Masiva de Rescate en Urgencias en dosis única o 2x de 1mg). Asma profilaxis: 100-200 mcg 2x/día.'
+        }
+      },
+      administration: { pt: ['As gotas/flaconetes para nebulização devem ser usadas com O2 e máscara. Pode demorar de 10 a 15 min para nebulizar todo o volume.', 'Obrigatório lavar o rosto do bebê após a nebulização, pois o corticoide que fica na pele da máscara afina e irrita o rosto da criança.'], es: ['Las gotas/viales para nebulización deben usarse con O2 y máscara. Puede tardar de 10 a 15 min en nebulizar.', 'Obligatorio lavar la cara del bebé tras la nebulización, pues el corticoide que queda en la piel de la máscara afina e irrita la cara del niño.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste.', es: 'Sin ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Em cirrose hepática severa, aquele metabolismo de "90% destruído" falha, e a droga atinge o sangue do paciente com força de corticoide sistêmico.', es: 'En cirrosis hepática severa, ese metabolismo de "90% destruido" falla, y la droga alcanza la sangre del paciente con fuerza de corticoide sistémico.' } },
+      commonAdverseEffects: { pt: ['Candidíase oral e Irritação da faringe', 'Rouquidão', 'Sangramento nasal (quando usado spray nasal)'], es: ['Candidiasis oral e Irritación de la faringe', 'Ronquera', 'Sangrado nasal (cuando se usa spray nasal)'] },
+      dangerousAdverseEffects: { pt: ['Síndrome de Cushing Iatrogênica (apenas se houver superdosagem maciça crônica ou interação hepática)'], es: ['Síndrome de Cushing Iatrogénico (solo si hay sobredosis masiva crónica o interacción hepática)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave', 'Tuberculose pulmonar ativa não tratada'], es: ['Hipersensibilidad grave', 'Tuberculosis pulmonar activa no tratada'] },
+        relative: { pt: ['Herpes simplex ocular'], es: ['Herpes simplex ocular'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A SALVAÇÃO DA PEDIATRIA: Bebês com "Crupe" (Laringite Estridulosa) chegam de madrugada no PS tossindo feito "cachorro" e asfixiando por edema de traqueia. A nebulização em dose alta de Budesonida (2mg) reduz o inchaço quase como mágica, evitando a intubação na sala vermelha.', es: 'LA SALVACIÓN DE LA PEDIATRÍA: Bebés con "Crup" llegan de madrugada tosiendo como "perro" y asfixiándose por edema de tráquea. La nebulización en dosis alta de Budesonida (2mg) reduce la hinchazón casi como magia, evitando la intubación.' }
+      }
     }
 
   });
