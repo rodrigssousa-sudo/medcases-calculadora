@@ -866,6 +866,56 @@ const INTERACOES_DB = {
     }
   },
 
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 387 — BLOCO MOTOR DE INTERAÇÕES: Pneumologia e Receptores Muscarínicos
+     Ultra-LABAs (Indacaterol/Olodaterol/Vilanterol) e LAMAs/SAMAs (Ipratrópio/Tiotrópio)
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── INTERAÇÕES DOS ANTAGONISTAS MUSCARÍNICOS (IPRATRÓPIO / TIOTRÓPIO) ── */
+  "$classe_anticolinergicos_inalatorios": {
+    "$classe_antidepressivos_triciclicos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "SINERGISMO ANTICOLINÉRGICO PERIFÉRICO. Antidepressivos Tricíclicos (Amitriptilina, Nortriptilina, Clomipramina) possuem forte efeito antimuscarínico basal. Se o idoso com DPOC começar a usar Tiotrópio ou Ipratrópio (mesmo sendo inalatório, uma parcela desce ao estômago/sangue), a somação anticolinérgica gerará xerostomia total (boca como lixa), visão borrada impeditiva e interrupção do trânsito intestinal (íleo adinâmico) e urinário (globo vesical).",
+        es: "SINERGISMO ANTICOLINÉRGICO PERIFÉRICO. Antidepresivos Tricíclicos (Amitriptilina, Nortriptilina) poseen fuerte efecto antimuscarínico basal. Si el anciano con EPOC comienza a usar Tiotropio o Ipratropio, la suma anticolinérgica generará xerostomía total, visión borrosa impeditiva e interrupción del tránsito intestinal (íleo adinámico) y urinario (globo vesical)."
+      },
+      conduta: {
+        pt: "Monitorar queixas do paciente idoso (retenção de urina). Evitar usar Tiotrópio + Amitriptilina + Fenergan juntos no mesmo paciente. Hidratação oral mandatória.",
+        es: "Monitorizar quejas del paciente anciano (retención de orina). Evitar usar Tiotropio + Amitriptilina + Fenergan juntos en el mismo paciente. Hidratación oral obligatoria."
+      }
+    },
+    "$classe_anticolinergicos_vesicais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "TRAVAMENTO VESICAL AGUDO. Drogas para bexiga hiperativa (Oxibutinina, Solifenacina) são antimuscarínicos puros. Tiotrópio em excesso causa a mesma ação. Se misturados na geriatria, o esfíncter da bexiga vai hiper-travar, causando retenção urinária aguda na madrugada e necessidade de cateterismo (sonda de alívio) doloroso no PS.",
+        es: "TRABA VESICAL AGUDA. Drogas para vejiga hiperactiva (Oxibutinina, Solifenacina) son antimuscarínicos puros. Tiotropio en exceso causa la misma acción. Si se mezclan en geriatría, el esfínter de la vejiga se hipertrabará, causando retención urinaria aguda en la madrugada y necesidad de sondaje doloroso en Urgencias."
+      },
+      conduta: {
+        pt: "Contraindicação de somação rotineira. Se o paciente não urinar após uso de Tiotrópio associado a urológicos, suspender imediatamente o urológico (que é menos vital que o pulmão) e drenar a bexiga.",
+        es: "Contraindicación de suma rutinaria. Si el paciente no orina tras uso de Tiotropio asociado a urológicos, suspender inmediatamente el urológico (que es menos vital que el pulmón) y drenar la vejiga."
+      }
+    }
+  },
+
+  /* ── INTERAÇÕES DOS ULTRA-LABAS ──
+     (Vilanterol, Indacaterol, Olodaterol — riscos beta-adrenérgicos em exposição de 24h contínua) */
+  "$classe_ultra_labas": {
+    "$classe_simpatomimeticos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SOBREPOSIÇÃO DE MECANISMOS E TOXICIDADE BETA ADRENÉRGICA. Misturar um Ultra-LABA (Indacaterol) com simpaticomiméticos sistêmicos (ex: Efedrina/Pseudoefedrina para gripe e rinite, ou uso de Anfetaminas) vai criar uma tempestade simpática contínua de 24 horas. Arritmias ventriculares não paroxísticas podem surgir com alto risco de infarto em idosos.",
+        es: "SUPERPOSICIÓN DE MECANISMOS Y TOXICIDAD BETA ADRENÉRGICA. Mezclar un Ultra-LABA (Indacaterol) con simpaticomiméticos sistémicos (ej: Efedrina/Pseudoefedrina para gripe) creará una tormenta simpática continua de 24 horas. Arritmias ventriculares no paroxísticas pueden surgir con alto riesgo de infarto en ancianos."
+      },
+      conduta: {
+        pt: "Ao prescrever o dispositivo Ellipta/Respimat, PROÍBA o paciente de comprar 'antialérgicos de farmácia' que venham associados com pseudoefedrina (Ex: Allegra D, Tylenol Sinus).",
+        es: "Al prescribir el dispositivo Ellipta/Respimat, PROHÍBA al paciente comprar 'antialérgicos de farmacia' que vengan asociados con pseudoefedrina (Ej: Allegra D, Tylenol Sinus)."
+      }
+    }
+  },
+
   /* ─────────────────────────────────────────────────────────────
      BUILD 255 — ADDITIVE RISK EXPANSION
      $classe_depressoras_snc × $classe_depressoras_snc (auto-cruzamento)
