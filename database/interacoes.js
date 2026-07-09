@@ -263,6 +263,24 @@ const DRUG_ALIASES = {
   "eletriptan":                         "eletriptana",
   "relpax":                             "eletriptana",
 
+  /* BUILD 397 — Antimigranosos adicionais + Ergotaminicos + Anti-CGRP: aliases */
+  "almotriptan":                        "almotriptana",
+  "almogran":                           "almotriptana",
+  "frovatriptan":                       "frovatriptana",
+  "frova":                              "frovatriptana",
+  "ergotamine":                         "ergotamina",
+  "cefalium":                           "ergotamina",
+  "tonopan":                            "ergotamina",
+  "cafergot":                           "ergotamina",
+  "dihydroergotamine":                  "di_hidroergotamina",
+  "dhe":                                "di_hidroergotamina",
+  "migranette":                         "di_hidroergotamina",
+  "di-hidroergotamina":                 "di_hidroergotamina",
+  "dihidroergotamina":                  "di_hidroergotamina",
+  "erenumab":                           "erenumabe",
+  "aimovig":                            "erenumabe",
+  "pasurta":                            "erenumabe",
+
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4: aliases */
   "nintedanib":                         "nintedanibe",
   "ofev":                               "nintedanibe",
@@ -778,14 +796,19 @@ const DRUG_CLASSES = {
     "tolbutamida", "clorpropamida", "repaglinida", "nateglinida"
   ],
 
-  /* BUILD 396 — Triptanos: classe única para interações cruzadas de vasoespasmo */
+  /* BUILD 397 — Ergotaminicos e Anti-CGRP: classes adicionais */
 
-  /* Toda a classe triptanos compartilha o mesmo mecanismo (5-HT1B/1D),
-     o mesmo risco de vasoespasmo coronariano e a mesma contraindicação
-     absoluta com ergotaminas (Regra das 24 Horas) e IMAOs. */
-  "$classe_triptanos": [
-    "sumatriptana", "zolmitriptana", "rizatriptana",
-    "naratriptana",  "eletriptana"
+  /* Alcaloides do Ergot — vasoconstritores não-seletivos; risco de ergotismo.
+     Compartilham: contraindicação com Macrolídeos/Azóis (CYP3A4), risco
+     de vasoespasmo com Triptanos (Regra das 24h), gangrena periférica. */
+  "$classe_derivados_ergot": [
+    "ergotamina", "di_hidroergotamina"
+  ],
+
+  /* Anti-CGRP (Anticorpos Monoclonais) — profilaxia de enxaqueca crônica.
+     Classe nova; não compartilham das interações dos triptanos. */
+  "$classe_anticgrp_monoclonal": [
+    "erenumabe"
   ],
 
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4 */
@@ -1843,6 +1866,51 @@ const INTERACOES_DB = {
       conduta: {
         pt: "A Fluticasona (Seretide/Relvar) deve ser banida se o paciente entrar em terapia com inibidores potentes de CYP. O tratamento profilático respiratório do paciente com HIV ou infecção fúngica severa deve ser obrigatoriamente revisto pelo especialista.",
         es: "La Fluticasona (Seretide/Relvar) debe ser prohibida si el paciente entra en terapia con inhibidores de CYP. El tratamiento profiláctico respiratorio del paciente con VIH debe ser revisado por el especialista."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 397 — BLOCO MOTOR DE INTERAÇÕES: Alcaloides do Ergot e Profilaxia Anti-CGRP
+     Almotriptana, Frovatriptana, Ergotamina, DHE, Erenumabe
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── ERGOTAMINA E DHE (Regra de Ouro do Ergotismo) ── */
+  "$classe_derivados_ergot": {
+    "$classe_inibidores_potentes_cyp3a4": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "GANGRENA DE EXTREMIDADES (ERGOTISMO). O fígado usa a enzima CYP3A4 para desativar a ergotamina. Antibióticos Macrolídeos (Eritromicina, Claritromicina), Antifúngicos Azólicos (Itraconazol, Cetoconazol) e Antirretrovirais (Ritonavir) desligam completamente o CYP3A4. A Ergotamina se acumula no sangue em horas, contraindo as artérias periféricas a níveis absurdos. O sangue para de chegar nas pernas, mãos e cérebro. A pele fica preta, fria e sem pulso, necessitando de amputação nas extremidades (Fogo de Santo Antônio / Ergotismo).",
+        es: "GANGRENA DE EXTREMIDADES (ERGOTISMO). El hígado usa la enzima CYP3A4 para desactivar la ergotamina. Macrólidos (Claritromicina) o Antifúngicos (Itraconazol) apagan el CYP3A4. La Ergotamina se acumula en horas, contrayendo las arterias periféricas. La sangre deja de llegar a las manos. La piel queda negra, requiriendo amputación (Fuego de San Antonio / Ergotismo)."
+      },
+      conduta: {
+        pt: "CAIXA PRETA (BLACK BOX WARNING). É absolutamente proibido prescrever Claritromicina ou Itraconazol para um paciente que faça uso regular de drogas contendo ergotamina (Cefalium/Tonopan). A associação já causou morte isquêmica na literatura médica.",
+        es: "CAJA NEGRA (BLACK BOX WARNING). Está absolutamente prohibido prescribir Claritromicina o Itraconazol para un paciente que use drogas con ergotamina (Cafergot). La asociación ha causado isquemia letal en la literatura médica."
+      }
+    },
+    "$classe_betabloqueadores_nao_seletivos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A 'ARMADILHA' DO PROPRANOLOL E DO VASO. O Propranolol bloqueia a vasodilatação mediada pelos receptores Beta-2 nas pernas. A Ergotamina estimula a vasoconstrição alfa. Como resultado, não há força dilatadora e o vaso periférico sofre uma isquemia somada, deixando os pés do paciente arroxeados e as pontas dos dedos frias permanentemente.",
+        es: "LA 'TRAMPA' DEL PROPRANOLOL Y DEL VASO. El Propranolol bloquea la vasodilatación beta-2 en las piernas. La Ergotamina estimula la vasoconstricción alfa. Como resultado, el vaso periférico sufre isquemia sumada, dejando los pies del paciente amoratados."
+      },
+      conduta: {
+        pt: "Pacientes usando Propranolol crônico para prevenir enxaqueca devem ser severamente desencorajados de utilizar Cefalium/Tonopan (Ergotamina) para abortar as crises. Preferir AINEs puros, Dipirona IV ou Anti-CGRP (Erenumabe).",
+        es: "Pacientes usando Propranolol crónico para prevenir migraña deben ser severamente desaconsejados de utilizar Ergotamina para abortar crisis. Preferir AINEs o Anti-CGRP (Erenumab)."
+      }
+    },
+    "$classe_triptanos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "REGRA DAS 24 HORAS — ISQUEMIA LETAL CRUZADA. Os Derivados do Ergot e os Triptanos são ambos vasoconstritores de vasos cerebrais e coronarianos. Usados juntos ou em sequência rápida (< 24h), causam espasmo tetânico das artérias cranianas e coronárias, podendo resultar em AVC isquêmico e Infarto Fulminante.",
+        es: "REGLA DE LAS 24 HORAS — ISQUEMIA LETAL CRUZADA. Los Derivados del Ergot y los Triptanos son vasoconstrictores de vasos cerebrales y coronarios. Usados juntos o en secuencia rápida (< 24h), causan espasmo tetánico de las arterias craneales y coronarias, resultando en ACV Isquémico e Infarto Fulminante."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA. Intervalo mínimo de 24 horas entre qualquer ergotamínico e qualquer triptano — em qualquer ordem. Documentar no prontuário.",
+        es: "CONTRAINDICACIÓN ABSOLUTA. Intervalo mínimo de 24 horas entre cualquier ergotamínico y cualquier triptano — en cualquier orden. Documentar en el expediente."
       }
     }
   },
