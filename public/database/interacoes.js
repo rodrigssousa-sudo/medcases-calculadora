@@ -1116,6 +1116,71 @@ const INTERACOES_DB = {
     }
   },
 
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 392 — MUCOLÍTICOS E ANTITUSSÍGENOS CENTRAIS
+     Ambroxol, Carbocisteína, Erdosteína, Dornase Alfa, Dextrometorfano
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA CLÁSSICA E IATROGÊNICA DA TOSSE ── */
+  "$classe_mucoliticos": {
+    "$classe_antitussigenos_centrais": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "SÍNDROME DO AFOGAMENTO (Pneumonia de Estase). Os Mucolíticos/Expectorantes (Ambroxol, Carbocisteína, Erdosteína, Bromexina) inundam os pulmões de água e desmancham o catarro grosso. O corpo precisa TOSSIR desesperadamente para expulsar a piscina formada. O Dextrometorfano ou a Codeína paralisam ativamente o cérebro e impedem a tosse. Resultado: O paciente se 'afoga' silenciosamente na própria secreção, colapsando os alvéolos e desenvolvendo pneumonia bacteriana asfixiante.",
+        es: "SÍNDROME DE AHOGAMIENTO (Neumonía de Estasis). Los Mucolíticos inundan los pulmones de agua y deshacen el catarro. El cuerpo necesita TOSER para expulsar la piscina formada. El Dextrometorfano o la Codeína paralizan el cerebro e impiden la tos. Resultado: El paciente se 'ahoga' silenciosamente en su propia secreción."
+      },
+      conduta: {
+        pt: "A COMBINAÇÃO É ABSOLUTAMENTE VETADA NA PRÁTICA MÉDICA. Nunca associe um xarope expectorante de manhã com um antitussígeno à noite (erro clássico de PA infantil). Se a tosse é seca (irritativa), use antitussígeno. Se é produtiva (catarro), use mucolítico.",
+        es: "LA COMBINACIÓN ES ABSOLUTAMENTE VETADA. Nunca asocie un jarabe expectorante con un antitusivo. Si la tos es seca (irritativa), use antitusivo. Si es productiva (catarro), use mucolítico."
+      }
+    }
+  },
+
+  /* ── DEXTROMETORFANO (Antitussígeno Central) ── */
+  "dextrometorfano": {
+    "$classe_isrs": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SÍNDROME SEROTONINÉRGICA EXTREMA E BLOQUEIO DE CYP. Os Inibidores Seletivos de Recaptação de Serotonina (Fluoxetina, Paroxetina) inibem potentemente a enzima CYP2D6 no fígado (que quebra o dextrometorfano). O Dextrometorfano acumula maciçamente e, por si só, é um inibidor da recaptação de serotonina. A soma dessas forças transborda a fenda sináptica, deflagrando rigidez muscular, febre altíssima, delírio, taquicardia e risco de morte.",
+        es: "SÍNDROME SEROTONINÉRGICO EXTREMO Y BLOQUEO DE CYP. Los ISRS (Fluoxetina) inhiben potentemente la enzima CYP2D6 en el hígado. El Dextrometorfano se acumula e inhibe la recaptación de serotonina. La suma desborda la sinapsis, desencadenando rigidez, fiebre altísima, delirio y riesgo de muerte."
+      },
+      conduta: {
+        pt: "Evitar xaropes contendo Dextrometorfano (Benalet, Vicks) em pacientes usuários de Fluoxetina, Sertralina, Paroxetina e Venlafaxina. Use antialérgicos convencionais (ex: Loratadina) ou fitoterápicos (Guaco) para tosse desses pacientes.",
+        es: "Evitar jarabes conteniendo Dextrometorfano en pacientes usuarios de Fluoxetina, Sertralina o Paroxetina. Use antialérgicos convencionales para la tos de estos pacientes."
+      }
+    },
+    "$classe_imao": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "MORTE SÚBITA / COLAPSO AUTONÔMICO. A associação do Dextrometorfano com Inibidores da MAO (Tranilcipromina, Selegilina, Linezolida) causa a forma mais violenta e abrupta de Síndrome Serotoninérgica conhecida pela medicina, levando frequentemente ao óbito em horas.",
+        es: "MUERTE SÚBITA / COLAPSO AUTONÓMICO. La asociación de Dextrometorfano con Inhibidores de la MAO causa la forma más violenta y abrupta de Síndrome Serotoninérgico, llevando al óbito en horas."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO MUNDIAL DE BULA (Alerta FDA). Nunca administre as duas drogas em conjunto e respeite o intervalo de 'washout' (14 dias) após suspender o IMAO antes de usar o xarope antitussígeno.",
+        es: "CONTRAINDICACIÓN MUNDIAL DE PROSPECTO (Alerta FDA). Nunca administre las dos drogas en conjunto y respete 14 días tras suspender el IMAO."
+      }
+    }
+  },
+
+  /* ── ERDOSTEÍNA / CARBOCISTEÍNA (Mucolíticos Orais) ── */
+  "$classe_mucoliticos_orais": {
+    "$classe_aines": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "SOMA DE TOXICIDADE DA MUCOSA GÁSTRICA. Mucolíticos fluidificam o catarro dos pulmões, mas também 'ralam' e 'afinam' o muco protetor que forra o estômago contra o ácido sulfúrico humano. Os AINEs (Ibuprofeno, Cetoprofeno, AAS) desligam as prostaglandinas e param a irrigação de sangue do estômago. O uso duplo destrói completamente o 'escudo' gástrico, abrindo portas para sangramentos ativos e dispepsia severa.",
+        es: "SUMA DE TOXICIDAD DE LA MUCOSA GÁSTRICA. Mucolíticos fluidifican el catarro, pero también afinan el moco protector del estómago. Los AINEs apagan las prostaglandinas. El uso doble destruye el 'escudo' gástrico, abriendo puertas para sangrados activos y dispepsia."
+      },
+      conduta: {
+        pt: "Precaução em idosos e doentes com histórico de úlceras. Avaliar proteção de bomba de prótons (Omeprazol) se a associação (AINE + Mucolítico para bronquite/dores) for estritamente necessária por vários dias.",
+        es: "Precaución en ancianos. Evaluar protección de bomba de protones (Omeprazol) si la asociación es estrictamente necesaria por varios días."
+      }
+    }
+  },
+
   /* ─────────────────────────────────────────────────────────────
      BUILD 255 — ADDITIVE RISK EXPANSION
      $classe_depressoras_snc × $classe_depressoras_snc (auto-cruzamento)

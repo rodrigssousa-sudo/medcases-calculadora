@@ -1209,6 +1209,206 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
         warning: { pt: 'NÃO TRAVE A TOSSE: É um erro conceitual e perigoso associar Bromexina (que "amolece" o catarro para ser expulso) com Antitussígenos como a Codeína ou Dextrometorfano (que inibem o reflexo de tosse). O catarro vai ficar líquido no pulmão, o paciente não vai tossir, e ocorrerá um "afogamento em secreção" com pneumonia associada.', es: 'NO TRABE LA TOS: Es un error peligroso asociar Bromhexina (que "ablanda" el catarro para ser expulsado) con Antitusivos (que inhiben la tos). El catarro quedará líquido en el pulmón, el paciente no toserá y se "ahogará en secreción" con neumonía.' }
       }
+    },
+
+    /* ── AMBROXOL ───────────────────────────────────────────────────────── */
+    "ambroxol": {
+      name: { pt: 'Ambroxol (Cloridrato de)', es: 'Ambroxol (Clorhidrato de)' },
+      category: 'pneumologia',
+      class: { pt: 'Expectorante Mucolítico', es: 'Expectorante Mucolítico' },
+      indications: {
+        pt: ['Doenças broncopulmonares agudas e crônicas com secreção espessa (Bronquite, Traqueobronquite)', 'Alívio da tosse produtiva'],
+        es: ['Enfermedades broncopulmonares agudas y crónicas con secreción espesa (Bronquitis, Traqueobronquitis)', 'Alivio de la tos productiva']
+      },
+      commercialNames: { br: ['Mucosolvan', 'Ambroxmel'], ar: ['Mucosolvan'] },
+      presentation: { pt: ['Xarope Adulto 30 mg/5 mL', 'Xarope Pediátrico 15 mg/5 mL', 'Gotas para inalação ou via oral'], es: ['Jarabe Adulto 30 mg/5 mL', 'Jarabe Pediátrico 15 mg/5 mL', 'Gotas para inhalación o vía oral'] },
+      mechanism: {
+        pt: 'O Ambroxol é o metabólito direto (a forma purificada e ativa) da Bromexina. Ele atua fragmentando os polímeros de muco no pulmão e, mais importante, estimula ativamente os pneumócitos tipo II a produzirem SURFACTANTE pulmonar. O surfactante funciona como um "lubrificante" que impede o catarro de colar na parede do brônquio, facilitando sua expulsão natural pela tosse.',
+        es: 'El Ambroxol es el metabolito directo (la forma purificada y activa) de la Bromhexina. Actúa fragmentando los polímeros de moco y estimula activamente los neumocitos tipo II a producir SURFACTANTE pulmonar. El surfactante funciona como un "lubricante" que impide que el catarro se pegue en la pared del bronquio.'
+      },
+      dose: {
+        adult: {
+          pt: 'Xarope adulto (30mg/5mL): 5 mL via oral 3 vezes ao dia (a cada 8 horas).',
+          es: 'Jarabe adulto (30mg/5mL): 5 mL vía oral 3 veces al día (cada 8 horas).'
+        },
+        pediatric: {
+          pt: '2 a 5 anos: 2,5 mL do xarope pediátrico a cada 8h. 6 a 12 anos: 5 mL do xarope pediátrico a cada 8-12h.',
+          es: '2 a 5 años: 2,5 mL del jarabe pediátrico cada 8h. 6 a 12 años: 5 mL del jarabe pediátrico cada 8-12h.'
+        }
+      },
+      administration: { pt: ['Administrar preferencialmente após as refeições.', 'Tal como a bromexina, a eficácia do ambroxol é totalmente dependente da INGESTÃO MASSIVA DE ÁGUA durante o tratamento.'], es: ['Administrar preferentemente tras las comidas.', 'Al igual que la bromhexina, la eficacia depende totalmente de la INGESTIÓN MASIVA DE AGUA durante el tratamiento.'] },
+      renalAdjustment: { required: true, message: { pt: 'Os metabólitos hepáticos do ambroxol são eliminados pelo rim. Em DRC grave, eles podem se acumular. Aumentar os intervalos de dose.', es: 'Los metabolitos hepáticos del ambroxol son eliminados por el riñón. En ERC grave, pueden acumularse. Aumentar los intervalos de dosis.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Usar com cautela em falência hepática severa.', es: 'Usar con cautela en falla hepática severa.' } },
+      commonAdverseEffects: { pt: ['Alteração do paladar (disgeusia)', 'Náuseas e leve dormência na garganta (efeito anestésico local leve)'], es: ['Alteración del gusto (disgeusia)', 'Náuseas y leve adormecimiento en la garganta (efecto anestésico local leve)'] },
+      dangerousAdverseEffects: { pt: ['Reações cutâneas alérgicas severas (Eritema multiforme) raríssimas'], es: ['Reacciones cutáneas alérgicas severas (Eritema multiforme) rarísimas'] },
+      contraindications: {
+        absolute: { pt: ['Crianças menores de 2 anos (pelo alto risco de acúmulo de secreção não expectorada)'], es: ['Niños menores de 2 años (por el alto riesgo de acumulación de secreción no expectorada)'] },
+        relative: { pt: ['Pacientes com úlcera péptica ativa'], es: ['Pacientes con úlcera péptica activa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'Tem um leve efeito anestésico tópico! Se o paciente relatar que a boca ou a garganta ficaram "adormecidas" ou com formigamento após tomar o xarope, avise que isso é uma ação farmacológica normal do Ambroxol e não um sinal imediato de anafilaxia.', es: '¡Tiene un leve efecto anestésico tópico! Si el paciente relata que la boca o garganta quedaron "adormecidas" tras tomar el jarabe, avise que esto es una acción farmacológica normal del Ambroxol y no un signo de anafilaxia.' }
+      }
+    },
+
+    /* ── CARBOCISTEÍNA ──────────────────────────────────────────────────── */
+    "carbocisteina": {
+      name: { pt: 'Carbocisteína', es: 'Carbocisteína' },
+      category: 'pneumologia',
+      class: { pt: 'Mucorregulador / Expectorante', es: 'Mucorregulador / Expectorante' },
+      indications: {
+        pt: ['Doença Pulmonar Obstrutiva Crônica (DPOC) para redução de exacerbações', 'Bronquites e otites acompanhadas de muco hiperviscoso'],
+        es: ['Enfermedad Pulmonar Obstructiva Crónica (EPOC) para reducción de exacerbaciones', 'Bronquitis y otitis acompañadas de moco hiperviscoso']
+      },
+      commercialNames: { br: ['Mucofan', 'Mucosolvan (Atenção, varia por país)'], ar: ['Rinofluimucil'] },
+      presentation: { pt: ['Xarope Adulto 50 mg/mL', 'Xarope Pediátrico 20 mg/mL', 'Cápsulas 375 mg'], es: ['Jarabe Adulto 50 mg/mL', 'Jarabe Pediátrico 20 mg/mL', 'Cápsulas 375 mg'] },
+      mechanism: {
+        pt: 'Não apenas quebra o catarro, mas REGULA a sua fabricação original. A carbocisteína age dentro das células secretoras da traqueia (células caliciformes), obrigando-as a produzir mais *sialomucinas* (catarro fluido e ralo) e menos *fucomucinas* (catarro duro e grosso). Assim, o muco já nasce saudável e ralo nas glândulas respiratórias.',
+        es: 'No solo rompe el catarro, sino REGULA su fabricación original. La carbocisteína actúa dentro de las células secretoras de la tráquea, obligándolas a producir más *sialomucinas* (catarro fluido) y menos *fucomucinas* (catarro duro y grueso). Así, el moco ya nace saludable y fluido.'
+      },
+      dose: {
+        adult: {
+          pt: 'Xarope Adulto (50mg/mL): 5 a 15 mL via oral a cada 8 horas (A dose geralmente é reduzida após a melhora inicial).',
+          es: 'Jarabe Adulto (50mg/mL): 5 a 15 mL vía oral cada 8 horas (La dosis generalmente se reduce tras la mejora inicial).'
+        },
+        pediatric: {
+          pt: '2 a 5 anos: 2,5 mL a 5 mL (Xarope Pediátrico) a cada 6h. 6 a 12 anos: 5 mL a 10 mL a cada 8h.',
+          es: '2 a 5 años: 2,5 mL a 5 mL (Jarabe Pediátrico) cada 6h. 6 a 12 años: 5 mL a 10 mL cada 8h.'
+        }
+      },
+      administration: { pt: ['Deve ser tomado longe dos laticínios para não prejudicar a absorção gástrica.'], es: ['Debe ser tomado lejos de los lácteos para no perjudicar la absorción gástrica.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Desconforto epigástrico e azia (muito comum)', 'Náuseas e diarreia leve', 'Erupção cutânea'], es: ['Malestar epigástrico y acidez (muy común)', 'Náuseas y diarrea leve', 'Erupción cutánea'] },
+      dangerousAdverseEffects: { pt: ['Sangramento Gastrointestinal (Especialmente em idosos que já usam AINEs, pois a carbocisteína dissolve o muco protetor do estômago também)'], es: ['Sangrado Gastrointestinal (Especialmente en ancianos que ya usan AINEs, pues la carbocisteína disuelve el muco protector del estómago también)'] },
+      contraindications: {
+        absolute: { pt: ['Úlceras gástricas ou duodenais ativas (Risco de hemorragia)', 'Crianças menores de 2 anos'], es: ['Úlceras gástricas o duodenales activas (Riesgo de hemorragia)', 'Niños menores de 2 años'] },
+        relative: { pt: ['Histórico de úlceras cicatrizadas ou uso excessivo de Ibuprofeno/Diclofenaco'], es: ['Historial de úlceras cicatrizadas o uso excesivo de Ibuprofeno/Diclofenaco'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O MUCO DO ESTÔMAGO SOFRE JUNTO: A Carbocisteína não entende que o muco do estômago deve ser mantido espesso para proteger contra o ácido. Ela dissolve o muco de proteção gástrica, abrindo caminho para dor de estômago e úlceras. Use com IBP (Omeprazol) se o paciente tiver gastrite grave.', es: 'EL MOCO DEL ESTÓMAGO SUFRE: La Carbocisteína disuelve el muco de protección gástrica, abriendo camino para dolor de estómago y úlceras. Use con IBP (Omeprazol) si el paciente tiene gastritis grave.' }
+      }
+    },
+
+    /* ── ERDOSTEÍNA ─────────────────────────────────────────────────────── */
+    "erdosteina": {
+      name: { pt: 'Erdosteína', es: 'Erdosteína' },
+      category: 'pneumologia',
+      class: { pt: 'Mucolítico Avançado e Antioxidante', es: 'Mucolítico Avanzado y Antioxidante' },
+      indications: {
+        pt: ['Doença Pulmonar Obstrutiva Crônica (DPOC) sintomática (Reduz agressivamente o número de exacerbações/internações)', 'Bronquite crônica severa'],
+        es: ['Enfermedad Pulmonar Obstructiva Crónica (EPOC) sintomática (Reduce agresivamente el número de exacerbaciones)', 'Bronquitis crónica severa']
+      },
+      commercialNames: { br: ['Flusten'], ar: ['Erdosteina'] },
+      presentation: { pt: ['Cápsulas 300 mg', 'Suspensão oral 35 mg/mL'], es: ['Cápsulas 300 mg', 'Suspensión oral 35 mg/mL'] },
+      mechanism: {
+        pt: 'A mais avançada das opções orais. É um pró-fármaco que, ao passar pelo fígado, libera "grupos tiol" (enxofre). Esses grupos cortam as pontes de dissulfeto do catarro como uma tesoura, amolecendo a secreção. O seu trunfo gigantesco é ser um forte ANTIOXIDANTE: ele "varre" os radicais livres de oxigênio gerados pelo cigarro no pulmão, protegendo a enzima alfa-1-antitripsina da destruição no DPOC.',
+        es: 'Es un profármaco que, al pasar por el hígado, libera "grupos tiol" (azufre). Estos grupos cortan los puentes disulfuro del catarro como una tijera. Su triunfo gigantesco es ser un fuerte ANTIOXIDANTE: "barre" los radicales libres de oxígeno generados por el cigarro en el pulmón.'
+      },
+      dose: {
+        adult: {
+          pt: '1 cápsula de 300 mg via oral a cada 12 horas (2x ao dia).',
+          es: '1 cápsula de 300 mg vía oral cada 12 horas (2x al día).'
+        },
+        pediatric: {
+          pt: 'Uso não recomendado em pediatria (foco quase exclusivo no adulto tabagista).',
+          es: 'Uso no recomendado en pediatría.'
+        }
+      },
+      administration: { pt: ['O paciente pode ingerir as cápsulas antes, durante ou após as refeições (absorção rápida).'], es: ['El paciente puede ingerir las cápsulas antes, durante o después de las comidas (absorción rápida).'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar ou reduzir em ClCr < 25 mL/min (acúmulo dos metabólitos ativos).', es: 'Evitar o reducir en ClCr < 25 mL/min (acumulación de metabolitos activos).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em insuficiência hepática grave (Child-Pugh C), pois a droga exige o fígado sadio para ser ativada e não intoxicar.', es: 'Contraindicado en insuficiencia hepática grave (Child-Pugh C), pues la droga exige el hígado sano para ser activada.' } },
+      commonAdverseEffects: { pt: ['Leve desconforto epigástrico (muito menor que a carbocisteína)', 'Cefaleia', 'Sabor alterado'], es: ['Leve malestar epigástrico (mucho menor que la carbocisteína)', 'Cefalea', 'Sabor alterado'] },
+      dangerousAdverseEffects: { pt: ['Hipersensibilidade grave (Raríssimo)'], es: ['Hipersensibilidad grave (Rarísimo)'] },
+      contraindications: {
+        absolute: { pt: ['Úlcera péptica ativa', 'Cirrose hepática grave ou DRC grave'], es: ['Úlcera péptica activa', 'Cirrosis hepática grave o ERC grave'] },
+        relative: { pt: ['Nenhuma relevante clinicamente em dose terapêutica'], es: ['Ninguna relevante clínicamente en dosis terapéutica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ANTIBIÓTICO TURBINADO (Sinergismo Comprovado): Assim como a bromexina, a Erdosteína aumenta incrivelmente a concentração de Amoxicilina nos brônquios. Além disso, ela impede que as bactérias formem biofilmes resistentes no muco.', es: 'ANTIBIÓTICO TURBINADO (Sinergismo Comprobado): Al igual que la bromhexina, la Erdosteína aumenta increíblemente la concentración de Amoxicilina en los bronquios. Además, impide que las bacterias formen biopelículas en el moco.' }
+      }
+    },
+
+    /* ── DORNASE ALFA ───────────────────────────────────────────────────── */
+    "dornase_alfa": {
+      name: { pt: 'Dornase Alfa (DNase I Recombinante Humana)', es: 'Dornasa Alfa' },
+      category: 'pneumologia',
+      class: { pt: 'Mucolítico Enzimático Específico', es: 'Mucolítico Enzimático Específico' },
+      indications: {
+        pt: ['Fibrose Cística (Mucoviscidose) severa, para fluidificar a secreção pulmonar asfixiante'],
+        es: ['Fibrosis Quística (Mucoviscidosis) severa, para fluidificar la secreción pulmonar asfixiante']
+      },
+      commercialNames: { br: ['Pulmozyme'], ar: ['Pulmozyme'] },
+      presentation: { pt: ['Ampolas para inalação (nebulização) 2,5 mg/2,5 mL'], es: ['Ampollas para inhalación (nebulización) 2,5 mg/2,5 mL'] },
+      mechanism: {
+        pt: 'A biotecnologia salvadora da Fibrose Cística. Nos pacientes com a doença, milhões de neutrófilos do sistema imune morrem no pulmão tentando combater infecções. Quando eles morrem, eles "vomitam" todo o seu DNA (material genético) no catarro do paciente, formando uma "teia de aranha" de DNA que deixa o catarro duro como cimento. A Dornase Alfa é uma enzima genética sintética (uma tesoura de DNA) inalada que "pica" esse DNA neutrofílico do catarro, liquefazendo o cimento e salvando a respiração.',
+        es: 'En pacientes con la enfermedad, millones de neutrófilos mueren en el pulmón. Cuando mueren, "vomitan" su ADN en el catarro, formando una "telaraña" de ADN que deja el moco duro como cemento. La Dornasa Alfa es una enzima genética inalada que "pica" ese ADN del catarro, licuando el cemento.'
+      },
+      dose: {
+        adult: {
+          pt: '2,5 mg em nebulização inalatória UMA VEZ ao dia. (Pacientes muito graves > 21 anos podem fazer a cada 12h).',
+          es: '2,5 mg en nebulización inhalatoria UNA VEZ al día. (Pacientes muy graves > 21 años pueden hacer cada 12h).'
+        },
+        pediatric: {
+          pt: 'Acima de 5 anos: 2,5 mg UMA VEZ ao dia por nebulização.',
+          es: 'Por encima de 5 años: 2,5 mg UNA VEZ al día por nebulización.'
+        }
+      },
+      administration: { pt: ['REGRAS RÍGIDAS DE USO: O medicamento deve ficar na GELADEIRA e protegido da luz intensa. NÃO PODE SER DILUÍDO (não adicionar soro) nem misturado com nenhum outro remédio no copo. Deve ser usado com um "nebulizador compressor a jato" apropriado (nebulizadores ultrassônicos destroem a enzima).'], es: ['REGLAS RÍGIDAS: El medicamento debe estar en la NEVERA. NO PUEDE SER DILUIDO ni mezclado. Debe usarse con un "nebulizador compresor" apropiado (nebulizadores ultrasónicos destruyen la enzima).'] },
+      renalAdjustment: { required: false, message: { pt: 'Ação puramente inalatória intrapulmonar.', es: 'Acción puramente inhalatoria intrapulmonar.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem absorção sistêmica relevante.', es: 'Sin absorción sistémica relevante.' } },
+      commonAdverseEffects: { pt: ['Alteração severa da voz (Rouquidão ou afonia passageira)', 'Faringite e irritação da garganta profunda', 'Erupção cutânea'], es: ['Alteración severa de la voz (Ronquera o afonía pasajera)', 'Faringitis e irritación de la garganta profunda', 'Erupción cutánea'] },
+      dangerousAdverseEffects: { pt: ['Dispneia leve a moderada paradoxal', 'Dor torácica (pleurítica) intensa'], es: ['Disnea leve a moderada paradójica', 'Dolor torácico (pleurítico) intenso'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave à dornase alfa ou a produtos de ovário de hamster chinês (células CHO onde a enzima é criada em laboratório)'], es: ['Hipersensibilidad grave a dornasa alfa o a productos de ovario de hámster chino'] },
+        relative: { pt: ['Pneumonias comuns não associadas à Fibrose Cística (O remédio não faz efeito e custa milhares de reais, é inútil no catarro comum de gripe).'], es: ['Neumonías comunes no asociadas a Fibrosis Quística (Es inútil en el catarro común de gripe).'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'MEDICAÇÃO TÉRMICA BIOLÓGICA: Sendo uma proteína enzimática viva, se o frasco da Dornase ficar fora da geladeira por mais de 24h, a enzima desnatura completamente e a inalação vira água inútil.', es: 'MEDICACIÓN TÉRMICA BIOLÓGICA: Siendo una proteína enzimática viva, si el vial queda fuera de la nevera por más de 24h, la enzima se desnaturaliza completamente y la inhalación se vuelve agua inútil.' }
+      }
+    },
+
+    /* ── DEXTROMETORFANO ────────────────────────────────────────────────── */
+    "dextrometorfano": {
+      name: { pt: 'Dextrometorfano', es: 'Dextrometorfano' },
+      category: 'pneumologia',
+      class: { pt: 'Antitussígeno Central (Derivado não-opioide do Levorfanol)', es: 'Antitusivo Central (Derivado no opioide del Levorfanol)' },
+      indications: {
+        pt: ['Tosse SECA, irritativa e não produtiva (Gripes, irritações alérgicas ou pós-infecção viral severa)'],
+        es: ['Tos SECA, irritativa y no productiva (Gripes, irritaciones alérgicas o posinfección viral severa)']
+      },
+      commercialNames: { br: ['Benalet (Assoc)', 'Novalgina Tosse', 'Vick Xarope'], ar: ['Romilar'] },
+      presentation: { pt: ['Xaropes e Gotas Orais (Frequentemente associado a antialérgicos ou dipirona)'], es: ['Nuevos jarabes y gotas (Frecuentemente asociado a antialérgicos o dipirona)'] },
+      mechanism: {
+        pt: 'Atua diretamente no "Centro da Tosse" localizado no Bulbo (Tronco encefálico), elevando o limiar neurológico necessário para deflagrar o reflexo de tosse. Ele é um poderoso ANTAGONISTA DO RECEPTOR NMDA no cérebro e agonista dos receptores sigma-1. Quimicamente é parecido com os opioides, mas não se liga aos receptores mu/kappa (não tira a dor e não deprime a respiração).',
+        es: 'Actúa directamente en el "Centro de la Tos" en el Bulbo, elevando el umbral neurológico de la tos. Es un poderoso ANTAGONISTA DEL RECEPTOR NMDA en el cerebro y agonista sigma-1. Químicamente es parecido a los opioides, pero no deprime la respiración.'
+      },
+      dose: {
+        adult: {
+          pt: '10 mg a 30 mg via oral a cada 4 ou 8 horas. Máximo de 120 mg/dia.',
+          es: '10 mg a 30 mg vía oral cada 4 o 8 horas. Máximo de 120 mg/día.'
+        },
+        pediatric: {
+          pt: '6 a 12 anos: 5 a 15 mg a cada 4 horas (Máximo 60 mg/dia). Contraindicado rotineiramente em crianças < 2 anos.',
+          es: '6 a 12 años: 5 a 15 mg cada 4 horas (Máximo 60 mg/día). Contraindicado en niños < 2 años.'
+        }
+      },
+      administration: { pt: ['Doses exageradas não aumentam o controle da tosse, apenas o risco de efeitos no sistema nervoso central.'], es: ['Dosis exageradas no aumentan el control de la tos, solo el riesgo de efectos en el sistema nervioso central.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito em insuficiência renal.', es: 'Sin necesidad de ajuste estricto en insuficiencia renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em cirrose descompensada ou reduzir agressivamente a dose.', es: 'Evitar en cirrosis descompensada o reducir agresivamente la dosis.' } },
+      commonAdverseEffects: { pt: ['Sonolência leve', 'Tontura (vertigem) e excitação leve paradoxal', 'Constipação moderada'], es: ['Somnolencia leve', 'Mareo (vértigo) y excitación leve paradójica', 'Constipación moderada'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME SEROTONINÉRGICA FATAL (se combinado com antidepressivos)', 'Alucinações e Delírios Psicodélicos profundos (se usado como droga de abuso recreativo em doses ultra-altas - "Robotripping")'], es: ['SÍNDROME SEROTONINÉRGICO FATAL (si combinado con antidepresivos)', 'Alucinaciones y Delirios Psicodélicos profundos (si se usa como droga de abuso recreativo - "Robotripping")'] },
+      contraindications: {
+        absolute: { pt: ['Tosse PRODUTIVA com expectoração excessiva (Risco de afogamento pulmonar)', 'Uso concomitante com inibidores da MAO (Morte por colapso autonômico)'], es: ['Tos PRODUCTIVA con expectoración excesiva (Riesgo de ahogamiento pulmonar)', 'Uso concomitante con inhibidores de la MAO (Muerte por colapso autonómico)'] },
+        relative: { pt: ['Asma brônquica aguda', 'Depressão respiratória pré-existente'], es: ['Asma bronquial aguda', 'Depresión respiratoria preexistente'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A MAIOR CONTRAINDICAÇÃO DA PNEUMOLOGIA: Jamais deprima o centro da tosse de um paciente com infecção bacteriana, DPOC ou catarro abundante. Tossir salva a vida do doente. Dar Dextrometorfano para o pulmão "cheio" vai travar o catarro lá dentro e induzir uma asfixia purulenta letal.', es: 'LA MAYOR CONTRAINDICACIÓN: Jamás deprima el centro de la tos de un paciente con infección bacteriana o catarro abundante. Toser salva la vida. Dar Dextrometorfano para un pulmón "lleno" trabará el catarro e inducirá asfixia.' }
+      }
     }
 
   });
