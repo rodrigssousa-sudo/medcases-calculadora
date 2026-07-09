@@ -778,15 +778,208 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
         warning: { pt: 'O FIM DOS TRIPTANOS? Para pacientes com alto risco cardiovascular, o Nurtec ODT e o Ubrelvy substituíram os Triptanos como primeira linha, eliminando o medo de "ter um infarto tratando a dor de cabeça".', es: '¿EL FIN DE LOS TRIPTANOS? Para pacientes con alto riesgo cardiovascular, Nurtec y Ubrelvy sustituyeron a los Triptanos, eliminando el miedo de sufrir infarto tratando el dolor.' }
       }
+    },
+
+    /* ── BUILD 399 — Gepantos adicionais + Ditanos + Demência (Alzheimer/Parkinson) ── */
+
+    /* ── ATOGEPANTA ─────────────────────────────────────────────────────── */
+    "atogepanta": {
+      id: 'atogepanta',
+      name: { pt: 'Atogepanta', es: 'Atogepant' },
+      category: 'neurologia',
+      class: { pt: 'Antagonista Oral do Receptor de CGRP (Gepanto Profilático)', es: 'Antagonista Oral del Receptor de CGRP (Gepanto Profiláctico)' },
+      indications: {
+        pt: ['Profilaxia (prevenção contínua) da enxaqueca episódica e crônica em adultos'],
+        es: ['Profilaxis (prevención continua) de la migraña episódica y crónica en adultos']
+      },
+      commercialNames: { br: ['Qulipta'], ar: ['Aquipta'] },
+      presentation: { pt: ['Comprimidos 10 mg, 30 mg e 60 mg'], es: ['Comprimidos 10 mg, 30 mg y 60 mg'] },
+      mechanism: {
+        pt: 'Enquanto o Ubrogepanta serve para resgatar a crise, a Atogepanta foi desenhada especificamente para uso DIÁRIO. Ela bloqueia os receptores de CGRP continuamente, impedindo que a inflamação trigeminal aconteça. A ausência de efeito vasoconstritor a torna o substituto moderno para o Topiramato ou Amitriptilina na prevenção em pacientes cardiovasculares ou que não toleram sedação.',
+        es: 'Mientras el Ubrogepant sirve para rescatar la crisis, el Atogepant fue diseñado para uso DIARIO. Bloquea los receptores de CGRP continuamente, impidiendo la inflamación trigeminal. Su ausencia de efecto vasoconstrictor lo hace el sustituto moderno del Topiramato en prevención.'
+      },
+      dose: {
+        adult: {
+          pt: 'Episódica: 10 mg, 30 mg ou 60 mg via oral UMA VEZ ao dia. Crônica: 60 mg 1x/dia.',
+          es: 'Episódica: 10 mg, 30 mg o 60 mg vía oral UNA VEZ al día. Crónica: 60 mg 1x/día.'
+        },
+        pediatric: { pt: 'Uso não indicado.', es: 'Uso no indicado.' }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos.'], es: ['Puede ser tomado con o sin alimentos.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr < 30 mL/min ou diálise: dose máxima 10 mg/dia.', es: 'ClCr < 30 mL/min o diálisis: dosis máxima 10 mg/día.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em insuficiência hepática severa.', es: 'Contraindicado en insuficiencia hepática severa.' } },
+      commonAdverseEffects: { pt: ['Constipação intestinal', 'Náusea leve', 'Fadiga e perda de peso leve'], es: ['Constipación intestinal', 'Náusea leve', 'Fatiga y pérdida de peso leve'] },
+      dangerousAdverseEffects: { pt: ['Elevação de transaminases hepáticas (raro, mas documentado)'], es: ['Elevación de transaminasas hepáticas (raro, pero documentado)'] },
+      contraindications: {
+        absolute: { pt: ['Uso associado a inibidores ou indutores potentes do CYP3A4'], es: ['Uso asociado a inhibidores o inductores potentes del CYP3A4'] },
+        relative: { pt: ['Gravidez (risco não esclarecido, mecanicamente indesejado na formação vascular fetal)'], es: ['Embarazo (riesgo no aclarado, mecánicamente indeseable)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A VANTAGEM DO PESO: Diferente da Amitriptilina ou Valproato, que engordam os pacientes assustadoramente, a Atogepanta frequentemente induz uma leve perda de peso, o que melhora a adesão ao tratamento diário.', es: 'LA VENTAJA DEL PESO: A diferencia de la Amitriptilina, que engorda a los pacientes, el Atogepant frecuentemente induce una leve pérdida de peso, lo que mejora la adhesión al tratamiento diario.' }
+      }
+    },
+
+    /* ── ZAVEGEPANTA ────────────────────────────────────────────────────── */
+    "zavegepanta": {
+      id: 'zavegepanta',
+      name: { pt: 'Zavegepanta', es: 'Zavegepant' },
+      category: 'neurologia',
+      class: { pt: 'Antagonista do Receptor de CGRP (Gepanto Nasal)', es: 'Antagonista del Receptor de CGRP (Gepanto Nasal)' },
+      indications: {
+        pt: ['Tratamento agudo da enxaqueca (aprovada para crises de ação ultrarrápida)'],
+        es: ['Tratamiento agudo de la migraña (aprobada para crisis de acción ultrarrápida)']
+      },
+      commercialNames: { br: ['Zavzpret'], ar: ['Zavzpret'] },
+      presentation: { pt: ['Spray Nasal 10 mg/dose'], es: ['Spray Nasal 10 mg/dosis'] },
+      mechanism: {
+        pt: 'O "Gepanto do Vômito". Durante uma crise grave de enxaqueca, o estômago paralisa (gastroparesia) e o paciente vomita qualquer comprimido que engole (Triptanos orais, Nurtec, Ubrelvy falham). A Zavegepanta é borrifada no nariz, entra direto na corrente sanguínea em 15 minutos e desliga o receptor de CGRP, abortando a dor sem precisar passar pelo sistema digestivo e sem causar isquemia.',
+        es: 'El "Gepanto del Vómito". Durante una crisis grave, el estómago se paraliza y el paciente vomita cualquier comprimido. El Zavegepant se rocía en la nariz, entra a la sangre en 15 minutos y apaga el receptor CGRP sin pasar por el sistema digestivo ni causar isquemia.'
+      },
+      dose: {
+        adult: {
+          pt: '1 jato de 10 mg em UMA única narina sob demanda na crise (máximo de 1 jato a cada 24 horas).',
+          es: '1 puff de 10 mg en UNA sola fosa nasal a demanda (máximo 1 puff cada 24 horas).'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Via estritamente nasal. Não usar descongestionantes nasais junto — a vasoconstrição impede a absorção do Gepanto.'], es: ['Vía estrictamente nasal. No usar descongestionantes nasales junto — la vasoconstricción impedirá la absorción.'] },
+      renalAdjustment: { required: false, message: { pt: 'Segura em disfunção moderada; evitar em ClCr < 30 mL/min.', es: 'Segura en disfunción moderada; evitar en ClCr < 30 mL/min.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em cirrose Child-Pugh C.', es: 'Evitar en cirrosis Child-Pugh C.' } },
+      commonAdverseEffects: { pt: ['Disgeusia — gosto amargo/metálico na boca que desce do nariz (afeta ~20% dos usuários)', 'Desconforto nasal'], es: ['Disgeusia — sabor amargo/metálico en la boca (afecta ~20% de los usuarios)', 'Malestar nasal'] },
+      dangerousAdverseEffects: { pt: ['Reações alérgicas sistêmicas (urticária facial)'], es: ['Reacciones alérgicas sistémicas (urticaria facial)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave aos componentes da bomba nasal'], es: ['Hipersensibilidad grave a los componentes de la bomba nasal'] },
+        relative: { pt: ['Uso associado com inibidores de transporte OATP1B3 (ex: Rifampicina)'], es: ['Uso asociado con inhibidores de transporte OATP1B3 (ej: Rifampicina)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'CUIDADO COM O GATILHO DO GOSTO: A Disgeusia forte (gosto metálico no fundo da garganta) pode paradoxalmente piorar a náusea num paciente que já está com o estômago revirado pela enxaqueca.', es: 'CUIDADO CON EL GATILLO DEL GUSTO: La Disgeusia fuerte (sabor metálico en la garganta) puede paradójicamente empeorar la náusea del paciente.' }
+      }
+    },
+
+    /* ── LASMIDITANA ────────────────────────────────────────────────────── */
+    "lasmiditana": {
+      id: 'lasmiditana',
+      name: { pt: 'Lasmiditana', es: 'Lasmiditán' },
+      category: 'neurologia',
+      class: { pt: 'Agonista 5-HT1F Seletivo (Ditano)', es: 'Agonista 5-HT1F Selectivo (Ditano)' },
+      indications: {
+        pt: ['Tratamento agudo da enxaqueca com ou sem aura em adultos (particularmente útil em pacientes cardiovasculares proibidos de usar Triptanos)'],
+        es: ['Tratamiento agudo de la migraña con o sin aura en adultos (útil en pacientes cardiovasculares prohibidos de usar Triptanos)']
+      },
+      commercialNames: { br: ['Reyvow'], ar: ['Reyvow'] },
+      presentation: { pt: ['Comprimidos 50 mg e 100 mg'], es: ['Comprimidos 50 mg y 100 mg'] },
+      mechanism: {
+        pt: 'Uma nova classe (os "Ditanos"). Os triptanos estimulam os receptores 1B (no vaso sanguíneo, causando contração isquêmica) e 1D (no nervo). A Lasmiditana ignora os vasos sanguíneos e age EXCLUSIVAMENTE no receptor 5-HT1F, que fica isolado dentro dos neurônios cerebrais. Ela desliga o nervo trigêmeo "no cérebro", bloqueando a dor sem contrair nem 1 milímetro de artéria.',
+        es: 'Una nueva clase ("Ditanos"). Los triptanos estimulan receptores 1B (en el vaso, causando isquemia) y 1D. El Lasmiditán ignora los vasos y actúa EXCLUSIVAMENTE en el receptor 5-HT1F, dentro de neuronas. Apaga el trigémino sin contraer ni 1 milímetro de arteria.'
+      },
+      dose: {
+        adult: {
+          pt: '50 mg, 100 mg ou 200 mg via oral no início da dor. NÃO repetir segunda dose em 24h.',
+          es: '50 mg, 100 mg o 200 mg vía oral al inicio del dolor. NO repetir segunda dosis en 24h.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Uso restrito. Não repetir a dose na mesma crise.'], es: ['Uso restringido. No repetir la dosis en la misma crisis.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Evitar apenas na falência hepática severa.', es: 'Evitar solo en falla hepática severa.' } },
+      commonAdverseEffects: { pt: ['Tontura intensa e vertigem (principal fator limitante)', 'Fadiga extrema e sonolência (sensação de embriaguez)', 'Parestesias'], es: ['Mareo intenso y vértigo (principal factor limitante)', 'Fatiga extrema y somnolencia (sensación de embriaguez)', 'Parestesias'] },
+      dangerousAdverseEffects: { pt: ['Depressão profunda do SNC', 'Síndrome Serotoninérgica (risco maior que triptanos)'], es: ['Depresión profunda del SNC', 'Síndrome Serotoninérgico (riesgo mayor que triptanos)'] },
+      contraindications: {
+        absolute: { pt: ['Uso simultâneo com depressores centrais (álcool, benzodiazepínicos)', 'Pacientes que precisam dirigir imediatamente'], es: ['Uso simultáneo con depresores centrales (alcohol, benzodiacepinas)', 'Pacientes que necesitan conducir inmediatamente'] },
+        relative: { pt: ['Idosos suscetíveis a quedas e delírios'], es: ['Ancianos susceptibles a caídas y delirios'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A REGRA DAS 8 HORAS: O FDA determinou uma proibição legal — o paciente está estritamente proibido de dirigir veículos ou operar máquinas por no mínimo 8 HORAS após tomar a Lasmiditana, mesmo que "se sinta bem".', es: 'LA REGLA DE LAS 8 HORAS: La FDA determinó una prohibición legal — el paciente está estrictamente prohibido de conducir vehículos por al menos 8 HORAS tras tomar el Lasmiditán, incluso si "se siente bien".' }
+      }
+    },
+
+    /* ── DONEPEZILA ─────────────────────────────────────────────────────── */
+    "donepezila": {
+      id: 'donepezila',
+      name: { pt: 'Donepezila (Cloridrato de)', es: 'Donepezilo (Clorhidrato de)' },
+      category: 'neurologia',
+      class: { pt: 'Inibidor da Acetilcolinesterase Central', es: 'Inhibidor de la Acetilcolinesterasa Central' },
+      indications: {
+        pt: ['Tratamento sintomático da demência na Doença de Alzheimer (leve a grave)'],
+        es: ['Tratamiento sintomático de la demencia en la Enfermedad de Alzheimer (leve a grave)']
+      },
+      commercialNames: { br: ['Eranz', 'Donepezila'], ar: ['Memorex', 'Donepezilo'] },
+      presentation: { pt: ['Comprimidos revestidos 5 mg e 10 mg', 'Comprimidos orodispersíveis'], es: ['Comprimidos recubiertos 5 mg y 10 mg', 'Comprimidos orodispersables'] },
+      mechanism: {
+        pt: 'O cérebro com Alzheimer destrói os neurônios que produzem Acetilcolina (o neurotransmissor da memória). A Donepezila bloqueia a enzima (acetilcolinesterase) que reciclaria e destruiria a acetilcolina restante. Resultado: a pouca acetilcolina que o idoso ainda tem acumula-se nas fendas sinápticas, melhorando transitoriamente a memória, a clareza e as atividades diárias.',
+        es: 'El cerebro con Alzheimer destruye las neuronas que producen Acetilcolina. El Donepezilo bloquea la enzima que reciclaría la acetilcolina restante. Resultado: la poca acetilcolina que el anciano aún tiene se acumula en las sinapsis, mejorando transitoriamente la memoria.'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciar com 5 mg UMA VEZ ao dia (à noite, antes de dormir) por 4 a 6 semanas. Se bem tolerado, subir para 10 mg/dia.',
+          es: 'Iniciar con 5 mg UNA VEZ al día (a la noche) por 4 a 6 semanas. Si bien tolerado, subir a 10 mg/día.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Tomada noturna preferida — a droga causa náuseas e síncope; dormindo, o paciente sente menos esses efeitos.'], es: ['Toma nocturna preferida — la droga causa náuseas y síncope; durmiendo, el paciente siente menos estos efectos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar ou reduzir na cirrose severa — acúmulo plasmático.', es: 'Evitar o reducir en cirrosis severa — acúmulo plasmático.' } },
+      commonAdverseEffects: { pt: ['Náuseas, Vômitos e Diarreia severa (excesso de acetilcolina sistêmica)', 'Pesadelos vívidos e sonhos anormais', 'Cãibras musculares'], es: ['Náuseas, Vómitos y Diarrea severa (exceso de acetilcolina sistémica)', 'Pesadillas vívidas y sueños anormales', 'Calambres musculares'] },
+      dangerousAdverseEffects: { pt: ['Bradicardia severa e Bloqueio Atrioventricular (síncope)', 'Úlceras gastrointestinais (excesso de ácido induzido por acetilcolina)'], es: ['Bradicardia severa y Bloqueo Auriculoventricular (síncope)', 'Úlceras gastrointestinales (exceso de ácido)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade a derivados de piperidina', 'Bloqueio Atrioventricular de alto grau sem marcapasso'], es: ['Hipersensibilidad a derivados de piperidina', 'Bloqueo Auriculoventricular de alto grado sin marcapasos'] },
+        relative: { pt: ['Asma grave ou DPOC (acetilcolina contrai brônquios)', 'Histórico de úlceras', 'Epilepsia'], es: ['Asma grave o EPOC (acetilcolina contrae bronquios)', 'Historial de úlceras', 'Epilepsia'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ENGANO DA CURA: A família deve ser avisada de que a Donepezila NÃO PARA a destruição do cérebro. Ela apenas age como um "óleo no motor quebrado", mascarando os sintomas. A doença continua a progredir e, após alguns anos, o remédio perderá o efeito.', es: 'EL ENGAÑO DE LA CURA: La familia debe ser avisada que el Donepezilo NO DETIENE la destrucción del cerebro. Solo actúa como "aceite en el motor roto". La enfermedad continúa y tras años el remedio perderá el efecto.' }
+      }
+    },
+
+    /* ── RIVASTIGMINA ───────────────────────────────────────────────────── */
+    "rivastigmina": {
+      id: 'rivastigmina',
+      name: { pt: 'Rivastigmina', es: 'Rivastigmina' },
+      category: 'neurologia',
+      class: { pt: 'Inibidor da Acetilcolinesterase e Butirilcolinesterase Central', es: 'Inhibidor de la Acetilcolinesterasa y Butirilcolinesterasa Central' },
+      indications: {
+        pt: ['Demência da Doença de Alzheimer', 'Demência associada à Doença de Parkinson (única da classe formalmente aprovada para isso)'],
+        es: ['Demencia de la Enfermedad de Alzheimer', 'Demencia asociada a la Enfermedad de Parkinson (única formalmente aprobada para esto)']
+      },
+      commercialNames: { br: ['Exelon', 'Exelon Patch'], ar: ['Exelon'] },
+      presentation: { pt: ['Cápsulas 1,5 mg, 3 mg, 4,5 mg e 6 mg', 'Adesivos Transdérmicos (Patch) 4,6 mg/24h, 9,5 mg/24h, 13,3 mg/24h', 'Solução Oral'], es: ['Cápsulas 1,5 mg, 3 mg, 4,5 mg y 6 mg', 'Parches Transdérmicos (Patch) 4,6 mg/24h, 9,5 mg/24h, 13,3 mg/24h', 'Solución Oral'] },
+      mechanism: {
+        pt: 'Diferente da donepezila (que inibe apenas a acetilcolinesterase), a Rivastigmina é um inibidor DUPLO: inibe também a Butirilcolinesterase, tornando-a formidável para o Parkinson com demência. As cápsulas orais causavam tanto vômito que os pacientes desistiam. A genialidade foi criar o ADESIVO (Patch), que infunde a droga pela pele, pulando o estômago e zerando o vômito.',
+        es: 'A diferencia del donepezilo, la Rivastigmina es un inhibidor DOBLE: también inhibe la Butirilcolinesterasa, haciéndola formidable para Parkinson con demencia. La genialidad fue crear el PARCHE (Patch), que infunde la droga por la piel, saltando el estómago y eliminando el vómito.'
+      },
+      dose: {
+        adult: {
+          pt: 'Oral: Iniciar com 1,5 mg 2x/dia; aumentar lentamente até máx. 6 mg 2x/dia. Patch: Iniciar com 4,6 mg/24h; após 4 semanas, trocar para 9,5 mg/24h (dose alvo).',
+          es: 'Oral: Iniciar con 1,5 mg 2x/día; aumentar lentamente hasta 6 mg 2x/día. Parche: Iniciar con 4,6 mg/24h; tras 4 semanas, cambiar al de 9,5 mg/24h (dosis objetivo).'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['O Adesivo deve ser colado nas costas, peito ou braço e TROCADO A CADA 24 HORAS. Nunca usar dois adesivos simultâneos.'], es: ['El Parche debe ser pegado en la espalda, pecho o brazo y CAMBIADO CADA 24 HORAS. Nunca usar dos parches simultáneos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste em DRC.', es: 'No requiere ajuste en ERC.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir dose em insuficiência hepática moderada/severa.', es: 'Reducir dosis en insuficiencia hepática moderada/severa.' } },
+      commonAdverseEffects: { pt: ['Reação cutânea no local do adesivo (eritema, coceira)', 'Perda de peso intensa e anorexia (monitorar peso mensal)', 'Tremores agravados (no Parkinson)'], es: ['Reacción cutánea en el lugar del parche (eritema, picazón)', 'Pérdida de peso intensa y anorexia (monitorear peso mensual)', 'Temblores agravados (en Parkinson)'] },
+      dangerousAdverseEffects: { pt: ['Síncope por bradicardia profunda', 'Convulsões e úlcera perfurada'], es: ['Síncope por bradicardia profunda', 'Convulsiones y úlcera perforada'] },
+      contraindications: {
+        absolute: { pt: ['Alergia de contato grave aos adesivos de carbamatato', 'Bloqueio cardíaco avançado'], es: ['Alergia de contacto grave a los parches', 'Bloqueo cardíaco avanzado'] },
+        relative: { pt: ['Doença de úlcera péptica ativa', 'Asma brônquica severa'], es: ['Enfermedad de úlcera péptica activa', 'Asma bronquial severa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ERRO IATROGÊNICO DO ADESIVO: Idosos dementes frequentemente colam um novo adesivo sem tirar o velho. Ao acumular 2, 3 ou 4 adesivos no corpo, o paciente sofre um envenenamento colinérgico letal (salivação maciça, parada cardíaca, coma). SEMPRE TIRE O VELHO ANTES DE COLAR O NOVO.', es: 'ERROR IATROGÉNICO DEL PARCHE: Ancianos dementes frecuentemente pegan un nuevo parche sin quitar el viejo. Al acumular 3 o 4 parches, sufren un envenenamiento colinérgico letal. SIEMPRE QUITE EL VIEJO ANTES DE PEGAR EL NUEVO.' }
+      }
     }
 
-  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 398
+  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 399
          BUILD 396 — Triptanos: Sumatriptana, Zolmitriptana, Rizatriptana, Naratriptana, Eletriptana
          BUILD 397 — Triptanos+Ergot: Almotriptana, Frovatriptana, Ergotamina, DHE, Erenumabe
-         BUILD 398 — Anti-CGRP + Gepantos:
-                     Fremanezumabe (Ajovy) — Caçador CGRP, SC mensal/trimestral
-                     Galcanezumabe (Emgality) — Caçador CGRP, Cluster Headache
-                     Eptinezumabe (Vyepti) — IV trimestral, efeito imediato
-                     Ubrogepanta (Ubrelvy) — Gepanto oral agudo, ⚠ CYP3A4
-                     Rimegepanta (Nurtec ODT) — Gepanto dupla-função, ⚠ CYP3A4 */
+         BUILD 398 — Anti-CGRP+Gepantos: Fremanezumabe, Galcanezumabe, Eptinezumabe, Ubrogepanta, Rimegepanta
+         BUILD 399 — Gepantos+Ditano+Demência:
+                     Atogepanta (Qulipta) — Gepanto profilático oral diário
+                     Zavegepanta (Zavzpret) — Gepanto nasal ultrarrápido, Disgeusia
+                     Lasmiditana (Reyvow) — Ditano 5-HT1F, ⚠ Regra 8h, highAlert
+                     Donepezila (Eranz) — AChE-I Alzheimer, ⚠ highAlert
+                     Rivastigmina (Exelon/Patch) — AChE-I duplo, Parkinson+Alzheimer, ⚠ highAlert */
 })();

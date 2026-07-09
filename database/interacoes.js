@@ -294,6 +294,20 @@ const DRUG_ALIASES = {
   "nurtec":                             "rimegepanta",
   "vydura":                             "rimegepanta",
 
+  /* BUILD 399 (neurologia) — Gepantos adicionais, Ditano, Demência: aliases */
+  "atogepant":                          "atogepanta",
+  "qulipta":                            "atogepanta",
+  "aquipta":                            "atogepanta",
+  "zavegepant":                         "zavegepanta",
+  "zavzpret":                           "zavegepanta",
+  "lasmiditan":                         "lasmiditana",
+  "reyvow":                             "lasmiditana",
+  "donepezil":                          "donepezila",
+  "eranz":                              "donepezila",
+  "memorex":                            "donepezila",
+  "rivastigmine":                       "rivastigmina",
+  "exelon":                             "rivastigmina",
+
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4: aliases */
   "nintedanib":                         "nintedanibe",
   "ofev":                               "nintedanibe",
@@ -827,7 +841,22 @@ const DRUG_CLASSES = {
   /* Gepantos Orais — antagonistas orais do receptor CGRP (pequena molécula).
      Dependem do CYP3A4 hepático → interações com inibidores/indutores. */
   "$classe_gepantos_orais": [
-    "ubrogepanta", "rimegepanta"
+    "ubrogepanta", "rimegepanta", "atogepanta"
+  ],
+
+  /* Gepanto Nasal — mecanismo CGRP, via absorção mucosa; sem CYP3A4 oral. */
+  "$classe_gepantos_nasais": [
+    "zavegepanta"
+  ],
+
+  /* Ditanos — agonistas 5-HT1F; não vasoconstritores; alta sedação SNC. */
+  "$classe_ditanos": [
+    "lasmiditana"
+  ],
+
+  /* Inibidores da Colinesterase (AChE-I) — demência; bradicardia + antagonismo anticolinérgico. */
+  "$classe_inibidores_colinesterase": [
+    "donepezila", "rivastigmina"
   ],
 
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4 */
@@ -1930,6 +1959,55 @@ const INTERACOES_DB = {
       conduta: {
         pt: "CONTRAINDICAÇÃO ABSOLUTA. Intervalo mínimo de 24 horas entre qualquer ergotamínico e qualquer triptano — em qualquer ordem. Documentar no prontuário.",
         es: "CONTRAINDICACIÓN ABSOLUTA. Intervalo mínimo de 24 horas entre cualquier ergotamínico y cualquier triptano — en cualquier orden. Documentar en el expediente."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 399 (neurologia) — BLOCO MOTOR: Gepantos, Ditanos e Demência
+     Atogepanta, Zavegepanta, Lasmiditana, Donepezila, Rivastigmina
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── LASMIDITANA (Ditano — Depressor SNC) ── */
+  "lasmiditana": {
+    "$classe_depressoras_snc": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SEDAÇÃO E COLAPSO DO REFLEXO. A Lasmiditana atua profundamente em receptores 5-HT1F no cérebro central, causando tontura e inibição motora severa. A associação com Benzodiazepínicos (Clonazepam, Alprazolam), Zolpidem ou Opioides causa uma sedação respiratória e letargia perigosa. O paciente pode entrar em estado de quase-coma não intencional e cair ao levantar da cama.",
+        es: "SEDACIÓN Y COLAPSO DEL REFLEJO. El Lasmiditán actúa profundamente en receptores 5-HT1F, causando mareo severo. La asociación con Benzodiacepinas, Zolpidem u Opioides causa sedación respiratoria y letargo peligroso. El paciente puede entrar en estado de casi coma y caer al levantarse."
+      },
+      conduta: {
+        pt: "Uso concomitante deve ser evitado ou altamente vigiado. Garantir que o paciente NÃO DIRIJA por 8 horas (obrigação FDA). Comunicar ao paciente o risco de quedas com fratura se tentar se levantar da cama sob efeito da combinação.",
+        es: "Uso concomitante debe ser evitado o altamente vigilado. Garantizar que el paciente NO CONDUZCA por 8 horas (obligación FDA). Informar al paciente el riesgo de caídas con fractura al levantarse bajo el efecto de la combinación."
+      }
+    }
+  },
+
+  /* ── INIBIDORES DA COLINESTERASE (Donepezila e Rivastigmina) ── */
+  "$classe_inibidores_colinesterase": {
+    "$classe_anticolinergicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A 'GUERRA DE CABO DE FORÇA' CEREBRAL (FALHA TERAPÊUTICA DIRETA). A Donepezila e a Rivastigmina funcionam AUMENTANDO a Acetilcolina para salvar a memória do idoso. Os Anticolinérgicos (Amitriptilina, Prometazina, Oxibutinina, Tiotrópio) funcionam BLOQUEANDO a Acetilcolina. Se prescritos juntos, eles se anulam quimicamente. O tratamento caríssimo para o Alzheimer vira farinha e o cérebro do paciente decai vertiginosamente.",
+        es: "LA 'GUERRA DE CUERDA' CEREBRAL (FALLO TERAPÉUTICO DIRECTO). El Donepezilo y Rivastigmina funcionan AUMENTANDO la Acetilcolina. Los Anticolinérgicos (Amitriptilina, Prometazina, Oxibutinina) funcionan BLOQUEANDO la Acetilcolina. Prescritos juntos, se anulan. El tratamiento para el Alzheimer se vuelve inútil."
+      },
+      conduta: {
+        pt: "ERRO DE PRESCRIÇÃO CRÍTICO. Pacientes com Alzheimer NÃO PODEM usar remédios para incontinência urinária tradicionais (Oxibutinina, Solifenacina), antialérgicos de 1ª geração (Prometazina, Hidroxizina) ou antidepressivos tricíclicos, sob pena de piorar a demência e anular o tratamento.",
+        es: "ERROR DE PRESCRIPCIÓN CRÍTICO. Pacientes con Alzheimer NO PUEDEN usar remedios para incontinencia tradicional (Oxibutinina), antialérgicos de 1ª generación (Prometazina) o antidepresivos tricíclicos, so pena de empeorar la demencia y anular el tratamiento."
+      }
+    },
+    "$classe_betabloqueadores_bradicardizantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SÍNCOPE POR BRADICARDIA (O Coração Parando). O excesso de acetilcolina induzido pela Donepezila/Rivastigmina diz ao coração parassimpático para 'bater mais devagar'. O uso de Betabloqueadores (Atenolol, Propranolol, Metoprolol) retira o drive simpático de aceleração. A dupla ação 'freando' o coração pode reduzir os batimentos a 35-40 bpm. O cérebro fica sem sangue e o idoso desmaia (síncope), batendo a cabeça.",
+        es: "SÍNCOPE POR BRADICARDIA (El Corazón Parando). El exceso de acetilcolina dice al corazón 'latir más lento'. Los Betabloqueantes (Atenolol, Propranolol) retiran el drive simpático. La doble acción puede reducir los latidos a 35-40 lpm. El cerebro queda sin sangre y el anciano se desmaya."
+      },
+      conduta: {
+        pt: "Monitorar rigorosamente o pulso e solicitar ECG na introdução de Donepezila em pacientes que já usam betabloqueadores. Se ocorrer bradicardia sintomática ou tontura, o cardiologista pode precisar ajustar o betabloqueador ou discutir marcapasso.",
+        es: "Monitorizar rigurosamente el pulso y solicitar ECG al introducir Donepezilo en pacientes con betabloqueantes. Si ocurre bradicardia sintomática o mareo, el cardiólogo puede necesitar ajustar el betabloqueante o discutir marcapasos."
       }
     }
   },
