@@ -249,6 +249,20 @@ const DRUG_ALIASES = {
   "saxenda":                            "liraglutida",
   "levotiroxine":                       "levotiroxina",
 
+  /* BUILD 395 — Anti-histamínicos H1 Lote 2 (Alergia/Imunologia): aliases de nomenclatura */
+  "bilastine":                          "bilastina",
+  "alektos":                            "bilastina",
+  "ilaxten":                            "bilastina",
+  "rupatadinа":                         "rupatadina",
+  "rupafin":                            "rupatadina",
+  "diphenhydramine":                    "difenidramina",
+  "benadryl":                           "difenidramina",
+  "difenidrin":                         "difenidramina",
+  "chlorpheniramine":                   "clorfeniramina",
+  "dexchlorpheniramine":                "dexclorfeniramina",
+  "polaramine":                         "dexclorfeniramina",
+  "maleato_de_dexclorfeniramina":       "dexclorfeniramina",
+
   /* BUILD 394 — Anti-histamínicos H1 (Alergia/Imunologia): aliases de nomenclatura */
   "desloratadine":                      "desloratadina",
   "desalex":                            "desloratadina",
@@ -683,6 +697,53 @@ const DRUG_CLASSES = {
   "$classe_hipoglicemiantes_secretagogos": [
     "glibenclamida", "glimepirida", "glipizida", "gliclazida",
     "tolbutamida", "clorpropamida", "repaglinida", "nateglinida"
+  ],
+
+  /* BUILD 395 — Anti-histamínicos H1 1ª Geração + Bilastina/Rupatadina */
+
+  /* Anti-histamínicos de 1ª Geração — fortemente sedativos e anticolinérgicos
+     (difenidramina, dexclorfeniramina, clorfeniramina, prometazina, hidroxizina…)
+     Cruzam a BHE, deprimem o SNC e bloqueiam receptores muscarínicos.
+     Contraindicados em idosos (Critérios de Beers). */
+  "$classe_antihistaminicos_1a_geracao": [
+    "difenidramina", "dexclorfeniramina", "clorfeniramina",
+    "prometazina", "hidroxizina", "doxilamina", "dimenidrinato",
+    "ciclizina", "meclizina", "cetotifeno", "bromofeniramina"
+  ],
+
+  /* Sucos e alimentos que bloqueiam OATP intestinal — superset de
+     $classe_sucos_de_fruta para cobrir também alimentos sólidos ácidos
+     (interação com Bilastina e Fexofenadina) */
+  "$classe_sucos_e_alimentos": [
+    "suco_de_maca", "suco_de_laranja", "suco_de_grapefruit",
+    "suco_de_toranja", "suco_de_pomelo", "suco_fruta_acida",
+    "alimentos", "refeicao", "comida", "cafe_da_manha"
+  ],
+
+  /* Anticolinérgicos + Tricíclicos + IMAOs — risco de Toxidrome Anticolinérgica
+     aditiva quando combinados com anti-histamínicos de 1ª geração */
+  "$classe_anticolinergicos_triciclicos_imao": [
+    "amitriptilina", "nortriptilina", "imipramina", "clomipramina",
+    "desipramina", "doxepina", "trimipramina",
+    "fenelzina", "tranilcipromina", "isocarboxazida", "moclobemida",
+    "atropina", "escopolamina", "oxibutinina", "solifenacina",
+    "biperideno", "triexifenidila", "benzatropina",
+    "olanzapina", "clozapina", "clorpromazina", "levomepromazina"
+  ],
+
+  /* Depressores do SNC + Álcool — superset de $classe_depressoras_snc
+     explicitando álcool como membro (para uso nos nós de interação dos
+     anti-histamínicos 1ª geração, onde o risco de coma/asfixia é contraindicado) */
+  "$classe_depressores_snc_alcool": [
+    "alcool", "etanol",
+    "diazepam", "lorazepam", "alprazolam", "clonazepam",
+    "midazolam", "bromazepam", "zolpidem", "zopiclona",
+    "fenobarbital", "morfina", "codeina", "tramadol",
+    "fentanil", "oxicodona", "hidromorfona", "metadona",
+    "haloperidol", "olanzapina", "quetiapina", "risperidona",
+    "clozapina", "clorpromazina", "levomepromazina",
+    "pregabalina", "gabapentina", "baclofeno", "tizanidina",
+    "mirtazapina", "hidroxizina"
   ],
 
   /* BUILD 394 — Anti-histamínicos H1 de 2ª/3ª Geração */
@@ -1358,6 +1419,71 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Monitorar ECG (Intervalo QTc) se a associação for inevitável. Evitar a prescrição simultânea em pacientes coronariopatas, com arritmia basal severa ou hipocalemia. Nesse contexto, preferir Fexofenadina (sem metabolismo CYP hepático) ou Desloratadina (já ativada, independente do CYP3A4).",
         es: "Monitorear ECG (Intervalo QTc) si la asociación es inevitable. Evitar la prescripción simultánea en coronariopatas, con arritmia basal severa o hipopotasemia. En este contexto, preferir Fexofenadina (sin metabolismo CYP hepático) o Desloratadina (ya activada, independiente del CYP3A4)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 395 — BLOCO MOTOR DE INTERAÇÕES: Anti-histamínicos H1 Lote 2
+     Bilastina, Rupatadina, Difenidramina, Clorfeniramina, Dexclorfeniramina
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── BILASTINA — Bloqueio de absorção por alimentos e OATP intestinal ── */
+  "bilastina": {
+    "$classe_sucos_e_alimentos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A 'FALHA DO CAFÉ DA MANHÃ'. Semelhante à Fexofenadina, a Bilastina possui sua absorção severamente inibida (30% a 50%) se entrar em contato com quimo alimentar ou sucos de fruta (principalmente maçã e toranja/grapefruit) no estômago, devido ao bloqueio do transportador intestinal OATP. A droga é esvaziada nas fezes sem fazer o efeito antialérgico sistêmico esperado — uma falha terapêutica completa silenciosa.",
+        es: "EL 'FALLO DEL DESAYUNO'. Similar a la Fexofenadina, la Bilastina posee su absorción severamente inhibida (30% a 50%) si entra en contacto con alimentos o jugos de fruta (manzana, pomelo) en el estómago, debido al bloqueo del transportador intestinal OATP. La droga se vacía en las heces sin hacer el efecto antialérgico esperado — un fallo terapéutico silencioso."
+      },
+      conduta: {
+        pt: "REGRA DE PRESCRIÇÃO ABSOLUTA: Jejum obrigatório. O paciente deve tomar o comprimido de Bilastina pelo menos 1 HORA ANTES de comer qualquer coisa, ou esperar 2 HORAS após a refeição. Tomar estritamente com água. Anotar explicitamente na receita: 'Tomar em jejum, com água.'",
+        es: "REGLA DE PRESCRIPCIÓN ABSOLUTA: Ayuno obligatorio. El paciente debe tomar el comprimido de Bilastina al menos 1 HORA ANTES de comer cualquier cosa, o esperar 2 HORAS tras la comida. Tomar estrictamente con agua. Anotar explícitamente en la receta: 'Tomar en ayuno, con agua.'"
+      }
+    }
+  },
+
+  /* ── RUPATADINA — Acúmulo tóxico por bloqueio de CYP3A4 ── */
+  "rupatadina": {
+    "$classe_inibidores_fortes_cyp3a4": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INIBIÇÃO METABÓLICA GRAVE (SUPERDOSAGEM FUNCIONAL). A Rupatadina é quase que exclusivamente eliminada pelo CYP3A4 hepático. Se o paciente contrair uma infecção e usar Macrolídeos (Claritromicina, Eritromicina) ou Antifúngicos Sistêmicos (Cetoconazol, Itraconazol), a enzima CYP3A4 é bloqueada e o nível de Rupatadina no sangue multiplica em mais de 10 VEZES os valores normais. Há um aumento drástico e imprevisível do efeito sedativo colateral — o paciente fica incapaz de trabalhar, raciocinar ou dirigir com segurança.",
+        es: "INHIBICIÓN METABÓLICA GRAVE (SOBREDOSIS FUNCIONAL). La Rupatadina es eliminada casi exclusivamente por el CYP3A4 hepático. Si el paciente usa Macrólidos (Claritromicina, Eritromicina) o Antifúngicos (Ketoconazol, Itraconazol), el nivel de Rupatadina se multiplica en más de 10 VECES los valores normales. Hay aumento drástico e impredecible del efecto sedante — el paciente queda incapaz de trabajar o conducir."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO TEMPORÁRIA: Suspender a Rupatadina imediatamente durante o tratamento com macrolídeos ou antifúngicos sistêmicos. Substituir por Bilastina (excretada inalterada, sem metabolismo CYP) ou Fexofenadina (mínimo metabolismo hepático), que não sofrem essa interação.",
+        es: "CONTRAINDICACIÓN TEMPORAL: Suspender la Rupatadina inmediatamente durante el tratamiento con macrólidos o antifúngicos sistémicos. Sustituir por Bilastina (excretada inalterada) o Fexofenadina (metabolismo hepático mínimo), que no sufren esta interacción."
+      }
+    }
+  },
+
+  /* ── ANTI-HISTAMÍNICOS DE 1ª GERAÇÃO — Toxidrome Anticolinérgica e Sedação Asfíxica ── */
+  "$classe_antihistaminicos_1a_geracao": {
+    "$classe_depressores_snc_alcool": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "COMA E ASFIXIA FARMACOLÓGICA. Antialérgicos clássicos de 1ª Geração (Difenidramina, Dexclorfeniramina, Clorfeniramina) cruzam violentamente a barreira hematoencefálica e deprimem o centro respiratório e a vigilância cortical. Misturá-los com Álcool, Benzodiazepínicos (Diazepam, Clonazepam/Rivotril), Barbitúricos ou Opioides pesados resulta em sinergismo letal de letargia. O paciente pode vomitar enquanto dorme, broncoaspirar o conteúdo gástrico, ou simplesmente parar de respirar na enfermaria ou em casa.",
+        es: "COMA Y ASFIXIA FARMACOLÓGICA. Los antialérgicos clásicos de 1ª Generación (Difenhidramina, Dexclorfeniramina, Clorfeniramina) cruzan violentamente la barrera hematoencefálica y deprimen el centro respiratorio. Mezclarlos con Alcohol, Benzodiacepinas (Diazepam, Clonazepam), Barbitúricos u Opioides resulta en sinergismo letal de letargo. El paciente puede vomitar durmiendo, broncoaspirar o simplemente dejar de respirar."
+      },
+      conduta: {
+        pt: "Proibir absolutamente a mistura com álcool (orientação ativa obrigatória). Em ambientes hospitalares, REDUZIR A DOSE DE OPIOIDES em 30 a 50% se a Difenidramina IV/IM for administrada na sala de emergência ou UTI. Para alergias simples, nunca justifica o uso de anti-H1 de 1ª geração quando há Fexofenadina, Bilastina ou Desloratadina disponíveis.",
+        es: "Prohibir absolutamente la mezcla con alcohol (orientación activa obligatoria). En ambientes hospitalarios, REDUCIR LA DOSIS DE OPIOIDES en 30 a 50% si la Difenhidramina IV/IM es administrada. Para alergias simples, nunca justifica usar anti-H1 de 1ª generación cuando hay Fexofenadina, Bilastina o Desloratadina disponibles."
+      }
+    },
+    "$classe_anticolinergicos_triciclicos_imao": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "TOXIDROME ANTICOLINÉRGICA FATAL (O PIOR INIMIGO DO IDOSO POLIMEDICADO). Os anti-histamínicos de 1ª Geração — 'Polaramine' (Dexclorfeniramina) e 'Benadryl' (Difenidramina) — são potentes bloqueadores muscarínicos por conta própria. Ao combiná-los com Antidepressivos Tricíclicos (Amitriptilina, Nortriptilina) ou IMAOs em idosos polimedicados, o efeito anticolinérgico soma-se exponencialmente: pupilas dilatadas e fixas (midríase), retenção urinária e intestinal completa (íleo e retenção aguda), hipertermia, taquicardia e um delírio agressivo e terrorífico — a síndrome anticolinérgica pura.",
+        es: "TOXÍDROME ANTICOLINÉRGICA FATAL (EL PEOR ENEMIGO DEL ANCIANO POLIMEDICADO). Los antihistamínicos de 1ª Generación son potentes bloqueadores muscarínicos. Al combinarlos con Antidepresivos Tricíclicos (Amitriptilina) o IMAOs en ancianos polimedicados, el efecto anticolinérgico se suma exponencialmente: pupilas dilatadas y fijas, retención urinaria e intestinal, hipertermia, taquicardia y un delirio agresivo terrorífico."
+      },
+      conduta: {
+        pt: "EVITAR completamente anti-histamínicos de 1ª geração em idosos que usam psicotrópicos (Antidepressivos, Antipsicóticos, IMAOs). Na emergência psiquiátrica com toxidrome anticolinérgica instalada, usar Fisostigmina (0,5 a 2 mg IV lento) se o quadro se tornar letal, hipertérmico ou com convulsões. Monitorar ECG (QTc) e temperatura retal.",
+        es: "EVITAR completamente antihistamínicos de 1ª generación en ancianos que usan psicotrópicos. En emergencia con toxídrome instalada, usar Fisostigmina (0,5 a 2 mg IV lento) si el cuadro se vuelve letal, hipertérmico o con convulsiones. Monitorear ECG (QTc) y temperatura rectal."
       }
     }
   },

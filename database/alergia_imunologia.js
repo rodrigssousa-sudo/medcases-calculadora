@@ -212,9 +212,208 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
         warning: { pt: 'ALERTA METABÓLICO: Como a Ebastina vira Carebastina pelas enzimas CYP3A4 no fígado, se o paciente tomar cetoconazol ou claritromicina, o fígado para. A ebastina original vai acumular e, diferentemente da Loratadina, isso pode alongar levemente o QTc do paciente. Preferir Fexofenadina ou Desloratadina em pacientes coronariopatas.', es: 'ALERTA METABÓLICA: Como la Ebastina se vuelve Carebastina por las enzimas CYP3A4, si el paciente toma ketoconazol o claritromicina, el hígado se detiene. La ebastina original acumulará y puede alargar levemente el QTc. Preferir Fexofenadina o Desloratadina en coronariopatas.' }
       }
+    },
+
+    /* ── BUILD 395 Lote 2 — Anti-histamínicos H1: 2ª Geração (Bilastina, Rupatadina) + 1ª Geração Clássicos ── */
+
+    "bilastina": {
+      name: { pt: 'Bilastina', es: 'Bilastina' },
+      category: 'alergia_imunologia',
+      class: { pt: 'Anti-histamínico H1 de 2ª Geração (Não Sedativo)', es: 'Antihistamínico H1 de 2ª Generación (No Sedante)' },
+      indications: {
+        pt: ['Tratamento sintomático da Rinoconjuntivite alérgica (sazonal e perene)', 'Urticária crônica espontânea'],
+        es: ['Tratamiento sintomático de la Rinoconjuntivitis alérgica (estacional y perenne)', 'Urticaria crónica espontánea']
+      },
+      commercialNames: { br: ['Alektos'], ar: ['Ilaxten'] },
+      presentation: { pt: ['Comprimidos 20 mg', 'Solução Oral Pediátrica 2,5 mg/mL'], es: ['Comprimidos 20 mg', 'Solución Oral Pediátrica 2,5 mg/mL'] },
+      mechanism: {
+        pt: 'Antialérgico super moderno. Bloqueia receptores H1 de forma altissimamente seletiva, sem nenhuma afinidade por receptores muscarínicos (não causa boca seca significativa). Como não cruza a barreira hematoencefálica, não causa sedação. Seu diferencial é o controle rápido: começa a agir em 30 a 60 minutos e dura exatas 24 horas. É excretada de forma inalterada (não sobrecarrega o fígado).',
+        es: 'Antialérgico supermoderno. Bloquea receptores H1 de forma altísimamente selectiva, sin afinidad por muscarínicos. Al no cruzar la barrera hematoencefálica, no causa sedación. Su diferencial es el control rápido: empieza a actuar en 30 a 60 minutos y dura 24 horas. Se excreta inalterada (no sobrecarga el hígado).'
+      },
+      dose: {
+        adult: {
+          pt: '20 mg via oral UMA VEZ ao dia.',
+          es: '20 mg vía oral UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: 'Crianças de 6 a 11 anos: 10 mg (4 mL) UMA VEZ ao dia.',
+          es: 'Niños de 6 a 11 años: 10 mg (4 mL) UNA VEZ al día.'
+        }
+      },
+      administration: { pt: ['REGRA DO JEJUM ABSOLUTO: Tomar o comprimido pelo menos 1 HORA ANTES ou 2 HORAS DEPOIS da ingestão de qualquer alimento ou suco de frutas. A comida corta quase 30% a 50% do efeito da droga.'], es: ['REGLA DE AYUNO ABSOLUTO: Tomar el comprimido al menos 1 HORA ANTES o 2 HORAS DESPUÉS de cualquier alimento o jugo. La comida corta el 30% a 50% del efecto de la droga.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose, mesmo na doença renal grave.', es: 'Sin necesidad de ajuste de dosis, incluso en enfermedad renal grave.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não requer ajuste (metabolismo hepático é irrelevante, excretada nas fezes e urina intacta).', es: 'No requiere ajuste (metabolismo hepático irrelevante).' } },
+      commonAdverseEffects: { pt: ['Cefaleia leve', 'Sonolência irrisória (praticamente igual ao placebo)'], es: ['Cefalea leve', 'Somnolencia irrisoria (prácticamente igual a placebo)'] },
+      dangerousAdverseEffects: { pt: ['Extremamente segura. Nenhum efeito cardíaco (não prolonga o QT) mesmo em doses altas.'], es: ['Extremadamente segura. Ningún efecto cardíaco (no prolonga QT) incluso en dosis altas.'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave à bilastina'], es: ['Hipersensibilidad grave a la bilastina'] },
+        relative: { pt: ['Crianças < 6 anos (por falta de estudos de eficácia robustos)'], es: ['Niños < 6 años (por falta de estudios de eficacia)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ERRO NA MESA: Se você prescrever Bilastina para o paciente tomar "depois do café da manhã" (como se faz com quase todo remédio), o remédio não vai funcionar. Essa droga compete com a comida no intestino e perde. Tem que ser no estômago vazio.', es: 'ERROR EN LA MESA: Si prescribe Bilastina para "después del desayuno", el remedio no funcionará. Compite con la comida en el intestino y pierde. Debe ser con estómago vacío.' }
+      }
+    },
+
+    "rupatadina": {
+      name: { pt: 'Rupatadina', es: 'Rupatadina' },
+      category: 'alergia_imunologia',
+      class: { pt: 'Anti-histamínico H1 de 2ª Geração + Antagonista do PAF', es: 'Antihistamínico H1 de 2ª Generación + Antagonista del PAF' },
+      indications: {
+        pt: ['Rinite Alérgica (com alto poder contra o entupimento nasal crônico)', 'Urticária crônica com alto poder de inchaço inflamatório'],
+        es: ['Rinitis Alérgica (con alto poder contra el taponamiento nasal crónico)', 'Urticaria crónica con alto poder de hinchazón inflamatoria']
+      },
+      commercialNames: { br: ['Rupafin'], ar: ['Rupafin', 'Alergiax'] },
+      presentation: { pt: ['Comprimidos 10 mg', 'Solução Oral 1 mg/mL'], es: ['Comprimidos 10 mg', 'Solución Oral 1 mg/mL'] },
+      mechanism: {
+        pt: 'Tem um DUPLO MECANISMO revolucionário. Além de bloquear a Histamina (H1) como todos os outros, a Rupatadina bloqueia o Fator Ativador de Plaquetas (PAF). O PAF é uma das principais substâncias que as células soltam para deixar o nariz entupido e a pele vermelha/inchada. Ao bloquear ambos, ela "seca" a alergia mais intensamente que os antihistamínicos puros.',
+        es: 'Tiene un DOBLE MECANISMO revolucionario. Además de bloquear la Histamina (H1), la Rupatadina bloquea el Factor Activador de Plaquetas (PAF). El PAF es una de las principales sustancias que tapan la nariz e hinchan la piel. Al bloquear ambos, "seca" la alergia más intensamente.'
+      },
+      dose: {
+        adult: {
+          pt: '10 mg via oral UMA VEZ ao dia.',
+          es: '10 mg vía oral UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: 'Crianças de 2 a 11 anos (>25 kg): 5 mg (5 mL) 1x/dia. (10 a 25 kg): 2,5 mg (2,5 mL) 1x/dia.',
+          es: 'Niños de 2 a 11 años (>25 kg): 5 mg (5 mL) 1x/día. (10 a 25 kg): 2,5 mg (2,5 mL) 1x/día.'
+        }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos (A comida aumenta ligeiramente sua absorção e atrasa o pico, mas não anula o remédio, sendo seguro misturar).'], es: ['Puede ser tomado con o sin alimentos (La comida aumenta ligeramente su absorción y retrasa el pico, pero no anula el remedio).'] },
+      renalAdjustment: { required: false, message: { pt: 'Uso não recomendado em insuficiência renal grave apenas por falta de dados concretos.', es: 'Uso no recomendado en insuficiencia renal grave solo por falta de datos.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar o uso em insuficiência hepática (metabolismo extenso via CYP3A4).', es: 'Evitar uso en insuficiencia hepática (metabolismo extenso vía CYP3A4).' } },
+      commonAdverseEffects: { pt: ['Sonolência (Afeta até 9% dos pacientes, mais que a bilastina/loratadina)', 'Astenia (fraqueza)', 'Cefaleia'], es: ['Somnolencia (Afecta hasta 9% de los pacientes)', 'Astenia (debilidad)', 'Cefalea'] },
+      dangerousAdverseEffects: { pt: ['Nenhum evento cardíaco perigoso em doses terapêuticas.'], es: ['Ningún evento cardíaco peligroso en dosis terapéuticas.'] },
+      contraindications: {
+        absolute: { pt: ['Crianças menores de 2 anos', 'Insuficiência hepática ou renal grave'], es: ['Niños menores de 2 años', 'Insuficiencia hepática o renal grave'] },
+        relative: { pt: ['Uso associado com inibidores potentes do CYP3A4 (Cetoconazol, Eritromicina)'], es: ['Uso asociado con inhibidores potentes del CYP3A4 (Ketoconazol, Eritromicina)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ALERTA DE SEDATIVO: Por ser metabolizada no fígado e ter estrutura mais lipofílica que a Fexofenadina/Bilastina, a Rupatadina CAUSA SONO em alguns pacientes (semelhante à Cetirizina). Instrua o adulto a tomar a primeira dose à noite para ver como o corpo reage.', es: 'ALERTA DE SEDANTE: Por ser metabolizada en hígado, la Rupatadina CAUSA SUEÑO en algunos pacientes. Instruya al adulto a tomar la primera dosis a la noche para ver cómo reacciona el cuerpo.' }
+      }
+    },
+
+    "difenidramina": {
+      name: { pt: 'Difenidramina', es: 'Difenhidramina' },
+      category: 'alergia_imunologia',
+      class: { pt: 'Anti-histamínico H1 de 1ª Geração (Fortemente Sedativo)', es: 'Antihistamínico H1 de 1ª Generación (Fuertemente Sedante)' },
+      indications: {
+        pt: ['Reações anafiláticas e alergias severas na emergência', 'Reações Extrapiramidais (Distonia aguda por Plasil ou Haldol)', 'Insônia aguda (Uso off-label comum nos EUA)'],
+        es: ['Reacciones anafilácticas y alergias severas en urgencias', 'Reacciones Extrapiramidales (Distonía aguda por Plasil o Haldol)', 'Insomnio agudo (Uso off-label común en EE.UU.)']
+      },
+      commercialNames: { br: ['Benadryl', 'Difenidrin'], ar: ['Benadryl'] },
+      presentation: { pt: ['Ampolas IV/IM 50 mg/mL', 'Comprimidos/Cápsulas 25 mg, 50 mg', 'Xarope 12,5 mg/5 mL'], es: ['Ampollas IV/IM 50 mg/mL', 'Comprimidos/Cápsulas 25 mg, 50 mg', 'Jarabe 12,5 mg/5 mL'] },
+      mechanism: {
+        pt: 'Um "Dinossauro" potente. Bloqueia receptores H1 em todo o corpo, desinchando a pele e os brônquios na anafilaxia. Porém, ela atravessa a barreira hematoencefálica brutalmente. No cérebro, atua como um sedativo pesado e possui AÇÃO ANTICOLINÉRGICA EXTREMA (bloqueia receptores muscarínicos). Esse bloqueio anticolinérgico é o que cura a distonia extrapiramidal e seca toda a água do corpo (boca, nariz, pulmão).',
+        es: 'Un "Dinosaurio" potente. Bloquea receptores H1 en todo el cuerpo. Sin embargo, atraviesa la barrera hematoencefálica brutalmente. En el cerebro, actúa como sedante pesado y posee ACCIÓN ANTICOLINÉRGICA EXTREMA. Este bloqueo anticolinérgico cura la distonía y seca toda el agua del cuerpo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Alergia/Anafilaxia grave: 25 a 50 mg IV ou IM LENTO a cada 6 ou 8 horas. Insônia/Oral: 50 mg VO antes de dormir.',
+          es: 'Alergia/Anafilaxia grave: 25 a 50 mg IV o IM LENTO cada 6 o 8 horas. Insomnio/Oral: 50 mg VO antes de dormir.'
+        },
+        pediatric: {
+          pt: 'Crianças (>10 kg): 1 a 1,25 mg/kg IV ou IM a cada 6 horas.',
+          es: 'Niños (>10 kg): 1 a 1,25 mg/kg IV o IM cada 6 horas.'
+        }
+      },
+      administration: { pt: ['Via endovenosa (IV) deve ser feita MUITO lentamente (mínimo de 3 a 5 min), injeção rápida causa hipotensão severa e colapso circulatório.', 'A IM deve ser profunda.'], es: ['Vía endovenosa (IV) debe hacerse MUY lentamente (mínimo 3 a 5 min), inyección rápida causa hipotensión severa.', 'La IM debe ser profunda.'] },
+      renalAdjustment: { required: true, message: { pt: 'Em falência renal (ClCr 10-50), aumentar o intervalo entre as doses para 6-12 horas.', es: 'En falla renal (ClCr 10-50), aumentar intervalo entre dosis a 6-12 horas.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolismo de primeira passagem maciço. Evitar ou reduzir na cirrose.', es: 'Metabolismo de primera pasada masivo. Evitar o reducir en cirrosis.' } },
+      commonAdverseEffects: { pt: ['Sonolência INCAPACITANTE (O paciente "apaga")', 'Boca parecendo lixa (xerostomia extrema)', 'Visão turva e palpitação'], es: ['Somnolencia INCAPACITANTE (El paciente "se apaga")', 'Boca como lija (xerostomía extrema)', 'Visión borrosa y palpitación'] },
+      dangerousAdverseEffects: { pt: ['Delirium Anticolinérgico em idosos (alucinações terroríficas, agitação e coma)', 'Retenção urinária aguda', 'Espessamento letal de secreção brônquica no asmático'], es: ['Delirium Anticolinérgico en ancianos (alucinaciones terroríficas, agitación y coma)', 'Retención urinaria aguda', 'Espesamiento letal de secreción bronquial en el asmático'] },
+      contraindications: {
+        absolute: { pt: ['Recém-nascidos e prematuros (Risco de apneia fatal)', 'Uso como droga profilática diária para rinite (Tóxica pro cérebro)'], es: ['Recién nacidos y prematuros (Riesgo de apnea fatal)', 'Uso como droga profiláctica diaria (Tóxica para el cerebro)'] },
+        relative: { pt: ['Idosos (> 65 anos) - Droga da Lista de Beers (altamente inapropriada)', 'Glaucoma de ângulo fechado', 'Hiperplasia Prostática'], es: ['Ancianos (> 65 años) - Droga de Criterios de Beers', 'Glaucoma de ángulo cerrado', 'Hiperplasia Prostática'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O PIOR REMÉDIO PARA O IDOSO: A Difenidramina no idoso causa confusão mental profunda, demência aguda reversível e retenção de urina. Um avô que toma Benadryl no PS corre alto risco de não reconhecer os filhos, cair, quebrar o fêmur e parar na UTI horas depois. USE SEMPRE os de 2ª geração para alergias simples.', es: 'EL PEOR REMEDIO PARA EL ANCIANO: La Difenhidramina en el anciano causa confusión mental profunda y retención de orina. Un abuelo que lo toma corre alto riesgo de caer, romperse el fémur y terminar en UCI.' }
+      }
+    },
+
+    "clorfeniramina": {
+      name: { pt: 'Clorfeniramina', es: 'Clorfeniramina' },
+      category: 'alergia_imunologia',
+      class: { pt: 'Anti-histamínico H1 de 1ª Geração', es: 'Antihistamínico H1 de 1ª Generación' },
+      indications: {
+        pt: ['Sintomas de gripes e resfriados associados à coriza nasal e espirros', 'Urticária leve'],
+        es: ['Síntomas de gripes y resfriados asociados a coriza nasal y estornudos', 'Urticaria leve']
+      },
+      commercialNames: { br: ['Resfenol (Assoc)', 'Benegrip (Assoc)'], ar: ['Qura Plus (Assoc)'] },
+      presentation: { pt: ['Comprimidos 4 mg', 'Xarope 2 mg/5 mL (Muitas vezes misturado com Paracetamol/Descongestionantes na farmácia)'], es: ['Comprimidos 4 mg', 'Jarabe 2 mg/5 mL (Frecuentemente mezclado con Paracetamol/Descongestionantes)'] },
+      mechanism: {
+        pt: 'Semelhante à difenidramina, cruza a barreira hematoencefálica e bloqueia os receptores H1 e muscarínicos. A diferença clínica é que a clorfeniramina é ligeiramente menos sedativa e "derruba" menos o paciente do que a difenidramina, sendo extremamente comum sua venda livre em "antigripais" de prateleira (para secar o nariz e o paciente conseguir trabalhar).',
+        es: 'Similar a difenhidramina, cruza la barrera y bloquea receptores H1 y muscarínicos. La diferencia clínica es que la clorfeniramina es ligeramente menos sedante y "tira" menos al paciente, siendo común su venta libre en "antigripales" para secar la nariz.'
+      },
+      dose: {
+        adult: {
+          pt: '4 mg via oral a cada 4 a 6 horas (Máximo de 24 mg/dia).',
+          es: '4 mg vía oral cada 4 a 6 horas (Máximo de 24 mg/día).'
+        },
+        pediatric: {
+          pt: '6 a 12 anos: 2 mg a cada 4 a 6 horas (Máximo 12 mg/dia).',
+          es: '6 a 12 años: 2 mg cada 4 a 6 horas (Máximo 12 mg/día).'
+        }
+      },
+      administration: { pt: ['Uso oral rotineiro. Pode ser ingerido com leite ou comida se houver irritação gástrica.'], es: ['Uso oral rutinario. Puede ser ingerido con leche o comida si hay irritación gástrica.'] },
+      renalAdjustment: { required: false, message: { pt: 'Monitorar acúmulo de metabólitos em disfunção grave.', es: 'Monitorizar acumulación de metabolitos en disfunción grave.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em cirrose descompensada.', es: 'Evitar en cirrosis descompensada.' } },
+      commonAdverseEffects: { pt: ['Sonolência e letargia', 'Tontura e falta de coordenação', 'Boca seca'], es: ['Somnolencia y letargo', 'Mareo y falta de coordinación', 'Boca seca'] },
+      dangerousAdverseEffects: { pt: ['Glaucoma agudo precipitado', 'Incapacidade de urinar (em hiperplasia benigna da próstata)'], es: ['Glaucoma agudo precipitado', 'Incapacidad de orinar (en hiperplasia benigna de la próstata)'] },
+      contraindications: {
+        absolute: { pt: ['Crise aguda de asma (Resseca e engrossa as secreções pulmonares, asfixiando o doente)'], es: ['Crisis aguda de asma (Reseca y engrosa las secreciones pulmonares, asfixiando al enfermo)'] },
+        relative: { pt: ['Glaucoma de ângulo fechado', 'Uso contínuo em idosos (Causa esquecimento e demência induzida)'], es: ['Glaucoma de ángulo cerrado', 'Uso continuo en ancianos (Causa olvido y demencia inducida)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O PERIGO DOS ANTIGRIPAIS: Pacientes idosos frequentemente tomam 3 ou 4 comprimidos de "Benegrip/Resfenol" ao dia para a gripe, sem saber que a Clorfeniramina neles vai causar retenção urinária e parar a próstata, além de confusão mental grave. Oriente os familiares.', es: 'EL PELIGRO DE LOS ANTIGRIPALES: Pacientes ancianos frecuentemente toman 3 o 4 comprimidos de antigripales al día, sin saber que la Clorfeniramina en ellos causará retención urinaria y confusión mental grave.' }
+      }
+    },
+
+    "dexclorfeniramina": {
+      name: { pt: 'Dexclorfeniramina (Maleato de)', es: 'Dexclorfeniramina (Maleato de)' },
+      category: 'alergia_imunologia',
+      class: { pt: 'Anti-histamínico H1 de 1ª Geração (O Clássico "Alergia de Pele")', es: 'Antihistamínico H1 de 1ª Generación (El Clásico "Alergia de Piel")' },
+      indications: {
+        pt: ['Alergias cutâneas severas (Urticária, Picadas de inseto, Eczema)', 'Coceiras generalizadas refratárias', 'Seguro na Gravidez para rinites alérgicas intensas'],
+        es: ['Alergias cutáneas severas (Urticaria, Picaduras de insecto, Eczema)', 'Picores generalizados refractarios', 'Seguro en el Embarazo para rinitis alérgicas intensas']
+      },
+      commercialNames: { br: ['Polaramine'], ar: ['Celestamine (Assoc)'] },
+      presentation: { pt: ['Comprimidos 2 mg', 'Drágeas Repetabs (liberação prolongada) 6 mg', 'Xarope ou Gotas 2 mg/5 mL'], es: ['Comprimidos 2 mg', 'Grageas de liberación prolongada 6 mg', 'Jarabe o Gotas 2 mg/5 mL'] },
+      mechanism: {
+        pt: 'É o isômero destro puro da Clorfeniramina. Ao purificar a molécula, a indústria a tornou DUAS VEZES MAIS POTENTE (2 mg dela equivalem a 4 mg da clorfeniramina) e reduziu um pouco os efeitos colaterais. É o "rei" da alergia de pele no Brasil, altamente confiável na obstetrícia e pediatria de emergência, apesar da intensa sonolência induzida.',
+        es: 'Es el isómero diestro puro de la Clorfeniramina. Al purificar la molécula, la industria la hizo EL DOBLE DE POTENTE (2 mg equivalen a 4 mg de clorfeniramina). Es altamente confiable en obstetricia y pediatría de emergencia, a pesar del sueño inducido.'
+      },
+      dose: {
+        adult: {
+          pt: '2 mg via oral a cada 6 a 8 horas. Repetabs (6 mg) a cada 12 horas.',
+          es: '2 mg vía oral cada 6 a 8 horas. Repetabs (6 mg) cada 12 horas.'
+        },
+        pediatric: {
+          pt: '2 a 6 anos: 0,5 mg (1,25 mL) a cada 8h. 6 a 12 anos: 1 mg (2,5 mL) a cada 8h.',
+          es: '2 a 6 años: 0,5 mg (1,25 mL) cada 8h. 6 a 12 años: 1 mg (2,5 mL) cada 8h.'
+        }
+      },
+      administration: { pt: ['Xarope/Comprimidos não tem relação com comida. As Drágeas de liberação prolongada NUNCA devem ser esmagadas ou mastigadas.'], es: ['Jarabe/Comprimidos no tiene relación con comida. Las Grageas de liberación prolongada NUNCA deben ser masticadas o aplastadas.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado no fígado, reduzir dose em cirrose grave.', es: 'Metabolizado en hígado, reducir dosis en cirrosis grave.' } },
+      commonAdverseEffects: { pt: ['Sonolência intensa', 'Astenia', 'Espessamento das secreções brônquicas'], es: ['Somnolencia intensa', 'Astenia', 'Espesamiento de las secreciones bronquiales'] },
+      dangerousAdverseEffects: { pt: ['Convulsões e delírio grave em intoxicação pediátrica'], es: ['Convulsiones y delirio grave en intoxicación pediátrica'] },
+      contraindications: {
+        absolute: { pt: ['Bebês menores de 2 anos', 'Asma brônquica aguda', 'Pacientes em uso de IMAO'], es: ['Bebés menores de 2 años', 'Asma bronquial aguda', 'Pacientes en uso de IMAO'] },
+        relative: { pt: ['Idosos com glaucoma, HBP ou demência (Risco da Toxidrome Anticolinérgica)'], es: ['Ancianos con glaucoma, HBP o demencia (Riesgo de Toxidrome Anticolinérgico)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ALERTA PEDIÁTRICO: Um erro muito comum de mães é dar doses "a mais" de Polaramine para bebês com coceira severa. A superdosagem no cérebro imaturo da criança NÃO a faz dormir; pelo contrário, causa agitação paradoxal extrema, alucinações ("vendo bichos") e convulsões hipercinéticas.', es: 'ALERTA PEDIÁTRICA: Un error común de madres es dar dosis extras de Polaramine para bebés con picor. La sobredosis en el cerebro inmaduro NO hace dormir; al contrario, causa agitación paradójica extrema, alucinaciones y convulsiones.' }
+      }
     }
 
-  }); /* fim Object.assign ALERGIA_IMUNOLOGIA_DRUGS_DB — BUILD 394 Lote 1
-         (Desloratadina + Cetirizina + Levocetirizina + Fexofenadina + Ebastina) */
+  }); /* fim Object.assign ALERGIA_IMUNOLOGIA_DRUGS_DB — BUILD 394 Lote 1 + BUILD 395 Lote 2
+         Lote 1 (Desloratadina + Cetirizina + Levocetirizina + Fexofenadina + Ebastina)
+         Lote 2 (Bilastina + Rupatadina + Difenidramina + Clorfeniramina + Dexclorfeniramina)
+         Total: 10 fármacos anti-histamínicos H1 */
 
 })();
