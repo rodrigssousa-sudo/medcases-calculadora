@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=392" />
-  <link rel="stylesheet" href="css/build233.css?v=392" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=392" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=392" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=392" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=392" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=392" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=393" />
+  <link rel="stylesheet" href="css/build233.css?v=393" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=393" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=393" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=393" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=393" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=393" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=392" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=393" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=392" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=393" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=392" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=393" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=392" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=393" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=392" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=393" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=392" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=393" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=392" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=393" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=392" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=393" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -15670,6 +15670,29 @@ function openFarmacoDetail(id) {
     return null;
   };
 
+  /* BUILD 393 PATCH A — utilitários de resolução multilíngue segura
+     Resolve campos {pt:'...', es:'...'} antes de injetar em template literals.
+     _resolveField : escalares  — retorna string ou '—'
+     _resolveArr   : arrays     — retorna array ou null
+     Elimina sistematicamente o bug [object Object] nos fármacos Object-DB
+     (Fondaparinux, Heparina NF, Nintedanibe, Montelucaste, etc.) */
+  const _resolveField = (field) => {
+    if (field === null || field === undefined) return '—';
+    if (typeof field === 'object' && !Array.isArray(field)) {
+      return field[lang] || field.pt || field.es || '—';
+    }
+    return String(field);
+  };
+  const _resolveArr = (field) => {
+    if (!field) return null;
+    if (Array.isArray(field)) return field.length ? field : null;
+    if (typeof field === 'object') {
+      const arr = field[lang] || field.pt || field.es;
+      return Array.isArray(arr) && arr.length ? arr : null;
+    }
+    return null;
+  };
+
   /* ── Resolve nome e classe ── */
   const drugName  = (result && result._resolvedName)  || _fdResolveName(drug);
   const drugClass = (result && result._resolvedClass) || _fdResolveClass(drug);
@@ -16059,37 +16082,41 @@ function openFarmacoDetail(id) {
   })();
 
   /* ══ BLOCO 2 — MECANISMO DE AÇÃO (→ aba Farmacologia) ══ */
+  /* BUILD 393 PATCH A: _resolveField() elimina [object Object] para Object-DB drugs */
   const mech = get('mechanism');
   if (mech) {
     htmlPharma += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-atom" style="color:#A78BFA;"></i> ${isES?'MECANISMO DE ACCIÓN':'MECANISMO DE AÇÃO'}</div>
-      <div class="fd-section-text">${mech}</div>
+      <div class="fd-section-text">${_resolveField(mech)}</div>
     </div>`;
   }
 
   /* ══ BLOCO 3 — FARMACOCINÉTICA (→ aba Farmacologia) ══ */
+  /* BUILD 393 PATCH A: _resolveField() resolve {pt,es} para onset e halfLife */
   const onset    = get('onset');
   const halfLife = get('halfLife');
   if (onset || halfLife) {
     htmlPharma += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-clock" style="color:#38BDF8;"></i> ${isES?'FARMACOCINÉTICA':'FARMACOCINÉTICA'}</div>`;
-    if (onset)    htmlPharma += `<div class="fd-adj-row"><span class="fd-adj-icon">⏱</span><span>${onset}</span></div>`;
-    if (halfLife) htmlPharma += `<div class="fd-adj-row"><span class="fd-adj-icon">⏳</span><span>${halfLife}</span></div>`;
+    if (onset)    htmlPharma += `<div class="fd-adj-row"><span class="fd-adj-icon">⏱</span><span>${_resolveField(onset)}</span></div>`;
+    if (halfLife) htmlPharma += `<div class="fd-adj-row"><span class="fd-adj-icon">⏳</span><span>${_resolveField(halfLife)}</span></div>`;
     htmlPharma += `</div>`;
   }
 
   /* ══ BLOCO 4 — AJUSTE HEPÁTICO (→ aba Farmacologia) ══ */
+  /* BUILD 393 PATCH A: _resolveField() resolve {pt,es} para hepaticAdjustment */
   const hepatic = get('hepaticAdjustment');
   if (hepatic) {
     htmlPharma += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-heart-pulse" style="color:#F0A842;"></i> ${isES?'AJUSTE HEPÁTICO':'AJUSTE HEPÁTICO'}</div>
-      <div class="fd-section-text">${hepatic}</div>
+      <div class="fd-section-text">${_resolveField(hepatic)}</div>
     </div>`;
   }
 
   /* ══ BLOCO 5 — EFEITOS ADVERSOS COMUNS (→ aba Segurança) ══ */
-  const common = get('commonAdverseEffects');
-  if (common && Array.isArray(common) && common.length) {
+  /* BUILD 393 PATCH A: _resolveArr() desempacota {pt:[],es:[]} antes do Array.isArray guard */
+  const common = _resolveArr(get('commonAdverseEffects'));
+  if (common && common.length) {
     const items = common.filter(Boolean);
     htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-triangle-exclamation" style="color:#F0A842;"></i> ${isES?'EF. ADVERSOS COMUNES':'EF. ADVERSOS COMUNS'} <span style="font-weight:400;color:var(--text-muted);font-size:9.5px;">(${items.length})</span></div>
@@ -16098,8 +16125,9 @@ function openFarmacoDetail(id) {
   }
 
   /* ══ BLOCO 6 — EFEITOS ADVERSOS GRAVES (→ aba Segurança) ══ */
-  const danger = get('dangerousAdverseEffects');
-  if (danger && Array.isArray(danger) && danger.length) {
+  /* BUILD 393 PATCH A: _resolveArr() desempacota {pt:[],es:[]} */
+  const danger = _resolveArr(get('dangerousAdverseEffects'));
+  if (danger && danger.length) {
     const items = danger.filter(Boolean);
     htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-circle-exclamation" style="color:#E05C6B;"></i> ${isES?'EF. ADVERSOS GRAVES':'EF. ADVERSOS GRAVES'} <span style="font-weight:400;color:var(--text-muted);font-size:9.5px;">(${items.length})</span></div>
@@ -16108,8 +16136,25 @@ function openFarmacoDetail(id) {
   }
 
   /* ══ BLOCO 7 — CONTRAINDICAÇÕES (→ aba Segurança) ══ */
-  const contra = get('contraindications');
-  if (contra && Array.isArray(contra) && contra.length) {
+  /* BUILD 393 PATCH A: _rawContra pode ser {absolute:{pt:[],es:[]}, relative:{pt:[],es:[]}}
+     → achata ambas as chaves numa única lista plana via _resolveArr */
+  const _rawContra = get('contraindications');
+  const contra = (() => {
+    if (!_rawContra) return null;
+    if (Array.isArray(_rawContra)) return _rawContra.length ? _rawContra : null;
+    if (typeof _rawContra === 'object') {
+      /* Estrutura plana multilíngue: {pt:[...], es:[...]} */
+      const flat = _resolveArr(_rawContra);
+      if (flat) return flat;
+      /* Estrutura aninhada: {absolute:{pt:[],es:[]}, relative:{pt:[],es:[]}} */
+      const abs = _resolveArr(_rawContra.absolute) || [];
+      const rel = _resolveArr(_rawContra.relative) || [];
+      const merged = [...abs, ...rel];
+      return merged.length ? merged : null;
+    }
+    return null;
+  })();
+  if (contra && contra.length) {
     const items = contra.filter(Boolean);
     htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-ban" style="color:#E05C6B;"></i> ${isES?'CONTRAINDICACIONES':'CONTRAINDICAÇÕES'}</div>
@@ -16118,8 +16163,9 @@ function openFarmacoDetail(id) {
   }
 
   /* ══ BLOCO 8 — ALERTAS CLÍNICOS (→ aba Segurança) ══ */
-  const risks = get('risksByPatient');
-  if (risks && Array.isArray(risks) && risks.filter(Boolean).length) {
+  /* BUILD 393 PATCH A: _resolveArr() desempacota {pt:[],es:[]} */
+  const risks = _resolveArr(get('risksByPatient'));
+  if (risks && risks.filter(Boolean).length) {
     const items = risks.filter(Boolean);
     htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-shield-halved" style="color:#A78BFA;"></i> ${isES?'ALERTAS CLÍNICOS':'ALERTAS CLÍNICOS'}</div>
@@ -16128,8 +16174,9 @@ function openFarmacoDetail(id) {
   }
 
   /* ══ BLOCO 9 — APRESENTAÇÕES COMERCIAIS (→ aba Farmacologia) ══ */
-  const presentation = get('presentation');
-  if (presentation && Array.isArray(presentation) && presentation.length) {
+  /* BUILD 393 PATCH A: _resolveArr() desempacota {pt:[],es:[]} */
+  const presentation = _resolveArr(get('presentation'));
+  if (presentation && presentation.length) {
     const items = presentation.filter(Boolean);
     htmlPharma += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-box" style="color:#38BDF8;"></i> ${isES?'PRESENTACIONES':'APRESENTAÇÕES'}</div>
@@ -23675,8 +23722,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=392"></script>
-<script src="database/analgesicos.js?v=392"></script>
+<script src="database/antimicrobianos.js?v=393"></script>
+<script src="database/analgesicos.js?v=393"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -23790,9 +23837,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=392', 'psico');
-    _loadScript('database/cardio.js?v=392',        'cardio');
-    _loadScript('database/interacoes.js?v=392',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=393', 'psico');
+    _loadScript('database/cardio.js?v=393',        'cardio');
+    _loadScript('database/interacoes.js?v=393',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -23802,50 +23849,50 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=392"></script>
-<script src="database/gastro.js?v=392"></script>
-<script src="database/gastro_imuno.js?v=392"></script>
-<script src="database/imuno_corticoide.js?v=392"></script>
-<script src="database/endocrino_glp1.js?v=392"></script>
-<script src="database/infusoes.js?v=392"></script>
-<script src="database/emergencia.js?v=392"></script>
-<script src="database/infectologia.js?v=392"></script>
-<script src="database/sedacao.js?v=392"></script>
-<script src="database/hematologia.js?v=392"></script>
-<script src="database/pneumologia.js?v=392"></script>
-<script src="database/gastroenterologia.js?v=392"></script>
-<script src="database/cardiologia.js?v=392"></script>
-<script src="database/analgesia_opioides.js?v=392"></script>
-<script src="database/alergia_imunologia.js?v=392"></script>
-<script src="database/pneumologia_otorrino.js?v=392"></script>
-<script src="database/prescricoes.js?v=392" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=393"></script>
+<script src="database/gastro.js?v=393"></script>
+<script src="database/gastro_imuno.js?v=393"></script>
+<script src="database/imuno_corticoide.js?v=393"></script>
+<script src="database/endocrino_glp1.js?v=393"></script>
+<script src="database/infusoes.js?v=393"></script>
+<script src="database/emergencia.js?v=393"></script>
+<script src="database/infectologia.js?v=393"></script>
+<script src="database/sedacao.js?v=393"></script>
+<script src="database/hematologia.js?v=393"></script>
+<script src="database/pneumologia.js?v=393"></script>
+<script src="database/gastroenterologia.js?v=393"></script>
+<script src="database/cardiologia.js?v=393"></script>
+<script src="database/analgesia_opioides.js?v=393"></script>
+<script src="database/alergia_imunologia.js?v=393"></script>
+<script src="database/pneumologia_otorrino.js?v=393"></script>
+<script src="database/prescricoes.js?v=393" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=392"></script>
+<script defer src="js/medcases-ux-v2.js?v=393"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=392"></script>
+<script defer src="js/hub-accordion.js?v=393"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=392"></script>
+<script defer src="js/build240b-accordion-fix.js?v=393"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=392"></script>
+<script defer src="js/calculator-overlay.js?v=393"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=392"></script>
+<script defer src="js/category-pills.js?v=393"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=392"></script>
+<script defer src="js/elec-calc.js?v=393"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=392"></script>
+<script defer src="js/deeplink-router.js?v=393"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=392"></script>
+<script defer src="js/build272-reactive-engine.js?v=393"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=392"></script>
+<script defer src="js/build283-accessory-bar.js?v=393"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
