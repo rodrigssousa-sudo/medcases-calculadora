@@ -249,6 +249,20 @@ const DRUG_ALIASES = {
   "saxenda":                            "liraglutida",
   "levotiroxine":                       "levotiroxina",
 
+  /* BUILD 396 — Triptanos (Antimigranosos): aliases PT↔ES + nomes comerciais */
+  "sumatriptan":                        "sumatriptana",
+  "imigran":                            "sumatriptana",
+  "sumax":                              "sumatriptana",
+  "zolmitriptan":                       "zolmitriptana",
+  "zomig":                              "zolmitriptana",
+  "rizatriptan":                        "rizatriptana",
+  "maxalt":                             "rizatriptana",
+  "naratriptan":                        "naratriptana",
+  "naramig":                            "naratriptana",
+  "naratrin":                           "naratriptana",
+  "eletriptan":                         "eletriptana",
+  "relpax":                             "eletriptana",
+
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4: aliases */
   "nintedanib":                         "nintedanibe",
   "ofev":                               "nintedanibe",
@@ -762,6 +776,16 @@ const DRUG_CLASSES = {
   "$classe_hipoglicemiantes_secretagogos": [
     "glibenclamida", "glimepirida", "glipizida", "gliclazida",
     "tolbutamida", "clorpropamida", "repaglinida", "nateglinida"
+  ],
+
+  /* BUILD 396 — Triptanos: classe única para interações cruzadas de vasoespasmo */
+
+  /* Toda a classe triptanos compartilha o mesmo mecanismo (5-HT1B/1D),
+     o mesmo risco de vasoespasmo coronariano e a mesma contraindicação
+     absoluta com ergotaminas (Regra das 24 Horas) e IMAOs. */
+  "$classe_triptanos": [
+    "sumatriptana", "zolmitriptana", "rizatriptana",
+    "naratriptana",  "eletriptana"
   ],
 
   /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4 */
@@ -1551,6 +1575,67 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Monitorar ECG (Intervalo QTc) se a associação for inevitável. Evitar a prescrição simultânea em pacientes coronariopatas, com arritmia basal severa ou hipocalemia. Nesse contexto, preferir Fexofenadina (sem metabolismo CYP hepático) ou Desloratadina (já ativada, independente do CYP3A4).",
         es: "Monitorear ECG (Intervalo QTc) si la asociación es inevitable. Evitar la prescripción simultánea en coronariopatas, con arritmia basal severa o hipopotasemia. En este contexto, preferir Fexofenadina (sin metabolismo CYP hepático) o Desloratadina (ya activada, independiente del CYP3A4)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 396 — BLOCO MOTOR DE INTERAÇÕES: Triptanos e Antimigranosos
+     Sumatriptana, Zolmitriptana, Rizatriptana, Naratriptana, Eletriptana
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA DE CLASSE: TRIPTANOS × VASOESPASMO ── */
+  "$classe_triptanos": {
+    "$classe_ergotaminicos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A REGRA DAS 24 HORAS (ISQUEMIA LETAL CRUZADA). Ergotaminas (Cefalium, Tonopan) são vasoconstritores arcaicos e maciços. Os Triptanos fecham as artérias do cérebro para cortar a dor. Se um paciente tomar as duas drogas na mesma janela de tempo, as artérias cerebrais e coronárias sofrem um espasmo tetânico, fechando completamente e bloqueando o sangue. Resulta em Infarto Fulminante, AVC isquêmico irreversível e Gangrena dos dedos.",
+        es: "LA REGLA DE LAS 24 HORAS (ISQUEMIA LETAL CRUZADA). Ergotaminas son vasoconstrictores arcaicos. Los Triptanos cierran las arterias del cerebro para cortar el dolor. Si un paciente toma ambas drogas, las arterias sufren espasmo tetánico, bloqueando la sangre. Resulta en Infarto Fulminante, ACV irreversible y Gangrena."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA E MUNDIAL. O médico OBRIGATORIAMENTE deve exigir um intervalo mínimo de 24 horas entre a ingestão de qualquer medicamento contendo ergotamina e qualquer Triptano.",
+        es: "CONTRAINDICACIÓN ABSOLUTA Y MUNDIAL. El médico OBLIGATORIAMENTE debe exigir un intervalo mínimo de 24 horas entre la ingestión de cualquier medicamento conteniendo ergotamina y cualquier Triptano."
+      }
+    },
+    "$classe_isrs": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "ALERTA FDA DE SÍNDROME SEROTONINÉRGICA (Teórico vs Prático). Os ISRS (Fluoxetina, Sertralina) aumentam a serotonina global. Os Triptanos imitam a serotonina no cérebro. A FDA emitiu um aviso temendo Síndrome Serotoninérgica fatal na mistura. Na PRÁTICA CLÍNICA, milhões de pessoas usam ambos sem morrer, pois os receptores do triptano (1B/1D) não causam a síndrome típica (mediada pelo 2A). O risco é raríssimo, mas médico-legal.",
+        es: "ALERTA FDA DE SÍNDROME SEROTONINÉRGICA. Los ISRS (Fluoxetina) aumentan la serotonina. Los Triptanos la imitan. La FDA emitió un aviso temiendo Síndrome Serotoninérgico fatal. EN LA PRÁCTICA, millones usan ambos, pues los receptores del triptano no causan el síndrome típico. El riesgo es rarísimo, pero médico-legal."
+      },
+      conduta: {
+        pt: "Associação permitida na prática (Muitos deprimidos têm enxaqueca), mas o paciente deve ser avisado para procurar o PS se sentir febre alta inexplicável, tremores musculares ou confusão aguda mental.",
+        es: "Asociación permitida en la práctica, pero el paciente debe ser avisado para buscar Urgencias si siente fiebre alta inexplicable, temblores musculares o confusión mental."
+      }
+    },
+    "$classe_imao": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A COMBINAÇÃO REALMENTE LETAL DA SEROTONINA. Ao contrário dos ISRS, misturar Triptanos (Sumatriptana/Rizatriptana) com Inibidores da MAO (Tranilcipromina, Selegilina) bloqueia totalmente a destruição do triptano e explode a serotonina, deflagrando a verdadeira e letal Síndrome Serotoninérgica e um colapso autonômico.",
+        es: "LA COMBINACIÓN REALMENTE LETAL DE LA SEROTONINA. Mezclar Triptanos con Inhibidores de la MAO bloquea la destrucción del triptano y explota la serotonina, desencadenando el verdadero y letal Síndrome Serotoninérgico."
+      },
+      conduta: {
+        pt: "Aguardar NO MÍNIMO 14 dias de intervalo puro após a interrupção do IMAO antes de dar um comprimido de triptano. A Naratriptana e Eletriptana não usam a via da MAO-A, mas ainda sim a classe inteira carrega o veto.",
+        es: "Esperar AL MENOS 14 días de intervalo puro tras la interrupción del IMAO antes de dar un triptano."
+      }
+    }
+  },
+
+  /* ── RIZATRIPTANA × PROPRANOLOL (interação farmacocinética específica) ── */
+  "rizatriptana": {
+    "propranolol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A SOBRECARGA DO PROPRANOLOL. Um fato químico único: o Propranolol (muito usado como preventivo de enxaqueca) bloqueia a enzima que destrói especificamente a Rizatriptana no sangue. Se o paciente usa Propranolol todo dia e toma os 10 mg de Maxalt na crise, os níveis de Rizatriptana sobem 70%, causando fadiga massacrante e risco coronariano.",
+        es: "LA SOBRECARGA DEL PROPRANOLOL. Un hecho químico único: el Propranolol bloquea la enzima que destruye al Rizatriptán en sangre. Si el paciente usa Propranolol a diario y toma 10 mg en la crisis, los niveles suben 70%, causando fatiga masacrante y riesgo coronario."
+      },
+      conduta: {
+        pt: "MANDATÓRIO: Pacientes que tomam Propranolol diário SÓ PODEM tomar a dose REDUZIDA de 5 mg de Rizatriptana por crise (Máx 15mg/dia). Nunca a dose cheia de 10 mg.",
+        es: "MANDATORIO: Pacientes que toman Propranolol diario SOLO PUEDEN tomar la dosis REDUCIDA de 5 mg de Rizatriptán por crisis. Nunca la dosis llena de 10 mg."
       }
     }
   },
