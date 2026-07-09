@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=388hotfix" />
-  <link rel="stylesheet" href="css/build233.css?v=388hotfix" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=388hotfix" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=388hotfix" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=388hotfix" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=388hotfix" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=388hotfix" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=390" />
+  <link rel="stylesheet" href="css/build233.css?v=390" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=390" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=390" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=390" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=390" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=390" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=388hotfix" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=390" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=388hotfix" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=390" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=388hotfix" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=390" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=388hotfix" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=390" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=388hotfix" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=390" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=388hotfix" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=390" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=388hotfix" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=390" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=388hotfix" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=390" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -20828,55 +20828,76 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     }
   });
 
-  /* ── BUILD 388-HOTFIX PATCH A: Delegated click listener for .hm-drug-item ──
-     Substitui PATCH 3b (BUILD 372). Único listener no document para todos os
-     itens — funciona mesmo após re-render da lista pelo SPA router.
-     Compatível com iOS WebView: usa e.target.closest() em vez de match().
-     HOTFIX: try/catch absoluto protege qualquer falha de renderização;
-     fallback duplo garante que o card SEMPRE abra independente do estado DOM. */
+  /* ── BUILD 390 PATCH A: Delegated click listener for .hm-drug-item ──
+     openFarmacoDetail FIRST (bula/modal de tela cheia completa).
+     Funciona sem patientData: openFarmacoDetail usa pd=null → exibe
+     doses de referência padrão (adulto neutro) sem travar.
+     Fallback duplo: hmShowInlineResult → inline card.
+     Fallback triplo: reconciliação de emergência se drug ausente do DRUG_DB. */
   document.addEventListener('click', function(e) {
     try {
       const drugRow = e.target.closest('.hm-drug-item');
       if (!drugRow) return;
-      /* Permite bubbling natural (não bloqueia links, checkboxes, etc. fora do item) */
       e.preventDefault();
       e.stopPropagation();
+
       /* Extrai ID: prioritiza data-drug-id, fallback para id sem prefixo */
       const targetId = drugRow.getAttribute('data-drug-id') ||
                        (drugRow.id || '').replace('hm-di-', '') ||
                        drugRow.dataset.drugId || '';
       if (!targetId) return;
-      /* Remove card wrapper anterior se existir (evita duplicata) */
+
+      /* Remove cards inline órfãos do render anterior */
       const existing = document.getElementById('hm-inline-card-wrapper');
       if (existing) existing.remove();
-      /* Remove cards inline órfãos do render anterior */
       document.querySelectorAll('.hm-drug-inline-card').forEach(function(el){ el.remove(); });
-      /* Garante que o drug existe no DRUG_DB antes de chamar hmShowInlineResult */
-      const db = window.DRUG_DB || [];
+
+      /* Garante que o drug existe no DRUG_DB antes de abrir */
+      const db   = window.DRUG_DB || [];
       const drug = db.find(function(d){ return d.id === targetId; });
+
       if (!drug) {
-        console.warn('[MedCases] HOTFIX: drug not found in DRUG_DB:', targetId,
+        /* Drug ausente: race condition com lazy-load — reconcilia e re-tenta */
+        console.warn('[MedCases] BUILD 390: drug not found in DRUG_DB:', targetId,
           '— DRUG_DB size:', db.length, '— Triggering lazy reconciliation.');
-        /* Tenta rebuild de emergência do índice e re-injeção dos DBs faltantes */
         if (typeof window._hmEmergencyReconcile === 'function') {
           window._hmEmergencyReconcile(function() {
-            if (typeof window.hmShowInlineResult === 'function')
+            /* Após reconciliação, usa openFarmacoDetail se disponível */
+            if (typeof window.openFarmacoDetail === 'function') {
+              window.openFarmacoDetail(targetId);
+            } else if (typeof window.hmShowInlineResult === 'function') {
               window.hmShowInlineResult(targetId, drugRow);
+            }
           });
         }
         return;
       }
+
+      /* ── Prioridade 1: openFarmacoDetail (bula completa em tela cheia) ──
+         Abre o modal/detalhe oficial independente de patientData.
+         Se patientData estiver vazio, exibe doses de referência padrão. */
+      if (typeof window.openFarmacoDetail === 'function') {
+        window.openFarmacoDetail(targetId);
+        return;
+      }
+
+      /* ── Prioridade 2: hmShowInlineResult (card inline) ── */
       if (typeof window.hmShowInlineResult === 'function') {
         window.hmShowInlineResult(targetId, drugRow);
       }
+
     } catch(clickErr) {
-      console.error('[MedCases] HOTFIX click delegation error:', clickErr.message);
-      /* Fallback: tenta abrir sem âncora (usa #hm-drug-result como destino) */
+      console.error('[MedCases] BUILD 390 click delegation error:', clickErr.message);
+      /* Fallback absoluto: tenta openFarmacoDetail ou inline, sem âncora */
       try {
         const row = e.target.closest('.hm-drug-item');
         const tid = row && (row.getAttribute('data-drug-id') || (row.id||'').replace('hm-di-',''));
-        if (tid && typeof window.hmShowInlineResult === 'function')
+        if (!tid) return;
+        if (typeof window.openFarmacoDetail === 'function') {
+          window.openFarmacoDetail(tid);
+        } else if (typeof window.hmShowInlineResult === 'function') {
           window.hmShowInlineResult(tid, null);
+        }
       } catch(e2) { /* silencioso — último recurso falhou */ }
     }
   });
@@ -21786,11 +21807,16 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (typeof window._buildSearchIndex === 'function') {
           window._buildSearchIndex();
         }
+        /* BUILD 390 PATCH B — Re-sincroniza ALL_DRUGS_DB com os fármacos reconciliados */
+        if (!window.ALL_DRUGS_DB) window.ALL_DRUGS_DB = {};
+        window.DRUG_DB.forEach(function(d) {
+          if (d && d.id && !window.ALL_DRUGS_DB[d.id]) window.ALL_DRUGS_DB[d.id] = d;
+        });
         if (typeof window._fdUpdateCount          === 'function') window._fdUpdateCount();
         if (typeof window._updateDrugSearchHint   === 'function') window._updateDrugSearchHint();
         /* PATCH D: sincroniza dropdown de interações após reconciliação */
         if (typeof window._hmSyncInteractionsIndex === 'function') window._hmSyncInteractionsIndex();
-        console.log('[MedCases] HOTFIX _hmEmergencyReconcile: +' + _added + ' fármacos reconciliados. Total: ' + window.DRUG_DB.length);
+        console.log('[MedCases] BUILD 390 _hmEmergencyReconcile: +' + _added + ' fármacos reconciliados. Total DRUG_DB: ' + window.DRUG_DB.length + '. ALL_DRUGS_DB: ' + Object.keys(window.ALL_DRUGS_DB).length);
       }
       if (typeof callback === 'function') callback();
     } catch (err) {
@@ -23631,8 +23657,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=388hotfix"></script>
-<script src="database/analgesicos.js?v=388hotfix"></script>
+<script src="database/antimicrobianos.js?v=390"></script>
+<script src="database/analgesicos.js?v=390"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -23681,12 +23707,53 @@ window.MedCasesBridge = {
     /* PATCH D — sincroniza dropdown de Interações com os lazy-DBs recém-carregados */
     if (typeof window._hmSyncInteractionsIndex === 'function') window._hmSyncInteractionsIndex();
 
+    /* BUILD 390 PATCH B — Re-sincroniza ALL_DRUGS_DB com o DRUG_DB unificado.
+       ALL_DRUGS_DB foi construído no DOMContentLoaded com os módulos estáticos;
+       após injetar cardio + psico via lazy-load, precisa ser enriquecido com
+       as entradas novas para que qualquer módulo externo que faça lookup por
+       chave (DRUG_ALIASES inference, interações, deeplink-router, etc.)
+       encontre 100% dos fármacos.
+       Estratégia: merge idempotente — preserva entradas existentes e adiciona
+       as novas (evita sobrescrita de adaptações já feitas). */
+    if (Array.isArray(window.DRUG_DB)) {
+      if (!window.ALL_DRUGS_DB) window.ALL_DRUGS_DB = {};
+      window.DRUG_DB.forEach(function(d) {
+        if (d && d.id && !window.ALL_DRUGS_DB[d.id]) {
+          window.ALL_DRUGS_DB[d.id] = d;
+        }
+      });
+    }
+
+    /* Força re-render da lista de busca ativa para refletir o índice expandido.
+       Se o campo de busca estiver com texto, re-executa o filtro para que os
+       novos fármacos apareçam nos resultados imediatamente sem precisar redigitar. */
+    (function _b390RefreshActiveSearch() {
+      try {
+        /* Painel Home Mobile (hmFilterDrugs) */
+        var hmInput = document.getElementById('hm-search-input');
+        if (hmInput && hmInput.value && hmInput.value.trim()) {
+          if (typeof window.hmFilterDrugs === 'function') window.hmFilterDrugs(hmInput.value);
+        }
+        /* Painel Adulto > Fármacos (filterDrugs) */
+        var drugInput = document.getElementById('drug-search-input');
+        if (drugInput && drugInput.value && drugInput.value.trim()) {
+          if (typeof window.filterDrugs === 'function') window.filterDrugs(drugInput.value);
+        }
+        /* Painel Central de Calculadoras / renderFarmacosList */
+        var farmInput = document.getElementById('farmacos-search');
+        if (farmInput && farmInput.value && farmInput.value.trim()) {
+          if (typeof window.renderFarmacosList === 'function') window.renderFarmacosList(farmInput.value);
+        }
+      } catch(e) { /* silencioso — busca ativa é feature de conforto, não crítica */ }
+    })();
+
     /* Atualiza contadores e hint de busca */
     if (typeof window._fdUpdateCount        === 'function') window._fdUpdateCount();
     if (typeof window._updateDrugSearchHint === 'function') window._updateDrugSearchHint();
 
-    console.log('[MedCases] BUILD 388-HOTFIX: lazy DBs prontos — cardio + psicofarmacos + interacoes. '
-      + 'DRUG_DB: ' + window.DRUG_DB.length + ' fármacos.');
+    console.log('[MedCases] BUILD 390: lazy DBs prontos — cardio + psicofarmacos + interacoes. '
+      + 'DRUG_DB: ' + window.DRUG_DB.length + ' fármacos. '
+      + 'ALL_DRUGS_DB: ' + Object.keys(window.ALL_DRUGS_DB || {}).length + ' entradas.');
   }
 
   function _loadScript(src, key) {
@@ -23705,9 +23772,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=388hotfix', 'psico');
-    _loadScript('database/cardio.js?v=388hotfix',        'cardio');
-    _loadScript('database/interacoes.js?v=388hotfix',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=390', 'psico');
+    _loadScript('database/cardio.js?v=390',        'cardio');
+    _loadScript('database/interacoes.js?v=390',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -23717,50 +23784,50 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=388hotfix"></script>
-<script src="database/gastro.js?v=388hotfix"></script>
-<script src="database/gastro_imuno.js?v=388hotfix"></script>
-<script src="database/imuno_corticoide.js?v=388hotfix"></script>
-<script src="database/endocrino_glp1.js?v=388hotfix"></script>
-<script src="database/infusoes.js?v=388hotfix"></script>
-<script src="database/emergencia.js?v=388hotfix"></script>
-<script src="database/infectologia.js?v=388hotfix"></script>
-<script src="database/sedacao.js?v=388hotfix"></script>
-<script src="database/hematologia.js?v=388hotfix"></script>
-<script src="database/pneumologia.js?v=388hotfix"></script>
-<script src="database/gastroenterologia.js?v=388hotfix"></script>
-<script src="database/cardiologia.js?v=388hotfix"></script>
-<script src="database/analgesia_opioides.js?v=388hotfix"></script>
-<script src="database/alergia_imunologia.js?v=388hotfix"></script>
-<script src="database/pneumologia_otorrino.js?v=388hotfix"></script>
-<script src="database/prescricoes.js?v=388hotfix" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=390"></script>
+<script src="database/gastro.js?v=390"></script>
+<script src="database/gastro_imuno.js?v=390"></script>
+<script src="database/imuno_corticoide.js?v=390"></script>
+<script src="database/endocrino_glp1.js?v=390"></script>
+<script src="database/infusoes.js?v=390"></script>
+<script src="database/emergencia.js?v=390"></script>
+<script src="database/infectologia.js?v=390"></script>
+<script src="database/sedacao.js?v=390"></script>
+<script src="database/hematologia.js?v=390"></script>
+<script src="database/pneumologia.js?v=390"></script>
+<script src="database/gastroenterologia.js?v=390"></script>
+<script src="database/cardiologia.js?v=390"></script>
+<script src="database/analgesia_opioides.js?v=390"></script>
+<script src="database/alergia_imunologia.js?v=390"></script>
+<script src="database/pneumologia_otorrino.js?v=390"></script>
+<script src="database/prescricoes.js?v=390" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=388hotfix"></script>
+<script defer src="js/medcases-ux-v2.js?v=390"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=388hotfix"></script>
+<script defer src="js/hub-accordion.js?v=390"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=388hotfix"></script>
+<script defer src="js/build240b-accordion-fix.js?v=390"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=388hotfix"></script>
+<script defer src="js/calculator-overlay.js?v=390"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=388hotfix"></script>
+<script defer src="js/category-pills.js?v=390"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=388hotfix"></script>
+<script defer src="js/elec-calc.js?v=390"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=388hotfix"></script>
+<script defer src="js/deeplink-router.js?v=390"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=388hotfix"></script>
+<script defer src="js/build272-reactive-engine.js?v=390"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=388hotfix"></script>
+<script defer src="js/build283-accessory-bar.js?v=390"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
