@@ -23,7 +23,7 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v386';
+const CACHE_VERSION   = 'medcases-v388-hotfix';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
 /* ── Lista canônica de assets pré-cacheados no install ──────
@@ -80,7 +80,7 @@ const ASSETS_TO_CACHE = [
   './database/neuro.js?v=374',
   './database/obesidade.js?v=374',
   './database/pneumo.js?v=374',
-  './database/pneumologia.js?v=386',
+  './database/pneumologia.js?v=388hotfix',
   './database/prescricoes.js?v=374',
   './database/psicofarmacos.js?v=374',
   './database/psiquiatria.js?v=374',
