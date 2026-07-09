@@ -1807,10 +1807,210 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
         warning: { pt: 'SÓ DEPENDE DO CORPO: O paciente geriátrico frequentemente joga todo o remédio do spray de asma comum na parede da boca por falta de coordenação (bater o botão e puxar o ar junto). Com o Respimat, a nuvem dura quase 2 segundos no ar. Ele tem tempo de sobra para respirar. Ensine-o a usar a tecnologia a seu favor.', es: 'SOLO DEPENDE DEL CUERPO: El paciente geriátrico frecuentemente tira todo el remedio del spray en la boca por falta de coordinación. Con Respimat, la nube dura casi 2 segundos. Tiene tiempo de sobra para respirar.' }
       }
+    },
+
+
+    /* ── BUILD 398 — LAMA/LABA Duplo + Terapias Triplas + Antifibrótico ── */
+
+    "glicopirronio_indacaterol": {
+      name: { pt: 'Glicopirrônio + Indacaterol', es: 'Glicopirronio + Indacaterol' },
+      category: 'pneumologia',
+      class: { pt: 'Associação LAMA + Ultra-LABA', es: 'Asociación LAMA + Ultra-LABA' },
+      indications: {
+        pt: ['Terapia broncodilatadora de manutenção contínua da DPOC moderada a grave para alívio de sintomas e redução de exacerbações'],
+        es: ['Terapia broncodilatadora de mantenimiento continuo de la EPOC moderada a grave para alivio de síntomas y reducción de exacerbaciones']
+      },
+      commercialNames: { br: ['Ultibro Breezhaler'], ar: ['Ultibro'] },
+      presentation: { pt: ['Cápsulas com pó inalatório 50/110 mcg'], es: ['Cápsulas con polvo inhalatorio 50/110 mcg'] },
+      mechanism: {
+        pt: 'Associação dupla de longa ação que ataca a DPOC por duas vias distintas de broncodilatação sem envolver corticoides. O Glicopirrônio (LAMA) bloqueia os receptores muscarínicos M3, inibindo o tônus vagal e secando o catarro. O Indacaterol (LABA) estimula os receptores beta-2, promovendo o relaxamento direto do músculo liso brônquico por exatas 24 horas.',
+        es: 'Asociación doble de larga acción que ataca la EPOC por dos vías de broncodilatación sin involucrar corticoides. El Glicopirronio (LAMA) bloquea los receptores muscarínicos M3, inhibiendo el tono vagal. El Indacaterol (LABA) estimula los receptores beta-2, promoviendo la relajación directa del músculo liso bronquial por exactas 24 horas.'
+      },
+      dose: {
+        adult: {
+          pt: 'Inalar o conteúdo de 1 cápsula UMA VEZ ao dia, usando o dispositivo Breezhaler.',
+          es: 'Inhalar el contenido de 1 cápsula UNA VEZ al día, usando el dispositivo Breezhaler.'
+        },
+        pediatric: {
+          pt: 'Uso não indicado em crianças (Exclusivo para DPOC).',
+          es: 'Uso no indicado en niños (Exclusivo para EPOC).'
+        }
+      },
+      administration: { pt: ['O paciente escuta um "zumbido" peculiar da cápsula girando dentro do dispositivo durante a inalação forte, o que serve como confirmação técnica de que o pó está descendo.'], es: ['El paciente escucha un "zumbido" peculiar de la cápsula girando dentro del dispositivo durante la inhalación, lo que sirve como confirmación técnica.'] },
+      renalAdjustment: { required: true, message: { pt: 'Pacientes com falência renal grave (ClCr < 30) acumulam o Glicopirrônio. Usar apenas se o benefício superar o risco agudo anticolinérgico.', es: 'Pacientes con falla renal grave (ClCr < 30) acumulan Glicopirronio. Usar solo si el beneficio supera el riesgo anticolinérgico agudo.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste clínico.', es: 'Sin ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Tosse reflexa imediata à inalação (pelo Indacaterol)', 'Boca seca', 'Nasofaringite'], es: ['Tos refleja inmediata a la inhalación (por Indacaterol)', 'Boca seca', 'Nasofaringitis'] },
+      dangerousAdverseEffects: { pt: ['Glaucoma agudo de ângulo fechado', 'Retenção urinária severa induzida'], es: ['Glaucoma agudo de ángulo cerrado', 'Retención urinaria severa inducida'] },
+      contraindications: {
+        absolute: { pt: ['Asma brônquica (Não usar LABA sem ICS em asma)', 'Resgate de broncoespasmo agudo'], es: ['Asma bronquial (No usar LABA sin ICS en asma)', 'Rescate de broncoespasmo agudo'] },
+        relative: { pt: ['Hiperplasia Prostática Benigna Severa'], es: ['Hiperplasia Prostática Benigna Severa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A regra de ouro da DPOC moderna é "Desinflar" (tirar o ar preso) maximizando a broncodilatação sem usar corticoides sistêmicos/inalatórios para evitar pneumonias lobares, tornando o Ultibro e o Anoro as pedras angulares do pneumologista.', es: 'La regla de oro de la EPOC moderna es "Desinflar" maximizando la broncodilatación sin usar corticoides para evitar neumonías lobares.' }
+      }
+    },
+
+    "budesonida_glicopirronio_formoterol": {
+      name: { pt: 'Budesonida + Glicopirrônio + Formoterol', es: 'Budesonida + Glicopirronio + Formoterol' },
+      category: 'pneumologia',
+      class: { pt: 'Terapia Tripla Inalatória (ICS + LAMA + LABA)', es: 'Terapia Triple Inhalatoria (ICS + LAMA + LABA)' },
+      indications: {
+        pt: ['Doença Pulmonar Obstrutiva Crônica (DPOC) grave em pacientes não controlados com terapia dupla'],
+        es: ['Enfermedad Pulmonar Obstructiva Crónica (EPOC) grave en pacientes no controlados con terapia doble']
+      },
+      commercialNames: { br: ['Breztri Aerosphere'], ar: ['Trixeo'] },
+      presentation: { pt: ['Spray Inalatório pressurizado (Aerosphere) 160/7,2/4,8 mcg por jato'], es: ['Spray Inhalatorio presurizado (Aerosphere) 160/7,2/4,8 mcg por puff'] },
+      mechanism: {
+        pt: 'O ataque em três frentes. Esta bombinha usa a tecnologia "Aerosphere", que envolve as moléculas das 3 drogas em microesferas fosfolipídicas porosas (como pequenas bolas de futebol ocas). Isso as impede de grudar umas nas outras no frasco, garantindo que as três drogas (O Corticoide, o Bloqueador Muscarínico e o Estimulador Beta-2) penetrem até os últimos alvéolos do paciente para desinflamar e dilatar simultaneamente.',
+        es: 'El ataque en tres frentes. Este inhalador usa la tecnología "Aerosphere", que envuelve las moléculas en microesferas fosfolipídicas porosas. Esto impide que se peguen en el frasco, garantizando que las tres drogas penetren hasta los últimos alvéolos para desinflamar y dilatar simultáneamente.'
+      },
+      dose: {
+        adult: {
+          pt: '2 jatos via inalatória, DUAS VEZES ao dia (a cada 12 horas).',
+          es: '2 puffs vía inhalatoria, DOS VECES al día (cada 12 horas).'
+        },
+        pediatric: {
+          pt: 'Uso não indicado.',
+          es: 'Uso no indicado.'
+        }
+      },
+      administration: { pt: ['Lavar a boca e gargarejar RIGOROSAMENTE após o uso (altíssimo risco de candidíase por ser corticoide com anticolinérgico). Uso de espaçador melhora o rendimento.'], es: ['Lavar la boca y hacer gárgaras RIGUROSAMENTE tras el uso (altísimo riesgo de candidiasis). Uso de espaciador mejora el rendimiento.'] },
+      renalAdjustment: { required: true, message: { pt: 'Monitorar pacientes com falência renal terminal devido ao componente Glicopirrônio.', es: 'Monitorizar pacientes con falla renal terminal debido al componente Glicopirronio.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Cirrose grave: Aumento drástico dos níveis de Budesonida no sangue devido ao metabolismo de primeira passagem falho.', es: 'Cirrosis grave: Aumento drástico de niveles de Budesonida en sangre debido al metabolismo fallido.' } },
+      commonAdverseEffects: { pt: ['Disfonia e Candidíase', 'Boca muito seca', 'Tremor nas extremidades'], es: ['Disfonía y Candidiasis', 'Boca muy seca', 'Temblor en las extremidades'] },
+      dangerousAdverseEffects: { pt: ['Pneumonia', 'Piora aguda de Glaucoma e retenção urinária'], es: ['Neumonía', 'Empeoramiento agudo de Glaucoma y retención urinaria'] },
+      contraindications: {
+        absolute: { pt: ['Tratamento do Broncoespasmo Agudo', 'Pacientes sem tratamento prévio (Não é droga de primeira linha)'], es: ['Tratamiento del Broncoespasmo Agudo', 'Pacientes sin tratamiento previo (No es droga de primera línea)'] },
+        relative: { pt: ['Próstata muito aumentada', 'Cardiopatia isquêmica grave'], es: ['Próstata muy aumentada', 'Cardiopatía isquémica grave'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ALERTA DE DESCALONAMENTO: Um grande erro na pneumologia é prescrever "A Bombinha Tripla" logo de cara para o paciente com falta de ar. A Terapia Tripla é a ÚLTIMA CARTADA inalatória. Usá-la antes de tentar LABA/LAMA apenas sobrecarrega o paciente com corticoides que aumentam o risco de pneumonia.', es: 'ALERTA DE DESCALONAMIENTO: Un gran error en neumología es prescribir "La Pluma Triple" de entrada. La Terapia Triple es la ÚLTIMA CARTA. Usarla antes de intentar LABA/LAMA solo sobrecarga al paciente con corticoides.' }
+      }
+    },
+
+    "fluticasona_umeclidinio_vilanterol": {
+      name: { pt: 'Fluticasona + Umeclidínio + Vilanterol', es: 'Fluticasona + Umeclidinio + Vilanterol' },
+      category: 'pneumologia',
+      class: { pt: 'Terapia Tripla Inalatória Ultra-Longa (ICS + LAMA + Ultra-LABA)', es: 'Terapia Triple Inhalatoria Ultra Larga (ICS + LAMA + Ultra-LABA)' },
+      indications: {
+        pt: ['DPOC grave não controlada', 'Asma Severa não controlada em adultos (Terapia de resgate antes dos biológicos)'],
+        es: ['EPOC grave no controlada', 'Asma Severa no controlada en adultos (Terapia de rescate antes de los biológicos)']
+      },
+      commercialNames: { br: ['Trelegy Ellipta'], ar: ['Trelegy'] },
+      presentation: { pt: ['Pó Inalatório (Ellipta) 100/62,5/25 mcg e 200/62,5/25 mcg'], es: ['Polvo Inhalatorio (Ellipta) 100/62,5/25 mcg y 200/62,5/25 mcg'] },
+      mechanism: {
+        pt: 'A "Bomba Atômica" inalatória de Dose Única. Associa três fármacos de longuíssima duração (24 horas) em uma única puxada de ar (Dispositivo Ellipta). O Furoato de Fluticasona silencia a inflamação eosinofílica severa; o Umeclidínio paralisa o muco e o reflexo de broncoconstrição vagal; e o Vilanterol estimula os receptores beta a deixarem a passagem aberta o dia todo.',
+        es: 'La "Bomba Atómica" inhalatoria de Dosis Única. Asocia tres fármacos de larguísima duración (24 horas) en una sola aspiración. El Furoato de Fluticasona silencia la inflamación; el Umeclidinio paraliza el moco; y el Vilanterol estimula los receptores beta a dejar la vía abierta.'
+      },
+      dose: {
+        adult: {
+          pt: '1 inalação UMA VEZ ao dia, no mesmo horário, todos os dias.',
+          es: '1 inhalación UNA VEZ al día, en el mismo horario, todos los días.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Exige bochecho e lavagem bucal vigorosa.', 'Não indicado usar dose a mais no dia mesmo se tiver falta de ar.'], es: ['Exige enjuague y lavado bucal vigoroso.', 'No indicado usar dosis extra en el día incluso si hay falta de aire.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Monitoramento contínuo em cirrose moderada/grave devido ao corticoide de altíssima potência.', es: 'Monitorización continua en cirrosis moderada/grave debido al corticoide de altísima potencia.' } },
+      commonAdverseEffects: { pt: ['Disfonia e Candidíase orofaríngea', 'Constipação e boca seca', 'Tosse transitória'], es: ['Disfonía y Candidiasis orofaríngea', 'Constipación y boca seca', 'Tos transitoria'] },
+      dangerousAdverseEffects: { pt: ['Pneumonia bacteriana grave no DPOC (Efeito direto da imunossupressão do corticoide no pulmão fragilizado)'], es: ['Neumonía bacteriana grave en la EPOC (Efecto directo de la inmunosupresión del corticoide)'] },
+      contraindications: {
+        absolute: { pt: ['Alívio imediato do asma/DPOC agudo'], es: ['Alivio inmediato del asma/EPOC agudo'] },
+        relative: { pt: ['Histórico recorrente de pneumonias de repetição'], es: ['Historial recurrente de neumonías de repetición'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'RISCO DE POLIFARMÁCIA CRUZADA: Pacientes no SUS comumente recebem a "bomba tripla" do médico especialista (Trelegy), mas continuam indo ao posto de saúde pegar as bombinhas antigas (Alenia, Spiriva) por não entenderem. Se inalar tudo junto, o paciente sofre parada cardíaca por superestimulação de receptores e bloqueio parassimpático massivo. Recolha as bombinhas velhas!', es: 'RIESGO DE POLIFARMACIA: Pacientes frecuentemente reciben la "bomba triple" del especialista, pero siguen usando sus inhaladores antiguos por no entender. Si inhala todo junto, sufre paro cardíaco por sobreestimulación y bloqueo masivo. ¡Recoja los inhaladores viejos!' }
+      }
+    },
+
+    "beclometasona_formoterol_glicopirronio": {
+      name: { pt: 'Beclometasona + Formoterol + Glicopirrônio', es: 'Beclometasona + Formoterol + Glicopirronio' },
+      category: 'pneumologia',
+      class: { pt: 'Terapia Tripla Inalatória Extrafina', es: 'Terapia Triple Inhalatoria Extrafina' },
+      indications: {
+        pt: ['Terapia de manutenção em pacientes adultos com DPOC moderada a grave', 'Asma não controlada em adultos (em casos refratários a associações duplas)'],
+        es: ['Terapia de mantenimiento en pacientes adultos con EPOC moderada a grave', 'Asma no controlada en adultos (refractarios a asociaciones dobles)']
+      },
+      commercialNames: { br: ['Trimbow'], ar: ['Trimbow'] },
+      presentation: { pt: ['Spray Inalatório Pressurizado (HFA) 87/5/9 mcg e 172/5/9 mcg por dose'], es: ['Spray Inhalatorio Presurizado (HFA) 87/5/9 mcg y 172/5/9 mcg por dosis'] },
+      mechanism: {
+        pt: 'O principal apelo do Trimbow é o tamanho da partícula (Formulações Extrafinas). Em um pulmão com DPOC ou Asma Severa, as vias aéreas superiores estão inchadas e tortuosas, e as vias distais (fundo do pulmão) colapsam. O Trimbow gera uma fumaça fina o suficiente para contornar o "labirinto" e entregar as três drogas (Corticoide para inflamação, LAMA para secar, LABA para dilatar) direto nos alvéolos doentes.',
+        es: 'El principal atractivo de Trimbow es el tamaño de la partícula (Formulaciones Extrafinas). En un pulmón con EPOC, las vías distales colapsan. Trimbow genera un humo lo suficientemente fino para sortear el "laberinto" y entregar las tres drogas directo a los alvéolos.'
+      },
+      dose: {
+        adult: {
+          pt: '2 inalações a cada 12 horas (Total de 4 jatos no dia).',
+          es: '2 inhalaciones cada 12 horas (Total de 4 puffs al día).'
+        },
+        pediatric: {
+          pt: 'Uso não indicado.',
+          es: 'Uso no indicado.'
+        }
+      },
+      administration: { pt: ['Agitar bem antes de usar, idealmente com espaçador, lavando a boca logo em seguida.', 'Armazenar o frasco na GELADEIRA na farmácia; após iniciar o uso, pode ficar em temperatura ambiente (até 25°C) por no máximo 2 meses.'], es: ['Agitar bien antes de usar, idealmente con espaciador, lavando la boca después.', 'Guardar el frasco en la NEVERA en farmacia; al iniciar uso, puede estar a temperatura ambiente por máximo 2 meses.'] },
+      renalAdjustment: { required: true, message: { pt: 'O Glicopirrônio exige cautela severa em ClCr < 30 mL/min.', es: 'El Glicopirronio exige cautela severa en ClCr < 30 mL/min.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Ajustes não estritamente definidos na bula, mas corticoide exige cautela na cirrose.', es: 'Ajustes no estrictamente definidos, pero el corticoide exige cautela en cirrosis.' } },
+      commonAdverseEffects: { pt: ['Candidíase oral (sapinho)', 'Boca seca e rouquidão', 'Eletrocardiograma com leve aumento de batimentos (taquicardia)'], es: ['Candidiasis oral (muguet)', 'Boca seca y ronquera', 'ECG con leve aumento de latidos (taquicardia)'] },
+      dangerousAdverseEffects: { pt: ['Retenção hídrica cruzada e Glaucoma em idosos suscetíveis'], es: ['Retención hídrica cruzada y Glaucoma en ancianos susceptibles'] },
+      contraindications: {
+        absolute: { pt: ['Uso para broncoespasmo agudo (não substitui o resgate isolado em pronto-socorro)'], es: ['Uso para broncoespasmo agudo (no sustituye el rescate en urgencias)'] },
+        relative: { pt: ['Paciente com hipertrofia prostática não tratada e sondada'], es: ['Paciente con hipertrofia prostática no tratada y sondada'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'CADEIA DE FRIO: Se o seu paciente reclamar que a bombinha do Trimbow "não está fazendo efeito", pergunte onde ele a guardava ANTES de abrir a embalagem térmica. Se o farmacêutico não entregou gelado, a droga degradou.', es: 'CADENA DE FRÍO: Si el paciente reclama que el Trimbow "no hace efecto", pregunte dónde lo guardaba ANTES de abrir. Si el farmacéutico no lo entregó frío, la droga se degradó.' }
+      }
+    },
+
+    "pirfenidona": {
+      name: { pt: 'Pirfenidona', es: 'Pirfenidona' },
+      category: 'pneumologia',
+      class: { pt: 'Antifibrótico Pulmonar', es: 'Antifibrótico Pulmonar' },
+      indications: {
+        pt: ['Tratamento da Fibrose Pulmonar Idiopática (FPI) leve a moderada', 'Retardo da progressão da perda de capacidade vital forçada (CVF) pulmonar'],
+        es: ['Tratamiento de la Fibrosis Pulmonar Idiopática (FPI) leve a moderada', 'Retraso de la progresión de la pérdida de capacidad vital forzada (CVF) pulmonar']
+      },
+      commercialNames: { br: ['Esbriet'], ar: ['Esbriet'] },
+      presentation: { pt: ['Cápsulas 267 mg', 'Comprimidos revestidos 267 mg e 801 mg'], es: ['Cápsulas 267 mg', 'Comprimidos recubiertos 267 mg y 801 mg'] },
+      mechanism: {
+        pt: 'A Fibrose Pulmonar é a "cicatrização incontrolável" dos pulmões (o tecido mole vira pedra). A Pirfenidona atua inibindo a produção de Fator de Crescimento Transformador Beta (TGF-beta) e o TNF-alfa. Isso paralisa os fibroblastos, impedindo que eles continuem depositando colágeno duro e matriz extracelular no pulmão. Não cura e não reverte a fibrose que já existe, mas DÁ TEMPO de vida ao "congelar" a doença.',
+        es: 'La Fibrosis Pulmonar es la "cicatrización incontrolable" de los pulmones (el tejido blando se vuelve piedra). La Pirfenidona inhibe la producción de Factor de Crecimiento Transformante Beta. Esto paraliza los fibroblastos, impidiendo que depositen colágeno duro. No cura ni revierte la fibrosis que ya existe, pero DA TIEMPO de vida al "congelar" la enfermedad.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 267 mg (1 cápsula) 3 vezes ao dia na primeira semana. Escalonamento gradual até atingir a dose alvo brutal de: 801 mg (3 cápsulas de 267mg), 3 vezes ao dia (TOTAL DE 9 CÁPSULAS POR DIA ou 2.403 mg/dia).',
+          es: 'Inicio: 267 mg (1 cápsula) 3 veces al día en la primera semana. Escalonamiento gradual hasta la dosis objetivo: 801 mg (3 cápsulas), 3 veces al día (TOTAL DE 9 CÁPSULAS POR DÍA).'
+        },
+        pediatric: {
+          pt: 'Uso não indicado. Doença de adultos senis.',
+          es: 'Uso no indicado. Enfermedad de adultos seniles.'
+        }
+      },
+      administration: { pt: ['MANDATÓRIO: Ingerir sempre JUNTO COM AS REFEIÇÕES. Tomar de estômago vazio causa náusea intolerável e picos na corrente sanguínea que geram toxicidade severa.'], es: ['OBLIGATORIO: Ingerir siempre JUNTO CON LAS COMIDAS. Tomar con estómago vacío causa náusea intolerable y picos de toxicidad severa.'] },
+      renalAdjustment: { required: true, message: { pt: 'Pacientes com falência renal grave (ClCr < 30) NÃO DEVEM USAR (acumulação tóxica não esclarecida).', es: 'Pacientes con falla renal grave (ClCr < 30) NO DEBEN USAR (acumulación tóxica no aclarada).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Altamente dependente do fígado (CYP1A2). Evitar em cirrose classe B ou C de Child-Pugh.', es: 'Altamente dependiente del hígado (CYP1A2). Evitar en cirrosis clase B o C de Child-Pugh.' } },
+      commonAdverseEffects: { pt: ['Fotosensibilidade extrema da pele (o paciente fica com a pele avermelhada e cheia de manchas vermelhas com qualquer sol)', 'Náuseas severas, anorexia e diarreia', 'Fadiga'], es: ['Fotosensibilidad extrema de la piel (el paciente queda rojo con cualquier sol)', 'Náuseas severas, anorexia y diarrea', 'Fatiga'] },
+      dangerousAdverseEffects: { pt: ['Hepatotoxicidade com elevação grave de transaminases', 'Perda de peso letal (Sarcopenia grave)'], es: ['Hepatotoxicidad con elevación grave de transaminasas', 'Pérdida de peso letal (Sarcopenia grave)'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de insuficiência hepática ou renal severa', 'Uso concomitante de Fluvoxamina'], es: ['Historial de insuficiencia hepática o renal severa', 'Uso concomitante de Fluvoxamina'] },
+        relative: { pt: ['Tabagismo ativo (O cigarro anula o remédio)'], es: ['Tabaquismo activo (El cigarro anula el remedio)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O AVISO DO CIGARRO: Se o seu paciente tem fibrose pulmonar e continua fumando, a Pirfenidona é INÚTIL. O tabagismo induz fortemente a enzima CYP1A2 no fígado do paciente. O fígado vai destruir toda a Pirfenidona antes que ela consiga alcançar o pulmão do paciente para tratar a doença.', es: 'EL AVISO DEL CIGARRO: Si el paciente tiene fibrosis y sigue fumando, la Pirfenidona es INÚTIL. El tabaquismo induce la enzima CYP1A2 en el hígado, que destruirá toda la Pirfenidona antes de alcanzar el pulmón.' }
+      }
     }
 
-  }); /* fim Object.assign PNEUMOLOGIA_DRUGS_DB — BUILD 397
-         ICS/LABA: Beclometasona+Formoterol (Fostair), Fluticasona+Salmeterol (Seretide),
-                   Fluticasona+Vilanterol (Relvar)
-         LAMA/LABA: Umeclidínio+Vilanterol (Anoro), Tiotrópio+Olodaterol (Spiolto) */
+  }); /* fim Object.assign PNEUMOLOGIA_DRUGS_DB — BUILD 397 + BUILD 398
+         BUILD 397 — ICS/LABA: Beclometasona+Formoterol, Fluticasona+Salmeterol, Fluticasona+Vilanterol
+                     LAMA/LABA: Umeclidínio+Vilanterol, Tiotrópio+Olodaterol
+         BUILD 398 — LAMA/LABA: Glicopirrônio+Indacaterol (Ultibro)
+                     Terapia Tripla: Breztri, Trelegy, Trimbow
+                     Antifibrótico: Pirfenidona (Esbriet) */
 })();

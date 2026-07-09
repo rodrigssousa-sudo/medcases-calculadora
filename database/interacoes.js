@@ -249,6 +249,19 @@ const DRUG_ALIASES = {
   "saxenda":                            "liraglutida",
   "levotiroxine":                       "levotiroxina",
 
+  /* BUILD 398 — Terapias Triplas Inalatórias + LAMA/LABA Duplo + Antifibrótico: aliases */
+  "glycopyrronium_indacaterol":         "glicopirronio_indacaterol",
+  "ultibro":                            "glicopirronio_indacaterol",
+  "budesonide_glycopyrronium_formoterol": "budesonida_glicopirronio_formoterol",
+  "breztri":                            "budesonida_glicopirronio_formoterol",
+  "trixeo":                             "budesonida_glicopirronio_formoterol",
+  "fluticasone_umeclidinium_vilanterol": "fluticasona_umeclidinio_vilanterol",
+  "trelegy":                            "fluticasona_umeclidinio_vilanterol",
+  "beclometasone_formoterol_glycopyrronium": "beclometasona_formoterol_glicopirronio",
+  "trimbow":                            "beclometasona_formoterol_glicopirronio",
+  "pirfenidone":                        "pirfenidona",
+  "esbriet":                            "pirfenidona",
+
   /* BUILD 397 — Associações Inalatórias ICS/LABA + LAMA/LABA: aliases */
   "beclomethasone_formoterol":          "beclometasona_formoterol",
   "fostair":                            "beclometasona_formoterol",
@@ -731,6 +744,19 @@ const DRUG_CLASSES = {
   "$classe_hipoglicemiantes_secretagogos": [
     "glibenclamida", "glimepirida", "glipizida", "gliclazida",
     "tolbutamida", "clorpropamida", "repaglinida", "nateglinida"
+  ],
+
+  /* BUILD 398 — Terapias Triplas Inalatórias (ICS + LAMA + LABA) */
+
+  /* Terapias triplas inalatórias de manutenção para DPOC grave.
+     Breztri (Budesonida+Glicopirrônio+Formoterol),
+     Trelegy (Fluticasona+Umeclidínio+Vilanterol),
+     Trimbow (Beclometasona+Formoterol+Glicopirrônio).
+     Carga anticolinérgica MÁXIMA — contraindicadas com outros anticolinérgicos. */
+  "$classe_terapia_tripla_inalatoria": [
+    "budesonida_glicopirronio_formoterol",
+    "fluticasona_umeclidinio_vilanterol",
+    "beclometasona_formoterol_glicopirronio"
   ],
 
   /* BUILD 397 — Associações Inalatórias para DPOC e Asma */
@@ -1484,6 +1510,55 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Monitorar ECG (Intervalo QTc) se a associação for inevitável. Evitar a prescrição simultânea em pacientes coronariopatas, com arritmia basal severa ou hipocalemia. Nesse contexto, preferir Fexofenadina (sem metabolismo CYP hepático) ou Desloratadina (já ativada, independente do CYP3A4).",
         es: "Monitorear ECG (Intervalo QTc) si la asociación es inevitable. Evitar la prescripción simultánea en coronariopatas, con arritmia basal severa o hipopotasemia. En este contexto, preferir Fexofenadina (sin metabolismo CYP hepático) o Desloratadina (ya activada, independiente del CYP3A4)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 398 — BLOCO MOTOR DE INTERAÇÕES: Terapias Triplas (ICS/LAMA/LABA) e Antifibróticos
+     Breztri, Trelegy, Trimbow, Ultibro, Pirfenidona
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── TERAPIAS TRIPLAS (Sobrecarga de Corticoide + Anticolinérgico) ── */
+  "$classe_terapia_tripla_inalatoria": {
+    "$classe_anticolinergicos_triciclicos_imao": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A 'BOMBA' ANTICOLINÉRGICA DE ALTO GRAU. As terapias triplas (Trelegy, Trimbow, Breztri) já contêm LAMAs em doses diárias massivas. A associação com antidepressivos tricíclicos (Amitriptilina) ou drogas para incontinência urinária (Oxibutinina) deflagra uma paralisação letal de fluidos no idoso: O paciente sofre constipação intestinal refratária (fecaloma), obstrução urinária aguda (globo vesical), taquicardia sinusal persistente e piora aguda da demência/cognição.",
+        es: "LA 'BOMBA' ANTICOLINÉRGICA DE ALTO GRADO. Las terapias triples ya contienen LAMAs en dosis masivas. La asociación con antidepresivos tricíclicos o drogas para incontinencia desencadena una paralización de fluidos en el anciano: El paciente sufre constipación refractaria (fecaloma), obstrucción urinaria, taquicardia y empeoramiento de demencia."
+      },
+      conduta: {
+        pt: "Se prescrever Terapia Tripla Inalatória para um idoso com DPOC, o médico é OBRIGADO a revisar a lista de pílulas orais do paciente e retirar (ou reduzir drasticamente) qualquer medicamento oral que tenha efeito colateral anticolinérgico.",
+        es: "Si prescribe Terapia Triple para un anciano con EPOC, el médico está OBLIGADO a revisar la lista de píldoras orales y retirar cualquier medicamento con efecto anticolinérgico."
+      }
+    }
+  },
+
+  /* ── PIRFENIDONA (A Droga Hepática Hipersensível) ── */
+  "pirfenidona": {
+    "fluvoxamina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INIBIÇÃO ENZIMÁTICA MÚLTIPLA FULMINANTE. A Pirfenidona é degradada no fígado pelas enzimas CYP1A2, CYP2C9 e CYP2C19. O antidepressivo Fluvoxamina inibe e paralisa TODAS elas simultaneamente. Na presença da fluvoxamina, a concentração de Pirfenidona no sangue dispara, provocando hepatotoxicidade fulminante e falência hepática, além de um quadro incontrolável de náuseas em jato que desidratam o paciente severamente.",
+        es: "INHIBICIÓN ENZIMÁTICA MÚLTIPLE FULMINANTE. La Pirfenidona es degradada por enzimas CYP1A2, CYP2C9 y CYP2C19. El antidepresivo Fluvoxamina inhibe TODAS simultáneamente. La concentración de Pirfenidona se dispara, provocando hepatotoxicidad fulminante y vómitos incontrolables."
+      },
+      conduta: {
+        pt: "CONTRAINDICADO. Se o paciente precisar de um ISRS para tratar a depressão da Fibrose Pulmonar, a fluvoxamina deve ser banida do receituário. Preferir Citalopram ou Escitalopram.",
+        es: "CONTRAINDICADO. Si el paciente necesita un ISRS, la fluvoxamina debe ser prohibida. Preferir Citalopram o Escitalopram."
+      }
+    },
+    "ciprofloxacino": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "BLOQUEIO DE CYP1A2 POR ANTIBIÓTICO. Fato irônico: o paciente com Fibrose Pulmonar faz infecções torácicas comuns e o clínico do PS prescreve Ciprofloxacino. O Ciprofloxacino é um inibidor forte do CYP1A2. A Pirfenidona acumula absurdamente no sangue (sobe 80% a AUC), induzindo náuseas violentas, dores de estômago e risco letal pro fígado do idoso.",
+        es: "BLOQUEO DE CYP1A2 POR ANTIBIÓTICO. Hecho irónico: el paciente con Fibrosis hace infecciones y el clínico prescribe Ciprofloxacino. Este es un inhibidor fuerte de CYP1A2. La Pirfenidona acumula absurdamente, induciendo náuseas y riesgo hepático."
+      },
+      conduta: {
+        pt: "EVITAR COMPLETAMENTE Ciprofloxacino em pacientes com FPI usando Pirfenidona. Se não houver outra droga possível no antibiograma, a dose de Pirfenidona DEVE ser reduzida para 1 cápsula de 267 mg (2 vezes ao dia, no máximo) durante os dias do antibiótico.",
+        es: "EVITAR COMPLETAMENTE Ciprofloxacino. Si no hay otra droga en antibiograma, la dosis de Pirfenidona DEBE ser reducida a 1 cápsula de 267 mg (2x al día máximo) durante el antibiótico."
       }
     }
   },
