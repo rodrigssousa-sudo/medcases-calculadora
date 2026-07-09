@@ -249,6 +249,24 @@ const DRUG_ALIASES = {
   "saxenda":                            "liraglutida",
   "levotiroxine":                       "levotiroxina",
 
+  /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4: aliases */
+  "nintedanib":                         "nintedanibe",
+  "ofev":                               "nintedanibe",
+  "vargatef":                           "nintedanibe",
+  "montelukast":                        "montelucaste",
+  "singulair":                          "montelucaste",
+  "brondilat":                          "montelucaste",
+  "montelair":                          "montelucaste",
+  "zafirlukast":                        "zafirlucaste",
+  "accolate":                           "zafirlucaste",
+  "theophylline":                       "teofilina",
+  "euphyllin":                          "teofilina",
+  "teolong":                            "teofilina",
+  "aminophylline":                      "teofilina",
+  "aminofilina":                        "teofilina",
+  "roflumilast":                        "roflumilaste",
+  "daxas":                              "roflumilaste",
+
   /* BUILD 398 — Terapias Triplas Inalatórias + LAMA/LABA Duplo + Antifibrótico: aliases */
   "glycopyrronium_indacaterol":         "glicopirronio_indacaterol",
   "ultibro":                            "glicopirronio_indacaterol",
@@ -744,6 +762,29 @@ const DRUG_CLASSES = {
   "$classe_hipoglicemiantes_secretagogos": [
     "glibenclamida", "glimepirida", "glipizida", "gliclazida",
     "tolbutamida", "clorpropamida", "repaglinida", "nateglinida"
+  ],
+
+  /* BUILD 399 — Antifibróticos, Antileucotrienos, Xantinas, Inibidor PDE-4 */
+
+  /* Antifibróticos pulmonares para FPI e DPI fibrosante.
+     Nintedanibe (Ofev) — inibidor de TKI (VEGFR/FGFR/PDGFR); bleedingRisk: true.
+     Pirfenidona (Esbriet) — bloqueio TGF-beta/TNF; CYP1A2-dependente. */
+  "$classe_antifibróticos_pulmonares": [
+    "nintedanibe", "pirfenidona"
+  ],
+
+  /* Antileucotrienos (ARLT — Antagonistas do Receptor de Cisteinil-Leucotrieno).
+     Montelucaste (Singulair) — 1x/dia; Black Box neuropsiquiátrico.
+     Zafirlucaste (Accolate) — 2x/dia em jejum; inibe CYP2C9 (risco varfarina). */
+  "$classe_antileucotrienos": [
+    "montelucaste", "zafirlucaste"
+  ],
+
+  /* Xantinas broncodilatadoras — índice terapêutico estreitíssimo.
+     Teofilina: nível terapêutico 5-15 mg/L; tóxica > 20 mg/L.
+     Aminofilina: pró-droga EV da teofilina (85% de teofilina base). */
+  "$classe_xantinas": [
+    "teofilina", "aminofilina", "diprofilina"
   ],
 
   /* BUILD 398 — Terapias Triplas Inalatórias (ICS + LAMA + LABA) */
@@ -1510,6 +1551,115 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Monitorar ECG (Intervalo QTc) se a associação for inevitável. Evitar a prescrição simultânea em pacientes coronariopatas, com arritmia basal severa ou hipocalemia. Nesse contexto, preferir Fexofenadina (sem metabolismo CYP hepático) ou Desloratadina (já ativada, independente do CYP3A4).",
         es: "Monitorear ECG (Intervalo QTc) si la asociación es inevitable. Evitar la prescripción simultánea en coronariopatas, con arritmia basal severa o hipopotasemia. En este contexto, preferir Fexofenadina (sin metabolismo CYP hepático) o Desloratadina (ya activada, independiente del CYP3A4)."
+      }
+    }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 399 — BLOCO MOTOR DE INTERAÇÕES: Antifibróticos, Antileucotrienos, Teofilina, Roflumilaste
+     Nintedanibe, Montelucaste, Zafirlucaste, Teofilina, Roflumilaste
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── NINTEDANIBE (Anticoagulantes — Risco Hemorrágico Multiplicado) ── */
+  "nintedanibe": {
+    "$classe_anticoagulantes_orais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "POTENCIALIZAÇÃO DO SANGRAMENTO POR INIBIÇÃO VEGFR. O Nintedanibe inibe o receptor VEGFR, que é responsável pela manutenção da integridade vascular e da hemostasia capilar. Ao associá-lo com anticoagulantes orais (Varfarina, Rivaroxabana, Apixabana, Dabigatrana), ocorre uma potencialização bidirecional do risco hemorrágico: o anticoagulante impede a coagulação sistêmica enquanto o Nintedanibe destrói a barreira vascular — resultando em sangramentos gastrointestinais graves, hematúria macroscópica e risco de sangramento intracraniano.",
+        es: "POTENCIACIÓN DEL SANGRADO POR INHIBICIÓN VEGFR. El Nintedanib inhibe el receptor VEGFR, responsable del mantenimiento de la integridad vascular. Al asociarlo con anticoagulantes orales, ocurre una potenciación bidireccional del riesgo hemorrágico: el anticoagulante impide la coagulación mientras el Nintedanib destruye la barrera vascular — resultando en sangramientos gastrointestinales graves y riesgo intracraneal."
+      },
+      conduta: {
+        pt: "Uso POSSÍVEL mas requer monitoração intensiva. Checar INR semanalmente (Varfarina) ou clínica de sangramento (NOACs) nas primeiras 8 semanas. Orientar o paciente a reportar qualquer fezes escuras, urina avermelhada ou equimoses atípicas. Considerar suspensão do anticoagulante se o risco hemorrágico superar o trombótico.",
+        es: "Uso POSIBLE pero requiere monitorización intensiva. Verificar INR semanalmente (Warfarina) o clínica de sangrado (NOACs) en las primeras 8 semanas. Orientar al paciente a reportar heces oscuras, orina rojiza o hematomas atípicos."
+      }
+    },
+    "$classe_inibidores_fortes_cyp3a4": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "AUMENTO DA EXPOSIÇÃO AO NINTEDANIBE. O Nintedanibe é substrato da P-glicoproteína (P-gp) e do CYP3A4. Inibidores fortes (Cetoconazol, Itraconazol, Ritonavir, Claritromicina) reduzem o clearance do Nintedanibe, aumentando sua AUC em até 60%. Isso eleva o risco de diarreia grave, hepatotoxicidade e sangramento.",
+        es: "AUMENTO DE LA EXPOSICIÓN AL NINTEDANIB. El Nintedanib es sustrato de P-gp y CYP3A4. Inhibidores fuertes reducen su clearance, aumentando la AUC hasta un 60%. Esto eleva el riesgo de diarrea grave, hepatotoxicidad y sangrado."
+      },
+      conduta: {
+        pt: "Monitorar tolerabilidade e função hepática (ALT/AST) após início do inibidor. Se efeitos adversos aumentarem, considerar redução de dose do Nintedanibe para 100 mg 2x/dia.",
+        es: "Monitorar tolerabilidad y función hepática (ALT/AST) tras inicio del inhibidor. Si los efectos adversos aumentan, considerar reducción de dosis del Nintedanib a 100 mg 2x/día."
+      }
+    }
+  },
+
+  /* ── ANTILEUCOTRIENOS (Efeito Neuropsiquiátrico Aditivo) ── */
+  "$classe_antileucotrienos": {
+    "$classe_depressores_snc_alcool": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "SOMATÓRIA DE RISCO NEUROPSIQUIÁTRICO. Os antileucotrienos (especialmente Montelucaste) têm Black Box Warning da FDA para eventos neuropsiquiátricos (ansiedade, depressão, ideação suicida). A combinação com depressores do SNC (benzodiazepínicos, opioides, álcool, antidepressivos sedativos) aumenta o risco de depressão profunda e comportamento suicida, particularmente em adolescentes e pacientes com vulnerabilidade psiquiátrica prévia.",
+        es: "SUMATORIA DE RIESGO NEUROPSIQUIÁTRICO. Los antileucotrienos tienen Black Box Warning de la FDA para eventos neuropsiquiátricos. La combinación con depresores del SNC aumenta el riesgo de depresión profunda y comportamiento suicida, particularmente en adolescentes."
+      },
+      conduta: {
+        pt: "Rastrear humor e comportamento (PHQ-9 em adultos; CDRS em crianças) a cada consulta. Orientar familiares e cuidadores sobre sinais de alerta. Suspender o antileucotrieno imediatamente se houver qualquer sinal neuropsiquiátrico emergente.",
+        es: "Rastrear humor y comportamiento en cada consulta. Orientar familiares sobre señales de alerta. Suspender el antileucotrieno inmediatamente ante cualquier señal neuropsiquiátrica emergente."
+      }
+    }
+  },
+
+  /* ── ZAFIRLUCASTE (Varfarina — Interação CYP2C9 Letal) ── */
+  "zafirlucaste": {
+    "varfarina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INIBIÇÃO CYP2C9 COM HEMORRAGIA. O Zafirlucaste inibe a enzima CYP2C9, que é a principal via de metabolização da Varfarina. A inibição do CYP2C9 reduz o clearance da Varfarina, acumulando-a no sangue e elevando o INR de forma imprevisível — frequentemente para valores > 5. Nesse nível, o risco de hemorragia intracraniana espontânea e sangramento gastrointestinal massivo é real e imediato.",
+        es: "INHIBICIÓN CYP2C9 CON HEMORRAGIA. El Zafirlukast inhibe la enzima CYP2C9, principal vía de metabolización de la Warfarina. La inhibición del CYP2C9 eleva el INR de forma imprevisible — frecuentemente > 5. A ese nivel, el riesgo de hemorragia intracraneal espontánea es real e inmediato."
+      },
+      conduta: {
+        pt: "EVITAR a combinação. Se não houver alternativa terapêutica ao Zafirlucaste, monitorar INR a cada 3–5 dias nas primeiras 4 semanas e considerar redução empírica de 20–25% na dose da Varfarina ao iniciar o Zafirlucaste. O Montelucaste é o antileucotrieno SEGURO para pacientes em anticoagulação oral.",
+        es: "EVITAR la combinación. Si no hay alternativa, monitorar INR cada 3-5 días en las primeras 4 semanas y considerar reducción empírica de 20-25% en la dosis de Warfarina. El Montelukast es el antileucotrieno SEGURO en anticoagulación oral."
+      }
+    }
+  },
+
+  /* ── TEOFILINA (Índice Terapêutico Estreito — Múltiplas Interações) ── */
+  "teofilina": {
+    "$classe_inibidores_fortes_cyp3a4": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INTOXICAÇÃO POR XANTINA — DOBRAMENTO DO NÍVEL SÉRICO. A Teofilina é metabolizada principalmente pelo CYP1A2 e parcialmente pelo CYP3A4. Antibióticos macrolídeos (Eritromicina, Claritromicina) e antifúngicos azólicos (Cetoconazol, Itraconazol) inibem essas vias, dobrando ou triplicando os níveis séricos de teofilina em dias. O nível terapêutico seguro é 5–15 mg/L; com inibidores fortes, o paciente pode chegar a 25–30 mg/L em 2–3 dias — zona de convulsões refratárias, arritmias ventriculares e morte.",
+        es: "INTOXICACIÓN POR XANTINA — DOBLAJE DEL NIVEL SÉRICO. La Teofilina es metabolizada principalmente por CYP1A2 y parcialmente por CYP3A4. Antibióticos macrólidos (Eritromicina, Claritromicina) y antifúngicos azólicos inhiben estas vías, doblando o triplicando los niveles séricos de teofilina en días — zona de convulsiones refractarias, arritmias ventriculares y muerte."
+      },
+      conduta: {
+        pt: "REDUZIR a dose da Teofilina em 25–50% ao iniciar qualquer inibidor de CYP3A4. Colher nível sérico em 48–72 horas após início do inibidor. Se nível > 15 mg/L: suspender o inibidor ou substituir por antibiótico/antifúngico não inibidor. Em intoxicação aguda: suporte intensivo — carvão ativado e hemodiálise se nível > 40 mg/L.",
+        es: "REDUCIR la dosis de Teofilina en 25-50% al iniciar cualquier inhibidor de CYP3A4. Extraer nivel sérico a las 48-72 horas. Si nivel > 15 mg/L: suspender el inhibidor. En intoxicación aguda: soporte intensivo — carbón activado y hemodiálisis si nivel > 40 mg/L."
+      }
+    },
+    "ciprofloxacino": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O ANTIBIÓTICO QUE INTOXICA O BRONCODILATADOR. O Ciprofloxacino inibe fortemente o CYP1A2 — a principal via de metabolização da Teofilina. A combinação é extremamente perigosa: pacientes com DPOC ou asma são exatamente quem mais recebe Ciprofloxacino por infecções pulmonares. O nível da Teofilina pode dobrar em 24–48 horas, levando o paciente da estabilidade clínica para convulsões e arritmias sem aviso prévio.",
+        es: "EL ANTIBIÓTICO QUE INTOXICA EL BRONCODILATADOR. El Ciprofloxacino inhibe fuertemente el CYP1A2 — principal vía de metabolización de la Teofilina. La combinación es peligrosa: el nivel puede doblar en 24-48 horas, llevando al paciente de la estabilidad a convulsiones y arritmias sin aviso."
+      },
+      conduta: {
+        pt: "PREFERIR Levofloxacino ou Moxifloxacino (inibição mínima de CYP1A2) como alternativa ao Ciprofloxacino em pacientes usando Teofilina. Se Ciprofloxacino for indispensável, REDUZIR a dose da Teofilina em 30–50% ao primeiro dia e monitorar nível sérico diariamente nas primeiras 48 horas.",
+        es: "PREFERIR Levofloxacino o Moxifloxacino como alternativa al Ciprofloxacino en pacientes con Teofilina. Si Ciprofloxacino es indispensable, REDUCIR la dosis de Teofilina en 30-50% el primer día y monitorar nivel sérico diariamente."
+      }
+    }
+  },
+
+  /* ── ROFLUMILASTE × INIBIDORES CYP3A4 ── */
+  "roflumilaste": {
+    "$classe_inibidores_fortes_cyp3a4": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "AUMENTO DA EXPOSIÇÃO AO ROFLUMILASTE E SEU METABÓLITO ATIVO. O Roflumilaste é metabolizado pelo CYP3A4 e CYP1A2 para seu metabólito ativo N-óxido. Inibidores fortes (Cetoconazol, Eritromicina, Ritonavir) aumentam a AUC do sistema em até 70%, potencializando os efeitos adversos gastrointestinais (diarreia severa), a perda de peso e o risco de eventos neuropsiquiátricos, já que o metabólito ativo inibe PDE-4 no SNC além do pulmão.",
+        es: "AUMENTO DE LA EXPOSICIÓN AL ROFLUMILAST Y SU METABOLITO ACTIVO. Los inhibidores fuertes de CYP3A4 aumentan la AUC del sistema hasta en un 70%, potenciando los efectos gastrointestinales (diarrea severa), la pérdida de peso y el riesgo de eventos neuropsiquiátricos."
+      },
+      conduta: {
+        pt: "Monitorar peso e tolerância gastrointestinal com maior frequência. Se diarreia ou perda de peso grave emergirem, suspender temporariamente o Roflumilaste até estabilização e reavaliar dose.",
+        es: "Monitorar peso y tolerancia gastrointestinal con mayor frecuencia. Si diarrea o pérdida de peso grave emergen, suspender temporalmente el Roflumilast y reevaluar la dosis."
       }
     }
   },

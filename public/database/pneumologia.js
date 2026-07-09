@@ -2005,12 +2005,216 @@
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'O AVISO DO CIGARRO: Se o seu paciente tem fibrose pulmonar e continua fumando, a Pirfenidona é INÚTIL. O tabagismo induz fortemente a enzima CYP1A2 no fígado do paciente. O fígado vai destruir toda a Pirfenidona antes que ela consiga alcançar o pulmão do paciente para tratar a doença.', es: 'EL AVISO DEL CIGARRO: Si el paciente tiene fibrosis y sigue fumando, la Pirfenidona es INÚTIL. El tabaquismo induce la enzima CYP1A2 en el hígado, que destruirá toda la Pirfenidona antes de alcanzar el pulmón.' }
       }
+    },
+
+/* ── NINTEDANIBE ────────────────────────────────────────────────────── */
+    "nintedanibe": {
+      name: { pt: 'Nintedanibe', es: 'Nintedanib' },
+      category: 'pneumologia',
+      class: { pt: 'Antifibrótico Pulmonar (Inibidor de Tirosina-Quinase)', es: 'Antifibrótico Pulmonar (Inhibidor de Tirosina-Quinasa)' },
+      indications: {
+        pt: ['Fibrose Pulmonar Idiopática (FPI) — qualquer estágio', 'Doença Pulmonar Intersticial associada à Esclerose Sistêmica (DPI-ES)', 'Doença Pulmonar Intersticial fibrosante progressiva de outras causas'],
+        es: ['Fibrosis Pulmonar Idiopática (FPI) — cualquier estadio', 'Enfermedad Pulmonar Intersticial asociada a Esclerosis Sistémica (EPI-ES)', 'Enfermedad Pulmonar Intersticial fibrosante progresiva de otras causas']
+      },
+      commercialNames: { br: ['Ofev'], ar: ['Ofev'] },
+      presentation: { pt: ['Cápsulas moles 100 mg e 150 mg'], es: ['Cápsulas blandas 100 mg y 150 mg'] },
+      mechanism: {
+        pt: 'Se a Pirfenidona "paralisa os fibroblastos por fora" (bloqueando os sinais TGF-beta/TNF), o Nintedanibe os paralisa "por dentro". Ele é um inibidor de tirosina-quinase que entra no fibroblasto e bloqueia simultaneamente três receptores de crescimento: VEGFR (que vasculariza a cicatriz), FGFR (que estimula a proliferação do fibroblasto) e PDGFRα/β (que atrai mais fibroblastos para o pulmão). Resultado: desorganiza toda a cascata de sinalização interna que faz o pulmão se transformar em couro.',
+        es: 'Si la Pirfenidona "paraliza los fibroblastos por fuera", el Nintedanib los paraliza "por dentro". Es un inhibidor de tirosina-quinasa que bloquea simultáneamente tres receptores de crecimiento: VEGFR, FGFR y PDGFRα/β. Resultado: desorganiza toda la cascada interna que hace que el pulmón se transforme en cuero.'
+      },
+      dose: {
+        adult: {
+          pt: '150 mg por via oral, DUAS VEZES ao dia (a cada 12 horas). Caso haja intolerância gastrointestinal, reduzir para 100 mg, 2 vezes ao dia.',
+          es: '150 mg por vía oral, DOS VECES al día (cada 12 horas). Si hay intolerancia gastrointestinal, reducir a 100 mg, 2 veces al día.'
+        },
+        pediatric: {
+          pt: 'Não indicado. Doença exclusiva de adultos.',
+          es: 'No indicado. Enfermedad exclusiva de adultos.'
+        }
+      },
+      administration: { pt: ['Ingerir JUNTO COM AS REFEIÇÕES para reduzir as náuseas e a biodisponibilidade errática.', 'Engolir inteiro — não mastigar (cápsula mole contém óleo de soja).'], es: ['Ingerir JUNTO CON LAS COMIDAS para reducir náuseas.', 'Tragar entero — no masticar (cápsula blanda contiene aceite de soja).'] },
+      renalAdjustment: { required: false, message: { pt: 'Eliminação predominantemente biliar (> 90%). Insuficiência renal isolada não requer ajuste.', es: 'Eliminación predominantemente biliar (> 90%). Insuficiencia renal aislada no requiere ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Substrato de CYP3A4 e P-glicoproteína. Em Child-Pugh B: reduzir para 100 mg 2x/dia. CONTRAINDICADO em Child-Pugh C.', es: 'Sustrato de CYP3A4 y P-glicoproteína. En Child-Pugh B: reducir a 100 mg 2x/día. CONTRAINDICADO en Child-Pugh C.' } },
+      commonAdverseEffects: { pt: ['Diarreia profusa (reação mais comum e mais limitante — 60% dos pacientes)', 'Náuseas e vômitos', 'Dor e distensão abdominal'], es: ['Diarrea profusa (reacción más común y limitante — 60% de los pacientes)', 'Náuseas y vómitos', 'Dolor y distensión abdominal'] },
+      dangerousAdverseEffects: { pt: ['Hepatotoxicidade grave (monitorar ALT/AST mensalmente no primeiro ano)', 'Sangramento arterial (inibe VEGFR — cautela máxima com anticoagulantes)', 'Perfuração gastrointestinal (raro, potencialmente fatal)'], es: ['Hepatotoxicidad grave (monitorar ALT/AST mensualmente el primer año)', 'Sangrado arterial (inhibe VEGFR — cautela máxima con anticoagulantes)', 'Perforación gastrointestinal (raro, potencialmente fatal)'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez e lactação (Categoria D — teratogênico em animais)', 'Child-Pugh C'], es: ['Embarazo y lactancia (Categoría D — teratogénico en animales)', 'Child-Pugh C'] },
+        relative: { pt: ['Uso concomitante de anticoagulantes (risco de sangramento multiplicado)', 'Tabagismo ativo (reduz eficácia por indução enzimática)'], es: ['Uso concomitante de anticoagulantes (riesgo de sangrado multiplicado)', 'Tabaquismo activo (reduce eficacia por inducción enzimática)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A DIARREIA QUE MATA O TRATAMENTO: O principal motivo pelo qual os pacientes abandonam o Nintedanibe não é medo ou falta de acesso — é a diarreia. Nos primeiros meses, pode ser debilitante. O pneumologista inteligente prescreve ANTECIPADAMENTE loperamida "se precisar" para controlar o trânsito e salvar a adesão ao único remédio que freia a fibrose.', es: 'LA DIARREA QUE MATA EL TRATAMIENTO: El principal motivo de abandono del Nintedanib no es el miedo o falta de acceso — es la diarrea. El neumólogo inteligente prescribe ANTICIPADAMENTE loperamida "si necesita" para controlar el tránsito y salvar la adherencia.' }
+      }
+    },
+
+/* ── MONTELUCASTE ────────────────────────────────────────────────────── */
+    "montelucaste": {
+      name: { pt: 'Montelucaste', es: 'Montelukast' },
+      category: 'pneumologia',
+      class: { pt: 'Antileucotrieno (Antagonista do Receptor de Cisteinil-Leucotrieno — ARLT)', es: 'Antileucotrieno (Antagonista del Receptor de Cisteinil-Leucotrieno — ARLT)' },
+      indications: {
+        pt: ['Profilaxia e tratamento crônico da Asma leve a moderada (2ª linha, adjuvante ao ICS)', 'Rinite Alérgica Sazonal e Perene em adultos e crianças', 'Prevenção de Broncoespasmo induzido por exercício'],
+        es: ['Profilaxis y tratamiento crónico del Asma leve a moderada (2ª línea, adyuvante al ICS)', 'Rinitis Alérgica Estacional y Perenne en adultos y niños', 'Prevención de Broncoespasmo inducido por ejercicio']
+      },
+      commercialNames: { br: ['Singulair', 'Brondilat', 'Montelair'], ar: ['Singulair', 'Montelukast Genérico'] },
+      presentation: { pt: ['Comprimidos mastigáveis 4 mg (2–5 anos) e 5 mg (6–14 anos)', 'Comprimidos revestidos 10 mg (adultos)', 'Sachê granulado 4 mg (6 meses – 5 anos)'], es: ['Comprimidos masticables 4 mg (2-5 años) y 5 mg (6-14 años)', 'Comprimidos recubiertos 10 mg (adultos)', 'Sobre granulado 4 mg (6 meses – 5 años)'] },
+      mechanism: {
+        pt: 'Os leucotrienos (LTC4, LTD4, LTE4) são os "bombeiros incendiários" da Asma: ao mesmo tempo em que chegam para combater o alérgeno, eles contraem o músculo brônquico, produzem muco em excesso e inflamam as paredes das vias aéreas. O Montelucaste bloqueia seletivamente o receptor CysLT1, impedindo que esses leucotrienos se "encaixem" e disparem essa cascata. Resultado: brônquios mais abertos, menos secreção e menos inflamação — especialmente em Asma alérgica e na Asma por AINEs.',
+        es: 'Los leucotrienos son los "bomberos incendiarios" del Asma: contraen el músculo bronquial, producen moco en exceso e inflaman las paredes. El Montelukast bloquea selectivamente el receptor CysLT1, impidiendo que los leucotrienos disparen la cascada. Resultado: bronquios más abiertos, menos moco, menos inflamación.'
+      },
+      dose: {
+        adult: {
+          pt: '10 mg por via oral, UMA VEZ ao dia, preferencialmente à noite.',
+          es: '10 mg por vía oral, UNA VEZ al día, preferentemente por la noche.'
+        },
+        pediatric: {
+          pt: '6 meses–5 anos: 4 mg/dia (granulado ou mastigável). 6–14 anos: 5 mg/dia (mastigável). ≥ 15 anos: 10 mg/dia (comprimido adulto).',
+          es: '6 meses-5 años: 4 mg/día (granulado o masticable). 6-14 años: 5 mg/día (masticable). ≥ 15 años: 10 mg/día (comprimido adulto).'
+        }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimento.', 'Preferir a dose noturna porque a broncoconstrição noturna é o padrão mais comum na asma.'], es: ['Puede tomarse con o sin alimento.', 'Preferir la dosis nocturna porque la broncoconstricción nocturna es el patrón más común.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste. Eliminação biliar predominante.', es: 'No requiere ajuste. Eliminación biliar predominante.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Cirrose leve a moderada: usar com cautela. Cirrose grave (Child-Pugh C): evitar.', es: 'Cirrosis leve a moderada: usar con cautela. Cirrosis grave (Child-Pugh C): evitar.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Infecção de vias aéreas superiores', 'Dor abdominal (especialmente em crianças)'], es: ['Cefalea', 'Infección de vías aéreas superiores', 'Dolor abdominal (especialmente en niños)'] },
+      dangerousAdverseEffects: { pt: ['Neuropsiquiátricos graves (FDA Black Box Warning): ideação suicida, agressividade, alucinações, sonambulismo, pesadelos — especialmente em crianças e adolescentes', 'Síndrome de Churg-Strauss (vasculite eosinofílica — ao reduzir corticoide sistêmico)'], es: ['Neuropsiquiátricos graves (FDA Black Box Warning): ideación suicida, agresividad, alucinaciones, sonambulismo — especialmente en niños', 'Síndrome de Churg-Strauss (vasculitis eosinofílica — al reducir corticoide sistémico)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade ao Montelucaste'], es: ['Hipersensibilidad al Montelukast'] },
+        relative: { pt: ['Pacientes com histórico de transtornos neuropsiquiátricos (depressão, transtorno bipolar, psicose) — revisão obrigatória do risco/benefício', 'Fenilcetonúria (comprimidos mastigáveis contêm aspartame)'], es: ['Pacientes con historial de trastornos neuropsiquiátricos — revisión obligatoria del riesgo/beneficio', 'Fenilcetonuria (comprimidos masticables contienen aspartamo)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ALERTA NEUROPSIQUIÁTRICO INVISÍVEL: O Montelucaste tem um Black Box Warning da FDA para eventos neuropsiquiátricos. O problema é que a maioria dos médicos no Brasil nunca avisa o paciente. A mãe que percebe que o filho começou a ter pesadelos intensos, comportamento agressivo ou falar em morte desde que iniciou o "remedinho do pulmão" DEVE comunicar imediatamente e suspender o Montelucaste.', es: 'LA ADVERTENCIA NEUROPSIQUIÁTRICA INVISIBLE: El Montelukast tiene un Black Box Warning de la FDA. La mayoría de los médicos nunca avisa al paciente. La madre que nota pesadillas intensas, agresividad o pensamientos de muerte desde el "remedito del pulmón" DEBE comunicar y suspender el Montelukast.' }
+      }
+    },
+
+/* ── ZAFIRLUCASTE ────────────────────────────────────────────────────── */
+    "zafirlucaste": {
+      name: { pt: 'Zafirlucaste', es: 'Zafirlukast' },
+      category: 'pneumologia',
+      class: { pt: 'Antileucotrieno (Antagonista do Receptor de Cisteinil-Leucotrieno — ARLT)', es: 'Antileucotrieno (Antagonista del Receptor de Cisteinil-Leucotrieno — ARLT)' },
+      indications: {
+        pt: ['Profilaxia e tratamento crônico da Asma brônquica em adultos e crianças ≥ 7 anos (2ª linha)'],
+        es: ['Profilaxis y tratamiento crónico del Asma bronquial en adultos y niños ≥ 7 años (2ª línea)']
+      },
+      commercialNames: { br: ['Accolate'], ar: ['Accolate'] },
+      presentation: { pt: ['Comprimidos revestidos 10 mg e 20 mg'], es: ['Comprimidos recubiertos 10 mg y 20 mg'] },
+      mechanism: {
+        pt: 'Idêntico ao Montelucaste: antagonismo seletivo do receptor CysLT1 para leucotrienos cisteinílicos. A diferença clínica é farmacológica: o Zafirlucaste tem interações medicamentosas muito mais agressivas (inibe CYP2C9 e CYP3A4) e precisa ser tomado em JEJUM. No uso clínico atual, foi amplamente substituído pelo Montelucaste por ser menos conveniente (2 doses/dia) e com maior potencial de interações.',
+        es: 'Idéntico al Montelukast: antagonismo selectivo del receptor CysLT1. La diferencia clínica es farmacológica: el Zafirlukast tiene interacciones mucho más agresivas (inhibe CYP2C9 y CYP3A4) y necesita tomarse en AYUNAS. Fue ampliamente reemplazado por Montelukast por ser menos conveniente.'
+      },
+      dose: {
+        adult: {
+          pt: '20 mg por via oral, DUAS VEZES ao dia (a cada 12 horas), em JEJUM (1 hora antes ou 2 horas após as refeições).',
+          es: '20 mg por vía oral, DOS VECES al día (cada 12 horas), en AYUNAS (1 hora antes o 2 horas después de las comidas).'
+        },
+        pediatric: {
+          pt: '7–11 anos: 10 mg, 2 vezes ao dia, em jejum. ≥ 12 anos: dose adulta.',
+          es: '7-11 años: 10 mg, 2 veces al día, en ayunas. ≥ 12 años: dosis adulta.'
+        }
+      },
+      administration: { pt: ['Obrigatoriamente em JEJUM — alimentos reduzem a biodisponibilidade em até 40%.'], es: ['Obligatoriamente en AYUNAS — los alimentos reducen la biodisponibilidad hasta en un 40%.'] },
+      renalAdjustment: { required: false, message: { pt: 'Eliminação predominantemente fecal. Não requer ajuste renal.', es: 'Eliminación predominantemente fecal. No requiere ajuste renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADO em cirrose hepática (acúmulo tóxico). Monitorar transaminases em uso prolongado.', es: 'CONTRAINDICADO en cirrosis hepática (acumulación tóxica). Monitorar transaminasas en uso prolongado.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Náuseas e dispepsia (exacerbados se tomado com comida)', 'Infecções respiratórias altas'], es: ['Cefalea', 'Náuseas y dispepsia (exacerbados si se toma con comida)', 'Infecciones respiratorias altas'] },
+      dangerousAdverseEffects: { pt: ['Hepatotoxicidade grave (casos de insuficiência hepática fatal relatados em pós-comercialização)', 'Síndrome de Churg-Strauss (vasculite eosinofílica)'], es: ['Hepatotoxicidad grave (casos de insuficiencia hepática fatal reportados)', 'Síndrome de Churg-Strauss (vasculitis eosinofílica)'] },
+      contraindications: {
+        absolute: { pt: ['Doença hepática ativa ou elevação de transaminases > 3× o limite superior da normalidade'], es: ['Enfermedad hepática activa o elevación de transaminasas > 3× el límite superior de normalidad'] },
+        relative: { pt: ['Uso de Varfarina (Zafirlucaste inibe CYP2C9 → INR dispara)', 'Idosos > 65 anos (clearance reduzido)'], es: ['Uso de Warfarina (Zafirlukast inhibe CYP2C9 → INR se dispara)', 'Ancianos > 65 años (clearance reducido)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A INTERAÇÃO LETAL COM VARFARINA: Se o seu paciente anticoagulado com Varfarina para FA ou TVP tiver asma e o médico prescrever Zafirlucaste sem saber da interação, o INR pode triplicar em dias — gerando hemorragia intracraniana. O Montelucaste é o antileucotrieno SEGURO para pacientes em anticoagulação oral.', es: 'LA INTERACCIÓN LETAL CON WARFARINA: Si el paciente anticoagulado con Warfarina recibe Zafirlukast sin conocer la interacción, el INR puede triplicarse en días — generando hemorragia intracraneal. El Montelukast es el antileucotrieno SEGURO en anticoagulación.' }
+      }
+    },
+
+/* ── TEOFILINA ────────────────────────────────────────────────────────── */
+    "teofilina": {
+      name: { pt: 'Teofilina', es: 'Teofilina' },
+      category: 'pneumologia',
+      class: { pt: 'Xantina (Broncodilatador + Anti-inflamatório leve)', es: 'Xantina (Broncodilatador + Antiinflamatorio leve)' },
+      indications: {
+        pt: ['Asma brônquica persistente — uso oral crônico de baixa dose como adjuvante (fármaco de 3ª linha)', 'DPOC moderada a grave — quando LABAs e LAMAs são insuficientes', 'Asma grave com status asmático (uso EV hospitalar — aminofilina)'],
+        es: ['Asma bronquial persistente — uso oral crónico de baja dosis como adyuvante (fármaco de 3ª línea)', 'EPOC moderada a grave — cuando LABAs y LAMAs son insuficientes', 'Asma grave con status asmático (uso EV hospitalario — aminofilina)']
+      },
+      commercialNames: { br: ['Euphyllin', 'Teolong', 'Unifiland'], ar: ['Euphyllin', 'Theolan'] },
+      presentation: { pt: ['Comprimidos de liberação prolongada 100 mg, 200 mg e 300 mg', 'Solução oral (xarope) para crianças', 'Aminofilina EV: ampola 240 mg/10 mL (uso hospitalar)'], es: ['Comprimidos de liberación prolongada 100 mg, 200 mg y 300 mg', 'Solución oral (jarabe) para niños', 'Aminofilina EV: ampolla 240 mg/10 mL (uso hospitalario)'] },
+      mechanism: {
+        pt: 'A Teofilina tem um mecanismo duplo e elegante: (1) Inibe as Fosfodiesterases (PDEs), impedindo a degradação do AMPc intracelular — mais AMPc → o músculo brônquico relaxa e dilata. (2) Antagoniza os receptores de Adenosina A1/A2, que normalmente provocam broncoconstrição. Em baixas doses (nível sérico 5–10 mg/L), também ativa histonas deacetilases (HDAC2) e tem efeito anti-inflamatório que reverte parcialmente a resistência ao corticoide no pulmão do tabagista com DPOC.',
+        es: 'La Teofilina tiene un mecanismo doble: (1) Inhibe las Fosfodiesterasas (PDEs), impidiendo la degradación del AMPc — más AMPc → el músculo bronquial se relaja. (2) Antagoniza los receptores de Adenosina A1/A2. En bajas dosis (nivel sérico 5-10 mg/L), activa HDAC2 y tiene efecto antiinflamatorio que revierte parcialmente la resistencia al corticoide.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose individualizada por nível sérico. Início: 200–300 mg/dia VO (liberação prolongada). Dose-alvo (nível terapêutico 5–15 mg/L): geralmente 400–800 mg/dia divididos a cada 12 horas. NUNCA ultrapassar 900 mg/dia sem monitorização sérica.',
+          es: 'Dosis individualizada por nivel sérico. Inicio: 200-300 mg/día VO (liberación prolongada). Dosis-objetivo (nivel terapéutico 5-15 mg/L): generalmente 400-800 mg/día divididos cada 12 horas. NUNCA superar 900 mg/día sin monitorización sérica.'
+        },
+        pediatric: {
+          pt: '1–9 anos: 12–14 mg/kg/dia (máx. 300 mg/dia). 9–16 anos: 18 mg/kg/dia (máx. 400 mg/dia). Monitoração sérica obrigatória.',
+          es: '1-9 años: 12-14 mg/kg/día (máx. 300 mg/día). 9-16 años: 18 mg/kg/día (máx. 400 mg/día). Monitorización sérica obligatoria.'
+        }
+      },
+      administration: { pt: ['Comprimidos de liberação prolongada: engolir inteiro, não partir ou triturar.', 'Tomar preferencialmente com alimentos para reduzir irritação gástrica.', 'Monitorar nível sérico: colher amostra 5–6 horas após dose matinal (estado estacionário).'], es: ['Comprimidos de liberación prolongada: tragar entero, no partir ni triturar.', 'Tomar preferentemente con alimentos para reducir irritación gástrica.', 'Monitorar nivel sérico: extraer muestra 5-6 horas después de la dosis matinal.'] },
+      renalAdjustment: { required: false, message: { pt: 'Metabolismo hepático (CYP1A2). Insuficiência renal isolada não requer ajuste, mas monitorar nível sérico.', es: 'Metabolismo hepático (CYP1A2). Insuficiencia renal aislada no requiere ajuste, pero monitorar nivel sérico.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Cirrose ou hepatite grave reduz clearance drasticamente — doses usuais provocam toxicidade. Reduzir 25–50% e monitorar de perto.', es: 'Cirrosis o hepatitis grave reducen el clearance drásticamente. Reducir 25-50% y monitorar de cerca.' } },
+      commonAdverseEffects: { pt: ['Náuseas, vômitos e dor epigástrica (nível sérico > 10 mg/L)', 'Cefaleia e nervosismo', 'Taquicardia sinusal', 'Insônia e tremores finos'], es: ['Náuseas, vómitos y dolor epigástrico (nivel sérico > 10 mg/L)', 'Cefalea y nerviosismo', 'Taquicardia sinusal', 'Insomnio y temblores finos'] },
+      dangerousAdverseEffects: { pt: ['TOXICIDADE GRAVE (nível > 20 mg/L): Convulsões refratárias, taquicardia ventricular, Fibrilação Ventricular, Encefalopatia', 'Hipocalemia severa (potencializada por Beta-2 agonistas)'], es: ['TOXICIDAD GRAVE (nivel > 20 mg/L): Convulsiones refractarias, taquicardia ventricular, Fibrilación Ventricular, Encefalopatía', 'Hipocalemia severa (potenciada por Beta-2 agonistas)'] },
+      contraindications: {
+        absolute: { pt: ['Arritmias cardíacas ativas sem tratamento', 'Úlcera péptica ativa não tratada'], es: ['Arritmias cardíacas activas sin tratamiento', 'Úlcera péptica activa no tratada'] },
+        relative: { pt: ['Tabagismo ativo (aumenta o clearance da teofilina — necessita doses maiores)', 'Epilepsia (reduz limiar convulsivo)', 'Hipotireoidismo (reduz clearance — risco de intoxicação)'], es: ['Tabaquismo activo (aumenta el clearance — necesita dosis mayores)', 'Epilepsia (reduce umbral convulsivo)', 'Hipotiroidismo (reduce clearance — riesgo de intoxicación)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ÍNDICE TERAPÊUTICO ESTREITÍSSIMO: A janela entre a dose que funciona (nível 5–15 mg/L) e a dose que mata (nível > 20 mg/L) é pequena. O problema é que DEZENAS de medicamentos e condições clínicas alteram o nível: Eritromicina e Ciprofloxacino (inibidores de CYP1A2) DOBRAM o nível. O tabagismo REDUZ o nível à metade. Se o seu paciente parar de fumar enquanto toma Teofilina sem ajustar a dose, você tem uma intoxicação esperando para acontecer.', es: 'ÍNDICE TERAPÉUTICO ESTRECHO: La ventana entre la dosis que funciona (5-15 mg/L) y la que mata (> 20 mg/L) es pequeña. Eritromicina y Ciprofloxacino (inhibidores CYP1A2) DOBLAN el nivel. El tabaco REDUCE el nivel a la mitad. Si el paciente deja de fumar sin ajustar la dosis, tiene una intoxicación esperando.' }
+      }
+    },
+
+/* ── ROFLUMILASTE ────────────────────────────────────────────────────── */
+    "roflumilaste": {
+      name: { pt: 'Roflumilaste', es: 'Roflumilast' },
+      category: 'pneumologia',
+      class: { pt: 'Inibidor seletivo de Fosfodiesterase-4 (PDE-4)', es: 'Inhibidor selectivo de Fosfodiesterasa-4 (PDE-4)' },
+      indications: {
+        pt: ['Redução das exacerbações na DPOC grave (VEF1 < 50% do predito) com bronquite crônica e histórico de exacerbações frequentes apesar de broncodilatadores inalatórios ótimos', 'Uso combinado com broncodilatadores de longa ação — NUNCA como monoterapia'],
+        es: ['Reducción de las exacerbaciones en la EPOC grave (VEF1 < 50% del predicho) con bronquitis crónica y antecedentes de exacerbaciones frecuentes a pesar de broncodilatadores inhalatorios óptimos', 'Uso combinado con broncodilatadores de larga acción — NUNCA como monoterapia']
+      },
+      commercialNames: { br: ['Daxas'], ar: ['Daxas'] },
+      presentation: { pt: ['Comprimidos revestidos 500 mcg (0,5 mg)'], es: ['Comprimidos recubiertos 500 mcg (0,5 mg)'] },
+      mechanism: {
+        pt: 'O Roflumilaste faz o que nenhuma bombinha consegue: ele é um comprimido que age nas células inflamatórias do interior do pulmão. A PDE-4 é a enzima que degrada o AMPc dentro dos neutrófilos, macrófagos e eosinófilos. Ao inibir a PDE-4, o Roflumilaste acumula AMPc dentro dessas células imunes — AMPc alto "acalma" essas células, reduzindo a produção de citocinas inflamatórias (IL-6, IL-8, TNF) que causam as exacerbações purulentas da bronquite crônica da DPOC.',
+        es: 'El Roflumilast hace lo que ningún inhalador logra: es un comprimido que actúa en las células inflamatorias del interior del pulmón. La PDE-4 degrada el AMPc dentro de neutrófilos, macrófagos y eosinófilos. Al inhibir PDE-4, el Roflumilast acumula AMPc, "calmando" estas células e reduciendo citocinas inflamatorias que causan las exacerbaciones.'
+      },
+      dose: {
+        adult: {
+          pt: '500 mcg (0,5 mg) por via oral, UMA VEZ ao dia. Para reduzir efeitos gastrointestinais iniciais: iniciar com 250 mcg/dia (meio comprimido) por 4 semanas, depois escalar para 500 mcg/dia.',
+          es: '500 mcg (0,5 mg) por vía oral, UNA VEZ al día. Para reducir efectos gastrointestinales iniciales: iniciar con 250 mcg/día (medio comprimido) por 4 semanas, luego escalar.'
+        },
+        pediatric: {
+          pt: 'Não indicado. Doença exclusiva de adultos.',
+          es: 'No indicado. Enfermedad exclusiva de adultos.'
+        }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimento.', 'Monitorar peso corporal — perda de peso frequente e significativa ao longo do tratamento.'], es: ['Puede tomarse con o sin alimento.', 'Monitorar peso corporal — pérdida de peso frecuente y significativa durante el tratamiento.'] },
+      renalAdjustment: { required: false, message: { pt: 'Eliminação predominantemente fecal (metabólito ativo). Não requer ajuste.', es: 'Eliminación predominantemente fecal (metabolito activo). No requiere ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADO em insuficiência hepática moderada a grave (Child-Pugh B e C). Metabolismo hepático extenso.', es: 'CONTRAINDICADO en insuficiencia hepática moderada a grave (Child-Pugh B y C). Metabolismo hepático extenso.' } },
+      commonAdverseEffects: { pt: ['Diarreia e náuseas (primeiras semanas)', 'Perda de peso (média de 2 kg — pode ser maior)', 'Cefaleia e insônia'], es: ['Diarrea y náuseas (primeras semanas)', 'Pérdida de peso (promedio de 2 kg — puede ser mayor)', 'Cefalea e insomnio'] },
+      dangerousAdverseEffects: { pt: ['Transtornos neuropsiquiátricos: ansiedade, depressão, ideação suicida (FDA Black Box Warning)', 'Perda de peso clinicamente significativa em pacientes com baixo IMC (caquexia da DPOC)'], es: ['Trastornos neuropsiquiátricos: ansiedad, depresión, ideación suicida (FDA Black Box Warning)', 'Pérdida de peso clínicamente significativa en pacientes con bajo IMC (caquexia de la EPOC)'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência Hepática moderada a grave (Child-Pugh B ou C)', 'Histórico de depressão grave com ideação suicida'], es: ['Insuficiencia Hepática moderada a grave (Child-Pugh B o C)', 'Historial de depresión grave con ideación suicida'] },
+        relative: { pt: ['Desnutrição grave ou IMC < 18 (agrava a perda de peso)', 'Uso concomitante de imunosupressores sistêmicos fortes'], es: ['Desnutrición grave o IMC < 18 (agrava la pérdida de peso)', 'Uso concomitante de inmunosupresores sistémicos fuertes'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'DPOC + DEPRESSÃO = PROIBIDO: O paciente clássico do Daxas é o homem de 65 anos, obeso, tabagista crônico com DPOC grave e bronquite crônica purulenta recorrente. Esse perfil de paciente tem alto risco de depressão. Se o pneumologista prescrever o Roflumilaste sem investigar e tratar a depressão pré-existente, está agravando um risco de suicídio que já era elevado. Rastrear depressão (PHQ-9) ANTES de prescrever é obrigatório.', es: 'EPOC + DEPRESIÓN = PROHIBIDO: Si el neumólogo prescribe Roflumilast sin investigar y tratar la depresión preexistente, está agravando un riesgo de suicidio ya elevado. Rastrear depresión (PHQ-9) ANTES de prescribir es obligatorio.' }
+      }
     }
 
-  }); /* fim Object.assign PNEUMOLOGIA_DRUGS_DB — BUILD 397 + BUILD 398
+  }); /* fim Object.assign PNEUMOLOGIA_DRUGS_DB — BUILD 397 + BUILD 398 + BUILD 399
          BUILD 397 — ICS/LABA: Beclometasona+Formoterol, Fluticasona+Salmeterol, Fluticasona+Vilanterol
                      LAMA/LABA: Umeclidínio+Vilanterol, Tiotrópio+Olodaterol
          BUILD 398 — LAMA/LABA: Glicopirrônio+Indacaterol (Ultibro)
                      Terapia Tripla: Breztri, Trelegy, Trimbow
-                     Antifibrótico: Pirfenidona (Esbriet) */
+                     Antifibrótico: Pirfenidona (Esbriet)
+         BUILD 399 — Antifibrótico: Nintedanibe (Ofev)
+                     Antileucotrienos: Montelucaste (Singulair), Zafirlucaste (Accolate)
+                     Xantina: Teofilina (Euphyllin)
+                     Inibidor PDE-4: Roflumilaste (Daxas) */
 })();
