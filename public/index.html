@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=370" />
-  <link rel="stylesheet" href="css/build233.css?v=370" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=370" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=370" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=370" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=370" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=370" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=372" />
+  <link rel="stylesheet" href="css/build233.css?v=372" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=372" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=372" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=372" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=372" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=372" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=370" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=372" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=370" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=372" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=370" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=372" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=370" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=372" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=370" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=372" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=370" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=372" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=370" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=372" />
 
   <style>
     /* ============================================================ RESET */
@@ -7552,7 +7552,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=370" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=372" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -7643,6 +7643,7 @@
                   </span>
                 </div>
                 <!-- Grid compacto de inputs -->
+                <form id="hm-patient-form" action="javascript:void(0);" autocomplete="off">
                 <div class="hm-input-grid">
                   <div class="hm-input-wrap">
                     <label class="hm-label">Peso <span class="hm-label-unit">kg</span></label>
@@ -7760,6 +7761,7 @@
                     </div>
                   </div>
                 </div>
+                </form><!-- /hm-patient-form -->
                 <!-- Pills de resultado rápido -->
                 <div class="hm-result-pills" id="hm-result-pills" style="display:none">
                   <div class="hm-pill" id="hm-pill-clcr">
@@ -7798,7 +7800,10 @@
                   <button class="hm-btn hm-btn--ghost" onclick="hmClearPatient()">
                     <i class="fa-solid fa-rotate-left"></i> Limpar
                   </button>
-                  <button class="hm-btn hm-btn--primary" id="hm-fix-btn" onclick="hmFixarDados()">
+                  <button class="hm-btn hm-btn--primary" id="hm-fix-btn"
+                    onclick="hmFixarDados()"
+                    ontouchend="event.preventDefault();window.hmFixarDados&&hmFixarDados();"
+                    onmousedown="window.hmFixarDados&&hmFixarDados();">
                     <i class="fa-solid fa-calculator"></i>
                     <span class="lang-hub-pt">Calcular / Fixar</span>
                     <span class="lang-hub-es">Calcular / Fijar</span>
@@ -20643,6 +20648,25 @@ function _adaptExternalDB(dbObj, categoryLabel) {
     }
   });
 
+  /* ── BUILD 372 PATCH 3b: Delegated click listener for .hm-drug-item ──
+     Substitui o inline onclick removido no PATCH 3a. Único listener no
+     document para todos os itens — funciona mesmo após re-render da lista.
+     Compatível com iOS WebView: usa e.target.closest() em vez de match(). */
+  document.addEventListener('click', function(e) {
+    const drugRow = e.target.closest('.hm-drug-item');
+    if (!drugRow) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const targetId = drugRow.getAttribute('data-drug-id') ||
+                     (drugRow.id || '').replace('hm-di-', '');
+    if (targetId && typeof window.hmShowInlineResult === 'function') {
+      /* Remove wrapper do card anterior se existir */
+      const existing = document.getElementById('hm-inline-card-wrapper');
+      if (existing) existing.remove();
+      window.hmShowInlineResult(targetId, drugRow);
+    }
+  });
+
   /* ── Compat: aliases legados ── */
   window.ixVerificar         = window.executarChecagemInteracoes;
   window._ixRefreshLang      = window._intxRefreshLang;
@@ -21008,8 +21032,10 @@ document.addEventListener('DOMContentLoaded', () => {
      hmShowInlineResult(drugId) — injeta card de resultado logo
      abaixo da lista de busca, com dose para o perfil do paciente.
   ============================================================ */
-  window.hmShowInlineResult = function(drugId) {
-    /* ── BUILD 306: Node Injection com toggle e fallback seguro ── */
+  window.hmShowInlineResult = function(drugId, anchorElement) {
+    /* ── BUILD 306 / 372: Node Injection com toggle e fallback seguro ──
+       anchorElement: elemento DOM clicado (passado pelo delegated listener).
+       Fallback para getElementById('hm-di-'+drugId) se não fornecido.    */
 
     /* Toggle: se card já está aberto para este drug, fecha e sai */
     const existingCard = document.querySelector('.hm-drug-inline-card[data-drug-id="' + drugId + '"]');
@@ -21025,9 +21051,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const drug = db.find(d => d.id === drugId);
     if (!drug) return;
 
-    /* 2. Âncora: o item da lista que recebeu o clique
-          Fallback: se id hm-di- não existe (lista re-renderizada), usa #hm-drug-result */
-    const anchor = document.getElementById('hm-di-' + drugId);
+    /* 2. Âncora: BUILD 372 — usa anchorElement passado pelo delegated listener
+          Fallback para getElementById se chamado via alias legado sem 2º argumento */
+    const anchor = (anchorElement instanceof Element)
+      ? anchorElement
+      : document.getElementById('hm-di-' + drugId);
 
     const lang = currentLang || 'pt';
     const isES = lang === 'es';
@@ -21449,15 +21477,24 @@ document.addEventListener('DOMContentLoaded', () => {
      Chamada explícita em: hmCalcCockcroft(), hmFixarDados(), hmLoadPatient(), hmClearPatient().
   ────────────────────────────────────────────────────────────────────────────────── */
   function _updateHomeLiveDash() {
-    const pd = window.patientData || {};
+    /* BUILD 372 PATCH 1b: usa window.hmPatientState como fonte primária
+       (escrito por hmFixarDados); fallback para window.patientData legacy. */
+    const ps  = window.hmPatientState || {};
+    const pd  = (ps._savedAt) ? ps : (window.patientData || {});
     const derived = _hmComputeDerived(pd);
 
     const fmt = (v, dec) => (v != null && !isNaN(v)) ? (+v).toFixed(dec) : null;
 
-    const clcrVal  = fmt(pd.clcr,             0);
-    const imcVal   = fmt(derived.imc  != null ? derived.imc  : pd.imc,       1);
-    const pesoVal  = fmt(derived.pesoIdeal != null ? derived.pesoIdeal : pd.pesoIdeal, 1);
-    const bsaVal   = fmt(derived.bsa  != null ? derived.bsa  : pd.bsa,       2);
+    /* ClCr: prefere hmPatientState.clcr, depois patientData.clcr */
+    const clcrSrc  = (ps._savedAt && ps.clcr   != null) ? ps.clcr   : pd.clcr;
+    const imcSrc   = (ps._savedAt && ps.imc    != null) ? ps.imc    : (derived.imc   != null ? derived.imc   : pd.imc);
+    const pesoSrc  = (ps._savedAt && ps.pesoIdeal != null) ? ps.pesoIdeal : (derived.pesoIdeal != null ? derived.pesoIdeal : pd.pesoIdeal);
+    const bsaSrc   = (ps._savedAt && ps.bsa    != null) ? ps.bsa    : (derived.bsa   != null ? derived.bsa   : pd.bsa);
+
+    const clcrVal  = fmt(clcrSrc,  0);
+    const imcVal   = fmt(imcSrc,   1);
+    const pesoVal  = fmt(pesoSrc,  1);
+    const bsaVal   = fmt(bsaSrc,   2);
 
     const set = (id, v) => {
       const el = document.getElementById(id);
@@ -21617,7 +21654,23 @@ document.addEventListener('DOMContentLoaded', () => {
        atualiza imediatamente com o novo perfil do paciente.            */
     _patientDataDidChange();
 
-    /* ── BUILD 306: Atualiza Live Dashboard da Home via getElementById direto ── */
+    /* ── BUILD 372 PATCH 1a: Persiste estado global seguro do paciente ──
+       window.hmPatientState é a fonte de verdade para _updateHomeLiveDash()
+       e para qualquer módulo externo que precise dos valores calculados.   */
+    window.hmPatientState = {
+      weight:     data.weight,
+      age:        data.age,
+      height:     data.height,
+      creatinine: data.creatinine,
+      clcr:       data.clcr,
+      sex:        currentSex || 'M',
+      imc:        derived.imc        || null,
+      pesoIdeal:  derived.pesoIdeal  || null,
+      bsa:        derived.bsa        || null,
+      _savedAt:   Date.now()
+    };
+
+    /* ── BUILD 306 / 372: Atualiza Live Dashboard da Home via getElementById direto ── */
     _updateHomeLiveDash();
 
     /* Feedback tátil no botão */
@@ -21935,7 +21988,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dispClass = _fdResolveClass(d);
         const safeId = (d.id || '').replace(/'/g, "\\'");
         html += `
-          <div class="hm-drug-item" id="hm-di-${safeId}" onclick="hmShowInlineResult('${safeId}')" role="button" aria-label="${dispName}">
+          <div class="hm-drug-item" id="hm-di-${safeId}" data-drug-id="${safeId}" role="button" tabindex="0" aria-label="${dispName}">
             <div class="hm-drug-dot" style="background:${colorTxt}"></div>
             <div class="hm-drug-info">
               <div class="hm-drug-name">${dispName}</div>
@@ -22824,6 +22877,42 @@ document.addEventListener('DOMContentLoaded', () => {
     childList: true, subtree: true
   });
 
+  /* ── BUILD 372 PATCH 2c: Enter-key focus chaining no hm-patient-form ──
+     Avança entre inputs com Enter; no último input (ou form submit) dispara
+     hmCalcCockcroft + hmFixarDados. Intercepta ANTES do iOS fechar teclado. */
+  (function _hmFormKeyChain() {
+    var form = document.getElementById('hm-patient-form');
+    if (!form) return;
+    form.addEventListener('keydown', function(e) {
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+      var inputs = Array.from(form.querySelectorAll('input:not([type="hidden"])'));
+      var idx = inputs.indexOf(document.activeElement);
+      if (idx > -1 && idx < inputs.length - 1) {
+        /* Avança para o próximo input */
+        inputs[idx + 1].focus();
+      } else {
+        /* Último campo ou nenhum ativo — calcula e fixa */
+        if (typeof window.hmCalcCockcroft === 'function') window.hmCalcCockcroft();
+        if (typeof window.hmFixarDados    === 'function') window.hmFixarDados();
+      }
+    });
+  })();
+
+  /* ── BUILD 372 PATCH 2b (runtime): reforça touchend/mousedown via JS
+     para garantir interceptação mesmo em WebViews que ignoram atributos ── */
+  (function _hmFixBtnTouchGuard() {
+    var btn = document.getElementById('hm-fix-btn');
+    if (!btn) return;
+    function _fireFixar(e) {
+      /* Só dispara se não foi acionado por click já processado */
+      e.preventDefault();
+      if (typeof window.hmFixarDados === 'function') window.hmFixarDados();
+    }
+    btn.addEventListener('touchend',  _fireFixar, { passive: false });
+    btn.addEventListener('mousedown', _fireFixar, { passive: false });
+  })();
+
   /* BUILD 276 — APP BOOT COMPLETE FLAG
      Setada aqui, no final absoluto do DOMContentLoaded, para que
      qualquer função chamada DURANTE a inicialização (setLang → calcFluids
@@ -23192,59 +23281,59 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/interacoes.js?v=370"></script>
-<script src="database/antimicrobianos.js?v=370"></script>
-<script src="database/psicofarmacos.js?v=370"></script>
-<script src="database/analgesicos.js?v=370"></script>
-<script src="database/anticoag.js?v=370"></script>
-<script src="database/cardio.js?v=370"></script>
-<script src="database/endocrino.js?v=370"></script>
-<script src="database/gastro.js?v=370"></script>
-<script src="database/gastro_imuno.js?v=370"></script>
-<script src="database/imuno_corticoide.js?v=370"></script>
-<script src="database/endocrino_glp1.js?v=370"></script>
-<script src="database/infusoes.js?v=370"></script>
-<script src="database/nefro.js?v=370"></script>
-<script src="database/neuro.js?v=370"></script>
-<script src="database/obesidade.js?v=370"></script>
-<script src="database/pneumo.js?v=370"></script>
-<script src="database/psiquiatria.js?v=370"></script>
-<script src="database/reumatologia.js?v=370"></script>
-<script src="database/emergencia.js?v=370"></script>
-<script src="database/infectologia.js?v=370"></script>
-<script src="database/sedacao.js?v=370"></script>
-<script src="database/hematologia.js?v=370"></script>
-<script src="database/gastroenterologia.js?v=370"></script>
-<script src="database/cardiologia.js?v=370"></script>
-<script src="database/analgesia_opioides.js?v=370"></script>
-<script src="database/prescricoes.js?v=370" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/interacoes.js?v=372"></script>
+<script src="database/antimicrobianos.js?v=372"></script>
+<script src="database/psicofarmacos.js?v=372"></script>
+<script src="database/analgesicos.js?v=372"></script>
+<script src="database/anticoag.js?v=372"></script>
+<script src="database/cardio.js?v=372"></script>
+<script src="database/endocrino.js?v=372"></script>
+<script src="database/gastro.js?v=372"></script>
+<script src="database/gastro_imuno.js?v=372"></script>
+<script src="database/imuno_corticoide.js?v=372"></script>
+<script src="database/endocrino_glp1.js?v=372"></script>
+<script src="database/infusoes.js?v=372"></script>
+<script src="database/nefro.js?v=372"></script>
+<script src="database/neuro.js?v=372"></script>
+<script src="database/obesidade.js?v=372"></script>
+<script src="database/pneumo.js?v=372"></script>
+<script src="database/psiquiatria.js?v=372"></script>
+<script src="database/reumatologia.js?v=372"></script>
+<script src="database/emergencia.js?v=372"></script>
+<script src="database/infectologia.js?v=372"></script>
+<script src="database/sedacao.js?v=372"></script>
+<script src="database/hematologia.js?v=372"></script>
+<script src="database/gastroenterologia.js?v=372"></script>
+<script src="database/cardiologia.js?v=372"></script>
+<script src="database/analgesia_opioides.js?v=372"></script>
+<script src="database/prescricoes.js?v=372" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=370"></script>
+<script defer src="js/medcases-ux-v2.js?v=372"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=370"></script>
+<script defer src="js/hub-accordion.js?v=372"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=370"></script>
+<script defer src="js/build240b-accordion-fix.js?v=372"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=370"></script>
+<script defer src="js/calculator-overlay.js?v=372"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=370"></script>
+<script defer src="js/category-pills.js?v=372"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=370"></script>
+<script defer src="js/elec-calc.js?v=372"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=370"></script>
+<script defer src="js/deeplink-router.js?v=372"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=370"></script>
+<script defer src="js/build272-reactive-engine.js?v=372"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=370"></script>
+<script defer src="js/build283-accessory-bar.js?v=372"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
