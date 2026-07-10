@@ -1149,6 +1149,24 @@ const DRUG_CLASSES = {
   "$classe_diureticos_tiazidicos": [
     "hidroclorotiazida", "clortalidona", "indapamida", "metolazona",
     "bendroflumetiazida", "triclormetiazida"
+  ],
+
+  /* BUILD 412 — Anticolinérgicos Centrais Parkinson */
+  "$classe_anticolinergicos_centrales_parkinson": [
+    "triexifenidil", "benztropina", "biperideno"
+  ],
+
+  /* BUILD 412 — Antidepressivos ISRS e Duais (IRSN/ISRSN) */
+  "$classe_antidepressivos_isrs_duais": [
+    "fluoxetina", "sertralina", "escitalopram", "citalopram", "paroxetina",
+    "fluvoxamina", "venlafaxina", "desvenlafaxina", "duloxetina", "milnaciprana"
+  ],
+
+  /* BUILD 412 — Antiarrítmicos + Antibióticos Prolongadores do QT */
+  "$classe_antiarritmicos_antibioticos_qt_longo": [
+    "amiodarona", "sotalol", "quinidina", "disopiramida", "procainamida",
+    "haloperidol", "tioridazina", "azitromicina", "claritromicina",
+    "ciprofloxacino", "levofloxacino", "hidroxicloroquina"
   ]
 
 };
@@ -23110,9 +23128,74 @@ const INTERACOES_DB = {
         es: "CONTRAINDICACIÓN CAJA NEGRA. Pacientes con Tolcapona NO PUEDEN tomar inhibidores no selectivos de la MAO."
       }
     }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 412 — Control Antiparkinsoniano y Neuropsiquiatría
+     Safinamida | $classe_anticolinergicos_centrales_parkinson | Pimavanserina
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── SAFINAMIDA (IMAO-B Reversível e a Armadilha Antidepressiva) ── */
+  "safinamida": {
+    "$classe_antidepressivos_isrs_duais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "RISCO DE SÍNDROME SEROTONINÉRGICA. Embora a Safinamida seja um inibidor seletivo e reversível da MAO-B, misturá-la com doses altas de Fluoxetina, Sertralina, Venlafaxina ou Duloxetina bloqueia a quebra e transborda os estoques de Serotonina nas fendas sinápticas. O paciente idoso pode deflagrar rigidez severa, picos de febre alta, tremores violentos, diarreia e delírio agudo em horas.",
+        es: "RIESGO DE SÍNDROME SEROTONINÉRGICO. Aunque la Safinamida es un inhibidor selectivo y reversible de la MAO-B, mezclarla con dosis altas de Fluoxetina, Sertralina o Venlafaxina bloquea la degradación y desborda la Serotonina. El anciano puede desencadenar rigidez severa, picos de fiebre alta, temblores y delirio en horas."
+      },
+      conduta: {
+        pt: "Associação permitida se estritamente necessária, mas com doses mínimas de ambos. O médico deve monitorar ativamente sinais autonômicos. É estritamente PROIBIDO associar com outros IMAOs não-seletivos ou Linezolida.",
+        es: "Asociación permitida si es estrictamente necesaria, pero con dosis mínimas de ambos. Está estrictamente PROHIBIDO asociar con otros IMAO no selectivos o Linezolida."
+      }
+    }
+  },
+
+  /* ── ANTICOLINÉRGICOS CENTRAIS PARKINSON (Triexifenidil e Benztropina) ── */
+  "$classe_anticolinergicos_centrales_parkinson": {
+    "donepezila_rivastigmina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ANULAÇÃO TERAPÊUTICA E DELÍRIO MENTAL. Idosos com Parkinson frequentemente desenvolvem Demência associada. Prescrever Triexifenidil/Benztropina (que cortam a acetilcolina no cérebro) para o paciente que toma Donepezila/Rivastigmina (que tentam aumentar a acetilcolina) é um colapso iatrogênico. As drogas se anulam mutuamente, a memória do idoso desaba vertiginosamente e ele entra em psicose confusional.",
+        es: "ANULACIÓN TERAPÉUTICA Y DELIRIUM. Ancianos con Parkinson frecuentemente desarrollan Demencia. Prescribir Trihexifenidilo (que corta la acetilcolina) al paciente que toma Donepezilo (que intenta aumentarla) es un colapso iatrogénico. Las drogas se anulan mutuamente, la memoria se desploma y entra en psicosis confusional."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA. Caso o paciente com Parkinson desenvolva demência ou declínio de memória, os anticolinérgicos centrais devem ser sumariamente DESMAMADOS E RETIRADOS do receituário. O tremor deve ser controlado com ajuste de Levodopa ou Pramipexol.",
+        es: "CONTRAINDICACIÓN ABSOLUTA. Si el paciente con Parkinson desarrolla demencia, los anticolinérgicos centrales deben ser sumariamente RETIRADOS. El temblor debe controlarse con ajuste de Levodopa."
+      }
+    }
+  },
+
+  /* ── PIMAVANSERINA (O Antipsicótico Cardiotóxico) ── */
+  "pimavanserina": {
+    "$classe_antiarritmicos_antibioticos_qt_longo": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ARRITMIA VENTRICULAR LETAL (TORSADES DE POINTES). A Pimavanserina tem a perigosa capacidade de prolongar o intervalo QT no eletrocardiograma cardíaco. Misturá-la com Amiodarona, Hidroxicloroquina, Haloperidol, Azitromicina ou Ciprofloxacino causa uma somação elétrica tóxica nas fibras do coração. O coração do idoso entra em Torsades de Pointes (parada cardíaca por arritmia helicoidal), levando ao óbito repentino.",
+        es: "ARRITMIA VENTRICULAR LETAL (TORSADES DE POINTES). La Pimavanserina prolonga el intervalo QT en el ECG. Mezclarla con Amiodarona, Haloperidol o Ciprofloxacino causa una sumación eléctrica tóxica. El corazón del anciano entra en Torsades de Pointes, llevando al óbito repentino."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO DE BULA. É mandatório realizar um Eletrocardiograma (ECG) basal antes de prescrever Nuplazid e calcular o QTc. Se o QT for maior que 470ms em mulheres ou 450ms em homens, a droga está proibida. Se o paciente contrair pneumonia, nunca trate com Azitromicina.",
+        es: "CONTRAINDICACIÓN DE PROSPECTO. Es mandatorio realizar un ECG basal antes de prescribir y calcular el QTc. Si el QT es largo, la droga está prohibida. Si contrae neumonía, nunca trate con Azitromicina."
+      }
+    },
+    "cetoconazol_itraconazol": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INTOXICAÇÃO E PRECIPITAÇÃO DE ARRITMIA. Antifúngicos fortes trancam a enzima CYP3A4 hepática que destrói a Pimavanserina. Os níveis do antipsicótico dobram no sangue, multiplicando a toxicidade cardíaca no eletrocardiograma.",
+        es: "INTOXICACIÓN Y ARRITMIA. Antifúngicos fuertes bloquean la enzima CYP3A4 hepática que destruye la Pimavanserina. Los niveles del antipsicótico se duplican en sangre, multiplicando la toxicidad cardíaca."
+      },
+      conduta: {
+        pt: "MANDATÓRIO: Caso o paciente precise usar inibidores potentes do CYP3A4, a dose da Pimavanserina DEVE SER CORTADA PELA METADE (de 34 mg para 17 mg ao dia) durante o tratamento.",
+        es: "MANDATORIO: Si necesita usar inhibidores potentes del CYP3A4, la dosis de Pimavanserina DEBE SER CORTADA A LA MITAD (de 34 mg a 17 mg al día)."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

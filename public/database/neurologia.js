@@ -2797,3 +2797,216 @@
 
   }); /* fim Object.assign BUILD 411 append */
 })();
+
+/* ═══════════════════════════════════════════════════════════════
+   BUILD 412 APPEND — Anticolinérgicos Parkinson + Pimavanserina
+   Safinamida | Opicapona | Triexifenidil | Benztropina | Pimavanserina
+═══════════════════════════════════════════════════════════════ */
+(function(){
+  if (!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB))
+    window.NEUROLOGIA_DRUGS_DB = {};
+
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── SAFINAMIDA ─────────────────────────────────────────────────────── */
+    "safinamida": {
+      name: { pt: 'Safinamida (Metanosulfonato de)', es: 'Safinamida (Metanosulfonato de)' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Inibidor Reversível da MAO-B / Bloqueador de Canais de Sódio', es: 'Inhibidor Reversible de la MAO-B / Bloqueador de Canales de Sodio' },
+      indications: {
+        pt: ['Tratamento da Doença de Parkinson idiopática em pacientes com flutuações motoras (fases "Off") em associação com Levodopa/Carbidopa'],
+        es: ['Tratamiento de la Enfermedad de Parkinson idiopática en pacientes con fluctuaciones motoras (fases "Off") en asociación con Levodopa']
+      },
+      commercialNames: { br: ['Xadago'], ar: ['Xadago'] },
+      presentation: { pt: ['Comprimidos revestidos 50 mg e 100 mg'], es: ['Comprimidos recubiertos 50 mg y 100 mg'] },
+      mechanism: {
+        pt: 'Mecanismo duplo e brilhante. De forma dopaminérgica, ela inibe altamente e de forma REVERSÍVEL a enzima MAO-B, bloqueando a destruição da dopamina no cérebro. De forma não-dopaminérgica, bloqueia os canais de Sódio dependentes de voltagem e modula a liberação excessiva de Glutamato. Isso protege os neurônios da toxicidade e ajuda a suavizar as flutuações motoras sem causar as crises hipertensivas dos IMAOs antigos.',
+        es: 'Mecanismo doble y brillante. De forma dopaminérgica, inhibe altamente y de forma REVERSIBLE la enzima MAO-B, bloqueando la destrucción de dopamina. De forma no dopaminérgica, bloquea canales de Sodio y modula la liberación excesiva de Glutamato. Esto protege las neuronas de la toxicidad y suaviza las fluctuaciones motoras.'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciar com 50 mg via oral UMA VEZ ao dia (de manhã). Após duas semanas, com base na resposta, a dose pode ser aumentada para 100 mg/dia.',
+          es: 'Iniciar con 50 mg vía oral UNA VEZ al día (por la mañana). Tras dos semanas, según la respuesta, la dosis puede aumentarse a 100 mg/día.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Uso oral diário matinal, obrigatoriamente deglutido inteiro com água. Não exige restrição dietética drástica de tiramina nas doses recomendadas.'], es: ['Uso oral diario matutino, obligatoriamente tragado entero con agua. No exige restricción dietética drástica de tiramina a dosis normales.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico na insuficiência renal crônica.', es: 'Sin necesidad de ajuste clínico en la insuficiencia renal crónica.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Em insuficiência hepática moderada (Child-Pugh B), a dose não deve ultrapassar 50 mg/dia. CONTRAINDICADA na insuficiência hepática grave.', es: 'En insuficiencia hepática moderada (Child-Pugh B), la dosis no debe superar 50 mg/día. CONTRAINDICADA en insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['Discinesias (movimentos involuntários bruscos exacerbados pela Levodopa)', 'Insônia e ansiedade', 'Náuseas'], es: ['Discinesias (movimientos involuntarios bruscos exacerbados por la Levodopa)', 'Insomnio y ansiedad', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Síndrome Serotoninérgica fatal (se misturada com antidepressivos errados)', 'Agravamento de comportamentos compulsivos (jogo, compras, hipersexualidade)'], es: ['Síndrome Serotoninérgico fatal (si se mezcla con antidepresivos erróneos)', 'Agravamiento de comportamientos compulsivos'] },
+      contraindications: {
+        absolute: { pt: ['Uso associado de outros IMAOs (Selegilina, Rasagilina) ou Linezolida', 'Insuficiência hepática grave', 'Histórico de degeneração da retina'], es: ['Uso asociado de otros IMAO (Selegilina, Rasagilina) o Linezolida', 'Insuficiencia hepática grave', 'Historial de degeneración de la retina'] },
+        relative: { pt: ['Uso concomitante com inibidores de recaptação de serotonina (ISRS/Dual)'], es: ['Uso concomitante con inhibidores de la recaptación de serotonina'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O CONTROLE DO IMPULSO DOPAMINÉRGICO: Avise a família de que o acúmulo de dopamina gerado pela Safinamida pode ligar o "modo vício" no cérebro do idoso. Ele pode começar a gastar fortunas no jogo, ter desejos sexuais bizarros e inapropriados ou ficar limpando a casa obsessivamente de madrugada.', es: 'EL CONTROL DEL IMPULSO: Avise a la familia que el acúmulo de dopamina por Safinamida puede encender el "modo vicio" en el anciano. Puede empezar a gastar fortunas en juegos, tener deseos sexuales inapropiados o limpiar obsesivamente de madrugada.' }
+      }
+    },
+
+    /* ── OPICAPONA ──────────────────────────────────────────────────────── */
+    "opicapona": {
+      name: { pt: 'Opicapona', es: 'Opicapona' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Inibidor Periférico Altamente Seletivo da COMT', es: 'Inhibidor Periférico Altamente Selectivo de la COMT' },
+      indications: {
+        pt: ['Doença de Parkinson avançada com flutuações motoras de fim de dose ("Wearing-Off"), como terapia adjuvante à Levodopa'],
+        es: ['Enfermedad de Parkinson avanzada con fluctuaciones motoras de fin de dosis ("Wearing-Off"), como terapia adyuvante a la Levodopa']
+      },
+      commercialNames: { br: ['Ongentys'], ar: ['Ongentys'] },
+      presentation: { pt: ['Cápsulas duras 50 mg'], es: ['Cápsulas duras 50 mg'] },
+      mechanism: {
+        pt: 'A Terceira Geração de inibidores da COMT. A Opicapona tem uma afinidade de ligação absurdamente longa com a enzima COMT na periferia do corpo (sangue), durando mais de 24 horas. Ela blinda a Levodopa no sangue de forma avassaladora, fazendo com que muito mais remédio entre no cérebro. A glória desta droga é que ela NÃO CRUZA a barreira hematoencefálica (diferente da antiga Tolcapona), anulando totalmente o risco de destruição fulminante do fígado.',
+        es: 'La tercera generación de inhibidores de la COMT. La Opicapona tiene una afinidad de unión larguísima con la enzima COMT periférica, durando más de 24 horas. Blinda la Levodopa en sangre de forma avasalladora. La gloria de esta droga es que NO CRUZA al cerebro, anulando el riesgo de destrucción del hígado.'
+      },
+      dose: {
+        adult: {
+          pt: '50 mg via oral UMA VEZ ao dia, obrigatoriamente administrada à noite, antes de dormir.',
+          es: '50 mg vía oral UNA VEZ al día, obligatoriamente administrada a la noche, antes de dormir.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['REGRA RÍGIDA DE TOMADA: Deve ser ingerida de estômago vazio, pelo menos 1 hora ANTES ou 1 hora DEPOIS de qualquer dose de Levodopa do dia. A comida e a própria levodopa esmagam a sua absorção intestinal.'], es: ['REGLA RÍGIDA DE TOMA: Debe ingerirse con estómago vacío, al menos 1 hora ANTES o 1 hora DESPUÉS de cualquier dosis de Levodopa. La comida y la propia levodopa aplastan su absorción intestinal.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste direto.', es: 'Sin necesidad de ajuste directo.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Uso não recomendado em insuficiência hepática grave devido à ausência de dados clínicos de clearance.', es: 'Uso no recomendado en insuficiencia hepática grave debido a la ausencia de datos.' } },
+      commonAdverseEffects: { pt: ['Discinesias violentas (exige reduzir a dose da Levodopa diária)', 'Constipação intestinal', 'Tontura e boca seca'], es: ['Discinesias violentas (exige reducir la dosis de Levodopa)', 'Constipación intestinal', 'Mareo y boca seca'] },
+      dangerousAdverseEffects: { pt: ['Alucinações psicóticas agudas', 'Hipotensão ortostática severa (risco de queda e fratura de fêmur)'], es: ['Alucinaciones psicóticas agudas', 'Hipotensión postural severa (riesgo de caída y fractura de fémur)'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de Feocromocitoma ou Paraganglioma (risco de pico de noradrenalina fatal)', 'Histórico de Síndrome Neuroléptica Maligna'], es: ['Historial de Feocromocitoma o Paraganglioma (riesgo de pico de noradrenalina fatal)', 'Historial de Síndrome Neuroléptico Maligno'] },
+        relative: { pt: ['Uso conjunto com antidepressivos IMAO não-seletivos'], es: ['Uso conjunto con antidepresivos IMAO no selectivos'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A COMODIDADE VENCEDORA: A Opicapona destronou a antiga Entacapona e Tolcapona porque é tomada apenas 1 vez ao dia antes de deitar, limpando o paciente parkinsoniano da obrigação de tomar pílulas associadas a cada 4 horas durante o dia.', es: 'LA COMODIDAD GANADORA: La Opicapona destronó a la antigua Entacapona porque se toma solo 1 vez al día antes de acostarse, limpiando al parkinsoniano de la obligación de tomar píldoras asociadas cada 4 horas.' }
+      }
+    },
+
+    /* ── TRIEXIFENIDIL ──────────────────────────────────────────────────── */
+    "triexifenidil": {
+      name: { pt: 'Triexifenidil (Cloridrato de)', es: 'Trihexifenidilo (Clorhidrato de)' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Anticolinérgico Central (Antagonista Muscarínico)', es: 'Anticolinérgico Central (Antagonista Muscarínico)' },
+      indications: {
+        pt: ['Controle do Tremor de repouso severo na Doença de Parkinson (especialmente em pacientes jovens)', 'Tratamento de Sintomas Extraparamidais e Distonias Agudas causadas por Antipsicóticos (Haldol) ou Antieméticos (Plasil)'],
+        es: ['Control del Tremor de reposo severo en la Enfermedad de Parkinson (en jóvenes)', 'Tratamiento de Síntomas Extrapiramidales y Distonías Agudas causadas por Antipsicóticos o Antieméticos']
+      },
+      commercialNames: { br: ['Artane'], ar: ['Artane'] },
+      presentation: { pt: ['Comprimidos 2 mg e 5 mg'], es: ['Comprimidos 2 mg y 5 mg'] },
+      mechanism: {
+        pt: 'O cérebro parkinsoniano perde dopamina. Quando a dopamina cai, a ACETILCOLINA sobe de forma descontrolada nos gânglios da base, provocando aquele tremor característico de "contar moedas". O Triexifenidil entra no cérebro e bloqueia diretamente os receptores muscarínicos, derrubando a acetilcolina e parando o tremor por força anticolinérgica direta.',
+        es: 'El cerebro parkinsoniano pierde dopamina. Cuando la dopamina cae, la ACETILCOLINA sube de forma descontrolada, provocando el temblor característico de "contar monedas". El Trihexifenidilo bloquea los receptores muscarínicos cerebrales, apagando el temblor.'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciar com 1 mg via oral no dia 1. Subir para 2 mg divididos em doses diárias. Dose de manutenção: 5 mg a 15 mg/dia, divididos em 3 tomadas junto às refeições.',
+          es: 'Iniciar con 1 mg vía oral el día 1. Subir a 2 mg divididos. Dosis de mantenimiento: 5 mg a 15 mg/día, divididos en 3 tomas junto a las comidas.'
+        },
+        pediatric: { pt: 'Uso restrito off-label para distonias graves induzidas por paralisia cerebral.', es: 'Uso restringido off-label para distonías graves inducidas por parálisis cerebral.' }
+      },
+      administration: { pt: ['Deve ser tomado junto com as refeições para evitar irritação gástrica. Causa boca seca imediata, o que exige pastilhas ou gomas de mascar para aliviar.'], es: ['Debe tomarse junto con las comidas para evitar irritación gástrica. Causa boca seca inmediata, lo que exige caramelos o gomas de mascar para aliviar.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito, monitorar sintomas.', es: 'Sin necesidad de ajuste estricto, monitorizar síntomas.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Metabolizado no fígado, precaução em cirróticos.', es: 'Metabolizado en hígado, precaución en cirróticos.' } },
+      commonAdverseEffects: { pt: ['Boca seca extrema (xerostomia)', 'Visão borrada (cicloplegia / paralisia da pupila)', 'Constipação e Taquicardia'], es: ['Boca seca extrema (xerostomía)', 'Visión borrosa (cicloplejía / parálisis de la pupila)', 'Constipación y Taquicardia'] },
+      dangerousAdverseEffects: { pt: ['DELÍRIO ANTICOLINÉRGICO EM IDOSOS (Alucinações terroríficas, confusão mental profunda e agitação psicomotora)', 'Glaucoma agudo de ângulo fechado precipitado', 'Retenção urinária aguda com globo vesical'], es: ['DELIRIUM ANTICOLINÉRGICO EN ANCIANOS (Alucinaciones terroríficas, confusión y agitación)', 'Glaucoma agudo de ángulo cerrado', 'Retención urinaria aguda con globo vesical'] },
+      contraindications: {
+        absolute: { pt: ['Glaucoma de ângulo fechado', 'Hiperplasia Prostática Benigna obstrutiva', 'Idosos dementes (Lista de Beers - Droga altamente inapropriada)'], es: ['Glaucoma de ángulo cerrado', 'Hiperplasia Prostática Benigna obstructiva', 'Ancianos dementes (Criterios de Beers - Altamente inapropiada)'] },
+        relative: { pt: ['Pacientes com taquiarritmias ou coronariopatias graves'], es: ['Pacientes con taquiarritmias o coronariopatías graves'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'A DROGA DA DEMÊNCIA AGUDA: Nunca prescreva Triexifenidil para um idoso de 75 anos para tratar tremor. Ele vai parar de tremer, mas vai ter um surto psicótico anticolinérgico na mesma noite, deixando de reconhecer a família e gritando de pânico. É uma droga maravilhosa apenas para parkinsonianos JOVENS.', es: 'LA DROGA DE LA DEMENCIA AGUDA: Nunca prescriba Trihexifenidilo a un anciano de 75 años. Dejará de temblar, pero tendrá un brote psicótico anticolinérgico esa misma noche, desconociendo a la familia. Es una droga maravillosa solo para parkinsonianos JÓVENES.' }
+      }
+    },
+
+    /* ── BENZTROPINA ────────────────────────────────────────────────────── */
+    "benztropina": {
+      name: { pt: 'Benztropina (Mesilato de)', es: 'Benzatropina (Mesilato de)' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Anticolinérgico Central e Anti-histamínico', es: 'Anticolinérgico Central y Antihistamínico' },
+      indications: {
+        pt: ['Tratamento de emergência de Reações Distônicas Agudas induzidas por drogas (crise oculógira, torcicolo traumático por antipsicóticos)', 'Parkinsonismo secundário a neurolépticos'],
+        es: ['Tratamiento de emergencia de Reacciones Distónicas Agudas inducidas por drogas (crisis oculógira por antipsicóticos)', 'Parkinsonismo secundario a neurolépticos']
+      },
+      commercialNames: { br: ['Cogentin (Importado/Uso hospitalar)'], ar: ['Cogentin'] },
+      presentation: { pt: ['Ampolas IV/IM 1 mg/mL', 'Comprimidos 0,5 mg, 1 mg e 2 mg'], es: ['Ampollas IV/IM 1 mg/mL', 'Comprimidos 0,5 mg, 1 mg y 2 mg'] },
+      mechanism: {
+        pt: 'Uma fusão química molecular de Atropina com Difenidramina. A Benztropina possui um bloqueio muscarínico central extremamente potente combinado com um bloqueio histamínico H1. Ao ser injetada na veia de um paciente travado por efeito colateral de antipsicóticos, ela desliga instantaneamente o espasmo colinérgico do tronco cerebral, relaxando o corpo em minutos.',
+        es: 'Una fusión química molecular de Atropina con Difenhidramina. Posee un bloqueo muscarínico central extremadamente potente combinado con un bloqueo histamínico H1. Al inyectarse en vena, apaga instantáneamente el espasmo colinérgico del tronco cerebral, relajando el cuerpo en minutos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Crise Distônica Oral/Emergência: 1 a 2 mg via Intramuscular (IM) ou Intravenosa (IV) imediata. Pode repetir se o espasmo persistir. Manutenção oral: 1 a 4 mg/dia divididos.',
+          es: 'Crisis Distónica de Emergencia: 1 a 2 mg vía Intramuscular (IM) o Intravenosa (IV) inmediata. Puede repetir si el espasmo persiste. Mantenimiento oral: 1 a 4 mg/día.'
+        },
+        pediatric: { pt: 'Não recomendado em menores de 3 anos; maiores de 3 anos sob rigoroso cálculo e indicação neurológica.', es: 'No recomendado en menores de 3 años.' }
+      },
+      administration: { pt: ['Injeção IV deve ser lenta. O efeito IM é altamente confiável e mais seguro contra picos de taquicardia em pronto-socorro.'], es: ['Inyección IV debe ser lenta. El efecto IM es altamente confiable y más seguro contra picos de taquicardia en urgencias.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estrito.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Usar com cautela em cirróticos.', es: 'Usar con cautela en cirróticos.' } },
+      commonAdverseEffects: { pt: ['Retenção urinária leve', 'Boca seca e visão borrada', 'Sedação leve (pelo componente histamínico)'], es: ['Retención urinaria leve', 'Boca seca y visión borrosa', 'Sedación leve (por el componente histamínico)'] },
+      dangerousAdverseEffects: { pt: ['Toxidrome Anticolinérgica completa com hipertermia severa', 'Íleo paralítico (parada do intestino com obstrução fecal)'], es: ['Toxídrome Anticolinérgica completa con hipertermia severa', 'Íleo paralítico (parada del intestino con obstrucción fecal)'] },
+      contraindications: {
+        absolute: { pt: ['Crianças menores de 3 anos', 'Glaucoma de ângulo fechado', 'Megacólon tóxico'], es: ['Niños menores de 3 años', 'Glaucoma de ángulo cerrado', 'Megacolon tóxico'] },
+        relative: { pt: ['Idosos frágeis (Risco extremo de delírio e retenção oculta de urina)'], es: ['Ancianos frágiles (Riesgo extremo de delirium y retención oculta de orina)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'O BALANÇO DO ANTIPSICÓTICO: A Benztropina limpa a distonia do Haldol, mas o uso contínuo oral em pacientes psiquiátricos crônicos pode mascarar e, pior, AGRAVAR a temida Discinesia Tardia (movimentos involuntários de lamber e mastigar da boca) que é irreversível. Monitore.', es: 'EL BALANCE DEL ANTIPSICÓTICO: La Benzatropina limpia la distonía por Haldol, pero el uso continuo oral en pacientes psiquiátricos crónicos puede enmascarar y AGRAVAR la temida Discinesia Tardía, que es irreversible. Monitoree.' }
+      }
+    },
+
+    /* ── PIMAVANSERINA ──────────────────────────────────────────────────── */
+    "pimavanserina": {
+      name: { pt: 'Pimavanserina', es: 'Pimavanserina' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Antipsicótico Atípico (Agonista Inverso do Receptor 5-HT2A)', es: 'Antipsicótico Atípico (Agonista Inverso del Receptor 5-HT2A)' },
+      indications: {
+        pt: ['Tratamento de Alucinações e Delírios associados à Psicose da Doença de Parkinson (O único fármaco aprovado que trata a loucura sem estragar o movimento)'],
+        es: ['Tratamiento de Alucinaciones y Delirios asociados a la Psicosis de la Enfermedad de Parkinson (El único fármaco que trata la locura sin dañar el movimiento)']
+      },
+      commercialNames: { br: ['Nuplazid (Importação especializada)'], ar: ['Nuplazid'] },
+      presentation: { pt: ['Comprimidos 34 mg (Equivalente a 40 mg de tartarato)'], es: ['Comprimidos 34 mg'] },
+      mechanism: {
+        pt: 'A Joia da Coroa da Neuropsiquiatria. Todos os antipsicóticos do mundo (Haldol, Risperidona, Olanzapina) curam alucinações bloqueando os receptores D2 de Dopamina. Se você der isso para um parkinsoniano, ele para de ver fantasmas, mas trava os músculos completamente e fica estátua. A Pimavanserina tem ZERO afinidade por receptores D2. Ela age como agonista inverso EXCLUSIVAMENTE nos receptores de Serotonina 5-HT2A. Ela desliga as alucinações de forma limpa, mantendo a dopamina motora intacta.',
+        es: 'La Joya de la Neuropsiquiatría. Todos los antipsicóticos curan alucinaciones bloqueando receptores D2 de Dopamina. Si das eso a un parkinsoniano, deja de ver fantasmas, pero se congela por completo. Pimavanserina tiene CERO afinidad por D2. Actúa EXCLUSIVAMENTE en receptores de Serotonina 5-HT2A. Apaga las alucinaciones manteniendo la dopamina motora intacta.'
+      },
+      dose: {
+        adult: {
+          pt: '34 mg via oral, UMA VEZ ao dia, continuamente.',
+          es: '34 mg vía oral, UNA VEZ al día, continuamente.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos. O efeito terapêutico real pode demorar de 4 a 6 semanas de tomadas diárias para se consolidar no cérebro.'], es: ['Puede tomarse con o sin alimentos. El efecto terapéutico real puede tardar de 4 a 6 semanas de tomas diarias para consolidarse en el cerebro.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste na insuficiência renal leve a moderada.', es: 'Sin necesidad de ajuste en insuficiencia renal leve a moderada.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Uso não recomendado em insuficiência hepática grave devido ao metabolismo extensivo por CYP3A4.', es: 'Uso no recomendado en insuficiencia hepática grave debido al metabolismo extensivo por CYP3A4.' } },
+      commonAdverseEffects: { pt: ['Edema periférico (inchaço nas pernas)', 'Confusão mental transitória inicial', 'Constipação e náuseas'], es: ['Edema periférico (hinchazón en las piernas)', 'Confusión mental transitoria inicial', 'Constipación y náuseas'] },
+      dangerousAdverseEffects: { pt: ['PROLONGAMENTO DO INTERVALO QT (Risco de arritmia ventricular fatal Torsades de Pointes)', 'Aumento de mortalidade em idosos com psicose associada à demência (Alerta Black Box)'], es: ['PROLONGACIÓN DEL INTERVALO QT (Riesgo de arritmia fatal Torsades de Pointes)', 'Aumento de mortalidad en ancianos con psicosis por demencia (Caja Negra)'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com histórico de QT longo congênito ou arritmias cardíacas ativas', 'Uso conjunto com outras drogas que prolongam o QT (Amiodarona, Haloperidol)'], es: ['Pacientes con historial de QT largo congénito o arritmias activas', 'Uso conjunto con otras drogas que prolongan el QT (Amiodarona)'] },
+        relative: { pt: ['Uso associado com inibidores potentes do CYP3A4 (Cetoconazol), exige reduzir a dose pela metade'], es: ['Uso asociado con inhibidores potentes del CYP3A4 (Ketoconazol), exige reducir la dosis a la mitad'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'BLACK BOX WARNING DE MORTALIDADE: Embora seja a única droga que salva o parkinsoniano com surto psicótico, ela carrega o terrível alerta de classe de todos os antipsicóticos: aumenta o risco de morte súbita ou AVC em idosos dementes. O uso deve ser pesado com extrema seriedade pela família.', es: 'BLACK BOX WARNING DE MORTALIDAD: Aunque es la única droga que salva al parkinsoniano con psicosis, carga el terrible alerta de clase: aumenta el riesgo de muerte súbita o ACV en ancianos dementes. El uso debe ser sopesado con extrema seriedad.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 412 append */
+})();
