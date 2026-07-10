@@ -1237,6 +1237,25 @@ const DRUG_CLASSES = {
 
   "$classe_calcimimeticos": [
     "cinacalcete", "etelcalcetida"
+  ],
+
+  /* ── BUILD 420: Nefrologia — Aquarético IV + Alcalinizantes + Ferro IV ── */
+  /* Estatinas + Bloqueadores de Canal de Cálcio (CYP3A4-dependentes — alvo do Conivaptana) */
+  "$classe_estatinas_bloqueadores_calcio": [
+    "atorvastatina", "sinvastatina", "rosuvastatina", "pravastatina",
+    "fluvastatina", "lovastatina", "pitavastatina",
+    "anlodipino", "nifedipino", "diltiazem", "verapamil",
+    "felodipino", "lercanidipino", "nitrendipino"
+  ],
+
+  /* IECAs + BRAs + Espironolactona (poupadores de potássio — risco hipercalemia com Citrato K+) */
+  "$classe_iec_bra_espironolactona": [
+    "captopril", "enalapril", "lisinopril", "ramipril",
+    "perindopril", "quinapril", "fosinopril", "trandolapril",
+    "benazepril", "cilazapril",
+    "losartana", "valsartana", "olmesartana", "telmisartana",
+    "irbesartana", "candesartana", "azilsartana", "eprosartana",
+    "espironolactona", "eplerenona"
   ]
 
 };
@@ -23627,9 +23646,63 @@ const INTERACOES_DB = {
         es: "PROHIBIDO USO CONJUNTO. Nunca asociar Tolvaptana a inhibidores potentes de CYP3A4."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES BUILD 420:
+   Água, Cálcio Urinário e Alta Carga de Ferro
+   Conivaptana, Citrato de Potássio, Carboximaltose Férrica
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── CONIVAPTANA (A Inibição Enzimática Acidental — CYP3A4) ── */
+  "conivaptana": {
+    "$classe_estatinas_bloqueadores_calcio": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "RABDOMIÓLISE E CHOQUE HIPOTENSIVO. Embora a Conivaptana seja usada na UTI para urinar água pura (aquarético), ela possui um efeito oculto: é um inibidor extremamente potente do citocromo CYP3A4 no fígado. Se o paciente estiver usando Sinvastatina, os níveis da estatina sobem astronomicamente e derretem os músculos (rabdomiólise). Se usar Amlodipino/Nifedipino, os bloqueadores de cálcio explodem no sangue causando choque vasoplégico e parada cardíaca.",
+        es: "RABDOMIÓLISIS Y CHOQUE HIPOTENSIVO. Aunque el Conivaptán se usa en la UCI para orinar agua, es un inhibidor extremadamente potente del CYP3A4 en el hígado. Si usa Simvastatina, los niveles suben y derriten los músculos (rabdomiólisis). Si usa Amlodipino, causan choque vasopléjico y parada cardíaca."
+      },
+      conduta: {
+        pt: "É MASCARAMENTO METABÓLICO. Qualquer medicamento dependente de CYP3A4 (Estatinas, Bloqueadores de Cálcio, Benzodiazepínicos) deve ter sua dose brutalmente reduzida ou evitada durante a infusão contínua da Conivaptana.",
+        es: "Cualquier medicamento dependiente de CYP3A4 debe tener su dosis brutalmente reducida o evitada durante la infusión continua del Conivaptán."
+      }
+    }
+  },
+
+  /* ── CITRATO DE POTÁSSIO (O Colapso Renal de Potássio) ── */
+  "citrato_de_potassio": {
+    "$classe_iec_bra_espironolactona": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "PARADA EM DIÁSTOLE (HIPERCALEMIA EXTREMA). O paciente ingere comprimidos de Citrato de Potássio para evitar pedra nos rins (recebendo carga massiva de potássio livre diária). Se ele for hipertenso e o cardiologista receitar Losartana, Enalapril ou Espironolactona, o rim PERDE a capacidade de jogar esse potássio fora. O sangue vira uma bomba de potássio, levando a fraqueza muscular em dias e Parada Cardíaca Silenciosa em Diástole.",
+        es: "PARADA EN DIÁSTOLE (HIPERPOTASEMIA EXTREMA). El paciente ingiere Citrato de Potasio para evitar piedras. Si el cardiólogo receta Losartán, Enalapril o Espironolactona, el riñón PIERDE la capacidad de expulsar potasio. La sangre se vuelve una bomba de potasio, llevando a Parada Cardíaca Silenciosa."
+      },
+      conduta: {
+        pt: "A associação não é totalmente proibida, MAS exige exames de sangue (potássio sérico) semanais nos primeiros 30 dias de combinação e eletrocardiograma se passar de 5,5 mEq/L.",
+        es: "La asociación exige exámenes de sangre (potasio sérico) semanales en los primeros 30 días de combinación y ECG si pasa de 5,5 mEq/L."
+      }
+    }
+  },
+
+  /* ── CARBOXIMALTOSE FÉRRICA (A Tempestade de Fósforo — FGF23) ── */
+  "carboximaltose_ferrica": {
+    "vitamina_d_calcio_suplementos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "CRISE DE OSTEOMALÁCIA PARADOXAL (Efeito FGF23). A Carboximaltose Férrica desencadeia um aumento bizarro do hormônio FGF23 no sangue. O FGF23 diz para o rim jogar todo o Fósforo fora e ainda por cima DESLIGA a ativação de vitamina D. O paciente que tentar suplementar Cálcio e Vitamina D terá todo o seu tratamento inativado quimicamente, resultando em fraqueza óssea massiva algumas semanas após a injeção do ferro.",
+        es: "CRISIS DE OSTEOMALACIA PARADÓJICA (Efecto FGF23). La Carboximaltosa Férrica desencadena un aumento bizarro de la hormona FGF23. El FGF23 dice al riñón expulsar todo el Fósforo y APAGA la activación de vitamina D. El paciente sufrirá debilidad ósea masiva."
+      },
+      conduta: {
+        pt: "Pacientes submetidos à infusão de alta dosagem do Ferinject devem ser avisados da fadiga óssea tardia e ter os níveis de fósforo testados 2 a 3 semanas após a infusão, repondo fósforo puro se necessário.",
+        es: "Pacientes sometidos a infusión de alta dosis deben tener los niveles de fósforo probados 2 a 3 semanas tras la infusión, reponiendo fósforo puro si es necesario."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

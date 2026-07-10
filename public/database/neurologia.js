@@ -4556,3 +4556,253 @@
 
   }); /* fim Object.assign BUILD 419 append */
 })();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   BUILD 420 — Nefrologia: Engenharia da Água Hospitalar e a Forja do Sangue
+   +5 drogas: Conivaptana | Citrato de Potássio | Citrato Sódio+Ác.Cítrico
+              Sacarato de Hidróxido Férrico | Carboximaltose Férrica
+   category: nefrologia (×4) | urologia (×1: citrato_de_potassio)
+   icon: 🫘 color: #0369A1 colorTxt: #ffffff (nefrologia)
+   icon: 💧 color: #0891B2 colorTxt: #ffffff (urologia — definido neste build)
+══════════════════════════════════════════════════════════════════════════ */
+(function(){
+  if(!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) window.NEUROLOGIA_DRUGS_DB={};
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── CONIVAPTANA ────────────────────────────────────────────────────── */
+    "conivaptana": {
+      name: { pt: 'Conivaptana (Cloridrato de)', es: 'Conivaptán (Clorhidrato de)' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Antagonista Misto dos Receptores de Vasopressina (V1a e V2) / Aquarético IV', es: 'Antagonista Mixto de los Receptores de Vasopresina (V1a y V2) / Acuarético IV' },
+      indications: {
+        pt: ['Tratamento agudo de Hiponatremia euvolêmica e hipervolêmica em pacientes hospitalizados (ex: SIADH, Insuficiência Cardíaca)'],
+        es: ['Tratamiento agudo de Hiponatremia euvolémica e hipervolémica en pacientes hospitalizados (ej: SIADH, Insuficiencia Cardíaca)']
+      },
+      commercialNames: { br: ['Vaprisol (Importação hospitalar)'], ar: ['Vaprisol'] },
+      presentation: { pt: ['Ampolas IV 20 mg/100 mL para infusão'], es: ['Ampollas IV 20 mg/100 mL para infusión'] },
+      mechanism: {
+        pt: 'A "Torneira Venosa". Diferente da Tolvaptana (oral, apenas V2), a Conivaptana é estritamente intravenosa e bloqueia simultaneamente dois receptores: o V2 nos rins (abrindo as comportas de água livre, fazendo o paciente urinar litros sem perder sódio) e o V1a nas artérias (causando vasodilatação periférica). Isso abaixa a pressão do coração enquanto concentra o sódio do sangue, tirando o cérebro do risco de edema.',
+        es: 'El "Grifo Venoso". A diferencia del Tolvaptán, el Conivaptán es intravenoso y bloquea dos receptores: el V2 en el riñón (eliminando agua libre sin perder sodio) y el V1a en las arterias (causando vasodilatación periférica). Baja la presión del corazón mientras concentra el sodio.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose de ataque: 20 mg IV administrados ao longo de 30 minutos. Manutenção: Infusão contínua de 20 mg a 40 mg ao longo de 24 horas. O uso MÁXIMO não deve exceder 4 dias.',
+          es: 'Ataque: 20 mg IV en 30 minutos. Mantenimiento: Infusión continua de 20 a 40 mg por 24 horas. El uso MÁXIMO no debe exceder 4 días.'
+        },
+        pediatric: {
+          pt: 'Não indicado e não testado na pediatria.',
+          es: 'No indicado y no probado en pediatría.'
+        }
+      },
+      administration: { pt: ['APENAS via intravenosa em veias de grosso calibre. Trocar o local da infusão a cada 24h pelo alto risco de flebite necrótica (a droga é muito irritante para o vaso).'], es: ['SOLO vía intravenosa en venas de gran calibre. Cambiar el sitio de infusión cada 24h por alto riesgo de flebitis necrótica.'] },
+      renalAdjustment: { required: true, message: { pt: 'Não usar se o paciente for anúrico. Efeito inútil sem o túbulo.', es: 'No usar si el paciente es anúrico.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir dose em insuficiência hepática moderada a grave. O limite é 20mg/dia máximo.', es: 'Reducir dosis en insuficiencia hepática moderada a grave.' } },
+      commonAdverseEffects: { pt: ['Reação no local de infusão (Dor crônica na veia e tromboflebite)', 'Sede insaciável e boca seca', 'Hipocalemia (baixa de potássio)'], es: ['Reacción en el sitio de infusión (Dolor en la vena y flebitis)', 'Sed insaciable y boca seca', 'Hipopotasemia'] },
+      dangerousAdverseEffects: { pt: ['Mielinólise Pontina Central (Se o sódio subir mais que 12 mEq em 24h, rompendo a ponte cerebral)', 'Hipotensão aguda severa (Pelo efeito V1a vasodilatador)'], es: ['Mielinolisis Pontina Central (Si el sodio sube muy rápido)', 'Hipotensión aguda severa'] },
+      contraindications: {
+        absolute: { pt: ['Hiponatremia hipovolêmica (Choque hemorrágico/Desidratação)', 'Alergia a proteínas do milho (o excipiente contém derivado de milho)'], es: ['Hiponatremia hipovolémica', 'Alergia a proteínas del maíz'] },
+        relative: { pt: ['Insuficiência cardíaca grave com choque hipotensivo'], es: ['Insuficiencia cardíaca grave con choque hipotensivo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A REGRA DOS 4 DIAS: O FDA proibiu o uso contínuo de Conivaptana por mais de 4 dias. A inibição prolongada bloqueia as vias de metabolização hepática de forma tão agressiva que transforma a droga em um veneno iatrogênico se usada cronicamente.', es: 'LA REGLA DE LOS 4 DÍAS: La FDA prohibió el uso continuo por más de 4 días. La inhibición prolongada bloquea el hígado de forma agresiva transformando la droga en veneno.' }
+      },
+      references: {
+        pt: 'FDA Label (Vaprisol); Diretrizes AHA/ACC para Insuficiência Cardíaca; Micromedex Renal Dosing.',
+        es: 'FDA Label (Vaprisol); Directrices AHA/ACC para Insuficiencia Cardíaca; Micromedex.'
+      }
+    },
+
+    /* ── CITRATO DE POTÁSSIO ────────────────────────────────────────────── */
+    "citrato_de_potassio": {
+      name: { pt: 'Citrato de Potássio', es: 'Citrato de Potasio' },
+      category: 'urologia',
+      icon: '💧',
+      color: '#0891B2',
+      colorTxt: '#ffffff',
+      class: { pt: 'Alcalinizante Urinário / Suplemento Eletrolítico', es: 'Alcalinizante Urinario / Suplemento Electrolítico' },
+      indications: {
+        pt: ['Prevenção da formação de cálculos renais (Pedras de oxalato de cálcio, ácido úrico e cistina)', 'Acidose Tubular Renal com nefrolitíase por cálcio', 'Hipocalemia (Repositor de potássio)'],
+        es: ['Prevención de la formación de cálculos renales (Piedras de oxalato de calcio, ácido úrico y cistina)', 'Acidosis Tubular Renal', 'Hipopotasemia']
+      },
+      commercialNames: { br: ['Urocit-K', 'Litocit'], ar: ['Urocit-K'] },
+      presentation: { pt: ['Comprimidos de Liberação Prolongada (Wax-matrix) 5 mEq, 10 mEq e 15 mEq'], es: ['Comprimidos de Liberación Prolongada 5 mEq, 10 mEq y 15 mEq'] },
+      mechanism: {
+        pt: 'O "Anticristalizante". O corpo metaboliza o citrato no fígado e gera Bicarbonato. O bicarbonato alcaliniza o sangue e, consequentemente, a urina. Uma urina alcalina IMPEDE que os cristais de ácido úrico e oxalato de cálcio se unam para formar pedras (cálculos). Além disso, a presença direta de citrato na urina age como um escudo químico ao redor do cálcio, não deixando a pedra se formar.',
+        es: 'El "Anticristalizante". El cuerpo metaboliza el citrato generando Bicarbonato, que alcaliniza la orina. Una orina alcalina IMPIDE que los cristales se unan para formar piedras. Además, el citrato en la orina actúa como un escudo químico.'
+      },
+      dose: {
+        adult: {
+          pt: 'Geralmente 30 a 60 mEq por dia, divididos em 2 a 3 tomadas junto com as refeições (Máximo de 100 mEq/dia).',
+          es: 'Generalmente 30 a 60 mEq por día, divididos en 2 a 3 tomas con las comidas.'
+        },
+        pediatric: {
+          pt: 'Uso ajustado por especialista baseado em mEq/kg e monitoramento urinário.',
+          es: 'Uso ajustado por especialista basado en mEq/kg.'
+        }
+      },
+      administration: { pt: ['OBRIGATÓRIO ENGOLIR INTEIRO COM UM COPO CHEIO DE ÁGUA E JUNTO COM A COMIDA. Não amassar ou chupar a pílula. A matriz de cera (wax-matrix) costuma sair intacta nas fezes, avisar o paciente (a droga de dentro foi absorvida).'], es: ['OBLIGATORIO TRAGAR ENTERO CON AGUA Y JUNTO A LA COMIDA. La matriz de cera suele salir intacta en las heces, avisar al paciente.'] },
+      renalAdjustment: { required: true, message: { pt: 'CONTRAINDICADO formalmente em insuficiência renal crônica grave (Risco altíssimo de parada cardíaca por acúmulo de potássio livre).', es: 'CONTRAINDICADO formalmente en insuficiencia renal crónica grave (Riesgo de parada cardíaca).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade rigorosa.', es: 'Sin necesidad rigurosa.' } },
+      commonAdverseEffects: { pt: ['Desconforto gástrico leve', 'Náuseas e flatulência', 'Visualização do "fantasma" do comprimido nas fezes'], es: ['Malestar gástrico leve', 'Náuseas y flatulencia', 'Visualización del "fantasma" del comprimido en heces'] },
+      dangerousAdverseEffects: { pt: ['HIPERCALEMIA LETAL (Se os rins não filtrarem, o potássio sobe e o coração para em diástole)', 'Ulceração gastrointestinal perfurante (Se o comprimido de cera ficar parado/travado no esôfago)'], es: ['HIPERPOTASEMIA LETAL (Si los riñones no filtran)', 'Ulceración gastrointestinal perforante (Si el comprimido se atasca)'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com Doença de Addison não tratada, Insuficiência Renal, hipercalemia basal', 'Atraso no esvaziamento gástrico ou estenose esofágica (risco de úlcera)'], es: ['Pacientes con Enfermedad de Addison, Insuficiencia Renal, hiperpotasemia basal', 'Retraso en el vaciado gástrico o estenosis esofágica'] },
+        relative: { pt: ['Infecção do trato urinário ativa por germes que desdobram ureia (A urina já é alcalina pela infecção)'], es: ['Infección del tracto urinario activa por gérmenes'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A QUEIMADURA DE POTÁSSIO: Os comprimidos de Urocit-K são feitos de matriz de cera. Se um paciente com o trânsito intestinal muito lento tomar isso e for deitar, a pílula pode parar no esôfago ou estômago, liberando sal de potássio puro no mesmo ponto por 8 horas, queimando e perfurando o órgão como um ácido.', es: 'LA QUEMADURA DE POTASIO: Los comprimidos son de matriz de cera. Si un paciente los toma y se acuesta, la píldora puede detenerse en el esófago, liberando sal de potasio y perforando el órgano como ácido.' }
+      },
+      references: {
+        pt: 'Diretrizes da EAU/AUA (European Association of Urology); Bula Urocit-K FDA; Tratado de Nefrologia de Brenner & Rector.',
+        es: 'Directrices de EAU/AUA; Prospecto Urocit-K FDA; Tratado de Nefrología de Brenner & Rector.'
+      }
+    },
+
+    /* ── CITRATO DE SÓDIO + ÁCIDO CÍTRICO ───────────────────────────────── */
+    "citrato_sodio_acido_citrico": {
+      name: { pt: 'Citrato de Sódio + Ácido Cítrico (Solução de Shohl)', es: 'Citrato de Sodio + Ácido Cítrico (Solución de Shohl)' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Alcalinizante Sistêmico e Urinário', es: 'Alcalinizante Sistémico y Urinario' },
+      indications: {
+        pt: ['Manejo da Acidose Metabólica crônica na Doença Renal Crônica', 'Alcalinização urinária prolongada (Prevenção de pedras de ácido úrico)'],
+        es: ['Manejo de la Acidosis Metabólica crónica en la Enfermedad Renal Crónica', 'Alcalinización urinaria prolongada (Prevención de piedras de ácido úrico)']
+      },
+      commercialNames: { br: ['Bicitra', 'Solução de Shohl (Manipulada)'], ar: ['Bicitra'] },
+      presentation: { pt: ['Solução Oral líquida (Cada 1 mL contém tipicamente 1 mEq de Sódio e 1 mEq de Bicarbonato potencial)'], es: ['Solución Oral líquida'] },
+      mechanism: {
+        pt: 'O "Bicarbonato Sem Gás". Na insuficiência renal, o sangue do paciente fica altamente ÁCIDO. A Solução de Shohl fornece íons citrato que são metabolizados pelo ciclo de Krebs no fígado, resultando na geração maciça de BICARBONATO de sódio de forma sistêmica. A enorme vantagem é que, por ser citrato e não "Bicarbonato de Sódio" puro, ela não solta gás carbônico no estômago do paciente, não causando inchaço e dor gástrica.',
+        es: 'El "Bicarbonato Sin Gas". En insuficiencia renal, la sangre se vuelve ÁCIDA. La Solución de Shohl proporciona citrato que se metaboliza en el hígado, generando BICARBONATO de sodio. La ventaja es que no libera gas carbónico en el estómago, no causando hinchazón.'
+      },
+      dose: {
+        adult: {
+          pt: '10 a 30 mL diluídos em água, 3 a 4 vezes ao dia APÓS as refeições e ao deitar.',
+          es: '10 a 30 mL diluidos en agua, 3 a 4 veces al día TRAS las comidas y al acostarse.'
+        },
+        pediatric: {
+          pt: '5 a 15 mL diluídos em água, 3 a 4 vezes ao dia.',
+          es: '5 a 15 mL diluidos en agua, 3 a 4 veces al día.'
+        }
+      },
+      administration: { pt: ['É absolutamente crucial DILUIR BEM em um copo de água ou suco antes de ingerir (para prevenir a diarreia osmótica da solução super concentrada).'], es: ['Es absolutamente crucial DILUIR BIEN en un vaso de agua o jugo antes de ingerir (para prevenir la diarrea osmótica).'] },
+      renalAdjustment: { required: true, message: { pt: 'Uso guiado pela gasometria. Cuidado extremo com a CARGA DE SÓDIO em pacientes renais oligoanúricos.', es: 'Uso guiado por gasometría. Cuidado extremo con la CARGA DE SODIO en renales anúricos.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Requer função hepática intacta (Se o fígado falhar, ele não transforma o citrato em bicarbonato, tornando a droga inútil).', es: 'Requiere función hepática intacta (Si el hígado falla, no transforma el citrato en bicarbonato).' } },
+      commonAdverseEffects: { pt: ['Diarreia e ação laxativa osmótica', 'Edema leve nos tornozelos (Sobrecarga de sódio)'], es: ['Diarrea y acción laxante osmótica', 'Edema leve en los tobillos (Sobrecarga de sodio)'] },
+      dangerousAdverseEffects: { pt: ['Alcalose Metabólica severa (Causa tremores, tetania e convulsões)', 'Edema Agudo de Pulmão em cardiopatas'], es: ['Alcalosis Metabólica severa (Causa temblores, tetania y convulsiones)', 'Edema Agudo de Pulmón en cardiópatas'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência Cardíaca severa com restrição total de sódio', 'Alcalose metabólica/respiratória prévia'], es: ['Insuficiencia Cardíaca severa con restricción total de sodio', 'Alcalosis metabólica/respiratoria previa'] },
+        relative: { pt: ['Pacientes que recebem diuréticos poupadores de potássio podem sofrer desbalanço de eletrólitos'], es: ['Pacientes con diuréticos ahorradores de potasio pueden sufrir desbalance de electrolitos'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A INTOXICAÇÃO PELO SAL: O Bicitra resolve a acidez renal perfeitamente, mas injeta grandes quantidades de SÓDIO. Se o paciente for um idoso hipertenso, de coração fraco, a acidez vai passar, mas ele irá morrer afogado nos próprios fluidos por insuficiência cardíaca hipervolêmica.', es: 'LA INTOXICACIÓN POR SAL: El Bicitra resuelve la acidez renal, pero inyecta grandes cantidades de SODIO. Si el paciente es anciano hipertenso, la acidez pasará, pero morirá ahogado en sus propios fluidos por insuficiencia cardíaca.' }
+      },
+      references: {
+        pt: 'FDA Label (Bicitra / Shohl Solution); KDIGO Guidelines for CKD Management.',
+        es: 'FDA Label (Bicitra); KDIGO Guidelines for CKD Management.'
+      }
+    },
+
+    /* ── SACARATO DE HIDRÓXIDO FÉRRICO ──────────────────────────────────── */
+    "sacarato_hidroxido_ferrico": {
+      name: { pt: 'Sacarato de Hidróxido Férrico (Ferro Sacarato)', es: 'Sacarato de Hidróxido Férrico (Hierro Sacarato)' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento Intravenoso de Ferro', es: 'Suplemento Intravenoso de Hierro' },
+      indications: {
+        pt: ['Anemia ferropriva severa em pacientes com DRC (Em hemodiálise ou fase conservadora)', 'Sangramento maciço crônico intolerante a ferro oral'],
+        es: ['Anemia ferropénica severa en pacientes con ERC (En hemodiálisis o fase conservadora)', 'Sangrado masivo crónico intolerante a hierro oral']
+      },
+      commercialNames: { br: ['Venofer', 'Noripurum IV'], ar: ['Venofer', 'Intrafer'] },
+      presentation: { pt: ['Ampolas IV contendo 100 mg de ferro elementar em 5 mL (20 mg/mL)'], es: ['Ampollas IV conteniendo 100 mg de hierro elemental en 5 mL'] },
+      mechanism: {
+        pt: 'A "Injeção de Vida" da Hemodiálise. Como as pílulas de ferro não são absorvidas direito pelo renal crônico, o Ferro Sacarato burla o intestino. A molécula é injetada na veia como um complexo ligado à sacarose. As células de defesa (macrófagos do sistema reticuloendotelial) "comem" esse complexo, soltam o açúcar e doam o Ferro PURO imediatamente para a medula fabricar novas hemácias junto com a Epoetina.',
+        es: 'La "Inyección de Vida" de la Hemodiálisis. Como las píldoras no se absorben bien, el Hierro Sacarato burla el intestino. Se inyecta en vena ligado a la sacarosa. Los macrófagos "comen" el complejo y donan el Hierro PURO a la médula para fabricar glóbulos rojos junto con Epoetina.'
+      },
+      dose: {
+        adult: {
+          pt: 'DRC Hemodiálise: 100 mg IV de forma lenta ao final de CADA UMA das sessões de diálise contínuas (ex: por 10 dias) até totalizar a dose de reposição (ex: 1.000 mg totais).',
+          es: 'ERC Hemodiálisis: 100 mg IV lento al final de CADA sesión de diálisis hasta totalizar la dosis de reposición (ej: 1.000 mg totales).'
+        },
+        pediatric: {
+          pt: '0,5 mg/kg (MÁXIMO de 100 mg/dose) por infusão na diálise.',
+          es: '0,5 mg/kg (MÁXIMO de 100 mg/dosis) por infusión en diálisis.'
+        }
+      },
+      administration: { pt: ['A injeção IV NUNCA PODE SER FEITA RÁPIDA (Bolus mínimo 5 min para 100mg, ou infusão em 15-30 min diluída em SF 0,9%). Injetar ferro rápido causa choque anafilactoide severo.'], es: ['La inyección IV NUNCA DEBE SER RÁPIDA. Inyectar hierro rápido causa choque anafilactoide severo.'] },
+      renalAdjustment: { required: false, message: { pt: 'Criado especificamente para suprir o renal crônico.', es: 'Creado específicamente para suplir al renal crónico.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em doença hepática severa, pois o excesso de ferro ficará aprisionado no fígado doente.', es: 'Evitar en enfermedad hepática severa.' } },
+      commonAdverseEffects: { pt: ['Gosto metálico horrível na boca de forma imediata na infusão', 'Queda transitória e leve de pressão arterial intradialítica', 'Cefaleia e dores musculares (costas)'], es: ['Gusto metálico horrible en la boca inmediato en la infusión', 'Caída transitoria de presión arterial', 'Cefalea y dolores musculares'] },
+      dangerousAdverseEffects: { pt: ['Choque anafilático e asma letal (Embora 10x mais seguro que o ferro dextrano antigo)', 'Hemocromatose secundária (Destruição do pâncreas e fígado por excesso crônico)'], es: ['Choque anafiláctico (Aunque 10x más seguro que el dextrano)', 'Hemocromatosis secundaria (Destrucción de órganos por exceso)'] },
+      contraindications: {
+        absolute: { pt: ['Anemias não causadas por falta de ferro (ex: Anemia megaloblástica por vitamina B12)', 'Sobrecarga de ferro comprovada (Ferritina > 1000)'], es: ['Anemias no causadas por falta de hierro', 'Sobrecarga de hierro comprobada'] },
+        relative: { pt: ['Pacientes com infecção sistêmica ativa grave ou Sepse (O ferro é a "comida" das bactérias, piorando a infecção)'], es: ['Pacientes con infección sistémica activa o Sepsis (El hierro alimenta a las bacterias)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'A COMIDA DO BACTÉRIA: É estritamente proibido administrar Ferro Intravenoso num paciente da UTI que esteja passando por um choque séptico ativo ou bacteremia (infecção no sangue). Bactérias dependem de íons férricos livres para se reproduzir; aplicar Venofer nelas é como jogar gasolina no incêndio.', es: 'LA COMIDA DE LA BACTERIA: Está estrictamente prohibido administrar Hierro Intravenoso a un paciente en la UCI con choque séptico. Las bacterias dependen del hierro para reproducirse; aplicar Venofer es echar gasolina al fuego.' }
+      },
+      references: {
+        pt: 'FDA Label (Venofer); KDIGO Anemia Management; Protocolos da Sociedade Brasileira de Nefrologia.',
+        es: 'FDA Label (Venofer); KDIGO Anemia Management; Protocolos Internacionales.'
+      }
+    },
+
+    /* ── CARBOXIMALTOSE FÉRRICA ─────────────────────────────────────────── */
+    "carboximaltose_ferrica": {
+      name: { pt: 'Carboximaltose Férrica', es: 'Carboximaltosa Férrica' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento Intravenoso Férrico de Alta Capacidade', es: 'Suplemento Intravenoso Férrico de Alta Capacidad' },
+      indications: {
+        pt: ['Anemia ferropriva grave onde o ferro oral é ineficaz ou não suportado', 'Pacientes com Insuficiência Cardíaca Sistólica com falta de ferro (Melhora dramática do cansaço independentemente da hemoglobina)', 'Doença Renal Crônica conservadora'],
+        es: ['Anemia ferropénica grave donde el hierro oral es ineficaz', 'Pacientes con Insuficiencia Cardíaca Sistólica con falta de hierro', 'Enfermedad Renal Crónica conservadora']
+      },
+      commercialNames: { br: ['Ferinject', 'Injectafer'], ar: ['Ferinject'] },
+      presentation: { pt: ['Frasco-ampola contendo 500 mg ou 1.000 mg de ferro elementar por frasco'], es: ['Vial conteniendo 500 mg o 1.000 mg de hierro elemental por frasco'] },
+      mechanism: {
+        pt: 'O "Tanque de Guerra do Ferro". O grande problema do Noripurum/Venofer é que não se pode injetar mais que 200mg por dia na veia (libera íons letais na circulação). A Carboximaltose Férrica blindou o ferro dentro de um carboidrato macromolecular super estável. Isso permite ao médico INJETAR MIL MILIGRAMAS (1.000 mg) EM APENAS 15 MINUTOS, enchendo o depósito de ferro do corpo para o ano todo de uma única vez, sem intoxicar o sangue.',
+        es: 'El "Tanque de Guerra del Hierro". La Carboximaltosa Férrica blindó el hierro dentro de un carbohidrato macromolecular super estable. Esto permite INYECTAR MIL MILIGRAMOS (1.000 mg) EN SOLO 15 MINUTOS, llenando el depósito para todo el año de una vez, sin intoxicar.'
+      },
+      dose: {
+        adult: {
+          pt: 'Peso > 50kg: Infusão Única Intravenosa de 1.000 mg (em 15 minutos). Se necessário, repete a mesma dose em 1 semana. Peso < 50kg: 15 mg/kg em dose única.',
+          es: 'Peso > 50kg: Infusión Única Intravenosa de 1.000 mg (en 15 minutos). Peso < 50kg: 15 mg/kg en dosis única.'
+        },
+        pediatric: {
+          pt: 'Limitado e ajustado rigidamente (ex: 15 mg/kg para maiores de 1 ano até o teto estrito do peso).',
+          es: 'Limitado y ajustado rígidamente por peso (15 mg/kg).'
+        }
+      },
+      administration: { pt: ['Deve ser diluída exclusivamente em SF 0,9%. Jamais administrar por via intramuscular. O tempo de infusão para 1.000mg é super curto (15 minutos), revolucionando a experiência ambulatorial.'], es: ['Diluir exclusivamente en SF 0,9%. Jamás intramuscular. Tiempo de infusión super corto (15 minutos), revolucionando la atención.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Acompanhar enzimas hepáticas; o fígado absorve boa parte da reserva massiva injetada.', es: 'Acompañar enzimas hepáticas; el hígado absorbe la reserva masiva inyectada.' } },
+      commonAdverseEffects: { pt: ['Cefaleia marcante e tontura', 'Aumento de pressão arterial transitório', 'Reação escura PERMANENTE na pele se o medicamento vazar da veia durante a aplicação'], es: ['Cefalea marcada y mareo', 'Aumento de presión arterial transitorio', 'Reacción oscura PERMANENTE en piel si el líquido gotea de la vena'] },
+      dangerousAdverseEffects: { pt: ['HIPOFOSFATEMIA SEVERA E PROLONGADA (Um perigo exclusivo desta formulação)', 'Anafilaxia letal'], es: ['HIPOFOSFATEMIA SEVERA Y PROLONGADA (Peligro exclusivo de esta formulación)', 'Anafilaxia letal'] },
+      contraindications: {
+        absolute: { pt: ['Alergia anterior a compostos de ferro parenterais', 'Hemocromatose'], es: ['Alergia anterior a compuestos de hierro parenterales', 'Hemocromatosis'] },
+        relative: { pt: ['Pacientes com níveis basais muito baixos de Fósforo'], es: ['Pacientes con niveles basales muy bajos de Fósforo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A PARALISIA PELA FALTA DE FÓSFORO: Diferente dos outros ferros, o Ferinject sequestra violentamente uma proteína chamada FGF23. O resultado bizarro: o rim começa a jogar todo o FÓSFORO do corpo fora na urina de forma incontrolável semanas após a injeção. O paciente pode entrar na emergência em choque de fraqueza e fraturas pela hipofosfatemia massiva. Monitore o fósforo pós-infusão.', es: 'LA PARÁLISIS POR FALTA DE FÓSFORO: A diferencia de otros hierros, Ferinject secuestra violentamente la proteína FGF23. El riñón comienza a expulsar todo el FÓSFORO en la orina de forma incontrolable. El paciente puede entrar en choque por hipofosfatemia masiva. Monitorice.' }
+      },
+      references: {
+        pt: 'FDA Label (Injectafer); Diretrizes da ESC/AHA para Insuficiência Cardíaca com déficit de ferro; Publicações de segurança do FGF23.',
+        es: 'FDA Label (Injectafer); Directrices de ESC/AHA para Insuficiencia Cardíaca; Publicaciones de seguridad del FGF23.'
+      }
+    }
+
+  }); /* fim Object.assign BUILD 420 append */
+})();
