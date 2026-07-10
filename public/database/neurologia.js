@@ -2347,3 +2347,228 @@
 
   }); /* fim Object.assign BUILD 409 append */
 })();
+
+/* ── BUILD 410 APPEND — Alta Epilepsia: AMPA/Dravet/Lennox/Focais Resistentes ── */
+(function () {
+  if (typeof window.NEUROLOGIA_DRUGS_DB !== 'object' || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) {
+    window.NEUROLOGIA_DRUGS_DB = {};
+  }
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── PERAMPANEL ─────────────────────────────────────────────────────── */
+    "perampanel": {
+      name: { pt: 'Perampanel', es: 'Perampanel' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Antagonista Não-Competitivo do Receptor AMPA (Glutamato)', es: 'Antagonista No Competitivo del Receptor AMPA (Glutamato)' },
+      indications: {
+        pt: ['Terapia adjuvante para convulsões focais (com ou sem generalização secundária)', 'Convulsões tônico-clônicas generalizadas primárias em pacientes > 12 anos'],
+        es: ['Terapia adyuvante para convulsiones focales (con o sin generalización secundaria)', 'Convulsiones tónico-clónicas generalizadas primarias en > 12 años']
+      },
+      commercialNames: { br: ['Fycompa'], ar: ['Fycompa'] },
+      presentation: { pt: ['Comprimidos revestidos 2 mg, 4 mg, 6 mg, 8 mg, 10 mg e 12 mg'], es: ['Comprimidos recubiertos 2 mg, 4 mg, 6 mg, 8 mg, 10 mg y 12 mg'] },
+      mechanism: {
+        pt: 'Primeiro da sua classe. Enquanto a maioria das drogas foca nos canais de Sódio ou GABA, o Perampanel mira diretamente no "acelerador" do cérebro: o Glutamato. Ele atua de forma não-competitiva nos receptores AMPA, impedindo que o glutamato gere sinais elétricos rápidos. Ele "corta a fiação" das tempestades elétricas agudas que causam a convulsão.',
+        es: 'Primero de su clase. Mientras la mayoría se enfoca en Sodio o GABA, el Perampanel apunta al "acelerador": el Glutamato. Actúa de forma no competitiva en receptores AMPA, impidiendo que el glutamato genere señales eléctricas. "Corta el cableado" de las tormentas eléctricas.'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciar com 2 mg via oral, UMA VEZ ao dia, sempre ao deitar. Aumentar 2 mg a cada 1 ou 2 semanas (Titulação lenta). Dose máxima de 12 mg/dia.',
+          es: 'Iniciar con 2 mg vía oral, UNA VEZ al día, siempre al acostarse. Aumentar 2 mg cada 1 o 2 semanas. Dosis máxima de 12 mg/día.'
+        },
+        pediatric: {
+          pt: 'Uso a partir de 4 anos de idade (ajuste estrito por peso).',
+          es: 'Uso a partir de 4 años (ajuste estricto por peso).'
+        }
+      },
+      administration: { pt: ['Tomar à noite ao deitar para minimizar a vertigem intensa e os distúrbios de marcha durante o dia.'], es: ['Tomar de noche al acostarse para minimizar el vértigo intenso y los disturbios de marcha de día.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar em disfunção renal grave (ClCr < 30 mL/min) por falta de dados.', es: 'Evitar en disfunción renal grave (ClCr < 30 mL/min) por falta de datos.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Dose máxima de 8 mg em insuficiência hepática leve a moderada. Contraindicado na grave.', es: 'Dosis máxima de 8 mg en insuficiencia hepática leve/moderada. Contraindicado en grave.' } },
+      commonAdverseEffects: { pt: ['Tontura e distúrbio da marcha (ataxia/quedas freqüentes)', 'Ganho de peso', 'Sonolência e fadiga'], es: ['Mareo y disturbio de la marcha (ataxia/caídas)', 'Aumento de peso', 'Somnolencia y fatiga'] },
+      dangerousAdverseEffects: { pt: ['REAÇÕES PSIQUIÁTRICAS SEVERAS (Hostilidade extrema, delírios e ideação homicida)', 'Risco aumentado de suicídio'], es: ['REACCIONES PSIQUIÁTRICAS SEVERAS (Hostilidad extrema, delirios e ideación homicida)', 'Riesgo aumentado de suicidio'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave ao princípio ativo'], es: ['Hipersensibilidad grave al principio activo'] },
+        relative: { pt: ['Pacientes com transtornos de personalidade prévios, esquizofrenia ou histórico de agressividade'], es: ['Pacientes con trastornos de personalidad, esquizofrenia o historial de agresividad'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA AGRESSIVIDADE: O Perampanel possui uma "Black Box" do FDA inusitada. A droga altera o sistema límbico do paciente de tal forma que ele pode desenvolver, subitamente, episódios de hostilidade incontrolável, raiva assassina, paranoia e agitação severa, mesmo sem histórico psiquiátrico prévio. A família deve ser avisada para vigiar mudanças de humor.', es: 'LA ALERTA DE AGRESIVIDAD: Posee una "Caja Negra" inusual. Altera el sistema límbico de tal forma que el paciente puede desarrollar hostilidad incontrolable, rabia homicida y paranoia, incluso sin historial. La familia debe vigilar cambios de humor.' }
+      }
+    },
+
+    /* ── ESTIRIPENTOL ───────────────────────────────────────────────────── */
+    "estiripentol": {
+      name: { pt: 'Estiripentol', es: 'Estiripentol' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Anticonvulsivante (Inibidor Enzimático e Modulador GABA)', es: 'Anticonvulsivante (Inhibidor Enzimático y Modulador GABA)' },
+      indications: {
+        pt: ['Síndrome de Dravet (Epilepsia Mioclônica Severa da Infância) — SEMPRE associado ao Clobazam e Valproato'],
+        es: ['Síndrome de Dravet (Epilepsia Mioclónica Severa de la Infancia) — SIEMPRE asociado a Clobazam y Valproato']
+      },
+      commercialNames: { br: ['Diacomit'], ar: ['Diacomit'] },
+      presentation: { pt: ['Cápsulas 250 mg e 500 mg', 'Sachês com pó oral 250 mg e 500 mg'], es: ['Cápsulas 250 mg y 500 mg', 'Sobres con polvo oral 250 mg y 500 mg'] },
+      mechanism: {
+        pt: 'Mecanismo duplo fascinante. Sozinho, o Estiripentol potencializa o receptor GABA-A prolongando o tempo que o canal fica aberto. Porém, a sua MÁGICA acontece no fígado: ele é um potentíssimo "Destruidor de Enzimas" (inibe CYP1A2, CYP2C19, CYP3A4). Quando dado junto com Clobazam (que é a regra da Síndrome de Dravet), o fígado para de destruir o Clobazam. Os níveis do anticonvulsivante no sangue da criança disparam em até 5 vezes, paralisando os ataques epilépticos refratários.',
+        es: 'Mecanismo doble. Solo, potencia el receptor GABA-A. Pero su MAGIA ocurre en el hígado: es un potentísimo inhibidor enzimático (CYP1A2, CYP2C19, CYP3A4). Cuando se da con Clobazam (regla en Dravet), el hígado deja de destruirlo. Los niveles del anticonvulsivante se disparan, paralizando los ataques refractarios.'
+      },
+      dose: {
+        adult: {
+          pt: '50 mg/kg/dia divididos em 2 a 3 tomadas diárias (As doses são pesadas e tituladas gradualmente).',
+          es: '50 mg/kg/día divididos en 2 a 3 tomas diarias (Dosis tituladas gradualmente).'
+        },
+        pediatric: {
+          pt: '50 mg/kg/dia dividido em 2 a 3 administrações, junto à alimentação.',
+          es: '50 mg/kg/día dividido en 2 a 3 administraciones, junto a la alimentación.'
+        }
+      },
+      administration: { pt: ['OBRIGATÓRIO tomar junto com alimentos para garantir a absorção e não causar irritação gástrica ácida. O pó (sachê) pode ser misturado em iogurte ou purê de maçã.'], es: ['OBLIGATORIO tomar junto con alimentos. El polvo puede mezclarse en yogur o puré de manzana.'] },
+      renalAdjustment: { required: true, message: { pt: 'A evitar em caso de disfunção renal grave.', es: 'A evitar en caso de disfunción renal grave.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em insuficiência hepática severa.', es: 'Contraindicado en insuficiencia hepática severa.' } },
+      commonAdverseEffects: { pt: ['Sonolência extrema (efeito do acúmulo das outras drogas)', 'Perda de apetite marcante e perda de peso na criança', 'Hipotonia (Fraqueza muscular)'], es: ['Somnolencia extrema (efecto del acúmulo de las otras drogas)', 'Pérdida de apetito y peso en el niño', 'Hipotonía (Debilidad muscular)'] },
+      dangerousAdverseEffects: { pt: ['Neutropenia grave (Queda das defesas do sangue)'], es: ['Neutropenia grave (Caída de defensas en sangre)'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de delírio severo', 'Uso como monoterapia (Sozinho ele é fraco, precisa do Clobazam)'], es: ['Historial de delirio severo', 'Uso como monoterapia (Solo es débil, necesita Clobazam)'] },
+        relative: { pt: ['Pacientes subnutridos (A anorexia do remédio agrava a inanição)'], es: ['Pacientes desnutridos (La anorexia del remedio agrava la inanición)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A "INTOXICAÇÃO PROPOSITAL": Na Síndrome de Dravet, o médico usa o Estiripentol justamente para "intoxicar" beneficamente a criança com o Clobazam que ela já tomava. O clínico é OBRIGADO a reduzir a dose de Clobazam pela metade no dia em que iniciar o Estiripentol, senão a criança pode entrar em coma medicamentoso em 48 horas.', es: 'LA "INTOXICACIÓN PROPOSITIVA": En Dravet, se usa Estiripentol justamente para acumular el Clobazam que el niño ya tomaba. El clínico está OBLIGADO a reducir la dosis de Clobazam a la mitad al iniciar Estiripentol, de lo contrario el niño puede entrar en coma.' }
+      }
+    },
+
+    /* ── CANABIDIOL ─────────────────────────────────────────────────────── */
+    "canabidiol": {
+      name: { pt: 'Canabidiol (CBD Purificado)', es: 'Cannabidiol (CBD Purificado)' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Modulador de Canais de Cálcio (Derivado Canabinoide Não-Psicoativo)', es: 'Modulador de Canales de Calcio (Derivado Cannabinoide No Psicoactivo)' },
+      indications: {
+        pt: ['Convulsões associadas à Síndrome de Lennox-Gastaut', 'Convulsões associadas à Síndrome de Dravet', 'Esclerose Tuberosa'],
+        es: ['Convulsiones asociadas al Síndrome de Lennox-Gastaut', 'Convulsiones asociadas al Síndrome de Dravet', 'Esclerosis Tuberosa']
+      },
+      commercialNames: { br: ['Epidiolex', 'Mevatyl (Outra formulação)', 'Prati-Donaduzzi'], ar: ['Epidiolex'] },
+      presentation: { pt: ['Solução Oral 100 mg/mL (Óleo puro, grau farmacêutico, 0% THC)'], es: ['Solución Oral 100 mg/mL (Aceite puro, grado farmacéutico, 0% THC)'] },
+      mechanism: {
+        pt: 'Diferente da maconha fumada, o Epidiolex é o extrato farmacêutico 100% puro do CBD, sem NENHUM THC (não causa "barato" ou alucinações). Seu mecanismo exato não envolve os receptores canabinoides (CB1/CB2) do cérebro. Ele bloqueia o receptor GPR55 e os canais TRPV1 (canais de cálcio excessivamente ativos nos neurônios doentes), acalmando a eletricidade cerebral aberrante nas síndromes catastróficas da infância.',
+        es: 'A diferencia de la marihuana, el Epidiolex es extracto farmacéutico 100% puro de CBD, sin THC (no causa "viaje" ni alucinaciones). No involucra los receptores CB1/CB2. Bloquea el receptor GPR55 y los canales TRPV1, calmando la electricidad cerebral en síndromes catastróficos infantiles.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início com 2,5 mg/kg duas vezes ao dia. Manutenção: 5 a 10 mg/kg duas vezes ao dia. Máximo de 20 a 25 mg/kg/dia.',
+          es: 'Inicio con 2,5 mg/kg dos veces al día. Mantenimiento: 5 a 10 mg/kg dos veces al día. Máximo de 20 a 25 mg/kg/día.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 1 ano de idade nas mesmas doses de ajuste por peso corporo-baseado.',
+          es: 'Aprobado a partir de 1 año de edad en las mismas dosis de ajuste por peso.'
+        }
+      },
+      administration: { pt: ['O óleo deve ser administrado de forma consistente em relação às refeições. Refeições ricas em GORDURA multiplicam a absorção do CBD em 5 vezes, causando risco de overdose ou sonolência extrema se for tomado aleatoriamente.'], es: ['El aceite debe administrarse de forma consistente respecto a las comidas. Comidas ricas en GRASA multiplican la absorción 5 veces, causando riesgo de sobredosis si se toma aleatoriamente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade em disfunção renal.', es: 'Sin necesidad en disfunción renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Requer dose muito mais baixa e lenta em insuficiência hepática moderada ou grave.', es: 'Requiere dosis mucho más baja en insuficiencia hepática moderada/grave.' } },
+      commonAdverseEffects: { pt: ['Sonolência intensa (Letargia marcante nas primeiras semanas)', 'Diarreia grave (Muitas vezes causada pelo óleo de sésamo do veículo, não pelo remédio)', 'Diminuição do apetite e vômitos'], es: ['Somnolencia intensa (Letargo marcado las primeras semanas)', 'Diarrea grave (A menudo causada por el aceite del vehículo)', 'Disminución del apetito y vómitos'] },
+      dangerousAdverseEffects: { pt: ['Aumento agressivo de Enzimas Hepáticas (TGO/TGP subindo 3 a 5 vezes o limite normal)', 'Comportamento suicida agudo'], es: ['Aumento agresivo de Enzimas Hepáticas (AST/ALT subiendo 3 a 5 veces lo normal)', 'Comportamiento suicida agudo'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade severa ao CBD ou óleo de sésamo'], es: ['Hipersensibilidad severa al CBD o aceite de sésamo'] },
+        relative: { pt: ['Doença hepática pré-existente (sem ajuste adequado)', 'Uso cruzado sem monitoramento com Valproato de Sódio'], es: ['Enfermedad hepática preexistente', 'Uso cruzado sin monitoreo con Valproato de Sodio'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O CHOQUE DE FICAR ACORDADO: Um fenômeno intrigante do uso de Canabidiol é que, embora cause muito sono de dia nas crianças com Lennox-Gastaut, ele PODE CAUSAR INSÔNIA SEVERA se dado logo antes de dormir. O cérebro fica confuso com o "relaxamento" elétrico. Recomenda-se dar a última dose do dia no final da tarde, não na hora do travesseiro.', es: 'EL CHOQUE DE ESTAR DESPIERTO: Un fenómeno intrigante es que, aunque causa mucho sueño de día, PUEDE CAUSAR INSOMNIO SEVERO si se da justo antes de dormir. Se recomienda dar la última dosis a final de la tarde, no a la hora de acostarse.' }
+      }
+    },
+
+    /* ── CENOBAMATO ─────────────────────────────────────────────────────── */
+    "cenobamato": {
+      name: { pt: 'Cenobamato', es: 'Cenobamato' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Anticonvulsivante Duplo (Bloqueador Na+ e Modulador GABA)', es: 'Anticonvulsivante Doble (Bloqueador Na+ y Modulador GABA)' },
+      indications: {
+        pt: ['Crises epilépticas focais (com ou sem generalização secundária) em pacientes adultos REFRATÁRIOS'],
+        es: ['Crisis epilépticas focales (con o sin generalización) en pacientes adultos REFRACTARIOS']
+      },
+      commercialNames: { br: ['Xcopri (Em aprovação)'], ar: ['Ontozry', 'Xcopri'] },
+      presentation: { pt: ['Comprimidos de titulação 12,5 mg, 25 mg, 50 mg, 100 mg, 150 mg, 200 mg'], es: ['Comprimidos de titulación 12,5 mg, 25 mg, 50 mg, 100 mg, 150 mg, 200 mg'] },
+      mechanism: {
+        pt: 'Uma nova "bomba nuclear" contra convulsões focais. Ele combina os dois mecanismos mais fortes da neurologia em uma pílula só. Primeiro: inibe a "corrente persistente" de Sódio (impedindo a descarga repetitiva e veloz da convulsão). Segundo: ele se liga de forma não-benzodiazepínica ao receptor GABA-A, aumentando massivamente a entrada de cloreto inibitório. Em ensaios clínicos, zerou as convulsões em quase 20% dos pacientes que não respondiam a NADA.',
+        es: 'Una nueva "bomba" contra convulsiones focales. Combina los dos mecanismos más fuertes. Primero: inhibe la "corriente persistente" de Sodio. Segundo: se une de forma no benzodiazepínica al GABA-A, aumentando masivamente el cloruro inhibitorio. En ensayos, dejó sin convulsiones al 20% de pacientes que no respondían a NADA.'
+      },
+      dose: {
+        adult: {
+          pt: 'Regime Ultra-Lento: 12,5 mg/dia nas 2 primeiras semanas. 25 mg/dia nas semanas 3 e 4. Até atingir a manutenção de 200 mg a 400 mg ao dia. (Pressa mata o paciente).',
+          es: 'Régimen Ultra Lento: 12,5 mg/día las 2 primeras semanas. 25 mg/día en semanas 3 y 4. Hasta mantenimiento de 200 a 400 mg. (La prisa mata al paciente).'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Tomar inteiro com ou sem comida.'], es: ['Tomar entero con o sin comida.'] },
+      renalAdjustment: { required: true, message: { pt: 'Usar com cautela, dose máxima reduzida em insuficiência renal (ClCr < 90 já requer atenção moderada).', es: 'Usar con cautela, dosis máxima reducida en insuficiencia renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Máximo de 200 mg/dia em disfunção hepática leve/moderada.', es: 'Máximo de 200 mg/día en disfunción hepática leve/moderada.' } },
+      commonAdverseEffects: { pt: ['Sonolência avassaladora e fadiga motora', 'Tontura extrema (Ataxia e Diplopia — visão dupla)', 'Dor de cabeça'], es: ['Somnolencia avasalladora y fatiga motora', 'Mareo extremo (Ataxia y Visión doble)', 'Dolor de cabeza'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME DE DRESS (Reação com eosinofilia e sintomas sistêmicos — A alergia que derrete órgãos internos e a pele, podendo ser letal)', 'Encurtamento do intervalo QT no eletrocardiograma'], es: ['SÍNDROME DE DRESS (Reacción con eosinofilia — Alergia que derrite órganos y piel, letal)', 'Acortamiento del intervalo QT en el ECG'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com Síndrome do QT Curto Familiar (Risco de parada cardíaca súbita)'], es: ['Pacientes con Síndrome de QT Corto Familiar (Riesgo de parada cardíaca)'] },
+        relative: { pt: ['Vício prévio em benzodiazepínicos'], es: ['Vicio previo en benzodiazepinas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A PACIÊNCIA CONTRA A SÍNDROME DE DRESS: O Cenobamato é excelente, mas só pode ser dado de forma quase homeopática no começo. Aumentar a dose rápido para cortar a convulsão resultará na Síndrome de DRESS nas primeiras semanas, onde o fígado inflama, os rins param e o paciente desenvolve erupções em brasa fatais. Siga a tabela!', es: 'LA PACIENCIA CONTRA EL SÍNDROME DE DRESS: El Cenobamato es excelente, pero aumentar la dosis rápido resultará en el Síndrome de DRESS. ¡Siga la tabla!' }
+      }
+    },
+
+    /* ── FELBAMATO ──────────────────────────────────────────────────────── */
+    "felbamato": {
+      name: { pt: 'Felbamato', es: 'Felbamato' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Anticonvulsivante Misto (Modulador NMDA / Potenciador GABA)', es: 'Anticonvulsivante Mixto (Modulador NMDA / Potenciador GABA)' },
+      indications: {
+        pt: ['A Última Fronteira: Tratamento de convulsões refratárias extremas (Lennox-Gastaut e focais graves) APENAS quando o risco do paciente morrer pela convulsão é maior que o risco de morrer pela medicação.'],
+        es: ['La Última Frontera: Tratamiento de convulsiones refractarias extremas (Lennox-Gastaut) SOLO cuando el riesgo de morir por la convulsión es mayor que por la medicación.']
+      },
+      commercialNames: { br: ['Taloxa', 'Felbatol (Importado)'], ar: ['Felbamato'] },
+      presentation: { pt: ['Comprimidos 400 mg e 600 mg', 'Suspensão Oral'], es: ['Comprimidos 400 mg y 600 mg', 'Suspensión Oral'] },
+      mechanism: {
+        pt: 'Uma droga de poder absoluto. O Felbamato bloqueia especificamente o "sítio da glicina" no receptor NMDA de glutamato, cortando pela raiz a hiperexcitabilidade de tempestades elétricas cerebrais que não respondem a mais nada. É capaz de zerar Lennox-Gastaut, mas foi restrito mundialmente em 1994 por seus efeitos fatais e idiossincráticos na medula e no fígado.',
+        es: 'Una droga de poder absoluto. Bloquea el "sitio de la glicina" en el receptor NMDA, cortando de raíz la hiperexcitabilidad. Es capaz de detener Lennox-Gastaut, pero fue restringido en 1994 por sus efectos fatales en la médula ósea y el hígado.'
+      },
+      dose: {
+        adult: {
+          pt: 'Oral: Iniciar com 1200 mg/dia, divididos em 3 a 4 tomadas. Subir gradativamente até o máximo de 3600 mg/dia.',
+          es: 'Oral: Iniciar con 1200 mg/día, divididos en 3 a 4 tomas. Subir hasta 3600 mg/día.'
+        },
+        pediatric: {
+          pt: 'Síndrome de Lennox-Gastaut (crianças de 2 a 14 anos): Iniciar com 15 mg/kg/dia, subir até 45 mg/kg/dia.',
+          es: 'Síndrome de Lennox-Gastaut: Iniciar con 15 mg/kg/día, subir hasta 45 mg/kg/día.'
+        }
+      },
+      administration: { pt: ['Obrigatório dividir as doses rigorosamente durante o dia para manter o nível sérico.'], es: ['Obligatorio dividir las dosis rigurosamente para mantener el nivel sérico.'] },
+      renalAdjustment: { required: true, message: { pt: 'Reduzir a dose inicial pela METADE e fazer titulação ultra-lenta em ClCr < 50 mL/min.', es: 'Reducir dosis inicial a la MITAD y hacer titulación ultra lenta en ClCr < 50 mL/min.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADO formalmente na disfunção hepática, independentemente do grau.', es: 'CONTRAINDICADO formalmente en disfunción hepática, independientemente del grado.' } },
+      commonAdverseEffects: { pt: ['Insônia bizarra e anorexia brutal', 'Vômitos incontroláveis nas primeiras semanas', 'Visão dupla (Diplopia)'], es: ['Insomnio bizarro y anorexia brutal', 'Vómitos incontrolables en las primeras semanas', 'Visión doble (Diplopía)'] },
+      dangerousAdverseEffects: { pt: ['ANEMIA APLÁSTICA LETAL (A medula óssea do paciente simplesmente para de fabricar sangue, levando à morte por sangramento ou infecção em 30% dos afetados)', 'FALÊNCIA HEPÁTICA FULMINANTE'], es: ['ANEMIA APLÁSTICA LETAL (La médula ósea deja de fabricar sangre, llevando a la muerte en 30% de los afectados)', 'FALLA HEPÁTICA FULMINANTE'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de discrasias sanguíneas (Anemia, neutropenia prévia)', 'Doença hepática anterior', 'Qualquer paciente cujas convulsões possam ser controladas com OUTRO medicamento seguro'], es: ['Historial de discrasias sanguíneas (Anemia, neutropenia)', 'Enfermedad hepática', 'Cualquier paciente cuyas convulsiones puedan controlarse con OTRO medicamento seguro'] },
+        relative: { pt: ['Uso associado com Carbamazepina ou Valproato (risco massivo de overdose hepática e medular)'], es: ['Uso asociado con Carbamazepina o Valproato'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O TERMO DE RESPONSABILIDADE: Prescrever Felbamato não é uma simples canetada. O médico é legalmente obrigado (sob FDA e diretrizes mundiais) a fazer o paciente e a família ASSINAREM UM TERMO reconhecendo que entenderam que a medicação pode matar o paciente de Anemia Aplástica (incidência 1 em 3.000) e aceitam o risco.', es: 'EL CONSENTIMIENTO INFORMADO: El médico está legalmente obligado a hacer que el paciente y la familia FIRMEN UN DOCUMENTO reconociendo que la medicación puede matar al paciente de Anemia Aplástica (incidencia 1 en 3.000) y aceptan el riesgo.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 410 append */
+})();

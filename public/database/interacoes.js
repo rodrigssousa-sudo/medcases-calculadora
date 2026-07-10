@@ -1137,6 +1137,12 @@ const DRUG_CLASSES = {
   "$classe_betabloqueadores_bradicardizantes": [
     "propranolol", "atenolol", "metoprolol", "bisoprolol", "carvedilol",
     "nebivolol", "esmolol", "labetalol", "nadolol", "sotalol", "acebutolol"
+  ],
+
+  /* BUILD 410 — Moduladores das Síndromes de Dravet e Lennox-Gastaut
+     Canabidiol (CBD) + Estiripentol: inibem CYP2C19/CYP3A4, acumulam Clobazam e Valproato */
+  "$classe_moduladores_dravet_lennox": [
+    "canabidiol", "estiripentol"
   ]
 
 };
@@ -22968,9 +22974,86 @@ const INTERACOES_DB = {
         es: "Evitar la asociación. Si es la única esperanza, el paciente debe beber mínimo 3 Litros de agua/jugo al día y tener gasometría y ecografía renal."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Alta Epilepsia (Dravet, Lennox, Focais Resistentes)
+   Perampanel, Estiripentol, Canabidiol, Cenobamato, Felbamato
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── PERAMPANEL (A Ira Incontrolável e a Falha de Absorção) ── */
+  "perampanel": {
+    "$classe_depressores_snc_alcool": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A 'FÚRIA' ALCOÓLICA. O Perampanel possui um alerta Black Box para o desenvolvimento de raiva homicida e transtornos psiquiátricos. Se o paciente que faz uso da droga ingerir Álcool ou sedativos de ação límbica, ocorre um desarranjo comportamental letal. O paciente pode entrar em surtos psicóticos de agressividade extrema com apagão de memória motora.",
+        es: "LA 'FURIA' ALCOHÓLICA. Perampanel posee una alerta de Caja Negra para el desarrollo de rabia homicida. Si el paciente ingiere Alcohol o sedantes límbicos, ocurre un desajuste letal. El paciente puede entrar en brotes psicóticos de agresividad extrema."
+      },
+      conduta: {
+        pt: "PROIBIÇÃO TOTAL do consumo de álcool durante o tratamento com Fycompa. Retirar a droga caso sinais persecutórios surjam na família.",
+        es: "PROHIBICIÓN TOTAL del consumo de alcohol durante el tratamiento. Retirar la droga si surgen signos persecutorios en la familia."
+      }
+    },
+    "$classe_indutores_fortes_cyp3a4": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A CRISE DE ROUBO FARMACOCINÉTICO. Carbamazepina, Fenitoína e Oxcarbazepina (os outros anticonvulsivantes mais comuns) aceleram o fígado massivamente. Se prescritos com o Perampanel, eles destroem 70% do Perampanel no sangue. O paciente, achando que está protegido, sofrerá uma tempestade de convulsões tônico-clônicas por falta do remédio de marca no cérebro.",
+        es: "LA CRISIS DE ROBO. Carbamazepina y Fenitoína aceleran el hígado masivamente. Si se prescriben con Perampanel, destruyen 70% del Perampanel. El paciente sufrirá una tormenta de convulsiones por falta de remedio."
+      },
+      conduta: {
+        pt: "Caso seja imperativo usar Perampanel associado à Carbamazepina/Fenitoína, a dose do Perampanel deve ser dobrada (Titular de 8 a 12 mg mais rapidamente).",
+        es: "Si es imperativo usar Perampanel asociado a Carbamazepina, la dosis de Perampanel debe doblarse."
+      }
+    }
+  },
+
+  /* ── ESTIRIPENTOL E CANABIDIOL (A Tríade Tóxica do Valproato e Clobazam) ── */
+  "$classe_moduladores_dravet_lennox": {
+    "acido_valproico_divalproato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A FALÊNCIA HEPÁTICA INFANTIL. O Canabidiol (Epidiolex) eleva severamente as transaminases do fígado por si só. Se a criança com Síndrome de Lennox-Gastaut/Dravet usar Canabidiol + Ácido Valproico (uma combinação padrão), o fígado entra em sofrimento agudo (TGO/TGP sobem mais de 5 vezes). Se associado ao Estiripentol, a necrose medicamentosa é um risco iminente.",
+        es: "LA FALLA HEPÁTICA INFANTIL. El Cannabidiol (Epidiolex) eleva severamente las transaminasas. Si el niño usa Cannabidiol + Ácido Valproico, el hígado entra en sufrimiento agudo. La necrosis medicamentosa es un riesgo inminente."
+      },
+      conduta: {
+        pt: "A associação é necessária na prática, MAS EXIGE coleta de Exames de Função Hepática todo mês. Caso TGO/TGP subam > 3x o limite, a dose do Valproato deve ser reduzida drasticamente.",
+        es: "La asociación es necesaria, PERO EXIGE exámenes de Función Hepática mensuales. Si AST/ALT suben > 3x, la dosis del Valproato debe reducirse drásticamente."
+      }
+    },
+    "clobazam": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INTOXICAÇÃO BENZODIAZEPÍNICA FORÇADA (O Efeito Zumbi). Tanto o Canabidiol puro quanto o Estiripentol inibem violentamente o fígado de destruir o Clobazam (Urbanil). O metabólito 'Norclobazam' acumula 500% no sangue da criança. A criança para de convulsionar, mas fica num 'Estado Zumbi' (letargia, apneia respiratória e hipotonia profunda incapaz de engolir a saliva).",
+        es: "INTOXICACIÓN BENZODIAZEPÍNICA FORZADA. Tanto Cannabidiol como Estiripentol inhiben violentamente la destrucción del Clobazam. El 'Norclobazam' acumula 500% en la sangre. El niño deja de convulsionar, pero queda en 'Estado Zombi' (letargo y apnea)."
+      },
+      conduta: {
+        pt: "Se a criança já usa Clobazam e você vai introduzir Canabidiol ou Estiripentol, REDUZA A DOSE DE CLOBAZAM PELA METADE previamente para evitar o coma farmacológico.",
+        es: "Si el niño ya usa Clobazam y va a introducir Cannabidiol, REDUZCA LA DOSIS DE CLOBAZAM A LA MITAD previamente."
+      }
+    }
+  },
+
+  /* ── FELBAMATO (A Cartada Letal) ── */
+  "felbamato": {
+    "carbamazepina_acido_valproico": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A DESTRUIÇÃO DA MEDULA ÓSSEA (Anemia Aplástica). O Felbamato em si já ataca a fábrica de sangue da medula espinhal em doentes suscetíveis. A associação desta medicação com Valproato ou Carbamazepina (que também suprimem a medula e o fígado de forma dose-dependente) gera um choque hematológico cruzado. O paciente perderá as plaquetas, hemácias e leucócitos ao mesmo tempo, sofrendo sangramento massivo intracraniano e infecção fulminante.",
+        es: "LA DESTRUCCIÓN DE LA MÉDULA ÓSEA. El Felbamato ataca la fábrica de sangre. La asociación con Valproato o Carbamazepina (que también suprimen la médula) genera un choque hematológico cruzado. El paciente perderá plaquetas y glóbulos blancos, sufriendo sangrado masivo."
+      },
+      conduta: {
+        pt: "MANDATÓRIO evitar a associação. O Felbamato também 'estoura' a concentração de Valproato no sangue. Exige Hemograma e Função Hepática semanais nos primeiros meses.",
+        es: "MANDATORIO evitar la asociación. El Felbamato también 'explota' la concentración de Valproato. Exige Hemograma semanal los primeros meses."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 409 (carisoprodol×depressores_SNC; orfenadrina×anticolinérgicos_tricíclicos_IMAO; zonisamida×topiramato) | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 410 (perampanel×depressores_SNC/indutores_CYP3A4; $classe_moduladores_dravet_lennox×valproato/clobazam; felbamato×carbamazepina_valproico) | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
