@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=405" />
-  <link rel="stylesheet" href="css/build233.css?v=405" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=405" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=405" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=405" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=405" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=405" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=406" />
+  <link rel="stylesheet" href="css/build233.css?v=406" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=406" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=406" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=406" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=406" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=406" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=405" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=406" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=405" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=406" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=405" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=406" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=405" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=406" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=405" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=406" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=405" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=406" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=405" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=406" />
 
   <style>
     /* ============================================================ RESET */
@@ -2548,6 +2548,25 @@
       line-height:1.6;
     }
     .fd-ref-val strong { color:#F8FAFC; font-weight:700; }
+
+    /* BUILD 406 — posologia formatada em tópicos */
+    .posologia-list-v2 {
+      list-style:none; margin:0; padding:0;
+      display:flex; flex-direction:column; gap:5px;
+    }
+    .posologia-list-v2 li {
+      font-size:13px; font-weight:500; color:#E2E8F0;
+      line-height:1.4; display:flex; gap:6px; align-items:flex-start;
+    }
+    .posologia-list-v2 li::before {
+      content:'•'; color:#38BDF8; font-size:10px;
+      flex-shrink:0; margin-top:2px;
+    }
+    .posologia-text {
+      font-size:13px; font-weight:500; color:#E2E8F0; line-height:1.4; margin:0;
+    }
+    /* hero posologia — tópicos em destaque */
+    .fd-dose-val--hero .posologia-list-v2 li { font-size:13.5px; }
     .fd-ref-hero-badge {
       display:inline-block; margin-left:8px;
       font-size:9px; font-weight:800; color:#38BDF8;
@@ -7563,7 +7582,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=405" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=406" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -15785,7 +15804,7 @@ function openFarmacoDetail(id) {
       ${hasRealPatient && hero.renalFaixa && !hero.renalAdj ? `<span class="fd-hero-renal-chip fd-hero-chip--ok"><i class="fa-solid fa-kidney"></i> ${hero.renalFaixa}</span>` : ''}
     </div>
     <div class="fd-dose-val fd-dose-val--hero">
-      ${_fdHighlight(hero.heroDose || '—')}
+      ${_parsePosologyToHtml(hero.heroDose || '—')}
       ${hero.heroFreq ? `<span class="fd-dose-freq-inline"> <i class="fa-solid fa-rotate" style="font-size:9px;"></i> ${hero.heroFreq}</span>` : ''}
       ${hero.heroVia  ? `<span class="fd-dose-via-inline">${hero.heroVia}</span>` : ''}
     </div>
@@ -15856,7 +15875,7 @@ function openFarmacoDetail(id) {
           const isHeroKey = hero._heroKey === k;
           htmlDosing += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
             <span class="fd-ref-key">${_fdFormatKey(k)}</span>
-            <span class="fd-ref-val">${_fdHighlight(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
+            <span class="fd-ref-val">${_parsePosologyToHtml(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
           </div>`;
         });
         htmlDosing += `</div>`;
@@ -15874,7 +15893,7 @@ function openFarmacoDetail(id) {
           const isHeroKey = hero._heroKey === k;
           htmlDosing += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
             <span class="fd-ref-key">${_fdFormatKey(k)}</span>
-            <span class="fd-ref-val">${_fdHighlight(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
+            <span class="fd-ref-val">${_parsePosologyToHtml(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
           </div>`;
         });
         htmlDosing += `</div>`;
@@ -15892,7 +15911,7 @@ function openFarmacoDetail(id) {
           const isHeroKey = hero._heroKey === k;
           htmlDosing += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
             <span class="fd-ref-key">${_fdFormatKey(k)}</span>
-            <span class="fd-ref-val">${_fdHighlight(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
+            <span class="fd-ref-val">${_parsePosologyToHtml(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
           </div>`;
         });
         htmlDosing += `</div>`;
@@ -15910,14 +15929,14 @@ function openFarmacoDetail(id) {
           const isHeroKey = hero._heroKey === k;
           htmlDosing += `<div class="fd-ref-row${isHeroKey ? ' fd-ref-row--hero' : ''}">
             <span class="fd-ref-key">${_fdFormatKey(k)}</span>
-            <span class="fd-ref-val">${_fdHighlight(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
+            <span class="fd-ref-val">${_parsePosologyToHtml(String(v))}${isHeroKey ? `<span class="fd-ref-hero-badge">${isES?'▶ ESTE PACIENTE':'▶ ESTE PACIENTE'}</span>` : ''}</span>
           </div>`;
         });
         htmlDosing += `</div>`;
       }
     } else if (typeof doseSrc === 'string' && doseSrc !== '—') {
       htmlDosing += `<div class="fd-ref-cat">
-        <div class="fd-ref-row"><span class="fd-ref-val">${_fdHighlight(doseSrc)}</span></div>
+        <div class="fd-ref-row"><span class="fd-ref-val">${_parsePosologyToHtml(doseSrc)}</span></div>
       </div>`;
     }
 
@@ -15933,7 +15952,7 @@ function openFarmacoDetail(id) {
         kgEntries.forEach(([k,v]) => {
           htmlDosing += `<div class="fd-ref-row">
             <span class="fd-ref-key">${_fdFormatKey(k)}</span>
-            <span class="fd-ref-val">${_fdHighlight(String(v))}</span>
+            <span class="fd-ref-val">${_parsePosologyToHtml(String(v))}</span>
           </div>`;
         });
         htmlDosing += `</div>`;
@@ -16434,9 +16453,12 @@ function _fdCopyPrescricao() {
     if (pd.pregnant || pd.gestante) partes.push('Gestante');
     const metricas = partes.join(' · ');
 
+    /* BUILD 406 PATCH B: formatação em tópicos + template padrão */
+    const posologiaFmt = _parsePosologyToText(posologia);
+    const ajusteStr    = faixa ? `⚠️ Ajuste Renal: ${faixa}` : (isES ? '⚠️ Dosis individualizada por paciente' : '⚠️ Dose individualizada por paciente');
     textToCopy = isES
-      ? `💊 Fármaco: ${drugName}\n📋 Dosis: ${posologia}${ajuste}\n👤 Paciente: ${metricas}\n⚕ Generado por MedCases Pro`
-      : `💊 Fármaco: ${drugName}\n📋 Dose: ${posologia}${ajuste}\n👤 Paciente: ${metricas}\n⚕ Gerado por MedCases Pro`;
+      ? `💊 Fármaco: ${drugName}\n\n📋 Posología de referencia:\n${posologiaFmt}\n\n${ajusteStr}\n👤 Paciente: ${metricas}\n⚕️ Generado por MedCases Pro`
+      : `💊 Fármaco: ${drugName}\n\n📋 Posologia de referência:\n${posologiaFmt}\n\n${ajusteStr}\n👤 Paciente: ${metricas}\n⚕️ Gerado por MedCases Pro`;
 
   /* ════════════════════════════════════
      CENÁRIO B — sem paciente (bula)
@@ -16456,9 +16478,11 @@ function _fdCopyPrescricao() {
       }
     } catch(_e) {}
 
+    /* BUILD 406 PATCH B: formatação em tópicos + template padrão Cenário B */
+    const doseRefFmt = _parsePosologyToText(doseRef);
     textToCopy = isES
-      ? `💊 Fármaco: ${drugName}\n📋 Posología de referencia: ${doseRef}\n⚠ Dosis estándar — sin ajuste por paciente\n⚕ Generado por MedCases Pro`
-      : `💊 Fármaco: ${drugName}\n📋 Posologia de referência: ${doseRef}\n⚠ Dose padrão — sem ajuste por paciente\n⚕ Gerado por MedCases Pro`;
+      ? `💊 Fármaco: ${drugName}\n\n📋 Posología de referencia:\n${doseRefFmt}\n\n⚠️ Dosis estándar — sin ajuste por paciente\n⚕️ Generado por MedCases Pro`
+      : `💊 Fármaco: ${drugName}\n\n📋 Posologia de referência:\n${doseRefFmt}\n\n⚠️ Dose padrão — sem ajuste por paciente\n⚕️ Gerado por MedCases Pro`;
   }
 
   /* ── Cópia para clipboard (com fallback para WebView iOS/Android) ── */
@@ -16509,6 +16533,40 @@ function _fdCopyPrescricao() {
 }
 
 /* Helper: destaca doses em negrito ciano */
+/* ═══════════════════════════════════════════════════════════════════
+   BUILD 406 — PATCH A: Conversor dinâmico de posologia em tópicos.
+
+   Problema: dose strings longas saíam como bloco corrido → ilegível.
+   Solução: segmentar em pontos finais + marcadores de via/rota comuns.
+
+   _parsePosologyToHtml(text) → HTML <ul.posologia-list-v2> ou <p>
+   _parsePosologyToText(text) → texto com bullet "• " por linha (clipboard)
+═══════════════════════════════════════════════════════════════════ */
+function _parsePosologyToHtml(text) {
+  if (!text || text === '—') return '<span class="posologia-text">—</span>';
+  // Cliva em: ponto final + espaço + maiúscula/dígito OU marcadores de via
+  const SEP = /(?<=\.)\s+(?=[A-ZÁÀÂÃÉÈÊÍÌÎÓÒÔÕÚÙÛÇ0-9])|(?=(?:Sublingual|IV\/IM|Máximo|Mínimo|VO|SC|IM|EV|IV|SL|Nebulização|Inalação|Adulto:|Idosos:|Crianças:|Pediátrico:|Dose de ataque|Manutenção|Ajuste|Alternativa|NOTA|Atenção))/gi;
+  const segments = text.split(SEP)
+    .map(s => s.trim())
+    .filter(s => s.length > 2);
+  if (segments.length <= 1) {
+    return `<p class="posologia-text">${_fdHighlight(text)}</p>`;
+  }
+  return `<ul class="posologia-list-v2">` +
+    segments.map(item => `<li>${_fdHighlight(item)}</li>`).join('') +
+    `</ul>`;
+}
+
+function _parsePosologyToText(text) {
+  if (!text || text === '—') return '—';
+  const SEP = /(?<=\.)\s+(?=[A-ZÁÀÂÃÉÈÊÍÌÎÓÒÔÕÚÙÛÇ0-9])|(?=(?:Sublingual|IV\/IM|Máximo|Mínimo|VO|SC|IM|EV|IV|SL|Nebulização|Inalação|Adulto:|Idosos:|Crianças:|Pediátrico:|Dose de ataque|Manutenção|Ajuste|Alternativa|NOTA|Atenção))/gi;
+  const segments = text.split(SEP)
+    .map(s => s.trim())
+    .filter(s => s.length > 2);
+  if (segments.length <= 1) return text;
+  return segments.map(s => `• ${s}`).join('\n');
+}
+
 function _fdHighlight(txt) {
   if (!txt) return '—';
   return txt
@@ -23833,8 +23891,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=405"></script>
-<script src="database/analgesicos.js?v=405"></script>
+<script src="database/antimicrobianos.js?v=406"></script>
+<script src="database/analgesicos.js?v=406"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -23948,9 +24006,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=405', 'psico');
-    _loadScript('database/cardio.js?v=405',        'cardio');
-    _loadScript('database/interacoes.js?v=405',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=406', 'psico');
+    _loadScript('database/cardio.js?v=406',        'cardio');
+    _loadScript('database/interacoes.js?v=406',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -23960,51 +24018,51 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=405"></script>
-<script src="database/gastro.js?v=405"></script>
-<script src="database/gastro_imuno.js?v=405"></script>
-<script src="database/imuno_corticoide.js?v=405"></script>
-<script src="database/endocrino_glp1.js?v=405"></script>
-<script src="database/infusoes.js?v=405"></script>
-<script src="database/emergencia.js?v=405"></script>
-<script src="database/infectologia.js?v=405"></script>
-<script src="database/sedacao.js?v=405"></script>
-<script src="database/hematologia.js?v=405"></script>
-<script src="database/pneumologia.js?v=405"></script>
-<script src="database/gastroenterologia.js?v=405"></script>
-<script src="database/cardiologia.js?v=405"></script>
-<script src="database/analgesia_opioides.js?v=405"></script>
-<script src="database/alergia_imunologia.js?v=405"></script>
-<script src="database/pneumologia_otorrino.js?v=405"></script>
-<script src="database/neurologia.js?v=405"></script>
-<script src="database/prescricoes.js?v=405" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=406"></script>
+<script src="database/gastro.js?v=406"></script>
+<script src="database/gastro_imuno.js?v=406"></script>
+<script src="database/imuno_corticoide.js?v=406"></script>
+<script src="database/endocrino_glp1.js?v=406"></script>
+<script src="database/infusoes.js?v=406"></script>
+<script src="database/emergencia.js?v=406"></script>
+<script src="database/infectologia.js?v=406"></script>
+<script src="database/sedacao.js?v=406"></script>
+<script src="database/hematologia.js?v=406"></script>
+<script src="database/pneumologia.js?v=406"></script>
+<script src="database/gastroenterologia.js?v=406"></script>
+<script src="database/cardiologia.js?v=406"></script>
+<script src="database/analgesia_opioides.js?v=406"></script>
+<script src="database/alergia_imunologia.js?v=406"></script>
+<script src="database/pneumologia_otorrino.js?v=406"></script>
+<script src="database/neurologia.js?v=406"></script>
+<script src="database/prescricoes.js?v=406" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=405"></script>
+<script defer src="js/medcases-ux-v2.js?v=406"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=405"></script>
+<script defer src="js/hub-accordion.js?v=406"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=405"></script>
+<script defer src="js/build240b-accordion-fix.js?v=406"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=405"></script>
+<script defer src="js/calculator-overlay.js?v=406"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=405"></script>
+<script defer src="js/category-pills.js?v=406"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=405"></script>
+<script defer src="js/elec-calc.js?v=406"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=405"></script>
+<script defer src="js/deeplink-router.js?v=406"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=405"></script>
+<script defer src="js/build272-reactive-engine.js?v=406"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=405"></script>
+<script defer src="js/build283-accessory-bar.js?v=406"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
