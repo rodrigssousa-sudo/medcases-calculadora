@@ -5557,3 +5557,254 @@
 
   }); /* fim Object.assign BUILD 424 / ONDA 49 append */
 })();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   BUILD 425 — ONDA 50: Hematologia & Endocrinologia — Sais Ferrosos + Vitamina D3
+   +5 drogas: Fumarato Ferroso | Gluconato Ferroso | Ferro Polimaltosado
+              Maltol Férrico | Colecalciferol (Vitamina D3)
+   Categorias: hematologia (×4) | endocrinologia (×1)
+   Motor de interações: $classe_ferro_sais_ionicos×vitamina_c (leve/1 — benéfica)
+                        colecalciferol×orlistate_resinas (alta/4)
+                        colecalciferol×$classe_diureticos_tiazidicos (moderada/3)
+══════════════════════════════════════════════════════════════════════════ */
+(function(){
+  if(!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) window.NEUROLOGIA_DRUGS_DB={};
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── FUMARATO FERROSO ───────────────────────────────────────────────── */
+    "fumarato_ferroso": {
+      name: { pt: 'Fumarato Ferroso', es: 'Fumarato Ferroso' },
+      category: 'hematologia',
+      icon: '🩸',
+      color: '#B91C1C',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento de Ferro Oral (Sal Ferroso Divalente)', es: 'Suplemento de Hierro Oral (Sal Ferrosa Divalente)' },
+      indications: {
+        pt: ['Prevenção e tratamento da Anemia Ferropriva (Frequentemente associado a ácido fólico ou vitamina C em formulações obstétricas)'],
+        es: ['Prevención y tratamiento de la Anemia Ferropénica']
+      },
+      commercialNames: { br: ['Ferronil', 'Iberet Fólico (Assoc)'], ar: ['Hierro Fumarato'] },
+      presentation: { pt: ['Comprimidos 300 mg a 330 mg (Contém altíssima taxa de ferro elementar, aprox. 106 mg por comprimido)'], es: ['Comprimidos 300 mg a 330 mg'] },
+      mechanism: {
+        pt: 'O "Carregador Pesado". O Fumarato é um sal ferroso (Fe++) que possui a maior proporção de ferro elementar por miligrama de sal (cerca de 33%). Isso significa que um comprimido pequeno entrega uma marreta de ferro livre no duodeno para ser absorvido. Assim como o sulfato, sofre forte oxidação no estômago.',
+        es: 'El "Cargador Pesado". El Fumarato posee la mayor proporción de hierro elemental por miligramo (33%). Un comprimido pequeño entrega una gran cantidad de hierro libre en el duodeno. Sufre fuerte oxidación en el estómago.'
+      },
+      dose: {
+        adult: {
+          pt: '1 comprimido ao dia ou em dias alternados (As diretrizes modernas favorecem dias alternados para reduzir a hepcidina e aumentar a absorção).',
+          es: '1 comprimido al día o en días alternos.'
+        },
+        pediatric: {
+          pt: '3 a 6 mg de Ferro Elementar/kg/dia (Requer cálculo preciso pela alta concentração).',
+          es: '3 a 6 mg de Hierro Elemental/kg/día.'
+        }
+      },
+      administration: { pt: ['Tomar com estômago vazio ou com vitamina C. O chá, café, leite e laticínios anulam a sua absorção.'], es: ['Tomar con estómago vacío o con vitamina C. El té, café o lácteos anulan su absorción.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Precaução em doenças de acúmulo de ferro.', es: 'Precaución en enfermedades de acúmulo.' } },
+      commonAdverseEffects: { pt: ['Dor epigástrica severa, queimação e azia', 'Fezes negras e espessas', 'Constipação e náuseas'], es: ['Dolor epigástrico severo y acidez', 'Heces negras y espesas', 'Constipación y náuseas'] },
+      dangerousAdverseEffects: { pt: ['Toxicidade gastrointestinal erosiva em superdosagem (Fatal em crianças)'], es: ['Toxicidad gastrointestinal erosiva en sobredosis (Fatal en niños)'] },
+      contraindications: {
+        absolute: { pt: ['Hemocromatose, anemia hemolítica, úlcera gástrica ativa'], es: ['Hemocromatosis, anemia hemolítica, úlcera gástrica activa'] },
+        relative: { pt: ['Doença de Crohn (O ferro não absorvido oxida as bactérias e piora a inflamação)'], es: ['Enfermedad de Crohn (El hierro no absorbido oxida las bacterias y empeora la inflamación)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'A FALÁCIA DO COMPRIMIDO MENOR: Não se engane pelo peso do comprimido. 300mg de Fumarato entregam 100mg de ferro PURO, enquanto 300mg de Sulfato entregam apenas 60mg. É muito mais forte e, consequentemente, queima muito mais o estômago do paciente se ele for sensível.', es: 'LA FALACIA DEL COMPRIMIDO MENOR: 300mg de Fumarato entregan 100mg de hierro PURO, mientras 300mg de Sulfato entregan solo 60mg. Es mucho más fuerte y quema más el estómago.' }
+      },
+      references: {
+        pt: 'ASH Guidelines for Iron Deficiency; WHO Model Formulary.',
+        es: 'ASH Guidelines for Iron Deficiency; WHO Model Formulary.'
+      }
+    },
+
+    /* ── GLUCONATO FERROSO ──────────────────────────────────────────────── */
+    "gluconato_ferroso": {
+      name: { pt: 'Gluconato Ferroso', es: 'Gluconato Ferroso' },
+      category: 'hematologia',
+      icon: '🩸',
+      color: '#B91C1C',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento de Ferro Oral (Sal Ferroso de Baixa Concentração)', es: 'Suplemento de Hierro Oral (Sal Ferrosa de Baja Concentración)' },
+      indications: {
+        pt: ['Anemia ferropriva leve a moderada', 'Suplementação pediátrica e obstétrica onde o paciente não tolera sulfato ou fumarato'],
+        es: ['Anemia ferropénica leve a moderada', 'Suplementación pediátrica y obstétrica donde el paciente no tolera sulfato']
+      },
+      commercialNames: { br: ['Combiron (Histórico/Assoc)'], ar: ['Gluconato Ferroso'] },
+      presentation: { pt: ['Comprimidos 300 mg (Contém apenas ~35 mg de ferro elementar, ou 12%)', 'Xaropes infantis'], es: ['Comprimidos 300 mg (Contiene ~35 mg de hierro elemental)', 'Jarabes infantiles'] },
+      mechanism: {
+        pt: 'O "Ferro Suave". É um sal ferroso igual ao sulfato, mas a molécula do ácido glucônico é gigantesca. Isso dilui a quantidade de ferro livre por comprimido. Como tem menos ferro bruto, ele irrita muito menos a mucosa gástrica e causa muito menos dor de estômago e diarreia, melhorando a adesão do paciente intolerante.',
+        es: 'El "Hierro Suave". La molécula de ácido glucónico es gigante. Esto diluye la cantidad de hierro libre por comprimido. Como tiene menos hierro bruto, irrita mucho menos la mucosa gástrica, mejorando la adhesión.'
+      },
+      dose: {
+        adult: {
+          pt: 'Requer mais comprimidos (ex: 2 a 3 por dia) para atingir os 100 mg de ferro elementar necessários para tratamento ativo.',
+          es: 'Requiere más comprimidos (ej: 2 a 3 por día) para alcanzar los 100 mg de hierro elemental necesarios.'
+        },
+        pediatric: {
+          pt: 'Xarope dosado estritamente por mg de ferro elementar.',
+          es: 'Jarabe dosificado estrictamente por mg de hierro elemental.'
+        }
+      },
+      administration: { pt: ['Deve ser tomado preferencialmente em jejum, mas devido à suavidade, pacientes relutam menos. Líquidos devem ser tomados com canudo.'], es: ['Debe ser tomado en ayunas. Líquidos deben ser tomados con pajita.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Acompanhar em hepatopatias.', es: 'Acompañar en hepatopatías.' } },
+      commonAdverseEffects: { pt: ['Fezes escuras', 'Constipação e náuseas (Bem menores que no sulfato/fumarato)'], es: ['Heces oscuras', 'Constipación y náuseas (Menores que en sulfato/fumarato)'] },
+      dangerousAdverseEffects: { pt: ['Intoxicação em superdosagem acidental (O paciente pode tentar tomar 10 pílulas para "compensar" a fraqueza)'], es: ['Intoxicación en sobredosis accidental'] },
+      contraindications: {
+        absolute: { pt: ['Sobrecarga de ferro', 'Anemias hemolíticas'], es: ['Sobrecarga de hierro', 'Anemias hemolíticas'] },
+        relative: { pt: ['Nenhuma específica além das restrições de ferro clássicas'], es: ['Ninguna específica además de las restricciones de hierro clásicas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: false,
+        warning: { pt: 'A ILUSÃO DA DOSE: Um erro comum é prescrever "1 comprimido ao dia" de gluconato achando que é o mesmo que 1 de sulfato. O paciente levará O TRIPLO do tempo para curar a anemia se o médico não ajustar a dose de ferro elementar corretamente.', es: 'LA ILUSIÓN DE LA DOSIS: Un error común es prescribir "1 comprimido al día" de gluconato creyendo que es lo mismo que sulfato. El paciente tardará EL TRIPLE de tiempo en curar la anemia.' }
+      },
+      references: {
+        pt: 'FDA Label; Diretrizes Clínicas de Reposição de Ferro da Sociedade de Pediatria.',
+        es: 'FDA Label; Directrices Clínicas de Reposición de Hierro.'
+      }
+    },
+
+    /* ── FERRO POLIMALTOSADO ────────────────────────────────────────────── */
+    "ferro_polimaltosado": {
+      name: { pt: 'Ferro Polimaltosado (Complexo de Ferro(III) Hidróxido Polimaltosado)', es: 'Hierro Polimaltosado (Complejo de Hierro(III) Hidróxido Polimaltosado)' },
+      category: 'hematologia',
+      icon: '🩸',
+      color: '#7C2D12',
+      colorTxt: '#ffffff',
+      class: { pt: 'Complexo Férrico Não-Iônico Oral', es: 'Complejo Férrico No Iónico Oral' },
+      indications: {
+        pt: ['Anemia ferropriva, especialmente em crianças, gestantes e pacientes que não toleram NENHUM sal ferroso tradicional', 'Profilaxia em prematuros'],
+        es: ['Anemia ferropénica, especialmente en niños, gestantes y pacientes que no toleran NINGUNA sal ferrosa tradicional']
+      },
+      commercialNames: { br: ['Neutrofer', 'Noripurum', 'Endofer'], ar: ['Ferranin'] },
+      presentation: { pt: ['Comprimidos mastigáveis 100 mg', 'Solução oral (gotas e xarope)'], es: ['Comprimidos masticables 100 mg', 'Solución oral (gotas y jarabe)'] },
+      mechanism: {
+        pt: 'A "Gaiola de Açúcar Inteligente". A maior revolução do ferro oral. Aqui, o ferro Férrico (Fe+++) está engaiolado dentro de uma macromolécula de polimaltose. Por não ser iônico (não há sais soltos), ele NÃO SOFRE OXIDAÇÃO no estômago. Ele não queima a mucosa e não solta radicais livres. Além disso, o intestino o absorve de forma ativa (apenas o que precisa), praticamente anulando o risco de intoxicação acidental letal em crianças.',
+        es: 'La "Jaula de Azúcar Inteligente". La mayor revolución del hierro oral. El hierro Férrico está enjaulado en una macromolécula. Al no ser iónico, NO SUFRE OXIDACIÓN en el estómago. No quema la mucosa ni suelta radicales libres. El intestino lo absorbe activamente.'
+      },
+      dose: {
+        adult: {
+          pt: '100 mg a 200 mg via oral (mastigável ou deglutido) por dia. Pode ser tomado de uma só vez.',
+          es: '100 mg a 200 mg vía oral (masticable o deglutido) por día.'
+        },
+        pediatric: {
+          pt: 'Gotas altamente seguras. Tratamento: 3 a 5 mg/kg/dia. Profilaxia: 1 a 2 mg/kg/dia.',
+          es: 'Gotas altamente seguras. Tratamiento: 3 a 5 mg/kg/día.'
+        }
+      },
+      administration: { pt: ['O TRIUNFO FARMACOLÓGICO: DEVE e PODE ser tomado JUNTO e misturado com os alimentos! Não interage com leite, cálcio, café ou pão. Não escurece e não mancha os dentes das crianças.'], es: ['EL TRIUNFO FARMACOLÓGICO: DEBE y PUEDE ser tomado JUNTO con los alimentos. No interactúa con leche o calcio. No mancha los dientes de los niños.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade clínica.', es: 'Sin necesidad clínica.' } },
+      commonAdverseEffects: { pt: ['Fezes escuras (esperado)', 'Distúrbios gastrointestinais LEVES (A incidência de náusea/cólicas cai de 30% no sulfato para menos de 5% no polimaltosado)'], es: ['Heces oscuras', 'Disturbios gastrointestinales LEVES (Cae de 30% en sulfato a menos de 5% aquí)'] },
+      dangerousAdverseEffects: { pt: ['Praticamente isento de toxicidade fatal em superdosagem aguda infantil, pois o intestino só abre a "gaiola" se precisar do ferro.'], es: ['Prácticamente exento de toxicidad fatal en sobredosis aguda infantil.'] },
+      contraindications: {
+        absolute: { pt: ['Hemocromatose'], es: ['Hemocromatosis'] },
+        relative: { pt: ['Anemias crônicas por déficit de ácido fólico exclusivas'], es: ['Anemias crónicas por déficit de ácido fólico exclusivas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A ADESÃO GARANTIDA: Na pediatria e obstetrícia, o sulfato ferroso tem uma taxa de abandono gigantesca por causa das cólicas e do gosto horrível de "ferrugem". O Polimaltosado (como o Noripurum) tem gosto de doce/chocolate e zero cólicas. Se o paciente puder pagar, é a escolha superior definitiva para garantir a cura.', es: 'LA ADHESIÓN GARANTIZADA: En pediatría y obstetricia, el sulfato ferroso tiene una tasa de abandono gigantesca. El Polimaltosado tiene sabor a dulce y cero cólicos. Es la elección superior definitiva.' }
+      },
+      references: {
+        pt: 'Geisser P. Safety and efficacy of iron(III)-hydroxide polymaltose complex (2007); Diretrizes de Anemia na Gravidez FEBRASGO.',
+        es: 'Geisser P. Safety and efficacy of iron(III) polymaltose (2007); Directrices de Anemia en el Embarazo.'
+      }
+    },
+
+    /* ── MALTOL FÉRRICO ─────────────────────────────────────────────────── */
+    "maltol_ferrico": {
+      name: { pt: 'Maltol Férrico', es: 'Maltol Férrico' },
+      category: 'hematologia',
+      icon: '🩸',
+      color: '#7C2D12',
+      colorTxt: '#ffffff',
+      class: { pt: 'Complexo de Ferro Oral de Alta Biodisponibilidade', es: 'Complejo de Hierro Oral de Alta Biodisponibilidad' },
+      indications: {
+        pt: ['Tratamento da anemia ferropriva em pacientes com Doença Inflamatória Intestinal (Retocolite Ulcerativa, Doença de Crohn)', 'Alternativa ao ferro IV em adultos que não toleram ferro oral clássico'],
+        es: ['Tratamiento de la anemia ferropénica en pacientes con Enfermedad Inflamatoria Intestinal (Crohn)', 'Alternativa al hierro IV en adultos que no toleran hierro oral']
+      },
+      commercialNames: { br: ['Accrufer (Importação EUA)'], ar: ['Feraccru'] },
+      presentation: { pt: ['Cápsulas duras 30 mg'], es: ['Cápsulas duras 30 mg'] },
+      mechanism: {
+        pt: 'A mais recente biotecnologia para o intestino doente. Em pacientes com Doença de Crohn, dar sulfato ferroso oxida a parede do intestino já sangrando e causa dores agoniantes. O Maltol Férrico é um quelato estável onde 1 ferro se liga firmemente a 3 moléculas de maltol. O complexo atravessa a barreira do intestino doente de forma intacta e neutra, sem irritar a mucosa e sem gerar os radicais livres tóxicos.',
+        es: 'La biotecnología para el intestino enfermo. Dar sulfato ferroso a pacientes con Crohn oxida la pared y causa dolor. El Maltol Férrico es un quelato estable que cruza la barrera del intestino enfermo de forma intacta y neutra, sin irritar la mucosa.'
+      },
+      dose: {
+        adult: {
+          pt: '30 mg, via oral, DUAS VEZES ao dia (Total de 60 mg diários).',
+          es: '30 mg, vía oral, DOS VECES al día (Total de 60 mg diarios).'
+        },
+        pediatric: {
+          pt: 'Não aprovado para pediatria.',
+          es: 'No aprobado para pediatría.'
+        }
+      },
+      administration: { pt: ['Deve ser tomado DE ESTÔMAGO VAZIO (1 hora antes ou 2 horas depois da refeição). Não mastigar a cápsula.'], es: ['Debe ser tomado DE ESTÓMAGO VACÍO (1 hora antes o 2 horas después de la comida). No masticar la cápsula.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Evitar em sobrecarga férrica hepática.', es: 'Evitar en sobrecarga férrica hepática.' } },
+      commonAdverseEffects: { pt: ['Flatulência leve', 'Constipação e fezes escuras', 'Dor de estômago (Incidência infinitamente menor que os sais tradicionais)'], es: ['Flatulencia leve', 'Constipación y heces oscuras', 'Dolor de estómago (Incidencia infinitamente menor que las sales tradicionales)'] },
+      dangerousAdverseEffects: { pt: ['Não apresenta letalidade aguda alta devido à absorção limitante e não-iônica.'], es: ['No presenta letalidad aguda alta debido a absorción limitante.'] },
+      contraindications: {
+        absolute: { pt: ['Hemocromatose', 'Surtos hemorrágicos maciços de DII onde a via oral é impossibilitada'], es: ['Hemocromatosis', 'Brotes hemorrágicos masivos de EII donde la vía oral es imposible'] },
+        relative: { pt: ['Uso associado com injeções de ferro venoso simultâneas'], es: ['Uso asociado con inyecciones de hierro venoso simultáneas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A SALVAÇÃO DOS COLÍTICOS: Antes do Maltol Férrico, o paciente com doença de Crohn e anemia severa era obrigado a frequentar o hospital semanalmente para receber injeções de Ferro na veia, pois a pílula de ferro comum piorava o sangramento retal. Esta droga permite o tratamento domiciliar e pacífico da inflamação intestinal.', es: 'LA SALVACIÓN DE LOS COLÍTICOS: Antes de este remedio, el paciente con Crohn y anemia debía ir al hospital para inyecciones IV. Esta droga permite el tratamiento domiciliario sin sangrado rectal.' }
+      },
+      references: {
+        pt: 'AEGIS-H2H Study; FDA Label (Accrufer); European Crohn\'s and Colitis Organisation (ECCO) Guidelines.',
+        es: 'AEGIS-H2H Study; FDA Label (Accrufer); ECCO Guidelines.'
+      }
+    },
+
+    /* ── COLECALCIFEROL (Vitamina D3) ─────────────────────────────────── */
+    "colecalciferol": {
+      name: { pt: 'Colecalciferol (Vitamina D3)', es: 'Colecalciferol (Vitamina D3)' },
+      category: 'endocrinologia',
+      icon: '☀️',
+      color: '#B45309',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento Vitamínico Lipossolúvel (Pró-hormônio inativo)', es: 'Suplemento Vitamínico Liposoluble (Prohormona inactiva)' },
+      indications: {
+        pt: ['Prevenção e Tratamento da hipovitaminose D (Deficiência de 25-OH-Vitamina D < 20 ou 30 ng/mL)', 'Profilaxia do Raquitismo e Osteoporose (associado ao cálcio)'],
+        es: ['Prevención y Tratamiento de la hipovitaminosis D', 'Profilaxis del Raquitismo y Osteoporosis (asociado al calcio)']
+      },
+      commercialNames: { br: ['Addera D3', 'DePura', 'D-Prev'], ar: ['D-Vit', 'Raquiferol'] },
+      presentation: { pt: ['Cápsulas/Comprimidos/Gotas (200 UI, 1.000 UI, 7.000 UI, 10.000 UI, 50.000 UI)'], es: ['Cápsulas/Comprimidos/Gotas (desde 200 UI hasta 50.000 UI)'] },
+      mechanism: {
+        pt: 'O "Hormônio do Sol de Prateleira". O colecalciferol é a Vitamina D INATIVA (a mesma que sua pele produz no sol). Ele não faz nada sozinho. Quando engolido, é estocado na gordura do corpo e precisa viajar para o fígado (onde vira Calcifediol) e DEPOIS para os rins (onde vira o super-hormônio Calcitriol). Só assim ele permite que o intestino absorva o cálcio do leite e fortaleça os ossos.',
+        es: 'La "Hormona del Sol de Estante". Es la Vitamina D INACTIVA. Cuando se ingiere, se almacena en la grasa y viaja al hígado (se vuelve Calcifediol) y LUEGO a los riñones (se vuelve Calcitriol). Solo así permite que el intestino absorba calcio.'
+      },
+      dose: {
+        adult: {
+          pt: 'Manutenção: 1.000 a 2.000 UI/dia. Tratamento do Déficit Grave: 50.000 UI UMA VEZ por semana durante 8 semanas, seguido da manutenção.',
+          es: 'Mantenimiento: 1.000 a 2.000 UI/día. Tratamiento de Déficit Grave: 50.000 UI UNA VEZ por semana por 8 semanas.'
+        },
+        pediatric: {
+          pt: 'Manutenção lactentes: 400 UI/dia. Crianças maiores: 600 UI/dia. (Gotas oleosas).',
+          es: 'Mantenimiento lactantes: 400 UI/día. Niños mayores: 600 UI/día.'
+        }
+      },
+      administration: { pt: ['OBRIGATÓRIO tomar junto a uma refeição rica em GORDURAS (Almoço ou jantar com azeite/carne). A absorção de uma megadose de 50.000 UI em jejum seco é quase zero (o corpo desperdiça).'], es: ['OBLIGATORIO tomar junto a una comida rica en GRASAS. La absorción de una megadosis de 50.000 UI en ayunas es casi cero.'] },
+      renalAdjustment: { required: true, message: { pt: 'INÚTIL em pacientes com Doença Renal Crônica terminal em diálise. O rim parado não consegue ativar a vitamina (Exige Calcitriol puro).', es: 'INÚTIL en pacientes con Enfermedad Renal Crónica terminal. El riñón parado no logra activar la vitamina.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Cuidado em cirrose grave, pois o primeiro passo de ativação falhará.', es: 'Cuidado en cirrosis grave, el primer paso de activación fallará.' } },
+      commonAdverseEffects: { pt: ['Geralmente assintomático nas doses normais', 'Distúrbios gastrointestinais leves (Cápsulas oleosas)'], es: ['Generalmente asintomático en dosis normales', 'Disturbios gastrointestinales leves'] },
+      dangerousAdverseEffects: { pt: ['INTOXICAÇÃO POR MEGADOSE DIÁRIA (Cálcio sobe, causando pedras nos rins e coma — muito comum em curandeiros que prescrevem o "Protocolo de Coimbra" irracional)'], es: ['INTOXICACIÓN POR MEGADOSIS DIARIA (Calcio sube, causando piedras en riñones y coma)'] },
+      contraindications: {
+        absolute: { pt: ['Hipercalcemia documentada (> 10.5 mg/dL)', 'Sarcoidose ou tuberculose hiperativa (Essas doenças "ativam" a vitamina D sozinhas de forma perigosa)'], es: ['Hipercalcemia documentada', 'Sarcoidosis o tuberculosis hiperactiva (Estas enfermedades "activan" la vitamina D peligrosamente)'] },
+        relative: { pt: ['Pacientes com histórico de pedras de cálcio repetidas no rim (Nefrolitíase ativa)'], es: ['Pacientes con historial de cálculos de calcio repetidos en el riñón'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O FENÔMENO DO ACÚMULO NA OBESIDADE: A vitamina D é gorda (lipossolúvel). Em pacientes com obesidade mórbida, as altas doses de Addera ficam "vizinhas e presas" no tecido adiposo do corpo e não vão para o sangue. Obesos exigem doses até 3 vezes maiores que pessoas magras para curar a deficiência.', es: 'EL FENÓMENO DEL ACÚMULO EN OBESIDAD: La vitamina D es liposoluble. En obesidad mórbida, las altas dosis quedan "presas" en el tejido adiposo y no van a la sangre. Obesos exigen dosis 3 veces mayores para curar la deficiencia.' }
+      },
+      references: {
+        pt: 'Endocrine Society Clinical Practice Guideline on Vitamin D; Diretrizes da Sociedade Brasileira de Endocrinologia e Metabologia (SBEM).',
+        es: 'Endocrine Society Clinical Practice Guideline on Vitamin D; Directrices Internacionales.'
+      }
+    }
+
+  }); /* fim Object.assign BUILD 425 / ONDA 50 append */
+})();

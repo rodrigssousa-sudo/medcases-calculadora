@@ -1295,6 +1295,11 @@ const DRUG_CLASSES = {
   "$classe_antiacidos_ibp": [
     "omeprazol", "pantoprazol", "lansoprazol", "esomeprazol",
     "rabeprazol", "dexlansoprazol"
+  ],
+
+  /* ── BUILD 425: Sais Ferrosos Iônicos Orais (Sulfato, Fumarato, Gluconato) ── */
+  "$classe_ferro_sais_ionicos": [
+    "sulfato_ferroso", "fumarato_ferroso", "gluconato_ferroso"
   ]
 
 };
@@ -23909,9 +23914,58 @@ const INTERACOES_DB = {
         es: "Pacientes que usan Omeprazol crónico deben tragar la píldora de hierro con JUGO DE LIMÓN PURO para acidificar artificialmente el estómago. Si falla, migrar a Hierro Intravenoso."
       }
     }
+  },
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     BUILD 425 — ONDA 50: Hematínicos Orais & Vitamina D
+     $classe_ferro_sais_ionicos×vitamina_c | colecalciferol×orlistate_resinas_biliares | colecalciferol×$classe_diureticos_tiazidicos
+  ══════════════════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA DE CLASSE: SAIS FERROSOS IÔNICOS (Sulfato, Fumarato, Gluconato) ── */
+  "$classe_ferro_sais_ionicos": {
+    "vitamina_c_acido_ascorbico": {
+      gravidade: "leve",
+      scoreClinico: 1,
+      descricao: {
+        pt: "A POTENCIALIZAÇÃO DE SUCESSO. Os sais ferrosos inorgânicos precisam de um ambiente extremamente ácido e redutor para não virarem 'ferrugem' inabsorvível no estômago. A administração concomitante de 200 a 500 mg de Vitamina C (Ácido Ascórbico) com o comprimido de ferro mantém o metal no estado Fe2+ (solúvel e ativo), podendo dobrar a absorção do ferro na parede intestinal.",
+        es: "LA POTENCIACIÓN DE ÉXITO. Las sales ferrosas inorgánicas necesitan un ambiente ácido. La administración de Vitamina C mantiene el metal en estado Fe2+ (soluble y activo), pudiendo doblar la absorción del hierro en la pared intestinal."
+      },
+      conduta: {
+        pt: "Incentivar ativamente o paciente a engolir a pílula do sulfato/fumarato/gluconato com um copo de limonada pura ou suco de laranja natural.",
+        es: "Incentivar activamente al paciente a tragar la píldora con limonada pura o jugo de naranja natural."
+      }
+    }
+  },
+
+  /* ── COLECALCIFEROL (Vitamina D3) ── */
+  "colecalciferol": {
+    "orlistate_resinas_biliares": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O SEQUESTRO LIPÍDICO TERAPÊUTICO. O Colecalciferol é uma vitamina solúvel em gordura. Remédios para emagrecer como o Orlistate (Xenical) bloqueiam a digestão e absorção de gorduras no intestino. Resinas como Colestiramina prendem a bile. Se o paciente tomar o suplemento de Vitamina D junto com o Orlistate, a vitamina inteira ficará presa na 'bolha' de gordura não digerida e será eliminada integralmente pelas fezes (esteatorreia).",
+        es: "EL SECUESTRO LIPÍDICO TERAPÉUTICO. El Colecalciferol es una vitamina soluble en grasa. Remedios para adelgazar como Orlistat bloquean la absorción de grasas. Si toma la Vitamina D junto con Orlistat, la vitamina quedará presa en la grasa no digerida y será eliminada en las heces."
+      },
+      conduta: {
+        pt: "ESPAÇAMENTO MANDATÓRIO. Pacientes bariátricos ou em uso de Orlistate DEVEM tomar a dose diária ou semanal de Colecalciferol no mínimo 2 HORAS ANTES ou 2 HORAS DEPOIS da droga de perda de peso, e junto com uma refeição de gordura saudável (como nozes ou azeite).",
+        es: "ESPACIAMIENTO MANDATORIO. Pacientes usando Orlistat DEBEN tomar el Colecalciferol al menos 2 HORAS ANTES o DESPUÉS de la droga para pérdida de peso."
+      }
+    },
+    "$classe_diureticos_tiazidicos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A RETENÇÃO DUPLA DE CÁLCIO. O Colecalciferol (após ser ativado pelo próprio corpo) força a entrada de cálcio via dieta. Os Diuréticos Tiazídicos (Hidroclorotiazida) impedem os rins de descartar cálcio na urina. Em pacientes idosos (principalmente mulheres em tratamento para osteoporose), a combinação de altas doses diárias das duas drogas aumenta significativamente o risco de desenvolver Hipercalcemia crônica e danos às válvulas aórticas.",
+        es: "LA RETENCIÓN DOBLE DE CALCIO. El Colecalciferol fuerza la entrada de calcio. Los Diuréticos Tiazídicos impiden a los riñones descartar calcio. En ancianos, la combinación aumenta el riesgo de Hipercalcemia crónica y daños a las válvulas."
+      },
+      conduta: {
+        pt: "Se prescrever doses cavalares de ataque (50.000 UI por semana) em um hipertenso que usa Hidroclorotiazida, é imperativo coletar Cálcio Sérico no 30º dia de tratamento.",
+        es: "Si prescribe megadosis (50.000 UI por semana) en un hipertenso que usa Hidroclorotiazida, es imperativo recolectar Calcio Sérico en el 30º día de tratamiento."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 424 ($classe_fosfatos_intravenosos×calcio_intravenoso_gluconato_cloreto; $classe_repositores_metais_bivalentes_fe_mg×levotiroxina_antibioticos_quinolonas_tetraciclinas; $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp) | BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 425 ($classe_ferro_sais_ionicos×vitamina_c_acido_ascorbico; colecalciferol×orlistate_resinas_biliares; colecalciferol×$classe_diureticos_tiazidicos) | BUILD 424 ($classe_fosfatos_intravenosos×calcio_intravenoso_gluconato_cloreto; $classe_repositores_metais_bivalentes_fe_mg×levotiroxina_antibioticos_quinolonas_tetraciclinas; $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp) | BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
