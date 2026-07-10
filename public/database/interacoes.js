@@ -1277,6 +1277,24 @@ const DRUG_CLASSES = {
     "losartana", "valsartana", "olmesartana", "telmisartana",
     "irbesartana", "candesartana", "azilsartana", "eprosartana",
     "aliskireno"
+  ],
+
+  /* ── BUILD 424: Fosfatos IV — Precipitação com Cálcio ── */
+  "$classe_fosfatos_intravenosos": [
+    "fosfato_de_potassio", "fosfato_de_sodio"
+  ],
+
+  /* ── BUILD 424: Metais Bivalentes Orais — Fe e Mg (Quelação) ── */
+  "$classe_repositores_metais_bivalentes_fe_mg": [
+    "sulfato_ferroso", "gluconato_ferroso", "fumarato_ferroso",
+    "oxido_de_magnesio", "citrato_de_magnesio", "glicinato_de_magnesio",
+    "sulfato_de_magnesio_oral"
+  ],
+
+  /* ── BUILD 424: IBPs (Inibidores da Bomba de Prótons) ── */
+  "$classe_antiacidos_ibp": [
+    "omeprazol", "pantoprazol", "lansoprazol", "esomeprazol",
+    "rabeprazol", "dexlansoprazol"
   ]
 
 };
@@ -23839,9 +23857,61 @@ const INTERACOES_DB = {
         es: "REGLA DE ORO DE UCI: Transfusiones de sangre SOLO EXCLUSIVAMENTE deben correr junto con Suero Fisiológico 0,9%. El Ringer Lactato está prohibido."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES BUILD 424 — ONDA 49:
+   Repositores Eletrolíticos e Sais de Ferro/Magnésio
+   $classe_fosfatos_intravenosos×calcio_intravenoso (contraindicada/5)
+   $classe_repositores_metais_bivalentes_fe_mg×levotiroxina_quinolonas_tetraciclinas (alta/4)
+   $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp (moderada/3)
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── FOSFATOS IV (A Pedra na Veia) ── */
+  "$classe_fosfatos_intravenosos": {
+    "calcio_intravenoso_gluconato_cloreto": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A PEDRA NA VEIA (Precipitação Cristalina Fatal). Esta é uma das regras mais fundamentais da UTI e Nutrição Parenteral. Fósforo e Cálcio no sangue se odeiam ou se amam demais. Se você infundir Fosfato de Potássio/Sódio numa veia, e administrar Cálcio IV na mesma via (ou num volume de Nutrição mal calculado), as duas substâncias precipitam instantaneamente em FOSFATO DE CÁLCIO. Forma-se uma 'pedra calcária' branca e grossa dentro do equipo, que será atirada para o pulmão do paciente, causando Embolia Pulmonar Microcristalina Imediata e Morte.",
+        es: "LA PIEDRA EN LA VENA (Precipitación Cristalina Fatal). Regla fundamental de la UCI. Si infundes Fosfato y administras Calcio IV en la misma vía, precipitan instantáneamente formando FOSFATO DE CALCIO. Se forma una 'piedra' blanca en el equipo que viaja al pulmón, causando Embolia Pulmonar y Muerte."
+      },
+      conduta: {
+        pt: "REGRA DE OURO: NUNCA administrar cálcio e fosfato na mesma linha ou mesmo em vias em 'Y'. Lavar extensamente os acessos. Em fórmulas de Nutrição Parenteral Total (NPT), a curva de solubilidade de cálcio/fósforo deve ser calculada meticulosamente pelo farmacêutico.",
+        es: "REGLA DE ORO: NUNCA administrar calcio y fosfato en la misma línea. En Nutrición Parenteral, la solubilidad debe calcularse meticulosamente."
+      }
+    }
+  },
+
+  /* ── REPOSITORES DE METAIS BIVALENTES Fe/Mg (A Quelação Oral) ── */
+  "$classe_repositores_metais_bivalentes_fe_mg": {
+    "levotiroxina_antibioticos_quinolonas_tetraciclinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O SEQUESTRO ESTRUTURAL E FALHA TERAPÊUTICA. Sulfato Ferroso e Óxido de Magnésio são metais 'pesados' na química estomacal (Cátions divalentes/trivalentes). Se um paciente tomar seu remédio da tireoide (Levotiroxina) ou um antibiótico (Ciprofloxacino, Doxiciclina, Minociclina) junto com as vitaminas e minerais do café da manhã, o Ferro e o Magnésio 'grudam' fortemente nessas drogas. O complexo endurece, não é absorvido, e sai nas fezes. O hipotireoidismo agrava e a infecção bacteriana avança imune ao tratamento.",
+        es: "EL SECUESTRO ESTRUCTURAL. Hierro y Magnesio son metales pesados. Si el paciente toma Levotiroxina o un antibiótico (Ciprofloxacino) junto con el Hierro, los metales 'se pegan' a estas drogas. El complejo no se absorbe y sale en heces. El hipotiroidismo empeora y la infección avanza."
+      },
+      conduta: {
+        pt: "Exigência de Espaçamento Rígido: O paciente DEVE tomar Levotiroxina puramente em jejum (esperando 1h). O Sulfato Ferroso e o Magnésio DEVEM ser separados em pelo menos 2 a 3 HORAS de qualquer antibiótico da classe das quinolonas/tetraciclinas ou medicações para tireoide.",
+        es: "Exigencia de Espaciamiento Rígido: El Hierro y Magnesio DEBEN ser separados al menos 2 a 3 HORAS de cualquier antibiótico o medicación para tiroides."
+      }
+    },
+    "$classe_antiacidos_ibp": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A ANULAÇÃO PELO BLOQUEIO ÁCIDO. O Sulfato Ferroso exige um 'banho' brutal de ácido clorídrico (estômago com pH < 3,0) para que o Ferro Fe+++ se converta na forma Fe++ que o intestino consegue engolir. Se o paciente faz uso rotineiro de Omeprazol ou Pantoprazol (como 30% da população mundial idosa faz), o estômago fica com pH de 5 ou 6. A pílula de sulfato ferroso desce pelo intestino, escurece as fezes, causa cólicas horrendas, MAS NÃO É ABSORVIDA. O paciente sofre os efeitos sem curar a anemia.",
+        es: "LA ANULACIÓN POR EL BLOQUEO ÁCIDO. El Hierro exige un 'baño' brutal de ácido (pH < 3,0) para ser absorbido. Si el paciente usa Omeprazol rutinario, el estómago queda alcalino. La píldora de hierro causa cólicos y heces negras, PERO NO SE ABSORBE. Sufre los efectos sin curar la anemia."
+      },
+      conduta: {
+        pt: "Pacientes refratários ao ferro oral que utilizam IBP (Omeprazol) cronicamente devem ser instruídos a engolir a pílula de ferro tomando um copo de SUCO DE LIMÃO/LARANJA PURO para acidificar artificialmente o estômago (vitamina C + ácido cítrico). Se falhar, migrar para Ferro Intravenoso.",
+        es: "Pacientes que usan Omeprazol crónico deben tragar la píldora de hierro con JUGO DE LIMÓN PURO para acidificar artificialmente el estómago. Si falla, migrar a Hierro Intravenoso."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 424 ($classe_fosfatos_intravenosos×calcio_intravenoso_gluconato_cloreto; $classe_repositores_metais_bivalentes_fe_mg×levotiroxina_antibioticos_quinolonas_tetraciclinas; $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp) | BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

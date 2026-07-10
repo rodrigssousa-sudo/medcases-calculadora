@@ -5306,3 +5306,254 @@
 
   }); /* fim Object.assign BUILD 423 / ONDA 48 append */
 })();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   BUILD 424 — ONDA 49: UTI Fluidos & Hematologia — Cristaloides + Eletrolíticos + Ferro
+   +5 drogas: Plasma-Lyte | Fosfato de Potássio | Fosfato de Sódio
+              Óxido de Magnésio | Sulfato Ferroso
+   Categorias: uti_fluidos (×3) | nefrologia (×1) | hematologia (×1)
+   Motor de interações: $classe_fosfatos_intravenosos×calcio_iv (contraindicada/5)
+                        $classe_repositores_metais_bivalentes_fe_mg×levotiroxina (alta/4)
+                        $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp (moderada/3)
+══════════════════════════════════════════════════════════════════════════ */
+(function(){
+  if(!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) window.NEUROLOGIA_DRUGS_DB={};
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── SOLUÇÃO DE PLASMA-LYTE ─────────────────────────────────────────── */
+    "plasma_lyte": {
+      name: { pt: 'Solução de Plasma-Lyte (148 / A)', es: 'Solución de Plasma-Lyte (148 / A)' },
+      category: 'uti_fluidos',
+      icon: '💧',
+      color: '#0F766E',
+      colorTxt: '#ffffff',
+      class: { pt: 'Cristaloide Isotônico Plenamente Balanceado', es: 'Cristaloide Isotónico Plenamente Balanceado' },
+      indications: {
+        pt: ['Ressuscitação de choque séptico e trauma grave em UTI', 'Fluidos de reposição em pacientes onde o Ringer Lactato é perigoso (Ex: Cirróticos graves ou pacientes recebendo transfusão de sangue)'],
+        es: ['Reanimación de choque séptico y trauma grave en UCI', 'Fluidos en pacientes donde Ringer Lactato es peligroso (Ej: Cirróticos graves o transfusión de sangre)']
+      },
+      commercialNames: { br: ['Plasma-Lyte 148'], ar: ['Plasma-Lyte'] },
+      presentation: { pt: ['Bolsas IV 500 mL e 1.000 mL'], es: ['Bolsas IV 500 mL y 1.000 mL'] },
+      mechanism: {
+        pt: 'A "Perfeição Fisiológica". O Plasma-Lyte foi desenhado para ser o líquido que mais se aproxima do plasma humano real. Tem Sódio, Potássio e Magnésio. A GRANDE DIFERENÇA para o Ringer Lactato: Ele NÃO TEM CÁLCIO (logo, não coagula sangue em transfusões e não reage com antibióticos) e NÃO USA LACTATO como tampão. Ele usa Acetato e Gliconato, que viram Bicarbonato no MÚSCULO, e não no fígado, sendo ideal para pacientes com insuficiência hepática fulminante.',
+        es: 'La "Perfección Fisiológica". Diseñado para acercarse al plasma humano real. LA GRAN DIFERENCIA: NO TIENE CALCIO (no coagula sangre ni reacciona con antibióticos) y NO USA LACTATO. Usa Acetato y Gluconato, que se vuelven Bicarbonato en el MÚSCULO, ideal para pacientes con insuficiencia hepática.'
+      },
+      dose: {
+        adult: {
+          pt: 'Bolus de ressuscitação de 30 mL/kg IV. Titulação conforme meta hemodinâmica.',
+          es: 'Bolo de reanimación de 30 mL/kg IV. Titulación según meta hemodinámica.'
+        },
+        pediatric: {
+          pt: '20 mL/kg em bolus para ressuscitação pediátrica.',
+          es: '20 mL/kg en bolo para reanimación pediátrica.'
+        }
+      },
+      administration: { pt: ['Via intravenosa rápida ou contínua. Totalmente compatível com transfusão de hemácias (Pode correr na mesma linha, ao contrário do Ringer).'], es: ['Totalmente compatible con transfusión de hematíes (Puede correr en la misma línea).'] },
+      renalAdjustment: { required: true, message: { pt: 'Cuidado em insuficiência renal aguda oligúrica devido ao conteúdo de Potássio (5 mEq/L).', es: 'Cuidado en insuficiencia renal aguda debido al Potasio (5 mEq/L).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'É a ESCOLHA DE OURO para hepatopatas graves e cirróticos em choque, pois seus tampões não exigem metabolismo hepático.', es: 'Es la ELECCIÓN DE ORO para hepatópatas graves, pues sus tampones no exigen metabolismo hepático.' } },
+      commonAdverseEffects: { pt: ['Sobrecarga de volume sistêmico (Se administrado em excesso)', 'Edema periférico'], es: ['Sobrecarga de volumen', 'Edema periférico'] },
+      dangerousAdverseEffects: { pt: ['Hipercalemia (em pacientes com falência renal que recebem grandes volumes rápidos)'], es: ['Hiperpotasemia (en pacientes con falla renal que reciben grandes volúmenes)'] },
+      contraindications: {
+        absolute: { pt: ['Hipercalemia severa documentada ou alcalose metabólica severa'], es: ['Hiperpotasemia severa o alcalosis metabólica severa'] },
+        relative: { pt: ['Insuficiência cardíaca descompensada (Risco de edema agudo)'], es: ['Insuficiencia cardíaca descompensada'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A SALVAÇÃO CIRÚRGICA: Ao contrário do Soro Fisiológico (que causa acidose grave por excesso de cloro), o Plasma-Lyte estabiliza o pH do paciente chocado. Grandes UTIs e centros de transplante hepático migraram quase que inteiramente para o Plasma-Lyte devido à sua neutralidade perfeita.', es: 'LA SALVACIÓN QUIRÚRGICA: A diferencia del Suero Fisiológico, estabiliza el pH del paciente. Grandes UCIs y centros de trasplante hepático migraron al Plasma-Lyte por su neutralidad perfecta.' }
+      },
+      references: {
+        pt: 'SMART Trial (NEJM 2018); SPLIT Trial; Diretrizes de Fluidoterapia da Surviving Sepsis Campaign.',
+        es: 'SMART Trial (NEJM 2018); Directrices de Fluidoterapia de la Surviving Sepsis Campaign.'
+      }
+    },
+
+    /* ── FOSFATO DE POTÁSSIO ────────────────────────────────────────────── */
+    "fosfato_de_potassio": {
+      name: { pt: 'Fosfato de Potássio', es: 'Fosfato de Potasio' },
+      category: 'uti_fluidos',
+      icon: '💧',
+      color: '#B45309',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento Eletrolítico Intravenoso Duplo', es: 'Suplemento Electrolítico Intravenoso Doble' },
+      indications: {
+        pt: ['Hipofosfatemia severa na UTI associada à Síndrome de Realimentação (Quando o doente desnutrido volta a comer e o fósforo zera no sangue)', 'Nutrição Parenteral Total (NPT)'],
+        es: ['Hipofosfatemia severa en la UCI asociada al Síndrome de Realimentación', 'Nutrición Parenteral Total (NPT)']
+      },
+      commercialNames: { br: ['Fosfato de Potássio a 2 mEq/mL'], ar: ['Fosfato de Potasio'] },
+      presentation: { pt: ['Ampolas de concentração variável (Ex: 2 mEq de Potássio e 1,1 a 1,5 mmol de Fosfato por mL)'], es: ['Ampollas de concentración variable'] },
+      mechanism: {
+        pt: 'O "Combustível da Vida". O Fósforo é o bloco de construção do ATP (energia da célula) e da contração do músculo do diafragma. Na UTI, se o paciente fica sem comer e depois recebe muita glicose, a insulina "suga" todo o fósforo e potássio do sangue para dentro das células. O sangue fica sem fósforo e o paciente PARA de respirar por falha no diafragma. Esta injeção devolve o fósforo vital e o potássio de uma vez só para salvar a ventilação do doente.',
+        es: 'El "Combustible de la Vida". El Fósforo construye el ATP y contrae el diafragma. En la UCI, si el paciente desnutrido recibe glucosa, la insulina "succiona" el fósforo. El paciente DEJA de respirar. Esta inyección devuelve el fósforo vital y el potasio para salvar la ventilación.'
+      },
+      dose: {
+        adult: {
+          pt: 'Geralmente repõe-se de 15 a 30 mmol de Fósforo infundidos lentamente ao longo de 2 a 6 horas (A dose é extremamente calculada e baseada no peso e nível sérico de potássio).',
+          es: '15 a 30 mmol de Fósforo infundidos lentamente a lo largo de 2 a 6 horas (Dosis extremadamente calculada).'
+        },
+        pediatric: {
+          pt: '0,15 a 0,33 mmol/kg infundidos em 6 horas (Monitoramento de UTI obrigatório).',
+          es: '0,15 a 0,33 mmol/kg infundidos en 6 horas.'
+        }
+      },
+      administration: { pt: ['NUNCA administrar em bolus rápido (Causa parada cardíaca por excesso de potássio). DEVE ser diluído em SF 0,9% ou Glicose 5% e infundido com bomba de seringa.'], es: ['NUNCA administrar en bolo rápido. DEBE diluirse e infundirse con bomba.'] },
+      renalAdjustment: { required: true, message: { pt: 'Pacientes com falência renal podem sofrer intoxicação letal de potássio e fósforo (que não são filtrados). Reduzir dose e correr em tempo dobrado.', es: 'Pacientes con falla renal pueden sufrir intoxicación letal de potasio y fósforo.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem restrição direta.', es: 'Sin restricción directa.' } },
+      commonAdverseEffects: { pt: ['Diarreia (Se preparações orais associadas)', 'Flebite no local da infusão venosa', 'Queda transitória da pressão arterial'], es: ['Diarrea', 'Flebitis en el sitio de infusión', 'Caída transitoria de presión'] },
+      dangerousAdverseEffects: { pt: ['PRECIPITAÇÃO DE CÁLCIO (O cálcio do sangue despenca, causando convulsões e tetania)', 'Parada cardíaca (Se infundido muito rápido devido ao pico de potássio)'], es: ['PRECIPITACIÓN DE CALCIO (Causa convulsiones y tetania)', 'Parada cardíaca (Si se infunde muy rápido)'] },
+      contraindications: {
+        absolute: { pt: ['Hipercalemia (Potássio alto)', 'Hiperfosfatemia', 'Hipocalcemia ativa'], es: ['Hiperpotasemia', 'Hiperfosfatemia', 'Hipocalcemia activa'] },
+        relative: { pt: ['Insuficiência renal grave oligúrica'], es: ['Insuficiencia renal grave oligúrica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ERRO MATEMÁTICO: A prescrição de Fosfato de Potássio gera pânico nas UTIs porque as ampolas listam o Fósforo em "milimoles (mmol)" e o Potássio em "miliequivalentes (mEq)". Um erro do médico de confundir mmol com mEq destrói o coração do paciente. Prescreva sempre especificando quantos mmol de FOSFATO você deseja.', es: 'EL ERROR MATEMÁTICO: Genera pánico en las UCIs porque el Fósforo se mide en "mmol" y el Potasio en "mEq". Un error al confundirlos destruye el corazón. Prescriba siempre especificando "mmol de FOSFATO".' }
+      },
+      references: {
+        pt: 'NICE Guidelines on Refeeding Syndrome; ESPEN Guidelines on Parenteral Nutrition; Micromedex.',
+        es: 'NICE Guidelines on Refeeding Syndrome; ESPEN Guidelines; Micromedex.'
+      }
+    },
+
+    /* ── FOSFATO DE SÓDIO ───────────────────────────────────────────────── */
+    "fosfato_de_sodio": {
+      name: { pt: 'Fosfato de Sódio', es: 'Fosfato de Sodio' },
+      category: 'uti_fluidos',
+      icon: '💧',
+      color: '#B45309',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento Intravenoso / Laxante Salino Osmótico Oral', es: 'Suplemento Intravenoso / Laxante Salino Osmótico Oral' },
+      indications: {
+        pt: ['(VIA IV): Hipofosfatemia severa em pacientes que já têm Potássio Alto (logo não podem usar Fosfato de Potássio)', '(VIA ORAL): Preparo de cólon extremo para Colonoscopias'],
+        es: ['(VÍA IV): Hipofosfatemia severa en pacientes con Potasio Alto', '(VÍA ORAL): Preparación de colon extremo para Colonoscopias']
+      },
+      commercialNames: { br: ['Fleet Enema (Retal)', 'Fosfato de Sódio IV'], ar: ['Fleet Enema'] },
+      presentation: { pt: ['Ampolas IV (Concentrações em mmol/mEq)', 'Solução oral / Enemas retais'], es: ['Ampollas IV', 'Solución oral / Enemas rectales'] },
+      mechanism: {
+        pt: 'VIA INTRAVENOSA: Reposição pura de íons inorgânicos de fósforo atrelados ao sódio, recompondo a energia celular (ATP). VIA ORAL/RETAL: O Fosfato puxa violentamente a água da parede do corpo para dentro da luz do intestino grosso (catártico salino osmótico superpotente), induzindo uma evacuação aquosa explosiva que "lava" o cólon completamente em horas para a cirurgia.',
+        es: 'VÍA INTRAVENOSA: Reposición de fósforo ligado a sodio, recomponiendo ATP. VÍA ORAL/RECTAL: El fosfato tira violentamente el agua del cuerpo hacia el intestino (catártico osmótico superpotente), induciendo evacuación explosiva que "lava" el colon en horas.'
+      },
+      dose: {
+        adult: {
+          pt: 'IV: 15 a 30 mmol infundidos lentamente em 4 a 6 horas. Oral (Preparo de Cólon): Soluções prontas ingeridas com muita água na véspera do exame.',
+          es: 'IV: 15 a 30 mmol infundidos en 4 a 6 horas. Oral (Preparo de Colon): Soluciones ingeridas con mucha agua la víspera del examen.'
+        },
+        pediatric: {
+          pt: 'Laxante oral/enema contraindicado ou sob extrema restrição de volume em crianças pequenas devido a risco letal de desidratação.',
+          es: 'Laxante oral/enema bajo extrema restricción en niños pequeños por riesgo letal.'
+        }
+      },
+      administration: { pt: ['O USO ORAL EXIGE que o paciente beba no mínimo 2 a 3 litros de água limpa adicional para evitar a dessecação completa dos rins e morte celular.'], es: ['EL USO ORAL EXIGE beber mínimo 2 a 3 litros de agua extra para evitar desecación de los riñones.'] },
+      renalAdjustment: { required: true, message: { pt: 'Preparo oral contraindicado na DRC devido ao risco de sobrecarga de fósforo e lesão tubular direta.', es: 'Preparo oral contraindicado en ERC debido a sobrecarga de fósforo y lesión tubular.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Cuidado em ascite/cirrose devido ao pico de carga de sódio.', es: 'Cuidado en ascitis por carga de sodio.' } },
+      commonAdverseEffects: { pt: ['Diarreia aquosa avassaladora (Desejado no preparo oral)', 'Distensão abdominal e cólicas', 'Hipernatremia e Hipocalcemia'], es: ['Diarrea acuosa avasalladora (Deseado en uso oral)', 'Distensión abdominal y cólicos', 'Hipernatremia e Hipocalcemia'] },
+      dangerousAdverseEffects: { pt: ['NEFROPATIA AGUDA DO FOSFATO (Lesão renal aguda irreversível — Black Box para uso oral)', 'Convulsões por queda de cálcio', 'Parada cardíaca por arritmia eletrolítica global'], es: ['NEFROPATÍA AGUDA DEL FOSFATO (Lesión renal irreversible — Caja Negra oral)', 'Convulsiones por caída de calcio', 'Parada cardíaca'] },
+      contraindications: {
+        absolute: { pt: ['Doença Renal Crônica, Insuficiência Cardíaca Congestiva descompensada (Preparo Oral)', 'Hipernatremia'], es: ['Enfermedad Renal Crónica, Insuficiencia Cardíaca (Preparo Oral)', 'Hipernatremia'] },
+        relative: { pt: ['Idosos frágeis (O laxante oral puxa tanta água que o idoso pode desmaiar de choque hipovolêmico na sanita)'], es: ['Ancianos frágiles (El laxante saca tanta agua que el anciano puede desmayarse en el baño)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'BLACK BOX DA COLONOSCOPIA: Milhares de pacientes saudáveis tomaram xarope de Fosfato de Sódio para limpar o intestino para colonoscopia e acabaram PERDENDO OS RINS definitivamente. A desidratação maciça com alta carga de fósforo faz os cristais entupirem os túbulos do rim de forma permanente. Para limpar o cólon hoje, a medicina migrou para o Polietilenoglicol (PEG/Macrogol).', es: 'BLACK BOX DE LA COLONOSCOPIA: Pacientes sanos tomaron jarabe de Fosfato para colonoscopia y PERDIERON LOS RIÑONES. La deshidratación masiva tapa los túbulos con cristales. Hoy la medicina migró al Polietilenglicol (PEG/Macrogol).' }
+      },
+      references: {
+        pt: 'FDA Black Box Warning on Oral Sodium Phosphate; Diretrizes da Sociedade Americana de Endoscopia Gastrointestinal.',
+        es: 'FDA Black Box Warning on Oral Sodium Phosphate; Directrices de la Sociedad Americana de Endoscopia Gastrointestinal.'
+      }
+    },
+
+    /* ── ÓXIDO DE MAGNÉSIO ──────────────────────────────────────────────── */
+    "oxido_de_magnesio": {
+      name: { pt: 'Óxido de Magnésio', es: 'Óxido de Magnesio' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento Mineral / Antiácido / Laxante', es: 'Suplemento Mineral / Antiácido / Laxante' },
+      indications: {
+        pt: ['Prevenção e tratamento da Hipomagnesemia leve a moderada crônica', 'Constipação intestinal crônica (uso diário off-label)', 'Antiácido para azia'],
+        es: ['Prevención y tratamiento de la Hipomagnesemia leve a moderada crónica', 'Constipación intestinal crónica', 'Antiácido']
+      },
+      commercialNames: { br: ['Magnesia Bisurada', 'Suplementos de Óxido de Mg'], ar: ['Magnesio'] },
+      presentation: { pt: ['Comprimidos e Cápsulas de 250 mg, 400 mg e 500 mg'], es: ['Comprimidos y Cápsulas de 250 mg, 400 mg y 500 mg'] },
+      mechanism: {
+        pt: 'A "Vassoura de Água". O óxido de magnésio tem baixa biodisponibilidade para o sangue (o corpo absorve pouco). Quando engolido, ele reage com o ácido do estômago gerando Cloreto de Magnésio. Esse magnésio livre no intestino possui uma carga osmótica altíssima, sugando água para o interior das fezes, o que desencadeia ondas peristálticas intensas. Uma pequena fração é absorvida para o sangue, reabastecendo os ossos e músculos da falta do mineral.',
+        es: 'La "Escoba de Agua". El óxido de magnesio se absorbe poco. Al tragarlo, reacciona con el ácido generando Cloruro de Magnesio. Este magnesio en el intestino atrae agua, desencadenando peristaltismo. Una pequeña fracción va a la sangre, reabasteciendo el mineral.'
+      },
+      dose: {
+        adult: {
+          pt: 'Suplemento: 400 mg a 800 mg ao dia. Laxante: Doses maiores conforme resposta, sempre com grande quantidade de líquidos.',
+          es: 'Suplemento: 400 mg a 800 mg al día. Laxante: Dosis mayores según respuesta, siempre con líquidos.'
+        },
+        pediatric: {
+          pt: 'Não usado rotineiramente como primeira linha em pediatria sem cálculo estrito.',
+          es: 'No usado rutinariamente sin cálculo estricto.'
+        }
+      },
+      administration: { pt: ['DEVE ser ingerido junto a uma refeição para otimizar a absorção (que depende de ácido gástrico) e reduzir a irritação.', 'Beber muita água (1 a 2 copos cheios).'], es: ['DEBE ser ingerido junto a una comida para optimizar absorción y beber mucha agua.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar ou usar com monitoramento rigoroso em ClCr < 30 mL/min, devido ao risco de Hipermagnesemia letal.', es: 'Evitar en ClCr < 30 mL/min, debido a riesgo de Hipermagnesemia letal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Diarreia aquosa profusa (O maior limitante para usar como suplemento no sangue)', 'Cólicas e gases', 'Sensação de estufamento'], es: ['Diarrea acuosa profusa', 'Cólicos y gases'] },
+      dangerousAdverseEffects: { pt: ['Hipermagnesemia (Fraqueza muscular generalizada, arreflexia e parada respiratória) em doentes renais'], es: ['Hipermagnesemia (Debilidad muscular, arreflexia y parada respiratoria) en enfermos renales'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência Renal Grave com anúria', 'Abdome agudo cirúrgico / Obstrução intestinal (Risco de ruptura)'], es: ['Insuficiencia Renal Grave con anuria', 'Abdomen agudo quirúrgico / Obstrucción intestinal'] },
+        relative: { pt: ['Uso associado com bloqueadores neuromusculares em UTI (O magnésio potencializa a paralisia)'], es: ['Uso asociado con bloqueadores neuromusculares (El magnesio potencia la parálisis)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: false,
+        warning: { pt: 'O ENGANO DA SUPLEMENTAÇÃO: Pacientes compram Óxido de Magnésio barato para curar câimbras, mas a absorção desta molécula no sangue é ínfima (apenas 4%). 96% fica no intestino causando diarreia severa, impedindo o tratamento muscular. Se o foco for repor o magnésio do SANGUE, o paciente deve trocar para Citrato de Magnésio ou Glicinato de Magnésio.', es: 'EL ENGAÑO DEL SUPLEMENTO: La absorción de esta molécula en la sangre es ínfima (4%). El 96% queda en el intestino causando diarrea. Si el foco es reponer el magnesio en SANGRE, debe cambiar a Citrato o Glicinato de Magnesio.' }
+      },
+      references: {
+        pt: 'Diretrizes da ESPEN; Tratado de Nutrologia; Farmacopeia Americana (USP).',
+        es: 'Directrices de ESPEN; Tratado de Nutrología; Farmacopea Americana (USP).'
+      }
+    },
+
+    /* ── SULFATO FERROSO ────────────────────────────────────────────────── */
+    "sulfato_ferroso": {
+      name: { pt: 'Sulfato Ferroso', es: 'Sulfato Ferroso' },
+      category: 'hematologia',
+      icon: '🩸',
+      color: '#B91C1C',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento de Ferro Oral (Primeira Geração)', es: 'Suplemento de Hierro Oral (Primera Generación)' },
+      indications: {
+        pt: ['Profilaxia e Tratamento da Anemia Ferropriva aguda ou crônica', 'Suplementação rotineira na gravidez para prevenção de déficits do tubo neural e anemia materna'],
+        es: ['Profilaxis y Tratamiento de la Anemia Ferropénica', 'Suplementación rutinaria en el embarazo']
+      },
+      commercialNames: { br: ['Neutrofer', 'Sulfer'], ar: ['Fer In Sol'] },
+      presentation: { pt: ['Comprimidos/Drágeas 300 mg (contém aprox. 60 a 65 mg de Ferro Elementar)', 'Solução oral (gotas)'], es: ['Comprimidos/Grageas 300 mg (contiene aprox. 60 mg de Hierro Elemental)', 'Solución oral (gotas)'] },
+      mechanism: {
+        pt: 'O "Tijolo do Sangue". O Sulfato Ferroso entrega íons de Ferro de forma rápida e bruta na luz do intestino superior (duodeno). O intestino absorve o Ferro para o sangue mediado pela vitamina C. O ferro viaja até a medula óssea e é acoplado diretamente no anel da "porfirina" para criar o grupo HEME da hemoglobina. Sem ele, a hemácia nasce pequena, pálida e incapaz de carregar o oxigênio (anemia microcítica hipocrômica).',
+        es: 'El "Ladrillo de la Sangre". Entrega iones de Hierro en el intestino superior. Es absorbido a la sangre y acoplado en la "porfirina" para crear el grupo HEMO. Sin él, el glóbulo rojo nace pequeño y pálido.'
+      },
+      dose: {
+        adult: {
+          pt: 'Tratamento: 1 comprimido (aprox 60 mg Fe elementar) de 1 a 3 vezes ao dia. As novas diretrizes sugerem que tomar EM DIAS ALTERNADOS (1x sim, 1x não) melhora a absorção e reduz efeitos colaterais.',
+          es: 'Tratamiento: 1 comprimido 1 a 3 veces al día. Nuevas directrices sugieren tomar EN DÍAS ALTERNOS para mejorar absorción.'
+        },
+        pediatric: {
+          pt: 'Tratamento: 3 a 6 mg de Ferro Elementar/kg/dia dividido em 3 doses. Profilaxia: 1 a 2 mg/kg/dia.',
+          es: 'Tratamiento: 3 a 6 mg de Hierro Elemental/kg/día dividido en 3 dosis.'
+        }
+      },
+      administration: { pt: ['DEVE SER TOMADO EM JEJUM OU COM SUCO DE CÍTRICO (Vitamina C). O ácido gástrico e o pH ácido garantem a absorção.', 'Mancha os dentes na formulação líquida (usar canudo).'], es: ['DEBE TOMARSE EN AYUNAS O CON JUGO CÍTRICO (Vitamina C). El ácido garantiza la absorción.', 'Mancha los dientes en líquido.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade sistêmica.', es: 'Sin necesidad sistémica.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Cuidado em hepatopatias de acúmulo (Hemocromatose / Hepatite crônica grave).', es: 'Cuidado en hepatopatías de acúmulo.' } },
+      commonAdverseEffects: { pt: ['Constipação Cimentante (As fezes viram pedras duras e negras)', 'Dor gástrica severa, queimação e cólicas', 'Fezes negras e espessas (Assusta os pacientes, mas é normal e atesta adesão)'], es: ['Constipación Cimentante (Las heces se vuelven duras y negras)', 'Dolor gástrico severo y cólicos', 'Heces negras (Es normal)'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia e úlcera gastrointestinal medicamentosa', 'INTOXICAÇÃO FATAL (Superdosagem aguda destrói a parede estomacal, fígado e cérebro — muito comum em pediatria)'], es: ['Hemorragia y úlcera gastrointestinal', 'INTOXICACIÓN FATAL (Sobredosis aguda destruye estómago, hígado y cerebro)'] },
+      contraindications: {
+        absolute: { pt: ['Anemias não causadas por ferro (Anemia falciforme, Talassemia, Anemia de doença crônica com ferritina alta)', 'Uso de Hemotransfusões simultâneas'], es: ['Anemias no causadas por hierro', 'Uso de Hemotransfusiones simultáneas'] },
+        relative: { pt: ['Pacientes com Doença Inflamatória Intestinal ativa (O sulfato oxida e piora a inflamação do Crohn/Retocolite)'], es: ['Pacientes con Enfermedad Inflamatoria Intestinal activa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'AS BALAS ASSASSINAS: Comprimidos de sulfato ferroso parecem "M&Ms" ou confeitos de chocolate, o que atrai crianças. Ingerir 10 comprimidos de sulfato ferroso pode causar Necrose Gastrointestinal Fulminante e Morte Hepática em uma criança de 4 anos de forma irreversível. É a principal causa de envenenamento fatal por cosméticos/suplementos na pediatria mundial. O antídoto é Deferoxamina IV de urgência.', es: 'LAS BALAS ASESINAS: Los comprimidos parecen dulces. Ingerir 10 comprimidos puede causar Necrosis Gastrointestinal y Muerte en un niño. Es la principal causa de envenenamiento fatal en pediatría. El antídoto es Deferoxamina IV.' }
+      },
+      references: {
+        pt: 'Diretrizes da Sociedade Brasileira de Hematologia (ABHH); ASH Guidelines for Iron Deficiency Anemia; UpToDate Tox.',
+        es: 'Directrices de Hematología ASH; UpToDate Tox.'
+      }
+    }
+
+  }); /* fim Object.assign BUILD 424 / ONDA 49 append */
+})();
