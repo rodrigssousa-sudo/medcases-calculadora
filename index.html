@@ -21205,6 +21205,7 @@ document.addEventListener('DOMContentLoaded', () => {
   _injectObjectDB(window.ALERGIA_IMUNOLOGIA_DRUGS_DB,   'Alergia/Imunologia'); /* BUILD 394 */
   _injectObjectDB(window.PNEUMOLOGIA_OTORRINO_DRUGS_DB, 'Pneumologia');        /* BUILD 396 */
   _injectObjectDB(window.NEUROLOGIA_DRUGS_DB,           'Neurologia');         /* BUILD 396: triptanos */
+  _injectObjectDB(window.INFECTOLOGIA_DRUGS_DB,         'Infectologia');       /* BUILD 403 PATCH A — 27 fármacos antifúngicos/antibióticos/antivirais */
 
   /* ══════════════════════════════════════════════════════════════
      BUILD 233 — OBJ1: DRUG_DB STUB INJECTION
@@ -21393,7 +21394,8 @@ document.addEventListener('DOMContentLoaded', () => {
       ...Object.fromEntries(_safeArr(window.PNEUMO_DRUGS_DB      ).map(d=>[d.id, d])),
       ...Object.fromEntries(_safeArr(window.PSIQUIATRIA_DRUGS_DB ).map(d=>[d.id, d])),
       ...Object.fromEntries(_safeArr(window.REUMATOLOGIA_DRUGS_DB).map(d=>[d.id, d])),
-      ...(window.NEUROLOGIA_DRUGS_DB || {}) /* BUILD 396: triptanos — schema Object-DB */
+      ...(window.NEUROLOGIA_DRUGS_DB     || {}), /* BUILD 396: triptanos — schema Object-DB */
+      ...(window.INFECTOLOGIA_DRUGS_DB   || {})  /* BUILD 403 PATCH A: antifúngicos/antivirais/antibióticos — 27 fármacos absorvidos no ALL_DRUGS_DB */
     };
   } catch(e) {
     console.error('[Boot DB] Erro ao montar ALL_DRUGS_DB — usando mapa parcial:', e.message);
@@ -21938,6 +21940,7 @@ document.addEventListener('DOMContentLoaded', () => {
       _injectObjectDB(window.ALERGIA_IMUNOLOGIA_DRUGS_DB,   'Alergia/Imunologia');
       _injectObjectDB(window.PNEUMOLOGIA_OTORRINO_DRUGS_DB, 'Pneumologia');        /* BUILD 396 */
       _injectObjectDB(window.NEUROLOGIA_DRUGS_DB,           'Neurologia');         /* BUILD 396: triptanos */
+      _injectObjectDB(window.INFECTOLOGIA_DRUGS_DB,         'Infectologia');       /* BUILD 403 PATCH A — idempotente, 27 fármacos */
       _injectObjectDB(window.PSICOFARMACOS_DRUGS_DB,        'Psicofármaco');
       _injectObjectDB(window.CARDIO_DRUGS_DB,               'Cardiovascular');
       var _added = window.DRUG_DB.length - _sizeBefore;
