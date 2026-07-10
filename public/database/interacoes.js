@@ -1220,6 +1220,15 @@ const DRUG_CLASSES = {
   "$classe_calcio_oral": [
     "acetato_de_calcio", "carbonato_de_calcio", "citrato_de_calcio",
     "gluconato_de_calcio_oral", "lactato_de_calcio"
+  ],
+
+  "$classe_quelantes_potassio_todos": [
+    "patiromer", "ciclossilicato_de_zirconio_sodico",
+    "poliestirenossulfonato_de_sodio", "poliestirenossulfonato_de_calcio"
+  ],
+
+  "$classe_resinas_poliestireno": [
+    "poliestirenossulfonato_de_sodio", "poliestirenossulfonato_de_calcio"
   ]
 
 };
@@ -23454,9 +23463,63 @@ const INTERACOES_DB = {
         es: "La Levotiroxina NUNCA debe ser ingerida en la ventana de comida con el Velphoro. Espaciar al menos 4 horas."
       }
     }
+  },
+
+  /* ════════════════════════════════════════════════════════════════
+     BLOCO INTERAÇÕES BUILD 417 — Nefrologia: Hipercalemia & Sequestro GI
+     citrato_ferrico | patiromer | ciclossilicato_de_zirconio_sodico
+     poliestirenossulfonato_de_sodio | poliestirenossulfonato_de_calcio
+  ════════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA DE CLASSE: SEQUESTRO INTESTINAL (Todas as Resinas/Cristais de Potássio) ── */
+  "$classe_quelantes_potassio_todos": {
+    "qualquer_medicamento_oral": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A FALÊNCIA TERAPÊUTICA CRUZADA. Patiromer, Ciclossilicato de Zircônio e as Resinas de Poliestireno atuam como malhas microscópicas não seletivas no estômago e intestino. Se o paciente ingerir seus medicamentos essenciais da manhã (Amlodipino para pressão, Levotiroxina para tireoide, Lítio para bipolaridade) junto com o pó do potássio, a resina prenderá todos esses remédios fisicamente. O paciente defecará os remédios caros e sofrerá falha brutal no tratamento de todas as suas outras doenças.",
+        es: "EL FALLO TERAPÉUTICO CRUZADO. Estas resinas actúan como mallas no selectivas. Si el paciente ingiere sus medicamentos esenciales (Amlodipino, Levotiroxina) junto con el polvo de potasio, la resina los atrapará físicamente. El paciente defecará los remedios y sufrirá fallo brutal en sus otras enfermedades."
+      },
+      conduta: {
+        pt: "ESPAÇAMENTO UNIVERSAL MANDATÓRIO DE 3 HORAS. Nenhum outro medicamento oral deve ser administrado 3 horas antes ou 3 horas depois do Patiromer, Sorcal ou Lokelma (Zircônio). Organização de enfermagem e dieta rigorosa.",
+        es: "ESPACIAMIENTO UNIVERSAL MANDATORIO DE 3 HORAS. Ningún medicamento debe administrarse 3 horas antes o después de la resina de potasio."
+      }
+    }
+  },
+
+  /* ── SORCAL E RESICAL (Poliestirenossulfonato): Black Box Sorbitol ── */
+  "$classe_resinas_poliestireno": {
+    "sorbitol": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "NECROSE COLÔNICA E GANGRENA (BLACK BOX FDA). A associação de Poliestirenossulfonato (Sorcal/Kayexalate) com o xarope laxante de Sorbitol destrói a barreira mucosa do intestino grosso. Ocorre isquemia transmural, gangrena, perfuração fecal do peritônio e morte fulminante por sepse em pacientes imunodeprimidos ou urêmicos.",
+        es: "NECROSIS COLÓNICA Y GANGRENA (CAJA NEGRA FDA). La asociación de Poliestirenosulfonato con jarabe laxante de Sorbitol destruye la barrera mucosa del colon. Ocurre isquemia transmural, gangrena, perforación y muerte fulminante por sepsis."
+      },
+      conduta: {
+        pt: "CONTRAINDICADO ABSOLUTAMENTE pelo FDA. Não manipular nem aviar Sorcal suspenso em formulações ricas em Sorbitol. Usar água estéril para enemas. Tratar constipação com Lactulose em horários distantes se necessário.",
+        es: "CONTRAINDICADO ABSOLUTAMENTE por la FDA. No mezclar Sorcal con Sorbitol. Usar agua estéril para enemas."
+      }
+    }
+  },
+
+  /* ── CICLOSSILICATO DE ZIRCÔNIO SÓDICO: Sobrecarga de Sódio na ICC ── */
+  "ciclossilicato_de_zirconio_sodico": {
+    "insuficiencia_cardiaca_congestiva": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "DESCOMPENSAÇÃO HIPERVOLÊMICA (Sobrecarga de Sódio). Cada dose de 10 gramas de Zircônio contém 800 mg de Sódio puro, que é inteiramente trocado e absorvido para o sangue do paciente. Em pacientes com ICC descompensada (coração fraco), esse sal atrai litros de água para as veias, levando o coração ao colapso e o paciente a um Edema Agudo de Pulmão sufocante.",
+        es: "DESCOMPENSACIÓN HIPERVOLÉMICA (Sobrecarga de Sodio). Cada dosis de 10 g contiene 800 mg de Sodio puro absorbido. En pacientes con ICC descompensada, esta sal atrae litros de agua, llevando al colapso cardíaco y Edema Pulmonar Agudo."
+      },
+      conduta: {
+        pt: "Restrição hídrica e aumento imediato das doses do diurético de alça (Furosemida) se o uso do Lokelma for inegociável. Preferir Patiromer em doentes com ICC severa, pois este troca por cálcio e não por sódio.",
+        es: "Restricción hídrica y aumento del diurético de asa (Furosemida) si el uso es innegociable. Preferir Patiromer en ICC severa, pues este cambia por calcio y no por sodio."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

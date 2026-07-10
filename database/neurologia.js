@@ -3892,3 +3892,225 @@
 
   }); /* fim Object.assign BUILD 416 append */
 })();
+
+/* ─────────────────────────────────────────────────────────────────────────
+   BUILD 417 APPEND — Nefrologia: Hipercalemia & Citrato Férrico
+   IDs: citrato_ferrico | patiromer | ciclossilicato_de_zirconio_sodico
+        poliestirenossulfonato_de_sodio | poliestirenossulfonato_de_calcio
+   ───────────────────────────────────────────────────────────────────────── */
+(function(){
+  if(!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) window.NEUROLOGIA_DRUGS_DB={};
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    "citrato_ferrico": {
+      name: { pt: 'Citrato Férrico', es: 'Citrato Férrico' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Quelante de Fósforo / Suplemento de Ferro Oral', es: 'Quelante de Fósforo / Suplemento de Hierro Oral' },
+      indications: {
+        pt: ['Hiperfosfatemia em pacientes com DRC em diálise', 'Anemia por deficiência de ferro em adultos com DRC não dependente de diálise'],
+        es: ['Hiperfosfatemia en pacientes con ERC en diálisis', 'Anemia por deficiencia de hierro en adultos con ERC no dependiente de diálisis']
+      },
+      commercialNames: { br: ['Auryxia'], ar: ['Auryxia'] },
+      presentation: { pt: ['Comprimidos 1 g (equivalente a 210 mg de ferro férrico)'], es: ['Comprimidos 1 g (equivalente a 210 mg de hierro férrico)'] },
+      mechanism: {
+        pt: 'A "Pílula de Dupla Função". O Citrato Férrico se liga ao fósforo do alimento no trato GI, formando fosfato férrico insolúvel (excretado nas fezes). O GRANDE DIFERENCIAL: Diferente do Velphoro (que prende o ferro), o citrato férrico PERMITE que uma quantidade substancial de ferro seja absorvida para o sangue. Ele baixa o fósforo E cura a anemia do renal crônico ao mesmo tempo.',
+        es: 'La "Píldora de Doble Función". Se une al fósforo del alimento en el tracto GI. EL GRAN DIFERENCIAL: A diferencia del Velphoro, el citrato férrico PERMITE que se absorba una cantidad sustancial de hierro a la sangre. Baja el fósforo Y cura la anemia del renal crónico al mismo tiempo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hiperfosfatemia: 2 comprimidos (2 g), via oral, 3 vezes ao dia COM AS REFEIÇÕES. Titular conforme fósforo sérico.',
+          es: 'Hiperfosfatemia: 2 comprimidos (2 g), vía oral, 3 veces al día CON LAS COMIDAS.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Obrigatório tomar com as refeições. Não triturar ou mastigar.'], es: ['Obligatorio tomar con las comidas. No triturar o masticar.'] },
+      renalAdjustment: { required: false, message: { pt: 'Desejado para uso em DRC. Monitorar Ferritina para evitar acúmulo sistêmico.', es: 'Deseado para uso en ERC. Monitorear Ferritina.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Cuidado em doenças de depósito de ferro no fígado.', es: 'Cuidado en enfermedades de depósito de hierro.' } },
+      commonAdverseEffects: { pt: ['Fezes muito escuras ou negras (inofensivo)', 'Diarreia e constipação', 'Dor abdominal'], es: ['Heces muy oscuras o negras (inofensivo)', 'Diarrea y constipación', 'Dolor abdominal'] },
+      dangerousAdverseEffects: { pt: ['SOBRECARGA DE FERRO (Hemocromatose iatrogênica - Ferritina > 2000 ng/mL, depositando ferro no fígado e coração)'], es: ['SOBRECARGA DE HIERRO (Hemocromatosis iatrogénica - depositando hierro en hígado y corazón)'] },
+      contraindications: {
+        absolute: { pt: ['Hemocromatose, Hemossiderose ou qualquer distúrbio de sobrecarga de ferro'], es: ['Hemocromatosis, Hemosiderosis o cualquier trastorno de sobrecarga de hierro'] },
+        relative: { pt: ['Sangramento gastrointestinal ativo agudo'], es: ['Sangrado gastrointestinal activo agudo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O EXCESSO SILENCIOSO: Como ele doa ferro para o sangue, o médico é OBRIGADO a cortar a dose do "ferro na veia" que o paciente recebe na diálise. Se esquecer de suspender o ferro IV, o paciente sofre um envenenamento lento por ferro que destrói o coração e o pâncreas.', es: 'EL EXCESO SILENCIOSO: Como dona hierro a la sangre, el médico está OBLIGADO a cortar la dosis del "hierro en vena" en la diálisis. Si olvida suspenderlo, el paciente sufre envenenamiento lento por hierro que destruye el corazón.' }
+      }
+    },
+
+    "patiromer": {
+      name: { pt: 'Patiromer (Sorbitex Cálcico)', es: 'Patiromer' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Resina de Troca Iônica Não-Absorvível (Quelante de Potássio)', es: 'Resina de Intercambio Iónico No Absorbible (Quelante de Potasio)' },
+      indications: {
+        pt: ['Tratamento da HIPERCALEMIA crônica ou recorrente em pacientes com DRC ou usuários de inibidores da SRAA (Losartana/Enalapril)'],
+        es: ['Tratamiento de la HIPERPOTASEMIA crónica o recurrente en pacientes con ERC o usuarios de inhibidores SRAA']
+      },
+      commercialNames: { br: ['Veltassa'], ar: ['Veltassa'] },
+      presentation: { pt: ['Pó para suspensão oral 8,4 g, 16,8 g e 25,2 g (Sachês)'], es: ['Polvo para suspensión oral 8,4 g, 16,8 g y 25,2 g (Sobres)'] },
+      mechanism: {
+        pt: 'Um polímero em forma de pó que atua principalmente no lúmen do cólon. Ele prende o POTÁSSIO livre que está no intestino e, em troca, solta uma molécula de CÁLCIO. O potássio fica preso na resina e vai para o vaso sanitário, baixando o potássio no sangue. Vantagem: Não tem sódio na composição, protegendo o coração do paciente renal.',
+        es: 'Un polímero en polvo que actúa en el colon. Atrapa el POTASIO libre en el intestino y, a cambio, suelta una molécula de CALCIO. Ventaja: No tiene sodio, protegiendo el corazón.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 8,4 g, via oral, UMA VEZ ao dia. Titular em incrementos semanais. Máximo de 25,2 g/dia.',
+          es: 'Inicio: 8,4 g, vía oral, UNA VEZ al día. Titular en incrementos semanales. Máximo de 25,2 g/día.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 12 anos de idade, ajuste conforme peso/idade.',
+          es: 'Aprobado a partir de 12 años.'
+        }
+      },
+      administration: { pt: ['Misturar o pó em 1/3 de copo de água (nunca engolir a seco). Tomar sempre JUNTO com alimentos.'], es: ['Mezclar el polvo en 1/3 de vaso de agua. Tomar siempre JUNTO a alimentos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Específico para pacientes com falência renal. Não é absorvido.', es: 'Específico para pacientes con falla renal. No se absorbe.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Constipação (Muito comum)', 'Hipomagnesemia (O polímero rouba magnésio por engano)', 'Diarreia e dor abdominal leve'], es: ['Constipación (Muy común)', 'Hipomagnesemia (El polímero roba magnesio por error)', 'Diarrea y dolor leve'] },
+      dangerousAdverseEffects: { pt: ['Hipocalemia severa (Se a dose for excessiva)', 'Obstrução intestinal'], es: ['Hipopotasemia severa (Si la dosis es excesiva)', 'Obstrucción intestinal'] },
+      contraindications: {
+        absolute: { pt: ['Obstrução intestinal, impactação fecal aguda'], es: ['Obstrucción intestinal, impactación fecal aguda'] },
+        relative: { pt: ['Hipomagnesemia severa prévia (< 1.2 mg/dL)'], es: ['Hipomagnesemia severa previa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O AVISO DE EMERGÊNCIA: O Patiromer demora de 7 a 48 HORAS para começar a baixar o potássio no sangue. Ele É INÚTIL para um paciente na UTI com Potássio = 8.0 mEq/L tendo arritmia. Para emergência usa-se Insulina+Glicose ou Diálise.', es: 'EL AVISO DE EMERGENCIA: Patiromer tarda de 7 a 48 HORAS en bajar el potasio. ES INÚTIL en la UCI para un paciente con Potasio = 8.0 y arritmia. Para emergencia se usa Insulina+Glucosa o Diálisis.' }
+      }
+    },
+
+    "ciclossilicato_de_zirconio_sodico": {
+      name: { pt: 'Ciclossilicato de Zircônio Sódico', es: 'Ciclosilicato de Zirconio y Sodio' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Capturador de Potássio (Matriz Cristalina Inorgânica)', es: 'Capturador de Potasio (Matriz Cristalina Inorgánica)' },
+      indications: {
+        pt: ['Tratamento da Hipercalemia leve a moderada (Age muito mais rápido que o Patiromer — início em 1 hora)'],
+        es: ['Tratamiento de la Hiperpotasemia leve a moderada (Actúa mucho más rápido que el Patiromer — inicio en 1 hora)']
+      },
+      commercialNames: { br: ['Lokelma'], ar: ['Lokelma'] },
+      presentation: { pt: ['Pó para suspensão oral em sachês de 5 g e 10 g'], es: ['Polvo para suspensión oral en sobres de 5 g y 10 g'] },
+      mechanism: {
+        pt: 'A "Armadilha de Cristal". Não é uma resina plástica, mas um cristal inorgânico projetado com microporos exatos do tamanho do íon de Potássio. Ele engole o Potássio e joga fora SÓDIO e HIDROGÊNIO em todo o trato GI (não só no cólon). Por iniciar o roubo de potássio já no estômago, ele começa a agir em apenas 1 HORA.',
+        es: 'La "Trampa de Cristal". Es un cristal inorgánico con microporos exactos del tamaño del ion de Potasio. Traga el Potasio y tira SODIO e HIDRÓGENO en todo el tracto GI. Por iniciar en el estómago, comienza a actuar en solo 1 HORA.'
+      },
+      dose: {
+        adult: {
+          pt: 'Fase de Correção: 10 g, via oral, 3 vezes ao dia por 48 horas. Fase de Manutenção: 5 a 10 g, UMA VEZ ao dia.',
+          es: 'Fase de Corrección: 10 g, vía oral, 3 veces al día por 48 horas. Fase de Mantenimiento: 5 a 10 g, UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: 'Não estabelecido em menores de 18 anos.',
+          es: 'No establecido en menores de 18 años.'
+        }
+      },
+      administration: { pt: ['Misturar o pó em 45 mL de água. A suspensão fica turva — tomar imediatamente antes que o pó assente. Pode ser tomado com ou sem alimentos.'], es: ['Mezclar el polvo en 45 mL de agua. La suspensión queda turbia, tomar de inmediato.'] },
+      renalAdjustment: { required: false, message: { pt: 'Desenvolvido para renais crônicos. Sem ajuste.', es: 'Desarrollado para renales crónicos. Sin ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Edema periférico (Pés e pernas inchados) — Devido à sobrecarga de sódio', 'Hipocalemia (Baixa excessiva de potássio)'], es: ['Edema periférico (Pies y piernas hinchados) — Por sobrecarga de sodio', 'Hipopotasemia'] },
+      dangerousAdverseEffects: { pt: ['Descompensação de Insuficiência Cardíaca Congestiva (O corpo inunda de sódio e líquido)'], es: ['Descompensación de Insuficiencia Cardíaca Congestiva (El cuerpo se inunda de sodio y líquido)'] },
+      contraindications: {
+        absolute: { pt: ['Hipocalemia grave ativa'], es: ['Hipopotasemia grave activa'] },
+        relative: { pt: ['Insuficiência Cardíaca não controlada e Hipertensão Grave', 'Constipação crônica'], es: ['Insuficiencia Cardíaca no controlada e Hipertensión Grave'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A BOMBA DE SÓDIO: Como o Zircônio troca Potássio por Sódio, cada 10 g de pó entregam 800 mg de sódio livre para o corpo do paciente. Se ele tomar a dose de ataque, receberá quase o dobro do sal permitido por dia. Para um paciente com falência cardíaca e edema pulmonar, isso pode ser catastrófico.', es: 'LA BOMBA DE SODIO: El Zirconio cambia Potasio por Sodio, entregando 800 mg de sodio libre en cada sobre. En la dosis de ataque, el paciente recibe el doble de sal permitida. Para un paciente con falla cardíaca, esto puede ser catastrófico.' }
+      }
+    },
+
+    "poliestirenossulfonato_de_sodio": {
+      name: { pt: 'Poliestirenossulfonato de Sódio', es: 'Poliestirenosulfonato de Sodio' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Resina de Troca Iônica de Primeira Geração', es: 'Resina de Intercambio Iónico de Primera Generación' },
+      indications: {
+        pt: ['Hipercalemia (Antigamente muito usado na emergência, hoje substituído sempre que possível devido ao risco de gangrena colônica)'],
+        es: ['Hiperpotasemia (Antiguamente muy usado en urgencias, hoy sustituido por riesgo de gangrena colónica)']
+      },
+      commercialNames: { br: ['Sorcal', 'Kayexalate'], ar: ['Resical'] },
+      presentation: { pt: ['Pó oral/retal em potes de 30 g a 900 g'], es: ['Polvo oral/rectal en botes de 30 g a 900 g'] },
+      mechanism: {
+        pt: 'A "Resina Primitiva". Quando administrada via oral ou retal, ela atinge o intestino grosso, onde libera 1 íon de Sódio e captura 1 íon de Potássio. O potássio é excretado nas fezes. É extremamente agressivo para a mucosa do intestino, gerando constipação pétrea se não usar laxante.',
+        es: 'La "Resina Primitiva". Altera el colon liberando 1 ion de Sodio y capturando 1 de Potasio. Es extremadamente agresivo para la mucosa.'
+      },
+      dose: {
+        adult: {
+          pt: 'Via oral: 15 a 30 g por dose, 1 a 4 vezes ao dia. Via Retal (Enema): 30 a 50 g retido no cólon por horas.',
+          es: 'Vía oral: 15 a 30 g por dosis. Vía Rectal (Enema): 30 a 50 g retenido en colon por horas.'
+        },
+        pediatric: {
+          pt: '1 g/kg/dose oral ou retal.',
+          es: '1 g/kg/dosis oral o rectal.'
+        }
+      },
+      administration: { pt: ['Oralmente misturado em água. NUNCA misturar com Sorbitol concentrado!'], es: ['Oral mezclado en agua. ¡NUNCA mezclar con Sorbitol concentrado!'] },
+      renalAdjustment: { required: false, message: { pt: 'Para hipercalemia renal, sem ajuste sistêmico.', es: 'Para hiperpotasemia renal, sin ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Constipação ou compactação fecal severa', 'Edema por retenção de sódio', 'Náuseas e perda de apetite extrema'], es: ['Constipación o compactación fecal severa', 'Edema por retención de sodio', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['NECROSE COLÔNICA FATAL (O intestino gangrena, perfura e o paciente morre de sepse peritoneal)', 'Pneumonite por broncoaspiração em crianças'], es: ['NECROSIS COLÓNICA FATAL (El intestino se gangrena, perfora y el paciente muere de sepsis)', 'Neumonitis por broncoaspiración'] },
+      contraindications: {
+        absolute: { pt: ['Pós-operatório de cirurgias intestinais', 'Íleo paralítico (Redução da motilidade gastrointestinal)'], es: ['Posoperatorio de cirugías intestinales', 'Íleo paralítico'] },
+        relative: { pt: ['Cardiopatas descompensados (Devido à carga de sódio)'], es: ['Cardiópatas descompensados (Por la carga de sodio)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A ROLETA RUSSA DO SORBITOL: Antigamente, os hospitais misturavam o Sorcal com o laxante Sorbitol para evitar o intestino preso. Descobriu-se que essa combinação é um gatilho direto para Necrose Intestinal Isquêmica Fatal. O FDA emitiu um Black Box proibindo a mistura das duas drogas.', es: 'LA RULETA RUSA DEL SORBITOL: Se mezclaba con laxante Sorbitol. Se descubrió que esta combinación desencadena Necrosis Intestinal Isquémica Fatal. La FDA prohibió la mezcla con Caja Negra.' }
+      }
+    },
+
+    "poliestirenossulfonato_de_calcio": {
+      name: { pt: 'Poliestirenossulfonato de Cálcio', es: 'Poliestirenosulfonato de Calcio' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Resina de Troca Iônica de Primeira Geração (Versão Cálcica)', es: 'Resina de Intercambio Iónico de Primera Generación (Versión Cálcica)' },
+      indications: {
+        pt: ['Hipercalemia em pacientes renais — usada quando se deseja evitar a sobrecarga de SÓDIO do Poliestirenossulfonato de Sódio'],
+        es: ['Hiperpotasemia en pacientes renales — usada para evitar la sobrecarga de SODIO del Poliestirenosulfonato de Sodio']
+      },
+      commercialNames: { br: ['Kalimate', 'Resical'], ar: ['Resical'] },
+      presentation: { pt: ['Pó oral para suspensão (Sachês de 5 g ou potes maiores)'], es: ['Polvo oral para suspensión (Sobres de 5 g)'] },
+      mechanism: {
+        pt: 'Idêntico ao Sorcal de sódio, atuando no lúmen do cólon, MAS ele troca íons de Potássio por íons de CÁLCIO. Salva o paciente da sobrecarga de sal, mas carrega o perigo de entregar cálcio demais para um paciente em diálise, aumentando o risco de calcificação vascular.',
+        es: 'Idéntico al Sorcal de sodio, PERO cambia Potasio por CALCIO. Salva de la sobrecarga de sal, pero entrega mucho calcio, aumentando el riesgo de calcificación vascular.'
+      },
+      dose: {
+        adult: {
+          pt: '15 g via oral, 3 a 4 vezes ao dia. Ou via retal 30 g como enema.',
+          es: '15 g vía oral, 3 a 4 veces al día. O vía rectal 30 g como enema.'
+        },
+        pediatric: {
+          pt: 'Geralmente 1 g/kg/dose oral.',
+          es: 'Generalmente 1 g/kg/dosis oral.'
+        }
+      },
+      administration: { pt: ['Oral ou Retal. Jamais administrar junto com Sorbitol.'], es: ['Oral o Rectal. Jamás con Sorbitol.'] },
+      renalAdjustment: { required: false, message: { pt: 'Acompanhar risco de hipercalcemia em anúricos.', es: 'Acompañar riesgo de hipercalcemia en anúricos.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Constipação cimentante severa (Pior que a versão sódica)', 'Anorexia e Vômitos'], es: ['Constipación cimentante severa (Peor que la versión sódica)', 'Anorexia y Vómitos'] },
+      dangerousAdverseEffects: { pt: ['Necrose de cólon (risco clássico das resinas poliestireno)', 'Hipercalcemia aguda perigosa'], es: ['Necrosis de colon (riesgo clásico de las resinas poliestireno)', 'Hipercalcemia aguda peligrosa'] },
+      contraindications: {
+        absolute: { pt: ['Hipercalcemia basal prévia', 'Mieloma Múltiplo (Piora crise de cálcio)'], es: ['Hipercalcemia basal previa', 'Mieloma Múltiple'] },
+        relative: { pt: ['Uso associado com digitálicos (Digoxina): a hipercalcemia desencadeia arritmia letal'], es: ['Uso asociado con digitálicos (Digoxina): la hipercalcemia desencadena arritmia letal'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ENGANO DA PRESCRIÇÃO: É comum na UTI o médico escrever apenas "Sorcal" achando que é o de cálcio, ou pedir o de cálcio e a farmácia mandar o de sódio. Um erro de troca dessas resinas condena o paciente renal a um edema agudo de pulmão (se receber sódio) ou a uma crise arrítmica de cálcio (se receber cálcio erradamente).', es: 'EL ERROR DE PRESCRIPCIÓN: Un error de intercambio de estas resinas condena al paciente renal a un edema pulmonar (si recibe sodio) o crisis de calcio. Sea exacto.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 417 append */
+})();
