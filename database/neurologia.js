@@ -1848,5 +1848,277 @@
                      Ofatumumabe (Kesimpta) — Anti-CD20 SC mensal, ⚠ vacinas vírus vivo, highAlert
                      Alemtuzumabe (Lemtrada) — Anti-CD52 reset imune, ⚠ autoimune 30%, highAlert
                      Cladribina (Mavenclad) — Análogo purina oral pulso, ⚠ teratogênica, renalHighRisk
-                     Piridostigmina (Mestinon) — AChE-I Miastenia Gravis, ⚠ Crise Colinérgica, antidote */
+                     Piridostigmina (Mestinon) — AChE-I Miastenia Gravis, ⚠ Crise Colinérgica, antidote
+         BUILD 408 — Anti-FcRn Miastenia + Relaxantes Musculares Centrais:
+                     Efgartigimode alfa (Vyvgart) — Anti-FcRn IV/SC ciclo 4sem, ⚠ janela IgG zero, highAlert
+                     Rozanolixizumabe (Rystiggo) — Anti-FcRn SC anti-AChR+MuSK, ⚠ meningite asséptica, highAlert
+                     Baclofeno (Lioresal) — GABA-B oral/intratecal espasticidade, ⚠ abstinência letal, renalHighRisk
+                     Tizanidina (Sirdalud) — alfa-2 CYP1A2, ⚠ síncope hipotensiva + veto Cipro/Fluvoxamina, hepaticCaution
+                     Ciclobenzaprina (Miosan) — tricíclico central espasmo agudo, ⚠ anticolinérgico + IMAOs */
+})();
+
+/* ── BUILD 408 APPEND — Anti-FcRn + Relaxantes Musculares ────────────── */
+(function () {
+  if (typeof window.NEUROLOGIA_DRUGS_DB !== 'object' || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) {
+    window.NEUROLOGIA_DRUGS_DB = {};
+  }
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── EFGARTIGIMODE ALFA ─────────────────────────────────────────────── */
+    "efgartigimode_alfa": {
+      name: { pt: 'Efgartigimode alfa', es: 'Efgartigimod alfa' },
+      category: 'neurologia',
+      class: { pt: 'Antagonista do Receptor Fc Neonatal (FcRn) / Fragmento de IgG1', es: 'Antagonista del Receptor Fc Neonatal (FcRn) / Fragmento de IgG1' },
+      icon: '🧠', color: 'rgba(139,92,246,0.15)', colorTxt: '#8B5CF6',
+      indications: {
+        pt: ['Miastenia Gravis Generalizada em pacientes adultos positivos para anticorpos antirreceptor de acetilcolina (AChR)'],
+        es: ['Miastenia Gravis Generalizada en pacientes adultos positivos para anticuerpos antirreceptor de acetilcolina (AChR)']
+      },
+      commercialNames: { br: ['Vyvgart'], ar: ['Vyvgart'] },
+      presentation: { pt: ['Frasco-ampola IV 400 mg/20 mL', 'Formulação Subcutânea (associada com hialuronidase)'], es: ['Vial IV 400 mg/20 mL', 'Formulación Subcutánea (asociada con hialuronidasa)'] },
+      mechanism: {
+        pt: 'Uma obra-prima da biotecnologia. No corpo humano, o receptor FcRn age como um "salva-vidas", impedindo que os anticorpos IgG sejam destruídos e reciclando-os de volta para o sangue. Na Miastenia, os anticorpos IgG atacam o próprio músculo. O Efgartigimode bloqueia o receptor FcRn. Sem o salva-vidas, o corpo destrói todos os anticorpos IgG (bons e ruins) rapidamente nos lisossomos, fazendo o nível de autoanticorpos despencar e devolvendo a força ao paciente em dias.',
+        es: 'Una obra maestra. En el cuerpo, el receptor FcRn actúa como "salvavidas", impidiendo que los anticuerpos IgG sean destruidos. En la Miastenia, los IgG atacan el músculo. El Efgartigimod bloquea el receptor FcRn. Sin el salvavidas, el cuerpo destruye todos los anticuerpos rápidamente, haciendo que el nivel de autoanticuerpos caiga y devolviendo la fuerza en días.'
+      },
+      dose: {
+        adult: {
+          pt: '10 mg/kg via Infusão Intravenosa, UMA VEZ POR SEMANA, durante 4 semanas (1 ciclo). Novos ciclos são iniciados com base na avaliação clínica.',
+          es: '10 mg/kg vía Infusión Intravenosa, UNA VEZ POR SEMANA, durante 4 semanas (1 ciclo). Nuevos ciclos se inician basados en la clínica.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: {
+        pt: ['Infusão IV durante 1 hora. Monitorar sinais de hipersensibilidade. A formulação SC pode ser aplicada no abdome.'],
+        es: ['Infusión IV durante 1 hora. Monitorizar signos de hipersensibilidad. La formulación SC puede aplicarse en abdomen.']
+      },
+      renalAdjustment: { required: false, message: { pt: 'Degradado em aminoácidos, sem ajuste renal.', es: 'Degradado en aminoácidos, sin ajuste renal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não metabolizado pelo fígado.', es: 'No metabolizado por el hígado.' } },
+      commonAdverseEffects: {
+        pt: ['Infecções do trato respiratório e urinário (O corpo fica sem IgG para se defender)', 'Cefaleia (muito comum)', 'Mialgia'],
+        es: ['Infecciones del tracto respiratorio y urinario (El cuerpo queda sin IgG)', 'Cefalea (muy común)', 'Mialgia']
+      },
+      dangerousAdverseEffects: {
+        pt: ['Infecções oportunistas graves', 'Reações alérgicas severas (angioedema)'],
+        es: ['Infecciones oportunistas graves', 'Reacciones alérgicas severas (angioedema)']
+      },
+      contraindications: {
+        absolute: { pt: ['Infecções ativas clinicamente significativas', 'Hipersensibilidade grave'], es: ['Infecciones activas clínicamente significativas', 'Hipersensibilidad grave'] },
+        relative: { pt: ['Pacientes sem vacinação atualizada (A imunoglobulina despenca)'], es: ['Pacientes sin vacunación actualizada (La inmunoglobulina cae)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: {
+          pt: 'A JANELA DE VULNERABILIDADE: O tratamento literalmente "zera" os anticorpos IgG do paciente circulantes no sangue para salvar o músculo. Durante as 4 semanas do ciclo, o paciente está severamente imunossuprimido e não deve entrar em contato com pessoas doentes.',
+          es: 'LA VENTANA DE VULNERABILIDAD: El tratamiento literalmente "pone a cero" los anticuerpos IgG del paciente para salvar el músculo. Durante las 4 semanas, el paciente está severamente inmunosuprimido.'
+        }
+      }
+    },
+
+    /* ── ROZANOLIXIZUMABE ───────────────────────────────────────────────── */
+    "rozanolixizumabe": {
+      name: { pt: 'Rozanolixizumabe', es: 'Rozanolixizumab' },
+      category: 'neurologia',
+      class: { pt: 'Anticorpo Monoclonal Humanizado Anti-FcRn', es: 'Anticuerpo Monoclonal Humanizado Anti-FcRn' },
+      icon: '🧠', color: 'rgba(139,92,246,0.15)', colorTxt: '#8B5CF6',
+      indications: {
+        pt: ['Miastenia Gravis Generalizada em adultos (Tanto para anticorpos anti-AChR quanto anti-MuSK)'],
+        es: ['Miastenia Gravis Generalizada en adultos (Tanto para anticuerpos anti-AChR como anti-MuSK)']
+      },
+      commercialNames: { br: ['Rystiggo'], ar: ['Rystiggo'] },
+      presentation: { pt: ['Solução para infusão Subcutânea 140 mg/mL'], es: ['Solución para infusión Subcutánea 140 mg/mL'] },
+      mechanism: {
+        pt: 'Atua pelo mesmo mecanismo revolucionário que o Efgartigimode: bloqueia o receptor Fc neonatal (FcRn). O diferencial clínico é que o Rozanolixizumabe demonstrou eficácia não só contra os autoanticorpos clássicos (Anti-AChR), mas também contra a forma mais agressiva e resistente de Miastenia mediada por anticorpos anti-MuSK. Além disso, é puramente subcutâneo por bomba de infusão em casa.',
+        es: 'Actúa por el mismo mecanismo que Efgartigimod: bloquea el receptor FcRn. El diferencial es que demostró eficacia contra la forma más agresiva y resistente mediada por anticuerpos anti-MuSK. Además, es puramente subcutáneo.'
+      },
+      dose: {
+        adult: {
+          pt: 'A dose depende do PESO (Ex: <50kg: 420mg; 50-100kg: 560mg; >100kg: 840mg). Administrado via Infusão Subcutânea 1 vez por semana durante 6 semanas.',
+          es: 'La dosis depende del PESO. Administrado vía Infusión Subcutánea 1 vez por semana durante 6 semanas.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: {
+        pt: ['Infusão subcutânea no abdome utilizando uma bomba de infusão portátil. Não agitar o frasco.'],
+        es: ['Infusión subcutánea en abdomen utilizando una bomba de infusión portátil. No agitar el vial.']
+      },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: {
+        pt: ['Cefaleia intensa (MUITO COMUM, a dor de cabeça é o maior queixa na infusão)', 'Diarreia e pirexia (febre)', 'Reação local da injeção'],
+        es: ['Cefalea intensa (MUY COMÚN, la queja mayor en la infusión)', 'Diarrea y pirexia (fiebre)', 'Reacción local']
+      },
+      dangerousAdverseEffects: {
+        pt: ['Meningite Asséptica (O paciente desenvolve rigidez de nuca e febre, mas o líquor não tem bactéria)', 'Infecções graves'],
+        es: ['Meningitis Aséptica (Desarrolla rigidez de nuca y fiebre, pero el LCR no tiene bacteria)', 'Infecciones graves']
+      },
+      contraindications: {
+        absolute: { pt: ['Infecções ativas severas', 'Hipersensibilidade'], es: ['Infecciones activas severas', 'Hipersensibilidad'] },
+        relative: { pt: ['Uso associado de vacinas vivas atenuadas'], es: ['Uso asociado de vacunas vivas atenuadas'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: {
+          pt: 'A DOR DE CABEÇA DO LÍQUOR: Uma complicação intrigante da droga é o alto índice de dores de cabeça latejantes e até meningite inflamatória. Se o paciente reclamar de dor de cabeça insuportável no dia seguinte à infusão, pode ser necessário administrar analgesia pesada e reavaliar o tratamento.',
+          es: 'EL DOLOR DE CABEZA DEL LÍQUIDO: Una complicación intrigante es el alto índice de dolores de cabeza latientes y hasta meningitis. Si el paciente se queja de dolor insoportable, puede necesitar analgesia pesada.'
+        }
+      }
+    },
+
+    /* ── BACLOFENO ──────────────────────────────────────────────────────── */
+    "baclofeno": {
+      name: { pt: 'Baclofeno', es: 'Baclofeno' },
+      category: 'neurologia',
+      class: { pt: 'Relaxante Muscular de Ação Central (Agonista GABA-B)', es: 'Relajante Muscular de Acción Central (Agonista GABA-B)' },
+      icon: '🧠', color: 'rgba(139,92,246,0.15)', colorTxt: '#8B5CF6',
+      indications: {
+        pt: ['Espasticidade muscular grave (Esclerose Múltipla, Lesões Medulares, Paralisia Cerebral)', 'Soluços intratáveis (uso off-label)'],
+        es: ['Espasticidad muscular grave (Esclerosis Múltiple, Lesiones Medulares, Parálisis Cerebral)', 'Hipo intratable (uso off-label)']
+      },
+      commercialNames: { br: ['Lioresal', 'Baclon'], ar: ['Lioresal'] },
+      presentation: { pt: ['Comprimidos 10 mg', 'Solução Injetável Intratecal 0,05 mg/mL, 2 mg/mL (Para bomba espinhal)'], es: ['Comprimidos 10 mg', 'Solución Inyectable Intratecal 0,05 mg/mL, 2 mg/mL (Para bomba espinal)'] },
+      mechanism: {
+        pt: 'A "Calmaria da Medula". Nos pacientes com lesão medular, os reflexos musculares ficam hiperativos, causando espasmos dolorosos que quebram ossos. O Baclofeno atua exclusivamente nos receptores GABA-B da medula espinhal, hiperpolarizando o nervo e bloqueando a liberação de cálcio. Isso desliga a atividade dos reflexos polissinápticos, soltando a musculatura "dura" do paciente.',
+        es: 'La "Calma de la Médula". El Baclofeno actúa en los receptores GABA-B de la médula, hiperpolarizando el nervio y bloqueando la liberación de calcio. Esto apaga la actividad de los reflejos, soltando la musculatura "dura".'
+      },
+      dose: {
+        adult: {
+          pt: 'Via Oral: Iniciar com 5 mg, 3 vezes ao dia. Aumentar gradualmente a cada 3 dias. Dose máxima de 80 mg/dia. Bomba Intratecal (Ajuste por neurocirurgião).',
+          es: 'Vía Oral: Iniciar con 5 mg, 3 veces al día. Aumentar gradualmente cada 3 días. Dosis máxima 80 mg/día. Bomba Intratecal (ajuste especializado).'
+        },
+        pediatric: {
+          pt: 'Uso intenso em paralisia cerebral: 10 a 15 mg/dia iniciais, divididos. Titular até 40-60 mg/dia dependendo da idade.',
+          es: 'Uso en parálisis cerebral: 10-15 mg/día iniciales, divididos. Titular hasta 40-60 mg/día según edad.'
+        }
+      },
+      administration: {
+        pt: ['Ingerir com as refeições. NUNCA SUSPENDER ABRUPTAMENTE.'],
+        es: ['Ingerir con las comidas. NUNCA SUSPENDER ABRUPTAMENTE.']
+      },
+      renalAdjustment: { required: true, message: { pt: 'Altamente excretado intacto pela urina. Em DRC severa, acumula rápido e causa coma profundo. Reduzir a dose para o mínimo necessário.', es: 'Altamente excretado intacto por orina. En ERC severa, acumula y causa coma. Reducir dosis al mínimo.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico rigoroso.', es: 'Sin necesidad de ajuste clínico riguroso.' } },
+      commonAdverseEffects: {
+        pt: ['Sonolência intensa (piora em associação com outros relaxantes)', 'Fraqueza muscular generalizada (o paciente pode perder força para ficar em pé)', 'Tontura e confusão em idosos'],
+        es: ['Somnolencia intensa', 'Debilidad muscular generalizada (puede perder fuerza para estar de pie)', 'Mareo y confusión en ancianos']
+      },
+      dangerousAdverseEffects: {
+        pt: ['Coma e depressão respiratória (em superdosagem ou acúmulo renal)', 'Síndrome de Abstinência Aguda (Convulsões e hipertermia na parada brusca)'],
+        es: ['Coma y depresión respiratoria (en sobredosis o acúmulo renal)', 'Síndrome de Abstinencia Aguda (Convulsiones e hipertermia en la parada brusca)']
+      },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave'], es: ['Hipersensibilidad grave'] },
+        relative: { pt: ['Pacientes que dependem da espasticidade para se manterem de pé e caminharem', 'Epilepsia prévia (a droga reduz o limiar convulsivo)'], es: ['Pacientes que dependen de la espasticidad para estar de pie', 'Epilepsia previa (reduce el umbral convulsivo)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: {
+          pt: 'O DESMAIO MUSCULAR: Na Paralisia Cerebral ou Pós-AVC, muitos pacientes só conseguem se apoiar em pé POR CAUSA da perna espástica (dura). Se você errar a mão no Baclofeno e soltar o músculo demais, as pernas viram "gelatina" e o paciente perde completamente a capacidade de ficar em pé ou transferir para a cadeira de rodas.',
+          es: 'EL DESMAYO MUSCULAR: Si te excedes con el Baclofeno, las piernas se vuelven "gelatina" y el paciente pierde la capacidad de estar de pie o transferir a la silla.'
+        }
+      }
+    },
+
+    /* ── TIZANIDINA ─────────────────────────────────────────────────────── */
+    "tizanidina": {
+      name: { pt: 'Tizanidina', es: 'Tizanidina' },
+      category: 'neurologia',
+      class: { pt: 'Relaxante Muscular de Ação Central (Agonista Alfa-2 Adrenérgico)', es: 'Relajante Muscular de Acción Central (Agonista Alfa-2 Adrenérgico)' },
+      icon: '🧠', color: 'rgba(139,92,246,0.15)', colorTxt: '#8B5CF6',
+      indications: {
+        pt: ['Espasmos musculares dolorosos agudos e crônicos', 'Espasticidade decorrente de Esclerose Múltipla ou Lesão Medular'],
+        es: ['Espasmos musculares dolorosos agudos y crónicos', 'Espasticidad derivada de Esclerosis Múltiple o Lesión Medular']
+      },
+      commercialNames: { br: ['Sirdalud'], ar: ['Sirdalud'] },
+      presentation: { pt: ['Comprimidos 2 mg e 4 mg'], es: ['Comprimidos 2 mg y 4 mg'] },
+      mechanism: {
+        pt: 'Age no cérebro de forma muito parecida com o anti-hipertensivo Clonidina. A Tizanidina estimula os receptores Alfa-2 pré-sinápticos nas vias motoras da medula espinhal. Isso inibe brutalmente a liberação de aminoácidos excitatórios, soltando os músculos travados do corpo inteiro. Seu "efeito indesejado" intrínseco é que, por agir como a clonidina, também causa vasodilatação e queda maciça de pressão arterial.',
+        es: 'Actúa parecido a la Clonidina. Estimula los receptores Alfa-2 presinápticos. Inhibe la liberación de aminoácidos excitatorios. Su efecto intrínseco es que causa vasodilatación y caída masiva de presión arterial.'
+      },
+      dose: {
+        adult: {
+          pt: 'Espasmo: 2 a 4 mg via oral, 3 vezes ao dia. Espasticidade neurológica severa: Aumento gradual até 24 mg/dia a 36 mg/dia (em 3 ou 4 tomadas).',
+          es: 'Espasmo: 2-4 mg vía oral, 3 veces al día. Espasticidad severa: hasta 24-36 mg/día en 3-4 tomas.'
+        },
+        pediatric: { pt: 'Não indicado (Segurança não estabelecida).', es: 'No indicado.' }
+      },
+      administration: {
+        pt: ['Evitar trocar entre tomar em jejum e tomar com comida. Manter consistência, pois a comida altera a absorção em 20%.', 'Nunca levantar rapidamente da cama após tomar.'],
+        es: ['Evitar cambiar entre ayunas y con comida. Mantener consistencia. Nunca levantarse rápido de la cama.']
+      },
+      renalAdjustment: { required: true, message: { pt: 'Em ClCr < 25 mL/min, iniciar com apenas 2 mg UMA VEZ ao dia. O clearance cai 50% no doente renal.', es: 'En ClCr < 25 mL/min, iniciar con solo 2 mg UNA VEZ al día. El clearance cae 50% en el enfermo renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolismo maciço via CYP1A2. Contraindicado em insuficiência hepática grave.', es: 'Metabolismo masivo vía CYP1A2. Contraindicado en insuficiencia hepática grave.' } },
+      commonAdverseEffects: {
+        pt: ['Hipotensão postural severa e síncope', 'Boca muito seca', 'Sonolência e astenia profunda'],
+        es: ['Hipotensión postural severa y síncope', 'Boca muy seca', 'Somnolencia y astenia profunda']
+      },
+      dangerousAdverseEffects: {
+        pt: ['Lesão Hepática Aguda (Pode ocorrer hepatite medicamentosa fatal, TGO/TGP devem ser vigiadas)', 'Alucinações'],
+        es: ['Lesión Hepática Aguda (Puede ocurrir hepatitis medicamentosa fatal)', 'Alucinaciones']
+      },
+      contraindications: {
+        absolute: { pt: ['Uso associado de Inibidores Potentes do CYP1A2 (Ciprofloxacino ou Fluvoxamina - Risco de choque vasoplégico fatal)', 'Hepatopatia grave'], es: ['Uso asociado de Inhibidores Potentes de CYP1A2 (Ciprofloxacino o Fluvoxamina)', 'Hepatopatía grave'] },
+        relative: { pt: ['Idosos usuários de múltiplos anti-hipertensivos'], es: ['Ancianos usuarios de múltiples antihipertensivos'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: {
+          pt: 'A SÍNCOPE DO VASO ABERTO: Ao contrário do Baclofeno, o grande risco da Tizanidina não é o acúmulo no rim, mas o colapso da pressão. Se você prescrever 4mg para uma senhora magra com espasmo muscular, ela pode levantar de madrugada para urinar, desmaiar de hipotensão por alfa-bloqueio, bater a cabeça e sangrar no cérebro.',
+          es: 'EL SÍNCOPE DEL VASO ABIERTO: Si prescribe 4mg para una señora anciana, puede desmayarse de hipotensión, golpear la cabeza y sangrar en el cerebro.'
+        }
+      }
+    },
+
+    /* ── CICLOBENZAPRINA ────────────────────────────────────────────────── */
+    "ciclobenzaprina": {
+      name: { pt: 'Ciclobenzaprina (Cloridrato de)', es: 'Ciclobenzaprina (Clorhidrato de)' },
+      category: 'neurologia',
+      class: { pt: 'Relaxante Muscular de Ação Central', es: 'Relajante Muscular de Acción Central' },
+      icon: '🧠', color: 'rgba(139,92,246,0.15)', colorTxt: '#8B5CF6',
+      indications: {
+        pt: ['Espasmos musculares dolorosos agudos (Torcicolo, Lombalgia aguda)', 'Coadjuvante em fibromialgia (off-label comum)'],
+        es: ['Espasmos musculares dolorosos agudos (Tortícolis, Lumbalgia aguda)', 'Coadyuvante en fibromialgia (off-label común)']
+      },
+      commercialNames: { br: ['Miosan', 'Musculare', 'Mirtax'], ar: ['Yuredol'] },
+      presentation: { pt: ['Comprimidos 5 mg e 10 mg'], es: ['Comprimidos 5 mg y 10 mg'] },
+      mechanism: {
+        pt: 'É estruturalmente quase idêntica à Amitriptilina (um antidepressivo tricíclico). Ela atua no Tronco Encefálico (não na medula) deprimindo os neurônios motores alfa e gama. Ela reduz o reflexo tônico do músculo somático. Como é filha dos tricíclicos, tem EFEITO ANTICOLINÉRGICO pesado. ATENÇÃO: NÃO FUNCIONA para tratar espasticidade de lesão medular ou paralisia cerebral, apenas para contraturas musculares agudas periféricas.',
+        es: 'Estructuralmente casi idéntica a la Amitriptilina. Actúa en el Tronco Encefálico. Reduce el reflejo tónico. Tiene PESADO EFECTO ANTICOLINÉRGICO. No funciona para espasticidad de lesión medular, solo para contracturas agudas.'
+      },
+      dose: {
+        adult: {
+          pt: '5 mg a 10 mg via oral, de 2 a 3 vezes ao dia. O tratamento NÃO DEVE exceder 2 a 3 semanas.',
+          es: '5-10 mg vía oral, 2-3 veces al día. El tratamiento NO DEBE exceder 2-3 semanas.'
+        },
+        pediatric: {
+          pt: 'Aprovado > 15 anos nas doses de adulto. Não recomendado em crianças pequenas.',
+          es: 'Aprobado > 15 años en dosis de adulto. No recomendado en niños.'
+        }
+      },
+      administration: {
+        pt: ['Se causar muita sonolência diurna, alterar para uso exclusivo de uma dose de 10 mg ao deitar.'],
+        es: ['Si causa mucha somnolencia diurna, alterar para uso exclusivo de 10 mg al acostarse.']
+      },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em cirrose moderada a grave. Usar 5mg e com muito espaçamento em disfunções leves.', es: 'Evitar en cirrosis moderada a grave. Usar 5mg y espaciado en disfunción leve.' } },
+      commonAdverseEffects: {
+        pt: ['Sonolência extrema e sedação ("Apaga" o paciente)', 'Boca e garganta secas como lixa (efeito anticolinérgico)', 'Tontura e fadiga'],
+        es: ['Somnolencia extrema y sedación', 'Boca y garganta secas como lija', 'Mareo y fatiga']
+      },
+      dangerousAdverseEffects: {
+        pt: ['Arritmias cardíacas e taquicardia severa', 'Retenção urinária aguda e glaucoma em idosos', 'Síndrome Serotoninérgica'],
+        es: ['Arritmias cardíacas y taquicardia severa', 'Retención urinaria aguda y glaucoma en ancianos', 'Síndrome Serotoninérgico']
+      },
+      contraindications: {
+        absolute: { pt: ['Uso associado com Inibidores da MAO ou na fase aguda pós-Infarto do Miocárdio', 'Arritmias cardíacas ativas e insuficiência cardíaca grave'], es: ['Uso asociado con IMAOs o fase aguda posinfarto', 'Arritmias activas e insuficiencia cardíaca grave'] },
+        relative: { pt: ['Idosos > 65 anos (Lista de Beers - causa demência aguda por bloqueio colinérgico)', 'Glaucoma e Hiperplasia Prostática'], es: ['Ancianos > 65 años (Criterios de Beers)', 'Glaucoma e Hiperplasia Prostática'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: {
+          pt: 'A ILUSÃO DO RELAXANTE: O Miosan é o "rei da lombalgia" no PS, mas os estudos mostram que a dor nas costas melhora muito mais porque a Ciclobenzaprina FAZ O PACIENTE DORMIR PROFUNDAMENTE (efeito sedativo tricíclico) do que pela ação direta no espasmo muscular. Não prescreva se o paciente vai dirigir em seguida.',
+          es: 'LA ILUSIÓN DEL RELAJANTE: La Ciclobenzaprina alivia el dolor de espalda más porque HACE QUE EL PACIENTE DUERMA PROFUNDAMENTE que por la acción directa en el espasmo. No prescriba si el paciente va a conducir.'
+        }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 408 append */
 })();

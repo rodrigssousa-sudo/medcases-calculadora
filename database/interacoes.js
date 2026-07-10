@@ -22821,9 +22821,103 @@ const INTERACOES_DB = {
         es: "Los betabloqueantes deben ser extremadamente evitados en portadores de Miastenia Gravis sintomáticos en uso de Piridostigmina. Para control de hipertensión, preferir bloqueadores de calcio (Amlodipino) o IECA."
       }
     }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 408 — Relaxantes Musculares Centrais + Miastenia Anti-FcRn
+     Nós: tizanidina × ciprofloxacino (contraindicada — CYP1A2 10× nível)
+          tizanidina × fluvoxamina    (contraindicada — CYP1A2 inibidor)
+          baclofeno  × abstinencia_brusca (alta — crise gabaérgica letal)
+          baclofeno  × $classe_depressores_snc_alcool (alta — apneia)
+          ciclobenzaprina × $classe_imaos (contraindicada — Sínd Seroton.)
+          ciclobenzaprina × $classe_anticolinergicos (moderada — somação)
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── TIZANIDINA — colapso CYP1A2 ── */
+  "tizanidina": {
+    "ciprofloxacino": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CHOQUE VASOPLÉGICO LETAL POR CYP1A2. A Tizanidina é um agonista alfa-2 (age como a Clonidina, baixando a pressão arterial) e é 100% dependente da enzima CYP1A2 para ser destruída no fígado. O Ciprofloxacino desliga essa enzima de forma potente. O nível de Tizanidina no sangue MULTIPLICA EM 10 VEZES. O paciente sofrerá Hipotensão Profunda, Síncope e Parada Cardiorrespiratória por falta de perfusão.",
+        es: "CHOQUE VASOPLÉJICO LETAL POR CYP1A2. La Tizanidina es un agonista alfa-2 dependiente 100% de la enzima CYP1A2. El Ciprofloxacino apaga esa enzima. El nivel de Tizanidina MULTIPLICA POR 10. El paciente sufrirá Hipotensión Profunda, Síncope y Parada Cardiorrespiratoria."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA. Proibido prescrever Tizanidina se o paciente estiver usando Ciprofloxacino. Trocar o antibiótico (ex: Nitrofurantoína, Fosfomicina) ou o relaxante (ex: Ciclobenzaprina, Baclofeno).",
+        es: "CONTRAINDICACIÓN ABSOLUTA. Prohibido prescribir Tizanidina si el paciente usa Ciprofloxacino. Cambiar el antibiótico o el relajante muscular."
+      }
+    },
+    "fluvoxamina": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CHOQUE VASOPLÉGICO LETAL POR CYP1A2. A Fluvoxamina (ISRS antidepressivo) é o inibidor mais potente do CYP1A2 disponível clinicamente. Bloqueia completamente o metabolismo da Tizanidina. O nível plasmático da Tizanidina sobe 33 vezes (estudos), causando hipotensão grave, bradicardia e colapso circulatório.",
+        es: "CHOQUE VASOPLÉJICO LETAL POR CYP1A2. La Fluvoxamina es el inhibidor más potente del CYP1A2. Bloquea completamente el metabolismo de la Tizanidina. El nivel plasmático sube 33 veces, causando hipotensión grave y colapso circulatorio."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO ABSOLUTA. Se o paciente usa Fluvoxamina (ISRS para TOC/depressão), a Tizanidina está proibida. Trocar para Baclofeno ou Ciclobenzaprina para o espasmo.",
+        es: "CONTRAINDICACIÓN ABSOLUTA. Si el paciente usa Fluvoxamina, la Tizanidina está prohibida. Cambiar a Baclofeno o Ciclobenzaprina."
+      }
+    }
+  },
+
+  /* ── BACLOFENO — abstinência + depressores do SNC ── */
+  "baclofeno": {
+    "abstinencia_brusca": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "CRISE DE ABSTINÊNCIA GABAÉRGICA LETAL. Se um paciente usar Baclofeno (oral ou bomba intratecal) por meses e o remédio for cortado de forma brusca, a medula e o cérebro — acostumados ao freio do GABA — entram em excitação caótica. O paciente sofrerá espasmos de quebrar os próprios ossos, hipertermia de 41ºC, delírio e Convulsões generalizadas, podendo ir a óbito em horas.",
+        es: "CRISIS DE ABSTINENCIA GABAÉRGICA LETAL. Si el Baclofeno se corta de forma brusca, la médula y el cerebro entran en excitación caótica. El paciente sufrirá espasmos rompe-huesos, hipertermia de 41ºC, delirio y Convulsiones generalizadas, pudiendo morir en horas."
+      },
+      conduta: {
+        pt: "A interrupção deve ser feita com DESMAME LENTO ao longo de 2 a 3 semanas. Na emergência por esvaziamento de bomba intratecal, administrar Diazepam IV em altas doses e Baclofeno oral para evitar morte celular por excitotoxicidade.",
+        es: "La interrupción debe ser con DESTETE LENTO en 2-3 semanas. En emergencia por bomba vacía, administrar Diazepam IV en altas dosis para evitar muerte celular."
+      }
+    },
+    "$classe_depressores_snc_alcool": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "DEPRESSÃO RESPIRATÓRIA E COMA. O Baclofeno reduz intensamente a atividade do tronco encefálico via GABA-B. Associá-lo a Opioides (Fentanil, Morfina), Benzodiazepínicos (Diazepam) ou Álcool potencializa o bloqueio neural a um nível letal, afogando o centro respiratório do bulbo.",
+        es: "DEPRESIÓN RESPIRATORIA Y COMA. El Baclofeno reduce intensamente la actividad del tronco encefálico. Asociarlo a Opioides, Benzodiazepinas o Alcohol potencia el bloqueo a nivel letal, ahogando el centro respiratorio."
+      },
+      conduta: {
+        pt: "Reduzir dose de ambos os agentes ao mínimo necessário. Vigilância noturna rigorosa contra apneia. Evitar o trio Baclofeno + Opioide + Álcool em qualquer circunstância.",
+        es: "Reducir dosis de ambos agentes al mínimo. Vigilancia nocturna rigurosa contra apnea. Evitar el trío Baclofeno + Opioide + Alcohol."
+      }
+    }
+  },
+
+  /* ── CICLOBENZAPRINA — tricíclico disfarçado ── */
+  "ciclobenzaprina": {
+    "$classe_imaos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "SÍNDROME SEROTONINÉRGICA E COLAPSO NEUROLÓGICO FATAL. A Ciclobenzaprina tem estrutura molecular quase idêntica à Amitriptilina — bloqueia a recaptação de Serotonina e Noradrenalina. Se associada a Inibidores da MAO (Tranilcipromina, Selegilina, Fenelzina), o cérebro entra em Síndrome Serotoninérgica letal: hipertermia de 41°C, convulsões intratáveis e colapso cardiovascular imediato.",
+        es: "SÍNDROME SEROTONINÉRGICO Y COLAPSO NEUROLÓGICO FATAL. La Ciclobenzaprina tiene estructura casi idéntica a la Amitriptilina. Si asociada a Inhibidores de la MAO, el cerebro entra en Síndrome Serotoninérgico letal: hipertermia de 41°C, convulsiones y colapso cardiovascular."
+      },
+      conduta: {
+        pt: "Veto absoluto — washout de 14 DIAS entre o uso de IMAOs e Ciclobenzaprina (em qualquer ordem). Nunca iniciar um se o outro foi usado nas últimas 2 semanas.",
+        es: "Veto absoluto — washout de 14 DÍAS entre el uso de IMAOs y Ciclobenzaprina. Nunca iniciar uno si el otro fue usado en las últimas 2 semanas."
+      }
+    },
+    "$classe_anticolinergicos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "SOMAÇÃO ANTICOLINÉRGICA EM IDOSOS. A Ciclobenzaprina 'seca' o corpo inteiro (boca seca, constipação, retenção urinária, taquicardia, confusão). Se o paciente — especialmente idoso — tomar para dor nas costas e à noite usar um anti-histamínico de 1ª geração (Difenidramina) ou antiespasmódico (Oxibutinina) para alergia ou bexiga, a carga anticolinérgica combinada pode causar retenção urinária aguda, delirium e glaucoma de ângulo fechado.",
+        es: "SUMA ANTICOLINÉRGICA EN ANCIANOS. La Ciclobenzaprina 'seca' el cuerpo. Si el anciano la toma y usa un antihistamínico de 1ª generación (Difenhidramina), la carga anticolinérgica combinada puede causar retención urinaria aguda, delirio y glaucoma."
+      },
+      conduta: {
+        pt: "Evitar a Ciclobenzaprina em idosos (Critérios de Beers). Nunca combinar com outros anticolinérgicos. Se necessário, usar a menor dose por prazo de até 3 dias e monitorar diurese.",
+        es: "Evitar Ciclobenzaprina en ancianos (Criterios de Beers). Nunca combinar con otros anticolinérgicos. Si necesario, usar la menor dosis por hasta 3 días y monitorear diuresis."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 407 (Neuroimunologia EM: imunodepletores×vacinas vírus vivo; Miastenia: piridostigmina×corticoides/betabloqueadores) | BUILD 403 (Anestesia: isoflurano×succinilcolina/HM, Infectologia: cetoconazol×CYP3A4/IBP, Cardiologia: furosemida_iv×aminoglicosideos, Gastrologia: proclorperazina×D2-bloqueadores) */
+}; /* fim INTERACOES_DB — BUILD 408 (Relaxantes Musculares: tizanidina×CYP1A2; baclofeno×abstinência/depressores; ciclobenzaprina×IMAOs/anticolinérgicos) | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
