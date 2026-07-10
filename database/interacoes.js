@@ -1197,6 +1197,11 @@ const DRUG_CLASSES = {
     "etinilestradiol", "levonorgestrel", "desogestrel", "gestodeno",
     "etonogestrel", "norelgestromina", "drospirenona", "dienogeste",
     "medroxiprogesterona", "noretisterona"
+  ],
+
+  /* BUILD 415 — Promotores de Vigília (Indutores CYP3A4 e eugeroicos) */
+  "$classe_promotores_vigilia": [
+    "modafinila", "armodafinila", "pitolisanto"
   ]
 
 };
@@ -23325,9 +23330,62 @@ const INTERACOES_DB = {
         es: "Mujeres fértiles usando Modafinilo DEBEN usar métodos de barrera (DIU, Condón) no solo durante el tratamiento, sino hasta 2 MESES DESPUÉS DE PARAR."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES BUILD 415: Promotores de Vigília e Labirinto
+   Armodafinila, Pitolisanto, Solriamfetol, Betaistina, Meclizina
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── $CLASSE_PROMOTORES_VIGILIA (Indução Enzimática CYP3A4 → Falha Contraceptiva) ── */
+  "$classe_promotores_vigilia": {
+    "$classe_anticoncepcionais_hormonais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ANULAÇÃO CONTRACEPTIVA CRÍTICA. Tanto a Armodafinila quanto o Pitolisanto aceleram violentamente as enzimas hepáticas (CYP3A4) responsáveis por digerir os hormônios das pílulas anticoncepcionais, implantes e anéis vaginais. O fígado destrói os hormônios rapidamente, os níveis sanguíneos despencam, a ovulação ocorre normalmente e o paciente engravida sem planejamento.",
+        es: "ANULACIÓN ANTICONCEPTIVA CRÍTICA. Tanto Armodafinilo como Pitolisant aceleran las enzimas hepáticas (CYP3A4) que digieren las píldoras anticonceptivas. El hígado destruye los hormonas rápidamente, la ovulación ocurre y el paciente queda embarazada sin planificación."
+      },
+      conduta: {
+        pt: "A paciente DEVE adotar um método contraceptivo não-hormonal de barreira (DIU de cobre, preservativos rigorosos) durante TODO o tratamento e por pelo menos 1 a 2 meses após a suspensão destas medicações.",
+        es: "La paciente DEBE adoptar un método anticonceptivo no hormonal (DIU, Preservativo) durante TODO el tratamiento y por lo menos 1 a 2 meses después de la suspensión."
+      }
+    }
+  },
+
+  /* ── SOLRIAMFETOL (Efeito Simpaticomimético Perigoso + IMAOs) ── */
+  "solriamfetol": {
+    "$classe_imaos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CRISE HIPERTENSIVA E ARRITMIA LETAL. O Solriamfetol inibe a recaptação de noradrenalina e dopamina. Os Inibidores da MAO impedem a destruição dessas catecolaminas. A soma dos dois mecanismos inunda o sistema vascular do paciente com adrenalina livre, estourando a pressão arterial a níveis de AVC hemorrágico fatal e infarto fulminante.",
+        es: "CRISIS HIPERTENSIVA Y ARRITMIA LETAL. El Solriamfetol inhibe la recaptación de noradrenalina. Los IMAO impiden su destrucción. La suma inunda el sistema vascular con adrenalina libre, elevando la presión arterial a niveles de ACV hemorrágico e infarto."
+      },
+      conduta: {
+        pt: "PROIBIDO MISTURAR. Exige-se um intervalo ('Washout') de 14 dias puros após descontinuar um IMAO antes de iniciar o Solriamfetol.",
+        es: "PROHIBIDO MEZCLAR. Se exige un intervalo de 14 días puros tras descontinuar un IMAO antes de iniciar Solriamfetol."
+      }
+    }
+  },
+
+  /* ── BETAISTINA (Antagonismo Otoneurológico — Guerra pelo Receptor H1) ── */
+  "betaistina": {
+    "meclizina_prometazina_dramin": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A GUERRA PELO RECEPTOR H1 (A Nulidade Terapêutica). A Betaistina trata o labirinto atuando como AGONISTA dos receptores de histamina H1 no ouvido. A Meclizina e o Dimenidrinato (Dramin) são ANTAGONISTAS H1 (Anti-histamínicos). Se um médico prescrever os dois juntos ('Betaserc + Meclin'), um remédio acelera e o outro freia a mesma fechadura. A Betaistina é bloqueada, tornando-se água no corpo do paciente, e a tontura nunca passa.",
+        es: "LA GUERRA POR EL RECEPTOR H1 (Nulidad Terapéutica). La Betahistina trata el laberinto actuando como AGONISTA H1 en el oído. La Meclizina y Dimenhidrinato son ANTAGONISTAS H1. Si se prescriben juntos, uno acelera y el otro frena. La Betahistina es bloqueada y el mareo nunca pasa."
+      },
+      conduta: {
+        pt: "ERRO DE PRESCRIÇÃO. Jamais associe medicamentos anti-histamínicos (antialérgicos, Dramin, Meclin) para pacientes que fazem tratamento contínuo com Betaistina para Doença de Ménière.",
+        es: "ERROR DE PRESCRIPCIÓN. Jamás asocie medicamentos antihistamínicos para pacientes que hacen tratamiento continuo con Betahistina para Enfermedad de Ménière."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

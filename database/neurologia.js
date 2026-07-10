@@ -3433,3 +3433,232 @@
 
   }); /* fim Object.assign BUILD 414 append */
 })();
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BUILD 415 — Promotores de Vigília / Otoneurologia
+   Fármacos: armodafinila, pitolisanto, solriamfetol, betaistina, meclizina
+   Categorias: psiquiatria (3) · otorrinolaringologia (2)
+   Namespace: NEUROLOGIA_DRUGS_DB  (9º bloco IIFE)
+══════════════════════════════════════════════════════════════════════════════ */
+(function(){
+  if (!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB))
+    window.NEUROLOGIA_DRUGS_DB = {};
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── ARMODAFINILA ─────────────────────────────────────────────────── */
+    "armodafinila": {
+      name: { pt: 'Armodafinila', es: 'Armodafinilo' },
+      category: 'psiquiatria',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Agente Promotor da Vigília (Isômero R-purificado da Modafinila)', es: 'Agente Promotor de la Vigilia (Isómero R-purificado del Modafinilo)' },
+      indications: {
+        pt: ['Narcolepsia', 'Sonolência excessiva associada à Apneia Obstrutiva do Sono', 'Distúrbio do Sono do Trabalho em Turnos'],
+        es: ['Narcolepsia', 'Somnolencia excesiva asociada a Apnea Obstructiva del Sueño', 'Trastorno del Sueño por Trabajo de Turnos']
+      },
+      commercialNames: { br: ['Nuvigil (Importado)'], ar: ['Nuvigil'] },
+      presentation: { pt: ['Comprimidos 50 mg, 150 mg, 200 mg e 250 mg'], es: ['Comprimidos 50 mg, 150 mg, 200 mg y 250 mg'] },
+      mechanism: {
+        pt: 'A "Versão Longa" da Modafinila. A modafinila comum é uma mistura de duas moléculas espelhadas (R e S). A Armodafinila isola apenas a molécula "R" (o lado direito do espelho), que é a que dura muito mais tempo no sangue. O mecanismo é o mesmo (liberação central de histamina e orexina sem pico de dopamina), mas o paciente não sofre a "queda de energia" no meio da tarde que ocorre com a modafinila antiga.',
+        es: 'La "Versión Larga" del Modafinilo. Aísla solo la molécula "R" (el lado derecho del espejo), que dura mucho más en la sangre. El mecanismo es el mismo (liberación de histamina y orexina), pero el paciente no sufre la "caída de energía" a media tarde.'
+      },
+      dose: {
+        adult: {
+          pt: 'Narcolepsia/Apneia: 150 mg a 250 mg via oral UMA VEZ ao dia pela manhã. Turnos: 150 mg 1 hora antes do plantão noturno.',
+          es: 'Narcolepsia/Apnea: 150 mg a 250 mg vía oral UNA VEZ al día por la mañana. Turnos: 150 mg 1 hora antes de la guardia.'
+        },
+        pediatric: {
+          pt: 'Não recomendado rotineiramente para crianças.',
+          es: 'No recomendado rutinariamente en niños.'
+        }
+      },
+      administration: { pt: ['Administrar no mesmo horário. Retarda o sono profundamente.'], es: ['Administrar en el mismo horario. Retrasa el sueño profundamente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade em disfunção renal leve/moderada.', es: 'Sin necesidad en disfunción renal leve/moderada.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir a dose para pacientes com insuficiência hepática grave.', es: 'Reducir la dosis para pacientes con insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['Cefaleia marcante', 'Náuseas e tontura', 'Insônia e ansiedade intensa'], es: ['Cefalea marcada', 'Náuseas y mareo', 'Insomnio y ansiedad intensa'] },
+      dangerousAdverseEffects: { pt: ['Reações Cutâneas Graves (Síndrome de Stevens-Johnson)', 'Surtos psiquiátricos/maníacos (especialmente em bipolares)'], es: ['Reacciones Cutáneas Graves (Síndrome de Stevens-Johnson)', 'Brotes psiquiátricos/maníacos (especialmente en bipolares)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida ou histórico de rash cutâneo grave com modafinila'], es: ['Hipersensibilidad conocida o historial de rash cutáneo grave con modafinilo'] },
+        relative: { pt: ['Mulheres férteis utilizando pílula anticoncepcional (Reduz a eficácia da pílula)'], es: ['Mujeres fértiles utilizando píldora anticonceptiva (Reduce la eficacia)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'RISCO TERATOGÊNICO: Assim como a Modafinila, há suspeitas recentes de que o uso no início da gravidez aumenta o risco de malformações congênitas graves. Requer teste de gravidez negativo antes de iniciar.', es: 'RIESGO TERATOGÉNICO: Como el Modafinilo, hay sospechas de que el uso en el inicio del embarazo aumenta malformaciones. Requiere test de embarazo negativo antes de iniciar.' }
+      }
+    },
+
+    /* ── PITOLISANTO ──────────────────────────────────────────────────── */
+    "pitolisanto": {
+      name: { pt: 'Pitolisanto', es: 'Pitolisant' },
+      category: 'psiquiatria',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Antagonista / Agonista Inverso do Receptor Histamínico H3', es: 'Antagonista / Agonista Inverso del Receptor Histamínico H3' },
+      indications: {
+        pt: ['Narcolepsia com ou sem Cataplexia em adultos (O único não-estimulante aprovado para Cataplexia - a perda súbita de tônus muscular)'],
+        es: ['Narcolepsia con o sin Cataplejía en adultos (El único no estimulante aprobado para Cataplejía)']
+      },
+      commercialNames: { br: ['Wakix (Importado)'], ar: ['Wakix'] },
+      presentation: { pt: ['Comprimidos revestidos 4,45 mg e 17,8 mg'], es: ['Comprimidos recubiertos 4,45 mg y 17,8 mg'] },
+      mechanism: {
+        pt: 'Primeiro da sua classe no mundo. Os receptores H3 são "autofreios" no cérebro que dizem para o neurônio PARAR de liberar histamina (que nos mantém acordados). O Pitolisanto bloqueia esse "freio" H3. Como o neurônio perde o freio, ele começa a liberar HISTAMINA massivamente no cérebro. O cérebro desperta de forma natural e constante, o que ajuda não só a manter o paciente alerta, mas impede os ataques de cataplexia.',
+        es: 'Primero de su clase. Los receptores H3 son "frenos" que dicen al cerebro PARAR de liberar histamina. El Pitolisant bloquea este "freno". El cerebro comienza a liberar HISTAMINA masivamente. Despierta de forma natural y constante, impidiendo la cataplejía.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 8,9 mg/dia na primeira semana. Titular gradualmente até um máximo de 35,6 mg/dia (administrado em dose única pela manhã).',
+          es: 'Inicio: 8,9 mg/día en la primera semana. Titular gradualmente hasta un máximo de 35,6 mg/día (dosis única por la mañana).'
+        },
+        pediatric: {
+          pt: 'Não indicado para menores de 18 anos.',
+          es: 'No indicado para menores de 18 años.'
+        }
+      },
+      administration: { pt: ['Tomar pela manhã com o café da manhã. Como demora semanas para os níveis no cérebro se consolidarem, o efeito pleno não é imediato.'], es: ['Tomar por la mañana con el desayuno. Como tarda semanas en consolidarse, el efecto pleno no es inmediato.'] },
+      renalAdjustment: { required: true, message: { pt: 'Dose máxima reduzida a 17,8 mg/dia em disfunção renal moderada/grave.', es: 'Dosis máxima reducida a 17,8 mg/día en disfunción renal moderada/grave.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Dose máxima reduzida a 17,8 mg/dia em disfunção hepática moderada (Child-Pugh B). Contraindicado na grave.', es: 'Dosis máxima reducida a 17,8 mg/día en disfunción hepática moderada. Contraindicado en grave.' } },
+      commonAdverseEffects: { pt: ['Insônia severa', 'Cefaleia e náuseas', 'Ansiedade e irritabilidade'], es: ['Insomnio severo', 'Cefalea y náuseas', 'Ansiedad e irritabilidad'] },
+      dangerousAdverseEffects: { pt: ['PROLONGAMENTO DO INTERVALO QT (Risco de arritmia no coração)'], es: ['PROLONGACIÓN DEL INTERVALO QT (Riesgo de arritmia)'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com insuficiência hepática severa (Child-Pugh C)', 'Uso associado de anti-histamínicos clássicos de 1ª geração'], es: ['Pacientes con insuficiencia hepática severa (Child-Pugh C)', 'Uso asociado de antihistamínicos clásicos de 1ª generación'] },
+        relative: { pt: ['Uso concomitante de drogas que prolongam o QT (Ex: Azitromicina, Haloperidol)'], es: ['Uso concomitante de drogas que prolongan el QT'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O CONFLITO DO ALÉRGICO: Como a droga força o cérebro a ficar acordado através da Histamina, se o paciente tomar um antialérgico que cruze a barreira (como Polaramine/Prometazina), o antialérgico vai bloquear a histamina e ANULAR 100% O EFEITO DO PITOLISANTO. Se ele tiver alergia, deve usar Loratadina ou Fexofenadina (que não cruzam para o cérebro).', es: 'EL CONFLICTO DEL ALÉRGICO: Como la droga usa Histamina para despertar, si el paciente toma un antialérgico clásico (Clorfenamina), este ANULARÁ 100% EL EFECTO DEL PITOLISANT. Si tiene alergia, debe usar Loratadina (no cruza al cerebro).' }
+      }
+    },
+
+    /* ── SOLRIAMFETOL ─────────────────────────────────────────────────── */
+    "solriamfetol": {
+      name: { pt: 'Solriamfetol', es: 'Solriamfetol' },
+      category: 'psiquiatria',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Inibidor da Recaptação de Dopamina e Noradrenalina (NDRI)', es: 'Inhibidor de la Recaptación de Dopamina y Noradrenalina (NDRI)' },
+      indications: {
+        pt: ['Sonolência diurna excessiva associada à Narcolepsia ou Apneia Obstrutiva do Sono (Como terapia para mantê-lo acordado, não substitui o CPAP na apneia)'],
+        es: ['Somnolencia diurna excesiva asociada a Narcolepsia o Apnea Obstructiva del Sueño (No sustituye el CPAP)']
+      },
+      commercialNames: { br: ['Sunosi (Em aprovação)'], ar: ['Sunosi'] },
+      presentation: { pt: ['Comprimidos 75 mg e 150 mg'], es: ['Comprimidos 75 mg y 150 mg'] },
+      mechanism: {
+        pt: 'Atua exatamente nas mesmas bombas que o Metilfenidato (Bloqueando o DAT da dopamina e o NET da noradrenalina), inundando as fendas sinápticas. Contudo, ao contrário das anfetaminas, ele não força a liberação massiva estocada, agindo puramente na recaptação de forma muito refinada. O paciente fica super alerta o dia todo, mas sem o pico e o "crash" abrupto dos estimulantes de TDAH.',
+        es: 'Actúa en las mismas bombas que el Metilfenidato (Bloqueando DAT y NET). Sin embargo, a diferencia de las anfetaminas, no fuerza la liberación masiva almacenada, actuando puramente en la recaptación. El paciente está super alerta, pero sin el "crash" abrupto.'
+      },
+      dose: {
+        adult: {
+          pt: 'Narcolepsia: Início com 75 mg pela manhã, podendo subir até 150 mg. Apneia: Início com 37,5 mg, podendo subir até 150 mg.',
+          es: 'Narcolepsia: Inicio con 75 mg por la mañana, pudiendo subir a 150 mg. Apnea: Inicio con 37,5 mg, pudiendo subir a 150 mg.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Não deve ser tomado menos de 9 horas antes de dormir, caso contrário o paciente terá insônia implacável.'], es: ['No debe ser tomado menos de 9 horas antes de dormir, o el paciente tendrá insomnio implacable.'] },
+      renalAdjustment: { required: true, message: { pt: 'Excreção quase 100% renal INTACTA. Se ClCr entre 30 e 59: máx 75 mg. Se ClCr entre 15 e 29: máx 37,5 mg. Se Diálise: PROIBIDO.', es: 'Excreción casi 100% renal INTACTA. Si ClCr entre 30-59: máx 75 mg. Si Diálisis: PROHIBIDO.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não é metabolizado pelo fígado. Sem necessidade de ajuste.', es: 'No es metabolizado por el hígado. Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Dor de cabeça intensa', 'Aumento da Pressão Arterial e da Frequência Cardíaca (Efeito noradrenérgico periférico)', 'Náuseas e Insônia'], es: ['Dolor de cabeza intenso', 'Aumento de la Presión Arterial y Frecuencia Cardíaca (Efecto noradrenérgico)', 'Náuseas e Insomnio'] },
+      dangerousAdverseEffects: { pt: ['Crise hipertensiva e eventos isquêmicos cardíacos em pacientes de risco', 'Surtos de ansiedade, irritabilidade e agressividade'], es: ['Crisis hipertensiva y eventos isquémicos en pacientes de riesgo', 'Brotes de ansiedad, irritabilidad y agresividad'] },
+      contraindications: {
+        absolute: { pt: ['Uso associado com IMAOs nos últimos 14 dias', 'Doença Renal em Estágio Terminal (Diálise)'], es: ['Uso asociado con IMAOs en últimos 14 días', 'Enfermedad Renal en Etapa Terminal (Diálisis)'] },
+        relative: { pt: ['Hipertensão arterial não controlada, arritmias graves'], es: ['Hipertensión arterial no controlada, arritmias graves'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ALERTA DA APNEIA: O Solriamfetol é maravilhoso para o cansaço da Apneia, mas NUNCA substitui o CPAP. Se o paciente parar de usar a máscara e depender só da pílula, o coração dele (que já sofre de noite por falta de oxigênio) vai sofrer de dia com a taquicardia da droga, gerando infarto maciço.', es: 'LA ALERTA DE LA APNEA: El Solriamfetol es maravilloso para el cansancio de la Apnea, pero NUNCA sustituye el CPAP. Si el paciente deja la máscara y usa solo la píldora, el corazón sufrirá de día con la taquicardia de la droga, generando infarto masivo.' }
+      }
+    },
+
+    /* ── BETAISTINA ───────────────────────────────────────────────────── */
+    "betaistina": {
+      name: { pt: 'Betaistina (Dicloridrato de)', es: 'Betahistina (Diclorhidrato de)' },
+      category: 'otorrinolaringologia',
+      icon: '👂',
+      color: '#0D9488',
+      colorTxt: '#ffffff',
+      class: { pt: 'Análogo da Histamina (Agonista H1 fraco / Antagonista H3 forte)', es: 'Análogo de la Histamina (Agonista H1 débil / Antagonista H3 fuerte)' },
+      indications: {
+        pt: ['Síndrome de Ménière (Vertigem grave, zumbido no ouvido e perda auditiva)', 'Vertigem e tontura de origem vestibular'],
+        es: ['Síndrome de Ménière (Vértigo grave, zumbido en el oído y pérdida auditiva)', 'Vértigo y mareo de origen vestibular']
+      },
+      commercialNames: { br: ['Betaserc', 'Labirin'], ar: ['Betaserc', 'Menietol'] },
+      presentation: { pt: ['Comprimidos 8 mg, 16 mg e 24 mg'], es: ['Comprimidos 8 mg, 16 mg y 24 mg'] },
+      mechanism: {
+        pt: 'Atua diretamente nos receptores de histamina do ouvido interno (Labirinto). Como agonista H1, ela dilata ferozmente os capilares sanguíneos da "estria vascular" do ouvido, drenando e diminuindo a pressão excessiva da endolinfa que causa a tontura do Ménière. Como antagonista H3 central, inibe os impulsos errados do nervo vestibular no cérebro. É a principal arma para "despressurizar" o labirinto doente.',
+        es: 'Actúa directamente en los receptores de histamina del oído interno (Laberinto). Como agonista H1, dilata ferozmente los capilares sanguíneos del oído, drenando la presión excesiva de la endolinfa que causa el vértigo. Como antagonista H3, inhibe los impulsos erróneos del nervio.'
+      },
+      dose: {
+        adult: {
+          pt: '24 a 48 mg ao dia, divididos em 2 a 3 tomadas. Geralmente 1 comp de 16 mg de 8/8h ou 24 mg de 12/12h.',
+          es: '24 a 48 mg al día, divididos en 2 a 3 tomas. Generalmente 1 comp de 16 mg cada 8h o 24 mg cada 12h.'
+        },
+        pediatric: {
+          pt: 'Não recomendado (Eficácia e segurança não comprovadas em crianças).',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['Deve ser tomado SEMPRE junto ou logo após as refeições para evitar o efeito histamínico ácido (dor de estômago e úlcera).'], es: ['Debe ser tomado SIEMPRE junto o después de las comidas para evitar el efecto histamínico ácido (dolor de estómago).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      commonAdverseEffects: { pt: ['Dispepsia, dor gástrica e azia (O estômago é cheio de receptores histamínicos ativados por ela)', 'Cefaleia', 'Ondas de calor / Rash cutâneo leve'], es: ['Dispepsia, dolor gástrico y acidez', 'Cefalea', 'Sofocos / Rash cutáneo leve'] },
+      dangerousAdverseEffects: { pt: ['Crise de Feocromocitoma (Pode causar pico hipertensivo agudo)', 'Sangramento por reativação de Úlcera Péptica'], es: ['Crisis de Feocromocitoma (Puede causar pico hipertensivo)', 'Sangrado por reactivación de Úlcera Péptica'] },
+      contraindications: {
+        absolute: { pt: ['Feocromocitoma pré-existente (O tumor supra-renal vai liberar adrenalina em níveis fatais ao ser ativado por histamina)'], es: ['Feocromocitoma preexistente (El tumor liberará adrenalina en niveles fatales)'] },
+        relative: { pt: ['Asma brônquica (O efeito H1 fraco pode deflagrar broncoespasmo brando)', 'Úlcera péptica ativa'], es: ['Asma bronquial (El efecto H1 puede desencadenar broncoespasmo)', 'Úlcera péptica activa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'NÃO CURA TONTURA IMEDIATAMENTE: O paciente deve ser informado de que a Betaistina não é uma "pílula de resgate mágico" como o Dramin. Ela é para tratamento estrutural de longo prazo, levando de 2 semanas a meses para despressurizar o ouvido e cessar as crises de Ménière.', es: 'NO CURA EL MAREO DE INMEDIATO: El paciente debe ser informado que la Betahistina no es rescate mágico. Es para tratamiento estructural a largo plazo, llevando semanas o meses para despresurizar el oído.' }
+      }
+    },
+
+    /* ── MECLIZINA ────────────────────────────────────────────────────── */
+    "meclizina": {
+      name: { pt: 'Meclizina', es: 'Meclozina' },
+      category: 'otorrinolaringologia',
+      icon: '👂',
+      color: '#0D9488',
+      colorTxt: '#ffffff',
+      class: { pt: 'Anti-histamínico H1 com atividade Anticolinérgica', es: 'Antihistamínico H1 con actividad Anticolinérgica' },
+      indications: {
+        pt: ['Cinetose (Enjoo de movimento ao viajar de barco, carro ou avião)', 'Tratamento profilático e sintomático da Vertigem aguda (Labirintites)'],
+        es: ['Cinetosis (Mareo por movimiento al viajar en barco, coche o avión)', 'Tratamiento profiláctico y sintomático del Vértigo agudo (Laberintitis)']
+      },
+      commercialNames: { br: ['Meclin', 'Navicalm'], ar: ['Bonamine (Histórico)'] },
+      presentation: { pt: ['Comprimidos 25 mg e 50 mg'], es: ['Comprimidos 25 mg y 50 mg'] },
+      mechanism: {
+        pt: 'O "Isolador de Enjoo". Como um anti-histamínico de primeira geração com potentes propriedades anticolinérgicas, a Meclizina atua diminuindo a excitabilidade do labirinto no ouvido interno e bloqueando a condução nas vias do nervo vestibular-cerebelar. Ela literalmente "desconecta" a comunicação entre o ouvido (que sente o balanço do barco) e o centro do vômito no cérebro.',
+        es: 'El "Aislador de Mareo". Es un antihistamínico con potentes propiedades anticolinérgicas. Actúa disminuyendo la excitabilidad del laberinto en el oído interno y bloqueando la conducción nerviosa vestibular. Literalmente "desconecta" la comunicación entre el oído (que siente el balanceo) y el centro del vómito.'
+      },
+      dose: {
+        adult: {
+          pt: 'Vertigem/Labirintite: 25 a 100 mg ao dia (divididos a cada 12 ou 24 horas). Cinetose (Viagem): 25 mg, tomar 1 hora ANTES da viagem (Pode repetir a cada 24h).',
+          es: 'Vértigo/Laberintitis: 25 a 100 mg al día (divididos cada 12 o 24 horas). Cinetosis (Viaje): 25 mg, tomar 1 hora ANTES del viaje (Puede repetir cada 24h).'
+        },
+        pediatric: {
+          pt: 'Não é rotineiramente aprovada para crianças < 12 anos. O Dramin (Dimenidrinato) é preferido na pediatria.',
+          es: 'No es rutinariamente aprobada para niños < 12 años.'
+        }
+      },
+      administration: { pt: ['Pode ser tomado com leite ou alimentos para evitar desconforto gástrico.'], es: ['Puede tomarse con leche o alimentos para evitar malestar gástrico.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Usar com grande cautela. Metabolização massiva hepática.', es: 'Usar con gran cautela. Metabolización masiva hepática.' } },
+      commonAdverseEffects: { pt: ['Sonolência intensa (Embora menor que o Dimenidrinato, ainda dá muito sono)', 'Boca e mucosas extremamente secas', 'Visão turva temporária'], es: ['Somnolencia intensa (Aunque menor que el Dimenhidrinato, aún da sueño)', 'Boca y mucosas extremadamente secas', 'Visión borrosa temporal'] },
+      dangerousAdverseEffects: { pt: ['Retenção Urinária Aguda (Globo vesical) em Idosos', 'Delirium anticolinérgico'], es: ['Retención Urinaria Aguda (Globo vesical) en Ancianos', 'Delirium anticolinérgico'] },
+      contraindications: {
+        absolute: { pt: ['Idosos com demência e quadro agudo de delirium', 'Crise aguda de asma brônquica'], es: ['Ancianos con demencia y cuadro agudo de delirium', 'Crisis aguda de asma bronquial'] },
+        relative: { pt: ['Glaucoma de ângulo fechado', 'Hiperplasia benigna da próstata (Risco de travar a urina)'], es: ['Glaucoma de ángulo cerrado', 'Hiperplasia benigna de próstata'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A DEMORA DA VIAGEM: O maior erro dos pacientes é tomar a Meclizina quando JÁ ESTÃO no barco passando mal e vomitando. A droga leva 1 hora para fazer efeito profilático. Deve ser engolida enquanto o paciente ainda está em solo firme, antes de embarcar.', es: 'LA DEMORA DEL VIAJE: El mayor error de los pacientes es tomarla cuando YA ESTÁN en el barco vomitando. La droga lleva 1 hora para hacer efecto. Debe ser tragada estando aún en suelo firme, antes de embarcar.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 415 append */
+})();
