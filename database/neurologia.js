@@ -3220,3 +3220,216 @@
 
   }); /* fim Object.assign BUILD 413 append */
 })();
+
+/* ═══════════════════════════════════════════════════════════════
+   BUILD 414 APPEND — TDAH e Narcolepsia (Estimulantes e Eugeroicos)
+   Metilfenidato | Lisdexanfetamina | Atomoxetina | Guanfacina | Modafinila
+═══════════════════════════════════════════════════════════════ */
+(function(){
+  if (!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB))
+    window.NEUROLOGIA_DRUGS_DB = {};
+
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── METILFENIDATO ──────────────────────────────────────────────────── */
+    "metilfenidato": {
+      name: { pt: 'Metilfenidato (Cloridrato de)', es: 'Metilfenidato (Clorhidrato de)' },
+      category: 'psiquiatria',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Estimulante do Sistema Nervoso Central (Bloqueador DAT/NET)', es: 'Estimulante del Sistema Nervioso Central (Bloqueador DAT/NET)' },
+      indications: {
+        pt: ['Transtorno de Déficit de Atenção e Hiperatividade (TDAH) em crianças e adultos', 'Narcolepsia (Episódios incontroláveis de sono)'],
+        es: ['Trastorno por Déficit de Atención e Hiperactividad (TDAH) en niños y adultos', 'Narcolepsia (Episodios incontrolables de sueño)']
+      },
+      commercialNames: { br: ['Ritalina', 'Ritalina LA', 'Concerta'], ar: ['Ritalina', 'Concerta'] },
+      presentation: { pt: ['Comprimidos de Liberação Imediata 10 mg', 'Cápsulas de Liberação Modificada (LA/Concerta) 18, 20, 30, 36, 40 e 54 mg'], es: ['Comprimidos de Liberación Inmediata 10 mg', 'Cápsulas de Liberación Modificada 18, 20, 30, 36, 40 y 54 mg'] },
+      mechanism: {
+        pt: 'O cérebro com TDAH é um motor subestimulado no Córtex Pré-Frontal (o CEO do cérebro não tem Dopamina e Noradrenalina para organizar as tarefas). O Metilfenidato bloqueia diretamente os transportadores DAT e NET. As bombas param de "aspirar" a dopamina, inundando as sinapses do cérebro. O paciente de repente ganha "freios" e "foco a laser", conseguindo inibir a agitação motora.',
+        es: 'El cerebro con TDAH es un motor subestimulado en el Córtex Prefrontal. El Metilfenidato bloquea los transportadores DAT y NET. Las bombas dejan de "aspirar" la dopamina, inundando las sinapsis. El paciente gana "frenos" y "foco láser", logrando inhibir la agitación.'
+      },
+      dose: {
+        adult: {
+          pt: 'Liberação Imediata: 10 mg, 2 a 3 vezes ao dia (Última dose até às 16h para evitar insônia). Liberação Prolongada (Concerta/LA): 18 a 54 mg de manhã UMA VEZ ao dia.',
+          es: 'Liberación Inmediata: 10 mg, 2 a 3 veces al día. Liberación Prolongada (Concerta/LA): 18 a 54 mg por la mañana UNA VEZ al día.'
+        },
+        pediatric: { pt: 'TDAH (> 6 anos): Início com 5 mg de 12/12h (Imediata). Titular rigorosamente.', es: 'TDAH (> 6 años): Inicio con 5 mg de 12/12h (Inmediata). Titular rigurosamente.' }
+      },
+      administration: { pt: ['Cápsulas de Liberação Modificada (Concerta/LA) NUNCA podem ser esmagadas ou mastigadas. Se mastigadas, as 12 horas de dopamina explodem na cabeça do paciente em 1 hora (overdose).'], es: ['Cápsulas de Liberación Modificada NUNCA pueden ser aplastadas o masticadas. Si se mastican, las 12 horas de dopamina explotan en 1 hora (sobredosis).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Metabolizado predominantemente no fígado. Usar com cautela na disfunção grave.', es: 'Metabolizado predominantemente en hígado. Usar con cautela en disfunción grave.' } },
+      commonAdverseEffects: { pt: ['Insônia terminal', 'Anorexia e perda de peso (As crianças param de comer)', 'Taquicardia, boca seca e ansiedade aguda no pico do remédio'], es: ['Insomnio terminal', 'Anorexia y pérdida de peso (Los niños dejan de comer)', 'Taquicardia, boca seca y ansiedad'] },
+      dangerousAdverseEffects: { pt: ['Crescimento atrofiado em crianças (Retarda o ganho de altura)', 'Morte Súbita Cardíaca em pacientes com anomalias congênitas (Efeito estimulante violento)', 'Surto Psicótico / Mania (A dopamina alta induz alucinação)'], es: ['Crecimiento atrofiado en niños (Retrasa el aumento de altura)', 'Muerte Súbita Cardíaca en pacientes con anomalías congénitas', 'Brote Psicótico / Manía'] },
+      contraindications: {
+        absolute: { pt: ['Uso associado com IMAOs', 'Glaucoma, Hipertireoidismo severo, Arritmias cardíacas'], es: ['Uso asociado con IMAOs', 'Glaucoma, Hipertiroidismo severo, Arritmias cardíacas'] },
+        relative: { pt: ['Transtorno de Ansiedade Generalizada severo e Síndrome de Tourette (Piora os tics)'], es: ['Trastorno de Ansiedad Generalizada severo y Síndrome de Tourette (Empeora los tics)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'ALERTA DE ABUSO RECREATIVO E ACADÊMICO: Classificado como substância controlada de alto risco (Schedule II). É brutalmente desviado por universitários (que não têm TDAH) para varar noites estudando, o que resulta em colapso de burnout, taquicardia severa e vício comportamental avassalador em dopamina.', es: 'ALERTA DE ABUSO RECREATIVO Y ACADÉMICO: Sustancia controlada de alto riesgo. Brutalmente desviado por universitarios para estudiar noches enteras, resultando en colapso de burnout, taquicardia severa y vicio a dopamina.' }
+      }
+    },
+
+    /* ── LISDEXANFETAMINA ───────────────────────────────────────────────── */
+    "lisdexanfetamina": {
+      name: { pt: 'Lisdexanfetamina (Dimesilato de)', es: 'Lisdexanfetamina (Dimesilato de)' },
+      category: 'psiquiatria',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Pró-fármaco Estimulante do Sistema Nervoso Central (Derivado Anfetamínico)', es: 'Profármaco Estimulante del Sistema Nervioso Central (Derivado Anfetamínico)' },
+      indications: {
+        pt: ['TDAH em crianças e adultos (Cobertura longa para o dia inteiro)', 'Transtorno da Compulsão Alimentar Periódica em adultos (Binge Eating - É a única droga do mundo aprovada oficialmente para isso)'],
+        es: ['TDAH en niños y adultos (Cobertura larga para todo el día)', 'Trastorno por Atracón en adultos (Binge Eating - La única droga aprobada oficialmente para esto)']
+      },
+      commercialNames: { br: ['Venvanse', 'Juneve'], ar: ['Vyvanse'] },
+      presentation: { pt: ['Cápsulas duras 30 mg, 50 mg e 70 mg'], es: ['Cápsulas duras 30 mg, 50 mg y 70 mg'] },
+      mechanism: {
+        pt: 'Uma engenharia molecular genial contra o vício. A Lisdexanfetamina entra no corpo como uma molécula cega e INATIVA. Ela só se transforma em Dextroanfetamina (o super estimulante) quando encontra as Enzimas dos Glóbulos Vermelhos no sangue, que quebram a ponte de Lisina lentamente. O truque: Se o adolescente abrir a cápsula e "cheirar" o pó ou injetar na veia, a droga NÃO FAZ EFEITO NENHUM, porque não passa pelas hemácias. A liberação no sangue é constante, mantendo foco brutal por 12-14 horas sem picos eufóricos.',
+        es: 'Ingeniería molecular contra el vicio. Entra en el cuerpo CIEGA E INACTIVA. Solo se transforma en Dextroanfetamina al encontrar las Enzimas de los Glóbulos Rojos. Si el adolescente aspira el polvo o lo inyecta, NO HACE EFECTO. La liberación es constante por 12-14 horas.'
+      },
+      dose: {
+        adult: {
+          pt: 'TDAH / Compulsão: Início com 30 mg via oral, UMA VEZ ao dia (Obrigatoriamente pela manhã). Titular até 50 mg ou 70 mg/dia dependendo do foco.',
+          es: 'TDAH / Atracón: Inicio con 30 mg vía oral, UNA VEZ al día (Obligatoriamente por la mañana). Titular hasta 50 mg o 70 mg/día.'
+        },
+        pediatric: { pt: 'Aprovado > 6 anos. Início 30 mg pela manhã. O conteúdo da cápsula pode ser diluído em iogurte/água, MAS DEVE SER ENGOLIDO LOGO.', es: 'Aprobado > 6 años. Inicio 30 mg por la mañana. El contenido puede diluirse en yogur, PERO DEBE TRAGARSE PRONTO.' }
+      },
+      administration: { pt: ['Nunca administrar à tarde ou à noite (Insônia garantida de 12 horas).'], es: ['Nunca administrar a la tarde o noche (Insomnio garantizado de 12 horas).'] },
+      renalAdjustment: { required: true, message: { pt: 'Dose MÁXIMA de 50 mg/dia se insuficiência renal grave (ClCr < 30 mL/min).', es: 'Dosis MÁXIMA de 50 mg/día si insuficiencia renal grave (ClCr < 30 mL/min).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'As hemácias quebram a droga, não o fígado. Sem ajuste drástico.', es: 'Los hematíes rompen la droga, no el hígado. Sin ajuste drástico.' } },
+      commonAdverseEffects: { pt: ['Perda drástica de apetite (O paciente simplesmente "esquece" de comer o dia todo)', 'Boca excessivamente seca e Ranger de dentes (bruxismo)', 'Irritabilidade e "Crateramento" (Efeito crash no fim da tarde)'], es: ['Pérdida drástica de apetito (El paciente "olvida" comer)', 'Boca seca y Rechinar de dientes', 'Irritabilidad y "Crash" al atardecer'] },
+      dangerousAdverseEffects: { pt: ['Cardiotoxicidade aguda, Infarto e AVC em pacientes com sopro/doença valvar', 'Desencadeamento de Psicose, Mania e Comportamento Agressivo', 'Síndrome de Raynaud medicamentosa (vasoespasmo de dedos)'], es: ['Cardiotoxicidad aguda, Infarto y ACV en pacientes con anomalía cardíaca', 'Desencadenamiento de Psicosis, Manía y Agresividad', 'Síndrome de Raynaud'] },
+      contraindications: {
+        absolute: { pt: ['Uso associado de Inibidores da MAO nos últimos 14 dias', 'Arteriosclerose avançada, hipertensão moderada a grave', 'Hipertireoidismo sintomático'], es: ['Uso asociado de Inhibidores de la MAO en últimos 14 días', 'Arteriosclerosis avanzada, hipertensión moderada a grave', 'Hipertiroidismo sintomático'] },
+        relative: { pt: ['Histórico pessoal de psicose bipolar'], es: ['Historial personal de psicosis bipolar'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O DESAFIO DOS PAIS (CRASH DO FIM DE TARDE): Como a Lisdexanfetamina dura muito tempo, quando o nível da anfetamina cai repentinamente no final do dia (18h), a criança com TDAH sofre o "Crash": uma abstinência dopaminérgica aguda. Ela fica extremamente chorosa, irritada e dá ataques de birra, deixando os pais desesperados todo fim de tarde.', es: 'EL "CRASH" DEL ATARDECER: Cuando el nivel cae de repente al final del día (18h), el niño sufre el "Crash". Se pone llorón, irritado y tiene berrinches, desesperando a los padres cada atardecer.' }
+      }
+    },
+
+    /* ── ATOMOXETINA ────────────────────────────────────────────────────── */
+    "atomoxetina": {
+      name: { pt: 'Atomoxetina', es: 'Atomoxetina' },
+      category: 'psiquiatria',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Inibidor Seletivo da Recaptação de Noradrenalina (Não-Estimulante)', es: 'Inhibidor Selectivo de la Recaptación de Noradrenalina (No Estimulante)' },
+      indications: {
+        pt: ['TDAH em crianças, adolescentes e adultos (Primeira escolha quando o paciente tem histórico de vício, uso abusivo de drogas ou transtornos de ansiedade severa que a anfetamina pioraria)'],
+        es: ['TDAH en niños, adolescentes y adultos (Primera elección cuando el paciente tiene historial de vicio, abuso de drogas o ansiedad severa)']
+      },
+      commercialNames: { br: ['Atentah', 'Strattera'], ar: ['Strattera'] },
+      presentation: { pt: ['Cápsulas duras 10 mg, 18 mg, 25 mg, 40 mg, 60 mg, 80 mg e 100 mg'], es: ['Cápsulas duras 10 mg, 18 mg, 25 mg, 40 mg, 60 mg, 80 mg y 100 mg'] },
+      mechanism: {
+        pt: 'A "Cura Silenciosa" do TDAH. Não é um estimulante e não tem potencial de abuso. A Atomoxetina bloqueia APENAS a bomba de noradrenalina (NET). O truque fisiológico: No córtex pré-frontal (área da atenção), quase não existe bomba de dopamina. A dopamina local é "sugada" por engano pela bomba de noradrenalina. Ao bloquear a NET, a Atomoxetina aumenta a noradrenalina no cérebro todo, mas aumenta a dopamina APENAS NO CÓRTEX PRÉ-FRONTAL, evitando a enxurrada de dopamina nos núcleos da base (o que vicia).',
+        es: 'La "Cura Silenciosa". No es un estimulante. Bloquea SOLO la bomba de noradrenalina (NET). Al bloquearla, aumenta la dopamina SOLO EN EL CÓRTEX PREFRONTAL, evitando la inundación en el núcleo accumbens (que vicia).'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 40 mg/dia de manhã. Aumentar após 3 dias para a dose alvo de 80 mg/dia. Pode chegar a 100 mg/dia em casos refratários.',
+          es: 'Inicio: 40 mg/día por la mañana. Aumentar tras 3 días a 80 mg/día. Puede llegar a 100 mg/día.'
+        },
+        pediatric: { pt: 'Crianças (< 70 kg): Início 0,5 mg/kg/dia. Dose alvo de 1,2 mg/kg/dia.', es: 'Niños (< 70 kg): Inicio 0,5 mg/kg/día. Dosis objetivo de 1,2 mg/kg/día.' }
+      },
+      administration: { pt: ['O efeito não é imediato como a Ritalina. O paciente e a família devem ser avisados que a melhora no TDAH DEMORA de 2 a 4 SEMANAS contínuas para aparecer.'], es: ['El efecto no es inmediato. La mejora en el TDAH TARDA de 2 a 4 SEMANAS continuas en aparecer.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir dose pela metade em insuficiência hepática moderada (Child-Pugh B), e para um quarto na severa (Child-Pugh C).', es: 'Reducir dosis a la mitad en insuficiencia hepática moderada, y a un cuarto en la severa.' } },
+      commonAdverseEffects: { pt: ['Fadiga profunda (Muitos relatam extrema letargia inicial)', 'Disfunção erétil severa e dor geniturinária / disúria em homens adultos (Efeito prostático)', 'Boca seca e tontura'], es: ['Fatiga profunda (Muchos relatan letargo extremo inicial)', 'Disfunción eréctil severa y dolor genitourinario en hombres adultos', 'Boca seca y mareo'] },
+      dangerousAdverseEffects: { pt: ['Lesão Hepática Aguda Grave (Falência hepática foi reportada, exigindo transplante)', 'Ideação Suicida em crianças e adolescentes (Alerta Caixa Preta)'], es: ['Lesión Hepática Aguda Grave (Falla hepática exigiendo trasplante)', 'Ideación Suicida en niños y adolescentes (Caja Negra)'] },
+      contraindications: {
+        absolute: { pt: ['Uso associado com IMAOs', 'Glaucoma de ângulo fechado restrito', 'Feocromocitoma'], es: ['Uso asociado con IMAOs', 'Glaucoma de ángulo cerrado', 'Feocromocitoma'] },
+        relative: { pt: ['Pacientes com hipertrofia prostática (piora o bloqueio urinário)'], es: ['Pacientes con hipertrofia prostática'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O CHOQUE DE PERSONALIDADE: O FDA emitiu um Black Box Warning obrigatório. Em crianças com TDAH que iniciam Atomoxetina, uma minoria desenvolve alterações bruscas de comportamento, hostilidade incomum e pensamentos suicidas intensos nos primeiros meses. A vigilância parental deve ser estrita.', es: 'EL CHOQUE DE PERSONALIDAD: Black Box Warning. En niños que inician Atomoxetina, una minoría desarrolla cambios bruscos de comportamiento, hostilidad y pensamientos suicidas. Vigilancia estricta.' }
+      }
+    },
+
+    /* ── GUANFACINA ─────────────────────────────────────────────────────── */
+    "guanfacina": {
+      name: { pt: 'Guanfacina', es: 'Guanfacina' },
+      category: 'psiquiatria',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Agonista do Receptor Alfa-2A Adrenérgico Central (Não-Estimulante)', es: 'Agonista del Receptor Alfa-2A Adrenérgico Central (No Estimulante)' },
+      indications: {
+        pt: ['TDAH em crianças e adolescentes (Frequentemente adicionada à Ritalina/Venvanse para "acalmar a hiperatividade e os tics" quando o estimulante só resolveu a desatenção)'],
+        es: ['TDAH en niños y adolescentes (Añadida frecuentemente a Ritalina para "calmar la hiperactividad y los tics" cuando el estimulante solo resolvió la inatención)']
+      },
+      commercialNames: { br: ['Intuniv'], ar: ['Intuniv'] },
+      presentation: { pt: ['Comprimidos de Liberação Prolongada (ER) 1 mg, 2 mg, 3 mg e 4 mg'], es: ['Comprimidos de Liberación Prolongada (ER) 1 mg, 2 mg, 3 mg y 4 mg'] },
+      mechanism: {
+        pt: 'A "Cola Neural" do TDAH. Estimula ativamente os receptores Alfa-2A pós-sinápticos especificamente no córtex pré-frontal. Ao fechar os canais iônicos no cérebro, ela fortalece o sinal e elimina os "ruídos e distrações". Resultado: melhora a memória de trabalho, reduz a hiperatividade impulsiva e a oposição desafiadora sem tocar na dopamina. Como efeito fisiológico, reduz o simpático, diminuindo a pressão arterial.',
+        es: 'El "Pegamento Neural". Estimula los receptores Alfa-2A postsinápticos en el córtex prefrontal, fortaleciendo la señal y eliminando el "ruido". Mejora la memoria de trabajo y reduce la hiperactividad impulsiva sin tocar la dopamina. Disminuye la presión arterial.'
+      },
+      dose: {
+        adult: {
+          pt: 'Uso adulto não é a indicação primária, mas inicia-se com 1 mg à noite, titulando a cada semana até 4 mg/dia.',
+          es: 'Uso adulto no es indicación primaria. Inicia con 1 mg a la noche, titulando semanalmente hasta 4 mg/día.'
+        },
+        pediatric: { pt: 'Crianças 6 a 17 anos: Início com 1 mg/dia via oral. Aumentar em 1 mg semanalmente baseando-se no peso (Dose máxima de 4 mg para < 45kg, ou 7mg para mais pesados).', es: 'Niños 6 a 17 años: Inicio con 1 mg/día. Aumentar 1 mg semanalmente basado en el peso.' }
+      },
+      administration: { pt: ['Não deve ser ingerida com refeições muito ricas em gorduras (isso acelera a liberação da droga). NUNCA mastigar a pílula ER.', 'Nunca suspenda abruptamente.'], es: ['No ingerir con comidas muy ricas en grasas. NUNCA masticar la píldora ER. Nunca suspender abruptamente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade rigorosa, monitorar PA.', es: 'Sin necesidad rigurosa, monitorizar PA.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Metabolizado por CYP3A4, usar com cautela se disfunção grave.', es: 'Metabolizado por CYP3A4, usar con cautela.' } },
+      commonAdverseEffects: { pt: ['Sonolência intensa e letargia inicial (Muitas vezes é tomada à noite por isso)', 'Hipotensão e bradicardia (o batimento cardíaco da criança cai significativamente)', 'Boca seca e dor abdominal'], es: ['Somnolencia intensa y letargo inicial (Por eso se toma a la noche)', 'Hipotensión y bradicardia (el latido cae significativamente)', 'Boca seca y dolor abdominal'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão Ortostática Severa com Síncope (Desmaio)', 'CRISE HIPERTENSIVA DE REBOTE (Se o remédio for parado repentinamente)'], es: ['Hipotensión Ortostática Severa con Síncope (Desmayo)', 'CRISIS HIPERTENSIVA DE REBOTE (Si se para repentinamente)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade', 'Uso sem monitoramento rigoroso de pressão arterial e pulso (O coração bate mais lento e fraco)'], es: ['Hipersensibilidad', 'Uso sin monitoreo riguroso de presión y pulso'] },
+        relative: { pt: ['Crianças com bloqueio AV ou história familiar de síncope inexplicada'], es: ['Niños con bloqueo AV o historia de síncope inexplicado'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O PERIGO DA PARADA BRUSCA: A Guanfacina suprime os impulsos cardiovasculares do cérebro. Se os pais acharem que a droga não está funcionando e a interromperem abruptamente de um dia para o outro, o corpo sofre uma chuva de adrenalina compensatória de REBOTE. A pressão arterial da criança pode explodir (Emergência Hipertensiva) levando a sangramento ou arritmia.', es: 'EL PELIGRO DE LA PARADA BRUSCA: Si los padres cortan la droga abruptamente, el cuerpo sufre una lluvia de adrenalina de REBOTE. La presión del niño puede explotar (Emergencia Hipertensiva).' }
+      }
+    },
+
+    /* ── MODAFINILA ─────────────────────────────────────────────────────── */
+    "modafinila": {
+      name: { pt: 'Modafinila', es: 'Modafinilo' },
+      category: 'psiquiatria',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Agente Promotor da Vigília (Eugeroico / Estimulante Atípico)', es: 'Agente Promotor de la Vigilia (Eugeroico / Estimulante Atípico)' },
+      indications: {
+        pt: ['Narcolepsia grave', 'Síndrome da Apneia Obstrutiva do Sono (sonolência residual)', 'Distúrbio do Sono do Trabalho em Turnos (Vigias noturnos, médicos plantonistas)'],
+        es: ['Narcolepsia grave', 'Síndrome de Apnea Obstructiva del Sueño', 'Trastorno del Sueño por Trabajo de Turnos (Vigilantes, médicos en guardia)']
+      },
+      commercialNames: { br: ['Stavigile', 'Provigil'], ar: ['Vigicer', 'Provigil'] },
+      presentation: { pt: ['Comprimidos 100 mg e 200 mg'], es: ['Comprimidos 100 mg y 200 mg'] },
+      mechanism: {
+        pt: 'O Despertador Perfeito. Diferente da Ritalina, a Modafinila não inunda o cérebro com uma "bomba" de dopamina que vicia. Ela ativa seletivamente o hipotálamo, liberando HISTAMINA e OREXINA (os dois transmissores mestres do cérebro para "ficar acordado"). O resultado: o paciente fica clara, serena e invariavelmente "ligado" e acordado, sem sentir tremores, euforia psicótica ou taquicardia severa.',
+        es: 'El Despertador Perfecto. No inunda el cerebro con dopamina que vicia. Activa el hipotálamo, liberando HISTAMINA y OREXINA. El paciente queda sereno e invariablemente "encendido", sin tremores ni taquicardia severa.'
+      },
+      dose: {
+        adult: {
+          pt: 'Narcolepsia: 200 mg via oral, UMA VEZ ao dia, sempre de manhã. Trabalho em turno noturno: 200 mg uma hora ANTES do início do turno.',
+          es: 'Narcolepsia: 200 mg vía oral, UNA VEZ al día, siempre de mañana. Trabajo en turno: 200 mg una hora ANTES del turno.'
+        },
+        pediatric: { pt: 'Não recomendado (risco elevado de reações de pele raras em pediatria).', es: 'No recomendado (riesgo elevado de reacciones de piel raras en pediatría).' }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos. Não tomar à tarde, exceto se a intenção for não dormir à noite inteira.'], es: ['Puede tomarse con o sin alimentos. No tomar a la tarde, excepto si la intención es no dormir en la noche.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste, apenas eliminação de metabólitos inativos.', es: 'Sin ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir a dose para 100 mg em pacientes com insuficiência hepática grave.', es: 'Reducir a 100 mg en pacientes con insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['Cefaleia marcante (Muito comum, até 34% dos usuários sentem forte dor de cabeça inicial)', 'Náuseas e diarreia', 'Ansiedade, nervosismo, e palpitação'], es: ['Cefalea marcada (Muy común, hasta 34% siente fuerte dolor de cabeza)', 'Náuseas y diarrea', 'Ansiedad, nerviosismo, palpitación'] },
+      dangerousAdverseEffects: { pt: ['Reações Cutâneas Letais (Síndrome de Stevens-Johnson, Necrose Epidérmica Tóxica - Aparece nos primeiros meses)', 'Surtos maníacos agudos e ideação psicótica'], es: ['Reacciones Cutáneas Letales (Síndrome de Stevens-Johnson - Aparece en los primeros meses)', 'Brotes maníacos agudos e ideación psicótica'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de reações alérgicas graves (Erupção) com modafinila', 'Hipertrofia ventricular esquerda ou alterações de valvas cardíacas'], es: ['Historial de reacciones alérgicas cutáneas con modafinilo', 'Hipertrofia ventricular izquierda'] },
+        relative: { pt: ['Mulheres usando pílula anticoncepcional (Ver Interações)'], es: ['Mujeres usando píldora anticonceptiva (Ver Interacciones)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O REMÉDIO DO PLANTONISTA E O "HACKER" ACADÊMICO: É a medicação mais "hackeada" por pilotos militares, cirurgiões no CTI e estudantes ("Smart Drug"). Permite ao indivíduo varar até 40 horas seguidas acordado com total cognição. Mas o sono não é cancelado, é adiado: quando o remédio sai do corpo, ocorre a "dívida de sono" com apagão total neuroquímico.', es: 'EL REMEDIO DEL PLANTONISTA: "Smart Drug" de pilotos y estudiantes. Permite 40 horas despierto con cognición. Pero el sueño no se cancela, se pospone: cuando el remedio sale, ocurre la "deuda de sueño" con apagón total.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 414 append */
+})();

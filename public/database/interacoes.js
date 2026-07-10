@@ -1178,6 +1178,25 @@ const DRUG_CLASSES = {
   "$classe_antipsicoticos_tipicos": [
     "haloperidol", "clorpromazina", "tioridazina", "flufenazina",
     "trifluoperazina", "perfenazina", "pimozida", "droperidol"
+  ],
+
+  /* BUILD 414 — Estimulantes do TDAH (Metilfenidato e derivados anfetamínicos) */
+  "$classe_estimulantes_tdah": [
+    "metilfenidato", "lisdexanfetamina", "dextroanfetamina",
+    "anfetamina", "metanfetamina"
+  ],
+
+  /* BUILD 414 — Inibidores Potentes do CYP2D6 */
+  "$classe_inibidores_potentes_cyp2d6": [
+    "fluoxetina", "paroxetina", "bupropiona", "duloxetina",
+    "terbinafina", "quinidina", "cimetidina", "cinacalcete"
+  ],
+
+  /* BUILD 414 — Anticoncepcionais Hormonais (Oral, Adesivo, Anel, Implante) */
+  "$classe_anticoncepcionais_hormonais": [
+    "etinilestradiol", "levonorgestrel", "desogestrel", "gestodeno",
+    "etonogestrel", "norelgestromina", "drospirenona", "dienogeste",
+    "medroxiprogesterona", "noretisterona"
   ]
 
 };
@@ -23253,9 +23272,62 @@ const INTERACOES_DB = {
         es: "Paciente recién diagnosticado con ELA DEBE interrumpir el tabaquismo. Cuidado con el exceso de carnes asadas, que también inducen la CYP1A2."
       }
     }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 414 — TDAH e Narcolepsia (Estimulantes e Eugeroicos)
+     $classe_estimulantes_tdah | atomoxetina | modafinila
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── ESTIMULANTES TDAH (Metilfenidato e Anfetaminas) ── */
+  "$classe_estimulantes_tdah": {
+    "$classe_imaos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A FÁBRICA DE CRISES HIPERTENSIVAS (A TEMPESTADE FATAL). Metilfenidato e Anfetaminas ordenam o cérebro e os vasos sanguíneos a bombear Dopamina e Noradrenalina de forma violenta nas fendas. Os IMAOs (Tranilcipromina, Selegilina) fecham a lixeira do cérebro, impedindo a destruição dessas substâncias. Se ingeridos juntos, o paciente terá um pico estratosférico de pressão arterial em 20 minutos (pressão 250x140), taquicardia ventricular grave, febre alta e risco absoluto de Acidente Vascular Cerebral Hemorrágico e Morte.",
+        es: "LA FÁBRICA DE CRISIS HIPERTENSIVAS. El Metilfenidato ordena al cerebro bombear Dopamina y Noradrenalina. Los IMAO cierran la basura del cerebro. Si se ingieren juntos, la presión arterial se disparará en 20 minutos (250x140), con taquicardia ventricular, fiebre y riesgo absoluto de ACV Hemorrágico y Muerte."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO MUNDIAL. É exigido por lei médica aguardar um intervalo de 'Lavagem' de pelo menos 14 DIAS completos após o último comprimido do IMAO antes de dar qualquer comprimido de Ritalina ou Venvanse para o paciente.",
+        es: "CONTRAINDICACIÓN MUNDIAL. Es exigido esperar al menos 14 DÍAS completos tras el último comprimido del IMAO antes de dar cualquier Ritalina o Vyvanse."
+      }
+    }
+  },
+
+  /* ── ATOMOXETINA (A Armadilha do Citocromo CYP2D6) ── */
+  "atomoxetina": {
+    "$classe_inibidores_potentes_cyp2d6": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A OVERDOSE NORADRENÉRGICA. Diferente dos outros, a Atomoxetina é um refém exclusivo da enzima hepática CYP2D6. Se o psiquiatra prescrever Fluoxetina, Paroxetina (Antidepressivos) ou Bupropiona (Inibidores do CYP2D6) junto com o Strattera, o fígado para de digerir o remédio do TDAH. O nível de Atomoxetina sobe em até 5 VEZES. O paciente sofrerá taquicardia, insônia infernal, disfunção hepática por toxicidade e surto de ansiedade profunda.",
+        es: "LA SOBREDOSIS NORADRENÉRGICA. La Atomoxetina es rehén exclusivo de la enzima CYP2D6. Si el psiquiatra prescribe Fluoxetina o Paroxetina, el hígado deja de digerir el remedio de TDAH. El nivel de Atomoxetina sube hasta 5 VECES. Taquicardia, insomnio infernal y brote de ansiedad."
+      },
+      conduta: {
+        pt: "Nunca associar com Fluoxetina ou Paroxetina sem um reajuste drástico. A dose da Atomoxetina OBRIGATORIAMENTE deve ser reduzida pela metade ou 1/4 da dose se o paciente for iniciar esses inibidores do CYP2D6.",
+        es: "Nunca asociar con Fluoxetina o Paroxetina sin reajuste. La dosis de Atomoxetina DEBE reducirse a la mitad o 1/4."
+      }
+    }
+  },
+
+  /* ── MODAFINILA (O Inimigo das Pílulas — Indutor CYP3A4) ── */
+  "modafinila": {
+    "$classe_anticoncepcionais_hormonais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A 'GRAVIDEZ DA MODAFINILA' (Falha Contraceptiva Massiva). A Modafinila é um indutor agressivo da enzima CYP3A4 no fígado. Se uma mulher tomar a pílula anticoncepcional (Oral, Adesivo, Anel ou Implante), o fígado induzido destruirá o estrogênio/progesterona no sangue muito antes de proteger o ovário. A mulher ovula e a falha contraceptiva resulta em GRAVIDEZ NÃO PLANEJADA.",
+        es: "EL 'EMBARAZO DEL MODAFINILO' (Fallo Anticonceptivo Masivo). El Modafinilo induce agresivamente la enzima CYP3A4. El hígado inducido destruirá el estrógeno/progesterona antes de proteger el ovario. La mujer ovula y resulta en EMBARAZO NO PLANIFICADO."
+      },
+      conduta: {
+        pt: "Regra de Prescrição: Mulheres férteis usando Stavigile/Provigil DEVEM usar métodos contraceptivos de barreira alternativos e seguros (DIU de Cobre, Preservativo) não apenas durante todo o tratamento, mas até 2 MESES APÓS PARAR a modafinila, pois o fígado demora a 'desacelerar'.",
+        es: "Mujeres fértiles usando Modafinilo DEBEN usar métodos de barrera (DIU, Condón) no solo durante el tratamiento, sino hasta 2 MESES DESPUÉS DE PARAR."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
