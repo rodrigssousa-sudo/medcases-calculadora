@@ -2122,3 +2122,228 @@
 
   }); /* fim Object.assign BUILD 408 append */
 })();
+
+/* ── BUILD 409 APPEND — Relaxantes Orais Perigosos + Zonisamida ──────── */
+(function () {
+  if (typeof window.NEUROLOGIA_DRUGS_DB !== 'object' || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) {
+    window.NEUROLOGIA_DRUGS_DB = {};
+  }
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── METOCARBAMOL ───────────────────────────────────────────────────── */
+    "metocarbamol": {
+      name: { pt: 'Metocarbamol', es: 'Metocarbamol' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Relaxante Muscular de Ação Central', es: 'Relajante Muscular de Acción Central' },
+      indications: {
+        pt: ['Espasmos musculares agudos e dolorosos (Coadjuvante a repouso e fisioterapia)', 'Tétano (historicamente usado em altas doses IV para controlar os espasmos tetânicos)'],
+        es: ['Espasmos musculares agudos y dolorosos (Coadyuvante al reposo y fisioterapia)', 'Tétanos (históricamente usado en altas dosis IV para controlar espasmos)']
+      },
+      commercialNames: { br: ['Robaxin (Importado/Associações)'], ar: ['Robaxin'] },
+      presentation: { pt: ['Comprimidos 500 mg e 750 mg', 'Ampolas IV/IM 100 mg/mL'], es: ['Comprimidos 500 mg y 750 mg', 'Ampollas IV/IM 100 mg/mL'] },
+      mechanism: {
+        pt: 'Mecanismo exato desconhecido. Acredita-se que atue puramente por depressão geral do Sistema Nervoso Central (sedação profunda). Ele não tem efeito direto na placa motora ou no músculo esquelético. O paciente relaxa porque o cérebro "apaga" a tensão neurológica basal.',
+        es: 'Mecanismo exacto desconocido. Se cree que actúa puramente por depresión general del SNC (sedación profunda). No tiene efecto directo en la placa motora. El paciente se relaja porque el cerebro "apaga" la tensión neurológica basal.'
+      },
+      dose: {
+        adult: {
+          pt: 'Oral: Iniciar com 1.500 mg, 4 vezes ao dia por 2 a 3 dias. Depois, reduzir para 1.000 mg 4 vezes ao dia. IV/IM: Casos severos (Tétano).',
+          es: 'Oral: Iniciar con 1.500 mg, 4 veces al día por 2 a 3 días. Luego, reducir a 1.000 mg 4 veces al día. IV/IM: Casos severos (Tétanos).'
+        },
+        pediatric: {
+          pt: 'Não recomendado (exceto no tétano pediátrico IV).',
+          es: 'No recomendado (excepto en tétanos pediátrico IV).'
+        }
+      },
+      administration: { pt: ['Pode escurecer a urina (cor preta, marrom ou verde), o que é inofensivo. Injeção IV deve ser lenta (Máx 300 mg/min) para evitar síncope.'], es: ['Puede oscurecer la orina (color negro, marrón o verde), lo que es inofensivo. Inyección IV debe ser lenta para evitar síncope.'] },
+      renalAdjustment: { required: true, message: { pt: 'As ampolas IV contêm polietilenoglicol (PEG). O PEG acumula em nefropatas, sendo CONTRAINDICADO o uso IV na insuficiência renal grave.', es: 'Las ampollas IV contienen polietilenglicol (PEG). El PEG acumula en nefrópatas, siendo CONTRAINDICADO el uso IV en insuficiencia renal grave.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Evitar ou reduzir dose na cirrose devido a meia-vida prolongada.', es: 'Evitar o reducir dosis en cirrosis debido a vida media prolongada.' } },
+      commonAdverseEffects: { pt: ['Sonolência intensa, vertigem e letargia', 'Urina escura/esverdeada', 'Visão dupla (diplopia)'], es: ['Somnolencia intensa, vértigo y letargo', 'Orina oscura/verdosa', 'Visión doble (diplopía)'] },
+      dangerousAdverseEffects: { pt: ['Convulsões (Ocorre na injeção IV muito rápida)', 'Anafilaxia'], es: ['Convulsiones (Ocurre en inyección IV muy rápida)', 'Anafilaxia'] },
+      contraindications: {
+        absolute: { pt: ['Uso Intravenoso em pacientes com Insuficiência Renal (Devido ao veículo PEG)'], es: ['Uso Intravenoso en pacientes con Insuficiencia Renal (Por el vehículo PEG)'] },
+        relative: { pt: ['Miastenia Gravis (Especialmente se o paciente estiver usando inibidores de colinesterase)'], es: ['Miastenia Gravis (Especialmente si el paciente usa inhibidores de colinesterasa)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O SUSTO NO BANHEIRO: O paciente deve ser ativamente avisado de que o Metocarbamol vai deixar a urina dele completamente preta, verde ou marrom. Sem esse aviso, ele vai ao pronto-socorro em pânico achando que os rins falharam ou que está sangrando.', es: 'EL SUSTO EN EL BAÑO: El paciente debe ser avisado de que el Metocarbamol dejará su orina negra, verde o marrón. Sin este aviso, irá a urgencias en pánico creyendo que sus riñones fallaron.' }
+      }
+    },
+
+    /* ── CARISOPRODOL ───────────────────────────────────────────────────── */
+    "carisoprodol": {
+      name: { pt: 'Carisoprodol', es: 'Carisoprodol' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Relaxante Muscular de Ação Central (Pró-fármaco de Barbitúrico)', es: 'Relajante Muscular de Acción Central (Profármaco de Barbitúrico)' },
+      indications: {
+        pt: ['Alívio sintomático de dores musculoesqueléticas agudas (Geralmente associado a Diclofenaco/Meloxicam em formulações brasileiras/latinas)'],
+        es: ['Alivio sintomático de dolores musculoesqueléticos agudos (Generalmente asociado a Diclofenac en formulaciones latinas)']
+      },
+      commercialNames: { br: ['Torsilax (Assoc)', 'Tandrilax (Assoc)', 'Beserol (Assoc)'], ar: ['Dioxaflex (Assoc)'] },
+      presentation: { pt: ['Comprimidos (Em mono-droga 350 mg EUA, ou 125mg nas associações brasileiras)'], es: ['Comprimidos (En mono-droga 350 mg EE.UU., o 125mg en asociaciones latinas)'] },
+      mechanism: {
+        pt: 'O Relaxante Muscular que causa Dependência. Ele interrompe a comunicação dos neurônios na medula espinhal e na formação reticular do cérebro. O GRANDE PROBLEMA: O Carisoprodol é rapidamente transformado no fígado em MEPROBAMATO. O Meprobamato atua como um BARBITÚRICO (um calmante altamente viciante e perigoso). O paciente sente uma euforia leve, sedação pesada e relaxamento brutal.',
+        es: 'El Relajante Muscular que causa Dependencia. Interrumpe la comunicación en la médula y el cerebro. EL GRAN PROBLEMA: El Carisoprodol se transforma en el hígado en MEPROBAMATO. El Meprobamato actúa como un BARBITÚRICO (calmante altamente adictivo). El paciente siente euforia, sedación pesada y relajación brutal.'
+      },
+      dose: {
+        adult: {
+          pt: '250 mg a 350 mg via oral, 3 vezes ao dia e ao deitar. O USO NÃO DEVE ULTRAPASSAR 2 A 3 SEMANAS!',
+          es: '250 mg a 350 mg vía oral, 3 veces al día y al acostarse. ¡EL USO NO DEBE SUPERAR 2 A 3 SEMANAS!'
+        },
+        pediatric: {
+          pt: 'Não indicado em menores de 16 anos.',
+          es: 'No indicado en menores de 16 años.'
+        }
+      },
+      administration: { pt: ['Uso oral. No Brasil, pacientes frequentemente abusam tomando múltiplos comprimidos de Tandrilax/Torsilax por dia, viciando no meprobamato oculto.'], es: ['Uso oral. Pacientes frecuentemente abusan tomando múltiples comprimidos al día, volviéndose adictos al meprobamato oculto.'] },
+      renalAdjustment: { required: false, message: { pt: 'Cuidado no acúmulo de meprobamato em falência renal.', es: 'Cuidado en la acumulación de meprobamato en falla renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em disfunção hepática, metabolismo de CYP2C19 alterado gera picos do fármaco mãe.', es: 'Evitar en disfunción hepática, metabolismo alterado genera picos del fármaco madre.' } },
+      commonAdverseEffects: { pt: ['Sonolência avassaladora e tontura', 'Cefaleia', 'Sensação de embriaguez / Vertigem'], es: ['Somnolencia avasalladora y mareo', 'Cefalea', 'Sensación de embriaguez / Vértigo'] },
+      dangerousAdverseEffects: { pt: ['DEPRESSÃO RESPIRATÓRIA FATAL (Se overdose)', 'Síndrome de Abstinência Aguda (Ansiedade, tremores, insônia e convulsões após parar uso crônico)'], es: ['DEPRESIÓN RESPIRATORIA FATAL (Si sobredosis)', 'Síndrome de Abstinencia Aguda (Ansiedad, temblores, insomnio y convulsiones)'] },
+      contraindications: {
+        absolute: { pt: ['Porfiria Aguda Intermitente (Meprobamato deflagra crise fatal)', 'Histórico de Abuso de Drogas/Álcool'], es: ['Porfiria Aguda Intermitente (Meprobamato desencadena crisis fatal)', 'Historial de Abuso de Drogas/Alcohol'] },
+        relative: { pt: ['Idosos (Risco brutal de queda e delírio)'], es: ['Ancianos (Riesgo brutal de caída y delirio)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O VÍCIO SILENCIOSO DA FARMÁCIA: Nos EUA, o Carisoprodol é uma droga controlada rigorosamente (Schedule IV) por ser altamente viciante. Na América Latina, pacientes tomam "Tandrilax" por anos para dor nas costas. Quando tentam parar, têm crises de pânico, taquicardia e insônia (abstinência de barbitúrico).', es: 'EL VICIO SILENCIOSO DE LA FARMACIA: En EE.UU., es una droga controlada rigurosamente por ser altamente adictiva. En América Latina, pacientes toman esto por años. Al intentar parar, tienen pánico, taquicardia e insomnio (abstinencia de barbitúrico).' }
+      }
+    },
+
+    /* ── ORFENADRINA ────────────────────────────────────────────────────── */
+    "orfenadrina": {
+      name: { pt: 'Orfenadrina', es: 'Orfenadrina' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Relaxante Muscular de Ação Central / Anticolinérgico', es: 'Relajante Muscular de Acción Central / Anticolinérgico' },
+      indications: {
+        pt: ['Alívio de espasmos musculares severos e dor (Componente base do famoso "Dorflex")', 'Tratamento de tremores e rigidez do Mal de Parkinson (histórico)'],
+        es: ['Alivio de espasmos musculares severos y dolor', 'Tratamiento de temblores y rigidez del Parkinson (histórico)']
+      },
+      commercialNames: { br: ['Dorflex (Assoc)', 'Lisador (Assoc)', 'Norflex'], ar: ['Norflex'] },
+      presentation: { pt: ['Comprimidos 35 mg (Nas associações), 100 mg (Puro)', 'Ampolas IV/IM 60 mg/2 mL'], es: ['Comprimidos 35 mg (asociaciones), 100 mg (Puro)', 'Ampollas IV/IM 60 mg/2 mL'] },
+      mechanism: {
+        pt: 'A Orfenadrina não atua na medula. Ela foi originalmente desenvolvida como uma medicação para Doença de Parkinson! Ela tem forte ação ANTICOLINÉRGICA (bloqueia muscarínicos) e também antagoniza os receptores NMDA no cérebro. Essa tempestade central induz um relaxamento motor pesado, mas "seca" o paciente inteiro no processo.',
+        es: 'La Orfenadrina no actúa en la médula. Fue originalmente desarrollada para Parkinson. Tiene fuerte acción ANTICOLINÉRGICA y antagoniza receptores NMDA. Esta tormenta central induce relajación motora, pero "seca" al paciente entero en el proceso.'
+      },
+      dose: {
+        adult: {
+          pt: 'Comprimidos com Dipirona (Dorflex): 1 a 2 comp, 3 a 4 vezes ao dia. Cápsula pura (100mg): 1 cap de 12/12h. (Uso curto de no máximo 15 dias).',
+          es: 'Comprimidos asociados: 1 a 2 comp, 3 a 4 veces al día. (Uso corto de máximo 15 días).'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Uso oral rotineiro. Via intravenosa na emergência deve ser feita diluída e lentamente para evitar colapso de pressão e taquicardia paroxística.'], es: ['Uso oral rutinario. Vía IV en urgencias debe hacerse diluida y lenta para evitar colapso de presión.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade estrita.', es: 'Sin necesidad estricta.' } },
+      commonAdverseEffects: { pt: ['Taquicardia (O coração acelera assustadoramente)', 'Boca seca intensa, constipação e visão borrada', 'Euforia ou Sonolência'], es: ['Taquicardia (El corazón acelera asustadoramente)', 'Boca seca intensa, constipación y visión borrosa', 'Euforia o Somnolencia'] },
+      dangerousAdverseEffects: { pt: ['DELIRIUM ANTICOLINÉRGICO EM IDOSOS (Agitação, alucinação, febre)', 'Retenção urinária aguda (O paciente não consegue urinar)'], es: ['DELIRIUM ANTICOLINÉRGICO EN ANCIANOS (Agitación, alucinación, fiebre)', 'Retención urinaria aguda'] },
+      contraindications: {
+        absolute: { pt: ['Glaucoma', 'Hiperplasia Prostática Benigna (Retenção aguda)', 'Miastenia Gravis'], es: ['Glaucoma', 'Hiperplasia Prostática Benigna (Retención aguda)', 'Miastenia Gravis'] },
+        relative: { pt: ['Taquiarritmias e insuficiência cardíaca coronariana (O aumento do batimento pode infartar o paciente)'], es: ['Taquiarritmias e insuficiencia cardíaca coronaria'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A BATERIA DO CORAÇÃO: Ao prescrever "Dorflex" no pronto-socorro para o paciente que chegou com torcicolo, cuidado! Como tem orfenadrina, o remédio é vagolítico. Se o paciente for um infartado ou tiver arritmia de base, a frequência cardíaca dele vai pular de 70 para 110 bpm sentado na cadeira, induzindo dor no peito.', es: 'LA BATERÍA DEL CORAZÓN: Al prescribir Orfenadrina en urgencias, cuidado. Es vagolítico. Si el paciente tiene arritmia base, su frecuencia cardíaca saltará de 70 a 110 lpm, induciendo isquemia.' }
+      }
+    },
+
+    /* ── CLORZOXAZONA ───────────────────────────────────────────────────── */
+    "clorzoxazona": {
+      name: { pt: 'Clorzoxazona', es: 'Clorzoxazona' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Relaxante Muscular de Ação Central', es: 'Relajante Muscular de Acción Central' },
+      indications: {
+        pt: ['Espasmos musculares dolorosos (Associado a entorses e traumas lombares)'],
+        es: ['Espasmos musculares dolorosos (Asociado a esguinces y traumas lumbares)']
+      },
+      commercialNames: { br: ['Parafon Forte (Histórico/Algumas formulações antigas)'], ar: ['Flexicamin (Assoc)'] },
+      presentation: { pt: ['Comprimidos 250 mg e 500 mg'], es: ['Comprimidos 250 mg y 500 mg'] },
+      mechanism: {
+        pt: 'Atua diretamente na medula espinhal e nas áreas subcorticais do cérebro, deprimindo os reflexos polissinápticos envolvidos na produção e manutenção do espasmo do músculo esquelético. Provoca forte sedação generalizada que contribui para o efeito clínico de relaxamento.',
+        es: 'Actúa directamente en la médula espinal y áreas subcorticales del cerebro, deprimiendo los reflejos polisinápticos del espasmo muscular. Provoca fuerte sedación que contribuye al efecto clínico.'
+      },
+      dose: {
+        adult: {
+          pt: '250 a 500 mg via oral, 3 a 4 vezes ao dia. Em dores extremas, pode-se usar até 750 mg de 8/8h.',
+          es: '250 a 500 mg vía oral, 3 a 4 veces al día. En dolores extremos, hasta 750 mg cada 8h.'
+        },
+        pediatric: {
+          pt: 'Não recomendado o uso pediátrico.',
+          es: 'No recomendado el uso pediátrico.'
+        }
+      },
+      administration: { pt: ['Ingerir com alimentos se ocorrer irritação gástrica. Evitar misturar com álcool.'], es: ['Ingerir con alimentos si ocurre irritación gástrica. Evitar mezclar con alcohol.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADA EM DOENÇA HEPÁTICA (Droga com histórico de hepatotoxicidade idiopática severa).', es: 'CONTRAINDICADA EN ENFERMEDAD HEPÁTICA (Historial de hepatotoxicidad severa).' } },
+      commonAdverseEffects: { pt: ['Tontura e sonolência marcante', 'Urina com coloração alaranjada, vermelha ou roxa (Metabólitos inofensivos)', 'Mal-estar gástrico'], es: ['Mareo y somnolencia', 'Orina de color naranja, rojo o púrpura (Metabolitos inofensivos)', 'Malestar gástrico'] },
+      dangerousAdverseEffects: { pt: ['Hepatotoxicidade idiossincrática fatal (Necrose hepática rara mas documentada)'], es: ['Hepatotoxicidad idiosincrásica fatal (Necrosis hepática rara pero documentada)'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com qualquer grau de disfunção hepática basal'], es: ['Pacientes con cualquier grado de disfunción hepática basal'] },
+        relative: { pt: ['Pacientes cujo trabalho exija vigilância mental total'], es: ['Pacientes cuyo trabajo exija vigilancia mental total'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ALERTA DO FÍGADO: A Clorzoxazona caiu em desuso em muitos países de primeiro mundo porque pode destruir o fígado de forma imprevisível (necrose letal). Se o paciente usando a droga apresentar náusea crônica, urina muito escura não explicada, ou olhos amarelos (icterícia), a droga deve ser suspensa na hora.', es: 'ALERTA DEL HÍGADO: Ha caído en desuso porque puede destruir el hígado de forma imprevisible. Si el paciente presenta náusea crónica, orina oscura o ictericia, la droga debe suspenderse al instante.' }
+      }
+    },
+
+    /* ── ZONISAMIDA ─────────────────────────────────────────────────────── */
+    "zonisamida": {
+      name: { pt: 'Zonisamida', es: 'Zonisamida' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Anticonvulsivante (Derivado Sulfonamídico)', es: 'Anticonvulsivante (Derivado Sulfonamídico)' },
+      indications: {
+        pt: ['Terapia adjuvante para convulsões parciais (focais) em adultos', 'Tratamento de tremores essenciais ou Parkinson (Off-label em alguns países)', 'Perda de peso em clínicas estéticas (Off-label)'],
+        es: ['Terapia adyuvante para convulsiones parciales (focales) en adultos', 'Tratamiento de temblores esenciales o Parkinson (Off-label)', 'Pérdida de peso en clínicas estéticas (Off-label)']
+      },
+      commercialNames: { br: ['Zonegran', 'Zonisamida'], ar: ['Zonegran'] },
+      presentation: { pt: ['Cápsulas 25 mg, 50 mg e 100 mg'], es: ['Cápsulas 25 mg, 50 mg y 100 mg'] },
+      mechanism: {
+        pt: 'Uma droga complexa derivada da Sulfonamida (antibióticos de Sulfa). Ela bloqueia os canais de Sódio dependentes de voltagem (impedindo que o neurônio dispare loucamente) e bloqueia os canais de Cálcio tipo T. Como efeito colateral de classe, ela também é uma inibidora fraca da anidrase carbônica (o que desregula o ácido do sangue e forma pedras nos rins).',
+        es: 'Una droga compleja derivada de la Sulfonamida. Bloquea los canales de Sodio (impidiendo que la neurona dispare locamente) y bloquea los canales de Calcio tipo T. Como efecto de clase, también es inhibidora débil de la anhidrasa carbónica (lo que desregula el ácido y forma piedras en riñones).'
+      },
+      dose: {
+        adult: {
+          pt: 'Início Lento: 100 mg/dia via oral, aumentando 100 mg a cada 2 semanas. Dose de manutenção: 200 a 400 mg/dia. (Pode chegar a 600 mg em casos extremos).',
+          es: 'Inicio Lento: 100 mg/día vía oral, aumentando 100 mg cada 2 semanas. Mantenimiento: 200 a 400 mg/día.'
+        },
+        pediatric: {
+          pt: 'Aprovada > 16 anos na dose de adulto. Usos off-label baseados no peso.',
+          es: 'Aprobada > 16 años en dosis de adulto. Usos off-label basados en peso.'
+        }
+      },
+      administration: { pt: ['É OBRIGATÓRIO o paciente beber de 2 a 3 litros de água por dia durante a terapia para evitar as famosas pedras no rim da zonisamida.'], es: ['ES OBLIGATORIO que el paciente beba de 2 a 3 litros de agua al día para evitar las piedras en el riñón.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar em ClCr < 50 mL/min (Devido ao acúmulo da droga e risco de formação crônica de cálculos renais).', es: 'Evitar en ClCr < 50 mL/min (Debido a la acumulación y riesgo crónico de cálculos renales).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Titulação deve ser ainda mais lenta na disfunção hepática.', es: 'Titulación debe ser aún más lenta en disfunción hepática.' } },
+      commonAdverseEffects: { pt: ['Sedação e confusão mental grave (A famosa "lentidão de raciocínio" induzida pela droga)', 'Nefrolitíase (Pedra no rim)', 'Anorexia com emagrecimento severo'], es: ['Sedación y confusión mental grave (La famosa "lentitud de pensamiento")', 'Nefrolitiasis (Piedra en el riñón)', 'Anorexia con adelgazamiento severo'] },
+      dangerousAdverseEffects: { pt: ['OLIGIDROSE E HIPERTERMIA (A droga impede que o paciente sue. O corpo frita no calor, causando choque térmico, especialmente fatal em crianças)', 'Acidose Metabólica Crônica', 'Síndrome de Stevens-Johnson (Reação da sulfa)'], es: ['OLIGOHIDROSIS E HIPERTERMIA (La droga impide sudar. El cuerpo se fríe, causando choque térmico en niños)', 'Acidosis Metabólica Crónica', 'Síndrome de Stevens-Johnson (Reacción a sulfa)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave a drogas com SULFA (Sulfametoxazol, Furosemida)', 'Pacientes com histórico de pedras renais repetidas'], es: ['Hipersensibilidad grave a drogas con SULFA', 'Pacientes con historial de cálculos renales'] },
+        relative: { pt: ['Crianças expostas a calor intenso no verão'], es: ['Niños expuestos a calor intenso en verano'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'PROIBIÇÃO DE SOL E PRAIA: O aviso mais importante para pais de crianças em uso de Zonisamida é que a droga desliga a capacidade das glândulas sudoríparas. Se a criança for brincar no sol no verão, ela não vai suar uma gota. A temperatura do corpo explodirá para 42°C, resultando em coma, dano cerebral ou morte por insolação farmacológica.', es: 'PROHIBICIÓN DE SOL Y PLAYA: La droga apaga la capacidad de sudar. Si el niño juega al sol en verano, no sudará una gota. La temperatura subirá a 42°C, resultando en coma o muerte por insolación farmacológica.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 409 append */
+})();

@@ -22915,9 +22915,62 @@ const INTERACOES_DB = {
         es: "Evitar Ciclobenzaprina en ancianos (Criterios de Beers). Nunca combinar con otros anticolinérgicos. Si necesario, usar la menor dosis por hasta 3 días y monitorear diuresis."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Relaxantes Orais Perigosos e Zonisamida
+   Metocarbamol, Carisoprodol, Orfenadrina, Clorzoxazona, Zonisamida
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── CARISOPRODOL (Metabolização Barbitúrica) ── */
+  "carisoprodol": {
+    "$classe_depressores_snc_alcool": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "OVERDOSE DE MEPROBAMATO (Efeito Barbitúrico). O Carisoprodol é uma 'Bomba Relógio' que vira um barbitúrico (Meprobamato) no fígado. Se o paciente ingerir este relaxante muscular com Álcool, Opioides, ou Benzodiazepínicos (Rivotril), o sistema nervoso central sofre um blecaute total. O paciente perde a capacidade de respirar sozinho, entra em coma agudo e sofre morte por asfixia silenciosa durante o sono.",
+        es: "SOBREDOSIS DE MEPROBAMATO. El Carisoprodol es una 'Bomba de Tiempo' que se vuelve un barbitúrico en el hígado. Si el paciente ingiere esto con Alcohol u Opioides, el SNC sufre un apagón. Pierde la capacidad de respirar, entra en coma y sufre muerte por asfixia."
+      },
+      conduta: {
+        pt: "VETO ABSOLUTO de álcool ou sedativos noturnos durante o tratamento de dores nas costas com Torsilax/Tandrilax (Carisoprodol).",
+        es: "VETO ABSOLUTO de alcohol o sedantes nocturnos durante el tratamiento con Carisoprodol."
+      }
+    }
+  },
+
+  /* ── ORFENADRINA (A Tempestade Anticolinérgica) ── */
+  "orfenadrina": {
+    "$classe_anticolinergicos_triciclicos_imao": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SOMAÇÃO ANTICOLINÉRGICA E DELIRIUM. A orfenadrina já possui atividade antimuscarínica violentíssima para relaxar o músculo. Associá-la com Amitriptilina, antialérgicos de 1ª geração (Prometazina/Polaramine) ou remédios para Parkinson trava a secreção e musculatura lisa de todo o corpo. O idoso fica com o intestino petrificado, não consegue urinar (globo vesical), as pupilas dilatam e a mente mergulha em delírio alucinatório.",
+        es: "SUMA ANTICOLINÉRGICA Y DELIRIUM. La orfenadrina posee actividad antimuscarínica violenta. Asociarla con Amitriptilina o antialérgicos traba la secreción. El anciano queda con intestino petrificado, globo vesical y delirio alucinatorio."
+      },
+      conduta: {
+        pt: "Nunca prescrever Dorflex/Orfenadrina para pacientes geriátricos que já fazem uso de antidepressivos tricíclicos. Riscos absurdos de ida à emergência para passagem de sonda vesical.",
+        es: "Nunca prescribir Orfenadrina para pacientes geriátricos que ya usan tricíclicos. Riesgos absurdos de ida a emergencia para sondaje vesical."
+      }
+    }
+  },
+
+  /* ── ZONISAMIDA (A Pedreira Metabólica) ── */
+  "zonisamida": {
+    "topiramato": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "DUPLA INIBIÇÃO DA ANIDRASE E PEDRAS RENAIS. Tanto a Zonisamida quanto o Topiramato são inibidores da anidrase carbônica e bloqueiam o suor. Prescrevê-los juntos na Neurologia causa duas calamidades: 1. Acidose Metabólica severa no sangue (o osso dissolve para tamponar). 2. A urina fica supersaturada de fosfato de cálcio, criando literalmente dezenas de 'pedras nos rins' (Nefrolitíase múltipla) que obstruem os ureteres do paciente.",
+        es: "DOBLE INHIBICIÓN Y PIEDRAS RENALES. Tanto la Zonisamida como el Topiramato inhiben la anhidrasa carbónica. Prescribirlos juntos causa dos calamidades: 1. Acidosis Metabólica severa. 2. La orina queda sobresaturada, creando decenas de piedras en el riñón."
+      },
+      conduta: {
+        pt: "Evitar a associação sempre que possível. Se for a única esperança para controlar uma epilepsia refratária, o paciente deve beber no mínimo 3 Litros de água alcalinizada/suco de laranja ao dia e ter gasometria e ultrassom renal a cada 6 meses.",
+        es: "Evitar la asociación. Si es la única esperanza, el paciente debe beber mínimo 3 Litros de agua/jugo al día y tener gasometría y ecografía renal."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 408 (Relaxantes Musculares: tizanidina×CYP1A2; baclofeno×abstinência/depressores; ciclobenzaprina×IMAOs/anticolinérgicos) | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 409 (carisoprodol×depressores_SNC; orfenadrina×anticolinérgicos_tricíclicos_IMAO; zonisamida×topiramato) | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
