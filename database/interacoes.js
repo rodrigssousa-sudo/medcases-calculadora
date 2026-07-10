@@ -1202,6 +1202,24 @@ const DRUG_CLASSES = {
   /* BUILD 415 — Promotores de Vigília (Indutores CYP3A4 e eugeroicos) */
   "$classe_promotores_vigilia": [
     "modafinila", "armodafinila", "pitolisanto"
+  ],
+
+  /* BUILD 416 — Quelantes de Fósforo / Nefrologia */
+  "$classe_quelantes_fosforo_todos": [
+    "sevelamer", "acetato_de_calcio", "carbonato_de_calcio",
+    "carbonato_de_lantanio", "oxihidroxido_sucroferrico",
+    "hidroxido_de_aluminio"
+  ],
+
+  "$classe_antibioticos_quinolonas_tetraciclinas": [
+    "ciprofloxacino", "levofloxacino", "moxifloxacino", "norfloxacino",
+    "ofloxacino", "doxiciclina", "tetraciclina", "minociclina",
+    "demeclociclina", "tigeciclina"
+  ],
+
+  "$classe_calcio_oral": [
+    "acetato_de_calcio", "carbonato_de_calcio", "citrato_de_calcio",
+    "gluconato_de_calcio_oral", "lactato_de_calcio"
   ]
 
 };
@@ -23383,9 +23401,62 @@ const INTERACOES_DB = {
         es: "ERROR DE PRESCRIPCIÓN. Jamás asocie medicamentos antihistamínicos para pacientes que hacen tratamiento continuo con Betahistina para Enfermedad de Ménière."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES BUILD 416: Quelantes de Fósforo / Nefrologia
+   Sevelâmer, Acetato de Cálcio, Carbonato de Cálcio, Lantânio, Oxihidróxido Sucroférrico
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA DE CLASSE: O ROUBO INTESTINAL (Quelantes × Antibióticos) ── */
+  "$classe_quelantes_fosforo_todos": {
+    "$classe_antibioticos_quinolonas_tetraciclinas": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A NEUTRALIZAÇÃO TOTAL DA CURA. Quelantes de fósforo (Sevelâmer, Cálcio, Lantânio, Ferro) não diferenciam perfeitamente o fósforo alimentar da química de certos antibióticos. Se o paciente em diálise engolir um Ciprofloxacino (Quinolona) ou Doxiciclina (Tetraciclina) junto com seu remédio do fósforo, as drogas grudam uma na outra no estômago. O antibiótico vira 'cimento', passa direto nas fezes e a pneumonia/infecção do paciente não será curada.",
+        es: "LA NEUTRALIZACIÓN TOTAL DE LA CURA. Quelantes de fósforo no diferencian el fósforo de los antibióticos. Si el paciente traga un Ciprofloxacino junto con su quelante, las drogas se pegan en el estómago. El antibiótico pasa directo en las heces y la infección no se curará."
+      },
+      conduta: {
+        pt: "ESPAÇAMENTO DE SEGURANÇA OBRIGATÓRIO: Antibióticos quinolonas/tetraciclinas e Levotiroxina DEVEM ser administrados oralmente no mínimo 1 HORA ANTES ou 3 HORAS DEPOIS da ingestão de qualquer quelante de fósforo.",
+        es: "ESPACIAMIENTO DE SEGURIDAD OBLIGATORIO: Antibióticos y Levotiroxina DEBEN administrarse al menos 1 HORA ANTES o 3 HORAS DESPUÉS de cualquier quelante de fósforo."
+      }
+    }
+  },
+
+  /* ── ACETATO E CARBONATO DE CÁLCIO (Hipercalcemia com Vitamina D ativa) ── */
+  "$classe_calcio_oral": {
+    "calcitriol_vitamina_d_ativa": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "CALCIFICAÇÃO METASTÁTICA E COMA HIPERCALCÊMICO. Pacientes renais tomam Calcitriol (Vit D ativa) porque o rim falhou em ativar a vitamina. O Calcitriol diz ao intestino: 'Absorva todo o cálcio que você ver'. Se o paciente estiver comendo 3 comprimidos de Carbonato de Cálcio como 'quelante', o Calcitriol forçará a entrada maciça de cálcio no sangue (em vez de sair nas fezes). A sobrecarga letal causa paradas cardíacas, depósitos de pedra nas artérias (calcifilaxia) e psicose.",
+        es: "CALCIFICACIÓN METASTÁSICA Y COMA. El Calcitriol dice al intestino 'Absorbe todo el calcio'. Si el paciente come Carbonato de Calcio como quelante, el Calcitriol forzará la entrada masiva de calcio en sangre. La sobrecarga letal causa calcifilaxia y paradas cardíacas."
+      },
+      conduta: {
+        pt: "Monitoramento estrito semanal do produto 'Cálcio × Fósforo' no sangue do renal crônico. Se o produto ultrapassar 55 mg²/dL², o cálcio oral deve ser drasticamente reduzido ou trocado por Sevelâmer/Lantânio.",
+        es: "Monitoreo estricto semanal del producto 'Calcio × Fósforo' en sangre. Si supera 55 mg²/dL², el calcio oral debe reducirse o cambiarse por Sevelámero/Lantano."
+      }
+    }
+  },
+
+  /* ── OXIHIDRÓXIDO SUCROFÉRRICO (Velphoro × Levotiroxina) ── */
+  "oxihidroxido_sucroferrico": {
+    "levotiroxina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "HIPOTIREOIDISMO IATROGÊNICO INDUZIDO POR FERRO. O ferro no trato gastrointestinal atrai fortemente a molécula de tiroxina (T4). Ao triturar o Velphoro, o paciente com hipotireoidismo acaba destruindo a absorção da sua reposição hormonal da tireoide, apresentando fadiga profunda, ganho de peso e queda metabólica não explicada.",
+        es: "HIPOTIROIDISMO IATROGÉNICO. El hierro en el tracto atrae la molécula de tiroxina (T4). Al masticar el Velphoro, el paciente destruye la absorción de su reemplazo hormonal, presentando fatiga profunda y ganho de peso inexplicado."
+      },
+      conduta: {
+        pt: "A Levotiroxina NUNCA deve ser ingerida na janela de refeição em que o paciente usar os comprimidos mastigáveis de ferro para diálise. Espaçar no mínimo 4 horas.",
+        es: "La Levotiroxina NUNCA debe ser ingerida en la ventana de comida con el Velphoro. Espaciar al menos 4 horas."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

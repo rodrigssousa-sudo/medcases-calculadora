@@ -3662,3 +3662,233 @@
 
   }); /* fim Object.assign BUILD 415 append */
 })();
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BUILD 416 — Quelantes de Fósforo / Nefrologia
+   Fármacos: sevelamer, acetato_de_calcio, carbonato_de_calcio,
+             carbonato_de_lantanio, oxihidroxido_sucroferrico
+   Categorias: nefrologia (4) · multi_especialidade (1)
+   Namespace: NEUROLOGIA_DRUGS_DB  (10º bloco IIFE)
+══════════════════════════════════════════════════════════════════════════════ */
+(function(){
+  if (!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB))
+    window.NEUROLOGIA_DRUGS_DB = {};
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── SEVELÂMER ────────────────────────────────────────────────────── */
+    "sevelamer": {
+      name: { pt: 'Sevelâmer (Cloridrato / Carbonato de)', es: 'Sevelámero (Clorhidrato / Carbonato de)' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Quelante de Fósforo (Polímero Não-Cálcico e Não-Metálico)', es: 'Quelante de Fósforo (Polímero No Cálcico y No Metálico)' },
+      indications: {
+        pt: ['Hiperfosfatemia em pacientes com Doença Renal Crônica (DRC) em diálise ou fase avançada'],
+        es: ['Hiperfosfatemia en pacientes con Enfermedad Renal Crónica (ERC) en diálisis o fase avanzada']
+      },
+      commercialNames: { br: ['Renagel', 'Renvela'], ar: ['Renagel', 'Renvela'] },
+      presentation: { pt: ['Comprimidos revestidos 800 mg', 'Sachês com pó para suspensão 800 mg e 2,4 g'], es: ['Comprimidos recubiertos 800 mg', 'Sobres con polvo para suspensión 800 mg y 2,4 g'] },
+      mechanism: {
+        pt: 'O "Plástico Imã de Fósforo". O Sevelâmer é uma resina polimérica que não é absorvida pelo intestino. Quando engolido junto com a comida, ele agarra fisicamente as moléculas de fósforo do alimento dentro do estômago/intestino e não solta mais. O fósforo sai nas fezes em vez de ir para o sangue. Sua glória é não conter cálcio, evitando que os vasos sanguíneos do renal crônico virem pedra (calcificação vascular).',
+        es: 'El "Plástico Imán de Fósforo". El Sevelámero es una resina que no se absorbe. Al tragarlo con comida, agarra físicamente el fósforo del alimento en el intestino y no lo suelta. El fósforo sale en las heces en vez de ir a la sangre. Su gloria es no contener calcio, evitando la calcificación vascular.'
+      },
+      dose: {
+        adult: {
+          pt: '800 a 1600 mg via oral, 3 vezes ao dia, ESTRITAMENTE JUNTO COM AS REFEIÇÕES. (A dose é ajustada pelo nível de fósforo no sangue).',
+          es: '800 a 1600 mg vía oral, 3 veces al día, ESTRICTAMENTE JUNTO A LAS COMIDAS. (La dosis se ajusta por el nivel de fósforo).'
+        },
+        pediatric: {
+          pt: 'Uso aprovado com base na Área de Superfície Corporal (Ex: 800 mg a cada refeição para ASC > 1,2 m²).',
+          es: 'Uso aprobado basado en Área de Superficie Corporal.'
+        }
+      },
+      administration: { pt: ['NUNCA tomar de estômago vazio (Não serve para nada, pois não há fósforo alimentar para quelar).', 'Engolir inteiro. O pó em sachê é para quem não consegue engolir a pílula gigante.'], es: ['NUNCA tomar con estómago vacío (No sirve de nada).', 'Tragar entero.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem absorção sistêmica, seguro e feito para falência renal.', es: 'Sin absorción sistémica, seguro y hecho para falla renal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem absorção sistêmica.', es: 'Sin absorción sistémica.' } },
+      commonAdverseEffects: { pt: ['Constipação severa e fecaloma', 'Náuseas, dispepsia e flatulência', 'Diarreia (menos comum que constipação)'], es: ['Constipación severa y fecaloma', 'Náuseas, dispepsia y flatulencia', 'Diarrea'] },
+      dangerousAdverseEffects: { pt: ['Obstrução intestinal, perfuração e íleo paralítico (O polímero endurece nas fezes)', 'Cristalização polimérica na mucosa gástrica (Raro)'], es: ['Obstrucción intestinal, perforación e íleo paralítico', 'Cristalización polimérica en mucosa gástrica'] },
+      contraindications: {
+        absolute: { pt: ['Obstrução intestinal ativa', 'Hipofosfatemia severa'], es: ['Obstrucción intestinal activa', 'Hipofosfatemia severa'] },
+        relative: { pt: ['Disfagia severa ou distúrbios de deglutição severos (O comprimido pode entalar e inchar no esôfago)'], es: ['Disfagia severa o trastornos de deglución'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ROUBO DOS REMÉDIOS: Como o Sevelâmer é um "super ímã" no intestino, ele não gruda só no fósforo, gruda em outras pílulas também. Se o paciente tomar o Sevelâmer junto com remédio para tireoide (Levotiroxina) ou antibióticos, eles não farão efeito. Deve-se espaçar no mínimo 2 horas.', es: 'EL ROBO DE LOS REMEDIOS: Si el paciente toma Sevelámero con tiroides o antibióticos, no harán efecto. Espaciar mínimo 2 horas.' }
+      }
+    },
+
+    /* ── ACETATO DE CÁLCIO ────────────────────────────────────────────── */
+    "acetato_de_calcio": {
+      name: { pt: 'Acetato de Cálcio', es: 'Acetato de Calcio' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Quelante de Fósforo (À base de Cálcio)', es: 'Quelante de Fósforo (A base de Calcio)' },
+      indications: {
+        pt: ['Hiperfosfatemia em DRC terminal / Pacientes em Hemodiálise'],
+        es: ['Hiperfosfatemia en ERC terminal / Pacientes en Hemodiálisis']
+      },
+      commercialNames: { br: ['Phoslo (Histórico)', 'Acetato de Cálcio'], ar: ['Royen'] },
+      presentation: { pt: ['Comprimidos ou cápsulas 667 mg (equivale a ~169 mg de cálcio elementar)'], es: ['Comprimidos o cápsulas 667 mg'] },
+      mechanism: {
+        pt: 'O Quelante Clássico. Ao ser ingerido com os alimentos, os íons de cálcio do acetato se ligam fortemente aos íons de fosfato da comida, formando "Fosfato de Cálcio", um cimento insolúvel que o intestino humano não absorve e sai nas fezes. É preferido sobre o Carbonato de Cálcio porque precisa de MENOS doses de cálcio elementar para atingir o mesmo efeito quelante, reduzindo o risco de o cálcio ir para o sangue.',
+        es: 'El Quelante Clásico. El calcio se une al fosfato formando un cemento insoluble. Se prefiere al Carbonato porque necesita MENOS calcio elemental para lograr el mismo efecto quelante.'
+      },
+      dose: {
+        adult: {
+          pt: '2 a 4 comprimidos via oral, COM CADA REFEIÇÃO (Café, almoço e jantar).',
+          es: '2 a 4 comprimidos vía oral, CON CADA COMIDA.'
+        },
+        pediatric: {
+          pt: 'Ajuste estrito pelo nível sérico de cálcio e fósforo.',
+          es: 'Ajuste estricto por nivel sérico de calcio y fósforo.'
+        }
+      },
+      administration: { pt: ['Tomar EXATAMENTE na hora das refeições. Se tomar em jejum, ele não quela o fósforo e o paciente absorverá todo o cálcio para a corrente sanguínea, intoxicando-se.'], es: ['Tomar EXACTAMENTE en la hora de las comidas. En ayunas el calcio se absorbe y el paciente se intoxica.'] },
+      renalAdjustment: { required: false, message: { pt: 'Seguro em uremia, mas a carga de cálcio deve ser estritamente vigiada.', es: 'Seguro en uremia, pero la carga de calcio debe vigilarse.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Náuseas leves e obstipação (intestino preso)', 'Irritação gástrica'], es: ['Náuseas leves y constipación', 'Irritación gástrica'] },
+      dangerousAdverseEffects: { pt: ['Hipercalcemia severa (Cálcio sobe, causando coma, arritmia e confusão)', 'Calcificação Vascular e Valvular (As artérias do rim doente viram pedra)'], es: ['Hipercalcemia severa (coma y arritmia)', 'Calcificación Vascular y Valvular'] },
+      contraindications: {
+        absolute: { pt: ['Hipercalcemia pré-existente (Cálcio > 10.5 mg/dL)', 'Presença confirmada de calcificação severa nas artérias do coração'], es: ['Hipercalcemia preexistente', 'Calcificación severa confirmada en arterias'] },
+        relative: { pt: ['Uso associado de Vitamina D ativa (Calcitriol), que multiplica a absorção desse cálcio'], es: ['Uso asociado de Vitamina D activa (Calcitriol)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O DILEMA DO OSSO DE PEDRA: O uso prolongado e abusivo de quelantes à base de cálcio em renais crônicos pode fazer com que o excesso de cálcio não vá para os ossos, mas para a parede das veias e do coração, causando "Calcifilaxia" (gangrena química e morte). Por isso a medicina migrou muito para o Sevelâmer.', es: 'EL DILEMA DEL HUESO DE PIEDRA: El exceso de calcio puede ir a las venas causando "Calcifilaxia" (gangrena química letal). Por eso la medicina migró al Sevelámero.' }
+      }
+    },
+
+    /* ── CARBONATO DE CÁLCIO ──────────────────────────────────────────── */
+    "carbonato_de_calcio": {
+      name: { pt: 'Carbonato de Cálcio', es: 'Carbonato de Calcio' },
+      category: 'multi_especialidade',
+      icon: '💊',
+      color: '#6B7280',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento Mineral / Antiácido / Quelante de Fósforo', es: 'Suplemento Mineral / Antiácido / Quelante de Fósforo' },
+      indications: {
+        pt: ['Prevenção e tratamento da osteoporose/osteopenia', 'Azia e dispepsia ácida (como antiácido)', 'Hiperfosfatemia em DRC (como quelante)'],
+        es: ['Prevención y tratamiento de osteoporosis', 'Acidez y dispepsia ácida', 'Hiperfosfatemia en ERC']
+      },
+      commercialNames: { br: ['Os-Cal', 'Tums', 'Calcium'], ar: ['Calcium Sandoz'] },
+      presentation: { pt: ['Comprimidos 500 mg, 600 mg e 1250 mg', 'Comprimidos Mastigáveis (Antiácidos)'], es: ['Comprimidos 500 mg, 600 mg y 1250 mg', 'Comprimidos Masticables'] },
+      mechanism: {
+        pt: 'Uma droga de múltiplos propósitos dependendo do horário da tomada. Se tomado EM JEJUM: Age como suplemento ósseo ou antiácido (neutraliza o ácido do estômago virando cloreto de cálcio e vai para o sangue). Se tomado JUNTO COM A COMIDA por um renal crônico: Ele age no intestino ligando-se ao fósforo da dieta e sai nas fezes.',
+        es: 'En AYUNAS: Suplemento óseo o antiácido (va a la sangre). CON LA COMIDA: Se une al fósforo de la dieta y sale en las heces.'
+      },
+      dose: {
+        adult: {
+          pt: 'Suplemento: 500 a 1000 mg/dia, longe das refeições (para absorver). Quelante: 1 a 2 comprimidos junto com almoço e jantar (para não absorver e excretar o fósforo).',
+          es: 'Suplemento: 500 a 1000 mg/día, lejos de comidas. Quelante: 1 a 2 comprimidos junto con comida.'
+        },
+        pediatric: {
+          pt: 'Suplementação conforme ingestão diária recomendada (RDA) da faixa etária.',
+          es: 'Según ingesta diaria recomendada de la franja etaria.'
+        }
+      },
+      administration: { pt: ['Precisa de ÁCIDO GÁSTRICO para quebrar o comprimido. Pacientes tomando Omeprazol/Pantoprazol em altas doses NÃO conseguem absorver carbonato de cálcio (devem usar Citrato de Cálcio no lugar).'], es: ['Necesita ÁCIDO GÁSTRICO. Pacientes con Omeprazol NO logran absorber carbonato (deben usar Citrato de Calcio).'] },
+      renalAdjustment: { required: false, message: { pt: 'Evitar sobrecarga em renais crônicos severos pelo risco vascular.', es: 'Evitar sobrecarga en renales crónicos por riesgo vascular.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Constipação persistente (Fezes brancas ou muito duras)', 'Flatulência e eructação (arroto de gás carbônico)'], es: ['Constipación persistente', 'Flatulencia y eructos'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME DE BURNETT (Síndrome Leite-Álcali - Ocorre se o paciente beber muito leite e tomar muito cálcio: Alcalose metabólica aguda, falência renal e calcificação do cérebro)'], es: ['SÍNDROME DE BURNETT (Síndrome Leche-Álcali: Alcalosis metabólica aguda y falla renal)'] },
+      contraindications: {
+        absolute: { pt: ['Fibrilação ventricular, hipercalcemia, hipercalciúria severa (Pedras de cálcio no rim ativas)'], es: ['Fibrilación ventricular, hipercalcemia, hipercalciuria severa'] },
+        relative: { pt: ['Acloridria (Falta de ácido no estômago)'], es: ['Aclorhidria (Falta de ácido en estómago)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ENGANO DA OSTEOPOROSE NO RENAL: O cálcio é vital para os ossos de uma pessoa normal. Porém, em um paciente em diálise, as glândulas paratireoides estão loucas, então dar cálcio em excesso para tentar "melhorar o osso" vai apenas precipitar pedras nas válvulas do coração. A regra para renal é diferente da regra ortopédica.', es: 'EL ENGAÑO EN RENAL: En un paciente en diálisis, dar exceso de calcio solo precipita piedras en el corazón. La regla renal es diferente de la ortopédica.' }
+      }
+    },
+
+    /* ── CARBONATO DE LANTÂNIO ────────────────────────────────────────── */
+    "carbonato_de_lantanio": {
+      name: { pt: 'Carbonato de Lantânio', es: 'Carbonato de Lantano' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Quelante de Fósforo (Não-Cálcico Metálico)', es: 'Quelante de Fósforo (No Cálcico Metálico)' },
+      indications: {
+        pt: ['Controle avançado da Hiperfosfatemia em pacientes com DRC (Indicado quando sevelâmer falha ou o cálcio do paciente já está muito alto)'],
+        es: ['Control avanzado de la Hiperfosfatemia en ERC (Indicado cuando sevelámero falla o el calcio ya está muy alto)']
+      },
+      commercialNames: { br: ['Fosrenol'], ar: ['Fosrenol'] },
+      presentation: { pt: ['Comprimidos MASTIGÁVEIS 500 mg, 750 mg e 1000 mg', 'Pó oral'], es: ['Comprimidos MASTICABLES 500 mg, 750 mg y 1000 mg', 'Polvo oral'] },
+      mechanism: {
+        pt: 'O "Metal Pesado Salvador". O lantânio é um elemento químico do grupo das terras raras (metal). Ele tem uma afinidade absurdamente alta pelo fosfato dietético. No ambiente ácido do estômago, o carbonato de lantânio libera o íon lantânio, que se liga fortemente ao fósforo da comida formando fosfato de lantânio impermeável. Ele sai pelas fezes com zero carga de cálcio no processo.',
+        es: 'El "Metal Pesado Salvador". El lantano tiene afinidad absurdamente alta por el fosfato. Libera el ion lantano en el estómago, que se une al fósforo formando fosfato de lantano impermeable. Sale por las heces con cero carga de calcio.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 500 mg, 3 vezes ao dia COM AS REFEIÇÕES. Pode ser titulado até 3.000 mg/dia divididos nas refeições.',
+          es: 'Inicio: 500 mg, 3 veces al día CON LAS COMIDAS. Puede titularse hasta 3.000 mg/día.'
+        },
+        pediatric: {
+          pt: 'Segurança não comprovada em crianças.',
+          es: 'Seguridad no comprobada en niños.'
+        }
+      },
+      administration: { pt: ['O COMPRIMIDO DEVE SER MASTIGADO COMPLETAMENTE ANTES DE ENGOLIR. Jamais engolir inteiro (ver Alerta).'], es: ['EL COMPRIMIDO DEBE SER MASTICADO COMPLETAMENTE. Jamás tragar entero (ver Alerta).'] },
+      renalAdjustment: { required: false, message: { pt: 'Absorção < 0,002%. Seguro para falência renal.', es: 'Absorción < 0,002%. Seguro para falla renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'A minúscula porção que é absorvida é excretada pela bile. Evitar uso a longo prazo em obstrução biliar grave.', es: 'La minúscula porción absorbida se excreta por bilis. Evitar en obstrucción biliar grave.' } },
+      commonAdverseEffects: { pt: ['Náusea e Vômito intensos (O gosto do metal é muito ruim)', 'Dor abdominal e constipação', 'Dentes escurecidos temporariamente'], es: ['Náusea y Vómito intensos (El sabor del metal es muy malo)', 'Dolor abdominal y constipación', 'Dientes oscurecidos temporalmente'] },
+      dangerousAdverseEffects: { pt: ['PERFURAÇÃO GASTROINTESTINAL E OBSTRUÇÃO (Se engolido inteiro)', 'Fecaloma radiopaco severo'], es: ['PERFORACIÓN GASTROINTESTINAL Y OBSTRUCCIÓN (Si se traga entero)', 'Fecaloma radiopaco severo'] },
+      contraindications: {
+        absolute: { pt: ['Obstrução intestinal, íleo paralítico ou impactação fecal prévia', 'Hipofosfatemia'], es: ['Obstrucción intestinal, íleo paralítico o impactación fecal', 'Hipofosfatemia'] },
+        relative: { pt: ['Ulcerações gástricas ativas ou Doença de Crohn severa'], es: ['Ulceraciones gástricas activas o Enfermedad de Crohn'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA PEDRA E DO RAIO-X: Se o paciente com dentes fracos tentar ENGOLIR o comprimido de Fosrenol INTEIRO, o remédio agirá como uma verdadeira pedra no estômago, podendo rasgar e perfurar o intestino causando morte por sepse. Além disso, no Raio-X, o Lantânio brilha como metal e parece contraste bário ou moeda engolida, assustando radiologistas desavisados.', es: 'LA PIEDRA Y EL RAYO-X: Tragado ENTERO puede perforar el intestino y matar. Además en el Rayo-X el Lantano brilla como metal, asustando radiólogos.' }
+      }
+    },
+
+    /* ── OXIHIDRÓXIDO SUCROFÉRRICO ────────────────────────────────────── */
+    "oxihidroxido_sucroferrico": {
+      name: { pt: 'Oxihidróxido Sucroférrico', es: 'Oxihidróxido Sucroférrico' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Quelante de Fósforo (À base de Ferro não-absorvível)', es: 'Quelante de Fósforo (A base de Hierro no absorbible)' },
+      indications: {
+        pt: ['Controle rigoroso da Hiperfosfatemia em Doença Renal Crônica (DRC) dialítica'],
+        es: ['Control riguroso de la Hiperfosfatemia en Enfermedad Renal Crónica (ERC) dialítica']
+      },
+      commercialNames: { br: ['Velphoro'], ar: ['Velphoro'] },
+      presentation: { pt: ['Comprimidos mastigáveis 500 mg (Quantidade baseada em ferro elementar)'], es: ['Comprimidos masticables 500 mg'] },
+      mechanism: {
+        pt: 'A mais recente tecnologia de quelação. É um complexo polinuclear férrico formulado para NÃO liberar seu ferro para o sangue. Dentro do tubo digestivo, o complexo troca seus íons "hidroxila" por íons "fosfato" do alimento mastigado. Ele prende quantidades brutais de fósforo em um volume físico menor de medicamento (reduz a carga de comprimidos do paciente - a "pill burden").',
+        es: 'La tecnología más reciente de quelación. Complejo férrico que NO libera hierro a la sangre. En el tubo digestivo, cambia iones "hidroxilo" por "fosfato". Atrapa cantidades brutales de fósforo en menor volumen de medicamento (reduce la "pill burden").'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 500 mg (1 comp), 3 vezes ao dia com as refeições. Titular conforme o nível de fósforo (Máx 3.000 mg/dia).',
+          es: 'Inicio: 500 mg (1 comp), 3 veces al día con las comidas. Titular según nivel de fósforo (Máx 3.000 mg/día).'
+        },
+        pediatric: {
+          pt: 'Não indicado. O ferro não absorvido pode causar irritação local grave.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['DEVE SER MASTIGADO antes de engolir (O comprimido é castanho escuro, pode manchar a língua/dentes temporariamente).'], es: ['DEBE SER MASTICADO antes de tragar (puede manchar la lengua/dientes temporalmente).'] },
+      renalAdjustment: { required: false, message: { pt: 'O complexo de ferro é insolúvel e não acumula na urina.', es: 'El complejo de hierro es insoluble y no acumula en orina.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não há sobrecarga hepática de ferro (Diferente da injeção de ferro).', es: 'No hay sobrecarga hepática de hierro.' } },
+      commonAdverseEffects: { pt: ['Fezes Negras/Escuras (Quase 100% dos pacientes relatam, é inofensivo mas assustador)', 'Diarreia (No primeiro mês de uso)'], es: ['Heces Negras/Oscuras (Casi 100% lo relatan, es inofensivo)', 'Diarrea (En el primer mes)'] },
+      dangerousAdverseEffects: { pt: ['Obstrução intestinal', 'Irritação grave de focos hemorrágicos gastrointestinais pré-existentes'], es: ['Obstrucción intestinal', 'Irritación grave de focos hemorrágicos gastrointestinales'] },
+      contraindications: {
+        absolute: { pt: ['Hemocromatose ou doenças de acúmulo de ferro prévias', 'Íleo paralítico ativo'], es: ['Hemocromatosis o enfermedades de acumulación de hierro', 'Íleo paralítico activo'] },
+        relative: { pt: ['Pacientes com Doença Ulcerosa Péptica grave ou Doença Inflamatória Intestinal ativa'], es: ['Enfermedad Ulcerosa Péptica grave o EII activa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A CAMUFLAGEM DO SANGRAMENTO: Como este remédio deixa as fezes do paciente diálise completamente pretas (melena-like), o médico pode ter extrema dificuldade para identificar se o paciente está com um sangramento de úlcera estomacal ativo ou se é apenas a cor do remédio. Pode exigir testes laboratoriais focados.', es: 'EL CAMUFLAJE DEL SANGRADO: Las heces negras hacen imposible distinguir si el paciente sangra de úlcera o es solo el remedio. Puede exigir pruebas fecales especiales.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 416 append */
+})();
