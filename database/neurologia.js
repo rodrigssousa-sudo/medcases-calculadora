@@ -4806,3 +4806,252 @@
 
   }); /* fim Object.assign BUILD 420 append */
 })();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   BUILD 421 — Nefrologia: Ferro IV Pesado e os Protetores Renais Modernos
+   +5 drogas: Derisomaltose Férrica | Dextrana Férrica | Gluconato Férrico
+              Finerenona | Voclosporina
+   category: nefrologia (×5)
+   icon: 🫘 color: #0369A1 colorTxt: #ffffff (nefrologia)
+══════════════════════════════════════════════════════════════════════════ */
+(function(){
+  if(!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) window.NEUROLOGIA_DRUGS_DB={};
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── DERISOMALTOSE FÉRRICA ──────────────────────────────────────────── */
+    "derisomaltose_ferrica": {
+      name: { pt: 'Derisomaltose Férrica', es: 'Derisomaltosa Férrica' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento Intravenoso Férrico de Alta Capacidade', es: 'Suplemento Intravenoso Férrico de Alta Capacidad' },
+      indications: {
+        pt: ['Anemia ferropriva severa onde o ferro oral é ineficaz ou mal tolerado', 'Necessidade clínica de reposição rápida e massiva de ferro (Alternativa à Carboximaltose)'],
+        es: ['Anemia ferropénica severa donde el hierro oral es ineficaz', 'Necesidad clínica de reposición rápida y masiva de hierro']
+      },
+      commercialNames: { br: ['Monofer'], ar: ['Monofer'] },
+      presentation: { pt: ['Ampolas IV contendo 100 mg/mL de ferro elementar (Frascos de 100mg, 500mg, 1000mg)'], es: ['Ampollas IV conteniendo 100 mg/mL de hierro elemental'] },
+      mechanism: {
+        pt: 'A Evolução Macromolecular. Assim como a Carboximaltose, a Derisomaltose Férrica é um complexo onde o ferro está preso firmemente dentro de uma matriz de carboidrato (isomaltosídeo 1000). A ligação é tão forte que não vaza ferro livre tóxico no sangue. O macrófago "engole" o complexo inteiro. Vantagem biológica: a matriz de carboidrato tem um potencial imunogênico menor, reduzindo o risco de reações alérgicas severas, e causa menos "roubo de fósforo" (FGF23) que a Carboximaltose.',
+        es: 'La Evolución Macromolecular. El hierro está atrapado firmemente en una matriz de carbohidrato (isomaltósido 1000). La unión es tan fuerte que no filtra hierro libre tóxico. El macrófago "traga" el complejo. Ventaja: menor riesgo de alergias y causa menos "robo de fósforo" (FGF23) que la Carboximaltosa.'
+      },
+      dose: {
+        adult: {
+          pt: 'Injeção única de até 20 mg/kg de peso corporal (Máximo de 1.000 mg em uma única infusão de 15 a 30 minutos).',
+          es: 'Inyección única de hasta 20 mg/kg de peso (Máximo de 1.000 mg en una sola infusión de 15 a 30 minutos).'
+        },
+        pediatric: {
+          pt: 'Uso não estabelecido com segurança em menores de 18 anos na maioria das diretrizes.',
+          es: 'Uso no establecido con seguridad en menores de 18 años.'
+        }
+      },
+      administration: { pt: ['Infusão IV diluída em SF 0,9%. Não administrar como injeção intramuscular rápida.'], es: ['Infusión IV diluida en SF 0,9%. No administrar como inyección intramuscular.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em doenças hepáticas crônicas graves (como cirrose descompensada), para evitar acúmulo de ferro no parênquima.', es: 'Contraindicado en enfermedades hepáticas crónicas graves.' } },
+      commonAdverseEffects: { pt: ['Gosto metálico transitório', 'Rubor facial e dor de cabeça durante a infusão', 'Dor lombar aguda (Reação de Fishbane)'], es: ['Gusto metálico transitorio', 'Rubor facial y dolor de cabeza', 'Dolor lumbar agudo (Reacción de Fishbane)'] },
+      dangerousAdverseEffects: { pt: ['Reação anafilactoide / Hipersensibilidade grave (Apesar de menor incidência, ainda possível)', 'Hipofosfatemia (Ocorre, mas em menor grau que Ferinject)'], es: ['Reacción anafilactoide / Hipersensibilidad grave', 'Hipofosfatemia'] },
+      contraindications: {
+        absolute: { pt: ['Sobrecarga de ferro (Hemocromatose)', 'Bacteremia aguda ou sepse'], es: ['Sobrecarga de hierro', 'Bacteriemia aguda o sepsis'] },
+        relative: { pt: ['Pacientes com lúpus eritematoso sistêmico ou artrite reumatoide ativa (Pode exacerbar a inflamação articular aguda)'], es: ['Pacientes con lupus o artritis reumatoide activa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'A REAÇÃO DE FISHBANE: Durante a infusão, o paciente pode apresentar subitamente dor severa nas costas/peito associada a rubor, sem alteração de pressão (não é anafilaxia!). É uma reação peculiar aos ferros IV (Reação de Fishbane). A conduta é PAUSAR a infusão por 15 minutos até a dor passar, e depois retomar mais devagar.', es: 'LA REACCIÓN DE FISHBANE: Durante la infusión, el paciente puede sentir dolor severo en la espalda sin baja de presión (¡no es anafilaxia!). La conducta es PAUSAR la infusión 15 min y retomar más lento.' }
+      },
+      references: {
+        pt: 'FDA Label (Monoferric); KDIGO Anemia Guidelines; Artigos de Fishbane S. et al. sobre segurança do ferro IV.',
+        es: 'FDA Label (Monoferric); KDIGO Anemia Guidelines; Artículos de Fishbane S. sobre hierro IV.'
+      }
+    },
+
+    /* ── DEXTRANA FÉRRICA ───────────────────────────────────────────────── */
+    "dextrana_ferrica": {
+      name: { pt: 'Dextrana Férrica (Ferro Dextrano)', es: 'Dextrano Férrico (Hierro Dextrano)' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento Intravenoso Férrico de Primeira Geração', es: 'Suplemento Intravenoso Férrico de Primera Generación' },
+      indications: {
+        pt: ['Anemia ferropriva documentada em pacientes intolerantes ao ferro oral (Medicamento histórico, de uso cada vez mais restrito devido aos riscos)'],
+        es: ['Anemia ferropénica en pacientes intolerantes al hierro oral (Medicamento histórico, uso restringido por riesgos)']
+      },
+      commercialNames: { br: ['Dexfer', 'CosmoFer (Histórico)'], ar: ['Hierro Dextran'] },
+      presentation: { pt: ['Ampolas IV/IM contendo 50 mg/mL de ferro elementar'], es: ['Ampollas IV/IM conteniendo 50 mg/mL de hierro elemental'] },
+      mechanism: {
+        pt: 'O "Avô dos Ferros Venosos". O ferro é ligado a moléculas poliméricas de dextrano (um tipo de carboidrato que o corpo humano estranha muito). O complexo é muito grande e exige que os macrófagos o fagocitem para quebrar a ligação lentamente e liberar o ferro. Por ser muito estranho ao sistema imune, anticorpos anti-dextrano pré-existentes na circulação do paciente podem atacar a medicação instantes após ela entrar na veia.',
+        es: 'El "Abuelo de los Hierros Venosos". El hierro se une a moléculas de dextrano. El complejo es muy grande y exige que los macrófagos lo rompan. Al ser extraño al sistema inmune, anticuerpos anti-dextrano pueden atacar la medicación instantes tras entrar en vena.'
+      },
+      dose: {
+        adult: {
+          pt: 'DOSE TESTE DE 25 mg (0,5 mL) É ABSOLUTAMENTE OBRIGATÓRIA. Se não houver reação em 1 hora, administra-se o restante da dose estipulada.',
+          es: 'DOSIS PRUEBA DE 25 mg (0,5 mL) ES ABSOLUTAMENTE OBLIGATORIA. Si no hay reacción en 1 hora, se administra el resto.'
+        },
+        pediatric: {
+          pt: 'Dose teste obrigatória. Cálculo conforme fórmula de deficiência de ferro no peso magro.',
+          es: 'Dosis prueba obligatoria. Cálculo según fórmula de déficit de hierro.'
+        }
+      },
+      administration: { pt: ['Infusão IV lenta sob monitoramento contínuo em ambiente hospitalar com carrinho de parada (adrenalina) do lado. Pode ser feito IM (técnica em Z profunda), mas dói brutalmente e mancha a pele para sempre.'], es: ['Infusión IV lenta bajo monitoreo en ambiente con carro de paro. Puede hacerse IM (técnica Z), pero duele brutalmente y mancha la piel para siempre.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Precaução em doença hepática (Sobrecarga).', es: 'Precaución en enfermedad hepática.' } },
+      commonAdverseEffects: { pt: ['Artralgia, mialgia e febre (doença do soro-símile nos dias seguintes)', 'Sabor metálico', 'Mancha marrom escura e permanente se injetado errado (IM/SC)'], es: ['Artralgia, mialgia y fiebre', 'Sabor metálico', 'Mancha marrón oscura permanente si se inyecta mal'] },
+      dangerousAdverseEffects: { pt: ['ANAFILAXIA FULMINANTE LETAL (Choque imediato com asfixia e parada cardíaca nos primeiros mililitros da droga)'], es: ['ANAFILAXIA FULMINANTE LETAL (Choque inmediato con asfixia y parada en los primeros mililitros)'] },
+      contraindications: {
+        absolute: { pt: ['Alergia a Dextrano', 'Fase aguda de doenças infecciosas'], es: ['Alergia a Dextrano', 'Fase aguda de enfermedades infecciosas'] },
+        relative: { pt: ['Asma grave, eczema crônico (Pacientes atópicos têm muito mais chance de morrer na infusão)'], es: ['Asma grave, eccema crónico (Mayor riesgo de morir en la infusión)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'BLACK BOX DO CHOQUE (DOSE TESTE): A Dextrana Férrica CARREGA O MAIOR AVISO DE MORTE SÚBITA entre as formulações de ferro. É ILEGAL e antiético realizar a infusão sem aplicar a DOSE TESTE de 25 mg primeiro e esperar 60 minutos observando o paciente respirar. E atenção: passar na dose teste não impede anafilaxia na dose completa, vigie sempre.', es: 'BLACK BOX DEL CHOQUE: Es ILEGAL realizar la infusión sin aplicar la DOSIS PRUEBA de 25 mg primero y esperar 60 min. Pasar la prueba no impide anafilaxia después, vigile.' }
+      },
+      references: {
+        pt: 'FDA Black Box Warning (Iron Dextran); Guidelines de infusão de ferro da Hematology Association.',
+        es: 'FDA Black Box Warning (Iron Dextran); Guidelines de infusión de la Hematology Association.'
+      }
+    },
+
+    /* ── GLUCONATO FÉRRICO ──────────────────────────────────────────────── */
+    "gluconato_ferrico": {
+      name: { pt: 'Gluconato Férrico Sódico', es: 'Gluconato Férrico de Sodio' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Suplemento Intravenoso Férrico (Complexo de Peso Molecular Médio)', es: 'Suplemento Intravenoso Férrico (Complejo de Peso Molecular Medio)' },
+      indications: {
+        pt: ['Anemia por deficiência de ferro em pacientes adultos e pediátricos com DRC crônica, frequentemente em hemodiálise (junto a Epoetina)'],
+        es: ['Anemia por deficiencia de hierro en pacientes con ERC, frecuentemente en hemodiálisis (junto a Epoetina)']
+      },
+      commercialNames: { br: ['Ferrlecit'], ar: ['Ferrlecit'] },
+      presentation: { pt: ['Ampolas IV 62,5 mg de ferro elementar por 5 mL'], es: ['Ampollas IV 62,5 mg de hierro elemental por 5 mL'] },
+      mechanism: {
+        pt: 'O "Tratamento Fracionado". O Gluconato Férrico é um complexo onde o ferro está preso ao ácido glucônico. É mais seguro imunologicamente que o Dextrano, porém a sua estrutura é menos estável que o Ferro Sacarato. Devido a essa "fragilidade" estrutural, ele não pode ser injetado em altas doses (como o Ferinject), ou soltaria ferro livre no sangue causando intoxicação. A sua vocação é a administração seriada de pequenas doses.',
+        es: 'El "Tratamiento Fraccionado". El hierro está unido al ácido glucónico. Es más seguro que el Dextrano, pero menos estable que el Hierro Sacarato. Por esa "fragilidad", no puede inyectarse en altas dosis. Su vocación son pequeñas dosis seriadas.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hemodiálise: 125 mg via Intravenosa (infusão lenta) por sessão consecutiva de diálise (ex: 8 sessões consecutivas até totalizar 1.000 mg).',
+          es: 'Hemodiálisis: 125 mg IV por sesión de diálisis (ej: 8 sesiones consecutivas hasta 1.000 mg).'
+        },
+        pediatric: {
+          pt: '1,5 mg/kg (MÁXIMO de 125 mg/dose) diluídos e infundidos em 1 hora.',
+          es: '1,5 mg/kg (MÁXIMO 125 mg/dosis) diluidos en 1 hora.'
+        }
+      },
+      administration: { pt: ['A infusão deve ser feita durante a sessão de hemodiálise (na linha venosa extracorpórea) de forma lenta, ou injetada ao longo de no mínimo 10 minutos (NUNCA empurrar rápido).'], es: ['Infusión en la línea de hemodiálisis mínimo 10 minutos. ¡NUNCA empujar rápido!'] },
+      renalAdjustment: { required: false, message: { pt: 'Feito para DRC.', es: 'Hecho para ERC.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Monitorar TGO/TGP; fígado é o reservatório natural do ferro.', es: 'Monitorear transaminasas; el hígado es el reservorio natural.' } },
+      commonAdverseEffects: { pt: ['Cãibras nas pernas durante a diálise', 'Hipotensão transitória', 'Náusea e dor abdominal'], es: ['Calambres en piernas en diálisis', 'Hipotensión transitoria', 'Náusea y dolor abdominal'] },
+      dangerousAdverseEffects: { pt: ['Reação de hipersensibilidade fatal (Rara, mas não exige dose-teste pelo FDA, requerendo vigilância)'], es: ['Reacción de hipersensibilidad fatal (Rara, no exige dosis de prueba, pero requiere vigilancia)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade ao gluconato de sódio ou complexo de ferro', 'Anemia não-ferropriva'], es: ['Hipersensibilidad al gluconato o al complejo de hierro', 'Anemia no ferropénica'] },
+        relative: { pt: ['Infecção ativa (bacteriana)'], es: ['Infección activa bacteriana'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'HIPOTENSÃO DO FERRO LIVRE: Se o Gluconato for injetado em "Bolus rápido" pelo enfermeiro apressado, a molécula quebra no sangue. O ferro livre atinge o coração causando vasodilatação sistêmica maciça, e a pressão do paciente em diálise despenca perigosamente (Síncope Induzida por Ferro).', es: 'HIPOTENSIÓN POR HIERRO LIBRE: Si el Gluconato se inyecta rápido, la molécula se rompe. El hierro libre causa vasodilatación masiva y la presión del paciente se desploma (Síncope Inducido por Hierro).' }
+      },
+      references: {
+        pt: 'FDA Label (Ferrlecit); Protocolo de Anemia da National Kidney Foundation.',
+        es: 'FDA Label (Ferrlecit); Protocolo de Anemia de National Kidney Foundation.'
+      }
+    },
+
+    /* ── FINERENONA ─────────────────────────────────────────────────────── */
+    "finerenona": {
+      name: { pt: 'Finerenona', es: 'Finerenona' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Antagonista Não-Esteroide do Receptor Mineralocorticoide (nsMRA)', es: 'Antagonista No Esteroideo del Receptor Mineralocorticoide (nsMRA)' },
+      indications: {
+        pt: ['Doença Renal Crônica associada a Diabetes Tipo 2 (Com albuminúria) - Retarda a perda da função renal, insuficiência cardíaca e risco de morte cardiovascular'],
+        es: ['Enfermedad Renal Crónica asociada a Diabetes Tipo 2 (Con albuminuria) - Retrasa pérdida de función renal y muerte CV']
+      },
+      commercialNames: { br: ['Kerendia'], ar: ['Kerendia'] },
+      presentation: { pt: ['Comprimidos revestidos 10 mg e 20 mg'], es: ['Comprimidos recubiertos 10 mg y 20 mg'] },
+      mechanism: {
+        pt: 'A "Defesa Cega da Aldosterona". Espironolactona é ótima para o coração, mas age com uma estrutura esteroide (causa ginecomastia) e sobe o potássio violentamente. A Finerenona é um bloqueador do receptor de aldosterona NÃO-ESTEROIDEO. Ela se encaixa de forma mais equilibrada entre o coração e os rins, cortando a sinalização inflamatória e fibrótica (cicatrizes) que o Diabetes faz no rim, reduzindo a perda de proteína (albuminúria) com um risco ligeiramente menor de hipercalemia fatal.',
+        es: 'La "Defensa Ciega de la Aldosterona". La Espironolactona causa ginecomastia y sube el potasio violentamente. La Finerenona es un bloqueador NO ESTEROIDEO. Corta la señalización inflamatoria y fibrótica que la Diabetes hace en el riñón, bajando la proteína en orina con menor riesgo de hiperpotasemia fatal.'
+      },
+      dose: {
+        adult: {
+          pt: 'Depende da Taxa de Filtração Glomerular (eGFR). Se eGFR > 60: 20 mg UMA VEZ ao dia. Se eGFR entre 25-60: 10 mg ao dia. (Ajuste ditado também pelo nível de Potássio sérico).',
+          es: 'Depende del filtrado glomerular (eGFR). Si eGFR > 60: 20 mg UNA VEZ al día. Si eGFR 25-60: 10 mg. (Ajuste también por nivel de Potasio).'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Uso oral diário. O nível de potássio no sangue DEVE ser medido 4 semanas após iniciar ou aumentar a dose.'], es: ['Uso oral diario. El nivel de potasio DEBE medirse 4 semanas tras iniciar o aumentar dosis.'] },
+      renalAdjustment: { required: true, message: { pt: 'Não iniciar se eGFR < 25 mL/min/1.73m². Descontinuar se eGFR cair para menos de 15.', es: 'No iniciar si eGFR < 25. Descontinuar si eGFR cae a menos de 15.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Não recomendado em insuficiência hepática grave (Child-Pugh C).', es: 'No recomendado en insuficiencia hepática grave (Child-Pugh C).' } },
+      commonAdverseEffects: { pt: ['Hipercalemia (Potássio elevado, o mais crítico)', 'Hipotensão', 'Hiponatremia leve'], es: ['Hiperpotasemia (Potasio elevado, el más crítico)', 'Hipotensión', 'Hiponatremia leve'] },
+      dangerousAdverseEffects: { pt: ['Arritmia por hipercalemia fatal (Se o potássio sérico passar de 5,5 mEq/L)'], es: ['Arritmia por hiperpotasemia fatal (Si el potasio pasa de 5,5 mEq/L)'] },
+      contraindications: {
+        absolute: { pt: ['Potássio basal > 5,0 mEq/L antes de iniciar', 'Uso concomitante com inibidores potentes do CYP3A4'], es: ['Potasio basal > 5,0 mEq/L antes de iniciar', 'Uso con inhibidores potentes de CYP3A4'] },
+        relative: { pt: ['Pacientes que não conseguem fazer exames de sangue rotineiros para checar eletrólitos'], es: ['Pacientes que no pueden hacerse análisis de sangre rutinarios'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A GINÁSTICA DO POTÁSSIO: A droga salva o rim diabético da falência, mas a margem de segurança é estreita. O paciente geralmente JÁ TOMA Losartana/Enalapril (que sobem o potássio). Adicionar Finerenona eleva o potássio ainda mais. Se o potássio bater 5.6 mEq/L, a droga DEVE ser pausada até voltar para menos de 5.0.', es: 'LA GIMNASIA DEL POTASIO: El paciente YA TOMA Losartán (que sube el potasio). Añadir Finerenona lo eleva más. Si el potasio llega a 5.6 mEq/L, la droga DEBE ser pausada hasta bajar a menos de 5.0.' }
+      },
+      references: {
+        pt: 'FDA Label (Kerendia); FIDELIO-DKD e FIGARO-DKD Trials; Diretrizes ADA/KDIGO 2022 para DRC em Diabetes.',
+        es: 'FDA Label (Kerendia); FIDELIO-DKD Trial; Directrices ADA/KDIGO 2022 para ERC en Diabetes.'
+      }
+    },
+
+    /* ── VOCLOSPORINA ───────────────────────────────────────────────────── */
+    "voclosporina": {
+      name: { pt: 'Voclosporina', es: 'Voclosporina' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Imunossupressor (Inibidor de Calcineurina de 2ª Geração)', es: 'Inmunosupresor (Inhibidor de Calcineurina de 2ª Generación)' },
+      indications: {
+        pt: ['Nefrite Lúpica Ativa (Inflamação destrutiva dos rins pelo Lúpus) - Sempre associada a Micofenolato de Mofetila e Corticoides'],
+        es: ['Nefritis Lúpica Activa (Inflamación destructiva del riñón por Lupus) - Siempre asociada a Micofenolato y Corticoides']
+      },
+      commercialNames: { br: ['Lupkynis (Importação especializada)'], ar: ['Lupkynis'] },
+      presentation: { pt: ['Cápsulas 7,9 mg'], es: ['Cápsulas 7,9 mg'] },
+      mechanism: {
+        pt: 'A "Blindagem do Podócito". Como um derivado potente da Ciclosporina, ela entra nos linfócitos T e bloqueia a calcineurina, impedindo a produção de IL-2 (parando o ataque autoimune do Lúpus). O efeito FANTÁSTICO renal: Ela atua diretamente nos podócitos (as células do "ralo" do filtro renal), estabilizando o citoesqueleto deles. O ralo do rim para de vazar proteína (Proteinúria) quase que instantaneamente, salvando o órgão da fibrose lúpica.',
+        es: 'El "Blindaje del Podocito". Bloquea la calcineurina en Linfocitos T, parando el ataque del Lupus. El efecto FANTÁSTICO renal: Actúa en los podocitos, estabilizando su esqueleto. El riñón deja de fugar proteína casi al instante.'
+      },
+      dose: {
+        adult: {
+          pt: '23,7 mg (3 cápsulas de 7,9 mg) DUAS VEZES ao dia (Total: 6 cápsulas diárias).',
+          es: '23,7 mg (3 cápsulas de 7,9 mg) DOS VECES al día (Total: 6 cápsulas al día).'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Tomar as doses com 12 horas de intervalo. Engolir inteira. Não abrir nem mastigar.'], es: ['Tomar dosis cada 12 horas. Tragar entera.'] },
+      renalAdjustment: { required: true, message: { pt: 'Paradoxo: A droga salva o rim lúpico, mas causa contração arterial que machuca o rim. Se o eGFR cair > 20% do basal, a dose DEVE ser reduzida para 15,8 mg 2x/dia.', es: 'Paradoja: Si eGFR cae > 20%, la dosis DEBE reducirse a 15,8 mg 2x/día.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir para 15,8 mg 2x/dia na insuficiência hepática leve/moderada. Evitar na grave.', es: 'Reducir a 15,8 mg 2x/día en insuficiencia hepática leve/moderada. Evitar en grave.' } },
+      commonAdverseEffects: { pt: ['HIPERTENSÃO (Efeito colateral crítico de classe)', 'Declínio da taxa de filtração glomerular (eGFR) nos primeiros dias', 'Diarreia, dor de cabeça e tosse'], es: ['HIPERTENSIÓN (Efecto colateral crítico de clase)', 'Declive del eGFR en los primeros días', 'Diarrea, dolor de cabeza'] },
+      dangerousAdverseEffects: { pt: ['NEFROTOXICIDADE AGUDA (Isquemia do filtro renal)', 'Infecções oportunistas graves e reativação viral (Herpes, CMV)', 'Malignidade induzida por imunossupressão (Linfoma)'], es: ['NEFROTOXICIDAD AGUDA (Isquemia del filtro renal)', 'Infecciones oportunistas graves y reactivación viral', 'Malignidad por inmunosupresión'] },
+      contraindications: {
+        absolute: { pt: ['Uso associado de Inibidores Potentes do CYP3A4 (Cetoconazol, Claritromicina)', 'Pressão Arterial > 165/105 mmHg antes de iniciar'], es: ['Uso con Inhibidores Potentes del CYP3A4', 'Presión Arterial > 165/105 mmHg antes de iniciar'] },
+        relative: { pt: ['Uso concomitante com Ciclofosfamida não foi estudado e é desencorajado no protocolo'], es: ['Uso con Ciclofosfamida es desalentado en el protocolo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A DROGA QUE ESTRANGULA A ARTÉRIA: Inibidores de calcineurina (como Voclosporina e Tacrolimo) curam a imunidade, mas fazem a artéria AFERENTE do rim (o cano de entrada de sangue) sofrer um vasoespasmo violento. Isso faz o rim "secar" temporariamente, elevando a Creatinina do paciente no sangue assustadoramente nas primeiras semanas. É preciso diferenciar toxicidade da medicação vs falência do Lúpus.', es: 'LA DROGA QUE ESTRANGULA LA ARTERIA: Causan vasoespasmo violento en la arteria del riñón. La Creatinina sube asustadoramente las primeras semanas. Hay que diferenciar toxicidad vs falla por Lupus.' }
+      },
+      references: {
+        pt: 'FDA Label (Lupkynis); AURORA 1 Trial; Diretrizes KDIGO 2024 para Nefrite Lúpica.',
+        es: 'FDA Label (Lupkynis); AURORA 1 Trial; Directrices KDIGO 2024 para Nefritis Lúpica.'
+      }
+    }
+
+  }); /* fim Object.assign BUILD 421 append */
+})();

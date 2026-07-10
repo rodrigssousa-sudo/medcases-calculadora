@@ -1256,6 +1256,17 @@ const DRUG_CLASSES = {
     "losartana", "valsartana", "olmesartana", "telmisartana",
     "irbesartana", "candesartana", "azilsartana", "eprosartana",
     "espironolactona", "eplerenona"
+  ],
+
+  /* ── BUILD 421: Nefrologia — Ferro IV Pesado + Protetores Renais Modernos ── */
+  /* Alias expandido: IECAs + BRAs + Antagonistas Aldosterona (para Finerenona) */
+  "$classe_iec_bra_ieca_espironolactona": [
+    "captopril", "enalapril", "lisinopril", "ramipril",
+    "perindopril", "quinapril", "fosinopril", "trandolapril",
+    "benazepril", "cilazapril",
+    "losartana", "valsartana", "olmesartana", "telmisartana",
+    "irbesartana", "candesartana", "azilsartana", "eprosartana",
+    "espironolactona", "eplerenona", "finerenona"
   ]
 
 };
@@ -23700,9 +23711,75 @@ const INTERACOES_DB = {
         es: "Pacientes sometidos a infusión de alta dosis deben tener los niveles de fósforo probados 2 a 3 semanas tras la infusión, reponiendo fósforo puro si es necesario."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES BUILD 421:
+   Ferro IV Pesado + Protetores Renais Modernos
+   Finerenona (×2 nós), Voclosporina, Dextrana Férrica
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── FINERENONA (A Hipercalemia do Rim Diabético + CYP3A4) ── */
+  "finerenona": {
+    "$classe_iec_bra_ieca_espironolactona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "SOMAÇÃO DE HIPERCALEMIA DIABÉTICA. Pacientes com DRC Diabética quase sempre utilizam Inibidores da ECA (Enalapril) ou BRAs (Losartana, Valsartana) para proteger o rim. Adicionar a Finerenona (um bloqueador de aldosterona) maximiza o bloqueio do eixo Renina-Angiotensina. O potássio, sem via de escape pelo rim, eleva-se de forma assintomática e aguda, colocando o coração em risco de bloqueio de ramo e assistolia ventricular.",
+        es: "SUMA DE HIPERPOTASEMIA DIABÉTICA. Pacientes con ERC Diabética usan IECA (Enalapril) o ARA-II (Losartán). Añadir Finerenona maximiza el bloqueo del eje. El potasio, sin escape, se eleva de forma aguda, poniendo al corazón en riesgo de asistolia."
+      },
+      conduta: {
+        pt: "O uso conjunto não só é permitido como é a DIRETRIZ CLÍNICA PADRÃO para proteger o rim do diabético, MAS o monitoramento laboratorial de Potássio e Creatinina deve ser realizado em 4 semanas. Se Potássio > 5.5 mEq/L, intervir com restrição dietética ou quelantes (Patiromer).",
+        es: "El uso conjunto es la DIRECTRIZ CLÍNICA ESTÁNDAR para proteger el riñón, PERO el monitoreo de Potasio debe ser en 4 semanas. Si Potasio > 5.5, intervenir con restricción dietética."
+      }
+    },
+    "$classe_inibidores_potentes_cyp3a4": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "OVERDOSE DE FINERENONA POR BLOQUEIO HEPÁTICO. A droga é esmagadoramente dependente do citocromo CYP3A4. Antifúngicos (Itraconazol), Antivirais (Ritonavir) ou Suco de Toranja (Grapefruit) paralisam a enzima. A Finerenona no sangue multiplica em mais de 400%, causando retenção massiva de potássio e colapso cardíaco iatrogênico.",
+        es: "SOBREDOSIS DE FINERENONA POR BLOQUEO HEPÁTICO. Antifúngicos y Antivirales paralizan la enzima CYP3A4. La Finerenona se multiplica más de 400%, causando retención de potasio y colapso cardíaco."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO DE BULA (Absoluta). NUNCA associar Finerenona com inibidores potentes de CYP3A4. Se usar inibidores moderados (Eritromicina, Verapamil), a dose da Finerenona monitorada deve ser a mínima (10 mg/dia).",
+        es: "CONTRAINDICACIÓN DE PROSPECTO (Absoluta). NUNCA asociar con inhibidores potentes de CYP3A4."
+      }
+    }
+  },
+
+  /* ── VOCLOSPORINA (A Imunossupressão vs. o Vírus Vacinal) ── */
+  "voclosporina": {
+    "vacinas_virus_vivo": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INFECÇÃO DISSEMINADA POR VÍRUS VACINAL. A Voclosporina (junto com Micofenolato e Corticoides no protocolo do Lúpus) aniquila a atividade dos Linfócitos T do corpo inteiro. Aplicar uma vacina atenuada (Febre Amarela, Tríplice Viral) injeta o vírus vivo no paciente. Sem os linfócitos T para impedir a replicação, o vírus da vacina sofre mutação e causa infecção generalizada letal no paciente imunossuprimido.",
+        es: "INFECCIÓN DISEMINADA POR VIRUS VACUNAL. La Voclosporina aniquila los Linfocitos T. Aplicar una vacuna atenuada (Fiebre Amarilla, Triple Viral) inyecta el virus vivo. Sin linfocitos T, el virus causa infección letal generalizada."
+      },
+      conduta: {
+        pt: "PROIBIDO. Atualizar carteira vacinal inteiramente ANTES de iniciar a indução com Voclosporina. Na vigência do tratamento, apenas vacinas inativadas (mRNA, vírion morto) são autorizadas.",
+        es: "PROHIBIDO. Actualizar cartera de vacunación ANTES de iniciar la inducción. Solo vacunas inactivadas (mRNA, virión muerto) están autorizadas."
+      }
+    }
+  },
+
+  /* ── DEXTRANA FÉRRICA (O Perigo Anafilático + IECA) ── */
+  "dextrana_ferrica": {
+    "ieca_enalapril_captopril": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "POTENCIALIZAÇÃO DA ANAFILAXIA (Efeito Bradicinina). O uso prévio de Inibidores da ECA aumenta o risco global de qualquer tipo de anafilaxia ou reação infusional venosa sistêmica. Como a Dextrana Férrica já possui a maior taxa de choque circulatório do mundo do Ferro IV, a presença de inibidores da ECA dificulta a quebra da bradicinina, tornando o choque vasoplégico (pressão zero) quase irrecuperável mesmo com adrenalina na UTI.",
+        es: "POTENCIACIÓN DE LA ANAFILAXIA (Efecto Bradicinina). El uso de IECA aumenta el riesgo de anafilaxia. Con Dextrana Férrica (la mayor tasa de choque del Hierro IV), los IECA dificultan el control del choque vasopléjico, haciéndolo casi irrecuperable."
+      },
+      conduta: {
+        pt: "Alerta extremo. Deve-se considerar a substituição por formulações de ferro IV modernas (Ferro Sacarato ou Carboximaltose). A dose-teste é o único recurso preditivo obrigatório.",
+        es: "Alerta extrema. Debe considerarse la sustitución por formulaciones modernas (Hierro Sacarato). La dosis prueba es obligatoria."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
