@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=435" />
-  <link rel="stylesheet" href="css/build233.css?v=435" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=435" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=435" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=435" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=435" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=435" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=436" />
+  <link rel="stylesheet" href="css/build233.css?v=436" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=436" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=436" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=436" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=436" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=436" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=435" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=436" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=435" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=436" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=435" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=436" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=435" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=436" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=435" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=436" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=435" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=436" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=435" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=436" />
 
   <style>
     /* ============================================================ RESET */
@@ -7582,7 +7582,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=435" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=436" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -23907,8 +23907,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=435"></script>
-<script src="database/analgesicos.js?v=435"></script>
+<script src="database/antimicrobianos.js?v=436"></script>
+<script src="database/analgesicos.js?v=436"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -24022,9 +24022,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=435', 'psico');
-    _loadScript('database/cardio.js?v=435',        'cardio');
-    _loadScript('database/interacoes.js?v=435',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=436', 'psico');
+    _loadScript('database/cardio.js?v=436',        'cardio');
+    _loadScript('database/interacoes.js?v=436',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -24034,51 +24034,51 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=435"></script>
-<script src="database/gastro.js?v=435"></script>
-<script src="database/gastro_imuno.js?v=435"></script>
-<script src="database/imuno_corticoide.js?v=435"></script>
-<script src="database/endocrino_glp1.js?v=435"></script>
-<script src="database/infusoes.js?v=435"></script>
-<script src="database/emergencia.js?v=435"></script>
-<script src="database/infectologia.js?v=435"></script>
-<script src="database/sedacao.js?v=435"></script>
-<script src="database/hematologia.js?v=435"></script>
-<script src="database/pneumologia.js?v=435"></script>
-<script src="database/gastroenterologia.js?v=435"></script>
-<script src="database/cardiologia.js?v=435"></script>
-<script src="database/analgesia_opioides.js?v=435"></script>
-<script src="database/alergia_imunologia.js?v=435"></script>
-<script src="database/pneumologia_otorrino.js?v=435"></script>
-<script src="database/neurologia.js?v=435"></script>
-<script src="database/prescricoes.js?v=435" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=436"></script>
+<script src="database/gastro.js?v=436"></script>
+<script src="database/gastro_imuno.js?v=436"></script>
+<script src="database/imuno_corticoide.js?v=436"></script>
+<script src="database/endocrino_glp1.js?v=436"></script>
+<script src="database/infusoes.js?v=436"></script>
+<script src="database/emergencia.js?v=436"></script>
+<script src="database/infectologia.js?v=436"></script>
+<script src="database/sedacao.js?v=436"></script>
+<script src="database/hematologia.js?v=436"></script>
+<script src="database/pneumologia.js?v=436"></script>
+<script src="database/gastroenterologia.js?v=436"></script>
+<script src="database/cardiologia.js?v=436"></script>
+<script src="database/analgesia_opioides.js?v=436"></script>
+<script src="database/alergia_imunologia.js?v=436"></script>
+<script src="database/pneumologia_otorrino.js?v=436"></script>
+<script src="database/neurologia.js?v=436"></script>
+<script src="database/prescricoes.js?v=436" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=435"></script>
+<script defer src="js/medcases-ux-v2.js?v=436"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=435"></script>
+<script defer src="js/hub-accordion.js?v=436"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=435"></script>
+<script defer src="js/build240b-accordion-fix.js?v=436"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=435"></script>
+<script defer src="js/calculator-overlay.js?v=436"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=435"></script>
+<script defer src="js/category-pills.js?v=436"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=435"></script>
+<script defer src="js/elec-calc.js?v=436"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=435"></script>
+<script defer src="js/deeplink-router.js?v=436"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=435"></script>
+<script defer src="js/build272-reactive-engine.js?v=436"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=435"></script>
+<script defer src="js/build283-accessory-bar.js?v=436"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>

@@ -664,4 +664,142 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
 
   }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 435 (famotidina + cimetidina + sucralfato + subsalicilato_de_bismuto — Encerramento Histórico Módulo Gastro) */
 
+  /* ── BUILD 436 — Protetores Físicos + Laxantes Salinos/Tensoativos ── */
+  if (typeof window.GASTROENTEROLOGIA_DRUGS_DB !== 'object' || window.GASTROENTEROLOGIA_DRUGS_DB === null) return;
+  Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
+
+/* ── ALGINATO DE SÓDIO ───────────────────────────────────────────────── */
+    "alginato_de_sodio": {
+      name: { pt: 'Alginato de Sódio', es: 'Alginato de Sodio' },
+      category: 'gastroenterologia',
+      class: { pt: 'Agente de Barreira Antirrefluxo Mecânica / Polissacarídeo Natural', es: 'Agente de Barrera Antirreflujo Mecánica / Polisacárido Natural' },
+      indications: {
+        pt: ['Alívio imediato dos sintomas de refluxo gastroesofágico (pirose, queimação, regurgitação ácida) especialmente pós-prandial', 'Gestação — 1ª linha para sintomas de refluxo na gravidez (segurança comprovada, não absorvido)', 'Esofagite por refluxo leve em alternativa ou complemento ao IBP'],
+        es: ['Alivio inmediato de síntomas de reflujo gastroesofágico (pirosis, regurgitación ácida) especialmente posprandial', 'Embarazo — 1ª línea para reflujo gestacional (seguro, no absorbido)', 'Esofagitis por reflujo leve']
+      },
+      commercialNames: { br: ['Gaviscon'], ar: ['Gaviscon', 'Algiscon'] },
+      presentation: { pt: ['Suspensão oral em frasco 150 mL (Alginato de Sódio + Bicarbonato de Sódio/Potássio)', 'Comprimidos mastigáveis'], es: ['Suspensión oral en frasco', 'Comprimidos masticables'] },
+      mechanism: {
+        pt: 'A Balsa Física do Estômago. Ao entrar em contato com o ácido clorídrico gástrico, o alginato precipita-se formando instantaneamente um gel de ácido algínico de pH neutro. O bicarbonato presente na fórmula reage com o HCl liberando CO₂, cujas bolhas ficam aprisionadas dentro do gel — fazendo-o flutuar como uma "balsa" bem na junção esofagogástrica. Essa balsa bloqueia fisicamente o refluxo ácido, atuando como um tampão mecânico sem suprimir a secreção ácida global.',
+        es: 'Al contacto con el HCl gástrico, precipita formando un gel de ácido algínico pH neutro. El bicarbonato libera CO₂, cuyas burbujas quedan atrapadas en el gel, haciéndolo flotar como una "balsa" en la unión gastroesofágica. Esta barrera mecánica bloquea físicamente el reflujo sin suprimir la secreción ácida global.'
+      },
+      dose: {
+        adult: {
+          pt: '10 mL a 20 mL da suspensão oral (ou 2 a 4 comprimidos mastigáveis) após as principais refeições e antes de deitar. Máximo 4 doses ao dia.',
+          es: '10 a 20 mL de la suspensión oral (o 2-4 comprimidos masticables) tras las comidas principales y antes de acostarse. Máximo 4 dosis al día.'
+        },
+        pediatric: {
+          pt: 'Crianças > 12 anos: mesma dose do adulto. Menores de 12 anos: apenas sob prescrição médica e formulação pediátrica específica.',
+          es: 'Niños > 12 años: dosis de adulto. < 12 años: solo con prescripción médica.'
+        }
+      },
+      administration: { pt: ['Administrar estritamente APÓS as refeições ou no momento exato da crise de queimação. Comprimidos DEVEM ser mastigados completamente — engolir inteiro impede a formação da balsa. Não beber grande volume de água logo após para não diluir e afundar o gel. Manter-se sentado ou com cabeceira elevada ≥ 30 min após a tomada.'], es: ['Administrar estrictamente DESPUÉS de las comidas o en plena crisis de pirosis. Los comprimidos DEBEN masticarse por completo. No beber abundante agua inmediatamente después. Permanecer sentado o con cabecera elevada ≥ 30 min.'] },
+      renalAdjustment: { required: true, message: { pt: 'Contém Sódio e Potássio na co-formulação. Usar com cautela em insuficiência renal terminal (ClCr < 30 mL/min) — risco de sobrecarga eletrolítica.', es: 'Contiene Sodio y Potasio. Precaución en insuficiencia renal terminal (ClCr < 30) por sobrecarga electrolítica.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não é absorvido sistemicamente — sem necessidade de ajuste.', es: 'No se absorbe sistémicamente — sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Flatulência e eructação (arrotos por liberação de CO₂ do gel)', 'Constipação leve'], es: ['Flatulencia y eructos (por liberación de CO₂)', 'Estreñimiento leve'] },
+      dangerousAdverseEffects: { pt: ['Sobrecarga de sódio com descompensação de Insuficiência Cardíaca Congestiva em uso abusivo e massivo'], es: ['Descompensación de insuficiencia cardíaca por sobrecarga de sodio en uso abusivo'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade documentada ao alginato ou componentes da formulação'], es: ['Hipersensibilidad al alginato o excipientes'] },
+        relative: { pt: ['Dieta restrita de sódio estrita ou cardiopatia descompensada com anasarca (pela carga de Na⁺ e K⁺)'], es: ['Dieta estricta en sodio o cardiopatía descompensada con anasarca'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A BALSA QUE NÃO FUNCIONA DEITADO: O alginato funciona de modo puramente físico por flutuação. Se o paciente tomar o Gaviscon e deitar horizontalmente logo em seguida, a balsa se desloca lateralmente e o ácido escapa pelos lados, anulando o efeito. Oriente: manter-se sentado ou com cabeceira elevada a 30–45° por pelo menos 30 minutos após a dose.', es: 'LA BALSA QUE NO FUNCIONA ACOSTADO: El alginato actúa flotando. Si el paciente se acuesta enseguida, la balsa se desplaza y el ácido escapa. Instrucción obligatoria: permanecer sentado o con la cabecera elevada 30-45° durante al menos 30 minutos.' }
+      },
+      references: {
+        pt: 'Mandel KG et al., Aliment Pharmacol Ther 2000;14:669-90 (mecanismo balsa); Diretrizes FBG para DRGE 2022; Bula Gaviscon Reckitt Benckiser Brasil 2024.',
+        es: 'Mandel KG et al., Aliment Pharmacol Ther 2000;14:669-90; Guías de la SAGE para ERGE 2022; Ficha Técnica CIMA Gaviscon.'
+      }
+    },
+
+/* ── PICOSSULFATO DE SÓDIO ───────────────────────────────────────────── */
+    "picossulfato_de_sodio": {
+      name: { pt: 'Picossulfato de Sódio', es: 'Picosulfato de Sodio' },
+      category: 'gastroenterologia',
+      class: { pt: 'Laxante Catártico Estimulante / Pró-fármaco de Ativação Cólica por Microbiota', es: 'Laxante Catártico Estimulante / Profármaco de Activación Cólica por Microbiota' },
+      indications: {
+        pt: ['Tratamento a curto prazo da constipação intestinal aguda ou crônica refratária', 'Preparo de cólon para colonoscopia e cirurgias colorretais (formulações em envelopes associadas ao óxido de magnésio)'],
+        es: ['Tratamiento a corto plazo de la constipación intestinal', 'Preparación de colon para colonoscopia y cirugías colorrectales']
+      },
+      commercialNames: { br: ['Guttalax', 'Dulcolax Gotas', 'Picoprep (Assoc Óxido Mg)'], ar: ['Rapilax', 'Guttalax Argentina'] },
+      presentation: { pt: ['Solução oral em gotas 7,5 mg/mL', 'Pó para solução oral em envelopes (associado a óxido de magnésio e ácido cítrico — Picoprep)'], es: ['Solución oral (gotas) 7,5 mg/mL', 'Polvo en sobres (asociado a óxido de magnesio — Picoprep)'] },
+      mechanism: {
+        pt: 'O Laxante Robô do Cólon. O picossulfato ingerido é totalmente inativo no estômago e intestino delgado — passa inalterado até o cólon. Lá, bactérias da microbiota colônica hidrolisam a molécula por sulfatases, liberando o metabólito ativo (BHPM — bis-(p-hydroxyphenyl)-pyridyl-2-methane). O BHPM estimula diretamente os plexos mientéricos da parede cólica, disparando contrações peristálticas violentas e inibindo a reabsorção de água e eletrólitos — liquefazendo as fezes e expulsando-as em 6 a 12 horas.',
+        es: 'Profármaco laxante estimulante. Inactivo en estómago e intestino delgado; llega inalterado al colon. Allí, las bacterias de la microbiota lo hidrolizan mediante sulfatasas, liberando el metabolito activo BHPM. Este estimula los plexos mientéricos disparando contracciones peristálticas violentas e inhibiendo la reabsorción de agua y electrolitos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Constipação: 5 a 10 mg (10 a 20 gotas) via oral em dose única à noite antes de dormir. Efeito em 6–12 horas. Preparo colonoscopia: esquema Picoprep conforme protocolo (2 envelopes com intervalo).',
+          es: 'Constipación: 5 a 10 mg (10 a 20 gotas) en dosis única por la noche. Efecto en 6-12 horas. Preparación colonoscopia: esquema Picoprep en 2 sobres según protocolo.'
+        },
+        pediatric: {
+          pt: 'Crianças 4–10 anos: 2,5 a 5 mg (5–10 gotas) à noite. Menores de 4 anos: 0,1 mg/kg à noite.',
+          es: 'Niños 4-10 años: 2,5 a 5 mg (5-10 gotas) por la noche. < 4 años: 0,1 mg/kg.'
+        }
+      },
+      administration: { pt: ['Administrar à noite para que a evacuação ocorra pela manhã. Pode ser diluído em água ou suco. Para o preparo de colonoscopia com Picoprep: ingerir cada envelope diluído em 150 mL de água fria, seguido de volumes extras de líquidos claros (mínimo 1,5 L adicionais) para evitar desidratação.'], es: ['Administrar por la noche. Puede diluirse en agua o jugo. Para Picoprep: disolver en 150 mL de agua fría y completar con 1,5 L adicionales de líquidos claros.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste de dose, mas o preparo de cólon com Picoprep exige hipervigilância hídrica e eletrolítica — monitorar K⁺ e Mg²⁺.', es: 'Sin ajuste de dosis, pero la preparación con Picoprep requiere vigilancia estricta de hidratación y electrolitos (K⁺, Mg²⁺).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Cólicas abdominais intensas e espasmos (estimulação do plexo mientérico)', 'Diarreia aquosa volumosa', 'Desidratação leve a moderada'], es: ['Cólicos abdominales intensos', 'Diarrea acuosa abundante', 'Deshidratación leve a moderada'] },
+      dangerousAdverseEffects: { pt: ['ESPOLIAÇÃO CRÍTICA DE ELETRÓLITOS — hipocalemia severa (K⁺ < 2,5 mEq/L) por perda diarreica → risco de arritmia letal', 'Atonia cólica crônica (cólon catártico) por uso abusivo prolongado — destruição dos neurônios do plexo mientérico', 'Choque hipovolêmico em preparo de colonoscopia sem reposição hídrica adequada'], es: ['PÉRDIDA CRÍTICA DE ELECTROLITOS — hipopotasemia severa por diarrea → arritmia letal', 'Colon catártico / Atonía cólica crónica por abuso prolongado', 'Choque hipovolémico en preparación de colonoscopia sin hidratación adecuada'] },
+      contraindications: {
+        absolute: { pt: ['Abdome agudo cirúrgico, obstrução intestinal mecânica ou perfuração', 'Desidratação severa, megacólon tóxico ou íleo paralítico'], es: ['Abdomen agudo quirúrgico, obstrucción intestinal mecánica', 'Deshidratación severa, megacolon tóxico o íleo paralítico'] },
+        relative: { pt: ['Uso contínuo > 7 dias sem supervisão médica (risco de dependência intestinal e cólon catártico)'], es: ['Uso continuo > 7 días sin supervisión médica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O INTESTINO VICIADO (CÓLON CATÁRTICO): O uso diário por meses de Guttalax destrói progressivamente os neurônios do plexo mientérico do intestino grosso. O cólon "esquece" de contrair sozinho e se torna atônico de forma irreversível — o paciente desenvolve constipação intratável que às vezes exige colectomia. Use no MÁXIMO 5 a 7 dias consecutivos.', es: 'EL INTESTINO ADICTO (COLON CATÁRTICO): El uso diario por meses destruye progresivamente las neuronas del plexo mientérico del colon. El colon pierde su motilidad autónoma de forma irreversible. Limite el uso a máximo 5-7 días consecutivos.' }
+      },
+      references: {
+        pt: 'Kienzle-Horn S et al., Aliment Pharmacol Ther 2006;23:1439-48 (eficácia picossulfato vs lactulose); Diretrizes FBG para Constipação 2018; Bula Guttalax Boehringer Ingelheim Brasil 2024.',
+        es: 'Kienzle-Horn S et al., Aliment Pharmacol Ther 2006;23:1439-48; Guías de Constipación SAGE; Ficha Técnica CIMA Picosulfato de Sodio.'
+      }
+    },
+
+/* ── DOCUSATO DE SÓDIO ───────────────────────────────────────────────── */
+    "docusato_de_sodio": {
+      name: { pt: 'Docusato de Sódio', es: 'Docusato de Sodio' },
+      category: 'gastroenterologia',
+      class: { pt: 'Laxante Tensoativo / Amaciante e Emoliente de Fezes por Quebra de Tensão Superficial', es: 'Laxante Tensoactivo / Ablandador y Emoliente de Heces por Reducción de Tensión Superficial' },
+      indications: {
+        pt: ['Prevenção e tratamento da constipação com fezes excessivamente duras e ressecadas', 'Profilaxia do esforço evacuatório (Manobra de Valsalva) em pacientes de alto risco: pós-IAM, pós-cirurgia cardíaca, aneurisma cerebral, pós-operatório de hemorroidas', 'Facilitação evacuatória em pacientes acamados ou com mobilidade reduzida'],
+        es: ['Prevención y tratamiento de constipación con heces endurecidas', 'Profilaxis del esfuerzo evacuatorio (Valsalva) en postinfarto, poscirugía cardíaca, aneurisma cerebral, posoperatorio de hemorroides', 'Facilitación evacuatoria en pacientes encamados']
+      },
+      commercialNames: { br: ['Humactil', 'Docusato Sódio Medley'], ar: ['Docusato Sodio', 'Modaton (Assoc)'] },
+      presentation: { pt: ['Cápsulas moles 100 mg', 'Solução oral gotas 50 mg/mL'], es: ['Cápsulas blandas 100 mg', 'Solución oral gotas'] },
+      mechanism: {
+        pt: 'O Detergente do Intestino. O Docusato de Sódio é um surfactante aniônico (detergente biológico). Ele quebra a tensão superficial que separa os componentes aquosos e lipídicos da massa fecal, forçando a água do próprio lúmen intestinal a penetrar no interior das fezes endurecidas e se misturar com a gordura fecal. As fezes "murcham" e amolecem como uma esponja embebida — deslizando facilmente pelo reto sem necessidade de qualquer esforço de pujo.',
+        es: 'Surfactante aniónico (detergente biológico). Rompe la tensión superficial de la masa fecal, forzando la penetración de agua del lumen en el interior de las heces endurecidas. Las heces se ablandan y se desplazan fácilmente por el recto sin esfuerzo de pujo.'
+      },
+      dose: {
+        adult: {
+          pt: '100 mg a 200 mg via oral uma vez ao dia, preferencialmente à noite com copo cheio de água (250 mL). Efeito amaciante em 24 a 72 horas.',
+          es: '100 a 200 mg vía oral una vez al día, preferentemente por la noche con vaso lleno de agua (250 mL). Efecto en 24-72 horas.'
+        },
+        pediatric: {
+          pt: 'Crianças 6–12 anos: 50 mg a 100 mg ao dia via oral.',
+          es: 'Niños 6-12 años: 50 a 100 mg al día.'
+        }
+      },
+      administration: { pt: ['Tomar com copo cheio de água (250 mL mínimo). O efeito amaciante leva 24 a 72 horas para se estabelecer completamente no bolo fecal — não esperar efeito catártico imediato. PROIBIDO combinar com óleo mineral (risco de hepatotoxicidade por absorção forçada — ver interações).'], es: ['Tomar con vaso lleno de agua. El efecto tarda 24-72 horas en completarse. PROHIBIDO combinar con aceite mineral (riesgo de hepatotoxicidad por absorción forzada).'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínima absorção sistêmica — sem necessidade de ajuste.', es: 'Absorción sistémica mínima — sin ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Cólicas abdominais leves', 'Sabor amargo na boca ou irritação faríngea (solução em gotas)', 'Náusea'], es: ['Cólicos abdominales leves', 'Sabor amargo o irritación faríngea (gotas)', 'Náusea'] },
+      dangerousAdverseEffects: { pt: ['HEPATOTOXICIDADE SEVERA E GRANULOMATOSE se combinado com óleo mineral (absorção forçada do óleo para o fígado e linfonodos)', 'Desidratação e distúrbios eletrolíticos por superdosagem'], es: ['HEPATOTOXICIDAD SEVERA Y GRANULOMATOSIS si combinado con aceite mineral', 'Deshidratación y trastornos electrolíticos por sobredosis'] },
+      contraindications: {
+        absolute: { pt: ['Obstrução intestinal ativa, apendicite aguda ou dor abdominal de causa desconhecida', 'USO CONCOMITANTE COM ÓLEO MINERAL (absoluta — hepatotoxicidade fatal)'], es: ['Obstrucción intestinal, apendicitis aguda', 'USO CONCOMITANTE CON ACEITE MINERAL (absoluta — hepatotoxicidad)'] },
+        relative: { pt: ['Dependência psicológica de laxantes (avaliar causa subjacente da constipação)'], es: ['Dependencia psicológica de laxantes'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ESCUDO DO CORAÇÃO PÓS-INFARTO: O Docusato é o queridinho das UTIs cardíacas. Um paciente que acabou de infartar ou fez cirurgia cardíaca e faz esforço extremo de pujo (Manobra de Valsalva) pode ter um pico de pressão intracraniana que rompe a artéria ou causa arritmia fatal. O Docusato garante que as fezes saiam sozinhas e suavemente — protegendo a coronária recém-tratada. NUNCA combinar com óleo mineral: o Docusato força a absorção hepática do óleo, causando granulomas hepáticos permanentes.', es: 'EL ESCUDO CARDÍACO POSINFARTO: El Docusato protege al paciente postinfarto del esfuerzo de pujo (Valsalva) que puede romper la coronaria recién tratada. NUNCA combinar con Aceite Mineral: el Docusato fuerza la absorción hepática del aceite, provocando granulomas hepáticos permanentes.' }
+      },
+      references: {
+        pt: 'FDA Prescribing Data Colace (docusato de sódio); Diretrizes AHA/SBC pós-IAM (profilaxia esforço evacuatório); Goodman & Gilman Farmacologia; Bula Humactil Anvisa 2024.',
+        es: 'FDA Prescribing Data (Colace); Guías AHA postinfarto; Goodman & Gilman Farmacología; Ficha Técnica CIMA Docusato de Sodio.'
+      }
+    }
+
+  }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 436 (alginato_de_sodio + picossulfato_de_sodio + docusato_de_sodio — Protetores Físicos e Laxantes Tensoativos) */
+
 })();
