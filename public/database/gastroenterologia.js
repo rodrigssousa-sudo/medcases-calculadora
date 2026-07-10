@@ -385,4 +385,52 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
 
 }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 431 (Imunobiológicos: infliximabe + vedolizumabe) */
 
+/* BUILD 432 — Imunobiológico Anti-IL-12/IL-23: Ustekinumabe */
+Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
+
+  "ustekinumabe": {
+    name: { pt: 'Ustekinumabe', es: 'Ustekinumab' },
+    category: 'gastroenterologia',
+    class: { pt: 'Anticorpo Monoclonal Humano Anti-IL-12/IL-23 / Imunobiológico Dual-Via', es: 'Anticuerpo Monoclonal Humano Anti-IL-12/IL-23 / Inmunobiológico Dual' },
+    indications: {
+      pt: ['Doença de Crohn ativa moderada a grave em adultos que falharam ou foram intolerantes a corticoides, imunomoduladores ou anti-TNF (infliximabe/adalimumabe)', 'Retocolite Ulcerativa moderada a grave com falha a terapia convencional ou anti-TNF', 'Psoríase em placas moderada a grave'],
+      es: ['Enfermedad de Crohn activa moderada a severa refractaria a corticoides, inmunomoduladores o anti-TNF', 'Colitis Ulcerosa moderada a severa refractaria', 'Psoriasis en placas moderada a grave']
+    },
+    commercialNames: { br: ['Stelara'], ar: ['Stelara'] },
+    presentation: { pt: ['Frasco-ampola IV 130 mg/26 mL (5 mg/mL — indução hospitalar)', 'Seringa preenchida SC 90 mg/1 mL (manutenção ambulatorial)'], es: ['Vial IV 130 mg/26 mL (inducción hospitalaria)', 'Jeringa prellenada SC 90 mg/1 mL (mantenimiento ambulatorial)'] },
+    mechanism: {
+      pt: 'O Bloqueador das Interleucinas Duplas. É um anticorpo IgG1κ totalmente humano que se liga especificamente à subunidade proteica p40 — compartilhada pelas interleucinas IL-12 e IL-23. Ao neutralizar ambas simultaneamente, bloqueia: (1) a IL-12 que ativa os linfócitos Th1 (produtores de INF-γ — pró-inflamatório intestinal); (2) a IL-23 que sustenta os linfócitos Th17 (produtores de IL-17 — responsáveis pela inflamação cutânea e intestinal crônica). Ao travar essas duas vias, desliga a cascata autoimune de forma upstream — antes mesmo do TNF-alfa ser produzido.',
+      es: 'Anticuerpo IgG1κ totalmente humano que se une a la subunidad p40 compartida por las interleucinas IL-12 e IL-23. Al neutralizarlas simultáneamente bloquea: (1) IL-12 → activación de linfocitos Th1 (IFN-γ inflamatorio intestinal); (2) IL-23 → sustento de linfocitos Th17 (IL-17 — inflamación cutánea e intestinal crónica). Actúa upstream del TNF-alfa, desactivando la cascada antes de que se generen los mediadores terminales.'
+    },
+    dose: {
+      adult: {
+        pt: 'Indução (Fase Hospitalar): Dose ÚNICA IV baseada em peso — ≤ 55 kg: 260 mg; 55–85 kg: 390 mg; > 85 kg: 520 mg (infusão lenta de 1 hora). Manutenção (a partir da semana 8): 90 mg SC a cada 8 semanas.',
+        es: 'Inducción (Hospitalar): Dosis ÚNICA IV por peso — ≤ 55 kg: 260 mg; 55–85 kg: 390 mg; > 85 kg: 520 mg (infusión 1 hora). Mantenimiento (desde semana 8): 90 mg SC cada 8 semanas.'
+      },
+      pediatric: {
+        pt: 'Aprovado ≥ 6 anos apenas para psoríase em placas grave com ajuste rígido por peso corporal.',
+        es: 'Aprobado ≥ 6 años solo para psoriasis en placas grave, con ajuste estricto por peso.'
+      }
+    },
+    administration: { pt: ['Indução: INFUSÃO INTRAVENOSA hospitalar lenta de 1 hora, em ambiente controlado com monitoramento de sinais vitais. Manutenção: SUBCUTÂNEA ambulatorial (coxa, abdômen ou braço). Autoaplicação permitida após treinamento adequado.'], es: ['Inducción: INFUSIÓN INTRAVENOSA lenta hospitalaria de 1 hora con monitoreo de signos vitales. Mantenimiento: SUBCUTÁNEA ambulatoria. Autoinyección permitida tras entrenamiento.'] },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste — eliminação por catabolismo proteico biológico.', es: 'Sin necesidad de ajuste — eliminación por catabolismo proteico.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Não estudado sistematicamente em hepatopatias graves. Monitorar enzimas hepáticas periodicamente.', es: 'No estudiado en hepatopatías graves. Monitorear enzimas hepáticas.' } },
+    commonAdverseEffects: { pt: ['Nasofaringite e infecções respiratórias altas leves', 'Cefaleia e tontura', 'Artralgia (dor articular localizada)', 'Reação local na aplicação SC'], es: ['Nasofaringitis e infecciones respiratorias altas leves', 'Cefalea y mareo', 'Artralgia', 'Reacción local en el sitio SC'] },
+    dangerousAdverseEffects: { pt: ['Reativação de Tuberculose Latente (risco menor que anti-TNF, mas rastreio obrigatório)', 'Infecções oportunistas graves (fúngicas, bacterianas)', 'Leucoencefalopatia Multifocal Progressiva (PML — risco teórico de classe, sem casos confirmados)'], es: ['Reactivación de Tuberculosis Latente (riesgo menor que anti-TNF; rastreo obligatorio)', 'Infecciones oportunistas graves', 'LMP — riesgo teórico de clase, sin casos confirmados'] },
+    contraindications: {
+      absolute: { pt: ['Infecção sistêmica ativa grave não controlada (Sepse, abscessos)', 'Tuberculose ativa'], es: ['Infección sistémica activa grave no controlada', 'Tuberculosis activa'] },
+      relative: { pt: ['Histórico de infecções recorrentes graves sem causa identificada; tuberculose latente não tratada (realizar profilaxia antes de iniciar)'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+      warning: { pt: 'A VANTAGEM SOBRE O REMICADE (QUANDO ELE FALHA): O Stelara é a grande arma da gastroenterologia quando o Infliximabe (Remicade) perde eficácia por formação de anticorpos neutralizantes (fenômeno de "escape imunológico"). Ao bloquear as IL-12/IL-23 ao invés do TNF-alfa diretamente, o Ustekinumabe possui: (1) taxa muito menor de reações alérgicas infusionais; (2) menor incidência de formação de anticorpos antidrug ao longo do tempo; (3) perfil de segurança infecciosa sistêmica significativamente superior ao anti-TNF.', es: 'LA VENTAJA CUANDO EL REMICADE FALLA: El Stelara es la herramienta clave cuando el Infliximab pierde eficacia por anticuerpos neutralizantes ("escape inmunológico"). Al bloquear IL-12/IL-23 en lugar del TNF-alfa directo: (1) menor tasa de alergias infusionales; (2) menor formación de anticuerpos antidrug; (3) perfil de seguridad infecciosa sistémica superior al anti-TNF.' }
+    },
+    references: {
+      pt: 'UNITI-1 e UNITI-2 Trials (Crohn — NEJM 2016, Feagan BG et al.); UNIFI Trial (RCU — NEJM 2019); Diretrizes ECCO para DII 2023; GEDIIB — Consenso Biológicos em DII 2024.',
+      es: 'UNITI-1 y UNITI-2 Trials (Crohn — NEJM 2016, Feagan BG et al.); UNIFI Trial (CU — NEJM 2019); Directrices ECCO 2023; Consenso SAGE Biológicos en EII.'
+    }
+  }
+
+}); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 432 (ustekinumabe — Anti-IL-12/IL-23 UNITI/UNIFI) */
+
 })();

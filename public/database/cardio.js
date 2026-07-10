@@ -42737,6 +42737,59 @@
   }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 73 (HAP: sildenafila · tadalafila — nomenclatura canônica sem sufixo HAP) */
 
   /* ══════════════════════════════════════════════════════════════════════════════
+     GRUPO 73-B — BUILD 432
+     iPDE5 Ação Ultrarrápida: avanafila
+     Última molécula da classe — velocidade de 15 min vs 30-60 min dos demais
+  ══════════════════════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ── AVANAFILA ───────────────────────────────────────────────────── */
+    "avanafila": {
+      name: { pt: 'Avanafila', es: 'Avanafilo' },
+      category: 'cardio',
+      class: { pt: 'Inibidor de Fosfodiesterase Tipo 5 (iPDE5) de Ação Ultrarrápida', es: 'Inhibidor de la Fosfodiesterasa Tipo 5 (iPDE5) de Acción Ultrarrápida' },
+      indications: {
+        pt: ['Tratamento da Disfunção Erétil masculina (foco em velocidade de resposta — ação em 15 minutos)'],
+        es: ['Tratamiento de la Disfunción Eréctil masculina (foco en velocidad de respuesta — acción en 15 minutos)']
+      },
+      commercialNames: { br: ['Spedra'], ar: ['Stendra'] },
+      presentation: { pt: ['Comprimidos revestidos 50 mg, 100 mg e 200 mg'], es: ['Comprimidos 50 mg, 100 mg y 200 mg'] },
+      mechanism: {
+        pt: 'O Veloz da Categoria. A Avanafila inibe seletivamente a PDE5 nos corpos cavernosos, preservando o GMPc e promovendo vasodilatação sustentada. A sua inovação farmacocinética é a velocidade supersônica de absorção — atinge o pico plasmático e efeito clínico completo em apenas 15-30 minutos, sendo o iPDE5 de ação mais rápida do mercado. Possui baixíssima afinidade pela PDE11 (musculoesquelética), reduzindo drasticamente a mialgia lombar marcante na Tadalafila, e pela PDE6 (retiniana), reduzindo as alterações visuais da Sildenafila.',
+        es: 'Inhibidor altamente selectivo de la PDE5 en los cuerpos cavernosos. Su diseño molecular le permite una absorción ultrarrápida alcanzando concentraciones plasmáticas máximas y efecto clínico completo en solo 15-30 minutos — el iPDE5 de inicio de acción más rápido. Menor afinidad por PDE11 muscular (menos mialgia que tadalafilo) y por PDE6 retiniana (menos alteraciones visuales que sildenafilo).'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose inicial: 100 mg via oral, tomado sob demanda aproximadamente 15–30 minutos ANTES da atividade sexual. Faixa: 50–200 mg. Máximo: 1 comprimido por dia.',
+          es: 'Dosis inicial: 100 mg vía oral, bajo demanda 15–30 minutos ANTES de la actividad sexual. Rango: 50–200 mg. Máximo: 1 comprimido al día.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos. O início da ação pode ser discretamente retardado com refeições muito gordurosas, mas em menor grau que a Sildenafila.'], es: ['Puede tomarse con o sin alimentos. Las comidas muy grasas pueden retrasar ligeramente el inicio de acción, pero en menor grado que el sildenafilo.'] },
+      renalAdjustment: { required: true, message: { pt: 'Sem ajuste necessário se ClCr > 30 mL/min. Formalmente contraindicado se ClCr < 30 mL/min (dados insuficientes de segurança).', es: 'Sin ajuste si ClCr > 30 mL/min. Contraindicado formalmente si ClCr < 30 mL/min (datos de seguridad insuficientes).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Insuficiência hepática moderada: reduzir dose máxima para 50 mg. Contraindicado na disfunção hepática grave (Child-Pugh C).', es: 'Falla hepática moderada: dosis máxima de 50 mg. Contraindicado en disfunción hepática grave (Child-Pugh C).' } },
+      commonAdverseEffects: { pt: ['Cefaleia (mecanismo da vasodilatação craniana)', 'Rubor facial e calor cutâneo', 'Congestão nasal leve'], es: ['Cefalea', 'Rubor facial y calor cutáneo', 'Congestión nasal leve'] },
+      dangerousAdverseEffects: { pt: ['Colapso circulatório por choque vasoplégico (especialmente com nitratos)', 'Priapismo prolongado doloroso (> 4 horas → isquemia → fibrose e impotência permanente)', 'Neuropatia Óptica Isquêmica Anterior Não Arterítica (NOIA-NA)'], es: ['Colapso hemodinámico por choque vasopléjico (especialmente con nitratos)', 'Priapismo (> 4 horas → isquemia → fibrosis e impotencia permanente)', 'NOIA-NA'] },
+      contraindications: {
+        absolute: { pt: ['USO ASSOCIADO DE NITRATOS de qualquer forma (Isossorbida, Monocordil, Nitroglicerina) — PROIBIDO', 'AVC ou Infarto nos últimos 6 meses', 'Insuficiência hepática grave (Child-Pugh C) ou renal grave (ClCr < 30)'], es: ['USO ASOCIADO DE NITRATOS — PROHIBIDO', 'ACV o Infarto en los últimos 6 meses', 'Insuficiencia hepática grave o renal grave'] },
+        relative: { pt: ['Uso associado com inibidores potentes de CYP3A4 (ex: Cetoconazol, Ritonavir) → veto absoluto ou redução para 50 mg; uso com alfa-bloqueadores → intervalo mínimo de 2h'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A JANELA DO INFARTO MAIS CURTA (MEIA-VIDA ~5H): A Avanafila tem meia-vida biológica de apenas ~5 horas — muito mais curta que a Sildenafila (4h de ação) e a Tadalafila (17,5h). Se o paciente tomar Spedra e infartar na UTI: o médico pode administrar Nitroglicerina após apenas 12 HORAS da última dose. (Viagra: esperar 24h; Cialis: esperar 48h). PRIAPISMO: se ultrapassar 4 horas, emergência urológica — isquemia e fibrose permanente da ereção.', es: 'LA VENTANA DEL INFARTO MÁS CORTA (VIDA MEDIA ~5H): La Avanafila tiene vida media de ~5 horas. Si el paciente infarta, el médico puede usar Nitroglicerina tras solo 12 HORAS de la última dosis. (Viagra: 24h; Cialis: 48h). PRIAPISMO: si supera las 4 horas, urgencia urológica — isquemia y fibrosis peniana permanente.' }
+      },
+      references: {
+        pt: 'FDA Approval Data Stendra (2012); EMA (European Medicines Agency) — Spedra Product Information; Journal of Sexual Medicine — Avanafil Reviews; Goldstein I et al., J Sex Med 2012.',
+        es: 'FDA Approval Data Stendra (2012); EMA — Spedra Product Information; Journal of Sexual Medicine — Goldstein I et al. 2012.'
+      }
+    }
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 73-B (iPDE5 Ação Ultrarrápida: avanafila — BUILD 432) */
+
+  /* ══════════════════════════════════════════════════════════════════════════════
      BLOCO DESATIVADO — bosentana, ambrisentana, macitentana, riociguate,
      selexipague, epoprostenol, treprostinil e iloprosta JÁ EXISTIAM nos
      Grupos 26-28 deste arquivo com fichas técnicas MAIS COMPLETAS

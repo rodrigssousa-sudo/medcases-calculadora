@@ -398,4 +398,141 @@
 
   }); /* fim Object.assign HEMATOLOGIA_DRUGS_DB — BUILD 431 (betrixabana — DOAC Ultra Longa Duração / Profilaxia Estendida APEX Trial) */
 
+  /* BUILD 432 — Anticoagulantes Injetáveis Essenciais + Reversor (Fondaparinux · Dalteparina · Vitamina K1) */
+  Object.assign(window.HEMATOLOGIA_DRUGS_DB, {
+
+    /* ── FONDAPARINUX ──────────────────────────────────────────────── */
+    "fondaparinux": {
+      name: { pt: 'Fondaparinux Sódico', es: 'Fondaparinux Sódico' },
+      category: 'hematologia',
+      class: { pt: 'Anticoagulante Injetável / Inibidor Sintético e Seletivo do Fator Xa', es: 'Anticoagulante Inyectable / Inhibidor Sintético y Selectivo del Factor Xa' },
+      indications: {
+        pt: ['Tratamento de Angina Instável e Infarto Agudo do Miocárdio sem supra de ST (Estratégia padrão da diretriz europeia — OASIS-5)', 'Prevenção e tratamento de Trombose Venosa Profunda (TVP) e Embolia Pulmonar (TEP) em cirurgias ortopédicas ou abdominais', 'Anticoagulação de escolha em pacientes com histórico ou suspeita de HIT (Trombocitopenia Induzida por Heparina)'],
+        es: ['Tratamiento de Angina Inestable e Infarto sin supra de ST (OASIS-5)', 'Prevención y tratamiento de TVP y TEP en cirugías mayores', 'Anticoagulación de elección ante sospecha o historial de HIT']
+      },
+      commercialNames: { br: ['Arixtra'], ar: ['Arixtra'] },
+      presentation: { pt: ['Seringas preenchidas Subcutâneas: 2,5 mg/0,5 mL (profilaxia); 7,5 mg/0,6 mL (tratamento)'], es: ['Jeringas prellenadas SC: 2,5 mg (profilaxis); 7,5 mg (tratamiento)'] },
+      mechanism: {
+        pt: 'O Pentassacarídeo Cirúrgico. É um oligossacarídeo puramente sintético que imita a sequência exata de 5 açúcares que a heparina usa para se ligar à Antitrombina III. Ao se acoplar nela, multiplica em ~300 vezes a velocidade com que a Antitrombina caça e destrói o Fator Xa. Por ser sintético e minúsculo, NÃO se liga ao Fator Plaquetário 4 (PF4) — sendo incapaz de desencadear HIT.',
+        es: 'Pentasacárido sintético que se une específicamente a la antitrombina III, potenciando su capacidad de neutralizar al Factor Xa en ~300 veces. Por ser completamente sintético, NO se une al Factor Plaquetario 4 (PF4) y por lo tanto prácticamente no induce HIT.'
+      },
+      dose: {
+        adult: {
+          pt: 'Profilaxia: 2,5 mg via Subcutânea, UMA VEZ ao dia. Tratamento (IAM-SSST / TVP): 7,5 mg SC uma vez ao dia (Ajuste: 5 mg se peso < 50 kg; 10 mg se peso > 100 kg).',
+          es: 'Profilaxis: 2,5 mg SC UNA VEZ al día. Tratamiento: 7,5 mg SC una vez al día (5 mg si < 50 kg; 10 mg si > 100 kg).'
+        },
+        pediatric: {
+          pt: 'Off-label em regime hospitalar especializado: 0,1 mg/kg SC uma vez ao dia.',
+          es: 'Off-label: 0,1 mg/kg SC una vez al día (uso hospitalario especializado).'
+        }
+      },
+      administration: { pt: ['Exclusivamente via Subcutânea profunda no abdômen (alternando lados esquerdo e direito). NUNCA administrar por via Intramuscular — risco de hematoma gigante.'], es: ['Exclusivamente vía Subcutánea profunda abdominal. NUNCA intramuscular — riesgo de hematoma gigante.'] },
+      renalAdjustment: { required: true, message: { pt: 'CRÍTICO — eliminação 100% renal. ClCr 30-50 mL/min: cautela extrema ou reduzir dose profilática. ClCr < 30 mL/min: ABSOLUTAMENTE CONTRAINDICADO por risco de hemorragia fatal.', es: 'CRÍTICO — eliminación 100% renal. ClCr 30-50: precaución extrema. ClCr < 30 mL/min: ABSOLUTAMENTE CONTRAINDICADO por riesgo de hemorragia fatal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste se coagulograma basal estável.', es: 'Sin necesidad de ajuste si coagulograma basal estable.' } },
+      commonAdverseEffects: { pt: ['Sangramento e dor no local da injeção', 'Anemia por perdas ocultas', 'Insônia e febre transitória'], es: ['Sangrado e inflamación en sitio de inyección', 'Anemia', 'Insomnio y fiebre transitoria'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia retroperitoneal catastrófica', 'Hematoma espinhal/epidural pós-punção → Paraplegia permanente', 'Trombocitopenia paradoxal (raríssimo)'], es: ['Hemorragia retroperitoneal', 'Hematoma espinal/epidural pospunción → Paraplejía permanente'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência renal grave (ClCr < 30 mL/min)', 'Sangramento ativo anatomicamente relevante', 'Endocardite bacteriana aguda'], es: ['Insuficiencia renal grave (ClCr < 30 mL/min)', 'Sangrado activo relevante', 'Endocarditis bacteriana aguda'] },
+        relative: { pt: ['Uso associado a antiplaquetários de alta potência; idosos < 50 kg'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A ESCOLHA DO INFARTO SEGURO (OASIS-5): O Fondaparinux provou no mega-estudo OASIS-5 ser o anticoagulante mais seguro para o infarto sem supra de ST — causa METADE dos sangramentos da Enoxaparina, reduzindo a mortalidade global intra-hospitalar. ATENÇÃO: se o doente for para cateterismo, o cardiologista precisa adicionar um bolus de Heparina Comum para evitar trombose do cateter (síndrome do "cateter seco").', es: 'EL RELEVO DEL INFARTO (OASIS-5): Demostró causar la MITAD de los sangrados que la Enoxaparina en infartos sin supra de ST. ATENCIÓN: si va a cateterismo, se debe sumar un bolo de Heparina Común para evitar trombosis del catéter.' }
+      },
+      references: {
+        pt: 'OASIS-5 Trial (NEJM 2006); MATISSE Trials; Diretrizes de SCA da ESC 2023.',
+        es: 'OASIS-5 Trial (NEJM 2006); MATISSE Trials; Directrices ESC 2023.'
+      }
+    },
+
+    /* ── DALTEPARINA ───────────────────────────────────────────────── */
+    "dalteparina": {
+      name: { pt: 'Dalteparina Sódica', es: 'Dalteparina Sódica' },
+      category: 'hematologia',
+      class: { pt: 'Heparina de Baixo Peso Molecular (HBPM)', es: 'Heparina de Bajo Peso Molecular (HBPM)' },
+      indications: {
+        pt: ['Tratamento de longo prazo de Tromboembolismo Venoso (TVP/TEP) em pacientes com CÂNCER ATIVO — padrão-ouro da literatura (Estudo CLOT)', 'Profilaxia de TVP em pacientes cirúrgicos ou graves imobilizados', 'Tratamento da Síndrome Coronariana Aguda'],
+        es: ['Tratamiento de TVP/TEP en pacientes con CÁNCER ACTIVO — estándar de elección (Estudio CLOT, NEJM 2003)', 'Profilaxis de TVP en pacientes quirúrgicos', 'Síndrome Coronario Agudo']
+      },
+      commercialNames: { br: ['Fragmin'], ar: ['Fragmin'] },
+      presentation: { pt: ['Seringas preenchidas SC: 2.500 UI/0,2 mL; 5.000 UI/0,2 mL; 10.000 UI/1 mL; 12.500 UI/0,5 mL; 18.000 UI/0,72 mL'], es: ['Jeringas prellenadas SC: 2.500 UI; 5.000 UI; 10.000 UI; 12.500 UI; 18.000 UI'] },
+      mechanism: {
+        pt: 'A Heparina Oncológica. Obtida por despolimerização da heparina suína. Liga-se à Antitrombina III, acelerando fortemente a inativação do Fator Xa e, em menor grau, do Fator IIa (trombina), na proporção anti-Xa/anti-IIa de ~4:1. Altamente resistente à destruição celular e com efeito previsível pelo peso corporal. O seu mecanismo antimetastático direto nas células tumorais (inibição da selectina P) é investigado como vantagem extra no paciente oncológico.',
+        es: 'HBPM con relación anti-Xa/anti-IIa ~4:1. Se une a la antitrombina III para inhibir los factores clave de la coagulación. Su mecanismo antitrombótico predecible por peso corporal y los posibles efectos antimetastáticos directos (inhibición de la selectina P) son ventajas clave en el paciente oncológico.'
+      },
+      dose: {
+        adult: {
+          pt: 'Trombose no Câncer (Protocolo CLOT): 200 UI/kg via SC UMA VEZ ao dia no 1º mês (teto: 18.000 UI/dia). Meses 2 a 6: 150 UI/kg/dia. Profilaxia cirúrgica: 2.500–5.000 UI SC ao dia.',
+          es: 'Trombosis en Cáncer (Protocolo CLOT): 200 UI/kg SC UNA VEZ al día el mes 1 (máx. 18.000 UI). Meses 2 a 6: 150 UI/kg/día. Profilaxis: 2.500–5.000 UI/día.'
+        },
+        pediatric: {
+          pt: 'TVP pediátrica off-label: 100–150 UI/kg SC a cada 12 horas com monitoramento obrigatório de atividade anti-Xa.',
+          es: 'TVP pediátrica: 100–150 UI/kg SC cada 12 horas con monitoreo de anti-Xa.'
+        }
+      },
+      administration: { pt: ['Via Subcutânea profunda na cintura abdominal. A seringa preenchida possui uma bolha de ar protetora que NÃO deve ser expelida antes da aplicação — ela empurra toda a dose para dentro.'], es: ['Vía Subcutánea profunda abdominal. La jeringa prellenada tiene una burbuja de aire protectora que NO debe expulsarse antes de pinchar — empuja toda la dosis hacia adentro.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr < 30 mL/min: alto risco de acúmulo. Monitorar atividade anti-Xa obrigatoriamente ou migrar para Heparina Não-Fracionada IV (controlada por TTPa).', es: 'ClCr < 30 mL/min: alto riesgo de acumulación. Monitorear anti-Xa u optar por Heparina No Fraccionada IV (controlada por TTPa).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito de dose.', es: 'Sin necesidad de ajuste estricto.' } },
+      commonAdverseEffects: { pt: ['Hematomas subcutâneos e dor local na barriga', 'Elevação transitória e reversível de transaminases (TGO/TGP)', 'Alopecia leve transitória'], es: ['Hematomas subcutáneos y dolor local', 'Elevación transitoria de transaminasas', 'Alopecia leve transitoria'] },
+      dangerousAdverseEffects: { pt: ['TROMBOCITOPENIA INDUZIDA POR HEPARINA (HIT) — queda fulminante de plaquetas com trombose paradoxal interna severa e embolia (contraintuitivo: plaquetas caem MAS o sangue coagula)', 'Hemorragia maior visceral'], es: ['TROMBOCITOPENIA INDUCIDA POR HEPARINA (HIT) — caída fulminante de plaquetas con trombosis paradójica severa', 'Hemorragia mayor visceral'] },
+      contraindications: {
+        absolute: { pt: ['Histórico confirmado de HIT mediada por anticorpos anti-PF4', 'Sangramento ativo volumoso', 'Alergia grave a componentes suínos'], es: ['Antecedente confirmado de HIT', 'Sangrado activo volumoso', 'Alergia a componentes porcinos'] },
+        relative: { pt: ['Plaquetopenia basal < 50.000/mm³; hipertensão arterial descontrolada severa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'O PADRÃO-OURO DO PACIENTE COM CÂNCER (ESTUDO CLOT): O estudo histórico CLOT (NEJM 2003) provou que a Dalteparina é infinitamente superior à Varfarina oral para tratar trombose em pacientes com tumores sólidos. A Varfarina falha continuamente pelas náuseas e pela disfagia causada pela quimioterapia (impossível manter o INR estável). A Dalteparina injetável, com dose baseada em peso, estabiliza a anticoagulação por 6 meses sem os caprichos do INR.', es: 'EL ESTÁNDAR DEL PACIENTE CON CÁNCER (ESTUDIO CLOT): Demostró ser ampliamente superior a la Warfarina oral en trombosis oncológica — la quimioterapia causa náuseas e imposibilita mantener el INR estable. La Dalteparina SC con dosis por peso estabiliza la anticoagulación 6 meses sin las oscilaciones del INR.' }
+      },
+      references: {
+        pt: 'CLOT Trial (NEJM 2003 — Lee AY et al.); FRISC Trial (SCA); ASH Guidelines Trombose e Câncer 2021.',
+        es: 'CLOT Trial (NEJM 2003 — Lee AY et al.); FRISC Trial; Guías ASH Trombosis y Cáncer 2021.'
+      }
+    },
+
+    /* ── VITAMINA K1 (FITOMENADIONA) ───────────────────────────────── */
+    "vitamina_k": {
+      name: { pt: 'Vitamina K1 (Fitomenadiona)', es: 'Vitamina K1 (Fitomenadiona)' },
+      category: 'hematologia',
+      class: { pt: 'Fator de Coagulação Lipossolúvel / Antídoto dos Anticoagulantes Cumarínicos / Profilaxia Hemorrágica Neonatal', es: 'Factor de Coagulación Liposoluble / Antídoto de Anticoagulantes Cumarínicos / Profilaxis Hemorrágica Neonatal' },
+      indications: {
+        pt: ['Reversão de superdosagem de anticoagulantes cumarínicos (Varfarina / Acenocumarol) com ou sem sangramento ativo', 'Prevenção e tratamento da Doença Hemorrágica do Recém-Nascido (profilaxia obrigatória em sala de parto)', 'Hipoprotrombinemia por desnutrição severa, síndromes de má-absorção de gordura ou bloqueio biliar'],
+        es: ['Reversión de sobredosis de anticoagulantes cumarínicos (Warfarina / Acenocumarol) con o sin sangrado activo', 'Prevención de la Enfermedad Hemorrágica del Recién Nacido (obligatoria en sala de parto)', 'Hipoprotrombinemia por desnutrición o malabsorción de grasas']
+      },
+      commercialNames: { br: ['Kanakion', 'Kavit'], ar: ['Konakion'] },
+      presentation: { pt: ['Ampolas injetáveis: 10 mg/1 mL (uso adulto); 1 mg/0,1 mL (uso pediátrico). Comprimidos 10 mg (via oral)'], es: ['Ampollas inyectables: 10 mg (adulto); 1 mg (pediátrico). Comprimidos 10 mg (vía oral)'] },
+      mechanism: {
+        pt: 'A Forja dos Fatores de Sangue. A Vitamina K1 entra no fígado e atua como cofator essencial para a enzima gama-glutamil carboxilase. Esta enzima realiza a carboxilação (ativação estrutural) dos fatores de coagulação vitamina K-dependentes: II (Protrombina), VII, IX e X, além das proteínas C e S anticoagulantes. A Varfarina age bloqueando a reciclagem da vitamina K. Ao administrar a Vitamina K1, o fígado supera esse bloqueio competitivamente e retoma a fabricação dos fatores travados.',
+        es: 'Cofactor esencial para la gama-carboxilación (activación) de los factores de coagulación hepáticos: II, VII, IX y X (y proteínas C y S). La Warfarina bloquea el reciclaje de la Vitamina K. La Fitomenadiona administrada supera ese bloqueo de forma competitiva, restaurando la síntesis de los factores detenidos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Superdosagem de Varfarina SEM sangramento (RNI > 9): 1–2,5 mg VIA ORAL. Sangramento ativo grave / Emergência hemorrágica: 5–10 mg via INTRAVENOSA LENTA (diluída, infusão de 20–30 min) + Complexo Protrombínico 4 fatores IV para reversão imediata.',
+          es: 'Sobredosis de Warfarina SIN sangrado (RNI > 9): 1–2,5 mg VÍA ORAL. Sangrado activo grave: 5–10 mg vía INTRAVENOSA LENTA (diluida, infusión 20–30 min) + Complejo Protrombínico para reversión inmediata.'
+        },
+        pediatric: {
+          pt: 'Profilaxia neonatal obrigatória em sala de parto: 1 mg via INTRAMUSCULAR em dose única nas primeiras 6 horas de vida (previne hemorragia cerebral neonatal — salva a vida do bebê).',
+          es: 'Profilaxis neonatal obligatoria: 1 mg vía INTRAMUSCULAR dosis única en las primeras 6 horas de vida (previene hemorragia cerebral neonatal).'
+        }
+      },
+      administration: { pt: ['VIA IV EXIGE CUIDADO MÁXIMO: Diluir em SG5% ou SF 0,9% e infundir em no mínimo 20–30 minutos — NUNCA em bolus rápido (risco de Choque Anafilactoide letal pelos excipientes oleosos). A ampola pode ser administrada VIA ORAL (bebida com suco) — opção segura e eficaz para superdosagens assintomáticas.'], es: ['VÍA IV EXIGE CUIDADO MÁXIMO: Diluir y administrar en mínimo 20–30 minutos. ¡NUNCA en bolo rápido — riesgo de Choque Anafilactoide letal! La ampolla puede administrarse VÍA ORAL (bebida con jugo) — opción segura en sobredosis asintomáticas.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Em cirrose hepática terminal ou falência hepatocelular total, a Vitamina K é INÚTIL — as células hepáticas estão mortas e não conseguem fabricar os fatores mesmo com a vitamina presente. Tratar com Plasma Fresco Congelado ou Complexo Protrombínico diretamente.', es: 'En cirrosis terminal o insuficiencia hepática fulminante, la Vitamina K es INÚTIL — el hígado destruido no puede fabricar los factores. Tratar con Plasma Fresco Congelado o Complejo Protrombínico directamente.' } },
+      commonAdverseEffects: { pt: ['Dor, rubor e irritação local na aplicação IM', 'Sabor estranho transitório na boca', 'Rubor facial e sensação de calor durante a infusão IV'], es: ['Dolor e irritación local IM', 'Sabor extraño transitorio', 'Rubor facial y calor durante la infusión IV'] },
+      dangerousAdverseEffects: { pt: ['CHOQUE ANAFILACTOIDE IMEDIATO LETAL se injetado rapidamente na veia (pelos excipientes oleosos — lecitina e sais biliares da ampola)', 'Hiperbilirrubinemia / Icterícia nuclear em prematuros (se exceder doses)'], es: ['CHOQUE ANAFILACTOIDE INMEDIATO LETAL si se inyecta rápido por vía IV', 'Hiperbilirrubinemia en prematuros (si se exceden las dosis)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade confirmada à fitomenadiona ou aos excipientes oleosos da ampola'], es: ['Hipersensibilidad confirmada a la fitomenadiona o excipientes'] },
+        relative: { pt: ['Pacientes com próteses valvares mecânicas em superdosagem leve de Varfarina — evitar doses IV altas para não causar rebote trombótico severo e risco de trombose da válvula'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ERRO DO CHOQUE DA INJEÇÃO RÁPIDA: As ampolas de Kanakion usam veículo oleoso pesado (lecitina + sais biliares). Se injetada pura e rápida na veia, ocorre reação anafilactoide fulminante com parada cardíaca. Regra de ouro: injete SEMPRE de forma lenta e diluída — ou dê para o paciente BEBER a ampola (via oral), que funciona muito bem e é 100% seguro. CIRROSE: Vitamina K NÃO funciona em hepática grave — o fígado morto não fabrica fatores mesmo com a vitamina presente.', es: 'EL ERROR DEL CHOQUE POR INYECCIÓN RÁPIDA: Las ampollas de Konakion usan vehículo oleoso pesado. Inyectada pura y rápida genera choque anafilactoide con paro cardíaco. Regla de oro: infundir siempre lento y diluido — o hacer que el paciente BEBA la ampolla (vía oral, 100% seguro). CIRROSIS: Vitamina K NO funciona en falla hepática grave — el hígado muerto no fabrica factores.' }
+      },
+      references: {
+        pt: 'CHEST Antithrombotic Guidelines 2022; Protocolo de Reversão de Anticoagulação da SBH (Sociedade Brasileira de Hematologia); Lexicomp Pharmacology Guide; OMS — Handbook on Injectables.',
+        es: 'CHEST Antithrombotic Guidelines 2022; Guías SAH (Sociedad Argentina de Hematología); Lexicomp Pharmacology Guide.'
+      }
+    }
+
+  }); /* fim Object.assign HEMATOLOGIA_DRUGS_DB — BUILD 432 (fondaparinux + dalteparina + vitamina_k / Fitomenadiona) */
+
 })();
