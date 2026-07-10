@@ -8,7 +8,7 @@
      e quaisquer outros caches anteriores em dispositivos reais.
    BUILD 276 — Total Boot Shutdown (Patient Card Fix):
    • CACHE_VERSION bumped para 'medcases-v276' → invalida medcases-v275.
-   • ASSETS_TO_CACHE com query string ?v=437 sincronizada com index.html.
+   • ASSETS_TO_CACHE com query string ?v=438 sincronizada com index.html.
    • Mantém: skipWaiting() incondicional, limpeza agressiva no activate,
      clients.claim() após limpeza.
 
@@ -23,11 +23,11 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v437';
+const CACHE_VERSION   = 'medcases-v438';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
 /* ── Lista canônica de assets pré-cacheados no install ──────
-   BUILD 276: query strings sincronizadas com ?v=437 do index.html.
+   BUILD 276: query strings sincronizadas com ?v=438 do index.html.
    Inclui: 2 raiz + 14 css + 8 js + 16 database = 40 arquivos
 ─────────────────────────────────────────────────────────── */
 const ASSETS_TO_CACHE = [
@@ -38,63 +38,63 @@ const ASSETS_TO_CACHE = [
   './sw.js',
 
   /* ── CSS (14 arquivos — stack completa BUILD 275.1) ── */
-  './css/medcases-ux-v2.css?v=437',
-  './css/build233.css?v=437',
-  './css/build234-design-system.css?v=437',
-  './css/build235-layout.css?v=437',
-  './css/build236-hub-redesign.css?v=437',
-  './css/build237a-ux-refinement.css?v=437',
-  './css/build237b-flush-cards.css?v=437',
-  './css/build240b-fixes.css?v=437',
-  './css/build241-ux-pro.css?v=437',
-  './css/build243-fullscreen-overlay.css?v=437',
-  './css/build244-category-pills.css?v=437',
-  './css/build246-farmaco-modal-premium.css?v=437',
-  './css/build254-critical-fixes.css?v=437',
-  './css/build272-universal-design-system.css?v=437',
+  './css/medcases-ux-v2.css?v=438',
+  './css/build233.css?v=438',
+  './css/build234-design-system.css?v=438',
+  './css/build235-layout.css?v=438',
+  './css/build236-hub-redesign.css?v=438',
+  './css/build237a-ux-refinement.css?v=438',
+  './css/build237b-flush-cards.css?v=438',
+  './css/build240b-fixes.css?v=438',
+  './css/build241-ux-pro.css?v=438',
+  './css/build243-fullscreen-overlay.css?v=438',
+  './css/build244-category-pills.css?v=438',
+  './css/build246-farmaco-modal-premium.css?v=438',
+  './css/build254-critical-fixes.css?v=438',
+  './css/build272-universal-design-system.css?v=438',
 
   /* ── JS (8 arquivos — stack completa BUILD 275.1) ── */
-  './js/medcases-ux-v2.js?v=437',
-  './js/hub-accordion.js?v=437',
-  './js/build240b-accordion-fix.js?v=437',
-  './js/calculator-overlay.js?v=437',
-  './js/category-pills.js?v=437',
-  './js/elec-calc.js?v=437',
-  './js/deeplink-router.js?v=437',
-  './js/build272-reactive-engine.js?v=437',
-  './js/build283-accessory-bar.js?v=437',
+  './js/medcases-ux-v2.js?v=438',
+  './js/hub-accordion.js?v=438',
+  './js/build240b-accordion-fix.js?v=438',
+  './js/calculator-overlay.js?v=438',
+  './js/category-pills.js?v=438',
+  './js/elec-calc.js?v=438',
+  './js/deeplink-router.js?v=438',
+  './js/build272-reactive-engine.js?v=438',
+  './js/build283-accessory-bar.js?v=438',
 
   /* ── Database (20 arquivos — base clínica COMPLETA) ── */
-  './database/analgesicos.js?v=437',
-  './database/anticoag.js?v=437',
-  './database/antimicrobianos.js?v=437',
-  './database/cardio.js?v=437',
-  './database/endocrino.js?v=437',
-  './database/gastro.js?v=437',
-  './database/gastro_imuno.js?v=437',
-  './database/imuno_corticoide.js?v=437',
-  './database/endocrino_glp1.js?v=437',
-  './database/infusoes.js?v=437',
-  './database/interacoes.js?v=437',
-  './database/nefro.js?v=437',
-  './database/neuro.js?v=437',
-  './database/obesidade.js?v=437',
-  './database/pneumo.js?v=437',
-  './database/pneumologia.js?v=437',
-  './database/alergia_imunologia.js?v=437',
-  './database/pneumologia_otorrino.js?v=437',
-  './database/neurologia.js?v=437',
-  './database/prescricoes.js?v=437',
-  './database/psicofarmacos.js?v=437',
-  './database/psiquiatria.js?v=437',
-  './database/reumatologia.js?v=437',
-  './database/emergencia.js?v=437',
-  './database/infectologia.js?v=437',
-  './database/sedacao.js?v=437',
-  './database/hematologia.js?v=437',
-  './database/gastroenterologia.js?v=437',
-  './database/cardiologia.js?v=437',
-  './database/analgesia_opioides.js?v=437',
+  './database/analgesicos.js?v=438',
+  './database/anticoag.js?v=438',
+  './database/antimicrobianos.js?v=438',
+  './database/cardio.js?v=438',
+  './database/endocrino.js?v=438',
+  './database/gastro.js?v=438',
+  './database/gastro_imuno.js?v=438',
+  './database/imuno_corticoide.js?v=438',
+  './database/endocrino_glp1.js?v=438',
+  './database/infusoes.js?v=438',
+  './database/interacoes.js?v=438',
+  './database/nefro.js?v=438',
+  './database/neuro.js?v=438',
+  './database/obesidade.js?v=438',
+  './database/pneumo.js?v=438',
+  './database/pneumologia.js?v=438',
+  './database/alergia_imunologia.js?v=438',
+  './database/pneumologia_otorrino.js?v=438',
+  './database/neurologia.js?v=438',
+  './database/prescricoes.js?v=438',
+  './database/psicofarmacos.js?v=438',
+  './database/psiquiatria.js?v=438',
+  './database/reumatologia.js?v=438',
+  './database/emergencia.js?v=438',
+  './database/infectologia.js?v=438',
+  './database/sedacao.js?v=438',
+  './database/hematologia.js?v=438',
+  './database/gastroenterologia.js?v=438',
+  './database/cardiologia.js?v=438',
+  './database/analgesia_opioides.js?v=438',
 ];
 
 /* ============================================================

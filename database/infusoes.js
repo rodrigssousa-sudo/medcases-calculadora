@@ -1182,6 +1182,54 @@ function setInfusionMode(mode) {
   _infUpdateCopyBtn();
 }
 
+/* ══════════════════════════════════════════════════════════════════════
+   BUILD 407-UX PASSO 1 — _infWeightInlineUpdate()
+   Handler do campo de peso inline no banner "Peso não cadastrado".
+   ─────────────────────────────────────────────────────────────────────
+   Contrato:
+     1. Atualiza campo hidden #inf-weight (compat interna do motor).
+     2. Persiste window.patientData.weight + localStorage (mesmas chaves
+        que updateInlinePatientData() usa — compatibilidade total).
+     3. Chama _onPatientDataUpdated() → atualiza chip de peso, recalcula.
+     4. Auto-dismiss: quando peso ≥ 1, some com o banner e exibe o chip.
+        (O dismiss visual já é feito pelo _onPatientDataUpdated via
+         _onPatientDataUpdated → calculateInfusion → chip/missing toggle.)
+   Segurança: parseFloat garante que vírgula decimal (teclado BR) funcione.
+══════════════════════════════════════════════════════════════════════ */
+function _infWeightInlineUpdate(rawVal) {
+  /* Aceita tanto '70' quanto '70,5' (mobile BR) */
+  const parsed = parseFloat(String(rawVal).replace(',', '.'));
+  const peso   = (Number.isFinite(parsed) && parsed >= 1) ? parsed : null;
+
+  /* 1. Campo hidden — compatibilidade com calculateInfusion() */
+  const hiddenEl = document.getElementById('inf-weight');
+  if (hiddenEl) hiddenEl.value = peso !== null ? peso : '';
+
+  /* 2. Persiste no estado global + localStorage */
+  if (peso !== null) {
+    window.patientData = Object.assign(window.patientData || {}, { weight: peso });
+    try {
+      localStorage.setItem('medcases_hm_patient_v1',
+        JSON.stringify(window.patientData));
+      /* compat chave legada */
+      const ls = JSON.parse(localStorage.getItem('pacienteAtual') || '{}');
+      ls.peso = peso; ls.weight = peso;
+      localStorage.setItem('pacienteAtual', JSON.stringify(ls));
+    } catch(e) {}
+
+    /* 3. Notifica todos os módulos + auto-dismiss visual */
+    if (typeof _onPatientDataUpdated === 'function') {
+      _onPatientDataUpdated();
+    } else {
+      /* fallback: recalcula diretamente se _onPatientDataUpdated não existe */
+      calculateInfusion();
+    }
+  } else {
+    /* Digitando mas ainda não válido → recalcula sem persistir */
+    calculateInfusion();
+  }
+}
+
 /**
  * Motor de cálculo principal — chamado em todo oninput/onchange
  */
@@ -1533,6 +1581,106 @@ function _infusionOnLangChange() {
    Funções privadas (prefixo _) NÃO são expostas.
 ============================================================ */
 window.bicOpenDropdown          = bicOpenDropdown;
+/* ══════════════════════════════════════════════════════════════════════
+   BUILD 407-UX PASSO 2 — _infBidir(source)
+   Motor Bidirecional "Vasos Comunicantes" — Dose ⇔ Vazão (mL/h)
+   ─────────────────────────────────────────────────────────────────────
+   source: 'dose' | 'rate' | 'unit'
+     'dose' → calcula mL/h e escreve em #inf-current-rate
+     'rate' → calcula dose e escreve em #inf-dose
+     'unit' → mudança de unidade recalcula tudo a partir da dose
+
+   LOCK ANTI-LOOP: variável _infBidirLock garante que a escrita
+   programática de um campo não re-dispare o cálculo do outro.
+   Pattern: lock=true → escrever → lock=false — protegido por try/finally.
+
+   MATH (inversa de calculateInfusion):
+     mcgPorMl = (ampMg / volMl) * 1000
+     mcg/kg/min: mlH = (dose * peso * 60) / mcgPorMl
+     mcg/min:    mlH = (dose * 60)         / mcgPorMl
+     mg/kg/h:    mlH = (dose * peso)       / mgPorMl
+     ml/h:       mlH = dose
+
+   Reversa:
+     mcg/kg/min: dose = (mlH * mcgPorMl) / (peso * 60)
+     mcg/min:    dose = (mlH * mcgPorMl) / 60
+     mg/kg/h:    dose = (mlH * mgPorMl)  / peso
+     ml/h:       dose = mlH
+══════════════════════════════════════════════════════════════════════ */
+var _infBidirLock = false;
+
+function _infBidir(source) {
+  if (_infBidirLock) return;   /* evita loop infinito */
+
+  const ampMg  = parseFloat(document.getElementById('inf-amp-mg')?.value)      || 0;
+  const volMl  = parseFloat(document.getElementById('inf-vol-ml')?.value)      || 0;
+  const unidade = document.getElementById('inf-dose-unit')?.value || 'mcg/kg/min';
+  const pd      = window.patientData || {};
+  const pesoKg  = parseFloat(pd.weight) > 0 ? parseFloat(pd.weight) : 0;
+
+  /* Não há concentração definida → não pode bidirecionalizar; chama motor normal */
+  if (!ampMg || !volMl) {
+    calculateInfusion();
+    return;
+  }
+
+  const mgPorMl  = ampMg / volMl;
+  const mcgPorMl = mgPorMl * 1000;
+
+  const doseEl = document.getElementById('inf-dose');
+  const rateEl = document.getElementById('inf-current-rate');
+  if (!doseEl || !rateEl) { calculateInfusion(); return; }
+
+  try {
+    _infBidirLock = true;
+
+    if (source === 'dose' || source === 'unit') {
+      /* Dose → mL/h */
+      const dose = parseFloat(doseEl.value) || 0;
+      let mlH = NaN;
+      if (dose > 0) {
+        if (unidade === 'mcg/kg/min' && pesoKg > 0) mlH = (dose * pesoKg * 60) / mcgPorMl;
+        else if (unidade === 'mcg/min')              mlH = (dose * 60) / mcgPorMl;
+        else if (unidade === 'mg/kg/h' && pesoKg > 0) mlH = (dose * pesoKg) / mgPorMl;
+        else if (unidade === 'ml/h')                 mlH = dose;
+      }
+      /* Escreve mL/h só se válido (não apaga digitação parcial) */
+      if (Number.isFinite(mlH) && mlH > 0) {
+        rateEl.value = mlH.toFixed(2);
+      } else if (dose === 0) {
+        rateEl.value = '';
+      }
+
+    } else if (source === 'rate') {
+      /* mL/h → Dose */
+      const mlH = parseFloat(rateEl.value) || 0;
+      let dose = NaN;
+      if (mlH > 0) {
+        if (unidade === 'mcg/kg/min' && pesoKg > 0) dose = (mlH * mcgPorMl) / (pesoKg * 60);
+        else if (unidade === 'mcg/min')              dose = (mlH * mcgPorMl) / 60;
+        else if (unidade === 'mg/kg/h' && pesoKg > 0) dose = (mlH * mgPorMl)  / pesoKg;
+        else if (unidade === 'ml/h')                 dose = mlH;
+      }
+      if (Number.isFinite(dose) && dose > 0) {
+        /* Formata com dígitos significativos adequados */
+        doseEl.value = dose < 0.01
+          ? dose.toFixed(5)
+          : dose < 1
+          ? dose.toFixed(3)
+          : dose.toFixed(2);
+      } else if (mlH === 0) {
+        doseEl.value = '';
+      }
+    }
+
+  } finally {
+    _infBidirLock = false;
+  }
+
+  /* Sempre termina chamando o motor principal para atualizar o display */
+  calculateInfusion();
+}
+
 window.bicHandleDrugInput       = bicHandleDrugInput;
 window.bicHoverItem             = bicHoverItem;
 window.bicSelectDrug            = bicSelectDrug;
@@ -1553,3 +1701,5 @@ window.setInfusionMode          = setInfusionMode;
 window.calculateInfusion        = calculateInfusion;
 window.infCopyPrescription      = infCopyPrescription;
 window._infusionOnLangChange    = _infusionOnLangChange;
+window._infWeightInlineUpdate   = _infWeightInlineUpdate;
+window._infBidir                = _infBidir;

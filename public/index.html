@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=437" />
-  <link rel="stylesheet" href="css/build233.css?v=437" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=437" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=437" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=437" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=437" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=437" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=438" />
+  <link rel="stylesheet" href="css/build233.css?v=438" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=438" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=438" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=438" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=438" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=438" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=437" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=438" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=437" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=438" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=437" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=438" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=437" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=438" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=437" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=438" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=437" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=438" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=437" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=438" />
 
   <style>
     /* ============================================================ RESET */
@@ -4856,6 +4856,33 @@
       display:flex; gap:8px; align-items:flex-end; margin-top:8px;
     }
     .infusion-unit-row .infusion-input { flex:1; }
+
+    /* ── BUILD 407-UX: Vasos Comunicantes — linha bidirecional Dose ⇔ mL/h ── */
+    .infusion-bidir-row {
+      display:flex; align-items:flex-start; gap:8px; margin-top:6px;
+    }
+    .infusion-bidir-arrow {
+      /* Seta ⇅ centralizada verticalmente com o input */
+      flex-shrink:0; width:24px; font-size:16px; font-weight:700;
+      color:rgba(148,163,184,0.45); text-align:center;
+      padding-top:26px; /* alinha com o input abaixo do field-label */
+      line-height:1; user-select:none;
+    }
+    .infusion-bidir-field { flex:1; }
+    .infusion-bidir-field .infusion-field-label { margin-top:0; }
+    .infusion-bidir-unit-badge {
+      display:inline-block; font-size:9px; font-weight:700;
+      letter-spacing:0.5px; text-transform:uppercase;
+      background:rgba(148,163,184,0.10);
+      border:1px solid rgba(148,163,184,0.18);
+      border-radius:5px; padding:1px 5px; margin-left:4px;
+      color:var(--text-secondary); vertical-align:middle;
+    }
+    body.light-mode .infusion-bidir-unit-badge {
+      background:rgba(3,105,161,0.07); border-color:rgba(3,105,161,0.15);
+      color:#0369A1;
+    }
+    body.light-mode .infusion-bidir-arrow { color:rgba(3,105,161,0.30); }
     .infusion-unit-select {
       background:var(--bg-input); border:1px solid rgba(255,255,255,0.08);
       border-radius:10px; color:var(--text-secondary); font-family:'Inter',sans-serif;
@@ -7582,7 +7609,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=437" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=438" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -9658,17 +9685,19 @@
             <div class="infusion-weight-inline-title" data-i18n="guard_weight_title">Peso do Paciente (Obrigatório)</div>
             <div class="infusion-weight-inline-desc" data-i18n="guard_weight_desc">Necessário para doses peso-dependentes (mcg/kg/min, mg/kg/h).</div>
           </div>
+          <!-- BUILD 407-UX PASSO 1: oninput persiste no estado global + localStorage
+               e auto-dismiss o banner quando o peso for confirmado (≥1 kg). -->
           <input type="text" class="infusion-weight-inline-input" id="inf-weight-inline-input"
-            inputmode="decimal" pattern="[0-9.,]*" placeholder="kg"
+            inputmode="decimal" pattern="[0-9.,]*" placeholder="Ex: 70"
             autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
-            oninput="document.getElementById('inf-weight').value=this.value; calculateInfusion();" />
+            oninput="_infWeightInlineUpdate(this.value)" />
         </div>
         <!-- campo oculto mantido para compatibilidade interna do JS -->
         <input type="hidden" id="inf-weight" />
 
         <div class="infusion-field-label">
           <i class="fa-solid fa-vial"></i>
-          <span data-i18n="infusion_label_amp">Concentração da Ampola</span><span style="color:var(--text-secondary);font-size:10px;margin-left:4px">(mg)</span>
+          <span data-i18n="infusion_label_amp">Concentração da Ampola (mg)</span>
         </div>
         <input type="text" class="infusion-input" id="inf-amp-mg"
           inputmode="decimal" pattern="[0-9.,]*"
@@ -9678,7 +9707,7 @@
 
         <div class="infusion-field-label">
           <i class="fa-solid fa-flask"></i>
-          <span data-i18n="infusion_label_vol">Volume do Diluente</span><span style="color:var(--text-secondary);font-size:10px;margin-left:4px">(mL)</span>
+          <span data-i18n="infusion_label_vol">Volume do Diluente (mL)</span>
         </div>
         <input type="text" class="infusion-input" id="inf-vol-ml"
           inputmode="decimal" pattern="[0-9.,]*"
@@ -9686,18 +9715,22 @@
           placeholder="Ex: 250"
           oninput="calculateInfusion()" />
 
+        <!-- ── BUILD 407-UX PASSO 2: Vasos Comunicantes — Dose ⇔ Vazão bidirecional ── -->
+        <!-- Label unificado para o par reativo -->
         <div class="infusion-field-label">
           <i class="fa-solid fa-syringe"></i>
           <span data-i18n="infusion_label_dose">Dose Desejada</span>
         </div>
+
+        <!-- Linha 1: Dose + select de unidade (inalterada internamente) -->
         <div class="infusion-unit-row">
           <input type="text" class="infusion-input" id="inf-dose"
             inputmode="decimal" pattern="[0-9.,]*"
             autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
             placeholder="Ex: 0.1"
-            oninput="calculateInfusion()" />
+            oninput="_infBidir('dose')" />
           <select class="infusion-unit-select" id="inf-dose-unit"
-            onchange="calculateInfusion()" aria-label="Unidade da dose">
+            onchange="_infBidir('unit')" aria-label="Unidade da dose">
             <option value="mcg/kg/min" data-i18n="infusion_unit_mcgkgmin">mcg/kg/min</option>
             <option value="mcg/min"    data-i18n="infusion_unit_mcgmin">mcg/min</option>
             <option value="mg/kg/h"    data-i18n="infusion_unit_mgkgh">mg/kg/h</option>
@@ -9705,17 +9738,22 @@
           </select>
         </div>
 
-        <!-- ── Conversor reverso ── -->
-        <div class="infusion-sec-label" style="margin-top:18px" data-i18n="infusion_sec_reverse">Conversor Reverso (mL/h → Dose)</div>
-        <div class="infusion-field-label" style="margin-top:0">
-          <i class="fa-solid fa-rotate-left"></i>
-          <span data-i18n="infusion_label_rate">Vazão atual da bomba</span><span style="color:var(--text-secondary);font-size:10px;margin-left:4px">(mL/h)</span>
+        <!-- Linha 2: Vazão (mL/h) — integrada logo abaixo, mesmo visual -->
+        <div class="infusion-bidir-row">
+          <div class="infusion-bidir-arrow" aria-hidden="true">⇅</div>
+          <div class="infusion-bidir-field">
+            <div class="infusion-field-label" style="margin-bottom:5px">
+              <i class="fa-solid fa-gauge-high"></i>
+              <span data-i18n="infusion_label_rate_short">Vazão da Bomba</span>
+              <span class="infusion-bidir-unit-badge">mL/h</span>
+            </div>
+            <input type="text" class="infusion-input" id="inf-current-rate"
+              inputmode="decimal" pattern="[0-9.,]*"
+              autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
+              placeholder="Ex: 12.5"
+              oninput="_infBidir('rate')" />
+          </div>
         </div>
-        <input type="text" class="infusion-input" id="inf-current-rate"
-          inputmode="decimal" pattern="[0-9.,]*"
-          autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
-          placeholder="Ex: 12.5"
-          oninput="calculateInfusion()" />
 
         <!-- ── Alerta de Interação Medicamentosa (infusão) ── -->
         <div id="inf-interaction-alert"></div>
@@ -10612,6 +10650,7 @@ const i18n = {
     infusion_label_dose:'Dose Desejada',
     infusion_sec_reverse:'Conversor Reverso (mL/h → Dose)',
     infusion_label_rate:'Vazão atual da bomba (mL/h)',
+    infusion_label_rate_short:'Vazão da Bomba',
     infusion_result_label:'VAZÃO CALCULADA',
     infusion_dilution_label:'Diluição padrão:',
     infusion_disclaimer:'⚠️ Ferramenta de apoio clínico/educacional. Confirmar dose, diluição, compatibilidade, estabilidade e protocolo institucional antes de administrar.',
@@ -11003,6 +11042,7 @@ const i18n = {
     infusion_label_dose:'Dosis Deseada',
     infusion_sec_reverse:'Conversor Inverso (mL/h → Dosis)',
     infusion_label_rate:'Caudal actual de la bomba (mL/h)',
+    infusion_label_rate_short:'Caudal de la Bomba',
     infusion_result_label:'CAUDAL CALCULADO',
     infusion_dilution_label:'Dilución estándar:',
     infusion_disclaimer:'⚠️ Herramienta de apoyo clínico/educativo. Confirmar dosis, dilución, compatibilidad, estabilidad y protocolo institucional antes de administrar.',
@@ -23961,8 +24001,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=437"></script>
-<script src="database/analgesicos.js?v=437"></script>
+<script src="database/antimicrobianos.js?v=438"></script>
+<script src="database/analgesicos.js?v=438"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -24080,9 +24120,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=437', 'psico');
-    _loadScript('database/cardio.js?v=437',        'cardio');
-    _loadScript('database/interacoes.js?v=437',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=438', 'psico');
+    _loadScript('database/cardio.js?v=438',        'cardio');
+    _loadScript('database/interacoes.js?v=438',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -24092,51 +24132,51 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=437"></script>
-<script src="database/gastro.js?v=437"></script>
-<script src="database/gastro_imuno.js?v=437"></script>
-<script src="database/imuno_corticoide.js?v=437"></script>
-<script src="database/endocrino_glp1.js?v=437"></script>
-<script src="database/infusoes.js?v=437"></script>
-<script src="database/emergencia.js?v=437"></script>
-<script src="database/infectologia.js?v=437"></script>
-<script src="database/sedacao.js?v=437"></script>
-<script src="database/hematologia.js?v=437"></script>
-<script src="database/pneumologia.js?v=437"></script>
-<script src="database/gastroenterologia.js?v=437"></script>
-<script src="database/cardiologia.js?v=437"></script>
-<script src="database/analgesia_opioides.js?v=437"></script>
-<script src="database/alergia_imunologia.js?v=437"></script>
-<script src="database/pneumologia_otorrino.js?v=437"></script>
-<script src="database/neurologia.js?v=437"></script>
-<script src="database/prescricoes.js?v=437" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=438"></script>
+<script src="database/gastro.js?v=438"></script>
+<script src="database/gastro_imuno.js?v=438"></script>
+<script src="database/imuno_corticoide.js?v=438"></script>
+<script src="database/endocrino_glp1.js?v=438"></script>
+<script src="database/infusoes.js?v=438"></script>
+<script src="database/emergencia.js?v=438"></script>
+<script src="database/infectologia.js?v=438"></script>
+<script src="database/sedacao.js?v=438"></script>
+<script src="database/hematologia.js?v=438"></script>
+<script src="database/pneumologia.js?v=438"></script>
+<script src="database/gastroenterologia.js?v=438"></script>
+<script src="database/cardiologia.js?v=438"></script>
+<script src="database/analgesia_opioides.js?v=438"></script>
+<script src="database/alergia_imunologia.js?v=438"></script>
+<script src="database/pneumologia_otorrino.js?v=438"></script>
+<script src="database/neurologia.js?v=438"></script>
+<script src="database/prescricoes.js?v=438" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=437"></script>
+<script defer src="js/medcases-ux-v2.js?v=438"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=437"></script>
+<script defer src="js/hub-accordion.js?v=438"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=437"></script>
+<script defer src="js/build240b-accordion-fix.js?v=438"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=437"></script>
+<script defer src="js/calculator-overlay.js?v=438"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=437"></script>
+<script defer src="js/category-pills.js?v=438"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=437"></script>
+<script defer src="js/elec-calc.js?v=438"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=437"></script>
+<script defer src="js/deeplink-router.js?v=438"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=437"></script>
+<script defer src="js/build272-reactive-engine.js?v=438"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=437"></script>
+<script defer src="js/build283-accessory-bar.js?v=438"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
