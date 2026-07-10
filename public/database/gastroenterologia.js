@@ -482,4 +482,186 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
 
   }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 434 (domperidona — Procinético Seguro no Parkinson / Gastroparesia) */
 
+  /* ── BUILD 435 — Encerramento Histórico: Bloqueadores H2 + Protetores Mucosais ── */
+  if (typeof window.GASTROENTEROLOGIA_DRUGS_DB !== 'object' || window.GASTROENTEROLOGIA_DRUGS_DB === null) return;
+  Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
+
+/* ── FAMOTIDINA ──────────────────────────────────────────────────────── */
+    "famotidina": {
+      name: { pt: 'Famotidina', es: 'Famotidina' },
+      category: 'gastroenterologia',
+      class: { pt: 'Antagonista do Receptor H2 de Histamina / Antissecretor Gástrico', es: 'Antagonista del Receptor H2 de Histamina / Antisecretor Gástrico' },
+      indications: {
+        pt: ['Tratamento e prevenção de Úlcera Gástrica e Duodenal ativa', 'Doença do Refluxo Gastroesofágico (DRGE) leve a moderada', 'Profilaxia de aspiração ácida peri-operatória (Síndrome de Mendelson)', 'Alternativa segura aos IBPs em pacientes em uso de Clopidogrel (sem interferência no metabolismo hepático do antiagregante)'],
+        es: ['Tratamiento y prevención de Úlcera Gástrica y Duodenal', 'Enfermedad por Reflujo Gastroesofágico (ERGE) leve a moderada', 'Profilaxis de aspiración ácida perioperatoria', 'Alternativa segura a los IBP en pacientes con Clopidogrel']
+      },
+      commercialNames: { br: ['Famox', 'Famotadina EMS', 'Pepcid (Importado)'], ar: ['Famotidina', 'Taural', 'Gastrosedol'] },
+      presentation: { pt: ['Comprimidos revestidos 20 mg e 40 mg', 'Ampolas IV 20 mg/2 mL'], es: ['Comprimidos 20 mg y 40 mg', 'Ampollas IV 20 mg/2 mL'] },
+      mechanism: {
+        pt: 'O Bloqueador H2 Potente sem Interferência Hepática. Bloqueia competitivamente e de forma altamente seletiva os receptores de histamina H2 nas células parietais do estômago, suprimindo a secreção basal e estimulada de ácido clorídrico. É 20 a 50 vezes mais potente que a Cimetidina de primeira geração. Vantagem farmacológica crítica: NÃO inibe enzimas do citocromo P450 hepático, sendo isento das interações medicamentosas devastadoras da Cimetidina.',
+        es: 'Antagonista competitivo y reversible de los receptores H2 en las células parietales gástricas. Inhibe la secreción de ácido clorhídrico basal y estimulada. Posee una potencia 20-50 veces superior a la cimetidina sin sus efectos antiandrogénicos ni inhibición del citocromo P450.'
+      },
+      dose: {
+        adult: {
+          pt: 'Úlcera ativa / DRGE: 40 mg via oral ou IV UMA VEZ ao dia, à noite antes de deitar (ou 20 mg 12/12h). Manutenção: 20 mg à noite. Via IV: infundir lentamente em 2 min ou diluído em 50 mL SF em 15 min.',
+          es: 'Úlcera activa / ERGE: 40 mg vía oral o IV UNA VEZ al día por la noche (o 20 mg c/12h). Mantenimiento: 20 mg por la noche. IV: infundir lentamente en 2 min o diluido en 50 mL SF en 15 min.'
+        },
+        pediatric: {
+          pt: 'Refluxo / úlcera pediátrica: 0,5 mg a 1 mg/kg/dia dividido em 1 a 2 doses (máximo 40 mg/dia).',
+          es: '0,5 a 1 mg/kg/día dividido cada 12 horas (máximo 40 mg/día).'
+        }
+      },
+      administration: { pt: ['Via oral ou Intravenosa lenta. Bolus IV de 2 minutos ou infusão em 15 min diluído em SF 0,9%. Pode ser tomado com ou sem alimentos.'], es: ['Vía oral o IV lenta (bolo en 2 min o infusión de 15 min diluido en SF 0,9%).'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 50 mL/min: reduzir à metade (20 mg/noite) ou espaçar para a cada 48 horas. Se ClCr < 10: risco alto de acúmulo com delirium e psicose medicamentosa — use somente 20 mg a cada 72h com monitoramento.', es: 'Si ClCr < 50 mL/min: reducir a la mitad (20 mg/noche) o espaciar a cada 48h por riesgo de delirium y psicosis medicamentosa.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Cefaleia e tontura', 'Diarreia ou constipação leve', 'Boca seca'], es: ['Cefalea y mareo', 'Diarrea o estreñimiento leve', 'Boca seca'] },
+      dangerousAdverseEffects: { pt: ['DELIRIUM AGUDO e confusão mental (idosos com insuficiência renal — receptor H2 cerebral)', 'Arritmias e bradicardia severa (infusão IV rápida demais)', 'Agranulocitose (raríssimo)'], es: ['DELIRIUM AGUDO y confusión mental (ancianos con falla renal)', 'Bradicardia y arritmia por infusión IV rápida', 'Agranulocitosis'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida à famotidina ou outros antagonistas H2'], es: ['Hipersensibilidad al fármaco o a otros antagonistas H2'] },
+        relative: { pt: ['Insuficiência renal grave sem monitoramento de dose (risco de psicose medicamentosa)'], es: ['Insuficiencia renal grave sin ajuste de dosis'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A PSICOSE DO IDOSO POR RECEPTOR H2 CEREBRAL: Receptores H2 existem em pequenas quantidades no SNC. Em idosos com insuficiência renal que recebem doses plenas de Famotidina sem ajuste, a droga se acumula, atravessa a BHE e causa Delirium agressivo (o paciente arranca acessos e alucina). AJUSTE SEMPRE A DOSE PARA A FUNÇÃO RENAL.', es: 'PSICOSIS POR RECEPTOR H2 CEREBRAL EN ANCIANOS: Los receptores H2 también están en el SNC. En ancianos con falla renal que reciben dosis completas sin ajuste, la Famotidina se acumula y provoca Delirium agresivo. SIEMPRE ajustar por función renal.' }
+      },
+      references: {
+        pt: 'FDA Prescribing Information Pepcid (famotidina); Diretrizes FBG de Úlcera Péptica; Micromedex Drug Interactions; UpToDate H2 Antagonists.',
+        es: 'FDA Prescribing Information (Pepcid); Ficha Técnica CIMA Famotidina; Guías SAGE Gastroenterología; UpToDate H2 Antagonists.'
+      }
+    },
+
+/* ── CIMETIDINA ──────────────────────────────────────────────────────── */
+    "cimetidina": {
+      name: { pt: 'Cimetidina', es: 'Cimetidina' },
+      category: 'gastroenterologia',
+      class: { pt: 'Antagonista do Receptor H2 de Histamina (1ª Geração) / Inibidor Enzimático Multidroga', es: 'Antagonista del Receptor H2 de Histamina (1ª Generación) / Inhibidor Enzimático Multidroga' },
+      indications: {
+        pt: ['Úlcera gástrica ou duodenal e refluxo gastroesofágico (Medicamento histórico — hoje em desuso nos grandes centros devido ao perfil imenso de interações e efeitos androgênicos)', 'Síndrome de Zollinger-Ellison (uso histórico antes dos IBPs)'],
+        es: ['Úlcera péptica y reflujo (Fármaco histórico — hoy en desuso por sus interacciones y efectos antiandrogénicos)', 'Síndrome de Zollinger-Ellison (uso histórico previo a los IBP)']
+      },
+      commercialNames: { br: ['Tagamet', 'Cimetidina Genérico'], ar: ['Tagamet', 'Cimetin'] },
+      presentation: { pt: ['Comprimidos 200 mg, 300 mg e 400 mg', 'Ampolas IV 300 mg/2 mL'], es: ['Comprimidos 200 mg y 400 mg', 'Ampollas IV 300 mg/2 mL'] },
+      mechanism: {
+        pt: 'Antagonista clássico de primeira geração do receptor H2 gástrico — bloqueia a secreção ácida parietal. Seu grande problema farmacológico: é inibidor inespecífico e potente de praticamente todos os citocromos hepáticos (CYP1A2, CYP2C9, CYP2D6, CYP3A4), paralisando o metabolismo de dezenas de outros fármacos. Além disso, bloqueia competitivamente os receptores de andrógenos e eleva a prolactina — efeitos antiandrogênicos ausentes na Famotidina e Ranitidina.',
+        es: 'Antagonista H2 de primera generación. Además de reducir la acidez gástrica, es un potente inhibidor inespecífico del citocromo P450 hepático (CYP1A2, CYP2C9, CYP2D6, CYP3A4). Posee efectos antiandrogénicos directos por unión a receptores de testosterona y elevación de prolactina.'
+      },
+      dose: {
+        adult: {
+          pt: 'Histórica: 300 mg a 400 mg via oral ou IV, 2 a 4 vezes ao dia (esquema pesado de tomadas repetidas). Hoje raramente prescrita.',
+          es: 'Histórica: 300 a 400 mg vía oral o IV, 2 a 4 veces al día. Rara vez prescrita actualmente.'
+        },
+        pediatric: {
+          pt: '20 a 40 mg/kg/dia divididos a cada 6 horas (evitada na pediatria moderna).',
+          es: '20 a 40 mg/kg/día dividido cada 6 horas (evitada en pediatría moderna).'
+        }
+      },
+      administration: { pt: ['Uso oral (junto às refeições) ou Intravenoso lento hospitalar. Administrar com alimentos para reduzir efeitos GI.'], es: ['Uso oral con alimentos o IV lento. Administrar junto a las comidas.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr 10-50 mL/min: reduzir dose em 50%. ClCr < 10 mL/min: reduzir em 75% pelo altíssimo risco de psicose e encefalopatia medicamentosa.', es: 'ClCr 10-50 mL/min: reducir dosis al 50%. ClCr < 10: reducir al 25% por alto riesgo de encefalopatía.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar ou monitorar rigorosamente em hepatopatias graves — a inibição do CYP hepático pela própria droga agrava o colapso de depuração enzimática.', es: 'Evitar en insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['GINECOMASTIA SEVERA e dolorosa em homens no uso crônico (efeito antiandrogênico)', 'Disfunção erétil e perda de libido', 'Diarreia e mialgia'], es: ['GINECOMASTIA severa y dolorosa en hombres con uso crónico', 'Disfunción eréctil y pérdida de libido', 'Diarrea'] },
+      dangerousAdverseEffects: { pt: ['Delirium e alucinações severas em idosos com insuficiência renal', 'Toxicidade cruzada fatal de outros fármacos por travamento completo do CYP hepático (Varfarina→hemorragia; Fenitoína→coma; Teofilina→convulsão)'], es: ['Delirium y alucinaciones en ancianos', 'Toxicidad cruzada fatal por bloqueo del CYP (Warfarina→hemorragia; Fenitoína→coma; Teofilina→convulsión)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade à cimetidina', 'Uso concomitante com drogas de estreita janela terapêutica (Varfarina, Fenitoína, Teofilina, Lidocaína, Metoprolol)'], es: ['Hipersensibilidad al fármaco', 'Uso concomitante con Warfarina, Fenitoína o Teofilina'] },
+        relative: { pt: ['Idosos em polifarmácia (risco crítico de iatrogenia por inibição enzimática)'], es: ['Ancianos polifarmacia (riesgo crítico de yatrogenia enzimática)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O PESADELO DOS HOMENS E DA FARMÁCIA HOSPITALAR: A Cimetidina bloqueia os receptores de testosterona → ginecomastia real e dolorosa + disfunção erétil. E bloqueia o fígado inteiro → qualquer droga de janela estreita explode (Varfarina vira hemorrhagia; Fenitoína vira coma). Se precisar de bloqueador H2, mude para Famotidina. Se precisar de antiácido superior, use IBP.', es: 'LA PESADILLA DE LOS HOMBRES Y DE LA FARMACIA HOSPITALARIA: Bloquea receptores de testosterona → ginecomastia real y dolorosa + disfunción eréctil. Y bloquea el hígado entero → Warfarina provoca hemorragia; Fenitoína provoca coma. Use Famotidina o IBP en su lugar.' }
+      },
+      references: {
+        pt: 'FDA Historical Data Tagamet; Rendic S & Di Carlo FJ Drug Metab Rev 1997 (CYP450 inhibition profile); Tratado de Gastroenterologia USP; Goodman & Gilman Farmacologia.',
+        es: 'FDA Historical Data (Tagamet); Rendic S & Di Carlo FJ, Drug Metab Rev 1997; Goodman & Gilman Farmacología; Ficha Técnica CIMA Cimetidina.'
+      }
+    },
+
+/* ── SUCRALFATO ──────────────────────────────────────────────────────── */
+    "sucralfato": {
+      name: { pt: 'Sucralfato', es: 'Sucralfato' },
+      category: 'gastroenterologia',
+      class: { pt: 'Protetor de Mucosa Gástrica / Complexo de Sacarose Sulfatada e Hidróxido de Alumínio', es: 'Protector de la Mucosa Gástrica / Complejo de Sacarosa Sulfatada e Hidróxido de Aluminio' },
+      indications: {
+        pt: ['Tratamento a curto prazo de Úlcera Duodenal e Gástrica ativa', 'Gastrite de refluxo biliar', 'Profilaxia de úlceras de estresse em pacientes críticos intubados na UTI (vantagem: não eleva o pH gástrico — menor risco de pneumonia associada à ventilação vs IBPs)'],
+        es: ['Tratamiento a corto plazo de Úlcera Duodenal y Gástrica', 'Gastritis por reflujo biliar', 'Profilaxis de úlceras de estrés en pacientes críticos (ventaja: no eleva el pH — menor riesgo de neumonía vs IBP)']
+      },
+      commercialNames: { br: ['Sucrafilm', 'Sucralfato Medley'], ar: ['Netun', 'Sucralfato Beta'] },
+      presentation: { pt: ['Comprimidos mastigáveis 1 g', 'Suspensão oral 1 g/10 mL e 2 g/10 mL'], es: ['Comprimidos masticables 1 g', 'Suspensión oral 1 g/10 mL'] },
+      mechanism: {
+        pt: 'O Cimento da Úlcera. É um complexo de sacarose sulfatada ligada ao hidróxido de alumínio — não absorvido sistemicamente (ação puramente local). Em contato com o ácido gástrico (pH < 4,0), polimeriza-se em um gel viscoso e pegajoso com forte carga negativa. Esse gel adere seletivamente às proteínas de carga positiva expostas na base da ferida ulcerosa, criando uma barreira física protetora que impede o ácido e a pepsina de atingirem o tecido lesado — efetivamente "cimentando" a úlcera.',
+        es: 'Complejo de sacarosa sulfatada e hidróxido de aluminio, no absorbido sistémicamente (acción local exclusiva). En medio ácido (pH < 4), polimeriza en un gel viscoso con carga negativa que se adhiere selectivamente a las proteínas con carga positiva en el cráter ulceroso, formando una barrera física protectora contra el ácido y la pepsina.'
+      },
+      dose: {
+        adult: {
+          pt: 'Úlcera ativa: 1 g via oral QUATRO vezes ao dia — 1h antes das três principais refeições e ao deitar. Curso de 4 a 8 semanas. Profilaxia UTI: 1 g via sonda 6/6h.',
+          es: 'Úlcera activa: 1 g vía oral CUATRO veces al día — 1h antes de cada comida principal y al acostarse. Duración 4-8 semanas. Profilaxis UCI: 1 g por sonda c/6h.'
+        },
+        pediatric: {
+          pt: 'Segurança formal não estabelecida em menores de 12 anos — uso off-label supervisionado.',
+          es: 'No recomendado en menores de 12 años (uso off-label supervisado).'
+        }
+      },
+      administration: { pt: ['TOMAR RIGOROSAMENTE COM ESTÔMAGO VAZIO — 1 HORA ANTES DAS REFEIÇÕES. O meio ácido livre de alimentos é imprescindível para a polimerização e aderência do gel na úlcera. Não engolir o comprimido inteiro — mastigar completamente ou dissolver em água antes de ingerir.'], es: ['TOMAR CON ESTÓMAGO VACÍO — 1 HORA ANTES DE LAS COMIDAS. El medio ácido sin alimentos es imprescindible para la polimerización del gel. No tragar el comprimido entero — masticar completamente o disolver en agua.'] },
+      renalAdjustment: { required: true, message: { pt: 'Contém Alumínio. Em DRC terminal (ClCr < 30 mL/min) ou em diálise: uso crônico pode causar absorção e acúmulo de Alumínio com encefalopatia e osteomalacia. Usar com cautela extrema e por tempo mínimo necessário.', es: 'Contiene Aluminio. En ERC terminal (ClCr < 30) o diálisis: el uso crónico puede provocar acumulación de Aluminio con encefalopatía y osteomalacia. Usar con máxima cautela.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não é absorvido sistemicamente — sem necessidade de ajuste hepático.', es: 'Sin absorción sistémica — sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Constipação intestinal marcada (o alumínio retarda o trânsito — afeta ~2% dos usuários)', 'Boca seca', 'Náusea leve'], es: ['Estreñimiento marcado (el aluminio enlentece el tránsito)', 'Boca seca', 'Náusea leve'] },
+      dangerousAdverseEffects: { pt: ['Formação de Bezoar gástrico (massa de gel solidificado que obstrui o estômago em pacientes com gastroparesia ou sonda enteral obstruída)', 'Encefalopatia por Alumínio em pacientes renais crônicos (uso prolongado)'], es: ['Bezoar gástrico (masa sólida de gel que obstruye el estómago en gastroparesia o sonda enteral)', 'Encefalopatía por Aluminio en ERC crónica con uso prolongado'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade documentada ao sucralfato ou alumínio'], es: ['Hipersensibilidad al sucralfato o aluminio'] },
+        relative: { pt: ['Gastroparesia severa ou sonda enteral com motilidade lenta (risco de bezoar e obstrução)'], es: ['Gastroparesia severa o sonda enteral con motilidad lenta'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ESCUDO QUE SEQUESTRA OUTROS REMÉDIOS: O gel do Sucralfato protege a úlcera do ácido, mas também capta e adsorve qualquer outro fármaco ingerido no mesmo horário (Digoxina, Varfarina, Levotiroxina, Quinolonas, Tetraciclinas). As moléculas sequestradas saem intactas nas fezes sem nenhum efeito terapêutico. REGRA OURO: tome qualquer outro medicamento pelo menos 2 horas ANTES do Sucralfato.', es: 'EL ESCUDO QUE SECUESTRA OTROS FÁRMACOS: El gel del Sucralfato atrapa cualquier fármaco ingerido al mismo tiempo (Digoxina, Warfarina, Levotiroxina, Quinolonas, Tetraciclinas). Las moléculas salen en las heces sin efecto terapéutico. REGLA DE ORO: tome cualquier medicamento al menos 2 horas ANTES del Sucralfato.' }
+      },
+      references: {
+        pt: 'FDA Label Carafate (sucralfato); Cook DJ et al., N Engl J Med 1998;338:791-7 (SUP Trial — Sucralfate vs Ranitidina em UTI); Diretrizes WGO Úlcera Péptica; Bula Sucrafilm Anvisa.',
+        es: 'FDA Label Carafate; Cook DJ et al., N Engl J Med 1998;338:791-7 (SUP Trial UCI); Guías WGO Úlcera Péptica; Ficha Técnica CIMA Sucralfato.'
+      }
+    },
+
+/* ── SUBSALICILATO DE BISMUTO ────────────────────────────────────────── */
+    "subsalicilato_de_bismuto": {
+      name: { pt: 'Subsalicilato de Bismuto', es: 'Subsalicilato de Bismuto' },
+      category: 'gastroenterologia',
+      class: { pt: 'Agente Antidiarreico e Antiemético Mucosal / Antimicrobiano e Antissecretor Local', es: 'Agente Antidiarreico y Antiemético Mucosal / Antimicrobiano y Antisecretor Local' },
+      indications: {
+        pt: ['Alívio de diarreia aguda inespecífica e Diarreia do Viajante', 'Tratamento adjuvante de dispepsia (azia, queimação, náuseas)', 'Componente do esquema quádruplo de resgate para erradicação de Helicobacter pylori resistente (Bismuto + IBP + Metronidazol + Tetraciclina)'],
+        es: ['Diarrea aguda inespecífica y Diarrea del Viajero', 'Dispepsia (acidez, náuseas)', 'Esquema cuádruple de rescate para erradicación de H. pylori resistente']
+      },
+      commercialNames: { br: ['Pepto-Bismol (importado)', 'Bismu-Jet (Assoc)'], ar: ['Pepto-Bismol', 'Bismuto Bisil'] },
+      presentation: { pt: ['Suspensão oral 17,6 mg/mL (262 mg/15 mL)', 'Comprimidos mastigáveis 262 mg'], es: ['Suspensión oral 17,6 mg/mL', 'Comprimidos masticables 262 mg'] },
+      mechanism: {
+        pt: 'Duplo Ataque Mucosal. O ácido gástrico cliva a molécula em dois componentes ativos: (1) Oxicloreto de Bismuto — bactericida direto contra H. pylori e adsorção de enterotoxinas bacterianas (ETEC, etc.); (2) Ácido Salicílico — inibe a COX intestinal, reduzindo síntese de prostaglandinas inflamatórias e secreção de fluidos no lúmen intestinal, "secando" a diarreia rapidamente.',
+        es: 'El ácido gástrico disocia la molécula en: (1) Oxicloruro de Bismuto — bactericida contra H. pylori y adsorción de enterotoxinas; (2) Ácido Salicílico — inhibe COX intestinal, reduciendo prostaglandinas inflamatorias y secreción luminal de fluidos, "secando" la diarrea.'
+      },
+      dose: {
+        adult: {
+          pt: 'Diarreia/Azia: 524 mg (2 comprimidos mastigáveis ou 30 mL de suspensão) via oral a cada 30–60 min conforme necessidade. TETO ABSOLUTO: 8 doses (4,2 g) ao dia, por no máximo 2 dias consecutivos.',
+          es: 'Diarrea/Acidez: 524 mg vía oral cada 30-60 min según necesidad. TECHO ABSOLUTO: 8 dosis (4,2 g) al día, máximo 2 días consecutivos.'
+        },
+        pediatric: {
+          pt: 'ABSOLUTAMENTE CONTRAINDICADO em menores de 12 anos (componente salicilato → Síndrome de Reye fatal).',
+          es: 'ABSOLUTAMENTE CONTRAINDICADO en menores de 12 años (componente salicilato → Síndrome de Reye fatal).'
+        }
+      },
+      administration: { pt: ['Comprimidos: mastigar completamente antes de engolir. Suspensão: agitar bem antes de usar. Uso estritamente oral — para uso a curto prazo (máximo 2 dias consecutivos na diarreia aguda).'], es: ['Comprimidos: masticar completamente. Suspensión: agitar bien antes de usar. Uso estrictamente oral a corto plazo.'] },
+      renalAdjustment: { required: true, message: { pt: 'Evitar uso crônico ou em altas doses em insuficiência renal avançada — risco de absorção sistêmica de Bismuto com neurotoxicidade (encefalopatia pelo bismuto).', es: 'Evitar uso crónico en insuficiencia renal avanzada por riesgo de absorción sistémica de Bismuto y encefalopatía.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['LÍNGUA NEGRA (reação inofensiva do Bismuto com enxofre da saliva — Sulfeto de Bismuto)', 'FEZES NEGRAS e endurecidas (idem)', 'Constipação transitória'], es: ['LENGUA NEGRA (reacción del Bismuto con el azufre salival — inocua)', 'HECES NEGRAS (ídem)', 'Estreñimiento transitorio'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME DE REYE em crianças com infecção viral (encefalopatia hepática fulminante)', 'Salicilismo por superdose (zumbido no ouvido, surdez, acidose respiratória)', 'Encefalopatia pelo Bismuto (uso crônico em renais — alucinações, convulsões)'], es: ['SÍNDROME DE REYE en niños con infección viral', 'Salicilismo por sobredosis (zumbido en oídos, acidosis respiratoria)', 'Encefalopatía por Bismuto (uso crónico en ERC)'] },
+      contraindications: {
+        absolute: { pt: ['Menores de 12 anos com gripe, varicela ou outros vírus (risco de morte por Síndrome de Reye)', 'Alergia grave ao AAS ou qualquer salicilato', 'Sangramento gastrointestinal ativo'], es: ['Menores de 12 años con gripe, varicela u otras infecciones virales (Síndrome de Reye)', 'Alergia grave al AAS o salicilatos', 'Sangrado digestivo activo'] },
+        relative: { pt: ['Uso concomitante com anticoagulantes (Varfarina) ou antiplaquetários — somação de efeito antiplaquetário do salicilato'], es: ['Uso con anticoagulantes (Warfarina) o antiplaquetarios — potenciación del efecto antiagregante'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O SUSTO DA LÍNGUA E FEZES PRETAS (NUNCA CONFUNDIR COM HEMORRAGIA): Ao tomar Pepto-Bismol, o Bismuto reage com o enxofre da saliva e das bactérias do cólon formando Sulfeto de Bismuto preto como carvão. A língua fica preta e as fezes viram carvão escuro. Muitos pacientes correm ao pronto-socorro convictos de estar tendo uma hemorragia digestiva alta. É um efeito cosmético totalmente INOFENSIVO que desaparece ao cessar o uso. Orienta o paciente antes.', es: 'EL SUSTO DE LA LENGUA Y HECES NEGRAS (NUNCA CONFUNDIR CON HEMORRAGIA): El Bismuto reacciona con el azufre salival y del colon, formando Sulfuro de Bismuto (negro como carbón). La lengua se tiñe de negro y las heces se oscurecen. Pacientes acuden urgencias creyendo sufrir una hemorragia masiva. Es un efecto INOFENSIVO que desaparece al suspender el uso.' }
+      },
+      references: {
+        pt: 'FDA Prescribing Data Pepto-Bismol; Chey WD et al., ACG Guidelines H. pylori 2017; CDC Yellow Book Chapter Travelers Diarrhea; Gorbach SL, Rev Infect Dis 1990 (bismuto na diarreia do viajante).',
+        es: 'FDA Prescribing Data (Pepto-Bismol); Chey WD et al., ACG Guidelines H. pylori 2017; CDC Yellow Book; Gorbach SL, Rev Infect Dis 1990.'
+      }
+    }
+
+  }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 435 (famotidina + cimetidina + sucralfato + subsalicilato_de_bismuto — Encerramento Histórico Módulo Gastro) */
+
 })();
