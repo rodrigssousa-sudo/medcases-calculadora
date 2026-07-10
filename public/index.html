@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=403" />
-  <link rel="stylesheet" href="css/build233.css?v=403" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=403" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=403" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=403" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=403" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=403" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=404" />
+  <link rel="stylesheet" href="css/build233.css?v=404" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=404" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=404" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=404" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=404" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=404" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=403" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=404" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=403" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=404" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=403" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=404" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=403" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=404" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=403" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=404" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=403" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=404" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=403" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=404" />
 
   <style>
     /* ============================================================ RESET */
@@ -2274,6 +2274,17 @@
     .fd-close:active { background:rgba(255,255,255,0.15); }
 
     .fd-body { padding:14px 16px; display:flex; flex-direction:column; gap:14px; }
+
+    /* BUILD 404 PATCH C2 — Font-size cap no painel de fichas completas.
+       Impede textos desproporcionais (ex: 50px pneumo) no modal de detalhes.
+       Regra de ouro de plantão: títulos ≤ 18px, corpo ≤ 14px, line-height 1.4. */
+    #fd-body h1, #fd-body h2, #fd-body h3, #fd-body h4, #fd-body h5, #fd-body h6,
+    #fd-modal .fd-section-label, #fd-modal .fd-dose-hero-label { max-font-size: 18px; }
+    #fd-body * { max-font-size: 14px; line-height: 1.4; }
+    /* Exceções explícitas para elementos que precisam de tamanho controlado */
+    #fd-body .fd-header-name   { font-size: clamp(13px, 3.5vw, 18px) !important; line-height: 1.2 !important; }
+    #fd-body .fd-dose-val      { font-size: 13px !important; line-height: 1.4 !important; }
+    #fd-body .fd-section-text  { font-size: 12.5px !important; line-height: 1.4 !important; }
 
     /* Bloco de dose hero */
     /* ============================================================
@@ -7552,7 +7563,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=403" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=404" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -9542,48 +9553,41 @@
             onclick="setInfusionMode('drug')" data-i18n="infusion_mode_drug">Selecionar Droga</button>
         </div>
 
-        <!-- ── Campo de droga no modo Livre ── -->
+        <!-- ── Input unificado de droga — BUILD 404 PATCH B2
+             Input único inteligente: serve para ambos os modos (Livre e Droga).
+             Em modo Livre: identifica a droga na prescrição impressa.
+             Em modo Droga: conectado ao autocomplete do banco de dados (bicHandleDrugInput).
+             O antigo #inf-drug-panel com #inf-drug-search REMOVIDO para eliminar UX duplicada. ── -->
         <div class="inf-free-drug-wrap" id="inf-free-drug-wrap">
           <div class="inf-free-drug-label">
             <i class="fa-solid fa-pills"></i>
             <span data-i18n="infusion_free_drug_label">Droga</span>
             <span class="optional-tag" data-i18n="infusion_free_drug_optional">opcional</span>
           </div>
-          <input type="text" class="inf-free-drug-input" id="inf-free-drug-name"
-            placeholder="Ex: Noradrenalina, Dobutamina…"
-            autocomplete="off" spellcheck="false"
-            aria-label="Nome da droga para identificação na prescrição" />
-        </div>
-
-        <!-- ── Painel de busca de droga (oculto por padrão) ── -->
-        <div class="infusion-drug-panel" id="inf-drug-panel">
-          <div class="infusion-sec-label" style="margin-bottom:10px" data-i18n="infusion_sec_drug">Droga da Base de Dados</div>
-
-          <!-- Autocomplete custom -->
-          <div class="inf-autocomplete-wrap" id="inf-autocomplete-wrap">
-            <i class="fa-solid fa-pills inf-autocomplete-icon"></i>
-            <input type="text"
-              class="inf-autocomplete-input" id="inf-drug-search"
-              placeholder="Buscar ou digitar droga…"
+          <!-- input unificado: id preservado + novos attrs de autocomplete para modo Droga -->
+          <div class="inf-autocomplete-wrap" id="inf-autocomplete-wrap" style="position:relative">
+            <input type="text" class="inf-free-drug-input" id="inf-free-drug-name"
+              placeholder="Ex: Noradrenalina, Dobutamina…"
               autocomplete="off" spellcheck="false"
-              oninput="bicHandleDrugInput(this.value)"
+              aria-label="Buscar ou nomear droga"
+              oninput="bicHandleDrugInput(this.value); _infUpdateFreeDrugField && _infUpdateFreeDrugField()"
               onfocus="bicOpenDropdown()"
               onkeydown="bicKeyNav(event)"
-              aria-label="Buscar droga de infusão"
               aria-autocomplete="list" aria-expanded="false" />
             <button class="inf-autocomplete-clear" id="inf-drug-clear"
-              onclick="bicClearDrug()" tabindex="-1" aria-label="Limpar">
+              onclick="bicClearDrug(); document.getElementById('inf-free-drug-name').value=''"
+              tabindex="-1" aria-label="Limpar" style="display:none">
               <i class="fa-solid fa-xmark"></i>
             </button>
-            <!-- Lista suspensa -->
-            <div class="inf-dropdown-list" id="inf-drug-dropdown" role="listbox">
-              <!-- Populado por JS -->
-            </div>
+            <!-- Lista suspensa do autocomplete -->
+            <div class="inf-dropdown-list" id="inf-drug-dropdown" role="listbox"><!-- Populado por JS --></div>
           </div>
-
-          <!-- select oculto — mantido para compatibilidade com applyInfusionDrug() -->
-          <select id="inf-drug-select" style="display:none" onchange="applyInfusionDrug()"></select>
         </div>
+
+        <!-- select oculto — mantido para compatibilidade com applyInfusionDrug() -->
+        <select id="inf-drug-select" style="display:none" onchange="applyInfusionDrug()"></select>
+        <!-- inf-drug-panel stub — mantido para setInfusionMode() que referencia panel.classList -->
+        <div id="inf-drug-panel" style="display:none" aria-hidden="true"></div>
 
         <!-- ══ PRESETS DE PROTOCOLO PADRÃO-Ouro ══ -->
         <!-- bomba-infusion-container: recebe data-current-lang do Watcher global -->
@@ -23255,21 +23259,40 @@ document.addEventListener('DOMContentLoaded', () => {
       tmp.innerHTML = newHtml;
       existing.replaceWith(tmp.firstElementChild);
     } else {
-      /* Primeira injeção: insere após .fd-dose-hero, antes do primeiro .fd-section */
-      const anchor = body.querySelector('.fd-dose-hero');
-      if (anchor && anchor.nextSibling) {
+      /* Primeira injeção — BUILD 404 PATCH A: blindagem total contra NotFoundError.
+         insertBefore() lança "The node before which the new node is to be inserted
+         is not a child of this node" quando anchor.nextSibling é um nó órfão/stale
+         após re-renders do modal (ex: Insulinas array-schema). Usamos body.contains()
+         antes de cada insertBefore e envolvemos tudo em try/catch absoluto. */
+      try {
+        const anchor = body.querySelector('.fd-dose-hero');
         const tmp = document.createElement('div');
         tmp.innerHTML = newHtml;
-        body.insertBefore(tmp.firstElementChild, anchor.nextSibling);
-      } else {
-        const firstSection = body.querySelector('.fd-section');
-        if (firstSection) {
-          const tmp = document.createElement('div');
-          tmp.innerHTML = newHtml;
-          body.insertBefore(tmp.firstElementChild, firstSection);
+        const newNode = tmp.firstElementChild;
+        if (anchor && anchor.nextSibling && body.contains(anchor.nextSibling)) {
+          /* Caminho ideal: logo após o bloco hero de posologia */
+          body.insertBefore(newNode, anchor.nextSibling);
+        } else if (anchor && body.contains(anchor)) {
+          /* Fallback 1: insere após o hero usando insertAdjacentElement (sempre seguro) */
+          anchor.insertAdjacentElement('afterend', newNode);
         } else {
-          body.insertAdjacentHTML('afterbegin', newHtml);
+          /* Fallback 2: sem hero → insere antes do primeiro fd-section */
+          const firstSection = body.querySelector('.fd-section');
+          if (firstSection && body.contains(firstSection)) {
+            body.insertBefore(newNode, firstSection);
+          } else {
+            /* Fallback 3: corpo vazio ou DOM rebuilt — appenda ao fim */
+            body.appendChild(newNode);
+          }
         }
+      } catch (e) {
+        /* Nó órfão detectado — tenta appendChild como último recurso */
+        console.warn('[Renal Shield] Ignorando nó órfão no DOM:', e.message);
+        try {
+          const tmp2 = document.createElement('div');
+          tmp2.innerHTML = newHtml;
+          body.appendChild(tmp2.firstElementChild);
+        } catch (e2) { /* silencia falha total */ }
       }
     }
   };
@@ -23811,8 +23834,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=403"></script>
-<script src="database/analgesicos.js?v=403"></script>
+<script src="database/antimicrobianos.js?v=404"></script>
+<script src="database/analgesicos.js?v=404"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -23926,9 +23949,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=403', 'psico');
-    _loadScript('database/cardio.js?v=403',        'cardio');
-    _loadScript('database/interacoes.js?v=403',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=404', 'psico');
+    _loadScript('database/cardio.js?v=404',        'cardio');
+    _loadScript('database/interacoes.js?v=404',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -23938,51 +23961,51 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=403"></script>
-<script src="database/gastro.js?v=403"></script>
-<script src="database/gastro_imuno.js?v=403"></script>
-<script src="database/imuno_corticoide.js?v=403"></script>
-<script src="database/endocrino_glp1.js?v=403"></script>
-<script src="database/infusoes.js?v=403"></script>
-<script src="database/emergencia.js?v=403"></script>
-<script src="database/infectologia.js?v=403"></script>
-<script src="database/sedacao.js?v=403"></script>
-<script src="database/hematologia.js?v=403"></script>
-<script src="database/pneumologia.js?v=403"></script>
-<script src="database/gastroenterologia.js?v=403"></script>
-<script src="database/cardiologia.js?v=403"></script>
-<script src="database/analgesia_opioides.js?v=403"></script>
-<script src="database/alergia_imunologia.js?v=403"></script>
-<script src="database/pneumologia_otorrino.js?v=403"></script>
-<script src="database/neurologia.js?v=403"></script>
-<script src="database/prescricoes.js?v=403" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=404"></script>
+<script src="database/gastro.js?v=404"></script>
+<script src="database/gastro_imuno.js?v=404"></script>
+<script src="database/imuno_corticoide.js?v=404"></script>
+<script src="database/endocrino_glp1.js?v=404"></script>
+<script src="database/infusoes.js?v=404"></script>
+<script src="database/emergencia.js?v=404"></script>
+<script src="database/infectologia.js?v=404"></script>
+<script src="database/sedacao.js?v=404"></script>
+<script src="database/hematologia.js?v=404"></script>
+<script src="database/pneumologia.js?v=404"></script>
+<script src="database/gastroenterologia.js?v=404"></script>
+<script src="database/cardiologia.js?v=404"></script>
+<script src="database/analgesia_opioides.js?v=404"></script>
+<script src="database/alergia_imunologia.js?v=404"></script>
+<script src="database/pneumologia_otorrino.js?v=404"></script>
+<script src="database/neurologia.js?v=404"></script>
+<script src="database/prescricoes.js?v=404" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=403"></script>
+<script defer src="js/medcases-ux-v2.js?v=404"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=403"></script>
+<script defer src="js/hub-accordion.js?v=404"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=403"></script>
+<script defer src="js/build240b-accordion-fix.js?v=404"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=403"></script>
+<script defer src="js/calculator-overlay.js?v=404"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=403"></script>
+<script defer src="js/category-pills.js?v=404"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=403"></script>
+<script defer src="js/elec-calc.js?v=404"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=403"></script>
+<script defer src="js/deeplink-router.js?v=404"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=403"></script>
+<script defer src="js/build272-reactive-engine.js?v=404"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=403"></script>
+<script defer src="js/build283-accessory-bar.js?v=404"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
