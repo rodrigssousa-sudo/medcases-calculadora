@@ -1167,6 +1167,17 @@ const DRUG_CLASSES = {
     "amiodarona", "sotalol", "quinidina", "disopiramida", "procainamida",
     "haloperidol", "tioridazina", "azitromicina", "claritromicina",
     "ciprofloxacino", "levofloxacino", "hidroxicloroquina"
+  ],
+
+  /* BUILD 413 — Inibidores VMAT2 (Huntington e Discinesia Tardia) */
+  "$classe_inibidores_vmat2": [
+    "tetrabenazina", "deutetrabenazina", "valbenazina"
+  ],
+
+  /* BUILD 413 — Antipsicóticos Típicos (Bloqueadores D2 clássicos) */
+  "$classe_antipsicoticos_tipicos": [
+    "haloperidol", "clorpromazina", "tioridazina", "flufenazina",
+    "trifluoperazina", "perfenazina", "pimozida", "droperidol"
   ]
 
 };
@@ -23193,9 +23204,58 @@ const INTERACOES_DB = {
         es: "MANDATORIO: Si necesita usar inhibidores potentes del CYP3A4, la dosis de Pimavanserina DEBE SER CORTADA A LA MITAD (de 34 mg a 17 mg al día)."
       }
     }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 413 — Proteção da ELA e Esvaziadores de Dopamina (VMAT2)
+     $classe_inibidores_vmat2 | riluzol
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── INIBIDORES VMAT2 (Tetrabenazina, Deutetrabenazina, Valbenazina) ── */
+  "$classe_inibidores_vmat2": {
+    "$classe_imaos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "TEMPESTADE AUTONÔMICA FATAL. Os Inibidores VMAT2 esvaziam a Dopamina, Noradrenalina e Serotonina das vesículas, jogando-as no citoplasma. Se o paciente estiver usando Inibidores da MAO (Tranilcipromina, Selegilina), essas monoaminas não são destruídas. O resultado é um transbordamento letal causando Crise Hipertensiva maligna e Síndrome Serotoninérgica de forma simultânea.",
+        es: "TORMENTA AUTONÓMICA FATAL. Los Inhibidores VMAT2 vacían Dopamina y Noradrenalina, lanzándolas al citoplasma. Si el paciente usa Inhibidores de la MAO, no son destruidas. El resultado es un desbordamiento letal causando Crisis Hipertensiva y Síndrome Serotoninérgico simultáneo."
+      },
+      conduta: {
+        pt: "A associação é CONTRAINDICADA na bula. É mandatório esperar no mínimo 20 dias após a interrupção de um IMAO antes de dar o primeiro comprimido para a discinesia ou coreia.",
+        es: "La asociación es CONTRAINDICADA. Es mandatorio esperar al menos 20 días tras la interrupción de un IMAO antes de dar el primer comprimido para la discinesia."
+      }
+    },
+    "$classe_antipsicoticos_tipicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "PARALISIA MOTORA CRUZADA (Parkinsonismo Induzido e SNM). Inibidores do VMAT2 sugam a dopamina. Antipsicóticos (Haldol) bloqueiam os receptores da pouca dopamina que restou. Administrá-los juntos cria um 'buraco negro' de dopamina nas vias nigroestriatais. O paciente fica em estado de estátua (Parkinsonismo rígido) e corre enorme risco de Síndrome Neuroléptica Maligna.",
+        es: "PARÁLISIS MOTORA CRUZADA. Los VMAT2 succionan la dopamina. Antipsicóticos (Haldol) bloquean los receptores de la poca dopamina que queda. Crean un 'agujero negro' de dopamina. El paciente queda hecho estatua (Parkinsonismo rígido) con riesgo de Síndrome Neuroléptico Maligno."
+      },
+      conduta: {
+        pt: "Monitoramento extremo. Curiosamente, a Discinesia Tardia (alvo do VMAT2) é causada justamente pelos antipsicóticos. O médico psiquiatra deve equilibrar as doses de ambas as drogas num fio de navalha para que o paciente não alucine (sem antipsicótico) e não se contorça (sem VMAT2).",
+        es: "Monitorización extrema. El psiquiatra debe equilibrar las dosis de ambas drogas en un hilo de navaja para que el paciente no alucine y no se contorsione."
+      }
+    }
+  },
+
+  /* ── RILUZOL (O Fator Ambiental CYP1A2) ── */
+  "riluzol": {
+    "tabagismo": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "ANULAÇÃO PELO CIGARRO. A fumaça do tabaco e os hidrocarbonetos aromáticos são poderosos ativadores (indutores) da enzima CYP1A2 do fígado. O fígado superativo quebra o Riluzol antes dele chegar ao cérebro para combater a ELA. O paciente fuma e perde o efeito protetor da única droga disponível para sua sobrevivência.",
+        es: "ANULACIÓN POR EL CIGARRO. El humo del tabaco induce la enzima CYP1A2 del hígado. El hígado hiperactivo rompe el Riluzol antes de llegar al cerebro para combatir la ELA. El paciente fuma y pierde el efecto protector."
+      },
+      conduta: {
+        pt: "Paciente recém diagnosticado com ELA DEVE interromper o tabagismo. Cuidado também com dietas ricas em carne grelhada/churrasco excessivo, que também induzem a CYP1A2.",
+        es: "Paciente recién diagnosticado con ELA DEBE interrumpir el tabaquismo. Cuidado con el exceso de carnes asadas, que también inducen la CYP1A2."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

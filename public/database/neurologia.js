@@ -3010,3 +3010,213 @@
 
   }); /* fim Object.assign BUILD 412 append */
 })();
+
+/* ═══════════════════════════════════════════════════════════════
+   BUILD 413 APPEND — ELA (Riluzol/Edaravona) + Inibidores VMAT2 (Huntington)
+   Riluzol | Edaravona | Tetrabenazina | Deutetrabenazina | Valbenazina
+═══════════════════════════════════════════════════════════════ */
+(function(){
+  if (!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB))
+    window.NEUROLOGIA_DRUGS_DB = {};
+
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── RILUZOL ────────────────────────────────────────────────────────── */
+    "riluzol": {
+      name: { pt: 'Riluzol', es: 'Riluzol' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Neuroprotetor (Inibidor da Liberação de Glutamato)', es: 'Neuroprotector (Inhibidor de la Liberación de Glutamato)' },
+      indications: {
+        pt: ['Esclerose Lateral Amiotrófica (ELA) - Prolonga a sobrevida e retarda a necessidade de traqueostomia/ventilação mecânica'],
+        es: ['Esclerosis Lateral Amiotrófica (ELA) - Prolonga la sobrevida y retrasa la necesidad de traqueotomía/ventilación mecánica']
+      },
+      commercialNames: { br: ['Rilutek', 'Riluzol'], ar: ['Rilutek'] },
+      presentation: { pt: ['Comprimidos revestidos 50 mg'], es: ['Comprimidos recubiertos 50 mg'] },
+      mechanism: {
+        pt: 'A "Rolha do Glutamato". Na ELA, os neurônios motores que controlam a respiração e os músculos morrem por "excitotoxicidade" (excesso de glutamato os faz disparar até morrerem fritos). O Riluzol bloqueia os canais de sódio voltagem-dependentes e inibe a liberação de glutamato na fenda sináptica. Ele não cura a doença e não recupera os músculos perdidos, mas ganha meses preciosos de vida para o paciente.',
+        es: 'El "Tapón del Glutamato". En la ELA, las neuronas motoras mueren por "excitotoxicidad" (el exceso de glutamato las hace disparar hasta morir). El Riluzol bloquea los canales de sodio e inhibe la liberación de glutamato. No cura la enfermedad, pero gana meses preciosos de vida para el paciente.'
+      },
+      dose: {
+        adult: { pt: '50 mg via oral a cada 12 horas (Total de 100 mg/dia).', es: '50 mg vía oral cada 12 horas (Total de 100 mg/día).' },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['REGRA VITAL: Deve ser tomado de ESTÔMAGO VAZIO (1 hora antes ou 2 horas depois das refeições). Refeições com alto teor de gordura reduzem a absorção da droga pela metade, tornando-a inútil.'], es: ['REGLA VITAL: Debe tomarse con ESTÓMAGO VACÍO (1 hora antes o 2 horas después de las comidas). Comidas grasas reducen la absorción a la mitad.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Aumentos de TGP/TGO são muito comuns. Contraindicado em insuficiência hepática grave ou se transaminases > 5x o limite superior.', es: 'Contraindicado en insuficiencia hepática grave o si transaminasas > 5x el límite superior.' } },
+      commonAdverseEffects: { pt: ['Astenia e fadiga extremas', 'Náuseas e dor abdominal', 'Aumento de transaminases hepáticas (TGP/ALAT)'], es: ['Astenia y fatiga extremas', 'Náuseas y dolor abdominal', 'Aumento de transaminasas hepáticas (ALT)'] },
+      dangerousAdverseEffects: { pt: ['Hepatite medicamentosa fulminante', 'Neutropenia severa (Queda dos glóbulos brancos, risco de infecção fatal)'], es: ['Hepatitis medicamentosa fulminante', 'Neutropenia severa (Caída de glóbulos blancos, riesgo de infección fatal)'] },
+      contraindications: {
+        absolute: { pt: ['Hepatopatias ativas pré-existentes'], es: ['Hepatopatías activas preexistentes'] },
+        relative: { pt: ['Tabagismo pesado ativo (O cigarro "queima" o remédio no fígado)'], es: ['Tabaquismo pesado activo (El cigarro "quema" el remedio en el hígado)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O INIMIGO DO CIGARRO: O Riluzol é metabolizado pela enzima hepática CYP1A2. Fumar cigarros é um dos indutores mais potentes desta enzima no mundo. Se o paciente com ELA for fumante ativo, a fumaça acelera o fígado e destrói o Riluzol no sangue tão rápido que a droga falha em proteger o cérebro.', es: 'EL ENEMIGO DEL CIGARRO: Riluzol es metabolizado por la enzima hepática CYP1A2. Fumar induce esta enzima. Si el paciente con ELA es fumador, el hígado destruye el Riluzol tan rápido que la droga falla en proteger el cerebro.' }
+      }
+    },
+
+    /* ── EDARAVONA ──────────────────────────────────────────────────────── */
+    "edaravona": {
+      name: { pt: 'Edaravona', es: 'Edaravona' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Antioxidante / Varredor de Radicais Livres', es: 'Antioxidante / Barredor de Radicales Libres' },
+      indications: {
+        pt: ['Esclerose Lateral Amiotrófica (ELA) - Reduz o declínio funcional físico no dia a dia'],
+        es: ['Esclerosis Lateral Amiotrófica (ELA) - Reduce el declive funcional físico en el día a día']
+      },
+      commercialNames: { br: ['Radicava (Importado)'], ar: ['Radicava'] },
+      presentation: { pt: ['Bolsa para infusão IV 30 mg/100 mL', 'Suspensão Oral (Aprovada recentemente no FDA)'], es: ['Bolsa para infusión IV 30 mg/100 mL', 'Suspensión Oral'] },
+      mechanism: {
+        pt: 'A "Esponja de Toxinas". Na ELA, o estresse oxidativo severo inunda os neurônios motores com radicais livres e peroxinitrito, destruindo-os. A Edaravona é um caçador de radicais livres projetado especificamente para limpar as neurotoxinas oxidativas do cérebro, protegendo as células motoras do "ferrugem" neurológico que as paralisa.',
+        es: 'La "Esponja de Toxinas". En la ELA, el estrés oxidativo inunda las neuronas motoras con radicales libres. La Edaravona es un barredor diseñado para limpiar las neurotoxinas del cerebro, protegiendo las células motoras del "óxido" neurológico.'
+      },
+      dose: {
+        adult: {
+          pt: 'Regime de Ciclos IV: 60 mg por infusão Intravenosa ao longo de 60 min. Ciclo 1: Administrar por 14 dias diários seguidos de 14 dias de descanso. Ciclos subsequentes: 10 dias de medicação dentro de um período de 14 dias, seguidos de 14 dias de descanso.',
+          es: 'Régimen de Ciclos IV: 60 mg por infusión IV por 60 min. Ciclo 1: Administrar 14 días seguidos, luego 14 días de descanso. Ciclos posteriores: 10 días de medicación en un período de 14 días, seguidos de 14 días de descanso.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['As infusões hospitalares ou em clínica exigem acesso venoso confiável. A rotina intermitente pode ser extenuante para pacientes imobilizados.'], es: ['Las infusiones exigen acceso venoso confiable. La rutina intermitente puede ser extenuante para pacientes inmovilizados.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem dados para ajuste.', es: 'Sin datos para ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste inicial necessário.', es: 'Sin ajuste inicial necesario.' } },
+      commonAdverseEffects: { pt: ['Distúrbios da marcha (Contusões, hematomas e quedas frequentes)', 'Dor de cabeça e fadiga', 'Dermatite no local da infusão'], es: ['Disturbios de la marcha (Contusiones y caídas frecuentes)', 'Dolor de cabeza y fatiga', 'Dermatitis en el sitio de infusión'] },
+      dangerousAdverseEffects: { pt: ['Anafilaxia sistêmica grave', 'Reações asmáticas severas devido aos sulfitos da fórmula'], es: ['Anafilaxia sistémica grave', 'Reacciones asmáticas severas debido a los sulfitos de la fórmula'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave aos excipientes', 'Alergia severa a BISSULFITO DE SÓDIO'], es: ['Hipersensibilidad grave a los excipientes', 'Alergia severa a BISULFITO DE SODIO'] },
+        relative: { pt: ['Pacientes com ELA em estágio terminal (Sem evidência de benefício quando a função respiratória já foi perdida)'], es: ['Pacientes con ELA en etapa terminal (Sin evidencia de beneficio)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ALERTA DA ASMA E DO BISSULFITO: A formulação intravenosa da Edaravona contém bissulfito de sódio (um conservante). Se o paciente com ELA for asmático com alergia a sulfitos, a injeção fechará as vias aéreas dele na hora, causando broncoespasmo letal e choque anafilático.', es: 'LA ALERTA DEL ASMA Y EL BISULFITO: La formulación IV contiene bisulfito de sodio. Si el paciente con ELA es asmático con alergia a sulfitos, la inyección cerrará sus vías aéreas al instante, causando broncoespasmo letal.' }
+      }
+    },
+
+    /* ── TETRABENAZINA ──────────────────────────────────────────────────── */
+    "tetrabenazina": {
+      name: { pt: 'Tetrabenazina', es: 'Tetrabenazina' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Inibidor do Transportador Vesicular de Monoaminas Tipo 2 (VMAT2)', es: 'Inhibidor del Transportador Vesicular de Monoaminas Tipo 2 (VMAT2)' },
+      indications: {
+        pt: ['Doença de Huntington (Controle dos movimentos hipercinéticos coreicos - a "dança" incontrolável)'],
+        es: ['Enfermedad de Huntington (Control de los movimientos hipercinéticos coreicos - la "danza" incontrolable)']
+      },
+      commercialNames: { br: ['Xenazine (Importado)', 'Tetina'], ar: ['Xenazine'] },
+      presentation: { pt: ['Comprimidos 12,5 mg e 25 mg'], es: ['Comprimidos 12,5 mg y 25 mg'] },
+      mechanism: {
+        pt: 'O "Esvaziador de Vesículas". Na Doença de Huntington, há um excesso de atividade da dopamina que faz o corpo do paciente se contorcer sem parar (Coreia). A Tetrabenazina bloqueia o VMAT2, a proteína que "empacota" a dopamina dentro das vesículas nos neurônios. Como a dopamina fica fora da vesícula, a enzima MAO a destrói no citoplasma. O cérebro fica sem dopamina e o paciente para de se contorcer. O lado sombrio: o cérebro sem dopamina/serotonina entra em depressão profunda.',
+        es: 'El "Vaciador de Vesículas". En Huntington, el exceso de dopamina hace que el cuerpo se contorsione (Corea). La Tetrabenazina bloquea el VMAT2, que "empaqueta" la dopamina. La enzima MAO destruye la dopamina en el citoplasma. El cerebro se queda sin dopamina y el paciente deja de contorsionarse. El lado oscuro: el cerebro sin dopamina entra en depresión profunda.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início Lento: 12,5 mg/dia pela manhã. Aumentar gradualmente até 25 mg de 8/8h ou 12/12h. (Doses > 50 mg/dia exigem genotipagem do fígado).',
+          es: 'Inicio Lento: 12,5 mg/día. Aumentar gradualmente hasta 25 mg cada 8 o 12h. (Dosis > 50 mg/día exigen genotipificación del hígado).'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['A droga tem meia-vida muito curta, o que gera picos e quedas (Exige tomadas de 3 a 4 vezes ao dia), piorando o cansaço do paciente.'], es: ['La droga tiene vida media muy corta, generando picos y caídas (Exige tomas 3 a 4 veces al día), empeorando el cansancio.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADA em insuficiência hepática. Metabolismo intensivo.', es: 'CONTRAINDICADA en insuficiencia hepática. Metabolismo intensivo.' } },
+      commonAdverseEffects: { pt: ['Depressão profunda e letargia', 'Parkinsonismo iatrogênico (Como a dopamina é sugada, o paciente de Huntington fica "travado" como um paciente de Parkinson)', 'Acatisia (inquietude) e fadiga'], es: ['Depresión profunda y letargo', 'Parkinsonismo iatrogénico (El paciente queda "trabado" como uno de Parkinson)', 'Acatisia (inquietud) y fatiga'] },
+      dangerousAdverseEffects: { pt: ['SUICÍDIO (Alerta Máximo de Caixa Preta)', 'Síndrome Neuroléptica Maligna (Rigidez, hipertermia, morte)'], es: ['SUICIDIO (Alerta Máxima de Caja Negra)', 'Síndrome Neuroléptico Maligno (Rigidez, hipertermia, muerte)'] },
+      contraindications: {
+        absolute: { pt: ['Depressão não tratada ou ativamente suicida (A doença de Huntington já tem risco gigante de suicídio, o remédio triplica isso)', 'Uso com Inibidores da MAO ou Reserpina'], es: ['Depresión no tratada o activamente suicida', 'Uso con Inhibidores de la MAO o Reserpina'] },
+        relative: { pt: ['Uso associado com inibidores de CYP2D6 (Fluoxetina, Paroxetina - O fígado para e o remédio intoxica)'], es: ['Uso asociado con inhibidores de CYP2D6'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'BLACK BOX WARNING DE SUICÍDIO: A Tetrabenazina esvazia a serotonina e dopamina. Isso cria um vazio neuroquímico brutal que joga o paciente em ideação suicida irreversível. Você é OBRIGADO a perguntar ao paciente em todas as consultas se ele tem vontade de se matar ou se machucar.', es: 'BLACK BOX WARNING DE SUICIDIO: Vacía la serotonina y dopamina, creando un vacío neuroquímico que lanza al paciente a la ideación suicida. Está OBLIGADO a preguntar al paciente si tiene deseos de matarse.' }
+      }
+    },
+
+    /* ── DEUTETRABENAZINA ───────────────────────────────────────────────── */
+    "deutetrabenazina": {
+      name: { pt: 'Deutetrabenazina', es: 'Deutetrabenazina' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Inibidor do VMAT2 (Variante Isótopo-Deuterada)', es: 'Inhibidor del VMAT2 (Variante Isótopo-Deuterada)' },
+      indications: {
+        pt: ['Doença de Huntington (Controle da Coreia)', 'Discinesia Tardia (Movimentos da boca e rosto causados pelo uso de psiquiátricos crônicos)'],
+        es: ['Enfermedad de Huntington (Control de la Corea)', 'Discinesia Tardía (Movimientos de boca y rostro causados por psiquiátricos)']
+      },
+      commercialNames: { br: ['Austedo'], ar: ['Austedo'] },
+      presentation: { pt: ['Comprimidos 6 mg, 9 mg e 12 mg'], es: ['Comprimidos 6 mg, 9 mg y 12 mg'] },
+      mechanism: {
+        pt: 'A "Mágica Nuclear". É EXATAMENTE a mesma molécula da Tetrabenazina, mas os átomos de hidrogênio normais foram trocados por DEUTÉRIO (hidrogênio pesado). Essa troca molecular faz com que o fígado demore mais para quebrar a droga. Com a quebra mais lenta, os níveis no sangue ficam estáveis o dia todo, eliminando os "picos tóxicos" no cérebro. O controle do movimento é mantido e a depressão despenca.',
+        es: 'La "Magia Nuclear". Es EXACTAMENTE la misma molécula de Tetrabenazina, pero los átomos de hidrógeno fueron cambiados por DEUTERIO (hidrógeno pesado). El hígado tarda más en romper la droga, dejando niveles estables todo el día, eliminando los "picos tóxicos" en el cerebro. La depresión se desploma.'
+      },
+      dose: {
+        adult: {
+          pt: 'Huntington/Discinesia: Iniciar com 6 mg DUAS vezes ao dia. Titular gradualmente semanalmente. Máximo de 48 mg/dia.',
+          es: 'Huntington/Discinesia: Iniciar con 6 mg DOS veces al día. Titular gradualmente. Máximo de 48 mg/día.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['Administrar JUNTO COM ALIMENTOS para atrasar a absorção e garantir o perfil de liberação contínua.'], es: ['Administrar JUNTO CON ALIMENTOS para retrasar la absorción y garantizar la liberación continua.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade estrita.', es: 'Sin necesidad estricta.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado na disfunção hepática.', es: 'Contraindicado en disfunción hepática.' } },
+      commonAdverseEffects: { pt: ['Sonolência, fadiga, diarreia e boca seca', 'Acatisia (Desespero para mover as pernas)'], es: ['Somnolencia, fatiga, diarrea y boca seca', 'Acatisia (Desespero por mover las piernas)'] },
+      dangerousAdverseEffects: { pt: ['Aumento de intervalo QT (Torsades de Pointes)', 'Depressão e Suicídio (O risco existe, mas é visivelmente menor que a tetrabenazina antiga)'], es: ['Aumento del intervalo QT (Torsades de Pointes)', 'Depresión y Suicidio (El riesgo existe, pero es menor que la antigua tetrabenazina)'] },
+      contraindications: {
+        absolute: { pt: ['Depressão grave, uso com IMAOs, ideação suicida', 'Uso simultâneo com Tetrabenazina pura ou Valbenazina'], es: ['Depresión grave, uso con IMAOs, ideación suicida', 'Uso simultáneo con Tetrabenazina pura o Valbenazina'] },
+        relative: { pt: ['Uso associado de Inibidores Fortes do CYP2D6 (Bupropiona, Fluoxetina)'], es: ['Uso asociado de Inhibidores Fuertes de CYP2D6'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A TRANSIÇÃO SEGURA: Embora tenha menos efeitos colaterais, a Deutetrabenazina NÃO curará a depressão se o paciente já a desenvolveu com o remédio antigo. Qualquer transição de drogas deve vir acompanhada de vigilância psiquiátrica armada.', es: 'LA TRANSICIÓN SEGURA: Aunque tiene menos efectos colaterales, NO curará la depresión si el paciente ya la desarrolló con el remedio antiguo. La transición exige vigilancia psiquiátrica armada.' }
+      }
+    },
+
+    /* ── VALBENAZINA ────────────────────────────────────────────────────── */
+    "valbenazina": {
+      name: { pt: 'Valbenazina', es: 'Valbenazina' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Inibidor Altamente Seletivo do VMAT2', es: 'Inhibidor Altamente Selectivo del VMAT2' },
+      indications: {
+        pt: ['Tratamento exclusivo da Discinesia Tardia (Movimentos bizarros orofaciais e corporais incontroláveis, complicação clássica de pacientes psiquiátricos usando Haldol/Risperidona por anos)'],
+        es: ['Tratamiento exclusivo de la Discinesia Tardía (Movimientos bizarros orofaciales incontrolables causados por el uso crónico de Haldol/Risperidona)']
+      },
+      commercialNames: { br: ['Ingrezza (Importado)'], ar: ['Ingrezza'] },
+      presentation: { pt: ['Cápsulas 40 mg, 60 mg e 80 mg'], es: ['Cápsulas 40 mg, 60 mg y 80 mg'] },
+      mechanism: {
+        pt: 'O ápice da seletividade. O VMAT tem 2 tipos: VMAT1 (Coração/Periferia) e VMAT2 (Cérebro). A Valbenazina inibe APENAS o VMAT2 do cérebro, sem tocar na periferia, minimizando quedas de pressão severas. Ela suprime o excesso de dopamina focado nos gânglios da base que faz o esquizofrênico lamber a boca, mastigar em vazio e contorcer as mãos.',
+        es: 'El ápice de la selectividad. Valbenazina inhibe SOLO el VMAT2 del cerebro, sin tocar la periferia, minimizando caídas de presión. Suprime el exceso de dopamina que hace que el esquizofrénico lama la boca, mastique en vacío y contorsione las manos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 40 mg UMA VEZ ao dia. Após 1 semana, subir para 80 mg UMA VEZ ao dia.',
+          es: 'Inicio: 40 mg UNA VEZ al día. Tras 1 semana, subir a 80 mg UNA VEZ al día.'
+        },
+        pediatric: { pt: 'Não indicado.', es: 'No indicado.' }
+      },
+      administration: { pt: ['A dose única diária (diferente das 3 a 4x da Tetrabenazina) mudou o jogo para pacientes psiquiátricos graves com baixa adesão ao tratamento.'], es: ['La dosis única diaria cambió el juego para pacientes psiquiátricos graves con baja adhesión al tratamiento.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Em disfunção hepática moderada a severa (Child-Pugh B/C), a dose máxima absoluta é 40 mg/dia.', es: 'En disfunción hepática moderada a severa, la dosis máxima absoluta es 40 mg/día.' } },
+      commonAdverseEffects: { pt: ['Sonolência extrema (afeta 11% dos pacientes)', 'Boca seca e tontura', 'Acatisia (inquietação)'], es: ['Somnolencia extrema (afecta 11% de pacientes)', 'Boca seca y mareo', 'Acatisia (inquietud)'] },
+      dangerousAdverseEffects: { pt: ['Prolongamento letal do Intervalo QT no coração', 'Parkinsonismo Iatrogênico (A dopamina cai tanto que o paciente fica rígido)'], es: ['Prolongación letal del Intervalo QT en el corazón', 'Parkinsonismo Iatrogénico (La dopamina cae tanto que el paciente queda rígido)'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com QT longo congênito', 'Uso com inibidores potentes e simultâneos de CYP3A4 e CYP2D6'], es: ['Pacientes con QT largo congénito', 'Uso con inhibidores potentes y simultáneos de CYP3A4 y CYP2D6'] },
+        relative: { pt: ['Associação com outros antipsicóticos que prolongam muito o QT (Clorpromazina, Tioridazina)'], es: ['Asociación con otros antipsicóticos que prolongan mucho el QT'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'SEM BLACK BOX DE SUICÍDIO: Devido ao seu bloqueio incrivelmente seletivo, a Valbenazina conseguiu aprovação do FDA SEM a terrível tarja preta de risco suicida imposta às suas irmãs (Tetrabenazinas). É muito mais segura para os esquizofrênicos e depressivos.', es: 'SIN BLACK BOX DE SUICIDIO: Debido a su bloqueo selectivo, la Valbenazina logró la aprobación SIN la terrible caja negra de riesgo suicida de sus hermanas. Es mucho más segura para deprimidos y esquizofrénicos.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 413 append */
+})();
