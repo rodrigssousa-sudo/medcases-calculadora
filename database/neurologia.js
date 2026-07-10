@@ -4335,3 +4335,224 @@
 
   }); /* fim Object.assign BUILD 418 append */
 })();
+
+/* ─────────────────────────────────────────────────────────────────────────
+   BUILD 419 APPEND — Nefrologia: Vitaminas D Análogas, Calcimiméticos & Aquarético
+   IDs: alfacalcidol | paricalcitol | cinacalcete | etelcalcetida | tolvaptana
+   ───────────────────────────────────────────────────────────────────────── */
+(function(){
+  if(!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) window.NEUROLOGIA_DRUGS_DB={};
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    "alfacalcidol": {
+      name: { pt: 'Alfacalcidol', es: 'Alfacalcidol' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Análogo da Vitamina D (Pró-fármaco 1-alfa-hidroxilado)', es: 'Análogo de la Vitamina D (Profármaco 1-alfa-hidroxilado)' },
+      indications: {
+        pt: ['Osteodistrofia renal (em pacientes sem rim mas com fígado bom)', 'Raquitismo e osteomalácia', 'Hipoparatireoidismo crônico'],
+        es: ['Osteodistrofia renal (en pacientes sin riñón pero con buen hígado)', 'Raquitismo y osteomalacia', 'Hipoparatiroidismo crónico']
+      },
+      commercialNames: { br: ['Alpha D3', 'Sigmacalcidiol'], ar: ['Alpha D3'] },
+      presentation: { pt: ['Cápsulas 0,25 mcg e 1 mcg'], es: ['Cápsulas 0,25 mcg y 1 mcg'] },
+      mechanism: {
+        pt: 'A "Vitamina que Pula o Rim". Normalmente, a Vitamina D é ativada no fígado e depois no rim. Quando o paciente perde a função renal, ele não consegue dar esse segundo passo. O Alfacalcidol já vem com o "passo renal" (a hidroxilação na posição 1-alfa) feito na fábrica! O paciente o engole, a droga vai para o fígado, que dá o último passo, transformando-a em Calcitriol ativo.',
+        es: 'La "Vitamina que Salta el Riñón". Normalmente la Vitamina D se activa en hígado y riñón. El Alfacalcidol ya viene con el "paso renal" hecho de fábrica. El hígado da el último paso, transformándolo en Calcitriol activo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Geralmente iniciar com 0,5 a 1 mcg via oral ao dia. A dose é guiada rigidamente pelos níveis de Cálcio, Fósforo e PTH.',
+          es: 'Generalmente iniciar con 0,5 a 1 mcg vía oral al día. Guiado por niveles de Calcio, Fósforo y PTH.'
+        },
+        pediatric: {
+          pt: 'Ajuste rígido por peso (ex: 0,01 a 0,05 mcg/kg/dia).',
+          es: 'Ajuste rígido por peso (ej: 0,01 a 0,05 mcg/kg/día).'
+        }
+      },
+      administration: { pt: ['Uso oral contínuo. Não confundir microgramas (mcg) com unidades internacionais (UI).'], es: ['Uso oral continuo. No confundir microgramos (mcg) con unidades internacionales (UI).'] },
+      renalAdjustment: { required: false, message: { pt: 'Feito para pacientes renais.', es: 'Hecho para pacientes renales.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADO em disfunção hepática grave. A droga é um pró-fármaco que depende 100% do fígado para funcionar. Se o fígado falhar, vira pílula inútil.', es: 'CONTRAINDICADO en disfunción hepática grave. Si el hígado falla, se vuelve una píldora inútil.' } },
+      commonAdverseEffects: { pt: ['Náusea, boca seca', 'Sede extrema (sinal de elevação de cálcio)'], es: ['Náusea, boca seca', 'Sed extrema (signo de elevación de calcio)'] },
+      dangerousAdverseEffects: { pt: ['Hipercalcemia grave e arritmia secundária', 'Calcificação de tecidos moles e artérias (quando produto Ca × P > 55)'], es: ['Hipercalcemia grave y arritmia secundaria', 'Calcificación de tejidos blandos y arterias (Ca × P > 55)'] },
+      contraindications: {
+        absolute: { pt: ['Hipercalcemia atestada por exames', 'Intoxicação prévia por Vitamina D'], es: ['Hipercalcemia comprobada', 'Intoxicación previa por Vitamina D'] },
+        relative: { pt: ['Níveis de fósforo não controlados', 'Disfunção hepática grave'], es: ['Niveles de fósforo no controlados', 'Disfunción hepática grave'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O AVISO DE CLASSE: Assim como o Calcitriol, o Alfacalcidol vai forçar o intestino a sugar cálcio. A maior tragédia é associá-lo a antiácidos contendo Magnésio ou Alumínio. Ele forçará a entrada desses metais no corpo de um renal, causando demência por alumínio fatal.', es: 'EL AVISO DE CLASE: Como el Calcitriol, el Alfacalcidol forzará al intestino a absorber calcio. Asociarlo con antiácidos de Aluminio forzará su entrada, causando demencia por aluminio.' }
+      }
+    },
+
+    "paricalcitol": {
+      name: { pt: 'Paricalcitol', es: 'Paricalcitol' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Ativador Seletivo do Receptor da Vitamina D (VDR)', es: 'Activador Selectivo del Receptor de la Vitamina D (VDR)' },
+      indications: {
+        pt: ['Prevenção e tratamento do Hiperparatireoidismo Secundário em Doença Renal Crônica (Estágios 3 a 5 e Diálise)'],
+        es: ['Prevención y tratamiento del Hiperparatiroidismo Secundario en ERC (Etapas 3 a 5 y Diálisis)']
+      },
+      commercialNames: { br: ['Zemplar'], ar: ['Zemplar'] },
+      presentation: { pt: ['Cápsulas moles 1 mcg, 2 mcg e 4 mcg', 'Ampolas IV 5 mcg/mL'], es: ['Cápsulas blandas 1 mcg, 2 mcg y 4 mcg', 'Ampollas IV 5 mcg/mL'] },
+      mechanism: {
+        pt: 'A "Vitamina D Inteligente". O Calcitriol clássico desliga o PTH, mas absorve muito cálcio e fósforo no intestino (causando pedras nas veias). O Paricalcitol foi sintetizado para ser SELETIVO. Ele se liga de forma esmagadora nos receptores da Glândula Paratireoide (desligando o hormônio ósseo destrutivo), mas "ignora" largamente os receptores do intestino. O paciente abaixa o PTH sem sofrer com surtos de Hipercalcemia e Hiperfosfatemia.',
+        es: 'La "Vitamina D Inteligente". El Paricalcitol es SELECTIVO. Se une a los receptores de la Paratiroides pero "ignora" los del intestino. El paciente baja el PTH sin sufrir Hipercalcemia.'
+      },
+      dose: {
+        adult: {
+          pt: 'IV: Geralmente 0,04 a 0,1 mcg/kg aplicado no acesso venoso no final da sessão de hemodiálise. Oral: 1 a 2 mcg diários (ou três vezes na semana).',
+          es: 'IV: 0,04 a 0,1 mcg/kg al final de la diálisis. Oral: 1 a 2 mcg diarios.'
+        },
+        pediatric: {
+          pt: 'Doses guiadas por peso e níveis basais de PTH em crianças > 10 anos.',
+          es: 'Dosis guiadas por peso y PTH basal en niños > 10 años.'
+        }
+      },
+      administration: { pt: ['As cápsulas orais podem ser tomadas com ou sem alimentos. Ampolas IV ao final da diálise.'], es: ['Las cápsulas orales pueden tomarse con o sin alimentos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Criado especificamente para pacientes renais.', es: 'Creado específicamente para pacientes renales.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste prévio.', es: 'Sin necesidad de ajuste previo.' } },
+      commonAdverseEffects: { pt: ['Gosto metálico na boca (na injeção IV)', 'Edema leve, fadiga', 'Pequenas elevações de Cálcio (muito menos frequentes que o calcitriol)'], es: ['Gusto metálico en la boca (IV)', 'Edema leve, fatiga', 'Pequeñas elevaciones de Calcio'] },
+      dangerousAdverseEffects: { pt: ['Supressão excessiva do PTH (Doença Óssea Adinâmica — o osso para de se renovar completamente e quebra fácil)'], es: ['Supresión excesiva del PTH (Enfermedad Ósea Adinámica — el hueso deja de renovarse y se rompe)'] },
+      contraindications: {
+        absolute: { pt: ['Hipercalcemia documentada ou intoxicação por vitamina D'], es: ['Hipercalcemia documentada o intoxicación vitamínica D'] },
+        relative: { pt: ['Uso associado de digitálicos sem rigorosa monitorização eletrocardiográfica'], es: ['Uso asociado de digitálicos sin rigurosa monitorización'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O CUIDADO COM O "OSSO PARADO": Se o médico exagerar e abaixar o PTH para menos de 100 pg/mL, o corpo sofre de "Doença Óssea Adinâmica". O osso vira uma escultura estática sem remodelamento de cálcio, tornando-se mais frágil e quebradiço do que sem tratamento.', es: 'EL CUIDADO DEL "HUESO PARADO": Si el PTH baja de 100 pg/mL, el cuerpo sufre "Enfermedad Ósea Adinámica". El hueso se vuelve estático, frágil y quebradizo.' }
+      }
+    },
+
+    "cinacalcete": {
+      name: { pt: 'Cinacalcete (Cloridrato de)', es: 'Cinacalcet (Clorhidrato de)' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Calcimimético (Modulador Alostérico do Receptor de Cálcio — CaSR)', es: 'Calcimimético (Modulador Alostérico del Receptor de Calcio — CaSR)' },
+      indications: {
+        pt: ['Hiperparatireoidismo Secundário em pacientes com DRC em DIÁLISE (Onde a vitamina D não funcionou)', 'Carcinoma da Paratireoide (para tentar abaixar o cálcio fatal)'],
+        es: ['Hiperparatiroidismo Secundario en ERC en DIÁLISIS', 'Carcinoma de la Paratiroides']
+      },
+      commercialNames: { br: ['Mimpara'], ar: ['Mimpara'] },
+      presentation: { pt: ['Comprimidos revestidos 30 mg, 60 mg e 90 mg'], es: ['Comprimidos recubiertos 30 mg, 60 mg y 90 mg'] },
+      mechanism: {
+        pt: 'A "Mentira do Cálcio". O Cinacalcete age diretamente na glândula paratireoide. Ele modula o receptor CaSR (Sensor de Cálcio), tornando-o HIPERSENSÍVEL a qualquer restinho de cálcio que o renal tenha no sangue. A glândula é "enganada" e pensa: "Uau, tem muito cálcio no corpo, vou parar de produzir PTH!". O hormônio PTH despenca brutalmente. Por não usar vitamina D, ele EVITA o aumento de cálcio e fósforo.',
+        es: 'La "Mentira del Calcio". Modula el receptor CaSR, haciéndolo HIPERSENSIBLE al calcio residual. La paratiroides es "engañada" y para de producir PTH. Al no usar vitamina D, EVITA el aumento de calcio y fósforo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 30 mg via oral UMA VEZ ao dia. Titular a cada 2 a 4 semanas (30, 60, 90 até 180 mg).',
+          es: 'Inicio: 30 mg vía oral UNA VEZ al día. Titular cada 2 a 4 semanas (hasta 180 mg).'
+        },
+        pediatric: {
+          pt: 'Indicado em > 3 anos com hiperparatireoidismo grave; dose baseada em peso (< ou > 0,20 mg/kg).',
+          es: 'Indicado en > 3 años con hiperparatiroidismo grave.'
+        }
+      },
+      administration: { pt: ['DEVE SER TOMADO com alimentos ou logo após a refeição, para aumentar a absorção e reduzir intolerância gástrica. Engolir inteiro — não triturar.'], es: ['DEBE SER TOMADO con alimentos o tras la comida. Tragar entero, no triturar.'] },
+      renalAdjustment: { required: false, message: { pt: 'Feito para pacientes em diálise.', es: 'Hecho para pacientes en diálisis.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado por CYP3A4, CYP2D6 e CYP1A2. Monitorar rigorosamente na disfunção hepática moderada/grave.', es: 'Metabolizado por CYP3A4/2D6. Monitorizar en disfunción hepática.' } },
+      commonAdverseEffects: { pt: ['Náuseas e Vômitos intensos (Mais de 30% dos pacientes, piora a adesão)', 'Cefaleia', 'Parestesia (Formigamento nas mãos/boca)'], es: ['Náuseas y Vómitos intensos (> 30%)', 'Cefalea', 'Parestesia (Hormigueo en manos/boca)'] },
+      dangerousAdverseEffects: { pt: ['HIPOCALCEMIA SEVERA (O remédio "gasta" o cálcio, podendo causar convulsões e prolongamento de QT)', 'Hemorragia gastrointestinal alta'], es: ['HIPOCALCEMIA SEVERA (Puede causar convulsiones y prolongación del QT)', 'Hemorragia gastrointestinal alta'] },
+      contraindications: {
+        absolute: { pt: ['Hipocalcemia basal (Cálcio < 8,4 mg/dL) ANTES de iniciar a terapia'], es: ['Hipocalcemia basal (Calcio < 8,4) ANTES de iniciar'] },
+        relative: { pt: ['Pacientes com QT longo no ECG (A hipocalcemia piora o QT para arritmia fatal)'], es: ['Pacientes con QT largo en el ECG'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA TETANIA (HIPOCALCEMIA): Diferente da Vitamina D (que aumenta o cálcio), o Cinacalcete é famoso por despencar o cálcio do sangue. Se o cálcio cair demais, o paciente sofre TETANIA: espasmo severo da face (Sinal de Chvostek), as mãos travam em formato de garra (Sinal de Trousseau) e a laringe pode fechar, asfixiando o paciente. Suspenda e aplique Gluconato de Cálcio IV imediatamente.', es: 'EL ALERTA DE TETANIA (HIPOCALCEMIA): El Cinacalcet desploma el calcio. Si cae mucho, el paciente sufre TETANIA: espasmo facial (Chvostek), manos en garra (Trousseau), laringoespasmo. Aplique Gluconato de Calcio IV.' }
+      }
+    },
+
+    "etelcalcetida": {
+      name: { pt: 'Etelcalcetida', es: 'Etelcalcetida' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Calcimimético (Peptídeo de Ação Direta Intravenosa)', es: 'Calcimimético (Péptido de Acción Directa Intravenosa)' },
+      indications: {
+        pt: ['Hiperparatireoidismo Secundário em pacientes com DRC exclusivamente em HEMODIÁLISE'],
+        es: ['Hiperparatiroidismo Secundario en ERC exclusivamente en HEMODIÁLISIS']
+      },
+      commercialNames: { br: ['Parsabiv'], ar: ['Parsabiv'] },
+      presentation: { pt: ['Frasco-ampola com solução injetável 2,5 mg, 5 mg e 10 mg'], es: ['Vial con solución inyectable 2,5 mg, 5 mg y 10 mg'] },
+      mechanism: {
+        pt: 'A evolução "injetável" dos calcimiméticos. É um pequeno peptídeo sintético (cadeia de aminoácidos) que gruda fisicamente no receptor CaSR da glândula paratireoide, suprimindo o PTH como o Cinacalcete. A grande jogada: Como ela é aplicada na veia do paciente pela enfermeira no final de cada sessão de hemodiálise, o médico GARANTE 100% de adesão (o paciente para de sofrer das terríveis náuseas diárias do comprimido de Cinacalcete).',
+        es: 'La evolución "inyectable". Es un péptido que gruda al receptor CaSR suprimiendo el PTH. La gran jugada: Al aplicarse en la vena al final de la hemodiálisis, GARANTIZA 100% de adhesión, evitando las náuseas diarias de la pastilla.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 5 mg via Intravenosa (Bolus) ao final da sessão de Hemodiálise (3 vezes por semana). Titular de 2,5 em 2,5 mg guiado por PTH/Cálcio.',
+          es: 'Inicio: 5 mg IV (Bolus) al final de la Hemodiálisis (3 veces/semana). Titular de 2,5 en 2,5 mg.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Administrar SEMPRE na linha venosa do circuito de diálise no FINAL da sessão (após o sangue ser enxaguado de volta). Nunca aplicar nos dias sem diálise.'], es: ['Administrar SIEMPRE en la línea venosa al FINAL de la sesión. Nunca en días sin diálisis.'] },
+      renalAdjustment: { required: false, message: { pt: 'Uso exclusivo para quem já não urina (Hemodiálise).', es: 'Uso exclusivo para quien ya no orina (Hemodiálisis).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Degradada por hidrólise plasmática de peptídeos. Fígado não é crucial.', es: 'Degradada por hidrólisis plasmática.' } },
+      commonAdverseEffects: { pt: ['Hipocalcemia (Mais de 60% dos pacientes terão redução substancial de cálcio)', 'Espasmos musculares (câimbras) e parestesia', 'Vômito e diarreia (menos intensos que a forma oral)'], es: ['Hipocalcemia (> 60% tendrán reducción de calcio)', 'Espasmos musculares y parestesia', 'Vómito y diarrea'] },
+      dangerousAdverseEffects: { pt: ['Hipocalcemia sintomática letal (Tetania, convulsão, arritmia QT)', 'Piora súbita da Insuficiência Cardíaca Congestiva (Raro)', 'Reação de anafilaxia'], es: ['Hipocalcemia sintomática letal (Tetania, convulsión, QT)', 'Empeoramiento de ICC (Raro)', 'Anafilaxia'] },
+      contraindications: {
+        absolute: { pt: ['Uso CONCOMITANTE com Cinacalcete oral (Parada cardíaca por hipocalcemia dupla)', 'Cálcio sérico pré-diálise < 8,3 mg/dL'], es: ['Uso CONCOMITANTE con Cinacalcet oral (parada cardíaca)', 'Calcio < 8,3 pre-diálisis'] },
+        relative: { pt: ['Pacientes com ICC severa não compensada'], es: ['Pacientes con ICC severa no compensada'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O DESMAME DA TROCA (WASHOUT): Se for transferir o paciente do Cinacalcete (Comprimido) para a Etelcalcetida (Injeção), é OBRIGATÓRIO suspender o comprimido por no mínimo 7 DIAS "de respiro" antes de aplicar a injeção na clínica de diálise. Misturar os dois levará a uma tetania muscular gravíssima e parada cardíaca.', es: 'EL DESTETE (WASHOUT): Para transferir de Cinacalcet a Etelcalcetida, es OBLIGATORIO suspender la pastilla por 7 DÍAS antes de inyectar. Mezclar los dos lleva a tetania gravísima y parada cardíaca.' }
+      }
+    },
+
+    "tolvaptana": {
+      name: { pt: 'Tolvaptana', es: 'Tolvaptán' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Antagonista do Receptor de Vasopressina (V2) / Aquarético', es: 'Antagonista del Receptor de Vasopresina (V2) / Acuarético' },
+      indications: {
+        pt: ['Hiponatremia euvolêmica ou hipervolêmica severa (Sódio < 125) resistente associada a Insuficiência Cardíaca ou SIADH', 'Doença Renal Policística Autossômica Dominante (Atrasa a destruição dos rins cheios de cistos)'],
+        es: ['Hiponatremia euvolémica o hipervolémica severa (Sodio < 125) resistente', 'Enfermedad Renal Poliquística Autosómica Dominante']
+      },
+      commercialNames: { br: ['Jinarc', 'Samsca'], ar: ['Jinarc', 'Samsca'] },
+      presentation: { pt: ['Comprimidos 15 mg e 30 mg'], es: ['Comprimidos 15 mg y 30 mg'] },
+      mechanism: {
+        pt: 'O "Aquarético" Mágico. O corpo humano tem o Hormônio Antidiurético (Vasopressina), que avisa o rim para não deixar a ÁGUA ir para a urina. Na doença cardíaca ou SIADH, o corpo afoga em água, diluindo o Sódio. A Tolvaptana bloqueia diretamente o receptor V2 da vasopressina nos túbulos do rim. Resultado: O rim abre as comportas e o paciente urina LITROS de "água livre" PURA, enquanto o Sódio fica guardado no corpo. O sangue "concentra" de volta e a hiponatremia é curada sem usar pílulas de sal.',
+        es: 'El "Acuarético" Mágico. Bloquea el receptor V2 en los túbulos. El riñón abre compuertas y el paciente orina LITROS de "agua libre" PURA, mientras el Sodio queda en el cuerpo. La hiponatremia se cura sin pastillas de sal.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hiponatremia: Iniciar 15 mg UMA VEZ ao dia. Pode subir para 30 a 60 mg. Duração MÁXIMA de 30 dias na hiponatremia para evitar necrose hepática. (Na Doença Policística as doses chegam a 90/30mg em esquema bi-diário).',
+          es: 'Hiponatremia: 15 mg UNA VEZ al día. Máximo 30 días. (Poliquística: esquemas mayores hasta 90/30 mg).'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['É OBRIGATÓRIO internar o paciente no hospital na primeira dose (para vigiar o nível de sódio a cada poucas horas).', 'O paciente deve poder beber água livremente devido à sede intensa.'], es: ['OBLIGATORIO internar en el hospital en la primera dosis. El paciente debe poder beber agua libremente por la sed intensa.'] },
+      renalAdjustment: { required: true, message: { pt: 'Não possui eficácia em paciente anúrico ou com ClCr < 10 mL/min (precisa do túbulo funcionante).', es: 'No eficaz en anuria o ClCr < 10 mL/min.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADA EM DOENÇA HEPÁTICA SEVERA (Black Box FDA de Hepatotoxicidade Grave — risco de falência hepática irreversível).', es: 'CONTRAINDICADA EN ENFERMEDAD HEPÁTICA SEVERA (Caja Negra FDA — riesgo de falla hepática irreversible).' } },
+      commonAdverseEffects: { pt: ['Sede absurdamente violenta (Polidipsia)', 'Poliúria extrema (urina galões por dia)', 'Boca seca e astenia'], es: ['Sed absurdamente violenta (Polidipsia)', 'Poliuria extrema (galones al día)', 'Boca seca y astenia'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME DE DESMIELINIZAÇÃO OSMÓTICA / MIELINÓLISE PONTINA CENTRAL (Se o sódio subir muito rápido > 8 mEq/L em 24h, o cérebro do paciente murcha e ele fica tetraplégico para sempre — Síndrome de Encarceramento)', 'Falência Hepática Aguda (Black Box)'], es: ['SÍNDROME DE DESMIELINIZACIÓN OSMÓTICA / MIELINOLISIS PONTINA CENTRAL (Sodio sube > 8 mEq en 24h, el cerebro se marchita — Síndrome de Cautiverio)', 'Falla Hepática Aguda (Caja Negra)'] },
+      contraindications: {
+        absolute: { pt: ['Hiponatremia hipovolêmica (O paciente já está seco)', 'Anúria, Hipernatremia', 'Paciente incapaz de sentir sede ou pedir água', 'Doença Hepática grave (Cirrose)'], es: ['Hiponatremia hipovolémica', 'Anuria, Hipernatremia', 'Paciente incapaz de sentir sed', 'Hepatopatía grave (Cirrosis)'] },
+        relative: { pt: ['Uso associado de Inibidores Potentes do CYP3A4 (multiplica a dose 5×)'], es: ['Uso asociado de Inhibidores Potentes de CYP3A4 (multiplica dosis 5×)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A TELA DA TETRAPLEGIA: Um paciente com hiponatremia (ex: Sódio = 118) tem o cérebro inchado de água. O bloqueio com Tolvaptana é tão eficaz que o Sódio pode voltar para 135 mEq/L em 1 dia. Se a correção ultrapassar "8 mEq em 24h", as bainhas de mielina na base do cérebro racham e rasgam (Mielinólise Pontina Central). O paciente fica em Síndrome do Encarceramento: Lúcido, vivo, mas tetraplégico e mudo (Locked-in).', es: 'LA PANTALLA DE LA TETRAPLEJIA: Si la corrección supera "8 mEq en 24h", la mielina de la base del cerebro se raja (Mielinolisis Pontina). El paciente queda Síndrome de Cautiverio: Lúcido, pero tetrapléjico y mudo.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 419 append */
+})();

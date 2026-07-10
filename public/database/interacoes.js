@@ -1233,6 +1233,10 @@ const DRUG_CLASSES = {
 
   "$classe_estimuladores_eritropoiese": [
     "epoetina_alfa", "epoetina_beta", "darbepoetina_alfa", "mircera"
+  ],
+
+  "$classe_calcimimeticos": [
+    "cinacalcete", "etelcalcetida"
   ]
 
 };
@@ -23570,9 +23574,62 @@ const INTERACOES_DB = {
         es: "Sustituir la Hidroclorotiazida por diuréticos de asa (Furosemida), pues la Furosemida hace excretar el calcio, protegiendo al paciente."
       }
     }
+  },
+
+  /* ════════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES BUILD 419 — Calcimiméticos, Vitaminas D e Aquaréticos
+     alfacalcidol | paricalcitol | cinacalcete | etelcalcetida | tolvaptana
+  ════════════════════════════════════════════════════════════════ */
+
+  /* ── CINACALCETE E ETELCALCETIDA: Arritmia pela Hipocalcemia ── */
+  "$classe_calcimimeticos": {
+    "prolongadores_qt_antiarritmicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A ARRITMIA PELA FALTA DE CÁLCIO. Calcimiméticos (Cinacalcete, Etelcalcetida) forçam o cálcio no sangue a cair severamente em muitos pacientes. O 'Cálcio Baixo' aumenta fisiologicamente o intervalo QT no eletrocardiograma. Se o paciente usar concomitantemente drogas como Amiodarona, Macrolídeos ou Antipsicóticos (Haldol), os dois fatores se somam, lançando o coração em Torsades de Pointes letal.",
+        es: "LA ARRITMIA POR FALTA DE CALCIO. Calcimiméticos fuerzan el calcio en sangre a caer severamente. El 'Calcio Bajo' aumenta el intervalo QT. Si el paciente usa Amiodarona o Antipsicóticos, los dos factores se suman lanzando el corazón en Torsades de Pointes letal."
+      },
+      conduta: {
+        pt: "Monitoramento semanal do Cálcio Iônico é OBRIGATÓRIO na associação. Se Cálcio < 8,4 mg/dL ou sintomas de parestesia/tetania, suspender o calcimimético e fazer ECG imediatamente.",
+        es: "Monitorización semanal de Calcio Iónico es OBLIGATORIA. Si Calcio < 8,4 mg/dL o parestesia, suspender y hacer ECG."
+      }
+    }
+  },
+
+  /* ── CINACALCETE: Inibição de CYP2D6 ── */
+  "cinacalcete": {
+    "$classe_metabolizados_cyp2d6_antidepressivos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "O BLOQUEIO PSICOFARMACOLÓGICO. O Cinacalcete é um forte inibidor da enzima CYP2D6 hepática. Essa enzima é a que destrói Tricíclicos (Amitriptilina), Atomoxetina, Fluoxetina e Flecainida. A introdução de Cinacalcete em paciente de diálise fará a Amitriptilina acumular no sangue, causando sedação profunda, boca seca intensa e retenção urinária súbita.",
+        es: "EL BLOQUEO PSICOFARMACOLÓGICO. Cinacalcet es un fuerte inhibidor de CYP2D6. Esta enzima destruye Amitriptilina, Fluoxetina. La introducción de Cinacalcet acumula Amitriptilina en sangre, causando sedación profunda y retención urinaria."
+      },
+      conduta: {
+        pt: "Pode ser necessário reduzir a dose de antidepressivos e medicamentos do TDAH em 30 a 50% quando o Cinacalcete oral é introduzido.",
+        es: "Puede ser necesario reducir la dosis de antidepresivos en 30 a 50% al introducir Cinacalcet oral."
+      }
+    }
+  },
+
+  /* ── TOLVAPTANA: Mielinólise por CYP3A4 ── */
+  "tolvaptana": {
+    "$classe_inibidores_potentes_cyp3a4": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INTOXICAÇÃO E DESMIELINIZAÇÃO FULMINANTE. A Tolvaptana é limpa do sangue exclusivamente pelo citocromo CYP3A4. Se o médico prescrever um bloqueador dessa enzima (como Claritromicina, Cetoconazol, Itraconazol, Ritonavir), o sangue é inundado pela Tolvaptana 5 vezes mais forte. O paciente começará a urinar litros em poucas horas, e a concentração de Sódio no cérebro pulará de forma supersônica, esmagando e destruindo a ponte cerebral (Mielinólise irreversível).",
+        es: "INTOXICACIÓN Y DESMIELINIZACIÓN FULMINANTE. Tolvaptana se limpia por CYP3A4. Con Ketoconazol, Ritonavir o Claritromicina, aumenta 5 veces. El paciente orinará litros en horas y el Sodio cerebral saltará aplastando el puente cerebral (Mielinolisis)."
+      },
+      conduta: {
+        pt: "PROIBIDO USO CONJUNTO DE BULA. Nunca associar Tolvaptana a inibidores potentes do CYP3A4. Se necessitar antibiótico/antifúngico, parar o uso da Tolvaptana imediatamente.",
+        es: "PROHIBIDO USO CONJUNTO. Nunca asociar Tolvaptana a inhibidores potentes de CYP3A4."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
