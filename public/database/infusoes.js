@@ -492,19 +492,14 @@ let _bicPendingDrug  = null;   /* droga aguardando confirmação do alerta */
 
 /** Abre o dropdown com a lista filtrada */
 function bicOpenDropdown() {
-  /* BUILD 404 PATCH B2: usa input unificado #inf-free-drug-name; fallback para #inf-drug-search */
-  const inp = document.getElementById('inf-free-drug-name') || document.getElementById('inf-drug-search');
+  const inp = document.getElementById('inf-drug-search');
   bicHandleDrugInput(inp ? inp.value : '');
 }
 
 /** Trata digitação no autocomplete */
 function bicHandleDrugInput(val) {
   const clearBtn = document.getElementById('inf-drug-clear');
-  /* BUILD 404 PATCH B2: clear btn usa display (não class.show) pois inicia com display:none */
-  if (clearBtn) {
-    clearBtn.classList.toggle('show', val.length > 0);
-    clearBtn.style.display = val.length > 0 ? 'flex' : 'none';
-  }
+  if (clearBtn) clearBtn.classList.toggle('show', val.length > 0);
 
   const q = val.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   const list = !q
@@ -522,8 +517,7 @@ function bicHandleDrugInput(val) {
 /** Renderiza os itens do dropdown */
 function _bicRenderDropdown(list, highlight) {
   const box = document.getElementById('inf-drug-dropdown');
-  /* BUILD 404 PATCH B2: usa input unificado #inf-free-drug-name */
-  const inp = document.getElementById('inf-free-drug-name') || document.getElementById('inf-drug-search');
+  const inp = document.getElementById('inf-drug-search');
   if (!box) return;
 
   if (!list.length) {
@@ -597,9 +591,8 @@ function _bicApplyDrug(drug) {
   const lang = typeof currentLang !== 'undefined' ? currentLang : 'pt';
   const nome = lang === 'es' ? drug.nome_es : drug.nome;
 
-  /* Atualiza input visual — BUILD 404 PATCH B2: #inf-drug-search removido;
-     escreve no input unificado #inf-free-drug-name (mesmo elemento do modo Livre) */
-  const inp = document.getElementById('inf-free-drug-name') || document.getElementById('inf-drug-search');
+  /* Atualiza input visual */
+  const inp = document.getElementById('inf-drug-search');
   if (inp) {
     inp.value = nome;
     inp.setAttribute('aria-expanded','false');
@@ -920,8 +913,7 @@ function _bicCalcBMI(pesoKg, alturaCm) {
 function bicClearDrug() {
   _bicSelectedDrug  = null;
   _bicActivePresetId = null;
-  /* BUILD 404 PATCH B2: usa input unificado #inf-free-drug-name */
-  const inp = document.getElementById('inf-free-drug-name') || document.getElementById('inf-drug-search');
+  const inp = document.getElementById('inf-drug-search');
   if (inp) { inp.value = ''; inp.focus(); }
   const clearBtn = document.getElementById('inf-drug-clear');
   if (clearBtn) clearBtn.classList.remove('show');
@@ -1150,14 +1142,14 @@ function applyInfusionDrug() {
   if (infInteractEl && typeof checkInteractions === 'function') {
     const drugName = (drug.nome || '').toLowerCase().split(' ')[0];
     const db = typeof DRUG_DB !== 'undefined' ? DRUG_DB : [];
-    /* BUILD 404 PATCH B1: d.name pode ser {pt,es} objeto (gerado por _adaptExternalDB)
-       → extrai string segura antes de chamar toLowerCase(), evitando TypeError */
+    /* BUILD 405 REFAT 2B: d.name pode ser {pt,es} objeto (_adaptExternalDB).
+       Usa String() safe: extrai campo de idioma → force String → toLowerCase */
     const matched = db.find(d => {
-      const rawName = d.name;
-      const nameStr = (typeof rawName === 'object' && rawName !== null)
-        ? (rawName[(typeof currentLang !== 'undefined' ? currentLang : 'pt')] || rawName.pt || '')
-        : (rawName || '');
-      return nameStr.toLowerCase().startsWith(drugName);
+      const nameRaw = d.name && typeof d.name === 'object'
+        ? (d.name[currentLang || 'pt'] || d.name.pt || '')
+        : (d.name || '');
+      const searchStr = String(nameRaw).toLowerCase();
+      return searchStr.startsWith(drugName);
     });
     infInteractEl.innerHTML = matched ? checkInteractions(matched.id) : '';
   }
@@ -1194,9 +1186,10 @@ function setInfusionMode(mode) {
  * Motor de cálculo principal — chamado em todo oninput/onchange
  */
 function calculateInfusion() {
-  /* Peso sempre vem da Home (patientData) — campo inf-weight é apenas relay oculto */
+  /* BUILD 405 REFAT 2C: peso via parseFloat explícito para garantir número mesmo
+     quando patientData.weight vem como string do formulário de entrada */
   const pd       = window.patientData || {};
-  const pesoKg   = (pd.weight && pd.weight > 0) ? pd.weight : 0;
+  const pesoKg   = parseFloat(pd.weight) > 0 ? parseFloat(pd.weight) : 0;
 
   /* Atualiza visibilidade do chip / guard de peso */
   const chip    = document.getElementById('inf-weight-chip');
@@ -1346,10 +1339,8 @@ function calculateInfusion() {
  * Chamado pelo setInfusionMode() e pelo próprio calculateInfusion().
  */
 function _infUpdateFreeDrugField() {
-  /* BUILD 404 PATCH B2: input unificado — #inf-free-drug-wrap sempre visível
-     (era oculto em modo 'drug', agora é o único input de droga em todos os modos) */
   const wrap = document.getElementById('inf-free-drug-wrap');
-  if (wrap) wrap.style.display = 'block';
+  if (wrap) wrap.style.display = (_infusionMode === 'free') ? 'block' : 'none';
 }
 
 /**
