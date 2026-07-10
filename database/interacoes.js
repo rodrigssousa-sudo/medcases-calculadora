@@ -218,6 +218,13 @@ const DRUG_ALIASES = {
   "methylprednisolone":                 "metilprednisolona",
   "solu_medrol":                        "metilprednisolona",
 
+  /* BUILD 427 — Antiagregantes P2Y12: aliases nomes comerciais */
+  "plavix":                             "clopidogrel",
+  "iscover":                            "clopidogrel",
+  "clopivasan":                         "clopidogrel",
+  "effient":                            "prasugrel",
+  "brilinta":                           "ticagrelor",
+
   /* BUILD 278 — Gastro Lote 2: aliases de nomenclatura */
   "pantoprazol_iv":                     "pantoprazol",
   "pantocal_iv":                        "pantoprazol",
@@ -16655,6 +16662,20 @@ const INTERACOES_DB = {
         pt: "Geralmente se prefere clopidogrel se o paciente precisar de anticoagulação oral concomitante, conforme diretrizes.",
         es: "Generalmente se prefiere clopidogrel si el paciente necesita anticoagulación oral concomitante, según directrices."
       }
+    },
+
+    /* BUILD 427 — Ticagrelor × Sinvastatina/Lovastatina: rabdomiólise por inibição CYP3A4/OATP1B1 */
+    "sinvastatina_lovastatina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "INTOXICAÇÃO POR ESTATINA (RABDOMIÓLISE). O Ticagrelor (Brilinta) atua como inibidor do transportador OATP1B1 e da enzima CYP3A4. Ao introduzi-lo no pós-infarto junto com doses altas de Sinvastatina ou Lovastatina, a concentração plasmática da estatina pode subir mais de 200%. Isso desencadeia miopatia destrutiva severa e rabdomiólise com falência renal aguda — apresentando-se como dor muscular intensa, urina escura (mioglobinúria) e creatinina em ascensão rápida.",
+        es: "INTOXICACIÓN POR ESTATINA (RABDOMIÓLISIS). El Ticagrelor actúa como inhibidor de CYP3A4 y OATP1B1. Al introducirlo con dosis altas de Simvastatina o Lovastatina, la concentración plasmática de la estatina puede subir más del 200%. Esto desencadena miopatía destructiva severa y rabdomiólisis con fallo renal agudo — presentándose como dolor muscular intenso, orina oscura (mioglobinuria) y creatinina en ascenso rápido."
+      },
+      conduta: {
+        pt: "A dose diária de Sinvastatina ou Lovastatina NÃO deve exceder 40 mg em pacientes recebendo Ticagrelor. A conduta preferencial no pós-infarto atual é migrar para Atorvastatina ou Rosuvastatina, que são mais seguras neste contexto e possuem potência superior.",
+        es: "La dosis de Simvastatina o Lovastatina NO debe exceder los 40 mg en pacientes con Ticagrelor. La conducta preferencial es migrar a Atorvastatina o Rosuvastatina, más seguras y potentes en este contexto."
+      }
     }
   },
 
@@ -24032,10 +24053,46 @@ const INTERACOES_DB = {
         es: "EVITAR la combinación siempre que sea posible. Para infecciones respiratorias, preferir AMOXICILINA o AZITROMICINA (menor inhibición de CYP3A4). Si Claritromicina es estrictamente necesaria, reducir la dosis del BCC en 50% y monitorizar PA diariamente."
       }
     }
+  },
+
+
+  /* ═══════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES BUILD 427 — ONDA 52:
+     Corticoides Sistêmicos de Resgate + Antiagregantes P2Y12
+     Hidrocortisona · Metilprednisolona · Clopidogrel · Prasugrel · Ticagrelor
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* $classe_corticoides_sistemicos: nó-raiz de CLASSE ausente do motor até BUILD 426.
+     Mapeado para 2 sub-interações de alto impacto clínico identificadas na auditoria BUILD 407-D.
+     Hidrocortisona e Metilprednisolona são membros primários desta classe. */
+  "$classe_corticoides_sistemicos": {
+    "insulinas_antidiabeticos_orais": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "ANULAÇÃO COMPLETA DO CONTROLE GLICÊMICO (Cetoacidose Induzida). Os corticosteroides ativam fortemente a gliconeogênese hepática e bloqueiam a ação periférica da insulina nos músculos. Introduzir Hidrocortisona ou Metilprednisolona sabota o efeito de Metformina, Gliclazida e das Insulinas (NPH, Glargina), podendo elevar a glicemia de 120 para > 400 mg/dL em poucas horas na UTI, gerando risco real de Cetoacidose Diabética e Estado Hiperosmolar Não Cetótico.",
+        es: "ANULACIÓN DEL CONTROL GLUCÉMICO (Cetoacidosis Inducida). Los corticoesteroides activan la gluconeogénesis hepática y bloquean la acción periférica de la insulina. Introducir Hidrocortisona o Metilprednisolona sabotea el efecto de Metformina e Insulinas (NPH, Glargina), pudiendo elevar la glucemia de 120 a > 400 mg/dL en pocas horas en la UCI, con riesgo real de Cetoacidosis Diabética."
+      },
+      conduta: {
+        pt: "Ajuste preventivo e agressivo na escala de insulina regular/rápida. Pacientes em pulsoterapia ou corticoterapia sistêmica de UTI DEVEM ter glicemia capilar testada a cada 4–6 horas de forma obrigatória. Escalonar doses de insulina conforme protocolo. Suspender hipoglicemiantes orais se glicemia capilar instável.",
+        es: "Ajuste agresivo de insulina. Pacientes en pulsoterapia o corticoides sistémicos en UCI DEBEN testear la glucemia cada 4–6 horas obligatoriamente. Escalar dosis de insulina según protocolo. Suspender hipoglucemiantes orales si glucemia capilar inestable."
+      }
+    },
+    "$classe_aines_ibuprofeno_cetoprofeno": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "HEMORRAGIA E ÚLCERA GÁSTRICA PERFURANTE (Sinergismo Destrutivo). Os corticoides reduzem a síntese de muco protetor gástrico e os AINEs inibem a COX-1 (bloqueando prostaglandinas protetoras). A combinação destrói as barreiras defensivas do estômago de forma sinérgica, desenvolvendo úlceras profundas rapidamente, com risco muito elevado de hemorragia gastrointestinal alta maciça silenciosa ou perfuração da parede estomacal.",
+        es: "HEMORRAGIA Y ÚLCERA GÁSTRICA PERFORANTE (Sinergismo Destructivo). Los corticoides reducen el moco protector gástrico y los AINE inhiben la COX-1. La combinación destruye las barreras del estómago de forma sinérgica, desarrollando úlceras profundas con alto riesgo de hemorragia gastrointestinal masiva silenciosa o perforación de pared gástrica."
+      },
+      conduta: {
+        pt: "PROIBIDO MISTURAR. Se o paciente necessita de corticoide sistêmico, o uso de qualquer AINE está sumariamente vetado. É mandatório associar um Protetor Gástrico (Omeprazol 40 mg/dia ou Pantoprazol 40 mg/dia) como gastroproteção profilática durante toda a corticoterapia.",
+        es: "PROHIBIDO MEZCLAR. Si el paciente necesita corticoide sistémico, el uso de cualquier AINE está vetado. Es mandatorio asociar un Protector Gástrico (Omeprazol 40 mg/día o Pantoprazol 40 mg/día) como gastroprotección profiláctica durante toda la corticoterapia."
+      }
+    }
   }
 
-
-}; /* fim INTERACOES_DB — BUILD 426 (anlodipino×sinvastatina; $classe_diidropiridinicos×suco_toranja_grapefruit; $classe_diidropiridinicos×$classe_inibidores_potentes_cyp3a4_macrolideos) | BUILD 425 ($classe_ferro_sais_ionicos×vitamina_c_acido_ascorbico; colecalciferol×orlistate_resinas_biliares; colecalciferol×$classe_diureticos_tiazidicos) | BUILD 424 ($classe_fosfatos_intravenosos×calcio_intravenoso_gluconato_cloreto; $classe_repositores_metais_bivalentes_fe_mg×levotiroxina_antibioticos_quinolonas_tetraciclinas; $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp) | BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 427 ($classe_corticoides_sistemicos×insulinas_antidiabeticos_orais; $classe_corticoides_sistemicos×$classe_aines_ibuprofeno_cetoprofeno; ticagrelor×sinvastatina_lovastatina) | BUILD 426 (anlodipino×sinvastatina; $classe_diidropiridinicos×suco_toranja_grapefruit; $classe_diidropiridinicos×$classe_inibidores_potentes_cyp3a4_macrolideos) | BUILD 425 ($classe_ferro_sais_ionicos×vitamina_c_acido_ascorbico; colecalciferol×orlistate_resinas_biliares; colecalciferol×$classe_diureticos_tiazidicos) | BUILD 424 ($classe_fosfatos_intravenosos×calcio_intravenoso_gluconato_cloreto; $classe_repositores_metais_bivalentes_fe_mg×levotiroxina_antibioticos_quinolonas_tetraciclinas; $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp) | BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

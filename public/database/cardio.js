@@ -15570,7 +15570,177 @@
   ══════════════════════════════════════════════════════════════════════════════ */
   Object.assign(window.CARDIO_DRUGS_DB, {
 
-  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 21 (Antiagregantes P2Y12: Clopidogrel · Prasugrel) */
+    /* BUILD 427 — LACUNA PREENCHIDA */
+    clopidogrel: {
+      name:     { pt: 'Clopidogrel (Bisulfato de)', es: 'Clopidogrel (Bisulfato de)' },
+      category: 'cardio',
+      icon:     '🩸',
+      color:    'rgba(239,68,68,0.13)',
+      colorTxt: '#B91C1C',
+      calculate: (paciente, lang = 'pt') => {
+        const idade    = Number(paciente.idade   || 0);
+        const peso     = Number(paciente.peso    || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        return {
+          name:  t(lang, 'Clopidogrel (Bisulfato de)', 'Clopidogrel (Bisulfato de)'),
+          class: t(lang, 'Antiagregante Plaquetário — Antagonista Irreversível P2Y12', 'Antiagregante Plaquetario — Antagonista Irreversible P2Y12'),
+          commercialNames: {
+            br: ['Plavix', 'Iscover', 'Clopivasan'],
+            ar: ['Plavix', 'Nogreg']
+          },
+          presentation: [
+            t(lang, 'Comprimidos revestidos 75 mg', 'Comprimidos recubiertos 75 mg')
+          ],
+          dose: {
+            adultoPadrao: t(lang,
+              'Dose de Ataque (IAM/Stent): 300–600 mg VO dose única imediata. Manutenção: 75 mg VO 1x/dia.',
+              'Dosis de Carga (IAM/Stent): 300–600 mg VO dosis única. Mantenimiento: 75 mg VO 1 vez/día.'
+            ),
+            adultoGrave: t(lang,
+              'Prevenção AVC/DAP (sem ataque): 75 mg VO 1x/dia contínuo.',
+              'Prevención ACV/EAP (sin carga): 75 mg VO 1 vez/día continuo.'
+            ),
+            pediatricaPadrao: t(lang,
+              'Cardiopatia congênita (restrito): 1 mg/kg/dia VO. Máx 75 mg/dia.',
+              'Cardiopatía congénita (restringido): 1 mg/kg/día VO. Máx 75 mg/día.'
+            ),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+          doseKg: {
+            padrao:    null,
+            grave:     null,
+            meningite: null,
+            doseMaxima: t(lang, '600 mg (ataque) / 75 mg/dia (manutenção)', '600 mg (carga) / 75 mg/día (mantenimiento)')
+          },
+          therapeuticRange: t(lang,
+            'Não há nível sérico monitorável. Avaliação funcional plaquetária (VerifyNow P2Y12) em casos selecionados de resistência.',
+            'No hay nivel sérico monitoreable. Evaluación funcional plaquetaria (VerifyNow P2Y12) en casos de resistencia.'
+          ),
+          dilution: t(lang, 'Medicamento oral. Não há forma IV.', 'Medicamento oral. No hay forma IV.'),
+          speed:    t(lang, 'Administração oral. A carga deve ser ingerida imediatamente na sala de emergência.', 'Administración oral. La carga debe ingerirse inmediatamente en la sala de emergencia.'),
+          commonAdverseEffects: [
+            t(lang, 'Equimoses e hematomas espontâneos', 'Equimosis y hematomas espontáneos'),
+            t(lang, 'Epistaxe', 'Epistaxis'),
+            t(lang, 'Dispepsia e dor abdominal', 'Dispepsia y dolor abdominal')
+          ],
+          severeAdverseEffects: [
+            t(lang, 'Hemorragia gastrointestinal maciça', 'Hemorragia gastrointestinal masiva'),
+            t(lang, 'Hemorragia intracraniana', 'Hemorragia intracraneal'),
+            t(lang, 'Púrpura Trombocitopênica Trombótica (PTT — raríssimo)', 'Púrpura Trombocitopénica Trombótica (PTT — rarísimo)')
+          ],
+          contraindications: [
+            t(lang, 'Sangramento patológico ativo (úlcera péptica sangrante, hemorragia intracraniana ativa)', 'Sangrado patológico activo'),
+            t(lang, 'Hipersensibilidade ao clopidogrel', 'Hipersensibilidad al clopidogrel')
+          ],
+          pregnancyCategory: t(lang, 'Categoria B — Usar com cautela; evitar no 3º trimestre. Risco hemorrágico no parto.', 'Categoría B — Usar con cautela; evitar en el 3.º trimestre.'),
+          breastfeeding:     gestante || lactante ? t(lang, 'Excreção no leite não estabelecida — evitar.', 'Excreción en leche no establecida — evitar.') : null,
+          renalAdjust:       t(lang, 'Sem ajuste necessário na DRC.', 'Sin ajuste necesario en la ERC.'),
+          hepaticAdjust:     t(lang, 'Cuidado em hepatopatia grave: menor conversão pela CYP2C19 + risco hemorrágico aumentado.', 'Precaución en hepatopatía grave.'),
+          interactions: [
+            t(lang, 'OMEPRAZOL/ESOMEPRAZOL — FDA Black Warning: Inibição CYP2C19 → anulação do efeito antiagregante → trombose de stent.', 'OMEPRAZOL/ESOMEPRAZOL — FDA Black Warning: Inhibición CYP2C19 → anulación del efecto → trombosis de stent.'),
+            t(lang, 'AINEs — Risco hemorrágico GI sinérgico. Usar pantoprazol se inevitável.', 'AINEs — Riesgo hemorrágico GI sinérgico.'),
+            t(lang, 'Anticoagulantes (DOAC/Varfarina) — Terapia dupla/tripla: alto risco hemorrágico; restringir ao mínimo necessário.', 'Anticoagulantes (DOAC/Warfarina) — Terapia doble/triple: alto riesgo hemorrágico.')
+          ],
+          clinicalPearl: t(lang,
+            'A REGRA DOS 5 DIAS: Suspender 5 dias antes de cirurgia eletiva de grande porte (bypass, coluna). Resistência ao clopidogrel ocorre em ~30% dos pacientes por polimorfismo da CYP2C19 — nesse caso, migrar para ticagrelor ou prasugrel.',
+            'LA REGLA DE LOS 5 DÍAS: Suspender 5 días antes de cirugía electiva mayor. Resistencia al clopidogrel ocurre en ~30% por polimorfismo de CYP2C19 — migrar a ticagrelor o prasugrel.'
+          ),
+          evidence: t(lang,
+            'CURE Trial (NEJM 2001) — ACS; COMMIT Trial — IAM com ST; CAPRIE Trial — DAP/AVC.',
+            'CURE Trial (NEJM 2001) — SCA; COMMIT — IAM con ST; CAPRIE — EAP/ACV.'
+          )
+        };
+      }
+    },
+
+    prasugrel: {
+      name:     { pt: 'Prasugrel (Cloridrato de)', es: 'Prasugrel (Clorhidrato de)' },
+      category: 'cardio',
+      icon:     '🩸',
+      color:    'rgba(239,68,68,0.13)',
+      colorTxt: '#B91C1C',
+      calculate: (paciente, lang = 'pt') => {
+        const peso     = Number(paciente.peso    || 70);
+        const idade    = Number(paciente.idade   || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const doseManut = (peso < 60 || idade >= 75) ? 5 : 10;
+        return {
+          name:  t(lang, 'Prasugrel (Cloridrato de)', 'Prasugrel (Clorhidrato de)'),
+          class: t(lang, 'Antiagregante Plaquetário de Alta Potência — Tienopiridina P2Y12', 'Antiagregante Plaquetario de Alta Potencia — Tienopiridina P2Y12'),
+          commercialNames: {
+            br: ['Effient'],
+            ar: ['Effient']
+          },
+          presentation: [
+            t(lang, 'Comprimidos revestidos 5 mg e 10 mg', 'Comprimidos recubiertos 5 mg y 10 mg')
+          ],
+          dose: {
+            adultoPadrao: t(lang,
+              `Dose de Ataque (cateterismo): 60 mg VO dose única. Manutenção: ${doseManut} mg VO 1x/dia.`,
+              `Dosis de Carga (cateterismo): 60 mg VO dosis única. Mantenimiento: ${doseManut} mg VO 1 vez/día.`
+            ),
+            adultoGrave:        null,
+            pediatricaPadrao:   t(lang, 'Não indicado em pediatria.', 'No indicado en pediatría.'),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+          doseKg: {
+            padrao:    null,
+            grave:     null,
+            meningite: null,
+            doseMaxima: t(lang,
+              peso < 60 || idade >= 75
+                ? '5 mg/dia — dose reduzida (peso < 60 kg ou ≥ 75 anos)'
+                : '60 mg ataque / 10 mg/dia manutenção',
+              peso < 60 || idade >= 75
+                ? '5 mg/día — dosis reducida (peso < 60 kg o ≥ 75 años)'
+                : '60 mg carga / 10 mg/día mantenimiento'
+            )
+          },
+          therapeuticRange: t(lang,
+            'Sem nível sérico monitorável. Mais previsível que o clopidogrel por não depender de polimorfismo da CYP2C19.',
+            'Sin nivel sérico monitoreable. Más predecible que clopidogrel (no depende del polimorfismo CYP2C19).'
+          ),
+          dilution: t(lang, 'Medicamento oral. Não há forma IV.', 'Medicamento oral. No hay forma IV.'),
+          speed:    t(lang, 'Via oral. A carga de 60 mg é dada na mesa de hemodinâmica, pelo intervencionista.', 'Vía oral. La carga de 60 mg se administra en la mesa de cateterismo.'),
+          commonAdverseEffects: [
+            t(lang, 'Sangramentos cutâneos espontâneos', 'Sangrados cutáneos espontáneos'),
+            t(lang, 'Anemia por micro-sangramentos', 'Anemia por microsangrados'),
+            t(lang, 'Epistaxe', 'Epistaxis')
+          ],
+          severeAdverseEffects: [
+            t(lang, 'Hemorragia fatal severa', 'Hemorragia fatal severa'),
+            t(lang, 'AVC hemorrágico devastador — Alerta Caixa Preta em idosos com AVC/AIT prévio', 'ACV hemorrágico — Alerta de Caja Negra en ancianos con ACV/AIT previo')
+          ],
+          contraindications: [
+            t(lang, 'CONTRAINDICAÇÃO ABSOLUTA: Histórico de AVC ou AIT (risco proibitivo de hemorragia intracraniana)', 'CONTRAINDICACIÓN ABSOLUTA: Antecedentes de ACV o AIT'),
+            t(lang, 'Sangramento patológico ativo', 'Sangrado patológico activo'),
+            t(lang, 'Insuficiência hepática grave', 'Insuficiencia hepática grave')
+          ],
+          pregnancyCategory: t(lang, 'Categoria B — Evitar; dados insuficientes de segurança fetal.', 'Categoría B — Evitar; datos insuficientes de seguridad fetal.'),
+          breastfeeding:     gestante || lactante ? t(lang, 'Evitar — excreção no leite desconhecida.', 'Evitar — excreción en leche desconocida.') : null,
+          renalAdjust:       t(lang, 'Sem ajuste necessário.', 'Sin ajuste necesario.'),
+          hepaticAdjust:     t(lang, 'Sem ajuste em falência leve/moderada. Contraindicado na grave.', 'Sin ajuste en falla leve/moderada. Contraindicado en grave.'),
+          interactions: [
+            t(lang, 'AINEs — Risco hemorrágico GI sinérgico severo.', 'AINEs — Riesgo hemorrágico GI sinérgico severo.'),
+            t(lang, 'Anticoagulantes (DOAC/Varfarina) — Terapia tripla: alto risco; prasugrel é mais potente que clopidogrel nesse contexto.', 'Anticoagulantes — Terapia triple: prasugrel más potente que clopidogrel en este contexto.')
+          ],
+          clinicalPearl: t(lang,
+            'BLACK BOX AVC/AIT: Expressamente PROIBIDO em pacientes com histórico de AVC ou AIT. Reduzir manutenção para 5 mg em peso < 60 kg ou ≥ 75 anos para minimizar sangramento.',
+            'CAJA NEGRA ACV/AIT: PROHIBIDO en pacientes con antecedentes de ACV o AIT. Reducir mantenimiento a 5 mg en peso < 60 kg o ≥ 75 años.'
+          ),
+          evidence: t(lang,
+            'TRITON-TIMI 38 Trial (NEJM 2007) — Superior ao clopidogrel em ICP; TRILOGY-ACS — SCA sem ST.',
+            'TRITON-TIMI 38 Trial (NEJM 2007) — Superior al clopidogrel en ICP; TRILOGY-ACS — SCA sin ST.'
+          )
+        };
+      }
+    }
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 21 (Antiagregantes P2Y12: Clopidogrel · Prasugrel) — BUILD 427 */
 
   /* ══════════════════════════════════════════════════════════════════════════════
      GRUPO 22 — ANTIAGREGANTES P2Y12 REVERSÍVEIS (ORAL + IV)
@@ -15579,7 +15749,86 @@
   ══════════════════════════════════════════════════════════════════════════════ */
   Object.assign(window.CARDIO_DRUGS_DB, {
 
-  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 22 (Antiagregantes P2Y12 Reversíveis: Ticagrelor · Cangrelor) */
+    /* BUILD 427 — LACUNA PREENCHIDA */
+    ticagrelor: {
+      name:     { pt: 'Ticagrelor', es: 'Ticagrelor' },
+      category: 'cardio',
+      icon:     '🩸',
+      color:    'rgba(239,68,68,0.13)',
+      colorTxt: '#B91C1C',
+      calculate: (paciente, lang = 'pt') => {
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        return {
+          name:  t(lang, 'Ticagrelor', 'Ticagrelor'),
+          class: t(lang, 'Antiagregante Plaquetário de Alta Potência — Bloqueador REVERSÍVEL P2Y12 (CPTP)', 'Antiagregante Plaquetario de Alta Potencia — Bloqueador REVERSIBLE P2Y12 (CPTP)'),
+          commercialNames: {
+            br: ['Brilinta'],
+            ar: ['Brilinta']
+          },
+          presentation: [
+            t(lang, 'Comprimidos revestidos 60 mg e 90 mg', 'Comprimidos recubiertos 60 mg y 90 mg')
+          ],
+          dose: {
+            adultoPadrao: t(lang,
+              'Dose de Ataque (IAM agudo): 180 mg VO (2 cp de 90 mg) dose única. Manutenção 1º ano: 90 mg VO 12/12h. Após 1 ano (prevenção prolongada): 60 mg VO 12/12h.',
+              'Dosis de Carga (IAM agudo): 180 mg VO (2 cp de 90 mg) dosis única. Mantenimiento 1.º año: 90 mg VO cada 12h. Tras 1 año: 60 mg VO cada 12h.'
+            ),
+            adultoGrave:        null,
+            pediatricaPadrao:   t(lang, 'Não indicado em pediatria.', 'No indicado en pediatría.'),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+          doseKg: {
+            padrao:    null,
+            grave:     null,
+            meningite: null,
+            doseMaxima: t(lang, '180 mg (ataque) / 90 mg 2x/dia (manutenção 1º ano) / 60 mg 2x/dia (após 1 ano)', '180 mg (carga) / 90 mg 2 veces/día / 60 mg 2 veces/día (tras 1 año)')
+          },
+          therapeuticRange: t(lang,
+            'Sem nível sérico monitorável. Não é pró-fármaco — efeito imediato em ~30 min. Reversível: função plaquetária restaurada em 3–5 dias após suspensão (vs 7–10 dias do clopidogrel).',
+            'Sin nivel sérico monitoreable. No es profármaco — efecto inmediato en ~30 min. Reversible: función plaquetaria restaurada en 3–5 días tras la suspensión.'
+          ),
+          dilution: t(lang, 'Medicamento oral. Pode ser triturado e misturado com água em urgência.', 'Medicamento oral. Puede triturarse y mezclarse con agua en urgencia.'),
+          speed:    t(lang, 'Via oral, de 12/12 horas (reversibilidade exige 2 doses/dia).', 'Vía oral, cada 12 horas (la reversibilidad exige 2 dosis/día).'),
+          commonAdverseEffects: [
+            t(lang, 'DISPNEIA DO BRILINTA — Falta de ar benigna por inibição da recaptação de adenosina no pulmão (~14% dos usuários)', 'DISNEA DEL BRILINTA — Falta de aire benigna por inhibición de recaptación de adenosina (~14% de usuarios)'),
+            t(lang, 'Aumento do ácido úrico sérico', 'Aumento del ácido úrico sérico'),
+            t(lang, 'Pausas ventriculares / bradicardia assintomática', 'Pausas ventriculares / bradicardia asintomática')
+          ],
+          severeAdverseEffects: [
+            t(lang, 'Hemorragia intracraniana fatal', 'Hemorragia intracraneal fatal'),
+            t(lang, 'Sangramento digestivo maciço', 'Sangrado digestivo masivo')
+          ],
+          contraindications: [
+            t(lang, 'Histórico de hemorragia intracraniana (AVC hemorrágico)', 'Historial de hemorragia intracraneal (ACV hemorrágico)'),
+            t(lang, 'Sangramento ativo grave atual', 'Sangrado activo grave actual'),
+            t(lang, 'Insuficiência hepática grave', 'Insuficiencia hepática grave'),
+            t(lang, 'Uso concomitante de inibidores potentes CYP3A4 (cetoconazol, itraconazol, ritonavir, claritromicina) — contraindicação absoluta', 'Uso concomitante de inhibidores potentes CYP3A4 — contraindicación absoluta')
+          ],
+          pregnancyCategory: t(lang, 'Categoria C — Evitar; sem dados suficientes de segurança fetal.', 'Categoría C — Evitar; sin datos de seguridad fetal.'),
+          breastfeeding:     gestante || lactante ? t(lang, 'Evitar — excreção no leite desconhecida.', 'Evitar — excreción en leche desconocida.') : null,
+          renalAdjust:       t(lang, 'Sem ajuste necessário.', 'Sin ajuste necesario.'),
+          hepaticAdjust:     t(lang, 'Contraindicado na insuficiência hepática grave.', 'Contraindicado en insuficiencia hepática grave.'),
+          interactions: [
+            t(lang, 'SINVASTATINA/LOVASTATINA — Inibição de CYP3A4/OATP1B1: concentração da estatina pode dobrar → Rabdomiólise. Limitar Sinvastatina a ≤40 mg. Preferir Atorvastatina/Rosuvastatina.', 'SIMVASTATINA/LOVASTATINA — Inhibición CYP3A4/OATP1B1 → concentración de estatina duplicada → Rabdomiólisis. Limitar a ≤40 mg.'),
+            t(lang, 'CETOCONAZOL/ITRACONAZOL/RITONAVIR/CLARITROMICINA — Contraindicação absoluta (inibição CYP3A4: níveis de ticagrelor × 5–8).', 'KETOCONAZOL/ITRACONAZOL/RITONAVIR/CLARITROMICINA — Contraindicación absoluta.'),
+            t(lang, 'RIFAMPICINA/FENITOÍNA/CARBAMAZEPINA — Indutores CYP3A4: reduzem eficácia do ticagrelor drasticamente.', 'RIFAMPICINA/FENITOÍNA/CARBAMAZEPINA — Inductores CYP3A4: reducen eficacia drásticamente.'),
+            t(lang, 'AAS em altas doses (>100 mg/dia) — Reduz paradoxalmente a eficácia do ticagrelor. Manter AAS em dose baixa (75–100 mg).', 'AAS en dosis altas (>100 mg/día) — Reduce paradójicamente la eficacia. Mantener AAS dosis baja (75–100 mg).')
+          ],
+          clinicalPearl: t(lang,
+            'A DISPNEIA QUE PARECE INFARTO: A falta de ar benigna do Brilinta (adenosina pulmonar) assusta o paciente — oriente antecipadamente. O ticagrelor NÃO é metabolizado pelo CYP2C19, sendo eficaz mesmo em "resistentes ao clopidogrel". Usar AAS sempre em dose baixa (75–100 mg) para não antagonizar o efeito.',
+            'LA DISNEA QUE PARECE INFARTO: La falta de aire benigna del Brilinta (adenosina pulmonar) asusta al paciente — orientar anticipadamente. No metabolizado por CYP2C19, eficaz incluso en "resistentes al clopidogrel".'
+          ),
+          evidence: t(lang,
+            'PLATO Trial (NEJM 2009) — Superior ao clopidogrel em SCA (mortalidade CV reduzida 21%); PEGASUS-TIMI 54 — 60 mg 2x/dia após 1 ano de SCA.',
+            'PLATO Trial (NEJM 2009) — Superior al clopidogrel en SCA (mortalidad CV reducida 21%); PEGASUS-TIMI 54 — 60 mg 2 veces/día tras 1 año.'
+          )
+        };
+      }
+    }
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 22 (Antiagregantes P2Y12 Reversíveis: Ticagrelor · Cangrelor) — BUILD 427 */
 
   /* ══════════════════════════════════════════════════════════════════════════════
      GRUPO 23 — ANTIAGREGANTE VASODILATADOR + NITRATO IV

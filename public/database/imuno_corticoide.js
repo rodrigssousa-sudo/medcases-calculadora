@@ -297,6 +297,92 @@ window.IMUNO_CORTICOIDE_DRUGS_DB = [
       warning: { pt: 'CUIDADO ENDÓCRINO: A aplicação de 1 ampola de corticoide de depósito descompensa o diabetes por semanas, exigindo reajuste prolongado da insulina. Não banalizar o uso para dores simples.', es: 'CUIDADO ENDOCRINO: La aplicación de 1 ampolla de corticoide de depósito descompensa la diabetes por semanas, exigiendo reajuste prolongado de la insulina. No banalizar el uso para dolores simples.' }
     },
     ref: 'Roberts D et al. (ACTORDS) Cochrane 2017 · Crowther CA & Harding JE. N Engl J Med 2011 · ACR Guidelines 2022 · Lexicomp 2026'
+  },
+
+  /* ══════════════════════════════════════════════════════════════
+     BUILD 427 — LACUNAS CRÍTICAS: Corticoides IV de Resgate
+     Hidrocortisona · Metilprednisolona
+  ══════════════════════════════════════════════════════════════ */
+  {
+    id: 'hidrocortisona',
+    name: { pt: 'Hidrocortisona (Succinato Sódico de)', es: 'Hidrocortisona (Succinato Sódico de)' },
+    category: 'emergencia',
+    class: { pt: 'Corticosteroide Sistêmico de Ação Curta (Glucocorticoide)', es: 'Corticosteroide Sistémico de Acción Corta (Glucocorticoide)' },
+    indications: {
+      pt: ['Insuficiência Adrenal Aguda (Crise Addisoniana)', 'Choque Séptico refratário a vasopressores (Protocolo Surviving Sepsis)', 'Status Asthmaticus e exacerbação grave de DPOC', 'Reações anafiláticas graves (Adjuvante)'],
+      es: ['Insuficiencia Adrenal Aguda (Crisis Addisoniana)', 'Choque Séptico refractario a vasopresores', 'Status Asthmaticus y exacerbación de EPOC', 'Reacciones anafilácticas graves']
+    },
+    commercialNames: { br: ['Solu-Cortef', 'Hidrocortisona IV'], ar: ['Solu-Cortef', 'Flebocortid'] },
+    presentation: { pt: ['Frasco-ampola com pó liofilizado para injeção 100 mg e 500 mg + diluente'], es: ['Frasco-ampolla con polvo liofilizado para inyección 100 mg y 500 mg'] },
+    mechanism: {
+      pt: 'O Corticoide Fisiológico de Resgate. É a cópia sintética do cortisol humano. Age ligando-se aos receptores citoplasmáticos de glucocorticoide, migrando para o núcleo celular onde bloqueia a transcrição de citocinas pró-inflamatórias (IL-1, IL-6, TNF-alfa) e inibe a fosfolipase A2. Possui um potente efeito mineralocorticoide intrínseco (retém sódio e puxa água para dentro do vaso), o que ajuda a restaurar a pressão arterial no choque.',
+      es: 'El Corticoide Fisiológico de Rescate. Copia sintética del cortisol. Bloquea la transcripción de citocinas proinflamatorias e inhibe la fosfolipasa A2. Posee un potente efecto mineralocorticoide intrínseco (retiene sodio y agua), restaurando la presión arterial en el choque.'
+    },
+    dose: {
+      adult: {
+        pt: 'Choque Séptico: 200 mg/dia administrados em infusão contínua ou doses divididas de 50 mg IV a cada 6 horas. Crise Adrenal: 100 mg IV em bolus imediato, seguido de 100–200 mg nas próximas 24h.',
+        es: 'Choque Séptico: 200 mg/día en infusión continua o dosis divididas de 50 mg IV cada 6 horas. Crisis Adrenal: 100 mg IV en bolo.'
+      },
+      pediatric: {
+        pt: 'Ataque de insuficiência adrenal: 1 a 2 mg/kg/dose IV bolus, seguido de 25 a 150 mg/dia divididos.',
+        es: 'Crisis adrenal pediátrica: 1 a 2 mg/kg/dosis IV bolo.'
+      }
+    },
+    administration: { pt: ['Pode ser administrado via IV direta (bolus lento de 1 a 5 minutos) ou diluído em SF 0,9% ou SG 5% para infusão contínua.'], es: ['Vía IV directa (bolo lento de 1 a 5 minutos) o diluido en SF o SG 5% para infusión continua.'] },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste prévio.', es: 'Sin necesidad de ajuste previo.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Metabolização hepática; monitorar retenção de fluidos se cirrose grave.', es: 'Monitorear retención de fluidos si hay cirrosis grave.' } },
+    commonAdverseEffects: { pt: ['Hiperglicemia aguda (requer insulina)', 'Hipocalemia', 'Retenção hídrica com edema e hipertensão transitória'], es: ['Hiperglucemia aguda', 'Hipopotasemia', 'Retención hídrica con edema'] },
+    dangerousAdverseEffects: { pt: ['Psicose induzida por corticoide (Delirium agudo de UTI)', 'Imunossupressão severa com mascaramento de focos infecciosos', 'Miopatia aguda'], es: ['Psicosis por corticoide (Delirium en UCI)', 'Infecciones oportunistas por inmunosupresión'] },
+    contraindications: {
+      absolute: { pt: ['Infecções fúngicas sistêmicas generalizadas sem tratamento fúngico ativo'], es: ['Infecciones fúngicas sistémicas sin tratamiento activo'] },
+      relative: { pt: ['Diabetes Mellitus descompensado severo', 'Úlcera péptica ativa sangrante'], es: ['Diabetes Mellitus descompensado', 'Úlcera péptica activa'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+      warning: { pt: 'O PERIGO DA PARADA BRUSCA: O uso prolongado de hidrocortisona por mais de 7–14 dias atrofia as glândulas adrenais. Se suspenso abruptamente, o corpo entra em Choque Addisoniano Iatrogênico por falta de cortisol, podendo levar ao óbito. Faça sempre o desmame gradual.', es: 'EL PELIGRO DE LA PARADA BRUSCA: El uso por más de 7–14 días atrofia las glándulas adrenales. Si se suspende abruptamente, el cuerpo entra en Choque Addisoniano Iatrogénico. Realice siempre desmame gradual.' }
+    },
+    ref: 'Surviving Sepsis Campaign Guidelines 2021 · Corticus Trial · ADRENAL Trial (NEJM 2018) · Lexicomp 2026'
+  },
+
+  {
+    id: 'metilprednisolona',
+    name: { pt: 'Metilprednisolona (Succinato Sódico de)', es: 'Metilprednisolona (Succinato Sódico de)' },
+    category: 'emergencia',
+    class: { pt: 'Corticosteroide Sistêmico de Ação Intermediária (Alta Potência Anti-inflamatória)', es: 'Corticosteroide Sistémico de Acción Intermedia (Alta Potencia Antiinflamatoria)' },
+    indications: {
+      pt: ['Pulsoterapia em crises reumatológicas (Lúpus, Artrite Reumatoide)', 'Rejeição aguda de órgãos transplantados', 'Exacerbação grave de Esclerose Múltipla', 'Lesão medular traumática aguda (uso controverso conforme protocolo)'],
+      es: ['Pulsoterapia en crisis reumatológicas (Lupus, AR)', 'Rechazo agudo de órganos trasplantados', 'Exacerbación de Esclerosis Múltiple']
+    },
+    commercialNames: { br: ['Solu-Medrol', 'Unimedrol'], ar: ['Solu-Medrol', 'Metilprednisolona'] },
+    presentation: { pt: ['Frasco-ampola pó liofilizado IV 40 mg, 125 mg, 500 mg e 1.000 mg + diluente'], es: ['Frasco-ampolla polvo liofilizado IV 40 mg a 1.000 mg'] },
+    mechanism: {
+      pt: 'O Aríete da Imunossupressão. Possui potência anti-inflamatória 5 vezes MAIOR que a Hidrocortisona, com a enorme vantagem de quase NÃO ter efeito mineralocorticoide (não retém sódio). Em altas doses (Pulsoterapia), penetra diretamente no núcleo dos linfócitos doentes e induz apoptose, paralisando o ataque autoimune em 24 horas.',
+      es: 'El Ariete de la Inmunosupresión. Potencia antiinflamatoria 5 veces MAYOR que la Hidrocortisona, casi SIN efecto mineralocorticoide. En altas dosis (Pulsoterapia), induce la apoptosis de los linfocitos enfermos, parando el ataque autoinmune en 24 horas.'
+    },
+    dose: {
+      adult: {
+        pt: 'Pulsoterapia Reumatológica/Transplante: 500 mg a 1.000 mg IV, UMA VEZ ao dia, infundido em 30 a 60 minutos, geralmente por 3 dias consecutivos.',
+        es: 'Pulsoterapia: 500 mg a 1.000 mg IV, UNA VEZ al día, infundido en 30 a 60 minutos, por 3 días.'
+      },
+      pediatric: {
+        pt: 'Anti-inflamatório padrão: 1 a 2 mg/kg/dia IV divididos a cada 6 ou 12 horas.',
+        es: 'Antiinflamatorio estándar: 1 a 2 mg/kg/día IV.'
+      }
+    },
+    administration: { pt: ['A PULSOTERAPIA NUNCA PODE SER DADA EM BOLUS RÁPIDO. Deve correr em bomba de infusão em pelo menos 30–60 minutos, sob risco de parada cardíaca por arritmia eletrolítica severa.'], es: ['LA PULSOTERAPIA NUNCA EN BOLO RÁPIDO. Debe correr en bomba de infusión en mínimo 30–60 minutos, bajo riesgo de parada cardíaca.'] },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Metabolizado no fígado. Monitorar enzimas em hepatopatias graves.', es: 'Metabolizado en hígado. Monitorear enzimas en hepatopatías graves.' } },
+    commonAdverseEffects: { pt: ['Disparada glicêmica severa', 'Sabor metálico durante a infusão', 'Insônia profunda e irritabilidade extrema'], es: ['Pico glucémico severo', 'Sabor metálico durante la infusión', 'Insomnio profundo e irritabilidad'] },
+    dangerousAdverseEffects: { pt: ['Necrose Asséptica da Cabeça do Fêmur (uso crônico ou pulsoterapia repetida)', 'Arritmias cardíacas letais se infundido rapidamente', 'Perfuração de úlcera gástrica silenciosa'], es: ['Necrosis Avascular de la Cabeza del Fémur', 'Arritmias cardíacas letales si se infunde rápido', 'Perforación de úlcera gástrica'] },
+    contraindications: {
+      absolute: { pt: ['Infecções bacterianas ou fúngicas sistêmicas ativas sem cobertura antimicrobiana adequada'], es: ['Infecciones sistémicas activas sin cobertura'] },
+      relative: { pt: ['Hipertensão arterial maligna', 'Histórico de psicose bipolar'], es: ['Hipertensión arterial maligna', 'Historial de psicosis bipolar'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+      warning: { pt: 'O ALERTA DO INFARTO DA CABEÇA DO FÊMUR: O uso de altas doses pode causar microembolias de gordura que entopem as artérias do quadril. Meses após a pulsoterapia, a cabeça do fêmur pode morrer (Necrose Avascular), exigindo prótese total de quadril em pacientes jovens.', es: 'EL ALERTA DEL INFARTO DE LA CABEZA DEL FÉMUR: El uso de altas dosis puede causar microembolias que tapan las arterias de la cadera. Meses después, la cabeza del fémur puede morir (Necrosis Avascular), exigiendo prótesis.' }
+    },
+    ref: 'SBR Guidelines · NASCIS III Trial · ADRENAL Trial · Lexicomp 2026'
   }
 
-]; /* fim window.IMUNO_CORTICOIDE_DRUGS_DB */
+]; /* fim window.IMUNO_CORTICOIDE_DRUGS_DB — BUILD 427 */
