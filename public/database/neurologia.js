@@ -5057,12 +5057,13 @@
 })();
 
 /* ══════════════════════════════════════════════════════════════════════════
-   BUILD 422 — ONDA 47: Biotech & Reanimação Venosa (Fármacos 665–669)
-   +5 drogas: Sparsentana | Cisteamina | Ácido Tióctico
+   BUILD 423 — ONDA 48: Spec Expandido — Proteção Renal & Fluidos Vasculares
+   +5 drogas (schema completo): Sparsentana | Cisteamina | Ácido Tióctico
               Cloreto de Sódio 0,9% (SF) | Ringer Lactato
-   category: nefrologia (×3) | emergencia (×2 — fluidos IV)
-   icon nefrologia: 🫘 color: #0369A1 colorTxt: #ffffff
-   icon emergencia:  🧪 color: #0F766E colorTxt: #ffffff
+   Categorias: nefrologia (×2) | neurologia (×1) | uti_fluidos (×2)
+   Motor de interações: sparsentana×IECA/BRA/Aliskireno (contraindicada/5)
+                        ringer_lactato×ceftriaxona (contraindicada/5)
+                        ringer_lactato×transfusao (contraindicada/5)
 ══════════════════════════════════════════════════════════════════════════ */
 (function(){
   if(!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) window.NEUROLOGIA_DRUGS_DB={};
@@ -5075,232 +5076,233 @@
       icon: '🫘',
       color: '#0369A1',
       colorTxt: '#ffffff',
-      class: { pt: 'Antagonista Duplo do Receptor de Angiotensina II (AT1) e Endotelina A (ETA) — DARA', es: 'Antagonista Dual del Receptor de Angiotensina II (AT1) y Endotelina A (ETA) — DARA' },
+      class: { pt: 'Antagonista Duplo (Receptor de Endotelina e Angiotensina II - DEARA)', es: 'Antagonista Doble (Receptor de Endotelina y Angiotensina II - DEARA)' },
       indications: {
-        pt: ['Nefropatia por IgA (IgAN) com proteinúria persistente ≥ 1 g/dia em adultos — primeiro DARA aprovado para doença renal primária autoimune'],
-        es: ['Nefropatía por IgA (IgAN) con proteinuria persistente ≥ 1 g/día en adultos — primer DARA aprobado para enfermedad renal primaria autoinmune']
+        pt: ['Nefropatia por IgA (Doença de Berger) primária com alto risco de progressão da doença (Proteinúria > 1,5 g/dia)'],
+        es: ['Nefropatía por IgA (Enfermedad de Berger) primaria con alto riesgo de progresión (Proteinuria > 1,5 g/día)']
       },
-      commercialNames: { br: ['Filspari (Aprovado FDA 2023)'], ar: ['Filspari'] },
-      presentation: { pt: ['Cápsulas de liberação prolongada 200 mg e 400 mg'], es: ['Cápsulas de liberación prolongada 200 mg y 400 mg'] },
+      commercialNames: { br: ['Filspari (Importação especializada)'], ar: ['Filspari'] },
+      presentation: { pt: ['Comprimidos revestidos 200 mg e 400 mg'], es: ['Comprimidos recubiertos 200 mg y 400 mg'] },
       mechanism: {
-        pt: 'O "Duplo Extintor da Inflamação Renal". A Sparsentana é uma molécula engenhosa que bloqueia DOIS receptores que trabalham juntos para destruir os glomérulos na IgAN:\n• Receptor AT1 de Angiotensina II: Causa vasoconstrição da artéria eferente do rim, hipertensão glomerular e fibrose. Bloquear AT1 reduz a pressão dentro do glomérulo.\n• Receptor ETA de Endotelina-1: A Endotelina é produzida pelo lúmen glomerular quando agredido pelos complexos de IgA. Ela causa inflamação local, proliferação mesangial e esclerose glomerular progressiva. Bloquear ETA interrompe este ciclo de destruição.\nO resultado dual: queda dramática da proteinúria em semanas, com desaceleração documentada da fibrose renal.',
-        es: 'El "Doble Extintor de la Inflamación Renal". La Sparsentán bloquea DOS receptores que trabajan juntos para destruir los glomérulos:\n• Receptor AT1 de Angiotensina II: Causa vasoconstricción, hipertensión glomerular y fibrosis.\n• Receptor ETA de Endotelina-1: La Endotelina causa inflamación local y esclerosis glomerular progresiva.\nEl resultado dual: caída dramática de la proteinuria en semanas.'
+        pt: 'A "Defesa Dupla do Glomérulo". A Nefropatia por IgA destrói o filtro renal através de hipertensão glomerular e inflamação (Endotelina). A Sparsentana é a primeira droga do mundo a combinar dois bloqueios numa única molécula: bloqueia o receptor ETA (endotelina tipo A, que causa inflamação e constrição) E bloqueia o receptor AT1 (angiotensina II, como a losartana). O resultado é uma dilatação massiva das artérias do rim, paralisando o vazamento de proteína para a urina e salvando o rim da diálise.',
+        es: 'La "Defensa Doble del Glomérulo". Combina dos bloqueos en una molécula: bloquea el receptor ETA (endotelina tipo A, inflamación) Y bloquea el receptor AT1 (angiotensina II, como losartán). El resultado es una dilatación masiva de las arterias del riñón, parando la fuga de proteína y salvando al riñón de la diálisis.'
       },
       dose: {
         adult: {
-          pt: 'Semanas 1–4: 200 mg UMA VEZ ao dia (dose de titulação, avaliar tolerabilidade).\nSemana 5 em diante: Aumentar para 400 mg UMA VEZ ao dia (dose alvo de manutenção).',
-          es: 'Semanas 1–4: 200 mg UNA VEZ al día (titulación).\nSemana 5 en adelante: Aumentar a 400 mg UNA VEZ al día.'
+          pt: 'Início: 200 mg via oral UMA VEZ ao dia por 14 dias. Após 14 dias, aumentar para a dose de manutenção de 400 mg/dia (titulação obrigatória e monitorada).',
+          es: 'Inicio: 200 mg vía oral UNA VEZ al día por 14 días. Tras 14 días, aumentar a mantenimiento de 400 mg/día.'
         },
-        pediatric: { pt: 'Não indicado (< 18 anos).', es: 'No indicado (< 18 años).' }
+        pediatric: {
+          pt: 'Não indicado e não testado com segurança em crianças.',
+          es: 'No indicado en niños.'
+        }
       },
-      administration: { pt: ['Tomar COM ou SEM alimentos. Engolir a cápsula inteira, sem mastigar.', 'PROGRAMA REMS OBRIGATÓRIO (FDA): Só pode ser prescrito por médicos certificados pelo programa FILSPARI REMS. Proibido em mulheres que podem engravidar sem anticontraceptivo eficaz confirmado.'], es: ['Tomar CON o SIN alimentos.', 'PROGRAMA REMS OBLIGATORIO (FDA): Solo prescriptores certificados. Prohibido en mujeres que pueden quedar embarazadas sin anticonceptivo eficaz.'] },
-      renalAdjustment: { required: true, message: { pt: 'Contraindicado se eGFR < 30 mL/min/1,73m². Monitorar eGFR e potássio mensalmente.', es: 'Contraindicado si eGFR < 30. Monitorizar eGFR y potasio mensualmente.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Não recomendado em insuficiência hepática moderada/grave.', es: 'No recomendado en insuficiencia hepática moderada/grave.' } },
-      commonAdverseEffects: { pt: ['Hipotensão e tontura (especialmente na titulação)', 'Edema periférico (retenção hídrica pelo bloqueio ETA)', 'Hipercalemia (bloqueio AT1)'], es: ['Hipotensión y mareo', 'Edema periférico (retención hídrica por bloqueo ETA)', 'Hiperpotasemia'] },
-      dangerousAdverseEffects: { pt: ['TERATOGENICIDADE GRAU X: Causa defeitos fetais fatais (similar ao grupo dos Sartanas)', 'Hepatotoxicidade aguda (monitorar TGO/TGP mensalmente)'], es: ['TERATOGENICIDAD GRADO X: Causa defectos fetales fatales', 'Hepatotoxicidad aguda (monitorear TGO/TGP mensualmente)'] },
+      administration: { pt: ['Administrar com água. Acompanhamento rigoroso de Enzimas Hepáticas e Teste de Gravidez mensal é exigido por lei nos EUA (Sistema REMS).'], es: ['Acompañamiento riguroso de Enzimas Hepáticas y Test de Embarazo mensual es exigido por ley en EE.UU. (REMS).'] },
+      renalAdjustment: { required: true, message: { pt: 'Não testado em insuficiência renal terminal. Efeito terapêutico reduz se eGFR < 30 mL/min.', es: 'No probado en falla renal terminal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em qualquer disfunção hepática prévia. Risco de hepatotoxicidade fulminante de classe (endotelinas).', es: 'Evitar en disfunción hepática previa. Riesgo de hepatotoxicidad fulminante.' } },
+      commonAdverseEffects: { pt: ['Hipotensão (A pressão arterial pode despencar criticamente)', 'Edema periférico severo', 'Hipercalemia (retenção de potássio)'], es: ['Hipotensión (La presión puede caer críticamente)', 'Edema periférico severo', 'Hiperpotasemia'] },
+      dangerousAdverseEffects: { pt: ['HEPATOTOXICIDADE SEVERA (Aumento fulminante de TGO/TGP)', 'Malformações congênitas severas (Teratogenicidade extrema)'], es: ['HEPATOTOXICIDAD SEVERA (Aumento fulminante de AST/ALT)', 'Malformaciones congénitas severas (Teratogenicidad extrema)'] },
       contraindications: {
-        absolute: { pt: ['Gravidez (ABSOLUTE — Grau X)', 'Uso concomitante com qualquer inibidor da ECA ou BRA (Risco de hipotensão e hipercalemia dupla)', 'eGFR < 30 mL/min/1,73m²'], es: ['Embarazo (Grado X)', 'Uso con IECA o ARA-II', 'eGFR < 30'] },
-        relative: { pt: ['Mulheres em idade fértil sem contracepção confiável dupla'], es: ['Mujeres en edad fértil sin doble contracepción confiable'] }
+        absolute: { pt: ['GRAVIDEZ (Droga nível Talidomida em destruição fetal)', 'Uso concomitante de IECA (Enalapril) ou BRAs (Losartana) ou Inibidores de Renina'], es: ['EMBARAZO (Destrucción fetal)', 'Uso concomitante de IECA (Enalapril) o ARA-II (Losartán)'] },
+        relative: { pt: ['Hipotensão basal < 100/60 mmHg'], es: ['Hipotensión basal < 100/60 mmHg'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'O PARADOXO DO EDEMA SALVADOR: O bloqueio do receptor ETA da Endotelina retém sódio e água nos tecidos (Edema nas pernas é esperado). O médico incauto que prescreve diurético de alça agressivo para combater esse edema pode colapsar a pressão glomerular e acelerar a falência renal que a droga tentava salvar. Tratar o edema da Sparsentana COM diuréticos requer titulação cautelosa.', es: 'LA PARADOJA DEL EDEMA SALVADOR: El bloqueo ETA retiene sodio (Edema en piernas es esperado). Tratar el edema con diuréticos de asa agresivos puede colapsar la presión glomerular. Requiere titulación cautelosa.' }
+        warning: { pt: 'PROGRAMA REMS (MONITORAMENTO FORÇADO): Devido ao risco altíssimo do fígado necrosar e do feto nascer deformado, o médico e o paciente precisam ser cadastrados em um programa restrito. É OBRIGATÓRIO fazer exame de fígado (TGO/TGP/Bilirrubina) todo mês durante o primeiro ano, e teste de gravidez mensal. Sem esses exames, a farmácia não libera a caixa.', es: 'PROGRAMA REMS (MONITOREO FORZADO): Debido al altísimo riesgo hepático y teratogénico, es OBLIGATORIO hacer examen de hígado y embarazo CADA MES. Sin eso, la farmacia no entrega el medicamento.' }
       },
       references: {
-        pt: 'FDA Approval (Filspari, 2023); PROTECT Trial (NEJM 2023); KDIGO 2024 IgA Nephropathy Guidelines.',
-        es: 'FDA Approval (Filspari, 2023); PROTECT Trial (NEJM 2023); KDIGO 2024 IgA Nephropathy Guidelines.'
+        pt: 'FDA Label (Filspari); PROTECT Trial (IgA Nephropathy); Diretrizes KDIGO 2024 para Doenças Glomerulares.',
+        es: 'FDA Label (Filspari); PROTECT Trial; Directrices KDIGO 2024 para Enfermedades Glomerulares.'
       }
     },
 
     /* ── CISTEAMINA ─────────────────────────────────────────────────────── */
     "cisteamina": {
-      name: { pt: 'Cisteamina (Bitartarato de)', es: 'Cisteamína (Bitartrato de)' },
+      name: { pt: 'Cisteamina (Bitartarato de)', es: 'Cisteamina (Bitartrato de)' },
       category: 'nefrologia',
       icon: '🫘',
       color: '#0369A1',
       colorTxt: '#ffffff',
-      class: { pt: 'Agente Citoprotético / Depletador de Cistina (Tratamento Específico para Cistinose)', es: 'Agente Citoprotector / Depletador de Cistina (Tratamiento Específico para Cistinosis)' },
+      class: { pt: 'Agente Depletor de Cistina', es: 'Agente Depletor de Cistina' },
       indications: {
-        pt: ['Cistinose Nefropática (Doença de depósito lisossômico de cistina — tratamento específico de causa)', 'Previne ou retarda a disfunção renal, hepática, ocular e muscular causada pela cistina acumulada'],
-        es: ['Cistinosis Nefropática (Enfermedad de depósito lisosómico de cistina — tratamiento específico)', 'Previene o retarda la disfunción renal, hepática, ocular y muscular']
+        pt: ['Cistinose Nefropática (Doença genética rara onde cristais de cistina destroem os rins, olhos e órgãos internos de crianças)'],
+        es: ['Cistinosis Nefropática (Enfermedad genética rara donde cristales de cistina destruyen riñones y ojos de niños)']
       },
-      commercialNames: { br: ['Procysbi (LP)', 'Cystagon (LI — Histórico)'], ar: ['Procysbi', 'Cystagon'] },
-      presentation: { pt: ['Cápsulas de Liberação Imediata (LI) 50 mg e 150 mg', 'Cápsulas de Liberação Prolongada (LP) 25 mg, 75 mg e 150 mg'], es: ['Cápsulas de Liberación Inmediata (LI) 50 mg y 150 mg', 'Cápsulas de Liberación Prolongada (LP) 75 mg y 150 mg'] },
+      commercialNames: { br: ['Cystagon', 'Procysbi'], ar: ['Cystagon'] },
+      presentation: { pt: ['Cápsulas 50 mg e 150 mg', 'Cápsulas de liberação retardada (Procysbi) 25 mg e 75 mg'], es: ['Cápsulas 50 mg y 150 mg', 'Cápsulas de liberación retardada (Procysbi)'] },
       mechanism: {
-        pt: 'O "Abre-Cofre da Cistina". A cistinose é causada por um defeito no transportador CTNS que joga a cistina para fora do lisossomo. Sem saída, a cistina cristaliza dentro dos lisossomos de CADA CÉLULA do corpo, destruindo-as.\nA Cisteamina entra nos lisossomos e realiza uma reação de troca dissulfeto com a cistina presa: ela "quebra" a cistina em dois fragmentos menores (cisteína + cisteamina-cistina mista), que conseguem escapar pelo transportador de lisina ainda funcional.\nResultado: O lisossomo é esvaziado, a célula sobrevive.',
-        es: 'El "Abre-Cofre de la Cistina". La cistinosis es causada por un defecto en el transportador CTNS. La Cisteamina entra en los lisosomas y realiza un intercambio disulfuro: "rompe" la cistina en dos fragmentos que pueden escapar por el transportador de lisina aún funcional.\nResultado: El lisosoma se vacía, la célula sobrevive.'
+        pt: 'O "Limpador de Cristais". Na Cistinose, falta o transportador que tira o aminoácido Cistina de dentro dos lisossomos das células. A Cistina acumula, cristaliza como vidro quebrado e destrói o rim da criança (causando Síndrome de Fanconi e insuficiência renal terminal). A Cisteamina entra no lisossomo e sofre uma reação química direta com o cristal: ela quebra a Cistina pela metade (virando Cisteína e um dissulfeto). Essas metades conseguem sair do lisossomo. A droga derrete os cristais e salva os órgãos.',
+        es: 'El "Limpiador de Cristales". En la Cistinosis, la Cistina cristaliza como vidrio roto y destruye el riñón (Síndrome de Fanconi). La Cisteamina entra al lisosoma, reacciona con el cristal y lo rompe por la mitad. Estas mitades logran salir del lisosoma, salvando los órganos.'
       },
       dose: {
         adult: {
-          pt: 'Liberação Imediata (LI): 1,3 g/m² de Superfície Corporal/dia, divididos em 4 tomadas a cada 6 horas.\nLiberação Prolongada (LP/Procysbi): 1,3 g/m²/dia divididos em 2 tomadas a cada 12 horas.',
-          es: 'Liberación Inmediata (LI): 1,3 g/m² SC/día, divididos en 4 tomas cada 6 horas.\nLiberación Prolongada (LP): 1,3 g/m²/día en 2 tomas cada 12 horas.'
+          pt: 'Depende da superfície corporal. Geralmente 1,3 a 1,95 gramas/m²/dia, divididos em 4 vezes ao dia (a cada 6 horas rigorosamente).',
+          es: 'Depende de superficie corporal. 1,3 a 1,95 gramos/m²/día, divididos en 4 veces (cada 6 horas).'
         },
         pediatric: {
-          pt: 'Dose pediátrica por superfície corporal (como no adulto). Iniciar com 1/6 da dose-alvo e titular em semanas. Lactentes: abrir a cápsula e misturar em suco de fruta ácido.',
-          es: 'Dosis por superficie corporal. Iniciar con 1/6 de la dosis objetivo y titular. Lactantes: abrir cápsula y mezclar en jugo ácido.'
+          pt: 'Até 12 anos: 1,30 g/m²/dia divididos em 4 doses. Titular doseando cistina nos leucócitos (< 1 nmol 1/2 cistina/mg de proteína).',
+          es: 'Hasta 12 años: 1,30 g/m²/día divididos en 4 dosis. Titular midiendo cistina en leucocitos.'
         }
       },
-      administration: { pt: ['Monitorar nível de leucócitos com cistina 5–6 horas após a dose para confirmar eficácia (meta: leucócitos < 1 nmol de semi-cistina/mg de proteína).', 'Colírio de Cisteamina 0,55% deve ser aplicado nos olhos à parte para tratar os cristais corneanos.'], es: ['Monitorear nivel de leucocitos con cistina 5–6 horas tras la dosis (meta: < 1 nmol semicistina/mg proteína).', 'Colirio de Cisteamina 0,55% aplicar en los ojos por separado.'] },
-      renalAdjustment: { required: true, message: { pt: 'A droga é exatamente para atrasar a falência renal na cistinose. Ajuste por superfície corporal e creatinina.', es: 'La droga retrasa la falla renal en cistinosis. Ajuste por superficie corporal y creatinina.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Monitorar enzimas hepáticas; cristais de cistina também se depositam no fígado.', es: 'Monitorear enzimas hepáticas.' } },
-      commonAdverseEffects: { pt: ['ODOR CORPORAL EXTREMAMENTE FORTE E PERSISTENTE (Cheiro de enxofre/ovo podre)', 'Náusea e vômitos graves (especialmente nas primeiras semanas de titulação)', 'Fadiga'], es: ['OLOR CORPORAL EXTREMADAMENTE FUERTE (Olor a azufre/huevo podrido)', 'Náusea y vómitos graves', 'Fatiga'] },
-      dangerousAdverseEffects: { pt: ['Leucocitose com cristais no sangue (Síndrome de Benign Leukocytosis)', 'Osteoporose e fraturas patológicas (Cristais nos ossos)'], es: ['Síndrome de Benign Leukocytosis', 'Osteoporosis y fracturas patológicas'] },
+      administration: { pt: ['Pode causar muito vômito. Administrar rigorosamente a cada 6 horas para manter os lisossomos limpos. O cheiro do paciente pode ficar muito fétido (odor sulfúrico/ovo podre).'], es: ['Puede causar mucho vómito. Administrar cada 6 horas. El olor del paciente puede volverse muy fétido (azufre/huevo podrido).'] },
+      renalAdjustment: { required: false, message: { pt: 'Feita para salvar a função renal.', es: 'Hecha para salvar la función renal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade rigorosa.', es: 'Sin necesidad rigurosa.' } },
+      commonAdverseEffects: { pt: ['Halitose extrema e odor corporal sulfúrico (cheiro de esgoto)', 'Náuseas severas e dor de estômago', 'Letargia e febre'], es: ['Halitosis extrema y olor corporal a azufre (olor a cañería)', 'Náuseas severas y dolor de estómago', 'Letargo y fiebre'] },
+      dangerousAdverseEffects: { pt: ['Úlceras e sangramento gastrointestinal severo', 'Lesões de pele tipo Síndrome de Ehlers-Danlos (A pele rasga e raspa facilmente nos cotovelos e joelhos em altas doses)'], es: ['Úlceras y sangrado gastrointestinal severo', 'Lesiones de piel tipo Síndrome de Ehlers-Danlos (La piel se rasga fácilmente)'] },
       contraindications: {
-        absolute: { pt: ['Hipersensibilidade à Cisteamina ou Penicilamina', 'Gravidez'], es: ['Hipersensibilidad a Cisteamína o Penicilamina', 'Embarazo'] },
-        relative: { pt: ['Úlceras gastrointestinais ativas (Cisteamina é cáustica para mucosas)'], es: ['Úlceras gastrointestinales activas (la Cisteamína es cáustica)'] }
+        absolute: { pt: ['Hipersensibilidade à cisteamina ou penicilamina'], es: ['Hipersensibilidad a cisteamina o penicilamina'] },
+        relative: { pt: ['Úlcera gástrica ativa ou histórico recente de sangramento digestivo'], es: ['Úlcera gástrica activa o historial de sangrado digestivo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ESTIGMA DO ODOR E A PELE DE PAPEL: A principal causa de falha do tratamento é o bullying escolar. O suor e o hálito da criança cheiram forte a enxofre (ovo podre). Além disso, em doses muito altas para limpar o cristal, a droga interfere no colágeno. A pele da criança fica como "papel molhado", rasgando nas articulações. Ajuste a dose monitorando a cistina nos leucócitos.', es: 'EL ESTIGMA DEL OLOR: El sudor y aliento huelen a azufre. Además, en dosis altas, la piel queda como "papel mojado", rasgándose en las articulaciones. Ajuste dosis monitorizando cistina.' }
+      },
+      references: {
+        pt: 'FDA Label (Cystagon/Procysbi); Diretrizes Internacionais de Cistinose Nefropática.',
+        es: 'FDA Label (Cystagon); Directrices Internacionales de Cistinosis Nefropática.'
+      }
+    },
+
+    /* ── ÁCIDO TIÓCTICO (Ácido Alfa-Lipoico) ──────────────────────────── */
+    "acido_tioctico": {
+      name: { pt: 'Ácido Tióctico (Ácido Alfa-Lipoico)', es: 'Ácido Tióctico (Ácido Alfa-Lipoico)' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#7C3AED',
+      colorTxt: '#ffffff',
+      class: { pt: 'Antioxidante Universal / Cofator Enzimático', es: 'Antioxidante Universal / Cofactor Enzimático' },
+      indications: {
+        pt: ['Polineuropatia Diabética Periférica (Alívio da dor tipo choque, queimação e dormência nos pés do diabético)', 'Estresse oxidativo severo'],
+        es: ['Polineuropatía Diabética Periférica (Alivio del dolor tipo choque, ardor y entumecimiento en pies)', 'Estrés oxidativo severo']
+      },
+      commercialNames: { br: ['Thioctacid'], ar: ['Thioctacid', 'Neurolip'] },
+      presentation: { pt: ['Comprimidos revestidos 600 mg', 'Ampolas IV 600 mg/24 mL'], es: ['Comprimidos recubiertos 600 mg', 'Ampollas IV 600 mg/24 mL'] },
+      mechanism: {
+        pt: 'O "Antioxidante Perfeito". No diabetes, o açúcar alto carameliza (glica) os nervos, gerando radicais livres que destroem a bainha de mielina dos pés, causando dores infernais em queimação. O Ácido Tióctico atua tanto na água quanto na gordura da célula. Ele neutraliza os radicais livres, aumenta o fluxo sanguíneo nos micro-vasos do nervo e melhora a velocidade de condução elétrica, aliviando a queimação neuropática com muita segurança.',
+        es: 'El "Antioxidante Perfecto". En la diabetes, el azúcar alto carameliza los nervios, destruyendo la mielina. El Ácido Tióctico neutraliza los radicales libres, aumenta el flujo sanguíneo en el nervio y mejora la conducción eléctrica, aliviando el ardor neuropático.'
+      },
+      dose: {
+        adult: {
+          pt: 'Crise aguda severa: 600 mg Intravenoso (infusão lenta ao abrigo da luz) por 2 a 4 semanas. Manutenção oral: 600 mg via oral UMA VEZ ao dia de manhã.',
+          es: 'Crisis aguda: 600 mg Intravenoso (infusión lenta protegida de la luz) por 2 a 4 semanas. Mantenimiento: 600 mg vía oral UNA VEZ al día por la mañana.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['DEVE ser ingerido de estômago completamente vazio (30 min antes do café da manhã). Alimentos reduzem drasticamente a absorção.'], es: ['DEBE ingerirse con estómago vacío (30 min antes del desayuno). Los alimentos reducen su absorción.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste necessário.', es: 'Sin ajuste necesario.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico rigoroso.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Náusea temporária', 'Cheiro peculiar na urina (odor semelhante a espargos/enxofre, inofensivo)'], es: ['Náusea temporal', 'Olor peculiar en la orina (similar a espárragos/azufre, inofensivo)'] },
+      dangerousAdverseEffects: { pt: ['Hipoglicemia iatrogênica (Ele melhora o consumo de glicose do corpo, abaixando o açúcar demais)', 'Síndrome de Autoimunidade à Insulina (RARÍSSIMO)'], es: ['Hipoglucemia iatrogénica (Mejora el consumo de glucosa, bajando mucho el azúcar)', 'Síndrome Autoinmune a la Insulina (RARO)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave comprovada'], es: ['Hipersensibilidad grave comprobada'] },
+        relative: { pt: ['Diabéticos com quadros severos e frequentes de hipoglicemia'], es: ['Diabéticos con cuadros severos de hipoglucemia'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A "CURA" QUE CAUSA HIPO: O Ácido Tióctico reduz a resistência à insulina no corpo. Se o paciente continuar aplicando as mesmas doses altas de insulina ou Metformina sem avisar o endocrinologista, ele sofrerá crises de Hipoglicemia (açúcar caindo abaixo de 60 mg/dL), podendo desmaiar e ir ao PS.', es: 'LA "CURA" QUE CAUSA HIPO: Reduce la resistencia a la insulina. Si el paciente sigue aplicando altas dosis de insulina sin ajustar, sufrirá crisis de Hipoglucemia (azúcar bajo 60), pudiendo desmayarse.' }
+      },
+      references: {
+        pt: 'SYDNEY Trial; ALADIN Trial; Diretrizes da Sociedade Brasileira de Diabetes para Neuropatia.',
+        es: 'SYDNEY Trial; ALADIN Trial; Directrices Internacionales para Neuropatía Diabética.'
+      }
+    },
+
+    /* ── SOLUÇÃO DE CLORETO DE SÓDIO 0,9% (SORO FISIOLÓGICO) ────────────── */
+    "cloreto_de_sodio_09": {
+      name: { pt: 'Solução de Cloreto de Sódio 0,9% (Soro Fisiológico)', es: 'Solución de Cloruro de Sodio 0,9% (Suero Fisiológico)' },
+      category: 'uti_fluidos',
+      icon: '💧',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Cristaloide Isotônico Desbalanceado', es: 'Cristaloide Isotónico Desbalanceado' },
+      indications: {
+        pt: ['Ressuscitação volêmica em choque hipovolêmico (Hemorragia, Sepse, Desidratação severa)', 'Veículo para diluição de medicações intravenosas', 'Tratamento de Alcalose Metabólica associada a depleção de cloreto (vômitos intensos)'],
+        es: ['Reanimación volémica en choque hipovolémico (Hemorragia, Sepsis, Deshidratación severa)', 'Vehículo para dilución de medicaciones IV', 'Tratamiento de Alcalosis Metabólica']
+      },
+      commercialNames: { br: ['Soro Fisiológico 0,9%', 'NaCl 0,9%'], ar: ['Solución Fisiológica 0,9%'] },
+      presentation: { pt: ['Bolsas/Frascos IV 100 mL, 250 mL, 500 mL, 1.000 mL'], es: ['Bolsas/Frascos IV 100 mL, 250 mL, 500 mL, 1.000 mL'] },
+      mechanism: {
+        pt: 'O "Expansor Desbalanceado". O Soro "Fisiológico" não é nada fisiológico. Ele contém 154 mEq/L de Sódio e 154 mEq/L de Cloro (O sangue humano tem apenas 100 de Cloro). Quando injetado, ele expande o espaço intravascular (enchendo as veias e segurando a pressão do paciente chocado). Cerca de 75% da água vaza para o interstício (causando inchaço) e 25% fica na veia. A enorme carga de Cloro suprime os rins e empurra o bicarbonato para fora do corpo.',
+        es: 'El "Expansor Desbalanceado". El Suero "Fisiológico" no es fisiológico. Contiene 154 mEq/L de Sodio y Cloro (La sangre solo tiene 100 de Cloro). Al inyectarse, expande el espacio intravascular. El 75% del agua fuga al tejido (hinchazón). La enorme carga de Cloro suprime el riñón y empuja el bicarbonato fuera.'
+      },
+      dose: {
+        adult: {
+          pt: 'Choque/Sepse (Ressuscitação): Bolus rápido de 30 mL/kg nas primeiras 3 horas (cerca de 2 a 3 Litros). Manutenção: Conforme estado de volemia e pressão venosa central.',
+          es: 'Choque/Sepsis (Reanimación): Bolo rápido de 30 mL/kg en las primeras 3 horas. Mantenimiento: Según estado de volemia.'
+        },
+        pediatric: {
+          pt: 'Choque: Bolus de 20 mL/kg (Pode ser repetido até 3 vezes). Manutenção conforme regra de Holliday-Segar.',
+          es: 'Choque: Bolo de 20 mL/kg. Mantenimiento según Holliday-Segar.'
+        }
+      },
+      administration: { pt: ['Pode ser infundido pressurizado, aquecido ou resfriado. É a ÚNICA solução segura para lavar e acompanhar transfusões de sangue concentrado de hemácias.'], es: ['Puede infundirse presurizado, calentado. Es la ÚNICA solución segura para lavar y acompañar transfusiones de sangre.'] },
+      renalAdjustment: { required: true, message: { pt: 'Pacientes em diálise (anúricos) NÃO urinam fluidos. Dar soro indiscriminado causa edema agudo de pulmão em horas.', es: 'Pacientes en diálisis NO orinan fluidos. Dar suero indiscriminado causa edema agudo de pulmón.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Cuidado na cirrose (Piora drástica da ascite por sobrecarga de sódio).', es: 'Cuidado en cirrosis (Empeora ascitis por sobrecarga de sodio).' } },
+      commonAdverseEffects: { pt: ['Edema periférico e inchaço de órgãos (Congestão visceral)', 'Retenção de sódio e água (Ganho de peso no hospital)'], es: ['Edema periférico e hinchazón de órganos', 'Retención de sodio y agua'] },
+      dangerousAdverseEffects: { pt: ['ACIDOSE METABÓLICA HIPERCLORÊMICA (A injeção excessiva de Cloro destrói o pH do sangue, piorando o trabalho do coração e mascarando a acidose da Sepse)', 'Lesão Renal Aguda (O cloro causa vasoconstrição nos rins)'], es: ['ACIDOSIS METABÓLICA HIPERCLORÉMICA (El exceso de Cloro destruye el pH de la sangre)', 'Lesión Renal Aguda'] },
+      contraindications: {
+        absolute: { pt: ['Hipernatremia grave e Hipercloremia extrema', 'Edema agudo de pulmão cardiogênico'], es: ['Hipernatremia grave e Hipercloremia extrema', 'Edema agudo de pulmón cardiogénico'] },
+        relative: { pt: ['Ressuscitação em UTI para pacientes já com lesão renal aguda e acidemia grave (Preferir Ringer Lactato ou Plasma-Lyte)'], es: ['Reanimación en UCI con lesión renal y acidemia (Preferir Ringer o Plasma-Lyte)'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'O CHEIRO QUE ESTIGMATIZA: O efeito colateral social mais devastador da Cisteamina é o odor corporal de enxofre que a droga produz. É tão intenso que isola a criança no ambiente escolar, causando trauma psicossocial grave. Pediatras devem abordar esse aspecto proativamente com a família e explorar se a formulação de liberação prolongada (LP) gera menos odor por ter picos de concentração menores.', es: 'EL OLOR QUE ESTIGMATIZA: El efecto secundario social más devastador es el olor corporal a azufre. Es tan intenso que aísla al niño en la escuela, causando trauma psicosocial. Explorar si la formulación LP genera menos olor.' }
+        warning: { pt: 'A MORTE POR ÁGUA E SAL (MITO DA FISIOLOGIA): Soro 0,9% mata milhares de pacientes na UTI por ignorância. Ao infundir 4 litros de SF 0,9% num paciente com Sepse, injeta-se o equivalente a mais de "MEIO QUILO de Sal" e uma carga de cloro brutal. Os rins param (vasoconstrição) e o sangue fica ácido. A medicina moderna recomenda fortemente a troca para "Fluidos Balanceados" (Ringer) em ressuscitação massiva.', es: 'LA MUERTE POR AGUA Y SAL: Suero 0,9% mata pacientes en UCI. Infundir 4 litros es inyectar una carga de cloro brutal que detiene los riñones y acidifica la sangre. La medicina moderna recomienda "Fluidos Balanceados" (Ringer) en reanimación masiva.' }
       },
       references: {
-        pt: 'FDA Label (Procysbi/Cystagon); NORD Guidelines para Cistinose; Gahl WA et al., NEJM 1987.',
-        es: 'FDA Label (Procysbi/Cystagon); NORD Guidelines; Gahl WA et al., NEJM 1987.'
-      }
-    },
-
-    /* ── ÁCIDO TIÓCTICO ─────────────────────────────────────────────────── */
-    "acido_tioctico": {
-      name: { pt: 'Ácido Tióctico (Ácido Alfa-Lipóico)', es: 'Ácido Tióctico (Ácido Alfa-Lipoico)' },
-      category: 'nefrologia',
-      icon: '🫘',
-      color: '#0369A1',
-      colorTxt: '#ffffff',
-      class: { pt: 'Antioxidante Mitocondrial / Neuroprotetor (Coenzima Endógena do Complexo Piruvato Desidrogenase)', es: 'Antioxidante Mitocondrial / Neuroprotector (Coenzima Endógena del Complejo Piruvato Deshidrogenasa)' },
-      indications: {
-        pt: ['Neuropatia Diabética Periférica (Sintomas de ardor, formigamento e dor neuropática nos pés e mãos)', 'Proteção contra estresse oxidativo em doenças metabólicas crônicas'],
-        es: ['Neuropatía Diabética Periférica (Ardor, hormigueo y dolor neuropático en pies y manos)', 'Protección contra estrés oxidativo en enfermedades metabólicas crónicas']
-      },
-      commercialNames: { br: ['Thioctacid', 'Alphalipoic', 'Lipogen (manipulado)'], ar: ['Thioctacid', 'Berlition'] },
-      presentation: { pt: ['Comprimidos 300 mg, 600 mg', 'Ampolas IV 300 mg/12 mL e 600 mg/24 mL'], es: ['Comprimidos 300 mg, 600 mg', 'Ampollas IV 300 mg/12 mL y 600 mg/24 mL'] },
-      mechanism: {
-        pt: 'O "Antioxidante de Dupla Face". O Ácido Alfa-Lipóico é único porque é solúvel TANTO EM ÁGUA quanto em GORDURA — ele atravessa qualquer barreira biológica, inclusive a barreira hematoencefálica.\nMecanismo mitocondrial: Funciona como coenzima do complexo piruvato desidrogenase, otimizando a produção de energia celular e reduzindo o vazamento de radicais livres.\nRecuperação de antioxidantes: "Regenera" Vitamina C, Vitamina E e Glutationa oxidadas de volta à sua forma ativa, amplificando a defesa antioxidante do corpo.\nEfeito nervoso: Na neuropatia diabética, reduz a dor neuropática ao proteger as fibras nervosas dos danos dos AGEs (Produtos Finais de Glicação Avançada).',
-        es: 'El "Antioxidante de Doble Cara". Único porque es soluble en agua Y en grasa — atraviesa cualquier barrera biológica.\nMecanismo mitocondrial: Coenzima del complejo piruvato deshidrogenasa, reduce el escape de radicales libres.\nRecuperación de antioxidantes: "Regenera" Vitamina C, E y Glutatión a su forma activa.\nEfecto nervioso: En neuropatía diabética, reduce el dolor neuropático protegiendo fibras nerviosas de los AGEs.'
-      },
-      dose: {
-        adult: {
-          pt: 'Neuropatia Diabética — Via Oral: 600 mg UMA VEZ ao dia, preferencialmente em jejum (30 min antes do café).\nNeuropatia Grave — Via IV: 600 mg em 250 mL SF 0,9% INFUNDIDOS EM 30 MINUTOS, por 3 semanas consecutivas.',
-          es: 'Neuropatía Diabética — Oral: 600 mg UNA VEZ al día, preferentemente en ayunas.\nNeuropatía Grave — IV: 600 mg en 250 mL SF 0,9% en 30 min, por 3 semanas.'
-        },
-        pediatric: { pt: 'Uso sem dados suficientes de segurança para pediatria.', es: 'Sin datos suficientes de seguridad en pediatría.' }
-      },
-      administration: { pt: ['A absorção oral é reduzida em 20–30% quando tomado com alimentos. Tomar SEMPRE em jejum para maximizar biodisponibilidade.', 'A infusão IV deve ser protegida da LUZ (envolver o frasco em papel alumínio) — o ácido alfa-lipóico degrada com exposição luminosa.'], es: ['Absorción oral reducida 20–30% con alimentos. Tomar SIEMPRE en ayunas.', 'La infusión IV debe ser protegida de la LUZ (envolver el frasco en papel aluminio).'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estabelecido.', es: 'Sin necesidad de ajuste establecido.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste estabelecido; monitorar transaminases em uso prolongado.', es: 'Sin ajuste; monitorear transaminasas en uso prolongado.' } },
-      commonAdverseEffects: { pt: ['Hipoglicemia (Aumenta a sensibilidade insulínica — pode reduzir glicemia em diabéticos insulinodependentes)', 'Náusea e dor epigástrica (especialmente via IV)'], es: ['Hipoglicemia (Aumenta sensibilidad insulínica)', 'Náusea y dolor epigástrico'] },
-      dangerousAdverseEffects: { pt: ['Hipoglicemia grave em diabéticos tipo 1 em uso de insulina (Sinergismo hipoglicemiante inesperado)'], es: ['Hipoglicemia grave en diabéticos tipo 1 en uso de insulina'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade ao Ácido Alfa-Lipóico'], es: ['Hipersensibilidad al Ácido Alfa-Lipoico'] },
-        relative: { pt: ['Diabetes Tipo 1 em uso de insulina sem monitoramento de glicemia frequente'], es: ['Diabetes Tipo 1 en uso de insulina sin monitoreo frecuente de glucemia'] }
-      },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'A QUEDA SILENCIOSA DA GLICOSE: O Ácido Alfa-Lipóico parece inofensivo (antioxidante "vitamínico"), mas aumenta SIGNIFICATIVAMENTE a sensibilidade das células à insulina. Um diabético tipo 1 que inicia o Thioctacid IV sem reduzir a dose de insulina pode ter uma hipoglicemia noturna fulminante. O profissional deve reduzir a dose de insulina em ~10–15% no início da terapia IV.', es: 'LA CAÍDA SILENCIOSA DE LA GLUCOSA: Aumenta significativamente la sensibilidad a insulina. Un diabético tipo 1 que inicia Thioctacid IV sin reducir insulina puede tener hipoglucemia nocturna fulminante.' }
-      },
-      references: {
-        pt: 'ALADIN Trial (Alpha-Lipoic Acid in Diabetic Neuropathy, 1995); Bupropion & Thioctic Acid FDA Label; EFNS Guidelines para Neuropatia Diabética.',
-        es: 'ALADIN Trial (1995); EFNS Guidelines para Neuropatía Diabética.'
-      }
-    },
-
-    /* ── CLORETO DE SÓDIO 0,9% (SORO FISIOLÓGICO) ───────────────────────
-       Integração dupla: objeto fármaco no Drug DB + referência ao motor
-       calcFluids() — os modos 'resus' e 'deficit' já referenciam SF 0,9%
-       nas notas clínicas. Os IDs cloreto_sodio_09 / ringer_lactato ficam
-       disponíveis no índice de busca rápida (_hmSyncInteractionsIndex).
-    ─────────────────────────────────────────────────────────────────── */
-    "cloreto_sodio_09": {
-      name: { pt: 'Cloreto de Sódio 0,9% (Soro Fisiológico / SF)', es: 'Cloruro de Sodio 0,9% (Suero Fisiológico / SF)' },
-      category: 'emergencia',
-      icon: '🧪',
-      color: '#0F766E',
-      colorTxt: '#ffffff',
-      class: { pt: 'Cristaloide Isotônico / Solução de Expansão Volêmica', es: 'Cristaloide Isotónico / Solución de Expansión Volémica' },
-      indications: {
-        pt: ['Ressuscitação volêmica (Sepse, Trauma, Hipovolemia aguda)', 'Veículo de diluição de medicamentos IV (Antibióticos, Ferro IV, Amiodarona)', 'Reposição de perdas de sódio e cloro (Hiponatremia hipovolêmica)', 'Manutenção hídrica basal perioperatória'],
-        es: ['Resucitación volémica (Sepsis, Trauma, Hipovolemia aguda)', 'Vehículo de dilución de medicamentos IV', 'Reposición de pérdidas de sodio y cloro', 'Mantenimiento hídrico perioperatorio']
-      },
-      commercialNames: { br: ['Soro Fisiológico 0,9%', 'NaCl 0,9%', 'Baxter SF 0,9%'], ar: ['Suero Fisiológico 0,9%', 'ClNa 0,9%'] },
-      presentation: { pt: ['Bolsas/frascos IV: 100 mL, 250 mL, 500 mL, 1.000 mL'], es: ['Bolsas/frascos IV: 100 mL, 250 mL, 500 mL, 1.000 mL'] },
-      mechanism: {
-        pt: 'A "Água do Mar do Sangue". O SF 0,9% tem osmolaridade de 308 mOsm/L (ligeiramente hipertônica em relação ao plasma, que é ~290 mOsm/L). Ao ser infundido, expande o espaço vascular com eficiência: cada litro permanece ~25% no intravascular (250 mL) — o restante redistribui para o interstício.\nPorém: contém 154 mEq/L de Cloreto (versus 103 mEq/L no plasma). Grandes volumes causam HIPERCLOREMIA, que acidifica o sangue (Acidose Metabólica Hiperclorêmica) e prejudica a função renal. Esta é a razão pela qual o Ringer Lactato foi criado.',
-        es: 'El "Agua del Mar de la Sangre". SF 0,9% tiene osmolaridad 308 mOsm/L. Al infundirse, expande el espacio vascular: cada litro permanece ~25% intravascular.\nPero: contiene 154 mEq/L de Cloro (vs 103 mEq/L en plasma). Grandes volúmenes causan HIPERCLOREMIA y Acidosis Metabólica Hiperclorémica — razón por la que el Ringer Lactato fue creado.'
-      },
-      dose: {
-        adult: {
-          pt: 'Ressuscitação volêmica (Sepse/Trauma): 30 mL/kg IV em bolus rápido (30 minutos). [→ Calculadora de Fluidos: modo Ressuscitação]\nManutenção basal: 25–30 mL/kg/dia. [→ Calculadora de Fluidos: modo Manutenção]\nDiluição de medicamentos: volume conforme bula específica do fármaco.',
-          es: 'Resucitación volémica: 30 mL/kg IV en bolo rápido (30 min). [→ Calculadora de Fluidos: modo Resucitación]\nMantenimiento basal: 25–30 mL/kg/día.\nDilución de medicamentos: volumen según prospecto.'
-        },
-        pediatric: {
-          pt: 'Bolus de ressuscitação: 10–20 mL/kg IV (repetir conforme resposta clínica). Holliday-Segar para manutenção.',
-          es: 'Bolo de resucitación: 10–20 mL/kg IV. Holliday-Segar para mantenimiento.'
-        }
-      },
-      administration: { pt: ['Calcular velocidade de infusão pela Calculadora de Fluidos integrada ao app (aba Fluidos).', 'NUNCA infundir SF 0,9% com concentração > 0,9% em veia periférica (flebite osmótica).'], es: ['Calcular velocidad de infusión por la Calculadora de Fluidos integrada.', 'NUNCA infundir SF > 0,9% en vena periférica.'] },
-      renalAdjustment: { required: true, message: { pt: 'Em IR oligoanúrica: limite volume rigorosamente (risco de sobrecarga hídrica e hipercloremia). Preferir Ringer Lactato.', es: 'En IR oligoanúrica: limitar volumen. Preferir Ringer Lactato.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade específica.', es: 'Sin necesidad específica.' } },
-      commonAdverseEffects: { pt: ['Edema periférico (redistribuição intersticial)', 'Hipercloremia assintomática (volumes > 2L)'], es: ['Edema periférico', 'Hipercloremia asintomática (volúmenes > 2 L)'] },
-      dangerousAdverseEffects: { pt: ['Acidose Metabólica Hiperclorêmica (Grandes volumes — > 3–4L em adulto)', 'Edema Agudo de Pulmão (Sobrecarga volêmica em cardiopatas ou nefropatas graves)'], es: ['Acidosis Metabólica Hiperclorémica (> 3–4 L)', 'Edema Agudo de Pulmón en cardiopatas o nefropatas'] },
-      contraindications: {
-        absolute: { pt: ['Hipernatremia grave sem hipovolemia', 'Acidose metabólica hiperclorêmica estabelecida'], es: ['Hipernatremia grave sin hipovolemia', 'Acidosis metabólica hiperclorémica establecida'] },
-        relative: { pt: ['Hipertensão arterial grave descompensada (Sobrecarga de sódio)'], es: ['Hipertensión arterial grave descompensada'] }
-      },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'O VENENO ISOTÔNICO: Injetar litros de SF em um paciente séptico parece benigno, mas é um dos erros mais comuns na emergência. A literatura (SMART Trial, NEJM 2018) demonstrou que SF 0,9% versus Ringer Lactato em UTI dobrou a incidência de lesão renal aguda e necessidade de diálise. Prefira Ringer Lactato para ressuscitações de volume elevado (> 2L).', es: 'EL VENENO ISOTÓNICO: El estudio SMART Trial (NEJM 2018) demostró que SF 0,9% duplicó la incidencia de lesión renal aguda. Preferir Ringer Lactato para resucitaciones de alto volumen (> 2 L).' }
-      },
-      references: {
-        pt: 'SMART Trial (NEJM 2018 — Self et al.); SALT-ED Trial; Diretrizes Surviving Sepsis Campaign 2021.',
-        es: 'SMART Trial (NEJM 2018); SALT-ED Trial; Surviving Sepsis Campaign 2021.'
+        pt: 'SMART Trial (NEJM 2018); Diretrizes da Surviving Sepsis Campaign; Fluid Resuscitation Guidelines.',
+        es: 'SMART Trial (NEJM 2018); Directrices Surviving Sepsis Campaign.'
       }
     },
 
     /* ── RINGER LACTATO ─────────────────────────────────────────────────── */
     "ringer_lactato": {
       name: { pt: 'Ringer Lactato (Solução de Hartmann)', es: 'Ringer Lactato (Solución de Hartmann)' },
-      category: 'emergencia',
-      icon: '🧪',
+      category: 'uti_fluidos',
+      icon: '💧',
       color: '#0F766E',
       colorTxt: '#ffffff',
-      class: { pt: 'Cristaloide Balanceado / Solução de Expansão Volêmica Fisiológica', es: 'Cristaloide Balanceado / Solución de Expansión Volémica Fisiológica' },
+      class: { pt: 'Cristaloide Isotônico Balanceado', es: 'Cristaloide Isotónico Balanceado' },
       indications: {
-        pt: ['Ressuscitação volêmica de escolha em grandes volumes (Trauma, Queimaduras, Cirurgias abdominais)', 'Reposição de perdas gastrointestinais (Diarreia, Vômitos, Fístulas)', 'Manutenção perioperatória (Mais fisiológica que o SF 0,9%)', 'Pancreatite Aguda (Protocolo de hidratação agressiva com Ringer Lactato)'],
-        es: ['Resucitación volémica de elección en grandes volúmenes (Trauma, Quemaduras)', 'Reposición de pérdidas gastrointestinales', 'Mantenimiento perioperatorio', 'Pancreatitis Aguda (protocolo de hidratación)']
+        pt: ['Ressuscitação volêmica em trauma, cirurgias de grande porte, e queimaduras extensas (Fórmula de Parkland)', 'Tratamento de primeira linha no Choque Séptico e cetoacidose (se não houver hipercalemia aguda)'],
+        es: ['Reanimación volémica en trauma, cirugías mayores y quemaduras', 'Tratamiento de primera línea en Choque Séptico y cetoacidosis']
       },
-      commercialNames: { br: ['Ringer Lactato', 'Solução de Hartmann', 'Lactato de Ringer Baxter'], ar: ['Ringer Lactato', 'Solución de Hartmann'] },
-      presentation: { pt: ['Bolsas/frascos IV: 250 mL, 500 mL, 1.000 mL'], es: ['Bolsas/frascos IV: 250 mL, 500 mL, 1.000 mL'] },
+      commercialNames: { br: ['Ringer Lactato', 'Solução de Ringer com Lactato'], ar: ['Ringer Lactato'] },
+      presentation: { pt: ['Bolsas/Frascos IV 250 mL, 500 mL, 1.000 mL'], es: ['Bolsas/Frascos IV 250 mL, 500 mL, 1.000 mL'] },
       mechanism: {
-        pt: 'O "Plasma Artificial". O Ringer Lactato foi formulado por Sydney Ringer (1880s) para se aproximar da composição do plasma sanguíneo humano:\n• Na⁺: 130 mEq/L (vs 140 do plasma) — menos sódio que o SF\n• Cl⁻: 109 mEq/L (vs 154 do SF) — muito menos cloro, evitando acidose\n• K⁺: 4 mEq/L — repõe potássio sem suplementação adicional\n• Ca²⁺: 2,7 mEq/L — coagulação e função muscular\n• Lactato: 28 mEq/L — metabolizado pelo fígado em Bicarbonato, tamponando o sangue\nOsmolaridade: 273 mOsm/L (levemente hipotônica). Vantagem central: NÃO causa acidose hiperclorêmica.',
-        es: 'El "Plasma Artificial". Composición:\n• Na⁺: 130 mEq/L — menos sodio que SF\n• Cl⁻: 109 mEq/L — mucho menos cloro, evita acidosis\n• K⁺: 4 mEq/L — repone potasio\n• Ca²⁺: 2,7 mEq/L\n• Lactato: 28 mEq/L — metabolizado en Bicarbonato por el hígado\nOsmolaridad: 273 mOsm/L. NO causa acidosis hiperclorémica.'
+        pt: 'O "Sangue Falso Perfeito". Desenvolvido para imitar a química real do sangue. Ele tem Sódio (130), Cloro (109 - seguro!), Potássio (4) e Cálcio (3). A magia química: O seu principal "tampão" é o Íon Lactato (28 mEq). Quando o lactato entra no fígado do paciente, o fígado o consome e o transforma em BICARBONATO PURO. O paciente ressuscitado com Ringer não fica ácido, ele fica com o pH sanguíneo perfeito e equilibrado.',
+        es: 'El "Sangre Falsa Perfecta". Diseñado para imitar la química de la sangre. Tiene Sodio, Cloro (seguro!), Potasio y Calcio. La magia: Su tampón es el Ion Lactato. El hígado lo consume y lo transforma en BICARBONATO PURO. El paciente resucitado queda con pH equilibrado.'
       },
       dose: {
         adult: {
-          pt: 'Ressuscitação volêmica: 30 mL/kg em 30 minutos (bolus inicial — repetir conforme PAS e débito urinário). [→ Calculadora de Fluidos: modo Ressuscitação]\nPancreatite Aguda: 250–500 mL/h nas primeiras 12–24h, depois ajustar conforme balanço. [→ Calculadora de Fluidos: modo Manutenção]\nQueimaduras (Fórmula de Parkland): 4 mL × kg × % SCQ nas 24h; metade nas primeiras 8h.',
-          es: 'Resucitación volémica: 30 mL/kg en 30 min. [→ Calculadora de Fluidos: modo Resucitación]\nPancreatitis Aguda: 250–500 mL/h en las primeras 12–24h.\nQuemaduras (Fórmula de Parkland): 4 mL × kg × % SCQ en 24h.'
+          pt: 'Choque: Bolus de 30 mL/kg IV. Queimaduras (Parkland moderna): 2 a 4 mL/kg x % Área Queimada em 24h, infundindo metade nas primeiras 8 horas.',
+          es: 'Choque: Bolo de 30 mL/kg IV. Quemaduras: 2 a 4 mL/kg x % Área Quemada en 24h.'
         },
         pediatric: {
-          pt: 'Bolus: 10–20 mL/kg IV em 15–30 minutos. Repetir conforme perfusão periférica.',
-          es: 'Bolo: 10–20 mL/kg IV en 15–30 minutos.'
+          pt: 'Choque: 20 mL/kg IV rápido.',
+          es: 'Choque: 20 mL/kg IV rápido.'
         }
       },
-      administration: { pt: ['Calcular velocidade pela Calculadora de Fluidos integrada (aba Fluidos).', 'ATENÇÃO: O Ringer Lactato contém CÁLCIO (2,7 mEq/L). NÃO misturar no mesmo equipo com sangue (coagula no set) nem com antibióticos que precipitam com cálcio (ex: Ceftriaxona em neonatos).'], es: ['Usar Calculadora de Fluidos integrada.', 'ATENCIÓN: El Ringer Lactato contiene CALCIO. NO mezclar con sangre ni con antibióticos que precipiten con calcio (Ceftriaxona en neonatos).'] },
-      renalAdjustment: { required: true, message: { pt: 'CONTRAINDICADO em Hipercalemia basal (K > 5 mEq/L), pois já contém 4 mEq/L de K⁺.', es: 'CONTRAINDICADO en Hiperpotasemia basal (K > 5 mEq/L), pues ya contiene 4 mEq/L de K⁺.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Em insuficiência hepática grave: O lactato NÃO é convertido em bicarbonato. Pode causar acidose lática paradoxal. Preferir SF 0,9% balanceado ou Plasmalyte.', es: 'En insuficiencia hepática grave: El lactato NO se convierte en bicarbonato. Puede causar acidosis láctica. Preferir SF 0,9% o Plasmalyte.' } },
-      commonAdverseEffects: { pt: ['Hipervolemia (Sobrecarga em cardiopatas/nefropatas)', 'Hiponatremia dilucional leve (Menor Na que SF)'], es: ['Hipervolemia', 'Hiponatremia dilucional leve'] },
-      dangerousAdverseEffects: { pt: ['Acidose lática paradoxal em hepatopatas graves (Lactato não metabolizado)', 'Hipercalemia grave se usado em pacientes com K⁺ basal elevado'], es: ['Acidosis láctica paradójica en hepatopatas', 'Hiperpotasemia si K⁺ basal elevado'] },
+      administration: { pt: ['Via Intravenosa. NÃO pode ser misturado na mesma linha que derivados de sangue e certas drogas devido ao Cálcio na fórmula.'], es: ['Vía IV. NO puede mezclarse en la misma línea que sangre y ciertas drogas debido al Calcio.'] },
+      renalAdjustment: { required: true, message: { pt: 'Cuidado na doença renal crônica anúrica, não porque contém muito potássio (só tem 4 mEq/L, que é pouco), mas porque o rim doente não urina a água.', es: 'Cuidado en falla renal anúrica, el riñón enfermo no orina el agua.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Mito e Fato da Cirrose: Se o fígado do paciente for completamente "morto" (Falência Hepática Fulminante/Choque Severo), ele não conseguirá transformar o Lactato da bolsa em Bicarbonato. O lactato acumula, piorando a medição da acidose láctica na gasometria.', es: 'Mito y Hecho: Si el hígado está completamente "muerto" (Falla Hepática Fulminante), no logrará transformar el Lactato en Bicarbonato. El lactato acumula.' } },
+      commonAdverseEffects: { pt: ['Sobrecarga de volume sistêmico em casos de ressuscitação excessiva', 'Edema periférico'], es: ['Sobrecarga de volumen', 'Edema periférico'] },
+      dangerousAdverseEffects: { pt: ['Alcalose Metabólica Iatrogênica (Ocorre se forem infundidos dezenas de litros - excesso de geração de bicarbonato)', 'Trombose no equipo e precipitação química medicamentosa'], es: ['Alcalosis Metabólica Iatrogénica (Por exceso de generación de bicarbonato)', 'Trombosis en el equipo y precipitación química'] },
       contraindications: {
-        absolute: { pt: ['Hipercalemia grave (K⁺ sérico > 5,5 mEq/L)', 'Insuficiência Hepática Grave (Child-Pugh C) — lactato não convertido'], es: ['Hiperpotasemia grave (K⁺ > 5,5 mEq/L)', 'Insuficiencia Hepática Grave — lactato no convertido'] },
-        relative: { pt: ['Alcalose metabólica estabelecida (O lactato amplifica a alcalose)'], es: ['Alcalosis metabólica establecida'] }
+        absolute: { pt: ['Incompatibilidade mecânica com Ceftriaxona (Forma cristais de Ceftriaxona-Cálcio — obstrução capilar fatal)', 'Incompatibilidade com transfusão de sangue/hemácias (O cálcio do RL anula o citrato da bolsa de sangue — coagulação no equipo)', 'Alcalose Metabólica prévia', 'Acidose Láctica profunda tipo B extrema (Falência hepática anóxica total)'], es: ['Incompatibilidad con Ceftriaxona (forma cristales de calcio — obstrucción capilar fatal)', 'Incompatibilidad con transfusión de sangre (el calcio anula el citrato — coagulación en equipo)', 'Alcalosis Metabólica previa'] },
+        relative: { pt: ['Hipercalemia severa documentada (Soro Fisiológico ou Plasma-Lyte sem potássio pode ser preferido na primeira hora, embora novos estudos minimizem esse medo)'], es: ['Hiperpotasemia severa documentada (Nuevos estudios minimizan este miedo)'] }
       },
       safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'O CÁLCIO TRAIDOR: A maioria dos médicos desconhece que o Ringer Lactato contém cálcio. Quando conectado ao mesmo equipo de infusão que uma unidade de hemácias, o Ca²⁺ do RL precipita as proteínas anticoagulantes do sangue armazenado, formando microcoágulos no equipo que vão direto para o pulmão do paciente. NUNCA co-administrar Ringer Lactato com sangue no mesmo acesso intravenoso.', es: 'EL CALCIO TRAIDOR: El RL contiene calcio. Conectado al mismo equipo que glóbulos rojos, el Ca²⁺ precipita las proteínas anticoagulantes del banco de sangre formando microcoágulos que van al pulmón. NUNCA co-administrar RL con sangre.' }
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O CÁLCIO TRAIDOR (DUPLA ARMADILHA): 1) NUNCA usar Ringer Lactato na mesma linha que Ceftriaxona — o cálcio forma cristais de "cimento" que entopem capilares do pulmão e rim (PROIBIDO MUNDIALMENTE, especialmente em neonatos). 2) NUNCA usar Ringer Lactato na mesma linha que transfusão de sangue — o cálcio anula o citrato anticoagulante da bolsa de sangue, formando coágulos gelatinosos no equipo. Para lavar veia com sangue: USE APENAS SORO FISIOLÓGICO 0,9%.', es: 'EL CALCIO TRAIDOR (DOBLE TRAMPA): 1) NUNCA usar Ringer con Ceftriaxona — el calcio forma cristales de "cemento" que obstruyen capilares (PROHIBIDO, especialmente en neonatos). 2) NUNCA usar Ringer con transfusión — el calcio anula el citrato anticoagulante, formando coágulos en el equipo. Para lavar vena con sangre: USE SOLO SUERO FISIOLÓGICO 0,9%.' }
       },
       references: {
-        pt: 'SMART Trial (NEJM 2018); SALT-ED Trial; Semler MW et al.; Diretrizes de Ressuscitação Volêmica do ATLS 10ª Edição.',
-        es: 'SMART Trial (NEJM 2018); SALT-ED Trial; Directrices ATLS 10ª Edición.'
+        pt: 'SMART Trial (NEJM 2018); SALT-ED Trial (Fluidos balanceados); Diretrizes de Trauma do ATLS; FDA Drug Safety Communication (Ceftriaxone + Calcium).',
+        es: 'SMART Trial (NEJM 2018); SALT-ED Trial; Directrices ATLS; FDA Drug Safety Communication (Ceftriaxona + Calcio).'
       }
     }
 
-  }); /* fim Object.assign BUILD 422 / ONDA 47 append */
+  }); /* fim Object.assign BUILD 423 / ONDA 48 append */
 })();

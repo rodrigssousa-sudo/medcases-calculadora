@@ -1267,6 +1267,16 @@ const DRUG_CLASSES = {
     "losartana", "valsartana", "olmesartana", "telmisartana",
     "irbesartana", "candesartana", "azilsartana", "eprosartana",
     "espironolactona", "eplerenona", "finerenona"
+  ],
+
+  /* ── BUILD 423: Sparsentana — Bloqueio Duplo do SRAA + Aliskireno ── */
+  "$classe_iec_bra_ieca_aliskireno": [
+    "captopril", "enalapril", "lisinopril", "ramipril",
+    "perindopril", "quinapril", "fosinopril", "trandolapril",
+    "benazepril", "cilazapril",
+    "losartana", "valsartana", "olmesartana", "telmisartana",
+    "irbesartana", "candesartana", "azilsartana", "eprosartana",
+    "aliskireno"
   ]
 
 };
@@ -23777,9 +23787,61 @@ const INTERACOES_DB = {
         es: "Alerta extrema. Debe considerarse la sustitución por formulaciones modernas (Hierro Sacarato). La dosis prueba es obligatoria."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES BUILD 423 — ONDA 48:
+   Proteção Renal e Fluidos Vasculares Críticos
+   sparsentana×$classe_iec_bra_ieca_aliskireno (contraindicada/5)
+   ringer_lactato×ceftriaxona (contraindicada/5)
+   ringer_lactato×transfusao_hemacias_sangue (contraindicada/5)
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── SPARSENTANA (O Duplo Bloqueio Letal de Renina) ── */
+  "sparsentana": {
+    "$classe_iec_bra_ieca_aliskireno": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "CHOQUE HIPOTENSIVO E SUPRESSÃO RENAL ABSOLUTA. A Sparsentana já vem de 'fábrica' com um bloqueador do receptor de Angiotensina (AT1) idêntico à Losartana acoplado nela. Se o médico prescrever Enalapril, Losartana, Valsartana ou Aliskireno para o paciente que toma Filspari, o sistema de compensação pressórica do rim é duplamente estrangulado. O paciente sofre Síncope por Hipotensão Extrema, Falência Renal isquêmica e Hipercalemia letal.",
+        es: "CHOQUE HIPOTENSIVO Y SUPRESIÓN RENAL ABSOLUTA. La Sparsentana ya bloquea el receptor AT1. Si el médico prescribe Enalapril, Losartán o Aliskireno al paciente, el sistema de compensación del riñón es doblemente estrangulado. Sufre Síncope, Falla Renal e Hiperpotasemia letal."
+      },
+      conduta: {
+        pt: "PROIBIÇÃO DE BULA (CONTRAINDICAÇÃO ABSOLUTA). Se for iniciar Sparsentana, todos os IECAs, BRAs e Inibidores Diretos de Renina (Aliskireno) prévios do paciente devem ser sumariamente SUSPENSOS e desmamados com antecedência.",
+        es: "PROHIBICIÓN DE PROSPECTO (CONTRAINDICACIÓN ABSOLUTA). Se deben SUSPENDER todos los IECA, ARA-II e Inhibidores Directos de Renina (Aliskireno) previos del paciente."
+      }
+    }
+  },
+
+  /* ── RINGER LACTATO (As Interações Físico-Químicas Graves na UTI) ── */
+  "ringer_lactato": {
+    "ceftriaxona": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A FORMAÇÃO DE CIMENTO PULMONAR E RENAL. O Ringer Lactato contém Íons de CÁLCIO na sua composição química. A Ceftriaxona (antibiótico de UTI) no sangue tem altíssima afinidade pelo cálcio. Quando eles se encontram na mesma veia ou equipo, a Ceftriaxona e o Cálcio se fundem instantaneamente formando minúsculos cristais de 'Ceftriaxona-Cálcio' parecidos com cimento. Esses cristais viajam pelo sangue, entopem os capilares do pulmão e os filtros dos rins, matando recém-nascidos e adultos de Insuficiência Pulmonar Aguda e Falência Renal.",
+        es: "LA FORMACIÓN DE CEMENTO PULMONAR Y RENAL. El Ringer Lactato contiene Iones de CALCIO. La Ceftriaxona se une al calcio al instante, formando minúsculos cristales de 'cemento'. Estos cristales viajan, tapando capilares del pulmón y riñón, matando a recién nacidos y adultos por Falla Pulmonar."
+      },
+      conduta: {
+        pt: "A ASSOCIAÇÃO É MUNDIALMENTE PROIBIDA, especialmente em Neonatos (< 28 dias). NUNCA administrar Ceftriaxona pela mesma linha IV de soluções contendo Cálcio, e não administrar dentro da janela de 48 horas no mesmo recém-nascido. Lave a linha venosa extensamente se for adulto.",
+        es: "LA ASOCIACIÓN ESTÁ MUNDIALMENTE PROHIBIDA, especialmente en Neonatos. NUNCA administrar Ceftriaxona por la misma línea IV del Ringer Lactato."
+      }
+    },
+    "transfusao_hemacias_sangue": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "TROMBOSE MACIÇA NO EQUIPO DE SANGUE. Bolsas de doação de sangue no banco de sangue usam uma substância chamada 'Citrato' para evitar que o sangue coagule (o citrato inativa o cálcio do sangue da bolsa). O Ringer Lactato contém CÁLCIO LIVRE. Se você usar Ringer para 'lavar' a veia junto com a transfusão de sangue, o cálcio do Ringer anulará o citrato da bolsa. O sangue da transfusão vai coagular formando coágulos gelatinosos gigantes dentro da mangueira do soro, bloqueando a veia do paciente e causando tromboembolismo pulmonar.",
+        es: "TROMBOSIS MASIVA EN EL EQUIPO DE SANGRE. Las bolsas de sangre usan 'Citrato' para evitar coagulación. El Ringer Lactato contiene CALCIO LIBRE. Si lavas la vena con Ringer durante la transfusión, el calcio anula el citrato. La sangre coagulará formando coágulos gigantes en la manguera, bloqueando la vena."
+      },
+      conduta: {
+        pt: "REGRA DE OURO DA UTI: Hemoderivados e transfusões de sangue APENAS E EXCLUSIVAMENTE devem correr junto com Solução de Cloreto de Sódio 0,9% (Soro Fisiológico). Ringer Lactato é proibido em via de sangue.",
+        es: "REGLA DE ORO DE UCI: Transfusiones de sangre SOLO EXCLUSIVAMENTE deben correr junto con Suero Fisiológico 0,9%. El Ringer Lactato está prohibido."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
