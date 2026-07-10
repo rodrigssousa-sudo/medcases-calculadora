@@ -465,6 +465,21 @@ const DRUG_ALIASES = {
   "amlodipine":                         "anlodipino",
   "norvasc":                            "anlodipino",
   "pressat":                            "anlodipino",
+  "amlodipino":                         "anlodipino",
+
+  /* BUILD 426 — Unificação grafia ANVISA: BCC Diidropiridínicos */
+  "nifedipino":                         "nifedipina",
+  "nifedipine":                         "nifedipina",
+  "adalat":                             "nifedipina",
+  "felodipino":                         "felodipina",
+  "felodipine":                         "felodipina",
+  "splendil":                           "felodipina",
+  "lercanidipino":                      "lercanidipina",
+  "lercanidipine":                      "lercanidipina",
+  "zanidip":                            "lercanidipina",
+  "manidipino":                         "manidipina",
+  "manidipine":                         "manidipina",
+  "manidon":                            "manidipina",
 
   /* BUILD 280 — Corticoides Sistêmicos Lote 4: aliases de nomenclatura */
   "dexamethasone":                      "dexametasona",
@@ -1300,6 +1315,11 @@ const DRUG_CLASSES = {
   /* ── BUILD 425: Sais Ferrosos Iônicos Orais (Sulfato, Fumarato, Gluconato) ── */
   "$classe_ferro_sais_ionicos": [
     "sulfato_ferroso", "fumarato_ferroso", "gluconato_ferroso"
+  ],
+
+  /* ── BUILD 426: BCC Diidropiridínicos — todos os 5 IDs canônicos ANVISA ── */
+  "$classe_diidropiridinicos": [
+    "anlodipino", "nifedipina", "felodipina", "lercanidipina", "manidipina"
   ]
 
 };
@@ -23963,9 +23983,59 @@ const INTERACOES_DB = {
         es: "Si prescribe megadosis (50.000 UI por semana) en un hipertenso que usa Hidroclorotiazida, es imperativo recolectar Calcio Sérico en el 30º día de tratamiento."
       }
     }
+  },
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     BUILD 426 — ONDA 51: BCC Diidropiridínicos — Interações CYP3A4
+     anlodipino×sinvastatina | $classe_diidropiridinicos×toranja | $classe_diidropiridinicos×macrolídeos
+  ══════════════════════════════════════════════════════════════════════════ */
+
+  /* ── ANLODIPINO — Estrangulador da Sinvastatina ── */
+  "anlodipino": {
+    "sinvastatina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A NEUROTOXICIDADE MUSCULAR (RABDOMIÓLISE). O Anlodipino inibe competitivamente o CYP3A4 hepático — a principal enzima que degrada a Sinvastatina. Com a via bloqueada, os níveis plasmáticos da estatina podem aumentar em até 77%. Essa concentração tóxica invade os músculos do paciente e dissolve a musculatura (Rabdomiólise), causando dores agoniantes em membros inferiores, mioglobinúria (urina cor de chá escuro) e, nos casos graves, falência renal aguda.",
+        es: "LA TOXICIDAD MUSCULAR (RABDOMIÓLISIS). El Amlodipino inhibe competitivamente el CYP3A4 hepático. Con la vía bloqueada, los niveles plasmáticos de la Simvastatina pueden aumentar hasta un 77%. Esta concentración tóxica invade los músculos y los disuelve (Rabdomiólisis), causando dolores agónicos en MMII, mioglobinuria (orina color té oscuro) y falla renal aguda."
+      },
+      conduta: {
+        pt: "REGRA FDA INEGOCIÁVEL: A dose MÁXIMA permitida de Sinvastatina em pacientes em uso de Anlodipino é de 20 MG POR DIA. Jamais prescrever 40 mg ou 80 mg de Sinvastatina com Anlodipino. Para pacientes que precisam de maior potência de redução do LDL, trocar Sinvastatina por Rosuvastatina ou Atorvastatina (metabolizadas por CYP3A4 com menor impacto da interação).",
+        es: "REGLA FDA INNEGOCIABLE: La dosis MÁXIMA permitida de Simvastatina en pacientes con Amlodipino es de 20 MG POR DÍA. Para pacientes que necesitan mayor reducción de LDL, cambiar Simvastatina por Rosuvastatina o Atorvastatina."
+      }
+    }
+  },
+
+  /* ── REGRA DE CLASSE: TODOS OS BCC DIIDROPIRIDÍNICOS ── */
+  "$classe_diidropiridinicos": {
+    "suco_toranja_grapefruit": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O CHOQUE VASOPLÉGICO DA FRUTA. O suco de Toranja (Grapefruit / Pomelo) contém furanocumarinas que destroem irreversivelmente a enzima CYP3A4 na parede intestinal. Se um paciente tomar o comprimido de Felodipina ou Nifedipina com esse suco no café da manhã, a biodisponibilidade da droga pode TRIPLICAR. Ocorre vasodilatação sistêmica maciça e súbita: a pressão arterial despenca para valores de 60×40 mmHg, o paciente sofre taquicardia extrema e síncope. Um único copo de 250 mL de suco de toranja inibe o CYP3A4 intestinal por até 72 horas.",
+        es: "EL CHOQUE VASOPLÉJICO DE LA FRUTA. El jugo de Toronja (Pomelo) contiene furanocumarinas que destruyen irreversiblemente el CYP3A4 intestinal. Si el paciente toma Felodipino con este jugo, la biodisponibilidad puede TRIPLICARSE. Ocurre vasodilatación sistémica masiva: la presión cae a 60×40 mmHg, taquicardia extrema y síncope. Un solo vaso de 250 mL inhibe el CYP3A4 hasta por 72 horas."
+      },
+      conduta: {
+        pt: "PROIBIÇÃO DIETÉTICA ABSOLUTA com Black Warning. É TERMINANTEMENTE PROIBIDO ingerir toranja (in natura, em suco, ou qualquer suplemento cítrico contendo extrato de toranja) durante toda a terapia com qualquer BCC diidropiridínico. O aviso deve constar na prescrição, no rótulo da farmácia e na orientação verbal ao paciente.",
+        es: "PROHIBICIÓN DIETÉTICA ABSOLUTA con Black Warning. ESTÁ TERMINANTEMENTE PROHIBIDO ingerir toronja (natural, en jugo, o cualquier suplemento cítrico con extracto de toronja) durante toda la terapia con cualquier BCC dihidropiridínico."
+      }
+    },
+    "$classe_inibidores_potentes_cyp3a4_macrolideos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A ARMADILHA DO ANTIBIÓTICO PARA IDOSOS. Pacientes idosos hipertensos em uso de Anlodipino ou Nifedipina que contraem infecções respiratórias (pneumonia, sinusite) frequentemente recebem Claritromicina ou Eritromicina. Esses macrolídeos inibem potentemente o CYP3A4 hepático. O resultado é uma tempestade vasodilatadora: o edema maleolar do paciente explode em 24–48 horas, a pressão sistólica desaba e o risco de evento cardiovascular (infarto, AVC) aumenta significativamente nos primeiros 3 dias do antibiótico, especialmente em idosos frágeis com reserva cardiovascular limitada.",
+        es: "LA TRAMPA DEL ANTIBIÓTICO PARA ANCIANOS. Pacientes ancianos con Amlodipino que reciben Claritromicina o Eritromicina (para infecciones respiratorias). Estos macrólidos inhiben potentemente el CYP3A4 hepático. Resultado: el edema maleolar explota, la presión sistólica cae y el riesgo de infarto/ACV aumenta significativamente en los primeros 3 días del antibiótico."
+      },
+      conduta: {
+        pt: "EVITAR a combinação sempre que possível. Para infecções respiratórias em usuários de BCC diidropiridínicos, preferir AMOXICILINA, AMOXICILINA-CLAVULANATO ou AZITROMICINA (que tem inibição de CYP3A4 muito menor que a Claritromicina). Se Claritromicina for estritamente necessária, reduzir a dose do BCC em 50%, monitorar PA diariamente e orientar o paciente a procurar a emergência se sentir tontura intensa ou síncope.",
+        es: "EVITAR la combinación siempre que sea posible. Para infecciones respiratorias, preferir AMOXICILINA o AZITROMICINA (menor inhibición de CYP3A4). Si Claritromicina es estrictamente necesaria, reducir la dosis del BCC en 50% y monitorizar PA diariamente."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 425 ($classe_ferro_sais_ionicos×vitamina_c_acido_ascorbico; colecalciferol×orlistate_resinas_biliares; colecalciferol×$classe_diureticos_tiazidicos) | BUILD 424 ($classe_fosfatos_intravenosos×calcio_intravenoso_gluconato_cloreto; $classe_repositores_metais_bivalentes_fe_mg×levotiroxina_antibioticos_quinolonas_tetraciclinas; $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp) | BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+
+}; /* fim INTERACOES_DB — BUILD 426 (anlodipino×sinvastatina; $classe_diidropiridinicos×suco_toranja_grapefruit; $classe_diidropiridinicos×$classe_inibidores_potentes_cyp3a4_macrolideos) | BUILD 425 ($classe_ferro_sais_ionicos×vitamina_c_acido_ascorbico; colecalciferol×orlistate_resinas_biliares; colecalciferol×$classe_diureticos_tiazidicos) | BUILD 424 ($classe_fosfatos_intravenosos×calcio_intravenoso_gluconato_cloreto; $classe_repositores_metais_bivalentes_fe_mg×levotiroxina_antibioticos_quinolonas_tetraciclinas; $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp) | BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
