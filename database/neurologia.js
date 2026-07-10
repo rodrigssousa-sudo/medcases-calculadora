@@ -2572,3 +2572,228 @@
 
   }); /* fim Object.assign BUILD 410 append */
 })();
+
+/* ── BUILD 411 APPEND — Anticonvulsivantes Finais + Doença de Parkinson (Tolcapona) ── */
+(function () {
+  if (typeof window.NEUROLOGIA_DRUGS_DB !== 'object' || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) {
+    window.NEUROLOGIA_DRUGS_DB = {};
+  }
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    /* ── TIAGABINA ──────────────────────────────────────────────────────── */
+    "tiagabina": {
+      name: { pt: 'Tiagabina', es: 'Tiagabina' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Anticonvulsivante (Inibidor da Recaptação do GABA)', es: 'Anticonvulsivante (Inhibidor de la Recaptación del GABA)' },
+      indications: {
+        pt: ['Terapia adjuvante para convulsões focais (parciais) em adultos e adolescentes (>12 anos)'],
+        es: ['Terapia adyuvante para convulsiones focales (parciales) en adultos y adolescentes (>12 años)']
+      },
+      commercialNames: { br: ['Gabitril (Importado)'], ar: ['Gabitril'] },
+      presentation: { pt: ['Comprimidos 2 mg, 4 mg, 12 mg e 16 mg'], es: ['Comprimidos 2 mg, 4 mg, 12 mg y 16 mg'] },
+      mechanism: {
+        pt: 'Uma armadilha para o transportador. O cérebro usa a proteína GAT-1 para "limpar" o GABA (o freio do cérebro) das sinapses depois que ele é usado. A Tiagabina inibe a GAT-1. Como o GABA não é limpo, ele se acumula na fenda sináptica, freando continuamente os disparos elétricos anormais.',
+        es: 'Una trampa para el transportador. El cerebro usa la proteína GAT-1 para "limpiar" el GABA de las sinapsis. La Tiagabina inhibe la GAT-1. Como el GABA no es limpiado, se acumula, frenando continuamente los disparos eléctricos anormales.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 4 mg 1x ao dia. Aumentar de 4 a 8 mg/semana. Manutenção: 32 mg a 56 mg/dia (divididos em 2 a 4 tomadas).',
+          es: 'Inicio: 4 mg 1x al día. Aumentar de 4 a 8 mg/semana. Mantenimiento: 32 mg a 56 mg/día (divididos en 2 a 4 tomas).'
+        },
+        pediatric: {
+          pt: '12 a 18 anos: Iniciar com 4 mg. Manutenção até 32 mg/dia.',
+          es: '12 a 18 años: Iniciar con 4 mg. Mantenimiento hasta 32 mg/día.'
+        }
+      },
+      administration: { pt: ['Deve ser tomada COM ALIMENTOS para atrasar o pico no sangue, minimizando reações neurológicas.'], es: ['Debe tomarse CON ALIMENTOS para retrasar el pico en sangre, minimizando reacciones neurológicas.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade (metabolismo hepático CYP3A4 predominante).', es: 'Sin necesidad (metabolismo hepático predominante).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir dose ou espaçar tomadas em insuficiência hepática.', es: 'Reducir dosis o espaciar tomas en insuficiencia hepática.' } },
+      commonAdverseEffects: { pt: ['Tontura marcante e nervosismo', 'Fadiga e confusão', 'Tremores'], es: ['Mareo marcado y nerviosismo', 'Fatiga y confusión', 'Temblores'] },
+      dangerousAdverseEffects: { pt: ['Estado de Mal Epiléptico não convulsivo (O paciente fica preso num "transe" elétrico mudo)', 'Convulsões de Novo (Em pacientes sem epilepsia que tomam a droga para outros fins)'], es: ['Estado de Mal Epiléptico no convulsivo (El paciente queda en un "trance" eléctrico mudo)', 'Convulsiones de Novo (En pacientes sin epilepsia)'] },
+      contraindications: {
+        absolute: { pt: ['Uso OFF-LABEL (Para dormir ou transtorno bipolar) — Causa convulsões no cérebro sadio'], es: ['Uso OFF-LABEL (Para dormir o trastorno bipolar) — Causa convulsiones en el cerebro sano'] },
+        relative: { pt: ['Crises de ausência generalizadas (Pode piorá-las dramaticamente)'], es: ['Crisis de ausencia generalizadas (Puede empeorarlas dramáticamente)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A SÍNDROME DO "OFF-LABEL": A Tiagabina tem um alerta terrível. Nos anos 2000, psiquiatras a prescreviam fora da bula como calmante/para insônia em pessoas normais. O resultado: essas pessoas começaram a ter convulsões violentas no meio da rua. É uma droga EXCLUSIVA para epiléticos.', es: 'LA SÍNDROME DEL "OFF-LABEL": Psiquiatras la prescribían como calmante en personas normales. El resultado: estas personas comenzaron a tener convulsiones violentas. Es una droga EXCLUSIVA para epilépticos.' }
+      }
+    },
+
+    /* ── CLOBAZAM ───────────────────────────────────────────────────────── */
+    "clobazam": {
+      name: { pt: 'Clobazam', es: 'Clobazam' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Benzodiazepínico 1,5 (Anticonvulsivante)', es: 'Benzodiazepínico 1,5 (Anticonvulsivante)' },
+      indications: {
+        pt: ['Terapia coadjuvante na Síndrome de Lennox-Gastaut e Dravet', 'Epilepsia parcial ou generalizada refratária', 'Prevenção de crises catameniais (ligadas à menstruação)'],
+        es: ['Terapia coadyuvante en el Síndrome de Lennox-Gastaut y Dravet', 'Epilepsia parcial o generalizada refractaria', 'Prevención de crisis catameniales (ligadas a la menstruación)']
+      },
+      commercialNames: { br: ['Urbanil', 'Frisium'], ar: ['Karidium', 'Urbadan'] },
+      presentation: { pt: ['Comprimidos 10 mg e 20 mg', 'Suspensão oral 2,5 mg/mL (Em alguns países)'], es: ['Comprimidos 10 mg y 20 mg', 'Suspensión oral 2,5 mg/mL'] },
+      mechanism: {
+        pt: 'Diferente de TODOS os outros benzodiazepínicos clássicos (Diazepam, Rivotril, Alprazolam) que têm os átomos de nitrogênio nas posições 1 e 4 do anel químico, o Clobazam possui nitrogênios nas posições 1 e 5. Essa minúscula mudança química faz com que ele se ligue seletivamente a receptores GABA-A diferentes no cérebro. O resultado: ele é um anticonvulsivante violento, mas produz MUITO MENOS sedação profunda e desenvolve muito menos tolerância ("vício") que os outros benzos.',
+        es: 'A diferencia de TODOS los otros benzodiazepínicos clásicos que tienen los nitrógenos en las posiciones 1 y 4, el Clobazam posee nitrógenos en 1 y 5. Esta minúscula diferencia hace que sea un anticonvulsivante violento, pero produce MUCHO MENOS sedación profunda y desarrolla mucho menos tolerancia.'
+      },
+      dose: {
+        adult: {
+          pt: '20 mg a 30 mg/dia via oral, podendo chegar a 60 mg/dia em epilepsias graves.',
+          es: '20 mg a 30 mg/día vía oral, pudiendo llegar a 60 mg/día en epilepsias graves.'
+        },
+        pediatric: {
+          pt: 'Lennox-Gastaut (>2 anos): 5 mg/dia (se peso <30kg); titular conforme eficácia, máx 20 a 40 mg/dia.',
+          es: 'Lennox-Gastaut (>2 años): 5 mg/día (si peso <30kg); titular según eficacia.'
+        }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos. Os comprimidos costumam ser sulcados para facilitar a partição pediátrica.'], es: ['Puede tomarse con o sin alimentos. Los comprimidos suelen tener ranuras para facilitar partición pediátrica.'] },
+      renalAdjustment: { required: false, message: { pt: 'Uso com precaução em insuficiência renal, mas não exige ajuste rígido inicial.', es: 'Uso con precaución en insuficiencia renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado integralmente no fígado (Metabólito ativo Norclobazam). Reduzir dose em hepatopatias.', es: 'Metabolizado integralmente en hígado (Metabolito activo Norclobazam). Reducir dosis en hepatopatías.' } },
+      commonAdverseEffects: { pt: ['Sonolência e letargia', 'Sialorreia (Criança baba muito)', 'Ataxia e perda de coordenação motora'], es: ['Somnolencia y letargo', 'Sialorrea (El niño babea mucho)', 'Ataxia y pérdida de coordinación'] },
+      dangerousAdverseEffects: { pt: ['Reação cutânea letal (Síndrome de Stevens-Johnson)', 'Depressão Respiratória (Se somado a opioides)'], es: ['Reacción cutánea letal (Síndrome de Stevens-Johnson)', 'Depresión Respiratoria (Si se suma a opioides)'] },
+      contraindications: {
+        absolute: { pt: ['Miastenia Gravis descompensada', 'Síndrome da Apneia Severa do Sono'], es: ['Miastenia Gravis descompensada', 'Síndrome de la Apnea Severa del Sueño'] },
+        relative: { pt: ['Histórico de abuso de substâncias (Apesar de tolerância menor, ainda é um benzodiazepínico)'], es: ['Historial de abuso de sustancias (Aunque tiene menor tolerancia, aún es un benzodiazepínico)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'O RISCO DA AGRESSÃO PARADOXAL: Em crianças com cérebro severamente lesionado (Lennox-Gastaut), o Clobazam às vezes faz o efeito reverso. Em vez de acalmar, a criança fica agressiva, hiperativa, grita e bate nos pais (Reação Paradoxal do Benzo). Suspenda e reporte ao neuro.', es: 'EL RIESGO DE LA AGRESIÓN PARADÓJICA: En niños con cerebro lesionado, el Clobazam a veces hace el efecto reverso. En vez de calmar, el niño queda agresivo, hiperactivo y golpea a los padres. Suspenda y reporte.' }
+      }
+    },
+
+    /* ── ESLICARBAZEPINA ────────────────────────────────────────────────── */
+    "eslicarbazepina": {
+      name: { pt: 'Eslicarbazepina (Acetato de)', es: 'Eslicarbazepina (Acetato de)' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Anticonvulsivante (Bloqueador de Canais de Sódio dependente de voltagem)', es: 'Anticonvulsivante (Bloqueador de Canales de Sodio)' },
+      indications: {
+        pt: ['Convulsões de início parcial (focal) em adultos e crianças (>4 anos)'],
+        es: ['Convulsiones de inicio parcial (focal) en adultos y niños (>4 años)']
+      },
+      commercialNames: { br: ['Zebinix', 'Aptiom'], ar: ['Zebinix'] },
+      presentation: { pt: ['Comprimidos 200 mg, 400 mg, 600 mg e 800 mg'], es: ['Comprimidos 200 mg, 400 mg, 600 mg y 800 mg'] },
+      mechanism: {
+        pt: 'É a "Terceira Geração" da Carbamazepina. A Carbamazepina original era tóxica. A Oxcarbazepina melhorou, mas precisava ser tomada de 12/12h e baixava muito o sódio. A Eslicarbazepina é um pró-fármaco que o fígado quebra APENAS no componente mais purificado possível. Resultado: Ele entra e tranca os canais de sódio do cérebro com uma vida média tão longa que o paciente SÓ PRECISA TOMAR 1 VEZ AO DIA, facilitando a adesão.',
+        es: 'La "Tercera Generación" de la Carbamazepina. La Eslicarbazepina es un profármaco que el hígado rompe SOLO en el componente más purificado. Resultado: Entra y bloquea los canales de sodio con una vida media tan larga que el paciente SOLO NECESITA TOMAR 1 VEZ AL DÍA.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início com 400 mg UMA VEZ ao dia. Após 1 a 2 semanas, subir para 800 mg/dia (dose de manutenção mais comum). Pode chegar a 1.200 mg/dia.',
+          es: 'Inicio con 400 mg UNA VEZ al día. Tras 1-2 semanas, subir a 800 mg/día. Puede llegar a 1.200 mg/día.'
+        },
+        pediatric: {
+          pt: 'Uso a partir de 4 anos com titulação rigorosa por peso (ex: 10 a 30 mg/kg/dia).',
+          es: 'Uso a partir de 4 años con titulación rigurosa por peso.'
+        }
+      },
+      administration: { pt: ['Uso oral diário (dose única). Não necessita fracionamento.'], es: ['Uso oral diario (dosis única). No necesita fraccionamiento.'] },
+      renalAdjustment: { required: true, message: { pt: 'Em ClCr < 50 mL/min, a dose DEVE SER REDUZIDA PELA METADE (Metabólitos acumulam pesadamente).', es: 'En ClCr < 50 mL/min, la dosis DEBE REDUCIRSE A LA MITAD.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Disfunção hepática grave não possui dados para liberação segura.', es: 'Disfunción hepática grave no posee datos para liberación segura.' } },
+      commonAdverseEffects: { pt: ['Tontura intensa e sonolência', 'Diplopia (Visão dupla transitória no pico da dose)', 'Náuseas e dor de cabeça'], es: ['Mareo intenso y somnolencia', 'Diplopía (Visión doble transitoria)', 'Náuseas y dolor de cabeza'] },
+      dangerousAdverseEffects: { pt: ['HIPONATREMIA GRAVE (O sódio do sangue despenca abaixo de 125 mEq/L, causando coma)', 'DRESS e Síndrome de Stevens-Johnson', 'Prolongamento do Intervalo PR (Risco de Bloqueio AV)'], es: ['HIPONATREMIA GRAVE (El sodio cae, causando coma)', 'DRESS y Síndrome de Stevens-Johnson', 'Prolongación del Intervalo PR'] },
+      contraindications: {
+        absolute: { pt: ['Bloqueio Atrioventricular (AV) de 2º ou 3º grau prévio', 'Alergia prévia à Carbamazepina ou Oxcarbazepina (Reação cruzada quase certa)'], es: ['Bloqueo AV de 2º o 3º grado previo', 'Alergia previa a Carbamazepina (Reacción cruzada casi segura)'] },
+        relative: { pt: ['Pacientes em uso crônico de diuréticos tiazídicos (Risco brutal de Hiponatremia)'], es: ['Pacientes en uso crónico de diuréticos (Riesgo brutal de Hiponatremia)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ROUBO DO SÓDIO NO IDOSO: Assim como suas irmãs, a Eslicarbazepina faz o paciente perder Sódio pela urina. Se você prescreve isso para uma avó de 70 anos que também toma Hidroclorotiazida para pressão, em duas semanas ela chegará no PS convulsionando de novo, mas não por epilepsia, e sim porque o sódio do sangue dela caiu para 118 mEq/L (Hiponatremia severa).', es: 'EL ROBO DEL SODIO EN EL ANCIANO: Si la prescribe para una abuela que también toma Hidroclorotiazida, en dos semanas llegará al hospital convulsionando por Hiponatremia severa (Sodio en 118).' }
+      }
+    },
+
+    /* ── FOSFENITOÍNA ───────────────────────────────────────────────────── */
+    "fosfenitoina": {
+      name: { pt: 'Fosfenitoína (Sódica)', es: 'Fosfenitoína (Sódica)' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Anticonvulsivante de Resgate (Pró-fármaco da Fenitoína)', es: 'Anticonvulsivante de Rescate (Profármaco de la Fenitoína)' },
+      indications: {
+        pt: ['Estado de Mal Epiléptico (Status Epilepticus)', 'Prevenção e tratamento de convulsões pós-neurocirurgia (Quando a via oral é impossível)'],
+        es: ['Estado de Mal Epiléptico (Status Epilepticus)', 'Prevención y tratamiento de convulsiones posneurocirugía']
+      },
+      commercialNames: { br: ['Cerebyx (Importado)', 'Dantalin'], ar: ['Fosfenitoina'] },
+      presentation: { pt: ['Ampolas IV/IM contendo 50 mg de Equivalentes de Fenitoína (PE) por mL'], es: ['Ampollas IV/IM con 50 mg de Equivalentes de Fenitoína (PE) por mL'] },
+      mechanism: {
+        pt: 'A correção de um desastre químico. A Fenitoína pura (Hidantal) em ampola é dissolvida em Propilenoglicol, o que a torna caústica e exige injeção lenta (senão para o coração e necrosa o braço). A Fosfenitoína foi inventada como um pró-fármaco 100% SOLÚVEL EM ÁGUA (Não tem propilenoglicol). No sangue humano, enzimas (fosfatases) quebram ela e liberam a fenitoína em 15 minutos. Resultado: você pode injetá-la MUITO MAIS RÁPIDO na emergência sem causar parada cardíaca ou gangrena roxa no membro.',
+        es: 'La corrección de un desastre químico. La Fenitoína pura exige inyección lenta para no necrosar el brazo. La Fosfenitoína es un profármaco 100% SOLUBLE EN AGUA. En la sangre, se rompe y libera fenitoína. Puede inyectarse MUCHO MÁS RÁPIDO sin parada cardíaca.'
+      },
+      dose: {
+        adult: {
+          pt: 'Status Epilepticus (Dose de Ataque): 15 a 20 mg PE/kg Intravenoso (Taxa de infusão pode ser até 150 mg PE/minuto — TRÊS VEZES MAIS RÁPIDO que o Hidantal).',
+          es: 'Status Epilepticus (Ataque): 15 a 20 mg PE/kg Intravenoso (Tasa de infusión hasta 150 mg PE/minuto).'
+        },
+        pediatric: {
+          pt: 'Ataque: 15 a 20 mg PE/kg IV (Velocidade máx 2 a 3 mg PE/kg/min).',
+          es: 'Ataque: 15 a 20 mg PE/kg IV (Velocidad máx 2 a 3 mg PE/kg/min).'
+        }
+      },
+      administration: { pt: ['SEMPRE prescrita e dosada em "mg PE" (Equivalentes de Fenitoína). DIFERENCIAL BRUTAL: Por ser hidrossolúvel, a Fosfenitoína PODE ser feita Intramuscular (IM) nos glúteos de um paciente se a veia não for achada.'], es: ['SIEMPRE prescrita en "mg PE". DIFERENCIAL: Por ser hidrosoluble, la Fosfenitoína PUEDE hacerse Intramuscular (IM) si no se halla la vena.'] },
+      renalAdjustment: { required: true, message: { pt: 'Pacientes com doença renal em estágio final não desdobram a fosfenitoína perfeitamente. Alteração de fração livre ocorre.', es: 'Pacientes con enfermedad renal final no desdoblan bien la fosfenitoína.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'A fenitoína liberada é de metabolismo hepático saturável. Exige ajuste em falência severa.', es: 'La fenitoína liberada es de metabolismo hepático saturable. Exige ajuste.' } },
+      commonAdverseEffects: { pt: ['PRURIDO GENITAL E PÉLVICO (Coceira profunda e formigamento na virilha durante a infusão venosa rápida — exclusividade do fosfato da droga)', 'Nistagmo e Tontura'], es: ['PRURITO GENITAL Y PÉLVICO (Picazón profunda y hormigueo en la ingle durante la infusión IV rápida)', 'Nistagmo y Mareo'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão e Arritmia (Ainda existe, mas é muito menor que o Hidantal tradicional)', 'Síndrome da Luva Púrpura (Purple Glove Syndrome — Ocorre rarissimamente)'], es: ['Hipotensión y Arritmia (Menor que Fenitoína tradicional)', 'Síndrome del Guante Púrpura (Raro pero posible)'] },
+      contraindications: {
+        absolute: { pt: ['Bradicardia sinusal, Bloqueio AV de 2º ou 3º Grau', 'Síndrome de Adams-Stokes'], es: ['Bradicardia sinusal, Bloqueo AV de 2º o 3º Grado', 'Síndrome de Adams-Stokes'] },
+        relative: { pt: ['Porfiria'], es: ['Porfiria'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A COCEIRA DA MORTE FINGIDA: Durante o ataque de Fosfenitoína IV na UTI, pacientes acordados vão desesperadamente coçar a virilha, as costas e a região genital, relatando calor intenso. Muitos médicos acham que é uma anafilaxia brutal e pausam a droga. Não é! É apenas uma liberação fosfatada transitória. Pode continuar a infusão.', es: 'LA PICAZÓN ATERRADORA: Pacientes despiertos se rascarán desesperadamente la ingle y zona genital, relatando calor. Muchos creen que es anafilaxia y pausan la droga. ¡No lo es! Es solo una liberación fosfatada transitoria. Puede continuar.' }
+      }
+    },
+
+    /* ── TOLCAPONA ──────────────────────────────────────────────────────── */
+    "tolcapona": {
+      name: { pt: 'Tolcapona', es: 'Tolcapona' },
+      category: 'neurologia',
+      icon: '🧠',
+      color: '#8B5CF6',
+      colorTxt: '#ffffff',
+      class: { pt: 'Inibidor da COMT (Catecol-O-metiltransferase)', es: 'Inhibidor de la COMT (Catecol-O-metiltransferasa)' },
+      indications: {
+        pt: ['Doença de Parkinson avançada e idiopática com flutuação motora severa (Fenômeno "Wearing-Off" ou Fim de Dose) SEMPRE como terapia adjunta à Levodopa.'],
+        es: ['Enfermedad de Parkinson avanzada e idiopática con fluctuación motora severa ("Wearing-Off") SIEMPRE como terapia adjunta a la Levodopa.']
+      },
+      commercialNames: { br: ['Tasmar (Uso estritamente restrito)'], ar: ['Tasmar'] },
+      presentation: { pt: ['Comprimidos 100 mg e 200 mg'], es: ['Comprimidos 100 mg y 200 mg'] },
+      mechanism: {
+        pt: 'A "Guarda-Costas Central e Periférica". A Levodopa é o remédio principal do Parkinson, mas a enzima COMT do corpo destrói a Levodopa antes que ela alcance o cérebro, e destrói a dopamina no cérebro. A Tolcapona é a droga mais potente: cruza a barreira do cérebro e inibe a COMT DENTRO E FORA da cabeça. O paciente que ficava paralisado (Off) volta a se mexer e ter controle muscular fluido por muitas horas.',
+        es: 'El "Guardaespaldas Central y Periférico". La enzima COMT destruye la Levodopa antes de alcanzar el cerebro. La Tolcapona cruza la barrera e inhibe la COMT DENTRO Y FUERA. El paciente paralizado (Off) vuelve a moverse por horas.'
+      },
+      dose: {
+        adult: {
+          pt: '100 mg via oral, 3 vezes ao dia (geralmente acompanhando as doses de levodopa/carbidopa). Máximo de 200 mg 3x/dia.',
+          es: '100 mg vía oral, 3 veces al día. Máximo de 200 mg 3x/día.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['A Levodopa deve obrigatoriamente ter a sua dose reduzida em até 30% quando a Tolcapona for iniciada, para evitar sobrecarga cerebral de dopamina (Discinesias incontroláveis).'], es: ['La Levodopa debe obligatoriamente reducir su dosis hasta un 30% al iniciar Tolcapona, para evitar sobrecarga cerebral.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste em disfunção renal leve/moderada.', es: 'Sin ajuste en disfunción renal leve/moderada.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADO formalmente na insuficiência hepática, seja leve, moderada ou grave.', es: 'CONTRAINDICADO formalmente en insuficiencia hepática.' } },
+      commonAdverseEffects: { pt: ['Diarreia explosiva severa (Pode ocorrer semanas após o início)', 'Urina alaranjada forte', 'Discinesias intensas (Movimentos corporais anormais de contorção)'], es: ['Diarrea explosiva severa (Puede ocurrir semanas tras el inicio)', 'Orina naranja fuerte', 'Discinesias intensas (Movimientos de contorsión)'] },
+      dangerousAdverseEffects: { pt: ['FALÊNCIA HEPÁTICA FULMINANTE LETAL (Pode matar o paciente em dias)', 'Síndrome Neuroléptica Maligna (Se descontinuado bruscamente)'], es: ['FALLA HEPÁTICA FULMINANTE LETAL (Puede matar al paciente en días)', 'Síndrome Neuroléptico Maligno (Si se suspende bruscamente)'] },
+      contraindications: {
+        absolute: { pt: ['Histórico prévio de transaminases alteradas', 'Uso concomitante com inibidores da MAO não-seletivos'], es: ['Historial previo de transaminasas alteradas', 'Uso concomitante con inhibidores de la MAO no selectivos'] },
+        relative: { pt: ['Surtos psicóticos ativos ou esquizofrenia (O aumento da dopamina causa alucinações terríveis)'], es: ['Brotes psicóticos activos (El aumento de dopamina causa alucinaciones)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A ÚLTIMA CARTADA DO PARKINSON: Devido a relatos de morte por destruição total do fígado, a Tolcapona tem CAIXA PRETA do FDA. Ela SÓ PODE SER PRESCRITA se o paciente for refratário a todos os outros remédios. O médico é obrigado a coletar exames do fígado (TGO/TGP) A CADA 2 SEMANAS no primeiro ano. Se não fizer isso, comete má prática.', es: 'LA ÚLTIMA CARTA DEL PARKINSON: Tiene CAJA NEGRA. SOLO PUEDE PRESCRIBIRSE si es refractario a todo lo demás. Obliga a exámenes de hígado CADA 2 SEMANAS en el primer año.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 411 append */
+})();

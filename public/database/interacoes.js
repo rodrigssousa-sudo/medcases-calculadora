@@ -1143,6 +1143,12 @@ const DRUG_CLASSES = {
      Canabidiol (CBD) + Estiripentol: inibem CYP2C19/CYP3A4, acumulam Clobazam e Valproato */
   "$classe_moduladores_dravet_lennox": [
     "canabidiol", "estiripentol"
+  ],
+
+  /* BUILD 411 — Diuréticos Tiazídicos: espoliam sódio, sinergia com Eslicarbazepina/Oxcarbazepina */
+  "$classe_diureticos_tiazidicos": [
+    "hidroclorotiazida", "clortalidona", "indapamida", "metolazona",
+    "bendroflumetiazida", "triclormetiazida"
   ]
 
 };
@@ -23051,9 +23057,62 @@ const INTERACOES_DB = {
         es: "MANDATORIO evitar la asociación. El Felbamato también 'explota' la concentración de Valproato. Exige Hemograma semanal los primeros meses."
       }
     }
+  },
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO MOTOR DE INTERAÇÕES: Anticonvulsivantes Finais e Doença de Parkinson
+   Tiagabina, Clobazam, Eslicarbazepina, Fosfenitoína, Tolcapona
+═══════════════════════════════════════════════════════════════ */
+
+  /* ── ESLICARBAZEPINA (O Efeito Hiponatrêmico Massivo) ── */
+  "eslicarbazepina": {
+    "$classe_diureticos_tiazidicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "COMA HIPONATRÊMICO (Diluição do Cérebro). A Eslicarbazepina, assim como suas irmãs (Carbamazepina e Oxcarbazepina), possui um efeito similar ao SIADH, retendo água no corpo e diluindo o sódio do sangue. O uso de Diuréticos Tiazídicos (Hidroclorotiazida) faz o rim forçar a perda de sódio de propósito. A combinação despenca o nível de Sódio Sanguíneo para valores críticos (< 120 mEq/L). O cérebro do paciente incha (edema cerebral), causando letargia profunda, novas convulsões refratárias e coma.",
+        es: "COMA HIPONATRÉMICO. La Eslicarbazepina retiene agua, diluyendo el sodio. El uso de Diuréticos Tiazídicos fuerza la pérdida de sodio. La combinación desploma el Sodio a niveles críticos. El cerebro se hincha (edema cerebral), causando letargo profundo, nuevas convulsiones y coma."
+      },
+      conduta: {
+        pt: "Acompanhamento OBRIGATÓRIO do Sódio Sérico (Eletrólitos). Se o paciente epiléptico precisar de tratamento para hipertensão, a Hidroclorotiazida deve ser substituída por Anlodipino ou Losartana pura sem diurético.",
+        es: "Acompañamiento OBLIGATORIO del Sodio Sérico. Si el paciente necesita tratamiento para hipertensión, cambiar la Hidroclorotiazida por Amlodipino."
+      }
+    }
+  },
+
+  /* ── FOSFENITOÍNA (O Resgate Antiarrítmico) ── */
+  "fosfenitoina": {
+    "amiodarona": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "CHOQUE DE TOXICIDADE DA FENITOÍNA. Quando a Fosfenitoína é convertida em fenitoína, ela precisa do citocromo CYP2C9 para ser eliminada. A Amiodarona é um bloqueador profundo dessa enzima. A infusão das drogas num paciente grave na UTI faz os níveis de fenitoína dispararem de 15 mcg/mL para > 40 mcg/mL. O paciente sofre Nistagmo maciço, Ataxia (perda total da coordenação), letargia e bloqueio cardíaco fatal.",
+        es: "CHOQUE DE TOXICIDAD DE LA FENITOÍNA. La Amiodarona bloquea la enzima que elimina la fenitoína. La infusión de las drogas en UCI dispara los niveles de fenitoína. El paciente sufre Nistagmo masivo, Ataxia y bloqueo cardíaco fatal."
+      },
+      conduta: {
+        pt: "Se paciente usar Amiodarona cronicamente, a dose de resgate/manutenção de Fosfenitoína deve ser reduzida pela metade e o nível sérico de fenitoína medido rigorosamente todos os dias.",
+        es: "Si el paciente usa Amiodarona, la dosis de Fosfenitoína debe reducirse a la mitad y medir niveles séricos diariamente."
+      }
+    }
+  },
+
+  /* ── TOLCAPONA (A Tempestade Catecolaminérgica) ── */
+  "tolcapona": {
+    "$classe_imaos": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "A SUPRESSÃO TOTAL DAS ENZIMAS CEREBRAIS. O cérebro só tem duas enzimas para destruir a Dopamina e a Noradrenalina para que a gente não exploda de hiperatividade: a COMT e a MAO. A Tolcapona aniquila a COMT. Inibidores Não-Seletivos da MAO (Tranilcipromina, Linezolida) aniquilam a MAO. Sem as duas lixeiras, a Dopamina inunda o cérebro sem parar. Ocorre uma crise simpaticomimética letal: Hipertensão rasgando os vasos, taquicardia ventricular e convulsões isquêmicas.",
+        es: "LA SUPRESIÓN TOTAL DE LAS ENZIMAS CEREBRALES. El cerebro tiene COMT y MAO para destruir Dopamina. La Tolcapona aniquila la COMT. Los Inhibidores de MAO aniquilan la MAO. La Dopamina inunda el cerebro sin parar. Ocurre una crisis letal: Hipertensión extrema y taquicardia ventricular."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO CAIXA PRETA. Pacientes em uso de Tolcapona NÃO PODEM tomar inibidores não-seletivos da MAO. (Nota de bula: Selegilina e Rasagilina, que são inibidores Seletivos MAO-B em dose para Parkinson, podem ser usados com extrema cautela pelo especialista).",
+        es: "CONTRAINDICACIÓN CAJA NEGRA. Pacientes con Tolcapona NO PUEDEN tomar inhibidores no selectivos de la MAO."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 410 (perampanel×depressores_SNC/indutores_CYP3A4; $classe_moduladores_dravet_lennox×valproato/clobazam; felbamato×carbamazepina_valproico) | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
