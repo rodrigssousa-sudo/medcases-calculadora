@@ -16364,6 +16364,22 @@ const INTERACOES_DB = {
         pt: "Evitar sobreposição, salvo transição protocolada entre anticoagulantes (ex.: início de edoxabana no horário da próxima dose de heparina/varfarina conforme protocolo de troca).",
         es: "Evitar la superposición, salvo transición protocolizada entre anticoagulantes (ej.: inicio de edoxabán en el horario de la próxima dosis de heparina/warfarina según protocolo de cambio)."
       }
+    },
+
+    /* BUILD 428 — Edoxabana × Função Renal Super-Normal
+       Nó droga×condição clínica (ClCr > 95 mL/min em FA): alerta de bula FDA,
+       genuinamente ausente do motor antes desta submissão. */
+    "funcao_renal_super_normal_clcr_maior_95": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "ANULAÇÃO DE EFICÁCIA E AVC ISQUÊMICO (ALERTA BLACK BOX FDA). Em pacientes com Fibrilação Atrial e clearance de creatinina superior a 95 mL/min, o rim ultra-filtrante excreta a Edoxabana de forma extremamente rápida. Os níveis séricos da droga despencam abaixo da janela de proteção terapêutica, permitindo que o coração forme trombos e o paciente sofra um AVC isquêmico maciço. Paradoxo confirmado no estudo ENGAGE AF-TIMI 48: pacientes com ClCr > 95 tiveram mais AVCs com Edoxabana do que com Varfarina.",
+        es: "ANULACIÓN DE EFICACIA Y ACV ISQUÉMICO (CAJA NEGRA FDA). En pacientes con FA y clearance de creatinina mayor a 95 mL/min, el riñón excreta el Edoxabán extremadamente rápido. Los niveles caen por debajo de la ventana de protección, permitiendo trombos cardíacos y ACV. Paradoja confirmada en ENGAGE AF-TIMI 48: más AVCs con Edoxabán que con Warfarina en este grupo."
+      },
+      conduta: {
+        pt: "CONTRAINDICAÇÃO DE BULA (FDA BLACK BOX). É proibido usar Edoxabana se o ClCr medido for > 95 mL/min em FA. Migrar imediatamente para Apixabana ou Rivaroxabana, que não apresentam esta limitação de eficácia em rim hiperfuncionante.",
+        es: "CONTRAINDICACIÓN DE PROSPECTO (FDA BLACK BOX). Está prohibido usar Edoxabán si el ClCr es > 95 mL/min en FA. Migrar inmediatamente a Apixabán o Rivaroxabán, que no presentan esta limitación de eficacia en riñón hiperfuncionante."
+      }
     }
   },
 
@@ -16481,6 +16497,23 @@ const INTERACOES_DB = {
       conduta: {
         pt: "Monitorar sinais de sangramento.",
         es: "Monitorizar signos de sangrado."
+      }
+    },
+
+    /* BUILD 428 — Chave combinada P-gp: verapamil + amiodarona + claritromicina
+       (verapamil e amiodarona já existem como sub-nós separados acima; esta chave
+       adiciona a claritromicina e formaliza o conceito da "overdose por bloqueio
+       de transporte intestinal P-gp" como mecanismo unificador dos três) */
+    "verapamil_amiodarona_claritromicina": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A OVERDOSE POR BLOQUEIO DE TRANSPORTE (P-gp). A Dabigatrana é pró-fármaco que depende do transportador P-gp intestinal para controlar sua absorção. Verapamil, Amiodarona e Claritromicina desativam a P-gp por mecanismos distintos (Verapamil: inibição competitiva; Amiodarona: inibição farmacocinética; Claritromicina: inibição CYP3A4/P-gp). Se qualquer um for tomado junto, a barreira intestinal cai e o corpo absorve substancialmente mais Dabigatrana livre — sem que qualquer enzima hepática sinalize o problema, pois a Dabigatrana não tem metabolismo CYP450.",
+        es: "LA SOBREDOSIS POR BLOQUEO DE P-gp. El Dabigatrán depende del transportador P-gp intestinal. Verapamilo, Amiodarona y Claritromicina desactivan la P-gp. Si cualquiera se toma junto, el cuerpo absorbe sustancialmente más Dabigatrán libre — sin que ninguna enzima hepática señale el problema (sin metabolismo CYP450)."
+      },
+      conduta: {
+        pt: "Para Verapamil oral: reduzir a Dabigatrana para 110 mg 2x/dia obrigatoriamente e administrá-la pelo menos 2 horas antes do Verapamil. Para Claritromicina: avaliar troca por azitromicina (menor inibição de P-gp). Para Amiodarona: monitorar sinais de sangramento e considerar 110 mg 2x/dia em idosos ou ClCr limítrofe.",
+        es: "Para Verapamilo: reducir a 110 mg 2x/día y administrar al menos 2 horas antes del Verapamilo. Para Claritromicina: evaluar cambio a azitromicina. Para Amiodarona: monitorizar sangrado y considerar 110 mg 2x/día en ancianos o ClCr limítrofe."
       }
     }
   },
@@ -24092,7 +24125,7 @@ const INTERACOES_DB = {
     }
   }
 
-}; /* fim INTERACOES_DB — BUILD 427 ($classe_corticoides_sistemicos×insulinas_antidiabeticos_orais; $classe_corticoides_sistemicos×$classe_aines_ibuprofeno_cetoprofeno; ticagrelor×sinvastatina_lovastatina) | BUILD 426 (anlodipino×sinvastatina; $classe_diidropiridinicos×suco_toranja_grapefruit; $classe_diidropiridinicos×$classe_inibidores_potentes_cyp3a4_macrolideos) | BUILD 425 ($classe_ferro_sais_ionicos×vitamina_c_acido_ascorbico; colecalciferol×orlistate_resinas_biliares; colecalciferol×$classe_diureticos_tiazidicos) | BUILD 424 ($classe_fosfatos_intravenosos×calcio_intravenoso_gluconato_cloreto; $classe_repositores_metais_bivalentes_fe_mg×levotiroxina_antibioticos_quinolonas_tetraciclinas; $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp) | BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 428 (dabigatrana×verapamil_amiodarona_claritromicina; edoxabana×funcao_renal_super_normal_clcr_maior_95) | BUILD 427 ($classe_corticoides_sistemicos×insulinas_antidiabeticos_orais; $classe_corticoides_sistemicos×$classe_aines_ibuprofeno_cetoprofeno; ticagrelor×sinvastatina_lovastatina) | BUILD 426 (anlodipino×sinvastatina; $classe_diidropiridinicos×suco_toranja_grapefruit; $classe_diidropiridinicos×$classe_inibidores_potentes_cyp3a4_macrolideos) | BUILD 425 ($classe_ferro_sais_ionicos×vitamina_c_acido_ascorbico; colecalciferol×orlistate_resinas_biliares; colecalciferol×$classe_diureticos_tiazidicos) | BUILD 424 ($classe_fosfatos_intravenosos×calcio_intravenoso_gluconato_cloreto; $classe_repositores_metais_bivalentes_fe_mg×levotiroxina_antibioticos_quinolonas_tetraciclinas; $classe_repositores_metais_bivalentes_fe_mg×$classe_antiacidos_ibp) | BUILD 423 (sparsentana×$classe_iec_bra_ieca_aliskireno; ringer_lactato×ceftriaxona; ringer_lactato×transfusao_hemacias_sangue) | BUILD 421 (finerenona×$classe_iec_bra_ieca_espironolactona; finerenona×$classe_inibidores_potentes_cyp3a4; voclosporina×vacinas_virus_vivo; dextrana_ferrica×ieca_enalapril_captopril) | BUILD 420 (conivaptana×$classe_estatinas_bloqueadores_calcio; citrato_de_potassio×$classe_iec_bra_espironolactona; carboximaltose_ferrica×vitamina_d_calcio_suplementos) | BUILD 419 ($classe_calcimimeticos×prolongadores_qt_antiarritmicos; cinacalcete×$classe_metabolizados_cyp2d6_antidepressivos; tolvaptana×$classe_inibidores_potentes_cyp3a4) | BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador

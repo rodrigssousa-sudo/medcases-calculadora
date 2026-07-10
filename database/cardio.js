@@ -15831,6 +15831,112 @@
   }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 22 (Antiagregantes P2Y12 Reversíveis: Ticagrelor · Cangrelor) — BUILD 427 */
 
   /* ══════════════════════════════════════════════════════════════════════════════
+     GRUPO 22-B — ANTIAGREGANTE P2Y12 IV ULTRARRÁPIDO
+     cangrelor
+     BUILD 428 — lacuna preenchida; calculate schema (padrão cardio.js)
+  ══════════════════════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* BUILD 428 — LACUNA PREENCHIDA */
+    cangrelor: {
+      name:     { pt: 'Cangrelor', es: 'Cangrelor' },
+      category: 'cardio',
+      icon:     '💉',
+      color:    'rgba(239,68,68,0.13)',
+      colorTxt: '#B91C1C',
+      calculate: (paciente, lang = 'pt') => {
+        const peso = Number(paciente.peso || 70);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+
+        const bolusTotal = Math.round(peso * 30);           // 30 mcg/kg bolus
+        const infusaoMin = (peso * 4).toFixed(1);           // 4 mcg/kg/min
+
+        return {
+          name:  t(lang, 'Cangrelor', 'Cangrelor'),
+          class: t(lang,
+            'Antiagregante Plaquetário Intravenoso Ultrarrápido — Antagonista Reversível P2Y12 (IV)',
+            'Antiagregante Plaquetario Intravenoso Ultrarápido — Antagonista Reversible P2Y12 (IV)'
+          ),
+          commercialNames: { br: ['Kengreal'], ar: ['Kengreal'] },
+          presentation: [
+            t(lang, 'Frasco-ampola pó liofilizado IV 50 mg (reconstituído + diluído para infusão)', 'Frasco-ampolla polvo liofilizado IV 50 mg')
+          ],
+          dose: {
+            adultoPadrao: t(lang,
+              `Bolus IV: ${bolusTotal} mcg (30 mcg/kg) em até 1 min ANTES da angioplastia. Imediatamente após: infusão contínua de ${infusaoMin} mcg/min (4 mcg/kg/min) por mínimo 2 horas ou até fim do procedimento.`,
+              `Bolo IV: ${bolusTotal} mcg (30 mcg/kg) en 1 min ANTES de la angioplastia. Inmediatamente: infusión continua de ${infusaoMin} mcg/min (4 mcg/kg/min) por mínimo 2 horas.`
+            ),
+            adultoGrave:        null,
+            pediatricaPadrao:   t(lang, 'Não indicado em pediatria.', 'No indicado en pediatría.'),
+            pediatricaGrave:    null,
+            pediatricaMeningite: null
+          },
+          doseKg: {
+            padrao:    t(lang, 'Bolus: 30 mcg/kg · Infusão: 4 mcg/kg/min', 'Bolo: 30 mcg/kg · Infusión: 4 mcg/kg/min'),
+            grave:     null,
+            meningite: null,
+            doseMaxima: t(lang, 'Bolus máx: 30 mcg/kg (único) · Infusão: 4 mcg/kg/min (não titular)', 'Bolo máx: 30 mcg/kg (único) · Infusión: 4 mcg/kg/min')
+          },
+          therapeuticRange: t(lang,
+            'Sem monitoração sérica disponível. Ação imediata (< 2 min). Meia-vida ultracurta: 3–6 minutos. Plaquetas restauradas 1 hora após cessar infusão.',
+            'Sin monitoreo sérico disponible. Acción inmediata (< 2 min). Vida media ultracorta: 3–6 minutos. Plaquetas restauradas 1 hora después del cese.'
+          ),
+          dilution: t(lang,
+            'Reconstituir 50 mg com 5 mL de água estéril; agitar até dissolução completa. Diluir em 250 mL de SF 0,9% ou SG 5%. Concentração final: 200 mcg/mL.',
+            'Reconstituir 50 mg con 5 mL de agua estéril; agitar hasta disolución completa. Diluir en 250 mL de SF 0,9% o SG 5%. Concentración final: 200 mcg/mL.'
+          ),
+          speed: t(lang,
+            'Bolus rápido (< 1 min) → infusão contínua em bomba exclusiva. Uso restrito à sala de hemodinâmica com monitorização contínua.',
+            'Bolo rápido (< 1 min) → infusión continua en bomba exclusiva. Uso restringido a sala de hemodinámica con monitorización continua.'
+          ),
+          commonAdverseEffects: [
+            t(lang, 'Sangramento no sítio de punção arterial (femoral/radial)', 'Sangrado en el sitio de punción arterial'),
+            t(lang, 'Equimoses severas periféricas', 'Equimosis severas periféricas'),
+            t(lang, 'Dispneia aguda benigna (mecanismo adenosínico, similar ao ticagrelor)', 'Disnea aguda benigna (mecanismo adenosínico, similar al ticagrelor)')
+          ],
+          severeAdverseEffects: [
+            t(lang, 'Hemorragia retroperitoneal catastrófica', 'Hemorragia retroperitoneal catastrófica'),
+            t(lang, 'Hemorragia intracraniana', 'Hemorragia intracraneal')
+          ],
+          contraindications: [
+            t(lang, 'Sangramento ativo de qualquer foco', 'Sangrado activo de cualquier foco'),
+            t(lang, 'Histórico de AVC ou AIT de qualquer tipo', 'Historial de ACV o AIT de cualquier tipo'),
+            t(lang, 'Uso prévio de clopidogrel ou prasugrel nas últimas 24 horas (torna uso do cangrelor redundante e perigoso)', 'Uso previo de clopidogrel o prasugrel en las últimas 24 horas')
+          ],
+          pregnancyCategory: t(lang, 'Categoria C — Evitar; sem dados de segurança fetal estabelecidos.', 'Categoría C — Evitar; sin datos de seguridad fetal.'),
+          breastfeeding:     gestante || lactante ? t(lang, 'Evitar — sem dados de excreção no leite.', 'Evitar — sin datos de excreción en leche.') : null,
+          renalAdjust:       t(lang, 'Sem ajuste necessário — inativado por desativação plasmática (ecto-nucleotidases), independente do rim.', 'Sin ajuste necesario — inactivado por desactivación plasmática, independiente del riñón.'),
+          hepaticAdjust:     t(lang, 'Sem ajuste necessário.', 'Sin ajuste necesario.'),
+          interactions: [
+            t(lang,
+              'CLOPIDOGREL / PRASUGREL — Dar a pílula APENAS APÓS fechar a infusão de cangrelor (nunca durante). O cangrelor ocupa o receptor P2Y12 e impede a ativação do comprimido oral se dado simultaneamente.',
+              'CLOPIDOGREL / PRASUGREL — Dar la pastilla SOLO DESPUÉS de apagar la infusión. El cangrelor ocupa el P2Y12 e impide la activación del comprimido si se da simultáneamente.'
+            ),
+            t(lang,
+              'TICAGRELOR — Pode ser dado a qualquer momento (antes, durante ou após cangrelor) pois liga-se a um sítio alostérico diferente do P2Y12.',
+              'TICAGRELOR — Puede darse en cualquier momento pues se une a un sitio alostérico diferente del P2Y12.'
+            ),
+            t(lang,
+              'ANTICOAGULANTES (Heparina/DOAC) — Terapia combinada aumenta risco hemorrágico; restrita a indicação de cateterismo com protocolo definido.',
+              'ANTICOAGULANTES (Heparina/DOAC) — Terapia combinada aumenta riesgo hemorrágico; restringida a cateterismo con protocolo definido.'
+            )
+          ],
+          clinicalPearl: t(lang,
+            'A PONTE PARA O COMPRIMIDO: O Cangrelor dura pouco. Assim que fechar a bomba ao final da angioplastia, o médico DEVE dar o antiagregante oral imediatamente para o paciente não entupir o stent. Se for dar Clopidogrel ou Prasugrel, a pílula DEVE ser dada SOMENTE APÓS fechar o Cangrelor — nunca durante — senão o cangrelor bloqueia o receptor e o comprimido não consegue agir.',
+            'EL PUENTE HACIA EL COMPRIMIDO: El Cangrelor dura poco. Al apagar la bomba, el médico DEBE dar el antiagregante oral. Si va a dar Clopidogrel, la pastilla DEBE darse SOLO DESPUÉS de apagar el Cangrelor — nunca durante — si no, el cangrelor bloquea el sitio e impide que la pastilla actúe.'
+          ),
+          evidence: t(lang,
+            'CHAMPION PHOENIX Trial (NEJM 2013) — Superior a clopidogrel em ICP de emergência (redução de 22% em morte + IAM + revascularização urgente); CHAMPION PLATFORM; FDA Prescribing Information Kengreal.',
+            'CHAMPION PHOENIX Trial (NEJM 2013) — Superior al clopidogrel en ICP de emergencia; CHAMPION PLATFORM; FDA Prescribing Info Kengreal.'
+          )
+        };
+      }
+    }
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 22-B (Antiagregante P2Y12 IV: Cangrelor) — BUILD 428 */
+
+  /* ══════════════════════════════════════════════════════════════════════════════
      GRUPO 23 — ANTIAGREGANTE VASODILATADOR + NITRATO IV
      dipiridamol · nitroglicerinaIV
      Injetado v2.6.6 — campos estáticos com {pt,es}; t(lang,...) somente em calculate()
@@ -43040,43 +43146,47 @@
       }
     },
 
-    /* ── DROXIDOPA ──────────────────────────────────────────────────────── */
+    /* ── DROXIDOPA — BUILD 428 (objeto enriquecido) ─────────────────────── */
     "droxidopa": {
       name: { pt: 'Droxidopa', es: 'Droxidopa' },
       category: 'cardio',
-      class: { pt: 'Vasopressor (Precursor Sintético da Noradrenalina)', es: 'Vasopresor (Precursor Sintético de la Noradrenalina)' },
+      class: { pt: 'Precursor Sintético de Aminoácido / Vasopressor Oral (Pró-fármaco da Noradrenalina)', es: 'Precursor Sintético de Aminoácido / Vasopresor Oral (Profármaco de la Noradrenalina)' },
       indications: {
-        pt: ['Tratamento da hipotensão ortostática neurogênica sintomática associada a falência autonômica primária.'],
-        es: ['Tratamiento de la hipotensión ortostática neurogénica sintomática asociada a falla autonómica primaria.']
+        pt: ['Hipotensão Ortostática Neurogênica Sintomática associada a falência autonômica primária (Doença de Parkinson, Atrofia Múltipla dos Sistemas, Neuropatia Autonômica Diabética)'],
+        es: ['Hipotensión Ortostática Neurogénica Sintomática asociada a falla autonómica primaria (Enfermedad de Parkinson, Atrofia Multisistémica, Neuropatía Autonómica Diabética)']
       },
-      commercialNames: { br: ['Northera'], ar: ['Northera'] },
-      presentation: { pt: ['Cápsulas 100 mg', '200 mg', '300 mg'], es: ['Cápsulas 100 mg', '200 mg', '300 mg'] },
+      commercialNames: { br: ['Northera (importação especializada)'], ar: ['Northera'] },
+      presentation: { pt: ['Cápsulas 100 mg, 200 mg e 300 mg'], es: ['Cápsulas 100 mg, 200 mg y 300 mg'] },
       mechanism: {
-        pt: 'Aminoácido sintético que atua como pró-fármaco. É clivado diretamente pela enzima dopa-descarboxilase (tanto central quanto perifericamente) sendo convertido em NORADRENALINA. Eleva os estoques sinápticos de noradrenalina, promovendo vasoconstrição periférica e aumento do tônus vascular.',
-        es: 'Aminoácido sintético que actúa como profármaco. Es escindido directamente por la enzima dopa-descarboxilasa (tanto central como periféricamente) siendo convertido en NORADRENALINA. Eleva los depósitos sinápticos de noradrenalina, promoviendo vasoconstricción periférica y aumento del tono vascular.'
+        pt: 'A "Noradrenalina em Pílula". Pacientes com Parkinson avançado ou destruição nervosa autonômica perdem os neurônios que fabricam noradrenalina nas artérias. Ao levantar, a pressão cai para 60×30 e eles desmaiam. A Droxidopa é um aminoácido sintético que é convertido DIRETAMENTE em Noradrenalina pela enzima DOPA-descarboxilase nos tecidos. Ela aperta as artérias via receptor alfa-1, subindo a pressão por via oral — único fármaco oral capaz de fazer isso com esta especificidade.',
+        es: 'La "Noradrenalina en Píldora". Pacientes con Parkinson avanzado pierden las neuronas que fabrican noradrenalina en las arterias. Al levantarse, la presión cae. La Droxidopa es un aminoácido sintético que se convierte DIRECTAMENTE en Noradrenalina por la enzima DOPA descarboxilasa en los tejidos. Aumenta el tono vascular vía receptor alfa-1, único fármaco oral con esta especificidad.'
       },
       dose: {
         adult: {
           standard: {
-            pt: 'Inicial: 100 mg VO 3x/dia (manhã, meio-dia e tarde). Titular a cada 24-48h em incrementos de 100 mg 3x/dia até dose máxima de 600 mg VO 3x/dia. Última dose obrigatoriamente antes das 18h.',
-            es: 'Inicial: 100 mg VO 3 veces/día (mañana, mediodía y tarde). Titular cada 24-48h en incrementos de 100 mg 3 veces/día hasta dosis máxima de 600 mg VO 3 veces/día. Última dosis obligatoriamente antes de las 18h.'
+            pt: 'Início: 100 mg VO 3x/dia (ao acordar, ao meio-dia e no final da tarde). Titular a cada 24–48h em incrementos de 100 mg 3x/dia até no máximo 600 mg 3x/dia (Total máx: 1.800 mg/dia). ÚLTIMA DOSE DO DIA: no mínimo 3 horas antes de deitar.',
+            es: 'Inicio: 100 mg VO 3 veces/día (al despertar, al mediodía y al final de la tarde). Titular cada 24–48h en incrementos de 100 mg 3 veces/día hasta máximo 600 mg 3 veces/día (Total máx: 1.800 mg/día). ÚLTIMA DOSIS: mínimo 3 horas antes de acostarse.'
           }
         },
         pediatric: null
       },
-      administration: { pt: ['Tomar acordado, espaçando ao longo do dia.', 'Manter última dose pelo menos 4h antes de deitar para evitar picos hipertensivos supinos.'], es: ['Tomar despierto, espaciando a lo largo del día.', 'Mantener la última dosis al menos 4h antes de acostarse para evitar picos hipertensivos supinos.'] },
-      renalAdjustment: { required: false, message: { pt: 'Não estudado em ClCr < 30 mL/min. Usar com extrema cautela na DRC avançada.', es: 'No estudiado en ClCr < 30 mL/min. Usar con extrema precaución en ERC avanzada.' } },
+      administration: {
+        pt: ['A ÚLTIMA DOSE DO DIA DEVE SER TOMADA NO MÍNIMO 3 HORAS ANTES DE DEITAR. Nunca tomar imediatamente antes de dormir (risco de pico hipertensivo supino). Paciente deve dormir com cabeceira elevada (≥ 30°).'],
+        es: ['LA ÚLTIMA DOSIS DEBE TOMARSE MÍNIMO 3 HORAS ANTES DE ACOSTARSE. Nunca tomar antes de dormir por riesgo de hipertensión supina. El paciente debe dormir con la cabecera elevada (≥ 30°).']
+      },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em insuficiência renal leve/moderada. Não estudado em DRC grave (ClCr < 30 mL/min) — usar com extrema cautela.', es: 'Sin necesidad de ajuste en insuficiencia renal leve/moderada. No estudiado en ERC grave (ClCr < 30 mL/min) — usar con extrema cautela.' } },
       hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste específico formulado.', es: 'Sin necesidad de ajuste específico formulado.' } },
-      commonAdverseEffects: { pt: ['Cefaleia', 'Tontura', 'Náuseas', 'Hipertensão'], es: ['Cefalea', 'Mareos', 'Náuseas', 'Hipertensión'] },
-      dangerousAdverseEffects: { pt: ['Hipertensão supina grave', 'Isquemia coronariana ou cerebral reflexa', 'Exacerbação de arritmias cardíacas'], es: ['Hipertensión supina grave', 'Isquemia coronaria o cerebral refleja', 'Exacerbación de arritmias cardíacas'] },
+      commonAdverseEffects: { pt: ['Cefaleia de tração vascular', 'Náusea e tontura', 'Hipertensão Supina (pressão dispara quando o paciente deita)'], es: ['Cefalea de tracción vascular', 'Náusea y mareo', 'Hipertensión Supina (la presión se dispara al acostarse)'] },
+      dangerousAdverseEffects: { pt: ['AVC por Hipertensão Supina Extrema (> 180/110 mmHg) — FDA Black Box Warning', 'Isquemia coronariana ou cerebral reflexa', 'Exacerbação de arritmias ventriculares'], es: ['ACV por Hipertensión Supina Extrema (> 180/110 mmHg) — FDA Black Box Warning', 'Isquemia coronaria o cerebral refleja', 'Exacerbación de arritmias ventriculares'] },
       contraindications: {
-        absolute: { pt: ['Hipersensibilidade grave à droxidopa'], es: ['Hipersensibilidad grave a la droxidopa'] },
-        relative: { pt: ['Doença isquêmica cardíaca', 'Histórico de arritmias ventriculares'], es: ['Enfermedad isquémica cardíaca', 'Historial de arritmias ventriculares'] }
+        absolute: { pt: ['Hipersensibilidade conhecida à droxidopa', 'Hipertensão grave não-controlada em repouso supino'], es: ['Hipersensibilidad conocida a la droxidopa', 'Hipertensión grave no controlada en reposo supino'] },
+        relative: { pt: ['Doença arterial coronariana severa', 'Arritmias ventriculares não controladas', 'Uso concomitante de IMAOs (washout 14 dias obrigatório)'], es: ['Enfermedad arterial coronaria severa', 'Arritmias ventriculares no controladas', 'Uso concomitante de IMAOs (washout 14 días obligatorio)'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'Boxed Warning: Risco crítico de Hipertensão Supina severa. Elevar a cabeceira da cama à noite. Avaliar PA supina antes e durante a titulação.', es: 'Boxed Warning: Riesgo crítico de Hipertensión Supina severa. Elevar la cabecera de la cama por la noche. Evaluar PA supina antes y durante la titulación.' }
-      }
+        warning: { pt: 'A CAIXA PRETA DO INFARTO DEITADO (HIPERTENSÃO SUPINA): A Droxidopa carrega um Black Box Warning do FDA. O remédio sobe a pressão para o paciente andar. Se ele tomar a pílula e for tirar um cochilo deitado reto na cama, a pressão pode bater 200×120 deitado, causando AVC hemorrágico. O paciente SÓ pode dormir com a cabeceira da cama elevada ≥ 30 graus. Meça a PA supina antes e durante a titulação.', es: 'CAJA NEGRA DE LA HIPERTENSIÓN SUPINA: Si el paciente toma la pastilla y se acuesta recto, la presión puede llegar a 200×120, causando un ACV hemorrágico. El paciente SOLO puede dormir con la cabecera elevada ≥ 30 grados. Medir PA supina antes y durante la titulación.' }
+      },
+      references: { pt: 'FDA Black Box Warning Northera · Estudo Clínico 306B (Neurogenic Orthostatic Hypotension) · Diretrizes Movement Disorder Society.', es: 'FDA Black Box Warning Northera · Estudio Clínico 306B · Directrices Movement Disorder Society.' }
     }
 
   }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 74 (Falência Autonômica: midodrina · fludrocortisona · droxidopa) */

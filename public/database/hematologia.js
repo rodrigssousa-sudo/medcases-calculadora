@@ -216,4 +216,138 @@
 
   }); /* fim Object.assign HEMATOLOGIA_DRUGS_DB — BUILD 350 Lote 1 (HNF + Enoxaparina + Varfarina + Rivaroxabana + AcidoTranexamico) */
 
+  /* ══════════════════════════════════════════════════════════════════════════
+     BUILD 428 — LOTE 2: DOACs Orais Avançados
+     Apixabana · Dabigatrana · Edoxabana
+     Lacunas identificadas na auditoria BUILD 407-D: constavam em INTERACOES_DB
+     e em DRUG_CLASSES mas não tinham objeto clínico próprio em nenhum DB.
+     Schema: Object.assign quoted-key (padrão HEMATOLOGIA_DRUGS_DB)
+  ══════════════════════════════════════════════════════════════════════════ */
+  Object.assign(window.HEMATOLOGIA_DRUGS_DB, {
+
+/* ── APIXABANA ────────────────────────────────────────────────────────── */
+    "apixabana": {
+      name: { pt: 'Apixabana', es: 'Apixabán' },
+      category: 'hematologia',
+      class: { pt: 'Anticoagulante Oral Direto / Inibidor Seletivo do Fator Xa (DOAC)', es: 'Anticoagulante Oral Directo / Inhibidor Selectivo del Factor Xa (DOAC)' },
+      indications: {
+        pt: ['Prevenção de AVC e embolia sistêmica em pacientes com Fibrilação Atrial Não-Valvar', 'Tratamento e prevenção de Trombose Venosa Profunda (TVP) e Embolia Pulmonar (TEP)', 'Profilaxia de TVP em pós-operatório de artroplastia de quadril ou joelho'],
+        es: ['Prevención de ACV en Fibrilación Auricular No Valvular', 'Tratamiento y prevención de Trombosis Venosa Profunda (TVP) y Embolismo Pulmonar (TEP)', 'Profilaxis de TVP en postoperatorio de artroplastia de cadera o rodilla']
+      },
+      commercialNames: { br: ['Eliquis'], ar: ['Eliquis'] },
+      presentation: { pt: ['Comprimidos revestidos 2,5 mg e 5 mg'], es: ['Comprimidos recubiertos 2,5 mg y 5 mg'] },
+      mechanism: {
+        pt: 'O Bloqueador do Ponto de Ignição. A Apixabana liga-se diretamente e de forma altamente seletiva ao sítio ativo do Fator Xa (tanto livre quanto ligado ao coágulo) na cascata de coagulação. Ao neutralizar o Fator Xa, ela impede mecanicamente a conversão da protrombina em trombina. Sem trombina, a malha de fibrina não se fecha e o coágulo não consegue se formar.',
+        es: 'Inhibidor selectivo y reversible del sitio activo del Factor Xa. Al unirse al Factor Xa, bloquea la conversión de protrombina en trombina. Sin trombina, se interrumpe la cascada y se frena la formación del coágulo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Fibrilação Atrial: 5 mg VO 2x/dia. Reduzir para 2,5 mg 2x/dia se o paciente apresentar pelo menos DOIS dos critérios: Idade ≥ 80 anos, Peso ≤ 60 kg, ou Creatinina sérica ≥ 1,5 mg/dL. TVP/TEP Agudo: 10 mg 2x/dia por 7 dias, depois 5 mg 2x/dia.',
+          es: 'Fibrilación Auricular: 5 mg VO 2x/día. Reducir a 2,5 mg 2x/día si cumple DOS criterios: Edad ≥ 80 años, Peso ≤ 60 kg, o Creatinina ≥ 1,5 mg/dL. TVP/TEP Agudo: 10 mg 2x/día × 7 días, luego 5 mg 2x/día.'
+        },
+        pediatric: {
+          pt: 'Não indicado ou estabelecido na pediatria.',
+          es: 'No indicado en pediatría.'
+        }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos. Se esquecer uma dose, tomá-la imediatamente — nunca dobrar na próxima tomada.'], es: ['Puede tomarse con o sin alimentos. Si se olvida una dosis, tomarla de inmediato sin duplicar en la siguiente toma.'] },
+      renalAdjustment: { required: true, message: { pt: 'Menor dependência renal da classe (~27%). Contraindicado se ClCr < 15 mL/min ou diálise (bula BR).', es: 'Menor dependencia renal de la clase (~27%). Contraindicado si ClCr < 15 mL/min (Prospecto Latam).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em hepatopatias com coagulopatia clinicamente relevante (Child-Pugh C).', es: 'Contraindicado en insuficiencia hepática grave (Child-Pugh C).' } },
+      commonAdverseEffects: { pt: ['Sangramento gengival e epistaxe', 'Hematomas e equimoses espontâneas', 'Náusea leve'], es: ['Sangrado gingival y epistaxis', 'Hematomas y equimosis espontáneas', 'Náusea leve'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia gastrointestinal massiva', 'Hemorragia intracraniana (raro, mas potencialmente fatal)', 'Sangramento retroperitoneal'], es: ['Hemorragia gastrointestinal masiva', 'Hemorragia intracraneal', 'Sangrado retroperitoneal'] },
+      contraindications: {
+        absolute: { pt: ['Sangramento ativo clinicamente significativo', 'Prótese valvar cardíaca mecânica', 'Coagulopatia hepática grave (Child-Pugh C)'], es: ['Sangrado activo clínicamente significativo', 'Prótesis valvular cardíaca mecánica', 'Coagulopatía hepática grave'] },
+        relative: { pt: ['Uso concomitante de AINEs (risco hemorrágico gástrico multiplicativo)'], es: ['Uso concomitante de AINEs'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'A REGRA DOS DOIS CRITÉRIOS: Um erro grave de enfermaria é reduzir a dose do Eliquis para 2,5 mg só porque o paciente é idoso. Se ele tiver 85 anos mas pesar 70 kg e tiver creatinina normal, ele DEVE usar 5 mg. Subdosar por medo expõe o paciente a um AVC Isquêmico devastador.', es: 'LA REGLA DE LOS DOS CRITERIOS: Reducir la dosis a 2,5 mg solo por la edad es un error grave. Si tiene 85 años pero pesa 70 kg y tiene creatinina normal, DEBE usar 5 mg. Subdosificarlo lo expone a un ACV Isquémico.' }
+      },
+      references: { pt: 'ARISTOTLE Trial (NEJM 2011) · AMPLIFY Trial (TVP/TEP) · Diretrizes SBC sobre Anticoagulação.', es: 'ARISTOTLE Trial (NEJM 2011) · AMPLIFY Trial · Directrices SAC.' }
+    },
+
+/* ── DABIGATRANA ──────────────────────────────────────────────────────── */
+    "dabigatrana": {
+      name: { pt: 'Dabigatrana (Etexilato de)', es: 'Dabigatrán (Etexilato de)' },
+      category: 'hematologia',
+      class: { pt: 'Anticoagulante Oral Direto / Inibidor Direto da Trombina (Fator IIa)', es: 'Anticoagulante Oral Directo / Inhibidor Directo de la Trombina (Factor IIa)' },
+      indications: {
+        pt: ['Prevenção de AVC e embolia sistêmica em Fibrilação Atrial Não-Valvar', 'Tratamento e prevenção de recidivas de TVP e Embolia Pulmonar'],
+        es: ['Prevención de ACV en Fibrilación Auricular No Valvular', 'Tratamiento y prevención de TVP y TEP']
+      },
+      commercialNames: { br: ['Pradaxa'], ar: ['Pradaxa'] },
+      presentation: { pt: ['Cápsulas duras 75 mg, 110 mg e 150 mg'], es: ['Cápsulas duras 75 mg, 110 mg y 150 mg'] },
+      mechanism: {
+        pt: 'O Bloqueador do Fim da Linha. Diferente da Apixabana, a Dabigatrana é o único DOAC focado no Fator IIa (Trombina). Liga-se diretamente na Trombina livre e ligada ao coágulo, impedindo que ela clive o fibrinogênio em fibrina. Possui antídoto específico de ação imediata: o Idarucizumabe (Praxbind).',
+        es: 'Inhibidor directo, potente, competitivo y reversible de la trombina (Factor IIa). Bloquea la conversión de fibrinógeno en fibrina en el paso final de la cascada, impidiendo la solidificación del trombo. Antídoto específico: Idarucizumab (Praxbind).'
+      },
+      dose: {
+        adult: {
+          pt: 'Padrão FA: 150 mg VO 2x/dia. Se Idade ≥ 80 anos ou uso concomitante de Verapamil: reduzir para 110 mg 2x/dia.',
+          es: 'Estándar FA: 150 mg VO 2x/día. Si Edad ≥ 80 años o uso de Verapamilo: reducir a 110 mg 2x/día.'
+        },
+        pediatric: {
+          pt: 'Uso restrito sob formulações específicas com dose ajustada por peso para TEPT pediátrico.',
+          es: 'Uso restringido con dosis ajustada por peso en pediatría.'
+        }
+      },
+      administration: { pt: ['A CÁPSULA NUNCA PODE SER ABERTA OU MASTIGADA. Se aberta, a biodisponibilidade dispara ~75%, aumentando o risco de hemorragia fatal. Manter sempre no frasco original (absorve muita umidade).'], es: ['LA CÁPSULA NUNCA DEBE SER ABIERTA O MASTICADA. Si se abre, la biodisponibilidad sube ~75%, elevando el riesgo de hemorragia fatal. Conservar en el frasco original.'] },
+      renalAdjustment: { required: true, message: { pt: 'ALTAMENTE DEPENDENTE DO RIM (~80%). ClCr 30–50 mL/min: usar com cautela (considerar 110 mg 2x/dia se risco hemorrágico elevado). ClCr < 30 mL/min: ABSOLUTAMENTE CONTRAINDICADO.', es: 'ALTAMENTE DEPENDIENTE DEL RIÑÓN (~80%). ClCr 30–50: usar con cautela. ClCr < 30 mL/min: ABSOLUTAMENTE CONTRAINDICADO.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste se testes de função hepática normais.', es: 'Sin necesidad de ajuste si la función es normal.' } },
+      commonAdverseEffects: { pt: ['DISPEPSIA SEVERA e azia — a cápsula contém núcleo de ácido tartárico (~10% dos usuários)', 'Gastrite', 'Equimoses e manchas roxas na pele'], es: ['DISPEPSIA SEVERA y acidez — la cápsula contiene ácido tartárico (~10% de usuarios)', 'Gastritis', 'Equimosis'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia digestiva alta grave', 'Hemorragia alveolar pulmonar (raro)'], es: ['Hemorragia digestiva alta grave', 'Hemorragia alveolar pulmonar (raro)'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência renal grave (ClCr < 30 mL/min)', 'Próteses valvares mecânicas (Estudo RE-ALIGN: causa infarto/trombose de válvula)', 'Sangramento ativo'], es: ['Insuficiencia renal grave (ClCr < 30)', 'Prótesis valvulares mecánicas (Estudio RE-ALIGN)', 'Sangrado activo'] },
+        relative: { pt: ['Histórico de úlcera péptica recorrente ou esofagite erosiva'], es: ['Historial de úlcera péptica o esofagitis'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'A ARMADILHA DO RIM PARADO: Como 80% da Dabigatrana sai pelo rim, se o paciente idoso desidratar ou tiver Insuficiência Renal Aguda, o remédio acumula de forma assustadora. Qualquer corte sangrará por horas. O antídoto de resgate hospitalar é o Praxbind (Idarucizumabe) IV.', es: 'LA TRAMPA DEL RIÑÓN PARADO: Como el 80% se elimina por vía renal, si el paciente se deshidrata o sufre falla renal aguda, el fármaco se acumula masivamente. El antídoto de rescate es Praxbind (Idarucizumab) IV.' }
+      },
+      references: { pt: 'RE-LY Trial (NEJM 2009) · RE-ALIGN Trial (Válvulas mecânicas — NEJM 2013) · FDA Prescribing Information Pradaxa.', es: 'RE-LY Trial (NEJM 2009) · RE-ALIGN Trial (NEJM 2013) · FDA Prescribing Info.' }
+    },
+
+/* ── EDOXABANA ────────────────────────────────────────────────────────── */
+    "edoxabana": {
+      name: { pt: 'Edoxabana (Tosilato de)', es: 'Edoxabán (Tosilato de)' },
+      category: 'hematologia',
+      class: { pt: 'Anticoagulante Oral Direto / Inibidor do Fator Xa (DOAC Monodiário)', es: 'Anticoagulante Oral Directo / Inhibidor del Factor Xa (DOAC Monodiario)' },
+      indications: {
+        pt: ['Prevenção de AVC e embolia sistêmica em Fibrilação Atrial Não-Valvar', 'Tratamento e prevenção de TVP e Embolia Pulmonar após curso inicial de anticoagulante injetável'],
+        es: ['Prevención de ACV en Fibrilación Auricular No Valvular', 'Tratamiento de TVP y TEP tras anticoagulación parenteral inicial']
+      },
+      commercialNames: { br: ['Lixiana'], ar: ['Lixiana'] },
+      presentation: { pt: ['Comprimidos revestidos 15 mg, 30 mg e 60 mg'], es: ['Comprimidos recubiertos 15 mg, 30 mg y 60 mg'] },
+      mechanism: {
+        pt: 'Inibidor altamente seletivo, direto e reversível do Fator Xa. Bloqueia a geração de trombina de forma idêntica à rivaroxabana e apixabana. Vantagem de engenharia farmacêutica: estabilidade molecular que permite dose única diária com baixa flutuação plasmática.',
+        es: 'Inhibidor directo y altamente selectivo del Factor Xa. Su unión frena la cascada de coagulación de manera reversible. Ventaja molecular: permite una única toma diaria con bajas fluctuaciones de nivel sérico.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose Padrão: 60 mg VO 1x/dia. Reduzir para 30 mg 1x/dia se: ClCr 15–50 mL/min, Peso ≤ 60 kg, ou uso de inibidores potentes da P-gp (ciclosporina, eritromicina).',
+          es: 'Dosis Estándar: 60 mg VO 1x/día. Reducir a 30 mg 1x/día si: ClCr 15–50 mL/min, Peso ≤ 60 kg, o uso de inhibidores de P-gp.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos. Ingerir rigorosamente no mesmo horário todos os dias para não falhar a janela de 24h.'], es: ['Puede tomarse con o sin alimentos. Ingerir estrictamente en el mismo horario cada día.'] },
+      renalAdjustment: { required: true, message: { pt: 'O PARADOXO RENAL: ClCr 15–50: reduzir para 30 mg. ClCr > 95 mL/min: CONTRAINDICADO em FA (rim elimina tão rápido que o nível cai abaixo da janela terapêutica e o paciente fica desprotegido — FDA Black Box).', es: 'EL PARADOJO RENAL: ClCr 15–50: reducir a 30 mg. ClCr > 95 mL/min: CONTRAINDICADO en FA (el riñón lo elimina tan rápido que el nivel cae y el paciente queda desprotegido — FDA Black Box).' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado na insuficiência hepática grave (Child-Pugh C).', es: 'Contraindicado en insuficiencia hepática grave (Child-Pugh C).' } },
+      commonAdverseEffects: { pt: ['Sangramento cutâneo e mucoso', 'Aumento transitório de enzimas hepáticas (TGO/TGP)', 'Anemia por perdas crônicas'], es: ['Sangrado cutáneo y mucoso', 'Aumento transitorio de transaminasas', 'Anemia'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia intracraniana', 'Sangramento retroperitoneal severo'], es: ['Hemorragia intracraneal', 'Sangrado retroperitoneal severo'] },
+      contraindications: {
+        absolute: { pt: ['ClCr > 95 mL/min em pacientes com Fibrilação Atrial (Alerta de Bula FDA)', 'Sangramento ativo', 'Prótese valvar mecânica'], es: ['ClCr > 95 mL/min en pacientes con FA (Alerta de Prospecto FDA)', 'Sangrado activo', 'Prótesis valvular mecánica'] },
+        relative: { pt: ['Uso associado crônico de AAS ou clopidogrel (tripla terapia — restrito a indicações específicas)'], es: ['Uso asociado crónico de AAS o clopidogrel'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O PERIGO DO RIM SUPER-SAUDÁVEL: O Edoxabana tem um dos avisos mais contraintuitivos da medicina. Se o rim do paciente for "bom demais" (ClCr > 95 mL/min, comum em idosos ativos), o rim limpa o remédio tão rápido que o paciente fica desprotegido. O estudo ENGAGE mostrou que esses pacientes sofriam mais AVC com Edoxabana do que com Varfarina. Use outro DOAC nesse caso.', es: 'EL PELIGRO DEL RIÑÓN SUPER SANO: Si el ClCr > 95 mL/min, el riñón elimina el Edoxabán tan rápido que el nivel cae y el paciente queda desprotegido. El estudio ENGAGE demostró que estos pacientes sufrían más ACV con Edoxabán que con Warfarina. Use otro DOAC.' }
+      },
+      references: { pt: 'ENGAGE AF-TIMI 48 Trial (NEJM 2013) · Hokusai-VTE Trial · FDA Black Box Warning Lixiana.', es: 'ENGAGE AF-TIMI 48 Trial (NEJM 2013) · Hokusai-VTE Trial · FDA Black Box Warning.' }
+    }
+
+  }); /* fim Object.assign HEMATOLOGIA_DRUGS_DB — BUILD 428 Lote 2 (apixabana + dabigatrana + edoxabana) */
+
 })();
