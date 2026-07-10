@@ -433,4 +433,53 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
 
 }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 432 (ustekinumabe — Anti-IL-12/IL-23 UNITI/UNIFI) */
 
+  /* ── BUILD 434 — Procinético Seguro no Parkinson ── */
+  Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
+
+/* ── DOMPERIDONA ────────────────────────────────────────────────────── */
+    "domperidona": {
+      name: { pt: 'Domperidona', es: 'Domperidona' },
+      category: 'gastroenterologia',
+      class: { pt: 'Antagonista Dopaminérgico D2 Periférico / Procinético e Antiemético', es: 'Antagonista Dopaminérgico D2 Periférico / Proquinético y Antiemético' },
+      indications: {
+        pt: ['Gastroparesia diabética ou idiopática (retardo do esvaziamento gástrico)', 'Manejo de náuseas e vômitos induzidos por agonistas dopaminérgicos na Doença de Parkinson (Droga de escolha absoluta — não causa sintomas extrapiramidais)', 'Síndromes dispépticas com saciedade precoce e empachamento pós-prandial'],
+        es: ['Gastroparesia diabética o idiopática (retraso del vaciamiento gástrico)', 'Náuseas y vómitos inducidos por agonistas dopaminérgicos en la Enfermedad de Parkinson (Elección absoluta — no causa síntomas extrapiramidales)', 'Dispepsia con saciedad precoz y plenitud posprandial']
+      },
+      commercialNames: { br: ['Motilium', 'Peridal', 'Domperix'], ar: ['Motilium', 'Gastrozole', 'Euciton'] },
+      presentation: { pt: ['Comprimidos de 10 mg', 'Suspensão oral 1 mg/mL'], es: ['Comprimidos de 10 mg', 'Suspensión oral 1 mg/mL'] },
+      mechanism: {
+        pt: 'O Procinético sem Bloqueio Cerebral. Bloqueia os receptores de dopamina D2 na periferia do trato gastrointestinal e na Zona Gatilho Quimioreceptora (área postrema do cérebro — fora da barreira hematoencefálica). Ao travar a dopamina (que relaxa o estômago), aumenta a pressão do esfíncter esofágico inferior e dispara contrações coordenadas do antro e duodeno acelerando o esvaziamento gástrico. GRANDE VANTAGEM sobre Metoclopramida e Bromoprida: NÃO atravessa a Barreira Hematoencefálica, sendo incapaz de causar tremores, rigidez ou crises extrapiramidais — tornando-a a única opção segura em pacientes com Doença de Parkinson.',
+        es: 'Antagonista selectivo de los receptores dopaminérgicos D2 periféricos. Actúa sobre el tracto GI y la zona gatillo quimiorreceptora (área postrema — exterior a la barrera hematoencefálica). Aumenta el peristaltismo gástrico acelerando el vaciamiento y eleva el tono del esfínter esofágico inferior. Al no cruzar la barrera hematoencefálica, carece completamente de los efectos extrapiramidales (temblores, discinesia) de la metoclopramida.'
+      },
+      dose: {
+        adult: {
+          pt: '10 mg via oral, até TRÊS vezes ao dia (teto estrito máximo de 30 mg/dia conforme diretrizes EMA/PRAC 2025 para proteção cardíaca). Administrar pelo menor tempo necessário.',
+          es: '10 mg vía oral, hasta TRES veces al día (techo máximo estricto de 30 mg al día por seguridad cardiovascular — EMA/PRAC 2025). Usar el menor tiempo posible.'
+        },
+        pediatric: {
+          pt: '0,25 mg/kg por dose, via oral, até 3 vezes ao dia (máximo 0,75 mg/kg/dia). Usar preferencialmente suspensão oral. Contraindicado em menores de 35 kg na formulação comprimido.',
+          es: '0,25 mg/kg por toma, vía oral, hasta 3 veces al día (máximo 0,75 mg/kg/día). Preferir suspensión oral.'
+        }
+      },
+      administration: { pt: ['ADMINISTRAR 15 A 30 MINUTOS ANTES DAS REFEIÇÕES. Se tomado após a comida, a absorção diminui em até 40% e o efeito procinético falha clinicamente.'], es: ['ADMINISTRAR 15 A 30 MINUTOS ANTES DE LAS COMIDAS. Si se toma con alimentos, la absorción se reduce hasta un 40% y el efecto procinético falla.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min: reduzir a frequência para 1 a 2 vezes ao dia conforme tolerabilidade e monitorar ECG basal.', es: 'En ClCr < 30 mL/min: reducir la frecuencia a 1 o 2 veces al día y monitorizar ECG basal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'ABSOLUTAMENTE CONTRAINDICADA em insuficiência hepática moderada a grave (Child-Pugh B e C) devido ao risco de acúmulo sistêmico e toxicidade cardíaca fatal.', es: 'ABSOLUTAMENTE CONTRAINDICADA en insuficiencia hepática moderada a grave (Child-Pugh B y C).' } },
+      commonAdverseEffects: { pt: ['Boca seca (Xerostomia)', 'Hiperprolactinemia (ginecomastia em homens, galactorreia e amenorreia em mulheres — dose-dependente)'], es: ['Boca seca (Xerostomía)', 'Hiperprolactinemia (ginecomastia en hombres, galactorrea y amenorrea en mujeres — dosis-dependiente)'] },
+      dangerousAdverseEffects: { pt: ['PROLONGAMENTO DO INTERVALO QT NO ECG — risco de Torsades de Pointes letal', 'Morte súbita cardíaca por arritmia ventricular (risco aumentado em idosos > 60 anos e doses > 30 mg/dia)'], es: ['PROLONGACIÓN DEL INTERVALO QT — riesgo de Torsades de Pointes', 'Muerte súbita cardíaca por arritmia ventricular (riesgo aumentado en > 60 años y dosis > 30 mg/día)'] },
+      contraindications: {
+        absolute: { pt: ['Uso concomitante com inibidores potentes do CYP3A4 (cetoconazol, itraconazol, claritromicina, eritromicina)', 'Uso concomitante com outros prolongadores do QT (amiodarona, quinidina, haloperidol, metadona)', 'Prolactinoma (tumor hipofisário prolactina-secretor)', 'Sangramento gastrointestinal ativo, obstrução mecânica ou perfuração', 'Insuficiência hepática moderada a grave (Child-Pugh B/C)'], es: ['Uso concomitante con inhibidores potentes de CYP3A4 (ketoconazol, claritromicina)', 'Uso concomitante con prolongadores de QT (amiodarona, quinidina, haloperidol)', 'Prolactinoma', 'Hemorragia digestiva activa, obstrucción mecánica o perforación', 'Insuficiencia hepática moderada a grave'] },
+        relative: { pt: ['Idosos > 60 anos frágeis (exige ECG basal e monitoramento periódico)', 'Cardiopatia estrutural pré-existente com QTc prolongado'], es: ['Ancianos > 60 años frágiles (exige ECG basal)', 'Cardiopatía estructural preexistente con QTc prolongado'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O RISCO CARDÍACO OCULTO DO PROCINÉTICO SEGURO: O FDA proibiu a venda de Domperidona nos EUA. O PRAC Europeu limitou para 30 mg/dia (2025). O motivo: bloqueia os canais de potássio hERG do coração em idosos, esticando o intervalo QT e causando morte súbita por Torsades de Pointes. NUNCA associar com macrólideos, azólicos ou amiodarona. NUNCA exceder 3 comprimidos por dia.', es: 'EL RIESGO CARDÍACO OCULTO DEL PROCINÉTICO SEGURO: El FDA prohibió la Domperidona en EE.UU. El PRAC europeo la limitó a 30 mg/día (2025) por bloqueo de canales hERG cardíacos con prolongación del QT y muerte súbita por Torsades de Pointes. NUNCA asociar con macrólidos, azólicos o amiodarona. NUNCA superar 3 comprimidos al día.' }
+      },
+      references: {
+        pt: 'EMA PRAC Safety Review Domperidona 2025; Bula Motilium Cellera/Anvisa 2024; Camilleri M et al., Gastroenterology 2013 (Gastroparesia Management); UpToDate Prokinetics in Parkinson Disease.',
+        es: 'EMA PRAC Safety Review 2025; Guías de Gastroparesia WGO; Camilleri M et al., Gastroenterology 2013; Ficha Técnica CIMA Domperidona; UpToDate Procinéticos en Parkinson.'
+      }
+    }
+
+  }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 434 (domperidona — Procinético Seguro no Parkinson / Gastroparesia) */
+
 })();

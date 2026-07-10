@@ -50,7 +50,11 @@
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'ATENÇÃO AO PREÇO E DOSE: O custo da Lipossomal é estratosférico (milhares de dólares por dia). Logo, ela só é liberada se o paciente possuir fator de risco ou lesão renal aguda comprovada impedindo o uso da barata Anfotericina Desoxicolato.', es: 'ATENCIÓN AL PRECIO Y DOSIS: El costo de la Liposomal es estratosférico (miles de dólares por día). Por tanto, solo se libera si el paciente posee factor de riesgo o lesión renal aguda comprobada impidiendo el uso de la barata Anfotericina Desoxicolato.' }
+        warning: { pt: 'O ERRO DE TROCA DE FORMULAÇÃO (ALERTA DE BALCÃO FATAL): Trocar Anfotericina Lipossomal (AmBisome) por Anfotericina Desoxicolato clássica na mesma dose de 5 mg/kg MATA o paciente por necrose tubular fulminante e parada cardíaca nas primeiras 24 horas. O desoxicolato tem teto absoluto de 1 mg/kg/dia. Realize tripla checagem do nome da ampola antes de infundir. CUSTO: AmBisome é estratosférico (milhares de reais por dia) — liberada pelo PCDT/Componente Especializado apenas se TFG < 40 ou creatinina em ascensão documentada.', es: 'ERROR DE CAMBIO DE FORMULACIÓN (ALERTA FATAL DE GUARDIA): Confundir Anfotericina Liposomal (AmBisome) con Anfotericina Desoxicolato usando la dosis de 5 mg/kg MATA al paciente por necrosis tubular fulminante. El desoxicolato tiene un techo de 1 mg/kg/día. Realice triple chequeo en el vial. AmBisome solo se aprueba cuando TFG < 40 o creatinina en ascenso.' }
+      },
+      references: {
+        pt: 'AmbiLoad Trial — Walsh TJ et al., N Engl J Med 2004;351:1391-402 (segurança doses altas 10 mg/kg/dia); IDSA Mycosis Guidelines (Pappas PG et al., Clin Infect Dis 2016); Guia de Antimicrobianos Hospitalar InCor/HC-FMUSP; Bula AmBisome Gilead Sciences Brasil 2024.',
+        es: 'AmbiLoad Trial — Walsh TJ et al., N Engl J Med 2004;351:1391-402; Guías SADI de Micosis Invasivas 2023; Guías IDSA Candidiasis/Aspergilosis (Pappas PG et al., 2016); Ficha Técnica AmBisome AEMPS.'
       }
     },
 

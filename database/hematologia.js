@@ -535,4 +535,98 @@
 
   }); /* fim Object.assign HEMATOLOGIA_DRUGS_DB — BUILD 432 (fondaparinux + dalteparina + vitamina_k / Fitomenadiona) */
 
+  /* ── BUILD 434 — Pilares da Síntese de Hemácias: Ácido Fólico + Vitamina B12 ── */
+  if (typeof window.HEMATOLOGIA_DRUGS_DB !== 'object' || window.HEMATOLOGIA_DRUGS_DB === null) return;
+  Object.assign(window.HEMATOLOGIA_DRUGS_DB, {
+
+/* ── ÁCIDO FÓLICO ────────────────────────────────────────────────────── */
+    "acido_folico": {
+      name: { pt: 'Ácido Fólico (Vitamina B9)', es: 'Ácido Fólico (Vitamina B9)' },
+      category: 'hematologia',
+      class: { pt: 'Fator Vitamínico Hidrossolúvel / Essencial para Síntese de DNA e Divisão Celular', es: 'Factor Vitamínico Hidrosoluble / Esencial para la Síntesis de ADN y División Celular' },
+      indications: {
+        pt: ['Prevenção de Defeitos do Tubo Neural (anencefalia, espinha bífida) durante o planejamento gestacional e primeiro trimestre', 'Tratamento de Anemia Megaloblástica por deficiência de folato', 'Profilaxia de toxicidade celular hematológica em pacientes em uso crônico de Metotrexato'],
+        es: ['Prevención de Defectos del Tubo Neural (anencefalia, espina bífida) durante la planificación gestacional y primer trimestre', 'Tratamiento de Anemia Megaloblástica por deficiencia de folato', 'Profilaxis de toxicidad hematológica por Metotrexato crónico']
+      },
+      commercialNames: { br: ['Endofolin', 'Afolic', 'Materfol', 'Ácido Fólico Comprimido EMS'], ar: ['Acifol', 'Anemidox (Assoc)', 'Folamin'] },
+      presentation: { pt: ['Comprimidos 0,4 mg (400 mcg), 1 mg, 2 mg e 5 mg', 'Gotas orais 0,2 mg/mL'], es: ['Comprimidos 0,4 mg, 1 mg y 5 mg', 'Gotas orales 0,2 mg/mL'] },
+      mechanism: {
+        pt: 'O Tecelão do DNA. É convertido no corpo em tetrahidrofolato (THF), cofator essencial que doa grupos metila para fabricar purinas e timidilato — os blocos que constroem as bases do DNA. Sem folato, a medula óssea não consegue duplicar o DNA para se dividir. O glóbulo vermelho cresce desordenadamente tentando se dividir, mas nasce gigante, frágil e disfuncional (Anemia Megaloblástica com VCM > 100 fL). O embrião, privado de folato nas primeiras semanas, não fecha o tubo neural adequadamente.',
+        es: 'Precursor del ácido tetrahidrofólico (THF), cofactor indispensable para la síntesis de purinas y timidilato en la replicación del ADN. Su carencia detiene la división celular en la médula ósea, produciendo maduración citoplasmática asíncrona que resulta en macrocitosis y anemia megaloblástica (VCM > 100 fL). En el embrión, el déficit impide el cierre del tubo neural en las primeras semanas de gestación.'
+      },
+      dose: {
+        adult: {
+          pt: 'Prevenção do Tubo Neural (gestantes/planejamento): 0,4 mg (400 mcg) ao dia, iniciando no mínimo 30 dias ANTES de engravidar e mantendo até o final do 1º trimestre. Se histórico de filho anterior com malformação do tubo neural: subir para 4 mg a 5 mg ao dia. Anemia Megaloblástica: 1 mg a 5 mg via oral ao dia.',
+          es: 'Prevención Tubo Neural: 0,4 mg al día, iniciando 30 días ANTES de la gestación hasta el fin del 1º trimestre. Con antecedente previo de malformación del tubo neural: 5 mg al día. Anemia Megaloblástica: 1 a 5 mg al día.'
+        },
+        pediatric: {
+          pt: 'Deficiência documentada: 0,5 mg a 1 mg via oral uma vez ao dia.',
+          es: 'Deficiencia pediátrica: 0,5 a 1 mg vía oral una vez al día.'
+        }
+      },
+      administration: { pt: ['Uso oral diário. Pode ser tomado com ou sem alimentos (molécula estável).'], es: ['Uso oral diario. Puede tomarse con o sin alimentos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de alteração de dose. Excesso eliminado via urina.', es: 'Sin necesidad de ajuste. El exceso se elimina por vía urinaria.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Praticamente isento de efeitos colaterais nas doses habituais', 'Sabor ligeiramente amargo na boca em doses muito altas (≥ 5 mg/dia)'], es: ['Prácticamente exento de efectos secundarios en dosis habituales', 'Sabor ligeramente amargo en boca en dosis muy altas (≥ 5 mg/día)'] },
+      dangerousAdverseEffects: { pt: ['OCULTAMENTO DE NEUROPATIA POR DÉFICIT DE VITAMINA B12: o folato normaliza o hemograma enquanto a desmielinização medular avança silenciosamente (Degeneração Combinada Subaguda)'], es: ['OCULTAMIENTO DE NEUROPATÍA POR DÉFICIT DE B12: el folato normaliza el hemograma mientras la desmielinización avanza silenciosamente (Degeneración Combinada Subaguda)'] },
+      contraindications: {
+        absolute: { pt: ['Anemia megaloblástica por deficiência de Vitamina B12 SEM reposição concomitante de B12 (o folato trata a anemia mas esconde e agrava a lesão neurológica)'], es: ['Anemia megaloblástica por déficit de Vitamina B12 SIN reposición concomitante de B12'] },
+        relative: { pt: ['Nenhuma específica — molécula hidrossolúvel com ampla margem de segurança e descarte urinário'], es: ['Ninguna específica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A ARMADILHA DA PARALISIA OCULTA (NUNCA PRESCREVA SEM DOSAR A B12): Em qualquer paciente com Anemia Megaloblástica, NUNCA prescrevev Ácido Fólico isolado sem dosar Vitamina B12 sérica. O Ácido Fólico cura a anemia (hemograma fica normal) mas "mascara" o déficit de B12. Sem B12, os nervos da medula espinhal sofrem desmielinização irreversível — o paciente pode perder a marcha e o controle das pernas permanentemente (Degeneração Combinada Subaguda da Medula).', es: 'LA TRAMPA DE LA PARÁLISIS OCULTA: Jamás prescriba Ácido Fólico aislado en anemia megaloblástica sin dosar Vitamina B12. El folato normaliza el hemograma (parece curado) pero enmascara el déficit de B12. Sin B12, los nervios de la médula espinal sufren desmielinización irreversible — el paciente puede perder la marcha definitivamente (Degeneración Combinada Subaguda).' }
+      },
+      references: {
+        pt: 'Diretrizes FEBRASGO de Assistência Pré-Natal 2022; MRC Vitamin Study Research Group, Lancet 1991;338:131-7 (prevenção tubo neural, 5 mg/dia); ASH Guidelines for Megaloblastic Anemia; Protocolo Clínico MS Brasil — Ácido Fólico na gestação.',
+        es: 'Guías de Atención Prenatal FLASOG 2022; MRC Vitamin Study Research Group, Lancet 1991; ASH Guidelines; Ministerio de Salud Argentina — Suplementación con Ácido Fólico; Ficha Técnica CIMA Ácido Fólico.'
+      }
+    },
+
+/* ── VITAMINA B12 / CIANOCOBALAMINA ─────────────────────────────────── */
+    "vitamina_b12": {
+      name: { pt: 'Vitamina B12 (Cianocobalamina / Hidroxocobalamina)', es: 'Vitamina B12 (Cianocobalamina / Hidroxocobalamina)' },
+      category: 'hematologia',
+      class: { pt: 'Fator Vitamínico Essencial / Coenzima de Maturação de Mielina e Hemácias', es: 'Factor Vitamínico Esencial / Coenzima de Maduración de Mielina y Hematíes' },
+      indications: {
+        pt: ['Tratamento e profilaxia da Anemia Megaloblástica e Anemia Perniciosa (deficiência de Fator Intrínseco)', 'Neuropatia periférica e Degeneração Combinada Subaguda da Medula por déficit de cobalamina', 'Prevenção de déficit neurológico em vegetarianos estritos, pacientes pós-bariátrica e usuários crônicos de Metformina e Omeprazol'],
+        es: ['Tratamiento de Anemia Megaloblástica y Anemia Perniciosa (déficit de Factor Intrínseco)', 'Neuropatía periférica y Degeneración Combinada Subaguda de la Médula por déficit de cobalamina', 'Prevención en vegetarianos estrictos, bariátricos y usuarios crónicos de Metformina u Omeprazol']
+      },
+      commercialNames: { br: ['Citoneurin (Assoc B1+B6+B12)', 'Cronobê', 'Rubranova', 'Cobavital'], ar: ['Cobalamina', 'Nervobion', 'B12 Richmond', 'Citovit'] },
+      presentation: { pt: ['Ampolas Intramusculares 1.000 mcg/mL (1 mL) e 5.000 mcg/2 mL', 'Comprimidos orais de alta dose 1.000 mcg e 2.000 mcg', 'Gotas orais 200 mcg/mL'], es: ['Ampollas Intramusculares 1.000 mcg/mL y 5.000 mcg/2 mL', 'Comprimidos orales de alta dosis 1.000 mcg y 2.000 mcg'] },
+      mechanism: {
+        pt: 'O Escudo da Mielina. Atua como coenzima essencial para duas reações vitais: (1) Síntese de metionina — necessária para a replicação do DNA celular e maturação da medula óssea; (2) Conversão de metilmalonil-CoA em succinil-CoA — sem essa reação, o ácido metilmalônico se acumula e destrói quimicamente os ácidos graxos que constroem a bainha de mielina dos nervos, determinando desmielinização irreversível do SNC e SNP.',
+        es: 'Coenzima metabólica indispensable para: (1) Síntesis de metionina — necesaria para replicación del ADN y maduración eritroide en médula ósea; (2) Conversión de metilmalonil-CoA en succinil-CoA — sin esta reacción, el ácido metilmalónico se acumula y destruye los ácidos grasos que constituyen la vaina de mielina nerviosa, causando desmielinización irreversible del SNC y SNP.'
+      },
+      dose: {
+        adult: {
+          pt: 'Deficiência Severa / Sintomas Neurológicos (via IM): 1.000 mcg INTRAMUSCULAR profunda em dias alternados por 1 semana → 1.000 mcg semanal por 1 mês → manutenção 1.000 mcg mensal pelo resto da vida se causa irreversível (anemia perniciosa, pós-gastrectomia). Oral de alta dose (quando causa é dietética/reversível): 1.000 mcg a 2.000 mcg ao dia (absorção por difusão passiva, sem necessidade de fator intrínseco).',
+          es: 'Déficit Severo con Clínica Neurológica (vía IM): 1.000 mcg INTRAMUSCULAR profunda en días alternos 1 semana → semanal 1 mes → mensual de por vida si causa irreversible (perniciosa, postgastrectomía). Oral de alta dosis (causa dietética reversible): 1.000–2.000 mcg/día (absorción por difusión pasiva, sin necesidad de factor intrínseco).'
+        },
+        pediatric: {
+          pt: 'Deficiência documentada: 100 mcg IM por dia durante 10 a 15 dias, seguido de esquema de manutenção conforme etiologia.',
+          es: 'Deficiencia documentada: 100 mcg IM por día durante 10 a 15 días, seguido de mantenimiento según etiología.'
+        }
+      },
+      administration: { pt: ['Ampola IM: aplicar EXCLUSIVAMENTE VIA INTRAMUSCULAR PROFUNDA (músculo glúteo ou vasto lateral). Aplicação dolorosa pela concentração do complexo vitamínico. NÃO administrar por via intravenosa direta (formulação padrão).'], es: ['Ampolla IM: administrar EXCLUSIVAMENTE vía INTRAMUSCULAR PROFUNDA (glúteo o vasto lateral). Inyección dolorosa. NO administrar por vía intravenosa directa (formulación estándar).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de redução de dose. Excesso de cobalamina é eliminado pela urina (urina rosada/avermelhada — inofensiva).', es: 'Sin necesidad de ajuste. El exceso se elimina por la orina (orina rosada — inocua).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'O fígado é o grande reservatório biológico de B12 (estoca para 3 a 5 anos de necessidade). Sem necessidade de ajuste.', es: 'El hígado es el gran reservorio biológico de B12 (reservas para 3 a 5 años). Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Dor, queimação e endurecimento no local da aplicação IM', 'Erupção acneiforme (brotes de espinhas no rosto pós-injeção de megadose)', 'Urina avermelhada/rosada (inofensiva — excreção de excesso)'], es: ['Dolor, ardor e induración local IM', 'Erupción acneiforme (brotes de acné tras megadosis)', 'Orina rosada (inocua — excreción del exceso)'] },
+      dangerousAdverseEffects: { pt: ['HIPOCALEMIA AGUDA GRAVE nas primeiras 48h de tratamento: a medula "acorda" e fabrica milhões de hemácias consumindo o potássio livre do sangue — risco de arritmia cardíaca letal', 'Reação anafilática rara a sais de cobalto (hipersensibilidade)'], es: ['HIPOPOTASEMIA AGUDA GRAVE en las primeras 48h: la médula "despierta" y fabrica millones de glóbulos rojos consumiendo el potasio libre en sangre — riesgo de arritmia cardíaca letal', 'Reacción anafiláctica rara a sales de cobalto'] },
+      contraindications: {
+        absolute: { pt: ['Doença de Leber (Atrofia Óptica Hereditária) — a Cianocobalamina pode precipitar cegueira fulminante do nervo óptico; usar Hidroxocobalamina se necessário'], es: ['Enfermedad de Leber (Atrofia Óptica Hereditaria) — la Cianocobalamina puede precipitar ceguera fulminante; usar Hidroxocobalamina si necesario'] },
+        relative: { pt: ['Hipersensibilidade a sais de cobalto (usar formulação alternativa)'], es: ['Hipersensibilidad a sales de cobalto (cambiar formulación)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O CHOQUE DO POTÁSSIO NAS PRIMEIRAS 48 HORAS: Quando um paciente gravemente depletado de B12 recebe a primeira injeção, a medula óssea "acorda em fúria" fabricando milhões de hemácias por hora. Esse processo consome todo o POTÁSSIO livre do sangue num fenômeno chamado "síndrome de realimentação hematológica". Monitore obrigatoriamente os eletrólitos nas primeiras 48h — se o paciente tiver cardiopatia, a hipocalemia pode ser fatal por arritmia ventricular.', es: 'EL CHOQUE DEL POTASIO EN LAS PRIMERAS 48 HORAS: Cuando un paciente gravemente depletado de B12 recibe la primera inyección, la médula ósea "despierta en furia" fabricando millones de glóbulos rojos por hora. Este proceso consume todo el Potasio libre en sangre (síndrome de realimentación hematológica). Monitoree electrolitos obligatoriamente en las primeras 48h — si el paciente tiene cardiopatía, la hipopotasemia puede ser fatal.' }
+      },
+      references: {
+        pt: 'ASH Guidelines for Megaloblastic Anemia 2023; Stabler SP, N Engl J Med 2013;368:149-60 (Vitamin B12 Deficiency); Andrès E et al., CMAJ 2004;171:251-9 (Oral B12 alta dose); Protocolo Clínico PCDT MS Brasil — Anemia por deficiência de vitamina B12.',
+        es: 'ASH Guidelines for Megaloblastic Anemia 2023; Stabler SP, N Engl J Med 2013;368:149-60; Andrès E et al., CMAJ 2004;171:251-9 (B12 oral alta dosis); Guías SAH (Sociedad Argentina de Hematología); Goodman & Gilman Farmacología.'
+      }
+    }
+
+  }); /* fim Object.assign HEMATOLOGIA_DRUGS_DB — BUILD 434 (acido_folico + vitamina_b12 — Pilares Síntese Hemácias) */
+
 })();
