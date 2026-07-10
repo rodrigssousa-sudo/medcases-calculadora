@@ -113,4 +113,185 @@
     }
 
   }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 403 (Regulação gástrica: trimebutina + simeticona + proclorperazina) */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BUILD 430 — Inibidores da Bomba de Prótons (IBPs) VO
+   omeprazol · pantoprazol · esomeprazol · lansoprazol
+═══════════════════════════════════════════════════════════════════════════ */
+Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
+
+  "omeprazol": {
+    name: { pt: 'Omeprazol (Via Oral)', es: 'Omeprazol (Vía Oral)' },
+    category: 'gastroenterologia',
+    class: { pt: 'Inibidor da Bomba de Prótons (IBP) / Antissecretor Gástrico', es: 'Inhibidor de la Bomba de Protones (IBP) / Antisecretor Gástrico' },
+    indications: {
+      pt: ['Tratamento de Úlcera Gástrica e Duodenal', 'Esofagite de refluxo e Doença do Refluxo Gastroesofágico (DRGE)', 'Erradicação de Helicobacter pylori (em associação com antibióticos)', 'Tratamento da Síndrome de Zollinger-Ellison'],
+      es: ['Tratamiento de Úlcera Gástrica y Duodenal', 'Esofagitis por reflujo y ERGE', 'Erradicación de Helicobacter pylori', 'Síndrome de Zollinger-Ellison']
+    },
+    commercialNames: { br: ['Losec', 'Peprazol', 'Gastrium'], ar: ['Losec', 'Gastrozole', 'Danlox'] },
+    presentation: { pt: ['Cápsulas duras com microgrânulos gastrorresistentes 10 mg, 20 mg e 40 mg'], es: ['Cápsulas con microgránulos gastrorresistentes 10 mg, 20 mg y 40 mg'] },
+    mechanism: {
+      pt: 'O Cadeado do Ácido. O Omeprazol é uma base fraca lipofílica inativa. Ele atravessa o estômago protegido por microgrânulos e é absorvido no intestino. Pelo sangue, ele viaja até as células parietais do estômago e entra nos canalículos ácidos, onde é convertido em sua forma ativa. Lá, liga-se de forma IRREVERSÍVEL (ligação covalente) à enzima H+/K+-ATPase (a bomba de prótons), paralisando a secreção de ácido clorídrico até que novas bombas sejam fabricadas.',
+      es: 'Inhibidor irreversible de la bomba de protones (H+/K+-ATPase). Es un profármaco que requiere activarse en el medio ácido de los canalículos de la célula parietal. Al bloquear la vía final común de secreción de ácido, reduce drásticamente la acidez gástrica.'
+    },
+    dose: {
+      adult: {
+        pt: 'DRGE e Úlceras: 20 mg via oral, UMA VEZ ao dia, pela manhã. Casos graves ou refratários: 40 mg ao dia. Erradicação de H. pylori: 20 mg de 12/12h por 7 a 14 dias (associado ao esquema antibiótico).',
+        es: 'ERGE y Úlceras: 20 mg vía oral, UNA VEZ al día por la mañana. Casos graves: 40 mg al día. Erradicación de H. pylori: 20 mg cada 12h.'
+      },
+      pediatric: {
+        pt: 'Maiores de 1 ano (Refluxo erosivo): 5 a 10 kg: 5 mg/dia; 10 a 20 kg: 10 mg/dia; > 20 kg: 20 mg/dia.',
+        es: 'Niños > 1 año: 0,7 a 1 mg/kg/día base.'
+      }
+    },
+    administration: { pt: ['DEVE SER ADMINISTRADO EM JEJUM, 30 A 60 MINUTOS ANTES DO CAFÉ DA MANHÃ. As cápsulas não devem ser abertas ou mastigadas, pois o ácido do estômago destrói o remédio se os microgrânulos forem rompidos.'], es: ['DEBE SER ADMINISTRADO EN AYUNAS, 30 A 60 MINUTOS ANTES DEL DESAYUNO. No abrir ni masticar las cápsulas.'] },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de alteração de dose na insuficiência renal.', es: 'Sin necesidad de ajuste.' } },
+    hepaticAdjustment: { required: true, message: { pt: 'Metabolizado intensamente pelo fígado. Em cirróticos graves, considerar dose máxima de 20 mg/dia.', es: 'En cirrosis severa, no exceder los 20 mg/día.' } },
+    commonAdverseEffects: { pt: ['Cefaleia leve', 'Diarreia ou constipação transitória', 'Dor abdominal e flatulência'], es: ['Cefalea leve', 'Diarrea o estreñimiento transitorio', 'Dolor abdominal'] },
+    dangerousAdverseEffects: { pt: ['Nefrite Intersticial Aguda (Lesão renal alérgica oculta)', 'Hipomagnesemia severa (Uso crônico por mais de 1 ano)', 'Fraturas ósseas por má absorção de cálcio', 'Diarreia por Clostridioides difficile'], es: ['Nefritis Intersticial Aguda', 'Hipomagnesemia severa (uso crónico)', 'Mayor riesgo de fracturas por malabsorción de calcio', 'Infección por Clostridioides difficile'] },
+    contraindications: {
+      absolute: { pt: ['Hipersensibilidade conhecida ao omeprazol ou a outros benzimidazóis substituídos'], es: ['Hipersensibilidad conocida al fármaco'] },
+      relative: { pt: ['Uso crônico injustificado (Risco de superpopulação bacteriana intestinal)', 'Uso concomitante com Clopidogrel (inibe CYP2C19, risco de trombose de stent)'], es: ['Uso crónico sin indicación real', 'Uso concomitante con Clopidogrel'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+      warning: { pt: 'A ARMADILHA DO USO AD ETERNUM: O uso crônico indiscriminado de Omeprazol por anos desacidifica o estômago permanentemente. Isso bloqueia a absorção de Vitamina B12 e Cálcio, levando a demência reversível, anemia megaloblástica e osteoporose severa com fratura de quadril em idosos. Além disso, abre as portas do intestino para infecções bacterianas graves.', es: 'EL PELIGRO DEL USO PROLONGADO: El uso crónico por años anula el ácido, bloqueando la absorción de Vitamina B12 y Calcio. Provoca anemia megaloblástica, demencia reversible y osteoporosis con alto riesgo de fracturas en ancianos.' }
+    },
+    references: {
+      pt: 'Diretrizes da Federação Brasileira de Gastroenterologia (FBG); FDA Prescribing Information Losec; UpToDate Chronics.',
+      es: 'Directrices de la Organización Mundial de Gastroenterología; FDA Prescribing Information; Manual de Farmacología de Goodman & Gilman.'
+    }
+  },
+
+  "pantoprazol": {
+    name: { pt: 'Pantoprazol (Via Oral)', es: 'Pantoprazol (Vía Oral)' },
+    category: 'gastroenterologia',
+    class: { pt: 'Inibidor da Bomba de Prótons (IBP) / Baixa Interação Hepática', es: 'Inhibidor de la Bomba de Protones (IBP) / Baja Interacción Hepática' },
+    indications: {
+      pt: ['Doença do Refluxo Gastroesofágico', 'Gastrite e Duodenite agudas ou crônicas', 'Profilaxia de úlceras de estresse em pacientes de alto risco', 'Escolha padrão em pacientes polifarmácia que usam Clopidogrel'],
+      es: ['Enfermedad por Reflujo Gastroesofágico', 'Gastritis y Duodenitis', 'Elección estándar en pacientes polifarmacia que toman Clopidogrel']
+    },
+    commercialNames: { br: ['Pantozol', 'Panto', 'Pantocal'], ar: ['Gastromax', 'Pantus', 'Panto-Gas'] },
+    presentation: { pt: ['Comprimidos gastrorresistentes 20 mg e 40 mg'], es: ['Comprimidos gastrorresistentes 20 mg y 40 mg'] },
+    mechanism: {
+      pt: 'Inibe irreversivelmente a bomba H+/K+-ATPase parietal gástrica. O seu GRANDE DIFERENCIAL farmacológico é possuir uma afinidade muito menor pelo citocromo CYP2C19 do fígado em comparação ao Omeprazol. Ele desce de forma limpa pelo fígado sem travar o metabolismo de outras drogas cruciais, sendo o IBP de escolha em pacientes em uso de antiagregantes plaquetários.',
+      es: 'Inhibidor irreversible de la bomba de protones. Su gran ventaja clínica es que posee una afinidad significativamente menor por el citocromo CYP2C19 hepático. No bloquea el metabolismo de otros fármacos críticos, siendo el IBP de elección en pacientes con antiagregantes plaquetarios.'
+    },
+    dose: {
+      adult: {
+        pt: 'DRGE leve: 20 mg via oral ao dia antes do café da manhã. DRGE moderada a grave e Úlceras: 40 mg via oral ao dia.',
+        es: 'ERGE leve: 20 mg vía oral al día antes del desayuno. Casos moderados a severos: 40 mg al día.'
+      },
+      pediatric: {
+        pt: 'Segurança estabelecida a partir de 5 anos de idade para DRGE: 20 mg a 40 mg baseado na faixa de peso (> 40 kg usa 40 mg).',
+        es: 'Aprobado en > 5 años con dosis según peso corporal.'
+      }
+    },
+    administration: { pt: ['Engolir o comprimido inteiro com um copo de água, 1 hora antes do café da manhã. Não pode ser partido, quebrado ou mastigado.'], es: ['Tragar entero con agua, 1 hora antes del desayuno. No partir ni masticar.'] },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose na falência renal.', es: 'Sin necesidad de ajuste.' } },
+    hepaticAdjustment: { required: true, message: { pt: 'Em pacientes com insuficiência hepática grave (Child-Pugh C), a dose máxima deve ser restrita a 20 mg ao dia ou administração em dias alternados.', es: 'En insuficiencia hepática grave, no exceder los 20 mg al día.' } },
+    commonAdverseEffects: { pt: ['Dispepsia leve e náuseas', 'Cefaleia', 'Diarreia episódica'], es: ['Dispepsia leve y náuseas', 'Cefalea', 'Diarrea episódica'] },
+    dangerousAdverseEffects: { pt: ['Nefrite Intersticial Aguda imunomediada', 'Aumento do risco de fraturas por osteopenia crônica', 'Hipomagnesemia sintomática'], es: ['Nefritis Intersticial Aguda', 'Riesgo de osteoporosis a largo plazo', 'Hipomagnesemia'] },
+    contraindications: {
+      absolute: { pt: ['Hipersensibilidade ao pantoprazol'], es: ['Hipersensibilidad al pantoprazol'] },
+      relative: { pt: ['Coadministração com atazanavir (zera o efeito do antiviral)'], es: ['Coadministración con atazanavir'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+      warning: { pt: 'O AMIGO DO INFARTADO: O Pantoprazol é o IBP preferido de escolha unânime por cardiologistas mundiais quando o paciente precisa tomar antiplaquetários como o Clopidogrel. Enquanto o Omeprazol anula o Clopidogrel e causa reinfarto, o Pantoprazol protege o estômago sem tocar na plaqueta do doente.', es: 'EL RELEVO DEL CARDIÓLOGO: El Pantoprazol es el IBP de elección cuando el paciente toma Clopidogrel. Mientras que el Omeprazol inactiva al Clopidogrel provocando trombosis de Stent, el Pantoprazol protege la mucosa sin alterar el efecto antiagregante.' }
+    },
+    references: {
+      pt: 'Consenso de Polifarmácia e Interações da FBG; FDA Prescribing Information Protonix; JCC Guidelines.',
+      es: 'FDA Prescribing Information (Protonix); Guías de Consenso de la Sociedad Española de Patología Digestiva.'
+    }
+  },
+
+  "esomeprazol": {
+    name: { pt: 'Esomeprazol Magnésico', es: 'Esomeprazol Magnésico' },
+    category: 'gastroenterologia',
+    class: { pt: 'Inibidor da Bomba de Prótons / Isômero Ativo Purificado', es: 'Inhibidor de la Bomba de Protones / Isómero Activo Purificado' },
+    indications: {
+      pt: ['Doença do Refluxo Gastroesofágico com esofagite erosiva severa cicatrizante', 'Cura e prevenção de úlceras induzidas por AINEs', 'Hipersecreção patológica crônica'],
+      es: ['ERGE con esofagitis erosiva severa cicatrizante', 'Curación y prevención de úlceras inducidas por AINEs']
+    },
+    commercialNames: { br: ['Nexium', 'Ezobloc', 'Esogastro'], ar: ['Nexium', 'Nexium Argentina', 'Axagon'] },
+    presentation: { pt: ['Comprimidos revestidos gastrorresistentes 20 mg e 40 mg'], es: ['Comprimidos gastrorresistentes 20 mg y 40 mg'] },
+    mechanism: {
+      pt: 'O Isômero Refinado. O Omeprazol comum é uma mistura de duas moléculas espelhadas (isômeros R e S). O Esomeprazol isolou puramente o Isômero S-omeprazol. Esta modificação cirúrgica faz com que ele sofra menos destruição de primeira passagem pelo fígado. Uma quantidade muito maior de remédio atinge as bombas de prótons do estômago, oferecendo um bloqueio ácido mais potente e duradouro nas primeiras 24 horas.',
+      es: 'Es el S-isómero puro del omeprazol. Ofrece una menor tasa de aclaramiento metabólico hepático de primera pasada. Logra concentraciones plasmáticas más elevadas y sostenidas, logrando un control del pH gástrico superior y más rápido.'
+    },
+    dose: {
+      adult: {
+        pt: 'Esofagite Erosiva: 40 mg via oral, UMA VEZ ao dia, por 4 a 8 semanas. Manutenção e DRGE sem esofagite: 20 mg ao dia.',
+        es: 'Esofagitis Erosiva: 40 mg vía oral, UNA VEZ al día por 4 a 8 semanas. Mantenimiento: 20 mg al día.'
+      },
+      pediatric: {
+        pt: 'Crianças 1-11 anos: 10 mg a 20 mg uma vez ao dia dependendo do peso, por no máximo 8 semanas.',
+        es: 'Niños 1-11 años: 10 a 20 mg una vez al día.'
+      }
+    },
+    administration: { pt: ['Tomar 1 hora antes da refeição da manhã. Os comprimidos Nexium usam tecnologia MUPS (múltiplas unidades de pelotas), podendo ser dispersados em um copo de água sem gás se o paciente não conseguir engolir, mas os grânulos nunca devem ser mastigados.'], es: ['Tomar 1 hora antes del desayuno. Los comprimidos pueden dispersarse en agua si hay disfagia, pero sin masticar los gránulos.'] },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+    hepaticAdjustment: { required: true, message: { pt: 'Em insuficiência hepática grave (Child-Pugh C), não exceder o teto de 20 mg ao dia.', es: 'En insuficiencia hepática grave, no exceder los 20 mg al día.' } },
+    commonAdverseEffects: { pt: ['Cefaleia', 'Diarreia e boca seca', 'Náusea e flatulência'], es: ['Cefalea', 'Diarrea y boca seca', 'Náusea y flatulencia'] },
+    dangerousAdverseEffects: { pt: ['Nefrite Intersticial Aguda', 'Hipomagnesemia profunda induzida por bloqueio de transporte mucosal', 'Diarreia por superpopulação de Clostridioides'], es: ['Nefritis Intersticial Aguda', 'Hipomagnesemia profunda', 'Diarrea por Clostridioides'] },
+    contraindications: {
+      absolute: { pt: ['Hipersensibilidade ao esomeprazol'], es: ['Hipersensibilidad al esomeprazol'] },
+      relative: { pt: ['Uso concomitante com Clopidogrel (Inibe a CYP2C19 de forma similar ao omeprazol clássico)'], es: ['Uso concomitante con Clopidogrel'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+      warning: { pt: 'A EQUIVOCAÇÃO DO STENT: Embora seja o IBP mais potente para cicatrizar o refluxo severo, o Esomeprazol herda o mesmo problema do Omeprazol: ele inibe a CYP2C19. Se o seu paciente acabou de colocar um Stent no coração e está usando Clopidogrel, mude o Nexium para Pantoprazol para não aumentar as chances de uma trombose coronariana.', es: 'LA EQUIVOCACIÓN DEL STENT: Al ser el isómero puro, hereda la alta inhibición de CYP2C19. Si el paciente usa Clopidogrel por un Stent reciente, evite el Esomeprazol y use Pantoprazol para evitar trombosis de Stent.' }
+    },
+    references: {
+      pt: 'EXPO Study (Esomeprazole vs Omeprazole); FDA Prescribing Information Nexium; Directivas ESC Gastro-Cardio.',
+      es: 'EXPO Study; FDA Prescribing Information (Nexium); Directivas de Consenso de la SEPD.'
+    }
+  },
+
+  "lansoprazol": {
+    name: { pt: 'Lansoprazol', es: 'Lansoprazol' },
+    category: 'gastroenterologia',
+    class: { pt: 'Inibidor da Bomba de Prótons de Segunda Geração', es: 'Inhibidor de la Bomba de Protones de Segunda Generación' },
+    indications: {
+      pt: ['Cicatrização de Úlcera Duodenal e Gástrica', 'Tratamento de esofagite de refluxo', 'Coadjuvante na erradicação de H. pylori'],
+      es: ['Cicatrización de Úlcera Duodenal y Gástrica', 'Tratamiento de esofagitis por reflujo', 'Erradicación de H. pylori']
+    },
+    commercialNames: { br: ['Ogastro', 'Prazol', 'Lanzol'], ar: ['Ogastro', 'Lanzopral', 'Gastroland'] },
+    presentation: { pt: ['Cápsulas duras com microgrânulos liberação retardada 15 mg e 30 mg'], es: ['Cápsulas con microgránulos de liberación retardada 15 mg y 30 mg'] },
+    mechanism: {
+      pt: 'Atua bloqueando a bomba de prótons H+/K+-ATPase de forma irreversível e duradoura. Possui uma biodisponibilidade inicial extremamente alta nas primeiras tomadas (absorção rápida) e uma taxa de depuração plasmática constante, controlando as crises de azia noturna com excelente eficácia clínica.',
+      es: 'Inhibidor irreversible de la enzima H+/K+-ATPase de la célula parietal gástrica. Se destaca por una absorción inicial muy veloz y alta biodisponibilidad desde la primera dosis, controlando la acidez nocturna eficazmente.'
+    },
+    dose: {
+      adult: {
+        pt: 'Úlcera Duodenal: 30 mg VO ao dia por 4 semanas. DRGE e esofagite: 30 mg ao dia antes do café da manhã por até 8 semanas.',
+        es: 'Úlcera Duodenal: 30 mg VO al día por 4 semanas. ERGE: 30 mg al día antes del desayuno.'
+      },
+      pediatric: {
+        pt: 'Crianças de 1 a 11 anos para DRGE curto prazo: Peso <= 30 kg: 15 mg/dia; Peso > 30 kg: 30 mg/dia.',
+        es: 'Niños 1-11 años: Dosificación establecida según peso corporal.'
+      }
+    },
+    administration: { pt: ['Tomar pela manhã em jejum seco. Para pacientes idosos com sonda nasogástrica, as cápsulas de Ogastro podem ser abertas e os microgrânulos misturados em suco de maçã (nunca em água pura ou bicarbonato, pois entope a sonda).'], es: ['Tomar por la mañana en ayunas. No masticar los microgránulos.'] },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+    hepaticAdjustment: { required: true, message: { pt: 'Em insuficiência hepática moderada a grave, reduzir a dose máxima para 15 mg ao dia.', es: 'En insuficiencia hepática moderada a severa, reducir la dosis máxima a 15 mg al día.' } },
+    commonAdverseEffects: { pt: ['Diarreia e náuseas', 'Cefaleia episódica', 'Artralgia (dor nas articulações, mais descrita neste IBP)'], es: ['Diarrea y náuseas', 'Cefalea', 'Artralgia (más descrita en este IBP)'] },
+    dangerousAdverseEffects: { pt: ['Nefrite Intersticial Aguda funcional', 'Hipomagnesemia crônica letal', 'Colite colagenosa (diarreia crônica aquosa por inflamação do intestino)'], es: ['Nefritis Intersticial Aguda', 'Hipomagnesemia', 'Colitis colágena'] },
+    contraindications: {
+      absolute: { pt: ['Hipersensibilidade ao lansoprazol'], es: ['Hipersensibilidad al lansoprazol'] },
+      relative: { pt: ['Uso associado com inibidores de protease de HIV dependentes de acidez'], es: ['Uso asociado con inhibidores de proteasa del VIH dependientes de acidez'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+      warning: { pt: 'A DIARREIA QUE NÃO PASSA (COLITE): O Lansoprazol é o IBP mais associado ao desenvolvimento de Colite Microscópica/Colagenosa. Se o paciente idoso começar a ter uma diarreia aquosa crônica que dura meses após iniciar o Ogastro, não dê antibiótico; suspenda o Lansoprazol e o intestino voltará ao normal.', es: 'LA DIARREA CRÓNICA (COLITIS): Es el IBP más asociado a Colitis Microscópica. Si el paciente inicia una diarrea acuosa que dura meses tras usar Ogastro, suspenda el Lansoprazol y el cuadro remitirá.' }
+    },
+    references: {
+      pt: 'FDA Label (Prevacid / Ogastro); Diretrizes Clínicas da FBG 2023.',
+      es: 'FDA Label (Prevacid); Guías de Consenso Multicéntrico de la Sociedad Argentina de Gastroenterología (SAGE).'
+    }
+  }
+
+}); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 430 (IBPs VO: omeprazol + pantoprazol + esomeprazol + lansoprazol) */
+
 })();

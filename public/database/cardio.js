@@ -43107,43 +43107,45 @@
       }
     },
 
-    /* ── FLUDROCORTISONA ──────────────────────────────────────────────────── */
+    /* ── FLUDROCORTISONA — BUILD 430 (objeto enriquecido) ────────────────── */
     "fludrocortisona": {
-      name: { pt: 'Fludrocortisona', es: 'Fludrocortisona' },
+      name: { pt: 'Fludrocortisona (Acetato de)', es: 'Fludrocortisona (Acetato de)' },
       category: 'cardio',
-      class: { pt: 'Mineralocorticoide Potente', es: 'Mineralocorticoide Potente' },
+      class: { pt: 'Mineralocorticoide Potente / Retentor de Sódio e Fluidos', es: 'Mineralocorticoide Potente / Retentor de Sodio y Fluidos' },
       indications: {
-        pt: ['Insuficiência adrenocortical primária (Doença de Addison)', 'Tratamento da hipotensão ortostática neurogênica refratária (uso off-label consagrado)'],
-        es: ['Insuficiencia adrenocortical primaria (Enfermedad de Addison)', 'Tratamiento de la hipotensión ortostática neurogénica refractaria (uso off-label consagrado)']
+        pt: ['Terapia de reposição na Insuficiência Adrenal Primária crônica (Doença de Addison, junto com hidrocortisona)', 'Tratamento da Síndrome Adrenogenital com perda de sal', 'Hipotensão Ortostática Neurogênica grave resistente a outras medidas'],
+        es: ['Terapia de reemplazo en la Insuficiencia Adrenal Primaria (Enfermedad de Addison)', 'Síndrome Adrenogenital perdedor de sal', 'Hipotensión Ortostática Neurogénica grave']
       },
       commercialNames: { br: ['Florinefe'], ar: ['Florinef'] },
-      presentation: { pt: ['Comprimidos 0,1 mg'], es: ['Comprimidos 0,1 mg'] },
+      presentation: { pt: ['Comprimidos 0,1 mg (100 mcg)'], es: ['Comprimidos 0,1 mg (100 mcg)'] },
       mechanism: {
-        pt: 'Corticosteroide sintético com atividade mineralocorticoreceptora extremamente potente. Promove aumento acentuado da reabsorção de sódio e água nos túbulos distais renais, expandindo o volume de fluido extracelular e plasmático, elevando a PA e induzindo excreção de potássio.',
-        es: 'Corticosteroide sintético con actividad mineralocorticoide extremadamente potente. Promueve un aumento marcado de la reabsorción de sodio y agua en los túbulos distales renales, expandiendo el volumen de fluido extracelular y plasmático, elevando la PA e induciendo la excreción de potasio.'
+        pt: 'O Retentor de Sal Humano. É um corticoide modificado com um átomo de flúor. Esta pequena alteração destrói quase todo o seu efeito anti-inflamatório e multiplica o seu efeito MINERALOCORTICOIDE. Ela age diretamente nos túbulos do rim imitando a Aldosterona pura: obriga o rim a reabsorver SÓDIO e ÁGUA em massa para dentro do sangue e joga o potássio fora. Isso enche as veias murchas do paciente com Addison, subindo a pressão arterial cronicamente.',
+        es: 'Mineralocorticoide sintético de acción potente. Actúa en el túbulo contorneado distal del riñón promoviendo la reabsorción de SÓDIO y AGUA y la excreción de Potasio e Hidrógeno (efecto idéntico a la Aldosterona natural), elevando la volemia y la presión arterial.'
       },
       dose: {
         adult: {
-          standard: {
-            pt: 'Hipotensão ortostática: 0,1 mg VO 1x/dia (pela manhã). Pode ser titulada de 0,1 mg a 0,2 mg/dia. Monitorar peso e eletrólitos.',
-            es: 'Hipotensión ortostática: 0,1 mg VO 1 vez/día (por la mañana). Puede ser titulada de 0,1 mg a 0,2 mg/día. Monitorizar peso y electrolitos.'
-          }
+          pt: 'Doença de Addison: 0,1 mg (100 mcg) via oral, UMA VEZ ao dia, pela manhã. A dose pode variar de 0,05 mg a 0,2 mg ao dia dependendo da pressão e do potássio sérico. Hipotensão Ortostática: mesma faixa de dose, titulada por PA e eletrólitos.',
+          es: 'Enfermedad de Addison: 0,1 mg (100 mcg) vía oral, UNA VEZ al día por la mañana. Rango habitual: 0,05 a 0,2 mg al día. Hipotensión Ortostática: misma faixa, titulada por PA y electrolitos.'
         },
-        pediatric: null
+        pediatric: {
+          pt: '0,05 mg a 0,1 mg ao dia, sob titulação rigorosa de eletrólitos por endocrinologista pediátrico.',
+          es: '0,05 a 0,1 mg al día bajo monitoreo estricto de electrolitos por endocrinólogo pediátrico.'
+        }
       },
-      administration: { pt: ['Administrar preferencialmente pela manhã.', 'Restrição moderada de sódio na dieta pode ser necessária se ocorrer edema excessivo.'], es: ['Administrar preferentemente por la mañana.', 'Restricción moderada de sodio en la dieta puede ser necesaria si ocurre edema excesivo.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose, mas monitorar retenção hídrica na DRC.', es: 'Sin necesidad de ajuste de dosis, pero monitorizar retención hídrica en ERC.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste específico.', es: 'Sin necesidad de ajuste específico.' } },
-      commonAdverseEffects: { pt: ['Hipocalemia (muito comum)', 'Edema periférico', 'Cefaleia', 'Ganho de peso'], es: ['Hipopotasemia (muy común)', 'Edema periférico', 'Cefalea', 'Ganancia de peso'] },
-      dangerousAdverseEffects: { pt: ['Insuficiência cardíaca congestiva (precipitada por sobrecarga volêmica)', 'Hipertensão severa', 'Hipocalemia grave arritmogênica'], es: ['Insuficiencia cardíaca congestiva (precipitada por sobrecarga volémica)', 'Hipertensión severa', 'Hipopotasemia grave arritmogénica'] },
+      administration: { pt: ['Uso oral diário, preferencialmente pela manhã.', 'OBRIGATÓRIO CONSERVAR AS EMBALAGENS DE FLORINEFE SOB REFRIGERAÇÃO CONSTANTE (Entre 2°C e 8°C). Se mantido fora da geladeira, perde a potência rapidamente.'], es: ['Uso oral diario, preferentemente por la mañana.', 'OBLIGATORIO CONSERVAR EL FRASCO BAJO REFRIGERACIÓN CONSTANTE (Entre 2°C y 8°C). Fuera de la heladera pierde potencia rápidamente.'] },
+      renalAdjustment: { required: true, message: { pt: 'Monitorar rigidamente; risco imenso de sobrecarga de fluidos com edema pulmonar se ClCr < 30 mL/min.', es: 'Monitorear estrictamente en falla renal. Riesgo de sobrecarga hídrica severa.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Hipocalemia (muito comum — o rim joga o potássio fora)', 'Edema periférico marcante nas pernas', 'Hipertensão supina', 'Ganho de peso'], es: ['Hipopotasemia (muy común)', 'Edema periférico marcado', 'Hipertensión supina', 'Ganancia de peso'] },
+      dangerousAdverseEffects: { pt: ['Insuficiência Cardíaca Congestiva hipervolêmica (O corpo retém tanto sal que o coração falha)', 'Cãibras e paralisia muscular por hipocalemia extrema (K+ < 2,5 mEq/L)', 'Hipertensão severa não controlada'], es: ['Insuficiencia Cardíaca Congestiva hipervolémica', 'Parálisis muscular por hipopotasemia extrema (K+ < 2,5 mEq/L)', 'Hipertensión severa no controlada'] },
       contraindications: {
-        absolute: { pt: ['Infecções fúngicas sistêmicas não tratadas', 'Hipertensão arterial grave não controlada', 'Insuficiência cardíaca descompensada'], es: ['Infecciones fúngicas sistémicas no tratadas', 'Hipertensión arterial grave no controlada', 'Insuficiencia cardíaca descompensada'] },
-        relative: { pt: ['Diabetes Mellitus', 'Oesteoporose severa'], es: ['Diabetes Mellitus', 'Osteoporosis severa'] }
+        absolute: { pt: ['Hipertensão arterial grave não controlada', 'Insuficiência cardíaca congestiva descompensada anasarca', 'Infecções fúngicas sistêmicas não tratadas'], es: ['Hipertensión arterial grave no controlada', 'Insuficiencia cardíaca congestiva descompensada', 'Infecciones fúngicas sistémicas no tratadas'] },
+        relative: { pt: ['Diabetes Mellitus (retém sódio, piora a resistência à insulina)', 'Pacientes com tendência a hipocalemia recorrente'], es: ['Diabetes Mellitus', 'Pacientes con tendencia a hipopotasemia recurrente'] }
       },
       safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'Monitorar Potássio Sérico a cada 1-2 semanas no início e periodicamente. Suplementação de potássio é frequentemente necessária.', es: 'Monitorizar Potasio Sérico cada 1-2 semanas al inicio y periódicamente. La suplementación de potasio es frecuentemente necesaria.' }
-      }
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA GELADEIRA E O PÓ DE POTÁSSIO: O Florinefe exige dois cuidados máximos no plantão. Primeiro: se o paciente deixar o frasco na gaveta da cabeceira, o remédio vira farinha inútil — DEVE FICAR NA GELADEIRA. Segundo: ele limpa o potássio do sangue ativamente. O paciente que toma Florinefe quase sempre precisa tomar xarope ou comprimido de Cloreto de Potássio para não sofrer uma parada cardíaca por hipocalemia fatal.', es: 'EL ALERTA DE LA HELADERA Y EL POTASIO: El Florinef exige conservación en frío o pierde potencia. Además, elimina tanto potasio que el paciente casi siempre requiere suplementación con Cloruro de Potasio para evitar paros cardíacos por hipopotasemia fatal.' }
+      },
+      references: { pt: 'FDA Label (Florinef Acetate); Diretriz de Insuficiência Adrenal da Endocrine Society; Manual Prático de Endocrinologia SBEM.', es: 'FDA Label (Florinef); Directrices de Insuficiencia Adrenal de la Endocrine Society; Manual de la Sociedad Argentina de Endocrinología.' }
     },
 
     /* ── DROXIDOPA — BUILD 428 (objeto enriquecido) ─────────────────────── */
