@@ -1145,4 +1145,143 @@
 
   }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 403 (cetoconazol_oral) */
 
+  /* BUILD 433 — Antirretrovirais HIV (Inibidor de Protease + Inibidor de Integrase 2ª Geração) + Antifúngico ID Canônico de Classe */
+  if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null) return;
+
+  Object.assign(window.INFECTOLOGIA_DRUGS_DB, {
+
+    /* ── ATAZANAVIR ──────────────────────────────────────────────────── */
+    "atazanavir": {
+      name: { pt: 'Atazanavir (Sulfato de)', es: 'Atazanavir (Sulfato de)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor da Protease do HIV-1 (IP)', es: 'Antirretroviral / Inhibidor de la Proteasa del VIH-1 (IP)' },
+      indications: {
+        pt: ['Tratamento da infecção pelo vírus HIV-1 em adultos e crianças — geralmente combinado com Ritonavir (booster farmacocinético) e dois nucleosídeos (Tenofovir + Emtricitabina)'],
+        es: ['Tratamiento de la infección por VIH-1 en adultos y niños — siempre combinado con Ritonavir (potenciador) y dos nucleósidos']
+      },
+      commercialNames: { br: ['Reyataz'], ar: ['Reyataz', 'Atazanavir Richmond'] },
+      presentation: { pt: ['Cápsulas 150 mg, 200 mg e 300 mg'], es: ['Cápsulas 150 mg, 200 mg y 300 mg'] },
+      mechanism: {
+        pt: 'O Tesourão Viral. Liga-se seletivamente ao sítio ativo da Protease do HIV, a enzima "tesoura" que corta as poliproteínas Gag-Pol em proteínas estruturais funcionais. Ao travar essa tesoura, o vírus até se replica, mas nasce imaturo, deformado e estéril — incapaz de infectar novas células CD4.',
+        es: 'Inhibidor específico de la Proteasa del VIH-1. Se une al sitio activo de la enzima, impidiendo la rotura de las poliproteínas Gag-Pol virales. El resultado son partículas virales inmaduras, defectuosas y no infecciosas que no pueden infectar nuevas células.'
+      },
+      dose: {
+        adult: {
+          pt: 'Virgem de tratamento: Atazanavir 300 mg + Ritonavir 100 mg via oral, UMA VEZ ao dia, OBRIGATORIAMENTE junto com uma refeição completa. Experiência prévia (tratados): 400 mg/dia (sem Ritonavir em selecionados).',
+          es: 'Virgen de tratamiento: Atazanavir 300 mg + Ritonavir 100 mg vía oral, UNA VEZ al día, OBLIGATORIAMENTE junto con una comida completa.'
+        },
+        pediatric: {
+          pt: 'Aprovado ≥ 6 anos e ≥ 15 kg; dose calculada por peso combinada com Ritonavir líquido.',
+          es: 'Aprobado ≥ 6 años y ≥ 15 kg; dosis calculada por peso con Ritonavir líquido.'
+        }
+      },
+      administration: { pt: ['INGESTÃO OBRIGATÓRIA JUNTO COM REFEIÇÃO COMPLETA. A absorção gastrointestinal depende 100% de pH gástrico ácido (< 3) para dissolver os cristais do sal. PROIBIDO tomar com IBPs (Omeprazol) — anulam a absorção em > 75%.'], es: ['INGESTIÓN OBLIGATORIA CON COMIDA COMPLETA. La absorción depende del pH gástrico ácido. PROHIBIDO tomar con IBP (Omeprazol) — anulan la absorción más del 75%.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em doença renal crônica. Não recomendado em hemodiálise em pacientes com tratamento antirretroviral prévio.', es: 'Sin ajuste en enfermedad renal crónica. No recomendado en hemodiálisis en pacientes con terapia previa.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado pelo CYP3A4. Child-Pugh B: dose reduzida 300 mg/dia sem booster. Child-Pugh C: CONTRAINDICADO.', es: 'Metabolizado por CYP3A4. Child-Pugh B: dosis reducida sin booster. Child-Pugh C: CONTRAINDICADO.' } },
+      commonAdverseEffects: { pt: ['ICTERÍCIA BENIGNA HIPERBILIRRUBINÊMICA (olhos amarelos "hepatíticos" em ~40% — por bloqueio da UGT1A1, sem lesão hepática real)', 'Náuseas, diarreia e dor abdominal', 'Cefaleia e rash cutâneo leve'], es: ['ICTERICIA BENIGNA por bloqueo de UGT1A1 (~40% — ojos amarillos sin daño hepático real)', 'Náuseas, diarrea', 'Cefalea y erupción cutánea'] },
+      dangerousAdverseEffects: { pt: ['Prolongamento do intervalo PR no ECG (Bloqueio atrioventricular de 1º grau)', 'Colelitíase por cálculos de colesterol puro', 'Hepatotoxicidade grave (raro)', 'Lipodistrofia e dislipidemia'], es: ['Prolongación del intervalo PR (Bloqueo AV)', 'Colelitiasis', 'Hepatotoxicidad grave (raro)', 'Lipodistrofia'] },
+      contraindications: {
+        absolute: { pt: ['USO CONCOMITANTE COM IBPs (Omeprazol, Pantoprazol, Esomeprazol, Lansoprazol) — ANULAÇÃO TOTAL DA ABSORÇÃO', 'Uso com Rifampicina ou Midazolam oral', 'Insuficiência hepática grave (Child-Pugh C)'], es: ['COADMINISTRACIÓN CON IBP (Omeprazol, Pantoprazol) — ANULACIÓN TOTAL DE ABSORCIÓN', 'Uso con Rifampicina', 'Insuficiencia hepática grave'] },
+        relative: { pt: ['Distúrbios de condução cardíaca preexistentes (Bloqueio AV de 1º grau)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O DILEMA DO OLHO AMARELO (ICTERÍCIA BENIGNA): O Atazanavir bloqueia a enzima UGT1A1 que limpa a bilirrubina indireta do sangue. O resultado são olhos e pele amarelos idênticos aos da hepatite — mas SEM destruição do fígado. O erro clínico fatal é o médico parar o antirretroviral achando que está destruindo o fígado. A bilirrubina normaliza em dias após a suspensão.', es: 'EL DILEMA DEL OJO AMARILLO (ICTERICIA BENIGNA): Bloquea la UGT1A1. El resultado son ojos y piel amarillos idénticos a los de la hepatitis — pero SIN daño hepático. El error fatal es suspender el antirretroviral por confundirlo con hepatitis.' }
+      },
+      references: {
+        pt: 'CASTLE Trial (Atazanavir vs Lopinavir/Ritonavir — NEJM 2008); PCDT HIV do Ministério da Saúde do Brasil 2023; FDA Prescribing Information Reyataz.',
+        es: 'CASTLE Trial (NEJM 2008); Guías SADI (Sociedad Argentina de Infectología); FDA Prescribing Information Reyataz.'
+      }
+    },
+
+    /* ── BICTEGRAVIR ─────────────────────────────────────────────────── */
+    "bictegravir": {
+      name: { pt: 'Bictegravir Sódico', es: 'Bictegravir Sódico' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor da Integrase do HIV de Segunda Geração (INSTI Gen-2)', es: 'Antirretroviral / Inhibidor de la Integrasa del VIH de Segunda Generación (INSTI Gen-2)' },
+      indications: {
+        pt: ['Tratamento de primeira linha da infecção por HIV-1 em adultos e pediatria (sempre co-formulado em dose fixa combinada com Emtricitabina 200 mg + Tenofovir Alafenamida 25 mg — Biktarvy®)'],
+        es: ['Tratamiento de primera línea de VIH-1 (siempre coformulado con Emtricitabina 200 mg + Tenofovir Alafenamida 25 mg — Biktarvy®)']
+      },
+      commercialNames: { br: ['Biktarvy'], ar: ['Biktarvy'] },
+      presentation: { pt: ['Comprimido revestido de dose fixa combinada: Bictegravir 50 mg + Emtricitabina 200 mg + Tenofovir Alafenamida 25 mg (1 comprimido/dia)'], es: ['Comprimido de dosis fija: Bictegravir 50 mg + Emtricitabina 200 mg + Tenofovir Alafenamida 25 mg (1 comp/día)'] },
+      mechanism: {
+        pt: 'O Tranque de DNA. Liga-se especificamente ao sítio ativo da Integrase do HIV — a enzima que pega o DNA viral fabricado pela Transcriptase Reversa e o costura diretamente dentro do genoma humano da célula CD4. Ao bloquear a transferência de fita (strand transfer), o DNA viral fica "flutuando" solto no citoplasma, incapaz de se integrar, e a célula não se torna uma fábrica viral permanente.',
+        es: 'Inhibidor de la transferencia de hebras de la integrasa (INSTI). Se une al sitio activo de la integrasa bloqueando la integración del ADN viral en el ADN de la célula huésped CD4. El ADN viral queda flotando en el citoplasma sin integrarse, deteniendo permanentemente la replicación.'
+      },
+      dose: {
+        adult: {
+          pt: '1 comprimido de Biktarvy® via oral, UMA VEZ ao dia, com ou sem alimentos (independente de acidez gástrica).',
+          es: '1 comprimido de Biktarvy® vía oral, UNA VEZ al día, con o sin alimentos (independiente del pH gástrico).'
+        },
+        pediatric: {
+          pt: 'Aprovado para crianças com ≥ 14 kg, com apresentações de dosagem reduzida adaptadas por peso.',
+          es: 'Aprobado para niños con ≥ 14 kg con presentaciones de dosis reducida adaptadas por peso.'
+        }
+      },
+      administration: { pt: ['Uso oral uma vez ao dia. NÃO tomar ao mesmo tempo que antiácidos com Alumínio, Magnésio, Cálcio ou suplementos de Ferro/Multivitamínicos sem intervalo de 2h (quelação metálica reduz absorção — ver interações).'], es: ['Uso oral una vez al día. NO tomar simultáneamente con antiácidos que contengan Aluminio, Magnesio o Calcio ni suplementos de Hierro sin intervalo de 2h.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem ajuste se eGFR ≥ 30 mL/min. Não recomendado iniciar com eGFR < 30 mL/min (componente Tenofovir Alafenamida).', es: 'Sin ajuste si eGFR ≥ 30. No recomendado iniciar con eGFR < 30 mL/min (por el Tenofovir Alafenamida).' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em disfunção leve a moderada. Não estudado na grave.', es: 'Sin necesidad de ajuste en disfunción leve o moderada. No estudiado en la grave.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Diarreia leve e náuseas transitórias (1ª-2ª semana)', 'Sonhos anormais e pesadelos vívidos (primeiras semanas, depois desaparecem)'], es: ['Cefalea', 'Diarrea leve y náuseas (1ª-2ª semana)', 'Sueños anormales y pesadillas vívidas (primeras semanas)'] },
+      dangerousAdverseEffects: { pt: ['EXACERBAÇÃO GRAVE DA HEPATITE B AO SUSPENDER ABRUPTAMENTE (em coinfectados — rebote viral fulminante)', 'Acidose láctica severa (raro, classe NRTI)', 'Síndrome de Reconstituição Imune (IRIS) nas primeiras semanas'], es: ['EXACERBACIÓN GRAVE DE HEPATITIS B AL SUSPENDER (en coinfectados — rebote viral fulminante)', 'Acidosis láctica severa (raro)', 'Síndrome de Reconstitución Inmune (IRIS)'] },
+      contraindications: {
+        absolute: { pt: ['Uso concomitante com Rifampicina ou Erva-de-São-João (anulam o Bictegravir por indução do CYP3A4/P-gp)', 'Uso com Dofetilida (potencial para prolongamento fatal do QT)'], es: ['Coadministración con Rifampicina o Hierba de San Juan (anulan el fármaco)', 'Uso con Dofetilida'] },
+        relative: { pt: ['Coinfecção com Hepatite B sem monitoramento regular (risco de rebote se suspenso sem supervisão)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O GATILHO DA HEPATITE B FULMINANTE (BIKTARVY SILENCIA O VHB): O Tenofovir Alafenamida presente no Biktarvy suprime tanto o HIV quanto o vírus da Hepatite B simultaneamente. Se o paciente coinfectado (HIV + HBV crônico) parar o Biktarvy sem supervisão médica — por conta própria, falta de medicamento ou crença de cura — o vírus da Hepatite B acorda em "explosão de raiva viral", destruindo o fígado em dias e causando Insuficiência Hepática Fulminante potencialmente fatal.', es: 'EL GATILLO DE LA HEPATITIS B FULMINANTE: El Tenofovir Alafenamida suprime HIV y Hepatitis B simultáneamente. Si el paciente coinfectado suspende el Biktarvy sin supervisión, el VHB despierta con "explosión de rabia viral" destruyendo el hígado en días.' }
+      },
+      references: {
+        pt: 'GS-US-380-1489 Trial (Lancet 2017, Gallant JE et al.); DHHS Guidelines for HIV Treatment 2023; PCDT HIV — Ministério da Saúde do Brasil 2023; Bula Anvisa Biktarvy.',
+        es: 'GS-US-380-1489 Trial (Lancet 2017, Gallant JE et al.); DHHS Guidelines 2023; Guías SADI.'
+      }
+    },
+
+    /* ── ANFOTERICINA B (ID Canônico de Classe Genérica) ────────────── */
+    "anfotericina_b": {
+      name: { pt: 'Anfotericina B (ID Canônico de Classe)', es: 'Anfotericina B (ID Canónico de Clase)' },
+      category: 'infectologia',
+      class: { pt: 'Antifúngico Polieno Sistêmico / Macrólido Poliênico de Amplo Espectro', es: 'Antifúngico Polieno Sistémico de Amplio Espectro' },
+      indications: {
+        pt: ['Infecções fúngicas invasivas graves e ameaçadoras à vida: Candidíase disseminada, Aspergilose invasiva, Criptococose meníngea, Histoplasmose disseminada, Mucormicose, Leishmaniose visceral (Calazar)', 'Nota: Existem formulações distintas — desoxicolato (clássica/nefrotóxica) e lipossomal (AmBisome — menor nefrotoxicidade)'],
+        es: ['Infecciones micóticas invasivas graves: Candidiasis diseminada, Aspergilosis, Criptococosis meníngea, Histoplasmosis, Mucormicosis, Leishmaniasis visceral', 'Nota: Formulación desoxicolato (clásica/nefrotóxica) y liposomal (AmBisome — menor nefrotoxicidad)']
+      },
+      commercialNames: { br: ['Anforicin B', 'Anfotericina B Desoxicolato', 'AmBisome (lipossomal)'], ar: ['Anfotericina B Northia', 'AmBisome'] },
+      presentation: { pt: ['Frasco-ampola 50 mg (pó liofilizado para reconstituição IV — desoxicolato)', 'Frasco-ampola AmBisome 50 mg (formulação lipossomal de menor toxicidade)'], es: ['Vial 50 mg (polvo liofilizado para IV — desoxicolato)', 'Vial AmBisome 50 mg (formulación liposomal)'] },
+      mechanism: {
+        pt: 'O Perfurador de Fungos. Liga-se com alta afinidade ao Ergosterol — componente exclusivo da membrana plasmática dos fungos (não existe em células humanas, que usam Colesterol). Ao se intercalar no ergosterol, a Anfotericina se organiza em poros aquosos transmembrana e ABRE BURACOS na parede do fungo. Os eletrólitos intracelulares (K⁺, Mg²⁺) vazam para fora e a célula fúngica morre por colapso osmótico e lise.',
+        es: 'Se une con alta afinidad al Ergosterol, componente exclusivo de la membrana plasmática de los hongos. Al intercalarse, forma poros transmembrana que abren canales acuosos en la membrana del hongo. Los iones intracelulares (K⁺, Mg²⁺) se filtran hacia el exterior y la célula muere por colapso osmótico y lisis.'
+      },
+      dose: {
+        adult: {
+          pt: 'Desoxicolato (clássica): 0,5–1,0 mg/kg/dia IV lento (4–6h). Lipossomal (AmBisome): 3–5 mg/kg/dia IV (melhor tolerada). ATENÇÃO: Dose-teste de 1 mg IV em 20 min obrigatória antes da primeira infusão para testar reação aguda.',
+          es: 'Desoxicolato (clásica): 0,5–1,0 mg/kg/día IV lento (4–6h). Liposomal (AmBisome): 3–5 mg/kg/día IV. ATENCIÓN: Dosis-test de 1 mg IV en 20 min obligatoria antes de la primera infusión.'
+        },
+        pediatric: {
+          pt: '0,5–1,0 mg/kg/dia IV (desoxicolato) ou 3–5 mg/kg/dia (lipossomal) — monitoramento diário de função renal e eletrólitos na UTI pediátrica.',
+          es: '0,5–1,0 mg/kg/día (desoxicolato) o 3–5 mg/kg/día (liposomal) — monitoreo diario de función renal y electrolitos.'
+        }
+      },
+      administration: { pt: ['INFUSÃO IV LENTA EXCLUSIVA (4–6h) EM AMBIENTE HOSPITALAR. Diluir EXCLUSIVAMENTE em SORO GLICOSADO 5% (SG5%). NUNCA em Soro Fisiológico (NaCl 0,9%) — ocorre precipitação imediata com formação de partículas e inutilização da dose. Pré-medicar com Paracetamol/Dipirona + Hidrocortisona IV 30 minutos ANTES para reduzir a tempestade de citocinas ("Anfoterível").'], es: ['INFUSIÓN IV LENTA (4–6h) EXCLUSIVAMENTE HOSPITALARIA. Diluir SÓLO en DEXTROSA 5% (DX5%). NUNCA en Suero Fisiológico — precipita inmediatamente. Pre-medicar con Paracetamol + Hidrocortisona IV 30 minutos ANTES para reducir la tormenta de citocinas.'] },
+      renalAdjustment: { required: true, message: { pt: 'CRÍTICO — nefrotóxica em ~80% com a formulação desoxicolato (necrose tubular aguda). Preferir lipossomal em insuficiência renal prévia. Hidratar com SF 0,9% 500–1000 mL ANTES da infusão. Monitorar creatinina e eletrólitos DIARIAMENTE.', es: 'CRÍTICO — nefrotóxica en ~80% con la formulación desoxicolato. Preferir liposomal en insuficiencia renal previa. Hidratar con SF 0,9% antes de la infusión. Monitorear creatinina y electrolitos DIARIAMENTE.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste direto de dose.', es: 'Sin ajuste directo de dosis.' } },
+      commonAdverseEffects: { pt: ['"Febre do Anfoterível" — calafrios violentos, tremores sacolejantes e febre alta durante/após a infusão (tempestade de citocinas IL-1/TNF-α)', 'Hipocalemia grave e Hipomagnesemia profunda (os poros tubulares vazam K⁺ e Mg²⁺)', 'Náuseas, vômitos e anorexia'], es: ['"Fiebre del Anfoterrible" — escalofríos violentos, temblores y fiebre alta durante la infusión (tormenta de citocinas)', 'Hipopotasemia grave e Hipomagnesemia profunda', 'Náuseas y vómitos'] },
+      dangerousAdverseEffects: { pt: ['NEFROTOXICIDADE GRAVE (Necrose tubular aguda com oligúria e parada de filtração)', 'Parada cardíaca por hipocalemia profunda (K⁺ < 2,0 mEq/L → FV)', 'Anemia normocítica por supressão da eritropoetina renal'], es: ['NEFROTOXICIDAD GRAVE (Necrosis tubular aguda)', 'Paro cardíaco por hipopotasemia profunda (K⁺ < 2,0 mEq/L)', 'Anemia normocítica por supresión de eritropoyetina'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade grave comprovada à Anfotericina B'], es: ['Hipersensibilidad grave comprobada a la Anfotericina B'] },
+        relative: { pt: ['Insuficiência renal aguda estabelecida — preferir estritamente formulação lipossomal ou Equinocandinas (Caspofungina/Micafungina) como alternativa menos nefrotóxica'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O "ANFOTERÍVEL" (A FEBRE DOS TREMORES NA UTI): A infusão da anfotericina desoxicolato libera uma tempestade de citocinas inflamatórias que sacode literalmente a cama do doente — calafrios violentos, tremores descontrolados e febre de 39–40°C. O protocolo obrigatório: Dipirona + Hidrocortisona IV ANTES de iniciar. DILUA APENAS EM GLICOSE 5% — nunca em SF 0,9%. E nunca esqueça de repor K⁺ e Mg²⁺ diariamente.', es: 'EL "ANFOTERRIBLE" (FIEBRE DE TEMBLORES EN UCI): La infusión libera una tormenta de citocinas: temblores violentos e incontrolables y fiebre de 39–40°C. Protocolo obligatorio: Paracetamol + Hidrocortisona IV ANTES. SOLO en Dextrosa 5%. Reponer K⁺ y Mg²⁺ DIARIAMENTE.' }
+      },
+      references: {
+        pt: 'IDSA Guidelines for Invasive Candidiasis (2016); IDSA Guidelines for Aspergillosis (2016); Protocolo de Infecção Fúngica Invasiva do Ministério da Saúde do Brasil; Patterson TF et al., Clin Infect Dis 2016.',
+        es: 'IDSA Guidelines para Candidiasis Invasora (2016); IDSA Guidelines para Aspergilosis (2016); Patterson TF et al., Clin Infect Dis 2016; Guías SADI Micosis Sistémicas.'
+      }
+    }
+
+  }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 433 (atazanavir + bictegravir + anfotericina_b ID canônico) */
+
 })();

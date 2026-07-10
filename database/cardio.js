@@ -42790,6 +42790,58 @@
   }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 73-B (iPDE5 Ação Ultrarrápida: avanafila — BUILD 432) */
 
   /* ══════════════════════════════════════════════════════════════════════════════
+     GRUPO 74-B — BUILD 433
+     Sequestrador de Ácidos Biliares / Resina de Troca Iônica: colestipol
+  ══════════════════════════════════════════════════════════════════════════════ */
+  Object.assign(window.CARDIO_DRUGS_DB, {
+
+    /* ── COLESTIPOL ──────────────────────────────────────────────────── */
+    "colestipol": {
+      name: { pt: 'Colestipol (Cloridrato de)', es: 'Colestipol (Clorhidrato de)' },
+      category: 'cardio',
+      class: { pt: 'Resina de Troca Iônica / Sequestrador de Ácidos Biliares (Não absorvível)', es: 'Resina de Intercambio Iónico / Secuestrador de Ácidos Biliares (No absorbible)' },
+      indications: {
+        pt: ['Hipercolesterolemia primária isolada (LDL elevado, quando estatinas são contraindicadas ou insuficientes)', 'Tratamento de diarreia osmótica crônica por má absorção de ácidos biliares (pós-colecistectomia ou doença ileal de Crohn)', 'Hiperlipoproteinemia Tipo IIa'],
+        es: ['Hipercolesterolemia primaria aislada (LDL elevado)', 'Diarrea osmótica crónica por malabsorción de ácidos biliares (poscolecistectomía o Crohn ileal)', 'Hiperlipoproteinemia Tipo IIa']
+      },
+      commercialNames: { br: ['Colestid'], ar: ['Colestid'] },
+      presentation: { pt: ['Grânulos para suspensão oral (envelopes de 5 g)', 'Comprimidos 1 g (para uso oral)'], es: ['Gránulos para suspensión oral (sobres de 5 g)', 'Comprimidos 1 g'] },
+      mechanism: {
+        pt: 'O Imã da Bile. O Colestipol é um polímero hidrofóbico gigante de troca aniônica que NÃO é absorvido pelo trato gastrointestinal — entra e sai intacto nas fezes. No intestino delgado, sua carga positiva gruda fortemente nos ácidos biliares (carga negativa), formando um complexo insolúvel inabsorvível. Os ácidos biliares são eliminados nas fezes em vez de serem reabsorvidos (ciclo entero-hepático). O fígado, sem reserva de bile, é forçado a queimar o colesterol LDL do próprio sangue para fabricar nova bile — reduzindo o LDL circulante.',
+        es: 'Resina de intercambio aniónico que no se absorbe en el intestino. Se une a los ácidos biliares cargados negativamente, formando complejos insolubles eliminados en las heces. Al interrumpir la circulación enterohepática, el hígado consume el LDL circulante para sintetizar nuevos ácidos biliares, reduciendo el colesterol sérico.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 5 g (1 envelope) misturado em líquido, 1–2x ao dia antes das refeições. Ajuste gradual até 30 g/dia divididos em 2–3 tomadas. Comprimidos: 2–16 g/dia em doses divididas.',
+          es: 'Inicio: 5 g (1 sobre) disuelto en líquido, 1–2 veces al día antes de las comidas. Ajuste gradual hasta 30 g/día divididos en 2–3 tomas.'
+        },
+        pediatric: {
+          pt: 'Hipercolesterolemia familiar genética grave: 1–4 envelopes ao dia (uso restrito hospitalar especializado).',
+          es: 'Hipercolesterolemia familiar severa: 1–4 sobres al día (uso especializado hospitalario).'
+        }
+      },
+      administration: { pt: ['NUNCA INGERIR O PÓ SECO — risco de obstrução esofágica. Sempre misturar em copo grande de água, suco de fruta ou sopa antes de beber. Ingerir os comprimidos com abundante quantidade de água. Tomar ANTES das principais refeições para capturar a bile liberada pela digestão.'], es: ['NUNCA INGERIR EL POLVO SECO — riesgo de obstrucción esofágica. Mezclar siempre en vaso grande de agua o jugo antes de beber. Tomar ANTES de las principales comidas.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não é absorvido. Sem necessidade de ajuste renal.', es: 'No se absorbe. Sin necesidad de ajuste renal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste. Mecanismo exclusivamente luminal.', es: 'Sin necesidad de ajuste. Mecanismo exclusivamente luminal.' } },
+      commonAdverseEffects: { pt: ['CONSTIPAÇÃO INTESTINAL CIMENTANTE SEVERA (as fezes endurecem como pedra — efeito mais frequente e limitante, afeta ~50%)', 'Flatulência volumosa e distensão abdominal', 'Esteatorreia leve (gordura nas fezes)', 'Náuseas e mal-estar gástrico'], es: ['ESTREÑIMIENTO CIMENTANTE SEVERO (Las heces se endurecen como piedra — efecto más frecuente, afecta ~50%)', 'Flatulencia volumosa y distensión abdominal', 'Esteatorrea leve', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Fecaloma obstrutivo intestinal com risco de perfuração de alça', 'Deficiência grave de vitaminas lipossolúveis A, D, E e K (especialmente K → Coagulopatia hemorrágica por hipoprotrombinemia)', 'Hipertrigliceridemia secundária (compensatória — monitorar TG)'], es: ['Fecaloma obstructivo intestinal con riesgo de perforación', 'Deficiencia grave de vitaminas liposolubles A, D, E y K (→ Coagulopatía hemorrágica por hipoprotrombinemia)', 'Hipertrigliceridemia secundaria compensatoria'] },
+      contraindications: {
+        absolute: { pt: ['Obstrução intestinal completa ou impactação fecal severa documentada', 'Hipertrigliceridemia grave (TG > 500 mg/dL) — piora a dislipidemia mista'], es: ['Obstrucción intestinal completa o impactación fecal severa', 'Hipertrigliceridemia grave (TG > 500 mg/dL)'] },
+        relative: { pt: ['Hemorroidas severas sangrantes (constipação agrava o sangramento); fenilcetonúria'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O SEQUESTRO UNIVERSAL DE REMÉDIOS: O Colestipol não distingue ácidos biliares de outros medicamentos. Age como uma rede de arrasto no intestino, prendendo fisicamente QUASE QUALQUER OUTRA MEDICAÇÃO que o paciente engolir no mesmo intervalo: Digoxina, Furosemida, Levotiroxina, Propranolol, Hidroclorotiazida, Varfarina e vitaminas lipossolúveis saem intactos nas fezes. O tratamento cardíaco, tiroidiano e anticoagulante falham silenciosamente. Regra inviolável: Afastar qualquer outro medicamento por no mínimo 1 hora ANTES ou 4 horas DEPOIS do Colestipol.', es: 'EL SECUESTRO UNIVERSAL DE MEDICAMENTOS: El Colestipol atrapa físicamente CASI CUALQUIER FÁRMACO que se tome al mismo tiempo: Digoxina, Furosemida, Levotiroxina, Propranolol, Warfarina — todo se elimina en las heces. Los tratamientos cardíaco, tiroideo y anticoagulante fallan silenciosamente. Regla inviolable: Separar cualquier medicamento al menos 1 hora ANTES o 4 horas DESPUÉS.' }
+      },
+      references: {
+        pt: 'LRC-CPPT Trial (Lancet 1984 — Lipid Research Clinics Coronary Primary Prevention Trial); AHA/ACC Cholesterol Guidelines 2018; FDA Prescribing Information Colestid.',
+        es: 'LRC-CPPT Trial (Lancet 1984); AHA/ACC Cholesterol Guidelines 2018; Ficha Técnica CIMA Colestipol; Manual Farmacológico de Goodman & Gilman.'
+      }
+    }
+
+  }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 74-B (Sequestrador de Ácidos Biliares: colestipol — BUILD 433) */
+
+  /* ══════════════════════════════════════════════════════════════════════════════
      BLOCO DESATIVADO — bosentana, ambrisentana, macitentana, riociguate,
      selexipague, epoprostenol, treprostinil e iloprosta JÁ EXISTIAM nos
      Grupos 26-28 deste arquivo com fichas técnicas MAIS COMPLETAS
