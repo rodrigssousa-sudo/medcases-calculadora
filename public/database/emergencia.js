@@ -1341,4 +1341,288 @@
 
   }); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 403 (Anestesia: ketamina + tiopental + isoflurano) */
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   BUILD 429 — Drogas Vasoativas de UTI
+   noradrenalina · adrenalina · dobutamina · dopamina · vasopressina
+═══════════════════════════════════════════════════════════════════════════ */
+Object.assign(window.EMERGENCIA_DRUGS_DB, {
+
+  "noradrenalina": {
+    name: { pt: 'Noradrenalina (Hemitartarato de)', es: 'Noradrenalina (Bitartrato de)' },
+    category: 'emergencia',
+    class: { pt: 'Vasopressor Sistêmico / Agonista Alfa-1 e Beta-1 Adrenérgico', es: 'Vasopresor Sistémico / Agonista Alfa-1 y Beta-1 Adrenérgico' },
+    indications: {
+      pt: ['Primeira linha no tratamento do Choque Séptico, Choque Cardiogênico e Choque Neurogênico refratários à reposição de fluidos'],
+      es: ['Primera línea en el tratamiento del Choque Séptico, Choque Cardiogénico y Choque Neurogénico refractarios']
+    },
+    commercialNames: { br: ['Norepin', 'Hyponor'], ar: ['Levophed', 'Noradrenalina Biotenk'] },
+    presentation: {
+      pt: ['Ampolas de 4 mL contendo 4 mg de Noradrenalina Base (1 mg/mL)'],
+      es: ['Ampollas de 4 mL conteniendo 4 mg de Noradrenalina Base (1 mg/mL)']
+    },
+    mechanism: {
+      pt: 'O Apertador de Artérias Supremo. Age estimulando fortemente os receptores adrenérgicos Alfa-1 na musculatura das artérias, gerando uma vasoconstrição periférica massiva que sobe a pressão arterial sistêmica imediatamente. Possui também efeito Beta-1 moderado no coração, aumentando a força de contração (inotropismo) sem disparar tanto a frequência cardíaca.',
+      es: 'Potente agonista de los receptores alfa-1 adrenérgicos vasculares, induciendo vasoconstricción periférica intensa y aumento de la resistencia vascular sistémica. Posee efecto beta-1 cardíaco moderado, mejorando la contractilidad con menor cronotropismo.'
+    },
+    dose: {
+      adult: {
+        pt: 'Início: 0,05 a 0,1 mcg/kg/min em infusão contínua. Titular a cada 2-5 minutos guiado pela Pressão Arterial Média (Alvo PAM >= 65 mmHg). Doses em choques refratários podem passar de 1 a 2 mcg/kg/min.',
+        es: 'Inicio: 0,05 a 0,1 mcg/kg/min en infusión continua. Titular cada 2-5 minutos guiado por la Presión Arterial Media (Meta PAM >= 65 mmHg).'
+      },
+      pediatric: {
+        pt: 'Choque pediátrico: 0,05 a 0,1 mcg/kg/min, máximo de 2 mcg/kg/min.',
+        es: 'Choque pediátrico: 0,05 a 0,1 mcg/kg/min.'
+      }
+    },
+    administration: {
+      pt: [
+        'DILUIÇÃO PADRÃO (Solução de Carga): 4 ampolas (16 mg) + 234 mL de Glicose 5% (SG5%), totalizando 250 mL (Concentração: 64 mcg/mL).',
+        'DILUIÇÃO CONCENTRADA (Para restrição hídrica): 8 ampolas (32 mg) + 218 mL de SG5%, totalizando 250 mL.',
+        'VEÍCULO: Deve ser diluída preferencialmente em Glicose 5% (SG5%) para evitar a oxidação da molécula que ocorre no Soro Fisiológico simples.',
+        'VIA: EXCLUSIVAMENTE VIA ACESSO VENOSO CENTRAL. Uso em veia periférica aceito por no máximo 2-4 horas em emergência extrema.'
+      ],
+      es: [
+        'DILUCIÓN ESTÁNDAR: 4 ampollas (16 mg) + 234 mL de Dextrosa 5% (DX5%), total 250 mL (64 mcg/mL).',
+        'VÍA: EXCLUSIVAMENTE POR ACCESO VENOSO CENTRAL. El uso periférico aumenta el riesgo de necrosis tisular.'
+      ]
+    },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, mas causa forte vasoconstrição renal em doses extremas.', es: 'Sin necesidad de ajuste.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+    commonAdverseEffects: { pt: ['Ansiedade e tremores se o paciente estiver acordado', 'Taquicardia sinusal leve', 'Cefaleia de tração vascular'], es: ['Ansiedad y temblores', 'Taquicardia sinusal leve', 'Cefalea'] },
+    dangerousAdverseEffects: { pt: ['NECROSE TISULAR EXTREMA (Se houver extravasamento na veia)', 'Isquemia mesentérica (falta de sangue no intestino por fechamento de artérias)', 'Isquemia digital (dedos pretos/frios)'], es: ['NECROSIS TISULAR POR EXTRAVASACIÓN', 'Isquemia mesentérica', 'Isquemia digital'] },
+    contraindications: {
+      absolute: { pt: ['Hipotensão por hipovolemia pura não corrigida (Salvo como medida de resgate temporária enquanto infunde sangue/soro)'], es: ['Hipotensión por hipovolemia no corregida'] },
+      relative: { pt: ['Arritmias cardíacas severas ativas ou doença vascular periférica grave'], es: ['Arritmias cardíacas severas'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+      warning: { pt: 'O ALERTA DA VEIA QUE VAZA E RASGA: Se a Noradrenalina vazar de uma veia periférica fina do braço para debaixo da pele, ela esmagará os microvasos locais. A pele morre, apodrece e gangrena (necrose por isquemia local), exigindo enxerto de pele. O ANTÍDOTO imediato é infiltrar a área com Fentolamina (bloqueador alfa) ou Nitroglicerina tópica para abrir os vasos.', es: 'EL ALERTA DE LA EXTRAVASACIÓN: Si la Noradrenalina se infiltra fuera de la vena periférica, colapsa los microvasos locales, causando gangrena y necrosis cutánea. El ANTÍDOTO es la infiltración local con Fentolamina o parches de Nitroglicerina.' }
+    },
+    references: {
+      pt: 'Surviving Sepsis Campaign 2021; Protocolo de Infusões da UTI do InCor/HCFMUSP; Micromedex Critical Care.',
+      es: 'Surviving Sepsis Campaign 2021; Guías de Emergencias de la Sociedad Argentina de Terapia Intensiva (SATI).'
+    }
+  },
+
+  "adrenalina": {
+    name: { pt: 'Adrenalina (Epinefrina)', es: 'Adrenalina (Epinefrina)' },
+    category: 'emergencia',
+    class: { pt: 'Estimulante Adrenérgico Global / Vasopressor e Inotrópico', es: 'Estimulante Adrenérgico Global / Vasopresor e Inotrópico' },
+    indications: {
+      pt: ['Droga de escolha absoluta na Parada Cardiorrespiratória (PCR - todos os ritmos)', 'Tratamento de primeira linha no Choque Anafilático', 'Choque cardiogênico com bradicardia extrema resistente'],
+      es: ['Droga de elección absoluta en la Parada Cardiorrespiratoria (PCR)', 'Tratamiento de primera línea en Choque Anafiláctico']
+    },
+    commercialNames: { br: ['Adrenalina Biofun', 'Epinefrina Teuto'], ar: ['Adrenalina Fada', 'Epinefrina Larjan'] },
+    presentation: {
+      pt: ['Ampolas de 1 mL contendo 1 mg de Cloridrato de Epinefrina (Concentração pura 1:1.000)'],
+      es: ['Ampollas de 1 mL conteniendo 1 mg de Epinefrina (1:1.000)']
+    },
+    mechanism: {
+      pt: 'O Ativador Total do Sistema Simpático. Estimula de forma massiva e violenta todos os receptores adrenérgicos: Alfa-1 (contração de artérias), Beta-1 (dispara os batimentos e a força do coração) e Beta-2 (abre os brônquios do pulmão). Na PCR, ela esmaga as artérias periféricas para empurrar o pouco sangue restante em direção ao cérebro e às coronárias.',
+      es: 'Agonista potente de los receptores alfa y beta adrenérgicos. Aumenta la fuerza y frecuencia cardíaca (beta-1), induce broncodilatación (beta-2) y genera vasoconstricción periférica (alfa-1) redistribuyendo el flujo hacia órganos vitales.'
+    },
+    dose: {
+      adult: {
+        pt: 'Parada Cardíaca (PCR): 1 mg via Intravenosa DIRETA (Bolus puro) a cada 3 a 5 minutos. Anafilaxia: 0,3 mg a 0,5 mg via INTRAMUSCULAR (coxa) imediato. Infusão Contínua (Choque): 0,05 a 1 mcg/kg/min.',
+        es: 'Parada Cardíaca: 1 mg IV DIRECTA (Bolo) cada 3-5 minutos. Anafilaxia: 0,3 mg a 0,5 mg vía INTRAMUSCULAR. Infusión Continua: 0,05 a 1 mcg/kg/min.'
+      },
+      pediatric: {
+        pt: 'PCR: 0,01 mg/kg (0,1 mL/kg da diluição 1:10.000) IV a cada 3-5 min. Anafilaxia: 0,01 mg/kg IM.',
+        es: 'PCR pediátrica: 0,01 mg/kg IV. Anafilaxia: 0,01 mg/kg IM.'
+      }
+    },
+    administration: {
+      pt: [
+        'DILUIÇÃO PARA INFUSÃO CONTÍNUA (Bomba): 10 ampolas (10 mg) + 240 mL de SG5% ou SF 0,9%, total 250 mL (Concentração: 40 mcg/mL).',
+        'ANAFILAXIA: Deve ser aplicada SEMPRE VIA INTRAMUSCULAR na coxa (vasto lateral). Fazer Adrenalina IV direta fora da parada cardíaca causa AVC e morte instantânea por pico pressórico.',
+        'DILUIÇÃO PEDIÁTRICA (1:10.000): Pegar 1 ampola de 1 mL e diluir com 9 mL de Soro Fisiológico antes de aspirar a dose da criança.'
+      ],
+      es: [
+        'INFUSIÓN CONTINUA: 10 ampollas (10 mg) + 240 mL de DX5% o SF 0,9%, total 250 mL.',
+        'ANAFILAXIA: Aplicar SIEMPRE vía INTRAMUSCULAR en el muslo (vasto lateral).'
+      ]
+    },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+    commonAdverseEffects: { pt: ['Palpitações violentas e taquicardia severa', 'Tremores musculares e ansiedade extrema', 'Sudorese fria e palidez facial'], es: ['Palpitaciones y taquicardia severa', 'Temblores y ansiedad extrema', 'Palidez'] },
+    dangerousAdverseEffects: { pt: ['FIBRILAÇÃO VENTRICULAR LETAL (Arritmia fatal por excesso de estímulo do coração)', 'AVC Hemorrágico agudo por pico de pressão arterial', 'Isquemia miocárdica/Infarto induzido'], es: ['FIBRILACIÓN VENTRICULAR LETAL', 'ACV Hemorrágico por pico pressórico', 'Isquemia miocárdica'] },
+    contraindications: {
+      absolute: { pt: ['Não existem contraindicações absolutas em situações de Parada Cardíaca ou Choque Anafilático iminente de morte.'], es: ['No existen contraindicaciones absolutas en Parada Cardíaca o Anafilaxia.'] },
+      relative: { pt: ['Arritmias taquicárdicas severas, glaucoma de ângulo fechado'], es: ['Arritmias taquicárdicas'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+      warning: { pt: 'O ERRO DA VIA NA ALERGIA: Jamais aplique Adrenalina na veia (IV) direta de um paciente com alergia que esteja acordado e conversando. A injeção IV direta causa um espasmo nas artérias do cérebro, estourando a pressão e matando o paciente de AVC hemorrágico. Na alergia/anafilaxia, a via sagrada e segura é a INTRAMUSCULAR na coxa.', es: 'EL ERRO DE LA VÍA EN ALERGIA: Jamás aplique Adrenalina venosa (IV) directa a un paciente con alergia que esté consciente. Causa picos de presión brutales que provocan ACV hemorrágico. La vía segura es la INTRAMUSCULAR en el muslo.' }
+    },
+    references: {
+      pt: 'Diretrizes de RCP da American Heart Association (AHA) 2020; WAO (World Allergy Organization) Anaphylaxis Guidelines.',
+      es: 'Directrices de RCP de la American Heart Association (AHA) 2020; Guías de Anafilaxia de la WAO.'
+    }
+  },
+
+  "dobutamina": {
+    name: { pt: 'Dobutamina (Cloridrato de)', es: 'Dobutamina (Clorhidrato de)' },
+    category: 'emergencia',
+    class: { pt: 'Inotrópico Cardíaco / Agonista Predominante Beta-1 Adrenérgico', es: 'Inotrópico Cardíaco / Agonista Predominante Beta-1 Adrenérgico' },
+    indications: {
+      pt: ['Choque Cardiogênico (Infarto severo com falência do coração)', 'Insuficiência Cardíaca Congestiva agudamente descompensada com baixo débito cardíaco (Perfil C de Stevenson)'],
+      es: ['Choque Cardiogénico', 'Insuficiencia Cardíaca Congestiva agudamente descompensada con bajo gasto (Perfil C)']
+    },
+    commercialNames: { br: ['Dobutrex', 'Dobutamina'], ar: ['Dobutrex', 'Dobutamina Richmond'] },
+    presentation: {
+      pt: ['Ampolas ou Frascos de 20 mL contendo 250 mg de Dobutamina (12,5 mg/mL)'],
+      es: ['Ampollas o Viales de 20 mL conteniendo 250 mg de Dobutamina (12,5 mg/mL)']
+    },
+    mechanism: {
+      pt: 'O "Chicote do Coração Cansado". Liga-se diretamente nos receptores Beta-1 do músculo cardíaco. Isso causa um aumento violento do cálcio dentro das células do coração, aumentando drasticamente a força de contração (Inotropismo positivo) e melhorando o volume de sangue ejetado por minuto. Possui um efeito Beta-2 leve que dilata os vasos sanguíneos da periferia, o que reduz o "peso" (pós-carga) que o coração precisa empurrar.',
+      es: 'Estimulante selectivo beta-1 adrenérgico que aumenta la contractilidad miocárdica (inotropismo positivo) y el gasto cardíaco con mínimos cambios en la frecuencia. Produce vasodilatación periférica leve (beta-2) disminuyendo la poscarga.'
+    },
+    dose: {
+      adult: {
+        pt: 'Infusão Contínua: 2 a 20 mcg/kg/min. A dose usual clínica de suporte fica entre 5 a 10 mcg/kg/min (Evitar passar de 20 devido ao risco extremo de arritmias ventriculares letais).',
+        es: 'Infusión Continua: 2 a 20 mcg/kg/min. Dosis clínica habitual entre 5 a 10 mcg/kg/min.'
+      },
+      pediatric: {
+        pt: '2 a 20 mcg/kg/min via infusão contínua em bomba.',
+        es: '2 a 20 mcg/kg/min en infusión continua.'
+      }
+    },
+    administration: {
+      pt: [
+        'DILUIÇÃO PADRÃO BRASIL/ARGENTINA: 1 ampola (250 mg / 20 mL) + 230 mL de Soro Fisiológico 0,9% ou SG5%, totalizando 250 mL (Concentração: 1.000 mcg/mL ou 1 mg/mL).',
+        'Pode correr em veia periférica calibrosa por períodos curtos, mas o acesso venoso central é fortemente recomendado.'
+      ],
+      es: [
+        'DILUCIÓN ESTÁNDAR: 1 ampolla (250 mg) + 230 mL de SF 0,9% o DX5%, total 250 mL (1.000 mcg/mL).'
+      ]
+    },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Metabolização por conjugação tecidual, sem ajuste.', es: 'Sin necesidad de ajuste.' } },
+    commonAdverseEffects: { pt: ['Taquicardia sinusal incômoda (o coração acelera)', 'Extrassístoles isoladas no monitor', 'Cefaleia e náuseas'], es: ['Taquicardia sinusal', 'Extrasístoles aisladas en monitor', 'Cefalea'] },
+    dangerousAdverseEffects: { pt: ['TAQUIARRITMIAS VENTRICULARES LETAIS (Dispara episódios de Taquicardia Ventricular Sustentada ou Torsades)', 'Isquemia miocárdica aguda (o coração trabalha tanto que falta oxigênio)'], es: ['TAQUIARRITMIAS VENTRICULARES LETALES', 'Isquemia miocárdica aguda'] },
+    contraindications: {
+      absolute: { pt: ['Estenose subaórtica hipertrófica dinâmica (Miocardiopatia Hipertrófica Obstrutiva - o remédio fecha a saída do coração inteiramente e mata o paciente)'], es: ['Miocardiopatía Hipertrófica Obstructiva (Causa colapso mecánico de la salida del ventrículo)'] },
+      relative: { pt: ['Fibrilação atrial prévia com resposta ventricular rápida (Acelera a FA perigosamente)'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+      warning: { pt: 'O RISCO DO "CHICOTE" EM CORAÇÃO SEM SANGUE: Usar Dobutamina num coração infartado que está sem nenhuma irrigação nas artérias coronárias é como dar uma chicotada num cavalo exausto e desidratado. O coração vai acelerar, consumir o resto de oxigênio que tinha e sofrer uma arritmia fatal. Corrija o volume e as artérias primeiro.', es: 'EL RIESGO EN CORAZÓN ISQUÉMICO: Usar Dobutamina en un corazón infartado sin irrigación coronaria es como azotar a un caballo exhausto. El corazón consumirá el oxígeno restante y entrará en arritmia fatal. Estabilice antes.' }
+    },
+    references: {
+      pt: 'Diretrizes Brasileiras de Insuficiência Cardíaca Aguda SBC 2021; ADHERE Registry; UpToDate Critical Care.',
+      es: 'Guías de Insuficiencia Cardíaca de la Sociedad Europea de Cardiología (ESC); Manual de la SATI.'
+    }
+  },
+
+  "dopamina": {
+    name: { pt: 'Dopamina (Cloridrato de)', es: 'Dopamina (Clorhidrato de)' },
+    category: 'emergencia',
+    class: { pt: 'Vasopressor e Inotrópico Adrenérgico Dependente de Dose', es: 'Vasopresor e Inotrópico Adrenérgico Dependiente de Dosis' },
+    indications: {
+      pt: ['Tratamento de Choque circulatório de qualquer etiologia (Hoje restrita a segundas linhas ou quando associada a bradicardia severa)', 'Bradicardia sinusal sintomática grave refratária à atropina'],
+      es: ['Tratamiento de Choque circulatorio', 'Bradicardia sinusal sintomática grave refractaria a atropina']
+    },
+    commercialNames: { br: ['Revivan', 'Dopamina'], ar: ['Revivan', 'Dopamina Klonal'] },
+    presentation: {
+      pt: ['Ampolas de 10 mL contendo 50 mg de Dopamina (5 mg/mL)'],
+      es: ['Ampollas de 5 mL ou 10 mL conteniendo 200 mg ou 50 mg']
+    },
+    mechanism: {
+      pt: 'A Droga Camaleão. Seus efeitos dependem da velocidade de infusão. DOSE BAIXA (0,5 a 2 mcg/kg/min): Liga-se nos receptores dopaminérgicos D1, dilatando artérias renais e mesentéricas. DOSE MÉDIA (2 a 10 mcg/kg/min): Estimula os receptores Beta-1 do coração, aumentando a força e os batimentos cardíacos. DOSE ALTA (10 a 20 mcg/kg/min): Domina o receptor Alfa-1, esmagando as artérias e subindo a pressão como a noradrenalina.',
+      es: 'Efectos dependientes de la velocidad de infusión. DOSIS BAJA (0,5-2 mcg/kg/min): Estimula receptores D1 renales. DOSIS MEDIA (2-10 mcg/kg/min): Agonista beta-1 (inotrópico). DOSIS ALTA (10-20 mcg/kg/min): Agonista alfa-1, generando vasoconstricción periférica intensa.'
+    },
+    dose: {
+      adult: {
+        pt: 'Infusão Contínua: 2 a 20 mcg/kg/min. Iniciar geralmente com 5 mcg/kg/min e titular baseado na resposta pressórica e eletrocardiográfica.',
+        es: 'Infusión Continua: 2 a 20 mcg/kg/min. Iniciar con 5 mcg/kg/min y titular según respuesta.'
+      },
+      pediatric: {
+        pt: '2 a 20 mcg/kg/min (Muito utilizada no choque neonatal).',
+        es: '2 a 20 mcg/kg/min (Muy utilizada en choque neonatal).'
+      }
+    },
+    administration: {
+      pt: [
+        'DILUIÇÃO PADRÃO: 5 ampolas (250 mg / 50 mL) + 200 mL de Soro Fisiológico 0,9% ou SG5%, totalizando 250 mL (Concentração: 1.000 mcg/mL).',
+        'Exige via em ACESSO VENOSO CENTRAL obrigatório em doses altas devido ao risco severo de necrose local por infiltração.'
+      ],
+      es: [
+        'DILUCIÓN ESTÁNDAR: 250 mg + 200 mL de SF o DX5%, total 250 mL (1.000 mcg/mL).'
+      ]
+    },
+    renalAdjustment: { required: false, message: { pt: 'Mito da dose renal: Usar dopamina baixa para "proteger o rim" NÃO reduz a mortalidade e foi banido da prática moderna.', es: 'Mito de dosis renal: El uso de dosis bajas para "proteger el riñón" fue desmentido por la evidencia moderna.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+    commonAdverseEffects: { pt: ['TAQUICARDIA ACENTUADA (Acelera muito mais o coração que a noradrenalina)', 'Náuseas e vômitos intensos (Estimula receptores de dopamina no cérebro)', 'Ansiedade'], es: ['TAQUICARDIA ACENTUADA (Acelera el corazón más que la noradrenalina)', 'Náuseas y vómitos intensos', 'Ansiedad'] },
+    dangerousAdverseEffects: { pt: ['Fibrilação Atrial com resposta rápida e Arritmias ventriculares malignas', 'Necrose tecidual periférica por extravasamento', 'Gangrena de extremidades'], es: ['Arritmias ventriculares malignas', 'Necrosis tisular por extravasación', 'Gangrena de extremidades'] },
+    contraindications: {
+      absolute: { pt: ['Feocromocitoma pré-existente (Dispara liberação fatal de adrenalina do tumor)', 'Fibrilação ventricular ativa'], es: ['Feocromocitoma preexistente', 'Fibrilación ventricular'] },
+      relative: { pt: ['Taquiarritmias prévias não controladas ou hipertensão pulmonar severa'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+      warning: { pt: 'O ABANDONO DA DOPAMINA NO CHOQUE SÉPTICO: O grande estudo SOAP II provou que usar Dopamina no Choque Séptico mata muito mais do que usar Noradrenalina, porque a Dopamina causa o dobro de arritmias cardíacas fatais. Ela foi rebaixada pelas diretrizes mundiais e hoje a Noradrenalina é a dona absoluta do choque.', es: 'EL ABANDONO EN CHOQUE SÉPTICO: El estudio SOAP II demostró que usar Dopamina en Choque Séptico causa el doble de arritmias cardíacas fatales comparado con Noradrenalina. Fue desplazada por las guías mundiales.' }
+    },
+    references: {
+      pt: 'SOAP II Trial (NEJM 2010 - Dopamine vs Norepinephrine); Surviving Sepsis Campaign Guidelines 2021; Manual Lexicomp Critical Care.',
+      es: 'SOAP II Trial (NEJM 2010); Directrices de la Surviving Sepsis Campaign; Manual de la SATI.'
+    }
+  },
+
+  "vasopressina": {
+    name: { pt: 'Vasopressina (Hormônio Antidiurético Sintético)', es: 'Vasopresina (Hormona Antidiurética Sintética)' },
+    category: 'emergencia',
+    class: { pt: 'Vasopressor Puro Não-Adrenérgico / Agonista do Receptor V1', es: 'Vasopresor Puro No Adrenérgico / Agonista del Receptor V1' },
+    indications: {
+      pt: ['Choque Séptico refratário (Associada à Noradrenalina para tentar reduzir a dose desta e poupar o coração)', 'Diabetes Insipidus Central (Tratamento da poliúria massiva)', 'Hemorragia por Varizes Esofágicas (Uso alternativo secundário)'],
+      es: ['Choque Séptico refractario (Asociada a Noradrenalina para disminuir su dosis)', 'Diabetes Insípida Central', 'Hemorragia por Varices Esofágicas']
+    },
+    commercialNames: { br: ['Enpress', 'Vasopressina'], ar: ['Empress', 'Vasopresina Richmond'] },
+    presentation: {
+      pt: ['Ampolas de 1 mL contendo 20 UI (Unidades Internacionais) de Vasopressina'],
+      es: ['Ampollas de 1 mL conteniendo 20 UI (Unidades Internacionales) de Vasopresina']
+    },
+    mechanism: {
+      pt: 'O Vasopressor Sem Adrenalina. Ela ignora completamente o coração e os receptores adrenérgicos. Age ligando-se diretamente nos receptores V1a da musculatura das artérias periféricas, ativando canais de cálcio que provocam uma constrição vascular implacável. Como age por uma via totalmente diferente, funciona mesmo quando o sangue está muito ácido e a noradrenalina parou de fazer efeito.',
+      es: 'Vasopresor puro no adrenérgico. Agonista selectivo de los receptores V1a vasculares, induciendo vasoconstricción periférica potente e independiente del pH sanguíneo. Útil cuando hay acidosis severa y refractariedad a las catecolaminas.'
+    },
+    dose: {
+      adult: {
+        pt: 'Choque Séptico: Dose FIXA e CONSTANTE de 0,03 a 0,04 UI/minuto via Intravenosa contínua. (ATENÇÃO: Diferente das outras, ela NÃO se titula para cima e para baixo; dose fixa de protocolo).',
+        es: 'Choque Séptico: Dosis FIJA y CONSTANTE de 0,03 a 0,04 UI/minuto vía Intravenosa continua. (¡ATENCIÓN: No se titula hacia arriba o abajo!).'
+      },
+      pediatric: {
+        pt: '0,0005 a 0,002 UI/kg/minuto infusão contínua regulada em UTI.',
+        es: '0,0005 a 0,002 UI/kg/minuto.'
+      }
+    },
+    administration: {
+      pt: [
+        'DILUIÇÃO PADRÃO (Seringa ou Bomba): 1 ampola (20 UI / 1 mL) + 19 mL de Soro Fisiológico 0,9%, totalizando 20 mL de solução (Concentração final: 1 UI/mL).',
+        'Regula-se a bomba em mL/h correspondente às unidades fixas (ex: 0,03 UI/min = 1,8 mL/h nesta diluição).',
+        'OBRIGATÓRIO USAR EM ACESSO VENOSO CENTRAL.'
+      ],
+      es: [
+        'DILUCIÓN ESTÁNDAR: 1 ampolla (20 UI) + 19 mL de SF 0,9%, total 20 mL (1 UI/mL). Administrar por bomba en Acceso Venoso Central.'
+      ]
+    },
+    renalAdjustment: { required: false, message: { pt: 'Seguro em falência renal crônica, mas reduz a diurese drasticamente (efeito antidiurético V2 concomitante).', es: 'Seguro en falla renal, reduce diuresis.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste.' } },
+    commonAdverseEffects: { pt: ['Palidez extrema na pele e mucosas (Constrição cutânea feroz)', 'Cólica abdominal e flatulência intensa (Aperta o intestino)', 'Hiponatremia de diluição'], es: ['Palidez extrema en piel y mucosas', 'Cólicos abdominales intensos (vasoconstricción esplácnica)', 'Hiponatremia'] },
+    dangerousAdverseEffects: { pt: ['NECROSE ISQUÊMICA DE EXTREMIDADES (Dedos, ponta do nariz e orelhas secam e morrem se associada a doses altas de nora)', 'Infarto Intestinal (Isquemia mesentérica)', 'Isquemia miocárdica aguda coronariana'], es: ['NECROSIS ISQUÉMICA DE EXTREMIDADES', 'Infarto Intestinal por isquemia mesentérica', 'Isquemia miocárdica'] },
+    contraindications: {
+      absolute: { pt: ['Hipersensibilidade conhecida à vasopressina sintética'], es: ['Hipersensibilidad conocida a la vasopresina sintética'] },
+      relative: { pt: ['Doença arterial coronariana severa não revascularizada (risco de espasmo das pontes de safena/artérias)'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+      warning: { pt: 'A ARMADILHA DA TITULAÇÃO (NÃO AFOGUE O PACIENTE): Um erro comum de residentes de UTI é tentar "titular" a vasopressina na bomba igual fazem com a noradrenalina quando a pressão cai. Se você subir a vasopressina para mais de 0,04 UI/min, as artérias do coração e do intestino se fecham por completo, causando infarto do miocárdio e gangrena do intestino de forma fatal. Mantenha a dose fixa.', es: 'LA TRAMPA DE LA TITULACIÓN: No se debe titular como la noradrenalina. Si se aumenta la dosis a más de 0,04 UI/min, las arterias del corazón e intestino se cierran por completo, causando infarto y gangrena intestinal fatal. Mantenga dosis fija.' }
+    },
+    references: {
+      pt: 'VASST Trial (NEJM 2008 - Vasopressin in Septic Shock); Surviving Sepsis Campaign Guidelines 2021; Manual de Emergências Clínicas USP.',
+      es: 'VASST Trial (NEJM 2008); Guías de la Surviving Sepsis Campaign; Tratado de Cuidados Intensivos de la SATI.'
+    }
+  }
+
+}); /* fim Object.assign EMERGENCIA_DRUGS_DB — BUILD 429 (Vasoativos UTI: noradrenalina + adrenalina + dobutamina + dopamina + vasopressina) */
+
 })();
