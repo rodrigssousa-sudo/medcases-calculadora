@@ -42640,40 +42640,49 @@
 
     /* ── SILDENAFILA ────────────────────────────────────────────────────── */
     "sildenafila": {
-      name: { pt: 'Sildenafila', es: 'Sildenafilo' },
+      name: { pt: 'Sildenafila (Citrato de)', es: 'Sildenafilo (Citrato de)' },
       category: 'cardio',
-      class: { pt: 'Inibidor da Fosfodiesterase tipo 5 (PDE5)', es: 'Inhibidor de la Fosfodiesterasa tipo 5 (PDE5)' },
+      class: { pt: 'Inibidor Seletivo da Fosfodiesterase Tipo 5 (iPDE5) / Vasodilatador Pulmonar', es: 'Inhibidor Selectivo de la Fosfodiesterasa Tipo 5 (iPDE5) / Vasodilatador Pulmonar' },
       indications: {
-        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunção erétil'],
-        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunción eréctil']
+        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS, para melhora da capacidade de exercício)', 'Disfunção Erétil masculina'],
+        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunción Eréctil masculina']
       },
-      commercialNames: { br: ['Revatio', 'Viagra'], ar: ['Revatio', 'Viagra'] },
-      presentation: { pt: ['Comprimidos 20 mg', '50 mg', '100 mg', 'Solução injetável 10 mg/12,5 mL'], es: ['Comprimidos 20 mg', '50 mg', '100 mg', 'Solución inyectable 10 mg/12,5 mL'] },
+      commercialNames: { br: ['Revatio', 'Viagra', 'Vivanza'], ar: ['Revatio', 'Viagra', 'Magnus', 'Sildefil'] },
+      presentation: { pt: ['Comprimidos 20 mg (HAP)', 'Comprimidos 25 mg, 50 mg e 100 mg (Disfunção Erétil)', 'Solução injetável 10 mg/12,5 mL'], es: ['Comprimidos 20 mg (HAP)', 'Comprimidos 25 mg, 50 mg y 100 mg (Disfunción Eréctil)', 'Solución inyectable 10 mg/12,5 mL'] },
       mechanism: {
-        pt: 'Inibe especificamente a PDE5, enzima responsável pela degradação do GMPc nos tecidos vasculares. O acúmulo de GMPc amplifica a via do óxido nítrico (NO), resultando em relaxamento do músculo liso e vasodilatação (potente no leito pulmonar e corpo cavernoso).',
-        es: 'Inhibe específicamente la PDE5, enzima responsable de la degradación del GMPc en los tejidos vasculares. La acumulación de GMPc amplifica la vía del óxido nítrico (NO), resultando en relajación del músculo liso y vasodilatación (potente en el lecho pulmonar y cuerpo cavernoso).'
+        pt: 'O Protetor do GMP cíclico. A Sildenafila inibe seletivamente a enzima Fosfodiesterase Tipo 5 (PDE5), responsável por destruir o GMP cíclico (GMPc) nos corpos cavernosos do pênis e nas artérias do pulmão. Ao travar a destruição do GMPc, o óxido nítrico atua por muito mais tempo, gerando relaxamento do músculo liso, dilatação arterial vigorosa e consequente influxo de sangue (ereção) ou queda da pressão pulmonar (HAP).',
+        es: 'Inhibidor selectivo de la PDE5. Impide la degradación del GMP cíclico (GMPc) en las células musculares lisas de los cuerpos cavernosos y la vasculatura pulmonar. Esto prolonga el efecto vasodilatador del Óxido Nítrico, promoviendo la erección o disminuyendo la resistencia vascular pulmonar.'
       },
       dose: {
         adult: {
           standard: {
-            pt: 'HAP: 20 mg VO 3x/dia (a cada 8h). (Doses maiores, 40-80 mg 3x/dia, usadas off-label em HAP refratária). IV: 10 mg 3x/dia.',
-            es: 'HAP: 20 mg VO 3 veces/día (cada 8h). (Dosis mayores, 40-80 mg 3 veces/día, usadas off-label en HAP refractaria). IV: 10 mg 3 veces/día.'
+            pt: 'HAP: 20 mg VO 3x/dia (a cada 8h). (Doses maiores, 40-80 mg 3x/dia, usadas off-label em HAP refratária). IV: 10 mg 3x/dia. Disfunção Erétil: 50 mg VO dose única cerca de 1 hora ANTES da atividade sexual (ajustar 25-100 mg conforme eficácia; máximo 1 tomada/dia).',
+            es: 'HAP: 20 mg VO 3 veces/día (cada 8h). IV: 10 mg 3 veces/día. Disfunción Eréctil: 50 mg VO 1 hora ANTES de la actividad sexual (ajustar 25-100 mg; máximo 1 vez/día).'
           }
         },
-        pediatric: null
+        pediatric: {
+          standard: {
+            pt: 'Uso especializado off-label em UTI neonatal/pediátrica para crises de hipertensão pulmonar: 0,5 a 2 mg/kg/dose.',
+            es: 'Uso especializado en HAP pediátrica bajo cálculo estricto: 0,5 a 2 mg/kg/dosis.'
+          }
+        }
       },
-      administration: { pt: ['Com ou sem alimentos. (Refeições hiperlipídicas retardam a absorção).'], es: ['Con o sin alimentos. (Las comidas ricas en grasas retrasan la absorción).'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose em HAP.', es: 'Sin necesidad de ajuste de dosis en HAP.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Child-Pugh C: Não estudado. Cautela em disfunção grave.', es: 'Child-Pugh C: No estudiado. Precaución en disfunción grave.' } },
-      commonAdverseEffects: { pt: ['Cefaleia', 'Rubor facial', 'Epistaxe', 'Dispepsia', 'Alterações visuais (cianopsia - visão azulada)'], es: ['Cefalea', 'Rubor facial', 'Epistaxis', 'Dispepsia', 'Alteraciones visuales (cianopsia - visión azulada)'] },
-      dangerousAdverseEffects: { pt: ['Hipotensão grave', 'Neuropatia Óptica Isquêmica Anterior Não Arterítica (NOIA-NA)', 'Priapismo', 'Perda súbita de audição'], es: ['Hipotensión grave', 'Neuropatía Óptica Isquémica Anterior No Arterítica (NOIA-NA)', 'Priapismo', 'Pérdida súbita de audición'] },
+      administration: { pt: ['HAP: Com ou sem alimentos. Disfunção erétil: Preferir estômago vazio — refeições hiperlipídicas retardam o início do efeito em até 1 hora. Não usar mais de uma vez ao dia.'], es: ['HAP: Con o sin alimentos. Disfunción eréctil: Preferiblemente en ayunas, ya que comidas grasas retrasan el efecto.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr < 30 mL/min: iniciar com 25 mg para disfunção erétil (clearance reduzido). Sem ajuste necessário em HAP.', es: 'ClCr < 30 mL/min: iniciar con 25 mg en disfunción eréctil. Sin ajuste en HAP.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizada pelo CYP3A4. Child-Pugh A/B: iniciar com 25 mg. Child-Pugh C: não estudado, cautela extrema.', es: 'Metabolizada por CYP3A4. Child-Pugh A/B: iniciar con 25 mg. Child-Pugh C: no estudiado, precaución extrema.' } },
+      commonAdverseEffects: { pt: ['Cefaleia latejante e Rubor facial (calor e vermelhidão)', 'Epistaxe', 'Dispepsia (azia)', 'Cianopsia (visão azulada por inibição leve de PDE6 da retina)', 'Congestão nasal'], es: ['Cefalea y Rubor facial', 'Epistaxis', 'Dispepsia', 'Cianopsia (visión azulada por inhibición de PDE6 retiniana)', 'Congestión nasal'] },
+      dangerousAdverseEffects: { pt: ['Colapso circulatório severo por hipotensão fulminante (especialmente com nitratos)', 'PRIAPISMO — ereção dolorosa prolongada > 4 horas (emergência urológica: isquemia e fibrose permanente)', 'Neuropatia Óptica Isquêmica Anterior Não Arterítica (NOIA-NA)', 'Perda auditiva súbita bilateral'], es: ['Colapso circulatorio por hipotensión fulminante (especialmente con nitratos)', 'PRIAPISMO — erección dolorosa > 4 horas (urgencia urológica: isquemia y fibrosis permanente)', 'Neuropatía Óptica Isquémica Anterior No Arterítica (NOIA-NA)', 'Pérdida auditiva súbita'] },
       contraindications: {
-        absolute: { pt: ['Uso concomitante de NITRATOS de qualquer forma', 'Uso concomitante com estimuladores da sGC (riociguate)', 'Doença veno-oclusiva pulmonar (risco de edema pulmonar fatal)'], es: ['Uso concomitante de NITRATOS de cualquier forma', 'Uso concomitante con estimuladores de sGC (riociguat)', 'Enfermedad venooclusiva pulmonar (riesgo de edema pulmonar fatal)'] },
-        relative: { pt: ['Hipotensão basal grave', 'Retinite pigmentosa'], es: ['Hipotensión basal grave', 'Retinitis pigmentosa'] }
+        absolute: { pt: ['USO CONCOMITANTE DE QUALQUER NITRATO (Nitroglicerina, Isossorbida) — PROIBIDO POR RISCO DE MORTE', 'Uso concomitante com estimuladores da sGC (riociguate)', 'Doença veno-oclusiva pulmonar (risco de edema pulmonar fatal)', 'Histórico de NOIA-NA (Neuropatia Óptica Isquêmica Anterior)'], es: ['USO CONCOMITANTE DE NITRATOS — PROHIBIDO POR RIESGO DE MUERTE', 'Uso con estimuladores de sGC (riociguat)', 'Enfermedad venooclusiva pulmonar', 'Antecedentes de NOIA-NA'] },
+        relative: { pt: ['Hipotensão basal grave (< 90/50 mmHg)', 'Retinite pigmentosa', 'IAM ou AVC nos últimos 6 meses'] }
       },
       safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'Risco de colapso circulatório fatal se combinado com doadores de NO (nitratos). Aguardar 24h pós-sildenafila para dar nitrato.', es: 'Riesgo de colapso circulatorio fatal si se combina con donantes de NO (nitratos). Esperar 24h pos-sildenafilo para dar nitrato.' }
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DO PRIAPISMO E DO COLAPSO: (1) PRIAPISMO — Se a ereção ultrapassar 4 horas, o sangue "aprisionado" perde oxigênio, causando isquemia, fibrose e impotência permanente. Exige aspiração com agulha e vasoconstritor (Adrenalina/Fenilefrina) no pronto-socorro. (2) COLAPSO por NITRATOS — Aguardar mínimo 24h após a última dose de sildenafila antes de administrar qualquer nitrato.', es: 'ALERTA DE PRIAPISMO Y COLAPSO: (1) PRIAPISMO — Si la erección supera las 4 horas, causa isquemia y fibrosis permanente. Requiere aspiración con aguja y vasoconstrictor urgente. (2) COLAPSO por NITRATOS — Esperar mínimo 24h tras la última dosis de sildenafilo antes de administrar nitratos.' }
+      },
+      references: {
+        pt: 'SUPER Trial (Sildenafil Use in Pulmonary Arterial Hypertension); Diretrizes AHA/ESC para Hipertensão Pulmonar (2022); FDA Prescribing Info Viagra/Revatio.',
+        es: 'SUPER Trial; Directrices AHA/ESC Hipertensión Pulmonar 2022; FDA Prescribing Information Viagra/Revatio.'
       }
     },
 
@@ -42681,38 +42690,47 @@
     "tadalafila": {
       name: { pt: 'Tadalafila', es: 'Tadalafilo' },
       category: 'cardio',
-      class: { pt: 'Inibidor da Fosfodiesterase tipo 5 (PDE5)', es: 'Inhibidor de la Fosfodiesterasa tipo 5 (PDE5)' },
+      class: { pt: 'Inibidor da Fosfodiesterase Tipo 5 de Ação Prolongada (iPDE5)', es: 'Inhibidor de la Fosfodiesterasa Tipo 5 de Acción Prolongada (iPDE5)' },
       indications: {
-        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunção erétil', 'Hiperplasia Prostática Benigna (HPB)'],
-        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunción eréctil', 'Hiperplasia Prostática Benigna (HPB)']
+        pt: ['Hipertensão Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunção Erétil', 'Sintomas urinários da Hiperplasia Prostática Benigna (HPB)'],
+        es: ['Hipertensión Arterial Pulmonar (HAP - Grupo 1 OMS)', 'Disfunción Eréctil', 'Síntomas de Hiperplasia Prostática Benigna (HPB)']
       },
-      commercialNames: { br: ['Adcirca', 'Cialis'], ar: ['Adcirca', 'Cialis'] },
-      presentation: { pt: ['Comprimidos 5 mg', '20 mg'], es: ['Comprimidos 5 mg', '20 mg'] },
+      commercialNames: { br: ['Adcirca', 'Cialis', 'Tada'], ar: ['Adcirca', 'Cialis', 'Magnus 36', 'Tadalafilbeta'] },
+      presentation: { pt: ['Comprimidos revestidos 5 mg (uso diário — HPB/Disfunção Erétil)', 'Comprimidos revestidos 20 mg (uso sob demanda ou HAP)'], es: ['Comprimidos recubiertos 5 mg (uso diario)', 'Comprimidos recubiertos 20 mg (uso a demanda o HAP)'] },
       mechanism: {
-        pt: 'Inibidor reversível e seletivo da PDE5. Idêntico à sildenafila, mas possui uma meia-vida substancialmente mais longa (17,5 horas vs 4 horas), permitindo administração em dose única diária.',
-        es: 'Inhibidor reversible y selectivo de la PDE5. Idéntico al sildenafilo, pero posee una vida media sustancialmente más larga (17,5 horas vs 4 horas), permitiendo administración en dosis única diaria.'
+        pt: 'A "Pílula do Fim de Semana". Mecanismo idêntico ao da Sildenafila (bloqueio da PDE5 e preservação do GMPc via NO), mas com estrutura molecular que confere meia-vida biológica de 17,5 horas — efeito estendido por até 36 horas. Possui também excelente seletividade: bloqueia muito menos a PDE6 da retina (menor cianopsia). A grande desvantagem é o bloqueio colateral da PDE11 nos músculos esqueléticos, causando mialgia lombar.',
+        es: 'Inhibidor selectivo de la PDE5. Idéntico mecanismo, pero con estructura molecular que otorga vida media de 17,5 horas, prolongando el efecto hasta 36 horas ("pastilla del fin de semana"). Mayor selectividad que sildenafilo sobre la PDE6 retiniana. El bloqueo colateral de la PDE11 muscular explica la mialgia lumbar característica.'
       },
       dose: {
         adult: {
           standard: {
-            pt: 'HAP: 40 mg VO 1x/dia (dois comprimidos de 20 mg tomados juntos). Não dividir a dose.',
-            es: 'HAP: 40 mg VO 1 vez/día (dos comprimidos de 20 mg tomados juntos). No dividir la dosis.'
+            pt: 'HAP: 40 mg VO 1x/dia (dois comprimidos de 20 mg juntos). Disfunção Erétil (sob demanda): 20 mg VO 30-40 min antes do sexo. Uso Diário (HPB ou Disfunção contínua): 5 mg VO 1x/dia, sempre no mesmo horário.',
+            es: 'HAP: 40 mg VO 1 vez/día (dos comprimidos de 20 mg). Disfunción Eréctil (demanda): 20 mg VO 30-40 min antes. Uso Diario (HPB): 5 mg VO 1 vez/día.'
           }
         },
-        pediatric: null
+        pediatric: {
+          standard: {
+            pt: 'Não indicado.',
+            es: 'No indicado.'
+          }
+        }
       },
-      administration: { pt: ['Independente das refeições.'], es: ['Independiente de las comidas.'] },
-      renalAdjustment: { required: true, message: { pt: 'ClCr 31-50: 20 mg/dia. ClCr < 30 ou Diálise: Evitar em HAP.', es: 'ClCr 31-50: 20 mg/día. ClCr < 30 o Diálisis: Evitar en HAP.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Child-Pugh A/B: Considerar 20 mg/dia. Child C: Evitar.', es: 'Child-Pugh A/B: Considerar 20 mg/día. Child C: Evitar.' } },
-      commonAdverseEffects: { pt: ['Cefaleia', 'Mialgia / Dor nas costas (mais comum que sildenafila devido à inibição leve da PDE11 do músculo esquelético)', 'Rubor'], es: ['Cefalea', 'Mialgia / Dolor de espalda (más común que sildenafilo debido a inhibición leve de PDE11 del músculo esquelético)', 'Rubor'] },
-      dangerousAdverseEffects: { pt: ['Hipotensão severa', 'Priapismo', 'Alterações visuais isquêmicas'], es: ['Hipotensión severa', 'Priapismo', 'Alteraciones visuales isquémicas'] },
+      administration: { pt: ['Pode ser tomado COM OU SEM alimentos. As refeições gordurosas NÃO alteram a absorção da tadalafila (grande vantagem sobre a sildenafila). Uso diário de 5 mg: tomar sempre no mesmo horário do dia.'], es: ['Puede tomarse CON O SIN alimentos. Las comidas grasas NO alteran la absorción (gran ventaja sobre sildenafilo). Uso diario de 5 mg: tomar siempre a la misma hora.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr 31-50 mL/min: máximo 20 mg/dose a cada 48h. ClCr < 30 mL/min ou diálise: máximo 5 mg a demanda; uso diário contraindicado. Evitar em HAP com ClCr < 30.', es: 'ClCr 31-50 mL/min: máx. 20 mg cada 48h. ClCr < 30 mL/min o diálisis: máx. 5 mg a demanda; uso diario contraindicado en HAP.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Child-Pugh A/B: considerar 20 mg/dia (disfunção erétil) ou cautela em HAP. Child-Pugh C: evitar uso.', es: 'Child-Pugh A/B: considerar 20 mg/día. Child-Pugh C: evitar.' } },
+      commonAdverseEffects: { pt: ['Mialgia severa e Dor lombar (por inibição leve de PDE11 nos músculos esqueléticos — ~10% dos usuários)', 'Cefaleia', 'Dispepsia', 'Congestão nasal', 'Rubor facial'], es: ['Mialgia severa y Dolor lumbar (por inhibición de PDE11 muscular — ~10% de usuarios)', 'Cefalea', 'Dispepsia', 'Congestión nasal', 'Rubor facial'] },
+      dangerousAdverseEffects: { pt: ['Colapso hemodinâmico com choque vasoplégico (especialmente com nitratos — janela de 48h)', 'Priapismo prolongado (> 4 horas)', 'Neuropatia óptica isquêmica anterior não-arterítica (NOIA-NA)', 'Hipotensão ortostática grave com alfa-bloqueadores'], es: ['Colapso hemodinámico con choque vasopléjico (con nitratos — ventana de 48h)', 'Priapismo prolongado (> 4 horas)', 'NOIA-NA', 'Hipotensión ortostática con bloqueadores alfa'] },
       contraindications: {
-        absolute: { pt: ['Uso de NITRATOS', 'Uso de Riociguate'], es: ['Uso de NITRATOS', 'Uso de Riociguat'] },
-        relative: { pt: ['Retinite pigmentosa', 'Uso de alfa-bloqueadores (exceto tansulosina em dose baixa)'], es: ['Retinitis pigmentosa', 'Uso de bloqueadores alfa (excepto tamsulosina en dosis baja)'] }
+        absolute: { pt: ['USO CONCOMITANTE DE NITRATOS ORAIS OU INJETÁVEIS (Isordil, Monocordil, Nitroglicerina) — JANELA DE 48 HORAS', 'Uso de Riociguate', 'Angina instável ativa ou ICC severa NYHA IV'], es: ['USO CONCOMITANTE DE NITRATOS — VENTANA DE 48 HORAS', 'Uso de Riociguat', 'Angina inestable activa o ICC severa NYHA IV'] },
+        relative: { pt: ['Retinite pigmentosa', 'Associação com alfa-bloqueadores (ex: Doxazosina) — risco de hipotensão postural'] }
       },
       safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'Devido à meia-vida longa, NITRATOS estão estritamente contraindicados por 48 HORAS após a última dose de tadalafila (diferente das 24h da sildenafila).', es: 'Debido a la vida media larga, los NITRATOS están estrictamente contraindicados por 48 HORAS tras la última dosis de tadalafilo (diferente a las 24h de sildenafilo).' }
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O PERIGO DA DOR NAS COSTAS (MIALGIA por PDE11): A tadalafila bloqueia colateralmente a PDE11 presente nos músculos esqueléticos. Cerca de 10% dos usuários desenvolvem dor lombar e nas coxas intensa 1-2 dias após a dose, confundindo com problema de coluna — cede com analgésicos simples. E NITRATOS: aguardar 48 HORAS (e não 24h) após a última dose de tadalafila antes de qualquer nitrato, pela meia-vida prolongada.', es: 'EL ALERTA DE LA MIALGIA (PDE11): La tadalafilo inhibe secundariamente la PDE11 muscular. El 10% de los pacientes presenta dolor lumbar intenso 1-2 días tras la dosis, confundiéndolo con problemas de columna — cede con analgésicos. Y NITRATOS: esperar 48 HORAS tras la última dosis antes de administrar nitratos.' }
+      },
+      references: {
+        pt: 'PHIRST Trial (Tadalafil in Pulmonary Arterial Hypertension); FDA Clinical Data Adcirca/Cialis; Diretrizes American Urological Association (AUA); ESC Guidelines PAH 2022.',
+        es: 'PHIRST Trial; FDA Clinical Data (Adcirca/Cialis); Directrices AUA; ESC Guidelines PAH 2022.'
       }
     }
 

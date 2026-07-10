@@ -294,4 +294,95 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
 
 }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 430 (IBPs VO: omeprazol + pantoprazol + esomeprazol + lansoprazol) */
 
+/* BUILD 431 — Imunobiológicos Gastroenterológicos (Anticorpos Monoclonais) */
+Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
+
+  "infliximabe": {
+    name: { pt: 'Infliximabe', es: 'Infliximab' },
+    category: 'gastroenterologia',
+    class: { pt: 'Anticorpo Monoclonal Quimérico Anti-TNF-alfa / Imunobiológico', es: 'Anticuerpo Monoclonal Quimérico Anti-TNF-alfa / Inmunobiológico' },
+    indications: {
+      pt: ['Doença de Crohn moderada a grave ativa (inclusive fistulizante) refratária a corticoides e imunomoduladores', 'Retocolite Ulcerativa (RCU) severa', 'Artrite Reumatóide moderada a grave', 'Espondilite Anquilosante', 'Artrite Psoriásica', 'Psoríase em placas grave'],
+      es: ['Enfermedad de Crohn moderada a severa activa (fistulizante) refractaria', 'Colitis Ulcerosa (CU) severa', 'Artritis Reumatoide moderada a severa', 'Espondilitis Anquilosante', 'Artritis Psoriásica', 'Psoriasis en placas grave']
+    },
+    commercialNames: { br: ['Remicade', 'Remsima (biossimilar)', 'Flixabi (biossimilar)'], ar: ['Remicade', 'Remsima'] },
+    presentation: { pt: ['Frasco-ampola com pó liofilizado para infusão IV 100 mg (reconstituir em SF 0,9%)'], es: ['Vial con polvo liofilizado IV 100 mg (reconstituir en SF 0,9%)'] },
+    mechanism: {
+      pt: 'O Neutralizador do TNF — Destrutor do Granuloma. Anticorpo monoclonal quimérico (componente murino + humano) que se liga com altíssima afinidade às formas solúvel e transmembrana do Fator de Necrose Tumoral alfa (TNF-alfa) — o principal mediador inflamatório destrutivo no intestino e nas articulações. Ao sequestrar o TNF, interrompe a cascata inflamatória, permitindo cicatrização mucosa. RISCO CRÍTICO: o TNF-alfa também organiza o granuloma que aprisiona o Mycobacterium tuberculosis nos pulmões. Ao desligar o TNF, o granuloma se dissolve e o bacilo acorda.',
+      es: 'Anticuerpo monoclonal quimérico que neutraliza el TNF-alfa soluble y transmembranal — principal mediador inflamatorio en intestino y articulaciones. Al secuestrar el TNF, interrumpe la cascada inflamatoria permitiendo la cicatrización mucosa. RIESGO CRÍTICO: el TNF-alfa mantiene el granuloma que encarcela al Mycobacterium tuberculosis. Al bloquearlo, el granuloma se disuelve y el bacilo despierta.'
+    },
+    dose: {
+      adult: {
+        pt: 'Indução: 5 mg/kg IV (infusão lenta de 2h) nas semanas 0, 2 e 6. Manutenção: 5 mg/kg IV a cada 8 semanas. Escalonamento por perda de resposta (Crohn): até 10 mg/kg a cada 8 semanas.',
+        es: 'Inducción: 5 mg/kg IV (infusión de 2h) en las semanas 0, 2 y 6. Mantenimiento: 5 mg/kg IV cada 8 semanas. Escalada por pérdida de respuesta (Crohn): hasta 10 mg/kg cada 8 semanas.'
+      },
+      pediatric: {
+        pt: 'Aprovado em > 6 anos para Doença de Crohn e RCU graves: 5 mg/kg IV — mesmo esquema de indução e manutenção do adulto.',
+        es: 'Aprobado en niños > 6 años con Crohn y CU graves: 5 mg/kg IV — mismo esquema de inducción y mantenimiento.'
+      }
+    },
+    administration: { pt: ['EXCLUSIVAMENTE INFUSÃO INTRAVENOSA HOSPITALAR LENTA (mínimo 2 horas de gotejamento). Monitoramento contínuo de sinais vitais por enfermagem durante toda a infusão pelo risco de reações infusionais agudas. Nunca administrar em bolus.'], es: ['EXCLUSIVAMENTE INFUSIÓN INTRAVENOSA HOSPITALARIA LENTA (mínimo 2 horas). Monitoreo continuo de signos vitales. Nunca en bolo.'] },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste — molécula eliminada por catabolismo proteico celular, não por depuração renal.', es: 'Sin ajuste necesario — eliminación por catabolismo proteico celular.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Não estudado sistematicamente em hepatopatias graves. Monitorar enzimas hepáticas.', es: 'No estudiado en hepatopatías graves. Monitorear enzimas hepáticas.' } },
+    commonAdverseEffects: { pt: ['Infecções respiratórias altas recorrentes (sinusite, faringite)', 'Reação infusional febril leve (calafrios, prurido, urticária durante a infusão)', 'Cefaleia', 'Dor abdominal'], es: ['Infecciones respiratorias altas recurrentes', 'Reacción infusional febril leve (escalofríos, prurito, urticaria)', 'Cefalea', 'Dolor abdominal'] },
+    dangerousAdverseEffects: { pt: ['REATIVAÇÃO DE TUBERCULOSE LATENTE — disseminação pulmonar (miliar), pleural ou extrapulmonar fatal', 'Choque anafilático grave durante a infusão', 'Insuficiência Cardíaca Congestiva nova ou agravada (raro, dose-dependente > 5 mg/kg)', 'Síndrome Lúpus-like induzida por droga', 'Linfoma (risco aumentado em longo prazo)'], es: ['REACTIVACIÓN DE TUBERCULOSIS LATENTE — miliar, pleural o extrapulmonar fatal', 'Choque anafiláctico durante la infusión', 'Insuficiencia Cardíaca Congestiva agravada', 'Síndrome Lupus-like', 'Linfoma (riesgo aumentado a largo plazo)'] },
+    contraindications: {
+      absolute: { pt: ['Tuberculose ativa não tratada ou outras infecções graves sistêmicas (Sepse, Abscesso)', 'Insuficiência Cardíaca Congestiva moderada a grave (NYHA III/IV)', 'Hipersensibilidade documentada ao infliximabe'], es: ['Tuberculosis activa no tratada o infecciones graves no controladas', 'ICC moderada/severa NYHA III/IV', 'Hipersensibilidad documentada al infliximab'] },
+      relative: { pt: ['Histórico de residência em áreas endêmicas de TB sem rastreio prévio completo (PPD/IGRA + RX tórax obrigatórios)', 'Infecções crônicas ativas (hepatite B — risco de reativação viral)', 'Desmielinização do SNC (esclerose múltipla)'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+      warning: { pt: 'O DESPERTAR DA TUBERCULOSE (PPD/IGRA OBRIGATÓRIO): O TNF-alfa é a proteína que o organismo usa para construir o "granuloma" — a gaiola celular que mantém o bacilo de Koch preso e dormente no pulmão. Quando o Remicade desliga o TNF, a gaiola quebra. O bacilo acorda e causa Tuberculose Miliar explosiva e fatal. É OBRIGATÓRIO por protocolo clínico e legal realizar teste PPD/IGRA E Raio-X de tórax ANTES da primeira dose. Se IGRA positivo → tratamento profilático com Isoniazida por 9 meses antes de iniciar o biológico.', es: 'EL DESPERTAR DE LA TUBERCULOSIS (PPD/IGRA OBLIGATORIO): El TNF-alfa mantiene el granuloma que encarcela al bacilo de Koch en el pulmón. Al bloquearlo, el granuloma se rompe y el bacilo causa Tuberculosis Miliar letal. ES OBLIGATORIO realizar PPD/IGRA Y Radiografía de tórax ANTES de la primera dosis. IGRA positivo → profilaxis con Isoniazida 9 meses antes del inicio.' }
+    },
+    references: {
+      pt: 'ACCENT I Trial (Crohn fistulizante - NEJM 2002); ACT 1 e 2 Trials (Colite Ulcerosa); Diretrizes ECCO (European Crohn\'s and Colitis Organisation); Protocolo do Ministério da Saúde do Brasil para uso de biológicos em DII.',
+      es: 'ACCENT I Trial (NEJM 2002); ACT 1 & 2 Trials; Directrices ECCO; Protocolo Ministerio de Salud Argentina/Brasil para biológicos en EII.'
+    }
+  },
+
+  "vedolizumabe": {
+    name: { pt: 'Vedolizumabe', es: 'Vedolizumab' },
+    category: 'gastroenterologia',
+    class: { pt: 'Anticorpo Monoclonal Integrina-Antagonista / Imunobiológico Gut-Specific (Seletivo Gastrointestinal)', es: 'Anticuerpo Monoclonal Integrina-Antagonista / Inmunobiológico Gut-Specific (Selectivo Gastrointestinal)' },
+    indications: {
+      pt: ['Doença de Crohn moderada a grave ativa em adultos que falharam ou foram intolerantes a terapia convencional (corticoides, imunomoduladores) ou a anti-TNF', 'Retocolite Ulcerativa (RCU) moderada a grave com falha ou intolerância à terapia convencional ou anti-TNF'],
+      es: ['Enfermedad de Crohn moderada a severa activa refractaria a terapia convencional o anti-TNF', 'Colitis Ulcerosa (CU) moderada a severa refractaria a terapia convencional o anti-TNF']
+    },
+    commercialNames: { br: ['Entyvio'], ar: ['Entyvio'] },
+    presentation: { pt: ['Frasco-ampola com pó liofilizado IV 300 mg', 'Caneta injetável Subcutânea 108 mg (manutenção após indução IV)'], es: ['Vial con polvo liofilizado IV 300 mg', 'Pluma Subcutánea 108 mg (mantenimiento tras inducción IV)'] },
+    mechanism: {
+      pt: 'O Guarda de Trânsito do Intestino — Segurança Sistêmica Total. Anticorpo monoclonal humanizado "gut-specific". Liga-se especificamente à integrina alfa4-beta7 (α4β7) na superfície dos linfócitos T inflamatórios ativados. Ao bloquear essa integrina, os linfócitos não conseguem ler o "endereço" da parede intestinal (MAdCAM-1) e ficam proibidos de entrar no trato gastrointestinal. A inflamação para NO INTESTINO sem desligar a imunidade sistêmica (pulmão, cérebro, rim permanecem totalmente protegidos). Taxa de infecções oportunistas = placebo.',
+      es: 'Anticuerpo monoclonal humanizado "gut-specific". Se une específicamente a la integrina α4β7 en la superficie de los linfocitos T inflamatorios, bloqueando su unión con MAdCAM-1 del endotelio intestinal. Impide mecánicamente que los linfocitos infiltren la mucosa gastrointestinal sin afectar la inmunidad sistémica. Tasa de infecciones oportunistas = placebo.'
+    },
+    dose: {
+      adult: {
+        pt: 'Indução IV: 300 mg via intravenosa (infusão em 30 minutos) nas semanas 0, 2 e 6. Manutenção IV: 300 mg IV a cada 8 semanas. Alternativa de manutenção subcutânea: 108 mg SC a cada 2 semanas (após completar pelo menos as 2 primeiras infusões IV).',
+        es: 'Inducción IV: 300 mg IV (infusión en 30 minutos) en las semanas 0, 2 y 6. Mantenimiento IV: 300 mg IV cada 8 semanas. Mantenimiento SC alternativo: 108 mg SC cada 2 semanas (tras las 2 primeras infusiones IV).'
+      },
+      pediatric: {
+        pt: 'Não indicado em menores de 18 anos (sem aprovação regulatória).',
+        es: 'No indicado en menores de 18 años.'
+      }
+    },
+    administration: { pt: ['Infusão IV: reconstituída e diluída em SF 0,9%, infundida em 30 minutos em ambiente clínico controlado. Não administrar em bolus. Via subcutânea: autoaplicação após treinamento, alternando locais (abdômen, coxa, braço).'], es: ['Infusión IV: diluida en SF 0,9%, administrada en 30 minutos en ambiente clínico. No en bolo. Subcutáneo: autoinyección tras entrenamiento.'] },
+    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose — eliminação por catabolismo proteico, independente da função renal.', es: 'Sin ajuste necesario.' } },
+    hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin ajuste necesario.' } },
+    commonAdverseEffects: { pt: ['Nasofaringite leve', 'Cefaleia', 'Artralgia (dor nas articulações)', 'Náusea', 'Reação no local da injeção (SC)'], es: ['Nasofaringitis leve', 'Cefalea', 'Artralgia', 'Náusea', 'Reacción en el sitio de inyección (SC)'] },
+    dangerousAdverseEffects: { pt: ['Reação de hipersensibilidade infusional anafilática (raro)', 'Infecções oportunistas gastrointestinais (Clostridium difficile)', 'Risco teórico de Leucoencefalopatia Multifocal Progressiva (PML) — sem casos confirmados com vedolizumabe'], es: ['Reacción de hipersensibilidad infusional anafiláctica (raro)', 'Infecciones oportunistas gastrointestinales', 'Riesgo teórico de LMP — sin casos confirmados con vedolizumab'] },
+    contraindications: {
+      absolute: { pt: ['Infecções sistêmicas graves ativas e não controladas (Sepse, tuberculose ativa)'], es: ['Infecciones sistémicas graves activas no controladas'] },
+      relative: { pt: ['Histórico de Leucoencefalopatia Multifocal Progressiva (LMP) — risco teórico por relação com classe integrina-antagonista (natalizumabe)', 'Tuberculose latente não tratada (menor risco que anti-TNF, mas rastreio recomendado)'] }
+    },
+    safetyFlags: {
+      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+      warning: { pt: 'A SEGURANÇA DO BIOLÓGICO FOCADO (GUT-SPECIFIC): Enquanto o Infliximabe desliga a imunidade do corpo inteiro e provoca reativação de tuberculose, o Vedolizumabe atua como um bisturi de alvo: bloqueia a inflamação APENAS no intestino. A taxa de infecções oportunistas pulmonares e sistêmicas com o Entyvio é estatisticamente igual à de um placebo. É o biológico de escolha para idosos frágeis, imunossuprimidos ou em regiões de alta prevalência de tuberculose.', es: 'LA SEGURIDAD DEL BIOLÓGICO ENFOCADO (GUT-SPECIFIC): A diferencia del infliximab que suprime toda la inmunidad, vedolizumab actúa solo en el intestino. La tasa de infecciones pulmonares y sistémicas es estadísticamente igual a la del placebo. Es el biológico de elección para ancianos frágiles o en zonas de alta prevalencia de tuberculosis.' }
+    },
+    references: {
+      pt: 'GEMINI I Trial (RCU - NEJM 2013); GEMINI II Trial (Crohn - NEJM 2013); VISIBLE 1 e 2 Trials (formulação subcutânea); Diretrizes ECCO 2023; FBG/GEDIIB Consenso Biológicos em DII.',
+      es: 'GEMINI I & II Trials (NEJM 2013); VISIBLE 1 & 2 Trials; Directrices ECCO 2023; SAGE Consenso Biológicos en EII.'
+    }
+  }
+
+}); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 431 (Imunobiológicos: infliximabe + vedolizumabe) */
+
 })();

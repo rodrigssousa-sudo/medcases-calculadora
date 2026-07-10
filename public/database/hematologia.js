@@ -350,4 +350,52 @@
 
   }); /* fim Object.assign HEMATOLOGIA_DRUGS_DB — BUILD 428 Lote 2 (apixabana + dabigatrana + edoxabana) */
 
+  /* BUILD 431 — Betrixabana (DOAC Ultra Longa Duração — Profilaxia Estendida) */
+  Object.assign(window.HEMATOLOGIA_DRUGS_DB, {
+
+    "betrixabana": {
+      name: { pt: 'Betrixabana', es: 'Betrixabán' },
+      category: 'hematologia',
+      class: { pt: 'Anticoagulante Oral Direto / Inibidor do Fator Xa de Ultra Longa Duração', es: 'Anticoagulante Oral Directo / Inhibidor del Factor Xa de Ultra Larga Duración' },
+      indications: {
+        pt: ['Profilaxia estendida de Tromboembolismo Venoso (TVP/TEP) em pacientes adultos hospitalizados por doença médica aguda com alto risco de trombose e imobilização prolongada'],
+        es: ['Profilaxis extendida de Tromboembolismo Venoso (TVP/TEP) en pacientes hospitalizados por enfermedad médica aguda con inmovilización prolongada']
+      },
+      commercialNames: { br: ['Bevyxxa (Importação hospitalar)'], ar: ['Bevyxxa'] },
+      presentation: { pt: ['Cápsulas duras 40 mg e 80 mg'], es: ['Cápsulas duras 40 mg y 80 mg'] },
+      mechanism: {
+        pt: 'O Protetor de Longo Prazo da UTI. Inibe diretamente o Fator Xa ativo da cascata de coagulação. Possui meia-vida de eliminação de 37 horas e baixíssimo clearance renal (apenas 6% excretado pelos rins), com eliminação predominantemente biliar/fecal. Isso permite proteção antitrombótica estendida por 35-42 dias após a alta hospitalar, sem necessidade das dolorosas injeções diárias de enoxaparina.',
+        es: 'Inhibidor directo del Factor Xa. Posee vida media plasmática de ~37 horas y mínima dependencia de eliminación renal (solo 6% renal), con excreción predominantemente biliar/fecal. Permite mantener anticoagulación profiláctica ambulatoria sostenida por un mes tras el alta hospitalaria.'
+      },
+      dose: {
+        adult: {
+          pt: 'Fase de ataque hospitalar: 160 mg via oral em dose única no primeiro dia. Manutenção: 80 mg via oral, UMA VEZ ao dia, por 35 a 42 dias de curso total.',
+          es: 'Dosis de Carga: 160 mg vía oral el día 1. Mantenimiento: 80 mg vía oral, UNA VEZ al día, por 35 a 42 días.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['DEVE ser tomado rigorosamente JUNTO COM ALIMENTOS. Tomar em jejum altera a taxa de absorção de forma imprevisível, comprometendo a eficácia antitrombótica.'], es: ['DEBE tomarse estrictamente CON ALIMENTOS. Tomarlo en ayunas altera la absorción de forma impredecible.'] },
+      renalAdjustment: { required: true, message: { pt: 'ClCr 15-30 mL/min: reduzir ataque para 80 mg e manutenção para 40 mg ao dia. ClCr < 15 mL/min ou diálise: contraindicada.', es: 'ClCr 15-30 mL/min: carga 80 mg y mantenimiento 40 mg/día. ClCr < 15 mL/min o diálisis: contraindicada.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em insuficiência hepática moderada a grave (Child-Pugh B/C) pelo risco hemorrágico elevado e farmacocinética imprevisível.', es: 'Evitar en insuficiencia hepática moderada o severa (Child-Pugh B/C).' } },
+      commonAdverseEffects: { pt: ['Sangramentos menores (gengiva, pequenos cortes, hematomas)', 'Anemia por microperdas crônicas', 'Náusea'], es: ['Sangrados menores (encías, cortes, hematomas)', 'Anemia por micropérdidas', 'Náusea'] },
+      dangerousAdverseEffects: { pt: ['Hemorragia retroperitoneal catastrófica', 'HEMORRAGIA ESPINHAL / EPIDURAL — Alerta Caixa Preta FDA (punção lombar ou anestesia neuroaxial)', 'Hemorragia intracraniana'], es: ['Hemorragia retroperitoneal catastrófica', 'HEMORRAGIA ESPINAL / EPIDURAL — Caja Negra FDA (punción lumbar o anestesia neuroaxial)', 'Hemorragia intracraneal'] },
+      contraindications: {
+        absolute: { pt: ['Sangramento ativo patológico severo', 'Uso concomitante de outros anticoagulantes plenos ou heparinas não fracionadas'], es: ['Sangrado activo patológico severo', 'Uso concomitante de otros anticoagulantes o heparinas'] },
+        relative: { pt: ['Uso de inibidores potentes da P-gp (ex: Amiodarona, Verapamil) → exige redução de dose para a metade (40 mg manutenção)', 'Procedimentos neuroaxiais (raqui/epidural): suspender com antecedência adequada'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A CAIXA PRETA DA RAQUIANESTESIA: Se o paciente em uso de betrixabana precisar de anestesia espinhal (Raqui ou Epidural) ou punção lombar, deve haver suspensão com alta antecedência. Caso contrário, forma-se um hematoma gigante dentro do canal medular que esmaga os nervos, levando à paraplegia permanente. Sem antídoto específico disponível (Andexaneta Alfa tem uso limitado neste contexto).', es: 'CAJA NEGRA DEL HEMATOMA ESPINAL: Si el paciente requiere anestesia espinal o punción lumbar, suspender con alta antelación. De lo contrario, se forma un hematoma epidural que comprime la médula, causando paraplejía permanente. Sin antídoto específico disponible.' }
+      },
+      references: {
+        pt: 'APEX Trial (NEJM 2016 — Extended Thromboprophylaxis with Betrixaban in Acutely Ill Medical Patients); FDA Medical Review Data Bevyxxa; FDA Black Box Warning.',
+        es: 'APEX Trial (NEJM 2016); FDA Medical Review Data (Bevyxxa); FDA Black Box Warning.'
+      }
+    }
+
+  }); /* fim Object.assign HEMATOLOGIA_DRUGS_DB — BUILD 431 (betrixabana — DOAC Ultra Longa Duração / Profilaxia Estendida APEX Trial) */
+
 })();
