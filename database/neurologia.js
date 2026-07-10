@@ -4114,3 +4114,224 @@
 
   }); /* fim Object.assign BUILD 417 append */
 })();
+
+/* ─────────────────────────────────────────────────────────────────────────
+   BUILD 418 APPEND — Nefrologia: ESAs (Eritropoiese) & Calcitriol
+   IDs: epoetina_alfa | epoetina_beta | darbepoetina_alfa | mircera | calcitriol
+   ───────────────────────────────────────────────────────────────────────── */
+(function(){
+  if(!window.NEUROLOGIA_DRUGS_DB || Array.isArray(window.NEUROLOGIA_DRUGS_DB)) window.NEUROLOGIA_DRUGS_DB={};
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    "epoetina_alfa": {
+      name: { pt: 'Epoetina alfa', es: 'Epoetina alfa' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Agente Estimulador da Eritropoiese (ESA)', es: 'Agente Estimulador de la Eritropoyesis (ESA)' },
+      indications: {
+        pt: ['Anemia grave associada à Doença Renal Crônica (DRC)', 'Anemia induzida por quimioterapia no câncer não-mieloide', 'Prevenção de transfusões em cirurgias de grande porte'],
+        es: ['Anemia grave asociada a la Enfermedad Renal Crónica (ERC)', 'Anemia inducida por quimioterapia en cáncer no mieloide', 'Prevención de transfusiones en cirugías mayores']
+      },
+      commercialNames: { br: ['Hemax', 'Eprex', 'Eritromax'], ar: ['Hemax', 'Eprex'] },
+      presentation: { pt: ['Seringas preenchidas ou frasco-ampola SC/IV (2.000, 4.000, 10.000, 40.000 UI)'], es: ['Jeringas prellenadas o vial SC/IV (2.000, 4.000, 10.000, 40.000 UI)'] },
+      mechanism: {
+        pt: 'A "Ordem para a Medula". O rim saudável produz eritropoietina, o hormônio que manda a medula óssea fabricar glóbulos vermelhos (hemácias). Quando o rim morre, a produção de sangue para e o paciente fica com anemia profunda. A Epoetina Alfa é a cópia sintética idêntica (recombinante) desse hormônio. Injetada no sangue, ela viaja até a medula e reinicia a fabricação de hemácias, curando a anemia e evitando transfusões.',
+        es: 'La "Orden para la Médula". El riñón sano produce eritropoyetina. Al fallar el riñón, la producción de sangre para. La Epoetina Alfa es la copia sintética de esta hormona. Viaja a la médula y reinicia la fabricación de glóbulos rojos, curando la anemia.'
+      },
+      dose: {
+        adult: {
+          pt: 'DRC em Diálise: Iniciar com 50 UI/kg, 3 vezes por semana (IV ou SC). Titular a dose para manter a Hemoglobina (Hb) entre 10 e 11,5 g/dL — NUNCA acima de 12 g/dL.',
+          es: 'ERC en Diálisis: Iniciar con 50 UI/kg, 3 veces por semana (IV o SC). Titular para mantener Hemoglobina (Hb) entre 10 y 11,5 g/dL — NUNCA arriba de 12 g/dL.'
+        },
+        pediatric: {
+          pt: '50 UI/kg, 3 vezes na semana (Crianças frequentemente requerem doses proporcionais maiores que adultos para resposta).',
+          es: '50 UI/kg, 3 veces a la semana (Niños requieren dosis proporcionales mayores).'
+        }
+      },
+      administration: { pt: ['A via Subcutânea (SC) dói mais, mas economiza 30% da dose porque o corpo absorve melhor que na via intravenosa (IV).'], es: ['La vía Subcutánea (SC) duele más, pero ahorra 30% de la dosis porque el cuerpo la absorbe mejor que IV.'] },
+      renalAdjustment: { required: false, message: { pt: 'Feita para falência renal. Sem ajuste sistêmico.', es: 'Hecha para falla renal. Sin ajuste sistémico.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['HIPERTENSÃO ARTERIAL (A pressão sobe violentamente nas primeiras semanas porque o sangue "engrossa" com novas hemácias)', 'Dor nos ossos (a medula trabalhando)', 'Cefaleia'], es: ['HIPERTENSIÓN ARTERIAL (La presión sube violentamente porque la sangre se "espesa")', 'Dolor de huesos (la médula trabajando)', 'Cefalea'] },
+      dangerousAdverseEffects: { pt: ['TROMBOSE E INFARTO MACIÇO (Se o sangue ficar grosso demais)', 'Aplasia Pura de Células Vermelhas (O corpo cria anticorpos contra o remédio e destrói o próprio sangue — letal)'], es: ['TROMBOSIS E INFARTO MASIVO (Si la sangre se espesa demasiado)', 'Aplasia Pura de Células Rojas (El cuerpo crea anticuerpos contra la droga — letal)'] },
+      contraindications: {
+        absolute: { pt: ['Hipertensão arterial severa não controlada', 'Aplasia Pura de Células Vermelhas (PRCA) associada ao uso prévio de eritropoietina'], es: ['Hipertensión arterial severa no controlada', 'Aplasia Pura de Células Rojas (PRCA) previa'] },
+        relative: { pt: ['Pacientes com câncer cujo objetivo do tratamento é a cura (A epoetina pode fazer os tumores crescerem mais rápido)'], es: ['Pacientes con cáncer cuyo objetivo es la cura (La epoetina puede hacer crecer los tumores)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA HEMOGLOBINA DE 12: Anos atrás, os médicos tentavam usar a Epoetina para deixar a hemoglobina do renal igual a de uma pessoa normal (13 ou 14 g/dL). O resultado foi um banho de sangue: milhares de pacientes morreram de AVC e Infarto porque o sangue virou "gelatina". O limite estrito atual é manter a Hb em, no máximo, 11 a 11,5 g/dL.', es: 'LA ALERTA DE LA HEMOGLOBINA DE 12: Antes se intentaba normalizar la hemoglobina (13 o 14). El resultado: muertes masivas por ACV porque la sangre se volvió "gelatina". El límite estricto actual es 11 a 11,5 g/dL máximo.' }
+      }
+    },
+
+    "epoetina_beta": {
+      name: { pt: 'Epoetina beta', es: 'Epoetina beta' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Agente Estimulador da Eritropoiese (ESA)', es: 'Agente Estimulador de la Eritropoyesis (ESA)' },
+      indications: {
+        pt: ['Anemia renal (DRC) e Anemia oncológica'],
+        es: ['Anemia renal (ERC) y Anemia oncológica']
+      },
+      commercialNames: { br: ['Recormon'], ar: ['Recormon'] },
+      presentation: { pt: ['Seringas preenchidas SC/IV (2.000, 4.000, 30.000 UI e outras dosagens)'], es: ['Jeringas prellenadas SC/IV'] },
+      mechanism: {
+        pt: 'Quimicamente quase idêntica à Epoetina alfa, sendo também uma eritropoietina recombinante humana (rHuEPO), mas produzida usando células de ovário de hamster chinês com um perfil de glicosilação levemente diferente. Na prática clínica, funciona exatamente igual: estimula a diferenciação e maturação dos precursores eritroides na medula óssea.',
+        es: 'Químicamente casi idéntica a la Epoetina alfa, con un perfil de glicosilación levemente diferente. En la práctica, funciona igual: estimula la maduración de los glóbulos rojos en la médula ósea.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 20 UI/kg SC 3 vezes por semana, ou 40 UI/kg IV 3 vezes por semana. Titulação dependente do Hemograma.',
+          es: 'Inicio: 20 UI/kg SC 3 veces por semana, o 40 UI/kg IV 3 veces por semana. Titulación dependiente del Hemograma.'
+        },
+        pediatric: {
+          pt: 'Mesmas diretrizes de peso da Epoetina alfa.',
+          es: 'Mismas directrices que Epoetina alfa.'
+        }
+      },
+      administration: { pt: ['Geralmente administrada pela enfermagem da clínica de diálise nas fístulas arteriovenosas ou vias subcutâneas ao fim da sessão.'], es: ['Generalmente administrada en la clínica de diálisis en las fístulas o vía subcutánea al final de la sesión.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Pico hipertensivo', 'Reação no local da injeção', 'Cefaleia e dores articulares'], es: ['Pico hipertensivo', 'Reacción en el sitio de inyección', 'Cefalea y dolores articulares'] },
+      dangerousAdverseEffects: { pt: ['Risco trombótico (Trombose da fístula de diálise)', 'Aplasia Pura de Células Vermelhas (PRCA)'], es: ['Riesgo trombótico (Trombosis de la fístula de diálisis)', 'Aplasia Pura de Células Rojas (PRCA)'] },
+      contraindications: {
+        absolute: { pt: ['Hipertensão severa não tratada'], es: ['Hipertensión severa no tratada'] },
+        relative: { pt: ['Pacientes com níveis basais muito altos de ferro e vitaminas, mas que não respondem à droga (Sinal de falência medular)'], es: ['Pacientes con altos niveles de hierro que no responden a la droga'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A REGRA DO FERRO: O paciente JAMAIS produzirá sangue com Epoetina se não tiver os "tijolos" para construir a hemácia. Se a Ferritina estiver < 100 ou Saturação de Transferrina < 20%, a injeção da Epoetina é puro desperdício de dinheiro. Tem que dar Ferro Intravenoso primeiro.', es: 'LA REGLA DEL HIERRO: El paciente JAMÁS producirá sangre con Epoetina si no tiene los "ladrillos". Si la Ferritina es < 100 o Saturación < 20%, la inyección es desperdicio de dinero. Debe dar Hierro Intravenoso primero.' }
+      }
+    },
+
+    "darbepoetina_alfa": {
+      name: { pt: 'Darbepoetina alfa', es: 'Darbepoetina alfa' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Agente Estimulador da Eritropoiese (Ação Prolongada)', es: 'Agente Estimulador de la Eritropoyesis (Acción Prolongada)' },
+      indications: {
+        pt: ['Anemia da DRC (Dialítica ou Não-dialítica)', 'Anemia secundária à quimioterapia'],
+        es: ['Anemia de la ERC (Dialítica o No dialítica)', 'Anemia secundaria a la quimioterapia']
+      },
+      commercialNames: { br: ['Aranesp'], ar: ['Aranesp'] },
+      presentation: { pt: ['Seringas preenchidas (10 mcg, 20 mcg, 40 mcg, 60 mcg, até 500 mcg)'], es: ['Jeringas prellenadas (10 a 500 mcg)'] },
+      mechanism: {
+        pt: 'A "Epoetina de Fim de Semana". Os cientistas adicionaram duas cadeias de carboidratos extras (glicosilação) à molécula de epoetina original. Essa "armadura de açúcar" torna a Darbepoetina resistente à destruição no sangue. O resultado é uma meia-vida TRÊS VEZES maior que a da Epoetina Alfa, permitindo que o paciente tome muito menos injeções.',
+        es: 'La "Epoetina de Fin de Semana". Los científicos añadieron cadenas de carbohidratos extras a la molécula. Esta "armadura" la hace resistente a la destrucción. El resultado es una vida media TRES VECES mayor, permitiendo menos inyecciones.'
+      },
+      dose: {
+        adult: {
+          pt: 'Conversão: Se o paciente tomava Epoetina Alfa 3 vezes na semana, a Darbepoetina é dada apenas UMA VEZ por semana, ou a cada 2 semanas na fase de manutenção (Dose média 0,45 mcg/kg 1×/semana).',
+          es: 'Si el paciente tomaba Epoetina Alfa 3 veces a la semana, la Darbepoetina se da solo UNA VEZ a la semana, o cada 2 semanas (Dosis media 0,45 mcg/kg).'
+        },
+        pediatric: {
+          pt: '0,45 mcg/kg SC ou IV uma vez por semana.',
+          es: '0,45 mcg/kg SC o IV una vez por semana.'
+        }
+      },
+      administration: { pt: ['Subcutânea ou Intravenosa. Evita as 12 picadas mensais da epoetina comum, reduzindo para 2 a 4 picadas mensais.'], es: ['Subcutánea o Intravenosa. Evita los 12 pinchazos mensuales de la epoetina común, reduciendo a 2 o 4.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Picos de Hipertensão Arterial', 'Edema periférico', 'Cefaleia e tosse'], es: ['Picos de Hipertensión Arterial', 'Edema periférico', 'Cefalea y tos'] },
+      dangerousAdverseEffects: { pt: ['Eventos Tromboembólicos (AVC, Infarto) se a hemoglobina passar de 11 g/dL', 'Convulsões de início recente (Raro, documentado na fase inicial)'], es: ['Eventos Tromboembólicos (ACV, Infarto) si la hemoglobina pasa de 11 g/dL', 'Convulsiones de inicio reciente'] },
+      contraindications: {
+        absolute: { pt: ['Hipertensão grave e descontrolada'], es: ['Hipertensión grave y descontrolada'] },
+        relative: { pt: ['Déficit absoluto de ferro (Droga será ineficaz)'], es: ['Déficit absoluto de hierro (Droga será ineficaz)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'CÁLCULO DE CONVERSÃO: Na troca de medicações, 200 UI de Epoetina Alfa antiga equivalem a aproximadamente 1 micrograma (mcg) de Darbepoetina. A regra clínica é dividir a dose semanal velha por 200.', es: 'CÁLCULO DE CONVERSIÓN: En el cambio, 200 UI de Epoetina Alfa antigua equivalen a 1 microgramo (mcg) de Darbepoetina. La regla clínica es dividir la dosis semanal vieja por 200.' }
+      }
+    },
+
+    "mircera": {
+      name: { pt: 'Metoxipolietilenoglicol-epoetina beta (CERA)', es: 'Metoxipolietilenglicol-epoetina beta (CERA)' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Ativador Contínuo do Receptor de Eritropoietina (Ação Ultra Longa)', es: 'Activador Continuo del Receptor de Eritropoyetina (Acción Ultra Larga)' },
+      indications: {
+        pt: ['Anemia secundária à Doença Renal Crônica (DRC)'],
+        es: ['Anemia secundaria a la Enfermedad Renal Crónica (ERC)']
+      },
+      commercialNames: { br: ['Mircera'], ar: ['Mircera'] },
+      presentation: { pt: ['Seringas preenchidas prontas para uso (30 mcg a 360 mcg)'], es: ['Jeringas prellenadas (30 a 360 mcg)'] },
+      mechanism: {
+        pt: 'A "Epoetina Mensal". A tecnologia CERA (Continuous Erythropoietin Receptor Activator) pegou a epoetina beta e a "grudou" quimicamente a um polímero gigante de Polietilenoglicol (PEG). Essa molécula monstruosa não consegue ser destruída pelos rins ou fígado rapidamente. Ela liga e desliga do receptor da medula repetidamente por semanas. Tem uma meia-vida colossal de 130 HORAS, permitindo controle da anemia com apenas uma injeção por mês.',
+        es: 'La "Epoetina Mensual". La tecnología CERA adhiere la epoetina a un polímero gigante de PEG. Tiene una vida media colosal de 130 HORAS, permitiendo inyectar una vez al mes.'
+      },
+      dose: {
+        adult: {
+          pt: 'Fase de correção: 0,6 mcg/kg a CADA 2 SEMANAS. Manutenção (Quando o alvo for atingido): Dose administrada UMA ÚNICA VEZ AO MÊS (A cada 4 semanas, dobrando a dose quinzenal anterior).',
+          es: 'Fase de corrección: 0,6 mcg/kg CADA 2 SEMANAS. Mantenimiento: Dosis administrada UNA SOLA VEZ AL MES (Cada 4 semanas).'
+        },
+        pediatric: {
+          pt: 'Não rotineiramente recomendado para crianças < 18 anos.',
+          es: 'No recomendado rutinariamente en < 18 años.'
+        }
+      },
+      administration: { pt: ['Injeção IV (preferida para paciente em hemodiálise) ou SC (preferida para DRC conservador).'], es: ['Inyección IV (preferida en diálisis) o SC.'] },
+      renalAdjustment: { required: false, message: { pt: 'Criada para o paciente renal.', es: 'Creada para el paciente renal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: { pt: ['Pico Hipertensivo imediato e crônico', 'Diarreia e cefaleia', 'Nasofaringite'], es: ['Pico Hipertensivo inmediato y crónico', 'Diarrea y cefalea', 'Nasofaringitis'] },
+      dangerousAdverseEffects: { pt: ['Encefalopatia Hipertensiva (Se a pressão sair do controle)', 'Trombose aguda da fístula'], es: ['Encefalopatía Hipertensiva (Si la presión se descontrola)', 'Trombosis aguda de la fístula'] },
+      contraindications: {
+        absolute: { pt: ['Hipertensão Arterial Maligna ou Severa não medicada'], es: ['Hipertensión Arterial Maligna o Severa no medicada'] },
+        relative: { pt: ['Pacientes com histórico de AVC isquêmico severo e Hb já limítrofe'], es: ['Pacientes con historial de ACV isquémico severo y Hb limítrofe'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'PERIGO DA AÇÃO PROLONGADA: A maior vantagem do Mircera é também o seu maior perigo. Se o médico errar a mão na dose e a hemoglobina do paciente "estourar" para 13 g/dL com risco de trombose, não adianta só suspender o remédio. A medicação continuará forçando a medula do paciente a fazer sangue por um mês inteiro, exigindo até sangria terapêutica (flebotomia) para salvar o paciente.', es: 'PELIGRO DE LA ACCIÓN PROLONGADA: Si la hemoglobina "explota" a 13 g/dL, suspender no basta. Continuará forzando la médula por un mes entero, exigiendo hasta sangría terapéutica.' }
+      }
+    },
+
+    "calcitriol": {
+      name: { pt: 'Calcitriol', es: 'Calcitriol' },
+      category: 'nefrologia',
+      icon: '🫘',
+      color: '#0369A1',
+      colorTxt: '#ffffff',
+      class: { pt: 'Vitamina D Ativa (1,25-di-hidroxicolecalciferol)', es: 'Vitamina D Activa (1,25-dihidroxicolecalciferol)' },
+      indications: {
+        pt: ['Hiperparatireoidismo secundário em Doença Renal Crônica avançada', 'Hipocalcemia crônica associada à diálise ou hipoparatireoidismo', 'Osteodistrofia renal'],
+        es: ['Hiperparatiroidismo secundario en Enfermedad Renal Crónica avanzada', 'Hipocalcemia crónica asociada a diálisis o hipoparatiroidismo', 'Osteodistrofia renal']
+      },
+      commercialNames: { br: ['Rocaltrol', 'Sigmacalcidiol'], ar: ['Rocaltrol'] },
+      presentation: { pt: ['Cápsulas moles 0,25 mcg'], es: ['Cápsulas blandas 0,25 mcg'] },
+      mechanism: {
+        pt: 'O Fim da Linha da Vitamina D. O corpo produz a Vitamina D3 (Colecalciferol), que precisa ser processada pelo fígado e ATIVADA PELO RIM. Quando o rim do paciente para de funcionar, a Vitamina D nunca é ativada. O cálcio no sangue cai. A paratireoide entra em pânico e começa a dissolver o osso do paciente (Hiperparatireoidismo). O Calcitriol é a vitamina JÁ ATIVADA. Quando o paciente a engole, ela inibe o PTH imediatamente e obriga o intestino a absorver o máximo de cálcio possível da comida.',
+        es: 'El Fin de la Línea de la Vitamina D. Cuando el riñón falla, la Vitamina D nunca se activa. El Calcitriol es la vitamina YA ACTIVADA. Inhibe la PTH de inmediato y obliga al intestino a absorber calcio.'
+      },
+      dose: {
+        adult: {
+          pt: 'DRC Diálise: 0,25 mcg/dia ou em dias alternados via oral. Subir de 0,25 em 0,25 a cada 4 semanas guiado pelo PTH e Cálcio.',
+          es: 'ERC Diálisis: 0,25 mcg/día o en días alternos. Subir de 0,25 en 0,25 cada 4 semanas guiado por PTH y Calcio.'
+        },
+        pediatric: {
+          pt: '0,25 mcg diários para crianças com hipoparatireoidismo (Titulação rígida).',
+          es: '0,25 mcg diarios en niños con hipoparatiroidismo.'
+        }
+      },
+      administration: { pt: ['A dose é em MICROGRAMAS (mcg). Não confundir com Unidades Internacionais de Vit D normal (Um erro de prescrição mata o paciente de coma hipercalcêmico).'], es: ['La dosis es en MICROGRAMOS (mcg). No confundir con Unidades Internacionales de Vit D normal.'] },
+      renalAdjustment: { required: false, message: { pt: 'Criado para pacientes sem rim funcional.', es: 'Creado para pacientes sin riñón funcional.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Ao contrário dos análogos inativos, não precisa de ativação hepática. Útil no cirrótico com lesão renal.', es: 'No necesita activación hepática. Útil en el cirrótico con lesión renal.' } },
+      commonAdverseEffects: { pt: ['Secura na boca e sede excessiva (Primeiros sinais de cálcio subindo)', 'Náusea leve, constipação'], es: ['Sequedad de boca y sed excesiva (Signos de calcio subiendo)', 'Náusea leve, constipación'] },
+      dangerousAdverseEffects: { pt: ['HIPERCALCEMIA SEVERA (Fraqueza muscular letal, confusão, parada cardíaca em diástole)', 'Aumento letal do produto Cálcio × Fósforo (Calcificação em órgãos internos e veias)'], es: ['HIPERCALCEMIA SEVERA (Debilidad muscular, confusión, parada cardíaca)', 'Calcificación en órganos y venas'] },
+      contraindications: {
+        absolute: { pt: ['Hipercalcemia pré-existente (Cálcio sérico elevado)', 'Toxicidade prévia por vitamina D'], es: ['Hipercalcemia preexistente (Calcio sérico elevado)', 'Toxicidad previa por vitamina D'] },
+        relative: { pt: ['Níveis de fósforo descontrolados (Deve-se controlar o fósforo com quelantes antes de dar calcitriol, senão ambos cristalizam no sangue)'], es: ['Niveles de fósforo descontrolados (Debe controlarse con quelantes antes de dar calcitriol)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ENGANO DA FARMÁCIA: Nunca diga a um paciente em diálise para "comprar vitamina D na farmácia". Se ele comprar Colecalciferol (Addera 50.000 UI) será absolutamente INÚTIL, pois o rim dele não a ativará. Ele PRECISA especificamente de Calcitriol em Microgramas. O inverso também é mortal: dar Calcitriol para quem só tem falta de vitamina de sol causará coma por excesso de cálcio.', es: 'EL ENGAÑO DE LA FARMACIA: Si compra Colecalciferol normal será INÚTIL. NECESITA Calcitriol en Microgramos. A la inversa, dar Calcitriol a quien solo le falta sol causará coma hipercalcémico.' }
+      }
+    }
+
+  }); /* fim Object.assign BUILD 418 append */
+})();

@@ -1229,6 +1229,10 @@ const DRUG_CLASSES = {
 
   "$classe_resinas_poliestireno": [
     "poliestirenossulfonato_de_sodio", "poliestirenossulfonato_de_calcio"
+  ],
+
+  "$classe_estimuladores_eritropoiese": [
+    "epoetina_alfa", "epoetina_beta", "darbepoetina_alfa", "mircera"
   ]
 
 };
@@ -23517,9 +23521,58 @@ const INTERACOES_DB = {
         es: "Restricción hídrica y aumento del diurético de asa (Furosemida) si el uso es innegociable. Preferir Patiromer en ICC severa, pues este cambia por calcio y no por sodio."
       }
     }
+  },
+
+  /* ════════════════════════════════════════════════════════════════
+     BLOCO MOTOR DE INTERAÇÕES BUILD 418 — Agentes Eritropoiéticos (ESAs) e Calcitriol
+     epoetina_alfa | epoetina_beta | darbepoetina_alfa | mircera | calcitriol
+  ════════════════════════════════════════════════════════════════ */
+
+  /* ── REGRA DE CLASSE: ERITROPOIETINAS E A "SANGUE GROSSO" ── */
+  "$classe_estimuladores_eritropoiese": {
+    "antihipertensivos_diureticos": {
+      gravidade: "moderada",
+      scoreClinico: 3,
+      descricao: {
+        pt: "A NEUTRALIZAÇÃO DO ANTI-HIPERTENSIVO. À medida que as Epoetinas (Alfa, Beta, Darbepoetina ou Mircera) forçam a medula a fabricar milhões de hemácias, o volume celular e a viscosidade do sangue do paciente aumentam vertiginosamente. Isso dispara uma resposta vascular de hipertensão severa em quase 30% dos pacientes, anulando o efeito de Losartana, Amlodipino ou Enalapril que o paciente já usa.",
+        es: "LA NEUTRALIZACIÓN DEL ANTIHIPERTENSIVO. A medida que las Epoetinas fuerzan a la médula a fabricar millones de glóbulos rojos, el volumen y la viscosidad de la sangre aumentan. Esto dispara una respuesta de hipertensión severa, anulando el efecto de Losartana o Enalapril que el paciente ya usa."
+      },
+      conduta: {
+        pt: "Obrigatório vigiar a pressão arterial semanalmente durante a correção da hemoglobina. Pode ser necessário triplicar a dose dos anti-hipertensivos durante o uso das Epoetinas. Se a pressão chegar a > 180 mmHg, PAUSAR a epoetina.",
+        es: "Obligatorio vigilar la presión semanalmente. Puede ser necesario triplicar la dosis del antihipertensivo. Si la PA llega a > 180 mmHg, PAUSAR la epoetina."
+      }
+    }
+  },
+
+  /* ── CALCITRIOL (A Dinâmica Mortal do Cálcio) ── */
+  "calcitriol": {
+    "$classe_calcio_oral": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O COMA HIPERCALCÊMICO. O Calcitriol maximiza o limite de absorção intestinal de cálcio a níveis absurdos. Se o paciente ingerir suplementos de Carbonato ou Acetato de Cálcio como quelantes ao mesmo tempo, a carga de cálcio no sangue subirá acima de 12 ou 13 mg/dL. O cérebro 'desliga' (coma), as contrações musculares falham e o coração entra em arritmias irreversíveis.",
+        es: "EL COMA HIPERCALCÉMICO. El Calcitriol maximiza el límite de absorción intestinal de calcio. Si el paciente ingiere Carbonato de Calcio al mismo tiempo, el calcio en sangre subirá por encima de 12 o 13 mg/dL. El cerebro se apaga (coma) y el corazón entra en arritmias irreversibles."
+      },
+      conduta: {
+        pt: "Evitar completamente associar Calcitriol com altas doses de quelantes à base de cálcio. Mudar o quelante de fósforo do paciente para Sevelâmer ou Lantânio (Não-cálcicos) antes de introduzir o Calcitriol.",
+        es: "Evitar completamente asociar Calcitriol con altas dosis de quelantes a base de calcio. Cambiar el quelante a Sevelámero o Lantano."
+      }
+    },
+    "$classe_diureticos_tiazidicos": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "O SEQUESTRO RENAL DO CÁLCIO. O Calcitriol empurra o cálcio para dentro do sangue pelo intestino. Os Diuréticos Tiazídicos (Hidroclorotiazida) impedem que os rins joguem o cálcio fora (causam hipocalciúria). O resultado final é um 'engavetamento' letal de cálcio na corrente sanguínea, elevando os níveis a taxas de risco de infarto em semanas.",
+        es: "EL SECUESTRO RENAL DEL CALCIO. El Calcitriol empuja el calcio a la sangre por el intestino. Los Diuréticos Tiazídicos impiden que los riñones boten el calcio (causan hipocalciuria). El resultado es un acúmulo letal de calcio en la sangre."
+      },
+      conduta: {
+        pt: "Substituir a Hidroclorotiazida/Clortalidona por diuréticos de alça (Furosemida), pois a Furosemida faz o rim excretar o cálcio, protegendo o paciente do excesso provocado pelo Calcitriol.",
+        es: "Sustituir la Hidroclorotiazida por diuréticos de asa (Furosemida), pues la Furosemida hace excretar el calcio, protegiendo al paciente."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
+}; /* fim INTERACOES_DB — BUILD 418 ($classe_estimuladores_eritropoiese×antihipertensivos_diureticos; calcitriol×$classe_calcio_oral; calcitriol×$classe_diureticos_tiazidicos) | BUILD 417 ($classe_quelantes_potassio_todos×qualquer_medicamento_oral; $classe_resinas_poliestireno×sorbitol; ciclossilicato_de_zirconio_sodico×insuficiencia_cardiaca_congestiva) | BUILD 416 ($classe_quelantes_fosforo_todos×$classe_antibioticos_quinolonas_tetraciclinas; $classe_calcio_oral×calcitriol_vitamina_d_ativa; oxihidroxido_sucroferrico×levotiroxina) | BUILD 415 ($classe_promotores_vigilia×$classe_anticoncepcionais_hormonais; solriamfetol×$classe_imaos; betaistina×meclizina_prometazina_dramin) | BUILD 414 ($classe_estimulantes_tdah×$classe_imaos; atomoxetina×$classe_inibidores_potentes_cyp2d6; modafinila×$classe_anticoncepcionais_hormonais) | BUILD 413 ($classe_inibidores_vmat2×$classe_imaos; $classe_inibidores_vmat2×$classe_antipsicoticos_tipicos; riluzol×tabagismo) | BUILD 412 (safinamida×$classe_antidepressivos_isrs_duais; $classe_anticolinergicos_centrales_parkinson×donepezila_rivastigmina; pimavanserina×$classe_antiarritmicos_antibioticos_qt_longo; pimavanserina×cetoconazol_itraconazol) | BUILD 411 (eslicarbazepina×$classe_diureticos_tiazidicos; fosfenitoina×amiodarona; tolcapona×$classe_imaos) | BUILD 410 | BUILD 409 | BUILD 408 | BUILD 407 | BUILD 403 */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
