@@ -1561,9 +1561,274 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'O PACTO COM O VÍRUS JC: O Tysabri é a droga mais eficaz da neurologia, mas exige a dosagem do Vírus JC (exame de sangue) a cada 6 meses. Se o índice do paciente for negativo, o risco de PML é zero. Se o vírus acordar e o índice subir acima de 1.5 após 2 anos de uso, a droga deve ser SUSPENSA IMEDIATAMENTE, ou o vírus JC vai derreter o cérebro do paciente letalmente.', es: 'EL PACTO CON EL VIRUS JC: Tysabri exige la dosificación del Virus JC cada 6 meses. Si el virus despierta y el índice sube arriba de 1.5 tras 2 años de uso, la droga debe SUSPENDERSE INMEDIATAMENTE, o el virus JC derretirá el cerebro del paciente de forma letal.' }
       }
+    },
+
+    /* ── OCRELIZUMABE ───────────────────────────────────────────────────── */
+    "ocrelizumabe": {
+      name: { pt: 'Ocrelizumabe', es: 'Ocrelizumab' },
+      category: 'neurologia',
+      class: { pt: 'Anticorpo Monoclonal Anti-CD20 (Depletor de Células B)', es: 'Anticuerpo Monoclonal Anti-CD20 (Depletor de Células B)' },
+      icon: '🧠', color: 'rgba(139,92,246,0.15)', colorTxt: '#8B5CF6',
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente (EMR)', 'Esclerose Múltipla Primariamente Progressiva (EMPP - O primeiro e único remédio aprovado para esta forma devastadora)'],
+        es: ['Esclerosis Múltiple Recurrente (EMR)', 'Esclerosis Múltiple Primariamente Progresiva (EMPP - El primer y único remedio aprobado para esta forma)']
+      },
+      commercialNames: { br: ['Ocrevus'], ar: ['Ocrevus'] },
+      presentation: { pt: ['Frasco-ampola IV 300 mg/10 mL'], es: ['Vial IV 300 mg/10 mL'] },
+      mechanism: {
+        pt: 'Uma mudança de paradigma na Esclerose Múltipla. Historicamente, achava-se que apenas os Linfócitos T atacavam o cérebro. O Ocrelizumabe mira no receptor CD20, que só existe nos Linfócitos B. Ao se ligar, ele destrói seletivamente as células B da memória no sangue, provando que elas também orquestram o ataque. Reduz atrofia cerebral e retarda o uso de cadeira de rodas.',
+        es: 'Un cambio de paradigma. Históricamente se creía que solo los Linfocitos T atacaban el cerebro. El Ocrelizumab apunta al CD20, presente solo en Linfocitos B. Al unirse, destruye selectivamente las células B de memoria en sangre. Reduce la atrofia cerebral y retrasa el uso de silla de ruedas.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose inicial: 300 mg IV, repetida em 2 semanas. Manutenção: 600 mg IV a CADA 6 MESES (Semestral).',
+          es: 'Dosis inicial: 300 mg IV, repetida en 2 semanas. Mantenimiento: 600 mg IV CADA 6 MESES (Semestral).'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: {
+        pt: ['Infusão IV hospitalar longa. EXIGE pré-medicação com Metilprednisolona, Difenidramina e Paracetamol 30 minutos antes para evitar reações ao gotejamento.'],
+        es: ['Infusión IV hospitalaria larga. EXIGE premedicación con Metilprednisolona, Difenhidramina y Paracetamol 30 min antes.']
+      },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: {
+        pt: ['Reação à infusão (prurido, erupção, febre)', 'Infecções do Trato Respiratório Superior (Falta de células B baixa os anticorpos nas mucosas)'],
+        es: ['Reacción a la infusión (prurito, erupción, fiebre)', 'Infecciones del Tracto Respiratorio Superior (La falta de células B baja los anticuerpos)']
+      },
+      dangerousAdverseEffects: {
+        pt: ['Reativação fulminante do Vírus da Hepatite B', 'Maior risco de câncer de mama', 'PML (Raro)'],
+        es: ['Reactivación fulminante del Virus de la Hepatitis B', 'Mayor riesgo de cáncer de mama', 'PML (Raro)']
+      },
+      contraindications: {
+        absolute: { pt: ['Infecção ativa por Hepatite B', 'Infecções ativas severas'], es: ['Infección activa por Hepatitis B', 'Infecciones activas severas'] },
+        relative: { pt: ['Hipogamaglobulinemia grave (Baixo nível de imunoglobulinas no sangue)'], es: ['Hipogammaglobulinemia grave'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: {
+          pt: 'O VETO DA HEPATITE B: A droga varre do sangue as células que fabricam anticorpos. Se o paciente for portador inativo do vírus da Hepatite B, o vírus percebe a queda da imunidade, acorda e destrói o fígado em semanas. Sorologia HBsAg e Anti-HBc são OBRIGATÓRIAS antes da primeira infusão.',
+          es: 'EL VETO DE LA HEPATITIS B: La droga barre las células que fabrican anticuerpos. Si el paciente es portador inactivo de Hepatitis B, el virus despierta y destruye el hígado. Serología HBsAg y Anti-HBc es OBLIGATORIA antes de la infusión.'
+        }
+      }
+    },
+
+    /* ── OFATUMUMABE ────────────────────────────────────────────────────── */
+    "ofatumumabe": {
+      name: { pt: 'Ofatumumabe', es: 'Ofatumumab' },
+      category: 'neurologia',
+      class: { pt: 'Anticorpo Monoclonal Anti-CD20 (Subcutâneo)', es: 'Anticuerpo Monoclonal Anti-CD20 (Subcutáneo)' },
+      icon: '🧠', color: 'rgba(139,92,246,0.15)', colorTxt: '#8B5CF6',
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente (EMR)'],
+        es: ['Esclerosis Múltiple Recurrente (EMR)']
+      },
+      commercialNames: { br: ['Kesimpta'], ar: ['Kesimpta'] },
+      presentation: { pt: ['Caneta preenchida SC 20 mg/0,4 mL'], es: ['Pluma prellenada SC 20 mg/0,4 mL'] },
+      mechanism: {
+        pt: 'Tem o mesmo alvo que o Ocrelizumabe (CD20 para destruir células B), mas se liga em uma parte diferente da molécula e possui uma formulação humana avançada. Sua revolução é logística: em vez do paciente ficar internado recebendo injeção na veia com corticoides a cada 6 meses, o Ofatumumabe permite que o próprio paciente aplique uma injeção de caneta na barriga mensalmente em casa.',
+        es: 'Tiene el mismo blanco que Ocrelizumab (CD20), pero se une a una parte diferente y es una formulación humana. Su revolución es logística: en vez de internarse para inyección venosa cada 6 meses, el paciente se aplica una pluma en el abdomen mensualmente en casa.'
+      },
+      dose: {
+        adult: {
+          pt: 'Iniciação: 20 mg SC nas Semanas 0, 1 e 2. Manutenção: 20 mg SC UMA VEZ AO MÊS, a partir da Semana 4.',
+          es: 'Iniciación: 20 mg SC en Semanas 0, 1 y 2. Mantenimiento: 20 mg SC UNA VEZ AL MES, a partir de la Semana 4.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: {
+        pt: ['Aplicação subcutânea. A primeira injeção exige supervisão médica.'],
+        es: ['Aplicación subcutánea. La primera inyección exige supervisión médica.']
+      },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: {
+        pt: ['Reação sistêmica após a 1ª injeção (Febre, calafrios, cefaleia)', 'Diminuição da imunoglobulina IgM'],
+        es: ['Reacción sistémica tras la 1ª inyección (Fiebre, escalofríos)', 'Disminución de la inmunoglobulina IgM']
+      },
+      dangerousAdverseEffects: {
+        pt: ['Reativação de Hepatite B', 'PML'],
+        es: ['Reactivación de Hepatitis B', 'PML']
+      },
+      contraindications: {
+        absolute: { pt: ['Infecção ativa por Hepatite B'], es: ['Infección activa por Hepatitis B'] },
+        relative: { pt: ['Gravidez (Lactentes nascem sem células B, precisam de monitoramento)'], es: ['Embarazo (Lactantes nacen sin células B, necesitan monitoreo)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: {
+          pt: 'CUIDADO COM AS VACINAS DO BEBÊ: Se uma mulher usar Ofatumumabe (ou Ocrelizumabe) perto do parto, o bebê nascerá sem linfócitos B. ESSE BEBÊ NÃO PODE TOMAR VACINAS DE VÍRUS VIVO (como a BCG da maternidade) até que os linfócitos B dele reapareçam, sob risco de morte por BCG disseminada.',
+          es: 'CUIDADO CON LAS VACUNAS DEL BEBÉ: Si una mujer usa la droga cerca del parto, el bebé nacerá sin linfocitos B. ESE BEBÉ NO PUEDE TOMAR VACUNAS DE VIRUS VIVO (como BCG) hasta que sus células B reaparezcan.'
+        }
+      }
+    },
+
+    /* ── ALEMTUZUMABE ───────────────────────────────────────────────────── */
+    "alemtuzumabe": {
+      name: { pt: 'Alemtuzumabe', es: 'Alemtuzumab' },
+      category: 'neurologia',
+      class: { pt: 'Anticorpo Monoclonal Anti-CD52 (Depletor T e B Massivo)', es: 'Anticuerpo Monoclonal Anti-CD52 (Depletor T y B Masivo)' },
+      icon: '🧠', color: 'rgba(139,92,246,0.15)', colorTxt: '#8B5CF6',
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente de alta atividade REFRATÁRIA (Usado quando o paciente já falhou em 2 ou mais drogas).'],
+        es: ['Esclerosis Múltiple Recurrente de alta actividad REFRACTARIA (Usado cuando el paciente ya falló en 2 o más drogas).']
+      },
+      commercialNames: { br: ['Lemtrada'], ar: ['Lemtrada'] },
+      presentation: { pt: ['Frasco-ampola IV 12 mg/1,2 mL'], es: ['Vial IV 12 mg/1,2 mL'] },
+      mechanism: {
+        pt: 'O "Botão de Reiniciar" (Reset Imunológico). É a droga mais agressiva para EM. O Alemtuzumabe ataca a proteína CD52, presente em LINFÓCITOS B E LINFÓCITOS T. A infusão dizima quase 100% dos linfócitos do sangue do paciente em dias. Nos anos seguintes, o corpo reconstrói um sistema imune "novo", e muitas vezes esse novo sistema esquece de atacar o cérebro.',
+        es: 'El "Botón de Reiniciar" (Reset Inmunológico). Es la droga más agresiva. Ataca la proteína CD52, en LINFOCITOS B Y T. La infusión diezma casi 100% de los linfocitos del paciente. Luego, el cuerpo reconstruye un sistema inmune "nuevo" que olvida atacar el cerebro.'
+      },
+      dose: {
+        adult: {
+          pt: 'Ano 1: 12 mg/dia IV por 5 dias SEGUIDOS. Ano 2: 12 mg/dia IV por 3 dias SEGUIDOS. Fim do tratamento (A eficácia dura anos).',
+          es: 'Año 1: 12 mg/día IV por 5 días SEGUIDOS. Año 2: 12 mg/día IV por 3 días SEGUIDOS. Fin del tratamiento.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: {
+        pt: ['Uso hospitalar sob monitoramento cardíaco. Obrigatório Aciclovir (para evitar Herpes) e Sulfametoxazol-Trimetoprima (para evitar Pneumocystis) no primeiro mês.'],
+        es: ['Uso hospitalario bajo monitoreo. Obligatorio Aciclovir y Sulfametoxazol-Trimetoprima preventivos el primer mes.']
+      },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
+      commonAdverseEffects: {
+        pt: ['Síndrome de liberação de citocinas (febre alta, tremores)', 'Infecções herpéticas e fúngicas'],
+        es: ['Síndrome de liberación de citocinas (fiebre alta)', 'Infecciones herpéticas y fúngicas']
+      },
+      dangerousAdverseEffects: {
+        pt: ['DOENÇAS AUTOIMUNES SECUNDÁRIAS (A nova imunidade ataca a tireoide ou plaquetas - PTI mortal)', 'AVC Isquêmico/Hemorrágico nas 48h após a infusão'],
+        es: ['ENFERMEDADES AUTOINMUNES SECUNDARIAS (La nueva inmunidad ataca la tiroides o plaquetas - PTI)', 'ACV Isquémico/Hemorrágico a las 48h']
+      },
+      contraindications: {
+        absolute: { pt: ['Pacientes com HIV (CD4 cai a zero)', 'Doenças autoimunes ativas não-EM'], es: ['Pacientes con VIH (CD4 cae a cero)', 'Enfermedades autoinmunes activas no-EM'] },
+        relative: { pt: ['Idosos, devido ao alto risco isquêmico infusional'], es: ['Ancianos, debido al alto riesgo isquémico'] }
+      },
+      safetyFlags: {
+        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: {
+          pt: 'A MALDIÇÃO AUTOIMUNE: Curiosamente, ao reiniciar a imunidade, cerca de 30% dos pacientes desenvolvem uma NOVA doença autoimune grave (Doença de Graves na tireoide ou Púrpura Trombocitopênica Idiopática - sangramento fatal). Exige monitoramento mensal do sangue por 4 ANOS após a última dose.',
+          es: 'LA MALDICIÓN AUTOINMUNE: Al reiniciar la inmunidad, 30% de los pacientes desarrollan una NUEVA enfermedad autoinmune grave (Graves o Púrpura Trombocitopénica). Exige monitoreo mensual de sangre por 4 AÑOS tras la última dosis.'
+        }
+      }
+    },
+
+    /* ── CLADRIBINA ─────────────────────────────────────────────────────── */
+    "cladribina": {
+      name: { pt: 'Cladribina', es: 'Cladribina' },
+      category: 'neurologia',
+      class: { pt: 'Análogo de Purina / Imunossupressor Oral', es: 'Análogo de Purina / Inmunosupresor Oral' },
+      icon: '🧠', color: 'rgba(139,92,246,0.15)', colorTxt: '#8B5CF6',
+      indications: {
+        pt: ['Esclerose Múltipla Recorrente altamente ativa (Tratamento de pulso curto com longa duração)'],
+        es: ['Esclerosis Múltiple Recurrente altamente activa (Tratamiento de pulso corto con larga duración)']
+      },
+      commercialNames: { br: ['Mavenclad'], ar: ['Mavenclad'] },
+      presentation: { pt: ['Comprimidos 10 mg'], es: ['Comprimidos 10 mg'] },
+      mechanism: {
+        pt: 'Um quimioterápico disfarçado de pílula. A Cladribina é um "falso bloco" de DNA (purina). Quando os linfócitos agressores T e B tentam se multiplicar, eles usam a Cladribina para construir o DNA. O DNA quebra por dentro e o linfócito morre. Atinge seletivamente os linfócitos porque eles não têm a enzima que os outros órgãos usam para desarmar a droga.',
+        es: 'Un quimioterápico disfrazado de píldora. Es un "falso bloque" de ADN. Cuando los linfocitos intentan multiplicarse, usan Cladribina. El ADN se rompe y el linfocito muere. Alcanza selectivamente los linfocitos porque no tienen la enzima para desarmar la droga.'
+      },
+      dose: {
+        adult: {
+          pt: 'Terapia por pulso em 2 anos (Máx 3,5 mg/kg ao todo). Ano 1: Toma pílulas por apenas 5 dias no Mês 1 e mais 5 dias no Mês 2. Ano 2: Repete a mesma coisa. (O paciente engole comprimidos apenas 20 dias na vida e fica protegido por anos).',
+          es: 'Terapia por pulso en 2 años. Año 1: Toma píldoras por solo 5 días en Mes 1 y 5 días en Mes 2. Año 2: Repite. (El paciente traga comprimidos solo 20 días en su vida y queda protegido por años).'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: {
+        pt: ['Evitar manuseio de pele nua nos comprimidos. Tomar com água, espaçando 3 horas de qualquer outro remédio oral.'],
+        es: ['Evitar manejo con piel desnuda. Tomar con agua, espaciando 3 horas de cualquier otro remedio oral.']
+      },
+      renalAdjustment: { required: true, message: { pt: 'Contraindicado em insuficiência renal moderada a grave (ClCr < 60 mL/min), acumula toxinas purínicas.', es: 'Contraindicado en insuficiencia renal moderada a grave (ClCr < 60), acumula toxinas purínicas.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Evitar em cirrose classe Child-Pugh C.', es: 'Evitar en cirrosis clase Child-Pugh C.' } },
+      commonAdverseEffects: {
+        pt: ['Linfopenia transitória intensa (Esperada para o efeito)', 'Infecção por Herpes Zoster'],
+        es: ['Linfopenia transitoria intensa (Esperada)', 'Infección por Herpes Zoster']
+      },
+      dangerousAdverseEffects: {
+        pt: ['Aumento de risco de câncer (Malignidades cutâneas e hematológicas em longo prazo)'],
+        es: ['Aumento de riesgo de cáncer (Malignidades cutáneas y hematológicas a largo plazo)']
+      },
+      contraindications: {
+        absolute: { pt: ['Gravidez (Droga teratogênica grau quimioterápico, abortiva)', 'Pacientes HIV+', 'Neoplasias ativas'], es: ['Embarazo (Droga teratogénica, abortiva)', 'Pacientes VIH+', 'Neoplasias activas'] },
+        relative: { pt: ['Uso associado a imunossupressores contínuos'], es: ['Uso asociado a inmunosupresores continuos'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: {
+          pt: 'PROIBIÇÃO DE MATERNIDADE/PATERNIDADE: Mulheres e HOMENS não podem tentar ter filhos durante o uso de Cladribina e por pelo menos 6 MESES após o último comprimido. Como ataca o DNA, espermatozoides afetados podem gerar fetos malformados.',
+          es: 'PROHIBICIÓN DE MATERNIDAD/PATERNIDAD: Mujeres y HOMBRES no pueden intentar tener hijos durante el uso de Cladribina y por al menos 6 MESES tras la última dosis. Espermatozoides afectados pueden generar fetos malformados.'
+        }
+      }
+    },
+
+    /* ── PIRIDOSTIGMINA ─────────────────────────────────────────────────── */
+    "piridostigmina": {
+      name: { pt: 'Piridostigmina (Brometo de)', es: 'Piridostigmina (Bromuro de)' },
+      category: 'neurologia',
+      class: { pt: 'Inibidor da Acetilcolinesterase Periférica', es: 'Inhibidor de la Acetilcolinesterasa Periférica' },
+      icon: '🧠', color: 'rgba(139,92,246,0.15)', colorTxt: '#8B5CF6',
+      indications: {
+        pt: ['Miastenia Gravis (Droga âncora para fraqueza muscular)', 'Reversão de bloqueadores neuromusculares não-despolarizantes na anestesia'],
+        es: ['Miastenia Gravis (Droga ancla para debilidad muscular)', 'Reversión de bloqueadores neuromusculares no despolarizantes en anestesia']
+      },
+      commercialNames: { br: ['Mestinon'], ar: ['Mestinon'] },
+      presentation: { pt: ['Comprimidos 60 mg'], es: ['Comprimidos 60 mg'] },
+      mechanism: {
+        pt: 'A Salvação da Força Muscular. Na Miastenia Gravis, os anticorpos do paciente destroem os receptores de acetilcolina no músculo, deixando-o com fraqueza letal (incapaz de mastigar ou respirar). A Piridostigmina bloqueia a enzima que destrói a acetilcolina na placa motora. A acetilcolina inunda a musculatura, forçando os poucos receptores que restaram a dispararem sem parar, devolvendo a força física ao paciente.',
+        es: 'La Salvación de la Fuerza Muscular. En la Miastenia, los anticuerpos destruyen los receptores musculares de acetilcolina, dejando debilidad letal. La Piridostigmina bloquea la enzima que destruye la acetilcolina. Esta inunda el músculo, forzando a los receptores restantes a disparar y devolviendo la fuerza.'
+      },
+      dose: {
+        adult: {
+          pt: '60 mg a 120 mg via oral a cada 4 a 6 horas durante o dia. (A dose depende da resposta e horário de pico da fadiga do paciente).',
+          es: '60 mg a 120 mg vía oral cada 4 a 6 horas durante el día. (La dosis depende de la respuesta y horario de pico de fatiga).'
+        },
+        pediatric: {
+          pt: 'Miastenia (Crianças): 7 mg/kg/dia divididos em 5 a 6 tomadas diárias.',
+          es: 'Miastenia (Niños): 7 mg/kg/día divididos en 5 a 6 tomas diarias.'
+        }
+      },
+      administration: {
+        pt: ['Tomar 30 a 60 minutos ANTES das refeições (Para garantir que o músculo da mastigação e deglutição estará forte na hora de engolir, evitando engasgos).'],
+        es: ['Tomar 30 a 60 minutos ANTES de las comidas (Para garantizar que el músculo de masticación esté fuerte, evitando ahogos).']
+      },
+      renalAdjustment: { required: true, message: { pt: 'Metade da droga sai intacta pela urina. Em DRC, doses mais baixas são exigidas para não intoxicar.', es: 'Mitad de la droga sale intacta por orina. En ERC, se exigen dosis más bajas para no intoxicar.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
+      commonAdverseEffects: {
+        pt: ['Cãibras e contrações musculares fasciculares (músculo "pulando")', 'Hipersalivação e dor de barriga (cólicas/diarreia)'],
+        es: ['Calambres y contracciones musculares (músculo "saltando")', 'Hipersalivación y dolor de barriga (cólicos/diarrea)']
+      },
+      dangerousAdverseEffects: {
+        pt: ['CRISE COLINÉRGICA (Paralisia muscular paradoxal por excesso de acetilcolina, bradicardia extrema, sufocamento no próprio catarro)'],
+        es: ['CRISIS COLINÉRGICA (Parálisis muscular paradójica por exceso de acetilcolina, bradicardia extrema, asfixia en el propio moco)']
+      },
+      contraindications: {
+        absolute: { pt: ['Obstrução mecânica intestinal ou urinária (As cólicas induzidas rompem a parede)'], es: ['Obstrucción mecánica intestinal o urinaria (Los cólicos inducidos rompen la pared)'] },
+        relative: { pt: ['Asma grave, bradicardia não controlada'], es: ['Asma grave, bradicardia no controlada'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
+        warning: {
+          pt: 'CRISE COLINÉRGICA VS MIASTÊNICA: Se o paciente com Miastenia chegar à UTI sem conseguir respirar, o desafio é saber se ele tomou POUCO remédio (Crise Miastênica) ou MUITO remédio (Crise Colinérgica). Pupilas minúsculas (miose), diarreia maciça e baba indicam Crise Colinérgica: A CONDUTA É INTUBAR E DAR ATROPINA, SUSPENDENDO A PIRIDOSTIGMINA.',
+          es: 'CRISIS COLINÉRGICA VS MIASTÉNICA: Si el paciente llega a UCI sin poder respirar, el reto es saber si tomó POCO (Crisis Miasténica) o MUCHO remedio (Crisis Colinérgica). Pupilas minúsculas, diarrea y baba indican Crisis Colinérgica: LA CONDUCTA ES INTUBAR, DAR ATROPINA Y SUSPENDER LA DROGA.'
+        }
+      }
     }
 
-  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 402
+  }); /* fim Object.assign NEUROLOGIA_DRUGS_DB — BUILD 407
          BUILD 396 — Triptanos: Sumatriptana, Zolmitriptana, Rizatriptana, Naratriptana, Eletriptana
          BUILD 397 — Triptanos+Ergot: Almotriptana, Frovatriptana, Ergotamina, DHE, Erenumabe
          BUILD 398 — Anti-CGRP+Gepantos: Fremanezumabe, Galcanezumabe, Eptinezumabe, Ubrogepanta, Rimegepanta
@@ -1577,5 +1842,11 @@
                      Dimetilfumarato (Tecfidera) — Nrf2 oral, ⚠ PML linfopenia, highAlert
                      Diroximel fumarato (Vumerity) — Nrf2 GI-safe, ⚠ PML/renal, renalHighRisk, highAlert
                      Teriflunomida (Aubagio) — DHODH oral, ⚠ Washout 2anos, teratogênica, highAlert
-                     Natalizumabe (Tysabri) — Anti-integrina IV mensal, ⚠ PML VírusJC, highAlert */
+                     Natalizumabe (Tysabri) — Anti-integrina IV mensal, ⚠ PML VírusJC, highAlert
+         BUILD 407 — Anticorpos Anti-CD20/CD52 + Piridostigmina:
+                     Ocrelizumabe (Ocrevus) — Anti-CD20 IV semestral, ⚠ HepB reativação, highAlert
+                     Ofatumumabe (Kesimpta) — Anti-CD20 SC mensal, ⚠ vacinas vírus vivo, highAlert
+                     Alemtuzumabe (Lemtrada) — Anti-CD52 reset imune, ⚠ autoimune 30%, highAlert
+                     Cladribina (Mavenclad) — Análogo purina oral pulso, ⚠ teratogênica, renalHighRisk
+                     Piridostigmina (Mestinon) — AChE-I Miastenia Gravis, ⚠ Crise Colinérgica, antidote */
 })();

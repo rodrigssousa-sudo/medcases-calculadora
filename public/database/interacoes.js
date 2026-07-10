@@ -1111,6 +1111,32 @@ const DRUG_CLASSES = {
   /* Bloqueadores D2 dopaminérgicos — somação com proclorperazina = distonia aguda */
   "$classe_metoclopramida_haldol": [
     "metoclopramida", "haloperidol", "droperidol", "domperidona"
+  ],
+
+  /* ── BUILD 407 — Neuroimunologia EM + Miastenia Gravis ── */
+
+  /* Imunodepletores de EM (Anti-CD20/CD52) — contraindicados com vírus vivos */
+  "$classe_imunodepletores_em": [
+    "ocrelizumabe", "ofatumumabe", "alemtuzumabe", "cladribina"
+  ],
+
+  /* Vacinas de vírus vivos atenuados — contraindicadas em imunodeprimidos severos */
+  "$classe_vacinas_virus_vivo": [
+    "vacina_febre_amarela", "vacina_triplice_viral", "vacina_varicela",
+    "vacina_herpes_zoster_vivo", "vacina_rotavirus", "bcg", "vacina_polio_oral",
+    "vacina_dengue_viva"
+  ],
+
+  /* Corticosteroides em pulsoterapia — piora bifásica da Miastenia Gravis */
+  "$classe_corticosteroides_pulsoterapia": [
+    "prednisona", "prednisolona", "metilprednisolona", "dexametasona",
+    "hidrocortisona", "betametasona"
+  ],
+
+  /* Betabloqueadores bradicardizantes — potencializam o vago na Miastenia */
+  "$classe_betabloqueadores_bradicardizantes": [
+    "propranolol", "atenolol", "metoprolol", "bisoprolol", "carvedilol",
+    "nebivolol", "esmolol", "labetalol", "nadolol", "sotalol", "acebutolol"
   ]
 
 };
@@ -22744,9 +22770,60 @@ const INTERACOES_DB = {
         es: "Regla de Oro de Urgencias: Si usó un bloqueador D2 y el paciente sigue vomitando, NUNCA prescriba 'otro' bloqueador D2. Cambie a Ondansetrón o Dexametasona."
       }
     }
+  },
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 407 — Neuroimunologia EM + Miastenia Gravis
+     Nós: $classe_imunodepletores_em × vacinas vírus vivo (contraindicada)
+          piridostigmina × corticosteroides pulsoterapia (alta — bifásico)
+          piridostigmina × betabloqueadores bradicardizantes (alta — vagal)
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── ANTICORPOS DEPLETORES (Anti-CD20 e Anti-CD52) × vacinas vírus vivo ── */
+  "$classe_imunodepletores_em": {
+    "$classe_vacinas_virus_vivo": {
+      gravidade: "contraindicada",
+      scoreClinico: 5,
+      descricao: {
+        pt: "INFECÇÃO VACINAL DESENFREADA E FALHA IMUNOLÓGICA. Ocrelizumabe, Ofatumumabe e Alemtuzumabe varrem os linfócitos B e T do sangue, deixando o corpo incapaz de montar resposta celular ou produzir novos anticorpos. A administração de vacinas de vírus vivos (Tríplice Viral, Febre Amarela) pode matar o paciente pela proliferação irrestrita do agente vacinal. Vacinas mortas/inativas (Gripe) são seguras, mas possivelmente ineficazes, pois o paciente não formará anticorpos contra elas.",
+        es: "INFECCIÓN VACUNAL DESENFRENADA Y FALLO INMUNOLÓGICO. Estos fármacos barren los linfocitos B y T de la sangre, dejando al cuerpo incapaz de montar respuesta celular o producir nuevos anticuerpos. Administrar vacunas de virus vivos puede matar al paciente por proliferación irrestricta del agente vacunal. Las vacunas muertas son seguras pero posiblemente inútiles."
+      },
+      conduta: {
+        pt: "A vacinação do paciente DEVE ser atualizada inteiramente pelo menos 6 SEMANAS ANTES do início do tratamento biológico. Durante a terapia e enquanto não houver repovoação de células B, vacinas vivas são rigorosamente contraindicadas.",
+        es: "La vacunación DEBE ser actualizada al menos 6 SEMANAS ANTES del inicio del tratamiento biológico. Durante la terapia y mientras no haya repoblación de células B, vacunas vivas son rigurosamente contraindicadas."
+      }
+    }
+  },
+
+  /* ── PIRIDOSTIGMINA (MIASTENIA GRAVIS) × outros fármacos ── */
+  "piridostigmina": {
+    "$classe_corticosteroides_pulsoterapia": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "A PIORA PARADOXAL E TEMPORÁRIA DA MIASTENIA. Na crise miastênica, o médico frequentemente inicia doses altas de Corticoide (Prednisona/Metilprednisolona) junto com a Piridostigmina. Nos primeiros 7 a 14 dias de corticoide em altas doses, a fraqueza muscular DO PACIENTE PIORA (ele pode parar de respirar antes de melhorar) devido a uma facilitação de bloqueio de placa motora induzida pelo corticoide.",
+        es: "EL EMPEORAMIENTO PARADÓJICO Y TEMPORAL DE LA MIASTENIA. En la crisis, se inicia Corticoide junto con Piridostigmina. En los primeros 7 a 14 días de corticoide alto, la debilidad muscular DEL PACIENTE EMPEORA (puede parar de respirar antes de mejorar) por facilitación de bloqueo en la placa motora."
+      },
+      conduta: {
+        pt: "A associação é padrão-ouro, MAS o início do corticoide em alta dose em paciente miastênico exige internação hospitalar e retaguarda de UTI para monitorar a possível necessidade de intubação nos primeiros dias.",
+        es: "La asociación es estándar de oro, PERO el inicio del corticoide alto en miasténico exige internación hospitalaria y retaguardia de UCI para monitorear la posible necesidad de intubación en los primeros días."
+      }
+    },
+    "$classe_betabloqueadores_bradicardizantes": {
+      gravidade: "alta",
+      scoreClinico: 4,
+      descricao: {
+        pt: "BLOQUEIO SINUSAL FATAL E FALHA RESPIRATÓRIA. A Piridostigmina aumenta a acetilcolina no corpo todo, estimulando fortemente o nervo Vago a frear o coração (bradicardia e hipersecreção brônquica). Associar Betabloqueadores (Propranolol, Atenolol) retira o 'freio simpático' compensatório. O resultado é bradicardia severa (< 40 bpm) e piora da função muscular respiratória do miastênico.",
+        es: "BLOQUEO SINUSAL FATAL Y FALLO RESPIRATORIO. La Piridostigmina estimula fuertemente al nervio Vago a frenar el corazón (bradicardia e hipersecreción bronquial). Asociar Betabloqueantes retira el 'freno simpático' compensatorio. El resultado es bradicardia severa y empeoramiento de la función muscular respiratoria."
+      },
+      conduta: {
+        pt: "Betabloqueadores devem ser extremamente evitados em portadores de Miastenia Gravis sintomáticos em uso de Piridostigmina. Para controle de hipertensão, preferir bloqueadores de cálcio (Amlodipino) ou IECA.",
+        es: "Los betabloqueantes deben ser extremadamente evitados en portadores de Miastenia Gravis sintomáticos en uso de Piridostigmina. Para control de hipertensión, preferir bloqueadores de calcio (Amlodipino) o IECA."
+      }
+    }
   }
 
-}; /* fim INTERACOES_DB — BUILD 403 (Anestesia: isoflurano×succinilcolina/HM, Infectologia: cetoconazol×CYP3A4/IBP, Cardiologia: furosemida_iv×aminoglicosideos, Gastrologia: proclorperazina×D2-bloqueadores) */
+}; /* fim INTERACOES_DB — BUILD 407 (Neuroimunologia EM: imunodepletores×vacinas vírus vivo; Miastenia: piridostigmina×corticoides/betabloqueadores) | BUILD 403 (Anestesia: isoflurano×succinilcolina/HM, Infectologia: cetoconazol×CYP3A4/IBP, Cardiologia: furosemida_iv×aminoglicosideos, Gastrologia: proclorperazina×D2-bloqueadores) */
 
 /* ═══════════════════════════════════════════════════════════════
    EXPORTAÇÕES GLOBAIS — disponibiliza no escopo do navegador
