@@ -442,4 +442,219 @@
          (anlodipino · nifedipina · felodipina · lercanidipina · manidipina)
          ANTI-DUPLICAÇÃO: IDs canônicos ANVISA — coexistência com cardio.js
          (CARDIO_DRUGS_DB) via namespaces distintos, sem colisão de runtime */
+
+  /* ─── GUARD BUILD 437 ─── */
+  if (typeof window.CARDIOLOGIA_DRUGS_DB !== 'object' || window.CARDIOLOGIA_DRUGS_DB === null) return;
+
+  Object.assign(window.CARDIOLOGIA_DRUGS_DB, {
+
+    /* ── TRANDOLAPRIL ───────────────────────────────────────────────── */
+    "trandolapril": {
+      name: { pt: 'Trandolapril', es: 'Trandolapril' },
+      category: 'cardiologia',
+      class: { pt: 'Inibidor da Enzima Conversora de Angiotensina (IECA) de Alta Lipofilia', es: 'Inhibidor de la Enzima Convertidora de Angiotensina (IECA) de Alta Lipofilia' },
+      indications: {
+        pt: ['Hipertensão Arterial Sistêmica', 'Disfunção Ventricular Esquerda pós-Infarto Agudo do Miocárdio (melhora de sobrevida global)', 'Nefropatia Diabética com microalbuminúria'],
+        es: ['Hipertensión Arterial Sistémica', 'Disfunción Ventricular Izquierda post-Infarto de Miocardio', 'Nefropatía Diabética']
+      },
+      commercialNames: { br: ['Gopten'], ar: ['Gopten', 'Udrik'] },
+      presentation: { pt: ['Cápsulas duras 0,5 mg, 1 mg, 2 mg e 4 mg'], es: ['Cápsulas 0,5 mg, 1 mg, 2 mg y 4 mg'] },
+      mechanism: {
+        pt: 'O IECA mais Lipofílico da História. É um pró-fármaco convertido no fígado no metabólito ativo Trandolaprilato. A sua grande jogada de engenharia molecular é a sua lipofilia extrema (afinidade por gordura). Ele atravessa as barreiras dos tecidos com facilidade e se liga à ECA endotelial de forma 10 vezes mais forte que o Captopril. Bloqueia o eixo RAA tecidual por mais de 24 a 36 horas, impedindo de forma implacável o remodelamento cardíaco pós-infarto.',
+        es: 'Profármaco convertido en Trandolaprilat. Es el IECA con mayor lipofilia de su clase, lo que le permite una penetración tisular excepcional. Posee una afinidad de unión por la ECA endotelial vascular extremadamente alta y duradera, suprimiendo el eje RAA por más de 24-36 horas y frenando el remodelado cardíaco.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hipertensão: Iniciar com 1 mg a 2 mg via oral, UMA VEZ ao dia. Ajustar até 4 mg/dia. Pós-Infarto (Estudo TRACE): Iniciar com 0,5 mg ao dia, escalonando até o alvo de 4 mg/dia.',
+          es: 'Hipertensión: Iniciar con 1 mg a 2 mg vía oral, UNA VEZ al día. Máx 4 mg/día. Post-Infarto: Iniciar con 0,5 mg al día, escalonando hasta la meta de 4 mg/día.'
+        },
+        pediatric: {
+          pt: 'Segurança e eficácia não estabelecidas em pediatria.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['Uso oral diário, preferencialmente pela manhã. Pode ser administrado com ou sem alimentos, mantendo absorção estável.'], es: ['Uso oral diario, por la mañana. Puede tomarse con o sin alimentos.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min, reduzir a dose inicial obrigatória para 0,5 mg ao dia, monitorando potássio.', es: 'Si ClCr < 30 mL/min, dosis inicial reducida a 0,5 mg al día.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Em cirrose hepática severa, a conversão do pró-fármaco é mais lenta. Iniciar com 0,5 mg ao dia.', es: 'En cirrosis grave, iniciar con 0,5 mg al día debido a metabolismo lento.' } },
+      commonAdverseEffects: { pt: ['Tosse seca irritativa de padrão crônico', 'Tontura postural e hipotensão na primeira dose', 'Hipercalemia leve'], es: ['Tos seca irritativa', 'Mareo postural e hipotensión de primera dosis', 'Hiperpotasemia leve'] },
+      dangerousAdverseEffects: { pt: ['ANGIOEDEMA LETAL de glote e face', 'Insuficiência renal funcional anúrica aguda (em rim único ou estenose renal)'], es: ['ANGIOEDEMA LETAL', 'Insuficiencia renal aguda funcional'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez (Black Box de classe por destruição renal fetal)', 'Histórico de angioedema induzido por qualquer IECA'], es: ['Embarazo (Caja Negra por toxicidad fetal)', 'Historial de angioedema'] },
+        relative: { pt: ['Uso associado com diuréticos poupadores de potássio ou suplementos puros'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O SALVADOR DO CORAÇÃO INFARTADO (O ESTUDO TRACE): O Trandolapril ganhou a coroa da cardiologia após o estudo europeu TRACE. Ele provou que dar o remédio logo após um infarto grave com disfunção de bomba reduz a mortalidade global em 22% a longo prazo, porque impede mecanicamente que o coração do paciente cresça "torto e dilatado" (remodelamento).', es: 'EL REDENTOR POST-INFARTO (ESTUDIO TRACE): Demostró que iniciar Trandolapril tras un infarto agudo con disfunción ventricular reduce la mortalidad global un 22% a largo prazo, al bloquear el remodelado patológico del ventrículo.' }
+      },
+      references: { pt: 'TRACE Trial (Lancet 1995 - Trandolapril Cardiac Evaluation); Diretrizes da ESC/SBC sobre Infarto Agudo do Miocárdio.', es: 'TRACE Trial (Lancet 1995); Directrices de la Sociedad Europea de Cardiología (ESC).' }
+    },
+
+    /* ── PERHEXILINA ────────────────────────────────────────────────── */
+    "perhexilina": {
+      name: { pt: 'Perhexilina (Maleato de)', es: 'Perhexilina (Maleato de)' },
+      category: 'cardiologia',
+      class: { pt: 'Modulador do Metabolismo Energético Miocárdico / Inibidor de CPT-1', es: 'Modulador del Metabolismo Energético Miocárdico / Inhibidor de CPT-1' },
+      indications: {
+        pt: ['Tratamento de Angina Pectoris Crônica Grave refratária que não responde a outros antianginosos clássicos', 'Manejo de sintomas em pacientes com Cardiomiopatia Hipertrófica Obstrutiva'],
+        es: ['Tratamiento de Angina Pectoris Crónica Grave refractaria', 'Manejo de síntomas en Cardiomiopatía Hipertrófica Obstructiva']
+      },
+      commercialNames: { br: ['Pexsig (Importação regulada)'], ar: ['Pexsig'] },
+      presentation: { pt: ['Comprimidos de 100 mg'], es: ['Comprimidos de 100 mg'] },
+      mechanism: {
+        pt: 'O Protetor de Oxigênio Mitocondrial. A Perhexilina inibe a enzima CPT-1 (Carnitina Palmitoiltransferase-1) dentro das mitocôndrias do coração. Ao bloquear essa enzima, ela proíbe o coração de queimar Ácidos Graxos para gerar energia, forçando o miocárdio a queimar GLICOSE. A queima de glicose consome muito MENOS oxigênio por molécula de ATP gerada. Isso faz com que o coração do paciente precise de menos oxigênio para funcionar, eliminando a dor da angina.',
+        es: 'Inhibidor de la enzima mitocondrial carnitina palmitoiltransferasa-1 (CPT-1). Cambia el metabolismo energético del miocardio de la oxidación de ácidos grasos a la oxidación de glucosa, la cual es metabólicamente más eficiente y requiere menos oxígeno por mol de ATP generado, aliviando la isquemia miocárdica.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 100 mg via oral, UMA VEZ ao dia. Requer monitoramento rigoroso das concentrações no sangue (janela terapêutica estreita: 0,15 a 0,60 mg/L). Ajustar até um teto máximo de 300 mg/dia.',
+          es: 'Inicio: 100 mg vía oral, UNA VEZ al día. Requiere monitoreo terapéutico obligatorio de niveles séricos (Rango: 0,15 a 0,60 mg/L).'
+        },
+        pediatric: {
+          pt: 'Não indicado em pediatria.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Uso oral diário. OBRIGATÓRIO dosar o nível sanguíneo da droga após 1 a 2 semanas do início do tratamento devido à variação genética de metabolismo via CYP2D6.'], es: ['Uso oral diario. Obligatorio dosar concentraciones plasmáticas para evitar neurotoxicidad severa.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito de dose renal.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'ALTAMENTE PERIGOSO. Metabolizado pela via CYP2D6. Se o paciente for um "metabolizador lento" genético, a droga acumula, causando cirrose e destruição dos nervos. Monitorar transaminases.', es: 'Metabolizado por CYP2D6. Contraindicado en insuficiencia hepática grave por alto riesgo de hepatotoxicidad celular.' } },
+      commonAdverseEffects: { pt: ['Náuseas e tonturas iniciais', 'Fadiga e cefaleia', 'Flutuações de peso'], es: ['Náuseas y mareos', 'Fatiga y cefalea', 'Pérdida de peso'] },
+      dangerousAdverseEffects: { pt: ['HEPATOTOXICIDADE SEVERA (Cirrose fulminante e infiltração de gordura fosfolipídica)', 'NEUROPATIA PERIFÉRICA GRAVE (Fraqueza nas pernas e dormência incapacitante se os níveis passarem de 0,6 mg/L)'], es: ['HEPATOTOXICIDAD GRAVE (Cirrosis fulminante)', 'NEUROPATÍA PERIFÉRICA GRAVE (Pérdida de la marcha por mielinolisis axonal)'] },
+      contraindications: {
+        absolute: { pt: ['Doença hepática ativa pré-existente', 'Impossibilidade laboratorial de dosar os níveis plasmáticos da droga'], es: ['Enfermedad hepática activa', 'Imposibilidad de realizar monitoreo de niveles en sangre'] },
+        relative: { pt: ['Uso concomitante com inibidores potentes de CYP2D6 (como Fluoxetina ou Paroxetina)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A CAIXA PRETA DOS NÍVEIS SANGUÍNEOS: A Perhexilina é uma das drogas mais perigosas da cardiologia se usada às cegas. Causa fosfolipidose generalizada. Se o nível passar do teto de 0,60 mg/L, o paciente desenvolve neuropatia que tira o movimento dos pés e destrói o fígado. Só use se puder dosar o exame de sangue.', es: 'ALERTA DE SEGURIDAD EXTREMA: Si los niveles superan los 0,60 mg/L, acumula fosfolípidos en los tejidos provocando polineuropatía desmielinizante severa y cirrosis. Es mandatorio suspender si hay hormigueo en extremidades.' }
+      },
+      references: { pt: 'CARISA Trial (Metabolic support); European Heart Journal Antianginal Guide; FDA Special Access Data Pexsig.', es: 'European Heart Journal Antianginal Guidelines; Manual de Toxicología Clínica de Micromedex.' }
+    },
+
+    /* ── ALISQUIRENO ────────────────────────────────────────────────── */
+    "alisquireno": {
+      name: { pt: 'Alisquireno (Hemifumarato de)', es: 'Aliskiren (Hemifumarato de)' },
+      category: 'cardiologia',
+      class: { pt: 'Inibidor Direto da Renina / Bloqueador Primário do Eixo RAA', es: 'Inhibidor Directo de la Renina / Bloqueador Primario del Eje RAA' },
+      indications: {
+        pt: ['Tratamento da Hipertensão Arterial Sistêmica isolada ou em combinação com outros anti-hipertensivos (Exceto IECA/BRA)'],
+        es: ['Tratamiento de la Hipertensión Arterial Sistémica']
+      },
+      commercialNames: { br: ['Rasilez'], ar: ['Rasilez', 'Rasilez HCT (Assoc)'] },
+      presentation: { pt: ['Comprimidos revestidos 150 mg e 300 mg'], es: ['Comprimidos 150 mg y 300 mg'] },
+      mechanism: {
+        pt: 'O Bloqueador da Origem do Eixo. O Alisquireno atua no topo do sistema. Ele liga-se diretamente no sítio ativo da Renina fabricada pelos rins. Ao travar a Renina, ele impede mecanicamente que o Angiotensinogênio vire Angiotensina I. Sem Angiotensina I, não há substrato para a ECA trabalhar, cortando por completo a produção de Angiotensina II e Aldosterona na raiz do problema.',
+        es: 'Inhibidor directo, potente y selectivo de la renina humana. Al unirse a la enzima, bloquea la conversión de angiotensinógeno en Angiotensina I, disminuyendo los niveles de Angiotensina II y Aldosterona desde el paso inicial y limitante del sistema.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 150 mg via oral, UMA VEZ ao dia. Se a pressão não atingir o alvo após 2-4 semanas, a dose pode ser elevada para 300 mg ao dia.',
+          es: 'Inicio: 150 mg vía oral, UNA VEZ al día. Puede incrementarse a 300 mg al día tras 2-4 semanas de evaluación.'
+        },
+        pediatric: {
+          pt: 'Contraindicado em crianças menores de 2 anos devido ao risco imenso de toxicidade renal e colapso por hipotensão.',
+          es: 'Contraindicado en menores de 2 años.'
+        }
+      },
+      administration: { pt: ['Deve ser tomado uma vez ao dia, sempre no mesmo horário. EVITAR TOMAR JUNTO COM REFEIÇÕES RICAS EM GORDURA, pois elas reduzem a absorção da droga em mais de 70%, gerando falha terapêutica.'], es: ['Tomar siempre a la misma hora. EVITAR COMIDAS ALTAS EN GRASA, ya que disminuyen su absorción un 70%, anulando su eficacia.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min, usar com extrema cautela pelo risco severo de hipercalemia e piora aguda da função renal.', es: 'Contraindicado el uso asociado con IECA/BRA si hay falla renal crónica.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste prévio.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Diarreia dose-dependente (afeta ~2% com 300mg)', 'Hipercalemia leve', 'Tontura e fadiga'], es: ['Diarrea dosis-dependiente', 'Hiperpotasemia leve', 'Mareo'] },
+      dangerousAdverseEffects: { pt: ['Insuficiência Renal Aguda funcional catastrófica', 'Angioedema de glote e anafilaxia', 'Hipotensão severa com síncope'], es: ['Insuficiencia Renal Aguda', 'Angioedema de glotis', 'Hipotensión severa'] },
+      contraindications: {
+        absolute: { pt: ['USO COMBINADO COM IECA (Enalapril) OU BRA (Losartana) EM PACIENTES DIABÉTICOS (Estudo ALTITUDE provou que causa AVC e falência renal)', 'Gravidez (causa morte renal fetal)'], es: ['USO COMBINADO CON IECA O ARA-II EN PACIENTES DIABÉTICOS (Estudio ALTITUDE)', 'Embarazo'] },
+        relative: { pt: ['Estenose bilateral de artéria renal'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O DESASTRE DO ESTUDO ALTITUDE (NÃO MISTURE OS BLOQUEADORES): O Alisquireno foi desenhado para revolucionar a pressão. Mas o grande estudo ALTITUDE trouxe um banho de água fria: misturar o Alisquireno com Losartana ou Enalapril em diabéticos aumentou assustadoramente a taxa de AVC, infarto e paralisação dos rins. Nunca combine este remédio com outro bloqueador do eixo.', es: 'EL DESASTRE DEL ESTUDIO ALTITUDE: Está PROHIBIDO combinar Aliskiren con Enalapril o Losartán en pacientes con diabetes o falla renal. El estudio demostró que esta doble combinación dispara los ACV, la hiperpotasemia crítica y la necesidad de diálisis de emergencia.' }
+      },
+      references: { pt: 'ALTITUDE Trial (NEJM 2012 - Aliskiren in Type 2 Diabetes); AVOID Trial (Nefropatia); Diretrizes SBC Hipertensão.', es: 'ALTITUDE Trial (NEJM 2012); AVOID Trial; Directrices de la Sociedad Argentina de Hipertensión (SAHA).' }
+    },
+
+    /* ── AMLODIPINO + VALSARTANA ────────────────────────────────────── */
+    "amlodipino_valsartana": {
+      name: { pt: 'Amlodipino + Valsartana', es: 'Amlodipino + Valsartán' },
+      category: 'cardiologia',
+      class: { pt: 'Combinação Anti-hipertensiva Sinérgica / Bloqueador de Cálcio + BRA', es: 'Combinación Antihipertensiva Sinérgica / Bloqueador de Calcio + ARA-II' },
+      indications: {
+        pt: ['Tratamento da Hipertensão Arterial Sistêmica em pacientes cuja pressão não é controlada com monoterapia (Segunda linha em diante)'],
+        es: ['Tratamiento de la Hipertensión Arterial Sistémica cuando falla la monoterapia']
+      },
+      commercialNames: { br: ['Exforge', 'Brasart BCC', 'Valsatress AM'], ar: ['Exforge', 'Simval AM'] },
+      presentation: { pt: ['Comprimidos revestidos nas dosagens 5/160 mg, 10/160 mg e 10/320 mg'], es: ['Comprimidos de 5/160 mg, 10/160 mg y 10/320 mg'] },
+      mechanism: {
+        pt: 'O Combo Perfeito Sem Inchaço. Junta dois mecanismos brilhantes. O Amlodipino relaxa a artéria que entra no capilar (vasodilatação pré-capilar). A Valsartana bloqueia o receptor AT1 da Angiotensina II, relaxando a veia que SAI do capilar (vasodilatação pós-capilar). Como os dois lados do vaso abrem juntos, a pressão no microvaso equilibra e o plasma não vaza para a perna. A pressão despenca e a incidência de edema maleolar cai pela metade.',
+        es: 'Combinación sinérgica de un bloqueante de canales de calcio (Amlodipino) y un antagonista de los receptores de angiotensina II (Valsartán). El amlodipino induce vasodilatación arteriolar (precapilar), mientras que el valsartán promueve venodilatación (postcapilar). Esta acción equilibrada reduce la presión hidrostática en el microvaso, disminuyendo el edema en tobillos.'
+      },
+      dose: {
+        adult: {
+          pt: '1 comprimido via oral, UMA VEZ ao dia, de manhã. Titular a dosagem conforme a resposta de queda pressórica (ex: subir de 5/160mg para 10/160mg após 2 semanas se necessário).',
+          es: '1 comprimido vía oral, UNA VEZ al día por la mañana. Se titula escalonando las dosis según objetivos terapéuticos.'
+        },
+        pediatric: {
+          pt: 'Não indicado para crianças.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Uso oral contínuo diário. Pode ser administrado com ou sem alimentos. Recomenda-se tomar sempre no mesmo horário todos os dias.'], es: ['Uso oral continuo. Puede tomarse con o sin alimentos.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min, usar com monitoramento rigoroso devido ao componente Valsartana (risco de hipercalemia). Não requer ajuste se ClCr > 30.', es: 'Precaución extrema si ClCr < 30 mL/min por riesgo de hiperpotasemia.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Usar com extremo cuidado em hepatopatias severas ou obstrução biliar devido ao clearance de amlodipino estar lentificado.', es: 'Reducir dosis inicial al mínimo en insuficiencia hepática por acumulación de amlodipino.' } },
+      commonAdverseEffects: { pt: ['Tontura postural transitória', 'Edema periférico leve (muito menor que amlodipino isolado)', 'Cefaleia e fadiga'], es: ['Mareo postural', 'Edema periférico leve', 'Cefalea y fatiga'] },
+      dangerousAdverseEffects: { pt: ['Insuficiência renal funcional aguda', 'Hipotensão severa com síncope na primeira tomada', 'Hipercalemia severa'], es: ['Insuficiencia renal funcional', 'Síncope hipotensivo', 'Hiperpotasemia'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez (Valsartana causa parada de filtração e defeito ósseo fetal)', 'Uso associado com Alisquireno em diabéticos'], es: ['Embarazo (Absoluto)', 'Uso concomitante con Aliskiren en pacientes diabéticos'] },
+        relative: { pt: ['Estenose aórtica severa ou estenose bilateral de artéria renal'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A MECÂNICA DA TROCA ESPERTA: Se o seu paciente usa Amlodipino 10mg e chega reclamando que o pé parece um "pão de forma" de tão inchado, o erro é dar diurético. A conduta inteligente é migrar para o combo Exforge. A Valsartana dilata as veias que o amlodipino ignorou, puxando o líquido da perna de volta para o vaso e murchando o pé do doente.', es: 'EL RESCATE MECÁNICO DEL EDEMA: En lugar de sumar Furosemida (error iatrogénico común) ante la hinchazón causada por amlodipino, la asociación con Valsartán equilibra la microcirculación al abrir el esfínter postcapilar venoso, eliminando el edema en pocas semanas.' }
+      },
+      references: { pt: 'EXFORGE Clinical Development Program; JNC 8 Hypertension Guidelines; Diretrizes de HAS da SBC 2020.', es: 'EXFORGE Clinical Development Program; Guías de Hipertensión de la ESC/ESH.' }
+    },
+
+    /* ── AMLODIPINO + LOSARTANA ─────────────────────────────────────── */
+    "amlodipino_losartana": {
+      name: { pt: 'Amlodipino + Losartana Potássica', es: 'Amlodipino + Losartán Potásico' },
+      category: 'cardiologia',
+      class: { pt: 'Combinação Anti-hipertensiva / Bloqueador de Cálcio + Antagonista AT1', es: 'Combinación Antihipertensiva / Bloqueador de Calcio + Antagonista AT1' },
+      indications: {
+        pt: ['Hipertensão Arterial Sistêmica em pacientes que necessitam de terapia combinada com alta adesão (comprimido único de baixo custo)'],
+        es: ['Hipertensión Arterial Sistémica que requiere terapia combinada en un solo comprimido de bajo costo']
+      },
+      commercialNames: { br: ['Aradois AM', 'Lotar', 'Corus HAM'], ar: ['Aradois AM'] },
+      presentation: { pt: ['Comprimidos revestidos combinados 2,5/50 mg, 5/50 mg e 5/100 mg'], es: ['Comprimidos de 2,5/50 mg, 5/50 mg y 5/100 mg'] },
+      mechanism: {
+        pt: 'O Combo de Alto Acesso Nacional. Une a ação prolongada do Amlodipino (vasodilatação periférica arterial por 24h) com o bloqueio do receptor AT1 pela Losartana. A Losartana adiciona uma vantagem biológica única: possui um efeito URICOSÚRICO discreto (obriga o rim a jogar o Ácido Úrico fora pela urina). Isso neutraliza o aumento de ácido úrico que pode ocorrer em pacientes predispostos à gota.',
+        es: 'Combinación de amlodipino y losartán. Además del sinergismo tensional arteriovenoso capilar, el losartán aporta un efecto uricosúrico intrínseco a nivel del túbulo renal proximal, lo que contrarresta la tendencia a la hiperuricemia que pueden inducir los bloqueantes de calcio a largo plazo.'
+      },
+      dose: {
+        adult: {
+          pt: '1 comprimido via oral, UMA VEZ ao dia, pela manhã ou à noite. Dose máxima restrita ao teto dos componentes (5/100 mg ou conforme apresentação disponível).',
+          es: '1 comprimido vía oral, UNA VEZ al día. Ajustable según control de cifras de presión arterial.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Uso oral diário. Pode ser ingerido de estômago cheio ou vazio. Manter o uso contínuo mesmo com níveis pressóricos ótimos.'], es: ['Uso oral diario. Puede tomarse con o sin alimentos de manera indefinida.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min, risco de hipercalemia funcional por acúmulo de losartana; monitorar creatinina sérica a cada 3 meses.', es: 'Monitorear potasio y creatinina si hay insuficiencia renal moderada a grave.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'A Losartana precisa do fígado para virar seu metabólito ativo EXP3174. Em cirróticos, o efeito pode ser menor, mas o amlodipino pode acumular. Iniciar com doses mínimas (2,5/50 mg).', es: 'Cirrosis hepática ralentiza la activación de losartán y acumula amlodipino; iniciar con dosis mínima.' } },
+      commonAdverseEffects: { pt: ['Tontura ao levantar rápido (hipotensão ortostática)', 'Cefaleia de tração vascular', 'Cãibras musculares leves'], es: ['Mareo postural', 'Cefalea', 'Calambres musculares leves'] },
+      dangerousAdverseEffects: { pt: ['Insuficiência renal aguda funcional anúrica', 'Hipercalemia crítica arritmogênica', 'Angioedema laríngeo (Raro)'], es: ['Insuficiencia renal aguda', 'Hiperpotasemia crítica', 'Angioedema'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez (Contraindicação absoluta black box — risco de malformação e morte renal fetal)'], es: ['Embarazo (Contraindicación absoluta por riesgo de insuficiencia renal y muerte fetal)'] },
+        relative: { pt: ['Histórico de gota severa recorrente (embora a losartana ajude, monitorar eletrólitos)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ALERTA DA PARADA NA DIARREIA: Se o paciente que toma Lotar/Aradois AM pegar uma infecção intestinal grave com vômitos e diarreia volumosa, ele vai desidratar. Manter o remédio ativa um bloqueio que impede o rim de se defender da desidratação, causando Insuficiência Renal Aguda. A conduta certa é SUSPENDER temporariamente o combo até curar a diarreia.', es: 'EL ALERTA DE LA DESHIDRATACIÓN AGUDA: Si el paciente presenta un cuadro de deshidratación por diarrea profusa o vómitos, mantener este combo bloquea los mecanismos de defensa del riñón, gatillando una Injuria Renal Aguda prerrenal. Se debe suspender el fármaco temporalmente hasta restaurar la volemia.' }
+      },
+      references: { pt: 'Estudo Clínico LOTAR; Diretrizes de Hipertensão Arterial da SBC/SBD/SBN 2020; JNC 8 Manual.', es: 'Estudio Clínico LOTAR; Guías de Hipertensión de la Sociedad Argentina de Cardiología.' }
+    }
+
+  }); /* fim Object.assign CARDIOLOGIA_DRUGS_DB — BUILD 437 / ONDA 64
+         (trandolapril · perhexilina · alisquireno · amlodipino_valsartana · amlodipino_losartana)
+         Bloco: IECAs lipofílicos, Modulador Metabólico CPT-1, Inibidor Direto da Renina,
+         Combos anti-hipertensivos BCC+BRA e BCC+AT1 */
 })();
