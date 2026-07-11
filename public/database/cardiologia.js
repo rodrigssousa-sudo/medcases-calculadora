@@ -527,7 +527,7 @@
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
         warning: { pt: 'A CAIXA PRETA DOS NÍVEIS SANGUÍNEOS: A Perhexilina é uma das drogas mais perigosas da cardiologia se usada às cegas. Causa fosfolipidose generalizada. Se o nível passar do teto de 0,60 mg/L, o paciente desenvolve neuropatia que tira o movimento dos pés e destrói o fígado. Só use se puder dosar o exame de sangue.', es: 'ALERTA DE SEGURIDAD EXTREMA: Si los niveles superan los 0,60 mg/L, acumula fosfolípidos en los tejidos provocando polineuropatía desmielinizante severa y cirrosis. Es mandatorio suspender si hay hormigueo en extremidades.' }
       },
-      references: { pt: 'CARISA Trial (Metabolic support); European Heart Journal Antianginal Guide; FDA Special Access Data Pexsig.', es: 'European Heart Journal Antianginal Guidelines; Manual de Toxicología Clínica de Micromedex.' }
+      references: { pt: 'CARISA Trial (Metabolic support); European Heart Journal Antianginal Guide; FDA Special Access Data Pexsig.', es: 'European Heart Journal Antianginal Guidelines; Manual de Toxicología Clínica de Micomedex.' }
     },
 
     /* ── ALISQUIRENO ────────────────────────────────────────────────── */
@@ -657,4 +657,98 @@
          (trandolapril · perhexilina · alisquireno · amlodipino_valsartana · amlodipino_losartana)
          Bloco: IECAs lipofílicos, Modulador Metabólico CPT-1, Inibidor Direto da Renina,
          Combos anti-hipertensivos BCC+BRA e BCC+AT1 */
+
+  /* ── BUILD 440 guard ─────────────────────────────────────────────── */
+  if (typeof window.CARDIOLOGIA_DRUGS_DB !== 'object' || window.CARDIOLOGIA_DRUGS_DB === null) return;
+  Object.assign(window.CARDIOLOGIA_DRUGS_DB, {
+
+/* ── DILTIAZEM (691) ────────────────────────────────────────────────── */
+    "diltiazem": {
+      name: { pt: 'Diltiazem (Cloridrato de)', es: 'Diltiazem (Clorhidrato de)' },
+      category: 'cardiologia',
+      class: { pt: 'Bloqueador dos Canais de Cálcio Não-Di-hidropiridínico / Antiarrítmico de Classe IV', es: 'Bloqueante de los Canales de Calcio No Dihidropiridínico / Antiarrítmico de Clase IV' },
+      indications: {
+        pt: ['Controle de frequência cardíaca na Fibrilação Atrial crônica ou Flutter atrial', 'Angina Pectoris (Estável e Vasoespástica de Prinzmetal)', 'Hipertensão Arterial Sistêmica'],
+        es: ['Control de frecuencia cardíaca en Fibrilación Auricular o Flutter atrial', 'Angina de Pecho (Estable y Vasoespástica de Prinzmetal)', 'Hipertensión Arterial']
+      },
+      commercialNames: { br: ['Cardizem', 'Balcor', 'Diltiazem'], ar: ['Cardizem', 'Acalix', 'Incoril'] },
+      presentation: { pt: ['Comprimidos 30 mg, 60 mg; Cardizem SR/CD (Liberação prolongada) 90 mg, 120 mg, 180 mg'], es: ['Comprimidos 30 mg, 60 mg; Comprimidos de liberación prolongada 90 mg, 120 mg, 180 mg'] },
+      mechanism: {
+        pt: 'O Freio do Nodo AV. Liga-se às subunidades Alfa-1 dos canais de cálcio tipo L no músculo liso vascular e, com altíssima intensidade, nas células do sistema de condução elétrica cardíaca (nós sinusal e atrioventricular). Ao diminuir a entrada de cálcio no coração, ele lentifica a velocidade de condução do estímulo e aumenta o período refratário do nó AV, diminuindo os batimentos cardíacos (efeito cronotrópico e dromotrópico negativo) e relaxando as coronárias.',
+        es: 'Inhibe el flujo de iones de calcio a través de los canales lentos tipo L en el músculo liso vascular y el miocardio. Posee un marcado efecto en el tejido de conducción (nodos sinusal y AV), disminuyendo la frecuencia cardíaca (cronotrópico negativo) y reduciendo la fuerza de contracción (inotrópico negativo).'
+      },
+      dose: {
+        adult: {
+          pt: 'Angina/Hipertensão: Iniciar com 30 mg a 60 mg via oral, 3 a 4 vezes ao dia (liberação imediata). Formulações de liberação prolongada (SR/CD): 90 mg a 180 mg via oral, UMA VEZ ao dia. Pode titular até o teto de 360 mg/dia.',
+          es: 'Inicio: 30 mg a 60 mg vía oral, 3 o 4 veces al día (inmediata). Liberación prolongada: 90 mg a 180 mg vía oral, UNA VEZ al día. Máx 360 mg/día.'
+        },
+        pediatric: {
+          pt: 'Não recomendado ou estabelecido na rotina pediátrica.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['As cápsulas de liberação prolongada (Cardizem SR/CD) DEVEM ser engolidas inteiras. É expressamente proibido partir ou mastigar as pelotas internas, sob risco de liberação maciça da dose e colapso circulatório com choque.'], es: ['Los comprimidos de liberación prolongada DEBEN tragarse enteros, nunca partirse ni masticarse por riesgo de toxicidad aguda por sobredosis.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito, monitorar tolerabilidade basal.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado intensamente pelo fígado (Inibidor potente do CYP3A4). Usar com extrema cautela e doses reduzidas em hepatopatias graves.', es: 'Disminuir dosis en insuficiencia hepática grave por alto metabolismo de primer paso.' } },
+      commonAdverseEffects: { pt: ['Bradicardia sinusal (batimentos lentos)', 'Edema periférico maleolar nas pernas', 'Constipação intestinal (o cálcio travado prende o intestino)', 'Rubor facial e tonturas'], es: ['Bradicardia sinusal', 'Edema periférico en tobillos', 'Estreñimiento por relajación del músculo liso colónico', 'Rubor'] },
+      dangerousAdverseEffects: { pt: ['Bloqueio Atrioventricular Total (BAVT de alto grau)', 'Insuficiência Cardíaca Congestiva aguda descompensada (devido ao seu forte efeito inotrópico negativo)', 'Hipotensão severa com síncope'], es: ['Bloqueo Atrioventricular Completo (BAVT)', 'Insuficiencia cardíaca aguda por depresión contráctil', 'Hipotensión severa'] },
+      contraindications: {
+        absolute: { pt: ['Síndrome do Nó Sinusal enfermo ou Bloqueio AV de 2º ou 3º grau (sem marcapasso ativo)', 'Insuficiência cardíaca com fração de ejeção reduzida severa (ICFER)', 'Choque cardiogênico'], es: ['Síndrome del nodo sinusal enfermo o Bloqueo AV de alto grado sin marcapasos', 'Insuficiencia cardíaca con FE reducida', 'Choque cardiogénico'] },
+        relative: { pt: ['Uso concomitante com Betabloqueadores (Metoprolol) pelo risco crítico de BAVT e assincronia de pulso'], es: ['Uso concomitante con Betabloqueadores (riesgo crítico de BAVT)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
+        warning: { pt: 'O ERRO CRÍTICO NA INSUFICIÊNCIA CARDÍACA: Jamais prescreva Diltiazem para um paciente que tem o coração fraco e dilatado (ICFER / Fração de ejeção baixa). Como o Diltiazem desliga os canais de cálcio no músculo cardíaco, ele "tira a força" de contração do coração. O coração falha na mesma hora e o paciente entra em Edema Agudo de Pulmão na emergência.', es: 'EL PELIGRO EN INSUFICIENCIA CARDÍACA: Está terminantemente PROHIBIDO usar Diltiazem en pacientes con falla cardíaca sistólica (FE reducida). Por su potente efecto inotrópico negativo, debilita la fuerza de bombeo del ventrículo, induciendo edema agudo de pulmón inmediato.' }
+      },
+      references: {
+        pt: 'OASIS-2 Trial; AFFIRM Study (Controle de FC na FA); Diretrizes de Arritmias Cardíacas da SBC 2021.',
+        es: 'AFFIRM Study; Directrices de la Sociedad Europea de Cardiología (ESC) para el manejo de la Fibrilación Auricular.'
+      }
+    },
+
+/* ── DOXAZOSINA DE LIBERAÇÃO PROLONGADA (694) ─────────────────────────── */
+    "doxazosina_lp": {
+      name: { pt: 'Doxazosina de Liberação Prolongada', es: 'Doxazosina de Liberación Prolongada' },
+      category: 'cardiologia',
+      class: { pt: 'Antagonista Seletivo dos Receptores Alfa-1 Adrenérgicos / Anti-hipertensivo e Antiprostático', es: 'Antagonista Selectivo de los Receptores Alfa-1 Adrenérgicos / Antihipertensivo y Antiprostático' },
+      indications: {
+        pt: ['Sintomas urinários da Hiperplasia Prostática Benigna (HPB - jato urinário fraco, polaciúria)', 'Tratamento da Hipertensão Arterial Sistêmica (como droga adjuvante de 3ª ou 4ª linha)'],
+        es: ['Síntomas urinarios de la Hiperplasia Prostática Benigna (HPB)', 'Tratamiento de la Hipertensión Arterial Sistémica']
+      },
+      commercialNames: { br: ['Duomo HP', 'Unidox', 'Doxazosina GITS'], ar: ['Cardura XL', 'Doxazosina GITS'] },
+      presentation: { pt: ['Comprimidos de liberação prolongada 4 mg e 8 mg'], es: ['Comprimidos de liberación prolongada 4 mg y 8 mg'] },
+      mechanism: {
+        pt: 'A Tecnologia de Matriz Osmótica. Bloqueia de forma competitiva os receptores Alfa-1 adrenérgicos localizados no colo da bexiga, uretra e próstata, relaxando o músculo liso e abrindo espaço para a urina descer livremente. Paralelamente, causa vasodilatação das artérias periféricas, reduzindo a pressão arterial. A versão de Liberação Prolongada usa o sistema GITS (matriz que puxa água), liberando a droga devagar em 24h, eliminando o pico tóxico e o desmaio clássico da versão comum.',
+        es: 'Antagonista selectivo postsináptico de los receptores alfa-1 adrenérgicos. Induce la relajación del músculo liso en el cuello de la vejiga y próstata, disminuyendo la resistencia al flujo urinario. La tecnología de liberación prolongada GITS reduce las oscilaciones plasmáticas, minimizando el riesgo de hipotensión ortostática.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose usual: 4 mg via oral, UMA VEZ ao dia. Se após 3-4 semanas o controle do jato urinário ou da pressão for insuficiente, pode ser elevada para o teto de 8 mg via oral uma vez ao dia.',
+          es: 'Dosis habitual: 4 mg vía oral, UNA VEZ al día. Puede incrementarse a 8 mg al día tras un mes de evaluación.'
+        },
+        pediatric: {
+          pt: 'Não indicado para menores de 18 anos.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['Deve ser tomado uma vez ao dia, de preferência com o café da manhã. O comprimido deve ser engolido INTEIRO (não pode mastigar, quebrar ou triturar, pois destrói a matriz de liberação controlada). A casca vazia do comprimido é eliminada intacta nas fezes.'], es: ['Tragar entero con el desayuno. No masticar. La matriz inerte del comprimido se elimina visiblemente en las heces.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose, perfil farmacocinético seguro.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado intensamente no fígado. Usar com muita cautela e monitorar em cirróticos graves.', es: 'Precaución en insuficiencia hepática grave por metabolismo hepático extenso.' } },
+      commonAdverseEffects: { pt: ['Tontura e vertigem leve', 'Cefaleia vascular', 'Astenia (fraqueza) e sonolência', 'Congestão nasal e edema periférico'], es: ['Mareo y vértigo leve', 'Cefalea', 'Astenia y somnolencia', 'Congestión nasal'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão Ortostática severa com Síncope (Desmaio na primeira tomada, embora muito menor que na doxazosina comum)', 'Priapismo doloroso prolongado (emergência urológica — raro)'], es: ['Hipotensión Ortostática con Síncope de primera dosis', 'Priapismo prolongado doloroso'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de hipotensão ortostática documentada ou síncope vaso-vagal severa', 'Obstrução esofágica mecânica pré-existente (para tecnologia GITS)'], es: ['Antecedente de hipotensión ortostática severa', 'Obstrucción gastrointestinal mecánica'] },
+        relative: { pt: ['Uso associado com inibidores de PDE5 (Sildenafila) pelo risco de somação de hipotensão postural'], es: ['Uso con inhibidores de PDE5 (Sildenafilo)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O COMPRIMIDO FANTASMA NAS FEZES: A Doxazosina LP usa um sistema de plástico inerte perfurado a laser chamado GITS. A água entra, empurra o remédio para fora e a cápsula de plástico sai vazia e perfeitamente intacta no vaso sanitário após a evacuação. O paciente idoso liga em pânico achando que o remédio não funcionou. Acalme o paciente: o remédio já foi absorvido e o que saiu foi apenas a casca.', es: 'EL COMPRIMIDO FANTASMA EN LAS HECES: Utiliza un sistema de matriz plástica osmótica cortada a láser. El agua entra en el intestino, empuja el fármaco hacia afuera, y el cascarón de plástico vacío se elimina intacto en las heces. Advierta al paciente anciano para evitar el pánico de creer que no absorbió el medicamento.' }
+      },
+      references: {
+        pt: 'ALLHAT Trial (Doxazosin arm - JAMA 2000); MTOPS Trial (HPB long term evaluation); FDA Clinical Data Cardura XL.',
+        es: 'ALLHAT Trial (JAMA 2000); MTOPS Trial; Ficha Técnica CIMA Doxazosina GITS.'
+      }
+    }
+
+  }); /* fim Object.assign CARDIOLOGIA_DRUGS_DB — BUILD 440 (diltiazem — BCC não-diidropiridinido/AntiarrítmicoIV; doxazosina_lp — Alfa-1 GITS/HPB+HAS) */
 })();
