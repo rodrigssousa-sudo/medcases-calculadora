@@ -3669,4 +3669,4671 @@
     }
 
   }); /* fim Object.assign BUILD 415 append */
+
+  /* ── BUILD 455-SNC — PILAR 3: Anticonvulsivantes + Antiparkinsonianos
+     Migrados de psicofarmacos.js para centralizar controle de disparo
+     elétrico e motor em neurologia.js ── */
+  Object.assign(window.NEURO_DRUGS_DB,
+    window.NEURO_DRUGS_DB !== window.NEUROLOGIA_DRUGS_DB
+      ? window.NEUROLOGIA_DRUGS_DB : {});
+
+  Object.assign(window.NEUROLOGIA_DRUGS_DB, {
+
+    // ── ANTICONVULSIVANTES / ANTIEPILÉPTICOS (AED) — Clássicos e Adjuvantes ──
+
+    acido_valproico: {
+      name: { pt: "Ácido valpróico / Valproato", es: "Ácido valproico / Valproato" },
+      category: "estabilizador_humor",
+
+      calculate: (paciente, lang = "pt") => {
+        const peso = Number(paciente.peso || 0);
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+
+        const doseMin = peso * 10;
+        const doseMax = peso * 15;
+
+        return {
+          name: t(lang, "Ácido valpróico / Valproato", "Ácido valproico / Valproato"),
+          class: t(lang, "Estabilizador do humor e anticonvulsivante", "Estabilizador del ánimo y anticonvulsivante"),
+          category: "estabilizador_humor",
+          commercialNames: {
+            br: ["Depakene", "Depakote", "Divalcon", "Valpakine"],
+            ar: ["Depakene", "Valcote", "Valproato", "Divalproato"]
+          },
+          presentation: [
+            t(lang, "Cápsula/comprimido 250 mg", "Cápsula/comprimido 250 mg"),
+            t(lang, "Comprimido 500 mg", "Comprimido 500 mg"),
+            t(lang, "Comprimido de liberação prolongada 500 mg", "Comprimido de liberación prolongada 500 mg"),
+            t(lang, "Solução/xarope 250 mg/5 mL", "Solución/jarabe 250 mg/5 mL"),
+            t(lang, "Frasco-ampola EV 500 mg", "Frasco ampolla IV 500 mg")
+          ],
+          dose: {
+            adulto: t(
+              lang,
+              `Mania aguda/epilepsia: iniciar 10–15 mg/kg/dia. Para ${peso || 0} kg: ${doseMin.toFixed(0)}–${doseMax.toFixed(0)} mg/dia.`,
+              `Manía aguda/epilepsia: iniciar 10–15 mg/kg/día. Para ${peso || 0} kg: ${doseMin.toFixed(0)}–${doseMax.toFixed(0)} mg/día.`
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 750–2000 mg/dia, ajustada por resposta, tolerabilidade e nível sérico.",
+              "Dosis habitual: 750–2000 mg/día, ajustada por respuesta, tolerabilidad y nivel sérico."
+            ),
+            alvoSerico: t(
+              lang,
+              "Nível sérico usual: 50–100 mcg/mL; em mania pode-se usar 50–125 mcg/mL conforme protocolo.",
+              "Nivel sérico habitual: 50–100 mcg/mL; en manía puede usarse 50–125 mcg/mL según protocolo."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 60 mg/kg/dia, com monitorização especializada.",
+              "Dosis máxima habitual: 60 mg/kg/día, con monitorización especializada."
+            )
+          },
+          doseKg: {
+            standard: t(lang, "10–15 mg/kg/dia inicialmente.", "10–15 mg/kg/día inicialmente."),
+            severe: t(
+              lang,
+              "Pode titular gradualmente até 20–60 mg/kg/dia conforme indicação e nível sérico.",
+              "Puede titularse gradualmente hasta 20–60 mg/kg/día según indicación y nivel sérico."
+            ),
+            maxDose: t(lang, "60 mg/kg/dia", "60 mg/kg/día")
+          },
+          indications: [
+            t(lang, "Transtorno bipolar — mania aguda", "Trastorno bipolar — manía aguda"),
+            t(lang, "Episódios mistos do transtorno bipolar", "Episodios mixtos del trastorno bipolar"),
+            t(lang, "Manutenção do transtorno bipolar em casos selecionados", "Mantenimiento del trastorno bipolar en casos seleccionados"),
+            t(lang, "Epilepsia generalizada", "Epilepsia generalizada"),
+            t(lang, "Epilepsia focal", "Epilepsia focal"),
+            t(lang, "Profilaxia de enxaqueca", "Profilaxis de migraña"),
+            t(lang, "Agitação/impulsividade associada a transtornos do humor em casos selecionados", "Agitación/impulsividad asociada a trastornos del ánimo en casos seleccionados")
+          ],
+          renalAdjustment: t(
+            lang,
+            "Sem ajuste renal habitual, mas interpretar nível sérico com cautela se hipoalbuminemia/uremia.",
+            "Sin ajuste renal habitual, pero interpretar nivel sérico con cautela si hipoalbuminemia/uremia."
+          ),
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: contraindicado em doença hepática significativa; risco de hepatotoxicidade grave.",
+                "Hepatopatía: contraindicado en enfermedad hepática significativa; riesgo de hepatotoxicidad grave."
+              )
+            : t(
+                lang,
+                "Monitorar função hepática antes e durante o tratamento.",
+                "Monitorizar función hepática antes y durante el tratamiento."
+              ),
+          mechanism: t(
+            lang,
+            "Aumenta neurotransmissão GABAérgica, modula canais de sódio e cálcio e reduz excitabilidade neuronal.",
+            "Aumenta neurotransmisión GABAérgica, modula canales de sodio y calcio y reduce excitabilidad neuronal."
+          ),
+          onset: t(
+            lang,
+            "Efeito antimaníaco pode ocorrer em alguns dias; estabilização plena exige ajuste por nível sérico e seguimento.",
+            "Efecto antimaníaco puede ocurrir en algunos días; estabilización plena requiere ajuste por nivel sérico y seguimiento."
+          ),
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 9–16 horas em adultos; varia com formulação e interações.",
+            "Vida media aproximada: 9–16 horas en adultos; varía con formulación e interacciones."
+          ),
+          commonAdverseEffects: [
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Tremor", "Temblor"),
+            t(lang, "Ganho de peso", "Aumento de peso"),
+            t(lang, "Queda de cabelo", "Caída de cabello"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Diarreia", "Diarrea"),
+            t(lang, "Aumento de transaminases", "Aumento de transaminasas")
+          ],
+          dangerousAdverseEffects: [
+            t(lang, "Hepatotoxicidade grave", "Hepatotoxicidad grave"),
+            t(lang, "Pancreatite", "Pancreatitis"),
+            t(lang, "Teratogenicidade importante", "Teratogenicidad importante"),
+            t(lang, "Trombocitopenia", "Trombocitopenia"),
+            t(lang, "Hiperamonemia/encefalopatia", "Hiperamonemia/encefalopatía"),
+            t(lang, "Reação cutânea grave rara", "Reacción cutánea grave rara"),
+            t(lang, "Síndrome dos ovários policísticos/alterações endócrinas", "Síndrome de ovario poliquístico/alteraciones endocrinas")
+          ],
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de sedação, tremor, trombocitopenia e interações; iniciar baixo.", "Adulto mayor: mayor riesgo de sedación, temblor, trombocitopenia e interacciones; iniciar bajo.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: evitar/contraindicado salvo ausência de alternativa; alto risco de malformações e prejuízo neurodesenvolvimental.", "Embarazo: evitar/contraindicado salvo ausencia de alternativa; alto riesgo de malformaciones y daño del neurodesarrollo.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: geralmente compatível com monitorização; observar icterícia, sangramento ou sedação no lactente.", "Lactancia: generalmente compatible con monitorización; observar ictericia, sangrado o sedación en lactante.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: contraindicado se doença hepática significativa.", "Hepatopatía: contraindicado si enfermedad hepática significativa.")
+              : null
+          ].filter(Boolean),
+          contraindications: [
+            t(lang, "Doença hepática significativa", "Enfermedad hepática significativa"),
+            t(lang, "Distúrbio do ciclo da ureia", "Trastorno del ciclo de la urea"),
+            t(lang, "Gestação, especialmente para transtornos psiquiátricos ou enxaqueca quando houver alternativa", "Embarazo, especialmente para trastornos psiquiátricos o migraña cuando haya alternativa"),
+            t(lang, "Doença mitocondrial por mutação POLG", "Enfermedad mitocondrial por mutación POLG"),
+            t(lang, "Hipersensibilidade ao valproato", "Hipersensibilidad al valproato"),
+            t(lang, "Pancreatite prévia associada ao fármaco", "Pancreatitis previa asociada al fármaco")
+          ],
+          interactions: [
+            t(lang, "Lamotrigina: aumenta níveis e risco de rash grave", "Lamotrigina: aumenta niveles y riesgo de rash grave"),
+            t(lang, "Carbapenêmicos: reduzem drasticamente níveis de valproato", "Carbapenémicos: reducen drásticamente niveles de valproato"),
+            t(lang, "AAS: pode aumentar fração livre de valproato", "AAS: puede aumentar fracción libre de valproato"),
+            t(lang, "Varfarina/anticoagulantes: maior risco de sangramento", "Warfarina/anticoagulantes: mayor riesgo de sangrado"),
+            t(lang, "Fenitoína/fenobarbital/carbamazepina: interações bidirecionais relevantes", "Fenitoína/fenobarbital/carbamazepina: interacciones bidireccionales relevantes"),
+            t(lang, "Álcool e sedativos: maior depressão do SNC", "Alcohol y sedantes: mayor depresión del SNC")
+          ],
+          alerts: [
+            t(lang, "Evitar em mulheres com potencial gestacional sem planejamento e consentimento claro.", "Evitar en mujeres con potencial gestacional sin planificación y consentimiento claro."),
+            t(lang, "Solicitar TGO/TGP, bilirrubina, hemograma/plaquetas e peso antes e durante o tratamento.", "Solicitar TGO/TGP, bilirrubina, hemograma/plaquetas y peso antes y durante el tratamiento."),
+            t(lang, "Monitorar nível sérico após início/ajustes e se suspeita de toxicidade.", "Monitorizar nivel sérico tras inicio/ajustes y si sospecha de toxicidad."),
+            t(lang, "Investigar dor abdominal intensa, vômitos persistentes ou letargia por risco de pancreatite/hiperamonemia.", "Investigar dolor abdominal intenso, vómitos persistentes o letargo por riesgo de pancreatitis/hiperamonemia."),
+            t(lang, "Não associar com carbapenêmicos se possível.", "No asociar con carbapenémicos si es posible.")
+          ],
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Valproate Prescribing Information",
+            "CANMAT Bipolar Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    valproato_de_sodio: {
+      name: { pt: "Valproato de sódio", es: "Valproato de sodio" },
+      category: "estabilizador_humor",
+
+      calculate: (paciente, lang = "pt") => {
+        const peso = Number(paciente.peso || 0);
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+
+        const doseMin = peso * 10;
+        const doseMax = peso * 15;
+
+        return {
+          name: t(lang, "Valproato de sódio", "Valproato de sodio"),
+          class: t(lang, "Estabilizador do humor e anticonvulsivante", "Estabilizador del ánimo y anticonvulsivante"),
+          category: "estabilizador_humor",
+          commercialNames: {
+            br: ["Depakene", "Valpakine", "Valproato de Sódio"],
+            ar: ["Depakene", "Valcote", "Valproato de Sodio"]
+          },
+          presentation: [
+            t(lang, "Comprimido/cápsula 250 mg", "Comprimido/cápsula 250 mg"),
+            t(lang, "Comprimido 500 mg", "Comprimido 500 mg"),
+            t(lang, "Solução/xarope 250 mg/5 mL", "Solución/jarabe 250 mg/5 mL"),
+            t(lang, "Frasco-ampola EV 500 mg", "Frasco ampolla IV 500 mg")
+          ],
+          dose: {
+            adulto: t(
+              lang,
+              `Iniciar 10–15 mg/kg/dia. Para ${peso || 0} kg: ${doseMin.toFixed(0)}–${doseMax.toFixed(0)} mg/dia.`,
+              `Iniciar 10–15 mg/kg/día. Para ${peso || 0} kg: ${doseMin.toFixed(0)}–${doseMax.toFixed(0)} mg/día.`
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 750–2000 mg/dia, ajustada por resposta, tolerabilidade e nível sérico.",
+              "Dosis habitual: 750–2000 mg/día, ajustada por respuesta, tolerabilidad y nivel sérico."
+            ),
+            alvoSerico: t(
+              lang,
+              "Nível sérico usual: 50–100 mcg/mL; em mania pode-se usar 50–125 mcg/mL conforme protocolo.",
+              "Nivel sérico habitual: 50–100 mcg/mL; en manía puede usarse 50–125 mcg/mL según protocolo."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 60 mg/kg/dia com monitorização especializada.",
+              "Dosis máxima habitual: 60 mg/kg/día con monitorización especializada."
+            )
+          },
+          doseKg: {
+            standard: t(lang, "10–15 mg/kg/dia inicialmente.", "10–15 mg/kg/día inicialmente."),
+            severe: t(lang, "Titular até 20–60 mg/kg/dia conforme indicação e nível sérico.", "Titular hasta 20–60 mg/kg/día según indicación y nivel sérico."),
+            maxDose: t(lang, "60 mg/kg/dia", "60 mg/kg/día")
+          },
+          indications: [
+            t(lang, "Transtorno bipolar — mania aguda", "Trastorno bipolar — manía aguda"),
+            t(lang, "Episódios mistos do transtorno bipolar", "Episodios mixtos del trastorno bipolar"),
+            t(lang, "Manutenção do transtorno bipolar em casos selecionados", "Mantenimiento del trastorno bipolar en casos seleccionados"),
+            t(lang, "Epilepsia generalizada", "Epilepsia generalizada"),
+            t(lang, "Epilepsia focal", "Epilepsia focal"),
+            t(lang, "Estado de mal epiléptico em formulação EV", "Estado epiléptico en formulación IV"),
+            t(lang, "Profilaxia de enxaqueca", "Profilaxis de migraña"),
+            t(lang, "Impulsividade/agressividade associada a transtornos do humor em casos selecionados", "Impulsividad/agresividad asociada a trastornos del ánimo en casos seleccionados")
+          ],
+          renalAdjustment: t(
+            lang,
+            "Sem ajuste renal habitual, mas interpretar nível sérico com cautela em uremia ou hipoalbuminemia.",
+            "Sin ajuste renal habitual, pero interpretar nivel sérico con cautela en uremia o hipoalbuminemia."
+          ),
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: contraindicado em doença hepática significativa pelo risco de hepatotoxicidade grave.",
+                "Hepatopatía: contraindicado en enfermedad hepática significativa por riesgo de hepatotoxicidad grave."
+              )
+            : t(
+                lang,
+                "Monitorar função hepática antes e durante o tratamento.",
+                "Monitorizar función hepática antes y durante el tratamiento."
+              ),
+          mechanism: t(
+            lang,
+            "Aumenta a neurotransmissão GABAérgica, bloqueia canais de sódio e modula canais de cálcio, reduzindo excitabilidade neuronal.",
+            "Aumenta la neurotransmisión GABAérgica, bloquea canales de sodio y modula canales de calcio, reduciendo excitabilidad neuronal."
+          ),
+          onset: t(
+            lang,
+            "Efeito antimaníaco pode surgir em alguns dias; estabilização plena exige ajuste por nível sérico.",
+            "El efecto antimaníaco puede aparecer en algunos días; estabilización plena requiere ajuste por nivel sérico."
+          ),
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 9–16 horas em adultos.",
+            "Vida media aproximada: 9–16 horas en adultos."
+          ),
+          commonAdverseEffects: [
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Tremor", "Temblor"),
+            t(lang, "Ganho de peso", "Aumento de peso"),
+            t(lang, "Queda de cabelo", "Caída de cabello"),
+            t(lang, "Diarreia", "Diarrea"),
+            t(lang, "Aumento de transaminases", "Aumento de transaminasas")
+          ],
+          dangerousAdverseEffects: [
+            t(lang, "Hepatotoxicidade grave", "Hepatotoxicidad grave"),
+            t(lang, "Pancreatite", "Pancreatitis"),
+            t(lang, "Teratogenicidade importante", "Teratogenicidad importante"),
+            t(lang, "Trombocitopenia", "Trombocitopenia"),
+            t(lang, "Hiperamonemia/encefalopatia", "Hiperamonemia/encefalopatía"),
+            t(lang, "Reação cutânea grave rara", "Reacción cutánea grave rara"),
+            t(lang, "Síndrome dos ovários policísticos/alterações endócrinas", "Síndrome de ovario poliquístico/alteraciones endocrinas")
+          ],
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de sedação, tremor, trombocitopenia e interações.", "Adulto mayor: mayor riesgo de sedación, temblor, trombocitopenia e interacciones.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: evitar/contraindicado quando houver alternativa; alto risco de malformações e dano neurodesenvolvimental.", "Embarazo: evitar/contraindicado cuando haya alternativa; alto riesgo de malformaciones y daño del neurodesarrollo.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: geralmente compatível com monitorização; observar icterícia, sangramento ou sedação no lactente.", "Lactancia: generalmente compatible con monitorización; observar ictericia, sangrado o sedación en lactante.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: contraindicado se doença hepática significativa.", "Hepatopatía: contraindicado si enfermedad hepática significativa.")
+              : null
+          ].filter(Boolean),
+          contraindications: [
+            t(lang, "Doença hepática significativa", "Enfermedad hepática significativa"),
+            t(lang, "Distúrbio do ciclo da ureia", "Trastorno del ciclo de la urea"),
+            t(lang, "Gestação para transtorno bipolar/enxaqueca quando houver alternativa", "Embarazo para trastorno bipolar/migraña cuando haya alternativa"),
+            t(lang, "Doença mitocondrial por mutação POLG", "Enfermedad mitocondrial por mutación POLG"),
+            t(lang, "Pancreatite prévia associada ao fármaco", "Pancreatitis previa asociada al fármaco"),
+            t(lang, "Hipersensibilidade ao valproato", "Hipersensibilidad al valproato")
+          ],
+          interactions: [
+            t(lang, "Lamotrigina: aumenta níveis e risco de rash grave", "Lamotrigina: aumenta niveles y riesgo de rash grave"),
+            t(lang, "Carbapenêmicos: reduzem drasticamente níveis de valproato", "Carbapenémicos: reducen drásticamente niveles de valproato"),
+            t(lang, "AAS: pode aumentar fração livre de valproato", "AAS: puede aumentar fracción libre de valproato"),
+            t(lang, "Varfarina/anticoagulantes: maior risco de sangramento", "Warfarina/anticoagulantes: mayor riesgo de sangrado"),
+            t(lang, "Fenitoína/fenobarbital/carbamazepina: interações bidirecionais relevantes", "Fenitoína/fenobarbital/carbamazepina: interacciones bidireccionales relevantes"),
+            t(lang, "Álcool e sedativos: maior depressão do SNC", "Alcohol y sedantes: mayor depresión del SNC")
+          ],
+          alerts: [
+            t(lang, "Evitar em mulheres com potencial gestacional sem planejamento e consentimento claro.", "Evitar en mujeres con potencial gestacional sin planificación y consentimiento claro."),
+            t(lang, "Solicitar TGO/TGP, bilirrubina, hemograma/plaquetas e peso antes e durante o tratamento.", "Solicitar TGO/TGP, bilirrubina, hemograma/plaquetas y peso antes y durante el tratamiento."),
+            t(lang, "Monitorar nível sérico após início/ajustes e se suspeita de toxicidade.", "Monitorizar nivel sérico tras inicio/ajustes y si sospecha de toxicidad."),
+            t(lang, "Investigar dor abdominal intensa, vômitos persistentes ou letargia por risco de pancreatite/hiperamonemia.", "Investigar dolor abdominal intenso, vómitos persistentes o letargo por riesgo de pancreatitis/hiperamonemia."),
+            t(lang, "Não associar com carbapenêmicos se possível.", "No asociar con carbapenémicos si es posible.")
+          ],
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Valproate Prescribing Information",
+            "CANMAT Bipolar Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    lamotrigina: {
+      name: { pt: "Lamotrigina", es: "Lamotrigina" },
+      category: "estabilizador_humor",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const usaValproato = Boolean(paciente.usaValproato);
+        const usaIndutor = Boolean(paciente.usaIndutorEnzimatico);
+
+        return {
+          name: t(lang, "Lamotrigina", "Lamotrigina"),
+          class: t(lang, "Estabilizador do humor e anticonvulsivante", "Estabilizador del ánimo y anticonvulsivante"),
+          category: "estabilizador_humor",
+          commercialNames: {
+            br: ["Lamictal", "Neural", "Lamotrigina EMS", "Lamotrigina Eurofarma"],
+            ar: ["Lamictal", "Lamotrigina Gador", "Lamotrigina Bagó", "Lamirax"]
+          },
+          presentation: [
+            t(lang, "Comprimido 25 mg", "Comprimido 25 mg"),
+            t(lang, "Comprimido 50 mg", "Comprimido 50 mg"),
+            t(lang, "Comprimido 100 mg", "Comprimido 100 mg"),
+            t(lang, "Comprimido 200 mg", "Comprimido 200 mg"),
+            t(lang, "Comprimido dispersível/mastigável", "Comprimido dispersable/masticable")
+          ],
+          dose: {
+            adulto: usaValproato
+              ? t(
+                  lang,
+                  "Com valproato: iniciar 25 mg em dias alternados por 2 semanas; depois 25 mg/dia por 2 semanas; titular lentamente.",
+                  "Con valproato: iniciar 25 mg en días alternos por 2 semanas; luego 25 mg/día por 2 semanas; titular lentamente."
+                )
+              : usaIndutor
+              ? t(
+                  lang,
+                  "Com indutores enzimáticos: iniciar 50 mg/dia por 2 semanas; depois 50 mg 12/12h por 2 semanas; titular conforme resposta.",
+                  "Con inductores enzimáticos: iniciar 50 mg/día por 2 semanas; luego 50 mg cada 12 h por 2 semanas; titular según respuesta."
+                )
+              : t(
+                  lang,
+                  "Sem valproato/indutores: iniciar 25 mg/dia por 2 semanas; depois 50 mg/dia por 2 semanas; titular gradualmente.",
+                  "Sin valproato/inductores: iniciar 25 mg/día por 2 semanas; luego 50 mg/día por 2 semanas; titular gradualmente."
+                ),
+            manutencao: t(
+              lang,
+              "Manutenção bipolar usual: 100–200 mg/dia; pode variar conforme interações.",
+              "Mantenimiento bipolar habitual: 100–200 mg/día; puede variar según interacciones."
+            ),
+            epilepsia: t(
+              lang,
+              "Epilepsia: dose varia conforme idade, peso e fármacos associados.",
+              "Epilepsia: dosis varía según edad, peso y fármacos asociados."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima depende das interações: menor com valproato, maior com indutores enzimáticos.",
+              "Dosis máxima depende de interacciones: menor con valproato, mayor con inductores enzimáticos."
+            )
+          },
+          doseKg: {
+            standard: t(
+              lang,
+              "Adultos: não se usa cálculo rotineiro por kg para bipolaridade.",
+              "Adultos: no se usa cálculo rutinario por kg para bipolaridad."
+            ),
+            pediatric: t(
+              lang,
+              "Pediatria/epilepsia: calcular por kg e ajustar conforme associação com valproato ou indutores.",
+              "Pediatría/epilepsia: calcular por kg y ajustar según asociación con valproato o inductores."
+            ),
+            maxDose: t(lang, "Individualizar por indicação e interações.", "Individualizar por indicación e interacciones.")
+          },
+          indications: [
+            t(lang, "Transtorno bipolar — manutenção", "Trastorno bipolar — mantenimiento"),
+            t(lang, "Prevenção de episódios depressivos no transtorno bipolar", "Prevención de episodios depresivos en trastorno bipolar"),
+            t(lang, "Depressão bipolar em casos selecionados", "Depresión bipolar en casos seleccionados"),
+            t(lang, "Epilepsia focal", "Epilepsia focal"),
+            t(lang, "Epilepsia generalizada", "Epilepsia generalizada"),
+            t(lang, "Síndrome de Lennox-Gastaut como adjuvante", "Síndrome de Lennox-Gastaut como coadyuvante"),
+            t(lang, "Alternativa quando se deseja baixo risco de ganho de peso", "Alternativa cuando se desea bajo riesgo de aumento de peso")
+          ],
+          renalAdjustment: t(
+            lang,
+            "Insuficiência renal: geralmente sem ajuste inicial, mas pode requerer cautela em doença renal avançada.",
+            "Insuficiencia renal: generalmente sin ajuste inicial, pero puede requerir cautela en enfermedad renal avanzada."
+          ),
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia moderada/grave: considerar reduzir dose e titular lentamente.",
+                "Hepatopatía moderada/grave: considerar reducir dosis y titular lentamente."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+          mechanism: t(
+            lang,
+            "Bloqueia canais de sódio voltagem-dependentes e reduz liberação de glutamato, estabilizando excitabilidade neuronal.",
+            "Bloquea canales de sodio voltaje-dependientes y reduce liberación de glutamato, estabilizando excitabilidad neuronal."
+          ),
+          onset: t(
+            lang,
+            "Não é fármaco para mania aguda; benefício preventivo/depressivo surge após titulação lenta em semanas.",
+            "No es fármaco para manía aguda; beneficio preventivo/depresivo aparece tras titulación lenta en semanas."
+          ),
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 25–33 horas; aumenta muito com valproato e reduz com indutores enzimáticos.",
+            "Vida media aproximada: 25–33 horas; aumenta mucho con valproato y reduce con inductores enzimáticos."
+          ),
+          commonAdverseEffects: [
+            t(lang, "Cefaleia", "Cefalea"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Diplopia", "Diplopía"),
+            t(lang, "Ataxia", "Ataxia"),
+            t(lang, "Sonolência ou insônia", "Somnolencia o insomnio"),
+            t(lang, "Rash cutâneo leve", "Rash cutáneo leve")
+          ],
+          dangerousAdverseEffects: [
+            t(lang, "Síndrome de Stevens-Johnson", "Síndrome de Stevens-Johnson"),
+            t(lang, "Necrólise epidérmica tóxica", "Necrólisis epidérmica tóxica"),
+            t(lang, "DRESS", "DRESS"),
+            t(lang, "Meningite asséptica rara", "Meningitis aséptica rara"),
+            t(lang, "Hemofagocitose/HLH rara", "Hemofagocitosis/HLH rara"),
+            t(lang, "Ideação suicida", "Ideación suicida")
+          ],
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: titular com cautela; maior sensibilidade a tontura, ataxia e interações.", "Adulto mayor: titular con cautela; mayor sensibilidad a mareos, ataxia e interacciones.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: pode exigir aumento de dose por maior depuração; monitorar níveis/controle clínico e ajustar pós-parto.", "Embarazo: puede requerir aumento de dosis por mayor depuración; monitorizar niveles/control clínico y ajustar posparto.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: passa ao leite; monitorar rash, sonolência, sucção e ganho ponderal do lactente.", "Lactancia: pasa a la leche; monitorizar rash, somnolencia, succión y ganancia ponderal del lactante.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: reduzir dose se moderada/grave.", "Hepatopatía: reducir dosis si moderada/grave.")
+              : null,
+            usaValproato
+              ? t(lang, "Uso com valproato: alto risco de aumento de lamotrigina e rash grave; titular muito lentamente.", "Uso con valproato: alto riesgo de aumento de lamotrigina y rash grave; titular muy lentamente.")
+              : null,
+            usaIndutor
+              ? t(lang, "Uso com indutor enzimático: pode exigir doses maiores por maior depuração.", "Uso con inductor enzimático: puede requerir dosis mayores por mayor depuración.")
+              : null
+          ].filter(Boolean),
+          contraindications: [
+            t(lang, "Hipersensibilidade à lamotrigina", "Hipersensibilidad a lamotrigina"),
+            t(lang, "História de síndrome de Stevens-Johnson ou DRESS associada à lamotrigina", "Antecedente de síndrome de Stevens-Johnson o DRESS asociada a lamotrigina"),
+            t(lang, "Reinício em dose alta após interrupção prolongada", "Reinicio en dosis alta tras interrupción prolongada")
+          ],
+          interactions: [
+            t(lang, "Valproato: aumenta níveis de lamotrigina e risco de rash grave", "Valproato: aumenta niveles de lamotrigina y riesgo de rash grave"),
+            t(lang, "Carbamazepina, fenitoína, fenobarbital, primidona: reduzem níveis", "Carbamazepina, fenitoína, fenobarbital, primidona: reducen niveles"),
+            t(lang, "Rifampicina: reduz níveis", "Rifampicina: reduce niveles"),
+            t(lang, "Anticoncepcionais com estrogênio: reduzem níveis de lamotrigina", "Anticonceptivos con estrógeno: reducen niveles de lamotrigina"),
+            t(lang, "Suspensão de anticoncepcional estrogênico: pode aumentar níveis de lamotrigina", "Suspensión de anticonceptivo estrogénico: puede aumentar niveles de lamotrigina")
+          ],
+          alerts: [
+            t(lang, "Titulação lenta é obrigatória para reduzir risco de rash grave.", "La titulación lenta es obligatoria para reducir riesgo de rash grave."),
+            t(lang, "Suspender e avaliar imediatamente se rash com febre, mucosite, bolhas ou sintomas sistêmicos.", "Suspender y evaluar inmediatamente si rash con fiebre, mucositis, ampollas o síntomas sistémicos."),
+            t(lang, "Não é tratamento de escolha para mania aguda.", "No es tratamiento de elección para manía aguda."),
+            t(lang, "Se interromper por vários dias, pode ser necessário reiniciar titulação.", "Si se interrumpe por varios días, puede ser necesario reiniciar titulación."),
+            t(lang, "Ajustar esquema se usa valproato, indutores ou anticoncepcional estrogênico.", "Ajustar esquema si usa valproato, inductores o anticonceptivo estrogénico.")
+          ],
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Lamotrigine Prescribing Information",
+            "CANMAT Bipolar Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    carbamazepina: {
+      name: { pt: "Carbamazepina", es: "Carbamazepina" },
+      category: "estabilizador_humor",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+
+        return {
+          name: t(lang, "Carbamazepina", "Carbamazepina"),
+
+          class: t(
+            lang,
+            "Estabilizador do humor e anticonvulsivante",
+            "Estabilizador del ánimo y anticonvulsivante"
+          ),
+
+          category: "estabilizador_humor",
+
+          commercialNames: {
+            br: ["Tegretol", "Tegretol CR", "Carbamazepina EMS"],
+            ar: ["Tegretol", "Carbamazepina Gador", "Carbamazepina Denver Farma"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 200 mg", "Comprimido 200 mg"),
+            t(lang, "Comprimido 400 mg CR", "Comprimido 400 mg LP"),
+            t(lang, "Suspensão oral 100 mg/5 mL", "Suspensión oral 100 mg/5 mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Bipolar/epilepsia: iniciar 100–200 mg VO 1–2x/dia; titular gradualmente.",
+              "Bipolar/epilepsia: iniciar 100–200 mg VO 1–2 veces/día; titular gradualmente."
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 400–1200 mg/dia em 2–4 tomadas.",
+              "Dosis habitual: 400–1200 mg/día en 2–4 tomas."
+            ),
+            alvoSerico: t(
+              lang,
+              "Nível sérico usual: 4–12 mcg/mL.",
+              "Nivel sérico habitual: 4–12 mcg/mL."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 1600 mg/dia em adultos selecionados.",
+              "Dosis máxima habitual: 1600 mg/día en adultos seleccionados."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Adultos: geralmente não se calcula por kg.", "Adultos: generalmente no se calcula por kg."),
+            pediatric: t(lang, "Pediatria/epilepsia: ajustar por peso e nível sérico conforme protocolo.", "Pediatría/epilepsia: ajustar por peso y nivel sérico según protocolo."),
+            maxDose: t(lang, "1600 mg/dia", "1600 mg/día")
+          },
+
+          indications: [
+            t(lang, "Transtorno bipolar — mania aguda", "Trastorno bipolar — manía aguda"),
+            t(lang, "Manutenção do transtorno bipolar em casos selecionados", "Mantenimiento del trastorno bipolar en casos seleccionados"),
+            t(lang, "Epilepsia focal", "Epilepsia focal"),
+            t(lang, "Crises tônico-clônicas generalizadas", "Crisis tónico-clónicas generalizadas"),
+            t(lang, "Neuralgia do trigêmeo", "Neuralgia del trigémino"),
+            t(lang, "Neuralgia glossofaríngea", "Neuralgia glosofaríngea"),
+            t(lang, "Impulsividade/agressividade em casos selecionados", "Impulsividad/agresividad en casos seleccionados")
+          ],
+
+          renalAdjustment: t(
+            lang,
+            "Sem ajuste renal habitual, mas monitorar sódio e toxicidade em pacientes frágeis.",
+            "Sin ajuste renal habitual, pero monitorizar sodio y toxicidad en pacientes frágiles."
+          ),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: evitar se doença hepática significativa; monitorar enzimas hepáticas.",
+                "Hepatopatía: evitar si enfermedad hepática significativa; monitorizar enzimas hepáticas."
+              )
+            : t(
+                lang,
+                "Monitorar função hepática periodicamente.",
+                "Monitorizar función hepática periódicamente."
+              ),
+
+          mechanism: t(
+            lang,
+            "Bloqueia canais de sódio voltagem-dependentes, reduzindo descargas neuronais repetitivas; potente indutor enzimático.",
+            "Bloquea canales de sodio voltaje-dependientes, reduciendo descargas neuronales repetitivas; potente inductor enzimático."
+          ),
+
+          onset: t(
+            lang,
+            "Efeito antimaníaco pode surgir em dias a 1–2 semanas; autoindução reduz níveis após semanas.",
+            "Efecto antimaníaco puede aparecer en días a 1–2 semanas; autoinducción reduce niveles tras semanas."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média inicial 25–65 h; após autoindução pode cair para 12–17 h.",
+            "Vida media inicial 25–65 h; tras autoinducción puede caer a 12–17 h."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Diplopia", "Diplopía"),
+            t(lang, "Ataxia", "Ataxia"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Hiponatremia", "Hiponatremia"),
+            t(lang, "Rash cutâneo", "Rash cutáneo")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Síndrome de Stevens-Johnson/necrólise epidérmica tóxica", "Síndrome de Stevens-Johnson/necrólisis epidérmica tóxica"),
+            t(lang, "Agranulocitose", "Agranulocitosis"),
+            t(lang, "Anemia aplásica", "Anemia aplásica"),
+            t(lang, "Hepatotoxicidade", "Hepatotoxicidad"),
+            t(lang, "Hiponatremia grave/SIADH", "Hiponatremia grave/SIADH"),
+            t(lang, "Pancreatite rara", "Pancreatitis rara"),
+            t(lang, "Ideação suicida", "Ideación suicida")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de hiponatremia, tontura, quedas, interações e toxicidade.", "Adulto mayor: mayor riesgo de hiponatremia, mareos, caídas, interacciones y toxicidad.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: risco teratogênico; avaliar alternativa e suplementar ácido fólico se uso inevitável.", "Embarazo: riesgo teratogénico; evaluar alternativa y suplementar ácido fólico si uso inevitable.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: geralmente possível com monitorização de sedação, icterícia e ganho ponderal.", "Lactancia: generalmente posible con monitorización de sedación, ictericia y ganancia ponderal.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: risco de toxicidade; evitar se doença significativa.", "Hepatopatía: riesgo de toxicidad; evitar si enfermedad significativa.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à carbamazepina ou tricíclicos", "Hipersensibilidad a carbamazepina o tricíclicos"),
+            t(lang, "História de depressão medular", "Antecedente de depresión medular"),
+            t(lang, "Uso concomitante com IMAO", "Uso concomitante con IMAO"),
+            t(lang, "Porfiria hepática", "Porfiria hepática"),
+            t(lang, "História de SJS/TEN associada à carbamazepina", "Antecedente de SJS/TEN asociada a carbamazepina")
+          ],
+
+          interactions: [
+            t(lang, "Anticoncepcionais hormonais: reduz eficácia", "Anticonceptivos hormonales: reduce eficacia"),
+            t(lang, "Varfarina/DOACs: pode reduzir anticoagulação", "Warfarina/DOACs: puede reducir anticoagulación"),
+            t(lang, "Lamotrigina, valproato, fenitoína: interações bidirecionais", "Lamotrigina, valproato, fenitoína: interacciones bidireccionales"),
+            t(lang, "Macrolídeos/azólicos: aumentam níveis e toxicidade", "Macrólidos/azoles: aumentan niveles y toxicidad"),
+            t(lang, "Lítio e antipsicóticos: possível neurotoxicidade", "Litio y antipsicóticos: posible neurotoxicidad"),
+            t(lang, "Álcool e sedativos: maior depressão do SNC", "Alcohol y sedantes: mayor depresión del SNC")
+          ],
+
+          alerts: [
+            t(lang, "Solicitar hemograma, TGO/TGP, sódio e nível sérico conforme necessidade.", "Solicitar hemograma, TGO/TGP, sodio y nivel sérico según necesidad."),
+            t(lang, "Considerar HLA-B*1502 em populações asiáticas de risco antes de iniciar.", "Considerar HLA-B*1502 en poblaciones asiáticas de riesgo antes de iniciar."),
+            t(lang, "Suspender e avaliar se rash, febre, lesões mucosas ou sintomas sistêmicos.", "Suspender y evaluar si rash, fiebre, lesiones mucosas o síntomas sistémicos."),
+            t(lang, "Atenção extrema às interações por indução enzimática.", "Atención extrema a interacciones por inducción enzimática."),
+            t(lang, "Pode reduzir eficácia de anticoncepcionais hormonais.", "Puede reducir eficacia de anticonceptivos hormonales.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Carbamazepine Prescribing Information",
+            "CANMAT Bipolar Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    oxcarbazepina: {
+      name: { pt: "Oxcarbazepina", es: "Oxcarbazepina" },
+      category: "estabilizador_humor",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const insuficienciaRenal = clcr < 30;
+
+        return {
+          name: t(lang, "Oxcarbazepina", "Oxcarbazepina"),
+
+          class: t(
+            lang,
+            "Anticonvulsivante e estabilizador do humor off-label",
+            "Anticonvulsivante y estabilizador del ánimo off-label"
+          ),
+
+          category: "estabilizador_humor",
+
+          commercialNames: {
+            br: ["Trileptal", "Oxcarb", "Oxcarbazepina EMS"],
+            ar: ["Trileptal", "Oxcarbazepina Gador", "Oxcarbazepina"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 300 mg", "Comprimido 300 mg"),
+            t(lang, "Comprimido 600 mg", "Comprimido 600 mg"),
+            t(lang, "Suspensão oral 60 mg/mL", "Suspensión oral 60 mg/mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Epilepsia/bipolar off-label: iniciar 300 mg VO 12/12h; titular gradualmente.",
+              "Epilepsia/bipolar off-label: iniciar 300 mg VO cada 12 h; titular gradualmente."
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 600–1200 mg/dia; alguns casos usam até 2400 mg/dia sob especialista.",
+              "Dosis habitual: 600–1200 mg/día; algunos casos usan hasta 2400 mg/día bajo especialista."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 2400 mg/dia.",
+              "Dosis máxima habitual: 2400 mg/día."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Adultos: geralmente não se calcula por kg.", "Adultos: generalmente no se calcula por kg."),
+            pediatric: t(lang, "Pediatria/epilepsia: calcular por kg conforme protocolo especializado.", "Pediatría/epilepsia: calcular por kg según protocolo especializado."),
+            maxDose: t(lang, "2400 mg/dia", "2400 mg/día")
+          },
+
+          indications: [
+            t(lang, "Epilepsia focal", "Epilepsia focal"),
+            t(lang, "Crises focais com ou sem generalização secundária", "Crisis focales con o sin generalización secundaria"),
+            t(lang, "Transtorno bipolar em casos selecionados off-label", "Trastorno bipolar en casos seleccionados off-label"),
+            t(lang, "Mania aguda off-label", "Manía aguda off-label"),
+            t(lang, "Neuralgia do trigêmeo off-label", "Neuralgia del trigémino off-label"),
+            t(lang, "Alternativa à carbamazepina quando se busca menos interações", "Alternativa a carbamazepina cuando se buscan menos interacciones")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "ClCr <30 mL/min: iniciar com dose menor e titular lentamente.",
+                "ClCr <30 mL/min: iniciar con dosis menor y titular lentamente."
+              )
+            : t(lang, "Sem ajuste renal habitual se ClCr ≥30 mL/min.", "Sin ajuste renal habitual si ClCr ≥30 mL/min."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia leve/moderada: geralmente sem ajuste; cautela se grave.",
+                "Hepatopatía leve/moderada: generalmente sin ajuste; cautela si grave."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Pró-fármaco convertido em derivado monohidroxilado ativo; bloqueia canais de sódio voltagem-dependentes e reduz excitabilidade neuronal.",
+            "Profármaco convertido en derivado monohidroxilado activo; bloquea canales de sodio voltaje-dependientes y reduce excitabilidad neuronal."
+          ),
+
+          onset: t(
+            lang,
+            "Controle de crises pode ocorrer após titulação; efeito no humor é off-label e variável.",
+            "Control de crisis puede ocurrir tras titulación; efecto en ánimo es off-label y variable."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média do metabólito ativo: aproximadamente 8–10 horas.",
+            "Vida media del metabolito activo: aproximadamente 8–10 horas."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Diplopia", "Diplopía"),
+            t(lang, "Ataxia", "Ataxia"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Cefaleia", "Cefalea"),
+            t(lang, "Hiponatremia", "Hiponatremia")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Hiponatremia grave/SIADH", "Hiponatremia grave/SIADH"),
+            t(lang, "Síndrome de Stevens-Johnson/necrólise epidérmica tóxica rara", "Síndrome de Stevens-Johnson/necrólisis epidérmica tóxica rara"),
+            t(lang, "Anafilaxia/angioedema raro", "Anafilaxia/angioedema raro"),
+            t(lang, "Ideação suicida", "Ideación suicida"),
+            t(lang, "Reação de hipersensibilidade cruzada com carbamazepina", "Reacción de hipersensibilidad cruzada con carbamazepina")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de hiponatremia, tontura, quedas e confusão.", "Adulto mayor: mayor riesgo de hiponatremia, mareos, caídas y confusión.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: avaliar risco-benefício; dados menos robustos que carbamazepina, mas considerar risco anticonvulsivante.", "Embarazo: evaluar riesgo-beneficio; datos menos robustos que carbamazepina, pero considerar riesgo anticonvulsivante.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: monitorar sedação, ganho ponderal e irritabilidade do lactente.", "Lactancia: monitorizar sedación, ganancia ponderal e irritabilidad del lactante.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia grave: usar com cautela.", "Hepatopatía grave: usar con cautela.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal importante: reduzir dose inicial.", "Insuficiencia renal importante: reducir dosis inicial.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à oxcarbazepina ou eslicarbazepina", "Hipersensibilidad a oxcarbazepina o eslicarbazepina"),
+            t(lang, "História de reação grave cutânea associada ao fármaco", "Antecedente de reacción cutánea grave asociada al fármaco"),
+            t(lang, "Hiponatremia grave não corrigida", "Hiponatremia grave no corregida")
+          ],
+
+          interactions: [
+            t(lang, "Anticoncepcionais hormonais: pode reduzir eficácia", "Anticonceptivos hormonales: puede reducir eficacia"),
+            t(lang, "Diuréticos e ISRS/ISRN: maior risco de hiponatremia", "Diuréticos e ISRS/IRSN: mayor riesgo de hiponatremia"),
+            t(lang, "Carbamazepina/fenitoína/fenobarbital: podem alterar níveis", "Carbamazepina/fenitoína/fenobarbital: pueden alterar niveles"),
+            t(lang, "Lamotrigina: possível redução de níveis/efeito", "Lamotrigina: posible reducción de niveles/efecto"),
+            t(lang, "Álcool e sedativos: maior depressão do SNC", "Alcohol y sedantes: mayor depresión del SNC")
+          ],
+
+          alerts: [
+            t(lang, "Monitorar sódio, especialmente nas primeiras semanas e em idosos.", "Monitorizar sodio, especialmente en las primeras semanas y en adultos mayores."),
+            t(lang, "Menos indutora enzimática que carbamazepina, mas ainda pode reduzir anticoncepcionais.", "Menos inductora enzimática que carbamazepina, pero aún puede reducir anticonceptivos."),
+            t(lang, "Suspender e avaliar se rash, febre, mucosite ou sintomas sistêmicos.", "Suspender y evaluar si rash, fiebre, mucositis o síntomas sistémicos."),
+            t(lang, "Evidência em bipolaridade é menos sólida que lítio, valproato e lamotrigina.", "La evidencia en bipolaridad es menos sólida que litio, valproato y lamotrigina."),
+            t(lang, "Cautela se histórico de alergia à carbamazepina.", "Cautela si antecedente de alergia a carbamazepina.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Oxcarbazepine Prescribing Information",
+            "CANMAT Bipolar Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    levetiracetam: {
+      name: { pt: "Levetiracetam", es: "Levetiracetam" },
+      category: "anticonvulsivante",
+
+      calculate: (paciente, lang = "pt") => {
+        const peso = Number(paciente.peso || 0);
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const insuficienciaRenal = clcr < 60;
+
+        const dosePediatricaMin = peso * 10;
+        const dosePediatricaMax = peso * 30;
+
+        return {
+          name: t(lang, "Levetiracetam", "Levetiracetam"),
+
+          class: t(
+            lang,
+            "Anticonvulsivante modulador da proteína SV2A",
+            "Anticonvulsivante modulador de la proteína SV2A"
+          ),
+
+          category: "anticonvulsivante",
+
+          commercialNames: {
+            br: ["Keppra", "Levetiracetam EMS", "Levetiracetam Eurofarma"],
+            ar: ["Keppra", "Levetiracetam Gador", "Levetiracetam Bagó"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 250 mg", "Comprimido 250 mg"),
+            t(lang, "Comprimido 500 mg", "Comprimido 500 mg"),
+            t(lang, "Comprimido 750 mg", "Comprimido 750 mg"),
+            t(lang, "Comprimido 1000 mg", "Comprimido 1000 mg"),
+            t(lang, "Solução oral 100 mg/mL", "Solución oral 100 mg/mL"),
+            t(lang, "Frasco-ampola EV 500 mg/5 mL", "Frasco ampolla IV 500 mg/5 mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Epilepsia: iniciar 500 mg VO/EV 12/12h; titular conforme resposta.",
+              "Epilepsia: iniciar 500 mg VO/IV cada 12 h; titular según respuesta."
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 1000–3000 mg/dia divididos em 2 tomadas.",
+              "Dosis habitual: 1000–3000 mg/día divididos en 2 tomas."
+            ),
+            pediatrica: t(
+              lang,
+              `${dosePediatricaMin.toFixed(0)}–${dosePediatricaMax.toFixed(0)} mg por dose 12/12h, conforme idade e protocolo.`,
+              `${dosePediatricaMin.toFixed(0)}–${dosePediatricaMax.toFixed(0)} mg por dosis cada 12 h, según edad y protocolo.`
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 3000 mg/dia.",
+              "Dosis máxima habitual: 3000 mg/día."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Pediatria: 10 mg/kg/dose 12/12h inicialmente.", "Pediatría: 10 mg/kg/dosis cada 12 h inicialmente."),
+            severe: t(lang, "Pode titular até 30 mg/kg/dose 12/12h conforme resposta.", "Puede titularse hasta 30 mg/kg/dosis cada 12 h según respuesta."),
+            maxDose: t(lang, "3000 mg/dia em adultos", "3000 mg/día en adultos")
+          },
+
+          indications: [
+            t(lang, "Epilepsia focal", "Epilepsia focal"),
+            t(lang, "Crises focais com ou sem generalização secundária", "Crisis focales con o sin generalización secundaria"),
+            t(lang, "Crises tônico-clônicas generalizadas", "Crisis tónico-clónicas generalizadas"),
+            t(lang, "Crises mioclônicas", "Crisis mioclónicas"),
+            t(lang, "Epilepsia mioclônica juvenil", "Epilepsia mioclónica juvenil"),
+            t(lang, "Estado de mal epiléptico como adjuvante/segunda linha em muitos protocolos", "Estado epiléptico como coadyuvante/segunda línea en muchos protocolos"),
+            t(lang, "Profilaxia de crises em situações neurológicas selecionadas", "Profilaxis de crisis en situaciones neurológicas seleccionadas")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Necessita ajuste renal conforme ClCr; reduzir dose e/ou aumentar intervalo.",
+                "Requiere ajuste renal según ClCr; reducir dosis y/o aumentar intervalo."
+              )
+            : t(lang, "Sem ajuste renal se função renal normal.", "Sin ajuste renal si función renal normal."),
+
+          hepaticAdjustment: t(
+            lang,
+            "Sem ajuste hepático habitual; metabolismo hepático mínimo.",
+            "Sin ajuste hepático habitual; metabolismo hepático mínimo."
+          ),
+
+          mechanism: t(
+            lang,
+            "Liga-se à proteína vesicular sináptica SV2A, modulando liberação de neurotransmissores e reduzindo hiperexcitabilidade neuronal.",
+            "Se une a la proteína vesicular sináptica SV2A, modulando liberación de neurotransmisores y reduciendo hiperexcitabilidad neuronal."
+          ),
+
+          onset: t(
+            lang,
+            "Início anticonvulsivante rápido; via EV pode ser usada quando VO não é possível.",
+            "Inicio anticonvulsivante rápido; vía IV puede usarse cuando VO no es posible."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 6–8 horas em adultos.",
+            "Vida media aproximada: 6–8 horas en adultos."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Fadiga", "Fatiga"),
+            t(lang, "Cefaleia", "Cefalea"),
+            t(lang, "Irritabilidade", "Irritabilidad"),
+            t(lang, "Náuseas", "Náuseas")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Alterações comportamentais importantes", "Alteraciones conductuales importantes"),
+            t(lang, "Depressão ou ideação suicida", "Depresión o ideación suicida"),
+            t(lang, "Psicose rara", "Psicosis rara"),
+            t(lang, "Reações cutâneas graves raras", "Reacciones cutáneas graves raras"),
+            t(lang, "Anafilaxia/angioedema raro", "Anafilaxia/angioedema raro")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de sonolência, tontura e quedas; ajustar pela função renal.", "Adulto mayor: mayor riesgo de somnolencia, mareos y caídas; ajustar por función renal.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: opção relativamente usada em epilepsia; monitorar controle de crises e considerar níveis se disponível.", "Embarazo: opción relativamente usada en epilepsia; monitorizar control de crisis y considerar niveles si disponible.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: passa ao leite; monitorar sonolência, sucção e ganho ponderal.", "Lactancia: pasa a la leche; monitorizar somnolencia, succión y ganancia ponderal.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal: ajuste obrigatório conforme ClCr.", "Insuficiencia renal: ajuste obligatorio según ClCr.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade ao levetiracetam", "Hipersensibilidad a levetiracetam"),
+            t(lang, "História de reação grave ao fármaco", "Antecedente de reacción grave al fármaco")
+          ],
+
+          interactions: [
+            t(lang, "Poucas interações farmacocinéticas relevantes", "Pocas interacciones farmacocinéticas relevantes"),
+            t(lang, "Álcool e sedativos: podem aumentar sonolência", "Alcohol y sedantes: pueden aumentar somnolencia"),
+            t(lang, "Outros antiepilépticos: monitorar sedação e controle de crises", "Otros antiepilépticos: monitorizar sedación y control de crisis")
+          ],
+
+          alerts: [
+            t(lang, "Ajustar dose pela função renal.", "Ajustar dosis por función renal."),
+            t(lang, "Monitorar irritabilidade, agressividade, depressão e ideação suicida.", "Monitorizar irritabilidad, agresividad, depresión e ideación suicida."),
+            t(lang, "Não suspender abruptamente em pacientes epilépticos.", "No suspender bruscamente en pacientes epilépticos."),
+            t(lang, "Boa opção quando se deseja poucas interações medicamentosas.", "Buena opción cuando se desean pocas interacciones medicamentosas."),
+            t(lang, "Via EV pode substituir VO em dose equivalente quando necessário.", "Vía IV puede sustituir VO en dosis equivalente cuando sea necesario.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Levetiracetam Prescribing Information",
+            "ILAE Epilepsy Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    topiramato: {
+      name: { pt: "Topiramato", es: "Topiramato" },
+      category: "anticonvulsivante",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const insuficienciaRenal = clcr < 70;
+
+        return {
+          name: t(lang, "Topiramato", "Topiramato"),
+
+          class: t(
+            lang,
+            "Anticonvulsivante com múltiplos mecanismos",
+            "Anticonvulsivante con múltiples mecanismos"
+          ),
+
+          category: "anticonvulsivante",
+
+          commercialNames: {
+            br: ["Topamax", "Amato", "Topiramato EMS", "Topiramato Eurofarma"],
+            ar: ["Topamax", "Topiramato Gador", "Topiramato Bagó"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 25 mg", "Comprimido 25 mg"),
+            t(lang, "Comprimido 50 mg", "Comprimido 50 mg"),
+            t(lang, "Comprimido 100 mg", "Comprimido 100 mg"),
+            t(lang, "Comprimido 200 mg", "Comprimido 200 mg"),
+            t(lang, "Cápsula sprinkle 15 mg", "Cápsula sprinkle 15 mg"),
+            t(lang, "Cápsula sprinkle 25 mg", "Cápsula sprinkle 25 mg")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Epilepsia: iniciar 25–50 mg/dia; titular semanalmente conforme resposta.",
+              "Epilepsia: iniciar 25–50 mg/día; titular semanalmente según respuesta."
+            ),
+            enxaqueca: t(
+              lang,
+              "Profilaxia de enxaqueca: iniciar 25 mg à noite; titular até 50 mg 12/12h.",
+              "Profilaxis de migraña: iniciar 25 mg por la noche; titular hasta 50 mg cada 12 h."
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 100 mg/dia para enxaqueca; 200–400 mg/dia para epilepsia conforme indicação.",
+              "Dosis habitual: 100 mg/día para migraña; 200–400 mg/día para epilepsia según indicación."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 400 mg/dia em epilepsia; doses maiores apenas em contexto especializado.",
+              "Dosis máxima habitual: 400 mg/día en epilepsia; dosis mayores solo en contexto especializado."
+            )
+          },
+
+          doseKg: {
+            standard: t(
+              lang,
+              "Pediatria/epilepsia: dose por kg conforme idade, peso e protocolo especializado.",
+              "Pediatría/epilepsia: dosis por kg según edad, peso y protocolo especializado."
+            ),
+            severe: t(
+              lang,
+              "Titular lentamente para reduzir efeitos cognitivos e parestesias.",
+              "Titular lentamente para reducir efectos cognitivos y parestesias."
+            ),
+            maxDose: t(lang, "400 mg/dia em adultos", "400 mg/día en adultos")
+          },
+
+          indications: [
+            t(lang, "Epilepsia focal", "Epilepsia focal"),
+            t(lang, "Crises tônico-clônicas generalizadas", "Crisis tónico-clónicas generalizadas"),
+            t(lang, "Síndrome de Lennox-Gastaut como adjuvante", "Síndrome de Lennox-Gastaut como coadyuvante"),
+            t(lang, "Profilaxia de enxaqueca", "Profilaxis de migraña"),
+            t(lang, "Transtorno de compulsão alimentar em alguns protocolos/off-label", "Trastorno por atracón en algunos protocolos/off-label"),
+            t(lang, "Perda ponderal como componente de combinações específicas em alguns países", "Pérdida ponderal como componente de combinaciones específicas en algunos países"),
+            t(lang, "Transtorno por uso de álcool em casos selecionados off-label", "Trastorno por uso de alcohol en casos seleccionados off-label")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "ClCr reduzido: considerar reduzir dose aproximadamente pela metade e titular lentamente.",
+                "ClCr reducido: considerar reducir dosis aproximadamente a la mitad y titular lentamente."
+              )
+            : t(lang, "Sem ajuste renal habitual se função renal preservada.", "Sin ajuste renal habitual si función renal preservada."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: usar com cautela; depuração pode reduzir.",
+                "Hepatopatía: usar con cautela; la depuración puede reducirse."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Bloqueia canais de sódio, potencializa GABA-A, antagoniza AMPA/kainato e inibe anidrase carbônica.",
+            "Bloquea canales de sodio, potencia GABA-A, antagoniza AMPA/kainato e inhibe anhidrasa carbónica."
+          ),
+
+          onset: t(
+            lang,
+            "Efeito anticonvulsivante/profilático ocorre após titulação; na enxaqueca avaliar resposta após semanas.",
+            "Efecto anticonvulsivante/profiláctico ocurre tras titulación; en migraña evaluar respuesta tras semanas."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 21 horas.",
+            "Vida media aproximada: 21 horas."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Parestesias", "Parestesias"),
+            t(lang, "Perda de peso", "Pérdida de peso"),
+            t(lang, "Lentificação cognitiva", "Enlentecimiento cognitivo"),
+            t(lang, "Dificuldade de concentração", "Dificultad de concentración"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Alteração do paladar", "Alteración del gusto")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Acidose metabólica", "Acidosis metabólica"),
+            t(lang, "Nefrolitíase", "Nefrolitiasis"),
+            t(lang, "Glaucoma agudo de ângulo fechado", "Glaucoma agudo de ángulo cerrado"),
+            t(lang, "Oligoidrose/hipertermia", "Oligohidrosis/hipertermia"),
+            t(lang, "Ideação suicida", "Ideación suicida"),
+            t(lang, "Teratogenicidade, especialmente fissura labiopalatina", "Teratogenicidad, especialmente fisura labiopalatina"),
+            t(lang, "Encefalopatia hiperamonêmica quando associado a valproato", "Encefalopatía hiperamonémica cuando se asocia a valproato")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de lentificação cognitiva, quedas, acidose e perda ponderal excessiva.", "Adulto mayor: mayor riesgo de enlentecimiento cognitivo, caídas, acidosis y pérdida ponderal excesiva.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: evitar quando possível; risco teratogênico aumentado.", "Embarazo: evitar cuando sea posible; riesgo teratogénico aumentado.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: monitorar diarreia, sonolência, irritabilidade e ganho ponderal.", "Lactancia: monitorizar diarrea, somnolencia, irritabilidad y ganancia ponderal.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: usar com cautela e monitorar tolerabilidade.", "Hepatopatía: usar con cautela y monitorizar tolerabilidad.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal: reduzir dose e monitorar acidose/nefrolitíase.", "Insuficiencia renal: reducir dosis y monitorizar acidosis/nefrolitiasis.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade ao topiramato", "Hipersensibilidad a topiramato"),
+            t(lang, "Acidose metabólica importante não corrigida", "Acidosis metabólica importante no corregida"),
+            t(lang, "História de glaucoma agudo induzido pelo fármaco", "Antecedente de glaucoma agudo inducido por el fármaco")
+          ],
+
+          interactions: [
+            t(lang, "Valproato: risco de hiperamonemia/encefalopatia", "Valproato: riesgo de hiperamonemia/encefalopatía"),
+            t(lang, "Anticoncepcionais hormonais: pode reduzir eficácia em doses maiores", "Anticonceptivos hormonales: puede reducir eficacia en dosis mayores"),
+            t(lang, "Inibidores da anidrase carbônica: maior risco de acidose e cálculos", "Inhibidores de anhidrasa carbónica: mayor riesgo de acidosis y cálculos"),
+            t(lang, "Depressores do SNC/álcool: maior sedação e prejuízo cognitivo", "Depresores del SNC/alcohol: mayor sedación y deterioro cognitivo"),
+            t(lang, "Lítio: pode alterar níveis séricos", "Litio: puede alterar niveles séricos")
+          ],
+
+          alerts: [
+            t(lang, "Titular lentamente para reduzir efeitos cognitivos.", "Titular lentamente para reducir efectos cognitivos."),
+            t(lang, "Monitorar bicarbonato se sintomas de acidose ou pacientes de risco.", "Monitorizar bicarbonato si síntomas de acidosis o pacientes de riesgo."),
+            t(lang, "Orientar hidratação para reduzir risco de nefrolitíase.", "Orientar hidratación para reducir riesgo de nefrolitiasis."),
+            t(lang, "Suspender e avaliar urgente se dor ocular aguda ou visão turva.", "Suspender y evaluar urgente si dolor ocular agudo o visión borrosa."),
+            t(lang, "Evitar em gestação quando houver alternativa.", "Evitar en embarazo cuando haya alternativa.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Topiramate Prescribing Information",
+            "ILAE Epilepsy Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    fenitoina: {
+      name: { pt: "Fenitoína", es: "Fenitoína" },
+      category: "anticonvulsivante",
+
+      calculate: (paciente, lang = "pt") => {
+        const peso = Number(paciente.peso || 0);
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+
+        const ataqueMin = peso * 15;
+        const ataqueMax = peso * 20;
+        const manutMin = peso * 4;
+        const manutMax = peso * 7;
+
+        return {
+          name: t(lang, "Fenitoína", "Fenitoína"),
+
+          class: t(
+            lang,
+            "Anticonvulsivante bloqueador de canais de sódio",
+            "Anticonvulsivante bloqueador de canales de sodio"
+          ),
+
+          category: "anticonvulsivante",
+
+          commercialNames: {
+            br: ["Hidantal", "Epelin", "Fenitoína"],
+            ar: ["Epamin", "Fenitoína", "Difenilhidantoína"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido/cápsula 100 mg", "Comprimido/cápsula 100 mg"),
+            t(lang, "Suspensão oral 125 mg/5 mL", "Suspensión oral 125 mg/5 mL"),
+            t(lang, "Ampola 250 mg/5 mL", "Ampolla 250 mg/5 mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              `Dose de ataque EV: 15–20 mg/kg. Para ${peso || 0} kg: ${ataqueMin.toFixed(0)}–${ataqueMax.toFixed(0)} mg.`,
+              `Dosis de carga IV: 15–20 mg/kg. Para ${peso || 0} kg: ${ataqueMin.toFixed(0)}–${ataqueMax.toFixed(0)} mg.`
+            ),
+            manutencao: t(
+              lang,
+              `Manutenção: 4–7 mg/kg/dia. Para ${peso || 0} kg: ${manutMin.toFixed(0)}–${manutMax.toFixed(0)} mg/dia.`,
+              `Mantenimiento: 4–7 mg/kg/día. Para ${peso || 0} kg: ${manutMin.toFixed(0)}–${manutMax.toFixed(0)} mg/día.`
+            ),
+            alvoSerico: t(
+              lang,
+              "Nível sérico total usual: 10–20 mcg/mL; interpretar fração livre em hipoalbuminemia/uremia.",
+              "Nivel sérico total habitual: 10–20 mcg/mL; interpretar fracción libre en hipoalbuminemia/uremia."
+            ),
+            maxDose: t(
+              lang,
+              "Ajustar por nível sérico e toxicidade; cinética não linear exige cautela.",
+              "Ajustar por nivel sérico y toxicidad; cinética no lineal exige cautela."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Ataque: 15–20 mg/kg EV.", "Carga: 15–20 mg/kg IV."),
+            severe: t(lang, "Manutenção: 4–7 mg/kg/dia.", "Mantenimiento: 4–7 mg/kg/día."),
+            maxDose: t(lang, "Individualizar por nível sérico.", "Individualizar por nivel sérico.")
+          },
+
+          indications: [
+            t(lang, "Estado de mal epiléptico após benzodiazepínico", "Estado epiléptico tras benzodiacepina"),
+            t(lang, "Crises focais", "Crisis focales"),
+            t(lang, "Crises tônico-clônicas generalizadas", "Crisis tónico-clónicas generalizadas"),
+            t(lang, "Profilaxia/tratamento de crises pós-traumáticas em contextos selecionados", "Profilaxis/tratamiento de crisis postraumáticas en contextos seleccionados"),
+            t(lang, "Epilepsia estrutural focal", "Epilepsia estructural focal"),
+            t(lang, "Arritmias ventriculares específicas induzidas por digital em contexto histórico/selecionado", "Arritmias ventriculares específicas inducidas por digital en contexto histórico/seleccionado")
+          ],
+
+          renalAdjustment: t(
+            lang,
+            "Sem ajuste renal fixo, mas em uremia monitorar fração livre ou corrigir interpretação do nível total.",
+            "Sin ajuste renal fijo, pero en uremia monitorizar fracción libre o corregir interpretación del nivel total."
+          ),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: alto risco de toxicidade; monitorar nível livre/total e reduzir dose conforme necessário.",
+                "Hepatopatía: alto riesgo de toxicidad; monitorizar nivel libre/total y reducir dosis según necesidad."
+              )
+            : t(lang, "Sem ajuste hepático inicial obrigatório, mas monitorar níveis.", "Sin ajuste hepático inicial obligatorio, pero monitorizar niveles."),
+
+          mechanism: t(
+            lang,
+            "Bloqueia canais de sódio voltagem-dependentes em estado inativado, reduzindo descargas neuronais repetitivas.",
+            "Bloquea canales de sodio voltaje-dependientes en estado inactivado, reduciendo descargas neuronales repetitivas."
+          ),
+
+          onset: t(
+            lang,
+            "EV tem ação rápida após carga; administração deve ser lenta e monitorizada.",
+            "IV tiene acción rápida tras carga; administración debe ser lenta y monitorizada."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média variável, cerca de 22 horas, com cinética não linear/saturável.",
+            "Vida media variable, cerca de 22 horas, con cinética no lineal/saturable."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Nistagmo", "Nistagmo"),
+            t(lang, "Ataxia", "Ataxia"),
+            t(lang, "Diplopia", "Diplopía"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Hiperplasia gengival", "Hiperplasia gingival"),
+            t(lang, "Hirsutismo", "Hirsutismo"),
+            t(lang, "Rash cutâneo", "Rash cutáneo")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Arritmias e hipotensão com infusão EV rápida", "Arritmias e hipotensión con infusión IV rápida"),
+            t(lang, "Síndrome de Stevens-Johnson/necrólise epidérmica tóxica", "Síndrome de Stevens-Johnson/necrólisis epidérmica tóxica"),
+            t(lang, "DRESS", "DRESS"),
+            t(lang, "Hepatotoxicidade", "Hepatotoxicidad"),
+            t(lang, "Depressão medular rara", "Depresión medular rara"),
+            t(lang, "Teratogenicidade/síndrome fetal da hidantoína", "Teratogenicidad/síndrome fetal de hidantoína"),
+            t(lang, "Toxicidade neurológica por níveis elevados", "Toxicidad neurológica por niveles elevados")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de toxicidade neurológica, quedas, interações e hipoalbuminemia.", "Adulto mayor: mayor riesgo de toxicidad neurológica, caídas, interacciones e hipoalbuminemia.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: risco teratogênico; avaliar alternativa, controle de crises e suplementação de ácido fólico.", "Embarazo: riesgo teratogénico; evaluar alternativa, control de crisis y suplementación de ácido fólico.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: geralmente possível com monitorização de sedação e ganho ponderal.", "Lactancia: generalmente posible con monitorización de sedación y ganancia ponderal.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: risco elevado de acúmulo e toxicidade.", "Hepatopatía: riesgo elevado de acumulación y toxicidad.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à fenitoína ou hidantoínas", "Hipersensibilidad a fenitoína o hidantoínas"),
+            t(lang, "Bradicardia sinusal, bloqueio sinoatrial ou BAV de 2º/3º grau sem marcapasso", "Bradicardia sinusal, bloqueo sinoauricular o BAV de 2º/3º grado sin marcapasos"),
+            t(lang, "Síndrome de Adams-Stokes", "Síndrome de Adams-Stokes"),
+            t(lang, "História de SJS/TEN ou DRESS por fenitoína", "Antecedente de SJS/TEN o DRESS por fenitoína"),
+            t(lang, "Uso concomitante com delavirdina", "Uso concomitante con delavirdina")
+          ],
+
+          interactions: [
+            t(lang, "Varfarina/DOACs: interação complexa e risco de alteração anticoagulante", "Warfarina/DOACs: interacción compleja y riesgo de alteración anticoagulante"),
+            t(lang, "Anticoncepcionais hormonais: reduz eficácia", "Anticonceptivos hormonales: reduce eficacia"),
+            t(lang, "Valproato: altera fração livre e níveis", "Valproato: altera fracción libre y niveles"),
+            t(lang, "Carbamazepina/fenobarbital: interações bidirecionais", "Carbamazepina/fenobarbital: interacciones bidireccionales"),
+            t(lang, "Azólicos, amiodarona, isoniazida, metronidazol: podem aumentar níveis", "Azoles, amiodarona, isoniazida, metronidazol: pueden aumentar niveles"),
+            t(lang, "Rifampicina: pode reduzir níveis", "Rifampicina: puede reducir niveles")
+          ],
+
+          alerts: [
+            t(lang, "Infusão EV deve ser lenta e com monitorização cardíaca.", "Infusión IV debe ser lenta y con monitorización cardíaca."),
+            t(lang, "Cinética não linear: pequenos aumentos de dose podem elevar muito o nível sérico.", "Cinética no lineal: pequeños aumentos de dosis pueden elevar mucho el nivel sérico."),
+            t(lang, "Monitorar nível sérico, albumina e sinais neurológicos de toxicidade.", "Monitorizar nivel sérico, albúmina y signos neurológicos de toxicidad."),
+            t(lang, "Atenção extrema às interações por indução enzimática.", "Atención extrema a interacciones por inducción enzimática."),
+            t(lang, "Suspender e avaliar se rash com febre, mucosite ou sintomas sistêmicos.", "Suspender y evaluar si rash con fiebre, mucositis o síntomas sistémicos.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Phenytoin Prescribing Information",
+            "ILAE Epilepsy Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    fenobarbital: {
+      name: { pt: "Fenobarbital", es: "Fenobarbital" },
+      category: "anticonvulsivante",
+
+      calculate: (paciente, lang = "pt") => {
+        const peso = Number(paciente.peso || 0);
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const insuficienciaRenal = clcr < 60;
+
+        const ataqueMin = peso * 10;
+        const ataqueMax = peso * 20;
+        const manutMin = peso * 1;
+        const manutMax = peso * 3;
+
+        return {
+          name: t(lang, "Fenobarbital", "Fenobarbital"),
+
+          class: t(
+            lang,
+            "Barbitúrico anticonvulsivante",
+            "Barbitúrico anticonvulsivante"
+          ),
+
+          category: "anticonvulsivante",
+
+          commercialNames: {
+            br: ["Gardenal", "Fenobarbital"],
+            ar: ["Luminal", "Fenobarbital"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 50 mg", "Comprimido 50 mg"),
+            t(lang, "Comprimido 100 mg", "Comprimido 100 mg"),
+            t(lang, "Solução oral/gotas 40 mg/mL", "Solución oral/gotas 40 mg/mL"),
+            t(lang, "Ampola 100 mg/mL", "Ampolla 100 mg/mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              `Dose de ataque: 10–20 mg/kg. Para ${peso || 0} kg: ${ataqueMin.toFixed(0)}–${ataqueMax.toFixed(0)} mg.`,
+              `Dosis de carga: 10–20 mg/kg. Para ${peso || 0} kg: ${ataqueMin.toFixed(0)}–${ataqueMax.toFixed(0)} mg.`
+            ),
+            manutencao: t(
+              lang,
+              `Manutenção: 1–3 mg/kg/dia. Para ${peso || 0} kg: ${manutMin.toFixed(0)}–${manutMax.toFixed(0)} mg/dia.`,
+              `Mantenimiento: 1–3 mg/kg/día. Para ${peso || 0} kg: ${manutMin.toFixed(0)}–${manutMax.toFixed(0)} mg/día.`
+            ),
+            alvoSerico: t(
+              lang,
+              "Nível sérico usual: 10–40 mcg/mL.",
+              "Nivel sérico habitual: 10–40 mcg/mL."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima deve ser individualizada por nível sérico, sedação e função respiratória.",
+              "La dosis máxima debe individualizarse por nivel sérico, sedación y función respiratoria."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Manutenção: 1–3 mg/kg/dia.", "Mantenimiento: 1–3 mg/kg/día."),
+            severe: t(lang, "Ataque: 10–20 mg/kg conforme protocolo.", "Carga: 10–20 mg/kg según protocolo."),
+            maxDose: t(lang, "Individualizar por nível sérico.", "Individualizar por nivel sérico.")
+          },
+
+          indications: [
+            t(lang, "Crises tônico-clônicas generalizadas", "Crisis tónico-clónicas generalizadas"),
+            t(lang, "Crises focais", "Crisis focales"),
+            t(lang, "Estado de mal epiléptico como segunda/terceira linha", "Estado epiléptico como segunda/tercera línea"),
+            t(lang, "Convulsões neonatais", "Convulsiones neonatales"),
+            t(lang, "Epilepsia em contextos com baixo acesso a outros anticonvulsivantes", "Epilepsia en contextos con bajo acceso a otros anticonvulsivantes"),
+            t(lang, "Sedação em contextos específicos e monitorizados", "Sedación en contextos específicos y monitorizados")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Insuficiência renal: usar com cautela; parte é eliminada pelos rins e pode haver acúmulo.",
+                "Insuficiencia renal: usar con cautela; parte se elimina por riñón y puede acumularse."
+              )
+            : t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: reduzir dose e monitorar sedação/toxicidade.",
+                "Hepatopatía: reducir dosis y monitorizar sedación/toxicidad."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Potencializa GABA-A, aumentando duração de abertura do canal de cloro; em doses altas pode ativar GABA-A diretamente.",
+            "Potencia GABA-A, aumentando duración de apertura del canal de cloro; en dosis altas puede activar GABA-A directamente."
+          ),
+
+          onset: t(
+            lang,
+            "EV/IM tem ação relativamente rápida; uso crônico exige dias a semanas para estabilização sérica.",
+            "IV/IM tiene acción relativamente rápida; uso crónico requiere días a semanas para estabilización sérica."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média longa: aproximadamente 2–5 dias em adultos.",
+            "Vida media larga: aproximadamente 2–5 días en adultos."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Sedação", "Sedación"),
+            t(lang, "Ataxia", "Ataxia"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Déficit cognitivo", "Deterioro cognitivo"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Hiperatividade paradoxal em crianças", "Hiperactividad paradójica en niños")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Depressão respiratória", "Depresión respiratoria"),
+            t(lang, "Coma em intoxicação", "Coma en intoxicación"),
+            t(lang, "Dependência física", "Dependencia física"),
+            t(lang, "Síndrome de abstinência grave", "Síndrome de abstinencia grave"),
+            t(lang, "Reações cutâneas graves", "Reacciones cutáneas graves"),
+            t(lang, "Depressão ou ideação suicida", "Depresión o ideación suicida"),
+            t(lang, "Osteopenia/osteomalácia em uso crônico", "Osteopenia/osteomalacia en uso crónico")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de sedação, quedas, confusão, depressão respiratória e interações.", "Adulto mayor: mayor riesgo de sedación, caídas, confusión, depresión respiratoria e interacciones.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: risco teratogênico e de abstinência neonatal; avaliar alternativa e suplementar ácido fólico se inevitável.", "Embarazo: riesgo teratogénico y de abstinencia neonatal; evaluar alternativa y suplementar ácido fólico si inevitable.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: pode causar sedação no lactente; monitorar sucção e ganho ponderal.", "Lactancia: puede causar sedación en el lactante; monitorizar succión y ganancia ponderal.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: maior risco de sedação prolongada e encefalopatia.", "Hepatopatía: mayor riesgo de sedación prolongada y encefalopatía.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal: monitorar acúmulo e sedação.", "Insuficiencia renal: monitorizar acumulación y sedación.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade a barbitúricos", "Hipersensibilidad a barbitúricos"),
+            t(lang, "Porfiria aguda intermitente", "Porfiria aguda intermitente"),
+            t(lang, "Insuficiência respiratória grave sem suporte", "Insuficiencia respiratoria grave sin soporte"),
+            t(lang, "Doença hepática grave", "Enfermedad hepática grave"),
+            t(lang, "Intoxicação aguda por depressores do SNC", "Intoxicación aguda por depresores del SNC")
+          ],
+
+          interactions: [
+            t(lang, "Álcool, opioides e benzodiazepínicos: maior depressão respiratória", "Alcohol, opioides y benzodiacepinas: mayor depresión respiratoria"),
+            t(lang, "Anticoncepcionais hormonais: reduz eficácia", "Anticonceptivos hormonales: reduce eficacia"),
+            t(lang, "Varfarina/DOACs: pode reduzir anticoagulação", "Warfarina/DOACs: puede reducir anticoagulación"),
+            t(lang, "Corticosteroides, antirretrovirais e imunossupressores: pode reduzir níveis", "Corticoides, antirretrovirales e inmunosupresores: puede reducir niveles"),
+            t(lang, "Valproato: pode aumentar níveis de fenobarbital", "Valproato: puede aumentar niveles de fenobarbital"),
+            t(lang, "Outros anticonvulsivantes: interações por indução enzimática", "Otros anticonvulsivantes: interacciones por inducción enzimática")
+          ],
+
+          alerts: [
+            t(lang, "Monitorar nível sérico, sedação e função respiratória em doses altas.", "Monitorizar nivel sérico, sedación y función respiratoria en dosis altas."),
+            t(lang, "Não suspender abruptamente pelo risco de abstinência e crises.", "No suspender bruscamente por riesgo de abstinencia y crisis."),
+            t(lang, "Potente indutor enzimático: revisar interações sempre.", "Potente inductor enzimático: revisar interacciones siempre."),
+            t(lang, "Evitar álcool e outros depressores do SNC.", "Evitar alcohol y otros depresores del SNC."),
+            t(lang, "Em uso crônico, considerar saúde óssea e vitamina D conforme risco.", "En uso crónico, considerar salud ósea y vitamina D según riesgo.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Phenobarbital Prescribing Information",
+            "ILAE Epilepsy Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    etossuximida: {
+      name: { pt: "Etossuximida", es: "Etosuximida" },
+      category: "anticonvulsivante",
+
+      calculate: (paciente, lang = "pt") => {
+        const peso = Number(paciente.peso || 0);
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+
+        const doseInicial = peso * 10;
+        const doseMaxKg = peso * 20;
+
+        return {
+          name: t(lang, "Etossuximida", "Etosuximida"),
+
+          class: t(
+            lang,
+            "Anticonvulsivante succinimida",
+            "Anticonvulsivante succinimida"
+          ),
+
+          category: "anticonvulsivante",
+
+          commercialNames: {
+            br: ["Zarontin", "Etossuximida"],
+            ar: ["Zarontin", "Etosuximida"]
+          },
+
+          presentation: [
+            t(lang, "Cápsula 250 mg", "Cápsula 250 mg"),
+            t(lang, "Xarope/solução oral 250 mg/5 mL", "Jarabe/solución oral 250 mg/5 mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Crises de ausência: iniciar 250 mg VO 2x/dia; titular conforme resposta.",
+              "Crisis de ausencia: iniciar 250 mg VO 2 veces/día; titular según respuesta."
+            ),
+            pediatrica: t(
+              lang,
+              `Dose inicial pediátrica: 10 mg/kg/dia. Para ${peso || 0} kg: ${doseInicial.toFixed(0)} mg/dia.`,
+              `Dosis inicial pediátrica: 10 mg/kg/día. Para ${peso || 0} kg: ${doseInicial.toFixed(0)} mg/día.`
+            ),
+            manutencao: t(
+              lang,
+              `Manutenção usual: 20 mg/kg/dia. Para ${peso || 0} kg: até ${doseMaxKg.toFixed(0)} mg/dia conforme tolerância.`,
+              `Mantenimiento habitual: 20 mg/kg/día. Para ${peso || 0} kg: hasta ${doseMaxKg.toFixed(0)} mg/día según tolerancia.`
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 1500 mg/dia.",
+              "Dosis máxima habitual: 1500 mg/día."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Iniciar 10 mg/kg/dia.", "Iniciar 10 mg/kg/día."),
+            severe: t(lang, "Titular geralmente até 20–40 mg/kg/dia conforme resposta e nível sérico.", "Titular generalmente hasta 20–40 mg/kg/día según respuesta y nivel sérico."),
+            maxDose: t(lang, "1500 mg/dia", "1500 mg/día")
+          },
+
+          indications: [
+            t(lang, "Crises de ausência típicas", "Crisis de ausencia típicas"),
+            t(lang, "Epilepsia ausência infantil", "Epilepsia ausencia infantil"),
+            t(lang, "Crises de ausência sem crises tônico-clônicas associadas", "Crisis de ausencia sin crisis tónico-clónicas asociadas"),
+            t(lang, "Alternativa ao valproato quando ausência é o principal tipo de crise", "Alternativa al valproato cuando ausencia es el principal tipo de crisis"),
+            t(lang, "Terapia combinada em ausência refratária em casos selecionados", "Terapia combinada en ausencia refractaria en casos seleccionados"),
+            t(lang, "Epilepsia generalizada com predomínio de ausência sob especialista", "Epilepsia generalizada con predominio de ausencia bajo especialista")
+          ],
+
+          renalAdjustment: t(
+            lang,
+            "Sem ajuste renal habitual, mas monitorar tolerabilidade em doença renal avançada.",
+            "Sin ajuste renal habitual, pero monitorizar tolerabilidad en enfermedad renal avanzada."
+          ),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: usar com cautela e monitorar função hepática.",
+                "Hepatopatía: usar con cautela y monitorizar función hepática."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Bloqueia canais de cálcio tipo T no tálamo, reduzindo descargas rítmicas associadas às crises de ausência.",
+            "Bloquea canales de calcio tipo T en el tálamo, reduciendo descargas rítmicas asociadas a las crisis de ausencia."
+          ),
+
+          onset: t(
+            lang,
+            "Controle de ausência pode ocorrer após dias a semanas de titulação.",
+            "Control de ausencias puede ocurrir tras días a semanas de titulación."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 30–60 horas em adultos; menor em crianças.",
+            "Vida media aproximada: 30–60 horas en adultos; menor en niños."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Vômitos", "Vómitos"),
+            t(lang, "Dor abdominal", "Dolor abdominal"),
+            t(lang, "Perda de apetite", "Pérdida de apetito"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Cefaleia", "Cefalea"),
+            t(lang, "Tontura", "Mareos")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Discrasias sanguíneas raras", "Discrasias sanguíneas raras"),
+            t(lang, "Síndrome de Stevens-Johnson rara", "Síndrome de Stevens-Johnson rara"),
+            t(lang, "Lúpus-like raro", "Síndrome lupus-like raro"),
+            t(lang, "Depressão ou ideação suicida", "Depresión o ideación suicida"),
+            t(lang, "Hepatotoxicidade rara", "Hepatotoxicidad rara")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: uso incomum; monitorar sonolência, tontura e interações.", "Adulto mayor: uso poco común; monitorizar somnolencia, mareos e interacciones.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: avaliar risco-benefício e controle de crises; dados são menos amplos que alguns anticonvulsivantes.", "Embarazo: evaluar riesgo-beneficio y control de crisis; datos son menos amplios que algunos anticonvulsivantes.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: passa ao leite; monitorar sedação, alimentação e irritabilidade.", "Lactancia: pasa a la leche; monitorizar sedación, alimentación e irritabilidad.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: monitorar função hepática e tolerabilidade.", "Hepatopatía: monitorizar función hepática y tolerabilidad.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à etossuximida ou succinimidas", "Hipersensibilidad a etosuximida o succinimidas"),
+            t(lang, "História de reação hematológica grave associada ao fármaco", "Antecedente de reacción hematológica grave asociada al fármaco")
+          ],
+
+          interactions: [
+            t(lang, "Valproato: pode alterar níveis de etossuximida", "Valproato: puede alterar niveles de etosuximida"),
+            t(lang, "Álcool e sedativos: maior sonolência", "Alcohol y sedantes: mayor somnolencia"),
+            t(lang, "Outros anticonvulsivantes: monitorar controle de crises e eventos adversos", "Otros anticonvulsivantes: monitorizar control de crisis y eventos adversos")
+          ],
+
+          alerts: [
+            t(lang, "É específica para crises de ausência; não cobre bem crises tônico-clônicas isoladamente.", "Es específica para crisis de ausencia; no cubre bien crisis tónico-clónicas aisladamente."),
+            t(lang, "Monitorar hemograma se febre, infecções recorrentes, equimoses ou sangramento.", "Monitorizar hemograma si fiebre, infecciones recurrentes, equimosis o sangrado."),
+            t(lang, "Monitorar humor e ideação suicida.", "Monitorizar ánimo e ideación suicida."),
+            t(lang, "Titular conforme resposta clínica e tolerabilidade gastrointestinal.", "Titular según respuesta clínica y tolerabilidad gastrointestinal."),
+            t(lang, "Não suspender abruptamente em pacientes epilépticos.", "No suspender bruscamente en pacientes epilépticos.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Ethosuximide Prescribing Information",
+            "ILAE Epilepsy Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    lacosamida: {
+      name: { pt: "Lacosamida", es: "Lacosamida" },
+      category: "anticonvulsivante",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const insuficienciaRenal = clcr < 30;
+
+        return {
+          name: t(lang, "Lacosamida", "Lacosamida"),
+
+          class: t(
+            lang,
+            "Anticonvulsivante modulador de canais de sódio",
+            "Anticonvulsivante modulador de canales de sodio"
+          ),
+
+          category: "anticonvulsivante",
+
+          commercialNames: {
+            br: ["Vimpat", "Lacosamida"],
+            ar: ["Vimpat", "Lacosamida Gador", "Lacosamida"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 50 mg", "Comprimido 50 mg"),
+            t(lang, "Comprimido 100 mg", "Comprimido 100 mg"),
+            t(lang, "Comprimido 150 mg", "Comprimido 150 mg"),
+            t(lang, "Comprimido 200 mg", "Comprimido 200 mg"),
+            t(lang, "Solução oral 10 mg/mL", "Solución oral 10 mg/mL"),
+            t(lang, "Frasco-ampola EV 200 mg/20 mL", "Frasco ampolla IV 200 mg/20 mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Crises focais: iniciar 50 mg VO/EV 12/12h; titular semanalmente.",
+              "Crisis focales: iniciar 50 mg VO/IV cada 12 h; titular semanalmente."
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 200–400 mg/dia divididos em 2 tomadas.",
+              "Dosis habitual: 200–400 mg/día divididos en 2 tomas."
+            ),
+            ataque: t(
+              lang,
+              "Dose de ataque EV/VO pode ser usada em contexto monitorizado conforme protocolo.",
+              "Dosis de carga IV/VO puede usarse en contexto monitorizado según protocolo."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 400 mg/dia; até 600 mg/dia em alguns contextos especializados.",
+              "Dosis máxima habitual: 400 mg/día; hasta 600 mg/día en algunos contextos especializados."
+            )
+          },
+
+          doseKg: {
+            standard: t(
+              lang,
+              "Adultos: não se usa cálculo rotineiro por kg.",
+              "Adultos: no se usa cálculo rutinario por kg."
+            ),
+            pediatric: t(
+              lang,
+              "Pediatria: dose por kg conforme idade, peso e protocolo especializado.",
+              "Pediatría: dosis por kg según edad, peso y protocolo especializado."
+            ),
+            maxDose: t(lang, "400 mg/dia usual", "400 mg/día habitual")
+          },
+
+          indications: [
+            t(lang, "Epilepsia focal", "Epilepsia focal"),
+            t(lang, "Crises focais com ou sem generalização bilateral", "Crisis focales con o sin generalización bilateral"),
+            t(lang, "Terapia adjuvante em epilepsia focal", "Terapia coadyuvante en epilepsia focal"),
+            t(lang, "Monoterapia em epilepsia focal em alguns protocolos", "Monoterapia en epilepsia focal en algunos protocolos"),
+            t(lang, "Estado de mal epiléptico refratário como opção adjuvante em alguns centros", "Estado epiléptico refractario como opción coadyuvante en algunos centros"),
+            t(lang, "Quando se busca menor interação medicamentosa que indutores enzimáticos", "Cuando se busca menor interacción farmacológica que inductores enzimáticos")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "ClCr <30 mL/min: limitar dose máxima e titular com cautela.",
+                "ClCr <30 mL/min: limitar dosis máxima y titular con cautela."
+              )
+            : t(lang, "Sem ajuste renal habitual se função renal preservada.", "Sin ajuste renal habitual si función renal preservada."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia leve/moderada: titular com cautela e limitar dose máxima; evitar se grave.",
+                "Hepatopatía leve/moderada: titular con cautela y limitar dosis máxima; evitar si grave."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Aumenta a inativação lenta dos canais de sódio voltagem-dependentes, estabilizando membranas neuronais hiperexcitáveis.",
+            "Aumenta la inactivación lenta de canales de sodio voltaje-dependientes, estabilizando membranas neuronales hiperexcitables."
+          ),
+
+          onset: t(
+            lang,
+            "Via EV pode atingir níveis rapidamente; ajuste de manutenção ocorre por titulação clínica.",
+            "Vía IV puede alcanzar niveles rápidamente; ajuste de mantenimiento ocurre por titulación clínica."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 13 horas.",
+            "Vida media aproximada: 13 horas."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Cefaleia", "Cefalea"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Diplopia", "Diplopía"),
+            t(lang, "Ataxia", "Ataxia"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Fadiga", "Fatiga")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Prolongamento do intervalo PR", "Prolongación del intervalo PR"),
+            t(lang, "Bloqueio AV", "Bloqueo AV"),
+            t(lang, "Arritmias em pacientes predispostos", "Arritmias en pacientes predispuestos"),
+            t(lang, "Síncope", "Síncope"),
+            t(lang, "Ideação suicida", "Ideación suicida"),
+            t(lang, "Reação de hipersensibilidade multissistêmica rara", "Reacción de hipersensibilidad multisistémica rara")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de tontura, quedas, alterações de condução cardíaca e interações.", "Adulto mayor: mayor riesgo de mareos, caídas, alteraciones de conducción cardíaca e interacciones.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: dados limitados; avaliar risco-benefício e controle de crises.", "Embarazo: datos limitados; evaluar riesgo-beneficio y control de crisis.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: dados limitados; monitorar sonolência e alimentação do lactente.", "Lactancia: datos limitados; monitorizar somnolencia y alimentación del lactante.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: limitar dose e evitar se grave.", "Hepatopatía: limitar dosis y evitar si grave.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal grave: limitar dose máxima e monitorar toxicidade.", "Insuficiencia renal grave: limitar dosis máxima y monitorizar toxicidad.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à lacosamida", "Hipersensibilidad a lacosamida"),
+            t(lang, "Bloqueio AV de 2º ou 3º grau sem marcapasso", "Bloqueo AV de 2º o 3º grado sin marcapasos")
+          ],
+
+          interactions: [
+            t(lang, "Betabloqueadores, bloqueadores de canal de cálcio e antiarrítmicos: maior risco de PR prolongado", "Betabloqueantes, bloqueantes de canal de calcio y antiarrítmicos: mayor riesgo de PR prolongado"),
+            t(lang, "Outros bloqueadores de canais de sódio: maior tontura, diplopia e condução cardíaca", "Otros bloqueadores de canales de sodio: mayor mareo, diplopía y conducción cardíaca"),
+            t(lang, "Álcool e sedativos: maior sonolência e prejuízo psicomotor", "Alcohol y sedantes: mayor somnolencia y deterioro psicomotor"),
+            t(lang, "Indutores enzimáticos potentes podem reduzir exposição modestamente", "Inductores enzimáticos potentes pueden reducir exposición modestamente")
+          ],
+
+          alerts: [
+            t(lang, "Considerar ECG em pacientes com doença cardíaca, síncope, idosos ou uso de fármacos que prolongam PR.", "Considerar ECG en pacientes con enfermedad cardíaca, síncope, adultos mayores o uso de fármacos que prolongan PR."),
+            t(lang, "Monitorar tontura e risco de quedas.", "Monitorizar mareos y riesgo de caídas."),
+            t(lang, "Não suspender abruptamente em epilepsia.", "No suspender bruscamente en epilepsia."),
+            t(lang, "Via EV deve ser administrada conforme protocolo e monitorização clínica.", "Vía IV debe administrarse según protocolo y monitorización clínica."),
+            t(lang, "Boa opção quando se deseja poucas interações enzimáticas.", "Buena opción cuando se desean pocas interacciones enzimáticas.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Lacosamide Prescribing Information",
+            "ILAE Epilepsy Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    brivaracetam: {
+      name: { pt: "Brivaracetam", es: "Brivaracetam" },
+      category: "anticonvulsivante",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const insuficienciaRenal = clcr < 60;
+
+        return {
+          name: t(lang, "Brivaracetam", "Brivaracetam"),
+
+          class: t(
+            lang,
+            "Anticonvulsivante modulador da proteína SV2A",
+            "Anticonvulsivante modulador de la proteína SV2A"
+          ),
+
+          category: "anticonvulsivante",
+
+          commercialNames: {
+            br: ["Briviact", "Brivaracetam"],
+            ar: ["Briviact", "Brivaracetam"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 10 mg", "Comprimido 10 mg"),
+            t(lang, "Comprimido 25 mg", "Comprimido 25 mg"),
+            t(lang, "Comprimido 50 mg", "Comprimido 50 mg"),
+            t(lang, "Comprimido 75 mg", "Comprimido 75 mg"),
+            t(lang, "Comprimido 100 mg", "Comprimido 100 mg"),
+            t(lang, "Solução oral 10 mg/mL", "Solución oral 10 mg/mL"),
+            t(lang, "Frasco-ampola EV 50 mg/5 mL", "Frasco ampolla IV 50 mg/5 mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Crises focais: iniciar 50 mg VO/EV 12/12h; ajustar conforme resposta.",
+              "Crisis focales: iniciar 50 mg VO/IV cada 12 h; ajustar según respuesta."
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 50–200 mg/dia divididos em 2 tomadas.",
+              "Dosis habitual: 50–200 mg/día divididos en 2 tomas."
+            ),
+            conversao: t(
+              lang,
+              "Pode substituir levetiracetam em alguns pacientes por melhor tolerabilidade comportamental.",
+              "Puede sustituir levetiracetam en algunos pacientes por mejor tolerabilidad conductual."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 200 mg/dia.",
+              "Dosis máxima habitual: 200 mg/día."
+            )
+          },
+
+          doseKg: {
+            standard: t(
+              lang,
+              "Adultos: não se usa cálculo rotineiro por kg.",
+              "Adultos: no se usa cálculo rutinario por kg."
+            ),
+            pediatric: t(
+              lang,
+              "Pediatria: dose por kg conforme idade, peso e protocolo especializado.",
+              "Pediatría: dosis por kg según edad, peso y protocolo especializado."
+            ),
+            maxDose: t(lang, "200 mg/dia em adultos", "200 mg/día en adultos")
+          },
+
+          indications: [
+            t(lang, "Epilepsia focal", "Epilepsia focal"),
+            t(lang, "Crises focais com ou sem generalização bilateral", "Crisis focales con o sin generalización bilateral"),
+            t(lang, "Terapia adjuvante em epilepsia focal", "Terapia coadyuvante en epilepsia focal"),
+            t(lang, "Monoterapia em epilepsia focal em alguns protocolos", "Monoterapia en epilepsia focal en algunos protocolos"),
+            t(lang, "Alternativa ao levetiracetam por eventos comportamentais em casos selecionados", "Alternativa a levetiracetam por eventos conductuales en casos seleccionados"),
+            t(lang, "Epilepsia refratária focal em combinação com outros anticonvulsivantes", "Epilepsia focal refractaria en combinación con otros anticonvulsivantes")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Sem ajuste renal habitual, mas usar cautela em insuficiência renal grave ou diálise.",
+                "Sin ajuste renal habitual, pero usar cautela en insuficiencia renal grave o diálisis."
+              )
+            : t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: considerar dose inicial menor e limitar dose máxima conforme gravidade.",
+                "Hepatopatía: considerar dosis inicial menor y limitar dosis máxima según gravedad."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Liga-se seletivamente à proteína vesicular sináptica SV2A com alta afinidade, modulando liberação de neurotransmissores e reduzindo hiperexcitabilidade neuronal.",
+            "Se une selectivamente a la proteína vesicular sináptica SV2A con alta afinidad, modulando liberación de neurotransmisores y reduciendo hiperexcitabilidad neuronal."
+          ),
+
+          onset: t(
+            lang,
+            "Início anticonvulsivante rápido; VO e EV podem ser usadas em doses equivalentes.",
+            "Inicio anticonvulsivante rápido; VO e IV pueden usarse en dosis equivalentes."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 9 horas.",
+            "Vida media aproximada: 9 horas."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Fadiga", "Fatiga"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Cefaleia", "Cefalea"),
+            t(lang, "Irritabilidade", "Irritabilidad")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Depressão ou ideação suicida", "Depresión o ideación suicida"),
+            t(lang, "Alterações comportamentais importantes", "Alteraciones conductuales importantes"),
+            t(lang, "Psicose rara", "Psicosis rara"),
+            t(lang, "Reações de hipersensibilidade raras", "Reacciones de hipersensibilidad raras"),
+            t(lang, "Sedação intensa em associação com depressores do SNC", "Sedación intensa en asociación con depresores del SNC")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de sonolência, tontura, quedas e interações por polifarmácia.", "Adulto mayor: mayor riesgo de somnolencia, mareos, caídas e interacciones por polifarmacia.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: dados limitados; avaliar risco-benefício e controle de crises.", "Embarazo: datos limitados; evaluar riesgo-beneficio y control de crisis.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: dados limitados; monitorar sonolência e alimentação do lactente.", "Lactancia: datos limitados; monitorizar somnolencia y alimentación del lactante.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: reduzir dose conforme gravidade.", "Hepatopatía: reducir dosis según gravedad.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal grave: cautela, especialmente em diálise.", "Insuficiencia renal grave: cautela, especialmente en diálisis.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade ao brivaracetam", "Hipersensibilidad a brivaracetam"),
+            t(lang, "História de reação grave ao fármaco", "Antecedente de reacción grave al fármaco")
+          ],
+
+          interactions: [
+            t(lang, "Álcool e sedativos: maior sonolência e prejuízo psicomotor", "Alcohol y sedantes: mayor somnolencia y deterioro psicomotor"),
+            t(lang, "Rifampicina: pode reduzir níveis de brivaracetam", "Rifampicina: puede reducir niveles de brivaracetam"),
+            t(lang, "Carbamazepina: pode aumentar exposição ao epóxido ativo da carbamazepina", "Carbamazepina: puede aumentar exposición al epóxido activo de carbamazepina"),
+            t(lang, "Outros anticonvulsivantes: monitorar sedação e controle de crises", "Otros anticonvulsivantes: monitorizar sedación y control de crisis")
+          ],
+
+          alerts: [
+            t(lang, "Monitorar humor, irritabilidade, depressão e ideação suicida.", "Monitorizar ánimo, irritabilidad, depresión e ideación suicida."),
+            t(lang, "Não suspender abruptamente em epilepsia.", "No suspender bruscamente en epilepsia."),
+            t(lang, "Via EV pode substituir VO em dose equivalente quando necessário.", "Vía IV puede sustituir VO en dosis equivalente cuando sea necesario."),
+            t(lang, "Pode ter menos eventos comportamentais que levetiracetam em alguns pacientes, mas ainda exige vigilância.", "Puede tener menos eventos conductuales que levetiracetam en algunos pacientes, pero aún requiere vigilancia."),
+            t(lang, "Ajustar com cautela em hepatopatia.", "Ajustar con cautela en hepatopatía.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Brivaracetam Prescribing Information",
+            "ILAE Epilepsy Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    vigabatrina: {
+      name: { pt: "Vigabatrina", es: "Vigabatrina" },
+      category: "anticonvulsivante",
+
+      calculate: (paciente, lang = "pt") => {
+        const peso = Number(paciente.peso || 0);
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const insuficienciaRenal = clcr < 60;
+
+        const doseInfantilMin = peso * 50;
+        const doseInfantilMax = peso * 100;
+
+        return {
+          name: t(lang, "Vigabatrina", "Vigabatrina"),
+
+          class: t(
+            lang,
+            "Anticonvulsivante inibidor irreversível da GABA-transaminase",
+            "Anticonvulsivante inhibidor irreversible de la GABA-transaminasa"
+          ),
+
+          category: "anticonvulsivante",
+
+          commercialNames: {
+            br: ["Sabril", "Vigabatrina"],
+            ar: ["Sabril", "Vigabatrina"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 500 mg", "Comprimido 500 mg"),
+            t(lang, "Sachê/pó para solução oral 500 mg", "Sobre/polvo para solución oral 500 mg")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Epilepsia focal refratária: iniciar 500 mg VO 12/12h; titular conforme resposta.",
+              "Epilepsia focal refractaria: iniciar 500 mg VO cada 12 h; titular según respuesta."
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual em adultos: 1–3 g/dia divididos em 1–2 tomadas.",
+              "Dosis habitual en adultos: 1–3 g/día divididos en 1–2 tomas."
+            ),
+            espasmosInfantis: t(
+              lang,
+              `Espasmos infantis: dose por peso conforme protocolo. Para ${peso || 0} kg: cerca de ${doseInfantilMin.toFixed(0)}–${doseInfantilMax.toFixed(0)} mg/dia inicialmente.`,
+              `Espasmos infantiles: dosis por peso según protocolo. Para ${peso || 0} kg: cerca de ${doseInfantilMin.toFixed(0)}–${doseInfantilMax.toFixed(0)} mg/día inicialmente.`
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 3 g/dia em adultos; pediatria conforme peso e protocolo.",
+              "Dosis máxima habitual: 3 g/día en adultos; pediatría según peso y protocolo."
+            )
+          },
+
+          doseKg: {
+            standard: t(
+              lang,
+              "Espasmos infantis: iniciar aproximadamente 50 mg/kg/dia.",
+              "Espasmos infantiles: iniciar aproximadamente 50 mg/kg/día."
+            ),
+            severe: t(
+              lang,
+              "Pode titular até 100–150 mg/kg/dia conforme resposta e tolerabilidade.",
+              "Puede titularse hasta 100–150 mg/kg/día según respuesta y tolerabilidad."
+            ),
+            maxDose: t(lang, "3 g/dia em adultos", "3 g/día en adultos")
+          },
+
+          indications: [
+            t(lang, "Espasmos infantis", "Espasmos infantiles"),
+            t(lang, "Síndrome de West", "Síndrome de West"),
+            t(lang, "Espasmos infantis associados à esclerose tuberosa", "Espasmos infantiles asociados a esclerosis tuberosa"),
+            t(lang, "Epilepsia focal refratária como terapia adjuvante", "Epilepsia focal refractaria como terapia coadyuvante"),
+            t(lang, "Crises focais resistentes a múltiplos anticonvulsivantes", "Crisis focales resistentes a múltiples anticonvulsivantes"),
+            t(lang, "Epilepsia de difícil controle sob neurologia especializada", "Epilepsia de difícil control bajo neurología especializada")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Necessita ajuste renal conforme ClCr; reduzir dose e monitorar toxicidade.",
+                "Requiere ajuste renal según ClCr; reducir dosis y monitorizar toxicidad."
+              )
+            : t(lang, "Sem ajuste renal se função renal normal.", "Sin ajuste renal si función renal normal."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Sem metabolismo hepático relevante; geralmente não requer ajuste hepático.",
+                "Sin metabolismo hepático relevante; generalmente no requiere ajuste hepático."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Inibe irreversivelmente a GABA-transaminase, aumentando níveis cerebrais de GABA e reduzindo excitabilidade neuronal.",
+            "Inhibe irreversiblemente la GABA-transaminasa, aumentando niveles cerebrales de GABA y reduciendo excitabilidad neuronal."
+          ),
+
+          onset: t(
+            lang,
+            "Em espasmos infantis, resposta pode ocorrer em dias a poucas semanas; reavaliar precocemente eficácia.",
+            "En espasmos infantiles, la respuesta puede ocurrir en días a pocas semanas; reevaluar precozmente eficacia."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média plasmática aproximada: 5–8 horas; efeito farmacodinâmico dura mais por inibição irreversível.",
+            "Vida media plasmática aproximada: 5–8 horas; efecto farmacodinámico dura más por inhibición irreversible."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Fadiga", "Fatiga"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Ganho de peso", "Aumento de peso"),
+            t(lang, "Irritabilidade", "Irritabilidad"),
+            t(lang, "Tremor", "Temblor"),
+            t(lang, "Nistagmo", "Nistagmo")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Perda visual periférica irreversível", "Pérdida visual periférica irreversible"),
+            t(lang, "Alterações retinianas", "Alteraciones retinianas"),
+            t(lang, "Depressão ou ideação suicida", "Depresión o ideación suicida"),
+            t(lang, "Psicose ou alteração comportamental", "Psicosis o alteración conductual"),
+            t(lang, "Alterações de ressonância em lactentes", "Alteraciones de resonancia en lactantes"),
+            t(lang, "Anemia ou neuropatia periférica rara", "Anemia o neuropatía periférica rara")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de sedação, tontura, quedas e perda visual não percebida.", "Adulto mayor: mayor riesgo de sedación, mareos, caídas y pérdida visual no percibida.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: avaliar risco-benefício; dados limitados e epilepsia deve permanecer controlada.", "Embarazo: evaluar riesgo-beneficio; datos limitados y epilepsia debe permanecer controlada.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: passa ao leite; monitorar sedação, alimentação e desenvolvimento do lactente.", "Lactancia: pasa a la leche; monitorizar sedación, alimentación y desarrollo del lactante.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: geralmente sem ajuste, mas monitorar tolerabilidade.", "Hepatopatía: generalmente sin ajuste, pero monitorizar tolerabilidad.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal: ajuste obrigatório conforme ClCr.", "Insuficiencia renal: ajuste obligatorio según ClCr.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à vigabatrina", "Hipersensibilidad a vigabatrina"),
+            t(lang, "Perda visual significativa pré-existente quando houver alternativa", "Pérdida visual significativa preexistente cuando haya alternativa"),
+            t(lang, "Impossibilidade de monitorização oftalmológica quando exigida", "Imposibilidad de monitorización oftalmológica cuando sea exigida")
+          ],
+
+          interactions: [
+            t(lang, "Fenitoína: pode reduzir níveis de fenitoína", "Fenitoína: puede reducir niveles de fenitoína"),
+            t(lang, "Álcool e sedativos: maior sonolência", "Alcohol y sedantes: mayor somnolencia"),
+            t(lang, "Outros anticonvulsivantes: monitorar sedação e controle de crises", "Otros anticonvulsivantes: monitorizar sedación y control de crisis")
+          ],
+
+          alerts: [
+            t(lang, "Risco clássico e grave: perda visual periférica irreversível.", "Riesgo clásico y grave: pérdida visual periférica irreversible."),
+            t(lang, "Exige avaliação oftalmológica basal e periódica quando possível.", "Requiere evaluación oftalmológica basal y periódica cuando sea posible."),
+            t(lang, "Usar apenas quando benefício supera claramente risco visual.", "Usar solo cuando el beneficio supera claramente el riesgo visual."),
+            t(lang, "Reavaliar eficácia precocemente; suspender se não houver benefício clínico relevante.", "Reevaluar eficacia precozmente; suspender si no hay beneficio clínico relevante."),
+            t(lang, "Não suspender abruptamente em epilepsia sem plano médico.", "No suspender bruscamente en epilepsia sin plan médico.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Vigabatrin Prescribing Information",
+            "ILAE Epilepsy Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    rufinamida: {
+      name: { pt: "Rufinamida", es: "Rufinamida" },
+      category: "anticonvulsivante",
+
+      calculate: (paciente, lang = "pt") => {
+        const peso = Number(paciente.peso || 0);
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const insuficienciaRenal = clcr < 30;
+
+        const dosePediatricaInicial = peso * 10;
+        const dosePediatricaMax = peso * 45;
+
+        return {
+          name: t(lang, "Rufinamida", "Rufinamida"),
+
+          class: t(
+            lang,
+            "Anticonvulsivante triazólico modulador de canais de sódio",
+            "Anticonvulsivante triazólico modulador de canales de sodio"
+          ),
+
+          category: "anticonvulsivante",
+
+          commercialNames: {
+            br: ["Inovelon", "Rufinamida"],
+            ar: ["Inovelon", "Rufinamida"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 200 mg", "Comprimido 200 mg"),
+            t(lang, "Comprimido 400 mg", "Comprimido 400 mg"),
+            t(lang, "Suspensão oral 40 mg/mL", "Suspensión oral 40 mg/mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Síndrome de Lennox-Gastaut: iniciar 400–800 mg/dia VO divididos 12/12h, com alimento; titular conforme resposta.",
+              "Síndrome de Lennox-Gastaut: iniciar 400–800 mg/día VO divididos cada 12 h, con comida; titular según respuesta."
+            ),
+            pediatrica: t(
+              lang,
+              `Pediatria: iniciar cerca de 10 mg/kg/dia. Para ${peso || 0} kg: ${dosePediatricaInicial.toFixed(0)} mg/dia.`,
+              `Pediatría: iniciar cerca de 10 mg/kg/día. Para ${peso || 0} kg: ${dosePediatricaInicial.toFixed(0)} mg/día.`
+            ),
+            manutencao: t(
+              lang,
+              `Manutenção pediátrica pode chegar a 45 mg/kg/dia. Para ${peso || 0} kg: até ${dosePediatricaMax.toFixed(0)} mg/dia conforme protocolo.`,
+              `Mantenimiento pediátrico puede llegar a 45 mg/kg/día. Para ${peso || 0} kg: hasta ${dosePediatricaMax.toFixed(0)} mg/día según protocolo.`
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 3200 mg/dia em adultos.",
+              "Dosis máxima habitual: 3200 mg/día en adultos."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Pediatria: iniciar 10 mg/kg/dia.", "Pediatría: iniciar 10 mg/kg/día."),
+            severe: t(lang, "Titular até 45 mg/kg/dia conforme resposta e tolerabilidade.", "Titular hasta 45 mg/kg/día según respuesta y tolerabilidad."),
+            maxDose: t(lang, "3200 mg/dia em adultos", "3200 mg/día en adultos")
+          },
+
+          indications: [
+            t(lang, "Síndrome de Lennox-Gastaut", "Síndrome de Lennox-Gastaut"),
+            t(lang, "Crises atônicas/drop attacks associadas a Lennox-Gastaut", "Crisis atónicas/drop attacks asociadas a Lennox-Gastaut"),
+            t(lang, "Crises tônico-clônicas em epilepsias generalizadas complexas", "Crisis tónico-clónicas en epilepsias generalizadas complejas"),
+            t(lang, "Terapia adjuvante em epilepsia refratária", "Terapia coadyuvante en epilepsia refractaria"),
+            t(lang, "Epilepsia pediátrica de difícil controle sob especialista", "Epilepsia pediátrica de difícil control bajo especialista"),
+            t(lang, "Crises múltiplas associadas a encefalopatias epilépticas", "Crisis múltiples asociadas a encefalopatías epilépticas")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Insuficiência renal grave: geralmente sem grande ajuste, mas usar cautela e monitorar tolerabilidade.",
+                "Insuficiencia renal grave: generalmente sin gran ajuste, pero usar cautela y monitorizar tolerabilidad."
+              )
+            : t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: usar com cautela; não recomendada em hepatopatia grave.",
+                "Hepatopatía: usar con cautela; no recomendada en hepatopatía grave."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Prolonga o estado inativado dos canais de sódio voltagem-dependentes, reduzindo descargas neuronais repetitivas.",
+            "Prolonga el estado inactivado de los canales de sodio voltaje-dependientes, reduciendo descargas neuronales repetitivas."
+          ),
+
+          onset: t(
+            lang,
+            "Controle de crises é avaliado após titulação gradual em dias a semanas.",
+            "El control de crisis se evalúa tras titulación gradual en días a semanas."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 6–10 horas.",
+            "Vida media aproximada: 6–10 horas."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Fadiga", "Fatiga"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Vômitos", "Vómitos"),
+            t(lang, "Cefaleia", "Cefalea"),
+            t(lang, "Diplopia", "Diplopía")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Síndrome de hipersensibilidade medicamentosa/DRESS", "Síndrome de hipersensibilidad medicamentosa/DRESS"),
+            t(lang, "Síndrome de Stevens-Johnson rara", "Síndrome de Stevens-Johnson rara"),
+            t(lang, "Ideação suicida", "Ideación suicida"),
+            t(lang, "Encurtamento do intervalo QT", "Acortamiento del intervalo QT"),
+            t(lang, "Piora paradoxal de crises em casos raros", "Empeoramiento paradójico de crisis en casos raros")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: experiência limitada; maior risco de tontura, sedação e quedas.", "Adulto mayor: experiencia limitada; mayor riesgo de mareos, sedación y caídas.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: dados limitados; avaliar risco-benefício e controle de crises.", "Embarazo: datos limitados; evaluar riesgo-beneficio y control de crisis.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: dados limitados; monitorar sonolência e alimentação do lactente.", "Lactancia: datos limitados; monitorizar somnolencia y alimentación del lactante.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: evitar se grave; maior risco de toxicidade.", "Hepatopatía: evitar si es grave; mayor riesgo de toxicidad.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à rufinamida", "Hipersensibilidad a rufinamida"),
+            t(lang, "Síndrome do QT curto familiar", "Síndrome de QT corto familiar"),
+            t(lang, "Hepatopatia grave", "Hepatopatía grave"),
+            t(lang, "História de reação de hipersensibilidade grave ao fármaco", "Antecedente de reacción de hipersensibilidad grave al fármaco")
+          ],
+
+          interactions: [
+            t(lang, "Valproato: pode aumentar níveis de rufinamida", "Valproato: puede aumentar niveles de rufinamida"),
+            t(lang, "Carbamazepina, fenitoína, fenobarbital e primidona: podem reduzir níveis", "Carbamazepina, fenitoína, fenobarbital y primidona: pueden reducir niveles"),
+            t(lang, "Anticoncepcionais hormonais: pode reduzir eficácia", "Anticonceptivos hormonales: puede reducir eficacia"),
+            t(lang, "Álcool e sedativos: maior sonolência", "Alcohol y sedantes: mayor somnolencia")
+          ],
+
+          alerts: [
+            t(lang, "Administrar com alimentos para melhor absorção.", "Administrar con alimentos para mejor absorción."),
+            t(lang, "Evitar em síndrome do QT curto familiar.", "Evitar en síndrome de QT corto familiar."),
+            t(lang, "Monitorar rash, febre, linfadenopatia ou sintomas sistêmicos.", "Monitorizar rash, fiebre, linfadenopatía o síntomas sistémicos."),
+            t(lang, "Pode reduzir eficácia de anticoncepcionais hormonais.", "Puede reducir eficacia de anticonceptivos hormonales."),
+            t(lang, "Não suspender abruptamente em epilepsia.", "No suspender bruscamente en epilepsia.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "FDA/DailyMed Rufinamide Prescribing Information",
+            "ILAE Epilepsy Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    primidona: {
+      name: { pt: "Primidona", es: "Primidona" },
+      category: "anticonvulsivante",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const insuficienciaRenal = clcr < 60;
+
+        return {
+          name: t(lang, "Primidona", "Primidona"),
+
+          class: t(
+            lang,
+            "Anticonvulsivante barbitúrico-like pró-fármaco do fenobarbital",
+            "Anticonvulsivante tipo barbitúrico profármaco de fenobarbital"
+          ),
+
+          category: "anticonvulsivante",
+
+          commercialNames: {
+            br: ["Mysoline", "Primidona"],
+            ar: ["Mysoline", "Primidona"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 250 mg", "Comprimido 250 mg")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Epilepsia/tremor essencial: iniciar 25–50 mg à noite ou 125 mg/dia; titular lentamente.",
+              "Epilepsia/temblor esencial: iniciar 25–50 mg por la noche o 125 mg/día; titular lentamente."
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 250 mg 2–4x/dia, conforme resposta e tolerabilidade.",
+              "Dosis habitual: 250 mg 2–4 veces/día, según respuesta y tolerabilidad."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 2000 mg/dia.",
+              "Dosis máxima habitual: 2000 mg/día."
+            )
+          },
+
+          doseKg: {
+            standard: t(
+              lang,
+              "Adultos: geralmente titular por resposta clínica, não por kg.",
+              "Adultos: generalmente titular por respuesta clínica, no por kg."
+            ),
+            pediatric: t(
+              lang,
+              "Pediatria/epilepsia: dose por kg conforme protocolo especializado.",
+              "Pediatría/epilepsia: dosis por kg según protocolo especializado."
+            ),
+            maxDose: t(lang, "2000 mg/dia", "2000 mg/día")
+          },
+
+          indications: [
+            t(lang, "Epilepsia focal", "Epilepsia focal"),
+            t(lang, "Crises tônico-clônicas generalizadas", "Crisis tónico-clónicas generalizadas"),
+            t(lang, "Tremor essencial", "Temblor esencial"),
+            t(lang, "Epilepsia refratária em combinação com outros anticonvulsivantes", "Epilepsia refractaria en combinación con otros anticonvulsivantes"),
+            t(lang, "Crises parciais com generalização secundária", "Crisis parciales con generalización secundaria"),
+            t(lang, "Alternativa histórica quando outros anticonvulsivantes não são adequados", "Alternativa histórica cuando otros anticonvulsivantes no son adecuados")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Insuficiência renal: usar com cautela; pode haver acúmulo de metabólitos ativos.",
+                "Insuficiencia renal: usar con cautela; puede haber acumulación de metabolitos activos."
+              )
+            : t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: usar com cautela; metabolismo e sedação podem ser alterados.",
+                "Hepatopatía: usar con cautela; metabolismo y sedación pueden alterarse."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Convertida parcialmente em fenobarbital e PEMA; potencializa GABA-A e reduz excitabilidade neuronal.",
+            "Convertida parcialmente en fenobarbital y PEMA; potencia GABA-A y reduce excitabilidad neuronal."
+          ),
+
+          onset: t(
+            lang,
+            "Efeito depende da titulação e formação de metabólitos ativos; iniciar lentamente reduz intolerância.",
+            "El efecto depende de la titulación y formación de metabolitos activos; iniciar lentamente reduce intolerancia."
+          ),
+
+          halfLife: t(
+            lang,
+            "Primidona: 5–15 horas; metabólito fenobarbital tem meia-vida longa de vários dias.",
+            "Primidona: 5–15 horas; metabolito fenobarbital tiene vida media larga de varios días."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Ataxia", "Ataxia"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Fadiga", "Fatiga"),
+            t(lang, "Nistagmo", "Nistagmo"),
+            t(lang, "Déficit cognitivo", "Deterioro cognitivo")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Depressão respiratória em intoxicação ou associação com sedativos", "Depresión respiratoria en intoxicación o asociación con sedantes"),
+            t(lang, "Dependência física e abstinência", "Dependencia física y abstinencia"),
+            t(lang, "Depressão ou ideação suicida", "Depresión o ideación suicida"),
+            t(lang, "Reações cutâneas graves raras", "Reacciones cutáneas graves raras"),
+            t(lang, "Depressão medular rara", "Depresión medular rara"),
+            t(lang, "Osteopenia/osteomalácia em uso crônico", "Osteopenia/osteomalacia en uso crónico")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de sedação, quedas, confusão, ataxia e interações.", "Adulto mayor: mayor riesgo de sedación, caídas, confusión, ataxia e interacciones.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: risco teratogênico e de abstinência neonatal; avaliar alternativa e suplementar ácido fólico se inevitável.", "Embarazo: riesgo teratogénico y de abstinencia neonatal; evaluar alternativa y suplementar ácido fólico si inevitable.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: pode causar sedação no lactente; monitorar sucção e ganho ponderal.", "Lactancia: puede causar sedación en lactante; monitorizar succión y ganancia ponderal.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: maior risco de sedação prolongada e toxicidade.", "Hepatopatía: mayor riesgo de sedación prolongada y toxicidad.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal: monitorar acúmulo e sedação.", "Insuficiencia renal: monitorizar acumulación y sedación.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à primidona ou barbitúricos", "Hipersensibilidad a primidona o barbitúricos"),
+            t(lang, "Porfiria aguda intermitente", "Porfiria aguda intermitente"),
+            t(lang, "Insuficiência respiratória grave sem suporte", "Insuficiencia respiratoria grave sin soporte"),
+            t(lang, "Doença hepática grave", "Enfermedad hepática grave")
+          ],
+
+          interactions: [
+            t(lang, "Álcool, opioides e benzodiazepínicos: maior depressão do SNC", "Alcohol, opioides y benzodiacepinas: mayor depresión del SNC"),
+            t(lang, "Anticoncepcionais hormonais: reduz eficácia", "Anticonceptivos hormonales: reduce eficacia"),
+            t(lang, "Varfarina/DOACs: pode reduzir anticoagulação", "Warfarina/DOACs: puede reducir anticoagulación"),
+            t(lang, "Valproato: pode aumentar fenobarbital/metabólitos", "Valproato: puede aumentar fenobarbital/metabolitos"),
+            t(lang, "Múltiplos fármacos metabolizados por CYP: risco alto de interações por indução enzimática", "Múltiples fármacos metabolizados por CYP: alto riesgo de interacciones por inducción enzimática")
+          ],
+
+          alerts: [
+            t(lang, "Titular lentamente para evitar sedação intensa e ataxia.", "Titular lentamente para evitar sedación intensa y ataxia."),
+            t(lang, "Não suspender abruptamente pelo risco de crises e abstinência.", "No suspender bruscamente por riesgo de crisis y abstinencia."),
+            t(lang, "Potente indutor enzimático: revisar interações sempre.", "Potente inductor enzimático: revisar interacciones siempre."),
+            t(lang, "Monitorar sedação, quedas, humor e ideação suicida.", "Monitorizar sedación, caídas, ánimo e ideación suicida."),
+            t(lang, "Em uso crônico, considerar avaliação de saúde óssea.", "En uso crónico, considerar evaluación de salud ósea.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "FDA/DailyMed Primidone Prescribing Information",
+            "ILAE Epilepsy Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    // ── ANTIPARKINSONIANOS — Dopaminérgicos e Anticolinérgicos ──
+
+    levodopa_carbidopa: {
+      name: { pt: "Levodopa + Carbidopa", es: "Levodopa + Carbidopa" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const clcr = Number(paciente.clcr || 100);
+        const insuficienciaRenal = clcr < 60;
+
+        return {
+          name: t(lang, "Levodopa + Carbidopa", "Levodopa + Carbidopa"),
+
+          class: t(
+            lang,
+            "Precursor dopaminérgico associado a inibidor periférico da dopa-descarboxilase",
+            "Precursor dopaminérgico asociado a inhibidor periférico de la dopa-descarboxilasa"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Sinemet", "Prolopa DR não contém carbidopa", "Levodopa + Carbidopa"],
+            ar: ["Sinemet", "Levodopa/Carbidopa", "Carbidopa Levodopa"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 250/25 mg", "Comprimido 250/25 mg"),
+            t(lang, "Comprimido 100/25 mg", "Comprimido 100/25 mg"),
+            t(lang, "Comprimido de liberação prolongada", "Comprimido de liberación prolongada"),
+            t(lang, "Formulações dispersíveis ou entéricas conforme disponibilidade local", "Formulaciones dispersables o entéricas según disponibilidad local")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Doença de Parkinson: iniciar com doses baixas, por exemplo 100/25 mg VO 2–3x/dia, titular conforme resposta motora e efeitos adversos.",
+              "Enfermedad de Parkinson: iniciar con dosis bajas, por ejemplo 100/25 mg VO 2–3 veces/día, titular según respuesta motora y efectos adversos."
+            ),
+            manutencao: t(
+              lang,
+              "Dose de manutenção é individualizada; ajustar frequência conforme wearing-off, discinesias e controle dos sintomas.",
+              "La dosis de mantenimiento es individualizada; ajustar frecuencia según wearing-off, discinesias y control de síntomas."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima não é fixa; individualizar por resposta clínica, discinesias, hipotensão, psicose e tolerabilidade.",
+              "La dosis máxima no es fija; individualizar por respuesta clínica, discinesias, hipotensión, psicosis y tolerabilidad."
+            )
+          },
+
+          doseKg: {
+            standard: t(
+              lang,
+              "Não se utiliza cálculo rotineiro por kg em adultos.",
+              "No se utiliza cálculo rutinario por kg en adultos."
+            ),
+            pediatric: t(
+              lang,
+              "Uso pediátrico não rotineiro; avaliar apenas em condições neurológicas específicas sob especialista.",
+              "Uso pediátrico no rutinario; evaluar solo en condiciones neurológicas específicas bajo especialista."
+            ),
+            maxDose: t(
+              lang,
+              "Individualizar conforme resposta e eventos adversos.",
+              "Individualizar según respuesta y eventos adversos."
+            )
+          },
+
+          indications: [
+            t(lang, "Doença de Parkinson idiopática", "Enfermedad de Parkinson idiopática"),
+            t(lang, "Bradicinesia parkinsoniana", "Bradicinesia parkinsoniana"),
+            t(lang, "Rigidez parkinsoniana", "Rigidez parkinsoniana"),
+            t(lang, "Tremor de repouso na doença de Parkinson", "Temblor de reposo en enfermedad de Parkinson"),
+            t(lang, "Flutuações motoras em ajuste terapêutico", "Fluctuaciones motoras en ajuste terapéutico"),
+            t(lang, "Parkinsonismo sintomático responsivo à levodopa em casos selecionados", "Parkinsonismo sintomático responsivo a levodopa en casos seleccionados")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Insuficiência renal: geralmente sem ajuste obrigatório, mas titular com cautela e monitorar confusão/hipotensão.",
+                "Insuficiencia renal: generalmente sin ajuste obligatorio, pero titular con cautela y monitorizar confusión/hipotensión."
+              )
+            : t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: titular com cautela e monitorar efeitos adversos.",
+                "Hepatopatía: titular con cautela y monitorizar efectos adversos."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "A levodopa atravessa a barreira hematoencefálica e é convertida em dopamina no SNC; a carbidopa inibe a conversão periférica, aumentando disponibilidade cerebral e reduzindo náuseas/hipotensão.",
+            "La levodopa atraviesa la barrera hematoencefálica y se convierte en dopamina en el SNC; la carbidopa inhibe la conversión periférica, aumentando disponibilidad cerebral y reduciendo náuseas/hipotensión."
+          ),
+
+          onset: t(
+            lang,
+            "Início clínico geralmente em 30–60 minutos nas formulações imediatas; resposta varia com alimentação e estágio da doença.",
+            "Inicio clínico generalmente en 30–60 minutos en formulaciones inmediatas; respuesta varía con alimentación y estadio de la enfermedad."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média curta, cerca de 1–2 horas; efeito clínico pode encurtar com progressão da doença.",
+            "Vida media corta, cerca de 1–2 horas; el efecto clínico puede acortarse con progresión de la enfermedad."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Hipotensão ortostática", "Hipotensión ortostática"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Discinesias", "Discinesias"),
+            t(lang, "Confusão", "Confusión"),
+            t(lang, "Insônia ou sonhos vívidos", "Insomnio o sueños vívidos")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Psicose ou alucinações", "Psicosis o alucinaciones"),
+            t(lang, "Discinesias graves", "Discinesias graves"),
+            t(lang, "Hipotensão sintomática com quedas", "Hipotensión sintomática con caídas"),
+            t(lang, "Síndrome semelhante à neuroléptica maligna se retirada abrupta", "Síndrome similar al neuroléptico maligno si retirada brusca"),
+            t(lang, "Compulsões/impulsividade em predispostos", "Compulsiones/impulsividad en predispuestos")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de confusão, alucinações, hipotensão e quedas.", "Adulto mayor: mayor riesgo de confusión, alucinaciones, hipotensión y caídas.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: avaliar risco-benefício; dados limitados.", "Embarazo: evaluar riesgo-beneficio; datos limitados.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: pode reduzir prolactina e produção de leite; dados limitados.", "Lactancia: puede reducir prolactina y producción de leche; datos limitados.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: titular cautelosamente.", "Hepatopatía: titular con cautela.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal: monitorar confusão, hipotensão e tolerabilidade.", "Insuficiencia renal: monitorizar confusión, hipotensión y tolerabilidad.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à levodopa ou carbidopa", "Hipersensibilidad a levodopa o carbidopa"),
+            t(lang, "Uso concomitante com IMAO não seletivo", "Uso concomitante con IMAO no selectivo"),
+            t(lang, "Glaucoma de ângulo fechado não controlado", "Glaucoma de ángulo cerrado no controlado"),
+            t(lang, "Psicose grave não controlada", "Psicosis grave no controlada"),
+            t(lang, "Melanoma suspeito ou histórico de melanoma sem avaliação", "Melanoma sospechoso o antecedente de melanoma sin evaluación")
+          ],
+
+          interactions: [
+            t(lang, "IMAO não seletivos: risco de crise hipertensiva", "IMAO no selectivos: riesgo de crisis hipertensiva"),
+            t(lang, "Antipsicóticos bloqueadores D2: reduzem efeito antiparkinsoniano", "Antipsicóticos bloqueadores D2: reducen efecto antiparkinsoniano"),
+            t(lang, "Metoclopramida: antagonismo dopaminérgico e piora parkinsoniana", "Metoclopramida: antagonismo dopaminérgico y empeoramiento parkinsoniano"),
+            t(lang, "Ferro: reduz absorção; separar administração", "Hierro: reduce absorción; separar administración"),
+            t(lang, "Proteína alimentar: pode reduzir absorção em alguns pacientes", "Proteína alimentaria: puede reducir absorción en algunos pacientes"),
+            t(lang, "Anti-hipertensivos: maior hipotensão ortostática", "Antihipertensivos: mayor hipotensión ortostática")
+          ],
+
+          alerts: [
+            t(lang, "Não suspender abruptamente.", "No suspender bruscamente."),
+            t(lang, "Orientar tomada longe de refeições hiperproteicas se houver flutuação motora.", "Orientar toma lejos de comidas hiperproteicas si hay fluctuación motora."),
+            t(lang, "Monitorar alucinações, confusão, discinesias e hipotensão.", "Monitorizar alucinaciones, confusión, discinesias e hipotensión."),
+            t(lang, "Ajustar horário antes de apenas aumentar dose em wearing-off.", "Ajustar horario antes de solo aumentar dosis en wearing-off."),
+            t(lang, "Evitar metoclopramida e antipsicóticos típicos quando possível.", "Evitar metoclopramida y antipsicóticos típicos cuando sea posible.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "MDS Parkinson Disease Guidelines",
+            "FDA/DailyMed Carbidopa-Levodopa Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    levodopa_benserazida: {
+      name: { pt: "Levodopa + Benserazida", es: "Levodopa + Benserazida" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const clcr = Number(paciente.clcr || 100);
+        const insuficienciaRenal = clcr < 60;
+
+        return {
+          name: t(lang, "Levodopa + Benserazida", "Levodopa + Benserazida"),
+
+          class: t(
+            lang,
+            "Precursor dopaminérgico associado a inibidor periférico da dopa-descarboxilase",
+            "Precursor dopaminérgico asociado a inhibidor periférico de la dopa-descarboxilasa"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Prolopa", "Prolopa HBS", "Levodopa + Benserazida"],
+            ar: ["Madopar", "Levodopa/Benserazida", "Prolopa"]
+          },
+
+          presentation: [
+            t(lang, "Cápsula/comprimido 100/25 mg", "Cápsula/comprimido 100/25 mg"),
+            t(lang, "Comprimido 200/50 mg", "Comprimido 200/50 mg"),
+            t(lang, "Comprimido dispersível", "Comprimido dispersable"),
+            t(lang, "Cápsula de liberação prolongada/HBS", "Cápsula de liberación prolongada/HBS")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Doença de Parkinson: iniciar com dose baixa, por exemplo 100/25 mg VO 2–3x/dia; titular conforme resposta e tolerabilidade.",
+              "Enfermedad de Parkinson: iniciar con dosis baja, por ejemplo 100/25 mg VO 2–3 veces/día; titular según respuesta y tolerabilidad."
+            ),
+            manutencao: t(
+              lang,
+              "Dose de manutenção é individualizada; dividir ao longo do dia conforme flutuações motoras.",
+              "La dosis de mantenimiento es individualizada; dividir durante el día según fluctuaciones motoras."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima não é fixa; ajustar por controle motor, discinesias, sintomas neuropsiquiátricos e hipotensão.",
+              "La dosis máxima no es fija; ajustar por control motor, discinesias, síntomas neuropsiquiátricos e hipotensión."
+            )
+          },
+
+          doseKg: {
+            standard: t(
+              lang,
+              "Não se utiliza cálculo rotineiro por kg em adultos.",
+              "No se utiliza cálculo rutinario por kg en adultos."
+            ),
+            pediatric: t(
+              lang,
+              "Uso pediátrico não rotineiro; apenas sob neurologia especializada.",
+              "Uso pediátrico no rutinario; solo bajo neurología especializada."
+            ),
+            maxDose: t(
+              lang,
+              "Individualizar conforme resposta clínica.",
+              "Individualizar según respuesta clínica."
+            )
+          },
+
+          indications: [
+            t(lang, "Doença de Parkinson idiopática", "Enfermedad de Parkinson idiopática"),
+            t(lang, "Bradicinesia parkinsoniana", "Bradicinesia parkinsoniana"),
+            t(lang, "Rigidez parkinsoniana", "Rigidez parkinsoniana"),
+            t(lang, "Tremor de repouso", "Temblor de reposo"),
+            t(lang, "Flutuações motoras tipo wearing-off", "Fluctuaciones motoras tipo wearing-off"),
+            t(lang, "Parkinsonismo responsivo à levodopa em casos selecionados", "Parkinsonismo responsivo a levodopa en casos seleccionados")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Insuficiência renal: geralmente sem ajuste obrigatório, mas titular com cautela.",
+                "Insuficiencia renal: generalmente sin ajuste obligatorio, pero titular con cautela."
+              )
+            : t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: titular com cautela e monitorar efeitos adversos.",
+                "Hepatopatía: titular con cautela y monitorizar efectos adversos."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "A levodopa é convertida em dopamina no SNC; a benserazida inibe a dopa-descarboxilase periférica, reduzindo conversão periférica e efeitos como náuseas.",
+            "La levodopa se convierte en dopamina en el SNC; la benserazida inhibe la dopa-descarboxilasa periférica, reduciendo conversión periférica y efectos como náuseas."
+          ),
+
+          onset: t(
+            lang,
+            "Formulação imediata/dispersível pode agir em 30–60 minutos; liberação prolongada tem início mais lento.",
+            "Formulación inmediata/dispersable puede actuar en 30–60 minutos; liberación prolongada tiene inicio más lento."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média curta, cerca de 1–2 horas; resposta clínica depende da formulação e estágio da doença.",
+            "Vida media corta, cerca de 1–2 horas; respuesta clínica depende de la formulación y estadio de la enfermedad."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Hipotensão ortostática", "Hipotensión ortostática"),
+            t(lang, "Discinesias", "Discinesias"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Insônia", "Insomnio"),
+            t(lang, "Confusão", "Confusión")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Alucinações ou psicose", "Alucinaciones o psicosis"),
+            t(lang, "Discinesias incapacitantes", "Discinesias incapacitantes"),
+            t(lang, "Hipotensão com síncope/quedas", "Hipotensión con síncope/caídas"),
+            t(lang, "Síndrome semelhante à neuroléptica maligna após retirada abrupta", "Síndrome similar al neuroléptico maligno tras retirada brusca"),
+            t(lang, "Transtornos do controle de impulsos em predispostos", "Trastornos del control de impulsos en predispuestos")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de confusão, alucinações, hipotensão e quedas.", "Adulto mayor: mayor riesgo de confusión, alucinaciones, hipotensión y caídas.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: avaliar risco-benefício; dados limitados.", "Embarazo: evaluar riesgo-beneficio; datos limitados.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: pode reduzir produção de leite; dados limitados.", "Lactancia: puede reducir producción de leche; datos limitados.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: titular cautelosamente.", "Hepatopatía: titular con cautela.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal: monitorar confusão e hipotensão.", "Insuficiencia renal: monitorizar confusión e hipotensión.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à levodopa ou benserazida", "Hipersensibilidad a levodopa o benserazida"),
+            t(lang, "Uso concomitante com IMAO não seletivo", "Uso concomitante con IMAO no selectivo"),
+            t(lang, "Glaucoma de ângulo fechado não controlado", "Glaucoma de ángulo cerrado no controlado"),
+            t(lang, "Psicose grave não controlada", "Psicosis grave no controlada"),
+            t(lang, "Melanoma suspeito ou histórico de melanoma sem avaliação", "Melanoma sospechoso o antecedente de melanoma sin evaluación")
+          ],
+
+          interactions: [
+            t(lang, "IMAO não seletivos: risco de crise hipertensiva", "IMAO no selectivos: riesgo de crisis hipertensiva"),
+            t(lang, "Antipsicóticos D2: reduzem efeito", "Antipsicóticos D2: reducen efecto"),
+            t(lang, "Metoclopramida: pode piorar parkinsonismo", "Metoclopramida: puede empeorar parkinsonismo"),
+            t(lang, "Ferro: reduz absorção", "Hierro: reduce absorción"),
+            t(lang, "Refeições hiperproteicas: podem reduzir resposta em alguns pacientes", "Comidas hiperproteicas: pueden reducir respuesta en algunos pacientes"),
+            t(lang, "Anti-hipertensivos: maior hipotensão ortostática", "Antihipertensivos: mayor hipotensión ortostática")
+          ],
+
+          alerts: [
+            t(lang, "Não suspender abruptamente.", "No suspender bruscamente."),
+            t(lang, "Formulação dispersível pode ser útil para início de ação mais rápido.", "La formulación dispersable puede ser útil para inicio de acción más rápido."),
+            t(lang, "Monitorar discinesias, alucinações, confusão e hipotensão.", "Monitorizar discinesias, alucinaciones, confusión e hipotensión."),
+            t(lang, "Ajustar horários conforme wearing-off antes de aumentar dose total.", "Ajustar horarios según wearing-off antes de aumentar dosis total."),
+            t(lang, "Evitar metoclopramida e antipsicóticos típicos quando possível.", "Evitar metoclopramida y antipsicóticos típicos cuando sea posible.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "MDS Parkinson Disease Guidelines",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    pramipexol: {
+      name: { pt: "Pramipexol", es: "Pramipexol" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const insuficienciaRenal = clcr < 60;
+
+        return {
+          name: t(lang, "Pramipexol", "Pramipexol"),
+
+          class: t(
+            lang,
+            "Agonista dopaminérgico D2/D3",
+            "Agonista dopaminérgico D2/D3"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Sifrol", "Pramipexol EMS", "Pramipexol Eurofarma"],
+            ar: ["Sifrol", "Pramipexol", "Mirapex"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 0,125 mg", "Comprimido 0,125 mg"),
+            t(lang, "Comprimido 0,25 mg", "Comprimido 0,25 mg"),
+            t(lang, "Comprimido 0,5 mg", "Comprimido 0,5 mg"),
+            t(lang, "Comprimido 1 mg", "Comprimido 1 mg"),
+            t(lang, "Comprimido 1,5 mg", "Comprimido 1,5 mg"),
+            t(lang, "Liberação prolongada", "Liberación prolongada")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Iniciar 0,125 mg VO 3x/dia; titular gradualmente conforme resposta clínica.",
+              "Iniciar 0,125 mg VO 3 veces/día; titular gradualmente según respuesta clínica."
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 0,375–4,5 mg/dia.",
+              "Dosis habitual: 0,375–4,5 mg/día."
+            ),
+            pernasInquietas: t(
+              lang,
+              "Síndrome das pernas inquietas: 0,125–0,75 mg à noite.",
+              "Síndrome de piernas inquietas: 0,125–0,75 mg por la noche."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 4,5 mg/dia.",
+              "Dosis máxima habitual: 4,5 mg/día."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Não se utiliza cálculo por kg.", "No se utiliza cálculo por kg."),
+            severe: t(lang, "Titulação lenta para minimizar eventos adversos.", "Titulación lenta para minimizar eventos adversos."),
+            maxDose: t(lang, "4,5 mg/dia", "4,5 mg/día")
+          },
+
+          indications: [
+            t(lang, "Doença de Parkinson inicial", "Enfermedad de Parkinson inicial"),
+            t(lang, "Doença de Parkinson avançada", "Enfermedad de Parkinson avanzada"),
+            t(lang, "Redução de flutuações motoras", "Reducción de fluctuaciones motoras"),
+            t(lang, "Redução de dose de levodopa em alguns pacientes", "Reducción de dosis de levodopa en algunos pacientes"),
+            t(lang, "Síndrome das pernas inquietas", "Síndrome de piernas inquietas"),
+            t(lang, "Sintomas motores leves a moderados em pacientes jovens", "Síntomas motores leves a moderados en pacientes jóvenes")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Necessita ajuste conforme ClCr; reduzir dose e/ou aumentar intervalo.",
+                "Requiere ajuste según ClCr; reducir dosis y/o aumentar intervalo."
+              )
+            : t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
+
+          hepaticAdjustment: t(
+            lang,
+            "Sem ajuste hepático significativo na maioria dos casos.",
+            "Sin ajuste hepático significativo en la mayoría de los casos."
+          ),
+
+          mechanism: t(
+            lang,
+            "Estimula diretamente receptores dopaminérgicos D2 e D3, compensando deficiência dopaminérgica nigroestriatal.",
+            "Estimula directamente receptores dopaminérgicos D2 y D3, compensando la deficiencia dopaminérgica nigroestriatal."
+          ),
+
+          onset: t(
+            lang,
+            "Melhora clínica geralmente observada após dias a semanas de titulação.",
+            "La mejoría clínica suele observarse tras días a semanas de titulación."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 8–12 horas.",
+            "Vida media aproximada: 8–12 horas."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Edema periférico", "Edema periférico"),
+            t(lang, "Constipação", "Estreñimiento"),
+            t(lang, "Hipotensão ortostática", "Hipotensión ortostática"),
+            t(lang, "Fadiga", "Fatiga")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Alucinações", "Alucinaciones"),
+            t(lang, "Psicose", "Psicosis"),
+            t(lang, "Ataques súbitos de sono", "Ataques súbitos de sueño"),
+            t(lang, "Transtornos do controle de impulsos", "Trastornos del control de impulsos"),
+            t(lang, "Hipersexualidade", "Hipersexualidad"),
+            t(lang, "Jogo patológico", "Juego patológico"),
+            t(lang, "Síndrome de abstinência de agonista dopaminérgico", "Síndrome de abstinencia de agonista dopaminérgico")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de alucinações, hipotensão, sonolência e quedas.", "Adulto mayor: mayor riesgo de alucinaciones, hipotensión, somnolencia y caídas.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: dados limitados; utilizar apenas quando benefício justificar risco.", "Embarazo: datos limitados; utilizar solo cuando el beneficio justifique el riesgo.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: pode inibir prolactina e reduzir produção de leite.", "Lactancia: puede inhibir prolactina y reducir producción de leche.")
+              : null,
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal: ajuste obrigatório conforme ClCr.", "Insuficiencia renal: ajuste obligatorio según ClCr.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade ao pramipexol", "Hipersensibilidad a pramipexol"),
+            t(lang, "Psicose ativa não controlada", "Psicosis activa no controlada"),
+            t(lang, "História grave de transtorno do controle de impulsos", "Antecedente grave de trastorno del control de impulsos")
+          ],
+
+          interactions: [
+            t(lang, "Álcool e sedativos: maior sonolência", "Alcohol y sedantes: mayor somnolencia"),
+            t(lang, "Antipsicóticos: antagonizam efeito dopaminérgico", "Antipsicóticos: antagonizan efecto dopaminérgico"),
+            t(lang, "Levodopa: aumenta risco de discinesias", "Levodopa: aumenta riesgo de discinesias"),
+            t(lang, "Anti-hipertensivos: maior hipotensão ortostática", "Antihipertensivos: mayor hipotensión ortostática")
+          ],
+
+          alerts: [
+            t(lang, "Monitorar compulsões, compras compulsivas, jogo patológico e hipersexualidade.", "Monitorizar compulsiones, compras compulsivas, juego patológico e hipersexualidad."),
+            t(lang, "Orientar sobre ataques súbitos de sono ao dirigir.", "Orientar sobre ataques súbitos de sueño al conducir."),
+            t(lang, "Não suspender abruptamente.", "No suspender bruscamente."),
+            t(lang, "Ajustar dose em insuficiência renal.", "Ajustar dosis en insuficiencia renal."),
+            t(lang, "Monitorar alucinações em idosos.", "Monitorizar alucinaciones en adultos mayores.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "MDS Parkinson Disease Guidelines",
+            "FDA/DailyMed Pramipexole Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    ropinirol: {
+      name: { pt: "Ropinirol", es: "Ropinirol" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+
+        return {
+          name: t(lang, "Ropinirol", "Ropinirol"),
+
+          class: t(
+            lang,
+            "Agonista dopaminérgico D2/D3",
+            "Agonista dopaminérgico D2/D3"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Requip", "Ropinirol", "Ropinirol EMS"],
+            ar: ["Requip", "Ropinirol", "Adartrel"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 0,25 mg", "Comprimido 0,25 mg"),
+            t(lang, "Comprimido 0,5 mg", "Comprimido 0,5 mg"),
+            t(lang, "Comprimido 1 mg", "Comprimido 1 mg"),
+            t(lang, "Comprimido 2 mg", "Comprimido 2 mg"),
+            t(lang, "Comprimido 5 mg", "Comprimido 5 mg"),
+            t(lang, "Liberação prolongada", "Liberación prolongada")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Iniciar 0,25 mg VO 3x/dia; aumentar gradualmente conforme resposta clínica.",
+              "Iniciar 0,25 mg VO 3 veces/día; aumentar gradualmente según respuesta clínica."
+            ),
+            manutencao: t(
+              lang,
+              "Dose usual: 3–24 mg/dia.",
+              "Dosis habitual: 3–24 mg/día."
+            ),
+            pernasInquietas: t(
+              lang,
+              "Síndrome das pernas inquietas: iniciar 0,25 mg 1–3 horas antes de dormir.",
+              "Síndrome de piernas inquietas: iniciar 0,25 mg 1–3 horas antes de dormir."
+            ),
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 24 mg/dia.",
+              "Dosis máxima habitual: 24 mg/día."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Não se utiliza cálculo por kg.", "No se utiliza cálculo por kg."),
+            severe: t(lang, "Titulação lenta reduz efeitos adversos.", "La titulación lenta reduce efectos adversos."),
+            maxDose: t(lang, "24 mg/dia", "24 mg/día")
+          },
+
+          indications: [
+            t(lang, "Doença de Parkinson inicial", "Enfermedad de Parkinson inicial"),
+            t(lang, "Doença de Parkinson avançada", "Enfermedad de Parkinson avanzada"),
+            t(lang, "Flutuações motoras e wearing-off", "Fluctuaciones motoras y wearing-off"),
+            t(lang, "Adjunto à levodopa", "Adjunto a levodopa"),
+            t(lang, "Síndrome das pernas inquietas", "Síndrome de piernas inquietas"),
+            t(lang, "Redução de necessidade de levodopa em pacientes selecionados", "Reducción de necesidad de levodopa en pacientes seleccionados")
+          ],
+
+          renalAdjustment: t(
+            lang,
+            "Geralmente sem ajuste em insuficiência renal leve/moderada; monitorar em doença avançada.",
+            "Generalmente sin ajuste en insuficiencia renal leve/moderada; monitorizar en enfermedad avanzada."
+          ),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: usar com cautela; pode aumentar exposição ao fármaco.",
+                "Hepatopatía: usar con cautela; puede aumentar la exposición al fármaco."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Agonista dos receptores dopaminérgicos D2/D3, estimulando diretamente vias dopaminérgicas centrais.",
+            "Agonista de receptores dopaminérgicos D2/D3, estimulando directamente vías dopaminérgicas centrales."
+          ),
+
+          onset: t(
+            lang,
+            "Melhora clínica observada após titulação progressiva ao longo de dias ou semanas.",
+            "La mejoría clínica se observa tras titulación progresiva durante días o semanas."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 6 horas.",
+            "Vida media aproximada: 6 horas."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Hipotensão ortostática", "Hipotensión ortostática"),
+            t(lang, "Edema periférico", "Edema periférico"),
+            t(lang, "Constipação", "Estreñimiento"),
+            t(lang, "Cefaleia", "Cefalea")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Alucinações", "Alucinaciones"),
+            t(lang, "Psicose", "Psicosis"),
+            t(lang, "Ataques súbitos de sono", "Ataques súbitos de sueño"),
+            t(lang, "Jogo patológico", "Juego patológico"),
+            t(lang, "Hipersexualidade", "Hipersexualidad"),
+            t(lang, "Compras compulsivas", "Compras compulsivas"),
+            t(lang, "Síndrome de abstinência de agonista dopaminérgico", "Síndrome de abstinencia de agonista dopaminérgico")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de confusão, alucinações, sonolência e quedas.", "Adulto mayor: mayor riesgo de confusión, alucinaciones, somnolencia y caídas.")
+              : null,
+            gestante
+              ? t(lang, "Gestação: utilizar apenas quando claramente necessário.", "Embarazo: utilizar solo cuando sea claramente necesario.")
+              : null,
+            lactante
+              ? t(lang, "Lactação: reduz prolactina e pode diminuir produção de leite.", "Lactancia: reduce prolactina y puede disminuir producción de leche.")
+              : null,
+            hepatopatia
+              ? t(lang, "Hepatopatia: titular lentamente e monitorar tolerabilidade.", "Hepatopatía: titular lentamente y monitorizar tolerabilidad.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade ao ropinirol", "Hipersensibilidad a ropinirol"),
+            t(lang, "Psicose ativa não controlada", "Psicosis activa no controlada"),
+            t(lang, "Transtornos graves do controle de impulsos", "Trastornos graves del control de impulsos")
+          ],
+
+          interactions: [
+            t(lang, "Antipsicóticos: antagonizam ação dopaminérgica", "Antipsicóticos: antagonizan acción dopaminérgica"),
+            t(lang, "Álcool e sedativos: maior sonolência", "Alcohol y sedantes: mayor somnolencia"),
+            t(lang, "Ciprofloxacino e inibidores CYP1A2: aumentam níveis", "Ciprofloxacino e inhibidores CYP1A2: aumentan niveles"),
+            t(lang, "Tabagismo: pode reduzir níveis séricos", "Tabaquismo: puede reducir niveles séricos"),
+            t(lang, "Levodopa: aumenta risco de discinesias", "Levodopa: aumenta riesgo de discinesias")
+          ],
+
+          alerts: [
+            t(lang, "Monitorar impulsividade, jogo patológico e hipersexualidade.", "Monitorizar impulsividad, juego patológico e hipersexualidad."),
+            t(lang, "Orientar sobre risco de ataques súbitos de sono.", "Orientar sobre riesgo de ataques súbitos de sueño."),
+            t(lang, "Não suspender abruptamente.", "No suspender bruscamente."),
+            t(lang, "Monitorar hipotensão ortostática.", "Monitorizar hipotensión ortostática."),
+            t(lang, "Avaliar alucinações especialmente em idosos.", "Evaluar alucinaciones especialmente en adultos mayores.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "MDS Parkinson Disease Guidelines",
+            "FDA/DailyMed Ropinirole Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    rotigotina: {
+      name: { pt: "Rotigotina", es: "Rotigotina" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const clcr = Number(paciente.clcr || 100);
+        const insuficienciaRenal = clcr < 60;
+
+        return {
+          name: t(lang, "Rotigotina", "Rotigotina"),
+
+          class: t(
+            lang,
+            "Agonista dopaminérgico D1/D2/D3 transdérmico",
+            "Agonista dopaminérgico D1/D2/D3 transdérmico"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Neupro", "Rotigotina"],
+            ar: ["Neupro", "Rotigotina"]
+          },
+
+          presentation: [
+            t(lang, "Adesivo transdérmico 1 mg/24 h", "Parche transdérmico 1 mg/24 h"),
+            t(lang, "Adesivo transdérmico 2 mg/24 h", "Parche transdérmico 2 mg/24 h"),
+            t(lang, "Adesivo transdérmico 4 mg/24 h", "Parche transdérmico 4 mg/24 h"),
+            t(lang, "Adesivo transdérmico 6 mg/24 h", "Parche transdérmico 6 mg/24 h"),
+            t(lang, "Adesivo transdérmico 8 mg/24 h", "Parche transdérmico 8 mg/24 h")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Doença de Parkinson inicial: iniciar 2 mg/24 h e aumentar gradualmente semanalmente.",
+              "Enfermedad de Parkinson inicial: iniciar 2 mg/24 h y aumentar gradualmente semanalmente."
+            ),
+
+            manutencao: t(
+              lang,
+              "Dose usual: 2–16 mg/24 h conforme resposta clínica.",
+              "Dosis habitual: 2–16 mg/24 h según respuesta clínica."
+            ),
+
+            pernasInquietas: t(
+              lang,
+              "Síndrome das pernas inquietas: 1–3 mg/24 h.",
+              "Síndrome de piernas inquietas: 1–3 mg/24 h."
+            ),
+
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 16 mg/24 h.",
+              "Dosis máxima habitual: 16 mg/24 h."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Não se utiliza cálculo por kg.", "No se utiliza cálculo por kg."),
+            severe: t(lang, "Titular progressivamente conforme resposta clínica.", "Titular progresivamente según respuesta clínica."),
+            maxDose: t(lang, "16 mg/24 h", "16 mg/24 h")
+          },
+
+          indications: [
+            t(lang, "Doença de Parkinson inicial", "Enfermedad de Parkinson inicial"),
+            t(lang, "Doença de Parkinson avançada", "Enfermedad de Parkinson avanzada"),
+            t(lang, "Flutuações motoras", "Fluctuaciones motoras"),
+            t(lang, "Pacientes com dificuldade de deglutição", "Pacientes con dificultad para deglutir"),
+            t(lang, "Síndrome das pernas inquietas", "Síndrome de piernas inquietas"),
+            t(lang, "Necessidade de estimulação dopaminérgica contínua", "Necesidad de estimulación dopaminérgica continua")
+          ],
+
+          renalAdjustment: t(
+            lang,
+            "Sem ajuste renal significativo.",
+            "Sin ajuste renal significativo."
+          ),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: utilizar com cautela e monitorar efeitos adversos.",
+                "Hepatopatía: utilizar con cautela y monitorizar efectos adversos."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Agonista dopaminérgico não ergolínico administrado por via transdérmica, promovendo estimulação contínua dos receptores dopaminérgicos.",
+            "Agonista dopaminérgico no ergolínico administrado por vía transdérmica, promoviendo estimulación continua de los receptores dopaminérgicos."
+          ),
+
+          onset: t(
+            lang,
+            "Efeito clínico ocorre após dias de uso contínuo e titulação adequada.",
+            "El efecto clínico ocurre tras días de uso continuo y titulación adecuada."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média efetiva após retirada do adesivo: aproximadamente 5–7 horas.",
+            "Vida media efectiva tras retirar el parche: aproximadamente 5–7 horas."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Reações no local do adesivo", "Reacciones en el sitio del parche"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Cefaleia", "Cefalea"),
+            t(lang, "Edema periférico", "Edema periférico"),
+            t(lang, "Hipotensão ortostática", "Hipotensión ortostática")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Alucinações", "Alucinaciones"),
+            t(lang, "Psicose", "Psicosis"),
+            t(lang, "Ataques súbitos de sono", "Ataques súbitos de sueño"),
+            t(lang, "Transtornos do controle de impulsos", "Trastornos del control de impulsos"),
+            t(lang, "Hipersexualidade", "Hipersexualidad"),
+            t(lang, "Jogo patológico", "Juego patológico"),
+            t(lang, "Reações cutâneas graves raras", "Reacciones cutáneas graves raras")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de confusão, alucinações e quedas.", "Adulto mayor: mayor riesgo de confusión, alucinaciones y caídas.")
+              : null,
+
+            gestante
+              ? t(lang, "Gestação: dados limitados; utilizar apenas quando necessário.", "Embarazo: datos limitados; utilizar solo cuando sea necesario.")
+              : null,
+
+            lactante
+              ? t(lang, "Lactação: pode reduzir prolactina e produção de leite.", "Lactancia: puede reducir prolactina y producción de leche.")
+              : null,
+
+            hepatopatia
+              ? t(lang, "Hepatopatia: monitorar tolerabilidade.", "Hepatopatía: monitorizar tolerabilidad.")
+              : null,
+
+            insuficienciaRenal
+              ? t(lang, "Sem necessidade habitual de ajuste renal.", "Sin necesidad habitual de ajuste renal.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à rotigotina", "Hipersensibilidad a rotigotina"),
+            t(lang, "Psicose não controlada", "Psicosis no controlada"),
+            t(lang, "Histórico grave de transtorno do controle de impulsos", "Antecedente grave de trastorno del control de impulsos")
+          ],
+
+          interactions: [
+            t(lang, "Álcool e sedativos: aumentam sonolência", "Alcohol y sedantes: aumentan somnolencia"),
+            t(lang, "Antipsicóticos: reduzem eficácia dopaminérgica", "Antipsicóticos: reducen eficacia dopaminérgica"),
+            t(lang, "Levodopa: aumenta risco de discinesias", "Levodopa: aumenta riesgo de discinesias"),
+            t(lang, "Anti-hipertensivos: maior hipotensão ortostática", "Antihipertensivos: mayor hipotensión ortostática")
+          ],
+
+          alerts: [
+            t(lang, "Trocar adesivo diariamente e alternar local de aplicação.", "Cambiar el parche diariamente y alternar el sitio de aplicación."),
+            t(lang, "Monitorar impulsividade e alterações comportamentais.", "Monitorizar impulsividad y alteraciones conductuales."),
+            t(lang, "Evitar fontes intensas de calor sobre o adesivo.", "Evitar fuentes intensas de calor sobre el parche."),
+            t(lang, "Não suspender abruptamente.", "No suspender bruscamente."),
+            t(lang, "Orientar sobre risco de ataques súbitos de sono.", "Orientar sobre riesgo de ataques súbitos de sueño.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "MDS Parkinson Disease Guidelines",
+            "FDA/DailyMed Rotigotine Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    apomorfina: {
+      name: { pt: "Apomorfina", es: "Apomorfina" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const clcr = Number(paciente.clcr || 100);
+        const insuficienciaRenal = clcr < 30;
+
+        return {
+          name: t(lang, "Apomorfina", "Apomorfina"),
+
+          class: t(
+            lang,
+            "Agonista dopaminérgico de ação rápida",
+            "Agonista dopaminérgico de acción rápida"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Apokinon", "Apomorfina"],
+            ar: ["Apomorfina", "Apokyn"]
+          },
+
+          presentation: [
+            t(lang, "Caneta SC 10 mg/mL", "Pluma SC 10 mg/mL"),
+            t(lang, "Ampola para infusão subcutânea contínua", "Ampolla para infusión subcutánea continua")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Iniciar sob supervisão especializada com 1–2 mg SC durante episódio OFF; titular conforme resposta.",
+              "Iniciar bajo supervisión especializada con 1–2 mg SC durante episodio OFF; titular según respuesta."
+            ),
+
+            manutencao: t(
+              lang,
+              "Dose individualizada para resgate de episódios OFF ou infusão contínua.",
+              "Dosis individualizada para rescate de episodios OFF o infusión continua."
+            ),
+
+            infusao: t(
+              lang,
+              "Pode ser utilizada em infusão subcutânea contínua em pacientes selecionados.",
+              "Puede utilizarse en infusión subcutánea continua en pacientes seleccionados."
+            ),
+
+            maxDose: t(
+              lang,
+              "Individualizar conforme protocolo especializado.",
+              "Individualizar según protocolo especializado."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Não se utiliza cálculo por kg.", "No se utiliza cálculo por kg."),
+            severe: t(lang, "Titulação individual obrigatória.", "Titulación individual obligatoria."),
+            maxDose: t(lang, "Conforme protocolo especializado.", "Según protocolo especializado.")
+          },
+
+          indications: [
+            t(lang, "Episódios OFF súbitos na doença de Parkinson", "Episodios OFF súbitos en enfermedad de Parkinson"),
+            t(lang, "Flutuações motoras graves", "Fluctuaciones motoras graves"),
+            t(lang, "Resgate motor rápido", "Rescate motor rápido"),
+            t(lang, "Doença de Parkinson avançada", "Enfermedad de Parkinson avanzada"),
+            t(lang, "Infusão contínua em pacientes selecionados", "Infusión continua en pacientes seleccionados"),
+            t(lang, "Pacientes com OFF refratário apesar de levodopa otimizada", "Pacientes con OFF refractario pese a levodopa optimizada")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Usar com cautela em insuficiência renal grave; monitorar efeitos adversos.",
+                "Usar con cautela en insuficiencia renal grave; monitorizar efectos adversos."
+              )
+            : t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: utilizar com cautela e monitorar tolerabilidade.",
+                "Hepatopatía: utilizar con cautela y monitorizar tolerabilidad."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Agonista potente dos receptores dopaminérgicos D1 e D2 com início extremamente rápido após administração subcutânea.",
+            "Agonista potente de receptores dopaminérgicos D1 y D2 con inicio extremadamente rápido tras administración subcutánea."
+          ),
+
+          onset: t(
+            lang,
+            "Início de ação geralmente em 5–20 minutos.",
+            "Inicio de acción generalmente en 5–20 minutos."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 30–60 minutos.",
+            "Vida media aproximada: 30–60 minutos."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Vômitos", "Vómitos"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Hipotensão ortostática", "Hipotensión ortostática"),
+            t(lang, "Bocejos frequentes", "Bostezos frecuentes"),
+            t(lang, "Nódulos subcutâneos", "Nódulos subcutáneos")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Hipotensão grave", "Hipotensión grave"),
+            t(lang, "Síncope", "Síncope"),
+            t(lang, "Alucinações", "Alucinaciones"),
+            t(lang, "Psicose", "Psicosis"),
+            t(lang, "Ataques súbitos de sono", "Ataques súbitos de sueño"),
+            t(lang, "Discinesias importantes", "Discinesias importantes"),
+            t(lang, "Prolongamento QT e arritmias raras", "Prolongación QT y arritmias raras")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: alto risco de hipotensão, confusão, alucinações e quedas.", "Adulto mayor: alto riesgo de hipotensión, confusión, alucinaciones y caídas.")
+              : null,
+
+            gestante
+              ? t(lang, "Gestação: dados insuficientes; evitar salvo necessidade extrema.", "Embarazo: datos insuficientes; evitar salvo necesidad extrema.")
+              : null,
+
+            lactante
+              ? t(lang, "Lactação: dados limitados; pode interferir na prolactina.", "Lactancia: datos limitados; puede interferir con la prolactina.")
+              : null,
+
+            hepatopatia
+              ? t(lang, "Hepatopatia: monitorar cuidadosamente tolerabilidade.", "Hepatopatía: monitorizar cuidadosamente tolerabilidad.")
+              : null,
+
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal grave: usar cautelosamente.", "Insuficiencia renal grave: usar con cautela.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à apomorfina", "Hipersensibilidad a apomorfina"),
+            t(lang, "Uso concomitante com ondansetrona", "Uso concomitante con ondansetrón"),
+            t(lang, "Hipotensão grave não controlada", "Hipotensión grave no controlada"),
+            t(lang, "Psicose grave ativa", "Psicosis grave activa")
+          ],
+
+          interactions: [
+            t(lang, "Ondansetrona: contraindicação absoluta pelo risco de hipotensão grave e perda de consciência", "Ondansetrón: contraindicación absoluta por riesgo de hipotensión grave y pérdida de conciencia"),
+            t(lang, "Anti-hipertensivos: potencializam hipotensão", "Antihipertensivos: potencian hipotensión"),
+            t(lang, "Levodopa: aumenta risco de discinesias", "Levodopa: aumenta riesgo de discinesias"),
+            t(lang, "Álcool e sedativos: aumentam sonolência", "Alcohol y sedantes: aumentan somnolencia"),
+            t(lang, "Antipsicóticos: antagonizam efeito terapêutico", "Antipsicóticos: antagonizan efecto terapéutico")
+          ],
+
+          alerts: [
+            t(lang, "Uso geralmente restrito a neurologistas especializados em Parkinson.", "Uso generalmente restringido a neurólogos especializados en Parkinson."),
+            t(lang, "Monitorar pressão arterial durante titulação.", "Monitorizar presión arterial durante la titulación."),
+            t(lang, "Orientar paciente sobre episódios de sono súbito.", "Orientar al paciente sobre episodios de sueño súbito."),
+            t(lang, "Contraindicada com ondansetrona.", "Contraindicada con ondansetrón."),
+            t(lang, "Importante para resgate rápido de episódios OFF.", "Importante para rescate rápido de episodios OFF.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "MDS Parkinson Disease Guidelines",
+            "FDA/DailyMed Apomorphine Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    amantadina: {
+      name: { pt: "Amantadina", es: "Amantadina" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const clcr = Number(paciente.clcr || 100);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+        const insuficienciaRenal = clcr < 60;
+
+        return {
+          name: t(lang, "Amantadina", "Amantadina"),
+
+          class: t(
+            lang,
+            "Antiparkinsoniano dopaminérgico e antagonista NMDA",
+            "Antiparkinsoniano dopaminérgico y antagonista NMDA"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Mantidan", "Amantadina"],
+            ar: ["PK-Merz", "Amantadina"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 100 mg", "Comprimido 100 mg"),
+            t(lang, "Cápsula 100 mg", "Cápsula 100 mg"),
+            t(lang, "Solução oral 50 mg/5 mL", "Solución oral 50 mg/5 mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Parkinson: iniciar 100 mg VO 1x/dia; pode aumentar para 100 mg 12/12h conforme resposta.",
+              "Parkinson: iniciar 100 mg VO 1 vez/día; puede aumentarse a 100 mg cada 12 h según respuesta."
+            ),
+
+            discinesia: t(
+              lang,
+              "Discinesia induzida por levodopa: 100 mg VO 1–2x/dia; ajustar conforme tolerabilidade.",
+              "Discinesia inducida por levodopa: 100 mg VO 1–2 veces/día; ajustar según tolerabilidad."
+            ),
+
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 300 mg/dia em adultos selecionados.",
+              "Dosis máxima habitual: 300 mg/día en adultos seleccionados."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Não se utiliza cálculo rotineiro por kg em adultos.", "No se utiliza cálculo rutinario por kg en adultos."),
+            pediatric: t(lang, "Uso pediátrico não rotineiro para Parkinson.", "Uso pediátrico no rutinario para Parkinson."),
+            maxDose: t(lang, "300 mg/dia", "300 mg/día")
+          },
+
+          indications: [
+            t(lang, "Doença de Parkinson inicial leve", "Enfermedad de Parkinson inicial leve"),
+            t(lang, "Sintomas motores parkinsonianos", "Síntomas motores parkinsonianos"),
+            t(lang, "Discinesias induzidas por levodopa", "Discinesias inducidas por levodopa"),
+            t(lang, "Flutuações motoras em casos selecionados", "Fluctuaciones motoras en casos seleccionados"),
+            t(lang, "Fadiga associada ao Parkinson em casos selecionados", "Fatiga asociada al Parkinson en casos seleccionados"),
+            t(lang, "Parkinsonismo medicamentoso em casos selecionados", "Parkinsonismo medicamentoso en casos seleccionados")
+          ],
+
+          renalAdjustment: insuficienciaRenal
+            ? t(
+                lang,
+                "Necessita ajuste renal conforme ClCr; alto risco de confusão, alucinações e acúmulo.",
+                "Requiere ajuste renal según ClCr; alto riesgo de confusión, alucinaciones y acumulación."
+              )
+            : t(lang, "Sem ajuste renal se função renal normal.", "Sin ajuste renal si función renal normal."),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Sem ajuste hepático habitual, mas monitorar neurotoxicidade se paciente frágil.",
+                "Sin ajuste hepático habitual, pero monitorizar neurotoxicidad si paciente frágil."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Aumenta liberação e reduz recaptação de dopamina; antagoniza receptores NMDA, ajudando especialmente em discinesias induzidas por levodopa.",
+            "Aumenta liberación y reduce recaptación de dopamina; antagoniza receptores NMDA, ayudando especialmente en discinesias inducidas por levodopa."
+          ),
+
+          onset: t(
+            lang,
+            "Melhora pode ocorrer em poucos dias; efeito sobre discinesias pode surgir em dias a semanas.",
+            "La mejoría puede ocurrir en pocos días; efecto sobre discinesias puede aparecer en días a semanas."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 10–15 horas; aumenta muito na insuficiência renal.",
+            "Vida media aproximada: 10–15 horas; aumenta mucho en insuficiencia renal."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Insônia", "Insomnio"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Boca seca", "Boca seca"),
+            t(lang, "Edema periférico", "Edema periférico"),
+            t(lang, "Livedo reticular", "Livedo reticular"),
+            t(lang, "Constipação", "Estreñimiento")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Confusão", "Confusión"),
+            t(lang, "Alucinações", "Alucinaciones"),
+            t(lang, "Psicose", "Psicosis"),
+            t(lang, "Convulsões em predispostos", "Convulsiones en predispuestos"),
+            t(lang, "Retenção urinária", "Retención urinaria"),
+            t(lang, "Síndrome de retirada com piora parkinsoniana se suspensão abrupta", "Síndrome de retirada con empeoramiento parkinsoniano si suspensión brusca")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de confusão, alucinações, edema, quedas e acúmulo por função renal reduzida.", "Adulto mayor: mayor riesgo de confusión, alucinaciones, edema, caídas y acumulación por función renal reducida.")
+              : null,
+
+            gestante
+              ? t(lang, "Gestação: evitar se possível; dados limitados.", "Embarazo: evitar si es posible; datos limitados.")
+              : null,
+
+            lactante
+              ? t(lang, "Lactação: evitar ou monitorar irritabilidade, vômitos e alterações do sono no lactente.", "Lactancia: evitar o monitorizar irritabilidad, vómitos y alteraciones del sueño en el lactante.")
+              : null,
+
+            hepatopatia
+              ? t(lang, "Hepatopatia: geralmente sem ajuste, mas cuidado com polifarmácia.", "Hepatopatía: generalmente sin ajuste, pero cuidado con polifarmacia.")
+              : null,
+
+            insuficienciaRenal
+              ? t(lang, "Insuficiência renal: ajuste obrigatório para evitar neurotoxicidade.", "Insuficiencia renal: ajuste obligatorio para evitar neurotoxicidad.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à amantadina", "Hipersensibilidad a amantadina"),
+            t(lang, "Insuficiência renal grave sem possibilidade de ajuste/monitorização", "Insuficiencia renal grave sin posibilidad de ajuste/monitorización"),
+            t(lang, "Psicose ativa não controlada", "Psicosis activa no controlada"),
+            t(lang, "Epilepsia não controlada", "Epilepsia no controlada")
+          ],
+
+          interactions: [
+            t(lang, "Anticolinérgicos: maior confusão, boca seca e retenção urinária", "Anticolinérgicos: mayor confusión, boca seca y retención urinaria"),
+            t(lang, "Levodopa e agonistas dopaminérgicos: maior risco de alucinações/discinesias", "Levodopa y agonistas dopaminérgicos: mayor riesgo de alucinaciones/discinesias"),
+            t(lang, "Álcool e sedativos: maior tontura e prejuízo psicomotor", "Alcohol y sedantes: mayor mareo y deterioro psicomotor"),
+            t(lang, "Fármacos que alcalinizam urina podem reduzir eliminação", "Fármacos que alcalinizan orina pueden reducir eliminación")
+          ],
+
+          alerts: [
+            t(lang, "Ajustar sempre pela função renal.", "Ajustar siempre por función renal."),
+            t(lang, "Monitorar confusão e alucinações, especialmente em idosos.", "Monitorizar confusión y alucinaciones, especialmente en adultos mayores."),
+            t(lang, "Não suspender abruptamente.", "No suspender bruscamente."),
+            t(lang, "Livedo reticular é efeito característico.", "Livedo reticular es efecto característico."),
+            t(lang, "Pode ajudar nas discinesias induzidas por levodopa.", "Puede ayudar en discinesias inducidas por levodopa.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "MDS Parkinson Disease Guidelines",
+            "FDA/DailyMed Amantadine Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    selegilina: {
+      name: { pt: "Selegilina", es: "Selegilina" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+
+        return {
+          name: t(lang, "Selegilina", "Selegilina"),
+
+          class: t(
+            lang,
+            "Inibidor seletivo da MAO-B",
+            "Inhibidor selectivo de la MAO-B"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Jumexil", "Niar", "Selegilina"],
+            ar: ["Jumex", "Selegilina"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 5 mg", "Comprimido 5 mg"),
+            t(lang, "Cápsula 5 mg", "Cápsula 5 mg"),
+            t(lang, "Formulação oral desintegrável conforme disponibilidade", "Formulación oral desintegrable según disponibilidad")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Parkinson: 5 mg VO pela manhã; pode usar 5 mg pela manhã + 5 mg ao meio-dia.",
+              "Parkinson: 5 mg VO por la mañana; puede usarse 5 mg por la mañana + 5 mg al mediodía."
+            ),
+
+            manutencao: t(
+              lang,
+              "Dose usual: 5–10 mg/dia.",
+              "Dosis habitual: 5–10 mg/día."
+            ),
+
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 10 mg/dia para manter seletividade MAO-B.",
+              "Dosis máxima habitual: 10 mg/día para mantener selectividad MAO-B."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Não se utiliza cálculo por kg.", "No se utiliza cálculo por kg."),
+            severe: t(lang, "Usar dose fixa e evitar horários noturnos por insônia.", "Usar dosis fija y evitar horarios nocturnos por insomnio."),
+            maxDose: t(lang, "10 mg/dia", "10 mg/día")
+          },
+
+          indications: [
+            t(lang, "Doença de Parkinson inicial", "Enfermedad de Parkinson inicial"),
+            t(lang, "Adjuvante à levodopa", "Coadyuvante a levodopa"),
+            t(lang, "Wearing-off leve", "Wearing-off leve"),
+            t(lang, "Redução de flutuações motoras em casos selecionados", "Reducción de fluctuaciones motoras en casos seleccionados"),
+            t(lang, "Sintomas motores leves em Parkinson", "Síntomas motores leves en Parkinson"),
+            t(lang, "Possível redução da necessidade de levodopa em fase inicial", "Posible reducción de necesidad de levodopa en fase inicial")
+          ],
+
+          renalAdjustment: t(
+            lang,
+            "Sem ajuste renal habitual.",
+            "Sin ajuste renal habitual."
+          ),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: usar com cautela e monitorar efeitos adversos.",
+                "Hepatopatía: usar con cautela y monitorizar efectos adversos."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Inibe seletivamente MAO-B em doses usuais, reduzindo degradação de dopamina no SNC; metabólitos anfetamínicos podem causar insônia.",
+            "Inhibe selectivamente MAO-B en dosis habituales, reduciendo degradación de dopamina en SNC; metabolitos anfetamínicos pueden causar insomnio."
+          ),
+
+          onset: t(
+            lang,
+            "Melhora motora pode ocorrer em dias a semanas.",
+            "La mejoría motora puede ocurrir en días a semanas."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média curta, mas inibição enzimática é prolongada; metabólitos podem persistir.",
+            "Vida media corta, pero la inhibición enzimática es prolongada; metabolitos pueden persistir."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Insônia", "Insomnio"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Boca seca", "Boca seca"),
+            t(lang, "Cefaleia", "Cefalea"),
+            t(lang, "Hipotensão ortostática", "Hipotensión ortostática"),
+            t(lang, "Discinesias quando associada à levodopa", "Discinesias cuando se asocia a levodopa")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Síndrome serotoninérgica em associações de risco", "Síndrome serotoninérgico en asociaciones de riesgo"),
+            t(lang, "Crise hipertensiva se perda de seletividade ou interações", "Crisis hipertensiva si pérdida de selectividad o interacciones"),
+            t(lang, "Alucinações ou confusão", "Alucinaciones o confusión"),
+            t(lang, "Hipotensão sintomática", "Hipotensión sintomática"),
+            t(lang, "Discinesias importantes com levodopa", "Discinesias importantes con levodopa")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de hipotensão, confusão, alucinações e insônia.", "Adulto mayor: mayor riesgo de hipotensión, confusión, alucinaciones e insomnio.")
+              : null,
+
+            gestante
+              ? t(lang, "Gestação: dados limitados; evitar se possível.", "Embarazo: datos limitados; evitar si es posible.")
+              : null,
+
+            lactante
+              ? t(lang, "Lactação: dados limitados; pode interferir com dopamina/prolactina.", "Lactancia: datos limitados; puede interferir con dopamina/prolactina.")
+              : null,
+
+            hepatopatia
+              ? t(lang, "Hepatopatia: titular com cautela.", "Hepatopatía: titular con cautela.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à selegilina", "Hipersensibilidad a selegilina"),
+            t(lang, "Uso concomitante com meperidina", "Uso concomitante con meperidina"),
+            t(lang, "Uso com tramadol, metadona, propoxifeno ou outros opioides serotoninérgicos de risco", "Uso con tramadol, metadona, propoxifeno u otros opioides serotoninérgicos de riesgo"),
+            t(lang, "Uso concomitante com IMAO ou linezolida sem manejo especializado", "Uso concomitante con IMAO o linezolid sin manejo especializado")
+          ],
+
+          interactions: [
+            t(lang, "Meperidina: contraindicado por risco serotoninérgico grave", "Meperidina: contraindicado por riesgo serotoninérgico grave"),
+            t(lang, "ISRS/ISRN/tricíclicos: risco de síndrome serotoninérgica", "ISRS/IRSN/tricíclicos: riesgo de síndrome serotoninérgico"),
+            t(lang, "Tramadol e metadona: risco serotoninérgico", "Tramadol y metadona: riesgo serotoninérgico"),
+            t(lang, "Levodopa: pode aumentar discinesias e efeitos dopaminérgicos", "Levodopa: puede aumentar discinesias y efectos dopaminérgicos"),
+            t(lang, "Simpaticomiméticos/descongestionantes: risco pressórico", "Simpaticomiméticos/descongestivos: riesgo presórico")
+          ],
+
+          alerts: [
+            t(lang, "Evitar tomar à noite por risco de insônia.", "Evitar tomar por la noche por riesgo de insomnio."),
+            t(lang, "Revisar antidepressivos e opioides antes de prescrever.", "Revisar antidepresivos y opioides antes de prescribir."),
+            t(lang, "Monitorar discinesias se associada à levodopa.", "Monitorizar discinesias si se asocia a levodopa."),
+            t(lang, "Em doses altas pode perder seletividade MAO-B.", "En dosis altas puede perder selectividad MAO-B."),
+            t(lang, "Orientar sinais de síndrome serotoninérgica.", "Orientar signos de síndrome serotoninérgico.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "MDS Parkinson Disease Guidelines",
+            "FDA/DailyMed Selegiline Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    rasagilina: {
+      name: { pt: "Rasagilina", es: "Rasagilina" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+
+        return {
+          name: t(lang, "Rasagilina", "Rasagilina"),
+
+          class: t(
+            lang,
+            "Inibidor seletivo da MAO-B",
+            "Inhibidor selectivo de la MAO-B"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Azilect", "Rasagilina"],
+            ar: ["Azilect", "Rasagilina"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 0,5 mg", "Comprimido 0,5 mg"),
+            t(lang, "Comprimido 1 mg", "Comprimido 1 mg")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Parkinson: 1 mg VO 1x/dia em monoterapia ou adjuvante.",
+              "Parkinson: 1 mg VO 1 vez/día en monoterapia o como coadyuvante."
+            ),
+
+            ajuste: t(
+              lang,
+              "Com inibidores de CYP1A2 ou risco de interação: considerar 0,5 mg/dia conforme protocolo.",
+              "Con inhibidores de CYP1A2 o riesgo de interacción: considerar 0,5 mg/día según protocolo."
+            ),
+
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 1 mg/dia.",
+              "Dosis máxima habitual: 1 mg/día."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Não se utiliza cálculo por kg.", "No se utiliza cálculo por kg."),
+            severe: t(lang, "Dose fixa diária.", "Dosis fija diaria."),
+            maxDose: t(lang, "1 mg/dia", "1 mg/día")
+          },
+
+          indications: [
+            t(lang, "Doença de Parkinson inicial em monoterapia", "Enfermedad de Parkinson inicial en monoterapia"),
+            t(lang, "Adjuvante à levodopa", "Coadyuvante a levodopa"),
+            t(lang, "Wearing-off", "Wearing-off"),
+            t(lang, "Flutuações motoras leves a moderadas", "Fluctuaciones motoras leves a moderadas"),
+            t(lang, "Sintomas motores leves em Parkinson", "Síntomas motores leves en Parkinson"),
+            t(lang, "Redução do tempo OFF em pacientes com levodopa", "Reducción del tiempo OFF en pacientes con levodopa")
+          ],
+
+          renalAdjustment: t(
+            lang,
+            "Sem ajuste renal habitual.",
+            "Sin ajuste renal habitual."
+          ),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia leve: usar cautela; moderada/grave: evitar.",
+                "Hepatopatía leve: usar cautela; moderada/grave: evitar."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Inibe irreversivelmente MAO-B, reduzindo degradação de dopamina no estriado e aumentando disponibilidade dopaminérgica.",
+            "Inhibe irreversiblemente MAO-B, reduciendo degradación de dopamina en el estriado y aumentando disponibilidad dopaminérgica."
+          ),
+
+          onset: t(
+            lang,
+            "Melhora motora pode ocorrer em dias a semanas.",
+            "La mejoría motora puede ocurrir en días a semanas."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média plasmática aproximada: 3 horas, mas a inibição da MAO-B é prolongada.",
+            "Vida media plasmática aproximada: 3 horas, pero la inhibición de MAO-B es prolongada."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Cefaleia", "Cefalea"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Dor articular", "Dolor articular"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Insônia", "Insomnio"),
+            t(lang, "Hipotensão ortostática", "Hipotensión ortostática"),
+            t(lang, "Discinesia quando associada à levodopa", "Discinesia cuando se asocia a levodopa")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Síndrome serotoninérgica em associações de risco", "Síndrome serotoninérgico en asociaciones de riesgo"),
+            t(lang, "Crise hipertensiva se interações ou perda de seletividade", "Crisis hipertensiva si interacciones o pérdida de selectividad"),
+            t(lang, "Alucinações ou confusão", "Alucinaciones o confusión"),
+            t(lang, "Hipotensão sintomática", "Hipotensión sintomática"),
+            t(lang, "Discinesias importantes com levodopa", "Discinesias importantes con levodopa")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de hipotensão, confusão, alucinações e quedas.", "Adulto mayor: mayor riesgo de hipotensión, confusión, alucinaciones y caídas.")
+              : null,
+
+            gestante
+              ? t(lang, "Gestação: dados limitados; evitar se possível.", "Embarazo: datos limitados; evitar si es posible.")
+              : null,
+
+            lactante
+              ? t(lang, "Lactação: dados limitados; pode interferir com dopamina/prolactina.", "Lactancia: datos limitados; puede interferir com dopamina/prolactina.")
+              : null,
+
+            hepatopatia
+              ? t(lang, "Hepatopatia moderada/grave: evitar.", "Hepatopatía moderada/grave: evitar.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à rasagilina", "Hipersensibilidad a rasagilina"),
+            t(lang, "Uso concomitante com meperidina", "Uso concomitante con meperidina"),
+            t(lang, "Uso com tramadol, metadona, propoxifeno ou outros opioides serotoninérgicos de risco", "Uso con tramadol, metadona, propoxifeno u otros opioides serotoninérgicos de riesgo"),
+            t(lang, "Uso concomitante com IMAO ou linezolida sem manejo especializado", "Uso concomitante con IMAO o linezolid sin manejo especializado"),
+            t(lang, "Hepatopatia moderada ou grave", "Hepatopatía moderada o grave")
+          ],
+
+          interactions: [
+            t(lang, "Meperidina: contraindicado por risco serotoninérgico grave", "Meperidina: contraindicado por riesgo serotoninérgico grave"),
+            t(lang, "ISRS/ISRN/tricíclicos: risco de síndrome serotoninérgica", "ISRS/IRSN/tricíclicos: riesgo de síndrome serotoninérgico"),
+            t(lang, "Tramadol e metadona: risco serotoninérgico", "Tramadol y metadona: riesgo serotoninérgico"),
+            t(lang, "Ciprofloxacino e inibidores CYP1A2: aumentam níveis", "Ciprofloxacino e inhibidores CYP1A2: aumentan niveles"),
+            t(lang, "Levodopa: pode aumentar discinesias", "Levodopa: puede aumentar discinesias"),
+            t(lang, "Simpaticomiméticos/descongestionantes: risco pressórico", "Simpaticomiméticos/descongestivos: riesgo presórico")
+          ],
+
+          alerts: [
+            t(lang, "Revisar antidepressivos, opioides e linezolida antes de prescrever.", "Revisar antidepresivos, opioides y linezolid antes de prescribir."),
+            t(lang, "Evitar em hepatopatia moderada/grave.", "Evitar en hepatopatía moderada/grave."),
+            t(lang, "Monitorar discinesias se associada à levodopa.", "Monitorizar discinesias si se asocia a levodopa."),
+            t(lang, "Orientar sinais de síndrome serotoninérgica.", "Orientar signos de síndrome serotoninérgico."),
+            t(lang, "Cuidado com ciprofloxacino e outros inibidores CYP1A2.", "Cuidado con ciprofloxacino y otros inhibidores CYP1A2.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "MDS Parkinson Disease Guidelines",
+            "FDA/DailyMed Rasagiline Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    entacapona: {
+      name: { pt: "Entacapona", es: "Entacapona" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+
+        return {
+          name: t(lang, "Entacapona", "Entacapona"),
+
+          class: t(
+            lang,
+            "Inibidor periférico da COMT",
+            "Inhibidor periférico de la COMT"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Comtan", "Stalevo", "Entacapona"],
+            ar: ["Comtan", "Stalevo", "Entacapona"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 200 mg", "Comprimido 200 mg"),
+            t(lang, "Associação levodopa/carbidopa/entacapona", "Asociación levodopa/carbidopa/entacapona")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "200 mg VO junto com cada dose de levodopa/carbidopa ou levodopa/benserazida.",
+              "200 mg VO junto con cada dosis de levodopa/carbidopa o levodopa/benserazida."
+            ),
+
+            manutencao: t(
+              lang,
+              "Usar apenas como adjuvante da levodopa; não tem efeito antiparkinsoniano isolado relevante.",
+              "Usar solo como coadyuvante de levodopa; no tiene efecto antiparkinsoniano aislado relevante."
+            ),
+
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 1600 mg/dia.",
+              "Dosis máxima habitual: 1600 mg/día."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Não se utiliza cálculo por kg.", "No se utiliza cálculo por kg."),
+            severe: t(lang, "Dose fixa associada a cada tomada de levodopa.", "Dosis fija asociada a cada toma de levodopa."),
+            maxDose: t(lang, "1600 mg/dia", "1600 mg/día")
+          },
+
+          indications: [
+            t(lang, "Doença de Parkinson com wearing-off", "Enfermedad de Parkinson con wearing-off"),
+            t(lang, "Flutuações motoras de fim de dose", "Fluctuaciones motoras de fin de dosis"),
+            t(lang, "Aumento da duração do efeito da levodopa", "Aumento de la duración del efecto de levodopa"),
+            t(lang, "Redução do tempo OFF", "Reducción del tiempo OFF"),
+            t(lang, "Adjuvante em pacientes em uso de levodopa", "Coadyuvante en pacientes en uso de levodopa"),
+            t(lang, "Otimização do esquema levodopa/carbidopa ou levodopa/benserazida", "Optimización del esquema levodopa/carbidopa o levodopa/benserazida")
+          ],
+
+          renalAdjustment: t(
+            lang,
+            "Sem ajuste renal habitual.",
+            "Sin ajuste renal habitual."
+          ),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: usar com cautela; evitar em doença hepática importante conforme protocolo local.",
+                "Hepatopatía: usar con cautela; evitar en enfermedad hepática importante según protocolo local."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Inibe a catecol-O-metiltransferase periférica, reduzindo metabolismo periférico da levodopa e aumentando sua disponibilidade/duração de ação.",
+            "Inhibe la catecol-O-metiltransferasa periférica, reduciendo metabolismo periférico de levodopa y aumentando su disponibilidad/duración de acción."
+          ),
+
+          onset: t(
+            lang,
+            "Efeito ocorre junto ao esquema de levodopa, com redução de wearing-off após ajuste terapêutico.",
+            "El efecto ocurre junto al esquema de levodopa, con reducción de wearing-off tras ajuste terapéutico."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 0,5–1 hora.",
+            "Vida media aproximada: 0,5–1 hora."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Discinesia", "Discinesia"),
+            t(lang, "Náuseas", "Náuseas"),
+            t(lang, "Diarreia", "Diarrea"),
+            t(lang, "Dor abdominal", "Dolor abdominal"),
+            t(lang, "Urina alaranjada/acastanhada", "Orina anaranjada/marrón"),
+            t(lang, "Tontura", "Mareos"),
+            t(lang, "Insônia", "Insomnio")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Diarreia grave ou persistente", "Diarrea grave o persistente"),
+            t(lang, "Discinesias incapacitantes", "Discinesias incapacitantes"),
+            t(lang, "Alucinações ou confusão", "Alucinaciones o confusión"),
+            t(lang, "Hipotensão sintomática", "Hipotensión sintomática"),
+            t(lang, "Síndrome semelhante à neuroléptica maligna se retirada abrupta de dopaminérgicos", "Síndrome similar al neuroléptico maligno si retirada brusca de dopaminérgicos"),
+            t(lang, "Rabdomiólise rara associada a discinesia intensa", "Rabdomiólisis rara asociada a discinesia intensa")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: maior risco de confusão, alucinações, discinesia e hipotensão.", "Adulto mayor: mayor riesgo de confusión, alucinaciones, discinesia e hipotensión.")
+              : null,
+
+            gestante
+              ? t(lang, "Gestação: dados limitados; usar apenas se benefício justificar risco.", "Embarazo: datos limitados; usar solo si el beneficio justifica el riesgo.")
+              : null,
+
+            lactante
+              ? t(lang, "Lactação: dados limitados; avaliar risco-benefício.", "Lactancia: datos limitados; evaluar riesgo-beneficio.")
+              : null,
+
+            hepatopatia
+              ? t(lang, "Hepatopatia: usar com cautela e monitorar tolerabilidade.", "Hepatopatía: usar con cautela y monitorizar tolerabilidad.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade à entacapona", "Hipersensibilidad a entacapona"),
+            t(lang, "Uso concomitante com IMAO não seletivo", "Uso concomitante con IMAO no selectivo"),
+            t(lang, "Feocromocitoma", "Feocromocitoma"),
+            t(lang, "História de síndrome neuroléptica maligna ou rabdomiólise não traumática relacionada a dopaminérgicos", "Antecedente de síndrome neuroléptico maligno o rabdomiólisis no traumática relacionada a dopaminérgicos")
+          ],
+
+          interactions: [
+            t(lang, "Levodopa: aumenta efeito e pode aumentar discinesias", "Levodopa: aumenta efecto y puede aumentar discinesias"),
+            t(lang, "IMAO não seletivos: contraindicado", "IMAO no selectivos: contraindicado"),
+            t(lang, "Fármacos metabolizados por COMT/catecolaminas: cautela", "Fármacos metabolizados por COMT/catecolaminas: cautela"),
+            t(lang, "Antipsicóticos dopaminérgicos D2: podem reduzir benefício clínico", "Antipsicóticos dopaminérgicos D2: pueden reducir beneficio clínico"),
+            t(lang, "Ferro: pode reduzir absorção; separar administração", "Hierro: puede reducir absorción; separar administración")
+          ],
+
+          alerts: [
+            t(lang, "Sempre administrar junto com levodopa.", "Administrar siempre junto con levodopa."),
+            t(lang, "Pode ser necessário reduzir dose de levodopa se houver discinesias.", "Puede ser necesario reducir dosis de levodopa si hay discinesias."),
+            t(lang, "Urina alaranjada/acastanhada é esperada e geralmente benigna.", "La orina anaranjada/marrón es esperada y generalmente benigna."),
+            t(lang, "Investigar diarreia persistente.", "Investigar diarrea persistente."),
+            t(lang, "Monitorar alucinações, hipotensão e confusão em idosos.", "Monitorizar alucinaciones, hipotensión y confusión en adultos mayores.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "MDS Parkinson Disease Guidelines",
+            "FDA/DailyMed Entacapone Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    },
+
+    biperideno: {
+      name: { pt: "Biperideno", es: "Biperideno" },
+      category: "antiparkinsoniano",
+
+      calculate: (paciente, lang = "pt") => {
+        const idade = Number(paciente.idade || 0);
+        const gestante = Boolean(paciente.gestante);
+        const lactante = Boolean(paciente.lactante);
+        const hepatopatia = Boolean(paciente.hepatopatia);
+
+        return {
+          name: t(lang, "Biperideno", "Biperideno"),
+
+          class: t(
+            lang,
+            "Anticolinérgico antiparkinsoniano",
+            "Anticolinérgico antiparkinsoniano"
+          ),
+
+          category: "antiparkinsoniano",
+
+          commercialNames: {
+            br: ["Akineton", "Biperideno"],
+            ar: ["Akineton", "Biperideno"]
+          },
+
+          presentation: [
+            t(lang, "Comprimido 2 mg", "Comprimido 2 mg"),
+            t(lang, "Comprimido de liberação prolongada 4 mg", "Comprimido de liberación prolongada 4 mg"),
+            t(lang, "Ampola 5 mg/mL", "Ampolla 5 mg/mL")
+          ],
+
+          dose: {
+            adulto: t(
+              lang,
+              "Parkinsonismo: iniciar 1 mg VO 1–2x/dia; titular lentamente.",
+              "Parkinsonismo: iniciar 1 mg VO 1–2 veces/día; titular lentamente."
+            ),
+
+            extrapiramidal: t(
+              lang,
+              "Distonia aguda/EPS: 2–5 mg IM/EV conforme protocolo; depois considerar VO por curto período.",
+              "Distonía aguda/EPS: 2–5 mg IM/IV según protocolo; luego considerar VO por corto período."
+            ),
+
+            manutencao: t(
+              lang,
+              "Dose usual: 2–8 mg/dia divididos.",
+              "Dosis habitual: 2–8 mg/día divididos."
+            ),
+
+            maxDose: t(
+              lang,
+              "Dose máxima usual: 16 mg/dia.",
+              "Dosis máxima habitual: 16 mg/día."
+            )
+          },
+
+          doseKg: {
+            standard: t(lang, "Não se utiliza cálculo rotineiro por kg em adultos.", "No se utiliza cálculo rutinario por kg en adultos."),
+            severe: t(lang, "Usar menor dose eficaz pelo risco anticolinérgico.", "Usar menor dosis eficaz por riesgo anticolinérgico."),
+            maxDose: t(lang, "16 mg/dia", "16 mg/día")
+          },
+
+          indications: [
+            t(lang, "Parkinsonismo medicamentoso", "Parkinsonismo medicamentoso"),
+            t(lang, "Distonia aguda induzida por antipsicótico", "Distonía aguda inducida por antipsicótico"),
+            t(lang, "Sintomas extrapiramidais por antipsicóticos", "Síntomas extrapiramidales por antipsicóticos"),
+            t(lang, "Tremor predominante na doença de Parkinson em pacientes jovens selecionados", "Temblor predominante en enfermedad de Parkinson en pacientes jóvenes seleccionados"),
+            t(lang, "Rigidez parkinsoniana leve em casos selecionados", "Rigidez parkinsoniana leve en casos seleccionados"),
+            t(lang, "Acatisia/EPS quando outras medidas não são suficientes em contexto selecionado", "Acatisia/EPS cuando otras medidas no son suficientes en contexto seleccionado")
+          ],
+
+          renalAdjustment: t(
+            lang,
+            "Sem ajuste renal habitual, mas usar cautela em pacientes frágeis.",
+            "Sin ajuste renal habitual, pero usar con cautela en pacientes frágiles."
+          ),
+
+          hepaticAdjustment: hepatopatia
+            ? t(
+                lang,
+                "Hepatopatia: usar com cautela e titular lentamente.",
+                "Hepatopatía: usar con cautela y titular lentamente."
+              )
+            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
+
+          mechanism: t(
+            lang,
+            "Antagonista muscarínico central, reduzindo hiperatividade colinérgica relativa nos gânglios da base.",
+            "Antagonista muscarínico central, reduciendo hiperactividad colinérgica relativa en ganglios basales."
+          ),
+
+          onset: t(
+            lang,
+            "Via parenteral pode aliviar distonia aguda em minutos; via oral atua em horas a dias.",
+            "Vía parenteral puede aliviar distonía aguda en minutos; vía oral actúa en horas a días."
+          ),
+
+          halfLife: t(
+            lang,
+            "Vida média aproximada: 18–24 horas.",
+            "Vida media aproximada: 18–24 horas."
+          ),
+
+          commonAdverseEffects: [
+            t(lang, "Boca seca", "Boca seca"),
+            t(lang, "Visão turva", "Visión borrosa"),
+            t(lang, "Constipação", "Estreñimiento"),
+            t(lang, "Retenção urinária", "Retención urinaria"),
+            t(lang, "Taquicardia", "Taquicardia"),
+            t(lang, "Sonolência", "Somnolencia"),
+            t(lang, "Náuseas", "Náuseas")
+          ],
+
+          dangerousAdverseEffects: [
+            t(lang, "Delirium anticolinérgico", "Delirium anticolinérgico"),
+            t(lang, "Confusão grave", "Confusión grave"),
+            t(lang, "Glaucoma agudo de ângulo fechado", "Glaucoma agudo de ángulo cerrado"),
+            t(lang, "Retenção urinária aguda", "Retención urinaria aguda"),
+            t(lang, "Íleo paralítico", "Íleo paralítico"),
+            t(lang, "Piora cognitiva em idosos", "Empeoramiento cognitivo en adultos mayores")
+          ],
+
+          risksByPatient: [
+            idade >= 65
+              ? t(lang, "Idoso: evitar se possível; alto risco de delirium, quedas, retenção urinária, constipação e piora cognitiva.", "Adulto mayor: evitar si es posible; alto riesgo de delirium, caídas, retención urinaria, estreñimiento y deterioro cognitivo.")
+              : null,
+
+            gestante
+              ? t(lang, "Gestação: usar apenas se necessário e por menor tempo possível.", "Embarazo: usar solo si es necesario y por el menor tiempo posible.")
+              : null,
+
+            lactante
+              ? t(lang, "Lactação: pode reduzir produção de leite e causar efeitos anticolinérgicos no lactente.", "Lactancia: puede reducir producción de leche y causar efectos anticolinérgicos en el lactante.")
+              : null,
+
+            hepatopatia
+              ? t(lang, "Hepatopatia: titular lentamente e monitorar confusão/sedação.", "Hepatopatía: titular lentamente y monitorizar confusión/sedación.")
+              : null
+          ].filter(Boolean),
+
+          contraindications: [
+            t(lang, "Hipersensibilidade ao biperideno", "Hipersensibilidad a biperideno"),
+            t(lang, "Glaucoma de ângulo fechado não tratado", "Glaucoma de ángulo cerrado no tratado"),
+            t(lang, "Retenção urinária grave ou obstrução prostática importante", "Retención urinaria grave u obstrucción prostática importante"),
+            t(lang, "Íleo paralítico ou megacólon", "Íleo paralítico o megacolon"),
+            t(lang, "Miastenia gravis", "Miastenia gravis"),
+            t(lang, "Demência ou delirium ativo, salvo extrema necessidade", "Demencia o delirium activo, salvo extrema necesidad")
+          ],
+
+          interactions: [
+            t(lang, "Antidepressivos tricíclicos: maior carga anticolinérgica", "Antidepresivos tricíclicos: mayor carga anticolinérgica"),
+            t(lang, "Antipsicóticos com ação anticolinérgica: maior risco de delirium/constipação", "Antipsicóticos con acción anticolinérgica: mayor riesgo de delirium/estreñimiento"),
+            t(lang, "Anti-histamínicos sedativos: maior efeito anticolinérgico", "Antihistamínicos sedativos: mayor efecto anticolinérgico"),
+            t(lang, "Levodopa: pode aumentar discinesias em alguns casos", "Levodopa: puede aumentar discinesias en algunos casos"),
+            t(lang, "Álcool e sedativos: maior sonolência/confusão", "Alcohol y sedantes: mayor somnolencia/confusión")
+          ],
+
+          alerts: [
+            t(lang, "Excelente para distonia aguda induzida por antipsicótico.", "Excelente para distonía aguda inducida por antipsicótico."),
+            t(lang, "Evitar uso crônico desnecessário em idosos.", "Evitar uso crónico innecesario en adultos mayores."),
+            t(lang, "Monitorar retenção urinária, constipação e confusão.", "Monitorizar retención urinaria, estreñimiento y confusión."),
+            t(lang, "Pode piorar cognição e memória.", "Puede empeorar cognición y memoria."),
+            t(lang, "Reavaliar necessidade após controle dos sintomas extrapiramidais.", "Reevaluar necesidad tras control de síntomas extrapiramidales.")
+          ],
+
+          ref: [
+            "Goodman & Gilman 14ª Ed.",
+            "MDS Parkinson Disease Guidelines",
+            "Stahl's Essential Psychopharmacology",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        };
+      }
+    }
+
+  }); /* fim Object.assign BUILD 455-SNC PILAR 3
+         acido_valproico·valproato_de_sodio·lamotrigina·carbamazepina·oxcarbazepina (AEDs)
+         levetiracetam·topiramato·fenitoina·fenobarbital·etossuximida·lacosamida (AEDs)
+         brivaracetam·vigabatrina·rufinamida·primidona (AEDs) — 15 anticonvulsivantes
+         levodopa_carbidopa·levodopa_benserazida·pramipexol·ropinirol·rotigotina (Parkinson)
+         apomorfina·amantadina·selegilina·rasagilina·entacapona·biperideno (Parkinson) — 11 total */
+
 })();
