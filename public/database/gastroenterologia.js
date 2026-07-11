@@ -1342,4 +1342,274 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
 
   }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 443 (prucaloprida + linaclotida + lubiprostona + plecanatida + macrogol + bisacodil + sene — Procinéticos Cólicos/Secretagogos GC-C/Osmótico PEG/Catárticos Estimulantes) */
 
+  /* ── BUILD 444 GUARD ─────────────────────────────────────────────── */
+  if (typeof window.GASTROENTEROLOGIA_DRUGS_DB !== 'object' || window.GASTROENTEROLOGIA_DRUGS_DB === null) return;
+  Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
+
+    /* ── GOLIMUMABE (744) ───────────────────────────────────────────────── */
+    "golimumabe": {
+      name: { pt: 'Golimumabe', es: 'Golimumab' },
+      category: 'gastroenterologia',
+      class: { pt: 'Anticorpo Monoclonal Humano Anti-TNF-alfa de Alta Afinidade', es: 'Anticuerpo Monoclonal Humano Anti-TNF-alfa de Alta Afinidad' },
+      indications: {
+        pt: ['Retocolite Ulcerativa (RCU) ativa moderada a grave em adultos refratários à terapia convencional', 'Artrite Reumatóide, Artrite Psoríaca e Espondilite Anquilosante'],
+        es: ['Colitis Ulcerosa moderada a severa activa en adultos', 'Artritis Reumatoide y Espondilitis Anquilosante']
+      },
+      commercialNames: { br: ['Simponi'], ar: ['Simponi'] },
+      presentation: { pt: ['Seringa preenchida ou Caneta injetável Subcutânea 50 mg/0,5 mL e 100 mg/1 mL'], es: ['Pluma prellenada Subcutánea 50 mg y 100 mg'] },
+      mechanism: {
+        pt: 'O Anti-TNF Humano Estável. É um anticorpo monoclonal puramente humano que neutraliza o TNF-alfa livre e transmembranar. Sua estrutura biológica confere uma afinidade de ligação superior e uma estabilidade plasmática prolongada, permitindo o bloqueio imunológico inflamatório mucosal crônico com apenas uma aplicação subcutânea mensal.',
+        es: 'Anticuerpo monoclonal humano IgG1kappa que se une con alta afinidad a las formas solubles y transmembrana del TNF-alfa, impidiendo su unión a los receptores celulares. Esto suprime de forma prolongada la cascada inflamatoria crónica destructiva en el colon.'
+      },
+      dose: {
+        adult: {
+          pt: 'Indução RCU: 200 mg via Subcutânea na semana 0, seguido de 100 mg via Subcutânea na semana 2. Manutenção estável: 100 mg via Subcutânea a cada 4 semanas (uma vez por mês).',
+          es: 'Inducción CU: 200 mg vía Subcutánea la semana 0, seguido de 100 mg SC la semana 2. Mantenimiento: 100 mg vía Subcutánea cada 4 semanas.'
+        },
+        pediatric: {
+          pt: 'Não indicado para RCU pediátrica.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['Administração puramente via Subcutânea (caneta autoinjetável). Retirar da geladeira 30 minutos antes de aplicar. Alternar os locais de injeção (coxa ou abdômen).'], es: ['Inyección Subcutánea mensual. Retirar del frío 30 minutos antes para reducir el dolor de aplicación.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não estudado em hepatopatias severas.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Infecções bacterianas do trato respiratório (bronquite, faringite)', 'Reações leves no local da injeção (eritema, prurido)', 'Hipertensão leve'], es: ['Infecciones respiratorias', 'Eritema o prurito en el sitio de inyección', 'Hipertensión leve'] },
+      dangerousAdverseEffects: { pt: ['Reativação de Tuberculose Latente e infecções fúngicas invasivas oportunistas', 'Linfoma Hepatosplênico de células T (Raro risco hematológico de classe)', 'Piora de sintomas desmielinizantes (Esclerose Múltipla)'], es: ['Reactivación de Tuberculosis Latente', 'Linfoma y neoplasias malignas de clase', 'Desmielinización central'] },
+      contraindications: {
+        absolute: { pt: ['Tuberculose ativa ou infecções oportunistas graves em curso', 'Insuficiência cardíaca moderada a grave NYHA III/IV'], es: ['Tuberculosis activa', 'Insuficiencia cardíaca grave'] },
+        relative: { pt: ['Rastreio negativo ou duvidoso para infecções granulomatosas (PPD obrigatório)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA ESCLEROSE INFLAMATÓRIA: Os bloqueadores de TNF-alfa como o Golimumabe podem agravar ou desencadear surtos de doenças desmielinizantes no cérebro. Se o paciente apresentar formigamentos estranhos, fraqueza ou perda de visão, suspenda imediatamente o Simponi; risco de desencadear Esclerose Múltipla latente.', es: 'ALERTA DE DESMIELINIZACIÓN: Los agentes anti-TNF pueden exacerbar o gatillar enfermedades desmielinizantes (Esclerosis Múltiple). Suspender de forma inmediata ante la aparición de síntomas neurológicos centrales.' }
+      },
+      references: {
+        pt: 'PURSUIT-SC Trial (Golimumab in Ulcerative Colitis); FDA Prescribing Information Simponi; Diretrizes GEDIIB.',
+        es: 'PURSUIT Trials; FDA Prescribing Information; Guías de Enfermedad Inflamatoria Intestinal de la SADI.'
+      }
+    },
+
+    /* ── TOFACITINIBE (745) ──────────────────────────────────────────────── */
+    "tofacitinibe": {
+      name: { pt: 'Tofacitinibe (Citrato de)', es: 'Tofacitinib (Citrato de)' },
+      category: 'gastroenterologia',
+      class: { pt: 'Imunomodulador Sintético / Inibidor Seletivo de JAK 1 e JAK 3', es: 'Inmunomodulador Sintético / Inhibidor Selectivo de JAK 1 y JAK 3' },
+      indications: {
+        pt: ['Retocolite Ulcerativa (RCU) ativa moderada a grave em adultos que falharam aos anti-TNF', 'Artrite Reumatóide crônica e Artrite Psoríaca ativa'],
+        es: ['Colitis Ulcerosa moderada a severa activa refractaria a anti-TNF', 'Artritis Reumatoide activa']
+      },
+      commercialNames: { br: ['Xeljanz'], ar: ['Xeljanz', 'Tofat'] },
+      presentation: { pt: ['Comprimidos revestidos 5 mg e 10 mg; Xeljanz XR 11 mg'], es: ['Comprimidos 5 mg, 10 mg y de liberación prolongada 11 mg'] },
+      mechanism: {
+        pt: 'O Interruptor de Citocinas Oral. Diferente dos anticorpos (que são injetáveis e grudam fora da célula), o Tofacitinibe é uma pequena molécula oral que entra na célula inflamatória e inibe as enzimas JAK1 e JAK3. Ao bloquear a via JAK, ele impede que os receptores celulares transmitam o sinal para o núcleo, "desligando" a fabricação de múltiplas citocinas inflamatórias (IL-2, IL-4, IL-7, IL-9, IL-15 e IL-21) ao mesmo tempo.',
+        es: 'Pequeña molécula sintética inhibidora de las quinasas Janus (JAK1 y JAK3). Bloquea la vía de señalización intracelular JAK-STAT, impidiendo la transducción de señales de múltiples interleucinas claves en la patogenia inmunoinflamatoria de la colitis.'
+      },
+      dose: {
+        adult: {
+          pt: 'Indução RCU: 10 mg via oral, DUAS VEZES ao dia (a cada 12h) por 8 semanas. Manutenção: 5 mg via oral, DUAS VEZES ao dia. Se perda de resposta, pode manter 10 mg 2x/dia monitorando riscos.',
+          es: 'Inducción CU: 10 mg vía oral, DOS VECES al día por 8 semanas. Mantenimiento: 5 mg vía oral, DOS VECES al día.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 2 anos apenas para Artrite Idiopática Juvenil com ajuste estrito por peso corporal.',
+          es: 'Aprobado en artritis juvenil, no indicado en colitis pediátrica.'
+        }
+      },
+      administration: { pt: ['Uso oral diário. Pode ser tomado com ou sem alimentos. Os comprimidos de liberação prolongada (XR 11mg) devem ser deglutidos inteiros, sem mastigar.'], es: ['Uso oral. Puede administrarse con o sin alimentos de forma indistinta.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se insuficiência renal moderada a grave (ClCr < 40 mL/min) ou diálise: reduzir a dose pela metade (se a indicação for 10mg 2x, dar 5mg 2x; se for 5mg 2x, dar 5mg 1x/dia).', es: 'Si ClCr < 40 mL/min, disminuir la dosis a la mitad de forma obligatoria.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Reduzir a dose pela metade em insuficiência hepática moderada (Child-Pugh B). ABSOLUTAMENTE CONTRAINDICADO na disfunção grave (Child-Pugh C).', es: 'Disminuir dosis a la mitad en insuficiencia moderada. Contraindicado en insuficiencia grave.' } },
+      commonAdverseEffects: { pt: ['Infecções respiratórias e sinusite', 'Hipercolesterolemia (eleva colesterol LDL e HDL)', 'Cefaleia e diarreia leve', 'Aumento de Creatina Fosfoquinase (CPK)'], es: ['Infecciones respiratorias', 'Dislipidemia (aumento de LDL y HDL)', 'Cefalea', 'Aumento de CPK'] },
+      dangerousAdverseEffects: { pt: ['HERPES ZOSTER DISSEMINADO (explosão de cobreiro cutâneo agressivo por quebra da barreira viral)', 'TROMBOEMBOLISMO VENOSO E TEP (Alerta Caixa Preta de coágulos pulmonares fatais em doses altas)', 'Perfuração Gastrointestinal'], es: ['HERPES ZOSTER (Reactivación viral dermatológica severa)', 'TROMBOEMBOLISMO VENOSO Y TEP (Caja Negra)', 'Perforación gastrointestinal'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência hepática grave Child-Pugh C', 'Infecções graves ativas ou tuberculose', 'Histórico de trombose venosa profunda ativa'], es: ['Insuficiencia hepática grave', 'Tuberculosis activa', 'Riesgo alto de trombosis'] },
+        relative: { pt: ['Idosos > 65 anos polifarmácia ou fumantes (risco aumentado de infarto/câncer de classe)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A CAIXA PRETA DOS COÁGULOS E DA EMBOLIA (O ALERTA DO XELJANZ): O Tofacitinibe carrega um aviso de Caixa Preta rígido do FDA. O uso da dose de indução de 10 mg 2x/dia aumenta de forma severa o risco de Trombose Venosa Profunda (TVP) e Embolia Pulmonar (TEP) letal. Monitorar falta de ar ou inchaço unilateral na panturrilha.', es: 'CAJA NEGRA DE TROMBOEMBOLISMO: Posee advertencia de Caja Negra de la FDA por riesgo aumentado de Tromboembolismo Venoso y Embolia Pulmonar fatal, especialmente en dosis de 10 mg dos veces al día en pacientes con factores de riesgo cardiovascular.' }
+      },
+      references: {
+        pt: 'OCTAVE Induction 1 and 2 Trials (Colite - NEJM 2017); FDA Drug Safety Communication on JAK inhibitors; Consenso GEDIIB.',
+        es: 'OCTAVE Trials (NEJM 2017); FDA Drug Safety Communication; Guías de Consenso de la SAGE.'
+      }
+    },
+
+    /* ── UPADACITINIBE (746) ─────────────────────────────────────────────── */
+    "upadacitinibe": {
+      name: { pt: 'Upadacitinibe Monohidratado', es: 'Upadacitinib Monohidratado' },
+      category: 'gastroenterologia',
+      class: { pt: 'Imunomodulador Sintético / Inibidor Altamente Seletivo de JAK 1', es: 'Inmunomodulador Sintético / Inhibidor Altamente Selectivo de JAK 1' },
+      indications: {
+        pt: ['Doença de Crohn ativa moderada a grave em adultos refratários a biológicos', 'Retocolite Ulcerativa ativa moderada a grave', 'Dermatite Atópica grave e Artrite Reumatóide'],
+        es: ['Enfermedad de Crohn activa moderada a severa', 'Colitis Ulcerosa refractaria a anti-TNF', 'Dermatitis Atópica grave']
+      },
+      commercialNames: { br: ['Rinvoq'], ar: ['Rinvoq'] },
+      presentation: { pt: ['Comprimidos de liberação prolongada 15 mg, 30 mg e 45 mg'], es: ['Comprimidos de liberación prolongada 15 mg, 30 mg y 45 mg'] },
+      mechanism: {
+        pt: 'O Bisturi Molecular de JAK. Diferente do Tofacitinibe (que bloqueia JAK1 e JAK3), o Upadacitinibe foi refinado para bloquear de forma quase exclusiva a enzima JAK1. Essa seletividade cirúrgica desliga a sinalização das interleucinas inflamatórias (IL-2, IL-6, IL-15, IFN-gama) poupando os canais de JAK2/3 que fabricam as hemácias, apresentando menor taxa de anemia severa, mantendo eficácia máxima no intestino.',
+        es: 'Inhibidor selectivo y reversible de la Janus Quinasa tipo 1 (JAK1). Al inhibir preferencialmente la JAK1 frente a JAK2 y JAK3, bloquea la transducción de interleucinas proinflamatorias como la IL-6 y el Interferón gamma, reduciendo la inflamación de la mucosa con menor mielosupresión.'
+      },
+      dose: {
+        adult: {
+          pt: 'Indução (Crohn/RCU): 45 mg via oral, UMA VEZ ao dia, por 8 semanas. Manutenção: 15 mg ou 30 mg via oral uma vez ao dia, dependendo da gravidade e resposta clínica.',
+          es: 'Inducción: 45 mg vía oral, UNA VEZ al día por 8 semanas. Mantenimiento: 15 mg o 30 mg vía oral, UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 12 anos apenas para Dermatite Atópica grave (dose de 15 mg uma vez ao dia).',
+          es: 'Aprobado en > 12 años solo para Dermatitis Atópica.'
+        }
+      },
+      administration: { pt: ['Comprimido de liberação prolongada. Deve ser engolido INTEIRO uma vez ao dia, com ou sem alimentos. Nunca quebrar, triturar ou mastigar o comprimido Rinvoq.'], es: ['Uso oral diario. Tragar entero sin partir ni masticar para no alterar la matriz de liberación prolongada.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se insuficiência renal grave (ClCr < 30 mL/min), a dose de manutenção recomendada fica restrita a 15 mg uma vez ao dia. Não estudado em diálise.', es: 'En insuficiencia renal grave (ClCr < 30 mL/min), la dosis máxima de mantenimiento es de 15 mg/día.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Sem ajuste em disfunção leve ou moderada. ABSOLUTAMENTE CONTRAINDICADO na insuficiência hepática grave (Child-Pugh C).', es: 'Contraindicado en insuficiencia hepática grave por riesgo de toxicidad.' } },
+      commonAdverseEffects: { pt: ['Infecções respiratórias altas', 'Acne inflamatória severa de início súbito', 'Elevação de transaminases e lípidos', 'Náusea e cefaleia'], es: ['Infecciones respiratorias', 'Brotes de acné severo', 'Aumento de transaminasas y lípidos', 'Cefalea'] },
+      dangerousAdverseEffects: { pt: ['Reativação de Herpes Zoster e Tuberculose Latente', 'Eventos Cardiovasculares Maiores (MACE - Infarto, AVC Alerta de Classe Caixa Preta)', 'Perfuração intestinal crônica'], es: ['Reactivación de Herpes Zóster', 'Eventos Cardiovasculares Mayores (MACE - Caja Negra de clase)', 'Perforación intestinal'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência hepática grave', 'Tuberculose ativa ou infecções sistêmicas severas', 'Gravidez e lactação'], es: ['Insuficiencia hepática grave', 'Tuberculosis activa', 'Embarazo y lactancia'] },
+        relative: { pt: ['Idosos > 65 anos com alto risco de infarto do miocárdio ou fumantes pesados'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O AVISO DE CLASSE MACE (O RISCO DO INFARTO): Sendo um inibidor de JAK, o Rinvoq herda o alerta de Caixa Preta de classe sobre o risco de infarto, AVC e câncer. Embora seja super seletivo para JAK1, evite o uso de doses altas de manutenção (30mg) em idosos cardiopatas graves ou fumantes crônicos.', es: 'ALERTA DE CLASE MACE: Comparte la advertencia de Caja Negra por riesgo de Eventos Cardiovasculares Mayores (Infarto, ACV) y neoplasias malignas. Usar con extrema precaución en pacientes con alto riesgo aterogénico previo.' }
+      },
+      references: {
+        pt: 'U-ACHIEVE e U-ACCOMPLISH Trials (RCU - Lancet 2021); U-EXCEL e U-EXCEED Trials (Crohn); FDA Rinvoq Box Warning.',
+        es: 'U-ACHIEVE Trials (Lancet 2021); U-EXCEL Trials; FDA Prescribing Information.'
+      }
+    },
+
+    /* ── FILGOTINIBE (747) ──────────────────────────────────────────────── */
+    "filgotinibe": {
+      name: { pt: 'Filgotinibe', es: 'Filgotinib' },
+      category: 'gastroenterologia',
+      class: { pt: 'Imunomodulador Sintético / Inibidor Preferencial de JAK 1', es: 'Inmunomodulador Sintético / Inhibidor Preferencial de JAK 1' },
+      indications: {
+        pt: ['Retocolite Ulcerativa (RCU) ativa moderada a grave em adultos que apresentaram resposta inadequada ou intolerância a biológicos', 'Artrite Reumatóide moderada a grave'],
+        es: ['Colitis Ulcerosa moderada a severa activa en adultos refractarios', 'Artritis Reumatoide']
+      },
+      commercialNames: { br: ['Jyseleca (Importação especializada)'], ar: ['Jyseleca'] },
+      presentation: { pt: ['Comprimidos revestidos 100 mg e 200 mg'], es: ['Comprimidos 100 mg y 200 mg'] },
+      mechanism: {
+        pt: 'Inibidor reversível e altamente seletivo da enzima JAK1. Bloqueia a cascata intracelular das citocinas sem interferir na sinalização de JAK2 (preservando a homeostase de plaquetas e hemácias na medula), controlando a inflamação ulcerosa com excelente perfil de segurança hematológica.',
+        es: 'Inhibidor preferencial de la Janus Quinasa tipo 1 (JAK1). Su selectividad minimiza la inhibición de JAK2, disminuyendo la incidencia de anemia y trombocitopenia en comparación con los inhibidores JAK pan-seletivos, modulando la inflamación del colon.'
+      },
+      dose: {
+        adult: {
+          pt: 'Indução e Manutenção RCU: 200 mg via oral, UMA VEZ ao dia, com ou sem alimentos. Em idosos (> 75 anos) ou renais crônicos, reduzir para 100 mg uma vez ao dia.',
+          es: 'Dosis Estándar: 200 mg vía oral, UNA VEZ al día de forma continua. Ancianos (> 75 años): 100 mg una vez al día.'
+        },
+        pediatric: {
+          pt: 'Não indicado ou estabelecido em menores de 18 anos.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['Uso oral diário. Engolir o comprimido inteiro com um copo de água. Pode ser ingerido de estômago cheio ou vazio.'], es: ['Uso oral diario. Puede tomarse con o sin alimentos de forma indiferente.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr entre 15-60 mL/min, reduzir a dose obrigatoriamente para 100 mg uma vez ao dia. Contraindicado se ClCr < 15 mL/min.', es: 'Si ClCr 15-60 mL/min, disminuir la dosis a 100 mg/día. Contraindicado si ClCr < 15.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem ajuste em disfunção leve ou moderada. Não recomendado na insuficiência grave (Child-Pugh C).', es: 'No recomendado en insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['Náusea leve', 'Infecções respiratórias altas e tonturas', 'Hipercolesterolemia moderada'], es: ['Náusea leve', 'Infecciones respiratorias', 'Aumento de lípidos en sangre'] },
+      dangerousAdverseEffects: { pt: ['Reativação de Herpes Zoster e Tuberculose Latente', 'Tromboembolismo Venoso (TEP) - Alerta de Classe', 'Redução transitória da espermatogênese (Alerta de fertilidade masculina)'], es: ['Reactivación de Herpes Zóster', 'Tromboembolismo Venoso (TEP)', 'Riesgo teórico reversible en la espermatogénesis masculina'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez ativa (Risco teratogênico severo)', 'Infecções graves ativas sistêmicas'], es: ['Embarazo activo', 'Infecciones graves no controladas'] },
+        relative: { pt: ['Uso concomitante com indutores potentes da CYP3A4 (Rifampicina)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA FERTILIDADE MASCULINA: Nos estudos animais de toxicologia, o Filgotinibe causou atrofia dos túbulos seminíferos com redução da contagem de espermatozoides. Embora os estudos humanos (MANTA) tenham mostrado segurança, oriente o paciente jovem em planejamento familiar sobre esse perfil de classe.', es: 'ALERTA DE FERTILIDAD MASCULINA: Estudios preclínicos indicaron riesgo de toxicidad testicular y alteración en la espermatogénesis. Aunque el estudio clínico MANTA demostró seguridad en humanos, se recomienda precaución en hombres jóvenes en edad fértil.' }
+      },
+      references: {
+        pt: 'SELECTION Trial (Filgotinib in Ulcerative Colitis - Lancet 2021); MANTA Safety Study (Fertilidade); EMA Jyseleca Data.',
+        es: 'SELECTION Trial (Lancet 2021); MANTA Safety Study; Ficha Técnica de la Agencia Europea de Medicamentos (EMA).'
+      }
+    },
+
+    /* ── RISANQUIZUMABE (748) ───────────────────────────────────────────── */
+    "risanquizumabe": {
+      name: { pt: 'Risanquizumabe', es: 'Risankizumab' },
+      category: 'gastroenterologia',
+      class: { pt: 'Anticorpo Monoclonal Humano Anti-IL-23 / Imunobiológico de Alta Seletividade', es: 'Anticuerpo Monoclonal Humano Anti-IL-23 / Inmunobiológico de Alta Selectividad' },
+      indications: {
+        pt: ['Doença de Crohn ativa moderada a grave em adultos que falharam a terapias convencionais ou anti-TNF', 'Psoríase em placas grave e Artrite Psoríaca'],
+        es: ['Enfermedad de Crohn activa moderada a severa', 'Psoriasis en placas grave y Artritis Psoriásica']
+      },
+      commercialNames: { br: ['Skyrizi'], ar: ['Skyrizi'] },
+      presentation: { pt: ['Frasco-ampola IV 600 mg/10 mL para indução', 'Cartucho com caneta injetável Subcutânea 360 mg/2,4 mL para manutenção'], es: ['Vial IV 600 mg para inducción', 'Cartucho Subcutáneo 360 mg para mantenimiento'] },
+      mechanism: {
+        pt: 'O Bloqueador Cirúrgico da IL-23. É um anticorpo IgG1 puramente humano que se liga de forma ultra-seletiva à subunidade p19 da Interleucina-23 (IL-23). Ao contrário do Ustekinumabe (que bloqueia IL-12 e IL-23 juntas), o Risanquizumabe foca APENAS na IL-23. Isso paralisa a ativação dos linfócitos patogênicos Th17 no intestino, parando a inflamação destrutiva sem alterar os caminhos de defesa da IL-12 contra vírus e tumores.',
+        es: 'Anticuerpo monoclonal humano IgG1 que se une selectivamente a la subunidad p19 de la interleucina 23 (IL-23), bloqueando su cascada biológica. Esto suprime la diferenciación de linfocitos Th17 sin alterar la vía de la IL-12, logrando un control inflamatorio intestinal óptimo con mínima inmunodepresión sistémica.'
+      },
+      dose: {
+        adult: {
+          pt: 'Indução Gástrica: 600 mg via Intravenosa (infusão de 1h) na semana 0, semana 4 e semana 8. Manutenção Crônica: 360 mg via Subcutânea na semana 12, repetida a cada 8 semanas (a cada 2 meses).',
+          es: 'Inducción: 600 mg vía Intravenosa lenta en las semanas 0, 4 y 8. Mantenimiento: 360 mg vía Subcutánea en la semana 12, y luego cada 8 semanas de por vida.'
+        },
+        pediatric: {
+          pt: 'Não indicado ou aprovado para menores de 18 anos em indicações intestinais.',
+          es: 'No recomendado en menores de 18 años.'
+        }
+      },
+      administration: { pt: ['A indução é estritamente INTRAVENOSA lenta hospitalar. A manutenção de 360mg usa um dispositivo injetor subcutâneo especial colado na pele do abdômen ou coxa que infunde a dose automaticamente ao longo de 5 minutos.'], es: ['La inducción es INTRAVENOSA. El mantenimiento de 360mg utiliza un inyector corporal electrónico subcutáneo automatizado de 5 minutos de duración.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose, eliminado por catabolismo proteico.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Infecções respiratórias altas e cefaleia', 'Fadiga transitória pós-infusão', 'Reações leves eritematosas no sítio da pele'], es: ['Infecciones respiratorias y cefalea', 'Fatiga transitoria post-infusión', 'Eritema local'] },
+      dangerousAdverseEffects: { pt: ['Reativação de Tuberculose Latente (Risco muito menor que anti-TNF, mas monitorado)', 'Hepatotoxicidade medicamentosa aguda (Exige controle de enzimas laboratoriais)'], es: ['Reactivación de Tuberculosis Latente', 'Hepatotoxicidad aguda (Monitorear transaminasas)'] },
+      contraindications: {
+        absolute: { pt: ['Infecções bacterianas ou fúngicas clinicamente graves ativas', 'Tuberculose ativa'], es: ['Infecciones activas clínicamente graves', 'Tuberculosis activa'] },
+        relative: { pt: ['Uso associado concomitante com outros imunobiológicos de alta potência'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O DISPOSITIVO ELETRÔNICO NA PELE: A dose de manutenção de 360mg do Skyrizi para Crohn não é uma injeção comum. Ela vem com um aparelho eletrônico colado no corpo. O paciente precisa acionar o botão e esperar o bipe luminoso terminar. Erros no manuseio jogam fora o remédio que custa milhares de reais; treine o paciente na clínica.', es: 'ALERTA DEL INYECTOR CORPORAL DE MANTENIMIENTO: El cartucho de 360mg utiliza un dispositivo electrónico adhesivo automatizado. El paciente debe ser entrenado en el consultorio para evitar la pérdida accidental del fármaco por mala manipulación.' }
+      },
+      references: {
+        pt: 'ADVANCE e MOTIVATE Induction Trials (Crohn - Lancet 2022); FORTIFY Maintenance Trial; Diretrizes GEDIIB 2024.',
+        es: 'ADVANCE & MOTIVATE Trials (Lancet 2022); FORTIFY Maintenance Trial; Directrices de Consenso de la SAGE.'
+      }
+    },
+
+    /* ── MIRIQUIZUMABE (749) ─────────────────────────────────────────────── */
+    "miriquizumabe": {
+      name: { pt: 'Miriquizumabe', es: 'Mirikizumab' },
+      category: 'gastroenterologia',
+      class: { pt: 'Anticorpo Monoclonal Humano Anti-IL-23 p19 / Imunobiológico de Alvo Colorretal', es: 'Anticuerpo Monoclonal Humano Anti-IL-23 p19 / Inmunobiológico de Alvo Colorrectal' },
+      indications: {
+        pt: ['Tratamento da Retocolite Ulcerativa (RCU) ativa moderada a grave em adultos que falharam ou foram intolerantes a terapias biológicas ou inibidores de JAK'],
+        es: ['Tratamiento de la Colitis Ulcerosa moderada a severa activa en adultos con falla a biológicos previos']
+      },
+      commercialNames: { br: ['Omvoh'], ar: ['Omvoh'] },
+      presentation: { pt: ['Frasco-ampola IV 300 mg/15 mL para indução', 'Caneta injetável Subcutânea 100 mg/1 mL para manutenção'], es: ['Vial IV 300 mg para inducción', 'Pluma Subcutánea 100 mg para mantenimiento'] },
+      mechanism: {
+        pt: 'O Cirurgião da Retocolite. É um anticorpo monoclonal humanizado direcionado especificamente contra a subunidade p19 da Interleucina-23. Ao bloquear a IL-23 no intestino grosso, ele paralisa o recrutamento de neutrófilos e linfócitos destrutivos que causam o sangramento e o pus nas úlceras da colite, induzindo taxas altíssimas de cicatrização endoscópica da mucosa do reto e cólon.',
+        es: 'Anticuerpo monoclonal humanizado IgG4 que se une selectivamente a la subunidad p19 de la IL-23. Bloquea la activación celular dependiente de esta vía en el colon, deteniendo el reclutamiento de neutrófilos y linfocitos destructivos, induciendo remisión clínica duradera de las úlceras sangrantes.'
+      },
+      dose: {
+        adult: {
+          pt: 'Indução RCU: 300 mg via Intravenosa (infusão de 30 minutos) na semana 0, semana 4 e semana 8. Manutenção: 200 mg administrados via Subcutânea (DUAS injeções de 100 mg) na semana 12, repetida a cada 4 semanas (uma vez por mês).',
+          es: 'Inducción: 300 mg vía Intravenosa lenta en las semanas 0, 4 y 8. Mantenimiento: 200 mg vía Subcutánea (DOS plumas de 100 mg) la semana 12, y luego cada 4 semanas de por vida.'
+        },
+        pediatric: {
+          pt: 'Não indicado ou aprovado em menores de 18 anos.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['Indução IV hospitalar lenta de 30 min. A manutenção de 200mg exige a aplicação consecutiva de DUAS canetas subcutâneas de 100mg no mesmo dia, alternando coxas ou abdômen.'], es: ['Inducción INTRAVENOSA. El mantenimiento exige la aplicación de DOS plumas subcutáneas de 100mg consecutivas el mismo día del mes.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, não depurado pelos rins.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Nasofaringite e resfriado comum', 'Cefaleia episódica', 'Reações dolorosas no local da picada subcutânea'], es: ['Nasofaringitis', 'Cefalea', 'Dolor local en el sitio de inyección'] },
+      dangerousAdverseEffects: { pt: ['Reativação de Tuberculose Latente', 'Hepatotoxicidade aguda com elevação acentuada de transaminases (Requer suspensão se TGO/TGP > 5x o normal)'], es: ['Reactivación de Tuberculosis', 'Hepatotoxicidad severa con picos de transaminasas'] },
+      contraindications: {
+        absolute: { pt: ['Infecções sistêmicas ativas graves não controladas', 'Tuberculose ativa confirmada'], es: ['Infección activa grave', 'Tuberculosis activa'] },
+        relative: { pt: ['Histórico de reações anafiláticas a anticorpos IgG4'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A REGRA DAS DUAS PICADAS NO MANTENIMENTO: O Omvoh (Miriquizumabe) possui uma pegadinha na manutenção domiciliar: a dose padrão é de 200mg, mas a caneta injetável que vem na caixa possui apenas 100mg. O paciente PRECISA aplicar as DUAS canetas seguidas no mesmo dia para fechar a dose. Aplicar apenas uma causa subdosagem e falha total do remédio.', es: 'ALERTA DE DOS APLICACIONES DE MANTENIMIENTO: La dosis mensual de mantenimiento es de 200mg, pero las plumas comerciales son de 100mg. El paciente DEBE inyectarse DOS plumas consecutivas en el mismo momento. Aplicar solo una anula la eficacia por subdosificación.' }
+      },
+      references: {
+        pt: 'LUCENT-1 Induction Trial (Colite - JAMA 2023); LUCENT-2 Maintenance Trial; EMA Product Information Omvoh.',
+        es: 'LUCENT-1 & LUCENT-2 Trials (JAMA 2023); Ficha Técnica de la Agencia Europea de Medicamentos (EMA).'
+      }
+    }
+
+  }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 444 (golimumabe + tofacitinibe + upadacitinibe + filgotinibe + risanquizumabe + miriquizumabe — Anti-TNF Humano/Inibidores JAK/Anti-IL-23 p19 para DII) */
+
 })();
