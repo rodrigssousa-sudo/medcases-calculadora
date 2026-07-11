@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=440" />
-  <link rel="stylesheet" href="css/build233.css?v=440" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=440" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=440" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=440" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=440" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=440" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=441" />
+  <link rel="stylesheet" href="css/build233.css?v=441" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=441" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=441" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=441" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=441" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=441" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=440" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=441" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=440" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=441" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=440" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=441" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=440" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=441" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=440" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=441" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=440" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=441" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=440" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=441" />
 
   <style>
     /* ============================================================ RESET */
@@ -7609,7 +7609,7 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=440" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=441" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
@@ -21345,6 +21345,251 @@ if (typeof window.hmFilterDrugs !== 'function') {
   window.hmFilterDrugs = function() { /* pre-stub: aguardando DOMContentLoaded */ };
 }
 
+/* ══════════════════════════════════════════════════════════════════════════
+   BUILD 408-RECEIVER-FINAL — DEEPLINK INGESTION ENGINE
+   ──────────────────────────────────────────────────────────────────────────
+   Captura payload enviado pelo App Nativo via URL query string no boot:
+     ?screen=patient_data&payload=<JSON-URL-encoded>
+
+   Esquema esperado do JSON:
+     {
+       peso:       Number,   // kg  (obrigatório para ajuste renal)
+       idade:      Number,   // anos
+       sexo:       'M'|'F',
+       altura:     Number,   // cm
+       creat:      Number,   // mg/dL — creatinina sérica atual
+       ckd_epi:    Number,   // TFG CKD-EPI (mL/min/1.73m²)
+       cockcroft:  Number,   // ClCr Cockcroft-Gault (mL/min)
+       kdigo:      Number    // estágio KDIGO 0-5 (0 = sem LRA)
+     }
+
+   Fluxo de execução (sempre após DOMContentLoaded):
+     1. Parse seguro do JSON decodificado
+     2. Ingestão em window.patientData (estado global)
+     3. Preenchimento físico dos inputs reais (#hm-weight, #hm-age, etc.)
+     4. Ativação do sexo via hmSetSex() — respeita a cadeia de patches
+     5. Disparo de hmCalcCockcroft() → preenche ClCr + pill semafórica
+     6. _onPatientDataUpdated() → notifica Infusão / Fluidos / Eletrólitos
+     7. Toast de confirmação + limpeza elegante da URL (sem reload)
+     8. Se kdigo >= 1 → badge visual de alerta renal no card de paciente
+   ════════════════════════════════════════════════════════════════════════ */
+function _handleNativeDeeplink() {
+  try {
+    /* ── 0. Lê parâmetros da URL ── */
+    var params    = new URLSearchParams(window.location.search);
+    var screen    = params.get('screen');
+    var rawPayload = params.get('payload');
+
+    if (screen !== 'patient_data' || !rawPayload) return;
+
+    /* ── 1. Parse seguro do payload ── */
+    var data;
+    try {
+      data = JSON.parse(decodeURIComponent(rawPayload));
+    } catch(parseErr) {
+      console.error('[MedCases·Deeplink] Payload JSON inválido:', parseErr.message);
+      return;
+    }
+
+    console.log('📥 [MedCases·Deeplink] BUILD 408-RECEIVER-FINAL — payload renal ingerido:', data);
+
+    /* ── 2. Ingestão no Estado Global (window.patientData) ── */
+    window.patientData = window.patientData || {};
+
+    /* Dados antropométricos */
+    if (data.peso      != null && data.peso      > 0) window.patientData.weight     = data.peso;
+    if (data.idade     != null && data.idade     > 0) window.patientData.age        = data.idade;
+    if (data.altura    != null && data.altura    > 0) window.patientData.height     = data.altura;
+    if (data.sexo      === 'M' || data.sexo      === 'F') window.patientData.sex    = data.sexo;
+
+    /* Dados renais calculados — preservados para motor de fármacos */
+    if (data.creat     != null) window.patientData.creatinine = data.creat;
+    if (data.cockcroft != null) window.patientData.clcr       = data.cockcroft;
+    if (data.ckd_epi   != null) window.patientData.ckd_epi   = data.ckd_epi;
+    if (data.kdigo     != null) window.patientData.kdigo      = data.kdigo;
+
+    /* ── 3. Persistência no localStorage (sincronização total) ── */
+    try {
+      localStorage.setItem('medcases_hm_patient_v1', JSON.stringify(window.patientData));
+      /* Sincroniza também a chave legada (módulos mais antigos lêem de cá) */
+      var legacy = {};
+      try { legacy = JSON.parse(localStorage.getItem('pacienteAtual') || '{}'); } catch(e) {}
+      legacy.peso   = window.patientData.weight;
+      legacy.weight = window.patientData.weight;
+      legacy.idade  = window.patientData.age;
+      legacy.age    = window.patientData.age;
+      legacy.sexo   = window.patientData.sex;
+      legacy.sex    = window.patientData.sex;
+      legacy.altura = window.patientData.height;
+      localStorage.setItem('pacienteAtual', JSON.stringify(legacy));
+    } catch(lsErr) {
+      console.warn('[MedCases·Deeplink] localStorage indisponível:', lsErr.message);
+    }
+
+    /* ── 4. Preenchimento físico dos inputs reais no DOM ── */
+    /* Dispara 'input' com bubbles:true para acionar oninput handlers (ex: hmCalcCockcroft) */
+    function _fillInput(id, value) {
+      if (value == null) return;
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.value = String(value).replace(',', '.');
+      el.dispatchEvent(new Event('input',  { bubbles: true }));
+      el.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    /* Campos do painel HM (aba Dados do Paciente real) */
+    _fillInput('hm-weight',    data.peso);
+    _fillInput('hm-age',       data.idade);
+    _fillInput('hm-height',    data.altura);
+    _fillInput('hm-creatinina', data.creat);
+
+    /* Campos da calculadora de Clearance da Home (inp-*) — sincronização cruzada */
+    _fillInput('inp-weight',    data.peso);
+    _fillInput('inp-age',       data.idade);
+    _fillInput('inp-height',    data.altura);
+    _fillInput('inp-creatinine', data.creat);
+
+    /* Campo oculto de peso do módulo Infusão */
+    _fillInput('inf-weight', data.peso);
+    /* Campo inline de peso do módulo Infusão (visível) */
+    _fillInput('inf-weight-inline-input', data.peso);
+
+    /* ── 5. Ativa sexo via hmSetSex() — respeita toda a cadeia de patches ── */
+    if (data.sexo === 'M' || data.sexo === 'F') {
+      if (typeof window.hmSetSex === 'function') {
+        window.hmSetSex(data.sexo);
+      } else if (typeof setSex === 'function') {
+        setSex(data.sexo);
+      }
+      /* Garante que currentSex esteja sincronizado */
+      if (typeof currentSex !== 'undefined') {
+        try { currentSex = data.sexo; } catch(e) {}
+      }
+    }
+
+    /* ── 6. Dispara hmCalcCockcroft() → preenche ClCr + pill semafórica ── */
+    /* Se o app nativo já enviou cockcroft calculado, injeta direto no hidden */
+    if (data.cockcroft != null) {
+      var clcrHid = document.getElementById('hm-clcr');
+      if (clcrHid) {
+        clcrHid.value = data.cockcroft;
+        clcrHid.dispatchEvent(new Event('input',  { bubbles: true }));
+        clcrHid.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      /* Atualiza pill semafórica diretamente */
+      var pillVal  = document.getElementById('hm-pv-clcr');
+      var pillSrc  = document.getElementById('hm-pv-clcr-src');
+      var pillWrap = document.getElementById('hm-result-pills');
+      if (pillVal)  pillVal.textContent  = data.cockcroft;
+      if (pillSrc)  { pillSrc.textContent = 'App'; pillSrc.style.display = ''; pillSrc.style.color = 'rgba(52,211,153,0.90)'; }
+      if (pillWrap && pillWrap.style.display === 'none') pillWrap.style.display = 'grid';
+      /* Cor semafórica do pill */
+      var pillEl = document.getElementById('hm-pill-clcr');
+      if (pillEl) {
+        var cc = data.cockcroft;
+        pillEl.style.borderColor =
+          cc < 10  ? 'rgba(248,113,113,0.55)' :
+          cc < 30  ? 'rgba(251,191, 36,0.50)' :
+          cc < 50  ? 'rgba(251,146, 60,0.50)' :
+                     'rgba( 56,189,248,0.30)';
+        pillEl.style.transition = 'border-color 0.35s ease';
+      }
+    }
+
+    /* Recalcula via motor nativo para garantir consistência com TODOS os campos */
+    if (typeof window.hmCalcCockcroft === 'function') {
+      window.hmCalcCockcroft();
+    }
+
+    /* ── 7. Notifica ecossistema — Infusão / Fluidos / Eletrólitos ── */
+    if (typeof _onPatientDataUpdated === 'function') {
+      _onPatientDataUpdated();
+    }
+
+    /* Atualiza o card global de Paciente Atual (barra superior) */
+    if (typeof _updateGlobalPatientBar === 'function') {
+      _updateGlobalPatientBar();
+    }
+
+    /* ── 8. Alerta visual KDIGO se paciente em risco renal ── */
+    if (data.kdigo != null && data.kdigo >= 1) {
+      /* Aguarda renderização completa antes de exibir */
+      setTimeout(function() {
+        var isES = (typeof currentLang !== 'undefined') && currentLang === 'es';
+        var kdigoLabel = ['', 'KDIGO 1 (Leve)', 'KDIGO 2 (Moderado)', 'KDIGO 3 (Grave)'][Math.min(data.kdigo, 3)]
+                       || 'KDIGO ' + data.kdigo;
+        var msg = isES
+          ? ('🚨 LRA ' + kdigoLabel + ' detectada — manejo de fluidos ativo')
+          : ('🚨 LRA ' + kdigoLabel + ' detectada — manejo de fluidos ativo');
+
+        /* Toast de alerta renal */
+        if (typeof showToast === 'function') {
+          showToast(msg, 4500);
+        }
+
+        /* Adiciona badge de alerta renal ao card de paciente (se existir) */
+        var patientCard = document.getElementById('hm-patient-card') ||
+                          document.getElementById('patient-card-bar') ||
+                          document.querySelector('.hm-patient-bar');
+        if (patientCard && !patientCard.querySelector('.deeplink-kdigo-badge')) {
+          var badge = document.createElement('div');
+          badge.className = 'deeplink-kdigo-badge';
+          badge.setAttribute('title', isES ? 'Lesión Renal Aguda detectada' : 'Lesão Renal Aguda detectada');
+          badge.style.cssText = [
+            'display:inline-flex;align-items:center;gap:4px;',
+            'background:rgba(248,113,113,0.18);border:1px solid rgba(248,113,113,0.45);',
+            'border-radius:6px;padding:2px 8px;font-size:10px;font-weight:700;',
+            'color:#F87171;letter-spacing:0.4px;margin-left:6px;',
+            'animation:_dlBadgePulse 2s ease-in-out infinite'
+          ].join('');
+          badge.innerHTML = '⚠️ LRA&nbsp;' + kdigoLabel;
+          patientCard.appendChild(badge);
+
+          /* Injeta keyframe de pulso se ainda não existir */
+          if (!document.getElementById('_dlBadgePulseStyle')) {
+            var sty = document.createElement('style');
+            sty.id  = '_dlBadgePulseStyle';
+            sty.textContent = '@keyframes _dlBadgePulse{0%,100%{opacity:1}50%{opacity:0.55}}';
+            document.head.appendChild(sty);
+          }
+        }
+
+        /* Navega para o painel de Fluidos automaticamente se KDIGO >= 2 */
+        if (data.kdigo >= 2) {
+          if (typeof navigate === 'function') navigate('adult');
+          if (typeof showAdultPanel === 'function') {
+            setTimeout(function() { showAdultPanel('fluids'); }, 120);
+          }
+        }
+      }, 400);
+    } else {
+      /* Sem LRA — apenas confirma ingestão com toast de sucesso */
+      setTimeout(function() {
+        var isES = (typeof currentLang !== 'undefined') && currentLang === 'es';
+        var msg  = isES
+          ? '📲 Dados do paciente carregados via app'
+          : '📲 Dados do paciente carregados via app';
+        if (typeof showToast === 'function') showToast(msg, 2800);
+      }, 350);
+    }
+
+    /* ── 9. Limpeza elegante da URL (sem reload — preserva estado SPA) ── */
+    try {
+      var cleanURL = window.location.protocol + '//' +
+                     window.location.host     +
+                     window.location.pathname;
+      window.history.replaceState({ deeplink: 'patient_data', ingested: true }, '', cleanURL);
+    } catch(histErr) {
+      /* replaceState pode falhar em file:// ou iframes sandboxed — silencioso */
+    }
+
+    console.log('[MedCases·Deeplink] Ingestão concluída. patientData:', window.patientData);
+
+  } catch(err) {
+    console.error('[MedCases·Deeplink] Erro crítico no receptor:', err);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ═══════════════════════════════════════════════════════════════════
@@ -21651,6 +21896,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Disparo inicial de tradução — usa idioma já detectado (Diretriz 1) */
   setLang(currentLang || 'pt');
+
+  /* BUILD 408-RECEIVER-FINAL: processa deeplink do app nativo APÓS boot completo
+     (DRUG_DB montado + setLang aplicado + todos os inputs no DOM disponíveis).
+     Timeout 0 garante que hmSetSex e hmCalcCockcroft já foram definidos pelas
+     DIRETRIZES seguintes (que também ficam dentro deste mesmo DOMContentLoaded). */
+  setTimeout(_handleNativeDeeplink, 0);
 
   /* ============================================================
      DIRETRIZ 3 — INLINE HOME CALCULATION FLOW
@@ -24055,8 +24306,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=440"></script>
-<script src="database/analgesicos.js?v=440"></script>
+<script src="database/antimicrobianos.js?v=441"></script>
+<script src="database/analgesicos.js?v=441"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -24174,9 +24425,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=440', 'psico');
-    _loadScript('database/cardio.js?v=440',        'cardio');
-    _loadScript('database/interacoes.js?v=440',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=441', 'psico');
+    _loadScript('database/cardio.js?v=441',        'cardio');
+    _loadScript('database/interacoes.js?v=441',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -24186,51 +24437,51 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=440"></script>
-<script src="database/gastro.js?v=440"></script>
-<script src="database/gastro_imuno.js?v=440"></script>
-<script src="database/imuno_corticoide.js?v=440"></script>
-<script src="database/endocrino_glp1.js?v=440"></script>
-<script src="database/infusoes.js?v=440"></script>
-<script src="database/emergencia.js?v=440"></script>
-<script src="database/infectologia.js?v=440"></script>
-<script src="database/sedacao.js?v=440"></script>
-<script src="database/hematologia.js?v=440"></script>
-<script src="database/pneumologia.js?v=440"></script>
-<script src="database/gastroenterologia.js?v=440"></script>
-<script src="database/cardiologia.js?v=440"></script>
-<script src="database/analgesia_opioides.js?v=440"></script>
-<script src="database/alergia_imunologia.js?v=440"></script>
-<script src="database/pneumologia_otorrino.js?v=440"></script>
-<script src="database/neurologia.js?v=440"></script>
-<script src="database/prescricoes.js?v=440" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=441"></script>
+<script src="database/gastro.js?v=441"></script>
+<script src="database/gastro_imuno.js?v=441"></script>
+<script src="database/imuno_corticoide.js?v=441"></script>
+<script src="database/endocrino_glp1.js?v=441"></script>
+<script src="database/infusoes.js?v=441"></script>
+<script src="database/emergencia.js?v=441"></script>
+<script src="database/infectologia.js?v=441"></script>
+<script src="database/sedacao.js?v=441"></script>
+<script src="database/hematologia.js?v=441"></script>
+<script src="database/pneumologia.js?v=441"></script>
+<script src="database/gastroenterologia.js?v=441"></script>
+<script src="database/cardiologia.js?v=441"></script>
+<script src="database/analgesia_opioides.js?v=441"></script>
+<script src="database/alergia_imunologia.js?v=441"></script>
+<script src="database/pneumologia_otorrino.js?v=441"></script>
+<script src="database/neurologia.js?v=441"></script>
+<script src="database/prescricoes.js?v=441" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=440"></script>
+<script defer src="js/medcases-ux-v2.js?v=441"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=440"></script>
+<script defer src="js/hub-accordion.js?v=441"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=440"></script>
+<script defer src="js/build240b-accordion-fix.js?v=441"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=440"></script>
+<script defer src="js/calculator-overlay.js?v=441"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=440"></script>
+<script defer src="js/category-pills.js?v=441"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=440"></script>
+<script defer src="js/elec-calc.js?v=441"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=440"></script>
+<script defer src="js/deeplink-router.js?v=441"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=440"></script>
+<script defer src="js/build272-reactive-engine.js?v=441"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=440"></script>
+<script defer src="js/build283-accessory-bar.js?v=441"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
