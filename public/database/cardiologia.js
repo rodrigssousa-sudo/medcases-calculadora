@@ -751,4 +751,98 @@
     }
 
   }); /* fim Object.assign CARDIOLOGIA_DRUGS_DB — BUILD 440 (diltiazem — BCC não-diidropiridinido/AntiarrítmicoIV; doxazosina_lp — Alfa-1 GITS/HPB+HAS) */
+
+  /* ── BUILD 441 GUARD ─────────────────────────────────────────── */
+  if (typeof window.CARDIOLOGIA_DRUGS_DB !== 'object' || window.CARDIOLOGIA_DRUGS_DB === null) return;
+  Object.assign(window.CARDIOLOGIA_DRUGS_DB, {
+
+    /* ── PERINDOPRIL + INDAPAMIDA (705) ─────────────────────────────── */
+    "perindopril_indapamida": {
+      name: { pt: 'Perindopril + Indapamida', es: 'Perindopril + Indapamida' },
+      category: 'cardiologia',
+      class: { pt: 'Combinação Anti-hipertensiva / Inibidor da ECA + Diurético Tiazídico-like', es: 'Combinación Antihipertensiva / Inhibidor de la ECA + Diurético Tiazídico-like' },
+      indications: {
+        pt: ['Hipertensão Arterial Sistêmica ESSENCIAL em adultos', 'Redução do risco de micro e macrovascularidades em pacientes diabéticos tipo 2 (Estratégia do Estudo ADVANCE)'],
+        es: ['Hipertensión Arterial Sistémica ESENCIAL', 'Reducción del riesgo micro y macrovascular en diabéticos tipo 2 (Estrategia del Estudio ADVANCE)']
+      },
+      commercialNames: { br: ['Bi-Preterax', 'Preterax'], ar: ['Preterax', 'Preterax de Mantenimiento'] },
+      presentation: { pt: ['Comprimidos revestidos combinados 2,5/0,625 mg, 5/1,25 mg e 10/2,5 mg'], es: ['Comprimidos combinados de 2,5/0,625 mg, 5/1,25 mg y 10/2,5 mg'] },
+      mechanism: {
+        pt: 'O Combo Sinergista Vascular. Une o Perindopril (um IECA de ação prolongada que reduz a Angiotensina II e a resistência arterial) à Indapamida (um diurético tiazídico-like que atua no néfron distal e possui efeito vasodilatador direto nas artérias). Juntos, eles provocam um relaxamento vascular duplo e sustentado por 24 horas, neutralizando mecanismos compensatórios e protegendo rins e coração.',
+        es: 'Combinación de un inhibidor de la ECA (Perindopril) y un diurético tiazídico-like (Indapamida). El perindopril reduce la poscarga mediante el bloqueo de la Angiotensina II, mientras que la indapamida promueve la natriuresis y ejerce un efecto vasodilatador directo sobre el músculo liso arteriolar por modulación del calcio.'
+      },
+      dose: {
+        adult: {
+          pt: '1 comprimido via oral, UMA VEZ ao dia, preferencialmente pela manhã antes do café. Iniciar com a dose menor (2,5/0,625 mg) e escalonar conforme a meta pressórica.',
+          es: '1 comprimido vía oral, UNA VEZ al día por la mañana antes del desayuno. Se escala la dosis progresivamente según controles médicos.'
+        },
+        pediatric: {
+          pt: 'Não indicado ou estudado na população pediátrica.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['Uso oral contínuo diário. Deve ser tomado pela manhã em jejum seco para garantir a absorção ideal do perindoprilato.'], es: ['Uso oral diario por la mañana antes del desayuno con agua.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr entre 30-60 mL/min: dose máxima restrita a 5/1,25 mg ao dia. Se ClCr < 30 mL/min: ABSOLUTAMENTE CONTRAINDICADO.', es: 'Si ClCr 30-60: dosis máxima de 5/1,25 mg. Si ClCr < 30 mL/min: ABSOLUTAMENTE CONTRAINDICADO.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em insuficiência hepática grave ou encefalopatia hepática ativa (devido ao risco de hipocalemia precipitante pela indapamida).', es: 'Contraindicado en falla hepática grave por riesgo de hipopotasemia severa.' } },
+      commonAdverseEffects: { pt: ['Tosse seca irritativa (efeito clássico do perindopril)', 'Tontura e hipotensão ortostática leve', 'Cãibras musculares (por queda leve de potássio)'], es: ['Tos seca irritativa', 'Mareo e hipotensión ortostática', 'Calambres musculares leves'] },
+      dangerousAdverseEffects: { pt: ['ANGIOEDEMA DE GLOTE (Risco de asfixia letal)', 'Insuficiência Renal Aguda funcional bilateral', 'Hipocalemia severa ou Hiponatremia de diluição profunda'], es: ['ANGIOEDEMA DE GLOTIS', 'Falla renal aguda funcional', 'Hipopotasemia grave o Hiponatremia severa'] },
+      contraindications: {
+        absolute: { pt: ['GRAVIDEZ (Black Box absoluto por toxicidade neonatal)', 'Histórico de angioedema familiar ou induzido por IECA', 'Insuficiência renal grave ClCr < 30 mL/min'], es: ['EMBARAZO (Contraindicación absoluta)', 'Historial de angioedema', 'Falla renal grave (ClCr < 30)'] },
+        relative: { pt: ['Uso associado com Lítio (risco de intoxicação grave por retenção de lítio)'], es: ['Uso concomitante con Litio (riesgo de toxicidad grave)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A LIÇÃO DA PROTEÇÃO DIABÉTICA (O ESTUDO ADVANCE): O combo Bi-Preterax é considerado o padrão-ouro no diabetes. O estudo mundial ADVANCE provou que dar essa combinação para pacientes diabéticos tipo 2 reduz em 21% a mortalidade por doença renal e em 14% a mortalidade cardiovascular global, mesmo em pacientes que já tinham a pressão normal.', es: 'LA PROTECCIÓN DIABÉTICA COMPROBADA (ESTUDIO ADVANCE): Esta combinación demostró en el mega estudio ADVANCE reducir un 21% la nefropatía diabética severa y un 14% la mortalidad cardiovascular global en pacientes diabéticos tipo 2, consolidándose como tratamiento de elección.' }
+      },
+      references: {
+        pt: 'ADVANCE Trial (Lancet 2007 - Perindopril-Indapamide in Type 2 Diabetes); Diretrizes de Hipertensão Arterial da SBC 2020.',
+        es: 'ADVANCE Trial (Lancet 2007); Directrices de la Sociedad Europea de Cardiología (ESC/ESH).'
+      }
+    },
+
+    /* ── PERINDOPRIL + AMLODIPINO (706) ─────────────────────────────── */
+    "perindopril_amlodipino": {
+      name: { pt: 'Perindopril + Amlodipino', es: 'Perindopril + Amlodipino' },
+      category: 'cardiologia',
+      class: { pt: 'Combinação Anti-hipertensiva de Alto Impacto / Inibidor da ECA + Bloqueador de Cálcio', es: 'Combinación Antihipertensiva / Inhibidor de la ECA + Bloqueante de los Canales de Calcio' },
+      indications: {
+        pt: ['Tratamento da Hipertensão Arterial Sistêmica essencial', 'Redução do risco de infarto e AVC em pacientes hipertensos com alto risco cardiovascular (Estratégia do Estudo ASCOT-BPLA)', 'Tratamento de Doença Arterial Coronariana estável'],
+        es: ['Tratamiento de la Hipertensión Arterial Sistémica esencial', 'Reducción del riesgo de infarto y ACV en pacientes de alto riesgo (Estudio ASCOT-BPLA)', 'Tratamiento de Enfermedad Arterial Coronaria estable']
+      },
+      commercialNames: { br: ['Acrobax', 'Preterax AM'], ar: ['Viacoram', 'Amloper'] },
+      presentation: { pt: ['Comprimidos combinados nas dosagens 3,5/2,5 mg, 5/5 mg, 7/5 mg e 10/10 mg'], es: ['Comprimidos combinados de 3,5/2,5 mg, 5/5 mg, 7/5 mg y 10/10 mg'] },
+      mechanism: {
+        pt: 'O Combo Sinergista Endotelial. O Amlodipino bloqueia os canais de cálcio dilatando fortemente as arteríolas periféricas (redução mecânica da pressão). O Perindopril bloqueia a ECA, impedindo a vasoconstrição e equilibrando a circulação capilar. Essa junção estabiliza o endotélio de forma agressiva, reduz a pressão arterial de forma central (aórtica) e diminui drasticamente o inchaço nos tornozelos que o amlodipino causaria sozinho.',
+        es: 'Combinación de amlodipino (calcioantagonista arteriolar precapilar) y perindopril (IECA venodilatador postcapilar). Su sinergismo reduce la presión arterial central y periférica con alta eficacia. La venodilatación inducida por perindopril balancea la presión capilar eliminando el edema maleolar inducido por amlodipino.'
+      },
+      dose: {
+        adult: {
+          pt: '1 comprimido via oral, UMA VEZ ao dia, pela manhã. Titular as doses de forma progressiva com base no diário de pressão do paciente (ex: iniciar com 5/5 mg e reavaliar em 14 dias).',
+          es: '1 comprimido vía oral, UNA VEZ al día por la mañana. Ajustable según la respuesta de las cifras tensionales del paciente.'
+        },
+        pediatric: {
+          pt: 'Não indicado.',
+          es: 'No indicado.'
+        }
+      },
+      administration: { pt: ['Uso oral diário pela manhã. Pode ser tomado com ou sem alimentos. Engolir inteiro sem mastigar ou quebrar o comprimido.'], es: ['Uso oral diario por la mañana. Puede tomarse con o sin alimentos de forma indiferente.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min: USO TOTALMENTE CONTRAINDICADO. Se ClCr entre 30-60: usar com cautela extrema e monitorar eletrólitos.', es: 'Si ClCr < 30 mL/min: USO CONTRAINDICADO. Si ClCr 30-60: monitorizar estrechamente potasio y función renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'O Amlodipino acumula severamente em fígados doentes. Usar com cautela em cirróticos e considerar doses menores.', es: 'Metabolismo de amlodipino ralentizado en falla hepática; monitorizar de forma estricta.' } },
+      commonAdverseEffects: { pt: ['Tosse seca persistente', 'Tontura postural e fadiga', 'Edema periférico leve nas pernas', 'Rubor facial'], es: ['Tos seca crónica', 'Mareo e hipotensión leve', 'Edema periférico leve', 'Rubor facial'] },
+      dangerousAdverseEffects: { pt: ['Angioedema laríngeo severo', 'Insuficiência renal aguda funcional', 'Bradicardia ou hipotensão profunda com síncope'], es: ['Angioedema de glotis', 'Injuria renal aguda funcional', 'Síncope hipotensivo'] },
+      contraindications: {
+        absolute: { pt: ['Gravidez (Black Box absoluto por teratogenicidade de classe)', 'Histórico de angioedema', 'Estenose aórtica severa em choque'], es: ['Embarazo (Absoluto)', 'Antecedente de angioedema', 'Choque cardiogénico'] },
+        relative: { pt: ['Estenose bilateral de artéria renal ou hipercalemia pré-existente'], es: ['Estenosis bilateral de arteria renal o hiperpotasemia preexistente'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O MARCO HISTÓRICO DO ESTUDO ASCOT: O combo Perindopril + Amlodipino quebrou o paradigma da cardiologia no estudo ASCOT-BPLA. Ele enterrou o uso antigo de Atenolol + Diurético, provando ser imensamente superior na redução de mortes, derrames (AVC) e no surgimento de novos casos de diabetes em pacientes hipertensos.', es: 'EL HITO DEL ESTUDIO ASCOT-BPLA: Esta combinación demostró una superioridad incontestable frente a la terapia clásica (Atenolol + Tiazida) en el estudio ASCOT, reduciendo significativamente los eventos cardiovasculares mayores, los ACV y previniendo el desarrollo de diabetes de novo.' }
+      },
+      references: {
+        pt: 'ASCOT-BPLA Trial (Lancet 2005 - Cardiovascular prevention); EUROPA Trial (Coronariopatia); Diretrizes da SBC 2020.',
+        es: 'ASCOT-BPLA Trial (Lancet 2005); EUROPA Trial; Directrices de la Sociedad Argentina de Cardiología.'
+      }
+    }
+
+  }); /* fim Object.assign CARDIOLOGIA_DRUGS_DB — BUILD 441 (perindopril_indapamida — IECA+TiazídicoLike/ADVANCE-Lancet2007/DM2; perindopril_amlodipino — IECA+BCC/ASCOT-BPLA-Lancet2005) */
 })();
