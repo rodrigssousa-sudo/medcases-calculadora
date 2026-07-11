@@ -1646,4 +1646,233 @@
 
   }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 445 (sofosbuvir + ledipasvir_sofosbuvir + velpatasvir_sofosbuvir + glecaprevir_pibrentasvir + daclatasvir + tenofovir_desoproxila + tenofovir_alafenamida + entecavir — DAAs HCV/Antivirais HBV Hepatite Viral) */
 
+/* ── BUILD 447 GUARD ─────────────────────────────────────────────── */
+if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null || Array.isArray(window.INFECTOLOGIA_DRUGS_DB)) { window.INFECTOLOGIA_DRUGS_DB = {}; }
+if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null) return;
+
+Object.assign(window.INFECTOLOGIA_DRUGS_DB, {
+
+  // ── PARASITOLOGIA E DOENÇAS TROPICAIS ──
+
+/* ── ALBENDAZOL (920) ───────────────────────────────────────────────── */
+    "albendazol": {
+      name: { pt: 'Albendazol', es: 'Albendazol' },
+      category: 'infectologia',
+      class: { pt: 'Antiparasitário Antelmíntico de Amplo Espectro / Benzimidazol', es: 'Antiparasitario Antihelmíntico de Amplio Espectro / Benzimidazol' },
+      indications: {
+        pt: ['Nematodíases intestinais (Ascaridíase, Ancilostomíase, Tricuríase, Enterobíase)', 'Estrongiloidíase e Teníase gástrica', 'Neurocisticercose por Larvas de Taenia solium', 'Doença Hidática/Equinococose pulmonar ou hepática'],
+        es: ['Nematodiasis intestinales (Ascaris, Uncinarias, Tricocéfalos)', 'Estrongiloidiasis y Teniasis', 'Neurocisticercosis por Taenia solium', 'Hidatidosis por Echinococcus granulosus']
+      },
+      commercialNames: { br: ['Zentel', 'Zolben', 'Albendazol'], ar: ['Zentel', 'Mac抗菌', 'Alben Richmond'] },
+      presentation: { pt: ['Comprimidos mastigáveis 400 mg', 'Suspensão oral 40 mg/mL (frasco com 10 mL)'], es: ['Comprimidos masticables 400 mg', 'Suspensión oral 4%'] },
+      mechanism: {
+        pt: 'O Paralisador de Parasitas. É um carbamato benzimidazólico quimicamente modificado. Ele se liga de forma seletiva e com alta afinidade à beta-tubulina livre dos parasitas. Ao bloquear essa proteína estrutural, ele impede a polimerização dos microtúbulos celulares intestinais do verme. Sem microtúbulos, o parasita perde a capacidade de captar Glicose. Seus estoques de glicogênio esgotam rapidamente, e o verme morre de fome por falência energética generalizada na luz intestinal.',
+        es: 'Inhibe de forma selectiva y reversible la polimerización de la beta-tubulina en los microtúbulos de las células intestinales del parásito. Provoca la pérdida de las funciones absortivas de glucosa, agotando los depósitos de glucógeno y bloqueando la producción de ATP, lo que induce la muerte y expulsión del helminto.'
+      },
+      dose: {
+        adult: {
+          pt: 'Verminoses comuns: 400 mg via oral, em DOSE ÚNICA (Enterobíase repete após 14 dias). Estrongiloidíase/Teníase: 400 mg ao dia por 3 dias seguidos. Neurocisticercose: 15 mg/kg/dia dividido em 2 doses por 8 a 30 dias (Associar Corticoide).',
+          es: 'Helmintiasis comunes: 400 mg vía oral, DOSE ÚNICA. Estrongiloidiasis: 400 mg al día por 3 días consecutivos. Neurocisticercosis: 15 mg/kg/día dividido cada 12 horas por 8-30 días.'
+        },
+        pediatric: {
+          pt: 'Crianças > 2 anos: mesma dose do adulto (400 mg). Crianças de 1 a 2 anos: reduzir a dose pela metade para 200 mg (5 mL da suspensão) em dose única.',
+          es: 'Niños > 2 años: 400 mg dosis única. Niños 1 a 2 años: 200 mg dosis única.'
+        }
+      },
+      administration: { pt: ['Uso oral. Os comprimidos podem ser mastigados, triturados ou engolidos com água. CRÍTICO: Para infecções intestinais comuns, tomar de estômago vazio. Para infecções sistêmicas (Neurocisticercose ou Hidatidose), DEVE ser tomado com REFEIÇÃO GORDUROSA para multiplicar a absorção em até 5 vezes.'], es: ['Uso oral. En infecciones tisulares sistémicas (Neurocisticercosis), administrar OBLIGATORIAMENTE con comidas grasas para aumentar 5 veces su absorción percutánea.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínima eliminação renal de metabólitos ativos, sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado intensamente no fígado em sulfóxido de albendazol. Em tratamentos longos (Cisticercose), monitorar transaminases mensalmente; suspender se subir > 3x o normal.', es: 'Monitoreo estricto de transaminasas en tratamientos prolongados por riesgo de hepatotoxicidad celular.' } },
+      commonAdverseEffects: { pt: ['Dor abdominal epigástrica transitória e náuseas', 'Cefaleia e tonturas episódicas', 'Diarreia de descarte de vermes'], es: ['Dolor abdominal transitorio', 'Cefalea y mareo', 'Diarrea leve'] },
+      dangerousAdverseEffects: { pt: ['Mielosupressão severa (Pancitopenia ou Agranulocitose em cursos longos)', 'Elevação fulminante de transaminases com hepatite crônica', 'Alopecia reversível severa'], es: ['Aplasia medular / Pancitopenia (en tratamientos largos)', 'Hepatitis medicamentosa', 'Alopecia reversible'] },
+      contraindications: {
+        absolute: { pt: ['GRAVIDEZ (Altamente teratogênico em estudos animais; contraindicado em mulheres em idade fértil sem teste de gravidez negativo recente)', 'Menores de 1 ano de idade'], es: ['EMBARAZO (Contraindicación absoluta por teratogenicidad)', 'Lactancia', 'Niños < 1 año'] },
+        relative: { pt: ['Histórico de cirrose hepática ou mielosupressão prévia ativa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ALERTA DA MORTE DO VERME NO CÉREBRO (NEUROCISTICERCOSE): Nunca dê Albendazol para um paciente com Neurocisticercose sem associar uma dose alta de Corticoide (Dexametasona ou Prednisona). Quando o remédio mata a larva dentro do cérebro, ela inflama e incha. Se não houver corticoide para frear a resposta, o paciente apresenta convulsões violentas, hipertensão intracraniana e risco de óbito.', es: 'ALERTA EN NEUROCISTICERCOSIS: Jamás administre albendazol sin asociar Corticoides sistémicos previos (Dexametasona). La lisis masiva del parásito en el parénquima cerebral desata una respuesta inflamatoria severa que provoca edema cerebral, convulsiones estatus y muerte si no se bloquea.' }
+      },
+      references: {
+        pt: 'CDC Parasitic Diseases Treatment Guidelines; Manual de Doenças Infecciosas do HC-FMUSP; WHO Essential Medicines List.',
+        es: 'CDC Guidelines; Guías de Tratamiento de la Sociedad Argentina de Infectología (SADI); Ficha Técnica CIMA.'
+      }
+    },
+
+/* ── MEBENDAZOL (921) ───────────────────────────────────────────────── */
+    "mebendazol": {
+      name: { pt: 'Mebendazol', es: 'Mebendazol' },
+      category: 'infectologia',
+      class: { pt: 'Antiparasitário Antelmíntico Luminal / Benzimidazol', es: 'Antiparasitario Antihelmíntico Luminal / Benzimidazol' },
+      indications: {
+        pt: ['Infecções intestinais simples ou mistas por Nematódeos (Ascaris lumbricoides, Enterobius vermicularis, Ancylostoma duodenale, Trichuris trichiura)'],
+        es: ['Infestaciones gastrointestinales únicas o mixtas por nematodos (Ascaris, Oxiuros, Uncinarias)']
+      },
+      commercialNames: { br: ['Pantelmin', 'Necamin', 'Mebendazol'], ar: ['Pantelmin', 'Mebustor', 'Mebendazol Beta'] },
+      presentation: { pt: ['Comprimidos simples 100 mg e 500 mg', 'Suspensão oral 20 mg/mL (frasco com 30 mL)'], es: ['Comprimidos 100 mg', 'Suspensión oral 2%'] },
+      mechanism: {
+        pt: 'O Bloqueador Luminal de Microtúbulos. Atua localmente ligando-se à tubulina dos parasitas intestinais, bloqueando a formação dos microtúbulos e paralisando o transporte de nutrientes do verme. Diferente do Albendazol, o Mebendazol possui uma estrutura molecular que impede quase toda a sua absorção no intestino (menos de 5% a 10% entra no sangue). Por isso, ele foca 100% de sua força de forma direta e exclusiva na luz intestinal.',
+        es: 'Inhibe la formación de microtúbulos en el nematodo de forma irreversible, provocando la desorganización ultraestructural del citoplasma del gusano. Su absorción gastrointestinal es inferior al 10%, actuando de forma puramente luminal en el tracto digestivo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Esquema Clássico: 100 mg via oral, de 12/12 horas (manhã e noite), por 3 dias seguidos, independente do peso. Esquema de Dose Única: Apresentação de 500 mg em tomada única.',
+          es: 'Dosis estándar: 100 mg vía oral cada 12 horas por 3 días consecutivos (o 500 mg en dosis única para campañas de salud pública).'
+        },
+        pediatric: {
+          pt: 'Crianças > 1 ano: mesma dose do adulto (100 mg de 12/12h por 3 dias). Não varia por peso ou idade acima dessa faixa de corte.',
+          es: 'Niños > 1 año: 100 mg cada 12 horas por 3 días.'
+        }
+      },
+      administration: { pt: ['Uso oral. A suspensão oral deve ser agitada antes de usar. Pode ser administrado com ou sem comida. Não exige jejum ou uso de laxantes para expulsão.'], es: ['Uso oral. Puede administrarse con o sin alimentos de forma indiferente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste devido à baixíssima absorção sistêmica.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em doses curtas luminais de 3 dias.', es: 'Sin necesidad de ajuste en tratamientos cortos.' } },
+      commonAdverseEffects: { pt: ['Cólicas abdominais leves e flatulência transitória durante a eliminação dos vermes', 'Diarreia episódica'], es: ['Dolor abdominal tipo cólico leve', 'Diarrea o meteorismo por descarte'] },
+      dangerousAdverseEffects: { pt: ['Neutropenia severa e Hepatite medicamentosa (Raríssimo, ocorrendo apenas se usado por erro em doses gigantes e prolongadas para hidatidose)'], es: ['Neutropenia transitoria o aumento de transaminasas (solo en uso crónico masivo erróneo)'] },
+      contraindications: {
+        absolute: { pt: ['GRAVIDEZ (Risco teratogênico de classe por quebra mitótica celular)', 'Menores de 1 ano de idade (Risco de convulsões induzidas na infância)'], es: ['EMBARAZO (Absoluto)', 'Niños menores de 1 año por riesgo de convulsiones refractarias'] },
+        relative: { pt: ['Nenhuma específica para o curso de tratamento intestinal clássico'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A PROIBIÇÃO CRÍTICA EM BEBÊS (RISCO DE CONVULSÃO): O Mebendazol é rigorosamente PROIBIDO para bebês menores de 1 ano. Estudos de farmacovigilância comprovaram que a molécula consegue cruzar para o cérebro imaturo do lactente, provocando crises de convulsões motoras generalizadas severas. Para crianças pequenas com vermes, prefira alternativas aprovadas e seguras.', es: 'ALERTA DE CONVULSIONES EN LACTANTES: Está terminantemente prohibido su uso en menores de 12 meses. Existe una correlación clínica documentada con la aparición de crisis convulsivas debido a la inmadurez de la barrera hematoencefálica del lactante.' }
+      },
+      references: {
+        pt: 'WHO Model Formulary; Diretrizes da Sociedade Brasileira de Pediatria para Parasitoses; Bula Profissional Pantelmin.',
+        es: 'WHO Model Formulary; Guías de Pediatría del Hospital Garrahan; Ficha Técnica Mebendazol CIMA.'
+      }
+    },
+
+/* ── PRAZIQUANTEL (922) ─────────────────────────────────────────────── */
+    "praziquantel": {
+      name: { pt: 'Praziquantel', es: 'Praziquantel' },
+      category: 'infectologia',
+      class: { pt: 'Antiparasitário Antitematódeo e Anticestódeo / Indutor de Permeabilidade de Cálcio', es: 'Antiparasitario Antitematodo y Anticestodo / Inductor de Permeabilidad de Calcio' },
+      indications: {
+        pt: ['Tratamento de escolha para Esquistossomose (Schistosoma mansoni e haematobium)', 'Tratamento de Teníase intestinal ativa (Taenia saginata e solium)', 'Tratamento de Himenolepíase e Difiloboríase (tênia do peixe)'],
+        es: ['Tratamiento de elección para Esquistosomiasis (Bilharzia)', 'Teniasis intestinal por T. solium o T. saginata', 'Diphyllobothriasis (tenia del pescado) e Himenolepiasis']
+      },
+      commercialNames: { br: ['Cestox', 'Praziquantel (Farmácia Especializada)'], ar: ['Cestox', 'Praziquantel Richmond'] },
+      presentation: { pt: ['Comprimidos de 150 mg e 600 mg (sulcados em quatro partes)'], es: ['Comprimidos de 600 mg'] },
+      mechanism: {
+        pt: 'O Espasmo de Cálcio do Verme. O Praziquantel provoca um vazamento maciço e imediato de íons Cálcio (Ca2+) para dentro das células musculares do parasita. Essa entrada descontrolada de cálcio induz uma contração muscular espástica violenta e permanente no corpo do verme, paralisando-o na hora. Adicionalmente, ele destrói quimicamente o tegumento (a pele) do parasita, deixando o verme "pelado" no sangue, fazendo com que os anticorpos do paciente o ataquem e o destruam rapidamente.',
+        es: 'Provoca um aumento rápido e imediato na permeabilidade da membrana celular do parasita ao ion Cálcio (Ca2+). Isso induce uma contração muscular espástica sostenida, paralizando los órganos de fijación del verme (ventosas). Produce además la vacuolización y degradación del tegumento del parásito, exponiéndolo a la destrucción por el sistema inmunitario del huésped.'
+      },
+      dose: {
+        adult: {
+          pt: 'Esquistossomose: Dose única de 50 mg/kg via oral, em tomada única após refeição. Teníase comum: Dose única de 5 a 10 mg/kg via oral.',
+          es: 'Esquistosomiasis: 50 mg/kg vía oral en DOSIS ÚNICA. Teniasis: 5 a 10 mg/kg vía oral en toma única.'
+        },
+        pediatric: {
+          pt: 'Crianças > 4 anos: Esquistossomose na dose de 60 mg/kg via oral, fracionada em duas tomadas com intervalo de 4 horas para reduzir náuseas.',
+          es: 'Niños > 4 años: 60 mg/kg fraccionado en dos tomas con diferencia de 4 horas.'
+        }
+      },
+      administration: { pt: ['Uso oral. OS COMPRIMIDOS DEVEM SER ENGOLIDOS RAPIDAMENTE SEM MASTIGAR, JUNTO COM LÍQUIDOS DURANTE AS REFEIÇÕES. O Praziquantel possui um sabor amargo insuportável e extremo. Se for mastigado ou mantido na boca, induz reflexo de vômito imediato e náuseas violentas.'], es: ['Uso oral. Los comprimidos DEBEN tragarse enteros rápidamente sin masticar durante las comidas. Poseen un sabor extremadamente amargo que gatilla emesis refleja si se disuelven en la cavidade bucal.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, eliminado na forma de metabólitos inativos.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado intensamente pela via CYP3A4. Em hepatopatias severas ou esquistossomose hepatoesplênica avançada, os níveis da droga sobem de forma acentuada; usar com vigilância estrita.', es: 'Precaución en insuficiencia hepática grave por retraso en el aclaramiento plasmático.' } },
+      commonAdverseEffects: { pt: ['NÁUSEAS E VÔMITOS INTENSOS (efeito central e local)', 'Cefaleia, tontura marcada e sonolência pós-tomada', 'Urticária leve por liberação de antígenos do verme morto'], es: ['Náuseas y vómitos', 'Mareo, vértigo y somnolencia', 'Prurito o exantema por lisis del parásito'] },
+      dangerousAdverseEffects: { pt: ['Reações anafiláticas sistêmicas severas devido à liberação maciça de proteínas do parasita morto na circulação portal', 'Arritmias cardíacas transitórias (raro)'], es: ['Choque o reacción de hipersensibilidad severa por antígenos parasitarios liberados en sangre portal'] },
+      contraindications: {
+        absolute: { pt: ['Cisticercose Ocular (matar o verme dentro do globo ocular causa inflamação destrutiva incurável com descolamento de retina e cegueira permanente)', 'Uso concomitante com Rifampicina (anula 100% o praziquantel)'], es: ['Cisticercosis Ocular (la respuesta inflamatoria destruye el ojo causando ceguera)', 'Uso con Rifampicina'] },
+        relative: { pt: ['Pacientes com histórico de epilepsia não controlada (requer corticoide associado se houver suspeita de neurocisticercose oculta)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O DESASTRE DA CISTICERCOSE OCULAR (NUNCA DAR SE HOUVER CASO NO OLHO): Se o paciente tiver larvas de tênia nos olhos (Cisticercose ocular) e tomar Praziquantel, a morte do verme libera toxinas dentro do humor vítreo. A reação inflamatória destrói a retina e o nervo óptico de forma irreversível em 24h. OBRIGATÓRIO realizar exame de fundo de olho se houver suspeita de cisticercose sistêmica antes de medicar.', es: 'CONTRAINDICACIÓN ABSOLUTA EN CISTICERCOSIS OCULAR: Si existen quistes en el globo ocular, el praziquantel provoca una panuveítis y desprendimiento de retina irreversible al destruir la larva. Es mandatorio descartar compromiso ocular antes de tratar cisticercosis sistémica.' }
+      },
+      references: {
+        pt: 'WHO Guidelines for Helminth Control; Guia de Antimicrobianos Hospital das Clínicas USP; Micromedex Drug Reference.',
+        es: 'WHO Guidelines for Helminth Control; Manual de Enfermedades Infecciosas del Hospital Muñiz; Ficha Técnica Cestox.'
+      }
+    },
+
+/* ── NITAZOXANIDA (926) ─────────────────────────────────────────────── */
+    "nitazoxanida": {
+      name: { pt: 'Nitazoxanida', es: 'Nitazoxanida' },
+      category: 'infectologia',
+      class: { pt: 'Antiparasitário Antiprotozoário e Antelmíntico de Amplo Espectro / Tiazolida', es: 'Antiparasitario Antiprotozoario y Antihelmíntico de Amplio Espectro / Tiazolida' },
+      indications: {
+        pt: ['Gastroenterites virais por Rotavírus e Norovírus', 'Protozooses intestinais (Giardíase, Amebíase, Criptosporidíase, Blastocistose)', 'Helmintíases comuns (Ascaris, Enterobius, Strongyloides)', 'Tratamento de Criptosporidíase em pacientes imunocomprometidos com HIV/SIDA (Dose estendida)'],
+        es: ['Gastroenteritis virales por Rotavirus y Norovirus', 'Protozoasis intestinales (Giardiasis, Amebiasis, Cryptosporidiosis, Blastocistosis)', 'Helmintiasis y parasitosis mixtas']
+      },
+      commercialNames: { br: ['Annita', 'Azox', 'Nitazoxanida'], ar: ['Gastropar', 'Nitax', 'Celectan'] },
+      presentation: { pt: ['Comprimidos revestidos 500 mg', 'Pó para reconstituição em suspensão oral 20 mg/mL (frasco com 45 mL ou 100 mL)'], es: ['Comprimidos 500 mg', 'Polvo para suspensión oral 2%'] },
+      mechanism: {
+        pt: 'O Asfixiador de Protozoários e Vírus. É um pró-fármaco convertido no organismo no metabólito ativo Tizoxanida. Ele bloqueia de forma seletiva a enzima piruvato-ferredoxina oxidorredutase (PFOR), que é vital para o metabolismo energético anaeróbio dos parasitas. Sem essa enzima, o protozoário perde a capacidade de realizar a respiração celular e morre por asfixia bioquímica. Contra os vírus, ela interfere na síntese das proteínas da cápsula viral (como a VP7 do rotavírus), impedindo o vírus de se montar.',
+        es: 'Profármaco convertido en Tizoxanida. Inhibe de forma específica la enzima piruvato:ferredoxina oxidorreductora (PFOR) en organismos anaerobios, interrumpiendo la transferencia de electrones esencial para el metabolismo energético del parásito. Contra virus (Rotavirus/Norovirus), bloquea la maduración de la estructura proteica de la cápside viral.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose Padrão Universal: 500 mg via oral, de 12/12 horas (manhã e noite), por 3 dias seguidos consecutivos junto com alimentos.',
+          es: 'Dosis estándar: 500 mg vía oral cada 12 horas (dos veces al día) por 3 días consecutivos obligatoriamente con alimentos.'
+        },
+        pediatric: {
+          pt: 'Crianças de 1 a 3 anos: 100 mg (5 mL) via oral de 12/12h por 3 dias. Crianças de 4 a 11 anos: 200 mg (10 mL) via oral de 12/12h por 3 dias. Menores de 1 ano: Contraindicado.',
+          es: 'Niños 1 a 3 años: 100 mg (5 mL) cada 12h por 3 días. Niños 4 a 11 años: 200 mg (10 mL) cada 12h por 3 días.'
+        }
+      },
+      administration: { pt: ['Uso oral. A suspensão oral deve ser preparada adicionando água filtrada até a marca do frasco e guardada em geladeira por no máximo 7 dias. DEVE SER ADMINISTRADA OBRIGATORIAMENTE JUNTO COM ALIMENTOS para evitar irritação gástrica severa e dobrar a absorção.'], es: ['Uso oral. Administrar OBLIGATORIAMENTE JUNTO CON ALIMENTOS para maximizar la biodisponibilidad plasmática de la tizoxanida y evitar náuseas severas.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínima eliminação renal, sem necessidade de alteração de dose em nefropatas.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Não estudado em pacientes com insuficiência hepática severa; usar com precaução pelo metabolismo hepático da tizoxanida.', es: 'Precaución en insuficiencia hepática grave por falta de datos farmacocinéticos.' } },
+      commonAdverseEffects: { pt: ['URINA VERDE-FLUORESCENTE (efeito colateral assustador, mas inofensivo por pigmentação do sal do remédio)', 'Esclera ocular amarelada transitória', 'Náuseas, dor epigástrica e diarreia de descarte'], es: ['ORINA COLOR VERDE BRILLANTE/FLUORESCENTE (Inofensivo por pigmentación del fármaco)', 'Tinte amarillento en conjuntivas oculares', 'Dolor epigástrico'] },
+      dangerousAdverseEffects: { pt: ['Reações anafiláticas e angioedema (raro)', 'Hepatite medicamentosa aguda reversível (raríssimo)'], es: ['Reacciones de hipersensibilidad agudas', 'Aumento de transaminasas (muy raro)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida à nitazoxanida', 'Menores de 1 ano de idade (falta de dados de segurança)', 'Diabetes mellitus (na formulação suspensão devido ao alto teor de açúcar)'], es: ['Hipersensibilidad conocida al fármaco', 'Niños menores de 12 meses', 'Diabetes (en suspensión líquida por alto contenido de sacarosa)'] },
+        relative: { pt: ['Uso concomitante com anticoagulantes cumarínicos (Varfarina - pode elevar o tempo de protrombina)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O SUSTO DO XIXI VERDE FLUORESCENTE: A Nitazoxanida sofre uma quebra química que gera um metabólito colorido brilhante eliminado na urina. O xixi do paciente sai com uma cor verde-limão fluorescente ou amarela escura bizarra. O paciente e as mães correm em pânico para a emergência achando que o rim faliu ou que há infecção grave. Avise antes de receitar: é normal e some ao fim do tratamento.', es: 'EL SUSTO DE LA ORINA VERDE FLUORESCENTE: El metabolismo de la nitazoxanida excreta un pigmento que tiñe la orina de un color verde brillante o amarillo verdoso muy llamativo. Puede colorear levemente el blanco de los ojos (esclera). Advierta siempre al paciente de que es un efecto totalmente BENIGNO.' }
+      },
+      references: {
+        pt: 'FDA Prescribing Data Alinia/Annita; Lancet Infectious Diseases Protocols; Diretrizes de Gastroenterologia Pediátrica da SBP.',
+        es: 'FDA Prescribing Data (Alinia); Ficha Técnica Gastropar; Manual de Parasitología del Hospital Muñiz.'
+      }
+    },
+
+/* ── ARTESUNATO (933) ───────────────────────────────────────────────── */
+    "artesunato": {
+      name: { pt: 'Artesunato', es: 'Artesunato' },
+      category: 'infectologia',
+      class: { pt: 'Antimalárico de Escolha Absoluta para Casos Graves / Derivado da Artemisinina', es: 'Antimalárico de Elección Absoluta en Casos Graves / Derivado de la Artemisinina' },
+      indications: {
+        pt: ['Tratamento de escolha absoluta para Malária Grave/Complicada por Plasmodium falciparum em adultos, gestantes e crianças (Reduz a mortalidade de forma dramática frente à antiga Quinina)']
+      },
+      commercialNames: { br: ['Artesunato (Ministério da Saúde / Notificação compulsória)'], ar: ['Artesunato (Importación OPS)'] },
+      presentation: { pt: ['Frasco-ampola IV/IM contendo 60 mg de pó liofilizado + ampola de diluente (bicarbonato de sódio)'] },
+      mechanism: {
+        pt: 'A Bomba de Radicais Livres Intra-Parasita. O Artesunato entra no sangue e invade os glóbulos vermelhos infectados pelo parasita da Malária. Lá dentro, ele entra em contato com o Ferro do grupo Heme concentrado pelo parasita. O ferro reage com a ponte de endoperóxido da molécula, gerando uma explosão de radicais livres de carbono altamente reativos. Esses radicais livres destroem as membranas e as proteínas vitais do Plasmodium, triturando o parasita em poucos minutos.',
+        es: 'Derivado hidrosoluble de la artemisinina. Al ingresar al eritrocito infectado, reacciona con el Hierro del grupo Heme recolectado por el parásito. Esta interacción rompe el puente endoperóxido del fármaco, generando radicales libres de carbono altamente inestables que alquilan y destruyen las membranas celulares y proteínas del Plasmodium falciparum.'
+      },
+      dose: {
+        adult: {
+          pt: 'Tratamento de Emergência: 2,4 mg/kg via INTRAVENOSA direta (ou Intramuscular) aplicada no tempo zero (Dose 1), repetida após 12 horas (Dose 2) e após 24 horas (Dose 3). Depois, manter 2,4 mg/kg uma vez ao dia via IV por até 7 dias, até que o paciente consiga engolir a terapia oral de manutenção.',
+          es: 'Esquema de Emergencia: 2,4 mg/kg vía INTRAVENOSA directa (o IM) en las horas 0, 12 y 24. Luego, continuar con 2,4 mg/kg una vez al día vía IV por 7 días o hasta tolerar vía oral.'
+        },
+        pediatric: {
+          pt: 'Crianças com peso < 20 kg: Exigem dose mais elevada devido ao clearance rápido. Administrar 3,0 mg/kg via IV seguindo os mesmos intervalos de tempo do adulto (0, 12h, 24h, depois diário).',
+          es: 'Niños con peso < 20 kg: Dosis aumentada a 3,0 mg/kg IV en las horas 0, 12, 24, seguido de dosis diaria.'
+        }
+      },
+      administration: { pt: ['CRÍTICO E RIGOROSO: O pó de 60mg deve ser primeiramente reconstituído com exatamente 1,2 mL de Bicarbonato de Sódio 5% (que acompanha o frasco) e agitado por 2-3 minutos até virar uma solução limpa. Em seguida, diluir com 5 mL de Soro Fisiológico (SF) ou Soro Glicosado (SG5%) e aplicar em BOLUS INTRAVENOSO DIRETO LENTO. NÃO pode ser feito em infusão contínua lenta de horas (a molécula quebra). Deve ser preparado e usado imediatamente.'], es: ['RECONSTITUCIÓN RIGUROSA: Reconstituir obligatoriamente con el bicarbonato de sodio adjunto. Luego diluir en 5 mL de suero fisiológico e inyectar en BOLO INTRAVENOSO LENTO DIRECTO. Prohibido colocar en goteo prolongado por inestabilidad de la molécula.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste de dose em falência renal, excelente perfil de segurança na malária complicada.', es: 'Sin necesidad de ajuste en insuficiencia renal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, mas monitorar transaminases devido à própria lesão induzida pela malária.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Náuseas, vômitos e diarreia transitórias', 'Tontura e cefaleia de controle clínico', 'Exantema cutâneo leve e febre de lise'], es: ['Náuseas, vómitos y diarrea', 'Mareo transitorio', 'Fiebre por destrucción del parásito'] },
+      dangerousAdverseEffects: { pt: ['ANEMIA HEMOLÍTICA RETARDADA PÓS-ARTEMISININA (Ocorre em ~10% dos casos de 1 a 3 semanas APÓS a cura da malária, onde os glóbulos vermelhos que foram limpos do parasita são destruídos em massa pelo baço; requer hemograma semanal de controle)'], es: ['ANEMIA HEMOLÍTICA RETARDADA (Ocurre 1-3 semanas tras finalizar el tratamiento debido al aclaramiento esplénico de eritrocitos previamente parasitados; exige hemograma de control semanal)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade documentada ao artesunato ou derivados da artemisinina'] },
+        relative: { pt: ['Primeiro trimestre de gravidez (Embora na malária grave o risco de morte da mãe seja tão alto que o Artesunato DEVE ser usado mesmo no primeiro trimestre, sendo escolha absoluta)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA ANEMIA RETARDADA DA TERCEIRA SEMANA: O Artesunato cura a malária grave salvando o doente em 48h. Porém, semanas após o paciente ter alta lindo e curado, ele pode apresentar um quadro de palidez extrema, falta de ar e cansaço. É a Anemia Hemolítica Retardada. Avise o paciente para voltar ao hospital e colher hemograma se sentir fraqueza semanas depois.', es: 'ALERTA DE ANEMIA HEMOLÍTICA POS-TRATAMIENTO: Monitorear el hemograma hasta 4 semanas después de la cura. El 10% de los pacientes presenta hemólisis diferida severa que puede requerir transfusión sanguínea de emergencia, semanas después de haber recibido el alta clínica.' }
+      },
+      references: {
+        pt: 'AQUAMAT Trial (Artesunate vs Quinine in African children - Lancet 2010); SEAQUAMAT Trial (Lancet 2005); Diretrizes de Malária do Ministério da Saúde do Brasil.',
+        es: 'AQUAMAT & SEAQUAMAT Trials (Lancet); Directrices de Tratamiento de la Malaria de la Organización Panamericana de la Salud (OPS).'
+      }
+    }
+
+}); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 447 (albendazol + mebendazol + praziquantel + nitazoxanida + artesunato — Parasitologia e Doenças Tropicais) */
+
 })();
