@@ -875,7 +875,7 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
           es: 'Aprobado en pacientes >= 12 años.'
         }
       },
-      administration: { pt: ['Pode ser tomado com ou sem alimentos (uma grande vantagem mecânica). As cápsulas devem ser engolidas inteiras. Para pacientes com disfagia, a cápsula pode ser aberta e os microgrânulos salpicados em uma colher de purê de maçã.'], es: ['Puede tomarse con o sin alimentos. No masticar los microgránulos internos al abrir la cápsula.'] },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos. As cápsulas devem ser engolidas inteiras. Para pacientes com disfagia, a cápsula pode ser aberta e os microgrânulos salpicados em uma colher de purê de maçã.'], es: ['Puede tomarse con o sin alimentos. No masticar los microgránulos internos al abrir la cápsula.'] },
       renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose em renais crônicos.', es: 'Sin necesidad de ajuste.' } },
       hepaticAdjustment: { required: true, message: { pt: 'Em insuficiência hepática moderada (Child-Pugh B), a dose máxima permitida é de 30 mg ao dia. Contraindicado na insuficiência grave.', es: 'En insuficiencia hepática moderada, dosis máxima de 30 mg/día. Evitar en falla grave.' } },
       commonAdverseEffects: { pt: ['Diarreia leve', 'Dor abdominal e flatulência', 'Náuseas', 'Sintomas de resfriado (infecção do trato respiratório superior)'], es: ['Diarrea leve', 'Dolor abdominal y flatulencia', 'Náuseas', 'Infección respiratoria superior'] },
@@ -1026,6 +1026,6 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
       }
     }
 
-  }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 438 (rabeprazol + dexlansoprazol + subcitrato_de_bismuto + itoprida + mosaprida — IBPs Avançados + Protetor de Mucosa + Procinéticos) */
+  }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 442 (rabeprazol + dexlansoprazol + subcitrato_de_bismuto — enrich/consolidação Padrão Ouro ala 719-723) | BUILD 438 (rabeprazol + dexlansoprazol + subcitrato_de_bismuto + itoprida + mosaprida — IBPs Avançados + Protetor de Mucosa + Procinéticos) */
 
 })();
