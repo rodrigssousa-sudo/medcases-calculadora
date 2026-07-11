@@ -1875,4 +1875,278 @@ Object.assign(window.INFECTOLOGIA_DRUGS_DB, {
 
 }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 447 (albendazol + mebendazol + praziquantel + nitazoxanida + artesunato — Parasitologia e Doenças Tropicais) */
 
+/* ── BUILD 448 GUARD ─────────────────────────────────────────────── */
+if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null || Array.isArray(window.INFECTOLOGIA_DRUGS_DB)) { window.INFECTOLOGIA_DRUGS_DB = {}; }
+if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null) return;
+
+Object.assign(window.INFECTOLOGIA_DRUGS_DB, {
+
+  // ── COQUETEL ANTIRRETROVIRAL E PROFILAXIAS (HIV) ──
+
+/* ── DOLUTEGRAVIR (947) ──────────────────────────────────────────────── */
+    "dolutegravir": {
+      name: { pt: 'Dolutegravir Sódico (DTG)', es: 'Dolutegravir Sódico (DTG)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor da Integrase de Segunda Geração (INSTI)', es: 'Antirretroviral / Inhibidor de la Integrasa de Segunda Generación (INSTI)' },
+      indications: {
+        pt: ['Tratamento da infecção pelo vírus HIV-1 e HIV-2 em adultos e crianças (Componente do esquema mestre inicial)', 'Componente preferencial da Profilaxia Pós-Exposição (PEP) de risco sexual ou ocupacional'],
+        es: ['Tratamiento de la infección por VIH-1 y VIH-2', 'Componente de elección en la Profilaxis Post-Exposición (PEP)']
+      },
+      commercialNames: { br: ['Tivicay', 'Dolutegravir/Lamivudina (Combo)', 'Dovato'], ar: ['Tivicay', 'Dolutegravir Richmond', 'Triumeq (Assoc)'] },
+      presentation: { pt: ['Comprimidos revestidos 50 mg', 'Comprimidos dispersáveis 5 mg (uso pediátrico)'], es: ['Comprimidos revestidos 50 mg'] },
+      mechanism: {
+        pt: 'O Protetor do Genoma Celular. O Dolutegravir atua ligando-se de forma ultra-seletiva ao sítio ativo da enzima Integrase do HIV. Ao travar essa enzima, ele impede mecanicamente a transferência e inserção da fita de DNA do vírus para dentro do DNA da própria célula humana do paciente (linfócito T CD4). Sem conseguir costurar seu código no nosso genoma, o vírus perde a capacidade de comando celular, bloqueando sua replicação com uma barreira genética colossal contra mutações.',
+        es: 'Inhibidor de la transferencia de cadenas de la integrasa del VIH (INSTI). Se une al sitio activo de la integrasa bloqueando el paso de transferencia de cadenas esencial para la integración del ADN provírico en el ADN de la célula huésped humana, deteniendo la propagación viral.'
+      },
+      dose: {
+        adult: {
+          pt: 'Paciente virgem de tratamento (Naïve) ou PEP: 50 mg via oral, UMA VEZ ao dia. Paciente com suspeita ou confirmação de resistência de classe (INSTI) ou uso com indutores (Rifampicina): 50 mg via oral, DUAS VEZES ao dia (de 12/12h).',
+          es: 'Pacientes sin resistencia previa o PEP: 50 mg vía oral, UNA VEZ al día. Pacientes con mutaciones de resistencia o uso de inductores: 50 mg vía oral cada 12 horas.'
+        },
+        pediatric: {
+          pt: 'Crianças e bebês >= 4 semanas e peso >= 3 kg: dose calculada rigorosamente por faixas de peso corporal utilizando comprimidos dispersáveis ou a versão de 50 mg se peso >= 20 kg.',
+          es: 'Aprobado en lactantes >= 4 semanas y >= 3 kg con dosis ajustada por peso.'
+        }
+      },
+      administration: { pt: ['Uso oral diário continuado. Pode ser tomado com ou sem alimentos. ATENÇÃO CRÍTICA: Os comprimidos não devem ser tomados simultaneamente com antiácidos ou suplementos minerais (VER INTERAÇÕES).'], es: ['Uso oral diario. Puede tomarse con o sin alimentos. Separar obligatoriamente de antiácidos y cationes metálicos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em nenhum grau de insuficiência renal crônica ou diálise. Excelente perfil.', es: 'Sin necesidad de ajuste en insuficiencia renal o diálisis.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não requer ajuste em insuficiência leve ou moderada (Child-Pugh A e B). Não estudado na insuficiência grave Child C.', es: 'Usar con precaución en insuficiencia hepática grave (Child-Pugh C).' } },
+      commonAdverseEffects: { pt: ['Insônia e sonhos vívidos anormais', 'Cefaleia e tontura leve', 'Náuseas e diarreia episódica', 'Ganho de peso discreto'], es: ['Insomnio y sueños anormales', 'Cefalea', 'Náuseas y diarrea', 'Aumento de peso'] },
+      dangerousAdverseEffects: { pt: ['Síndrome de Reconstituição Imune (IRIS - inflamação paradoxal contra infecções oportunistas latentes ao reativar a imunidade)', 'Hepatite medicamentosa aguda', 'Reações alérgicas severas com Síndrome de Stevens-Johnson (raríssimo)'], es: ['Síndrome de Reconstitución Inmune (IRIS)', 'Hepatotoxicidad severa', 'Síndrome de Stevens-Johnson'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida ao dolutegravir', 'Uso concomitante com Dofetilida ou Pimonizida (risco de arritmia fatal por pico plasmático)'], es: ['Hipersensibilidad conocida al fármaco', 'Uso concomitante con Dofetilida'] },
+        relative: { pt: ['Mulheres em planejamento gestacional ativo no primeiro trimestre (risco residual discutido de defeitos do tubo neural, embora hoje liberado pela OMS)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA SÍNDROME DE RECONSTITUIÇÃO IMUNE (IRIS): Quando o Dolutegravir derruba a carga viral para zero, os linfócitos do paciente voltam a subir rápido e ganham força. Se o paciente tiver uma infecção escondida (como Tuberculose ou Criptococose oculta), os novos linfócitos atacam essa infecção com tanta fúria que causam um quadro inflamatório sistêmico grave. Trate a infecção oportunista sem parar o antirretroviral.', es: 'ALERTA DEL SÍNDROME DE RECONSTITUCIÓN INMUNE (IRIS): Al suprimir drásticamente la réplica viral, el sistema inmune recupera funcionalidad velozmente. Si hay infecciones oportunistas latentes (Tuberculosis, Criptococosis), los linfócitos recuperados desatan una respuesta inflamatoria masiva que simula un empeoramiento clínico. No suspenda el tratamiento.' }
+      },
+      references: {
+        pt: 'SINGLE e FLAMINGO Trials (Dolutegravir superiority); Protocolo Clínico PCDT de Manejo do HIV do Ministério da Saúde; Guidelines da IAS 2024.',
+        es: 'SINGLE Trials (NEJM 2013); Directrices de la Sociedad Argentina de Infectología (SADI) para el tratamiento del VIH; WHO Guidelines.'
+      }
+    },
+
+/* ── RALTEGRAVIR (949) ──────────────────────────────────────────────── */
+    "raltegravir": {
+      name: { pt: 'Raltegravir Potássico (RAL)', es: 'Raltegravir Potásico (RAL)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor da Integrase de Primeira Geração', es: 'Antirretroviral / Inhibidor de la Integrasa de Primera Generación' },
+      indications: {
+        pt: ['Tratamento da infecção pelo vírus HIV-1 em combinação com outros agentes em adultos e pediatria', 'Profilaxia de Transmissão Vertical (aplicado em recém-nascidos de mães com alta carga viral no parto)', 'Esquema alternativo intensivo de resgate'],
+        es: ['Tratamiento de la infección por VIH-1', 'Profilaxis de Transmisión Vertical en recién nacidos de alto riesgo', 'Esquemas de rescate']
+      },
+      commercialNames: { br: ['Isentress'], ar: ['Isentress', 'Raltegravir Richmond'] },
+      presentation: { pt: ['Comprimidos revestidos 400 mg', 'Comprimidos de liberação prolongada 600 mg (Isentress HD)', 'Comprimidos mastigáveis 25 mg e 100 mg'], es: ['Comprimidos 400 mg', 'Comprimidos de liberación prolongada 600 mg'] },
+      mechanism: {
+        pt: 'O primeiro inibidor de integrase da história. Catalisa o travamento da enzima integrase do HIV ligando-se especificamente aos íons metálicos (magnésio) do sítio catalítico. Isso bloqueia a incorporação do DNA do vírus ao genoma do hospedeiro. Possui uma velocidade de queda de carga viral absurdamente rápida, sendo ideal para limpar o sangue de gestantes às vésperas do parto.',
+        es: 'Inhibidor selectivo de la transferencia de cadenas de la integrasa del VIH-1. Bloquea la inserción del ADN provírico en el genoma celular al quelar los cofactores de magnesio de la enzima, deteniendo la replicación de forma inmediata.'
+      },
+      dose: {
+        adult: {
+          pt: 'Comprimidos convencionais: 400 mg via oral, DUAS VEZES ao dia (de 12/12h). Versão de liberação prolongada (Isentress HD): 1.200 mg (2 comprimidos de 600mg) via oral, UMA VEZ ao dia.',
+          es: 'Comprimidos estándar: 400 mg vía oral cada 12 horas. Isentress HD: 1.200 mg vía oral, UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: 'Aprovado desde o nascimento (Recém-nascidos a termo): Dose em suspensão ou comprimido mastigável calculada por peso nas primeiras semanas de vida para profilaxia vertical.',
+          es: 'Uso aprobado desde el nacimiento en neonatos expuestos al VIH de alto riesgo.'
+        }
+      },
+      administration: { pt: ['Uso oral contínuo. Os comprimidos de 400mg normais e os de 600mg HD não são intercambiáveis (possuem taxas de absorção diferentes). Pode ser ingerido com ou sem comida.'], es: ['Uso oral. Las presentaciones de 400 mg y 600 mg HD NO son bioequivalentes ni intercambiables.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínima eliminação renal da droga ativa, sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em disfunção leve ou moderada. Usar com cautela em falência grave.', es: 'Precaución en insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['Náuseas e cefaleia', 'Elevação de Creatina Fosfoquinase (CPK) na musculatura', 'Tontura e cansaço leve'], es: ['Náuseas y cefalea', 'Aumento de la Creatina Fosfoquinasa (CPK) muscular', 'Mareo'] },
+      dangerousAdverseEffects: { pt: ['RABDOMIÓLISE SEVERA (destruição de músculos com mioglobinúria e insuficiência renal aguda)', 'Síndrome de Stevens-Johnson e Necrose Epidérmica Tóxica (NET)', 'Depressão grave com ideação suicida'], es: ['RABDOMIÓLISIS GRAVE', 'Síndrome de Stevens-Johnson / NET', 'Depresión severa con ideación suicida'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida ao raltegravir ou componentes da fórmula'] },
+        relative: { pt: ['Pacientes com histórico de miopatias ou uso concomitante de estatinas (eleva o risco de destruição muscular)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA DOR MUSCULAR (RISCO DE RABDOMIÓLISE): O Raltegravir pode causar miosite e quebra das fibras dos músculos com elevação marcante de CPK. Se o paciente em tratamento começar a queixar de dores musculares intensas e inexplicáveis pelo corpo e apresentar urina escura cor de coca-cola, colha CPK de urgência. Se estiver estourada, suspenda a droga.', es: 'EL ALERTA DE LA DESTRUCCIÓN MUSCULAR (RABDOMIÓLISIS): Puede inducir toxicidad muscular con elevaciones críticas de CPK. Si el paciente refiere debilidad o mialgias severas generalizadas acompañadas de orina oscura, evalúe CPK de inmediato ante riesgo de daño muscular y falla renal.' }
+      },
+      references: {
+        pt: 'BENCHMRK 1 and 2 Trials (Raltegravir in resistant HIV); STARTMRK Trial; Diretrizes de Profilaxia da Transmissão Vertical da SBI.',
+        es: 'BENCHMRK Trials (NEJM 2008); STARTMRK Trial; Guías de la SADI para el manejo de la embarazada VIH positiva.'
+      }
+    },
+
+/* ── EMTRICITABINA (943) ────────────────────────────────────────────── */
+    "emtricitabina": {
+      name: { pt: 'Emtricitabina (FTC)', es: 'Emtricitabina (FTC)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor Nucleosídeo da Transcriptase Reversa (ITRN)', es: 'Antirretroviral / Inhibidor Nucleósido de la Transcriptasa Inversa (ITRN)' },
+      indications: {
+        pt: ['Componente obrigatório do esquema mestre de Profilaxia Pré-Exposição (PrEP) para prevenção do HIV (Combinado com Tenofovir)', 'Tratamento do HIV-1 em combinação com outros antirretrovirais'],
+        es: ['Componente esencial de la Profilaxis Pre-Exposición (PrEP) combinado con Tenofovir', 'Tratamiento de la infección por VIH-1']
+      },
+      commercialNames: { br: ['Truvada (Combo TDF/FTC)', 'Descovy (Combo TAF/FTC)'], ar: ['Truvada', 'Descovy', 'Emtriva'] },
+      presentation: { pt: ['Cápsulas duras 200 mg (Emtriva)', 'Comprimidos combinados de dose fixa (Truvada/Descovy)'], es: ['Cápsulas 200 mg', 'Comprimidos combinados de dosis fija'] },
+      mechanism: {
+        pt: 'O Sabotador Químico da Transcriptase. É um análogo sintético fluorado da citidina. Ele penetra nos linfócitos infectados e é fosforilado em emtricitabina-trifosfato. Essa molécula compete diretamente com o substrato natural humano (dCTP) e força sua inserção na fita de DNA que o vírus do HIV está tentando construir. Como a emtricitabina não possui a hidroxila 3\'-linha necessária para colar o próximo bloco, a fita quebra (terminação de cadeia) e a cópia do vírus é destruída pela metade.',
+        es: 'Análogo sintético de la citidina. Tras activarse intracelularmente a la forma activa trifosfato, compite de forma competitiva con el sustrato dCTP incorporándose en la cadena de ADN provírico del VIH, provocando la terminación prematura de la cadena por ausencia del grupo 3\'-hidroxilo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose Padrão (HIV ou PrEP): 200 mg via oral, UMA VEZ ao dia, a qualquer hora do dia, independente das refeições.',
+          es: 'Dosis estándar (VIH o PrEP): 200 mg vía oral, UNA VEZ al día de forma continua.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir do nascimento: dose calibrada por peso corporal (solução oral de 10 mg/mL) em recém-nascidos e crianças menores de 35 kg.',
+          es: 'Aprobado desde neonatos con solución oral ajustada rigurosamente por kilo.'
+        }
+      },
+      administration: { pt: ['Uso oral diário continuado. Se utilizado no protocolo de PrEP diária, a aderência estrita é vital; esquecer tomadas zera a proteção protetora nos tecidos vaginais e retais.'], es: ['Uso oral diario. En protocolo de PrEP, la adherencia del 100% es crítica para mantener barreras tisulares efectivas contra el VIH.'] },
+      renalAdjustment: { required: true, message: { pt: 'ALTAMENTE FILTRADO PELO RIM. Se ClCr 30-49 mL/min: tomar 200 mg a cada 48 horas. Se ClCr 15-29 mL/min: tomar a cada 72 horas. Se ClCr < 15 ou diálise: tomar a cada 96 horas.', es: 'Si ClCr 30-49 mL/min: administrar cada 48 horas. Si ClCr 15-29: cada 72 horas. Si ClCr < 15 mL/min o hemodiálisis: cada 96 horas.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose, não sofre metabolismo hepático primário.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Cefaleia e tontura leve', 'Diarreia e náuseas', 'Hiperpigmentação cutânea (surgimento de manchas escuras na pele das palmas das mãos e solas dos pés, principalmente em etnia negra)'], es: ['Cefalea', 'Náuseas y diarrea', 'Hiperpigmentación cutánea benigna en palmas y plantas'] },
+      dangerousAdverseEffects: { pt: ['Acidose láctica com hepatomegalia esteatótica grave (risco raro de classe de ITRNs)', 'Exacerbação fulminante de Hepatite B oculta se o remédio for suspenso (possui ação contra o HBV)'], es: ['Acidosis Láctica con esteatosis hepática', 'Exacerbación aguda de Hepatitis B oculta ante retiro brusco'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida à emtricitabina'] },
+        relative: { pt: ['Coinfecção por Hepatite B crônica ativa (exige programação cuidadosa de desmame ou manutenção)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A ARMADILHA DA PREP ÀS CEGAS (FAÇA SEMPRE O TESTE DE HIV): Nunca inicie o Truvada (Tenofovir/Emtricitabina) como PrEP para um paciente sem ter certeza absoluta de que ele é HIV NEGATIVO. Se o paciente já tiver o vírus instalado em fase inicial oculta e tomar apenas o Truvada, o vírus recebe uma dose fraca de tratamento, aprende o truque e sofre mutação rápida (M184V), queimando a eficácia dos principais remédios da vida dele.', es: 'EL ALERTA CRÍTICO DE LA PrEP: Jamás prescriba Truvada como PrEP sin un test de VIH negativo de cuarta generación ultra reciente. Si el paciente ya está infectado e inicia PrEP con doble terapia, genera mutaciones de resistencia fulminantes (M184V) que anularán el éxito de su tratamiento futuro.' }
+      },
+      references: {
+        pt: 'iPrEx Trial (Emtricitabine/Tenofovir for PrEP - NEJM 2010); DISCOVER Trial (TAF vs TDF for PrEP); Protocolo PrEP do Ministério da Saúde.',
+        es: 'iPrEx Trial (NEJM 2010); DISCOVER Trial; Guías PrEP de la Sociedad Argentina de Infectología (SADI).'
+      }
+    },
+
+/* ── LAMIVUDINA (944) ───────────────────────────────────────────────── */
+    "lamivudina": {
+      name: { pt: 'Lamivudina (3TC)', es: 'Lamivudina (3TC)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor Nucleosídeo da Transcriptase Reversa (ITRN)', es: 'Antirretroviral / Inhibidor Nucleósido de la Transcriptasa Inversa (ITRN)' },
+      indications: {
+        pt: ['Componente obrigatório do esquema de primeira linha "3 em 1" para tratamento do HIV em adultos e pediatria', 'Componente mestre da Profilaxia Pós-Exposição (PEP) de urgência', 'Tratamento da Hepatite B crônica ativa (na dose baixa de 100mg)'],
+        es: ['Componente central del esquema de primera línea para VIH', 'Componente de la Profilaxis Post-Exposición (PEP) estándar', 'Tratamiento de Hepatitis B crónica (dosis baja 100 mg)']
+      },
+      commercialNames: { br: ['Epivir', 'Lamivudina (SUS)', 'Dovato (Assoc)'], ar: ['3TC', 'Lamivudina Richmond', 'Telzir (Assoc)'] },
+      presentation: { pt: ['Comprimidos revestidos 150 mg e 300 mg', 'Solução oral 10 mg/mL', 'Comprimido 100 mg (específico para Hepatite B - Zeffix)'], es: ['Comprimidos 150 mg y 300 mg', 'Solución oral 10 mg/mL'] },
+      mechanism: {
+        pt: 'O Clone de Citidina. É o análogo de nucleosídeo mais utilizado do mundo. Fosforilado intracelularmente em sua forma trifosfato ativa, ele compete com a desoxicitidina e infiltra-se na cadeia de DNA que a transcriptase reversa do HIV está costurando. Provoca a terminação imediata e mecânica da fita de DNA viral, congelando a replicação do vírus. Possui excelente tolerabilidade celular sistêmica.',
+        es: 'Análogo de nucleósido sintético de la citidina. Se fosforila en la célula a trifosfato de lamivudina, incorporándose al ADN vírico mediante la transcriptasa inversa del VIH o la polimerasa del HBV, deteniendo de forma mecánica la elongación de la cadena por ausencia del extremo 3\'-OH.'
+      },
+      dose: {
+        adult: {
+          pt: 'Infecção HIV ou PEP: 300 mg via oral, UMA VEZ ao dia (ou 150 mg de 12/12h). Tratamento isolado de Hepatite B (sem HIV): 100 mg via oral, uma vez ao dia.',
+          es: 'VIH o PEP: 300 mg vía oral, UNA VEZ al día (o 150 mg cada 12 horas). Hepatitis B crónica sola: 100 mg vía oral al día.'
+        },
+        pediatric: {
+          pt: 'Crianças > 3 meses: 5 mg/kg via oral, duas vezes ao dia, ou 10 mg/kg uma vez ao dia (teto máximo absoluto de 300 mg/dia).',
+          es: 'Niños > 3 meses: 5 mg/kg vía oral cada 12 horas o 10 mg/kg una vez al día.'
+        }
+      },
+      administration: { pt: ['Uso oral contínuo diário. Pode ser ingerido com ou sem alimentos. Comprimido altamente estável, ideal para esquemas combinados em dose fixa única à noite.'], es: ['Uso oral diario. Puede tomarse con o sin alimentos de forma indiferente.'] },
+      renalAdjustment: { required: true, message: { pt: 'ALTAMENTE EXCRETADO PELO RIM. Se ClCr 30-49 mL/min: dar 150 mg uma vez ao dia. Se ClCr 15-29 mL/min: dar 150 mg no primeiro dia, depois 100 mg/dia. Se ClCr 5-14 mL/min: 150 mg no primeiro dia, depois 50 mg/dia. Se < 5 ou diálise: 50 mg no primeiro dia, depois 25 mg/dia.', es: 'Ajuste estricto según depuración. Si ClCr 30-49: 150 mg/día. Si ClCr 15-29: 150 mg carga, luego 100 mg/día. Si ClCr < 15 o diálisis: disminuir dosis a 25-50 mg/día.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, rota de eliminação puramente renal.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Cefaleia e tontura leve', 'Náuseas e diarreia autolimitadas', 'Tosse e fadiga leve'], es: ['Cefalea', 'Náuseas y malestar gastrointestinal leve', 'Fatiga'] },
+      dangerousAdverseEffects: { pt: ['Acidose Láctica severa com esteatose hepática', 'Pancreatite Aguda fulminante (principalmente na pediatria se uso associado a outras drogas tóxicas)', 'Rebote grave de Hepatite B ao suspender abruptamente'], es: ['Acidosis Láctica', 'Pancreatitis Aguda (más frecuente en pediatría)', 'Rebote inflamatorio hepático por retiro en coinfectados HBV'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida à lamivudina'] },
+        relative: { pt: ['Uso concomitante com Emtricitabina (são clones químicos idênticos da citidina; usar os dois juntos na mesma receita é um erro iatrogênico de duplicação inútil)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ERRO CLÁSSICO DA DUPLICAÇÃO DA CITIDINA: Jamais prescreva Lamivudina (3TC) e Emtricitabina (FTC) para o mesmo paciente. Elas são a mesmíssima molécula modificada (irmãs gêmeas da citidina) e disputam exatamente a mesma vaga enzimática dentro do vírus. Usar as duas juntas não dobra o efeito, apenas multiplica a toxicidade e gera glomérulo-lesão renal. Escolha apenas uma.', es: 'EL ERROR DE LA DUPLICACIÓN INÚTIL: Está prohibido combinar Lamivudina y Emtricitabina en la misma receta. Ambos son análogos de la citidina que compiten por el mismo sitio activo intracelular; su asociación no aporta sinergismo y aumenta el riesgo de nefrotoxicidad tubular.' }
+      },
+      references: {
+        pt: 'PCDT de Manejo de HIV e PEP do Ministério da Saúde; WHO antiretroviral guidelines 2024; Manual de Infectologia de Lancet.',
+        es: 'Directrices del Ministerio de Salud de la Nación Argentina; Guías de Tratamiento del VIH de la SADI; Ficha Técnica CIMA.'
+      }
+    },
+
+/* ── ABACAVIR (945) ─────────────────────────────────────────────────── */
+    "abacavir": {
+      name: { pt: 'Abacavir (ABC)', es: 'Abacavir (ABC)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor Nucleosídeo da Transcriptase Reversa (ITRN)', es: 'Antirretroviral / Inhibidor Nucleósido de la Transcriptasa Inversa (ITRN)' },
+      indications: {
+        pt: ['Tratamento da infecção pelo vírus HIV-1 em adultos e crianças em esquemas combinados (Droga alternativa de escolha quando o paciente tem insuficiência renal crônica grave e não pode tomar Tenofovir TDF)'],
+        es: ['Tratamiento del VIH-1 en combinación combinada, de elección en insuficiencia renal previa donde se contraindica el Tenofovir clásico']
+      },
+      commercialNames: { br: ['Ziagen', 'Abacavir (SUS)', 'Triumeq (Assoc combo)'] },
+      presentation: { pt: ['Comprimidos revestidos 300 mg', 'Solução oral 20 mg/mL'], es: ['Comprimidos 300 mg', 'Solución oral 20 mg/mL'] },
+      mechanism: {
+        pt: 'O Sabotador de Carbocíclicos. É um análogo sintético carbocíclico da guanosina. Ele é convertido intracelularmente pelas enzimas celulares em carbovir-trifosfato. Essa forma ativa atua como um potente terminador de fita de DNA proviral do HIV por competição direta, travando de forma irreversível a enzima transcriptase reversa viral.',
+        es: 'Análogo de nucleósido de guanosina. Se convierte intracelularmente en su metabólito activo carbovir trifosfato, el cual compite con el sustrato dGTP e interrumpe de forma mecánica la síntesis de ADN vírico mediante la transcriptasa inversa, provocando la terminación de la cadena.'
+      },
+      dose: {
+        adult: {
+          pt: '600 mg via oral, UMA VEZ ao dia (ou fracionado em 300 mg de 12/12 horas), junto ou separado das refeições principais.',
+          es: '600 mg vía oral, UNA VEZ al día (o fraccionado en 300 mg cada 12 horas) de forma continua.'
+        },
+        pediatric: {
+          pt: 'Crianças de 3 meses a 12 anos: 8 mg/kg via oral, duas vezes ao dia (ou 16 mg/kg uma vez ao dia), com teto máximo travado em 600 mg ao dia.',
+          es: 'Niños > 3 meses: 8 mg/kg vía oral cada 12 horas (máximo 600 mg diarios).'
+        }
+      },
+      administration: { pt: ['Uso oral diário. Pode ser tomado com ou sem alimentos. OBRIGATÓRIO realizar teste genético prévio do alelo HLA-B*5701 antes de prescrever o comprimido (VER ALERTAS).'], es: ['Uso oral. Obligatorio realizar tamizaje genético previo para el alelo HLA-B*5701 antes de la primera dosis por riesgo de anafilaxia mortal.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer nenhum ajuste de dose em doentes renais crônicos ou em diálise (Grande vantagem clínica sobre o Tenofovir).', es: 'Sin necesidad de ajuste en insuficiencia renal o diálisis; fármaco de elección en nefrópatas.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado intensamente por desidrogenase alcoólica. Contraindicado em insuficiência hepática moderada a grave (Child-Pugh B e C); reduzir a dose para 200 mg de 12/12h na disfunção leve (Child A).', es: 'Contraindicado en insuficiencia hepática moderada o grave (Child B/C). Reducir dosis en falla leve Child A.' } },
+      commonAdverseEffects: { pt: ['Náuseas, vômitos e dispepsia inicial', 'Fadiga marcante e moleza corporal', 'Cefaleia e insônia leve', 'Febre e calafrios isolados'], es: ['Náuseas y vómitos', 'Fatiga y astenia', 'Cefalea', 'Fiebre aislada'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME DE HIPERSENSIBILIDADE AO ABACAVIR COMPLEXA (Reação autoimune multiorgânica com risco iminente de morte se reexposto - VER ALERTAS)', 'Acidose láctica severa', 'Aumento estatístico discreto do risco de Infarto Agudo do Miocárdio (IAM) em cardiopatas pré-existentes'], es: ['SÍNDROME DE HIPERSENSIBILIDAD MULTIORGÁNICA POR ABACAVIR (Mortal)', 'Acidosis Láctica con esteatosis', 'Riesgo cardiovascular aumentado de IAM'] },
+      contraindications: {
+        absolute: { pt: ['PACIENTES POSITIVOS PARA O TESTE GENÉTICO HLA-B*5701 (Risco de choque anafilático fatal)', 'Histórico prévio de qualquer reação alérgica ao abacavir', 'Insuficiência hepática moderada a grave'], es: ['PACIENTES POSITIVOS PARA EL ALELO HLA-B*5701 (Prohibido)', 'Historial de alergia previa al abacavir', 'Falla hepática moderada/grave'] },
+        relative: { pt: ['Pacientes com alto risco cardiovascular aterosclerótico estabelecido ou IAM recente'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O EXAME GENÉTICO QUE SALVA VIDAS (ALERTA DO HLA-B*5701): O Abacavir pode causar uma reação alérgica sistêmica assustadora na primeira semana (febre, erupção na pele, falta de ar e diarreia). Se o paciente tiver o gene HLA-B*5701 e tomar o remédio de novo, ele choca e morre em minutos. É PROIBIDO por lei prescrever Abacavir sem rodar o exame de sangue genético antes. Se der positivo, risque o abacavir do prontuário.', es: 'ALERTA DE SEGURIDAD CRÍTICA (REACCIÓN MORTAL POR HLA-B*5701): Induce un síndrome de hipersensibilidad mediado por células T que afecta pulmón, piel e intestino. Reexponer al paciente a la droga tras una sospecha alérgica desata un choque anafiláctico mortal. Es OBLIGATORIO descartar el alelo HLA-B*5701 por examen genético antes de iniciar.' }
+      },
+      references: {
+        pt: 'PREDICT-1 Trial (HLA-B*5701 screening reducing hypersensitivity - NEJM 2008); D:A:D Study (Cardiovascular risk evaluation); PCDT MS.',
+        es: 'PREDICT-1 Trial (NEJM 2008); D:A:D Observational Study; Guías de VIH de la SADI y Ministerio de Salud.'
+      }
+    },
+
+/* ── ZIDOVUDINA / AZT (946) ─────────────────────────────────────────── */
+    "zidovudina": {
+      name: { pt: 'Zidovudina (AZT)', es: 'Zidovudina (AZT)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor Nucleosídeo da Transcriptase Reversa (ITRN) Histórico', es: 'Antirretroviral / Inhibidor Nucleósido de la Transcriptasa Inversa (ITRN) Histórico' },
+      indications: {
+        pt: ['Profilaxia de Transmissão Vertical intraparto (infusão IV contínua na mãe durante o trabalho de parto)', 'Profilaxia neonatal do recém-nascido exposto ao HIV nas primeiras 4 semanas de vida', 'Esquema alternativo de tratamento do HIV em pacientes com resistência múltipla a novas drogas'],
+        es: ['Profilaxis de Transmisión Vertical intraparto (infusión IV continua durante el trabajo de parto)', 'Profilaxis neonatal del recién nacido expuesto', 'Esquemas alternativos de rescate multi-resistente']
+      },
+      commercialNames: { br: ['Retrovir', 'AZT (SUS)', 'Zidovudina/Lamivudina (Combo)'], ar: ['Retrovir', 'Zidovudina Richmond', 'Combivir'] },
+      presentation: { pt: ['Cápsulas duras 100 mg e 300 mg', 'Xarope / Solução oral 10 mg/mL', 'Frasco-ampola IV para infusão endovenosa 200 mg/20 mL'], es: ['Cápsulas 100 mg y 300 mg', 'Jarabe infantil 10 mg/mL', 'Ampollas IV 200 mg'] },
+      mechanism: {
+        pt: 'O Primeiro Guerreiro do HIV. É o análogo estrutural da timidina. Ele entra na célula e sofre fosforilação tripla gerando o AZT-trifosfato. Ele engana a transcriptase reversa do HIV ligando-se fortemente no lugar da timidina nativa. Ao entrar na fita de DNA em crescimento, ele encerra de forma prematura a replicação genética por ausência da ligação molecular subsequente. Possui alta toxicidade sobre a medula óssea humana.',
+        es: 'Análogo estructural de la timidina. Se fosforila en el linfocito a trifosfato de zidovudina, compitiendo con el sustrato natural dTTP. Al incorporarse al ADN provírico mediante la transcriptasa inversa, detiene de forma definitiva la elongación de la cadena de ADN vírico, abortando la replicación.'
+      },
+      dose: {
+        adult: {
+          pt: 'Uso oral (Resgate): 300 mg via oral, DUAS VEZES ao dia (de 12/12h) associado a outros antirretrovirais. Uso IV intraparto (Maternidade): Infusão contínua de 2 mg/kg IV na primeira hora (ataque), seguido de manutenção de 1 mg/kg/hora IV contínuo até o clampeamento do cordão umbilical.',
+          es: 'Uso Oral: 300 mg vía oral cada 12 horas. Infusión IV Intraparto: 2 mg/kg IV en bolo durante la primera hora, seguido de 1 mg/kg/hora en infusión continua hasta el clampeo del cordón.'
+        },
+        pediatric: {
+          pt: 'Profilaxia Neonatal (Bebê exposto): Iniciar nas primeiras 4 horas de vida. Dose baseada na idade gestacional: Termo: 4 mg/kg via oral de 12/12h por 4 semanas. Prematuros possuem tabelas estritas por semanas de vida.',
+          es: 'Profilaxis Neonatal: Iniciar en las primeras 4 horas de vida. Recién nacidos a término: 4 mg/kg vía oral cada 12 horas durante 4 semanas.'
+        }
+      },
+      administration: { pt: ['Uso oral, xarope ou infusão intravenosa hospitalar contínua. As ampolas IV devem ser diluídas em Soro Glicosado 5% (SG5%) até uma concentração estável máxima de 4 mg/mL antes de correr na bomba de infusão. Proteger contra luz se armazenamento longo.'], es: ['Vía oral o IV hospitalaria continua. Diluir las ampollas en suero glucosado al 5% hasta una concentración de 4 mg/mL antes de infundir en la maternidad.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 15 mL/min ou paciente em hemodiálise: reduzir a dose oral padrão para 100 mg a cada 8 horas (ou 300 mg uma vez ao dia).', es: 'Si ClCr < 15 mL/min o hemodiálisis: disminuir la dosis a 100 mg cada 8 horas.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado por glicuronidação hepática. Em pacientes com cirrose avançada, os níveis acumulam; reduzir a dose pela metade ou espaçar de 12/12h para 24/24h.', es: 'Reducir la dosis a la mitad en insuficiencia hepática grave por riesgo de toxicidad medular.' } },
+      commonAdverseEffects: { pt: ['NÁUSEAS INTENSAS E CEFALEIA VIOLENTA (Ocorre em 80% dos usuários no primeiro mês de uso oral, efeito limitante clássico)', 'Mialgia e dor muscular intensa', 'Insônia e gosto metálico'], es: ['Náuseas intensas y cefalea severa inicial', 'Mialgias y debilidad muscular', 'Gusto metálico'] },
+      dangerousAdverseEffects: { pt: ['MIELOSUPRESSÃO CRÍTICA (Anemia macrocítica severa com queda severa de hemoglobina e Neutropenia grave que exige transfusão)', 'MIOPATIA MITOCONDRIAL GRAVE (Desgaste e atrofia muscular por destruição do DNA mitocondrial humano)', 'Acidose Láctica letal'], es: ['MIELOSUPRESIÓN GRAVE (Anemia macrocítica severa y neutropenia crítica)', 'MIOPATÍA MITOCONDRIAL (Atrofia y destrucción muscular por toxicidad en el ADN mitocondrial celular)'] },
+      contraindications: {
+        absolute: { pt: ['Contagem basal de neutrófilos anormalmente baixa (< 750/mm³) ou hemoglobina criticamente reduzida (< 7,5 g/dL) pré-existente antes de iniciar tratamento'], es: ['Neutropenia severa previa (< 750/mm³) o anemia crítica (< 7,5 g/dL) antes del inicio'] },
+        relative: { pt: ['Uso concomitante com Ganciclovir ou Ribavirina (multiplica a toxicidade da medula ao extremo)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA DESTRUIÇÃO DA MEDULA (A ANEMIA DO AZT): O AZT é extremamente tóxico para a medula óssea do paciente. Ele paralisa a fabricação de glóbulos vermelhos, jogando a hemoglobina do doente para níveis absurdamente baixos (como 5 g/dL) acompanhado de um volume corpuscular imenso (Macrocitose). É OBRIGATÓRIO dosar hemograma a cada 15 dias no início do uso de resgate.', es: 'EL PELIGRO DE LA MIELOSUPRESIÓN AGUDA: Ejerce una toxicidad mitocondrial directa sobre las células madre de la médula ósea. Provoca anemia macrocítica severa y neutropenia en pocas semanas. Es mandatorio monitorear el hemograma de forma estricta (cada 14 días al inicio) en protocolos hospitalarios o neonatales.' }
+      },
+      references: {
+        pt: 'PACTG 076 Trial (AZT reducing vertical transmission by 70% - NEJM 1994); Protocolo de Transmissão Vertical do Ministério da Saúde; Guidelines CDC.',
+        es: 'PACTG 076 Landmark Trial (NEJM 1994); Directrices de Transmisión Vertical de la Sociedad Argentina de Pediatría; Ficha Técnica Retrovir.'
+      }
+    }
+
+}); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 448 (dolutegravir + raltegravir + emtricitabina + lamivudina + abacavir + zidovudina — Coquetel Antirretroviral e Profilaxias HIV) */
+
 })();
