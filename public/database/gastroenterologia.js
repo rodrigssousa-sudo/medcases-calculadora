@@ -951,7 +951,7 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
       presentation: { pt: ['Comprimidos revestidos 50 mg'], es: ['Comprimidos 50 mg'] },
       mechanism: {
         pt: 'O Duplo Motor do Estômago. A Itoprida atua por dois caminhos no estômago. Primeiro, ela bloqueia os receptores de dopamina D2 (que travam a motilidade). Segundo, ela inibe a enzima acetilcolinesterase, impedindo que a acetilcolina seja destruída na parede gástrica. Com mais acetilcolina ativa, o estômago ganha força e acelera o esvaziamento de forma coordenada. Não cruza a barreira hematoencefálica e não afeta o intervalo QT.',
-        es: 'Posee un mecanismo de acción dual: antagoniza los receptores dopaminérgicos D2 periféricos e inhibe la acetilcolinesterasa en el músculo liso gastrointestinal. Esto incrementa de forma sostenida los niveles de acetilcolina, estimulando el vaciamiento gástrico y el peristaltismo antral sin efectos sobre el sistema nervioso central.'
+        es: 'Antagonista selectivo de los receptores dopaminérgicos D2 periféricos e inhibe la acetilcolinesterasa en el músculo liso gastrointestinal. Esto incrementa de forma sostenida los niveles de acetilcolina, estimulando el vaciamiento gástrico y el peristaltismo antral sin efectos sobre el sistema nervioso central.'
       },
       dose: {
         adult: {
@@ -1027,5 +1027,319 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
     }
 
   }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 442 (rabeprazol + dexlansoprazol + subcitrato_de_bismuto — enrich/consolidação Padrão Ouro ala 719-723) | BUILD 438 (rabeprazol + dexlansoprazol + subcitrato_de_bismuto + itoprida + mosaprida — IBPs Avançados + Protetor de Mucosa + Procinéticos) */
+
+  /* ── BUILD 443 GUARD ─────────────────────────────────────────── */
+  if (typeof window.GASTROENTEROLOGIA_DRUGS_DB !== 'object' || window.GASTROENTEROLOGIA_DRUGS_DB === null) return;
+  Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
+
+    /* ── PRUCALOPRIDA (728) ─────────────────────────────────────────────── */
+    "prucaloprida": {
+      name: { pt: 'Prucaloprida (Succinato de)', es: 'Prucaloprida (Succinato de)' },
+      category: 'gastroenterologia',
+      class: { pt: 'Agonista Altamente Seletivo dos Receptores de Serotonina 5-HT4 / Procinético Cólico', es: 'Agonista Altamente Selectivo de los Receptores de Serotonina 5-HT4 / Proquinético Cólico' },
+      indications: {
+        pt: ['Tratamento da constipação intestinal crônica em adultos nos quais os laxantes clássicos falharam em fornecer alívio adequado'],
+        es: ['Tratamiento de la constipación intestinal crónica en adultos cuando los laxantes convencionales fallan']
+      },
+      commercialNames: { br: ['Resolor'], ar: ['Resolor', 'Prucalox'] },
+      presentation: { pt: ['Comprimidos revestidos 1 mg e 2 mg'], es: ['Comprimidos revestidos 1 mg y 2 mg'] },
+      mechanism: {
+        pt: 'O Ativador de Peristaltismo do Cólon. É um agonista di-hidrobenzofuranocarboxamida com afinidade ultra-elevada e estritamente seletiva pelos receptores 5-HT4 do intestino grosso. Ele estimula o reflexo peristáltico proximal e a secreção de fluidos intestinais, induzindo contrações propulsivas gigantes (HAPCs) no cólon, que empurram mecanicamente as fezes travadas há dias.',
+        es: 'Agonista selectivo de alta afinidad de los receptores serotoninérgicos 5-HT4. Estimula la motilidad colónica proximal desencadenando contracciones propulsivas de gran amplitud (HAPCs) y acelera el tránsito del intestino grueso sin afectar los canales hERG cardíacos.'
+      },
+      dose: {
+        adult: {
+          pt: '2 mg via oral, UMA VEZ ao dia, a qualquer hora do dia. Em idosos (> 65 anos), iniciar preventivamente com 1 mg ao dia.',
+          es: '2 mg vía oral, UNA VEZ al día. En pacientes ancianos (> 65 años), iniciar con 1 mg al día.'
+        },
+        pediatric: {
+          pt: 'Não indicado ou aprovado para menores de 18 anos.',
+          es: 'No recomendado en menores de 18 años.'
+        }
+      },
+      administration: { pt: ['Uso oral diário. Pode ser administrado com ou sem alimentos. Se não houver efeito após 4 semanas de uso contínuo, o tratamento deve ser reavaliado.'], es: ['Uso oral diario, con o sin alimentos de manera indiferente.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se insuficiência renal grave (ClCr < 30 mL/min), a dose máxima deve ser restrita obrigatoriamente a 1 mg ao dia.', es: 'En insuficiencia renal grave (ClCr < 30 mL/min), disminuir la dosis a 1 mg al día.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Se insuficiência hepática grave (Child-Pugh C), reduzir a dose inicial para 1 mg ao dia.', es: 'En insuficiencia hepática grave (Child-Pugh C), disminuir a 1 mg al día.' } },
+      commonAdverseEffects: { pt: ['Cefaleia intensa (ocorre em ~20% dos casos, tipicamente restrita ao primeiro dia de tratamento)', 'Náuseas e diarreia transitórias', 'Dor abdominal'], es: ['Cefalea intensa (frecuente en el primer día de toma, cede luego)', 'Náuseas y diarrea transitoria', 'Dolor abdominal'] },
+      dangerousAdverseEffects: { pt: ['Palpitações severas e taquicardia (raro)', 'Ideação suicida e alterações graves de humor (vigilância farmacológica restrita)'], es: ['Palpitaciones', 'Cambios severos en el estado de ánimo o ideación suicida (monitoreo estrecho)'] },
+      contraindications: {
+        absolute: { pt: ['Perfuração ou obstrução intestinal mecânica, megacólon tóxico, Crohn ou RCU severas'], es: ['Perforación o obstrucción intestinal, megacolon tóxico, colitis ulcerosa o Crohn grave'] },
+        relative: { pt: ['Histórico de arritmias cardíacas instáveis ou transtornos depressivos maiores'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A CEFALEIA DO PRIMEIRO DIA: Cerca de 1 em cada 5 pacientes que tomam a primeira dose de Resolor apresenta uma dor de cabeça latejante muito forte. Isso ocorre pelo estímulo sistêmico transitório dos receptores 5-HT4 vasculares. Explique ao doente que o sintoma some completamente a partir do segundo dia e oriente o uso de analgésicos.', es: 'ALERTA DE CEFALEA INICIAL: El 20% de los pacientes presenta cefalea intensa durante las primeras 24 horas debido al estímulo serotoninérgico vascular periférico. El síntoma remite de forma espontánea a partir del segundo día.' }
+      },
+      references: {
+        pt: 'FDA Prescribing Data Motegrity/Resolor; Diretrizes de Constipação Crônica da FBG; Aliment Pharmacol Ther.',
+        es: 'FDA Prescribing Information; Ficha Técnica CIMA Prucaloprida; Guías de Constipación de la SAGE.'
+      }
+    },
+
+    /* ── LINACLOTIDA (729) ──────────────────────────────────────────────── */
+    "linaclotida": {
+      name: { pt: 'Linaclotida', es: 'Linaclotida' },
+      category: 'gastroenterologia',
+      class: { pt: 'Agonista do Receptor da Guanilato Ciclase-C (GC-C) / Secretagogo Intestinal', es: 'Agonista del Receptor de la Guanilato Ciclasa-C (GC-C) / Secretagogo Intestinal' },
+      indications: {
+        pt: ['Tratamento da Síndrome do Intestino Irritável com Constipação (SII-C) moderada a grave em adultos', 'Constipação idiopática crônica'],
+        es: ['Tratamiento del Síndrome del Intestino Irritable con Constipación (SII-C) en adultos', 'Constipación idiopática crónica']
+      },
+      commercialNames: { br: ['Constella'], ar: ['Linis', 'Constella'] },
+      presentation: { pt: ['Cápsulas duras 72 mcg, 145 mcg e 290 mcg'], es: ['Cápsulas duras 72 mcg, 145 mcg y 290 mcg'] },
+      mechanism: {
+        pt: 'A Injeção de Água nas Fezes. A Linaclotida é um peptídeo sintético não absorvível que se liga ao receptor da Guanilato Ciclase-C na superfície interna do intestino. Esse acoplamento dispara a produção de GMP cíclico celular, que abre os canais CFTR. Ocorre uma secreção maciça de Cloreto e Bicarbonato para dentro do intestino. A água corre atrás dos eletrólitos por osmose, amolecendo as fezes e cortando a dor mecânica por bloquear os nervos sensoriais.',
+        es: 'Péptido sintético no absorbible que actúa localmente uniéndose al receptor de la guanilato ciclasa-C (GC-C) en el epitelio intestinal. Incrementa el GMP cíclico intracelular, activando el canal CFTR, lo que provoca una secreción activa de cloruro y bicarbonato hacia la luz intestinal. El agua entra por gradiente osmótico, ablandando las heces.'
+      },
+      dose: {
+        adult: {
+          pt: 'Síndrome do Intestino Irritável (SII-C): 290 mcg via oral, UMA VEZ ao dia. Constipação Crônica: 145 mcg ou 72 mcg via oral uma vez ao dia.',
+          es: 'SII-C: 290 mcg vía oral, UNA VEZ al día. Constipación Crónica: 145 mcg o 72 mcg una vez al día.'
+        },
+        pediatric: {
+          pt: 'ABSOLUTAMENTE CONTRAINDICADA em menores de 6 anos e estritamente evitada até 18 anos devido ao risco letal de desidratação infantil.',
+          es: 'ABSOLUTAMENTE CONTRAINDICADA en niños menores de 6 años por riesgo mortal de deshidratación severa.'
+        }
+      },
+      administration: { pt: ['DEVE SER TOMADA DE ESTÔMAGO VAZIO, NO MÍNIMO 30 MINUTOS ANTES DA PRIMEIRA REFEIÇÃO DO DIA (Café da manhã). Tomar junto ou após alimentos provoca diarreia aquosa severa.'], es: ['DEBE TOMARSE EN AYUNAS, AL MENOS 30 MINUTOS ANTES DEL DESAYUNO. Tomarla con alimentos induce diarrea severa.'] },
+      renalAdjustment: { required: false, message: { pt: 'Ação puramente luminal, sem absorção sistêmica, sem ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['DIARREIA AQUOSA (ocorre em ~20% dos pacientes, sendo o principal motivo de manejo de dose)', 'Dor abdominal e flatulência', 'Distensão abdominal'], es: ['DIARREA ACUOSA (muy frecuente, requiere ajuste de dosis)', 'Dolor abdominal y flatulencia', 'Meteorismo'] },
+      dangerousAdverseEffects: { pt: ['Desidratação grave com distúrbios hidroeletrolíticos agudos', 'Síncope por hipovolemia transitória'], es: ['Deshidratación severa', 'Síncope por hipovolemia prerrenal'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com obstrução mecânica gastrointestinal conhecida ou suspeita', 'Menores de 6 anos de idade'], es: ['Obstrucción gastrointestinal mecánica conocida o sospechada', 'Niños < 6 años'] },
+        relative: { pt: ['Idosos muito frágeis com risco de colapso volêmico por diarreia'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A CAIXA PRETA INFANTIL DA DESIDRATAÇÃO: A Linaclotida carrega uma Caixa Preta rígida do FDA. Ela causa uma secreção de água tão potente no intestino que se for administrada em crianças pequenas ou bebês, seca o corpo da criança em poucas horas, levando ao choque hipovolêmico letal. Uso restrito e exclusivo para adultos.', es: 'CAJA NEGRA EN PEDIATRÍA: Posee advertencia de Caja Negra por la FDA. El mecanismo secretor de fluidos es tan agresivo que en niños pequeños puede gatillar deshidratación aguda mortal en pocas horas. Prohibido en menores de 18 años.' }
+      },
+      references: {
+        pt: 'FDA Black Box Warning Linzess/Constella; Estudo Clínico LINX SII-C; Diretrizes de Síndrome do Intestino Irritável da FBG.',
+        es: 'FDA Black Box Warning; Ficha Técnica CIMA Constella; Guías del Síndrome del Intestino Irritable de la SAGE.'
+      }
+    },
+
+    /* ── LUBIPROSTONA (730) ─────────────────────────────────────────────── */
+    "lubiprostona": {
+      name: { pt: 'Lubiprostona', es: 'Lubiprostona' },
+      category: 'gastroenterologia',
+      class: { pt: 'Ativador Local dos Canais de Cloreto Tipo 2 (ClC-2) / Secretagogo', es: 'Activador Local de los Canales de Cloruro Tipo 2 (ClC-2) / Secretagogo' },
+      indications: {
+        pt: ['Constipação idiopática crônica em adultos', 'Síndrome do Intestino Irritável com Constipação (SII-C) exclusivamente em mulheres', 'Constipação induzida por Opioides em adultos com dor crônica por câncer'],
+        es: ['Constipación idiopática crónica', 'SII-C exclusivamente en mujeres', 'Constipación inducida por Opioides en dolor crónico no oncológico']
+      },
+      commercialNames: { br: ['Amitiza'], ar: ['Amitiza', 'Lubipro'] },
+      presentation: { pt: ['Cápsulas gelatinosas moles 8 mcg e 24 mcg'], es: ['Cápsulas blandas 8 mcg y 24 mcg'] },
+      mechanism: {
+        pt: 'O Abre-Portas de Cloreto. É um ácido graxo bicíclico derivado da prostaglandina E1. Age ativando especificamente os canais de cloreto tipo 2 (ClC-2) localizados na membrana apical do epitélio do intestino humano. Isso bombeia cloro para a luz intestinal, puxando sódio e água de forma passiva. O líquido lubrifica e amolece o bolo fecal endurecido, aumentando o trânsito sem irritar os plexos nervosos.',
+        es: 'Activador específico de los canales de cloruro tipo 2 (ClC-2) en la célula epitelial intestinal. Aumenta la secreción de fluido rico en cloruro hacia la luz, promoviendo el paso de sodio y agua por vía paracelular, lo que incrementa la motilidad intestinal y disminuye la consistencia de las heces.'
+      },
+      dose: {
+        adult: {
+          pt: 'Constipação Crônica / Opioides: 24 mcg via oral, DUAS VEZes ao dia (de 12/12h). SII-C (Mulheres): 8 mcg via oral, DUAS VEZES ao dia.',
+          es: 'Constipación Crónica / Opioides: 24 mcg vía oral, DOS VECES al día. SII-C (Mujeres): 8 mcg vía oral, DOS VECES al día.'
+        },
+        pediatric: {
+          pt: 'Não indicado ou aprovado em menores de 18 anos.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['DEVE SER TOMADA JUNTO COM ALIMENTOS E ÁGUA. Administrar de estômago vazio provoca crises severas de náuseas e vômitos imediatos.'], es: ['DEBE TOMARSE JUNTO CON ALIMENTOS Y ABUNDANTE AGUA para mitigar la aparición de náuseas intensas de origen central.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínima absorção sistêmica, sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Em insuficiência hepática moderada a grave (Child-Pugh B e C), reduzir a dose de manutenção para 12-24 mcg uma vez ao dia.', es: 'En insuficiencia hepática moderada/grave, reducir la dosis a una toma diaria.' } },
+      commonAdverseEffects: { pt: ['NÁUSEAS INTENSAS (afeta até 30% dos usuários, dose-dependente, cede se ingerido com comida pesada)', 'Diarreia e cólicas abdominais', 'Cefaleia'], es: ['NÁUSEAS INTENSAS (hasta el 30% de los casos, disminuye al tomarlo con comidas)', 'Diarrea y cólicos', 'Cefalea'] },
+      dangerousAdverseEffects: { pt: ['DISPNEIA AGUDA DO AMITIZA (Sensação de aperto no peito benigna que ocorre nos primeiros 30-60 minutos após a primeira dose, some sozinha)'], es: ['DISNEA AGUDA TRANSITORIA (Sensación de opresión torácica en la primera hora postoma, cede espontáneamente)'] },
+      contraindications: {
+        absolute: { pt: ['Obstrução intestinal mecânica conhecida ou suspeita', 'Diarreia grave ativa'], es: ['Obstrucción intestinal mecánica conocida o sospechada', 'Diarrea grave'] },
+        relative: { pt: ['Mulheres grávidas ou em planejamento gestacional ativo (risco potencial de perda embrionária)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A FALTA DE AR DA PRIMEIRA HORA (DISPNEIA): A Lubiprostone pode causar uma dispneia súbita esquisita na primeira dose. O paciente liga dizendo que está sufocando ou tendo um infarto. É um efeito transitório e autolimitado que some sozinho em poucas horas. Acalme o paciente e reinicie com a dose de 8mcg se tolerável.', es: 'ALERTA DE DISNEA TRANSITORIA: Puede inducir una sensación de opresión en el pecho y falta de aire transitoria en la primera toma. Remite por completo en 2-3 horas; no requiere intervenciones de urgencia.' }
+      },
+      references: {
+        pt: 'FDA Clinical Data Amitiza; Estudo RENOIR (Opioid-induced constipation); Manual de Gastroenterologia USP.',
+        es: 'FDA Prescribing Information; Guías de Tratamiento de la Constipación inducida por opioides de la SADI.'
+      }
+    },
+
+    /* ── PLECANATIDA (731) ──────────────────────────────────────────────── */
+    "plecanatida": {
+      name: { pt: 'Plecanatida', es: 'Plecanatida' },
+      category: 'gastroenterologia',
+      class: { pt: 'Agente Secretagogo Intestinal / Análogo Estrutural da Uroguanilina', es: 'Agente Secretagogo Intestinal / Análogo Estructural de la Uroguanilina' },
+      indications: {
+        pt: ['Tratamento de Constipação Idiopática Crônica (CIC) em adultos', 'Síndrome do Intestino Irritável com Constipação (SII-C)'],
+        es: ['Tratamiento de la Constipación Idiopática Crónica (CIC)', 'Síndrome del Intestino Irritable con Constipación']
+      },
+      commercialNames: { br: ['Trulance (Importação especializada)'], ar: ['Trulance'] },
+      presentation: { pt: ['Comprimidos de 3 mg'], es: ['Comprimidos de 3 mg'] },
+      mechanism: {
+        pt: 'O Irmão Gêmeo da Uroguanilina. É um peptídeo de 16 aminoácidos que imita perfeitamente a Uroguanilina humana nativa. Ele liga-se e ativa os receptores de Guanilato Ciclase-C no intestino de forma pH-dependente (atua especificamente no duodeno e jejuno). Promove uma secreção fluida rica em água de forma muito mais fisiológica e suave que a Linaclotida, apresentando menor taxa de cólicas excruciantes.',
+        es: 'Análogo estructural del péptido natriurético humano uroguanilina. Se une y activa selectivamente los receptores de la guanilato ciclasa-C (GC-C) en el lumen intestinal de forma dependiente de pH, estimulando la secreción de fluido intestinal y normalizando la consistencia de las heces.'
+      },
+      dose: {
+        adult: {
+          pt: '3 mg via oral, UMA VEZ ao dia, a qualquer hora do dia, com ou sem alimentos.',
+          es: '3 mg vía oral, UNA VEZ al día, con o sin alimentos de manera indistinta.'
+        },
+        pediatric: {
+          pt: 'ABSOLUTAMENTE CONTRAINDICADA em menores de 6 anos; evitada formalmente em menores de 18 anos pelo risco extremo de desidratação.',
+          es: 'ABSOLUTAMENTE CONTRAINDICADA en menores de 6 años por riesgo de deshidratación severa fatal.'
+        }
+      },
+      administration: { pt: ['Uso oral diário. Os comprimidos podem ser engolidos inteiros ou triturados e misturados em água ou purê de frutas para administração por sonda enteral nasogástrica.'], es: ['Uso oral. Los comprimidos pueden triturarse y suspenderse en agua para administración por sonda nasogástrica.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, não sofre absorção sistêmica relevante.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Diarreia leve a moderada (ocorre em ~5% dos casos, significativamente menor que a linaclotida)', 'Náusea leve', 'Gases'], es: ['Diarrea (menos intensa que con linaclotida)', 'Náusea leve', 'Gases'] },
+      dangerousAdverseEffects: { pt: ['Desidratação severa fulminante em menores de idade', 'Incontinência fecal transitória'], es: ['Deshidratación grave en edad pediátrica', 'Incontinencia fecal'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com obstrução gastrointestinal mecânica conhecida ou suspeita', 'Menores de 6 anos de idade'], es: ['Obstrucción gastrointestinal mecánica', 'Niños menores de 6 años'] },
+        relative: { pt: ['Uso em adolescentes de 12 a 17 anos (não recomendado pela falta de dados robustos)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA IDADE LIMITE: Assim como a Linaclotida, a Plecanatida carrega um aviso de Caixa Preta rígido contra o uso em crianças pequenas. O epitélio intestinal infantil é extremamente sensível ao estímulo do GMPc, gerando perdas fluidas volumosas capazes de causar óbito por choque hipovolêmico em poucas horas.', es: 'ADVERTENCIA DE CAJA NEGRA: Contraindicado en menores de 6 años y evitado en menores de 18. El estímulo secretor provoca pérdidas de volumen intratables en el epitelio intestinal pediátrico, llevando al colapso deshidratante.' }
+      },
+      references: {
+        pt: 'FDA Black Box Warning Trulance; Estudo Clínico Integrado CIC-Plecanatide; Manual de Gastroenterologia Avançada.',
+        es: 'FDA Black Box Warning; Ficha Técnica Autorizada Trulance; Manual de Farmacología de Goodman & Gilman.'
+      }
+    },
+
+    /* ── MACROGOL (732) ─────────────────────────────────────────────────── */
+    "macrogol": {
+      name: { pt: 'Macrogol 3350 (Polietilenoglicol / PEG)', es: 'Macrogol 3350 (Polietilenglicol / PEG)' },
+      category: 'gastroenterologia',
+      class: { pt: 'Laxante Osmótico Puro / Polímero de Alta Massa Molecular', es: 'Laxante Osmótico Puro / Polímero de Alta Masa Molecular' },
+      indications: {
+        pt: ['Tratamento de escolha a longo prazo para Constipação Intestinal Crônica em adultos e crianças', 'Desimpactação de fecaloma (em doses altas)', 'Preparo de cólon limpo para exames (Macrogol 4000 com eletrólitos)'],
+        es: ['Tratamiento de elección a largo plazo para Constipación Crónica en adultos y niños', 'Desimpactación de fecaloma', 'Preparación de colon']
+      },
+      commercialNames: { br: ['Muvinlax', 'Peglax', 'Floraxil'], ar: ['Barex', 'Contumax', 'Miralax'] },
+      presentation: { pt: ['Pó para solução oral em envelopes de 14 g ou 17 g (sem ou com eletrólitos associados)'], es: ['Polvo para solución oral en sobres o frasco a granel'] },
+      mechanism: {
+        pt: 'A Esponja de Água Luminal. O Macrogol é um polímero linear gigante inerte que estabelece pontes de hidrogênio fortes com as moléculas de água. Ele não é absorvido e não é quebrado pelas bactérias do cólon (não gera gases). Ele atua como uma "esponja física": retém a água que o paciente bebeu diretamente dentro do bolo fecal. As fezes hidratam, aumentam de volume e estimulam o peristaltismo natural por estiramento mecânico.',
+        es: 'Polímero de alto peso molecular que actúa como agente osmótico puro. No se absorbe en el intestino ni es metabolizado por la microbiota colónica (no produce gas). Retiene las moléculas de agua mediante puentes de hidrógeno dentro de la luz intestinal, ablandando las heces e incrementando el volumen fecal.'
+      },
+      dose: {
+        adult: {
+          pt: 'Constipação Crônica: 17 g (1 envelope ou 1 colher medida) dissolvido em líquidos, UMA VEZ ao dia. Pode subir até 34 g/dia se necessário. Efeito ocorre em 24 a 48h.',
+          es: 'Constipación Crónica: 17 g (1 sobre) disuelto en líquidos, UNA VEZ al día. Puede incrementarse a 34 g/día según necesidad.'
+        },
+        pediatric: {
+          pt: 'Escolha padrão mundial em crianças > 6 meses: 0,4 a 0,8 g/kg/dia, ajustando conforme consistência das fezes.',
+          es: 'Estándar de oro en pediatría (> 6 meses): 0,4 a 0,8 g/kg/día, modulando la dosis según respuesta.'
+        }
+      },
+      administration: { pt: ['O pó do envelope deve ser totalmente dissolvido em um copo grande (200 mL) de água, suco, chá ou leite. Pode ser tomado a qualquer hora do dia, com ou sem comida.'], es: ['Disolver por completo el polvo en un vaso de líquido (agua o jugo). Se puede administrar a cualquier hora del día.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não absorvido, 100% seguro em renais crônicos e idosos cardiopatas (não altera eletrólitos se usado na formulação com sais).', es: 'Seguro en insuficiencia renal y cardiopatías al no absorberse sistémicamente.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Cólicas abdominais leves e borborigmos (ruídos no estômago)', 'Náusea leve inicial', 'Fezes amolecidas se dose alta'], es: ['Cólicos abdominales leves', 'Ruidos intestinales (borborigmos)', 'Náusea leve'] },
+      dangerousAdverseEffects: { pt: ['Diarreia profusa com desidratação se houver abuso extremo da dose habitual'], es: ['Diarrea por sobredosificación con riesgo de deshidratación en ancianos'] },
+      contraindications: {
+        absolute: { pt: ['Obstrução ou perfuração gastrointestinal mecânica, íleo paralítico, megacólon tóxico'], es: ['Obstrucción o perforación intestinal activa, íleo paralítico'] },
+        relative: { pt: ['Nenhuma específica; considerado o laxante mais seguro e limpo da medicina moderna'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O LAXANTE QUE NÃO CAUSA GASES: Diferente do Lactulona/Lactulose (que é fermentado pelas bactérias gerando cólicas terríveis e flatulência que fazem o paciente soltar gases o dia todo), o Macrogol é inerte. Ele limpa o intestino puramente pela água, sem fermentar. É o laxante número 1 preferido pelos pediatras e geriatras mundiais.', es: 'EL REY DE LOS OSMÓTICOS: A diferencia de la lactulosa (que sufre fermentación bacteriana masiva provocando gases, distensión dolorosa y flatulencias incómodas), el Macrogol es molecularmente inerte. No genera gases, lo que asegura una excelente tolerancia a largo plazo.' }
+      },
+      references: {
+        pt: 'WGO Global Guidelines on Constipation; Diretrizes da Sociedade Brasileira de Pediatria (SBP); Cochrane Database Syst Rev.',
+        es: 'WGO Global Guidelines; Guías de Constipación Pediátrica y Adultos de la SAGE; Cochrane Database Syst Rev.'
+      }
+    },
+
+    /* ── BISACODIL (733) ────────────────────────────────────────────────── */
+    "bisacodil": {
+      name: { pt: 'Bisacodil', es: 'Bisacodilo' },
+      category: 'gastroenterologia',
+      class: { pt: 'Laxante Catártico Estimulante / Derivado do Difenilmetano', es: 'Laxante Catártico Estimulante / Derivado del Difenilmetano' },
+      indications: {
+        pt: ['Tratamento de curto prazo da constipação aguda rebelde', 'Preparo intestinal pré-operatório ou para exames radiológicos e colonoscopia'],
+        es: ['Tratamiento a corto plazo de la constipación aguda', 'Preparación de colon preoperatorio o para estudios diagnósticos']
+      },
+      commercialNames: { br: ['Dulcolax', 'Pleson'], ar: ['Dulcolax Argentina', 'Modaton'] },
+      presentation: { pt: ['Comprimidos revestidos gastrorresistentes 5 mg', 'Supositórios infantis 5 mg e adultos 10 mg'], es: ['Comprimidos gastrorresistentes 5 mg', 'Supositorios adultos 10 mg'] },
+      mechanism: {
+        pt: 'O Gatilho Nervoso do Intestino. O Bisacodil é hidrolisado pelas enzimas do intestino, gerando o metabólito ativo desacetilado. Esse metabólito irrita e estimula diretamente as terminações nervosas do plexo mientérico no cólon (intestino grosso). Isso induz contrações propulsivas fortes (peristaltismo acelerado) e bloqueia o bombeamento de água de volta para o corpo, acumulando líquido e forçando a evacuação imediata.',
+        es: 'Laxante de contacto. Sufre hidrólisis por las esterasas intestinales liberando el metabólito activo (bis-p-hidroxifenildifenilmetano). Este estimula directamente los plexos nerviosos de la mucosa colónica, incrementando el peristaltismo e inhibiendo la absorción de agua y electrolitos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Via Oral: 5 mg a 10 mg (1 a 2 comprimidos) via oral à noite antes de deitar (Efeito em 6 a 12h). Via Retal (Supositório): 1 supositório de 10 mg introduzido pela manhã (Efeito rápido em 15 a 45 minutos).',
+          es: 'Vía Oral: 5 a 10 mg por la noche antes de acostarse (Efecto en 6-12h). Vía Rectal: 1 supositorio de 10 mg por la mañana (Efecto rápido en 15-45 minutos).'
+        },
+        pediatric: {
+          pt: 'Crianças > 4 anos: 5 mg via oral à noite ou 1 supositório infantil de 5 mg pela manhã.',
+          es: 'Niños > 4 años: 5 mg vía oral por la noche.'
+        }
+      },
+      administration: { pt: ['OS COMPRIMIDOS NÃO PODEM SER PARTIDOS OU MASTIGADOS. Devem ser tomados inteiros e NUNCA JUNTO COM LEITE OU ANTIÁCIDOS, pois estes rompem a casca protetora do comprimido antes da hora, liberando o remédio no estômago, causando dor de estômago terrível e vômitos.'], es: ['Los comprimidos poseen recubrimiento entérico. TRAGAR ENTEROS. PROHIBIDO TOMAR CON LECHE O ANTIÁCIDOS, ya que disuelven el recubrimiento en el estómago provocando gastritis severa y vómitos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínima absorção, sem ajuste, mas evitar o abuso crônico pelo risco de desidratação e perda de potássio.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['CÓLICAS ABDOMINAIS FORTES E ESPASMOS (efeito do estímulo motor entérico)', 'Queimação retal (supositório)', 'Diarreia e náuseas'], es: ['CÓLICOS ABDOMINALES INTENSOS (por espasmo muscular cólico)', 'Ardor rectal (supositorios)', 'Diarrea'] },
+      dangerousAdverseEffects: { pt: ['Hipocalemia severa (despenca o potássio no sangue)', 'Dependência de laxantes com perda da função motora natural do cólon (Uso crônico indiscriminado)'], es: ['Hipopotasemia grave por pérdidas fluidas', 'Atonía colónica / Colon catártico por abuso crónico'] },
+      contraindications: {
+        absolute: { pt: ['Obstrução intestinal mecânica, apendicite aguda, dor abdominal inexplicada, desidratação grave'], es: ['Obstrucción intestinal mecánica, apendicitis aguda, dolor abdominal agudo'] },
+        relative: { pt: ['Uso contínuo por mais de 5 a 7 dias sem diagnóstico real da causa da constipação'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O ERRO DA TOMADA COM LEITE: Tomar Dulcolax com um copo de leite ou após um antiácido neutraliza o ácido do estômago. Isso faz com que a pílula ache que já chegou no intestino e abra dentro do estômago. O Bisacodil solto queima o estômago vivo, gerando uma dor epigástrica excruciante e vômitos violentos. Separe o leite por 2 horas.', es: 'EL ERROR DE LA COADMINISTRACIÓN CON LÁCTEOS: Tomar bisacodilo con leche o antiácidos eleva el pH estomacal deshaciendo la cubierta protectora entérica en el estómago de forma prematura. El fármaco libre lesiona la mucosa gástrica provocando dolor epigástrico urente severo y vómitos.' }
+      },
+      references: {
+        pt: 'FDA Safety Alerts on Over-the-counter Laxatives; Manual de Gastroenterologia Clínica HC-FMUSP; Prescribing Info Dulcolax.',
+        es: 'FDA Safety Alerts; Ficha Técnica CIMA Bisacodilo; Guías de Constipación de la SAGE.'
+      }
+    },
+
+    /* ── SENE (734) ─────────────────────────────────────────────────────── */
+    "sene": {
+      name: { pt: 'Sene (Cassia senna / Senosídeos A e B)', es: 'Sen (Cassia senna / Senósidos A y B)' },
+      category: 'gastroenterologia',
+      class: { pt: 'Laxante Fitoterápico Estimulante / Antraquinona', es: 'Laxante Fitoterápico Estimulante / Antraquinona' },
+      indications: {
+        pt: ['Tratamento a curto prazo da constipação intestinal aguda ocasional', 'Preparo de exames diagnósticos colorretais'],
+        es: ['Tratamiento a corto plazo de la constipación ocasional', 'Preparación de colon']
+      },
+      commercialNames: { br: ['Tamarine (Assoc)', 'Naturetti (Assoc)', 'Sene Belarina'], ar: ['Senosidos', 'Modaton Natural', 'X-Prep'] },
+      presentation: { pt: ['Comprimidos 10 mg a 20 mg de senosídeos puros', 'Extrato seco fitoterápico ou chá de folhas secas'], es: ['Comprimidos conteniendo senósidos A y B'] },
+      mechanism: {
+        pt: 'O Irritante Natural das Paredes. Os senosídeos passam intactos pelo estômago e intestino. No cólon, as bactérias da flora clivam a molécula liberando as Antraquinonas ativas (reinantronas). Essas antraquinonas irritam localmente as células da parede do intestino grosso e os plexos nervosos, aumentando as contrações (peristaltismo) e forçando a secreção de fluidos e muco para dentro do cólon, gerando evacuação explosiva.',
+        es: 'Los senósidos son glucósidos antraquinónicos inactivos que se hidrolizan por la microbiota del colon, liberando las antraquinonas activas (reinantronas). Estas causan irritación local en la mucosa colónica estimulando el plexo mientérico, induciendo contracciones e incrementando la secreción de moco y agua.'
+      },
+      dose: {
+        adult: {
+          pt: '10 mg a 20 mg via oral (calculado em senosídeos), em dose única à noite antes de deitar. O efeito ocorre em 6 a 10 horas após a ingestão.',
+          es: '10 mg a 20 mg vía oral, en dosis única por la noche antes de acostarse. El efecto evacuatorio se manifiesta de 6 a 10 horas después.'
+        },
+        pediatric: {
+          pt: 'Contraindicado em crianças menores de 12 anos devido ao risco de dores abdominais intensas e assaduras severas por diarreia.',
+          es: 'Contraindicado en niños menores de 12 años.'
+        }
+      },
+      administration: { pt: ['Uso oral curto. Tomar à noite antes de deitar com um copo de água. Não deve ser utilizado de forma contínua por mais de 7 dias consecutivos.'], es: ['Uso oral nocturno. No utilizar por más de 7 días consecutivos por riesgo de habituación cólica.'] },
+      renalAdjustment: { required: false, message: { pt: 'Ação puramente cólica local, sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['CÓLICAS ABDOMINAIS SEVERAS (efeito irritante clássico das antraquinonas)', 'Urina de coloração avermelhada ou amarelada (por eliminação dos pigmentos vegetais)', 'Diarreia'], es: ['CÓLICOS ABDOMINALES SEVEROS (por efecto irritante directo)', 'Coloración rojiza o amarillenta en la orina', 'Diarrea'] },
+      dangerousAdverseEffects: { pt: ['MELANOSE CÓLICA (o cólon fica inteiramente preto por dentro devido à morte celular induzida pelo uso crônico)', 'Desidratação e hipocalemia severa por abuso', 'Distúrbios de condução cardíaca por falta de potássio'], es: ['MELANOSIS COLI (El colon se tiñe de negro por dentro en uso crónico)', 'Hipopotasemia severa', 'Deshidratación'] },
+      contraindications: {
+        absolute: { pt: ['Doença inflamatória intestinal ativa (Crohn/RCU)', 'Obstrução ou estenose intestinal mecânica, apendicite aguda', 'Menores de 12 anos e gravidez'], es: ['Enfermedades inflamatorias intestinales (Crohn/CU)', 'Obstrucción intestinal o apendicitis', 'Embarazo y niños < 12 años'] },
+        relative: { pt: ['Uso concomitante com diuréticos espoliadores de potássio (Furosemida)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O INTESTINO QUE FICA PRETO POR DENTRO (MELANOSE CÓLICA): O uso crônico de chá de Sene ou comprimidos fitoterápicos por meses causa a apoptose (morte celular) dos macrófagos da mucosa do cólon. As células mortas acumulam um pigmento escuro lipofuscínico. Quando o médico faz uma colonoscopia, o intestino do paciente está inteiramente PRETO por dentro, como couro queimado. O efeito é benigno e reverte em meses após suspender o Sene.', es: 'EL ALERTA DE LA MELANOSIS COLI: El abuso crónico de té de Sen o derivados antraquinónicos provoca la muerte de células epiteliales del colon que son fagocitadas por macrófagos, tiñendo el interior del intestino de un color negro intenso (Melanosis Coli) visible en la colonoscopia. El cuadro revierte al suspender el fitoterápico.' }
+      },
+      references: {
+        pt: 'Monografia de Plantas Medicinais da OMS (Sene); Diretrizes de Fitoterapia da ANVISA; Manual de Toxicologia de Plantas Micromedex.',
+        es: 'Monografías de Plantas Medicinales de la OMS; Ficha Técnica Autorizada de Senósidos; Manual de la SAGE.'
+      }
+    }
+
+  }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 443 (prucaloprida + linaclotida + lubiprostona + plecanatida + macrogol + bisacodil + sene — Procinéticos Cólicos/Secretagogos GC-C/Osmótico PEG/Catárticos Estimulantes) */
 
 })();
