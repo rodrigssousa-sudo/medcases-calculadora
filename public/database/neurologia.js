@@ -2137,39 +2137,43 @@
       icon: '🧠',
       color: '#8B5CF6',
       colorTxt: '#ffffff',
-      class: { pt: 'Relaxante Muscular de Ação Central', es: 'Relajante Muscular de Acción Central' },
+      class: { pt: 'Relaxante Muscular de Ação Central / Bloqueador Polissináptico', es: 'Relajante Muscular de Acción Central / Bloqueador Polisináptico' },
       indications: {
-        pt: ['Espasmos musculares agudos e dolorosos (Coadjuvante a repouso e fisioterapia)', 'Tétano (historicamente usado em altas doses IV para controlar os espasmos tetânicos)'],
-        es: ['Espasmos musculares agudos y dolorosos (Coadyuvante al reposo y fisioterapia)', 'Tétanos (históricamente usado en altas dosis IV para controlar espasmos)']
+        pt: ['Alívio do espasmo muscular doloroso agudo associado a condições musculoesqueléticas (lombalgia crônica, torcicolo, traumas musculares)', 'Terapia adjuvante no manejo do Tétano (espasmos tétânicos severos)'],
+        es: ['Alivio del espasmo muscular doloroso agudo (lumbalgia, tortícolis, contracturas)', 'Terapia coadyuvante en el tétanos']
       },
-      commercialNames: { br: ['Robaxin (Importado/Associações)'], ar: ['Robaxin'] },
-      presentation: { pt: ['Comprimidos 500 mg e 750 mg', 'Ampolas IV/IM 100 mg/mL'], es: ['Comprimidos 500 mg y 750 mg', 'Ampollas IV/IM 100 mg/mL'] },
+      commercialNames: { br: ['Robaxin (Importação especializada)', 'Metocarbamol'], ar: ['Robaxin', 'Miorelax'] },
+      presentation: { pt: ['Comprimidos de 500 mg e 750 mg', 'Ampolas injetáveis IV/IM 1.000 mg/10 mL'], es: ['Comprimidos de 500 mg y 750 mg', 'Ampollas IV/IM 1.000 mg'] },
       mechanism: {
-        pt: 'Mecanismo exato desconhecido. Acredita-se que atue puramente por depressão geral do Sistema Nervoso Central (sedação profunda). Ele não tem efeito direto na placa motora ou no músculo esquelético. O paciente relaxa porque o cérebro "apaga" a tensão neurológica basal.',
-        es: 'Mecanismo exacto desconocido. Se cree que actúa puramente por depresión general del SNC (sedación profunda). No tiene efecto directo en la placa motora. El paciente se relaja porque el cerebro "apaga" la tensión neurológica basal.'
+        pt: 'O Desligador do Reflexo do Espasmo. Ele não age diretamente no músculo esquerdo ou na placa motora. Ele penetra no Sistema Nervoso Central e provoca uma depressão geral do SNC. Ele bloqueia os reflexos polissinápticos na medula espinhal e no tronco cerebral, cortando a transmissão dos impulsos nervosos que forçam o músculo a ficar contraído e duro em resposta à dor.',
+        es: 'Relajante muscular de acción central. No relaja directamente el músculo esquelético ni bloquea la placa motora, sino que induce una depresión general del sistema nervioso central, bloqueando las vías reflejas polisinápticas en la médula espinal, rompiendo el ciclo dolor-espasmo.'
       },
       dose: {
         adult: {
-          pt: 'Oral: Iniciar com 1.500 mg, 4 vezes ao dia por 2 a 3 dias. Depois, reduzir para 1.000 mg 4 vezes ao dia. IV/IM: Casos severos (Tétano).',
-          es: 'Oral: Iniciar con 1.500 mg, 4 veces al día por 2 a 3 días. Luego, reducir a 1.000 mg 4 veces al día. IV/IM: Casos severos (Tétanos).'
+          pt: 'Dose Inicial Intensa (Ataque): 1.500 mg via oral, QUATRO vezes ao dia (Total de 6 g/dia nos primeiros 2-3 dias). Dose de manutenção: 750 mg a 1.000 mg via oral a cada 6 horas (máximo de 4 g/dia).',
+          es: 'Dosis de Carga (Días 1-3): 1.500 mg vía oral, CUATRO veces al día (6 g/día). Mantenimiento posterior: 750 mg a 1.000 mg vía oral cada 6 horas (Máx 4 g/día).'
         },
         pediatric: {
-          pt: 'Não recomendado (exceto no tétano pediátrico IV).',
-          es: 'No recomendado (excepto en tétanos pediátrico IV).'
+          pt: 'Não recomendado para menores de 12 anos, exceto em protocolo específico hospitalar para tétano.',
+          es: 'No recomendado en niños menores de 12 años.'
         }
       },
-      administration: { pt: ['Pode escurecer a urina (cor preta, marrom ou verde), o que é inofensivo. Injeção IV deve ser lenta (Máx 300 mg/min) para evitar síncope.'], es: ['Puede oscurecer la orina (color negro, marrón o verde), lo que es inofensivo. Inyección IV debe ser lenta para evitar síncope.'] },
-      renalAdjustment: { required: true, message: { pt: 'As ampolas IV contêm polietilenoglicol (PEG). O PEG acumula em nefropatas, sendo CONTRAINDICADO o uso IV na insuficiência renal grave.', es: 'Las ampollas IV contienen polietilenglicol (PEG). El PEG acumula en nefrópatas, siendo CONTRAINDICADO el uso IV en insuficiencia renal grave.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Evitar ou reduzir dose na cirrose devido a meia-vida prolongada.', es: 'Evitar o reducir dosis en cirrosis debido a vida media prolongada.' } },
-      commonAdverseEffects: { pt: ['Sonolência intensa, vertigem e letargia', 'Urina escura/esverdeada', 'Visão dupla (diplopia)'], es: ['Somnolencia intensa, vértigo y letargo', 'Orina oscura/verdosa', 'Visión doble (diplopía)'] },
-      dangerousAdverseEffects: { pt: ['Convulsões (Ocorre na injeção IV muito rápida)', 'Anafilaxia'], es: ['Convulsiones (Ocurre en inyección IV muy rápida)', 'Anafilaxia'] },
+      administration: { pt: ['Uso oral ou injetável (IV lento ou IM profundo). A injeção IV direta na veia não deve exceder a velocidade de 3 mL por minuto para evitar colapso de pressão e desmaio.'], es: ['Uso oral o inyectable. La vía IV directa exige lentitud extrema: no superar los 3 mL/minuto para evitar síncope.'] },
+      renalAdjustment: { required: true, message: { pt: 'A formulação injetável contém polietilenoglicol (veículo oleoso). CONTRAINDICADO por via intravenosa se o paciente tiver insuficiência renal crônica (ClCr < 30 mL/min) devido ao risco de necrose tubular pelo veículo.', es: 'La ampolla IV posee polietilenglicol. CONTRAINDICADO por vía endovenosa si ClCr < 30 mL/min por nefrotoxicidad del vehículo.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado por conjugação hepática intensa. Em cirróticos, a meia-vida triplica. Usar doses menores e espaçar tomadas.', es: 'Prolonga su vida media al triple en cirrosis; disminuir dosis de mantenimiento.' } },
+      commonAdverseEffects: { pt: ['SONOLÊNCIA MARCADA e sedação (efeito limitante principal)', 'Tonturas, vertigens e ataxia', 'Urina com coloração escura (verde-escura ou preta, inofensiva)'], es: ['SONOLENCIA MARCADA (Efecto sedante principal)', 'Mareos y vértigo', 'Orina de coloración oscura (verdosa o negra, inofensiva)'] },
+      dangerousAdverseEffects: { pt: ['Depressão respiratória severa (se associado a opioides ou álcool)', 'Choque anafilático e convulsões (se infusão IV rápida)', 'Hipotensão profunda com síncope'], es: ['Depresión respiratoria grave (en asociación)', 'Síncope e hipotensión severa', 'Convulsiones por infusión IV rápida'] },
       contraindications: {
-        absolute: { pt: ['Uso Intravenoso em pacientes com Insuficiência Renal (Devido ao veículo PEG)'], es: ['Uso Intravenoso en pacientes con Insuficiencia Renal (Por el vehículo PEG)'] },
-        relative: { pt: ['Miastenia Gravis (Especialmente se o paciente estiver usando inibidores de colinesterase)'], es: ['Miastenia Gravis (Especialmente si el paciente usa inhibidores de colinesterasa)'] }
+        absolute: { pt: ['Hipersensibilidade ao metocarbamol', 'Estado de coma ou depressão pré-existente do SNC', 'Disfunção renal severa se via IV'], es: ['Estado de coma o depresión severa del SNC', 'Falla renal grave para uso IV'] },
+        relative: { pt: ['Histórico de epilepsia ou crises convulsivas (o remédio pode reduzir o limiar convulsivo)'], es: ['Antecedentes de epilepsia o convulsiones'] }
       },
       safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'O SUSTO NO BANHEIRO: O paciente deve ser ativamente avisado de que o Metocarbamol vai deixar a urina dele completamente preta, verde ou marrom. Sem esse aviso, ele vai ao pronto-socorro em pânico achando que os rins falharam ou que está sangrando.', es: 'EL SUSTO EN EL BAÑO: El paciente debe ser avisado de que el Metocarbamol dejará su orina negra, verde o marrón. Sin este aviso, irá a urgencias en pánico creyendo que sus riñones fallaron.' }
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O SUSTO DO XIXI VERDE: O Metocarbamol sofre uma quebra química no corpo que altera a cor dos pigmentos na urina do paciente. A urina pode sair com uma cor verde-escura ou preta azulada na privada. O paciente liga desesperado achando que está morrendo de infecção. Avise antes: é inofensivo e decorrente do descarte do remédio.', es: 'EL SUSTO DE LA ORINA VERDE/NEGRA: El metabolismo del fármaco produce cromógenos que tiñen la orina de un color verde oscuro o negro azulado al contacto con el aire. Es un efecto totalmente INOFENSIVO. Advierta al paciente para evitar consultas innecesarias.' }
+      },
+      references: {
+        pt: 'FDA Label Robaxin; Cochrane Systematic Review on Muscle Relaxants; Manual de Cuidados Críticos em Tétano.',
+        es: 'FDA Prescribing Information (Robaxin); Guías de Manejo del Dolor Lumbar de la Red Cochrane.'
       }
     },
 
@@ -2180,39 +2184,43 @@
       icon: '🧠',
       color: '#8B5CF6',
       colorTxt: '#ffffff',
-      class: { pt: 'Relaxante Muscular de Ação Central (Pró-fármaco de Barbitúrico)', es: 'Relajante Muscular de Acción Central (Profármaco de Barbitúrico)' },
+      class: { pt: 'Relaxante Muscular Central de Alto Risco / Precursor de Meprobamato', es: 'Relajante Muscular Central de Alto Riesgo / Precursor de Meprobamato' },
       indications: {
-        pt: ['Alívio sintomático de dores musculoesqueléticas agudas (Geralmente associado a Diclofenaco/Meloxicam em formulações brasileiras/latinas)'],
-        es: ['Alivio sintomático de dolores musculoesqueléticos agudos (Generalmente asociado a Diclofenac en formulaciones latinas)']
+        pt: ['Tratamento de espasmos e rigidez musculares dolorosas agudas no esqueleto (Lombalgias e contraturas severas, uso restrito a no máximo 2 a 3 semanas)'],
+        es: ['Tratamiento a corto plazo de espasmos musculares dolorosos agudos (Uso limitado a máximo 2-3 semanas)']
       },
-      commercialNames: { br: ['Torsilax (Assoc)', 'Tandrilax (Assoc)', 'Beserol (Assoc)'], ar: ['Dioxaflex (Assoc)'] },
-      presentation: { pt: ['Comprimidos (Em mono-droga 350 mg EUA, ou 125mg nas associações brasileiras)'], es: ['Comprimidos (En mono-droga 350 mg EE.UU., o 125mg en asociaciones latinas)'] },
+      commercialNames: { br: ['Mioflex (Assoc)', 'Tandrilax (Assoc)', 'Infralax (Assoc)'], ar: ['Mio-Virotex', 'Flexidol'] },
+      presentation: { pt: ['Comprimidos de 125 mg, 25 mg e 350 mg (Geralmente co-formulado com AINEs e Cafeína no Brasil)'], es: ['Comprimidos de 350 mg'] },
       mechanism: {
-        pt: 'O Relaxante Muscular que causa Dependência. Ele interrompe a comunicação dos neurônios na medula espinhal e na formação reticular do cérebro. O GRANDE PROBLEMA: O Carisoprodol é rapidamente transformado no fígado em MEPROBAMATO. O Meprobamato atua como um BARBITÚRICO (um calmante altamente viciante e perigoso). O paciente sente uma euforia leve, sedação pesada e relaxamento brutal.',
-        es: 'El Relajante Muscular que causa Dependencia. Interrumpe la comunicación en la médula y el cerebro. EL GRAN PROBLEMA: El Carisoprodol se transforma en el hígado en MEPROBAMATO. El Meprobamato actúa como un BARBITÚRICO (calmante altamente adictivo). El paciente siente euforia, sedación pesada y relajación brutal.'
+        pt: 'O Primo do Barbitúrico. Age no Sistema Nervoso Central interrompendo a comunicação neuronal polissináptica na medula espinhal e na formação reticular do cérebro. A sua VERDADEIRA natureza farmacológica: ele é um pró-fármaco que o fígado quebra em Meprobamato, um ansiolítico antigo da classe dos carbamatos com efeitos IDÊNTICOS aos barbitúricos. Ele modula positivamente o receptor GABA-A, causando relaxamento muscular por sedação cerebral profunda e induzindo alto vício biológico.',
+        es: 'Relajante central. Su acción real se debe a que es un profármaco que se metaboliza en el hígado a Meprobamato, un ansiolítico potente con propiedades idénticas a los Barbitúricos. Modula los receptores GABA-A cerebrales, induciendo relajación muscular secundaria a sedación central y ansiólisis severa, con un altísimo potencial de adicción.'
       },
       dose: {
         adult: {
-          pt: '250 mg a 350 mg via oral, 3 vezes ao dia e ao deitar. O USO NÃO DEVE ULTRAPASSAR 2 A 3 SEMANAS!',
-          es: '250 mg a 350 mg vía oral, 3 veces al día y al acostarse. ¡EL USO NO DEBE SUPERAR 2 A 3 SEMANAS!'
+          pt: '250 mg a 350 mg via oral, TRÊS a QUATRO vezes ao dia (A cada 6 ou 8 horas, de preferência com a última dose ao deitar). Curso máximo proibitivo de passar de 14 a 21 dias.',
+          es: '250 mg a 350 mg vía oral, TRES a CUATRO veces al día (cada 6-8 horas). Curso de tratamiento severamente limitado a un máximo de 2 a 3 semanas.'
         },
         pediatric: {
-          pt: 'Não indicado em menores de 16 anos.',
-          es: 'No indicado en menores de 16 años.'
+          pt: 'Contraindicado e proibido para menores de 16 anos devido ao risco de depressão severa do SNC e dependência.',
+          es: 'Contraindicado en menores de 16 años.'
         }
       },
-      administration: { pt: ['Uso oral. No Brasil, pacientes frequentemente abusam tomando múltiplos comprimidos de Tandrilax/Torsilax por dia, viciando no meprobamato oculto.'], es: ['Uso oral. Pacientes frecuentemente abusan tomando múltiples comprimidos al día, volviéndose adictos al meprobamato oculto.'] },
-      renalAdjustment: { required: false, message: { pt: 'Cuidado no acúmulo de meprobamato em falência renal.', es: 'Cuidado en la acumulación de meprobamato en falla renal.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Evitar em disfunção hepática, metabolismo de CYP2C19 alterado gera picos do fármaco mãe.', es: 'Evitar en disfunción hepática, metabolismo alterado genera picos del fármaco madre.' } },
-      commonAdverseEffects: { pt: ['Sonolência avassaladora e tontura', 'Cefaleia', 'Sensação de embriaguez / Vertigem'], es: ['Somnolencia avasalladora y mareo', 'Cefalea', 'Sensación de embriaguez / Vértigo'] },
-      dangerousAdverseEffects: { pt: ['DEPRESSÃO RESPIRATÓRIA FATAL (Se overdose)', 'Síndrome de Abstinência Aguda (Ansiedade, tremores, insônia e convulsões após parar uso crônico)'], es: ['DEPRESIÓN RESPIRATORIA FATAL (Si sobredosis)', 'Síndrome de Abstinencia Aguda (Ansiedad, temblores, insomnio y convulsiones)'] },
+      administration: { pt: ['Uso oral contínuo a curto prazo. Deve ser tomado acompanhado de água. Devido à sedação intensa, o paciente não deve dirigir veículos ou operar máquinas pesadas durante o uso.'], es: ['Uso oral. Debido a su intensa sedación central, está prohibido conducir o manejar maquinaria durante su uso.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min, usar com monitoramento extremo; o metabólito meprobamato acumula, causando sedação prolongada e coma.', es: 'En insuficiencia renal grave, acumula meprobamato induciendo sedación prolongada.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em insuficiência hepática severa ou falência biliar crônica, pois o fígado lento prolonga a toxicidade da droga.', es: 'Contraindicado en insuficiencia hepática grave por fallo de depuración metabólica.' } },
+      commonAdverseEffects: { pt: ['SÉRIA SONOLÊNCIA e sedação (efeito central dominante)', 'Tonturas marcadas e cefaleia', 'Transtornos de marcha e perda de coordenação motora (ataxia)'], es: ['SEDACIÓN INTENSA y somnolencia', 'Mareo marcado y cefalea', 'Ataxia y pérdida de coordinación motora'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME DE ABSTINÊNCIA SEVERA (crise de convulsões, alucinações e delirium se suspenso brusco após uso crônico)', 'Abuso de substâncias e dependência física/psíquica', 'Coma em superdosagem'], es: ['SÍNDROME DE ABSTINENCIA SEVERA (Convulsiones y delirium si se suspende bruscamente tras abuso)', 'Dependencia física y adicción', 'Coma por sobredosis'] },
       contraindications: {
-        absolute: { pt: ['Porfiria Aguda Intermitente (Meprobamato deflagra crise fatal)', 'Histórico de Abuso de Drogas/Álcool'], es: ['Porfiria Aguda Intermitente (Meprobamato desencadena crisis fatal)', 'Historial de Abuso de Drogas/Alcohol'] },
-        relative: { pt: ['Idosos (Risco brutal de queda e delírio)'], es: ['Ancianos (Riesgo brutal de caída y delirio)'] }
+        absolute: { pt: ['Histórico de Porfiria Aguda Intermitente (o meprobamato ativa a enzima e causa crise fatal de porfiria)', 'Histórico de vício em sedativos ou drogas', 'Menores de 16 anos'], es: ['Antecedente de Porfiria Aguda Intermitente (gatilla crisis mortal)', 'Historial de adicción a sedantes', 'Niños < 16 años'] },
+        relative: { pt: ['Uso concomitante com Benzodiazepínicos (Clonazepam) ou Álcool (VER MOTOR DE INTERAÇÕES)'], es: ['Uso concomitante con Benzodiacepinas o Alcohol'] }
       },
       safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'O VÍCIO SILENCIOSO DA FARMÁCIA: Nos EUA, o Carisoprodol é uma droga controlada rigorosamente (Schedule IV) por ser altamente viciante. Na América Latina, pacientes tomam "Tandrilax" por anos para dor nas costas. Quando tentam parar, têm crises de pânico, taquicardia e insônia (abstinência de barbitúrico).', es: 'EL VICIO SILENCIOSO DE LA FARMACIA: En EE.UU., es una droga controlada rigurosamente por ser altamente adictiva. En América Latina, pacientes toman esto por años. Al intentar parar, tienen pánico, taquicardia e insomnio (abstinencia de barbitúrico).' }
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A CAIXA PRETA DO VÍCIO OCULTO (A PROIBIÇÃO DA EUROPA): A Agência Europeia de Medicamentos (EMA) baniu e proibiu a venda de Carisoprodol em toda a Europa. O motivo: ele vira Barbitúrico no fígado e causa dependência química pesada. Pacientes usam Tandrilax/Mioflex cronicamente para dor nas costas e viram dependentes sem saber. Limite o uso a no máximo 15 dias.', es: 'ALERTA DE PROHIBICIÓN EUROPEA (CAJA NEGRA): La EMA retiró el Carisoprodol del mercado en toda Europa debido a su perfil de abuso. Al convertirse en meprobamato (barbitúrico), genera adicción física severa. Los síndromes de abstinencia imitan al Delirium Tremens con convulsiones mortales. No prescriba más de 15 días.' }
+      },
+      references: {
+        pt: 'EMA European Safety Ban Report Carisoprodol; FDA Prescribing Information Soma; Journal of Substance Abuse Treatment.',
+        es: 'EMA Safety Ban Report; FDA Prescribing Information (Soma); Manual de Adicciones de la SAMHA.'
       }
     },
 
@@ -5076,90 +5084,90 @@
       icon: '🫘',
       color: '#0369A1',
       colorTxt: '#ffffff',
-      class: { pt: 'Antagonista Duplo (Receptor de Endotelina e Angiotensina II - DEARA)', es: 'Antagonista Doble (Receptor de Endotelina y Angiotensina II - DEARA)' },
+      class: { pt: 'Antagonista Dual dos Receptores de Endotelina e Angiotensina II (DEARA)', es: 'Antagonista Dual de los Receptores de Endotelina y Angiotensina II (DEARA)' },
       indications: {
-        pt: ['Nefropatia por IgA (Doença de Berger) primária com alto risco de progressão da doença (Proteinúria > 1,5 g/dia)'],
-        es: ['Nefropatía por IgA (Enfermedad de Berger) primaria con alto riesgo de progresión (Proteinuria > 1,5 g/día)']
+        pt: ['Redução da proteinúria em adultos com Nefropatia por IgA primária (Doença de Berger) com risco de progressão rápida da perda renal'],
+        es: ['Reducción de la proteinuria en adultos con Nefropatía por IgA primaria con alto riesgo de progresión rápida']
       },
-      commercialNames: { br: ['Filspari (Importação especializada)'], ar: ['Filspari'] },
-      presentation: { pt: ['Comprimidos revestidos 200 mg e 400 mg'], es: ['Comprimidos recubiertos 200 mg y 400 mg'] },
+      commercialNames: { br: ['Filspari (Importação regulada)'], ar: ['Filspari'] },
+      presentation: { pt: ['Comprimidos revestidos 200 mg e 400 mg'], es: ['Comprimidos 200 mg y 400 mg'] },
       mechanism: {
-        pt: 'A "Defesa Dupla do Glomérulo". A Nefropatia por IgA destrói o filtro renal através de hipertensão glomerular e inflamação (Endotelina). A Sparsentana é a primeira droga do mundo a combinar dois bloqueios numa única molécula: bloqueia o receptor ETA (endotelina tipo A, que causa inflamação e constrição) E bloqueia o receptor AT1 (angiotensina II, como a losartana). O resultado é uma dilatação massiva das artérias do rim, paralisando o vazamento de proteína para a urina e salvando o rim da diálise.',
-        es: 'La "Defensa Doble del Glomérulo". Combina dos bloqueos en una molécula: bloquea el receptor ETA (endotelina tipo A, inflamación) Y bloquea el receptor AT1 (angiotensina II, como losartán). El resultado es una dilatación masiva de las arterias del riñón, parando la fuga de proteína y salvando al riñón de la diálisis.'
+        pt: 'O Bloqueador Dual de Alvo Glomerular. É uma molécula de engenharia cirúrgica que bloqueia de forma combinada dois caminhos destrutivos no rim: o receptor de Endotelina Tipo A ($ETA$) e o receptor de Angiotensina II Tipo 1 ($AT_1$). Ao travar os dois eixos ao mesmo tempo, ela alivia de forma violenta a pressão hiperfiltrante e a inflamação dentro dos glomérulos machucados pela IgA, estancando a proteinúria e protegendo o néfron contra a fibrose terminal.',
+        es: 'Antagonista dual selectivo que actúa bloqueando simultáneamente los receptores de endotelina tipo A ($ETA$) y los receptores de angiotensina II tipo 1 ($AT_1$). Esta acción combinada reduce la vasoconstricción y la inflamación intraglomerular, disminuyendo drásticamente la proteinuria y frenando la esclerosis renal.'
       },
       dose: {
         adult: {
-          pt: 'Início: 200 mg via oral UMA VEZ ao dia por 14 dias. Após 14 dias, aumentar para a dose de manutenção de 400 mg/dia (titulação obrigatória e monitorada).',
-          es: 'Inicio: 200 mg vía oral UNA VEZ al día por 14 días. Tras 14 días, aumentar a mantenimiento de 400 mg/día.'
+          pt: 'Início: 200 mg via oral, UMA VEZ ao dia. Após 14 dias, se tolerado, elevar obrigatoriamente para a dose de manutenção alvo de 400 mg uma vez ao dia.',
+          es: 'Inicio: 200 mg vía oral, UNA VEZ al día. Tras 14 días, si es tolerado, incrementar a la dosis de mantenimiento meta de 400 mg una vez al día.'
         },
         pediatric: {
-          pt: 'Não indicado e não testado com segurança em crianças.',
-          es: 'No indicado en niños.'
+          pt: 'Segurança e eficácia não estabelecidas em menores de 18 anos.',
+          es: 'No recomendado en niños.'
         }
       },
-      administration: { pt: ['Administrar com água. Acompanhamento rigoroso de Enzimas Hepáticas e Teste de Gravidez mensal é exigido por lei nos EUA (Sistema REMS).'], es: ['Acompañamiento riguroso de Enzimas Hepáticas y Test de Embarazo mensual es exigido por ley en EE.UU. (REMS).'] },
-      renalAdjustment: { required: true, message: { pt: 'Não testado em insuficiência renal terminal. Efeito terapêutico reduz se eGFR < 30 mL/min.', es: 'No probado en falla renal terminal.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Evitar em qualquer disfunção hepática prévia. Risco de hepatotoxicidade fulminante de classe (endotelinas).', es: 'Evitar en disfunción hepática previa. Riesgo de hepatotoxicidad fulminante.' } },
-      commonAdverseEffects: { pt: ['Hipotensão (A pressão arterial pode despencar criticamente)', 'Edema periférico severo', 'Hipercalemia (retenção de potássio)'], es: ['Hipotensión (La presión puede caer críticamente)', 'Edema periférico severo', 'Hiperpotasemia'] },
-      dangerousAdverseEffects: { pt: ['HEPATOTOXICIDADE SEVERA (Aumento fulminante de TGO/TGP)', 'Malformações congênitas severas (Teratogenicidade extrema)'], es: ['HEPATOTOXICIDAD SEVERA (Aumento fulminante de AST/ALT)', 'Malformaciones congénitas severas (Teratogenicidad extrema)'] },
+      administration: { pt: ['Tomar uma vez ao dia por via oral. Deve ser ingerido com água antes da primeira refeição do dia (pela manhã). Exige monitoramento rigoroso de enzimas do fígado (TGO/TGP) basal e mensal.'], es: ['Uso oral diario por la mañana antes del desayuno. Requiere control mensual obligatorio de transaminasas hepáticas.'] },
+      renalAdjustment: { required: false, message: { pt: 'Projetada para o rim doente. Não exige ajuste baseado na taxa de filtração glomerular (eGFR), mas não estudada se eGFR < 30 mL/min inicial.', es: 'No requiere ajuste inicial según TFG, pero no hay datos si TFG < 30 mL/min.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'ALTAMENTE CAUTELOSO (Black Box). Contraindicada em pacientes com insuficiência hepática moderada a grave (Child-Pugh B e C) ou se transaminasas basais > 3x o limite normal.', es: 'Contraindicado en insuficiencia hepática moderada o grave por riesgo de hepatotoxicidad celular.' } },
+      commonAdverseEffects: { pt: ['Hipotensão postural acentuada e tontura', 'Edema periférico por retenção hídrica leve', 'Hipercalemia (aumento do potássio)', 'Anemia por hemodiluição'], es: ['Hipotensión ortostática y mareo', 'Edema periférico leve', 'Hiperpotasemia', 'Anemia'] },
+      dangerousAdverseEffects: { pt: ['HEPATOTOXICIDADE SEVERA IDIOSSIANCRÁTICA (Alerta Caixa Preta de falência hepática)', 'Insuficiência renal funcional aguda', 'Teratogenicidade extrema (Malformação fetal grave)'], es: ['HEPATOTOXICIDAD GRAVE (Alerta de Caja Negra)', 'Falla renal aguda funcional', 'Teratogenicidad severa'] },
       contraindications: {
-        absolute: { pt: ['GRAVIDEZ (Droga nível Talidomida em destruição fetal)', 'Uso concomitante de IECA (Enalapril) ou BRAs (Losartana) ou Inibidores de Renina'], es: ['EMBARAZO (Destrucción fetal)', 'Uso concomitante de IECA (Enalapril) o ARA-II (Losartán)'] },
-        relative: { pt: ['Hipotensão basal < 100/60 mmHg'], es: ['Hipotensión basal < 100/60 mmHg'] }
+        absolute: { pt: ['GRAVIDEZ (Exige programa de controle reprodutivo rígido de classe)', 'Uso concomitante com outros IECAs, BRAs ou Antagonistas de Endotelina (Anlodipino tolerado)'], es: ['EMBARAZO (Absoluto por teratogenicidad)', 'Uso concomitante con IECA o ARA-II'] },
+        relative: { pt: ['Uso associado com inibidores potentes do CYP3A4 (pode disparar os níveis da droga)'], es: ['Uso con inhibidores potentes CYP3A4'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'PROGRAMA REMS (MONITORAMENTO FORÇADO): Devido ao risco altíssimo do fígado necrosar e do feto nascer deformado, o médico e o paciente precisam ser cadastrados em um programa restrito. É OBRIGATÓRIO fazer exame de fígado (TGO/TGP/Bilirrubina) todo mês durante o primeiro ano, e teste de gravidez mensal. Sem esses exames, a farmácia não libera a caixa.', es: 'PROGRAMA REMS (MONITOREO FORZADO): Debido al altísimo riesgo hepático y teratogénico, es OBLIGATORIO hacer examen de hígado y embarazo CADA MES. Sin eso, la farmacia no entrega el medicamento.' }
+        warning: { pt: 'A CAIXA PRETA REPRODUTIVA (O PROGRAMA REMS): A Sparsentana carrega um dos alertas de teratogenicidade mais agressivos do mercado. Mulheres em idade fértil só podem receber o remédio se realizarem testes de gravidez mensais obrigatórios sob o protocolo REMS. Uma única tomada grávida derrete o sistema renal e ósseo do feto. O desmame exige acompanhamento rígido.', es: 'ALERTA DE CAJA NEGRA REPRODUCTIVA: Debido a su alto riesgo teratogénico, exige la incorporación obligatoria a un programa de seguridad (REMS) con test de embarazo mensual en mujeres en edad fértil. Está terminantemente prohibido su uso gestacional.' }
       },
       references: {
-        pt: 'FDA Label (Filspari); PROTECT Trial (IgA Nephropathy); Diretrizes KDIGO 2024 para Doenças Glomerulares.',
-        es: 'FDA Label (Filspari); PROTECT Trial; Directrices KDIGO 2024 para Enfermedades Glomerulares.'
+        pt: 'PROTECT Trial (Lancet 2023 - Sparsentan in IgA Nephropathy); FDA Box Warning Filspari; Diretrizes KDIGO Glomerulonefrites 2024.',
+        es: 'PROTECT Trial (Lancet 2023); FDA Prescribing Information; Directrices KDIGO 2024.'
       }
     },
 
     /* ── CISTEAMINA ─────────────────────────────────────────────────────── */
     "cisteamina": {
-      name: { pt: 'Cisteamina (Bitartarato de)', es: 'Cisteamina (Bitartrato de)' },
+      name: { pt: 'Cisteamina (Bitartrato de)', es: 'Cisteamina (Bitartrato de)' },
       category: 'nefrologia',
       icon: '🫘',
       color: '#0369A1',
       colorTxt: '#ffffff',
-      class: { pt: 'Agente Depletor de Cistina', es: 'Agente Depletor de Cistina' },
+      class: { pt: 'Agente Depletor de Cistina / Terapia de Erro Inato do Metabolismo', es: 'Agente Depletor de Cistina / Terapia de Error Innato del Metabolismo' },
       indications: {
-        pt: ['Cistinose Nefropática (Doença genética rara onde cristais de cistina destroem os rins, olhos e órgãos internos de crianças)'],
-        es: ['Cistinosis Nefropática (Enfermedad genética rara donde cristales de cistina destruyen riñones y ojos de niños)']
+        pt: ['Tratamento da Cistinose Nefropática em pacientes pediátricos e adultos (Evita a falência renal e o depósito de cristais nos olhos e cérebro)'],
+        es: ['Tratamiento de la Cistinosis Nefropática en niños y adultos (Frena el depósito de cristales en órganos)']
       },
-      commercialNames: { br: ['Cystagon', 'Procysbi'], ar: ['Cystagon'] },
-      presentation: { pt: ['Cápsulas 50 mg e 150 mg', 'Cápsulas de liberação retardada (Procysbi) 25 mg e 75 mg'], es: ['Cápsulas 50 mg y 150 mg', 'Cápsulas de liberación retardada (Procysbi)'] },
+      commercialNames: { br: ['Cystagon', 'Procysbi (Liberação prolongada)'], ar: ['Cystagon'] },
+      presentation: { pt: ['Cápsulas duras 50 mg e 150 mg', 'Cápsulas de liberação prolongada 25 mg e 75 mg'], es: ['Cápsulas duras 50 mg y 150 mg'] },
       mechanism: {
-        pt: 'O "Limpador de Cristais". Na Cistinose, falta o transportador que tira o aminoácido Cistina de dentro dos lisossomos das células. A Cistina acumula, cristaliza como vidro quebrado e destrói o rim da criança (causando Síndrome de Fanconi e insuficiência renal terminal). A Cisteamina entra no lisossomo e sofre uma reação química direta com o cristal: ela quebra a Cistina pela metade (virando Cisteína e um dissulfeto). Essas metades conseguem sair do lisossomo. A droga derrete os cristais e salva os órgãos.',
-        es: 'El "Limpiador de Cristales". En la Cistinosis, la Cistina cristaliza como vidrio roto y destruye el riñón (Síndrome de Fanconi). La Cisteamina entra al lisosoma, reacciona con el cristal y lo rompe por la mitad. Estas mitades logran salir del lisosoma, salvando los órganos.'
+        pt: 'O Dissolvedor de Cristais. Pacientes com cistinose acumulam o aminoácido cistina dentro dos lisossomos devido a um defeito genético, o que gera cristais que destroem os rins e nervos. A Cisteamina entra no lisossomo e reage quimicamente com a cistina, quebrando-a em duas moléculas menores: cisteína e dissulfeto de cisteamina-cisteína. Essas novas moléculas conseguem sair livremente do lisossomo mesmo com o defeito genético, esvaziando os cristais tóxicos das células.',
+        es: 'Penetra en las vacuolas lisosomales y reacciona con la cistina acumulada para formar cisteína y un complejo mixto soluble (disulfuro de cisteamina-cisteína). Este complejo logra salir del lisosoma mediante el transportador de lisina intacto, disminuyendo los niveles intracelulares de cistina y previniendo el daño tisular.'
       },
       dose: {
         adult: {
-          pt: 'Depende da superfície corporal. Geralmente 1,3 a 1,95 gramas/m²/dia, divididos em 4 vezes ao dia (a cada 6 horas rigorosamente).',
-          es: 'Depende de superficie corporal. 1,3 a 1,95 gramos/m²/día, divididos en 4 veces (cada 6 horas).'
+          pt: 'Dose baseada na área de superfície corporal: Geralmente 1,30 g/m²/dia via oral, dividida estritamente a cada 6 horas (Cystagon) ou de 12/12 horas (Procysbi). Titular guiado pelo nível de cistina nos leucócitos.',
+          es: 'Dosis ajustada por superficie corporal: Habitual 1,30 g/m²/día vía oral, fraccionada estrictamente cada 6 horas (Cystagon) o cada 12 horas (Procysbi).'
         },
         pediatric: {
-          pt: 'Até 12 anos: 1,30 g/m²/dia divididos em 4 doses. Titular doseando cistina nos leucócitos (< 1 nmol 1/2 cistina/mg de proteína).',
-          es: 'Hasta 12 años: 1,30 g/m²/día divididos en 4 dosis. Titular midiendo cistina en leucocitos.'
+          pt: 'Crianças até 12 anos: Iniciar com 1/4 a 1/6 da dose alvo, escalonando em 4-6 semanas até atingir 1,30 g/m²/dia.',
+          es: 'Ajuste pediátrico gradual hasta alcanzar la dosis de mantenimiento por m².'
         }
       },
-      administration: { pt: ['Pode causar muito vômito. Administrar rigorosamente a cada 6 horas para manter os lisossomos limpos. O cheiro do paciente pode ficar muito fétido (odor sulfúrico/ovo podre).'], es: ['Puede causar mucho vómito. Administrar cada 6 horas. El olor del paciente puede volverse muy fétido (azufre/huevo podrido).'] },
-      renalAdjustment: { required: false, message: { pt: 'Feita para salvar a função renal.', es: 'Hecha para salvar la función renal.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade rigorosa.', es: 'Sin necesidad rigurosa.' } },
-      commonAdverseEffects: { pt: ['Halitose extrema e odor corporal sulfúrico (cheiro de esgoto)', 'Náuseas severas e dor de estômago', 'Letargia e febre'], es: ['Halitosis extrema y olor corporal a azufre (olor a cañería)', 'Náuseas severas y dolor de estómago', 'Letargo y fiebre'] },
-      dangerousAdverseEffects: { pt: ['Úlceras e sangramento gastrointestinal severo', 'Lesões de pele tipo Síndrome de Ehlers-Danlos (A pele rasga e raspa facilmente nos cotovelos e joelhos em altas doses)'], es: ['Úlceras y sangrado gastrointestinal severo', 'Lesiones de piel tipo Síndrome de Ehlers-Danlos (La piel se rasga fácilmente)'] },
+      administration: { pt: ['A formulação de liberação imediata (Cystagon) DEVE ser tomada rigorosamente de 6 em 6 horas, sem falhar, dia e noite. O Procysbi (prolongado) deve ser tomado de 12/12h de estômago vazio (2h antes ou 30 min após comer). Não tomar com suco de toranja.'], es: ['Cystagon exige toma estricta cada 6 horas cronometradas, día y noche. Procysbi se toma cada 12 horas con estómago vacío.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não exige ajuste por clearance, mas retarda a necessidade de transplante renal em anos se iniciada precocemente.', es: 'No requiere ajuste, protege la función renal contra el daño por cristales.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['ODOR CORPORAL E HALITOSE INTENSOS (cheiro sulfúrico forte de ovo podre na pele e suor)', 'Náuseas violentas, vômitos e dor de estômago', 'Sonolência extrema e letargia'], es: ['OLOR CORPORAL Y HALITOSIS INTENSOS (Olor sulfúrico desagradable en piel y aliento)', 'Náuseas, vómitos y dispepsia', 'Somnolencia'] },
+      dangerousAdverseEffects: { pt: ['Ulceração gástrica severa com hemorragia digestiva', 'Fibras elásticas alteradas na pele (Lesões tipo estrias purpúricas nos cotovelos)', 'Encefalopatia e convulsões se dose excessiva'], es: ['Úlcera gástrica con hemorragia digestiva', 'Alteraciones del colágeno cutáneo (pseudoxantoma)', 'Convulsiones'] },
       contraindications: {
-        absolute: { pt: ['Hipersensibilidade à cisteamina ou penicilamina'], es: ['Hipersensibilidad a cisteamina o penicilamina'] },
-        relative: { pt: ['Úlcera gástrica ativa ou histórico recente de sangramento digestivo'], es: ['Úlcera gástrica activa o historial de sangrado digestivo'] }
+        absolute: { pt: ['Hipersensibilidade conhecida à cisteamina ou à penicilamina', 'Amamentação e gravidez'], es: ['Hipersensibilidad al fármaco', 'Embarazo y lactancia'] },
+        relative: { pt: ['Histórico de úlcera péptica ativa ou distúrbios neurológicos convulsivos não controlados'], es: ['Úlcera péptica activa'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'O ESTIGMA DO ODOR E A PELE DE PAPEL: A principal causa de falha do tratamento é o bullying escolar. O suor e o hálito da criança cheiram forte a enxofre (ovo podre). Além disso, em doses muito altas para limpar o cristal, a droga interfere no colágeno. A pele da criança fica como "papel molhado", rasgando nas articulações. Ajuste a dose monitorando a cistina nos leucócitos.', es: 'EL ESTIGMA DEL OLOR: El sudor y aliento huelen a azufre. Además, en dosis altas, la piel queda como "papel mojado", rasgándose en las articulaciones. Ajuste dosis monitorizando cistina.' }
+        warning: { pt: 'O ALERTA DO ODOR SULFÚRICO E ADERÊNCIA: A Cisteamina libera compostos de enxofre no corpo. O paciente exala um cheiro forte de ovo podre/alho pelo suor e hálito 24h por dia. Isso destrói a vida social de crianças e adolescentes, causando abandono em massa do tratamento. É preciso suporte psicológico familiar: parar o remédio destrói o rim de forma irreversível.', es: 'EL ALERTA DEL OLOR SULFÚRICO: El fármaco excreta metabolitos azufrados a través del sudor y el aliento, provocando un olor penetrante y desagradable continuo. Esto deteriora la calidad de vida y la adherencia en jóvenes. El abandono del fármaco acelera la necesidad de diálisis terminal.' }
       },
       references: {
-        pt: 'FDA Label (Cystagon/Procysbi); Diretrizes Internacionais de Cistinose Nefropática.',
-        es: 'FDA Label (Cystagon); Directrices Internacionales de Cistinosis Nefropática.'
+        pt: 'Cystinosis Research Network Treatment Protocols; FDA Prescribing Info Cystagon/Procysbi; Manual de Erros Inatos do Metabolismo USP.',
+        es: 'FDA Prescribing Information; Guías de Consenso Europeo para el Tratamiento de la Cistinosis.'
       }
     },
 
@@ -5170,43 +5178,43 @@
       icon: '🧠',
       color: '#7C3AED',
       colorTxt: '#ffffff',
-      class: { pt: 'Antioxidante Universal / Cofator Enzimático', es: 'Antioxidante Universal / Cofactor Enzimático' },
+      class: { pt: 'Antioxidante Mitocondrial Potente / Varredor de Radicais Livres', es: 'Antioxidante Mitocondrial Potente / Barredor de Radicales Libres' },
       indications: {
-        pt: ['Polineuropatia Diabética Periférica (Alívio da dor tipo choque, queimação e dormência nos pés do diabético)', 'Estresse oxidativo severo'],
-        es: ['Polineuropatía Diabética Periférica (Alivio del dolor tipo choque, ardor y entumecimiento en pies)', 'Estrés oxidativo severo']
+        pt: ['Tratamento da Polineuropatia Diabética Dolorosa sintomática (queimação, dormência e dor em queimação nas pernas)', 'Adjuvante na esteato-hepatite não alcoólica (fígado gordo)'],
+        es: ['Tratamiento de la Polineuropatía Diabética Dolorosa sintomática (Ardor, hormigueo y dolor lancinante)', 'Coadyuvante en esteatosis hepática']
       },
-      commercialNames: { br: ['Thioctacid'], ar: ['Thioctacid', 'Neurolip'] },
-      presentation: { pt: ['Comprimidos revestidos 600 mg', 'Ampolas IV 600 mg/24 mL'], es: ['Comprimidos recubiertos 600 mg', 'Ampollas IV 600 mg/24 mL'] },
+      commercialNames: { br: ['Thioctacid'], ar: ['Thioctacid', 'Lipomax', 'Bialip'] },
+      presentation: { pt: ['Comprimidos de 600 mg', 'Ampolas IV 600 mg/24 mL'], es: ['Comprimidos de 600 mg', 'Ampollas IV 600 mg'] },
       mechanism: {
-        pt: 'O "Antioxidante Perfeito". No diabetes, o açúcar alto carameliza (glica) os nervos, gerando radicais livres que destroem a bainha de mielina dos pés, causando dores infernais em queimação. O Ácido Tióctico atua tanto na água quanto na gordura da célula. Ele neutraliza os radicais livres, aumenta o fluxo sanguíneo nos micro-vasos do nervo e melhora a velocidade de condução elétrica, aliviando a queimação neuropática com muita segurança.',
-        es: 'El "Antioxidante Perfecto". En la diabetes, el azúcar alto carameliza los nervios, destruyendo la mielina. El Ácido Tióctico neutraliza los radicales libres, aumenta el flujo sanguíneo en el nervio y mejora la conducción eléctrica, aliviando el ardor neuropático.'
+        pt: 'O Reparador de Nervos Diabéticos. Atua como uma coenzima no complexo da piruvato desidrogenase mitocondrial. É um antioxidante universal potente (funciona na água e na gordura da célula). Ele neutraliza os radicais livres gerados pelo excesso de açúcar no sangue (hiperglicemia crônica), aumenta o fluxo de sangue (microcirculação) que nutre o nervo isquêmico e restaura a velocidade de condução elétrica axonal.',
+        es: 'Coenzima mitocondrial soluble en agua y lípidos. Actúa como un potente antioxidante universal que neutraliza las especies reactivas de oxígeno (ROS) causadas por la hiperglucemia crónica. Mejora el flujo sanguíneo endoneural y aumenta el transporte de glucosa, restaurando la conducción nerviosa y aliviando el dolor neuropático.'
       },
       dose: {
         adult: {
-          pt: 'Crise aguda severa: 600 mg Intravenoso (infusão lenta ao abrigo da luz) por 2 a 4 semanas. Manutenção oral: 600 mg via oral UMA VEZ ao dia de manhã.',
-          es: 'Crisis aguda: 600 mg Intravenoso (infusión lenta protegida de la luz) por 2 a 4 semanas. Mantenimiento: 600 mg vía oral UNA VEZ al día por la mañana.'
+          pt: 'Fase de ataque oral ou endovenosa: 600 mg via oral ou IV, UMA VEZ ao dia, por 2 a 4 semanas. Manutenção crônica: 600 mg via oral ao dia pela manhã.',
+          es: 'Dosis Estándar: 600 mg vía oral o IV, UNA VEZ al día por la mañana. Fase crónica de mantenimiento: 600 mg/día vía oral.'
         },
         pediatric: {
-          pt: 'Não indicado.',
-          es: 'No indicado.'
+          pt: 'Uso não recomendado ou estudado de forma rotineira em pediatria.',
+          es: 'No recomendado en niños.'
         }
       },
-      administration: { pt: ['DEVE ser ingerido de estômago completamente vazio (30 min antes do café da manhã). Alimentos reduzem drasticamente a absorção.'], es: ['DEBE ingerirse con estómago vacío (30 min antes del desayuno). Los alimentos reducen su absorción.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem ajuste necessário.', es: 'Sin ajuste necesario.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico rigoroso.', es: 'Sin necesidad de ajuste.' } },
-      commonAdverseEffects: { pt: ['Náusea temporária', 'Cheiro peculiar na urina (odor semelhante a espargos/enxofre, inofensivo)'], es: ['Náusea temporal', 'Olor peculiar en la orina (similar a espárragos/azufre, inofensivo)'] },
-      dangerousAdverseEffects: { pt: ['Hipoglicemia iatrogênica (Ele melhora o consumo de glicose do corpo, abaixando o açúcar demais)', 'Síndrome de Autoimunidade à Insulina (RARÍSSIMO)'], es: ['Hipoglucemia iatrogénica (Mejora el consumo de glucosa, bajando mucho el azúcar)', 'Síndrome Autoinmune a la Insulina (RARO)'] },
+      administration: { pt: ['A DOSAGEM ORAL DEVE SER FEITA EM JEJUM RIGOROSO, 30 MINUTOS ANTES DO CAFÉ DA MANHÃ. A comida no estômago reduz drasticamente a biodisponibilidade do ácido tióctico. As ampolas IV exigem proteção contra a luz (revestir o soro com papel alumínio ou capa opaca) e correr em 30 minutos.'], es: ['DEBE TOMARSE EN AYUNAS, 30 MINUTOS ANTES DEL DESAYUNO. Los alimentos bloquean su absorción. La infusión IV debe protegerse de la luz (fotosensible).'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, eliminado por via metabólica.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Seguro e protetor celular hepático nas doses clínicas.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Náuseas e queimação estomacal episódica', 'Tontura leve e alteração transitória do paladar', 'Urina com cheiro forte característico'], es: ['Náuseas y pirosis episódica', 'Mareo leve', 'Olor fuerte en la orina'] },
+      dangerousAdverseEffects: { pt: ['Hipotensão e Choque Anafilático (na infusão IV rápida)', 'Hipoglicemia severa por aumento rebote da sensibilidade à insulina (mecanismo sinérgico)'], es: ['Choque anafiláctico (en infusión IV rápida)', 'Hipoglucemia severa por potenciación de la insulina'] },
       contraindications: {
-        absolute: { pt: ['Hipersensibilidade grave comprovada'], es: ['Hipersensibilidad grave comprobada'] },
-        relative: { pt: ['Diabéticos com quadros severos e frequentes de hipoglicemia'], es: ['Diabéticos con cuadros severos de hipoglucemia'] }
+        absolute: { pt: ['Hipersensibilidade confirmada ao ácido tióctico ou alfa-lipoico'], es: ['Hipersensibilidad confirmada al fármaco'] },
+        relative: { pt: ['Pacientes diabéticos que já usam doses altas de insulina (risco de hipoglicemia inesperada — ver interações)'], es: ['Diabéticos con dosis altas de insulina (riesgo hipoglucemia)'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'A "CURA" QUE CAUSA HIPO: O Ácido Tióctico reduz a resistência à insulina no corpo. Se o paciente continuar aplicando as mesmas doses altas de insulina ou Metformina sem avisar o endocrinologista, ele sofrerá crises de Hipoglicemia (açúcar caindo abaixo de 60 mg/dL), podendo desmaiar e ir ao PS.', es: 'LA "CURA" QUE CAUSA HIPO: Reduce la resistencia a la insulina. Si el paciente sigue aplicando altas dosis de insulina sin ajustar, sufrirá crisis de Hipoglucemia (azúcar bajo 60), pudiendo desmayarse.' }
+        warning: { pt: 'O ALERTA DA FOTOSENSIBILIDADE NA VEIA: O Thioctacid injetável é extremamente sensível à luz. Se a enfermagem ligar a ampola no soro e deixar exposta à luz da lâmpada da UTI, a molécula quebra e vira um composto inútil em minutos. OBRIGATÓRIO cobrir o frasco e a equipe com capa fotoprotetora escura.', es: 'ALERTA DE FOTOSENSIBILIDAD: La formulación intravenosa es altamente fotosensible. Si la solución se expone a la luz ambiental sin protección (Capa fotoprotectora), el principio activo se degrada rápidamente perdiendo toda eficacia. Cubra siempre la infusión.' }
       },
       references: {
-        pt: 'SYDNEY Trial; ALADIN Trial; Diretrizes da Sociedade Brasileira de Diabetes para Neuropatia.',
-        es: 'SYDNEY Trial; ALADIN Trial; Directrices Internacionales para Neuropatía Diabética.'
+        pt: 'ALADIN Trials (I, II e III - Alpha-Lipoic Acid in Diabetic Neuropathy); NATHAN 1 Trial; Diretriz de Neuropatia Diabética da SBD.',
+        es: 'ALADIN Trials (I, II y III); NATHAN 1 Trial; Directrices de la Sociedad Argentina de Diabetes (SAD).'
       }
     },
 
