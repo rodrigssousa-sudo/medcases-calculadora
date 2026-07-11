@@ -2149,4 +2149,322 @@ Object.assign(window.INFECTOLOGIA_DRUGS_DB, {
 
 }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 448 (dolutegravir + raltegravir + emtricitabina + lamivudina + abacavir + zidovudina — Coquetel Antirretroviral e Profilaxias HIV) */
 
+/* ── BUILD 449 GUARD ─────────────────────────────────────────────── */
+if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null || Array.isArray(window.INFECTOLOGIA_DRUGS_DB)) { window.INFECTOLOGIA_DRUGS_DB = {}; }
+if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null) return;
+
+Object.assign(window.INFECTOLOGIA_DRUGS_DB, {
+
+  // ── INIBIDORES DE PROTEASE E NÃO-NUCLEOSÍDEOS ──
+
+/* ── DARUNAVIR (951) ────────────────────────────────────────────────── */
+    "darunavir": {
+      name: { pt: 'Darunavir (DRV)', es: 'Darunavir (DRV)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor de Protease de Segunda Geração Potencializado', es: 'Antirretroviral / Inhibidor de la Proteasa de Segunda Generación Potenciado' },
+      indications: {
+        pt: ['Tratamento da infecção pelo vírus HIV-1 em adultos e pediatria, especialmente indicado para esquemas de resgate ou em pacientes com histórico de falha e resistência a múltiplos antivirais'],
+        es: ['Tratamiento de la infección por VIH-1 en pacientes pretratados con mutaciones de resistencia a otros inhibidores de proteasa']
+      },
+      commercialNames: { br: ['Prezista', 'Darunavir/Ritonavir (SUS)'], ar: ['Prezista', 'Darunavir Richmond'] },
+      presentation: { pt: ['Comprimidos revestidos 75 mg, 150 mg, 600 mg e 800 mg'], es: ['Comprimidos revestidos 600 mg y 800 mg'] },
+      mechanism: {
+        pt: 'O Engessador de Enzimas. O Darunavir liga-se de forma extremamente firme e seletiva ao sítio ativo da enzima Protease do HIV-1. Essa ligação impede a clivagem química das poliproteínas precursoras gag-pol do vírus. Sem esse corte cirúrgico, o vírus só consegue produzir partículas virais imaturas, defeituosas e totalmente não-infecciosas. Sua arquitetura molecular flexível permite que ele continue grudado na protease mesmo se o vírus sofrer mutações comuns.',
+        es: 'Inhibidor selectivo de la proteasa del VIH-1. Bloquea de forma competitiva la escisión de las poliproteínas virales Gag-Pol en los viriones infectados, impidiendo la maduración del virus y generando partículas virales residuales estructuralmente defectuosas e incapaces de infectar.'
+      },
+      dose: {
+        adult: {
+          pt: 'Paciente sem resistência prévia (Naïve): 800 mg via oral, UMA VEZ ao dia, associado obrigatoriamente a um booster (Ritonavir 100mg ou Cobicistate 150mg). Paciente experiente com mutações: 600 mg via oral, DUAS VEZES ao dia (de 12/12h), com Ritonavir 100mg em cada tomada.',
+          es: 'Pacientes sin resistencia previa: 800 mg vía oral, UNA VEZ al día + Ritonavir 100 mg. Pacientes con resistencia a IP: 600 mg vía oral cada 12 horas + Ritonavir 100 mg en cada toma.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 3 anos de idade e peso >= 10 kg, com doses rigorosamente fracionadas por faixas de peso corporal associado ao Ritonavir em suspensão.',
+          es: 'Aprobado en niños > 3 años con dosificación ajustada estrictamente según peso.'
+        }
+      },
+      administration: { pt: ['USO ORAL DIÁRIO. DEVE SER ADMINISTRADO OBRIGATORIAMENTE JUNTO COM ALIMENTOS. A ingestão em jejum derruba a biodisponibilidade do Darunavir em mais de 30%. Deve ser sempre co-administrado com o Ritonavir.'], es: ['Uso oral diario. ADMINISTRAR OBLIGATORIAMENTE CON ALIMENTOS para asegurar el pico de concentración plasmática indispensable. Tomar siempre con el booster de Ritonavir.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínima excreção renal da droga inalterada, sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado intensamente no fígado pela via CYP3A4. Usar com extrema cautela em insuficiência hepática moderada (Child B). ABSOLUTAMENTE CONTRAINDICADO na falência hepática grave (Child-Pugh C).', es: 'Contraindicado en insuficiencia hepática grave (Child-Pugh C) por riesgo de hepatotoxicidad severa.' } },
+      commonAdverseEffects: { pt: ['NÁUSEAS INTENSAS, vômitos e diarreia pastosa', 'Dislipidemia acentuada (dispara Triglicerídeos e Colesterol LDL)', 'Cefaleia e erupção cutânea (rash maculopapular)'], es: ['Náuseas, vómitos y diarrea', 'Dislipidemia marcada (hipertrigliceridemia y LDL elevado)', 'Cefalea y rash cutáneo'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME DE STEVENS-JOHNSON letal (o darunavir contém uma molécula de sulfonamida em sua estrutura)', 'Hepatotoxicidade fulminante com necrose celular gástrica', 'Lipodistrofia severa'], es: ['SÍNDROME DE STEVENS-JOHNSON / NET (posee estructura de sulfonamida)', 'Hepatotoxicidad aguda severa con ictericia'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência hepática grave Child-Pugh C', 'Uso concomitante com medicamentos que dependem da CYP3A4 para depuração e causam arritmia (Amiodarona, Ergotamina, Sinvastatina)'], es: ['Insuficiencia hepática grave (Child C)', 'Uso concomitante con Amiodarona, Simvastatina o derivados del Ergot'] },
+        relative: { pt: ['Pacientes com alergia grave documentada a Sulfas/Sulfonamidas (risco de sensibilidade cruzada)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA SULFA OCULTA (RISCO DE STEVENS-JOHNSON): O Darunavir possui um anel químico derivado das Sulfonamidas. Se o seu paciente relatar histórico de alergia violenta a sulfas (como o Bactrim), o uso do Prezista pode desencadear uma reação cutânea gravíssima com descolamento da pele em carne viva (Síndrome de Stevens-Johnson). Pergunte sempre sobre alergias a antibióticos antes.', es: 'ALERTA DE ALERGIA A SULFA: Posee un grupo sulfonamida en su estructura molecular. Su uso en pacientes con historial de hipersensibilidad severa a las sulfas (ej: Cotrimoxazol) puede gatillar un Síndrome de Stevens-Johnson de evolución mortal. Indagar alergias previas.' }
+      },
+      references: {
+        pt: 'ARTEMIS e ODIN Trials (Darunavir efficacy in Naïve/Experienced); Protocolo Clínico PCDT de Manejo do HIV do MS; Guidelines da IAS 2024.',
+        es: 'ARTEMIS Trials; Directrices de la Sociedad Argentina de Infectología (SADI) para VIH; Ficha Técnica Prezista.'
+      }
+    },
+
+/* ── ATAZANAVIR (952) ───────────────────────────────────────────────── */
+    "atazanavir": {
+      name: { pt: 'Atazanavir (ATV)', es: 'Atazanavir (ATV)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor de Protease Azapeptídico', es: 'Antirretroviral / Inhibidor de la Proteasa Azapeptídico' },
+      indications: {
+        pt: ['Tratamento da infecção pelo vírus HIV-1 em combinação com outros antirretrovirais (Tradicionalmente preferido por causar menos impacto lipídico que outros IPs)'],
+        es: ['Tratamiento de la infección por VIH-1 en combinación combinada, con menor perfil de toxicidad lipídica metabólica']
+      },
+      commercialNames: { br: ['Reyataz', 'Atazanavir (SUS)'], ar: ['Reyataz', 'Atazanavir Richmond', 'Genzavir'] },
+      presentation: { pt: ['Cápsulas duras 150 mg, 200 mg e 300 mg'], es: ['Cápsulas duras 200 mg y 300 mg'] },
+      mechanism: {
+        pt: 'Inibidor seletivo azapeptídico da protease do HIV-1. Trava a quebra das proteínas estruturais virais impedindo a remodelação interna do núcleo do vírus. Apresenta uma farmacocinética limpa que permite tomada única diária, mas necessita obrigatoriamente de um ambiente hiperácido no estômago para conseguir se dissolver e entrar no sangue.',
+        es: 'Inhibidor azapeptídico de la proteasa del VIH-1. Bloquea la formación de proteínas estructurales maduras del núcleo del virión. Requiere un medio ácido gástrico óptimo de forma obligatoria para su disolución y posterior absorción percutánea intestinal.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose Combinada Potencializada (Padrão): 300 mg via oral, UMA VEZ ao dia, associado obrigatoriamente a Ritonavir 100 mg. Dose isolada (sem booster): 400 mg via oral uma vez ao dia (apenas se intolerância ao ritonavir).',
+          es: 'Dosis estándar potenciada: 300 mg vía oral, UNA VEZ al día + Ritonavir 100 mg. Sin potenciador: 400 mg una vez al día.'
+        },
+        pediatric: {
+          pt: 'Aprovado para crianças a partir de 6 anos de idade, com dose calibrada por faixas de peso corporal associado ao reforço do ritonavir.',
+          es: 'Aprobado en niños > 6 años con dosis calculada por peso.'
+        }
+      },
+      administration: { pt: ['DEVE SER TOMADO RESTRITAMENTE COM ALIMENTOS (uma refeição completa). É proibido o uso simultâneo de medicamentos que cortem a acidez do estômago (como Omeprazol ou antiácidos), pois eles anulam a absorção do Atazanavir (VER MOTOR).'], es: ['Tomar obligatoriamente CON ALIMENTOS. Está estrictamente contraindicado el uso de Inhibidores de la Bomba de Protones (Omeprazol) por anular su absorción.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose em renais crônicos ou em hemodiálise (administrar após a sessão).', es: 'Sin necesidad de ajuste en insuficiencia renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado na via hepática. Contraindicado em insuficiência hepática moderada a grave (Child-Pugh B e C) pelo risco de hiperbilirrubinemia maciça.', es: 'Contraindicado en insuficiencia hepática moderada o grave (Child B/C).' } },
+      commonAdverseEffects: { pt: ['HIPERBILIRRUBINEMIA BENIGNA (Icterícia isolada com olhos amarelos que afeta até 40% dos doentes - VER ALERTAS)', 'Náuseas e dispepsia', 'Cefaleia'], es: ['HIPERBILIRRUBINEMIA INDIRECTA AISLADA (Ojos amarillos en el 40% de los casos)', 'Náuseas y dispepsia', 'Cefalea'] },
+      dangerousAdverseEffects: { pt: ['Prolongamento do intervalo PR no eletrocardiograma com risco de Bloqueio AV de primeiro grau', 'Colelitíase e Nefrolitíase (formação de pedras de cristais de atazanavir nos rins e vesícula)'], es: ['Prolongación del intervalo PR cardíaco', 'Nefrolitiasis y colelitiasis por depósito de cristales de atazanavir'] },
+      contraindications: {
+        absolute: { pt: ['Uso de inibidores de bomba de prótons (Omeprazol) em qualquer dosagem', 'Insuficiência hepática moderada a grave Child B e C'], es: ['Uso de inhibidores de la bomba de protones (Omeprazol)', 'Insuficiencia hepática Child B o C'] },
+        relative: { pt: ['Pacientes com distúrbios de condução cardíaca pré-existentes ou bradicardia sinusal'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O SINAL DO OLHO AMARELO BENIGNO (A ICTERÍCIA DO REYATAZ): O Atazanavir inibe a enzima UGT1A1 do fígado, a mesma que limpa a Bilirrubina Indireta (causando uma Síndrome de Gilbert induzida). O paciente acorda com o olho inteiramente amarelo. Explique com calma: o fígado não está falindo, o efeito é puramente estético e benigno. Caso o paciente sofra estigma social, o remédio pode ser trocado.', es: 'ALERTA DE OJOS AMARILLOS (ICTERICIA POR REYATAZ): Inhibe competitivamente la enzima UGT1A1, provocando elevaciones de la bilirrubina indirecta. El paciente presenta ictericia conjuntival marcada. Advierta de forma preventiva que es un efecto cosmético e INOFENSIVO que no refleja daño celular hepático.' }
+      },
+      references: {
+        pt: 'CASTLE Trial (Atazanavir vs Lopinavir); FDA Prescribing Data Reyataz; Diretrizes Consolidadas de HIV MS.',
+        es: 'CASTLE Trial; Ficha Técnica CIMA Atazanavir; Manual de Infectología Clínica de la SADI.'
+      }
+    },
+
+/* ── RITONAVIR (953) ────────────────────────────────────────────────── */
+    "ritonavir": {
+      name: { pt: 'Ritonavir (RTV)', es: 'Ritonavir (RTV)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Potencializador Farmacocinético / Inibidor Potente do CYP3A4', es: 'Antirretroviral / Potenciador Farmacocinético / Inhibidor Potente de CYP3A4' },
+      indications: {
+        pt: ['Utilizado exclusivamente em dose baixa como potencializador ("Booster") farmacocinético de outros inibidores de protease (Darunavir, Atazanavir, Lopinavir) no tratamento do HIV-1', 'Componente essencial do Paxlovid contra a COVID-19 (como booster do Nirmatrelvir)'],
+        es: ['Utilizado exclusivamente a bajas dosis como potenciador farmacocinético ("Booster") de otros inhibidores de proteasa (Darunavir, Atazanavir)', 'Componente de Paxlovid contra COVID-19']
+      },
+      commercialNames: { br: ['Norvir', 'Ritonavir (SUS)', 'Paxlovid (Assoc)'], ar: ['Norvir', 'Ritonavir Richmond', 'Paxlovid'] },
+      presentation: { pt: ['Comprimidos revestidos 100 mg'], es: ['Comprimidos 100 mg'] },
+      mechanism: {
+        pt: 'O Cavalo de Tróia do Fígado. Embora tenha nascido como inibidor de protease, hoje ele não é usado para matar o vírus. Sua única função mecânica é ser o maior inibidor suicida da enzima CYP3A4 do fígado da história da medicina. Ao travar a CYP3A4, ele "desliga" o triturador do fígado. Isso impede que o corpo destrua os outros antivirais (Darunavir/Nirmatrelvir), fazendo com que esses remédios durem muito mais tempo e com picos gigantescos no sangue.',
+        es: 'Inhibidor suicida ultra-potente del citocromo hepático e intestinal CYP3A4 e de la glicoproteína-P. A dosis bajas de 100 mg, carece de efecto antiviral relevante pero bloquea por completo la degradación metabólica de otros antirretrovirales orales coadministrados, disparando de forma drástica su biodisponibilidad plasmática.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose Booster Estável: 100 mg via oral, UMA a DUAS vezes ao dia, administrado exatamente no mesmo segundo e junto com o inibidor de protease principal.',
+          es: 'Dosis Potenciadora: 100 mg vía oral, UNA o DOS VECES al día, administrado estrictamente de forma simultánea con el antiviral primario.'
+        },
+        pediatric: {
+          pt: 'Calculado por peso na faixa de 100 mg/m² como potencializador farmacocinético em esquemas combinados especializados.',
+          es: 'Dosificado según guías especializadas como co-factor de IPs.'
+        }
+      },
+      administration: { pt: ['DEVE SER ADMINISTRADO OBRIGATORIAMENTE JUNTO COM ALIMENTOS. Os comprimidos devem ser engolidos inteiros, nunca partidos, triturados ou mastigados (possuem sabor químico amargo metálico avassalador).'], es: ['Uso oral diario. TOMAR CON ALIMENTOS. Tragar los comprimidos enteros. Su trituración libera un sabor metálico urente intolerable.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste renal de dose.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado na via master do fígado. Contraindicado em cirrose descompensada severa Child-Pugh C; usar com muita cautela em Child B.', es: 'Contraindicado en insuficiencia hepática severa Child-Pugh C.' } },
+      commonAdverseEffects: { pt: ['DISTÚRBIOS GASTRINTESTINAIS VIOLENTOS (queimação gástrica, diarreia explosiva, náuseas violentas)', 'Parestesia circum-oral (formigamento ao redor da boca e nos dedos logo após engolir o comprimido)', 'Gosto metálico horrível', 'Hipertrigliceridemia severa'], es: ['DISCONFORT DIGESTIVO INTENSO (Diarrea, náuseas)', 'Parestesia circumoral (hormigueo labial típico postoma)', 'Disgeusia metálica', 'Hipertrigliceridemia'] },
+      dangerousAdverseEffects: { pt: ['Pancreatite Aguda Necro-hemorrágica (devido a picos de triglicerídeos > 1.000 mg/dL)', 'Hepatotoxicidade fatal', 'Interações medicamentosas letais por bloqueio enzimático (VER MOTOR)'], es: ['Pancreatitis Aguda secundaria a hipertrigliceridemia crítica', 'Toxicidad hepática grave', 'Crisis por interacciones fatales'] },
+      contraindications: {
+        absolute: { pt: ['Uso concomitante com qualquer droga de estreita janela terapêutica limpa pela CYP3A4 (Sinvastatina, Amiodarona, Midazolam VO, Ergotamina) - Risco de morte imediata por overdose do outro remédio'], es: ['COADMINISTRACIÓN CON FÁRMACOS CYP3A4 DEPENDIENTES DE MARGEN ESTRECHO (Amiodarona, Simvastatina, Midazolam VO) - PROHIBIDO'] },
+        relative: { pt: ['Histórico de dislipidemia severa familiar com triglicerídeos descontrolados'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A BOMBA DE INTERAÇÕES DA MEDICINA (O RISCO DA OVERDOSE ALHEIA): O Ritonavir é uma bomba biológica. Como ele paralisa o triturador do fígado, qualquer outro remédio que dependa desse triturador vai acumular de forma violenta. Se o paciente tomar o tranquilizante Midazolam oral ou usar Sinvastatina para colesterol junto com o Ritonavir, ele entra em Coma Respiratório ou sofre Rabdomiólise fatal em poucas horas. CHEQUE TODAS AS INTERAÇÕES ANTES.', es: 'EL REY DE LAS INTERACCIONES (PELIGRO DE SOBREDOSIS): Al apagar el citocromo CYP3A4, bloquea la eliminación de cientos de medicamentos del mercado. Prescribir Ritonavir sin revisar la lista previa del paciente puede inducir toxicidades letales por sobredosificación inadvertida del otro fármaco (ej: miopatía por estatinas o paro respiratorio por sedantes).' }
+      },
+      references: {
+        pt: 'FDA Boxed Warning Norvir; Ritonavir Interaction Database (Liverpool University); Manual de Farmacologia Clínica de Goodman & Gilman.',
+        es: 'Liverpool HIV Interactions Database; FDA Boxed Warning; Manual de Infectología de la SADI.'
+      }
+    },
+
+/* ── LOPINAVIR + RITONAVIR (954) ─────────────────────────────────────── */
+    "lopinavir_ritonavir": {
+      name: { pt: 'Lopinavir + Ritonavir (LPV/r)', es: 'Lopinavir + Ritonavir (LPV/r)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral Combinado / Inibidor de Protease Co-formulado com Booster', es: 'Antirretroviral Combinado / Inhibidor de la Proteasa Coformulado con Booster' },
+      indications: {
+        pt: ['Tratamento da infecção pelo vírus HIV-1 em adultos e crianças a partir de 14 dias de vida (Esquema alternativo clássico de segunda linha ou uso pediátrico histórico)'],
+        es: ['Tratamiento de la infección por VIH-1 en adultos y pediatría (Esquema clásico alternativo o de segunda línea)']
+      },
+      commercialNames: { br: ['Kaletra', 'Lopinavir/Ritonavir (SUS)'], ar: ['Kaletra', 'Lopinavir/Ritonavir Richmond'] },
+      presentation: { pt: ['Comprimidos revestidos contendo 200 mg Lopinavir + 50 mg Ritonavir', 'Solução oral líquida (80 mg + 20 mg)/mL'], es: ['Comprimidos de 200/50 mg', 'Solución oral líquida (80/20 mg)/mL'] },
+      mechanism: {
+        pt: 'O Combo Histórico de Protease. O Lopinavir é o antiviral ativo que bloqueia o sítio catalítico da protease do HIV-1, impedindo o corte e maturação das proteínas do vírus. Como o Lopinavir sozinho é destruído de forma extremamente rápida pelo fígado, ele é fundido de fábrica na mesma pílula com o Ritonavir (o booster), que desativa a CYP3A4 e garante que o Lopinavir consiga circular no sangue em níveis curativos.',
+        es: 'Combinación de dosis fija. El Lopinavir inhibe de forma potente la proteasa del VIH-1. Se formula junto con Ritonavir de forma obligatoria, el cual actúa puramente como protector metabólico al inhibir la enzima CYP3A4, elevando los niveles plasmáticos de lopinavir hasta 15 veces por encima del rango de aclaramiento basal.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose Padrão: 400 mg/100 mg via oral (2 comprimidos juntos), DUAS VEZES ao dia (de 12/12h). Em pacientes virgens de tratamento, pode ser feito como 800 mg/200 mg (4 comprimidos juntos) UMA VEZ ao dia.',
+          es: 'Dosis estándar: 400/100 mg vía oral (2 comprimidos) cada 12 horas. Pacientes vírgenes de tratamiento: opción de 800/200 mg (4 comprimidos) una vez al día.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 14 dias de vida. Dose calculada estritamente pela área de superfície corporal ou peso utilizando a solução oral em xarope com seringa dosadora (de 12/12h). Cuidado extremo com toxicidade do veículo líquido em neonatos prematuros.',
+          es: 'Aprobado desde los 14 días de vida con solución oral líquida dosificada por superficie corporal cada 12 horas.'
+        }
+      },
+      administration: { pt: ['Os comprimidos DEVEM ser engolidos inteiros, com ou sem alimentos (tecnologia de matriz derretida). A solução oral líquida (xarope) DEVE ser tomada obrigatoriamente JUNTO COM ALIMENTOS para diminuir a queimação estomacal severa.'], es: ['Los comprimidos pueden tomarse con o sin alimentos. La solución oral líquida DEBE administrarse estrictamente CON ALIMENTOS para mejorar la tolerancia gástrica de los niños.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em nenhum grau de clearance ou diálise.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Contraindicado em insuficiência hepática grave Child-Pugh C; o ritonavir em dose terapêutica acumulada causa sobrecarga celular severa.', es: 'Contraindicado en insuficiencia hepática grave (Child-Pugh C).' } },
+      commonAdverseEffects: { pt: ['DIARREIA INTENSA PASTOSA E LÍQUIDA (afeta até 25% dos usuários, crônica de padrão osmótico)', 'Náuseas e vômitos frequentes', 'Hipertrigliceridemia e Hipercolesterolemia brutas', 'Fadiga'], es: ['DIARREA CRÓNICA LÍQUIDA (muy frecuente por el componente oleoso)', 'Náuseas y vómitos', 'Dislipidemia severa y aumento notable de triglicéridos'] },
+      dangerousAdverseEffects: { pt: ['Pancreatite Aguda fulminante secundária a picos brutais de triglicerídeos', 'Prolongamento do intervalo QT e PR (risco de arritmias do tipo Torsades de Pointes)', 'Toxicidade fatal por Propilenoglicol em bebês prematuros usando o xarope'], es: ['Pancreatitis Aguda exócrina por hipertrigliceridemia', 'Prolongación del intervalo QT/PR con riesgo de arritmias ventriculares', 'Toxicidad neonatal por el vehículo de propilenglicol'] },
+      contraindications: {
+        absolute: { pt: ['Uso concomitante com medicamentos de clearance dependente por CYP3A4 (Amiodarona, Midazolam VO, Estatinas potentes)', 'Bebês prematuros antes de completar 14 dias após a data do parto (risco letal pelo veículo líquido)'], es: ['Uso concomitante con fármacos CYP3A4 de margen estrecho', 'Neonatos prematuros menores de 14 días de vida'] },
+        relative: { pt: ['Histórico de arritmias por prolongamento congênito do intervalo QT'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA MORTAL DO XAROPE EM PREMATUROS: A solução líquida do Kaletra contém altas quantidades de Álcool e Propilenoglicol como conservantes. Se administrada em bebês prematuros na UTI neonatal nas primeiras duas semanas de vida, o rim imaturo não consegue expelir esses solventes. O bebê evolui com depressão respiratória total, falência dos rins, acidose láctica e morte. Uso proibido antes dos 14 dias de vida.', es: 'ALERTA LETAL EN NEONATOS PREMATUROS: La solución oral de Kaletra contiene alcohol y propilenglicol como vehículos. Administrarla en prematuros menores de 14 días provoca toxicidad por acumulación de solventes, induciendo depresión respiratoria, insuficiencia renal aguda, convulsiones y paro cardíaco. Uso prohibido.' }
+      },
+      references: {
+        pt: 'M98-418 and M02-418 Landmark Trials (Kaletra development); FDA Pediatric Safety Warnings; Diretrizes GEDIIB / MS.',
+        es: 'Landmark Kaletra Trials; FDA Pediatric Safety Warnings; Guías de Tratamiento Pediátrico del SIDA de la SAP.'
+      }
+    },
+
+/* ── EFAVIRENZ (955) ────────────────────────────────────────────────── */
+    "efavirenz": {
+      name: { pt: 'Efavirenz (EFV)', es: 'Efavirenz (EFV)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor Não-Nucleosídeo da Transcriptase Reversa (ITRNN)', es: 'Antirretroviral / Inhibidor No Nucleósido de la Transcriptasa Inversa (ITRNN)' },
+      indications: {
+        pt: ['Tratamento da infecção pelo vírus HIV-1 em adultos e crianças acima de 3 meses em esquemas combinados (Histórico pilar do antigo "3 em 1" mundial)'],
+        es: ['Tratamiento de la infección por VIH-1 en combinación, pilar histórico de los esquemas preferenciales iniciales']
+      },
+      commercialNames: { br: ['Stocrin', 'Efavirenz (SUS)', '3 em 1 (SUS combo histórico)'], ar: ['Stocrin', 'Efavirenz Richmond'] },
+      presentation: { pt: ['Comprimidos revestidos e cápsulas 200 mg e 600 mg'], es: ['Comprimidos 600 mg'] },
+      mechanism: {
+        pt: 'O Bloqueador Alostérico Direto. Ao contrário das drogas anteriores (que fingem ser blocos de DNA), o Efavirenz liga-se DIRETAMENTE e de forma não-competitiva a um sítio alostérico específico da enzima Transcriptase Reversa do HIV-1 (próximo ao sítio polimerásico). Essa ligação causa uma distorção geométrica na "mão" da enzima, travando seu funcionamento. O vírus fica paralisado e não consegue iniciar a cópia do seu RNA.',
+        es: 'Inhibidor no nucleósido de la transcriptasa inversa (ITRNN) del VIH-1. Se une directamente y de forma no competitiva al sitio alostérico de la enzima, induciendo un cambio conformacional tridimensional que bloquea el centro catalítico de polimerización de ARN, abortando la transcripción.'
+      },
+      dose: {
+        adult: {
+          pt: '600 mg via oral, UMA VEZ ao dia, obrigatoriamente administrado À NOITE antes de dormir de estômago vazio.',
+          es: '600 mg vía oral, UNA VEZ al día, administrado estrictamente por la NOCHE antes de acostarse con estómago vacío.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 3 meses de idade e peso >= 3,5 kg, com dose calculada rigorosamente por faixas de peso corporal utilizando cápsulas abertas em purê.',
+          es: 'Aprobado en niños > 3 meses con ajuste de dosis por peso.'
+        }
+      },
+      administration: { pt: ['DEVE SER TOMADO RESTRITAMENTE À NOITE ANTES DE DORMIR E DE ESTÔMAGO VAZIO. Tomar o Efavirenz junto com alimentos gordurosos (como pizza ou frituras) dispara a absorção da droga no sangue em mais de 50%, gerando uma overdose tóxica no cérebro com alucinações severas (VER ALERTAS).'], es: ['TOMAR ESTRICTAMENTE POR LA NOCHE ANTES DE DORMIR Y CON ESTÓMAGO VACÍO. Las comidas ricas en grasa aumentan un 50% su absorción sistémica, disparando la neurotoxicidad cerebral aguda con alucinaciones y pesadillas de horror.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínima excreção renal da droga ativa, sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado intensamente no fígado (Indutor potente de CYP3A4). Contraindicado na insuficiência hepática grave Child-Pugh C.', es: 'Contraindicado en insuficiencia hepática grave Child C por riesgo de acumulación psicotrópica.' } },
+      commonAdverseEffects: { pt: ['SINTOMAS NEUROPSIQUIÁTRICOS (Tontura espacial intensa, tontura tipo ressaca, PESADELOS VÍVIDOS DE TERROR, insônia e sonolência diurna nas primeiras 2 a 4 semanas)', 'Erupção cutânea maculopapular (rash benigno)', 'Hipercolesterolemia'], es: ['SÍNTOMAS NEUROPSIQUIÁTRICOS (Mareo intenso, PESADILLAS VÍVIDAS DE TERROR, insomnio y desconexión de la realidad durante las primeras 3 semanas de inicio)', 'Rash cutáneo leve'] },
+      dangerousAdverseEffects: { pt: ['SURTO PSICÓTICO AGUDO com alucinações visuais e auditivas, ideação suicida severa e depressão maior exógena', 'Hepatite medicamentosa fulminante', 'Ginecomastia verdadeira em homens (efeito estrogênico periférico secundário)'], es: ['BROTE PSICÓTICO AGUDO con alucinaciones, depresión severa e ideación suicida', 'Fallo hepático agudo', 'Ginecomastia verdadera en varones por disrupción hormonal'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de surto psicótico ativo, depressão maior grave com ideação suicida ativa não controlada', 'Uso concomitante com Elbasvir/Grazoprevir (antiviral HCV)'], es: ['Antecedente de psicosis activa o depresión severa con ideación suicida', 'Insuficiencia hepática grave'] },
+        relative: { pt: ['Mulheres grávidas no primeiro trimestre (risco histórico e discutido de defeitos do tubo neural em animais, embora hoje liberado se controle estrito)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DOS PESADELOS DE TERROR (A NEUROTOXICIDADE DO STOCRIN): O Efavirenz atravessa o cérebro e age de forma semelhante a um alucinógeno nas primeiras semanas. O paciente apresenta tontura intensa e pesadelos ultra-realistas de terror (sonhos vívidos). Explique ao doente de forma empática: esses sintomas psíquicos somem sozinhos em 90% dos casos após 20 dias de uso. Avise para nunca tomar o comprimido após comer comida gordurosa.', es: 'ALERTA DE ALUCINACIONES Y SUEÑOS DE TERROR: El fármaco posee una estructura lipofílica que invade el SNC induciendo síntomas de disociación y pesadillas terroríficas los primeros 15 días. Indique al paciente que el cuadro es transitorio y autolimitado; tomarlo antes de acostarse disminuye el impacto del mareo diurno.' }
+      },
+      references: {
+        pt: '006 Study (Efavirenz vs Indinavir Landmark); FDA Drug Safety Communications; Diretrizes de Saúde Mental e HIV do Ministério da Saúde.',
+        es: '006 Landmark Study (NEJM 1999); FDA Safety Communications; Manual de Psicofarmacología e Infectología de la SADI.'
+      }
+    },
+
+/* ── RILPIVIRINA (956) ──────────────────────────────────────────────── */
+    "rilpivirina": {
+      name: { pt: 'Rilpivirina (RPV)', es: 'Rilpivirina (RPV)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Inibidor Não-Nucleosídeo da Transcriptase Reversa de Segunda Geração', es: 'Antirretroviral / Inhibidor No Nucleósido de la Transcriptasa Inversa de Segunda Generación' },
+      indications: {
+        pt: ['Tratamento da infecção pelo vírus HIV-1 em adultos e adolescentes virgens de tratamento (Naïve) com carga viral inicial BAIXA (< 100.000 cópias/mL)'],
+        es: ['Tratamiento de la infección por VIH-1 en pacientes vírgenes de terapia con carga viral inicial BAJA (< 100.000 copias/mL)']
+      },
+      commercialNames: { br: ['Edurant', 'Complera (Combo)', 'Juluca (Assoc)'], ar: ['Edurant', 'Complera', 'Eviplera'] },
+      presentation: { pt: ['Comprimidos revestidos 25 mg'], es: ['Comprimidos revestidos 25 mg'] },
+      mechanism: {
+        pt: 'Inibidor não-nucleosídeo (ITRNN) de segunda geração da família das diarilpirimidinas. Liga-se ao sítio alostérico da transcriptase reversa do HIV-1 com uma flexibilidade molecular imensa, o que permite tolerar mutações genéticas espaciais do vírus que anulavam o antigo Efavirenz. Possui uma taxa de efeitos neuropsiquiátricos infinitamente menor.',
+        es: 'Inhibidor no nucleósido de segunda generación (diarilpirimidina). Su estructura molecular flexible le permite un acoplamiento espacial dinámico en el sitio alostérico de la transcriptasa inversa, manteniendo eficacia contra cepas mutantes resistentes a efavirenz con mínima neurotoxicidad central.'
+      },
+      dose: {
+        adult: {
+          pt: '25 mg via oral, UMA VEZ ao dia, obrigatoriamente administrado JUNTO COM UMA REFEIÇÃO COMPLETA (Calórica).',
+          es: '25 mg vía oral, UNA VEZ al día, de forma continua. Administrar obligatoriamente junto con una comida calórica completa.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 12 anos de idade e peso >= 35 kg na mesma dosagem estável do adulto (25 mg uma vez ao dia).',
+          es: 'Aprobado en adolescentes >= 12 años con peso mínimo de 35 kg.'
+        }
+      },
+      administration: { pt: ['Uso oral diário. DEVE SER TOMADA COM UMA REFEIÇÃO COMPLETA. Tomar apenas com água, suco ou um lanche leve colapsa a absorção do remédio, levando à falha do coquetel. CONTRAINDICADA com Omeprazol (VER MOTOR).'], es: ['Uso oral diario. TOMAR CON UNA COMIDA COMPLETA. Ingerirla con líquidos o ayuno anula su eficacia. Contraindicado formalmente el uso concomitante con Omeprazol.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínimo clearance renal da droga ativa, sem necessidade de ajuste de dose em nefropatas.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em disfunção leve ou moderada. Não estudada na insuficiência grave Child C.', es: 'Precaución en insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['Insônia e cefaleia leve', 'Elevação discreta de transaminases e bilirrubinas', 'Náusea episódica'], es: ['Insomnio leve y cefalea', 'Aumento leve de transaminasas', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Prolongamento do intervalo QT no eletrocardiograma (em doses supra-terapêuticas)', 'Síndrome de Reconstituição Imune (IRIS)', 'Depressão exógena aguda'], es: ['Prolongación del intervalo QT cardíaco', 'Depresión severa', 'Síndrome de Reconstitución Inmune'] },
+      contraindications: {
+        absolute: { pt: ['Uso concomitante com Inibidores da Bomba de Prótons (Omeprazol, Lansoprazol) devido ao cancelamento de absorção', 'Uso com indutores potentes (Rifampicina, Carbamazepina)'], es: ['COADMINISTRACIÓN CON INHIBIDORES DE LA BOMBA DE PROTONES (Omeprazol) - PROHIBIDO', 'Uso con Rifampicina'] },
+        relative: { pt: ['Carga viral inicial do paciente extremamente alta > 100.000 cópias/mL (alto risco de falha terapêutica por rebote de resistência)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A BARREIRA DA CARGA VIRAL INICIAL: A Rilpivirina (Edurant) é uma droga excelente e leve, mas ela falha se for usada no paciente que chega no consultório com o HIV estourado acima de 100.000 cópias/mL. Estudos (ECHO/THRIVE) provaram que nesses pacientes o vírus consegue quebrar a barreira da rilpivirina e criar resistência cruzada rápida. Use apenas em cargas virais baixas.', es: 'ALERTA DE LÍMITE DE CARGA VIRAL: Está demostrado en los estudios ECHO y THRIVE que Rilpivirina presenta una tasa de fracaso terapéutico inaceptable si se inicia en pacientes con carga viral basal elevada (> 100.000 copias/mL). Reservar estrictamente para viremias bajas.' }
+      },
+      references: {
+        pt: 'ECHO and THRIVE Trials (Rilpivirina efficiency limits); FDA Drug Safety Communication; Guidelines da AASLD / IAS 2024.',
+        es: 'ECHO & THRIVE Trials (Lancet 2011); Ficha Técnica Edurant; Directrices de Consenso de la SADI.'
+      }
+    },
+
+/* ── MARAVIROQUE (959) ──────────────────────────────────────────────── */
+    "maraviroque": {
+      name: { pt: 'Maraviroque', es: 'Maraviroc' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral / Antagonista do Co-receptor CCR5 / Inibidor de Entrada', es: 'Antirretroviral / Antagonista del Co-receptor CCR5 / Inhibidor de Entrada' },
+      indications: {
+        pt: ['Tratamento da infecção pelo vírus HIV-1 em adultos e crianças experientes com falha terapêutica múltipla, cujo vírus utilize EXCLUSIVAMENTE o co-receptor CCR5 para entrar na célula (Vírus com tropismo CCR5 puro)'],
+        es: ['Tratamiento de la infección por VIH-1 en pacientes pretratados multirresistentes con tropismo exclusivo por el co-receptor CCR5']
+      },
+      commercialNames: { br: ['Celsentri'], ar: ['Celsentri', 'Maraviroc Richmond'] },
+      presentation: { pt: ['Comprimidos revestidos 150 mg e 300 mg'], es: ['Comprimidos revestidos 150 mg y 300 mg'] },
+      mechanism: {
+        pt: 'O Cadeado do Linfócito. Diferente de todos os outros remédios que atacam o vírus dentro da célula, o Maraviroque atua bloqueando a nossa própria célula humana. Ele liga-se de forma irreversível ao co-receptor CCR5 localizado na membrana externa dos linfócitos T CD4. Isso muda o desenho geométrico do receptor, impedindo que a proteína gp120 do vírus da SIDA consiga se "encaixar" ali. Sem o encaixe, o vírus não consegue fundir sua membrana e fica trancado do lado de fora da célula.',
+        es: 'Antagonista selectivo del co-receptor de quimiocinas CCR5 humano. Se une de forma específica a la proteína celular del huésped, impidiendo el cambio conformacional de la gp120 del VIH-1 necesario para fusionar las membranas. Bloquea mecánicamente la entrada del virus a la célula.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose Camaleão por Interação (CRÍTICO): 300 mg via oral, DUAS VEZES ao dia (de 12/12h). Se usado com inibidores potentes (Ritonavir/Darunavir), a dose DEVE ser reduzida para 150 mg 2x/dia. Se usado com indutores potentes (Efavirenz/Rifampicina), a dose DEVE ser subida para 600 mg 2x/dia.',
+          es: 'Dosis variable por interacción (Crítico): 300 mg vía oral cada 12 horas. Si coadministra con Inhibidores de Proteasa (Ritonavir), reducir a 150 mg cada 12h. Si coadministra con inductores (Efavirenz), aumentar a 600 mg cada 12h.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 2 anos de idade e peso >= 10 kg, com dose calculada com base no peso e no perfil de medicamentos associados da receita médica.',
+          es: 'Aprobado en niños > 2 años con dosis ajustada por peso e interacciones farmacológicas concurrentes.'
+        }
+      },
+      administration: { pt: ['Uso oral diário a longo prazo. Pode ser tomado com ou sem alimentos. OBRIGATÓRIO confirmar o tropismo do vírus por exame molecular (Exame de Tropismo Trofile) antes de iniciar a medicação.'], es: ['Uso oral. Obligatorio realizar un ensayo de tropismo molecular (ej: Trofile) antes de prescribir para confirmar que el virus es R5-trópico puro.'] },
+      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min e o paciente estiver usando inibidores potentes (Ritonavir), o risco de toxicidade e acúmulo é extremo; contraindicado nessa associação específica.', es: 'Contraindicado si ClCr < 30 mL/min en presencia de inhibidores potentes de CYP3A4.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Risco de hepatotoxicidade imunoalérgica severa. Monitorar rigidamente enzimas basais e mensais em hepatopatas crônicos; suspender se houver rash ou sinais de hepatite.', es: 'Precaución extrema y monitoreo de transaminasas por riesgo de hepatotoxicidad severa con características eosinofílicas.' } },
+      commonAdverseEffects: { pt: ['Infecções respiratórias altas e tosse', 'Dor abdominal, náuseas e flatulência', 'Tontura postural e fadiga', 'Cefaleia'], es: ['Infecciones respiratorias y tos', 'Dolor abdominal y diarrea', 'Mareo postural y cefalea'] },
+      dangerousAdverseEffects: { pt: ['HEPATOTOXICIDADE SEVERA precedida por reação alérgica sistêmica (Rash cutâneo com eosinofilia e febre, exige parada imediata da droga)', 'Aumento estatístico do risco de infecções oportunistas sistêmicas periféricas por travar o receptor imunológico'], es: ['HEPATOTOXICIDAD SEVERA FULMINANTE precedida por exantema alérgico y eosinofilia', 'Infecciones oportunistas'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes cujo exame de tropismo confirme presença de vírus com tropismo CXCR4 ou misto X4/R5 (o remédio não terá efeito nenhum e haverá falha catastrófica)'], es: ['Virus con tropismo CXCR4 o tropismo mixto X4/R5 confirmado en el test molecular'] },
+        relative: { pt: ['Insuficiência renal grave associada a potentes inibidores enzimáticos'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A EXIGÊNCIA ABSOLUTA DO TESTE TROFILE (O VÍRUS QUE USA OUTRA PORTA): O Maraviroque só funciona se o vírus for do tipo R5 puro (usa a porta CCR5). Se o vírus do paciente tiver sofrido mutação e aprendido a usar a porta CXCR4 (vírus X4), o Maraviroque vira um placebo caro. É PROIBIDO por protocolo dar a medicação sem rodar o teste de Tropismo antes. Dar o remédio às cegas em vírus X4 destrói o esquema de resgate.', es: 'MANDATORIO TEST DE TROPISMO VIRAL: El virus del VIH puede mutar y cambiar de puerta de entrada utilizando el correceptor CXCR4 en lugar del CCR5. Si el paciente posee virus con tropismo mixto o CXCR4 puro, Maraviroc es inerte. Es obligatorio realizar el test de tropismo (Trofile) antes de prescribir.' }
+      },
+      references: {
+        pt: 'MERIT and MOTIVATE Trials (Maraviroc in treatment-naïve/experienced); FDA Boxed Warning Celsentri; Guidelines da SBI.',
+        es: 'MOTIVATE & MERIT Trials (NEJM 2008); FDA Boxed Warning; Guías del SIDA del Ministerio de Salud de la Nación Argentina.'
+      }
+    }
+
+}); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 449 (darunavir + atazanavir + ritonavir + lopinavir_ritonavir + efavirenz + rilpivirina + maraviroque — Inibidores de Protease e Não-Nucleosídeos) */
+
 })();
