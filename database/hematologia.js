@@ -629,4 +629,322 @@
 
   }); /* fim Object.assign HEMATOLOGIA_DRUGS_DB — BUILD 434 (acido_folico + vitamina_b12 — Pilares Síntese Hemácias) */
 
+/* ── BUILD 450 GUARD ─── */
+if (typeof window.HEMATOLOGIA_DRUGS_DB !== 'object' || window.HEMATOLOGIA_DRUGS_DB === null || Array.isArray(window.HEMATOLOGIA_DRUGS_DB)) { window.HEMATOLOGIA_DRUGS_DB = {}; }
+if (typeof window.HEMATOLOGIA_DRUGS_DB !== 'object' || window.HEMATOLOGIA_DRUGS_DB === null) return;
+
+Object.assign(window.HEMATOLOGIA_DRUGS_DB, {
+
+  // ── HEMOSTASIA AVANÇADA, FATORES E ESTIMULADORES DE MEDULA ──
+
+/* ── HIDROXOCOBALAMINA (967) ────────────────────────────────────────── */
+    "hidroxocobalamina": {
+      name: { pt: 'Hidroxocobalamina (Vitamina B12a)', es: 'Hidroxocobalamina (Vitamina B12a)' },
+      category: 'hematologia',
+      class: { pt: 'Antídoto Anticianeto / Forma Ativa de Vitamina B12 de Alta Afinidade', es: 'Antídoto Anticidatado / Forma Activa de Vitamina B12 de Alta Afinidad' },
+      indications: {
+        pt: ['Tratamento de envenenamento agudo por Cianeto (inalação de fumaça de incêndios industriais)', 'Anemia Megaloblástica por deficiência grave de Vitamina B12 ou Síndrome de má-absorção', 'Neuropatia óptica de Leber e ambliopia tabágica'],
+        es: ['Tratamiento de la intoxicación aguda por Cianuro (inhalación de humo en incendios)', 'Anemia Megaloblástica por déficit severo de Vitamina B12', 'Neuropatía óptica de Leber']
+      },
+      commercialNames: { br: ['Cyanokit', 'Rubranova'], ar: ['Cyanokit', 'Cobalin', 'Megalobic'] },
+      presentation: { pt: ['Frasco-ampola IV com pó liofilizado de 5 g (Cyanokit)', 'Ampolas injetáveis IM 5.000 mcg/2 mL (Rubranova)'], es: ['Vial IV con polvo liofilizado 5 g', 'Ampollas IM 5.000 mcg'] },
+      mechanism: {
+        pt: 'O Ímã de Cianeto. Como antídoto (Cyanokit), cada molécula de Hidroxocobalamina possui um íon cobalto central que atua trocando uma hidroxila diretamente pelo íon cianeto tóxico. Essa reação química transforma o cianeto na molécula inofensiva **Cianocobalamina** (Vitamina B12 comum). O cianeto é arrancado das mitocôndrias, liberando a enzima citocromo c oxidase celular. O corpo volta a respirar e o cianeto é urinado de forma segura.',
+        es: 'Cada molécula de hidroxocobalamina sustituye su grupo hidroxilo por un ion cianuro libre, fijándolo con alta afinidad para formar **Cianocobalamina** (vitamina B12 inerte). Esto rescata a la enzima mitocondrial citocromo c oxidasa de la inhibición del cianuro, restaurando la respiración celular aeróbica y permitiendo la excreción renal del tóxico.'
+      },
+      dose: {
+        adult: {
+          pt: 'Intoxicação por Cianeto (Fumaça/Incêndio): 5 g via Intravenosa (infusão em 15 minutos). Uma segunda dose de 5 g pode ser infundida se houver instabilidade neurológica crônica. Anemia: 1.000 a 5.000 mcg via Intramuscular profunda a cada 2-3 dias na fase de ataque.',
+          es: 'Intoxicación por Cianuro: 5 g vía Intravenosa (infusión rápida en 15 min). Se puede repetir una segunda dosis de 5 g si persiste el coma o shock. Anemia: 1.000 a 5.000 mcg vía Intramuscular profunda.'
+        },
+        pediatric: {
+          pt: 'Antídoto Cianeto: 70 mg/kg via Intravenosa (máximo de 5 g por dose de infusão única).',
+          es: 'Intoxicación por Cianuro en niños: 70 mg/kg IV bolo lento.'
+        }
+      },
+      administration: { pt: ['A formulação de antídoto de 5g deve ser reconstituída com 200 mL de Soro Fisiológico (NaCl 0,9%) e infundida em linha endovenosa exclusiva ao longo de 15 minutos. NUNCA misturar com outras drogas na mesma linha. A formulação de anemia é estritamente INTRAMUSCULAR profunda.'], es: ['Reconstituir el vial de 5 g con 200 mL de solución fisiológica e infundir en una línea IV exclusiva en 15 minutos. No mezclar con otros fármacos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, embora os rins excretores fiquem corados pela cor vermelha do complexo.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['COLORAÇÃO VERMELHA INTENSA DA URINA E PELE (efeito cromógeno inofensivo que dura até 15 dias)', 'Hipertensão arterial transitória por vasoconstrição reflexa', 'Reação eritematosa no sítio injetável'], es: ['COLORACIÓN ROJA INTENSA EN PIEL Y ORINA (Cromogenia inofensiva duradera)', 'Hipertensión arterial transitoria', 'Cefalea'] },
+      dangerousAdverseEffects: { pt: ['Reações anafiláticas severas (raro)', 'Insuficiência renal aguda por precipitação de cristais cromógenos na luz tubular se houver desidratação crônica extrema'], es: ['Reacciones anafilácticas', 'Falla renal aguda por cromógenos intratubulares en shock severo'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida à hidroxocobalamina ou ao cobalto'] },
+        relative: { pt: ['Uso concomitante na mesma linha IV com hemoderivados ou Epinefrina (inativa as catecolaminas por oxidação direta)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O XIXI VERDE-CHROME QUE VIRA SANGUE (A CROMOGENIA DO CYANOKIT): A Hidroxocobalamina é um corante vermelho natural ultra-concentrado. Após a infusão na UTI, a pele, o suor, as lágrimas e a urina do paciente ficam com uma cor vermelho-sangue viva e assustadora. Os monitores de diálise e exames laboratoriais dão erro porque a máquina acha que o sangue derreteu. Avise o laboratório e a família: é normal e o paciente vai urinar vermelho por semanas.', es: 'ALERTA DE CROMOGENIA INTENSA: Tras infundir el Cyanokit, el paciente se tiñe por completo de un color rojo violáceo intenso (piel, mucosas y orina). Esto altera las lecturas de los oxímetros de pulso y los analizadores de laboratorio bioquímico por interferencia colorimétrica. Advierta al personal de enfermería.' }
+      },
+      references: {
+        pt: 'Cyanokit FDA Approval Data; Cortina Fire Smoke Inhalation Emergency Protocols; Manual de Toxicologia Ouro de Micromedex.',
+        es: 'FDA Prescribing Information (Cyanokit); Guías de Manejo de Intoxicaciones de la Red de Toxicología de Argentina.'
+      }
+    },
+
+/* ── FILGRASTIM (968) ───────────────────────────────────────────────── */
+    "filgrastim": {
+      name: { pt: 'Filgrastim (G-CSF Recombinante)', es: 'Filgrastim (G-CSF Recombinante)' },
+      category: 'hematologia',
+      class: { pt: 'Fator de Estímulo de Colônias de Granulócitos Humano / Citocina Hematopoiética', es: 'Factor Estimulante de Colonias de Granulocitos Humano / Citocina Hematopoyética' },
+      indications: {
+        pt: ['Redução da duração da Neutropenia Grave e incidência de Neutropenia Febril em pacientes com tumores sob quimioterapia citotóxica', 'Mobilização de células-tronco hematopoiéticas para o sangue periférico para transplante de medula', 'Neutropenia congênita severa crônica'],
+        es: ['Prevención y reducción de la Neutropenia Febril inducida por quimioterapia mielosupresora', 'Movilización de células progenitoras (Stem Cells) para trasplante de médula ósea']
+      },
+      commercialNames: { br: ['Granulokine', 'Filgrastim (SUS)', 'Biozurin'], ar: ['Granulokine', 'Filgrastim Richmond', 'Relgrast'] },
+      presentation: { pt: ['Seringas preenchidas Injetáveis Subcutâneas/IV 300 mcg (30 MUI) e 480 mcg (48 MUI)'], es: ['Jeringas prellenadas SC/IV de 300 mcg y 480 mcg'] },
+      mechanism: {
+        pt: 'A Fábrica de Neutrófilos. É uma glicoproteína fabricada por tecnologia de DNA recombinante que imita o G-CSF humano nativo. Ele se liga diretamente aos receptores de superfície das células-mãe mieloides dentro da medula óssea do paciente. Esse estímulo força e acelera de forma violenta a proliferação, maturação e liberação dos **Neutrófilos** (as células de defesa de linha de frente) para o sangue, salvando o paciente de morrer de infecções sem imunidade.',
+        es: 'Factor estimulante de colonias de granulocitos recombinante. Regula la producción de neutrófilos en la médula ósea mediante la unión a receptores específicos en células progenitoras mieloides. Estimula la proliferación, diferenciación y activación funcional de los neutrófilos, acelerando su liberación al torrente sanguíneo.'
+      },
+      dose: {
+        adult: {
+          pt: 'Neutropenia Pós-Quimio: 5 mcg/kg/dia via SUBCUTÂNEA (geralmente uma seringa cheia de 300 mcg ou 480 mcg ao dia). Iniciar estritamente 24 horas APÓS o término da quimioterapia. Continuar até que a contagem de neutrófilos (ANC) passe de 10.000/mm³ após o nadir.',
+          es: 'Dosis estándar: 5 mcg/kg/día vía SUBCUTÁNEA o IV. Iniciar estrictamente 24 horas después de finalizar la quimioterapia. Mantener hasta lograr una recuperación de neutrófilos segura (> 10.000/mm³).'
+        },
+        pediatric: {
+          pt: 'Crianças sob quimioterapia: 5 mcg/kg/dia via Subcutânea seguindo as mesmas diretrizes de nadir e tempo de segurança do adulto.',
+          es: 'Pediátrica: 5 mcg/kg/día SC con monitoreo estricto de hemograma.'
+        }
+      },
+      administration: { pt: ['Administração via Subcutânea diária ou infusão IV curta diluída apenas em Soro Glicosado 5% (SG5%). CRÍTICO: NUNCA DILUIR FILGRASTIM EM SORO FISIOLÓGICO (NaCl 0,9%), pois o sal precipita e destrói a citocina, quebrando o remédio na hora. Se a dose for menor que 15 mcg/mL, adicionar albumina para proteger o frasco.'], es: ['Inyección Subcutánea diaria. Si se administra por vía IV, DILUIR EXCLUSIVAMENTE EN SUERO GLUCOSADO AL 5%. ¡PROHIBIDO USAR SOLUCIÓN FISIOLÓGICA! El cloruro de sodio precipita y anula la proteína por completo.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose, depurado por captação celular de neutrófilos.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['DOR ÓSSEA SEVERA E MIALGIA (ocorre em > 30% dos pacientes, tipicamente na bacia, coluna e esterno devido à expansão da medula fabricando células)', 'Cefaleia', 'Elevação de Ácido Úrico e Lactato Desidrogenase (LDH)'], es: ['DOLOR ÓSEO SEVERO E INTENSO (frecuente en esternón, pelvis y columna por expansión de la médula ósea)', 'Cefalea', 'Aumento de LDH'] },
+      dangerousAdverseEffects: { pt: ['RUPTURA EXPLOSIVA DE BAÇO (Esplenomegalia maciça com ruptura esplênica hemorrágica fatal por infiltração celular - exige palpação abdominal)', 'Síndrome do Desconforto Respiratório Agudo (SDRA) por infiltração de neutrófilos nos pulmões'], es: ['RUPTURA ESPLÉNICA MORTAL (Esplenomegalia masiva aguda por congestión mieloide)', 'Síndrome de Distrés Respiratorio Agudo (SDRA) pulmonar'] },
+      contraindications: {
+        absolute: { pt: ['Histórico de hipersensibilidade grave ao filgrastim ou a proteínas derivadas de E. coli', 'Uso nas 24 horas antes ou nas 24 horas após a aplicação de quimioterapia (pode multiplicar a toxicidade medular)'] },
+        relative: { pt: ['Pacientes com anemia falciforme ativa (pode precipitar crises de foicização esplênicas severas e fatais)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA DOR ABDOMINAL À ESQUERDA (RISCO DE EXPLOSÃO DE BAÇO): O Filgrastim força tanto a medula e o baço que o baço pode crescer rápido feito um balão de sangue e estourar lá dentro. Se o paciente que está tomando o remédio queixar de dor súbita e violenta na barriga à esquerda ou dor irradiando para o ombro esquerdo (Sinal de Kehr), corra para a tomografia; risco de ruptura esplênica hemorrágica fatal.', es: 'ALERTA DE RUPTURA ESPLÉNICA: El estímulo mieloide congestiona el bazo. Si el paciente refiere dolor en hipocondrio izquierdo o irradiado al hombro, suspenda de inmediato y descarte rotura de bazo de urgencia por ecografía ante riesgo de shock hipovolémico.' }
+      },
+      references: {
+        pt: 'ASCO Clinical Practice Guidelines on G-CSF; Guidelines de Neutropenia Febril da Sociedade Brasileira de Oncologia Clínica (SBOC); Bula Granulokine.',
+        es: 'ASCO Practice Guidelines; Guías de Neutropenia Febril de la Sociedad Argentina de Oncología (AAOC).'
+      }
+    },
+
+/* ── PEGFILGRASTIM (969) ────────────────────────────────────────────── */
+    "pegfilgrastim": {
+      name: { pt: 'Pegfilgrastim', es: 'Pegfilgrastim' },
+      category: 'hematologia',
+      class: { pt: 'Fator de Estímulo de Colônias de Granulócitos Peguilado de Longa Duração', es: 'Factor Estimulante de Colonias de Granulocitos Pegilado de Larga Duración' },
+      indications: {
+        pt: ['Prevenção e redução da Neutropenia Febril em pacientes sob ciclos de quimioterapia mielosupresora forte (A versão de dose única que substitui as picadas diárias do filgrastim comum)'],
+        es: ['Reducción de la duración de la neutropenia en quimioterapia citotóxica (Formulación monodosis de larga duración)']
+      },
+      commercialNames: { br: ['Neulastim', 'Pelgraz', 'Fulphila'], ar: ['Neulastim', 'Pegasta', 'Pelgraz Argentina'] },
+      presentation: { pt: ['Seringa preenchida Injetável Subcutânea de 6 mg/0,6 mL'], es: ['Jeringa prellenada de 6 mg/0,6 mL'] },
+      mechanism: {
+        pt: 'O Filgrastim de Longa Duração. É a molécula de filgrastim acoplada quimicamente a um polímero de Polietilenoglicol (Peguilação). Essa alteração de engenharia molecular aumenta o tamanho físico da molécula, impedindo que ela seja filtrada e destruída pelos rins. Sua eliminação passa a ser puramente biológica ("Clearance Neutrofílico"): o remédio dura no sangue até os novos neutrófilos nascerem e engolirem a medicação. Uma única injeção substitui 10 dias de picadas diárias.',
+        es: 'Filgrastim conjugado covalentemente con polietilenglicol (PEG). La pegilación reduce drásticamente el aclaramiento renal de la proteína. Su eliminación se autorregula de forma biológica por los propios neutrófilos circulantes ("Clearance Neutrofílico"): a medida que los neutrófilos se recuperan, fagocitan y limpian el fármaco de la sangre.'
+      },
+      dose: {
+        adult: {
+          pt: '6 mg via oral (NUNCA ORAL), estritamente via SUBCUTÂNEA, em DOSE ÚNICA por ciclo de quimioterapia. Aplicar exatamente 24 horas a no máximo 72 horas após o término da quimioterapia citotóxica.',
+          es: '6 mg (una jeringa completa) vía SUBCUTÁNEA en DOSIS ÚNICA por cada ciclo de quimioterapia, administrado 24 horas después del fin del citotóxico.'
+        },
+        pediatric: {
+          pt: 'Calculado estritamente por peso corporal em crianças com peso < 45 kg utilizando seringas de microdosagem em centros oncológicos especializados.',
+          es: 'Dosificación pediátrica calibrada estrictamente por kilo en oncología.'
+        }
+      },
+      administration: { pt: ['Injeção via subcutânea única na coxa, abdômen ou braço. NUNCA aplicar na veia (IV) ou no mesmo dia da quimioterapia. Retirar da geladeira 30 minutos antes para quebrar o choque térmico da agulha.'], es: ['Inyección Subcutánea única. No administrar por vía intravenosa. Mantener refrigerado.'] },
+      renalAdjustment: { required: false, message: { pt: 'Peguilação blinda o rim; sem necessidade de ajuste de dose em renais crônicos.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Dor óssea intensa generalizada (bacia e esterno)', 'Cefaleia', 'Dor muscular local'], es: ['Dolor óseo severo generalizado', 'Cefalea', 'Mialgias localizadas'] },
+      dangerousAdverseEffects: { pt: ['Ruptura de Baço hemorrágica aguda', 'Síndrome do Extravasamento Capilar (Capillary Leak Syndrome - inchaço sistêmico explosivo com choque e hipotensão na UTI)', 'Glomerulonefrite imunomediada'], es: ['Ruptura esplénica mortal', 'Síndrome de Fuga Capilar masiva (edema generalizado con shock)', 'Glomerulonefritis aguda'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade documentada ao pegfilgrastim ou ao filgrastim convencional', 'Uso a menos de 14 dias antes de um ciclo planejado de quimioterapia'] },
+        relative: { pt: ['Crise de foicização em pacientes com traço ou doença falciforme ativa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A SÍNDROME DA FUGA CAPILAR (O PERIGO DO INCHAÇO FULMINANTE): O Pegfilgrastim pode desencadear uma reação imune rara chamada Síndrome de Fuga Capilar. Os capilares do corpo inteiro "abrem" as comportas e o líquido do sangue vaza para os tecidos em poucos minutos. O paciente incha feito um boneco, a pressão cai para zero e ocorre falência de múltiplos órgãos. Exige suporte de UTI imediato com albumina e corticoide.', es: 'ALERTA DE SÍNDROME DE FUGA CAPILAR: Puede inducir de forma idiopática permeabilidad capilar masiva. El paciente presenta edema generalizado rápido, efusión pleural, distrés respiratorio e hipotensión profunda refractaria. Exige manejo crítico inmediato.' }
+      },
+      references: {
+        pt: 'EORTC Guidelines for the Use of Granulocyte Colony-Stimulating Factors; Lancet Oncology Pegfilgrastim Trials; Bula Neulastim.',
+        es: 'EORTC Management Guidelines; Ficha Técnica CIMA Pegfilgrastim; Manual de Terapéutica Oncológica del Hospital Roffo.'
+      }
+    },
+
+/* ── ELTROMBOPAGUE (971) ────────────────────────────────────────────── */
+    "eltrombopague": {
+      name: { pt: 'Eltrombopague Olamina', es: 'Eltrombopag Olamina' },
+      category: 'hematologia',
+      class: { pt: 'Agonista Não-Peptídico do Receptor de Trombopoetina (TPO-R) / Estimulador de Plaquetas', es: 'Agonista No Peptídico del Receptor de Trombopoyetina (TPO-R) / Estimulante de Plaquetas' },
+      indications: {
+        pt: ['Plaquetopenia severa na Púrpura Trombocitopênica Imunológica (PTI) crônica refratária a corticoides ou esplenectomia', 'Tratamento de Trombocitopenia em pacientes com Hepatite C crônica para permitir o início de antivirais', 'Anemia Aplástica Grave refratária de medula'],
+        es: ['Trombocitopenia severa en Púrpura Trombocitopénica Inmune (PTI) crónica refractaria', 'Trombocitopenia en pacientes con Hepatitis C', 'Anemia Aplásica Grave']
+      },
+      commercialNames: { br: ['Revolade'], ar: ['Revolade', 'Eltrombopag Beta'] },
+      presentation: { pt: ['Comprimidos revestidos 12,5 mg, 25 mg, 50 mg e 75 mg'], es: ['Comprimidos revestidos 25 mg, 50 mg y 75 mg'] },
+      mechanism: {
+        pt: 'O Multiplicador de Plaquetas Oral. É uma pequena molécula não-peptídica que entra no sangue e se liga ao domínio transmembrana do receptor de Trombopoetina ($TPO-R$) nas células-mãe da medula. Essa ligação ativa a via JAK/STAT e induz a proliferação agressiva e maturação dos **Megacariócitos** (as células gigantes que se fragmentam para virar plaquetas). A produção de plaquetas dispara, subindo os níveis sanguíneos e interrompendo sangramentos em poucos dias.',
+        es: 'Agonista molecular que interactúa selectivamente con el dominio transmembrana del receptor de trombopoyetina humana (TPO-R). Activa las vías de señalización intracelular JAK/STAT e STAT/MAPK, induciendo la proliferación y maduración de megacariocitos en la médula ósea, lo que eleva el recuento plaquetario de forma sostenida.'
+      },
+      dose: {
+        adult: {
+          pt: 'PTI Crônica: Iniciar com 50 mg via oral, UMA VEZ ao dia. (Atenção: Pacientes de descendência asiática devem iniciar com dose reduzida de 25 mg ao dia). Monitorar plaquetas semanalmente; ajustar a dose para manter as plaquetas > 50.000/mm³ para segurança de sangramento. Dose máxima: 75 mg/dia.',
+          es: 'PTI Crónica: Iniciar con 50 mg vía oral, UNA VEZ al día. (Descendientes asiáticos: iniciar con 25 mg/clase). Ajustar dosis semanalmente hasta mantener plaquetas estables > 50.000/mm³. Máx 75 mg/día.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 1 ano de idade para PTI crônica: Peso de 10 a 20 kg: iniciar com 25 mg uma vez ao dia; Peso > 20 kg: dose padrão de 50 mg ao dia.',
+          es: 'Aprobado en niños > 1 año con dosificación calibrada según franjas de peso corporal.'
+        }
+      },
+      administration: { pt: ['DEVE SER TOMADO EM JEJUM SECO OU ESTÔMAGO VAZIO (1 hora antes ou 2 horas depois de comer). CRÍTICO: É proibido tomar junto com leite, iogurte, cálcio ou antiácidos. Os metais grudam no Eltrombopague quimicamente (quelação) e cortam sua absorção a zero, destruindo o efeito do remédio.'], es: ['TOMAR CON ESTÓMAGO VACÍO (1 hora antes o 2 horas después de comer). ¡PROHIBIDO TOMAR CON LÁCTEOS O CATIONES METÁLICOS! Quelan el fármaco anulando por completo su absorción.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínima excreção renal da droga ativa, sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'ALTAMENTE HEPATOTÓXICO. Exige dosagem de TGO, TGP e Bilirrubinas basais e a cada 2 semanas na fase de ajuste. Se houver cirrose ou hepatopatia, reduzir a dose inicial obrigatória para 25 mg ao dia.', es: 'ALTAMENTE HEPATOTÓXICO. Reducir dosis inicial a 25 mg/día si hay daño hepático previo. Monitoreo bimensual obligatorio de transaminasas.' } },
+      commonAdverseEffects: { pt: ['Cefaleia marcante e náuseas', 'Elevação de transaminases hepáticas', 'Insônia e mialgia localizado'], es: ['Cefalea intensa', 'Aumento de transaminasas hepáticas', 'Náuseas y diarrea'] },
+      dangerousAdverseEffects: { pt: ['HEPATOTOXICIDADE CRÍTICA com falência hepática severa e icterícia', 'Eventos Tromboembólicos (TVP, TEP ou Trombose de Veia Porta caso a dose force as plaquetas a subirem demais acima de 200.000/mm³)'], es: ['HEPATOTOXICIDAD SEVERA FULMINANTE', 'Trombosis de la vena porta o TEP si el recuento plaquetario excede los límites biológicos seguros (> 200.000/mm³)'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência hepática grave Child-Pugh C', 'Histórico de trombose de veia porta ativa ou estados de hipercoagulação severos pré-existentes'] },
+        relative: { pt: ['Uso associado com estatinas (o eltrombopague dobra os níveis de estatinas no sangue — reduzir dose da estatina)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A ARMADILHA DO COPO DE LEITE (A CATASTROFE DA QUELAÇÃO): Oriente o paciente hematológico de forma enérgica: nunca tome o Revolade com um copo de leite ou comendo queijo. O Cálcio do leite funciona como um cadeado químico que tranca o remédio no estômago, impedindo-o de entrar no sangue. O nível de plaquetas despenca rápido e o paciente pode sofrer um AVC hemorrágico por falha de absorção. Separe o leite por 4 horas.', es: 'EL PELIGRO DE LA QUELACIÓN POR LÁCTEOS: El Calcio, el Magnesio y el Hierro contenidos en alimentos bloquean la absorción de Eltrombopag al quelarlo en el estómago, provocando recaídas plaquetarias severas con sangrado espontáneo. Espacie lácteos o antiácidos al menos 4 horas.' }
+      },
+      references: {
+        pt: 'EXTEND Trial (Long term Eltrombopag in ITP - Lancet 2017); RAISE Trial; Manual de Diagnóstico e Tratamento de PTI da Hcor / SBI.',
+        es: 'EXTEND Trial (Lancet 2017); RAISE Trial; Guías de Diagnóstico y Tratamiento de la PTI de la Sociedad Argentina de Hematología (SAH).'
+      }
+    },
+
+/* ── ROMIPLOSTIM (972) ──────────────────────────────────────────────── */
+    "romiplostim": {
+      name: { pt: 'Romiplostim', es: 'Romiplostim' },
+      category: 'hematologia',
+      class: { pt: 'Proteína de Fusão "Peptibody" Agonista de Trombopoetina / Estimulador de Plaquetas Injetável', es: 'Proteína de Fusión "Peptibody" Agonista de Trombopoyetina / Estimulante de Plaquetas Inyectable' },
+      indications: {
+        pt: ['Tratamento de Plaquetopenia Crônica Grave em pacientes adultos e pediátricos com Púrpura Trombocitopênica Imunológica (PTI) refratários a outros tratamentos (corticoides, imunoglobulinas)'],
+        es: ['Trombocitopenia crónica en pacientes con PTI refractarios a esplenectomía o corticoterapia previa']
+      },
+      commercialNames: { br: ['Nplate'], ar: ['Nplate'] },
+      presentation: { pt: ['Frasco-ampola com pó liofilizado injetável Subcutâneo 250 mcg e 500 mcg'], es: ['Vial con polvo liofilizado Subcutáneo 250 mcg y 500 mcg'] },
+      mechanism: {
+        pt: 'O Corpo Peptídico Ativador (Peptibody). É uma proteína de fusão recombinante exclusiva de engenharia biológica. Ela junta uma porção Fc de anticorpo IgG1 humano acoplada covalentemente a peptídeos ativadores que grudam no receptor de Trombopoetina ($TPO-R$). Ao contrário do Eltrombopague, o Romiplostim gruda no sítio extracelular da molécula (igual à trombopoetina humana nativa). Ele ativa a cascata de transcrição mieloide forçando a fabricação em massa de plaquetas de forma potente e direcionada na veia/pele.',
+        es: 'Cuerpo peptídico ("Peptibody") de ingeniería genética que consta de una región Fc de IgG1 humana unida a cadenas peptídicas que activan el receptor TPO-R en su dominio extracelular. Estimula la transcripción mieloide intracelular de megacariocitos igual que la trombopoyetina nativa.'
+      },
+      dose: {
+        adult: {
+          pt: 'Uso SUBCUTÂNEO SEMANAL: Iniciar com 1 mcg/kg via Subcutânea, UMA VEZ POR SEMANA. Monitorar o hemograma/plaquetas semanalmente. Titular a dose aumentando 1 mcg/kg a cada semana até que o paciente estabilize as plaquetas > 50.000/mm³ (máximo absoluto de 10 mcg/kg/semana). Se plaquetas > 200.000, suspender ou reduzir a dose.',
+          es: 'Uso SUBCUTÁNEO SEMANAL: Inicio con 1 mcg/kg vía SC, UNA VEZ POR SEMANA. Se titula incrementando de a 1 mcg/kg semanal según recuento de plaquetas hasta estabilizar > 50.000/mm³. Dosis máxima: 10 mcg/kg/semana.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 1 ano de idade para PTI crônica com o mesmo esquema de titulação semanal de 1 mcg/kg/semana baseado rigidamente no peso real da criança.',
+          es: 'Aprobado en niños > 1 año con esquema de titulación semanal idéntico al adulto.'
+        }
+      },
+      administration: { pt: ['EXCLUSIVAMENTE VIA SUBCUTÂNEA SEMANAL HOSPITALAR OU AMBULATORIAL. O pó liofilizado deve ser reconstituído com Água para Injeção estéril estritamente de acordo com as linhas de graduação da bula de volume líquido para evitar erros catastróficos de superdosagem. Não agitar o frasco (destrói a fusão de peptibody).'], es: ['Inyección Subcutánea SEMANAL. Reconstituir con agua destilada estéril de forma milimétrica. No agitar el vial con violencia por fragilidad estructural de la proteína de fusión.'] },
+      renalAdjustment: { required: false, message: { pt: 'Molécula gigante eliminada por catabolismo celular proteico, sem necessidade de ajuste renal.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Ao contrário do Eltrombopague, NÃO possui perfil de hepatotoxicidade primária severa, sem necessidade de ajuste inicial.', es: 'Sin necesidad de ajuste hepático, gran ventaja sobre el Eltrombopag oral.' } },
+      commonAdverseEffects: { pt: ['Cefaleia de padrão tensional forte', 'Artralgia e dor óssea localizada', 'Tontura e distúrbios do sono', 'Dor abdominal e diarreia leve'], es: ['Cefalea tensional intensa', 'Artralgias y dolor óseo', 'Mareo e insomnio'] },
+      dangerousAdverseEffects: { pt: ['FIBROSE DE MEDULA ÓSSEA (Risco de deposição de reticulina na medula por estímulo celular crônico exagerado; exige monitoramento laboratorial de mielofibrose de rebote)', 'Tromboembolismo venoso massivo (TEP) se plaquetas > 400.000/mm³ por superdosagem'], es: ['FIBROSIS DE LA MÉDULA ÓSEA (Depósito patológico de reticulina medular por sobreestimulación crónica mieloide)', 'Tromboembolismo pulmonar masivo'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida às proteínas derivadas de Escherichia coli ou ao romiplostim', 'Presença de Síndrome Mielodisplásica (risco de evoluir para Leucemia Mieloide Aguda explosiva)'] },
+        relative: { pt: ['Histórico de eventos trombóticos arteriais ou venosos maiores recentes (AVC/IAM)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA VIGILÂNCIA DE MIELOFIBROSE (A MEDULA QUE VIRA PEDRA): O Nplate (Romiplostim) estimula tanto as células da medula que se a dose for excessiva por anos, a medula do paciente começa a cicatrizar e acumular fibras de reticulina (Mielofibrose). O espaço para fabricar sangue some e o paciente desenvolve anemia crônica severa. O hematologista deve pesquisar periodicamente alterações celulares no sangue periférico.', es: 'ALERTA DE MIELOFIBROSIS MEDULAR: El estímulo continuo de megacariocitos puede inducir el depósito de fibras de reticulina en la médula ósea, alterando la hematopoyesis. Se recomienda realizar frotis de sangre periférica para vigilar la aparición de dacriocitos o precursores eritroides.' }
+      },
+      references: {
+        pt: 'Nplate Global Safety Registry Study; Lancet Pediatric ITP Trials; Manual de Condutas em Hematologia do Hospital Sírio-Libanês.',
+        es: 'Nplate Global Safety Registry; Guías de Tratamiento de PTI de la Sociedad Argentina de Hematología.'
+      }
+    },
+
+/* ── FATOR VIIa RECOMBINANTE (947) ───────────────────────────────────── */
+    "fator_viia": {
+      name: { pt: 'Fator VIIa Recombinante (Eptacogue Alfa)', es: 'Factor VIIa Recombinante (Eptacog Alfa)' },
+      category: 'hematologia',
+      class: { pt: 'Fator de Coagulação Ativado Recombinante / Agente Hemostático de Emergência de Alto Custo', es: 'Factor de Coagulación Activado Recombinante / Agente Hemostático de Emergencia' },
+      indications: {
+        pt: ['Tratamento de episódios de sangramento grave ou prevenção de hemorragias em cirurgias de pacientes com Hemofilia A ou B que possuem inibidores (anticorpos que destroem o Fator VIII ou IX)', 'Hemorragia pós-parto catastrófica refratária off-label', 'Tratamento de sangramentos severos na Trombastenia de Glanzmann'],
+        es: ['Hemorragias graves o cirugía en pacientes con Hemofilia A o B con inhibidores circulantes', 'Hemorragia postparto catastrófica refractaria (Uso de rescate off-label)', 'Trombastenia de Glanzmann']
+      },
+      commercialNames: { br: ['NovoSeven'], ar: ['NovoSeven'] },
+      presentation: { pt: ['Frasco-ampola com pó liofilizado IV contendo 1 mg (50 UI), 2 mg (100 UI) e 50 mg (250 UI) de Fator VIIa + diluente'], es: ['Vial con polvo liofilizado IV de 1 mg (50 UI), 2 mg (100 UI) y 5 mg (250 UI)'] },
+      mechanism: {
+        pt: 'O Disparador do Coágulo de UTI. O Fator VIIa atua no início da cascata de coagulação. Quando injetado em altas doses na veia, ele pula as etapas iniciais travadas da hemofilia. Ele liga-se diretamente ao Fator Tecidual exposto na parede do vaso rasgado e, de forma independente, liga-se à superfície das plaquetas ativadas no local da ferida. Esse acoplamento gera uma **Explosão de Trombina** instantânea, transformando o fibrinogênio em redes de fibrina duras que estancam a hemorragia em minutos.',
+        es: 'Actúa activando la vía extrínseca de la cascada de coagulación. Al administrarse a dosis altas terapéuticas, induce una activación directa del Fator X sobre la superficie de las plaquetas activadas localmente en el sitio del daño vascular. Esto desencadena una "explosión de trombina" masiva que forma un coágulo de fibrina estable, puenteando el déficit de Fator VIII o IX.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hemorragia em Hemofilia com Inibidor: 90 mcg/kg via BOLUS INTRAVENOSO DIRETO, aplicado a cada 2 ou 3 horas até que o sangramento seja controlado com segurança estável. Hemorragia pós-parto (off-label resgate): 60 a 90 mcg/kg em dose única rápida IV.',
+          es: 'Episodio Hemorrágico en Hemofilia con inhibidores: 90 mcg/kg vía BOLO INTRAVENOSO DIRECTO, repetido cada 2 o 3 horas hasta lograr la hemostasia del paciente. Hemorragia Postparto: 60-90 mcg/kg IV bolo único.'
+        },
+        pediatric: {
+          pt: 'Crianças hemofílicas com inibidores: Exigem clearance acelerado. Administrar dose maior de 90 a 120 mcg/kg via bolus IV a cada 2 horas nas crises hemorrágicas.',
+          es: 'Pediátrica en crisis hemorrágica: 90 a 120 mcg/kg IV bolo cada 2 horas.'
+        }
+      },
+      administration: { pt: ['EXCLUSIVAMENTE RECONSTITUÍDO E APLICADO EM BOLUS INTRAVENOSO DIRETO LENTO AO LONGO DE 2 A 5 MINUTOS. É proibido colocar em soro para gotejamento lento (a proteína quebra rápido). Administrar em linha exclusiva e em até 3 horas após a diluição.'], es: ['EXCLUSIVAMENTE BOLO INTRAVENOSO DIRECTO EN 2 A 5 MINUTOS. Prohibido diluir en goteo continuo. Administrar inmediatamente tras la reconstitución.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste de dose, depurado por vias metabólicas plasmáticas normais.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, mas o monitoramento do coagulograma é obrigatório.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Febre e calafrios pós-infusão (reação proteica)', 'Náuseas e tontura', 'Alterações discretas no local do acesso venoso'], es: ['Fiebre y escalofríos', 'Náuseas', 'Dolor local en la vía venosa'] },
+      dangerousAdverseEffects: { pt: ['TROMBOSE ARTERIAL E VENOSA MASSIVA (Infarto Agudo do Miocárdio, AVC Isquêmico ou Trombose Venosa Profunda por hipercoagulação descontrolada sistêmica se houver uso abusivo fora do peso)'], es: ['TROMBOSIS ARTERIAL O VENOSA MASIVA (Infarto de Miocardio, ACV Isquémico o TEP fulminante por estado de hipercoagulabilidad iatrogénica)'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida às proteínas do rato camundongo, hamster ou ao próprio fator VIIa', 'Presença de Coagulação Intravascular Disseminada (CIVD) ativa explosiva'] },
+        relative: { pt: ['Idosos cardiopatas graves com doença arterial coronariana obstrutiva crítica avançada'] }
+      },
+      safetyFlags: {
+        warning: { pt: 'O ALERTA DA EXPLOSÃO TROMBÓTICA (O COÁGULO ANDANTE): O NovoSeven é a medicação de resgate mais potente da hematologia, mas seu uso exige precisão matemática milimétrica no peso. Injetar doses excessivas ou aplicar em pacientes que não possuem indicação real de hemofilia/inibidor dispara o risco de Trombose Sistêmica. O sangue coagula dentro dos vasos saudáveis, causando infarto e derrames instantâneos na UTI.', es: 'ALERTA DE INFARTO Y ACV IATROGÉNICO: Debido a que desencadena hemostasia sistémica agresiva, las sobredosis o el uso indiscriminado fuera de protocolo triplican el riesgo de trombosis arterial. Monitorizar estrictamente signos de isquemia cerebral o miocárdica durante su uso.' },
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true
+      },
+      references: {
+        pt: 'NovoSeven Clinical Efficacy Registry; Guidelines da Federação Mundial de Hemofilia (WFH); Manual de Hemorragias Graves de UTI do Einstein.',
+        es: 'World Federation of Hemophilia (WFH) Guidelines; Manual de Emergencias Obstétricas y Hematológicas del Hospital de Clínicas.'
+      }
+    },
+
+/* ── EMICIZUMABE (979) ──────────────────────────────────────────────── */
+    "emicizumabe": {
+      name: { pt: 'Emicizumabe', es: 'Emicizumab' },
+      category: 'hematologia',
+      class: { pt: 'Anticorpo Monoclonal Biespecífico Humanizado / Mimético Funcional do Fator VIII', es: 'Anticuerpo Monoclonal Biespecífico Humanizado / Mimético Funcional del Factor VIII' },
+      indications: {
+        pt: ['Profilaxia de rotina para prevenir ou reduzir a frequência de episódios de sangramento em pacientes de todas as idades com Hemofilia A (deficiência congênita de Fator VIII) COM ou SEM inibidores de Fator VIII'],
+        es: ['Profilaxis de rutina para prevenir episodios de sangrado en pacientes con Hemofilia A con o sin inhibidores de factor VIII de por vida']
+      },
+      commercialNames: { br: ['Hemlibra'], ar: ['Hemlibra'] },
+      presentation: { pt: ['Frasco-ampola injetável Subcutâneo 30 mg/1 mL, 60 mg/0,4 mL e 150 mg/1 mL'], es: ['Vial inyectable Subcutáneo de 30 mg, 60 mg y 150 mg'] },
+      mechanism: {
+        pt: 'A Ponte Humana Artificial. É um anticorpo biológico de engenharia cirúrgica revolucionária chamado **Biespecífico**. Ele possui dois braços de agarre diferentes: um braço segura o Fator IXa e o outro braço segura o Fator X. Ao aproximar os dois fatores fisicamente no espaço, ele imita perfeitamente o papel tridimensional do Fator VIII que está faltando no hemofílico. A cascata corre, a trombina explode e o paciente fica protegido de sangramentos com uma picada na pele a cada duas semanas.',
+        es: 'Anticuerpo monoclonal biespecífico humanizado (IgG4). Su diseño estructural posee dos sitios de unión asimétricos: un brazo se une al Factor IX activado (FIXa) y el otro brazo se une al Factor X (FX). Al posicionarlos en la orientación espacial exacta, mimetiza la función cofactorial del Factor VIII ausente, restaurando la cascada de coagulación.'
+      },
+      dose: {
+        adult: {
+          pt: 'Fase de Ataque (Indução): 3 mg/kg via SUBCUTÂNEA, UMA VEZ POR SEMANA, nas primeiras 4 semanas. Fase de Manutenção Crônica: 1,5 mg/kg via Subcutânea uma vez por semana; OU 3 mg/kg a cada 2 semanas; OU 6 mg/kg a cada 4 semanas (uma vez por mês) via pele.',
+          es: 'Dosis de Carga: 3 mg/kg vía SUBCUTÁNEA, UNA VEZ POR SEMANA durante las primeras 4 semanas. Mantenimiento: 1,5 mg/kg una vez por semana, o 3 mg/kg cada 2 semanas, o 6 mg/kg cada 4 semanas.'
+        },
+        pediatric: {
+          pt: 'Aprovado desde recém-nascidos e lactantes: mesmo esquema de indução (3mg/kg) e manutenção ajustado milimetricamente pelo peso da criança.',
+          es: 'Aprobado en todas las edades desde el neonato bajo el mismo cálculo de dosis por kilo.'
+        }
+      },
+      administration: { pt: ['EXCLUSIVAMENTE INJEÇÃO SUBCUTÂNEA DOMICILIAR OU AMBULATORIAL (NUNCA VEICULAR NA VEIA). Retirar o frasco da geladeira 20 minutos antes de aplicar. O volume máximo por picada na pele é de 2 mL; se a dose calculada exigir mais que 2 mL, fracionar em duas picadas em locais diferentes.'], es: ['Inyección Subcutánea exclusiva. Prohibido por vía intravenosa. Si el volumen total calculado excede los 2 mL, dividir la dosis en dos sitios de inyección anatómicos distintos.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose, anticorpo metabolizado por degradação biológica celular.', es: 'Sin necesidad of ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Reações dolorosas locais no sítio de injeção cutânea (eritema, prurido)', 'Cefaleia de padrão leve', 'Artralgia transiente'], es: ['Eritema, induración o dolor en el sitio de inyección', 'Cefalea', 'Artralgias'] },
+      dangerousAdverseEffects: { pt: ['MICROANGIOPATIA TROMBÓTICA (MAT - destruição de hemácias com entupimento generalizado de vasos e rins se usado de forma errada com Complexo Protrombínico Ativado — VER MOTOR CAIXA PRETA)', 'Tromboembolismo venoso com infarto renal'], es: ['MICROANGIOPATÍA TROMBÓTICA (MAT) fulminante (con aPCC)', 'Tromboembolismo venoso extenso con necrosis tisular'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida ao emicizumabe ou componentes do Hemlibra'] },
+        relative: { pt: ['Uso concomitante com agentes de bypass como Complexo Protrombínico Ativado (Feiba) — PERIGO EXTREMO (VER INTERAÇÕES)'] }
+      },
+      safetyFlags: {
+        warning: { pt: 'A CAIXA PRETA DA COMBINAÇÃO PROIBIDA COM FEIBA (RISCO DE MAT): O Emicizumabe carrega um alerta Caixa Preta gravíssimo do FDA. Se o paciente que usa Hemlibra apresentar um sangramento e o médico na emergência aplicar o Complexo Protrombínico Ativado (Feiba) em doses > 100 UI/kg, ocorre uma super-coagulação violenta. O paciente desenvolve Microangiopatia Trombótica (MAT): os vasos entopem, as hemácias quebram e os rins param de funcionar na hora. Use apenas Fator VIIa se houver sangramento.', es: 'ALERTA DE CAJA NEGRA (MICROANGIOPATÍA TROMBÓTICA CON aPCC): Está terminantemente PROHIBIDO coadministrar Hemlibra junto con Complexo Protrombínico Activado (aPCC / Feiba) a dosis > 100 UI/kg. La combinación dispara una hipercoagulabilidad fulminante que induce MAT (destrucción de eritrocitos y falla multiorgánica masiva). Utilice Fator VIIa en emergencias.' },
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true
+      },
+      references: {
+        pt: 'HAVEN Trials (1 a 4 - Emicizumab in Hemophilia A - NEJM 2017); FDA Boxed Warning Hemlibra; Diretriz de Hemofilia do Ministério da Saúde.',
+        es: 'HAVEN Trials (NEJM 2017); FDA Boxed Warning; Guías del Manejo de la Hemofilia del Ministerio de Salud de la Nación.'
+      }
+    }
+
+}); /* fim Object.assign HEMATOLOGIA_DRUGS_DB — BUILD 450 (hidroxocobalamina + filgrastim + pegfilgrastim + eltrombopague + romiplostim + fator_viia + emicizumabe — Hemostasia Avançada, Fatores e Estimuladores de Medula) */
+
 })();
