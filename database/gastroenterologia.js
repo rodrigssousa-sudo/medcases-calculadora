@@ -1612,4 +1612,98 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
 
   }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 444 (golimumabe + tofacitinibe + upadacitinibe + filgotinibe + risanquizumabe + miriquizumabe — Anti-TNF Humano/Inibidores JAK/Anti-IL-23 p19 para DII) */
 
+  /* ── BUILD 445 GUARD ─────────────────────────────────────────────── */
+  if (typeof window.GASTROENTEROLOGIA_DRUGS_DB !== 'object' || window.GASTROENTEROLOGIA_DRUGS_DB === null) return;
+  Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
+
+    /* ── ÁCIDO URSODESOXICÓLICO (750) ───────────────────────────────────── */
+    "acido_ursodesoxicolico": {
+      name: { pt: 'Ácido Ursodesoxicólico (UDCA)', es: 'Ácido Ursodesoxicólico (UDCA)' },
+      category: 'gastroenterologia',
+      class: { pt: 'Ácido Biliar Hidrofílico Natural / Citoprotetor e Colerético', es: 'Ácido Biliar Hidrofílico Natural / Citoprotector y Colerético' },
+      indications: {
+        pt: ['Tratamento da Colangite Biliar Primária (CBP, antiga Cirrose Biliar Primária)', 'Dissolução de cálculos biliares de colesterol radiotransparentes em pacientes sem indicação cirúrgica', 'Tratamento da lama biliar e gastrite de refluxo biliar'],
+        es: ['Tratamiento de la Colangitis Biliar Primaria (CBP)', 'Disolución de cálculos biliares de colesterol radiotransparentes', 'Colestasis neonatal y pediátrica']
+      },
+      commercialNames: { br: ['Ursacol', 'Urso'], ar: ['Ursacol', 'Udca Richmond', 'Cholagutt'] },
+      presentation: { pt: ['Comprimidos de 50 mg, 150 mg, 300 mg e 450 mg'], es: ['Comprimidos de 150 mg, 300 mg y 500 mg'] },
+      mechanism: {
+        pt: 'O Diluente de Bile Tóxica. É um ácido biliar minoritário hidrofílico natural. Quando administrado por via oral, ele compete e substitui os ácidos biliares endógenos hidrofóbicos que são altamente tóxicos e corrosivos para as membranas das células do fígado. Ele estimula a secreção biliar (colerese), dilui a bile espessa e protege os hepatócitos e colangiócitos contra a apoptose e destruição imunomediada.',
+        es: 'Ácido biliar terciario hidrofílico. Al ser absorbido, desplaza de forma competitiva a los ácidos biliares endógenos lipofílicos e hidrofóbicos acumulados (altamente hepatotóxicos). Reduce la secreción de colesterol en la bilis, estabiliza las membranas celulares y ejerce un efecto inmunomodulador y colerético en los conductos biliares.'
+      },
+      dose: {
+        adult: {
+          pt: 'Colangite Biliar Primária (CBP): 13 a 15 mg/kg/dia via oral, divididos em 2 a 3 tomadas junto com as refeições. Dissolução de cálculos: 10 mg/kg/dia via oral, em dose única à noite.',
+          es: 'CBP: 13 a 15 mg/kg/día vía oral, fraccionado en 2 o 3 tomas con las comidas. Disolución de cálculos: 10 mg/kg/día por la noche.'
+        },
+        pediatric: {
+          pt: 'Atresia biliar e fibrose cística colestática pediátrica: 20 a 30 mg/kg/dia divididos em 2 a 3 tomadas.',
+          es: 'Colestasis pediátrica: 20 a 30 mg/kg/día.'
+        }
+      },
+      administration: { pt: ['Uso oral contínuo crônico. Deve ser ingerido estritamente junto com alimentos para otimizar sua incorporação nas micelas biliares. Não mastigar os comprimidos.'], es: ['Uso oral continuo. Tomar obligatoriamente con alimentos para asegurar su correcta absorción enterohepática.'] },
+      renalAdjustment: { required: false, message: { pt: 'Mínima eliminação renal, sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Indicado para proteção hepática; monitorar transaminases e bilirrubinas na fase de titulação.', es: 'No requiere ajuste, fármaco protector hepático.' } },
+      commonAdverseEffects: { pt: ['Fezes amolecidas ou diarreia leve (efeito osmótico biliar)', 'Náuseas e dispepsia', 'Prurito cutâneo temporário no início'], es: ['Heces blandas o diarrea leve', 'Náuseas', 'Prurito transitorio inicial'] },
+      dangerousAdverseEffects: { pt: ['Piora paradoxal da colestase se houver obstrução mecânica completa não diagnosticada do colédoco'], es: ['Exacerbación de la ictericia en caso de obstrucción biliar mecánica total'] },
+      contraindications: {
+        absolute: { pt: ['Obstrução mecânica completa dos ductos biliares (colédoco ou cístico)', 'Colecistite aguda ativa ou vesícula biliar não funcionante', 'Cálculos biliares calcificados radiopacos'], es: ['Obstrucción biliar mecánica completa', 'Colecistitis aguda activa', 'Cálculos calcificados radiopacos'] },
+        relative: { pt: ['Uso concomitante com colestiramina (bloqueia a absorção do Ursacol - VER MOTOR)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O REMÉDIO DE USO CONTÍNUO QUE EVITA TRANSPLANTE: Na Colangite Biliar Primária, o Ursacol não cura a doença genética, mas atrasa a progressão da fibrose em décadas. Se o paciente suspender o remédio por conta própria, os ácidos biliares tóxicos voltam a corroer os canais do fígado, acelerando a necessidade de um transplante hepático de emergência.', es: 'EL PROTECTOR CONTINUO DE POR VIDA: En la CBP, el UDCA frena la progresión hacia la cirrosis y retrasa la necesidad de trasplante por décadas. Si el paciente suspende la toma, los ácidos biliares corrosivos vuelven a destruir los conductos. No se debe interrumpir.' }
+      },
+      references: {
+        pt: 'AASLD Practice Guidelines for Primary Biliary Cholangitis; Manual de Hepatologia do Ambulatório do HC-FMUSP; Cochrane Database.',
+        es: 'AASLD Practice Guidelines; Guías de Colestasis Crónicas de la Sociedad Argentina de Hepatología (SAH).'
+      }
+    },
+
+    /* ── ÁCIDO OBETICÓLICO (751) ────────────────────────────────────────── */
+    "acido_obeticolico": {
+      name: { pt: 'Ácido Obeticólico', es: 'Ácido Obeticólico' },
+      category: 'gastroenterologia',
+      class: { pt: 'Agonista do Receptor Farnesoide X (FXR) / Ácido Biliar Sintético Modificado', es: 'Agonista del Receptor Farnesoide X (FXR) / Ácido Biliar Sintético Modificado' },
+      indications: {
+        pt: ['Tratamento da Colangite Biliar Primária (CBP) em combinação com o ácido ursodesoxicólico em adultos com resposta inadequada, ou como monoterapia em pacientes intolerantes ao UDCA'],
+        es: ['Tratamiento de la Colangitis Biliar Primaria (CBP) en adultos con respuesta inadecuada o intolerancia al ácido ursodesoxicólico']
+      },
+      commercialNames: { br: ['Ocaliva (Importação de alto custo)'], ar: ['Ocaliva'] },
+      presentation: { pt: ['Comprimidos revestidos 5 mg e 10 mg'], es: ['Comprimidos 5 mg y 10 mg'] },
+      mechanism: {
+        pt: 'O Regulador Genético do Fígado. É um análogo do ácido quenodesoxicólico modificado quimicamente (6-alfa-etil). Ele liga-se com afinidade 100 vezes superior ao receptor nuclear Farnesoide X (FXR) no fígado. A ativação do FXR desliga a transcrição de genes que fabricam novos ácidos biliares e ativa transportadores que expulsam os ácidos biliares para fora do fígado, cortando a toxicidade celular por raiz genética.',
+        es: 'Agonista potente y selectivo del receptor nuclear Farnesoide X (FXR). Regula la transcripción genética en el hepatocito: inhibe la síntesis de novo de ácidos biliares mediante la supresión de la enzima CYP7A1 y estimula su transporte fuera del hígado, disminuyendo la colestasis intrahepática.'
+      },
+      dose: {
+        adult: {
+          pt: 'Início: 5 mg via oral, UMA VEZ ao dia. Reavaliar após 6 meses; se as enzimas fosfatase alcalina continuarem altas e o paciente tolerar, elevar para 10 mg via oral uma vez ao dia. ATENÇÃO MÁXIMA EM CIRROSE (Ver Alertas).',
+          es: 'Inicio: 5 mg vía oral, UNA VEZ al día. Evaluar a los 6 meses: si la fosfatasa alcalina persiste elevada y es tolerado, incrementar a 10 mg una vez al día. ¡CUIDADO CRÍTICO EN CIRROSIS AVANZADA!.'
+        },
+        pediatric: {
+          pt: 'Uso não recomendado ou aprovado em menores de 18 anos.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['Uso oral diário, com ou sem alimentos. Pacientes com cirrose avançada Child-Pugh B ou C exigem esquemas de doses ultra-espaçados (VER ALERTAS).'], es: ['Uso oral diario. En pacientes cirróticos avanzados, la frecuencia se reduce estrictamente a 1 o 2 veces POR SEMANA.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, eliminação puramente biliar/fecal.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'CRÍTICO (Alerta Caixa Preta). Em cirrose descompensada Child-Pugh B ou C, a dose deve iniciar com 5 mg APENAS UMA VEZ POR SEMANA, progredindo no máximo para duas vezes por semana. Dar dose diária nesse perfil destrói o fígado de forma fulminante.', es: 'CRÍTICO (Caja Negra). En cirrosis avanzada Child-Pugh B o C, iniciar con 5 mg SOLO UNA VEZ POR SEMANA. El uso diario en estos pacientes provoca insuficiencia hepática fulminante.' } },
+      commonAdverseEffects: { pt: ['PRURIDO EXCRUCIANTE (Coceira insuportável no corpo todo que afeta até 60% dos usuários, sendo o principal motivo de suspensão)', 'Fadiga e cansaço severos', 'Dor orofaríngea'], es: ['PRURITO EXCRUCIANTE (Comezón insoportable generalizada que afecta hasta al 60% de los pacientes)', 'Fatiga', 'Dolor abdominal'] },
+      dangerousAdverseEffects: { pt: ['Insuficiência Hepática Fulminante e óbito por superdosagem em cirróticos', 'Ascite e sangramento de varizes esofágicas por descompensação portal'], es: ['Fallo Hepático Fulminante por sobredosificación en cirrosis', 'Ascitis y sangrado de varices esofágicas'] },
+      contraindications: {
+        absolute: { pt: ['Pacientes com cirrose descompensada Child-Pugh B ou C ou histórico de evento de descompensação hepática ativa', 'Obstrução biliar mecânica completa'], es: ['Cirrosis descompensada Child-Pugh B o C', 'Obstrucción biliar mecánica completa'] },
+        relative: { pt: ['Uso associado com resinas quelantes (Colestiramina bloqueia o Ocaliva - afastar 4 horas)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A CAIXA PRETA DA SUPERDOSAGEM EM CIRRÓTICOS: O Ácido Obeticólico carrega o alerta de erro médico mais perigoso da hepatologia. Se um clínico prescrever a dose de 5mg DIÁRIA para um paciente que já tem cirrose avançada (Child B ou C), o remédio se acumula de forma tóxica e provoca necrose do fígado, levando ao óbito por falência hepática. A dose nesse perfil deve ser SEMANÁRIA. Faça dupla checagem.', es: 'ALERTA DE CAJA NEGRA MORTAL: El error de dosificación diaria en pacientes con cirrosis avanzada (Child B o C) acumula el fármaco induciendo necrosis masiva y muerte por fallo hepático. En cirróticos, la dosis DEBE ser SEMANAL (1 o 2 veces por semana). Realice doble chequeo de la función hepática.' }
+      },
+      references: {
+        pt: 'POISE Trial (Obeticholic Acid in PBC - NEJM 2016); FDA Boxed Warning Ocaliva 2022; Manual de Hepatologia Avançada USP.',
+        es: 'POISE Trial (NEJM 2016); FDA Boxed Warning (Ocaliva); Guías de la Sociedad Argentina de Hepatología.'
+      }
+    }
+
+  }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 445 (acido_ursodesoxicolico + acido_obeticolico — Ácido Biliar Hidrofílico Citoprotetor/Agonista FXR Hepatoprotector Colangite Biliar Primária) */
+
 })();

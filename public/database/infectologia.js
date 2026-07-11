@@ -1288,4 +1288,362 @@
 
   }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 433 (atazanavir + bictegravir + anfotericina_b ID canônico) */
 
+  /* ── BUILD 445 GUARD ─────────────────────────────────────────────── */
+  if (typeof window.INFECTOLOGIA_DRUGS_DB !== 'object' || window.INFECTOLOGIA_DRUGS_DB === null) return;
+  Object.assign(window.INFECTOLOGIA_DRUGS_DB, {
+
+    /* ── SOFOSBUVIR (752) ───────────────────────────────────────────────── */
+    "sofosbuvir": {
+      name: { pt: 'Sofosbuvir', es: 'Sofosbuvir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral de Ação Direta (DAA) / Inibidor Nucleotídeo da Polimerase NS5B do HCV', es: 'Antiviral de Acción Directa (DAA) / Inhibidor Nucleótido de la Polimerasa NS5B del VHC' },
+      indications: {
+        pt: ['Tratamento da infecção crônica pelo vírus da Hepatite C (HCV) genótipos 1, 2, 3, 4, 5 ou 6 em adultos e crianças (Sempre combinado com outros antivirais como Daclatasvir ou Velpatasvir)'],
+        es: ['Tratamiento de la infección crónica por el virus de la Hepatitis C (VHC) genotipos 1 al 6 (Siempre en combinación con otros DAAs)']
+      },
+      commercialNames: { br: ['Sovaldi', 'Sofosbuvir (Genérico SUS)'], ar: ['Sovaldi', 'Sofosbuvir Richmond', 'Cevis'] },
+      presentation: { pt: ['Comprimidos revestidos 400 mg'], es: ['Comprimidos 400 mg'] },
+      mechanism: {
+        pt: 'O Sabotador da Cópia Viral. É um pró-fármaco que entra no hepatócito e é fosforilado na sua forma ativa (GS-461203). Esta molécula imita perfeitamente o nucleotídeo Uridina que o vírus usa para construir seu RNA. Quando a enzima polimerase NS5B do vírus da Hepatite C captura o Sofosbuvir por engano e tenta costurá-lo na fita de RNA, a fita "trava" de forma definitiva (terminação de cadeia). A replicação para e o vírus é extinto do corpo.',
+        es: 'Análogo de nucleótido e inhibidor de la polimerasa de ARN dependiente de ARN NS5B del VHC. Tras activarse intracelularmente a trifosfato, compite con la uridina incorporándose en la cadena de ARN viral en formación, provocando la terminación prematura de la cadena de replicación del VHC.'
+      },
+      dose: {
+        adult: {
+          pt: '400 mg via oral, UMA VEZ ao dia, combinado com outros antivirais (ex: + Daclatasvir 60mg) por um curso estrito de 12 ou 24 semanas (garante cura > 95%).',
+          es: '400 mg vía oral, UNA VEZ al día, combinado con otros agentes (Ledipasvir, Velpatasvir) por un período de 12 o 24 semanas según protocolo.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 3 anos de idade, com dose ajustada por peso em grânulos ou comprimidos de baixa dosagem (ex: 200mg se peso < 35kg).',
+          es: 'Aprobado en niños > 3 años con ajuste estricto por peso corporal.'
+        }
+      },
+      administration: { pt: ['Uso oral diário, rigorosamente no mesmo horário todos os dias. Pode ser tomado com ou sem alimentos. Se o paciente vomitar dentro de 2 horas após a tomada, deve ingerir outro comprimido imediatamente.'], es: ['Uso oral diario. Si se presenta vómito en las primeras 2 horas postoma, administrar un comprimido de reemplazo de inmediato.'] },
+      renalAdjustment: { required: false, message: { pt: 'Anteriormente contraindicado se ClCr < 30, hoje a evidência moderna (e aprovação do FDA/Anvisa) permite o uso seguro de Sofosbuvir 400mg em pacientes com insuficiência renal terminal ou em hemodiálise sem necessidade de redução de dose.', es: 'Evidencia moderna y aprobaciones FDA permiten su uso seguro en insuficiencia renal terminal y hemodiálisis a dosis plena.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Altamente seguro e eficaz em cirróticos Child-Pugh A, B ou C, sem ajuste de dose.', es: 'Seguro en cirrosis descompensada, sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Fadiga e cansaço leve', 'Cefaleia e náuseas', 'Insônia e episódios de anemia (quando associado a Ribavirina)'], es: ['Fatiga', 'Cefalea y náuseas', 'Insomnio'] },
+      dangerousAdverseEffects: { pt: ['BRADICARDIA SEVERA E PARADA CARDÍACA (se usado de forma errada com Amiodarona - VER INTERAÇÕES)', 'Reativação fulminante do vírus da Hepatite B oculta'], es: ['BRADICARDIA EXTREMA Y PARO CARDÍACO (con amiodarona)', 'Reactivación del virus de la Hepatitis B latente'] },
+      contraindications: {
+        absolute: { pt: ['USO CONCOMITANTE COM AMIODARONA (risco de bradicardia fatal)', 'Uso associado com indutores potentes da P-gp (Rifampicina anula o remédio)'], es: ['USO CONCOMITANTE CON AMIODARONA - PROHIBIDO POR RIESGO DE MUERTE', 'Uso con Rifampicina'] },
+        relative: { pt: ['Coinfecção por HBV não rastreada (risco de rebote fulminante da hepatite B)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O ALERTA DA REATIVAÇÃO DA HEPATITE B OCULTA: O Sofosbuvir cura a Hepatite C tão rápido que o sistema imune "relaxa". Se o paciente tiver também o vírus da Hepatite B escondido dormindo nas células, a Hepatite B acorda furiosa e causa uma destruição fulminante do fígado. É OBRIGATÓRIO dosar Sorologias de Hepatite B (HBsAg e Anti-HBc) antes de iniciar o tratamento.', es: 'EL ALERTA DE REACTIVACIÓN DE HEPATITIS B: Al suprimir velozmente el VHC, el sistema inmune sufre un cambio adaptativo. Si hay coinfección latente por Hepatitis B (HBV), este virus puede reactivarse de forma explosiva causando falla hepática aguda. Es obligatorio testear HBV antes de iniciar.' }
+      },
+      references: {
+        pt: 'VALENCE e FISSION Trials (HCV eradication); Protocolo de Tratamento de Hepatite C do Ministério da Saúde do Brasil; Guidelines da AASLD 2024.',
+        es: 'VALENCE Trials; Guías de la Asociación Argentina para el Estudio de las Enfermedades del Hígado (AAEEH); Directrices de la OMS.'
+      }
+    },
+
+    /* ── LEDIPASVIR + SOFOSBUVIR (753) ──────────────────────────────────── */
+    "ledipasvir_sofosbuvir": {
+      name: { pt: 'Ledipasvir + Sofosbuvir', es: 'Ledipasvir + Sofosbuvir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral de Ação Direta Combinado / Inibidor de NS5A + Inibidor de NS5B', es: 'Antiviral de Acción Directa Combinado / Inhibidor de NS5A + Inhibidor de NS5B' },
+      indications: {
+        pt: ['Tratamento da infecção crônica pelo vírus da Hepatite C (HCV) em adultos e crianças, especificamente direcionado para os Genótipos 1, 4, 5 e 6, com taxa de cura superior a 98%'],
+        es: ['Tratamiento de la Hepatitis C crónica genotipos 1, 4, 5 y 6 en adultos y niños con tasa de cura > 98%']
+      },
+      commercialNames: { br: ['Harvoni'], ar: ['Harvoni', 'Ledisof'] },
+      presentation: { pt: ['Comprimidos revestidos em dose fixa combinada contendo Ledipasvir 90 mg + Sofosbuvir 400 mg'], es: ['Comprimidos conteniendo Ledipasvir 90 mg + Sofosbuvir 400 mg'] },
+      mechanism: {
+        pt: 'A Dupla Trava Viral. Junta dois mecanismos letais contra o vírus. O Sofosbuvir sabota a polimerase NS5B travando a cópia do RNA. O Ledipasvir liga-se de forma ultra-seletiva à proteína não-estrutural NS5A do vírus. A NS5A é a proteína "gerente" que organiza a montagem do vírus e a replicação. Ao travar a NS5A, o vírus perde a capacidade de montar novas cápsulas virais, interrompendo a progressão da infecção.',
+        es: 'Combinación de dosis fija de un inhibidor de la proteína de replicación y ensamblaje NS5A (Ledipasvir) y un inhibidor nucleótido de la polimerasa NS5B (Sofosbuvir). Bloquea de forma simultánea dos pasos críticos del ciclo vital del VHC, impidiendo la replicación y la formación del virión.'
+      },
+      dose: {
+        adult: {
+          pt: '1 comprimido via oral, UMA VEZ ao dia, por um ciclo contínuo de 12 semanas (pode ser reduzido para 8 semanas em pacientes sem cirrose e virgens de tratamento com carga viral baixa).',
+          es: '1 comprimido vía oral, UNA VEZ al día por 12 semanas (reducible a 8 semanas en pacientes seleccionados sin cirrosis e inicio rápido).'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 3 anos de idade com formulações em grânulos ajustadas por faixas de peso corporal.',
+          es: 'Aprobado en niños > 3 años con dosis según peso.'
+        }
+      },
+      administration: { pt: ['Tomar inteiro com água todos os dias rigorosamente no mesmo horário, com ou sem alimentos. Evitar o uso simultâneo de antiácidos potentes que alterem o pH gástrico (afetam a absorção do ledipasvir).'], es: ['Uso oral diario. Separar de antiácidos o bloqueantes H2/IBP por interferencia en la absorción del Ledipasvir.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose em renais crônicos ou em diálise terminal de acordo com as novas revisões clínicas.', es: 'No requiere ajuste de dosis en insuficiencia renal o diálisis.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Seguro em cirrose estável e descompensada; em cirrose Child B/C, o protocolo adiciona Ribavirina ou estende para 24 semanas.', es: 'Seguro en cirrosis; en estadios Child B/C puede requerir adición de Ribavirina.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Fadiga marcante e cansaço', 'Náuseas e diarreia leve', 'Astenia'], es: ['Cefalea', 'Fatiga y cansancio', 'Náuseas y diarrea leve'] },
+      dangerousAdverseEffects: { pt: ['Bradicardia severa com síncope se usado com amiodarona', 'Reativação explosiva do vírus da Hepatite B escondido'], es: ['Bradicardia severa letal (con amiodarona)', 'Reactivación fulminante de Hepatitis B'] },
+      contraindications: {
+        absolute: { pt: ['Uso concomitante com Amiodarona devido ao risco de parada sinusal letal', 'Uso com Rosuvastatina (dispara os níveis da estatina causando rabdomiólise)'], es: ['COADMINISTRACIÓN CON AMIODARONA - PROHIBIDO', 'Uso concomitante con Rosuvastatina'] },
+        relative: { pt: ['Uso associado com inibidores da bomba de prótons (Omeprazol) exige dose máxima de 20mg tomado ao mesmo tempo'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'O RISCO DA DESTRUIÇÃO DO MÚSCULO (A ARMADILHA DA ROSUVASTATINA): O Harvoni (Ledipasvir/Sofosbuvir) inibe os transportadores que limpam as estatinas no fígado (OATP). Se o paciente tomar Rosuvastatina junto com o Harvoni, os níveis da estatina disparam no sangue. O paciente desenvolve uma rabdomiólise severa (o músculo derrete, entope o rim e causa insuficiência renal aguda). Suspenda ou reduza a estatina.', es: 'EL PELIGRO DE LA RABDOMIÓLISIS POR ESTATINAS: El Ledipasvir aumenta masivamente la exposición sistémica a la Rosuvastatina por inhibición de transportadores hepáticos (OATP). La coadministración puede provocar rabdomiólisis grave (destrucción muscular con falla renal). Se debe suspender o reducir la estatina al mínimo.' }
+      },
+      references: {
+        pt: 'ION-1, ION-2 e ION-3 Trials (Harvoni efficiency in HCV Genotype 1); Guidelines da AASLD/EASL; Anvisa Reg.',
+        es: 'ION Trials (NEJM 2014); Directrices de la European Association for the Study of the Liver (EASL).'
+      }
+    },
+
+    /* ── VELPATASVIR + SOFOSBUVIR (754) ─────────────────────────────────── */
+    "velpatasvir_sofosbuvir": {
+      name: { pt: 'Velpatasvir + Sofosbuvir', es: 'Velpatasvir + Sofosbuvir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral de Ação Direta Pan-Genotípico / Inibidor de NS5A + Inibidor de NS5B', es: 'Antiviral de Acción Directa Pan-Genotípico / Inhibidor de NS5A + Inhibidor de NS5B' },
+      indications: {
+        pt: ['Tratamento da infecção crônica pelo vírus da Hepatite C (HCV) em adultos e crianças para TODOS os genótipos (1 a 6) de forma universal, inclusive em cirróticos descompensados'],
+        es: ['Tratamiento universal pan-genotípico (1 al 6) de la Hepatitis C crónica en adultos y niños, incluyendo cirrosis descompensada']
+      },
+      commercialNames: { br: ['Epclusa'], ar: ['Epclusan', 'Velpaclean'] },
+      presentation: { pt: ['Comprimidos revestidos contendo Velpatasvir 100 mg + Sofosbuvir 400 mg'], es: ['Comprimidos conteniendo Velpatasvir 100 mg + Sofosbuvir 400 mg'] },
+      mechanism: {
+        pt: 'O Exterminador Pan-Genotípico Universal. Combina o Sofosbuvir (inibidor de polimerase) ao Velpatasvir, um inibidor de NS5A de segunda geração com uma barreira genética imensa e afinidade simétrica contra as variantes estruturais de todos os 6 genótipos conhecidos do vírus da Hepatite C. Ele bloqueia o complexo de replicação viral impossibilitando o vírus de se multiplicar, limpando a infecção de forma definitiva.',
+        es: 'Combinación pan-genotípica de dosis fija. Contiene Sofosbuvir (inhibidor de polimerasa NS5B) y Velpatasvir, un inhibidor de NS5A de segunda generación con cobertura universal contra variantes de los genotipos 1 al 6. Bloquea de forma hermética el complejo de replicación macromolecular del VHC.'
+      },
+      dose: {
+        adult: {
+          pt: '1 comprimido via oral, UMA VEZ ao dia, por 12 semanas consecutivas (Se o paciente apresentar cirrose descompensada Child B ou C, o esquema é associado a Ribavirina).',
+          es: '1 comprimido vía oral, UNA VEZ al día por 12 semanas consecutivas. En cirrosis descompensada (Child B/C), asociar obligatoriamente Ribavirina.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 3 anos de idade com dosagem combinada reduzida baseada rigidamente na faixa de peso corporal.',
+          es: 'Aprobado en niños > 3 años con dosis ajustada por peso.'
+        }
+      },
+      administration: { pt: ['Uso oral diário no mesmo horário. Pode ser tomado com ou sem alimentos. Atenção total: Os inibidores da bomba de prótons (Omeprazol) reduzem drasticamente os níveis de Velpatasvir e devem ser evitados ou tomados sob regras estritas (VER INTERAÇÕES).'], es: ['Uso oral diario. Los IBP (Omeprazol) reducen drásticamente la absorción de Velpatasvir, comprometiendo la cura del VHC.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não exige ajuste de dose em renais crônicos graves ou pacientes em programa estável de diálise.', es: 'Sin necesidad de ajuste en falla renal o diálisis.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Seguro e eficaz em todas as fases da cirrose hepática; monitorar rigorosamente função em Child B e C.', es: 'Fármaco pan-genotípico seguro en todas las fases de la cirrosis.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Fadiga e cansaço geral', 'Náuseas', 'Insônia leve'], es: ['Cefalea', 'Fatiga', 'Náuseas', 'Insomnio leve'] },
+      dangerousAdverseEffects: { pt: ['Bradicardia severa extrema com risco de parada se associado a amiodarona', 'Reativação inflamatória do vírus da Hepatite B'], es: ['Bradicardia extrema letal (con amiodarona)', 'Reactivación de Hepatitis B'] },
+      contraindications: {
+        absolute: { pt: ['Uso combinado com Amiodarona (Risco proibitivo de parada cardíaca sinusal)', 'Uso com indutores potentes de CYP/P-gp (Rifampicina, Erva-de-São-João)'], es: ['COADMINISTRACIÓN CON AMIODARONA - PROHIBIDO', 'Uso concomitante con Rifampicina'] },
+        relative: { pt: ['Uso concomitante com antiácidos potentes ou bloqueadores de prótons (IBPs)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A PROIBIÇÃO DO OMEPRAZOL NO EPCLUSA: O Velpatasvir necessita da acidez natural do estômago para entrar no sangue. Se o paciente tomar Omeprazol ou Pantoprazol de forma descontrolada durante o tratamento, o nível do Velpatasvir despenca abaixo da linha protetora, o vírus ganha resistência e o tratamento falha. Se o uso for vital, tomar o Omeprazol 20mg estritamente junto com o Epclusa durante uma refeição pesada.', es: 'EL ALERTA DEL OMEPRAZOL: Velpatasvir requiere medio ácido gástrico para absorberse. Los IBP (Omeprazol) anulan el ácido y reducen sus niveles en sangre comprometiendo la curación. Si el IBP es vital, no superar los 20 mg de Omeprazol y administrarlo simultáneamente con Epclusa JUNTO con una comida completa.' }
+      },
+      references: {
+        pt: 'ASTRAL-1, ASTRAL-2 e ASTRAL-3 Trials (Universal pan-genotypic cure - NEJM 2015); Guidelines Globais da OMS para Eliminação do HCV; Bula Anvisa.',
+        es: 'ASTRAL Trials (NEJM 2015); Directrices Globales de la OMS para la Eliminación del VHC; Guías de la SADI.'
+      }
+    },
+
+    /* ── GLECAPREVIR + PIBRENTASVIR (755) ────────────────────────────────── */
+    "glecaprevir_pibrentasvir": {
+      name: { pt: 'Glecaprevir + Pibrentasvir', es: 'Glecaprevir + Pibrentasvir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral de Ação Direta Pan-Genotípico / Inibidor de Protease NS3/4A + Inibidor de NS5A', es: 'Antiviral de Acción Directa Pan-Genotípico / Inhibidor de Proteasa NS3/4A + Inhibidor de NS5A' },
+      indications: {
+        pt: ['Tratamento ultrarrápido pan-genotípico (1 a 6) da infecção crônica pelo vírus da Hepatite C (HCV) em adultos e crianças a partir de 3 anos, virgens de tratamento ou que falharam a outros DAAs, sem cirrose (Curso de apenas 8 semanas)'],
+        es: ['Tratamiento pan-genotípico ultracorto (8 semanas) de la Hepatitis C crónica en pacientes sin cirrosis, adultos y niños > 3 años']
+      },
+      commercialNames: { br: ['Maviret'], ar: ['Maviret'] },
+      presentation: { pt: ['Comprimidos revestidos combinados contendo Glecaprevir 100 mg + Pibrentasvir 40 mg'], es: ['Comprimidos combinados conteniendo Glecaprevir 100 mg + Pibrentasvir 40 mg'] },
+      mechanism: {
+        pt: 'O Ataque Curto de Oito Semanas. Une duas moléculas potentes de segunda geração. O Glecaprevir é um inibidor da protease NS3/4A do HCV, bloqueando o corte das poliproteínas vitais. O Pibrentasvir é um inibidor seletivo de NS5A com uma barreira genética colossal contra mutações. Como atuam em alvos estruturais cruciais com altíssima potência, eles conseguem limpar o vírus do corpo em apenas 8 semanas reais de tratamento, dispensando o uso de Ribavirina.',
+        es: 'Combinación pan-genotípica de un inhibidor de la proteasa NS3/4A (Glecaprevir) y un inhibidor de NS5A de segunda generación (Pibrentasvir). Bloquea la replicación macromolecular y el procesamiento de proteínas del VHC con altísima potencia, permitiendo acortar el esquema a solo 8 semanas de tratamiento.'
+      },
+      dose: {
+        adult: {
+          pt: '3 comprimidos via oral, JUNTOS, UMA VEZ ao dia (Dose diária total: 300 mg Glecaprevir + 120 mg Pibrentasvir), administrados obrigatoriamente junto com alimentos, por 8 semanas consecutivas.',
+          es: '3 comprimidos vía oral, JUNTOS, UNA VEZ al día (Dosis total diaria: 300/120 mg) administrados obligatoriamente con alimentos, durante 8 semanas consecutivas.'
+        },
+        pediatric: {
+          pt: 'Crianças de 3 a 12 anos: Apresentação em grânulos revestidos com dose fracionada calibrada rigorosamente pelo peso corporal.',
+          es: 'Aprobado en niños > 3 años con gránulos dosificados según peso.'
+        }
+      },
+      administration: { pt: ['OS 3 COMPRIMIDOS DEVEM SER TOMADOS JUNTOS, NO MESMO INSTANTE, UMA VEZ AO DIA, OBRIGATORIAMENTE COM ALIMENTOS. Tomar em jejum corta a absorção do remédio pela metade, gerando falha de cura.'], es: ['LOS 3 COMPRIMIDOS DEBEN TOMARSE JUNTOS, UNA VEZ AL DÍA, OBLIGATORIAMENTE CON ALIMENTOS. La ingesta en ayunas reduce drásticamente su biodisponibilidad.'] },
+      renalAdjustment: { required: false, message: { pt: 'O Antiviral mais seguro no rim. Não exige ajuste de dose em nenhum grau de insuficiência renal crônica, inclusive em pacientes em hemodiálise (Droga de escolha pela diretriz na nefropatia por HCV).', es: 'No requiere ajuste de dosis en falla renal o hemodiálisis. Es el DAA de elección en pacientes con enfermedad renal grave.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'ABSOLUTAMENTE CONTRAINDICADO em cirrose hepática moderada ou grave (Child-Pugh B e C). O componente Glecaprevir (inibidor de protease) acumula de forma tóxica em fígados fracos, causando hepatite fulminante.', es: 'ABSOLUTAMENTE CONTRAINDICADO en insuficiencia hepática moderada o grave (Child-Pugh B y C). Los inhibidores de proteasa aumentan sus niveles exponencialmente en hígados descompensados, provocando toxicidad letal.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Fadiga e cansaço leve', 'Náuseas e diarreia episódica', 'Prurito cutâneo leve'], es: ['Cefalea', 'Fatiga', 'Náuseas y diarrea', 'Prurito leve'] },
+      dangerousAdverseEffects: { pt: ['Hepatotoxicidade grave com hiperbilirrubinemia acentuada (se usado por erro em cirróticos Child B/C)', 'Reativação aguda do vírus da Hepatite B oculta'], es: ['Hepatotoxicidad severa por error de indicación en cirróticos', 'Reactivación de Hepatitis B'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência hepática moderada ou grave (Child-Pugh B ou C) ou histórico de descompensação', 'Uso concomitante com Rifampicina, Carbamazepina ou Atorvastatina/Sinvastatina'], es: ['Insuficiencia hepática moderada o grave (Child-Pugh B y C)', 'Uso concomitante con Rifampicina o Estatinas'] },
+        relative: { pt: ['Uso associado com contraceptivos orais contendo Etinilestradiol (risco de subir transaminases - usar progesterona)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A REGRA DOS TRÊS COMPRIMIDOS COM COMIDA: Um erro comum de dispensação no balcão é o paciente achar que deve tomar 1 comprimido de 8 em 8 horas. Explique de forma enérgica: os 3 comprimidos DEVEM ser engolidos juntos, de uma vez só, no meio do almoço ou do jantar. Tomar separado ou com o estômago vazio anula a eficácia do tratamento e impede a cura do fígado.', es: 'EL ALERTA DE LOS 3 COMPRIMIDOS JUNTOS: Los 3 comprimidos deben ingerirse en una única toma diaria simultánea, estrictamente acompañados de comida. Fraccionar las tomas o tomarlos en ayunas disminuye los niveles plasmáticos por debajo del umbral de erradicación viral.' }
+      },
+      references: {
+        pt: 'ENDURANCE Trials (1 a 4 - Maviret efficiency); EXPEDITION Trials (Efficiency in renal failure); Diretrizes da Sociedade Brasileira de Hepatologia.',
+        es: 'ENDURANCE & EXPEDITION Trials (NEJM 2017); Directrices de la AAEEH (Asociación Argentina para el Estudio de las Enfermedades del Hígado).'
+      }
+    },
+
+    /* ── DACLATASVIR (756) ──────────────────────────────────────────────── */
+    "daclatasvir": {
+      name: { pt: 'Daclatasvir (Dicloridrato de)', es: 'Daclatasvir (Diclorhidrato de)' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral de Ação Direta (DAA) / Inibidor Seletivo de NS5A', es: 'Antiviral de Acción Directa (DAA) / Inhibidor Selectivo de NS5A' },
+      indications: {
+        pt: ['Tratamento da infecção crônica pelo vírus da Hepatite C (HCV) genótipos 1, 3 e 4 em adultos (Historicamente a combinação mais utilizada no SUS do Brasil: Sofosbuvir + Daclatasvir)'],
+        es: ['Tratamiento de la Hepatitis C crónica genotipos 1, 3 y 4 en adultos (Frecuentemente combinado con Sofosbuvir)']
+      },
+      commercialNames: { br: ['Daklinza', 'Daclatasvir (SUS)'], ar: ['Daklinza', 'Daclavir'] },
+      presentation: { pt: ['Comprimidos revestidos 30 mg e 60 mg'], es: ['Comprimidos 30 mg y 60 mg'] },
+      mechanism: {
+        pt: 'O Travador do Complexo União. Liga-se com altíssima afinidade à porção N-terminal da proteína não-estrutural NS5A do vírus da Hepatite C. Ao bloquear essa proteína, ele distorce e desorganiza todo o complexo de replicação macromolecular do vírus. O vírus não consegue copiar seu material genético e fica impossibilitado de secretar novas partículas de vírus infectantes de dentro do fígado.',
+        es: 'Inhibidor potente y altamente selectivo de la proteína no estructural NS5A del VHC. Al bloquear la función de la NS5A, distorsiona la estructura del complejo de replicación viral y frena de forma definitiva la síntesis de ARN y el ensamblaje del virión.'
+      },
+      dose: {
+        adult: {
+          pt: 'Dose Padrão: 60 mg via oral, UMA VEZ ao dia, associado ao Sofosbuvir 400mg, por 12 ou 24 semanas. ATENÇÃO: A dose exige alteração obrigatória se houver interações (Ver Alertas).',
+          es: 'Dosis Estándar: 60 mg vía oral, UNA VEZ al día, combinado con Sofosbuvir 400 mg por 12 o 24 semanas según protocolo de fibrosis.'
+        },
+        pediatric: {
+          pt: 'Uso não recomendado ou aprovado de rotina em menores de 18 anos.',
+          es: 'No recomendado en menores de 18 años.'
+        }
+      },
+      administration: { pt: ['Uso oral diário continuado. Pode ser tomado com ou sem alimentos. Não mastigar os comprimidos.'], es: ['Uso oral diario. Puede administrarse con o sin alimentos de forma indiferente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em nenhum grau de insuficiência renal crônica ou diálise.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Seguro em todas as fases da cirrose (Child A, B ou C), sem necessidade de ajuste de dose.', es: 'Seguro en cirrosis descompensada, sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Fadiga e fraqueza leve', 'Cefaleia', 'Náuseas e diarreia episódica quando combinado com sofosbuvir'], es: ['Fatiga', 'Cefalea', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['Bradicardia severa arritmogênica se usado de forma errada com amiodarona', 'Reativação de Hepatite B crônica oculta'], es: ['Bradicardia severa (con amiodarona)', 'Reactivación de Hepatitis B'] },
+      contraindications: {
+        absolute: { pt: ['Uso combinado com Amiodarona (Risco fatal de parada sinusal)', 'Uso com indutores potentes da CYP3A4 (Rifampicina, Fenitoína anulam o daclatasvir)'], es: ['COADMINISTRACIÓN CON AMIODARONA - PROHIBIDO', 'Uso concomitante con Rifampicina o Fenitoína'] },
+        relative: { pt: ['Uso associado com medicamentos que exijam modulação de dose (ver Alerta Camaleão)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A DOSE CAMALEÃO (O RISCO DO METABOLISMO): O Daclatasvir é um camaleão. Sua dose padrão é 60mg. Mas se o paciente precisar tomar em conjunto um inibidor de protease de HIV (como Atazanavir + Ritonavir), o fígado fica lento e a dose do Daclatasvir DEVE ser reduzida para 30 mg ao dia. Se o paciente tomar um anticonvulsivante moderado (Efavirenz), a dose do Daclatasvir DEVE ser subida para 90 mg ao dia. Faça a checagem cruzada de interações.', es: 'LA DOSIS CAMALEÓN POR INTERACCIÓN: Su dosis estándar es 60 mg. Si se coadministra con inhibidores potentes de CYP3A4 (como Atazanavir/Ritonavir para VIH), la dosis DEBE reducirse a 30 mg/día. Si se administra con inductores moderados (Efavirenz), la dosis DEBE incrementarse a 90 mg/día para evitar el fallo terapéutico.' }
+      },
+      references: {
+        pt: 'ALLY Trials (1, 2 e 3 - Daclatasvir + Sofosbuvir efficacy); Protocolo PCDT de Hepatites Virais do Ministério da Saúde; Guidelines da AASLD.',
+        es: 'ALLY Trials (NEJM 2015); Directrices de Tratamiento de la Hepatitis C de la SADI; Ficha Técnica Daklinza.'
+      }
+    },
+
+    /* ── TENOFOVIR DESOPROXILA (757) ────────────────────────────────────── */
+    "tenofovir_desoproxila": {
+      name: { pt: 'Tenofovir Desoproxila (Fumarato de / TDF)', es: 'Tenofovir Disoproxilo (Fumarato de / TDF)' },
+      category: 'infectologia',
+      class: { pt: 'Antirretroviral e Antiviral HBV / Inibidor Nucleotídeo da Transcriptase Reversa / Polimerase', es: 'Antirretroviral y Antiviral HBV / Inhibidor Nucleótido de la Transcriptasa Inversa / Polimerasa' },
+      indications: {
+        pt: ['Tratamento de primeira linha da infecção crônica pelo vírus da Hepatite B (HBV) em adultos e crianças com replicação ativa', 'Tratamento da infecção pelo vírus HIV-1 (Componente do esquema mestre "3 em 1" / PrEP)'],
+        es: ['Tratamiento de primera línea de la Hepatitis B crónica activa', 'Tratamiento de la infección por VIH-1 y Profilaxis Pre-Exposición (PrEP)']
+      },
+      commercialNames: { br: ['Viread', 'Tenofovir (SUS)'], ar: ['Viread', 'Virex', 'Teofovir Richmond'] },
+      presentation: { pt: ['Comprimidos revestidos 300 mg (Equivalente a 245 mg de Tenofovir disoxila base)'], es: ['Comprimidos revestidos 300 mg'] },
+      mechanism: {
+        pt: 'O Sabotador da Polimerase do HBV. É um análogo do nucleotídeo adenosina-monofosfato. Entra na célula do fígado infectada e é fosforilado em seu metabólito ativo (difosfato de tenofovir). A polimerase do vírus da Hepatite B captura essa molécula por engano achando que é adenina e a insere na fita de DNA viral. A fita quebra imediatamente (terminação de cadeia), paralisando a replicação do HBV e derrubando a carga viral para níveis indetectáveis.',
+        es: 'Inhibidor nucleótido de la transcriptasa inversa del VIH-1 y de la polimerasa de ADN del virus de la Hepatitis B (HBV). Tras fosforilarse a la forma activa trifosfato, compite con el sustrato natural dATP incorporándose al ADN viral en formación, interrumpiendo de forma irreversible la elongación de la cadena de ADN.'
+      },
+      dose: {
+        adult: {
+          pt: 'Hepatite B Crônica ou HIV: 300 mg via oral, UMA VEZ ao dia, junto ou separado de refeições, por tempo indefinido (Uso contínuo de supressão crônica).',
+          es: 'Hepatitis B crónica o VIH: 300 mg vía oral, UNA VEZ al día, de forma continua e indefinida.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 2 anos de idade para HBV, com dose ajustada por peso em comprimidos de baixa dosagem (150mg, 200mg, 250mg) se peso < 35kg.',
+          es: 'Aprobado en niños > 2 años con dosificación según peso corporal.'
+        }
+      },
+      administration: { pt: ['Uso oral diário contínuo por anos. Deve ser tomado rigidamente no mesmo horário. Em pacientes idosos com osteopenia ou doença renal, monitorar de forma estrita (VER ALERTAS).'], es: ['Uso oral continuo a largo plazo. Requiere monitoreo anual de la densidad ósea y de la función renal por acumulación del TDF clásico.'] },
+      renalAdjustment: { required: true, message: { pt: 'ALTAMENTE DEPENDENTE DO RIM. Se ClCr 30-49 mL/min: Espaçar a tomada para 1 comprimido a cada 48 horas. Se ClCr 10-29 mL/min: 1 comprimido a cada 72-96 horas. Se ClCr < 10 ou diálise: 1 comprimido a cada 7 dias (após sessão).', es: 'ALTAMENTE DEPENDIENTE DEL RIÑÓN. Si ClCr 30-49 mL/min: espaciar a cada 48 horas. Si ClCr 10-29: cada 72 horas. Si ClCr < 10 o diálisis: 1 comprimido cada 7 días.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste, não é metabolizado pelo fígado e protege contra cirrose/câncer por HBV.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Náuseas e flatulência inicial', 'Diarreia leve ou cefaleia', 'Perda mineral óssea discreta'], es: ['Náuseas y flatulencia', 'Diarrea o cefalea', 'Pérdida de densidad ósea leve'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME DE FANCONI RENAL (Destruição dos túbulos proximais dos rins com perda massiva de fosfato e insuficiência renal aguda)', 'Osteomalácia e Osteoporose severa com fraturas patológicas de fêmur e coluna (Uso prolongado)'], es: ['SÍNDROME DE FANCONI RENAL (Falla tubular proximal grave con hipofosfatemia y falla renal aguda)', 'Osteomalacia y fracturas óseas patológicas'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência renal crônica grave ou taxa de filtração < 30 mL/min se não houver ajuste rígido de espaçamento (preferir TAF)'], es: ['Insuficiencia renal previa severa sin ajuste de dosis'] },
+        relative: { pt: ['Idosos com osteoporose severa pré-existente estabilizada (alto risco de fratura de bacia)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O REMÉDIO QUE ROUBA O OSSO E O RIM (SÍNDROME DE FANCONI): O Tenofovir TDF clássico se acumula nas células do túbulo renal proximal e causa uma lesão tóxica (Síndrome de Fanconi). O rim perde a capacidade de segurar o FOSFATO, urinando todo o fósforo do corpo. Sem fósforo, os ossos do paciente "amolecem" e quebram sozinhos ao caminhar (Osteomalácia). Monitore Creatinina e Fosfato no sangue anualmente.', es: 'EL PELIGRO DE LA DESMINERALIZACIÓN ÓSEA Y TUBULOPATÍA: El TDF clásico se acumula en las mitocondrias de los túbulos renales proximales, provocando el Síndrome de Fanconi renal. El paciente pierde fosfato por la orina, induciendo osteomalacia y fracturas óseas patológicas espontáneas. Controle creatinina y fósforo sérico anualmente.' }
+      },
+      references: {
+        pt: 'GS-US-174-0102 e 0103 Trials (Tenofovir in Chronic Hepatitis B - NEJM 2008); Diretrizes de HBV da Sociedade Brasileira de Infectologia; PCDT.',
+        es: 'GS-US Trials (NEJM 2008); Guías de Tratamiento de la Hepatitis B de la SADI; Ficha Técnica Viread.'
+      }
+    },
+
+    /* ── TENOFOVIR ALAFENAMIDA (758) ────────────────────────────────────── */
+    "tenofovir_alafenamida": {
+      name: { pt: 'Tenofovir Alafenamida (Fumarato de / TAF)', es: 'Tenofovir Alafenamida (Fumarato de / TAF)' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral HBV de Última Geração / Pró-fármaco Direcionado Seguro', es: 'Antiviral HBV de Última Generación / Profármaco Dirigido de Alta Seguridad' },
+      indications: {
+        pt: ['Tratamento da infecção crônica pelo vírus da Hepatite B (HBV) em adultos e adolescentes com doença hepática compensada (Substituto moderno e seguro do TDF clássico para poupar rim e ossos)'],
+        es: ['Tratamiento de la Hepatitis B crónica en adultos y adolescentes (Alternativa segura al TDF clásico para proteger riñones y huesos)']
+      },
+      commercialNames: { br: ['Vemlidy'], ar: ['Vemlidy', 'Vemlidy Argentina'] },
+      presentation: { pt: ['Comprimidos revestidos 25 mg'], es: ['Comprimidos 25 mg'] },
+      mechanism: {
+        pt: 'O Míssil Direcionado ao Fígado. É uma evolução cirúrgica do Tenofovir. Enquanto o TDF antigo se quebra no sangue e inunda o corpo todo de tenofovir livre (lesionando rim e osso), o TAF viaja pelo sangue de forma 100% intacta e estável. Ele entra DIRETAMENTE e exclusivamente para dentro dos hepatócitos (células do fígado) e dos linfócitos T. Lá dentro, ele solta a droga ativa. Como precisa de uma dose 10 vezes menor (25mg vs 300mg), ele deixa o sangue limpo, poupando os rins e ossos de toxicidade.',
+        es: 'Profármaco de tenofovir dirigido a las células diana. Su estabilidad en plasma es muy superior al TDF clásico, permitiendo que ingrese de forma selectiva e intacta al interior del hepatocito. Requiere una dosis 10 veces menor (25 mg vs 300 mg), logrando la misma eficacia antiviral intracelular con una exposición sistémica mínima, eliminando la nefrotoxicidad y la pérdida ósea.'
+      },
+      dose: {
+        adult: {
+          pt: '25 mg via oral, UMA VEZ ao dia, junto com alimentos, por tempo indeterminado.',
+          es: '25 mg vía oral, UNA VEZ al día, administrado junto con alimentos de forma continua e indefinida.'
+        },
+        pediatric: {
+          pt: 'Aprovado para adolescentes a partir de 12 anos e com peso corporal >= 35 kg na dose estável de 25 mg uma vez ao dia.',
+          es: 'Aprobado en pacientes >= 12 años con peso mínimo de 35 kg.'
+        }
+      },
+      administration: { pt: ['Uso oral diário. Deve ser tomado obrigatoriamente JUNTO COM ALIMENTOS para garantir o pico ideal de absorção hepática direcionada.'], es: ['Uso oral diario. Administrar obligatoriamente JUNTO CON ALIMENTOS para maximizar su biodisponibilidad dirigida.'] },
+      renalAdjustment: { required: false, message: { pt: 'Excelente perfil de segurança. Não requer nenhum ajuste de dose se ClCr >= 15 mL/min ou se em hemodiálise crônica (Diferença vital sobre o TDF antigo que exigia fracionar de 7 em 7 dias). Contraindicado apenas se ClCr < 15 sem diálise.', es: 'No requiere ajuste si ClCr >= 15 mL/min o en hemodiálisis. Gran ventaja frente al TDF clásico.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Não requer ajuste em insuficiência hepática leve (Child-Pugh A). Não recomendado se cirrose descompensada severa (Child B/C) por falta de dados.', es: 'No recomendado en cirrosis descompensada Child B o C por falta de datos.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Náuseas leves', 'Dor abdominal e fadiga', 'Artralgia (dor nas articulações)'], es: ['Cefalea', 'Náuseas leves', 'Dolor abdominal', 'Artralgia'] },
+      dangerousAdverseEffects: { pt: ['Exacerbação aguda grave da Hepatite B (Se o paciente suspender o remédio abruptamente por conta própria - VER ALERTAS)'], es: ['Exacerbación aguda severa de Hepatitis B ante suspensión brusca de la terapia'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência renal terminal (ClCr < 15 mL/min) em paciente que NÃO está em programa de hemodiálise', 'Uso com indutores potentes da P-gp (Rifampicina anula o TAF)'], es: ['Falla renal terminal (ClCr < 15 mL/min) sin diálisis', 'Uso concomitante con Rifampicina'] },
+        relative: { pt: ['Uso concomitante com anticonvulsivantes indutores (Fenobarbital)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O PERIGO DA PARADA ABRUPTA DA SUPRESSÃO: O Vemlidy (TAF) não cura e não arranca o vírus da Hepatite B das células (ele apenas amordaça a polimerase). Se o paciente resolver parar de tomar o comprimido por conta própria, o vírus acorda em fúria total e causa uma destruição massiva de hepatócitos. O paciente evolui com Insuficiência Hepática Fulminante e morte em poucos dias se não receber transplante.', es: 'EL PELIGRO DEL REBOTE VIRAL POR ABANDONO: El TAF suprime de forma implacable la polimerasa pero no elimina el ADN circular del HBV del núcleo celular. Si el paciente suspende el fármaco bruscamente, el virus se replica de forma masiva y agresiva, gatillando una hepatitis fulminante mortal. Se debe concientizar al paciente.' }
+      },
+      references: {
+        pt: 'GS-US-320-0108 e 0110 Trials (Tenofovir Alafenamide vs Desoproxil in Chronic HBV - Lancet 2016); EASL Clinical Practice Guidelines 2024.',
+        es: 'GS-US Trials (Lancet 2016); Guías de Tratamiento de la Hepatitis B de la European Association for the Study of the Liver (EASL).'
+      }
+    },
+
+    /* ── ENTECAVIR (759) ────────────────────────────────────────────────── */
+    "entecavir": {
+      name: { pt: 'Entecavir', es: 'Entecavir' },
+      category: 'infectologia',
+      class: { pt: 'Antiviral HBV Potente / Análogo de Nucleosídeo de Guanina / Inibidor da Polimerase', es: 'Antiviral HBV Potente / Análogo de Nucleósido de Guanina / Inhibidor de la Polimerasa' },
+      indications: {
+        pt: ['Tratamento de primeira linha da infecção crônica pelo vírus da Hepatite B (HBV) em adultos com doença hepática compensada ou descompensada e replicação ativa', 'Droga de escolha em pacientes com HBV que têm contraindicação ou fragilidade óssea/renal ao Tenofovir'],
+        es: ['Tratamiento de primera línea de la Hepatitis B crónica activa, especialmente en pacientes con daño renal previo u osteoporosis donde se contraindica el Tenofovir']
+      },
+      commercialNames: { br: ['Baraclude', 'Entecavir (Genérico SUS)'], ar: ['Baraclude', 'Entecavir Richmond', 'Cronivir'] },
+      presentation: { pt: ['Comprimidos revestidos 0,5 mg e 1,0 mg', 'Solução oral 0,05 mg/mL'], es: ['Comprimidos 0,5 mg y 1,0 mg'] },
+      mechanism: {
+        pt: 'O Bloqueador de Três Passos da Polimerase. É um análogo da guanosina de altíssima potência. Ele é fosforilado dentro do hepatócito na sua forma ativa trifosfato. Ele sabota a polimerase do vírus da Hepatite B bloqueando de forma cirúrgica TRÊS passos fundamentais do ciclo viral: 1) A iniciação da cópia (priming), 2) A transcrição reversa da fita de RNA, e 3) A síntese da fita complementar de DNA. Possui uma barreira de resistência imensa se o paciente nunca usou Lamivudina.',
+        es: 'Análogo de nucleósido de guanina con potente actividad selectiva contra la polimerasa del virus de la Hepatitis B (HBV). Inhibe eficazmente los tres pasos funcionales de la enzima viral: el inicio de la síntesis (priming), la transcripción inversa de la cadena negativa y la síntesis de la cadena positiva de ADN.'
+      },
+      dose: {
+        adult: {
+          pt: 'Paciente virgem de tratamento (Naiive): 0,5 mg via oral, UMA VEZ ao dia. Paciente com histórico de uso ou resistência à Lamivudina, ou Cirrose Descompensada Child B/C: 1,0 mg via oral, UMA VEZ ao dia.',
+          es: 'Paciente virgen de tratamiento (Naïve): 0,5 mg vía oral, UNA VEZ al día. Paciente con resistencia previa a Lamivudina o Cirrosis Descompensada: 1,0 mg vía oral, UNA VEZ al día.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 2 anos de idade para HBV, com dose calculada por peso utilizando a solução oral líquida.',
+          es: 'Aprobado en niños > 2 años utilizando solución oral ajustada por peso.'
+        }
+      },
+      administration: { pt: ['DEVE SER ADMINISTRADO IMPRESCINDIVELMENTE DE ESTÔMAGO VAZIO, NO MÍNIMO 2 HORAS ANTES OU 2 HORAS DEPOIS DE UMA REFEIÇÃO. A presença de qualquer alimento no estômago atrasa e derruba a absorção do Entecavir de forma crítica.'], es: ['DEBE ADMINISTRARSE CON ESTÓMAGO VACÍO, AL MENOS 2 HORAS ANTES O 2 HORAS DESPUÉS DE COMER. Los alimentos reducen su absorción de forma crítica.'] },
+      renalAdjustment: { required: true, message: { pt: 'ALTAMENTE INDISPENSÁVEL AJUSTAR. Se ClCr 30-50: reduzir para 0,25mg/dia (ou 0,5mg a cada 48h). Se ClCr 10-30: 0,15mg/dia (ou 0,5mg a cada 72h). Se ClCr < 10 ou diálise: 0,05mg/dia (ou 0,5mg a cada 5 a 7 dias).', es: 'AJUSTE RENAL MANDATORIO. Si ClCr 30-50: 0,5 mg cada 48 horas. Si ClCr 10-30: 0,5 mg cada 72 horas. Si ClCr < 10 o hemodiálisis: 0,5 mg cada 5 o 7 días.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Fármaco de escolha absoluta e super seguro na cirrose descompensada Child B e C (onde o Tenofovir TAF não pode ser usado), sem ajuste hepático.', es: 'Fármaco de elección en cirrosis descompensada por su excelente perfil de bioseguridad hepática.' } },
+      commonAdverseEffects: { pt: ['Cefaleia e tontura leve', 'Fadiga e cansaço físico', 'Náuseas e dispepsia', 'Aumento leve de transaminases de rebote'], es: ['Cefalea y mareo', 'Fatiga', 'Náuseas', 'Aumento leve transitorio de transaminasas'] },
+      dangerousAdverseEffects: { pt: ['Acidose Láctica severa com hepatomegalia esteatótica grave (risco de classe dos análogos de nucleosídeos)', 'Rebote de hepatite fulminante se suspenso rápido'], es: ['Acidosis Láctica severa con esteatosis hepática grave', 'Exacerbación fulminante de la hepatitis por abandono'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida ao entecavir ou componentes da fórmula'], es: ['Hipersensibilidad conocida al fármaco'] },
+        relative: { pt: ['Uso isolado em pacientes co-infectados com HIV que NÃO estão em tratamento antirretroviral ativo (o entecavir seleciona mutações de resistência rápida na transcriptase do HIV - M204V)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A ARMADILHA DA COINFECÇÃO COM HIV OCULTO: O Entecavir é muito parecido com os remédios do HIV. Se você der Entecavir sozinho para um paciente que tem Hepatite B e também tem HIV escondido sem tratamento, o Entecavir vai "fustigar" o vírus do HIV de forma fraca. O vírus do HIV aprende o truque, sofre uma mutação genética de resistência permanente e o paciente queima a eficácia da Lamivudina/Emtricitabina para sempre. É OBRIGATÓRIO testar HIV antes de receitar.', es: 'EL PELIGRO DE LA COINFECCIÓN CON VIH OCULTO: Entecavir posee actividad secundaria contra el VIH. Si se administra de forma aislada a un paciente coinfectado con VIH no diagnosticado, induce mutaciones de resistencia rápidas e irreversibles en el VIH, anulando el éxito de esquemas futuros de SIDA. Testee VIH siempre antes de prescribir.' }
+      },
+      references: {
+        pt: 'ETV-022 e ETV-026 Trials (Entecavir vs Lamivudine in Chronic HBV - NEJM 2006); Diretrizes Globais de HBV da Sociedade Brasileira de Hepatologia.',
+        es: 'ETV Trials (NEJM 2006); Guías de Tratamiento del HBV de la AAEEH; Ficha Técnica Baraclude.'
+      }
+    }
+
+  }); /* fim Object.assign INFECTOLOGIA_DRUGS_DB — BUILD 445 (sofosbuvir + ledipasvir_sofosbuvir + velpatasvir_sofosbuvir + glecaprevir_pibrentasvir + daclatasvir + tenofovir_desoproxila + tenofovir_alafenamida + entecavir — DAAs HCV/Antivirais HBV Hepatite Viral) */
+
 })();
