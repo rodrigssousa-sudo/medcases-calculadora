@@ -28,44 +28,45 @@
 
     /* ── SEVELÂMER ────────────────────────────────────────────────────── */
     "sevelamer": {
-      name: { pt: 'Sevelâmer (Cloridrato / Carbonato de)', es: 'Sevelámero (Clorhidrato / Carbonato de)' },
-      category: 'nefrologia',
-      icon: '🫘',
-      color: '#0369A1',
-      colorTxt: '#ffffff',
-      class: { pt: 'Quelante de Fósforo (Polímero Não-Cálcico e Não-Metálico)', es: 'Quelante de Fósforo (Polímero No Cálcico y No Metálico)' },
+      name: { pt: 'Carbonato de Sevelâmer', es: 'Carbonato de Sevelámero' },
+      category: 'nefro',
+      class: { pt: 'Quelante de Fosfato Polimérico Não-Cálcico / Resina de Troca Iônica', es: 'Quelante de Fosfato Polimérico No Cálcico / Resina de Intercambio' },
       indications: {
-        pt: ['Hiperfosfatemia em pacientes com Doença Renal Crônica (DRC) em diálise ou fase avançada'],
-        es: ['Hiperfosfatemia en pacientes con Enfermedad Renal Crónica (ERC) en diálisis o fase avanzada']
+        pt: ['Controle da Hiperfosfatemia em pacientes adultos com Doença Renal Crônica (DRC) em tratamento de hemodiálise ou diálise peritoneal', 'Controle do fósforo sérico elevado em pacientes com DRC pré-dialítica (Estágios 4 e 5)'],
+        es: ['Control de la Hiperfosatemia en pacientes adultos con Enfermedad Renal Crónica (ERC) en diálisis o estadios avanzados 4 y 5']
       },
-      commercialNames: { br: ['Renagel', 'Renvela'], ar: ['Renagel', 'Renvela'] },
-      presentation: { pt: ['Comprimidos revestidos 800 mg', 'Sachês com pó para suspensão 800 mg e 2,4 g'], es: ['Comprimidos recubiertos 800 mg', 'Sobres con polvo para suspensión 800 mg y 2,4 g'] },
+      commercialNames: { br: ['Renvela', 'Renagel (Versão Cloridrato)', 'Sevelâmer'], ar: ['Renvela', 'Sevelámero Richmond', 'Phosphofren'] },
+      presentation: { pt: ['Comprimidos revestidos 800 mg', 'Pó para suspensão oral 800 mg e 2,4 g'], es: ['Comprimidos revestidos 800 mg', 'Polvo para suspensión oral 800 mg'] },
       mechanism: {
-        pt: 'O "Plástico Imã de Fósforo". O Sevelâmer é uma resina polimérica que não é absorvida pelo intestino. Quando engolido junto com a comida, ele agarra fisicamente as moléculas de fósforo do alimento dentro do estômago/intestino e não solta mais. O fósforo sai nas fezes em vez de ir para o sangue. Sua glória é não conter cálcio, evitando que os vasos sanguíneos do renal crônico virem pedra (calcificação vascular).',
-        es: 'El "Plástico Imán de Fósforo". El Sevelámero es una resina que no se absorbe. Al tragarlo con comida, agarra físicamente el fósforo del alimento en el intestino y no lo suelta. El fósforo sale en las heces en vez de ir a la sangre. Su gloria es no contener calcio, evitando la calcificación vascular.'
+        pt: 'O Ímã de Fósforo Intestinal. É um polímero reticulado não-absorvível de troca iônica, livre de cálcio e de alumínio. Quando ingerido junto com a comida, seus múltiplos grupos amina sofrem protonação no estômago e ligam-se por atração eletrostática aos íons de fosfato ($PO_4^{3-}$) dos alimentos na luz do intestino. O complexo sevelâmer-fosfato fica gigante, insolúvel e não consegue passar para o sangue, sendo totalmente expelido nas fezes. Isso desaba o fósforo no sangue, impedindo a calcificação das artérias.',
+        es: 'Polímero de unión al fosfato, no absorbible, libre de calcio y aluminio. Contiene múltiples aminas que se protonan en el intestino e interactúan mediante enlaces de hidrógeno con las moléculas de fosfato de la dieta. Esto retiene el fosfato en la luz intestinal, impidiendo su absorción sistémica y eliminándolo a través de las heces.'
       },
       dose: {
         adult: {
-          pt: '800 a 1600 mg via oral, 3 vezes ao dia, ESTRITAMENTE JUNTO COM AS REFEIÇÕES. (A dose é ajustada pelo nível de fósforo no sangue).',
-          es: '800 a 1600 mg vía oral, 3 veces al día, ESTRICTAMENTE JUNTO A LAS COMIDAS. (La dosis se ajusta por el nivel de fósforo).'
+          pt: 'Dose Inicial baseada no nível de Fósforo sérico:\n- Fósforo entre 5,5 e 7,5 mg/dL: 800 mg via oral, TRÊS VEZES ao dia, nas refeições.\n- Fósforo > 7,5 mg/dL: 1.600 mg via oral, TRÊS VEZES ao dia, nas refeições.\nAjustar a dose em degraus de 800mg por refeição a cada 2-4 semanas até atingir a meta de fósforo < 5,5 mg/dL.',
+          es: 'Dosis Inicial según fósforo sérico:\n- Fosfato entre 5,5 - 7,5 mg/dL: 800 mg vía oral, TRES VECES al día con comidas.\n- Fosfato > 7,5 mg/dL: 1.600 mg vía oral, TRES VECES al día con comidas.\nTitular cada 15-30 días hasta lograr fosfemia < 5,5 mg/dL.'
         },
         pediatric: {
-          pt: 'Uso aprovado com base na Área de Superfície Corporal (Ex: 800 mg a cada refeição para ASC > 1,2 m²).',
-          es: 'Uso aprobado basado en Área de Superficie Corporal.'
+          pt: 'Aprovado a partir de 6 anos de idade com doses calculadas por área de superfície corporal (m²) utilizando preferencialmente a formulação em pó.',
+          es: 'Aprobado en niños > 6 años con dosificación según superficie corporal.'
         }
       },
-      administration: { pt: ['NUNCA tomar de estômago vazio (Não serve para nada, pois não há fósforo alimentar para quelar).', 'Engolir inteiro. O pó em sachê é para quem não consegue engolir a pílula gigante.'], es: ['NUNCA tomar con estómago vacío (No sirve de nada).', 'Tragar entero.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem absorção sistêmica, seguro e feito para falência renal.', es: 'Sin absorción sistémica, seguro y hecho para falla renal.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem absorção sistêmica.', es: 'Sin absorción sistémica.' } },
-      commonAdverseEffects: { pt: ['Constipação severa e fecaloma', 'Náuseas, dispepsia e flatulência', 'Diarreia (menos comum que constipação)'], es: ['Constipación severa y fecaloma', 'Náuseas, dispepsia y flatulencia', 'Diarrea'] },
-      dangerousAdverseEffects: { pt: ['Obstrução intestinal, perfuração e íleo paralítico (O polímero endurece nas fezes)', 'Cristalização polimérica na mucosa gástrica (Raro)'], es: ['Obstrucción intestinal, perforación e íleo paralítico', 'Cristalización polimérica en mucosa gástrica'] },
+      administration: { pt: ['USO ORAL COMPULSÓRIO EXCLUSIVAMENTE NO MEIO DAS REFEIÇÕES PRINCIPAIS (Café da manhã, Almoço e Jantar). Tomar o Sevelâmer com o estômago vazio anula 100% o efeito do remédio, pois não haverá fósforo alimentar para ele grudar. Os comprimidos DEVEM ser engolidos inteiros; não quebrar ou mastigar.'], es: ['Uso oral. ADMINISTRAR ESTRICTAMENTE JUNTO CON LAS COMIDAS PRINCIPALES. Ingerirlo en ayunas invalida por completo su acción terapéutica. Tragarse entero.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste de dose; o fármaco age puramente na luz intestinal e é indicado especificamente para a falência renal.', es: 'Sin necesidad de ajuste, fármaco de acción luminal indicado en falla renal.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['CONSTIPAÇÃO INTESTINAL SEVERA (efeito colateral master, a resina resseca e compacta as fezes)', 'Dispepsia, gases, flatulência e dor abdominal leve', 'Náuseas e vômitos episódicos'], es: ['ESTREÑIMIENTO SEVERO (la resina compacta el bolo fecal)', 'Dispepsia, meteorismo y dolor abdominal tipo cólico', 'Náuseas'] },
+      dangerousAdverseEffects: { pt: ['OBSTRUÇÃO INTESTINAL COMPLETA E IMPACTAÇÃO FECAL (Fecaloma gigante de resina que pode rasgar o cólon e exigir cirurgia de emergência)', 'Perfuração intestinal isquêmica focal'], es: ['OBSTRUCCIÓN INTESTINAL / IMPACTACIÓN FECAL GRAVE (Fecaloma resinoso)', 'Perforación de colon por necrosis isquémica'] },
       contraindications: {
-        absolute: { pt: ['Obstrução intestinal ativa', 'Hipofosfatemia severa'], es: ['Obstrucción intestinal activa', 'Hipofosfatemia severa'] },
-        relative: { pt: ['Disfagia severa ou distúrbios de deglutição severos (O comprimido pode entalar e inchar no esôfago)'], es: ['Disfagia severa o trastornos de deglución'] }
+        absolute: { pt: ['Obstrução mecânica intestinal ativa confirmada, histórico de hipersensibilidade ao sevelâmer, hipofosfatemia severa basal'], es: ['Obstrucción intestinal mecánica activa', 'Hipofosatemia previa', 'Hipersensibilidad al fármaco'] },
+        relative: { pt: ['Histórico de constipação crônica grave, gastroparesia diabética severa ou doença de Crohn intestinal'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'O ROUBO DOS REMÉDIOS: Como o Sevelâmer é um "super ímã" no intestino, ele não gruda só no fósforo, gruda em outras pílulas também. Se o paciente tomar o Sevelâmer junto com remédio para tireoide (Levotiroxina) ou antibióticos, eles não farão efeito. Deve-se espaçar no mínimo 2 horas.', es: 'EL ROBO DE LOS REMEDIOS: Si el paciente toma Sevelámero con tiroides o antibióticos, no harán efecto. Espaciar mínimo 2 horas.' }
+        warning: { pt: 'A ARMADILHA DO ESTÔMAGO VAZIO E A PRÓSTATA DE PEDRA (O PERIGO DO FECALOMA): O Renvela não entra no sangue; ele funciona feito uma esponja de fósforo no prato de comida. Explique ao nefropata: tomar em jejum é jogar o dinheiro fora. Além disso, se o paciente começar a ficar muitos dias sem ir ao banheiro, avise o médico: o remédio empedra as fezes, criando um Fecaloma de resina duro que pode entupir e estourar o intestino do doente.', es: 'ALERTA DE IMPACTACIÓN INTESTINAL CRÍTICA: Carbonato de sevelámero deshidrata y compacta el contenido colónico. El desarrollo de estreñimiento pertinaz en pacientes dializados puede evolucionar hacia un íleo obstructivo o perforación estercoral. Indicar ablandadores de materia fecal si cesa el ritmo evacuatorio.' }
+      },
+      references: {
+        pt: 'DCOR Trial (Sevelamer reducing mortality vs calcium binders); Diretrizes de Distúrbio Mineral e Ósseo KDIGO 2024; Bula Renvela.',
+        es: 'DCOR Trial (Kidney International 2007); Guías globales KDIGO 2024 para el manejo del Fósforo; Ficha Técnica CIMA.'
       }
     },
 
@@ -376,44 +377,45 @@
     },
 
     "poliestirenossulfonato_de_sodio": {
-      name: { pt: 'Poliestirenossulfonato de Sódio', es: 'Poliestirenosulfonato de Sodio' },
-      category: 'nefrologia',
-      icon: '🫘',
-      color: '#0369A1',
-      colorTxt: '#ffffff',
-      class: { pt: 'Resina de Troca Iônica de Primeira Geração', es: 'Resina de Intercambio Iónico de Primera Generación' },
+      name: { pt: 'Poliestirenossulfonato de Sódio', es: 'Poliestirenosulfonato de Sódio' },
+      category: 'nefro',
+      class: { pt: 'Resina de Troca Catiônica Luminal / Depurador de Potássio Intestinal', es: 'Resina de Intercambio Catiónico Luminal / Depurador de Potasio Intestinal' },
       indications: {
-        pt: ['Hipercalemia (Antigamente muito usado na emergência, hoje substituído sempre que possível devido ao risco de gangrena colônica)'],
-        es: ['Hiperpotasemia (Antiguamente muy usado en urgencias, hoy sustituido por riesgo de gangrena colónica)']
+        pt: ['Tratamento de Hipercalemia (Potássio sérico elevado) moderada a grave em pacientes com insuficiência renal crônica ou aguda (Manejo ambulatorial ou suporte em UTI enquanto aguarda a diálise)'],
+        es: ['Tratamiento de la Hiperpotasemia/Hipercalemia en insuficiencia renal aguda o crónica']
       },
-      commercialNames: { br: ['Sorcal', 'Kayexalate'], ar: ['Resical'] },
-      presentation: { pt: ['Pó oral/retal em potes de 30 g a 900 g'], es: ['Polvo oral/rectal en botes de 30 g a 900 g'] },
+      commercialNames: { br: ['Sorcal', 'Secresol'], ar: ['Sorcal', 'Resina calcio (Versão Cálcio)', 'Argexalato'] },
+      presentation: { pt: ['Pó para suspensão oral ou retal (Envelopes ou potes contendo gramas de resina)'], es: ['Polvo para suspensión oral o rectal (botes o sobres de 15 g)'] },
       mechanism: {
-        pt: 'A "Resina Primitiva". Quando administrada via oral ou retal, ela atinge o intestino grosso, onde libera 1 íon de Sódio e captura 1 íon de Potássio. O potássio é excretado nas fezes. É extremamente agressivo para a mucosa do intestino, gerando constipação pétrea se não usar laxante.',
-        es: 'La "Resina Primitiva". Altera el colon liberando 1 ion de Sodio y capturando 1 de Potasio. Es extremadamente agresivo para la mucosa.'
+        pt: 'O Purgador de Potássio. É uma grande resina de troca catiônica não-absorvível. Quando passa pelo intestino grosso por via oral ou retal, ela atua liberando íons de Sódio ($Na^+$) de sua estrutura e capturando quimicamente os íons de Potássio ($K^+$) livres que estão na água do intestino. Cada grama de resina sequestra cerca de 1 mEq de potássio. O potássio fica preso na matriz da resina e sai direto no vaso sanitário junto com o cocô, limpando o potássio do sangue por equilíbrio osmótico.',
+        es: 'Resina de intercambio catiónico no absorbible. Al transitar por el colon, libera iones de Sodio e incorpora de forma competitiva iones de Potasio ($K^+$) libres presentes en la luz intestinal (1 g de resina fija 1 mEq de potasio). El complejo resina-potasio se elimina mecánicamente con las heces, disminuyendo la kalemia sistémica.'
       },
       dose: {
         adult: {
-          pt: 'Via oral: 15 a 30 g por dose, 1 a 4 vezes ao dia. Via Retal (Enema): 30 a 50 g retido no cólon por horas.',
-          es: 'Vía oral: 15 a 30 g por dosis. Vía Rectal (Enema): 30 a 50 g retenido en colon por horas.'
+          pt: 'Uso Oral Comum: 15 g a 30 g de pó via oral, dissolvido em água, de 1 a 4 vezes ao dia (a cada 6 ou 8 horas) conforme a gravidade do potássio. Uso Retal (Enema de UTI): 30 g de pó dissolvidos em 100-200 mL de água morna, aplicados via retal profunda, retendo o líquido por no mínimo 30 a 60 minutos.',
+          es: 'Vía Oral: 15 a 30 g de polvo disuelto en agua, cada 6 u 8 horas según niveles de potasio. Vía Rectal (Enema de rescate): 30 g de polvo disuelto en 150 mL de agua, retener al menos 30 minutos.'
         },
         pediatric: {
-          pt: '1 g/kg/dose oral ou retal.',
-          es: '1 g/kg/dosis oral o rectal.'
+          pt: 'Uso especializado infantil em hipercalemia aguda: 1 g/kg via oral ou retal dividido em doses a cada 6 horas, com monitoramento rígido do sódio plasmático.',
+          es: 'Pediátrica: 1 g/kg/día dividido cada 6 horas vía oral o rectal.'
         }
       },
-      administration: { pt: ['Oralmente misturado em água. NUNCA misturar com Sorbitol concentrado!'], es: ['Oral mezclado en agua. ¡NUNCA mezclar con Sorbitol concentrado!'] },
-      renalAdjustment: { required: false, message: { pt: 'Para hipercalemia renal, sem ajuste sistêmico.', es: 'Para hiperpotasemia renal, sin ajuste.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
-      commonAdverseEffects: { pt: ['Constipação ou compactação fecal severa', 'Edema por retenção de sódio', 'Náuseas e perda de apetite extrema'], es: ['Constipación o compactación fecal severa', 'Edema por retención de sodio', 'Náuseas'] },
-      dangerousAdverseEffects: { pt: ['NECROSE COLÔNICA FATAL (O intestino gangrena, perfura e o paciente morre de sepse peritoneal)', 'Pneumonite por broncoaspiração em crianças'], es: ['NECROSIS COLÓNICA FATAL (El intestino se gangrena, perfora y el paciente muere de sepsis)', 'Neumonitis por broncoaspiración'] },
+      administration: { pt: ['Uso oral ou retal hospitalar. O pó deve ser preparado adicionando água filtrada ou xarope simples. CRÍTICO: NUNCA DILUIR OU MISTURAR O SORCAL COM SORBITOL LIQUIDO, risco de causar necrose fatal do intestino (VER ALERTAS). Após o enema retal, lavar o cólon do paciente com água pura para retirar os resíduos de resina secos.'], es: ['Uso oral o rectal. PROHIBIDO MEZCLAR CON SORBITOL LÍQUIDO! Alto riesgo de inducir necrosis colónica transmural fatal. Realizar lavado rectal de limpieza tras el enema.'] },
+      renalAdjustment: { required: false, message: { pt: 'Fármaco de ação puramente luminal mecânica indicado para a falência renal terminal; monitorar sobrecarga de sódio.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Constipação intestinal severa com fezes duras de resina', 'Náuseas marcantes, vômitos e anorexia leve', 'Hipocalemia paradoxal (se a dose for excessiva e limpar o potássio demais)'], es: ['Estreñimiento pertinaz e impactación', 'Náuseas y vómitos', 'Hipopotasemia iatrogénica por exceso de efecto'] },
+      dangerousAdverseEffects: { pt: ['NECROSE COLÔNICA TRANSMURAL AGUDA (morte química do intestino grosso com perfuração, peritonite fecal e choque séptico fatal — VER ALERTAS)', 'Sobrecarga de Sódio com Edema Agudo de Pulmão e Anasarca (a resina joga muito sódio para dentro do sangue para puxar o potássio)'], es: ['NECROSIS COLÓNICA TRANSMURAL / PERFORACIÓN INTESTINAL (Mortal, secundaria a espasmo o interacción con sorbitol)', 'Hipernatremia severa con Edema Agudo de Pulmón por sobrecarga hídrica de sodio'] },
       contraindications: {
-        absolute: { pt: ['Pós-operatório de cirurgias intestinais', 'Íleo paralítico (Redução da motilidade gastrointestinal)'], es: ['Posoperatorio de cirugías intestinales', 'Íleo paralítico'] },
-        relative: { pt: ['Cardiopatas descompensados (Devido à carga de sódio)'], es: ['Cardiópatas descompensados (Por la carga de sodio)'] }
+        absolute: { pt: ['Pacientes com obstrução mecânica intestinal ativa ou íleo paralítico pós-cirúrgico, recém-nascidos (risco fulminante de necrose cecal)'], es: ['Obstrucción intestinal mecánica o íleo paralítico, neonatos (prohibido por necrosis de colon)'] },
+        relative: { pt: ['Pacientes com insuficiência cardíaca congestiva anasarca grave (a carga de sódio do Sorcal pode afogar o coração)'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'A ROLETA RUSSA DO SORBITOL: Antigamente, os hospitais misturavam o Sorcal com o laxante Sorbitol para evitar o intestino preso. Descobriu-se que essa combinação é um gatilho direto para Necrose Intestinal Isquêmica Fatal. O FDA emitiu um Black Box proibindo a mistura das duas drogas.', es: 'LA RULETA RUSA DEL SORBITOL: Se mezclaba con laxante Sorbitol. Se descubrió que esta combinación desencadena Necrosis Intestinal Isquémica Fatal. La FDA prohibió la mezcla con Caja Negra.' }
+        warning: { pt: 'A CAIXA PRETA DA PROIBIÇÃO DO SORBITOL (A DESTRUIÇÃO DO INTESTINO): O Sorcal carrega um erro médico histórico gravíssimo. Antigamente, misturava-se a resina com o laxante Sorbitol para evitar que o remédio ressecasse o intestino. Estudos de farmacovigilância provaram que o Sorbitol reage com a resina e causa uma Necrose Transmural do Intestino. O intestino grosso apodrece, perfura e o paciente morre de sepse generalizada. Dilua o Sorcal APENAS EM ÁGUA PURA.', es: 'ALERTA DE CAJA NEGRA (NECROSIS DE COLON POR SORBITOL): Está terminantemente PROHIBIDO coadministrar o suspender la resina en soluciones de Sorbitol líquido. La mezcla desata una reacción inflamatoria isquémica focal en la mucosa cecal, provocando necrosis transmural del colon y peritonitis fecal de evolución mortal en pocas horas. Disolver exclusivamente en agua limpia.' }
+      },
+      references: {
+        pt: 'FDA Drug Safety Communication on Kayexalate/Sorcal and bowel necrosis; Cochrane Database for Hyperkalemia Management; Manual de UTI Einstein.',
+        es: 'FDA Safety Communications (Kayexalate); Guías de Emergencias Electrolíticas de la SADI; Ficha Técnica CIMA.'
       }
     },
 
@@ -467,44 +469,45 @@
 
 
     "epoetina_alfa": {
-      name: { pt: 'Epoetina alfa', es: 'Epoetina alfa' },
-      category: 'nefrologia',
-      icon: '🫘',
-      color: '#0369A1',
-      colorTxt: '#ffffff',
-      class: { pt: 'Agente Estimulador da Eritropoiese (ESA)', es: 'Agente Estimulador de la Eritropoyesis (ESA)' },
+      name: { pt: 'Epoetina Alfa (Eritropoetina Humana Recombinante / rHuEPO)', es: 'Epoetina Alfa (Eritropoyetina Humana Recombinante / rHuEPO)' },
+      category: 'nefro',
+      class: { pt: 'Fator de Crescimento Hematopoiético Recombinante / Estimulador da Eritropoiese', es: 'Factor de Crecimiento Hematopoyético Recombinante / Estimulante de la Eritropoyesis' },
       indications: {
-        pt: ['Anemia grave associada à Doença Renal Crônica (DRC)', 'Anemia induzida por quimioterapia no câncer não-mieloide', 'Prevenção de transfusões em cirurgias de grande porte'],
-        es: ['Anemia grave asociada a la Enfermedad Renal Crónica (ERC)', 'Anemia inducida por quimioterapia en cáncer no mieloide', 'Prevención de transfusiones en cirugías mayores']
+        pt: ['Tratamento da Anemia Crônica da Doença Renal Crônica em pacientes dialíticos ou pré-dialíticos', 'Tratamento da anemia induzida por quimioterapia antineoplásica em tumores não-mieloides', 'Redução de transfusões alogênicas em pacientes cirúrgicos programados'],
+        es: ['Tratamiento de la Anemia secundaria a Enfermedad Renal Crónica', 'Anemia inducida por quimioterapia citotóxica en tumores sólidos']
       },
-      commercialNames: { br: ['Hemax', 'Eprex', 'Eritromax'], ar: ['Hemax', 'Eprex'] },
-      presentation: { pt: ['Seringas preenchidas ou frasco-ampola SC/IV (2.000, 4.000, 10.000, 40.000 UI)'], es: ['Jeringas prellenadas o vial SC/IV (2.000, 4.000, 10.000, 40.000 UI)'] },
+      commercialNames: { br: ['Eprex', 'Hemax', 'Epoetina (SUS)', 'Alfaepoetina'], ar: ['Eprex', 'Hemax Richmond', 'Epoetina DOSA'] },
+      presentation: { pt: ['Frasco-ampola ou seringa preenchida IV/SC contendo 2.000 UI, 3.000 UI, 4.000 UI, 10.000 UI e 40.000 UI/mL'], es: ['Viales o Jeringas prellenadas SC/IV de 2.000 UI, 4.000 UI y 10.000 UI'] },
       mechanism: {
-        pt: 'A "Ordem para a Medula". O rim saudável produz eritropoietina, o hormônio que manda a medula óssea fabricar glóbulos vermelhos (hemácias). Quando o rim morre, a produção de sangue para e o paciente fica com anemia profunda. A Epoetina Alfa é a cópia sintética idêntica (recombinante) desse hormônio. Injetada no sangue, ela viaja até a medula e reinicia a fabricação de hemácias, curando a anemia e evitando transfusões.',
-        es: 'La "Orden para la Médula". El riñón sano produce eritropoyetina. Al fallar el riñón, la producción de sangre para. La Epoetina Alfa es la copia sintética de esta hormona. Viaja a la médula y reinicia la fabricación de glóbulos rojos, curando la anemia.'
+        pt: 'O Motor de Hemácias. É uma cópia purificada por bioengenharia da eritropoetina humana (hormônio que o rim doente parou de fabricar). Ela viaja pelo sangue até a medula óssea e acopla-se de forma seletiva ao receptor de eritropoetina nas células progenitoras eritroides (UFC-E). Esse estímulo genético força a medula a se dividir e fabricar novos Glóbulos Vermelhos (Hemácias) em velocidade acelerada, subindo a Hemoglobina e curando a anemia crônica do rim.',
+        es: 'Glicoproteína obtenida por tecnología de ADN recombinante que mimetiza la acción de la eritropoyetina endógena. Se une de forma específica al receptor de eritropoyetina en las células progenitoras eritroides de la médula ósea, estimulando su proliferación, maduración y supervivencia, lo que eleva la masa de glóbulos rojos (Hemoglobina).'
       },
       dose: {
         adult: {
-          pt: 'DRC em Diálise: Iniciar com 50 UI/kg, 3 vezes por semana (IV ou SC). Titular a dose para manter a Hemoglobina (Hb) entre 10 e 11,5 g/dL — NUNCA acima de 12 g/dL.',
-          es: 'ERC en Diálisis: Iniciar con 50 UI/kg, 3 veces por semana (IV o SC). Titular para mantener Hemoglobina (Hb) entre 10 y 11,5 g/dL — NUNCA arriba de 12 g/dL.'
+          pt: 'Anemia na DRC: Iniciar com 50 a 100 UI/kg via SUBCUTÂNEA ou IV, TRÊS VEZES POR SEMANA (ex: Segunda, Quarta e Sexta). Monitorar Hemoglobina (Hb) mensalmente. Ajustar a dose para manter a Hb na meta de segurança entre 10,0 e 11,5 g/dL. NUNCA ultrapassar 12 g/dL — Ver Alertas.',
+          es: 'Anemia en ERC: Iniciar con 50 a 100 UI/kg vía SUBCUTÁNEA o IV, TRES VECES POR SEMANA. Monitorear Hemoglobina (Hb) mensual. Ajustar dosis para sostener la Hb estrictamente en el rango seguro de 10,0 a 11,5 g/dL.'
         },
         pediatric: {
-          pt: '50 UI/kg, 3 vezes na semana (Crianças frequentemente requerem doses proporcionais maiores que adultos para resposta).',
-          es: '50 UI/kg, 3 veces a la semana (Niños requieren dosis proporcionales mayores).'
+          pt: 'Anemia crônica pediátrica renal: Iniciar com 50 UI/kg via Subcutânea ou IV, 3 vezes por semana, com ajuste rígido baseado no ganho de peso e curvas de Hb.',
+          es: 'Pediátrica: 50 UI/kg por dosis SC/IV tres veces por semana.'
         }
       },
-      administration: { pt: ['A via Subcutânea (SC) dói mais, mas economiza 30% da dose porque o corpo absorve melhor que na via intravenosa (IV).'], es: ['La vía Subcutánea (SC) duele más, pero ahorra 30% de la dosis porque el cuerpo la absorbe mejor que IV.'] },
-      renalAdjustment: { required: false, message: { pt: 'Feita para falência renal. Sem ajuste sistêmico.', es: 'Hecha para falla renal. Sin ajuste sistémico.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade.', es: 'Sin necesidad.' } },
-      commonAdverseEffects: { pt: ['HIPERTENSÃO ARTERIAL (A pressão sobe violentamente nas primeiras semanas porque o sangue "engrossa" com novas hemácias)', 'Dor nos ossos (a medula trabalhando)', 'Cefaleia'], es: ['HIPERTENSIÓN ARTERIAL (La presión sube violentamente porque la sangre se "espesa")', 'Dolor de huesos (la médula trabajando)', 'Cefalea'] },
-      dangerousAdverseEffects: { pt: ['TROMBOSE E INFARTO MACIÇO (Se o sangue ficar grosso demais)', 'Aplasia Pura de Células Vermelhas (O corpo cria anticorpos contra o remédio e destrói o próprio sangue — letal)'], es: ['TROMBOSIS E INFARTO MASIVO (Si la sangre se espesa demasiado)', 'Aplasia Pura de Células Rojas (El cuerpo crea anticuerpos contra la droga — letal)'] },
+      administration: { pt: ['Administração via Subcutânea (via de escolha no paciente pré-dialítico por ser mais confortável e durar mais) ou Intravenosa direta (feita na linha de retorno da máquina de hemodiálise ao fim da sessão). Nunca agitar o frasco (a agitação violenta quebra a estrutura da proteína e anula o remédio).'], es: ['Inyección Subcutánea o Intravenosa directa. No agitar el vial con fuerza; la agitación mecánica desnatura la glicoproteína anulando su efecto.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste de dose baseado no clearance; indicação primária de uso na falência renal crônica.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['PIORA DA HIPERTENSÃO ARTERIAL (efeito colateral master, o sangue engrossa rápido e sobe a PA)', 'Sintomas gripais leves nas primeiras horas (febre, cefaleia)', 'Dor e eritema no local da picada subcutânea'], es: ['EXACERBACIÓN DE LA HIPERTENSIÓN ARTERIAL (por aumento de la viscosidad sanguínea)', 'Síndrome pseudogripal', 'Dolor local SC'] },
+      dangerousAdverseEffects: { pt: ['EVENTOS TROMBOEMBÓLICOS (Infarto do Miocárdio, AVC ou Trombose da fístula arteriovenosa de diálise se a hemoglobina passar de 12 g/dL — Caixa Preta)', 'APLASIA PURA DE CÉLULAS VERMELHAS (PRCA: reação autoimune raríssima onde anticorpos destroem toda a eritropoetina do corpo)'], es: ['EVENTOS TROMBÓTICOS E ACV (Se Hb > 12 g/dL — Alerta Caixa Negra)', 'APLASIA PURA DE CÉLULAS ROJAS (PRCA inmunomediada refractaria por anticuerpos anti-EPO)'] },
       contraindications: {
-        absolute: { pt: ['Hipertensão arterial severa não controlada', 'Aplasia Pura de Células Vermelhas (PRCA) associada ao uso prévio de eritropoietina'], es: ['Hipertensión arterial severa no controlada', 'Aplasia Pura de Células Rojas (PRCA) previa'] },
-        relative: { pt: ['Pacientes com câncer cujo objetivo do tratamento é a cura (A epoetina pode fazer os tumores crescerem mais rápido)'], es: ['Pacientes con cáncer cuyo objetivo es la cura (La epoetina puede hacer crecer los tumores)'] }
+        absolute: { pt: ['HIPERTENSÃO ARTERIAL GRAVE NÃO CONTROLADA (Dispara crises hipertensivas e convulsões encefalopáticas)', 'Aplasia Pura de Células Vermelhas desenvolvida após qualquer tratamento com eritropoetina'], es: ['HIPERTENSIÓN ARTERIAL SEVERA NO CONTROLADA (Absoluto por riesgo de encefalopatía)', 'Aplasia pura de células rojas previa'] },
+        relative: { pt: ['Pacientes com histórico de neoplasias malignas ativas (a EPO pode funcionar como fator de crescimento tumoral angiogênico)'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'O ALERTA DA HEMOGLOBINA DE 12: Anos atrás, os médicos tentavam usar a Epoetina para deixar a hemoglobina do renal igual a de uma pessoa normal (13 ou 14 g/dL). O resultado foi um banho de sangue: milhares de pacientes morreram de AVC e Infarto porque o sangue virou "gelatina". O limite estrito atual é manter a Hb em, no máximo, 11 a 11,5 g/dL.', es: 'LA ALERTA DE LA HEMOGLOBINA DE 12: Antes se intentaba normalizar la hemoglobina (13 o 14). El resultado: muertes masivas por ACV porque la sangre se volvió "gelatina". El límite estricto actual es 11 a 11,5 g/dL máximo.' }
+        warning: { pt: 'A CAIXA PRETA DO TETO DA HEMOGLOBINA (O ERRO DO SANGUE GROSSO): A Eritropoetina carrega um aviso de Caixa Preta rígido. Na doença renal, o teto da Hemoglobina é 11,5 g/dL. Se o médico errar a dose e forçar a hemoglobina a subir acima de 12 ou 13 g/dL para tentar "normalizar" o sangue, o sangue fica viscoso feito mel. O risco de Infarto (IAM), AVC derrame e perda da Fístula de diálise por entupimento explode. Monitore o hemograma mensalmente e jamais ultrapasse o teto seguro.', es: 'ALERTA DE CAJA NEGRA (LÍMITE CRÍTICO DE HEMOGLOBINA): El estudio TREAT demostró que intentar normalizar la Hb a valores normales (> 12-13 g/dL) en nefrópatas duplica el riesgo de ACV e Infarto agudo de miocardio por hiperviscosidad hemática. La meta de seguridad mandatoria de Hemoglobina es de 10,0 a 11,5 g/dL. Module la dosis según esta meta.' }
+      },
+      references: {
+        pt: 'TREAT and CHOIR Trials (Epoetin safety limits and cardiovascular events - NEJM 2009); Diretrizes de Anemia KDIGO 2024; Bula Eprex.',
+        es: 'TREAT Trial (NEJM 2009); CHOIR Trial (NEJM 2006); Guías globales KDIGO 2024 para el manejo de la Anemia en ERC.'
       }
     },
 
@@ -768,44 +771,45 @@
     },
 
     "cinacalcete": {
-      name: { pt: 'Cinacalcete (Cloridrato de)', es: 'Cinacalcet (Clorhidrato de)' },
-      category: 'nefrologia',
-      icon: '🫘',
-      color: '#0369A1',
-      colorTxt: '#ffffff',
-      class: { pt: 'Calcimimético (Modulador Alostérico do Receptor de Cálcio — CaSR)', es: 'Calcimimético (Modulador Alostérico del Receptor de Calcio — CaSR)' },
+      name: { pt: 'Cloridrato de Cinacalcete', es: 'Clorhidrato de Cinacalcet' },
+      category: 'nefro',
+      class: { pt: 'Agente Calcimimético de Ação Direta / Modulador do Receptor de Cálcio', es: 'Agente Calcimimético de Acción Directa / Modulador del Receptor de Calcio' },
       indications: {
-        pt: ['Hiperparatireoidismo Secundário em pacientes com DRC em DIÁLISE (Onde a vitamina D não funcionou)', 'Carcinoma da Paratireoide (para tentar abaixar o cálcio fatal)'],
-        es: ['Hiperparatiroidismo Secundario en ERC en DIÁLISIS', 'Carcinoma de la Paratiroides']
+        pt: ['Tratamento do Hiperparatiroidismo Secundário (HPT2) em pacientes com Doença Renal Crônica terminal em terapia de diálise', 'Controle da Hipercalcemia em pacientes com Carcinoma de Paratireoide ou Hiperparatiroidismo Primário grave'],
+        es: ['Tratamiento del Hiperparatiroidismo Secundario (HPT2) en pacientes con ERC en diálisis', 'Hipercalcemia en Carcinoma de Paratiroides']
       },
-      commercialNames: { br: ['Mimpara'], ar: ['Mimpara'] },
-      presentation: { pt: ['Comprimidos revestidos 30 mg, 60 mg e 90 mg'], es: ['Comprimidos recubiertos 30 mg, 60 mg y 90 mg'] },
+      commercialNames: { br: ['Mimpara', 'Regpara', 'Cinacalcete'], ar: ['Mimpara', 'Cinacalcet Richmond', 'Sensipar'] },
+      presentation: { pt: ['Comprimidos revestidos 30 mg, 60 mg e 90 mg'], es: ['Comprimidos revestidos 30 mg, 60 mg y 90 mg'] },
       mechanism: {
-        pt: 'A "Mentira do Cálcio". O Cinacalcete age diretamente na glândula paratireoide. Ele modula o receptor CaSR (Sensor de Cálcio), tornando-o HIPERSENSÍVEL a qualquer restinho de cálcio que o renal tenha no sangue. A glândula é "enganada" e pensa: "Uau, tem muito cálcio no corpo, vou parar de produzir PTH!". O hormônio PTH despenca brutalmente. Por não usar vitamina D, ele EVITA o aumento de cálcio e fósforo.',
-        es: 'La "Mentira del Calcio". Modula el receptor CaSR, haciéndolo HIPERSENSIBLE al calcio residual. La paratiroides es "engañada" y para de producir PTH. Al no usar vitamina D, EVITA el aumento de calcio y fósforo.'
+        pt: 'O Enganador da Paratireoide. É uma molécula calcimimética que viaja pelo sangue e gruda diretamente no receptor sensor de Cálcio ($CaSR$) localizado nas células das glândulas paratireoides. Ele altera o desenho geométrico do receptor, aumentando em 10 vezes a sensibilidade da glândula ao cálcio do sangue. A paratireoide é "enganada": ela acha que o corpo está inundado de cálcio e cessa imediatamente a fabricação e secreção do hormônio PTH (Paratormônio), interrompendo a destruição dos ossos do nefropata.',
+        es: 'Agente calcimimético que aumenta directamente la sensibilidad del receptor sensor de Calcio ($CaSR$) de las células principales de la glándula paratiroides hacia el calcio extracelular circulante. Al "simular" concentraciones altas de calcio, inhibe de forma inmediata la transcripción y secreción de Hormona Paratiroidea (PTH), disminuyendo el remodelado óseo acelerado.'
       },
       dose: {
         adult: {
-          pt: 'Início: 30 mg via oral UMA VEZ ao dia. Titular a cada 2 a 4 semanas (30, 60, 90 até 180 mg).',
-          es: 'Inicio: 30 mg vía oral UNA VEZ al día. Titular cada 2 a 4 semanas (hasta 180 mg).'
+          pt: 'Hiperparatiroidismo Secundário: Iniciar com 30 mg via oral, UMA VEZ ao dia. Monitorar rigorosamente o Cálcio sérico e o PTH a cada 2 semanas. Titular a dose em degraus (30mg -> 60mg -> 90mg -> máximo de 180 mg ao dia) até manter o PTH na meta ideal de diálise (150 a 300 pg/mL).',
+          es: 'HPT2 en Diálisis: Iniciar con 30 mg vía oral, UNA VEZ al día. Controlar Calcio sérico y PTH cada 14 días. Titular de forma escalonada (30 mg, 60 mg, 90 mg) hasta dosis máxima de 180 mg/día.'
         },
         pediatric: {
-          pt: 'Indicado em > 3 anos com hiperparatireoidismo grave; dose baseada em peso (< ou > 0,20 mg/kg).',
-          es: 'Indicado en > 3 años con hiperparatiroidismo grave.'
+          pt: 'Aprovado a partir de 3 anos de idade para HPT2 em diálise, com dose inicial baseada rigidamente no peso seco, utilizando microcomprimidos ou suspensão.',
+          es: 'Aprobado en niños > 3 años con dosificación estricta por peso corporal.'
         }
       },
-      administration: { pt: ['DEVE SER TOMADO com alimentos ou logo após a refeição, para aumentar a absorção e reduzir intolerância gástrica. Engolir inteiro — não triturar.'], es: ['DEBE SER TOMADO con alimentos o tras la comida. Tragar entero, no triturar.'] },
-      renalAdjustment: { required: false, message: { pt: 'Feito para pacientes em diálise.', es: 'Hecho para pacientes en diálisis.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado por CYP3A4, CYP2D6 e CYP1A2. Monitorar rigorosamente na disfunção hepática moderada/grave.', es: 'Metabolizado por CYP3A4/2D6. Monitorizar en disfunción hepática.' } },
-      commonAdverseEffects: { pt: ['Náuseas e Vômitos intensos (Mais de 30% dos pacientes, piora a adesão)', 'Cefaleia', 'Parestesia (Formigamento nas mãos/boca)'], es: ['Náuseas y Vómitos intensos (> 30%)', 'Cefalea', 'Parestesia (Hormigueo en manos/boca)'] },
-      dangerousAdverseEffects: { pt: ['HIPOCALCEMIA SEVERA (O remédio "gasta" o cálcio, podendo causar convulsões e prolongamento de QT)', 'Hemorragia gastrointestinal alta'], es: ['HIPOCALCEMIA SEVERA (Puede causar convulsiones y prolongación del QT)', 'Hemorragia gastrointestinal alta'] },
+      administration: { pt: ['Uso oral diário. DEVE SER ADMINISTRADO OBRIGATORIAMENTE JUNTO COM ALIMENTOS ou imediatamente após as refeições. Tomar com comida dispara a absorção do Cinacalcete em mais de 80%, garantindo o pico terapêutico da medicação. Nunca partir os comprimidos.'], es: ['Uso oral. INGERIR OBLIGATORIAMENTE CON ALIMENTOS para maximizar su biodisponibilidad sistémica en un 80% y reducir la intolerancia digestiva.'] },
+      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste de dose baseado no clearance; medicação desenhada para uso em nefropatas dialíticos.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado intensamente no fígado (via CYP2D6). Em pacientes com insuficiência hepática moderada a grave Child-Pugh B e C, os níveis plasmáticos duplicam; monitorar cálcio sérico semanalmente.', es: 'Monitorear estrechamente en insuficiencia hepática moderada/grave por riesgo de sobredosificación farmacológica.' } },
+      commonAdverseEffects: { pt: ['NÁUSEAS INTENSAS E VÔMITOS (efeito adverso comum que afeta até 30% dos usuários)', 'Mialgia e dores musculares', 'Hipocalcemia assintomática inicial', 'Parestesias (formigamento nos dedos)'], es: ['Náuseas y vómitos severos', 'Mialgias', 'Hipocalcemia leve', 'Parestesias digitales'] },
+      dangerousAdverseEffects: { pt: ['HIPOCALCEMIA SEVERA CRÍTICA (queda do Cálcio iônico < 7,5 mg/dL provocando prolongamento do intervalo QT, arritmias ventriculares fatais e convulsões)'], es: ['HIPOCALCEMIA CRÍTICA AGUDA (Ca < 7,5 mg/dL que induce prolongación del intervalo QT, arritmias ventriculares y tetania)'] },
       contraindications: {
-        absolute: { pt: ['Hipocalcemia basal (Cálcio < 8,4 mg/dL) ANTES de iniciar a terapia'], es: ['Hipocalcemia basal (Calcio < 8,4) ANTES de iniciar'] },
-        relative: { pt: ['Pacientes com QT longo no ECG (A hipocalcemia piora o QT para arritmia fatal)'], es: ['Pacientes con QT largo en el ECG'] }
+        absolute: { pt: ['NÃO INICIAR O TRATAMENTO SE O CÁLCIO SÉRICO INICIAL ESTIVER ABAIXO DO LIMITE NORMAL (< 8,4 mg/dL) devido ao risco de choque hipocalcêmico imediato'], es: ['VALOR DE CALCIO SÉRICO BASAL POR DEBAJO DEL LÍMITE INFERIOR (< 8,4 mg/dL). Contraindicación absoluta de inicio.'] },
+        relative: { pt: ['Histórico de epilepsia ou distúrbios convulsivos ativos (a hipocalcemia baixa o limiar de convulsão)'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'O ALERTA DA TETANIA (HIPOCALCEMIA): Diferente da Vitamina D (que aumenta o cálcio), o Cinacalcete é famoso por despencar o cálcio do sangue. Se o cálcio cair demais, o paciente sofre TETANIA: espasmo severo da face (Sinal de Chvostek), as mãos travam em formato de garra (Sinal de Trousseau) e a laringe pode fechar, asfixiando o paciente. Suspenda e aplique Gluconato de Cálcio IV imediatamente.', es: 'EL ALERTA DE TETANIA (HIPOCALCEMIA): El Cinacalcet desploma el calcio. Si cae mucho, el paciente sufre TETANIA: espasmo facial (Chvostek), manos en garra (Trousseau), laringoespasmo. Aplique Gluconato de Calcio IV.' }
+        warning: { pt: 'O DESASTRE DO CHOQUE HIPOCALCÊMICO (O PERIGO DO CÁLCIO BAIXO): O Mimpara joga o cálcio do sangue para baixo de forma muito rápida. É ABSOLUTAMENTE PROIBIDO iniciar o Cinacalcete se o cálcio do paciente já estiver baixo no exame. Se o cálcio iônico despencar abaixo de 7,5 mg/dL, o paciente apresenta a Síndrome de Tetania (mãos em garra de parideira), o coração estica o intervalo QT e faz arritmia fatal de UTI. Se cair, suspenda a droga e infunda Gluconato de Cálcio.', es: 'ALERTA DE HIPOCALCEMIA MORTAL: Cinacalcet deprime drásticamente los niveles de calcio en sangre. Está prohibido iniciar la toma si el calcio sérico previo es < 8,4 mg/dL. Si durante el tratamiento el calcio cae críticamente, gatilla tetania muscular, laringoespasmo y arritmias ventriculares por prolongación del QT. Monitoree mensualmente.' }
+      },
+      references: {
+        pt: 'EVOLVE Trial (Cinacalcet cardiovascular outcomes in dialysis); Diretrizes de DMO da Sociedade Brasileira de Nefrologia (SBN); Bula Regpara.',
+        es: 'EVOLVE Trial (NEJM 2012); Guías de Metabolismo Mineral de la Sociedad Argentina de Nefrología (SAN).'
       }
     },
 
@@ -853,43 +857,44 @@
 
     "tolvaptana": {
       name: { pt: 'Tolvaptana', es: 'Tolvaptán' },
-      category: 'nefrologia',
-      icon: '🫘',
-      color: '#0369A1',
-      colorTxt: '#ffffff',
-      class: { pt: 'Antagonista do Receptor de Vasopressina (V2) / Aquarético', es: 'Antagonista del Receptor de Vasopresina (V2) / Acuarético' },
+      category: 'nefro',
+      class: { pt: 'Aquarético de Ação Direta / Antagonista Seletivo dos Receptores V2 de Vasopressina', es: 'Acuarético de Acción Direta / Antagonista Selectivo de los Receptores V2 de Vasopresina' },
       indications: {
-        pt: ['Hiponatremia euvolêmica ou hipervolêmica severa (Sódio < 125) resistente associada a Insuficiência Cardíaca ou SIADH', 'Doença Renal Policística Autossômica Dominante (Atrasa a destruição dos rins cheios de cistos)'],
-        es: ['Hiponatremia euvolémica o hipervolémica severa (Sodio < 125) resistente', 'Enfermedad Renal Poliquística Autosómica Dominante']
+        pt: ['Tratamento de Hiponatremia Dilucional Hipervolêmica ou Normovolêmica clinicamente significativa (Sódio < 125 mEq/L) secundária à SIADH ou Insuficiência Cardíaca refratária', 'Retardo da progressão do crescimento de cistos na Doença Renal Policística Autossômica Dominante (DRPAD) em adultos'],
+        es: ['Tratamiento de la Hiponatremia secundaria a SIADH o Insuficiencia Cardíaca congestiva avanzada', 'Retraso de la progresión de quistes en la Enfermedad Renal Poliquística Autosómica Dominante (ERPAD)']
       },
-      commercialNames: { br: ['Jinarc', 'Samsca'], ar: ['Jinarc', 'Samsca'] },
-      presentation: { pt: ['Comprimidos 15 mg e 30 mg'], es: ['Comprimidos 15 mg y 30 mg'] },
+      commercialNames: { br: ['Samsca', 'Jinarc'], ar: ['Samsca', 'Tolvaptán Richmond'] },
+      presentation: { pt: ['Comprimidos simples 15 mg, 30 mg e 60 mg'], es: ['Comprimidos simples 15 mg y 30 mg'] },
       mechanism: {
-        pt: 'O "Aquarético" Mágico. O corpo humano tem o Hormônio Antidiurético (Vasopressina), que avisa o rim para não deixar a ÁGUA ir para a urina. Na doença cardíaca ou SIADH, o corpo afoga em água, diluindo o Sódio. A Tolvaptana bloqueia diretamente o receptor V2 da vasopressina nos túbulos do rim. Resultado: O rim abre as comportas e o paciente urina LITROS de "água livre" PURA, enquanto o Sódio fica guardado no corpo. O sangue "concentra" de volta e a hiponatremia é curada sem usar pílulas de sal.',
-        es: 'El "Acuarético" Mágico. Bloquea el receptor V2 en los túbulos. El riñón abre compuertas y el paciente orina LITROS de "agua libre" PURA, mientras el Sodio queda en el cuerpo. La hiponatremia se cura sin pastillas de sal.'
+        pt: 'O Aquarético Puro (Urina Água sem Sal). É uma pequena molécula antagonista altamente seletiva do receptor V2 do hormônio antidiurético (Vasopressina/ADH) localizado nos tubos coletores dos rins. Ao travar o receptor V2, ela impede que o ADH abra os canais de aquaporina. O rim perde a capacidade de segurar a água livre, urinando litros de água pura, SEM perder eletrólitos como sódio e potássio (Aquarese). Isso concentra o sangue naturalmente, fazendo o nível de Sódio subir rápido e eliminando o inchaço celular.',
+        es: 'Antagonista selectivo y competitivo del receptor V2 de vasopresina (ADH) en el túbulo colector renal. Bloquea la inserción de canales de acuaporina-2, impidiendo la reabsorción de agua libre mediada por ADH. Induce una Acuaresis pura: excreción renal masiva de agua libre de electrolitos, concentrando el Sodio plasmático y revirtiendo la hiponatremia dilucional.'
       },
       dose: {
         adult: {
-          pt: 'Hiponatremia: Iniciar 15 mg UMA VEZ ao dia. Pode subir para 30 a 60 mg. Duração MÁXIMA de 30 dias na hiponatremia para evitar necrose hepática. (Na Doença Policística as doses chegam a 90/30mg em esquema bi-diário).',
-          es: 'Hiponatremia: 15 mg UNA VEZ al día. Máximo 30 días. (Poliquística: esquemas mayores hasta 90/30 mg).'
+          pt: 'Hiponatremia por SIADH: Iniciar com 15 mg via oral, UMA VEZ ao dia, pela manhã. Se o sódio não subir na velocidade desejada após 24h, elevar para 30 mg uma vez ao dia, até o máximo de 60 mg/dia. OBRIGATÓRIO MONITORAR SÓDIO DE 4 EM 4 HORAS NA UTI. Teto de segurança: máximo 8-10 mEq/L de aumento nas primeiras 24h.',
+          es: 'Hiponatremia por SIADH: Iniciar con 15 mg vía oral, UNA VEZ al día por la mañana. Titular a 30 mg o máximo 60 mg/día según cinética del sodio. Control obligatorio del Sodio plasmático cada 4-6 horas en UTI.'
         },
         pediatric: {
-          pt: 'Não indicado.',
-          es: 'No indicado.'
+          pt: 'Uso contraindicado e não seguro em menores de 18 anos.',
+          es: 'No recomendado en niños.'
         }
       },
-      administration: { pt: ['É OBRIGATÓRIO internar o paciente no hospital na primeira dose (para vigiar o nível de sódio a cada poucas horas).', 'O paciente deve poder beber água livremente devido à sede intensa.'], es: ['OBLIGATORIO internar en el hospital en la primera dosis. El paciente debe poder beber agua libremente por la sed intensa.'] },
-      renalAdjustment: { required: true, message: { pt: 'Não possui eficácia em paciente anúrico ou com ClCr < 10 mL/min (precisa do túbulo funcionante).', es: 'No eficaz en anuria o ClCr < 10 mL/min.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'CONTRAINDICADA EM DOENÇA HEPÁTICA SEVERA (Black Box FDA de Hepatotoxicidade Grave — risco de falência hepática irreversível).', es: 'CONTRAINDICADA EN ENFERMEDAD HEPÁTICA SEVERA (Caja Negra FDA — riesgo de falla hepática irreversible).' } },
-      commonAdverseEffects: { pt: ['Sede absurdamente violenta (Polidipsia)', 'Poliúria extrema (urina galões por dia)', 'Boca seca e astenia'], es: ['Sed absurdamente violenta (Polidipsia)', 'Poliuria extrema (galones al día)', 'Boca seca y astenia'] },
-      dangerousAdverseEffects: { pt: ['SÍNDROME DE DESMIELINIZAÇÃO OSMÓTICA / MIELINÓLISE PONTINA CENTRAL (Se o sódio subir muito rápido > 8 mEq/L em 24h, o cérebro do paciente murcha e ele fica tetraplégico para sempre — Síndrome de Encarceramento)', 'Falência Hepática Aguda (Black Box)'], es: ['SÍNDROME DE DESMIELINIZACIÓN OSMÓTICA / MIELINOLISIS PONTINA CENTRAL (Sodio sube > 8 mEq en 24h, el cerebro se marchita — Síndrome de Cautiverio)', 'Falla Hepática Aguda (Caja Negra)'] },
+      administration: { pt: ['Uso oral diário hospitalar na fase inicial. Pode ser tomado com ou sem alimentos. O paciente DEVE ter livre acesso a água limpa para beber para saciar a sede violenta que o remédio causa; proibir a ingestão de água cega o mecanismo e mata o doente.'], es: ['Uso oral matutino. Permitir obligatoriamente el libre acceso a agua de bebida al paciente para saciar la sed acuarética extrema y evitar deshidratación masiva.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste se ClCr > 10 mL/min, mas perde a eficácia aquarética se o rim estiver em estágio terminal falido.', es: 'Pierde eficacia terapéutica si el ClCr es < 10 mL/min.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'ALTAMENTE HEPATOTÓXICA (Alerta de Caixa Preta). O uso contínuo por mais de 30 dias pode causar falência do fígado grave. É PROIBIDO manter o Samsca por mais de 30 dias seguidos na hiponatremia. Contraindicado em cirróticos Child B e C.', es: 'CAJA NEGRA POR HEPATOTOXICIDAD SEVERA: Su uso continuo por más de 30 días provoca daño hepático irreversible. Prohibido exceder el mes de pauta continua. Contraindicado en cirrosis avanzada.' } },
+      commonAdverseEffects: { pt: ['SEDE AVASSALADORA INCONTROLÁVEL (polidipsia por desidratação aquarética)', 'Poliúria massiva (o paciente urina litros de água clara)', 'Boca seca e desidratação de mucosas'], es: ['SED EXTREMA INCONTROLABLE (Polidipsia severa)', 'Poliuria masiva de agua clara', 'Xerostomía y sequedad cutánea'] },
+      dangerousAdverseEffects: { pt: ['SÍNDROME DA DESMIELINIZAÇÃO OSMÓTICA / MIELINÓLISE PONTINA (Lesão cerebral irreversível mortal se o sódio subir rápido demais — Caixa Preta)', 'Hepatite tóxica fulminante aguda com transaminasite severa'], es: ['SÍNDROME DE DESMIELINIZACIÓN OSMÓTICA / MIELINÓLISIS PONTINA (Destrucción neurológica irreversible mortal por corrección ultra-veloz del Sodio — Caja Negra)', 'Fallo hepático severo'] },
       contraindications: {
-        absolute: { pt: ['Hiponatremia hipovolêmica (O paciente já está seco)', 'Anúria, Hipernatremia', 'Paciente incapaz de sentir sede ou pedir água', 'Doença Hepática grave (Cirrose)'], es: ['Hiponatremia hipovolémica', 'Anuria, Hipernatremia', 'Paciente incapaz de sentir sed', 'Hepatopatía grave (Cirrosis)'] },
-        relative: { pt: ['Uso associado de Inibidores Potentes do CYP3A4 (multiplica a dose 5×)'], es: ['Uso asociado de Inhibidores Potentes de CYP3A4 (multiplica dosis 5×)'] }
+        absolute: { pt: ['Incapacidade do paciente de perceber ou responder à sede (pacientes em coma neurológico profundo)', 'Hiponatremia hipovolêmica (paciente desidratado por diarreia ou sangramento)', 'Uso com inibidores potentes do CYP3A4'], es: ['Incapacidad del paciente para percibir o responder a la sed (Coma profundo)', 'Hiponatremia hipovolémica', 'Co-administración con ketoconazol o ritonavir'] },
+        relative: { pt: ['Uso estendido que ultrapasse a barreira de 30 dias seguidos de caixa'] }
       },
       safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'A TELA DA TETRAPLEGIA: Um paciente com hiponatremia (ex: Sódio = 118) tem o cérebro inchado de água. O bloqueio com Tolvaptana é tão eficaz que o Sódio pode voltar para 135 mEq/L em 1 dia. Se a correção ultrapassar "8 mEq em 24h", as bainhas de mielina na base do cérebro racham e rasgam (Mielinólise Pontina Central). O paciente fica em Síndrome do Encarceramento: Lúcido, vivo, mas tetraplégico e mudo (Locked-in).', es: 'LA PANTALLA DE LA TETRAPLEJIA: Si la corrección supera "8 mEq en 24h", la mielina de la base del cerebro se raja (Mielinolisis Pontina). El paciente queda Síndrome de Cautiverio: Lúcido, pero tetrapléjico y mudo.' }
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
+        warning: { pt: 'A CAIXA PRETA QUE DERRETE O CÉREBRO (O PERIGO DA SUBIDA DO SÓDIO): O Samsca carrega o alerta de Caixa Preta mais rígido da UTI. Se você der o remédio para tratar hiponatremia e o Sódio SUBIR RÁPIDO DEMAIS (Limite máximo de segurança: NÃO deixar subir mais que 8 a 10 mEq/L nas primeiras 24 horas), ocorre a Mielinólise Pontina. Os neurônios do tronco cerebral perdem a bainha de mielina e derretem. O paciente fica tetraplégico, entra em coma e morre. Monitore o sódio de 4 em 4 horas com o cronômetro.', es: 'ALERTA DE CAJA NEGRA MORTAL (MIELINÓLISIS PONTINA): Corregir el sodio de forma ultra-rápida deshidrata las células del puente cerebral desnudando sus vainas de mielina de forma irreversible. LÍMITE DE SEGURIDAD ABSOLUTO: No permitir jamás que el Sodio sérico aumente más de 8 a 10 mEq/L en las primeras 24 horas del tratamiento. Monitorizar el ionograma cada 4 horas estrictamente en la UTI.' }
+      },
+      references: {
+        pt: 'SALT-1 and SALT-2 Trials (Tolvaptan in Hyponatremia - NEJM 2006); TEMPO 3:4 Trial (Tolvaptan in Polyquistic Kidney Disease); FDA Boxed Warnings Samsca.',
+        es: 'SALT-1 & SALT-2 Trials (NEJM 2006); TEMPO 3:4 Trial (NEJM 2012); FDA Boxed Warnings (Samsca); Guías de Medio Interno de la SAN.'
       }
     },
 
@@ -1047,48 +1052,45 @@
 
     /* ── SACARATO DE HIDRÓXIDO FÉRRICO ──────────────────────────────────── */
     "sacarato_hidroxido_ferrico": {
-      name: { pt: 'Sacarato de Hidróxido Férrico (Ferro Sacarato)', es: 'Sacarato de Hidróxido Férrico (Hierro Sacarato)' },
-      category: 'nefrologia',
-      icon: '🫘',
-      color: '#0369A1',
-      colorTxt: '#ffffff',
-      class: { pt: 'Suplemento Intravenoso de Ferro', es: 'Suplemento Intravenoso de Hierro' },
+      name: { pt: 'Sacarato de Hidróxido Férrico (Ferro Injetável)', es: 'Complejo de Sacarato de Hidróxido Férrico (Hierro IV)' },
+      category: 'nefro',
+      class: { pt: 'Suplemento de Ferro Parenteral Intravenoso / Complexo de Coordenação Macroglobular', es: 'Suplemento de Hierro Parenteral Intravenoso / Complejo Macroglobular' },
       indications: {
-        pt: ['Anemia ferropriva severa em pacientes com DRC (Em hemodiálise ou fase conservadora)', 'Sangramento maciço crônico intolerante a ferro oral'],
-        es: ['Anemia ferropénica severa en pacientes con ERC (En hemodiálisis o fase conservadora)', 'Sangrado masivo crónico intolerante a hierro oral']
+        pt: ['Tratamento da Anemia por Deficiência de Ferro crônica em pacientes com Doença Renal Crônica em diálise (Uso obrigatório associado à eritropoetina para dar matéria-prima para a medula fabricar sangue)', 'Intolerância ou falha absoluta ao ferro oral em anemia ferropriva grave'],
+        es: ['Tratamiento de la Anemia Ferropénica en pacientes con ERC en diálisis', 'Intolerancia absoluta o fracaso terapéutico del hierro por vía oral']
       },
-      commercialNames: { br: ['Venofer', 'Noripurum IV'], ar: ['Venofer', 'Intrafer'] },
-      presentation: { pt: ['Ampolas IV contendo 100 mg de ferro elementar em 5 mL (20 mg/mL)'], es: ['Ampollas IV conteniendo 100 mg de hierro elemental en 5 mL'] },
+      commercialNames: { br: ['Noripurum IV', 'Ferinject (Carboximaltose)', 'Sacarato de Ferro (SUS)'], ar: ['Venofer', 'Hierro Sacarato Richmond', 'Siderblan IV'] },
+      presentation: { pt: ['Ampolas injetáveis INTRAVENOSAS contendo 100 mg de ferro elementar em 5 mL (20 mg/mL)'], es: ['Ampollas inyectables INTRAVENOSAS de 100 mg de hierro elemental en 5 mL'] },
       mechanism: {
-        pt: 'A "Injeção de Vida" da Hemodiálise. Como as pílulas de ferro não são absorvidas direito pelo renal crônico, o Ferro Sacarato burla o intestino. A molécula é injetada na veia como um complexo ligado à sacarose. As células de defesa (macrófagos do sistema reticuloendotelial) "comem" esse complexo, soltam o açúcar e doam o Ferro PURO imediatamente para a medula fabricar novas hemácias junto com a Epoetina.',
-        es: 'La "Inyección de Vida" de la Hemodiálisis. Como las píldoras no se absorben bien, el Hierro Sacarato burla el intestino. Se inyecta en vena ligado a la sacarosa. Los macrófagos "comen" el complejo y donan el Hierro PURO a la médula para fabricar glóbulos rojos junto con Epoetina.'
+        pt: 'O Combustível da Medula. É um complexo macromolecular multinuclear estável de hidróxido férrico envolto por moléculas de sacarose. Quando injetado na veia, ele viaja de forma segura sem soltar ferro livre tóxico no sangue. O complexo é engolido pelos macrófagos do sistema reticuloendotelial (baço e fígado), que quebram a sacarose e liberam o ferro diretamente para a Ferritina (o estoque do corpo) e para a Transferrina, que leva o ferro para a medula construir Hemoglobina.',
+        es: 'Complejo macromolecular hidrosoluble de hierro trivalente y sacarosa. Tras la infusión IV, el complejo es captado selectivamente por el sistema reticuloendotelial (hígado y bazo), donde se disocia liberando el hierro elemental de forma gradual hacia la transferrina y ferritina, aportando materia prima inmediata para la eritropoyesis medular sin liberar hierro libre iónico tóxico.'
       },
       dose: {
         adult: {
-          pt: 'DRC Hemodiálise: 100 mg IV de forma lenta ao final de CADA UMA das sessões de diálise contínuas (ex: por 10 dias) até totalizar a dose de reposição (ex: 1.000 mg totais).',
-          es: 'ERC Hemodiálisis: 100 mg IV lento al final de CADA sesión de diálisis hasta totalizar la dosis de reposición (ej: 1.000 mg totales).'
+          pt: 'Uso Clínico / Diálise: 100 mg a 200 mg (1 a 2 ampolas) via INTRAVENOSA lenta, administrada durante ou ao fim da sessão de hemodiálise, 1 a 3 vezes por semana. Repetir até atingir a dose acumulada total calculada pelo déficit de ferro do paciente (Fórmula de Ganzoni). Limitar se Ferritina > 500 ng/mL ou Saturação de Transferrina > 30%.',
+          es: 'Dosis habitual en diálisis: 100 a 200 mg (1 o 2 ampollas) vía INTRAVENOSA lenta al finalizar la sesión de diálisis, de 1 a 3 veces por semana. Frenar si Ferritina > 500 ng/mL.'
         },
         pediatric: {
-          pt: '0,5 mg/kg (MÁXIMO de 100 mg/dose) por infusão na diálise.',
-          es: '0,5 mg/kg (MÁXIMO de 100 mg/dosis) por infusión en diálisis.'
+          pt: 'Anemia ferropriva pediátrica crônica renal: 1 a 3 mg/kg via Intravenosa lenta, fracionada por semana, sob rígida vigilância de saturação de transferrina.',
+          es: 'Pediátrica: 1 a 3 mg/kg por dosis en infusión IV lenta.'
         }
       },
-      administration: { pt: ['A injeção IV NUNCA PODE SER FEITA RÁPIDA (Bolus mínimo 5 min para 100mg, ou infusão em 15-30 min diluída em SF 0,9%). Injetar ferro rápido causa choque anafilactoide severo.'], es: ['La inyección IV NUNCA DEBE SER RÁPIDA. Inyectar hierro rápido causa choque anafilactoide severo.'] },
-      renalAdjustment: { required: false, message: { pt: 'Criado especificamente para suprir o renal crônico.', es: 'Creado específicamente para suplir al renal crónico.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Evitar em doença hepática severa, pois o excesso de ferro ficará aprisionado no fígado doente.', es: 'Evitar en enfermedad hepática severa.' } },
-      commonAdverseEffects: { pt: ['Gosto metálico horrível na boca de forma imediata na infusão', 'Queda transitória e leve de pressão arterial intradialítica', 'Cefaleia e dores musculares (costas)'], es: ['Gusto metálico horrible en la boca inmediato en la infusión', 'Caída transitoria de presión arterial', 'Cefalea y dolores musculares'] },
-      dangerousAdverseEffects: { pt: ['Choque anafilático e asma letal (Embora 10x mais seguro que o ferro dextrano antigo)', 'Hemocromatose secundária (Destruição do pâncreas e fígado por excesso crônico)'], es: ['Choque anafiláctico (Aunque 10x más seguro que el dextrano)', 'Hemocromatosis secundaria (Destrucción de órganos por exceso)'] },
+      administration: { pt: ['EXCLUSIVAMENTE VIA INTRAVENOSA LENTA HOSPITALAR. Pode ser aplicado por injeção IV direta ultra-lenta (1 ampola de 5 mL pura correndo em no mínimo 5 minutos); OU preferencialmente DILUÍDO: 100-200 mg diluídos em exatamente 100 mL de Soro Fisiológico (NaCl 0,9%) correndo ao longo de 15 a 30 minutos na bomba. NUNCA DILUIR EM SORO GLICOSADO (quebra o complexo e precipita o ferro). NUNCA FAZER VIA INTRAMUSCULAR (causa dor extrema e mancha a pele de preto permanentemente).'], es: ['EXCLUSIVAMENTE INFUSIÓN IV LENTA HOSPITALARIA. Diluir 100-200 mg en 100 mL de solución fisiológica a pasar en 20-30 minutos. PROHIBIDO DILUIR EN SUERO GLUCOSADO! PROHIBIDA LA VÍA IM! Mancha la piel de negro de forma permanente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste; medicação essencial e segura para a rotina do renal dialítico.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'O ferro é armazenado no fígado. Contraindicado em quadros de Hemocromatose, hemossiderose ou sobrecarga de ferro hepática severa.', es: 'Contraindicado en hemocromatosis o sobrecarga tisular sistémica de hierro.' } },
+      commonAdverseEffects: { pt: ['GOSTO METÁLICO INTENSO na boca durante a infusão (efeito colateral master)', 'Hipotensão transitória leve por infusão rápida', 'Cefaleia e náuseas episódicas', 'Rubor facial'], es: ['SABOR METÁLICO INTENSO transinfusión (muy frecuente)', 'Hipotensión transitoria', 'Cefalea y rubor facial'] },
+      dangerousAdverseEffects: { pt: ['ANAFILAXIA SEVERA E CHOQUE ANAFILÁCTICO FATAL (reação imune alérgica grave imediata, exige carrinho de parada à mão)', 'Crise de hipotensão profunda por velocidade de gotejamento excessiva'], es: ['REACCIÓN ANAFILÁCTICA GRAVE / SHOCK ALÉRGICO (Mortal, exige adrenalina a la mano)', 'Hipotensión severa por bolo rápido'] },
       contraindications: {
-        absolute: { pt: ['Anemias não causadas por falta de ferro (ex: Anemia megaloblástica por vitamina B12)', 'Sobrecarga de ferro comprovada (Ferritina > 1000)'], es: ['Anemias no causadas por falta de hierro', 'Sobrecarga de hierro comprobada'] },
-        relative: { pt: ['Pacientes com infecção sistêmica ativa grave ou Sepse (O ferro é a "comida" das bactérias, piorando a infecção)'], es: ['Pacientes con infección sistémica activa o Sepsis (El hierro alimenta a las bacterias)'] }
+        absolute: { pt: ['Anemias não-ferroprivas (Anemia hemolítica, talassemia, anemia sideroblástica)', 'Evidência clínica de sobrecarga de ferro (Ferritina > 800 ng/mL)', 'Histórico de anafilaxia ao ferro IV'], es: ['Anemias no ferropénicas (Hepatopatías por depósito), sobrecarga de hierro activa, hipersensibilidad al complejo'] },
+        relative: { pt: ['Infecções bacterianas agudas sistêmicas ativas (o ferro livre funciona como nutriente que alimenta a replicação de bactérias na Sepse — adiar uso)'] }
       },
       safetyFlags: {
         bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'A COMIDA DO BACTÉRIA: É estritamente proibido administrar Ferro Intravenoso num paciente da UTI que esteja passando por um choque séptico ativo ou bacteremia (infecção no sangue). Bactérias dependem de íons férricos livres para se reproduzir; aplicar Venofer nelas é como jogar gasolina no incêndio.', es: 'LA COMIDA DE LA BACTERIA: Está estrictamente prohibido administrar Hierro Intravenoso a un paciente en la UCI con choque séptico. Las bacterias dependen del hierro para reproducirse; aplicar Venofer es echar gasolina al fuego.' }
+        warning: { pt: 'O ALERTA DO SINAL DO CHOQUE E O TESTE DE INFUSÃO (ALERTA DO NORIPURUM): O Ferro injetável pode causar um choque anafilático fulminante na veia do doente. É recomendado que nos primeiros 10 minutos correndo o soro escuro de ferro, o gotejamento seja ultra-lento (teste de dose) com o médico ou enfermeiro ao lado medindo a pressão arterial. Se o paciente queixar de tontura, falta de ar ou a pressão desabar, feche o soro e aplique Adrenalina IM na hora.', es: 'ALERTA DE SHOCK ANAFILÁCTICO: El hierro IV puede desencadenar reacciones de hipersensibilidad tipo anafilactoides graves. Iniciar la infusión de forma ultra-lenta los primeros 10 minutos (Dosis de prueba) con el paciente monitorizado. Si presenta disnea, estridor u opresión, suspenda de inmediato e inyecte Epinefrina.' }
       },
       references: {
-        pt: 'FDA Label (Venofer); KDIGO Anemia Management; Protocolos da Sociedade Brasileira de Nefrologia.',
-        es: 'FDA Label (Venofer); KDIGO Anemia Management; Protocolos Internacionales.'
+        pt: 'PIVOTAL Trial (Intravenous Iron Dosing in Hemodialysis - NEJM 2019); KDIGO Clinical Practice Guideline for Iron in CKD; Bula Noripurum IV.',
+        es: 'PIVOTAL Trial (NEJM 2019); Guías KDIGO para el manejo del Hierro en ERC; Ficha Técnica Venofer CIMA.'
       }
     },
 
@@ -2136,5 +2138,11 @@
          Proteção Renal (5): sparsentana, cisteamina, acido_tioctico, cloreto_de_sodio_09, ringer_lactato
          Fluidos + Eletrólitos (5): plasma_lyte, fosfato_de_potassio, fosfato_de_sodio, oxido_de_magnesio, sulfato_ferroso
          Ferro Oral + Vitamina D3 (5): fumarato_ferroso, gluconato_ferroso, ferro_polimaltosado, maltol_ferrico, colecalciferol */
+
+/* ── BUILD 456-NEFRO: Aliases de resolução de chave ── */
+Object.assign(window.NEFRO_DRUGS_DB, {
+    "ferro_sacarato": window.NEFRO_DRUGS_DB["sacarato_hidroxido_ferrico"],
+    "poliestirenossulfonato": window.NEFRO_DRUGS_DB["poliestirenossulfonato_de_sodio"]
+}); /* fim aliases BUILD 456-NEFRO */
 
 })();
