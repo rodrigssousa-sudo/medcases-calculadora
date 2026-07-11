@@ -802,4 +802,230 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
 
   }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 436 (alginato_de_sodio + picossulfato_de_sodio + docusato_de_sodio — Protetores Físicos e Laxantes Tensoativos) */
 
+  /* ── BUILD 438 guard ─────────────────────────────────────────────── */
+  if (typeof window.GASTROENTEROLOGIA_DRUGS_DB !== 'object' || window.GASTROENTEROLOGIA_DRUGS_DB === null) return;
+  Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
+
+/* ── RABEPRAZOL ─────────────────────────────────────────────────────── */
+    "rabeprazol": {
+      name: { pt: 'Rabeprazol Sódico', es: 'Rabeprazol Sódico' },
+      category: 'gastroenterologia',
+      class: { pt: 'Inibidor da Bomba de Prótons (IBP) de Ação Rápida', es: 'Inhibidor de la Bomba de Protones (IBP) de Acción Rápida' },
+      indications: {
+        pt: ['Doença do Refluxo Gastroesofágico (DRGE) erosiva ou ulcerativa', 'Tratamento de Úlcera Duodenal e Gástrica ativa', 'Erradicação de Helicobacter pylori', 'Condições hipersecretórias patológicas (Síndrome de Zollinger-Ellison)'],
+        es: ['Enfermedad por Reflujo Gastroesofágico (ERGE) erosiva', 'Úlcera Duodenal y Gástrica activa', 'Erradicación de Helicobacter pylori', 'Síndrome de Zollinger-Ellison']
+      },
+      commercialNames: { br: ['Pariet'], ar: ['Pariet', 'Rabec'] },
+      presentation: { pt: ['Comprimidos gastrorresistentes 10 mg e 20 mg'], es: ['Comprimidos gastrorresistentes 10 mg y 20 mg'] },
+      mechanism: {
+        pt: 'O Mais Rápido dos IBPs. Assim como os outros membros da classe, ele inibe de forma irreversível a enzima $H^+/K^+-ATPase$ nas células parietais. O seu grande trunfo molecular: ele possui um pKa mais elevado, o que significa que ele se ativa muito mais rápido nos canalículos ácidos do estômago. Alcança o bloqueio ácido máximo logo no primeiro dia de tomada, enquanto o omeprazol pode levar até 3 dias para estabilizar.',
+        es: 'Inhibidor irreversible de la bomba de protones ($H^+/K^+-ATPase$). Debido a un pKa más elevado en comparación con otros IBP, se activa de forma significativamente más veloz en los canalículos de la célula parietal, logrando un control del pH gástrico óptimo desde la primera dosis.'
+      },
+      dose: {
+        adult: {
+          pt: 'DRGE e Úlceras: 20 mg via oral, UMA VEZ ao dia, pela manhã. Casos leves podem iniciar com 10 mg ao dia. Curso usual de 4 a 8 semanas.',
+          es: 'ERGE y Úlceras: 20 mg vía oral, UNA VEZ al día por la mañana. Casos leves: 10 mg al día.'
+        },
+        pediatric: {
+          pt: 'Aprovado a partir de 12 anos para DRGE na dose de 20 mg uma vez ao dia por até 8 semanas.',
+          es: 'Aprobado en niños > 12 años: 20 mg una vez al día.'
+        }
+      },
+      administration: { pt: ['Deve ser tomado pela manhã, preferencialmente 30 minutos antes do café da manhã. O comprimido deve ser engolido inteiro, sem mastigar, quebrar ou triturar.'], es: ['Tomar por la mañana en ayunas, 30 minutos antes del desayuno. Tragar entero sin masticar.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose em pacientes com disfunção renal.', es: 'Sin necesidad de ajuste en insuficiencia renal.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizado pelo fígado. Em pacientes com cirrose hepática severa, monitorar rigidamente; evitar o uso de doses elevadas crônicas.', es: 'Precaución en insuficiencia hepática grave por metabolismo prolongado.' } },
+      commonAdverseEffects: { pt: ['Cefaleia', 'Diarreia leve ou dor abdominal episódica', 'Faringite e astenia'], es: ['Cefalea', 'Diarrea leve o dolor abdominal', 'Faringitis'] },
+      dangerousAdverseEffects: { pt: ['Nefrite Intersticial Aguda (reação alérgica renal)', 'Hipomagnesemia severa se uso por mais de 1 ano', 'Aumento do risco de infecções por Clostridioides difficile'], es: ['Nefritis Intersticial Aguda', 'Hipomagnesemia severa por uso prolongado', 'Infección por Clostridioides difficile'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade ao rabeprazol ou a qualquer benzimidazol substituído'], es: ['Hipersensibilidad conocida al fármaco'] },
+        relative: { pt: ['Uso concomitante com atazanavir ou rilpivirina (reduz a eficácia do tratamento do HIV)'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A VANTAGEM DO METABOLISMO LIMPO: Ao contrário do Omeprazol, o Rabeprazol é metabolizado principalmente por uma via não-enzimática (redução química) e tem baixíssima dependência do citocromo CYP2C19. Por isso, ele quase não interage com o Clopidogrel, sendo uma excelente opção para o paciente cardiopata.', es: 'BAJA INTERACCIÓN HEPÁTICA: A diferencia del omeprazol, su metabolismo es predominantemente no enzimático. Presenta una afinidad mínima por la enzima CYP2C19, lo que minimiza el riesgo de interacciones con el antiagregante Clopidogrel.' }
+      },
+      references: {
+        pt: 'FDA Prescribing Information Aciphex/Pariet; Diretrizes de DRGE da Federação Brasileira de Gastroenterologia; Am J Gastroenterol.',
+        es: 'FDA Prescribing Information; Ficha Técnica CIMA Rabeprazol; Guías de Consenso de la SEPD.'
+      }
+    },
+
+/* ── DEXLANSOPRAZOL ─────────────────────────────────────────────────── */
+    "dexlansoprazol": {
+      name: { pt: 'Dexlansoprazol', es: 'Dexlansoprazol' },
+      category: 'gastroenterologia',
+      class: { pt: 'Inibidor da Bomba de Prótons de Liberação Dupla Retardada', es: 'Inhibidor de la Bomba de Protones de Liberación Dual Retardada' },
+      indications: {
+        pt: ['Cicatrização de todos os graus de esofagite erosiva', 'Manutenção da cicatrização da esofagite e alívio da azia', 'Tratamento da azia associada à DRGE não-erosiva'],
+        es: ['Cicatrización de todos los grados de esofagitis erosiva', 'Mantenimiento de la esofagitis cicatrizada', 'Tratamiento de ERGE no erosiva']
+      },
+      commercialNames: { br: ['Dexilant'], ar: ['Dexilant'] },
+      presentation: { pt: ['Cápsulas de liberação modificada 30 mg e 60 mg'], es: ['Cápsulas de liberación modificada 30 mg y 60 mg'] },
+      mechanism: {
+        pt: 'A Tecnologia de Dois Picos. É o enantiômero R puro do lansoprazol. Sua cápsula possui uma engenharia de liberação modificada dupla exclusiva (DDR). Ela libera dois tipos de grânulos em momentos diferentes: os primeiros 25% dos grânulos abrem no duodeno logo após a ingestão; os outros 75% abrem horas depois no intestino delgado proximal. Isso cria dois picos de remédio no sangue, estendendo o bloqueio do ácido por até 24 horas reais.',
+        es: 'Es el enantiómero R activo del lansoprazol. Utiliza una tecnología de Liberación Dual Retardada (DDR) con dos tipos de gránulos que se activan a diferentes pH intestinales. El primer pico ocurre 1-2 horas tras la ingesta; el segundo ocurre 4-5 horas después, prolongando la supresión ácida durante todo el día.'
+      },
+      dose: {
+        adult: {
+          pt: 'Cicatrização de Esofagite: 60 mg via oral, UMA VEZ ao dia, por até 8 semanas. Manutenção e DRGE não-erosiva: 30 mg via oral ao dia.',
+          es: 'Cicatrización de Esofagitis: 60 mg vía oral, UNA VEZ al día por 8 semanas. Mantenimiento: 30 mg al día.'
+        },
+        pediatric: {
+          pt: 'Aprovado para adolescentes a partir de 12 anos nas mesmas doses do adulto.',
+          es: 'Aprobado en pacientes >= 12 años.'
+        }
+      },
+      administration: { pt: ['Pode ser tomado com ou sem alimentos (uma grande vantagem mecânica). As cápsulas devem ser engolidas inteiras. Para pacientes com disfagia, a cápsula pode ser aberta e os microgrânulos salpicados em uma colher de purê de maçã.'], es: ['Puede tomarse con o sin alimentos. No masticar los microgránulos internos al abrir la cápsula.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose em renais crônicos.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Em insuficiência hepática moderada (Child-Pugh B), a dose máxima permitida é de 30 mg ao dia. Contraindicado na insuficiência grave.', es: 'En insuficiencia hepática moderada, dosis máxima de 30 mg/día. Evitar en falla grave.' } },
+      commonAdverseEffects: { pt: ['Diarreia leve', 'Dor abdominal e flatulência', 'Náuseas', 'Sintomas de resfriado (infecção do trato respiratório superior)'], es: ['Diarrea leve', 'Dolor abdominal y flatulencia', 'Náuseas', 'Infección respiratoria superior'] },
+      dangerousAdverseEffects: { pt: ['Nefrite Intersticial Aguda', 'Fraturas ósseas por osteopenia em uso crônico abusivo', 'Hipomagnesemia grave e espasmos musculares'], es: ['Nefritis Intersticial Aguda', 'Riesgo de fracturas óseas a largo plazo', 'Hipomagnesemia profunda'] },
+      contraindications: {
+        absolute: { pt: ['Hipersensibilidade conhecida ao dexlansoprazol ou componentes da fórmula'], es: ['Hipersensibilidad conocida al dexlansoprazol'] },
+        relative: { pt: ['Uso associado crônico com anti-inflamatórios sem indicação profilática estrita'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A LIBERDADE DO HORÁRIO: Enquanto todos os outros IBPs do mercado forçam o paciente a ser escravo do jejum matinal estrito de 30 minutos, a liberação dupla do Dexlansoprazol quebra essa regra. Ele pode ser tomado a qualquer hora do dia, com ou sem comida, sem perder sua capacidade de blindagem ácida.', es: 'LA LIBERTAD DEL AYUNO: A diferencia de los IBP clásicos que exigen un ayuno estricto prandial, la tecnología de liberación dual modificada permite que Dexlansoprazol sea administrado a cualquier hora del día, con o sin alimentos, manteniendo el mismo perfil de eficacia.' }
+      },
+      references: {
+        pt: 'FDA Approval Data Dexilant; Estudo Clínico de Eficácia DDR de dexlansoprazol; Consenso de DRGE da FBG.',
+        es: 'FDA Prescribing Information (Dexilant); Guías Clínicas de la Organización Mundial de Gastroenterología.'
+      }
+    },
+
+/* ── SUBCITRATO DE BISMUTO ──────────────────────────────────────────── */
+    "subcitrato_de_bismuto": {
+      name: { pt: 'Subcitrato de Bismuto Coloidal', es: 'Subcitrato de Bismuto Coloidal' },
+      category: 'gastroenterologia',
+      class: { pt: 'Protetor de Mucosa / Agente Antibacteriano Anti-H. pylori', es: 'Protector de la Mucosa / Agente Antibacteriano Anti-H. pylori' },
+      indications: {
+        pt: ['Componente essencial do esquema quádruplo de resgate para erradicação de Helicobacter pylori (associado a Tetraciclina, Metronidazol e um IBP)', 'Tratamento de Úlceras pépticas ativas'],
+        es: ['Componente del esquema cuádruple clásico de erradicación de Helicobacter pylori', 'Tratamiento de Úlceras pépticas']
+      },
+      commercialNames: { br: ['Pylera (Dose combinada importada)'], ar: ['Biscoloid', 'Bismuto Coloidal'] },
+      presentation: { pt: ['Cápsulas ou comprimidos contendo equivalência de sal de bismuto coloidal (geralmente 120 mg)'], es: ['Comprimidos de 120 mg de bismuto coloidal'] },
+      mechanism: {
+        pt: 'O Verniz Estomacal Antibacteriano. No estômago, ele se solubiliza formando um quelato coloidal que se precipita seletivamente sobre o cráter da úlcera, criando um verniz protetor contra a pepsina. Adicionalmente, ele penetra na parede celular da bactéria *Helicobacter pylori*, rompendo sua membrana e inibindo suas enzimas vitais, levando à lise bacteriana sem induzir resistência genética.',
+        es: 'Se precipita selectivamente en el medio ácido del cráter ulceroso, uniéndose a las proteínas de la mucosa para formar una capa protectora. Ejerce además una acción bactericida directa contra Helicobacter pylori mediante la degradación de su pared celular y la inhibición de sus sistemas enzimáticos.'
+      },
+      dose: {
+        adult: {
+          pt: 'Erradicação de H. pylori: 120 mg via oral, QUATRO vezes ao dia (geralmente tomado como 120mg antes das 3 refeições e antes de dormir), por 10 a 14 dias associado ao combo antimicrobiano.',
+          es: 'Erradicación de H. pylori: 120 mg vía oral, CUATRO veces al día (antes de las comidas y al acostarse) por 10-14 días en terapia cuádruple.'
+        },
+        pediatric: {
+          pt: 'Uso não recomendado ou estabelecido na rotina pediátrica.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['Tomar os comprimidos com um copo cheio de água de estômago vazio antes das refeições. Não tomar junto com leite ou antiácidos simples, pois necessita de acidez inicial para precipitar.'], es: ['Tomar antes de las comidas con agua. Evitar lácteos o antiácidos simples simultáneos.'] },
+      renalAdjustment: { required: true, message: { pt: 'Uma pequena fração de bismuto é absorvida. Absolutamente CONTRAINDICADO na insuficiência renal grave (ClCr < 30 mL/min) devido ao risco crítico de acúmulo e Encefalopatia por Bismuto.', es: 'Absolutamente CONTRAINDICADO si ClCr < 30 mL/min por riesgo de neurotoxicidad y Encefalopatía por Bismuto.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste de dose.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Escurecimento da língua (aspecto negro inofensivo)', 'Fezes pretas pastosas (pode mimetizar melena/sangramento)', 'Constipação'], es: ['Coloración oscura de la lengua', 'Heces negras (puede confundirse con melena)', 'Estreñimiento'] },
+      dangerousAdverseEffects: { pt: ['ENCEFALOPATIA POR BISMUTO (quadro de confusão mental, tremores, mioclonias e convulsões por intoxicação - uso prolongado ou renal crônico)'], es: ['ENCEFALOPATÍA POR BISMUTO (Neurotoxicidad grave con mioclonías y confusión por acumulación)'] },
+      contraindications: {
+        absolute: { pt: ['Insuficiência renal grave (ClCr < 30 mL/min)', 'Gravidez e lactação'], es: ['Insuficiencia renal grave (ClCr < 30)', 'Embarazo y lactancia'] },
+        relative: { pt: ['Uso concomitante com outras pílulas contendo salicilatos ou metais'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'A FALSA HEMORRAGIA (O SUSTO DAS FEZES): O subcitrato de bismuto reage com o enxofre no trato gastrointestinal e transforma as fezes em uma cor preta escura como carvão. O paciente corre apavorado para o hospital achando que está tendo uma hemorragia digestiva alta (melena). Avise preventivamente o paciente para evitar pânico.', es: 'ALERTA DE LA FALSA MELENA: El bismuto reacciona con los sulfuros intestinales tiñendo las heces de un color negro intenso. Esto simula perfectamente una melena (sangrado digestivo alto), generando pánico en el paciente. Es mandatorio advertir al paciente antes de iniciar el esquema.' }
+      },
+      references: {
+        pt: 'Maastricht VI/Florence Consensus Report (H. pylori); ACG Clinical Guideline; Manual de Infectologia Hospitalar.',
+        es: 'Maastricht VI Consensus Report; Guías de Erradicación de H. pylori de la SAGE.'
+      }
+    },
+
+/* ── ITOPRIDA ───────────────────────────────────────────────────────── */
+    "itoprida": {
+      name: { pt: 'Itoprida (Cloridrato de)', es: 'Itoprida (Clorhidrato de)' },
+      category: 'gastroenterologia',
+      class: { pt: 'Procinético Gastrointestinal / Antagonista D2 e Inibidor da Acetilcolinesterase', es: 'Proquinético Gastrointestinal / Antagonista D2 e Inhibidor de la Acetilcolinesterasa' },
+      indications: {
+        pt: ['Tratamento de sintomas de Dispepsia Não-Ulcerosa (empachamento, saciedade precoce, dor ou desconforto epigástrico)', 'Gastroparesia diabética leve a moderada'],
+        es: ['Tratamiento de Dispepsia No Ulcerosa', 'Gastroparesia diabética leve o moderada']
+      },
+      commercialNames: { br: ['Promotil'], ar: ['Itoprid', 'Dispep', 'Yurex'] },
+      presentation: { pt: ['Comprimidos revestidos 50 mg'], es: ['Comprimidos 50 mg'] },
+      mechanism: {
+        pt: 'O Duplo Motor do Estômago. A Itoprida atua por dois caminhos no estômago. Primeiro, ela bloqueia os receptores de dopamina D2 (que travam a motilidade). Segundo, ela inibe a enzima acetilcolinesterase, impedindo que a acetilcolina seja destruída na parede gástrica. Com mais acetilcolina ativa, o estômago ganha força e acelera o esvaziamento de forma coordenada. Não cruza a barreira hematoencefálica e não afeta o intervalo QT.',
+        es: 'Posee un mecanismo de acción dual: antagoniza los receptores dopaminérgicos D2 periféricos e inhibe la acetilcolinesterasa en el músculo liso gastrointestinal. Esto incrementa de forma sostenida los niveles de acetilcolina, estimulando el vaciamiento gástrico y el peristaltismo antral sin efectos sobre el sistema nervioso central.'
+      },
+      dose: {
+        adult: {
+          pt: '50 mg via oral, TRÊS vezes ao dia, antes das principais refeições (Dose diária máxima de 150 mg). Reduzir conforme melhora dos sintomas.',
+          es: '50 mg vía oral, TRES veces al día, antes de las comidas principales (Dosis máxima de 150 mg/día).'
+        },
+        pediatric: {
+          pt: 'Uso não recomendado ou estabelecido em menores de 16 anos por falta de dados de segurança.',
+          es: 'No recomendado en menores de 16 años.'
+        }
+      },
+      administration: { pt: ['Deve ser tomado estritamente de estômago vazio, de 15 a 30 minutos ANTES do café da manhã, almoço e jantar.'], es: ['Administrar 15 a 30 minutos ANTES de las comidas principales con agua.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito, mas monitorar em renais crônicos terminais pelo clearance periférico.', es: 'Usar con precaución en falla renal por excreción biliar predominante.' } },
+      hepaticAdjustment: { required: false, message: { pt: 'Metabolizado por flavina monooxigenase (FMO3) e não pelo CYP450, o que reduz o risco de hepatotoxicidade comum.', es: 'Sin necesidad de ajuste.' } },
+      commonAdverseEffects: { pt: ['Hiperprolactinemia leve (ginecomastia ou galactorreia por bloqueio D2 periférico hipofisário)', 'Dor abdominal leve ou diarreia transitória', 'Cefaleia'], es: ['Hiperprolactinemia leve', 'Dolor abdominal o diarrea transitoria', 'Cefalea'] },
+      dangerousAdverseEffects: { pt: ['Leucopenia severa (Raríssimo efeito idiossincrásico de medula, exige interrupção se febre)'], es: ['Leucopenia (Extremadamente raro, suspender si hay fiebre o infección)'] },
+      contraindications: {
+        absolute: { pt: ['Sangramento gastrointestinal ativo, obstrução mecânica ou perfuração intestinal'], es: ['Hemorragia digestiva activa, obstrucción mecánica o perforación'] },
+        relative: { pt: ['Pacientes com distúrbios de prolactina elevados pré-existentes'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'O PROCINÉTICO SEGURO PARA O CORAÇÃO: Diferente da antiga Cisaprida ou da Domperidona, a Itoprida NÃO bloqueia os canais hERG do coração e não prolonga o intervalo QT. Pode ser usada em idosos cardiopatas crônicos polifarmácia com total segurança cardiovascular.', es: 'EL PROCINÉTICO CARDIOSEGURO: A diferencia de la domperidona o la cisaprida, la Itoprida NO bloquea los canales de potasio cardíacos hERG ni prolonga el intervalo QT, lo que la convierte en el proquinético de elección para ancianos polimedicados.' }
+      },
+      references: {
+        pt: 'Itopride Dyspepsia Study Group; Diretrizes de Dispepsia Funcional da Federação Brasileira de Gastroenterologia; J Gastroenterol Hepatol.',
+        es: 'Guías Clínicas de Dispepsia de la Organización Mundial de Gastroenterología; Ficha Técnica Autorizada de Itopride.'
+      }
+    },
+
+/* ── MOSAPRIDA ──────────────────────────────────────────────────────── */
+    "mosaprida": {
+      name: { pt: 'Mosaprida (Citrato de)', es: 'Mosaprida (Citrato de)' },
+      category: 'gastroenterologia',
+      class: { pt: 'Procinético Gastrointestinal / Agonista Seletivo dos Receptores 5-HT4', es: 'Proquinético Gastrointestinal / Agonista Selectivo de los Receptores 5-HT4' },
+      indications: {
+        pt: ['Sintomas gastrointestinais associados à dispepsia funcional (azia, náuseas, vômitos)', 'Gastroparesia e esofagite de refluxo crônica'],
+        es: ['Síntomas digestivos asociados a dispepsia funcional', 'Gastroparesia y esofagitis por reflujo']
+      },
+      commercialNames: { br: ['Mosaprida (Importação)'], ar: ['Mosar', 'Vizerul', 'Gastrosedol Pro'] },
+      presentation: { pt: ['Comprimidos de 5 mg'], es: ['Comprimidos de 5 mg'] },
+      mechanism: {
+        pt: 'O Ativador de Serotonina Gástrico. A Mosaprida atua estimulando seletivamente os receptores de serotonina tipo 4 (5-HT4) localizados nos plexos nervosos internos do estômago. Esse estímulo força a liberação natural de acetilcolina na musculatura do trato gastrointestinal superior, aumentando a força e o esvaziamento do estômago sem tocar nos receptores de dopamina D2 (zero risco de vazamento de leite ou ginecomastia).',
+        es: 'Agonista selectivo de los receptores serotoninérgicos 5-HT4 en el plexo mientérico digestivo. Estimula la liberación de acetilcolina endógena, lo que incrementa la motilidad del estómago y el duodeno, facilitando el vaciamiento gástrico sin bloquear los receptores D2.'
+      },
+      dose: {
+        adult: {
+          pt: '5 mg via oral, TRÊS vezes ao dia, administrado antes ou após as refeições principais.',
+          es: '5 mg vía oral, TRES veces al día, antes o después de las comidas principales.'
+        },
+        pediatric: {
+          pt: 'Segurança e eficácia não estabelecidas em crianças e adolescentes.',
+          es: 'No recomendado en niños.'
+        }
+      },
+      administration: { pt: ['Uso oral. Os comprimidos podem ser engolidos com água. Diferente de outros procinéticos, a comida não altera significativamente sua taxa total de absorção.'], es: ['Uso oral. Puede administrarse con o sin alimentos de manera indiferente.'] },
+      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste habitual em disfunção leve ou moderada.', es: 'Sin necesidad de ajuste.' } },
+      hepaticAdjustment: { required: true, message: { pt: 'Metabolizada intensamente pelo fígado. Em pacientes idosos ou hepatopatas, monitorar transaminases e usar com cautela se insuficiência grave.', es: 'Usar con precaución y bajo monitoreo de transaminasas en insuficiencia hepática grave.' } },
+      commonAdverseEffects: { pt: ['Diarreia leve ou fezes amolecidas', 'Boca seca', 'Náusea episódica e cefaleia'], es: ['Diarrea leve o heces blandas', 'Boca seca', 'Náusea y cefalea'] },
+      dangerousAdverseEffects: { pt: ['Aumento marcado de transaminases com hepatite medicamentosa aguda (Raro e reversível ao suspender)'], es: ['Hepatitis medicamentosa aguda por hipersensibilidad (Raro, remite al suspender el fármaco)'] },
+      contraindications: {
+        absolute: { pt: ['Hemorragia gastrointestinal ativa, obstrução intestinal mecânica ou perfuração de alça'], es: ['Hemorragia digestiva activa, obstrucción mecánica o perforación de asa'] },
+        relative: { pt: ['Histórico de doença hepática inflamatória crônica ativa'] }
+      },
+      safetyFlags: {
+        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
+        warning: { pt: 'ZERO RISCO EXTRAPIRAMIDAL OU MAMÁRIO: Como a Mosaprida ignora completamente os receptores D2 de dopamina e foca apenas na Serotonina 5-HT4, ela é o procinético perfeito para pacientes que não toleram o Citoneurin/Motilium. Não causa tremores de Parkinson e não faz a mama vazar leite ou crescer.', es: 'SEGURIDAD ENDOCRINA Y NEUROLÓGICA: Al carecer de actividad antagonista dopaminérgica D2, posee un riesgo de cero de inducir hiperprolactinemia, galactorrea o síntomas extrapiramidales, siendo altamente segura frente a la metoclopramida.' }
+      },
+      references: {
+        pt: 'Mosapride Clinical Trial Registry; Manual de Gastroenterologia do Hospital de Clínicas de Buenos Aires; J Clin Gastroenterol.',
+        es: 'Mosapride Clinical Trials; Guías de Dispepsia de la Sociedad Argentina de Gastroenterología (SAGE).'
+      }
+    }
+
+  }); /* fim Object.assign GASTROENTEROLOGIA_DRUGS_DB — BUILD 438 (rabeprazol + dexlansoprazol + subcitrato_de_bismuto + itoprida + mosaprida — IBPs Avançados + Protetor de Mucosa + Procinéticos) */
+
 })();
