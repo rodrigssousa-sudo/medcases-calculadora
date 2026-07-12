@@ -109,26 +109,25 @@
      Aceita id do elemento; define .value e dispara 'input'+'change'
      para acionar todos os listeners reativos do app shell.          */
   function _fillDomInput(id, val) {
-    if (val === null || val === undefined || val === '') return;
+    if (val === null || val === undefined || val === '') return false;
     var el = document.getElementById(id);
-    if (!el) return;
+    if (!el) return false;
     var s = String(val).replace('.', ','); /* padrão BR: vírgula decimal */
     if (el.tagName === 'SELECT') {
-      /* Tenta match exato, depois case-insensitive */
       var found = false;
       for (var i = 0; i < el.options.length; i++) {
         if (el.options[i].value.toLowerCase() === String(val).toLowerCase()) {
           el.selectedIndex = i; found = true; break;
         }
       }
-      if (!found) return;
+      if (!found) return false;
     } else {
       el.value = s;
     }
-    /* Dispara eventos para ativar listeners reativos (calcDrugDose, etc.) */
     ['input', 'change'].forEach(function (evName) {
       try { el.dispatchEvent(new Event(evName, { bubbles: true })); } catch (e) { /* noop */ }
     });
+    return true; /* injeção bem-sucedida */
   }
 
   /* Mapa URL param → ID de input do DOM (Dados do Paciente card) */
@@ -137,9 +136,156 @@
     altura:     'hm-height',
     idade:      'hm-age',
     creatinina: 'hm-creatinina'
-    /* clcr é calculado pelo motor CG a partir de creatinina+peso+idade+sexo
-       → campo hidden #hm-clcr; injetamos após o motor rodar via callback    */
   };
+
+  /* ───────────────────────────────────────────────────────────────
+     BUILD 475-FORCE-CLEAN
+     _domIsViable() — verifica se os inputs biométricos críticos
+     estão realmente acessíveis e funcionais no DOM atual.
+     Retorna true apenas se os elementos existirem E não estiverem
+     ocultos por CSS quebrado (offsetParent !== null = visível).
+  ─────────────────────────────────────────────────────────────── */
+  function _domIsViable() {
+    var w = document.getElementById('hm-weight');
+    var hub = document.getElementById('hub-card-eletrolitos');
+    /* Elementos devem existir no DOM */
+    if (!w || !hub) return false;
+    /* offsetParent === null indica display:none em algum ancestral
+       (sintoma clássico de CSS quebrado no iOS WebView).
+       Exceto elementos com position:fixed que têm offsetParent null legítimo. */
+    if (w.offsetParent === null && getComputedStyle(w).position !== 'fixed') {
+      return false; /* input existe mas está oculto — DOM inviável */
+    }
+    return true;
+  }
+
+  /* ───────────────────────────────────────────────────────────────
+     BUILD 475-FORCE-CLEAN
+     _emergencyPersist() — Fallback Estrutural de Última Instância.
+     Ativado quando o DOM está cru/incompleto (CSS quebrado, 404 de
+     assets, iOS WebView com layout corrompido).
+     Estratégia:
+       1. Persiste dados em window.patientData (sempre)
+       2. Persiste em sessionStorage (sobrevive a re-render parcial)
+       3. Se #clinical-support-view não existir, cria um overlay
+          de emergência diretamente no body com os dados do paciente
+          — o médico vê as condutas mesmo que o hub-accordion tenha
+          falhado completamente.
+  ─────────────────────────────────────────────────────────────── */
+  function _emergencyPersist(pd) {
+    /* 1. window.patientData já foi setado pelo caller — reforça */
+    window.patientData = window.patientData || {};
+    Object.assign(window.patientData, pd || {});
+
+    /* 2. sessionStorage como buffer de sobrevivência */
+    try {
+      sessionStorage.setItem('csr_patient_emergency', JSON.stringify(window.patientData));
+    } catch (e) { /* private/full storage */ }
+
+    console.warn('[CSR v2 EMERGENCY] DOM inviável — ativando fallback estrutural.');
+
+    /* 3. Injeta dados diretamente via atributos data- no <body>
+          para que scripts posteriores (ao recarregar CSS) possam ler */
+    var body = document.body || document.documentElement;
+    var pd2 = window.patientData;
+    if (body) {
+      if (pd2.peso)       body.setAttribute('data-csr-peso',  pd2.peso);
+      if (pd2.idade)      body.setAttribute('data-csr-idade', pd2.idade);
+      if (pd2.clcr)       body.setAttribute('data-csr-clcr',  pd2.clcr);
+      if (pd2.sexo)       body.setAttribute('data-csr-sexo',  pd2.sexo);
+      if (pd2.creatinina) body.setAttribute('data-csr-creat', pd2.creatinina);
+    }
+
+    /* 4. Força criação/exibição do #clinical-support-view via JS puro
+          sem depender do CSS ou do hub-accordion estar funcional.     */
+    var existingView = document.getElementById('clinical-support-view');
+    if (existingView) {
+      /* View existe mas pode estar oculta por CSS quebrado */
+      existingView.style.cssText = [
+        'display:flex !important',
+        'position:fixed !important',
+        'top:0 !important',
+        'left:0 !important',
+        'width:100vw !important',
+        'height:100vh !important',
+        'z-index:9999999 !important',
+        'background:#0f172a !important',
+        'flex-direction:column !important',
+        'overflow-y:auto !important'
+      ].join(';');
+      console.warn('[CSR v2 EMERGENCY] #clinical-support-view forçado visível via inline style.');
+    } else {
+      /* View não existe — cria overlay de emergência diretamente no body */
+      var overlay = document.createElement('div');
+      overlay.id = 'csr-emergency-overlay';
+      overlay.setAttribute('style', [
+        'position:fixed',
+        'top:0',
+        'left:0',
+        'width:100vw',
+        'height:100vh',
+        'z-index:9999999',
+        'background:#0f172a',
+        'color:#e2e8f0',
+        'font-family:system-ui,sans-serif',
+        'padding:20px',
+        'box-sizing:border-box',
+        'overflow-y:auto',
+        'display:flex',
+        'flex-direction:column'
+      ].join(';'));
+
+      var pesoStr  = pd2.peso  ? pd2.peso  + ' kg'    : '--';
+      var idadeStr = pd2.idade ? pd2.idade + ' anos'   : '--';
+      var clcrStr  = pd2.clcr  ? pd2.clcr  + ' mL/min': '--';
+      var langCur  = _activeLang || 'pt';
+
+      overlay.innerHTML =
+        '<div style="background:#1e293b;border-radius:12px;padding:16px;margin-bottom:16px">' +
+          '<h2 style="margin:0 0 8px;font-size:18px;color:#60a5fa">' +
+            (langCur === 'es' ? '⚠️ Modo de Emergencia — Sistema de Soporte Clínico'
+                              : '⚠️ Modo Emergência — Suporte Clínico Ativo') +
+          '</h2>' +
+          '<p style="margin:4px 0;font-size:13px;color:#94a3b8">' +
+            (langCur === 'es' ? 'Datos del paciente recibidos correctamente:'
+                              : 'Dados do paciente recebidos com sucesso:') +
+          '</p>' +
+          '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px">' +
+            '<div style="background:#0f172a;border-radius:8px;padding:10px;text-align:center">' +
+              '<div style="font-size:10px;color:#64748b;text-transform:uppercase">' +
+                (langCur === 'es' ? 'Peso' : 'Peso') + '</div>' +
+              '<div style="font-size:20px;font-weight:bold;color:#fff">' + pesoStr + '</div>' +
+            '</div>' +
+            '<div style="background:#0f172a;border-radius:8px;padding:10px;text-align:center">' +
+              '<div style="font-size:10px;color:#64748b;text-transform:uppercase">' +
+                (langCur === 'es' ? 'Edad' : 'Idade') + '</div>' +
+              '<div style="font-size:20px;font-weight:bold;color:#fff">' + idadeStr + '</div>' +
+            '</div>' +
+            '<div style="background:#0f172a;border-radius:8px;padding:10px;text-align:center">' +
+              '<div style="font-size:10px;color:#64748b;text-transform:uppercase">ClCr</div>' +
+              '<div style="font-size:20px;font-weight:bold;color:#60a5fa">' + clcrStr + '</div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div style="background:#1e293b;border-radius:12px;padding:16px;flex:1">' +
+          '<p style="color:#fbbf24;font-size:13px;margin:0 0 8px">⚠️ ' +
+            (langCur === 'es'
+              ? 'El layout principal está cargando. Los datos del paciente están guardados y se aplicarán automáticamente.'
+              : 'O layout principal está carregando. Os dados do paciente estão salvos e serão aplicados automaticamente.') +
+          '</p>' +
+          '<button onclick="document.getElementById(\'csr-emergency-overlay\').remove()" ' +
+            'style="background:#3b82f6;color:#fff;border:none;border-radius:8px;padding:10px 20px;' +
+            'font-size:14px;cursor:pointer;margin-top:12px;width:100%">' +
+            (langCur === 'es' ? '← Volver e Intentar de Nuevo' : '← Voltar e Tentar Novamente') +
+          '</button>' +
+        '</div>';
+
+      if (body) {
+        body.appendChild(overlay);
+        console.warn('[CSR v2 EMERGENCY] Overlay de emergência injetado no body ✅');
+      }
+    }
+  }
 
   function _ingestPatientPayload(params) {
     if (!params) return;
@@ -160,13 +306,20 @@
     if (!updated) return;
     console.log('[CSR v2] patientData ingerido:', JSON.stringify(window.patientData));
 
-    /* ── 2. Injeção direta nos inputs físicos do card "Dados do Paciente" ──
-     *    Usa _waitFor com DOMContentLoaded para tolerar carregamento lazy.   */
+    /* ── 2. Injeção física nos inputs do DOM ── */
     function _doInject() {
-      /* Campos numéricos simples */
+      /* ── BUILD 475: verifica viabilidade do DOM antes de injetar ── */
+      if (!_domIsViable()) {
+        console.warn('[CSR v2] DOM inviável detectado (CSS quebrado / 404 de assets).');
+        _emergencyPersist(window.patientData);
+        return;
+      }
+
+      /* Campos numéricos simples — contabiliza sucessos */
+      var hits = 0;
       Object.keys(FIELD_DOM_MAP).forEach(function (f) {
         if (window.patientData[f] != null) {
-          _fillDomInput(FIELD_DOM_MAP[f], window.patientData[f]);
+          if (_fillDomInput(FIELD_DOM_MAP[f], window.patientData[f])) hits++;
         }
       });
 
@@ -178,7 +331,6 @@
         if (btnM && btnF) {
           btnM.classList.toggle('hm-sex-btn--active', sexo === 'M');
           btnF.classList.toggle('hm-sex-btn--active', sexo === 'F');
-          /* Dispara click para ativar lógica interna */
           try { (sexo === 'M' ? btnM : btnF).click(); } catch (e) { /* noop */ }
         }
       }
@@ -188,23 +340,30 @@
         var clcrHid = document.getElementById('hm-clcr');
         if (clcrHid) {
           clcrHid.value = window.patientData.clcr;
-          try { clcrHid.dispatchEvent(new Event('input', { bubbles: true })); } catch (e) {}
+          try { clcrHid.dispatchEvent(new Event('input',  { bubbles: true })); } catch (e) {}
           try { clcrHid.dispatchEvent(new Event('change', { bubbles: true })); } catch (e) {}
+          hits++;
         }
+      }
+
+      /* Se nenhum input foi encontrado → DOM ainda cru → fallback estrutural */
+      if (hits === 0) {
+        console.warn('[CSR v2] Nenhum input biométrico encontrado (hits=0) — fallback estrutural.');
+        _emergencyPersist(window.patientData);
+        return;
       }
 
       /* ── 3. Dispara rotina de sincronização global ── */
       if (typeof window._onPatientDataUpdated === 'function') {
         try { window._onPatientDataUpdated(window.patientData); } catch (e) { /* noop */ }
       }
-      console.log('[CSR v2] Inputs biométricos injetados no DOM ✅');
+      console.log('[CSR v2] Inputs biométricos injetados no DOM ✅ (' + hits + ' campos)');
     }
 
     /* Aguarda DOM pronto antes de tentar injetar */
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', _doInject);
     } else {
-      /* DOM já pronto: delay mínimo para garantir que o app shell inicializou */
       setTimeout(_doInject, 120);
     }
   }
@@ -1529,7 +1688,7 @@
   /* ── Dispara boot seguro — iOS WebView + Desktop + Android ── */
   _init();
 
-  console.log('[MedCases CSR v2.4] BUILD 466-IOS-BOOT-FIX | Locale: ' + _activeLang +
+  console.log('[MedCases CSR v2.5] BUILD 475-FORCE-CLEAN | Locale: ' + _activeLang +
     ' | Módulos: ' + Object.keys(MODULE_META).join(', ') + ' | API: window.ClinicalSupportRouter');
 
 })();

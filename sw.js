@@ -23,7 +23,7 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v473';
+const CACHE_VERSION   = 'medcases-v475';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
 /* ── Lista canônica de assets pré-cacheados no install ──────
@@ -102,26 +102,22 @@ const ASSETS_TO_CACHE = [
    event.waitUntil garante que o SW só avança para 'activate'
    após o cache estar 100% populado com sucesso.
 ============================================================ */
-self.addEventListener('install', (event) => {
-  console.log(`[SW ${CACHE_VERSION}] Install: pré-cacheando ${ASSETS_TO_CACHE.length} assets.`);
-
-  /* BUILD 274: skipWaiting() chamado IMEDIATAMENTE (fora do .then encadeado)
-     Garante que o SW entre em ativação mesmo se o pre-cache falhar parcialmente.
-     A estratégia stale-while-revalidate tolera cache miss individual — não
-     precisamos bloquear toda a ativação por um asset que falhou no pre-cache. */
+/* ============================================================
+   BUILD 475-FORCE-CLEAN — INSTALL: skipWaiting() imediato
+   Força ativação instantânea sem aguardar o pre-cache completar.
+   Garante que iOS WebView receba o novo SW sem ficar preso no
+   estado 'waiting' por tabs abertas.
+============================================================ */
+self.addEventListener('install', (e) => {
+  console.log(`[SW ${CACHE_VERSION}] Install: skipWaiting() imediato — BUILD 475-FORCE-CLEAN`);
+  /* skipWaiting() ANTES de qualquer waitUntil — entra em activate
+     imediatamente, sem aguardar pre-cache ou tabs fecharem.      */
   self.skipWaiting();
-
-  event.waitUntil(
+  e.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(ASSETS_TO_CACHE))
-      .then(() => {
-        console.log(`[SW ${CACHE_VERSION}] Pre-cache concluído (${ASSETS_TO_CACHE.length} assets).`);
-      })
-      .catch((err) => {
-        /* Falha no pre-cache é logada mas NÃO cancela a instalação —
-           o SW ainda funciona com os assets que conseguiu cachear */
-        console.warn(`[SW ${CACHE_VERSION}] Aviso: pre-cache parcial.`, err);
-      })
+      .then(() => console.log(`[SW ${CACHE_VERSION}] Pre-cache concluído (${ASSETS_TO_CACHE.length} assets).`))
+      .catch((err) => console.warn(`[SW ${CACHE_VERSION}] Pre-cache parcial (não fatal):`, err))
   );
 });
 
@@ -131,30 +127,26 @@ self.addEventListener('install', (event) => {
    clients.claim() faz o SW assumir controle de todas as abas
    abertas IMEDIATAMENTE, sem precisar de refresh do usuário.
 ============================================================ */
-self.addEventListener('activate', (event) => {
-  console.log(`[SW ${CACHE_VERSION}] Activate: limpeza agressiva de caches obsoletos.`);
-
-  event.waitUntil(
+/* ============================================================
+   BUILD 475-FORCE-CLEAN — ACTIVATE: purga absoluta de TODOS
+   os caches anteriores + clients.claim() imediato.
+   Qualquer cache com nome diferente de CACHE_NAME é deletado
+   sem exceção — resolve corrupção de cache no iOS WebView.
+============================================================ */
+self.addEventListener('activate', (e) => {
+  console.log(`[SW ${CACHE_VERSION}] Activate: PURGA ABSOLUTA BUILD 475-FORCE-CLEAN`);
+  e.waitUntil(
     caches.keys()
-      .then((cacheNames) => {
-        /* BUILD 274: limpeza AGRESSIVA — deleta qualquer cache que não seja
-           exatamente CACHE_NAME, sem exceções. Isso invalida:
-           - medcases-calc-medcases-v60 (versão anterior)
-           - qualquer outro nome gerado por versões mais antigas
-           Resultado: dispositivos antigos sempre recebem a versão nova. */
-        const deletePromises = cacheNames
-          .filter((name) => name !== CACHE_NAME)
-          .map((name) => {
-            console.log(`[SW ${CACHE_VERSION}] Expurgando cache obsoleto: "${name}"`);
-            return caches.delete(name);
-          });
-        return Promise.all(deletePromises);
-      })
+      .then((keys) => Promise.all(
+        keys.map((k) => {
+          if (k !== CACHE_NAME) {
+            console.log(`[SW ${CACHE_VERSION}] Deletando cache obsoleto: "${k}"`);
+            return caches.delete(k);
+          }
+        })
+      ))
       .then(() => {
-        console.log(`[SW ${CACHE_VERSION}] Limpeza concluída. Assumindo controle de todos os clients.`);
-        /* clients.claim() faz este SW assumir controle de TODAS as abas abertas
-           imediatamente, sem aguardar reload — essencial para dispositivos que
-           ficam com a aba do app aberta por horas (uso clínico). */
+        console.log(`[SW ${CACHE_VERSION}] Limpeza concluída. Assumindo controle imediato de todos os clients.`);
         return self.clients.claim();
       })
   );
