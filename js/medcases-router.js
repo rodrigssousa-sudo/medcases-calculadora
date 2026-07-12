@@ -104,11 +104,50 @@
      Lê ?peso=&idade=&creatinina=&clcr=&kdigo=&child_pugh=
      &chads_vasc=&has_bled=&ascvd= da URL → window.patientData
   ─────────────────────────────────────────────────────────────── */
+  /* ───────────────────────────────────────────────────────────────
+     BUILD 465: helper — injeta valor em input/select do DOM.
+     Aceita id do elemento; define .value e dispara 'input'+'change'
+     para acionar todos os listeners reativos do app shell.          */
+  function _fillDomInput(id, val) {
+    if (val === null || val === undefined || val === '') return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    var s = String(val).replace('.', ','); /* padrão BR: vírgula decimal */
+    if (el.tagName === 'SELECT') {
+      /* Tenta match exato, depois case-insensitive */
+      var found = false;
+      for (var i = 0; i < el.options.length; i++) {
+        if (el.options[i].value.toLowerCase() === String(val).toLowerCase()) {
+          el.selectedIndex = i; found = true; break;
+        }
+      }
+      if (!found) return;
+    } else {
+      el.value = s;
+    }
+    /* Dispara eventos para ativar listeners reativos (calcDrugDose, etc.) */
+    ['input', 'change'].forEach(function (evName) {
+      try { el.dispatchEvent(new Event(evName, { bubbles: true })); } catch (e) { /* noop */ }
+    });
+  }
+
+  /* Mapa URL param → ID de input do DOM (Dados do Paciente card) */
+  var FIELD_DOM_MAP = {
+    peso:       'hm-weight',
+    altura:     'hm-height',
+    idade:      'hm-age',
+    creatinina: 'hm-creatinina'
+    /* clcr é calculado pelo motor CG a partir de creatinina+peso+idade+sexo
+       → campo hidden #hm-clcr; injetamos após o motor rodar via callback    */
+  };
+
   function _ingestPatientPayload(params) {
     if (!params) return;
     window.patientData = window.patientData || {};
+
+    /* ── 1. Campos clínicos → window.patientData ── */
     var fields = [
-      'peso', 'idade', 'creatinina', 'clcr',
+      'peso', 'altura', 'idade', 'creatinina', 'clcr',
       'kdigo', 'child_pugh', 'chads_vasc', 'has_bled', 'ascvd',
       'hco3', 'na', 'k', 'mg', 'sexo'
     ];
@@ -117,11 +156,56 @@
       var v = params.get(f);
       if (v !== null && v !== '') { window.patientData[f] = v; updated = true; }
     });
-    if (updated) {
-      console.log('[CSR v2] patientData:', JSON.stringify(window.patientData));
+
+    if (!updated) return;
+    console.log('[CSR v2] patientData ingerido:', JSON.stringify(window.patientData));
+
+    /* ── 2. Injeção direta nos inputs físicos do card "Dados do Paciente" ──
+     *    Usa _waitFor com DOMContentLoaded para tolerar carregamento lazy.   */
+    function _doInject() {
+      /* Campos numéricos simples */
+      Object.keys(FIELD_DOM_MAP).forEach(function (f) {
+        if (window.patientData[f] != null) {
+          _fillDomInput(FIELD_DOM_MAP[f], window.patientData[f]);
+        }
+      });
+
+      /* Sexo — toggles de botão (#hm-btn-male / #hm-btn-female) */
+      var sexo = (window.patientData.sexo || '').toUpperCase();
+      if (sexo === 'M' || sexo === 'F') {
+        var btnM = document.getElementById('hm-btn-male');
+        var btnF = document.getElementById('hm-btn-female');
+        if (btnM && btnF) {
+          btnM.classList.toggle('hm-sex-btn--active', sexo === 'M');
+          btnF.classList.toggle('hm-sex-btn--active', sexo === 'F');
+          /* Dispara click para ativar lógica interna */
+          try { (sexo === 'M' ? btnM : btnF).click(); } catch (e) { /* noop */ }
+        }
+      }
+
+      /* ClCr fornecido diretamente (bypass motor CG) */
+      if (window.patientData.clcr != null) {
+        var clcrHid = document.getElementById('hm-clcr');
+        if (clcrHid) {
+          clcrHid.value = window.patientData.clcr;
+          try { clcrHid.dispatchEvent(new Event('input', { bubbles: true })); } catch (e) {}
+          try { clcrHid.dispatchEvent(new Event('change', { bubbles: true })); } catch (e) {}
+        }
+      }
+
+      /* ── 3. Dispara rotina de sincronização global ── */
       if (typeof window._onPatientDataUpdated === 'function') {
         try { window._onPatientDataUpdated(window.patientData); } catch (e) { /* noop */ }
       }
+      console.log('[CSR v2] Inputs biométricos injetados no DOM ✅');
+    }
+
+    /* Aguarda DOM pronto antes de tentar injetar */
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', _doInject);
+    } else {
+      /* DOM já pronto: delay mínimo para garantir que o app shell inicializou */
+      setTimeout(_doInject, 120);
     }
   }
 
@@ -671,27 +755,147 @@
     },
 
     /* ════════════════════════════════════════════════════════════
-       HEPATOLOGIA — Estratificação Child-Pugh + Drogas Hepáticas
+       HEPATOLOGIA — BUILD 465: Regionalizado PT(BR) / ES(AR)
+       Nomenclaturas ES corrigidas: HDA, Encefalopatía Portosistémica,
+       Ascitis. Primeira linha regionalizada por mercado via _activeLang.
     ════════════════════════════════════════════════════════════ */
     hepatologia: {
       alertBlock: function (pd, lang) {
         var cp = (pd.child_pugh || '').toUpperCase();
         if (!cp) return '';
-        var msg = cp === 'C'
-          ? (lang === 'es'
-            ? '🔴 <strong>Child-Pugh C:</strong> Insuficiência hepática grave. Evite hepatotóxicos, NSAIDs, acetaminofeno > 2 g/dia, benzodiazepínicos não puroados e opioides de longa duração. Considere encaminhamento para centro de transplante hepático.'
-            : '🔴 <strong>Child-Pugh C:</strong> Insuficiência hepática grave. Evite hepatotóxicos, AINEs, paracetamol > 2 g/dia, benzodiazepínicos não puros e opioides de longa duração. Considere encaminhamento para centro de transplante hepático.')
-          : (cp === 'B'
-            ? (lang === 'es'
-              ? '🟠 <strong>Child-Pugh B:</strong> Insuficiência hepática moderada. Reduza doses de fármacos de alta extração hepática, monitore encefalopatia e evite sedantes não titráveis.'
-              : '🟠 <strong>Child-Pugh B:</strong> Insuficiência hepática moderada. Reduza doses de fármacos de alta extração hepática, monitore encefalopatia e evite sedantes não titráveis.')
-            : '');
+        var msg = '';
+        if (cp === 'C') {
+          msg = lang === 'es'
+            ? '🔴 <strong>Child-Pugh C:</strong> Insuficiencia hepática grave. Evite hepatotóxicos, AINEs, acetaminofeno > 2 g/día, benzodiazepinas no puras y opioides de larga duración. Considere derivación a centro de trasplante hepático.'
+            : '🔴 <strong>Child-Pugh C:</strong> Insuficiência hepática grave. Evite hepatotóxicos, AINEs, paracetamol > 2 g/dia, benzodiazepínicos não puros e opioides de longa duração. Considere encaminhamento para centro de transplante hepático.';
+        } else if (cp === 'B') {
+          msg = lang === 'es'
+            ? '🟠 <strong>Child-Pugh B:</strong> Insuficiencia hepática moderada. Reduzca dosis de fármacos de alta extracción hepática, monitorice Encefalopatía Portosistémica y evite sedantes no titulables.'
+            : '🟠 <strong>Child-Pugh B:</strong> Insuficiência hepática moderada. Reduza doses de fármacos de alta extração hepática, monitore encefalopatia porto-sistêmica e evite sedantes não titráveis.';
+        }
         return msg ? '<div class="csr-alert-block">' + msg + '</div>' : '';
       },
       lines: [
+
+        /* ── 1ª LINHA — Varizes Esofágicas / HDA (Hemorragia Digestiva Alta)
+               PT(BR): Propranolol + Lactulose
+               ES(AR): Propranolol VO + Lactol (Lactulosa) / Bioglicol         ── */
         {
           tier: '1a',
-          label: { pt: '1ª LINHA — Rastreio de Hepatotóxicos na Medicação Atual', es: '1ª LÍNEA — Rastreo de Hepatotóxicos en Medicación Actual' },
+          label: {
+            pt: '1ª LINHA — HDA / Varizes Esofágicas + Encefalopatia Porto-Sistêmica',
+            es: '1ª LÍNEA — HDA / Várices Esofágicas + Encefalopatía Portosistémica'
+          },
+          guard: function () { return true; },
+          drugs: [
+            {
+              key: 'propranolol_hepato',
+              dbGlobal: null,
+              fallbackName: {
+                pt: 'Propranolol — Profilaxia de Varizes (Meta: FC 55–60 bpm)',
+                es: 'Propranolol VO — Profilaxis de Várices (Meta: FC 55–60 lpm)'
+              },
+              indicacao: {
+                pt: 'Profilaxia primária e secundária de hemorragia por varizes esofagogástricas. Reduz pressão porta via bloqueio β1 (↓DC) + β2 (vasoconstrição esplâncnica). Meta: FC 55–60 bpm ou redução ≥ 25% da FC basal. Dose inicial 20–40 mg VO 12/12h; titular até 160–320 mg/dia conforme tolerância.',
+                es: 'Profilaxis primaria y secundaria de HDA por várices esofagogástricas. Reduce presión portal por bloqueo β1 (↓GC) + β2 (vasoconstricción esplácnica). Meta: FC 55–60 lpm o reducción ≥ 25% de FC basal. Dosis inicial 20–40 mg VO c/12h; titular hasta 160–320 mg/día según tolerancia.'
+              },
+              mecanismo: {
+                pt: ['Bloqueio β1: reduz débito cardíaco → reduz fluxo portal', 'Bloqueio β2: vasoconstrição esplâncnica → reduz pressão porta', 'Redução do gradiente de pressão venosa hepática (GPVH) em ≥ 20%'],
+                es: ['Bloqueo β1: reduce gasto cardíaco → disminuye flujo portal', 'Bloqueo β2: vasoconstricción esplácnica → reduce presión portal', 'Reducción del gradiente de presión venosa hepática (GPVH) ≥ 20%']
+              },
+              ea: {
+                pt: ['Bradicardia sintomática (monitorar FC)', 'Broncoespasmo (contraindicado em asma grave)', 'Hipotensão postural, fadiga, depressão'],
+                es: ['Bradicardia sintomática (monitorar FC)', 'Broncoespasmo (contraindicado en asma grave)', 'Hipotensión postural, fatiga, depresión']
+              },
+              riscos: {
+                pt: ['Não suspender abruptamente (rebote hipertensivo)', 'Child-Pugh C: usar com cautela — pode precipitar hipotensão grave', 'Interação com bloqueadores de canal de cálcio: hipotensão aditiva'],
+                es: ['No suspender abruptamente (rebote hipertensivo)', 'Child-Pugh C: usar con cautela — puede precipitar hipotensión grave', 'Interacción con bloqueadores de canales de calcio: hipotensión aditiva']
+              },
+              ci: {
+                pt: ['Asma brônquica grave', 'Bloqueio AV 2º ou 3º grau', 'Bradicardia < 50 bpm em repouso'],
+                es: ['Asma bronquial grave', 'Bloqueo AV 2.º o 3.º grado', 'Bradicardia < 50 lpm en reposo']
+              }
+            },
+            {
+              key: 'lactulose_hepato',
+              dbGlobal: null,
+              fallbackName: {
+                pt: 'Lactulose — Encefalopatia Porto-Sistêmica (2–3 evacuações pastosas/dia)',
+                es: 'Lactol / Lactulosa — Encefalopatía Portosistémica (2–3 deposiciones blandas/día)'
+              },
+              indicacao: {
+                pt: '🇧🇷 BR: Lactulose 15–30 mL VO 8/8h (ajustar para 2–3 evacuações pastosas/dia). Reduz produção e absorção intestinal de amônia (NH₃) pela acidificação do cólon. Primeira escolha no protocolo brasileiro (SUS e protocolos SBHH).',
+                es: '🇦🇷 AR: Lactol (Lactulosa) ou Bioglicol — opções de alta disponibilidade no mercado argentino. 15–30 mL VO c/8h (ajustar para 2–3 deposiciones blandas/día). Mecanismo idêntico: acidificação colônica → NH₃ → NH₄⁺ (não absorvível) → eliminação fecal.'
+              },
+              mecanismo: {
+                pt: ['Dissacarídeo não absorvível fermentado pela flora colônica → ácido láctico + acético', 'pH ácido converte NH₃ (absorvível) em NH₄⁺ (não absorvível) → eliminação fecal', 'Efeito catártico: aceleração do trânsito intestinal reduz tempo de absorção de amônia'],
+                es: ['Disacárido no absorbible fermentado por flora colónica → ácido láctico + acético', 'pH ácido convierte NH₃ (absorbible) en NH₄⁺ (no absorbible) → eliminación fecal', 'Efecto catártico: acelera el tránsito intestinal reduciendo absorción de amonio']
+              },
+              ea: {
+                pt: ['Flatulência, distensão abdominal (dose-dependente)', 'Diarreia excessiva se > 3 evacuações/dia — reduzir dose', 'Hiponatremia dilucional (raro) em uso prolongado com restrição hídrica'],
+                es: ['Flatulencia, distensión abdominal (dosis-dependiente)', 'Diarrea excesiva si > 3 deposiciones/día — reducir dosis', 'Hiponatremia dilucional (rara) en uso prolongado']
+              },
+              riscos: {
+                pt: ['Hipocalemia por perdas fecais excessivas — monitorar eletrólitos', 'Interação com antibióticos não absorvíveis (neomicina): sinergismo na EH'],
+                es: ['Hipocalemia por pérdidas fecales excesivas — monitorar electrolitos', 'Interacción con antibióticos no absorbibles (neomicina): sinergismo en EH']
+              },
+              ci: {
+                pt: ['Obstrução intestinal', 'Galactosemia (intolerância à lactose)', 'Íleo paralítico'],
+                es: ['Obstrucción intestinal', 'Galactosemia (intolerancia a lactosa)', 'Íleo paralítico']
+              }
+            }
+          ]
+        },
+
+        /* ── 2ª LINHA — Ascite / Manejo Diurético
+               PT(BR): Espironolactona 100 mg + Furosemida 40 mg (proporção áurea)
+               ES(AR): Espironolactona 100 mg + Furosemida 40 mg + dose máx 400/160 ── */
+        {
+          tier: '2a',
+          label: {
+            pt: '2ª LINHA — Ascite: Diuréticos (Proporção Áurea Brasileira)',
+            es: '2ª LÍNEA — Ascitis: Diuréticos (Guías Locales Argentinas)'
+          },
+          guard: function () { return true; },
+          drugs: [
+            {
+              key: 'espironolactona_ascite',
+              dbGlobal: null,
+              fallbackName: {
+                pt: 'Espironolactona 100 mg + Furosemida 40 mg VO (proporção 100:40)',
+                es: 'Espironolactona 100 mg + Furosemida 40 mg VO (hasta 400/160 mg)'
+              },
+              indicacao: {
+                pt: '🇧🇷 BR — Proporção áurea AASLD/SBH: Espironolactona 100 mg + Furosemida 40 mg VO 1×/dia (razão 2,5:1 mantém normokalemia). Titulação a cada 3–5 dias: ↑ Espironolactona 100 mg + Furosemida 40 mg em paralelo. Máximo: Espironolactona 400 mg + Furosemida 160 mg. Meta: perda ≤ 0,5 kg/dia (sem edema) ou ≤ 1 kg/dia (com edema periférico). Monitorar sódio, creatinina e kalemia semanalmente nas primeiras 4 semanas.',
+                es: '🇦🇷 AR — Guías AASLD adaptadas ao mercado argentino: Espironolactona 100 mg + Furosemida 40 mg VO c/día. Titular conforme balanço hídrico e resposta diurética. Dosis máxima: Espironolactona 400 mg + Furosemida 160 mg/día. Siguiendo guías locales GADHE (Grupo Argentino de Diagnóstico y Hepatología). Meta: pérdida ≤ 0,5 kg/día sin edema o ≤ 1 kg/día con edema periférico. Monitorear Na⁺, creatinina y kalemia semanalmente.'
+              },
+              mecanismo: {
+                pt: ['Espironolactona: antagonista da aldosterona → retém K⁺, excreta Na⁺ e água (distais)', 'Furosemida: inibe cotransportador Na-K-2Cl na alça de Henle → diurese potente', 'Proporção 100:40 mimetiza balanço normal de K⁺: evita hiper e hipocalemia'],
+                es: ['Espironolactona: antagonista de aldosterona → retiene K⁺, excreta Na⁺ y agua (distales)', 'Furosemida: inhibe cotransportador Na-K-2Cl en asa de Henle → diuresis potente', 'Proporción 100:40 equilibra K⁺: evita hiper e hipocalemia']
+              },
+              ea: {
+                pt: ['Ginecomastia / mastalgia (espironolactona — dose-dependente; trocar por amilorida se necessário)', 'Hipercalemia (> 5,5 mEq/L → reduzir ou suspender espironolactona)', 'Insuficiência renal aguda (IRA) pré-renal por diurese excessiva — suspender se Cr ↑ > 50% do basal', 'Hiponatremia dilucional (sódio < 125 mEq/L → reduzir diuréticos)'],
+                es: ['Ginecomastia / mastalgia (espironolactona — dosis-dependiente; cambiar a amilorida si necesario)', 'Hipercalemia (> 5,5 mEq/L → reducir o suspender espironolactona)', 'IRA pre-renal por diuresis excesiva — suspender si Cr ↑ > 50% del basal', 'Hiponatremia dilucional (Na < 125 mEq/L → reducir diuréticos)']
+              },
+              riscos: {
+                pt: ['Síndrome hepatorrenal tipo 1: complicação grave da diurese excessiva em cirróticos', 'Encefalopatia hepática precipitada por alcalose hipocalêmica (furosemida)', 'Não usar furosemida isolada — aumenta risco de hipocalemia e EH'],
+                es: ['Síndrome hepatorrenal tipo 1: complicación grave de diuresis excesiva en cirróticos', 'Encefalopatía Portosistémica precipitada por alcalosis hipocalémica (furosemida)', 'No usar furosemida sola — aumenta riesgo de hipocalemia y EH']
+              },
+              ci: {
+                pt: ['Hipercalemia basal (K⁺ > 5,5 mEq/L)', 'Creatinina > 2 mg/dL (risco de IRA)', 'Hiponatremia grave (Na < 125 mEq/L)', 'Encefalopatia hepática grau 3–4 (relativa)'],
+                es: ['Hipercalemia basal (K⁺ > 5,5 mEq/L)', 'Creatinina > 2 mg/dL (riesgo de IRA)', 'Hiponatremia grave (Na < 125 mEq/L)', 'Encefalopatía Portosistémica grado 3–4 (relativa)']
+              }
+            }
+          ]
+        },
+
+        /* ── 1ª LINHA RASTREIO — Hepatotóxicos na Medicação Atual ── */
+        {
+          tier: '3a',
+          label: {
+            pt: '3ª LINHA — Rastreio de Hepatotóxicos na Medicação Atual',
+            es: '3ª LÍNEA — Rastreo de Hepatotóxicos en Medicación Actual'
+          },
           guard: function () { return true; },
           drugs: [
             {
@@ -866,18 +1070,61 @@
   function _renderConductas(moduloKey, container, pd, lang) {
     var therapy = THERAPY_LINES[moduloKey];
 
-    /* Eletrólitos: redirect */
+    /* ── BUILD 465: Eletrólitos — routing real para a calculadora interna ──
+     * Fecha o clinical-support-view e invoca o hub de eletrólitos nativo,
+     * com cadeia de fallback: HubAccordion.open → hubOpen → elec-calc init.  */
     if (moduloKey === 'eletrolitos') {
-      container.innerHTML = '<div class="csr-redirect-msg">⚗️ ' +
-        (lang === 'es' ? 'Redirigiendo a la Calculadora de Electrolitos…' : 'Redirecionando para a Calculadora de Eletrólitos…') +
-        '</div>';
-      _waitGlobal('HubAccordion', function (hub) {
-        if (typeof hub.open === 'function') {
-          hub.open('eletrolitos');
-          var view = document.getElementById('clinical-support-view');
-          if (view) view.style.display = 'none';
+      var elecMsg = lang === 'es'
+        ? '⚗️ Abriendo Calculadora de Electrolitos & Gasometría…'
+        : '⚗️ Abrindo Calculadora de Eletrólitos & Gasometria…';
+      container.innerHTML = '<div class="csr-redirect-msg">' + elecMsg + '</div>';
+
+      /* Fecha o overlay imediatamente */
+      _closeView();
+
+      /* Tenta abrir o hub via três estratégias em cascata */
+      function _doElecRoute() {
+        /* Estratégia 1: API pública HubAccordion.open('eletrolitos') */
+        if (window.HubAccordion && typeof window.HubAccordion.open === 'function') {
+          window.HubAccordion.open('eletrolitos');
+          console.log('[CSR v2] Eletrólitos → HubAccordion.open() ✅');
+          return;
         }
-      });
+        /* Estratégia 2: hubOpen() global (função raw do hub-accordion.js) */
+        if (typeof window.hubOpen === 'function') {
+          window.hubOpen('eletrolitos');
+          console.log('[CSR v2] Eletrólitos → hubOpen() ✅');
+          return;
+        }
+        /* Estratégia 3: hubToggle() — fallback se open não existir */
+        if (typeof window.hubToggle === 'function') {
+          window.hubToggle('eletrolitos');
+          console.log('[CSR v2] Eletrólitos → hubToggle() ✅');
+          return;
+        }
+        /* Estratégia 4: clicar no trigger físico do hub card */
+        var trigger = document.querySelector('#hub-card-eletrolitos .hub-card-trigger');
+        if (trigger) {
+          trigger.click();
+          console.log('[CSR v2] Eletrólitos → trigger.click() ✅');
+          return;
+        }
+        /* Estratégia 5: scroll para o card de eletrólitos */
+        var elCard = document.getElementById('hub-card-eletrolitos');
+        if (elCard) {
+          elCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          console.log('[CSR v2] Eletrólitos → scrollIntoView() ✅');
+        }
+      }
+
+      /* Aguarda HubAccordion estar disponível (defer) */
+      if (window.HubAccordion || typeof window.hubOpen === 'function') {
+        setTimeout(_doElecRoute, 80);
+      } else {
+        _waitGlobal('HubAccordion', function () { _doElecRoute(); });
+        /* Fallback paralelo: tenta diretamente após 400ms caso _waitGlobal falhe */
+        setTimeout(_doElecRoute, 400);
+      }
       return;
     }
 
@@ -922,21 +1169,43 @@
       html += '</div></div>';
     });
 
-    /* Rodapé — I18N PT/ES (BUILD 461-I18N-FIX) */
+    /* Rodapé — I18N PT/ES (BUILD 465-DYNAMIC-INTEGRATION) */
     html += '<div class="csr-footer-note">📚 ' +
       (lang === 'es'
-        ? 'Basado en: AHA/ACC 2023, ESC 2023 (FA/ICC), KDIGO 2024, AASLD 2023, FEBRASGO 2023. Versión v470.'
-        : 'Baseado em: AHA/ACC 2023, ESC 2023 (FA/ICC), KDIGO 2024, AASLD 2023, FEBRASGO 2023. Versão v470.') +
+        ? 'Basado en: AHA/ACC 2023, ESC 2023 (FA/ICC), KDIGO 2024, AASLD 2023, GADHE 2023. Versión v472.'
+        : 'Baseado em: AHA/ACC 2023, ESC 2023 (FA/ICC), KDIGO 2024, AASLD 2023, FEBRASGO 2023. Versão v472.') +
       '</div>';
 
     container.innerHTML = html;
 
-    /* Bind: botão "Ver Ficha Completa" → fecha view + abre hub */
+    /* ── BUILD 465: Bind botão "Ver Ficha Completa" ──────────────────────────
+     * Distúrbios de Sódio/Potássio → roteia para hub de eletrólitos (não farmacos).
+     * Demais fármacos → fecha view + abre hub de fármacos com busca pré-preenchida. */
+    var ELEC_KEYS = {
+      'hiponatremia':1,'hipernatremia':1,'hipocalemia':1,'hipercalemia':1,
+      'hipomagnesemia':1,'hipermagnesemia':1,'hipofosfatemia':1,
+      'alcalose_metabolica':1,'acidose_metabolica':1,'alcalose_respiratoria':1,'acidose_respiratoria':1
+    };
     container.querySelectorAll('.csr-full-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        var dk = this.getAttribute('data-drug');
+        var dk = (this.getAttribute('data-drug') || '').toLowerCase();
         if (!dk) return;
         _closeView();
+        /* Distúrbios eletrolíticos/gasométricos → hub de eletrólitos */
+        if (ELEC_KEYS[dk]) {
+          setTimeout(function () {
+            if (window.HubAccordion && typeof window.HubAccordion.open === 'function') {
+              window.HubAccordion.open('eletrolitos');
+            } else if (typeof window.hubOpen === 'function') {
+              window.hubOpen('eletrolitos');
+            } else {
+              var t = document.querySelector('#hub-card-eletrolitos .hub-card-trigger');
+              if (t) t.click();
+            }
+          }, 200);
+          return;
+        }
+        /* Fármacos → hub de fármacos com busca */
         setTimeout(function () {
           _waitGlobal('HubAccordion', function (hub) {
             if (typeof hub.open === 'function') hub.open('farmacos', { q: dk });
@@ -1184,7 +1453,7 @@
   /* ── Executa imediatamente ── */
   _init();
 
-  console.log('[MedCases CSR v2.2] BUILD 462-I18N-REACTIVITY | Locale: ' + _activeLang +
+  console.log('[MedCases CSR v2.3] BUILD 465-DYNAMIC-INTEGRATION | Locale: ' + _activeLang +
     ' | Módulos: ' + Object.keys(MODULE_META).join(', ') + ' | API: window.ClinicalSupportRouter');
 
 })();
