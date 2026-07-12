@@ -43,6 +43,31 @@
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
+  /* ── Locale persistente no escopo da IIFE ── */
+  var _activeLang = 'pt'; /* default; sobrescrito por _resolveLang() em _init() */
+
+  /**
+   * _resolveLang(params)
+   * Prioridade de resolução do idioma (BUILD 461-I18N-FIX):
+   *   1. ?lang=   ou ?idioma=  na URL (parâmetro explícito do app nativo)
+   *   2. window.currentLang   (variável do HubAccordion / app shell)
+   *   3. localStorage.getItem('lang')
+   *   4. 'pt'  (fallback)
+   * Normaliza para lowercase e aceita variantes 'es-AR', 'es-MX', 'pt-BR'.
+   */
+  function _resolveLang(params) {
+    var raw = '';
+    if (params) {
+      raw = params.get('lang') || params.get('idioma') || '';
+    }
+    if (!raw) raw = (window.currentLang || localStorage.getItem('lang') || '');
+    raw = (raw + '').toLowerCase().trim();
+    /* Normaliza: 'es-ar', 'es-mx', 'es-419' → 'es' | 'pt-br', 'pt-pt' → 'pt' */
+    if (raw.startsWith('es')) return 'es';
+    if (raw.startsWith('pt')) return 'pt';
+    return 'pt'; /* fallback */
+  }
+
   function _waitEl(id, cb, n) {
     n = n || 0;
     var el = document.getElementById(id);
@@ -743,26 +768,37 @@
       drugDb = window.ALL_DRUGS_DB[drug.key] || null;
     }
 
-    /* Dose calculada via calculate() se disponível */
+    /* ── Dicionário dose/indicação (BUILD 461-I18N-FIX) ── */
+    var DOSE_I18N = {
+      calcTitle:   lang === 'es' ? '💊 DOSIS CALCULADA EN SU GUARDIA'  : '💊 DOSE CALCULADA NO SEU PLANTÃO',
+      calcLblPad:  lang === 'es' ? 'Estándar'                           : 'Padrão',
+      calcLblGrav: lang === 'es' ? 'Grave/ICC'                          : 'Grave/ICC',
+      patLabel:    lang === 'es' ? '📋 Paciente'                        : '📋 Paciente',
+      weightLbl:   lang === 'es' ? 'Peso'                               : 'Peso',
+      ageLbl:      lang === 'es' ? 'años'                               : 'anos',
+      indTitle:    lang === 'es' ? '📋 INDICACIÓN & DOSIS'              : '📋 INDICAÇÃO & DOSE'
+    };
+
+    /* Dose calculada via calculate(pd, lang) — PASSO 3 garante lang explícito */
     var doseHtml = '';
     if (drugDb && typeof drugDb.calculate === 'function') {
       try {
-        var calc = drugDb.calculate(pd || {}, lang);
+        var calc = drugDb.calculate(pd || {}, lang);   /* ← lang passado explicitamente */
         if (calc) {
           var doseText = '';
           if (calc.dose) {
             var d = calc.dose;
-            if (d.adultoPadrao) doseText += '<li><strong>Padrão:</strong> ' + _esc(d.adultoPadrao) + '</li>';
-            if (d.adultoGrave)  doseText += '<li><strong>Grave/ICC:</strong> ' + _esc(d.adultoGrave) + '</li>';
+            if (d.adultoPadrao) doseText += '<li><strong>' + DOSE_I18N.calcLblPad  + ':</strong> ' + _esc(d.adultoPadrao) + '</li>';
+            if (d.adultoGrave)  doseText += '<li><strong>' + DOSE_I18N.calcLblGrav + ':</strong> ' + _esc(d.adultoGrave)  + '</li>';
           }
           if (doseText) {
             doseHtml = '<div class="csr-dose-block">' +
-              '<div class="csr-dose-title">💊 DOSE CALCULADA NO SEU PLANTÃO</div>' +
+              '<div class="csr-dose-title">' + DOSE_I18N.calcTitle + '</div>' +
               '<ul class="csr-dose-list">' + doseText + '</ul>' +
-              (pd.peso ? '<div class="csr-dose-patient">📋 Paciente: ' +
-                (pd.peso ? 'Peso ' + _esc(pd.peso) + ' kg' : '') +
-                (pd.clcr ? ' · ClCr ' + _esc(pd.clcr) + ' mL/min' : '') +
-                (pd.idade ? ' · ' + _esc(pd.idade) + ' anos' : '') +
+              (pd.peso ? '<div class="csr-dose-patient">' + DOSE_I18N.patLabel + ': ' +
+                DOSE_I18N.weightLbl + ' ' + _esc(pd.peso) + ' kg' +
+                (pd.clcr  ? ' · ClCr '  + _esc(pd.clcr)  + ' mL/min' : '') +
+                (pd.idade ? ' · '       + _esc(pd.idade) + ' ' + DOSE_I18N.ageLbl : '') +
                 '</div>' : '') +
               '</div>';
           }
@@ -772,7 +808,7 @@
       /* Fallback: dose estática do drug definition */
       if (drug.indicacao) {
         doseHtml = '<div class="csr-dose-block">' +
-          '<div class="csr-dose-title">📋 INDICAÇÃO & DOSE</div>' +
+          '<div class="csr-dose-title">' + DOSE_I18N.indTitle + '</div>' +
           '<p class="csr-dose-static">' + _esc(_txt(drug.indicacao, lang)) + '</p>' +
           '</div>';
       }
@@ -821,7 +857,7 @@
         doseHtml +
         miniBula +
         '<button class="csr-full-btn" data-drug="' + _esc(drug.key) + '">' +
-          '🔍 ' + (lang === 'es' ? 'Ver Ficha Completa na Calculadora' : 'Ver Ficha Completa na Calculadora') +
+          '🔍 ' + (lang === 'es' ? 'Ver Ficha Completa en la Calculadora' : 'Ver Ficha Completa na Calculadora') +
         '</button>' +
       '</div>' +
     '</div>';
@@ -886,11 +922,11 @@
       html += '</div></div>';
     });
 
-    /* Rodapé */
+    /* Rodapé — I18N PT/ES (BUILD 461-I18N-FIX) */
     html += '<div class="csr-footer-note">📚 ' +
       (lang === 'es'
-        ? 'Basado en: AHA/ACC 2023, ESC 2023 (FA/ICC), KDIGO 2024, AASLD 2023, FEBRASGO 2023. Versão v469.'
-        : 'Baseado em: AHA/ACC 2023, ESC 2023 (FA/ICC), KDIGO 2024, AASLD 2023, FEBRASGO 2023. Versão v469.') +
+        ? 'Basado en: AHA/ACC 2023, ESC 2023 (FA/ICC), KDIGO 2024, AASLD 2023, FEBRASGO 2023. Versión v470.'
+        : 'Baseado em: AHA/ACC 2023, ESC 2023 (FA/ICC), KDIGO 2024, AASLD 2023, FEBRASGO 2023. Versão v470.') +
       '</div>';
 
     container.innerHTML = html;
@@ -920,8 +956,15 @@
     var meta = MODULE_META[moduloKey];
     if (!meta) { console.warn('[CSR] Módulo desconhecido: ' + moduloKey); return; }
 
-    var lang = (window.currentLang || localStorage.getItem('lang') || 'pt');
+    /* ── BUILD 461-I18N-FIX: usa _activeLang persistido por _init() ── */
+    var lang = _activeLang;
     var pd   = window.patientData || {};
+
+    /* Dicionário de UI — PT / ES */
+    var I18N = {
+      bannerTitle: lang === 'es' ? 'Soporte de Decisión Médica' : 'Suporte de Decisão Médica',
+      closeBtnTxt: lang === 'es' ? '← Volver a la Calculadora'  : '← Voltar para a Calculadora'
+    };
 
     _waitEl('clinical-support-view', function (view) {
       /* ── CSS ABSOLUTO INVIOLÁVEL (z-index:9999999) ── */
@@ -938,16 +981,17 @@
       view.style.setProperty('--csr-color', meta.color);
       view.style.setProperty('--csr-accent', meta.accent);
 
-      /* Banner */
+      /* Banner — I18N completo PT/ES */
       var bannerEl = document.getElementById('csr-banner-title');
       if (bannerEl) {
-        bannerEl.textContent = meta.emoji + '  Suporte de Decisão Médica — ' +
+        bannerEl.textContent = meta.emoji + '  ' + I18N.bannerTitle + ' — ' +
           (lang === 'es' ? meta.label.es : meta.label.pt);
       }
 
-      /* Botão Fechar — handler DOM direto */
+      /* Botão Fechar — handler DOM direto com texto I18N */
       var closeBtn = document.getElementById('csr-close-btn');
       if (closeBtn) {
+        closeBtn.textContent = I18N.closeBtnTxt;
         closeBtn.onclick = function () {
           document.getElementById('clinical-support-view').style.display = 'none';
           window.scrollTo(0, 0);
@@ -1059,6 +1103,15 @@
     var params;
     try { params = new URLSearchParams(window.location.search); } catch (e) { params = null; }
 
+    /* ── PASSO 1 (BUILD 461-I18N-FIX): resolve e persiste o idioma da URL ── */
+    _activeLang = _resolveLang(params);
+    /* Propaga para o app shell se ele ainda não definiu */
+    if (!window.currentLang) window.currentLang = _activeLang;
+    console.log('[CSR v2] locale resolvido: ' + _activeLang +
+      (params && (params.get('lang') || params.get('idioma'))
+        ? ' (URL param: ' + (params.get('lang') || params.get('idioma')) + ')'
+        : ' (fallback)'));
+
     /* Ingere payload do paciente (síncrono) */
     _ingestPatientPayload(params);
 
@@ -1111,7 +1164,7 @@
   /* ── Executa imediatamente ── */
   _init();
 
-  console.log('[MedCases CSR v2.0] BUILD 460-CLINICAL-STEPS | Módulos: ' +
-    Object.keys(MODULE_META).join(', ') + ' | API: window.ClinicalSupportRouter');
+  console.log('[MedCases CSR v2.1] BUILD 461-I18N-FIX | Locale: ' + _activeLang +
+    ' | Módulos: ' + Object.keys(MODULE_META).join(', ') + ' | API: window.ClinicalSupportRouter');
 
 })();
