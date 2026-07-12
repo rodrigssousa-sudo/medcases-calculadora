@@ -1368,13 +1368,98 @@
   /* ───────────────────────────────────────────────────────────────
      INICIALIZAÇÃO
   ─────────────────────────────────────────────────────────────── */
+  /* ───────────────────────────────────────────────────────────────
+     BUILD 466-IOS-BOOT-FIX
+     _domReady(cb) — cross-engine safe: chama cb() assim que o DOM
+     estiver parseado, seja no iOS WebView, Android WebView ou browser.
+  ─────────────────────────────────────────────────────────────── */
+  function _domReady(cb) {
+    if (document.readyState !== 'loading') {
+      cb(); /* já pronto — desktop/Android fast-path */
+    } else {
+      document.addEventListener('DOMContentLoaded', cb, { once: true });
+    }
+  }
+
+  /* ───────────────────────────────────────────────────────────────
+     BUILD 466-IOS-BOOT-FIX
+     _isAppReady() — oracle de prontidão do ecossistema.
+     Retorna true SOMENTE quando todos os elementos críticos do
+     app shell já estão no DOM E o motor principal deu boot.
+     Critérios (em ordem de custo):
+       1. DOM parseado (readyState !== 'loading')
+       2. Input biométrico primário montado (#hm-weight)
+       3. Hub de cards montado (#hub-card-eletrolitos)
+       4. Motor de boot da calculadora sinalizado OU timeout de segurança
+  ─────────────────────────────────────────────────────────────── */
+  function _isAppReady() {
+    if (document.readyState === 'loading') return false;
+    if (!document.getElementById('hm-weight'))            return false; /* inputs biométricos */
+    if (!document.getElementById('hub-card-eletrolitos')) return false; /* hub principal */
+    return true;
+  }
+
+  /* ───────────────────────────────────────────────────────────────
+     BUILD 466-IOS-BOOT-FIX
+     _safeIosBootExecute(params, moduloKey, attempts)
+     Polling de segurança com backoff progressivo:
+       • Testa _isAppReady() a cada 100 ms (até 30 tentativas = 3 s)
+       • Se window._appBootComplete === true, executa imediatamente
+         mesmo sem todos os elementos (respeita sinal explícito do app)
+       • Se timeout estourar, executa de qualquer forma (fail-safe) para
+         não deixar o médico sem a conduta em iOS WebView lento
+       • Log detalhado para debugging de race-condition remota
+  ─────────────────────────────────────────────────────────────── */
+  var _BOOT_MAX_ATTEMPTS = 30; /* 30 × 100 ms = 3 s teto absoluto */
+
+  function _safeIosBootExecute(params, moduloKey, attempts) {
+    attempts = attempts || 0;
+
+    var appSignal   = window._appBootComplete === true;
+    var domReady    = _isAppReady();
+    var forceExec   = attempts >= _BOOT_MAX_ATTEMPTS;
+
+    if (appSignal || domReady || forceExec) {
+      /* ── Log de diagnóstico ── */
+      console.log(
+        '[CSR v2 iOS-Boot] Executando no attempt #' + attempts +
+        ' | appSignal=' + appSignal +
+        ' | domReady='  + domReady  +
+        ' | forced='    + forceExec
+      );
+
+      /* ── Ingestão biométrica ── */
+      _ingestPatientPayload(params);
+
+      /* ── CSS de condutas ── */
+      _injectTherapyCSS();
+
+      /* ── Abre view do módulo (se houver) ── */
+      if (moduloKey) {
+        /* Delay mínimo pós-detecção para garantir que o hub-accordion
+           terminou de montar seus event-listeners internos no iOS.     */
+        var delay = forceExec ? 0 : (domReady ? 60 : 40);
+        setTimeout(function () { _openView(moduloKey); }, delay);
+      }
+      return; /* polling encerrado */
+    }
+
+    /* DOM ainda não pronto — agenda próxima tentativa */
+    console.log('[CSR v2 iOS-Boot] Aguardando DOM… attempt #' + attempts + '/30');
+    setTimeout(function () {
+      _safeIosBootExecute(params, moduloKey, attempts + 1);
+    }, 100);
+  }
+
+  /* ───────────────────────────────────────────────────────────────
+     INICIALIZAÇÃO
+  ─────────────────────────────────────────────────────────────── */
   function _init() {
     var params;
     try { params = new URLSearchParams(window.location.search); } catch (e) { params = null; }
 
-    /* ── PASSO 1 (BUILD 461-I18N-FIX): resolve e persiste o idioma da URL ── */
+    /* ── Resolve e persiste idioma da URL (BUILD 461-I18N-FIX) ── */
     _activeLang = _resolveLang(params);
-    /* Propaga para o app shell se ele ainda não definiu */
     if (!window.currentLang) window.currentLang = _activeLang;
     console.log('[CSR v2] locale resolvido: ' + _activeLang +
       (params && (params.get('lang') || params.get('idioma'))
@@ -1386,13 +1471,9 @@
      * seja re-renderizada no idioma correto ao carregar via deeplink do Flutter.
      * Usa _waitGlobal() para tolerar o carregamento defer de index.html.         */
     if (_activeLang) {
-      /* 1) Persiste em localStorage — chave lida por _isES() e pelo DB de fármacos */
       try { localStorage.setItem('lang', _activeLang); } catch (e) { /* private browsing */ }
-      /* 2) Propaga window.currentLang e marcador de auto-detecção */
       window.currentLang = _activeLang;
       window._autoLang   = _activeLang;
-      /* 3) Dispara setLang() nativo com retry — função inline em index.html,
-       *    pode ainda não estar definida quando o script defer executa.           */
       _waitGlobal('setLang', function (setLangFn) {
         if (typeof setLangFn === 'function') {
           console.log('[CSR v2] setLang(' + _activeLang + ') disparado via _waitGlobal');
@@ -1401,27 +1482,22 @@
       });
     }
 
-    /* Ingere payload do paciente (síncrono) */
-    _ingestPatientPayload(params);
-
-    /* Injeta CSS de linhas terapêuticas */
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', _injectTherapyCSS);
-    } else {
-      _injectTherapyCSS();
-    }
-
+    /* ── Detecta módulo da URL ── */
     var moduloKey = _detectModulo();
     if (!moduloKey) {
+      /* Modo passivo: sem módulo na URL — só injeta biometria quando DOM pronto */
       console.log('[CSR v2] Sem ?modulo= ou /condutas/ — modo passivo.');
+      _domReady(function () { _ingestPatientPayload(params); _injectTherapyCSS(); });
       return;
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function () { _openView(moduloKey); });
-    } else {
-      setTimeout(function () { _openView(moduloKey); }, 80);
-    }
+    /* ── BUILD 466-IOS-BOOT-FIX: boot seguro com polling ── *
+     * Substitui o antigo par DOMContentLoaded/setTimeout(80ms) por um
+     * polling ativo que aguarda o ecossistema completo antes de executar.
+     * Compatível com: desktop Chrome/Firefox, Android WebView, iOS WKWebView,
+     * iOS UIWebView (legado), Safari e Progressive Web App offline.           */
+    console.log('[CSR v2 iOS-Boot] Módulo detectado: ' + moduloKey + ' — iniciando polling de boot…');
+    _safeIosBootExecute(params, moduloKey, 0);
   }
 
   /* ───────────────────────────────────────────────────────────────
@@ -1450,10 +1526,10 @@
     modules: function () { return Object.keys(MODULE_META); }
   };
 
-  /* ── Executa imediatamente ── */
+  /* ── Dispara boot seguro — iOS WebView + Desktop + Android ── */
   _init();
 
-  console.log('[MedCases CSR v2.3] BUILD 465-DYNAMIC-INTEGRATION | Locale: ' + _activeLang +
+  console.log('[MedCases CSR v2.4] BUILD 466-IOS-BOOT-FIX | Locale: ' + _activeLang +
     ' | Módulos: ' + Object.keys(MODULE_META).join(', ') + ' | API: window.ClinicalSupportRouter');
 
 })();
