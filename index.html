@@ -11,27 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <!-- BUILD 233: OBJ2 Grid | OBJ3 UX | OBJ6 Hemo | OBJ9 Animações -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=464" />
-  <link rel="stylesheet" href="css/build233.css?v=464" />
-  <link rel="stylesheet" href="css/build234-design-system.css?v=464" />
-  <link rel="stylesheet" href="css/build235-layout.css?v=464" />
-  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=464" />
-  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=464" />
-  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=464" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=465" />
+  <link rel="stylesheet" href="css/build233.css?v=465" />
+  <link rel="stylesheet" href="css/build234-design-system.css?v=465" />
+  <link rel="stylesheet" href="css/build235-layout.css?v=465" />
+  <link rel="stylesheet" href="css/build236-hub-redesign.css?v=465" />
+  <link rel="stylesheet" href="css/build237a-ux-refinement.css?v=465" />
+  <link rel="stylesheet" href="css/build237b-flush-cards.css?v=465" />
   <!-- BUILD 240B: Mobile UX Fix — inputs, accordion scroll, light mode, card-in-card -->
-  <link rel="stylesheet" href="css/build240b-fixes.css?v=464" />
+  <link rel="stylesheet" href="css/build240b-fixes.css?v=465" />
   <!-- BUILD 241C: UX Professionalization — tipografia, botões, inputs, cards unificados -->
-  <link rel="stylesheet" href="css/build241-ux-pro.css?v=464" />
+  <link rel="stylesheet" href="css/build241-ux-pro.css?v=465" />
   <!-- BUILD 243: Sub-tela Full-Screen para Calculadoras (substitui expansão inline no WebView) -->
-  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=464" />
+  <link rel="stylesheet" href="css/build243-fullscreen-overlay.css?v=465" />
   <!-- BUILD 244: Navegação por Categorias Clínicas (pills horizontais na busca de fármacos) -->
-  <link rel="stylesheet" href="css/build244-category-pills.css?v=464" />
+  <link rel="stylesheet" href="css/build244-category-pills.css?v=465" />
   <!-- BUILD 246: Refatoração Premium do Modal de Detalhe do Fármaco (Onda 3) -->
-  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=464" />
+  <link rel="stylesheet" href="css/build246-farmaco-modal-premium.css?v=465" />
   <!-- BUILD 254: UX Rescue & Interaction Audit — overscroll/dvh, anti-zoom iOS, grid 2-col forçado -->
-  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=464" />
+  <link rel="stylesheet" href="css/build254-critical-fixes.css?v=465" />
   <!-- BUILD 272: Universal Design System (.univ-*) + Live Dashboard ClCr + Reactive Engine (CSS) -->
-  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=464" />
+  <link rel="stylesheet" href="css/build272-universal-design-system.css?v=465" />
 
   <style>
     /* ============================================================ RESET */
@@ -7609,11 +7609,275 @@
   </style>
 
   <!-- MedCases UX v2 — Tema e contraste (Diretriz 5) -->
-  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=464" />
+  <link rel="stylesheet" href="css/medcases-ux-v2.css?v=465" />
 
   <!-- BUILD 251 — database/interacoes.js MOVIDO para o final do <body>
+  <!-- ═══════════════════════════════════════════════════════════════
+       BUILD 456-WEB-CONDUTAS: #clinical-support-view
+       Suporte de Decisão Clínica — Apple-Compliant Deeplink Receiver
+       Ativado via ?modulo=<nefrologia|cardiologia|eletrolitos|hepatologia>
+       ou via /condutas/<modulo> (SPA path routing)
+  ════════════════════════════════════════════════════════════════ -->
+  <div id="clinical-support-view" role="main" aria-label="Suporte de Decisão Médica">
+
+    <!-- Faixa minimizada (visível só quando .csr-minimized) -->
+    <div id="csr-minimized-bar">
+      <span class="csr-min-label" id="csr-min-label-text">Suporte Clínico Ativo</span>
+      <button class="csr-min-restore" onclick="document.getElementById('clinical-support-view').classList.remove('csr-minimized')">
+        Expandir ↑
+      </button>
+      <button class="csr-min-restore" style="background:#475569" onclick="window.ClinicalSupportRouter && window.ClinicalSupportRouter.close()">
+        Fechar ✕
+      </button>
+    </div>
+
+    <!-- Header / Banner de identificação seguro -->
+    <div id="csr-header">
+      <span id="csr-banner-title">🏥  Suporte de Decisão Médica</span>
+      <span id="csr-safe-badge">CLÍNICO</span>
+      <button id="csr-close-btn"
+        onclick="window.ClinicalSupportRouter && window.ClinicalSupportRouter.close()"
+        aria-label="Voltar para a Calculadora">
+        ← Voltar para a Calculadora
+      </button>
+    </div>
+
+    <!-- Miolo: conteúdo dinâmico renderizado pelo ClinicalSupportRouter -->
+    <div id="csr-content-body" aria-live="polite">
+      <!-- Preenchido dinamicamente pelo renderer do medcases-router.js -->
+    </div>
+
+  </div>
+  <!-- /clinical-support-view — BUILD 456-WEB-CONDUTAS -->
        (não bloqueia mais o FCP). Ver bloco de scripts de banco de dados
        próximo ao fechamento do documento. -->
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       BUILD 456-WEB-CONDUTAS: #clinical-support-view — Styles
+       Motor de Suporte Clínico — Apple-Compliant Deeplink Receiver
+  ════════════════════════════════════════════════════════════════ -->
+  <style id="csr-styles">
+    /* ── Fullscreen overlay — exibido via JS quando ?modulo= detectado ── */
+    #clinical-support-view {
+      display: none; /* JS ativa via ClinicalSupportRouter._openView() */
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      flex-direction: column;
+      background: #0f172a;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow: hidden;
+      --csr-color: #3B82F6;
+      --csr-accent: #1D4ED8;
+    }
+
+    /* Estado minimizado — faixa inferior que permite voltar */
+    #clinical-support-view.csr-minimized {
+      top: auto;
+      height: 56px;
+      flex-direction: row;
+      align-items: center;
+      border-top: 2px solid var(--csr-color);
+      background: #1e293b;
+      cursor: pointer;
+    }
+    #clinical-support-view.csr-minimized #csr-header,
+    #clinical-support-view.csr-minimized #csr-content-body { display: none; }
+    #clinical-support-view.csr-minimized #csr-minimized-bar { display: flex; }
+
+    /* ── Header / Banner de identificação ── */
+    #csr-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px 12px;
+      background: linear-gradient(135deg, var(--csr-accent) 0%, #0f172a 100%);
+      border-bottom: 2px solid var(--csr-color);
+      flex-shrink: 0;
+    }
+
+    #csr-banner-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #fff;
+      flex: 1;
+      line-height: 1.3;
+    }
+
+    #csr-safe-badge {
+      font-size: 0.7rem;
+      background: var(--csr-color);
+      color: #fff;
+      border-radius: 6px;
+      padding: 2px 9px;
+      margin-left: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    #csr-close-btn {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #cbd5e1;
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      margin-left: 14px;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    #csr-close-btn:hover { background: rgba(255,255,255,0.16); color: #fff; }
+
+    /* ── Corpo com scroll ── */
+    #csr-content-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 20px 32px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* ── Barra minimizada ── */
+    #csr-minimized-bar {
+      display: none;
+      align-items: center;
+      padding: 0 16px;
+      gap: 10px;
+      width: 100%;
+    }
+    #csr-minimized-bar .csr-min-label {
+      flex: 1;
+      font-size: 0.85rem;
+      color: var(--csr-color);
+      font-weight: 600;
+    }
+    #csr-minimized-bar .csr-min-restore {
+      background: var(--csr-color);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    /* ── Conteúdo dinâmico ── */
+    .csr-intro {
+      background: rgba(255,255,255,0.05);
+      border-left: 3px solid var(--csr-color);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 14px;
+      margin-bottom: 20px;
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.55;
+    }
+
+    .csr-section { margin-bottom: 24px; }
+    .csr-section h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 0 0 12px 0;
+      color: #e2e8f0;
+    }
+
+    .csr-drug-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+    }
+
+    .csr-drug-card {
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 12px 14px;
+      border-left: 4px solid #64748b;
+    }
+    .csr-card-danger { border-left-color: #EF4444; background: rgba(239,68,68,0.08); }
+    .csr-card-warn   { border-left-color: #F59E0B; background: rgba(245,158,11,0.07); }
+
+    .csr-drug-name {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #f1f5f9;
+      margin-bottom: 5px;
+    }
+
+    .csr-drug-warning, .csr-drug-adjust {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .csr-lookup-btn {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #93c5fd;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 0.76rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .csr-lookup-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+    .csr-footer-note {
+      margin-top: 28px;
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      font-size: 0.74rem;
+      color: #475569;
+      text-align: center;
+    }
+
+    .csr-empty {
+      text-align: center;
+      color: #475569;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+
+    .csr-redirect-msg {
+      text-align: center;
+      color: #10B981;
+      padding: 60px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .csr-loading {
+      text-align: center;
+      padding: 60px 20px;
+      color: #475569;
+    }
+    .csr-spinner {
+      width: 36px; height: 36px;
+      border: 3px solid rgba(255,255,255,0.1);
+      border-top-color: var(--csr-color);
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      animation: csr-spin 0.8s linear infinite;
+    }
+    @keyframes csr-spin { to { transform: rotate(360deg); } }
+
+    /* Esconde app quando CSR está ativo */
+    body.csr-active > *:not(#clinical-support-view) {
+      pointer-events: none;
+    }
+
+    /* ── Responsivo mobile ── */
+    @media (max-width: 480px) {
+      #csr-banner-title { font-size: 0.88rem; }
+      #csr-safe-badge   { display: none; }
+      .csr-drug-list    { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 <div id="app">
@@ -24319,8 +24583,8 @@ window.MedCasesBridge = {
      rotear, como segunda camada de proteção contra regressões
      futuras nesta cadeia de carregamento.
 ═══════════════════════════════════════════════════════════════ -->
-<script src="database/antimicrobianos.js?v=464"></script>
-<script src="database/analgesicos.js?v=464"></script>
+<script src="database/antimicrobianos.js?v=465"></script>
+<script src="database/analgesicos.js?v=465"></script>
 
 <!-- BUILD 378 PATCH A+C — LAZY LOAD (requestIdleCallback)
      cardio.js (2.5 MB), psicofarmacos.js (756 KB) e interacoes.js (1.2 MB)
@@ -24438,9 +24702,9 @@ window.MedCasesBridge = {
   }
 
   function _doLoad() {
-    _loadScript('database/psicofarmacos.js?v=464', 'psico');
-    _loadScript('database/cardio.js?v=464',        'cardio');
-    _loadScript('database/interacoes.js?v=464',   'interacoes');
+    _loadScript('database/psicofarmacos.js?v=465', 'psico');
+    _loadScript('database/cardio.js?v=465',        'cardio');
+    _loadScript('database/interacoes.js?v=465',   'interacoes');
   }
 
   if ('requestIdleCallback' in window) {
@@ -24450,60 +24714,61 @@ window.MedCasesBridge = {
   }
 })();
 </script>
-<script src="database/endocrino.js?v=464"></script>
-<script src="database/gastro.js?v=464"></script>
-<script src="database/gastro_imuno.js?v=464"></script>
-<script src="database/imuno_corticoide.js?v=464"></script>
-<script src="database/endocrino_glp1.js?v=464"></script>
-<script src="database/infusoes.js?v=464"></script>
-<script src="database/emergencia.js?v=464"></script>
-<script src="database/infectologia.js?v=464"></script>
-<script src="database/sedacao.js?v=464"></script>
-<script src="database/hematologia.js?v=464"></script>
-<script src="database/pneumologia.js?v=464"></script>
-<script src="database/gastroenterologia.js?v=464"></script>
-<script src="database/cardiologia.js?v=464"></script>
-<script src="database/analgesia_opioides.js?v=464"></script>
-<script src="database/alergia_imunologia.js?v=464"></script>
-<script src="database/pneumologia_otorrino.js?v=464"></script>
-<script src="database/neurologia.js?v=464"></script>
-<script src="database/nefro.js?v=464"></script>
-<script src="database/reumatologia.js?v=464"></script>
-<script src="database/anticoag.js?v=464"></script>
-<script src="database/psiquiatria.js?v=464"></script>
-<script src="database/toxicologia.js?v=464"></script>
-<script src="database/obesidade.js?v=464"></script>
-<script src="database/uro_ginecologia.js?v=464"></script>
-<script src="database/oftalmologia.js?v=464"></script>
-    <script src="database/ginecologia.js?v=464"></script>
-<script src="database/prescricoes.js?v=464" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
+<script src="database/endocrino.js?v=465"></script>
+<script src="database/gastro.js?v=465"></script>
+<script src="database/gastro_imuno.js?v=465"></script>
+<script src="database/imuno_corticoide.js?v=465"></script>
+<script src="database/endocrino_glp1.js?v=465"></script>
+<script src="database/infusoes.js?v=465"></script>
+<script src="database/emergencia.js?v=465"></script>
+<script src="database/infectologia.js?v=465"></script>
+<script src="database/sedacao.js?v=465"></script>
+<script src="database/hematologia.js?v=465"></script>
+<script src="database/pneumologia.js?v=465"></script>
+<script src="database/gastroenterologia.js?v=465"></script>
+<script src="database/cardiologia.js?v=465"></script>
+<script src="database/analgesia_opioides.js?v=465"></script>
+<script src="database/alergia_imunologia.js?v=465"></script>
+<script src="database/pneumologia_otorrino.js?v=465"></script>
+<script src="database/neurologia.js?v=465"></script>
+<script src="database/nefro.js?v=465"></script>
+<script src="database/reumatologia.js?v=465"></script>
+<script src="database/anticoag.js?v=465"></script>
+<script src="database/psiquiatria.js?v=465"></script>
+<script src="database/toxicologia.js?v=465"></script>
+<script src="database/obesidade.js?v=465"></script>
+<script src="database/uro_ginecologia.js?v=465"></script>
+<script src="database/oftalmologia.js?v=465"></script>
+    <script src="database/ginecologia.js?v=465"></script>
+<script src="database/prescricoes.js?v=465" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=464"></script>
+<script defer src="js/medcases-ux-v2.js?v=465"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
-<script defer src="js/hub-accordion.js?v=464"></script>
+<script defer src="js/hub-accordion.js?v=465"></script>
 
 <!-- BUILD 240B: Accordion scroll fix + keyboard stable focus (Fix 2+3) -->
-<script defer src="js/build240b-accordion-fix.js?v=464"></script>
+<script defer src="js/build240b-accordion-fix.js?v=465"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=464"></script>
+<script defer src="js/calculator-overlay.js?v=465"></script>
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
-<script defer src="js/category-pills.js?v=464"></script>
+<script defer src="js/category-pills.js?v=465"></script>
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=464"></script>
+<script defer src="js/elec-calc.js?v=465"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/deeplink-router.js?v=464"></script>
+<script defer src="js/medcases-router.js?v=465"></script>
+    <script defer src="js/deeplink-router.js?v=465"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
-<script defer src="js/build272-reactive-engine.js?v=464"></script>
+<script defer src="js/build272-reactive-engine.js?v=465"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=464"></script>
+<script defer src="js/build283-accessory-bar.js?v=465"></script>
 
 <!-- PWA Offline Service Worker Registration -->
 <script>
