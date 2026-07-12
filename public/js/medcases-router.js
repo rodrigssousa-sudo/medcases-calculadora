@@ -379,7 +379,7 @@
         'width:100vw',
         'height:100vh',
         'background:#111827',
-        'z-index:999999',
+        'z-index:9999999',
         'overflow-y:auto',
         'padding:20px',
         'box-sizing:border-box',
