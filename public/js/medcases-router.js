@@ -1112,6 +1112,26 @@
         ? ' (URL param: ' + (params.get('lang') || params.get('idioma')) + ')'
         : ' (fallback)'));
 
+    /* ── BUILD 462: propaga idioma para o sistema i18n nativo da calculadora ── *
+     * Garante que toda a UI (data-i18n, banners, bulas, renderDrugList, etc.)
+     * seja re-renderizada no idioma correto ao carregar via deeplink do Flutter.
+     * Usa _waitGlobal() para tolerar o carregamento defer de index.html.         */
+    if (_activeLang) {
+      /* 1) Persiste em localStorage — chave lida por _isES() e pelo DB de fármacos */
+      try { localStorage.setItem('lang', _activeLang); } catch (e) { /* private browsing */ }
+      /* 2) Propaga window.currentLang e marcador de auto-detecção */
+      window.currentLang = _activeLang;
+      window._autoLang   = _activeLang;
+      /* 3) Dispara setLang() nativo com retry — função inline em index.html,
+       *    pode ainda não estar definida quando o script defer executa.           */
+      _waitGlobal('setLang', function (setLangFn) {
+        if (typeof setLangFn === 'function') {
+          console.log('[CSR v2] setLang(' + _activeLang + ') disparado via _waitGlobal');
+          setLangFn(_activeLang);
+        }
+      });
+    }
+
     /* Ingere payload do paciente (síncrono) */
     _ingestPatientPayload(params);
 
@@ -1164,7 +1184,7 @@
   /* ── Executa imediatamente ── */
   _init();
 
-  console.log('[MedCases CSR v2.1] BUILD 461-I18N-FIX | Locale: ' + _activeLang +
+  console.log('[MedCases CSR v2.2] BUILD 462-I18N-REACTIVITY | Locale: ' + _activeLang +
     ' | Módulos: ' + Object.keys(MODULE_META).join(', ') + ' | API: window.ClinicalSupportRouter');
 
 })();
