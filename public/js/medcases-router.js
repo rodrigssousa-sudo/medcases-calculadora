@@ -371,18 +371,52 @@
     var lang = (window.currentLang || localStorage.getItem('lang') || 'pt');
 
     _waitEl('clinical-support-view', function (view) {
+      /* ── CSS ABSOLUTO INVIOLÁVEL: sobrepõe acordeões e preenche janela ── */
+      view.style.cssText = [
+        'position:fixed',
+        'top:0',
+        'left:0',
+        'width:100vw',
+        'height:100vh',
+        'background:#111827',
+        'z-index:999999',
+        'overflow-y:auto',
+        'padding:20px',
+        'box-sizing:border-box',
+        'color:#fff',
+        'font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
+        'display:flex',
+        'flex-direction:column'
+      ].join(';') + ';';
+
+      /* Cor temática dinâmica via CSS var (complementa o cssText) */
+      view.style.setProperty('--csr-color', mod.color);
+      view.style.setProperty('--csr-accent', mod.accent);
+
       /* Banner: título do módulo */
       var bannerEl = document.getElementById('csr-banner-title');
       if (bannerEl) {
         bannerEl.textContent = mod.emoji + '  Suporte de Decisão Médica — ' + (lang === 'es' ? mod.label.es : mod.label.pt);
       }
 
-      /* Cor temática dinâmica */
-      view.style.setProperty('--csr-color', mod.color);
-      view.style.setProperty('--csr-accent', mod.accent);
+      /* Botão Fechar: injeta handler direto no DOM para resposta imediata */
+      var closeBtn = document.getElementById('csr-close-btn');
+      if (closeBtn) {
+        closeBtn.onclick = function () {
+          document.getElementById('clinical-support-view').style.display = 'none';
+          window.scrollTo(0, 0);
+          /* Restaura o hub principal */
+          var hub = document.getElementById('hub-root') || document.querySelector('.hub-wrapper') || document.getElementById('app');
+          if (hub) hub.style.display = '';
+          document.body.classList.remove('csr-active');
+          try {
+            var p = new URLSearchParams(window.location.search);
+            p.delete('modulo');
+            history.replaceState(null, '', window.location.pathname + (p.toString() ? '?' + p.toString() : ''));
+          } catch (e) { /* iOS Safari private */ }
+        };
+      }
 
-      /* Exibe a view em fullscreen */
-      view.style.display = 'flex';
       view.classList.remove('csr-minimized');
       document.body.classList.add('csr-active');
 
@@ -426,9 +460,41 @@
   }
 
   /* ─────────────────────────────────────────────────────────────────
+     INGESTÃO AUTOMÁTICA DE PAYLOAD DO PACIENTE
+     Captura ?peso=&idade=&creatinina=&clcr=&kdigo=&child_pugh= da URL
+     e popula window.patientData, disparando _onPatientDataUpdated().
+  ───────────────────────────────────────────────────────────────── */
+  function _ingestPatientPayload(params) {
+    if (!params) return;
+    window.patientData = window.patientData || {};
+    var fields = ['peso', 'idade', 'creatinina', 'clcr', 'kdigo', 'child_pugh'];
+    var updated = false;
+    fields.forEach(function (f) {
+      var v = params.get(f);
+      if (v !== null && v !== '') {
+        window.patientData[f] = v;
+        updated = true;
+      }
+    });
+    if (updated) {
+      console.log('[CSR] patientData ingerido da URL:', JSON.stringify(window.patientData));
+      if (typeof window._onPatientDataUpdated === 'function') {
+        try { window._onPatientDataUpdated(window.patientData); }
+        catch (e) { console.warn('[CSR] _onPatientDataUpdated lançou erro:', e); }
+      }
+    }
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
      INICIALIZAÇÃO — executa cedo, antes do HubAccordion
   ───────────────────────────────────────────────────────────────── */
   function _init() {
+    var params;
+    try { params = new URLSearchParams(window.location.search); } catch (e) { params = null; }
+
+    /* PASSO 2 — Ingere payload do paciente (campos médicos da query string) */
+    _ingestPatientPayload(params);
+
     var moduloKey = _detectModulo();
     if (!moduloKey) {
       console.log('[CSR] Sem parâmetro ?modulo= ou /condutas/ — modo passivo.');
