@@ -358,6 +358,9 @@
         try { window._onPatientDataUpdated(window.patientData); } catch (e) { /* noop */ }
       }
       console.log('[CSR v2] Inputs biométricos injetados no DOM ✅ (' + hits + ' campos)');
+
+      /* ── BUILD 479: recálculo compulsório de ClCr após injeção dos defaults ── */
+      _forceCockcroft(0);
     }
 
     /* Aguarda DOM pronto antes de tentar injetar */
@@ -1688,6 +1691,108 @@
   }
 
   /* ───────────────────────────────────────────────────────────────
+     BUILD 479-ULTRA-RESILIENT
+     CLINICAL_DEFAULTS — Valores padrão clínicos seguros.
+     Aplicados quando a URL chega incompleta (ex: "?lang=es" sem
+     dados biométricos). Permitem que o motor de condutas opere
+     em modo de demonstração funcional sem travar por falta de
+     parâmetros — o médico pode ajustar os inputs livremente.
+     Estes valores NÃO sobrescrevem dados reais já presentes.
+  ─────────────────────────────────────────────────────────────── */
+  var CLINICAL_DEFAULTS = {
+    peso:       '70',
+    altura:     '170',
+    idade:      '45',
+    creatinina: '1.0',
+    sexo:       'M'
+  };
+
+  /* Módulo de fallback quando ?modulo= não está presente na URL */
+  var MODULO_FALLBACK = 'cardiologia';
+
+  /* ───────────────────────────────────────────────────────────────
+     BUILD 479-ULTRA-RESILIENT
+     _applyClinicialFallbacks(params)
+     Aplica CLINICAL_DEFAULTS para campos ausentes/vazios na URL.
+     Retorna um adapter enriquecido cujo .get() retorna o valor
+     real da URL quando presente, ou o fallback seguro quando não.
+     Garante que _ingestPatientPayload e _safeIosBootExecute sempre
+     recebam dados viáveis independente da completude da URL.
+  ─────────────────────────────────────────────────────────────── */
+  function _applyClinicialFallbacks(params) {
+    var enriched = {};
+
+    /* Copia todos os campos da URL real primeiro */
+    var BIOMETRIC_KEYS = ['peso', 'altura', 'idade', 'creatinina', 'clcr',
+                          'sexo', 'kdigo', 'child_pugh', 'chads_vasc',
+                          'has_bled', 'ascvd', 'hco3', 'na', 'k', 'mg',
+                          'lang', 'idioma', 'modulo'];
+    BIOMETRIC_KEYS.forEach(function (k) {
+      var v = params ? params.get(k) : null;
+      if (v !== null && v !== '') { enriched[k] = v; }
+    });
+
+    /* Aplica defaults apenas para campos biométricos ausentes */
+    var applied = [];
+    Object.keys(CLINICAL_DEFAULTS).forEach(function (k) {
+      if (!enriched[k]) {
+        enriched[k] = CLINICAL_DEFAULTS[k];
+        applied.push(k + '=' + CLINICAL_DEFAULTS[k]);
+      }
+    });
+
+    if (applied.length > 0) {
+      console.warn('[CSR v479] URL incompleta — aplicando fallbacks clínicos seguros: ' + applied.join(', '));
+      /* Expõe para o painel de telemetria */
+      window._csrFallbacksApplied = applied.join(' | ');
+    } else {
+      window._csrFallbacksApplied = null;
+    }
+
+    /* Retorna adapter duck-typed compatível com URLSearchParams.get() */
+    return {
+      get: function (k) {
+        return (enriched[k] !== undefined && enriched[k] !== null) ? String(enriched[k]) : null;
+      },
+      _enriched: enriched,   /* debug: acesso direto ao mapa */
+      _hadFallbacks: applied.length > 0
+    };
+  }
+
+  /* ───────────────────────────────────────────────────────────────
+     BUILD 479-ULTRA-RESILIENT
+     _forceCockcroft()
+     Força o recálculo do Clearance de Creatinina via Cockcroft-
+     Gault após injeção dos defaults, garantindo que o campo ClCr
+     mostre valor real e não "---" na tela do médico.
+     Usa polling leve (5 tentativas × 200ms) para aguardar o motor
+     hmCalcCockcroft() estar disponível.
+  ─────────────────────────────────────────────────────────────── */
+  function _forceCockcroft(attempt) {
+    attempt = attempt || 0;
+    if (typeof window.hmCalcCockcroft === 'function') {
+      try {
+        window.hmCalcCockcroft();
+        console.log('[CSR v479] hmCalcCockcroft() disparado compulsoriamente — ClCr calculado.');
+      } catch (e) { /* noop — motor pode não ter inputs ainda */ }
+      /* Dispara também _hmComputeDerived para IMC / Peso Ideal / BSA */
+      if (typeof window._hmComputeDerived === 'function') {
+        try {
+          var pd = window.patientData || {};
+          var derived = window._hmComputeDerived(pd);
+          window.patientData = Object.assign(pd, derived || {});
+        } catch (e) { /* noop */ }
+      }
+      /* Sincroniza Live Dashboard se disponível */
+      if (typeof window._clcrLiveDashboardSync === 'function') {
+        try { window._clcrLiveDashboardSync(); } catch (e) { /* noop */ }
+      }
+    } else if (attempt < 5) {
+      setTimeout(function () { _forceCockcroft(attempt + 1); }, 200);
+    }
+  }
+
+  /* ───────────────────────────────────────────────────────────────
      INICIALIZAÇÃO
   ─────────────────────────────────────────────────────────────── */
   function _init() {
@@ -1718,25 +1823,55 @@
       });
     }
 
-    /* ── Detecta módulo da URL ── */
+    /* ── BUILD 479-ULTRA-RESILIENT: enriquece params com fallbacks clínicos ──
+     * Garante que mesmo URLs incompletas como "?lang=es" recebam dados
+     * biométricos padrão seguros para não travar o motor de condutas.         */
+    var enrichedParams = _applyClinicialFallbacks(params);
+
+    /* ── Detecta módulo da URL (ou aplica MODULO_FALLBACK) ── */
     var moduloKey = _detectModulo();
+
+    /* BUILD 479: se não há módulo na URL mas a URL tem pelo menos ?lang=,
+       ativa o MODULO_FALLBACK para garantir que o motor nunca fique inerte.
+       Instala também o Path-A listener para captura assíncrona.             */
     if (!moduloKey) {
-      /* Modo passivo: sem módulo na URL — só injeta biometria quando DOM pronto.
-         BUILD 477-WEBVIEW-HEAL PATH-A: instala listener para capturar injeção
-         assíncrona de URL pelo Flutter APÓS este return (fix race condition iOS). */
-      console.log('[CSR v2] Sem ?modulo= ou /condutas/ — modo passivo. Instalando URL mutation listener…');
-      _installUrlMutationListener();
-      _domReady(function () { _ingestPatientPayload(params); _injectTherapyCSS(); });
-      return;
+      var hasAnyParam = params && (
+        params.get('lang')    || params.get('idioma') ||
+        params.get('peso')    || params.get('modulo') ||
+        params.get('clcr')    || params.get('creatinina')
+      );
+
+      if (hasAnyParam) {
+        /* URL chegou do Flutter mas sem ?modulo= — usa MODULO_FALLBACK */
+        moduloKey = MODULO_FALLBACK;
+        console.warn('[CSR v479] URL com params mas sem ?modulo= — usando fallback: ' + MODULO_FALLBACK);
+      } else {
+        /* Totalmente sem params — modo passivo com Path-A listener */
+        console.log('[CSR v2] Sem ?modulo= ou /condutas/ — modo passivo. Instalando URL mutation listener…');
+        _installUrlMutationListener();
+        _domReady(function () {
+          _ingestPatientPayload(enrichedParams);
+          _injectTherapyCSS();
+        });
+        return;
+      }
     }
 
-    /* ── BUILD 466-IOS-BOOT-FIX: boot seguro com polling ── *
-     * Substitui o antigo par DOMContentLoaded/setTimeout(80ms) por um
-     * polling ativo que aguarda o ecossistema completo antes de executar.
-     * Compatível com: desktop Chrome/Firefox, Android WebView, iOS WKWebView,
-     * iOS UIWebView (legado), Safari e Progressive Web App offline.           */
-    console.log('[CSR v2 iOS-Boot] Módulo detectado: ' + moduloKey + ' — iniciando polling de boot…');
-    _safeIosBootExecute(params, moduloKey, 0);
+    /* ── BUILD 466-IOS-BOOT-FIX + BUILD 479: boot seguro com params enriquecidos ── *
+     * Usa enrichedParams (com fallbacks) em vez de params brutos, garantindo que
+     * _ingestPatientPayload sempre receba dados viáveis para injetar no DOM.
+     * Após injeção: _forceCockcroft() dispara recálculo compulsório de ClCr.    */
+    console.log('[CSR v2 iOS-Boot] Módulo: ' + moduloKey +
+      (enrichedParams._hadFallbacks ? ' [com fallbacks clínicos v479]' : '') +
+      ' — iniciando polling de boot…');
+
+    /* Instala Path-A como safety-net mesmo em modo ativo — captura re-injeções */
+    _installUrlMutationListener();
+
+    _safeIosBootExecute(enrichedParams, moduloKey, 0);
+
+    /* Força recálculo de ClCr após boot (delay para aguardar DOM + injeção) */
+    setTimeout(function () { _forceCockcroft(0); }, 600);
   }
 
   /* ───────────────────────────────────────────────────────────────
@@ -1855,163 +1990,167 @@
   /* ── Dispara boot seguro — iOS WebView + Desktop + Android ── */
   _init();
 
-  console.log('[MedCases CSR v2.5] BUILD 478-TELEMETRY | Locale: ' + _activeLang +
+  console.log('[MedCases CSR v2.5] BUILD 479-ULTRA-RESILIENT | Locale: ' + _activeLang +
     ' | Módulos: ' + Object.keys(MODULE_META).join(', ') +
     ' | API: window.ClinicalSupportRouter' +
     ' | PATH-A: URL mutation listener' +
     ' | PATH-C: injectPatient(payload)' +
-    ' | TELEMETRY: painel on-screen ativo');
+    ' | FALLBACKS: clinical defaults ativos' +
+    ' | TELEMETRY: window.toggleMCTelemetry()');
 
   /* ═══════════════════════════════════════════════════════════════
-     BUILD 478-TELEMETRY — PAINEL DE DIAGNÓSTICO ON-SCREEN
-     Painel visual flutuante para depuração direta no dispositivo
-     iOS sem acesso ao Safari Remote Inspector.
+     BUILD 479-ULTRA-RESILIENT — TELEMETRIA SOB DEMANDA
+     O painel de diagnóstico foi movido para modo silencioso:
+     NÃO é injetado automaticamente no viewport do usuário.
 
-     Exibe em tempo real (250ms):
-       • URL atual (window.location.href)
-       • window.patientData (JSON serializado)
-       • window._appBootComplete
-       • _domIsViable() oracle
-       • Contador de intercepts do Path A (_csrHistoryInterceptCount)
-       • Último erro JS capturado via window.onerror
+     ATIVAÇÃO:
+       • Via console do browser:  window.toggleMCTelemetry()
+       • Via Flutter evaluateJS:  window.toggleMCTelemetry()
+       • Para fechar:             window.toggleMCTelemetry() novamente
+         (toggle — mesma função liga e desliga)
 
-     REMOÇÃO: para desativar o painel em produção, basta remover
-     este bloco ou setar window._csrTelemetryDisabled = true antes
-     do carregamento do script.
+     O painel permanece completamente invisível em produção normal.
+     Erros JS continuam sendo capturados silenciosamente em
+     window._csrLastError para consulta posterior via console.
   ═══════════════════════════════════════════════════════════════ */
-  (function _initTelemetryPanel() {
-    /* Guard: desativa via flag global ou se já injetado */
-    if (window._csrTelemetryDisabled) return;
-    if (document.getElementById('mc-telemetry')) return;
 
-    /* Aguarda body estar disponível antes de injetar */
-    function _inject() {
-      if (!document.body) { setTimeout(_inject, 50); return; }
-      if (document.getElementById('mc-telemetry')) return; /* double-check */
+  /* ── Captura silenciosa de erros — sempre ativa, sem painel ── */
+  window._csrLastError = null;
+  window.addEventListener('error', function (e) {
+    window._csrLastError = {
+      message:  e.message  || 'erro desconhecido',
+      filename: (e.filename || '').split('/').pop() || '?',
+      lineno:   e.lineno   || '?',
+      ts:       new Date().toISOString()
+    };
+  });
+  window.addEventListener('unhandledrejection', function (e) {
+    var msg = (e.reason && e.reason.message) ? e.reason.message : String(e.reason || 'Promise rejected');
+    window._csrLastError = { message: 'Promise: ' + msg, filename: 'async', lineno: '?', ts: new Date().toISOString() };
+  });
 
-      var div = document.createElement('div');
-      div.id = 'mc-telemetry';
-      div.setAttribute('style', [
-        'position:fixed',
-        'bottom:5px',
-        'right:5px',
-        'left:5px',
-        'background:rgba(0,0,0,0.93)',
-        'color:#00ff00',
-        'font-family:monospace',
-        'font-size:10px',
-        'line-height:1.4',
-        'z-index:999999',
-        'padding:8px 10px',
-        'border:2px solid #ffcc00',
-        'border-radius:6px',
-        'max-height:165px',
-        'overflow-y:auto',
-        'pointer-events:none',
-        'box-shadow:0 0 12px rgba(0,255,0,0.25)',
-        'word-break:break-all'
-      ].join(';'));
+  /* ── Função de injeção do painel (chamada sob demanda) ── */
+  function _buildTelemetryPanel() {
+    if (document.getElementById('mc-telemetry')) {
+      /* Toggle: se já existe, remove */
+      var existing = document.getElementById('mc-telemetry');
+      existing.parentNode.removeChild(existing);
+      console.log('[CSR Telemetry] Painel removido.');
+      return;
+    }
 
-      div.innerHTML =
-        '<span style="color:#ffcc00;font-weight:bold">[MedCases Telemetria v478]</span>' +
-        ' <span style="color:#666;font-size:9px">tap fora para interagir</span><br>' +
-        '&#x25B6; <span style="color:#aaa">URL:</span> ' +
-          '<span id="tel-url" style="color:#7df">...</span><br>' +
-        '&#x25B6; <span style="color:#aaa">Data:</span> ' +
-          '<span id="tel-data" style="color:#7f7">...</span><br>' +
-        '&#x25B6; <span style="color:#aaa">Boot:</span> ' +
-          '<span id="tel-boot">...</span>' +
-        ' &nbsp;<span style="color:#aaa">DOM:</span> ' +
-          '<span id="tel-dom">...</span><br>' +
-        '&#x25B6; <span style="color:#aaa">Intercepts:</span> ' +
-          '<span id="tel-hist" style="color:#fa0">0</span>' +
-        ' &nbsp;<span style="color:#aaa">Lang:</span> ' +
-          '<span id="tel-lang" style="color:#c9f">...</span><br>' +
-        '&#x25B6; <span style="color:#aaa">Módulo:</span> ' +
-          '<span id="tel-mod" style="color:#ffa">...</span><br>' +
-        '&#x25B6; <span style="color:#aaa">Err:</span> ' +
-          '<span id="tel-err" style="color:#ff5555">Nenhum</span>';
+    var div = document.createElement('div');
+    div.id = 'mc-telemetry';
+    div.setAttribute('style', [
+      'position:fixed',
+      'bottom:5px',
+      'right:5px',
+      'left:5px',
+      'background:rgba(0,0,0,0.93)',
+      'color:#00ff00',
+      'font-family:monospace',
+      'font-size:10px',
+      'line-height:1.5',
+      'z-index:999999',
+      'padding:8px 10px',
+      'border:2px solid #ffcc00',
+      'border-radius:6px',
+      'max-height:175px',
+      'overflow-y:auto',
+      'pointer-events:none',
+      'box-shadow:0 0 14px rgba(0,255,0,0.3)',
+      'word-break:break-all'
+    ].join(';'));
 
-      document.body.appendChild(div);
+    div.innerHTML =
+      '<span style="color:#ffcc00;font-weight:bold">[MedCases Telemetria v479]</span>' +
+      ' <span style="color:#555;font-size:9px">toggleMCTelemetry() p/ fechar</span><br>' +
+      '&#x25B6; <span style="color:#aaa">URL:</span> ' +
+        '<span id="tel-url" style="color:#7df">...</span><br>' +
+      '&#x25B6; <span style="color:#aaa">Data:</span> ' +
+        '<span id="tel-data" style="color:#7f7">...</span><br>' +
+      '&#x25B6; <span style="color:#aaa">Boot:</span> ' +
+        '<span id="tel-boot">...</span>' +
+      '&nbsp;<span style="color:#aaa">DOM:</span> ' +
+        '<span id="tel-dom">...</span><br>' +
+      '&#x25B6; <span style="color:#aaa">Intercepts:</span> ' +
+        '<span id="tel-hist" style="color:#fa0">0</span>' +
+      '&nbsp;<span style="color:#aaa">Lang:</span> ' +
+        '<span id="tel-lang" style="color:#c9f">...</span>' +
+      '&nbsp;<span style="color:#aaa">Mod:</span> ' +
+        '<span id="tel-mod" style="color:#ffa">...</span><br>' +
+      '&#x25B6; <span style="color:#aaa">Fallback:</span> ' +
+        '<span id="tel-fb" style="color:#f90">...</span><br>' +
+      '&#x25B6; <span style="color:#aaa">Err:</span> ' +
+        '<span id="tel-err" style="color:#ff5555">Nenhum</span>';
 
-      /* ── Atualização em tempo real — 250ms ── */
-      setInterval(function () {
-        var elUrl  = document.getElementById('tel-url');
-        var elData = document.getElementById('tel-data');
-        var elBoot = document.getElementById('tel-boot');
-        var elDom  = document.getElementById('tel-dom');
-        var elHist = document.getElementById('tel-hist');
-        var elLang = document.getElementById('tel-lang');
-        var elMod  = document.getElementById('tel-mod');
-        if (!elUrl) return; /* painel removido externamente */
+    if (!document.body) { console.warn('[CSR Telemetry] body não disponível.'); return; }
+    document.body.appendChild(div);
 
-        /* URL: exibe só a parte de search+hash para economizar espaço */
-        var search = window.location.search || '(vazio)';
-        var proto  = window.location.protocol;
-        elUrl.innerText = proto + ' ' + search;
+    /* ── Atualização em tempo real 250ms ── */
+    var _telTimer = setInterval(function () {
+      if (!document.getElementById('mc-telemetry')) { clearInterval(_telTimer); return; }
 
-        /* PatientData: serializa apenas campos relevantes */
-        var pd = window.patientData;
-        if (pd && typeof pd === 'object') {
-          var fields = ['peso','idade','clcr','sexo','creatinina','modulo'];
-          var parts = [];
-          fields.forEach(function(k){ if (pd[k] != null) parts.push(k + ':' + pd[k]); });
-          elData.innerText = parts.length ? '{' + parts.join(', ') + '}' : '{}';
-        } else {
-          elData.innerText = 'null';
-        }
+      var elUrl  = document.getElementById('tel-url');
+      var elData = document.getElementById('tel-data');
+      var elBoot = document.getElementById('tel-boot');
+      var elDom  = document.getElementById('tel-dom');
+      var elHist = document.getElementById('tel-hist');
+      var elLang = document.getElementById('tel-lang');
+      var elMod  = document.getElementById('tel-mod');
+      var elFb   = document.getElementById('tel-fb');
+      var elErr  = document.getElementById('tel-err');
+      if (!elUrl) { clearInterval(_telTimer); return; }
 
-        /* Boot signal */
-        var boot = window._appBootComplete === true;
-        elBoot.style.color = boot ? '#00ff00' : '#ff8800';
-        elBoot.innerText = boot ? 'TRUE ✓' : 'false';
+      var search = window.location.search || '(vazio)';
+      elUrl.innerText = window.location.protocol + ' ' + search;
 
-        /* DOM viability oracle */
-        var viable = false;
-        try { viable = (typeof _domIsViable === 'function') ? _domIsViable() : false; } catch(e) {}
-        elDom.style.color = viable ? '#00ff00' : '#ff5555';
-        elDom.innerText = viable ? 'OK ✓' : 'FAIL ✗';
+      var pd = window.patientData;
+      if (pd && typeof pd === 'object') {
+        var parts = [];
+        ['peso','idade','clcr','sexo','creatinina'].forEach(function(k){
+          if (pd[k] != null) parts.push(k + ':' + pd[k]);
+        });
+        elData.innerText = parts.length ? '{' + parts.join(', ') + '}' : '{}';
+      } else { elData.innerText = 'null'; }
 
-        /* Intercept counter */
-        elHist.innerText = String(window._csrHistoryInterceptCount || 0);
+      var boot = window._appBootComplete === true;
+      elBoot.style.color = boot ? '#00ff00' : '#ff8800';
+      elBoot.innerText = boot ? 'TRUE✓ ' : 'false ';
 
-        /* Idioma ativo */
-        elLang.innerText = (window.currentLang || window._activeLang || _activeLang || '?');
+      var viable = false;
+      try { viable = (typeof _domIsViable === 'function') ? _domIsViable() : false; } catch(e) {}
+      elDom.style.color = viable ? '#00ff00' : '#ff5555';
+      elDom.innerText = viable ? 'DOM✓' : 'DOM✗';
 
-        /* Módulo ativo */
-        elMod.innerText = (window._csrActiveModulo || _activeModulo || '—');
+      elHist.innerText = String(window._csrHistoryInterceptCount || 0);
+      elLang.innerText = (window.currentLang || _activeLang || '?');
+      elMod.innerText  = (_activeModulo || '—');
 
-      }, 250);
+      /* Fallbacks aplicados */
+      elFb.innerText = window._csrFallbacksApplied
+        ? window._csrFallbacksApplied
+        : 'nenhum';
 
-      /* ── Captura global de erros JS ── */
-      window.addEventListener('error', function (e) {
-        var elErr = document.getElementById('tel-err');
-        if (!elErr) return;
-        var fname = (e.filename || '').split('/').pop() || '?';
-        elErr.innerText = (e.message || 'erro') +
-          ' (' + fname + ':' + (e.lineno || '?') + ')';
+      /* Último erro capturado */
+      var err = window._csrLastError;
+      if (err) {
+        elErr.innerText = err.message.substring(0, 70) +
+          ' (' + err.filename + ':' + err.lineno + ')';
         elErr.style.color = '#ff3333';
-        elErr.style.fontWeight = 'bold';
-      });
+      }
+    }, 250);
 
-      /* ── Captura rejeições de Promise não tratadas ── */
-      window.addEventListener('unhandledrejection', function (e) {
-        var elErr = document.getElementById('tel-err');
-        if (!elErr) return;
-        var msg = (e.reason && e.reason.message) ? e.reason.message : String(e.reason || 'Promise rejected');
-        elErr.innerText = 'Promise: ' + msg.substring(0, 80);
-        elErr.style.color = '#ff9933';
-      });
+    console.log('[CSR Telemetry v479] Painel on-screen ativado — 250ms refresh. toggleMCTelemetry() p/ fechar.');
+  }
 
-      console.log('[CSR Telemetry v478] Painel on-screen injetado — 250ms refresh ativo.');
-    }
-
-    /* Injeta imediatamente se body existir, ou após DOM pronto */
-    if (document.body) {
-      _inject();
+  /* ── API pública de toggle — ativação sob demanda ── */
+  window.toggleMCTelemetry = function () {
+    if (!document.body) {
+      document.addEventListener('DOMContentLoaded', _buildTelemetryPanel, { once: true });
     } else {
-      document.addEventListener('DOMContentLoaded', _inject, { once: true });
+      _buildTelemetryPanel();
     }
-  })();
+  };
 
 })();
