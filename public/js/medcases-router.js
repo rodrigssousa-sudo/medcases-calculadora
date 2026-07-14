@@ -1611,6 +1611,80 @@
   }
 
   /* ───────────────────────────────────────────────────────────────
+     BUILD 477-WEBVIEW-HEAL — PATH A
+     _installUrlMutationListener()
+     Intercepta mutações assíncronas de URL injetadas pelo Flutter
+     via history.replaceState / pushState / popstate.
+     Soluciona o caso em que o WKWebView é aberto com file:// ou
+     URL sem query string e o Flutter injeta os params clínicos
+     APÓS o boot do IIFE (race condition de carregamento assíncrono).
+
+     Garantias:
+       • Guard window._csrUrlListenerActive evita registro duplo.
+       • Re-exec só quando a nova URL contém params clínicos válidos
+         (evita re-init em navegações internas sem dados).
+       • Monkey-patch não-destrutivo: mantém comportamento original
+         do replaceState/pushState — só adiciona callback pós-chamada.
+       • Compatível com iOS 12+, Android WebView, Chrome desktop.
+  ─────────────────────────────────────────────────────────────── */
+  function _installUrlMutationListener() {
+    /* Guard: instala apenas uma vez por contexto de página */
+    if (window._csrUrlListenerActive) return;
+    window._csrUrlListenerActive = true;
+
+    /* Parâmetros clínicos que indicam payload válido de paciente */
+    var CLINICAL_PARAMS = ['modulo', 'peso', 'clcr', 'idade', 'creatinina',
+                           'sexo', 'lang', 'idioma', 'kdigo', 'child_pugh'];
+
+    /* Verifica se a query string atual contém ao menos 1 param clínico */
+    function _hasClinicalParams() {
+      try {
+        var p = new URLSearchParams(window.location.search);
+        return CLINICAL_PARAMS.some(function (k) {
+          var v = p.get(k);
+          return v !== null && v !== '';
+        });
+      } catch (e) { return false; }
+    }
+
+    /* Re-executa o boot completo com a URL atual (já mutada pelo Flutter) */
+    function _reBootFromCurrentUrl() {
+      if (!_hasClinicalParams()) return; /* URL sem dados clínicos — ignora */
+      console.log('[CSR v2 PATH-A] URL mutation detectada com params clínicos — re-init…',
+                  window.location.search);
+      /* Reset guard para permitir re-execução idempotente */
+      window._csrUrlListenerActive = false;
+      _init();
+    }
+
+    /* ── Monkey-patch history.replaceState ── */
+    if (typeof history !== 'undefined' && typeof history.replaceState === 'function') {
+      var _origReplace = history.replaceState.bind(history);
+      history.replaceState = function (state, title, url) {
+        _origReplace(state, title, url);
+        /* Adia para após o browser atualizar window.location */
+        setTimeout(_reBootFromCurrentUrl, 0);
+      };
+    }
+
+    /* ── Monkey-patch history.pushState ── */
+    if (typeof history !== 'undefined' && typeof history.pushState === 'function') {
+      var _origPush = history.pushState.bind(history);
+      history.pushState = function (state, title, url) {
+        _origPush(state, title, url);
+        setTimeout(_reBootFromCurrentUrl, 0);
+      };
+    }
+
+    /* ── Listener de popstate (back/forward navigation) ── */
+    window.addEventListener('popstate', function () {
+      setTimeout(_reBootFromCurrentUrl, 0);
+    });
+
+    console.log('[CSR v2 PATH-A] URL mutation listener instalado (replaceState + pushState + popstate).');
+  }
+
+  /* ───────────────────────────────────────────────────────────────
      INICIALIZAÇÃO
   ─────────────────────────────────────────────────────────────── */
   function _init() {
@@ -1644,8 +1718,11 @@
     /* ── Detecta módulo da URL ── */
     var moduloKey = _detectModulo();
     if (!moduloKey) {
-      /* Modo passivo: sem módulo na URL — só injeta biometria quando DOM pronto */
-      console.log('[CSR v2] Sem ?modulo= ou /condutas/ — modo passivo.');
+      /* Modo passivo: sem módulo na URL — só injeta biometria quando DOM pronto.
+         BUILD 477-WEBVIEW-HEAL PATH-A: instala listener para capturar injeção
+         assíncrona de URL pelo Flutter APÓS este return (fix race condition iOS). */
+      console.log('[CSR v2] Sem ?modulo= ou /condutas/ — modo passivo. Instalando URL mutation listener…');
+      _installUrlMutationListener();
       _domReady(function () { _ingestPatientPayload(params); _injectTherapyCSS(); });
       return;
     }
@@ -1682,13 +1759,103 @@
       }
       return base + '?' + p.toString();
     },
-    modules: function () { return Object.keys(MODULE_META); }
+    modules: function () { return Object.keys(MODULE_META); },
+
+    /* ── BUILD 477-WEBVIEW-HEAL PATH-C ─────────────────────────────
+       injectPatient(payload)
+       API de injeção direta de dados do paciente — bypassa URL e SW.
+       Projetada para ser chamada pelo Flutter via JavascriptChannel ou
+       evaluateJavascript APÓS o WebView estar pronto, sem depender de
+       window.location.search ou history API.
+
+       Contrato de chamada (Flutter):
+         await webViewController.evaluateJavascript("""
+           window.ClinicalSupportRouter.injectPatient({
+             modulo: 'cardiologia',
+             peso: 70,
+             clcr: 48,
+             idade: 65,
+             sexo: 'M',
+             creatinina: 1.2,
+             lang: 'pt'
+           });
+         """);
+
+       Payload aceito (todos opcionais exceto indicação clínica):
+         modulo      — string: nefrologia|cardiologia|eletrolitos|hepatologia
+         peso        — number|string: kg
+         altura      — number|string: cm
+         idade       — number|string: anos
+         creatinina  — number|string: mg/dL
+         clcr        — number|string: mL/min (bypass motor CG)
+         sexo        — string: 'M' | 'F'
+         kdigo       — string: '1'|'2'|'3a'|'3b'|'3c'
+         child_pugh  — string: 'A'|'B'|'C'
+         lang        — string: 'pt' | 'es'
+    ─────────────────────────────────────────────────────────────── */
+    injectPatient: function (payload) {
+      if (!payload || typeof payload !== 'object') {
+        console.warn('[CSR PATH-C] injectPatient: payload inválido ou ausente.', payload);
+        return;
+      }
+      console.log('[CSR PATH-C] injectPatient chamado com:', JSON.stringify(payload));
+
+      /* ── 1. Normaliza idioma do payload ── */
+      var lang = payload.lang || payload.idioma || null;
+      if (lang) {
+        lang = lang.toLowerCase().replace(/^pt.*/,'pt').replace(/^es.*/,'es');
+        _activeLang        = lang;
+        window.currentLang = lang;
+        window._autoLang   = lang;
+        try { localStorage.setItem('lang', lang); } catch (e) { /* private browsing */ }
+        _waitGlobal('setLang', function (fn) {
+          if (typeof fn === 'function') { fn(lang); }
+        });
+      }
+
+      /* ── 2. Resolve módulo clínico ── */
+      var moduloRaw = payload.modulo || null;
+      var moduloKey = moduloRaw ? (MODULE_ALIASES[_norm(moduloRaw)] || null) : null;
+
+      /* ── 3. Constrói adapter de params compatível com _ingestPatientPayload ──
+              Usa duck-typing sobre objeto simples — evita new URLSearchParams
+              que pode falhar em contextos file:// muito restritivos.           */
+      var _payloadAdapter = {
+        get: function (k) {
+          var v = payload[k];
+          return (v !== null && v !== undefined && v !== '') ? String(v) : null;
+        }
+      };
+
+      /* ── 4. Actualiza window.patientData com todos os campos recebidos ── */
+      window.patientData = window.patientData || {};
+      var PATIENT_FIELDS_INJECT = [
+        'peso','altura','idade','creatinina','clcr',
+        'kdigo','child_pugh','chads_vasc','has_bled','ascvd',
+        'hco3','na','k','mg','sexo'
+      ];
+      PATIENT_FIELDS_INJECT.forEach(function (f) {
+        var v = _payloadAdapter.get(f);
+        if (v !== null) { window.patientData[f] = v; }
+      });
+
+      /* ── 5. Cancela URL mutation listener (não precisamos mais do Path A
+              nesta sessão — o payload chegou via canal direto)            ── */
+      window._csrUrlListenerActive = true; /* suprime re-init desnecessário */
+
+      /* ── 6. Dispara boot seguro com polling (mesma engine do iOS-Boot-Fix) ── */
+      console.log('[CSR PATH-C] Acionando _safeIosBootExecute | modulo=' + moduloKey);
+      _safeIosBootExecute(_payloadAdapter, moduloKey, 0);
+    }
   };
 
   /* ── Dispara boot seguro — iOS WebView + Desktop + Android ── */
   _init();
 
-  console.log('[MedCases CSR v2.5] BUILD 475-FORCE-CLEAN | Locale: ' + _activeLang +
-    ' | Módulos: ' + Object.keys(MODULE_META).join(', ') + ' | API: window.ClinicalSupportRouter');
+  console.log('[MedCases CSR v2.5] BUILD 477-WEBVIEW-HEAL | Locale: ' + _activeLang +
+    ' | Módulos: ' + Object.keys(MODULE_META).join(', ') +
+    ' | API: window.ClinicalSupportRouter' +
+    ' | PATH-A: URL mutation listener' +
+    ' | PATH-C: injectPatient(payload)');
 
 })();

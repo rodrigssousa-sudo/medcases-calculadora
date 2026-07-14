@@ -67,9 +67,11 @@
   'use strict';
 
   /* ── Aguarda o DOM + todas as funções do app estarem prontas ── */
+  /* BUILD 477-WEBVIEW-HEAL: adicionado { once: true } para evitar
+     disparos duplicados em ciclos de re-renderização do iOS WebView. */
   function _ready(fn) {
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn);
+      document.addEventListener('DOMContentLoaded', fn, { once: true });
     } else {
       fn();
     }
