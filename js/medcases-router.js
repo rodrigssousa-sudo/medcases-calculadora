@@ -1662,6 +1662,7 @@
       var _origReplace = history.replaceState.bind(history);
       history.replaceState = function (state, title, url) {
         _origReplace(state, title, url);
+        window._csrHistoryInterceptCount = (window._csrHistoryInterceptCount || 0) + 1;
         /* Adia para após o browser atualizar window.location */
         setTimeout(_reBootFromCurrentUrl, 0);
       };
@@ -1672,12 +1673,14 @@
       var _origPush = history.pushState.bind(history);
       history.pushState = function (state, title, url) {
         _origPush(state, title, url);
+        window._csrHistoryInterceptCount = (window._csrHistoryInterceptCount || 0) + 1;
         setTimeout(_reBootFromCurrentUrl, 0);
       };
     }
 
     /* ── Listener de popstate (back/forward navigation) ── */
     window.addEventListener('popstate', function () {
+      window._csrHistoryInterceptCount = (window._csrHistoryInterceptCount || 0) + 1;
       setTimeout(_reBootFromCurrentUrl, 0);
     });
 
@@ -1852,10 +1855,163 @@
   /* ── Dispara boot seguro — iOS WebView + Desktop + Android ── */
   _init();
 
-  console.log('[MedCases CSR v2.5] BUILD 477-WEBVIEW-HEAL | Locale: ' + _activeLang +
+  console.log('[MedCases CSR v2.5] BUILD 478-TELEMETRY | Locale: ' + _activeLang +
     ' | Módulos: ' + Object.keys(MODULE_META).join(', ') +
     ' | API: window.ClinicalSupportRouter' +
     ' | PATH-A: URL mutation listener' +
-    ' | PATH-C: injectPatient(payload)');
+    ' | PATH-C: injectPatient(payload)' +
+    ' | TELEMETRY: painel on-screen ativo');
+
+  /* ═══════════════════════════════════════════════════════════════
+     BUILD 478-TELEMETRY — PAINEL DE DIAGNÓSTICO ON-SCREEN
+     Painel visual flutuante para depuração direta no dispositivo
+     iOS sem acesso ao Safari Remote Inspector.
+
+     Exibe em tempo real (250ms):
+       • URL atual (window.location.href)
+       • window.patientData (JSON serializado)
+       • window._appBootComplete
+       • _domIsViable() oracle
+       • Contador de intercepts do Path A (_csrHistoryInterceptCount)
+       • Último erro JS capturado via window.onerror
+
+     REMOÇÃO: para desativar o painel em produção, basta remover
+     este bloco ou setar window._csrTelemetryDisabled = true antes
+     do carregamento do script.
+  ═══════════════════════════════════════════════════════════════ */
+  (function _initTelemetryPanel() {
+    /* Guard: desativa via flag global ou se já injetado */
+    if (window._csrTelemetryDisabled) return;
+    if (document.getElementById('mc-telemetry')) return;
+
+    /* Aguarda body estar disponível antes de injetar */
+    function _inject() {
+      if (!document.body) { setTimeout(_inject, 50); return; }
+      if (document.getElementById('mc-telemetry')) return; /* double-check */
+
+      var div = document.createElement('div');
+      div.id = 'mc-telemetry';
+      div.setAttribute('style', [
+        'position:fixed',
+        'bottom:5px',
+        'right:5px',
+        'left:5px',
+        'background:rgba(0,0,0,0.93)',
+        'color:#00ff00',
+        'font-family:monospace',
+        'font-size:10px',
+        'line-height:1.4',
+        'z-index:999999',
+        'padding:8px 10px',
+        'border:2px solid #ffcc00',
+        'border-radius:6px',
+        'max-height:165px',
+        'overflow-y:auto',
+        'pointer-events:none',
+        'box-shadow:0 0 12px rgba(0,255,0,0.25)',
+        'word-break:break-all'
+      ].join(';'));
+
+      div.innerHTML =
+        '<span style="color:#ffcc00;font-weight:bold">[MedCases Telemetria v478]</span>' +
+        ' <span style="color:#666;font-size:9px">tap fora para interagir</span><br>' +
+        '&#x25B6; <span style="color:#aaa">URL:</span> ' +
+          '<span id="tel-url" style="color:#7df">...</span><br>' +
+        '&#x25B6; <span style="color:#aaa">Data:</span> ' +
+          '<span id="tel-data" style="color:#7f7">...</span><br>' +
+        '&#x25B6; <span style="color:#aaa">Boot:</span> ' +
+          '<span id="tel-boot">...</span>' +
+        ' &nbsp;<span style="color:#aaa">DOM:</span> ' +
+          '<span id="tel-dom">...</span><br>' +
+        '&#x25B6; <span style="color:#aaa">Intercepts:</span> ' +
+          '<span id="tel-hist" style="color:#fa0">0</span>' +
+        ' &nbsp;<span style="color:#aaa">Lang:</span> ' +
+          '<span id="tel-lang" style="color:#c9f">...</span><br>' +
+        '&#x25B6; <span style="color:#aaa">Módulo:</span> ' +
+          '<span id="tel-mod" style="color:#ffa">...</span><br>' +
+        '&#x25B6; <span style="color:#aaa">Err:</span> ' +
+          '<span id="tel-err" style="color:#ff5555">Nenhum</span>';
+
+      document.body.appendChild(div);
+
+      /* ── Atualização em tempo real — 250ms ── */
+      setInterval(function () {
+        var elUrl  = document.getElementById('tel-url');
+        var elData = document.getElementById('tel-data');
+        var elBoot = document.getElementById('tel-boot');
+        var elDom  = document.getElementById('tel-dom');
+        var elHist = document.getElementById('tel-hist');
+        var elLang = document.getElementById('tel-lang');
+        var elMod  = document.getElementById('tel-mod');
+        if (!elUrl) return; /* painel removido externamente */
+
+        /* URL: exibe só a parte de search+hash para economizar espaço */
+        var search = window.location.search || '(vazio)';
+        var proto  = window.location.protocol;
+        elUrl.innerText = proto + ' ' + search;
+
+        /* PatientData: serializa apenas campos relevantes */
+        var pd = window.patientData;
+        if (pd && typeof pd === 'object') {
+          var fields = ['peso','idade','clcr','sexo','creatinina','modulo'];
+          var parts = [];
+          fields.forEach(function(k){ if (pd[k] != null) parts.push(k + ':' + pd[k]); });
+          elData.innerText = parts.length ? '{' + parts.join(', ') + '}' : '{}';
+        } else {
+          elData.innerText = 'null';
+        }
+
+        /* Boot signal */
+        var boot = window._appBootComplete === true;
+        elBoot.style.color = boot ? '#00ff00' : '#ff8800';
+        elBoot.innerText = boot ? 'TRUE ✓' : 'false';
+
+        /* DOM viability oracle */
+        var viable = false;
+        try { viable = (typeof _domIsViable === 'function') ? _domIsViable() : false; } catch(e) {}
+        elDom.style.color = viable ? '#00ff00' : '#ff5555';
+        elDom.innerText = viable ? 'OK ✓' : 'FAIL ✗';
+
+        /* Intercept counter */
+        elHist.innerText = String(window._csrHistoryInterceptCount || 0);
+
+        /* Idioma ativo */
+        elLang.innerText = (window.currentLang || window._activeLang || _activeLang || '?');
+
+        /* Módulo ativo */
+        elMod.innerText = (window._csrActiveModulo || _activeModulo || '—');
+
+      }, 250);
+
+      /* ── Captura global de erros JS ── */
+      window.addEventListener('error', function (e) {
+        var elErr = document.getElementById('tel-err');
+        if (!elErr) return;
+        var fname = (e.filename || '').split('/').pop() || '?';
+        elErr.innerText = (e.message || 'erro') +
+          ' (' + fname + ':' + (e.lineno || '?') + ')';
+        elErr.style.color = '#ff3333';
+        elErr.style.fontWeight = 'bold';
+      });
+
+      /* ── Captura rejeições de Promise não tratadas ── */
+      window.addEventListener('unhandledrejection', function (e) {
+        var elErr = document.getElementById('tel-err');
+        if (!elErr) return;
+        var msg = (e.reason && e.reason.message) ? e.reason.message : String(e.reason || 'Promise rejected');
+        elErr.innerText = 'Promise: ' + msg.substring(0, 80);
+        elErr.style.color = '#ff9933';
+      });
+
+      console.log('[CSR Telemetry v478] Painel on-screen injetado — 250ms refresh ativo.');
+    }
+
+    /* Injeta imediatamente se body existir, ou após DOM pronto */
+    if (document.body) {
+      _inject();
+    } else {
+      document.addEventListener('DOMContentLoaded', _inject, { once: true });
+    }
+  })();
 
 })();
