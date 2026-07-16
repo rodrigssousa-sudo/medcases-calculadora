@@ -1,0 +1,131 @@
+{
+  "id": "flecainida",
+  "category": "cardio",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "dose": "50 mg VO 12/12h — titular até 150 mg 12/12h conforme resposta e ECG",
+    "doseMax": "300 mg/dia (150 mg 12/12h)",
+    "dosePillInPocket": null,
+    "clcrEstimado": "90 mL/min",
+    "apresentacao": "Comprimidos 50 mg / 100 mg (Tambocor)",
+    "classe": "Antiarrítmico Classe IC — bloqueador potente canal Na⁺ | t½ 12–27 h",
+    "indicacoes": [
+      "FA paroxística SEM cardiopatia estrutural",
+      "Flutter atrial selecionado (SEM cardiopatia estrutural)",
+      "Manutenção ritmo sinusal",
+      "Pill-in-the-pocket supervisionada",
+      "TSV paroxística",
+      "Arritmias ventriculares idiopáticas selecionadas"
+    ],
+    "efeitosAdversos": [
+      "Tontura",
+      "Visão turva/diplopia",
+      "Cefaleia",
+      "Náuseas",
+      "Fadiga",
+      "Palpitações",
+      "⚠️ TV/FV",
+      "⚠️ Flutter 1:1",
+      "⚠️ Bloqueio AV",
+      "⚠️ Alargamento extremo QRS",
+      "⚠️ Morte súbita em cardiopatia"
+    ],
+    "monitoramento": [
+      "ECG basal (QRS + PR)",
+      "FEVE obrigatória antes de iniciar",
+      "ECG após início e titulação",
+      "Alerta: QRS >25% do basal → reduzir/suspender",
+      "ClCr basal e periódico",
+      "K⁺ e Mg²⁺",
+      "Sintomas: síncope, dispneia, palpitações"
+    ],
+    "refs": [
+      "CAST Trial",
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA label"
+    ],
+    "alerts": [
+      {
+        "tipo": "warning",
+        "msg": "⚠️ FA tratada com flecainida: considerar bloqueador AV concomitante (betabloqueador, verapamil ou diltiazem) para prevenir flutter atrial com condução AV 1:1 (FC >200 bpm)."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX (CAST Trial): flecainida aumenta mortalidade em cardiopatia estrutural/pós-IAM. Uso RESTRITO a FA paroxística/TSV sem cardiopatia estrutural."
+      }
+    ]
+  },
+  "es": {
+    "dose": "50 mg VO 12/12h — titular até 150 mg 12/12h conforme resposta e ECG",
+    "doseMax": "300 mg/día (150 mg c/12h)",
+    "dosePillInPocket": null,
+    "clcrEstimado": "90 mL/min",
+    "apresentacao": "Comprimidos 50 mg / 100 mg (Tambocor)",
+    "classe": "Antiarrítmico Clase IC — bloqueador potente canal Na⁺ | t½ 12–27 h",
+    "indicacoes": [
+      "FA paroxística SIN cardiopatía estructural",
+      "Flutter auricular seleccionado (SIN cardiopatía estructural)",
+      "Mantenimiento ritmo sinusal",
+      "Pill-in-the-pocket supervisada",
+      "TSV paroxística",
+      "Arritmias ventriculares idiopáticas seleccionadas"
+    ],
+    "efeitosAdversos": [
+      "Mareos",
+      "Visión borrosa/diplopía",
+      "Cefalea",
+      "Náuseas",
+      "Fatiga",
+      "Palpitaciones",
+      "⚠️ TV/FV",
+      "⚠️ Flutter 1:1",
+      "⚠️ Bloqueo AV",
+      "⚠️ Ensanchamiento extremo QRS",
+      "⚠️ Muerte súbita en cardiopatía"
+    ],
+    "monitoramento": [
+      "ECG basal (QRS + PR)",
+      "FEVI obligatoria antes de iniciar",
+      "ECG tras inicio y titulación",
+      "Alerta: QRS >25% del basal → reducir/suspender",
+      "ClCr basal y periódico",
+      "K⁺ y Mg²⁺",
+      "Síntomas: síncope, disnea, palpitaciones"
+    ],
+    "refs": [
+      "CAST Trial",
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA label"
+    ],
+    "alerts": [
+      {
+        "tipo": "warning",
+        "msg": "⚠️ FA tratada con flecainida: considerar bloqueador AV concomitante (betabloqueante, verapamilo o diltiazem) para prevenir flutter auricular con conducción AV 1:1 (FC >200 lpm)."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX (CAST Trial): flecainida aumenta mortalidad en cardiopatía estructural/post-IAM. Uso RESTRINGIDO a FA paroxística/TSV sin cardiopatía estructural."
+      }
+    ]
+  },
+  "name": {
+    "pt": "flecainida",
+    "es": "flecainida"
+  },
+  "keywords": [
+    "flecainida"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

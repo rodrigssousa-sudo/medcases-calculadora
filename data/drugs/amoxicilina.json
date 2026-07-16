@@ -1,0 +1,311 @@
+{
+  "id": "amoxicilina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Amoxicilina",
+    "class": "Penicilina de amplo espectro (aminopenicilina)",
+    "commercialNames": {
+      "br": [
+        "Amoxil",
+        "Amoxicilina EMS",
+        "Novamox",
+        "Amoxicilina Eurofarma"
+      ],
+      "ar": [
+        "Amoxil",
+        "Amoxicilina Richet",
+        "Amoxicilina Bagó",
+        "Amoxicilina genérica"
+      ]
+    },
+    "presentation": [
+      "Cápsulas/comprimidos: 250 mg, 500 mg, 875 mg",
+      "Suspensão oral: 125 mg/5 mL, 250 mg/5 mL, 400 mg/5 mL",
+      "Pó para suspensão oral (sachê): 500 mg"
+    ],
+    "dose": {
+      "adultoOtite": "500 mg VO 8/8h ou 875 mg VO 12/12h por 5–7 dias",
+      "adultoStrep": "500 mg VO 12/12h ou 875 mg 12/12h por 10 dias",
+      "adultoUrinario": "500 mg VO 8/8h por 7 dias",
+      "pediatricaPadrao": "500 mg VO 8/8h",
+      "pediatricaAlta": "875 mg VO 12/12h (dose alta p/ pneumococo resistente)"
+    },
+    "doseKg": {
+      "padrao": "25–50 mg/kg/dia dividido 8/8h ou 12/12h",
+      "alta": "80–90 mg/kg/dia dividido 12/12h (OMA, pneumonia — S. pneumoniae resistente)",
+      "doseMaxima": "Máximo: 3 g/dia (adultos)"
+    },
+    "therapeuticRange": "Faixa usual pediátrica: 25–90 mg/kg/dia conforme indicação.",
+    "dilution": "Via oral: não necessita diluição. Uso EV não habitual para amoxicilina isolada no Brasil.",
+    "speed": "VO: administrar conforme intervalo prescrito.",
+    "commonAdverseEffects": [
+      "Diarreia",
+      "Náuseas",
+      "Rash cutâneo",
+      "Vômitos",
+      "Candidíase oral/vaginal"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Doença do soro",
+      "Colite por Clostridioides difficile",
+      "Síndrome de Stevens-Johnson (raro)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Investigar história de alergia a penicilinas antes de prescrever.",
+      "Rash maculopapular frequente em pacientes com mononucleose — não indica alergia a penicilinas.",
+      "Coberttura limitada: sem atividade contra S. aureus produtor de penicilinase."
+    ],
+    "ref": "Goodman & Gilman / FDA Amoxicillin label / Sanford Guide / AAP Red Book",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "500–875 mg",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "3–4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "25–50 mg/kg/dia",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg/dia"
+        },
+        "obs": "Dose habitual conforme indicação clínica."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500–875 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "25–50 mg/kg/dia",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg/dia"
+        },
+        "obs": "Ajustar intervalo em infecções moderadas/graves."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–25 mg/kg/dose",
+          "intervalo": "12/12h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg/kg/dose"
+        },
+        "obs": "Evitar apresentação de 875 mg."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–25 mg/kg/dose",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg/dose"
+        },
+        "obs": "Usar menor dose efetiva e monitorar acúmulo."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–25 mg/kg/dose",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg/dose"
+        },
+        "obs": "Administrar após hemodiálise nos dias de HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Amoxicilina",
+    "class": "Penicilina de amplio espectro (aminopenicilina)",
+    "commercialNames": {
+      "br": [
+        "Amoxil",
+        "Amoxicilina EMS",
+        "Novamox",
+        "Amoxicilina Eurofarma"
+      ],
+      "ar": [
+        "Amoxil",
+        "Amoxicilina Richet",
+        "Amoxicilina Bagó",
+        "Amoxicilina genérica"
+      ]
+    },
+    "presentation": [
+      "Cápsulas/comprimidos: 250 mg, 500 mg, 875 mg",
+      "Suspensión oral: 125 mg/5 mL, 250 mg/5 mL, 400 mg/5 mL",
+      "Polvo para suspensión oral (sobre): 500 mg"
+    ],
+    "dose": {
+      "adultoOtite": "500 mg VO cada 8h o 875 mg VO cada 12h por 5–7 días",
+      "adultoStrep": "500 mg VO cada 12h o 875 mg cada 12h por 10 días",
+      "adultoUrinario": "500 mg VO cada 8h por 7 días",
+      "pediatricaPadrao": "500 mg VO cada 8h",
+      "pediatricaAlta": "875 mg VO cada 12h (dosis alta para neumococo resistente)"
+    },
+    "doseKg": {
+      "padrao": "25–50 mg/kg/día dividido cada 8h o 12h",
+      "alta": "80–90 mg/kg/día dividido cada 12h (OMA, neumonía — S. pneumoniae resistente)",
+      "doseMaxima": "Máximo: 3 g/día (adultos)"
+    },
+    "therapeuticRange": "Rango usual pediátrico: 25–90 mg/kg/día según indicación.",
+    "dilution": "Vía oral: no requiere dilución. El uso EV de amoxicilina sola no es habitual.",
+    "speed": "VO: administrar según intervalo prescrito.",
+    "commonAdverseEffects": [
+      "Diarrea",
+      "Náuseas",
+      "Exantema cutáneo",
+      "Vómitos",
+      "Candidiasis oral/vaginal"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Enfermedad del suero",
+      "Colitis por Clostridioides difficile",
+      "Síndrome de Stevens-Johnson (raro)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Investigar historia de alergia a penicilinas antes de prescribir.",
+      "Exantema maculopapular frecuente en mononucleosis — no indica alergia a penicilinas.",
+      "Cobertura limitada: sin actividad contra S. aureus productor de penicilinasa."
+    ],
+    "ref": "Goodman & Gilman / FDA Amoxicillin label / Sanford Guide / AAP Red Book",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "500–875 mg",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "3–4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "25–50 mg/kg/dia",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg/dia"
+        },
+        "obs": "Dosis habitual según indicación clínica."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500–875 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "25–50 mg/kg/dia",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg/dia"
+        },
+        "obs": "Ajustar intervalo en infecciones moderadas/graves."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–25 mg/kg/dose",
+          "intervalo": "12/12h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg/kg/dose"
+        },
+        "obs": "Evitar presentación de 875 mg."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–25 mg/kg/dose",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg/dose"
+        },
+        "obs": "Usar la menor dosis efectiva y monitorizar acumulación."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–25 mg/kg/dose",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg/dose"
+        },
+        "obs": "Administrar después de hemodiálisis en días de HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Amoxicilina",
+    "es": "Amoxicilina"
+  },
+  "keywords": [
+    "amoxicilina",
+    "amoxil",
+    "amoxicilina ems",
+    "novamox",
+    "amoxicilina eurofarma",
+    "amoxicilina richet",
+    "amoxicilina bago",
+    "amoxicilina generica",
+    "penicilina de amplo espectro (aminopenicilina)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

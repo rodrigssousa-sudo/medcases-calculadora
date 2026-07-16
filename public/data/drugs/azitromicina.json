@@ -1,0 +1,355 @@
+{
+  "id": "azitromicina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Azitromicina",
+    "class": "Macrolídeo",
+    "commercialNames": {
+      "br": [
+        "Zitromax",
+        "Azitromicina EMS",
+        "Azitromicina Eurofarma"
+      ],
+      "ar": [
+        "Zitromax",
+        "Azitromicina Bagó",
+        "Azitromicina genérica"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 250 mg, 500 mg",
+      "Suspensão oral: 200 mg/5 mL",
+      "Pó para solução injetável: 500 mg"
+    ],
+    "dose": {
+      "adulto": "500 mg VO 1x/dia por 3 dias ou 500 mg no dia 1, seguido de 250 mg/dia do dia 2 ao 5",
+      "pediatrica3Dias": "500 mg VO 1x/dia por 3 dias",
+      "pediatrica5Dias": "500 mg VO no dia 1, depois 250 mg VO 1x/dia do dia 2 ao 5"
+    },
+    "doseKg": {
+      "esquema3Dias": "10 mg/kg/dia por 3 dias",
+      "esquema5Dias": "10 mg/kg no dia 1 + 5 mg/kg/dia do dia 2 ao 5",
+      "doseMaxima": "Máximo: 500 mg no dia 1 e 250 mg/dia nos dias seguintes"
+    },
+    "therapeuticRange": "Faixa usual pediátrica: 5–10 mg/kg/dia conforme indicação clínica.",
+    "dilution": "Via oral: não necessita diluição. EV: reconstituir e diluir conforme protocolo institucional.",
+    "speed": "VO: administrar 1x/dia. EV: infundir lentamente conforme protocolo hospitalar.",
+    "commonAdverseEffects": [
+      "Diarreia",
+      "Náuseas",
+      "Dor abdominal",
+      "Vômitos",
+      "Cefaleia"
+    ],
+    "dangerousAdverseEffects": [
+      "Prolongamento do intervalo QT",
+      "Torsades de Pointes",
+      "Hepatotoxicidade grave",
+      "Anafilaxia",
+      "Colite por Clostridioides difficile"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Evitar associação com outros fármacos que prolongam QT.",
+      "Corrigir hipocalemia e hipomagnesemia antes do uso em pacientes de risco.",
+      "Não usar como monoterapia empírica onde houver alta resistência pneumocócica."
+    ],
+    "ref": "Goodman & Gilman / FDA Zithromax label / Sanford Guide / Johns Hopkins ABX Guide",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual. Não necessita ajuste renal."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal habitual. Utilizar com cautela em insuficiência renal grave."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal habitual. Monitorar eventos adversos em insuficiência renal terminal."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita dose suplementar pós-hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Azitromicina",
+    "class": "Macrólido",
+    "commercialNames": {
+      "br": [
+        "Zitromax",
+        "Azitromicina EMS",
+        "Azitromicina Eurofarma"
+      ],
+      "ar": [
+        "Zitromax",
+        "Azitromicina Bagó",
+        "Azitromicina genérica"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 250 mg, 500 mg",
+      "Suspensión oral: 200 mg/5 mL",
+      "Polvo para solución inyectable: 500 mg"
+    ],
+    "dose": {
+      "adulto": "500 mg VO 1 vez/día por 3 días o 500 mg el día 1, seguido de 250 mg/día del día 2 al 5",
+      "pediatrica3Dias": "500 mg VO 1 vez/día por 3 días",
+      "pediatrica5Dias": "500 mg VO el día 1, luego 250 mg VO 1 vez/día del día 2 al 5"
+    },
+    "doseKg": {
+      "esquema3Dias": "10 mg/kg/día por 3 días",
+      "esquema5Dias": "10 mg/kg el día 1 + 5 mg/kg/día del día 2 al 5",
+      "doseMaxima": "Máximo: 500 mg el día 1 y 250 mg/día en los días siguientes"
+    },
+    "therapeuticRange": "Rango usual pediátrico: 5–10 mg/kg/día según indicación clínica.",
+    "dilution": "Vía oral: no requiere dilución. EV: reconstituir y diluir según protocolo institucional.",
+    "speed": "VO: administrar 1 vez/día. EV: infundir lentamente según protocolo hospitalario.",
+    "commonAdverseEffects": [
+      "Diarrea",
+      "Náuseas",
+      "Dolor abdominal",
+      "Vómitos",
+      "Cefalea"
+    ],
+    "dangerousAdverseEffects": [
+      "Prolongación del intervalo QT",
+      "Torsades de Pointes",
+      "Hepatotoxicidad grave",
+      "Anafilaxia",
+      "Colitis por Clostridioides difficile"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Evitar asociación con otros fármacos que prolongan QT.",
+      "Corregir hipopotasemia e hipomagnesemia antes del uso en pacientes de riesgo.",
+      "No usar como monoterapia empírica donde exista alta resistencia neumocócica."
+    ],
+    "ref": "Goodman & Gilman / FDA Zithromax label / Sanford Guide / Johns Hopkins ABX Guide",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual. No requiere ajuste renal."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal habitual. Utilizar con precaución en insuficiencia renal grave."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal habitual. Monitorizar eventos adversos en insuficiencia renal terminal."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere dosis suplementaria post-hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Azitromicina",
+    "es": "Azitromicina"
+  },
+  "keywords": [
+    "azitromicina",
+    "zitromax",
+    "azitromicina ems",
+    "azitromicina eurofarma",
+    "azitromicina bago",
+    "azitromicina generica",
+    "macrolideo"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

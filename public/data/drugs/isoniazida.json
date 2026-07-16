@@ -1,0 +1,291 @@
+{
+  "id": "isoniazida",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Isoniazida",
+    "class": "Antituberculoso (hidrazida do ácido isonicotínico)",
+    "commercialNames": {
+      "br": [
+        "Isoniazida EMS",
+        "Isoniazida Teuto",
+        "Rifaldin (combinação)"
+      ],
+      "ar": [
+        "Isoniazida Richet",
+        "Isoniazida Klonal"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 100 mg / 300 mg",
+      "Solução oral 50 mg/5 mL"
+    ],
+    "dose": {
+      "adulto": "300 mg VO 24/24h (em jejum)",
+      "pediatrica": "300 mg VO 24/24h"
+    },
+    "doseKg": {
+      "standard": "10–15 mg/kg/dia",
+      "maxDose": "300 mg/dia"
+    },
+    "therapeuticRange": "Bactericida intracelular — essencial no esquema RHZE.",
+    "dilution": "Uso oral. Pode ser administrada EV em casos selecionados.",
+    "speed": "Oral em jejum. Se EV: infusão lenta conforme protocolo.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Cefaleia",
+      "Insônia",
+      "Neuropatia periférica (deficiência de B6)"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidade grave (hepatite isoniazídica)",
+      "Neuropatia periférica grave",
+      "Lúpus induzido por droga",
+      "Convulsões (superdose)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Associar piridoxina (vitamina B6) para prevenir neuropatia em grupos de risco.",
+      "Monitorar função hepática mensalmente no primeiro trimestre de tratamento."
+    ],
+    "ref": "WHO TB Guidelines 2022 / MS Brasil PNCT / Goodman & Gilman",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Associar piridoxina em grupos de risco para neuropatia."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar neuropatia periférica e hepatotoxicidade."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Isoniazida",
+    "class": "Antituberculoso (hidrazida del ácido isonicotínico)",
+    "commercialNames": {
+      "br": [
+        "Isoniazida EMS",
+        "Isoniazida Teuto",
+        "Rifaldin (combinação)"
+      ],
+      "ar": [
+        "Isoniazida Richet",
+        "Isoniazida Klonal"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 100 mg / 300 mg",
+      "Solución oral 50 mg/5 mL"
+    ],
+    "dose": {
+      "adulto": "300 mg VO cada 24h (en ayunas)",
+      "pediatrica": "300 mg VO cada 24h"
+    },
+    "doseKg": {
+      "standard": "10–15 mg/kg/día",
+      "maxDose": "300 mg/día"
+    },
+    "therapeuticRange": "Bactericida intracelular — esencial en el esquema RHZE.",
+    "dilution": "Uso oral. Puede administrarse EV en casos seleccionados.",
+    "speed": "Oral en ayunas. Si EV: infusión lenta según protocolo.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Cefalea",
+      "Insomnio",
+      "Neuropatía periférica (deficiencia de B6)"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidad grave (hepatitis isoniazídica)",
+      "Neuropatía periférica grave",
+      "Lupus inducido por droga",
+      "Convulsiones (sobredosis)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Asociar piridoxina (vitamina B6) para prevenir neuropatía en grupos de riesgo.",
+      "Monitorizar función hepática mensualmente en el primer trimestre de tratamiento."
+    ],
+    "ref": "WHO TB Guidelines 2022 / MS Brasil PNCT / Goodman & Gilman",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Asociar piridoxina en grupos de riesgo para neuropatía."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar neuropatía periférica y hepatotoxicidad."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Isoniazida",
+    "es": "Isoniazida"
+  },
+  "keywords": [
+    "isoniazida",
+    "isoniazida ems",
+    "isoniazida teuto",
+    "rifaldin (combinacao)",
+    "isoniazida richet",
+    "isoniazida klonal",
+    "antituberculoso (hidrazida do acido isonicotinico)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

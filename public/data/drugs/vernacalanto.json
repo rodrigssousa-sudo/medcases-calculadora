@@ -1,0 +1,234 @@
+{
+  "id": "vernacalanto",
+  "category": "cardio",
+  "icon": "💉",
+  "color": "rgba(190,24,93,0.13)",
+  "colorTxt": "#9D174D",
+  "pt": {
+    "name": "Vernacalanto",
+    "class": "Antiarrítmico seletivo atrial — bloqueador multicanal (IKur, IKACh, Ito, INa)",
+    "indications": {
+      "approved": [
+        "Conversão rápida de fibrilação atrial de início recente para ritmo sinusal em adultos (≤ 7 dias para pacientes não cirúrgicos ou ≤ 3 dias para pós-operatório de cirurgia cardíaca)"
+      ],
+      "offLabel": []
+    },
+    "commercialNames": {
+      "br": [
+        "Brinavess"
+      ],
+      "ar": [
+        "Brinavess"
+      ]
+    },
+    "presentation": [
+      "Frasco-ampola 20 mg/mL (10 mL ou 25 mL) para infusão IV"
+    ],
+    "mechanism": "Atua preferencialmente no tecido atrial bloqueando as correntes de potássio (IKur, IKACh e Ito) e a corrente de sódio (INa), prolongando a refratariedade e diminuindo a velocidade de condução de forma tempo e voltagem-dependente. Possui mínimo efeito na refratariedade do tecido ventricular.",
+    "pharmacokinetics": {
+      "onset": "Conversão para ritmo sinusal frequentemente dentro de minutos após o término da infusão",
+      "halfLife": "Meia-vida curta; metabolismo predominante via CYP2D6 em metabolizadores extensos",
+      "duration": "Efeito agudo — uso único por episódio, não indicado para manutenção crônica"
+    },
+    "dose": {
+      "adultoPadrao": "1ª dose: 3 mg/kg IV infundida ao longo de 10 minutos (dose máxima 339 mg; peso calculado ≈ 70 kg → 210 mg). Se não houver conversão após 15 minutos do término da 1ª infusão, administrar 2ª dose: 2 mg/kg IV em 10 minutos (dose máxima 226 mg → 140 mg).",
+      "adultoGrave": "Dose calculada com limite de peso de 113 kg (acima disso, usar dose máxima fixa: 339 mg na 1ª dose e 226 mg na 2ª dose).",
+      "pediatricaPadrao": "Não estabelecido — uso não aprovado em pediatria.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "1ª dose: 3 mg/kg IV em 10 min (máx. 339 mg); 2ª dose (se necessário, após 15 min): 2 mg/kg IV em 10 min (máx. 226 mg)",
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "339 mg (1ª dose) + 226 mg (2ª dose), com peso calculado limitado a 113 kg"
+    },
+    "administration": "Infusão IV exclusiva usando bomba de infusão. Monitorização rigorosa de ECG e pressão arterial durante e por pelo menos 2 horas após a administração, em ambiente com recursos de reanimação (desfibrilador) imediatamente disponíveis.",
+    "commonAdverseEffects": [
+      "Disgeusia (alteração do paladar)",
+      "Espirros",
+      "Parestesia",
+      "Náusea",
+      "Hipotensão leve"
+    ],
+    "dangerousAdverseEffects": [
+      "Hipotensão grave",
+      "Choque cardiogênico",
+      "Bradicardia severa",
+      "Flutter atrial com condução AV 1:1"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Pressão arterial sistólica < 100 mmHg",
+        "Insuficiência cardíaca grave (NYHA III/IV ou descompensada)",
+        "Síndrome coronariana aguda nos últimos 30 dias",
+        "Estenose aórtica severa",
+        "Intervalo QT longo prolongado basal (> 440 ms)"
+      ],
+      "relativas": [
+        "Uso recente de antiarrítmicos classes I ou III",
+        "Bradicardia significativa preexistente"
+      ]
+    },
+    "interactions": [
+      "Antiarrítmicos classes I e III: risco de arritmias graves e disfunção hemodinâmica — avaliar intervalo de washout antes de administrar.",
+      "Anti-hipertensivos, betabloqueadores e bloqueadores de canal de cálcio: risco de hipotensão ou bradicardia exacerbada — monitorar PA e FC rigorosamente durante e após a infusão."
+    ],
+    "renalAdjustment": "Não é necessário ajuste de dose.",
+    "hepaticAdjustment": "Sem recomendações de ajuste específico; utilizar com cautela.",
+    "monitoring": {
+      "baseline": [
+        "Pressão arterial e ECG basais",
+        "Avaliação de classe funcional NYHA e histórico de síndrome coronariana aguda recente",
+        "Revisão de medicações concomitantes (antiarrítmicos classe I/III, anti-hipertensivos, betabloqueadores/BCC)"
+      ],
+      "followUp": [
+        "Monitorização contínua de ECG e pressão arterial durante a infusão e por, no mínimo, 2 horas após o término",
+        "Sinais de hipotensão grave, choque cardiogênico ou bradicardia severa",
+        "Vigilância para flutter atrial com condução AV 1:1",
+        "Ambiente com recursos de reanimação (desfibrilador) imediatamente disponíveis"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Faltam dados robustos. Uso contraindicado como precaução, a menos que estritamente necessário.",
+      "lactation": "Não recomendado. Desconhecido se é excretado no leite humano.",
+      "elderly": "Não requer ajuste de dose, mas o monitoramento hemodinâmico deve ser extremamente cuidadoso devido à maior prevalência de cardiopatia estrutural e isquemia."
+    },
+    "safetyFlags": {
+      "hypotensionRisk": true,
+      "cardiogenicShockRisk": true,
+      "requiresICUSetting": true,
+      "warning": "O uso do vernacalanto exige ambiente de terapia intensiva ou emergência com recursos de reanimação (desfibrilador) imediatamente disponíveis devido ao risco rápido de hipotensão refratária. Monitorizar ECG e pressão arterial continuamente durante a infusão e por pelo menos 2 horas após."
+    },
+    "auditNotes": {
+      "status": "antiarritmico_vernacalanto_master_template"
+    },
+    "ref": [
+      "2020 ESC Guidelines for the Diagnosis and Management of Atrial Fibrillation",
+      "EMA (European Medicines Agency) — Brinavess (vernacalant) Summary of Product Characteristics",
+      "Goodman & Gilman's: The Pharmacological Basis of Therapeutics"
+    ]
+  },
+  "es": {
+    "name": "Vernacalant",
+    "class": "Antiarrítmico selectivo auricular — bloqueador multicanal (IKur, IKACh, Ito, INa)",
+    "indications": {
+      "approved": [
+        "Conversión rápida de fibrilación auricular de inicio reciente a ritmo sinusal en adultos (≤ 7 días para pacientes no quirúrgicos o ≤ 3 días para posoperatorio de cirugía cardíaca)"
+      ],
+      "offLabel": []
+    },
+    "commercialNames": {
+      "br": [
+        "Brinavess"
+      ],
+      "ar": [
+        "Brinavess"
+      ]
+    },
+    "presentation": [
+      "Vial 20 mg/mL (10 mL o 25 mL) para infusión IV"
+    ],
+    "mechanism": "Actúa preferentemente en el tejido auricular bloqueando las corrientes de potasio (IKur, IKACh y Ito) y la corriente de sodio (INa), prolongando la refractariedad y disminuyendo la velocidad de conducción de forma dependiente de tiempo y voltaje. Tiene un efecto mínimo en la refractariedad del tejido ventricular.",
+    "pharmacokinetics": {
+      "onset": "Conversión a ritmo sinusal frecuentemente dentro de minutos tras finalizar la infusión",
+      "halfLife": "Vida media corta; metabolismo predominante vía CYP2D6 en metabolizadores extensos",
+      "duration": "Efecto agudo — uso único por episodio, no indicado para mantenimiento crónico"
+    },
+    "dose": {
+      "adultoPadrao": "1ª dosis: 3 mg/kg IV infundida a lo largo de 10 minutos (dosis máxima 339 mg; peso calculado ≈ 70 kg → 210 mg). Si no hay conversión después de 15 minutos de finalizada la 1ª infusión, administrar 2ª dosis: 2 mg/kg IV en 10 minutos (dosis máxima 226 mg → 140 mg).",
+      "adultoGrave": "Dosis calculada con límite de peso de 113 kg (por encima de eso, usar dosis máxima fija: 339 mg en la 1ª dosis y 226 mg en la 2ª dosis).",
+      "pediatricaPadrao": "No establecido — uso no aprobado en pediatría.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "1ª dosis: 3 mg/kg IV en 10 min (máx. 339 mg); 2ª dosis (si es necesario, tras 15 min): 2 mg/kg IV en 10 min (máx. 226 mg)",
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "339 mg (1ª dosis) + 226 mg (2ª dosis), con peso calculado limitado a 113 kg"
+    },
+    "administration": "Infusión IV exclusiva usando bomba de infusión. Monitorización rigurosa de ECG y presión arterial durante y por lo menos 2 horas después de la administración, en un entorno con recursos de reanimación (desfibrilador) inmediatamente disponibles.",
+    "commonAdverseEffects": [
+      "Disgeusia (alteración del gusto)",
+      "Estornudos",
+      "Parestesia",
+      "Náusea",
+      "Hipotensión leve"
+    ],
+    "dangerousAdverseEffects": [
+      "Hipotensión grave",
+      "Choque cardiogénico",
+      "Bradicardia severa",
+      "Aleteo auricular con conducción AV 1:1"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Presión arterial sistólica < 100 mmHg",
+        "Insuficiencia cardíaca grave (NYHA III/IV o descompensada)",
+        "Síndrome coronario agudo en los últimos 30 días",
+        "Estenosis aórtica severa",
+        "Intervalo QT prolongado basal (> 440 ms)"
+      ],
+      "relativas": [
+        "Uso reciente de antiarrítmicos clases I o III",
+        "Bradicardia significativa preexistente"
+      ]
+    },
+    "interactions": [
+      "Antiarrítmicos clases I y III: riesgo de arritmias graves y disfunción hemodinámica — evaluar intervalo de lavado antes de administrar.",
+      "Antihipertensivos, betabloqueantes y bloqueadores de canal de calcio: riesgo de hipotensión o bradicardia exacerbada — monitorizar PA y FC rigurosamente durante y después de la infusión."
+    ],
+    "renalAdjustment": "No es necesario ajuste de dosis.",
+    "hepaticAdjustment": "Sin recomendaciones de ajuste específico; utilizar con precaución.",
+    "monitoring": {
+      "baseline": [
+        "Presión arterial y ECG basales",
+        "Evaluación de clase funcional NYHA e historial de síndrome coronario agudo reciente",
+        "Revisión de medicaciones concomitantes (antiarrítmicos clase I/III, antihipertensivos, betabloqueantes/BCC)"
+      ],
+      "followUp": [
+        "Monitorización continua de ECG y presión arterial durante la infusión y por, como mínimo, 2 horas tras finalizar",
+        "Signos de hipotensión grave, choque cardiogénico o bradicardia severa",
+        "Vigilancia de aleteo auricular con conducción AV 1:1",
+        "Entorno con recursos de reanimación (desfibrilador) inmediatamente disponibles"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Faltan datos robustos. Uso contraindicado como precaución, a menos que sea estrictamente necesario.",
+      "lactation": "No recomendado. Desconocido si se excreta en la leche humana.",
+      "elderly": "No requiere ajuste de dosis, pero el monitoreo hemodinámico debe ser extremadamente cuidadoso debido a la mayor prevalencia de cardiopatía estructural e isquemia."
+    },
+    "safetyFlags": {
+      "hypotensionRisk": true,
+      "cardiogenicShockRisk": true,
+      "requiresICUSetting": true,
+      "warning": "El uso de vernacalant requiere un entorno de cuidados intensivos o emergencia con recursos de reanimación (desfibrilador) inmediatamente disponibles debido al riesgo rápido de hipotensión refractaria. Monitorizar ECG y presión arterial continuamente durante la infusión y por lo menos 2 horas después."
+    },
+    "auditNotes": {
+      "status": "antiarritmico_vernacalanto_master_template"
+    },
+    "ref": [
+      "2020 ESC Guidelines for the Diagnosis and Management of Atrial Fibrillation",
+      "EMA (European Medicines Agency) — Brinavess (vernacalant) Summary of Product Characteristics",
+      "Goodman & Gilman's: The Pharmacological Basis of Therapeutics"
+    ]
+  },
+  "name": {
+    "pt": "Vernacalanto",
+    "es": "Vernacalant"
+  },
+  "keywords": [
+    "vernacalanto",
+    "vernacalant",
+    "brinavess",
+    "antiarritmico seletivo atrial — bloqueador multicanal (ikur, ikach, ito, ina)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

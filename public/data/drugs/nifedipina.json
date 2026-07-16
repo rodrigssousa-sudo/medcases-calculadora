@@ -1,0 +1,327 @@
+{
+  "id": "nifedipina",
+  "category": "cardiologia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Nifedipina"
+  },
+  "es": {
+    "name": "Nifedipino"
+  },
+  "name": {
+    "pt": "Nifedipina",
+    "es": "Nifedipino"
+  },
+  "keywords": [
+    "nifedipina"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "cardiologia.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "cardiologia.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "cardio.js",
+      "record": {
+        "id": "nifedipina",
+        "category": "cardio",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "id": "nifedipina",
+          "name": "Nifedipina",
+          "class": "Bloqueador dos canais de cálcio diidropiridínico",
+          "category": "cardio",
+          "commercialNames": [
+            "Adalat",
+            "Nifedipina genérica"
+          ],
+          "presentation": [
+            "Cápsulas 10 mg (ação curta — evitar para HAS crônica)",
+            "Comprimidos retard 20 mg",
+            "Comprimidos LP 30 mg",
+            "Comprimidos LP 60 mg"
+          ],
+          "mechanism": "Bloqueia canais de cálcio tipo L na musculatura lisa vascular — vasodilatação arterial potente. Pouco efeito direto no nó AV, mas pode causar taquicardia reflexa adrenérgica, especialmente nas formulações de liberação imediata.",
+          "halfLife": "2–5 horas (IR) · 7–12 horas (LP)",
+          "onset": "20–30 min (IR) · 6h (LP)",
+          "dose": {
+            "adultoPadrao": "30 mg LP VO 1x/dia. Titular a cada 1–2 semanas. Máximo: 90–120 mg/dia.",
+            "adultoGrave": "Dose máxima: 120 mg/dia (LP). Formulações IR: somente em urgência hipertensiva ou angina aguda sob supervisão."
+          },
+          "risksByPatient": [
+            "Gestante: anti-hipertensivo oral de escolha na urgência hipertensiva gestacional (ACOG). Amplamente utilizado.",
+            "Lactante: compatível com lactação na maioria dos casos.",
+            "Idoso (40 anos): iniciar com doses menores. Maior risco de hipotensão e edema periférico.",
+            "Angina instável / IAM recente: evitar formulações IR sem supervisão especializada — risco de taquicardia reflexa e piora da isquemia."
+          ],
+          "commonAdverseEffects": [
+            "Cefaleia",
+            "Rubor facial",
+            "Tontura",
+            "Edema periférico",
+            "Palpitações",
+            "Taquicardia reflexa",
+            "Fadiga"
+          ],
+          "dangerousAdverseEffects": [
+            "Hipotensão grave",
+            "Síncope",
+            "Isquemia miocárdica por taquicardia reflexa (formulação IR)",
+            "Piora de angina com formulação de ação curta"
+          ],
+          "alerts": [
+            "PREFERIR formulações de liberação prolongada (LP/retard) para uso crônico — formulações de ação curta causam taquicardia reflexa e podem piorar isquemia.",
+            "Interações: claritromicina, cetoconazol, itraconazol, ritonavir → aumentam nível sérico significativamente (CYP3A4).",
+            "Não usar com betabloqueador IV concomitante — risco de hipotensão grave e bloqueio AV."
+          ],
+          "ref": "ESC Hypertension Guidelines · ACOG Hypertension in Pregnancy · AHA/ACC Hypertension Guidelines · Lexicomp · UpToDate · FDA Label",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": false,
+            "message": "Não requer ajuste renal. Metabolismo predominantemente hepático (CYP3A4).",
+            "fgMaior50": {
+              "vo": {
+                "dose": "30–60 mg LP",
+                "intervalo": "1x/dia",
+                "doseMaxima": "120 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Dose habitual. Preferir formulação LP para uso crônico."
+            },
+            "fg30a50": {
+              "vo": {
+                "dose": "30 mg LP",
+                "intervalo": "1x/dia",
+                "doseMaxima": "90 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Sem ajuste renal específico. Monitorar PA e FC."
+            },
+            "fg10a30": {
+              "vo": {
+                "dose": "30 mg LP",
+                "intervalo": "1x/dia (cautela)",
+                "doseMaxima": "60 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Pode usar sem ajuste específico, mas monitorar PA e FC rigorosamente."
+            },
+            "fgMenor10": {
+              "vo": {
+                "dose": "30 mg LP",
+                "intervalo": "1x/dia (cautela)",
+                "doseMaxima": "30 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "ClCr < 10 mL/min: iniciar com dose menor. Monitorar hipotensão."
+            },
+            "hemodialise": {
+              "vo": {
+                "dose": "30 mg LP",
+                "intervalo": "1x/dia",
+                "doseMaxima": "30 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Hemodiálise: não dialisável. Manter dose habitual com cautela."
+            }
+          },
+          "safetyFlags": {
+            "hypotensionRisk": true,
+            "bradycardiaRisk": false,
+            "avBlockRisk": false,
+            "renalHighRisk": false,
+            "qtRisk": false,
+            "peripheralEdemaRisk": true,
+            "reflexTachycardiaRisk": true,
+            "pregnancyPreferred": true,
+            "warning": "Formulações de ação curta podem causar taquicardia reflexa e piora da isquemia coronariana — PREFERIR formulações LP para uso crônico. Gestação: anti-hipertensivo oral de escolha para urgência hipertensiva."
+          },
+          "auditNotes": {
+            "status": "excellent_after_review",
+            "sourcePriority": [
+              "ESC Hypertension Guidelines 2023",
+              "ACOG Hypertension in Pregnancy 2023",
+              "AHA/ACC Hypertension Guidelines 2023",
+              "Lexicomp 2026",
+              "UpToDate",
+              "FDA Label"
+            ],
+            "note": "Fundamental em HAS gestacional, fenômeno de Raynaud e angina vasoespástica. PREFERIR formulações LP para uso crônico. Formulação IR reservada a urgências."
+          }
+        },
+        "es": {
+          "id": "nifedipina",
+          "name": "Nifedipina",
+          "class": "Bloqueador de los canales de calcio dihidropiridínico",
+          "category": "cardio",
+          "commercialNames": [
+            "Adalat",
+            "Nifedipina genérica"
+          ],
+          "presentation": [
+            "Cápsulas 10 mg (acción corta — evitar para HTA crónica)",
+            "Comprimidos retard 20 mg",
+            "Comprimidos LP 30 mg",
+            "Comprimidos LP 60 mg"
+          ],
+          "mechanism": "Bloquea canales de calcio tipo L en músculo liso vascular — vasodilatación arterial potente. Poco efecto directo en el nodo AV, pero puede causar taquicardia refleja adrenérgica, especialmente en formulaciones de liberación inmediata.",
+          "halfLife": "2–5 horas (IR) · 7–12 horas (LP)",
+          "onset": "20–30 min (IR) · 6h (LP)",
+          "dose": {
+            "adultoPadrao": "30 mg LP VO 1 vez/día. Titular cada 1–2 semanas. Máximo: 90–120 mg/día.",
+            "adultoGrave": "Dosis máxima: 120 mg/día (LP). Formulaciones IR: solo en urgencia hipertensiva o angina aguda bajo supervisión."
+          },
+          "risksByPatient": [
+            "Gestante: antihipertensivo oral de elección en urgencia hipertensiva gestacional (ACOG). Ampliamente utilizado.",
+            "Lactante: compatible con lactancia en la mayoría de los casos.",
+            "Anciano (40 años): iniciar con dosis menores. Mayor riesgo de hipotensión y edema periférico.",
+            "Angina inestable / IAM reciente: evitar formulaciones IR sin supervisión especializada — riesgo de taquicardia refleja y empeoramiento de la isquemia."
+          ],
+          "commonAdverseEffects": [
+            "Cefalea",
+            "Rubor facial",
+            "Mareos",
+            "Edema periférico",
+            "Palpitaciones",
+            "Taquicardia refleja",
+            "Fatiga"
+          ],
+          "dangerousAdverseEffects": [
+            "Hipotensión grave",
+            "Síncope",
+            "Isquemia miocárdica por taquicardia refleja (formulación IR)",
+            "Empeoramiento de angina con formulación de acción corta"
+          ],
+          "alerts": [
+            "PREFERIR formulaciones de liberación prolongada (LP/retard) para uso crónico — formulaciones de acción corta causan taquicardia refleja y pueden empeorar la isquemia.",
+            "Interacciones: claritromicina, ketoconazol, itraconazol, ritonavir → aumentan nivel sérico significativamente (CYP3A4).",
+            "No usar con betabloqueador IV concomitante — riesgo de hipotensión grave y bloqueo AV."
+          ],
+          "ref": "ESC Hypertension Guidelines · ACOG Hypertension in Pregnancy · AHA/ACC Hypertension Guidelines · Lexicomp · UpToDate · FDA Label",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": false,
+            "message": "No requiere ajuste renal. Metabolismo predominantemente hepático (CYP3A4).",
+            "fgMaior50": {
+              "vo": {
+                "dose": "30–60 mg LP",
+                "intervalo": "1x/dia",
+                "doseMaxima": "120 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Dosis habitual. Preferir formulación LP para uso crónico."
+            },
+            "fg30a50": {
+              "vo": {
+                "dose": "30 mg LP",
+                "intervalo": "1x/dia",
+                "doseMaxima": "90 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Sin ajuste renal específico. Monitorizar PA y FC."
+            },
+            "fg10a30": {
+              "vo": {
+                "dose": "30 mg LP",
+                "intervalo": "1x/dia (cautela)",
+                "doseMaxima": "60 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Puede usarse sin ajuste específico, pero monitorizar PA y FC rigurosamente."
+            },
+            "fgMenor10": {
+              "vo": {
+                "dose": "30 mg LP",
+                "intervalo": "1x/dia (cautela)",
+                "doseMaxima": "30 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "ClCr < 10 mL/min: iniciar con dosis menor. Monitorizar hipotensión."
+            },
+            "hemodialise": {
+              "vo": {
+                "dose": "30 mg LP",
+                "intervalo": "1x/dia",
+                "doseMaxima": "30 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Hemodiálisis: no dializable. Mantener dosis habitual con precaución."
+            }
+          },
+          "safetyFlags": {
+            "hypotensionRisk": true,
+            "bradycardiaRisk": false,
+            "avBlockRisk": false,
+            "renalHighRisk": false,
+            "qtRisk": false,
+            "peripheralEdemaRisk": true,
+            "reflexTachycardiaRisk": true,
+            "pregnancyPreferred": true,
+            "warning": "Las formulaciones de acción corta pueden causar taquicardia refleja y empeoramiento de la isquemia coronaria — PREFERIR formulaciones LP para uso crónico. Embarazo: antihipertensivo oral de elección para urgencia hipertensiva."
+          },
+          "auditNotes": {
+            "status": "excellent_after_review",
+            "sourcePriority": [
+              "ESC Hypertension Guidelines 2023",
+              "ACOG Hypertension in Pregnancy 2023",
+              "AHA/ACC Hypertension Guidelines 2023",
+              "Lexicomp 2026",
+              "UpToDate",
+              "FDA Label"
+            ],
+            "note": "Fundamental en HTA gestacional, fenómeno de Raynaud y angina vasoespástica. PREFERIR formulaciones LP para uso crónico. Formulación IR reservada a urgencias."
+          }
+        },
+        "name": {
+          "pt": "Nifedipina",
+          "es": "Nifedipina"
+        },
+        "keywords": [
+          "nifedipina",
+          "bloqueador dos canais de calcio diidropiridinico"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "cardio.js"
+      }
+    }
+  ]
+}

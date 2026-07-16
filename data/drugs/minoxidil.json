@@ -1,0 +1,529 @@
+{
+  "id": "minoxidil",
+  "category": "cardio",
+  "icon": "🫀",
+  "color": "rgba(239,68,68,0.14)",
+  "colorTxt": "#B91C1C",
+  "pt": {
+    "name": "Minoxidil",
+    "class": "Vasodilatador arterial direto / abridor de canais de potássio",
+    "pharmacologicClass": "Anti-hipertensivo vasodilatador arteriolar potente",
+    "mechanism": "Pró-fármaco convertido em sulfato de minoxidil, que abre canais de potássio ATP-sensíveis na musculatura lisa arteriolar. Isso hiperpolariza a célula vascular, reduz entrada de cálcio e promove vasodilatação arterial intensa, com queda da resistência vascular sistêmica e da pós-carga.",
+    "pharmacodynamics": "É um dos vasodilatadores orais mais potentes. A vasodilatação intensa ativa reflexo simpático e sistema renina-angiotensina-aldosterona, causando taquicardia, retenção hídrica, edema e potencial piora de insuficiência cardíaca. Por isso, deve ser usado quase sempre com betabloqueador e diurético de alça.",
+    "pharmacokinetics": {
+      "absorption": "Boa absorção oral.",
+      "bioavailability": "≈90%",
+      "proteinBinding": "Baixa ligação a proteínas.",
+      "metabolism": "Metabolismo hepático por sulfotransferase para metabólito ativo.",
+      "halfLife": "Meia-vida plasmática curta, mas efeito anti-hipertensivo pode durar 24 horas ou mais.",
+      "elimination": "Eliminação renal de metabólitos."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensão arterial grave refratária"
+      ],
+      "offLabel": [
+        "Hipertensão resistente quando múltiplas classes falharam ou são contraindicadas",
+        "Uso dermatológico tópico para alopecia androgenética"
+      ]
+    },
+    "commercialNames": {
+      "br": [
+        "Loniten",
+        "Minoxidil"
+      ],
+      "ar": [
+        "Loniten",
+        "Minoxidil"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 2,5 mg conforme disponibilidade",
+      "Comprimidos 5 mg conforme disponibilidade",
+      "Comprimidos 10 mg conforme disponibilidade",
+      "Solução tópica/espuma 2% ou 5% para alopecia"
+    ],
+    "dose": {
+      "hipertensaoResistente": "Iniciar 2,5–5 mg VO 1x/dia. Titular lentamente conforme PA, edema e FC.",
+      "manutencao": "Dose usual 10–40 mg/dia em 1–2 tomadas, sempre com diurético adequado e geralmente betabloqueador.",
+      "doseMaxima": "Até 100 mg/dia em casos excepcionais especializados, mas doses altas aumentam muito eventos adversos."
+    },
+    "doseKg": {
+      "padrao": "Adulto: dose fixa titulada por PA e tolerância. Pediatria apenas com especialista.",
+      "grave": "Hipertensão refratária grave: individualizar com nefrologia/cardiologia.",
+      "meningite": null,
+      "doseMaxima": "Individualizar. Exige combinação com diurético de alça e controle da FC."
+    },
+    "onset": "Início em 30–60 minutos; efeito máximo em várias horas; duração prolongada.",
+    "therapeuticRange": "Objetivo: redução sustentada da PA em hipertensão resistente, sem edema progressivo, taquicardia, angina, derrame pericárdico ou descompensação cardíaca.",
+    "commonAdverseEffects": [
+      "Hipertricose",
+      "Edema periférico",
+      "Retenção hídrica",
+      "Taquicardia reflexa",
+      "Palpitações",
+      "Cefaleia",
+      "Ganho de peso por retenção de líquido"
+    ],
+    "dangerousAdverseEffects": [
+      "Derrame pericárdico",
+      "Tamponamento cardíaco raro",
+      "Piora de insuficiência cardíaca",
+      "Angina ou isquemia por taquicardia reflexa",
+      "Edema grave/retenção hídrica maciça",
+      "Hipotensão sintomática"
+    ],
+    "contraindications": {
+      "absolute": [
+        "Feocromocitoma sem controle alfa-adrenérgico",
+        "Hipersensibilidade ao minoxidil"
+      ],
+      "relative": [
+        "Insuficiência cardíaca descompensada",
+        "Doença arterial coronariana instável",
+        "Derrame pericárdico prévio ou pericardiopatia",
+        "DRC avançada com sobrecarga volêmica",
+        "Taquiarritmias não controladas"
+      ]
+    },
+    "risksByPatient": [],
+    "alerts": [
+      "Minoxidil oral NÃO deve ser usado como anti-hipertensivo simples. Reservar para hipertensão grave/resistente refratária.",
+      "Obrigatório associar diurético potente, geralmente de alça, para prevenir retenção hídrica grave.",
+      "Geralmente associar betabloqueador ou outro controle cronotrópico para prevenir taquicardia reflexa e isquemia.",
+      "Monitorar sinais de derrame pericárdico: dispneia, dor torácica, hipotensão, turgência jugular ou aumento inexplicado de peso/edema."
+    ],
+    "interactions": {
+      "contraindicated": [
+        "Feocromocitoma sem bloqueio alfa adequado: risco de crise hipertensiva catecolaminérgica."
+      ],
+      "major": [
+        "Outros vasodilatadores: hipotensão aditiva importante.",
+        "Nitratos e inibidores PDE-5: risco de hipotensão sintomática.",
+        "Simpaticomiméticos podem antagonizar efeito anti-hipertensivo e aumentar taquicardia."
+      ],
+      "beneficialRequired": [
+        "Diurético de alça: geralmente necessário para prevenir retenção hídrica grave.",
+        "Betabloqueador: geralmente necessário para controlar taquicardia reflexa."
+      ],
+      "moderate": [
+        "AINEs podem reduzir efeito anti-hipertensivo e piorar retenção hídrica.",
+        "Anti-hipertensivos múltiplos aumentam risco de hipotensão."
+      ]
+    },
+    "combinationRule": {
+      "pt": [
+        "Minoxidil oral para hipertensão deve ser prescrito quase sempre com diurético de alça.",
+        "Associar betabloqueador se não houver contraindicação para reduzir taquicardia reflexa.",
+        "Sem diurético, o risco de edema grave, ganho de peso e descompensação cardíaca aumenta muito.",
+        "Sem controle da FC, o risco de angina e isquemia miocárdica aumenta."
+      ],
+      "es": [
+        "Minoxidil oral para hipertensión debe prescribirse casi siempre con diurético de asa.",
+        "Asociar betabloqueante si no hay contraindicación para reducir taquicardia refleja.",
+        "Sin diurético, el riesgo de edema grave, aumento de peso y descompensación cardíaca aumenta mucho.",
+        "Sin control de FC, el riesgo de angina e isquemia miocárdica aumenta."
+      ]
+    },
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não há ajuste renal formal padronizado, mas DRC avançada aumenta muito o risco de retenção hídrica e derrame pericárdico; titular com extrema cautela.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "2,5–10 mg",
+          "intervalo": "24/24h–12/12h",
+          "doseMaxima": "40–100 mg/dia conforme especialista",
+          "unidade": "mg"
+        },
+        "obs": "Iniciar baixo e titular conforme PA, edema e FC."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "2,5–5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "Maior risco de retenção hídrica; garantir diurético adequado."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "20–40 mg/dia conforme resposta",
+          "unidade": "mg"
+        },
+        "obs": "Usar com nefrologia/cardiologia. Monitorar peso, edema, PA e sinais pericárdicos."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h ou dias alternados",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Uso excepcional. Alto risco de sobrecarga volêmica e derrame pericárdico."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "2,5–5 mg",
+          "intervalo": "após HD ou conforme PA",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Pode ser usado em hipertensão refratária de diálise, mas exige controle rigoroso de volume, peso seco e avaliação de derrame pericárdico."
+      }
+    },
+    "hepaticDose": {
+      "required": false,
+      "message": "Metabolização hepática para metabólito ativo; não há ajuste hepático formal padronizado, mas iniciar com cautela em hepatopatia avançada."
+    },
+    "monitoring": {
+      "baseline": [
+        "Pressão arterial",
+        "Frequência cardíaca",
+        "Peso corporal",
+        "Edema/estado volêmico",
+        "Creatinina/ClCr",
+        "ECG se DAC/taquiarritmia",
+        "Avaliar necessidade de ecocardiograma se alto risco"
+      ],
+      "followUp": [
+        "PA domiciliar/ambulatorial",
+        "FC",
+        "Peso diário no início/titulação",
+        "Edema e dispneia",
+        "Sinais de derrame pericárdico",
+        "Angina/palpitações",
+        "Adesão ao diurético e betabloqueador"
+      ]
+    },
+    "patientEducation": [
+      "Não usar minoxidil oral sem os medicamentos associados prescritos para proteger coração e controlar líquido.",
+      "Controlar peso diariamente no início ou após aumento de dose.",
+      "Avisar rapidamente edema, falta de ar, dor no peito, palpitações ou ganho rápido de peso.",
+      "Hipertricose é frequente e pode limitar adesão."
+    ],
+    "clinicalPearls": [
+      "É um dos anti-hipertensivos orais mais potentes, mas também um dos que mais exige estratégia de segurança.",
+      "Se o paciente não está usando diurético de alça, pense duas vezes antes de aceitar minoxidil oral.",
+      "Hipertricose é efeito adverso clássico e dose-dependente.",
+      "Derrame pericárdico é raro, mas é o evento grave que precisa ser lembrado."
+    ],
+    "guidelineRecommendations": [
+      "Reservar para hipertensão resistente/refratária quando terapias preferenciais falharam, com monitorização especializada.",
+      "Não é fármaco de primeira linha para hipertensão essencial comum."
+    ],
+    "safetyFlags": {
+      "arterialVasodilator": true,
+      "potassiumChannelOpener": true,
+      "refractoryHypertensionDrug": true,
+      "requiresLoopDiuretic": true,
+      "requiresHeartRateControl": true,
+      "fluidRetentionRisk": true,
+      "reflexTachycardiaRisk": true,
+      "pericardialEffusionRisk": true,
+      "hypertrichosisRisk": true,
+      "ischemiaRisk": true,
+      "specialistDrug": true,
+      "warning": "Minoxidil oral é reservado para hipertensão resistente grave. Deve ser usado com diurético potente e geralmente betabloqueador; pode causar retenção hídrica maciça, taquicardia reflexa, isquemia e derrame pericárdico."
+    },
+    "auditNotes": {
+      "status": "MASTER_V2",
+      "version": "2.0",
+      "evidence": [
+        "AHA Resistant Hypertension Scientific Statement",
+        "ESC Hypertension Guidelines",
+        "AHA/ACC Hypertension Guideline",
+        "KDIGO Blood Pressure in CKD",
+        "Lexicomp",
+        "Micromedex",
+        "Goodman & Gilman",
+        "Katzung",
+        "FDA",
+        "EMA"
+      ]
+    },
+    "ref": [
+      "AHA Resistant Hypertension Scientific Statement",
+      "ESC Hypertension Guidelines",
+      "AHA/ACC Hypertension Guideline",
+      "KDIGO Blood Pressure in CKD",
+      "Lexicomp",
+      "Micromedex",
+      "Goodman & Gilman",
+      "Katzung",
+      "FDA Label",
+      "EMA Label"
+    ]
+  },
+  "es": {
+    "name": "Minoxidil",
+    "class": "Vasodilatador arterial directo / abridor de canales de potasio",
+    "pharmacologicClass": "Antihipertensivo vasodilatador arteriolar potente",
+    "mechanism": "Profármaco convertido en sulfato de minoxidil, que abre canales de potasio ATP-sensibles en el músculo liso arteriolar. Esto hiperpolariza la célula vascular, reduce la entrada de calcio y produce vasodilatación arterial intensa, con caída de la resistencia vascular sistémica y de la poscarga.",
+    "pharmacodynamics": "Es uno de los vasodilatadores orales más potentes. La vasodilatación intensa activa reflejo simpático y sistema renina-angiotensina-aldosterona, causando taquicardia, retención hídrica, edema y potencial empeoramiento de insuficiencia cardíaca. Por eso debe usarse casi siempre con betabloqueante y diurético de asa.",
+    "pharmacokinetics": {
+      "absorption": "Buena absorción oral.",
+      "bioavailability": "≈90%",
+      "proteinBinding": "Baja unión a proteínas.",
+      "metabolism": "Metabolismo hepático por sulfotransferasa a metabolito activo.",
+      "halfLife": "Vida media plasmática corta, pero el efecto antihipertensivo puede durar 24 horas o más.",
+      "elimination": "Eliminación renal de metabolitos."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensión arterial grave refractaria"
+      ],
+      "offLabel": [
+        "Hipertensión resistente cuando múltiples clases fallaron o están contraindicadas",
+        "Uso dermatológico tópico para alopecia androgenética"
+      ]
+    },
+    "commercialNames": {
+      "br": [
+        "Loniten",
+        "Minoxidil"
+      ],
+      "ar": [
+        "Loniten",
+        "Minoxidil"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 2,5 mg según disponibilidad",
+      "Comprimidos 5 mg según disponibilidad",
+      "Comprimidos 10 mg según disponibilidad",
+      "Solución tópica/espuma 2% o 5% para alopecia"
+    ],
+    "dose": {
+      "hipertensaoResistente": "Iniciar 2,5–5 mg VO 1 vez/día. Titular lentamente según PA, edema y FC.",
+      "manutencao": "Dosis usual 10–40 mg/día en 1–2 tomas, siempre con diurético adecuado y generalmente betabloqueante.",
+      "doseMaxima": "Hasta 100 mg/día en casos excepcionales especializados, pero dosis altas aumentan mucho los eventos adversos."
+    },
+    "doseKg": {
+      "padrao": "Adulto: dosis fija titulada por PA y tolerancia. Pediatría solo con especialista.",
+      "grave": "Hipertensión refractaria grave: individualizar con nefrología/cardiología.",
+      "meningite": null,
+      "doseMaxima": "Individualizar. Requiere combinación con diurético de asa y control de FC."
+    },
+    "onset": "Inicio en 30–60 minutos; efecto máximo en varias horas; duración prolongada.",
+    "therapeuticRange": "Objetivo: reducción sostenida de PA en hipertensión resistente, sin edema progresivo, taquicardia, angina, derrame pericárdico o descompensación cardíaca.",
+    "commonAdverseEffects": [
+      "Hipertricosis",
+      "Edema periférico",
+      "Retención hídrica",
+      "Taquicardia refleja",
+      "Palpitaciones",
+      "Cefalea",
+      "Aumento de peso por retención de líquido"
+    ],
+    "dangerousAdverseEffects": [
+      "Derrame pericárdico",
+      "Taponamiento cardíaco raro",
+      "Empeoramiento de insuficiencia cardíaca",
+      "Angina o isquemia por taquicardia refleja",
+      "Edema grave/retención hídrica masiva",
+      "Hipotensión sintomática"
+    ],
+    "contraindications": {
+      "absolute": [
+        "Feocromocitoma sin control alfa-adrenérgico",
+        "Hipersensibilidad a minoxidil"
+      ],
+      "relative": [
+        "Insuficiencia cardíaca descompensada",
+        "Enfermedad coronaria inestable",
+        "Derrame pericárdico previo o pericardiopatía",
+        "ERC avanzada con sobrecarga de volumen",
+        "Taquiarritmias no controladas"
+      ]
+    },
+    "risksByPatient": [],
+    "alerts": [
+      "Minoxidil oral NO debe usarse como antihipertensivo simple. Reservar para hipertensión grave/resistente refractaria.",
+      "Obligatorio asociar diurético potente, generalmente de asa, para prevenir retención hídrica grave.",
+      "Generalmente asociar betabloqueante u otro control cronotrópico para prevenir taquicardia refleja e isquemia.",
+      "Monitorizar signos de derrame pericárdico: disnea, dolor torácico, hipotensión, ingurgitación yugular o aumento inexplicado de peso/edema."
+    ],
+    "interactions": {
+      "contraindicated": [
+        "Feocromocitoma sin bloqueo alfa adecuado: riesgo de crisis hipertensiva catecolaminérgica."
+      ],
+      "major": [
+        "Otros vasodilatadores: hipotensión aditiva importante.",
+        "Nitratos e inhibidores PDE-5: riesgo de hipotensión sintomática.",
+        "Simpaticomiméticos pueden antagonizar efecto antihipertensivo y aumentar taquicardia."
+      ],
+      "beneficialRequired": [
+        "Diurético de asa: generalmente necesario para prevenir retención hídrica grave.",
+        "Betabloqueante: generalmente necesario para controlar taquicardia refleja."
+      ],
+      "moderate": [
+        "Los AINE pueden reducir efecto antihipertensivo y empeorar retención hídrica.",
+        "Múltiples antihipertensivos aumentan riesgo de hipotensión."
+      ]
+    },
+    "combinationRule": {
+      "pt": [
+        "Minoxidil oral para hipertensão deve ser prescrito quase sempre com diurético de alça.",
+        "Associar betabloqueador se não houver contraindicação para reduzir taquicardia reflexa.",
+        "Sem diurético, o risco de edema grave, ganho de peso e descompensação cardíaca aumenta muito.",
+        "Sem controle da FC, o risco de angina e isquemia miocárdica aumenta."
+      ],
+      "es": [
+        "Minoxidil oral para hipertensión debe prescribirse casi siempre con diurético de asa.",
+        "Asociar betabloqueante si no hay contraindicación para reducir taquicardia refleja.",
+        "Sin diurético, el riesgo de edema grave, aumento de peso y descompensación cardíaca aumenta mucho.",
+        "Sin control de FC, el riesgo de angina e isquemia miocárdica aumenta."
+      ]
+    },
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No hay ajuste renal formal estandarizado, pero ERC avanzada aumenta mucho el riesgo de retención hídrica y derrame pericárdico; titular con extrema precaución.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "2,5–10 mg",
+          "intervalo": "24/24h–12/12h",
+          "doseMaxima": "40–100 mg/dia conforme especialista",
+          "unidade": "mg"
+        },
+        "obs": "Iniciar bajo y titular según PA, edema y FC."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "2,5–5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "Mayor riesgo de retención hídrica; asegurar diurético adecuado."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "20–40 mg/dia conforme resposta",
+          "unidade": "mg"
+        },
+        "obs": "Usar con nefrología/cardiología. Monitorizar peso, edema, PA y signos pericárdicos."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h ou dias alternados",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Uso excepcional. Alto riesgo de sobrecarga de volumen y derrame pericárdico."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "2,5–5 mg",
+          "intervalo": "após HD ou conforme PA",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Puede usarse en hipertensión refractaria de diálisis, pero requiere control estricto de volumen, peso seco y evaluación de derrame pericárdico."
+      }
+    },
+    "hepaticDose": {
+      "required": false,
+      "message": "Metabolización hepática a metabolito activo; no hay ajuste hepático formal estandarizado, pero iniciar con precaución en hepatopatía avanzada."
+    },
+    "monitoring": {
+      "baseline": [
+        "Presión arterial",
+        "Frecuencia cardíaca",
+        "Peso corporal",
+        "Edema/estado de volumen",
+        "Creatinina/ClCr",
+        "ECG si EAC/taquiarritmia",
+        "Evaluar necesidad de ecocardiograma si alto riesgo"
+      ],
+      "followUp": [
+        "PA domiciliaria/ambulatoria",
+        "FC",
+        "Peso diario al inicio/titulación",
+        "Edema y disnea",
+        "Signos de derrame pericárdico",
+        "Angina/palpitaciones",
+        "Adherencia al diurético y betabloqueante"
+      ]
+    },
+    "patientEducation": [
+      "No usar minoxidil oral sin los medicamentos asociados prescritos para proteger el corazón y controlar líquido.",
+      "Controlar peso diariamente al inicio o después de aumentar dosis.",
+      "Avisar rápidamente edema, falta de aire, dolor torácico, palpitaciones o aumento rápido de peso.",
+      "La hipertricosis es frecuente y puede limitar adherencia."
+    ],
+    "clinicalPearls": [
+      "Es uno de los antihipertensivos orales más potentes, pero también uno de los que más exige estrategia de seguridad.",
+      "Si el paciente no está usando diurético de asa, piense dos veces antes de aceptar minoxidil oral.",
+      "La hipertricosis es efecto adverso clásico y dosis-dependiente.",
+      "El derrame pericárdico es raro, pero es el evento grave que debe recordarse."
+    ],
+    "guidelineRecommendations": [
+      "Reservar para hipertensión resistente/refractaria cuando terapias preferenciales fallaron, con monitorización especializada.",
+      "No es fármaco de primera línea para hipertensión esencial común."
+    ],
+    "safetyFlags": {
+      "arterialVasodilator": true,
+      "potassiumChannelOpener": true,
+      "refractoryHypertensionDrug": true,
+      "requiresLoopDiuretic": true,
+      "requiresHeartRateControl": true,
+      "fluidRetentionRisk": true,
+      "reflexTachycardiaRisk": true,
+      "pericardialEffusionRisk": true,
+      "hypertrichosisRisk": true,
+      "ischemiaRisk": true,
+      "specialistDrug": true,
+      "warning": "Minoxidil oral se reserva para hipertensión resistente grave. Debe usarse con diurético potente y generalmente betabloqueante; puede causar retención hídrica masiva, taquicardia refleja, isquemia y derrame pericárdico."
+    },
+    "auditNotes": {
+      "status": "MASTER_V2",
+      "version": "2.0",
+      "evidence": [
+        "AHA Resistant Hypertension Scientific Statement",
+        "ESC Hypertension Guidelines",
+        "AHA/ACC Hypertension Guideline",
+        "KDIGO Blood Pressure in CKD",
+        "Lexicomp",
+        "Micromedex",
+        "Goodman & Gilman",
+        "Katzung",
+        "FDA",
+        "EMA"
+      ]
+    },
+    "ref": [
+      "AHA Resistant Hypertension Scientific Statement",
+      "ESC Hypertension Guidelines",
+      "AHA/ACC Hypertension Guideline",
+      "KDIGO Blood Pressure in CKD",
+      "Lexicomp",
+      "Micromedex",
+      "Goodman & Gilman",
+      "Katzung",
+      "FDA Label",
+      "EMA Label"
+    ]
+  },
+  "name": {
+    "pt": "Minoxidil",
+    "es": "Minoxidil"
+  },
+  "keywords": [
+    "minoxidil",
+    "loniten",
+    "vasodilatador arterial direto / abridor de canais de potassio"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

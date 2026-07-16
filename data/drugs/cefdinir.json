@@ -1,0 +1,258 @@
+{
+  "id": "cefdinir",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(139,92,246,0.12)",
+  "colorTxt": "#7C3AED",
+  "pt": {
+    "name": "Cefdinir",
+    "class": "Cefalosporina de 3ª geração (oral)",
+    "commercialNames": {
+      "br": [
+        "Omnicef",
+        "Cefdinir Genérico"
+      ],
+      "ar": [
+        "Omnicef",
+        "Cefdinir Genérico"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 300 mg",
+      "Suspensão oral pediátrica: 125 mg/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "300 mg VO 12/12h (ou 600 mg VO 24/24h)"
+    },
+    "doseKg": null,
+    "indication": "Otite média aguda, sinusite aguda, faringoamigdalite por Streptococcus pyogenes, pneumonia adquirida na comunidade leve-moderada, infecções de pele e partes moles não complicadas.",
+    "spectrum": "Streptococcus pyogenes, Streptococcus pneumoniae (sensível à penicilina), Haemophilus influenzae (incluindo beta-lactamase+), Moraxella catarrhalis, Staphylococcus aureus (MSSA), E. coli, Klebsiella spp., Proteus mirabilis. Atividade superior ao cefaclor contra H. influenzae. Sem atividade contra MRSA, Pseudomonas ou anaeróbios.",
+    "contraindications": [
+      "Hipersensibilidade às cefalosporinas ou penicilinas (reação cruzada ~1–2%)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Fezes avermelhadas em lactentes: reação benigna pelo quelante de ferro — não suspender.",
+      "Antiácidos com Al/Mg e suplementos de ferro reduzem absorção — administrar 2h antes ou depois.",
+      "Ajuste renal quando ClCr < 30 mL/min: estender intervalo para 24 horas."
+    ],
+    "ref": "Sanford Guide 2025 / IDSA CAP Guidelines / FDA Prescribing Information / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "7 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "7 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Sem ajuste até ClCr 30 mL/min."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "7 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Estender intervalo para 24 horas."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "7 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar neurotoxicidade e eventos gastrointestinais."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "7 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Cefdinir",
+    "class": "Cefalosporina de 3.ª generación (oral)",
+    "commercialNames": {
+      "br": [
+        "Omnicef",
+        "Cefdinir Genérico"
+      ],
+      "ar": [
+        "Omnicef",
+        "Cefdinir Genérico"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 300 mg",
+      "Suspensión oral pediátrica: 125 mg/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "300 mg VO 12/12h (o 600 mg VO 24/24h)"
+    },
+    "doseKg": null,
+    "indication": "Otitis media aguda, sinusitis aguda, faringoamigdalitis por Streptococcus pyogenes, neumonía adquirida en la comunidad leve-moderada, infecciones de piel y partes blandas no complicadas.",
+    "spectrum": "Streptococcus pyogenes, Streptococcus pneumoniae (sensible a penicilina), Haemophilus influenzae (incluido beta-lactamasa+), Moraxella catarrhalis, Staphylococcus aureus (MSSA), E. coli, Klebsiella spp., Proteus mirabilis. Actividad superior al cefaclor frente a H. influenzae. Sin actividad frente a MRSA, Pseudomonas ni anaerobios.",
+    "contraindications": [
+      "Hipersensibilidad a cefalosporinas o penicilinas (reacción cruzada ~1–2%)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Heces rojizas en lactantes: reacción benigna por quelante de hierro — no suspender.",
+      "Antiácidos con Al/Mg y suplementos de hierro reducen la absorción — administrar 2h antes o después.",
+      "Ajuste renal cuando ClCr < 30 mL/min: extender intervalo a 24 horas."
+    ],
+    "ref": "Sanford Guide 2025 / IDSA CAP Guidelines / FDA Prescribing Information / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "7 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "7 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Sin ajuste hasta ClCr 30 mL/min."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "7 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Extender intervalo a 24 horas."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "7 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar neurotoxicidad y eventos gastrointestinales."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "7 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Cefdinir",
+    "es": "Cefdinir"
+  },
+  "keywords": [
+    "cefdinir",
+    "omnicef",
+    "cefdinir generico",
+    "cefalosporina de 3ª geracao (oral)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

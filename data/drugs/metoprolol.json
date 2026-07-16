@@ -1,0 +1,834 @@
+{
+  "id": "metoprolol",
+  "category": "cardio",
+  "icon": "🫀",
+  "color": "rgba(239,68,68,0.13)",
+  "colorTxt": "#B91C1C",
+  "pt": {
+    "name": "Succinato / Tartarato de Metoprolol",
+    "class": "Betabloqueador beta-1 seletivo",
+    "commercialNames": {
+      "br": [
+        "Seloken",
+        "Selozok",
+        "Metoprolol genérico"
+      ],
+      "ar": [
+        "Lopresor",
+        "Seloken",
+        "Metoprolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 25 mg, 50 mg, 100 mg (tartarato - liberação imediata)",
+      "Comprimidos LP: 25 mg, 50 mg, 100 mg, 200 mg (succinato - liberação prolongada)",
+      "Solução injetável EV: 1 mg/mL (5 mL/ampola)"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA/Angina: 50–100 mg VO 1–2x/dia (tartarato) ou 50–100 mg 1x/dia (succinato LP). Titular até 200 mg/dia.",
+      "adultoGrave": "ICC (ICFEr): iniciar 12,5–25 mg VO 1x/dia (succinato LP). Titular lentamente a cada 2 semanas até 200 mg/dia se tolerado.",
+      "pediatricaPadrao": "50 mg VO/dia dividido em 1–2 tomadas (1 mg/kg/dia inicial em HTA).",
+      "pediatricaGrave": "Titular até 140 mg/dia (2 mg/kg/dia) com cautela em ICC pediátrica.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "1 mg/kg/dia VO dividido em 1–2x (HTA pediátrica)",
+      "grave": "Até 2 mg/kg/dia VO com titulação cautelosa",
+      "meningite": null,
+      "doseMaxima": "Adultos: 200 mg/dia (ICC) / 400 mg/dia (HTA/Angina) | Pediatria: 200 mg/dia"
+    },
+    "therapeuticRange": "Alvo de FC em repouso: 55–65 bpm em ICC estável. Em HTA/Angina: FC em repouso < 70 bpm com PA controlada.",
+    "dilution": "EV: pode ser administrado sem diluição (bolus lento 1 mg/min) ou diluído em SF 0,9% / SG 5%. Usar apenas em ambiente com monitorização contínua.",
+    "speed": "EV: infundir 5 mg em 5 minutos. Repetir até 3 doses com intervalo de 5 min conforme resposta hemodinâmica.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Fadiga e letargia",
+      "Tontura / hipotensão",
+      "Extremidades frias",
+      "Disfunção erétil",
+      "Pesadelos / distúrbios do sono"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueio AV de 2º/3º grau",
+      "Broncoespasmo em asmáticos/DPOC grave",
+      "Choque cardiogênico / hipotensão grave",
+      "Piora abrupta de ICC descompensada",
+      "Hipoglicemia mascarada em diabéticos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NUNCA suspender abruptamente — risco de angina rebote, IAM e morte súbita. Reduzir progressivamente em 1–2 semanas.",
+      "Segurar dose se: FC < 50 bpm, PAS < 90 mmHg, bloqueio AV 2º/3º grau ou ICC agudamente descompensada.",
+      "Interação crítica com verapamil/diltiazem EV: risco de bloqueio AV e parada cardíaca.",
+      "Pode mascarar taquicardia como sinal precoce de hipoglicemia em diabéticos insulinizados."
+    ],
+    "ref": "AHA/ACC/HFSA Heart Failure Guidelines 2022 · ESC Heart Failure Guidelines 2021 · MERIT-HF Trial · Goodman & Gilman 14ª ed. · Lexicomp 2026 · FDA/EMA label",
+    "pharmacologicClass": "Betabloqueador cardioseletivo de segunda geração, lipofílico",
+    "formulations": {
+      "succinate": "Succinato LP (liberação prolongada, 1x/dia) — única formulação com evidência de redução de mortalidade na ICFEr (MERIT-HF). Equivale ao Selozok/Seloken ZOC.",
+      "tartrate": "Tartarato IR (liberação imediata, 2–3x/dia) — utilizado em IAM (EV e VO), angina, controle de FC. NÃO intercambiável com succinato em ICC."
+    },
+    "pharmacodynamics": "Reduz PA, FC, consumo miocárdico de O₂ e remodelamento ventricular após IAM e em ICC. Succinato LP mantém níveis plasmáticos estáveis ao longo de 24 h, minimizando picos e vales — melhor tolerabilidade em ICC. Lipofílico: cruza a BHE → pode causar pesadelos, depressão e distúrbios do sono.",
+    "onset": "VO (tartarato IR): início em ~1 hora, pico em 1–2 h. VO (succinato LP): pico em 6–12 h, liberação controlada por 24 h. EV: início em 5–10 minutos.",
+    "mechanism": "Bloqueio seletivo competitivo dos receptores β1-adrenérgicos cardíacos. Reduz FC, força contrátil (efeito inotrópico negativo) e velocidade de condução AV, diminuindo o consumo miocárdico de O₂. Em doses mais altas pode perder seletividade e bloquear receptores β2 (brônquios, vasos). O succinato LP libera o fármaco de forma controlada ao longo de 24 h, mantendo níveis plasmáticos estáveis e melhor tolerabilidade em ICC.",
+    "pharmacokinetics": {
+      "absorption": "Absorção oral rápida e quase completa (~95%). A formulação LP retarda o pico sem alterar biodisponibilidade total.",
+      "bioavailability": "~40–50% (efeito de primeira passagem hepática importante; polimorfismo CYP2D6 influencia biodisponibilidade)",
+      "proteinBinding": "~12% (baixa ligação proteica)",
+      "vd": "~5,6 L/kg",
+      "metabolism": "Hepático via CYP2D6 (~95%). Metabolizadores lentos (CYP2D6 PM) apresentam níveis até 5× maiores — maior risco de bradicardia. Metabólitos inativos.",
+      "halfLife": "3–7 horas (IR: formulação LP prolonga a liberação, não altera meia-vida)",
+      "elimination": "Renal < 5% inalterado; restante como metabólitos inativos",
+      "dialysability": "Parcialmente removido por hemodiálise (~25%). Não significativamente removido por diálise peritoneal.",
+      "cyp2d6Note": "Inibidores de CYP2D6 (fluoxetina, paroxetina, bupropiona, quinidina) podem elevar substancialmente os níveis de metoprolol → bradicardia grave. Monitorar."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensão arterial sistêmica",
+        "Angina estável crônica",
+        "ICC com fração de ejeção reduzida (ICFEr) — succinato LP",
+        "Pós-IAM para redução de mortalidade cardiovascular",
+        "Taquicardia supraventricular / Fibrilação atrial (controle de FC)",
+        "Taquicardia sinusal sintomática"
+      ],
+      "offLabel": [
+        "Tremor essencial",
+        "Profilaxia de migrânea",
+        "Síndrome de taquicardia postural ortostática (POTS)",
+        "Hipertireoidismo (controle sintomático de FC enquanto aguarda tratamento definitivo)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Bradicardia sinusal < 50 bpm sintomática",
+        "Bloqueio AV de 2º grau (Mobitz II) ou 3º grau sem marcapasso",
+        "Síndrome do seio doente sem marcapasso",
+        "Choque cardiogênico",
+        "ICC agudamente descompensada que requer inotrópico IV",
+        "PAS < 90 mmHg",
+        "Hipersensibilidade ao metoprolol"
+      ],
+      "relative": [
+        "Asma brônquica moderada/grave (usar apenas se não houver alternativa — succinato LP preferível)",
+        "DPOC com broncoespasmo reversível significativo",
+        "Doença vascular periférica grave (Raynaud, isquemia crítica)",
+        "Diabetes insulinodependente (mascaramento de hipoglicemia)",
+        "Feocromocitoma sem bloqueio α prévio",
+        "Psoríase (pode exacerbar)",
+        "Depressão maior (betabloqueadores centralmente ativos podem piorar)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamil EV / Diltiazem EV",
+          "mechanism": "Dupla inibição nodal AV (dromotrópico negativo aditivo)",
+          "consequence": "Bloqueio AV completo, parada cardíaca",
+          "management": "NÃO associar EV. Via oral: usar com extrema cautela e monitorização contínua."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Inibidores de CYP2D6 (fluoxetina, paroxetina, bupropiona, quinidina)",
+          "mechanism": "Redução do metabolismo hepático do metoprolol via CYP2D6 → aumento de até 5× nos níveis plasmáticos",
+          "consequence": "Bradicardia grave, hipotensão, bloqueio AV",
+          "management": "Reduzir dose do metoprolol 50–75%. Monitorar FC e PA rigorosamente."
+        },
+        {
+          "drug": "Clonidina",
+          "mechanism": "Se clonidina for suspensa abruptamente em uso concomitante, há hipertensão rebote grave pelo efeito alfa não antagonizado",
+          "consequence": "Crise hipertensiva grave",
+          "management": "Descontinuar metoprolol dias antes de suspender clonidina. Monitorar PA."
+        },
+        {
+          "drug": "Insulina / antidiabéticos orais",
+          "mechanism": "Mascaramento da taquicardia reflexa como sinal de hipoglicemia; pode prolongar hipoglicemia",
+          "consequence": "Hipoglicemia grave não reconhecida",
+          "management": "Orientar paciente a monitorar glicemia. Sudorese preservada como sinal alternativo."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINES (ibuprofeno, naproxeno, diclofenaco)",
+          "mechanism": "Redução da síntese de prostaglandinas vasodilatadoras renais → antagonismo do efeito anti-hipertensivo",
+          "consequence": "Redução do efeito anti-hipertensivo do metoprolol",
+          "management": "Monitorar PA. Preferir paracetamol se analgesia necessária."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Efeito cronotrópico negativo aditivo. Amiodarona inibe CYP2D6 aumentando níveis de metoprolol.",
+          "consequence": "Bradicardia, bloqueio AV, hipotensão",
+          "management": "Reduzir dose de metoprolol. Monitorar ECG e FC continuamente."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efeito cronotrópico e dromotrópico negativo aditivo no nódulo sinusal e AV",
+          "consequence": "Bradicardia e bloqueio AV",
+          "management": "Monitorar FC e ECG regularmente."
+        },
+        {
+          "drug": "Anestésicos inalatórios (halotano, sevoflurano)",
+          "mechanism": "Depressão miocárdica e hipotensão aditiva",
+          "consequence": "Hipotensão intraoperatória grave, bradicardia",
+          "management": "Informar anestesiologista. Considerar manutenção do metoprolol no perioperatório (reduz risco cardiovascular) mas monitorar hemodinâmica."
+        },
+        {
+          "drug": "Rifampicina (indutor enzimático CYP2D6/CYP3A4)",
+          "mechanism": "Indução do metabolismo hepático do metoprolol → redução significativa dos níveis plasmáticos (até 4–8× menores)",
+          "consequence": "Perda de efeito betabloqueador — risco de angina rebote, HTA descontrolada ou taquicardia em ICC",
+          "management": "Monitorar FC e PA rigorosamente durante e após ciclo de rifampicina. Pode ser necessário aumentar dose de metoprolol. Reajustar ao suspender rifampicina."
+        },
+        {
+          "drug": "Antidepressivos tricíclicos (amitriptilina, imipramina)",
+          "mechanism": "Inibição de CYP2D6 + efeito hipotensor aditivo",
+          "consequence": "Elevação de níveis de metoprolol + hipotensão ortostática",
+          "management": "Monitorar PA e FC. Considerar redução de dose de metoprolol."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC em repouso e PA",
+        "ECG (intervalo PR, ritmo)",
+        "Função renal (creatinina/ClCr)",
+        "Função hepática (TGO/TGP) se suspeita de hepatopatia",
+        "Sintomas respiratórios (DPOC/Asma)",
+        "Glicemia de jejum em diabéticos"
+      ],
+      "followUp": [
+        "FC alvo: 55–65 bpm (ICC) / < 70 bpm (HTA)",
+        "PA em cada consulta",
+        "Sintomas de hipotensão ortostática",
+        "Sintomas respiratórios (broncoespasmo)",
+        "Aderência e tolerabilidade",
+        "ECG a cada 6–12 meses ou se mudança de dose em ICC",
+        "Eletrólitos séricos (K⁺, Mg²⁺) em pacientes com ICC — hipocalemia aumenta risco de arritmias",
+        "BNP/NT-proBNP como marcador de resposta em ICC (redução espera-se com betabloqueador bem titulado)"
+      ],
+      "icc": [
+        "Pesar diariamente (ganho > 2 kg/48h = sinal de retenção hídrica)",
+        "Edemas periféricos",
+        "Classe funcional NYHA a cada consulta",
+        "Ecocardiograma após titulação completa (3–6 meses)"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (< 40 bpm)",
+        "Hipotensão grave",
+        "Bloqueio AV de alto grau",
+        "Broncoespasmo",
+        "Hipoglicemia",
+        "Insuficiência cardíaca aguda",
+        "Convulsões (overdose grave)",
+        "Coma (raro)"
+      ],
+      "management": [
+        "1. Lavagem gástrica / carvão ativado se ingesta < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia (pode ser repetida, dose máx 3 mg)",
+        "3. Glucagon 5–10 mg IV bolus, depois 1–5 mg/h infusão — antídoto específico (↑ cAMP independente de β1)",
+        "4. Isoprotenerenol ou dobutamina se hipotensão refratária",
+        "5. Emulsão lipídica IV 20% (terapia de resgate em intoxicação grave refratária)",
+        "6. Marcapasso transcutâneo ou transvenoso em bloqueio AV refratário",
+        "7. ECMO em colapso cardiocirculatório refratário (centros experientes)",
+        "8. Hemodiálise tem utilidade limitada (~25% de remoção)"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "IR leve-moderada (ClCr ≥ 30 mL/min): sem ajuste formal — metabolismo hepático ~95%. IR grave (ClCr < 30): cautela, preferir doses baixas; sem limiar obrigatório de dose. Hemodiálise: removido ~25% — administrar após sessão de HD.",
+      "obesity": "Obesidade: a distribuição do metoprolol pode ser afetada. Titular pela resposta de FC e PA, não apenas pelo peso. Atentar para apneia do sono associada (pode agravar bradicardia noturna).",
+      "geriatrics": "Idoso: maior sensibilidade farmacológica. Iniciar 12,5–25 mg/dia. Risco de quedas por hipotensão ortostática. Monitorar cognição (betabloqueadores lipofílicos podem cruzar BHE). Não usar como agente preferencial apenas para HTA em idosos (ESC/AHA).",
+      "pregnancy": "Gestação: categoria C (FDA antigo). Travessa a placenta. Pode causar RCIU, bradicardia neonatal e hipoglicemia neonatal. Monitorar crescimento fetal por US. Descontinuar 48–72 h antes do parto se possível; monitorar neonato. Em HTA na gestação, labetalol e nifedipina são preferidos.",
+      "lactation": "Lactação: excretado no leite materno em concentrações maiores que no plasma (relação leite/plasma ~3). Monitorar lactente para bradicardia e sonolência. Considerar alternativa com menor relação leite/plasma (propranolol ou labetalol) se necessário.",
+      "hepaticImpairment": "Hepatopatia: metabolismo hepático via CYP2D6 reduzido em cirrose grave → acumulação e maior risco de bradicardia. Iniciar com doses menores e titular lentamente. Monitorar enzimas hepáticas se uso prolongado.",
+      "dpoc": "DPOC: succinato LP em baixas doses é preferível ao tartarato IR pela menor variação de pico. Benefício em DPOC+ICC geralmente supera risco de broncoespasmo leve. Contraindicado em broncoespasmo reversível grave ou asma ativa."
+    },
+    "clinicalPearls": [
+      "MERIT-HF (1999): succinato de metoprolol LP reduziu mortalidade total em 34% vs. placebo em ICFEr (NNT ~14 por ano).",
+      "NÃO trocar succinato LP por tartarato IR em ICC: o benefício foi demonstrado especificamente para a formulação LP (succinato). O tartarato não tem evidência de redução de mortalidade em ICC.",
+      "Polimorfismo CYP2D6: ~7–10% da população caucasiana são metabolizadores lentos (PM) — níveis plasmáticos até 5× maiores. Suspeitar se bradicardia excessiva com doses baixas.",
+      "Metoprolol é lipofílico — cruza a barreira hematoencefálica. Pode causar pesadelos, depressão e distúrbios do sono com maior frequência que atenolol (hidrofílico).",
+      "Perioperatório: manter betabloqueadores em pacientes em uso crônico. Iniciar apenas se RCRI ≥ 3 e com tempo suficiente para titular (não iniciar no dia da cirurgia — risco de hipotensão e AVC).",
+      "IAM: metoprolol EV seguido de VO reduz mortalidade quando iniciado precocemente em pacientes hemodinamicamente estáveis. COMMITT mostrou que uso precoce em IAM grande com instabilidade pode aumentar choque — escolher momento adequado.",
+      "POISE Trial (2008): metoprolol EV perioperatório reduziu IAM não-fatal, mas aumentou AVC e morte por choque. Conclusão: NÃO iniciar betabloqueador no dia da cirurgia — titular pelo menos 1 semana antes em pacientes de alto risco cardiovascular (RCRI ≥ 3).",
+      "CYP2D6 Poor Metabolizer (PM): frequência ~7–10% em caucasianos, ~1–2% em asiáticos. Suspeitar em pacientes com bradicardia excessiva em doses baixas sem inibidores CYP2D6 concomitantes. Genotipagem CYP2D6 disponível em centros de referência."
+    ],
+    "incompatibilities": "EV: fisicamente compatível com SF 0,9% e SG 5%. Não misturar na mesma seringa ou linha com amfotericina B, furosemida IV em alta concentração, diazepam ou bicarbonato de sódio.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálise peritoneal: não remove metoprolol de forma significativa. Manter dose habitual reduzida (12,5–25 mg/dia). Monitorar PA e FC."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: remoção mínima (< 25%). Não requer suplementação. Monitorar hemodinâmica rigorosamente — pacientes em UTI com TRSC têm alta instabilidade. Usar dose mínima eficaz."
+      }
+    },
+    "prescriptionErrors": [
+      "Usar tartarato (IR) em vez de succinato (LP) para ICC — apenas succinato LP tem evidência de mortalidade.",
+      "Prescrever doses fixas sem monitorar FC alvo — titular sempre pela resposta clínica.",
+      "Suspender abruptamente no pré-operatório — manter até o dia da cirurgia em pacientes com ICC/DAC.",
+      "Não ajustar dose ao prescrever inibidores de CYP2D6 concomitantes (fluoxetina, paroxetina).",
+      "Iniciar em ICC agudamente descompensada com congestão — aguardar estabilização antes de iniciar ou retitular."
+    ],
+    "patientEducation": [
+      "Nunca parar o medicamento de repente sem orientação médica.",
+      "Tomar no mesmo horário todos os dias, com ou sem alimento.",
+      "Avisar ao médico se FC em repouso < 50 bpm ou PA muito baixa.",
+      "Diabéticos: monitorar glicemia com mais frequência — o remédio pode esconder a taquicardia da hipoglicemia, mas a sudorese persiste.",
+      "Avisar se sentir falta de ar, chiado no peito ou piora do inchaço.",
+      "Pesar-se todo dia pela manhã (ICC) — 2 kg a mais em 48h: ligar para o médico."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Metabolismo hepático predominante. Não requer ajuste renal formal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "25–200 mg",
+          "intervalo": "12/12h–24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "Bolus lento a cada 5 min (máx 3 doses)",
+          "doseMaxima": "15 mg",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h–24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose padrão. Na ICC, usar formulação LP (succinato) 1x/dia com titulação gradual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "25–100 mg",
+          "intervalo": "12/12h–24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "2,5–5 mg",
+          "intervalo": "Bolus lento (monitorização contínua)",
+          "doseMaxima": "10 mg",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,5–1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Sem ajuste renal obrigatório. Monitorar bradicardia e hipotensão — mais frequentes com disfunção renal moderada."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "12,5–50 mg",
+          "intervalo": "12/12h–24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "2,5 mg",
+          "intervalo": "Bolus lento com monitorização",
+          "doseMaxima": "5 mg",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,5 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR grave: sem ajuste formal necessário, mas preferir doses baixas. Alto risco de hipotensão e bradicardia. Monitorar PA e FC rigorosamente."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "12,5–25 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2,5 mg",
+          "intervalo": "Bolus lento — uso excepcional com monitorização intensiva",
+          "doseMaxima": "5 mg",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,25 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "25 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR muito grave/anúria: cautela extrema. Risco elevado de hipotensão e bradicardia. Avaliar necessidade real do betabloqueador neste cenário."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "12,5–25 mg",
+          "intervalo": "24/24h (após HD nos dias de diálise)",
+          "doseMaxima": "50 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Metoprolol é parcialmente removido por hemodiálise (~25%). Administrar dose reduzida após a sessão. Monitorar hipotensão intradialítica."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "bradycardiaRisk": true,
+      "hypotensionRisk": true,
+      "avBlockRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Risco de bradicardia, hipotensão e bloqueio AV. NUNCA suspender abruptamente. Contraindicado em IC agudamente descompensada."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "ESC Heart Failure Guidelines 2021",
+        "MERIT-HF Trial (Lancet 1999)",
+        "COMMIT/CCS-2 Trial (Lancet 2005)",
+        "POISE Trial (Lancet 2008)",
+        "FDA Lopressor (metoprolol tartrate) label 2023",
+        "EMA Seloken ZOC (metoprolol succinate) SmPC 2024",
+        "UpToDate 2025",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Betabloqueador β1 seletivo lipofílico de 2ª geração. SUCCINATO LP (única formulação com evidência de mortalidade em ICFEr — MERIT-HF NNT ~14/ano). TARTARATO IR: IAM/Angina/FC. NÃO intercambiáveis. CYP2D6 ~95%: PM até 5× níveis. POISE 2008: não iniciar no dia da cirurgia. Ajuste renal não obrigatório. pharmacologicClass, formulations, pharmacodynamics, onset adicionados. Auditoria V2 completada 2026-06."
+    }
+  },
+  "es": {
+    "name": "Succinato / Tartrato de Metoprolol",
+    "class": "Betabloqueante beta-1 selectivo",
+    "commercialNames": {
+      "br": [
+        "Seloken",
+        "Selozok",
+        "Metoprolol genérico"
+      ],
+      "ar": [
+        "Lopresor",
+        "Seloken",
+        "Metoprolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 25 mg, 50 mg, 100 mg (tartrato - liberación inmediata)",
+      "Comprimidos LP: 25 mg, 50 mg, 100 mg, 200 mg (succinato - liberación prolongada)",
+      "Solución inyectable EV: 1 mg/mL (5 mL/ampolla)"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA/Angina: 50–100 mg VO 1–2 veces/día (tartrato) o 50–100 mg 1 vez/día (succinato LP). Titular hasta 200 mg/día.",
+      "adultoGrave": "ICC (ICFEr): iniciar 12,5–25 mg VO 1 vez/día (succinato LP). Titular lentamente cada 2 semanas hasta 200 mg/día si tolerado.",
+      "pediatricaPadrao": "50 mg VO/día dividido en 1–2 tomas (1 mg/kg/día inicial en HTA).",
+      "pediatricaGrave": "Titular hasta 140 mg/día (2 mg/kg/día) con precaución en ICC pediátrica.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "1 mg/kg/día VO dividido en 1–2 veces (HTA pediátrica)",
+      "grave": "Hasta 2 mg/kg/día VO con titulación cautelosa",
+      "meningite": null,
+      "doseMaxima": "Adultos: 200 mg/día (ICC) / 400 mg/día (HTA/Angina) | Pediatría: 200 mg/día"
+    },
+    "therapeuticRange": "Objetivo de FC en reposo: 55–65 lpm en ICC estable. En HTA/Angina: FC en reposo < 70 lpm con PA controlada.",
+    "dilution": "EV: puede administrarse sin dilución (bolo lento 1 mg/min) o diluido en SF 0,9% / SG 5%. Usar solo con monitorización continua.",
+    "speed": "EV: infundir 5 mg en 5 minutos. Repetir hasta 3 dosis con intervalo de 5 min según respuesta hemodinámica.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Fatiga y letargo",
+      "Mareos / hipotensión",
+      "Extremidades frías",
+      "Disfunción eréctil",
+      "Pesadillas / trastornos del sueño"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueo AV de 2º/3er grado",
+      "Broncoespasmo en asmáticos/EPOC grave",
+      "Shock cardiogénico / hipotensión grave",
+      "Empeoramiento abrupto de ICC descompensada",
+      "Hipoglucemia enmascarada en diabéticos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NUNCA suspender abruptamente — riesgo de angina rebote, IAM y muerte súbita. Reducir progresivamente en 1–2 semanas.",
+      "Suspender dosis si: FC < 50 lpm, PAS < 90 mmHg, bloqueo AV 2º/3er grado o ICC agudamente descompensada.",
+      "Interacción crítica con verapamilo/diltiazem EV: riesgo de bloqueo AV y paro cardíaco.",
+      "Puede enmascarar taquicardia como signo precoz de hipoglucemia en diabéticos insulinizados."
+    ],
+    "ref": "AHA/ACC/HFSA Heart Failure Guidelines 2022 · ESC Heart Failure Guidelines 2021 · MERIT-HF Trial · Goodman & Gilman 14ª ed. · Lexicomp 2026 · FDA/EMA label",
+    "pharmacologicClass": "Betabloqueante cardioselectivo de segunda generación, lipofílico",
+    "formulations": {
+      "succinate": "Succinato LP (liberación prolongada, 1 vez/día) — única formulación con evidencia de reducción de mortalidad en ICFEr (MERIT-HF). Equivale a Selozok/Seloken ZOC.",
+      "tartrate": "Tartrato IR (liberación inmediata, 2–3 veces/día) — utilizado en IAM (IV y VO), angina, control de FC. NO intercambiable con succinato en ICC."
+    },
+    "pharmacodynamics": "Reduce PA, FC, consumo miocárdico de O₂ y remodelado ventricular tras IAM y en ICC. El succinato LP mantiene niveles plasmáticos estables a lo largo de 24 h, minimizando picos y valles — mejor tolerabilidad en ICC. Lipofílico: cruza la BHE → puede causar pesadillas, depresión y trastornos del sueño.",
+    "onset": "VO (tartrato IR): inicio en ~1 hora, pico en 1–2 h. VO (succinato LP): pico en 6–12 h, liberación controlada por 24 h. EV: inicio en 5–10 minutos.",
+    "mechanism": "Bloqueo selectivo competitivo de receptores β1-adrenérgicos cardíacos. Reduce FC, fuerza contráctil (efecto inotrópico negativo) y velocidad de conducción AV, disminuyendo el consumo miocárdico de O₂. En dosis más altas puede perder selectividad y bloquear receptores β2 (bronquios, vasos). El succinato LP libera el fármaco de forma controlada a lo largo de 24 h, manteniendo niveles plasmáticos estables y mejor tolerabilidad en ICC.",
+    "pharmacokinetics": {
+      "absorption": "Absorción oral rápida y casi completa (~95%). La formulación LP retarda el pico sin alterar la biodisponibilidad total.",
+      "bioavailability": "~40–50% (efecto de primer paso hepático importante; polimorfismo CYP2D6 influye en la biodisponibilidad)",
+      "proteinBinding": "~12% (baja unión a proteínas)",
+      "vd": "~5,6 L/kg",
+      "metabolism": "Hepático vía CYP2D6 (~95%). Metabolizadores lentos (CYP2D6 PM) presentan niveles hasta 5× mayores — mayor riesgo de bradicardia. Metabolitos inactivos.",
+      "halfLife": "3–7 horas (IR: formulación LP prolonga la liberación, no altera la semivida)",
+      "elimination": "Renal < 5% sin cambios; el resto como metabolitos inactivos",
+      "dialysability": "Parcialmente removido por hemodiálisis (~25%). No significativamente removido por diálisis peritoneal.",
+      "cyp2d6Note": "Inhibidores de CYP2D6 (fluoxetina, paroxetina, bupropión, quinidina) pueden elevar sustancialmente los niveles de metoprolol → bradicardia grave. Monitorizar."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensión arterial sistémica",
+        "Angina estable crónica",
+        "ICC con fracción de eyección reducida (ICFEr) — succinato LP",
+        "Post-IAM para reducción de mortalidad cardiovascular",
+        "Taquicardia supraventricular / Fibrilación auricular (control de FC)",
+        "Taquicardia sinusal sintomática"
+      ],
+      "offLabel": [
+        "Temblor esencial",
+        "Profilaxis de migraña",
+        "Síndrome de taquicardia postural ortostática (POTS)",
+        "Hipertiroidismo (control sintomático de FC mientras aguarda tratamiento definitivo)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Bradicardia sinusal < 50 lpm sintomática",
+        "Bloqueo AV de 2º grado (Mobitz II) o 3er grado sin marcapasos",
+        "Síndrome del seno enfermo sin marcapasos",
+        "Shock cardiogénico",
+        "ICC agudamente descompensada que requiere inotrópico IV",
+        "PAS < 90 mmHg",
+        "Hipersensibilidad al metoprolol"
+      ],
+      "relative": [
+        "Asma bronquial moderada/grave (usar solo si no hay alternativa — succinato LP preferible)",
+        "EPOC con broncoespasmo reversible significativo",
+        "Enfermedad vascular periférica grave (Raynaud, isquemia crítica)",
+        "Diabetes insulinodependiente (enmascaramiento de hipoglucemia)",
+        "Feocromocitoma sin bloqueo α previo",
+        "Psoriasis (puede exacerbar)",
+        "Depresión mayor (betabloqueantes centralmente activos pueden empeorar)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamilo EV / Diltiazem EV",
+          "mechanism": "Doble inhibición nodal AV (dromotrópico negativo aditivo)",
+          "consequence": "Bloqueo AV completo, paro cardíaco",
+          "management": "NO asociar EV. Vía oral: usar con extrema precaución y monitorización continua."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Inhibidores de CYP2D6 (fluoxetina, paroxetina, bupropión, quinidina)",
+          "mechanism": "Reducción del metabolismo hepático del metoprolol vía CYP2D6 → aumento de hasta 5× en niveles plasmáticos",
+          "consequence": "Bradicardia grave, hipotensión, bloqueo AV",
+          "management": "Reducir dosis del metoprolol 50–75%. Monitorizar FC y PA rigurosamente."
+        },
+        {
+          "drug": "Clonidina",
+          "mechanism": "Si clonidina se suspende abruptamente en uso concomitante, hay hipertensión de rebote grave por efecto alfa no antagonizado",
+          "consequence": "Crisis hipertensiva grave",
+          "management": "Descontinuar metoprolol días antes de suspender clonidina. Monitorizar PA."
+        },
+        {
+          "drug": "Insulina / antidiabéticos orales",
+          "mechanism": "Enmascaramiento de la taquicardia refleja como signo de hipoglucemia; puede prolongar hipoglucemia",
+          "consequence": "Hipoglucemia grave no reconocida",
+          "management": "Orientar al paciente a monitorizar glucemia. La sudoración se preserva como signo alternativo."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, diclofenaco)",
+          "mechanism": "Reducción de síntesis de prostaglandinas vasodilatadoras renales → antagonismo del efecto antihipertensivo",
+          "consequence": "Reducción del efecto antihipertensivo del metoprolol",
+          "management": "Monitorizar PA. Preferir paracetamol si analgesia necesaria."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Efecto cronotrópico negativo aditivo. Amiodarona inhibe CYP2D6 aumentando niveles de metoprolol.",
+          "consequence": "Bradicardia, bloqueo AV, hipotensión",
+          "management": "Reducir dosis de metoprolol. Monitorizar ECG y FC continuamente."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efecto cronotrópico y dromotrópico negativo aditivo en nódulo sinusal y AV",
+          "consequence": "Bradicardia y bloqueo AV",
+          "management": "Monitorizar FC y ECG regularmente."
+        },
+        {
+          "drug": "Anestésicos inhalatorios (halotano, sevoflurano)",
+          "mechanism": "Depresión miocárdica e hipotensión aditiva",
+          "consequence": "Hipotensión intraoperatoria grave, bradicardia",
+          "management": "Informar al anestesiólogo. Considerar mantenimiento del metoprolol en el perioperatorio (reduce riesgo cardiovascular) pero monitorizar hemodinámica."
+        },
+        {
+          "drug": "Rifampicina (inductor enzimático CYP2D6/CYP3A4)",
+          "mechanism": "Inducción del metabolismo hepático del metoprolol → reducción significativa de los niveles plasmáticos (hasta 4–8× menores)",
+          "consequence": "Pérdida de efecto betabloqueante — riesgo de angina de rebote, HTA descontrolada o taquicardia en ICC",
+          "management": "Monitorizar FC y PA rigurosamente durante y después del ciclo de rifampicina. Puede ser necesario aumentar dosis de metoprolol. Reajustar al suspender rifampicina."
+        },
+        {
+          "drug": "Antidepresivos tricíclicos (amitriptilina, imipramina)",
+          "mechanism": "Inhibición de CYP2D6 + efecto hipotensor aditivo",
+          "consequence": "Elevación de niveles de metoprolol + hipotensión ortostática",
+          "management": "Monitorizar PA y FC. Considerar reducción de dosis de metoprolol."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC en reposo y PA",
+        "ECG (intervalo PR, ritmo)",
+        "Función renal (creatinina/ClCr)",
+        "Función hepática (AST/ALT) si sospecha de hepatopatía",
+        "Síntomas respiratorios (EPOC/Asma)",
+        "Glucemia en ayunas en diabéticos"
+      ],
+      "followUp": [
+        "FC objetivo: 55–65 lpm (ICC) / < 70 lpm (HTA)",
+        "PA en cada consulta",
+        "Síntomas de hipotensión ortostática",
+        "Síntomas respiratorios (broncoespasmo)",
+        "Adherencia y tolerabilidad",
+        "ECG cada 6–12 meses o si cambio de dosis en ICC",
+        "Electrolitos séricos (K⁺, Mg²⁺) en pacientes con ICC — hipopotasemia aumenta riesgo de arritmias",
+        "BNP/NT-proBNP como marcador de respuesta en ICC (reducción esperada con betabloqueante bien titulado)"
+      ],
+      "icc": [
+        "Pesar diariamente (ganancia > 2 kg/48h = señal de retención hídrica)",
+        "Edemas periféricos",
+        "Clase funcional NYHA en cada consulta",
+        "Ecocardiograma tras titulación completa (3–6 meses)"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (< 40 lpm)",
+        "Hipotensión grave",
+        "Bloqueo AV de alto grado",
+        "Broncoespasmo",
+        "Hipoglucemia",
+        "Insuficiencia cardíaca aguda",
+        "Convulsiones (sobredosis grave)",
+        "Coma (raro)"
+      ],
+      "management": [
+        "1. Lavado gástrico / carbón activado si ingesta < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia (puede repetirse, dosis máx 3 mg)",
+        "3. Glucagón 5–10 mg IV bolo, luego 1–5 mg/h infusión — antídoto específico (↑ cAMP independiente de β1)",
+        "4. Isoproterenol o dobutamina si hipotensión refractaria",
+        "5. Emulsión lipídica IV 20% (terapia de rescate en intoxicación grave refractaria)",
+        "6. Marcapasos transcutáneo o transvenoso en bloqueo AV refractario",
+        "7. ECMO en colapso cardiocirculatorio refractario (centros experimentados)",
+        "8. Hemodiálisis tiene utilidad limitada (~25% de remoción)"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "IR leve-moderada (ClCr ≥ 30 mL/min): sin ajuste formal — metabolismo hepático ~95%. IR grave (ClCr < 30): precaución, preferir dosis bajas; sin umbral obligatorio de dosis. Hemodiálisis: eliminado ~25% — administrar después de la sesión de HD.",
+      "obesity": "Obesidad: la distribución del metoprolol puede verse afectada. Titular por respuesta de FC y PA, no solo por el peso. Atención a apnea del sueño asociada (puede agravar bradicardia nocturna).",
+      "geriatrics": "Anciano: mayor sensibilidad farmacológica. Iniciar 12,5–25 mg/día. Riesgo de caídas por hipotensión ortostática. Monitorizar cognición (betabloqueantes lipofílicos pueden cruzar BHE). No usar como agente preferencial solo para HTA en ancianos (ESC/AHA).",
+      "pregnancy": "Embarazo: categoría C (FDA antiguo). Atraviesa la placenta. Puede causar RCIU, bradicardia neonatal e hipoglucemia neonatal. Monitorizar crecimiento fetal por US. Descontinuar 48–72 h antes del parto si posible; monitorizar neonato. En HTA en el embarazo, labetalol y nifedipino son preferidos.",
+      "lactation": "Lactancia: excretado en leche materna en concentraciones mayores que en plasma (relación leche/plasma ~3). Monitorizar lactante para bradicardia y somnolencia. Considerar alternativa con menor relación leche/plasma (propranolol o labetalol) si necesario.",
+      "hepaticImpairment": "Hepatopatía: metabolismo hepático vía CYP2D6 reducido en cirrosis grave → acumulación y mayor riesgo de bradicardia. Iniciar con dosis menores y titular lentamente. Monitorizar enzimas hepáticas si uso prolongado.",
+      "dpoc": "EPOC: succinato LP en dosis bajas es preferible al tartrato IR por menor variación de pico. Beneficio en EPOC+ICC generalmente supera riesgo de broncoespasmo leve. Contraindicado en broncoespasmo reversible grave o asma activa."
+    },
+    "clinicalPearls": [
+      "MERIT-HF (1999): succinato de metoprolol LP redujo mortalidad total en 34% vs. placebo en ICFEr (NNT ~14 por año).",
+      "NO intercambiar succinato LP por tartrato IR en ICC: el beneficio fue demostrado específicamente para la formulación LP (succinato). El tartrato no tiene evidencia de reducción de mortalidad en ICC.",
+      "Polimorfismo CYP2D6: ~7–10% de la población caucásica son metabolizadores lentos (PM) — niveles plasmáticos hasta 5× mayores. Sospechar si bradicardia excesiva con dosis bajas.",
+      "Metoprolol es lipofílico — cruza la barrera hematoencefálica. Puede causar pesadillas, depresión y trastornos del sueño con mayor frecuencia que atenolol (hidrofílico).",
+      "Perioperatorio: mantener betabloqueantes en pacientes en uso crónico. Iniciar solo si RCRI ≥ 3 y con tiempo suficiente para titular (no iniciar el día de la cirugía — riesgo de hipotensión y ACV).",
+      "IAM: metoprolol EV seguido de VO reduce mortalidad cuando se inicia precozmente en pacientes hemodinámicamente estables. COMMIT mostró que el uso precoz en IAM grande con inestabilidad puede aumentar shock — elegir el momento adecuado.",
+      "POISE Trial (2008): metoprolol EV perioperatorio redujo IAM no fatal, pero aumentó ACV y muerte por shock. Conclusión: NO iniciar betabloqueante el día de la cirugía — titular al menos 1 semana antes en pacientes de alto riesgo cardiovascular (RCRI ≥ 3).",
+      "CYP2D6 Poor Metabolizer (PM): frecuencia ~7–10% en caucásicos, ~1–2% en asiáticos. Sospechar en pacientes con bradicardia excesiva a dosis bajas sin inhibidores CYP2D6 concomitantes. Genotipado CYP2D6 disponible en centros de referencia."
+    ],
+    "incompatibilities": "EV: físicamente compatible con SF 0,9% y SG 5%. No mezclar en la misma jeringa o línea con anfotericina B, furosemida IV en alta concentración, diazepam o bicarbonato de sodio.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálisis peritoneal: no elimina metoprolol de forma significativa. Mantener dosis habitual reducida (12,5–25 mg/día). Monitorizar PA y FC."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: eliminación mínima (< 25%). No requiere suplementación. Monitorizar hemodinámica rigurosamente — pacientes en UCI con TRRC tienen alta inestabilidad. Usar dosis mínima eficaz."
+      }
+    },
+    "prescriptionErrors": [
+      "Usar tartrato (IR) en lugar de succinato (LP) para ICC — solo succinato LP tiene evidencia de mortalidad.",
+      "Prescribir dosis fijas sin monitorizar FC objetivo — titular siempre por la respuesta clínica.",
+      "Suspender abruptamente en el preoperatorio — mantener hasta el día de la cirugía en pacientes con ICC/DAC.",
+      "No ajustar dosis al prescribir inhibidores de CYP2D6 concomitantes (fluoxetina, paroxetina).",
+      "Iniciar en ICC agudamente descompensada con congestión — esperar estabilización antes de iniciar o retitular."
+    ],
+    "patientEducation": [
+      "Nunca detener el medicamento de repente sin orientación médica.",
+      "Tomar a la misma hora todos los días, con o sin alimento.",
+      "Avisar al médico si FC en reposo < 50 lpm o PA muy baja.",
+      "Diabéticos: monitorizar glucemia con más frecuencia — el medicamento puede ocultar la taquicardia de la hipoglucemia, pero la sudoración persiste.",
+      "Avisar si siente falta de aire, silbido en el pecho o empeoramiento de la hinchazón.",
+      "Pesarse cada día por la mañana (ICC) — 2 kg más en 48h: llamar al médico."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Metabolismo hepático predominante. No requiere ajuste renal formal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "25–200 mg",
+          "intervalo": "12/12h–24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "Bolus lento a cada 5 min (máx 3 doses)",
+          "doseMaxima": "15 mg",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h–24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis estándar. En ICC, usar formulación LP (succinato) 1 vez/día con titulación gradual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "25–100 mg",
+          "intervalo": "12/12h–24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "2,5–5 mg",
+          "intervalo": "Bolus lento (monitorização contínua)",
+          "doseMaxima": "10 mg",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,5–1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Sin ajuste renal obligatorio. Monitorizar bradicardia e hipotensión — más frecuentes con disfunción renal moderada."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "12,5–50 mg",
+          "intervalo": "12/12h–24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "2,5 mg",
+          "intervalo": "Bolus lento com monitorização",
+          "doseMaxima": "5 mg",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,5 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR grave: sin ajuste formal necesario, pero preferir dosis bajas. Alto riesgo de hipotensión y bradicardia. Monitorizar PA y FC rigurosamente."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "12,5–25 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2,5 mg",
+          "intervalo": "Bolus lento — uso excepcional com monitorização intensiva",
+          "doseMaxima": "5 mg",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,25 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "25 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR muy grave/anuria: precaución extrema. Riesgo elevado de hipotensión y bradicardia. Evaluar necesidad real del betabloqueante en este escenario."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "12,5–25 mg",
+          "intervalo": "24/24h (após HD nos dias de diálise)",
+          "doseMaxima": "50 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Metoprolol es parcialmente removido por hemodiálisis (~25%). Administrar dosis reducida después de la sesión. Monitorizar hipotensión intradialítica."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "bradycardiaRisk": true,
+      "hypotensionRisk": true,
+      "avBlockRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Riesgo de bradicardia, hipotensión y bloqueo AV. NUNCA suspender abruptamente. Contraindicado en IC agudamente descompensada."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "ESC Heart Failure Guidelines 2021",
+        "MERIT-HF Trial (Lancet 1999)",
+        "COMMIT/CCS-2 Trial (Lancet 2005)",
+        "POISE Trial (Lancet 2008)",
+        "FDA Lopressor (metoprolol tartrate) label 2023",
+        "EMA Seloken ZOC (metoprolol succinate) SmPC 2024",
+        "UpToDate 2025",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Betabloqueante β1 selectivo lipofílico de 2ª generación. SUCCINATO LP (única formulación con evidencia de mortalidad en ICFEr — MERIT-HF NNT ~14/año). TARTRATO IR: IAM/Angina/FC. NO intercambiables. CYP2D6 ~95%: PM hasta 5× niveles. POISE 2008: no iniciar el día de la cirugía. Ajuste renal no obligatorio. pharmacologicClass, formulations, pharmacodynamics, onset añadidos. Auditoría V2 completada 2026-06."
+    }
+  },
+  "name": {
+    "pt": "Metoprolol",
+    "es": "Metoprolol"
+  },
+  "keywords": [
+    "metoprolol",
+    "seloken",
+    "selozok",
+    "metoprolol generico",
+    "lopresor",
+    "betabloqueador beta-1 seletivo"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

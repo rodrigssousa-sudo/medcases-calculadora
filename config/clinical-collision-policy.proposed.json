@@ -1,0 +1,1614 @@
+{
+  "schema": "clinical-collision-policy-v1",
+  "status": "proposed",
+  "purpose": "Resolve deterministic ID ownership while preserving every divergent source record as an explicit clinical context variant.",
+  "safetyRules": {
+    "oneCanonicalBasePerId": true,
+    "preserveAllDivergentVariants": true,
+    "automaticFieldMerge": false,
+    "discardSecondaryRecords": false,
+    "unknownCollisionFailsClosed": true,
+    "variantMustExposeSourceModule": true
+  },
+  "summary": {
+    "totalCollisions": 43,
+    "canonicalOwners": 43,
+    "preservedContextVariants": 43,
+    "unresolved": 0,
+    "automaticMerges": 0,
+    "discardedRecords": 0
+  },
+  "entries": [
+    {
+      "id": "adenosina",
+      "status": "proposed",
+      "canonicalOwner": "cardiologia.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "adenosina",
+        "first": {
+          "module": "cardio.js",
+          "line": 13113,
+          "commit": "a7714992b09d",
+          "date": "2026-06-16T02:12:42+00:00",
+          "score": 1,
+          "bytes": 1631
+        },
+        "second": {
+          "module": "cardiologia.js",
+          "line": 49,
+          "commit": "b21fab11cfe9",
+          "date": "2026-07-08T19:30:36+00:00",
+          "score": 10,
+          "bytes": 4818
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "alteplase",
+      "status": "proposed",
+      "canonicalOwner": "cardio.js",
+      "contextVariants": [
+        {
+          "module": "analgesicos.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "alteplase",
+        "first": {
+          "module": "analgesicos.js",
+          "line": 2379,
+          "commit": "8c9ee4d74fa0",
+          "date": "2026-07-08T17:49:46+00:00",
+          "score": 10,
+          "bytes": 4309
+        },
+        "second": {
+          "module": "cardio.js",
+          "line": 21761,
+          "commit": "fcdfa397b81b",
+          "date": "2026-07-09T14:02:59+00:00",
+          "score": 13,
+          "bytes": 7212
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "amiodarona",
+      "status": "proposed",
+      "canonicalOwner": "cardiologia.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "amiodarona",
+        "first": {
+          "module": "cardio.js",
+          "line": 13255,
+          "commit": "a7714992b09d",
+          "date": "2026-06-16T02:12:42+00:00",
+          "score": 1,
+          "bytes": 1470
+        },
+        "second": {
+          "module": "cardiologia.js",
+          "line": 9,
+          "commit": "b21fab11cfe9",
+          "date": "2026-07-08T19:30:36+00:00",
+          "score": 10,
+          "bytes": 4847
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "amoxicilina_clavulanato",
+      "status": "proposed",
+      "canonicalOwner": "infectologia.js",
+      "contextVariants": [
+        {
+          "module": "antimicrobianos.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "amoxicilina_clavulanato",
+        "first": {
+          "module": "antimicrobianos.js",
+          "line": 421,
+          "commit": "d83b73d7ef47",
+          "date": "2026-06-15T12:56:10+00:00",
+          "score": 5,
+          "bytes": 4025
+        },
+        "second": {
+          "module": "infectologia.js",
+          "line": 908,
+          "commit": "c89e382372a9",
+          "date": "2026-07-08T20:15:32+00:00",
+          "score": 10,
+          "bytes": 5033
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "anlodipino",
+      "status": "proposed",
+      "canonicalOwner": "cardiologia.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "anlodipino",
+        "first": {
+          "module": "cardio.js",
+          "line": 11664,
+          "commit": "390ddec2377a",
+          "date": "2026-07-07T23:03:49+00:00",
+          "score": 7,
+          "bytes": 4185
+        },
+        "second": {
+          "module": "cardiologia.js",
+          "line": 267,
+          "commit": "320e9db22335",
+          "date": "2026-07-10T19:07:26+00:00",
+          "score": 11,
+          "bytes": 4005
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "apixabana",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "hematologia.js",
+          "context": "hematology_context_variant"
+        }
+      ],
+      "decisionBasis": "consolidated_anticoagulation_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "apixabana",
+        "first": {
+          "module": "anticoag.js",
+          "line": 464,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 5662
+        },
+        "second": {
+          "module": "hematologia.js",
+          "line": 229,
+          "commit": "7fdad4d723f9",
+          "date": "2026-07-10T20:05:08+00:00",
+          "score": 11,
+          "bytes": 4611
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "betrixabana",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "hematologia.js",
+          "context": "hematology_context_variant"
+        }
+      ],
+      "decisionBasis": "consolidated_anticoagulation_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "betrixabana",
+        "first": {
+          "module": "anticoag.js",
+          "line": 640,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 5310
+        },
+        "second": {
+          "module": "hematologia.js",
+          "line": 356,
+          "commit": "37c8f5eb7e24",
+          "date": "2026-07-10T20:37:02+00:00",
+          "score": 11,
+          "bytes": 4927
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "cangrelor",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "cangrelor",
+        "first": {
+          "module": "anticoag.js",
+          "line": 200,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 5373
+        },
+        "second": {
+          "module": "cardio.js",
+          "line": 15841,
+          "commit": "7fdad4d723f9",
+          "date": "2026-07-10T20:05:08+00:00",
+          "score": 7,
+          "bytes": 3196
+        },
+        "scoreWinner": "first",
+        "recencyWinner": "first",
+        "evidenceAgreement": "first"
+      }
+    },
+    {
+      "id": "ceftriaxona",
+      "status": "proposed",
+      "canonicalOwner": "infectologia.js",
+      "contextVariants": [
+        {
+          "module": "antimicrobianos.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "ceftriaxona",
+        "first": {
+          "module": "antimicrobianos.js",
+          "line": 137,
+          "commit": "d83b73d7ef47",
+          "date": "2026-06-15T12:56:10+00:00",
+          "score": 6,
+          "bytes": 4308
+        },
+        "second": {
+          "module": "infectologia.js",
+          "line": 988,
+          "commit": "c89e382372a9",
+          "date": "2026-07-08T20:15:32+00:00",
+          "score": 10,
+          "bytes": 5221
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "cetoprofeno",
+      "status": "proposed",
+      "canonicalOwner": "analgesicos.js",
+      "contextVariants": [
+        {
+          "module": "analgesia_opioides.js",
+          "context": "analgesia_protocol_variant"
+        }
+      ],
+      "decisionBasis": "canonical_nsaid_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "cetoprofeno",
+        "first": {
+          "module": "analgesia_opioides.js",
+          "line": 89,
+          "commit": "8463223e0f15",
+          "date": "2026-07-08T19:39:28+00:00",
+          "score": 10,
+          "bytes": 5232
+        },
+        "second": {
+          "module": "analgesicos.js",
+          "line": 404,
+          "commit": "5ac42c264cc3",
+          "date": "2026-07-07T11:38:00+00:00",
+          "score": 10,
+          "bytes": 3866
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "cetorolaco",
+      "status": "proposed",
+      "canonicalOwner": "analgesicos.js",
+      "contextVariants": [
+        {
+          "module": "analgesia_opioides.js",
+          "context": "analgesia_protocol_variant"
+        }
+      ],
+      "decisionBasis": "canonical_nsaid_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "cetorolaco",
+        "first": {
+          "module": "analgesia_opioides.js",
+          "line": 169,
+          "commit": "45ef203f1f5d",
+          "date": "2026-07-08T20:37:20+00:00",
+          "score": 10,
+          "bytes": 4245
+        },
+        "second": {
+          "module": "analgesicos.js",
+          "line": 360,
+          "commit": "5ac42c264cc3",
+          "date": "2026-07-07T11:38:00+00:00",
+          "score": 10,
+          "bytes": 3947
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "clopidogrel",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "clopidogrel",
+        "first": {
+          "module": "anticoag.js",
+          "line": 68,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 5151
+        },
+        "second": {
+          "module": "cardio.js",
+          "line": 15574,
+          "commit": "0522d979f0e3",
+          "date": "2026-07-10T19:55:10+00:00",
+          "score": 7,
+          "bytes": 2380
+        },
+        "scoreWinner": "first",
+        "recencyWinner": "first",
+        "evidenceAgreement": "first"
+      }
+    },
+    {
+      "id": "dabigatrana",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "hematologia.js",
+          "context": "hematology_context_variant"
+        }
+      ],
+      "decisionBasis": "consolidated_anticoagulation_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "dabigatrana",
+        "first": {
+          "module": "anticoag.js",
+          "line": 596,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 6240
+        },
+        "second": {
+          "module": "hematologia.js",
+          "line": 270,
+          "commit": "7fdad4d723f9",
+          "date": "2026-07-10T20:05:08+00:00",
+          "score": 11,
+          "bytes": 4482
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "dalbavancina",
+      "status": "proposed",
+      "canonicalOwner": "infectologia.js",
+      "contextVariants": [
+        {
+          "module": "antimicrobianos.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "dalbavancina",
+        "first": {
+          "module": "antimicrobianos.js",
+          "line": 8772,
+          "commit": "d83b73d7ef47",
+          "date": "2026-06-15T12:56:10+00:00",
+          "score": 8,
+          "bytes": 4926
+        },
+        "second": {
+          "module": "infectologia.js",
+          "line": 828,
+          "commit": "19a7d2a8dff0",
+          "date": "2026-07-08T18:45:56+00:00",
+          "score": 10,
+          "bytes": 3900
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "dalteparina",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "hematologia.js",
+          "context": "hematology_context_variant"
+        }
+      ],
+      "decisionBasis": "consolidated_anticoagulation_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "dalteparina",
+        "first": {
+          "module": "anticoag.js",
+          "line": 332,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 4811
+        },
+        "second": {
+          "module": "hematologia.js",
+          "line": 449,
+          "commit": "40f164a8f6f4",
+          "date": "2026-07-10T20:47:02+00:00",
+          "score": 11,
+          "bytes": 5449
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "diazepam",
+      "status": "proposed",
+      "canonicalOwner": "psiquiatria.js",
+      "contextVariants": [
+        {
+          "module": "sedacao.js",
+          "context": "sedation_emergency_variant"
+        }
+      ],
+      "decisionBasis": "broader_anxiolytic_and_neuropsychiatric_use",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "diazepam",
+        "first": {
+          "module": "psiquiatria.js",
+          "line": 3362,
+          "commit": "04fd78f131bc",
+          "date": "2026-07-11T22:57:14+00:00",
+          "score": 10,
+          "bytes": 1826
+        },
+        "second": {
+          "module": "sedacao.js",
+          "line": 138,
+          "commit": "c45e2c0d4d78",
+          "date": "2026-07-08T19:02:14+00:00",
+          "score": 10,
+          "bytes": 5169
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "diltiazem",
+      "status": "proposed",
+      "canonicalOwner": "cardiologia.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "diltiazem",
+        "first": {
+          "module": "cardio.js",
+          "line": 12886,
+          "commit": "a7714992b09d",
+          "date": "2026-06-16T02:12:42+00:00",
+          "score": 7,
+          "bytes": 5103
+        },
+        "second": {
+          "module": "cardiologia.js",
+          "line": 666,
+          "commit": "ff9edcf8d704",
+          "date": "2026-07-11T15:53:47+00:00",
+          "score": 11,
+          "bytes": 5523
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "edoxabana",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "hematologia.js",
+          "context": "hematology_context_variant"
+        }
+      ],
+      "decisionBasis": "consolidated_anticoagulation_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "edoxabana",
+        "first": {
+          "module": "anticoag.js",
+          "line": 552,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 5301
+        },
+        "second": {
+          "module": "hematologia.js",
+          "line": 311,
+          "commit": "7fdad4d723f9",
+          "date": "2026-07-10T20:05:08+00:00",
+          "score": 11,
+          "bytes": 4457
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "enoxaparina",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "hematologia.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "enoxaparina",
+        "first": {
+          "module": "anticoag.js",
+          "line": 288,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 6416
+        },
+        "second": {
+          "module": "hematologia.js",
+          "line": 58,
+          "commit": "c0686fed637e",
+          "date": "2026-07-08T19:11:50+00:00",
+          "score": 10,
+          "bytes": 4917
+        },
+        "scoreWinner": "first",
+        "recencyWinner": "first",
+        "evidenceAgreement": "first"
+      }
+    },
+    {
+      "id": "esmolol",
+      "status": "proposed",
+      "canonicalOwner": "cardio.js",
+      "contextVariants": [
+        {
+          "module": "analgesicos.js",
+          "context": "legacy_critical_care_variant"
+        }
+      ],
+      "decisionBasis": "primary_cardiovascular_drug_and_richer_critical_care_record",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "esmolol",
+        "first": {
+          "module": "analgesicos.js",
+          "line": 2459,
+          "commit": "8c9ee4d74fa0",
+          "date": "2026-07-08T17:49:46+00:00",
+          "score": 10,
+          "bytes": 4422
+        },
+        "second": {
+          "module": "cardio.js",
+          "line": 5838,
+          "commit": "a7714992b09d",
+          "date": "2026-06-16T02:12:42+00:00",
+          "score": 13,
+          "bytes": 17322
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "first",
+        "evidenceAgreement": "mixed"
+      }
+    },
+    {
+      "id": "felodipina",
+      "status": "proposed",
+      "canonicalOwner": "cardiologia.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "felodipina",
+        "first": {
+          "module": "cardio.js",
+          "line": 12088,
+          "commit": "a7714992b09d",
+          "date": "2026-06-16T02:12:42+00:00",
+          "score": 7,
+          "bytes": 3729
+        },
+        "second": {
+          "module": "cardiologia.js",
+          "line": 337,
+          "commit": "320e9db22335",
+          "date": "2026-07-10T19:07:26+00:00",
+          "score": 11,
+          "bytes": 3678
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "fondaparinux",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "hematologia.js",
+          "context": "hematology_context_variant"
+        }
+      ],
+      "decisionBasis": "consolidated_anticoagulation_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "fondaparinux",
+        "first": {
+          "module": "anticoag.js",
+          "line": 376,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 5561
+        },
+        "second": {
+          "module": "hematologia.js",
+          "line": 405,
+          "commit": "40f164a8f6f4",
+          "date": "2026-07-10T20:47:02+00:00",
+          "score": 11,
+          "bytes": 5033
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "haloperidol",
+      "status": "proposed",
+      "canonicalOwner": "psicofarmacos.js",
+      "contextVariants": [
+        {
+          "module": "sedacao.js",
+          "context": "acute_sedation_variant"
+        }
+      ],
+      "decisionBasis": "primary_antipsychotic_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "haloperidol",
+        "first": {
+          "module": "psicofarmacos.js",
+          "line": 31,
+          "commit": "04fd78f131bc",
+          "date": "2026-07-11T22:57:14+00:00",
+          "score": 10,
+          "bytes": 2505
+        },
+        "second": {
+          "module": "sedacao.js",
+          "line": 178,
+          "commit": "c45e2c0d4d78",
+          "date": "2026-07-08T19:02:14+00:00",
+          "score": 10,
+          "bytes": 5362
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "heparina_hnf",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "hematologia.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "heparina_hnf",
+        "first": {
+          "module": "anticoag.js",
+          "line": 244,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 6468
+        },
+        "second": {
+          "module": "hematologia.js",
+          "line": 18,
+          "commit": "c0686fed637e",
+          "date": "2026-07-08T19:11:50+00:00",
+          "score": 10,
+          "bytes": 5020
+        },
+        "scoreWinner": "first",
+        "recencyWinner": "first",
+        "evidenceAgreement": "first"
+      }
+    },
+    {
+      "id": "ibuprofeno",
+      "status": "proposed",
+      "canonicalOwner": "analgesicos.js",
+      "contextVariants": [
+        {
+          "module": "analgesia_opioides.js",
+          "context": "analgesia_protocol_variant"
+        }
+      ],
+      "decisionBasis": "canonical_nsaid_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "ibuprofeno",
+        "first": {
+          "module": "analgesia_opioides.js",
+          "line": 129,
+          "commit": "45ef203f1f5d",
+          "date": "2026-07-08T20:37:20+00:00",
+          "score": 10,
+          "bytes": 3775
+        },
+        "second": {
+          "module": "analgesicos.js",
+          "line": 171,
+          "commit": "5ac42c264cc3",
+          "date": "2026-07-07T11:38:00+00:00",
+          "score": 10,
+          "bytes": 4145
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "lercanidipina",
+      "status": "proposed",
+      "canonicalOwner": "cardiologia.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "lercanidipina",
+        "first": {
+          "module": "cardio.js",
+          "line": 12279,
+          "commit": "a7714992b09d",
+          "date": "2026-06-16T02:12:42+00:00",
+          "score": 7,
+          "bytes": 3854
+        },
+        "second": {
+          "module": "cardiologia.js",
+          "line": 372,
+          "commit": "320e9db22335",
+          "date": "2026-07-10T19:07:26+00:00",
+          "score": 11,
+          "bytes": 4376
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "lidocaina",
+      "status": "proposed",
+      "canonicalOwner": "analgesicos.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "lidocaina",
+        "first": {
+          "module": "analgesicos.js",
+          "line": 898,
+          "commit": "5ac42c264cc3",
+          "date": "2026-07-07T11:38:00+00:00",
+          "score": 10,
+          "bytes": 4650
+        },
+        "second": {
+          "module": "cardio.js",
+          "line": 14702,
+          "commit": "a7714992b09d",
+          "date": "2026-06-16T02:12:42+00:00",
+          "score": 1,
+          "bytes": 1169
+        },
+        "scoreWinner": "first",
+        "recencyWinner": "first",
+        "evidenceAgreement": "first"
+      }
+    },
+    {
+      "id": "manidipina",
+      "status": "proposed",
+      "canonicalOwner": "cardiologia.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "manidipina",
+        "first": {
+          "module": "cardio.js",
+          "line": 12465,
+          "commit": "a7714992b09d",
+          "date": "2026-06-16T02:12:42+00:00",
+          "score": 7,
+          "bytes": 3836
+        },
+        "second": {
+          "module": "cardiologia.js",
+          "line": 407,
+          "commit": "320e9db22335",
+          "date": "2026-07-10T19:07:26+00:00",
+          "score": 11,
+          "bytes": 4048
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "meropenem",
+      "status": "proposed",
+      "canonicalOwner": "infectologia.js",
+      "contextVariants": [
+        {
+          "module": "antimicrobianos.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "meropenem",
+        "first": {
+          "module": "antimicrobianos.js",
+          "line": 1705,
+          "commit": "d83b73d7ef47",
+          "date": "2026-06-15T12:56:10+00:00",
+          "score": 6,
+          "bytes": 3629
+        },
+        "second": {
+          "module": "infectologia.js",
+          "line": 1028,
+          "commit": "c89e382372a9",
+          "date": "2026-07-08T20:15:32+00:00",
+          "score": 10,
+          "bytes": 4371
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "mexiletina",
+      "status": "proposed",
+      "canonicalOwner": "analgesicos.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "mexiletina",
+        "first": {
+          "module": "analgesicos.js",
+          "line": 2632,
+          "commit": "a4eb639e5818",
+          "date": "2026-07-08T17:59:17+00:00",
+          "score": 10,
+          "bytes": 4366
+        },
+        "second": {
+          "module": "cardio.js",
+          "line": 14883,
+          "commit": "a7714992b09d",
+          "date": "2026-06-16T02:12:42+00:00",
+          "score": 1,
+          "bytes": 1467
+        },
+        "scoreWinner": "first",
+        "recencyWinner": "first",
+        "evidenceAgreement": "first"
+      }
+    },
+    {
+      "id": "midazolam",
+      "status": "proposed",
+      "canonicalOwner": "sedacao.js",
+      "contextVariants": [
+        {
+          "module": "psiquiatria.js",
+          "context": "psychiatry_context_variant"
+        }
+      ],
+      "decisionBasis": "primary_procedural_and_critical_sedation_use",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "midazolam",
+        "first": {
+          "module": "psiquiatria.js",
+          "line": 3673,
+          "commit": "04fd78f131bc",
+          "date": "2026-07-11T22:57:14+00:00",
+          "score": 10,
+          "bytes": 2986
+        },
+        "second": {
+          "module": "sedacao.js",
+          "line": 58,
+          "commit": "c45e2c0d4d78",
+          "date": "2026-07-08T19:02:14+00:00",
+          "score": 10,
+          "bytes": 4375
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "nifedipina",
+      "status": "proposed",
+      "canonicalOwner": "cardiologia.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "nifedipina",
+        "first": {
+          "module": "cardio.js",
+          "line": 11865,
+          "commit": "a7714992b09d",
+          "date": "2026-06-16T02:12:42+00:00",
+          "score": 7,
+          "bytes": 4150
+        },
+        "second": {
+          "module": "cardiologia.js",
+          "line": 302,
+          "commit": "320e9db22335",
+          "date": "2026-07-10T19:07:26+00:00",
+          "score": 11,
+          "bytes": 4789
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "paracetamol",
+      "status": "proposed",
+      "canonicalOwner": "analgesicos.js",
+      "contextVariants": [
+        {
+          "module": "analgesia_opioides.js",
+          "context": "analgesia_protocol_variant"
+        }
+      ],
+      "decisionBasis": "canonical_non_opioid_analgesic_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "paracetamol",
+        "first": {
+          "module": "analgesia_opioides.js",
+          "line": 49,
+          "commit": "8463223e0f15",
+          "date": "2026-07-08T19:39:28+00:00",
+          "score": 10,
+          "bytes": 4190
+        },
+        "second": {
+          "module": "analgesicos.js",
+          "line": 53,
+          "commit": "5ac42c264cc3",
+          "date": "2026-07-07T11:38:00+00:00",
+          "score": 10,
+          "bytes": 3956
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "piperacilina_tazobactam",
+      "status": "proposed",
+      "canonicalOwner": "infectologia.js",
+      "contextVariants": [
+        {
+          "module": "antimicrobianos.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "piperacilina_tazobactam",
+        "first": {
+          "module": "antimicrobianos.js",
+          "line": 1125,
+          "commit": "d83b73d7ef47",
+          "date": "2026-06-15T12:56:10+00:00",
+          "score": 6,
+          "bytes": 3833
+        },
+        "second": {
+          "module": "infectologia.js",
+          "line": 948,
+          "commit": "c89e382372a9",
+          "date": "2026-07-08T20:15:32+00:00",
+          "score": 10,
+          "bytes": 4649
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "prasugrel",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "prasugrel",
+        "first": {
+          "module": "anticoag.js",
+          "line": 156,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 5223
+        },
+        "second": {
+          "module": "cardio.js",
+          "line": 15658,
+          "commit": "0522d979f0e3",
+          "date": "2026-07-10T19:55:10+00:00",
+          "score": 7,
+          "bytes": 1995
+        },
+        "scoreWinner": "first",
+        "recencyWinner": "first",
+        "evidenceAgreement": "first"
+      }
+    },
+    {
+      "id": "quetiapina",
+      "status": "proposed",
+      "canonicalOwner": "psicofarmacos.js",
+      "contextVariants": [
+        {
+          "module": "sedacao.js",
+          "context": "acute_sedation_variant"
+        }
+      ],
+      "decisionBasis": "primary_antipsychotic_module",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "quetiapina",
+        "first": {
+          "module": "psicofarmacos.js",
+          "line": 1069,
+          "commit": "04fd78f131bc",
+          "date": "2026-07-11T22:57:14+00:00",
+          "score": 10,
+          "bytes": 2920
+        },
+        "second": {
+          "module": "sedacao.js",
+          "line": 218,
+          "commit": "45ef203f1f5d",
+          "date": "2026-07-08T20:37:20+00:00",
+          "score": 10,
+          "bytes": 4205
+        },
+        "scoreWinner": "tie",
+        "recencyWinner": "first",
+        "evidenceAgreement": "partial"
+      }
+    },
+    {
+      "id": "retatrutida",
+      "status": "proposed",
+      "canonicalOwner": "obesidade.js",
+      "contextVariants": [
+        {
+          "module": "endocrino.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "retatrutida",
+        "first": {
+          "module": "endocrino.js",
+          "line": 354,
+          "commit": "f52238f203cb",
+          "date": "2026-07-08T16:40:25+00:00",
+          "score": 10,
+          "bytes": 3977
+        },
+        "second": {
+          "module": "obesidade.js",
+          "line": 240,
+          "commit": "da624de95f58",
+          "date": "2026-07-11T21:39:17+00:00",
+          "score": 11,
+          "bytes": 5950
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "rivaroxabana",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "hematologia.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "rivaroxabana",
+        "first": {
+          "module": "anticoag.js",
+          "line": 508,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 5788
+        },
+        "second": {
+          "module": "hematologia.js",
+          "line": 138,
+          "commit": "c0686fed637e",
+          "date": "2026-07-08T19:11:50+00:00",
+          "score": 10,
+          "bytes": 4958
+        },
+        "scoreWinner": "first",
+        "recencyWinner": "first",
+        "evidenceAgreement": "first"
+      }
+    },
+    {
+      "id": "teicoplanina",
+      "status": "proposed",
+      "canonicalOwner": "infectologia.js",
+      "contextVariants": [
+        {
+          "module": "antimicrobianos.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "teicoplanina",
+        "first": {
+          "module": "antimicrobianos.js",
+          "line": 5800,
+          "commit": "d83b73d7ef47",
+          "date": "2026-06-15T12:56:10+00:00",
+          "score": 9,
+          "bytes": 6735
+        },
+        "second": {
+          "module": "infectologia.js",
+          "line": 868,
+          "commit": "19a7d2a8dff0",
+          "date": "2026-07-08T18:45:56+00:00",
+          "score": 10,
+          "bytes": 3981
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "tenecteplase",
+      "status": "proposed",
+      "canonicalOwner": "cardio.js",
+      "contextVariants": [
+        {
+          "module": "analgesicos.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "tenecteplase",
+        "first": {
+          "module": "analgesicos.js",
+          "line": 2324,
+          "commit": "7abd3ceb6e55",
+          "date": "2026-07-08T17:42:49+00:00",
+          "score": 10,
+          "bytes": 4899
+        },
+        "second": {
+          "module": "cardio.js",
+          "line": 22045,
+          "commit": "fcdfa397b81b",
+          "date": "2026-07-09T14:02:59+00:00",
+          "score": 13,
+          "bytes": 7591
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "ticagrelor",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "cardio.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "ticagrelor",
+        "first": {
+          "module": "anticoag.js",
+          "line": 112,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 5022
+        },
+        "second": {
+          "module": "cardio.js",
+          "line": 15753,
+          "commit": "0522d979f0e3",
+          "date": "2026-07-10T19:55:10+00:00",
+          "score": 7,
+          "bytes": 2949
+        },
+        "scoreWinner": "first",
+        "recencyWinner": "first",
+        "evidenceAgreement": "first"
+      }
+    },
+    {
+      "id": "vancomicina",
+      "status": "proposed",
+      "canonicalOwner": "infectologia.js",
+      "contextVariants": [
+        {
+          "module": "antimicrobianos.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "vancomicina",
+        "first": {
+          "module": "antimicrobianos.js",
+          "line": 1265,
+          "commit": "d83b73d7ef47",
+          "date": "2026-06-15T12:56:10+00:00",
+          "score": 9,
+          "bytes": 7569
+        },
+        "second": {
+          "module": "infectologia.js",
+          "line": 1068,
+          "commit": "c89e382372a9",
+          "date": "2026-07-08T20:15:32+00:00",
+          "score": 10,
+          "bytes": 5106
+        },
+        "scoreWinner": "second",
+        "recencyWinner": "second",
+        "evidenceAgreement": "second"
+      }
+    },
+    {
+      "id": "varfarina",
+      "status": "proposed",
+      "canonicalOwner": "anticoag.js",
+      "contextVariants": [
+        {
+          "module": "hematologia.js",
+          "context": "secondary_clinical_variant"
+        }
+      ],
+      "decisionBasis": "structural_score_and_git_recency_agree",
+      "exportPolicy": "canonical_base_with_context_variants",
+      "automaticFieldMerge": false,
+      "discardSecondaryRecord": false,
+      "evidence": {
+        "id": "varfarina",
+        "first": {
+          "module": "anticoag.js",
+          "line": 420,
+          "commit": "3094aed1a90a",
+          "date": "2026-07-11T21:32:35+00:00",
+          "score": 11,
+          "bytes": 6475
+        },
+        "second": {
+          "module": "hematologia.js",
+          "line": 98,
+          "commit": "c0686fed637e",
+          "date": "2026-07-08T19:11:50+00:00",
+          "score": 10,
+          "bytes": 5706
+        },
+        "scoreWinner": "first",
+        "recencyWinner": "first",
+        "evidenceAgreement": "first"
+      }
+    }
+  ]
+}

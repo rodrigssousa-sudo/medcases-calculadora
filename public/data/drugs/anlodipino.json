@@ -1,0 +1,340 @@
+{
+  "id": "anlodipino",
+  "category": "cardiologia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Anlodipino (Besilato de)"
+  },
+  "es": {
+    "name": "Amlodipino (Besilato de)"
+  },
+  "name": {
+    "pt": "Anlodipino (Besilato de)",
+    "es": "Amlodipino (Besilato de)"
+  },
+  "keywords": [
+    "anlodipino",
+    "anlodipino (besilato de)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "cardiologia.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "cardiologia.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "cardio.js",
+      "record": {
+        "id": "anlodipino",
+        "category": "cardio",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "id": "anlodipino",
+          "name": "Anlodipino",
+          "class": "Bloqueador dos canais de cálcio diidropiridínico",
+          "category": "cardio",
+          "commercialNames": [
+            "Norvasc",
+            "Pressat",
+            "Amlodipina genérica"
+          ],
+          "presentation": [
+            "Comprimidos 2,5 mg",
+            "Comprimidos 5 mg",
+            "Comprimidos 10 mg"
+          ],
+          "mechanism": "Bloqueia canais de cálcio tipo L na musculatura lisa vascular, promovendo vasodilatação arterial periférica e coronariana. Mínimo efeito sobre condução AV e contratilidade cardíaca. Meia-vida longa (30–50h) garante cobertura de 24h com dose única.",
+          "halfLife": "30–50 horas",
+          "onset": "6–12 horas",
+          "dose": {
+            "adultoPadrao": "5 mg VO 1x/dia. Titular a cada 7–14 dias conforme PA. Pode aumentar até 10 mg/dia.",
+            "adultoGrave": "Dose máxima: 10 mg/dia. Não há formulação IV — uso exclusivo VO."
+          },
+          "risksByPatient": [
+            "Gestante: pode ser utilizada em situações selecionadas; nifedipina possui maior experiência clínica na gestação.",
+            "Lactante: compatível com lactação na maioria dos casos.",
+            "Idoso (40 anos): excelente opção para HAS sistólica isolada. Iniciar com 2,5 mg. Monitorar edema e hipotensão.",
+            "Insuficiência hepática: metabolismo hepático prolongado — iniciar com dose menor."
+          ],
+          "commonAdverseEffects": [
+            "Edema maleolar / MMII",
+            "Cefaleia",
+            "Rubor facial",
+            "Tontura",
+            "Palpitações",
+            "Fadiga"
+          ],
+          "dangerousAdverseEffects": [
+            "Hipotensão grave",
+            "Síncope",
+            "Angina paradoxal rara no início",
+            "Edema periférico incapacitante"
+          ],
+          "alerts": [
+            "BCC diidropiridínico mais prescrito mundialmente — primeira linha para HAS, especialmente em idosos e afrodescendentes.",
+            "Edema maleolar é o principal efeito adverso — não responde a diuréticos; melhora com associação de IECA ou BRA.",
+            "Interações: claritromicina, cetoconazol, itraconazol, ritonavir → aumentam nível sérico. Sinvastatina → limitar dose da estatina a 20 mg.",
+            "Meia-vida longa (30–50h): 7–14 dias para atingir estado estacionário; titulação a cada 7–14 dias."
+          ],
+          "ref": "ASCOT Trial · CAMELOT Trial · ESC Hypertension Guidelines · AHA/ACC Hypertension Guidelines · ESC Chronic Coronary Syndrome Guidelines · Lexicomp · UpToDate · FDA Label",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": false,
+            "message": "Não requer ajuste renal. Eliminação predominantemente hepática.",
+            "fgMaior50": {
+              "vo": {
+                "dose": "5–10 mg",
+                "intervalo": "1x/dia",
+                "doseMaxima": "10 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": {
+                "dose": "2,5–5 mg",
+                "intervalo": "1x/dia",
+                "doseMaxima": "5 mg/dia",
+                "unidade": "mg"
+              },
+              "obs": "Dose habitual. Sem ajuste renal necessário."
+            },
+            "fg30a50": {
+              "vo": {
+                "dose": "5–10 mg",
+                "intervalo": "1x/dia",
+                "doseMaxima": "10 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Sem ajuste renal. Monitorar PA e edema."
+            },
+            "fg10a30": {
+              "vo": {
+                "dose": "5–10 mg",
+                "intervalo": "1x/dia",
+                "doseMaxima": "10 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Sem ajuste renal específico. Pode usar dose habitual."
+            },
+            "fgMenor10": {
+              "vo": {
+                "dose": "2,5–5 mg",
+                "intervalo": "1x/dia (cautela)",
+                "doseMaxima": "5 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "ClCr < 10 mL/min: iniciar com dose menor. Monitorar PA e hipotensão."
+            },
+            "hemodialise": {
+              "vo": {
+                "dose": "2,5–5 mg",
+                "intervalo": "1x/dia",
+                "doseMaxima": "5 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Hemodiálise: não dialisável. Pode manter dose habitual com cautela. Monitorar PA."
+            }
+          },
+          "safetyFlags": {
+            "hypotensionRisk": true,
+            "bradycardiaRisk": false,
+            "avBlockRisk": false,
+            "renalHighRisk": false,
+            "qtRisk": false,
+            "peripheralEdemaRisk": true,
+            "pregnancyCaution": true,
+            "warning": "O edema maleolar é o principal efeito adverso e não responde a diuréticos. Melhora frequentemente com associação de IECA ou BRA. Interação com CYP3A4 — atenção a macrolídeos, azólicos e inibidores de protease."
+          },
+          "auditNotes": {
+            "status": "excellent_after_review",
+            "sourcePriority": [
+              "ASCOT Trial",
+              "CAMELOT Trial",
+              "ESC Hypertension Guidelines 2023",
+              "AHA/ACC Hypertension Guidelines 2023",
+              "ESC Chronic Coronary Syndrome Guidelines 2019",
+              "Lexicomp 2026",
+              "UpToDate",
+              "FDA Label"
+            ],
+            "note": "BCC diidropiridínico mais prescrito mundialmente. Primeira linha para HAS, especialmente em idosos e afrodescendentes. Meia-vida longa permite dose única diária com excelente adesão."
+          }
+        },
+        "es": {
+          "id": "anlodipino",
+          "name": "Anlodipino",
+          "class": "Bloqueador de los canales de calcio dihidropiridínico",
+          "category": "cardio",
+          "commercialNames": [
+            "Norvasc",
+            "Pressat",
+            "Amlodipina genérica"
+          ],
+          "presentation": [
+            "Comprimidos 2,5 mg",
+            "Comprimidos 5 mg",
+            "Comprimidos 10 mg"
+          ],
+          "mechanism": "Bloquea canales de calcio tipo L en músculo liso vascular, produciendo vasodilatación arterial periférica y coronaria. Mínimo efecto sobre conducción AV y contractilidad cardíaca. Vida media larga (30–50h) garantiza cobertura de 24h con dosis única.",
+          "halfLife": "30–50 horas",
+          "onset": "6–12 horas",
+          "dose": {
+            "adultoPadrao": "5 mg VO 1 vez/día. Titular cada 7–14 días según PA. Puede aumentarse hasta 10 mg/día.",
+            "adultoGrave": "Dosis máxima: 10 mg/día. No hay formulación IV — uso exclusivo VO."
+          },
+          "risksByPatient": [
+            "Gestante: puede utilizarse en situaciones seleccionadas; nifedipino posee mayor experiencia clínica durante el embarazo.",
+            "Lactante: compatible con lactancia en la mayoría de los casos.",
+            "Anciano (40 años): excelente opción para HTA sistólica aislada. Iniciar con 2,5 mg. Monitorizar edema e hipotensión.",
+            "Insuficiencia hepática: metabolismo hepático prolongado — iniciar con dosis menor."
+          ],
+          "commonAdverseEffects": [
+            "Edema maleolar / MMII",
+            "Cefalea",
+            "Rubor facial",
+            "Mareos",
+            "Palpitaciones",
+            "Fatiga"
+          ],
+          "dangerousAdverseEffects": [
+            "Hipotensión grave",
+            "Síncope",
+            "Angina paradójica rara al inicio",
+            "Edema periférico incapacitante"
+          ],
+          "alerts": [
+            "BCC dihidropiridínico más prescrito mundialmente — primera línea para HTA, especialmente en ancianos y afrodescendientes.",
+            "El edema maleolar es el principal efecto adverso — no responde a diuréticos; mejora con asociación de IECA o ARA-II.",
+            "Interacciones: claritromicina, ketoconazol, itraconazol, ritonavir → aumentan nivel sérico. Simvastatina → limitar dosis de estatina a 20 mg.",
+            "Vida media larga (30–50h): 7–14 días para alcanzar estado estacionario; titulación cada 7–14 días."
+          ],
+          "ref": "ASCOT Trial · CAMELOT Trial · ESC Hypertension Guidelines · AHA/ACC Hypertension Guidelines · ESC Chronic Coronary Syndrome Guidelines · Lexicomp · UpToDate · FDA Label",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": false,
+            "message": "No requiere ajuste renal. Eliminación predominantemente hepática.",
+            "fgMaior50": {
+              "vo": {
+                "dose": "5–10 mg",
+                "intervalo": "1x/dia",
+                "doseMaxima": "10 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": {
+                "dose": "2,5–5 mg",
+                "intervalo": "1x/dia",
+                "doseMaxima": "5 mg/dia",
+                "unidade": "mg"
+              },
+              "obs": "Dosis habitual. Sin ajuste renal necesario."
+            },
+            "fg30a50": {
+              "vo": {
+                "dose": "5–10 mg",
+                "intervalo": "1x/dia",
+                "doseMaxima": "10 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Sin ajuste renal. Monitorizar PA y edema."
+            },
+            "fg10a30": {
+              "vo": {
+                "dose": "5–10 mg",
+                "intervalo": "1x/dia",
+                "doseMaxima": "10 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Sin ajuste renal específico. Puede usar dosis habitual."
+            },
+            "fgMenor10": {
+              "vo": {
+                "dose": "2,5–5 mg",
+                "intervalo": "1x/dia (cautela)",
+                "doseMaxima": "5 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "ClCr < 10 mL/min: iniciar con dosis menor. Monitorizar PA e hipotensión."
+            },
+            "hemodialise": {
+              "vo": {
+                "dose": "2,5–5 mg",
+                "intervalo": "1x/dia",
+                "doseMaxima": "5 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Hemodiálisis: no dializable. Puede mantener dosis habitual con precaución. Monitorizar PA."
+            }
+          },
+          "safetyFlags": {
+            "hypotensionRisk": true,
+            "bradycardiaRisk": false,
+            "avBlockRisk": false,
+            "renalHighRisk": false,
+            "qtRisk": false,
+            "peripheralEdemaRisk": true,
+            "pregnancyCaution": true,
+            "warning": "El edema maleolar es el principal efecto adverso y no responde a diuréticos. Frecuentemente mejora con asociación de IECA o ARA-II. Interacción con CYP3A4 — atención a macrólidos, azólicos e inhibidores de proteasa."
+          },
+          "auditNotes": {
+            "status": "excellent_after_review",
+            "sourcePriority": [
+              "ASCOT Trial",
+              "CAMELOT Trial",
+              "ESC Hypertension Guidelines 2023",
+              "AHA/ACC Hypertension Guidelines 2023",
+              "ESC Chronic Coronary Syndrome Guidelines 2019",
+              "Lexicomp 2026",
+              "UpToDate",
+              "FDA Label"
+            ],
+            "note": "BCC dihidropiridínico más prescrito mundialmente. Primera línea para HTA, especialmente en ancianos y afrodescendientes. Vida media larga permite dosis única diaria con excelente adherencia."
+          }
+        },
+        "name": {
+          "pt": "Anlodipino",
+          "es": "Anlodipino"
+        },
+        "keywords": [
+          "anlodipino",
+          "bloqueador dos canais de calcio diidropiridinico"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "cardio.js"
+      }
+    }
+  ]
+}

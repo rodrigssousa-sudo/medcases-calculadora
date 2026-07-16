@@ -1,0 +1,247 @@
+{
+  "id": "sulbactam_durlobactam",
+  "category": "atb",
+  "icon": "🧬",
+  "color": "rgba(239,68,68,0.15)",
+  "colorTxt": "#7F1D1D",
+  "pt": {
+    "name": "Sulbactam + Durlobactam",
+    "class": "Inibidor de BLase com atividade intrínseca + Inibidor de BLase (anti-Acinetobacter XDR)",
+    "commercialNames": {
+      "br": [
+        "Xacduro (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Xacduro"
+      ]
+    },
+    "presentation": [
+      "Pó para solução injetável EV: 1 g sulbactam + 1 g durlobactam por frasco (uso hospitalar)"
+    ],
+    "dose": {
+      "adultoEV": "1 g sulbactam + 1 g durlobactam EV 6/6h (infusão 3 horas)"
+    },
+    "doseKg": null,
+    "indication": "Pneumonia hospitalar e associada à ventilação mecânica (HAP/VAP) causada por Acinetobacter baumannii resistente a carbapenêmicos (CRAB), incluindo cepas XDR/PDR.",
+    "spectrum": "Acinetobacter baumannii complex (incluindo CRAB, XDR, PDR). O sulbactam tem atividade intrínseca anti-Acinetobacter por ligação à PBP1 e PBP3; o durlobactam protege o sulbactam das beta-lactamases OXA (OXA-23, OXA-51, OXA-24/40, OXA-58), Classe C e serina-beta-lactamases. Sem atividade confiável contra outras bactérias.",
+    "contraindications": [
+      "Hipersensibilidade às penicilinas, cefalosporinas ou inibidores de beta-lactamase"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Primeiro e único antibiótico aprovado especificamente para CRAB (Acinetobacter resistente a carbapenêmicos).",
+      "Espectro restrito a Acinetobacter baumannii — uso exclusivo para este patógeno documentado.",
+      "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Xacduro (2023) / ATTACK trial / Lexicomp / EUCAST 2024",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g + 1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "8 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual: sulbactam 1 g + durlobactam 1 g EV 6/6h em infusão de 3 horas. Espectro EXCLUSIVO para Acinetobacter baumannii — uso guiado por cultura, antibiograma e infectologia. Único antibiótico aprovado especificamente para CRAB."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "750 mg + 750 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 30–59 mL/min → 750 mg sulbactam + 750 mg durlobactam 6/6h. Manter intervalo 6/6h (parâmetro T>CIM crítico — não ampliar intervalo). Monitorar função renal a cada 48h."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "500 mg + 500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 15–29 mL/min → 500 mg + 500 mg 6/6h. Manter intervalo 6/6h obrigatoriamente. Ajuste na dose (não no intervalo) preserva T>CIM ótimo. Monitorar função renal diariamente."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "250 mg + 250 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl < 15 mL/min → 250 mg + 250 mg 6/6h. Dados de segurança limitados — avaliar risco/benefício. Eficácia pode ser subótima. Manter intervalo 6/6h para preservar parâmetro T>CIM."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "250 mg + 250 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: HD → 250 mg + 250 mg 6/6h. Administrar após hemodiálise nos dias de HD. Sulbactam e durlobactam são removidos pela HD — dose suplementar de 250 mg + 250 mg imediatamente após cada sessão pode ser necessária para manter T>CIM."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Uso exclusivo para CRAB (Acinetobacter baumannii resistente a carbapenêmicos) confirmado por antibiograma e infectologia. NUNCA ampliar intervalo além de 6/6h — a otimização farmacodinâmica exige manutenção rigorosa do intervalo em todos os graus de IR (apenas a dose é reduzida). Cortes renais FDA: CrCl ≥50: dose plena; CrCl 30–59: 750 mg+750 mg 6/6h; CrCl 15–29: 500 mg+500 mg 6/6h; CrCl <15 ou HD: 250 mg+250 mg 6/6h + dose suplementar pós-HD."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Xacduro (sulbactam-durlobactam) 2023",
+        "EMA Assessment Report Xacduro 2024",
+        "ATTACK trial (NEJM 2023)",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "EUCAST 2024"
+      ],
+      "note": "Bloco desbloqueado após análise das questões pendentes: Q1 (CrCl cut fg30a50) → CONFIRMADO 30–59 mL/min conforme FDA label Xacduro 2023 (arquivo correto, referência havia sugerido 30–44 incorretamente); Q2 (neurotoxicityRisk) → CONFIRMADO false — FDA label e ATTACK trial não registram neurotoxicidade relevante nas doses padrão aprovadas (sulbactam em altas doses monitorado fora desta indicação). Warning expandido com todos os cortes renais e lógica de intervalo fixo 6/6h. sourcePriority expandido de 5 para 8 fontes."
+    }
+  },
+  "es": {
+    "name": "Sulbactam + Durlobactam",
+    "class": "Inhibidor de BLasa con actividad intrínseca + Inhibidor de BLasa (anti-Acinetobacter XDR)",
+    "commercialNames": {
+      "br": [
+        "Xacduro (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Xacduro"
+      ]
+    },
+    "presentation": [
+      "Polvo para solución inyectable EV: 1 g sulbactam + 1 g durlobactam por frasco (uso hospitalario)"
+    ],
+    "dose": {
+      "adultoEV": "1 g sulbactam + 1 g durlobactam EV 6/6h (infusión 3 horas)"
+    },
+    "doseKg": null,
+    "indication": "Neumonía hospitalaria y asociada a ventilación mecánica (HAP/VAP) causada por Acinetobacter baumannii resistente a carbapenémicos (CRAB), incluidas cepas XDR/PDR.",
+    "spectrum": "Acinetobacter baumannii complex (incluido CRAB, XDR, PDR). El sulbactam tiene actividad intrínseca anti-Acinetobacter por unión a PBP1 y PBP3; el durlobactam protege el sulbactam de betalactamasas OXA (OXA-23, OXA-51, OXA-24/40, OXA-58), Clase C y serina-betalactamasas. Sin actividad confiable frente a otras bacterias.",
+    "contraindications": [
+      "Hipersensibilidad a penicilinas, cefalosporinas o inhibidores de betalactamasa"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Primero y único antibiótico aprobado específicamente para CRAB (Acinetobacter resistente a carbapenémicos).",
+      "Espectro restringido a Acinetobacter baumannii — uso exclusivo para este patógeno documentado.",
+      "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Xacduro (2023) / ATTACK trial / Lexicomp / EUCAST 2024",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g + 1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "8 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual: sulbactam 1 g + durlobactam 1 g IV 6/6h en infusión de 3 horas. Espectro EXCLUSIVO para Acinetobacter baumannii — uso guiado por cultivo, antibiograma e infectología. Único antibiótico aprobado específicamente para CRAB."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "750 mg + 750 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 30–59 mL/min → 750 mg sulbactam + 750 mg durlobactam 6/6h. Mantener intervalo 6/6h (parámetro T>CIM crítico — no ampliar intervalo). Monitorizar función renal cada 48h."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "500 mg + 500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 15–29 mL/min → 500 mg + 500 mg 6/6h. Mantener intervalo 6/6h obligatoriamente. El ajuste en dosis (no en intervalo) preserva T>CIM óptimo. Monitorizar función renal diariamente."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "250 mg + 250 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl < 15 mL/min → 250 mg + 250 mg 6/6h. Datos de seguridad limitados — evaluar riesgo/beneficio. Eficacia puede ser subóptima. Mantener intervalo 6/6h para preservar parámetro T>CIM."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "250 mg + 250 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: HD → 250 mg + 250 mg 6/6h. Administrar después de hemodiálisis en días de HD. El sulbactam y durlobactam son removidos por HD — puede requerirse dosis suplementaria de 250 mg + 250 mg inmediatamente tras cada sesión para mantener T>CIM."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Uso exclusivo para CRAB (Acinetobacter baumannii resistente a carbapenémicos) confirmado por antibiograma e infectología. NUNCA ampliar intervalo más allá de 6/6h — la optimización farmacodinámica exige mantenimiento riguroso del intervalo en todos los grados de IR (solo la dosis se reduce). Cortes renales FDA: ClCr ≥50: dosis plena; ClCr 30–59: 750 mg+750 mg 6/6h; ClCr 15–29: 500 mg+500 mg 6/6h; ClCr <15 o HD: 250 mg+250 mg 6/6h + dosis suplementaria post-HD."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Xacduro (sulbactam-durlobactam) 2023",
+        "EMA Assessment Report Xacduro 2024",
+        "ATTACK trial (NEJM 2023)",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "EUCAST 2024"
+      ],
+      "note": "Bloque desbloqueado tras análisis de cuestiones pendientes: Q1 (corte ClCr fg30a50) → CONFIRMADO 30–59 mL/min según FDA label Xacduro 2023 (archivo correcto, referencia había sugerido 30–44 incorrectamente); Q2 (neurotoxicityRisk) → CONFIRMADO false — FDA label y ATTACK trial no registran neurotoxicidad relevante en dosis estándar aprobadas. Warning ampliado con todos los cortes renales y lógica de intervalo fijo 6/6h. sourcePriority ampliado de 5 a 8 fuentes."
+    }
+  },
+  "name": {
+    "pt": "Sulbactam + Durlobactam",
+    "es": "Sulbactam + Durlobactam"
+  },
+  "keywords": [
+    "sulbactam_durlobactam",
+    "sulbactam + durlobactam",
+    "xacduro (acesso limitado no brasil)",
+    "xacduro",
+    "inibidor de blase com atividade intrinseca + inibidor de blase (anti-acinetobacter xdr)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

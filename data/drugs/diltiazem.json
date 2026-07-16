@@ -1,0 +1,376 @@
+{
+  "id": "diltiazem",
+  "category": "cardiologia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Diltiazem (Cloridrato de)"
+  },
+  "es": {
+    "name": "Diltiazem (Clorhidrato de)"
+  },
+  "name": {
+    "pt": "Diltiazem (Cloridrato de)",
+    "es": "Diltiazem (Clorhidrato de)"
+  },
+  "keywords": [
+    "diltiazem",
+    "diltiazem (cloridrato de)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "cardiologia.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "cardiologia.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "cardio.js",
+      "record": {
+        "id": "diltiazem",
+        "category": "cardio",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "id": "diltiazem",
+          "name": "Diltiazem",
+          "class": "Bloqueador dos canais de cálcio não diidropiridínico",
+          "category": "cardio",
+          "commercialNames": [
+            "Cardizem",
+            "Balcor",
+            "Diltiazem genérico"
+          ],
+          "presentation": [
+            "Comprimidos 30 mg · 60 mg",
+            "Cápsulas/comprimidos LP 90 · 120 · 180 · 240 · 300 · 360 mg",
+            "Ampolas IV"
+          ],
+          "mechanism": "Bloqueia canais de cálcio tipo L no nó AV, nó sinusal, miocárdio e musculatura lisa vascular. Reduz condução AV, frequência ventricular e consumo miocárdico de oxigênio. Promove vasodilatação coronariana e periférica. Efeito inotrópico negativo menor que o verapamil.",
+          "halfLife": "4–12 horas (IR) · 6–9h (LP)",
+          "onset": "3 min IV · 30–60 min VO",
+          "dose": {
+            "adultoPadrao": "VO: 30 mg 6/6h (IR) ou LP 120–180 mg 1x/dia. IV bolus: 0,25 mg/kg (17.5 mg para 70 kg) em 2 min. Pode repetir 0,35 mg/kg (24.5 mg) após 15 min.",
+            "adultoGrave": "Infusão IV contínua: 5–15 mg/h conforme FC. Dose máxima VO: 360–480 mg/dia."
+          },
+          "risksByPatient": [
+            "IC-FEr (FEVE < 40%): CONTRAINDICADO.",
+            "Betabloqueador IV concomitante: CONTRAINDICADO — risco de colapso hemodinâmico.",
+            "Gestante: usar apenas se benefício superar risco, sob supervisão especializada.",
+            "Lactante: compatível com cautela; observar bradicardia ou sonolência no lactente.",
+            "Idoso (40 anos): maior risco de bradicardia, hipotensão, bloqueio AV e quedas. Iniciar com dose baixa.",
+            "Insuficiência hepática: metabolismo hepático importante — usar dose menor e titular com cautela."
+          ],
+          "commonAdverseEffects": [
+            "Bradicardia",
+            "Hipotensão",
+            "Tontura",
+            "Cefaleia",
+            "Edema periférico",
+            "Fadiga",
+            "Náuseas"
+          ],
+          "dangerousAdverseEffects": [
+            "Bloqueio AV avançado (2º/3º grau)",
+            "Bradicardia grave",
+            "Choque cardiogênico",
+            "Insuficiência cardíaca aguda",
+            "Assistolia",
+            "Colapso hemodinâmico"
+          ],
+          "alerts": [
+            "CONTRAINDICADO em IC com fração de ejeção reduzida significativa — efeito inotrópico negativo pode precipitar descompensação grave.",
+            "Interação CRÍTICA: betabloqueadores IV — risco de bloqueio AV completo, bradicardia grave e colapso hemodinâmico. NUNCA associar IV.",
+            "Digoxina: diltiazem pode aumentar os níveis séricos — monitorar nível da digoxina.",
+            "Monitorar ECG: intervalo PR — bloqueio AV de 1º grau é comum; suspender em BAV 2º/3º grau."
+          ],
+          "ref": "ESC Atrial Fibrillation Guidelines · ESC Supraventricular Tachycardia Guidelines · AHA/ACC Arrhythmia Guidelines · ESC Chronic Coronary Syndrome Guidelines · Goodman & Gilman · Lexicomp · FDA Label",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": false,
+            "message": "Não requer ajuste renal habitual. Metabolismo hepático predominante.",
+            "fgMaior50": {
+              "vo": {
+                "dose": "120–360 mg LP",
+                "intervalo": "1x/dia (ou IR 30–60 mg 6/6h)",
+                "doseMaxima": "480 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "0,25 mg/kg (≈17.5 mg)",
+                "intervalo": "bolus IV lento 2 min; infusão: 5–15 mg/h",
+                "doseMaxima": "15 mg/h",
+                "unidade": "mg/kg / mg/h"
+              },
+              "pediatrica": null,
+              "obs": "Dose habitual. Monitorar FC, PA e ECG."
+            },
+            "fg30a50": {
+              "vo": {
+                "dose": "120–240 mg LP",
+                "intervalo": "1x/dia",
+                "doseMaxima": "360 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "0,25 mg/kg",
+                "intervalo": "bolus lento (cautela)",
+                "doseMaxima": "10 mg/h (infusão)",
+                "unidade": "mg/kg / mg/h"
+              },
+              "pediatrica": null,
+              "obs": "Sem ajuste renal específico. Monitorar FC, PA e ECG frequentemente."
+            },
+            "fg10a30": {
+              "vo": {
+                "dose": "60–120 mg LP",
+                "intervalo": "1x/dia (cautela)",
+                "doseMaxima": "240 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "0,25 mg/kg (dose única)",
+                "intervalo": "supervisão intensiva",
+                "doseMaxima": "5 mg/h (infusão)",
+                "unidade": "mg/kg / mg/h"
+              },
+              "pediatrica": null,
+              "obs": "Sem ajuste renal formal; usar dose menor. Monitorização contínua obrigatória."
+            },
+            "fgMenor10": {
+              "vo": {
+                "dose": "60 mg",
+                "intervalo": "12/12h (cautela máxima)",
+                "doseMaxima": "120 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Dados limitados. Usar somente se imprescindível, com monitorização intensiva."
+            },
+            "hemodialise": {
+              "vo": {
+                "dose": "60–120 mg",
+                "intervalo": "12/12h (cautela)",
+                "doseMaxima": "240 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Não dialisável. Pode manter VO com monitorização cuidadosa de FC e ECG."
+            }
+          },
+          "safetyFlags": {
+            "hypotensionRisk": true,
+            "bradycardiaRisk": true,
+            "avBlockRisk": true,
+            "renalHighRisk": false,
+            "qtRisk": false,
+            "heartFailureRisk": true,
+            "digoxinInteractionRisk": true,
+            "betaBlockerInteractionRisk": true,
+            "pregnancyCaution": true,
+            "infusionDrug": true,
+            "ivUseHighRisk": true,
+            "warning": "Diltiazem CONTRAINDICADO em IC-FEr significativa. Risco de bloqueio AV grave com betabloqueadores IV — NUNCA associar. Monitorar ECG (PR) e FC rigorosamente. Menor constipação que verapamil."
+          },
+          "auditNotes": {
+            "status": "excellent_after_review",
+            "sourcePriority": [
+              "ESC Atrial Fibrillation Guidelines 2020/2023",
+              "ESC Supraventricular Tachycardia Guidelines 2019",
+              "AHA/ACC Arrhythmia Guidelines 2023",
+              "ESC Chronic Coronary Syndrome Guidelines 2019",
+              "Goodman & Gilman",
+              "Lexicomp 2026",
+              "FDA Label"
+            ],
+            "note": "BCC não-DHP fundamental para controle de FC em FA/flutter e reversão de TSVP. Preferido ao verapamil por menor efeito inotrópico negativo e menos constipação. Dose IV calculada por peso — bolus 0,25 mg/kg em 2 min."
+          }
+        },
+        "es": {
+          "id": "diltiazem",
+          "name": "Diltiazem",
+          "class": "Bloqueador de los canales de calcio no dihidropiridínico",
+          "category": "cardio",
+          "commercialNames": [
+            "Cardizem",
+            "Balcor",
+            "Diltiazem genérico"
+          ],
+          "presentation": [
+            "Comprimidos 30 mg · 60 mg",
+            "Cápsulas/comprimidos LP 90 · 120 · 180 · 240 · 300 · 360 mg",
+            "Ampollas IV"
+          ],
+          "mechanism": "Bloquea canales de calcio tipo L en el nodo AV, nodo sinusal, miocardio y músculo liso vascular. Reduce conducción AV, frecuencia ventricular y consumo miocárdico de oxígeno. Produce vasodilatación coronaria y periférica. Efecto inotrópico negativo menor que el verapamilo.",
+          "halfLife": "4–12 horas (IR) · 6–9h (LP)",
+          "onset": "3 min IV · 30–60 min VO",
+          "dose": {
+            "adultoPadrao": "VO: 30 mg cada 6h (IR) o LP 120–180 mg 1 vez/día. IV bolo: 0,25 mg/kg (17.5 mg para 70 kg) en 2 min. Puede repetir 0,35 mg/kg (24.5 mg) a los 15 min.",
+            "adultoGrave": "Infusión IV continua: 5–15 mg/h según FC. Dosis máxima VO: 360–480 mg/día."
+          },
+          "risksByPatient": [
+            "IC-FEr (FEVI < 40%): CONTRAINDICADO.",
+            "Betabloqueador IV concomitante: CONTRAINDICADO — riesgo de colapso hemodinámico.",
+            "Gestante: usar solo si el beneficio supera el riesgo, bajo supervisión especializada.",
+            "Lactante: compatible con precaución; observar bradicardia o somnolencia en el lactante.",
+            "Anciano (40 años): mayor riesgo de bradicardia, hipotensión, bloqueo AV y caídas. Iniciar con dosis baja.",
+            "Insuficiencia hepática: metabolismo hepático importante — usar dosis menor y titular con precaución."
+          ],
+          "commonAdverseEffects": [
+            "Bradicardia",
+            "Hipotensión",
+            "Mareos",
+            "Cefalea",
+            "Edema periférico",
+            "Fatiga",
+            "Náuseas"
+          ],
+          "dangerousAdverseEffects": [
+            "Bloqueo AV avanzado (2º/3er grado)",
+            "Bradicardia grave",
+            "Shock cardiogénico",
+            "Insuficiencia cardíaca aguda",
+            "Asistolia",
+            "Colapso hemodinámico"
+          ],
+          "alerts": [
+            "CONTRAINDICADO en IC con fracción de eyección reducida significativa — efecto inotrópico negativo puede precipitar descompensación grave.",
+            "Interacción CRÍTICA: betabloqueadores IV — riesgo de bloqueo AV completo, bradicardia grave y colapso hemodinámico. NUNCA asociar IV.",
+            "Digoxina: diltiazem puede aumentar los niveles séricos — monitorizar nivel de digoxina.",
+            "Monitorizar ECG: intervalo PR — bloqueo AV de 1er grado es común; suspender en BAV 2º/3er grado."
+          ],
+          "ref": "ESC Atrial Fibrillation Guidelines · ESC Supraventricular Tachycardia Guidelines · AHA/ACC Arrhythmia Guidelines · ESC Chronic Coronary Syndrome Guidelines · Goodman & Gilman · Lexicomp · FDA Label",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": false,
+            "message": "No requiere ajuste renal habitual. Metabolismo hepático predominante.",
+            "fgMaior50": {
+              "vo": {
+                "dose": "120–360 mg LP",
+                "intervalo": "1x/dia (ou IR 30–60 mg 6/6h)",
+                "doseMaxima": "480 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "0,25 mg/kg (≈17.5 mg)",
+                "intervalo": "bolus IV lento 2 min; infusão: 5–15 mg/h",
+                "doseMaxima": "15 mg/h",
+                "unidade": "mg/kg / mg/h"
+              },
+              "pediatrica": null,
+              "obs": "Dosis habitual. Monitorizar FC, PA y ECG."
+            },
+            "fg30a50": {
+              "vo": {
+                "dose": "120–240 mg LP",
+                "intervalo": "1x/dia",
+                "doseMaxima": "360 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "0,25 mg/kg",
+                "intervalo": "bolus lento (cautela)",
+                "doseMaxima": "10 mg/h (infusão)",
+                "unidade": "mg/kg / mg/h"
+              },
+              "pediatrica": null,
+              "obs": "Sin ajuste renal específico. Monitorizar FC, PA y ECG frecuentemente."
+            },
+            "fg10a30": {
+              "vo": {
+                "dose": "60–120 mg LP",
+                "intervalo": "1x/dia (cautela)",
+                "doseMaxima": "240 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "0,25 mg/kg (dose única)",
+                "intervalo": "supervisão intensiva",
+                "doseMaxima": "5 mg/h (infusão)",
+                "unidade": "mg/kg / mg/h"
+              },
+              "pediatrica": null,
+              "obs": "Sin ajuste renal formal; usar dosis menor. Monitorización continua obligatoria."
+            },
+            "fgMenor10": {
+              "vo": {
+                "dose": "60 mg",
+                "intervalo": "12/12h (cautela máxima)",
+                "doseMaxima": "120 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "Datos limitados. Usar solo si imprescindible, con monitorización intensiva."
+            },
+            "hemodialise": {
+              "vo": {
+                "dose": "60–120 mg",
+                "intervalo": "12/12h (cautela)",
+                "doseMaxima": "240 mg/dia",
+                "unidade": "mg"
+              },
+              "ev": null,
+              "pediatrica": null,
+              "obs": "No dializable. Puede mantener VO con monitorización cuidadosa de FC y ECG."
+            }
+          },
+          "safetyFlags": {
+            "hypotensionRisk": true,
+            "bradycardiaRisk": true,
+            "avBlockRisk": true,
+            "renalHighRisk": false,
+            "qtRisk": false,
+            "heartFailureRisk": true,
+            "digoxinInteractionRisk": true,
+            "betaBlockerInteractionRisk": true,
+            "pregnancyCaution": true,
+            "infusionDrug": true,
+            "ivUseHighRisk": true,
+            "warning": "Diltiazem CONTRAINDICADO en IC-FEr significativa. Riesgo de bloqueo AV grave con betabloqueadores IV — NUNCA asociar. Monitorizar ECG (PR) y FC rigurosamente. Menor estreñimiento que verapamilo."
+          },
+          "auditNotes": {
+            "status": "excellent_after_review",
+            "sourcePriority": [
+              "ESC Atrial Fibrillation Guidelines 2020/2023",
+              "ESC Supraventricular Tachycardia Guidelines 2019",
+              "AHA/ACC Arrhythmia Guidelines 2023",
+              "ESC Chronic Coronary Syndrome Guidelines 2019",
+              "Goodman & Gilman",
+              "Lexicomp 2026",
+              "FDA Label"
+            ],
+            "note": "BCC no-DHP fundamental para control de FC en FA/flutter y reversión de TSVP. Preferido al verapamilo por menor efecto inotrópico negativo y menos estreñimiento. Dosis IV calculada por peso — bolo 0,25 mg/kg en 2 min."
+          }
+        },
+        "name": {
+          "pt": "Diltiazem",
+          "es": "Diltiazem"
+        },
+        "keywords": [
+          "diltiazem",
+          "bloqueador dos canais de calcio nao diidropiridinico"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "cardio.js"
+      }
+    }
+  ]
+}

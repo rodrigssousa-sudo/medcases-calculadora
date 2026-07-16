@@ -1,0 +1,233 @@
+{
+  "id": "nitrofurantoina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Nitrofurantoína",
+    "class": "Nitrofurano (uso exclusivo urinário)",
+    "commercialNames": {
+      "br": [
+        "Macrobid",
+        "Macrodantina",
+        "Nitrofurantoína EMS"
+      ],
+      "ar": [
+        "Macrodantina",
+        "Nitrofurantoína Richet"
+      ]
+    },
+    "presentation": [
+      "Cápsulas 100 mg (macrocristalina/macrobid)",
+      "Suspensão oral 25 mg/5 mL"
+    ],
+    "dose": {
+      "adulto": "100 mg VO 12/12h (macrocristalina)",
+      "profilaxia": "50–100 mg VO 24/24h ao deitar",
+      "pediatrica": "100 mg VO 6/6h"
+    },
+    "doseKg": {
+      "standard": "1,25–1,75 mg/kg por dose 6/6h",
+      "profilaxia": "1–2 mg/kg/dia ao deitar",
+      "maxDose": "7 mg/kg/dia"
+    },
+    "therapeuticRange": "Concentração urinária bactericida — ineficaz em tecidos.",
+    "dilution": "Uso oral exclusivo. Tomar com alimentos para melhorar absorção e reduzir efeitos GI.",
+    "speed": "Administração oral com alimento.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Vômitos",
+      "Urina escurecida (marrom-amarelada)"
+    ],
+    "dangerousAdverseEffects": [
+      "Pneumonite intersticial (uso crônico)",
+      "Fibrose pulmonar (uso prolongado)",
+      "Neuropatia periférica",
+      "Hepatotoxicidade"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Uso restrito a ITU baixa não complicada. Não cobre Pseudomonas, Klebsiella nem Proteus resistente.",
+      "Contraindicada se ClCr < 30 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / AUA / Goodman & Gilman",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Contraindicada quando ClCr < 30 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "1,25–1,75 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "7 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Uso exclusivo para infecções urinárias baixas."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "1,25–1,75 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "7 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Pode ser utilizada com cautela."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Contraindicada por baixa concentração urinária e maior toxicidade."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Contraindicada."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Contraindicada em pacientes dialíticos."
+      }
+    }
+  },
+  "es": {
+    "name": "Nitrofurantoína",
+    "class": "Nitrofurano (uso exclusivo urinario)",
+    "commercialNames": {
+      "br": [
+        "Macrobid",
+        "Macrodantina",
+        "Nitrofurantoína EMS"
+      ],
+      "ar": [
+        "Macrodantina",
+        "Nitrofurantoína Richet"
+      ]
+    },
+    "presentation": [
+      "Cápsulas 100 mg (macrocristalina/macrobid)",
+      "Suspensión oral 25 mg/5 mL"
+    ],
+    "dose": {
+      "adulto": "100 mg VO cada 12h (macrocristalina)",
+      "profilaxia": "50–100 mg VO cada 24h al acostarse",
+      "pediatrica": "100 mg VO cada 6h"
+    },
+    "doseKg": {
+      "standard": "1,25–1,75 mg/kg por dosis cada 6h",
+      "profilaxia": "1–2 mg/kg/día al acostarse",
+      "maxDose": "7 mg/kg/día"
+    },
+    "therapeuticRange": "Concentración urinaria bactericida — ineficaz en tejidos.",
+    "dilution": "Uso oral exclusivo. Tomar con alimentos para mejorar absorción y reducir efectos GI.",
+    "speed": "Administración oral con alimento.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Vómitos",
+      "Orina oscurecida (marrón-amarillenta)"
+    ],
+    "dangerousAdverseEffects": [
+      "Pneumonitis intersticial (uso crónico)",
+      "Fibrosis pulmonar (uso prolongado)",
+      "Neuropatía periférica",
+      "Hepatotoxicidad"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Uso restringido a ITU baja no complicada. No cubre Pseudomonas, Klebsiella ni Proteus resistente.",
+      "Contraindicada si ClCr < 30 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / AUA / Goodman & Gilman",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Contraindicada cuando ClCr < 30 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "1,25–1,75 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "7 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Uso exclusivo para infecciones urinarias bajas."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "1,25–1,75 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "7 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Puede utilizarse con precaución."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Contraindicada por baja concentración urinaria y mayor toxicidad."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Contraindicada."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Contraindicada en pacientes dializados."
+      }
+    }
+  },
+  "name": {
+    "pt": "Nitrofurantoína",
+    "es": "Nitrofurantoína"
+  },
+  "keywords": [
+    "nitrofurantoina",
+    "nitrofurantoina",
+    "macrobid",
+    "macrodantina",
+    "nitrofurantoina ems",
+    "nitrofurantoina richet",
+    "nitrofurano (uso exclusivo urinario)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

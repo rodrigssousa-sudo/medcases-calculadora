@@ -1,0 +1,250 @@
+{
+  "id": "pretomanida",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(139,92,246,0.12)",
+  "colorTxt": "#5B21B6",
+  "pt": {
+    "name": "Pretomanida",
+    "class": "Nitroimidazooxazina (ativa em TB latente e ativa — mecanismo duplo)",
+    "commercialNames": {
+      "br": [
+        "PA-824 / Pretomanida (acesso via protocolo OMS)"
+      ],
+      "ar": [
+        "Pretomanida (acceso vía protocolo OMS)"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 200 mg"
+    ],
+    "dose": {
+      "adultoVO": "200 mg VO 24/24h (com alimentos) — sempre como parte do esquema BPaL ou BPaLM"
+    },
+    "doseKg": null,
+    "indication": "Tuberculose extensivamente resistente (TB-XDR) e TB-MDR sem opções de tratamento em adultos — EXCLUSIVAMENTE como parte dos esquemas BPaL (bedaquilina + pretomanida + linezolida) ou BPaLM (+moxifloxacino).",
+    "spectrum": "Mycobacterium tuberculosis (incluindo cepas XDR e MDR). Mecanismo duplo: (1) inibe a síntese do ácido micólico (bactérias em replicação); (2) gera radicais reativos de óxido nítrico (bactérias não replicantes/latentes). Sem atividade contra bactérias não-micobactérias.",
+    "contraindications": [
+      "Hipersensibilidade à pretomanida",
+      "Não deve ser usada em monoterapia ou em regimes fora dos esquemas BPaL/BPaLM"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NUNCA usar em monoterapia — resistência se desenvolve rapidamente.",
+      "Esquema BPaL: 26 semanas de tratamento para TB-XDR (taxas de sucesso ~90% no estudo ZeNix).",
+      "Hepatotoxicidade — monitorar enzimas hepáticas mensalmente.",
+      "Neuropatia periférica — monitorar em combinação com linezolida (potencialmente aditivo).",
+      "Não necessita ajuste renal conhecido."
+    ],
+    "ref": "Sanford Guide 2025 / WHO XDR-TB Guidelines 2022 / Conradie et al. NEJM 2020 (ZeNix trial) / FDA Prescribing Information Pretomanida / TB Alliance Clinical Data",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Pretomanida não requer ajuste de dose renal segundo os estudos disponíveis. Metabolismo hepático predominante via redução e CYP3A4. Dados renais específicos são limitados — usar com cautela em IR grave. Administrar sempre com alimento.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sem ajuste renal necessário nesta faixa (FDA label / TB Alliance). Administrar com refeição para maximizar absorção (biodisponibilidade aumenta ~2,7x com alimento). Uso exclusivo como componente do esquema BPaL (Bedaquilina + Pretomanida + Linezolida) ou BPaLM (+Moxifloxacino) para TB-XDR/MDR por 26 semanas. Monitorar enzimas hepáticas (ALT/AST) e sintomas de neuropatia periférica mensalmente. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sem ajuste renal necessário nesta faixa. FDA label: dados limitados em insuficiência renal moderada; não há evidência de acumulação clinicamente relevante. Monitorar hepatotoxicidade (ALT/AST mensalmente — risco aditivo com bedaquilina). Monitorar QTcF: risco aditivo com bedaquilina (e moxifloxacino no esquema BPaLM). Administrar com refeição. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA label: ausência de estudos farmacocinéticos em insuficiência renal grave (CrCl 15–29 mL/min). Não há recomendação formal de ajuste. Metabolismo hepático predominante deve preservar exposição ao fármaco. Maior risco de acumulação de metabólitos polares renalmente excretados — monitorar toxicidade (hepatotoxicidade, neuropatia). Corrigir distúrbios eletrolíticos antes de iniciar (K⁺, Mg²⁺) para mitigar risco QTcF. Administrar com refeição. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA label: ausência de dados em insuficiência renal muito grave (CrCl <15 mL/min). Usar apenas se benefício superar risco, sob supervisão rigorosa de infectologia. Monitorar ALT/AST e bilirrubina total quinzenalmente (hepatotoxicidade aditiva com bedaquilina amplificada em IR). Monitorar QTcF: ECG antes de iniciar e a cada 2 semanas no mínimo. Monitorar neuropatia periférica (potencialmente aditiva com linezolida). Corrigir K⁺ e Mg²⁺ séricos. Administrar com refeição. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA label: ausência de dados farmacocinéticos em hemodiálise. Pretomanida tem alta ligação proteica (~86%) e Vd ~35 L/kg — remoção por HD provavelmente insignificante, mas não confirmada. Uso em pacientes dialíticos deve ser considerado apenas em TB-XDR/MDR sem alternativa, sob supervisão de infectologia e nefrologista. Monitorar QTcF rigorosamente (risco cumulativo com bedaquilina + distúrbios eletrolíticos da HD). ECG antes de iniciar, após 1ª HD e mensalmente. Hepatotoxicidade monitorada mensalmente. Administrar com refeição. Uso guiado por cultura, antibiograma e infectologia."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": true,
+      "qtRisk": true,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": true,
+      "warning": "Pretomanida NUNCA deve ser usada em monoterapia. Triplo risco clínico no esquema BPaL: (1) QTcF prolongado — risco aditivo com bedaquilina e moxifloxacino; (2) Hepatotoxicidade — risco aditivo com bedaquilina; (3) Neuropatia periférica — risco aditivo com linezolida. Monitoramento mensal obrigatório de ECG, ALT/AST e avaliação neurológica. Administrar sempre com alimento."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Prescribing Information Pretomanida (Dovprela) 2019",
+        "Conradie et al. NEJM 2020 — ZeNix trial (BPaL 26w, TB-XDR)",
+        "WHO XDR-TB Guidelines 2022 — BPaL recommendation",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "TB Alliance Clinical Summary 2022",
+        "Lexicomp Online 2025"
+      ],
+      "note": "Bloco revisado para padrão Excelente. Pretomanida não tem dados formais de ajuste renal — metabolismo hepático predominante (redução + CYP3A4) justifica ausência de ajuste. Três eixos de risco cumulativo no esquema BPaL/BPaLM: QTcF (bedaquilina+pretomanida+moxifloxacino), hepatotoxicidade (bedaquilina+pretomanida) e neuropatia periférica (linezolida+pretomanida). Uso exclusivo em TB-XDR/MDR sem alternativa, com supervisão de infectologia especializada."
+    }
+  },
+  "es": {
+    "name": "Pretomanida",
+    "class": "Nitroimidazooxazina (activa en TB latente y activa — mecanismo doble)",
+    "commercialNames": {
+      "br": [
+        "PA-824 / Pretomanida (acesso via protocolo OMS)"
+      ],
+      "ar": [
+        "Pretomanida (acceso vía protocolo OMS)"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 200 mg"
+    ],
+    "dose": {
+      "adultoVO": "200 mg VO 24/24h (con alimentos) — siempre como parte del esquema BPaL o BPaLM"
+    },
+    "doseKg": null,
+    "indication": "Tuberculosis extensivamente resistente (TB-XDR) y TB-MDR sin opciones de tratamiento en adultos — EXCLUSIVAMENTE como parte de los esquemas BPaL (bedaquilina + pretomanida + linezolida) o BPaLM (+moxifloxacino).",
+    "spectrum": "Mycobacterium tuberculosis (incluidas cepas XDR y MDR). Mecanismo doble: (1) inhibe la síntesis del ácido micólico (bacterias en replicación); (2) genera radicales reactivos de óxido nítrico (bacterias no replicantes/latentes). Sin actividad frente a bacterias no micobacterianas.",
+    "contraindications": [
+      "Hipersensibilidad a la pretomanida",
+      "No debe usarse en monoterapia ni en regímenes fuera de los esquemas BPaL/BPaLM"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NUNCA usar en monoterapia — la resistencia se desarrolla rápidamente.",
+      "Esquema BPaL: 26 semanas de tratamiento para TB-XDR (tasas de éxito ~90% en el estudio ZeNix).",
+      "Hepatotoxicidad — monitorizar enzimas hepáticas mensualmente.",
+      "Neuropatía periférica — monitorizar en combinación con linezolida (potencialmente aditivo).",
+      "No requiere ajuste renal conocido."
+    ],
+    "ref": "Sanford Guide 2025 / WHO XDR-TB Guidelines 2022 / Conradie et al. NEJM 2020 (ZeNix trial) / FDA Prescribing Information Pretomanida / TB Alliance Clinical Data",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Pretomanida no requiere ajuste de dosis renal según los estudios disponibles. Metabolismo hepático predominante vía reducción y CYP3A4. Datos renales específicos son limitados — usar con precaución en IR grave. Administrar siempre con alimento.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sin ajuste renal necesario en esta franja (FDA label / TB Alliance). Administrar con alimento para maximizar absorción (biodisponibilidad aumenta ~2,7x con alimento). Uso exclusivo como componente del esquema BPaL (Bedaquilina + Pretomanida + Linezolida) o BPaLM (+Moxifloxacino) para TB-XDR/MDR por 26 semanas. Monitorizar enzimas hepáticas (ALT/AST) y síntomas de neuropatía periférica mensualmente. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sin ajuste renal necesario en esta franja. FDA label: datos limitados en insuficiencia renal moderada; no hay evidencia de acumulación clínicamente relevante. Monitorizar hepatotoxicidad (ALT/AST mensualmente — riesgo aditivo con bedaquilina). Monitorizar QTcF: riesgo aditivo con bedaquilina (y moxifloxacino en esquema BPaLM). Administrar con alimento. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA label: ausencia de estudios farmacocinéticos en insuficiencia renal grave (CrCl 15–29 mL/min). No hay recomendación formal de ajuste. Metabolismo hepático predominante debe preservar exposición al fármaco. Mayor riesgo de acumulación de metabolitos polares renalmente excretados — monitorizar toxicidad (hepatotoxicidad, neuropatía). Corregir trastornos electrolíticos antes de iniciar (K⁺, Mg²⁺) para mitigar riesgo QTcF. Administrar con alimento. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA label: ausencia de datos en insuficiencia renal muy grave (CrCl <15 mL/min). Usar solo si el beneficio supera el riesgo, bajo supervisión rigurosa de infectología. Monitorizar ALT/AST y bilirrubina total quincenalmente (hepatotoxicidad aditiva con bedaquilina amplificada en IR). Monitorizar QTcF: ECG antes de iniciar y cada 2 semanas como mínimo. Monitorizar neuropatía periférica (potencialmente aditiva con linezolida). Corregir K⁺ y Mg²⁺ séricos. Administrar con alimento. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA label: ausencia de datos farmacocinéticos en hemodiálisis. Pretomanida tiene alta unión proteica (~86%) y Vd ~35 L/kg — remoción por HD probablemente insignificante, pero no confirmada. Uso en pacientes dializados debe considerarse solo en TB-XDR/MDR sin alternativa, bajo supervisión de infectología y nefrología. Monitorizar QTcF rigurosamente (riesgo cumulativo con bedaquilina + trastornos electrolíticos de la HD). ECG antes de iniciar, después de 1ª HD y mensualmente. Hepatotoxicidad monitorada mensualmente. Administrar con alimento. Uso guiado por cultivo, antibiograma e infectología."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": true,
+      "qtRisk": true,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": true,
+      "warning": "Pretomanida NUNCA debe usarse en monoterapia. Triple riesgo clínico en el esquema BPaL: (1) QTcF prolongado — riesgo aditivo con bedaquilina y moxifloxacino; (2) Hepatotoxicidad — riesgo aditivo con bedaquilina; (3) Neuropatía periférica — riesgo aditivo con linezolida. Monitoreo mensual obligatorio de ECG, ALT/AST y evaluación neurológica. Administrar siempre con alimento."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Prescribing Information Pretomanida (Dovprela) 2019",
+        "Conradie et al. NEJM 2020 — ZeNix trial (BPaL 26w, TB-XDR)",
+        "WHO XDR-TB Guidelines 2022 — BPaL recommendation",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "TB Alliance Clinical Summary 2022",
+        "Lexicomp Online 2025"
+      ],
+      "note": "Bloque revisado para estándar Excelente. Pretomanida no tiene datos formales de ajuste renal — metabolismo hepático predominante (reducción + CYP3A4) justifica ausencia de ajuste. Tres ejes de riesgo cumulativo en el esquema BPaL/BPaLM: QTcF (bedaquilina+pretomanida+moxifloxacino), hepatotoxicidad (bedaquilina+pretomanida) y neuropatía periférica (linezolida+pretomanida). Uso exclusivo en TB-XDR/MDR sin alternativa, con supervisión de infectología especializada."
+    }
+  },
+  "name": {
+    "pt": "Pretomanida",
+    "es": "Pretomanida"
+  },
+  "keywords": [
+    "pretomanida",
+    "pa-824 / pretomanida (acesso via protocolo oms)",
+    "pretomanida (acceso via protocolo oms)",
+    "nitroimidazooxazina (ativa em tb latente e ativa — mecanismo duplo)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

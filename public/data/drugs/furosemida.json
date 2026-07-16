@@ -1,0 +1,372 @@
+{
+  "id": "furosemida",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(59,130,246,0.13)",
+  "colorTxt": "#1E3A5F",
+  "pt": {
+    "name": "Furosemida",
+    "class": "Diurético de alça — Inibidor do cotransportador Na+/K+/2Cl- (NKCC2)",
+    "commercialNames": {
+      "br": [
+        "Lasix",
+        "Furosemida genérica"
+      ],
+      "ar": [
+        "Lasix",
+        "Furosemida genérica"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 40 mg",
+      "Solução oral 10 mg/mL",
+      "Ampolas IV 10 mg/mL (2 mL e 5 mL)"
+    ],
+    "dose": {
+      "adultoPadrao": "VO: 20–40 mg/dia (1–2x/dia); IC moderada: 40–80 mg/dia. IV (descompensação): dose igual ou superior à dose oral habitual, 40–80 mg IV.",
+      "adultoGrave": "IC avançada ou DRC com resistência diurética: doses escalonadas 80–160–250 mg IV. Infusão contínua IV pode ser necessária. Monitorar função renal e eletrólitos rigorosamente.",
+      "pediatricaPadrao": "0,5–2 mg/kg/dose VO/IV, 1–2x/dia. Máx 6 mg/kg/dia em crianças. Monitorar eletrólitos.",
+      "pediatricaGrave": "Edema agudo de pulmão pediátrico: 1–2 mg/kg IV. Monitoração intensiva.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "0,5–2 mg/kg/dose (pediatria)",
+      "grave": "1–2 mg/kg IV (pediatria/emergência)",
+      "meningite": null,
+      "doseMaxima": "Adulto: individualizado; IC avançada pode requerer doses altas sob monitorização. Pediatria: máx 6 mg/kg/dia."
+    },
+    "therapeuticRange": "Redução de congestão; balanço hídrico negativo quando indicado; manutenção de perfusão renal e estabilidade hemodinâmica",
+    "dilution": "IV bólus: pode ser administrado sem diluição (lento, ≤ 4 mg/min). Infusão contínua: diluir em SF 0,9% — evitar SG5% (precipitação). Concentração máx recomendada: 10 mg/mL.",
+    "speed": "Bólus IV: administrar lentamente (não exceder 4 mg/min) para evitar ototoxicidade. Infusão contínua: iniciar 5–10 mg/h, titular conforme diurese.",
+    "commonAdverseEffects": [
+      "Poliúria",
+      "Tontura",
+      "Hipotensão",
+      "Hipocalemia",
+      "Hipomagnesemia",
+      "Hiponatremia",
+      "Aumento de creatinina",
+      "Cãibras musculares"
+    ],
+    "dangerousAdverseEffects": [
+      "Desidratação grave",
+      "Lesão renal aguda",
+      "Hipocalemia grave com arritmias",
+      "Hiponatremia grave",
+      "Ototoxicidade (IV alta dose ou infusão rápida)",
+      "Alcalose metabólica",
+      "Encefalopatia hepática em cirrose vulnerável"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Interações graves: digoxina (hipocalemia amplifica toxicidade); aminoglicosídeos e anfotericina B (ototoxicidade/hipocalemia); lítio (toxicidade).",
+      "AINEs reduzem efeito diurético e aumentam risco de lesão renal — evitar associação.",
+      "Infusão IV rápida (> 4 mg/min): risco de ototoxicidade — administrar lentamente.",
+      "Cirrose: cautela — risco de hipovolemia, hiponatremia, encefalopatia hepática e síndrome hepatorrenal."
+    ],
+    "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sem ajuste renal obrigatório em ClCr ≥ 30 mL/min. Monitorar eletrólitos e função renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "20–80 mg",
+          "intervalo": "1–2x/dia",
+          "doseMaxima": "Individualizado",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "20–80 mg",
+          "intervalo": "Conforme congestão e resposta",
+          "doseMaxima": "Individualizado",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,5–2 mg/kg",
+          "intervalo": "1–2x/dia",
+          "doseMaxima": "6 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose e intervalo habituais. Monitorar eletrólitos periodicamente."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "1–2x/dia",
+          "doseMaxima": "Individualizado",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "40–80 mg",
+          "intervalo": "Conforme resposta diurética",
+          "doseMaxima": "Individualizado",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "DRC moderada: doses habituais ou levemente maiores. Monitorar função renal, sódio, potássio e magnésio."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "80–250 mg",
+          "intervalo": "1–2x/dia (titulada)",
+          "doseMaxima": "Conforme resposta",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "40–200 mg",
+          "intervalo": "Ou infusão contínua 5–20 mg/h",
+          "doseMaxima": "Conforme diurese",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "DRC grave: doses altas frequentemente necessárias por resistência diurética. Monitoração intensiva obrigatória."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "160–500 mg",
+          "intervalo": "Individualizado (sem anúria)",
+          "doseMaxima": "Conforme diurese residual",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "Infusão contínua 10–40 mg/h",
+          "intervalo": "Sob monitorização intensiva",
+          "doseMaxima": "Titular por diurese",
+          "unidade": "mg/h"
+        },
+        "pediatrica": null,
+        "obs": "DRC muito grave/anúria: resistência diurética extrema. Avaliar necessidade de terapia de substituição renal."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "Pré-HD se diurese residual",
+          "doseMaxima": "Conforme resposta",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Furosemida é parcialmente removida por hemodiálise. Em pacientes anúricos sem diurese residual, raramente eficaz. Manter apenas se houver diurese residual documentada."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "electrolyteRisk": true,
+      "hypokalemiaRisk": true,
+      "hyponatremiaRisk": true,
+      "ototoxicityRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Furosemida é essencial na congestão, mas pode causar hipovolemia, lesão renal aguda, hipocalemia, hiponatremia, ototoxicidade (IV rápida) e arritmias. Monitorar peso diário, diurese, eletrólitos e função renal."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "ESC Heart Failure Guidelines 2021/2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "KDIGO Acute Kidney Injury Guidelines",
+        "Goodman & Gilman",
+        "Lexicomp 2026",
+        "FDA/EMA label"
+      ],
+      "note": "Diurético de alça de referência em IC, EAP, DRC e UTI. Resistência diurética em DRC grave exige doses escaladas. Ototoxicidade com infusão IV rápida ou alta dose — administrar lentamente (≤ 4 mg/min)."
+    }
+  },
+  "es": {
+    "name": "Furosemida",
+    "class": "Diurético de asa — Inhibidor del cotransportador Na+/K+/2Cl- (NKCC2)",
+    "commercialNames": {
+      "br": [
+        "Lasix",
+        "Furosemida genérica"
+      ],
+      "ar": [
+        "Lasix",
+        "Furosemida genérica"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 40 mg",
+      "Solución oral 10 mg/mL",
+      "Ampollas IV 10 mg/mL (2 mL y 5 mL)"
+    ],
+    "dose": {
+      "adultoPadrao": "VO: 20–40 mg/día (1–2 veces/día); IC moderada: 40–80 mg/día. IV (descompensación): dosis igual o superior a la dosis oral habitual, 40–80 mg IV.",
+      "adultoGrave": "IC avanzada o ERC con resistencia diurética: dosis escalonadas 80–160–250 mg IV. Infusión continua IV puede ser necesaria. Monitorizar función renal y electrolitos rigurosamente.",
+      "pediatricaPadrao": "0,5–2 mg/kg/dosis VO/IV, 1–2 veces/día. Máx 6 mg/kg/día en niños. Monitorizar electrolitos.",
+      "pediatricaGrave": "Edema agudo de pulmón pediátrico: 1–2 mg/kg IV. Monitorización intensiva.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "0,5–2 mg/kg/dosis (pediatría)",
+      "grave": "1–2 mg/kg IV (pediatría/emergencia)",
+      "meningite": null,
+      "doseMaxima": "Adulto: individualizado; IC avanzada puede requerir dosis altas bajo monitorización. Pediatría: máx 6 mg/kg/día."
+    },
+    "therapeuticRange": "Reducción de congestión; balance hídrico negativo cuando indicado; mantenimiento de perfusión renal y estabilidad hemodinámica",
+    "dilution": "IV bolo: puede administrarse sin dilución (lento, ≤ 4 mg/min). Infusión continua: diluir en SF 0,9% — evitar SG5% (precipitación). Concentración máx recomendada: 10 mg/mL.",
+    "speed": "Bolo IV: administrar lentamente (no exceder 4 mg/min) para evitar ototoxicidad. Infusión continua: iniciar 5–10 mg/h, titular según diuresis.",
+    "commonAdverseEffects": [
+      "Poliuria",
+      "Mareos",
+      "Hipotensión",
+      "Hipocalemia",
+      "Hipomagnesemia",
+      "Hiponatremia",
+      "Aumento de creatinina",
+      "Calambres musculares"
+    ],
+    "dangerousAdverseEffects": [
+      "Deshidratación grave",
+      "Lesión renal aguda",
+      "Hipocalemia grave con arritmias",
+      "Hiponatremia grave",
+      "Ototoxicidad (IV alta dosis o infusión rápida)",
+      "Alcalosis metabólica",
+      "Encefalopatía hepática en cirrosis vulnerable"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Interacciones graves: digoxina (hipocalemia amplifica toxicidad); aminoglucósidos y anfotericina B (ototoxicidad/hipocalemia); litio (toxicidad).",
+      "AINEs reducen efecto diurético y aumentan riesgo de lesión renal — evitar asociación.",
+      "Infusión IV rápida (> 4 mg/min): riesgo de ototoxicidad — administrar lentamente.",
+      "Cirrosis: precaución — riesgo de hipovolemia, hiponatremia, encefalopatía hepática y síndrome hepatorrenal."
+    ],
+    "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sin ajuste renal obligatorio con ClCr ≥ 30 mL/min. Monitorizar electrolitos y función renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "20–80 mg",
+          "intervalo": "1–2x/dia",
+          "doseMaxima": "Individualizado",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "20–80 mg",
+          "intervalo": "Conforme congestão e resposta",
+          "doseMaxima": "Individualizado",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,5–2 mg/kg",
+          "intervalo": "1–2x/dia",
+          "doseMaxima": "6 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis e intervalo habituales. Monitorizar electrolitos periódicamente."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "1–2x/dia",
+          "doseMaxima": "Individualizado",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "40–80 mg",
+          "intervalo": "Conforme resposta diurética",
+          "doseMaxima": "Individualizado",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "ERC moderada: dosis habituales o ligeramente mayores. Monitorizar función renal, sodio, potasio y magnesio."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "80–250 mg",
+          "intervalo": "1–2x/dia (titulada)",
+          "doseMaxima": "Conforme resposta",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "40–200 mg",
+          "intervalo": "Ou infusão contínua 5–20 mg/h",
+          "doseMaxima": "Conforme diurese",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "ERC grave: dosis altas frecuentemente necesarias por resistencia diurética. Monitorización intensiva obligatoria."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "160–500 mg",
+          "intervalo": "Individualizado (sem anúria)",
+          "doseMaxima": "Conforme diurese residual",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "Infusão contínua 10–40 mg/h",
+          "intervalo": "Sob monitorização intensiva",
+          "doseMaxima": "Titular por diurese",
+          "unidade": "mg/h"
+        },
+        "pediatrica": null,
+        "obs": "ERC muy grave/anuria: resistencia diurética extrema. Evaluar necesidad de terapia de sustitución renal."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "Pré-HD se diurese residual",
+          "doseMaxima": "Conforme resposta",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Furosemida es parcialmente removida por hemodiálisis. En pacientes anúricos sin diuresis residual, raramente eficaz. Mantener solo si hay diuresis residual documentada."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "electrolyteRisk": true,
+      "hypokalemiaRisk": true,
+      "hyponatremiaRisk": true,
+      "ototoxicityRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Furosemida es esencial en congestión, pero puede causar hipovolemia, lesión renal aguda, hipocalemia, hiponatremia, ototoxicidad (IV rápida) y arritmias. Monitorizar peso diario, diuresis, electrolitos y función renal."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "ESC Heart Failure Guidelines 2021/2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "KDIGO Acute Kidney Injury Guidelines",
+        "Goodman & Gilman",
+        "Lexicomp 2026",
+        "FDA/EMA label"
+      ],
+      "note": "Diurético de asa de referencia en IC, EAP, ERC y UCI. Resistencia diurética en ERC grave exige dosis escaladas. Ototoxicidad con infusión IV rápida o alta dosis — administrar lentamente (≤ 4 mg/min)."
+    }
+  },
+  "name": {
+    "pt": "Furosemida",
+    "es": "Furosemida"
+  },
+  "keywords": [
+    "furosemida",
+    "lasix",
+    "furosemida generica",
+    "diuretico de alca — inibidor do cotransportador na+/k+/2cl- (nkcc2)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

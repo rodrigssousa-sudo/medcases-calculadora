@@ -1,0 +1,299 @@
+{
+  "id": "cefalexina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Cefalexina",
+    "class": "Cefalosporina de 1ª geração",
+    "commercialNames": {
+      "br": [
+        "Keflex",
+        "Cefalexina EMS",
+        "Cefalexina Medley"
+      ],
+      "ar": [
+        "Keflex",
+        "Cefalexina Richet",
+        "Cefalexina genérica"
+      ]
+    },
+    "presentation": [
+      "Cápsulas/comprimidos: 500 mg",
+      "Suspensão oral: 250 mg/5 mL",
+      "Suspensão oral: 500 mg/5 mL"
+    ],
+    "dose": {
+      "adulto": "500 mg VO 6/6h ou 1 g VO 8/8h",
+      "pediatrica6h": "875 mg VO 6/6h",
+      "pediatrica8h": "1167 mg VO 8/8h"
+    },
+    "doseKg": {
+      "standard": "25–50 mg/kg/dia dividido 6/6h ou 8/8h",
+      "severe": "75–100 mg/kg/dia em infecções mais graves, conforme protocolo",
+      "maxDose": "4 g/dia"
+    },
+    "therapeuticRange": "Beta-lactâmico dependente do tempo acima da MIC.",
+    "dilution": "Via oral. Suspensão deve ser reconstituída conforme bula e agitada antes do uso.",
+    "speed": "Administração por via oral.",
+    "commonAdverseEffects": [
+      "Diarreia",
+      "Náuseas",
+      "Dor abdominal",
+      "Rash cutâneo"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Colite por Clostridioides difficile",
+      "Síndrome de Stevens-Johnson",
+      "Convulsões em insuficiência renal sem ajuste"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Boa opção oral para celulite não purulenta e infecções por estreptococos/MSSA sensível.",
+      "Não cobre MRSA, Enterococcus nem Pseudomonas.",
+      "Investigar alergia grave prévia a beta-lactâmicos."
+    ],
+    "ref": "Goodman & Gilman / Sanford Guide / Lexicomp-style dosing references",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "25–50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "3 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "25 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "75 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Redução discreta da frequência."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–25 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "50 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obrigatório para evitar acúmulo."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "25 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar toxicidade em insuficiência renal avançada."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "25 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Cefalexina",
+    "class": "Cefalosporina de 1ª generación",
+    "commercialNames": {
+      "br": [
+        "Keflex",
+        "Cefalexina EMS",
+        "Cefalexina Medley"
+      ],
+      "ar": [
+        "Keflex",
+        "Cefalexina Richet",
+        "Cefalexina genérica"
+      ]
+    },
+    "presentation": [
+      "Cápsulas/comprimidos: 500 mg",
+      "Suspensión oral: 250 mg/5 mL",
+      "Suspensión oral: 500 mg/5 mL"
+    ],
+    "dose": {
+      "adulto": "500 mg VO cada 6h o 1 g VO cada 8h",
+      "pediatrica6h": "875 mg VO cada 6h",
+      "pediatrica8h": "1167 mg VO cada 8h"
+    },
+    "doseKg": {
+      "standard": "25–50 mg/kg/día dividido cada 6h o 8h",
+      "severe": "75–100 mg/kg/día en infecciones más graves, según protocolo",
+      "maxDose": "4 g/día"
+    },
+    "therapeuticRange": "Beta-lactámico dependiente del tiempo sobre la MIC.",
+    "dilution": "Vía oral. La suspensión debe reconstituirse según prospecto y agitarse antes del uso.",
+    "speed": "Administración por vía oral.",
+    "commonAdverseEffects": [
+      "Diarrea",
+      "Náuseas",
+      "Dolor abdominal",
+      "Exantema cutáneo"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Colitis por Clostridioides difficile",
+      "Síndrome de Stevens-Johnson",
+      "Convulsiones en insuficiencia renal sin ajuste"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Buena opción oral para celulitis no purulenta e infecciones por estreptococos/MSSA sensible.",
+      "No cubre MRSA, Enterococcus ni Pseudomonas.",
+      "Investigar alergia grave previa a beta-lactámicos."
+    ],
+    "ref": "Goodman & Gilman / Sanford Guide / Lexicomp-style dosing references",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "25–50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "3 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "25 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "75 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducción discreta de la frecuencia."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–25 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "50 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obligatorio para evitar acumulación."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "25 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar toxicidad en insuficiencia renal avanzada."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "25 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Cefalexina",
+    "es": "Cefalexina"
+  },
+  "keywords": [
+    "cefalexina",
+    "keflex",
+    "cefalexina ems",
+    "cefalexina medley",
+    "cefalexina richet",
+    "cefalexina generica",
+    "cefalosporina de 1ª geracao"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

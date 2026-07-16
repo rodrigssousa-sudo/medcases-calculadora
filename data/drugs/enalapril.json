@@ -1,0 +1,400 @@
+{
+  "id": "enalapril",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(59,130,246,0.13)",
+  "colorTxt": "#1E40AF",
+  "pt": {
+    "name": "Maleato de Enalapril",
+    "class": "Inibidor da Enzima Conversora de Angiotensina (IECA)",
+    "commercialNames": {
+      "br": [
+        "Renitec",
+        "Enalatec",
+        "Pressotec",
+        "Enalapril Genérico"
+      ],
+      "ar": [
+        "Lotrial",
+        "Glioten",
+        "Renitec",
+        "Enalapril Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 2,5 mg, 5 mg, 10 mg, 20 mg",
+      "Enalaprilat injetável EV: 1,25 mg/mL (ampola 2 mL)"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 5 mg VO 1x/dia inicial. Manutenção: 10–40 mg/dia (1x ou 2x/dia).",
+      "adultoGrave": "ICC / Disfunção VE: 2,5 mg VO 2x/dia inicial. Titular até 10–20 mg 2x/dia conforme tolerância.",
+      "pediatricaPadrao": "5 mg VO 1x/dia inicial (0,08 mg/kg/dia). Titular com cautela.",
+      "pediatricaGrave": "Até 35 mg/dia (0,5 mg/kg/dia máximo) dividido em 1–2 tomadas.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "0,08 mg/kg/dia VO 1x/dia (início em HTA pediátrica)",
+      "grave": "Até 0,5 mg/kg/dia VO dividido em 1–2 tomadas",
+      "meningite": null,
+      "doseMaxima": "Adultos: 40 mg/dia | Pediatria: 40 mg/dia"
+    },
+    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. ICC: manutenção em 10–40 mg/dia (2x/dia) conforme tolerância hemodinâmica e renal.",
+    "dilution": "Enalaprilat EV: pode ser administrado direto IV ou diluído em até 50 mL de SF 0,9% ou SG 5%.",
+    "speed": "EV: administrar lentamente em no mínimo 5 minutos. Monitorar PA durante infusão.",
+    "commonAdverseEffects": [
+      "Tosse seca persistente (efeito de classe — ECA)",
+      "Hipotensão arterial / tontura",
+      "Hipercalemia (↑ potássio)",
+      "Elevação discreta de creatinina",
+      "Cefaleia"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema — risco de obstrução de via aérea (evitar IECA para sempre após episódio)",
+      "Insuficiência Renal Aguda (especialmente em estenose bilateral de artéria renal)",
+      "Hipercalemia grave (K⁺ > 6 mEq/L)",
+      "Hipotensão grave pós-primeira dose (especialmente em hipovolemia)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou aumento de dose.",
+      "Angioedema: orientar busca imediata de atendimento se inchaço de lábios, língua ou face. Contraindicar IECA para sempre.",
+      "Contraindicado com Sacubitril/Valsartana sem washout de 36h (risco de angioedema potencializado).",
+      "Evitar AINEs — reduzem efeito anti-hipertensivo e aumentam risco de lesão renal aguda."
+    ],
+    "ref": "FDA Renitec Label 2023 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · ESC Hypertension Guidelines 2023 · Lexicomp 2026 · Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não requer ajuste renal para ClCr > 50 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1,25 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "5 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,08 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose padrão. HTA: 5–40 mg/dia. ICC: iniciar 2,5 mg 12/12h e titular até 20 mg 12/12h."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1,25 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2,5 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,04 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "20 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reduzir dose inicial. Monitorar K⁺ e creatinina rigorosamente."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "20 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "0,625 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1,25 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,02 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR grave: dose inicial muito reduzida. Risco elevado de hipercalemia severa e piora renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "1,25 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "0,625 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1,25 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,01 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "5 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Redução drástica. Considerar alternativas se anúria ou K⁺ > 5,5 mEq/L. Risco de hipercalemia fatal."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "1,25 mg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "0,625 mg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "1,25 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Enalaprilat é dialisável (~35–50% removido). Administrar APÓS a sessão de HD para evitar hipotensão intradialítica."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. Monitorar angioedema, K⁺ e creatinina. Ajuste renal obrigatório em ClCr ≤ 50 mL/min."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Renitec (enalapril maleate) label 2023",
+        "EMA Renitec SmPC 2024",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "ESC Heart Failure Guidelines 2021",
+        "ESC Hypertension Guidelines 2023",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "IECA padrão em HTA/ICC. Pró-fármaco (enalaprilat ativo). Eliminação renal 88% — ajuste obrigatório em ClCr ≤ 50. Dialisável — dose pós-HD. Contraindicação absoluta na gravidez."
+    }
+  },
+  "es": {
+    "name": "Maleato de Enalapril",
+    "class": "Inhibidor de la Enzima Convertidora de Angiotensina (IECA)",
+    "commercialNames": {
+      "br": [
+        "Renitec",
+        "Enalatec",
+        "Pressotec",
+        "Enalapril Genérico"
+      ],
+      "ar": [
+        "Lotrial",
+        "Glioten",
+        "Renitec",
+        "Enalapril Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 2,5 mg, 5 mg, 10 mg, 20 mg",
+      "Enalaprilat inyectable EV: 1,25 mg/mL (ampolla 2 mL)"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 5 mg VO 1 vez/día inicial. Mantenimiento: 10–40 mg/día (1 vez o 2 veces/día).",
+      "adultoGrave": "ICC / Disfunción VI: 2,5 mg VO 2 veces/día inicial. Titular hasta 10–20 mg cada 12h según tolerancia.",
+      "pediatricaPadrao": "5 mg VO 1 vez/día inicial (0,08 mg/kg/día). Titular con precaución.",
+      "pediatricaGrave": "Hasta 35 mg/día (0,5 mg/kg/día máximo) dividido en 1–2 tomas.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "0,08 mg/kg/día VO 1 vez/día (inicio en HTA pediátrica)",
+      "grave": "Hasta 0,5 mg/kg/día VO dividido en 1–2 tomas",
+      "meningite": null,
+      "doseMaxima": "Adultos: 40 mg/día | Pediatría: 40 mg/día"
+    },
+    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. ICC: mantenimiento en 10–40 mg/día (2 veces/día) según tolerancia hemodinámica y renal.",
+    "dilution": "Enalaprilat EV: puede administrarse directo IV o diluido en hasta 50 mL de SF 0,9% o SG 5%.",
+    "speed": "EV: administrar lentamente en al menos 5 minutos. Monitorizar PA durante la infusión.",
+    "commonAdverseEffects": [
+      "Tos seca persistente (efecto de clase — ECA)",
+      "Hipotensión arterial / mareo",
+      "Hiperpotasemia (↑ potasio)",
+      "Elevación discreta de creatinina",
+      "Cefalea"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema — riesgo de obstrucción de vía aérea (evitar IECA para siempre tras episodio)",
+      "Insuficiencia Renal Aguda (especialmente en estenosis bilateral de arteria renal)",
+      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
+      "Hipotensión grave post-primera dosis (especialmente en hipovolemia)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o aumento de dosis.",
+      "Angioedema: orientar búsqueda inmediata de atención si hinchazón de labios, lengua o cara. Contraindicar IECA para siempre.",
+      "Contraindicado con Sacubitril/Valsartán sin washout de 36h (riesgo de angioedema potenciado).",
+      "Evitar AINEs — reducen efecto antihipertensivo y aumentan riesgo de lesión renal aguda."
+    ],
+    "ref": "FDA Renitec Label 2023 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · ESC Hypertension Guidelines 2023 · Lexicomp 2026 · Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal para ClCr > 50 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1,25 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "5 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,08 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis estándar. HTA: 5–40 mg/día. ICC: iniciar 2,5 mg 12/12h y titular hasta 20 mg 12/12h."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1,25 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2,5 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,04 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "20 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducir dosis inicial. Monitorizar K⁺ y creatinina rigurosamente."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "20 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "0,625 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1,25 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,02 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR grave: dosis inicial muy reducida. Riesgo elevado de hiperpotasemia severa y deterioro renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "1,25 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "0,625 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1,25 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "0,01 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "5 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducción drástica. Considerar alternativas si anuria o K⁺ > 5,5 mEq/L. Riesgo de hiperpotasemia fatal."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "1,25 mg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "0,625 mg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "1,25 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Enalaprilat es dializable (~35–50% removido). Administrar DESPUÉS de la sesión de HD para evitar hipotensión intradialítica."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. Monitorizar angioedema, K⁺ y creatinina. Ajuste renal obligatorio en ClCr ≤ 50 mL/min."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Renitec (enalapril maleate) label 2023",
+        "EMA Renitec SmPC 2024",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "ESC Heart Failure Guidelines 2021",
+        "ESC Hypertension Guidelines 2023",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "IECA estándar en HTA/ICC. Profármaco (enalaprilat activo). Eliminación renal 88% — ajuste obligatorio en ClCr ≤ 50. Dializable — dosis post-HD. Contraindicación absoluta en embarazo."
+    }
+  },
+  "name": {
+    "pt": "Enalapril",
+    "es": "Enalapril"
+  },
+  "keywords": [
+    "enalapril",
+    "renitec",
+    "enalatec",
+    "pressotec",
+    "enalapril generico",
+    "lotrial",
+    "glioten",
+    "inibidor da enzima conversora de angiotensina (ieca)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

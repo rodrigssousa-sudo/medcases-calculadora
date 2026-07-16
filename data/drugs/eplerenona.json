@@ -1,0 +1,274 @@
+{
+  "id": "eplerenona",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.10)",
+  "colorTxt": "#065F46",
+  "pt": {
+    "name": "Eplerenona",
+    "class": "Antagonista seletivo do receptor mineralocorticoide (MRA) — menor toxicidade endócrina que espironolactona",
+    "commercialNames": {
+      "br": [
+        "Inspra",
+        "Eplerenona genérica"
+      ],
+      "ar": [
+        "Inspra",
+        "Eplerenona genérica"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 25 mg",
+      "Comprimidos 50 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "ICFEr: iniciar 25 mg VO 1x/dia; manutenção 25–50 mg/dia. HAS: 50 mg 1–2x/dia.",
+      "adultoGrave": "DRC ou K⁺ > 4,5 mEq/L: iniciar 12,5–25 mg com monitoração rigorosa de K⁺ em 3–7 dias. Evitar se K⁺ > 5,0 ou eTFG < 30.",
+      "pediatricaPadrao": "Uso pediátrico não estabelecido. Consultar especialista.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "50 mg/dia em ICFEr; 50 mg 2x/dia em HAS selecionada (sob supervisão)."
+    },
+    "therapeuticRange": "Redução de mortalidade cardiovascular; K⁺ 4,0–5,0 mEq/L; controle pressórico",
+    "dilution": "Uso exclusivo via oral. Não diluir.",
+    "speed": "Pode ser tomado com ou sem alimentos. Reavaliar K⁺ e creatinina em 3–7 dias após início ou ajuste.",
+    "commonAdverseEffects": [
+      "Hipercalemia",
+      "Tontura",
+      "Hipotensão",
+      "Fadiga",
+      "Náuseas",
+      "Aumento de creatinina"
+    ],
+    "dangerousAdverseEffects": [
+      "Hipercalemia grave (arritmias fatais)",
+      "Parada cardíaca por hipercalemia",
+      "Lesão renal aguda"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "HIPERCALEMIA é o principal risco — monitorar K⁺ em 3–7 dias após início ou aumento de dose.",
+      "CONTRAINDICADA com inibidores potentes do CYP3A4: cetoconazol, itraconazol, ritonavir — risco de acúmulo.",
+      "Interações graves: IECA, BRA, ARNI, suplementos de K⁺ — risco de hipercalemia potencialmente fatal.",
+      "Vantagem sobre espironolactona: muito menor incidência de ginecomastia, disfunção sexual e irregularidade menstrual."
+    ],
+    "ref": "EPHESUS Trial · EMPHASIS-HF Trial · ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · Lexicomp · FDA label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sem ajuste renal obrigatório em eTFG ≥ 50 mL/min. Monitorar K⁺ e creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "25–50 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "50 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose habitual. Monitorar K⁺ e creatinina periodicamente."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "25 mg",
+          "intervalo": "Dias alternados (cautela extrema)",
+          "doseMaxima": "25 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "eTFG 30–50 mL/min: dose mínima em dias alternados. Monitorar K⁺ em 3–7 dias. Risco elevado de hipercalemia."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "eTFG < 30 mL/min: CONTRAINDICADA. Evitar completamente."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "eTFG < 10 mL/min / anúria: CONTRAINDICADA. Risco de hipercalemia fatal."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálise: CONTRAINDICADA. Risco de hipercalemia entre sessões."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "hyperkalemiaRisk": true,
+      "endocrineEffects": false,
+      "pregnancyCaution": true,
+      "warning": "MRA seletivo com muito menor toxicidade endócrina que espironolactona. Principal risco: HIPERCALEMIA — monitorar K⁺ 3–7 dias após início. CONTRAINDICADO em eTFG < 30 e K⁺ > 5,0 mEq/L."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "EPHESUS Trial (NEJM 2003)",
+        "EMPHASIS-HF Trial (NEJM 2011)",
+        "ESC Heart Failure Guidelines 2021/2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "Lexicomp 2026",
+        "FDA label"
+      ],
+      "note": "MRA seletivo — pilar da ICFEr (EMPHASIS-HF) e pós-IAM com disfunção VE (EPHESUS). Metabolizado por CYP3A4 — interações com inibidores potentes. Muito menor incidência de ginecomastia vs espironolactona."
+    }
+  },
+  "es": {
+    "name": "Eplerenona",
+    "class": "Antagonista selectivo del receptor mineralocorticoide (MRA) — menor toxicidad endocrina que espironolactona",
+    "commercialNames": {
+      "br": [
+        "Inspra",
+        "Eplerenona genérica"
+      ],
+      "ar": [
+        "Inspra",
+        "Eplerenona genérica"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 25 mg",
+      "Comprimidos 50 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "ICFEr: iniciar 25 mg VO 1 vez/día; mantenimiento 25–50 mg/día. HTA: 50 mg 1–2 veces/día.",
+      "adultoGrave": "ERC o K⁺ > 4,5 mEq/L: iniciar 12,5–25 mg con monitorización rigurosa de K⁺ en 3–7 días. Evitar si K⁺ > 5,0 o TFGe < 30.",
+      "pediatricaPadrao": "Uso pediátrico no establecido. Consultar especialista.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "50 mg/día en ICFEr; 50 mg 2 veces/día en HTA seleccionada (bajo supervisión)."
+    },
+    "therapeuticRange": "Reducción de mortalidad cardiovascular; K⁺ 4,0–5,0 mEq/L; control tensional",
+    "dilution": "Uso exclusivo vía oral. No diluir.",
+    "speed": "Puede tomarse con o sin alimentos. Reevaluar K⁺ y creatinina en 3–7 días tras inicio o ajuste.",
+    "commonAdverseEffects": [
+      "Hiperpotasemia",
+      "Mareos",
+      "Hipotensión",
+      "Fatiga",
+      "Náuseas",
+      "Aumento de creatinina"
+    ],
+    "dangerousAdverseEffects": [
+      "Hiperpotasemia grave (arritmias fatales)",
+      "Paro cardíaco por hiperpotasemia",
+      "Lesión renal aguda"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "HIPERPOTASEMIA es el principal riesgo — monitorizar K⁺ en 3–7 días tras inicio o aumento de dosis.",
+      "CONTRAINDICADA con inhibidores potentes de CYP3A4: ketoconazol, itraconazol, ritonavir — riesgo de acumulación.",
+      "Interacciones graves: IECA, ARA-II, ARNI, suplementos de K⁺ — riesgo de hiperpotasemia potencialmente fatal.",
+      "Ventaja sobre espironolactona: mucho menor incidencia de ginecomastia, disfunción sexual e irregularidad menstrual."
+    ],
+    "ref": "EPHESUS Trial · EMPHASIS-HF Trial · ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · Lexicomp · FDA label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sin ajuste renal obligatorio con TFGe ≥ 50 mL/min. Monitorizar K⁺ y creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "25–50 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "50 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis habitual. Monitorizar K⁺ y creatinina periódicamente."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "25 mg",
+          "intervalo": "Dias alternados (cautela extrema)",
+          "doseMaxima": "25 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "TFGe 30–50 mL/min: dosis mínima en días alternos. Monitorizar K⁺ en 3–7 días. Riesgo elevado de hiperpotasemia."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "TFGe < 30 mL/min: CONTRAINDICADA. Evitar completamente."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "TFGe < 10 mL/min / anuria: CONTRAINDICADA. Riesgo de hiperpotasemia fatal."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálisis: CONTRAINDICADA. Riesgo de hiperpotasemia entre sesiones."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "hyperkalemiaRisk": true,
+      "endocrineEffects": false,
+      "pregnancyCaution": true,
+      "warning": "MRA selectivo con mucho menor toxicidad endocrina que espironolactona. Principal riesgo: HIPERPOTASEMIA — monitorizar K⁺ 3–7 días tras inicio. CONTRAINDICADO con TFGe < 30 y K⁺ > 5,0 mEq/L."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "EPHESUS Trial (NEJM 2003)",
+        "EMPHASIS-HF Trial (NEJM 2011)",
+        "ESC Heart Failure Guidelines 2021/2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "Lexicomp 2026",
+        "FDA label"
+      ],
+      "note": "MRA selectivo — pilar de la ICFEr (EMPHASIS-HF) y post-IAM con disfunción VI (EPHESUS). Metabolizado por CYP3A4 — interacciones con inhibidores potentes. Mucho menor incidencia de ginecomastia vs espironolactona."
+    }
+  },
+  "name": {
+    "pt": "Eplerenona",
+    "es": "Eplerenona"
+  },
+  "keywords": [
+    "eplerenona",
+    "inspra",
+    "eplerenona generica",
+    "antagonista seletivo do receptor mineralocorticoide (mra) — menor toxicidade endocrina que espironolactona"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

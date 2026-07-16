@@ -1,0 +1,263 @@
+{
+  "id": "dronedarona",
+  "category": "cardio",
+  "icon": "💓",
+  "color": "rgba(190,24,93,0.13)",
+  "colorTxt": "#9D174D",
+  "pt": {
+    "name": "Dronedarona",
+    "class": "Antiarrítmico Classe III — análogo estrutural não iodado da amiodarona",
+    "indications": {
+      "approved": [
+        "Manutenção do ritmo sinusal após cardioversão em pacientes adultos clinicamente estáveis com fibrilação atrial (FA) paroxística ou persistente"
+      ],
+      "offLabel": []
+    },
+    "commercialNames": {
+      "br": [
+        "Multaq"
+      ],
+      "ar": [
+        "Multaq"
+      ]
+    },
+    "presentation": [
+      "Comprimido revestido 400 mg"
+    ],
+    "mechanism": "Derivado estrutural da amiodarona, porém sem a molécula de iodo (reduzindo a toxicidade tireoidiana e pulmonar associada). Possui propriedades eletrofisiológicas das 4 classes de Vaughan-Williams: bloqueia canais de potássio (prolonga o potencial de ação e o período refratário), canais de sódio e de cálcio, além de possuir ação antiadrenérgica não competitiva.",
+    "pharmacokinetics": {
+      "onset": "Biodisponibilidade aumenta significativamente quando administrada com alimentos",
+      "halfLife": "≈ 13–19 horas; metabolismo hepático extenso via CYP3A4",
+      "duration": "Efeito mantido com posologia de 12/12h"
+    },
+    "dose": {
+      "adultoPadrao": "400 mg VO a cada 12 horas, administrado junto com as refeições da manhã e da noite.",
+      "adultoGrave": "Sem ajuste de dose adicional além das contraindicações absolutas. Evitar consumo de suco de toranja (grapefruit) durante o tratamento.",
+      "pediatricaPadrao": "Não estabelecido — uso não aprovado em pediatria.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Dose fixa — não é calculada por peso",
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "400 mg 12/12h"
+    },
+    "administration": "Via oral, estritamente junto com alimentos (aumenta significativamente a biodisponibilidade). Evitar suco de toranja (grapefruit).",
+    "commonAdverseEffects": [
+      "Diarreia",
+      "Náusea",
+      "Dor abdominal",
+      "Astenia",
+      "Bradicardia",
+      "Aumento da creatinina sérica (sem queda real da TFG — inibição da secreção tubular)"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidade aguda grave (incluindo insuficiência hepática fulminante)",
+      "Exacerbação/descompensação de insuficiência cardíaca",
+      "Prolongamento do intervalo QTc e Torsades de Pointes",
+      "Doença pulmonar intersticial (raro)"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Insuficiência cardíaca descompensada ou classe funcional NYHA III/IV",
+        "Fibrilação atrial PERMANENTE",
+        "Bloqueio atrioventricular de 2º ou 3º grau sem marcapasso",
+        "Bradicardia < 50 bpm",
+        "Intervalo QTc > 500 ms",
+        "Uso concomitante de inibidores potentes do CYP3A4",
+        "Insuficiência hepática grave (Child-Pugh C)",
+        "Gravidez"
+      ],
+      "relativas": [
+        "Doença hepática moderada (Child-Pugh B)",
+        "Pacientes com risco elevado de Torsades de Pointes (hipocalemia, hipomagnesemia não corrigidas)"
+      ]
+    },
+    "interactions": [
+      "Inibidores potentes de CYP3A4 (azólicos, macrolídeos, antirretrovirais): contraindicado — acúmulo acentuado de dronedarona.",
+      "Fármacos que prolongam QT: contraindicado — risco aditivo de Torsades de Pointes.",
+      "Dabigatrana: a dronedarona inibe a P-gp, aumentando o risco de sangramento — associação amplamente desaconselhada.",
+      "Digoxina: aumento dos níveis de digoxina por inibição da P-gp — reduzir a dose de digoxina pela metade.",
+      "Sinvastatina e outras estatinas metabolizadas pelo CYP3A4: limitar a dose de sinvastatina a 10 mg/dia.",
+      "Betabloqueadores e bloqueadores de canal de cálcio: bradicardia aditiva — iniciar com dose baixa e monitorar FC/ECG."
+    ],
+    "renalAdjustment": "Sem ajuste necessário. Aumento leve da creatinina sérica é esperado (inibição da secreção tubular), sem refletir queda real da TFG.",
+    "hepaticAdjustment": "Contraindicado em insuficiência hepática grave (Child-Pugh C). Usar com cautela em Child-Pugh B, com monitorização rigorosa de enzimas hepáticas.",
+    "monitoring": {
+      "baseline": [
+        "ECG (FC e QTc)",
+        "Função hepática (transaminases)",
+        "Função renal (creatinina sérica)",
+        "Eletrólitos (K+, Mg2+)",
+        "Avaliação da classe funcional NYHA e do tipo de FA (paroxística/persistente vs. permanente)",
+        "Revisão de medicações concomitantes (inibidores de CYP3A4, dabigatrana, digoxina, sinvastatina, betabloqueadores/BCC)"
+      ],
+      "followUp": [
+        "Enzimas hepáticas MENSALMENTE nos primeiros 6 meses de tratamento — suspender se ALT > 3x LSN com sintomas ou > 5x LSN.",
+        "ECG periódico (FC e QTc)",
+        "Sinais e sintomas de insuficiência cardíaca nova ou piora",
+        "Função renal periódica (creatinina)",
+        "Sintomas respiratórios (dispneia, tosse) — risco raro de doença pulmonar intersticial"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Categoria X — contraindicado. Efeitos teratogênicos comprovados em estudos animais. Mulheres em idade fértil devem usar métodos contraceptivos eficazes durante o tratamento.",
+      "lactation": "Contraindicado. Excretada no leite materno em estudos animais.",
+      "elderly": "Usar com cautela em pacientes ≥ 75 anos. Avaliar rigorosamente a presença de disfunções orgânicas e comorbidades antes de iniciar."
+    },
+    "safetyFlags": {
+      "qtProlongationRisk": true,
+      "hepatotoxicityRisk": true,
+      "heartFailureRisk": true,
+      "permanentAfibRisk": true,
+      "warning": "ALERTA DE CAIXA PRETA: Risco aumentado de morte, acidente vascular cerebral e hospitalização por insuficiência cardíaca quando usado em pacientes com FIBRILAÇÃO ATRIAL PERMANENTE (estudo PALLAS) ou em pacientes com INSUFICIÊNCIA CARDÍACA descompensada recente ou classe NYHA III/IV (estudo ANDROMEDA). Risco de hepatotoxicidade grave — monitorar enzimas hepáticas mensalmente nos primeiros 6 meses de tratamento."
+    },
+    "auditNotes": {
+      "status": "antiarritmico_dronedarona_master_template"
+    },
+    "ref": [
+      "2020 ESC Guidelines for the Diagnosis and Management of Atrial Fibrillation",
+      "ANDROMEDA Trial (Dronedarone in High-Risk Patients with Heart Failure)",
+      "PALLAS Trial (Dronedarone in High-Risk Permanent Atrial Fibrillation)",
+      "FDA Labeling Information — Multaq (dronedarone)",
+      "Goodman & Gilman's: The Pharmacological Basis of Therapeutics"
+    ]
+  },
+  "es": {
+    "name": "Dronedarona",
+    "class": "Antiarrítmico Clase III — análogo estructural no yodado de la amiodarona",
+    "indications": {
+      "approved": [
+        "Mantenimiento del ritmo sinusal tras cardioversión en pacientes adultos clínicamente estables con fibrilación auricular (FA) paroxística o persistente"
+      ],
+      "offLabel": []
+    },
+    "commercialNames": {
+      "br": [
+        "Multaq"
+      ],
+      "ar": [
+        "Multaq"
+      ]
+    },
+    "presentation": [
+      "Comprimido recubierto 400 mg"
+    ],
+    "mechanism": "Derivado estructural de la amiodarona, pero sin la molécula de yodo (reduciendo la toxicidad tiroidea y pulmonar asociada). Posee propiedades electrofisiológicas de las 4 clases de Vaughan-Williams: bloquea canales de potasio (prolonga el potencial de acción y el período refractario), canales de sodio y de calcio, además de poseer acción antiadrenérgica no competitiva.",
+    "pharmacokinetics": {
+      "onset": "La biodisponibilidad aumenta significativamente cuando se administra con alimentos",
+      "halfLife": "≈ 13–19 horas; metabolismo hepático extenso vía CYP3A4",
+      "duration": "Efecto mantenido con posología cada 12h"
+    },
+    "dose": {
+      "adultoPadrao": "400 mg VO cada 12 horas, administrado junto con las comidas de la mañana y de la noche.",
+      "adultoGrave": "Sin ajuste de dosis adicional además de las contraindicaciones absolutas. Evitar el consumo de jugo de pomelo (grapefruit) durante el tratamiento.",
+      "pediatricaPadrao": "No establecido — uso no aprobado en pediatría.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Dosis fija — no se calcula por peso",
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "400 mg cada 12h"
+    },
+    "administration": "Vía oral, estrictamente junto con alimentos (aumenta significativamente la biodisponibilidad). Evitar jugo de pomelo (grapefruit).",
+    "commonAdverseEffects": [
+      "Diarrea",
+      "Náusea",
+      "Dolor abdominal",
+      "Astenia",
+      "Bradicardia",
+      "Aumento de la creatinina sérica (sin caída real de la TFG — inhibición de la secreción tubular)"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidad aguda grave (incluyendo insuficiencia hepática fulminante)",
+      "Exacerbación/descompensación de insuficiencia cardíaca",
+      "Prolongación del intervalo QTc y Torsades de Pointes",
+      "Enfermedad pulmonar intersticial (raro)"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Insuficiencia cardíaca descompensada o clase funcional NYHA III/IV",
+        "Fibrilación auricular PERMANENTE",
+        "Bloqueo auriculoventricular de 2º o 3º grado sin marcapasos",
+        "Bradicardia < 50 lpm",
+        "Intervalo QTc > 500 ms",
+        "Uso concomitante de inhibidores potentes del CYP3A4",
+        "Insuficiencia hepática grave (Child-Pugh C)",
+        "Embarazo"
+      ],
+      "relativas": [
+        "Enfermedad hepática moderada (Child-Pugh B)",
+        "Pacientes con alto riesgo de Torsades de Pointes (hipocalemia, hipomagnesemia no corregidas)"
+      ]
+    },
+    "interactions": [
+      "Inhibidores potentes de CYP3A4 (azólicos, macrólidos, antirretrovirales): contraindicado — acumulación marcada de dronedarona.",
+      "Fármacos que prolongan QT: contraindicado — riesgo aditivo de Torsades de Pointes.",
+      "Dabigatrán: la dronedarona inhibe la P-gp, aumentando el riesgo de sangrado — asociación ampliamente desaconsejada.",
+      "Digoxina: aumento de los niveles de digoxina por inhibición de la P-gp — reducir la dosis de digoxina a la mitad.",
+      "Simvastatina y otras estatinas metabolizadas por CYP3A4: limitar la dosis de simvastatina a 10 mg/día.",
+      "Betabloqueantes y bloqueadores de canal de calcio: bradicardia aditiva — iniciar con dosis baja y monitorizar FC/ECG."
+    ],
+    "renalAdjustment": "Sin ajuste necesario. Se espera un aumento leve de la creatinina sérica (inhibición de la secreción tubular), sin reflejar caída real de la TFG.",
+    "hepaticAdjustment": "Contraindicado en insuficiencia hepática grave (Child-Pugh C). Usar con precaución en Child-Pugh B, con monitorización rigurosa de enzimas hepáticas.",
+    "monitoring": {
+      "baseline": [
+        "ECG (FC y QTc)",
+        "Función hepática (transaminasas)",
+        "Función renal (creatinina sérica)",
+        "Electrolitos (K+, Mg2+)",
+        "Evaluación de la clase funcional NYHA y del tipo de FA (paroxística/persistente vs. permanente)",
+        "Revisión de medicaciones concomitantes (inhibidores de CYP3A4, dabigatrán, digoxina, simvastatina, betabloqueantes/BCC)"
+      ],
+      "followUp": [
+        "Enzimas hepáticas MENSUALMENTE en los primeros 6 meses de tratamiento — suspender si ALT > 3x LSN con síntomas o > 5x LSN.",
+        "ECG periódico (FC y QTc)",
+        "Signos y síntomas de insuficiencia cardíaca nueva o empeoramiento",
+        "Función renal periódica (creatinina)",
+        "Síntomas respiratorios (disnea, tos) — riesgo raro de enfermedad pulmonar intersticial"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Categoría X — contraindicado. Efectos teratogénicos comprobados en estudios en animales. Las mujeres en edad fértil deben usar métodos anticonceptivos eficaces durante el tratamiento.",
+      "lactation": "Contraindicado. Excretada en la leche materna en estudios en animales.",
+      "elderly": "Usar con precaución en pacientes ≥ 75 años. Evaluar rigurosamente la presencia de disfunciones orgánicas y comorbilidades antes de iniciar."
+    },
+    "safetyFlags": {
+      "qtProlongationRisk": true,
+      "hepatotoxicityRisk": true,
+      "heartFailureRisk": true,
+      "permanentAfibRisk": true,
+      "warning": "ALERTA DE CAJA NEGRA: Riesgo aumentado de muerte, accidente cerebrovascular y hospitalización por insuficiencia cardíaca cuando se usa en pacientes con FIBRILACIÓN AURICULAR PERMANENTE (estudio PALLAS) o en pacientes con INSUFICIENCIA CARDÍACA descompensada reciente o clase NYHA III/IV (estudio ANDROMEDA). Riesgo de hepatotoxicidad grave — monitorizar enzimas hepáticas mensualmente en los primeros 6 meses de tratamiento."
+    },
+    "auditNotes": {
+      "status": "antiarritmico_dronedarona_master_template"
+    },
+    "ref": [
+      "2020 ESC Guidelines for the Diagnosis and Management of Atrial Fibrillation",
+      "ANDROMEDA Trial (Dronedarone in High-Risk Patients with Heart Failure)",
+      "PALLAS Trial (Dronedarone in High-Risk Permanent Atrial Fibrillation)",
+      "FDA Labeling Information — Multaq (dronedarone)",
+      "Goodman & Gilman's: The Pharmacological Basis of Therapeutics"
+    ]
+  },
+  "name": {
+    "pt": "Dronedarona",
+    "es": "Dronedarona"
+  },
+  "keywords": [
+    "dronedarona",
+    "multaq",
+    "antiarritmico classe iii — analogo estrutural nao iodado da amiodarona"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

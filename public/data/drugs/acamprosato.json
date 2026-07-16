@@ -1,0 +1,137 @@
+{
+  "id": "acamprosato",
+  "category": "dependencia_alcool",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Acamprosato",
+    "class": "Modulador GABA/Glutamato — Anticraving do Álcool",
+    "category": "dependencia_alcool",
+    "commercialNames": {
+      "br": [
+        "Campral"
+      ],
+      "ar": [
+        "Campral"
+      ]
+    },
+    "presentation": [
+      "Comprimido revestido entérico 333 mg"
+    ],
+    "dose": {
+      "standard": "666 mg VO 3×/dia (com ou sem alimentos). Total: 1998 mg/dia.",
+      "inicio": "Iniciar APÓS abstinência estabelecida (logo após desintoxicação). Manter mesmo se ocorrer recaída.",
+      "duracao": "Duração mínima: 1 ano. Pode ser mantido cronicamente."
+    },
+    "renalAdjustment": "Sem ajuste renal para ClCr ≥ 60 mL/min.",
+    "mechanism": "Restaura equilíbrio entre neurotransmissão inibitória (GABA) e excitatória (glutamato/NMDA) após cessação do álcool, reduzindo hiperexcitabilidade e fissura (craving). Não interfere no metabolismo do etanol.",
+    "halfLife": "Meia-vida: ~13 horas. Excreção renal inalterada.",
+    "commonAdverseEffects": [
+      "Diarreia (mais comum)",
+      "Náuseas, dor abdominal",
+      "Prurido / rash",
+      "Cefaleia, insônia"
+    ],
+    "dangerousAdverseEffects": [
+      "Depressão e ideação suicida — monitorar (prevalente na população alcoólatra)"
+    ],
+    "contraindications": {
+      "absolute": [
+        "ClCr < 30 mL/min / Diálise",
+        "Gestação"
+      ],
+      "relative": [
+        "Depressão grave não controlada"
+      ]
+    },
+    "safetyFlags": {
+      "bleedingRisk": false,
+      "renalHighRisk": true,
+      "hepaticCaution": false,
+      "antidoteAvailable": false,
+      "highAlertMedication": false,
+      "warning": "USAR APENAS APÓS ABSTINÊNCIA: Acamprosato não reduz sintomas de abstinência aguda — indicado para MANUTENÇÃO da sobriedade. Pode ser combinado com naltrexona ou disulfiram."
+    },
+    "references": [
+      "ANVISA — Campral Bula",
+      "Mason BJ & Heyser CJ. Rec Pat CNS Drug Discov 2010",
+      "Rösner S et al. Cochrane Database 2010 — Acamprosate for alcohol dependence",
+      "Lexicomp",
+      "Micromedex",
+      "UpToDate"
+    ]
+  },
+  "es": {
+    "name": "Acamprosato",
+    "class": "Modulador GABA/Glutamato — Anticraving del Alcohol",
+    "category": "dependencia_alcool",
+    "commercialNames": {
+      "br": [
+        "Campral"
+      ],
+      "ar": [
+        "Campral"
+      ]
+    },
+    "presentation": [
+      "Comprimido recubierto entérico 333 mg"
+    ],
+    "dose": {
+      "standard": "666 mg VO 3×/día (con o sin alimentos). Total: 1998 mg/día.",
+      "inicio": "Iniciar DESPUÉS de abstinencia establecida. Mantener incluso si ocurre recaída.",
+      "duracao": "Duración mínima: 1 año. Puede mantenerse crónicamente."
+    },
+    "renalAdjustment": "Sin ajuste renal para ClCr ≥ 60 mL/min.",
+    "mechanism": "Restaura equilibrio GABA/Glutamato post-cesación del alcohol, reduciendo hiperexcitabilidad y craving. No interfiere con el metabolismo del etanol.",
+    "halfLife": "Vida media: ~13 horas. Excreción renal sin cambios.",
+    "commonAdverseEffects": [
+      "Diarrea (más frecuente)",
+      "Náuseas, dolor abdominal",
+      "Prurito / rash",
+      "Cefalea, insomnio"
+    ],
+    "dangerousAdverseEffects": [
+      "Depresión e ideación suicida — monitorizar"
+    ],
+    "contraindications": {
+      "absolute": [
+        "ClCr < 30 mL/min / Diálisis",
+        "Gestación"
+      ],
+      "relative": [
+        "Depresión grave no controlada"
+      ]
+    },
+    "safetyFlags": {
+      "bleedingRisk": false,
+      "renalHighRisk": true,
+      "hepaticCaution": false,
+      "antidoteAvailable": false,
+      "highAlertMedication": false,
+      "warning": "USAR SOLO TRAS ABSTINENCIA: no reduce síntomas de abstinencia aguda."
+    },
+    "references": [
+      "ANVISA — Campral Bula",
+      "Mason BJ & Heyser CJ. Rec Pat CNS Drug Discov 2010",
+      "Rösner S et al. Cochrane Database 2010 — Acamprosate for alcohol dependence",
+      "Lexicomp",
+      "Micromedex",
+      "UpToDate"
+    ]
+  },
+  "name": {
+    "pt": "Acamprosato",
+    "es": "Acamprosato"
+  },
+  "keywords": [
+    "acamprosato",
+    "campral",
+    "modulador gaba/glutamato — anticraving do alcool"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "toxicologia.js"
+}

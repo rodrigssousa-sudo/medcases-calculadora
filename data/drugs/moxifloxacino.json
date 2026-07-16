@@ -1,0 +1,308 @@
+{
+  "id": "moxifloxacino",
+  "category": "atb",
+  "icon": "🦠",
+  "color": "rgba(251,146,60,0.15)",
+  "colorTxt": "#FB923C",
+  "pt": {
+    "name": "Moxifloxacino",
+    "class": "Fluoroquinolona de 4ª geração",
+    "commercialNames": {
+      "br": [
+        "Avalox",
+        "Moxifloxacino Genérico"
+      ],
+      "ar": [
+        "Avalox",
+        "Moxifloxacino Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos revestidos: 400 mg",
+      "Solução para infusão EV: 400 mg/250 mL"
+    ],
+    "dose": {
+      "adultoVO": "400 mg VO 1x/dia",
+      "adultoEV": "400 mg EV 1x/dia (infusão 60 min)"
+    },
+    "doseKg": {
+      "standard": "Dose fixa 400 mg/dia (não baseado em peso)"
+    },
+    "mechanism": "Inibe as topoisomerases II (DNA girase) e IV, bloqueando a replicação e transcrição do DNA bacteriano.",
+    "onset": "Absorção oral rápida — Tmáx 1–3 h; biodisponibilidade ~90%.",
+    "halfLife": "Meia-vida 11–15 h (dose única diária).",
+    "therapeuticRange": "Concentração-dependente. AUC/CIM ≥ 30–50 para otimizar eficácia.",
+    "dilution": "EV: pronto para infusão (400 mg/250 mL). Não diluir adicionalmente.",
+    "speed": "Infundir em 60 minutos. Não infundir em menos de 60 min.",
+    "commonAdverseEffects": [
+      "Náuseas e vômitos",
+      "Diarreia",
+      "Cefaleia",
+      "Tontura",
+      "Elevação de TGO/TGP"
+    ],
+    "dangerousAdverseEffects": [
+      "QT prolongado / Torsades de Pointes",
+      "Hepatotoxicidade grave",
+      "Ruptura de tendão",
+      "Neuropatia periférica",
+      "Convulsões / Psicose (raro)"
+    ],
+    "contraindications": [
+      "QT prolongado congênito ou adquirido",
+      "Uso concomitante de antiarrítmicos classe IA/III",
+      "Hipocalemia ou hipomagnesemia não corrigidas",
+      "Crianças e adolescentes < 18 anos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar ECG (intervalo QTc) antes e durante o uso, especialmente em pacientes de risco.",
+      "Evitar uso simultâneo com outros fármacos que prolongam QT (haloperidol, metadona, amiodarona).",
+      "Não requer ajuste renal — vantagem sobre outras fluoroquinolonas em insuficiência renal."
+    ],
+    "ref": "Sanford Guide 2025 / ANVISA / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorar QT prolongado e hepatotoxicidade."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não removido significativamente pela hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Moxifloxacino",
+    "class": "Fluoroquinolona de 4ª generación",
+    "commercialNames": {
+      "br": [
+        "Avalox",
+        "Moxifloxacino Genérico"
+      ],
+      "ar": [
+        "Avalox",
+        "Moxifloxacino Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos recubiertos: 400 mg",
+      "Solución para infusión EV: 400 mg/250 mL"
+    ],
+    "dose": {
+      "adultoVO": "400 mg VO 1 vez/día",
+      "adultoEV": "400 mg EV 1 vez/día (infusión 60 min)"
+    },
+    "doseKg": {
+      "standard": "Dosis fija 400 mg/día (no basado en peso)"
+    },
+    "mechanism": "Inhibe las topoisomerasas II (DNA girasa) y IV, bloqueando la replicación y transcripción del DNA bacteriano.",
+    "onset": "Absorción oral rápida — Tmáx 1–3 h; biodisponibilidad ~90%.",
+    "halfLife": "Semivida 11–15 h (dosis única diaria).",
+    "therapeuticRange": "Concentración-dependiente. AUC/CIM ≥ 30–50 para optimizar eficacia.",
+    "dilution": "EV: listo para infusión (400 mg/250 mL). No diluir adicionalmente.",
+    "speed": "Infundir en 60 minutos. No infundir en menos de 60 min.",
+    "commonAdverseEffects": [
+      "Náuseas y vómitos",
+      "Diarrea",
+      "Cefalea",
+      "Mareos",
+      "Elevación de TGO/TGP"
+    ],
+    "dangerousAdverseEffects": [
+      "QT prolongado / Torsades de Pointes",
+      "Hepatotoxicidad grave",
+      "Rotura de tendón",
+      "Neuropatía periférica",
+      "Convulsiones / Psicosis (raro)"
+    ],
+    "contraindications": [
+      "QT prolongado congénito o adquirido",
+      "Uso concomitante de antiarrítmicos clase IA/III",
+      "Hipocalemia o hipomagnesemia no corregidas",
+      "Niños y adolescentes < 18 años"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorizar ECG (intervalo QTc) antes y durante el uso, especialmente en pacientes de riesgo.",
+      "Evitar uso simultáneo con otros fármacos que prolongan QT (haloperidol, metadona, amiodarona).",
+      "No requiere ajuste renal — ventaja sobre otras fluoroquinolonas en insuficiencia renal."
+    ],
+    "ref": "Sanford Guide 2025 / ANVISA / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorizar QT prolongado y hepatotoxicidad."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No removido significativamente por hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Moxifloxacino",
+    "es": "Moxifloxacino"
+  },
+  "keywords": [
+    "moxifloxacino",
+    "avalox",
+    "moxifloxacino generico",
+    "fluoroquinolona de 4ª geracao"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

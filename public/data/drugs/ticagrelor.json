@@ -1,0 +1,178 @@
+{
+  "id": "ticagrelor",
+  "category": "anticoag",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Ticagrelor"
+  },
+  "es": {
+    "name": "Ticagrelor"
+  },
+  "name": {
+    "pt": "Ticagrelor",
+    "es": "Ticagrelor"
+  },
+  "keywords": [
+    "ticagrelor"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "anticoag.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "anticoag.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "cardio.js",
+      "record": {
+        "id": "ticagrelor",
+        "category": "cardio",
+        "icon": "🩸",
+        "color": "rgba(239,68,68,0.13)",
+        "colorTxt": "#B91C1C",
+        "pt": {
+          "name": "Ticagrelor",
+          "class": "Antiagregante Plaquetário de Alta Potência — Bloqueador REVERSÍVEL P2Y12 (CPTP)",
+          "commercialNames": {
+            "br": [
+              "Brilinta"
+            ],
+            "ar": [
+              "Brilinta"
+            ]
+          },
+          "presentation": [
+            "Comprimidos revestidos 60 mg e 90 mg"
+          ],
+          "dose": {
+            "adultoPadrao": "Dose de Ataque (IAM agudo): 180 mg VO (2 cp de 90 mg) dose única. Manutenção 1º ano: 90 mg VO 12/12h. Após 1 ano (prevenção prolongada): 60 mg VO 12/12h.",
+            "adultoGrave": null,
+            "pediatricaPadrao": "Não indicado em pediatria.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null
+          },
+          "doseKg": {
+            "padrao": null,
+            "grave": null,
+            "meningite": null,
+            "doseMaxima": "180 mg (ataque) / 90 mg 2x/dia (manutenção 1º ano) / 60 mg 2x/dia (após 1 ano)"
+          },
+          "therapeuticRange": "Sem nível sérico monitorável. Não é pró-fármaco — efeito imediato em ~30 min. Reversível: função plaquetária restaurada em 3–5 dias após suspensão (vs 7–10 dias do clopidogrel).",
+          "dilution": "Medicamento oral. Pode ser triturado e misturado com água em urgência.",
+          "speed": "Via oral, de 12/12 horas (reversibilidade exige 2 doses/dia).",
+          "commonAdverseEffects": [
+            "DISPNEIA DO BRILINTA — Falta de ar benigna por inibição da recaptação de adenosina no pulmão (~14% dos usuários)",
+            "Aumento do ácido úrico sérico",
+            "Pausas ventriculares / bradicardia assintomática"
+          ],
+          "severeAdverseEffects": [
+            "Hemorragia intracraniana fatal",
+            "Sangramento digestivo maciço"
+          ],
+          "contraindications": [
+            "Histórico de hemorragia intracraniana (AVC hemorrágico)",
+            "Sangramento ativo grave atual",
+            "Insuficiência hepática grave",
+            "Uso concomitante de inibidores potentes CYP3A4 (cetoconazol, itraconazol, ritonavir, claritromicina) — contraindicação absoluta"
+          ],
+          "pregnancyCategory": "Categoria C — Evitar; sem dados suficientes de segurança fetal.",
+          "breastfeeding": null,
+          "renalAdjust": "Sem ajuste necessário.",
+          "hepaticAdjust": "Contraindicado na insuficiência hepática grave.",
+          "interactions": [
+            "SINVASTATINA/LOVASTATINA — Inibição de CYP3A4/OATP1B1: concentração da estatina pode dobrar → Rabdomiólise. Limitar Sinvastatina a ≤40 mg. Preferir Atorvastatina/Rosuvastatina.",
+            "CETOCONAZOL/ITRACONAZOL/RITONAVIR/CLARITROMICINA — Contraindicação absoluta (inibição CYP3A4: níveis de ticagrelor × 5–8).",
+            "RIFAMPICINA/FENITOÍNA/CARBAMAZEPINA — Indutores CYP3A4: reduzem eficácia do ticagrelor drasticamente.",
+            "AAS em altas doses (>100 mg/dia) — Reduz paradoxalmente a eficácia do ticagrelor. Manter AAS em dose baixa (75–100 mg)."
+          ],
+          "clinicalPearl": "A DISPNEIA QUE PARECE INFARTO: A falta de ar benigna do Brilinta (adenosina pulmonar) assusta o paciente — oriente antecipadamente. O ticagrelor NÃO é metabolizado pelo CYP2C19, sendo eficaz mesmo em \"resistentes ao clopidogrel\". Usar AAS sempre em dose baixa (75–100 mg) para não antagonizar o efeito.",
+          "evidence": "PLATO Trial (NEJM 2009) — Superior ao clopidogrel em SCA (mortalidade CV reduzida 21%); PEGASUS-TIMI 54 — 60 mg 2x/dia após 1 ano de SCA."
+        },
+        "es": {
+          "name": "Ticagrelor",
+          "class": "Antiagregante Plaquetario de Alta Potencia — Bloqueador REVERSIBLE P2Y12 (CPTP)",
+          "commercialNames": {
+            "br": [
+              "Brilinta"
+            ],
+            "ar": [
+              "Brilinta"
+            ]
+          },
+          "presentation": [
+            "Comprimidos recubiertos 60 mg y 90 mg"
+          ],
+          "dose": {
+            "adultoPadrao": "Dosis de Carga (IAM agudo): 180 mg VO (2 cp de 90 mg) dosis única. Mantenimiento 1.º año: 90 mg VO cada 12h. Tras 1 año: 60 mg VO cada 12h.",
+            "adultoGrave": null,
+            "pediatricaPadrao": "No indicado en pediatría.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null
+          },
+          "doseKg": {
+            "padrao": null,
+            "grave": null,
+            "meningite": null,
+            "doseMaxima": "180 mg (carga) / 90 mg 2 veces/día / 60 mg 2 veces/día (tras 1 año)"
+          },
+          "therapeuticRange": "Sin nivel sérico monitoreable. No es profármaco — efecto inmediato en ~30 min. Reversible: función plaquetaria restaurada en 3–5 días tras la suspensión.",
+          "dilution": "Medicamento oral. Puede triturarse y mezclarse con agua en urgencia.",
+          "speed": "Vía oral, cada 12 horas (la reversibilidad exige 2 dosis/día).",
+          "commonAdverseEffects": [
+            "DISNEA DEL BRILINTA — Falta de aire benigna por inhibición de recaptación de adenosina (~14% de usuarios)",
+            "Aumento del ácido úrico sérico",
+            "Pausas ventriculares / bradicardia asintomática"
+          ],
+          "severeAdverseEffects": [
+            "Hemorragia intracraneal fatal",
+            "Sangrado digestivo masivo"
+          ],
+          "contraindications": [
+            "Historial de hemorragia intracraneal (ACV hemorrágico)",
+            "Sangrado activo grave actual",
+            "Insuficiencia hepática grave",
+            "Uso concomitante de inhibidores potentes CYP3A4 — contraindicación absoluta"
+          ],
+          "pregnancyCategory": "Categoría C — Evitar; sin datos de seguridad fetal.",
+          "breastfeeding": null,
+          "renalAdjust": "Sin ajuste necesario.",
+          "hepaticAdjust": "Contraindicado en insuficiencia hepática grave.",
+          "interactions": [
+            "SIMVASTATINA/LOVASTATINA — Inhibición CYP3A4/OATP1B1 → concentración de estatina duplicada → Rabdomiólisis. Limitar a ≤40 mg.",
+            "KETOCONAZOL/ITRACONAZOL/RITONAVIR/CLARITROMICINA — Contraindicación absoluta.",
+            "RIFAMPICINA/FENITOÍNA/CARBAMAZEPINA — Inductores CYP3A4: reducen eficacia drásticamente.",
+            "AAS en dosis altas (>100 mg/día) — Reduce paradójicamente la eficacia. Mantener AAS dosis baja (75–100 mg)."
+          ],
+          "clinicalPearl": "LA DISNEA QUE PARECE INFARTO: La falta de aire benigna del Brilinta (adenosina pulmonar) asusta al paciente — orientar anticipadamente. No metabolizado por CYP2C19, eficaz incluso en \"resistentes al clopidogrel\".",
+          "evidence": "PLATO Trial (NEJM 2009) — Superior al clopidogrel en SCA (mortalidad CV reducida 21%); PEGASUS-TIMI 54 — 60 mg 2 veces/día tras 1 año."
+        },
+        "name": {
+          "pt": "Ticagrelor",
+          "es": "Ticagrelor"
+        },
+        "keywords": [
+          "ticagrelor",
+          "brilinta",
+          "antiagregante plaquetario de alta potencia — bloqueador reversivel p2y12 (cptp)"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "cardio.js"
+      }
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "id": "eravaciclina",
+  "category": "atb",
+  "icon": "🧪",
+  "color": "rgba(245,158,11,0.15)",
+  "colorTxt": "#92400E",
+  "pt": {
+    "name": "Eravaciclina",
+    "class": "Fluorociclina (nova geração de tetraciclina — anti-ESBL/carbapenem-R)",
+    "commercialNames": {
+      "br": [
+        "Xerava (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Xerava"
+      ]
+    },
+    "presentation": [
+      "Pó liofilizado para solução injetável EV: 50 mg por frasco"
+    ],
+    "dose": {
+      "adultoEV": "70 mg EV 12/12h (70 kg — 1 mg/kg)"
+    },
+    "doseKg": {
+      "adultoEV_kg": "1 mg/kg EV 12/12h (70 kg = 70 mg/dose)"
+    },
+    "indication": "Infecções intra-abdominais complicadas (cIAI) incluindo aquelas causadas por Enterobacterales resistentes a carbapenêmicos (CRE) e ESBL, Acinetobacter baumannii.",
+    "spectrum": "Espectro extremamente amplo: Enterobacterales (ESBL, KPC, NDM, OXA-48), Acinetobacter baumannii (inclusive MDR), Staphylococcus aureus (MRSA), Enterococcus faecalis/faecium, anaeróbios (Bacteroides fragilis). Atividade frente a cepas resistentes às tetraciclinas clássicas. Sem atividade confiável contra Pseudomonas.",
+    "contraindications": [
+      "Hipersensibilidade às tetraciclinas",
+      "Gestação e crianças < 8 anos (risco de lesão dentária e óssea)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Não necessita ajuste renal — vantagem significativa em pacientes com IRA ou DRC avançada.",
+      "Ajuste necessário em insuficiência hepática grave (Child-Pugh C): reduzir para 1 mg/kg 24/24h.",
+      "Reservar para infecções por germes MDR/XDR confirmados (stewardship)."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CRE Guidelines / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal.",
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual para infecções intra-abdominais complicadas."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Avaliar função hepática em insuficiência avançada."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Não requer ajuste pós-hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Eravaciclina",
+    "class": "Fluorociclina (nueva generación de tetraciclina — anti-ESBL/carbapenem-R)",
+    "commercialNames": {
+      "br": [
+        "Xerava (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Xerava"
+      ]
+    },
+    "presentation": [
+      "Polvo liofilizado para solución inyectable EV: 50 mg por frasco"
+    ],
+    "dose": {
+      "adultoEV": "70 mg EV 12/12h (70 kg — 1 mg/kg)"
+    },
+    "doseKg": {
+      "adultoEV_kg": "1 mg/kg EV 12/12h (70 kg = 70 mg/dose)"
+    },
+    "indication": "Infecciones intraabdominales complicadas (cIAI) incluidas las causadas por Enterobacterales resistentes a carbapenémicos (CRE) y ESBL, Acinetobacter baumannii.",
+    "spectrum": "Espectro extremadamente amplio: Enterobacterales (ESBL, KPC, NDM, OXA-48), Acinetobacter baumannii (inclusive MDR), Staphylococcus aureus (MRSA), Enterococcus faecalis/faecium, anaerobios (Bacteroides fragilis). Actividad frente a cepas resistentes a tetraciclinas clásicas. Sin actividad confiable frente a Pseudomonas.",
+    "contraindications": [
+      "Hipersensibilidad a las tetraciclinas",
+      "Gestación y niños < 8 años (riesgo de lesión dental y ósea)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "No requiere ajuste renal — ventaja significativa en pacientes con IRA o ERC avanzada.",
+      "Ajuste necesario en insuficiencia hepática grave (Child-Pugh C): reducir a 1 mg/kg 24/24h.",
+      "Reservar para infecciones por gérmenes MDR/XDR confirmados (stewardship)."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CRE Guidelines / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal.",
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual para infecciones intraabdominales complicadas."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Evaluar función hepática en insuficiencia avanzada."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "1 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste post-hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Eravaciclina",
+    "es": "Eravaciclina"
+  },
+  "keywords": [
+    "eravaciclina",
+    "xerava (acesso limitado no brasil)",
+    "xerava",
+    "fluorociclina (nova geracao de tetraciclina — anti-esbl/carbapenem-r)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

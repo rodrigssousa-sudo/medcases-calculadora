@@ -1,0 +1,174 @@
+{
+  "id": "mexiletina",
+  "category": "cardiologia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Mexiletina"
+  },
+  "es": {
+    "name": "Mexiletina"
+  },
+  "name": {
+    "pt": "Mexiletina",
+    "es": "Mexiletina"
+  },
+  "keywords": [
+    "mexiletina"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "analgesicos.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "analgesicos.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "cardio.js",
+      "record": {
+        "id": "mexiletina",
+        "category": "cardio",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "dose": "200 mg VO 8/8h com alimentos (titular 150–300 mg 8/8h)",
+          "doseMax": "1200 mg/dia",
+          "clcrEstimado": "90 mL/min",
+          "apresentacao": "Cápsulas 150 mg / 200 mg / 250 mg (Mexitil)",
+          "classe": "Antiarrítmico Classe IB oral | Análogo oral da lidocaína | t½ 10–12 h",
+          "indicacoes": [
+            "TV sustentada documentada",
+            "Arritmias ventriculares potencialmente fatais",
+            "Adjuvante em TV refratária (+ amiodarona)",
+            "QT longo tipo 3 selecionado (especialista)",
+            "EV de alto risco selecionadas"
+          ],
+          "efeitosAdversos": [
+            "Náuseas",
+            "Vômitos",
+            "Azia",
+            "Tremor",
+            "Tontura",
+            "Ataxia",
+            "Visão turva",
+            "⚠️ Pró-arritmia ventricular",
+            "⚠️ Convulsões",
+            "⚠️ Hepatotoxicidade",
+            "⚠️ Leucopenia rara"
+          ],
+          "monitoramento": [
+            "ECG basal + periódico (QRS + PR)",
+            "Função hepática basal e periódica",
+            "K⁺ e Mg²⁺",
+            "Sintomas neurológicos",
+            "Sintomas GI",
+            "Recorrência de TV",
+            "Estado mental"
+          ],
+          "refs": [
+            "ESC VA Guidelines",
+            "AHA/ACC/HRS VA Guidelines",
+            "Goodman & Gilman",
+            "Lexicomp",
+            "FDA/DailyMed label"
+          ],
+          "alerts": [
+            {
+              "tipo": "warning",
+              "msg": "⚠️ Mexiletina reservada para TV sustentada documentada ou EV potencialmente fatal. Não usar para EV assintomáticas/benignas — pode aumentar mortalidade."
+            },
+            {
+              "tipo": "info",
+              "msg": "🍽️ Tomar SEMPRE com alimentos — reduz significativamente náuseas e efeitos GI."
+            },
+            {
+              "tipo": "danger",
+              "msg": "📦 BLACK BOX: Antiarrítmicos podem aumentar mortalidade em arritmias não ameaçadoras à vida. Reservar para TV/EV documentadas e potencialmente fatais."
+            }
+          ]
+        },
+        "es": {
+          "dose": "200 mg VO 8/8h com alimentos (titular 150–300 mg 8/8h)",
+          "doseMax": "1200 mg/día",
+          "clcrEstimado": "90 mL/min",
+          "apresentacao": "Cápsulas 150 mg / 200 mg / 250 mg (Mexitil)",
+          "classe": "Antiarrítmico Clase IB oral | Análogo oral de lidocaína | t½ 10–12 h",
+          "indicacoes": [
+            "TV sostenida documentada",
+            "Arritmias ventriculares potencialmente fatales",
+            "Adyuvante en TV refractaria (+ amiodarona)",
+            "QT largo tipo 3 seleccionado (especialista)",
+            "EV de alto riesgo seleccionadas"
+          ],
+          "efeitosAdversos": [
+            "Náuseas",
+            "Vómitos",
+            "Acidez",
+            "Temblor",
+            "Mareos",
+            "Ataxia",
+            "Visión borrosa",
+            "⚠️ Proarritmia ventricular",
+            "⚠️ Convulsiones",
+            "⚠️ Hepatotoxicidad",
+            "⚠️ Leucopenia rara"
+          ],
+          "monitoramento": [
+            "ECG basal + periódico (QRS + PR)",
+            "Función hepática basal y periódica",
+            "K⁺ y Mg²⁺",
+            "Síntomas neurológicos",
+            "Síntomas GI",
+            "Recurrencia de TV",
+            "Estado mental"
+          ],
+          "refs": [
+            "ESC VA Guidelines",
+            "AHA/ACC/HRS VA Guidelines",
+            "Goodman & Gilman",
+            "Lexicomp",
+            "FDA/DailyMed label"
+          ],
+          "alerts": [
+            {
+              "tipo": "warning",
+              "msg": "⚠️ Mexiletina reservada para TV sostenida documentada o EV potencialmente fatal. No usar para EV asintomáticas/benignas — puede aumentar mortalidad."
+            },
+            {
+              "tipo": "info",
+              "msg": "🍽️ Tomar SIEMPRE con alimentos — reduce significativamente náuseas y efectos GI."
+            },
+            {
+              "tipo": "danger",
+              "msg": "📦 BLACK BOX: Antiarrítmicos pueden aumentar mortalidad en arritmias no amenazantes para la vida. Reservar para TV/EV documentadas y potencialmente fatales."
+            }
+          ]
+        },
+        "name": {
+          "pt": "mexiletina",
+          "es": "mexiletina"
+        },
+        "keywords": [
+          "mexiletina"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "cardio.js"
+      }
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "id": "telavancina",
+  "category": "atb",
+  "icon": "🧪",
+  "color": "rgba(245,158,11,0.12)",
+  "colorTxt": "#92400E",
+  "pt": {
+    "name": "Telavancina",
+    "class": "Lipoglicopeptídeo semi-sintético (duplo mecanismo: inibição da parede + membrana)",
+    "commercialNames": {
+      "br": [
+        "Vibativ (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Vibativ"
+      ]
+    },
+    "presentation": [
+      "Pó liofilizado para solução injetável EV: 250 mg, 750 mg por frasco"
+    ],
+    "dose": {
+      "adultoEV": "700 mg EV 24/24h (70 kg — 10 mg/kg)"
+    },
+    "doseKg": {
+      "adultoEV_kg": "10 mg/kg/dia (ClCr≥50); 7,5 mg/kg/dia (ClCr 30–50); 10 mg/kg/48h (ClCr 10–30)"
+    },
+    "indication": "Infecções de pele e partes moles (ABSSSI) por MRSA, pneumonia hospitalar e associada à ventilação mecânica (HAP/VAP) por S. aureus.",
+    "spectrum": "Staphylococcus aureus (MSSA, MRSA, hVISA, VISA), Streptococcus spp., Enterococcus faecalis (VSE). Atividade superior à vancomicina em biofilme de MRSA. Sem atividade contra Gram-negativos ou VRE.",
+    "contraindications": [
+      "Hipersensibilidade aos glicopeptídeos",
+      "Gestação — teratogênico em animais (categoria C/D)",
+      "ClCr < 10 mL/min ou hemodiálise"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Interfere com ensaios de coagulação (APTT, TP, INR) — colher sangue ANTES da infusão.",
+      "Nefrotoxicidade — monitorar creatinina a cada 2–3 dias.",
+      "Ajuste renal obrigatório quando ClCr < 50 mL/min; contraindicado em ClCr < 10 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Vibativ / IDSA HAP/VAP Guidelines / Lexicomp / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual. Infusão EV em 60 min (não em bólus). Telavancina interfere com ensaios de coagulação (APTT, TP, INR) — colher sangue ANTES da infusão. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "7,5 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "7,5 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 30–50 mL/min → 7,5 mg/kg/dia. Monitorar creatinina a cada 2–3 dias. Nefrotoxicidade — a telavancina tem maior nefrotoxicidade que a vancomicina, especialmente em ClCr < 50 mL/min."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "10 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "10 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 10–29 mL/min → 10 mg/kg a cada 48h. Risco aumentado de nefrotoxicidade e mortalidade em insuficiência renal pré-existente — avaliar risco/benefício. Telavancina apresentou mortalidade aumentada em estudo ATTAIN em pacientes com ClCr < 50 mL/min vs. vancomicina."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA label: ClCr < 10 mL/min — uso NÃO recomendado (contraindicação relativa). Dados de eficácia e segurança insuficientes. Risco muito elevado de nefrotoxicidade adicional. Considerar alternativa (daptomicina, linezolida ou outro agente anti-MRSA)."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA label: pacientes em hemodiálise — uso NÃO recomendado. Telavancina não foi estudada adequadamente em HD. Dados de remoção dialítica insuficientes. Contraindicação relativa — usar alternativa anti-MRSA (daptomicina, linezolida, ceftarolina)."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": true,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "NEFROTOXICIDADE: maior risco que vancomicina — monitorar creatinina a cada 2–3 dias. PROLONGAMENTO DE QT: monitorar ECG antes do início e a cada 2–4 semanas (risco de torsades de pointes). AUMENTO DE MORTALIDADE em pacientes com ClCr < 50 mL/min (dados ATTAIN) — avaliar risco/benefício. TERATOGÊNICA em animais — teste de gravidez obrigatório antes do uso. Interfere com ensaios de coagulação — sempre coletar sangue antes da infusão."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Vibativ (telavancin) 2016",
+        "EMA label Vibativ (telavancin) 2011",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "IDSA HAP/VAP Guidelines 2016 (update 2022)",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "ATTAIN / ATLAS trials"
+      ],
+      "note": "Bloco mesclado e melhorado: cortes renais FDA (CrCl 30–50 / 10–29 / <10 / HD) preservados. qtRisk corrigido para true (telavancina prolonga QT — risco de torsades). Warning expandido com QT, mortalidade ATTAIN em ClCr < 50 e teratogenicidade. EMA label, Johns Hopkins e UpToDate adicionados às fontes."
+    }
+  },
+  "es": {
+    "name": "Telavancina",
+    "class": "Lipoglicopéptido semisintético (doble mecanismo: inhibición de pared + membrana)",
+    "commercialNames": {
+      "br": [
+        "Vibativ (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Vibativ"
+      ]
+    },
+    "presentation": [
+      "Polvo liofilizado para solución inyectable EV: 250 mg, 750 mg por frasco"
+    ],
+    "dose": {
+      "adultoEV": "700 mg EV 24/24h (70 kg — 10 mg/kg)"
+    },
+    "doseKg": {
+      "adultoEV_kg": "10 mg/kg/dia (ClCr≥50); 7,5 mg/kg/dia (ClCr 30–50); 10 mg/kg/48h (ClCr 10–30)"
+    },
+    "indication": "Infecciones de piel y partes blandas (ABSSSI) por MRSA, neumonía hospitalaria y asociada a ventilación mecánica (HAP/VAP) por S. aureus.",
+    "spectrum": "Staphylococcus aureus (MSSA, MRSA, hVISA, VISA), Streptococcus spp., Enterococcus faecalis (VSE). Actividad superior a vancomicina en biofilm de MRSA. Sin actividad frente a Gramnegativos ni VRE.",
+    "contraindications": [
+      "Hipersensibilidad a los glucopéptidos",
+      "Gestación — teratogénico en animales (categoría C/D)",
+      "ClCr < 10 mL/min o hemodiálisis"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Interfiere con ensayos de coagulación (APTT, TP, INR) — extraer sangre ANTES de la infusión.",
+      "Nefrotoxicidad — monitorizar creatinina cada 2–3 días.",
+      "Ajuste renal obligatorio cuando ClCr < 50 mL/min; contraindicado en ClCr < 10 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Vibativ / IDSA HAP/VAP Guidelines / Lexicomp / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual. Infusión IV en 60 min (no en bolo). La telavancina interfiere con ensayos de coagulación (APTT, TP, INR) — extraer sangre ANTES de la infusión. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "7,5 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "7,5 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 30–50 mL/min → 7,5 mg/kg/día. Monitorizar creatinina cada 2–3 días. Nefrotoxicidad — la telavancina tiene mayor nefrotoxicidad que la vancomicina, especialmente con ClCr < 50 mL/min."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "10 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "10 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 10–29 mL/min → 10 mg/kg cada 48h. Riesgo aumentado de nefrotoxicidad y mortalidad en insuficiencia renal preexistente — evaluar riesgo/beneficio. Telavancina mostró mortalidad aumentada en estudio ATTAIN en pacientes con ClCr < 50 mL/min vs. vancomicina."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA label: ClCr < 10 mL/min — uso NO recomendado (contraindicación relativa). Datos de eficacia y seguridad insuficientes. Riesgo muy elevado de nefrotoxicidad adicional. Considerar alternativa (daptomicina, linezolida u otro agente anti-MRSA)."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA label: pacientes en hemodiálisis — uso NO recomendado. La telavancina no fue estudiada adecuadamente en HD. Datos de remoción dialítica insuficientes. Contraindicación relativa — usar alternativa anti-MRSA (daptomicina, linezolida, ceftarolina)."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": true,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "NEFROTOXICIDAD: mayor riesgo que vancomicina — monitorizar creatinina cada 2–3 días. PROLONGACIÓN DE QT: monitorizar ECG antes del inicio y cada 2–4 semanas (riesgo de torsades de pointes). AUMENTO DE MORTALIDAD en pacientes con ClCr < 50 mL/min (datos ATTAIN) — evaluar riesgo/beneficio. TERATOGÉNICA en animales — prueba de embarazo obligatoria antes del uso. Interfiere con ensayos de coagulación — siempre colectar sangre antes de la infusión."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Vibativ (telavancin) 2016",
+        "EMA label Vibativ (telavancin) 2011",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "IDSA HAP/VAP Guidelines 2016 (update 2022)",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "ATTAIN / ATLAS trials"
+      ],
+      "note": "Bloque fusionado y mejorado: cortes renales FDA (CrCl 30–50 / 10–29 / <10 / HD) preservados. qtRisk corregido a true (telavancina prolonga QT — riesgo de torsades). Warning ampliado con QT, mortalidad ATTAIN en ClCr < 50 y teratogenicidad. EMA label, Johns Hopkins y UpToDate añadidos a las fuentes."
+    }
+  },
+  "name": {
+    "pt": "Telavancina",
+    "es": "Telavancina"
+  },
+  "keywords": [
+    "telavancina",
+    "vibativ (acesso limitado no brasil)",
+    "vibativ",
+    "lipoglicopeptideo semi-sintetico (duplo mecanismo: inibicao da parede + membrana)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

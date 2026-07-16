@@ -1,0 +1,722 @@
+{
+  "id": "esmolol",
+  "category": "cardio",
+  "icon": "💉",
+  "color": "rgba(220,38,38,0.15)",
+  "colorTxt": "#7F1D1D",
+  "pt": {
+    "name": "Esmolol",
+    "class": "Betabloqueador beta-1 seletivo de ação ultracurta (IV)",
+    "commercialNames": {
+      "br": [
+        "Brevibloc",
+        "Esmolol genérico"
+      ],
+      "ar": [
+        "Brevibloc",
+        "Esmolol genérico"
+      ]
+    },
+    "presentation": [
+      "Ampolas 10 mg/mL para infusão intravenosa",
+      "Frascos para infusão intravenosa contínua"
+    ],
+    "dose": {
+      "adultoPadrao": "Bólus opcional: 500 mcg/kg IV em 1 min → Infusão 50–200 mcg/kg/min IV (≈ 21.0 mL/h a 84.0 mL/h usando 10 mg/mL)",
+      "adultoGrave": "UTI/Emergência: titular até 300 mcg/kg/min conforme FC e PA (≈ 126.0 mL/h usando 10 mg/mL). Monitorização contínua obrigatória.",
+      "pediatricaPadrao": "Uso pediátrico off-label; consultar especialista e protocolo institucional",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "50–200 mcg/kg/min IV",
+      "grave": "Até 300 mcg/kg/min IV",
+      "meningite": null,
+      "doseMaxima": "300 mcg/kg/min IV"
+    },
+    "therapeuticRange": "FC < 110 bpm em FA estável; FC 60–80 bpm em situações críticas (dissecção de aorta, pós-operatório)",
+    "dilution": "Diluição padrão: 2,5 g (250 mL de 10 mg/mL) em 250 mL SF/SG5% → concentração 10 mg/mL. Verificar compatibilidade conforme apresentação.",
+    "speed": "Ajustar velocidade de infusão a cada 5–10 min conforme FC e PA. Meia-vida ~9 min — efeito reverte rapidamente ao suspender.",
+    "commonAdverseEffects": [
+      "Hipotensão",
+      "Bradicardia",
+      "Náuseas",
+      "Tontura",
+      "Sudorese",
+      "Dor/irritação no local da infusão"
+    ],
+    "dangerousAdverseEffects": [
+      "Choque cardiogênico",
+      "Bloqueio AV completo",
+      "Assistolia / Parada cardíaca",
+      "Broncoespasmo",
+      "Descompensação aguda de insuficiência cardíaca"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "USO EXCLUSIVO HOSPITALAR: requer monitorização cardíaca contínua (ECG, FC, PA invasiva ou não invasiva).",
+      "Meia-vida ~9 min: efeito reverte rapidamente ao suspender a infusão — vantagem em situações instáveis.",
+      "Interromper imediatamente se hipotensão importante, bradicardia grave, bloqueio AV ou sinais de choque.",
+      "Interações graves: verapamil e diltiazem — risco elevado de choque e bloqueio AV."
+    ],
+    "ref": "ESC Atrial Fibrillation Guidelines 2020 · AHA/ACC Arrhythmia Guidelines 2019 · ESC Aortic Disease Guidelines 2014 · AHA/ACC Aortic Diseases Guidelines 2022 · Goodman & Gilman 14ª ed. · Lexicomp Online 2026 · Micromedex 2026 · FDA label · EMA label",
+    "pharmacologicClass": "Betabloqueador β1 seletivo intravenoso de ação ultracurta",
+    "mechanism": "Bloqueia seletivamente receptores β1-adrenérgicos cardíacos, reduzindo rapidamente FC, contratilidade miocárdica e condução AV. Não possui atividade simpatomimética intrínseca. Ação terminada em minutos após suspensão da infusão — confere reversibilidade imediata clinicamente vantajosa em situações instáveis.",
+    "pharmacodynamics": "Controle preciso e titulável da FC e PA por via IV. Meia-vida ~9 minutos permite rápida reversão ao suspender. Ideal para situações em que se deseja teste terapêutico reversível ou controle em contexto perioperatório/UTI sem comprometimento hemodinâmico prolongado.",
+    "onset": "Início em 1–2 minutos. Efeito máximo em 5–10 minutos. Término da ação em 10–30 minutos após suspensão da infusão.",
+    "pharmacokinetics": {
+      "absorption": "Uso exclusivamente intravenoso. Biodisponibilidade 100% por definição.",
+      "bioavailability": "100% (IV)",
+      "proteinBinding": "~55% (moderada)",
+      "vd": "~3,4 L/kg",
+      "metabolism": "Hidrólise rápida pelo grupo éster por esterases eritrocitárias (hemácias) — completamente independente do CYP450 e da função hepática e renal. Produz metabólito ácido (ASL-8123) e metanol (em quantidades clinicamente insignificantes).",
+      "halfLife": "~9 minutos (betabloqueio); metabólito ácido: 3,7 horas",
+      "elimination": "Metabólito ácido eliminado predominantemente pelos rins. Em IR grave há acúmulo do metabólito ácido — sem impacto no betabloqueio em curto prazo, mas monitorar em infusões prolongadas.",
+      "dialysability": "Não removido por HD (meia-vida ~9 min — irrelevante dialisar). Metabólito ácido pode ser parcialmente removido."
+    },
+    "indications": {
+      "approved": [
+        "Controle rápido da FC em fibrilação atrial/flutter atrial",
+        "Taquicardia supraventricular perioperatória ou pós-operatória",
+        "Hipertensão perioperatória",
+        "Taquicardia sinusal intraoperatória não fisiológica"
+      ],
+      "offLabel": [
+        "Dissecção aguda de aorta (controle de FC antes de vasodilatação)",
+        "Tempestade tireoidiana (controle de FC em UTI)",
+        "Controle hemodinâmico em UTI (FA com RVR, crise hipertensiva monitorizada)",
+        "Feocromocitoma (sempre após bloqueio α completo)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Bradicardia sinusal grave (FC < 50 bpm sintomática)",
+        "Bloqueio AV de 2º grau (Mobitz II) ou 3º grau sem marcapasso",
+        "Choque cardiogênico",
+        "ICC agudamente descompensada",
+        "Hipotensão grave (PAS < 90 mmHg)",
+        "Síndrome do seio doente sem marcapasso"
+      ],
+      "relative": [
+        "Asma brônquica ou broncoespasmo ativo (perda de seletividade β1 em doses altas)",
+        "DPOC grave com broncoespasmo reversível",
+        "Feocromocitoma sem bloqueio α prévio (vasoconstrição α paradoxal)",
+        "Diabetes mellitus insulinodependente (mascaramento de hipoglicemia)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamil EV / Diltiazem EV",
+          "mechanism": "Dupla inibição nodal AV (dromotrópico negativo aditivo) com ação IV simultânea",
+          "consequence": "Bloqueio AV completo, assistolia, parada cardíaca",
+          "management": "ABSOLUTAMENTE contraindicado administrar ambos EV. Intervalo mínimo de 24–48h se transição de verapamil oral para esmolol IV."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efeito cronotrópico e dromotrópico negativo aditivo no nódulo AV",
+          "consequence": "Bradicardia grave e bloqueio AV de alto grau",
+          "management": "Monitorar ECG continuamente. Verificar nível sérico de digoxina (alvo: 0,5–0,9 ng/mL) antes de iniciar esmolol."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Efeito bradicardizante e bloqueio AV aditivos; vasodilatação periférica adicional da amiodarona IV",
+          "consequence": "Bradicardia grave, bloqueio AV, colapso hemodinâmico",
+          "management": "Monitorar ECG e PA continuamente. Titular esmolol em doses mínimas eficazes."
+        },
+        {
+          "drug": "Anestésicos gerais (propofol, sevoflurano, isoflurano)",
+          "mechanism": "Depressão miocárdica, vasodilatação periférica e bradicardia aditivas",
+          "consequence": "Hipotensão intraoperatória grave, colapso circulatório",
+          "management": "Monitorização hemodinâmica contínua. Comunicar anestesiologista antes de qualquer bolus. Titular infusão em doses baixas no intraoperatório."
+        },
+        {
+          "drug": "Vasodilatadores IV (nitroprussiato, nicardipina, hidralazina)",
+          "mechanism": "Hipotensão aditiva — redução simultânea de pré-carga (vasodilatadores) e cronotropismo/inotropismo (esmolol)",
+          "consequence": "Hipotensão grave e choque circulatório",
+          "management": "Na dissecção de aorta: iniciar esmolol (controle de FC) ANTES de vasodilatar. Titular vasodilatador em doses baixas apenas após FC controlada."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "Insulina / sulfonilureias",
+          "mechanism": "Mascaramento da taquicardia reflexa da hipoglicemia (β1)",
+          "consequence": "Hipoglicemia grave não reconhecida",
+          "management": "Monitorar glicemia com frequência em infusões prolongadas. Orientar equipe de enfermagem."
+        },
+        {
+          "drug": "Outros anti-hipertensivos IV (furosemida, hidralazina, labetalol)",
+          "mechanism": "Efeito hipotensor aditivo",
+          "consequence": "Hipotensão excessiva e instabilidade hemodinâmica",
+          "management": "Monitorar PA continuamente. Titular vasoativo concomitante em doses baixas."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "ECG contínuo obrigatório (FC, ritmo, bloqueio AV)",
+        "PA contínua (invasiva em pacientes críticos; não invasiva em perioperatório estável)",
+        "SpO₂ e frequência respiratória",
+        "Estado hemodinâmico e perfusão periférica",
+        "Função renal basal (creatinina) — relevante para metabólito ácido em infusões > 24h"
+      ],
+      "followUp": [
+        "FC alvo (FA/flutter: < 110 bpm; dissecção aorta: < 60 bpm; perioperatório: 60–80 bpm)",
+        "PA alvo (dissecção aorta: PAS 100–120 mmHg)",
+        "Sinais de bloqueio AV progressivo (PR prolongado, escape ventricular)",
+        "Sinais de hipoperfusão (lactato, débito urinário, nível de consciência)",
+        "Broncoespasmo em pacientes com DPOC/asma (monitorar ausculta)"
+      ],
+      "icc": [
+        "Esmolol NÃO é indicado para ICC crônica. Em pacientes com ICC, usar apenas para controle de FC agudo (FA+RVR) com monitorização hemodinâmica intensiva",
+        "Débito cardíaco (se monitorização avançada disponível — Swan-Ganz ou ecocardio)",
+        "Pressão de oclusão capilar pulmonar em ICC grave com esmolol"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (FC < 40 bpm)",
+        "Hipotensão grave (PAS < 70 mmHg)",
+        "Bloqueio AV de alto grau",
+        "Choque cardiogênico",
+        "Broncoespasmo (em doses excessivas com perda de seletividade β1)",
+        "Assistolia"
+      ],
+      "management": [
+        "1. SUSPENDER IMEDIATAMENTE a infusão de esmolol — efeito reverte em 10–20 minutos pela meia-vida ultracurta",
+        "2. Atropina 0,5–1 mg IV para bradicardia sintomática; repetir conforme necessário (máx 3 mg)",
+        "3. Glucagon 5–10 mg IV bolus → infusão 1–5 mg/h (antídoto específico de betabloqueadores)",
+        "4. Dobutamina ou isoproterenol em hipotensão refratária",
+        "5. Emulsão lipídica IV 20% (baixa eficácia — esmolol é hidrofílico/moderadamente lipofílico)",
+        "6. Marcapasso transcutâneo ou transvenoso em BAV refratário",
+        "7. ECMO em colapso circulatório refratário"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "IR: metabolismo por esterases eritrocitárias — independente da função renal. Sem ajuste renal para o betabloqueio. O metabólito ácido (ASL-8123) acumula em IR grave/anúria com infusões prolongadas (> 24h) — sem impacto clínico relevante estabelecido no curto prazo. Monitorar em UTI com TRSC.",
+      "obesity": "Obesidade: calcular dose baseada no peso corporal real (não ideal) para doses de ataque. Para infusões prolongadas, considerar peso ideal para evitar sobredosagem relativa em obesos mórbidos.",
+      "geriatrics": "Idoso: maior sensibilidade ao betabloqueio. Titular em doses baixas com monitorização contínua intensiva. Risco aumentado de hipotensão e bloqueio AV. Meia-vida não é afetada pela idade.",
+      "pregnancy": "Gestação: usar apenas se benefício superar risco. Pode causar bradicardia fetal. Pela meia-vida ultracurta, exposição fetal é limitada. Monitorar neonato para bradicardia e hipoglicemia.",
+      "lactation": "Lactação: dados muito limitados. Pela meia-vida ~9 min, exposição no leite materno é mínima. Uso restrito a contexto hospitalar — suspender amamentação durante infusão e por 30 min após.",
+      "hepaticImpairment": "Hepatopatia: metabolismo por esterases eritrocitárias — completamente independente da função hepática. Sem ajuste hepático necessário."
+    },
+    "hepaticDose": {
+      "required": false,
+      "message": "Sem necessidade de ajuste hepático — metabolismo por esterases eritrocitárias, completamente independente do fígado."
+    },
+    "infusionProtocol": {
+      "route": "IV contínuo exclusivo (bomba de infusão obrigatória)",
+      "bolus": "Opcional: 500 mcg/kg IV em 1 minuto. Pode ser omitido em pacientes instáveis — iniciar diretamente com infusão baixa.",
+      "infusion": "Iniciar 50 mcg/kg/min. Titular em incrementos de 50 mcg/kg/min a cada 5–10 min conforme FC e PA alvo.",
+      "max": "300 mcg/kg/min (guias recomendam até 200 mcg/kg/min para uso crônico)",
+      "monitoring": "ECG contínuo + PA contínua (invasiva em UTI) + FC + SpO₂ + perfusão periférica."
+    },
+    "patientEducation": [
+      "Medicamento de uso hospitalar exclusivo, administrado por via intravenosa com monitorização cardíaca contínua.",
+      "O efeito é rápido e reversível — desaparece em minutos após a suspensão da infusão.",
+      "Comunicar imediatamente à equipe qualquer tontura intensa, falta de ar ou sensação de batimento cardíaco muito lento."
+    ],
+    "clinicalPearls": [
+      "Meia-vida ~9 minutos — único betabloqueador com esta propriedade: permite reversão imediata em caso de hipotensão ou bradicardia. Ideal para teste terapêutico em pacientes instáveis.",
+      "Dissecção aguda de aorta: esmolol é agente de primeira linha. Reduzir FC para < 60 bpm ANTES de iniciar vasodilatador (evitar aumento reflexo do shear stress aórtico).",
+      "Metabolismo por esterases eritrocitárias: totalmente independente de rim, fígado e CYP450 — único betabloqueador com esta característica. Sem ajuste em hepatopatia ou nefropatia.",
+      "Substituição para oral: ao descontinuar esmolol IV, iniciar metoprolol VO 25–50 mg 15 min antes de suspender a infusão, ou bisoprolol VO 2,5–5 mg. Reduzir esmolol 50% após primeira dose oral e descontinuar após segunda dose.",
+      "NÃO é medicamento de manutenção crônica. Após estabilização aguda, transicionar para betabloqueador oral (metoprolol succinato ou bisoprolol) com base na indicação clínica."
+    ],
+    "guidelineRecommendations": [
+      "ESC/AHA: betabloqueadores IV (esmolol ou metoprolol IV) são recomendados para controle de FC em FA com RVR em contexto agudo quando não há hipotensão ou ICC descompensada.",
+      "ESC/AHA Aortic Disease Guidelines: betabloqueador IV (esmolol) é a terapia inicial de escolha para dissecção aguda de aorta — alvo FC < 60 bpm e PAS 100–120 mmHg.",
+      "Perioperatório: esmolol é recomendado para controle de taquicardia e hipertensão perioperatória em contexto intraoperatório e imediato pós-operatório."
+    ],
+    "incompatibilities": "EV: incompatível com bicarbonato de sódio 5% (precipitação). Compatível com SF 0,9%, SG 5%, Ringer Lactato. Não misturar na mesma linha com furosemida em alta concentração ou diazepam.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálise peritoneal: meia-vida ~9 min — irrelevante. Metabolismo eritrocitário independente de qualquer modalidade de depuração extracorpórea."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: esmolol não é removido por TRSC (meia-vida ~9 min + metabolismo eritrocitário). Em UTI com TRSC, usar dose habitual com monitorização hemodinâmica intensiva."
+      }
+    },
+    "prescriptionErrors": [
+      "Administrar bolus IV em pacientes hemodinamicamente instáveis — em instabilidade, iniciar diretamente com infusão em dose baixa sem bolus.",
+      "Iniciar vasodilatador na dissecção de aorta sem controlar FC previamente — regra: controlar FC < 60 bpm com esmolol ANTES de nitroprussiato ou nicardipina.",
+      "Usar esmolol sem monitorização contínua de ECG e PA — uso obrigatoriamente monitorizado.",
+      "Calcular dose por peso ideal em vez de peso real — usar peso real para dose de ataque.",
+      "Não planejar transição para betabloqueador oral ao descontinuar — ao estabilizar, iniciar metoprolol VO ou bisoprolol VO antes de suspender esmolol.",
+      "Associar com verapamil ou diltiazem EV — contraindicação absoluta (bloqueio AV completo e assistolia)."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Esmolol é metabolizado por esterases eritrocitárias — independente da função renal e hepática. Nenhum ajuste renal necessário.",
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "50–200 mcg/kg/min",
+          "intervalo": "Infusão contínua IV",
+          "doseMaxima": "300 mcg/kg/min",
+          "unidade": "mcg/kg/min"
+        },
+        "pediatrica": null,
+        "obs": "Sem ajuste necessário. Dose e velocidade conforme resposta clínica."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "50–200 mcg/kg/min",
+          "intervalo": "Infusão contínua IV",
+          "doseMaxima": "300 mcg/kg/min",
+          "unidade": "mcg/kg/min"
+        },
+        "pediatrica": null,
+        "obs": "Sem ajuste renal necessário. Metabolismo por esterases eritrocitárias."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "50–200 mcg/kg/min",
+          "intervalo": "Infusão contínua IV",
+          "doseMaxima": "300 mcg/kg/min",
+          "unidade": "mcg/kg/min"
+        },
+        "pediatrica": null,
+        "obs": "Sem ajuste renal específico. Monitorização hemodinâmica intensiva habitual em DRC grave."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "50–200 mcg/kg/min",
+          "intervalo": "Infusão contínua IV",
+          "doseMaxima": "300 mcg/kg/min",
+          "unidade": "mcg/kg/min"
+        },
+        "pediatrica": null,
+        "obs": "Sem ajuste renal obrigatório. Em DRC muito grave/anúria, titular com cautela adicional considerando fragilidade hemodinâmica."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Esmolol não é removido por hemodiálise de forma significativa. Meia-vida ultracurta dispensa ajuste pós-HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "pregnancyCaution": true,
+      "infusionDrug": true,
+      "warning": "Betabloqueador intravenoso de ação ultracurta. Exige monitorização contínua. Pode provocar colapso hemodinâmico rapidamente — meia-vida ~9 min permite reversão rápida."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ESC Atrial Fibrillation Guidelines 2020",
+        "AHA/ACC Atrial Fibrillation Guidelines 2019",
+        "ESC/AHA Aortic Disease Guidelines 2014/2022",
+        "AHA/ACC Perioperative Cardiovascular Guidelines",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA label",
+        "EMA label"
+      ],
+      "note": "Único betabloqueador EV de meia-vida ultracurta (~9 min). Metabolizado por esterases eritrocitárias — independente de rim, fígado e CYP450. Uso exclusivo em UTI, emergência e centro cirúrgico. Dissecção aorta: FC < 60 bpm antes de vasodilatar. Transição oral: metoprolol VO 15 min antes de suspender. Auditoria V2 completada 2026-06."
+    }
+  },
+  "es": {
+    "name": "Esmolol",
+    "class": "Betabloqueante beta-1 selectivo de acción ultracorta (IV)",
+    "commercialNames": {
+      "br": [
+        "Brevibloc",
+        "Esmolol genérico"
+      ],
+      "ar": [
+        "Brevibloc",
+        "Esmolol genérico"
+      ]
+    },
+    "presentation": [
+      "Ampollas 10 mg/mL para infusión intravenosa",
+      "Frascos para infusión intravenosa continua"
+    ],
+    "dose": {
+      "adultoPadrao": "Bolo opcional: 500 mcg/kg IV en 1 min → Infusión 50–200 mcg/kg/min IV (≈ 21.0 mL/h a 84.0 mL/h usando 10 mg/mL)",
+      "adultoGrave": "UCI/Emergencia: titular hasta 300 mcg/kg/min según FC y PA (≈ 126.0 mL/h usando 10 mg/mL). Monitorización continua obligatoria.",
+      "pediatricaPadrao": "Uso pediátrico off-label; consultar especialista y protocolo institucional",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "50–200 mcg/kg/min IV",
+      "grave": "Hasta 300 mcg/kg/min IV",
+      "meningite": null,
+      "doseMaxima": "300 mcg/kg/min IV"
+    },
+    "therapeuticRange": "FC < 110 lpm en FA estable; FC 60–80 lpm en situaciones críticas (disección de aorta, postoperatorio)",
+    "dilution": "Dilución estándar: 2,5 g (250 mL de 10 mg/mL) en 250 mL SF/SG5% → concentración 10 mg/mL. Verificar compatibilidad según presentación.",
+    "speed": "Ajustar velocidad de infusión cada 5–10 min según FC y PA. Vida media ~9 min — el efecto revierte rápidamente al suspender.",
+    "commonAdverseEffects": [
+      "Hipotensión",
+      "Bradicardia",
+      "Náuseas",
+      "Mareos",
+      "Sudoración",
+      "Dolor/irritación en el sitio de infusión"
+    ],
+    "dangerousAdverseEffects": [
+      "Shock cardiogénico",
+      "Bloqueo AV completo",
+      "Asistolia / Paro cardíaco",
+      "Broncoespasmo",
+      "Descompensación aguda de insuficiencia cardíaca"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "USO EXCLUSIVO HOSPITALARIO: requiere monitorización cardíaca continua (ECG, FC, PA invasiva o no invasiva).",
+      "Vida media ~9 min: el efecto revierte rápidamente al suspender la infusión — ventaja en situaciones inestables.",
+      "Interrumpir inmediatamente si hipotensión importante, bradicardia grave, bloqueo AV o signos de shock.",
+      "Interacciones graves: verapamilo y diltiazem — riesgo elevado de shock y bloqueo AV."
+    ],
+    "ref": "ESC Atrial Fibrillation Guidelines 2020 · AHA/ACC Arrhythmia Guidelines 2019 · ESC Aortic Disease Guidelines 2014 · AHA/ACC Aortic Diseases Guidelines 2022 · Goodman & Gilman 14ª ed. · Lexicomp Online 2026 · Micromedex 2026 · FDA label · EMA label",
+    "pharmacologicClass": "Betabloqueante β1 selectivo intravenoso de acción ultracorta",
+    "mechanism": "Bloquea selectivamente receptores β1-adrenérgicos cardíacos, reduciendo rápidamente FC, contractilidad miocárdica y conducción AV. Sin actividad simpatomimética intrínseca. La acción finaliza minutos después de suspender la infusión — confiere reversibilidad inmediata ventajosa clínicamente en situaciones inestables.",
+    "pharmacodynamics": "Control preciso y titulable de la FC y PA por vía IV. La vida media de ~9 minutos permite rápida reversión al suspender. Ideal para situaciones donde se desea prueba terapéutica reversible o control en contexto perioperatorio/UCI sin compromiso hemodinámico prolongado.",
+    "onset": "Inicio en 1–2 minutos. Efecto máximo en 5–10 minutos. Cese de la acción en 10–30 minutos tras suspensión de la infusión.",
+    "pharmacokinetics": {
+      "absorption": "Uso exclusivamente intravenoso. Biodisponibilidad 100% por definición.",
+      "bioavailability": "100% (IV)",
+      "proteinBinding": "~55% (moderada)",
+      "vd": "~3,4 L/kg",
+      "metabolism": "Hidrólisis rápida del grupo éster por esterasas eritrocitarias (hematíes) — completamente independiente del CYP450 y de la función hepática y renal. Produce metabolito ácido (ASL-8123) y metanol (en cantidades clínicamente insignificantes).",
+      "halfLife": "~9 minutos (betabloqueo); metabolito ácido: 3,7 horas",
+      "elimination": "Metabolito ácido eliminado predominantemente por vía renal. En IR grave hay acumulación del metabolito ácido — sin impacto en el betabloqueo a corto plazo, pero monitorizar en infusiones prolongadas.",
+      "dialysability": "No eliminado por HD (vida media ~9 min — irrelevante dializar). El metabolito ácido puede ser parcialmente eliminado."
+    },
+    "indications": {
+      "approved": [
+        "Control rápido de FC en fibrilación auricular/flutter auricular",
+        "Taquicardia supraventricular perioperatoria o postoperatoria",
+        "Hipertensión perioperatoria",
+        "Taquicardia sinusal intraoperatoria no fisiológica"
+      ],
+      "offLabel": [
+        "Disección aguda de aorta (control de FC antes de vasodilatación)",
+        "Tormenta tiroidea (control de FC en UCI)",
+        "Control hemodinámico en UCI (FA con RVR, crisis hipertensiva monitorizada)",
+        "Feocromocitoma (siempre después de bloqueo α completo)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Bradicardia sinusal grave (FC < 50 lpm sintomática)",
+        "Bloqueo AV de 2º grado (Mobitz II) o 3er grado sin marcapasos",
+        "Shock cardiogénico",
+        "ICC agudamente descompensada",
+        "Hipotensión grave (PAS < 90 mmHg)",
+        "Síndrome del seno enfermo sin marcapasos"
+      ],
+      "relative": [
+        "Asma bronquial o broncoespasmo activo (pérdida de selectividad β1 en dosis altas)",
+        "EPOC grave con broncoespasmo reversible",
+        "Feocromocitoma sin bloqueo α previo (vasoconstricción α paradójica)",
+        "Diabetes mellitus insulinodependiente (enmascaramiento de hipoglucemia)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamilo EV / Diltiazem EV",
+          "mechanism": "Doble inhibición nodal AV (dromotrópico negativo aditivo) con acción IV simultánea",
+          "consequence": "Bloqueo AV completo, asistolia, paro cardíaco",
+          "management": "ABSOLUTAMENTE contraindicado administrar ambos IV. Intervalo mínimo de 24–48h si transición de verapamilo oral a esmolol IV."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efecto cronotrópico y dromotrópico negativo aditivo en nódulo AV",
+          "consequence": "Bradicardia grave y bloqueo AV de alto grado",
+          "management": "Monitorizar ECG continuamente. Verificar nivel sérico de digoxina (objetivo: 0,5–0,9 ng/mL) antes de iniciar esmolol."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Efecto bradicardizante y bloqueo AV aditivos; vasodilatación periférica adicional de amiodarona IV",
+          "consequence": "Bradicardia grave, bloqueo AV, colapso hemodinámico",
+          "management": "Monitorizar ECG y PA continuamente. Titular esmolol en dosis mínimas eficaces."
+        },
+        {
+          "drug": "Anestésicos generales (propofol, sevoflurano, isoflurano)",
+          "mechanism": "Depresión miocárdica, vasodilatación periférica y bradicardia aditivas",
+          "consequence": "Hipotensión intraoperatoria grave, colapso circulatorio",
+          "management": "Monitorización hemodinámica continua. Comunicar al anestesiólogo antes de cualquier bolo. Titular infusión en dosis bajas en el intraoperatorio."
+        },
+        {
+          "drug": "Vasodilatadores IV (nitroprusiato, nicardipina, hidralazina)",
+          "mechanism": "Hipotensión aditiva — reducción simultánea de precarga (vasodilatadores) y cronotropismo/inotropismo (esmolol)",
+          "consequence": "Hipotensión grave y shock circulatorio",
+          "management": "En disección de aorta: iniciar esmolol (control de FC) ANTES de vasodilatar. Titular vasodilatador en dosis bajas solo tras FC controlada."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "Insulina / sulfonilureas",
+          "mechanism": "Enmascaramiento de la taquicardia refleja de la hipoglucemia (β1)",
+          "consequence": "Hipoglucemia grave no reconocida",
+          "management": "Monitorizar glucemia frecuentemente en infusiones prolongadas. Orientar al equipo de enfermería."
+        },
+        {
+          "drug": "Otros antihipertensivos IV (furosemida, hidralazina, labetalol)",
+          "mechanism": "Efecto hipotensor aditivo",
+          "consequence": "Hipotensión excesiva e inestabilidad hemodinámica",
+          "management": "Monitorizar PA continuamente. Titular vasoactivo concomitante en dosis bajas."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "ECG continuo obligatorio (FC, ritmo, bloqueo AV)",
+        "PA continua (invasiva en pacientes críticos; no invasiva en perioperatorio estable)",
+        "SpO₂ y frecuencia respiratoria",
+        "Estado hemodinámico y perfusión periférica",
+        "Función renal basal (creatinina) — relevante para metabolito ácido en infusiones > 24h"
+      ],
+      "followUp": [
+        "FC objetivo (FA/flutter: < 110 lpm; disección aorta: < 60 lpm; perioperatorio: 60–80 lpm)",
+        "PA objetivo (disección aorta: PAS 100–120 mmHg)",
+        "Signos de bloqueo AV progresivo (PR prolongado, escape ventricular)",
+        "Signos de hipoperfusión (lactato, diuresis, nivel de consciencia)",
+        "Broncoespasmo en pacientes con EPOC/asma (monitorizar auscultación)"
+      ],
+      "icc": [
+        "Esmolol NO está indicado para ICC crónica. En pacientes con ICC, usar solo para control de FC agudo (FA+RVR) con monitorización hemodinámica intensiva",
+        "Gasto cardíaco (si monitorización avanzada disponible — Swan-Ganz o ecocardiografía)",
+        "Presión de oclusión capilar pulmonar en ICC grave con esmolol"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (FC < 40 lpm)",
+        "Hipotensión grave (PAS < 70 mmHg)",
+        "Bloqueo AV de alto grado",
+        "Shock cardiogénico",
+        "Broncoespasmo (en dosis excesivas con pérdida de selectividad β1)",
+        "Asistolia"
+      ],
+      "management": [
+        "1. SUSPENDER INMEDIATAMENTE la infusión de esmolol — el efecto revierte en 10–20 minutos por la vida media ultracorta",
+        "2. Atropina 0,5–1 mg IV para bradicardia sintomática; repetir según necesidad (máx 3 mg)",
+        "3. Glucagón 5–10 mg IV bolo → infusión 1–5 mg/h (antídoto específico de betabloqueantes)",
+        "4. Dobutamina o isoproterenol en hipotensión refractaria",
+        "5. Emulsión lipídica IV 20% (baja eficacia — esmolol es hidrofílico/moderadamente lipofílico)",
+        "6. Marcapasos transcutáneo o transvenoso en BAV refractario",
+        "7. ECMO en colapso circulatorio refractario"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "IR: metabolismo por esterasas eritrocitarias — independiente de la función renal. Sin ajuste renal para el betabloqueo. El metabolito ácido (ASL-8123) se acumula en IR grave/anuria con infusiones prolongadas (> 24h) — sin impacto clínico relevante establecido a corto plazo. Monitorizar en UCI con TRRC.",
+      "obesity": "Obesidad: calcular dosis basada en peso corporal real (no ideal) para dosis de ataque. Para infusiones prolongadas, considerar peso ideal para evitar sobredosificación relativa en obesos mórbidos.",
+      "geriatrics": "Anciano: mayor sensibilidad al betabloqueo. Titular en dosis bajas con monitorización continua intensiva. Riesgo aumentado de hipotensión y bloqueo AV. La vida media no se ve afectada por la edad.",
+      "pregnancy": "Embarazo: usar solo si el beneficio supera el riesgo. Puede causar bradicardia fetal. Por la vida media ultracorta, la exposición fetal es limitada. Monitorizar neonato para bradicardia e hipoglucemia.",
+      "lactation": "Lactancia: datos muy limitados. Por la vida media ~9 min, la exposición en leche materna es mínima. Uso restringido a contexto hospitalario — suspender lactancia durante infusión y por 30 min después.",
+      "hepaticImpairment": "Hepatopatía: metabolismo por esterasas eritrocitarias — completamente independiente de la función hepática. Sin ajuste hepático necesario."
+    },
+    "hepaticDose": {
+      "required": false,
+      "message": "Sin necesidad de ajuste hepático — metabolismo por esterasas eritrocitarias, completamente independiente del hígado."
+    },
+    "infusionProtocol": {
+      "route": "IV continuo exclusivo (bomba de infusión obligatoria)",
+      "bolus": "Opcional: 500 mcg/kg IV en 1 minuto. Puede omitirse en pacientes inestables — iniciar directamente con infusión baja.",
+      "infusion": "Iniciar 50 mcg/kg/min. Titular en incrementos de 50 mcg/kg/min cada 5–10 min según FC y PA objetivo.",
+      "max": "300 mcg/kg/min (guías recomiendan hasta 200 mcg/kg/min para uso crónico)",
+      "monitoring": "ECG continuo + PA continua (invasiva en UCI) + FC + SpO₂ + perfusión periférica."
+    },
+    "patientEducation": [
+      "Medicamento de uso hospitalario exclusivo, administrado por vía intravenosa con monitorización cardíaca continua.",
+      "El efecto es rápido y reversible — desaparece en minutos tras suspender la infusión.",
+      "Comunicar inmediatamente al equipo cualquier mareo intenso, falta de aire o sensación de latido cardíaco muy lento."
+    ],
+    "clinicalPearls": [
+      "Vida media ~9 minutos — único betabloqueante con esta propiedad: permite reversión inmediata ante hipotensión o bradicardia. Ideal para prueba terapéutica en pacientes inestables.",
+      "Disección aguda de aorta: esmolol es agente de primera línea. Reducir FC a < 60 lpm ANTES de iniciar vasodilatador (evitar aumento reflejo del shear stress aórtico).",
+      "Metabolismo por esterasas eritrocitarias: totalmente independiente de riñón, hígado y CYP450 — único betabloqueante con esta característica. Sin ajuste en hepatopatía o nefropatía.",
+      "Sustitución a vía oral: al descontinuar esmolol IV, iniciar metoprolol VO 25–50 mg 15 min antes de suspender la infusión, o bisoprolol VO 2,5–5 mg. Reducir esmolol 50% tras la primera dosis oral y discontinuar tras la segunda dosis.",
+      "NO es medicamento de mantenimiento crónico. Tras la estabilización aguda, transicionar a betabloqueante oral (metoprolol succinato o bisoprolol) basándose en la indicación clínica."
+    ],
+    "guidelineRecommendations": [
+      "ESC/AHA: los betabloqueantes IV (esmolol o metoprolol IV) están recomendados para control de FC en FA con RVR en contexto agudo cuando no hay hipotensión o ICC descompensada.",
+      "ESC/AHA Aortic Disease Guidelines: el betabloqueante IV (esmolol) es la terapia inicial de elección para disección aguda de aorta — objetivo FC < 60 lpm y PAS 100–120 mmHg.",
+      "Perioperatorio: esmolol está recomendado para control de taquicardia e hipertensión perioperatoria en contexto intraoperatorio e inmediato postoperatorio."
+    ],
+    "incompatibilities": "EV: incompatible con bicarbonato de sodio 5% (precipitación). Compatible con SF 0,9%, SG 5%, Ringer Lactato. No mezclar en la misma línea con furosemida en alta concentración o diazepam.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálisis peritoneal: vida media ~9 min — irrelevante. Metabolismo eritrocitario independiente de cualquier modalidad de depuración extracorpórea."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: esmolol no se elimina por TRRC (vida media ~9 min + metabolismo eritrocitario). En UCI con TRRC, usar dosis habitual con monitorización hemodinámica intensiva."
+      }
+    },
+    "prescriptionErrors": [
+      "Administrar bolo IV en pacientes hemodinámicamente inestables — en inestabilidad, iniciar directamente con infusión en dosis baja sin bolo.",
+      "Iniciar vasodilatador en disección de aorta sin controlar FC previamente — regla: controlar FC < 60 lpm con esmolol ANTES de nitroprusiato o nicardipina.",
+      "Usar esmolol sin monitorización continua de ECG y PA — uso obligatoriamente monitorizado.",
+      "Calcular dosis por peso ideal en lugar de peso real — usar peso real para dosis de ataque.",
+      "No planificar transición a betabloqueante oral al descontinuar — al estabilizar, iniciar metoprolol VO o bisoprolol VO antes de suspender esmolol.",
+      "Asociar con verapamilo o diltiazem IV — contraindicación absoluta (bloqueo AV completo y asistolia)."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Esmolol se metaboliza por esterasas eritrocitarias — independiente de la función renal y hepática. No se requiere ajuste renal.",
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "50–200 mcg/kg/min",
+          "intervalo": "Infusão contínua IV",
+          "doseMaxima": "300 mcg/kg/min",
+          "unidade": "mcg/kg/min"
+        },
+        "pediatrica": null,
+        "obs": "Sin ajuste necesario. Dosis y velocidad según respuesta clínica."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "50–200 mcg/kg/min",
+          "intervalo": "Infusão contínua IV",
+          "doseMaxima": "300 mcg/kg/min",
+          "unidade": "mcg/kg/min"
+        },
+        "pediatrica": null,
+        "obs": "Sin ajuste renal necesario. Metabolismo por esterasas eritrocitarias."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "50–200 mcg/kg/min",
+          "intervalo": "Infusão contínua IV",
+          "doseMaxima": "300 mcg/kg/min",
+          "unidade": "mcg/kg/min"
+        },
+        "pediatrica": null,
+        "obs": "Sin ajuste renal específico. Monitorización hemodinámica intensiva habitual en ERC grave."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "50–200 mcg/kg/min",
+          "intervalo": "Infusão contínua IV",
+          "doseMaxima": "300 mcg/kg/min",
+          "unidade": "mcg/kg/min"
+        },
+        "pediatrica": null,
+        "obs": "Sin ajuste renal obligatorio. En ERC muy grave/anuria, titular con precaución adicional considerando fragilidad hemodinámica."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Esmolol no se elimina significativamente por hemodiálisis. La vida media ultracorta elimina la necesidad de ajuste post-HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "pregnancyCaution": true,
+      "infusionDrug": true,
+      "warning": "Betabloqueante intravenoso de acción ultracorta. Exige monitorización continua. Puede provocar colapso hemodinámico rápidamente — vida media ~9 min permite reversión rápida."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ESC Atrial Fibrillation Guidelines 2020",
+        "AHA/ACC Atrial Fibrillation Guidelines 2019",
+        "ESC/AHA Aortic Disease Guidelines 2014/2022",
+        "AHA/ACC Perioperative Cardiovascular Guidelines",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA label",
+        "EMA label"
+      ],
+      "note": "Único betabloqueante IV de vida media ultracorta (~9 min). Metabolizado por esterasas eritrocitarias — independiente de riñón, hígado y CYP450. Uso exclusivo en UCI, emergencia y quirófano. Disección aorta: FC < 60 lpm antes de vasodilatar. Transición oral: metoprolol VO 15 min antes de suspender. Auditoría V2 completada 2026-06."
+    }
+  },
+  "name": {
+    "pt": "Esmolol",
+    "es": "Esmolol"
+  },
+  "keywords": [
+    "esmolol",
+    "brevibloc",
+    "esmolol generico",
+    "betabloqueador beta-1 seletivo de acao ultracurta (iv)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "cardio.js",
+    "decisionBasis": "primary_cardiovascular_drug_and_richer_critical_care_record",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "legacy_critical_care_variant",
+      "sourceModule": "analgesicos.js",
+      "record": {
+        "id": "esmolol",
+        "category": "cardiologia",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "name": "Esmolol IV"
+        },
+        "es": {
+          "name": "Esmolol IV"
+        },
+        "name": {
+          "pt": "Esmolol IV",
+          "es": "Esmolol IV"
+        },
+        "keywords": [
+          "esmolol",
+          "esmolol iv"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "legacy-v1",
+        "sourceModule": "analgesicos.js"
+      }
+    }
+  ]
+}

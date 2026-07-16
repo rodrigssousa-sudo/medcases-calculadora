@@ -1,0 +1,332 @@
+{
+  "id": "verapamil",
+  "category": "cardio",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "id": "verapamil",
+    "name": "Verapamil",
+    "class": "Bloqueador dos canais de cálcio não diidropiridínico",
+    "category": "cardio",
+    "commercialNames": [
+      "Dilacoron",
+      "Isoptin",
+      "Verapamil genérico"
+    ],
+    "presentation": [
+      "Comprimidos 40 mg · 80 mg · 120 mg",
+      "Comprimidos LP 180 mg · 240 mg",
+      "Ampolas IV 5 mg/2 mL"
+    ],
+    "mechanism": "Bloqueia canais de cálcio tipo L no nó sinoatrial, nó AV e miocárdio. Reduz condução AV, frequência cardíaca e contratilidade cardíaca (efeito inotrópico negativo). Também promove vasodilatação arterial. Diferencial dos BCC DHP: efeito cronotrópico e dromiotrópico negativo significativos.",
+    "halfLife": "4–12 horas",
+    "onset": "3–5 min IV · 1–2h VO",
+    "dose": {
+      "adultoPadrao": "VO: 80 mg 8/8h (IR) ou 120–180 mg LP 1x/dia. IV: 5–10 mg em bolus lento 2–3 min (com monitorização contínua).",
+      "adultoGrave": "Manutenção VO: 240–480 mg/dia. Dose máxima: 480 mg/dia."
+    },
+    "risksByPatient": [
+      "IC-FEr (FEVE < 40%): CONTRAINDICADO.",
+      "Betabloqueador IV concomitante: CONTRAINDICADO — risco de colapso hemodinâmico.",
+      "Gestante: pode ser utilizado em situações específicas sob supervisão especializada.",
+      "Lactante: compatível com lactação na maioria dos casos.",
+      "Idoso (40 anos): maior risco de bradicardia, hipotensão e bloqueio AV. Iniciar com doses menores.",
+      "Insuficiência hepática: metabolismo hepático intenso — reduzir doses."
+    ],
+    "commonAdverseEffects": [
+      "Constipação (mais frequente que diltiazem)",
+      "Bradicardia",
+      "Hipotensão",
+      "Tontura",
+      "Fadiga",
+      "Edema periférico",
+      "Náuseas"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueio AV avançado (2º/3º grau)",
+      "Assistolia",
+      "Choque cardiogênico",
+      "Insuficiência cardíaca aguda",
+      "Bradicardia grave",
+      "Colapso hemodinâmico"
+    ],
+    "alerts": [
+      "CONTRAINDICADO em IC com fração de ejeção reduzida significativa — pode precipitar descompensação grave.",
+      "Interação CRÍTICA: betabloqueadores IV — risco de bloqueio AV completo, bradicardia grave e choque cardiogênico. NUNCA associar IV.",
+      "Digoxina: verapamil aumenta os níveis séricos da digoxina em ~50–75% — reduzir dose da digoxina.",
+      "Monitorar ECG: intervalo PR — bloqueio AV de 1º grau é comum; suspender em BAV 2º/3º grau.",
+      "Constipação é efeito adverso frequente — mais comum que com diltiazem."
+    ],
+    "ref": "ESC Atrial Fibrillation Guidelines · ESC Supraventricular Tachycardia Guidelines · AHA/ACC Arrhythmia Guidelines · Lexicomp · UpToDate · FDA Label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Geralmente não requer ajuste renal significativo. Metabolismo hepático predominante.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "80–120 mg",
+          "intervalo": "8/8h (IR) ou 240 mg LP 1x/dia",
+          "doseMaxima": "480 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5–10 mg",
+          "intervalo": "bolus lento 2–3 min (monitorização contínua)",
+          "doseMaxima": "20 mg/episódio",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual. Monitorar FC e ECG."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "80 mg",
+          "intervalo": "8/8h ou LP 180 mg 1x/dia",
+          "doseMaxima": "360 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "bolus lento (cautela)",
+          "doseMaxima": "10 mg/episódio",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Sem ajuste renal específico. Monitorar FC, PA e ECG."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "8/8h (cautela)",
+          "doseMaxima": "240 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "bolus lento (supervisão intensiva)",
+          "doseMaxima": "5 mg/episódio",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Sem ajuste renal formal; usar dose menor por cautela. Monitorização contínua obrigatória."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "40 mg",
+          "intervalo": "8/8h (cautela máxima)",
+          "doseMaxima": "120 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dados limitados. Usar somente se imprescindível, com monitorização intensiva."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "8/8h (cautela)",
+          "doseMaxima": "240 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não dialisável. Pode manter VO com monitorização cuidadosa de FC e ECG."
+      }
+    },
+    "safetyFlags": {
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "renalHighRisk": false,
+      "qtRisk": false,
+      "heartFailureRisk": true,
+      "digoxinInteractionRisk": true,
+      "betaBlockerInteractionRisk": true,
+      "pregnancyCaution": true,
+      "infusionDrug": true,
+      "warning": "Verapamil CONTRAINDICADO em IC-FEr significativa. Risco de bloqueio AV grave com betabloqueadores IV — NUNCA associar. Aumenta níveis séricos de digoxina (~50–75%) — reduzir dose da digoxina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "ESC Atrial Fibrillation Guidelines 2020/2023",
+        "ESC Supraventricular Tachycardia Guidelines 2019",
+        "AHA/ACC Arrhythmia Guidelines 2023",
+        "Lexicomp 2026",
+        "UpToDate",
+        "FDA Label"
+      ],
+      "note": "BCC não-DHP fundamental para controle de FC em FA/flutter e reversão de TSVP. Diferencial: efeito cronotrópico e dromiotrópico negativo potentes. CONTRAINDICADO em IC-FEr e com betabloqueadores IV."
+    }
+  },
+  "es": {
+    "id": "verapamil",
+    "name": "Verapamil",
+    "class": "Bloqueador de los canales de calcio no dihidropiridínico",
+    "category": "cardio",
+    "commercialNames": [
+      "Dilacoron",
+      "Isoptin",
+      "Verapamil genérico"
+    ],
+    "presentation": [
+      "Comprimidos 40 mg · 80 mg · 120 mg",
+      "Comprimidos LP 180 mg · 240 mg",
+      "Ampollas IV 5 mg/2 mL"
+    ],
+    "mechanism": "Bloquea canales de calcio tipo L en el nodo sinusal, nodo AV y miocardio. Reduce conducción AV, frecuencia cardíaca y contractilidad cardíaca (efecto inotrópico negativo). También produce vasodilatación arterial. Diferencial de los BCC DHP: efecto cronotrópico y dromotrópico negativo significativos.",
+    "halfLife": "4–12 horas",
+    "onset": "3–5 min IV · 1–2h VO",
+    "dose": {
+      "adultoPadrao": "VO: 80 mg cada 8h (IR) o 120–180 mg LP 1 vez/día. IV: 5–10 mg en bolo lento 2–3 min (con monitorización continua).",
+      "adultoGrave": "Mantenimiento VO: 240–480 mg/día. Dosis máxima: 480 mg/día."
+    },
+    "risksByPatient": [
+      "IC-FEr (FEVI < 40%): CONTRAINDICADO.",
+      "Betabloqueador IV concomitante: CONTRAINDICADO — riesgo de colapso hemodinámico.",
+      "Gestante: puede utilizarse en situaciones específicas bajo supervisión especializada.",
+      "Lactante: compatible con lactancia en la mayoría de los casos.",
+      "Anciano (40 años): mayor riesgo de bradicardia, hipotensión y bloqueo AV. Iniciar con dosis menores.",
+      "Insuficiencia hepática: metabolismo hepático intenso — reducir dosis."
+    ],
+    "commonAdverseEffects": [
+      "Estreñimiento (más frecuente que diltiazem)",
+      "Bradicardia",
+      "Hipotensión",
+      "Mareos",
+      "Fatiga",
+      "Edema periférico",
+      "Náuseas"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueo AV avanzado (2º/3er grado)",
+      "Asistolia",
+      "Shock cardiogénico",
+      "Insuficiencia cardíaca aguda",
+      "Bradicardia grave",
+      "Colapso hemodinámico"
+    ],
+    "alerts": [
+      "CONTRAINDICADO en IC con fracción de eyección reducida significativa — puede precipitar descompensación grave.",
+      "Interacción CRÍTICA: betabloqueadores IV — riesgo de bloqueo AV completo, bradicardia grave y shock cardiogénico. NUNCA asociar IV.",
+      "Digoxina: verapamilo aumenta los niveles séricos de digoxina en ~50–75% — reducir dosis de digoxina.",
+      "Monitorizar ECG: intervalo PR — bloqueo AV de 1er grado es común; suspender en BAV 2º/3er grado.",
+      "El estreñimiento es efecto adverso frecuente — más común que con diltiazem."
+    ],
+    "ref": "ESC Atrial Fibrillation Guidelines · ESC Supraventricular Tachycardia Guidelines · AHA/ACC Arrhythmia Guidelines · Lexicomp · UpToDate · FDA Label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Generalmente no requiere ajuste renal significativo. Metabolismo hepático predominante.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "80–120 mg",
+          "intervalo": "8/8h (IR) ou 240 mg LP 1x/dia",
+          "doseMaxima": "480 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5–10 mg",
+          "intervalo": "bolus lento 2–3 min (monitorização contínua)",
+          "doseMaxima": "20 mg/episódio",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual. Monitorizar FC y ECG."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "80 mg",
+          "intervalo": "8/8h ou LP 180 mg 1x/dia",
+          "doseMaxima": "360 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "bolus lento (cautela)",
+          "doseMaxima": "10 mg/episódio",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Sin ajuste renal específico. Monitorizar FC, PA y ECG."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "8/8h (cautela)",
+          "doseMaxima": "240 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "bolus lento (supervisão intensiva)",
+          "doseMaxima": "5 mg/episódio",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Sin ajuste renal formal; usar dosis menor por precaución. Monitorización continua obligatoria."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "40 mg",
+          "intervalo": "8/8h (cautela máxima)",
+          "doseMaxima": "120 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Datos limitados. Usar solo si imprescindible, con monitorización intensiva."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "8/8h (cautela)",
+          "doseMaxima": "240 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No dializable. Puede mantener VO con monitorización cuidadosa de FC y ECG."
+      }
+    },
+    "safetyFlags": {
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "renalHighRisk": false,
+      "qtRisk": false,
+      "heartFailureRisk": true,
+      "digoxinInteractionRisk": true,
+      "betaBlockerInteractionRisk": true,
+      "pregnancyCaution": true,
+      "infusionDrug": true,
+      "warning": "Verapamilo CONTRAINDICADO en IC-FEr significativa. Riesgo de bloqueo AV grave con betabloqueadores IV — NUNCA asociar. Aumenta niveles séricos de digoxina (~50–75%) — reducir dosis de digoxina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "ESC Atrial Fibrillation Guidelines 2020/2023",
+        "ESC Supraventricular Tachycardia Guidelines 2019",
+        "AHA/ACC Arrhythmia Guidelines 2023",
+        "Lexicomp 2026",
+        "UpToDate",
+        "FDA Label"
+      ],
+      "note": "BCC no-DHP fundamental para control de FC en FA/flutter y reversión de TSVP. Diferencial: efecto cronotrópico y dromotrópico negativo potentes. CONTRAINDICADO en IC-FEr y con betabloqueadores IV."
+    }
+  },
+  "name": {
+    "pt": "Verapamil",
+    "es": "Verapamil"
+  },
+  "keywords": [
+    "verapamil",
+    "bloqueador dos canais de calcio nao diidropiridinico"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

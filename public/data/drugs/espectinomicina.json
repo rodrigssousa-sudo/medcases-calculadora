@@ -1,0 +1,158 @@
+{
+  "id": "espectinomicina",
+  "category": "atb",
+  "icon": "💉",
+  "color": "rgba(99,102,241,0.12)",
+  "colorTxt": "#3730A3",
+  "pt": {
+    "name": "Espectinomicina",
+    "class": "Aminociclitol (inibidor da síntese proteica — sem atividade em outras infecções)",
+    "commercialNames": {
+      "br": [
+        "Trobicin (disponibilidade limitada)"
+      ],
+      "ar": [
+        "Trobicin"
+      ]
+    },
+    "presentation": [
+      "Pó para suspensão injetável IM: 2 g por frasco"
+    ],
+    "dose": {
+      "adultoIM": "2 g IM dose única (gonorreia)"
+    },
+    "doseKg": null,
+    "indication": "Gonorreia urogenital não complicada em pacientes alérgicos à cefalosporinas e fluoroquinolonas, ou em áreas com alta resistência a esses agentes.",
+    "spectrum": "Neisseria gonorrhoeae (incluindo cepas resistentes à penicilina e fluoroquinolonas). NÃO ativa contra Chlamydia trachomatis (co-infecção deve ser tratada separadamente). Sem atividade útil contra outros patógenos.",
+    "contraindications": [
+      "Hipersensibilidade à espectinomicina",
+      "NÃO indicada para gonorreia faríngea ou retal (eficácia muito baixa)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NÃO eficaz para gonorreia faríngea (única indicação é a urogenital).",
+      "Sempre tratar co-infecção por Chlamydia trachomatis (azitromicina ou doxiciclina).",
+      "Administração exclusivamente IM — via EV não disponível/aprovada.",
+      "Não necessita ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / WHO Gonorrhea Treatment Guidelines / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose habitual: 2 g IM dose única para gonorreia."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dados limitados em insuficiência renal terminal."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não há recomendação de suplementação pós-HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Espectinomicina",
+    "class": "Aminociclitol (inhibidor de la síntesis proteica — sin actividad en otras infecciones)",
+    "commercialNames": {
+      "br": [
+        "Trobicin (disponibilidade limitada)"
+      ],
+      "ar": [
+        "Trobicin"
+      ]
+    },
+    "presentation": [
+      "Polvo para suspensión inyectable IM: 2 g por frasco"
+    ],
+    "dose": {
+      "adultoIM": "2 g IM dosis única (gonorrea)"
+    },
+    "doseKg": null,
+    "indication": "Gonorrea urogenital no complicada en pacientes alérgicos a cefalosporinas y fluoroquinolonas, o en áreas con alta resistencia a estos agentes.",
+    "spectrum": "Neisseria gonorrhoeae (incluidas cepas resistentes a penicilina y fluoroquinolonas). NO activa frente a Chlamydia trachomatis (la coinfección debe tratarse por separado). Sin actividad útil frente a otros patógenos.",
+    "contraindications": [
+      "Hipersensibilidad a la espectinomicina",
+      "NO indicada para gonorrea faríngea ni rectal (eficacia muy baja)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NO eficaz para gonorrea faríngea (la única indicación es la urogenital).",
+      "Siempre tratar la coinfección por Chlamydia trachomatis (azitromicina o doxiciclina).",
+      "Administración exclusivamente IM — vía EV no disponible/aprobada.",
+      "No requiere ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / WHO Gonorrhea Treatment Guidelines / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis habitual: 2 g IM dosis única para gonorrea."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Datos limitados en insuficiencia renal terminal."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No existe recomendación de suplementación post-HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Espectinomicina",
+    "es": "Espectinomicina"
+  },
+  "keywords": [
+    "espectinomicina",
+    "trobicin (disponibilidade limitada)",
+    "trobicin",
+    "aminociclitol (inibidor da sintese proteica — sem atividade em outras infeccoes)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

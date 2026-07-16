@@ -1,0 +1,732 @@
+{
+  "id": "sotalol",
+  "category": "cardio",
+  "icon": "⚡",
+  "color": "rgba(234,179,8,0.13)",
+  "colorTxt": "#78350F",
+  "pt": {
+    "name": "Sotalol",
+    "class": "Antiarrítmico Classe III com atividade betabloqueadora não seletiva",
+    "commercialNames": {
+      "br": [
+        "Sotalol genérico",
+        "Sotacor"
+      ],
+      "ar": [
+        "Sotalol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 80 mg",
+      "Comprimidos 120 mg",
+      "Comprimidos 160 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "Iniciar com 80 mg VO 12/12h; manutenção 80–160 mg 12/12h; máx 320 mg/dia em casos selecionados com monitorização especializada.",
+      "adultoGrave": "Iniciar com dose mínima (80 mg 12/12h) e titular conforme QTc, FC e resposta clínica.",
+      "pediatricaPadrao": "Não estabelecido rotineiramente. Uso pediátrico requer avaliação especializada de eletrofisiologia.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "320 mg/dia em casos selecionados com monitorização especializada; 80 mg/dia em ClCr < 40 mL/min"
+    },
+    "therapeuticRange": "Manutenção do ritmo sinusal; supressão de arritmias ventriculares; QTc < 500 ms durante tratamento (idealmente < 480 ms)",
+    "dilution": "Uso exclusivo via oral. Comprimidos não devem ser partidos ou mastigados.",
+    "speed": "Ajustar gradualmente a cada ≥ 3 dias, sempre com ECG para monitorar QTc antes de cada aumento de dose.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Fadiga",
+      "Tontura",
+      "Hipotensão",
+      "Fraqueza",
+      "Dispneia",
+      "Náuseas"
+    ],
+    "dangerousAdverseEffects": [
+      "Torsades de Pointes",
+      "Morte súbita arrítmica",
+      "QT prolongado grave",
+      "Bloqueio AV completo",
+      "Assistolia / Parada cardíaca",
+      "Choque cardiogênico",
+      "Broncoespasmo"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NÃO INICIAR sem ECG basal com QTc < 450 ms, K⁺ ≥ 4,0 mEq/L e Mg²⁺ ≥ 2,0 mg/dL.",
+      "Não suspender abruptamente — risco de angina rebote e arritmia de rebote.",
+      "Interações graves: amiodarona, dofetilida, quinidina, macrolídeos, fluoroquinolonas, antipsicóticos, metadona — risco de Torsades de Pointes.",
+      "Betabloqueador NÃO seletivo: contraindicado em asma grave e broncoespasmo ativo."
+    ],
+    "ref": "ESC Atrial Fibrillation Guidelines 2020/2024 · ESC Ventricular Arrhythmia Guidelines 2022 · AHA/ACC/HRS Arrhythmia Guidelines 2023 · CredibleMeds QTDrugs List · Goodman & Gilman 14ª ed. · Katzung Farmacologia 15ª ed. · Lexicomp Online 2026 · Micromedex 2026 · FDA Betapace AF label · EMA label",
+    "pharmacologicClass": "Antiarrítmico classe III (bloqueador de canais de K⁺) + betabloqueador β1/β2 não seletivo",
+    "mechanism": "Bloqueia receptores β1 e β2-adrenérgicos (sem ASI) E bloqueia canais de potássio cardíacos (corrente IKr/IKs), prolongando o potencial de ação, o intervalo QT, a repolarização e o período refratário efetivo. Em doses menores (80–160 mg/dia) predomina o efeito betabloqueador; em doses maiores (≥ 160 mg/dia) o efeito classe III QT-prolongador se torna clinicamente significativo.",
+    "pharmacodynamics": "O risco pró-arrítmico (Torsades de Pointes) é dose-dependente, renal-dependente e eletrolítico-dependente. Fatores que amplificam o risco: DRC (acúmulo), hipocalemia, hipomagnesemia, bradicardia, sexo feminino (QT intrínseco mais longo) e uso concomitante de outros fármacos que prolongam o QT. Estado de equilíbrio atingido em ~2–3 dias.",
+    "onset": "Efeito betabloqueador: inicia em ~1–2h. Estado de equilíbrio (e pleno efeito classe III sobre o QT): após 2–3 dias de dose estável. Por isso, monitorização de QTc é obrigatória no início e a cada ajuste.",
+    "pharmacokinetics": {
+      "absorption": "Absorção oral boa e previsível (~90–100%). Não afetada pelo efeito de primeira passagem.",
+      "bioavailability": "~90–100%",
+      "proteinBinding": "<10% (ligação proteica muito baixa — contribui para a dialisabilidade)",
+      "vd": "~1,2–2,4 L/kg",
+      "metabolism": "Sem metabolismo hepático significativo. Não é substrato de CYP450. Não há metabólitos ativos.",
+      "halfLife": "~12 horas (prolonga-se significativamente em DRC)",
+      "elimination": "Eliminação renal como fármaco inalterado (~80–90%). Ajuste obrigatório em ClCr < 40 mL/min. Contraindicado em ClCr < 10 mL/min.",
+      "dialysability": "Removido pela hemodiálise (baixa ligação proteica + baixo Vd). Porém, o risco de arritmia por desequilíbrio eletrolítico intradialítico supera o benefício na maioria dos casos."
+    },
+    "indications": {
+      "approved": [
+        "Manutenção do ritmo sinusal após cardioversão em fibrilação atrial/flutter atrial documentado",
+        "Arritmias ventriculares documentadas potencialmente fatais (taquicardia ventricular sustentada, FV)"
+      ],
+      "offLabel": [
+        "Taquicardia ventricular não sustentada em pacientes selecionados por eletrofisiologia",
+        "Supressão de arritmias supraventriculares recorrentes em cenários específicos"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "QTc basal > 450 ms (em maioria dos protocolos)",
+        "Torsades de Pointes prévio relacionado a fármaco ou adquirido",
+        "Hipocalemia não corrigida (K⁺ < 4,0 mEq/L)",
+        "Hipomagnesemia não corrigida (Mg²⁺ < 2,0 mg/dL)",
+        "ClCr < 10 mL/min — risco fatal de acúmulo e Torsades",
+        "Bradicardia sintomática (FC < 50 bpm)",
+        "Bloqueio AV de 2º grau (Mobitz II) ou 3º grau sem marcapasso",
+        "Choque cardiogênico / ICC descompensada com baixo débito",
+        "Asma brônquica grave ou broncoespasmo ativo"
+      ],
+      "relative": [
+        "Insuficiência renal moderada (ClCr 10–40 mL/min) — ajuste obrigatório e monitorização intensiva",
+        "Sexo feminino com múltiplos fatores de risco para QT longo (QT intrínseco mais longo)",
+        "Uso concomitante de outros fármacos que prolongam QT (verificar CredibleMeds)",
+        "DPOC com broncoespasmo reversível significativo",
+        "Diabetes mellitus insulinodependente (mascaramento de hipoglicemia)"
+      ]
+    },
+    "qtSafety": {
+      "baselineRequirement": "Obrigatório antes de iniciar: ECG com QTc < 450 ms, K⁺ ≥ 4,0 mEq/L, Mg²⁺ ≥ 2,0 mg/dL, creatinina/ClCr, revisão de todos os fármacos que prolongam QT (CredibleMeds).",
+      "avoidIf": "Não iniciar se QTc basal > 450 ms. Na maioria dos protocolos, QTc > 440 ms em mulheres ou > 430 ms em homens já justifica cautela extrema ou alternativa terapêutica.",
+      "stopIf": "Suspender imediatamente se QTc ≥ 500 ms ou aumento > 60 ms em relação ao basal. Reduzir dose se QTc 480–499 ms.",
+      "inpatientStart": "Início ou reinício requer internação com telemetria por ≥ 3 dias na maioria dos protocolos (FDA e ESC). Titulação deve ser realizada com ECG seriado antes de cada aumento de dose."
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Antiarrítmicos classe Ia (quinidina, procainamida, disopiramida) e classe III (amiodarona, dofetilida, ibutilida)",
+          "mechanism": "Prolongamento aditivo do QT por bloqueio múltiplo de canais de K⁺ e Na⁺",
+          "consequence": "Risco extremo de Torsades de Pointes e morte súbita arrítmica",
+          "management": "Absolutamente contraindicado combinar com qualquer outro antiarrítmico QT-ativo. Washout adequado necessário ao trocar entre eles."
+        },
+        {
+          "drug": "Verapamil EV / Diltiazem EV",
+          "mechanism": "Dupla inibição nodal AV com bradicardia e bloqueio AV aditivos",
+          "consequence": "Bloqueio AV completo, assistolia",
+          "management": "Absolutamente contraindicado administrar ambos por via IV."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Macrolídeos (azitromicina, claritromicina, eritromicina)",
+          "mechanism": "Bloqueio adicional de canais IKr cardíacos com prolongamento aditivo do QT",
+          "consequence": "QT prolongado e risco elevado de Torsades de Pointes",
+          "management": "Evitar combinação. Se antibioticoterapia obrigatória: usar amoxicilina, doxiciclina ou aminoglicosídeo. Verificar CredibleMeds para alternativas."
+        },
+        {
+          "drug": "Fluoroquinolonas (ciprofloxacino, levofloxacino, moxifloxacino)",
+          "mechanism": "Bloqueio de canais IKr com prolongamento aditivo do QT",
+          "consequence": "QT prolongado e risco de Torsades, especialmente com moxifloxacino",
+          "management": "Evitar moxifloxacino (risco elevado). Preferir amoxicilina, doxiciclina, aztreonam ou aminoglicosídeo. Se inevitável: monitorar QTc continuamente."
+        },
+        {
+          "drug": "Antipsicóticos (haloperidol, quetiapina, risperidona, ziprasidona, clozapina)",
+          "mechanism": "Bloqueio de canais hERG (IKr) com prolongamento aditivo da repolarização",
+          "consequence": "QT prolongado, Torsades de Pointes e risco de morte súbita",
+          "management": "Evitar combinação. Consultar psiquiatria para alternativas com menor risco QT (aripiprazol, olanzapina em doses baixas)."
+        },
+        {
+          "drug": "Diuréticos hipocalemiantes (furosemida, tiazídicos, acetazolamida)",
+          "mechanism": "Hipocalemia e hipomagnesemia induzidas pelos diuréticos potencializam o efeito QT-prolongador do sotalol",
+          "consequence": "Risco aumentado de Torsades de Pointes — o fator eletrolítico é o mais frequente precipitante de TdP com sotalol",
+          "management": "Monitorar K⁺ e Mg²⁺ antes e durante uso. Alvo K⁺ ≥ 4,0 mEq/L e Mg²⁺ ≥ 2,0 mg/dL. Considerar suplementação profilática."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efeito cronotrópico e dromotrópico negativo aditivo no nódulo AV",
+          "consequence": "Bradicardia grave e bloqueio AV de alto grau",
+          "management": "Monitorar ECG e nível sérico de digoxina. Manter alvo 0,5–0,9 ng/mL. Titular sotalol em doses mínimas."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "Insulina / sulfonilureias",
+          "mechanism": "Mascaramento de taquicardia reflexa da hipoglicemia (β1/β2)",
+          "consequence": "Hipoglicemia grave não reconhecida",
+          "management": "Monitorar glicemia com frequência. Orientar paciente sobre ausência de taquicardia como sinal de alerta."
+        },
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno)",
+          "mechanism": "Inibição de prostaglandinas vasodilatadoras renais — redução do efeito anti-hipertensivo",
+          "consequence": "Redução modesta do controle pressórico",
+          "management": "Preferir paracetamol. Monitorar PA."
+        },
+        {
+          "drug": "Outros anti-hipertensivos / diuréticos",
+          "mechanism": "Hipotensão aditiva",
+          "consequence": "Hipotensão e bradicardia excessivas",
+          "management": "Monitorar PA e FC. Atenção especial a diuréticos (risco eletrolítico concomitante)."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "ECG com medida de QTc (obrigatório — contraindicado se QTc > 450 ms)",
+        "Potássio sérico — alvo ≥ 4,0 mEq/L antes de iniciar",
+        "Magnésio sérico — alvo ≥ 2,0 mg/dL antes de iniciar",
+        "Creatinina / ClCr (dosagem renal-dependente — contraindicado se ClCr < 10 mL/min)",
+        "Revisão completa de fármacos que prolongam QT (CredibleMeds)",
+        "Frequência cardíaca e pressão arterial basais",
+        "Histórico de asma/DPOC (broncoespasmo pelo bloqueio β2)"
+      ],
+      "followUp": [
+        "ECG com QTc após 3–5 doses iniciais e antes de cada aumento de dose (internação com telemetria recomendada)",
+        "Potássio e magnésio séricos a cada consulta — especialmente se diuréticos concomitantes",
+        "Função renal (creatinina/ClCr) — deterioração renal altera radicalmente o esquema de dose",
+        "FC: suspender se FC < 50 bpm sintomática",
+        "Síncope, pré-síncope ou palpitações novas — podem indicar Torsades não sustentado",
+        "Recorrência de arritmia (FA/flutter, TV)",
+        "Broncoespasmo em pacientes com DPOC/asma"
+      ],
+      "icc": [
+        "Sotalol NÃO possui evidência de benefício em ICC-FEr — pelo contrário, pode piorar hemodinâmica. Não usar para ICC como indicação principal.",
+        "Em pacientes com ICC e arritmia ventricular grave (indicação absoluta de sotalol): internação obrigatória com monitorização invasiva e avaliação de eletrofisiologia.",
+        "Na FA com ICC: preferir amiodarona ou ablação por cateter — risco de pró-arritmia do sotalol supera o benefício em ICC avançada."
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (FC < 40 bpm)",
+        "Hipotensão grave (PAS < 70 mmHg)",
+        "QT excessivamente prolongado (QTc > 550–600 ms)",
+        "Torsades de Pointes (TV polimórfica em torno do eixo — \"girar sobre as pontas\")",
+        "Bloqueio AV de alto grau",
+        "Broncoespasmo grave (bloqueio β2)",
+        "Choque cardiogênico / parada cardíaca"
+      ],
+      "management": [
+        "1. SUSPENDER SOTALOL — pela meia-vida de ~12h (prolongada em DRC), monitorar por 24–72h",
+        "2. Sulfato de magnésio IV 2 g em 2 min → infusão 1–2 g/h — TRATAMENTO ESPECÍFICO para Torsades de Pointes (independente do nível sérico de Mg)",
+        "3. Overdrive pacing: marcapasso temporário a 90–110 bpm — encurta o QT ao acelerar a FC e suprime a reentrada",
+        "4. Cardioversão elétrica em Torsades com instabilidade hemodinâmica — corrente contínua sincronizada se houver pulso, desfibrilação se FV",
+        "5. Atropina 0,5–1 mg IV para bradicardia sintomática — efeito limitado no componente classe III",
+        "6. Glucagon 5–10 mg IV bolus → 1–5 mg/h — útil no componente betabloqueador; sem efeito no componente QT",
+        "7. Isoproterenol IV em bradicardia refratária — aumenta FC e encurta o QT (cuidado: pró-arrítmico se QT muito longo)",
+        "8. Hemodiálise: sotalol é removido por HD (baixa ligação proteica). Considerar em toxicidade grave com DRC — porém risco de arritmia por desequilíbrio eletrolítico intradialítico",
+        "9. ECMO em colapso circulatório refratário"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "Eliminação renal ~80–90% — ajuste obrigatório. ClCr ≥ 40 mL/min: 80–160 mg a cada 12h. ClCr 10–40 mL/min: 80 mg a cada 24h com monitorização intensiva. ClCr < 10 mL/min: CONTRAINDICADO — risco fatal de acúmulo e Torsades de Pointes.",
+      "hepaticImpairment": "Sem metabolismo hepático relevante — sem necessidade de ajuste hepático. Hepatopatia avançada com disfunção renal associada (síndrome hepatorrenal): avaliar ClCr real antes de usar.",
+      "geriatrics": "Idoso: alto risco por TFG frequentemente reduzida (acúmulo), QT basal mais longo, maior uso de fármacos QT-ativos e maior sensibilidade ao betabloqueio. Iniciar com 80 mg 1x/dia (não 2x/dia) e monitorar QTc, ClCr e eletrólitos rigorosamente.",
+      "pregnancy": "Gestação: uso apenas se benefício superar risco. Pode causar bradicardia fetal, hipoglicemia neonatal e, teoricamente, efeitos pró-arrítmicos fetais. Monitorar ECG neonatal.",
+      "lactation": "Lactação: excretado no leite materno em quantidade relevante. Monitorar bradicardia, sonolência e arritmias no lactente. Considerar suspender amamentação ou usar alternativa.",
+      "femaleGender": "Sexo feminino: QT basal intrínseco mais longo que no sexo masculino — maior susceptibilidade a Torsades de Pointes com sotalol. Iniciar em dose menor e monitorar QTc com maior rigor."
+    },
+    "hepaticDose": {
+      "required": false,
+      "message": "Sem metabolismo hepático significativo. Não requer ajuste hepático. Em hepatopatia avançada com síndrome hepatorrenal, avaliar ClCr real (pode requerer ajuste renal)."
+    },
+    "patientEducation": [
+      "Reportar imediatamente qualquer episódio de desmaio, quase desmaio, palpitações novas ou aceleração/irregularidade cardíaca — podem ser sinais de Torsades de Pointes.",
+      "NUNCA iniciar antibiótico, antipsicótico ou outro medicamento sem verificar com médico ou farmacêutico o risco de QT — muitos medicamentos comuns são proibidos com sotalol.",
+      "Manter controle rigoroso de potássio e magnésio — eletrólitos baixos podem desencadear arritmia fatal. Reportar diarreia, vômito ou início de diurético ao médico.",
+      "Nunca interromper ou alterar a dose sem orientação — sotalol possui risco de arritmia de rebote na retirada abrupta.",
+      "Em diabetes: monitorar glicemia com mais frequência — os sintomas de hipoglicemia (taquicardia, tremor) podem estar mascarados."
+    ],
+    "clinicalPearls": [
+      "Sotalol NÃO é apenas betabloqueador — é antiarrítmico classe III com risco real de Torsades de Pointes fatal. A maioria dos erros fatais ocorre por não ajustar a dose em DRC ou por não monitorar o QTc.",
+      "A regra prática FDA/ESC: iniciar ou reiniciar sotalol em internação com telemetria por ≥ 3 dias. Qualquer aumento de dose deve ser precedido por ECG com QTc < 500 ms.",
+      "Magnésio IV 2 g em Torsades — é o tratamento de PRIMEIRA LINHA, mesmo com Mg sérico normal. O magnésio estabiliza a membrana e interrompe a reentrada.",
+      "Sexo feminino tem QT basal mais longo — risco 2–3× maior de Torsades com sotalol em comparação ao sexo masculino. Considerar dose inicial menor e intervalo de monitorização mais curto.",
+      "Sotalol é a única alternativa ao propranolol para taquiarritmias ventriculares em pacientes sem ICC avançada e sem DRC grave — amiodarona tem menos tolerabilidade crônica pela toxicidade extracardíaca."
+    ],
+    "guidelineRecommendations": [
+      "ESC FA 2020/2024 e AHA/ACC/HRS 2023: sotalol é opção classe IIa para manutenção do ritmo sinusal em FA sem cardiopatia estrutural significativa, IRC moderada ou hipertrofia ventricular — monitorização hospitalar ao iniciar.",
+      "ESC Arritmias Ventriculares 2022: sotalol pode ser usado para supressão de TV sustentada documentada quando ablação por cateter ou CDI não estão disponíveis — risco pró-arrítmico deve ser explicitamente avaliado.",
+      "CredibleMeds (ArizonaCERT): sotalol classificado como risco CONHECIDO de Torsades de Pointes — sempre verificar interações antes de prescrever qualquer novo fármaco."
+    ],
+    "incompatibilities": "Uso exclusivo via oral. Sem formulação IV disponível no Brasil. Comprimidos não devem ser partidos ou mastigados. Antiácidos com alumínio ou magnésio podem reduzir marginalmente a absorção — administrar sotalol 2h antes ou 2h após antiácidos.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálise peritoneal: remoção mínima de sotalol. Não utilizar como estratégia de desintoxicação ou dose pós-DP."
+      },
+      "cvvh": {
+        "removido": true,
+        "obs": "CVVH/CVVHDF: sotalol pode ser removido por TRSC (baixa ligação proteica). Em UTI com TRSC e sotalol: monitorar QTc continuamente. O risco de arritmia por desequilíbrio eletrolítico durante TRSC é o principal perigo — manter K⁺ ≥ 4,0 e Mg²⁺ ≥ 2,0 rigorosamente."
+      }
+    },
+    "prescriptionErrors": [
+      "Não calcular ClCr antes de iniciar — o erro mais perigoso. ClCr < 10 mL/min é CONTRAINDICAÇÃO ABSOLUTA. ClCr 10–40 mL/min exige intervalo 24h (não 12h).",
+      "Não verificar QTc basal — iniciar sotalol com QTc > 450 ms é contraindicado. Obter sempre ECG antes da primeira dose.",
+      "Não corrigir hipocalemia ou hipomagnesemia antes de iniciar — o fator eletrolítico é o precipitante mais frequente de Torsades com sotalol.",
+      "Não verificar interações com antibióticos, antipsicóticos ou antidepressivos — muitos medicamentos comuns são CredibleMeds Risco Conhecido com sotalol.",
+      "Tratar Torsades com amiodarona — ERRO FATAL. Amiodarona prolonga ainda mais o QT. Tratamento correto: sulfato de magnésio IV + overdrive pacing.",
+      "Iniciar sotalol em ambulatório sem telemetria — FDA e ESC recomendam hospitalização com monitorização por ≥ 3 dias."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sem ajuste renal para ClCr ≥ 40 mL/min. Iniciar com 80 mg 12/12h e titular conforme QTc, FC e resposta.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "80–160 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "320 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose e intervalo habituais. Titular com incrementos de 80 mg a cada ≥ 3 dias com ECG seriado."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "80 mg",
+          "intervalo": "12/12h (cautela)",
+          "doseMaxima": "160 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 30–50 mL/min: manter 80 mg 12/12h com monitorização mais frequente de QTc e eletrólitos. Evitar aumentar dose sem avaliação especializada."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "80 mg",
+          "intervalo": "a cada 24h",
+          "doseMaxima": "80 mg/24h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 10–30 mL/min: reduzir intervalo para 24/24h (1x/dia). Monitorização cardíaca e de QTc obrigatória. Considerar internação para início."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 10 mL/min: CONTRAINDICADO. Risco de acúmulo fatal com Torsades de Pointes e parada cardíaca."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sotalol é removido por hemodiálise. Porém, em pacientes em hemodiálise, o risco de arritmia por acúmulo e desequilíbrio eletrolítico é muito alto. Uso deve ser evitado ou feito apenas sob supervisão de eletrofisiologista."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": true,
+      "torsadesRisk": true,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "bronchospasmRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Sotalol é um dos fármacos cardiovasculares com MAIOR risco de Torsades de Pointes. Nunca iniciar sem ECG (QTc < 450 ms), K⁺ ≥ 4,0 mEq/L, Mg²⁺ ≥ 2,0 mg/dL e função renal avaliada. CONTRAINDICADO em ClCr < 10 mL/min."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ESC Atrial Fibrillation Guidelines 2020/2024",
+        "ESC Ventricular Arrhythmia Guidelines 2022",
+        "AHA/ACC/HRS Arrhythmia Guidelines 2023",
+        "CredibleMeds QTDrugs List (ArizonaCERT)",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Katzung Farmacologia Básica e Clínica 15ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA Betapace AF label",
+        "EMA label"
+      ],
+      "note": "Antiarrítmico Classe III (bloqueador IKr/IKs) + betabloqueador β1/β2 não seletivo. Eliminação renal ~80–90% — ajuste obrigatório em ClCr < 40 mL/min (intervalo 24h); CONTRAINDICADO em ClCr < 10 mL/min (Torsades fatal). Monitorização hospitalar com telemetria ≥ 3 dias ao iniciar ou reiniciar (FDA/ESC). QTc < 450 ms + K⁺ ≥ 4,0 + Mg²⁺ ≥ 2,0 obrigatórios antes de cada titulação. Sexo feminino: risco 2–3× maior de Torsades. Tratamento de Torsades: MgSO₄ IV 2 g + overdrive pacing — NUNCA amiodarona. CredibleMeds: risco CONHECIDO de TdP. Auditoria V2 completada 2026-06."
+    }
+  },
+  "es": {
+    "name": "Sotalol",
+    "class": "Antiarrítmico Clase III con actividad betabloqueante no selectiva",
+    "commercialNames": {
+      "br": [
+        "Sotalol genérico",
+        "Sotacor"
+      ],
+      "ar": [
+        "Sotalol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 80 mg",
+      "Comprimidos 120 mg",
+      "Comprimidos 160 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "Iniciar con 80 mg VO cada 12h; mantenimiento 80–160 mg cada 12h; máx 320 mg/día en casos seleccionados con monitorización especializada.",
+      "adultoGrave": "Iniciar con dosis mínima (80 mg cada 12h) y titular según QTc, FC y respuesta clínica.",
+      "pediatricaPadrao": "No establecido de forma rutinaria. El uso pediátrico requiere evaluación especializada de electrofisiología.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "320 mg/día en casos seleccionados con monitorización especializada; 80 mg/día en ClCr < 40 mL/min"
+    },
+    "therapeuticRange": "Mantenimiento del ritmo sinusal; supresión de arritmias ventriculares; QTc < 500 ms durante tratamiento (idealmente < 480 ms)",
+    "dilution": "Uso exclusivo vía oral. Los comprimidos no deben partirse ni masticarse.",
+    "speed": "Ajustar gradualmente cada ≥ 3 días, siempre con ECG para monitorizar QTc antes de cada aumento de dosis.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Fatiga",
+      "Mareos",
+      "Hipotensión",
+      "Debilidad",
+      "Disnea",
+      "Náuseas"
+    ],
+    "dangerousAdverseEffects": [
+      "Torsades de Pointes",
+      "Muerte súbita arrítmica",
+      "QT prolongado grave",
+      "Bloqueo AV completo",
+      "Asistolia / Paro cardíaco",
+      "Shock cardiogénico",
+      "Broncoespasmo"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NO INICIAR sin ECG basal con QTc < 450 ms, K⁺ ≥ 4,0 mEq/L y Mg²⁺ ≥ 2,0 mg/dL.",
+      "No suspender abruptamente — riesgo de angina de rebote y arritmia de rebote.",
+      "Interacciones graves: amiodarona, dofetilida, quinidina, macrólidos, fluoroquinolonas, antipsicóticos, metadona — riesgo de Torsades de Pointes.",
+      "Betabloqueante NO selectivo: contraindicado en asma grave y broncoespasmo activo."
+    ],
+    "ref": "ESC Atrial Fibrillation Guidelines 2020/2024 · ESC Ventricular Arrhythmia Guidelines 2022 · AHA/ACC/HRS Arrhythmia Guidelines 2023 · CredibleMeds QTDrugs List · Goodman & Gilman 14ª ed. · Katzung Farmacologia 15ª ed. · Lexicomp Online 2026 · Micromedex 2026 · FDA Betapace AF label · EMA label",
+    "pharmacologicClass": "Antiarrítmico clase III (bloqueador de canales de K⁺) + betabloqueante β1/β2 no selectivo",
+    "mechanism": "Bloquea receptores β1 y β2-adrenérgicos (sin ASI) Y canales de potasio cardíacos (corriente IKr/IKs), prolongando el potencial de acción, el intervalo QT, la repolarización y el período refractario efectivo. En dosis bajas (80–160 mg/día) predomina el efecto betabloqueante; en dosis mayores (≥ 160 mg/día) el efecto clase III QT-prolongador se vuelve clínicamente significativo.",
+    "pharmacodynamics": "El riesgo proarrítmico (Torsades de Pointes) es dosis-dependiente, renal-dependiente y electrolito-dependiente. Factores que amplían el riesgo: ERC (acumulación), hipopotasemia, hipomagnesemia, bradicardia, sexo femenino (QT intrínseco más largo) y uso concomitante de otros fármacos que prolongan el QT. Estado estacionario alcanzado en ~2–3 días.",
+    "onset": "Efecto betabloqueante: inicia en ~1–2h. Estado estacionario (y pleno efecto clase III sobre el QT): tras 2–3 días de dosis estable. Por ello, monitorización de QTc es obligatoria al inicio y con cada ajuste.",
+    "pharmacokinetics": {
+      "absorption": "Absorción oral buena y predecible (~90–100%). No afectada por efecto de primer paso.",
+      "bioavailability": "~90–100%",
+      "proteinBinding": "<10% (unión proteica muy baja — contribuye a la dializabilidad)",
+      "vd": "~1,2–2,4 L/kg",
+      "metabolism": "Sin metabolismo hepático significativo. No es sustrato de CYP450. No hay metabolitos activos.",
+      "halfLife": "~12 horas (se prolonga significativamente en ERC)",
+      "elimination": "Eliminación renal como fármaco sin cambios (~80–90%). Ajuste obligatorio en ClCr < 40 mL/min. Contraindicado en ClCr < 10 mL/min.",
+      "dialysability": "Eliminado por hemodiálisis (baja unión proteica + bajo Vd). Sin embargo, el riesgo de arritmia por desequilibrio electrolítico intradialítico supera el beneficio en la mayoría de los casos."
+    },
+    "indications": {
+      "approved": [
+        "Mantenimiento del ritmo sinusal tras cardioversión en fibrilación auricular/flutter auricular documentado",
+        "Arritmias ventriculares documentadas potencialmente fatales (taquicardia ventricular sostenida, FV)"
+      ],
+      "offLabel": [
+        "Taquicardia ventricular no sostenida en pacientes seleccionados por electrofisiología",
+        "Supresión de arritmias supraventriculares recurrentes en escenarios específicos"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "QTc basal > 450 ms (en la mayoría de los protocolos)",
+        "Torsades de Pointes previo relacionado a fármaco o adquirido",
+        "Hipopotasemia no corregida (K⁺ < 4,0 mEq/L)",
+        "Hipomagnesemia no corregida (Mg²⁺ < 2,0 mg/dL)",
+        "ClCr < 10 mL/min — riesgo fatal de acumulación y Torsades",
+        "Bradicardia sintomática (FC < 50 lpm)",
+        "Bloqueo AV de 2º grado (Mobitz II) o 3er grado sin marcapasos",
+        "Shock cardiogénico / ICC descompensada con bajo gasto",
+        "Asma bronquial grave o broncoespasmo activo"
+      ],
+      "relative": [
+        "Insuficiencia renal moderada (ClCr 10–40 mL/min) — ajuste obligatorio y monitorización intensiva",
+        "Sexo femenino con múltiples factores de riesgo para QT largo (QT intrínseco más largo)",
+        "Uso concomitante de otros fármacos que prolongan QT (verificar CredibleMeds)",
+        "EPOC con broncoespasmo reversible significativo",
+        "Diabetes mellitus insulinodependiente (enmascaramiento de hipoglucemia)"
+      ]
+    },
+    "qtSafety": {
+      "baselineRequirement": "Obligatorio antes de iniciar: ECG con QTc < 450 ms, K⁺ ≥ 4,0 mEq/L, Mg²⁺ ≥ 2,0 mg/dL, creatinina/ClCr, revisión de todos los fármacos que prolongan QT (CredibleMeds).",
+      "avoidIf": "No iniciar si QTc basal > 450 ms. En la mayoría de los protocolos, QTc > 440 ms en mujeres o > 430 ms en hombres ya justifica cautela extrema o alternativa terapéutica.",
+      "stopIf": "Suspender inmediatamente si QTc ≥ 500 ms o aumento > 60 ms respecto al basal. Reducir dosis si QTc 480–499 ms.",
+      "inpatientStart": "Inicio o reinicio requiere hospitalización con telemetría por ≥ 3 días en la mayoría de los protocolos (FDA y ESC). La titulación debe realizarse con ECG seriado antes de cada aumento de dosis."
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Antiarrítmicos clase Ia (quinidina, procainamida, disopiramida) y clase III (amiodarona, dofetilida, ibutilida)",
+          "mechanism": "Prolongación aditiva del QT por bloqueo múltiple de canales de K⁺ y Na⁺",
+          "consequence": "Riesgo extremo de Torsades de Pointes y muerte súbita arrítmica",
+          "management": "Absolutamente contraindicado combinar con cualquier otro antiarrítmico QT-activo. Washout adecuado necesario al cambiar entre ellos."
+        },
+        {
+          "drug": "Verapamilo EV / Diltiazem EV",
+          "mechanism": "Doble inhibición nodal AV con bradicardia y bloqueo AV aditivos",
+          "consequence": "Bloqueo AV completo, asistolia",
+          "management": "Absolutamente contraindicado administrar ambos por vía IV."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Macrólidos (azitromicina, claritromicina, eritromicina)",
+          "mechanism": "Bloqueo adicional de canales IKr cardíacos con prolongación aditiva del QT",
+          "consequence": "QT prolongado y riesgo elevado de Torsades de Pointes",
+          "management": "Evitar combinación. Si antibioterapia obligatoria: usar amoxicilina, doxiciclina o aminoglucósido. Verificar CredibleMeds para alternativas."
+        },
+        {
+          "drug": "Fluoroquinolonas (ciprofloxacino, levofloxacino, moxifloxacino)",
+          "mechanism": "Bloqueo de canales IKr con prolongación aditiva del QT",
+          "consequence": "QT prolongado y riesgo de Torsades, especialmente con moxifloxacino",
+          "management": "Evitar moxifloxacino (riesgo elevado). Preferir amoxicilina, doxiciclina, aztreonam o aminoglucósido. Si inevitable: monitorizar QTc continuamente."
+        },
+        {
+          "drug": "Antipsicóticos (haloperidol, quetiapina, risperidona, ziprasidona, clozapina)",
+          "mechanism": "Bloqueo de canales hERG (IKr) con prolongación aditiva de la repolarización",
+          "consequence": "QT prolongado, Torsades de Pointes y riesgo de muerte súbita",
+          "management": "Evitar combinación. Consultar psiquiatría para alternativas con menor riesgo QT (aripiprazol, olanzapina en dosis bajas)."
+        },
+        {
+          "drug": "Diuréticos hipocalemiantes (furosemida, tiazídicos, acetazolamida)",
+          "mechanism": "Hipopotasemia e hipomagnesemia inducidas por los diuréticos potencian el efecto QT-prolongador del sotalol",
+          "consequence": "Riesgo aumentado de Torsades de Pointes — el factor electrolítico es el precipitante más frecuente de TdP con sotalol",
+          "management": "Monitorizar K⁺ y Mg²⁺ antes y durante el uso. Objetivo K⁺ ≥ 4,0 mEq/L y Mg²⁺ ≥ 2,0 mg/dL. Considerar suplementación profiláctica."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efecto cronotrópico y dromotrópico negativo aditivo en nódulo AV",
+          "consequence": "Bradicardia grave y bloqueo AV de alto grado",
+          "management": "Monitorizar ECG y nivel sérico de digoxina. Mantener objetivo 0,5–0,9 ng/mL. Titular sotalol en dosis mínimas."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "Insulina / sulfonilureas",
+          "mechanism": "Enmascaramiento de taquicardia refleja de hipoglucemia (β1/β2)",
+          "consequence": "Hipoglucemia grave no reconocida",
+          "management": "Monitorizar glucemia frecuentemente. Orientar al paciente sobre ausencia de taquicardia como signo de alerta."
+        },
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno)",
+          "mechanism": "Inhibición de prostaglandinas vasodilatadoras renales — reducción del efecto antihipertensivo",
+          "consequence": "Reducción modesta del control tensional",
+          "management": "Preferir paracetamol. Monitorizar PA."
+        },
+        {
+          "drug": "Otros antihipertensivos / diuréticos",
+          "mechanism": "Hipotensión aditiva",
+          "consequence": "Hipotensión y bradicardia excesivas",
+          "management": "Monitorizar PA y FC. Atención especial a diuréticos (riesgo electrolítico concomitante)."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "ECG con medida de QTc (obligatorio — contraindicado si QTc > 450 ms)",
+        "Potasio sérico — objetivo ≥ 4,0 mEq/L antes de iniciar",
+        "Magnesio sérico — objetivo ≥ 2,0 mg/dL antes de iniciar",
+        "Creatinina / ClCr (dosificación renal-dependiente — contraindicado si ClCr < 10 mL/min)",
+        "Revisión completa de fármacos que prolongan QT (CredibleMeds)",
+        "Frecuencia cardíaca y presión arterial basales",
+        "Historial de asma/EPOC (broncoespasmo por bloqueo β2)"
+      ],
+      "followUp": [
+        "ECG con QTc tras 3–5 dosis iniciales y antes de cada aumento de dosis (hospitalización con telemetría recomendada)",
+        "Potasio y magnesio séricos en cada consulta — especialmente si diuréticos concomitantes",
+        "Función renal (creatinina/ClCr) — el deterioro renal altera radicalmente el esquema de dosis",
+        "FC: suspender si FC < 50 lpm sintomática",
+        "Síncope, presíncope o palpitaciones nuevas — pueden indicar Torsades no sostenido",
+        "Recurrencia de arritmia (FA/flutter, TV)",
+        "Broncoespasmo en pacientes con EPOC/asma"
+      ],
+      "icc": [
+        "Sotalol NO tiene evidencia de beneficio en ICC-FEr — al contrario, puede empeorar la hemodinámica. No usar para ICC como indicación principal.",
+        "En pacientes con ICC y arritmia ventricular grave (indicación absoluta de sotalol): hospitalización obligatoria con monitorización invasiva y evaluación de electrofisiología.",
+        "En FA con ICC: preferir amiodarona o ablación por catéter — riesgo de proarritmia del sotalol supera el beneficio en ICC avanzada."
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (FC < 40 lpm)",
+        "Hipotensión grave (PAS < 70 mmHg)",
+        "QT excesivamente prolongado (QTc > 550–600 ms)",
+        "Torsades de Pointes (TV polimórfica alrededor del eje — \"girar sobre las puntas\")",
+        "Bloqueo AV de alto grado",
+        "Broncoespasmo grave (bloqueo β2)",
+        "Shock cardiogénico / paro cardíaco"
+      ],
+      "management": [
+        "1. SUSPENDER SOTALOL — por la vida media de ~12h (prolongada en ERC), monitorizar por 24–72h",
+        "2. Sulfato de magnesio IV 2 g en 2 min → infusión 1–2 g/h — TRATAMIENTO ESPECÍFICO para Torsades de Pointes (independiente del nivel sérico de Mg)",
+        "3. Overdrive pacing: marcapasos temporal a 90–110 lpm — acorta el QT al acelerar la FC y suprime la reentrada",
+        "4. Cardioversión eléctrica en Torsades con inestabilidad hemodinámica — corriente continua sincronizada si hay pulso, desfibrilación si FV",
+        "5. Atropina 0,5–1 mg IV para bradicardia sintomática — efecto limitado en el componente clase III",
+        "6. Glucagón 5–10 mg IV bolo → 1–5 mg/h — útil en el componente betabloqueante; sin efecto en el componente QT",
+        "7. Isoproterenol IV en bradicardia refractaria — aumenta FC y acorta el QT (cuidado: proarrítmico si QT muy largo)",
+        "8. Hemodiálisis: sotalol es eliminado por HD (baja unión proteica). Considerar en toxicidad grave con ERC — pero riesgo de arritmia por desequilibrio electrolítico intradialítico",
+        "9. ECMO en colapso circulatorio refractario"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "Eliminación renal ~80–90% — ajuste obligatorio. ClCr ≥ 40 mL/min: 80–160 mg cada 12h. ClCr 10–40 mL/min: 80 mg cada 24h con monitorización intensiva. ClCr < 10 mL/min: CONTRAINDICADO — riesgo fatal de acumulación y Torsades de Pointes.",
+      "hepaticImpairment": "Sin metabolismo hepático relevante — sin necesidad de ajuste hepático. Hepatopatía avanzada con disfunción renal asociada (síndrome hepatorrenal): evaluar ClCr real antes de usar.",
+      "geriatrics": "Anciano: alto riesgo por TFG frecuentemente reducida (acumulación), QT basal más largo, mayor uso de fármacos QT-activos y mayor sensibilidad al betabloqueo. Iniciar con 80 mg 1 vez/día (no 2 veces/día) y monitorizar QTc, ClCr y electrolitos rigurosamente.",
+      "pregnancy": "Embarazo: uso solo si el beneficio supera el riesgo. Puede causar bradicardia fetal, hipoglucemia neonatal y, teóricamente, efectos proarrítmicos fetales. Monitorizar ECG neonatal.",
+      "lactation": "Lactancia: se excreta en leche materna en cantidad relevante. Monitorizar bradicardia, somnolencia y arritmias en el lactante. Considerar suspender lactancia o usar alternativa.",
+      "femaleGender": "Sexo femenino: QT basal intrínseco más largo que en el masculino — mayor susceptibilidad a Torsades de Pointes con sotalol. Iniciar con dosis menor y monitorizar QTc con mayor rigor."
+    },
+    "hepaticDose": {
+      "required": false,
+      "message": "Sin metabolismo hepático significativo. No requiere ajuste hepático. En hepatopatía avanzada con síndrome hepatorrenal, evaluar ClCr real (puede requerir ajuste renal)."
+    },
+    "patientEducation": [
+      "Reportar inmediatamente cualquier episodio de desmayo, casi desmayo, palpitaciones nuevas o aceleración/irregularidad cardíaca — pueden ser signos de Torsades de Pointes.",
+      "NUNCA iniciar antibiótico, antipsicótico u otro medicamento sin verificar con médico o farmacéutico el riesgo de QT — muchos medicamentos comunes están prohibidos con sotalol.",
+      "Mantener control riguroso de potasio y magnesio — electrolitos bajos pueden desencadenar arritmia fatal. Reportar diarrea, vómito o inicio de diurético al médico.",
+      "Nunca interrumpir o alterar la dosis sin indicación — sotalol tiene riesgo de arritmia de rebote con la retirada brusca.",
+      "En diabetes: monitorizar glucemia con más frecuencia — los síntomas de hipoglucemia (taquicardia, temblor) pueden estar enmascarados."
+    ],
+    "clinicalPearls": [
+      "Sotalol NO es solo betabloqueante — es antiarrítmico clase III con riesgo real de Torsades de Pointes fatal. La mayoría de los errores fatales ocurre por no ajustar la dosis en ERC o por no monitorizar el QTc.",
+      "La regla práctica FDA/ESC: iniciar o reiniciar sotalol hospitalizado con telemetría por ≥ 3 días. Cualquier aumento de dosis debe ser precedido por ECG con QTc < 500 ms.",
+      "Magnesio IV 2 g en Torsades — es el tratamiento de PRIMERA LÍNEA, incluso con Mg sérico normal. El magnesio estabiliza la membrana e interrumpe la reentrada.",
+      "Sexo femenino tiene QT basal más largo — riesgo 2–3× mayor de Torsades con sotalol en comparación al masculino. Considerar dosis inicial menor e intervalo de monitorización más corto.",
+      "Sotalol es la única alternativa al propranolol para taquiarritmias ventriculares en pacientes sin ICC avanzada y sin ERC grave — amiodarona tiene menor tolerabilidad crónica por la toxicidad extracardíaca."
+    ],
+    "guidelineRecommendations": [
+      "ESC FA 2020/2024 y AHA/ACC/HRS 2023: sotalol es opción clase IIa para mantenimiento del ritmo sinusal en FA sin cardiopatía estructural significativa, IRC moderada o hipertrofia ventricular — monitorización hospitalaria al iniciar.",
+      "ESC Arritmias Ventriculares 2022: sotalol puede usarse para supresión de TV sostenida documentada cuando la ablación por catéter o CDI no están disponibles — riesgo proarrítmico debe ser evaluado explícitamente.",
+      "CredibleMeds (ArizonaCERT): sotalol clasificado como riesgo CONOCIDO de Torsades de Pointes — siempre verificar interacciones antes de prescribir cualquier nuevo fármaco."
+    ],
+    "incompatibilities": "Uso exclusivo vía oral. Sin formulación IV disponible. Los comprimidos no deben partirse ni masticarse. Los antiácidos con aluminio o magnesio pueden reducir marginalmente la absorción — administrar sotalol 2h antes o 2h después de antiácidos.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálisis peritoneal: eliminación mínima de sotalol. No utilizar como estrategia de desintoxicación o dosis post-DP."
+      },
+      "cvvh": {
+        "removido": true,
+        "obs": "CVVH/CVVHDF: sotalol puede ser eliminado por TRRC (baja unión proteica). En UCI con TRRC y sotalol: monitorizar QTc continuamente. El riesgo de arritmia por desequilibrio electrolítico durante TRRC es el principal peligro — mantener K⁺ ≥ 4,0 y Mg²⁺ ≥ 2,0 rigurosamente."
+      }
+    },
+    "prescriptionErrors": [
+      "No calcular ClCr antes de iniciar — el error más peligroso. ClCr < 10 mL/min es CONTRAINDICACIÓN ABSOLUTA. ClCr 10–40 mL/min requiere intervalo 24h (no 12h).",
+      "No verificar QTc basal — iniciar sotalol con QTc > 450 ms está contraindicado. Obtener siempre ECG antes de la primera dosis.",
+      "No corregir hipopotasemia o hipomagnesemia antes de iniciar — el factor electrolítico es el precipitante más frecuente de Torsades con sotalol.",
+      "No verificar interacciones con antibióticos, antipsicóticos o antidepresivos — muchos medicamentos comunes son CredibleMeds Riesgo Conocido con sotalol.",
+      "Tratar Torsades con amiodarona — ERROR FATAL. La amiodarona prolonga aún más el QT. Tratamiento correcto: sulfato de magnesio IV + overdrive pacing.",
+      "Iniciar sotalol en ambulatorio sin telemetría — FDA y ESC recomiendan hospitalización con monitorización por ≥ 3 días."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sin ajuste renal para ClCr ≥ 40 mL/min. Iniciar con 80 mg cada 12h y titular según QTc, FC y respuesta.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "80–160 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "320 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis e intervalo habituales. Titular con incrementos de 80 mg cada ≥ 3 días con ECG seriado."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "80 mg",
+          "intervalo": "12/12h (cautela)",
+          "doseMaxima": "160 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 30–50 mL/min: mantener 80 mg cada 12h con monitorización más frecuente de QTc y electrolitos. Evitar aumentar dosis sin evaluación especializada."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "80 mg",
+          "intervalo": "a cada 24h",
+          "doseMaxima": "80 mg/24h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 10–30 mL/min: reducir intervalo a cada 24h (1 vez/día). Monitorización cardíaca y de QTc obligatoria. Considerar hospitalización para inicio."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 10 mL/min: CONTRAINDICADO. Riesgo de acumulación fatal con Torsades de Pointes y paro cardíaco."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sotalol es removido por hemodiálisis. Sin embargo, en pacientes en hemodiálisis, el riesgo de arritmia por acumulación y desequilibrio electrolítico es muy alto. Debe evitarse o usarse solo bajo supervisión de electrofisiólogo."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": true,
+      "torsadesRisk": true,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "bronchospasmRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Sotalol es uno de los fármacos cardiovasculares con MAYOR riesgo de Torsades de Pointes. Nunca iniciar sin ECG (QTc < 450 ms), K⁺ ≥ 4,0 mEq/L, Mg²⁺ ≥ 2,0 mg/dL y función renal evaluada. CONTRAINDICADO en ClCr < 10 mL/min."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ESC Atrial Fibrillation Guidelines 2020/2024",
+        "ESC Ventricular Arrhythmia Guidelines 2022",
+        "AHA/ACC/HRS Arrhythmia Guidelines 2023",
+        "CredibleMeds QTDrugs List (ArizonaCERT)",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Katzung Farmacologia Básica e Clínica 15ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA Betapace AF label",
+        "EMA label"
+      ],
+      "note": "Antiarrítmico Clase III (bloqueador IKr/IKs) + betabloqueante β1/β2 no selectivo. Eliminación renal ~80–90% — ajuste obligatorio en ClCr < 40 mL/min (intervalo 24h); CONTRAINDICADO en ClCr < 10 mL/min (Torsades fatal). Monitorización hospitalaria con telemetría ≥ 3 días al iniciar o reiniciar (FDA/ESC). QTc < 450 ms + K⁺ ≥ 4,0 + Mg²⁺ ≥ 2,0 obligatorios antes de cada titulación. Sexo femenino: riesgo 2–3× mayor de Torsades. Tratamiento de Torsades: MgSO₄ IV 2 g + overdrive pacing — NUNCA amiodarona. CredibleMeds: riesgo CONOCIDO de TdP. Auditoría V2 completada 2026-06."
+    }
+  },
+  "name": {
+    "pt": "Sotalol",
+    "es": "Sotalol"
+  },
+  "keywords": [
+    "sotalol",
+    "sotalol generico",
+    "sotacor",
+    "antiarritmico classe iii com atividade betabloqueadora nao seletiva"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

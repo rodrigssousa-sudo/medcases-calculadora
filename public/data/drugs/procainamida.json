@@ -1,0 +1,127 @@
+{
+  "id": "procainamida",
+  "category": "cardio",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "dose": "Carga: 1050–1260 mg IV a 20–50 mg/min (máx 17 mg/kg)",
+    "doseCarga": "1050–1260 mg IV (15–18 mg/kg) a 20–50 mg/min",
+    "doseInfusao": "1–4 mg/min IV contínuo",
+    "clcrEstimado": "90 mL/min",
+    "apresentacao": "Ampola IV | Comprimidos VO (mercados limitados)",
+    "classe": "Antiarrítmico Classe IA | Bloqueador Na⁺ + K⁺ | t½ 3–5 h (NAPA 6–10 h)",
+    "indicacoes": [
+      "TV estável de QRS largo",
+      "Taquicardia QRS largo indiferenciada",
+      "FA/flutter com pré-excitação (WPW) — fármaco de escolha",
+      "Arritmias ventriculares refratárias"
+    ],
+    "ajusteRenal": "ClCr 90 mL/min — dose padrão",
+    "efeitosAdversos": [
+      "Hipotensão durante carga IV",
+      "Náuseas",
+      "Tontura",
+      "Rubor",
+      "Bradicardia",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV",
+      "⚠️ Lúpus induzido (uso crônico)",
+      "⚠️ Agranulocitose (uso crônico oral)",
+      "⚠️ Choque"
+    ],
+    "monitoramento": [
+      "ECG contínuo (QRS + QTc + PR)",
+      "PA a cada 5 min durante carga",
+      "Suspender se QRS >50% ou QTc >500 ms",
+      "K⁺ e Mg²⁺ antes e durante",
+      "Nível sérico procainamida + NAPA (DRC)",
+      "ANC (uso crônico)",
+      "ANA/anti-DNA (lúpus)"
+    ],
+    "refs": [
+      "AHA ACLS Guidelines",
+      "ESC VA Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA label"
+    ],
+    "alerts": [
+      {
+        "tipo": "danger",
+        "msg": "📋 SUSPENDER se: QRS alargar >50%, QTc >500 ms, hipotensão grave ou conversão da arritmia."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: Risco de Torsades. Lúpus induzido por droga (uso crônico). Agranulocitose (uso crônico oral)."
+      }
+    ]
+  },
+  "es": {
+    "dose": "Carga: 1050–1260 mg IV a 20–50 mg/min (máx 17 mg/kg)",
+    "doseCarga": "1050–1260 mg IV (15–18 mg/kg) a 20–50 mg/min",
+    "doseInfusao": "1–4 mg/min IV contínuo",
+    "clcrEstimado": "90 mL/min",
+    "apresentacao": "Ampolla IV | Comprimidos VO (mercados limitados)",
+    "classe": "Antiarrítmico Clase IA | Bloqueador Na⁺ + K⁺ | t½ 3–5 h (NAPA 6–10 h)",
+    "indicacoes": [
+      "TV estable de QRS ancho",
+      "Taquicardia QRS ancho indiferenciada",
+      "FA/flutter con preexcitación (WPW) — fármaco de elección",
+      "Arritmias ventriculares refractarias"
+    ],
+    "ajusteRenal": "ClCr 90 mL/min — dosis estándar",
+    "efeitosAdversos": [
+      "Hipotensión durante carga IV",
+      "Náuseas",
+      "Mareos",
+      "Rubor",
+      "Bradicardia",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV",
+      "⚠️ Lupus inducido (uso crónico)",
+      "⚠️ Agranulocitosis (uso crónico oral)",
+      "⚠️ Shock"
+    ],
+    "monitoramento": [
+      "ECG continuo (QRS + QTc + PR)",
+      "PA cada 5 min durante carga",
+      "Suspender si QRS >50% o QTc >500 ms",
+      "K⁺ y Mg²⁺ antes y durante",
+      "Nivel sérico procainamida + NAPA (ERC)",
+      "ANC (uso crónico)",
+      "ANA/anti-DNA (lupus)"
+    ],
+    "refs": [
+      "AHA ACLS Guidelines",
+      "ESC VA Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA label"
+    ],
+    "alerts": [
+      {
+        "tipo": "danger",
+        "msg": "📋 SUSPENDER si: QRS ensancha >50%, QTc >500 ms, hipotensión grave o conversión de la arritmia."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: Riesgo de Torsades. Lupus inducido por fármaco (uso crónico). Agranulocitosis (uso crónico oral)."
+      }
+    ]
+  },
+  "name": {
+    "pt": "Procainamida",
+    "es": "Procainamida"
+  },
+  "keywords": [
+    "procainamida"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

@@ -1,0 +1,180 @@
+{
+  "id": "adenosina",
+  "category": "cardiologia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Adenosina"
+  },
+  "es": {
+    "name": "Adenosina"
+  },
+  "name": {
+    "pt": "Adenosina",
+    "es": "Adenosina"
+  },
+  "keywords": [
+    "adenosina"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "cardiologia.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "cardiologia.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "cardio.js",
+      "record": {
+        "id": "adenosina",
+        "category": "cardio",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "dose": "6 mg IV em bolus extremamente rápido + flush imediato 20 mL SF 0,9%",
+          "doseEscalonada": "Se não converter em 1–2 min: 12 mg IV bolus. Pode repetir 12 mg conforme protocolo.",
+          "apresentacao": "Ampolas IV 3 mg/mL (6 mg/2 mL)",
+          "classe": "Antiarrítmico de ação ultracurta — bloqueador transitório nó AV",
+          "indicacoes": [
+            "TSVP (AVNRT, AVRT ortodrômica)",
+            "Diagnóstico diferencial de taquicardias supraventriculares",
+            "QRS estreito regular não convertido por vagais"
+          ],
+          "ajusteRenal": "Sem ajuste — meia-vida <10 s",
+          "efeitosAdversos": [
+            "Rubor facial",
+            "Pressão/dor torácica breve",
+            "Dispneia transitória",
+            "Sensação de morte iminente",
+            "Náuseas",
+            "Tontura",
+            "Cefaleia",
+            "⚠️ Broncoespasmo",
+            "⚠️ Bloqueio AV prolongado",
+            "⚠️ FA transitória",
+            "⚠️ Assistolia breve"
+          ],
+          "contraindicacoes": [
+            "Bloqueio AV 2º/3º sem marcapasso",
+            "Doença do nó sinusal sem marcapasso",
+            "Pré-excitação com FA/flutter",
+            "QRS largo irregular",
+            "Hipersensibilidade"
+          ],
+          "interacoes": [
+            "Dipiridamol: potencializa muito (usar 3 mg)",
+            "Carbamazepina: maior risco bloqueio AV",
+            "Teofilina/aminofilina: antagonizam efeito",
+            "Cafeína: reduz efeito",
+            "BB/verapamil/digoxina: maior risco bradicardia"
+          ],
+          "monitoramento": [
+            "ECG contínuo durante/após bolus",
+            "PA",
+            "Registro de traçado na administração",
+            "Desfibrilador disponível",
+            "Monitorar broncoespasmo"
+          ],
+          "refs": [
+            "AHA ACLS Guidelines",
+            "ESC SVT Guidelines",
+            "AHA/ACC/HRS SVT Guidelines",
+            "Goodman & Gilman",
+            "Lexicomp",
+            "FDA/DailyMed"
+          ],
+          "alerts": [
+            {
+              "tipo": "info",
+              "msg": "📋 ECG contínuo obrigatório. Preparar desfibrilador. Registrar traçado durante administração. Flush imediato 20 mL SF após bolus."
+            }
+          ]
+        },
+        "es": {
+          "dose": "6 mg IV em bolus extremamente rápido + flush imediato 20 mL SF 0,9%",
+          "doseEscalonada": "Se não converter em 1–2 min: 12 mg IV bolus. Pode repetir 12 mg conforme protocolo.",
+          "apresentacao": "Ampollas IV 3 mg/mL (6 mg/2 mL)",
+          "classe": "Antiarrítmico de acción ultracorta — bloqueador transitorio nodo AV",
+          "indicacoes": [
+            "TSVP (AVNRT, AVRT ortodrómica)",
+            "Diagnóstico diferencial de taquicardias supraventriculares",
+            "QRS estrecho regular no convertido por vagales"
+          ],
+          "ajusteRenal": "Sin ajuste — vida media <10 s",
+          "efeitosAdversos": [
+            "Rubor facial",
+            "Presión/dolor torácico breve",
+            "Disnea transitoria",
+            "Sensación de muerte inminente",
+            "Náuseas",
+            "Mareos",
+            "Cefalea",
+            "⚠️ Broncoespasmo",
+            "⚠️ Bloqueo AV prolongado",
+            "⚠️ FA transitoria",
+            "⚠️ Asistolia breve"
+          ],
+          "contraindicacoes": [
+            "Bloqueo AV 2º/3º sin marcapasos",
+            "Enfermedad del nodo sinusal sin marcapasos",
+            "Preexcitación con FA/flutter",
+            "QRS ancho irregular",
+            "Hipersensibilidad"
+          ],
+          "interacoes": [
+            "Dipiridamol: potencia mucho (usar 3 mg)",
+            "Carbamazepina: mayor riesgo bloqueo AV",
+            "Teofilina/aminofilina: antagonizan efecto",
+            "Cafeína: reduce efecto",
+            "BB/verapamilo/digoxina: mayor riesgo bradicardia"
+          ],
+          "monitoramento": [
+            "ECG continuo durante/tras bolo",
+            "PA",
+            "Registro de trazado en administración",
+            "Desfibrilador disponible",
+            "Monitorizar broncoespasmo"
+          ],
+          "refs": [
+            "AHA ACLS Guidelines",
+            "ESC SVT Guidelines",
+            "AHA/ACC/HRS SVT Guidelines",
+            "Goodman & Gilman",
+            "Lexicomp",
+            "FDA/DailyMed"
+          ],
+          "alerts": [
+            {
+              "tipo": "info",
+              "msg": "📋 ECG continuo obligatorio. Preparar desfibrilador. Registrar trazado durante administración. Flush inmediato 20 mL SF tras bolo."
+            }
+          ]
+        },
+        "name": {
+          "pt": "adenosina",
+          "es": "adenosina"
+        },
+        "keywords": [
+          "adenosina"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "cardio.js"
+      }
+    }
+  ]
+}

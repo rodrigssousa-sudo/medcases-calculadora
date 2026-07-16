@@ -1,0 +1,135 @@
+{
+  "id": "ibutilida",
+  "category": "cardio",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "dose": "1 mg IV em 10 min",
+    "doseRepetir": "Pode repetir 1 mg IV após 10 min se FA/flutter persistir",
+    "doseTotalMax": "2 mg total",
+    "esquemaDose": "≥60 kg: 1 mg IV em 10 min | <60 kg: 0,01 mg/kg IV em 10 min. Repetir 1× se necessário após 10 min.",
+    "apresentacao": "Ampola IV 1 mg/10 mL (0,1 mg/mL)",
+    "classe": "Antiarrítmico Classe III IV | Bloqueador IKr + corrente lenta Na⁺ | t½ ~6 h",
+    "indicacoes": [
+      "FA recente (<48 h ou anticoagulada) — conversão farmacológica",
+      "Flutter atrial — alta taxa de conversão (~60–70%)",
+      "Flutter pós-operatório selecionado"
+    ],
+    "ajusteRenal": "Sem ajuste formal; cautela em DRC",
+    "efeitosAdversos": [
+      "Cefaleia",
+      "Náuseas",
+      "Tontura",
+      "Palpitações",
+      "Extrassístoles",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV",
+      "⚠️ QT prolongado grave",
+      "⚠️ Morte súbita arrítmica"
+    ],
+    "contraindicacoes": [
+      "QTc >440 ms basal",
+      "Torsades de Pointes prévia",
+      "Hipocalemia/hipomagnesemia não corrigidas",
+      "Antiarrítmicos Classe IA ou III concomitantes",
+      "IC descompensada",
+      "Instabilidade hemodinâmica (PAS <90)"
+    ],
+    "monitoramento": [
+      "ECG contínuo durante e ≥4 h após",
+      "QTc basal + seriado",
+      "K⁺ e Mg²⁺ corrigidos antes",
+      "PA + FC",
+      "Desfibrilador à beira-leito",
+      "Vigiar Torsades de Pointes"
+    ],
+    "refs": [
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA Corvert label"
+    ],
+    "alerts": [
+      {
+        "tipo": "danger",
+        "msg": "📋 MONITORIZAÇÃO: ECG contínuo durante infusão + 4 horas pós-dose (ou até QTc normalizar). Desfibrilador disponível obrigatório."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: Risco de Torsades de Pointes potencialmente fatal. Uso exclusivamente hospitalar monitorizado."
+      }
+    ]
+  },
+  "es": {
+    "dose": "1 mg IV em 10 min",
+    "doseRepetir": "Pode repetir 1 mg IV após 10 min se FA/flutter persistir",
+    "doseTotalMax": "2 mg total",
+    "esquemaDose": "≥60 kg: 1 mg IV en 10 min | <60 kg: 0,01 mg/kg IV en 10 min. Repetir 1× si necesario tras 10 min.",
+    "apresentacao": "Ampolla IV 1 mg/10 mL (0,1 mg/mL)",
+    "classe": "Antiarrítmico Clase III IV | Bloqueador IKr + corriente lenta Na⁺ | t½ ~6 h",
+    "indicacoes": [
+      "FA reciente (<48 h o anticoagulada) — conversión farmacológica",
+      "Flutter auricular — alta tasa de conversión (~60–70%)",
+      "Flutter postoperatorio seleccionado"
+    ],
+    "ajusteRenal": "Sin ajuste formal; precaución en ERC",
+    "efeitosAdversos": [
+      "Cefalea",
+      "Náuseas",
+      "Mareos",
+      "Palpitaciones",
+      "Extrasístoles",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV",
+      "⚠️ QT prolongado grave",
+      "⚠️ Muerte súbita arrítmica"
+    ],
+    "contraindicacoes": [
+      "QTc >440 ms basal",
+      "Torsades de Pointes previa",
+      "Hipocalemia/hipomagnesemia no corregidas",
+      "Antiarrítmicos Clase IA o III concomitantes",
+      "IC descompensada",
+      "Inestabilidad hemodinámica (PAS <90)"
+    ],
+    "monitoramento": [
+      "ECG continuo durante y ≥4 h tras",
+      "QTc basal + seriado",
+      "K⁺ y Mg²⁺ corregidos antes",
+      "PA + FC",
+      "Desfibrilador a la cabecera",
+      "Vigilar Torsades de Pointes"
+    ],
+    "refs": [
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA Corvert label"
+    ],
+    "alerts": [
+      {
+        "tipo": "danger",
+        "msg": "📋 MONITORIZACIÓN: ECG continuo durante infusión + 4 horas post-dosis (o hasta normalizar QTc). Desfibrilador disponible obligatorio."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: Riesgo de Torsades de Pointes potencialmente fatal. Uso exclusivamente hospitalario monitorizado."
+      }
+    ]
+  },
+  "name": {
+    "pt": "ibutilida",
+    "es": "ibutilida"
+  },
+  "keywords": [
+    "ibutilida"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

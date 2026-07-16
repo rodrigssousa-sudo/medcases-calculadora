@@ -1,0 +1,258 @@
+{
+  "id": "plazomicina",
+  "category": "atb",
+  "icon": "🧬",
+  "color": "rgba(220,38,38,0.12)",
+  "colorTxt": "#DC2626",
+  "pt": {
+    "name": "Plazomicina",
+    "class": "Aminoglicosídeo de nova geração (anti-AME — aminoglicosídeo-modificando enzimas)",
+    "commercialNames": {
+      "br": [
+        "Zemdri (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Zemdri"
+      ]
+    },
+    "presentation": [
+      "Solução para infusão EV: 500 mg/10 mL (50 mg/mL)"
+    ],
+    "dose": {
+      "adultoEV": "1050 mg EV 24/24h (70 kg — 15 mg/kg)"
+    },
+    "doseKg": {
+      "adultoEV_kg": "15 mg/kg/dose (peso: 70 kg = 1050 mg/dose)"
+    },
+    "indication": "Infecções do trato urinário complicadas (cITU) e pielonefrite por Enterobacterales resistentes a carbapenêmicos (CRE), incluindo cepas AME-positivas resistentes aos aminoglicosídeos convencionais.",
+    "spectrum": "Enterobacterales (incluindo CRE — KPC, NDM, OXA-48), E. coli, Klebsiella pneumoniae (inclusive ESBL/KPC), Enterobacter cloacae. Atividade mantida contra cepas resistentes a gentamicina/tobramicina/amicacina por AME. Sem atividade contra Pseudomonas, Acinetobacter ou bactérias anaeróbias.",
+    "contraindications": [
+      "Hipersensibilidade aos aminoglicosídeos",
+      "Miastenia grave (risco de bloqueio neuromuscular)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Nefrotoxicidade e ototoxicidade — monitorar função renal, audição e níveis séricos.",
+      "Dose baseada no peso corporal total (peso real).",
+      "Ajuste renal obrigatório quando ClCr < 50 mL/min; monitorização farmacocinética mandatória quando ClCr < 30."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Zemdri / IDSA CRE Guidelines 2022 / Lexicomp / Goodman & Gilman 14ª ed.",
+    "therapeuticMonitoring": {
+      "required": true,
+      "target": "Pico sérico alvo 58–65 mcg/mL (colher 1h após infusão de 30 min). Vale < 3–5 mcg/mL (30 min antes da próxima dose). AUC/MIC ≥ 80–100 como parâmetro PK/PD de eficácia.",
+      "monitoring": "Colher pico (1h após infusão) e vale (30 min antes da próxima dose) antes da 3ª dose (estado estacionário). Monitorar creatinina sérica e ClCr 2–3×/semana. Audiometria baseline e semanal em tratamentos > 7 dias. Uso guiado por cultura, antibiograma e infectologia.",
+      "notes": "Plazomicina mantém atividade contra isolados AME-positivos resistentes a gentamicina, tobramicina e amicacina. Vale persistentemente > 5 mcg/mL indica acúmulo — ampliar intervalo urgentemente. Nefrotoxicidade e ototoxicidade são dose-cumulativas — minimizar duração do tratamento."
+    },
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "15 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual baseada em peso corporal total (ou peso ajustado se obesidade). Infusão em 30 min. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "15 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "15 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 30–89 mL/min → 15 mg/kg 24/24h; aqui representado como 48/48h pelo motor para CrCl 30–50 — aplicar monitorização sérica para ajuste individualizado. Monitorar pico e vale antes da 2ª dose."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl < 30 mL/min → dose individualizada por farmacocinética obrigatória. Iniciar com 15 mg/kg e ampliar intervalo conforme vale sérico. Risco alto de nefrotoxicidade e ototoxicidade — considerar alternativa se ClCr < 15 mL/min."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "FDA label: dados insuficientes para ClCr < 15 mL/min — uso NÃO recomendado exceto em ausência de alternativa. Monitorização sérica mandatória (pico e vale). Risco muito elevado de nefrotoxicidade e ototoxicidade irreversível."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "Dose individualizada",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "FDA label: dados limitados em HD — administrar após hemodiálise com monitorização sérica (vale < 3 mcg/mL antes de repetir dose). Plazomicina é removida pela HD (~50% por sessão). Dose suplementar de 15 mg/kg pós-HD pode ser necessária para manter exposição terapêutica."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Monitorização sérica OBRIGATÓRIA em qualquer faixa de ClCr. Reservar para CRE AME-positivos confirmados sem alternativa menos tóxica. Ototoxicidade pode ser irreversível — audiometria baseline obrigatória."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Zemdri (plazomicin)",
+        "Sanford Guide 2025",
+        "IDSA CRE Guidelines 2022",
+        "Lexicomp",
+        "EPIC trial data"
+      ],
+      "note": "Bloco revisado. therapeuticMonitoring expandido com alvo de pico/vale e AUC/MIC. renalDose atualizado com cortes FDA e obs clínicas detalhadas por faixa. safetyFlags e auditNotes adicionados."
+    }
+  },
+  "es": {
+    "name": "Plazomicina",
+    "class": "Aminoglucósido de nueva generación (anti-AME — aminoglucósido-modificando enzimas)",
+    "commercialNames": {
+      "br": [
+        "Zemdri (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Zemdri"
+      ]
+    },
+    "presentation": [
+      "Solución para infusión EV: 500 mg/10 mL (50 mg/mL)"
+    ],
+    "dose": {
+      "adultoEV": "1050 mg EV 24/24h (70 kg — 15 mg/kg)"
+    },
+    "doseKg": {
+      "adultoEV_kg": "15 mg/kg/dose (peso: 70 kg = 1050 mg/dose)"
+    },
+    "indication": "Infecciones del tracto urinario complicadas (cITU) y pielonefritis por Enterobacterales resistentes a carbapenémicos (CRE), incluidas cepas AME-positivas resistentes a aminoglucósidos convencionales.",
+    "spectrum": "Enterobacterales (incluidos CRE — KPC, NDM, OXA-48), E. coli, Klebsiella pneumoniae (inclusive ESBL/KPC), Enterobacter cloacae. Actividad mantenida frente a cepas resistentes a gentamicina/tobramicina/amicacina por AME. Sin actividad frente a Pseudomonas, Acinetobacter ni bacterias anaerobias.",
+    "contraindications": [
+      "Hipersensibilidad a los aminoglucósidos",
+      "Miastenia gravis (riesgo de bloqueo neuromuscular)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Nefrotoxicidad y ototoxicidad — monitorizar función renal, audición y niveles séricos.",
+      "Dosis basada en el peso corporal total (peso real).",
+      "Ajuste renal obligatorio cuando ClCr < 50 mL/min; monitorización farmacocinética mandatoria cuando ClCr < 30."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Zemdri / IDSA CRE Guidelines 2022 / Lexicomp / Goodman & Gilman 14ª ed.",
+    "therapeuticMonitoring": {
+      "required": true,
+      "target": "Pico sérico objetivo 58–65 mcg/mL (colectar 1h después de infusión de 30 min). Valle < 3–5 mcg/mL (30 min antes de la próxima dosis). AUC/MIC ≥ 80–100 como parámetro PK/PD de eficacia.",
+      "monitoring": "Colectar pico (1h después de infusión) y valle (30 min antes de la próxima dosis) antes de la 3ª dosis (estado estacionario). Monitorizar creatinina sérica y ClCr 2–3×/semana. Audiometría basal y semanal en tratamientos > 7 días. Uso guiado por cultivo, antibiograma e infectología.",
+      "notes": "Plazomicina mantiene actividad frente a aislados AME-positivos resistentes a gentamicina, tobramicina y amikacina. Valle persistentemente > 5 mcg/mL indica acumulación — ampliar intervalo urgentemente. Nefrotoxicidad y ototoxicidad son dosis-cumulativas — minimizar duración del tratamiento."
+    },
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "15 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual basada en peso corporal total (o peso ajustado en obesidad). Infusión en 30 min. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "15 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "15 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 30–89 mL/min → 15 mg/kg 24/24h; aquí representado como 48/48h por el motor para CrCl 30–50 — aplicar monitorización sérica para ajuste individualizado. Monitorizar pico y valle antes de la 2ª dosis."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl < 30 mL/min → dosis individualizada por farmacocinética obligatoria. Iniciar con 15 mg/kg y ampliar intervalo según valle sérico. Riesgo alto de nefrotoxicidad y ototoxicidad — considerar alternativa si ClCr < 15 mL/min."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "FDA label: datos insuficientes para ClCr < 15 mL/min — uso NO recomendado excepto ante ausencia de alternativa. Monitorización sérica mandatoria (pico y valle). Riesgo muy elevado de nefrotoxicidad y ototoxicidad irreversible."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "Dose individualizada",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": null,
+        "obs": "FDA label: datos limitados en HD — administrar después de hemodiálisis con monitorización sérica (valle < 3 mcg/mL antes de repetir dosis). La plazomicina es removida por HD (~50% por sesión). Puede requerirse dosis suplementaria de 15 mg/kg post-HD para mantener exposición terapéutica."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Monitorización sérica OBLIGATORIA en cualquier rango de ClCr. Reservar para CRE AME-positivos confirmados sin alternativa menos tóxica. Ototoxicidad puede ser irreversible — audiometría basal obligatoria."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Zemdri (plazomicin)",
+        "Sanford Guide 2025",
+        "IDSA CRE Guidelines 2022",
+        "Lexicomp",
+        "EPIC trial data"
+      ],
+      "note": "Bloque revisado. therapeuticMonitoring expandido con objetivo de pico/valle y AUC/MIC. renalDose actualizado con cortes FDA y obs clínicas detalladas por rango. safetyFlags y auditNotes añadidos."
+    }
+  },
+  "name": {
+    "pt": "Plazomicina",
+    "es": "Plazomicina"
+  },
+  "keywords": [
+    "plazomicina",
+    "zemdri (acesso limitado no brasil)",
+    "zemdri",
+    "aminoglicosideo de nova geracao (anti-ame — aminoglicosideo-modificando enzimas)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

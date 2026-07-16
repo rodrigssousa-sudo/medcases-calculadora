@@ -1,0 +1,347 @@
+{
+  "id": "gentamicina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Gentamicina",
+    "class": "Aminoglicosídeo",
+    "commercialNames": {
+      "br": [
+        "Garamicina",
+        "Gentamicina Teuto",
+        "Gentamicina Eurofarma"
+      ],
+      "ar": [
+        "Garamicina",
+        "Gentamicina Richet",
+        "Gentamicina Klonal"
+      ]
+    },
+    "presentation": [
+      "Ampola 20 mg/2 mL",
+      "Ampola 80 mg/2 mL",
+      "Ampola 160 mg/2 mL"
+    ],
+    "dose": {
+      "extendedInterval": "490 mg EV a cada 24 horas",
+      "tradicional": "140 mg EV 8/8h"
+    },
+    "doseKg": {
+      "standard": "5–7 mg/kg/dose",
+      "endocardite": "1 mg/kg 8/8h",
+      "maxDose": "Monitorização obrigatória"
+    },
+    "therapeuticRange": "Monitorar pico e vale séricos.",
+    "dilution": "Diluir em 50–100 mL de SF 0,9%.",
+    "speed": "Infundir em 30–60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Tontura",
+      "Dor local"
+    ],
+    "dangerousAdverseEffects": [
+      "Nefrotoxicidade",
+      "Ototoxicidade",
+      "Bloqueio neuromuscular",
+      "Insuficiência renal aguda"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar creatinina diariamente.",
+      "Monitorar audição em tratamentos prolongados.",
+      "Evitar associação com outros nefrotóxicos."
+    ],
+    "ref": "Sanford Guide / Goodman & Gilman / IDSA",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "5–7 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "7 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "2–2,5 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "7,5 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Preferir esquema de dose estendida. Ajustar conforme níveis séricos."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "5–7 mg/kg",
+          "intervalo": "36–48/48h",
+          "doseMaxima": "7 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "6 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Obrigatória monitorização sérica."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste guiado por vale sérico e função renal."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "obs": "Alto risco de nefrotoxicidade e ototoxicidade."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "1–2 mg/kg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "1–2 mg/kg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise e monitorar níveis séricos."
+      }
+    },
+    "therapeuticMonitoring": {
+      "required": true,
+      "target": "Dose estendida (ODA 5–7 mg/kg/dia): pico 20–30 mcg/mL (1h após infusão) e vale < 1 mcg/mL. Dose convencional: pico 5–10 mcg/mL e vale < 2 mcg/mL. Monitorar nível antes da 3ª dose para estado estacionário.",
+      "monitoring": "Colher pico 30 min após fim da infusão (30 min) e vale 30 min antes da próxima dose. Monitorar creatinina sérica e ureia 2–3×/semana. Audiometria formal se tratamento > 7 dias ou paciente de risco (idosos, histórico de perda auditiva).",
+      "notes": "Maior risco de nefrotoxicidade quando associado a vancomicina ou anfotericina B. Dose estendida (ODA) tem menor nefrotoxicidade que dose convencional 8/8h com eficácia equivalente. Vale > 2 mcg/mL por mais de 48h: reduzir dose ou ampliar intervalo urgentemente."
+    },
+    "indicationDosing": {
+      "standard": "Dose convencional: 1,5–2 mg/kg EV 8/8h. Dose estendida (ODA): 5–7 mg/kg EV 24/24h (preferida por menor toxicidade).",
+      "severe": "Sepse gram-negativa / endocardite sinérgica: dose estendida 5–7 mg/kg/dia EV ou convencional 1,5 mg/kg 8/8h com monitoração intensiva.",
+      "synergy": "Sinergia (endocardite enterocócica ou estreptocócica): 1 mg/kg EV 8/8h por 2–4 semanas (dose baixa sinérgica)."
+    },
+    "neurotoxicityWarning": {
+      "risk": "high",
+      "symptoms": [
+        "Ototoxicidade vestibular (tontura, perda de equilíbrio, ataxia)",
+        "Ototoxicidade coclear (perda auditiva neurossensorial, zumbido)",
+        "Nefrotoxicidade (elevação de creatinina, oligúria)",
+        "Bloqueio neuromuscular (raro — especialmente em anestesia)"
+      ],
+      "management": "Suspender imediatamente se vale > 2 mcg/mL persistente, elevação de creatinina > 0,5 mg/dL ou sintomas auditivos/vestibulares. Ototoxicidade geralmente irreversível — não há antídoto. Monitorar audiometria formal em tratamentos > 7 dias. Bloqueio neuromuscular: gluconato de cálcio EV como medida de emergência."
+    },
+    "qtRisk": {
+      "risk": "none",
+      "monitoring": "Sem risco clinicamente significativo de prolongamento do QT.",
+      "contraindications": []
+    }
+  },
+  "es": {
+    "name": "Gentamicina",
+    "class": "Aminoglucósido",
+    "commercialNames": {
+      "br": [
+        "Garamicina",
+        "Gentamicina Teuto",
+        "Gentamicina Eurofarma"
+      ],
+      "ar": [
+        "Garamicina",
+        "Gentamicina Richet",
+        "Gentamicina Klonal"
+      ]
+    },
+    "presentation": [
+      "Ampolla 20 mg/2 mL",
+      "Ampolla 80 mg/2 mL",
+      "Ampolla 160 mg/2 mL"
+    ],
+    "dose": {
+      "extendedInterval": "490 mg EV cada 24 horas",
+      "tradicional": "140 mg EV cada 8h"
+    },
+    "doseKg": {
+      "standard": "5–7 mg/kg/dosis",
+      "endocardite": "1 mg/kg cada 8h",
+      "maxDose": "Monitorización obligatoria"
+    },
+    "therapeuticRange": "Monitorar pico y valle séricos.",
+    "dilution": "Diluir en 50–100 mL de SF 0,9%.",
+    "speed": "Infundir en 30–60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Mareo",
+      "Dolor local"
+    ],
+    "dangerousAdverseEffects": [
+      "Nefrotoxicidad",
+      "Ototoxicidad",
+      "Bloqueo neuromuscular",
+      "Insuficiencia renal aguda"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar creatinina diariamente.",
+      "Monitorar audición en tratamientos prolongados.",
+      "Evitar asociación con otros nefrotóxicos."
+    ],
+    "ref": "Sanford Guide / Goodman & Gilman / IDSA",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "5–7 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "7 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "2–2,5 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "7,5 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Preferir esquema de dosis extendida. Ajustar según niveles séricos."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "5–7 mg/kg",
+          "intervalo": "36–48/48h",
+          "doseMaxima": "7 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "6 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Obligatoria monitorización sérica."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste guiado por valle sérico y función renal."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "Dose individualizada",
+          "intervalo": "Conforme nível sérico",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "obs": "Alto riesgo de nefrotoxicidad y ototoxicidad."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "1–2 mg/kg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "1–2 mg/kg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "Individualizada",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis y monitorizar niveles séricos."
+      }
+    },
+    "therapeuticMonitoring": {
+      "required": true,
+      "target": "Dosis extendida (ODA 5–7 mg/kg/día): pico 20–30 mcg/mL (1h después de infusión) y valle < 1 mcg/mL. Dosis convencional: pico 5–10 mcg/mL y valle < 2 mcg/mL. Monitorizar nivel antes de la 3ª dosis para estado estacionario.",
+      "monitoring": "Colectar pico 30 min después del fin de infusión (30 min) y valle 30 min antes de la próxima dosis. Monitorizar creatinina sérica y urea 2–3×/semana. Audiometría formal si tratamiento > 7 días o paciente de riesgo (ancianos, historial de pérdida auditiva).",
+      "notes": "Mayor riesgo de nefrotoxicidad cuando se asocia a vancomicina o anfotericina B. Dosis extendida (ODA) tiene menor nefrotoxicidad que dosis convencional 8/8h con eficacia equivalente. Valle > 2 mcg/mL por más de 48h: reducir dosis o ampliar intervalo urgentemente."
+    },
+    "indicationDosing": {
+      "standard": "Dosis convencional: 1,5–2 mg/kg IV 8/8h. Dosis extendida (ODA): 5–7 mg/kg IV 24/24h (preferida por menor toxicidad).",
+      "severe": "Sepsis gramnegativa / endocarditis sinérgica: dosis extendida 5–7 mg/kg/día IV o convencional 1,5 mg/kg 8/8h con monitoreo intensivo.",
+      "synergy": "Sinergia (endocarditis enterocócica o estreptocócica): 1 mg/kg IV 8/8h por 2–4 semanas (dosis baja sinérgica)."
+    },
+    "neurotoxicityWarning": {
+      "risk": "high",
+      "symptoms": [
+        "Ototoxicidad vestibular (mareos, pérdida de equilibrio, ataxia)",
+        "Ototoxicidad coclear (pérdida auditiva neurosensorial, tinnitus)",
+        "Nefrotoxicidad (elevación de creatinina, oliguria)",
+        "Bloqueo neuromuscular (raro — especialmente en anestesia)"
+      ],
+      "management": "Suspender inmediatamente si valle > 2 mcg/mL persistente, elevación de creatinina > 0,5 mg/dL o síntomas auditivos/vestibulares. Ototoxicidad generalmente irreversible — no hay antídoto. Monitorizar audiometría formal en tratamientos > 7 días. Bloqueo neuromuscular: gluconato de calcio IV como medida de emergencia."
+    },
+    "qtRisk": {
+      "risk": "none",
+      "monitoring": "Sin riesgo clínicamente significativo de prolongamiento del QT.",
+      "contraindications": []
+    }
+  },
+  "name": {
+    "pt": "Gentamicina",
+    "es": "Gentamicina"
+  },
+  "keywords": [
+    "gentamicina",
+    "garamicina",
+    "gentamicina teuto",
+    "gentamicina eurofarma",
+    "gentamicina richet",
+    "gentamicina klonal",
+    "aminoglicosideo"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

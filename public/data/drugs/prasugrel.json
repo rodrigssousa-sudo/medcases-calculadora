@@ -1,0 +1,175 @@
+{
+  "id": "prasugrel",
+  "category": "anticoag",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Prasugrel (Cloridrato de)"
+  },
+  "es": {
+    "name": "Prasugrel (Clorhidrato de)"
+  },
+  "name": {
+    "pt": "Prasugrel (Cloridrato de)",
+    "es": "Prasugrel (Clorhidrato de)"
+  },
+  "keywords": [
+    "prasugrel",
+    "prasugrel (cloridrato de)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "anticoag.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "anticoag.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "cardio.js",
+      "record": {
+        "id": "prasugrel",
+        "category": "cardio",
+        "icon": "🩸",
+        "color": "rgba(239,68,68,0.13)",
+        "colorTxt": "#B91C1C",
+        "pt": {
+          "name": "Prasugrel (Cloridrato de)",
+          "class": "Antiagregante Plaquetário de Alta Potência — Tienopiridina P2Y12",
+          "commercialNames": {
+            "br": [
+              "Effient"
+            ],
+            "ar": [
+              "Effient"
+            ]
+          },
+          "presentation": [
+            "Comprimidos revestidos 5 mg e 10 mg"
+          ],
+          "dose": {
+            "adultoPadrao": "Dose de Ataque (cateterismo): 60 mg VO dose única. Manutenção: 10 mg VO 1x/dia.",
+            "adultoGrave": null,
+            "pediatricaPadrao": "Não indicado em pediatria.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null
+          },
+          "doseKg": {
+            "padrao": null,
+            "grave": null,
+            "meningite": null,
+            "doseMaxima": "60 mg ataque / 10 mg/dia manutenção"
+          },
+          "therapeuticRange": "Sem nível sérico monitorável. Mais previsível que o clopidogrel por não depender de polimorfismo da CYP2C19.",
+          "dilution": "Medicamento oral. Não há forma IV.",
+          "speed": "Via oral. A carga de 60 mg é dada na mesa de hemodinâmica, pelo intervencionista.",
+          "commonAdverseEffects": [
+            "Sangramentos cutâneos espontâneos",
+            "Anemia por micro-sangramentos",
+            "Epistaxe"
+          ],
+          "severeAdverseEffects": [
+            "Hemorragia fatal severa",
+            "AVC hemorrágico devastador — Alerta Caixa Preta em idosos com AVC/AIT prévio"
+          ],
+          "contraindications": [
+            "CONTRAINDICAÇÃO ABSOLUTA: Histórico de AVC ou AIT (risco proibitivo de hemorragia intracraniana)",
+            "Sangramento patológico ativo",
+            "Insuficiência hepática grave"
+          ],
+          "pregnancyCategory": "Categoria B — Evitar; dados insuficientes de segurança fetal.",
+          "breastfeeding": null,
+          "renalAdjust": "Sem ajuste necessário.",
+          "hepaticAdjust": "Sem ajuste em falência leve/moderada. Contraindicado na grave.",
+          "interactions": [
+            "AINEs — Risco hemorrágico GI sinérgico severo.",
+            "Anticoagulantes (DOAC/Varfarina) — Terapia tripla: alto risco; prasugrel é mais potente que clopidogrel nesse contexto."
+          ],
+          "clinicalPearl": "BLACK BOX AVC/AIT: Expressamente PROIBIDO em pacientes com histórico de AVC ou AIT. Reduzir manutenção para 5 mg em peso < 60 kg ou ≥ 75 anos para minimizar sangramento.",
+          "evidence": "TRITON-TIMI 38 Trial (NEJM 2007) — Superior ao clopidogrel em ICP; TRILOGY-ACS — SCA sem ST."
+        },
+        "es": {
+          "name": "Prasugrel (Clorhidrato de)",
+          "class": "Antiagregante Plaquetario de Alta Potencia — Tienopiridina P2Y12",
+          "commercialNames": {
+            "br": [
+              "Effient"
+            ],
+            "ar": [
+              "Effient"
+            ]
+          },
+          "presentation": [
+            "Comprimidos recubiertos 5 mg y 10 mg"
+          ],
+          "dose": {
+            "adultoPadrao": "Dosis de Carga (cateterismo): 60 mg VO dosis única. Mantenimiento: 10 mg VO 1 vez/día.",
+            "adultoGrave": null,
+            "pediatricaPadrao": "No indicado en pediatría.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null
+          },
+          "doseKg": {
+            "padrao": null,
+            "grave": null,
+            "meningite": null,
+            "doseMaxima": "60 mg carga / 10 mg/día mantenimiento"
+          },
+          "therapeuticRange": "Sin nivel sérico monitoreable. Más predecible que clopidogrel (no depende del polimorfismo CYP2C19).",
+          "dilution": "Medicamento oral. No hay forma IV.",
+          "speed": "Vía oral. La carga de 60 mg se administra en la mesa de cateterismo.",
+          "commonAdverseEffects": [
+            "Sangrados cutáneos espontáneos",
+            "Anemia por microsangrados",
+            "Epistaxis"
+          ],
+          "severeAdverseEffects": [
+            "Hemorragia fatal severa",
+            "ACV hemorrágico — Alerta de Caja Negra en ancianos con ACV/AIT previo"
+          ],
+          "contraindications": [
+            "CONTRAINDICACIÓN ABSOLUTA: Antecedentes de ACV o AIT",
+            "Sangrado patológico activo",
+            "Insuficiencia hepática grave"
+          ],
+          "pregnancyCategory": "Categoría B — Evitar; datos insuficientes de seguridad fetal.",
+          "breastfeeding": null,
+          "renalAdjust": "Sin ajuste necesario.",
+          "hepaticAdjust": "Sin ajuste en falla leve/moderada. Contraindicado en grave.",
+          "interactions": [
+            "AINEs — Riesgo hemorrágico GI sinérgico severo.",
+            "Anticoagulantes — Terapia triple: prasugrel más potente que clopidogrel en este contexto."
+          ],
+          "clinicalPearl": "CAJA NEGRA ACV/AIT: PROHIBIDO en pacientes con antecedentes de ACV o AIT. Reducir mantenimiento a 5 mg en peso < 60 kg o ≥ 75 años.",
+          "evidence": "TRITON-TIMI 38 Trial (NEJM 2007) — Superior al clopidogrel en ICP; TRILOGY-ACS — SCA sin ST."
+        },
+        "name": {
+          "pt": "Prasugrel (Cloridrato de)",
+          "es": "Prasugrel (Clorhidrato de)"
+        },
+        "keywords": [
+          "prasugrel",
+          "prasugrel (cloridrato de)",
+          "prasugrel (clorhidrato de)",
+          "effient",
+          "antiagregante plaquetario de alta potencia — tienopiridina p2y12"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "cardio.js"
+      }
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "quinidina",
+  "category": "cardio",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "dose": "200–300 mg VO 6/6h (sulfato de quinidina)",
+    "clcrEstimado": "90 mL/min",
+    "apresentacao": "Comprimidos/cápsulas sulfato quinidina 200 mg | Formulações LP conforme disponibilidade",
+    "classe": "Antiarrítmico Classe IA | Anticolinérgico (vagolítico) | Prolonga QRS + QT + PR | t½ 6–8 h",
+    "indicacoes": [
+      "FA/flutter selecionados (contexto especializado)",
+      "Arritmias ventriculares selecionadas",
+      "Síndrome de Brugada (opção especializada)",
+      "Síndrome do QT curto (opção especializada)"
+    ],
+    "ajusteRenal": "ClCr 90 mL/min — 200–300 mg 6/6h",
+    "efeitosAdversos": [
+      "Diarreia",
+      "Náuseas/Vômitos",
+      "Dor abdominal",
+      "Cefaleia",
+      "Zumbido",
+      "Tontura",
+      "Visão turva",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV/Morte súbita",
+      "⚠️ Cinchonismo grave",
+      "⚠️ Trombocitopenia imune",
+      "⚠️ Anemia hemolítica",
+      "⚠️ Hepatotoxicidade"
+    ],
+    "monitoramento": [
+      "ECG + QTc + QRS seriados",
+      "K⁺ + Mg²⁺ + Ca²⁺",
+      "Nível digoxina se associado (↑ ~2×)",
+      "INR se varfarina",
+      "Hemograma periódico (uso crônico)",
+      "TGO/TGP periódico",
+      "Sintomas de cinchonismo",
+      "Síncope como sinal de Torsades"
+    ],
+    "refs": [
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS Arrhythmia Guidelines",
+      "Brugada Syndrome Consensus",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA/DailyMed label"
+    ],
+    "alerts": [
+      {
+        "tipo": "warning",
+        "msg": "⚠️ Efeito vagolítico: quinidina pode paradoxalmente AUMENTAR condução AV em flutter/FA e precipitar resposta ventricular rápida. Usar bloqueador AV (betabloqueador, verapamil ou diltiazem) concomitantemente."
+      },
+      {
+        "tipo": "warning",
+        "msg": "⚠️ Cinchonismo: zumbido, cefaleia, náuseas, visão turva e confusão são sinais de toxicidade por quinidina. Informar paciente e suspender se ocorrerem."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: Torsades de Pointes e morte súbita. Uso para arritmias não ameaçadoras pode aumentar mortalidade. Uso EXCLUSIVAMENTE especializado."
+      }
+    ]
+  },
+  "es": {
+    "dose": "200–300 mg VO 6/6h (sulfato de quinidina)",
+    "clcrEstimado": "90 mL/min",
+    "apresentacao": "Comprimidos/cápsulas sulfato quinidina 200 mg | Formulaciones LP según disponibilidad",
+    "classe": "Antiarrítmico Clase IA | Anticolinérgico (vagolítico) | Prolonga QRS + QT + PR | t½ 6–8 h",
+    "indicacoes": [
+      "FA/flutter seleccionados (contexto especializado)",
+      "Arritmias ventriculares seleccionadas",
+      "Síndrome de Brugada (opción especializada)",
+      "Síndrome de QT corto (opción especializada)"
+    ],
+    "ajusteRenal": "ClCr 90 mL/min — 200–300 mg c/6h",
+    "efeitosAdversos": [
+      "Diarrea",
+      "Náuseas/Vómitos",
+      "Dolor abdominal",
+      "Cefalea",
+      "Tinnitus",
+      "Mareos",
+      "Visión borrosa",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV/Muerte súbita",
+      "⚠️ Cinconismo grave",
+      "⚠️ Trombocitopenia inmune",
+      "⚠️ Anemia hemolítica",
+      "⚠️ Hepatotoxicidad"
+    ],
+    "monitoramento": [
+      "ECG + QTc + QRS seriados",
+      "K⁺ + Mg²⁺ + Ca²⁺",
+      "Nivel digoxina si asociado (↑ ~2×)",
+      "INR si warfarina",
+      "Hemograma periódico (uso crónico)",
+      "TGO/TGP periódico",
+      "Síntomas de cinconismo",
+      "Síncope como señal de Torsades"
+    ],
+    "refs": [
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS Arrhythmia Guidelines",
+      "Brugada Syndrome Consensus",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA/DailyMed label"
+    ],
+    "alerts": [
+      {
+        "tipo": "warning",
+        "msg": "⚠️ Efecto vagolítico: quinidina puede paradójicamente AUMENTAR conducción AV en flutter/FA y precipitar respuesta ventricular rápida. Usar bloqueador AV (betabloqueante, verapamilo o diltiazem) concomitantemente."
+      },
+      {
+        "tipo": "warning",
+        "msg": "⚠️ Cinconismo: tinnitus, cefalea, náuseas, visión borrosa y confusión son signos de toxicidad por quinidina. Informar paciente y suspender si ocurren."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: Torsades de Pointes y muerte súbita. Uso para arritmias no amenazantes puede aumentar mortalidad. Uso EXCLUSIVAMENTE especializado."
+      }
+    ]
+  },
+  "name": {
+    "pt": "quinidina",
+    "es": "quinidina"
+  },
+  "keywords": [
+    "quinidina"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

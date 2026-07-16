@@ -1,0 +1,359 @@
+{
+  "id": "minociclina",
+  "category": "atb",
+  "icon": "🟡",
+  "color": "rgba(234,179,8,0.15)",
+  "colorTxt": "#EAB308",
+  "pt": {
+    "name": "Minociclina",
+    "class": "Tetraciclina de 2ª geração",
+    "commercialNames": {
+      "br": [
+        "Minomycin",
+        "Minociclina Genérica"
+      ],
+      "ar": [
+        "Minocin",
+        "Minociclina Genérica"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 50 mg, 100 mg",
+      "Comprimidos de liberação prolongada: 45 mg, 90 mg, 135 mg",
+      "Pó para solução EV: 100 mg"
+    ],
+    "dose": {
+      "adultoVO": "200 mg dose de ataque, depois 100 mg VO/EV 12/12h",
+      "adultoEV": "200 mg dose de ataque EV, depois 100 mg EV 12/12h (infusão 60 min)",
+      "pediatrica": "140 mg/dose VO/EV 12/12h (ataque: 4 mg/kg)"
+    },
+    "doseKg": {
+      "pediatrica": "2 mg/kg/dose 12/12h (ataque: 4 mg/kg)"
+    },
+    "mechanism": "Liga-se à subunidade 30S ribossomal, inibindo reversível e bacteriostaticamente a síntese proteica bacteriana. Excelente penetração intracelular.",
+    "onset": "Absorção oral rápida — Tmáx 2–4 h; biodisponibilidade > 90%.",
+    "halfLife": "Meia-vida 11–26 h (eliminação principalmente hepática — NÃO renal).",
+    "therapeuticRange": "Bacteriostático. Concentração-dependente para alguns organismos intracelulares.",
+    "dilution": "EV: reconstituir 100 mg em 5 mL de água estéril; diluir em 500–1000 mL de SF/SG.",
+    "speed": "Infundir em 60–360 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas e vômitos",
+      "Tontura e vertigem",
+      "Fotossensibilidade",
+      "Pigmentação cutânea/dental",
+      "Diarreia"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidade grave",
+      "Hipertensão intracraniana benigna",
+      "Síndrome lúpus-like",
+      "Vestibulotoxicidade (tontura, vertigem grave)"
+    ],
+    "contraindications": [
+      "Gestação (especialmente 2º e 3º trimestres)",
+      "Crianças < 8 anos (pigmentação dentária permanente)",
+      "Hipersensibilidade a tetraciclinas"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Não tomar com laticínios, antiácidos com Ca²⁺/Mg²⁺/Al³⁺, ferro ou zinco — quelação reduz absorção.",
+      "Usar fotoproteção solar durante o tratamento.",
+      "Não requer ajuste renal — vantagem em pacientes com DRC."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Após dose de ataque de 200 mg."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar hepatotoxicidade e vestibulotoxicidade."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita dose suplementar pós-HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Minociclina",
+    "class": "Tetraciclina de 2ª generación",
+    "commercialNames": {
+      "br": [
+        "Minomycin",
+        "Minociclina Genérica"
+      ],
+      "ar": [
+        "Minocin",
+        "Minociclina Genérica"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 50 mg, 100 mg",
+      "Comprimidos de liberación prolongada: 45 mg, 90 mg, 135 mg",
+      "Polvo para solución EV: 100 mg"
+    ],
+    "dose": {
+      "adultoVO": "200 mg dosis de carga, luego 100 mg VO/EV cada 12h",
+      "adultoEV": "200 mg dosis de carga EV, luego 100 mg EV cada 12h (infusión 60 min)",
+      "pediatrica": "140 mg/dosis VO/EV cada 12h (carga: 4 mg/kg)"
+    },
+    "doseKg": {
+      "pediatrica": "2 mg/kg/dosis cada 12h (carga: 4 mg/kg)"
+    },
+    "mechanism": "Se une a la subunidad 30S ribosomal, inhibiendo reversible y bacteriostáticamente la síntesis proteica bacteriana. Excelente penetración intracelular.",
+    "onset": "Absorción oral rápida — Tmáx 2–4 h; biodisponibilidad > 90%.",
+    "halfLife": "Semivida 11–26 h (eliminación principalmente hepática — NO renal).",
+    "therapeuticRange": "Bacteriostático. Concentración-dependiente para algunos organismos intracelulares.",
+    "dilution": "EV: reconstituir 100 mg en 5 mL de agua estéril; diluir en 500–1000 mL de SF/SG.",
+    "speed": "Infundir en 60–360 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas y vómitos",
+      "Mareos y vértigo",
+      "Fotosensibilidad",
+      "Pigmentación cutánea/dental",
+      "Diarrea"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidad grave",
+      "Hipertensión intracraneal benigna",
+      "Síndrome lupus-like",
+      "Vestibulotoxicidad (mareo, vértigo grave)"
+    ],
+    "contraindications": [
+      "Gestación (especialmente 2º y 3er trimestres)",
+      "Niños < 8 años (pigmentación dental permanente)",
+      "Hipersensibilidad a tetraciclinas"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "No tomar con lácteos, antiácidos con Ca²⁺/Mg²⁺/Al³⁺, hierro o zinc — quelación reduce absorción.",
+      "Usar fotoprotección solar durante el tratamiento.",
+      "No requiere ajuste renal — ventaja en pacientes con ERC."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Tras dosis de carga de 200 mg."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar hepatotoxicidad y vestibulotoxicidad."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere dosis suplementaria post-HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Minociclina",
+    "es": "Minociclina"
+  },
+  "keywords": [
+    "minociclina",
+    "minomycin",
+    "minociclina generica",
+    "minocin",
+    "tetraciclina de 2ª geracao"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

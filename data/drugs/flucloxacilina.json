@@ -1,0 +1,312 @@
+{
+  "id": "flucloxacilina",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(245,158,11,0.12)",
+  "colorTxt": "#92400E",
+  "pt": {
+    "name": "Flucloxacilina",
+    "class": "Penicilina resistente à penicilinase (isoxazolilpenicilina — anti-MSSA, padrão europeu)",
+    "commercialNames": {
+      "br": [
+        "Flucloxacilina Genérico (uso limitado no Brasil)"
+      ],
+      "ar": [
+        "Flucloxacilina Genérico"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 250 mg, 500 mg",
+      "Pó para solução injetável EV/IM: 250 mg, 500 mg, 1 g por frasco",
+      "Suspensão oral: 125 mg/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "500 mg–1 g VO 6/6h (em jejum)",
+      "adultoEV": "1–2 g EV 6/6h"
+    },
+    "doseKg": null,
+    "indication": "Infecções por MSSA: endocardite, bacteremia, osteomielite, artrite séptica, infecções de pele e partes moles, pneumonia estafilocócica. Droga de escolha para MSSA em muitos países europeus (equivalente à nafcilina/oxacilina nas Américas).",
+    "spectrum": "Staphylococcus aureus (MSSA), Staphylococcus epidermidis (MSSE), Streptococcus spp. Sem atividade contra MRSA, Gram-negativos, enterococos ou anaeróbios.",
+    "contraindications": [
+      "Hipersensibilidade às penicilinas"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "DROGA DE ESCOLHA para MSSA em países europeus — equivalente funcional à nafcilina.",
+      "Tomar VO em jejum — alimentos reduzem absorção.",
+      "Hepatotoxicidade colestática idiossincrática — mais comum que com dicloxacilina; monitorar enzimas hepáticas.",
+      "Não necessita ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / BSAC Guidelines / EMA Prescribing Information / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Primeira linha para MSSA em diversos países."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar hepatotoxicidade colestática."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após HD quando possível."
+      }
+    }
+  },
+  "es": {
+    "name": "Flucloxacilina",
+    "class": "Penicilina resistente a penicilinasa (isoxazolilpenicilina — anti-MSSA, estándar europeo)",
+    "commercialNames": {
+      "br": [
+        "Flucloxacilina Genérico (uso limitado no Brasil)"
+      ],
+      "ar": [
+        "Flucloxacilina Genérico"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 250 mg, 500 mg",
+      "Polvo para solución inyectable EV/IM: 250 mg, 500 mg, 1 g por frasco",
+      "Suspensión oral: 125 mg/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "500 mg–1 g VO 6/6h (en ayunas)",
+      "adultoEV": "1–2 g EV 6/6h"
+    },
+    "doseKg": null,
+    "indication": "Infecciones por MSSA: endocarditis, bacteriemia, osteomielitis, artritis séptica, infecciones de piel y partes blandas, neumonía estafilocócica. Droga de elección para MSSA en muchos países europeos (equivalente a nafcilina/oxacilina en las Américas).",
+    "spectrum": "Staphylococcus aureus (MSSA), Staphylococcus epidermidis (MSSE), Streptococcus spp. Sin actividad frente a MRSA, Gramnegativos, enterococos ni anaerobios.",
+    "contraindications": [
+      "Hipersensibilidad a las penicilinas"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "DROGA DE ELECCIÓN para MSSA en países europeos — equivalente funcional a nafcilina.",
+      "Tomar VO en ayunas — los alimentos reducen la absorción.",
+      "Hepatotoxicidad colestásica idiosincrática — más común que con dicloxacilina; monitorizar enzimas hepáticas.",
+      "No requiere ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / BSAC Guidelines / EMA Prescribing Information / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Primera línea para MSSA en diversos países."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar hepatotoxicidad colestásica."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de HD cuando sea posible."
+      }
+    }
+  },
+  "name": {
+    "pt": "Flucloxacilina",
+    "es": "Flucloxacilina"
+  },
+  "keywords": [
+    "flucloxacilina",
+    "flucloxacilina generico (uso limitado no brasil)",
+    "flucloxacilina generico",
+    "penicilina resistente a penicilinase (isoxazolilpenicilina — anti-mssa, padrao europeu)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

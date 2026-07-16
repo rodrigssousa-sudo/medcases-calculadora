@@ -1,0 +1,717 @@
+{
+  "id": "bisoprolol",
+  "category": "cardio",
+  "icon": "🫀",
+  "color": "rgba(239,68,68,0.13)",
+  "colorTxt": "#991B1B",
+  "pt": {
+    "name": "Fumarato de Bisoprolol",
+    "class": "Betabloqueador beta-1 seletivo (alta seletividade)",
+    "commercialNames": {
+      "br": [
+        "Concor",
+        "Bisoprolol genérico",
+        "Emconcor"
+      ],
+      "ar": [
+        "Concor",
+        "Bisoprolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 1,25 mg, 2,5 mg, 5 mg, 10 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA/Angina/FA: 2,5–5 mg VO 1x/dia. Manutenção 5–10 mg/dia. Máximo 20 mg/dia.",
+      "adultoGrave": "ICC (ICFEr — CIBIS II): iniciar 1,25 mg VO 1x/dia. Dobrar a dose a cada 2 semanas se tolerado, até alvo de 10 mg/dia.",
+      "pediatricaPadrao": "Uso pediátrico não aprovado formalmente. Dados limitados em ICC pediátrica.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adultos: 0,02–0,2 mg/kg/dia VO 1x/dia (referência clínica)",
+      "grave": "ICC: titular de 1,25 mg até 10 mg/dia independente do peso",
+      "meningite": null,
+      "doseMaxima": "Adultos: 10 mg/dia (ICC) / 20 mg/dia (HTA/Angina)"
+    },
+    "therapeuticRange": "ICC: alvo de FC 55–65 bpm em repouso. HTA: FC < 70 bpm com PA-alvo atingida. Titular sempre com base em resposta clínica.",
+    "dilution": "Apenas formulação oral disponível comercialmente. Sem apresentação EV padronizada.",
+    "speed": "VO: tomar pela manhã, com ou sem alimento, no mesmo horário diariamente.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Fadiga",
+      "Tontura / hipotensão",
+      "Extremidades frias",
+      "Cefaleia"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueio AV de 2º/3º grau",
+      "Choque cardiogênico",
+      "Broncoespasmo (especialmente em asma grave)",
+      "Descompensação de ICC em início abrupto ou dose elevada"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NUNCA suspender abruptamente — risco de síndrome de abstinência, angina rebote e morte súbita.",
+      "Segurar se: FC < 50 bpm, PAS < 90 mmHg, bloqueio AV 2º/3º grau ou ICC agudamente descompensada.",
+      "Interação grave com verapamil EV ou diltiazem EV: risco de bradicardia fatal e bloqueio AV.",
+      "Usar com precaução em DPOC moderado/grave — preferir cardioseletivos de alta seletividade como bisoprolol nesse contexto."
+    ],
+    "ref": "ESC Heart Failure Guidelines 2021 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · CIBIS-II Trial (Lancet 1999) · BISOCOR Trial · Lexicomp 2026 · EMA Concor SmPC 2024",
+    "mechanism": "Bloqueio seletivo competitivo dos receptores β1-adrenérgicos cardíacos com alta seletividade (razão β1:β2 ≈ 75:1 — maior que metoprolol ~74:1 e atenolol ~35:1). Reduz FC, débito cardíaco e consumo miocárdico de O₂. A alta seletividade beta-1 minimiza broncoespasmo e vasoconstrição periférica, tornando-o preferível em DPOC leve-moderado. Formulação oral única — sem apresentação EV comercialmente disponível.",
+    "pharmacokinetics": {
+      "absorption": "Absorção oral > 90%. Biodisponibilidade ~88% (baixo efeito de primeira passagem). Alimento não afeta significativamente a absorção.",
+      "bioavailability": "~88% (muito superior ao metoprolol ~40–50%)",
+      "proteinBinding": "~30% (moderada)",
+      "vd": "~3,5 L/kg",
+      "metabolism": "Dual: 50% hepático (CYP3A4/CYP2D6) → metabólitos inativos; 50% eliminado renal inalterado. Sem efeito de first-pass significativo. Menor influência de polimorfismo CYP2D6 que metoprolol.",
+      "halfLife": "10–12 horas (permite posologia 1x/dia)",
+      "elimination": "50% renal inalterado + 50% hepático (metabólitos). Por isso requer ajuste em IR grave (ClCr < 20 mL/min).",
+      "dialysability": "Hemodiálise: não removido significativamente. Diálise peritoneal: não removido de forma relevante. CVVH/CVVHDF: remoção mínima."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensão arterial sistêmica",
+        "Angina estável crônica",
+        "ICC com fração de ejeção reduzida (ICFEr) — evidência CIBIS-II",
+        "Fibrilação atrial (controle de frequência ventricular)"
+      ],
+      "offLabel": [
+        "Hipertireoidismo (controle sintomático de taquicardia)",
+        "Síndrome de taquicardia postural ortostática (POTS)",
+        "Profilaxia de enxaqueca (dados limitados)",
+        "Tremor essencial"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Bradicardia sinusal < 50 bpm sintomática",
+        "Bloqueio AV de 2º grau (Mobitz II) ou 3º grau sem marcapasso",
+        "Síndrome do seio doente sem marcapasso",
+        "Choque cardiogênico",
+        "ICC agudamente descompensada que requer suporte inotrópico IV",
+        "PAS < 90 mmHg",
+        "Asma brônquica grave / broncoespasmo ativo",
+        "Hipersensibilidade ao bisoprolol"
+      ],
+      "relative": [
+        "DPOC moderado com broncoespasmo reversível (usar com cautela — alta seletividade favorece uso)",
+        "IR grave ClCr < 20 mL/min (ajuste necessário, dose máx 10 mg/dia)",
+        "Diabetes insulinodependente (mascaramento de sinais de hipoglicemia, exceto sudorese)",
+        "Doença vascular periférica grave (Raynaud)",
+        "Feocromocitoma sem bloqueio α prévio",
+        "Hipotireoidismo (pode agravar bradicardia)",
+        "Psoríase (pode exacerbar)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamil EV / Diltiazem EV",
+          "mechanism": "Dupla inibição nodal AV (dromotrópico negativo aditivo)",
+          "consequence": "Bloqueio AV completo, parada cardíaca",
+          "management": "NÃO associar EV. Via oral: extrema cautela com monitorização contínua."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Clonidina",
+          "mechanism": "Retirada abrupta da clonidina em uso concomitante → hipertensão rebote grave",
+          "consequence": "Crise hipertensiva grave",
+          "management": "Descontinuar bisoprolol dias antes de suspender clonidina."
+        },
+        {
+          "drug": "Insulina / hipoglicemiantes orais",
+          "mechanism": "Mascaramento da taquicardia reflexa da hipoglicemia",
+          "consequence": "Hipoglicemia grave não reconhecida",
+          "management": "Monitorar glicemia. Orientar: sudorese persiste como sinal alternativo."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Inibição de CYP2D6/CYP3A4 pela amiodarona + efeito bradicardizante aditivo",
+          "consequence": "Bradicardia grave, bloqueio AV",
+          "management": "Reduzir dose de bisoprolol. Monitorar ECG continuamente."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINES (ibuprofeno, naproxeno)",
+          "mechanism": "Antagonismo do efeito anti-hipertensivo por redução de prostaglandinas vasodilatadoras",
+          "consequence": "Redução do controle pressórico",
+          "management": "Monitorar PA. Preferir paracetamol."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efeito cronotrópico e dromotrópico negativo aditivo",
+          "consequence": "Bradicardia e bloqueio AV",
+          "management": "Monitorar FC e ECG. Ajustar doses conforme resposta."
+        },
+        {
+          "drug": "Anestésicos gerais (propofol, sevoflurano)",
+          "mechanism": "Depressão miocárdica e hipotensão aditiva",
+          "consequence": "Hipotensão intraoperatória, bradicardia",
+          "management": "Informar anestesiologista. Manter bisoprolol no perioperatório de pacientes com ICC/DAC (reduz eventos cardiovasculares); monitorar hemodinâmica."
+        },
+        {
+          "drug": "Rilmenidina / Moxonidina (agonistas I1 centrais)",
+          "mechanism": "Efeito hipotensor e bradicardizante aditivo",
+          "consequence": "Hipotensão e bradicardia excessivas",
+          "management": "Monitorar PA e FC regularmente."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC e PA em repouso",
+        "ECG (intervalo PR, ritmo, bloqueio de ramo)",
+        "Função renal (creatinina/ClCr) — fundamental pelo componente renal de eliminação",
+        "Função hepática (AST/ALT) — 50% do metabolismo é hepático via CYP3A4/2D6; avaliar antes de iniciar em hepatopatia suspeita",
+        "Sintomas respiratórios (DPOC/asma)",
+        "Glicemia basal em diabéticos"
+      ],
+      "followUp": [
+        "FC alvo: 55–65 bpm (ICC) / < 70 bpm (HTA/Angina)",
+        "PA a cada consulta",
+        "Sintomas de hipotensão ortostática (especialmente idosos)",
+        "Função renal a cada 6–12 meses ou após mudança de dose em IR",
+        "ECG anual ou se alteração de dose/sintomas em ICC",
+        "Tolerabilidade respiratória (dispneia, sibilos)"
+      ],
+      "icc": [
+        "Pesar diariamente pela manhã",
+        "Edemas de membros inferiores",
+        "Classe funcional NYHA",
+        "Ecocardiograma após titulação completa para verificar melhora de FEVE"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave",
+        "Hipotensão",
+        "Bloqueio AV",
+        "Broncoespasmo",
+        "Hipoglicemia (especialmente em diabéticos)",
+        "ICC aguda",
+        "Letargia / coma (raro)"
+      ],
+      "management": [
+        "1. Carvão ativado se ingesta recente < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia; repetir conforme necessário (máx 3 mg)",
+        "3. Glucagon 5–10 mg IV bolus → infusão 1–5 mg/h (antídoto específico — ativa adenilciclase independente de β1)",
+        "4. Catecolaminas (dobutamina, isoproterenol) se hipotensão refratária",
+        "5. Emulsão lipídica IV 20% se intoxicação grave refratária",
+        "6. Marcapasso transcutâneo ou transvenoso em BAV refratário",
+        "7. ECMO em colapso circulatório refratário",
+        "8. Hemodiálise não é eficaz (bisoprolol não é significativamente dialisável)"
+      ]
+    },
+    "specialPopulations": {
+      "obesity": "Obesidade: biodisponibilidade de ~88% não afetada significativamente. Titular pela resposta clínica (FC e PA). Atentar para síndrome metabólica associada — betabloqueadores não são agentes de primeira linha para HTA em síndrome metabólica sem ICC/DAC.",
+      "geriatrics": "Idoso: farmacocinética preservada, mas maior sensibilidade farmacodinâmica. Iniciar com 1,25 mg/dia. Alto risco de hipotensão ortostática e quedas. Verificar ClCr antes de iniciar. Bisoprolol é hidrofílico (ao contrário do metoprolol) — menor penetração na BHE → menos pesadelos e alterações cognitivas.",
+      "pregnancy": "Gestação: dados limitados. Pode causar bradicardia fetal, RCIU e hipoglicemia neonatal. Usar apenas se benefício superar risco. Em HTA gestacional, labetalol e nifedipina de liberação controlada são preferidos. Se mantido, interromper 48–72 h antes do parto e monitorar neonato.",
+      "lactation": "Lactação: excretado no leite materno. Monitorar lactente para bradicardia e hipoglicemia. Hidrofílico — menor relação leite/plasma que metoprolol, porém monitoração recomendada.",
+      "renalImpairment": "IR leve-moderada (ClCr ≥ 20): sem ajuste. IR grave (ClCr < 20): dose máxima 10 mg/dia; iniciar com 1,25 mg. Hemodiálise: não remove bisoprolol — não suplementar pós-HD.",
+      "hepaticImpairment": "Hepatopatia: 50% do metabolismo é hepático (CYP3A4/2D6). Em cirrose grave, acumulação possível. Iniciar com dose baixa (1,25 mg) e monitorar. Sem ajuste formal estabelecido, mas cautela.",
+      "dpoc": "DPOC: bisoprolol é o betabloqueador preferencial em DPOC leve-moderado que requer betabloqueador (ICC/DAC) pela sua alta seletividade β1. Estudos mostram segurança em DPOC estável com ICFEr. Contraindicado se broncoespasmo reversível grave ou asma ativa."
+    },
+    "clinicalPearls": [
+      "CIBIS-II (Lancet 1999): bisoprolol reduziu mortalidade total em 34% (RR 0,66) vs. placebo em ICFEr (NNT ~16 por ano). Estudo interrompido precocemente pela superioridade do bisoprolol.",
+      "Um dos 3 betabloqueadores com nível de evidência A para redução de mortalidade em ICFEr (junto com metoprolol succinato LP e carvedilol). ESC/AHA recomendam os 3.",
+      "Bisoprolol é hidrofílico (ao contrário do metoprolol e propranolol) — menor penetração na BHE → menor incidência de pesadelos, depressão e distúrbios cognitivos.",
+      "Biodisponibilidade ~88% — muito superior ao metoprolol (~40–50%), tornando os níveis mais previsíveis independente de polimorfismo CYP2D6.",
+      "DPOC + ICC: bisoprolol é o betabloqueador de primeira escolha — evidências de segurança em DPOC estável. Não privar paciente de betabloqueador por DPOC leve-moderado quando ICC está presente.",
+      "Titulação em ICC: começar 1,25 mg → 2,5 mg → 5 mg → 7,5 mg → 10 mg, dobrando a cada 2 semanas se tolerado (FC ≥ 60 bpm, PAS ≥ 90 mmHg, sem sinais de congestão piora).",
+      "Sem formulação EV comercial: em emergências (taquicardia intraoperatória, crise hipertensiva), usar metoprolol EV ou esmolol EV — não existe bisoprolol IV para uso clínico rotineiro.",
+      "Comparação com carvedilol em ICC: bisoprolol tem menor risco de hipotensão (sem bloqueio α1) e menor broncoespasmo. Preferível em ICC com DPOC ou PA limite. Carvedilol preferido em ICC com diabetes pela melhora de sensibilidade à insulina."
+    ],
+    "patientEducation": [
+      "Tomar uma vez ao dia, sempre no mesmo horário (preferencialmente pela manhã).",
+      "Nunca parar abruptamente — reduzir progressivamente sob orientação médica.",
+      "Avisar se FC em repouso < 50 bpm, pressão muito baixa ou tontura ao levantar.",
+      "Diabéticos: a taquicardia da hipoglicemia pode não aparecer — monitorar glicemia com frequência.",
+      "Pesagem diária em ICC — ganho > 2 kg em 2 dias: contatar médico.",
+      "Avisar se aparecer chiado no peito, falta de ar ou piora do inchaço."
+    ],
+    "prescriptionErrors": [
+      "Iniciar dose plena (5–10 mg) em ICC — obrigatório começar com 1,25 mg e titular lentamente.",
+      "Suspender abruptamente no perioperatório em paciente com ICC/DAC.",
+      "Não ajustar dose em IR grave (ClCr < 20 mL/min) — dose máxima é 10 mg/dia.",
+      "Contraindicar em DPOC leve-moderado com ICC — o benefício supera o risco com alta seletividade beta-1 do bisoprolol.",
+      "Não monitorar FC alvo durante titulação — aumentar dose sem verificar FC < 60 bpm ou sinais de intolerância.",
+      "Fracionar bisoprolol em 2 tomadas diárias — meia-vida de 10–12 h justifica posologia 1x/dia. Administração 2x/dia não acrescenta benefício e compromete adesão.",
+      "Usar bisoprolol em asma ativa — alta seletividade β1 não elimina o risco: asma ativa é contraindicação absoluta. Seletividade só favorece uso em DPOC estável leve-moderado."
+    ],
+    "incompatibilities": "Apenas formulação oral. Sem incompatibilidades de administração IV a relatar.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálise peritoneal: bisoprolol não é removido de forma relevante. Manter dose habitual (máx 10 mg/dia em IR grave). Monitorar PA e FC."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: remoção mínima do bisoprolol. Não requer suplementação de dose. Em UTI com TRSC, usar dose mínima eficaz com monitorização hemodinâmica contínua."
+      }
+    },
+    "pharmacologicClass": "Betabloqueador cardioseletivo de segunda geração",
+    "pharmacodynamics": "Apresenta elevada cardioseletividade (β1:β2 ≈ 75:1), longa duração de ação (10–12 h, posologia 1x/dia) e reduz mortalidade na ICFEr com fração de ejeção reduzida. Metabolismo dual (50% hepático + 50% renal) confere maior previsibilidade farmacocinética independente do polimorfismo CYP2D6.",
+    "onset": "Início do efeito em 2–4 horas após dose oral. Efeito anti-hipertensivo máximo após 2–4 semanas de uso regular.",
+    "guidelineRecommendations": [
+      "ESC e AHA/ACC/HFSA: bisoprolol é um dos três betabloqueadores de primeira linha com Classe I, Nível de Evidência A para redução de mortalidade em ICFEr (junto a metoprolol succinato e carvedilol).",
+      "CIBIS-II (Lancet 1999): bisoprolol vs. placebo em ICFEr — redução de mortalidade total 34% (RR 0,66, NNT ~16/ano). Nível de Evidência A para uso em ICC.",
+      "ESC 2021: betabloqueador preferencial em DPOC leve-moderado com ICFEr pela alta seletividade β1. Recomendado para controle de FC em FA com ICFEr."
+    ],
+    "hepaticDose": {
+      "required": true,
+      "message": "Hepatopatia: 50% do metabolismo é hepático (CYP3A4/2D6). Em cirrose leve-moderada (Child-Pugh A–B): iniciar com dose baixa (1,25 mg/dia) e titular com cautela. Sem ajuste formal estabelecido pelo fabricante. Monitorar enzimas hepáticas em uso prolongado. Child-Pugh C: usar com extrema cautela — ausência de dados; considerar alternativa."
+    },
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não requer ajuste renal para ClCr ≥ 20 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "1,25–10 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "20 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose padrão. Na ICC, iniciar com 1,25 mg e titular a cada 2 semanas."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "1,25–10 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR moderada: sem ajuste obrigatório, mas preferir doses até 10 mg/dia. Monitorar PA e FC."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "1,25–5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: não exceder 10 mg/dia. Titular com precaução — risco aumentado de hipotensão e bradicardia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "1,25–2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muito grave: dose máxima de 10 mg/dia. Iniciar com 1,25 mg e titular com cautela extrema. Monitorar bradicardia, hipotensão e hipercalemia."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "1,25–2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Bisoprolol não é removido significativamente por hemodiálise. Não requer suplementação pós-HD. Manter dose reduzida (máx 10 mg/dia)."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "bradycardiaRisk": true,
+      "hypotensionRisk": true,
+      "avBlockRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Alta seletividade beta-1. Usar com cautela em IR grave (ClCr < 20 — dose máx. 10 mg/dia). Titulação lenta obrigatória em ICC."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V4",
+      "sourcePriority": [
+        "ESC Heart Failure Guidelines 2021",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "CIBIS-II Trial (Lancet 1999)",
+        "EMA Concor (bisoprolol) SmPC 2024",
+        "UpToDate 2025",
+        "Lexicomp Online 2026",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Micromedex 2026"
+      ],
+      "note": "Betabloqueador de 2ª geração. Um dos 3 com evidência A de redução de mortalidade em ICFEr (CIBIS-II: RR 0,66, NNT ~16/ano). Alta seletividade β1:β2 ~75:1. Hidrofílico — menor risco cognitivo/pesadelos vs metoprolol. Metabolismo dual 50% hepático (CYP3A4/2D6) + 50% renal — menor impacto de polimorfismo CYP2D6. Ajuste renal apenas em ClCr < 20 mL/min (máx 10 mg/dia). Hepatopatia: cautela em CYP. monitoring.baseline enriquecido com função hepática (CYP). Auditoria V4 completada 2026-06."
+    }
+  },
+  "es": {
+    "name": "Fumarato de Bisoprolol",
+    "class": "Betabloqueante beta-1 selectivo (alta selectividad)",
+    "commercialNames": {
+      "br": [
+        "Concor",
+        "Bisoprolol genérico",
+        "Emconcor"
+      ],
+      "ar": [
+        "Concor",
+        "Bisoprolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 1,25 mg, 2,5 mg, 5 mg, 10 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA/Angina/FA: 2,5–5 mg VO 1 vez/día. Mantenimiento 5–10 mg/día. Máximo 20 mg/día.",
+      "adultoGrave": "ICC (ICFEr — CIBIS II): iniciar 1,25 mg VO 1 vez/día. Doblar la dosis cada 2 semanas si tolerado, hasta objetivo de 10 mg/día.",
+      "pediatricaPadrao": "Uso pediátrico no aprobado formalmente. Datos limitados en ICC pediátrica.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adultos: 0,02–0,2 mg/kg/día VO 1 vez/día (referencia clínica)",
+      "grave": "ICC: titular desde 1,25 mg hasta 10 mg/día independiente del peso",
+      "meningite": null,
+      "doseMaxima": "Adultos: 10 mg/día (ICC) / 20 mg/día (HTA/Angina)"
+    },
+    "therapeuticRange": "ICC: objetivo de FC 55–65 lpm en reposo. HTA: FC < 70 lpm con PA objetivo alcanzada. Titular siempre en base a respuesta clínica.",
+    "dilution": "Solo formulación oral disponible comercialmente. Sin presentación EV estandarizada.",
+    "speed": "VO: tomar por la mañana, con o sin alimento, a la misma hora diariamente.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Fatiga",
+      "Mareos / hipotensión",
+      "Extremidades frías",
+      "Cefalea"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueo AV de 2º/3er grado",
+      "Shock cardiogénico",
+      "Broncoespasmo (especialmente en asma grave)",
+      "Descompensación de ICC en inicio abrupto o dosis elevada"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NUNCA suspender abruptamente — riesgo de síndrome de abstinencia, angina rebote y muerte súbita.",
+      "Suspender si: FC < 50 lpm, PAS < 90 mmHg, bloqueo AV 2º/3er grado o ICC agudamente descompensada.",
+      "Interacción grave con verapamilo EV o diltiazem EV: riesgo de bradicardia fatal y bloqueo AV.",
+      "Usar con precaución en EPOC moderado/grave — preferir cardioselectivos de alta selectividad como bisoprolol en este contexto."
+    ],
+    "ref": "ESC Heart Failure Guidelines 2021 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · CIBIS-II Trial (Lancet 1999) · BISOCOR Trial · Lexicomp 2026 · EMA Concor SmPC 2024",
+    "mechanism": "Bloqueo selectivo competitivo de receptores β1-adrenérgicos cardíacos con alta selectividad (razón β1:β2 ≈ 75:1 — mayor que metoprolol ~74:1 y atenolol ~35:1). Reduce FC, gasto cardíaco y consumo miocárdico de O₂. La alta selectividad beta-1 minimiza broncoespasmo y vasoconstricción periférica, haciéndolo preferible en EPOC leve-moderado. Formulación oral única — sin presentación EV disponible comercialmente.",
+    "pharmacokinetics": {
+      "absorption": "Absorción oral > 90%. Biodisponibilidad ~88% (bajo efecto de primer paso). El alimento no afecta significativamente la absorción.",
+      "bioavailability": "~88% (muy superior al metoprolol ~40–50%)",
+      "proteinBinding": "~30% (moderada)",
+      "vd": "~3,5 L/kg",
+      "metabolism": "Dual: 50% hepático (CYP3A4/CYP2D6) → metabolitos inactivos; 50% eliminado renal sin cambios. Sin efecto de primer paso significativo. Menor influencia del polimorfismo CYP2D6 que metoprolol.",
+      "halfLife": "10–12 horas (permite posología 1 vez/día)",
+      "elimination": "50% renal sin cambios + 50% hepático (metabolitos). Por eso requiere ajuste en IR grave (ClCr < 20 mL/min).",
+      "dialysability": "Hemodiálisis: no removido significativamente. Diálisis peritoneal: no removido de forma relevante. CVVH/CVVHDF: eliminación mínima."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensión arterial sistémica",
+        "Angina estable crónica",
+        "ICC con fracción de eyección reducida (ICFEr) — evidencia CIBIS-II",
+        "Fibrilación auricular (control de frecuencia ventricular)"
+      ],
+      "offLabel": [
+        "Hipertiroidismo (control sintomático de taquicardia)",
+        "Síndrome de taquicardia postural ortostática (POTS)",
+        "Profilaxis de migraña (datos limitados)",
+        "Temblor esencial"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Bradicardia sinusal < 50 lpm sintomática",
+        "Bloqueo AV de 2º grado (Mobitz II) o 3er grado sin marcapasos",
+        "Síndrome del seno enfermo sin marcapasos",
+        "Shock cardiogénico",
+        "ICC agudamente descompensada que requiere soporte inotrópico IV",
+        "PAS < 90 mmHg",
+        "Asma bronquial grave / broncoespasmo activo",
+        "Hipersensibilidad al bisoprolol"
+      ],
+      "relative": [
+        "EPOC moderado con broncoespasmo reversible (usar con precaución — alta selectividad favorece el uso)",
+        "IR grave ClCr < 20 mL/min (ajuste necesario, dosis máx 10 mg/día)",
+        "Diabetes insulinodependiente (enmascaramiento de signos de hipoglucemia, excepto sudoración)",
+        "Enfermedad vascular periférica grave (Raynaud)",
+        "Feocromocitoma sin bloqueo α previo",
+        "Hipotiroidismo (puede agravar bradicardia)",
+        "Psoriasis (puede exacerbar)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamilo EV / Diltiazem EV",
+          "mechanism": "Doble inhibición nodal AV (dromotrópico negativo aditivo)",
+          "consequence": "Bloqueo AV completo, paro cardíaco",
+          "management": "NO asociar EV. Vía oral: extrema precaución con monitorización continua."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Clonidina",
+          "mechanism": "Retirada abrupta de clonidina en uso concomitante → hipertensión de rebote grave",
+          "consequence": "Crisis hipertensiva grave",
+          "management": "Descontinuar bisoprolol días antes de suspender clonidina."
+        },
+        {
+          "drug": "Insulina / hipoglucemiantes orales",
+          "mechanism": "Enmascaramiento de la taquicardia refleja de la hipoglucemia",
+          "consequence": "Hipoglucemia grave no reconocida",
+          "management": "Monitorizar glucemia. Orientar: la sudoración persiste como signo alternativo."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Inhibición de CYP2D6/CYP3A4 por amiodarona + efecto bradicardizante aditivo",
+          "consequence": "Bradicardia grave, bloqueo AV",
+          "management": "Reducir dosis de bisoprolol. Monitorizar ECG continuamente."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno)",
+          "mechanism": "Antagonismo del efecto antihipertensivo por reducción de prostaglandinas vasodilatadoras",
+          "consequence": "Reducción del control presórico",
+          "management": "Monitorizar PA. Preferir paracetamol."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efecto cronotrópico y dromotrópico negativo aditivo",
+          "consequence": "Bradicardia y bloqueo AV",
+          "management": "Monitorizar FC y ECG. Ajustar dosis según respuesta."
+        },
+        {
+          "drug": "Anestésicos generales (propofol, sevoflurano)",
+          "mechanism": "Depresión miocárdica e hipotensión aditiva",
+          "consequence": "Hipotensión intraoperatoria, bradicardia",
+          "management": "Informar al anestesiólogo. Mantener bisoprolol en el perioperatorio de pacientes con ICC/DAC (reduce eventos cardiovasculares); monitorizar hemodinámica."
+        },
+        {
+          "drug": "Rilmenidina / Moxonidina (agonistas I1 centrales)",
+          "mechanism": "Efecto hipotensor y bradicardizante aditivo",
+          "consequence": "Hipotensión y bradicardia excesivas",
+          "management": "Monitorizar PA y FC regularmente."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC y PA en reposo",
+        "ECG (intervalo PR, ritmo, bloqueo de rama)",
+        "Función renal (creatinina/ClCr) — fundamental por el componente renal de eliminación",
+        "Función hepática (AST/ALT) — 50% del metabolismo es hepático vía CYP3A4/2D6; evaluar antes de iniciar en hepatopatía sospechada",
+        "Síntomas respiratorios (EPOC/asma)",
+        "Glucemia basal en diabéticos"
+      ],
+      "followUp": [
+        "FC objetivo: 55–65 lpm (ICC) / < 70 lpm (HTA/Angina)",
+        "PA en cada consulta",
+        "Síntomas de hipotensión ortostática (especialmente ancianos)",
+        "Función renal cada 6–12 meses o tras cambio de dosis en IR",
+        "ECG anual o si cambio de dosis/síntomas en ICC",
+        "Tolerabilidad respiratoria (disnea, sibilancias)"
+      ],
+      "icc": [
+        "Pesar diariamente por la mañana",
+        "Edemas de miembros inferiores",
+        "Clase funcional NYHA",
+        "Ecocardiograma tras titulación completa para verificar mejora de FEVI"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave",
+        "Hipotensión",
+        "Bloqueo AV",
+        "Broncoespasmo",
+        "Hipoglucemia (especialmente en diabéticos)",
+        "ICC aguda",
+        "Letargia / coma (raro)"
+      ],
+      "management": [
+        "1. Carbón activado si ingesta reciente < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia; repetir según necesidad (máx 3 mg)",
+        "3. Glucagón 5–10 mg IV bolo → infusión 1–5 mg/h (antídoto específico — activa adenilciclasa independiente de β1)",
+        "4. Catecolaminas (dobutamina, isoproterenol) si hipotensión refractaria",
+        "5. Emulsión lipídica IV 20% si intoxicación grave refractaria",
+        "6. Marcapasos transcutáneo o transvenoso en BAV refractario",
+        "7. ECMO en colapso circulatorio refractario",
+        "8. Hemodiálisis no es eficaz (bisoprolol no es significativamente dializable)"
+      ]
+    },
+    "specialPopulations": {
+      "obesity": "Obesidad: biodisponibilidad de ~88% no afectada significativamente. Titular por respuesta clínica (FC y PA). Atención al síndrome metabólico asociado — betabloqueantes no son agentes de primera línea para HTA en síndrome metabólico sin ICC/DAC.",
+      "geriatrics": "Anciano: farmacocinética preservada, pero mayor sensibilidad farmacodinámica. Iniciar con 1,25 mg/día. Alto riesgo de hipotensión ortostática y caídas. Verificar ClCr antes de iniciar. Bisoprolol es hidrofílico (al contrario del metoprolol) — menor penetración en BHE → menos pesadillas y alteraciones cognitivas.",
+      "pregnancy": "Embarazo: datos limitados. Puede causar bradicardia fetal, RCIU e hipoglucemia neonatal. Usar solo si el beneficio supera el riesgo. En HTA gestacional, labetalol y nifedipino de liberación controlada son preferidos. Si se mantiene, interrumpir 48–72 h antes del parto y monitorizar neonato.",
+      "lactation": "Lactancia: excretado en leche materna. Monitorizar lactante para bradicardia e hipoglucemia. Hidrofílico — menor relación leche/plasma que metoprolol, pero monitorización recomendada.",
+      "renalImpairment": "IR leve-moderada (ClCr ≥ 20): sin ajuste. IR grave (ClCr < 20): dosis máxima 10 mg/día; iniciar con 1,25 mg. Hemodiálisis: no elimina bisoprolol — no suplementar post-HD.",
+      "hepaticImpairment": "Hepatopatía: 50% del metabolismo es hepático (CYP3A4/2D6). En cirrosis grave, acumulación posible. Iniciar con dosis baja (1,25 mg) y monitorizar. Sin ajuste formal establecido, pero precaución.",
+      "dpoc": "EPOC: bisoprolol es el betabloqueante preferencial en EPOC leve-moderado que requiere betabloqueante (ICC/DAC) por su alta selectividad β1. Estudios muestran seguridad en EPOC estable con ICFEr. Contraindicado si broncoespasmo reversible grave o asma activa."
+    },
+    "clinicalPearls": [
+      "CIBIS-II (Lancet 1999): bisoprolol redujo mortalidad total en 34% (RR 0,66) vs. placebo en ICFEr (NNT ~16 por año). Estudio interrumpido precozmente por superioridad del bisoprolol.",
+      "Uno de los 3 betabloqueantes con nivel de evidencia A para reducción de mortalidad en ICFEr (junto con metoprolol succinato LP y carvedilol). ESC/AHA recomiendan los 3.",
+      "Bisoprolol es hidrofílico (al contrario de metoprolol y propranolol) — menor penetración en BHE → menor incidencia de pesadillas, depresión y trastornos cognitivos.",
+      "Biodisponibilidad ~88% — muy superior al metoprolol (~40–50%), haciendo los niveles más predecibles independientemente del polimorfismo CYP2D6.",
+      "EPOC + ICC: bisoprolol es el betabloqueante de primera elección — evidencias de seguridad en EPOC estable. No privar al paciente de betabloqueante por EPOC leve-moderado cuando ICC está presente.",
+      "Titulación en ICC: comenzar 1,25 mg → 2,5 mg → 5 mg → 7,5 mg → 10 mg, duplicando cada 2 semanas si tolerado (FC ≥ 60 lpm, PAS ≥ 90 mmHg, sin signos de congestión en empeoramiento).",
+      "Sin formulación EV comercial: en emergencias (taquicardia intraoperatoria, crisis hipertensiva), usar metoprolol EV o esmolol EV — no existe bisoprolol IV para uso clínico rutinario.",
+      "Comparación con carvedilol en ICC: bisoprolol tiene menor riesgo de hipotensión (sin bloqueo α1) y menor broncoespasmo. Preferible en ICC con EPOC o PA límite. Carvedilol preferido en ICC con diabetes por mejora de sensibilidad a la insulina."
+    ],
+    "patientEducation": [
+      "Tomar una vez al día, siempre a la misma hora (preferiblemente por la mañana).",
+      "Nunca detener abruptamente — reducir progresivamente bajo orientación médica.",
+      "Avisar si FC en reposo < 50 lpm, presión muy baja o mareos al levantarse.",
+      "Diabéticos: la taquicardia de la hipoglucemia puede no aparecer — monitorizar glucemia con frecuencia.",
+      "Pesaje diario en ICC — ganancia > 2 kg en 2 días: contactar al médico.",
+      "Avisar si aparece silbido en el pecho, falta de aire o empeoramiento de la hinchazón."
+    ],
+    "prescriptionErrors": [
+      "Iniciar dosis plena (5–10 mg) en ICC — obligatorio comenzar con 1,25 mg y titular lentamente.",
+      "Suspender abruptamente en el perioperatorio en paciente con ICC/DAC.",
+      "No ajustar dosis en IR grave (ClCr < 20 mL/min) — dosis máxima es 10 mg/día.",
+      "Contraindicar en EPOC leve-moderado con ICC — el beneficio supera el riesgo con la alta selectividad beta-1 del bisoprolol.",
+      "No monitorizar FC objetivo durante titulación — aumentar dosis sin verificar FC < 60 lpm o signos de intolerancia.",
+      "Fraccionar bisoprolol en 2 tomas diarias — semivida de 10–12 h justifica posología 1 vez/día. Administración 2 veces/día no aporta beneficio y compromete la adherencia.",
+      "Usar bisoprolol en asma activa — la alta selectividad β1 no elimina el riesgo: el asma activa es contraindicación absoluta. La selectividad solo favorece el uso en EPOC estable leve-moderado."
+    ],
+    "incompatibilities": "Solo formulación oral. Sin incompatibilidades de administración IV a reportar.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálisis peritoneal: bisoprolol no es removido de forma relevante. Mantener dosis habitual (máx 10 mg/día en IR grave). Monitorizar PA y FC."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: eliminación mínima de bisoprolol. No requiere suplementación de dosis. En UCI con TRRC, usar dosis mínima eficaz con monitorización hemodinámica continua."
+      }
+    },
+    "pharmacologicClass": "Betabloqueante cardioselectivo de segunda generación",
+    "pharmacodynamics": "Presenta elevada cardioselectividad (β1:β2 ≈ 75:1), larga duración de acción (10–12 h, posología 1 vez/día) y reduce mortalidad en ICFEr con fracción de eyección reducida. Metabolismo dual (50% hepático + 50% renal) confiere mayor previsibilidad farmacocinética independiente del polimorfismo CYP2D6.",
+    "onset": "Inicio del efecto en 2–4 horas tras la dosis oral. Efecto antihipertensivo máximo tras 2–4 semanas de uso regular.",
+    "guidelineRecommendations": [
+      "ESC y AHA/ACC/HFSA: bisoprolol es uno de los tres betabloqueantes de primera línea con Clase I, Nivel de Evidencia A para reducción de mortalidad en ICFEr (junto a metoprolol succinato y carvedilol).",
+      "CIBIS-II (Lancet 1999): bisoprolol vs. placebo en ICFEr — reducción de mortalidad total 34% (RR 0,66, NNT ~16/año). Nivel de Evidencia A para uso en ICC.",
+      "ESC 2021: betabloqueante preferencial en EPOC leve-moderado con ICFEr por la alta selectividad β1. Recomendado para control de FC en FA con ICFEr."
+    ],
+    "hepaticDose": {
+      "required": true,
+      "message": "Hepatopatía: 50% del metabolismo es hepático (CYP3A4/2D6). En cirrosis leve-moderada (Child-Pugh A–B): iniciar con dosis baja (1,25 mg/día) y titular con precaución. Sin ajuste formal establecido por el fabricante. Monitorizar enzimas hepáticas en uso prolongado. Child-Pugh C: usar con extrema precaución — ausencia de datos; considerar alternativa."
+    },
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal para ClCr ≥ 20 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "1,25–10 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "20 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis estándar. En ICC, iniciar con 1,25 mg y titular cada 2 semanas."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "1,25–10 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR moderada: sin ajuste obligatorio, pero preferir dosis hasta 10 mg/día. Monitorizar PA y FC."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "1,25–5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: no superar 10 mg/día. Titular con precaución — riesgo aumentado de hipotensión y bradicardia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "1,25–2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muy grave: dosis máxima de 10 mg/día. Iniciar con 1,25 mg y titular con precaución extrema. Monitorizar bradicardia, hipotensión e hiperpotasemia."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "1,25–2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Bisoprolol no es removido significativamente por hemodiálisis. No requiere suplementación post-HD. Mantener dosis reducida (máx 10 mg/día)."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "bradycardiaRisk": true,
+      "hypotensionRisk": true,
+      "avBlockRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Alta selectividad beta-1. Usar con precaución en IR grave (ClCr < 20 — dosis máx. 10 mg/día). Titulación lenta obligatoria en ICC."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V4",
+      "sourcePriority": [
+        "ESC Heart Failure Guidelines 2021",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "CIBIS-II Trial (Lancet 1999)",
+        "EMA Concor (bisoprolol) SmPC 2024",
+        "UpToDate 2025",
+        "Lexicomp Online 2026",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Micromedex 2026"
+      ],
+      "note": "Betabloqueante de 2ª generación. Uno de los 3 con evidencia A de reducción de mortalidad en ICFEr (CIBIS-II: RR 0,66, NNT ~16/año). Alta selectividad β1:β2 ~75:1. Hidrofílico — menor riesgo cognitivo/pesadillas vs metoprolol. Metabolismo dual 50% hepático (CYP3A4/2D6) + 50% renal — menor impacto de polimorfismo CYP2D6. Ajuste renal solo en ClCr < 20 mL/min (máx 10 mg/día). Hepatopatía: precaución en CYP. monitoring.baseline enriquecido con función hepática (CYP). Auditoría V4 completada 2026-06."
+    }
+  },
+  "name": {
+    "pt": "Bisoprolol",
+    "es": "Bisoprolol"
+  },
+  "keywords": [
+    "bisoprolol",
+    "concor",
+    "bisoprolol generico",
+    "emconcor",
+    "betabloqueador beta-1 seletivo (alta seletividade)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

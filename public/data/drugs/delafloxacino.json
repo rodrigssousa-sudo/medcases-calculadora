@@ -1,0 +1,220 @@
+{
+  "id": "delafloxacino",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(239,68,68,0.12)",
+  "colorTxt": "#B91C1C",
+  "pt": {
+    "name": "Delafloxacino",
+    "class": "Fluoroquinolona de nova geração (anti-MRSA ativo em pH ácido)",
+    "commercialNames": {
+      "br": [
+        "Baxdela (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Baxdela"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 450 mg",
+      "Pó para solução injetável EV: 300 mg por frasco"
+    ],
+    "dose": {
+      "adultoVO": "450 mg VO 12/12h",
+      "adultoEV": "300 mg EV 12/12h"
+    },
+    "doseKg": null,
+    "indication": "Infecções de pele e partes moles (ABSSSI) incluindo por MRSA, pneumonia adquirida na comunidade.",
+    "spectrum": "Staphylococcus aureus (MSSA e MRSA), Streptococcus pyogenes, Streptococcus anginosus group, Enterococcus faecalis, Gram-negativos (E. coli, Klebsiella spp., Pseudomonas aeruginosa — atividade variável), Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila. Atividade superior a fluoroquinolonas clássicas em pH ácido (abscesso, tecido inflamado).",
+    "contraindications": [
+      "Hipersensibilidade às fluoroquinolonas",
+      "Menores de 18 anos (risco de artropatia)",
+      "ClCr < 15 mL/min sem suporte dialítico"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Única fluoroquinolona com atividade anti-MRSA clinicamente relevante.",
+      "Formulação EV contém SBECD (ciclodextrina sulfobutiléter) — acumulação em ClCr < 30: preferir VO ou evitar EV.",
+      "Prolongamento do QT menor que outras fluoroquinolonas — monitorar em pacientes de risco."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA SSTI Guidelines / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "450 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "900 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "300 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "450 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "900 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "300 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Sem ajuste até ClCr 30 mL/min."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "450 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "900 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Ajuste necessário apenas para formulação EV."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Uso não recomendado em ClCr <15 mL/min sem HD."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Uso não recomendado em pacientes sob hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Delafloxacino",
+    "class": "Fluoroquinolona de nueva generación (anti-MRSA activo en pH ácido)",
+    "commercialNames": {
+      "br": [
+        "Baxdela (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Baxdela"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 450 mg",
+      "Polvo para solución inyectable EV: 300 mg por frasco"
+    ],
+    "dose": {
+      "adultoVO": "450 mg VO 12/12h",
+      "adultoEV": "300 mg EV 12/12h"
+    },
+    "doseKg": null,
+    "indication": "Infecciones de piel y partes blandas (ABSSSI) incluidas las causadas por MRSA, neumonía adquirida en la comunidad.",
+    "spectrum": "Staphylococcus aureus (MSSA y MRSA), Streptococcus pyogenes, Streptococcus anginosus group, Enterococcus faecalis, Gramnegativos (E. coli, Klebsiella spp., Pseudomonas aeruginosa — actividad variable), Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila. Actividad superior a fluoroquinolonas clásicas en pH ácido (absceso, tejido inflamado).",
+    "contraindications": [
+      "Hipersensibilidad a las fluoroquinolonas",
+      "Menores de 18 años (riesgo de artropatía)",
+      "ClCr < 15 mL/min sin soporte dialítico"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Única fluoroquinolona con actividad anti-MRSA clínicamente relevante.",
+      "Formulación EV contiene SBECD (ciclodextrina sulfobutiléter) — acumulación en ClCr < 30: preferir VO o evitar EV.",
+      "Prolongación del QT menor que otras fluoroquinolonas — monitorizar en pacientes de riesgo."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA SSTI Guidelines / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "450 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "900 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "300 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "450 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "900 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "300 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Sin ajuste hasta ClCr 30 mL/min."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "450 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "900 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Ajuste necesario solo para formulación EV."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Uso no recomendado en ClCr <15 mL/min sin HD."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Uso no recomendado en pacientes en hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Delafloxacino",
+    "es": "Delafloxacino"
+  },
+  "keywords": [
+    "delafloxacino",
+    "baxdela (acesso limitado no brasil)",
+    "baxdela",
+    "fluoroquinolona de nova geracao (anti-mrsa ativo em ph acido)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

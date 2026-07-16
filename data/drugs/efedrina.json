@@ -1,0 +1,251 @@
+{
+  "id": "efedrina",
+  "category": "cardio",
+  "icon": "💉",
+  "color": "rgba(190,24,93,0.13)",
+  "colorTxt": "#9D174D",
+  "pt": {
+    "name": "Efedrina",
+    "class": "Vasopressor — agonista adrenérgico misto (ação direta alfa e beta + liberação indireta de norepinefrina)",
+    "indications": {
+      "approved": [
+        "Prevenção e tratamento de hipotensão induzida por anestesia raquidiana ou peridural",
+        "Tratamento de hipotensão aguda não responsiva a fluidos"
+      ],
+      "offLabel": []
+    },
+    "commercialNames": {
+      "br": [
+        "Efedrina",
+        "Unifedrina"
+      ],
+      "ar": [
+        "Efedrina"
+      ]
+    },
+    "presentation": [
+      "Ampola 50 mg/mL (1 mL)"
+    ],
+    "mechanism": "Amina simpatomimética de ação mista. Atua diretamente nos receptores alfa e beta-adrenérgicos e indiretamente liberando norepinefrina das vesículas simpáticas. Promove aumento da pressão arterial (vasoconstrição) e da frequência e débito cardíaco (inotropismo e cronotropismo positivos).",
+    "pharmacokinetics": {
+      "onset": "Minutos por via IV",
+      "halfLife": "Curta; efeito pode diminuir com doses repetidas (taquifilaxia)",
+      "duration": "10–60 minutos por dose IV"
+    },
+    "dose": {
+      "adultoPadrao": "Hipotensão na anestesia: bolus IV lento de 5 a 10 mg. Pode ser repetido a cada 5–10 minutos conforme necessidade. Dose máxima: 50 mg (em adultos).",
+      "adultoGrave": "Se resposta insuficiente ou doses repetidas frequentes, avaliar taquifilaxia e considerar vasopressor de outra classe (ex.: fenilefrina, noradrenalina).",
+      "pediatricaPadrao": "Hipotensão na anestesia: bolus IV de 0,1 a 0,2 mg/kg (7–10 mg para 70 kg). Dose máxima de 10 mg por bolus.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "0,1–0,2 mg/kg IV por bolus (pediatria) — máximo 10 mg/bolus",
+      "grave": "5–10 mg IV lento (adulto) — repetível a cada 5–10 min, máximo 50 mg",
+      "meningite": null,
+      "doseMaxima": "50 mg (adulto) / 10 mg por bolus (pediatria)"
+    },
+    "infusionCalc": "Uso predominante em bolus IV — não é rotineiramente administrada em infusão contínua. Diluir 1 ampola de 50 mg em 9 mL de SF 0,9% (5 mg/mL) antes do bolus.",
+    "administration": "Deve ser diluída antes do uso em bólus (ex.: 1 ampola de 50 mg em 9 mL de SF 0,9% = 5 mg/mL). Administrar por via intravenosa lenta.",
+    "dilution": "1 ampola de 50 mg em 9 mL de SF 0,9% → concentração final de 5 mg/mL para bolus IV lento.",
+    "speed": "Administrar em bolus IV lento; repetir a cada 5–10 minutos conforme resposta pressórica, respeitando a dose máxima.",
+    "commonAdverseEffects": [
+      "Taquicardia",
+      "Palpitações",
+      "Agitação",
+      "Cefaleia",
+      "Ansiedade"
+    ],
+    "dangerousAdverseEffects": [
+      "Arritmias ventriculares",
+      "Isquemia miocárdica",
+      "Crise hipertensiva",
+      "Hemorragia subaracnóidea (raro)"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Uso concomitante ou recente (14 dias) de Inibidores da MAO",
+        "Glaucoma de ângulo fechado",
+        "Tireotoxicose não tratada"
+      ],
+      "relativas": [
+        "Hipertensão arterial severa não controlada",
+        "Doença isquêmica do coração",
+        "Hipertrofia prostática benigna sintomática"
+      ]
+    },
+    "interactions": [
+      "Inibidores da MAO (IMAO): crise hipertensiva letal — associação contraindicada; aguardar no mínimo 14 dias após suspensão do IMAO.",
+      "Ocitocina: hipertensão grave no peri-parto por efeito pressor aditivo — monitorar pressão arterial de perto.",
+      "Clonidina: pode inibir o efeito vasopressor indireto da efedrina (depleção de norepinefrina pré-sináptica) — resposta pressórica reduzida.",
+      "Betabloqueadores: reduzem o efeito beta, deixando a ação alfa sem oposição — risco de hipertensão paradoxal e vasoconstrição excessiva."
+    ],
+    "renalAdjustment": "Sem necessidade de ajuste específico para uso agudo.",
+    "hepaticAdjustment": "Sem necessidade de ajuste específico para uso agudo.",
+    "monitoring": {
+      "baseline": [
+        "PAM / PA",
+        "FC / ECG",
+        "Sinais de taquifilaxia (queda progressiva de resposta)",
+        "Frequência cardíaca fetal (se gestante)"
+      ],
+      "followUp": [
+        "PAM/PA após cada bolus",
+        "ECG contínuo (risco de arritmias ventriculares e isquemia)",
+        "Número cumulativo de doses administradas (risco de taquifilaxia e dose máxima)",
+        "Sinais de crise hipertensiva"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Risco C. Muito utilizada na prática obstétrica (anestesia para cesariana), porém cruza a placenta e pode aumentar a frequência cardíaca fetal e alterar o pH umbilical.",
+      "lactation": "Excretada no leite materno. Risco de irritabilidade e insônia no lactente. Monitorar se uso essencial.",
+      "elderly": "Mais sensíveis aos efeitos inotrópicos e cronotrópicos, maior risco de arritmias e isquemia. Iniciar com a menor dose eficaz."
+    },
+    "safetyFlags": {
+      "highAlertMedication": true,
+      "vasopressor": true,
+      "tachyphylaxisRisk": true,
+      "requiresTelemetry": true,
+      "hospitalUseOnly": true,
+      "warning": "Taquifilaxia (tolerância aguda): a administração de doses repetidas de efedrina em curto período pode levar à perda da eficácia devido à depleção de norepinefrina nos estoques simpáticos."
+    },
+    "auditNotes": {
+      "status": "vasopressor_efedrina_master_template"
+    },
+    "ref": [
+      "ASA Guidelines for the Management of Obstetric Anesthesia",
+      "Goodman & Gilman's: The Pharmacological Basis of Therapeutics",
+      "FDA Labeling Information — Ephedrine Sulfate Injection"
+    ]
+  },
+  "es": {
+    "name": "Efedrina",
+    "class": "Vasopresor — agonista adrenérgico mixto (acción directa alfa y beta + liberación indirecta de norepinefrina)",
+    "indications": {
+      "approved": [
+        "Prevención y tratamiento de hipotensión inducida por anestesia espinal o epidural",
+        "Tratamiento de hipotensión aguda no responsiva a fluidos"
+      ],
+      "offLabel": []
+    },
+    "commercialNames": {
+      "br": [
+        "Efedrina",
+        "Unifedrina"
+      ],
+      "ar": [
+        "Efedrina"
+      ]
+    },
+    "presentation": [
+      "Ampolla 50 mg/mL (1 mL)"
+    ],
+    "mechanism": "Amina simpaticomimética de acción mixta. Actúa directamente sobre los receptores alfa y beta-adrenérgicos e indirectamente liberando norepinefrina de las vesículas simpáticas. Promueve el aumento de la presión arterial (vasoconstricción) y de la frecuencia y gasto cardíaco (inotropismo y cronotropismo positivos).",
+    "pharmacokinetics": {
+      "onset": "Minutos por vía IV",
+      "halfLife": "Corta; efecto puede disminuir con dosis repetidas (taquifilaxia)",
+      "duration": "10–60 minutos por dosis IV"
+    },
+    "dose": {
+      "adultoPadrao": "Hipotensión en la anestesia: bolo IV lento de 5 a 10 mg. Puede repetirse cada 5–10 minutos según necesidad. Dosis máxima: 50 mg (en adultos).",
+      "adultoGrave": "Si la respuesta es insuficiente o hay dosis repetidas frecuentes, evaluar taquifilaxia y considerar vasopresor de otra clase (ej.: fenilefrina, noradrenalina).",
+      "pediatricaPadrao": "Hipotensión en la anestesia: bolo IV de 0,1 a 0,2 mg/kg (7–10 mg para 70 kg). Dosis máxima de 10 mg por bolo.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "0,1–0,2 mg/kg IV por bolo (pediatría) — máximo 10 mg/bolo",
+      "grave": "5–10 mg IV lento (adulto) — repetible cada 5–10 min, máximo 50 mg",
+      "meningite": null,
+      "doseMaxima": "50 mg (adulto) / 10 mg por bolo (pediatría)"
+    },
+    "infusionCalc": "Uso predominante en bolo IV — no se administra rutinariamente en infusión continua. Diluir 1 ampolla de 50 mg en 9 mL de SF 0,9% (5 mg/mL) antes del bolo.",
+    "administration": "Debe ser diluida antes de su uso en bolo (ej.: 1 ampolla de 50 mg en 9 mL de SF 0,9% = 5 mg/mL). Administrar por vía intravenosa lenta.",
+    "dilution": "1 ampolla de 50 mg en 9 mL de SF 0,9% → concentración final de 5 mg/mL para bolo IV lento.",
+    "speed": "Administrar en bolo IV lento; repetir cada 5–10 minutos según respuesta presora, respetando la dosis máxima.",
+    "commonAdverseEffects": [
+      "Taquicardia",
+      "Palpitaciones",
+      "Agitación",
+      "Cefalea",
+      "Ansiedad"
+    ],
+    "dangerousAdverseEffects": [
+      "Arritmias ventriculares",
+      "Isquemia miocárdica",
+      "Crisis hipertensiva",
+      "Hemorragia subaracnoidea (raro)"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Uso concomitante o reciente (14 días) de Inhibidores de la MAO",
+        "Glaucoma de ángulo cerrado",
+        "Tirotoxicosis no tratada"
+      ],
+      "relativas": [
+        "Hipertensión arterial severa no controlada",
+        "Enfermedad isquémica del corazón",
+        "Hipertrofia prostática benigna sintomática"
+      ]
+    },
+    "interactions": [
+      "Inhibidores de la MAO (IMAO): crisis hipertensiva letal — asociación contraindicada; esperar al menos 14 días tras la suspensión del IMAO.",
+      "Oxitocina: hipertensión grave en el periparto por efecto presor aditivo — monitorizar presión arterial de cerca.",
+      "Clonidina: puede inhibir el efecto vasopresor indirecto de la efedrina (depleción de norepinefrina presináptica) — respuesta presora reducida.",
+      "Betabloqueantes: reducen el efecto beta, dejando la acción alfa sin oposición — riesgo de hipertensión paradójica y vasoconstricción excesiva."
+    ],
+    "renalAdjustment": "Sin necesidad de ajuste específico para uso agudo.",
+    "hepaticAdjustment": "Sin necesidad de ajuste específico para uso agudo.",
+    "monitoring": {
+      "baseline": [
+        "PAM / PA",
+        "FC / ECG",
+        "Signos de taquifilaxia (caída progresiva de respuesta)",
+        "Frecuencia cardíaca fetal (si embarazada)"
+      ],
+      "followUp": [
+        "PAM/PA después de cada bolo",
+        "ECG continuo (riesgo de arritmias ventriculares e isquemia)",
+        "Número acumulativo de dosis administradas (riesgo de taquifilaxia y dosis máxima)",
+        "Signos de crisis hipertensiva"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Riesgo C. Muy utilizada en la práctica obstétrica (anestesia para cesárea), sin embargo cruza la placenta y puede aumentar la frecuencia cardíaca fetal y alterar el pH umbilical.",
+      "lactation": "Excretada en la leche materna. Riesgo de irritabilidad e insomnio en el lactante. Monitorizar si el uso es esencial.",
+      "elderly": "Más sensibles a los efectos inotrópicos y cronotrópicos, mayor riesgo de arritmias e isquemia. Iniciar con la menor dosis eficaz."
+    },
+    "safetyFlags": {
+      "highAlertMedication": true,
+      "vasopressor": true,
+      "tachyphylaxisRisk": true,
+      "requiresTelemetry": true,
+      "hospitalUseOnly": true,
+      "warning": "Taquifilaxia (tolerancia aguda): la administración de dosis repetidas de efedrina en corto período puede llevar a la pérdida de eficacia debido a la depleción de norepinefrina en los depósitos simpáticos."
+    },
+    "auditNotes": {
+      "status": "vasopressor_efedrina_master_template"
+    },
+    "ref": [
+      "ASA Guidelines for the Management of Obstetric Anesthesia",
+      "Goodman & Gilman's: The Pharmacological Basis of Therapeutics",
+      "FDA Labeling Information — Ephedrine Sulfate Injection"
+    ]
+  },
+  "name": {
+    "pt": "Efedrina",
+    "es": "Efedrina"
+  },
+  "keywords": [
+    "efedrina",
+    "unifedrina",
+    "vasopressor — agonista adrenergico misto (acao direta alfa e beta + liberacao indireta de norepinefrina)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

@@ -1,0 +1,141 @@
+{
+  "id": "dofetilida",
+  "category": "cardio",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "dose": "500 mcg VO 12/12h",
+    "doseObs": "ClCr estimado: 90 mL/min — dose plena",
+    "clcrEstimado": "90 mL/min",
+    "escalonamentoRenal": "ClCr >60: 500 mcg 12/12h | ClCr 40–60: 250 mcg 12/12h | ClCr 20–39: 125 mcg 12/12h | ClCr <20: CONTRAINDICADO",
+    "apresentacao": "Cápsulas 125 mcg / 250 mcg / 500 mcg (Tikosyn)",
+    "classe": "Antiarrítmico Classe III puro — bloqueador IKr | Meia-vida ~10 h",
+    "indicacoes": [
+      "FA — manutenção ritmo sinusal",
+      "Flutter atrial",
+      "Conversão FA em selecionados",
+      "FA em cardiopatia estrutural selecionada (DIAMOND Trial)"
+    ],
+    "efeitosAdversos": [
+      "Cefaleia",
+      "Tontura",
+      "Náuseas",
+      "Dor torácica",
+      "Dispneia",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV",
+      "⚠️ QT prolongado grave",
+      "⚠️ Morte súbita"
+    ],
+    "contraindicacoesAbsolutas": [
+      "QTc >440 ms",
+      "ClCr <20 mL/min",
+      "Hipocalemia não corrigida",
+      "Verapamil",
+      "Cimetidina",
+      "Trimetoprim/SMX",
+      "Cetoconazol",
+      "Hidroclorotiazida"
+    ],
+    "monitoramento": [
+      "ECG + QTc basal",
+      "QTc 2–3 h após 1ª, 2ª, 3ª dose",
+      "Telemetria ≥3 dias (hospitalar)",
+      "ClCr antes e periodicamente",
+      "K⁺ e Mg²⁺ periódico",
+      "Sintomas arrítmicos"
+    ],
+    "refs": [
+      "FDA Tikosyn Label",
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "DIAMOND Trial",
+      "Goodman & Gilman",
+      "Lexicomp"
+    ],
+    "alerts": [
+      {
+        "tipo": "danger",
+        "msg": "🏥 INÍCIO/REINÍCIO HOSPITALAR OBRIGATÓRIO: telemetria contínua ≥3 dias. QTc 2–3 h após cada dose inicial. Apenas com equipe treinada em arritmias."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: Risco de Torsades de Pointes potencialmente fatal. Início e reinício apenas sob monitorização hospitalar contínua."
+      }
+    ]
+  },
+  "es": {
+    "dose": "500 mcg VO 12/12h",
+    "doseObs": "ClCr estimado: 90 mL/min — dosis plena",
+    "clcrEstimado": "90 mL/min",
+    "escalonamentoRenal": "ClCr >60: 500 mcg c/12h | ClCr 40–60: 250 mcg c/12h | ClCr 20–39: 125 mcg c/12h | ClCr <20: CONTRAINDICADO",
+    "apresentacao": "Cápsulas 125 mcg / 250 mcg / 500 mcg (Tikosyn)",
+    "classe": "Antiarrítmico Clase III puro — bloqueador IKr | Vida media ~10 h",
+    "indicacoes": [
+      "FA — mantenimiento ritmo sinusal",
+      "Flutter auricular",
+      "Conversión FA en seleccionados",
+      "FA en cardiopatía estructural seleccionada (DIAMOND Trial)"
+    ],
+    "efeitosAdversos": [
+      "Cefalea",
+      "Mareos",
+      "Náuseas",
+      "Dolor torácico",
+      "Disnea",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV",
+      "⚠️ QT prolongado grave",
+      "⚠️ Muerte súbita"
+    ],
+    "contraindicacoesAbsolutas": [
+      "QTc >440 ms",
+      "ClCr <20 mL/min",
+      "Hipocalemia no corregida",
+      "Verapamilo",
+      "Cimetidina",
+      "Trimetoprim/SMX",
+      "Ketoconazol",
+      "Hidroclorotiazida"
+    ],
+    "monitoramento": [
+      "ECG + QTc basal",
+      "QTc 2–3 h tras 1ª, 2ª, 3ª dosis",
+      "Telemetría ≥3 días (hospitalario)",
+      "ClCr antes y periódicamente",
+      "K⁺ y Mg²⁺ periódico",
+      "Síntomas arrítmicos"
+    ],
+    "refs": [
+      "FDA Tikosyn Label",
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "DIAMOND Trial",
+      "Goodman & Gilman",
+      "Lexicomp"
+    ],
+    "alerts": [
+      {
+        "tipo": "danger",
+        "msg": "🏥 INICIO/REINICIO HOSPITALARIO OBLIGATORIO: telemetría continua ≥3 días. QTc 2–3 h tras cada dosis inicial. Solo con equipo entrenado en arritmias."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: Riesgo de Torsades de Pointes potencialmente fatal. Inicio y reinicio solo bajo monitorización hospitalaria continua."
+      }
+    ]
+  },
+  "name": {
+    "pt": "dofetilida",
+    "es": "dofetilida"
+  },
+  "keywords": [
+    "dofetilida"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

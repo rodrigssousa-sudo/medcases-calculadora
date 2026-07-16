@@ -1,0 +1,251 @@
+{
+  "id": "bedaquilina",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(239,68,68,0.12)",
+  "colorTxt": "#991B1B",
+  "pt": {
+    "name": "Bedaquilina",
+    "class": "Diarilquinolina (inibidor da ATP-sintase micobacteriana — 1ª nova classe antituberculosa em 40 anos)",
+    "commercialNames": {
+      "br": [
+        "Sirturo"
+      ],
+      "ar": [
+        "Sirturo"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 100 mg"
+    ],
+    "dose": {
+      "adultoVO": "400 mg VO 24/24h por 2 semanas → 200 mg VO 3×/semana por 22 semanas (sempre com alimentos)"
+    },
+    "doseKg": null,
+    "indication": "Tuberculose pulmonar multirresistente (TB-MDR) e extensivamente resistente (TB-XDR) em adultos e adolescentes ≥ 12 anos, como parte de regime combinado.",
+    "spectrum": "Mycobacterium tuberculosis (incluindo cepas MDR e XDR), Mycobacterium avium complex (MAC — atividade in vitro). Mecanismo único: inibição seletiva da subunidade c da ATP-sintase micobacteriana.",
+    "contraindications": [
+      "Hipersensibilidade à bedaquilina",
+      "Uso concomitante de azitromicina ou outros prolongadores de QT sem monitorização rigorosa"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Prolongamento do QT — monitorar ECG antes, na 2ª e 12ª semana e mensalmente.",
+      "Meia-vida terminal extremamente longa (~5–6 meses) — efeitos adversos e interações persistem meses após a descontinuação.",
+      "SEMPRE administrar com alimentos (aumenta 2× a biodisponibilidade).",
+      "Parte dos esquemas BPaL (bedaquilina + pretomanida + linezolida) para TB-XDR."
+    ],
+    "ref": "Sanford Guide 2025 / WHO MDR-TB Guidelines 2022 / FDA label Sirturo / EMA label / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal em insuficiência leve a moderada. Sem dados suficientes em ClCr < 30 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Esquema padrão: 400 mg/dia nas primeiras 2 semanas → 200 mg 3×/semana por 22 semanas. SEMPRE administrar com alimentos (aumenta biodisponibilidade ~2×). Uso guiado por cultura, antibiograma e infectologia. Monitorar ECG antes do início."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA/EMA label: sem ajuste necessário para ClCr 30–50 mL/min. Bedaquilina é metabolizada principalmente pelo CYP3A4 — eliminação hepática predominante (~73% fecal). Eliminação renal mínima (~0,001%). Monitorar QTc a cada 2–4 semanas."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA/EMA label: dados insuficientes para ClCr 10–30 mL/min — usar com cautela. Eliminação renal mínima — ajuste de dose provavelmente desnecessário, mas risco de acúmulo de metabólitos N-monodesmetil (M2) aumentado. Monitorar QTc mensalmente e sinais de toxicidade."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA/EMA label: dados insuficientes para ClCr < 10 mL/min — usar com cautela extrema. Monitorar QTc rigorosamente (baseline, semana 2, 12 e mensalmente). Risco de prolongamento QT aumentado por acúmulo do metabólito M2. Avaliar risco/benefício com equipe de infectologia e cardiologia."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA/EMA label: dados muito limitados em pacientes em hemodiálise. Bedaquilina NÃO é removida pela HD (altamente lipofílica, Vd enorme ~164 L/kg, ligação proteica >99,9%). Não requer dose suplementar pós-HD. Monitorar QTc rigorosamente — meia-vida terminal de 5–6 meses implica exposição prolongada."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": true,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": true,
+      "warning": "⚠️ RISCO DE QT PROLONGADO E TORSADES DE POINTES. ECG obrigatório antes do início e monitoração mensal. Nunca combinar com outros agentes QT-prolongadores (delamanida, clofazimina, fluoroquinolonas, azitromicina) sem ECG seriado. Meia-vida de 5–6 meses — efeitos persistem muito além da descontinuação."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Sirturo (bedaquiline) 2019",
+        "EMA Assessment Report Sirturo 2023",
+        "WHO MDR-TB Guidelines 2022",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "STREAM / ZeNix / TB-PRACTECAL trials",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025"
+      ],
+      "note": "Bloco mesclado e melhorado: esquema de dose completo (400 mg × 2 semanas → 200 mg 3×/sem × 22 semanas) preservado em todas as faixas. Lógica de HD corrigida (Vd ~164 L/kg, LP >99,9% — não removida por HD). safetyFlags QT e hepatotoxicidade mantidos. Johns Hopkins, UpToDate e Lexicomp adicionados às fontes."
+    }
+  },
+  "es": {
+    "name": "Bedaquilina",
+    "class": "Diarilquinolina (inhibidor de la ATP-sintasa micobacteriana — 1.ª nueva clase antituberculosa en 40 años)",
+    "commercialNames": {
+      "br": [
+        "Sirturo"
+      ],
+      "ar": [
+        "Sirturo"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 100 mg"
+    ],
+    "dose": {
+      "adultoVO": "400 mg VO 24/24h durante 2 semanas → 200 mg VO 3×/semana durante 22 semanas (siempre con alimentos)"
+    },
+    "doseKg": null,
+    "indication": "Tuberculosis pulmonar multirresistente (TB-MDR) y extensivamente resistente (TB-XDR) en adultos y adolescentes ≥ 12 años, como parte de régimen combinado.",
+    "spectrum": "Mycobacterium tuberculosis (incluidas cepas MDR y XDR), Mycobacterium avium complex (MAC — actividad in vitro). Mecanismo único: inhibición selectiva de la subunidad c de la ATP-sintasa micobacteriana.",
+    "contraindications": [
+      "Hipersensibilidad a la bedaquilina",
+      "Uso concomitante de azitromicina u otros prolongadores de QT sin monitorización rigurosa"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Prolongación del QT — monitorizar ECG antes, en la 2.ª y 12.ª semana y mensualmente.",
+      "Semivida terminal extremadamente larga (~5–6 meses) — efectos adversos e interacciones persisten meses tras la discontinuación.",
+      "SIEMPRE administrar con alimentos (aumenta 2× la biodisponibilidad).",
+      "Parte de los esquemas BPaL (bedaquilina + pretomanida + linezolida) para TB-XDR."
+    ],
+    "ref": "Sanford Guide 2025 / WHO MDR-TB Guidelines 2022 / FDA label Sirturo / EMA label / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal en insuficiencia leve a moderada. Sin datos suficientes en ClCr < 30 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Esquema estándar: 400 mg/día las primeras 2 semanas → 200 mg 3×/semana por 22 semanas. SIEMPRE administrar con alimentos (aumenta biodisponibilidad ~2×). Uso guiado por cultivo, antibiograma e infectología. Monitorizar ECG antes del inicio."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA/EMA label: sin ajuste necesario para ClCr 30–50 mL/min. La bedaquilina se metaboliza principalmente por CYP3A4 — eliminación hepática predominante (~73% fecal). Eliminación renal mínima (~0,001%). Monitorizar QTc cada 2–4 semanas."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA/EMA label: datos insuficientes para ClCr 10–30 mL/min — usar con precaución. Eliminación renal mínima — ajuste de dosis probablemente innecesario, pero riesgo de acumulación de metabolito N-monodesmetil (M2) aumentado. Monitorizar QTc mensualmente y signos de toxicidad."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA/EMA label: datos insuficientes para ClCr < 10 mL/min — usar con cautela extrema. Monitorizar QTc rigurosamente (basal, semana 2, 12 y mensualmente). Riesgo de prolongación QT aumentado por acumulación del metabolito M2. Evaluar riesgo/beneficio con infectología y cardiología."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "FDA/EMA label: datos muy limitados en pacientes en hemodiálisis. La bedaquilina NO es removida por HD (altamente lipofílica, Vd enorme ~164 L/kg, unión proteica >99,9%). No requiere dosis suplementaria post-HD. Monitorizar QTc rigurosamente — semivida terminal de 5–6 meses implica exposición prolongada."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": true,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": true,
+      "warning": "⚠️ RIESGO DE QT PROLONGADO Y TORSADES DE POINTES. ECG obligatorio antes del inicio y monitoreo mensual. Nunca combinar con otros agentes QT-prolongadores (delamanida, clofazimina, fluoroquinolonas, azitromicina) sin ECG seriado. Semivida de 5–6 meses — efectos persisten mucho después de la discontinuación."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Sirturo (bedaquiline) 2019",
+        "EMA Assessment Report Sirturo 2023",
+        "WHO MDR-TB Guidelines 2022",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "STREAM / ZeNix / TB-PRACTECAL trials",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025"
+      ],
+      "note": "Bloque fusionado y mejorado: esquema de dosis completo (400 mg × 2 semanas → 200 mg 3×/sem × 22 semanas) preservado en todos los rangos. Lógica de HD corregida (Vd ~164 L/kg, LP >99,9% — no removida por HD). safetyFlags QT y hepatotoxicidad mantenidos. Johns Hopkins, UpToDate y Lexicomp añadidos a las fuentes."
+    }
+  },
+  "name": {
+    "pt": "Bedaquilina",
+    "es": "Bedaquilina"
+  },
+  "keywords": [
+    "bedaquilina",
+    "sirturo",
+    "diarilquinolina (inibidor da atp-sintase micobacteriana — 1ª nova classe antituberculosa em 40 anos)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

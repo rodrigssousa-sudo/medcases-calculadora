@@ -1,0 +1,262 @@
+{
+  "id": "espiramicina",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(236,72,153,0.12)",
+  "colorTxt": "#BE185D",
+  "pt": {
+    "name": "Espiramicina",
+    "class": "Macrolídeo de 1ª geração (anti-Toxoplasma)",
+    "commercialNames": {
+      "br": [
+        "Rovamycine",
+        "Espiramicina Genérico"
+      ],
+      "ar": [
+        "Rovamycine",
+        "Espiramicina Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 1,5 milhões UI, 3 milhões UI",
+      "Suspensão oral: 1,5 milhões UI/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "1–3 milhões UI VO 8/8h"
+    },
+    "doseKg": null,
+    "indication": "Toxoplasmose gestacional (1º trimestre — antes da amniocentese), infecções por patógenos atípicos (Mycoplasma, Chlamydophila), faringoamigdalite em alérgicos à penicilina.",
+    "spectrum": "Toxoplasma gondii (ação parasitostática), Streptococcus pyogenes, Streptococcus pneumoniae (sensível), Mycoplasma pneumoniae, Chlamydophila spp., Legionella pneumophila. Sem atividade contra Gram-negativos entéricos.",
+    "contraindications": [
+      "Hipersensibilidade aos macrolídeos",
+      "Deficiência de G6PD (risco de hemólise)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Droga de escolha para toxoplasmose no 1º trimestre de gestação (pirimetamina contraindicada nesse período).",
+      "Após 18 semanas: preferir pirimetamina + sulfadiazina + ácido folínico.",
+      "Não necessita ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / CRAT (Centre de Référence sur les Agents Tératogènes) / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "1–3 milhões UI",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Frequentemente utilizada na toxoplasmose gestacional."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "1–3 milhões UI",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "1–3 milhões UI",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "1–3 milhões UI",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Monitorar função hepática em tratamentos prolongados."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "1–3 milhões UI",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Não requer suplementação pós-HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Espiramicina",
+    "class": "Macrólido de 1.ª generación (anti-Toxoplasma)",
+    "commercialNames": {
+      "br": [
+        "Rovamycine",
+        "Espiramicina Genérico"
+      ],
+      "ar": [
+        "Rovamycine",
+        "Espiramicina Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 1,5 millones UI, 3 millones UI",
+      "Suspensión oral: 1,5 millones UI/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "1–3 millones UI VO 8/8h"
+    },
+    "doseKg": null,
+    "indication": "Toxoplasmosis gestacional (1.er trimestre — antes de la amniocentesis), infecciones por patógenos atípicos (Mycoplasma, Chlamydophila), faringoamigdalitis en alérgicos a penicilina.",
+    "spectrum": "Toxoplasma gondii (acción parasitostática), Streptococcus pyogenes, Streptococcus pneumoniae (sensible), Mycoplasma pneumoniae, Chlamydophila spp., Legionella pneumophila. Sin actividad frente a Gramnegativos entéricos.",
+    "contraindications": [
+      "Hipersensibilidad a los macrólidos",
+      "Deficiencia de G6PD (riesgo de hemólisis)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Droga de elección para toxoplasmosis en el 1.er trimestre de gestación (pirimetamina contraindicada en ese período).",
+      "Después de la semana 18: preferir pirimetamina + sulfadiazina + ácido folínico.",
+      "No requiere ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / CRAT (Centre de Référence sur les Agents Tératogènes) / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "1–3 milhões UI",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Frecuentemente utilizada en toxoplasmosis gestacional."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "1–3 milhões UI",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "1–3 milhões UI",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "1–3 milhões UI",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Monitorizar función hepática en tratamientos prolongados."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "1–3 milhões UI",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "9 milhões UI/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "No requiere suplementación post-HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Espiramicina",
+    "es": "Espiramicina"
+  },
+  "keywords": [
+    "espiramicina",
+    "rovamycine",
+    "espiramicina generico",
+    "macrolideo de 1ª geracao (anti-toxoplasma)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

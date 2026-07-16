@@ -1,0 +1,306 @@
+{
+  "id": "dapagliflozina",
+  "category": "cardio",
+  "icon": "🫀",
+  "color": "rgba(16,185,129,0.13)",
+  "colorTxt": "#065F46",
+  "pt": {
+    "name": "Dapagliflozina",
+    "class": "Inibidor do cotransportador sódio-glicose tipo 2 (iSGLT2) — benefício cardiorrenal",
+    "commercialNames": {
+      "br": [
+        "Forxiga",
+        "Dapagliflozina genérica"
+      ],
+      "ar": [
+        "Forxiga",
+        "Dapagliflozina"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 5 mg",
+      "Comprimidos 10 mg"
+    ],
+    "mechanism": "Inibe SGLT2 no túbulo proximal renal → ↑ glicosúria e natriurese → redução de congestão e pressão intraglomerular. Em IC e DRC, os benefícios são predominantemente hemodinâmicos e metabólicos, independentes do controle glicêmico.",
+    "pharmacokinetics": {
+      "onset": "Glicosúria/natriurese nas primeiras horas; benefício clínico em IC pode surgir precocemente",
+      "halfLife": "≈ 12–13 horas",
+      "duration": "Efeito sustentado com uso contínuo; metabolismo hepático + eliminação renal/fecal"
+    },
+    "dose": {
+      "adultoPadrao": "Dose: 10 mg VO 1x/dia (IC-FEr, IC-FEp, DRC). Benefício cardiorrenal independente do controle glicêmico.",
+      "adultoGrave": "IC-FEr (DAPA-HF): 10 mg/dia reduziu morte CV + hospitalização por IC. IC-FEp (DELIVER): 10 mg/dia reduziu piora de IC. DRC (DAPA-CKD): 10 mg/dia retardou progressão renal.",
+      "pediatricaPadrao": "Não aprovado em pediatria.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "10 mg VO 1x/dia — dose única para IC e DRC",
+      "grave": "10 mg/dia — sem titulação por peso",
+      "meningite": null,
+      "doseMaxima": "10 mg/dia"
+    },
+    "therapeuticTargets": [
+      "Redução de hospitalização por IC",
+      "Melhora de sintomas e congestão em IC",
+      "Proteção renal e redução de albuminúria",
+      "Benefício cardiorrenal independente do controle glicêmico (não-DM)",
+      "Redução de morte cardiovascular (IC-FEr)"
+    ],
+    "dilution": "Via oral. Administrar 1x/dia com ou sem alimentos. Não é de uso hospitalar exclusivo.",
+    "speed": "Dose única diária. Avaliar volemia e PA antes de iniciar. Considerar reduzir diurético se PAS < 100 mmHg ou sinais de hipovolemia.",
+    "commonAdverseEffects": [
+      "Infecção genital micótica",
+      "Poliúria / nictúria",
+      "Aumento da frequência urinária",
+      "Sede",
+      "Hipotensão postural",
+      "Náuseas leves"
+    ],
+    "dangerousAdverseEffects": [
+      "Cetoacidose diabética euglicêmica (DKA-E)",
+      "Desidratação grave e injúria renal aguda por hipovolemia",
+      "Hipotensão sintomática",
+      "Fasciíte necrosante do períneo (Fournier — rara)",
+      "Urossepse (rara)",
+      "Hipoglicemia quando combinada com insulina ou sulfonilureia"
+    ],
+    "risksByPatient": [
+      "🩺 Sick Day Rules: suspender em jejum prolongado, cirurgia, vômitos, diarreia, febre alta ou doença aguda grave. Reiniciar quando estável e hidratado.",
+      "Idosos: maior risco de hipovolemia, hipotensão e DRC subclínica. Avaliar diuréticos, PA e risco de quedas."
+    ],
+    "contraindications": {
+      "absolutas": [
+        "Hipersensibilidade à dapagliflozina",
+        "Cetoacidose diabética ativa",
+        "DM tipo 1 sem protocolo especializado aprovado",
+        "DRC terminal / diálise (conforme bula local e eGFR limite da indicação)"
+      ],
+      "relativas": [
+        "Hipovolemia não corrigida",
+        "PAS < 90 mmHg sintomática",
+        "Infecções genitais recorrentes",
+        "Jejum prolongado ou dieta cetogênica",
+        "Uso elevado de diuréticos sem compensação",
+        "História prévia de cetoacidose",
+        "Doença aguda grave (suspensão temporária)"
+      ]
+    },
+    "interactions": [
+      "Insulina / sulfonilureias: maior risco de hipoglicemia — considerar redução de dose.",
+      "Diuréticos de alça: maior risco de hipovolemia, hipotensão e injúria renal.",
+      "Anti-hipertensivos: hipotensão aditiva em pacientes suscetíveis.",
+      "AINEs + diuréticos + iSGLT2: tríade de risco para injúria renal aguda em hipovolemia.",
+      "Lítio: iSGLT2 podem reduzir lítio sérico em alguns casos — monitorar se aplicável."
+    ],
+    "renalAdjustment": "eGFR atual: 90 mL/min/1,73m². IC/DRC: pode iniciar/continuar com eGFR ≥ 25–30 (conforme indicação e bula local). Eficácia glicêmica reduz com eGFR < 45. Não iniciar em diálise.",
+    "hepaticAdjustment": "Geralmente não requer ajuste hepático. Cautela em hepatopatia grave — risco aumentado de desidratação e cetoacidose em doença aguda.",
+    "monitoring": {
+      "baseline": [
+        "Creatinina / eGFR",
+        "PA em ortostatismo",
+        "Estado volêmico (peso, edema, JVP)",
+        "HbA1c se diabetes",
+        "Albuminúria se DRC",
+        "Uso de diuréticos e dose atual",
+        "Histórico de cetoacidose",
+        "História de infecções genitais"
+      ],
+      "followUp": [
+        "Creatinina/eGFR — 2–4 sem após início se alto risco",
+        "PA e sintomas ortostáticos",
+        "Peso e congestão",
+        "Infecções genitais ou urinárias",
+        "Sinais de cetoacidose (náuseas, dor abd, taquipneia)",
+        "Necessidade de reduzir dose de diurético",
+        "Hospitalizações por IC"
+      ]
+    },
+    "safetyFlags": {
+      "highAlertInAcuteIllness": true,
+      "heartFailureBenefit": true,
+      "renalProtection": true,
+      "volumeDepletionRisk": true,
+      "hypotensionRisk": true,
+      "ketoacidosisRisk": true,
+      "euglycemicDKARisk": true,
+      "genitalInfectionRisk": true,
+      "renalFunctionCheckRequired": true,
+      "pregnancyAvoid": true,
+      "hospitalUseOnly": false,
+      "requiresTelemetry": false,
+      "requiresInfusionPump": false,
+      "warning": "🫀 Dapagliflozina reduz hospitalização por IC e protege rim — independente do diabetes. Atenção: suspender em doença aguda/cirurgia (cetoacidose euglicêmica), corrigir hipovolemia e monitorar eGFR."
+    },
+    "auditNotes": {
+      "status": "sglt2_inhibitor_cardiorenal_master_template"
+    },
+    "ref": [
+      "DAPA-HF Trial (NEJM 2019)",
+      "DELIVER Trial (NEJM 2022)",
+      "DAPA-CKD Trial (NEJM 2020)",
+      "ESC Heart Failure Guidelines 2021",
+      "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+      "KDIGO CKD Guidelines 2022",
+      "ADA Standards of Care 2024",
+      "FDA/EMA label — Forxiga (Dapagliflozin)"
+    ]
+  },
+  "es": {
+    "name": "Dapagliflozina",
+    "class": "Inhibidor del cotransportador sodio-glucosa tipo 2 (iSGLT2) — beneficio cardiorrenal",
+    "commercialNames": {
+      "br": [
+        "Forxiga",
+        "Dapagliflozina genérica"
+      ],
+      "ar": [
+        "Forxiga",
+        "Dapagliflozina"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 5 mg",
+      "Comprimidos 10 mg"
+    ],
+    "mechanism": "Inhibe SGLT2 en el túbulo proximal renal → ↑ glucosuria y natriuresis → reducción de congestión y presión intraglomerular. En IC y ERC, los beneficios son predominantemente hemodinámicos y metabólicos, independientes del control glucémico.",
+    "pharmacokinetics": {
+      "onset": "Glucosuria/natriuresis en las primeras horas; beneficio clínico en IC puede aparecer precozmente",
+      "halfLife": "≈ 12–13 horas",
+      "duration": "Efecto sostenido con uso continuo; metabolismo hepático + eliminación renal/fecal"
+    },
+    "dose": {
+      "adultoPadrao": "Dosis: 10 mg VO 1 vez/día (IC-FEr, IC-FEp, ERC). Beneficio cardiorrenal independiente del control glucémico.",
+      "adultoGrave": "IC-FEr (DAPA-HF): 10 mg/día redujo muerte CV + hospitalización por IC. IC-FEp (DELIVER): 10 mg/día redujo empeoramiento de IC. ERC (DAPA-CKD): 10 mg/día retrasó progresión renal.",
+      "pediatricaPadrao": "No aprobado en pediatría.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "10 mg VO 1 vez/día — dosis única para IC y ERC",
+      "grave": "10 mg/día — sin titulación por peso",
+      "meningite": null,
+      "doseMaxima": "10 mg/día"
+    },
+    "therapeuticTargets": [
+      "Reducción de hospitalización por IC",
+      "Mejoría de síntomas y congestión en IC",
+      "Protección renal y reducción de albuminuria",
+      "Beneficio cardiorrenal independiente del control glucémico (no-DM)",
+      "Reducción de muerte cardiovascular (IC-FEr)"
+    ],
+    "dilution": "Vía oral. Administrar 1 vez/día con o sin alimentos. No es de uso hospitalario exclusivo.",
+    "speed": "Dosis única diaria. Evaluar volemia y PA antes de iniciar. Considerar reducir diurético si PAS < 100 mmHg o signos de hipovolemia.",
+    "commonAdverseEffects": [
+      "Infección genital micótica",
+      "Poliuria / nicturia",
+      "Aumento de frecuencia urinaria",
+      "Sed",
+      "Hipotensión postural",
+      "Náuseas leves"
+    ],
+    "dangerousAdverseEffects": [
+      "Cetoacidosis diabética euglucémica (DKA-E)",
+      "Deshidratación grave y lesión renal aguda por hipovolemia",
+      "Hipotensión sintomática",
+      "Fascitis necrotizante del periné (Fournier — rara)",
+      "Urosepsis (rara)",
+      "Hipoglucemia cuando combinada con insulina o sulfonilurea"
+    ],
+    "risksByPatient": [
+      "🩺 Sick Day Rules: suspender en ayuno prolongado, cirugía, vómitos, diarrea, fiebre alta o enfermedad aguda grave. Reiniciar cuando estable e hidratado.",
+      "Ancianos: mayor riesgo de hipovolemia, hipotensión y ERC subclínica. Evaluar diuréticos, PA y riesgo de caídas."
+    ],
+    "contraindications": {
+      "absolutas": [
+        "Hipersensibilidad a dapagliflozina",
+        "Cetoacidosis diabética activa",
+        "DM tipo 1 sin protocolo especializado aprobado",
+        "ERC terminal / diálisis (según prospecto local y eGFR límite de indicación)"
+      ],
+      "relativas": [
+        "Hipovolemia no corregida",
+        "PAS < 90 mmHg sintomática",
+        "Infecciones genitales recurrentes",
+        "Ayuno prolongado o dieta cetogénica",
+        "Uso elevado de diuréticos sin compensación",
+        "Historia previa de cetoacidosis",
+        "Enfermedad aguda grave (suspensión temporal)"
+      ]
+    },
+    "interactions": [
+      "Insulina / sulfonilureas: mayor riesgo de hipoglucemia — considerar reducción de dosis.",
+      "Diuréticos de asa: mayor riesgo de hipovolemia, hipotensión y lesión renal.",
+      "Antihipertensivos: hipotensión aditiva en pacientes susceptibles.",
+      "AINEs + diuréticos + iSGLT2: tríada de riesgo para lesión renal aguda en hipovolemia.",
+      "Litio: iSGLT2 pueden reducir litio sérico en algunos casos — monitorizar si aplica."
+    ],
+    "renalAdjustment": "eGFR actual: 90 mL/min/1,73m². IC/ERC: puede iniciarse/continuarse con eGFR ≥ 25–30 (según indicación y prospecto local). Eficacia glucémica disminuye con eGFR < 45. No iniciar en diálisis.",
+    "hepaticAdjustment": "Generalmente no requiere ajuste hepático. Precaución en hepatopatía grave — riesgo aumentado de deshidratación y cetoacidosis en enfermedad aguda.",
+    "monitoring": {
+      "baseline": [
+        "Creatinina / eGFR",
+        "PA en ortostatismo",
+        "Estado voléimico (peso, edema, PVY)",
+        "HbA1c si diabetes",
+        "Albuminuria si ERC",
+        "Uso de diuréticos y dosis actual",
+        "Historial de cetoacidosis",
+        "Historia de infecciones genitales"
+      ],
+      "followUp": [
+        "Creatinina/eGFR — 2–4 sem tras inicio si alto riesgo",
+        "PA y síntomas ortostáticos",
+        "Peso y congestión",
+        "Infecciones genitales o urinarias",
+        "Signos de cetoacidosis (náuseas, dolor abd, taquipnea)",
+        "Necesidad de reducir dosis de diurético",
+        "Hospitalizaciones por IC"
+      ]
+    },
+    "safetyFlags": {
+      "highAlertInAcuteIllness": true,
+      "heartFailureBenefit": true,
+      "renalProtection": true,
+      "volumeDepletionRisk": true,
+      "hypotensionRisk": true,
+      "ketoacidosisRisk": true,
+      "euglycemicDKARisk": true,
+      "genitalInfectionRisk": true,
+      "renalFunctionCheckRequired": true,
+      "pregnancyAvoid": true,
+      "hospitalUseOnly": false,
+      "requiresTelemetry": false,
+      "requiresInfusionPump": false,
+      "warning": "🫀 Dapagliflozina reduce hospitalización por IC y protege riñón — independiente de la diabetes. Atención: suspender en enfermedad aguda/cirugía (cetoacidosis euglucémica), corregir hipovolemia y monitorizar eGFR."
+    },
+    "auditNotes": {
+      "status": "sglt2_inhibitor_cardiorenal_master_template"
+    },
+    "ref": [
+      "DAPA-HF Trial (NEJM 2019)",
+      "DELIVER Trial (NEJM 2022)",
+      "DAPA-CKD Trial (NEJM 2020)",
+      "ESC Heart Failure Guidelines 2021",
+      "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+      "KDIGO CKD Guidelines 2022",
+      "ADA Standards of Care 2024",
+      "FDA/EMA label — Forxiga (Dapagliflozin)"
+    ]
+  },
+  "name": {
+    "pt": "Dapagliflozina",
+    "es": "Dapagliflozina"
+  },
+  "keywords": [
+    "dapagliflozina",
+    "forxiga",
+    "dapagliflozina generica",
+    "inibidor do cotransportador sodio-glicose tipo 2 (isglt2) — beneficio cardiorrenal"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

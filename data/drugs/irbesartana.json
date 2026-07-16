@@ -1,0 +1,307 @@
+{
+  "id": "irbesartana",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.13)",
+  "colorTxt": "#14532D",
+  "pt": {
+    "name": "Irbesartana",
+    "class": "Bloqueador do Receptor de Angiotensina II (BRA/ARB)",
+    "commercialNames": {
+      "br": [
+        "Aprovel",
+        "Avapro",
+        "Irbesartana genérica"
+      ],
+      "ar": [
+        "Aprovel",
+        "Irbesartán genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 75 mg, 150 mg, 300 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 150 mg VO 1x/dia inicial. Manutenção: 150–300 mg/dia. Máximo: 300 mg/dia. Considerar 75 mg/dia em idosos frágeis, hipovolemia ou uso intenso de diuréticos.",
+      "adultoGrave": "Nefroproteção em DM2 + proteinúria (IDNT): 150 mg/dia → 300 mg/dia. Microalbuminúria em DM2 (IRMA-2): 150–300 mg/dia.",
+      "pediatricaPadrao": "Uso pediátrico não aprovado formalmente. Dados clínicos muito limitados.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adultos: 150–300 mg/dia (dose fixa — sem cálculo por kg aprovado)",
+      "grave": "Nefroproteção DM2: alvo 300 mg/dia se tolerado",
+      "meningite": null,
+      "doseMaxima": "Adultos: 300 mg/dia"
+    },
+    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. Nefroproteção: alvo de redução de albuminúria/proteinúria e estabilização de TFG. Monitorar K⁺ e creatinina — sem nível sérico-alvo.",
+    "dilution": "Apenas formulação oral disponível. Sem apresentação EV.",
+    "speed": "VO: tomar 1x/dia no mesmo horário, com ou sem alimento.",
+    "commonAdverseEffects": [
+      "Tontura / hipotensão",
+      "Hipercalemia (↑ potássio)",
+      "Elevação de creatinina",
+      "Fadiga",
+      "Cefaleia"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema (raro)",
+      "Hipercalemia grave (K⁺ > 6 mEq/L)",
+      "Insuficiência Renal Aguda (especialmente em estenose bilateral de artéria renal)",
+      "Hipotensão grave — especialmente na 1ª dose em hipovolêmicos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação. Aumento ≤ 30% de creatinina é esperado e aceitável.",
+      "Diferencial de classe: irbesartana tem evidência nefroprotetora robusta em DM2 com proteinúria (IDNT — redução de 33% na progressão para DRET; IRMA-2 — redução de microalbuminúria).",
+      "Evitar dupla inibição do SRAA (BRA + IECA + alisquireno): sem benefício adicional e risco aumentado de hipotensão, hipercalemia e lesão renal.",
+      "AINEs: reduzem efeito anti-hipertensivo e aumentam risco de lesão renal aguda — orientar paciente."
+    ],
+    "ref": "FDA Avapro (irbesartan) label 2023 · IDNT Trial — Lewis EJ et al. (NEJM 2001) · IRMA-2 Trial — Parving HH et al. (NEJM 2001) · ESC Hypertension Guidelines 2023 · KDIGO CKD 2022 · Lexicomp 2026",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Ajuste renal formal não necessário para ClCr ≥ 30 mL/min. Monitorar K⁺ e creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose padrão. HTA: 150–300 mg/dia. Nefroproteção DM2: titular até 300 mg/dia se tolerado."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "75–150 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR moderada: sem ajuste obrigatório. Preferir dose inicial de 75–150 mg. Monitorar K⁺ e creatinina com atenção."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "75 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "150 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar com 75 mg/dia. Risco elevado de hipercalemia. Monitoramento intensivo de K⁺ e creatinina."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "75 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "75 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muito grave/anúria: dose máxima 75 mg/dia. Avaliar risco-benefício cuidadosamente. K⁺ > 5,5 pode contraindicar uso."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "75 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "75 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Irbesartana não é removida significativamente por hemodiálise. Manter dose reduzida sem suplementação pós-HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. BRA com maior evidência nefroprotetora em DM2 + proteinúria (IDNT/IRMA-2). Monitorar K⁺ e creatinina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Avapro (irbesartan) label 2023",
+        "EMA Aprovel SmPC 2024",
+        "IDNT Trial — Lewis EJ et al. (NEJM 2001)",
+        "IRMA-2 Trial — Parving HH et al. (NEJM 2001)",
+        "ESC Hypertension Guidelines 2023",
+        "KDIGO CKD Guidelines 2022",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "BRA com evidência de nefroproteção específica em DM2 com proteinúria (IDNT/IRMA-2). Metabolismo hepático — sem ajuste renal formal. Não aprovado formalmente em pediatria. Não dialisável."
+    }
+  },
+  "es": {
+    "name": "Irbesartán",
+    "class": "Bloqueante del Receptor de Angiotensina II (BRA/ARA-II)",
+    "commercialNames": {
+      "br": [
+        "Aprovel",
+        "Avapro",
+        "Irbesartana genérica"
+      ],
+      "ar": [
+        "Aprovel",
+        "Irbesartán genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 75 mg, 150 mg, 300 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 150 mg VO 1 vez/día inicial. Mantenimiento: 150–300 mg/día. Máximo: 300 mg/día. Considerar 75 mg/día en ancianos frágiles, hipovolemia o uso intenso de diuréticos.",
+      "adultoGrave": "Nefroprotección en DM2 + proteinuria (IDNT): 150 mg/día → 300 mg/día. Microalbuminuria en DM2 (IRMA-2): 150–300 mg/día.",
+      "pediatricaPadrao": "Uso pediátrico no aprobado formalmente. Datos clínicos muy limitados.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adultos: 150–300 mg/día (dosis fija — sin cálculo por kg aprobado)",
+      "grave": "Nefroprotección DM2: objetivo 300 mg/día si tolerado",
+      "meningite": null,
+      "doseMaxima": "Adultos: 300 mg/día"
+    },
+    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. Nefroprotección: objetivo de reducción de albuminuria/proteinuria y estabilización de TFG. Monitorizar K⁺ y creatinina — sin nivel sérico objetivo.",
+    "dilution": "Solo formulación oral disponible. Sin presentación EV.",
+    "speed": "VO: tomar 1 vez/día a la misma hora, con o sin alimento.",
+    "commonAdverseEffects": [
+      "Mareos / hipotensión",
+      "Hiperpotasemia (↑ potasio)",
+      "Elevación de creatinina",
+      "Fatiga",
+      "Cefalea"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema (raro)",
+      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
+      "Insuficiencia Renal Aguda (especialmente en estenosis bilateral de arteria renal)",
+      "Hipotensión grave — especialmente en 1ª dosis en hipovolémicos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación. Aumento ≤ 30% de creatinina es esperado y aceptable.",
+      "Diferencial de clase: irbesartán tiene evidencia nefroprotectora robusta en DM2 con proteinuria (IDNT — reducción del 33% en progresión a ERCT; IRMA-2 — reducción de microalbuminuria).",
+      "Evitar doble inhibición del SRAA (ARA-II + IECA + aliskirén): sin beneficio adicional y riesgo aumentado de hipotensión, hiperpotasemia y lesión renal.",
+      "AINEs: reducen efecto antihipertensivo y aumentan riesgo de lesión renal aguda — orientar al paciente."
+    ],
+    "ref": "FDA Avapro (irbesartan) label 2023 · IDNT Trial — Lewis EJ et al. (NEJM 2001) · IRMA-2 Trial — Parving HH et al. (NEJM 2001) · ESC Hypertension Guidelines 2023 · KDIGO CKD 2022 · Lexicomp 2026",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Ajuste renal formal no necesario para ClCr ≥ 30 mL/min. Monitorizar K⁺ y creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis estándar. HTA: 150–300 mg/día. Nefroprotección DM2: titular hasta 300 mg/día si tolerado."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "75–150 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR moderada: sin ajuste obligatorio. Preferir dosis inicial de 75–150 mg. Monitorizar K⁺ y creatinina con atención."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "75 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "150 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar con 75 mg/día. Riesgo elevado de hiperpotasemia. Monitorización intensiva de K⁺ y creatinina."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "75 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "75 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muy grave/anuria: dosis máxima 75 mg/día. Evaluar riesgo-beneficio cuidadosamente. K⁺ > 5,5 puede contraindicar uso."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "75 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "75 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Irbesartán no es removido significativamente por hemodiálisis. Mantener dosis reducida sin suplementación post-HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. ARA-II con mayor evidencia nefroprotectora en DM2 + proteinuria (IDNT/IRMA-2). Monitorizar K⁺ y creatinina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Avapro (irbesartan) label 2023",
+        "EMA Aprovel SmPC 2024",
+        "IDNT Trial — Lewis EJ et al. (NEJM 2001)",
+        "IRMA-2 Trial — Parving HH et al. (NEJM 2001)",
+        "ESC Hypertension Guidelines 2023",
+        "KDIGO CKD Guidelines 2022",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "ARA-II con evidencia de nefroprotección específica en DM2 con proteinuria (IDNT/IRMA-2). Metabolismo hepático — sin ajuste renal formal. No aprobado formalmente en pediatría. No dializable."
+    }
+  },
+  "name": {
+    "pt": "Irbesartana",
+    "es": "Irbesartán"
+  },
+  "keywords": [
+    "irbesartana",
+    "irbesartan",
+    "aprovel",
+    "avapro",
+    "irbesartana generica",
+    "irbesartan generico",
+    "bloqueador do receptor de angiotensina ii (bra/arb)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

@@ -1,0 +1,233 @@
+{
+  "id": "norfloxacino",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Norfloxacino",
+    "class": "Fluoroquinolona de 2ª geração (uso oral exclusivo)",
+    "commercialNames": {
+      "br": [
+        "Floxacin",
+        "Norfloxacino Genérico"
+      ],
+      "ar": [
+        "Norfloxacino Genérico",
+        "Noroxin"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 400 mg"
+    ],
+    "dose": {
+      "adulto": "400 mg VO 12/12h"
+    },
+    "doseKg": {
+      "standard": "400 mg 12/12h VO (não baseado em peso)",
+      "maxDose": "800 mg/dia"
+    },
+    "therapeuticRange": "Concentração-dependente. Distribuição urinária predominante — uso restrito a ITU não complicada e prostatite. NÃO atingir níveis sistêmicos adequados.",
+    "dilution": "Uso exclusivamente oral.",
+    "speed": "Não aplicável (uso oral).",
+    "commonAdverseEffects": [
+      "Náuseas e vômitos",
+      "Cefaleia",
+      "Tontura",
+      "Diarreia"
+    ],
+    "dangerousAdverseEffects": [
+      "Tendinite / ruptura de tendão",
+      "QT prolongado / arritmias",
+      "Neuropatia periférica",
+      "Psicose / convulsões (raro)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "USO RESTRITO a ITU baixa não complicada e prostatite — NÃO usar para infecções sistêmicas.",
+      "Ingerir 1 hora antes ou 2 horas após antiácidos, leite, ferro e zinco — quelatação reduz absorção.",
+      "Risco de ruptura tendinea aumentado em idosos e com uso de corticoides."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman / Anvisa",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose habitual para ITU e prostatite."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Geralmente sem ajuste até ClCr 30 mL/min."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Reduzir frequência para cada 24 horas."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Monitorar QT prolongado, tendinopatia e neurotoxicidade."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não requer dose suplementar pós-hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Norfloxacino",
+    "class": "Fluoroquinolona de 2ª generación (uso oral exclusivo)",
+    "commercialNames": {
+      "br": [
+        "Floxacin",
+        "Norfloxacino Genérico"
+      ],
+      "ar": [
+        "Norfloxacino Genérico",
+        "Noroxin"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 400 mg"
+    ],
+    "dose": {
+      "adulto": "400 mg VO 12/12h"
+    },
+    "doseKg": {
+      "standard": "400 mg cada 12h VO (no basado en peso)",
+      "maxDose": "800 mg/día"
+    },
+    "therapeuticRange": "Concentración-dependiente. Distribución urinaria predominante — uso restringido a ITU no complicada y prostatitis. NO alcanza niveles sistémicos adecuados.",
+    "dilution": "Uso exclusivamente oral.",
+    "speed": "No aplicable (uso oral).",
+    "commonAdverseEffects": [
+      "Náuseas y vómitos",
+      "Cefalea",
+      "Mareos",
+      "Diarrea"
+    ],
+    "dangerousAdverseEffects": [
+      "Tendinitis / rotura de tendón",
+      "QT prolongado / arritmias",
+      "Neuropatía periférica",
+      "Psicosis / convulsiones (raro)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "USO RESTRINGIDO a ITU baja no complicada y prostatitis — NO usar para infecciones sistémicas.",
+      "Ingerir 1 hora antes o 2 horas después de antiácidos, leche, hierro y zinc — quelación reduce absorción.",
+      "Riesgo de rotura tendinosa aumentado en ancianos y con uso de corticoides."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman / Anvisa",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis habitual para ITU y prostatitis."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Generalmente sin ajuste hasta ClCr 30 mL/min."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Reducir frecuencia a cada 24 horas."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Monitorizar QT prolongado, tendinopatía y neurotoxicidad."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No requiere dosis suplementaria post-hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Norfloxacino",
+    "es": "Norfloxacino"
+  },
+  "keywords": [
+    "norfloxacino",
+    "floxacin",
+    "norfloxacino generico",
+    "noroxin",
+    "fluoroquinolona de 2ª geracao (uso oral exclusivo)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

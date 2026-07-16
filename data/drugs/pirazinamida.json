@@ -1,0 +1,281 @@
+{
+  "id": "pirazinamida",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Pirazinamida",
+    "class": "Antimicobacteriano (antituberculoso)",
+    "commercialNames": {
+      "br": [
+        "Pirazinamida Genérico",
+        "Rifater (associação)"
+      ],
+      "ar": [
+        "Pirazinamida Genérico",
+        "Rifater (asociación)"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 500 mg",
+      "Formulação combinada com rifampicina + isoniazida (Rifater)"
+    ],
+    "dose": {
+      "adulto": "1750 mg VO 1x/dia (20–25 mg/kg/dia)",
+      "pediatrica": "2000 mg VO 1x/dia (30–40 mg/kg/dia)"
+    },
+    "doseKg": {
+      "standard": "20–25 mg/kg/dia VO (adulto)",
+      "maxDose": "2 g/dia"
+    },
+    "therapeuticRange": "Bactericida em pH ácido (intracelular/fagossômico).",
+    "dilution": "Uso exclusivamente oral.",
+    "speed": "Não aplicável (uso oral).",
+    "commonAdverseEffects": [
+      "Hiperuricemia / artralgia",
+      "Náuseas e vômitos",
+      "Anorexia"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidade grave",
+      "Crise gotosa aguda",
+      "Fotossensibilidade"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar ácido úrico e provas de função hepática mensalmente.",
+      "Parte integrante do esquema RHZE (rifampicina + isoniazida + pirazinamida + etambutol) nos primeiros 2 meses."
+    ],
+    "ref": "WHO TB Guidelines 2022 / Ministério da Saúde BR / Sanford Guide 2025",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "20–25 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30–40 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual para tratamento da tuberculose."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "25–35 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30–40 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajustar intervalo para evitar acúmulo."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "25–35 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30–40 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar hepatotoxicidade e hiperuricemia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "25–35 mg/kg",
+          "intervalo": "72/72h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30–40 mg/kg",
+          "intervalo": "72/72h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar em intervalos prolongados."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "25–35 mg/kg",
+          "intervalo": "3x/semana pós-HD",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30–40 mg/kg",
+          "intervalo": "3x/semana pós-HD",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Pirazinamida",
+    "class": "Antimicobacteriano (antituberculoso)",
+    "commercialNames": {
+      "br": [
+        "Pirazinamida Genérico",
+        "Rifater (associação)"
+      ],
+      "ar": [
+        "Pirazinamida Genérico",
+        "Rifater (asociación)"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 500 mg",
+      "Formulación combinada con rifampicina + isoniazida (Rifater)"
+    ],
+    "dose": {
+      "adulto": "1750 mg VO 1 vez/día (20–25 mg/kg/día)",
+      "pediatrica": "2000 mg VO 1 vez/día (30–40 mg/kg/día)"
+    },
+    "doseKg": {
+      "standard": "20–25 mg/kg/día VO (adulto)",
+      "maxDose": "2 g/día"
+    },
+    "therapeuticRange": "Bactericida en pH ácido (intracelular/fagosómico).",
+    "dilution": "Uso exclusivamente oral.",
+    "speed": "No aplicable (uso oral).",
+    "commonAdverseEffects": [
+      "Hiperuricemia / artralgia",
+      "Náuseas y vómitos",
+      "Anorexia"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidad grave",
+      "Crisis gotosa aguda",
+      "Fotosensibilidad"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorizar ácido úrico y pruebas de función hepática mensualmente.",
+      "Parte integrante del esquema RHZE en los primeros 2 meses."
+    ],
+    "ref": "WHO TB Guidelines 2022 / Ministério da Saúde BR / Sanford Guide 2025",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "20–25 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30–40 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual para tratamiento de la tuberculosis."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "25–35 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30–40 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajustar intervalo para evitar acumulación."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "25–35 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30–40 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar hepatotoxicidad e hiperuricemia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "25–35 mg/kg",
+          "intervalo": "72/72h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30–40 mg/kg",
+          "intervalo": "72/72h",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar en intervalos prolongados."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "25–35 mg/kg",
+          "intervalo": "3x/semana pós-HD",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30–40 mg/kg",
+          "intervalo": "3x/semana pós-HD",
+          "doseMaxima": "2 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Pirazinamida",
+    "es": "Pirazinamida"
+  },
+  "keywords": [
+    "pirazinamida",
+    "pirazinamida generico",
+    "rifater (associacao)",
+    "rifater (asociacion)",
+    "antimicobacteriano (antituberculoso)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

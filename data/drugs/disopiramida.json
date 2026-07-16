@@ -1,0 +1,123 @@
+{
+  "id": "disopiramida",
+  "category": "cardio",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "dose": "100–150 mg VO 6/6h (IR) ou formulação LP 12/12h",
+    "doseMax": "800 mg/dia",
+    "clcrEstimado": "90 mL/min",
+    "apresentacao": "Cápsulas 100 mg / 150 mg IR | Cápsulas LP (Norpace CR)",
+    "classe": "Antiarrítmico Classe IA | Anticolinérgico potente | Inotrópico negativo | t½ 6–8 h",
+    "indicacoes": [
+      "FA selecionada (sem IC-FEr)",
+      "Flutter atrial",
+      "Arritmias ventriculares selecionadas",
+      "CMH obstrutiva sintomática — redução gradiente VE"
+    ],
+    "ajusteRenal": "ClCr 90 mL/min — dose plena",
+    "efeitosAdversos": [
+      "Boca seca",
+      "Constipação",
+      "Retenção urinária",
+      "Visão borrada",
+      "Tontura",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV",
+      "⚠️ Choque cardiogênico (IC)",
+      "⚠️ Bloqueio AV"
+    ],
+    "monitoramento": [
+      "ECG + QTc + QRS basal e periódico",
+      "K⁺ e Mg²⁺",
+      "PA e FC",
+      "Sintomas anticolinérgicos",
+      "Sintomas de IC",
+      "Débito urinário",
+      "ClCr periódico"
+    ],
+    "refs": [
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS Guidelines",
+      "ESC HCM Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA label"
+    ],
+    "alerts": [
+      {
+        "tipo": "warning",
+        "msg": "⚠️ Efeitos anticolinérgicos potentes: boca seca, constipação, retenção urinária, visão borrada. Alertar paciente. Monitorar em hiperplasia prostática."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: Risco de pró-arritmia ventricular e IC. Contraindicado em IC-FEr."
+      }
+    ]
+  },
+  "es": {
+    "dose": "100–150 mg VO 6/6h (IR) ou formulação LP 12/12h",
+    "doseMax": "800 mg/dia",
+    "clcrEstimado": "90 mL/min",
+    "apresentacao": "Cápsulas 100 mg / 150 mg IR | Cápsulas LP (Norpace CR)",
+    "classe": "Antiarrítmico Clase IA | Anticolinérgico potente | Inotrópico negativo | t½ 6–8 h",
+    "indicacoes": [
+      "FA seleccionada (sin IC-FEr)",
+      "Flutter auricular",
+      "Arritmias ventriculares seleccionadas",
+      "MCH obstructiva sintomática — reducción gradiente VI"
+    ],
+    "ajusteRenal": "ClCr 90 mL/min — dosis plena",
+    "efeitosAdversos": [
+      "Boca seca",
+      "Estreñimiento",
+      "Retención urinaria",
+      "Visión borrosa",
+      "Mareos",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV",
+      "⚠️ Shock cardiogénico (IC)",
+      "⚠️ Bloqueo AV"
+    ],
+    "monitoramento": [
+      "ECG + QTc + QRS basal y periódico",
+      "K⁺ y Mg²⁺",
+      "PA y FC",
+      "Síntomas anticolinérgicos",
+      "Síntomas de IC",
+      "Diuresis",
+      "ClCr periódico"
+    ],
+    "refs": [
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS Guidelines",
+      "ESC HCM Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA label"
+    ],
+    "alerts": [
+      {
+        "tipo": "warning",
+        "msg": "⚠️ Efectos anticolinérgicos potentes: boca seca, estreñimiento, retención urinaria, visión borrosa. Alertar al paciente. Monitorizar en hiperplasia prostática."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: Riesgo de proarritmia ventricular e IC. Contraindicado en IC-FEr."
+      }
+    ]
+  },
+  "name": {
+    "pt": "Disopiramida",
+    "es": "Disopiramida"
+  },
+  "keywords": [
+    "disopiramida"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

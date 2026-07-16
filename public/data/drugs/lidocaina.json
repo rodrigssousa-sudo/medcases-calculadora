@@ -1,0 +1,155 @@
+{
+  "id": "lidocaina",
+  "category": "analgesia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Lidocaína"
+  },
+  "es": {
+    "name": "Lidocaína"
+  },
+  "name": {
+    "pt": "Lidocaína",
+    "es": "Lidocaína"
+  },
+  "keywords": [
+    "lidocaina",
+    "lidocaína"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "analgesicos.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "analgesicos.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "cardio.js",
+      "record": {
+        "id": "lidocaina",
+        "category": "cardio",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "dose": "Bolus 70–105 mg IV (1–1,5 mg/kg) → Infusão 1–4 mg/min IV",
+          "doseBolus": "70–105 mg IV (1–1,5 mg/kg) em 1–2 min",
+          "doseRepetir": "53 mg IV (0,75 mg/kg) a cada 5–10 min se necessário",
+          "doseTotalMax": "210 mg (3 mg/kg) em bolus acumulado",
+          "doseInfusao": "1–4 mg/min IV",
+          "apresentacao": "Ampolas IV 1% (10 mg/mL) / 2% (20 mg/mL)",
+          "classe": "Antiarrítmico Classe IB | Anestésico local amida | t½ 1,5–2 h (variável)",
+          "indicacoes": [
+            "TV estável — alternativa à amiodarona",
+            "FV/TV recorrente pós-PCR",
+            "Arritmias ventriculares isquêmicas/pós-IAM",
+            "PCR por FV/TV sem pulso (se amiodarona indisponível)"
+          ],
+          "efeitosAdversos": [
+            "Sonolência",
+            "Tontura",
+            "Parestesias",
+            "Tremor",
+            "Náuseas",
+            "Confusão",
+            "Disartria",
+            "⚠️ Convulsões",
+            "⚠️ Coma",
+            "⚠️ Depressão respiratória",
+            "⚠️ Bradicardia/BAV",
+            "⚠️ Colapso CV"
+          ],
+          "monitoramento": [
+            "ECG contínuo",
+            "PA a cada 5 min (carga)",
+            "Estado neurológico",
+            "Ritmo ventricular",
+            "K⁺ + Mg²⁺",
+            "Função hepática",
+            "Suspender se tremor/confusão/convulsão"
+          ],
+          "refs": [
+            "AHA ACLS Guidelines",
+            "ESC VA Guidelines",
+            "AHA/ACC/HRS VA Guidelines",
+            "Goodman & Gilman",
+            "Lexicomp",
+            "FDA/DailyMed label"
+          ],
+          "alerts": []
+        },
+        "es": {
+          "dose": "Bolo 70–105 mg IV (1–1,5 mg/kg) → Infusión 1–4 mg/min IV",
+          "doseBolus": "70–105 mg IV (1–1,5 mg/kg) en 1–2 min",
+          "doseRepetir": "53 mg IV (0,75 mg/kg) cada 5–10 min si necesario",
+          "doseTotalMax": "210 mg (3 mg/kg) en bolo acumulado",
+          "doseInfusao": "1–4 mg/min IV",
+          "apresentacao": "Ampollas IV 1% (10 mg/mL) / 2% (20 mg/mL)",
+          "classe": "Antiarrítmico Clase IB | Anestésico local amida | t½ 1,5–2 h (variable)",
+          "indicacoes": [
+            "TV estable — alternativa a amiodarona",
+            "FV/TV recurrente post-PCR",
+            "Arritmias ventriculares isquémicas/post-IAM",
+            "PCR por FV/TV sin pulso (si amiodarona no disponible)"
+          ],
+          "efeitosAdversos": [
+            "Somnolencia",
+            "Mareos",
+            "Parestesias",
+            "Temblor",
+            "Náuseas",
+            "Confusión",
+            "Disartria",
+            "⚠️ Convulsiones",
+            "⚠️ Coma",
+            "⚠️ Depresión respiratoria",
+            "⚠️ Bradicardia/BAV",
+            "⚠️ Colapso CV"
+          ],
+          "monitoramento": [
+            "ECG continuo",
+            "PA cada 5 min (carga)",
+            "Estado neurológico",
+            "Ritmo ventricular",
+            "K⁺ + Mg²⁺",
+            "Función hepática",
+            "Suspender si temblor/confusión/convulsión"
+          ],
+          "refs": [
+            "AHA ACLS Guidelines",
+            "ESC VA Guidelines",
+            "AHA/ACC/HRS VA Guidelines",
+            "Goodman & Gilman",
+            "Lexicomp",
+            "FDA/DailyMed label"
+          ],
+          "alerts": []
+        },
+        "name": {
+          "pt": "lidocaina",
+          "es": "lidocaina"
+        },
+        "keywords": [
+          "lidocaina"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "cardio.js"
+      }
+    }
+  ]
+}

@@ -1,0 +1,722 @@
+{
+  "id": "nadolol",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(239,68,68,0.13)",
+  "colorTxt": "#7C2D12",
+  "pt": {
+    "name": "Nadolol",
+    "class": "Betabloqueador não seletivo de longa duração",
+    "commercialNames": {
+      "br": [
+        "Corgard",
+        "Nadolol genérico"
+      ],
+      "ar": [
+        "Nadolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 40 mg",
+      "Comprimidos 80 mg",
+      "Comprimidos 160 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "20–40 mg VO 1x/dia; manutenção 40–160 mg/dia; máx 240 mg/dia em algumas indicações",
+      "adultoGrave": "Sem formulação EV padrão. Uso exclusivo VO. Em hipertensão portal: titular para FC repouso ~55–60 bpm sem causar hipotensão.",
+      "pediatricaPadrao": "Não estabelecida rotineiramente em pediatria",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "240 mg/dia (em algumas indicações); titular por FC e PA"
+    },
+    "therapeuticRange": "FC alvo ~55–60 bpm em hipertensão portal; controle pressórico e de angina nas demais indicações",
+    "dilution": "Uso exclusivo via oral. Não diluir.",
+    "speed": "Administrar 1x/dia, preferencialmente pela manhã.",
+    "commonAdverseEffects": [
+      "Fadiga",
+      "Tontura",
+      "Bradicardia",
+      "Hipotensão",
+      "Extremidades frias",
+      "Náuseas",
+      "Disfunção sexual"
+    ],
+    "dangerousAdverseEffects": [
+      "Broncoespasmo",
+      "Bloqueio AV",
+      "Bradicardia grave",
+      "Choque cardiogênico",
+      "Piora de insuficiência cardíaca",
+      "Hipotensão grave em cirrose avançada",
+      "Piora de função renal em pacientes cirróticos vulneráveis"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Não suspender abruptamente — risco de angina rebote e eventos coronarianos.",
+      "Betabloqueador NÃO seletivo: contraindicado em asma grave e broncoespasmo ativo.",
+      "Eliminação renal (~75%): ajuste obrigatório em ClCr < 35 mL/min com aumento do intervalo.",
+      "Cirrose avançada (cirrhosisCaution): titular com extrema cautela por risco de hipotensão, disfunção renal e descompensação. Baveno VII: betabloqueador não seletivo de referência para profilaxia de sangramento por varizes."
+    ],
+    "ref": "ESC Hypertension Guidelines · AASLD Portal Hypertension Guidance · Baveno VII Consensus 2022 · AHA/ACC Scientific Statements · Goodman & Gilman 14ª ed. · Lexicomp Online 2026 · Micromedex 2026 · Katzung Farmacologia 15ª ed. · FDA label · EMA label",
+    "pharmacologicClass": "Betabloqueador β1/β2 não seletivo, hidrofílico, de longa duração de ação",
+    "mechanism": "Bloqueia receptores β1 cardíacos e β2 periféricos de forma não seletiva, sem atividade simpatomimética intrínseca (ASI). Reduz FC, contratilidade, condução AV, débito cardíaco e secreção de renina. O bloqueio β2 periférico também reduz tremor e resposta adrenérgica, mas aumenta o risco de broncoespasmo e vasoconstrição periférica.",
+    "pharmacodynamics": "Dose única diária pela longa meia-vida (20–24h). Por ser hidrofílico, atravessa menos a barreira hematoencefálica que propranolol, resultando em menor incidência de pesadelos, depressão e efeitos centrais. Reduz pressão portal por diminuição do débito cardíaco e vasoconstrição esplâncnica (bloqueio β2) — mecanismo duplo relevante na profilaxia de varizes esofágicas.",
+    "onset": "Início em 1–2 horas após dose oral; efeito máximo em 3–4 horas; duração aproximada de 24 horas.",
+    "pharmacokinetics": {
+      "absorption": "Absorção oral moderada (~30–40%), não significativamente afetada por alimentos.",
+      "bioavailability": "~30–40%",
+      "proteinBinding": "~30% (baixa)",
+      "vd": "~2 L/kg",
+      "metabolism": "Metabolismo hepático mínimo (< 10%). Não sofre efeito de primeira passagem relevante. Não há metabólitos ativos significativos. CYP450 não tem papel relevante.",
+      "halfLife": "20–24 horas (permite dose única diária)",
+      "elimination": "Eliminação predominantemente renal como fármaco inalterado (~75%). Ajuste obrigatório em DRC (intervalos prolongados em ClCr < 35 mL/min).",
+      "dialysability": "Parcialmente removido por hemodiálise (~50%). Administrar dose após cada sessão de HD."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensão arterial sistêmica",
+        "Angina estável crônica"
+      ],
+      "offLabel": [
+        "Profilaxia primária e secundária de sangramento por varizes esofágicas em hipertensão portal (Baveno VII)",
+        "Síndrome do QT longo congênito (SQTL) — especialmente SQTL tipo 1 e 2",
+        "Profilaxia de enxaqueca",
+        "Tremor essencial",
+        "Controle de sintomas adrenérgicos (tireotoxicose, feocromocitoma com α-bloqueio prévio)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Asma brônquica moderada ou grave",
+        "Broncoespasmo ativo",
+        "Choque cardiogênico",
+        "Bradicardia sintomática (FC < 50 bpm)",
+        "Bloqueio AV de 2º grau (Mobitz II) ou 3º grau sem marcapasso",
+        "Insuficiência cardíaca descompensada com sinais de baixo débito"
+      ],
+      "relative": [
+        "DPOC com broncoespasmo reversível significativo",
+        "Diabetes mellitus insulinodependente (mascaramento de hipoglicemia)",
+        "Doença vascular periférica grave / Fenômeno de Raynaud",
+        "Insuficiência renal avançada (ClCr < 10 mL/min) — ajuste agressivo necessário",
+        "Cirrose avançada com hipotensão basal (PAS < 90 mmHg), hiponatremia < 130 mEq/L, IRA ou ascite refratária"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamil EV / Diltiazem EV",
+          "mechanism": "Dupla inibição nodal AV com ação IV — dromotrópico e cronotrópico negativos aditivos",
+          "consequence": "Bloqueio AV completo, assistolia, parada cardíaca",
+          "management": "Absolutamente contraindicado administrar ambos por via IV. Cautela também com verapamil/diltiazem oral em doses altas."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Efeito bradicardizante e bloqueio AV aditivos",
+          "consequence": "Bradicardia grave, bloqueio AV de alto grau, colapso hemodinâmico",
+          "management": "Monitorar ECG continuamente. Titular nadolol em doses mínimas eficazes."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efeito cronotrópico e dromotrópico negativo aditivo no nódulo AV",
+          "consequence": "Bradicardia e bloqueio AV de alto grau",
+          "management": "Monitorar ECG e nível sérico de digoxina. Alvo: 0,5–0,9 ng/mL."
+        },
+        {
+          "drug": "Clonidina",
+          "mechanism": "Na retirada da clonidina, hipertensão rebote é exacerbada pelo betabloqueador (predominância alfa não oposta)",
+          "consequence": "Crise hipertensiva grave na retirada de clonidina",
+          "management": "Retirar betabloqueador ANTES da clonidina quando possível. Se necessário suspender ambos: descontinuar nadolol primeiro."
+        },
+        {
+          "drug": "Epinefrina (adrenalina)",
+          "mechanism": "Betabloqueio não seletivo bloqueia vasodilatação β2, deixando vasoconstrição α1 sem oposição",
+          "consequence": "Hipertensão paradoxal grave com bradicardia reflexa",
+          "management": "Evitar epinefrina em doses vasopressoras em pacientes com nadolol. Usar fenilefrina ou norepinefrina se vasoconstrição necessária."
+        },
+        {
+          "drug": "Insulina / sulfonilureias",
+          "mechanism": "Mascaramento da taquicardia reflexa e tremor da hipoglicemia (β1 e β2)",
+          "consequence": "Hipoglicemia grave não reconhecida; prolongamento da hipoglicemia por inibição da glicogenólise (β2)",
+          "management": "Monitorar glicemia com frequência. Orientar paciente que taquicardia pode estar ausente na hipoglicemia."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, indometacina)",
+          "mechanism": "Inibição da síntese de prostaglandinas vasodilatadoras renais e sistêmicas",
+          "consequence": "Redução do efeito anti-hipertensivo do nadolol",
+          "management": "Monitorar PA. Considerar paracetamol como alternativa analgésica."
+        },
+        {
+          "drug": "Outros anti-hipertensivos / diuréticos",
+          "mechanism": "Hipotensão aditiva",
+          "consequence": "Hipotensão excessiva, especialmente em posição ortostática",
+          "management": "Monitorar PA em diferentes posições. Titular escalonadamente."
+        },
+        {
+          "drug": "Anestésicos gerais (propofol, halogenados)",
+          "mechanism": "Depressão miocárdica aditiva e vasodilatação periférica",
+          "consequence": "Hipotensão intraoperatória grave",
+          "management": "Informar equipe cirúrgica/anestesia. Monitorar hemodinâmica continuamente. Não suspender nadolol abruptamente no pré-operatório."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "Pressão arterial e frequência cardíaca",
+        "ECG basal (ritmo, PR, FC)",
+        "Função renal — creatinina/ClCr (dosagem renal-dependente)",
+        "História de asma, DPOC ou broncoespasmo",
+        "Glicemia basal em diabéticos insulinodependentes",
+        "Grau de disfunção hepática (Child-Pugh) em cirrose — relevante para ajuste em hipertensão portal"
+      ],
+      "followUp": [
+        "PA e FC a cada consulta; alvo FC 55–60 bpm na hipertensão portal",
+        "Função renal (creatinina/ClCr) periodicamente — ajuste de dose se deterioração renal",
+        "Broncoespasmo (ausculta pulmonar em pacientes com DPOC/histórico de asma)",
+        "Sinais de hipoperfusão em cirróticos (ascite, função renal, hiponatremia)",
+        "Sintomas de hipoglicemia em diabéticos (monitorização mais frequente da glicemia)",
+        "Sinais de acúmulo em DRC (bradicardia progressiva, fadiga extrema)"
+      ],
+      "icc": [
+        "Nadolol NÃO possui evidência de mortalidade em ICC-FEr (ao contrário de bisoprolol, carvedilol, metoprolol succinato). Usar com extrema cautela em ICC descompensada — risco de piora hemodinâmica.",
+        "Em ICC compensada estável com indicação de hipertensão portal: monitorar FC, PA, débito urinário e função renal rigorosamente.",
+        "Sintomas de piora de ICC: dispneia noturna, edema, ganho de peso > 2 kg/semana."
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (FC < 40 bpm)",
+        "Hipotensão grave (PAS < 70 mmHg)",
+        "Bloqueio AV de alto grau",
+        "Broncoespasmo grave (por bloqueio β2)",
+        "Hipoglicemia (especialmente em diabéticos ou jejum)",
+        "Choque cardiogênico",
+        "Acúmulo em DRC pela longa meia-vida — toxicidade prolongada (24–72h)"
+      ],
+      "management": [
+        "1. Atropina 0,5–1 mg IV para bradicardia sintomática; repetir conforme necessário (máx 3 mg)",
+        "2. Glucagon 5–10 mg IV bolus → infusão 1–5 mg/h (antídoto específico de betabloqueadores)",
+        "3. Dobutamina ou isoproterenol em hipotensão e bradicardia refratária",
+        "4. Emulsão lipídica IV 20% — eficácia BAIXA (nadolol é hidrofílico — baixa captação lipídica)",
+        "5. Hemodiálise pode ser útil para remoção — nadolol é parcialmente dialisável (~50%). Considerar em sobredosagem grave com DRC",
+        "6. Marcapasso transcutâneo ou transvenoso em BAV refratário",
+        "7. ECMO em colapso circulatório refratário a todas as medidas",
+        "8. Monitorar por 24–72h em DRC — meia-vida ultraprolongada por acúmulo renal"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "Eliminação renal ~75% — ajuste obrigatório em ClCr < 35 mL/min por prolongamento da meia-vida. Usar intervalos progressivamente maiores (ver renalDose). Risco elevado de acúmulo e toxicidade em anúria. Ver tabela renalDose para esquema completo.",
+      "hepaticImpairment": "Metabolismo hepático mínimo (< 10%) — sem ajuste hepático formal necessário. Em cirrose com hipertensão portal: titular cuidadosamente para FC 55–60 bpm; evitar se PAS < 90 mmHg, hiponatremia < 130 mEq/L, IRA ou ascite refratária.",
+      "geriatrics": "Idoso: maior risco de bradicardia, hipotensão, quedas e acúmulo por redução fisiológica da TFG com a idade. Iniciar com dose baixa (20 mg/dia) e titular lentamente. Revisão periódica da função renal.",
+      "pregnancy": "Gestação: categoria C/D. Pode causar bradicardia fetal, restrição de crescimento intrauterino, hipoglicemia e hipotensão neonatal. Usar apenas quando benefício materno superar claramente o risco fetal. Monitorar neonato.",
+      "lactation": "Lactação: nadolol acumula no leite materno em concentrações 4–7× as plasmáticas maternas — risco de bradicardia neonatal significativo. Observar sonolência, cianose, dificuldade alimentar e bradicardia no lactente.",
+      "obesity": "Obesidade: usar dose habitual por peso real. Monitorar PA e FC cuidadosamente para titular adequadamente."
+    },
+    "hepaticDose": {
+      "required": false,
+      "message": "Metabolismo hepático mínimo (< 10%). Não requer ajuste hepático formal. Em cirrose com hipertensão portal: ajuste guiado pela resposta clínica (FC e PA) — não por Child-Pugh."
+    },
+    "patientEducation": [
+      "Tomar diariamente no mesmo horário — a regularidade é essencial para manter FC e PA estáveis.",
+      "Nunca interromper sem orientação médica — retirada abrupta pode causar crise de angina, arritmias graves ou infarto.",
+      "Comunicar imediatamente falta de ar, chiado no peito, desmaio, batimentos muito lentos ou tontura intensa.",
+      "Em diabetes: monitorar glicemia com maior frequência — os sintomas de hipoglicemia (tremor, taquicardia) podem estar mascarados.",
+      "Avisar médico sobre qualquer cirurgia ou procedimento planejado — não suspender o medicamento sem orientação."
+    ],
+    "clinicalPearls": [
+      "Baveno VII (2022): betabloqueadores não seletivos (propranolol ou nadolol) são recomendados para profilaxia primária e secundária de sangramento por varizes esofágicas em hipertensão portal. Nadolol oferece vantagem de dose única diária vs. propranolol 2–3x/dia.",
+      "Síndrome do QT longo congênito (SQTL): nadolol é frequentemente preferido ao propranolol por sua meia-vida mais longa (proteção antiadrenérgica contínua 24h), menor penetração no SNC e maior facilidade posológica. Especialmente eficaz em SQTL tipo 1 (exercício-induzido).",
+      "Hidrofilia → menor penetração na BHE: vantagem sobre propranolol em pacientes com histórico de pesadelos, depressão ou comprometimento cognitivo. Importante em idosos.",
+      "Função renal é CRÍTICA para dose segura: meia-vida passa de 20–24h a até 45–60h em anúria. Sempre calcular ClCr antes de titular. Em idosos, a TFG real pode ser 30–40% menor que o esperado para a creatinina sérica normal.",
+      "Dialisabilidade parcial (~50%): na sobredosagem com DRC ou hemodiálise crônica, a HD pode ser adjuvante terapêutico — ao contrário de propranolol (não dialisável, lipofílico)."
+    ],
+    "guidelineRecommendations": [
+      "Baveno VII Consensus (2022): betabloqueador não seletivo (propranolol ou nadolol) — primeira linha para profilaxia primária e secundária de sangramento varicoso em hipertensão portal. Titular para FC 55–60 bpm ou redução de 25% da FC basal.",
+      "SQTL (Síndrome do QT longo congênito): diretrizes internacionais recomendam nadolol como opção preferencial de betabloqueador de longa ação para SQTL tipo 1 e tipo 2, em doses tituladas por cardiologia/eletrofisiologia.",
+      "ESC/JNC 8 Hipertensão Arterial: betabloqueadores são opção terapêutica válida para HAS, especialmente quando coexiste angina, pós-IAM ou IC. Nadolol é alternativa ao propranolol para dose única diária."
+    ],
+    "incompatibilities": "Uso exclusivo via oral. Não há incompatibilidades de administração parenteral (sem formulação EV disponível). Não administrar conjuntamente com antiácidos que contenham alumínio (redução marginal da absorção).",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálise peritoneal: remoção mínima de nadolol (baixa eficiência de depuração peritoneal para este fármaco). Não modifica esquema de dose."
+      },
+      "cvvh": {
+        "removido": true,
+        "obs": "CVVH/CVVHDF: nadolol pode ser parcialmente removido por terapias contínuas pela baixa ligação proteica (~30%) e moderado Vd (~2 L/kg). Em UTI com TRSC, monitorar FC e PA e ajustar dose conforme resposta clínica."
+      }
+    },
+    "prescriptionErrors": [
+      "Não ajustar dose/intervalo em DRC — meia-vida dobra em ClCr 10–30 e pode triplicar em anúria. Sempre calcular ClCr antes de prescrever.",
+      "Prescrever em asma moderada/grave — o bloqueio β2 é inaceitável neste cenário. Usar cardioseletivo (bisoprolol ou atenolol) se betabloqueador for obrigatório.",
+      "Suspender abruptamente — sempre reduzir gradualmente em 1–2 semanas para evitar angina rebote, infarto e arritmias.",
+      "Usar em cirrose descompensada sem verificar critérios de segurança (Baveno VII) — contraindicado se PAS < 90 mmHg, hiponatremia < 130 mEq/L, IRA ou ascite refratária.",
+      "Não alertar paciente diabético sobre mascaramento de hipoglicemia — taquicardia (sinal clássico) pode estar ausente com nadolol.",
+      "Confundir nadolol com carvedilol ou bisoprolol para ICC com FE reduzida — nadolol NÃO tem evidência de redução de mortalidade em ICC-FEr."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Nadolol é eliminado predominantemente pelos rins (~75%). Ajuste por aumento de intervalo em ClCr < 35 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "40–160 mg",
+          "intervalo": "a cada 24h",
+          "doseMaxima": "240 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose e intervalo habituais. Sem ajuste renal necessário."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "a cada 24–36h",
+          "doseMaxima": "80 mg/36h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 31–50 mL/min: intervalo a cada 24–36h. Monitorar FC, PA e sintomas de acúmulo."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "20–40 mg",
+          "intervalo": "a cada 24–48h",
+          "doseMaxima": "40 mg/48h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 10–30 mL/min: intervalo a cada 24–48h. Risco elevado de bradicardia e hipotensão por acúmulo."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "20–40 mg",
+          "intervalo": "a cada 40–60h",
+          "doseMaxima": "40 mg/60h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 10 mL/min ou anúria: intervalo muito prolongado (40–60h). Avaliar alternativas terapêuticas."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "20–40 mg",
+          "intervalo": "Pós-HD (em dias de diálise)",
+          "doseMaxima": "40 mg/sessão HD",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Nadolol é parcialmente removido por hemodiálise. Administrar dose após cada sessão de HD e avaliar resposta clínica."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "bronchospasmRisk": true,
+      "cirrhosisCaution": true,
+      "pregnancyCaution": true,
+      "warning": "Nadolol é não seletivo e de eliminação predominantemente renal. Atenção especial em asma/DPOC, DRC (ajuste de intervalo em ClCr < 35), bradicardia e cirrose avançada com hipotensão ou disfunção renal."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ESC Hypertension Guidelines 2023",
+        "AASLD Portal Hypertension Guidance",
+        "Baveno VII Consensus 2022",
+        "AHA/ACC Scientific Statements",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Katzung Farmacologia Básica e Clínica 15ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA label",
+        "EMA label"
+      ],
+      "note": "Betabloqueador β1/β2 não seletivo hidrofílico de longa duração. Eliminação renal ~75% — ajuste obrigatório em ClCr < 35 mL/min (intervalos progressivos). Parcialmente dialisável (~50%). Referência Baveno VII para profilaxia de varizes esofágicas; preferido ao propranolol por dose única diária. Opção de eleição em SQTL por meia-vida longa e menor penetração no SNC. Sem evidência de redução de mortalidade em ICC-FEr. Auditoria V2 completada 2026-06."
+    }
+  },
+  "es": {
+    "name": "Nadolol",
+    "class": "Betabloqueante no selectivo de larga duración",
+    "commercialNames": {
+      "br": [
+        "Corgard",
+        "Nadolol genérico"
+      ],
+      "ar": [
+        "Nadolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 40 mg",
+      "Comprimidos 80 mg",
+      "Comprimidos 160 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "20–40 mg VO 1 vez/día; mantenimiento 40–160 mg/día; máx 240 mg/día en algunas indicaciones",
+      "adultoGrave": "Sin formulación IV estándar. Uso exclusivo VO. En hipertensión portal: titular para FC reposo ~55–60 lpm sin causar hipotensión.",
+      "pediatricaPadrao": "No establecida de forma rutinaria en pediatría",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "240 mg/día (en algunas indicaciones); titular por FC y PA"
+    },
+    "therapeuticRange": "FC objetivo ~55–60 lpm en hipertensión portal; control tensional y de angina en las demás indicaciones",
+    "dilution": "Uso exclusivo vía oral. No diluir.",
+    "speed": "Administrar 1 vez/día, preferiblemente por la mañana.",
+    "commonAdverseEffects": [
+      "Fatiga",
+      "Mareos",
+      "Bradicardia",
+      "Hipotensión",
+      "Extremidades frías",
+      "Náuseas",
+      "Disfunción sexual"
+    ],
+    "dangerousAdverseEffects": [
+      "Broncoespasmo",
+      "Bloqueo AV",
+      "Bradicardia grave",
+      "Shock cardiogénico",
+      "Empeoramiento de insuficiencia cardíaca",
+      "Hipotensión grave en cirrosis avanzada",
+      "Deterioro de función renal en pacientes cirróticos vulnerables"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "No suspender abruptamente — riesgo de angina de rebote y eventos coronarios.",
+      "Betabloqueante NO selectivo: contraindicado en asma grave y broncoespasmo activo.",
+      "Eliminación renal (~75%): ajuste obligatorio con ClCr < 35 mL/min con aumento del intervalo.",
+      "Cirrosis avanzada (cirrhosisCaution): titular con extrema precaución por riesgo de hipotensión, disfunción renal y descompensación. Baveno VII: betabloqueante no selectivo de referencia para profilaxis de sangrado por várices."
+    ],
+    "ref": "ESC Hypertension Guidelines · AASLD Portal Hypertension Guidance · Baveno VII Consensus 2022 · AHA/ACC Scientific Statements · Goodman & Gilman 14ª ed. · Lexicomp Online 2026 · Micromedex 2026 · Katzung Farmacologia 15ª ed. · FDA label · EMA label",
+    "pharmacologicClass": "Betabloqueante β1/β2 no selectivo, hidrofílico, de larga duración de acción",
+    "mechanism": "Bloquea receptores β1 cardíacos y β2 periféricos de forma no selectiva, sin actividad simpatomimética intrínseca (ASI). Reduce FC, contractilidad, conducción AV, gasto cardíaco y secreción de renina. El bloqueo β2 periférico también reduce el temblor y la respuesta adrenérgica, pero aumenta el riesgo de broncoespasmo y vasoconstricción periférica.",
+    "pharmacodynamics": "Dosis única diaria por la larga vida media (20–24h). Al ser hidrofílico, atraviesa menos la barrera hematoencefálica que propranolol, resultando en menor incidencia de pesadillas, depresión y efectos centrales. Reduce la presión portal por disminución del gasto cardíaco y vasoconstricción esplácnica (bloqueo β2) — mecanismo doble relevante en la profilaxis de várices esofágicas.",
+    "onset": "Inicio en 1–2 horas tras dosis oral; efecto máximo en 3–4 horas; duración aproximada de 24 horas.",
+    "pharmacokinetics": {
+      "absorption": "Absorción oral moderada (~30–40%), no afectada significativamente por alimentos.",
+      "bioavailability": "~30–40%",
+      "proteinBinding": "~30% (baja)",
+      "vd": "~2 L/kg",
+      "metabolism": "Metabolismo hepático mínimo (< 10%). Sin efecto de primer paso relevante. No hay metabolitos activos significativos. El CYP450 no tiene papel relevante.",
+      "halfLife": "20–24 horas (permite dosis única diaria)",
+      "elimination": "Eliminación predominantemente renal como fármaco sin cambios (~75%). Ajuste obligatorio en ERC (intervalos prolongados con ClCr < 35 mL/min).",
+      "dialysability": "Parcialmente eliminado por hemodiálisis (~50%). Administrar dosis después de cada sesión de HD."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensión arterial sistémica",
+        "Angina estable crónica"
+      ],
+      "offLabel": [
+        "Profilaxis primaria y secundaria de sangrado por várices esofágicas en hipertensión portal (Baveno VII)",
+        "Síndrome de QT largo congénito (SQTL) — especialmente SQTL tipo 1 y 2",
+        "Profilaxis de migraña",
+        "Temblor esencial",
+        "Control de síntomas adrenérgicos (tirotoxicosis, feocromocitoma con bloqueo α previo)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Asma bronquial moderada o grave",
+        "Broncoespasmo activo",
+        "Shock cardiogénico",
+        "Bradicardia sintomática (FC < 50 lpm)",
+        "Bloqueo AV de 2º grado (Mobitz II) o 3er grado sin marcapasos",
+        "Insuficiencia cardíaca descompensada con signos de bajo gasto"
+      ],
+      "relative": [
+        "EPOC con broncoespasmo reversible significativo",
+        "Diabetes mellitus insulinodependiente (enmascaramiento de hipoglucemia)",
+        "Enfermedad vascular periférica grave / Fenómeno de Raynaud",
+        "Insuficiencia renal avanzada (ClCr < 10 mL/min) — ajuste agresivo necesario",
+        "Cirrosis avanzada con hipotensión basal (PAS < 90 mmHg), hiponatremia < 130 mEq/L, IRA o ascitis refractaria"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamilo EV / Diltiazem EV",
+          "mechanism": "Doble inhibición nodal AV con acción IV — dromotrópico y cronotrópico negativos aditivos",
+          "consequence": "Bloqueo AV completo, asistolia, paro cardíaco",
+          "management": "Absolutamente contraindicado administrar ambos por vía IV. Precaución también con verapamilo/diltiazem oral en dosis altas."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Efecto bradicardizante y bloqueo AV aditivos",
+          "consequence": "Bradicardia grave, bloqueo AV de alto grado, colapso hemodinámico",
+          "management": "Monitorizar ECG continuamente. Titular nadolol en dosis mínimas eficaces."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efecto cronotrópico y dromotrópico negativo aditivo en nódulo AV",
+          "consequence": "Bradicardia y bloqueo AV de alto grado",
+          "management": "Monitorizar ECG y nivel sérico de digoxina. Objetivo: 0,5–0,9 ng/mL."
+        },
+        {
+          "drug": "Clonidina",
+          "mechanism": "En la retirada de clonidina, la hipertensión de rebote se exacerba por el betabloqueante (predominio alfa no opuesto)",
+          "consequence": "Crisis hipertensiva grave en la retirada de clonidina",
+          "management": "Retirar betabloqueante ANTES de clonidina cuando sea posible. Si necesario suspender ambos: discontinuar nadolol primero."
+        },
+        {
+          "drug": "Epinefrina (adrenalina)",
+          "mechanism": "Betabloqueo no selectivo bloquea vasodilatación β2, dejando vasoconstricción α1 sin oposición",
+          "consequence": "Hipertensión paradójica grave con bradicardia refleja",
+          "management": "Evitar epinefrina en dosis vasopresoras en pacientes con nadolol. Usar fenilefrina o norepinefrina si vasoconstricción es necesaria."
+        },
+        {
+          "drug": "Insulina / sulfonilureas",
+          "mechanism": "Enmascaramiento de la taquicardia refleja y temblor de la hipoglucemia (β1 y β2)",
+          "consequence": "Hipoglucemia grave no reconocida; prolongación de la hipoglucemia por inhibición de la glucogenólisis (β2)",
+          "management": "Monitorizar glucemia frecuentemente. Orientar al paciente que la taquicardia puede estar ausente en la hipoglucemia."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, indometacina)",
+          "mechanism": "Inhibición de la síntesis de prostaglandinas vasodilatadoras renales y sistémicas",
+          "consequence": "Reducción del efecto antihipertensivo del nadolol",
+          "management": "Monitorizar PA. Considerar paracetamol como alternativa analgésica."
+        },
+        {
+          "drug": "Otros antihipertensivos / diuréticos",
+          "mechanism": "Hipotensión aditiva",
+          "consequence": "Hipotensión excesiva, especialmente en posición ortostática",
+          "management": "Monitorizar PA en diferentes posiciones. Titular escalonadamente."
+        },
+        {
+          "drug": "Anestésicos generales (propofol, halogenados)",
+          "mechanism": "Depresión miocárdica aditiva y vasodilatación periférica",
+          "consequence": "Hipotensión intraoperatoria grave",
+          "management": "Informar al equipo quirúrgico/anestesia. Monitorar hemodinámica continuamente. No suspender nadolol bruscamente en el preoperatorio."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "Presión arterial y frecuencia cardíaca",
+        "ECG basal (ritmo, PR, FC)",
+        "Función renal — creatinina/ClCr (dosificación renal-dependiente)",
+        "Antecedentes de asma, EPOC o broncoespasmo",
+        "Glucemia basal en diabéticos insulinodependientes",
+        "Grado de disfunción hepática (Child-Pugh) en cirrosis — relevante para ajuste en hipertensión portal"
+      ],
+      "followUp": [
+        "PA y FC en cada consulta; objetivo FC 55–60 lpm en hipertensión portal",
+        "Función renal (creatinina/ClCr) periódicamente — ajuste de dosis si deterioro renal",
+        "Broncoespasmo (auscultación pulmonar en pacientes con EPOC/historial de asma)",
+        "Signos de hipoperfusión en cirróticos (ascitis, función renal, hiponatremia)",
+        "Síntomas de hipoglucemia en diabéticos (monitorización más frecuente de glucemia)",
+        "Signos de acumulación en ERC (bradicardia progresiva, fatiga extrema)"
+      ],
+      "icc": [
+        "Nadolol NO tiene evidencia de mortalidad en ICC-FEr (a diferencia de bisoprolol, carvedilol, metoprolol succinato). Usar con extrema precaución en ICC descompensada — riesgo de empeoramiento hemodinámico.",
+        "En ICC compensada estable con indicación de hipertensión portal: monitorizar FC, PA, diuresis y función renal rigurosamente.",
+        "Síntomas de empeoramiento de ICC: disnea nocturna, edema, aumento de peso > 2 kg/semana."
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (FC < 40 lpm)",
+        "Hipotensión grave (PAS < 70 mmHg)",
+        "Bloqueo AV de alto grado",
+        "Broncoespasmo grave (por bloqueo β2)",
+        "Hipoglucemia (especialmente en diabéticos o ayuno)",
+        "Shock cardiogénico",
+        "Acumulación en ERC por la larga vida media — toxicidad prolongada (24–72h)"
+      ],
+      "management": [
+        "1. Atropina 0,5–1 mg IV para bradicardia sintomática; repetir según necesidad (máx 3 mg)",
+        "2. Glucagón 5–10 mg IV bolo → infusión 1–5 mg/h (antídoto específico de betabloqueantes)",
+        "3. Dobutamina o isoproterenol en hipotensión y bradicardia refractaria",
+        "4. Emulsión lipídica IV 20% — eficacia BAJA (nadolol es hidrofílico — baja captación lipídica)",
+        "5. Hemodiálisis puede ser útil para eliminación — nadolol es parcialmente dializable (~50%). Considerar en sobredosificación grave con ERC",
+        "6. Marcapasos transcutáneo o transvenoso en BAV refractario",
+        "7. ECMO en colapso circulatorio refractario a todas las medidas",
+        "8. Monitorizar por 24–72h en ERC — vida media ultraprolongada por acumulación renal"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "Eliminación renal ~75% — ajuste obligatorio con ClCr < 35 mL/min por prolongación de la vida media. Usar intervalos progresivamente mayores (ver renalDose). Riesgo elevado de acumulación y toxicidad en anuria. Ver tabla renalDose para esquema completo.",
+      "hepaticImpairment": "Metabolismo hepático mínimo (< 10%) — sin ajuste hepático formal necesario. En cirrosis con hipertensión portal: titular cuidadosamente para FC 55–60 lpm; evitar si PAS < 90 mmHg, hiponatremia < 130 mEq/L, IRA o ascitis refractaria.",
+      "geriatrics": "Anciano: mayor riesgo de bradicardia, hipotensión, caídas y acumulación por reducción fisiológica de la TFG con la edad. Iniciar con dosis baja (20 mg/día) y titular lentamente. Revisión periódica de la función renal.",
+      "pregnancy": "Embarazo: categoría C/D. Puede causar bradicardia fetal, restricción del crecimiento intrauterino, hipoglucemia e hipotensión neonatal. Usar solo cuando el beneficio materno supere claramente el riesgo fetal. Monitorizar neonato.",
+      "lactation": "Lactancia: nadolol se acumula en leche materna en concentraciones 4–7× las plasmáticas maternas — riesgo de bradicardia neonatal significativo. Observar somnolencia, cianosis, dificultad para alimentarse y bradicardia en el lactante.",
+      "obesity": "Obesidad: usar dosis habitual por peso real. Monitorizar PA y FC cuidadosamente para titular adecuadamente."
+    },
+    "hepaticDose": {
+      "required": false,
+      "message": "Metabolismo hepático mínimo (< 10%). No requiere ajuste hepático formal. En cirrosis con hipertensión portal: ajuste guiado por respuesta clínica (FC y PA) — no por Child-Pugh."
+    },
+    "patientEducation": [
+      "Tomar diariamente en el mismo horario — la regularidad es esencial para mantener FC y PA estables.",
+      "Nunca suspender sin indicación médica — la retirada brusca puede causar crisis de angina, arritmias graves o infarto.",
+      "Comunicar inmediatamente falta de aire, sibilancias, desmayo, latidos muy lentos o mareo intenso.",
+      "En diabetes: monitorizar glucemia con mayor frecuencia — los síntomas de hipoglucemia (temblor, taquicardia) pueden estar enmascarados.",
+      "Avisar al médico sobre cualquier cirugía o procedimiento planificado — no suspender el medicamento sin indicación."
+    ],
+    "clinicalPearls": [
+      "Baveno VII (2022): los betabloqueantes no selectivos (propranolol o nadolol) están recomendados para profilaxis primaria y secundaria de sangrado por várices esofágicas en hipertensión portal. Nadolol ofrece ventaja de dosis única diaria vs. propranolol 2–3 veces/día.",
+      "Síndrome de QT largo congénito (SQTL): nadolol suele preferirse frente a propranolol por su vida media más larga (protección antiadrenérgica continua 24h), menor penetración en el SNC y mayor facilidad posológica. Especialmente eficaz en SQTL tipo 1 (inducido por ejercicio).",
+      "Hidrofilia → menor penetración en BHE: ventaja sobre propranolol en pacientes con historial de pesadillas, depresión o deterioro cognitivo. Importante en ancianos.",
+      "La función renal es CRÍTICA para una dosis segura: la vida media pasa de 20–24h a hasta 45–60h en anuria. Siempre calcular ClCr antes de titular. En ancianos, la TFG real puede ser 30–40% menor de lo esperado para la creatinina sérica normal.",
+      "Dializabilidad parcial (~50%): en sobredosificación con ERC o hemodiálisis crónica, la HD puede ser adyuvante terapéutico — a diferencia de propranolol (no dializable, lipofílico)."
+    ],
+    "guidelineRecommendations": [
+      "Baveno VII Consensus (2022): betabloqueante no selectivo (propranolol o nadolol) — primera línea para profilaxis primaria y secundaria de sangrado varicoso en hipertensión portal. Titular para FC 55–60 lpm o reducción del 25% de la FC basal.",
+      "SQTL (Síndrome de QT largo congénito): las guías internacionales recomiendan nadolol como opción preferencial de betabloqueante de acción prolongada para SQTL tipo 1 y tipo 2, en dosis tituladas por cardiología/electrofisiología.",
+      "ESC/JNC 8 Hipertensión Arterial: los betabloqueantes son opción terapéutica válida para HTA, especialmente cuando coexiste angina, posIAM o IC. Nadolol es alternativa a propranolol para dosis única diaria."
+    ],
+    "incompatibilities": "Uso exclusivo vía oral. No hay incompatibilidades de administración parenteral (sin formulación IV disponible). No administrar conjuntamente con antiácidos que contengan aluminio (reducción marginal de la absorción).",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálisis peritoneal: eliminación mínima de nadolol (baja eficiencia de depuración peritoneal para este fármaco). No modifica el esquema de dosis."
+      },
+      "cvvh": {
+        "removido": true,
+        "obs": "CVVH/CVVHDF: nadolol puede ser parcialmente eliminado por terapias continuas por su baja unión proteica (~30%) y moderado Vd (~2 L/kg). En UCI con TRRC, monitorizar FC y PA y ajustar dosis según respuesta clínica."
+      }
+    },
+    "prescriptionErrors": [
+      "No ajustar dosis/intervalo en ERC — la vida media se duplica con ClCr 10–30 y puede triplicarse en anuria. Siempre calcular ClCr antes de prescribir.",
+      "Prescribir en asma moderada/grave — el bloqueo β2 es inaceptable en este escenario. Usar cardioselectivo (bisoprolol o atenolol) si betabloqueante es obligatorio.",
+      "Suspender bruscamente — siempre reducir gradualmente en 1–2 semanas para evitar angina de rebote, infarto y arritmias.",
+      "Usar en cirrosis descompensada sin verificar criterios de seguridad (Baveno VII) — contraindicado si PAS < 90 mmHg, hiponatremia < 130 mEq/L, IRA o ascitis refractaria.",
+      "No alertar al paciente diabético sobre enmascaramiento de hipoglucemia — taquicardia (signo clásico) puede estar ausente con nadolol.",
+      "Confundir nadolol con carvedilol o bisoprolol para ICC con FE reducida — nadolol NO tiene evidencia de reducción de mortalidad en ICC-FEr."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Nadolol se elimina predominantemente por vía renal (~75%). Ajuste por aumento de intervalo con ClCr < 35 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "40–160 mg",
+          "intervalo": "a cada 24h",
+          "doseMaxima": "240 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis e intervalo habituales. Sin ajuste renal necesario."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "a cada 24–36h",
+          "doseMaxima": "80 mg/36h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 31–50 mL/min: intervalo cada 24–36h. Monitorizar FC, PA y síntomas de acumulación."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "20–40 mg",
+          "intervalo": "a cada 24–48h",
+          "doseMaxima": "40 mg/48h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 10–30 mL/min: intervalo cada 24–48h. Riesgo elevado de bradicardia e hipotensión por acumulación."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "20–40 mg",
+          "intervalo": "a cada 40–60h",
+          "doseMaxima": "40 mg/60h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 10 mL/min o anuria: intervalo muy prolongado (40–60h). Evaluar alternativas terapéuticas."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "20–40 mg",
+          "intervalo": "Pós-HD (em dias de diálise)",
+          "doseMaxima": "40 mg/sessão HD",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Nadolol es parcialmente removido por hemodiálisis. Administrar dosis después de cada sesión de HD y evaluar respuesta clínica."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "bronchospasmRisk": true,
+      "cirrhosisCaution": true,
+      "pregnancyCaution": true,
+      "warning": "Nadolol es no selectivo y de eliminación predominantemente renal. Atención especial en asma/EPOC, ERC (ajuste de intervalo con ClCr < 35), bradicardia y cirrosis avanzada con hipotensión o disfunción renal."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ESC Hypertension Guidelines 2023",
+        "AASLD Portal Hypertension Guidance",
+        "Baveno VII Consensus 2022",
+        "AHA/ACC Scientific Statements",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Katzung Farmacologia Básica e Clínica 15ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA label",
+        "EMA label"
+      ],
+      "note": "Betabloqueante β1/β2 no selectivo hidrofílico de larga duración. Eliminación renal ~75% — ajuste obligatorio con ClCr < 35 mL/min (intervalos progresivos). Parcialmente dializable (~50%). Referencia Baveno VII para profilaxis de várices esofágicas; preferido a propranolol por dosis única diaria. Opción de elección en SQTL por vida media larga y menor penetración en el SNC. Sin evidencia de reducción de mortalidad en ICC-FEr. Auditoría V2 completada 2026-06."
+    }
+  },
+  "name": {
+    "pt": "Nadolol",
+    "es": "Nadolol"
+  },
+  "keywords": [
+    "nadolol",
+    "corgard",
+    "nadolol generico",
+    "betabloqueador nao seletivo de longa duracao"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

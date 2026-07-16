@@ -1,0 +1,185 @@
+{
+  "id": "clopidogrel",
+  "category": "anticoag",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Clopidogrel (Bissulfato de)"
+  },
+  "es": {
+    "name": "Clopidogrel (Bisulfato de)"
+  },
+  "name": {
+    "pt": "Clopidogrel (Bissulfato de)",
+    "es": "Clopidogrel (Bisulfato de)"
+  },
+  "keywords": [
+    "clopidogrel",
+    "clopidogrel (bissulfato de)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "anticoag.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "anticoag.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "cardio.js",
+      "record": {
+        "id": "clopidogrel",
+        "category": "cardio",
+        "icon": "🩸",
+        "color": "rgba(239,68,68,0.13)",
+        "colorTxt": "#B91C1C",
+        "pt": {
+          "name": "Clopidogrel (Bisulfato de)",
+          "class": "Antiagregante Plaquetário — Antagonista Irreversível P2Y12",
+          "commercialNames": {
+            "br": [
+              "Plavix",
+              "Iscover",
+              "Clopivasan"
+            ],
+            "ar": [
+              "Plavix",
+              "Nogreg"
+            ]
+          },
+          "presentation": [
+            "Comprimidos revestidos 75 mg"
+          ],
+          "dose": {
+            "adultoPadrao": "Dose de Ataque (IAM/Stent): 300–600 mg VO dose única imediata. Manutenção: 75 mg VO 1x/dia.",
+            "adultoGrave": "Prevenção AVC/DAP (sem ataque): 75 mg VO 1x/dia contínuo.",
+            "pediatricaPadrao": "Cardiopatia congênita (restrito): 1 mg/kg/dia VO. Máx 75 mg/dia.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null
+          },
+          "doseKg": {
+            "padrao": null,
+            "grave": null,
+            "meningite": null,
+            "doseMaxima": "600 mg (ataque) / 75 mg/dia (manutenção)"
+          },
+          "therapeuticRange": "Não há nível sérico monitorável. Avaliação funcional plaquetária (VerifyNow P2Y12) em casos selecionados de resistência.",
+          "dilution": "Medicamento oral. Não há forma IV.",
+          "speed": "Administração oral. A carga deve ser ingerida imediatamente na sala de emergência.",
+          "commonAdverseEffects": [
+            "Equimoses e hematomas espontâneos",
+            "Epistaxe",
+            "Dispepsia e dor abdominal"
+          ],
+          "severeAdverseEffects": [
+            "Hemorragia gastrointestinal maciça",
+            "Hemorragia intracraniana",
+            "Púrpura Trombocitopênica Trombótica (PTT — raríssimo)"
+          ],
+          "contraindications": [
+            "Sangramento patológico ativo (úlcera péptica sangrante, hemorragia intracraniana ativa)",
+            "Hipersensibilidade ao clopidogrel"
+          ],
+          "pregnancyCategory": "Categoria B — Usar com cautela; evitar no 3º trimestre. Risco hemorrágico no parto.",
+          "breastfeeding": null,
+          "renalAdjust": "Sem ajuste necessário na DRC.",
+          "hepaticAdjust": "Cuidado em hepatopatia grave: menor conversão pela CYP2C19 + risco hemorrágico aumentado.",
+          "interactions": [
+            "OMEPRAZOL/ESOMEPRAZOL — FDA Black Warning: Inibição CYP2C19 → anulação do efeito antiagregante → trombose de stent.",
+            "AINEs — Risco hemorrágico GI sinérgico. Usar pantoprazol se inevitável.",
+            "Anticoagulantes (DOAC/Varfarina) — Terapia dupla/tripla: alto risco hemorrágico; restringir ao mínimo necessário."
+          ],
+          "clinicalPearl": "A REGRA DOS 5 DIAS: Suspender 5 dias antes de cirurgia eletiva de grande porte (bypass, coluna). Resistência ao clopidogrel ocorre em ~30% dos pacientes por polimorfismo da CYP2C19 — nesse caso, migrar para ticagrelor ou prasugrel.",
+          "evidence": "CURE Trial (NEJM 2001) — ACS; COMMIT Trial — IAM com ST; CAPRIE Trial — DAP/AVC."
+        },
+        "es": {
+          "name": "Clopidogrel (Bisulfato de)",
+          "class": "Antiagregante Plaquetario — Antagonista Irreversible P2Y12",
+          "commercialNames": {
+            "br": [
+              "Plavix",
+              "Iscover",
+              "Clopivasan"
+            ],
+            "ar": [
+              "Plavix",
+              "Nogreg"
+            ]
+          },
+          "presentation": [
+            "Comprimidos recubiertos 75 mg"
+          ],
+          "dose": {
+            "adultoPadrao": "Dosis de Carga (IAM/Stent): 300–600 mg VO dosis única. Mantenimiento: 75 mg VO 1 vez/día.",
+            "adultoGrave": "Prevención ACV/EAP (sin carga): 75 mg VO 1 vez/día continuo.",
+            "pediatricaPadrao": "Cardiopatía congénita (restringido): 1 mg/kg/día VO. Máx 75 mg/día.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null
+          },
+          "doseKg": {
+            "padrao": null,
+            "grave": null,
+            "meningite": null,
+            "doseMaxima": "600 mg (carga) / 75 mg/día (mantenimiento)"
+          },
+          "therapeuticRange": "No hay nivel sérico monitoreable. Evaluación funcional plaquetaria (VerifyNow P2Y12) en casos de resistencia.",
+          "dilution": "Medicamento oral. No hay forma IV.",
+          "speed": "Administración oral. La carga debe ingerirse inmediatamente en la sala de emergencia.",
+          "commonAdverseEffects": [
+            "Equimosis y hematomas espontáneos",
+            "Epistaxis",
+            "Dispepsia y dolor abdominal"
+          ],
+          "severeAdverseEffects": [
+            "Hemorragia gastrointestinal masiva",
+            "Hemorragia intracraneal",
+            "Púrpura Trombocitopénica Trombótica (PTT — rarísimo)"
+          ],
+          "contraindications": [
+            "Sangrado patológico activo",
+            "Hipersensibilidad al clopidogrel"
+          ],
+          "pregnancyCategory": "Categoría B — Usar con cautela; evitar en el 3.º trimestre.",
+          "breastfeeding": null,
+          "renalAdjust": "Sin ajuste necesario en la ERC.",
+          "hepaticAdjust": "Precaución en hepatopatía grave.",
+          "interactions": [
+            "OMEPRAZOL/ESOMEPRAZOL — FDA Black Warning: Inhibición CYP2C19 → anulación del efecto → trombosis de stent.",
+            "AINEs — Riesgo hemorrágico GI sinérgico.",
+            "Anticoagulantes (DOAC/Warfarina) — Terapia doble/triple: alto riesgo hemorrágico."
+          ],
+          "clinicalPearl": "LA REGLA DE LOS 5 DÍAS: Suspender 5 días antes de cirugía electiva mayor. Resistencia al clopidogrel ocurre en ~30% por polimorfismo de CYP2C19 — migrar a ticagrelor o prasugrel.",
+          "evidence": "CURE Trial (NEJM 2001) — SCA; COMMIT — IAM con ST; CAPRIE — EAP/ACV."
+        },
+        "name": {
+          "pt": "Clopidogrel (Bisulfato de)",
+          "es": "Clopidogrel (Bisulfato de)"
+        },
+        "keywords": [
+          "clopidogrel",
+          "clopidogrel (bisulfato de)",
+          "plavix",
+          "iscover",
+          "clopivasan",
+          "nogreg",
+          "antiagregante plaquetario — antagonista irreversivel p2y12"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "cardio.js"
+      }
+    }
+  ]
+}

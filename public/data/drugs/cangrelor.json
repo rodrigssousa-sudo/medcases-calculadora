@@ -1,0 +1,175 @@
+{
+  "id": "cangrelor",
+  "category": "anticoag",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Cangrelor (Tetrafosfato de)"
+  },
+  "es": {
+    "name": "Cangrelor (Tetrafosfato de)"
+  },
+  "name": {
+    "pt": "Cangrelor (Tetrafosfato de)",
+    "es": "Cangrelor (Tetrafosfato de)"
+  },
+  "keywords": [
+    "cangrelor",
+    "cangrelor (tetrafosfato de)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "anticoag.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "anticoag.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "cardio.js",
+      "record": {
+        "id": "cangrelor",
+        "category": "cardio",
+        "icon": "💉",
+        "color": "rgba(239,68,68,0.13)",
+        "colorTxt": "#B91C1C",
+        "pt": {
+          "name": "Cangrelor",
+          "class": "Antiagregante Plaquetário Intravenoso Ultrarrápido — Antagonista Reversível P2Y12 (IV)",
+          "commercialNames": {
+            "br": [
+              "Kengreal"
+            ],
+            "ar": [
+              "Kengreal"
+            ]
+          },
+          "presentation": [
+            "Frasco-ampola pó liofilizado IV 50 mg (reconstituído + diluído para infusão)"
+          ],
+          "dose": {
+            "adultoPadrao": "Bolus IV: 2100 mcg (30 mcg/kg) em até 1 min ANTES da angioplastia. Imediatamente após: infusão contínua de 280.0 mcg/min (4 mcg/kg/min) por mínimo 2 horas ou até fim do procedimento.",
+            "adultoGrave": null,
+            "pediatricaPadrao": "Não indicado em pediatria.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null
+          },
+          "doseKg": {
+            "padrao": "Bolus: 30 mcg/kg · Infusão: 4 mcg/kg/min",
+            "grave": null,
+            "meningite": null,
+            "doseMaxima": "Bolus máx: 30 mcg/kg (único) · Infusão: 4 mcg/kg/min (não titular)"
+          },
+          "therapeuticRange": "Sem monitoração sérica disponível. Ação imediata (< 2 min). Meia-vida ultracurta: 3–6 minutos. Plaquetas restauradas 1 hora após cessar infusão.",
+          "dilution": "Reconstituir 50 mg com 5 mL de água estéril; agitar até dissolução completa. Diluir em 250 mL de SF 0,9% ou SG 5%. Concentração final: 200 mcg/mL.",
+          "speed": "Bolus rápido (< 1 min) → infusão contínua em bomba exclusiva. Uso restrito à sala de hemodinâmica com monitorização contínua.",
+          "commonAdverseEffects": [
+            "Sangramento no sítio de punção arterial (femoral/radial)",
+            "Equimoses severas periféricas",
+            "Dispneia aguda benigna (mecanismo adenosínico, similar ao ticagrelor)"
+          ],
+          "severeAdverseEffects": [
+            "Hemorragia retroperitoneal catastrófica",
+            "Hemorragia intracraniana"
+          ],
+          "contraindications": [
+            "Sangramento ativo de qualquer foco",
+            "Histórico de AVC ou AIT de qualquer tipo",
+            "Uso prévio de clopidogrel ou prasugrel nas últimas 24 horas (torna uso do cangrelor redundante e perigoso)"
+          ],
+          "pregnancyCategory": "Categoria C — Evitar; sem dados de segurança fetal estabelecidos.",
+          "breastfeeding": null,
+          "renalAdjust": "Sem ajuste necessário — inativado por desativação plasmática (ecto-nucleotidases), independente do rim.",
+          "hepaticAdjust": "Sem ajuste necessário.",
+          "interactions": [
+            "CLOPIDOGREL / PRASUGREL — Dar a pílula APENAS APÓS fechar a infusão de cangrelor (nunca durante). O cangrelor ocupa o receptor P2Y12 e impede a ativação do comprimido oral se dado simultaneamente.",
+            "TICAGRELOR — Pode ser dado a qualquer momento (antes, durante ou após cangrelor) pois liga-se a um sítio alostérico diferente do P2Y12.",
+            "ANTICOAGULANTES (Heparina/DOAC) — Terapia combinada aumenta risco hemorrágico; restrita a indicação de cateterismo com protocolo definido."
+          ],
+          "clinicalPearl": "A PONTE PARA O COMPRIMIDO: O Cangrelor dura pouco. Assim que fechar a bomba ao final da angioplastia, o médico DEVE dar o antiagregante oral imediatamente para o paciente não entupir o stent. Se for dar Clopidogrel ou Prasugrel, a pílula DEVE ser dada SOMENTE APÓS fechar o Cangrelor — nunca durante — senão o cangrelor bloqueia o receptor e o comprimido não consegue agir.",
+          "evidence": "CHAMPION PHOENIX Trial (NEJM 2013) — Superior a clopidogrel em ICP de emergência (redução de 22% em morte + IAM + revascularização urgente); CHAMPION PLATFORM; FDA Prescribing Information Kengreal."
+        },
+        "es": {
+          "name": "Cangrelor",
+          "class": "Antiagregante Plaquetario Intravenoso Ultrarápido — Antagonista Reversible P2Y12 (IV)",
+          "commercialNames": {
+            "br": [
+              "Kengreal"
+            ],
+            "ar": [
+              "Kengreal"
+            ]
+          },
+          "presentation": [
+            "Frasco-ampolla polvo liofilizado IV 50 mg"
+          ],
+          "dose": {
+            "adultoPadrao": "Bolo IV: 2100 mcg (30 mcg/kg) en 1 min ANTES de la angioplastia. Inmediatamente: infusión continua de 280.0 mcg/min (4 mcg/kg/min) por mínimo 2 horas.",
+            "adultoGrave": null,
+            "pediatricaPadrao": "No indicado en pediatría.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null
+          },
+          "doseKg": {
+            "padrao": "Bolo: 30 mcg/kg · Infusión: 4 mcg/kg/min",
+            "grave": null,
+            "meningite": null,
+            "doseMaxima": "Bolo máx: 30 mcg/kg (único) · Infusión: 4 mcg/kg/min"
+          },
+          "therapeuticRange": "Sin monitoreo sérico disponible. Acción inmediata (< 2 min). Vida media ultracorta: 3–6 minutos. Plaquetas restauradas 1 hora después del cese.",
+          "dilution": "Reconstituir 50 mg con 5 mL de agua estéril; agitar hasta disolución completa. Diluir en 250 mL de SF 0,9% o SG 5%. Concentración final: 200 mcg/mL.",
+          "speed": "Bolo rápido (< 1 min) → infusión continua en bomba exclusiva. Uso restringido a sala de hemodinámica con monitorización continua.",
+          "commonAdverseEffects": [
+            "Sangrado en el sitio de punción arterial",
+            "Equimosis severas periféricas",
+            "Disnea aguda benigna (mecanismo adenosínico, similar al ticagrelor)"
+          ],
+          "severeAdverseEffects": [
+            "Hemorragia retroperitoneal catastrófica",
+            "Hemorragia intracraneal"
+          ],
+          "contraindications": [
+            "Sangrado activo de cualquier foco",
+            "Historial de ACV o AIT de cualquier tipo",
+            "Uso previo de clopidogrel o prasugrel en las últimas 24 horas"
+          ],
+          "pregnancyCategory": "Categoría C — Evitar; sin datos de seguridad fetal.",
+          "breastfeeding": null,
+          "renalAdjust": "Sin ajuste necesario — inactivado por desactivación plasmática, independiente del riñón.",
+          "hepaticAdjust": "Sin ajuste necesario.",
+          "interactions": [
+            "CLOPIDOGREL / PRASUGREL — Dar la pastilla SOLO DESPUÉS de apagar la infusión. El cangrelor ocupa el P2Y12 e impide la activación del comprimido si se da simultáneamente.",
+            "TICAGRELOR — Puede darse en cualquier momento pues se une a un sitio alostérico diferente del P2Y12.",
+            "ANTICOAGULANTES (Heparina/DOAC) — Terapia combinada aumenta riesgo hemorrágico; restringida a cateterismo con protocolo definido."
+          ],
+          "clinicalPearl": "EL PUENTE HACIA EL COMPRIMIDO: El Cangrelor dura poco. Al apagar la bomba, el médico DEBE dar el antiagregante oral. Si va a dar Clopidogrel, la pastilla DEBE darse SOLO DESPUÉS de apagar el Cangrelor — nunca durante — si no, el cangrelor bloquea el sitio e impide que la pastilla actúe.",
+          "evidence": "CHAMPION PHOENIX Trial (NEJM 2013) — Superior al clopidogrel en ICP de emergencia; CHAMPION PLATFORM; FDA Prescribing Info Kengreal."
+        },
+        "name": {
+          "pt": "Cangrelor",
+          "es": "Cangrelor"
+        },
+        "keywords": [
+          "cangrelor",
+          "kengreal",
+          "antiagregante plaquetario intravenoso ultrarrapido — antagonista reversivel p2y12 (iv)"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "cardio.js"
+      }
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "id": "dalbavancina",
+  "category": "infectologia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Dalbavancina"
+  },
+  "es": {
+    "name": "Dalbavancina"
+  },
+  "name": {
+    "pt": "Dalbavancina",
+    "es": "Dalbavancina"
+  },
+  "keywords": [
+    "dalbavancina"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "infectologia.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "infectologia.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "antimicrobianos.js",
+      "record": {
+        "id": "dalbavancina",
+        "category": "atb",
+        "icon": "💉",
+        "color": "rgba(245,158,11,0.15)",
+        "colorTxt": "#F59E0B",
+        "pt": {
+          "name": "Dalbavancina",
+          "class": "Lipoglicopeptídeo de longa duração (anti-MRSA)",
+          "commercialNames": {
+            "br": [
+              "Dalvance",
+              "Xydalba"
+            ],
+            "ar": [
+              "Dalvance",
+              "Xydalba"
+            ]
+          },
+          "presentation": [
+            "Pó para solução injetável EV: 500 mg/frasco"
+          ],
+          "dose": {
+            "adultoEV": "1500 mg EV dose única (ou 1000 mg + 500 mg na semana 2)",
+            "pediatrica": "1260 mg EV dose única (18 mg/kg; máx 1500 mg)"
+          },
+          "doseKg": {
+            "pediatrica": "18 mg/kg EV dose única (máx 1500 mg)"
+          },
+          "mechanism": "Liga-se ao terminal D-Ala-D-Ala dos precursores do peptidoglicano bacteriano, inibindo síntese da parede celular. A cauda lipofílica ancora na membrana, prolongando meia-vida para >14 dias.",
+          "onset": "EV: distribuição rápida após infusão. Tmáx ao final da infusão.",
+          "halfLife": "Meia-vida excepcional: 14,4 dias — permite dose única ou esquema de 2 doses (D1 e D8).",
+          "therapeuticRange": "AUC/CIM como parâmetro PK/PD. Exposição sustentada por semanas após dose única.",
+          "dilution": "Reconstituir 500 mg em 25 mL de água estéril; diluir em 250 mL de SG 5% (NÃO usar SF — precipita).",
+          "speed": "Infundir em 30 minutos.",
+          "commonAdverseEffects": [
+            "Náuseas",
+            "Cefaleia",
+            "Diarreia",
+            "Prurido",
+            "Rubor (flushing)"
+          ],
+          "dangerousAdverseEffects": [
+            "Síndrome do homem vermelho (infusão rápida — raro)",
+            "Hepatotoxicidade (elevação de TGO/TGP)",
+            "Colite por C. difficile",
+            "Anafilaxia (muito raro)"
+          ],
+          "contraindications": [
+            "Hipersensibilidade à dalbavancina ou outros glicopeptídeos"
+          ],
+          "risksByPatient": [],
+          "alerts": [
+            "Vantagem única: dose única ou 2 doses com intervalo de 1 semana — ideal para tratamento ambulatorial de infecções de pele por MRSA.",
+            "DILUIR APENAS EM SG 5% — precipita em SF 0,9%.",
+            "Reduzir dose em 25% (1500 → 1125 mg) em ClCr < 30 mL/min sem hemodiálise."
+          ],
+          "ref": "Sanford Guide 2025 / FDA label Dalvance / EMA label Xydalba / Goodman & Gilman 14ª ed. / Lexicomp",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": true,
+            "fgMaior50": {
+              "vo": null,
+              "ev": {
+                "dose": "1500 mg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg"
+              },
+              "pediatrica": {
+                "dose": "18 mg/kg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg/kg"
+              },
+              "obs": "Dose habitual: 1500 mg EV em dose única OU 1000 mg D1 + 500 mg D8 (esquemas equivalentes). Infusão em 30 min em SG 5% (NÃO usar SF — precipita). Dose pediátrica: 18 mg/kg até máx 1500 mg."
+            },
+            "fg30a50": {
+              "vo": null,
+              "ev": {
+                "dose": "1500 mg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg"
+              },
+              "pediatrica": {
+                "dose": "18 mg/kg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg/kg"
+              },
+              "obs": "FDA label: sem ajuste de dose para ClCr ≥ 30 mL/min. Dalbavancina é eliminada predominantemente por vias não-renais (metabolismo hepático + excreção biliar) — eliminação renal corresponde a ~33% da dose."
+            },
+            "fg10a30": {
+              "vo": null,
+              "ev": {
+                "dose": "1125 mg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1125 mg",
+                "unidade": "mg"
+              },
+              "pediatrica": {
+                "dose": "13,5 mg/kg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1125 mg",
+                "unidade": "mg/kg"
+              },
+              "obs": "Corte oficial FDA label: CrCl < 30 mL/min (sem diálise) → redução de 25% (1500 → 1125 mg). Aplica-se a CrCl 10–29 mL/min. Meia-vida de 14,4 dias — exposição acumulada deve ser monitorada em doses repetidas."
+            },
+            "fgMenor10": {
+              "vo": null,
+              "ev": {
+                "dose": "1125 mg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1125 mg",
+                "unidade": "mg"
+              },
+              "pediatrica": {
+                "dose": "13,5 mg/kg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1125 mg",
+                "unidade": "mg/kg"
+              },
+              "obs": "FDA label: ClCr < 30 mL/min (sem diálise) → 1125 mg. Monitorar hepatotoxicidade (elevação de transaminases). Meia-vida muito prolongada (~14 dias) — acúmulo possível em doses repetidas. Dose pediátrica: 13,5 mg/kg (máx 1125 mg)."
+            },
+            "hemodialise": {
+              "vo": null,
+              "ev": {
+                "dose": "1500 mg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg"
+              },
+              "pediatrica": {
+                "dose": "18 mg/kg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg/kg"
+              },
+              "obs": "FDA label: pacientes em hemodiálise (HD) não requerem ajuste de dose — usar 1500 mg normalmente. Dalbavancina NÃO é removida pela HD (alta ligação proteica >93% e Vd amplo). Não há necessidade de dose suplementar pós-HD. Administrar independentemente do horário da sessão."
+            }
+          },
+          "safetyFlags": {
+            "renalHighRisk": false,
+            "neurotoxicityRisk": false,
+            "qtRisk": false,
+            "hepatotoxicityRisk": true,
+            "requiresCultureGuidance": false,
+            "warning": "Monitorar função hepática (AST/ALT) em hepatopatia prévia. DILUIR EXCLUSIVAMENTE EM SG 5% — precipita em SF 0,9% ou outras soluções. Vantagem clínica: dose única ou 2 doses semanais permite tratamento ambulatorial de SSTI por MRSA."
+          },
+          "auditNotes": {
+            "status": "excellent_after_review",
+            "sourcePriority": [
+              "FDA label Dalvance (dalbavancin)",
+              "EMA label Xydalba",
+              "Sanford Guide 2025",
+              "Lexicomp",
+              "UpToDate"
+            ],
+            "note": "Bloco revisado. Corte renal oficial FDA: ClCr < 30 mL/min (sem HD) → 1125 mg; em HD → 1500 mg sem ajuste. Lógica de HD corrigida (não removida). safetyFlags (hepatotoxicidade) e auditNotes adicionados."
+          }
+        },
+        "es": {
+          "name": "Dalbavancina",
+          "class": "Lipoglicopéptido de larga duración (anti-MRSA)",
+          "commercialNames": {
+            "br": [
+              "Dalvance",
+              "Xydalba"
+            ],
+            "ar": [
+              "Dalvance",
+              "Xydalba"
+            ]
+          },
+          "presentation": [
+            "Polvo para solución inyectable EV: 500 mg/frasco"
+          ],
+          "dose": {
+            "adultoEV": "1500 mg EV dose única (ou 1000 mg + 500 mg na semana 2)",
+            "pediatrica": "1260 mg EV dosis única (18 mg/kg; máx 1500 mg)"
+          },
+          "doseKg": {
+            "pediatrica": "18 mg/kg EV dosis única (máx 1500 mg)"
+          },
+          "mechanism": "Se une al terminal D-Ala-D-Ala de los precursores del peptidoglicano bacteriano, inhibiendo la síntesis de la pared celular. La cola lipofílica se ancla en la membrana, prolongando la semivida a >14 días.",
+          "onset": "EV: distribución rápida tras infusión. Tmáx al final de la infusión.",
+          "halfLife": "Semivida excepcional: 14,4 días — permite dosis única o esquema de 2 dosis (D1 y D8).",
+          "therapeuticRange": "AUC/CIM como parámetro PK/PD. Exposición sostenida por semanas tras dosis única.",
+          "dilution": "Reconstituir 500 mg en 25 mL de agua estéril; diluir en 250 mL de SG 5% (NO usar SF — precipita).",
+          "speed": "Infundir en 30 minutos.",
+          "commonAdverseEffects": [
+            "Náuseas",
+            "Cefalea",
+            "Diarrea",
+            "Prurito",
+            "Rubor (flushing)"
+          ],
+          "dangerousAdverseEffects": [
+            "Síndrome del hombre rojo (infusión rápida — raro)",
+            "Hepatotoxicidad (elevación de TGO/TGP)",
+            "Colitis por C. difficile",
+            "Anafilaxia (muy raro)"
+          ],
+          "contraindications": [
+            "Hipersensibilidad a dalbavancina u otros glucopéptidos"
+          ],
+          "risksByPatient": [],
+          "alerts": [
+            "Ventaja única: dosis única o 2 dosis con intervalo de 1 semana — ideal para tratamiento ambulatorial de infecciones de piel por MRSA.",
+            "DILUIR SOLO EN SG 5% — precipita en SF 0,9%.",
+            "Reducir dosis en 25% (1500 → 1125 mg) en ClCr < 30 mL/min sin hemodiálisis."
+          ],
+          "ref": "Sanford Guide 2025 / FDA label Dalvance / EMA label Xydalba / Goodman & Gilman 14ª ed. / Lexicomp",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": true,
+            "fgMaior50": {
+              "vo": null,
+              "ev": {
+                "dose": "1500 mg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg"
+              },
+              "pediatrica": {
+                "dose": "18 mg/kg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg/kg"
+              },
+              "obs": "Dosis habitual: 1500 mg IV en dosis única O 1000 mg D1 + 500 mg D8 (esquemas equivalentes). Infusión en 30 min en SG 5% (NO usar SF — precipita). Dosis pediátrica: 18 mg/kg hasta máx 1500 mg."
+            },
+            "fg30a50": {
+              "vo": null,
+              "ev": {
+                "dose": "1500 mg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg"
+              },
+              "pediatrica": {
+                "dose": "18 mg/kg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg/kg"
+              },
+              "obs": "FDA label: sin ajuste de dosis para ClCr ≥ 30 mL/min. La dalbavancina se elimina predominantemente por vías no renales (metabolismo hepático + excreción biliar) — la eliminación renal corresponde al ~33% de la dosis."
+            },
+            "fg10a30": {
+              "vo": null,
+              "ev": {
+                "dose": "1125 mg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1125 mg",
+                "unidade": "mg"
+              },
+              "pediatrica": {
+                "dose": "13,5 mg/kg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1125 mg",
+                "unidade": "mg/kg"
+              },
+              "obs": "Corte oficial FDA label: CrCl < 30 mL/min (sin diálisis) → reducción del 25% (1500 → 1125 mg). Aplica a CrCl 10–29 mL/min. Semivida de 14,4 días — la exposición acumulada debe monitorizarse en dosis repetidas."
+            },
+            "fgMenor10": {
+              "vo": null,
+              "ev": {
+                "dose": "1125 mg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1125 mg",
+                "unidade": "mg"
+              },
+              "pediatrica": {
+                "dose": "13,5 mg/kg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1125 mg",
+                "unidade": "mg/kg"
+              },
+              "obs": "FDA label: ClCr < 30 mL/min (sin diálisis) → 1125 mg. Monitorizar hepatotoxicidad (elevación de transaminasas). Semivida muy prolongada (~14 días) — acumulación posible en dosis repetidas. Dosis pediátrica: 13,5 mg/kg (máx 1125 mg)."
+            },
+            "hemodialise": {
+              "vo": null,
+              "ev": {
+                "dose": "1500 mg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg"
+              },
+              "pediatrica": {
+                "dose": "18 mg/kg",
+                "intervalo": "Dose única",
+                "doseMaxima": "1500 mg",
+                "unidade": "mg/kg"
+              },
+              "obs": "FDA label: pacientes en hemodiálisis (HD) no requieren ajuste de dosis — usar 1500 mg normalmente. La dalbavancina NO es removida por HD (alta unión proteica >93% y Vd amplio). No se requiere dosis suplementaria post-HD. Administrar independientemente del horario de la sesión."
+            }
+          },
+          "safetyFlags": {
+            "renalHighRisk": false,
+            "neurotoxicityRisk": false,
+            "qtRisk": false,
+            "hepatotoxicityRisk": true,
+            "requiresCultureGuidance": false,
+            "warning": "Monitorizar función hepática (AST/ALT) en hepatopatía previa. DILUIR EXCLUSIVAMENTE EN SG 5% — precipita en SF 0,9% u otras soluciones. Ventaja clínica: dosis única o 2 dosis semanales permite tratamiento ambulatorial de SSTI por MRSA."
+          },
+          "auditNotes": {
+            "status": "excellent_after_review",
+            "sourcePriority": [
+              "FDA label Dalvance (dalbavancin)",
+              "EMA label Xydalba",
+              "Sanford Guide 2025",
+              "Lexicomp",
+              "UpToDate"
+            ],
+            "note": "Bloque revisado. Corte renal oficial FDA: ClCr < 30 mL/min (sin HD) → 1125 mg; en HD → 1500 mg sin ajuste. Lógica de HD corregida (no removida). safetyFlags (hepatotoxicidad) y auditNotes añadidos."
+          }
+        },
+        "name": {
+          "pt": "Dalbavancina",
+          "es": "Dalbavancina"
+        },
+        "keywords": [
+          "dalbavancina",
+          "dalvance",
+          "xydalba",
+          "lipoglicopeptideo de longa duracao (anti-mrsa)"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "antimicrobianos.js"
+      }
+    }
+  ]
+}

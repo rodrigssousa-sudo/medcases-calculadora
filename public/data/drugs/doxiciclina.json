@@ -1,0 +1,337 @@
+{
+  "id": "doxiciclina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Doxiciclina",
+    "class": "Tetraciclina",
+    "commercialNames": {
+      "br": [
+        "Vibramicina",
+        "Doxiciclina EMS"
+      ],
+      "ar": [
+        "Vibramicina",
+        "Doxiciclina Bagó"
+      ]
+    },
+    "presentation": [
+      "Comprimido 100 mg",
+      "Cápsula 100 mg"
+    ],
+    "dose": {
+      "adulto": "100 mg VO 12/12h",
+      "dst": "100 mg VO 12/12h por 7 dias",
+      "lyme": "100 mg VO 12/12h"
+    },
+    "doseKg": {
+      "pediatrica": "2–4 mg/kg/dia",
+      "maxDose": "200 mg/dia"
+    },
+    "therapeuticRange": "Boa biodisponibilidade oral.",
+    "dilution": "Via oral.",
+    "speed": "Administrar com água abundante.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Dispepsia",
+      "Fotossensibilidade"
+    ],
+    "dangerousAdverseEffects": [
+      "Esofagite",
+      "Hepatotoxicidade",
+      "Hipertensão intracraniana"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Não deitar por 30 minutos após tomar.",
+      "Evitar exposição solar excessiva.",
+      "Evitar associação com ferro, cálcio e antiácidos."
+    ],
+    "ref": "Sanford Guide / Goodman & Gilman / CDC STI Guidelines",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Doxiciclina não necessita ajuste renal. Eliminação predominantemente biliar/fecal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Preferível em pacientes renais por eliminação predominantemente não renal."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita dose suplementar pós-hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Doxiciclina",
+    "class": "Tetraciclina",
+    "commercialNames": {
+      "br": [
+        "Vibramicina",
+        "Doxiciclina EMS"
+      ],
+      "ar": [
+        "Vibramicina",
+        "Doxiciclina Bagó"
+      ]
+    },
+    "presentation": [
+      "Comprimido 100 mg",
+      "Cápsula 100 mg"
+    ],
+    "dose": {
+      "adulto": "100 mg VO cada 12h",
+      "dst": "100 mg VO cada 12h por 7 días",
+      "lyme": "100 mg VO cada 12h"
+    },
+    "doseKg": {
+      "pediatrica": "2–4 mg/kg/día",
+      "maxDose": "200 mg/día"
+    },
+    "therapeuticRange": "Buena biodisponibilidad oral.",
+    "dilution": "Vía oral.",
+    "speed": "Administrar con abundante agua.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Dispepsia",
+      "Fotosensibilidad"
+    ],
+    "dangerousAdverseEffects": [
+      "Esofagitis",
+      "Hepatotoxicidad",
+      "Hipertensión intracraneal"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "No acostarse durante 30 minutos después de tomarla.",
+      "Evitar exposición solar excesiva.",
+      "Evitar asociación con hierro, calcio y antiácidos."
+    ],
+    "ref": "Sanford Guide / Goodman & Gilman / CDC STI Guidelines",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Doxiciclina no requiere ajuste renal. Eliminación predominantemente biliar/fecal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Preferible en pacientes renales por eliminación predominantemente no renal."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere dosis suplementaria post-hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Doxiciclina",
+    "es": "Doxiciclina"
+  },
+  "keywords": [
+    "doxiciclina",
+    "vibramicina",
+    "doxiciclina ems",
+    "doxiciclina bago",
+    "tetraciclina"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

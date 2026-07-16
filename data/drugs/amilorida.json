@@ -1,0 +1,277 @@
+{
+  "id": "amilorida",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.08)",
+  "colorTxt": "#064E3B",
+  "pt": {
+    "name": "Amilorida",
+    "class": "Diurético poupador de potássio — Bloqueador dos canais epiteliais de sódio (ENaC)",
+    "commercialNames": {
+      "br": [
+        "Amilorida genérica",
+        "Moduretic (associação com hidroclorotiazida)"
+      ],
+      "ar": [
+        "Amilorida genérica",
+        "Asociaciones con hidroclorotiazida"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 5 mg",
+      "Comprimidos associados à hidroclorotiazida (Moduretic® e genéricos)"
+    ],
+    "dose": {
+      "adultoPadrao": "5 mg VO 1x/dia; manutenção 5–10 mg/dia. Frequentemente associada a tiazídicos ou diuréticos de alça para preservar K⁺.",
+      "adultoGrave": "Considerar dose mínima (5 mg/dia) em DRC leve/moderada. EVITAR em DRC grave por risco elevado de hipercalemia.",
+      "pediatricaPadrao": "Uso pediátrico off-label. Consultar especialista e protocolo institucional.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "20 mg/dia"
+    },
+    "therapeuticRange": "Prevenção de hipocalemia induzida por diuréticos; K⁺ 4,0–5,0 mEq/L; controle pressórico como adjuvante",
+    "dilution": "Uso exclusivo via oral. Não diluir.",
+    "speed": "Administrar com alimentos para reduzir náuseas. Reavaliar K⁺ e creatinina em 3–7 dias após início.",
+    "commonAdverseEffects": [
+      "Hipercalemia",
+      "Náuseas",
+      "Diarreia",
+      "Tontura",
+      "Cefaleia",
+      "Fadiga"
+    ],
+    "dangerousAdverseEffects": [
+      "Hipercalemia grave (arritmias ventriculares)",
+      "Parada cardíaca",
+      "Lesão renal aguda",
+      "Acidose metabólica hiperclorêmica"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "HIPERCALEMIA é o principal risco — monitorar K⁺ em 3–7 dias após início ou ajuste.",
+      "Interações graves: IECA, BRA, ARNI, espironolactona, eplerenona, suplementos de K⁺ — risco de hipercalemia potencialmente fatal.",
+      "Mecanismo diferente da espironolactona (ENaC vs receptor de aldosterona) — pode somar efeito em Síndrome de Liddle.",
+      "Trimetoprim e heparina também bloqueiam ENaC ou elevam K⁺ — atenção ao uso concomitante."
+    ],
+    "ref": "ESC Heart Failure Guidelines · AHA/ACC Hypertension Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · FDA label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sem ajuste renal obrigatório em ClCr ≥ 50 mL/min. Monitorar K⁺ e creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "5–10 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "20 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose habitual. Monitorar K⁺ e creatinina periodicamente."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "5 mg",
+          "intervalo": "1x/dia (cautela)",
+          "doseMaxima": "5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 30–50 mL/min: dose mínima. Monitorar K⁺ em 3–7 dias. Risco elevado de hipercalemia."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 30 mL/min: CONTRAINDICADA. Evitar completamente."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 10 mL/min / anúria: CONTRAINDICADA. Risco de hipercalemia fatal."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálise: CONTRAINDICADA. Risco de hipercalemia entre sessões."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "hyperkalemiaRisk": true,
+      "endocrineEffects": false,
+      "pregnancyCaution": true,
+      "warning": "Principal risco é HIPERCALEMIA potencialmente fatal, especialmente quando associada a IECA, BRA, ARNI, espironolactona ou suplementos de K⁺. CONTRAINDICADA em DRC grave (ClCr < 30) e K⁺ ≥ 5,0 mEq/L."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "ESC Heart Failure Guidelines 2021/2023",
+        "AHA/ACC Hypertension Guidelines 2023",
+        "KDIGO Guidelines",
+        "Goodman & Gilman",
+        "Lexicomp 2026",
+        "FDA label"
+      ],
+      "note": "Diurético poupador de K⁺ via bloqueio de ENaC (mecanismo independente de aldosterona). Menor potência diurética que MRA em ICFEr — uso principalmente como adjuvante para prevenir hipocalemia ou em Síndrome de Liddle."
+    }
+  },
+  "es": {
+    "name": "Amilorida",
+    "class": "Diurético ahorrador de potasio — Bloqueador de los canales epiteliales de sodio (ENaC)",
+    "commercialNames": {
+      "br": [
+        "Amilorida genérica",
+        "Moduretic (associação com hidroclorotiazida)"
+      ],
+      "ar": [
+        "Amilorida genérica",
+        "Asociaciones con hidroclorotiazida"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 5 mg",
+      "Comprimidos asociados a hidroclorotiazida (Moduretic® y genéricos)"
+    ],
+    "dose": {
+      "adultoPadrao": "5 mg VO 1 vez/día; mantenimiento 5–10 mg/día. Frecuentemente asociada a tiazidas o diuréticos de asa para preservar K⁺.",
+      "adultoGrave": "Considerar dosis mínima (5 mg/día) en ERC leve/moderada. EVITAR en ERC grave por riesgo elevado de hiperpotasemia.",
+      "pediatricaPadrao": "Uso pediátrico off-label. Consultar especialista y protocolo institucional.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "20 mg/día"
+    },
+    "therapeuticRange": "Prevención de hipocalemia inducida por diuréticos; K⁺ 4,0–5,0 mEq/L; control tensional como adyuvante",
+    "dilution": "Uso exclusivo vía oral. No diluir.",
+    "speed": "Administrar con alimentos para reducir náuseas. Reevaluar K⁺ y creatinina en 3–7 días tras inicio.",
+    "commonAdverseEffects": [
+      "Hiperpotasemia",
+      "Náuseas",
+      "Diarrea",
+      "Mareos",
+      "Cefalea",
+      "Fatiga"
+    ],
+    "dangerousAdverseEffects": [
+      "Hiperpotasemia grave (arritmias ventriculares)",
+      "Paro cardíaco",
+      "Lesión renal aguda",
+      "Acidosis metabólica hiperclorémica"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "HIPERPOTASEMIA es el principal riesgo — monitorizar K⁺ en 3–7 días tras inicio o ajuste.",
+      "Interacciones graves: IECA, ARA-II, ARNI, espironolactona, eplerenona, suplementos de K⁺ — riesgo de hiperpotasemia potencialmente fatal.",
+      "Mecanismo diferente de espironolactona (ENaC vs receptor de aldosterona) — puede sumar efecto en Síndrome de Liddle.",
+      "Trimetoprim y heparina también bloquean ENaC o elevan K⁺ — atención al uso concomitante."
+    ],
+    "ref": "ESC Heart Failure Guidelines · AHA/ACC Hypertension Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · FDA label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sin ajuste renal obligatorio con ClCr ≥ 50 mL/min. Monitorizar K⁺ y creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "5–10 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "20 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis habitual. Monitorizar K⁺ y creatinina periódicamente."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "5 mg",
+          "intervalo": "1x/dia (cautela)",
+          "doseMaxima": "5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 30–50 mL/min: dosis mínima. Monitorizar K⁺ en 3–7 días. Riesgo elevado de hiperpotasemia."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 30 mL/min: CONTRAINDICADA. Evitar completamente."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 10 mL/min / anuria: CONTRAINDICADA. Riesgo de hiperpotasemia fatal."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálisis: CONTRAINDICADA. Riesgo de hiperpotasemia entre sesiones."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "hyperkalemiaRisk": true,
+      "endocrineEffects": false,
+      "pregnancyCaution": true,
+      "warning": "El principal riesgo es HIPERPOTASEMIA potencialmente fatal, especialmente cuando se asocia a IECA, ARA-II, ARNI, espironolactona o suplementos de K⁺. CONTRAINDICADA en ERC grave (ClCr < 30) y K⁺ ≥ 5,0 mEq/L."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "ESC Heart Failure Guidelines 2021/2023",
+        "AHA/ACC Hypertension Guidelines 2023",
+        "KDIGO Guidelines",
+        "Goodman & Gilman",
+        "Lexicomp 2026",
+        "FDA label"
+      ],
+      "note": "Diurético ahorrador de K⁺ vía bloqueo de ENaC (mecanismo independiente de aldosterona). Menor potencia diurética que MRA en ICFEr — uso principalmente como adyuvante para prevenir hipocalemia o en Síndrome de Liddle."
+    }
+  },
+  "name": {
+    "pt": "Amilorida",
+    "es": "Amilorida"
+  },
+  "keywords": [
+    "amilorida",
+    "amilorida generica",
+    "moduretic (associacao com hidroclorotiazida)",
+    "asociaciones con hidroclorotiazida",
+    "diuretico poupador de potassio — bloqueador dos canais epiteliais de sodio (enac)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

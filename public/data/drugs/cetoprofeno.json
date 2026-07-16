@@ -1,0 +1,66 @@
+{
+  "id": "cetoprofeno",
+  "category": "analgesia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Cetoprofeno"
+  },
+  "es": {
+    "name": "Ketoprofeno"
+  },
+  "name": {
+    "pt": "Cetoprofeno",
+    "es": "Ketoprofeno"
+  },
+  "keywords": [
+    "cetoprofeno"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "analgesicos.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "analgesicos.js",
+    "decisionBasis": "canonical_nsaid_module",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "analgesia_protocol_variant",
+      "sourceModule": "analgesia_opioides.js",
+      "record": {
+        "id": "cetoprofeno",
+        "category": "analgesia",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "name": "Cetoprofeno"
+        },
+        "es": {
+          "name": "Ketoprofeno"
+        },
+        "name": {
+          "pt": "Cetoprofeno",
+          "es": "Ketoprofeno"
+        },
+        "keywords": [
+          "cetoprofeno"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "legacy-v1",
+        "sourceModule": "analgesia_opioides.js"
+      }
+    }
+  ]
+}

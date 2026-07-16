@@ -1,0 +1,274 @@
+{
+  "id": "manitol",
+  "category": "cardio",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "id": "manitol",
+    "name": "Manitol",
+    "class": "Diurético osmótico",
+    "category": "cardio",
+    "commercialNames": [
+      "Manitol Baxter",
+      "Manitol JP",
+      "Manitol genérico"
+    ],
+    "presentation": [
+      "Solução IV 10%  — frascos 250 mL e 500 mL",
+      "Solução IV 20%  — frascos 250 mL e 500 mL"
+    ],
+    "mechanism": "Aumenta a osmolaridade plasmática e tubular, promovendo movimentação de água do meio intracelular para o intravascular e reduzindo reabsorção de água nos túbulos renais. Produz intensa diurese osmótica sem metabolização.",
+    "halfLife": "1–2 horas (função renal normal)",
+    "onset": "5–15 minutos IV",
+    "dose": {
+      "adultoPadrao": "0,25–1 g/kg IV conforme indicação. Para 70 kg → 18–70 g IV em 15–30 min.",
+      "adultoGrave": "Doses repetidas conforme protocolo institucional e monitorização da osmolaridade sérica (meta < 320 mOsm/kg)."
+    },
+    "risksByPatient": [
+      "Gestante: utilizar apenas quando claramente necessário e sob supervisão especializada.",
+      "Lactante: dados limitados — utilizar com cautela.",
+      "Idoso (40 anos): maior risco de desidratação, distúrbios eletrolíticos, lesão renal e sobrecarga volêmica paradoxal.",
+      "ICC: CONTRAINDICADO em descompensação ativa — pode precipitar edema pulmonar.",
+      "Anúria estabelecida: CONTRAINDICADO."
+    ],
+    "commonAdverseEffects": [
+      "Poliúria",
+      "Cefaleia",
+      "Náuseas",
+      "Sede",
+      "Desidratação",
+      "Hipotensão"
+    ],
+    "dangerousAdverseEffects": [
+      "Edema pulmonar",
+      "Insuficiência cardíaca aguda",
+      "Hipernatremia",
+      "Hiponatremia (sobrecarga de livre)",
+      "Lesão renal aguda por acúmulo",
+      "Choque hipovolêmico",
+      "Hiperosmolaridade grave"
+    ],
+    "alerts": [
+      "Dose osmótica padrão: 0,25–1 g/kg IV. Para peso 70 kg → 18–70 g IV.",
+      "Monitorar osmolaridade sérica — suspender se osmolaridade > 320 mOsm/kg (risco de lesão renal e acúmulo).",
+      "CONTRAINDICADO em edema pulmonar ativo, ICC descompensada e anúria estabelecida.",
+      "Pode causar expansão inicial do volume intravascular — risco em pacientes com IC prévia ou oligúria.",
+      "Monitorar diurese horária, sódio sérico, osmolaridade e creatinina durante infusão."
+    ],
+    "ref": "Neurocritical Care Guidelines · ESC Heart Failure Guidelines · Lexicomp · UpToDate · Goodman & Gilman · FDA Label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "ClCr ≥ 50 mL/min: uso habitual com monitorização de osmolaridade e eletrólitos.",
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "0,25–1 g/kg",
+          "intervalo": "dose única ou repetida conforme protocolo",
+          "doseMaxima": "monitorar osmolaridade < 320 mOsm/kg",
+          "unidade": "g/kg"
+        },
+        "pediatrica": null,
+        "obs": "Função renal adequada. Monitorar osmolaridade sérica e diurese horária."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "0,25–0,5 g/kg",
+          "intervalo": "com cautela — intervalo estendido",
+          "doseMaxima": "osmolaridade < 310 mOsm/kg",
+          "unidade": "g/kg"
+        },
+        "pediatrica": null,
+        "obs": "ClCr 30–50 mL/min: dose reduzida. Monitorar osmolaridade, sódio e creatinina frequentemente."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "0,25 g/kg",
+          "intervalo": "somente hospitalar sob supervisão",
+          "doseMaxima": "osmolaridade < 305 mOsm/kg",
+          "unidade": "g/kg"
+        },
+        "pediatrica": null,
+        "obs": "ClCr 10–30 mL/min: risco elevado de acúmulo. Uso restrito a especialistas em UTI. Monitorização contínua."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 10 mL/min / anúria: CONTRAINDICADO. Acúmulo osmolar e risco de edema pulmonar."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálise: CONTRAINDICADO em uso rotineiro. Discussão especializada necessária em caso excepcional."
+      }
+    },
+    "safetyFlags": {
+      "hypotensionRisk": true,
+      "volumeOverloadRisk": true,
+      "dehydrationRisk": true,
+      "osmolarityRisk": true,
+      "renalHighRisk": true,
+      "qtRisk": false,
+      "infusionDrug": true,
+      "pregnancyCaution": true,
+      "warning": "Manitol pode inicialmente expandir o volume intravascular e precipitar edema pulmonar ou insuficiência cardíaca em pacientes suscetíveis. Monitorar osmolaridade sérica (suspender > 320 mOsm/kg) e diurese horária."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "Neurocritical Care Guidelines",
+        "ESC Heart Failure Guidelines",
+        "Lexicomp 2026",
+        "UpToDate",
+        "Goodman & Gilman",
+        "FDA Label"
+      ],
+      "note": "Diurético osmótico utilizado principalmente em neurocríticos (HIC, edema cerebral). Relevante na cardiologia por capacidade de alterar rapidamente volemia e função renal. CONTRAINDICADO em IC descompensada ativa."
+    }
+  },
+  "es": {
+    "id": "manitol",
+    "name": "Manitol",
+    "class": "Diurético osmótico",
+    "category": "cardio",
+    "commercialNames": [
+      "Manitol Baxter",
+      "Manitol JP",
+      "Manitol genérico"
+    ],
+    "presentation": [
+      "Solución IV 10% — frascos 250 mL y 500 mL",
+      "Solución IV 20% — frascos 250 mL y 500 mL"
+    ],
+    "mechanism": "Aumenta la osmolaridad plasmática y tubular, promoviendo el movimiento de agua desde el espacio intracelular al intravascular y reduciendo la reabsorción de agua en los túbulos renales. Produce intensa diuresis osmótica sin metabolización.",
+    "halfLife": "1–2 horas (función renal normal)",
+    "onset": "5–15 minutos IV",
+    "dose": {
+      "adultoPadrao": "0,25–1 g/kg IV según indicación. Para 70 kg → 18–70 g IV en 15–30 min.",
+      "adultoGrave": "Dosis repetidas según protocolo institucional y monitorización de la osmolaridad sérica (meta < 320 mOsm/kg)."
+    },
+    "risksByPatient": [
+      "Gestante: utilizar solo cuando sea claramente necesario y bajo supervisión especializada.",
+      "Lactante: datos limitados — utilizar con precaución.",
+      "Anciano (40 años): mayor riesgo de deshidratación, trastornos electrolíticos, lesión renal y sobrecarga de volumen paradójica.",
+      "ICC: CONTRAINDICADO en descompensación activa — puede precipitar edema pulmonar.",
+      "Anuria establecida: CONTRAINDICADO."
+    ],
+    "commonAdverseEffects": [
+      "Poliuria",
+      "Cefalea",
+      "Náuseas",
+      "Sed",
+      "Deshidratación",
+      "Hipotensión"
+    ],
+    "dangerousAdverseEffects": [
+      "Edema pulmonar",
+      "Insuficiencia cardíaca aguda",
+      "Hipernatremia",
+      "Hiponatremia (sobrecarga de agua libre)",
+      "Lesión renal aguda por acumulación",
+      "Shock hipovolémico",
+      "Hiperosmolaridad grave"
+    ],
+    "alerts": [
+      "Dosis osmótica estándar: 0,25–1 g/kg IV. Para peso 70 kg → 18–70 g IV.",
+      "Monitorizar osmolaridad sérica — suspender si osmolaridad > 320 mOsm/kg (riesgo de lesión renal y acumulación).",
+      "CONTRAINDICADO en edema pulmonar activo, ICC descompensada y anuria establecida.",
+      "Puede causar expansión inicial del volumen intravascular — riesgo en pacientes con IC previa u oliguria.",
+      "Monitorizar diuresis horaria, sodio sérico, osmolaridad y creatinina durante la infusión."
+    ],
+    "ref": "Neurocritical Care Guidelines · ESC Heart Failure Guidelines · Lexicomp · UpToDate · Goodman & Gilman · FDA Label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "ClCr ≥ 50 mL/min: uso habitual con monitorización de osmolaridad y electrolitos.",
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "0,25–1 g/kg",
+          "intervalo": "dose única ou repetida conforme protocolo",
+          "doseMaxima": "monitorar osmolaridade < 320 mOsm/kg",
+          "unidade": "g/kg"
+        },
+        "pediatrica": null,
+        "obs": "Función renal adecuada. Monitorizar osmolaridad sérica y diuresis horaria."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "0,25–0,5 g/kg",
+          "intervalo": "com cautela — intervalo estendido",
+          "doseMaxima": "osmolaridade < 310 mOsm/kg",
+          "unidade": "g/kg"
+        },
+        "pediatrica": null,
+        "obs": "ClCr 30–50 mL/min: dosis reducida. Monitorizar osmolaridad, sodio y creatinina frecuentemente."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "0,25 g/kg",
+          "intervalo": "somente hospitalar sob supervisão",
+          "doseMaxima": "osmolaridade < 305 mOsm/kg",
+          "unidade": "g/kg"
+        },
+        "pediatrica": null,
+        "obs": "ClCr 10–30 mL/min: riesgo elevado de acumulación. Uso restringido a especialistas en UCI. Monitorización continua."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 10 mL/min / anuria: CONTRAINDICADO. Acumulación osmolar y riesgo de edema pulmonar."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálisis: CONTRAINDICADO en uso rutinario. Discusión especializada necesaria en caso excepcional."
+      }
+    },
+    "safetyFlags": {
+      "hypotensionRisk": true,
+      "volumeOverloadRisk": true,
+      "dehydrationRisk": true,
+      "osmolarityRisk": true,
+      "renalHighRisk": true,
+      "qtRisk": false,
+      "infusionDrug": true,
+      "pregnancyCaution": true,
+      "warning": "El manitol puede expandir inicialmente el volumen intravascular y precipitar edema pulmonar o insuficiencia cardíaca en pacientes susceptibles. Monitorizar osmolaridad sérica (suspender > 320 mOsm/kg) y diuresis horaria."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "Neurocritical Care Guidelines",
+        "ESC Heart Failure Guidelines",
+        "Lexicomp 2026",
+        "UpToDate",
+        "Goodman & Gilman",
+        "FDA Label"
+      ],
+      "note": "Diurético osmótico utilizado principalmente en neurocríticos (HIC, edema cerebral). Relevante en cardiología por capacidad de alterar rápidamente la volemia y la función renal. CONTRAINDICADO en IC descompensada activa."
+    }
+  },
+  "name": {
+    "pt": "Manitol",
+    "es": "Manitol"
+  },
+  "keywords": [
+    "manitol",
+    "diuretico osmotico"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

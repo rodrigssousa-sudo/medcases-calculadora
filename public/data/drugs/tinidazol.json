@@ -1,0 +1,262 @@
+{
+  "id": "tinidazol",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.12)",
+  "colorTxt": "#047857",
+  "pt": {
+    "name": "Tinidazol",
+    "class": "Nitroimidazol de 2ª geração (longa meia-vida)",
+    "commercialNames": {
+      "br": [
+        "Fasigyn",
+        "Tinidazol Genérico"
+      ],
+      "ar": [
+        "Fasigyn",
+        "Tinidazol Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 500 mg"
+    ],
+    "dose": {
+      "adultoVO": "2 g VO dose única (ou 2 g/dia × 3 dias para amebíase)"
+    },
+    "doseKg": null,
+    "indication": "Giardíase, amebíase intestinal e hepática, tricomoníase, vaginose bacteriana (Gardnerella vaginalis), infecções por anaeróbios.",
+    "spectrum": "Trichomonas vaginalis, Giardia lamblia, Entamoeba histolytica, anaeróbios (Bacteroides fragilis, Clostridium spp.), Gardnerella vaginalis. Sem atividade contra aeróbios.",
+    "contraindications": [
+      "Hipersensibilidade aos nitroimidazóis",
+      "1º trimestre de gestação",
+      "Distúrbios neurológicos orgânicos (risco de neurotoxicidade)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Efeito antabuse com álcool — orientar abstinência durante tratamento e 72h após.",
+      "Meia-vida longa (~12–14h) permite dose única ou regimes curtos.",
+      "Não necessita ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "2 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "g"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "mg/kg"
+        },
+        "obs": "Utilizado para giardíase, amebíase e tricomoníase."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "2 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "g"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "2 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "g"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "2 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "g"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar neurotoxicidade em uso prolongado."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "2 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "g"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "mg/kg"
+        },
+        "obs": "Pode ser necessária dose suplementar após HD em tratamentos prolongados."
+      }
+    }
+  },
+  "es": {
+    "name": "Tinidazol",
+    "class": "Nitroimidazol de 2.ª generación (larga semivida)",
+    "commercialNames": {
+      "br": [
+        "Fasigyn",
+        "Tinidazol Genérico"
+      ],
+      "ar": [
+        "Fasigyn",
+        "Tinidazol Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 500 mg"
+    ],
+    "dose": {
+      "adultoVO": "2 g VO dosis única (o 2 g/día × 3 días para amebiasis)"
+    },
+    "doseKg": null,
+    "indication": "Giardiasis, amebiasis intestinal y hepática, tricomoniasis, vaginosis bacteriana (Gardnerella vaginalis), infecciones por anaerobios.",
+    "spectrum": "Trichomonas vaginalis, Giardia lamblia, Entamoeba histolytica, anaerobios (Bacteroides fragilis, Clostridium spp.), Gardnerella vaginalis. Sin actividad frente a aerobios.",
+    "contraindications": [
+      "Hipersensibilidad a los nitroimidazoles",
+      "1.er trimestre de gestación",
+      "Trastornos neurológicos orgánicos (riesgo de neurotoxicidad)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Efecto antabus con alcohol — orientar abstinencia durante el tratamiento y 72h después.",
+      "Semivida larga (~12–14h) permite dosis única o regímenes cortos.",
+      "No requiere ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "2 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "g"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "mg/kg"
+        },
+        "obs": "Utilizado para giardiasis, amebiasis y tricomoniasis."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "2 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "g"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "2 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "g"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "2 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "g"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar neurotoxicidad en uso prolongado."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "2 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "g"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "Dose única",
+          "doseMaxima": "2 g",
+          "unidade": "mg/kg"
+        },
+        "obs": "Puede ser necesaria dosis suplementaria después de HD en tratamientos prolongados."
+      }
+    }
+  },
+  "name": {
+    "pt": "Tinidazol",
+    "es": "Tinidazol"
+  },
+  "keywords": [
+    "tinidazol",
+    "fasigyn",
+    "tinidazol generico",
+    "nitroimidazol de 2ª geracao (longa meia-vida)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

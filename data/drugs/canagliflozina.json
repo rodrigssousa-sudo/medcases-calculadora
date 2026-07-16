@@ -1,0 +1,487 @@
+{
+  "id": "canagliflozina",
+  "category": "cardio",
+  "icon": "🩺",
+  "color": "rgba(239,68,68,0.10)",
+  "colorTxt": "#991B1B",
+  "pt": {
+    "name": "Canagliflozina",
+    "class": "Inibidor SGLT2 (iSGLT2) — benefício CV e renal em DM2",
+    "commercialNames": {
+      "br": [
+        "Invokana",
+        "Canagliflozina"
+      ],
+      "ar": [
+        "Invokana",
+        "Canagliflozina"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 100 mg",
+      "Comprimidos 300 mg"
+    ],
+    "mechanism": "Inibe SGLT2 no túbulo proximal → ↑ glicosúria e natriurese → ↓ glicemia, ↓ peso, ↓ PA, ↓ pressão intraglomerular. Também inibe parcialmente SGLT1 intestinal (distingue de dapa/empa). Benefício CV (CANVAS) e renal diabético (CREDENCE) demonstrados.",
+    "pharmacokinetics": {
+      "onset": "Glicosúria nas primeiras horas",
+      "halfLife": "≈ 10–13 horas",
+      "duration": "Efeito sustentado; metabolismo por glucuronidação + eliminação renal/fecal"
+    },
+    "dose": {
+      "adultoPadrao": "100 mg VO 1x/dia antes da 1ª refeição. Pode aumentar para 300 mg se necessário para controle glicêmico.",
+      "adultoGrave": "CANVAS: 100–300 mg/dia ↓ MACE em DM2+DCV. CREDENCE: 100 mg/dia ↓ progressão renal diabética. Atenção: CANVAS associou aumento de amputação — avaliar individualmente.",
+      "pediatricaPadrao": "Não aprovado em pediatria.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "100 mg VO 1x/dia antes da 1ª refeição",
+      "grave": "300 mg/dia (eGFR ≥ 60, necessidade glicêmica)",
+      "meningite": null,
+      "doseMaxima": "300 mg/dia (eGFR ≥ 60)"
+    },
+    "therapeuticTargets": [
+      "Controle glicêmico em DM2",
+      "Redução de MACE em DM2 com DCV estabelecida",
+      "Proteção renal e redução de albuminúria (CREDENCE)",
+      "Redução de hospitalização por IC",
+      "Redução ponderal e pressórica modestas"
+    ],
+    "dilution": "Via oral. 1x/dia antes da primeira refeição. Não requer infusão.",
+    "speed": "Dose única diária antes da 1ª refeição. Avaliar eGFR, volemia e PA antes.",
+    "commonAdverseEffects": [
+      "Infecção genital micótica",
+      "Poliúria / nictúria",
+      "Aumento da frequência urinária",
+      "Sede",
+      "Hipotensão postural",
+      "Náuseas / constipação"
+    ],
+    "dangerousAdverseEffects": [
+      "Cetoacidose diabética euglicêmica (DKA-E)",
+      "Desidratação grave e IRA por hipovolemia",
+      "Hipotensão sintomática",
+      "Amputação de membros inferiores (CANVAS — risco aumentado)",
+      "Fraturas em pacientes predispostos",
+      "Hipercalemia em DRC + IECA/BRA/ARM",
+      "Fasciíte necrosante do períneo — Fournier (rara)",
+      "Urossepse (rara)",
+      "Hipoglicemia com insulina ou sulfonilureia"
+    ],
+    "risksByPatient": [
+      "⚠️ CANVAS: canagliflozina associada a aumento do risco de amputação de MMII. Avaliar DAP, amputação prévia, úlcera ativa — considerar alternativa (dapagliflozina ou empagliflozina) em pacientes de alto risco vascular periférico.",
+      "🩺 Sick Day Rules: suspender em doença aguda, cirurgia, jejum, vômitos ou baixa ingesta.",
+      "Idosos: maior risco de hipovolemia, hipotensão, DRC, quedas, fraturas e complicações vasculares periféricas."
+    ],
+    "contraindications": {
+      "absolutas": [
+        "Hipersensibilidade à canagliflozina",
+        "Cetoacidose diabética ativa",
+        "DM tipo 1 sem protocolo aprovado",
+        "DRC terminal / diálise (conforme bula local)"
+      ],
+      "relativas": [
+        "Hipovolemia não corrigida",
+        "Hipotensão sintomática",
+        "DAP grave / úlcera ativa em pé diabético",
+        "Amputação prévia de MMII",
+        "Alto risco de fratura",
+        "Infecções genitais recorrentes",
+        "História prévia de cetoacidose",
+        "Doença aguda grave"
+      ]
+    },
+    "interactions": [
+      "Insulina / sulfonilureias: maior risco de hipoglicemia.",
+      "Diuréticos de alça: maior risco de hipovolemia, hipotensão e IRA.",
+      "Anti-hipertensivos: hipotensão aditiva.",
+      "Digoxina: canagliflozina pode ↑ discretamente exposição — monitorar se risco.",
+      "Indutores UGT (rifampicina, fenitoína): podem reduzir exposição e eficácia.",
+      "AINEs + diuréticos + iSGLT2: tríade de risco para IRA em hipovolemia."
+    ],
+    "renalAdjustment": "eGFR atual: 90 mL/min/1,73m². Iniciar com eGFR ≥ 45 (DM2 geral). DRC diabética (CREDENCE): pode manter com eGFR ≥ 30. Não iniciar em eGFR < 30. Evitar 300 mg com eGFR < 60.",
+    "hepaticAdjustment": "Sem ajuste hepático habitual. Cautela em hepatopatia grave em doença aguda.",
+    "monitoring": {
+      "baseline": [
+        "Creatinina / eGFR",
+        "PA em ortostatismo",
+        "Estado volêmico",
+        "HbA1c",
+        "Albuminúria se DRC",
+        "Potássio se DRC/IECA/BRA",
+        "Avaliação dos pés e circulação periférica",
+        "Uso de diuréticos"
+      ],
+      "followUp": [
+        "Creatinina/eGFR — 2–4 sem se alto risco",
+        "PA e sintomas ortostáticos",
+        "Avaliação de pés e feridas",
+        "Potássio se DRC + inibidores SRAA",
+        "Sinais de cetoacidose",
+        "Infecções genitais / urinárias",
+        "Fraturas e quedas",
+        "Hospitalizações por IC"
+      ]
+    },
+    "administration": [
+      "Administrar 1x/dia antes da primeira refeição.",
+      "Avaliar função renal e volemia antes de iniciar.",
+      "Considerar reduzir diuréticos se hipovolemia, hipotensão ou perda ponderal excessiva.",
+      "Suspender temporariamente em cirurgia, jejum prolongado, doença aguda grave, vômitos, diarreia ou baixa ingesta.",
+      "Não usar para tratamento de cetoacidose diabética."
+    ],
+    "hemodynamicRules": {
+      "holdIf": {
+        "systolicBPBelow": 90,
+        "severeDehydration": true,
+        "activeKetoacidosis": true,
+        "severeAcuteIllness": true,
+        "perioperativeFasting": true
+      },
+      "warning": "Pode causar depleção volêmica, hipotensão e queda inicial do eGFR. Avaliar volemia, PA e diuréticos antes de iniciar."
+    },
+    "electrolyteSafety": {
+      "potassiumRisk": true,
+      "magnesiumRisk": false,
+      "sodiumRisk": true,
+      "monitoring": [
+        "Monitorar função renal e volemia.",
+        "Atenção a hipercalemia em DRC, uso de IECA/BRA/ARM ou redução importante do eGFR.",
+        "Avaliar cetonas se sintomas compatíveis com cetoacidose, mesmo com glicemia não muito elevada."
+      ]
+    },
+    "sickDayRules": [
+      "Suspender temporariamente em vômitos, diarreia, febre alta, baixa ingesta, jejum prolongado, cirurgia ou internação por doença aguda.",
+      "Reiniciar apenas quando clinicamente estável, hidratado e alimentando-se adequadamente.",
+      "Procurar atendimento se náuseas, vômitos, dor abdominal, respiração rápida, sonolência ou cetonas positivas.",
+      "Avaliar pés regularmente; comunicar feridas, úlceras, dor, infecção ou escurecimento dos dedos."
+    ],
+    "footSafety": [
+      "Avaliar doença arterial periférica, neuropatia, úlcera ativa e amputação prévia antes de iniciar.",
+      "Orientar inspeção diária dos pés em diabéticos de alto risco.",
+      "Considerar alternativa se úlcera ativa, infecção grave de pé diabético ou isquemia crítica."
+    ],
+    "pregnancy": "Evitar, especialmente no 2º e 3º trimestre, por potencial risco renal fetal. Preferir alternativas com maior segurança.",
+    "lactation": "Evitar por dados limitados e potencial risco renal ao lactente.",
+    "elderly": "Maior risco de hipovolemia, hipotensão, DRC, quedas, fraturas e complicações em pés. Avaliar PA, diuréticos, função renal e risco vascular periférico.",
+    "patientEducation": [
+      "Tomar antes da primeira refeição.",
+      "Manter hidratação adequada.",
+      "Avisar se tontura, queda de pressão, vômitos ou baixa ingesta.",
+      "Avisar se dor, coceira, secreção ou vermelhidão genital.",
+      "Suspender temporariamente em jejum, cirurgia, vômitos, diarreia ou doença aguda importante conforme orientação.",
+      "Procurar atendimento se náuseas, vômitos, dor abdominal, respiração rápida ou sonolência.",
+      "Inspecionar os pés diariamente se diabético com neuropatia ou doença arterial periférica."
+    ],
+    "calculator": {
+      "inputsRequired": [
+        "idade",
+        "peso",
+        "indicacao",
+        "diabetes",
+        "doencaCardiovascular",
+        "nefropatiaDiabetica",
+        "albuminuria",
+        "creatinina",
+        "egfr",
+        "clcr",
+        "paSistolica",
+        "usoDiuretico",
+        "doseDiuretico",
+        "hipovolemia",
+        "potassio",
+        "cetoacidosePrevia",
+        "cetona",
+        "gestacao",
+        "cirurgiaProgramada",
+        "doencaAguda",
+        "usoInsulina",
+        "usoSulfonilureia",
+        "doencaArterialPeriferica",
+        "ulceraPeDiabetico",
+        "amputacaoPrevia",
+        "riscoFratura"
+      ],
+      "output": "Avalia elegibilidade cardiorrenal, dose 100/300 mg, limites de função renal, risco de hipovolemia/cetoacidose, pé diabético/amputação, fratura e necessidade de suspensão temporária."
+    },
+    "safetyFlags": {
+      "highAlertInAcuteIllness": true,
+      "cardiovascularBenefitInDM2CVD": true,
+      "renalProtectionInDiabeticKidneyDisease": true,
+      "heartFailureHospitalizationBenefit": true,
+      "volumeDepletionRisk": true,
+      "hypotensionRisk": true,
+      "ketoacidosisRisk": true,
+      "euglycemicDKARisk": true,
+      "genitalInfectionRisk": true,
+      "renalFunctionCheckRequired": true,
+      "hyperkalemiaCaution": true,
+      "amputationRiskCaution": true,
+      "fractureRiskCaution": true,
+      "pregnancyAvoid": true,
+      "hospitalUseOnly": false,
+      "requiresTelemetry": false,
+      "requiresInfusionPump": false,
+      "warning": "⚠️ Canagliflozina: benefício CV/renal em DM2 comprovado (CANVAS/CREDENCE), mas atenção especial ao RISCO DE AMPUTAÇÃO (CANVAS). Avaliar DAP, amputação prévia e úlcera ativa antes de prescrever."
+    },
+    "auditNotes": {
+      "status": "sglt2_inhibitor_canagliflozin_cardiorenal_master_template"
+    },
+    "ref": [
+      "CANVAS Program (NEJM 2017)",
+      "CREDENCE Trial (NEJM 2019)",
+      "ADA Standards of Care 2024",
+      "KDIGO CKD Guidelines 2022",
+      "ESC Heart Failure Guidelines 2021",
+      "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+      "FDA/EMA label — Invokana (Canagliflozin)"
+    ]
+  },
+  "es": {
+    "name": "Canagliflozina",
+    "class": "Inhibidor SGLT2 (iSGLT2) — beneficio CV y renal en DM2",
+    "commercialNames": {
+      "br": [
+        "Invokana",
+        "Canagliflozina"
+      ],
+      "ar": [
+        "Invokana",
+        "Canagliflozina"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 100 mg",
+      "Comprimidos 300 mg"
+    ],
+    "mechanism": "Inhibe SGLT2 en el túbulo proximal → ↑ glucosuria y natriuresis → ↓ glucemia, ↓ peso, ↓ PA, ↓ presión intraglomerular. También inhibe parcialmente SGLT1 intestinal (distingue de dapa/empa). Beneficio CV (CANVAS) y renal diabético (CREDENCE) demostrados.",
+    "pharmacokinetics": {
+      "onset": "Glucosuria en las primeras horas",
+      "halfLife": "≈ 10–13 horas",
+      "duration": "Efecto sostenido; metabolismo por glucuronidación + eliminación renal/fecal"
+    },
+    "dose": {
+      "adultoPadrao": "100 mg VO 1 vez/día antes de la 1ª comida. Puede aumentarse a 300 mg si necesario para control glucémico.",
+      "adultoGrave": "CANVAS: 100–300 mg/día ↓ MACE en DM2+ECV. CREDENCE: 100 mg/día ↓ progresión renal diabética. Atención: CANVAS asoció aumento de amputación — evaluar individualmente.",
+      "pediatricaPadrao": "No aprobado en pediatría.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "100 mg VO 1 vez/día antes de la 1ª comida",
+      "grave": "300 mg/día (eGFR ≥ 60, necesidad glucémica)",
+      "meningite": null,
+      "doseMaxima": "300 mg/día (eGFR ≥ 60)"
+    },
+    "therapeuticTargets": [
+      "Control glucémico en DM2",
+      "Reducción de MACE en DM2 con ECV establecida",
+      "Protección renal y reducción de albuminuria (CREDENCE)",
+      "Reducción de hospitalización por IC",
+      "Reducción ponderal y tensional modestas"
+    ],
+    "dilution": "Vía oral. 1 vez/día antes de la primera comida. No requiere infusión.",
+    "speed": "Dosis única diaria antes de la 1ª comida. Evaluar eGFR, volemia y PA antes.",
+    "commonAdverseEffects": [
+      "Infección genital micótica",
+      "Poliuria / nicturia",
+      "Aumento de frecuencia urinaria",
+      "Sed",
+      "Hipotensión postural",
+      "Náuseas / estreñimiento"
+    ],
+    "dangerousAdverseEffects": [
+      "Cetoacidosis diabética euglucémica (DKA-E)",
+      "Deshidratación grave e IRA por hipovolemia",
+      "Hipotensión sintomática",
+      "Amputación de miembros inferiores (CANVAS — riesgo aumentado)",
+      "Fracturas en pacientes predispuestos",
+      "Hiperpotasemia en ERC + IECA/ARA-II/ARM",
+      "Fascitis necrotizante del periné — Fournier (rara)",
+      "Urosepsis (rara)",
+      "Hipoglucemia con insulina o sulfonilurea"
+    ],
+    "risksByPatient": [
+      "⚠️ CANVAS: canagliflozina asociada a aumento del riesgo de amputación de MMII. Evaluar EAP, amputación previa, úlcera activa — considerar alternativa (dapagliflozina o empagliflozina) en pacientes de alto riesgo vascular periférico.",
+      "🩺 Sick Day Rules: suspender en enfermedad aguda, cirugía, ayuno, vómitos o baja ingesta.",
+      "Ancianos: mayor riesgo de hipovolemia, hipotensión, ERC, caídas, fracturas y complicaciones vasculares periféricas."
+    ],
+    "contraindications": {
+      "absolutas": [
+        "Hipersensibilidad a canagliflozina",
+        "Cetoacidosis diabética activa",
+        "DM tipo 1 sin protocolo aprobado",
+        "ERC terminal / diálisis (según prospecto local)"
+      ],
+      "relativas": [
+        "Hipovolemia no corregida",
+        "Hipotensión sintomática",
+        "EAP grave / úlcera activa en pie diabético",
+        "Amputación previa de MMII",
+        "Alto riesgo de fractura",
+        "Infecciones genitales recurrentes",
+        "Historia previa de cetoacidosis",
+        "Enfermedad aguda grave"
+      ]
+    },
+    "interactions": [
+      "Insulina / sulfonilureas: mayor riesgo de hipoglucemia.",
+      "Diuréticos de asa: mayor riesgo de hipovolemia, hipotensión e IRA.",
+      "Antihipertensivos: hipotensión aditiva.",
+      "Digoxina: canagliflozina puede ↑ discretamente exposición — monitorizar si riesgo.",
+      "Inductores UGT (rifampicina, fenitoína): pueden reducir exposición y eficacia.",
+      "AINEs + diuréticos + iSGLT2: tríada de riesgo para IRA en hipovolemia."
+    ],
+    "renalAdjustment": "eGFR actual: 90 mL/min/1,73m². Iniciar con eGFR ≥ 45 (DM2 general). ERC diabética (CREDENCE): puede mantenerse con eGFR ≥ 30. No iniciar con eGFR < 30. Evitar 300 mg con eGFR < 60.",
+    "hepaticAdjustment": "Sin ajuste hepático habitual. Precaución en hepatopatía grave en enfermedad aguda.",
+    "monitoring": {
+      "baseline": [
+        "Creatinina / eGFR",
+        "PA en ortostatismo",
+        "Estado voléimico",
+        "HbA1c",
+        "Albuminuria si ERC",
+        "Potasio si ERC/IECA/ARA-II",
+        "Evaluación de pies y circulación periférica",
+        "Uso de diuréticos"
+      ],
+      "followUp": [
+        "Creatinina/eGFR — 2–4 sem si alto riesgo",
+        "PA y síntomas ortostáticos",
+        "Evaluación de pies y heridas",
+        "Potasio si ERC + inhibidores SRAA",
+        "Signos de cetoacidosis",
+        "Infecciones genitales / urinarias",
+        "Fracturas y caídas",
+        "Hospitalizaciones por IC"
+      ]
+    },
+    "administration": [
+      "Administrar 1 vez/día antes de la primera comida.",
+      "Evaluar función renal y volemia antes de iniciar.",
+      "Considerar reducir diuréticos si hay hipovolemia, hipotensión o pérdida ponderal excesiva.",
+      "Suspender temporalmente en cirugía, ayuno prolongado, enfermedad aguda grave, vómitos, diarrea o baja ingesta.",
+      "No usar para tratamiento de cetoacidosis diabética."
+    ],
+    "hemodynamicRules": {
+      "holdIf": {
+        "systolicBPBelow": 90,
+        "severeDehydration": true,
+        "activeKetoacidosis": true,
+        "severeAcuteIllness": true,
+        "perioperativeFasting": true
+      },
+      "warning": "Puede causar depleción de volumen, hipotensión y caída inicial del eGFR. Evaluar volemia, PA y diuréticos antes de iniciar."
+    },
+    "electrolyteSafety": {
+      "potassiumRisk": true,
+      "magnesiumRisk": false,
+      "sodiumRisk": true,
+      "monitoring": [
+        "Monitorizar función renal y volemia.",
+        "Atención a hiperpotasemia en ERC, uso de IECA/ARA-II/ARM o reducción importante del eGFR.",
+        "Evaluar cetonas si hay síntomas compatibles con cetoacidosis, incluso con glucemia no muy elevada."
+      ]
+    },
+    "sickDayRules": [
+      "Suspender temporalmente en vómitos, diarrea, fiebre alta, baja ingesta, ayuno prolongado, cirugía o internación por enfermedad aguda.",
+      "Reiniciar solo cuando esté clínicamente estable, hidratado y alimentándose adecuadamente.",
+      "Consultar si hay náuseas, vómitos, dolor abdominal, respiración rápida, somnolencia o cetonas positivas.",
+      "Evaluar pies regularmente; comunicar heridas, úlceras, dolor, infección u oscurecimiento de dedos."
+    ],
+    "footSafety": [
+      "Evaluar enfermedad arterial periférica, neuropatía, úlcera activa y amputación previa antes de iniciar.",
+      "Orientar inspección diaria de pies en diabéticos de alto riesgo.",
+      "Considerar alternativa si hay úlcera activa, infección grave de pie diabético o isquemia crítica."
+    ],
+    "pregnancy": "Evitar, especialmente en 2º y 3º trimestre, por potencial riesgo renal fetal. Preferir alternativas con mayor seguridad.",
+    "lactation": "Evitar por datos limitados y potencial riesgo renal para el lactante.",
+    "elderly": "Mayor riesgo de hipovolemia, hipotensión, ERC, caídas, fracturas y complicaciones en pies. Evaluar PA, diuréticos, función renal y riesgo vascular periférico.",
+    "patientEducation": [
+      "Tomar antes de la primera comida.",
+      "Mantener hidratación adecuada.",
+      "Avisar si mareos, caída de presión, vómitos o baja ingesta.",
+      "Avisar si dolor, picazón, secreción o enrojecimiento genital.",
+      "Suspender temporalmente en ayuno, cirugía, vómitos, diarrea o enfermedad aguda importante según indicación.",
+      "Consultar si náuseas, vómitos, dolor abdominal, respiración rápida o somnolencia.",
+      "Inspeccionar los pies diariamente si tiene diabetes con neuropatía o enfermedad arterial periférica."
+    ],
+    "calculator": {
+      "inputsRequired": [
+        "idade",
+        "peso",
+        "indicacao",
+        "diabetes",
+        "doencaCardiovascular",
+        "nefropatiaDiabetica",
+        "albuminuria",
+        "creatinina",
+        "egfr",
+        "clcr",
+        "paSistolica",
+        "usoDiuretico",
+        "doseDiuretico",
+        "hipovolemia",
+        "potassio",
+        "cetoacidosePrevia",
+        "cetona",
+        "gestacao",
+        "cirurgiaProgramada",
+        "doencaAguda",
+        "usoInsulina",
+        "usoSulfonilureia",
+        "doencaArterialPeriferica",
+        "ulceraPeDiabetico",
+        "amputacaoPrevia",
+        "riscoFratura"
+      ],
+      "output": "Evalúa elegibilidad cardiorrenal, dosis 100/300 mg, límites de función renal, riesgo de hipovolemia/cetoacidosis, pie diabético/amputación, fractura y necesidad de suspensión temporal."
+    },
+    "safetyFlags": {
+      "highAlertInAcuteIllness": true,
+      "cardiovascularBenefitInDM2CVD": true,
+      "renalProtectionInDiabeticKidneyDisease": true,
+      "heartFailureHospitalizationBenefit": true,
+      "volumeDepletionRisk": true,
+      "hypotensionRisk": true,
+      "ketoacidosisRisk": true,
+      "euglycemicDKARisk": true,
+      "genitalInfectionRisk": true,
+      "renalFunctionCheckRequired": true,
+      "hyperkalemiaCaution": true,
+      "amputationRiskCaution": true,
+      "fractureRiskCaution": true,
+      "pregnancyAvoid": true,
+      "hospitalUseOnly": false,
+      "requiresTelemetry": false,
+      "requiresInfusionPump": false,
+      "warning": "⚠️ Canagliflozina: beneficio CV/renal en DM2 comprobado (CANVAS/CREDENCE), pero atención especial al RIESGO DE AMPUTACIÓN (CANVAS). Evaluar EAP, amputación previa y úlcera activa antes de prescribir."
+    },
+    "auditNotes": {
+      "status": "sglt2_inhibitor_canagliflozin_cardiorenal_master_template"
+    },
+    "ref": [
+      "CANVAS Program (NEJM 2017)",
+      "CREDENCE Trial (NEJM 2019)",
+      "ADA Standards of Care 2024",
+      "KDIGO CKD Guidelines 2022",
+      "ESC Heart Failure Guidelines 2021",
+      "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+      "FDA/EMA label — Invokana (Canagliflozin)"
+    ]
+  },
+  "name": {
+    "pt": "Canagliflozina",
+    "es": "Canagliflozina"
+  },
+  "keywords": [
+    "canagliflozina",
+    "invokana",
+    "inibidor sglt2 (isglt2) — beneficio cv e renal em dm2"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

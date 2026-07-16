@@ -1,0 +1,266 @@
+{
+  "id": "roxitromicina",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(234,179,8,0.12)",
+  "colorTxt": "#B45309",
+  "pt": {
+    "name": "Roxitromicina",
+    "class": "Macrolídeo de 2ª geração (longa meia-vida)",
+    "commercialNames": {
+      "br": [
+        "Roxitromicina Genérico",
+        "Rulid"
+      ],
+      "ar": [
+        "Rulid",
+        "Roxitromicina Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 150 mg, 300 mg",
+      "Suspensão pediátrica: 50 mg/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "150 mg VO 12/12h (ou 300 mg VO 24/24h)"
+    },
+    "doseKg": null,
+    "indication": "Infecções do trato respiratório superior e inferior por patógenos atípicos (Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella spp.), faringoamigdalite, otite média aguda, infecções de pele e partes moles.",
+    "spectrum": "Streptococcus pyogenes, Streptococcus pneumoniae (sensível), Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila, Haemophilus influenzae (atividade limitada), Moraxella catarrhalis. Sem atividade contra Gram-negativos entéricos.",
+    "contraindications": [
+      "Hipersensibilidade aos macrolídeos",
+      "Uso concomitante de ergotamínicos (risco de vasospasmo)",
+      "Prolongamento do intervalo QT ou hipopotassemia não corrigida"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Metabolismo hepático intenso (CYP3A4) — múltiplas interações medicamentosas.",
+      "Tomar em jejum para melhor absorção (30 min antes das refeições).",
+      "Monitorar QT prolongado em pacientes com cardiopatia.",
+      "Não necessita ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / EMA Summary of Product Characteristics / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "5–8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Macrolídeo de longa duração."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "5–8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "5–8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "5–8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar QT prolongado e hepatotoxicidade."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "5–8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não requer suplementação pós-HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Roxitromicina",
+    "class": "Macrólido de 2.ª generación (larga semivida)",
+    "commercialNames": {
+      "br": [
+        "Roxitromicina Genérico",
+        "Rulid"
+      ],
+      "ar": [
+        "Rulid",
+        "Roxitromicina Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 150 mg, 300 mg",
+      "Suspensión pediátrica: 50 mg/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "150 mg VO 12/12h (o 300 mg VO 24/24h)"
+    },
+    "doseKg": null,
+    "indication": "Infecciones del tracto respiratorio superior e inferior por patógenos atípicos (Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella spp.), faringoamigdalitis, otitis media aguda, infecciones de piel y partes blandas.",
+    "spectrum": "Streptococcus pyogenes, Streptococcus pneumoniae (sensible), Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila, Haemophilus influenzae (actividad limitada), Moraxella catarrhalis. Sin actividad frente a Gramnegativos entéricos.",
+    "contraindications": [
+      "Hipersensibilidad a los macrólidos",
+      "Uso concomitante de ergotamínicos (riesgo de vasoespasmo)",
+      "Prolongación del intervalo QT o hipopotasemia no corregida"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Metabolismo hepático intenso (CYP3A4) — múltiples interacciones medicamentosas.",
+      "Tomar en ayunas para mejor absorción (30 min antes de las comidas).",
+      "Monitorizar QT prolongado en pacientes con cardiopatía.",
+      "No requiere ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / EMA Summary of Product Characteristics / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "5–8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Macrólido de larga duración."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "5–8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "5–8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "5–8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar QT prolongado y hepatotoxicidad."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "5–8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere suplementación post-HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Roxitromicina",
+    "es": "Roxitromicina"
+  },
+  "keywords": [
+    "roxitromicina",
+    "roxitromicina generico",
+    "rulid",
+    "macrolideo de 2ª geracao (longa meia-vida)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

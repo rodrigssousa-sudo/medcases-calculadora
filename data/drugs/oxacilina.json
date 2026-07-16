@@ -1,0 +1,348 @@
+{
+  "id": "oxacilina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Oxacilina",
+    "class": "Penicilina antiestafilocócica resistente à penicilinase",
+    "commercialNames": {
+      "br": [
+        "Staficilin-N",
+        "Oxacilina Blau",
+        "Oxacilina ABL"
+      ],
+      "ar": [
+        "Oxacilina Richet",
+        "Oxacilina Klonal",
+        "Oxacilina genérica"
+      ]
+    },
+    "presentation": [
+      "Frasco-ampola 500 mg",
+      "Frasco-ampola 1 g"
+    ],
+    "dose": {
+      "adulto": "1–2 g EV 4/4h",
+      "infeccaoGraveMSSA": "2 g EV 4/4h",
+      "pediatrica": "2000 mg EV 4/4h"
+    },
+    "doseKg": {
+      "standard": "100–200 mg/kg/dia dividido 4/4h ou 6/6h",
+      "maxDose": "12 g/dia"
+    },
+    "therapeuticRange": "Beta-lactâmico dependente do tempo acima da MIC.",
+    "dilution": "Diluir em SF 0,9% ou SG5% conforme protocolo institucional.",
+    "speed": "Administrar EV lentamente ou infundir em 30–60 minutos conforme protocolo.",
+    "commonAdverseEffects": [
+      "Flebite",
+      "Náuseas",
+      "Diarreia",
+      "Rash cutâneo"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Hepatotoxicidade",
+      "Nefrite intersticial",
+      "Neutropenia em uso prolongado"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Indicada para Staphylococcus aureus sensível à meticilina.",
+      "Não cobre MRSA.",
+      "Monitorar hemograma e função hepática se uso prolongado."
+    ],
+    "ref": "Goodman & Gilman / Sanford Guide / IDSA SSTI and Endocarditis references",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita dose suplementar pós-hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Oxacilina",
+    "class": "Penicilina antiestafilocócica resistente a penicilinasa",
+    "commercialNames": {
+      "br": [
+        "Staficilin-N",
+        "Oxacilina Blau",
+        "Oxacilina ABL"
+      ],
+      "ar": [
+        "Oxacilina Richet",
+        "Oxacilina Klonal",
+        "Oxacilina genérica"
+      ]
+    },
+    "presentation": [
+      "Frasco ampolla 500 mg",
+      "Frasco ampolla 1 g"
+    ],
+    "dose": {
+      "adulto": "1–2 g EV cada 4h",
+      "infeccaoGraveMSSA": "2 g EV cada 4h",
+      "pediatrica": "2000 mg EV cada 4h"
+    },
+    "doseKg": {
+      "standard": "100–200 mg/kg/día dividido cada 4h o 6h",
+      "maxDose": "12 g/día"
+    },
+    "therapeuticRange": "Beta-lactámico dependiente del tiempo sobre la MIC.",
+    "dilution": "Diluir en SF 0,9% o SG5% según protocolo institucional.",
+    "speed": "Administrar EV lentamente o infundir en 30–60 minutos según protocolo.",
+    "commonAdverseEffects": [
+      "Flebitis",
+      "Náuseas",
+      "Diarrea",
+      "Exantema cutáneo"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Hepatotoxicidad",
+      "Nefritis intersticial",
+      "Neutropenia en uso prolongado"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Indicada para Staphylococcus aureus sensible a meticilina.",
+      "No cubre MRSA.",
+      "Monitorar hemograma y función hepática si uso prolongado."
+    ],
+    "ref": "Goodman & Gilman / Sanford Guide / IDSA SSTI and Endocarditis references",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere dosis suplementaria post-hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Oxacilina",
+    "es": "Oxacilina"
+  },
+  "keywords": [
+    "oxacilina",
+    "staficilin-n",
+    "oxacilina blau",
+    "oxacilina abl",
+    "oxacilina richet",
+    "oxacilina klonal",
+    "oxacilina generica",
+    "penicilina antiestafilococica resistente a penicilinase"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

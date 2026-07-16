@@ -1,0 +1,145 @@
+{
+  "id": "propafenona",
+  "category": "cardio",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "dose": "150 mg VO 8/8h — titular até 300 mg 8/8h | LP: 225–425 mg 12/12h",
+    "doseMax": "IR: 900 mg/dia | LP: 850 mg/dia",
+    "dosePillInPocket": null,
+    "clcrEstimado": "90 mL/min",
+    "apresentacao": "Comprimidos 150 mg / 300 mg IR | Cápsulas LP 225 / 325 / 425 mg (Ritmonorm)",
+    "classe": "Antiarrítmico Classe IC + leve betabloqueio + bloqueio Ca²⁺ | t½ 2–10 h (CYP2D6-dependente)",
+    "indicacoes": [
+      "FA paroxística SEM cardiopatia estrutural",
+      "Flutter atrial selecionado (SEM cardiopatia)",
+      "Manutenção ritmo sinusal",
+      "Pill-in-the-pocket supervisionada",
+      "TSV paroxística / AVNRT / AVRT"
+    ],
+    "efeitosAdversos": [
+      "Gosto metálico",
+      "Tontura",
+      "Náuseas",
+      "Constipação",
+      "Visão turva",
+      "Fadiga",
+      "Bradicardia",
+      "⚠️ TV/FV",
+      "⚠️ Flutter 1:1",
+      "⚠️ BAV avançado",
+      "⚠️ QRS extremo",
+      "⚠️ Broncoespasmo",
+      "⚠️ Brugada desmascarado"
+    ],
+    "monitoramento": [
+      "ECG basal (QRS + PR + padrão Brugada)",
+      "FEVE obrigatória",
+      "Avaliação doença coronariana",
+      "ECG após início e titulação",
+      "QRS: suspender se >25% basal",
+      "K⁺ e Mg²⁺",
+      "Revisão interações CYP",
+      "INR se varfarina",
+      "Nível digoxina se associado"
+    ],
+    "refs": [
+      "CAST Trial",
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA/DailyMed label"
+    ],
+    "alerts": [
+      {
+        "tipo": "warning",
+        "msg": "⚠️ FA tratada com propafenona: considerar bloqueador AV concomitante (betabloqueador ou verapamil/diltiazem com cautela) para prevenir flutter atrial com condução 1:1."
+      },
+      {
+        "tipo": "warning",
+        "msg": "⚠️ Propafenona pode DESMASCARAR síndrome de Brugada subclínica. Avaliar ECG basal com atenção; suspender se padrão Brugada aparecer."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: pró-arritmia e ↑ mortalidade em cardiopatia estrutural/pós-IAM. RESTRITO a FA paroxística/TSV sem cardiopatia estrutural."
+      }
+    ]
+  },
+  "es": {
+    "dose": "150 mg VO 8/8h — titular até 300 mg 8/8h | LP: 225–425 mg 12/12h",
+    "doseMax": "IR: 900 mg/día | LP: 850 mg/día",
+    "dosePillInPocket": null,
+    "clcrEstimado": "90 mL/min",
+    "apresentacao": "Comprimidos 150 mg / 300 mg IR | Cápsulas LP 225 / 325 / 425 mg (Rytmonorm)",
+    "classe": "Antiarrítmico Clase IC + leve betabloqueo + bloqueo Ca²⁺ | t½ 2–10 h (CYP2D6-dependiente)",
+    "indicacoes": [
+      "FA paroxística SIN cardiopatía estructural",
+      "Flutter auricular seleccionado (SIN cardiopatía)",
+      "Mantenimiento ritmo sinusal",
+      "Pill-in-the-pocket supervisada",
+      "TSV paroxística / AVNRT / AVRT"
+    ],
+    "efeitosAdversos": [
+      "Sabor metálico",
+      "Mareos",
+      "Náuseas",
+      "Estreñimiento",
+      "Visión borrosa",
+      "Fatiga",
+      "Bradicardia",
+      "⚠️ TV/FV",
+      "⚠️ Flutter 1:1",
+      "⚠️ BAV avanzado",
+      "⚠️ QRS extremo",
+      "⚠️ Broncoespasmo",
+      "⚠️ Brugada desenmascarado"
+    ],
+    "monitoramento": [
+      "ECG basal (QRS + PR + patrón Brugada)",
+      "FEVI obligatoria",
+      "Evaluación enfermedad coronaria",
+      "ECG tras inicio y titulación",
+      "QRS: suspender si >25% basal",
+      "K⁺ y Mg²⁺",
+      "Revisión interacciones CYP",
+      "INR si warfarina",
+      "Nivel digoxina si asociado"
+    ],
+    "refs": [
+      "CAST Trial",
+      "ESC AF Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA/DailyMed label"
+    ],
+    "alerts": [
+      {
+        "tipo": "warning",
+        "msg": "⚠️ FA tratada con propafenona: considerar bloqueador AV concomitante (betabloqueante o verapamilo/diltiazem con precaución) para prevenir flutter auricular con conducción 1:1."
+      },
+      {
+        "tipo": "warning",
+        "msg": "⚠️ Propafenona puede DESENMASCARAR síndrome de Brugada subclínica. Evaluar ECG basal con atención; suspender si aparece patrón Brugada."
+      },
+      {
+        "tipo": "danger",
+        "msg": "📦 BLACK BOX: proarritmia y ↑ mortalidad en cardiopatía estructural/post-IAM. RESTRINGIDO a FA paroxística/TSV sin cardiopatía estructural."
+      }
+    ]
+  },
+  "name": {
+    "pt": "propafenona",
+    "es": "propafenona"
+  },
+  "keywords": [
+    "propafenona"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

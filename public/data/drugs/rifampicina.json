@@ -1,0 +1,340 @@
+{
+  "id": "rifampicina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Rifampicina",
+    "class": "Rifamicina (antituberculoso / anti-estafilocócico adjuvante)",
+    "commercialNames": {
+      "br": [
+        "Rifampicina EMS",
+        "Rifampicina Teuto",
+        "Rifadin"
+      ],
+      "ar": [
+        "Rifadin",
+        "Rifampicina Richet"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 150 mg / 300 mg",
+      "Suspensão oral 20 mg/mL",
+      "Frasco-ampola EV 600 mg"
+    ],
+    "dose": {
+      "adulto": "600 mg VO/EV 24/24h (em jejum)",
+      "pediatrica": "600 mg VO 24/24h"
+    },
+    "doseKg": {
+      "standard": "10–20 mg/kg/dia",
+      "maxDose": "600 mg/dia"
+    },
+    "therapeuticRange": "Concentração dependente. Indutor potente de CYP450 — múltiplas interações.",
+    "dilution": "EV: reconstituir e diluir conforme protocolo institucional.",
+    "speed": "EV: infundir em 30–180 minutos.",
+    "commonAdverseEffects": [
+      "Coloração alaranjada de urina, suor e secreções",
+      "Náuseas",
+      "Dispepsia"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidade grave",
+      "Síndrome gripal (uso intermitente)",
+      "Trombocitopenia",
+      "Anemia hemolítica"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Indutor potente de CYP3A4/CYP2C9 — reduz níveis de anticoagulantes, anticonvulsivantes, antifúngicos e ARVs.",
+      "Nunca usar em monoterapia — risco de resistência rápida."
+    ],
+    "ref": "WHO TB Guidelines / Goodman & Gilman / Sanford Guide 2025",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual para tuberculose e infecções por estafilococos em associação."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar hepatotoxicidade e interações medicamentosas."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita dose suplementar pós-hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Rifampicina",
+    "class": "Rifamicina (antituberculoso / antiestafi locócico adyuvante)",
+    "commercialNames": {
+      "br": [
+        "Rifampicina EMS",
+        "Rifampicina Teuto",
+        "Rifadin"
+      ],
+      "ar": [
+        "Rifadin",
+        "Rifampicina Richet"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 150 mg / 300 mg",
+      "Suspensión oral 20 mg/mL",
+      "Frasco ampolla EV 600 mg"
+    ],
+    "dose": {
+      "adulto": "600 mg VO/EV cada 24h (en ayunas)",
+      "pediatrica": "600 mg VO cada 24h"
+    },
+    "doseKg": {
+      "standard": "10–20 mg/kg/día",
+      "maxDose": "600 mg/día"
+    },
+    "therapeuticRange": "Concentración dependiente. Inductor potente de CYP450 — múltiples interacciones.",
+    "dilution": "EV: reconstituir y diluir según protocolo institucional.",
+    "speed": "EV: infundir en 30–180 minutos.",
+    "commonAdverseEffects": [
+      "Coloración anaranjada de orina, sudor y secreciones",
+      "Náuseas",
+      "Dispepsia"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidad grave",
+      "Síndrome gripal (uso intermitente)",
+      "Trombocitopenia",
+      "Anemia hemolítica"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Inductor potente de CYP3A4/CYP2C9 — reduce niveles de anticoagulantes, anticonvulsivantes, antifúngicos y ARVs.",
+      "Nunca usar en monoterapia — riesgo de resistencia rápida."
+    ],
+    "ref": "WHO TB Guidelines / Goodman & Gilman / Sanford Guide 2025",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual para tuberculosis e infecciones por estafilococos en asociación."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar hepatotoxicidad e interacciones medicamentosas."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere dosis suplementaria post-hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Rifampicina",
+    "es": "Rifampicina"
+  },
+  "keywords": [
+    "rifampicina",
+    "rifampicina ems",
+    "rifampicina teuto",
+    "rifadin",
+    "rifampicina richet",
+    "rifamicina (antituberculoso / anti-estafilococico adjuvante)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

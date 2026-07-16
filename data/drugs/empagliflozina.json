@@ -1,0 +1,436 @@
+{
+  "id": "empagliflozina",
+  "category": "cardio",
+  "icon": "🫀",
+  "color": "rgba(245,158,11,0.13)",
+  "colorTxt": "#92400E",
+  "pt": {
+    "name": "Empagliflozina",
+    "class": "Inibidor SGLT2 (iSGLT2) — benefício em IC, DRC e mortalidade CV em DM2",
+    "commercialNames": {
+      "br": [
+        "Jardiance",
+        "Empagliflozina genérica"
+      ],
+      "ar": [
+        "Jardiance",
+        "Empagliflozina"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 10 mg",
+      "Comprimidos 25 mg"
+    ],
+    "mechanism": "Inibe SGLT2 no túbulo proximal → ↑ glicosúria e natriurese → ↓ congestão, ↓ pressão intraglomerular, ↓ hospitalizações por IC. Benefício CV e renal demonstrado em IC-FEr (EMPEROR-Reduced), IC-FEp (EMPEROR-Preserved), DRC (EMPA-KIDNEY) e DM2 com DCV (EMPA-REG).",
+    "pharmacokinetics": {
+      "onset": "Glicosúria/natriurese nas primeiras horas",
+      "halfLife": "≈ 12 horas",
+      "duration": "Efeito sustentado com uso contínuo; eliminação renal e fecal"
+    },
+    "dose": {
+      "adultoPadrao": "10 mg VO 1x/dia (IC-FEr, IC-FEp, DRC). Benefício cardiorrenal independente do controle glicêmico.",
+      "adultoGrave": "EMPEROR-Reduced: 10 mg/dia ↓ morte CV + hospitaliz. por IC em IC-FEr. EMPEROR-Preserved: 10 mg/dia ↓ piora de IC em IC-FEp. EMPA-REG: 10–25 mg/dia ↓ mortalidade CV em DM2 + DCV.",
+      "pediatricaPadrao": "Não aprovado em pediatria.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "10 mg VO 1x/dia — IC e DRC",
+      "grave": "25 mg/dia — DM2 (maior controle glicêmico se tolerado)",
+      "meningite": null,
+      "doseMaxima": "25 mg/dia (DM2); 10 mg/dia (IC/DRC)"
+    },
+    "therapeuticTargets": [
+      "Redução de hospitalização por IC",
+      "Redução de mortalidade CV em DM2 com DCV (EMPA-REG)",
+      "Proteção renal e redução de progressão de DRC",
+      "Melhora de congestão e sintomas em IC",
+      "Benefício cardiorrenal independente do controle glicêmico"
+    ],
+    "dilution": "Via oral. 1x/dia com ou sem alimentos. Não requer infusão.",
+    "speed": "Dose única diária. Avaliar volemia e PA antes. Considerar reduzir diurético se PAS < 100 mmHg ou sinais de hipovolemia.",
+    "commonAdverseEffects": [
+      "Infecção genital micótica",
+      "Poliúria / nictúria",
+      "Aumento da frequência urinária",
+      "Sede",
+      "Hipotensão postural",
+      "Náuseas leves"
+    ],
+    "dangerousAdverseEffects": [
+      "Cetoacidose diabética euglicêmica (DKA-E)",
+      "Desidratação grave e IRA por hipovolemia",
+      "Hipotensão sintomática",
+      "Urossepse / pielonefrite grave (rara)",
+      "Fasciíte necrosante do períneo — Fournier (rara)",
+      "Hipoglicemia com insulina ou sulfonilureia"
+    ],
+    "risksByPatient": [
+      "🩺 Sick Day Rules: suspender em doença aguda, cirurgia, jejum, vômitos ou baixa ingesta. Reiniciar quando estável e hidratado.",
+      "Idosos: maior risco de hipovolemia, hipotensão e DRC subclínica. Avaliar diuréticos, PA e hidratação."
+    ],
+    "contraindications": {
+      "absolutas": [
+        "Hipersensibilidade à empagliflozina",
+        "Cetoacidose diabética ativa",
+        "DM tipo 1 sem protocolo aprovado",
+        "DRC terminal / diálise (conforme bula local)"
+      ],
+      "relativas": [
+        "Hipovolemia não corrigida",
+        "PAS < 90 mmHg sintomática",
+        "Infecções genitais recorrentes",
+        "Jejum prolongado / dieta cetogênica",
+        "Uso elevado de diuréticos",
+        "História prévia de cetoacidose",
+        "Doença aguda grave"
+      ]
+    },
+    "interactions": [
+      "Insulina / sulfonilureias: maior risco de hipoglicemia.",
+      "Diuréticos de alça: maior risco de hipovolemia, hipotensão e IRA.",
+      "Anti-hipertensivos: hipotensão aditiva.",
+      "AINEs + diuréticos + iSGLT2: tríade de risco para IRA em hipovolemia.",
+      "Lítio: iSGLT2 podem reduzir lítio sérico — monitorar se aplicável."
+    ],
+    "renalAdjustment": "eGFR atual: 90 mL/min/1,73m². IC/DRC: iniciar/continuar com eGFR ≥ 20 conforme indicação e bula. Eficácia glicêmica ↓ com eGFR < 45.",
+    "hepaticAdjustment": "Sem ajuste hepático habitual. Cautela em hepatopatia grave em doença aguda.",
+    "monitoring": {
+      "baseline": [
+        "Creatinina / eGFR",
+        "PA em ortostatismo",
+        "Estado volêmico",
+        "HbA1c se DM2",
+        "Albuminúria se DRC",
+        "Uso de diuréticos"
+      ],
+      "followUp": [
+        "Creatinina/eGFR — 2–4 sem se alto risco",
+        "PA e sintomas ortostáticos",
+        "Infecções genitais / urinárias",
+        "Sinais de cetoacidose",
+        "Peso / congestão",
+        "Hospitalizações por IC"
+      ]
+    },
+    "administration": [
+      "Administrar 1x/dia, com ou sem alimentos.",
+      "Avaliar função renal e estado volêmico antes de iniciar.",
+      "Considerar ajuste de diurético se hipotensão, hipovolemia ou perda ponderal excessiva.",
+      "Suspender temporariamente em cirurgia, jejum prolongado, doença aguda grave, vômitos ou baixa ingesta.",
+      "Não usar para tratar cetoacidose diabética."
+    ],
+    "hemodynamicRules": {
+      "holdIf": {
+        "systolicBPBelow": 90,
+        "severeDehydration": true,
+        "activeKetoacidosis": true,
+        "severeAcuteIllness": true,
+        "perioperativeFasting": true
+      },
+      "warning": "Pode causar depleção volêmica e hipotensão, especialmente em idosos, DRC, baixa ingesta ou uso de diurético de alça."
+    },
+    "electrolyteSafety": {
+      "potassiumRisk": false,
+      "magnesiumRisk": false,
+      "sodiumRisk": true,
+      "monitoring": [
+        "Monitorar função renal e volemia.",
+        "Atenção a hipotensão ortostática em pacientes com diuréticos.",
+        "Em diabéticos, avaliar cetonas se sintomas compatíveis com cetoacidose, mesmo com glicemia moderada."
+      ]
+    },
+    "sickDayRules": [
+      "Suspender temporariamente em vômitos, diarreia, febre alta, baixa ingesta, jejum prolongado, cirurgia ou internação por doença aguda.",
+      "Reiniciar quando estiver clinicamente estável, hidratado e alimentando-se adequadamente.",
+      "Procurar atendimento se náuseas, dor abdominal, vômitos, respiração rápida, sonolência ou cetonas positivas."
+    ],
+    "pregnancy": "Evitar, especialmente no 2º e 3º trimestre, por potencial risco renal fetal. Preferir alternativas com maior segurança.",
+    "lactation": "Evitar por dados limitados e potencial risco renal ao lactente.",
+    "elderly": "Maior risco de hipotensão, hipovolemia, DRC e quedas. Avaliar PA, diuréticos, função renal e hidratação.",
+    "patientEducation": [
+      "Manter boa hidratação.",
+      "Avisar se dor, coceira, secreção ou vermelhidão genital.",
+      "Suspender temporariamente em jejum, cirurgia, vômitos, diarreia ou doença aguda importante conforme orientação.",
+      "Procurar atendimento se náuseas, vômitos, dor abdominal, respiração rápida ou sonolência.",
+      "Pode aumentar a urina e reduzir discretamente a pressão arterial."
+    ],
+    "calculator": {
+      "inputsRequired": [
+        "idade",
+        "peso",
+        "indicacao",
+        "diabetes",
+        "feve",
+        "nyha",
+        "creatinina",
+        "egfr",
+        "clcr",
+        "paSistolica",
+        "usoDiuretico",
+        "doseDiuretico",
+        "hipovolemia",
+        "cetoacidosePrevia",
+        "cetona",
+        "gestacao",
+        "cirurgiaProgramada",
+        "doencaAguda",
+        "usoInsulina",
+        "usoSulfonilureia"
+      ],
+      "output": "Avalia elegibilidade cardiorrenal, dose 10 mg, possibilidade de 25 mg em DM2, limites renais, risco de hipovolemia/cetoacidose e necessidade de suspender temporariamente."
+    },
+    "safetyFlags": {
+      "highAlertInAcuteIllness": true,
+      "heartFailureBenefit": true,
+      "cardiovascularMortalityBenefitInDM2CVD": true,
+      "renalProtection": true,
+      "volumeDepletionRisk": true,
+      "hypotensionRisk": true,
+      "ketoacidosisRisk": true,
+      "euglycemicDKARisk": true,
+      "genitalInfectionRisk": true,
+      "renalFunctionCheckRequired": true,
+      "pregnancyAvoid": true,
+      "hospitalUseOnly": false,
+      "requiresTelemetry": false,
+      "requiresInfusionPump": false,
+      "warning": "🫀 Empagliflozina: benefício robusto em IC-FEr, IC-FEp, DRC e mortalidade CV em DM2+DCV. Suspender em doença aguda/cirurgia. Monitorar eGFR e sinais de hipovolemia."
+    },
+    "auditNotes": {
+      "status": "sglt2_inhibitor_cardiorenal_master_template"
+    },
+    "ref": [
+      "EMPEROR-Reduced Trial (NEJM 2020)",
+      "EMPEROR-Preserved Trial (NEJM 2021)",
+      "EMPA-KIDNEY Trial (NEJM 2022)",
+      "EMPA-REG OUTCOME Trial (NEJM 2015)",
+      "ESC Heart Failure Guidelines 2021",
+      "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+      "KDIGO CKD Guidelines 2022",
+      "FDA/EMA label — Jardiance (Empagliflozin)"
+    ]
+  },
+  "es": {
+    "name": "Empagliflozina",
+    "class": "Inhibidor SGLT2 (iSGLT2) — beneficio en IC, ERC y mortalidad CV en DM2",
+    "commercialNames": {
+      "br": [
+        "Jardiance",
+        "Empagliflozina genérica"
+      ],
+      "ar": [
+        "Jardiance",
+        "Empagliflozina"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 10 mg",
+      "Comprimidos 25 mg"
+    ],
+    "mechanism": "Inhibe SGLT2 en el túbulo proximal → ↑ glucosuria y natriuresis → ↓ congestión, ↓ presión intraglomerular, ↓ hospitalizaciones por IC. Beneficio CV y renal demostrado en IC-FEr (EMPEROR-Reduced), IC-FEp (EMPEROR-Preserved), ERC (EMPA-KIDNEY) y DM2 con ECV (EMPA-REG).",
+    "pharmacokinetics": {
+      "onset": "Glucosuria/natriuresis en las primeras horas",
+      "halfLife": "≈ 12 horas",
+      "duration": "Efecto sostenido con uso continuo; eliminación renal y fecal"
+    },
+    "dose": {
+      "adultoPadrao": "10 mg VO 1 vez/día (IC-FEr, IC-FEp, ERC). Beneficio cardiorrenal independiente del control glucémico.",
+      "adultoGrave": "EMPEROR-Reduced: 10 mg/día ↓ muerte CV + hospitaliz. por IC en IC-FEr. EMPEROR-Preserved: 10 mg/día ↓ empeoramiento de IC en IC-FEp. EMPA-REG: 10–25 mg/día ↓ mortalidad CV en DM2 + ECV.",
+      "pediatricaPadrao": "No aprobado en pediatría.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "10 mg VO 1 vez/día — IC y ERC",
+      "grave": "25 mg/día — DM2 (mayor control glucémico si tolerado)",
+      "meningite": null,
+      "doseMaxima": "25 mg/día (DM2); 10 mg/día (IC/ERC)"
+    },
+    "therapeuticTargets": [
+      "Reducción de hospitalización por IC",
+      "Reducción de mortalidad CV en DM2 con ECV (EMPA-REG)",
+      "Protección renal y reducción de progresión de ERC",
+      "Mejoría de congestión y síntomas en IC",
+      "Beneficio cardiorrenal independiente del control glucémico"
+    ],
+    "dilution": "Vía oral. 1 vez/día con o sin alimentos. No requiere infusión.",
+    "speed": "Dosis única diaria. Evaluar volemia y PA antes. Considerar reducir diurético si PAS < 100 mmHg o signos de hipovolemia.",
+    "commonAdverseEffects": [
+      "Infección genital micótica",
+      "Poliuria / nicturia",
+      "Aumento de frecuencia urinaria",
+      "Sed",
+      "Hipotensión postural",
+      "Náuseas leves"
+    ],
+    "dangerousAdverseEffects": [
+      "Cetoacidosis diabética euglucémica (DKA-E)",
+      "Deshidratación grave e IRA por hipovolemia",
+      "Hipotensión sintomática",
+      "Urosepsis / pielonefritis grave (rara)",
+      "Fascitis necrotizante del periné — Fournier (rara)",
+      "Hipoglucemia con insulina o sulfonilurea"
+    ],
+    "risksByPatient": [
+      "🩺 Sick Day Rules: suspender en enfermedad aguda, cirugía, ayuno, vómitos o baja ingesta. Reiniciar cuando estable e hidratado.",
+      "Ancianos: mayor riesgo de hipovolemia, hipotensión y ERC subclínica. Evaluar diuréticos, PA e hidratación."
+    ],
+    "contraindications": {
+      "absolutas": [
+        "Hipersensibilidad a empagliflozina",
+        "Cetoacidosis diabética activa",
+        "DM tipo 1 sin protocolo aprobado",
+        "ERC terminal / diálisis (según prospecto local)"
+      ],
+      "relativas": [
+        "Hipovolemia no corregida",
+        "PAS < 90 mmHg sintomática",
+        "Infecciones genitales recurrentes",
+        "Ayuno prolongado / dieta cetogénica",
+        "Uso elevado de diuréticos",
+        "Historia previa de cetoacidosis",
+        "Enfermedad aguda grave"
+      ]
+    },
+    "interactions": [
+      "Insulina / sulfonilureas: mayor riesgo de hipoglucemia.",
+      "Diuréticos de asa: mayor riesgo de hipovolemia, hipotensión e IRA.",
+      "Antihipertensivos: hipotensión aditiva.",
+      "AINEs + diuréticos + iSGLT2: tríada de riesgo para IRA en hipovolemia.",
+      "Litio: iSGLT2 pueden reducir litio sérico — monitorizar si aplica."
+    ],
+    "renalAdjustment": "eGFR actual: 90 mL/min/1,73m². IC/ERC: iniciar/continuar con eGFR ≥ 20 según indicación y prospecto. Eficacia glucémica ↓ con eGFR < 45.",
+    "hepaticAdjustment": "Sin ajuste hepático habitual. Precaución en hepatopatía grave en enfermedad aguda.",
+    "monitoring": {
+      "baseline": [
+        "Creatinina / eGFR",
+        "PA en ortostatismo",
+        "Estado voléimico",
+        "HbA1c si DM2",
+        "Albuminuria si ERC",
+        "Uso de diuréticos"
+      ],
+      "followUp": [
+        "Creatinina/eGFR — 2–4 sem si alto riesgo",
+        "PA y síntomas ortostáticos",
+        "Infecciones genitales / urinarias",
+        "Signos de cetoacidosis",
+        "Peso / congestión",
+        "Hospitalizaciones por IC"
+      ]
+    },
+    "administration": [
+      "Administrar 1 vez/día, con o sin alimentos.",
+      "Evaluar función renal y estado volémico antes de iniciar.",
+      "Considerar ajuste de diurético si hipotensión, hipovolemia o pérdida ponderal excesiva.",
+      "Suspender temporalmente en cirugía, ayuno prolongado, enfermedad aguda grave, vómitos o baja ingesta.",
+      "No usar para tratar cetoacidosis diabética."
+    ],
+    "hemodynamicRules": {
+      "holdIf": {
+        "systolicBPBelow": 90,
+        "severeDehydration": true,
+        "activeKetoacidosis": true,
+        "severeAcuteIllness": true,
+        "perioperativeFasting": true
+      },
+      "warning": "Puede causar depleción de volumen e hipotensión, especialmente en ancianos, ERC, baja ingesta o uso de diurético de asa."
+    },
+    "electrolyteSafety": {
+      "potassiumRisk": false,
+      "magnesiumRisk": false,
+      "sodiumRisk": true,
+      "monitoring": [
+        "Monitorizar función renal y volemia.",
+        "Atención a hipotensión ortostática en pacientes con diuréticos.",
+        "En diabéticos, evaluar cetonas si hay síntomas compatibles con cetoacidosis, incluso con glucemia moderada."
+      ]
+    },
+    "sickDayRules": [
+      "Suspender temporalmente en vómitos, diarrea, fiebre alta, baja ingesta, ayuno prolongado, cirugía o internación por enfermedad aguda.",
+      "Reiniciar cuando esté clínicamente estable, hidratado y alimentándose adecuadamente.",
+      "Consultar si hay náuseas, dolor abdominal, vómitos, respiración rápida, somnolencia o cetonas positivas."
+    ],
+    "pregnancy": "Evitar, especialmente en 2º y 3º trimestre, por potencial riesgo renal fetal. Preferir alternativas con mayor seguridad.",
+    "lactation": "Evitar por datos limitados y potencial riesgo renal para el lactante.",
+    "elderly": "Mayor riesgo de hipotensión, hipovolemia, ERC y caídas. Evaluar PA, diuréticos, función renal e hidratación.",
+    "patientEducation": [
+      "Mantener buena hidratación.",
+      "Avisar si dolor, picazón, secreción o enrojecimiento genital.",
+      "Suspender temporalmente en ayuno, cirugía, vómitos, diarrea o enfermedad aguda importante según indicación.",
+      "Consultar si náuseas, vómitos, dolor abdominal, respiración rápida o somnolencia.",
+      "Puede aumentar la orina y reducir discretamente la presión arterial."
+    ],
+    "calculator": {
+      "inputsRequired": [
+        "idade",
+        "peso",
+        "indicacao",
+        "diabetes",
+        "feve",
+        "nyha",
+        "creatinina",
+        "egfr",
+        "clcr",
+        "paSistolica",
+        "usoDiuretico",
+        "doseDiuretico",
+        "hipovolemia",
+        "cetoacidosePrevia",
+        "cetona",
+        "gestacao",
+        "cirurgiaProgramada",
+        "doencaAguda",
+        "usoInsulina",
+        "usoSulfonilureia"
+      ],
+      "output": "Evalúa elegibilidad cardiorrenal, dosis 10 mg, posibilidad de 25 mg en DM2, límites renales, riesgo de hipovolemia/cetoacidosis y necesidad de suspensión temporal."
+    },
+    "safetyFlags": {
+      "highAlertInAcuteIllness": true,
+      "heartFailureBenefit": true,
+      "cardiovascularMortalityBenefitInDM2CVD": true,
+      "renalProtection": true,
+      "volumeDepletionRisk": true,
+      "hypotensionRisk": true,
+      "ketoacidosisRisk": true,
+      "euglycemicDKARisk": true,
+      "genitalInfectionRisk": true,
+      "renalFunctionCheckRequired": true,
+      "pregnancyAvoid": true,
+      "hospitalUseOnly": false,
+      "requiresTelemetry": false,
+      "requiresInfusionPump": false,
+      "warning": "🫀 Empagliflozina: beneficio robusto en IC-FEr, IC-FEp, ERC y mortalidad CV en DM2+ECV. Suspender en enfermedad aguda/cirugía. Monitorizar eGFR y signos de hipovolemia."
+    },
+    "auditNotes": {
+      "status": "sglt2_inhibitor_cardiorenal_master_template"
+    },
+    "ref": [
+      "EMPEROR-Reduced Trial (NEJM 2020)",
+      "EMPEROR-Preserved Trial (NEJM 2021)",
+      "EMPA-KIDNEY Trial (NEJM 2022)",
+      "EMPA-REG OUTCOME Trial (NEJM 2015)",
+      "ESC Heart Failure Guidelines 2021",
+      "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+      "KDIGO CKD Guidelines 2022",
+      "FDA/EMA label — Jardiance (Empagliflozin)"
+    ]
+  },
+  "name": {
+    "pt": "Empagliflozina",
+    "es": "Empagliflozina"
+  },
+  "keywords": [
+    "empagliflozina",
+    "jardiance",
+    "empagliflozina generica",
+    "inibidor sglt2 (isglt2) — beneficio em ic, drc e mortalidade cv em dm2"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

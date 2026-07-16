@@ -1,0 +1,261 @@
+{
+  "id": "rifapentina",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(234,179,8,0.12)",
+  "colorTxt": "#92400E",
+  "pt": {
+    "name": "Rifapentina",
+    "class": "Rifamicina de 3ª geração (longa meia-vida — esquemas curtos de TB)",
+    "commercialNames": {
+      "br": [
+        "Priftin (acesso limitado no Brasil)",
+        "Rifapentina Genérico"
+      ],
+      "ar": [
+        "Priftin"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 150 mg"
+    ],
+    "dose": {
+      "adultoVO": "600–900 mg VO 1×/semana (esquema 3HP: rifapentina + isoniazida) OU 600 mg 2×/semana nas fases de manutenção da TB"
+    },
+    "doseKg": null,
+    "indication": "Tuberculose latente (ILTB) em adultos e crianças ≥ 2 anos — esquema 3HP (rifapentina + isoniazida 1×/semana × 12 semanas). Tuberculose pulmonar ativa — fase de manutenção do tratamento (esquemas rifapentina-based).",
+    "spectrum": "Mycobacterium tuberculosis (sensível). Meia-vida muito longa (~13–14h) permite dosagem semanal. Indutor potente de CYP3A4, CYP2C8 e CYP2C9.",
+    "contraindications": [
+      "Hipersensibilidade às rifamicinas",
+      "Gestação (1º trimestre)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Indutor potente de CYP3A4 — múltiplas interações medicamentosas (anticonvulsivantes, ARV, anticoncepcionais).",
+      "Esquema 3HP (12 doses semanais): eficaz e bem tolerado para ILTB — alternativa à isoniazida 6–9 meses.",
+      "Coloração alaranjada de urina, suor, fezes e lágrimas.",
+      "Não necessita ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / CDC TB Guidelines / WHO TB Treatment Guidelines 2022 / Sterling et al. NEJM 2011",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "600–900 mg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Utilizada em esquemas abreviados para tuberculose."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "600–900 mg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "600–900 mg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "600–900 mg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar hepatotoxicidade e interações medicamentosas."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "600–900 mg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não requer suplementação pós-HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Rifapentina",
+    "class": "Rifamicina de 3.ª generación (larga semivida — esquemas cortos de TB)",
+    "commercialNames": {
+      "br": [
+        "Priftin (acesso limitado no Brasil)",
+        "Rifapentina Genérico"
+      ],
+      "ar": [
+        "Priftin"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 150 mg"
+    ],
+    "dose": {
+      "adultoVO": "600–900 mg VO 1×/semana (esquema 3HP: rifapentina + isoniazida) O 600 mg 2×/semana en fases de mantenimiento de TB"
+    },
+    "doseKg": null,
+    "indication": "Tuberculosis latente (ILTB) en adultos y niños ≥ 2 años — esquema 3HP (rifapentina + isoniazida 1×/semana × 12 semanas). Tuberculosis pulmonar activa — fase de mantenimiento del tratamiento (esquemas basados en rifapentina).",
+    "spectrum": "Mycobacterium tuberculosis (sensible). Semivida muy larga (~13–14h) permite dosificación semanal. Inductor potente de CYP3A4, CYP2C8 y CYP2C9.",
+    "contraindications": [
+      "Hipersensibilidad a las rifamicinas",
+      "Gestación (1.er trimestre)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Inductor potente de CYP3A4 — múltiples interacciones medicamentosas (anticonvulsivantes, ARV, anticonceptivos).",
+      "Esquema 3HP (12 dosis semanales): eficaz y bien tolerado para ILTB — alternativa a isoniazida 6–9 meses.",
+      "Coloración naranja de orina, sudor, heces y lágrimas.",
+      "No requiere ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / CDC TB Guidelines / WHO TB Treatment Guidelines 2022 / Sterling et al. NEJM 2011",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "600–900 mg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Utilizada en esquemas abreviados para tuberculosis."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "600–900 mg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "600–900 mg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "600–900 mg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar hepatotoxicidad e interacciones medicamentosas."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "600–900 mg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "Conforme esquema",
+          "doseMaxima": "900 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere suplementación post-HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Rifapentina",
+    "es": "Rifapentina"
+  },
+  "keywords": [
+    "rifapentina",
+    "priftin (acesso limitado no brasil)",
+    "rifapentina generico",
+    "priftin",
+    "rifamicina de 3ª geracao (longa meia-vida — esquemas curtos de tb)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

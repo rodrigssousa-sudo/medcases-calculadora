@@ -1,0 +1,299 @@
+{
+  "id": "ramipril",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(59,130,246,0.13)",
+  "colorTxt": "#1D4ED8",
+  "pt": {
+    "name": "Ramipril",
+    "class": "Inibidor da Enzima Conversora de Angiotensina (IECA) — Pró-fármaco (ramiprilat ativo)",
+    "commercialNames": {
+      "br": [
+        "Triatec",
+        "Naprix",
+        "Ramipril Genérico"
+      ],
+      "ar": [
+        "Triatec",
+        "Ramipril Genérico"
+      ]
+    },
+    "presentation": [
+      "Cápsulas/Comprimidos: 1,25 mg, 2,5 mg, 5 mg, 10 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 2,5 mg VO 1x/dia inicial. Manutenção: 5–10 mg/dia 1x/dia. Máximo: 10 mg/dia.",
+      "adultoGrave": "IC pós-IAM: 2,5 mg 2x/dia inicial; titular para 5 mg 2x/dia. Alto risco CV (HOPE): 10 mg 1x/dia ou 5 mg 2x/dia.",
+      "pediatricaPadrao": "Uso pediátrico não aprovado formalmente. Dados clínicos limitados.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adultos: 2,5–10 mg/dia (dose fixa — sem cálculo por kg aprovado)",
+      "grave": "IC/Pós-IAM: 2,5–5 mg 2x/dia | Alto risco CV: 10 mg/dia",
+      "meningite": null,
+      "doseMaxima": "Adultos: 10 mg/dia"
+    },
+    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. IC/Pós-IAM: dose-alvo 5 mg 2x/dia. HOPE: 10 mg/dia reduziu eventos CV em 22%. Monitorar por PA, creatinina e K⁺.",
+    "dilution": "Apenas formulação oral. Ramipril é pró-fármaco convertido em ramiprilat (ativo) no fígado e na parede intestinal.",
+    "speed": "VO: tomar 1x/dia (ou 2x/dia em IC), com ou sem alimento.",
+    "commonAdverseEffects": [
+      "Tosse seca (efeito de classe IECA)",
+      "Tontura / hipotensão",
+      "Hipercalemia",
+      "Elevação de creatinina",
+      "Fadiga"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema (histórico de IECA contraindica uso permanente)",
+      "Insuficiência Renal Aguda",
+      "Hipercalemia grave",
+      "Hipotensão grave — especialmente na 1ª dose em hipovolêmicos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação.",
+      "Ramipril é pró-fármaco — cautela em insuficiência hepática significativa (ativação hepática prejudicada).",
+      "Evidência do estudo HOPE: 10 mg/dia reduziu IAM, AVC e morte CV em 22% em pacientes de alto risco.",
+      "Sacubitril/Valsartana: washout de 36h obrigatório antes de iniciar ramipril."
+    ],
+    "ref": "EMA Triatec (ramipril) SmPC 2024 · HOPE Trial (NEJM 2000) · ESC Hypertension Guidelines 2023 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · Lexicomp 2026",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não requer ajuste renal para ClCr ≥ 30 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "2,5–10 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose padrão. HTA: 2,5–10 mg/dia. IC pós-IAM: 2,5 mg 2x/dia → 5 mg 2x/dia. HOPE: 10 mg/dia."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "1,25–5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR leve-moderada: não requer ajuste formal, mas preferir doses menores. Monitorar K⁺ e creatinina."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "1,25 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar com 1,25 mg/dia. Dose máxima 5 mg/dia. Risco elevado de acúmulo de ramiprilat e hipercalemia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "1,25 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2,5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muito grave: dose máxima 2,5 mg/dia. Monitoração intensiva obrigatória. Considerar alternativas se anúria ou K⁺ > 5,5 mEq/L."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "1,25 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2,5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Ramiprilat não é removido significativamente por hemodiálise. Manter dose reduzida (máx. 2,5 mg/dia). Sem dose suplementar pós-HD necessária."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. Pró-fármaco: cautela em hepatopatia. Ajuste renal em ClCr < 30 (máx. 5 mg/dia). Monitorar K⁺ e creatinina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "EMA Triatec (ramipril) SmPC 2024",
+        "HOPE Trial — Yusuf S et al. (NEJM 2000)",
+        "AIRE Trial — Hall AS et al. (Lancet 1993)",
+        "ESC Hypertension Guidelines 2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "Pró-fármaco (ramiprilat ativo, conversão hepática). Cautela em hepatopatia grave. Evidência HOPE para prevenção CV em alto risco. Ajuste renal em ClCr < 30 (máx. 5 mg/dia). Não dialisável."
+    }
+  },
+  "es": {
+    "name": "Ramipril",
+    "class": "Inhibidor de la Enzima Convertidora de Angiotensina (IECA) — Profármaco (ramiprilat activo)",
+    "commercialNames": {
+      "br": [
+        "Triatec",
+        "Naprix",
+        "Ramipril Genérico"
+      ],
+      "ar": [
+        "Triatec",
+        "Ramipril Genérico"
+      ]
+    },
+    "presentation": [
+      "Cápsulas/Comprimidos: 1,25 mg, 2,5 mg, 5 mg, 10 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 2,5 mg VO 1 vez/día inicial. Mantenimiento: 5–10 mg/día 1 vez/día. Máximo: 10 mg/día.",
+      "adultoGrave": "IC post-IAM: 2,5 mg 2 veces/día inicial; titular hasta 5 mg 2 veces/día. Alto riesgo CV (HOPE): 10 mg 1 vez/día o 5 mg 2 veces/día.",
+      "pediatricaPadrao": "Uso pediátrico no aprobado formalmente. Datos clínicos limitados.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adultos: 2,5–10 mg/día (dosis fija — sin cálculo por kg aprobado)",
+      "grave": "IC/Post-IAM: 2,5–5 mg 2 veces/día | Alto riesgo CV: 10 mg/día",
+      "meningite": null,
+      "doseMaxima": "Adultos: 10 mg/día"
+    },
+    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. IC/Post-IAM: dosis objetivo 5 mg 2 veces/día. HOPE: 10 mg/día redujo eventos CV en 22%. Monitorizar por PA, creatinina y K⁺.",
+    "dilution": "Solo formulación oral. Ramipril es profármaco convertido en ramiprilat (activo) en el hígado y en la pared intestinal.",
+    "speed": "VO: tomar 1 vez/día (o 2 veces/día en IC), con o sin alimento.",
+    "commonAdverseEffects": [
+      "Tos seca (efecto de clase IECA)",
+      "Mareos / hipotensión",
+      "Hiperpotasemia",
+      "Elevación de creatinina",
+      "Fatiga"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema (historial de IECA contraindica uso permanente)",
+      "Insuficiencia Renal Aguda",
+      "Hiperpotasemia grave",
+      "Hipotensión grave — especialmente en 1ª dosis en hipovolémicos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación.",
+      "Ramipril es profármaco — precaución en insuficiencia hepática significativa (activación hepática deteriorada).",
+      "Evidencia del estudio HOPE: 10 mg/día redujo IAM, ACV y muerte CV en 22% en pacientes de alto riesgo.",
+      "Sacubitril/Valsartán: washout de 36h obligatorio antes de iniciar ramipril."
+    ],
+    "ref": "EMA Triatec (ramipril) SmPC 2024 · HOPE Trial (NEJM 2000) · ESC Hypertension Guidelines 2023 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · Lexicomp 2026",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal para ClCr ≥ 30 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "2,5–10 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis estándar. HTA: 2,5–10 mg/día. IC post-IAM: 2,5 mg 2 veces/día → 5 mg 2 veces/día. HOPE: 10 mg/día."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "1,25–5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR leve-moderada: sin ajuste formal necesario, pero preferir dosis menores. Monitorizar K⁺ y creatinina."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "1,25 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar con 1,25 mg/día. Dosis máxima 5 mg/día. Riesgo elevado de acumulación de ramiprilat e hiperpotasemia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "1,25 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2,5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muy grave: dosis máxima 2,5 mg/día. Monitorización intensiva obligatoria. Considerar alternativas si anuria o K⁺ > 5,5 mEq/L."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "1,25 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2,5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Ramiprilat no es removido significativamente por hemodiálisis. Mantener dosis reducida (máx. 2,5 mg/día). Sin dosis suplementaria post-HD necesaria."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. Profármaco: precaución en hepatopatía. Ajuste renal en ClCr < 30 (máx. 5 mg/día). Monitorizar K⁺ y creatinina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "EMA Triatec (ramipril) SmPC 2024",
+        "HOPE Trial — Yusuf S et al. (NEJM 2000)",
+        "AIRE Trial — Hall AS et al. (Lancet 1993)",
+        "ESC Hypertension Guidelines 2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "Profármaco (ramiprilat activo, conversión hepática). Precaución en hepatopatía grave. Evidencia HOPE para prevención CV en alto riesgo. Ajuste renal en ClCr < 30 (máx. 5 mg/día). No dializable."
+    }
+  },
+  "name": {
+    "pt": "Ramipril",
+    "es": "Ramipril"
+  },
+  "keywords": [
+    "ramipril",
+    "triatec",
+    "naprix",
+    "ramipril generico",
+    "inibidor da enzima conversora de angiotensina (ieca) — pro-farmaco (ramiprilat ativo)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

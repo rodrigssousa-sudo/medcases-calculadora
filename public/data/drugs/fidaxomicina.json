@@ -1,0 +1,235 @@
+{
+  "id": "fidaxomicina",
+  "category": "atb",
+  "icon": "🦠",
+  "color": "rgba(168,85,247,0.15)",
+  "colorTxt": "#A855F7",
+  "pt": {
+    "name": "Fidaxomicina",
+    "class": "Macrocíclico (antibiótico oral não absorvível)",
+    "commercialNames": {
+      "br": [
+        "Dificid"
+      ],
+      "ar": [
+        "Dificid"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 200 mg"
+    ],
+    "dose": {
+      "adultoVO": "200 mg VO 12/12h por 10 dias (ICD) ou 200 mg VO 12/12h × 5d, depois 200 mg em dias alternados × 20d (recorrência)"
+    },
+    "doseKg": {
+      "standard": "Dose fixa 200 mg 12/12h (não baseado em peso)"
+    },
+    "mechanism": "Inibe a RNA polimerase bacteriana por mecanismo diferente da rifampicina, sem resistência cruzada. Atividade intraluminal predominante — níveis sistêmicos mínimos.",
+    "onset": "Absorção sistêmica mínima (<1%). Concentrações intraluminais elevadas.",
+    "halfLife": "Meia-vida plasmática ~11,7 h (metabólito ativo OP-118). Eliminação fecal predominante.",
+    "therapeuticRange": "Atividade intraluminal. Sem necessidade de monitorização sérica. Superior à vancomicina oral na prevenção de recorrência de ICD.",
+    "dilution": "Uso oral exclusivo — não disponível via EV.",
+    "speed": "Não aplicável (uso oral).",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Vômitos",
+      "Dor abdominal",
+      "Hemorragia gastrointestinal (raro)"
+    ],
+    "dangerousAdverseEffects": [
+      "Reação de hipersensibilidade (rara)",
+      "Megacólon tóxico (no contexto da própria ICD)"
+    ],
+    "contraindications": [
+      "Hipersensibilidade à fidaxomicina"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Indicação principal: infecção por Clostridioides difficile (ICD) — superior à vancomicina oral na prevenção de recorrência.",
+      "Não requer ajuste renal — absorção sistêmica < 1%.",
+      "Custo elevado — reservar para pacientes com alto risco de recorrência de ICD."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Dificid / IDSA C. difficile Guidelines 2021",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal devido à absorção sistêmica mínima.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Indicada para infecção por Clostridioides difficile."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sem ajuste necessário mesmo em insuficiência renal avançada."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não requer dose suplementar pós-hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Fidaxomicina",
+    "class": "Macrociclico (antibiótico oral no absorbible)",
+    "commercialNames": {
+      "br": [
+        "Dificid"
+      ],
+      "ar": [
+        "Dificid"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 200 mg"
+    ],
+    "dose": {
+      "adultoVO": "200 mg VO cada 12h por 10 días (ICD) o 200 mg VO cada 12h × 5d, luego 200 mg en días alternos × 20d (recurrencia)"
+    },
+    "doseKg": {
+      "standard": "Dosis fija 200 mg cada 12h (no basado en peso)"
+    },
+    "mechanism": "Inhibe la RNA polimerasa bacteriana por mecanismo diferente a la rifampicina, sin resistencia cruzada. Actividad intraluminal predominante — niveles sistémicos mínimos.",
+    "onset": "Absorción sistémica mínima (<1%). Concentraciones intraluminales elevadas.",
+    "halfLife": "Semivida plasmática ~11,7 h (metabolito activo OP-118). Eliminación fecal predominante.",
+    "therapeuticRange": "Actividad intraluminal. Sin necesidad de monitorización sérica. Superior a vancomicina oral en prevención de recurrencia de ICD.",
+    "dilution": "Uso oral exclusivo — no disponible vía EV.",
+    "speed": "No aplicable (uso oral).",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Vómitos",
+      "Dolor abdominal",
+      "Hemorragia gastrointestinal (raro)"
+    ],
+    "dangerousAdverseEffects": [
+      "Reacción de hipersensibilidad (rara)",
+      "Megacolon tóxico (en el contexto de la propia ICD)"
+    ],
+    "contraindications": [
+      "Hipersensibilidad a fidaxomicina"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Indicación principal: infección por Clostridioides difficile (ICD) — superior a vancomicina oral en prevención de recurrencia.",
+      "No requiere ajuste renal — absorción sistémica < 1%.",
+      "Costo elevado — reservar para pacientes con alto riesgo de recurrencia de ICD."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Dificid / IDSA C. difficile Guidelines 2021",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal debido a la absorción sistémica mínima.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Indicada para infección por Clostridioides difficile."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sin ajuste necesario incluso en insuficiencia renal avanzada."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No requiere dosis suplementaria post-hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Fidaxomicina",
+    "es": "Fidaxomicina"
+  },
+  "keywords": [
+    "fidaxomicina",
+    "dificid",
+    "macrociclico (antibiotico oral nao absorvivel)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

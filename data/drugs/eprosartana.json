@@ -1,0 +1,302 @@
+{
+  "id": "eprosartana",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.13)",
+  "colorTxt": "#064E3B",
+  "pt": {
+    "name": "Eprosartana Mesilato",
+    "class": "Bloqueador do Receptor de Angiotensina II (BRA/ARB)",
+    "commercialNames": {
+      "br": [
+        "Teveten",
+        "Eprosartana genérica"
+      ],
+      "ar": [
+        "Teveten",
+        "Eprosartán genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 400 mg, 600 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 600 mg VO 1x/dia inicial. Manutenção: 400–800 mg/dia em 1–2 tomadas. Máximo: 800 mg/dia.",
+      "adultoGrave": "Alternativa ao IECA em intolerância (tosse): 600 mg 1x/dia → titular até 800 mg/dia conforme resposta pressórica.",
+      "pediatricaPadrao": "Uso pediátrico não aprovado formalmente. Dados clínicos muito limitados.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adultos: 400–800 mg/dia (dose fixa — sem cálculo por kg aprovado)",
+      "grave": "Manutenção: 600–800 mg/dia conforme resposta",
+      "meningite": null,
+      "doseMaxima": "Adultos: 800 mg/dia"
+    },
+    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. Monitorar por PA, creatinina e K⁺ — sem nível sérico-alvo. Evidência limitada a HTA (sem dados robustos em IC ou nefroproteção).",
+    "dilution": "Apenas formulação oral disponível. Sem apresentação EV.",
+    "speed": "VO: tomar 1x/dia (ou dividido em 2 tomadas) no mesmo horário, com ou sem alimento.",
+    "commonAdverseEffects": [
+      "Tontura / hipotensão",
+      "Fadiga",
+      "Hipercalemia",
+      "Elevação de creatinina",
+      "Cefaleia"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema (raro)",
+      "Hipercalemia grave (K⁺ > 6 mEq/L)",
+      "Insuficiência Renal Aguda",
+      "Hipotensão grave"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Contexto clínico: eprosartana é o BRA com menor evidência clínica robusta — sem estudos de desfecho hard em IC, pós-IAM ou nefroproteção. Indicado apenas em HTA como alternativa ao IECA.",
+      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação. Aumento ≤ 30% de creatinina é esperado.",
+      "Evitar dupla inibição do SRAA (BRA + IECA): sem benefício adicional e risco aumentado de hipotensão, hipercalemia e lesão renal.",
+      "AINEs reduzem efeito anti-hipertensivo e aumentam risco de lesão renal aguda."
+    ],
+    "ref": "FDA Teveten (eprosartan) label 2022 · ESC Hypertension Guidelines 2023 · AHA/ACC Hypertension Guidance 2022 · Lexicomp 2026 · Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Ajuste renal formal não necessário para ClCr ≥ 30 mL/min. Monitorar K⁺ e creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose padrão. HTA: 600 mg 1x/dia → titular até 800 mg/dia ou dividir em 2 tomadas."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "400–600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR moderada: sem ajuste obrigatório. Preferir 400–600 mg/dia. Monitorar K⁺ e creatinina."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar com 400 mg/dia. Monitoramento intensivo de K⁺ e creatinina obrigatório."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muito grave: manter 400 mg/dia com vigilância rigorosa de K⁺. Avaliar risco-benefício continuamente."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Eprosartana não é removida significativamente por hemodiálise. Manter dose reduzida sem suplementação pós-HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "angioedemaRisk": false,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. BRA com menor evidência clínica da classe — indicado apenas em HTA. Monitorar K⁺ e creatinina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Teveten (eprosartan mesylate) label 2022",
+        "ESC Hypertension Guidelines 2023",
+        "AHA/ACC Hypertension Guidance 2022",
+        "UpToDate 2025",
+        "Lexicomp Online 2026",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "BRA com menor base de evidências robustas da classe. Uso exclusivo em HTA como alternativa ao IECA. Sem estudos de desfecho hard em IC ou nefroproteção. Eliminação predominantemente biliar/fecal — sem ajuste renal formal."
+    }
+  },
+  "es": {
+    "name": "Eprosartán Mesilato",
+    "class": "Bloqueante del Receptor de Angiotensina II (BRA/ARA-II)",
+    "commercialNames": {
+      "br": [
+        "Teveten",
+        "Eprosartana genérica"
+      ],
+      "ar": [
+        "Teveten",
+        "Eprosartán genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 400 mg, 600 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 600 mg VO 1 vez/día inicial. Mantenimiento: 400–800 mg/día en 1–2 tomas. Máximo: 800 mg/día.",
+      "adultoGrave": "Alternativa al IECA en intolerancia (tos): 600 mg 1 vez/día → titular hasta 800 mg/día según respuesta tensional.",
+      "pediatricaPadrao": "Uso pediátrico no aprobado formalmente. Datos clínicos muy limitados.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adultos: 400–800 mg/día (dosis fija — sin cálculo por kg aprobado)",
+      "grave": "Mantenimiento: 600–800 mg/día según respuesta",
+      "meningite": null,
+      "doseMaxima": "Adultos: 800 mg/día"
+    },
+    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. Monitorizar por PA, creatinina y K⁺ — sin nivel sérico objetivo. Evidencia limitada a HTA (sin datos robustos en IC o nefroprotección).",
+    "dilution": "Solo formulación oral disponible. Sin presentación EV.",
+    "speed": "VO: tomar 1 vez/día (o dividido en 2 tomas) a la misma hora, con o sin alimento.",
+    "commonAdverseEffects": [
+      "Mareos / hipotensión",
+      "Fatiga",
+      "Hiperpotasemia",
+      "Elevación de creatinina",
+      "Cefalea"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema (raro)",
+      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
+      "Insuficiencia Renal Aguda",
+      "Hipotensión grave"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Contexto clínico: eprosartán es el ARA-II con menor evidencia clínica robusta — sin estudios de desenlace hard en IC, post-IAM o nefroprotección. Indicado solo en HTA como alternativa al IECA.",
+      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación. Aumento ≤ 30% de creatinina es esperado.",
+      "Evitar doble inhibición del SRAA (ARA-II + IECA): sin beneficio adicional y riesgo aumentado de hipotensión, hiperpotasemia y lesión renal.",
+      "AINEs reducen efecto antihipertensivo y aumentan riesgo de lesión renal aguda."
+    ],
+    "ref": "FDA Teveten (eprosartan) label 2022 · ESC Hypertension Guidelines 2023 · AHA/ACC Hypertension Guidance 2022 · Lexicomp 2026 · Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Ajuste renal formal no necesario para ClCr ≥ 30 mL/min. Monitorizar K⁺ y creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis estándar. HTA: 600 mg 1 vez/día → titular hasta 800 mg/día o dividir en 2 tomas."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "400–600 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR moderada: sin ajuste obligatorio. Preferir 400–600 mg/día. Monitorizar K⁺ y creatinina."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar con 400 mg/día. Monitorización intensiva de K⁺ y creatinina obligatoria."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muy grave: mantener 400 mg/día con vigilancia rigurosa de K⁺. Evaluar riesgo-beneficio continuamente."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Eprosartán no es removido significativamente por hemodiálisis. Mantener dosis reducida sin suplementación post-HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "angioedemaRisk": false,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. ARA-II con menor evidencia clínica de la clase — indicado solo en HTA. Monitorizar K⁺ y creatinina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Teveten (eprosartan mesylate) label 2022",
+        "ESC Hypertension Guidelines 2023",
+        "AHA/ACC Hypertension Guidance 2022",
+        "UpToDate 2025",
+        "Lexicomp Online 2026",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "ARA-II con menor base de evidencias robustas de la clase. Uso exclusivo en HTA como alternativa al IECA. Sin estudios de desenlace hard en IC o nefroprotección. Eliminación predominantemente biliar/fecal — sin ajuste renal formal."
+    }
+  },
+  "name": {
+    "pt": "Eprosartana",
+    "es": "Eprosartán"
+  },
+  "keywords": [
+    "eprosartana",
+    "eprosartan",
+    "teveten",
+    "eprosartana generica",
+    "eprosartan generico",
+    "bloqueador do receptor de angiotensina ii (bra/arb)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

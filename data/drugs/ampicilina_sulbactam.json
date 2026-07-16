@@ -1,0 +1,334 @@
+{
+  "id": "ampicilina_sulbactam",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Ampicilina + Sulbactam",
+    "class": "Aminopenicilina + inibidor de beta-lactamase",
+    "commercialNames": {
+      "br": [
+        "Unasyn",
+        "Ampicilina + Sulbactam Blau",
+        "Ampicilina + Sulbactam Teuto"
+      ],
+      "ar": [
+        "Unasyn",
+        "Ampicilina + Sulbactam Richet",
+        "Ampicilina + Sulbactam Klonal"
+      ]
+    },
+    "presentation": [
+      "Frasco-ampola 1,5 g (1 g amp + 0,5 g sulbactam)",
+      "Frasco-ampola 3 g (2 g amp + 1 g sulbactam)"
+    ],
+    "dose": {
+      "adulto": "3 g EV 6/6h (2 g amp + 1 g sulbactam)",
+      "pediatrica": "3000 mg de ampicilina EV 6/6h"
+    },
+    "doseKg": {
+      "standard": "50 mg/kg de ampicilina por dose",
+      "maxDose": "12 g/dia de ampicilina"
+    },
+    "therapeuticRange": "Beta-lactâmico dependente do tempo acima da MIC.",
+    "dilution": "Diluir em SF 0,9% ou SG5% conforme protocolo.",
+    "speed": "Infundir em 15–30 minutos.",
+    "commonAdverseEffects": [
+      "Diarreia",
+      "Náuseas",
+      "Rash cutâneo",
+      "Flebite"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Colite por Clostridioides difficile",
+      "Hepatotoxicidade",
+      "Convulsões em insuficiência renal sem ajuste"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Cobre beta-lactamase-produtores, anaeróbios e muitos Gram-negativos.",
+      "Não cobre Pseudomonas aeruginosa nem MRSA."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman / Lexicomp",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5–3 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg de ampicilina",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia de ampicilina",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual para infecções moderadas a graves. Para Acinetobacter resistente, podem ser necessários esquemas de alta dose de sulbactam conforme protocolo especializado."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5–3 g",
+          "intervalo": "8/8h–12/12h",
+          "doseMaxima": "6–9 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25–50 mg/kg de ampicilina",
+          "intervalo": "8/8h",
+          "doseMaxima": "150 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajustar principalmente por eliminação renal de ambos os componentes (ampicilina e sulbactam)."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5–3 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "3–6 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25 mg/kg de ampicilina",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Evitar acúmulo e neurotoxicidade. Ajustar conforme gravidade da infecção."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1,5–3 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "15–25 mg/kg de ampicilina",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar toxicidade neurológica e acúmulo do antibiótico. Uso de alta dose para Acinetobacter deve ser individualizado com infectologia."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1,5–3 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "15–25 mg/kg de ampicilina",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise. Esquemas de alta dose de sulbactam exigem protocolo especializado e avaliação com infectologia."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": true,
+      "warning": "Para Acinetobacter resistente, não usar dose padrão sem avaliação de sensibilidade e protocolo local. Risco de neurotoxicidade por acúmulo em insuficiência renal sem ajuste. Monitorar função hepática em uso prolongado."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Unasyn (ampicillin-sulbactam) 2021",
+        "EMA label Unasyn (ampicillin-sulbactam) 2022",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Bloco mesclado e melhorado: pediátrica fgMaior50 doseMaxima corrigida para 200 mg/kg/dia; fgMaior50.obs com Acinetobacter/alta dose de sulbactam; fg30a50.doseMaxima expandida; fg30a50.obs com ambos os componentes; fg10a30.obs enriquecida; fgMenor10.obs com Acinetobacter individualizado; hemodialise.obs com protocolo especializado; safetyFlags e auditNotes adicionados."
+    }
+  },
+  "es": {
+    "name": "Ampicilina + Sulbactam",
+    "class": "Aminopenicilina + inhibidor de beta-lactamasa",
+    "commercialNames": {
+      "br": [
+        "Unasyn",
+        "Ampicilina + Sulbactam Blau",
+        "Ampicilina + Sulbactam Teuto"
+      ],
+      "ar": [
+        "Unasyn",
+        "Ampicilina + Sulbactam Richet",
+        "Ampicilina + Sulbactam Klonal"
+      ]
+    },
+    "presentation": [
+      "Frasco ampolla 1,5 g (1 g amp + 0,5 g sulbactam)",
+      "Frasco ampolla 3 g (2 g amp + 1 g sulbactam)"
+    ],
+    "dose": {
+      "adulto": "3 g EV cada 6h (2 g amp + 1 g sulbactam)",
+      "pediatrica": "3000 mg de ampicilina EV cada 6h"
+    },
+    "doseKg": {
+      "standard": "50 mg/kg de ampicilina por dosis",
+      "maxDose": "12 g/día de ampicilina"
+    },
+    "therapeuticRange": "Beta-lactámico dependiente del tiempo sobre la MIC.",
+    "dilution": "Diluir en SF 0,9% o SG5% según protocolo.",
+    "speed": "Infundir en 15–30 minutos.",
+    "commonAdverseEffects": [
+      "Diarrea",
+      "Náuseas",
+      "Exantema cutáneo",
+      "Flebitis"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Colitis por Clostridioides difficile",
+      "Hepatotoxicidad",
+      "Convulsiones en insuficiencia renal sin ajuste"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Cubre productores de beta-lactamasa, anaerobios y muchos Gram-negativos.",
+      "No cubre Pseudomonas aeruginosa ni MRSA."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman / Lexicomp",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5–3 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg de ampicilina",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia de ampicilina",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual para infecciones moderadas a graves. Para Acinetobacter resistente, pueden ser necesarios esquemas de alta dosis de sulbactam según protocolo especializado."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5–3 g",
+          "intervalo": "8/8h–12/12h",
+          "doseMaxima": "6–9 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25–50 mg/kg de ampicilina",
+          "intervalo": "8/8h",
+          "doseMaxima": "150 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajustar principalmente por eliminación renal de ambos componentes (ampicilina y sulbactam)."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5–3 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "3–6 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25 mg/kg de ampicilina",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Evitar acumulación y neurotoxicidad. Ajustar según gravedad de la infección."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1,5–3 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "15–25 mg/kg de ampicilina",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar toxicidad neurológica y acumulación del antibiótico. Uso de alta dosis para Acinetobacter debe individualizarse con infectología."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1,5–3 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "15–25 mg/kg de ampicilina",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis. Esquemas de alta dosis de sulbactam exigen protocolo especializado y evaluación con infectología."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": true,
+      "warning": "Para Acinetobacter resistente, no usar dosis estándar sin evaluación de sensibilidad y protocolo local. Riesgo de neurotoxicidad por acumulación en insuficiencia renal sin ajuste. Monitorizar función hepática en uso prolongado."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Unasyn (ampicillin-sulbactam) 2021",
+        "EMA label Unasyn (ampicillin-sulbactam) 2022",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Bloque fusionado y mejorado: pediátrica fgMaior50 doseMaxima corregida a 200 mg/kg/día; fgMaior50.obs con Acinetobacter/alta dosis de sulbactam; fg30a50.doseMaxima ampliada; fg30a50.obs con ambos componentes; fg10a30.obs enriquecida; fgMenor10.obs con Acinetobacter individualizado; hemodialise.obs con protocolo especializado; safetyFlags y auditNotes añadidos."
+    }
+  },
+  "name": {
+    "pt": "Ampicilina + Sulbactam",
+    "es": "Ampicilina + Sulbactam"
+  },
+  "keywords": [
+    "ampicilina_sulbactam",
+    "ampicilina + sulbactam",
+    "unasyn",
+    "ampicilina + sulbactam blau",
+    "ampicilina + sulbactam teuto",
+    "ampicilina + sulbactam richet",
+    "ampicilina + sulbactam klonal",
+    "aminopenicilina + inibidor de beta-lactamase"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

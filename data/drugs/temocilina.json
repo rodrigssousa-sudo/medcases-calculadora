@@ -1,0 +1,202 @@
+{
+  "id": "temocilina",
+  "category": "atb",
+  "icon": "🧬",
+  "color": "rgba(59,130,246,0.12)",
+  "colorTxt": "#1D4ED8",
+  "pt": {
+    "name": "Temocilina",
+    "class": "Penicilina antiestafilocócica modificada (anti-ESBL/KPC sem atividade antianaeróbia)",
+    "commercialNames": {
+      "br": [
+        "Negaban (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Negaban"
+      ]
+    },
+    "presentation": [
+      "Pó para solução injetável EV/IM: 1 g por frasco (uso hospitalar)"
+    ],
+    "dose": {
+      "adultoEV": "2 g EV 12/12h"
+    },
+    "doseKg": null,
+    "indication": "Infecções por Enterobacterales produtoras de ESBL ou KPC (alternativa aos carbapenêmicos), ITU complicada, infecções intra-abdominais, bacteremia por Gram-negativos sensíveis. Uso restrito a centros com acesso ao fármaco.",
+    "spectrum": "Enterobacterales (incluindo produtores de ESBL e KPC — exceto NDM e OXA-48 puro), E. coli, Klebsiella pneumoniae, Proteus spp. Naturalmente resistente a Pseudomonas, Acinetobacter e anaeróbios. Estável a beta-lactamases classe A e C.",
+    "contraindications": [
+      "Hipersensibilidade às penicilinas ou cefalosporinas (reação cruzada)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Cobertura seletiva anti-Enterobacterales: NÃO cobre Pseudomonas, Acinetobacter nem anaeróbios.",
+      "Utilidade como poupador de carbapenêmicos em infecções por ESBL documentadas.",
+      "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / EUCAST / Livermore DM et al. / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "2 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual para Enterobacterales multirresistentes."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "2 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Reduzir frequência em insuficiência renal moderada."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Ajuste obrigatório."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "48/48h",
+          "doseMaxima": "1 g/dose",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Monitorar acúmulo do fármaco."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "48/48h",
+          "doseMaxima": "1 g/dose",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Administrar após hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Temocilina",
+    "class": "Penicilina antiestafilocócica modificada (anti-ESBL/KPC sin actividad antianaeróbica)",
+    "commercialNames": {
+      "br": [
+        "Negaban (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Negaban"
+      ]
+    },
+    "presentation": [
+      "Polvo para solución inyectable EV/IM: 1 g por frasco (uso hospitalario)"
+    ],
+    "dose": {
+      "adultoEV": "2 g EV 12/12h"
+    },
+    "doseKg": null,
+    "indication": "Infecciones por Enterobacterales productoras de ESBL o KPC (alternativa a carbapenémicos), ITU complicada, infecciones intraabdominales, bacteriemia por Gramnegativos sensibles. Uso restringido a centros con acceso al fármaco.",
+    "spectrum": "Enterobacterales (incluidos productores de ESBL y KPC — excepto NDM y OXA-48 puro), E. coli, Klebsiella pneumoniae, Proteus spp. Naturalmente resistente a Pseudomonas, Acinetobacter y anaerobios. Estable frente a betalactamasas de clase A y C.",
+    "contraindications": [
+      "Hipersensibilidad a penicilinas o cefalosporinas (reacción cruzada)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Cobertura selectiva anti-Enterobacterales: NO cubre Pseudomonas, Acinetobacter ni anaerobios.",
+      "Utilidad como ahorrador de carbapenémicos en infecciones por ESBL documentadas.",
+      "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / EUCAST / Livermore DM et al. / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "2 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual para Enterobacterales multirresistentes."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "2 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Reducir frecuencia en insuficiencia renal moderada."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Ajuste obligatorio."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "48/48h",
+          "doseMaxima": "1 g/dose",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Monitorizar acumulación del fármaco."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "48/48h",
+          "doseMaxima": "1 g/dose",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Administrar después de hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Temocilina",
+    "es": "Temocilina"
+  },
+  "keywords": [
+    "temocilina",
+    "negaban (acesso limitado no brasil)",
+    "negaban",
+    "penicilina antiestafilococica modificada (anti-esbl/kpc sem atividade antianaerobia)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

@@ -1,0 +1,266 @@
+{
+  "id": "ofloxacino",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(245,158,11,0.12)",
+  "colorTxt": "#B45309",
+  "pt": {
+    "name": "Ofloxacino",
+    "class": "Fluoroquinolona de 2ª geração",
+    "commercialNames": {
+      "br": [
+        "Floxtat",
+        "Ofloxacino Genérico"
+      ],
+      "ar": [
+        "Floxtat",
+        "Ofloxacino Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 200 mg, 400 mg",
+      "Solução injetável EV: 200 mg/100 mL"
+    ],
+    "dose": {
+      "adultoVO": "200–400 mg VO 12/12h",
+      "adultoEV": "200–400 mg EV 12/12h"
+    },
+    "doseKg": null,
+    "indication": "ITU complicada, prostatite bacteriana crónica, DIP (doença inflamatória pélvica), uretrite/cervicite por gonorreia e clamídia, infecções do trato respiratório (uso limitado pela resistência).",
+    "spectrum": "Gram-negativos: E. coli, Klebsiella spp., Proteus spp., Neisseria gonorrhoeae. Atípicos: Chlamydia trachomatis, Mycoplasma spp. Atividade reduzida contra Streptococcus pneumoniae e anaeróbios comparado a quinolonas respiratórias.",
+    "contraindications": [
+      "Hipersensibilidade às fluoroquinolonas",
+      "Menores de 18 anos (risco de artropatia em animais em crescimento)",
+      "Gestação e lactação",
+      "Prolongamento do intervalo QT ou hipopotassemia não corrigida"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Risco de tendinite e ruptura de tendão (especialmente tendão de Aquiles) — suspender em caso de dor tendinosa.",
+      "Prolongamento do QT — monitorar ECG em pacientes de risco.",
+      "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / ANVISA / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "200–400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200–400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "200–400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200–400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Reduzir frequência para cada 24 horas."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Ajuste obrigatório."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "100–200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100–200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorar QT prolongado, tendinopatia e neurotoxicidade."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "100–200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100–200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Administrar após HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Ofloxacino",
+    "class": "Fluoroquinolona de 2.ª generación",
+    "commercialNames": {
+      "br": [
+        "Floxtat",
+        "Ofloxacino Genérico"
+      ],
+      "ar": [
+        "Floxtat",
+        "Ofloxacino Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 200 mg, 400 mg",
+      "Solución inyectable EV: 200 mg/100 mL"
+    ],
+    "dose": {
+      "adultoVO": "200–400 mg VO 12/12h",
+      "adultoEV": "200–400 mg EV 12/12h"
+    },
+    "doseKg": null,
+    "indication": "ITU complicada, prostatitis bacteriana crónica, EIP (enfermedad inflamatoria pélvica), uretritis/cervicitis por gonorrea y clamidia, infecciones del tracto respiratorio (uso limitado por resistencia).",
+    "spectrum": "Gramnegativos: E. coli, Klebsiella spp., Proteus spp., Neisseria gonorrhoeae. Atípicos: Chlamydia trachomatis, Mycoplasma spp. Actividad reducida frente a Streptococcus pneumoniae y anaerobios en comparación con quinolonas respiratorias.",
+    "contraindications": [
+      "Hipersensibilidad a las fluoroquinolonas",
+      "Menores de 18 años (riesgo de artropatía en animales en crecimiento)",
+      "Gestación y lactancia",
+      "Prolongación del intervalo QT o hipopotasemia no corregida"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Riesgo de tendinitis y rotura de tendón (especialmente tendón de Aquiles) — suspender ante dolor tendinoso.",
+      "Prolongación del QT — monitorizar ECG en pacientes de riesgo.",
+      "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / ANVISA / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "200–400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200–400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "200–400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200–400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Reducir frecuencia a cada 24 horas."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Ajuste obligatorio."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "100–200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100–200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorizar QT prolongado, tendinopatía y neurotoxicidad."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "100–200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100–200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Administrar después de HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Ofloxacino",
+    "es": "Ofloxacino"
+  },
+  "keywords": [
+    "ofloxacino",
+    "floxtat",
+    "ofloxacino generico",
+    "fluoroquinolona de 2ª geracao"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

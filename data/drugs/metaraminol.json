@@ -1,0 +1,248 @@
+{
+  "id": "metaraminol",
+  "category": "cardio",
+  "icon": "💉",
+  "color": "rgba(190,24,93,0.13)",
+  "colorTxt": "#9D174D",
+  "pt": {
+    "name": "Metaraminol",
+    "class": "Vasopressor — agonista adrenérgico misto (alfa-1 predominante, beta-1 e liberação indireta de norepinefrina)",
+    "indications": {
+      "approved": [
+        "Prevenção e tratamento da hipotensão aguda associada a anestesia espinhal",
+        "Tratamento adjunto da hipotensão secundária a hemorragia, cirurgia ou choque"
+      ],
+      "offLabel": []
+    },
+    "commercialNames": {
+      "br": [
+        "Aramin"
+      ],
+      "ar": [
+        "Aramine"
+      ]
+    },
+    "presentation": [
+      "Ampola 10 mg/mL (1 mL)"
+    ],
+    "mechanism": "Amina simpatomimética com efeito agonista direto sobre receptores alfa-1 (predominante) e beta-1 adrenérgicos, e efeito indireto ao liberar norepinefrina das vesículas de armazenamento. Promove aumento da resistência vascular sistêmica e consequente elevação da pressão arterial.",
+    "pharmacokinetics": {
+      "onset": "Minutos por via IV (bolus) — infusão contínua conforme titulação",
+      "halfLife": "Curta; efeito pode ser cumulativo com titulação repetida",
+      "duration": "Resposta pressórica máxima pode demorar mais que outras aminas — cautela para não superdosar"
+    },
+    "dose": {
+      "adultoPadrao": "Bolus IV direto (emergências): 0,5 a 5 mg, seguido de infusão se necessário. Infusão IV contínua: 15 a 100 mg em 500 mL de SF 0,9% ou SG 5%, titulando a dose para manter a pressão arterial alvo.",
+      "adultoGrave": "Titular conforme resposta pressórica; efeito cumulativo — reavaliar antes de novos incrementos para evitar hipertensão prolongada.",
+      "pediatricaPadrao": "Bolus IV: 0,01 mg/kg. Infusão contínua: 0,4 mg/kg (ou 12 mg/m²) diluídos, titulando para o efeito desejado.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Bolus 0,01 mg/kg IV (pediatria) — dose inicial",
+      "grave": "Infusão 0,4 mg/kg (ou 12 mg/m²) diluídos — titular para efeito desejado",
+      "meningite": null,
+      "doseMaxima": "Sem teto fixo — titular pela resposta pressórica; evitar hipertensão exagerada."
+    },
+    "infusionCalc": "Informe doseAtual (mcg/min) para calcular velocidade de infusão. Concentração de referência: 15–100 mg em 500 mL SF 0,9% ou SG 5%.",
+    "administration": "Preferencialmente via acesso venoso central em infusões contínuas. Em bolus periférico, utilizar veias de grosso calibre. Em caso de extravasamento, infiltrar fentolamina 5–10 mg para evitar necrose.",
+    "dilution": "Infusão IV contínua: 15 a 100 mg diluídos em 500 mL de SF 0,9% ou SG 5%, em bomba de infusão.",
+    "speed": "Titular a infusão contínua conforme resposta pressórica; considerar o efeito cumulativo e evitar incrementos muito frequentes.",
+    "commonAdverseEffects": [
+      "Bradicardia reflexa",
+      "Cefaleia",
+      "Ansiedade",
+      "Náusea"
+    ],
+    "dangerousAdverseEffects": [
+      "Necrose tecidual severa (extravasamento)",
+      "Isquemia periférica e mesentérica",
+      "Arritmias ventriculares",
+      "Edema pulmonar (por hipertensão severa)"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Uso concomitante com anestésicos como halotano (alto risco de arritmias)",
+        "Uso concomitante ou recente (14 dias) de Inibidores da MAO"
+      ],
+      "relativas": [
+        "Trombose vascular mesentérica ou periférica preexistente",
+        "Cor pulmonale agudo",
+        "Hipovolemia não corrigida"
+      ]
+    },
+    "interactions": [
+      "Inibidores da MAO (IMAO): crise hipertensiva severa — associação contraindicada; aguardar no mínimo 14 dias após suspensão do IMAO.",
+      "Antidepressivos tricíclicos: potencialização pressórica por bloqueio da recaptação de aminas simpáticas — evitar associação; se necessária, iniciar com doses mínimas e titulação rigorosa.",
+      "Digitálicos (digoxina): aumento do risco de arritmias ectópicas ventriculares por sensibilização miocárdica — manter monitorização eletrocardiográfica rigorosa.",
+      "Ocitocina: hipertensão aditiva grave — monitorar pressão arterial de perto."
+    ],
+    "renalAdjustment": "Sem ajuste específico — titular de acordo com a resposta pressórica.",
+    "hepaticAdjustment": "Sem ajuste específico — titular de acordo com a resposta pressórica.",
+    "monitoring": {
+      "baseline": [
+        "PAM / PA",
+        "FC / ECG",
+        "Perfusão periférica no local de infusão",
+        "Sinais de isquemia mesentérica"
+      ],
+      "followUp": [
+        "PAM contínua durante a infusão",
+        "ECG contínuo (risco de arritmias ventriculares)",
+        "Local de punção/infusão — sinais de extravasamento",
+        "Sinais de hipertensão exagerada e edema pulmonar"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Risco C. Pode causar vasoconstrição uterina e hipóxia fetal. Usar apenas se essencial em situações de resgate materno.",
+      "lactation": "Segurança desconhecida. Risco presumivelmente baixo devido à meia-vida curta e uso em situações críticas.",
+      "elderly": "Maior sensibilidade aos efeitos vasoconstritores. Iniciar com doses menores para evitar hipertensão exagerada e disfunção ventricular aguda."
+    },
+    "safetyFlags": {
+      "highAlertMedication": true,
+      "vasopressor": true,
+      "extravasationRisk": true,
+      "requiresTelemetry": true,
+      "requiresInfusionPump": true,
+      "hospitalUseOnly": true,
+      "warning": "Efeito cumulativo: a resposta pressórica máxima pode demorar mais que o esperado se comparada a outras aminas. Cautela para não administrar em excesso causando hipertensão prolongada."
+    },
+    "auditNotes": {
+      "status": "vasopressor_metaraminol_master_template"
+    },
+    "ref": [
+      "Goodman & Gilman's: The Pharmacological Basis of Therapeutics",
+      "AHA Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care",
+      "Bula do Profissional — Aramin (Metaraminol)"
+    ]
+  },
+  "es": {
+    "name": "Metaraminol",
+    "class": "Vasopresor — agonista adrenérgico mixto (alfa-1 predominante, beta-1 y liberación indirecta de norepinefrina)",
+    "indications": {
+      "approved": [
+        "Prevención y tratamiento de la hipotensión aguda asociada a anestesia espinal",
+        "Tratamiento adjunto de la hipotensión secundaria a hemorragia, cirugía o choque"
+      ],
+      "offLabel": []
+    },
+    "commercialNames": {
+      "br": [
+        "Aramin"
+      ],
+      "ar": [
+        "Aramine"
+      ]
+    },
+    "presentation": [
+      "Ampolla 10 mg/mL (1 mL)"
+    ],
+    "mechanism": "Amina simpaticomimética con efecto agonista directo sobre receptores alfa-1 (predominante) y beta-1 adrenérgicos, y efecto indirecto al liberar norepinefrina de las vesículas de almacenamiento. Promueve aumento de la resistencia vascular sistémica y consecuente elevación de la presión arterial.",
+    "pharmacokinetics": {
+      "onset": "Minutos por vía IV (bolo) — infusión continua según titulación",
+      "halfLife": "Corta; efecto puede ser acumulativo con titulación repetida",
+      "duration": "Respuesta presora máxima puede demorar más que otras aminas — precaución para no sobredosificar"
+    },
+    "dose": {
+      "adultoPadrao": "Bolo IV directo (emergencias): 0,5 a 5 mg, seguido de infusión si es necesario. Infusión IV continua: 15 a 100 mg en 500 mL de SF 0,9% o SG 5%, titulando la dosis para mantener la presión arterial objetivo.",
+      "adultoGrave": "Titular según respuesta presora; efecto acumulativo — reevaluar antes de nuevos incrementos para evitar hipertensión prolongada.",
+      "pediatricaPadrao": "Bolo IV: 0,01 mg/kg. Infusión continua: 0,4 mg/kg (o 12 mg/m²) diluidos, titulando para el efecto deseado.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Bolo 0,01 mg/kg IV (pediatría) — dosis inicial",
+      "grave": "Infusión 0,4 mg/kg (o 12 mg/m²) diluidos — titular para efecto deseado",
+      "meningite": null,
+      "doseMaxima": "Sin techo fijo — titular por la respuesta presora; evitar hipertensión exagerada."
+    },
+    "infusionCalc": "Informe doseAtual (mcg/min) para calcular velocidad de infusión. Concentración de referencia: 15–100 mg en 500 mL SF 0,9% o SG 5%.",
+    "administration": "Preferiblemente vía acceso venoso central en infusiones continuas. En bolo periférico, utilizar venas de grueso calibre. En caso de extravasación, infiltrar fentolamina 5–10 mg para evitar necrosis.",
+    "dilution": "Infusión IV continua: 15 a 100 mg diluidos en 500 mL de SF 0,9% o SG 5%, en bomba de infusión.",
+    "speed": "Titular la infusión continua según respuesta presora; considerar el efecto acumulativo y evitar incrementos muy frecuentes.",
+    "commonAdverseEffects": [
+      "Bradicardia refleja",
+      "Cefalea",
+      "Ansiedad",
+      "Náusea"
+    ],
+    "dangerousAdverseEffects": [
+      "Necrosis tisular severa (extravasación)",
+      "Isquemia periférica y mesentérica",
+      "Arritmias ventriculares",
+      "Edema pulmonar (por hipertensión severa)"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Uso concomitante con anestésicos como halotano (alto riesgo de arritmias)",
+        "Uso concomitante o reciente (14 días) de Inhibidores de la MAO"
+      ],
+      "relativas": [
+        "Trombosis vascular mesentérica o periférica preexistente",
+        "Cor pulmonale agudo",
+        "Hipovolemia no corregida"
+      ]
+    },
+    "interactions": [
+      "Inhibidores de la MAO (IMAO): crisis hipertensiva severa — asociación contraindicada; esperar al menos 14 días tras la suspensión del IMAO.",
+      "Antidepresivos tricíclicos: potenciación presora por bloqueo de la recaptación de aminas simpáticas — evitar asociación; si es necesaria, iniciar con dosis mínimas y titulación rigurosa.",
+      "Digitálicos (digoxina): aumento del riesgo de arritmias ectópicas ventriculares por sensibilización miocárdica — mantener monitorización electrocardiográfica rigurosa.",
+      "Oxitocina: hipertensión aditiva grave — monitorizar presión arterial de cerca."
+    ],
+    "renalAdjustment": "Sin ajuste específico — titular de acuerdo con la respuesta presora.",
+    "hepaticAdjustment": "Sin ajuste específico — titular de acuerdo con la respuesta presora.",
+    "monitoring": {
+      "baseline": [
+        "PAM / PA",
+        "FC / ECG",
+        "Perfusión periférica en el sitio de infusión",
+        "Signos de isquemia mesentérica"
+      ],
+      "followUp": [
+        "PAM continua durante la infusión",
+        "ECG continuo (riesgo de arritmias ventriculares)",
+        "Sitio de punción/infusión — signos de extravasación",
+        "Signos de hipertensión exagerada y edema pulmonar"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Riesgo C. Puede causar vasoconstricción uterina e hipoxia fetal. Usar solo si es esencial en situaciones de rescate materno.",
+      "lactation": "Seguridad desconocida. Riesgo presumiblemente bajo debido a la vida media corta y uso en situaciones críticas.",
+      "elderly": "Mayor sensibilidad a los efectos vasoconstrictores. Iniciar con dosis menores para evitar hipertensión exagerada y disfunción ventricular aguda."
+    },
+    "safetyFlags": {
+      "highAlertMedication": true,
+      "vasopressor": true,
+      "extravasationRisk": true,
+      "requiresTelemetry": true,
+      "requiresInfusionPump": true,
+      "hospitalUseOnly": true,
+      "warning": "Efecto acumulativo: la respuesta presora máxima puede demorar más de lo esperado en comparación con otras aminas. Precaución para no administrar en exceso causando hipertensión prolongada."
+    },
+    "auditNotes": {
+      "status": "vasopressor_metaraminol_master_template"
+    },
+    "ref": [
+      "Goodman & Gilman's: The Pharmacological Basis of Therapeutics",
+      "AHA Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care",
+      "Bula do Profissional — Aramin (Metaraminol)"
+    ]
+  },
+  "name": {
+    "pt": "Metaraminol",
+    "es": "Metaraminol"
+  },
+  "keywords": [
+    "metaraminol",
+    "aramin",
+    "aramine",
+    "vasopressor — agonista adrenergico misto (alfa-1 predominante, beta-1 e liberacao indireta de norepinefrina)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

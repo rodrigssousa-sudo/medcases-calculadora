@@ -1,0 +1,261 @@
+{
+  "id": "cefaclor",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.12)",
+  "colorTxt": "#059669",
+  "pt": {
+    "name": "Cefaclor",
+    "class": "Cefalosporina de 2ª geração (oral)",
+    "commercialNames": {
+      "br": [
+        "Ceclor",
+        "Alfacef",
+        "Cefaclor Genérico"
+      ],
+      "ar": [
+        "Ceclor",
+        "Cefaclor Genérico"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 250 mg, 500 mg",
+      "Suspensão oral: 125 mg/5 mL, 250 mg/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "250–500 mg VO 8/8h"
+    },
+    "doseKg": null,
+    "indication": "Otite média aguda, sinusite aguda, faringoamigdalite, infecções do trato respiratório inferior, infecções de pele e partes moles, ITU não complicada.",
+    "spectrum": "Streptococcus pyogenes, Streptococcus pneumoniae (sensível), Haemophilus influenzae (incluindo beta-lactamase+), Moraxella catarrhalis, E. coli, Klebsiella spp., Proteus mirabilis. Sem atividade contra MRSA, Pseudomonas ou anaeróbios.",
+    "contraindications": [
+      "Hipersensibilidade às cefalosporinas ou penicilinas (reação cruzada ~1–2%)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Pode ser tomado com ou sem alimentos (alimentos reduzem pico mas não biodisponibilidade total).",
+      "Doença do soro-like (urticária + artralgia) associada especialmente ao cefaclor — mais frequente em crianças.",
+      "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / ANVISA / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "20–40 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "20 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Redução da frequência recomendada."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obrigatório."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "250 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar neurotoxicidade."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "250 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Cefaclor",
+    "class": "Cefalosporina de 2.ª generación (oral)",
+    "commercialNames": {
+      "br": [
+        "Ceclor",
+        "Alfacef",
+        "Cefaclor Genérico"
+      ],
+      "ar": [
+        "Ceclor",
+        "Cefaclor Genérico"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 250 mg, 500 mg",
+      "Suspensión oral: 125 mg/5 mL, 250 mg/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "250–500 mg VO 8/8h"
+    },
+    "doseKg": null,
+    "indication": "Otitis media aguda, sinusitis aguda, faringoamigdalitis, infecciones del tracto respiratorio inferior, infecciones de piel y partes blandas, ITU no complicada.",
+    "spectrum": "Streptococcus pyogenes, Streptococcus pneumoniae (sensible), Haemophilus influenzae (incluido beta-lactamasa+), Moraxella catarrhalis, E. coli, Klebsiella spp., Proteus mirabilis. Sin actividad frente a MRSA, Pseudomonas ni anaerobios.",
+    "contraindications": [
+      "Hipersensibilidad a cefalosporinas o penicilinas (reacción cruzada ~1–2%)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Puede tomarse con o sin alimentos (los alimentos reducen el pico pero no la biodisponibilidad total).",
+      "Enfermedad del suero-like (urticaria + artralgia) asociada especialmente a cefaclor — más frecuente en niños.",
+      "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / ANVISA / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "20–40 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "20 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducción de la frecuencia recomendada."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obligatorio."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "250 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar neurotoxicidad."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "250 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Cefaclor",
+    "es": "Cefaclor"
+  },
+  "keywords": [
+    "cefaclor",
+    "ceclor",
+    "alfacef",
+    "cefaclor generico",
+    "cefalosporina de 2ª geracao (oral)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

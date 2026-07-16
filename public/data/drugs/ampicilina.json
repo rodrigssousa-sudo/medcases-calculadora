@@ -1,0 +1,386 @@
+{
+  "id": "ampicilina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Ampicilina",
+    "class": "Aminopenicilina",
+    "commercialNames": {
+      "br": [
+        "Ampicilina Blau",
+        "Ampicilina Teuto",
+        "Ampicilina EMS"
+      ],
+      "ar": [
+        "Ampicilina Richet",
+        "Ampicilina Klonal",
+        "Ampicilina genérica"
+      ]
+    },
+    "presentation": [
+      "Frasco-ampola 500 mg",
+      "Frasco-ampola 1 g",
+      "Cápsulas 250 mg / 500 mg",
+      "Suspensão oral 250 mg/5 mL"
+    ],
+    "dose": {
+      "adulto": "1–2 g EV 4/4h–6/6h",
+      "pediatrica": "2000 mg EV 6/6h"
+    },
+    "doseKg": {
+      "standard": "50 mg/kg por dose",
+      "maxDose": "12 g/dia"
+    },
+    "therapeuticRange": "Beta-lactâmico dependente do tempo acima da MIC.",
+    "dilution": "Diluir em SF 0,9% ou SG5% conforme protocolo institucional.",
+    "speed": "Infundir em 15–30 minutos (EV lento).",
+    "commonAdverseEffects": [
+      "Diarreia",
+      "Náuseas",
+      "Rash cutâneo"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Colite por Clostridioides difficile",
+      "Convulsões em insuficiência renal sem ajuste",
+      "Síndrome de Stevens-Johnson"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Espectro limitado — não cobre MRSA, Pseudomonas nem beta-lactamase-produtores.",
+      "Considerar ampicilina-sulbactam para maior cobertura."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman / Lexicomp",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose conforme foco infeccioso. Para meningite, endocardite ou Listeria, usar esquema específico de alta dose."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "3 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "6/6h–8/8h",
+          "doseMaxima": "8 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25–50 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "150 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reduzir frequência conforme ClCr. Ajustar intervalo em insuficiência renal moderada."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obrigatório para evitar acúmulo. Monitorar neurotoxicidade em uso de altas doses."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg–1 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "15–25 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Alto risco de acúmulo com esquemas de alta dose. Individualizar em meningite/endocardite. Monitorar neurotoxicidade e convulsões."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg–1 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "15–25 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após HD. Em infecções graves (meningite, endocardite), discutir dose suplementar com infectologia."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "warning": "Ajustar cuidadosamente em meningite, endocardite, Listeria e insuficiência renal avançada. Risco de convulsões com acúmulo em IR sem ajuste adequado."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Ampicillin 2021",
+        "EMA label Ampicillin 2022",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Bloco mesclado e melhorado: fgMaior50.obs com meningite/endocardite/Listeria; fg30a50.ev.intervalo e doseMaxima expandidos; fg10a30.obs com neurotoxicidade; fgMenor10.obs com acúmulo e individualização; hemodialise.obs com dose suplementar em infecções graves; safetyFlags e auditNotes adicionados."
+    }
+  },
+  "es": {
+    "name": "Ampicilina",
+    "class": "Aminopenicilina",
+    "commercialNames": {
+      "br": [
+        "Ampicilina Blau",
+        "Ampicilina Teuto",
+        "Ampicilina EMS"
+      ],
+      "ar": [
+        "Ampicilina Richet",
+        "Ampicilina Klonal",
+        "Ampicilina genérica"
+      ]
+    },
+    "presentation": [
+      "Frasco ampolla 500 mg",
+      "Frasco ampolla 1 g",
+      "Cápsulas 250 mg / 500 mg",
+      "Suspensión oral 250 mg/5 mL"
+    ],
+    "dose": {
+      "adulto": "1–2 g EV cada 4h–6h",
+      "pediatrica": "2000 mg EV cada 6h"
+    },
+    "doseKg": {
+      "standard": "50 mg/kg por dosis",
+      "maxDose": "12 g/día"
+    },
+    "therapeuticRange": "Beta-lactámico dependiente del tiempo sobre la MIC.",
+    "dilution": "Diluir en SF 0,9% o SG5% según protocolo institucional.",
+    "speed": "Infundir en 15–30 minutos (EV lento).",
+    "commonAdverseEffects": [
+      "Diarrea",
+      "Náuseas",
+      "Exantema cutáneo"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Colitis por Clostridioides difficile",
+      "Convulsiones en insuficiencia renal sin ajuste",
+      "Síndrome de Stevens-Johnson"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Espectro limitado — no cubre MRSA, Pseudomonas ni productores de beta-lactamasa.",
+      "Considerar ampicilina-sulbactam para mayor cobertura."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman / Lexicomp",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "4/4h–6/6h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "200 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis según foco infeccioso. Para meningitis, endocarditis o Listeria, usar esquema específico de alta dosis."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "3 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "6/6h–8/8h",
+          "doseMaxima": "8 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25–50 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "150 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducir frecuencia según ClCr. Ajustar intervalo en insuficiencia renal moderada."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obligatorio para evitar acumulación. Monitorizar neurotoxicidad con uso de dosis altas."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg–1 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "15–25 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Alto riesgo de acumulación con esquemas de alta dosis. Individualizar en meningitis/endocarditis. Monitorizar neurotoxicidad y convulsiones."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "500 mg–1 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "15–25 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "50 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de HD. En infecciones graves (meningitis, endocarditis), discutir dosis suplementaria con infectología."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "warning": "Ajustar cuidadosamente en meningitis, endocarditis, Listeria e insuficiencia renal avanzada. Riesgo de convulsiones con acumulación en IR sin ajuste adecuado."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Ampicillin 2021",
+        "EMA label Ampicillin 2022",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Bloque fusionado y mejorado: fgMaior50.obs con meningitis/endocarditis/Listeria; fg30a50.ev.intervalo y doseMaxima ampliados; fg10a30.obs con neurotoxicidad; fgMenor10.obs con acumulación e individualización; hemodialise.obs con dosis suplementaria en infecciones graves; safetyFlags y auditNotes añadidos."
+    }
+  },
+  "name": {
+    "pt": "Ampicilina",
+    "es": "Ampicilina"
+  },
+  "keywords": [
+    "ampicilina",
+    "ampicilina blau",
+    "ampicilina teuto",
+    "ampicilina ems",
+    "ampicilina richet",
+    "ampicilina klonal",
+    "ampicilina generica",
+    "aminopenicilina"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

@@ -1,0 +1,300 @@
+{
+  "id": "delamanida",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.12)",
+  "colorTxt": "#065F46",
+  "pt": {
+    "name": "Delamanida",
+    "class": "Nitroimidazooxazol (inibidor da síntese do ácido micólico — nova classe anti-TB)",
+    "commercialNames": {
+      "br": [
+        "Deltyba (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Deltyba"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 50 mg"
+    ],
+    "dose": {
+      "adultoVO": "100 mg VO 12/12h (com alimentos) × 24 semanas"
+    },
+    "doseKg": null,
+    "indication": "Tuberculose pulmonar multirresistente (TB-MDR) e extensivamente resistente (TB-XDR) em adultos e crianças, como componente de regime combinado quando não há outras opções.",
+    "spectrum": "Mycobacterium tuberculosis (incluindo cepas MDR e XDR). Mecanismo: inibição das enzimas F420-dependentes da síntese do ácido micólico e do óxido nítrico micobacteriano, levando à lise celular. Não apresenta resistência cruzada com bedaquilina ou linezolida.",
+    "contraindications": [
+      "Hipersensibilidade à delamanida",
+      "QTcF basal > 500 ms",
+      "Hipoalbuminemia grave (albumina < 2,8 g/dL — risco de QT prolongado)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Prolongamento do QT — monitorar ECG antes, mensalmente durante o tratamento.",
+      "SEMPRE administrar com alimentos (aumenta significativamente a biodisponibilidade).",
+      "Hipoalbuminemia aumenta risco de QT — corrigir albumina antes de iniciar.",
+      "Não necessita ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / WHO MDR-TB Guidelines 2022 / EMA Prescribing Information Deltyba / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Delamanida não requer ajuste de dose renal. Metabolismo predominantemente hepático (>80% via CYP3A4 e albumina sérica). Administrar sempre com alimento.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "Sem necessidade de ajuste renal nesta faixa (EMA label Deltyba). Administrar com refeição para maximizar absorção (Cmax aumenta ~2–3x com alimento). Parte do esquema BPaL (Bedaquilina + Pretomanida + Linezolida) ou BPaMZ para TB-XDR/TB-MDR. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "Sem ajuste renal necessário nesta faixa (EMA label: IR leve a moderada não altera farmacocinética de forma clinicamente relevante). Monitorar QTcF: ECG basal antes de iniciar, mensalmente durante tratamento. Hipoalbuminemia (<3,5 g/dL) pode aumentar fração livre do fármaco e prolongar QTcF — monitorar albumina. Administrar com refeição. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "EMA label: dados farmacocinéticos limitados em insuficiência renal grave (CrCl 15–29 mL/min). Não há recomendação formal de ajuste de dose, mas monitoramento rigoroso é obrigatório. Hipoalbuminemia frequente nesta faixa amplia risco de QT prolongado — monitorar albumina e QTcF mensalmente. Corrigir distúrbios eletrolíticos (K⁺, Mg²⁺) antes de iniciar. Administrar com refeição. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "EMA label: ausência de dados em insuficiência renal muito grave (CrCl <15 mL/min). Não alterar dose — metabolismo hepático predominante preservado. Risco elevado de hipopotassemia e hipomagnesemia nesta faixa, potencializando QTcF. Monitorar ECG antes e mensalmente durante tratamento. Monitorar albumina sérica. Corrigir eletrólitos antes de iniciar. Administrar com refeição. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "EMA label: não há dados em hemodiálise. Delamanida tem alta ligação proteica (>99,5%) e Vd elevado (~2.100 L) — improvável remoção significativa por HD convencional. Não ajustar dose. Monitorar QTcF rigorosamente: pacientes em HD têm alta prevalência de hipoalbuminemia, distúrbios eletrolíticos e doença cardiovascular, todos amplificando risco de QT prolongado. ECG mensal obrigatório. Administrar com refeição. Não administrar após HD sem orientação de infectologia. Uso guiado por cultura, antibiograma e infectologia."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": true,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Risco de QTcF prolongado significativo, especialmente em pacientes com hipoalbuminemia (<3,5 g/dL), hipopotassemia, hipomagnesemia ou uso concomitante de outros agentes que prolongam QT (bedaquilina, moxifloxacino, clofazimina). ECG obrigatório antes de iniciar e mensalmente durante todo o tratamento. Sempre administrar com alimento."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "EMA Prescribing Information Deltyba (delamanid) 2023",
+        "WHO MDR-TB Guidelines 2022 — Rapid Communication on Key Changes",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "WHO Module 4: Treatment of Drug-Resistant Tuberculosis 2020",
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed.",
+        "Lexicomp Online 2025"
+      ],
+      "note": "Bloco revisado para padrão Excelente. Delamanida tem metabolismo hepático predominante (albumina + CYP3A4 > 80%) — sem ajuste renal pelo label EMA. Principal risco clínico é QTcF prolongado, agravado por hipoalbuminemia. Monitoramento de ECG e albumina obrigatórios mensalmente. Administração com alimento é requisito farmacocinético, não opcional. Uso exclusivo em TB-MDR/XDR como parte de esquemas supervisionados."
+    }
+  },
+  "es": {
+    "name": "Delamanida",
+    "class": "Nitroimidazooxazol (inhibidor de la síntesis del ácido micólico — nueva clase anti-TB)",
+    "commercialNames": {
+      "br": [
+        "Deltyba (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Deltyba"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 50 mg"
+    ],
+    "dose": {
+      "adultoVO": "100 mg VO 12/12h (con alimentos) × 24 semanas"
+    },
+    "doseKg": null,
+    "indication": "Tuberculosis pulmonar multirresistente (TB-MDR) y extensivamente resistente (TB-XDR) en adultos y niños, como componente de régimen combinado cuando no hay otras opciones.",
+    "spectrum": "Mycobacterium tuberculosis (incluidas cepas MDR y XDR). Mecanismo: inhibición de enzimas F420-dependientes de la síntesis del ácido micólico y del óxido nítrico micobacteriano, llevando a lisis celular. No presenta resistencia cruzada con bedaquilina ni linezolida.",
+    "contraindications": [
+      "Hipersensibilidad a la delamanida",
+      "QTcF basal > 500 ms",
+      "Hipoalbuminemia grave (albúmina < 2,8 g/dL — riesgo de QT prolongado)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Prolongación del QT — monitorizar ECG antes y mensualmente durante el tratamiento.",
+      "SIEMPRE administrar con alimentos (aumenta significativamente la biodisponibilidad).",
+      "Hipoalbuminemia aumenta el riesgo de QT — corregir albúmina antes de iniciar.",
+      "No requiere ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / WHO MDR-TB Guidelines 2022 / EMA Prescribing Information Deltyba / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Delamanida no requiere ajuste de dosis renal. Metabolismo predominantemente hepático (>80% vía CYP3A4 y albúmina sérica). Administrar siempre con alimento.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "Sin necesidad de ajuste renal en esta franja (EMA label Deltyba). Administrar con alimento para maximizar absorción (Cmax aumenta ~2–3x con alimento). Parte del esquema BPaL (Bedaquilina + Pretomanida + Linezolida) o BPaMZ para TB-XDR/TB-MDR. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "Sin ajuste renal necesario en esta franja (EMA label: IR leve a moderada no altera farmacocinética de forma clínicamente relevante). Monitorizar QTcF: ECG basal antes de iniciar, mensualmente durante tratamiento. Hipoalbuminemia (<3,5 g/dL) puede aumentar fracción libre del fármaco y prolongar QTcF — monitorizar albúmina. Administrar con alimento. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "EMA label: datos farmacocinéticos limitados en insuficiencia renal grave (CrCl 15–29 mL/min). No hay recomendación formal de ajuste de dosis, pero monitoreo riguroso es obligatorio. Hipoalbuminemia frecuente en esta franja amplía riesgo de QT prolongado — monitorizar albúmina y QTcF mensualmente. Corregir trastornos electrolíticos (K⁺, Mg²⁺) antes de iniciar. Administrar con alimento. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "EMA label: ausencia de datos en insuficiencia renal muy grave (CrCl <15 mL/min). No alterar dosis — metabolismo hepático predominante preservado. Riesgo elevado de hipopotasemia e hipomagnesemia en esta franja, potenciando QTcF. Monitorizar ECG antes y mensualmente durante tratamiento. Monitorizar albúmina sérica. Corregir electrolitos antes de iniciar. Administrar con alimento. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "obs": "EMA label: no hay datos en hemodiálisis. Delamanida tiene alta unión proteica (>99,5%) y Vd elevado (~2.100 L) — improbable remoción significativa por HD convencional. No ajustar dosis. Monitorizar QTcF rigurosamente: pacientes en HD tienen alta prevalencia de hipoalbuminemia, trastornos electrolíticos y enfermedad cardiovascular, todos amplificando riesgo de QT prolongado. ECG mensual obligatorio. Administrar con alimento. No administrar después de HD sin orientación de infectología. Uso guiado por cultivo, antibiograma e infectología."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": true,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Riesgo de prolongación QTcF significativo, especialmente en pacientes con hipoalbuminemia (<3,5 g/dL), hipopotasemia, hipomagnesemia o uso concomitante de otros agentes que prolongan QT (bedaquilina, moxifloxacino, clofazimina). ECG obligatorio antes de iniciar y mensualmente durante todo el tratamiento. Siempre administrar con alimento."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "EMA Prescribing Information Deltyba (delamanid) 2023",
+        "WHO MDR-TB Guidelines 2022 — Rapid Communication on Key Changes",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "WHO Module 4: Treatment of Drug-Resistant Tuberculosis 2020",
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed.",
+        "Lexicomp Online 2025"
+      ],
+      "note": "Bloque revisado para estándar Excelente. Delamanida tiene metabolismo hepático predominante (albúmina + CYP3A4 > 80%) — sin ajuste renal según label EMA. Principal riesgo clínico es QTcF prolongado, agravado por hipoalbuminemia. Monitoreo de ECG y albúmina obligatorios mensualmente. Administración con alimento es requisito farmacocinético, no opcional. Uso exclusivo en TB-MDR/XDR como parte de esquemas supervisados."
+    }
+  },
+  "name": {
+    "pt": "Delamanida",
+    "es": "Delamanida"
+  },
+  "keywords": [
+    "delamanida",
+    "deltyba (acesso limitado no brasil)",
+    "deltyba",
+    "nitroimidazooxazol (inibidor da sintese do acido micolico — nova classe anti-tb)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

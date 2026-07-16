@@ -1,0 +1,282 @@
+{
+  "id": "tigeciclina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Tigeciclina",
+    "class": "Glicilciclina (tetraciclinóide de amplo espectro)",
+    "commercialNames": {
+      "br": [
+        "Tygacil",
+        "Tigeciclina Genérica"
+      ],
+      "ar": [
+        "Tygacil",
+        "Tigeciclina Genérica"
+      ]
+    },
+    "presentation": [
+      "Pó liofilizado EV: 50 mg"
+    ],
+    "dose": {
+      "adulto": "100 mg EV (ataque) → 50 mg EV 12/12h (manutenção)",
+      "pediatrica": "50.0 mg EV 12/12h (1,2 mg/kg/dose)"
+    },
+    "doseKg": {
+      "standard": "1,2 mg/kg/dose 12/12h EV (pediátrico)",
+      "maxDose": "100 mg/dia (manutenção)"
+    },
+    "therapeuticRange": "Bacteriostático. Amplo espectro: MRSA, VRE, Klebsiella MDR, Acinetobacter (NOT Pseudomonas / Proteus).",
+    "dilution": "EV: reconstituir com 5,3 mL de SF ou SG 5% → diluir em 100 mL.",
+    "speed": "EV: infundir em 30–60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas e vômitos (frequentes)",
+      "Diarreia",
+      "Anorexia"
+    ],
+    "dangerousAdverseEffects": [
+      "Aumento de mortalidade em pneumonia adquirida no hospital (metanálise FDA)",
+      "Pancreatite",
+      "Hepatotoxicidade",
+      "Pseudotumor cerebri"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "FDA alerta para aumento de mortalidade em pneumonia hospitalar — usar somente quando não há alternativa.",
+      "NÃO cobre Pseudomonas aeruginosa nem Proteus spp."
+    ],
+    "ref": "FDA Label / Sanford Guide 2025 / Goodman & Gilman",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal.",
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Após dose de ataque de 100 mg."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Avaliar ajuste apenas em insuficiência hepática grave."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Não removida significativamente pela hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Tigeciclina",
+    "class": "Glicilciclina (tetraciclínoide de amplio espectro)",
+    "commercialNames": {
+      "br": [
+        "Tygacil",
+        "Tigeciclina Genérica"
+      ],
+      "ar": [
+        "Tygacil",
+        "Tigeciclina Genérica"
+      ]
+    },
+    "presentation": [
+      "Polvo liofilizado EV: 50 mg"
+    ],
+    "dose": {
+      "adulto": "100 mg EV (carga) → 50 mg EV cada 12h (mantenimiento)",
+      "pediatrica": "50.0 mg EV cada 12h (1,2 mg/kg/dosis)"
+    },
+    "doseKg": {
+      "standard": "1,2 mg/kg/dosis cada 12h EV (pediátrico)",
+      "maxDose": "100 mg/día (mantenimiento)"
+    },
+    "therapeuticRange": "Bacteriostático. Amplio espectro: MRSA, VRE, Klebsiella MDR, Acinetobacter (NO Pseudomonas / Proteus).",
+    "dilution": "EV: reconstituir con 5,3 mL de SF o SG 5% → diluir en 100 mL.",
+    "speed": "EV: infundir en 30–60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas y vómitos (frecuentes)",
+      "Diarrea",
+      "Anorexia"
+    ],
+    "dangerousAdverseEffects": [
+      "Aumento de mortalidad en neumonía nosocomial (metaanálisis FDA)",
+      "Pancreatitis",
+      "Hepatotoxicidad",
+      "Pseudotumor cerebri"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "FDA alerta sobre aumento de mortalidad en neumonía nosocomial — usar solo cuando no hay alternativa.",
+      "NO cubre Pseudomonas aeruginosa ni Proteus spp."
+    ],
+    "ref": "FDA Label / Sanford Guide 2025 / Goodman & Gilman",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal.",
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Después de dosis de carga de 100 mg."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Evaluar ajuste solo en insuficiencia hepática grave."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "50 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "1,2 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "No removida significativamente por hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Tigeciclina",
+    "es": "Tigeciclina"
+  },
+  "keywords": [
+    "tigeciclina",
+    "tygacil",
+    "tigeciclina generica",
+    "glicilciclina (tetraciclinoide de amplo espectro)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

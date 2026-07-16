@@ -1,0 +1,557 @@
+{
+  "id": "hidralazina",
+  "category": "cardio",
+  "icon": "🫀",
+  "color": "rgba(239,68,68,0.14)",
+  "colorTxt": "#B91C1C",
+  "pt": {
+    "name": "Hidralazina",
+    "class": "Vasodilatador arterial direto",
+    "pharmacologicClass": "Anti-hipertensivo vasodilatador arteriolar",
+    "mechanism": "Relaxante direto da musculatura lisa arteriolar, reduzindo resistência vascular sistêmica e pós-carga. O mecanismo envolve alteração do cálcio intracelular, hiperpolarização vascular e liberação de óxido nítrico em alguns leitos vasculares. Produz pouca venodilatação, portanto reduz mais pós-carga que pré-carga.",
+    "pharmacodynamics": "A vasodilatação arterial pode ativar reflexo simpático e sistema renina-angiotensina-aldosterona, causando taquicardia reflexa, retenção hídrica e aumento do consumo miocárdico de oxigênio. Por isso, em uso crônico costuma ser combinada com betabloqueador e diurético quando tolerado.",
+    "pharmacokinetics": {
+      "absorption": "Absorção oral boa, com metabolismo de primeira passagem variável.",
+      "bioavailability": "Variável conforme fenótipo de acetilação.",
+      "proteinBinding": "≈85–90%",
+      "metabolism": "Metabolismo hepático por acetilação; acetiladores lentos têm maior exposição e maior risco de lúpus induzido.",
+      "halfLife": "≈3–7 horas",
+      "elimination": "Metabólitos eliminados principalmente pela urina."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensão arterial",
+        "Hipertensão grave na gestação conforme protocolo"
+      ],
+      "offLabel": [
+        "Insuficiência cardíaca com fração de ejeção reduzida associada a nitrato, especialmente quando IECA/BRA/ARNI não são tolerados",
+        "Emergência hipertensiva na gestação em alguns protocolos",
+        "Hipertensão resistente como adjuvante"
+      ]
+    },
+    "commercialNames": {
+      "br": [
+        "Apresolina",
+        "Hidralazina"
+      ],
+      "ar": [
+        "Apresolina",
+        "Hidralazina"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 25 mg",
+      "Comprimidos 50 mg",
+      "Solução injetável 20 mg/mL conforme disponibilidade"
+    ],
+    "dose": {
+      "hipertensaoOral": "Iniciar 10–25 mg VO 8/8h ou 12/12h. Titular gradualmente conforme PA, FC e tolerância.",
+      "hipertensaoResistente": "25–100 mg VO 2–4x/dia, geralmente associada a diurético e betabloqueador para reduzir edema e taquicardia reflexa.",
+      "insuficienciaCardiaca": "Associada a dinitrato de isossorbida: dose individualizada e titulada lentamente conforme tolerância, PA e sintomas.",
+      "gestacaoEmergencia": "5–10 mg IV lento, repetir conforme resposta a cada 20–30 min conforme protocolo obstétrico, evitando queda brusca da PA.",
+      "doseMaxima": "Geralmente até 200–300 mg/dia; doses elevadas aumentam risco de lúpus induzido, taquicardia e retenção hídrica."
+    },
+    "onset": "VO: 20–30 minutos, pico em 1–2 horas. IV: início em 5–20 minutos, com resposta variável.",
+    "therapeuticRange": "Objetivo: redução de PA sem taquicardia reflexa importante, angina, hipotensão excessiva ou hipoperfusão.",
+    "commonAdverseEffects": [
+      "Cefaleia",
+      "Rubor",
+      "Palpitações",
+      "Taquicardia reflexa",
+      "Tontura",
+      "Náuseas",
+      "Edema periférico"
+    ],
+    "dangerousAdverseEffects": [
+      "Lúpus-like induzido por fármaco",
+      "Angina ou isquemia miocárdica por taquicardia reflexa",
+      "Hipotensão grave",
+      "Retenção hídrica importante",
+      "Neuropatia periférica associada à deficiência de piridoxina",
+      "Discrasias sanguíneas raras"
+    ],
+    "contraindications": {
+      "absolute": [
+        "Hipersensibilidade à hidralazina",
+        "Doença arterial coronariana instável com taquicardia não controlada",
+        "Doença reumática mitral grave conforme contexto hemodinâmico"
+      ],
+      "relative": [
+        "Doença arterial coronariana",
+        "Taquiarritmias",
+        "Insuficiência cardíaca com congestão não controlada",
+        "Lúpus eritematoso sistêmico",
+        "DRC avançada",
+        "Acetilador lento conhecido ou suspeito"
+      ]
+    },
+    "risksByPatient": [],
+    "alerts": [
+      "Pode causar taquicardia reflexa e precipitar angina/isquemia em doença coronariana.",
+      "Em uso crônico, considerar associação com betabloqueador e diurético para reduzir taquicardia reflexa e retenção hídrica.",
+      "Risco de síndrome lúpus-like aumenta com doses altas, uso prolongado, sexo feminino, acetiladores lentos e DRC.",
+      "Na gestação, evitar queda excessiva da PA para não comprometer perfusão uteroplacentária."
+    ],
+    "interactions": {
+      "contraindicated": [],
+      "major": [
+        "Inibidores da PDE-5 e nitratos: hipotensão aditiva potencialmente importante.",
+        "Outros vasodilatadores: maior risco de hipotensão sintomática.",
+        "IMAO ou simpaticomiméticos podem gerar resposta pressórica imprevisível."
+      ],
+      "moderate": [
+        "Betabloqueadores reduzem taquicardia reflexa e podem melhorar tolerância.",
+        "Diuréticos reduzem retenção hídrica associada ao uso crônico.",
+        "AINEs podem reduzir efeito anti-hipertensivo."
+      ]
+    },
+    "infusionProtocol": {
+      "route": "IV lento conforme protocolo",
+      "bolus": "Administrar 5–10 mg IV lento, reavaliando PA a cada 20–30 minutos.",
+      "monitoring": "PA seriada, FC, ECG se risco cardíaco, diurese, sintomas neurológicos e perfusão periférica.",
+      "caution": "Resposta IV pode ser imprevisível; evitar reduções abruptas de PA."
+    },
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sem ajuste renal formal obrigatório, mas monitorar resposta clínica.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "10–100 mg",
+          "intervalo": "6/6h–12/12h",
+          "doseMaxima": "200–300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5–10 mg",
+          "intervalo": "repetir conforme PA/protocolo",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Dose usual com titulação conforme PA e FC."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "10–50 mg",
+          "intervalo": "8/8h–12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "repetir com cautela",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Titular lentamente; monitorar edema, taquicardia e PA."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "10–25 mg",
+          "intervalo": "12/12h–8/8h",
+          "doseMaxima": "100–200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "somente se necessário",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "DRC grave: maior risco de lúpus-like e retenção hídrica; usar menor dose efetiva."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "10–25 mg",
+          "intervalo": "12/12h–24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "uso excepcional com monitorização",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Individualizar. Evitar escalada rápida e monitorar hipotensão/taquicardia."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "10–25 mg",
+          "intervalo": "12/12h ou após HD conforme PA",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "conforme protocolo",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Administrar com cautela após HD se hipotensão intradialítica for problema."
+      }
+    },
+    "hepaticDose": {
+      "required": true,
+      "message": "Metabolismo por acetilação hepática. Usar cautela em hepatopatia e monitorar toxicidade sistêmica."
+    },
+    "monitoring": {
+      "baseline": [
+        "Pressão arterial",
+        "Frequência cardíaca",
+        "ECG se DAC/taquiarritmia",
+        "Função renal",
+        "Hemograma",
+        "ANA se sintomas ou uso prolongado"
+      ],
+      "followUp": [
+        "PA",
+        "FC",
+        "Edema e ganho de peso",
+        "Angina/palpitações",
+        "Artralgia, febre, rash ou sintomas lúpus-like",
+        "Hemograma se sintomas sistêmicos"
+      ]
+    },
+    "patientEducation": [
+      "Avisar palpitações, dor no peito, falta de ar ou desmaio.",
+      "Avisar febre, dores articulares, rash, fadiga intensa ou sintomas semelhantes a lúpus.",
+      "Não suspender sem orientação médica.",
+      "Pode ser necessário usar junto com diurético e betabloqueador."
+    ],
+    "clinicalPearls": [
+      "É vasodilatador arterial: reduz pós-carga, mas pode causar taquicardia reflexa.",
+      "Na ICFEr, o benefício clássico é com hidralazina associada a nitrato, não como monoterapia isolada.",
+      "Lúpus-like é dose/tempo dependente e mais comum em acetiladores lentos.",
+      "Na gestação, é opção IV clássica, mas labetalol e nifedipina são frequentemente preferidos em muitos protocolos pela previsibilidade."
+    ],
+    "guidelineRecommendations": [
+      "Pode ser usada em hipertensão grave na gestação conforme protocolos obstétricos.",
+      "Na ICFEr, a combinação hidralazina + nitrato é opção quando IECA/BRA/ARNI não são tolerados ou em grupos selecionados."
+    ],
+    "safetyFlags": {
+      "arterialVasodilator": true,
+      "pregnancyHypertensionDrug": true,
+      "hypertensiveEmergencyOption": true,
+      "heartFailureWithNitrateOption": true,
+      "reflexTachycardiaRisk": true,
+      "fluidRetentionRisk": true,
+      "lupusLikeRisk": true,
+      "ischemiaRisk": true,
+      "orthostaticRisk": true,
+      "warning": "Hidralazina reduz pós-carga, mas pode causar taquicardia reflexa, retenção hídrica, isquemia miocárdica e síndrome lúpus-like, especialmente em doses altas ou uso prolongado."
+    },
+    "auditNotes": {
+      "status": "MASTER_V2",
+      "version": "2.0",
+      "evidence": [
+        "AHA/ACC/HFSA Heart Failure Guidelines",
+        "ESC Heart Failure Guidelines",
+        "ACOG Practice Bulletin",
+        "ISSHP Hypertension in Pregnancy",
+        "ESC Hypertension Guidelines",
+        "Lexicomp",
+        "Micromedex",
+        "Goodman & Gilman",
+        "Katzung",
+        "FDA",
+        "EMA"
+      ]
+    },
+    "ref": [
+      "AHA/ACC/HFSA Heart Failure Guidelines",
+      "ESC Heart Failure Guidelines",
+      "ACOG Practice Bulletin",
+      "ISSHP Hypertension in Pregnancy",
+      "ESC Hypertension Guidelines",
+      "Lexicomp",
+      "Micromedex",
+      "Goodman & Gilman",
+      "Katzung",
+      "FDA Label",
+      "EMA Label"
+    ]
+  },
+  "es": {
+    "name": "Hidralazina",
+    "class": "Vasodilatador arterial directo",
+    "pharmacologicClass": "Antihipertensivo vasodilatador arteriolar",
+    "mechanism": "Relajante directo del músculo liso arteriolar, reduciendo resistencia vascular sistémica y poscarga. El mecanismo involucra alteración del calcio intracelular, hiperpolarización vascular y liberación de óxido nítrico en algunos lechos vasculares. Produce poca venodilatación, por lo que reduce más poscarga que precarga.",
+    "pharmacodynamics": "La vasodilatación arterial puede activar reflejo simpático y sistema renina-angiotensina-aldosterona, causando taquicardia refleja, retención hídrica y aumento del consumo miocárdico de oxígeno. Por eso, en uso crónico suele combinarse con betabloqueante y diurético cuando es tolerado.",
+    "pharmacokinetics": {
+      "absorption": "Absorción oral buena, con metabolismo de primer paso variable.",
+      "bioavailability": "Variable según fenotipo de acetilación.",
+      "proteinBinding": "≈85–90%",
+      "metabolism": "Metabolismo hepático por acetilación; acetiladores lentos tienen mayor exposición y mayor riesgo de lupus inducido.",
+      "halfLife": "≈3–7 horas",
+      "elimination": "Metabolitos eliminados principalmente por orina."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensión arterial",
+        "Hipertensión grave en embarazo según protocolo"
+      ],
+      "offLabel": [
+        "Insuficiencia cardíaca con fracción de eyección reducida asociada a nitrato, especialmente cuando IECA/ARA-II/ARNI no son tolerados",
+        "Emergencia hipertensiva en embarazo en algunos protocolos",
+        "Hipertensión resistente como adyuvante"
+      ]
+    },
+    "commercialNames": {
+      "br": [
+        "Apresolina",
+        "Hidralazina"
+      ],
+      "ar": [
+        "Apresolina",
+        "Hidralazina"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 25 mg",
+      "Comprimidos 50 mg",
+      "Solución inyectable 20 mg/mL según disponibilidad"
+    ],
+    "dose": {
+      "hipertensaoOral": "Iniciar 10–25 mg VO cada 8 h o 12 h. Titular gradualmente según PA, FC y tolerancia.",
+      "hipertensaoResistente": "25–100 mg VO 2–4 veces/día, generalmente asociada a diurético y betabloqueante para reducir edema y taquicardia refleja.",
+      "insuficienciaCardiaca": "Asociada a dinitrato de isosorbida: dosis individualizada y titulada lentamente según tolerancia, PA y síntomas.",
+      "gestacaoEmergencia": "5–10 mg IV lento, repetir según respuesta cada 20–30 min según protocolo obstétrico, evitando caída brusca de PA.",
+      "doseMaxima": "Generalmente hasta 200–300 mg/día; dosis elevadas aumentan riesgo de lupus inducido, taquicardia y retención hídrica."
+    },
+    "onset": "VO: 20–30 minutos, pico en 1–2 horas. IV: inicio en 5–20 minutos, con respuesta variable.",
+    "therapeuticRange": "Objetivo: reducción de PA sin taquicardia refleja importante, angina, hipotensión excesiva o hipoperfusión.",
+    "commonAdverseEffects": [
+      "Cefalea",
+      "Rubor",
+      "Palpitaciones",
+      "Taquicardia refleja",
+      "Mareos",
+      "Náuseas",
+      "Edema periférico"
+    ],
+    "dangerousAdverseEffects": [
+      "Síndrome lupus-like inducido por fármaco",
+      "Angina o isquemia miocárdica por taquicardia refleja",
+      "Hipotensión grave",
+      "Retención hídrica importante",
+      "Neuropatía periférica asociada a deficiencia de piridoxina",
+      "Discrasias sanguíneas raras"
+    ],
+    "contraindications": {
+      "absolute": [
+        "Hipersensibilidad a hidralazina",
+        "Enfermedad coronaria inestable con taquicardia no controlada",
+        "Enfermedad reumática mitral grave según contexto hemodinámico"
+      ],
+      "relative": [
+        "Enfermedad coronaria",
+        "Taquiarritmias",
+        "Insuficiencia cardíaca con congestión no controlada",
+        "Lupus eritematoso sistémico",
+        "ERC avanzada",
+        "Acetilador lento conocido o sospechado"
+      ]
+    },
+    "risksByPatient": [],
+    "alerts": [
+      "Puede causar taquicardia refleja y precipitar angina/isquemia en enfermedad coronaria.",
+      "En uso crónico, considerar asociación con betabloqueante y diurético para reducir taquicardia refleja y retención hídrica.",
+      "Riesgo de síndrome lupus-like aumenta con dosis altas, uso prolongado, sexo femenino, acetiladores lentos y ERC.",
+      "En embarazo, evitar caída excesiva de PA para no comprometer perfusión uteroplacentaria."
+    ],
+    "interactions": {
+      "contraindicated": [],
+      "major": [
+        "Inhibidores PDE-5 y nitratos: hipotensión aditiva potencialmente importante.",
+        "Otros vasodilatadores: mayor riesgo de hipotensión sintomática.",
+        "IMAO o simpaticomiméticos pueden generar respuesta tensional imprevisible."
+      ],
+      "moderate": [
+        "Betabloqueantes reducen taquicardia refleja y pueden mejorar tolerancia.",
+        "Diuréticos reducen retención hídrica asociada al uso crónico.",
+        "Los AINE pueden reducir el efecto antihipertensivo."
+      ]
+    },
+    "infusionProtocol": {
+      "route": "IV lento según protocolo",
+      "bolus": "Administrar 5–10 mg IV lento, reevaluando PA cada 20–30 minutos.",
+      "monitoring": "PA seriada, FC, ECG si riesgo cardíaco, diuresis, síntomas neurológicos y perfusión periférica.",
+      "caution": "Respuesta IV puede ser imprevisible; evitar reducciones bruscas de PA."
+    },
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sin ajuste renal formal obligatorio, pero monitorizar respuesta clínica.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "10–100 mg",
+          "intervalo": "6/6h–12/12h",
+          "doseMaxima": "200–300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5–10 mg",
+          "intervalo": "repetir conforme PA/protocolo",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Dosis usual con titulación según PA y FC."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "10–50 mg",
+          "intervalo": "8/8h–12/12h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "repetir com cautela",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Titular lentamente; monitorizar edema, taquicardia y PA."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "10–25 mg",
+          "intervalo": "12/12h–8/8h",
+          "doseMaxima": "100–200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "somente se necessário",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "ERC grave: mayor riesgo de lupus-like y retención hídrica; usar menor dosis efectiva."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "10–25 mg",
+          "intervalo": "12/12h–24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "uso excepcional com monitorização",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Individualizar. Evitar escalada rápida y monitorizar hipotensión/taquicardia."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "10–25 mg",
+          "intervalo": "12/12h ou após HD conforme PA",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg",
+          "intervalo": "conforme protocolo",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "obs": "Administrar con precaución después de HD si la hipotensión intradialítica es un problema."
+      }
+    },
+    "hepaticDose": {
+      "required": true,
+      "message": "Metabolismo por acetilación hepática. Usar precaución en hepatopatía y monitorizar toxicidad sistémica."
+    },
+    "monitoring": {
+      "baseline": [
+        "Presión arterial",
+        "Frecuencia cardíaca",
+        "ECG si EAC/taquiarritmia",
+        "Función renal",
+        "Hemograma",
+        "ANA si síntomas o uso prolongado"
+      ],
+      "followUp": [
+        "PA",
+        "FC",
+        "Edema y aumento de peso",
+        "Angina/palpitaciones",
+        "Artralgia, fiebre, rash o síntomas lupus-like",
+        "Hemograma si síntomas sistémicos"
+      ]
+    },
+    "patientEducation": [
+      "Avisar palpitaciones, dolor torácico, falta de aire o desmayo.",
+      "Avisar fiebre, dolores articulares, rash, fatiga intensa o síntomas similares a lupus.",
+      "No suspender sin indicación médica.",
+      "Puede ser necesario usar junto con diurético y betabloqueante."
+    ],
+    "clinicalPearls": [
+      "Es vasodilatador arterial: reduce poscarga, pero puede causar taquicardia refleja.",
+      "En ICFEr, el beneficio clásico es con hidralazina asociada a nitrato, no como monoterapia aislada.",
+      "Lupus-like es dosis/tiempo dependiente y más común en acetiladores lentos.",
+      "En embarazo, es opción IV clásica, pero labetalol y nifedipino suelen preferirse en muchos protocolos por previsibilidad."
+    ],
+    "guidelineRecommendations": [
+      "Puede usarse en hipertensión grave en embarazo según protocolos obstétricos.",
+      "En ICFEr, la combinación hidralazina + nitrato es opción cuando IECA/ARA-II/ARNI no son tolerados o en grupos seleccionados."
+    ],
+    "safetyFlags": {
+      "arterialVasodilator": true,
+      "pregnancyHypertensionDrug": true,
+      "hypertensiveEmergencyOption": true,
+      "heartFailureWithNitrateOption": true,
+      "reflexTachycardiaRisk": true,
+      "fluidRetentionRisk": true,
+      "lupusLikeRisk": true,
+      "ischemiaRisk": true,
+      "orthostaticRisk": true,
+      "warning": "Hidralazina reduce poscarga, pero puede causar taquicardia refleja, retención hídrica, isquemia miocárdica y síndrome lupus-like, especialmente en dosis altas o uso prolongado."
+    },
+    "auditNotes": {
+      "status": "MASTER_V2",
+      "version": "2.0",
+      "evidence": [
+        "AHA/ACC/HFSA Heart Failure Guidelines",
+        "ESC Heart Failure Guidelines",
+        "ACOG Practice Bulletin",
+        "ISSHP Hypertension in Pregnancy",
+        "ESC Hypertension Guidelines",
+        "Lexicomp",
+        "Micromedex",
+        "Goodman & Gilman",
+        "Katzung",
+        "FDA",
+        "EMA"
+      ]
+    },
+    "ref": [
+      "AHA/ACC/HFSA Heart Failure Guidelines",
+      "ESC Heart Failure Guidelines",
+      "ACOG Practice Bulletin",
+      "ISSHP Hypertension in Pregnancy",
+      "ESC Hypertension Guidelines",
+      "Lexicomp",
+      "Micromedex",
+      "Goodman & Gilman",
+      "Katzung",
+      "FDA Label",
+      "EMA Label"
+    ]
+  },
+  "name": {
+    "pt": "Hidralazina",
+    "es": "Hidralazina"
+  },
+  "keywords": [
+    "hidralazina",
+    "apresolina",
+    "vasodilatador arterial direto"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

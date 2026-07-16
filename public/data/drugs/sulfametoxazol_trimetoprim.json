@@ -1,0 +1,353 @@
+{
+  "id": "sulfametoxazol_trimetoprim",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Sulfametoxazol + Trimetoprim",
+    "class": "Sulfonamida",
+    "commercialNames": {
+      "br": [
+        "Bactrim",
+        "Bactrim F",
+        "Sulfametoxazol + Trimetoprim EMS"
+      ],
+      "ar": [
+        "Bactrim",
+        "Bactrim Forte",
+        "Bactrim Bagó"
+      ]
+    },
+    "presentation": [
+      "Comprimido: 400/80 mg",
+      "Comprimido Forte: 800/160 mg",
+      "Suspensão oral: 200/40 mg por 5 mL",
+      "Ampola EV"
+    ],
+    "dose": {
+      "adultoVO": "800/160 mg VO 12/12h",
+      "pediatrica": "350 mg de trimetoprim por dose 12/12h"
+    },
+    "doseKg": {
+      "standard": "4–5 mg/kg/dose (trimetoprim)",
+      "severe": "15–20 mg/kg/dia (trimetoprim)",
+      "maxDose": "320 mg/dia de trimetoprim"
+    },
+    "therapeuticRange": "Dose calculada sempre pelo componente trimetoprim.",
+    "dilution": "EV: diluir conforme protocolo institucional.",
+    "speed": "Infusão EV em 60–90 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Vômitos",
+      "Rash",
+      "Fotossensibilidade"
+    ],
+    "dangerousAdverseEffects": [
+      "Stevens-Johnson",
+      "Necrólise epidérmica tóxica",
+      "Hipercalemia",
+      "Mielossupressão",
+      "Anafilaxia"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar potássio sérico.",
+      "Monitorar hemograma em uso prolongado.",
+      "Dose sempre calculada pelo trimetoprim."
+    ],
+    "ref": "Goodman & Gilman / Sanford Guide / IDSA",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "800/160 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "320 mg TMP/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5–10 mg/kg de TMP",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "20 mg/kg/dia de TMP",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "4–6 mg/kg de TMP",
+          "intervalo": "12/12h",
+          "doseMaxima": "320 mg TMP/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual conforme infecção tratada."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "800/160 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "320 mg TMP/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5–10 mg/kg de TMP",
+          "intervalo": "12/12h",
+          "doseMaxima": "15 mg/kg/dia de TMP",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "4–6 mg/kg de TMP",
+          "intervalo": "12/12h",
+          "doseMaxima": "320 mg TMP/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Pode ser necessário pequeno ajuste conforme indicação clínica."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "800/160 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "160 mg TMP/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg/kg de TMP",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/kg/dia de TMP",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "2–3 mg/kg de TMP",
+          "intervalo": "12/12h",
+          "doseMaxima": "160 mg TMP/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reduzir aproximadamente 50% da exposição total."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "400/80 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "80 mg TMP/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "2,5–5 mg/kg de TMP",
+          "intervalo": "24/24h",
+          "doseMaxima": "5 mg/kg/dia de TMP",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg de TMP",
+          "intervalo": "24/24h",
+          "doseMaxima": "80 mg TMP/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar hiperpotassemia, creatinina e hemograma."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "400/80–800/160 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "160 mg TMP/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "2,5–5 mg/kg de TMP",
+          "intervalo": "24/24h",
+          "doseMaxima": "5 mg/kg/dia de TMP",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg de TMP",
+          "intervalo": "24/24h",
+          "doseMaxima": "160 mg TMP/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise. Monitorar potássio e função renal residual."
+      }
+    }
+  },
+  "es": {
+    "name": "Sulfametoxazol + Trimetoprima",
+    "class": "Sulfonamida",
+    "commercialNames": {
+      "br": [
+        "Bactrim",
+        "Bactrim F",
+        "Sulfametoxazol + Trimetoprim EMS"
+      ],
+      "ar": [
+        "Bactrim",
+        "Bactrim Forte",
+        "Bactrim Bagó"
+      ]
+    },
+    "presentation": [
+      "Comprimido: 400/80 mg",
+      "Comprimido Forte: 800/160 mg",
+      "Suspensión oral: 200/40 mg por 5 mL",
+      "Ampolla EV"
+    ],
+    "dose": {
+      "adultoVO": "800/160 mg VO cada 12h",
+      "pediatrica": "350 mg de trimetoprima por dosis cada 12h"
+    },
+    "doseKg": {
+      "standard": "4–5 mg/kg/dosis (trimetoprima)",
+      "severe": "15–20 mg/kg/día (trimetoprima)",
+      "maxDose": "320 mg/día de trimetoprima"
+    },
+    "therapeuticRange": "La dosis siempre se calcula por el componente trimetoprima.",
+    "dilution": "EV: diluir según protocolo institucional.",
+    "speed": "Infusión EV en 60–90 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Vómitos",
+      "Exantema",
+      "Fotosensibilidad"
+    ],
+    "dangerousAdverseEffects": [
+      "Stevens-Johnson",
+      "Necrólisis epidérmica tóxica",
+      "Hiperpotasemia",
+      "Mielosupresión",
+      "Anafilaxia"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar potasio sérico.",
+      "Monitorar hemograma en uso prolongado.",
+      "La dosis siempre se calcula por la trimetoprima."
+    ],
+    "ref": "Goodman & Gilman / Sanford Guide / IDSA",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "800/160 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "320 mg TMP/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5–10 mg/kg de TMP",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "20 mg/kg/dia de TMP",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "4–6 mg/kg de TMP",
+          "intervalo": "12/12h",
+          "doseMaxima": "320 mg TMP/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual según la infección tratada."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "800/160 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "320 mg TMP/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5–10 mg/kg de TMP",
+          "intervalo": "12/12h",
+          "doseMaxima": "15 mg/kg/dia de TMP",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "4–6 mg/kg de TMP",
+          "intervalo": "12/12h",
+          "doseMaxima": "320 mg TMP/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Puede ser necesario un pequeño ajuste según la indicación clínica."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "800/160 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "160 mg TMP/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "5 mg/kg de TMP",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/kg/dia de TMP",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "2–3 mg/kg de TMP",
+          "intervalo": "12/12h",
+          "doseMaxima": "160 mg TMP/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducir aproximadamente 50% de la exposición total."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "400/80 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "80 mg TMP/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "2,5–5 mg/kg de TMP",
+          "intervalo": "24/24h",
+          "doseMaxima": "5 mg/kg/dia de TMP",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg de TMP",
+          "intervalo": "24/24h",
+          "doseMaxima": "80 mg TMP/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar hiperpotasemia, creatinina y hemograma."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "400/80–800/160 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "160 mg TMP/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "2,5–5 mg/kg de TMP",
+          "intervalo": "24/24h",
+          "doseMaxima": "5 mg/kg/dia de TMP",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "2 mg/kg de TMP",
+          "intervalo": "24/24h",
+          "doseMaxima": "160 mg TMP/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis. Monitorizar potasio y función renal residual."
+      }
+    }
+  },
+  "name": {
+    "pt": "Sulfametoxazol + Trimetoprim",
+    "es": "Sulfametoxazol + Trimetoprima"
+  },
+  "keywords": [
+    "sulfametoxazol_trimetoprim",
+    "sulfametoxazol + trimetoprim",
+    "sulfametoxazol + trimetoprima",
+    "bactrim",
+    "bactrim f",
+    "sulfametoxazol + trimetoprim ems",
+    "bactrim forte",
+    "bactrim bago",
+    "sulfonamida"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

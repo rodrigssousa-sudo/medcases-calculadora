@@ -1,0 +1,437 @@
+{
+  "id": "teicoplanina",
+  "category": "infectologia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Teicoplanina"
+  },
+  "es": {
+    "name": "Teicoplanina"
+  },
+  "name": {
+    "pt": "Teicoplanina",
+    "es": "Teicoplanina"
+  },
+  "keywords": [
+    "teicoplanina"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "infectologia.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "infectologia.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "antimicrobianos.js",
+      "record": {
+        "id": "teicoplanina",
+        "category": "atb",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "name": "Teicoplanina",
+          "class": "Glicopeptídeo",
+          "commercialNames": {
+            "br": [
+              "Targocid",
+              "Teicoplanina Genérica"
+            ],
+            "ar": [
+              "Targocid",
+              "Teicoplanina Genérica"
+            ]
+          },
+          "presentation": [
+            "Pó liofilizado EV/IM: 200 mg, 400 mg"
+          ],
+          "dose": {
+            "adultoCarga": "420 mg EV/IM 12/12h (3 doses = 6 mg/kg)",
+            "adultoManutencao": "420 mg EV/IM 1x/dia (6 mg/kg)",
+            "adultoEndocardite": "840 mg EV/IM 1x/dia (12 mg/kg)",
+            "pediatrica": "700 mg EV/IM 1x/dia (10 mg/kg)"
+          },
+          "doseKg": {
+            "standard": "6–12 mg/kg/dia EV/IM conforme indicação",
+            "maxDose": "12 mg/kg/dia"
+          },
+          "therapeuticRange": "Vale sérico alvo 15–30 mcg/mL (infecções graves). Bactericida para Gram-positivos: MRSA, MSSA, Enterococcus.",
+          "dilution": "EV: diluir em SF 0,9% ou SG 5% 50–100 mL.",
+          "speed": "EV: infundir em 30 minutos. IM: injeção direta.",
+          "commonAdverseEffects": [
+            "Eritema no local de infusão",
+            "Febre",
+            "Trombocitopenia leve"
+          ],
+          "dangerousAdverseEffects": [
+            "Nefrotoxicidade (menor que vancomicina)",
+            "Ototoxicidade",
+            "Síndrome do homem vermelho (raro)"
+          ],
+          "risksByPatient": [],
+          "alerts": [
+            "Realizar 3 doses de ataque de 6 mg/kg 12/12h antes da manutenção diária.",
+            "Monitorar vale sérico 15–30 mcg/mL para infecções graves (endocardite, pneumonia por MRSA)."
+          ],
+          "ref": "EUCAST / Sanford Guide 2025 / Goodman & Gilman",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": true,
+            "fgMaior50": {
+              "vo": null,
+              "ev": {
+                "dose": "6–12 mg/kg",
+                "intervalo": "24/24h",
+                "doseMaxima": "12 mg/kg/dia",
+                "unidade": "mg/kg"
+              },
+              "pediatrica": {
+                "dose": "10 mg/kg",
+                "intervalo": "24/24h",
+                "doseMaxima": "12 mg/kg/dia",
+                "unidade": "mg/kg"
+              },
+              "obs": "Após doses de ataque (6 mg/kg 12/12h × 3 doses), manter dose diária conforme gravidade da infecção."
+            },
+            "fg30a50": {
+              "vo": null,
+              "ev": {
+                "dose": "6–12 mg/kg",
+                "intervalo": "48/48h",
+                "doseMaxima": "12 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "pediatrica": {
+                "dose": "10 mg/kg",
+                "intervalo": "48/48h",
+                "doseMaxima": "12 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "obs": "Reduzir frequência após fase de ataque. Manter doses de ataque independentemente da função renal."
+            },
+            "fg10a30": {
+              "vo": null,
+              "ev": {
+                "dose": "6–12 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "12 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "pediatrica": {
+                "dose": "10 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "12 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "obs": "Monitorar níveis séricos quando disponíveis. Intervalo de 72h após fase de ataque habitual."
+            },
+            "fgMenor10": {
+              "vo": null,
+              "ev": {
+                "dose": "6 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "6 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "pediatrica": {
+                "dose": "6 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "6 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "obs": "Ajuste obrigatório pela meia-vida prolongada. Monitorar níveis séricos e função renal."
+            },
+            "hemodialise": {
+              "vo": null,
+              "ev": {
+                "dose": "6 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "6 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "pediatrica": {
+                "dose": "6 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "6 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "obs": "Geralmente pouco removida por HD; ajustar posologia por níveis séricos quando possível. Manter fase de ataque mesmo em diálise."
+            }
+          },
+          "therapeuticMonitoring": {
+            "required": true,
+            "target": "Vale alvo geralmente 15–30 mcg/mL conforme gravidade e foco. Endocardite e infecções graves: alvo vale ≥ 20 mcg/mL. Coletar nível antes da 4ª dose de manutenção.",
+            "monitoring": "Monitorar níveis séricos (vale pré-dose), creatinina, hemograma e resposta clínica.",
+            "notes": "A fase de ataque NÃO deve ser omitida em infecções graves — sua omissão resulta em subdosagem por até 4–5 dias. Nefrotoxicidade menor que vancomicina."
+          },
+          "safetyFlags": {
+            "renalHighRisk": true,
+            "neurotoxicityRisk": false,
+            "qtRisk": false,
+            "hepatotoxicityRisk": false,
+            "requiresCultureGuidance": true,
+            "warning": "Risco de subdosagem se fase de ataque for omitida ou inadequada — SEMPRE realizar 3 doses de ataque de 6 mg/kg 12/12h antes da manutenção. Monitorar níveis séricos (vale 15–30 mcg/mL). Nefrotoxicidade menor que vancomicina, mas presente — monitorar creatinina."
+          },
+          "auditNotes": {
+            "status": "excellent_after_review",
+            "sourcePriority": [
+              "EMA label Targocid (teicoplanin) 2022",
+              "Sanford Guide to Antimicrobial Therapy 2025",
+              "EUCAST 2024",
+              "Johns Hopkins ABX Guide 2024",
+              "UpToDate 2024",
+              "Lexicomp Online 2025",
+              "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+            ],
+            "note": "Bloco mesclado e melhorado: fgMaior50.obs com protocolo de ataque explícito; hemodialise.obs corrigida para 'pouco removida'; therapeuticMonitoring corrigido (estava com conteúdo de colistina — bug resolvido); safetyFlags e auditNotes adicionados."
+          },
+          "indicationDosing": {
+            "standard": "Gram-negativos resistentes (XDR/PDR): CMS 9 MIU EV de ataque → manutenção por ClCr. Sempre associar a outro agente ativo (carbapenem, rifampicina, fosfomicina) para evitar resistência.",
+            "severe": "UTI / Acinetobacter baumannii XDR / P. aeruginosa PDR: CMS 9 MIU ataque + manutenção ajustada. Considerar nebulização adjuvante (3–4 MIU 12/12h) em pneumonia por Acinetobacter.",
+            "inhaled": "Nebulização adjuvante (pneumonia por gram-negativos XDR): 3–4 MIU CMS diluídos em 4 mL SF 0,9% a cada 12h. Preparar imediatamente antes do uso."
+          },
+          "loadingDose": {
+            "adult": "9 MIU EV de colistimetato de sódio em infusão de 30–60 min. Administrar independentemente da função renal (garante concentrações terapêuticas precoces, pois CMS tem meia-vida de ativação de ~2h).",
+            "pediatric": "75.000 UI/kg (≈ 2,5 mg/kg de CMS) EV em infusão de 30 min como dose de ataque. Ajustar manutenção por ClCr/peso.",
+            "notes": "A dose de ataque deve ser administrada MESMO em pacientes com insuficiência renal grave ou em diálise. O retardo no início da dose de ataque aumenta risco de falha terapêutica."
+          },
+          "maintenanceDose": {
+            "adult": "ClCr > 80 mL/min: 4,5 MIU EV 12/12h. ClCr 50–80: 4,5 MIU 18/18h. ClCr 30–50: 4,5 MIU 24/24h. ClCr 10–30: 4,5 MIU 36/36h. ClCr < 10: 4,5 MIU 48/48h.",
+            "pediatric": "50.000–75.000 UI/kg/dia dividido a cada 8–12h (função renal normal). Ajustar por ClCr.",
+            "renalAdjustment": "Hemodiálise: 4,5 MIU após cada sessão de HD (CMS é parcialmente removido). CRRT: 6–9 MIU/dia dividido 8/8h ou 12/12h. Atenção: converter MIU → mg conforme bula do produto disponível."
+          },
+          "neurotoxicityWarning": {
+            "risk": "moderate",
+            "symptoms": [
+              "Parestesias periorofaciais e de extremidades (mais comuns)",
+              "Tontura e ataxia",
+              "Bloqueio neuromuscular com fraqueza muscular (raro)",
+              "Confusão mental (em intoxicações graves)"
+            ],
+            "management": "Parestesias leves geralmente transitórias — monitorar sem necessidade de suspensão imediata. Fraqueza muscular progressiva: suspender e avaliar bloqueio neuromuscular. Reduzir dose em nefrotoxicidade. Evitar uso concomitante com bloqueadores neuromusculares e aminoglicosídeos."
+          },
+          "qtRisk": {
+            "risk": "none",
+            "monitoring": "Sem risco clinicamente significativo de prolongamento do QT.",
+            "contraindications": []
+          }
+        },
+        "es": {
+          "name": "Teicoplanina",
+          "class": "Glucopéptido",
+          "commercialNames": {
+            "br": [
+              "Targocid",
+              "Teicoplanina Genérica"
+            ],
+            "ar": [
+              "Targocid",
+              "Teicoplanina Genérica"
+            ]
+          },
+          "presentation": [
+            "Polvo liofilizado EV/IM: 200 mg, 400 mg"
+          ],
+          "dose": {
+            "adultoCarga": "420 mg EV/IM cada 12h (3 dosis = 6 mg/kg)",
+            "adultoManutencao": "420 mg EV/IM 1 vez/día (6 mg/kg)",
+            "adultoEndocardite": "840 mg EV/IM 1 vez/día (12 mg/kg)",
+            "pediatrica": "700 mg EV/IM 1 vez/día (10 mg/kg)"
+          },
+          "doseKg": {
+            "standard": "6–12 mg/kg/día EV/IM según indicación",
+            "maxDose": "12 mg/kg/día"
+          },
+          "therapeuticRange": "Valle sérico objetivo 15–30 mcg/mL (infecciones graves). Bactericida para Gram-positivos: MRSA, MSSA, Enterococcus.",
+          "dilution": "EV: diluir en SF 0,9% o SG 5% 50–100 mL.",
+          "speed": "EV: infundir en 30 minutos. IM: inyección directa.",
+          "commonAdverseEffects": [
+            "Eritema en el sitio de infusión",
+            "Fiebre",
+            "Trombocitopenia leve"
+          ],
+          "dangerousAdverseEffects": [
+            "Nefrotoxicidad (menor que vancomicina)",
+            "Ototoxicidad",
+            "Síndrome del hombre rojo (raro)"
+          ],
+          "risksByPatient": [],
+          "alerts": [
+            "Realizar 3 dosis de carga de 6 mg/kg cada 12h antes del mantenimiento diario.",
+            "Monitorizar valle sérico 15–30 mcg/mL para infecciones graves (endocarditis, neumonía por MRSA)."
+          ],
+          "ref": "EUCAST / Sanford Guide 2025 / Goodman & Gilman",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": true,
+            "fgMaior50": {
+              "vo": null,
+              "ev": {
+                "dose": "6–12 mg/kg",
+                "intervalo": "24/24h",
+                "doseMaxima": "12 mg/kg/dia",
+                "unidade": "mg/kg"
+              },
+              "pediatrica": {
+                "dose": "10 mg/kg",
+                "intervalo": "24/24h",
+                "doseMaxima": "12 mg/kg/dia",
+                "unidade": "mg/kg"
+              },
+              "obs": "Después de dosis de carga (6 mg/kg 12/12h × 3 dosis), mantener dosis diaria según gravedad de la infección."
+            },
+            "fg30a50": {
+              "vo": null,
+              "ev": {
+                "dose": "6–12 mg/kg",
+                "intervalo": "48/48h",
+                "doseMaxima": "12 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "pediatrica": {
+                "dose": "10 mg/kg",
+                "intervalo": "48/48h",
+                "doseMaxima": "12 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "obs": "Reducir frecuencia después de fase de carga. Mantener dosis de carga independientemente de la función renal."
+            },
+            "fg10a30": {
+              "vo": null,
+              "ev": {
+                "dose": "6–12 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "12 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "pediatrica": {
+                "dose": "10 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "12 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "obs": "Monitorizar niveles séricos cuando estén disponibles. Intervalo de 72h después de la fase de carga habitual."
+            },
+            "fgMenor10": {
+              "vo": null,
+              "ev": {
+                "dose": "6 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "6 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "pediatrica": {
+                "dose": "6 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "6 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "obs": "Ajuste obligatorio por vida media prolongada. Monitorizar niveles séricos y función renal."
+            },
+            "hemodialise": {
+              "vo": null,
+              "ev": {
+                "dose": "6 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "6 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "pediatrica": {
+                "dose": "6 mg/kg",
+                "intervalo": "72/72h",
+                "doseMaxima": "6 mg/kg/dose",
+                "unidade": "mg/kg"
+              },
+              "obs": "Generalmente poco removida por HD; ajustar posología por niveles séricos cuando sea posible. Mantener fase de carga incluso en diálisis."
+            }
+          },
+          "therapeuticMonitoring": {
+            "required": true,
+            "target": "Valle objetivo generalmente 15–30 mcg/mL según gravedad y foco. Endocarditis e infecciones graves: objetivo valle ≥ 20 mcg/mL. Obtener nivel antes de la 4ª dosis de mantenimiento.",
+            "monitoring": "Monitorizar niveles séricos (valle predosis), creatinina, hemograma y respuesta clínica.",
+            "notes": "La fase de carga NO debe omitirse en infecciones graves — su omisión resulta en subdosificación por hasta 4–5 días. Nefrotoxicidad menor que vancomicina."
+          },
+          "safetyFlags": {
+            "renalHighRisk": true,
+            "neurotoxicityRisk": false,
+            "qtRisk": false,
+            "hepatotoxicityRisk": false,
+            "requiresCultureGuidance": true,
+            "warning": "Riesgo de subdosificación si la fase de carga es omitida o inadecuada — SIEMPRE realizar 3 dosis de carga de 6 mg/kg 12/12h antes del mantenimiento. Monitorizar niveles séricos (valle 15–30 mcg/mL). Nefrotoxicidad menor que vancomicina, pero presente — monitorizar creatinina."
+          },
+          "auditNotes": {
+            "status": "excellent_after_review",
+            "sourcePriority": [
+              "EMA label Targocid (teicoplanin) 2022",
+              "Sanford Guide to Antimicrobial Therapy 2025",
+              "EUCAST 2024",
+              "Johns Hopkins ABX Guide 2024",
+              "UpToDate 2024",
+              "Lexicomp Online 2025",
+              "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+            ],
+            "note": "Bloque fusionado y mejorado: fgMaior50.obs con protocolo de carga explícito; hemodialise.obs corregida a 'poco removida'; therapeuticMonitoring corregido (tenía contenido de colistina — bug resuelto); safetyFlags y auditNotes añadidos."
+          },
+          "indicationDosing": {
+            "standard": "Gramnegativos resistentes (XDR/PDR): CMS 9 MIU IV de carga → mantenimiento por ClCr. Siempre asociar a otro agente activo (carbapenem, rifampicina, fosfomicina) para evitar resistencia.",
+            "severe": "UCI / Acinetobacter baumannii XDR / P. aeruginosa PDR: CMS 9 MIU carga + mantenimiento ajustado. Considerar nebulización adyuvante (3–4 MIU 12/12h) en neumonía por Acinetobacter.",
+            "inhaled": "Nebulización adyuvante (neumonía por gramnegativos XDR): 3–4 MIU CMS diluidos en 4 mL SF 0,9% cada 12h. Preparar inmediatamente antes del uso."
+          },
+          "loadingDose": {
+            "adult": "9 MIU IV de colistimetato de sodio en infusión de 30–60 min. Administrar independientemente de la función renal (garantiza concentraciones terapéuticas precoces, ya que CMS tiene semivida de activación de ~2h).",
+            "pediatric": "75.000 UI/kg (≈ 2,5 mg/kg de CMS) IV en infusión de 30 min como dosis de carga. Ajustar mantenimiento por ClCr/peso.",
+            "notes": "La dosis de carga debe administrarse INCLUSO en pacientes con insuficiencia renal grave o en diálisis. El retraso en el inicio de la dosis de carga aumenta el riesgo de fracaso terapéutico."
+          },
+          "maintenanceDose": {
+            "adult": "ClCr > 80 mL/min: 4,5 MIU IV 12/12h. ClCr 50–80: 4,5 MIU 18/18h. ClCr 30–50: 4,5 MIU 24/24h. ClCr 10–30: 4,5 MIU 36/36h. ClCr < 10: 4,5 MIU 48/48h.",
+            "pediatric": "50.000–75.000 UI/kg/día dividido cada 8–12h (función renal normal). Ajustar por ClCr.",
+            "renalAdjustment": "Hemodiálisis: 4,5 MIU después de cada sesión de HD (CMS es parcialmente removido). CRRT: 6–9 MIU/día dividido 8/8h o 12/12h. Atención: convertir MIU → mg según prospecto del producto disponible."
+          },
+          "neurotoxicityWarning": {
+            "risk": "moderate",
+            "symptoms": [
+              "Parestesias periorales y de extremidades (más comunes)",
+              "Mareos y ataxia",
+              "Bloqueo neuromuscular con debilidad muscular (raro)",
+              "Confusión mental (en intoxicaciones graves)"
+            ],
+            "management": "Parestesias leves generalmente transitorias — monitorar sin necesidad de suspensión inmediata. Debilidad muscular progresiva: suspender y evaluar bloqueo neuromuscular. Reducir dosis en nefrotoxicidad. Evitar uso concomitante con bloqueadores neuromusculares y aminoglucósidos."
+          },
+          "qtRisk": {
+            "risk": "none",
+            "monitoring": "Sin riesgo clínicamente significativo de prolongamiento del QT.",
+            "contraindications": []
+          }
+        },
+        "name": {
+          "pt": "Teicoplanina",
+          "es": "Teicoplanina"
+        },
+        "keywords": [
+          "teicoplanina",
+          "targocid",
+          "teicoplanina generica",
+          "glicopeptideo"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "antimicrobianos.js"
+      }
+    }
+  ]
+}

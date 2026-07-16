@@ -1,0 +1,217 @@
+{
+  "id": "fenitoina",
+  "category": "anticonvulsivante",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Fenitoína",
+    "class": "Anticonvulsivante bloqueador de canais de sódio",
+    "category": "anticonvulsivante",
+    "commercialNames": {
+      "br": [
+        "Hidantal",
+        "Epelin",
+        "Fenitoína"
+      ],
+      "ar": [
+        "Epamin",
+        "Fenitoína",
+        "Difenilhidantoína"
+      ]
+    },
+    "presentation": [
+      "Comprimido/cápsula 100 mg",
+      "Suspensão oral 125 mg/5 mL",
+      "Ampola 250 mg/5 mL"
+    ],
+    "dose": {
+      "adulto": "Dose de ataque EV: 15–20 mg/kg. Para 70 kg: 1050–1400 mg.",
+      "manutencao": "Manutenção: 4–7 mg/kg/dia. Para 70 kg: 280–490 mg/dia.",
+      "alvoSerico": "Nível sérico total usual: 10–20 mcg/mL; interpretar fração livre em hipoalbuminemia/uremia.",
+      "maxDose": "Ajustar por nível sérico e toxicidade; cinética não linear exige cautela."
+    },
+    "doseKg": {
+      "standard": "Ataque: 15–20 mg/kg EV.",
+      "severe": "Manutenção: 4–7 mg/kg/dia.",
+      "maxDose": "Individualizar por nível sérico."
+    },
+    "indications": [
+      "Estado de mal epiléptico após benzodiazepínico",
+      "Crises focais",
+      "Crises tônico-clônicas generalizadas",
+      "Profilaxia/tratamento de crises pós-traumáticas em contextos selecionados",
+      "Epilepsia estrutural focal",
+      "Arritmias ventriculares específicas induzidas por digital em contexto histórico/selecionado"
+    ],
+    "renalAdjustment": "Sem ajuste renal fixo, mas em uremia monitorar fração livre ou corrigir interpretação do nível total.",
+    "hepaticAdjustment": "Sem ajuste hepático inicial obrigatório, mas monitorar níveis.",
+    "mechanism": "Bloqueia canais de sódio voltagem-dependentes em estado inativado, reduzindo descargas neuronais repetitivas.",
+    "onset": "EV tem ação rápida após carga; administração deve ser lenta e monitorizada.",
+    "halfLife": "Vida média variável, cerca de 22 horas, com cinética não linear/saturável.",
+    "commonAdverseEffects": [
+      "Nistagmo",
+      "Ataxia",
+      "Diplopia",
+      "Sonolência",
+      "Hiperplasia gengival",
+      "Hirsutismo",
+      "Rash cutâneo"
+    ],
+    "dangerousAdverseEffects": [
+      "Arritmias e hipotensão com infusão EV rápida",
+      "Síndrome de Stevens-Johnson/necrólise epidérmica tóxica",
+      "DRESS",
+      "Hepatotoxicidade",
+      "Depressão medular rara",
+      "Teratogenicidade/síndrome fetal da hidantoína",
+      "Toxicidade neurológica por níveis elevados"
+    ],
+    "risksByPatient": [],
+    "contraindications": [
+      "Hipersensibilidade à fenitoína ou hidantoínas",
+      "Bradicardia sinusal, bloqueio sinoatrial ou BAV de 2º/3º grau sem marcapasso",
+      "Síndrome de Adams-Stokes",
+      "História de SJS/TEN ou DRESS por fenitoína",
+      "Uso concomitante com delavirdina"
+    ],
+    "interactions": [
+      "Varfarina/DOACs: interação complexa e risco de alteração anticoagulante",
+      "Anticoncepcionais hormonais: reduz eficácia",
+      "Valproato: altera fração livre e níveis",
+      "Carbamazepina/fenobarbital: interações bidirecionais",
+      "Azólicos, amiodarona, isoniazida, metronidazol: podem aumentar níveis",
+      "Rifampicina: pode reduzir níveis"
+    ],
+    "alerts": [
+      "Infusão EV deve ser lenta e com monitorização cardíaca.",
+      "Cinética não linear: pequenos aumentos de dose podem elevar muito o nível sérico.",
+      "Monitorar nível sérico, albumina e sinais neurológicos de toxicidade.",
+      "Atenção extrema às interações por indução enzimática.",
+      "Suspender e avaliar se rash com febre, mucosite ou sintomas sistêmicos."
+    ],
+    "ref": [
+      "Goodman & Gilman 14ª Ed.",
+      "Stahl's Essential Psychopharmacology",
+      "FDA/DailyMed Phenytoin Prescribing Information",
+      "ILAE Epilepsy Guidelines",
+      "Lexicomp",
+      "Micromedex",
+      "UpToDate"
+    ]
+  },
+  "es": {
+    "name": "Fenitoína",
+    "class": "Anticonvulsivante bloqueador de canales de sodio",
+    "category": "anticonvulsivante",
+    "commercialNames": {
+      "br": [
+        "Hidantal",
+        "Epelin",
+        "Fenitoína"
+      ],
+      "ar": [
+        "Epamin",
+        "Fenitoína",
+        "Difenilhidantoína"
+      ]
+    },
+    "presentation": [
+      "Comprimido/cápsula 100 mg",
+      "Suspensión oral 125 mg/5 mL",
+      "Ampolla 250 mg/5 mL"
+    ],
+    "dose": {
+      "adulto": "Dosis de carga IV: 15–20 mg/kg. Para 70 kg: 1050–1400 mg.",
+      "manutencao": "Mantenimiento: 4–7 mg/kg/día. Para 70 kg: 280–490 mg/día.",
+      "alvoSerico": "Nivel sérico total habitual: 10–20 mcg/mL; interpretar fracción libre en hipoalbuminemia/uremia.",
+      "maxDose": "Ajustar por nivel sérico y toxicidad; cinética no lineal exige cautela."
+    },
+    "doseKg": {
+      "standard": "Carga: 15–20 mg/kg IV.",
+      "severe": "Mantenimiento: 4–7 mg/kg/día.",
+      "maxDose": "Individualizar por nivel sérico."
+    },
+    "indications": [
+      "Estado epiléptico tras benzodiacepina",
+      "Crisis focales",
+      "Crisis tónico-clónicas generalizadas",
+      "Profilaxis/tratamiento de crisis postraumáticas en contextos seleccionados",
+      "Epilepsia estructural focal",
+      "Arritmias ventriculares específicas inducidas por digital en contexto histórico/seleccionado"
+    ],
+    "renalAdjustment": "Sin ajuste renal fijo, pero en uremia monitorizar fracción libre o corregir interpretación del nivel total.",
+    "hepaticAdjustment": "Sin ajuste hepático inicial obligatorio, pero monitorizar niveles.",
+    "mechanism": "Bloquea canales de sodio voltaje-dependientes en estado inactivado, reduciendo descargas neuronales repetitivas.",
+    "onset": "IV tiene acción rápida tras carga; administración debe ser lenta y monitorizada.",
+    "halfLife": "Vida media variable, cerca de 22 horas, con cinética no lineal/saturable.",
+    "commonAdverseEffects": [
+      "Nistagmo",
+      "Ataxia",
+      "Diplopía",
+      "Somnolencia",
+      "Hiperplasia gingival",
+      "Hirsutismo",
+      "Rash cutáneo"
+    ],
+    "dangerousAdverseEffects": [
+      "Arritmias e hipotensión con infusión IV rápida",
+      "Síndrome de Stevens-Johnson/necrólisis epidérmica tóxica",
+      "DRESS",
+      "Hepatotoxicidad",
+      "Depresión medular rara",
+      "Teratogenicidad/síndrome fetal de hidantoína",
+      "Toxicidad neurológica por niveles elevados"
+    ],
+    "risksByPatient": [],
+    "contraindications": [
+      "Hipersensibilidad a fenitoína o hidantoínas",
+      "Bradicardia sinusal, bloqueo sinoauricular o BAV de 2º/3º grado sin marcapasos",
+      "Síndrome de Adams-Stokes",
+      "Antecedente de SJS/TEN o DRESS por fenitoína",
+      "Uso concomitante con delavirdina"
+    ],
+    "interactions": [
+      "Warfarina/DOACs: interacción compleja y riesgo de alteración anticoagulante",
+      "Anticonceptivos hormonales: reduce eficacia",
+      "Valproato: altera fracción libre y niveles",
+      "Carbamazepina/fenobarbital: interacciones bidireccionales",
+      "Azoles, amiodarona, isoniazida, metronidazol: pueden aumentar niveles",
+      "Rifampicina: puede reducir niveles"
+    ],
+    "alerts": [
+      "Infusión IV debe ser lenta y con monitorización cardíaca.",
+      "Cinética no lineal: pequeños aumentos de dosis pueden elevar mucho el nivel sérico.",
+      "Monitorizar nivel sérico, albúmina y signos neurológicos de toxicidad.",
+      "Atención extrema a interacciones por inducción enzimática.",
+      "Suspender y evaluar si rash con fiebre, mucositis o síntomas sistémicos."
+    ],
+    "ref": [
+      "Goodman & Gilman 14ª Ed.",
+      "Stahl's Essential Psychopharmacology",
+      "FDA/DailyMed Phenytoin Prescribing Information",
+      "ILAE Epilepsy Guidelines",
+      "Lexicomp",
+      "Micromedex",
+      "UpToDate"
+    ]
+  },
+  "name": {
+    "pt": "Fenitoína",
+    "es": "Fenitoína"
+  },
+  "keywords": [
+    "fenitoina",
+    "fenitoina",
+    "hidantal",
+    "epelin",
+    "epamin",
+    "difenilhidantoina",
+    "anticonvulsivante bloqueador de canais de sodio"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "neurologia.js"
+}

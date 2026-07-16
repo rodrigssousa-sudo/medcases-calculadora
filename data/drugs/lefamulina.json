@@ -1,0 +1,264 @@
+{
+  "id": "lefamulina",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.12)",
+  "colorTxt": "#065F46",
+  "pt": {
+    "name": "Lefamulina",
+    "class": "Pleuromutilin semi-sintético (primeiro da classe aprovado para uso sistêmico)",
+    "commercialNames": {
+      "br": [
+        "Xenleta (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Xenleta"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 600 mg",
+      "Solução para infusão EV: 150 mg/15 mL (10 mg/mL)"
+    ],
+    "dose": {
+      "adultoVO": "600 mg VO 12/12h × 5 dias",
+      "adultoEV": "150 mg EV 12/12h × 5–7 dias (infusão em 60 min)"
+    },
+    "doseKg": null,
+    "indication": "Pneumonia adquirida na comunidade (PAC) em adultos, incluindo formas causadas por patógenos atípicos (Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila) e S. pneumoniae.",
+    "spectrum": "Streptococcus pneumoniae (incluindo cepas resistentes às quinolonas e macrolídeos), Staphylococcus aureus (MSSA, MRSA), Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila, Haemophilus influenzae. Sem atividade contra Gram-negativos entéricos ou anaeróbios.",
+    "contraindications": [
+      "Hipersensibilidade às pleuromutilinas",
+      "Prolongamento congênito do intervalo QT",
+      "Uso concomitante de fármacos que prolongam QT e são substratos de CYP3A4"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Novo mecanismo de ação (inibição do peptidil transferase do ribossomo 50S) — sem resistência cruzada com macrolídeos, quinolonas ou tetraciclinas.",
+      "Prolongamento do QT — monitorar ECG em pacientes de risco.",
+      "Substrato e inibidor de CYP3A4 — múltiplas interações medicamentosas.",
+      "Não necessita ajuste renal."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CAP Guidelines 2019 / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Indicada para pneumonia adquirida na comunidade."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorar prolongamento de QT e hepatotoxicidade."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não requer suplementação pós-HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Lefamulina",
+    "class": "Pleuromutilin semisintético (primero de la clase aprobado para uso sistémico)",
+    "commercialNames": {
+      "br": [
+        "Xenleta (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Xenleta"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 600 mg",
+      "Solución para infusión EV: 150 mg/15 mL (10 mg/mL)"
+    ],
+    "dose": {
+      "adultoVO": "600 mg VO 12/12h × 5 días",
+      "adultoEV": "150 mg EV 12/12h × 5–7 días (infusión en 60 min)"
+    },
+    "doseKg": null,
+    "indication": "Neumonía adquirida en la comunidad (NAC) en adultos, incluidas formas causadas por patógenos atípicos (Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila) y S. pneumoniae.",
+    "spectrum": "Streptococcus pneumoniae (incluidas cepas resistentes a quinolonas y macrólidos), Staphylococcus aureus (MSSA, MRSA), Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila, Haemophilus influenzae. Sin actividad frente a Gramnegativos entéricos ni anaerobios.",
+    "contraindications": [
+      "Hipersensibilidad a las pleuromutilinas",
+      "Prolongación congénita del intervalo QT",
+      "Uso concomitante de fármacos que prolongan QT y son sustratos de CYP3A4"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Nuevo mecanismo de acción (inhibición del peptidil transferasa del ribosoma 50S) — sin resistencia cruzada con macrólidos, quinolonas ni tetraciclinas.",
+      "Prolongación del QT — monitorizar ECG en pacientes de riesgo.",
+      "Sustrato e inhibidor de CYP3A4 — múltiples interacciones medicamentosas.",
+      "No requiere ajuste renal."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CAP Guidelines 2019 / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Indicada para neumonía adquirida en la comunidad."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorizar prolongación del QT y hepatotoxicidad."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere suplementación post-HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Lefamulina",
+    "es": "Lefamulina"
+  },
+  "keywords": [
+    "lefamulina",
+    "xenleta (acesso limitado no brasil)",
+    "xenleta",
+    "pleuromutilin semi-sintetico (primeiro da classe aprovado para uso sistemico)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

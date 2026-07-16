@@ -1,0 +1,690 @@
+{
+  "id": "atenolol",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(239,68,68,0.13)",
+  "colorTxt": "#B91C1C",
+  "pt": {
+    "name": "Atenolol",
+    "class": "Betabloqueador beta-1 seletivo",
+    "commercialNames": {
+      "br": [
+        "Atenol",
+        "Ablok",
+        "Atenolol genérico"
+      ],
+      "ar": [
+        "Tenormin",
+        "Atenolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 25 mg",
+      "Comprimidos 50 mg",
+      "Comprimidos 100 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "25–50 mg VO 1x/dia; manutenção 50–100 mg/dia; máx 200 mg/dia",
+      "adultoGrave": "Sem formulação EV padrão disponível. Uso exclusivo VO. Ajustar dose conforme FC, PA e função renal.",
+      "pediatricaPadrao": "Não estabelecida rotineiramente em pediatria",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "200 mg/dia"
+    },
+    "therapeuticRange": "FC alvo 55–70 bpm conforme contexto clínico; controle pressórico e de angina",
+    "dilution": "Uso exclusivo via oral. Não diluir.",
+    "speed": "Administrar 1x/dia, preferencialmente pela manhã.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Fadiga",
+      "Tontura",
+      "Hipotensão",
+      "Extremidades frias",
+      "Disfunção sexual",
+      "Sonolência"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueio AV",
+      "Choque cardiogênico",
+      "Broncoespasmo",
+      "Bradicardia grave",
+      "Piora de insuficiência cardíaca"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Não suspender abruptamente — risco de angina rebote e eventos coronarianos.",
+      "Pode mascarar sintomas adrenérgicos de hipoglicemia em diabéticos.",
+      "Interações graves: verapamil, diltiazem, amiodarona, digoxina — risco de bloqueio AV e bradicardia grave."
+    ],
+    "ref": "ESC Hypertension Guidelines · ESC Chronic Coronary Syndrome Guidelines · AHA/ACC Guidelines · Goodman & Gilman · Lexicomp · Micromedex 2026 · FDA label · EMA label",
+    "pharmacologicClass": "Betabloqueador cardioseletivo de segunda geração, hidrofílico",
+    "mechanism": "Bloqueia seletivamente receptores β1-adrenérgicos cardíacos (seletividade β1:β2 ≈ 35:1 — menor que bisoprolol ~75:1), reduzindo FC, contratilidade miocárdica, condução AV, débito cardíaco e secreção de renina. Não possui atividade simpatomimética intrínseca. Hidrofílico — baixa penetração na BHE e metabolismo hepático mínimo.",
+    "pharmacodynamics": "Reduz PA, FC e consumo miocárdico de O₂. Alta hidrofilia confere menor penetração no SNC → menor incidência de pesadelos, depressão e distúrbios cognitivos comparado a betabloqueadores lipofílicos (propranolol, metoprolol). Não melhora mortalidade em ICFEr — não é um dos 3 betabloqueadores com evidência A (carvedilol, bisoprolol, metoprolol succinato).",
+    "onset": "Início do efeito em aproximadamente 1 hora após dose oral. Efeito máximo em 2–4 horas.",
+    "pharmacokinetics": {
+      "absorption": "Absorção oral de aproximadamente 50% — baixa e variável. Alimento não altera significativamente a absorção.",
+      "bioavailability": "~50% (inferior ao bisoprolol ~88%)",
+      "proteinBinding": "6–16% (muito baixa — contribui para dialisabilidade)",
+      "vd": "~0,7 L/kg (hidrofílico — distribuição limitada ao plasma)",
+      "metabolism": "Metabolismo hepático mínimo (<10%). Não substrato relevante de CYP. Ausência de efeito de primeiro passo significativo. Sem impacto de polimorfismo CYP2D6.",
+      "halfLife": "6–9 horas (permite posologia 1x/dia em HTA)",
+      "elimination": "Predominantemente renal (>85–90% inalterado). Por isso requer ajuste em IR moderada-grave (ClCr ≤ 35 mL/min) e suplementação pós-HD.",
+      "dialysability": "Significativamente removido por hemodiálise (~50%). Administrar dose suplementar de 25–50 mg após cada sessão de HD."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensão arterial sistêmica",
+        "Angina estável crônica",
+        "Pós-infarto agudo do miocárdio (redução de mortalidade)"
+      ],
+      "offLabel": [
+        "Controle da frequência ventricular em fibrilação atrial",
+        "Taquicardia sinusal inapropriada",
+        "Profilaxia de enxaqueca (segunda linha)",
+        "Hipertireoidismo sintomático (controle de taquicardia)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Choque cardiogênico",
+        "Bradicardia sinusal sintomática (FC < 50 bpm)",
+        "Bloqueio AV de 2º grau (Mobitz II) ou 3º grau sem marcapasso",
+        "ICC agudamente descompensada",
+        "Hipotensão grave (PAS < 90 mmHg)",
+        "Asma brônquica grave / broncoespasmo ativo"
+      ],
+      "relative": [
+        "DPOC moderado (preferir bisoprolol se betabloqueador for necessário)",
+        "Diabetes mellitus insulinodependente (mascaramento de taquicardia hipoglicêmica)",
+        "Fenômeno de Raynaud / doença vascular periférica grave",
+        "IR moderada-grave (ajuste obrigatório em ClCr ≤ 35 mL/min)",
+        "Feocromocitoma sem bloqueio α prévio"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamil EV / Diltiazem EV",
+          "mechanism": "Dupla inibição nodal AV (dromotrópico negativo aditivo)",
+          "consequence": "Bloqueio AV completo, parada cardíaca",
+          "management": "NÃO associar EV. Via oral com monitorização contínua apenas em contexto especializado."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efeito cronotrópico e dromotrópico negativo aditivo",
+          "consequence": "Bradicardia grave e bloqueio AV",
+          "management": "Monitorar FC e ECG. Ajustar doses. Nível terapêutico da digoxina: 0,5–0,9 ng/mL."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Efeito bradicardizante e bloqueio AV aditivos; inibição leve de CYP2D6 pela amiodarona",
+          "consequence": "Bradicardia grave e bloqueio AV de alto grau",
+          "management": "Monitorar ECG continuamente. Reduzir dose de atenolol se FC < 55 bpm."
+        },
+        {
+          "drug": "Clonidina",
+          "mechanism": "Retirada abrupta da clonidina em uso concomitante → hipertensão rebote grave por estimulação adrenérgica não antagonizada",
+          "consequence": "Crise hipertensiva grave",
+          "management": "Descontinuar atenolol antes de suspender clonidina. Suspensão gradual de ambos."
+        },
+        {
+          "drug": "Insulina / sulfonilureias",
+          "mechanism": "Mascaramento da taquicardia reflexa da hipoglicemia (β1) e potencialização da hipoglicemia (β2 de atenolol é parcialmente ativo em doses altas)",
+          "consequence": "Hipoglicemia grave não reconhecida",
+          "management": "Monitorar glicemia com maior frequência. Orientar paciente: sudorese persiste como sinal alternativo."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, diclofenaco)",
+          "mechanism": "Antagonismo do efeito anti-hipertensivo por inibição de prostaglandinas vasodilatadoras e retenção de sódio/água",
+          "consequence": "Redução do controle pressórico",
+          "management": "Monitorar PA. Preferir paracetamol quando possível."
+        },
+        {
+          "drug": "Outros anti-hipertensivos (IECA, BRA, diuréticos, anlodipino)",
+          "mechanism": "Efeito hipotensor aditivo",
+          "consequence": "Hipotensão excessiva, especialmente em idosos",
+          "management": "Monitorar PA regularmente, especialmente ao iniciar nova associação."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC e PA em repouso",
+        "ECG (intervalo PR, ritmo)",
+        "Função renal — creatinina e ClCr (obrigatório por eliminação renal >85%)",
+        "Glicemia basal em diabéticos",
+        "Sintomas respiratórios (DPOC/asma)"
+      ],
+      "followUp": [
+        "FC alvo (HTA/angina: 55–70 bpm; IAM pós: < 70 bpm)",
+        "PA a cada consulta",
+        "Função renal a cada 6–12 meses ou após mudança de dose em IR",
+        "Sintomas de hipotensão ortostática (especialmente idosos com IR)",
+        "ECG anual ou se sintomas de bloqueio/arritmia"
+      ],
+      "icc": [
+        "Atenolol NÃO é indicado para ICFEr — monitorar sinais de descompensação se em uso por outra indicação",
+        "Peso diário e edemas periféricos",
+        "Classe funcional NYHA"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (FC < 40 bpm)",
+        "Hipotensão",
+        "Bloqueio AV (1º, 2º ou 3º grau)",
+        "Broncoespasmo",
+        "Hipoglicemia (especialmente em diabéticos)",
+        "Letargia e confusão mental (raro por hidrofilia)"
+      ],
+      "management": [
+        "1. Carvão ativado se ingesta recente < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia; repetir se necessário (máx 3 mg)",
+        "3. Glucagon 5–10 mg IV bolus → infusão 1–5 mg/h (antídoto específico — ativa adenilciclase independente de β1)",
+        "4. Dobutamina ou isoproterenol em hipotensão refratária",
+        "5. Emulsão lipídica IV 20% (menor eficácia que em agentes lipofílicos — atenolol é hidrofílico)",
+        "6. Marcapasso transcutâneo ou transvenoso em BAV refratário",
+        "7. Hemodiálise eficaz (~50% removido) — considerar em intoxicação grave",
+        "8. ECMO em colapso circulatório refratário"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "IR moderada-grave: ajuste obrigatório em ClCr ≤ 35 mL/min. ClCr 15–35: dose máx 50 mg/dia ou 100 mg a cada 48h. ClCr < 15: máx 25 mg a cada 96h. HD: suplementar 25–50 mg pós-sessão (~50% removido). Betabloqueador com maior dependência renal da classe.",
+      "obesity": "Obesidade: biodisponibilidade pode ser variável. Titular pela resposta clínica (FC e PA). Não é preferido em síndrome metabólica sem DAC/HTA indicativa.",
+      "geriatrics": "Idoso: maior risco de acúmulo por redução do ClCr. Iniciar com 25 mg/dia e monitorar função renal regularmente. Hidrofílico — menor risco de pesadelos e efeitos cognitivos que metoprolol. Risco aumentado de hipotensão ortostática e quedas.",
+      "pregnancy": "Gestação: pode causar bradicardia fetal, RCIU e hipoglicemia neonatal. Usar apenas se benefício superar risco. Em HTA gestacional, labetalol e nifedipina de liberação controlada são preferidos. Se mantido, interromper 48–72h antes do parto.",
+      "lactation": "Lactação: excretado no leite materno em concentrações consideráveis. Monitorar lactente para bradicardia e sonolência. Considerar alternativa (propranolol tem menor relação leite/plasma).",
+      "hepaticImpairment": "Hepatopatia: metabolismo hepático mínimo (<10%) — sem ajuste hepático necessário. A eliminação renal predominante mantém o perfil farmacocinético mesmo em cirrose.",
+      "dpoc": "DPOC: seletividade β1:β2 ~35:1 — menor que bisoprolol (~75:1). Em DPOC com necessidade de betabloqueador (ICC/DAC), preferir bisoprolol. Atenolol pode ser usado com cautela em DPOC leve-moderado estável. Contraindicado em broncoespasmo ativo."
+    },
+    "hepaticDose": {
+      "required": false,
+      "message": "Hepatopatia: sem ajuste necessário. Metabolismo hepático mínimo (<10%) — eliminação renal predominante não é afetada por disfunção hepática."
+    },
+    "patientEducation": [
+      "Tomar sempre no mesmo horário, preferencialmente pela manhã.",
+      "Nunca interromper abruptamente — risco de angina rebote e eventos coronarianos.",
+      "Monitorar PA e FC regularmente em casa se possível.",
+      "Levantar lentamente para evitar tontura e quedas.",
+      "Diabéticos: taquicardia da hipoglicemia pode não aparecer — monitorar glicemia com frequência.",
+      "Comunicar imediatamente: FC < 50 bpm, tontura intensa, falta de ar ou inchaço nos pés."
+    ],
+    "clinicalPearls": [
+      "Eliminação renal >85%: único betabloqueador da classe com dialisabilidade clinicamente relevante (~50% removido por HD) — suplementação pós-diálise obrigatória.",
+      "Hidrofílico: menor penetração na BHE → menos pesadelos, depressão e disfunção sexual comparado ao propranolol e metoprolol.",
+      "Seletividade β1:β2 ~35:1 — intermediária entre atenolol e bisoprolol (~75:1). Em DPOC + ICC, preferir bisoprolol.",
+      "NÃO é um dos 3 betabloqueadores com evidência A para ICFEr (apenas carvedilol, bisoprolol e metoprolol succinato). Não deve ser substituído por atenolol em ICC.",
+      "ONTARGET/JNC 8: atenolol foi questionado como agente de primeira linha para HTA em relação a outros anti-hipertensivos, com menor proteção para AVC comparado a IECA e bloqueadores de cálcio em alguns estudos."
+    ],
+    "guidelineRecommendations": [
+      "ESC/AHA: atenolol pode ser utilizado em HTA e doença coronariana, porém não é betabloqueador de primeira linha para ICFEr (sem evidência de redução de mortalidade).",
+      "AHA/ACC/HFSA 2022: betabloqueadores com evidência A para ICFEr são exclusivamente carvedilol, bisoprolol e metoprolol succinato LP — atenolol não está incluído.",
+      "ESC Chronic Coronary Syndromes 2023: betabloqueadores recomendados no pós-IAM — atenolol historicamente usado mas estudos mais recentes favorecem carvedilol ou metoprolol succinato."
+    ],
+    "incompatibilities": "Formulação oral exclusiva. Sem incompatibilidades IV a relatar.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": true,
+        "obs": "Diálise peritoneal: alguma remoção possível. Monitorar FC e PA. Manter dose ajustada ao ClCr residual."
+      },
+      "cvvh": {
+        "removido": true,
+        "obs": "CVVH/CVVHD/CVVHDF: atenolol é removido por terapias de substituição renal contínua (hidrofílico + baixa ligação proteica ~6–16%). Monitorar FC. Considerar suplementação de 25 mg se FC aumentar após sessão."
+      }
+    },
+    "prescriptionErrors": [
+      "Não ajustar dose em IR moderada-grave (ClCr ≤ 35 mL/min) — acúmulo resulta em bradicardia e hipotensão graves.",
+      "Não suplementar pós-HD — atenolol é ~50% removido por hemodiálise, com risco de recorrência de taquicardia/HTA pós-sessão.",
+      "Usar atenolol como betabloqueador para ICFEr — não tem evidência de redução de mortalidade; usar carvedilol, bisoprolol ou metoprolol succinato.",
+      "Suspender abruptamente no perioperatório — risco de angina rebote e IAM em pacientes com DAC.",
+      "Prescrevê-lo como primeira escolha em DPOC + ICC — bisoprolol é preferencial pela maior seletividade β1 (75:1 vs 35:1).",
+      "Não orientar paciente sobre mascaramento de taquicardia hipoglicêmica em diabéticos tratados com insulina."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Atenolol é eliminado predominantemente pelos rins (~90%). Ajuste obrigatório em ClCr ≤ 35 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "50–100 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose e intervalo habituais. Sem ajuste necessário."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "25–50 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 15–35 mL/min: reduzir dose para 25–50 mg/dia ou intervalar a cada 48h. Monitorar FC e PA."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "25 mg",
+          "intervalo": "a cada 48h",
+          "doseMaxima": "25 mg/48h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 15–35 mL/min (grave): máx 25 mg a cada 48h. Risco elevado de acúmulo e bradicardia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "25 mg",
+          "intervalo": "a cada 96h",
+          "doseMaxima": "25 mg/96h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 15 mL/min ou anúria: máx 25 mg a cada 96h com monitorização intensiva. Avaliar alternativas."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "25–50 mg",
+          "intervalo": "Pós-HD (em dias de diálise)",
+          "doseMaxima": "50 mg/sessão HD",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Atenolol é significativamente removido por hemodiálise (~50%). Administrar dose suplementar de 25–50 mg após cada sessão."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Betabloqueador dependente de eliminação renal (~90%). Monitorar FC, PA e função renal. Ajuste obrigatório em ClCr ≤ 35 mL/min."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ESC Hypertension Guidelines 2023",
+        "ESC Chronic Coronary Syndrome Guidelines 2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "AHA/ACC Hypertension Guideline 2017",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA label",
+        "EMA label"
+      ],
+      "note": "Betabloqueador β1 seletivo (β1:β2 ~35:1) hidrofílico VO. Eliminação renal >85% — único da classe com dialisabilidade relevante (~50% HD) e ajuste obrigatório em ClCr ≤ 35 mL/min. Sem evidência de redução de mortalidade em ICFEr. Auditoria V2 completada 2026-06."
+    }
+  },
+  "es": {
+    "name": "Atenolol",
+    "class": "Betabloqueante beta-1 selectivo",
+    "commercialNames": {
+      "br": [
+        "Atenol",
+        "Ablok",
+        "Atenolol genérico"
+      ],
+      "ar": [
+        "Tenormin",
+        "Atenolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 25 mg",
+      "Comprimidos 50 mg",
+      "Comprimidos 100 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "25–50 mg VO 1 vez/día; mantenimiento 50–100 mg/día; máx 200 mg/día",
+      "adultoGrave": "Sin formulación IV estándar disponible. Uso exclusivo VO. Ajustar dosis según FC, PA y función renal.",
+      "pediatricaPadrao": "No establecida de forma rutinaria en pediatría",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "200 mg/día"
+    },
+    "therapeuticRange": "FC objetivo 55–70 lpm según contexto clínico; control tensional y de angina",
+    "dilution": "Uso exclusivo vía oral. No diluir.",
+    "speed": "Administrar 1 vez/día, preferiblemente por la mañana.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Fatiga",
+      "Mareos",
+      "Hipotensión",
+      "Extremidades frías",
+      "Disfunción sexual",
+      "Somnolencia"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueo AV",
+      "Shock cardiogénico",
+      "Broncoespasmo",
+      "Bradicardia grave",
+      "Empeoramiento de insuficiencia cardíaca"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "No suspender abruptamente — riesgo de angina de rebote y eventos coronarios.",
+      "Puede enmascarar síntomas adrenérgicos de hipoglucemia en diabéticos.",
+      "Interacciones graves: verapamilo, diltiazem, amiodarona, digoxina — riesgo de bloqueo AV y bradicardia grave."
+    ],
+    "ref": "ESC Hypertension Guidelines · ESC Chronic Coronary Syndrome Guidelines · AHA/ACC Guidelines · Goodman & Gilman · Lexicomp · Micromedex 2026 · FDA label · EMA label",
+    "pharmacologicClass": "Betabloqueante cardioselectivo de segunda generación, hidrofílico",
+    "mechanism": "Bloquea selectivamente receptores β1-adrenérgicos cardíacos (selectividad β1:β2 ≈ 35:1 — menor que bisoprolol ~75:1), reduciendo FC, contractilidad miocárdica, conducción AV, gasto cardíaco y secreción de renina. Sin actividad simpatomimética intrínseca. Hidrofílico — baja penetración en BHE y metabolismo hepático mínimo.",
+    "pharmacodynamics": "Reduce PA, FC y consumo miocárdico de O₂. La elevada hidrofilia confiere menor penetración en SNC → menor incidencia de pesadillas, depresión y trastornos cognitivos comparado con betabloqueantes lipofílicos (propranolol, metoprolol). No mejora mortalidad en ICFEr — no es uno de los 3 betabloqueantes con evidencia A (carvedilol, bisoprolol, metoprolol succinato).",
+    "onset": "Inicio del efecto en aproximadamente 1 hora tras dosis oral. Efecto máximo entre 2–4 horas.",
+    "pharmacokinetics": {
+      "absorption": "Absorción oral de aproximadamente 50% — baja y variable. El alimento no altera significativamente la absorción.",
+      "bioavailability": "~50% (inferior al bisoprolol ~88%)",
+      "proteinBinding": "6–16% (muy baja — contribuye a la diálisis)",
+      "vd": "~0,7 L/kg (hidrofílico — distribución limitada al plasma)",
+      "metabolism": "Metabolismo hepático mínimo (<10%). No es sustrato relevante de CYP. Sin efecto de primer paso significativo. Sin impacto del polimorfismo CYP2D6.",
+      "halfLife": "6–9 horas (permite posología 1 vez/día en HTA)",
+      "elimination": "Predominantemente renal (>85–90% sin cambios). Por eso requiere ajuste en IR moderada-grave (ClCr ≤ 35 mL/min) y suplementación post-HD.",
+      "dialysability": "Significativamente eliminado por hemodiálisis (~50%). Administrar dosis suplementaria de 25–50 mg después de cada sesión de HD."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensión arterial sistémica",
+        "Angina estable crónica",
+        "Post-infarto agudo de miocardio (reducción de mortalidad)"
+      ],
+      "offLabel": [
+        "Control de frecuencia ventricular en fibrilación auricular",
+        "Taquicardia sinusal inapropiada",
+        "Profilaxis de migraña (segunda línea)",
+        "Hipertiroidismo sintomático (control de taquicardia)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Shock cardiogénico",
+        "Bradicardia sinusal sintomática (FC < 50 lpm)",
+        "Bloqueo AV de 2º grado (Mobitz II) o 3er grado sin marcapasos",
+        "ICC agudamente descompensada",
+        "Hipotensión grave (PAS < 90 mmHg)",
+        "Asma bronquial grave / broncoespasmo activo"
+      ],
+      "relative": [
+        "EPOC moderado (preferir bisoprolol si se requiere betabloqueante)",
+        "Diabetes mellitus insulinodependiente (enmascaramiento de taquicardia hipoglucémica)",
+        "Fenómeno de Raynaud / enfermedad vascular periférica grave",
+        "IR moderada-grave (ajuste obligatorio con ClCr ≤ 35 mL/min)",
+        "Feocromocitoma sin bloqueo α previo"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamilo EV / Diltiazem EV",
+          "mechanism": "Doble inhibición nodal AV (dromotrópico negativo aditivo)",
+          "consequence": "Bloqueo AV completo, paro cardíaco",
+          "management": "NO asociar EV. Vía oral con monitorización continua solo en contexto especializado."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efecto cronotrópico y dromotrópico negativo aditivo",
+          "consequence": "Bradicardia grave y bloqueo AV",
+          "management": "Monitorizar FC y ECG. Ajustar dosis. Nivel terapéutico de digoxina: 0,5–0,9 ng/mL."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Efecto bradicardizante y bloqueo AV aditivos; inhibición leve de CYP2D6 por amiodarona",
+          "consequence": "Bradicardia grave y bloqueo AV de alto grado",
+          "management": "Monitorizar ECG continuamente. Reducir dosis de atenolol si FC < 55 lpm."
+        },
+        {
+          "drug": "Clonidina",
+          "mechanism": "Retirada abrupta de clonidina en uso concomitante → hipertensión de rebote grave por estimulación adrenérgica no antagonizada",
+          "consequence": "Crisis hipertensiva grave",
+          "management": "Descontinuar atenolol antes de suspender clonidina. Suspensión gradual de ambos."
+        },
+        {
+          "drug": "Insulina / sulfonilureas",
+          "mechanism": "Enmascaramiento de la taquicardia refleja de hipoglucemia (β1) y potenciación de la hipoglucemia",
+          "consequence": "Hipoglucemia grave no reconocida",
+          "management": "Monitorizar glucemia con mayor frecuencia. Orientar al paciente: la sudoración persiste como signo alternativo."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, diclofenaco)",
+          "mechanism": "Antagonismo del efecto antihipertensivo por inhibición de prostaglandinas vasodilatadoras y retención de sodio/agua",
+          "consequence": "Reducción del control presórico",
+          "management": "Monitorizar PA. Preferir paracetamol cuando sea posible."
+        },
+        {
+          "drug": "Otros antihipertensivos (IECA, ARA, diuréticos, amlodipino)",
+          "mechanism": "Efecto hipotensor aditivo",
+          "consequence": "Hipotensión excesiva, especialmente en ancianos",
+          "management": "Monitorizar PA regularmente, especialmente al iniciar nueva combinación."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC y PA en reposo",
+        "ECG (intervalo PR, ritmo)",
+        "Función renal — creatinina y ClCr (obligatorio por eliminación renal >85%)",
+        "Glucemia basal en diabéticos",
+        "Síntomas respiratorios (EPOC/asma)"
+      ],
+      "followUp": [
+        "FC objetivo (HTA/angina: 55–70 lpm; IAM post: < 70 lpm)",
+        "PA en cada consulta",
+        "Función renal cada 6–12 meses o tras cambio de dosis en IR",
+        "Síntomas de hipotensión ortostática (especialmente ancianos con IR)",
+        "ECG anual o si síntomas de bloqueo/arritmia"
+      ],
+      "icc": [
+        "Atenolol NO está indicado para ICFEr — monitorizar signos de descompensación si en uso por otra indicación",
+        "Peso diario y edemas periféricos",
+        "Clase funcional NYHA"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (FC < 40 lpm)",
+        "Hipotensión",
+        "Bloqueo AV (1º, 2º o 3er grado)",
+        "Broncoespasmo",
+        "Hipoglucemia (especialmente en diabéticos)",
+        "Letargia y confusión mental (raro por hidrofilia)"
+      ],
+      "management": [
+        "1. Carbón activado si ingesta reciente < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia; repetir si necesario (máx 3 mg)",
+        "3. Glucagón 5–10 mg IV bolo → infusión 1–5 mg/h (antídoto específico — activa adenilciclasa independiente de β1)",
+        "4. Dobutamina o isoproterenol en hipotensión refractaria",
+        "5. Emulsión lipídica IV 20% (menor eficacia que en agentes lipofílicos — atenolol es hidrofílico)",
+        "6. Marcapasos transcutáneo o transvenoso en BAV refractario",
+        "7. Hemodiálisis eficaz (~50% eliminado) — considerar en intoxicación grave",
+        "8. ECMO en colapso circulatorio refractario"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "IR moderada-grave: ajuste obligatorio con ClCr ≤ 35 mL/min. ClCr 15–35: dosis máx 50 mg/día o 100 mg cada 48h. ClCr < 15: máx 25 mg cada 96h. HD: suplementar 25–50 mg post-sesión (~50% eliminado). Betabloqueante con mayor dependencia renal de la clase.",
+      "obesity": "Obesidad: biodisponibilidad puede ser variable. Titular por respuesta clínica (FC y PA). No preferido en síndrome metabólico sin DAC/HTA indicativa.",
+      "geriatrics": "Anciano: mayor riesgo de acumulación por reducción del ClCr. Iniciar con 25 mg/día y monitorizar función renal regularmente. Hidrofílico — menor riesgo de pesadillas y efectos cognitivos que metoprolol. Mayor riesgo de hipotensión ortostática y caídas.",
+      "pregnancy": "Embarazo: puede causar bradicardia fetal, RCIU e hipoglucemia neonatal. Usar solo si el beneficio supera el riesgo. En HTA gestacional, labetalol y nifedipino de liberación controlada son preferidos. Si se mantiene, interrumpir 48–72h antes del parto.",
+      "lactation": "Lactancia: excretado en leche materna en concentraciones considerables. Monitorizar lactante para bradicardia y somnolencia. Considerar alternativa (propranolol tiene menor relación leche/plasma).",
+      "hepaticImpairment": "Hepatopatía: metabolismo hepático mínimo (<10%) — sin ajuste hepático necesario. La eliminación renal predominante mantiene el perfil farmacocinético incluso en cirrosis.",
+      "dpoc": "EPOC: selectividad β1:β2 ~35:1 — menor que bisoprolol (~75:1). En EPOC con necesidad de betabloqueante (ICC/DAC), preferir bisoprolol. Atenolol puede usarse con cautela en EPOC leve-moderado estable. Contraindicado en broncoespasmo activo."
+    },
+    "hepaticDose": {
+      "required": false,
+      "message": "Hepatopatía: sin ajuste necesario. Metabolismo hepático mínimo (<10%) — la eliminación renal predominante no se ve afectada por disfunción hepática."
+    },
+    "patientEducation": [
+      "Tomar siempre a la misma hora, preferiblemente por la mañana.",
+      "Nunca suspender bruscamente — riesgo de angina rebote y eventos coronarios.",
+      "Controlar PA y FC regularmente en casa si es posible.",
+      "Levantarse lentamente para evitar mareos y caídas.",
+      "Diabéticos: la taquicardia de la hipoglucemia puede no aparecer — monitorizar glucemia con frecuencia.",
+      "Comunicar inmediatamente: FC < 50 lpm, mareos intensos, falta de aire o hinchazón en los pies."
+    ],
+    "clinicalPearls": [
+      "Eliminación renal >85%: único betabloqueante de la clase con diálisis clínicamente relevante (~50% eliminado por HD) — suplementación post-diálisis obligatoria.",
+      "Hidrofílico: menor penetración en BHE → menos pesadillas, depresión y disfunción sexual comparado con propranolol y metoprolol.",
+      "Selectividad β1:β2 ~35:1 — intermedia entre atenolol y bisoprolol (~75:1). En EPOC + ICC, preferir bisoprolol.",
+      "NO es uno de los 3 betabloqueantes con evidencia A para ICFEr (solo carvedilol, bisoprolol y metoprolol succinato). No debe sustituirse por atenolol en ICC.",
+      "ONTARGET/JNC 8: atenolol fue cuestionado como agente de primera línea para HTA frente a otros antihipertensivos, con menor protección para ACV comparado con IECA y bloqueadores de calcio en algunos estudios."
+    ],
+    "guidelineRecommendations": [
+      "ESC/AHA: atenolol puede utilizarse en HTA y enfermedad coronaria, pero no es betabloqueante de primera línea para ICFEr (sin evidencia de reducción de mortalidad).",
+      "AHA/ACC/HFSA 2022: los betabloqueantes con evidencia A para ICFEr son exclusivamente carvedilol, bisoprolol y metoprolol succinato LP — atenolol no está incluido.",
+      "ESC Chronic Coronary Syndromes 2023: betabloqueantes recomendados en post-IAM — atenolol históricamente utilizado pero estudios más recientes favorecen carvedilol o metoprolol succinato."
+    ],
+    "incompatibilities": "Formulación oral exclusiva. Sin incompatibilidades IV a reportar.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": true,
+        "obs": "Diálisis peritoneal: algo de eliminación posible. Monitorizar FC y PA. Mantener dosis ajustada al ClCr residual."
+      },
+      "cvvh": {
+        "removido": true,
+        "obs": "CVVH/CVVHD/CVVHDF: atenolol es eliminado por terapias de sustitución renal continua (hidrofílico + baja unión proteica ~6–16%). Monitorizar FC. Considerar suplementación de 25 mg si FC aumenta tras la sesión."
+      }
+    },
+    "prescriptionErrors": [
+      "No ajustar dosis en IR moderada-grave (ClCr ≤ 35 mL/min) — la acumulación resulta en bradicardia e hipotensión graves.",
+      "No suplementar post-HD — atenolol es ~50% eliminado por hemodiálisis, con riesgo de recurrencia de taquicardia/HTA tras la sesión.",
+      "Usar atenolol como betabloqueante para ICFEr — no tiene evidencia de reducción de mortalidad; usar carvedilol, bisoprolol o metoprolol succinato.",
+      "Suspender abruptamente en el perioperatorio — riesgo de angina rebote e IAM en pacientes con DAC.",
+      "Prescribirlo como primera elección en EPOC + ICC — bisoprolol es preferente por mayor selectividad β1 (75:1 vs 35:1).",
+      "No orientar al paciente sobre el enmascaramiento de la taquicardia hipoglucémica en diabéticos tratados con insulina."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Atenolol se elimina predominantemente por vía renal (~90%). Ajuste obligatorio con ClCr ≤ 35 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "50–100 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis e intervalo habituales. Sin ajuste necesario."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "25–50 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 15–35 mL/min: reducir dosis a 25–50 mg/día o intervalar cada 48h. Monitorizar FC y PA."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "25 mg",
+          "intervalo": "a cada 48h",
+          "doseMaxima": "25 mg/48h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 15–35 mL/min (grave): máx 25 mg cada 48h. Riesgo elevado de acumulación y bradicardia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "25 mg",
+          "intervalo": "a cada 96h",
+          "doseMaxima": "25 mg/96h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 15 mL/min o anuria: máx 25 mg cada 96h con monitorización intensiva. Evaluar alternativas."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "25–50 mg",
+          "intervalo": "Pós-HD (em dias de diálise)",
+          "doseMaxima": "50 mg/sessão HD",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Atenolol es significativamente removido por hemodiálisis (~50%). Administrar dosis suplementaria de 25–50 mg después de cada sesión."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Betabloqueante dependiente de eliminación renal (~90%). Monitorizar FC, PA y función renal. Ajuste obligatorio con ClCr ≤ 35 mL/min."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ESC Hypertension Guidelines 2023",
+        "ESC Chronic Coronary Syndrome Guidelines 2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "AHA/ACC Hypertension Guideline 2017",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA label",
+        "EMA label"
+      ],
+      "note": "Betabloqueante β1 selectivo (β1:β2 ~35:1) hidrofílico VO. Eliminación renal >85% — único de la clase con diálisis relevante (~50% HD) y ajuste obligatorio con ClCr ≤ 35 mL/min. Sin evidencia de reducción de mortalidad en ICFEr. Auditoría V2 completada 2026-06."
+    }
+  },
+  "name": {
+    "pt": "Atenolol",
+    "es": "Atenolol"
+  },
+  "keywords": [
+    "atenolol",
+    "atenol",
+    "ablok",
+    "atenolol generico",
+    "tenormin",
+    "betabloqueador beta-1 seletivo"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

@@ -1,0 +1,295 @@
+{
+  "id": "tedizolida",
+  "category": "atb",
+  "icon": "🔵",
+  "color": "rgba(99,102,241,0.15)",
+  "colorTxt": "#6366F1",
+  "pt": {
+    "name": "Tedizolida",
+    "class": "Oxazolidinona de 2ª geração",
+    "commercialNames": {
+      "br": [
+        "Sivextro"
+      ],
+      "ar": [
+        "Sivextro"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 200 mg",
+      "Pó para solução injetável EV: 200 mg/frasco"
+    ],
+    "dose": {
+      "adultoVO": "200 mg VO 1x/dia por 6 dias",
+      "adultoEV": "200 mg EV 1x/dia por 6 dias (infusão 60 min)"
+    },
+    "doseKg": {
+      "standard": "Dose fixa 200 mg/dia (não baseado em peso)"
+    },
+    "mechanism": "Liga-se à subunidade 23S do RNA ribossomal 50S, inibindo a formação do complexo de iniciação da síntese proteica. Ativo contra MRSA, VRSA, VRE e Staphylococcus resistentes.",
+    "onset": "Biodisponibilidade oral ~91%. Tmáx ~3 h.",
+    "halfLife": "Meia-vida ~12 h. Eliminação hepática predominante (>70%).",
+    "therapeuticRange": "Bacteriostático. AUC/CIM como parâmetro PK/PD. Menor inibição da MAO que linezolida.",
+    "dilution": "Reconstituir 200 mg em 4 mL de água estéril; diluir em 250 mL de SF 0,9%.",
+    "speed": "Infundir em 60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Cefaleia",
+      "Diarreia",
+      "Vômitos",
+      "Tontura"
+    ],
+    "dangerousAdverseEffects": [
+      "Mielossupressão (trombocitopenia, neutropenia — uso prolongado > 6 dias)",
+      "Neuropatia óptica (uso prolongado)",
+      "Síndrome serotoninérgica (inibição fraca da MAO)"
+    ],
+    "contraindications": [
+      "Hipersensibilidade à tedizolida ou oxazolidinonas",
+      "Uso com agentes serotoninérgicos (risco de síndrome serotoninérgica)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Curso limitado a 6 dias — mielossupressão rara com uso curto mas possível em uso prolongado.",
+      "Menor interação com IMAOs e serotoninérgicos que a linezolida, mas monitorar sintomas serotoninérgicos.",
+      "Não requer ajuste renal — vantagem em pacientes com DRC."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Sivextro / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual para infecções de pele por Gram-positivos."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorar mielossupressão em tratamentos prolongados."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não removida significativamente por hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Tedizolida",
+    "class": "Oxazolidinona de 2ª generación",
+    "commercialNames": {
+      "br": [
+        "Sivextro"
+      ],
+      "ar": [
+        "Sivextro"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 200 mg",
+      "Polvo para solución inyectable EV: 200 mg/frasco"
+    ],
+    "dose": {
+      "adultoVO": "200 mg VO 1 vez/día por 6 días",
+      "adultoEV": "200 mg EV 1 vez/día por 6 días (infusión 60 min)"
+    },
+    "doseKg": {
+      "standard": "Dosis fija 200 mg/día (no basado en peso)"
+    },
+    "mechanism": "Se une a la subunidad 23S del RNA ribosomal 50S, inhibiendo la formación del complejo de iniciación de la síntesis proteica. Activo contra MRSA, VRSA, VRE y Staphylococcus resistentes.",
+    "onset": "Biodisponibilidad oral ~91%. Tmáx ~3 h.",
+    "halfLife": "Semivida ~12 h. Eliminación hepática predominante (>70%).",
+    "therapeuticRange": "Bacteriostático. AUC/CIM como parámetro PK/PD. Menor inhibición de MAO que linezolida.",
+    "dilution": "Reconstituir 200 mg en 4 mL de agua estéril; diluir en 250 mL de SF 0,9%.",
+    "speed": "Infundir en 60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Cefalea",
+      "Diarrea",
+      "Vómitos",
+      "Mareos"
+    ],
+    "dangerousAdverseEffects": [
+      "Mielosupresión (trombocitopenia, neutropenia — uso prolongado > 6 días)",
+      "Neuropatía óptica (uso prolongado)",
+      "Síndrome serotoninérgica (inhibición débil de MAO)"
+    ],
+    "contraindications": [
+      "Hipersensibilidad a tedizolida u oxazolidinonas",
+      "Uso con agentes serotoninérgicos (riesgo de síndrome serotoninérgica)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Curso limitado a 6 días — mielosupresión rara con uso corto pero posible en uso prolongado.",
+      "Menor interacción con IMAOs y serotoninérgicos que linezolida, pero monitorizar síntomas serotoninérgicos.",
+      "No requiere ajuste renal — ventaja en pacientes con ERC."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Sivextro / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual para infecciones de piel por Grampositivos."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorizar mielosupresión en tratamientos prolongados."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No removida significativamente por hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Tedizolida",
+    "es": "Tedizolida"
+  },
+  "keywords": [
+    "tedizolida",
+    "sivextro",
+    "oxazolidinona de 2ª geracao"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

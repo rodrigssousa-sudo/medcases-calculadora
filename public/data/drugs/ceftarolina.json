@@ -1,0 +1,296 @@
+{
+  "id": "ceftarolina",
+  "category": "atb",
+  "icon": "💉",
+  "color": "rgba(56,189,248,0.15)",
+  "colorTxt": "#38BDF8",
+  "pt": {
+    "name": "Ceftarolina",
+    "class": "Cefalosporina de 5ª geração (anti-MRSA)",
+    "commercialNames": {
+      "br": [
+        "Zinforo"
+      ],
+      "ar": [
+        "Zinforo",
+        "Teflaro"
+      ]
+    },
+    "presentation": [
+      "Pó para solução injetável EV: 400 mg/frasco",
+      "Pó para solução injetável EV: 600 mg/frasco"
+    ],
+    "dose": {
+      "adultoEV": "600 mg EV 12/12h (infusão 60 min)",
+      "pediatrica": "600 mg EV 8/8h–12/12h (8–12 mg/kg/dose)"
+    },
+    "doseKg": {
+      "pediatrica": "8–12 mg/kg/dose EV 8/8h–12/12h (máx 600 mg/dose)"
+    },
+    "mechanism": "Liga-se à PBP2a (presente no MRSA) e às demais PBPs, inibindo a síntese da parede celular. Única cefalosporina com atividade anti-MRSA documentada.",
+    "onset": "EV: pico sérico ao final da infusão de 60 min.",
+    "halfLife": "Meia-vida 2,6 h (função renal normal). Eliminação renal ~64% inalterada.",
+    "therapeuticRange": "Tempo acima da CIM (T>CIM ≥ 60%) como parâmetro PK/PD.",
+    "dilution": "Reconstituir 400 mg ou 600 mg em 20 mL de água estéril; diluir em 50–250 mL de SF 0,9% ou SG 5%.",
+    "speed": "Infundir em 60 minutos.",
+    "commonAdverseEffects": [
+      "Diarreia",
+      "Náuseas",
+      "Rash cutâneo",
+      "Prurido",
+      "Flebite no local de infusão"
+    ],
+    "dangerousAdverseEffects": [
+      "Anemia hemolítica por Coombs positivo direto",
+      "Hipersensibilidade grave / anafilaxia",
+      "Colite por C. difficile",
+      "Convulsões (especialmente em insuficiência renal)"
+    ],
+    "contraindications": [
+      "Hipersensibilidade a cefalosporinas ou penicilinas (reação cruzada)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar hemograma: anemia hemolítica com teste de Coombs positivo relatada em ~10% dos pacientes.",
+      "Requer ajuste de dose em insuficiência renal (eliminação renal ~64%).",
+      "Reservar para infecções por MRSA ou pneumonia grave sem resposta a outros agentes."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA / FDA label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1,2 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "8–12 mg/kg",
+          "intervalo": "8/8h–12/12h",
+          "doseMaxima": "600 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual para MRSA e pneumonia adquirida na comunidade."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reduzir dose em insuficiência renal moderada."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "300 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "6 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obrigatório."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "4 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar acúmulo e neurotoxicidade."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "4 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Ceftarolina",
+    "class": "Cefalosporina de 5ª generación (anti-MRSA)",
+    "commercialNames": {
+      "br": [
+        "Zinforo"
+      ],
+      "ar": [
+        "Zinforo",
+        "Teflaro"
+      ]
+    },
+    "presentation": [
+      "Polvo para solución inyectable EV: 400 mg/frasco",
+      "Polvo para solución inyectable EV: 600 mg/frasco"
+    ],
+    "dose": {
+      "adultoEV": "600 mg EV 12/12h (infusão 60 min)",
+      "pediatrica": "600 mg EV cada 8h–12h (8–12 mg/kg/dosis)"
+    },
+    "doseKg": {
+      "pediatrica": "8–12 mg/kg/dosis EV cada 8h–12h (máx 600 mg/dosis)"
+    },
+    "mechanism": "Se une a PBP2a (presente en MRSA) y a las demás PBPs, inhibiendo la síntesis de la pared celular. Única cefalosporina con actividad anti-MRSA documentada.",
+    "onset": "EV: pico sérico al final de la infusión de 60 min.",
+    "halfLife": "Semivida 2,6 h (función renal normal). Eliminación renal ~64% inalterada.",
+    "therapeuticRange": "Tiempo sobre la CIM (T>CIM ≥ 60%) como parámetro PK/PD.",
+    "dilution": "Reconstituir 400 mg o 600 mg en 20 mL de agua estéril; diluir en 50–250 mL de SF 0,9% o SG 5%.",
+    "speed": "Infundir en 60 minutos.",
+    "commonAdverseEffects": [
+      "Diarrea",
+      "Náuseas",
+      "Erupción cutánea",
+      "Prurito",
+      "Flebitis en el lugar de infusión"
+    ],
+    "dangerousAdverseEffects": [
+      "Anemia hemolítica por Coombs directo positivo",
+      "Hipersensibilidad grave / anafilaxia",
+      "Colitis por C. difficile",
+      "Convulsiones (especialmente en insuficiencia renal)"
+    ],
+    "contraindications": [
+      "Hipersensibilidad a cefalosporinas o penicilinas (reacción cruzada)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorizar hemograma: anemia hemolítica con test de Coombs positivo reportada en ~10% de pacientes.",
+      "Requiere ajuste de dosis en insuficiencia renal (eliminación renal ~64%).",
+      "Reservar para infecciones por MRSA o neumonía grave sin respuesta a otros agentes."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA / FDA label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "600 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1,2 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "8–12 mg/kg",
+          "intervalo": "8/8h–12/12h",
+          "doseMaxima": "600 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual para MRSA y neumonía adquirida en la comunidad."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "8 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducir dosis en insuficiencia renal moderada."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "300 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "600 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "6 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "300 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obligatorio."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "4 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar acumulación y neurotoxicidad."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "4 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "200 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Ceftarolina",
+    "es": "Ceftarolina"
+  },
+  "keywords": [
+    "ceftarolina",
+    "zinforo",
+    "teflaro",
+    "cefalosporina de 5ª geracao (anti-mrsa)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

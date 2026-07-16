@@ -1,0 +1,278 @@
+{
+  "id": "meropenem_vaborbactam",
+  "category": "atb",
+  "icon": "🧬",
+  "color": "rgba(220,38,38,0.15)",
+  "colorTxt": "#DC2626",
+  "pt": {
+    "name": "Meropenem + Vaborbactam",
+    "class": "Carbapenêmico + Inibidor de beta-lactamase (anti-KPC)",
+    "commercialNames": {
+      "br": [
+        "Vabomere"
+      ],
+      "ar": [
+        "Vabomere"
+      ]
+    },
+    "presentation": [
+      "Pó para solução injetável EV: 2 g/2 g (meropenem/vaborbactam) por frasco"
+    ],
+    "dose": {
+      "adultoEV": "4 g EV 8/8h (infusão 180 min)"
+    },
+    "doseKg": {
+      "adulto": "Dose fixa 4 g 8/8h (não baseado em peso em adultos)"
+    },
+    "mechanism": "Meropenem liga-se às PBPs inibindo síntese da parede celular. Vaborbactam inibe beta-lactamases classe A (especialmente KPC) por mecanismo de ácido borônico, restaurando atividade do meropenem contra Enterobacterales produtores de KPC.",
+    "onset": "EV: pico sérico ao final da infusão de 180 min.",
+    "halfLife": "Meia-vida 1,2 h (meropenem); 1,7 h (vaborbactam). Eliminação renal >90%.",
+    "therapeuticRange": "T>CIM para meropenem; AUC para vaborbactam. Infusão prolongada (3h) melhora T>CIM.",
+    "dilution": "Reconstituir 4 g em 20 mL de SF; diluir em 250 mL de SF 0,9%. Estável 4h em temperatura ambiente.",
+    "speed": "Infundir em 180 minutos (3 horas).",
+    "commonAdverseEffects": [
+      "Diarreia",
+      "Náuseas e vômitos",
+      "Cefaleia",
+      "Flebite / reação local",
+      "Elevação de transaminases"
+    ],
+    "dangerousAdverseEffects": [
+      "Convulsões (especialmente em IR ou SNC comprometido)",
+      "Colite por C. difficile",
+      "Anafilaxia / hipersensibilidade grave",
+      "Encefalopatia / mioclonias (raro)"
+    ],
+    "contraindications": [
+      "Hipersensibilidade a meropenem, vaborbactam ou carbapenêmicos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "INDICAÇÃO RESTRITA: Enterobacterales produtores de KPC — confirmação microbiológica obrigatória antes do uso.",
+      "Ajuste renal rigoroso — eliminação >90% renal; subdose aumenta risco de falha terapêutica e resistência.",
+      "NÃO cobre MBL (NDM, VIM, IMP) — considerar ceftazidima+avibactam+aztreonam se suspeita."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Vabomere / IDSA MDR Guidelines / EUCAST 2024",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "4 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual (meropenem 2 g + vaborbactam 2 g a cada 8h). Infusão obrigatória em 180 min para otimizar T>CIM do meropenem. Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "2 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: eGFR 30–49 mL/min/1,73m² → 2 g 8/8h. Manter infusão em 180 min. Subdose de vaborbactam compromete inibição de KPC — nunca reduzir abaixo da dose recomendada."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "2 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: eGFR 15–29 mL/min/1,73m² → 2 g 12/12h. Ajuste obrigatório. Risco aumentado de convulsões — monitorar SNC diariamente. Histórico de convulsão é contraindicação relativa."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: eGFR < 15 mL/min/1,73m² → 1 g 12/12h. Monitorar neurotoxicidade (convulsões, mioclonias, encefalopatia) diariamente. Eficácia pode ser subótima — avaliar alternativa se ausência de resposta em 48–72h."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: HD → 1 g 12/12h. Administrar após hemodiálise nos dias de HD. Meropenem e vaborbactam são removidos pela HD — dose suplementar de 1 g após cada sessão prolongada pode ser necessária para manter exposição de vaborbactam."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Indicado exclusivamente para KPC-CR Enterobacterales confirmados. Subdose em qualquer faixa de ClCr favorece resistência emergente ao vaborbactam. Monitorar SNC diariamente — risco de convulsão aumentado em insuficiência renal."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Vabomere (meropenem-vaborbactam)",
+        "Sanford Guide 2025",
+        "IDSA MDR Gram-Negative Guidelines 2023",
+        "EUCAST 2024",
+        "UpToDate / Lexicomp"
+      ],
+      "note": "Bloco revisado com cortes renais oficiais FDA (eGFR 30–49 / 15–29 / <15 / HD). Obs de HD atualizada com informação de remoção dialítica e dose suplementar. safetyFlags e auditNotes adicionados."
+    }
+  },
+  "es": {
+    "name": "Meropenem + Vaborbactam",
+    "class": "Carbapenémico + Inhibidor de beta-lactamasa (anti-KPC)",
+    "commercialNames": {
+      "br": [
+        "Vabomere"
+      ],
+      "ar": [
+        "Vabomere"
+      ]
+    },
+    "presentation": [
+      "Polvo para solución inyectable EV: 2 g/2 g (meropenem/vaborbactam) por frasco"
+    ],
+    "dose": {
+      "adultoEV": "4 g EV 8/8h (infusão 180 min)"
+    },
+    "doseKg": {
+      "adulto": "Dosis fija 4 g cada 8h (no basado en peso en adultos)"
+    },
+    "mechanism": "Meropenem se une a las PBPs inhibiendo la síntesis de pared celular. Vaborbactam inhibe beta-lactamasas clase A (especialmente KPC) mediante ácido borónico, restaurando la actividad del meropenem frente a Enterobacterales productores de KPC.",
+    "onset": "EV: pico sérico al final de la infusión de 180 min.",
+    "halfLife": "Semivida 1,2 h (meropenem); 1,7 h (vaborbactam). Eliminación renal >90%.",
+    "therapeuticRange": "T>CIM para meropenem; AUC para vaborbactam. Infusión prolongada (3h) mejora T>CIM.",
+    "dilution": "Reconstituir 4 g en 20 mL de SF; diluir en 250 mL de SF 0,9%. Estable 4h a temperatura ambiente.",
+    "speed": "Infundir en 180 minutos (3 horas).",
+    "commonAdverseEffects": [
+      "Diarrea",
+      "Náuseas y vómitos",
+      "Cefalea",
+      "Flebitis / reacción local",
+      "Elevación de transaminasas"
+    ],
+    "dangerousAdverseEffects": [
+      "Convulsiones (especialmente en IR o SNC comprometido)",
+      "Colitis por C. difficile",
+      "Anafilaxia / hipersensibilidad grave",
+      "Encefalopatía / mioclonías (raro)"
+    ],
+    "contraindications": [
+      "Hipersensibilidad a meropenem, vaborbactam o carbapenémicos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "INDICACIÓN RESTRINGIDA: Enterobacterales productores de KPC — confirmación microbiológica obligatoria antes del uso.",
+      "Ajuste renal riguroso — eliminación >90% renal; infradosis aumenta riesgo de fracaso terapéutico y resistencia.",
+      "NO cubre MBL (NDM, VIM, IMP) — considerar ceftazidima+avibactam+aztreonam si sospecha."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Vabomere / IDSA MDR Guidelines / EUCAST 2024",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "4 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "12 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual (meropenem 2 g + vaborbactam 2 g cada 8h). Infusión obligatoria en 180 min para optimizar T>CIM del meropenem. Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "2 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: eGFR 30–49 mL/min/1,73m² → 2 g 8/8h. Mantener infusión en 180 min. Infradosis de vaborbactam compromete inhibición de KPC — nunca reducir por debajo de la dosis recomendada."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "2 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: eGFR 15–29 mL/min/1,73m² → 2 g 12/12h. Ajuste obligatorio. Riesgo aumentado de convulsiones — monitorizar SNC diariamente. Historial de convulsión es contraindicación relativa."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: eGFR < 15 mL/min/1,73m² → 1 g 12/12h. Monitorizar neurotoxicidad (convulsiones, mioclonías, encefalopatía) diariamente. Eficacia puede ser subóptima — evaluar alternativa si ausencia de respuesta en 48–72h."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: HD → 1 g 12/12h. Administrar después de hemodiálisis en días de HD. Meropenem y vaborbactam son removidos por HD — puede requerirse dosis suplementaria de 1 g tras cada sesión prolongada para mantener exposición de vaborbactam."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Indicado exclusivamente para KPC-CR Enterobacterales confirmados. Infradosis en cualquier rango de ClCr favorece resistencia emergente al vaborbactam. Monitorizar SNC diariamente — riesgo de convulsión aumentado en insuficiencia renal."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Vabomere (meropenem-vaborbactam)",
+        "Sanford Guide 2025",
+        "IDSA MDR Gram-Negative Guidelines 2023",
+        "EUCAST 2024",
+        "UpToDate / Lexicomp"
+      ],
+      "note": "Bloque revisado con cortes renales oficiales FDA (eGFR 30–49 / 15–29 / <15 / HD). Obs de HD actualizada con información de remoción dialítica y dosis suplementaria. safetyFlags y auditNotes añadidos."
+    }
+  },
+  "name": {
+    "pt": "Meropenem + Vaborbactam",
+    "es": "Meropenem + Vaborbactam"
+  },
+  "keywords": [
+    "meropenem_vaborbactam",
+    "meropenem + vaborbactam",
+    "vabomere",
+    "carbapenemico + inibidor de beta-lactamase (anti-kpc)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

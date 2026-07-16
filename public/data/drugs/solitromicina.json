@@ -1,0 +1,266 @@
+{
+  "id": "solitromicina",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(236,72,153,0.12)",
+  "colorTxt": "#9D174D",
+  "pt": {
+    "name": "Solitromicina",
+    "class": "Macrolídeo fluorocetolídeo de 4ª geração (anti-resistência a macrolídeos)",
+    "commercialNames": {
+      "br": [
+        "Solithromycin / CEM-101 (aprovação EMA em análise; não disponível comercialmente no Brasil)"
+      ],
+      "ar": [
+        "Solithromycin / CEM-101 (en revisión regulatoria)"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 400 mg (investigacional/EUA)",
+      "Solução para infusão EV: 400 mg/250 mL (investigacional)"
+    ],
+    "dose": {
+      "adultoVO": "800 mg VO no D1 (ataque) → 400 mg VO 24/24h D2–D5",
+      "adultoEV": "400 mg EV 24/24h (sem dose de ataque EV)"
+    },
+    "doseKg": null,
+    "indication": "Pneumonia adquirida na comunidade (PAC) leve a moderada em adultos, incluindo cepas resistentes aos macrolídeos clássicos e telitromicina. Status regulatório: aprovado no Japão (2022); FDA recusou em 2016 por hepatotoxicidade; EMA em reanálise.",
+    "spectrum": "Streptococcus pneumoniae (incluindo PRSP e cepas resistentes a macrolídeos — genes erm e mef), Staphylococcus aureus (MSSA, MRSA — atividade limitada), Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila, Haemophilus influenzae, Neisseria gonorrhoeae. Atividade superior à azitromicina e claritromicina por 4 pontos de ligação ao ribossomo 23S.",
+    "contraindications": [
+      "Hipersensibilidade aos macrolídeos ou cetolídeos",
+      "Prolongamento congênito do intervalo QT",
+      "Insuficiência hepática moderada a grave"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Hepatotoxicidade — principal razão da não aprovação pelo FDA em 2016; monitorar enzimas hepáticas.",
+      "4 pontos de ligação ao ribossomo 23S — atividade mantida contra cepas erm/mef-positivas resistentes a azitromicina.",
+      "Prolongamento do QT — monitorar ECG.",
+      "ATENÇÃO: status regulatório variável por país — verificar disponibilidade local.",
+      "Não necessita ajuste renal."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Advisory Committee Documents (2016) / PMDA Japan (2022) / Farrell et al. Lancet Infect Dis 2017",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "800 mg (ataque) → 400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Macrolídeo fluorocetolídeo de nova geração. Dose baseada em estudos para pneumonia adquirida na comunidade."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "800 mg (ataque) → 400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "800 mg (ataque) → 400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal em insuficiência renal grave."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "800 mg (ataque) → 400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorar prolongamento do QT, hepatotoxicidade e interações medicamentosas."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "800 mg (ataque) → 400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não removida significativamente por hemodiálise. Não requer dose suplementar pós-HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Solitromicina",
+    "class": "Macrólido fluorocetólido de 4.ª generación (anti-resistencia a macrólidos)",
+    "commercialNames": {
+      "br": [
+        "Solithromycin / CEM-101 (aprovação EMA em análise; não disponível comercialmente no Brasil)"
+      ],
+      "ar": [
+        "Solithromycin / CEM-101 (en revisión regulatoria)"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 400 mg (investigacional/EUA)",
+      "Solución para infusión EV: 400 mg/250 mL (investigacional)"
+    ],
+    "dose": {
+      "adultoVO": "800 mg VO en D1 (carga) → 400 mg VO 24/24h D2–D5",
+      "adultoEV": "400 mg EV 24/24h (sin dosis de carga EV)"
+    },
+    "doseKg": null,
+    "indication": "Neumonía adquirida en la comunidad (NAC) leve a moderada en adultos, incluidas cepas resistentes a los macrólidos clásicos y telitromicina. Estado regulatorio: aprobado en Japón (2022); FDA rechazó en 2016 por hepatotoxicidad; EMA en reanalización.",
+    "spectrum": "Streptococcus pneumoniae (incluido PRSP y cepas resistentes a macrólidos — genes erm y mef), Staphylococcus aureus (MSSA, MRSA — actividad limitada), Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila, Haemophilus influenzae, Neisseria gonorrhoeae. Actividad superior a azitromicina y claritromicina por 4 puntos de unión al ribosoma 23S.",
+    "contraindications": [
+      "Hipersensibilidad a los macrólidos o cetólidos",
+      "Prolongación congénita del intervalo QT",
+      "Insuficiencia hepática moderada a grave"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Hepatotoxicidad — principal razón del rechazo por FDA en 2016; monitorizar enzimas hepáticas.",
+      "4 puntos de unión al ribosoma 23S — actividad mantenida frente a cepas erm/mef-positivas resistentes a azitromicina.",
+      "Prolongación del QT — monitorizar ECG.",
+      "ATENCIÓN: estado regulatorio variable por país — verificar disponibilidad local.",
+      "No requiere ajuste renal."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Advisory Committee Documents (2016) / PMDA Japan (2022) / Farrell et al. Lancet Infect Dis 2017",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "800 mg (ataque) → 400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Macrólido fluorocetólido de nueva generación. Dosis basada en estudios para neumonía adquirida en la comunidad."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "800 mg (ataque) → 400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "800 mg (ataque) → 400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal en insuficiencia renal grave."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "800 mg (ataque) → 400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorizar prolongación del QT, hepatotoxicidad e interacciones medicamentosas."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "800 mg (ataque) → 400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No removida significativamente por hemodiálisis. No requiere dosis suplementaria post-HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Solitromicina",
+    "es": "Solitromicina"
+  },
+  "keywords": [
+    "solitromicina",
+    "solithromycin / cem-101 (aprovacao ema em analise; nao disponivel comercialmente no brasil)",
+    "solithromycin / cem-101 (en revision regulatoria)",
+    "macrolideo fluorocetolideo de 4ª geracao (anti-resistencia a macrolideos)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

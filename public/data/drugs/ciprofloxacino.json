@@ -1,0 +1,458 @@
+{
+  "id": "ciprofloxacino",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Ciprofloxacino",
+    "class": "Fluoroquinolona",
+    "commercialNames": {
+      "br": [
+        "Cipro",
+        "Ciprofloxacino EMS",
+        "Cipro XR"
+      ],
+      "ar": [
+        "Baycip",
+        "Ciprofloxacino Bagó",
+        "Ciprofloxacino Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 250, 500 e 750 mg",
+      "Bolsa EV: 200 mg/100 mL",
+      "Bolsa EV: 400 mg/200 mL"
+    ],
+    "dose": {
+      "adultoVO": "500 mg VO 12/12h",
+      "adultoEV": "400 mg EV 12/12h",
+      "pediatrica": "1050 mg VO/EV 12/12h"
+    },
+    "doseKg": {
+      "standard": "10–15 mg/kg por dose 12/12h",
+      "severe": "15–20 mg/kg por dose",
+      "maxDose": "1,5 g/dia"
+    },
+    "therapeuticRange": "Faixa habitual: 10–20 mg/kg por dose.",
+    "dilution": "Bolsa pronta para infusão.",
+    "speed": "Infundir em 60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarreia",
+      "Cefaleia",
+      "Insônia"
+    ],
+    "dangerousAdverseEffects": [
+      "Ruptura de tendão",
+      "Prolongamento do QT",
+      "Dissecção de aorta",
+      "Hipoglicemia grave",
+      "Convulsões"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Evitar associação com antiácidos contendo cálcio, magnésio ou alumínio.",
+      "Suspender imediatamente se dor tendínea.",
+      "Monitorar QT prolongado em pacientes de risco."
+    ],
+    "ref": "Goodman & Gilman / Sanford Guide / FDA Ciprofloxacin Label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "500–750 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1.500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "8/8h–12/12h",
+          "doseMaxima": "1.200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1.500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual conforme indicação clínica e gravidade. EV 8/8h para infecções graves/Pseudomonas; 12/12h para infecções moderadas. Infundir em 60 min. Monitorar QT basal em pacientes de risco."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste moderado conforme ClCr e gravidade."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200–400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajustar intervalo para 24/24h. Este bloco deve atualizar os cards automaticamente."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "250 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "250–500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200–400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Usar com cautela extrema — risco elevado de neurotoxicidade (convulsões, delirium), QT prolongado, tendinopatia e cristalúria por acúmulo renal. Monitorar QTc, função renal e sinais neurológicos diariamente. Avaliar alternativa terapêutica se disponível."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200–400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise nos dias de HD. Ciprofloxacino é parcialmente removido pela HD (~30%) — dose pós-HD garante exposição terapêutica adequada. Monitorar QTc e neurotoxicidade — pacientes dialíticos têm risco aumentado por distúrbios eletrolíticos."
+      }
+    },
+    "therapeuticMonitoring": {
+      "required": false,
+      "target": "AUC/MIC ≥ 125 para infecções por gram-negativos (parâmetro PK-PD concentração-dependente). Pico sérico ≥ 10× MIC desejável.",
+      "monitoring": "Monitorar QTc basal e após 2–3 dias em pacientes de risco. Monitorar função renal, hepática e sinais de tendinopatia.",
+      "notes": "Evitar em pacientes com histórico de tendinopatia por fluoroquinolonas. Interação com anticoagulantes (aumenta INR). Pode causar fotossensibilidade."
+    },
+    "indicationDosing": {
+      "standard": "IVU complicada/pielonefrite: 500 mg VO 12/12h por 7–14 dias ou 400 mg EV 12/12h.",
+      "severe": "Infecções graves (pneumonia, sepse): 400 mg EV 8/8h. Dose máxima 1.200 mg/dia EV.",
+      "uti": "UTI / P. aeruginosa: 400 mg EV 8/8h; combinar com beta-lactâmico antipseudomonas.",
+      "prophylaxis": "Profilaxia cirúrgica urológica: 500 mg VO dose única 1–2h antes do procedimento."
+    },
+    "neurotoxicityWarning": {
+      "risk": "moderate",
+      "symptoms": [
+        "Neuropatia periférica (dormência, parestesia, fraqueza)",
+        "Tontura, cefaleia, insônia",
+        "Confusão mental e alucinações (raro)",
+        "Tendinopatia e ruptura de tendão (fluoroquinolona class effect)",
+        "Agravamento de miastenia gravis"
+      ],
+      "management": "Descontinuar imediatamente se neuropatia periférica, tendinite ou psicose. Miastenia gravis é contraindicação absoluta. Evitar em idosos > 65 anos e pacientes em uso de corticoides (risco de ruptura de tendão). Advertir paciente sobre restrição de atividade física intensa."
+    },
+    "qtRisk": {
+      "risk": "moderate",
+      "monitoring": "Obter ECG basal. Monitorar QTc se uso concomitante de outros agentes que prolongam QT (antiarrítmicos, antipsicóticos, azitromicina). Suspender se QTc > 500 ms ou prolongamento > 60 ms em relação ao basal.",
+      "contraindications": [
+        "Síndrome do QT longo congênito",
+        "Uso concomitante de antiarrítmicos classe IA/III (quinidina, amiodarona, sotalol)",
+        "Hipocalemia ou hipomagnesemia não corrigidas"
+      ]
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": true,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "warning": "Risco de tendinite e ruptura tendínea (Black Box FDA — risco aumentado em idosos > 60 anos e uso de corticoides), QT prolongado (monitorar ECG basal e a cada 2–3 dias em pacientes de risco), neuropatia periférica irreversível (suspender imediatamente se parestesia), delirium e agravamento de miastenia gravis (contraindicação absoluta). Cristalúria em IR grave — manter hidratação adequada."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Cipro (ciprofloxacin) 2023 — Black Box Warning",
+        "EMA label Ciprofloxacin 2022",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Bloco mesclado e melhorado: ev.intervalo corrigido para '8/8h–12/12h', doseMaxima padronizada em mg. Texto de debug removido do fg10a30.obs. Obs enriquecidas: cortes FDA label (CrCl 30–50 e 5–29), fgMaior50 com EV 8/8h para Pseudomonas, fg10a30 com convulsões/cristalúria/hidratação, fgMenor10 com avaliação de alternativa e vo corrigida para 250–500 mg, HD com remoção ~30% e distúrbios eletrolíticos. safetyFlags adicionados (tendinite Black Box + miastenia gravis + cristalúria). auditNotes criado com 7 fontes."
+    }
+  },
+  "es": {
+    "name": "Ciprofloxacino",
+    "class": "Fluoroquinolona",
+    "commercialNames": {
+      "br": [
+        "Cipro",
+        "Ciprofloxacino EMS",
+        "Cipro XR"
+      ],
+      "ar": [
+        "Baycip",
+        "Ciprofloxacino Bagó",
+        "Ciprofloxacino Genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 250, 500 y 750 mg",
+      "Bolsa EV: 200 mg/100 mL",
+      "Bolsa EV: 400 mg/200 mL"
+    ],
+    "dose": {
+      "adultoVO": "500 mg VO cada 12h",
+      "adultoEV": "400 mg EV cada 12h",
+      "pediatrica": "1050 mg VO/EV cada 12h"
+    },
+    "doseKg": {
+      "standard": "10–15 mg/kg por dosis cada 12h",
+      "severe": "15–20 mg/kg por dosis",
+      "maxDose": "1,5 g/día"
+    },
+    "therapeuticRange": "Rango habitual: 10–20 mg/kg por dosis.",
+    "dilution": "Bolsa lista para infusión.",
+    "speed": "Infundir en 60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarrea",
+      "Cefalea",
+      "Insomnio"
+    ],
+    "dangerousAdverseEffects": [
+      "Rotura de tendón",
+      "Prolongación del QT",
+      "Disección aórtica",
+      "Hipoglucemia grave",
+      "Convulsiones"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Evitar asociación con antiácidos que contengan calcio, magnesio o aluminio.",
+      "Suspender inmediatamente si aparece dolor tendinoso.",
+      "Monitorar QT prolongado en pacientes de riesgo."
+    ],
+    "ref": "Goodman & Gilman / Sanford Guide / FDA Ciprofloxacin Label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "500–750 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1.500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "8/8h–12/12h",
+          "doseMaxima": "1.200 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1.500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual según indicación clínica y gravedad. IV 8/8h para infecciones graves/Pseudomonas; 12/12h para infecciones moderadas. Infundir en 60 min. Monitorizar QT basal en pacientes de riesgo."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste moderado según ClCr y gravedad."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200–400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajustar intervalo a 24/24h. Este bloque debe actualizar las tarjetas automáticamente."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "250 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "250–500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200–400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Usar con precaución extrema — riesgo elevado de neurotoxicidad (convulsiones, delirium), QT prolongado, tendinopatia y cristaluria por acumulación renal. Monitorizar QTc, función renal y signos neurológicos diariamente. Evaluar alternativa terapéutica si disponible."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "250–500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "200–400 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "400 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis en días de HD. Ciprofloxacino es parcialmente removido por HD (~30%) — dosis post-HD garantiza exposición terapéutica adecuada. Monitorizar QTc y neurotoxicidad — pacientes dialíticos tienen mayor riesgo por trastornos electrolíticos."
+      }
+    },
+    "therapeuticMonitoring": {
+      "required": false,
+      "target": "AUC/MIC ≥ 125 para infecciones por gramnegativos (parámetro PK-PD concentración-dependiente). Pico sérico ≥ 10× MIC deseable.",
+      "monitoring": "Monitorizar QTc basal y después de 2–3 días en pacientes de riesgo. Monitorizar función renal, hepática y signos de tendinopatía.",
+      "notes": "Evitar en pacientes con historial de tendinopatía por fluoroquinolonas. Interacción con anticoagulantes (aumenta INR). Puede causar fotosensibilidad."
+    },
+    "indicationDosing": {
+      "standard": "IVU complicada/pielonefritis: 500 mg VO 12/12h por 7–14 días o 400 mg IV 12/12h.",
+      "severe": "Infecciones graves (neumonía, sepsis): 400 mg IV 8/8h. Dosis máxima 1.200 mg/día IV.",
+      "uti": "UCI / P. aeruginosa: 400 mg IV 8/8h; combinar con beta-lactámico antipseudomonas.",
+      "prophylaxis": "Profilaxis quirúrgica urológica: 500 mg VO dosis única 1–2h antes del procedimiento."
+    },
+    "neurotoxicityWarning": {
+      "risk": "moderate",
+      "symptoms": [
+        "Neuropatía periférica (entumecimiento, parestesia, debilidad)",
+        "Mareos, cefalea, insomnio",
+        "Confusión mental y alucinaciones (raro)",
+        "Tendinopatía y ruptura de tendón (efecto de clase fluoroquinolona)",
+        "Agravamiento de miastenia grave"
+      ],
+      "management": "Descontinuar inmediatamente si neuropatía periférica, tendinitis o psicosis. Miastenia gravis es contraindicación absoluta. Evitar en ancianos > 65 años y pacientes con corticoides (riesgo de ruptura de tendón). Advertir al paciente sobre restricción de actividad física intensa."
+    },
+    "qtRisk": {
+      "risk": "moderate",
+      "monitoring": "Obtener ECG basal. Monitorizar QTc si uso concomitante de otros agentes que prolongan QT (antiarrítmicos, antipsicóticos, azitromicina). Suspender si QTc > 500 ms o prolongamiento > 60 ms respecto al basal.",
+      "contraindications": [
+        "Síndrome del QT largo congénito",
+        "Uso concomitante de antiarrítmicos clase IA/III (quinidina, amiodarona, sotalol)",
+        "Hipocalemia o hipomagnesemia no corregidas"
+      ]
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": true,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "warning": "Riesgo de tendinitis y ruptura tendinosa (Black Box FDA — riesgo aumentado en mayores de 60 años y uso de corticoides), QT prolongado (monitorizar ECG basal y cada 2–3 días en pacientes de riesgo), neuropatía periférica irreversible (suspender de inmediato si parestesia), delirium y agravamiento de miastenia gravis (contraindicación absoluta). Cristaluria en IR grave — mantener hidratación adecuada."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Cipro (ciprofloxacin) 2023 — Black Box Warning",
+        "EMA label Ciprofloxacin 2022",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Bloque fusionado y mejorado: ev.intervalo corregido a '8/8h–12/12h', doseMaxima estandarizada en mg. Texto de depuración eliminado de fg10a30.obs. Obs enriquecidas: cortes FDA label (CrCl 30–50 y 5–29), fgMaior50 con IV 8/8h para Pseudomonas, fg10a30 con convulsiones/cristaluria/hidratación, fgMenor10 con evaluación de alternativa y vo corregida a 250–500 mg, HD con remoción ~30% y trastornos electrolíticos. safetyFlags añadidos (tendinitis Black Box + miastenia gravis + cristaluria). auditNotes creado con 7 fuentes."
+    }
+  },
+  "name": {
+    "pt": "Ciprofloxacino",
+    "es": "Ciprofloxacino"
+  },
+  "keywords": [
+    "ciprofloxacino",
+    "cipro",
+    "ciprofloxacino ems",
+    "cipro xr",
+    "baycip",
+    "ciprofloxacino bago",
+    "ciprofloxacino generico",
+    "fluoroquinolona"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

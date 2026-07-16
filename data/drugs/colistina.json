@@ -1,0 +1,297 @@
+{
+  "id": "colistina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Colistina (Colistimetato de Sódio)",
+    "class": "Polimixina E (lipopeptídeo)",
+    "commercialNames": {
+      "br": [
+        "Colistimetato Genérico",
+        "Colobreathe (inalação)"
+      ],
+      "ar": [
+        "Colistimetato Genérico",
+        "Colistimetato Normon"
+      ]
+    },
+    "presentation": [
+      "Pó liofilizado EV: 150 mg (= 2 MIU de colistimetato)",
+      "Pó para inalação: 1.662.500 UI"
+    ],
+    "dose": {
+      "adultoAtaque": "9 MIU EV dose de ataque",
+      "adultoManutencao": "4,5 MIU EV 12/12h (manutenção); ajustar por ClCr",
+      "pediatrica": "75.000–150.000 UI/kg/dia dividido 12/12h"
+    },
+    "doseKg": {
+      "standard": "2,5–5 MIU/dia em 2–3 doses (adulto com função renal normal)",
+      "maxDose": "9 MIU/dia"
+    },
+    "therapeuticRange": "Gram-negativos MDR: KPC, NDM, Acinetobacter baumannii. Nefrotóxico — dose guiada por ClCr.",
+    "dilution": "EV: diluir em SF 0,9% 50–250 mL.",
+    "speed": "EV: infundir em 30–60 minutos.",
+    "commonAdverseEffects": [
+      "Nefrotoxicidade (dose-dependente)",
+      "Parestesias / neurotoxicidade",
+      "Broncoespasmo (inalação)"
+    ],
+    "dangerousAdverseEffects": [
+      "Insuficiência renal aguda",
+      "Bloqueio neuromuscular",
+      "Apneia / parada respiratória (raro)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Sempre iniciar com dose de ataque de 9 MIU EV independentemente da função renal.",
+      "Monitorar creatinina a cada 48–72h. Ajuste obrigatório de dose de manutenção por ClCr."
+    ],
+    "ref": "Sanford Guide 2025 / Infectious Diseases Society of America / Pogue et al. 2017",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "9 MIU (ataque) + 4,5 MIU",
+          "intervalo": "12/12h",
+          "doseMaxima": "9 MIU/dia",
+          "unidade": "MIU"
+        },
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "9 MIU/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Sempre iniciar com dose de ataque."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "4,5 MIU",
+          "intervalo": "24/24h",
+          "doseMaxima": "4,5 MIU/dia",
+          "unidade": "MIU"
+        },
+        "pediatrica": {
+          "dose": "75.000 UI/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "4,5 MIU/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Ajuste obrigatório devido à nefrotoxicidade."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "2,25–4,5 MIU",
+          "intervalo": "24/24h",
+          "doseMaxima": "4,5 MIU/dia",
+          "unidade": "MIU"
+        },
+        "pediatrica": {
+          "dose": "50.000–75.000 UI/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "4,5 MIU/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Monitorar rigorosamente função renal."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "2,25 MIU",
+          "intervalo": "24–48/48h",
+          "doseMaxima": "2,25 MIU/dia",
+          "unidade": "MIU"
+        },
+        "pediatrica": {
+          "dose": "50.000 UI/kg",
+          "intervalo": "24–48/48h",
+          "doseMaxima": "2,25 MIU/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Alto risco de nefrotoxicidade e neurotoxicidade."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "2,25 MIU",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "2,25 MIU/dose",
+          "unidade": "MIU"
+        },
+        "pediatrica": {
+          "dose": "50.000 UI/kg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "2,25 MIU/dose",
+          "unidade": "UI/kg"
+        },
+        "obs": "Administrar após hemodiálise."
+      }
+    },
+    "therapeuticMonitoring": {
+      "required": true,
+      "target": "Monitorização clínica e laboratorial da função renal.",
+      "monitoring": "Creatinina, débito urinário, eletrólitos e sintomas neurológicos.",
+      "notes": "Um dos antibióticos mais nefrotóxicos da prática clínica."
+    }
+  },
+  "es": {
+    "name": "Colistina (Colistimetato de Sodio)",
+    "class": "Polimixina E (lipopéptido)",
+    "commercialNames": {
+      "br": [
+        "Colistimetato Genérico",
+        "Colobreathe (inalação)"
+      ],
+      "ar": [
+        "Colistimetato Genérico",
+        "Colistimetato Normon"
+      ]
+    },
+    "presentation": [
+      "Polvo liofilizado EV: 150 mg (= 2 MIU de colistimetato)",
+      "Polvo para inhalación: 1.662.500 UI"
+    ],
+    "dose": {
+      "adultoAtaque": "9 MIU EV dosis de carga",
+      "adultoManutencao": "4,5 MIU EV cada 12h (mantenimiento); ajustar por ClCr",
+      "pediatrica": "75.000–150.000 UI/kg/día dividido cada 12h"
+    },
+    "doseKg": {
+      "standard": "2,5–5 MIU/día en 2–3 dosis (adulto con función renal normal)",
+      "maxDose": "9 MIU/día"
+    },
+    "therapeuticRange": "Gram-negativos MDR: KPC, NDM, Acinetobacter baumannii. Nefrotóxico — dosis guiada por ClCr.",
+    "dilution": "EV: diluir en SF 0,9% 50–250 mL.",
+    "speed": "EV: infundir en 30–60 minutos.",
+    "commonAdverseEffects": [
+      "Nefrotoxicidad (dosis-dependiente)",
+      "Parestesias / neurotoxicidad",
+      "Broncoespasmo (inhalación)"
+    ],
+    "dangerousAdverseEffects": [
+      "Insuficiencia renal aguda",
+      "Bloqueo neuromuscular",
+      "Apnea / parada respiratoria (raro)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Siempre iniciar con dosis de carga de 9 MIU EV independientemente de la función renal.",
+      "Monitorizar creatinina cada 48–72h. Ajuste obligatorio de dosis de mantenimiento por ClCr."
+    ],
+    "ref": "Sanford Guide 2025 / Infectious Diseases Society of America / Pogue et al. 2017",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "9 MIU (ataque) + 4,5 MIU",
+          "intervalo": "12/12h",
+          "doseMaxima": "9 MIU/dia",
+          "unidade": "MIU"
+        },
+        "pediatrica": {
+          "dose": "75.000–150.000 UI/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "9 MIU/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Siempre iniciar con dosis de carga."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "4,5 MIU",
+          "intervalo": "24/24h",
+          "doseMaxima": "4,5 MIU/dia",
+          "unidade": "MIU"
+        },
+        "pediatrica": {
+          "dose": "75.000 UI/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "4,5 MIU/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Ajuste obligatorio debido a la nefrotoxicidad."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "2,25–4,5 MIU",
+          "intervalo": "24/24h",
+          "doseMaxima": "4,5 MIU/dia",
+          "unidade": "MIU"
+        },
+        "pediatrica": {
+          "dose": "50.000–75.000 UI/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "4,5 MIU/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Monitorizar estrictamente la función renal."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "2,25 MIU",
+          "intervalo": "24–48/48h",
+          "doseMaxima": "2,25 MIU/dia",
+          "unidade": "MIU"
+        },
+        "pediatrica": {
+          "dose": "50.000 UI/kg",
+          "intervalo": "24–48/48h",
+          "doseMaxima": "2,25 MIU/dia",
+          "unidade": "UI/kg"
+        },
+        "obs": "Alto riesgo de nefrotoxicidad y neurotoxicidad."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "2,25 MIU",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "2,25 MIU/dose",
+          "unidade": "MIU"
+        },
+        "pediatrica": {
+          "dose": "50.000 UI/kg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "2,25 MIU/dose",
+          "unidade": "UI/kg"
+        },
+        "obs": "Administrar después de hemodiálisis."
+      }
+    },
+    "therapeuticMonitoring": {
+      "required": true,
+      "target": "Monitorización clínica y de laboratorio de la función renal.",
+      "monitoring": "Creatinina, diuresis, electrolitos y síntomas neurológicos.",
+      "notes": "Uno de los antibióticos más nefrotóxicos de la práctica clínica."
+    }
+  },
+  "name": {
+    "pt": "Colistina (Colistimetato de Sódio)",
+    "es": "Colistina (Colistimetato de Sodio)"
+  },
+  "keywords": [
+    "colistina",
+    "colistina (colistimetato de sodio)",
+    "colistina (colistimetato de sodio)",
+    "colistimetato generico",
+    "colobreathe (inalacao)",
+    "colistimetato normon",
+    "polimixina e (lipopeptideo)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

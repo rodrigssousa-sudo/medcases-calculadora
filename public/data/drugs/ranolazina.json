@@ -1,0 +1,255 @@
+{
+  "id": "ranolazina",
+  "category": "cardio",
+  "icon": "❤️‍🩹",
+  "color": "rgba(190,24,93,0.13)",
+  "colorTxt": "#9D174D",
+  "pt": {
+    "name": "Ranolazina",
+    "class": "Antianginoso — inibidor seletivo da corrente tardia de sódio (INa tardia)",
+    "indications": {
+      "approved": [
+        "Tratamento da angina crônica estável, em associação ou como alternativa a outros antianginosos (betabloqueadores, bloqueadores de canal de cálcio, nitratos)"
+      ],
+      "offLabel": [
+        "Fibrilação atrial (uso investigacional, propriedades antiarrítmicas atriais)"
+      ]
+    },
+    "commercialNames": {
+      "br": [
+        "Ranexa"
+      ],
+      "ar": [
+        "Ranexa"
+      ]
+    },
+    "presentation": [
+      "Comprimidos de liberação prolongada: 500 mg e 1000 mg"
+    ],
+    "mechanism": "Inibidor seletivo da corrente tardia de sódio (INa tardia). Diminui o acúmulo intracelular de sódio nas células miocárdicas isquêmicas, reduzindo a sobrecarga de cálcio intracelular, melhorando o relaxamento diastólico do miocárdio e diminuindo a tensão na parede ventricular, sem alterar significativamente a frequência cardíaca ou a pressão arterial.",
+    "pharmacokinetics": {
+      "onset": "Efeito antianginoso pleno após alguns dias de uso regular",
+      "halfLife": "≈ 7 horas (formulação de liberação prolongada; metabolismo predominante via CYP3A4)",
+      "duration": "Efeito mantido com posologia de 12/12h"
+    },
+    "dose": {
+      "adultoPadrao": "Iniciar com 500 mg VO 12/12h. Pode ser aumentada para 1000 mg 12/12h conforme tolerabilidade e resposta clínica, após 1–2 semanas.",
+      "adultoGrave": "Dose máxima: 1000 mg 12/12h. Limitar a 500 mg 12/12h se uso concomitante de inibidores moderados de CYP3A4 (diltiazem, verapamil). Ajuste/cautela em idosos, insuficiência renal leve a moderada ou hepática leve.",
+      "pediatricaPadrao": "Não estabelecido — uso não aprovado em pediatria.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Dose fixa — não é calculada por peso",
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "1000 mg 12/12h (500 mg 12/12h se uso de inibidor moderado de CYP3A4)"
+    },
+    "administration": "Via oral, com ou sem alimentos. Os comprimidos de liberação prolongada devem ser engolidos inteiros — não partir, mastigar ou triturar.",
+    "commonAdverseEffects": [
+      "Tontura",
+      "Cefaleia",
+      "Constipação",
+      "Náuseas",
+      "Astenia"
+    ],
+    "dangerousAdverseEffects": [
+      "Prolongamento do intervalo QT",
+      "Síncope",
+      "Insuficiência renal aguda (rara)",
+      "Alucinações (raro)"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Insuficiência hepática moderada ou grave (Child-Pugh B ou C)",
+        "Uso concomitante de inibidores potentes de CYP3A4 (cetoconazol, itraconazol, voriconazol, posaconazol, claritromicina, ritonavir e outros inibidores de protease)",
+        "Uso concomitante de indutores de CYP3A4 (rifampicina, rifabutina, rifapentina, fenitoína, carbamazepina, fenobarbital, erva-de-são-joão)",
+        "Histórico pessoal de prolongamento do intervalo QT ou síndrome do QT longo congênito"
+      ],
+      "relativas": [
+        "Insuficiência renal grave (ClCr < 30 mL/min)",
+        "Insuficiência renal moderada (ClCr 30–60 mL/min) — usar com cautela",
+        "Idosos de baixo peso ou com múltiplas comorbidades — maior incidência de reações adversas"
+      ]
+    },
+    "interactions": [
+      "Inibidores potentes de CYP3A4 (azólicos, macrolídeos, antirretrovirais): contraindicado — aumento acentuado dos níveis de ranolazina e risco de prolongamento de QT.",
+      "Indutores de CYP3A4 (rifamicinas, anticonvulsivantes indutores): contraindicado — perda de eficácia por redução dos níveis de ranolazina.",
+      "Diltiazem/Verapamil (inibidores moderados de CYP3A4): limitar dose de ranolazina a 500 mg 12/12h.",
+      "Sinvastatina: ranolazina aumenta os níveis séricos — limitar sinvastatina a 20 mg/dia.",
+      "Fármacos que prolongam QT: risco aditivo de prolongamento do intervalo QT e torsades de pointes.",
+      "Metformina: ranolazina inibe o transportador OCT2, podendo aumentar os níveis plasmáticos de metformina — monitorar função renal e sinais de toxicidade.",
+      "Digoxina: ranolazina pode aumentar modestamente os níveis de digoxina — monitorar sinais de toxicidade digitálica."
+    ],
+    "renalAdjustment": "Contraindicado se ClCr < 30 mL/min. Usar com cautela se ClCr 30–60 mL/min, com monitorização de função renal e sinais de toxicidade.",
+    "hepaticAdjustment": "Contraindicado em Child-Pugh B ou C. Usar com cautela em Child-Pugh A.",
+    "monitoring": {
+      "baseline": [
+        "ECG (intervalo QT/QTc)",
+        "Função renal (ClCr)",
+        "Função hepática (Child-Pugh)",
+        "Revisão de medicações concomitantes (inibidores/indutores de CYP3A4)"
+      ],
+      "followUp": [
+        "ECG periódico (risco de prolongamento de QT)",
+        "Função renal periódica",
+        "Sinais de toxicidade (tontura, náusea, síncope)",
+        "Se em uso de sinvastatina ou digoxina: monitorar sinais de toxicidade dessas drogas"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Dados limitados em humanos. Usar apenas se o benefício potencial justificar o risco ao feto.",
+      "lactation": "Desconhecido se é excretada no leite materno. Considerar risco/benefício.",
+      "elderly": "Maior incidência de eventos adversos (tontura, náusea, hipotensão, astenia). Pode necessitar de dose menor; sem ajuste específico obrigatório apenas por idade."
+    },
+    "safetyFlags": {
+      "qtProlongationRisk": true,
+      "hepaticRestriction": true,
+      "renalRestriction": true,
+      "cyp3a4Substrate": true,
+      "warning": "Ranolazina prolonga o intervalo QT de forma dose-dependente. Evitar em pacientes com síndrome do QT longo e associar com extrema cautela a outros fármacos que prolongam o QT. Contraindicada com inibidores ou indutores potentes de CYP3A4 e em insuficiência hepática moderada/grave."
+    },
+    "auditNotes": {
+      "status": "antianginoso_ranolazina_master_template"
+    },
+    "ref": [
+      "FDA Labeling Information — Ranexa (ranolazine)",
+      "2019 ESC Guidelines for the Diagnosis and Management of Chronic Coronary Syndromes",
+      "2012 ACCF/AHA/ACP/AATS/PCNA/SCAI/STS Guideline for the Diagnosis and Management of Patients With Stable Ischemic Heart Disease",
+      "Goodman & Gilman's: The Pharmacological Basis of Therapeutics",
+      "Lexicomp / Micromedex — Ranolazine Monograph"
+    ]
+  },
+  "es": {
+    "name": "Ranolazina",
+    "class": "Antianginoso — inhibidor selectivo de la corriente tardía de sodio (INa tardía)",
+    "indications": {
+      "approved": [
+        "Tratamiento de la angina crónica estable, en asociación o como alternativa a otros antianginosos (betabloqueantes, bloqueadores de canal de calcio, nitratos)"
+      ],
+      "offLabel": [
+        "Fibrilación auricular (uso en investigación, propiedades antiarrítmicas auriculares)"
+      ]
+    },
+    "commercialNames": {
+      "br": [
+        "Ranexa"
+      ],
+      "ar": [
+        "Ranexa"
+      ]
+    },
+    "presentation": [
+      "Comprimidos de liberación prolongada: 500 mg y 1000 mg"
+    ],
+    "mechanism": "Inhibidor selectivo de la corriente tardía de sodio (INa tardía). Disminuye la acumulación intracelular de sodio en las células miocárdicas isquémicas, reduciendo la sobrecarga de calcio intracelular, mejorando la relajación diastólica del miocardio y disminuyendo la tensión en la pared ventricular, sin alterar significativamente la frecuencia cardíaca o la presión arterial.",
+    "pharmacokinetics": {
+      "onset": "Efecto antianginoso pleno tras algunos días de uso regular",
+      "halfLife": "≈ 7 horas (formulación de liberación prolongada; metabolismo predominante vía CYP3A4)",
+      "duration": "Efecto mantenido con posología cada 12h"
+    },
+    "dose": {
+      "adultoPadrao": "Iniciar con 500 mg VO cada 12h. Puede aumentarse a 1000 mg cada 12h según tolerabilidad y respuesta clínica, tras 1–2 semanas.",
+      "adultoGrave": "Dosis máxima: 1000 mg cada 12h. Limitar a 500 mg cada 12h si hay uso concomitante de inhibidores moderados de CYP3A4 (diltiazem, verapamilo). Ajuste/precaución en ancianos, insuficiencia renal leve a moderada o hepática leve.",
+      "pediatricaPadrao": "No establecido — uso no aprobado en pediatría.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Dosis fija — no se calcula por peso",
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "1000 mg cada 12h (500 mg cada 12h si uso de inhibidor moderado de CYP3A4)"
+    },
+    "administration": "Vía oral, con o sin alimentos. Los comprimidos de liberación prolongada deben tragarse enteros — no partir, masticar ni triturar.",
+    "commonAdverseEffects": [
+      "Mareo",
+      "Cefalea",
+      "Estreñimiento",
+      "Náuseas",
+      "Astenia"
+    ],
+    "dangerousAdverseEffects": [
+      "Prolongación del intervalo QT",
+      "Síncope",
+      "Insuficiencia renal aguda (rara)",
+      "Alucinaciones (raro)"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Insuficiencia hepática moderada o grave (Child-Pugh B o C)",
+        "Uso concomitante de inhibidores potentes de CYP3A4 (ketoconazol, itraconazol, voriconazol, posaconazol, claritromicina, ritonavir y otros inhibidores de proteasa)",
+        "Uso concomitante de inductores de CYP3A4 (rifampicina, rifabutina, rifapentina, fenitoína, carbamazepina, fenobarbital, hierba de San Juan)",
+        "Antecedente personal de prolongación del intervalo QT o síndrome de QT largo congénito"
+      ],
+      "relativas": [
+        "Insuficiencia renal grave (ClCr < 30 mL/min)",
+        "Insuficiencia renal moderada (ClCr 30–60 mL/min) — usar con precaución",
+        "Ancianos de bajo peso o con múltiples comorbilidades — mayor incidencia de reacciones adversas"
+      ]
+    },
+    "interactions": [
+      "Inhibidores potentes de CYP3A4 (azólicos, macrólidos, antirretrovirales): contraindicado — aumento marcado de los niveles de ranolazina y riesgo de prolongación de QT.",
+      "Inductores de CYP3A4 (rifamicinas, anticonvulsivantes inductores): contraindicado — pérdida de eficacia por reducción de los niveles de ranolazina.",
+      "Diltiazem/Verapamilo (inhibidores moderados de CYP3A4): limitar dosis de ranolazina a 500 mg cada 12h.",
+      "Simvastatina: la ranolazina aumenta los niveles séricos — limitar simvastatina a 20 mg/día.",
+      "Fármacos que prolongan QT: riesgo aditivo de prolongación del intervalo QT y torsades de pointes.",
+      "Metformina: la ranolazina inhibe el transportador OCT2, pudiendo aumentar los niveles plasmáticos de metformina — monitorizar función renal y signos de toxicidad.",
+      "Digoxina: la ranolazina puede aumentar modestamente los niveles de digoxina — monitorizar signos de toxicidad digitálica."
+    ],
+    "renalAdjustment": "Contraindicado si ClCr < 30 mL/min. Usar con precaución si ClCr 30–60 mL/min, con monitorización de función renal y signos de toxicidad.",
+    "hepaticAdjustment": "Contraindicado en Child-Pugh B o C. Usar con precaución en Child-Pugh A.",
+    "monitoring": {
+      "baseline": [
+        "ECG (intervalo QT/QTc)",
+        "Función renal (ClCr)",
+        "Función hepática (Child-Pugh)",
+        "Revisión de medicaciones concomitantes (inhibidores/inductores de CYP3A4)"
+      ],
+      "followUp": [
+        "ECG periódico (riesgo de prolongación de QT)",
+        "Función renal periódica",
+        "Signos de toxicidad (mareo, náusea, síncope)",
+        "Si en uso de simvastatina o digoxina: monitorizar signos de toxicidad de esos fármacos"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Datos limitados en humanos. Usar solo si el beneficio potencial justifica el riesgo para el feto.",
+      "lactation": "Se desconoce si se excreta en la leche materna. Considerar riesgo/beneficio.",
+      "elderly": "Mayor incidencia de eventos adversos (mareo, náusea, hipotensión, astenia). Puede necesitar dosis menor; sin ajuste específico obligatorio solo por edad."
+    },
+    "safetyFlags": {
+      "qtProlongationRisk": true,
+      "hepaticRestriction": true,
+      "renalRestriction": true,
+      "cyp3a4Substrate": true,
+      "warning": "La ranolazina prolonga el intervalo QT de forma dosis-dependiente. Evitar en pacientes con síndrome de QT largo y asociar con extrema precaución a otros fármacos que prolongan el QT. Contraindicada con inhibidores o inductores potentes de CYP3A4 y en insuficiencia hepática moderada/grave."
+    },
+    "auditNotes": {
+      "status": "antianginoso_ranolazina_master_template"
+    },
+    "ref": [
+      "FDA Labeling Information — Ranexa (ranolazine)",
+      "2019 ESC Guidelines for the Diagnosis and Management of Chronic Coronary Syndromes",
+      "2012 ACCF/AHA/ACP/AATS/PCNA/SCAI/STS Guideline for the Diagnosis and Management of Patients With Stable Ischemic Heart Disease",
+      "Goodman & Gilman's: The Pharmacological Basis of Therapeutics",
+      "Lexicomp / Micromedex — Ranolazine Monograph"
+    ]
+  },
+  "name": {
+    "pt": "Ranolazina",
+    "es": "Ranolazina"
+  },
+  "keywords": [
+    "ranolazina",
+    "ranexa",
+    "antianginoso — inibidor seletivo da corrente tardia de sodio (ina tardia)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

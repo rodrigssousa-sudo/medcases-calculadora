@@ -1,0 +1,256 @@
+{
+  "id": "cefmetazol",
+  "category": "atb",
+  "icon": "🧪",
+  "color": "rgba(16,185,129,0.12)",
+  "colorTxt": "#065F46",
+  "pt": {
+    "name": "Cefmetazol",
+    "class": "Cefalosporina de 2ª geração — Cefamicina (anti-anaeróbio)",
+    "commercialNames": {
+      "br": [
+        "Zefazone",
+        "Cefmetazol Genérico"
+      ],
+      "ar": [
+        "Zefazone",
+        "Cefmetazol Genérico"
+      ]
+    },
+    "presentation": [
+      "Pó para solução injetável EV: 1 g e 2 g por frasco"
+    ],
+    "dose": {
+      "adultoEV": "1–2 g EV 8/8h"
+    },
+    "doseKg": null,
+    "indication": "Infecções intra-abdominais, ginecológicas, infecções de pele e partes moles com componente anaeróbio, profilaxia cirúrgica em cirurgia colorretal.",
+    "spectrum": "Excelente cobertura de anaeróbios (Bacteroides fragilis, Clostridium spp.). Gram-negativos: E. coli, Klebsiella spp., Proteus spp. Gram-positivos: Streptococcus spp., Staphylococcus aureus (MSSA). Perfil semelhante à cefoxitina. Sem atividade contra MRSA ou Pseudomonas.",
+    "contraindications": [
+      "Hipersensibilidade às cefalosporinas ou penicilinas (reação cruzada ~1–2%)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Cefamicina com cobertura anti-anaeróbia semelhante à cefoxitina — perfil MTT (evitar álcool).",
+      "Monitorar INR: inibição da síntese de vitamina K.",
+      "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / FDA Prescribing Information",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "30–50 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reduzir frequência conforme função renal."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obrigatório."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar neurotoxicidade e encefalopatia."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Cefmetazol",
+    "class": "Cefalosporina de 2.ª generación — Cefamicina (anti-anaerobio)",
+    "commercialNames": {
+      "br": [
+        "Zefazone",
+        "Cefmetazol Genérico"
+      ],
+      "ar": [
+        "Zefazone",
+        "Cefmetazol Genérico"
+      ]
+    },
+    "presentation": [
+      "Polvo para solución inyectable EV: 1 g y 2 g por frasco"
+    ],
+    "dose": {
+      "adultoEV": "1–2 g EV 8/8h"
+    },
+    "doseKg": null,
+    "indication": "Infecciones intraabdominales, ginecológicas, infecciones de piel y partes blandas con componente anaerobio, profilaxis quirúrgica en cirugía colorrectal.",
+    "spectrum": "Excelente cobertura de anaerobios (Bacteroides fragilis, Clostridium spp.). Gramnegativos: E. coli, Klebsiella spp., Proteus spp. Grampositivos: Streptococcus spp., Staphylococcus aureus (MSSA). Perfil similar a cefoxitina. Sin actividad frente a MRSA ni Pseudomonas.",
+    "contraindications": [
+      "Hipersensibilidad a cefalosporinas o penicilinas (reacción cruzada ~1–2%)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Cefamicina con cobertura anti-anaerobia similar a cefoxitina — perfil MTT (evitar alcohol).",
+      "Monitorizar INR: inhibición de la síntesis de vitamina K.",
+      "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / FDA Prescribing Information",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1–2 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "30–50 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "6 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducir frecuencia según función renal."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "15–20 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obligatorio."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar neurotoxicidad y encefalopatía."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10–15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Cefmetazol",
+    "es": "Cefmetazol"
+  },
+  "keywords": [
+    "cefmetazol",
+    "zefazone",
+    "cefmetazol generico",
+    "cefalosporina de 2ª geracao — cefamicina (anti-anaerobio)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

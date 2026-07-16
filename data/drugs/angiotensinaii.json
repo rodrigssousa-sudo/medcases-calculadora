@@ -1,0 +1,240 @@
+{
+  "id": "angiotensinaii",
+  "category": "cardio",
+  "icon": "🩸",
+  "color": "rgba(190,24,93,0.13)",
+  "colorTxt": "#9D174D",
+  "pt": {
+    "name": "Angiotensina II",
+    "class": "Vasopressor — agonista do receptor AT1 da angiotensina II",
+    "indications": {
+      "approved": [
+        "Choque vasodilatatório (distributivo) refratário a outros vasopressores em adultos"
+      ],
+      "offLabel": []
+    },
+    "commercialNames": {
+      "br": [
+        "Giapreza"
+      ],
+      "ar": [
+        "Giapreza"
+      ]
+    },
+    "presentation": [
+      "Frasco-ampola 2,5 mg/mL (1 mL ou 2 mL) — concentrado para diluição"
+    ],
+    "mechanism": "Ativa fortemente os receptores AT1 acoplados à proteína Gq no músculo liso vascular, promovendo vasoconstrição periférica potente e elevação imediata da pressão arterial. Também estimula a liberação de aldosterona.",
+    "pharmacokinetics": {
+      "onset": "Minutos (efeito imediato após início da infusão)",
+      "halfLife": "≈ 1 minuto (degradação rápida por aminopeptidases e ECA)",
+      "duration": "Efeito cessa minutos após interrupção da infusão"
+    },
+    "dose": {
+      "adultoPadrao": "Início: 20 ng/kg/min IV contínuo por CVC. Titular a cada 5 minutos em incrementos de até 15 ng/kg/min para atingir a PAM alvo.",
+      "adultoGrave": "Máximo nas primeiras 3 horas: 80 ng/kg/min. Manutenção: até 40 ng/kg/min.",
+      "pediatricaPadrao": "Não estabelecido — uso não aprovado em pediatria.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "20 ng/kg/min IV — dose inicial",
+      "grave": "Até 40 ng/kg/min IV — manutenção habitual",
+      "meningite": null,
+      "doseMaxima": "80 ng/kg/min (limitado às primeiras 3 horas de infusão)"
+    },
+    "infusionCalc": "Informe doseAtual (ng/kg/min) e peso para calcular velocidade. Concentração padrão: 2,5 mg/500 mL SF 0,9% → 5.000 ng/mL (ou 10.000 ng/mL conforme protocolo).",
+    "administration": "Administração exclusiva por Cateter Venoso Central (CVC). Diluir em SF 0,9% para concentração final de 5.000 ou 10.000 ng/mL. Não infundir em bolus.",
+    "dilution": "Bomba de infusão obrigatória com acesso venoso central. Concentração padrão: 2,5 mg em 500 mL SF 0,9% → 5.000 ng/mL.",
+    "speed": "Iniciar 20 ng/kg/min; titular a cada 5 min em incrementos de até 15 ng/kg/min conforme PAM alvo. Não infundir em bolus.",
+    "commonAdverseEffects": [
+      "Trombocitopenia",
+      "Taquicardia",
+      "Infecção micótica"
+    ],
+    "dangerousAdverseEffects": [
+      "Tromboembolismo venoso (TEV)",
+      "Trombose arterial",
+      "Isquemia periférica",
+      "Delírio"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Hipersensibilidade grave à angiotensina II"
+      ],
+      "relativas": [
+        "Isquemia mesentérica ou periférica severa preexistente",
+        "Ausência de profilaxia para tromboembolismo venoso"
+      ]
+    },
+    "interactions": [
+      "IECA: up-regulation de receptores AT1 aumenta de forma imprevisível a resposta à angiotensina II exógena — monitorar PA invasivamente, pode ser necessária dose menor.",
+      "BRA/ARA-II: competem pelo mesmo receptor AT1, podendo reduzir a resposta vasopressora — ajustar titulação ou considerar vasopressor de outra classe.",
+      "Outros vasopressores (noradrenalina, vasopressina, dopamina): sinergismo na vasoconstrição — ajustar titulação conforme PAM alvo; maior risco de isquemia periférica e mesentérica."
+    ],
+    "renalAdjustment": "Sem necessidade de ajuste de dose.",
+    "hepaticAdjustment": "Sem necessidade de ajuste de dose.",
+    "monitoring": {
+      "baseline": [
+        "PAM / PA",
+        "Contagem de plaquetas",
+        "Sinais de isquemia periférica/mesentérica",
+        "Status de profilaxia para TEV"
+      ],
+      "followUp": [
+        "PAM contínua durante a infusão",
+        "Plaquetas seriadas (risco de trombocitopenia)",
+        "Sinais de trombose arterial/venosa",
+        "Estado neurológico (risco de delírio)"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Pode causar dano e toxicidade fetal/neonatal, efeito comum a ativadores do SRAA. Uso restrito a situações de risco de vida materno imediato.",
+      "lactation": "Excreção no leite materno desconhecida — considerar risco-benefício.",
+      "elderly": "Pode haver maior risco de isquemia periférica — iniciar com doses menores se aplicável."
+    },
+    "safetyFlags": {
+      "highAlertMedication": true,
+      "vasopressor": true,
+      "thromboembolismRisk": true,
+      "requiresCVC": true,
+      "requiresTelemetry": true,
+      "requiresInfusionPump": true,
+      "hospitalUseOnly": true,
+      "warning": "ALTO RISCO TROMBÓTICO. A profilaxia concomitante para tromboembolismo venoso (TEV) é OBRIGATÓRIA durante a infusão, salvo contraindicação. Administração exclusiva por CVC, sem bolus."
+    },
+    "auditNotes": {
+      "status": "vasopressor_angiotensina_ii_master_template"
+    },
+    "ref": [
+      "Surviving Sepsis Campaign Guidelines",
+      "ATHOS-3 Trial (Angiotensin II for the Treatment of High-Output Shock)",
+      "FDA Labeling Information — Giapreza (Angiotensin II)"
+    ]
+  },
+  "es": {
+    "name": "Angiotensina II",
+    "class": "Vasopresor — agonista del receptor AT1 de la angiotensina II",
+    "indications": {
+      "approved": [
+        "Choque vasodilatador (distributivo) refractario a otros vasopresores en adultos"
+      ],
+      "offLabel": []
+    },
+    "commercialNames": {
+      "br": [
+        "Giapreza"
+      ],
+      "ar": [
+        "Giapreza"
+      ]
+    },
+    "presentation": [
+      "Vial 2,5 mg/mL (1 mL o 2 mL) — concentrado para dilución"
+    ],
+    "mechanism": "Activa fuertemente los receptores AT1 acoplados a la proteína Gq en el músculo liso vascular, promoviendo vasoconstricción periférica potente y elevación inmediata de la presión arterial. También estimula la liberación de aldosterona.",
+    "pharmacokinetics": {
+      "onset": "Minutos (efecto inmediato tras inicio de la infusión)",
+      "halfLife": "≈ 1 minuto (degradación rápida por aminopeptidasas y ECA)",
+      "duration": "Efecto cesa minutos después de interrumpir la infusión"
+    },
+    "dose": {
+      "adultoPadrao": "Inicio: 20 ng/kg/min IV continuo por CVC. Titular cada 5 minutos en incrementos de hasta 15 ng/kg/min para alcanzar la PAM objetivo.",
+      "adultoGrave": "Máximo en las primeras 3 horas: 80 ng/kg/min. Mantenimiento: hasta 40 ng/kg/min.",
+      "pediatricaPadrao": "No establecido — uso no aprobado en pediatría.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "20 ng/kg/min IV — dosis inicial",
+      "grave": "Hasta 40 ng/kg/min IV — mantenimiento habitual",
+      "meningite": null,
+      "doseMaxima": "80 ng/kg/min (limitado a las primeras 3 horas de infusión)"
+    },
+    "infusionCalc": "Informe doseAtual (ng/kg/min) y peso para calcular velocidad. Concentración estándar: 2,5 mg/500 mL SF 0,9% → 5.000 ng/mL (o 10.000 ng/mL según protocolo).",
+    "administration": "Administración exclusiva por Catéter Venoso Central (CVC). Diluir en SF 0,9% para concentración final de 5.000 o 10.000 ng/mL. No infundir en bolo.",
+    "dilution": "Bomba de infusión obligatoria con acceso venoso central. Concentración estándar: 2,5 mg en 500 mL SF 0,9% → 5.000 ng/mL.",
+    "speed": "Iniciar 20 ng/kg/min; titular cada 5 min en incrementos de hasta 15 ng/kg/min según PAM objetivo. No infundir en bolo.",
+    "commonAdverseEffects": [
+      "Trombocitopenia",
+      "Taquicardia",
+      "Infección micótica"
+    ],
+    "dangerousAdverseEffects": [
+      "Tromboembolismo venoso (TEV)",
+      "Trombosis arterial",
+      "Isquemia periférica",
+      "Delirio"
+    ],
+    "risksByPatient": [],
+    "contraindications": {
+      "absolutas": [
+        "Hipersensibilidad grave a la angiotensina II"
+      ],
+      "relativas": [
+        "Isquemia mesentérica o periférica severa preexistente",
+        "Ausencia de profilaxis para tromboembolismo venoso"
+      ]
+    },
+    "interactions": [
+      "IECA: up-regulation de receptores AT1 aumenta de forma imprevisible la respuesta a la angiotensina II exógena — monitorizar PA de forma invasiva, puede ser necesaria dosis menor.",
+      "ARA-II: compiten por el mismo receptor AT1, pudiendo reducir la respuesta vasopresora — ajustar titulación o considerar vasopresor de otra clase.",
+      "Otros vasopresores (noradrenalina, vasopresina, dopamina): sinergismo en la vasoconstricción — ajustar titulación según PAM objetivo; mayor riesgo de isquemia periférica y mesentérica."
+    ],
+    "renalAdjustment": "Sin necesidad de ajuste de dosis.",
+    "hepaticAdjustment": "Sin necesidad de ajuste de dosis.",
+    "monitoring": {
+      "baseline": [
+        "PAM / PA",
+        "Recuento de plaquetas",
+        "Signos de isquemia periférica/mesentérica",
+        "Estado de profilaxis para TEV"
+      ],
+      "followUp": [
+        "PAM continua durante la infusión",
+        "Plaquetas seriadas (riesgo de trombocitopenia)",
+        "Signos de trombosis arterial/venosa",
+        "Estado neurológico (riesgo de delirio)"
+      ]
+    },
+    "specialPopulations": {
+      "pregnancy": "Puede causar daño y toxicidad fetal/neonatal, efecto común a activadores del SRAA. Uso restringido a situaciones de riesgo de vida materno inmediato.",
+      "lactation": "Excreción en la leche materna desconocida — considerar riesgo-beneficio.",
+      "elderly": "Puede haber mayor riesgo de isquemia periférica — iniciar con dosis menores si corresponde."
+    },
+    "safetyFlags": {
+      "highAlertMedication": true,
+      "vasopressor": true,
+      "thromboembolismRisk": true,
+      "requiresCVC": true,
+      "requiresTelemetry": true,
+      "requiresInfusionPump": true,
+      "hospitalUseOnly": true,
+      "warning": "ALTO RIESGO TROMBÓTICO. La profilaxis concomitante para tromboembolismo venoso (TEV) es OBLIGATORIA durante la infusión, salvo contraindicación. Administración exclusiva por CVC, sin bolo."
+    },
+    "auditNotes": {
+      "status": "vasopressor_angiotensina_ii_master_template"
+    },
+    "ref": [
+      "Surviving Sepsis Campaign Guidelines",
+      "ATHOS-3 Trial (Angiotensin II for the Treatment of High-Output Shock)",
+      "FDA Labeling Information — Giapreza (Angiotensin II)"
+    ]
+  },
+  "name": {
+    "pt": "Angiotensina II",
+    "es": "Angiotensina II"
+  },
+  "keywords": [
+    "angiotensinaii",
+    "angiotensina ii",
+    "giapreza",
+    "vasopressor — agonista do receptor at1 da angiotensina ii"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

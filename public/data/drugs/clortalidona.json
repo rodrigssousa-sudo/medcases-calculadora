@@ -1,0 +1,292 @@
+{
+  "id": "clortalidona",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(100,116,139,0.10)",
+  "colorTxt": "#0F172A",
+  "pt": {
+    "name": "Clortalidona",
+    "class": "Diurético tiazídico-like de longa duração — Inibidor do NCC (t½ 40–60h, ação 48–72h)",
+    "commercialNames": {
+      "br": [
+        "Higroton",
+        "Clortalidona genérica"
+      ],
+      "ar": [
+        "Higroton",
+        "Clortalidona genérica"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 12,5 mg",
+      "Comprimidos 25 mg",
+      "Comprimidos 50 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HAS: iniciar 12,5 mg VO 1x/dia; manutenção 12,5–25 mg/dia; máx 50 mg/dia. Ação prolongada (t½ 40–60h) — não necessita ajuste para cobertura de 24h.",
+      "adultoGrave": "Idoso ou DRC moderada: iniciar 12,5 mg com monitoração rigorosa de Na⁺, K⁺ e creatinina em 2–4 semanas. Meia-vida longa aumenta risco de acúmulo de efeitos adversos.",
+      "pediatricaPadrao": "Uso pediátrico não estabelecido routineiramente. Consultar especialista.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "50 mg/dia. Meia-vida 40–60h — efeitos cumulativos exigem monitoramento mais cauteloso que HCTZ."
+    },
+    "therapeuticRange": "Controle pressórico sustentado 24h; redução de AVC, IAM e IC; prevenção de cálculos por hipercalciúria",
+    "dilution": "Uso exclusivo via oral. Não diluir.",
+    "speed": "Administrar pela manhã. Meia-vida muito longa (40–60h): efeitos adversos acumulam mais que HCTZ — monitorar eletrólitos cuidadosamente.",
+    "commonAdverseEffects": [
+      "Hipocalemia",
+      "Hiponatremia",
+      "Hipomagnesemia",
+      "Poliúria",
+      "Tontura",
+      "Hipotensão",
+      "Fraqueza",
+      "Cefaleia"
+    ],
+    "dangerousAdverseEffects": [
+      "Hiponatremia grave (mais frequente que HCTZ)",
+      "Hipocalemia grave com arritmias",
+      "Lesão renal aguda",
+      "Alcalose metabólica",
+      "Síncope por hipotensão",
+      "Crise de gota"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Meia-vida muito longa (40–60h): efeitos adversos (hiponatremia, hipocalemia) acumulam mais e são mais duradouros que com HCTZ — monitorar eletrólitos rigorosamente.",
+      "Considerada superior à HCTZ para prevenção de eventos cardiovasculares (ALLHAT, SHEP) — maior controle pressórico sustentado.",
+      "Interações graves: digoxina (hipocalemia amplifica toxicidade); lítio (toxicidade); antiarrítmicos (arritmia por hipocalemia).",
+      "Efeitos metabólicos: hiperuricemia, hiperglicemia, aumento de TG/LDL — considerar nesses perfis."
+    ],
+    "ref": "ALLHAT Trial · SHEP Trial · ESC Hypertension Guidelines · AHA/ACC Hypertension Guidelines · KDIGO Guidelines · Lexicomp",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sem ajuste formal em eTFG ≥ 30 mL/min, mas monitorar eletrólitos — meia-vida longa amplifica risco de acúmulo.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "12,5–25 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "50 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose habitual. Monitorar K⁺, Na⁺, ácido úrico e glicemia periódicamente. Meia-vida longa — efeitos se acumulam."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "12,5 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "25 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "DRC moderada: eficácia reduzida — usar dose mínima e monitorar K⁺, Na⁺ e creatinina frequentemente."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "eTFG < 30 mL/min: clortalidona geralmente INEFICAZ. Substituir por furosemida ou torsemida."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "eTFG < 10 mL/min / anúria: CONTRAINDICADA — sem eficácia e risco de eventos adversos sem benefício diurético."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálise: sem indicação. Substituir por diurético de alça se houver diurese residual."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "hypokalemiaRisk": true,
+      "hyponatremiaRisk": true,
+      "hyperuricemiaRisk": true,
+      "diabetesRisk": true,
+      "longHalfLife": true,
+      "pregnancyCaution": true,
+      "warning": "Meia-vida muito longa (40–60h) — produz mais hiponatremia e hipocalemia que HCTZ. Monitorar Na⁺ e K⁺ rigorosamente, especialmente em idosos. Perde eficácia diurética em DRC grave (eTFG < 30)."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "ALLHAT Trial (JAMA 2002)",
+        "SHEP Trial (JAMA 1991)",
+        "ESC Hypertension Guidelines 2023",
+        "AHA/ACC Hypertension Guidelines 2023",
+        "KDIGO Guidelines",
+        "Lexicomp 2026"
+      ],
+      "note": "Tiazídico-like com meia-vida muito longa (40–60h) — controle pressórico mais sustentado que HCTZ. Preferida por muitos guidelines para HAS por maior proteção cardiovascular (ALLHAT, SHEP). Porém causa mais hiponatremia e hipocalemia, especialmente em idosos."
+    }
+  },
+  "es": {
+    "name": "Clortalidona",
+    "class": "Diurético tipo tiazida de larga duración — Inhibidor del NCC (t½ 40–60h, acción 48–72h)",
+    "commercialNames": {
+      "br": [
+        "Higroton",
+        "Clortalidona genérica"
+      ],
+      "ar": [
+        "Higroton",
+        "Clortalidona genérica"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 12,5 mg",
+      "Comprimidos 25 mg",
+      "Comprimidos 50 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: iniciar 12,5 mg VO 1 vez/día; mantenimiento 12,5–25 mg/día; máx 50 mg/día. Acción prolongada (t½ 40–60h) — no requiere ajuste para cobertura de 24h.",
+      "adultoGrave": "Anciano o ERC moderada: iniciar 12,5 mg con monitorización rigurosa de Na⁺, K⁺ y creatinina en 2–4 semanas. Vida media larga aumenta riesgo de acumulación de efectos adversos.",
+      "pediatricaPadrao": "Uso pediátrico no establecido de forma rutinaria. Consultar especialista.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "50 mg/día. Vida media 40–60h — efectos cumulativos exigen monitorización más cautelosa que HCTZ."
+    },
+    "therapeuticRange": "Control tensional sostenido 24h; reducción de ACV, IAM e IC; prevención de cálculos por hipercalciuria",
+    "dilution": "Uso exclusivo vía oral. No diluir.",
+    "speed": "Administrar por la mañana. Vida media muy larga (40–60h): efectos adversos se acumulan más que HCTZ — monitorizar electrolitos cuidadosamente.",
+    "commonAdverseEffects": [
+      "Hipocalemia",
+      "Hiponatremia",
+      "Hipomagnesemia",
+      "Poliuria",
+      "Mareos",
+      "Hipotensión",
+      "Debilidad",
+      "Cefalea"
+    ],
+    "dangerousAdverseEffects": [
+      "Hiponatremia grave (más frecuente que HCTZ)",
+      "Hipocalemia grave con arritmias",
+      "Lesión renal aguda",
+      "Alcalosis metabólica",
+      "Síncope por hipotensión",
+      "Crisis de gota"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Vida media muy larga (40–60h): efectos adversos (hiponatremia, hipocalemia) se acumulan más y son más duraderos que con HCTZ — monitorizar electrolitos rigurosamente.",
+      "Considerada superior a HCTZ para prevención de eventos cardiovasculares (ALLHAT, SHEP) — mayor control tensional sostenido.",
+      "Interacciones graves: digoxina (hipocalemia amplifica toxicidad); litio (toxicidad); antiarrítmicos (arritmia por hipocalemia).",
+      "Efectos metabólicos: hiperuricemia, hiperglucemia, aumento de TG/LDL — considerar en estos perfiles."
+    ],
+    "ref": "ALLHAT Trial · SHEP Trial · ESC Hypertension Guidelines · AHA/ACC Hypertension Guidelines · KDIGO Guidelines · Lexicomp",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sin ajuste formal con TFGe ≥ 30 mL/min, pero monitorizar electrolitos — vida media larga amplifica riesgo de acumulación.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "12,5–25 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "50 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis habitual. Monitorizar K⁺, Na⁺, ácido úrico y glucemia periódicamente. Vida media larga — efectos se acumulan."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "12,5 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "25 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ERC moderada: eficacia reducida — usar dosis mínima y monitorizar K⁺, Na⁺ y creatinina frecuentemente."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "TFGe < 30 mL/min: clortalidona generalmente INEFICAZ. Sustituir por furosemida o torasemida."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "TFGe < 10 mL/min / anuria: CONTRAINDICADA — sin eficacia y riesgo de eventos adversos sin beneficio diurético."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálisis: sin indicación. Sustituir por diurético de asa si hay diuresis residual."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "hypokalemiaRisk": true,
+      "hyponatremiaRisk": true,
+      "hyperuricemiaRisk": true,
+      "diabetesRisk": true,
+      "longHalfLife": true,
+      "pregnancyCaution": true,
+      "warning": "Vida media muy larga (40–60h) — produce más hiponatremia e hipocalemia que HCTZ. Monitorizar Na⁺ y K⁺ rigurosamente, especialmente en ancianos. Pierde eficacia diurética en ERC grave (TFGe < 30)."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "ALLHAT Trial (JAMA 2002)",
+        "SHEP Trial (JAMA 1991)",
+        "ESC Hypertension Guidelines 2023",
+        "AHA/ACC Hypertension Guidelines 2023",
+        "KDIGO Guidelines",
+        "Lexicomp 2026"
+      ],
+      "note": "Tiazídico-like con vida media muy larga (40–60h) — control tensional más sostenido que HCTZ. Preferida por muchas guías para HTA por mayor protección cardiovascular (ALLHAT, SHEP). Sin embargo, causa más hiponatremia e hipocalemia, especialmente en ancianos."
+    }
+  },
+  "name": {
+    "pt": "Clortalidona",
+    "es": "Clortalidona"
+  },
+  "keywords": [
+    "clortalidona",
+    "higroton",
+    "clortalidona generica",
+    "diuretico tiazidico-like de longa duracao — inibidor do ncc (t½ 40–60h, acao 48–72h)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

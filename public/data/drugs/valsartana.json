@@ -1,0 +1,324 @@
+{
+  "id": "valsartana",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.13)",
+  "colorTxt": "#064E3B",
+  "pt": {
+    "name": "Valsartana",
+    "class": "Bloqueador do Receptor de Angiotensina II (BRA/ARB)",
+    "commercialNames": {
+      "br": [
+        "Diovan",
+        "Valsartana genérica"
+      ],
+      "ar": [
+        "Diovan",
+        "Valsartán genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 40 mg, 80 mg, 160 mg, 320 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 80–160 mg VO 1x/dia inicial. Manutenção: 160–320 mg/dia. Máximo: 320 mg/dia.",
+      "adultoGrave": "IC (ICFEr — Val-HeFT): 40 mg VO 2x/dia inicial. Titular até 160 mg 2x/dia. Pós-IAM com disfunção VE: 20 mg 2x/dia → 160 mg 2x/dia.",
+      "pediatricaPadrao": "HTA pediátrica ≥ 6 anos (FDA-aprovado): 1,3 mg/kg/dia VO 1x/dia (máx. 40 mg/dia inicial).",
+      "pediatricaGrave": "Titular até 2,7 mg/kg/dia ou 160 mg/dia (o menor). Monitorar PA, creatinina e K⁺ rigorosamente.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "1,3 mg/kg/dia VO 1x/dia (HTA pediátrica ≥ 6 anos, FDA-aprovado)",
+      "grave": "Até 2,7 mg/kg/dia ou 160 mg/dia (o menor)",
+      "meningite": null,
+      "doseMaxima": "Adultos: 320 mg/dia (HTA) / 320 mg/dia em 2 doses (IC) | Pediatria: 160 mg/dia"
+    },
+    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. IC: titular para dose máxima tolerada (alvo 160 mg 2x/dia). Não requer nível sérico — monitorar por PA, creatinina e K⁺.",
+    "dilution": "Apenas formulação oral disponível. Sem apresentação EV. Nota: Sacubitril/Valsartana (Entresto) é formulação combinada distinta.",
+    "speed": "VO: tomar 1x/dia (HTA) ou 2x/dia (IC/Pós-IAM), com ou sem alimento.",
+    "commonAdverseEffects": [
+      "Tontura / hipotensão",
+      "Hipercalemia",
+      "Elevação de creatinina",
+      "Fadiga",
+      "Cefaleia"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema (raro)",
+      "Hipercalemia grave (K⁺ > 6 mEq/L)",
+      "Insuficiência Renal Aguda",
+      "Hipotensão grave — especialmente pós-IAM ou IC descompensada"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação. Elevação ≤ 30% de creatinina é esperada.",
+      "Atenção ao Sacubitril/Valsartana (Entresto): se substituindo IECA, aguardar washout de 36h. A Valsartana simples NÃO substitui Entresto diretamente.",
+      "Evitar dupla inibição do SRAA (BRA + IECA): hipotensão, hipercalemia e insuficiência renal sem benefício adicional.",
+      "AINEs: reduzem efeito anti-hipertensivo e aumentam risco de lesão renal aguda."
+    ],
+    "ref": "FDA Diovan (valsartan) label 2023 · Val-HeFT Trial (NEJM 2001) · VALIANT Trial (NEJM 2003) · ESC HF Guidelines 2021 · AHA/ACC/HFSA HF Guidelines 2022 · Lexicomp 2026",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Ajuste renal formal não necessário para ClCr ≥ 30 mL/min. Monitorar K⁺ e creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "80–160 mg",
+          "intervalo": "24/24h (HTA) ou 12/12h (IC)",
+          "doseMaxima": "320 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "1,3 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "160 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose padrão. HTA: 80–320 mg/dia 1x/dia. IC: iniciar 40 mg 2x/dia → titular até 160 mg 2x/dia."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "24/24h (HTA) ou 12/12h (IC)",
+          "doseMaxima": "160 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "0,7 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "80 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR moderada: sem ajuste obrigatório. Preferir dose inicial menor. Monitorar K⁺ e creatinina rigorosamente."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "40 mg",
+          "intervalo": "24/24h ou 12/12h",
+          "doseMaxima": "80 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar com 40 mg/dia. Risco elevado de hipercalemia e piora renal. Monitoramento intensivo."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "40 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muito grave/anúria: dose máxima 40 mg/dia. Avaliação cuidadosa de risco-benefício. Hipercalemia potencialmente fatal — monitorar rigorosamente."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "40 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Valsartana não é removida significativamente por hemodiálise. Manter dose reduzida sem suplementação pós-HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. Monitorar K⁺, creatinina e PA após início/titulação. Cautela na substituição por Sacubitril/Valsartana."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Diovan (valsartan) label 2023",
+        "Val-HeFT Trial — Cohn JN et al. (NEJM 2001)",
+        "VALIANT Trial — Pfeffer MA et al. (NEJM 2003)",
+        "ESC Heart Failure Guidelines 2021",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "ESC Hypertension Guidelines 2023",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "BRA com maior dose disponível (320 mg). Evidência robusta em IC (Val-HeFT) e pós-IAM (VALIANT). Metabolismo hepático — sem ajuste renal formal. Não dialisável. Precursor do Entresto (Sacubitril/Valsartana)."
+    }
+  },
+  "es": {
+    "name": "Valsartán",
+    "class": "Bloqueante del Receptor de Angiotensina II (BRA/ARA-II)",
+    "commercialNames": {
+      "br": [
+        "Diovan",
+        "Valsartana genérica"
+      ],
+      "ar": [
+        "Diovan",
+        "Valsartán genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 40 mg, 80 mg, 160 mg, 320 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 80–160 mg VO 1 vez/día inicial. Mantenimiento: 160–320 mg/día. Máximo: 320 mg/día.",
+      "adultoGrave": "IC (ICFEr — Val-HeFT): 40 mg VO 2 veces/día inicial. Titular hasta 160 mg 2 veces/día. Post-IAM con disfunción VI: 20 mg 2 veces/día → 160 mg 2 veces/día.",
+      "pediatricaPadrao": "HTA pediátrica ≥ 6 años (FDA-aprobado): 1,3 mg/kg/día VO 1 vez/día (máx. 40 mg/día inicial).",
+      "pediatricaGrave": "Titular hasta 2,7 mg/kg/día o 160 mg/día (el menor). Monitorizar PA, creatinina y K⁺ rigurosamente.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "1,3 mg/kg/día VO 1 vez/día (HTA pediátrica ≥ 6 años, FDA-aprobado)",
+      "grave": "Hasta 2,7 mg/kg/día o 160 mg/día (el menor)",
+      "meningite": null,
+      "doseMaxima": "Adultos: 320 mg/día (HTA) / 320 mg/día en 2 dosis (IC) | Pediatría: 160 mg/día"
+    },
+    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. IC: titular a dosis máxima tolerada (objetivo 160 mg 2 veces/día). No requiere nivel sérico — monitorizar por PA, creatinina y K⁺.",
+    "dilution": "Solo formulación oral disponible. Sin presentación EV. Nota: Sacubitril/Valsartán (Entresto) es formulación combinada distinta.",
+    "speed": "VO: tomar 1 vez/día (HTA) o 2 veces/día (IC/Post-IAM), con o sin alimento.",
+    "commonAdverseEffects": [
+      "Mareos / hipotensión",
+      "Hiperpotasemia",
+      "Elevación de creatinina",
+      "Fatiga",
+      "Cefalea"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema (raro)",
+      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
+      "Insuficiencia Renal Aguda",
+      "Hipotensión grave — especialmente post-IAM o IC descompensada"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación. Aumento ≤ 30% de creatinina es esperado.",
+      "Atención al Sacubitril/Valsartán (Entresto): si sustituyendo IECA, esperar washout de 36h. La Valsartán simple NO sustituye Entresto directamente.",
+      "Evitar doble inhibición del SRAA (ARA-II + IECA): hipotensión, hiperpotasemia e insuficiencia renal sin beneficio adicional.",
+      "AINEs: reducen efecto antihipertensivo y aumentan riesgo de lesión renal aguda."
+    ],
+    "ref": "FDA Diovan (valsartan) label 2023 · Val-HeFT Trial (NEJM 2001) · VALIANT Trial (NEJM 2003) · ESC HF Guidelines 2021 · AHA/ACC/HFSA HF Guidelines 2022 · Lexicomp 2026",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Ajuste renal formal no necesario para ClCr ≥ 30 mL/min. Monitorizar K⁺ y creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "80–160 mg",
+          "intervalo": "24/24h (HTA) ou 12/12h (IC)",
+          "doseMaxima": "320 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "1,3 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "160 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis estándar. HTA: 80–320 mg/día 1 vez/día. IC: iniciar 40 mg 2 veces/día → titular hasta 160 mg 2 veces/día."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "40–80 mg",
+          "intervalo": "24/24h (HTA) ou 12/12h (IC)",
+          "doseMaxima": "160 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "0,7 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "80 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR moderada: sin ajuste obligatorio. Preferir dosis inicial menor. Monitorizar K⁺ y creatinina rigurosamente."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "40 mg",
+          "intervalo": "24/24h ou 12/12h",
+          "doseMaxima": "80 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar con 40 mg/día. Riesgo elevado de hiperpotasemia y deterioro renal. Monitorización intensiva."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "40 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muy grave/anuria: dosis máxima 40 mg/día. Evaluación cuidadosa de riesgo-beneficio. Hiperpotasemia potencialmente fatal — monitorizar rigurosamente."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "40 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Valsartán no es removido significativamente por hemodiálisis. Mantener dosis reducida sin suplementación post-HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. Monitorizar K⁺, creatinina y PA tras inicio/titulación. Precaución al sustituir por Sacubitril/Valsartán."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Diovan (valsartan) label 2023",
+        "Val-HeFT Trial — Cohn JN et al. (NEJM 2001)",
+        "VALIANT Trial — Pfeffer MA et al. (NEJM 2003)",
+        "ESC Heart Failure Guidelines 2021",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "ESC Hypertension Guidelines 2023",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "ARA-II con mayor dosis disponible (320 mg). Evidencia robusta en IC (Val-HeFT) y post-IAM (VALIANT). Metabolismo hepático — sin ajuste renal formal. No dializable. Precursor del Entresto (Sacubitril/Valsartán)."
+    }
+  },
+  "name": {
+    "pt": "Valsartana",
+    "es": "Valsartán"
+  },
+  "keywords": [
+    "valsartana",
+    "valsartan",
+    "diovan",
+    "valsartana generica",
+    "valsartan generico",
+    "bloqueador do receptor de angiotensina ii (bra/arb)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

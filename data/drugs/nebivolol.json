@@ -1,0 +1,702 @@
+{
+  "id": "nebivolol",
+  "category": "cardio",
+  "icon": "🫀",
+  "color": "rgba(239,68,68,0.13)",
+  "colorTxt": "#7F1D1D",
+  "pt": {
+    "name": "Cloridrato de Nebivolol",
+    "class": "Betabloqueador beta-1 seletivo com ação vasodilatadora mediada por óxido nítrico (NO)",
+    "commercialNames": {
+      "br": [
+        "Nebilet",
+        "Nebivolol genérico"
+      ],
+      "ar": [
+        "Nebilet",
+        "Nebivolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 2,5 mg, 5 mg, 10 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 5 mg VO 1x/dia. Titular a cada 2 semanas conforme resposta. Máximo: 40 mg/dia conforme protocolo.",
+      "adultoGrave": "ICC em idosos (SENIORS Trial): iniciar 1,25 mg VO 1x/dia. Dobrar a dose a cada 1–2 semanas até alvo de 10 mg/dia.",
+      "pediatricaPadrao": "Uso pediátrico não aprovado. Sem dados robustos de segurança/eficácia em menores de 18 anos.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adultos: 5 mg 1x/dia (dose fixa — não calculada por kg)",
+      "grave": "ICC: titular de 1,25 mg até 10 mg/dia (SENIORS)",
+      "meningite": null,
+      "doseMaxima": "Adultos: 10 mg/dia (ICC idosos) / 40 mg/dia (HTA alguns protocolos)"
+    },
+    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg com FC em repouso 55–70 bpm. ICC: FC 55–65 bpm em repouso sem sintomas de baixo débito.",
+    "dilution": "Apenas formulação oral. Sem apresentação EV disponível comercialmente.",
+    "speed": "VO: tomar 1x/dia no mesmo horário, com ou sem alimento.",
+    "commonAdverseEffects": [
+      "Cefaleia",
+      "Tontura / hipotensão",
+      "Fadiga",
+      "Bradicardia",
+      "Parestesias nas mãos",
+      "Dispneia leve"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueio AV de 2º/3º grau",
+      "Broncoespasmo grave",
+      "Choque cardiogênico",
+      "Piora de ICC descompensada",
+      "Hipotensão grave (especialmente em idosos)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NUNCA suspender abruptamente — reduzir progressivamente em 1–2 semanas para evitar angina rebote e eventos cardiovasculares.",
+      "Segurar se: FC < 50 bpm, PAS < 90 mmHg, bloqueio AV 2º/3º grau ou IC agudamente descompensada.",
+      "Contraindicado em insuficiência hepática grave — metabolismo predominantemente hepático via CYP2D6.",
+      "Inibidores potentes de CYP2D6 (fluoxetina, paroxetina) aumentam substancialmente a exposição ao nebivolol."
+    ],
+    "ref": "ESC Hypertension Guidelines 2023 · AHA/ACC Hypertension Guidance 2022 · SENIORS Trial (NEJM 2005) · FDA Bystolic (nebivolol) label 2023 · EMA Nebilet SmPC 2024 · Lexicomp 2026 · Goodman & Gilman 14ª ed.",
+    "mechanism": "Bloqueio seletivo e competitivo dos receptores β1-adrenérgicos cardíacos com alta seletividade (β1:β2 estimada > 300:1 em alguns estudos). Reduz FC, força contrátil, débito cardíaco e secreção de renina. Diferencial de 3ª geração: estimula a via L-arginina/NOS endotelial (eNOS) → produção de óxido nítrico (NO) → vasodilatação arterial periférica, redução da pós-carga e melhora da função endotelial. Esse efeito vasodilatador dependente de NO é ausente nos betabloqueadores de 1ª e 2ª gerações.",
+    "pharmacokinetics": {
+      "absorption": "Absorção oral rápida; Tmax ~1,5–4 h. Alimento não afeta significativamente a absorção.",
+      "bioavailability": "Metabolizadores extensos (EM) CYP2D6: ~12% (efeito de primeira passagem extenso). Metabolizadores lentos (PM) CYP2D6: >90%. Diferença de exposição de até 10× entre fenótipos — o efeito clínico em PM é muito mais pronunciado.",
+      "proteinBinding": "~98% (alta ligação proteica — albumina)",
+      "vd": "~10 L/kg (alta lipofilia — ampla distribuição tecidual)",
+      "metabolism": "Predominantemente hepático via CYP2D6 (~98%). Produz metabólitos hidroxilados ativos. Polimorfismo CYP2D6 tem impacto MUITO maior que no metoprolol — PM CYP2D6 têm AUC até 10× maior. Inibidores de CYP2D6 (fluoxetina, paroxetina) elevam drasticamente os níveis plasmáticos.",
+      "halfLife": "10 h (metabolizadores extensos CYP2D6) a 30 h (metabolizadores lentos PM). Meia-vida dos metabólitos ativos: 12–19 h. Permite posologia 1x/dia em ambos os fenótipos.",
+      "elimination": "38% fecal + 38% renal como metabólitos; fármaco inalterado < 0,5%. Em IR grave (ClCr < 30): acúmulo de metabólitos ativos — iniciar com 2,5 mg/dia.",
+      "dialysability": "Não removido significativamente por hemodiálise (alta ligação proteica ~98% + alto Vd ~10 L/kg). Sem suplementação pós-HD."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensão arterial sistêmica (aprovado FDA/EMA)",
+        "Insuficiência cardíaca crônica estável em idosos ≥ 70 anos — SENIORS Trial (aprovado EMA, não aprovado FDA para ICC)"
+      ],
+      "offLabel": [
+        "Angina estável crônica",
+        "Controle da frequência ventricular na fibrilação atrial",
+        "Doença arterial coronariana — redução de eventos cardiovasculares",
+        "Disfunção erétil associada a betabloqueadores (substituição por nebivolol — efeito NO)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Bradicardia sinusal < 50 bpm sintomática",
+        "Bloqueio AV de 2º grau (Mobitz II) ou 3º grau sem marcapasso",
+        "Síndrome do seio doente sem marcapasso",
+        "Choque cardiogênico",
+        "ICC agudamente descompensada que requer suporte inotrópico IV",
+        "PAS < 90 mmHg",
+        "Insuficiência hepática grave (Child-Pugh C) — contraindicado pelo metabolismo hepático extenso via CYP2D6",
+        "Hipersensibilidade ao nebivolol"
+      ],
+      "relative": [
+        "Asma brônquica moderada/grave (menor risco que betabloqueadores não seletivos, mas possível)",
+        "DPOC com broncoespasmo reversível significativo",
+        "IR grave (ClCr < 30 mL/min): iniciar com 2,5 mg/dia",
+        "Diabetes insulinodependente (mascaramento de sinais adrenérgicos de hipoglicemia)",
+        "Feocromocitoma sem bloqueio α prévio",
+        "Doença vascular periférica grave (Raynaud)",
+        "Insuficiência hepática moderada (Child-Pugh B): usar com cautela, doses baixas",
+        "Psoriase (pode exacerbar)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamil EV / Diltiazem EV",
+          "mechanism": "Dupla inibição nodal AV (dromotrópico negativo aditivo)",
+          "consequence": "Bloqueio AV completo, parada cardíaca",
+          "management": "NÃO associar EV. Via oral: extrema cautela com monitorização contínua de FC e ECG."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Inibidores de CYP2D6 (fluoxetina, paroxetina, bupropiona, quinidina)",
+          "mechanism": "Inibição do metabolismo hepático do nebivolol via CYP2D6 → aumento dramático de AUC (até 8–10×)",
+          "consequence": "Bradicardia grave, hipotensão, bloqueio AV — impacto muito maior que no metoprolol",
+          "management": "Reduzir dose de nebivolol substancialmente (≥50–75%). Monitorar FC e PA rigorosamente. Considerar substituição por bisoprolol se associação necessária."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efeito cronotrópico e dromotrópico negativo aditivo no nódulo sinusal e AV",
+          "consequence": "Bradicardia e bloqueio AV potencialmente graves",
+          "management": "Monitorar FC e ECG. Verificar nível sérico de digoxina se suspeita de toxicidade."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Inibição de CYP2D6 pela amiodarona + efeito bradicardizante/dromotrópico negativo aditivo",
+          "consequence": "Bradicardia grave e bloqueio AV — duplo mecanismo",
+          "management": "Reduzir dose de nebivolol. Monitorar ECG continuamente."
+        },
+        {
+          "drug": "Clonidina",
+          "mechanism": "Retirada abrupta da clonidina → hipertensão rebote grave não antagonizada pelo nebivolol",
+          "consequence": "Crise hipertensiva grave",
+          "management": "Descontinuar nebivolol dias antes de suspender clonidina."
+        },
+        {
+          "drug": "Insulina / sulfonilureias",
+          "mechanism": "Mascaramento da taquicardia reflexa de hipoglicemia; pode prolongar hipoglicemia",
+          "consequence": "Hipoglicemia grave não reconhecida",
+          "management": "Monitorar glicemia com frequência. Sudorese preservada como sinal alternativo."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, diclofenaco)",
+          "mechanism": "Redução de prostaglandinas vasodilatadoras renais → antagonismo do efeito anti-hipertensivo",
+          "consequence": "Redução do controle pressórico",
+          "management": "Monitorar PA. Preferir paracetamol se analgesia necessária."
+        },
+        {
+          "drug": "Anti-hipertensivos em geral (IECA, BRA, BCC VO, diuréticos)",
+          "mechanism": "Hipotensão aditiva — vasodilatação por NO do nebivolol soma-se ao efeito hipotensor de outros agentes",
+          "consequence": "Hipotensão sintomática, síncope (especialmente idosos)",
+          "management": "Titular doses individualmente. Monitorar PA em ortostatismo. Orientar levantamento gradual."
+        },
+        {
+          "drug": "Anestésicos gerais (propofol, sevoflurano, halotano)",
+          "mechanism": "Depressão miocárdica e hipotensão aditiva",
+          "consequence": "Hipotensão intraoperatória, bradicardia",
+          "management": "Manter nebivolol no perioperatório em pacientes com HTA/DAC crônica (risco de rebote se suspenso). Informar anestesiologista."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC e PA em repouso e em ortostatismo",
+        "ECG (intervalo PR, ritmo)",
+        "Função hepática (TGO/TGP) — metabolismo CYP2D6 hepático; contraindicado em Child-Pugh C",
+        "Função renal (creatinina/ClCr) — acúmulo de metabólitos ativos em IR grave",
+        "Sintomas respiratórios (asma/DPOC)",
+        "Glicemia basal em diabéticos"
+      ],
+      "followUp": [
+        "FC alvo: 55–65 bpm (ICC/SENIORS) / < 70 bpm (HTA)",
+        "PA em cada consulta — incluir ortostatismo em idosos",
+        "Sintomas de hipotensão ortostática (importante em idosos pelo efeito vasodilatador NO)",
+        "Função hepática e renal a cada 6–12 meses ou após mudança de dose",
+        "Tolerabilidade respiratória (dispneia, sibilos)",
+        "Aderência e tolerabilidade"
+      ],
+      "icc": [
+        "Pesar diariamente pela manhã (ganho > 2 kg/48h = alerta)",
+        "Edemas de membros inferiores",
+        "Classe funcional NYHA a cada consulta",
+        "Ecocardiograma após titulação completa para verificar melhora de FEVE"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave",
+        "Hipotensão (agravada pela vasodilatação mediada por NO)",
+        "Bloqueio AV de alto grau",
+        "Broncoespasmo (menor que com betabloqueadores não seletivos)",
+        "Hipoglicemia em diabéticos",
+        "Tontura grave, síncope",
+        "Insuficiência cardíaca aguda (raro)"
+      ],
+      "management": [
+        "1. Carvão ativado se ingesta recente < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia (máx 3 mg)",
+        "3. Glucagon 5–10 mg IV bolus → infusão 1–5 mg/h (antídoto específico — ativa adenilciclase independente de β1)",
+        "4. Norepinefrina para hipotensão refratária (considerar vasopressor pela vasodilatação por NO)",
+        "5. Dobutamina/isoprotenerenol se bradicardia com hipotensão refratária",
+        "6. Emulsão lipídica IV 20% em intoxicação grave refratária (nebivolol é lipofílico)",
+        "7. Marcapasso transcutâneo ou transvenoso em BAV refratário",
+        "8. ECMO em colapso cardiocirculatório refratário",
+        "9. Hemodiálise NÃO eficaz (ligação proteica ~98% + alto Vd)"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "ClCr ≥ 30 mL/min: sem ajuste. ClCr < 30 mL/min: iniciar com 2,5 mg/dia — acúmulo de metabólitos ativos. Hemodiálise: não removido significativamente (ligação proteica ~98%); sem suplementação pós-HD. SENIORS Trial incluiu pacientes com IR moderada.",
+      "obesity": "Obesidade: alto Vd (~10 L/kg) implica ampla distribuição. Titular pela resposta de FC e PA. Síndrome metabólica: nebivolol tem perfil neutro/favorável — menor impacto em sensibilidade à insulina e lipídeos vs. betabloqueadores não vasodilatadores.",
+      "geriatrics": "Idosos (≥ 70 anos): UNIQUE — nebivolol tem evidência específica em ICC de idosos (SENIORS Trial). Iniciar 1,25–2,5 mg/dia. Maior risco de hipotensão ortostática pela vasodilatação por NO. Monitorar ortostatismo rigorosamente. Verificar ClCr antes de iniciar. Lipofílico — risco teórico de alterações cognitivas.",
+      "pregnancy": "Gestação: dados limitados (categoria C FDA). Pode causar bradicardia fetal, RCIU e hipoglicemia neonatal. Monitorar crescimento fetal por US. Em HTA gestacional, labetalol e nifedipina de liberação controlada são preferidos. Interromper 48–72 h antes do parto.",
+      "lactation": "Lactação: excreção no leite materno (dados limitados). Monitorar lactente para bradicardia e sonolência. Lipofílico — relação leite/plasma possivelmente elevada. Considerar alternativa se necessário.",
+      "hepaticImpairment": "Hepatopatia: metabolismo ~98% hepático via CYP2D6. Child-Pugh A: usar com cautela, monitorar. Child-Pugh B: doses baixas (2,5 mg/dia), ajuste individual. Child-Pugh C: CONTRAINDICADO — acumulação grave. Diferencial crítico vs. bisoprolol (50% renal): em hepatopatia grave, bisoprolol é mais seguro.",
+      "dpoc": "DPOC: alta seletividade β1 (>300:1) minimiza broncoespasmo — superior a betabloqueadores não seletivos. Porém, evidência de segurança em DPOC+ICC é menor que para bisoprolol (SENIORS incluiu DPOC leve-moderado). Em DPOC+ICC, bisoprolol é geralmente preferido pela maior evidência.",
+      "cyp2d6pm": "CYP2D6 Poor Metabolizer (PM): ~7–10% caucasianos. Exposição ao nebivolol até 10× maior vs. EM — potencial para bradicardia intensa mesmo em doses baixas. Suspeitar em pacientes com bradicardia excessiva sem inibidores CYP2D6 concomitantes."
+    },
+    "clinicalPearls": [
+      "SENIORS Trial (NEJM 2005): nebivolol vs. placebo em ICC de idosos ≥ 70 anos (FE média ~36%, ~35% FE preservada). Reduziu endpoint primário (morte ou hospitalização cardiovascular) em 14% (RR 0,86, NNT ~14/18 meses). Único betabloqueador com evidência randomizada em ICC de idosos.",
+      "Betabloqueador de 3ª geração: alta seletividade β1 (>300:1) + vasodilatação mediada por óxido nítrico (NO). O efeito NO é ausente em metoprolol, bisoprolol, carvedilol e todos os betabloqueadores de 1ª/2ª geração.",
+      "CYP2D6: impacto do polimorfismo muito maior que no metoprolol. PM CYP2D6 têm AUC até 10× maior; biodisponibilidade salta de ~12% (EM) para >90% (PM). Inibidores de CYP2D6 (fluoxetina, paroxetina) têm consequência potencialmente muito mais grave com nebivolol do que com metoprolol.",
+      "Disfunção erétil: nebivolol tem menor incidência de DE vs. betabloqueadores clássicos. O efeito vasodilatador por NO melhora a função endotelial peniana. Pode ser usado como substituto em pacientes com DE atribuída a betabloqueadores tradicionais.",
+      "Nebivolol NÃO está aprovado pelo FDA para ICC (SENIORS não satisfez os critérios de endpoint do FDA). Está aprovado para ICC em vários países europeus via EMA. No Brasil: aprovado para HTA; ICC em idosos é uso off-label conforme SENIORS.",
+      "Sem formulação EV — única opção oral. Em emergências que requerem betabloqueio IV (crise hipertensiva, taquiarritmia intraoperatória), usar metoprolol EV ou esmolol EV."
+    ],
+    "incompatibilities": "Apenas formulação oral. Sem incompatibilidades de administração IV a relatar. Não há dados sobre interações com alimentos específicos além da absorção (alimento não altera biodisponibilidade significativamente).",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálise peritoneal: nebivolol não é removido de forma relevante (alta ligação proteica ~98% + alto Vd ~10 L/kg). Manter dose habitual reduzida (máx 2,5 mg/dia em IR grave). Monitorar PA e FC."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: remoção mínima do nebivolol. Não requer suplementação. Em UTI com TRSC, usar dose mínima eficaz com monitorização hemodinâmica contínua. Hipotensão pelo efeito vasodilatador por NO pode ser problemática em pacientes instáveis."
+      }
+    },
+    "prescriptionErrors": [
+      "Usar como padrão de 1ª linha em ICFEr em vez de metoprolol succinato, bisoprolol ou carvedilol — nebivolol NÃO está na lista dos 3 betabloqueadores com nível de evidência A da ESC/AHA para redução de mortalidade em ICFEr geral (apenas em idosos ≥ 70 anos pela SENIORS).",
+      "Não ajustar dose ao prescrever inibidores de CYP2D6 (fluoxetina, paroxetina) — risco de bradicardia grave; impacto é MUITO maior com nebivolol do que com metoprolol.",
+      "Usar em hepatopatia grave (Child-Pugh C) — contraindicado; metabolismo ~98% hepático.",
+      "Não iniciar com 2,5 mg em IR grave (ClCr < 30) e em idosos ≥ 65 anos — doses padrão (5 mg) causam bradicardia excessiva nesses grupos.",
+      "Suspender abruptamente no perioperatório — sempre reduzir progressivamente em 1–2 semanas."
+    ],
+    "patientEducation": [
+      "Tomar uma vez ao dia, sempre no mesmo horário.",
+      "Nunca parar o medicamento de repente — reduzir progressivamente sob orientação médica.",
+      "Levantar devagar da cama ou cadeira para evitar tontura (o remédio causa vasodilatação).",
+      "Avisar ao médico se FC < 50 bpm, pressão muito baixa ou tontura intensa ao levantar.",
+      "Diabéticos: monitorar glicemia com mais frequência — este remédio pode esconder a taquicardia da hipoglicemia. A sudorese persiste como sinal de alerta.",
+      "Idosos com ICC: pesar-se todo dia pela manhã — ganho > 2 kg em 2 dias: contatar médico.",
+      "Avisar ao médico se começar a tomar fluoxetina, paroxetina ou qualquer antidepressivo — podem aumentar muito o efeito deste medicamento."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não requer ajuste renal para ClCr ≥ 30 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose padrão. HTA: 5 mg 1x/dia. ICC em idosos: iniciar 1,25 mg e titular até 10 mg."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "2,5–5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "20 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR leve-moderada: dose padrão tolerada na maioria. Monitorar PA e FC — considerar iniciar com 2,5 mg se > 65 anos."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar com 2,5 mg/dia. Titular com cautela extrema. Risco aumentado de acúmulo de metabólitos e bradicardia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2,5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muito grave/anúria: dose máxima 2,5 mg/dia. Avaliar risco-benefício cuidadosamente. Monitoração intensiva de PA, FC e bloqueio AV."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2,5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Nebivolol não é significativamente removido por hemodiálise. Manter dose reduzida (2,5 mg/dia). Administrar em horário fixo — sem relação com sessão de HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "bradycardiaRisk": true,
+      "hypotensionRisk": true,
+      "avBlockRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Nebivolol combina beta-bloqueio com vasodilatação mediada por NO. Iniciar com 2,5 mg em IR grave (ClCr < 30) e em idosos. Contraindicado em hepatopatia grave."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "FDA Bystolic (nebivolol) label 2023",
+        "EMA Nebilet SmPC 2024",
+        "ESC Hypertension Guidelines 2023",
+        "AHA/ACC Hypertension Guidance 2022",
+        "SENIORS Trial — van Veldhuisen DJ et al. (NEJM 2005)",
+        "UpToDate 2025",
+        "Lexicomp Online 2026",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Betabloqueador de 3ª geração: seletividade β1 > 300:1 + vasodilatação por NO. Diferencial: único com evidência em ICC de idosos (SENIORS, NNT ~14/18 meses). CYP2D6: impacto do polimorfismo muito maior que metoprolol (AUC até 10× em PM). Contraindicado em Child-Pugh C. Ajuste renal: 2,5 mg em ClCr < 30. FDA: aprovado apenas para HTA; ICC é off-label nos EUA. Auditoria V2 completada 2026-06."
+    }
+  },
+  "es": {
+    "name": "Clorhidrato de Nebivolol",
+    "class": "Betabloqueante beta-1 selectivo con acción vasodilatadora mediada por óxido nítrico (NO)",
+    "commercialNames": {
+      "br": [
+        "Nebilet",
+        "Nebivolol genérico"
+      ],
+      "ar": [
+        "Nebilet",
+        "Nebivolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 2,5 mg, 5 mg, 10 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 5 mg VO 1 vez/día. Titular cada 2 semanas según respuesta. Máximo: 40 mg/día según protocolo.",
+      "adultoGrave": "ICC en ancianos (estudio SENIORS): iniciar 1,25 mg VO 1 vez/día. Doblar la dosis cada 1–2 semanas hasta objetivo de 10 mg/día.",
+      "pediatricaPadrao": "Uso pediátrico no aprobado. Sin datos robustos de seguridad/eficacia en menores de 18 años.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adultos: 5 mg 1 vez/día (dosis fija — no calculada por kg)",
+      "grave": "ICC: titular desde 1,25 mg hasta 10 mg/día (SENIORS)",
+      "meningite": null,
+      "doseMaxima": "Adultos: 10 mg/día (ICC ancianos) / 40 mg/día (HTA algunos protocolos)"
+    },
+    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg con FC en reposo 55–70 lpm. ICC: FC 55–65 lpm en reposo sin síntomas de bajo gasto.",
+    "dilution": "Solo formulación oral. Sin presentación EV disponible comercialmente.",
+    "speed": "VO: tomar 1 vez/día a la misma hora, con o sin alimento.",
+    "commonAdverseEffects": [
+      "Cefalea",
+      "Mareos / hipotensión",
+      "Fatiga",
+      "Bradicardia",
+      "Parestesias en manos",
+      "Disnea leve"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueo AV de 2º/3er grado",
+      "Broncoespasmo grave",
+      "Shock cardiogénico",
+      "Empeoramiento de ICC descompensada",
+      "Hipotensión grave (especialmente en ancianos)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NUNCA suspender abruptamente — reducir progresivamente en 1–2 semanas para evitar angina rebote y eventos cardiovasculares.",
+      "Suspender si: FC < 50 lpm, PAS < 90 mmHg, bloqueo AV 2º/3er grado o IC agudamente descompensada.",
+      "Contraindicado en insuficiencia hepática grave — metabolismo predominantemente hepático vía CYP2D6.",
+      "Inhibidores potentes de CYP2D6 (fluoxetina, paroxetina) aumentan sustancialmente la exposición al nebivolol."
+    ],
+    "ref": "ESC Hypertension Guidelines 2023 · AHA/ACC Hypertension Guidance 2022 · SENIORS Trial (NEJM 2005) · FDA Bystolic (nebivolol) label 2023 · EMA Nebilet SmPC 2024 · Lexicomp 2026 · Goodman & Gilman 14ª ed.",
+    "mechanism": "Bloqueo selectivo y competitivo de los receptores β1-adrenérgicos cardíacos con alta selectividad (β1:β2 estimada > 300:1 en algunos estudios). Reduce FC, fuerza contráctil, gasto cardíaco y secreción de renina. Diferencial de 3ª generación: estimula la vía L-arginina/eNOS endotelial → producción de óxido nítrico (NO) → vasodilatación arterial periférica, reducción de la postcarga y mejora de la función endotelial. Este efecto vasodilatador dependiente de NO está ausente en los betabloqueantes de 1ª y 2ª generaciones.",
+    "pharmacokinetics": {
+      "absorption": "Absorción oral rápida; Tmax ~1,5–4 h. El alimento no afecta significativamente la absorción.",
+      "bioavailability": "Metabolizadores extensos (EM) CYP2D6: ~12% (efecto de primer paso extenso). Metabolizadores lentos (PM) CYP2D6: >90%. Diferencia de exposición de hasta 10× entre fenotipos — el efecto clínico en PM es mucho más pronunciado.",
+      "proteinBinding": "~98% (alta unión a proteínas — albúmina)",
+      "vd": "~10 L/kg (alta lipofilia — amplia distribución tisular)",
+      "metabolism": "Predominantemente hepático vía CYP2D6 (~98%). Produce metabolitos hidroxilados activos. El polimorfismo CYP2D6 tiene impacto MUCHO mayor que en metoprolol — PM CYP2D6 tienen AUC hasta 10× mayor. Inhibidores de CYP2D6 (fluoxetina, paroxetina) elevan drásticamente los niveles plasmáticos.",
+      "halfLife": "10 h (metabolizadores extensos CYP2D6) a 30 h (metabolizadores lentos PM). Semivida de los metabolitos activos: 12–19 h. Permite posología 1 vez/día en ambos fenotipos.",
+      "elimination": "38% fecal + 38% renal como metabolitos; fármaco sin cambios < 0,5%. En IR grave (ClCr < 30): acumulación de metabolitos activos — iniciar con 2,5 mg/día.",
+      "dialysability": "No removido significativamente por hemodiálisis (alta unión proteica ~98% + alto Vd ~10 L/kg). Sin suplementación post-HD."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensión arterial sistémica (aprobado FDA/EMA)",
+        "Insuficiencia cardíaca crónica estable en ancianos ≥ 70 años — estudio SENIORS (aprobado EMA, no aprobado FDA para ICC)"
+      ],
+      "offLabel": [
+        "Angina estable crónica",
+        "Control de frecuencia ventricular en fibrilación auricular",
+        "Enfermedad arterial coronaria — reducción de eventos cardiovasculares",
+        "Disfunción eréctil asociada a betabloqueantes (sustitución por nebivolol — efecto NO)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Bradicardia sinusal < 50 lpm sintomática",
+        "Bloqueo AV de 2º grado (Mobitz II) o 3er grado sin marcapasos",
+        "Síndrome del seno enfermo sin marcapasos",
+        "Shock cardiogénico",
+        "ICC agudamente descompensada que requiere soporte inotrópico IV",
+        "PAS < 90 mmHg",
+        "Insuficiencia hepática grave (Child-Pugh C) — contraindicado por el metabolismo hepático extenso vía CYP2D6",
+        "Hipersensibilidad al nebivolol"
+      ],
+      "relative": [
+        "Asma bronquial moderada/grave (menor riesgo que betabloqueantes no selectivos, pero posible)",
+        "EPOC con broncoespasmo reversible significativo",
+        "IR grave (ClCr < 30 mL/min): iniciar con 2,5 mg/día",
+        "Diabetes insulinodependiente (enmascaramiento de signos adrenérgicos de hipoglucemia)",
+        "Feocromocitoma sin bloqueo α previo",
+        "Enfermedad vascular periférica grave (Raynaud)",
+        "Insuficiencia hepática moderada (Child-Pugh B): usar con precaución, dosis bajas",
+        "Psoriasis (puede exacerbar)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamilo EV / Diltiazem EV",
+          "mechanism": "Doble inhibición nodal AV (dromotrópico negativo aditivo)",
+          "consequence": "Bloqueo AV completo, paro cardíaco",
+          "management": "NO asociar EV. Vía oral: extrema precaución con monitorización continua de FC y ECG."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Inhibidores de CYP2D6 (fluoxetina, paroxetina, bupropión, quinidina)",
+          "mechanism": "Inhibición del metabolismo hepático del nebivolol vía CYP2D6 → aumento dramático de AUC (hasta 8–10×)",
+          "consequence": "Bradicardia grave, hipotensión, bloqueo AV — impacto mucho mayor que en metoprolol",
+          "management": "Reducir dosis de nebivolol sustancialmente (≥50–75%). Monitorizar FC y PA rigurosamente. Considerar sustitución por bisoprolol si la asociación es necesaria."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efecto cronotrópico y dromotrópico negativo aditivo en nódulo sinusal y AV",
+          "consequence": "Bradicardia y bloqueo AV potencialmente graves",
+          "management": "Monitorizar FC y ECG. Verificar nivel sérico de digoxina si sospecha de toxicidad."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Inhibición de CYP2D6 por amiodarona + efecto bradicardizante/dromotrópico negativo aditivo",
+          "consequence": "Bradicardia grave y bloqueo AV — doble mecanismo",
+          "management": "Reducir dosis de nebivolol. Monitorizar ECG continuamente."
+        },
+        {
+          "drug": "Clonidina",
+          "mechanism": "Retirada abrupta de clonidina → hipertensión de rebote grave no antagonizada por nebivolol",
+          "consequence": "Crisis hipertensiva grave",
+          "management": "Descontinuar nebivolol días antes de suspender clonidina."
+        },
+        {
+          "drug": "Insulina / sulfonilureas",
+          "mechanism": "Enmascaramiento de la taquicardia refleja de hipoglucemia; puede prolongar hipoglucemia",
+          "consequence": "Hipoglucemia grave no reconocida",
+          "management": "Monitorizar glucemia con frecuencia. La sudoración se preserva como signo alternativo."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, diclofenaco)",
+          "mechanism": "Reducción de prostaglandinas vasodilatadoras renales → antagonismo del efecto antihipertensivo",
+          "consequence": "Reducción del control presórico",
+          "management": "Monitorizar PA. Preferir paracetamol si analgesia necesaria."
+        },
+        {
+          "drug": "Antihipertensivos en general (IECA, ARA, BCC VO, diuréticos)",
+          "mechanism": "Hipotensión aditiva — vasodilatación por NO del nebivolol se suma al efecto hipotensor de otros agentes",
+          "consequence": "Hipotensión sintomática, síncope (especialmente ancianos)",
+          "management": "Titular dosis individualmente. Monitorizar PA en ortostatismo. Orientar levantamiento gradual."
+        },
+        {
+          "drug": "Anestésicos generales (propofol, sevoflurano, halotano)",
+          "mechanism": "Depresión miocárdica e hipotensión aditiva",
+          "consequence": "Hipotensión intraoperatoria, bradicardia",
+          "management": "Mantener nebivolol en el perioperatorio en pacientes con HTA/DAC crónica (riesgo de rebote si suspendido). Informar al anestesiólogo."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC y PA en reposo y en ortostatismo",
+        "ECG (intervalo PR, ritmo)",
+        "Función hepática (AST/ALT) — metabolismo CYP2D6 hepático; contraindicado en Child-Pugh C",
+        "Función renal (creatinina/ClCr) — acumulación de metabolitos activos en IR grave",
+        "Síntomas respiratorios (asma/EPOC)",
+        "Glucemia basal en diabéticos"
+      ],
+      "followUp": [
+        "FC objetivo: 55–65 lpm (ICC/SENIORS) / < 70 lpm (HTA)",
+        "PA en cada consulta — incluir ortostatismo en ancianos",
+        "Síntomas de hipotensión ortostática (importante en ancianos por el efecto vasodilatador NO)",
+        "Función hepática y renal cada 6–12 meses o tras cambio de dosis",
+        "Tolerabilidad respiratoria (disnea, sibilancias)",
+        "Adherencia y tolerabilidad"
+      ],
+      "icc": [
+        "Pesar diariamente por la mañana (ganancia > 2 kg/48h = alerta)",
+        "Edemas de miembros inferiores",
+        "Clase funcional NYHA en cada consulta",
+        "Ecocardiograma tras titulación completa para verificar mejora de FEVI"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave",
+        "Hipotensión (agravada por la vasodilatación mediada por NO)",
+        "Bloqueo AV de alto grado",
+        "Broncoespasmo (menor que con betabloqueantes no selectivos)",
+        "Hipoglucemia en diabéticos",
+        "Mareos graves, síncope",
+        "Insuficiencia cardíaca aguda (raro)"
+      ],
+      "management": [
+        "1. Carbón activado si ingesta reciente < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia (máx 3 mg)",
+        "3. Glucagón 5–10 mg IV bolo → infusión 1–5 mg/h (antídoto específico — activa adenilciclasa independiente de β1)",
+        "4. Norepinefrina para hipotensión refractaria (considerar vasopresor por la vasodilatación por NO)",
+        "5. Dobutamina/isoproterenol si bradicardia con hipotensión refractaria",
+        "6. Emulsión lipídica IV 20% en intoxicación grave refractaria (nebivolol es lipofílico)",
+        "7. Marcapasos transcutáneo o transvenoso en BAV refractario",
+        "8. ECMO en colapso cardiocirculatorio refractario",
+        "9. Hemodiálisis NO eficaz (unión proteica ~98% + alto Vd)"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "ClCr ≥ 30 mL/min: sin ajuste. ClCr < 30 mL/min: iniciar con 2,5 mg/día — acumulación de metabolitos activos. Hemodiálisis: no removido significativamente (unión proteica ~98%); sin suplementación post-HD. Estudio SENIORS incluyó pacientes con IR moderada.",
+      "obesity": "Obesidad: alto Vd (~10 L/kg) implica amplia distribución. Titular por respuesta de FC y PA. Síndrome metabólico: nebivolol tiene perfil neutro/favorable — menor impacto en sensibilidad a la insulina y lípidos vs. betabloqueantes no vasodilatadores.",
+      "geriatrics": "Ancianos (≥ 70 años): ÚNICO — nebivolol tiene evidencia específica en ICC de ancianos (estudio SENIORS). Iniciar 1,25–2,5 mg/día. Mayor riesgo de hipotensión ortostática por la vasodilatación por NO. Monitorizar ortostatismo rigurosamente. Verificar ClCr antes de iniciar. Lipofílico — riesgo teórico de alteraciones cognitivas.",
+      "pregnancy": "Embarazo: datos limitados (categoría C FDA). Puede causar bradicardia fetal, RCIU e hipoglucemia neonatal. Monitorizar crecimiento fetal por US. En HTA gestacional, labetalol y nifedipino de liberación controlada son preferidos. Interrumpir 48–72 h antes del parto.",
+      "lactation": "Lactancia: excreción en leche materna (datos limitados). Monitorizar lactante para bradicardia y somnolencia. Lipofílico — relación leche/plasma posiblemente elevada. Considerar alternativa si necesario.",
+      "hepaticImpairment": "Hepatopatía: metabolismo ~98% hepático vía CYP2D6. Child-Pugh A: usar con precaución, monitorizar. Child-Pugh B: dosis bajas (2,5 mg/día), ajuste individual. Child-Pugh C: CONTRAINDICADO — acumulación grave. Diferencial crítico vs. bisoprolol (50% renal): en hepatopatía grave, bisoprolol es más seguro.",
+      "dpoc": "EPOC: alta selectividad β1 (>300:1) minimiza broncoespasmo — superior a betabloqueantes no selectivos. Sin embargo, la evidencia de seguridad en EPOC+ICC es menor que para bisoprolol (SENIORS incluyó EPOC leve-moderado). En EPOC+ICC, bisoprolol es generalmente preferido por mayor evidencia.",
+      "cyp2d6pm": "CYP2D6 Poor Metabolizer (PM): ~7–10% caucásicos. Exposición al nebivolol hasta 10× mayor vs. EM — potencial de bradicardia intensa incluso a dosis bajas. Sospechar en pacientes con bradicardia excesiva sin inhibidores CYP2D6 concomitantes."
+    },
+    "clinicalPearls": [
+      "Estudio SENIORS (NEJM 2005): nebivolol vs. placebo en ICC de ancianos ≥ 70 años (FE media ~36%, ~35% FE preservada). Redujo endpoint primario (muerte u hospitalización cardiovascular) en 14% (RR 0,86, NNT ~14/18 meses). Único betabloqueante con evidencia aleatorizada en ICC de ancianos.",
+      "Betabloqueante de 3ª generación: alta selectividad β1 (>300:1) + vasodilatación mediada por óxido nítrico (NO). El efecto NO está ausente en metoprolol, bisoprolol, carvedilol y todos los betabloqueantes de 1ª/2ª generación.",
+      "CYP2D6: impacto del polimorfismo mucho mayor que en metoprolol. PM CYP2D6 tienen AUC hasta 10× mayor; biodisponibilidad salta de ~12% (EM) a >90% (PM). Inhibidores de CYP2D6 (fluoxetina, paroxetina) tienen consecuencia potencialmente mucho más grave con nebivolol que con metoprolol.",
+      "Disfunción eréctil: nebivolol tiene menor incidencia de DE vs. betabloqueantes clásicos. El efecto vasodilatador por NO mejora la función endotelial peneana. Puede usarse como sustituto en pacientes con DE atribuida a betabloqueantes tradicionales.",
+      "Nebivolol NO está aprobado por FDA para ICC (SENIORS no satisfizo los criterios de endpoint de la FDA). Está aprobado para ICC en varios países europeos vía EMA. En Brasil: aprobado para HTA; ICC en ancianos es uso off-label según SENIORS.",
+      "Sin formulación EV — única opción oral. En emergencias que requieren betabloqueo IV (crisis hipertensiva, taquiarritmia intraoperatoria), usar metoprolol EV o esmolol EV."
+    ],
+    "incompatibilities": "Solo formulación oral. Sin incompatibilidades de administración IV a reportar. No hay datos sobre interacciones con alimentos específicos además de la absorción (el alimento no altera la biodisponibilidad significativamente).",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálisis peritoneal: nebivolol no es removido de forma relevante (alta unión proteica ~98% + alto Vd ~10 L/kg). Mantener dosis habitual reducida (máx 2,5 mg/día en IR grave). Monitorizar PA y FC."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: eliminación mínima de nebivolol. No requiere suplementación. En UCI con TRRC, usar dosis mínima eficaz con monitorización hemodinámica continua. La hipotensión por el efecto vasodilatador por NO puede ser problemática en pacientes inestables."
+      }
+    },
+    "prescriptionErrors": [
+      "Usar como estándar de 1ª línea en ICFEr en lugar de metoprolol succinato, bisoprolol o carvedilol — nebivolol NO está en la lista de los 3 betabloqueantes con nivel de evidencia A de ESC/AHA para reducción de mortalidad en ICFEr general (solo en ancianos ≥ 70 años por SENIORS).",
+      "No ajustar dosis al prescribir inhibidores de CYP2D6 (fluoxetina, paroxetina) — riesgo de bradicardia grave; impacto es MUCHO mayor con nebivolol que con metoprolol.",
+      "Usar en hepatopatía grave (Child-Pugh C) — contraindicado; metabolismo ~98% hepático.",
+      "No iniciar con 2,5 mg en IR grave (ClCr < 30) y en ancianos ≥ 65 años — las dosis estándar (5 mg) causan bradicardia excesiva en estos grupos.",
+      "Suspender abruptamente en el perioperatorio — siempre reducir progresivamente en 1–2 semanas."
+    ],
+    "patientEducation": [
+      "Tomar una vez al día, siempre a la misma hora.",
+      "Nunca detener el medicamento de repente — reducir progresivamente bajo orientación médica.",
+      "Levantarse despacio de la cama o silla para evitar mareos (el medicamento causa vasodilatación).",
+      "Avisar al médico si FC < 50 lpm, presión muy baja o mareos intensos al levantarse.",
+      "Diabéticos: monitorizar glucemia con más frecuencia — este medicamento puede ocultar la taquicardia de la hipoglucemia. La sudoración persiste como señal de alerta.",
+      "Ancianos con ICC: pesarse cada día por la mañana — ganancia > 2 kg en 2 días: contactar al médico.",
+      "Avisar al médico si comienza a tomar fluoxetina, paroxetina o cualquier antidepresivo — pueden aumentar mucho el efecto de este medicamento."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal para ClCr ≥ 30 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "40 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis estándar. HTA: 5 mg 1 vez/día. ICC en ancianos: iniciar 1,25 mg y titular hasta 10 mg."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "2,5–5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "20 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR leve-moderada: dosis estándar tolerada en la mayoría. Monitorizar PA y FC — considerar iniciar con 2,5 mg si > 65 años."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar con 2,5 mg/día. Titular con precaución extrema. Riesgo aumentado de acumulación de metabolitos y bradicardia."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2,5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muy grave/anuria: dosis máxima 2,5 mg/día. Evaluar riesgo-beneficio cuidadosamente. Monitorización intensiva de PA, FC y bloqueo AV."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "2,5 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "2,5 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Nebivolol no es significativamente removido por hemodiálisis. Mantener dosis reducida (2,5 mg/día). Administrar en horario fijo — sin relación con sesión de HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "bradycardiaRisk": true,
+      "hypotensionRisk": true,
+      "avBlockRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Nebivolol combina beta-bloqueo con vasodilatación mediada por NO. Iniciar con 2,5 mg en IR grave (ClCr < 30) y en ancianos. Contraindicado en hepatopatía grave."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "FDA Bystolic (nebivolol) label 2023",
+        "EMA Nebilet SmPC 2024",
+        "ESC Hypertension Guidelines 2023",
+        "AHA/ACC Hypertension Guidance 2022",
+        "SENIORS Trial — van Veldhuisen DJ et al. (NEJM 2005)",
+        "UpToDate 2025",
+        "Lexicomp Online 2026",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Betabloqueante de 3ª generación: selectividad β1 > 300:1 + vasodilatación por NO. Diferencial: único con evidencia en ICC de ancianos (SENIORS, NNT ~14/18 meses). CYP2D6: impacto del polimorfismo mucho mayor que metoprolol (AUC hasta 10× en PM). Contraindicado en Child-Pugh C. Ajuste renal: 2,5 mg en ClCr < 30. FDA: aprobado solo para HTA; ICC es off-label en EE.UU. Auditoría V2 completada 2026-06."
+    }
+  },
+  "name": {
+    "pt": "Nebivolol",
+    "es": "Nebivolol"
+  },
+  "keywords": [
+    "nebivolol",
+    "nebilet",
+    "nebivolol generico",
+    "betabloqueador beta-1 seletivo com acao vasodilatadora mediada por oxido nitrico (no)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

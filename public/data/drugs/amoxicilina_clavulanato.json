@@ -1,0 +1,403 @@
+{
+  "id": "amoxicilina_clavulanato",
+  "category": "infectologia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Amoxicilina + Clavulanato"
+  },
+  "es": {
+    "name": "Amoxicilina + Ácido Clavulánico"
+  },
+  "name": {
+    "pt": "Amoxicilina + Clavulanato",
+    "es": "Amoxicilina + Ácido Clavulánico"
+  },
+  "keywords": [
+    "amoxicilina_clavulanato",
+    "amoxicilina + clavulanato"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "infectologia.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "infectologia.js",
+    "decisionBasis": "structural_score_and_git_recency_agree",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "secondary_clinical_variant",
+      "sourceModule": "antimicrobianos.js",
+      "record": {
+        "id": "amoxicilina_clavulanato",
+        "category": "atb",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "name": "Amoxicilina + Clavulanato",
+          "class": "Aminopenicilina + inibidor de beta-lactamase",
+          "commercialNames": {
+            "br": [
+              "Clavulin",
+              "Amoxicilina + Clavulanato EMS",
+              "Augmentin",
+              "Clavulanato Medley"
+            ],
+            "ar": [
+              "Augmentin",
+              "Clavulin",
+              "Amoxicilina/Clavulanato Bagó",
+              "Amoclav"
+            ]
+          },
+          "presentation": [
+            "Comprimidos: 500/125 mg, 875/125 mg",
+            "Suspensão oral: 250/62,5 mg/5 mL, 400/57 mg/5 mL",
+            "Pó para solução EV: 1000/200 mg, 2000/200 mg"
+          ],
+          "dose": {
+            "adultoPadrao": "875/125 mg VO 12/12h ou 500/125 mg VO 8/8h",
+            "adultoGrave": "1000/200 mg EV 8/8h ou 2000/200 mg EV 12/12h",
+            "pediatricaPadrao": "500 mg (amoxicilina) VO 8/8h",
+            "pediatricaAlta": "875 mg (amoxicilina) VO 12/12h (dose alta — OMA, sinusite)"
+          },
+          "doseKg": {
+            "padrao": "25–45 mg/kg/dia de amoxicilina, dividido 8/8h ou 12/12h",
+            "alta": "80–90 mg/kg/dia de amoxicilina, dividido 12/12h",
+            "doseMaxima": "Máximo: 875 mg de amoxicilina por dose (adultos)"
+          },
+          "therapeuticRange": "Dose baseada no componente amoxicilina. Monitorar tolerância gastrointestinal.",
+          "dilution": "EV: diluir em SF 0,9% ou SG 5%, conforme protocolo. Estabilidade limitada após reconstituição.",
+          "speed": "EV: infundir em 30 minutos. VO: administrar com alimentos para reduzir efeitos GI.",
+          "commonAdverseEffects": [
+            "Diarreia (frequente — clavulanato)",
+            "Náuseas e vômitos",
+            "Rash cutâneo",
+            "Candidíase oral/vaginal",
+            "Dispepsia"
+          ],
+          "dangerousAdverseEffects": [
+            "Anafilaxia",
+            "Hepatotoxicidade colestática (clavulanato)",
+            "Colite por Clostridioides difficile",
+            "Síndrome de Stevens-Johnson (raro)"
+          ],
+          "risksByPatient": [],
+          "alerts": [
+            "Investigar história de alergia a penicilinas/cefalosporinas.",
+            "Tomar com alimentos reduz significativamente a diarreia e melhora absorção do clavulanato.",
+            "Não usar em hepatite colestática prévia induzida por amoxicilina-clavulanato.",
+            "Ampliar espectro: cobre S. aureus MSSA, H. influenzae, M. catarrhalis, Klebsiella (não ESBL), anaeróbios."
+          ],
+          "ref": "Goodman & Gilman / FDA Augmentin label / Sanford Guide / IDSA / AAP Red Book",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": true,
+            "fgMaior50": {
+              "vo": {
+                "dose": "875/125 mg ou 500/125 mg",
+                "intervalo": "12/12h ou 8/8h",
+                "doseMaxima": "875/125 mg 12/12h",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "1,2 g",
+                "intervalo": "8/8h",
+                "doseMaxima": "3,6 g/dia",
+                "unidade": "g"
+              },
+              "pediatrica": {
+                "dose": "25–45 mg/kg/dia de amoxicilina",
+                "intervalo": "12/12h",
+                "doseMaxima": "4 g/dia de amoxicilina",
+                "unidade": "mg/kg/dia"
+              },
+              "obs": "Dose habitual conforme foco infeccioso."
+            },
+            "fg30a50": {
+              "vo": {
+                "dose": "500/125 mg",
+                "intervalo": "12/12h",
+                "doseMaxima": "1 g/dia de amoxicilina",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "1,2 g",
+                "intervalo": "12/12h",
+                "doseMaxima": "2,4 g/dia",
+                "unidade": "g"
+              },
+              "pediatrica": {
+                "dose": "25 mg/kg/dia de amoxicilina",
+                "intervalo": "12/12h",
+                "doseMaxima": "1 g/dia de amoxicilina",
+                "unidade": "mg/kg/dia"
+              },
+              "obs": "Evitar doses altas se função renal estiver em queda."
+            },
+            "fg10a30": {
+              "vo": {
+                "dose": "250/125–500/125 mg",
+                "intervalo": "12/12h",
+                "doseMaxima": "1 g/dia de amoxicilina",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "1,2 g",
+                "intervalo": "24/24h",
+                "doseMaxima": "1,2 g/dia",
+                "unidade": "g"
+              },
+              "pediatrica": {
+                "dose": "15–25 mg/kg/dia de amoxicilina",
+                "intervalo": "12/12h",
+                "doseMaxima": "1 g/dia de amoxicilina",
+                "unidade": "mg/kg/dia"
+              },
+              "obs": "Evitar apresentação 875/125 mg."
+            },
+            "fgMenor10": {
+              "vo": {
+                "dose": "250/125–500/125 mg",
+                "intervalo": "24/24h",
+                "doseMaxima": "500 mg/dia de amoxicilina",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "1,2 g",
+                "intervalo": "24/24h",
+                "doseMaxima": "1,2 g/dia",
+                "unidade": "g"
+              },
+              "pediatrica": {
+                "dose": "15 mg/kg/dose de amoxicilina",
+                "intervalo": "24/24h",
+                "doseMaxima": "500 mg/dia de amoxicilina",
+                "unidade": "mg/kg/dose"
+              },
+              "obs": "Evitar apresentação 875/125 mg e monitorar toxicidade gastrointestinal."
+            },
+            "hemodialise": {
+              "vo": {
+                "dose": "250/125–500/125 mg",
+                "intervalo": "24/24h",
+                "doseMaxima": "500 mg/dia de amoxicilina",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "1,2 g",
+                "intervalo": "24/24h",
+                "doseMaxima": "1,2 g/dia",
+                "unidade": "g"
+              },
+              "pediatrica": {
+                "dose": "15 mg/kg/dose de amoxicilina",
+                "intervalo": "24/24h",
+                "doseMaxima": "500 mg/dia de amoxicilina",
+                "unidade": "mg/kg/dose"
+              },
+              "obs": "Administrar após hemodiálise nos dias de HD."
+            }
+          }
+        },
+        "es": {
+          "name": "Amoxicilina + Clavulanato",
+          "class": "Aminopenicilina + inhibidor de beta-lactamasa",
+          "commercialNames": {
+            "br": [
+              "Clavulin",
+              "Amoxicilina + Clavulanato EMS",
+              "Augmentin",
+              "Clavulanato Medley"
+            ],
+            "ar": [
+              "Augmentin",
+              "Clavulin",
+              "Amoxicilina/Clavulanato Bagó",
+              "Amoclav"
+            ]
+          },
+          "presentation": [
+            "Comprimidos: 500/125 mg, 875/125 mg",
+            "Suspensión oral: 250/62,5 mg/5 mL, 400/57 mg/5 mL",
+            "Polvo para solución EV: 1000/200 mg, 2000/200 mg"
+          ],
+          "dose": {
+            "adultoPadrao": "875/125 mg VO cada 12h o 500/125 mg VO cada 8h",
+            "adultoGrave": "1000/200 mg EV cada 8h o 2000/200 mg EV cada 12h",
+            "pediatricaPadrao": "500 mg (amoxicilina) VO cada 8h",
+            "pediatricaAlta": "875 mg (amoxicilina) VO cada 12h (dosis alta — OMA, sinusitis)"
+          },
+          "doseKg": {
+            "padrao": "25–45 mg/kg/día de amoxicilina, dividido cada 8h o 12h",
+            "alta": "80–90 mg/kg/día de amoxicilina, dividido cada 12h",
+            "doseMaxima": "Máximo: 875 mg de amoxicilina por dosis (adultos)"
+          },
+          "therapeuticRange": "Dosis basada en el componente amoxicilina. Monitorear tolerancia gastrointestinal.",
+          "dilution": "EV: diluir en SF 0,9% o SG 5%, según protocolo. Estabilidad limitada tras reconstitución.",
+          "speed": "EV: infundir en 30 minutos. VO: administrar con alimentos para reducir efectos GI.",
+          "commonAdverseEffects": [
+            "Diarrea (frecuente — clavulanato)",
+            "Náuseas y vómitos",
+            "Exantema cutáneo",
+            "Candidiasis oral/vaginal",
+            "Dispepsia"
+          ],
+          "dangerousAdverseEffects": [
+            "Anafilaxia",
+            "Hepatotoxicidad colestática (clavulanato)",
+            "Colitis por Clostridioides difficile",
+            "Síndrome de Stevens-Johnson (raro)"
+          ],
+          "risksByPatient": [],
+          "alerts": [
+            "Investigar historia de alergia a penicilinas/cefalosporinas.",
+            "Tomar con alimentos reduce significativamente la diarrea y mejora la absorción del clavulanato.",
+            "No usar en hepatitis colestática previa inducida por amoxicilina-clavulanato.",
+            "Ampliar espectro: cubre S. aureus MSSA, H. influenzae, M. catarrhalis, Klebsiella (no BLEE), anaerobios."
+          ],
+          "ref": "Goodman & Gilman / FDA Augmentin label / Sanford Guide / IDSA / AAP Red Book",
+          "renalDose": {
+            "version": 2,
+            "requiresAdjustment": true,
+            "fgMaior50": {
+              "vo": {
+                "dose": "875/125 mg ou 500/125 mg",
+                "intervalo": "12/12h ou 8/8h",
+                "doseMaxima": "875/125 mg 12/12h",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "1,2 g",
+                "intervalo": "8/8h",
+                "doseMaxima": "3,6 g/dia",
+                "unidade": "g"
+              },
+              "pediatrica": {
+                "dose": "25–45 mg/kg/dia de amoxicilina",
+                "intervalo": "12/12h",
+                "doseMaxima": "4 g/dia de amoxicilina",
+                "unidade": "mg/kg/dia"
+              },
+              "obs": "Dosis habitual según foco infeccioso."
+            },
+            "fg30a50": {
+              "vo": {
+                "dose": "500/125 mg",
+                "intervalo": "12/12h",
+                "doseMaxima": "1 g/dia de amoxicilina",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "1,2 g",
+                "intervalo": "12/12h",
+                "doseMaxima": "2,4 g/dia",
+                "unidade": "g"
+              },
+              "pediatrica": {
+                "dose": "25 mg/kg/dia de amoxicilina",
+                "intervalo": "12/12h",
+                "doseMaxima": "1 g/dia de amoxicilina",
+                "unidade": "mg/kg/dia"
+              },
+              "obs": "Evitar dosis altas si la función renal está disminuyendo."
+            },
+            "fg10a30": {
+              "vo": {
+                "dose": "250/125–500/125 mg",
+                "intervalo": "12/12h",
+                "doseMaxima": "1 g/dia de amoxicilina",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "1,2 g",
+                "intervalo": "24/24h",
+                "doseMaxima": "1,2 g/dia",
+                "unidade": "g"
+              },
+              "pediatrica": {
+                "dose": "15–25 mg/kg/dia de amoxicilina",
+                "intervalo": "12/12h",
+                "doseMaxima": "1 g/dia de amoxicilina",
+                "unidade": "mg/kg/dia"
+              },
+              "obs": "Evitar presentación 875/125 mg."
+            },
+            "fgMenor10": {
+              "vo": {
+                "dose": "250/125–500/125 mg",
+                "intervalo": "24/24h",
+                "doseMaxima": "500 mg/dia de amoxicilina",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "1,2 g",
+                "intervalo": "24/24h",
+                "doseMaxima": "1,2 g/dia",
+                "unidade": "g"
+              },
+              "pediatrica": {
+                "dose": "15 mg/kg/dose de amoxicilina",
+                "intervalo": "24/24h",
+                "doseMaxima": "500 mg/dia de amoxicilina",
+                "unidade": "mg/kg/dose"
+              },
+              "obs": "Evitar presentación 875/125 mg y monitorizar toxicidad gastrointestinal."
+            },
+            "hemodialise": {
+              "vo": {
+                "dose": "250/125–500/125 mg",
+                "intervalo": "24/24h",
+                "doseMaxima": "500 mg/dia de amoxicilina",
+                "unidade": "mg"
+              },
+              "ev": {
+                "dose": "1,2 g",
+                "intervalo": "24/24h",
+                "doseMaxima": "1,2 g/dia",
+                "unidade": "g"
+              },
+              "pediatrica": {
+                "dose": "15 mg/kg/dose de amoxicilina",
+                "intervalo": "24/24h",
+                "doseMaxima": "500 mg/dia de amoxicilina",
+                "unidade": "mg/kg/dose"
+              },
+              "obs": "Administrar después de hemodiálisis en días de HD."
+            }
+          }
+        },
+        "name": {
+          "pt": "Amoxicilina + Clavulanato",
+          "es": "Amoxicilina + Clavulanato"
+        },
+        "keywords": [
+          "amoxicilina_clavulanato",
+          "amoxicilina + clavulanato",
+          "clavulin",
+          "amoxicilina + clavulanato ems",
+          "augmentin",
+          "clavulanato medley",
+          "amoxicilina/clavulanato bago",
+          "amoclav",
+          "aminopenicilina + inibidor de beta-lactamase"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "antimicrobianos.js"
+      }
+    }
+  ]
+}

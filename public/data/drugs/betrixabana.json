@@ -1,0 +1,67 @@
+{
+  "id": "betrixabana",
+  "category": "anticoag",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Betrixabana (Maleato de)"
+  },
+  "es": {
+    "name": "Betrixabán (Maleato de)"
+  },
+  "name": {
+    "pt": "Betrixabana (Maleato de)",
+    "es": "Betrixabán (Maleato de)"
+  },
+  "keywords": [
+    "betrixabana",
+    "betrixabana (maleato de)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "anticoag.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "anticoag.js",
+    "decisionBasis": "consolidated_anticoagulation_module",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "hematology_context_variant",
+      "sourceModule": "hematologia.js",
+      "record": {
+        "id": "betrixabana",
+        "category": "hematologia",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "name": "Betrixabana"
+        },
+        "es": {
+          "name": "Betrixabán"
+        },
+        "name": {
+          "pt": "Betrixabana",
+          "es": "Betrixabán"
+        },
+        "keywords": [
+          "betrixabana"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "legacy-v1",
+        "sourceModule": "hematologia.js"
+      }
+    }
+  ]
+}

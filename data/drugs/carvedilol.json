@@ -1,0 +1,744 @@
+{
+  "id": "carvedilol",
+  "category": "cardio",
+  "icon": "🫀",
+  "color": "rgba(239,68,68,0.13)",
+  "colorTxt": "#991B1B",
+  "pt": {
+    "name": "Carvedilol",
+    "class": "Betabloqueador não seletivo + bloqueador alfa-1",
+    "commercialNames": {
+      "br": [
+        "Coreg",
+        "Cardilol",
+        "Carvedilol genérico"
+      ],
+      "ar": [
+        "Dilatrend",
+        "Carvedilol genérico"
+      ]
+    },
+    "presentation": [
+      {
+        "pt": "Comprimidos: 3,125 mg, 6,25 mg, 12,5 mg, 25 mg",
+        "es": "Comprimidos: 3,125 mg, 6,25 mg, 12,5 mg, 25 mg"
+      }
+    ],
+    "dose": {
+      "adultoPadrao": "HTA/Angina: iniciar 6,25 mg VO 12/12h. Titular conforme PA/FC até 25 mg 12/12h.",
+      "adultoGrave": "ICFEr: iniciar 3,125 mg VO 12/12h por 2 semanas. Dobrar progressivamente se tolerado até 25 mg 12/12h (<85 kg) ou 50 mg 12/12h (>85 kg).",
+      "pediatricaPadrao": "Uso pediátrico não padronizado; utilizar apenas com especialista.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adulto: dose fixa titulada por resposta clínica, PA e FC.",
+      "grave": "ICFEr: alvo depende do peso: até 25 mg 12/12h se <85 kg; até 50 mg 12/12h se >85 kg.",
+      "meningite": null,
+      "doseMaxima": "ICFEr: 50 mg 12/12h em pacientes >85 kg. HTA: até 50 mg/dia em muitos protocolos; individualizar."
+    },
+    "therapeuticRange": "ICFEr: alvo de FC 55–65 bpm em repouso, PA tolerável e ausência de congestão/hipoperfusão.",
+    "dilution": "Apenas via oral. Não há formulação EV padronizada para uso rotineiro.",
+    "speed": "Administrar com alimento para reduzir hipotensão ortostática e melhorar tolerabilidade.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Hipotensão ortostática",
+      "Tontura",
+      "Fadiga",
+      "Edema periférico",
+      "Ganho de peso inicial em IC"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueio AV de 2º/3º grau",
+      "Choque cardiogênico",
+      "Piora de IC agudamente descompensada",
+      "Broncoespasmo em asma/DPOC grave",
+      "Hipoglicemia mascarada em diabéticos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NUNCA suspender abruptamente — risco de angina rebote, IAM, arritmia e morte súbita.",
+      "Segurar dose se FC <50 bpm, PAS <90 mmHg, bloqueio AV 2º/3º grau, choque ou IC agudamente descompensada.",
+      "Por bloquear alfa-1, causa mais hipotensão ortostática que metoprolol/bisoprolol — tomar sempre com alimento.",
+      "Evitar associação com verapamil/diltiazem EV: risco de bloqueio AV, bradicardia grave e parada cardíaca."
+    ],
+    "ref": "AHA/ACC/HFSA Heart Failure Guidelines 2022 · ESC Heart Failure Guidelines 2021 · COPERNICUS · CAPRICORN · COMET · Lexicomp 2026 · Goodman & Gilman 14ª ed. · FDA/EMA label",
+    "mechanism": "Bloqueio não seletivo dos receptores β1 e β2-adrenérgicos + bloqueio competitivo dos receptores α1-adrenérgicos periféricos. O bloqueio β1 reduz FC, débito cardíaco e consumo miocárdico de O₂. O bloqueio β2 pode causar broncoespasmo (menos que propranolol por baixas concentrações). O bloqueio α1 promove vasodilatação periférica, reduzindo pós-carga — diferencial importante na ICC. Carvedilol também tem propriedades antioxidantes e antiproliferativas (independentes do bloqueio adrenérgico), favorecendo remodelamento reverso miocárdico.",
+    "pharmacokinetics": {
+      "absorption": "Absorção oral rápida (~1–2 h para Tmax). Alimento reduz Tmax mas não a biodisponibilidade total — administrar sempre com alimento para reduzir hipotensão ortostática.",
+      "bioavailability": "~25–35% (efeito de primeira passagem hepático extenso; polimorfismo CYP2D6 influencia). Formulação LP (fosfato) tem biodisponibilidade similar mas pico mais suave.",
+      "proteinBinding": "~98% (alta ligação proteica — principalmente albumina e α1-glicoproteína ácida)",
+      "vd": "~115 L (alto Vd — lipofílico)",
+      "metabolism": "Hepático extenso: CYP2D6 (principal), CYP2C9, CYP3A4. Produz 3 metabólitos ativos (4-hidroxicarvedilol — até 13× mais potente como antioxidante). Polimorfismo CYP2D6: PM apresentam até 2–3× maiores concentrações.",
+      "halfLife": "7–10 horas. Metabólitos ativos com meia-vida similar. Formulação LP: perfil mais suave, mesma meia-vida eficaz.",
+      "elimination": "Principalmente biliar/fecal (~60%) como metabólitos glicuronados; renal ~16% como metabólitos. Eliminação renal do fármaco inalterado < 2%.",
+      "dialysability": "Não removido significativamente por hemodiálise (alta ligação proteica ~98% + alto Vd). Não requer suplementação pós-HD."
+    },
+    "indications": {
+      "approved": [
+        "ICC com fração de ejeção reduzida (ICFEr) — NYHA II–IV estável",
+        "Pós-IAM com disfunção ventricular esquerda (FE ≤ 40%) — CAPRICORN",
+        "Hipertensão arterial sistêmica",
+        "Angina estável crônica"
+      ],
+      "offLabel": [
+        "Fibrilação atrial (controle de frequência ventricular)",
+        "ICC com fração de ejeção preservada (ICFEp) — dados limitados",
+        "Cardiomiopatia hipertrófica obstrutiva",
+        "Tremor essencial"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Bradicardia sinusal < 50 bpm sintomática",
+        "Bloqueio AV de 2º grau (Mobitz II) ou 3º grau sem marcapasso",
+        "Síndrome do seio doente sem marcapasso",
+        "Choque cardiogênico",
+        "ICC agudamente descompensada com necessidade de inotrópico IV ou congestão pulmonar grave",
+        "PAS < 90 mmHg",
+        "Asma brônquica grave / broncoespasmo ativo",
+        "Hipersensibilidade ao carvedilol",
+        "Hepatopatia grave (Child-Pugh C)"
+      ],
+      "relative": [
+        "DPOC com componente broncoespástico reversível significativo",
+        "Diabetes insulinodependente (mascaramento de hipoglicemia)",
+        "Doença vascular periférica grave (pode exacerbar isquemia)",
+        "Feocromocitoma sem bloqueio α prévio (bloqueio β sem α pode precipitar crise)",
+        "Psoríase (pode exacerbar)",
+        "Hipotireoidismo não tratado (risco aumentado de bradicardia)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamil EV / Diltiazem EV",
+          "mechanism": "Dupla inibição nodal AV (dromotrópico e cronotrópico negativo aditivo)",
+          "consequence": "Bloqueio AV completo, parada cardíaca, colapso hemodinâmico",
+          "management": "NÃO associar EV. Via oral: extrema cautela com monitorização contínua de FC e ECG."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efeito cronotrópico e dromotrópico negativo aditivo no nódulo sinusal e AV",
+          "consequence": "Bradicardia e bloqueio AV potencialmente graves",
+          "management": "Monitorar FC e ECG regularmente. Carvedilol aumenta níveis de digoxina ~15% — verificar nível sérico se suspeita de toxicidade."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Inibição de CYP2D6 pela amiodarona eleva níveis de carvedilol + efeito bradicardizante aditivo",
+          "consequence": "Bradicardia grave, bloqueio AV, hipotensão",
+          "management": "Reduzir dose de carvedilol. Monitorar ECG e FC continuamente."
+        },
+        {
+          "drug": "Insulina / sulfonilureias",
+          "mechanism": "Mascaramento da taquicardia reflexa de hipoglicemia; pode prolongar hipoglicemia. Bloqueio β2 atenua glicogenólise compensatória.",
+          "consequence": "Hipoglicemia grave não reconhecida — risco maior que com betabloqueadores β1-seletivos",
+          "management": "Monitorar glicemia com maior frequência. Sudorese persiste como sinal alternativo. Preferir bisoprolol em diabéticos insulinizados se possível."
+        },
+        {
+          "drug": "Inibidores de CYP2D6 (fluoxetina, paroxetina, bupropiona, quinidina)",
+          "mechanism": "Redução do metabolismo hepático de carvedilol via CYP2D6 → aumento de níveis plasmáticos",
+          "consequence": "Bradicardia, hipotensão ortostática exacerbada, bloqueio AV",
+          "management": "Reduzir dose de carvedilol 25–50%. Monitorar FC e PA rigorosamente."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "Clonidina",
+          "mechanism": "Retirada abrupta da clonidina em uso concomitante → hipertensão rebote grave não antagonizada",
+          "consequence": "Crise hipertensiva grave",
+          "management": "Descontinuar carvedilol dias antes de suspender clonidina. Monitorar PA."
+        },
+        {
+          "drug": "Anti-hipertensivos (IECA, BRA, bloqueadores dos canais de cálcio VO)",
+          "mechanism": "Hipotensão aditiva — o bloqueio α1 do carvedilol já causa vasodilatação; anti-hipertensivos somam efeito",
+          "consequence": "Hipotensão ortostática sintomática, síncope",
+          "management": "Tomar carvedilol com alimento. Monitorar PA em ortostatismo. Titular doses individualmente."
+        },
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, diclofenaco)",
+          "mechanism": "Redução da síntese de prostaglandinas vasodilatadoras renais → antagonismo do efeito anti-hipertensivo",
+          "consequence": "Redução do controle pressórico",
+          "management": "Monitorar PA. Preferir paracetamol se analgesia necessária."
+        },
+        {
+          "drug": "Rifampicina (indutor CYP2D6/CYP3A4/CYP2C9)",
+          "mechanism": "Indução enzimática ampla → redução significativa dos níveis plasmáticos de carvedilol (até 70% de redução relatada)",
+          "consequence": "Perda substancial do efeito betabloqueador — risco de descompensação em ICC, angina rebote",
+          "management": "Monitorar FC e PA durante e após ciclo de rifampicina. Pode ser necessário aumentar dose de carvedilol. Reajustar ao suspender indutor."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC e PA em repouso e em ortostatismo (bloqueio α1 → hipotensão ortostática)",
+        "ECG (intervalo PR, ritmo)",
+        "Função hepática (TGO/TGP) — carvedilol é metabolizado extensamente pelo fígado; contraindicado em Child-Pugh C",
+        "Função renal (creatinina/ClCr)",
+        "Sintomas respiratórios (asma/DPOC)",
+        "Glicemia basal em diabéticos",
+        "Eletrólitos (K⁺, Na⁺) em ICC"
+      ],
+      "followUp": [
+        "FC alvo: 55–65 bpm (ICC) / < 70 bpm (HTA/Angina)",
+        "PA em decúbito e em pé — verificar hipotensão ortostática a cada consulta",
+        "Edema periférico (carvedilol pode causar ou agravar retenção hídrica inicial)",
+        "Sintomas respiratórios (broncoespasmo)",
+        "Aderência e tolerabilidade",
+        "ECG a cada 6–12 meses ou se mudança de dose em ICC",
+        "BNP/NT-proBNP como marcador de resposta em ICC"
+      ],
+      "icc": [
+        "Pesar diariamente pela manhã (ganho > 2 kg/48h = sinal de retenção hídrica)",
+        "Edemas de membros inferiores",
+        "Classe funcional NYHA a cada consulta",
+        "Ecocardiograma após titulação completa (3–6 meses) para verificar melhora de FEVE"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave",
+        "Hipotensão grave (agravada pelo bloqueio α1)",
+        "Bloqueio AV de alto grau",
+        "Broncoespasmo (bloqueio β2)",
+        "Hipoglicemia (especialmente em diabéticos)",
+        "Insuficiência cardíaca aguda",
+        "Convulsões (raro)",
+        "Choque cardiogênico refratário (alta ligação proteica dificulta remoção)"
+      ],
+      "management": [
+        "1. Carvão ativado se ingesta recente < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia (máx 3 mg)",
+        "3. Glucagon 5–10 mg IV bolus → infusão 1–5 mg/h — antídoto específico (ativa adenilciclase independente de β1)",
+        "4. Norepinefrina para hipotensão refratária (bloqueio α1 → vasoplegia) — preferir sobre dopamina",
+        "5. Dobutamina/isoprotenerenol se hipotensão com bradicardia refratária",
+        "6. Emulsão lipídica IV 20% (terapia de resgate — carvedilol é lipofílico, pode ser sequestrado)",
+        "7. Marcapasso transcutâneo ou transvenoso em BAV refratário",
+        "8. ECMO em colapso cardiocirculatório refratário",
+        "9. Hemodiálise NÃO eficaz (alta ligação proteica ~98% + alto Vd ~115 L)"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "IR leve-moderada: sem ajuste formal — eliminação renal do fármaco inalterado < 2%. IR grave: cautela, preferir doses baixas; risco aumentado de hipotensão e bradicardia em pacientes urêmicos. Hemodiálise: não removido significativamente (ligação proteica ~98%).",
+      "obesity": "Obesidade: alto Vd (~115 L) pode influenciar distribuição. Titulação guiada por FC e PA, não apenas pelo peso. Síndrome metabólica: carvedilol é NEUTRO ou levemente favorável à sensibilidade à insulina (diferencial vs. betabloqueadores β1-seletivos de 1ª geração).",
+      "geriatrics": "Idoso: maior sensibilidade farmacodinâmica. Alto risco de hipotensão ortostática e quedas pelo bloqueio α1. Iniciar sempre com 3,125 mg 12/12h. Monitorar ortostatismo a cada consulta. Carvedilol é lipofílico — risco de pesadelos e alterações cognitivas.",
+      "pregnancy": "Gestação: dados limitados (categoria C FDA antigo). Pode causar bradicardia fetal, RCIU e hipoglicemia neonatal. Monitorar crescimento fetal por US. Em HTA gestacional, labetalol e nifedipina de liberação controlada são preferidos. Interromper 48–72 h antes do parto se possível.",
+      "lactation": "Lactação: excretado no leite materno (dados limitados). Monitorar lactente para bradicardia, hipoglicemia e sonolência. Carvedilol é lipofílico — relação leite/plasma possivelmente elevada. Considerar alternativa menos lipofílica se necessário.",
+      "hepaticImpairment": "Hepatopatia: metabolismo hepático extenso via CYP2D6/2C9/3A4. Hepatopatia moderada (Child-Pugh B): usar com cautela, doses reduzidas. Child-Pugh C: CONTRAINDICADO — acumulação grave com risco de toxicidade. Monitorar TGO/TGP se uso em Child-Pugh A.",
+      "dpoc": "DPOC: carvedilol bloqueia β2 → maior risco de broncoespasmo que bisoprolol. Usar apenas se não houver alternativa cardioseletiva. Em DPOC estável com ICFEr, bisoprolol é preferível. Se carvedilol necessário, iniciar 3,125 mg com broncodilatador próximo e monitorar espirometria.",
+      "diabetes": "Diabetes: carvedilol é o betabloqueador preferencial em ICC + diabetes — melhora sensibilidade à insulina e perfil lipídico (ao contrário de betabloqueadores não vasodilatadores). Menor risco de novo DM2. Porém: bloqueia β2 → mascaramento mais intenso de hipoglicemia vs. bisoprolol. Monitorar glicemia com frequência."
+    },
+    "clinicalPearls": [
+      "COPERNICUS (2001): carvedilol vs. placebo em ICFEr grave (FE < 25%) — redução de mortalidade total de 35% (NNT ~8/ano). Estudo interrompido precocemente por superioridade.",
+      "CAPRICORN (2001): carvedilol pós-IAM com FE ≤ 40% — redução de mortalidade total de 23% vs. placebo. Confirmou benefício além do metoprolol nos estudos pós-IAM.",
+      "COMET (2003): carvedilol vs. metoprolol tartarato (atenção: metoprolol IR, não succinato LP) — redução de mortalidade de 17% a favor de carvedilol. RESSALVA: comparou formulações diferentes; MERIT-HF usou succinato LP, portanto comparação deve ser cautelosa.",
+      "Bloqueia β2 (não seletivo) — diferentemente de bisoprolol/metoprolol. Maior risco de broncoespasmo em DPOC/asma. Porém, também promove vasodilatação pelo bloqueio α1 — menor aumento de resistência vascular periférica que betabloqueadores seletivos puros.",
+      "Único betabloqueador entre os 3 de 1ª linha em ICC (carvedilol, metoprolol succinato, bisoprolol) que MELHORA sensibilidade à insulina e perfil lipídico — preferencial em ICC com diabetes ou síndrome metabólica.",
+      "Hipotensão ortostática: maior que bisoprolol/metoprolol pelo bloqueio α1. Estratégia: sempre administrar com alimento, iniciar com dose mais baixa possível (3,125 mg 12/12h) e orientar mudança de posição gradual.",
+      "Alta ligação proteica (~98%): hemodiálise não remove carvedilol. Em overdose: glucagon é o antídoto; norepinefrina preferível à dopamina para hipotensão (vasoplegia pelo bloqueio α1). Emulsão lipídica IV de resgate (lipofílico)."
+    ],
+    "incompatibilities": "Apenas formulação oral. Sem incompatibilidades de administração IV relevantes. Não misturar comprimidos com soluções de sorbitol (pode comprometer absorção).",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálise peritoneal: carvedilol não é removido de forma relevante (alta ligação proteica ~98% + Vd elevado). Manter dose habitual com cautela em IR grave. Monitorar PA e FC."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: remoção mínima de carvedilol (alta ligação proteica impede filtração). Não requer suplementação. Monitorar hemodinâmica rigorosamente — pacientes em UTI com TRSC têm alta instabilidade. Hipotensão pelo bloqueio α1 pode ser problemática nesse contexto."
+      }
+    },
+    "prescriptionErrors": [
+      "Administrar sem alimento — tomar sempre com comida para reduzir hipotensão ortostática e melhorar tolerabilidade.",
+      "Iniciar dose plena (12,5–25 mg) em ICC — obrigatório começar com 3,125 mg 12/12h e titular a cada 2 semanas.",
+      "Usar em ICC agudamente descompensada com congestão ativa ou necessidade de inotrópico — aguardar estabilização.",
+      "Suspender abruptamente — sempre reduzir progressivamente em 1–2 semanas para evitar síndrome de abstinência.",
+      "Usar em hepatopatia grave (Child-Pugh C) — contraindicado; acumulação extensiva com toxicidade grave.",
+      "Não ajustar dose ao prescribir inibidores de CYP2D6 (fluoxetina, paroxetina) — risco de bradicardia e hipotensão graves."
+    ],
+    "patientEducation": [
+      "Tomar SEMPRE com alimento (café, almoço ou jantar) — nunca em jejum.",
+      "Nunca parar o medicamento de repente — reduzir progressivamente sob orientação médica.",
+      "Levantar devagar da cama ou cadeira para evitar tontura e queda.",
+      "Avisar ao médico se FC < 50 bpm, PA muito baixa ou tontura intensa ao levantar.",
+      "Diabéticos: monitorar glicemia com mais frequência — este remédio pode esconder a taquicardia da hipoglicemia. A sudorese persiste como sinal de alerta.",
+      "Pesar-se todo dia pela manhã em ICC — ganho > 2 kg em 48 h: contatar médico.",
+      "Avisar se sentir chiado no peito, falta de ar, piora do inchaço ou tontura persistente."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Metabolismo hepático predominante. Não requer ajuste renal formal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "3,125–25 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "50 mg 12/12h em pacientes >85 kg com ICFEr",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose padrão. Em ICFEr iniciar sempre com 3,125 mg 12/12h com alimento e titular a cada 2 semanas se tolerado."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "3,125–25 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "25–50 mg 12/12h conforme peso e tolerância",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sem ajuste obrigatório. Monitorar PA em ortostatismo, FC e sintomas de hipotensão."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "3,125–12,5 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "25 mg 12/12h se tolerado",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: titulação mais lenta. Alto risco de hipotensão ortostática em pacientes urêmicos/frágeis. Monitorar PA em pé e deitado."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "3,125–6,25 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "12,5–25 mg 12/12h se tolerado",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muito grave/anúria: individualizar dose. Monitorar hipotensão, bradicardia e hipoperfusão. Iniciar extremamente baixo."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "3,125–6,25 mg",
+          "intervalo": "12/12h ou após HD conforme PA",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Carvedilol não é removido significativamente por hemodiálise (ligação proteica ~98%). Não requer suplementação pós-HD. Monitorar hipotensão intradialítica; pode ser preferível administrar após a sessão se PA instável."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": false,
+      "bradycardiaRisk": true,
+      "hypotensionRisk": true,
+      "orthostaticRisk": true,
+      "avBlockRisk": true,
+      "bronchospasmRisk": true,
+      "hypoglycemiaMasking": true,
+      "pregnancyCaution": true,
+      "warning": {
+        "pt": "Carvedilol reduz mortalidade em ICFEr, mas exige titulação lenta, uso com alimento e vigilância para bradicardia, bloqueio AV e hipotensão ortostática. Contraindicado em Child-Pugh C.",
+        "es": "Carvedilol reduce mortalidad en ICFEr, pero exige titulación lenta, uso con comida y vigilancia de bradicardia, bloqueo AV e hipotensión ortostática. Contraindicado en Child-Pugh C."
+      }
+    },
+    "auditNotes": {
+      "status": "master_v2_updated",
+      "sourcePriority": [
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "ESC Heart Failure Guidelines 2021",
+        "COPERNICUS Trial (NEJM 2001)",
+        "CAPRICORN Trial (Lancet 2001)",
+        "COMET Trial (Lancet 2003)",
+        "FDA Coreg (carvedilol) label 2023",
+        "EMA Carvedilol SmPC 2024",
+        "Lexicomp Online 2026",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": {
+        "pt": "Betabloqueador com bloqueio β1, β2 e α1. Um dos 3 betabloqueadores com evidência A de redução de mortalidade em ICFEr (COPERNICUS, CAPRICORN). Preferencial em ICC com diabetes ou síndrome metabólica. Maior risco de hipotensão ortostática e broncoespasmo vs. bisoprolol/metoprolol. Contraindicado em Child-Pugh C. Auditoria V2 completada 2026-06.",
+        "es": "Betabloqueante con bloqueo β1, β2 y α1. Uno de los 3 betabloqueantes con evidencia A de reducción de mortalidad en ICFEr (COPERNICUS, CAPRICORN). Preferencial en ICC con diabetes o síndrome metabólico. Mayor riesgo de hipotensión ortostática y broncoespasmo vs. bisoprolol/metoprolol. Contraindicado en Child-Pugh C. Auditoría V2 completada 2026-06."
+      }
+    }
+  },
+  "es": {
+    "name": "Carvedilol",
+    "class": "Betabloqueante no selectivo + bloqueante alfa-1",
+    "commercialNames": {
+      "br": [
+        "Coreg",
+        "Cardilol",
+        "Carvedilol genérico"
+      ],
+      "ar": [
+        "Dilatrend",
+        "Carvedilol genérico"
+      ]
+    },
+    "presentation": [
+      {
+        "pt": "Comprimidos: 3,125 mg, 6,25 mg, 12,5 mg, 25 mg",
+        "es": "Comprimidos: 3,125 mg, 6,25 mg, 12,5 mg, 25 mg"
+      }
+    ],
+    "dose": {
+      "adultoPadrao": "HTA/Angina: iniciar 6,25 mg VO cada 12 h. Titular según PA/FC hasta 25 mg cada 12 h.",
+      "adultoGrave": "ICFEr: iniciar 3,125 mg VO cada 12 h por 2 semanas. Duplicar progresivamente si tolerado hasta 25 mg cada 12 h (<85 kg) o 50 mg cada 12 h (>85 kg).",
+      "pediatricaPadrao": "Uso pediátrico no estandarizado; utilizar solo con especialista.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Adulto: dosis fija titulada por respuesta clínica, PA y FC.",
+      "grave": "ICFEr: objetivo depende del peso: hasta 25 mg cada 12 h si <85 kg; hasta 50 mg cada 12 h si >85 kg.",
+      "meningite": null,
+      "doseMaxima": "ICFEr: 50 mg cada 12 h en pacientes >85 kg. HTA: hasta 50 mg/día en muchos protocolos; individualizar."
+    },
+    "therapeuticRange": "ICFEr: objetivo de FC 55–65 lpm en reposo, PA tolerable y ausencia de congestión/hipoperfusión.",
+    "dilution": "Solo vía oral. No hay formulación IV estandarizada para uso rutinario.",
+    "speed": "Administrar con comida para reducir hipotensión ortostática y mejorar tolerabilidad.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Hipotensión ortostática",
+      "Mareos",
+      "Fatiga",
+      "Edema periférico",
+      "Aumento de peso inicial en IC"
+    ],
+    "dangerousAdverseEffects": [
+      "Bloqueo AV de 2º/3er grado",
+      "Shock cardiogénico",
+      "Empeoramiento de IC agudamente descompensada",
+      "Broncoespasmo en asma/EPOC grave",
+      "Hipoglucemia enmascarada en diabéticos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NUNCA suspender abruptamente — riesgo de angina rebote, IAM, arritmia y muerte súbita.",
+      "Suspender dosis si FC <50 lpm, PAS <90 mmHg, bloqueo AV 2º/3er grado, shock o IC agudamente descompensada.",
+      "Por bloquear alfa-1, causa más hipotensión ortostática que metoprolol/bisoprolol — tomar siempre con comida.",
+      "Evitar asociación con verapamilo/diltiazem IV: riesgo de bloqueo AV, bradicardia grave y paro cardíaco."
+    ],
+    "ref": "AHA/ACC/HFSA Heart Failure Guidelines 2022 · ESC Heart Failure Guidelines 2021 · COPERNICUS · CAPRICORN · COMET · Lexicomp 2026 · Goodman & Gilman 14ª ed. · FDA/EMA label",
+    "mechanism": "Bloqueo no selectivo de receptores β1 y β2-adrenérgicos + bloqueo competitivo de receptores α1-adrenérgicos periféricos. El bloqueo β1 reduce FC, gasto cardíaco y consumo miocárdico de O₂. El bloqueo β2 puede causar broncoespasmo (menos que propranolol por bajas concentraciones). El bloqueo α1 promueve vasodilatación periférica, reduciendo la postcarga — diferencial importante en ICC. Carvedilol también tiene propiedades antioxidantes y antiproliferativas (independientes del bloqueo adrenérgico), favoreciendo el remodelado reverso miocárdico.",
+    "pharmacokinetics": {
+      "absorption": "Absorción oral rápida (~1–2 h para Tmax). El alimento reduce Tmax pero no la biodisponibilidad total — administrar siempre con comida para reducir hipotensión ortostática.",
+      "bioavailability": "~25–35% (efecto de primer paso hepático extenso; polimorfismo CYP2D6 influye). Formulación LP (fosfato) tiene biodisponibilidad similar pero pico más suave.",
+      "proteinBinding": "~98% (alta unión a proteínas — principalmente albúmina y α1-glicoproteína ácida)",
+      "vd": "~115 L (alto Vd — lipofílico)",
+      "metabolism": "Hepático extenso: CYP2D6 (principal), CYP2C9, CYP3A4. Produce 3 metabolitos activos (4-hidroxicarvedilol — hasta 13× más potente como antioxidante). Polimorfismo CYP2D6: PM presentan hasta 2–3× mayores concentraciones.",
+      "halfLife": "7–10 horas. Metabolitos activos con semivida similar. Formulación LP: perfil más suave, misma semivida eficaz.",
+      "elimination": "Principalmente biliar/fecal (~60%) como metabolitos glucuronados; renal ~16% como metabolitos. Eliminación renal del fármaco sin cambios < 2%.",
+      "dialysability": "No removido significativamente por hemodiálisis (alta unión proteica ~98% + alto Vd). No requiere suplementación post-HD."
+    },
+    "indications": {
+      "approved": [
+        "ICC con fracción de eyección reducida (ICFEr) — NYHA II–IV estable",
+        "Post-IAM con disfunción ventricular izquierda (FE ≤ 40%) — CAPRICORN",
+        "Hipertensión arterial sistémica",
+        "Angina estable crónica"
+      ],
+      "offLabel": [
+        "Fibrilación auricular (control de frecuencia ventricular)",
+        "ICC con fracción de eyección preservada (ICFEp) — datos limitados",
+        "Miocardiopatía hipertrófica obstructiva",
+        "Temblor esencial"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Bradicardia sinusal < 50 lpm sintomática",
+        "Bloqueo AV de 2º grado (Mobitz II) o 3er grado sin marcapasos",
+        "Síndrome del seno enfermo sin marcapasos",
+        "Shock cardiogénico",
+        "ICC agudamente descompensada con necesidad de inotrópico IV o congestión pulmonar grave",
+        "PAS < 90 mmHg",
+        "Asma bronquial grave / broncoespasmo activo",
+        "Hipersensibilidad al carvedilol",
+        "Hepatopatía grave (Child-Pugh C)"
+      ],
+      "relative": [
+        "EPOC con componente broncoespástico reversible significativo",
+        "Diabetes insulinodependiente (enmascaramiento de hipoglucemia)",
+        "Enfermedad vascular periférica grave (puede exacerbar isquemia)",
+        "Feocromocitoma sin bloqueo α previo (bloqueo β sin α puede precipitar crisis)",
+        "Psoriasis (puede exacerbar)",
+        "Hipotiroidismo no tratado (riesgo aumentado de bradicardia)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamilo EV / Diltiazem EV",
+          "mechanism": "Doble inhibición nodal AV (dromotrópico y cronotrópico negativo aditivo)",
+          "consequence": "Bloqueo AV completo, paro cardíaco, colapso hemodinámico",
+          "management": "NO asociar EV. Vía oral: extrema precaución con monitorización continua de FC y ECG."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efecto cronotrópico y dromotrópico negativo aditivo en nódulo sinusal y AV",
+          "consequence": "Bradicardia y bloqueo AV potencialmente graves",
+          "management": "Monitorizar FC y ECG regularmente. Carvedilol aumenta niveles de digoxina ~15% — verificar nivel sérico si sospecha de toxicidad."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Inhibición de CYP2D6 por amiodarona eleva niveles de carvedilol + efecto bradicardizante aditivo",
+          "consequence": "Bradicardia grave, bloqueo AV, hipotensión",
+          "management": "Reducir dosis de carvedilol. Monitorizar ECG y FC continuamente."
+        },
+        {
+          "drug": "Insulina / sulfonilureas",
+          "mechanism": "Enmascaramiento de la taquicardia refleja de hipoglucemia; puede prolongar hipoglucemia. Bloqueo β2 atenúa glucogenólisis compensatoria.",
+          "consequence": "Hipoglucemia grave no reconocida — riesgo mayor que con betabloqueantes β1-selectivos",
+          "management": "Monitorizar glucemia con mayor frecuencia. La sudoración persiste como signo alternativo. Preferir bisoprolol en diabéticos insulinizados si posible."
+        },
+        {
+          "drug": "Inhibidores de CYP2D6 (fluoxetina, paroxetina, bupropión, quinidina)",
+          "mechanism": "Reducción del metabolismo hepático del carvedilol vía CYP2D6 → aumento de niveles plasmáticos",
+          "consequence": "Bradicardia, hipotensión ortostática exacerbada, bloqueo AV",
+          "management": "Reducir dosis de carvedilol 25–50%. Monitorizar FC y PA rigurosamente."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "Clonidina",
+          "mechanism": "Retirada abrupta de clonidina en uso concomitante → hipertensión de rebote grave no antagonizada",
+          "consequence": "Crisis hipertensiva grave",
+          "management": "Descontinuar carvedilol días antes de suspender clonidina. Monitorizar PA."
+        },
+        {
+          "drug": "Antihipertensivos (IECA, ARA, bloqueadores de canales de calcio VO)",
+          "mechanism": "Hipotensión aditiva — el bloqueo α1 del carvedilol ya causa vasodilatación; antihipertensivos suman efecto",
+          "consequence": "Hipotensión ortostática sintomática, síncope",
+          "management": "Tomar carvedilol con comida. Monitorizar PA en ortostatismo. Titular dosis individualmente."
+        },
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, diclofenaco)",
+          "mechanism": "Reducción de síntesis de prostaglandinas vasodilatadoras renales → antagonismo del efecto antihipertensivo",
+          "consequence": "Reducción del control presórico",
+          "management": "Monitorizar PA. Preferir paracetamol si analgesia necesaria."
+        },
+        {
+          "drug": "Rifampicina (inductor CYP2D6/CYP3A4/CYP2C9)",
+          "mechanism": "Inducción enzimática amplia → reducción significativa de los niveles plasmáticos de carvedilol (hasta 70% de reducción reportada)",
+          "consequence": "Pérdida sustancial del efecto betabloqueante — riesgo de descompensación en ICC, angina rebote",
+          "management": "Monitorizar FC y PA durante y después del ciclo de rifampicina. Puede ser necesario aumentar dosis de carvedilol. Reajustar al suspender inductor."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC y PA en reposo y en ortostatismo (bloqueo α1 → hipotensión ortostática)",
+        "ECG (intervalo PR, ritmo)",
+        "Función hepática (AST/ALT) — carvedilol se metaboliza extensamente en hígado; contraindicado en Child-Pugh C",
+        "Función renal (creatinina/ClCr)",
+        "Síntomas respiratorios (asma/EPOC)",
+        "Glucemia basal en diabéticos",
+        "Electrolitos (K⁺, Na⁺) en ICC"
+      ],
+      "followUp": [
+        "FC objetivo: 55–65 lpm (ICC) / < 70 lpm (HTA/Angina)",
+        "PA en decúbito y de pie — verificar hipotensión ortostática en cada consulta",
+        "Edema periférico (carvedilol puede causar o agravar retención hídrica inicial)",
+        "Síntomas respiratorios (broncoespasmo)",
+        "Adherencia y tolerabilidad",
+        "ECG cada 6–12 meses o si cambio de dosis en ICC",
+        "BNP/NT-proBNP como marcador de respuesta en ICC"
+      ],
+      "icc": [
+        "Pesar diariamente por la mañana (ganancia > 2 kg/48h = señal de retención hídrica)",
+        "Edemas de miembros inferiores",
+        "Clase funcional NYHA en cada consulta",
+        "Ecocardiograma tras titulación completa (3–6 meses) para verificar mejora de FEVI"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave",
+        "Hipotensión grave (agravada por el bloqueo α1)",
+        "Bloqueo AV de alto grado",
+        "Broncoespasmo (bloqueo β2)",
+        "Hipoglucemia (especialmente en diabéticos)",
+        "Insuficiencia cardíaca aguda",
+        "Convulsiones (raro)",
+        "Shock cardiogénico refractario (alta unión proteica dificulta eliminación)"
+      ],
+      "management": [
+        "1. Carbón activado si ingesta reciente < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia (máx 3 mg)",
+        "3. Glucagón 5–10 mg IV bolo → infusión 1–5 mg/h — antídoto específico (activa adenilciclasa independiente de β1)",
+        "4. Norepinefrina para hipotensión refractaria (bloqueo α1 → vasoplejia) — preferir sobre dopamina",
+        "5. Dobutamina/isoproterenol si hipotensión con bradicardia refractaria",
+        "6. Emulsión lipídica IV 20% (terapia de rescate — carvedilol es lipofílico, puede ser secuestrado)",
+        "7. Marcapasos transcutáneo o transvenoso en BAV refractario",
+        "8. ECMO en colapso cardiocirculatorio refractario",
+        "9. Hemodiálisis NO eficaz (alta unión proteica ~98% + alto Vd ~115 L)"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "IR leve-moderada: sin ajuste formal — eliminación renal del fármaco sin cambios < 2%. IR grave: precaución, preferir dosis bajas; riesgo aumentado de hipotensión y bradicardia en pacientes urémicos. Hemodiálisis: no removido significativamente (unión proteica ~98%).",
+      "obesity": "Obesidad: alto Vd (~115 L) puede influir en la distribución. Titulación guiada por FC y PA, no solo por el peso. Síndrome metabólico: carvedilol es NEUTRO o levemente favorable a la sensibilidad a la insulina (diferencial vs. betabloqueantes β1-selectivos de 1ª generación).",
+      "geriatrics": "Anciano: mayor sensibilidad farmacodinámica. Alto riesgo de hipotensión ortostática y caídas por el bloqueo α1. Iniciar siempre con 3,125 mg cada 12 h. Monitorizar ortostatismo en cada consulta. Carvedilol es lipofílico — riesgo de pesadillas y alteraciones cognitivas.",
+      "pregnancy": "Embarazo: datos limitados (categoría C FDA antiguo). Puede causar bradicardia fetal, RCIU e hipoglucemia neonatal. Monitorizar crecimiento fetal por US. En HTA gestacional, labetalol y nifedipino de liberación controlada son preferidos. Interrumpir 48–72 h antes del parto si posible.",
+      "lactation": "Lactancia: excretado en leche materna (datos limitados). Monitorizar lactante para bradicardia, hipoglucemia y somnolencia. Carvedilol es lipofílico — relación leche/plasma posiblemente elevada. Considerar alternativa menos lipofílica si necesario.",
+      "hepaticImpairment": "Hepatopatía: metabolismo hepático extenso vía CYP2D6/2C9/3A4. Hepatopatía moderada (Child-Pugh B): usar con precaución, dosis reducidas. Child-Pugh C: CONTRAINDICADO — acumulación grave con riesgo de toxicidad. Monitorizar AST/ALT si uso en Child-Pugh A.",
+      "dpoc": "EPOC: carvedilol bloquea β2 → mayor riesgo de broncoespasmo que bisoprolol. Usar solo si no hay alternativa cardioselectiva. En EPOC estable con ICFEr, bisoprolol es preferible. Si carvedilol necesario, iniciar 3,125 mg con broncodilatador cercano y monitorizar espirometría.",
+      "diabetes": "Diabetes: carvedilol es el betabloqueante preferencial en ICC + diabetes — mejora sensibilidad a la insulina y perfil lipídico (al contrario de betabloqueantes no vasodilatadores). Menor riesgo de nuevo DM2. Sin embargo: bloquea β2 → enmascaramiento más intenso de hipoglucemia vs. bisoprolol. Monitorizar glucemia con frecuencia."
+    },
+    "clinicalPearls": [
+      "COPERNICUS (2001): carvedilol vs. placebo en ICFEr grave (FE < 25%) — reducción de mortalidad total del 35% (NNT ~8/año). Estudio interrumpido precozmente por superioridad.",
+      "CAPRICORN (2001): carvedilol post-IAM con FE ≤ 40% — reducción de mortalidad total del 23% vs. placebo. Confirmó beneficio más allá del metoprolol en los estudios post-IAM.",
+      "COMET (2003): carvedilol vs. metoprolol tartrato (atención: metoprolol IR, no succinato LP) — reducción de mortalidad del 17% a favor de carvedilol. ADVERTENCIA: comparó formulaciones diferentes; MERIT-HF usó succinato LP, por lo tanto la comparación debe ser cautelosa.",
+      "Bloquea β2 (no selectivo) — a diferencia de bisoprolol/metoprolol. Mayor riesgo de broncoespasmo en EPOC/asma. Sin embargo, también promueve vasodilatación por bloqueo α1 — menor aumento de resistencia vascular periférica que betabloqueantes selectivos puros.",
+      "Único betabloqueante entre los 3 de 1ª línea en ICC (carvedilol, metoprolol succinato, bisoprolol) que MEJORA la sensibilidad a la insulina y el perfil lipídico — preferencial en ICC con diabetes o síndrome metabólico.",
+      "Hipotensión ortostática: mayor que bisoprolol/metoprolol por el bloqueo α1. Estrategia: siempre administrar con comida, iniciar con la dosis más baja posible (3,125 mg cada 12 h) y orientar cambio de posición gradual.",
+      "Alta unión proteica (~98%): hemodiálisis no elimina carvedilol. En sobredosis: glucagón es el antídoto; norepinefrina preferible a dopamina para hipotensión (vasoplejia por bloqueo α1). Emulsión lipídica IV de rescate (lipofílico)."
+    ],
+    "incompatibilities": "Solo formulación oral. Sin incompatibilidades de administración IV relevantes. No mezclar comprimidos con soluciones de sorbitol (puede comprometer absorción).",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálisis peritoneal: carvedilol no es removido de forma relevante (alta unión proteica ~98% + Vd elevado). Mantener dosis habitual con precaución en IR grave. Monitorizar PA y FC."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: eliminación mínima de carvedilol (alta unión proteica impide filtración). No requiere suplementación. Monitorizar hemodinámica rigurosamente — pacientes en UCI con TRRC tienen alta inestabilidad. La hipotensión por el bloqueo α1 puede ser problemática en este contexto."
+      }
+    },
+    "prescriptionErrors": [
+      "Administrar sin comida — tomar siempre con alimento para reducir hipotensión ortostática y mejorar tolerabilidad.",
+      "Iniciar dosis plena (12,5–25 mg) en ICC — obligatorio comenzar con 3,125 mg cada 12 h y titular cada 2 semanas.",
+      "Usar en ICC agudamente descompensada con congestión activa o necesidad de inotrópico — esperar estabilización.",
+      "Suspender abruptamente — siempre reducir progresivamente en 1–2 semanas para evitar síndrome de abstinencia.",
+      "Usar en hepatopatía grave (Child-Pugh C) — contraindicado; acumulación extensiva con toxicidad grave.",
+      "No ajustar dosis al prescribir inhibidores de CYP2D6 (fluoxetina, paroxetina) — riesgo de bradicardia e hipotensión graves."
+    ],
+    "patientEducation": [
+      "Tomar SIEMPRE con alimento (desayuno, almuerzo o cena) — nunca en ayuno.",
+      "Nunca detener el medicamento de repente — reducir progresivamente bajo orientación médica.",
+      "Levantarse despacio de la cama o silla para evitar mareos y caídas.",
+      "Avisar al médico si FC < 50 lpm, PA muy baja o mareos intensos al levantarse.",
+      "Diabéticos: monitorizar glucemia con más frecuencia — este medicamento puede ocultar la taquicardia de la hipoglucemia. La sudoración persiste como señal de alerta.",
+      "Pesarse cada día por la mañana en ICC — ganancia > 2 kg en 48 h: contactar al médico.",
+      "Avisar si siente silbido en el pecho, falta de aire, empeoramiento de la hinchazón o mareos persistentes."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Metabolismo hepático predominante. No requiere ajuste renal formal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "3,125–25 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "50 mg 12/12h em pacientes >85 kg com ICFEr",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis estándar. En ICFEr iniciar siempre con 3,125 mg cada 12 h con alimento y titular cada 2 semanas si tolerado."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "3,125–25 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "25–50 mg 12/12h conforme peso e tolerância",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sin ajuste obligatorio. Monitorizar PA en ortostatismo, FC y síntomas de hipotensión."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "3,125–12,5 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "25 mg 12/12h se tolerado",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: titulación más lenta. Alto riesgo de hipotensión ortostática en pacientes urémicos/frágiles. Monitorizar PA de pie y acostado."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "3,125–6,25 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "12,5–25 mg 12/12h se tolerado",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muy grave/anuria: individualizar dosis. Monitorizar hipotensión, bradicardia e hipoperfusión. Iniciar extremadamente bajo."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "3,125–6,25 mg",
+          "intervalo": "12/12h ou após HD conforme PA",
+          "doseMaxima": "individualizar",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Carvedilol no es removido significativamente por hemodiálisis (unión proteica ~98%). No requiere suplementación post-HD. Monitorizar hipotensión intradialítica; puede ser preferible administrar después de la sesión si PA inestable."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": false,
+      "bradycardiaRisk": true,
+      "hypotensionRisk": true,
+      "orthostaticRisk": true,
+      "avBlockRisk": true,
+      "bronchospasmRisk": true,
+      "hypoglycemiaMasking": true,
+      "pregnancyCaution": true,
+      "warning": {
+        "pt": "Carvedilol reduz mortalidade em ICFEr, mas exige titulação lenta, uso com alimento e vigilância para bradicardia, bloqueio AV e hipotensão ortostática. Contraindicado em Child-Pugh C.",
+        "es": "Carvedilol reduce mortalidad en ICFEr, pero exige titulación lenta, uso con comida y vigilancia de bradicardia, bloqueo AV e hipotensión ortostática. Contraindicado en Child-Pugh C."
+      }
+    },
+    "auditNotes": {
+      "status": "master_v2_updated",
+      "sourcePriority": [
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "ESC Heart Failure Guidelines 2021",
+        "COPERNICUS Trial (NEJM 2001)",
+        "CAPRICORN Trial (Lancet 2001)",
+        "COMET Trial (Lancet 2003)",
+        "FDA Coreg (carvedilol) label 2023",
+        "EMA Carvedilol SmPC 2024",
+        "Lexicomp Online 2026",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": {
+        "pt": "Betabloqueador com bloqueio β1, β2 e α1. Um dos 3 betabloqueadores com evidência A de redução de mortalidade em ICFEr (COPERNICUS, CAPRICORN). Preferencial em ICC com diabetes ou síndrome metabólica. Maior risco de hipotensão ortostática e broncoespasmo vs. bisoprolol/metoprolol. Contraindicado em Child-Pugh C. Auditoria V2 completada 2026-06.",
+        "es": "Betabloqueante con bloqueo β1, β2 y α1. Uno de los 3 betabloqueantes con evidencia A de reducción de mortalidad en ICFEr (COPERNICUS, CAPRICORN). Preferencial en ICC con diabetes o síndrome metabólico. Mayor riesgo de hipotensión ortostática y broncoespasmo vs. bisoprolol/metoprolol. Contraindicado en Child-Pugh C. Auditoría V2 completada 2026-06."
+      }
+    }
+  },
+  "name": {
+    "pt": "Carvedilol",
+    "es": "Carvedilol"
+  },
+  "keywords": [
+    "carvedilol",
+    "coreg",
+    "cardilol",
+    "carvedilol generico",
+    "dilatrend",
+    "betabloqueador nao seletivo + bloqueador alfa-1"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

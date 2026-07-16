@@ -1,0 +1,214 @@
+{
+  "id": "rifabutina",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(234,179,8,0.12)",
+  "colorTxt": "#78350F",
+  "pt": {
+    "name": "Rifabutina",
+    "class": "Rifamicina de 2ª geração (menor indutor de CYP que rifampicina)",
+    "commercialNames": {
+      "br": [
+        "Mycobutin",
+        "Rifabutina Genérico"
+      ],
+      "ar": [
+        "Mycobutin",
+        "Rifabutina Genérico"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 150 mg"
+    ],
+    "dose": {
+      "adultoVO": "300 mg VO 24/24h (pode ser 150 mg 2×/dia)"
+    },
+    "doseKg": null,
+    "indication": "Profilaxia e tratamento de Mycobacterium avium complex (MAC) em pacientes com HIV/AIDS (CD4 < 50 células/mm³), tuberculose em pacientes em uso de antirretrovirais (substituição à rifampicina por menor indução do CYP3A4).",
+    "spectrum": "Mycobacterium avium complex (MAC), Mycobacterium tuberculosis (alternativa à rifampicina em pacientes HIV+), outras micobactérias não-tuberculosas. Também ativa contra Staphylococcus aureus (uso adjuvante em biofilme) e H. pylori.",
+    "contraindications": [
+      "Hipersensibilidade às rifamicinas",
+      "Contagem de neutrófilos < 1000 células/mm³ (risco de neutropenia grave)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Indutor moderado de CYP3A4 — menos potente que a rifampicina; preferida em pacientes em uso de inibidores de protease ou inibidores de integrase.",
+      "Uveíte (irite) — risco aumentado em doses > 300 mg/dia ou em combinação com claritromicina/fluconazol.",
+      "Neutropenia — monitorar hemograma semanalmente no início do tratamento.",
+      "Coloração alaranjada de urina, fezes, suor, lágrimas e lentes de contato.",
+      "Não necessita ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / CDC MAC Guidelines / DHHS HIV Guidelines / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose habitual para micobactérias e coinfecção HIV."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Monitorar uveíte, neutropenia e hepatotoxicidade."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Não requer suplementação pós-HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Rifabutina",
+    "class": "Rifamicina de 2.ª generación (menor inductor de CYP que rifampicina)",
+    "commercialNames": {
+      "br": [
+        "Mycobutin",
+        "Rifabutina Genérico"
+      ],
+      "ar": [
+        "Mycobutin",
+        "Rifabutina Genérico"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 150 mg"
+    ],
+    "dose": {
+      "adultoVO": "300 mg VO 24/24h (puede ser 150 mg 2×/día)"
+    },
+    "doseKg": null,
+    "indication": "Profilaxis y tratamiento de Mycobacterium avium complex (MAC) en pacientes con VIH/SIDA (CD4 < 50 células/mm³), tuberculosis en pacientes con antirretrovirales (sustitución de rifampicina por menor inducción del CYP3A4).",
+    "spectrum": "Mycobacterium avium complex (MAC), Mycobacterium tuberculosis (alternativa a rifampicina en pacientes VIH+), otras micobacterias no tuberculosas. También activa frente a Staphylococcus aureus (uso adyuvante en biofilm) y H. pylori.",
+    "contraindications": [
+      "Hipersensibilidad a las rifamicinas",
+      "Recuento de neutrófilos < 1000 células/mm³ (riesgo de neutropenia grave)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Inductor moderado de CYP3A4 — menos potente que rifampicina; preferida en pacientes con inhibidores de proteasa o inhibidores de integrasa.",
+      "Uveítis (iritis) — riesgo aumentado con dosis > 300 mg/día o en combinación con claritromicina/fluconazol.",
+      "Neutropenia — monitorizar hemograma semanalmente al inicio del tratamiento.",
+      "Coloración naranja de orina, heces, sudor, lágrimas y lentes de contacto.",
+      "No requiere ajuste renal habitual."
+    ],
+    "ref": "Sanford Guide 2025 / CDC MAC Guidelines / DHHS HIV Guidelines / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis habitual para micobacterias y coinfección VIH."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Monitorizar uveítis, neutropenia y hepatotoxicidad."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "No requiere suplementación post-HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Rifabutina",
+    "es": "Rifabutina"
+  },
+  "keywords": [
+    "rifabutina",
+    "mycobutin",
+    "rifabutina generico",
+    "rifamicina de 2ª geracao (menor indutor de cyp que rifampicina)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

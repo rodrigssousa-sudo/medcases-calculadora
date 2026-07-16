@@ -1,0 +1,758 @@
+{
+  "id": "labetalol",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(239,68,68,0.13)",
+  "colorTxt": "#7C2D12",
+  "pt": {
+    "name": "Labetalol",
+    "class": "Betabloqueador não seletivo com bloqueio alfa-1 (α/β = 1:3 VO, 1:7 IV)",
+    "commercialNames": {
+      "br": [
+        "Trandate",
+        "Labetalol genérico"
+      ],
+      "ar": [
+        "Trandate",
+        "Labetalol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 100 mg, 200 mg, 300 mg",
+      "Ampolas IV 5 mg/mL (para uso hospitalar)"
+    ],
+    "dose": {
+      "adultoPadrao": "VO: 100 mg 12/12h; manutenção 200–400 mg 12/12h; máx 2400 mg/dia.",
+      "adultoGrave": "Emergência IV: bólus 20 mg lento em 2 min; repetir 40–80 mg a cada 10 min conforme PA (máx 300 mg total). Infusão IV: 0,5–2 mg/min. Monitorização contínua obrigatória.",
+      "pediatricaPadrao": "Não estabelecido rotineiramente. Uso pediátrico requer avaliação especializada.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": "0,3–1 mg/kg IV (máx 20 mg/dose); infusão 0,5–2 mg/min",
+      "meningite": null,
+      "doseMaxima": "2400 mg/dia VO; 300 mg total IV em bólus fracionados"
+    },
+    "therapeuticRange": "Redução gradual e controlada da PA em emergências; FC > 55 bpm; evitar queda brusca de PA",
+    "dilution": "IV: diluir em SF 0,9% ou SG 5% para concentração de 1 mg/mL. Uso oral: comprimidos, sem diluição.",
+    "speed": "Infusão IV: iniciar 0,5–2 mg/min, ajustar conforme PA. Bólus: 20 mg em 2 min; aguardar resposta 10 min antes de repetir.",
+    "commonAdverseEffects": [
+      "Hipotensão",
+      "Tontura",
+      "Bradicardia",
+      "Fadiga",
+      "Náuseas",
+      "Cefaleia",
+      "Hipotensão ortostática"
+    ],
+    "dangerousAdverseEffects": [
+      "Choque cardiogênico",
+      "Bradicardia grave",
+      "Bloqueio AV completo",
+      "Broncoespasmo",
+      "Hepatotoxicidade grave (rara)",
+      "Descompensação de insuficiência cardíaca"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Não suspender abruptamente — risco de angina rebote e rebound hipertensivo.",
+      "Betabloqueador NÃO seletivo: contraindicado em asma grave e broncoespasmo ativo.",
+      "Interações graves: verapamil e diltiazem — risco de choque e bloqueio AV.",
+      "Hepatotoxicidade rara descrita — monitorar enzimas hepáticas em uso prolongado.",
+      "Emergência hipertensiva, AVC, dissecção de aorta e obstetrícia: exige monitorização contínua de PA e FC."
+    ],
+    "ref": "ESC Hypertension Guidelines 2023 · AHA/ACC Hypertension Guidelines 2023 · ESC Aortic Disease Guidelines 2024 · ACOG Hypertension in Pregnancy 2024 · ISSHP Hypertension in Pregnancy Guidance · Goodman & Gilman 14ª ed. · Katzung Farmacologia 15ª ed. · Lexicomp Online 2026 · Micromedex 2026 · FDA label · EMA label",
+    "pharmacologicClass": "Anti-hipertensivo adrenérgico misto: betabloqueador β1/β2 não seletivo + bloqueador α1 (ratio α:β = 1:3 VO / 1:7 IV)",
+    "mechanism": "Bloqueio competitivo de receptores β1 e β2-adrenérgicos (reduz FC, contratilidade, condução AV e secreção de renina) associado a bloqueio α1 periférico (vasodilatação arterial, redução da resistência vascular sistêmica). O duplo bloqueio resulta em queda de PA sem taquicardia reflexa significativa — vantagem sobre betabloqueadores puros e vasodilatadores puros. Via IV predomina o bloqueio α1 (ratio α:β = 1:7).",
+    "pharmacodynamics": "Reduz a pressão arterial com preservação relativa do débito cardíaco (vasodilatação α1 compensa a redução de inotropismo β). Particularmente útil em emergências hipertensivas onde taquicardia reflexa seria prejudicial (dissecção de aorta, AVC hemorrágico, pré-eclâmpsia). IV: início de ação em 2–5 min, ideal para titulação em UTI e obstetrícia.",
+    "onset": "IV (bolus): início em 2–5 minutos; pico em 5–15 minutos; duração 2–4 horas. IV (infusão contínua): efeito estável conforme taxa de infusão. VO: início em 20–120 minutos; pico em 1–4 horas; duração 8–12 horas.",
+    "pharmacokinetics": {
+      "absorption": "Absorção oral boa (~100%), mas com efeito de primeira passagem hepático extenso, resultando em biodisponibilidade oral de apenas ~25%.",
+      "bioavailability": "~25% (VO) / 100% (IV)",
+      "proteinBinding": "~50% (moderada)",
+      "vd": "~9,4 L/kg (ampla distribuição tecidual)",
+      "metabolism": "Metabolismo hepático extenso por glucuronidação (UGT) — sem participação relevante do CYP450. Metabólito glucuronídeo inativo. Efeito de primeira passagem marcante.",
+      "halfLife": "~6–8 horas",
+      "elimination": "Metabólitos eliminados por via renal (~55%) e biliar/fecal (~40%). Fármaco inalterado: < 5% urinário. Sem ajuste renal formal necessário.",
+      "dialysability": "Não significativamente removido por hemodiálise (alto Vd ~9,4 L/kg + ligação proteica ~50%). Sem suplementação pós-HD necessária."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensão arterial sistêmica (VO crônico)",
+        "Emergência hipertensiva (IV)",
+        "Hipertensão grave na gestação / pré-eclâmpsia grave (IV)"
+      ],
+      "offLabel": [
+        "Dissecção aguda de aorta (quando esmolol não disponível ou conforme protocolo local)",
+        "Crise hipertensiva perioperatória",
+        "Encefalopatia hipertensiva",
+        "Emergência hipertensiva em AVC hemorrágico (com alvo < 180/120 mmHg)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Asma brônquica ou broncoespasmo ativo (bloqueio β2)",
+        "Choque cardiogênico",
+        "Bradicardia sintomática (FC < 50 bpm)",
+        "Bloqueio AV de 2º grau (Mobitz II) ou 3º grau sem marcapasso",
+        "Insuficiência cardíaca agudamente descompensada",
+        "Hipotensão grave (PAS < 90 mmHg)"
+      ],
+      "relative": [
+        "DPOC com broncoespasmo reversível significativo",
+        "Hepatopatia ativa (metabolismo hepático extenso; risco de hepatotoxicidade adicional)",
+        "Diabetes mellitus insulinodependente (mascaramento de hipoglicemia)",
+        "Doença vascular periférica grave / Fenômeno de Raynaud",
+        "Uso concomitante de outros bloqueadores nodais AV (digoxina, diltiazem, verapamil oral)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamil EV / Diltiazem EV",
+          "mechanism": "Dupla inibição nodal AV com ação IV simultânea — dromotrópico e cronotrópico negativos aditivos",
+          "consequence": "Bloqueio AV completo, assistolia, colapso hemodinâmico",
+          "management": "Absolutamente contraindicado administrar ambos por via IV. Cautela também na transição de verapamil/diltiazem oral para labetalol IV."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efeito cronotrópico e dromotrópico negativo aditivo no nódulo AV",
+          "consequence": "Bradicardia grave e bloqueio AV de alto grau",
+          "management": "Monitorar ECG e nível sérico de digoxina (alvo 0,5–0,9 ng/mL). Titular labetalol em doses mínimas eficazes."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Bradicardia e bloqueio AV aditivos; vasodilatação periférica adicional da amiodarona IV",
+          "consequence": "Bradicardia grave, bloqueio AV, colapso hemodinâmico",
+          "management": "Monitorar ECG e PA continuamente. Titular labetalol em doses mínimas eficazes."
+        },
+        {
+          "drug": "Anestésicos gerais (propofol, halogenados, ketamina)",
+          "mechanism": "Depressão miocárdica e vasodilatação periférica aditivas; potencialização do bloqueio α com hipotensão profunda",
+          "consequence": "Hipotensão intraoperatória grave e bradicardia",
+          "management": "Informar equipe de anestesia sobre uso de labetalol. Monitorização hemodinâmica invasiva em cirurgias de alto risco. Não suspender abruptamente no pré-operatório."
+        },
+        {
+          "drug": "Insulina / sulfonilureias",
+          "mechanism": "Mascaramento de taquicardia reflexa e tremor da hipoglicemia pelo bloqueio β1/β2",
+          "consequence": "Hipoglicemia grave não reconhecida",
+          "management": "Monitorar glicemia frequentemente. Orientar paciente que a taquicardia como sinal de alerta pode estar ausente."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "Outros anti-hipertensivos / diuréticos",
+          "mechanism": "Hipotensão aditiva — especialmente com vasodilatadores diretos (hidralazina, nitroprussiato)",
+          "consequence": "Hipotensão excessiva e instabilidade hemodinâmica",
+          "management": "Monitorar PA continuamente. Titular escalonadamente ao associar vasodilatadores."
+        },
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, indometacina)",
+          "mechanism": "Inibição de prostaglandinas vasodilatadoras renais, antagonizando efeito anti-hipertensivo",
+          "consequence": "Redução modesta do controle pressórico",
+          "management": "Preferir paracetamol. Monitorar PA. Especialmente importante em gestantes (AINEs contraindicados após 20ª semana)."
+        },
+        {
+          "drug": "Cimetidina",
+          "mechanism": "Inibição do metabolismo hepático de labetalol (redução do efeito de primeira passagem)",
+          "consequence": "Aumento da biodisponibilidade e exposição ao labetalol",
+          "management": "Monitorar PA e FC. Considerar redução de dose de labetalol se cimetidina for necessária."
+        }
+      ]
+    },
+    "infusionProtocol": {
+      "route": "IV bolus ou infusão contínua (bomba de infusão obrigatória para infusão contínua)",
+      "bolus": "Bolus IV lento: 20 mg em 2 minutos. Repetir 40–80 mg a cada 10 min conforme PA. Dose total máxima por bolus: 300 mg. Monitorar PA e FC antes de cada bolus adicional.",
+      "infusion": "Infusão contínua: 0,5–2 mg/min titulada conforme alvo pressórico. Diluir em SF 0,9% ou SG 5% para concentração de 1 mg/mL. Monitorização de PA contínua obrigatória.",
+      "max": "Bolus fracionados: 300 mg total. Infusão: sem dose máxima absoluta definida — titular por resposta e tolerância hemodinâmica.",
+      "monitoring": "PA contínua (preferencialmente invasiva em pacientes críticos), FC, ECG, estado neurológico, diurese, perfusão periférica e, em gestantes, bem-estar fetal."
+    },
+    "monitoring": {
+      "baseline": [
+        "Pressão arterial (PA)",
+        "Frequência cardíaca e ECG basal",
+        "Função hepática (AST/ALT) — metabolismo hepático + risco de hepatotoxicidade",
+        "História de asma/DPOC/broncoespasmo (bloqueio β2)",
+        "Glicemia em diabéticos insulinodependentes",
+        "Avaliação obstétrica basal (PA materna, bem-estar fetal, cardiotocografia) quando gestante"
+      ],
+      "followUp": [
+        "PA seriada ou contínua — evitar quedas > 25% da PA média em 1h (risco de isquemia)",
+        "FC: não reduzir abaixo de 55–60 bpm para evitar baixo débito",
+        "Broncoespasmo (ausculta pulmonar a cada dose em pacientes com DPOC/histórico)",
+        "Função hepática (AST/ALT) em uso oral prolongado (> 4 semanas) ou se sintomas (icterícia, náuseas, fadiga)",
+        "Diurese e sinais de hipoperfusão renal",
+        "Bem-estar fetal (cardiotocografia, ausculta fetal) quando gestante durante uso IV",
+        "Sinais de hipotensão ortostática ao iniciar terapia VO ambulatorial"
+      ],
+      "icc": [
+        "Labetalol NÃO é indicado para tratamento de ICC crônica com FE reduzida. Em ICC descompensada é CONTRAINDICADO. Usar apenas para controle hipertensivo de emergência em paciente com ICC compensada e monitorização invasiva disponível.",
+        "Em pacientes com ICC compensada e hipertensão: preferir betabloqueadores com evidência em ICC (carvedilol, bisoprolol, metoprolol succinato) para terapia crônica.",
+        "Débito cardíaco e pressão de enchimento ventricular em ICC grave com labetalol IV."
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (FC < 40 bpm)",
+        "Hipotensão grave (PAS < 70 mmHg) — especialmente pela vasodilatação α1",
+        "Bloqueio AV de alto grau",
+        "Broncoespasmo (bloqueio β2)",
+        "Choque cardiogênico",
+        "Hipotensão ortostática grave",
+        "Hipoglicemia em diabéticos (mascaramento de sintomas adrenérgicos)"
+      ],
+      "management": [
+        "1. Posição supina — elevar membros inferiores para combater vasodilatação α1 (bradicardia paradoxalmente piora em posição Trendelenburg — avaliar individualmente)",
+        "2. Fluidos IV em bolus para hipotensão (250–500 mL SF 0,9% conforme resposta e tolerância)",
+        "3. Atropina 0,5–1 mg IV para bradicardia sintomática; repetir conforme necessário (máx 3 mg)",
+        "4. Glucagon 5–10 mg IV bolus → infusão 1–5 mg/h — antídoto específico do betabloqueador",
+        "5. Norepinefrina IV para hipotensão refratária — preferir α1 puro ao invés de epinefrina (risco de hipertensão paradoxal por bloqueio β2 não oposto é MENOR com labetalol que com propranolol, mas cautela)",
+        "6. Emulsão lipídica IV 20% — eficácia MODERADA a BAIXA (lipofilia moderada, Vd alto ~9,4 L/kg); tentar em colapso refratário",
+        "7. Marcapasso transcutâneo ou transvenoso em BAV refratário",
+        "8. ECMO em colapso circulatório refratário"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "Metabolismo predominantemente hepático — sem ajuste renal formal obrigatório. Em DRC avançada ou anúria: monitorar hipotensão e bradicardia mais rigorosamente. Fármaco não removido por hemodiálise (alto Vd ~9,4 L/kg).",
+      "hepaticImpairment": "CAUTELA em hepatopatia — metabolismo hepático extenso por glucuronidação. Em Child-Pugh B/C: biodisponibilidade aumentada, meia-vida prolongada e risco de hepatotoxicidade aditiva. Iniciar com doses menores e monitorar transaminases.",
+      "pregnancy": "Gestação: UMA DAS PRINCIPAIS OPÇÕES para hipertensão grave e pré-eclâmpsia grave. Amplamente usado por obstetricians. ACOG/ISSHP 2024: labetalol IV é primeira linha para hipertensão grave em gestação juntamente com hidralazina IV e nifedipina VO. Monitorar bradicardia fetal, hipoglicemia neonatal e restrição de crescimento. Compatível com aleitamento.",
+      "lactation": "Lactação: geralmente compatível com amamentação. Labetalol é excretado no leite em baixas concentrações. Monitorar lactente para bradicardia, sonolência e má alimentação.",
+      "geriatrics": "Idoso: maior risco de hipotensão ortostática (bloqueio α1 + vasodilatação), quedas, bradicardia e interações medicamentosas. Iniciar com doses baixas (100 mg VO 12/12h) e titular lentamente. Monitorar PA em diferentes posições.",
+      "obesity": "Obesidade: usar dose baseada em peso real para uso IV. Para uso oral, titular conforme resposta pressórica. Volume de distribuição alto (~9,4 L/kg) pode ser relevante em obesos."
+    },
+    "hepaticDose": {
+      "required": true,
+      "message": "Metabolismo hepático extenso por glucuronidação. Em hepatopatia moderada (Child-Pugh B): reduzir dose em ~30–50% e monitorar. Em hepatopatia grave (Child-Pugh C): evitar ou usar doses muito reduzidas com monitorização rigorosa de transaminases. Hepatotoxicidade idiossincrática rara documentada — suspender se AST/ALT > 3× LSN."
+    },
+    "patientEducation": [
+      "Levantar lentamente da cama ou cadeira — labetalol pode causar tontura ao mudar de posição (hipotensão ortostática pelo bloqueio α1).",
+      "Nunca interromper abruptamente sem orientação médica — risco de hipertensão e angina de rebote.",
+      "Comunicar imediatamente ao médico: falta de ar, chiado no peito, batimentos muito lentos, desmaio, icterícia (coloração amarelada da pele/olhos), náuseas persistentes ou dor abdominal — podem indicar broncoespasmo ou hepatotoxicidade.",
+      "Na gestação: manter acompanhamento obstétrico regular e monitoramento da pressão arterial conforme orientação da equipe.",
+      "Em diabetes: monitorar glicemia com maior frequência — os sintomas de hipoglicemia (taquicardia, tremor) podem estar mascarados."
+    ],
+    "clinicalPearls": [
+      "Único anti-hipertensivo IV de uso obstétrico amplamente validado: ACOG 2024 e ISSHP listam labetalol IV como primeira linha para hipertensão grave em gestação (juntamente com hidralazina IV e nifedipina VO). Especialmente útil porque não causa taquicardia reflexa materna.",
+      "Ratio α:β depende da via: VO = 1:3 (predomina betabloqueio); IV = 1:7 (bloqueio α1 mais pronunciado → maior vasodilatação e queda mais rápida de PA). Esta diferença explica a utilidade da via IV em emergências.",
+      "Hepatotoxicidade idiossincrática: rara mas documentada — pode ocorrer mesmo em doses terapêuticas. Monitorar transaminases em uso prolongado (> 4 semanas) ou se sintomas digestivos.",
+      "NÃO usar em asma — o bloqueio β2 é absolutamente inaceitável em asma ativa. Substituir por hidralazina IV + nifedipina VO na gestação, ou nicardipina/nitroprussiato na emergência hipertensiva geral.",
+      "Dissecção de aorta: labetalol IV é alternativa ao esmolol quando este não está disponível — o duplo bloqueio α+β reduz FC e PA simultaneamente, ideais nesta emergência. Meta: FC < 60 bpm e PAS 100–120 mmHg."
+    ],
+    "guidelineRecommendations": [
+      "ACOG Practice Bulletin 2024 e ISSHP 2022: labetalol IV é primeira linha para controle agudo de hipertensão grave (PA ≥ 160/110 mmHg) na gestação — dose inicial 20 mg IV, repetir 40–80 mg a cada 10–20 min.",
+      "ESC Hypertension 2023 e AHA/ACC 2023: labetalol é opção válida para emergências hipertensivas com ou sem envolvimento de órgão-alvo, incluindo encefalopatia hipertensiva e crise adrenérgica.",
+      "ESC Aortic Disease 2024: betabloqueador IV (esmolol preferido, labetalol alternativa) — primeira linha para controle de FC e PA em dissecção aguda de aorta tipo A e B. Alvo: FC < 60 bpm e PAS 100–120 mmHg."
+    ],
+    "incompatibilities": "EV: compatível com SF 0,9% e SG 5% (concentração recomendada 1 mg/mL). Incompatível com bicarbonato de sódio (precipitação), furosemida em alta concentração e soluções alcalinas. Não administrar em mesma linha que heparina não fracionada em alta concentração.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálise peritoneal: remoção mínima de labetalol (alto Vd ~9,4 L/kg + ligação proteica ~50%). Sem impacto no esquema de dose."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHDF: labetalol não é significativamente removido por TRSC pelo alto Vd e moderada ligação proteica. Usar dose habitual com monitorização hemodinâmica em UTI."
+      }
+    },
+    "prescriptionErrors": [
+      "Usar em pacientes asmáticos — o bloqueio β2 pode desencadear broncoespasmo fatal. Contraindição absoluta em asma ativa. Alternativas obstétricas: hidralazina IV ou nifedipina VO.",
+      "Reduzir PA muito rapidamente em emergências hipertensivas — queda > 25% da PA média em 1h pode causar isquemia cerebral, coronária, renal ou uteroplacentária. Meta: redução gradual e controlada.",
+      "Não monitorar função hepática em uso oral prolongado — hepatotoxicidade idiossincrática rara mas real. Solicitar AST/ALT antes de iniciar e periodicamente.",
+      "Usar em ICC descompensada — o betabloqueio reduz débito cardíaco em pacientes já em baixo débito. CONTRAINDICADO em ICC agudamente descompensada.",
+      "Administrar bolus IV rápido (< 2 minutos) — pode causar hipotensão e bradicardia graves. Sempre bolus lento em 2 minutos com monitorização contínua.",
+      "Suspender abruptamente em uso oral crônico — risco de hipertensão de rebote e crise anginosa. Reduzir gradualmente em 1–2 semanas."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Labetalol é predominantemente metabolizado pelo fígado. Sem ajuste renal formal necessário para ClCr ≥ 10 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "100–400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "20–80 mg bólus / 0,5–2 mg/min",
+          "intervalo": "Infusão ou bólus conforme PA",
+          "doseMaxima": "300 mg IV total (bólus)",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dose e intervalo habituais. Sem ajuste renal necessário."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "100–400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "20–80 mg bólus / 0,5–2 mg/min",
+          "intervalo": "Infusão ou bólus conforme PA",
+          "doseMaxima": "300 mg IV total",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Sem ajuste renal necessário. Monitorar tolerância hemodinâmica em pacientes frágeis."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "100–200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia (cautela)",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "20 mg bólus / 0,5–1 mg/min",
+          "intervalo": "Com cautela conforme PA e FC",
+          "doseMaxima": "Titular criteriosamente",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "DRC grave: sem ajuste renal formal, mas usar doses conservadoras e monitorar hemodinâmica rigorosamente."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h (avaliar individualmente)",
+          "doseMaxima": "Titular conforme resposta",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "DRC muito grave/anúria: metabolismo hepático predominante — sem ajuste renal obrigatório. Monitorização rigorosa de PA e FC."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "Individualizar",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Labetalol não é significativamente removido por hemodiálise. Sem suplementação pós-HD necessária."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "bronchospasmRisk": true,
+      "pregnancyCaution": false,
+      "emergencyDrug": true,
+      "warning": "Fármaco de escolha em emergência hipertensiva, AVC, dissecção de aorta e obstetrícia. Exige monitorização rigorosa de PA e FC. Contraindicado em asma grave, broncoespasmo ativo e IC descompensada."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ACOG Practice Bulletin 2024",
+        "ESC Hypertension Guidelines 2023",
+        "AHA/ACC Hypertension Guidelines 2023",
+        "ESC Aortic Disease Guidelines 2024",
+        "ISSHP Hypertension in Pregnancy Guidance 2022",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Katzung Farmacologia Básica e Clínica 15ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA label",
+        "EMA label"
+      ],
+      "note": "Bloqueador α1+β1/β2 com ratio α:β = 1:3 VO / 1:7 IV. Sem taquicardia reflexa. Preferido em emergência hipertensiva neurológica, dissecção de aorta e gestação (ACOG/ISSHP 1ª linha). Metabolismo hepático por glucuronidação (UGT) — sem CYP450; hepatotoxicidade idiossincrática rara documentada. Não removido por HD (Vd ~9,4 L/kg). CONTRAINDICADO em asma (bloqueio β2). Auditoria V2 completada 2026-06."
+    }
+  },
+  "es": {
+    "name": "Labetalol",
+    "class": "Betabloqueante no selectivo con bloqueo alfa-1 (α/β = 1:3 VO, 1:7 IV)",
+    "commercialNames": {
+      "br": [
+        "Trandate",
+        "Labetalol genérico"
+      ],
+      "ar": [
+        "Trandate",
+        "Labetalol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 100 mg, 200 mg, 300 mg",
+      "Ampollas IV 5 mg/mL (para uso hospitalario)"
+    ],
+    "dose": {
+      "adultoPadrao": "VO: 100 mg cada 12h; mantenimiento 200–400 mg cada 12h; máx 2400 mg/día.",
+      "adultoGrave": "Emergencia IV: bolo 20 mg lento en 2 min; repetir 40–80 mg cada 10 min según PA (máx 300 mg total). Infusión IV: 0,5–2 mg/min. Monitorización continua obligatoria.",
+      "pediatricaPadrao": "No establecido de forma rutinaria. El uso pediátrico requiere evaluación especializada.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": "0,3–1 mg/kg IV (máx 20 mg/dosis); infusión 0,5–2 mg/min",
+      "meningite": null,
+      "doseMaxima": "2400 mg/día VO; 300 mg total IV en bolos fraccionados"
+    },
+    "therapeuticRange": "Reducción gradual y controlada de la PA en emergencias; FC > 55 lpm; evitar caída brusca de PA",
+    "dilution": "IV: diluir en SF 0,9% o SG 5% para concentración de 1 mg/mL. Uso oral: comprimidos, sin dilución.",
+    "speed": "Infusión IV: iniciar 0,5–2 mg/min, ajustar según PA. Bolo: 20 mg en 2 min; esperar respuesta 10 min antes de repetir.",
+    "commonAdverseEffects": [
+      "Hipotensión",
+      "Mareos",
+      "Bradicardia",
+      "Fatiga",
+      "Náuseas",
+      "Cefalea",
+      "Hipotensión ortostática"
+    ],
+    "dangerousAdverseEffects": [
+      "Shock cardiogénico",
+      "Bradicardia grave",
+      "Bloqueo AV completo",
+      "Broncoespasmo",
+      "Hepatotoxicidad grave (rara)",
+      "Descompensación de insuficiencia cardíaca"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "No suspender abruptamente — riesgo de angina de rebote y rebote hipertensivo.",
+      "Betabloqueante NO selectivo: contraindicado en asma grave y broncoespasmo activo.",
+      "Interacciones graves: verapamilo y diltiazem — riesgo de shock y bloqueo AV.",
+      "Hepatotoxicidad rara descrita — monitorizar enzimas hepáticas en uso prolongado.",
+      "Emergencia hipertensiva, ACV, disección de aorta y obstetricia: exige monitorización continua de PA y FC."
+    ],
+    "ref": "ESC Hypertension Guidelines 2023 · AHA/ACC Hypertension Guidelines 2023 · ESC Aortic Disease Guidelines 2024 · ACOG Hypertension in Pregnancy 2024 · ISSHP Hypertension in Pregnancy Guidance · Goodman & Gilman 14ª ed. · Katzung Farmacologia 15ª ed. · Lexicomp Online 2026 · Micromedex 2026 · FDA label · EMA label",
+    "pharmacologicClass": "Antihipertensivo adrenérgico mixto: betabloqueante β1/β2 no selectivo + bloqueante α1 (ratio α:β = 1:3 VO / 1:7 IV)",
+    "mechanism": "Bloqueo competitivo de receptores β1 y β2-adrenérgicos (reduce FC, contractilidad, conducción AV y secreción de renina) asociado a bloqueo α1 periférico (vasodilatación arterial, reducción de la resistencia vascular sistémica). El doble bloqueo resulta en caída de PA sin taquicardia refleja significativa — ventaja sobre betabloqueantes puros y vasodilatadores puros. Vía IV predomina el bloqueo α1 (ratio α:β = 1:7).",
+    "pharmacodynamics": "Reduce la PA con preservación relativa del gasto cardíaco (vasodilatación α1 compensa la reducción del inotropismo β). Particularmente útil en emergencias hipertensivas donde la taquicardia refleja sería perjudicial (disección aorta, ACV hemorrágico, preeclampsia). IV: inicio de acción en 2–5 min, ideal para titulación en UCI y obstetricia.",
+    "onset": "IV (bolo): inicio en 2–5 minutos; pico en 5–15 minutos; duración 2–4 horas. IV (infusión continua): efecto estable según tasa de infusión. VO: inicio en 20–120 minutos; pico en 1–4 horas; duración 8–12 horas.",
+    "pharmacokinetics": {
+      "absorption": "Absorción oral buena (~100%), pero con efecto de primer paso hepático extenso, resultando en biodisponibilidad oral de solo ~25%.",
+      "bioavailability": "~25% (VO) / 100% (IV)",
+      "proteinBinding": "~50% (moderada)",
+      "vd": "~9,4 L/kg (amplia distribución tisular)",
+      "metabolism": "Metabolismo hepático extenso por glucuronidación (UGT) — sin participación relevante del CYP450. Metabolito glucurónido inactivo. Efecto de primer paso marcado.",
+      "halfLife": "~6–8 horas",
+      "elimination": "Metabolitos eliminados por vía renal (~55%) y biliar/fecal (~40%). Fármaco sin cambios: < 5% urinario. Sin ajuste renal formal necesario.",
+      "dialysability": "No eliminado significativamente por hemodiálisis (alto Vd ~9,4 L/kg + unión proteica ~50%). Sin suplementación post-HD necesaria."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensión arterial sistémica (VO crónico)",
+        "Emergencia hipertensiva (IV)",
+        "Hipertensión grave en embarazo / preeclampsia grave (IV)"
+      ],
+      "offLabel": [
+        "Disección aguda de aorta (cuando esmolol no está disponible o según protocolo local)",
+        "Crisis hipertensiva perioperatoria",
+        "Encefalopatía hipertensiva",
+        "Emergencia hipertensiva en ACV hemorrágico (con objetivo < 180/120 mmHg)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Asma bronquial o broncoespasmo activo (bloqueo β2)",
+        "Shock cardiogénico",
+        "Bradicardia sintomática (FC < 50 lpm)",
+        "Bloqueo AV de 2º grado (Mobitz II) o 3er grado sin marcapasos",
+        "Insuficiencia cardíaca agudamente descompensada",
+        "Hipotensión grave (PAS < 90 mmHg)"
+      ],
+      "relative": [
+        "EPOC con broncoespasmo reversible significativo",
+        "Hepatopatía activa (metabolismo hepático extenso; riesgo de hepatotoxicidad adicional)",
+        "Diabetes mellitus insulinodependiente (enmascaramiento de hipoglucemia)",
+        "Enfermedad vascular periférica grave / Fenómeno de Raynaud",
+        "Uso concomitante de otros bloqueadores nodales AV (digoxina, diltiazem, verapamilo oral)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamilo EV / Diltiazem EV",
+          "mechanism": "Doble inhibición nodal AV con acción IV simultánea — dromotrópico y cronotrópico negativos aditivos",
+          "consequence": "Bloqueo AV completo, asistolia, colapso hemodinámico",
+          "management": "Absolutamente contraindicado administrar ambos por vía IV. Precaución también en la transición de verapamilo/diltiazem oral a labetalol IV."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efecto cronotrópico y dromotrópico negativo aditivo en nódulo AV",
+          "consequence": "Bradicardia grave y bloqueo AV de alto grado",
+          "management": "Monitorizar ECG y nivel sérico de digoxina (objetivo 0,5–0,9 ng/mL). Titular labetalol en dosis mínimas eficaces."
+        },
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Bradicardia y bloqueo AV aditivos; vasodilatación periférica adicional de amiodarona IV",
+          "consequence": "Bradicardia grave, bloqueo AV, colapso hemodinámico",
+          "management": "Monitorizar ECG y PA continuamente. Titular labetalol en dosis mínimas eficaces."
+        },
+        {
+          "drug": "Anestésicos generales (propofol, halogenados, ketamina)",
+          "mechanism": "Depresión miocárdica y vasodilatación periférica aditivas; potenciación del bloqueo α con hipotensión profunda",
+          "consequence": "Hipotensión intraoperatoria grave y bradicardia",
+          "management": "Informar al equipo de anestesia sobre uso de labetalol. Monitorización hemodinámica invasiva en cirugías de alto riesgo. No suspender bruscamente en preoperatorio."
+        },
+        {
+          "drug": "Insulina / sulfonilureas",
+          "mechanism": "Enmascaramiento de taquicardia refleja y temblor de hipoglucemia por bloqueo β1/β2",
+          "consequence": "Hipoglucemia grave no reconocida",
+          "management": "Monitorizar glucemia frecuentemente. Orientar al paciente que la taquicardia como signo de alerta puede estar ausente."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "Otros antihipertensivos / diuréticos",
+          "mechanism": "Hipotensión aditiva — especialmente con vasodilatadores directos (hidralazina, nitroprusiato)",
+          "consequence": "Hipotensión excesiva e inestabilidad hemodinámica",
+          "management": "Monitorizar PA continuamente. Titular escalonadamente al asociar vasodilatadores."
+        },
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, indometacina)",
+          "mechanism": "Inhibición de prostaglandinas vasodilatadoras renales, antagonizando el efecto antihipertensivo",
+          "consequence": "Reducción modesta del control tensional",
+          "management": "Preferir paracetamol. Monitorizar PA. Especialmente importante en embarazadas (AINEs contraindicados después de semana 20."
+        },
+        {
+          "drug": "Cimetidina",
+          "mechanism": "Inhibición del metabolismo hepático de labetalol (reducción del efecto de primer paso)",
+          "consequence": "Aumento de la biodisponibilidad y exposición al labetalol",
+          "management": "Monitorizar PA y FC. Considerar reducción de dosis de labetalol si cimetidina es necesaria."
+        }
+      ]
+    },
+    "infusionProtocol": {
+      "route": "IV bolo o infusión continua (bomba de infusión obligatoria para infusión continua)",
+      "bolus": "Bolo IV lento: 20 mg en 2 minutos. Repetir 40–80 mg cada 10 min según PA. Dosis total máxima por bolo: 300 mg. Monitorizar PA y FC antes de cada bolo adicional.",
+      "infusion": "Infusión continua: 0,5–2 mg/min titulada según objetivo tensional. Diluir en SF 0,9% o SG 5% para concentración de 1 mg/mL. Monitorización de PA continua obligatoria.",
+      "max": "Bolos fraccionados: 300 mg total. Infusión: sin dosis máxima absoluta definida — titular por respuesta y tolerancia hemodinámica.",
+      "monitoring": "PA continua (preferiblemente invasiva en pacientes críticos), FC, ECG, estado neurológico, diuresis, perfusión periférica y, en embarazadas, bienestar fetal."
+    },
+    "monitoring": {
+      "baseline": [
+        "Presión arterial (PA)",
+        "Frecuencia cardíaca y ECG basal",
+        "Función hepática (AST/ALT) — metabolismo hepático + riesgo de hepatotoxicidad",
+        "Antecedentes de asma/EPOC/broncoespasmo (bloqueo β2)",
+        "Glucemia en diabéticos insulinodependientes",
+        "Evaluación obstétrica basal (PA materna, bienestar fetal, cardiotocografía) cuando embarazada"
+      ],
+      "followUp": [
+        "PA seriada o continua — evitar caídas > 25% de la PAM en 1h (riesgo de isquemia)",
+        "FC: no reducir por debajo de 55–60 lpm para evitar bajo gasto",
+        "Broncoespasmo (auscultación pulmonar con cada dosis en pacientes con EPOC/historial)",
+        "Función hepática (AST/ALT) en uso oral prolongado (> 4 semanas) o si síntomas (ictericia, náuseas, fatiga)",
+        "Diuresis y signos de hipoperfusión renal",
+        "Bienestar fetal (cardiotocografía, auscultación fetal) cuando embarazada durante uso IV",
+        "Signos de hipotensión ortostática al iniciar terapia VO ambulatoria"
+      ],
+      "icc": [
+        "Labetalol NO está indicado para tratamiento de ICC crónica con FE reducida. En ICC descompensada está CONTRAINDICADO. Usar solo para control hipertensivo de emergencia en paciente con ICC compensada y monitorización invasiva disponible.",
+        "En pacientes con ICC compensada e hipertensión: preferir betabloqueantes con evidencia en ICC (carvedilol, bisoprolol, metoprolol succinato) para terapia crónica.",
+        "Gasto cardíaco y presión de llenado ventricular en ICC grave con labetalol IV."
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave (FC < 40 lpm)",
+        "Hipotensión grave (PAS < 70 mmHg) — especialmente por vasodilatación α1",
+        "Bloqueo AV de alto grado",
+        "Broncoespasmo (bloqueo β2)",
+        "Shock cardiogénico",
+        "Hipotensión ortostática grave",
+        "Hipoglucemia en diabéticos (enmascaramiento de síntomas adrenérgicos)"
+      ],
+      "management": [
+        "1. Posición supina — elevar miembros inferiores para combatir vasodilatación α1 (la bradicardia paradójicamente empeora en posición Trendelenburg — evaluar individualmente)",
+        "2. Fluidos IV en bolo para hipotensión (250–500 mL SF 0,9% según respuesta y tolerancia)",
+        "3. Atropina 0,5–1 mg IV para bradicardia sintomática; repetir según necesidad (máx 3 mg)",
+        "4. Glucagón 5–10 mg IV bolo → infusión 1–5 mg/h — antídoto específico del betabloqueante",
+        "5. Norepinefrina IV para hipotensión refractaria — preferir α1 puro en lugar de epinefrina (riesgo de hipertensión paradójica por bloqueo β2 no opuesto es MENOR con labetalol que con propranolol, pero precaución)",
+        "6. Emulsión lipídica IV 20% — eficacia MODERADA a BAJA (lipofilia moderada, Vd alto ~9,4 L/kg); intentar en colapso refractario",
+        "7. Marcapasos transcutáneo o transvenoso en BAV refractario",
+        "8. ECMO en colapso circulatorio refractario"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "Metabolismo predominantemente hepático — sin ajuste renal formal obligatorio. En ERC avanzada o anuria: monitorizar hipotensión y bradicardia más rigurosamente. Fármaco no eliminado por hemodiálisis (alto Vd ~9,4 L/kg).",
+      "hepaticImpairment": "PRECAUCIÓN en hepatopatía — metabolismo hepático extenso por glucuronidación. En Child-Pugh B/C: biodisponibilidad aumentada, vida media prolongada y riesgo de hepatotoxicidad aditiva. Iniciar con dosis menores y monitorizar transaminasas.",
+      "pregnancy": "Embarazo: UNA DE LAS PRINCIPALES OPCIONES para hipertensión grave y preeclampsia grave. Ampliamente usado por obstetras. ACOG/ISSHP 2024: labetalol IV es primera línea para hipertensión grave en embarazo junto con hidralazina IV y nifedipina VO. Monitorizar bradicardia fetal, hipoglucemia neonatal y restricción del crecimiento. Compatible con lactancia.",
+      "lactation": "Lactancia: generalmente compatible con lactancia. Labetalol se excreta en leche en bajas concentraciones. Monitorizar lactante por bradicardia, somnolencia y mala alimentación.",
+      "geriatrics": "Anciano: mayor riesgo de hipotensión ortostática (bloqueo α1 + vasodilatación), caídas, bradicardia e interacciones medicamentosas. Iniciar con dosis bajas (100 mg VO cada 12h) y titular lentamente. Monitorizar PA en diferentes posiciones.",
+      "obesity": "Obesidad: usar dosis basada en peso real para uso IV. Para uso oral, titular según respuesta tensional. El alto volumen de distribución (~9,4 L/kg) puede ser relevante en obesos."
+    },
+    "hepaticDose": {
+      "required": true,
+      "message": "Metabolismo hepático extenso por glucuronidación. En hepatopatía moderada (Child-Pugh B): reducir dosis ~30–50% y monitorizar. En hepatopatía grave (Child-Pugh C): evitar o usar dosis muy reducidas con monitorización rigurosa de transaminasas. Hepatotoxicidad idiosincrática rara documentada — suspender si AST/ALT > 3× LSN."
+    },
+    "patientEducation": [
+      "Levantarse lentamente de la cama o silla — labetalol puede causar mareo al cambiar de posición (hipotensión ortostática por bloqueo α1).",
+      "Nunca interrumpir bruscamente sin indicación médica — riesgo de hipertensión y angina de rebote.",
+      "Comunicar inmediatamente al médico: falta de aire, sibilancias, latidos muy lentos, desmayo, ictericia (coloración amarillenta de piel/ojos), náuseas persistentes o dolor abdominal — pueden indicar broncoespasmo o hepatotoxicidad.",
+      "En embarazo: mantener seguimiento obstétrico regular y monitoreo de presión arterial según indicación del equipo.",
+      "En diabetes: monitorizar glucemia con mayor frecuencia — los síntomas de hipoglucemia (taquicardia, temblor) pueden estar enmascarados."
+    ],
+    "clinicalPearls": [
+      "Único antihipertensivo IV de uso obstétrico ampliamente validado: ACOG 2024 e ISSHP listan labetalol IV como primera línea para hipertensión grave en embarazo (junto con hidralazina IV y nifedipina VO). Especialmente útil porque no causa taquicardia refleja materna.",
+      "Ratio α:β depende de la vía: VO = 1:3 (predomina betabloqueo); IV = 1:7 (bloqueo α1 más pronunciado → mayor vasodilatación y caída más rápida de PA). Esta diferencia explica la utilidad de la vía IV en emergencias.",
+      "Hepatotoxicidad idiosincrática: rara pero documentada — puede ocurrir incluso con dosis terapéuticas. Monitorizar transaminasas en uso prolongado (> 4 semanas) o si síntomas digestivos.",
+      "NO usar en asma — el bloqueo β2 es absolutamente inaceptable en asma activa. Sustituir por hidralazina IV + nifedipina VO en embarazo, o nicardipina/nitroprusiato en emergencia hipertensiva general.",
+      "Disección de aorta: labetalol IV es alternativa al esmolol cuando no está disponible — el doble bloqueo α+β reduce FC y PA simultáneamente, ideales en esta emergencia. Meta: FC < 60 lpm y PAS 100–120 mmHg."
+    ],
+    "guidelineRecommendations": [
+      "ACOG Practice Bulletin 2024 e ISSHP 2022: labetalol IV es primera línea para control agudo de hipertensión grave (PA ≥ 160/110 mmHg) en embarazo — dosis inicial 20 mg IV, repetir 40–80 mg cada 10–20 min.",
+      "ESC Hypertension 2023 y AHA/ACC 2023: labetalol es opción válida para emergencias hipertensivas con o sin afectación de órgano diana, incluyendo encefalopatía hipertensiva y crisis adrenérgica.",
+      "ESC Aortic Disease 2024: betabloqueante IV (esmolol preferido, labetalol alternativa) — primera línea para control de FC y PA en disección aguda de aorta tipo A y B. Objetivo: FC < 60 lpm y PAS 100–120 mmHg."
+    ],
+    "incompatibilities": "EV: compatible con SF 0,9% y SG 5% (concentración recomendada 1 mg/mL). Incompatible con bicarbonato de sodio (precipitación), furosemida en alta concentración y soluciones alcalinas. No administrar en la misma línea que heparina no fraccionada en alta concentración.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálisis peritoneal: eliminación mínima de labetalol (alto Vd ~9,4 L/kg + unión proteica ~50%). Sin impacto en el esquema de dosis."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHDF: labetalol no se elimina significativamente por TRRC por el alto Vd y moderada unión proteica. Usar dosis habitual con monitorización hemodinámica en UCI."
+      }
+    },
+    "prescriptionErrors": [
+      "Usar en pacientes asmáticos — el bloqueo β2 puede desencadenar broncoespasmo fatal. Contraindicación absoluta en asma activa. Alternativas obstétricas: hidralazina IV o nifedipina VO.",
+      "Reducir PA muy rápidamente en emergencias hipertensivas — caída > 25% de la PAM en 1h puede causar isquemia cerebral, coronaria, renal o uteroplacentaria. Meta: reducción gradual y controlada.",
+      "No monitorizar función hepática en uso oral prolongado — hepatotoxicidad idiosincrática rara pero real. Solicitar AST/ALT antes de iniciar y periódicamente.",
+      "Usar en ICC descompensada — el betabloqueo reduce gasto cardíaco en pacientes ya en bajo gasto. CONTRAINDICADO en ICC agudamente descompensada.",
+      "Administrar bolo IV rápido (< 2 minutos) — puede causar hipotensión y bradicardia graves. Siempre bolo lento en 2 minutos con monitorización continua.",
+      "Suspender bruscamente en uso oral crónico — riesgo de hipertensión de rebote y crisis anginosa. Reducir gradualmente en 1–2 semanas."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Labetalol es metabolizado predominantemente por el hígado. Sin ajuste renal formal necesario para ClCr ≥ 10 mL/min.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "100–400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "20–80 mg bólus / 0,5–2 mg/min",
+          "intervalo": "Infusão ou bólus conforme PA",
+          "doseMaxima": "300 mg IV total (bólus)",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Dosis e intervalo habituales. Sin ajuste renal necesario."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "100–400 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2400 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "20–80 mg bólus / 0,5–2 mg/min",
+          "intervalo": "Infusão ou bólus conforme PA",
+          "doseMaxima": "300 mg IV total",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Sin ajuste renal necesario. Monitorizar tolerancia hemodinámica en pacientes frágiles."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "100–200 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "800 mg/dia (cautela)",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "20 mg bólus / 0,5–1 mg/min",
+          "intervalo": "Com cautela conforme PA e FC",
+          "doseMaxima": "Titular criteriosamente",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "ERC grave: sin ajuste renal formal, pero usar dosis conservadoras y monitorizar hemodinámicamente de forma rigurosa."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h (avaliar individualmente)",
+          "doseMaxima": "Titular conforme resposta",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ERC muy grave/anuria: metabolismo hepático predominante — sin ajuste renal obligatorio. Monitorización rigurosa de PA y FC."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "100 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "Individualizar",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Labetalol no se elimina significativamente por hemodiálisis. No se requiere suplementación post-HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "bronchospasmRisk": true,
+      "pregnancyCaution": false,
+      "emergencyDrug": true,
+      "warning": "Fármaco de elección en emergencia hipertensiva, ACV, disección de aorta y obstetricia. Exige monitorización rigurosa de PA y FC. Contraindicado en asma grave, broncoespasmo activo e IC descompensada."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ACOG Practice Bulletin 2024",
+        "ESC Hypertension Guidelines 2023",
+        "AHA/ACC Hypertension Guidelines 2023",
+        "ESC Aortic Disease Guidelines 2024",
+        "ISSHP Hypertension in Pregnancy Guidance 2022",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Katzung Farmacologia Básica e Clínica 15ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA label",
+        "EMA label"
+      ],
+      "note": "Bloqueante α1+β1/β2 con ratio α:β = 1:3 VO / 1:7 IV. Sin taquicardia refleja. Preferido en emergencia hipertensiva neurológica, disección de aorta y embarazo (ACOG/ISSHP 1ª línea). Metabolismo hepático por glucuronidación (UGT) — sin CYP450; hepatotoxicidad idiosincrática rara documentada. No eliminado por HD (Vd ~9,4 L/kg). CONTRAINDICADO en asma (bloqueo β2). Auditoría V2 completada 2026-06."
+    }
+  },
+  "name": {
+    "pt": "Labetalol",
+    "es": "Labetalol"
+  },
+  "keywords": [
+    "labetalol",
+    "trandate",
+    "labetalol generico",
+    "betabloqueador nao seletivo com bloqueio alfa-1 (α/β = 1:3 vo, 1:7 iv)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

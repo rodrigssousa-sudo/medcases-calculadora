@@ -1,0 +1,319 @@
+{
+  "id": "sacubitrilvalsartana",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(99,102,241,0.13)",
+  "colorTxt": "#3730A3",
+  "pt": {
+    "name": "Sacubitril/Valsartana (Entresto®)",
+    "class": "ARNI — Inibidor da Neprilisina + Bloqueador do Receptor de Angiotensina II (Sacubitril/Valsartana)",
+    "commercialNames": {
+      "br": [
+        "Entresto"
+      ],
+      "ar": [
+        "Entresto"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 24/26 mg · 49/51 mg · 97/103 mg (sacubitril/valsartana)"
+    ],
+    "dose": {
+      "adultoPadrao": "Iniciar com 49/51 mg VO 12/12h se PA estável, função renal preservada e sem baixa dose prévia de IECA/BRA. Titular até 97/103 mg 12/12h a cada 2–4 semanas.",
+      "adultoGrave": "Iniciar com 24/26 mg VO 12/12h se: PAS < 110 mmHg, ClCr < 30 mL/min, hepatopatia moderada, idoso frágil ou em uso de baixa dose de IECA/BRA. Titular conforme tolerância.",
+      "pediatricaPadrao": "Aprovado FDA em pediatria ≥ 1 ano com IC sistólica. Doses pediátricas baseadas em peso — consultar protocolo específico.",
+      "pediatricaGrave": "Crianças < 40 kg: 1,6 mg/kg 12/12h (sacubitril); ≥ 40 kg: doses adultas menores. Monitorar PA, creatinina e K⁺ rigorosamente.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Pediatria ≥ 1 ano: 1,6 mg/kg/dose 12/12h (sacubitril) — FDA-aprovado em IC sistólica",
+      "grave": "Adultos: alvo 97/103 mg 12/12h (dose máxima tolerada)",
+      "meningite": null,
+      "doseMaxima": "Adultos: 97/103 mg 12/12h | Pediatria: conforme peso (protocolo específico)"
+    },
+    "therapeuticRange": "ICFEr: dose-alvo 97/103 mg 12/12h (PARADIGM-HF). Titular a cada 2–4 semanas. Monitorar PA, K⁺, creatinina e TFG após cada ajuste. Reduzir se PAS < 90–100 mmHg ou K⁺ > 5,5 mEq/L.",
+    "dilution": "Apenas formulação oral. Sacubitril é pró-fármaco convertido em LBQ657 (ativo inibidor da neprilisina). Sem apresentação EV.",
+    "speed": "VO: tomar 12/12h (de manhã e à noite), com ou sem alimento.",
+    "commonAdverseEffects": [
+      "Hipotensão arterial (principal limitante)",
+      "Tontura",
+      "Hipercalemia",
+      "Elevação de creatinina",
+      "Tosse (menos frequente que IECAs)"
+    ],
+    "dangerousAdverseEffects": [
+      "ANGIOEDEMA — risco aumentado se histórico de angioedema por IECA (contraindicação absoluta se prévia). Potencializado pela inibição da neprilisina (que degrada bradicinina)",
+      "Hipercalemia grave (K⁺ > 6 mEq/L)",
+      "Insuficiência Renal Aguda",
+      "Hipotensão grave — especialmente na 1ª titulação"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "⚠️ WASHOUT OBRIGATÓRIO DE 36 HORAS: NUNCA iniciar sacubitril/valsartana dentro de 36 horas da última dose de qualquer IECA. O risco de angioedema grave é substancialmente aumentado pela combinação (inibição dupla de degradação de bradicinina).",
+      "PARADIGM-HF: sacubitril/valsartana reduziu mortalidade CV em 20% e hospitalizações por IC em 21% vs. enalapril em ICFEr (McMurray JJ, NEJM 2014). Evidência classe I, nível A nas diretrizes ESC 2021 e AHA/ACC/HFSA 2022.",
+      "Angioedema prévio por IECA ou BRA: CONTRAINDICAÇÃO ABSOLUTA — a inibição da neprilisina potencializa o acúmulo de bradicinina, amplificando dramaticamente o risco.",
+      "Substituição de IECA: suspender IECA → aguardar 36h → iniciar sacubitril/valsartana com dose baixa. Substituição de BRA: pode ser feita diretamente (sem washout obrigatório)."
+    ],
+    "ref": "FDA Entresto (sacubitril/valsartan) label 2023 · PARADIGM-HF Trial — McMurray JJ et al. (NEJM 2014) · ESC Heart Failure Guidelines 2021 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · Lexicomp 2026",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não requer ajuste renal para ClCr ≥ 30 mL/min. Iniciar com 49/51 mg ou 24/26 mg 12/12h conforme status clínico.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "49/51 mg → 97/103 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "97/103 mg 12/12h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "1,6 mg/kg (sacubitril)",
+          "intervalo": "12/12h",
+          "doseMaxima": "Conforme peso",
+          "unidade": "mg/kg"
+        },
+        "obs": "Iniciar 49/51 mg 12/12h se PA e função renal estáveis. Titular para 97/103 mg 12/12h a cada 2–4 semanas conforme tolerância."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "24/26 mg → 49/51 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "97/103 mg 12/12h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "1,6 mg/kg (sacubitril)",
+          "intervalo": "12/12h",
+          "doseMaxima": "Conforme peso",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR moderada: iniciar com 24/26 mg 12/12h e titular com cautela. Monitorar K⁺ e creatinina rigorosamente."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "24/26 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "49/51 mg 12/12h (com cautela)",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar com 24/26 mg 12/12h obrigatoriamente. Titular muito lentamente se tolerado. Alto risco de hipercalemia e hipotensão."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "24/26 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "24/26 mg 12/12h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muito grave/anúria: dados limitados. Manter 24/26 mg 12/12h com monitoração intensiva. Avaliar risco-benefício cuidadosamente. Considerar suspensão se K⁺ > 5,5 ou creatinina em ascensão."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "24/26 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "24/26 mg 12/12h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálise: dados muito limitados. LBQ657 (metabólito ativo do sacubitril) pode ser parcialmente removido por HD. Uso com extrema cautela — avaliar risco-benefício individualmente."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "angioedemaRisk": true,
+      "pregnancyCaution": true,
+      "warning": "ARNI de referência em ICFEr. NUNCA combinar com IECA — washout mínimo de 36h obrigatório. Angioedema prévio por IECA/BRA = CONTRAINDICAÇÃO ABSOLUTA. Monitorar PA, K⁺ e creatinina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Entresto (sacubitril/valsartan) label 2023",
+        "PARADIGM-HF Trial — McMurray JJ et al. (NEJM 2014)",
+        "ESC Heart Failure Guidelines 2021",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "PIONEER-HF Trial (NEJM 2019)",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "ARNI — classe farmacológica distinta (neprilisina + BRA). PARADIGM-HF: -20% mortalidade CV vs. enalapril em ICFEr. Washout 36h após IECA é crítico. Aprovado FDA em pediatria ≥ 1 ano. Angioedema prévio = CI absoluta."
+    }
+  },
+  "es": {
+    "name": "Sacubitril/Valsartán (Entresto®)",
+    "class": "ARNI — Inhibidor de Neprilisina + Bloqueante del Receptor de Angiotensina II (Sacubitril/Valsartán)",
+    "commercialNames": {
+      "br": [
+        "Entresto"
+      ],
+      "ar": [
+        "Entresto"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 24/26 mg · 49/51 mg · 97/103 mg (sacubitril/valsartán)"
+    ],
+    "dose": {
+      "adultoPadrao": "Iniciar con 49/51 mg VO cada 12h si PA estable, función renal preservada y sin baja dosis previa de IECA/ARA-II. Titular hasta 97/103 mg cada 12h cada 2–4 semanas.",
+      "adultoGrave": "Iniciar con 24/26 mg VO cada 12h si: PAS < 110 mmHg, ClCr < 30 mL/min, hepatopatía moderada, anciano frágil o en uso de baja dosis de IECA/ARA-II. Titular según tolerancia.",
+      "pediatricaPadrao": "Aprobado FDA en pediatría ≥ 1 año con IC sistólica. Dosis pediátricas basadas en peso — consultar protocolo específico.",
+      "pediatricaGrave": "Niños < 40 kg: 1,6 mg/kg cada 12h (sacubitril); ≥ 40 kg: dosis adultas menores. Monitorizar PA, creatinina y K⁺ rigurosamente.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "Pediatría ≥ 1 año: 1,6 mg/kg/dosis cada 12h (sacubitril) — FDA-aprobado en IC sistólica",
+      "grave": "Adultos: objetivo 97/103 mg cada 12h (dosis máxima tolerada)",
+      "meningite": null,
+      "doseMaxima": "Adultos: 97/103 mg cada 12h | Pediatría: según peso (protocolo específico)"
+    },
+    "therapeuticRange": "ICFEr: dosis objetivo 97/103 mg cada 12h (PARADIGM-HF). Titular cada 2–4 semanas. Monitorizar PA, K⁺, creatinina y TFG tras cada ajuste. Reducir si PAS < 90–100 mmHg o K⁺ > 5,5 mEq/L.",
+    "dilution": "Solo formulación oral. Sacubitril es profármaco convertido en LBQ657 (activo inhibidor de neprilisina). Sin presentación EV.",
+    "speed": "VO: tomar cada 12h (mañana y noche), con o sin alimento.",
+    "commonAdverseEffects": [
+      "Hipotensión arterial (principal limitante)",
+      "Mareos",
+      "Hiperpotasemia",
+      "Elevación de creatinina",
+      "Tos (menos frecuente que IECAs)"
+    ],
+    "dangerousAdverseEffects": [
+      "ANGIOEDEMA — riesgo aumentado si antecedente de angioedema por IECA (contraindicación absoluta si previo). Potenciado por inhibición de neprilisina (que degrada bradiquinina)",
+      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
+      "Insuficiencia Renal Aguda",
+      "Hipotensión grave — especialmente en la 1ª titulación"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "⚠️ WASHOUT OBLIGATORIO DE 36 HORAS: NUNCA iniciar sacubitril/valsartán dentro de 36 horas de la última dosis de cualquier IECA. El riesgo de angioedema grave aumenta sustancialmente por la combinación (inhibición doble de degradación de bradiquinina).",
+      "PARADIGM-HF: sacubitril/valsartán redujo mortalidad CV en 20% y hospitalizaciones por IC en 21% vs. enalapril en ICFEr (McMurray JJ, NEJM 2014). Evidencia clase I, nivel A en guías ESC 2021 y AHA/ACC/HFSA 2022.",
+      "Angioedema previo por IECA o ARA-II: CONTRAINDICACIÓN ABSOLUTA — la inhibición de neprilisina potencia la acumulación de bradiquinina, amplificando dramáticamente el riesgo.",
+      "Sustitución de IECA: suspender IECA → esperar 36h → iniciar sacubitril/valsartán con dosis baja. Sustitución de ARA-II: puede hacerse directamente (sin washout obligatorio)."
+    ],
+    "ref": "FDA Entresto (sacubitril/valsartan) label 2023 · PARADIGM-HF Trial — McMurray JJ et al. (NEJM 2014) · ESC Heart Failure Guidelines 2021 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · Lexicomp 2026",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal para ClCr ≥ 30 mL/min. Iniciar con 49/51 mg o 24/26 mg cada 12h según status clínico.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "49/51 mg → 97/103 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "97/103 mg 12/12h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "1,6 mg/kg (sacubitril)",
+          "intervalo": "12/12h",
+          "doseMaxima": "Conforme peso",
+          "unidade": "mg/kg"
+        },
+        "obs": "Iniciar 49/51 mg cada 12h si PA y función renal estables. Titular hasta 97/103 mg cada 12h cada 2–4 semanas según tolerancia."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "24/26 mg → 49/51 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "97/103 mg 12/12h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "1,6 mg/kg (sacubitril)",
+          "intervalo": "12/12h",
+          "doseMaxima": "Conforme peso",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR moderada: iniciar con 24/26 mg cada 12h y titular con precaución. Monitorizar K⁺ y creatinina rigurosamente."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "24/26 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "49/51 mg 12/12h (com cautela)",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar con 24/26 mg cada 12h obligatoriamente. Titular muy lentamente si tolerado. Alto riesgo de hiperpotasemia e hipotensión."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "24/26 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "24/26 mg 12/12h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muy grave/anuria: datos limitados. Mantener 24/26 mg cada 12h con monitorización intensiva. Evaluar riesgo-beneficio cuidadosamente. Considerar suspensión si K⁺ > 5,5 o creatinina en ascenso."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "24/26 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "24/26 mg 12/12h",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálisis: datos muy limitados. LBQ657 (metabolito activo del sacubitril) puede ser parcialmente removido por HD. Uso con extrema precaución — evaluar riesgo-beneficio individualmente."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "angioedemaRisk": true,
+      "pregnancyCaution": true,
+      "warning": "ARNI de referencia en ICFEr. NUNCA combinar con IECA — washout mínimo de 36h obligatorio. Angioedema previo por IECA/ARA-II = CONTRAINDICACIÓN ABSOLUTA. Monitorizar PA, K⁺ y creatinina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA Entresto (sacubitril/valsartan) label 2023",
+        "PARADIGM-HF Trial — McMurray JJ et al. (NEJM 2014)",
+        "ESC Heart Failure Guidelines 2021",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "PIONEER-HF Trial (NEJM 2019)",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "ARNI — clase farmacológica distinta (neprilisina + ARA-II). PARADIGM-HF: -20% mortalidad CV vs. enalapril en ICFEr. Washout 36h tras IECA es crítico. Aprobado FDA en pediatría ≥ 1 año. Angioedema previo = CI absoluta."
+    }
+  },
+  "name": {
+    "pt": "Sacubitril + Valsartana",
+    "es": "Sacubitril + Valsartán"
+  },
+  "keywords": [
+    "sacubitrilvalsartana",
+    "sacubitril + valsartana",
+    "sacubitril + valsartan",
+    "entresto",
+    "arni — inibidor da neprilisina + bloqueador do receptor de angiotensina ii (sacubitril/valsartana)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

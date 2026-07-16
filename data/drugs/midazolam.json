@@ -1,0 +1,267 @@
+{
+  "id": "midazolam",
+  "category": "sedacao_neurologia",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Midazolam"
+  },
+  "es": {
+    "name": "Midazolam"
+  },
+  "name": {
+    "pt": "Midazolam",
+    "es": "Midazolam"
+  },
+  "keywords": [
+    "midazolam"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "legacy-v1",
+  "sourceModule": "sedacao.js",
+  "clinicalCollision": {
+    "policySchema": "clinical-collision-policy-v1",
+    "policyStatus": "proposed",
+    "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwner": "sedacao.js",
+    "decisionBasis": "primary_procedural_and_critical_sedation_use",
+    "exportPolicy": "canonical_base_with_context_variants",
+    "automaticFieldMerge": false,
+    "discardSecondaryRecord": false
+  },
+  "clinicalContextVariants": [
+    {
+      "context": "psychiatry_context_variant",
+      "sourceModule": "psiquiatria.js",
+      "record": {
+        "id": "midazolam",
+        "category": "ansiolitico",
+        "icon": "💊",
+        "color": null,
+        "colorTxt": null,
+        "pt": {
+          "name": "Midazolam",
+          "class": "Benzodiazepínico de curta ação",
+          "category": "ansiolitico",
+          "commercialNames": {
+            "br": [
+              "Dormonid",
+              "Dormire",
+              "Midazolam Cristália",
+              "Midazolam União Química"
+            ],
+            "ar": [
+              "Dormicum",
+              "Midazolam Richmond",
+              "Midazolam Klonal",
+              "Midazolam Denver Farma"
+            ]
+          },
+          "presentation": [
+            "Ampola 5 mg/mL",
+            "Ampola 1 mg/mL",
+            "Comprimido 7,5 mg",
+            "Comprimido 15 mg",
+            "Solução oral 2 mg/mL"
+          ],
+          "dose": {
+            "adulto": "Sedação procedural: 1–2 mg EV lento, repetir pequenas doses conforme resposta.",
+            "dosePesoSedacao": "Sedação EV por peso: 1.4–3.5 mg por dose.",
+            "convulsao": "Convulsão/estado epiléptico: aproximadamente 14.0 mg IM/IN conforme protocolo.",
+            "maxDose": "Dose máxima depende da indicação, via, idade, comorbidades e nível de monitorização."
+          },
+          "doseKg": {
+            "standard": "Sedação: 0,02–0,05 mg/kg EV lentamente.",
+            "severe": "Convulsão: 0,2 mg/kg IM/IN conforme protocolo local.",
+            "maxDose": "Individualizar conforme protocolo e monitorização."
+          },
+          "indications": [
+            "Sedação procedural",
+            "Sedação em UTI",
+            "Indução anestésica",
+            "Pré-medicação anestésica",
+            "Estado de mal epiléptico",
+            "Convulsões agudas",
+            "Agitação grave em contexto monitorizado",
+            "Amnésia anterógrada para procedimentos"
+          ],
+          "renalAdjustment": "Sem ajuste renal habitual em dose única.",
+          "hepaticAdjustment": "Sem ajuste hepático habitual em dose única.",
+          "mechanism": "Potencializa o GABA no receptor GABA-A, produzindo sedação, ansiólise, anticonvulsão, relaxamento muscular e amnésia.",
+          "onset": "EV: 1–5 min; IM: 5–15 min; intranasal: 5–10 min; VO: 15–30 min.",
+          "halfLife": "Vida média aproximada: 1,5–3 horas, podendo prolongar em idosos, obesidade, hepatopatia ou infusão contínua.",
+          "commonAdverseEffects": [
+            "Sonolência",
+            "Amnésia anterógrada",
+            "Tontura",
+            "Hipotensão",
+            "Ataxia",
+            "Náuseas"
+          ],
+          "dangerousAdverseEffects": [
+            "Depressão respiratória",
+            "Apneia",
+            "Hipotensão grave",
+            "Parada cardiorrespiratória em pacientes vulneráveis ou associação com opioides",
+            "Sedação prolongada",
+            "Reação paradoxal com agitação"
+          ],
+          "risksByPatient": [],
+          "contraindications": [
+            "Hipersensibilidade a benzodiazepínicos",
+            "Insuficiência respiratória grave sem suporte ventilatório",
+            "Apneia do sono grave sem monitorização",
+            "Miastenia gravis",
+            "Choque ou instabilidade hemodinâmica sem suporte adequado"
+          ],
+          "interactions": [
+            "Opioides",
+            "Álcool",
+            "Propofol e outros anestésicos",
+            "Barbitúricos",
+            "Inibidores fortes de CYP3A4 como cetoconazol, claritromicina e ritonavir",
+            "Antipsicóticos e anti-histamínicos sedativos"
+          ],
+          "alerts": [
+            "Usar EV apenas com monitorização e suporte ventilatório disponível.",
+            "Alto risco de depressão respiratória com opioides.",
+            "Administrar lentamente por via EV.",
+            "Flumazenil pode reverter efeito, mas pode precipitar convulsões em dependentes ou intoxicação mista.",
+            "Evitar uso prolongado sem estratégia de desmame."
+          ],
+          "ref": [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Midazolam Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        },
+        "es": {
+          "name": "Midazolam",
+          "class": "Benzodiacepina de acción corta",
+          "category": "ansiolitico",
+          "commercialNames": {
+            "br": [
+              "Dormonid",
+              "Dormire",
+              "Midazolam Cristália",
+              "Midazolam União Química"
+            ],
+            "ar": [
+              "Dormicum",
+              "Midazolam Richmond",
+              "Midazolam Klonal",
+              "Midazolam Denver Farma"
+            ]
+          },
+          "presentation": [
+            "Ampolla 5 mg/mL",
+            "Ampolla 1 mg/mL",
+            "Comprimido 7,5 mg",
+            "Comprimido 15 mg",
+            "Solución oral 2 mg/mL"
+          ],
+          "dose": {
+            "adulto": "Sedación procedural: 1–2 mg IV lento, repetir pequeñas dosis según respuesta.",
+            "dosePesoSedacao": "Sedación IV por peso: 1.4–3.5 mg por dosis.",
+            "convulsao": "Convulsión/estado epiléptico: aproximadamente 14.0 mg IM/IN según protocolo.",
+            "maxDose": "La dosis máxima depende de indicación, vía, edad, comorbilidades y nivel de monitorización."
+          },
+          "doseKg": {
+            "standard": "Sedación: 0,02–0,05 mg/kg IV lentamente.",
+            "severe": "Convulsión: 0,2 mg/kg IM/IN según protocolo local.",
+            "maxDose": "Individualizar según protocolo y monitorización."
+          },
+          "indications": [
+            "Sedación procedural",
+            "Sedación en UCI",
+            "Inducción anestésica",
+            "Premedicación anestésica",
+            "Estado epiléptico",
+            "Convulsiones agudas",
+            "Agitación grave en contexto monitorizado",
+            "Amnesia anterógrada para procedimientos"
+          ],
+          "renalAdjustment": "Sin ajuste renal habitual en dosis única.",
+          "hepaticAdjustment": "Sin ajuste hepático habitual en dosis única.",
+          "mechanism": "Potencia el GABA en el receptor GABA-A, produciendo sedación, ansiólisis, anticonvulsión, relajación muscular y amnesia.",
+          "onset": "IV: 1–5 min; IM: 5–15 min; intranasal: 5–10 min; VO: 15–30 min.",
+          "halfLife": "Vida media aproximada: 1,5–3 horas, pudiendo prolongarse en adultos mayores, obesidad, hepatopatía o infusión continua.",
+          "commonAdverseEffects": [
+            "Somnolencia",
+            "Amnesia anterógrada",
+            "Mareos",
+            "Hipotensión",
+            "Ataxia",
+            "Náuseas"
+          ],
+          "dangerousAdverseEffects": [
+            "Depresión respiratoria",
+            "Apnea",
+            "Hipotensión grave",
+            "Paro cardiorrespiratorio en pacientes vulnerables o asociación con opioides",
+            "Sedación prolongada",
+            "Reacción paradójica con agitación"
+          ],
+          "risksByPatient": [],
+          "contraindications": [
+            "Hipersensibilidad a benzodiacepinas",
+            "Insuficiencia respiratoria grave sin soporte ventilatorio",
+            "Apnea del sueño grave sin monitorización",
+            "Miastenia gravis",
+            "Shock o inestabilidad hemodinámica sin soporte adecuado"
+          ],
+          "interactions": [
+            "Opioides",
+            "Alcohol",
+            "Propofol y otros anestésicos",
+            "Barbitúricos",
+            "Inhibidores fuertes de CYP3A4 como ketoconazol, claritromicina y ritonavir",
+            "Antipsicóticos y antihistamínicos sedantes"
+          ],
+          "alerts": [
+            "Usar IV solo con monitorización y soporte ventilatorio disponible.",
+            "Alto riesgo de depresión respiratoria con opioides.",
+            "Administrar lentamente por vía IV.",
+            "Flumazenil puede revertir el efecto, pero puede precipitar convulsiones en dependientes o intoxicación mixta.",
+            "Evitar uso prolongado sin estrategia de retirada."
+          ],
+          "ref": [
+            "Goodman & Gilman 14ª Ed.",
+            "Stahl's Essential Psychopharmacology",
+            "FDA/DailyMed Midazolam Prescribing Information",
+            "Lexicomp",
+            "Micromedex",
+            "UpToDate"
+          ]
+        },
+        "name": {
+          "pt": "Midazolam",
+          "es": "Midazolam"
+        },
+        "keywords": [
+          "midazolam",
+          "dormonid",
+          "dormire",
+          "midazolam cristalia",
+          "midazolam uniao quimica",
+          "dormicum",
+          "midazolam richmond",
+          "midazolam klonal",
+          "midazolam denver farma",
+          "benzodiazepinico de curta acao"
+        ],
+        "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+        "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+        "source": "medcases-calculadora",
+        "schema": "premium-v1",
+        "sourceModule": "psiquiatria.js"
+      }
+    }
+  ]
+}

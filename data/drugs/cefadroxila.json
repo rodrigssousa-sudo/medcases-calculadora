@@ -1,0 +1,298 @@
+{
+  "id": "cefadroxila",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(34,197,94,0.15)",
+  "colorTxt": "#22C55E",
+  "pt": {
+    "name": "Cefadroxila",
+    "class": "Cefalosporina de 1ª geração (oral)",
+    "commercialNames": {
+      "br": [
+        "Cefamox",
+        "Cefadroxila Genérica",
+        "Drafloxin"
+      ],
+      "ar": [
+        "Cefadroxilo Genérico",
+        "Duricef"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 500 mg",
+      "Suspensão oral: 250 mg/5 mL; 500 mg/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "500 mg–1 g VO 12/12h",
+      "pediatrica": "2000 mg VO 12/12h (30 mg/kg/dia dividido 12/12h)"
+    },
+    "doseKg": {
+      "pediatrica": "30 mg/kg/dia dividido 12/12h (máx 2 g/dia)"
+    },
+    "mechanism": "Liga-se às proteínas ligadoras de penicilina (PBPs), inibindo a síntese da parede celular bacteriana. Bactericida tempo-dependente.",
+    "onset": "Absorção oral boa — Tmáx 1–2 h; biodisponibilidade ~90%.",
+    "halfLife": "Meia-vida 1,1–2 h. Eliminação predominantemente renal (>90% inalterada na urina).",
+    "therapeuticRange": "Tempo acima da CIM (T>CIM) como parâmetro PK/PD. Uso oral exclusivo.",
+    "dilution": "Uso oral exclusivo.",
+    "speed": "Não aplicável (uso oral).",
+    "commonAdverseEffects": [
+      "Náuseas e vômitos",
+      "Diarreia",
+      "Dor abdominal",
+      "Rash cutâneo"
+    ],
+    "dangerousAdverseEffects": [
+      "Reação de hipersensibilidade grave (anafilaxia)",
+      "Colite pseudomembranosa por C. difficile",
+      "Nefrotoxicidade (raro)"
+    ],
+    "contraindications": [
+      "Hipersensibilidade a cefalosporinas ou penicilinas (reação cruzada ~1–2%)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Requer ajuste de dose em insuficiência renal (eliminação renal >90%).",
+      "Excelente opção oral para infecções de pele, tecidos moles e ITU não complicada."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual para infecções de pele e vias aéreas superiores."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reduzir frequência devido à eliminação renal predominante."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24–36h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "24–36h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obrigatório para evitar acúmulo."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "36–48h",
+          "doseMaxima": "500 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "36–48h",
+          "doseMaxima": "500 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar neurotoxicidade em insuficiência renal avançada."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "48/48h",
+          "doseMaxima": "500 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "500 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Cefadroxilo",
+    "class": "Cefalosporina de 1ª generación (oral)",
+    "commercialNames": {
+      "br": [
+        "Cefamox",
+        "Cefadroxila Genérica",
+        "Drafloxin"
+      ],
+      "ar": [
+        "Cefadroxilo Genérico",
+        "Duricef"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 500 mg",
+      "Suspensión oral: 250 mg/5 mL; 500 mg/5 mL"
+    ],
+    "dose": {
+      "adultoVO": "500 mg–1 g VO 12/12h",
+      "pediatrica": "2000 mg VO cada 12h (30 mg/kg/día dividido cada 12h)"
+    },
+    "doseKg": {
+      "pediatrica": "30 mg/kg/día dividido cada 12h (máx 2 g/día)"
+    },
+    "mechanism": "Se une a las proteínas ligadoras de penicilina (PBPs), inhibiendo la síntesis de la pared celular bacteriana. Bactericida tiempo-dependiente.",
+    "onset": "Absorción oral buena — Tmáx 1–2 h; biodisponibilidad ~90%.",
+    "halfLife": "Semivida 1,1–2 h. Eliminación predominantemente renal (>90% inalterada en orina).",
+    "therapeuticRange": "Tiempo sobre la CIM (T>CIM) como parámetro PK/PD. Uso oral exclusivo.",
+    "dilution": "Uso oral exclusivo.",
+    "speed": "No aplicable (uso oral).",
+    "commonAdverseEffects": [
+      "Náuseas y vómitos",
+      "Diarrea",
+      "Dolor abdominal",
+      "Erupción cutánea"
+    ],
+    "dangerousAdverseEffects": [
+      "Reacción de hipersensibilidad grave (anafilaxia)",
+      "Colitis seudomembranosa por C. difficile",
+      "Nefrotoxicidad (raro)"
+    ],
+    "contraindications": [
+      "Hipersensibilidad a cefalosporinas o penicilinas (reacción cruzada ~1–2%)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Requiere ajuste de dosis en insuficiencia renal (eliminación renal >90%).",
+      "Excelente opción oral para infecciones de piel, tejidos blandos e ITU no complicada."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg–1 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "30 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual para infecciones de piel y vías respiratorias superiores."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "1 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducir frecuencia debido a la eliminación renal predominante."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "24–36h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "24–36h",
+          "doseMaxima": "500 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obligatorio para evitar acumulación."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "36–48h",
+          "doseMaxima": "500 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "36–48h",
+          "doseMaxima": "500 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar neurotoxicidad en insuficiencia renal avanzada."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "48/48h",
+          "doseMaxima": "500 mg/dose",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "15 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "500 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Cefadroxila",
+    "es": "Cefadroxilo"
+  },
+  "keywords": [
+    "cefadroxila",
+    "cefadroxilo",
+    "cefamox",
+    "cefadroxila generica",
+    "drafloxin",
+    "cefadroxilo generico",
+    "duricef",
+    "cefalosporina de 1ª geracao (oral)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

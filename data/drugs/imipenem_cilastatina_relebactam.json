@@ -1,0 +1,249 @@
+{
+  "id": "imipenem_cilastatina_relebactam",
+  "category": "atb",
+  "icon": "🧬",
+  "color": "rgba(220,38,38,0.18)",
+  "colorTxt": "#991B1B",
+  "pt": {
+    "name": "Imipenem + Cilastatina + Relebactam",
+    "class": "Carbapenêmico + Inibidor de DHP + Inibidor de beta-lactamase (anti-KPC/MBL tipo A e C)",
+    "commercialNames": {
+      "br": [
+        "Recarbrio (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Recarbrio"
+      ]
+    },
+    "presentation": [
+      "Pó para solução injetável EV: 500 mg imipenem/500 mg cilastatina/250 mg relebactam por frasco"
+    ],
+    "dose": {
+      "adultoEV": "1,25 g EV 6/6h (infusão 30 min)"
+    },
+    "doseKg": null,
+    "indication": "Infecções por Pseudomonas aeruginosa e Enterobacterales resistentes a carbapenêmicos (KPC), pneumonia hospitalar/VAP, infecções intra-abdominais complicadas, ITU complicada. Não cobre NDM e OXA-48.",
+    "spectrum": "Pseudomonas aeruginosa (incluindo cepas imipenem-resistentes com mecanismo KPC ou AmpC), Klebsiella pneumoniae (KPC+), outros Enterobacterales. O relebactam inibe beta-lactamases Classe A (KPC) e Classe C (AmpC). NÃO cobre metalo-beta-lactamases (NDM, VIM, IMP) nem OXA-48 isolado.",
+    "contraindications": [
+      "Hipersensibilidade aos carbapenêmicos ou penicilinas",
+      "Histórico de convulsões (imipenem — risco aumentado)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Imipenem tem maior risco de convulsões que outros carbapenêmicos — monitorar em epilépticos ou com lesão do SNC.",
+      "NÃO cobre NDM nem OXA-48 isolado — realizar fenotipagem antes do uso empírico.",
+      "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Recarbrio / RESTORE-IMI trials / IDSA CRE/Pseudomonas Guidelines / Lexicomp",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,25 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "5 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "CrCl ≥90 mL/min: dose habitual. Imipenem 500 mg + cilastatina 500 mg + relebactam 250 mg EV 6/6h em infusão de 30 min. Uso guiado por cultura, antibiograma e infectologia. NÃO cobre NDM, VIM, IMP nem OXA-48 isolado — confirmar mecanismo de resistência (PCR/MALDI) antes do uso."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 30–89 mL/min → imipenem 400 mg + cilastatina 400 mg + relebactam 200 mg (1 g total) 6/6h. Manter intervalo 6/6h — parâmetro T>CIM crítico para relebactam. Monitorar convulsões e SNC diariamente em insuficiência renal. Monitorar função renal diária — piora de ClCr exige recalibração para faixa inferior."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "750 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "3 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 15–29 mL/min → imipenem 300 mg + cilastatina 300 mg + relebactam 150 mg (750 mg total) 6/6h. Risco aumentado de convulsões — monitorar SNC diariamente. Histórico de convulsão é contraindicação relativa."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl < 15 mL/min → imipenem 200 mg + cilastatina 200 mg + relebactam 100 mg (500 mg total) 6/6h. Risco muito elevado de convulsões — monitorar EEG se alteração neurológica. Avaliar alternativa (meropenem + vaborbactam ou ceftazidima + avibactam) se disponível."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: HD → imipenem 200 mg + cilastatina 200 mg + relebactam 100 mg (500 mg total) 6/6h. Administrar após hemodiálise nos dias de HD. Imipenem, cilastatina e relebactam são removidos pela HD — dose suplementar após sessão prolongada pode ser necessária para manter exposição terapêutica."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Imipenem tem MAIOR risco de convulsão que outros carbapenêmicos — monitorar convulsões, encefalopatia e mioclonias diariamente em qualquer grau de insuficiência renal. Risco amplificado sem ajuste renal adequado. Confirmar KPC ou AmpC por PCR/MALDI antes do uso — não cobre NDM nem OXA-48. Uso guiado por infectologia obrigatório."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Recarbrio (imipenem-cilastatin-relebactam) 2020",
+        "EMA label Recarbrio 2020",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "RESTORE-IMI 1 & 2 trials (NEJM 2018 / Lancet Infect Dis 2021)",
+        "IDSA CRE/Pseudomonas Guidelines 2023",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025"
+      ],
+      "note": "Bloco mesclado e melhorado: cortes renais oficiais FDA (CrCl 30–89 / 15–29 / <15 / HD) preservados com proporções de cada componente por faixa. fgMaior50 atualizado com corte CrCl ≥90 mL/min explícito. fg30a50 enriquecido com monitoramento renal diário e reclassificação de faixa. warning expandido com mioclonias e PCR/MALDI. EMA label, Johns Hopkins, UpToDate e Lexicomp adicionados às fontes."
+    }
+  },
+  "es": {
+    "name": "Imipenem + Cilastatina + Relebactam",
+    "class": "Carbapenémico + Inhibidor de DHP + Inhibidor de beta-lactamasa (anti-KPC/MBL tipo A y C)",
+    "commercialNames": {
+      "br": [
+        "Recarbrio (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Recarbrio"
+      ]
+    },
+    "presentation": [
+      "Polvo para solución inyectable EV: 500 mg imipenem/500 mg cilastatina/250 mg relebactam por frasco"
+    ],
+    "dose": {
+      "adultoEV": "1,25 g EV 6/6h (infusión 30 min)"
+    },
+    "doseKg": null,
+    "indication": "Infecciones por Pseudomonas aeruginosa y Enterobacterales resistentes a carbapenémicos (KPC), neumonía hospitalaria/VAP, infecciones intraabdominales complicadas, ITU complicada. No cubre NDM ni OXA-48.",
+    "spectrum": "Pseudomonas aeruginosa (incluidas cepas imipenem-resistentes con mecanismo KPC o AmpC), Klebsiella pneumoniae (KPC+), otros Enterobacterales. El relebactam inhibe betalactamasas Clase A (KPC) y Clase C (AmpC). NO cubre metalo-betalactamasas (NDM, VIM, IMP) ni OXA-48 aislado.",
+    "contraindications": [
+      "Hipersensibilidad a los carbapenémicos o penicilinas",
+      "Antecedentes de convulsiones (imipenem — riesgo aumentado)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Imipenem tiene mayor riesgo de convulsiones que otros carbapenémicos — monitorizar en epilépticos o con lesión del SNC.",
+      "NO cubre NDM ni OXA-48 aislado — realizar fenotipado antes del uso empírico.",
+      "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Recarbrio / RESTORE-IMI trials / IDSA CRE/Pseudomonas Guidelines / Lexicomp",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,25 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "5 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "CrCl ≥90 mL/min: dosis habitual. Imipenem 500 mg + cilastatina 500 mg + relebactam 250 mg IV 6/6h en infusión de 30 min. Uso guiado por cultivo, antibiograma e infectología. NO cubre NDM, VIM, IMP ni OXA-48 aislado — confirmar mecanismo de resistencia (PCR/MALDI) antes del uso."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1 g",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 30–89 mL/min → imipenem 400 mg + cilastatina 400 mg + relebactam 200 mg (1 g total) 6/6h. Mantener intervalo 6/6h — parámetro T>CIM crítico para relebactam. Monitorizar convulsiones y SNC diariamente en insuficiencia renal. Monitorizar función renal diaria — deterioro de ClCr exige recalibración a franja inferior."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "750 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "3 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl 15–29 mL/min → imipenem 300 mg + cilastatina 300 mg + relebactam 150 mg (750 mg total) 6/6h. Riesgo aumentado de convulsiones — monitorizar SNC diariamente. Historial de convulsión es contraindicación relativa."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: CrCl < 15 mL/min → imipenem 200 mg + cilastatina 200 mg + relebactam 100 mg (500 mg total) 6/6h. Riesgo muy elevado de convulsiones — monitorizar EEG si alteración neurológica. Evaluar alternativa (meropenem + vaborbactam o ceftazidima + avibactam) si disponible."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "2 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Corte oficial FDA label: HD → imipenem 200 mg + cilastatina 200 mg + relebactam 100 mg (500 mg total) 6/6h. Administrar después de hemodiálisis en días de HD. Imipenem, cilastatina y relebactam son removidos por HD — puede requerirse dosis suplementaria tras sesión prolongada para mantener exposición terapéutica."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Imipenem tiene MAYOR riesgo de convulsión que otros carbapenémicos — monitorizar convulsiones, encefalopatía y mioclonías diariamente en cualquier grado de insuficiencia renal. Riesgo amplificado sin ajuste renal adecuado. Confirmar KPC o AmpC por PCR/MALDI antes del uso — no cubre NDM ni OXA-48. Uso guiado por infectología obligatorio."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Recarbrio (imipenem-cilastatin-relebactam) 2020",
+        "EMA label Recarbrio 2020",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "RESTORE-IMI 1 & 2 trials (NEJM 2018 / Lancet Infect Dis 2021)",
+        "IDSA CRE/Pseudomonas Guidelines 2023",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025"
+      ],
+      "note": "Bloque fusionado y mejorado: cortes renales oficiales FDA (CrCl 30–89 / 15–29 / <15 / HD) preservados con proporciones de cada componente por franja. fgMaior50 actualizado con corte CrCl ≥90 mL/min explícito. fg30a50 enriquecido con monitoreo renal diario y reclasificación de franja. warning expandido con mioclonías y PCR/MALDI. EMA label, Johns Hopkins, UpToDate y Lexicomp añadidos a las fuentes."
+    }
+  },
+  "name": {
+    "pt": "Imipenem + Cilastatina + Relebactam",
+    "es": "Imipenem + Cilastatina + Relebactam"
+  },
+  "keywords": [
+    "imipenem_cilastatina_relebactam",
+    "imipenem + cilastatina + relebactam",
+    "recarbrio (acesso limitado no brasil)",
+    "recarbrio",
+    "carbapenemico + inibidor de dhp + inibidor de beta-lactamase (anti-kpc/mbl tipo a e c)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

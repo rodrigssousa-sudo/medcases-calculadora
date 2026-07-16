@@ -1,0 +1,290 @@
+{
+  "id": "ceftolozano_tazobactam",
+  "category": "atb",
+  "icon": "🧬",
+  "color": "rgba(239,68,68,0.15)",
+  "colorTxt": "#EF4444",
+  "pt": {
+    "name": "Ceftolozano + Tazobactam",
+    "class": "Cefalosporina de 5ª geração + Inibidor de beta-lactamase (anti-Pseudomonas MDR)",
+    "commercialNames": {
+      "br": [
+        "Zerbaxa"
+      ],
+      "ar": [
+        "Zerbaxa"
+      ]
+    },
+    "presentation": [
+      "Pó para solução injetável EV: 1 g/0,5 g (ceftolozano/tazobactam) por frasco"
+    ],
+    "dose": {
+      "adultoEV": "1,5 g EV 8/8h (infusão 60 min)",
+      "pediatrica": "1400 mg EV 8/8h (ceftolozano 20 mg/kg/dose)"
+    },
+    "doseKg": {
+      "pediatrica": "20 mg/kg (ceftolozano) + 10 mg/kg (tazobactam) EV 8/8h (máx 1,5 g/dose)"
+    },
+    "mechanism": "Ceftolozano liga-se às PBPs de Pseudomonas aeruginosa (incluindo PBP3 mutada), inibindo síntese da parede celular. Tazobactam inibe beta-lactamases classe A (incluindo KPC), ampliando espectro.",
+    "onset": "EV: pico sérico ao final da infusão de 60 min.",
+    "halfLife": "Meia-vida 2,7 h (ceftolozano); 1 h (tazobactam). Eliminação renal >90%.",
+    "therapeuticRange": "T>CIM (fT>CIM ≥ 40–60%) como parâmetro PK/PD.",
+    "dilution": "Reconstituir em 10 mL de água estéril ou SF; diluir em 100 mL de SF 0,9% ou SG 5%.",
+    "speed": "Infundir em 60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarreia",
+      "Cefaleia",
+      "Febre",
+      "Hipopotassemia"
+    ],
+    "dangerousAdverseEffects": [
+      "Colite por C. difficile",
+      "Reações de hipersensibilidade graves",
+      "Convulsões (raro)"
+    ],
+    "contraindications": [
+      "Hipersensibilidade a cefalosporinas, tazobactam ou penicilinas"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "RESERVAR para Pseudomonas aeruginosa multirresistente (MDR) e infecções complicadas sem resposta a outros agentes.",
+      "Requer ajuste rigoroso em insuficiência renal — eliminação >90% renal.",
+      "Não cobre Bacteroides spp., Stenotrophomonas maltophilia nem MRSA."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Zerbaxa / IDSA MDR Guidelines",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "4,5 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "20 mg/kg (ceftolozano)",
+          "intervalo": "8/8h",
+          "doseMaxima": "1,5 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual para Pseudomonas multirresistente."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "750 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "2,25 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "750 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reduzir dose em insuficiência renal moderada."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "375 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "1,125 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "5 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "375 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obrigatório."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "450 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,5 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "150 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar eficácia e toxicidade."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "450 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,5 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "150 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar dose suplementar pós-hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Ceftolozano + Tazobactam",
+    "class": "Cefalosporina de 5ª generación + Inhibidor de beta-lactamasa (anti-Pseudomonas MDR)",
+    "commercialNames": {
+      "br": [
+        "Zerbaxa"
+      ],
+      "ar": [
+        "Zerbaxa"
+      ]
+    },
+    "presentation": [
+      "Polvo para solución inyectable EV: 1 g/0,5 g (ceftolozano/tazobactam) por frasco"
+    ],
+    "dose": {
+      "adultoEV": "1,5 g EV 8/8h (infusão 60 min)",
+      "pediatrica": "1400 mg EV cada 8h (ceftolozano 20 mg/kg/dosis)"
+    },
+    "doseKg": {
+      "pediatrica": "20 mg/kg (ceftolozano) + 10 mg/kg (tazobactam) EV cada 8h (máx 1,5 g/dosis)"
+    },
+    "mechanism": "Ceftolozano se une a las PBPs de Pseudomonas aeruginosa (incluida PBP3 mutada), inhibiendo la síntesis de la pared celular. Tazobactam inhibe beta-lactamasas clase A (incluida KPC), ampliando el espectro.",
+    "onset": "EV: pico sérico al final de la infusión de 60 min.",
+    "halfLife": "Semivida 2,7 h (ceftolozano); 1 h (tazobactam). Eliminación renal >90%.",
+    "therapeuticRange": "T>CIM (fT>CIM ≥ 40–60%) como parámetro PK/PD.",
+    "dilution": "Reconstituir en 10 mL de agua estéril o SF; diluir en 100 mL de SF 0,9% o SG 5%.",
+    "speed": "Infundir en 60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarrea",
+      "Cefalea",
+      "Fiebre",
+      "Hipopotasemia"
+    ],
+    "dangerousAdverseEffects": [
+      "Colitis por C. difficile",
+      "Reacciones de hipersensibilidad graves",
+      "Convulsiones (raro)"
+    ],
+    "contraindications": [
+      "Hipersensibilidad a cefalosporinas, tazobactam o penicilinas"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "RESERVAR para Pseudomonas aeruginosa multirresistente (MDR) e infecciones complicadas sin respuesta a otros agentes.",
+      "Requiere ajuste riguroso en insuficiencia renal — eliminación >90% renal.",
+      "No cubre Bacteroides spp., Stenotrophomonas maltophilia ni MRSA."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Zerbaxa / IDSA MDR Guidelines",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,5 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "4,5 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "20 mg/kg (ceftolozano)",
+          "intervalo": "8/8h",
+          "doseMaxima": "1,5 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual para Pseudomonas multirresistente."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "750 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "2,25 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "10 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "750 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducir dosis en insuficiencia renal moderada."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "375 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "1,125 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "5 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "375 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obligatorio."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "450 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,5 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "150 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar eficacia y toxicidad."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "150 mg",
+          "intervalo": "8/8h",
+          "doseMaxima": "450 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "2,5 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "150 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar dosis suplementaria post-hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Ceftolozano + Tazobactam",
+    "es": "Ceftolozano + Tazobactam"
+  },
+  "keywords": [
+    "ceftolozano_tazobactam",
+    "ceftolozano + tazobactam",
+    "zerbaxa",
+    "cefalosporina de 5ª geracao + inibidor de beta-lactamase (anti-pseudomonas mdr)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

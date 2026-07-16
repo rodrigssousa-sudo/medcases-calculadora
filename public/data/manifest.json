@@ -1,0 +1,295 @@
+{
+  "version": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "contentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "identitySchema": "clinical-source-content-v1",
+  "identityFileCount": 35,
+  "databaseFileCount": 34,
+  "generatedBy": "scripts/export-clinical-data.js",
+  "drugCount": 838,
+  "sourceRecordCount": 881,
+  "collisionCount": 43,
+  "contextVariantCount": 43,
+  "interactionCount": 1593,
+  "exportErrors": 0,
+  "modules": [
+    {
+      "module": "Alergia e Imunologia",
+      "count": 20,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Analgesia e Opioides",
+      "count": 1,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Analgésicos",
+      "count": 52,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Anticoagulação",
+      "count": 15,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Antimicrobianos",
+      "count": 86,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Cardiovascular",
+      "count": 144,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Cardiologia",
+      "count": 20,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Emergência",
+      "count": 38,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Endocrinologia",
+      "count": 22,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Endocrinologia GLP-1",
+      "count": 3,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Gastroenterologia — Legado",
+      "count": 10,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Gastro e Imunologia",
+      "count": 2,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Gastroenterologia",
+      "count": 38,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Ginecologia",
+      "count": 5,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Hematologia",
+      "count": 11,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Imunologia e Corticoides",
+      "count": 7,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Infectologia",
+      "count": 55,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Nefrologia",
+      "count": 47,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Neurologia",
+      "count": 106,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Obesidade",
+      "count": 3,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Oftalmologia",
+      "count": 4,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Pneumologia",
+      "count": 51,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Pneumologia e Otorrinolaringologia",
+      "count": 5,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Psicofármacos",
+      "count": 26,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Psiquiatria",
+      "count": 45,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Reumatologia",
+      "count": 4,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Sedação",
+      "count": 3,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Toxicologia",
+      "count": 6,
+      "errors": 0,
+      "status": "ok"
+    },
+    {
+      "module": "Urologia e Ginecologia",
+      "count": 9,
+      "errors": 0,
+      "status": "ok"
+    }
+  ],
+  "collisionPolicy": {
+    "schema": "clinical-collision-policy-v1",
+    "status": "proposed",
+    "sha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+    "canonicalOwners": 43,
+    "preservedContextVariants": 43,
+    "automaticFieldMerge": false,
+    "discardedRecords": 0
+  },
+  "pacientesPadrao": {
+    "adulto": {
+      "peso": 70,
+      "idade": 40,
+      "gestante": false,
+      "lactante": false,
+      "clcr": 90,
+      "fg": 90,
+      "sexo": "M",
+      "altura": 170,
+      "hepatopatia": false,
+      "qtLongo": false,
+      "miastenia": false
+    },
+    "pediatria": {
+      "peso": 25,
+      "idade": 8,
+      "gestante": false,
+      "lactante": false,
+      "clcr": 110,
+      "fg": 110,
+      "sexo": "M",
+      "altura": 128,
+      "hepatopatia": false,
+      "qtLongo": false,
+      "miastenia": false
+    },
+    "gestante": {
+      "peso": 68,
+      "idade": 28,
+      "gestante": true,
+      "lactante": false,
+      "clcr": 105,
+      "fg": 105,
+      "sexo": "F",
+      "altura": 163,
+      "hepatopatia": false,
+      "qtLongo": false,
+      "miastenia": false
+    },
+    "idoso": {
+      "peso": 65,
+      "idade": 72,
+      "gestante": false,
+      "lactante": false,
+      "clcr": 45,
+      "fg": 45,
+      "sexo": "M",
+      "altura": 168,
+      "hepatopatia": false,
+      "qtLongo": false,
+      "miastenia": false
+    },
+    "renal": {
+      "peso": 70,
+      "idade": 55,
+      "gestante": false,
+      "lactante": false,
+      "clcr": 18,
+      "fg": 18,
+      "sexo": "M",
+      "altura": 172,
+      "hepatopatia": false,
+      "qtLongo": false,
+      "miastenia": false
+    }
+  },
+  "endpoints": {
+    "drugsIndex": "/data/drugs_index.json",
+    "drugById": "/data/drugs/{id}.json",
+    "manifest": "/data/manifest.json"
+  },
+  "schema": {
+    "version": "premium-v1",
+    "langs": [
+      "pt",
+      "es"
+    ],
+    "requiredFields": [
+      "id",
+      "category",
+      "icon",
+      "pt",
+      "es",
+      "name",
+      "keywords",
+      "dataVersion",
+      "clinicalContentSha256",
+      "source",
+      "sourceModule"
+    ],
+    "optionalFields": [
+      "clinicalCollision",
+      "clinicalContextVariants"
+    ]
+  }
+}

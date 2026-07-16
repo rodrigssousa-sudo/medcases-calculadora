@@ -1,0 +1,365 @@
+{
+  "id": "cloranfenicol",
+  "category": "atb",
+  "icon": "⚠️",
+  "color": "rgba(239,68,68,0.15)",
+  "colorTxt": "#EF4444",
+  "pt": {
+    "name": "Cloranfenicol",
+    "class": "Anfenicol (bacteriostático de amplo espectro)",
+    "commercialNames": {
+      "br": [
+        "Quemicetina",
+        "Cloranfenicol Genérico"
+      ],
+      "ar": [
+        "Cloranfenicol Genérico",
+        "Clorafen"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 250 mg, 500 mg",
+      "Solução injetável EV: 1 g/frasco-ampola",
+      "Colírio/pomada oftálmica: 0,5%",
+      "Solução otológica: 0,5%"
+    ],
+    "dose": {
+      "adultoVO": "500 mg VO 6/6h (máx 4 g/dia)",
+      "adultoEV": "50–100 mg/kg/dia EV dividido 6/6h (máx 4 g/dia)",
+      "pediatrica": "3000 mg EV/VO 6/6h (50 mg/kg/dose; máx 100 mg/kg/dia)",
+      "neonato": "Neonatos: 25 mg/kg/dia EV 1x/dia (risco de síndrome cinzenta — monitorar nível sérico)"
+    },
+    "doseKg": {
+      "pediatrica": "50 mg/kg/dose 6/6h (máx 100 mg/kg/dia)",
+      "adultoEVKg": "50–100 mg/kg/dia EV dividido em 4 doses",
+      "neonato": "25 mg/kg/dia 1x/dia (máx 25 mg/kg/dia)"
+    },
+    "mechanism": "Liga-se à subunidade 50S ribossomal, inibindo a peptidiltransferase e bloqueando a síntese proteica. Bacteriostático na maioria dos organismos; bactericida para H. influenzae, N. meningitidis e S. pneumoniae.",
+    "onset": "Absorção oral boa — Tmáx 1–3 h; biodisponibilidade ~80%. EV: início imediato.",
+    "halfLife": "Meia-vida 1,5–4 h (adulto). Prolongada em neonatos e hepatopatas.",
+    "therapeuticRange": "Pico 10–20 mcg/mL; vale 5–10 mcg/mL. Monitorar nível sérico em neonatos e pacientes críticos.",
+    "dilution": "EV: reconstituir 1 g em 10 mL de água estéril; diluir em 50–100 mL SF/SG.",
+    "speed": "Infundir em 30–60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas e vômitos",
+      "Diarreia",
+      "Anemia (dose-dependente, reversível)",
+      "Neurite óptica (uso prolongado)"
+    ],
+    "dangerousAdverseEffects": [
+      "Anemia aplástica (idiossincrática, irreversível)",
+      "Síndrome cinzenta (neonatos — cianose, colapso cardiovascular)",
+      "Supressão medular (dose-dependente)",
+      "Reação de Jarisch-Herxheimer em febre tifoide"
+    ],
+    "contraindications": [
+      "Hipersensibilidade ao cloranfenicol",
+      "Aplasia medular prévia relacionada ao fármaco",
+      "Neonatos prematuros (sem monitorização de nível sérico)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "RESERVAR para infecções graves sem alternativa disponível — risco de aplasia medular fatal.",
+      "Monitorar hemograma completo seriado durante e após o tratamento.",
+      "Inibidor potente do CYP2C9 e CYP3A4 — verificar interações com varfarina, fenitoína, ciclosporina."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA / WHO Essential Medicines",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Geralmente não necessita ajuste renal, porém exige monitorização hematológica.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar hemograma seriado."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Sem ajuste renal habitual."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Avaliar níveis séricos se disponível."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar mielotoxicidade e síndrome cinzenta em neonatos."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Sem recomendação de suplementação pós-HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Cloranfenicol",
+    "class": "Anfenicol (bacteriostático de amplio espectro)",
+    "commercialNames": {
+      "br": [
+        "Quemicetina",
+        "Cloranfenicol Genérico"
+      ],
+      "ar": [
+        "Cloranfenicol Genérico",
+        "Clorafen"
+      ]
+    },
+    "presentation": [
+      "Cápsulas: 250 mg, 500 mg",
+      "Solución inyectable EV: 1 g/frasco-ampolla",
+      "Colirio/pomada oftálmica: 0,5%",
+      "Solución otológica: 0,5%"
+    ],
+    "dose": {
+      "adultoVO": "500 mg VO cada 6h (máx 4 g/día)",
+      "adultoEV": "50–100 mg/kg/día EV dividido cada 6h (máx 4 g/día)",
+      "pediatrica": "3000 mg EV/VO cada 6h (50 mg/kg/dosis; máx 100 mg/kg/día)",
+      "neonato": "Neonatos: 25 mg/kg/día EV 1 vez/día (riesgo de síndrome gris — monitorizar nivel sérico)"
+    },
+    "doseKg": {
+      "pediatrica": "50 mg/kg/dosis cada 6h (máx 100 mg/kg/día)",
+      "adultoEVKg": "50–100 mg/kg/día EV dividido en 4 dosis",
+      "neonato": "25 mg/kg/día 1 vez/día (máx 25 mg/kg/día)"
+    },
+    "mechanism": "Se une a la subunidad 50S ribosomal, inhibiendo la peptidiltransferasa y bloqueando la síntesis proteica. Bacteriostático para la mayoría; bactericida para H. influenzae, N. meningitidis y S. pneumoniae.",
+    "onset": "Absorción oral buena — Tmáx 1–3 h; biodisponibilidad ~80%. EV: inicio inmediato.",
+    "halfLife": "Semivida 1,5–4 h (adulto). Prolongada en neonatos y hepatópatas.",
+    "therapeuticRange": "Pico 10–20 mcg/mL; valle 5–10 mcg/mL. Monitorar nivel sérico en neonatos y pacientes críticos.",
+    "dilution": "EV: reconstituir 1 g en 10 mL de agua estéril; diluir en 50–100 mL SF/SG.",
+    "speed": "Infundir en 30–60 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas y vómitos",
+      "Diarrea",
+      "Anemia (dosis-dependiente, reversible)",
+      "Neuritis óptica (uso prolongado)"
+    ],
+    "dangerousAdverseEffects": [
+      "Anemia aplástica (idiosincrática, irreversible)",
+      "Síndrome gris (neonatos — cianosis, colapso cardiovascular)",
+      "Supresión medular (dosis-dependiente)",
+      "Reacción de Jarisch-Herxheimer en fiebre tifoidea"
+    ],
+    "contraindications": [
+      "Hipersensibilidad al cloranfenicol",
+      "Aplasia medular previa relacionada al fármaco",
+      "Neonatos prematuros (sin monitorización de nivel sérico)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "RESERVAR para infecciones graves sin alternativa disponible — riesgo de aplasia medular fatal.",
+      "Monitorizar hemograma completo seriado durante y después del tratamiento.",
+      "Inhibidor potente del CYP2C9 y CYP3A4 — verificar interacciones con warfarina, fenitoína, ciclosporina."
+    ],
+    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA / WHO Essential Medicines",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Generalmente no requiere ajuste renal, pero exige monitorización hematológica.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar hemograma seriado."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Sin ajuste renal habitual."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Evaluar niveles séricos si están disponibles."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar mielotoxicidad y síndrome gris en neonatos."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "500 mg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "50–100 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "6/6h",
+          "doseMaxima": "100 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Sin recomendación de suplementación post-HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Cloranfenicol",
+    "es": "Cloranfenicol"
+  },
+  "keywords": [
+    "cloranfenicol",
+    "quemicetina",
+    "cloranfenicol generico",
+    "clorafen",
+    "anfenicol (bacteriostatico de amplo espectro)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

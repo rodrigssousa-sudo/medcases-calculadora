@@ -1,0 +1,260 @@
+{
+  "id": "omadaciclina",
+  "category": "atb",
+  "icon": "💊",
+  "color": "rgba(139,92,246,0.12)",
+  "colorTxt": "#6D28D9",
+  "pt": {
+    "name": "Omadaciclina",
+    "class": "Aminometilciclina (nova geração de tetraciclina — anti-resistência)",
+    "commercialNames": {
+      "br": [
+        "Nuzyra (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Nuzyra"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 150 mg (uso oral)",
+      "Pó liofilizado para solução injetável EV: 100 mg por frasco"
+    ],
+    "dose": {
+      "adultoVO": "300 mg VO 24/24h (após ataque: 450 mg × 2 no D1 ou 300 mg × 3 no D1)",
+      "adultoEV": "100 mg EV 24/24h (após ataque: 200 mg EV no D1)"
+    },
+    "doseKg": null,
+    "indication": "Pneumonia adquirida na comunidade (PAC) por patógenos atípicos e sensíveis, infecções de pele e partes moles (ABSSSI), alternativa para S. aureus resistente à tetraciclina.",
+    "spectrum": "Staphylococcus aureus (MSSA e MRSA), Streptococcus pneumoniae, Haemophilus influenzae, Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila, Gram-negativos (exceto Pseudomonas). Atividade mantida contra cepas resistentes às tetraciclinas clássicas (mecanismo de efluxo tet efMX).",
+    "contraindications": [
+      "Hipersensibilidade às tetraciclinas",
+      "Gestação e crianças < 8 anos (risco de lesão dentária e óssea)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Tomar VO em jejum (≥ 4 horas após última refeição e ≥ 2 horas antes da próxima refeição).",
+      "Não necessita ajuste renal — vantagem em pacientes com insuficiência renal.",
+      "Hepatotoxicidade descrita — monitorar enzimas hepáticas."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CAP Guidelines 2019 / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Não necessita ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Após dose de ataque conforme protocolo."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não necessita ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorar hepatotoxicidade e efeitos gastrointestinais."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Não removida significativamente pela HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Omadaciclina",
+    "class": "Aminometilciclina (nueva generación de tetraciclina — anti-resistencia)",
+    "commercialNames": {
+      "br": [
+        "Nuzyra (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Nuzyra"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 150 mg (uso oral)",
+      "Polvo liofilizado para solución inyectable EV: 100 mg por frasco"
+    ],
+    "dose": {
+      "adultoVO": "300 mg VO 24/24h (tras carga: 450 mg × 2 en D1 o 300 mg × 3 en D1)",
+      "adultoEV": "100 mg EV 24/24h (tras carga: 200 mg EV en D1)"
+    },
+    "doseKg": null,
+    "indication": "Neumonía adquirida en la comunidad (NAC) por patógenos atípicos y sensibles, infecciones de piel y partes blandas (ABSSSI), alternativa para S. aureus resistente a tetraciclina.",
+    "spectrum": "Staphylococcus aureus (MSSA y MRSA), Streptococcus pneumoniae, Haemophilus influenzae, Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila, Gramnegativos (excepto Pseudomonas). Actividad mantenida frente a cepas resistentes a tetraciclinas clásicas (mecanismo de eflujo tet efMX).",
+    "contraindications": [
+      "Hipersensibilidad a las tetraciclinas",
+      "Gestación y niños < 8 años (riesgo de lesión dental y ósea)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Tomar VO en ayunas (≥ 4 horas después de la última comida y ≥ 2 horas antes de la próxima).",
+      "No requiere ajuste renal — ventaja en pacientes con insuficiencia renal.",
+      "Hepatotoxicidad descrita — monitorizar enzimas hepáticas."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CAP Guidelines 2019 / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "No requiere ajuste renal.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Después de dosis de carga según protocolo."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No requiere ajuste renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorizar hepatotoxicidad y efectos gastrointestinales."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "300 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "300 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": {
+          "dose": "100 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "100 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "No removida significativamente por HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Omadaciclina",
+    "es": "Omadaciclina"
+  },
+  "keywords": [
+    "omadaciclina",
+    "nuzyra (acesso limitado no brasil)",
+    "nuzyra",
+    "aminometilciclina (nova geracao de tetraciclina — anti-resistencia)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

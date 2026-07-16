@@ -1,0 +1,322 @@
+{
+  "id": "candesartana",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.13)",
+  "colorTxt": "#047857",
+  "pt": {
+    "name": "Candesartana Cilexetila",
+    "class": "Bloqueador do Receptor de Angiotensina II (BRA/ARB) — Pró-fármaco",
+    "commercialNames": {
+      "br": [
+        "Atacand",
+        "Candesartana genérica"
+      ],
+      "ar": [
+        "Atacand",
+        "Candesartán genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 4 mg, 8 mg, 16 mg, 32 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 8–16 mg VO 1x/dia inicial. Manutenção: 16–32 mg/dia. Máximo: 32 mg/dia.",
+      "adultoGrave": "IC (ICFEr — CHARM): iniciar 4–8 mg VO 1x/dia. Dobrar a dose a cada 2 semanas se tolerado, até alvo de 32 mg/dia.",
+      "pediatricaPadrao": "HTA pediátrica ≥ 6 anos: 0,2 mg/kg/dia VO 1x/dia (máx. 8 mg/dia). Titular com cautela.",
+      "pediatricaGrave": "Titular até 0,4 mg/kg/dia ou 32 mg/dia (o menor). Monitorar PA, creatinina e K⁺.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "0,2 mg/kg/dia VO 1x/dia (HTA pediátrica ≥ 6 anos)",
+      "grave": "IC: titular de 4–8 mg até 32 mg/dia (dose fixa — sem cálculo por kg)",
+      "meningite": null,
+      "doseMaxima": "Adultos: 32 mg/dia | Pediatria: 32 mg/dia ou 0,4 mg/kg/dia"
+    },
+    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. IC: dose-alvo 32 mg/dia 1x/dia (CHARM). Monitorar por PA, creatinina e K⁺ — sem nível sérico-alvo.",
+    "dilution": "Apenas formulação oral. Candesartana cilexetila é pró-fármaco convertido em candesartana (ativa) no trato GI/fígado.",
+    "speed": "VO: tomar 1x/dia no mesmo horário, com ou sem alimento.",
+    "commonAdverseEffects": [
+      "Tontura / hipotensão",
+      "Hipercalemia",
+      "Elevação de creatinina",
+      "Cefaleia",
+      "Infecção respiratória superior (leve)"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema (raro)",
+      "Hipercalemia grave (K⁺ > 6 mEq/L)",
+      "Insuficiência Renal Aguda (especialmente em estenose bilateral de artéria renal)",
+      "Hipotensão grave — especialmente pós-IAM ou IC descompensada"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação. Elevação ≤ 30% de creatinina é esperada e aceitável.",
+      "Candesartana: pró-fármaco (candesartana cilexetila). Cautela em insuficiência hepática grave — metabolismo hepático pode ser prejudicado.",
+      "Evitar dupla inibição do SRAA (BRA + IECA): sem benefício adicional e risco aumentado de hipotensão, hipercalemia e lesão renal.",
+      "AINEs: reduzem efeito anti-hipertensivo e potencializam risco de lesão renal aguda."
+    ],
+    "ref": "EMA Atacand (candesartan) SmPC 2024 · CHARM Programme (Lancet 2003) · ESC HF Guidelines 2021 · AHA/ACC/HFSA HF Guidelines 2022 · ESC Hypertension Guidelines 2023 · Lexicomp 2026",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Ajuste renal formal não necessário para ClCr ≥ 30 mL/min. Monitorar K⁺ e creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "8–16 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "32 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "0,2 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "32 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose padrão. HTA: 8–32 mg 1x/dia. IC: iniciar 4–8 mg e titular a cada 2 semanas até 32 mg/dia."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "4–8 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "32 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "0,1 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "16 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR moderada: sem ajuste obrigatório. Preferir dose inicial de 4–8 mg. Monitorar K⁺ e creatinina."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "4 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "16 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar com 4 mg/dia e titular com cautela extrema. Risco aumentado de hipercalemia e deterioração renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "4 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "8 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muito grave/anúria: dose máxima 8 mg/dia. Avaliação cuidadosa de risco-benefício. Monitorar K⁺ rigorosamente."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "4 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "8 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Candesartana não é removida significativamente por hemodiálise. Manter dose reduzida. Sem suplementação pós-HD necessária."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. Pró-fármaco: cautela em hepatopatia grave. Maior evidência em IC da classe (CHARM Programme). Monitorar K⁺ e creatinina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "EMA Atacand (candesartan cilexetil) SmPC 2024",
+        "CHARM Programme — Granger CB et al. (Lancet 2003)",
+        "ESC Heart Failure Guidelines 2021",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "ESC Hypertension Guidelines 2023",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "BRA com maior evidência em IC (CHARM). Pró-fármaco (conversão GI/hepática). Cautela em hepatopatia grave. Sem ajuste renal formal em IR leve/moderada. Iniciar com 4 mg em IR grave e idosos. Não dialisável."
+    }
+  },
+  "es": {
+    "name": "Candesartán Cilexetilo",
+    "class": "Bloqueante del Receptor de Angiotensina II (BRA/ARA-II) — Profármaco",
+    "commercialNames": {
+      "br": [
+        "Atacand",
+        "Candesartana genérica"
+      ],
+      "ar": [
+        "Atacand",
+        "Candesartán genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos: 4 mg, 8 mg, 16 mg, 32 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "HTA: 8–16 mg VO 1 vez/día inicial. Mantenimiento: 16–32 mg/día. Máximo: 32 mg/día.",
+      "adultoGrave": "IC (ICFEr — CHARM): iniciar 4–8 mg VO 1 vez/día. Doblar dosis cada 2 semanas si tolerado, hasta objetivo de 32 mg/día.",
+      "pediatricaPadrao": "HTA pediátrica ≥ 6 años: 0,2 mg/kg/día VO 1 vez/día (máx. 8 mg/día). Titular con precaución.",
+      "pediatricaGrave": "Titular hasta 0,4 mg/kg/día o 32 mg/día (el menor). Monitorizar PA, creatinina y K⁺.",
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": "0,2 mg/kg/día VO 1 vez/día (HTA pediátrica ≥ 6 años)",
+      "grave": "IC: titular de 4–8 mg hasta 32 mg/día (dosis fija — sin cálculo por kg)",
+      "meningite": null,
+      "doseMaxima": "Adultos: 32 mg/día | Pediatría: 32 mg/día o 0,4 mg/kg/día"
+    },
+    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. IC: dosis objetivo 32 mg/día 1 vez/día (CHARM). Monitorizar por PA, creatinina y K⁺ — sin nivel sérico objetivo.",
+    "dilution": "Solo formulación oral. Candesartán cilexetilo es profármaco convertido en candesartán (activo) en tracto GI/hígado.",
+    "speed": "VO: tomar 1 vez/día a la misma hora, con o sin alimento.",
+    "commonAdverseEffects": [
+      "Mareos / hipotensión",
+      "Hiperpotasemia",
+      "Elevación de creatinina",
+      "Cefalea",
+      "Infección respiratoria superior (leve)"
+    ],
+    "dangerousAdverseEffects": [
+      "Angioedema (raro)",
+      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
+      "Insuficiencia Renal Aguda (especialmente en estenosis bilateral de arteria renal)",
+      "Hipotensión grave — especialmente post-IAM o IC descompensada"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación. Aumento ≤ 30% de creatinina es esperado y aceptable.",
+      "Candesartán: profármaco (candesartán cilexetilo). Precaución en insuficiencia hepática grave — metabolismo hepático puede estar deteriorado.",
+      "Evitar doble inhibición del SRAA (ARA-II + IECA): sin beneficio adicional y riesgo aumentado de hipotensión, hiperpotasemia y lesión renal.",
+      "AINEs: reducen efecto antihipertensivo y potencian riesgo de lesión renal aguda."
+    ],
+    "ref": "EMA Atacand (candesartan) SmPC 2024 · CHARM Programme (Lancet 2003) · ESC HF Guidelines 2021 · AHA/ACC/HFSA HF Guidelines 2022 · ESC Hypertension Guidelines 2023 · Lexicomp 2026",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Ajuste renal formal no necesario para ClCr ≥ 30 mL/min. Monitorizar K⁺ y creatinina.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "8–16 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "32 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "0,2 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "32 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis estándar. HTA: 8–32 mg 1 vez/día. IC: iniciar 4–8 mg y titular cada 2 semanas hasta 32 mg/día."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "4–8 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "32 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": {
+          "dose": "0,1 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "16 mg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "IR moderada: sin ajuste obligatorio. Preferir dosis inicial de 4–8 mg. Monitorizar K⁺ y creatinina."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "4 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "16 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR grave: iniciar con 4 mg/día y titular con precaución extrema. Riesgo aumentado de hiperpotasemia y deterioro renal."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "4 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "8 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "IR muy grave/anuria: dosis máxima 8 mg/día. Evaluación cuidadosa de riesgo-beneficio. Monitorizar K⁺ rigurosamente."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "4 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "8 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Candesartán no es removido significativamente por hemodiálisis. Mantener dosis reducida. Sin suplementación post-HD necesaria."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "pregnancyCaution": true,
+      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. Profármaco: precaución en hepatopatía grave. Mayor evidencia en IC de la clase (Programa CHARM). Monitorizar K⁺ y creatinina."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "EMA Atacand (candesartan cilexetil) SmPC 2024",
+        "CHARM Programme — Granger CB et al. (Lancet 2003)",
+        "ESC Heart Failure Guidelines 2021",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "ESC Hypertension Guidelines 2023",
+        "UpToDate 2025",
+        "Lexicomp Online 2026"
+      ],
+      "note": "ARA-II con mayor evidencia en IC (CHARM). Profármaco (conversión GI/hepática). Precaución en hepatopatía grave. Sin ajuste renal formal en IR leve/moderada. Iniciar con 4 mg en IR grave y ancianos. No dializable."
+    }
+  },
+  "name": {
+    "pt": "Candesartana",
+    "es": "Candesartán"
+  },
+  "keywords": [
+    "candesartana",
+    "candesartan",
+    "atacand",
+    "candesartana generica",
+    "candesartan generico",
+    "bloqueador do receptor de angiotensina ii (bra/arb) — pro-farmaco"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

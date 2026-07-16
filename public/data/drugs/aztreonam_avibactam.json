@@ -1,0 +1,205 @@
+{
+  "id": "aztreonam_avibactam",
+  "category": "atb",
+  "icon": "🧬",
+  "color": "rgba(59,130,246,0.15)",
+  "colorTxt": "#1E40AF",
+  "pt": {
+    "name": "Aztreonam + Avibactam",
+    "class": "Monobactâmico + Inibidor de beta-lactamase (anti-MBL — NDM, VIM, IMP)",
+    "commercialNames": {
+      "br": [
+        "Emblaveo (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Emblaveo"
+      ]
+    },
+    "presentation": [
+      "Pó para solução injetável EV: 1,5 g aztreonam/600 mg avibactam (combinação extemporânea com ceftazidima+avibactam na prática)"
+    ],
+    "dose": {
+      "adultoEV": "2,5 g EV 8/8h (infusão 3 horas)"
+    },
+    "doseKg": null,
+    "indication": "Infecções por bacilos Gram-negativos produtores de metalo-beta-lactamases (NDM, VIM, IMP) — único regime com atividade confiável contra NDM. Pneumonia hospitalar/VAP, infecções intra-abdominais, ITU complicada, bacteremia por MBL.",
+    "spectrum": "Enterobacterales MBL+ (NDM, VIM, IMP), Klebsiella pneumoniae NDM+, E. coli NDM+. O aztreonam é estável às MBL; o avibactam protege o aztreonam das beta-lactamases de classe A e C co-produzidas. Atividade contra Pseudomonas aeruginosa é variável. Sem atividade contra Acinetobacter ou Gram-positivos.",
+    "contraindications": [
+      "Hipersensibilidade ao aztreonam ou avibactam",
+      "Hipersensibilidade grave à ceftazidima (reação cruzada possível com aztreonam)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "ÚNICO regime com atividade comprovada contra organismos NDM+ — reservar para MBL documentado.",
+      "Na prática, frequentemente combinado com ceftazidima+avibactam para ampliação do espectro (cobertura MBL + KPC).",
+      "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CRE Guidelines / Wunderink et al. NEJM 2023 / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "2,5 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "7,5 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Dose habitual para metalo-beta-lactamases."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,25 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "3,75 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Redução necessária em insuficiência renal moderada."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1,88 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Ajuste obrigatório para manutenção da exposição farmacodinâmica."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorar resposta clínica e neurotoxicidade."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Administrar após HD."
+      }
+    }
+  },
+  "es": {
+    "name": "Aztreonam + Avibactam",
+    "class": "Monobactámico + Inhibidor de beta-lactamasa (anti-MBL — NDM, VIM, IMP)",
+    "commercialNames": {
+      "br": [
+        "Emblaveo (acesso limitado no Brasil)"
+      ],
+      "ar": [
+        "Emblaveo"
+      ]
+    },
+    "presentation": [
+      "Polvo para solución inyectable EV: 1,5 g aztreonam/600 mg avibactam (combinación extemporánea con ceftazidima+avibactam en la práctica)"
+    ],
+    "dose": {
+      "adultoEV": "2,5 g EV 8/8h (infusión 3 horas)"
+    },
+    "doseKg": null,
+    "indication": "Infecciones por bacilos Gramnegativos productores de metalo-betalactamasas (NDM, VIM, IMP) — único régimen con actividad confiable frente a NDM. Neumonía hospitalaria/VAP, infecciones intraabdominales, ITU complicada, bacteriemia por MBL.",
+    "spectrum": "Enterobacterales MBL+ (NDM, VIM, IMP), Klebsiella pneumoniae NDM+, E. coli NDM+. El aztreonam es estable frente a las MBL; el avibactam protege el aztreonam de betalactamasas de clase A y C co-producidas. Actividad frente a Pseudomonas aeruginosa es variable. Sin actividad frente a Acinetobacter ni Grampositivos.",
+    "contraindications": [
+      "Hipersensibilidad al aztreonam o avibactam",
+      "Hipersensibilidad grave a ceftazidima (reacción cruzada posible con aztreonam)"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "ÚNICO régimen con actividad comprobada frente a organismos NDM+ — reservar para MBL documentado.",
+      "En la práctica, frecuentemente combinado con ceftazidima+avibactam para ampliar el espectro (cobertura MBL + KPC).",
+      "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+    ],
+    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CRE Guidelines / Wunderink et al. NEJM 2023 / Goodman & Gilman 14ª ed.",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "2,5 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "7,5 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Dosis habitual para metalo-beta-lactamasas."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,25 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "3,75 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": null,
+        "obs": "Reducción necesaria en insuficiencia renal moderada."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1,88 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Ajuste obligatorio para mantener la exposición farmacodinámica."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Monitorizar respuesta clínica y neurotoxicidad."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": null,
+        "obs": "Administrar después de HD."
+      }
+    }
+  },
+  "name": {
+    "pt": "Aztreonam + Avibactam",
+    "es": "Aztreonam + Avibactam"
+  },
+  "keywords": [
+    "aztreonam_avibactam",
+    "aztreonam + avibactam",
+    "emblaveo (acesso limitado no brasil)",
+    "emblaveo",
+    "monobactamico + inibidor de beta-lactamase (anti-mbl — ndm, vim, imp)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

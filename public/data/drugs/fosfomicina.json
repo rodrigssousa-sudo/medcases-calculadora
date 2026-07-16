@@ -1,0 +1,336 @@
+{
+  "id": "fosfomicina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Fosfomicina",
+    "class": "Antibiótico fosfônico",
+    "commercialNames": {
+      "br": [
+        "Monuril",
+        "Fosfomicina Trometamol EMS"
+      ],
+      "ar": [
+        "Monurol",
+        "Fosfomicina Richet"
+      ]
+    },
+    "presentation": [
+      "Sachê oral 3 g (trometamol)",
+      "Frasco-ampola EV 2 g / 4 g (sal disódico)"
+    ],
+    "dose": {
+      "adultoVO": "3 g VO dose única",
+      "adultoEV": "4–8 g EV 8/8h",
+      "pediatrica": "7000 mg EV 8/8h"
+    },
+    "doseKg": {
+      "standard": "100–200 mg/kg/dia EV",
+      "maxDose": "24 g/dia EV"
+    },
+    "therapeuticRange": "Concentração e tempo-dependente — monitorar conforme protocolo.",
+    "dilution": "EV: diluir em SF 0,9% ou SG5%.",
+    "speed": "EV: infundir em 30–60 minutos.",
+    "commonAdverseEffects": [
+      "Diarreia",
+      "Náuseas",
+      "Cefaleia",
+      "Sobrecarga de sódio (formulação EV)"
+    ],
+    "dangerousAdverseEffects": [
+      "Hipocalemia",
+      "Colite por C. difficile",
+      "Resistência induzível"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Oral (sachê): opção para ITU não complicada por ESBL.",
+      "EV: considerar como terapia de resgate para patógenos resistentes."
+    ],
+    "ref": "Sanford Guide 2025 / ESCMID / Goodman & Gilman",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "3 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "3 g",
+          "unidade": "g"
+        },
+        "ev": {
+          "dose": "4–8 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "24 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "100 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "16 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose habitual. Formulação oral geralmente utilizada para ITU."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "3 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "3 g",
+          "unidade": "g"
+        },
+        "ev": {
+          "dose": "4 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "8 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50–75 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "8 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reduzir frequência da formulação intravenosa."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "3 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "3 g",
+          "unidade": "g"
+        },
+        "ev": {
+          "dose": "4 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obrigatório da formulação EV."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "3 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "3 g",
+          "unidade": "g"
+        },
+        "ev": {
+          "dose": "2–4 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25–50 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar sobrecarga de sódio e acúmulo do fármaco."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "3 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "3 g",
+          "unidade": "g"
+        },
+        "ev": {
+          "dose": "2–4 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25–50 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise."
+      }
+    }
+  },
+  "es": {
+    "name": "Fosfomicina",
+    "class": "Antibiótico fosfónico",
+    "commercialNames": {
+      "br": [
+        "Monuril",
+        "Fosfomicina Trometamol EMS"
+      ],
+      "ar": [
+        "Monurol",
+        "Fosfomicina Richet"
+      ]
+    },
+    "presentation": [
+      "Sobre oral 3 g (trometamol)",
+      "Frasco ampolla EV 2 g / 4 g (sal disódico)"
+    ],
+    "dose": {
+      "adultoVO": "3 g VO dosis única",
+      "adultoEV": "4–8 g EV cada 8h",
+      "pediatrica": "7000 mg EV cada 8h"
+    },
+    "doseKg": {
+      "standard": "100–200 mg/kg/día EV",
+      "maxDose": "24 g/día EV"
+    },
+    "therapeuticRange": "Concentración y tiempo-dependiente — monitorar según protocolo.",
+    "dilution": "EV: diluir en SF 0,9% o SG5%.",
+    "speed": "EV: infundir en 30–60 minutos.",
+    "commonAdverseEffects": [
+      "Diarrea",
+      "Náuseas",
+      "Cefalea",
+      "Sobrecarga de sodio (formulación EV)"
+    ],
+    "dangerousAdverseEffects": [
+      "Hipocalemia",
+      "Colitis por C. difficile",
+      "Resistencia inducible"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Oral (sobre): opción para ITU no complicada por ESBL.",
+      "EV: considerar como terapia de rescate para patógenos resistentes."
+    ],
+    "ref": "Sanford Guide 2025 / ESCMID / Goodman & Gilman",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": {
+          "dose": "3 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "3 g",
+          "unidade": "g"
+        },
+        "ev": {
+          "dose": "4–8 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "24 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "100 mg/kg",
+          "intervalo": "8/8h",
+          "doseMaxima": "16 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis habitual. Formulación oral generalmente utilizada para ITU."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "3 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "3 g",
+          "unidade": "g"
+        },
+        "ev": {
+          "dose": "4 g",
+          "intervalo": "12/12h",
+          "doseMaxima": "8 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50–75 mg/kg",
+          "intervalo": "12/12h",
+          "doseMaxima": "8 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Reducir frecuencia de la formulación intravenosa."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "3 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "3 g",
+          "unidade": "g"
+        },
+        "ev": {
+          "dose": "4 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Ajuste obligatorio de la formulación EV."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "3 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "3 g",
+          "unidade": "g"
+        },
+        "ev": {
+          "dose": "2–4 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25–50 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar sobrecarga de sodio y acumulación del fármaco."
+      },
+      "hemodialise": {
+        "vo": {
+          "dose": "3 g",
+          "intervalo": "Dose única",
+          "doseMaxima": "3 g",
+          "unidade": "g"
+        },
+        "ev": {
+          "dose": "2–4 g",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25–50 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "4 g/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis."
+      }
+    }
+  },
+  "name": {
+    "pt": "Fosfomicina",
+    "es": "Fosfomicina"
+  },
+  "keywords": [
+    "fosfomicina",
+    "monuril",
+    "fosfomicina trometamol ems",
+    "monurol",
+    "fosfomicina richet",
+    "antibiotico fosfonico"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

@@ -1,0 +1,340 @@
+{
+  "id": "daptomicina",
+  "category": "atb",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "pt": {
+    "name": "Daptomicina",
+    "class": "Lipopeptídeo cíclico",
+    "commercialNames": {
+      "br": [
+        "Cubicin",
+        "Daptomicina Genérica"
+      ],
+      "ar": [
+        "Cubicin",
+        "Daptomicina Genérica"
+      ]
+    },
+    "presentation": [
+      "Pó liofilizado EV: 350 mg, 500 mg"
+    ],
+    "dose": {
+      "adultoSkinSoft": "280 mg EV 1x/dia (4 mg/kg)",
+      "adultoBacteremia": "420 mg EV 1x/dia (6 mg/kg)",
+      "adultoEndocardite": "700 mg EV 1x/dia (10 mg/kg)",
+      "pediatrica": "560 mg EV 1x/dia (7–10 mg/kg)"
+    },
+    "doseKg": {
+      "standard": "4–10 mg/kg/dia EV conforme indicação",
+      "maxDose": "10 mg/kg/dia"
+    },
+    "therapeuticRange": "Concentração-dependente. Eficaz contra MRSA, VRSA, VRE (exceto pneumonia — inativado pelo surfactante).",
+    "dilution": "EV: diluir em SF 0,9% 50 mL.",
+    "speed": "EV: infundir em 30 minutos.",
+    "commonAdverseEffects": [
+      "Elevação de CPK",
+      "Mialgia",
+      "Constipação",
+      "Náuseas"
+    ],
+    "dangerousAdverseEffects": [
+      "Miopatia / rabdomiólise (risco aumentado com estatinas)",
+      "Neuropatia periférica",
+      "Eosinofilia pulmonar"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NÃO usar para pneumonia — daptomicina é inativada pelo surfactante pulmonar.",
+      "Monitorar CPK semanalmente; suspender se CPK > 5x LSN com sintomas."
+    ],
+    "ref": "IDSA MRSA Guidelines / Sanford Guide 2025 / Goodman & Gilman",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "4–10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10–12 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "7–10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dose conforme foco: pele (4 mg/kg), bacteremia (6 mg/kg), endocardite ou VRE (10–12 mg/kg)."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "4–10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10–12 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "7–10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Geralmente sem ajuste até ClCr 30 mL/min."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "4–10 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "10–12 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "7–10 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "10 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Estender intervalo para 48 horas (FDA label: ClCr < 30 mL/min)."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "4–10 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "10–12 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "7–10 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "10 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorar CPK, mialgia e rabdomiólise. Alto risco de toxicidade muscular nesta faixa."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "6–10 mg/kg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "10–12 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "7–10 mg/kg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "10 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar após hemodiálise. Monitorar CPK mais frequentemente nos dias de HD."
+      }
+    },
+    "therapeuticMonitoring": {
+      "required": true,
+      "target": "CPK basal e semanal; mais frequente se estatina, IRC ou sintomas musculares. Suspender se CPK > 5x LSN com sintomas.",
+      "monitoring": "Monitorar CPK, dor muscular, fraqueza, eosinofilia pulmonar e função renal.",
+      "notes": "Maior risco de miopatia quando associada a estatinas — suspender estatina se possível. Evitar para pneumonia: daptomicina é inativada pelo surfactante pulmonar."
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Risco de miopatia/rabdomiólise — monitorar CPK semanalmente. Risco amplificado com estatinas ou insuficiência renal. NÃO usar para pneumonia (inativada pelo surfactante pulmonar). Ajustar intervalo para 48h se ClCr < 30 mL/min."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Cubicin (daptomycin) 2023",
+        "EMA label Cubicin (daptomycin) 2022",
+        "IDSA MRSA Guidelines 2011 (updated)",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Bloco mesclado e melhorado: doseMaxima fgMaior50/fg30a50 expandida para 10–12 mg/kg; obs fgMaior50 com focos clínicos; fgMenor10.obs com rabdomiólise; hemodialise.pediatrica corrigida para 7–10 mg/kg; hemodialise.obs com monitoramento de CPK; therapeuticMonitoring enriquecido; safetyFlags e auditNotes adicionados."
+    }
+  },
+  "es": {
+    "name": "Daptomicina",
+    "class": "Lipopéptido cíclico",
+    "commercialNames": {
+      "br": [
+        "Cubicin",
+        "Daptomicina Genérica"
+      ],
+      "ar": [
+        "Cubicin",
+        "Daptomicina Genérica"
+      ]
+    },
+    "presentation": [
+      "Polvo liofilizado EV: 350 mg, 500 mg"
+    ],
+    "dose": {
+      "adultoSkinSoft": "280 mg EV 1 vez/día (4 mg/kg)",
+      "adultoBacteremia": "420 mg EV 1 vez/día (6 mg/kg)",
+      "adultoEndocardite": "700 mg EV 1 vez/día (10 mg/kg)",
+      "pediatrica": "560 mg EV 1 vez/día (7–10 mg/kg)"
+    },
+    "doseKg": {
+      "standard": "4–10 mg/kg/día EV según indicación",
+      "maxDose": "10 mg/kg/día"
+    },
+    "therapeuticRange": "Concentración-dependiente. Eficaz contra MRSA, VRSA, VRE (excepto neumonía — inactivado por surfactante).",
+    "dilution": "EV: diluir en SF 0,9% 50 mL.",
+    "speed": "EV: infundir en 30 minutos.",
+    "commonAdverseEffects": [
+      "Elevación de CPK",
+      "Mialgia",
+      "Constipación",
+      "Náuseas"
+    ],
+    "dangerousAdverseEffects": [
+      "Miopatía / rabdomiólisis (riesgo aumentado con estatinas)",
+      "Neuropatía periférica",
+      "Eosinofilia pulmonar"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "NO usar para neumonía — la daptomicina es inactivada por el surfactante pulmonar.",
+      "Monitorizar CPK semanalmente; suspender si CPK > 5x LSN con síntomas."
+    ],
+    "ref": "IDSA MRSA Guidelines / Sanford Guide 2025 / Goodman & Gilman",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "4–10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10–12 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "7–10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Dosis según foco: piel (4 mg/kg), bacteriemia (6 mg/kg), endocarditis o VRE (10–12 mg/kg)."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "4–10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10–12 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "7–10 mg/kg",
+          "intervalo": "24/24h",
+          "doseMaxima": "10 mg/kg/dia",
+          "unidade": "mg/kg"
+        },
+        "obs": "Generalmente sin ajuste hasta ClCr 30 mL/min."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "4–10 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "10–12 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "7–10 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "10 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Extender intervalo a 48 horas (FDA label: ClCr < 30 mL/min)."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "4–10 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "10–12 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "7–10 mg/kg",
+          "intervalo": "48/48h",
+          "doseMaxima": "10 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Monitorizar CPK, mialgia y rabdomiólisis. Alto riesgo de toxicidad muscular en este rango."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "6–10 mg/kg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "10–12 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "pediatrica": {
+          "dose": "7–10 mg/kg",
+          "intervalo": "Pós-HD",
+          "doseMaxima": "10 mg/kg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Administrar después de hemodiálisis. Monitorizar CPK con mayor frecuencia los días de HD."
+      }
+    },
+    "therapeuticMonitoring": {
+      "required": true,
+      "target": "CPK basal y semanal; más frecuente si estatina, ERC o síntomas musculares. Suspender si CPK > 5x LSN con síntomas.",
+      "monitoring": "Monitorizar CPK, dolor muscular, debilidad, eosinofilia pulmonar y función renal.",
+      "notes": "Mayor riesgo de miopatía cuando se asocia a estatinas — suspender estatina si es posible. Evitar para neumonía: daptomicina es inactivada por el surfactante pulmonar."
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Riesgo de miopatía/rabdomiólisis — monitorizar CPK semanalmente. Riesgo amplificado con estatinas o insuficiencia renal. NO usar para neumonía (inactivada por el surfactante pulmonar). Ajustar intervalo a 48h si ClCr < 30 mL/min."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Cubicin (daptomycin) 2023",
+        "EMA label Cubicin (daptomycin) 2022",
+        "IDSA MRSA Guidelines 2011 (updated)",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+      ],
+      "note": "Bloque fusionado y mejorado: doseMaxima fgMaior50/fg30a50 ampliada a 10–12 mg/kg; obs fgMaior50 con focos clínicos; fgMenor10.obs con rabdomiólisis; hemodialise.pediatrica corregida a 7–10 mg/kg; hemodialise.obs con monitoreo de CPK; therapeuticMonitoring enriquecido; safetyFlags y auditNotes añadidos."
+    }
+  },
+  "name": {
+    "pt": "Daptomicina",
+    "es": "Daptomicina"
+  },
+  "keywords": [
+    "daptomicina",
+    "cubicin",
+    "daptomicina generica",
+    "lipopeptideo ciclico"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

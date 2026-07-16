@@ -1,0 +1,280 @@
+{
+  "id": "espironolactona",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(16,185,129,0.12)",
+  "colorTxt": "#064E3B",
+  "pt": {
+    "name": "Espironolactona",
+    "class": "Antagonista do receptor mineralocorticoide (MRA) não seletivo — Diurético poupador de potássio",
+    "commercialNames": {
+      "br": [
+        "Aldactone",
+        "Espironolactona genérica"
+      ],
+      "ar": [
+        "Aldactone",
+        "Espironolactona genérica"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 25 mg",
+      "Comprimidos 50 mg",
+      "Comprimidos 100 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "ICFEr: iniciar 12,5–25 mg VO 1x/dia; manutenção 25–50 mg/dia. HAS resistente/Hiperaldosteronismo: 25–100 mg/dia. Cirrose/Ascite: 100–400 mg/dia.",
+      "adultoGrave": "DRC ou K⁺ > 4,5 mEq/L: iniciar 12,5 mg/dia com monitoração rigorosa de K⁺ e creatinina após 3–7 dias.",
+      "pediatricaPadrao": "Uso pediátrico off-label. Consultar especialista e protocolo institucional.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "100 mg/dia em ICFEr/cardio; até 400 mg/dia em hiperaldosteronismo/ascite sob supervisão."
+    },
+    "therapeuticRange": "Redução de mortalidade na ICFEr; K⁺ 4,0–5,0 mEq/L; controle de ascite; controle pressórico em HAS resistente",
+    "dilution": "Uso exclusivo via oral. Não diluir.",
+    "speed": "Administrar com alimentos para melhorar absorção. Reavaliar K⁺ e creatinina em 3–7 dias após início ou ajuste.",
+    "commonAdverseEffects": [
+      "Hipercalemia",
+      "Tontura",
+      "Hipotensão",
+      "Náuseas",
+      "Fadiga",
+      "Cãibras",
+      "Ginecomastia (efeito androgênico)",
+      "Disfunção sexual / redução da libido"
+    ],
+    "dangerousAdverseEffects": [
+      "Hipercalemia grave (arritmias fatais)",
+      "Parada cardíaca por hipercalemia",
+      "Lesão renal aguda"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "HIPERCALEMIA é o principal risco — monitorar K⁺ em 3–7 dias após início ou aumento de dose.",
+      "Interações graves: IECA, BRA, ARNI, suplementos de K⁺, alisquireno — risco de hipercalemia potencialmente fatal.",
+      "Efeitos endócrinos (androgênicos): ginecomastia, disfunção sexual, irregularidade menstrual — substituir por eplerenona se intolerância.",
+      "Trimetoprim e heparina também elevam K⁺ — atenção ao uso concomitante."
+    ],
+    "ref": "RALES Trial · ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Lexicomp · FDA label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sem ajuste renal obrigatório em ClCr ≥ 45 mL/min. Monitorar K⁺ e creatinina após início.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "25–50 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "100 mg/dia em ICFEr",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose habitual. Monitorar K⁺ e creatinina periodicamente."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "12,5–25 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "25 mg/dia (cautela)",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 30–50 mL/min: dose reduzida — iniciar 12,5 mg e monitorar K⁺ em 3–7 dias. Risco elevado de hipercalemia."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 30 mL/min: EVITAR. Se absolutamente necessário, usar 12,5 mg com monitoração diária de K⁺ e supervisão especializada."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 10 mL/min / anúria: CONTRAINDICADO. Risco de hipercalemia fatal."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálise: espironolactona parcialmente removida por HD, mas em pacientes dialíticos o risco de hipercalemia entre sessões é muito elevado. Evitar uso."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "hyperkalemiaRisk": true,
+      "endocrineEffects": true,
+      "pregnancyCaution": true,
+      "warning": "Principal risco é HIPERCALEMIA potencialmente fatal. Monitorar K⁺ 3–7 dias após início ou ajuste. Efeitos endócrinos (ginecomastia, disfunção sexual) são peculiares — substituir por eplerenona se intolerância."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "RALES Trial (NEJM 1999)",
+        "ESC Heart Failure Guidelines 2021/2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "KDIGO Guidelines",
+        "Lexicomp 2026",
+        "FDA label"
+      ],
+      "note": "Um dos quatro pilares da ICFEr (RALES: redução de 30% na mortalidade). MRA não seletivo — efeitos endócrinos por atividade androgênica. Em cirrose/ascite: doses maiores (100–400 mg). Alternativa mais seletiva: eplerenona."
+    }
+  },
+  "es": {
+    "name": "Espironolactona",
+    "class": "Antagonista del receptor mineralocorticoide (MRA) no selectivo — Diurético ahorrador de potasio",
+    "commercialNames": {
+      "br": [
+        "Aldactone",
+        "Espironolactona genérica"
+      ],
+      "ar": [
+        "Aldactone",
+        "Espironolactona genérica"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 25 mg",
+      "Comprimidos 50 mg",
+      "Comprimidos 100 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "ICFEr: iniciar 12,5–25 mg VO 1 vez/día; mantenimiento 25–50 mg/día. HTA resistente/Hiperaldosteronismo: 25–100 mg/día. Cirrosis/Ascitis: 100–400 mg/día.",
+      "adultoGrave": "ERC o K⁺ > 4,5 mEq/L: iniciar 12,5 mg/día con monitorización rigurosa de K⁺ y creatinina tras 3–7 días.",
+      "pediatricaPadrao": "Uso pediátrico off-label. Consultar especialista y protocolo institucional.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "100 mg/día en ICFEr/cardio; hasta 400 mg/día en hiperaldosteronismo/ascitis bajo supervisión."
+    },
+    "therapeuticRange": "Reducción de mortalidad en ICFEr; K⁺ 4,0–5,0 mEq/L; control de ascitis; control tensional en HTA resistente",
+    "dilution": "Uso exclusivo vía oral. No diluir.",
+    "speed": "Administrar con alimentos para mejorar absorción. Reevaluar K⁺ y creatinina en 3–7 días tras inicio o ajuste.",
+    "commonAdverseEffects": [
+      "Hiperpotasemia",
+      "Mareos",
+      "Hipotensión",
+      "Náuseas",
+      "Fatiga",
+      "Calambres",
+      "Ginecomastia (efecto androgénico)",
+      "Disfunción sexual / reducción de la libido"
+    ],
+    "dangerousAdverseEffects": [
+      "Hiperpotasemia grave (arritmias fatales)",
+      "Paro cardíaco por hiperpotasemia",
+      "Lesión renal aguda"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "HIPERPOTASEMIA es el principal riesgo — monitorizar K⁺ en 3–7 días tras inicio o aumento de dosis.",
+      "Interacciones graves: IECA, ARA-II, ARNI, suplementos de K⁺, aliskireno — riesgo de hiperpotasemia potencialmente fatal.",
+      "Efectos endocrinos (androgénicos): ginecomastia, disfunción sexual, irregularidad menstrual — sustituir por eplerenona si intolerancia.",
+      "Trimetoprim y heparina también elevan K⁺ — atención al uso concomitante."
+    ],
+    "ref": "RALES Trial · ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Lexicomp · FDA label",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Sin ajuste renal obligatorio con ClCr ≥ 45 mL/min. Monitorizar K⁺ y creatinina tras inicio.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "25–50 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "100 mg/dia em ICFEr",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis habitual. Monitorizar K⁺ y creatinina periódicamente."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "12,5–25 mg",
+          "intervalo": "1x/dia",
+          "doseMaxima": "25 mg/dia (cautela)",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr 30–50 mL/min: dosis reducida — iniciar 12,5 mg y monitorizar K⁺ en 3–7 días. Riesgo elevado de hiperpotasemia."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 30 mL/min: EVITAR. Si absolutamente necesario, usar 12,5 mg con monitorización diaria de K⁺ y supervisión especializada."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "ClCr < 10 mL/min / anuria: CONTRAINDICADO. Riesgo de hiperpotasemia fatal."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Hemodiálisis: espironolactona parcialmente removida por HD, pero en pacientes dializados el riesgo de hiperpotasemia entre sesiones es muy elevado. Evitar uso."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": false,
+      "avBlockRisk": false,
+      "hyperkalemiaRisk": true,
+      "endocrineEffects": true,
+      "pregnancyCaution": true,
+      "warning": "El principal riesgo es HIPERPOTASEMIA potencialmente fatal. Monitorizar K⁺ 3–7 días tras inicio o ajuste. Efectos endocrinos (ginecomastia, disfunción sexual) son peculiares — sustituir por eplerenona si intolerancia."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "RALES Trial (NEJM 1999)",
+        "ESC Heart Failure Guidelines 2021/2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "KDIGO Guidelines",
+        "Lexicomp 2026",
+        "FDA label"
+      ],
+      "note": "Uno de los cuatro pilares de la ICFEr (RALES: reducción del 30% en mortalidad). MRA no selectivo — efectos endocrinos por actividad androgénica. En cirrosis/ascitis: dosis mayores (100–400 mg). Alternativa más selectiva: eplerenona."
+    }
+  },
+  "name": {
+    "pt": "Espironolactona",
+    "es": "Espironolactona"
+  },
+  "keywords": [
+    "espironolactona",
+    "aldactone",
+    "espironolactona generica",
+    "antagonista do receptor mineralocorticoide (mra) nao seletivo — diuretico poupador de potassio"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}

@@ -1,0 +1,341 @@
+{
+  "id": "ceftazidima_avibactam",
+  "category": "atb",
+  "icon": "🧬",
+  "color": "rgba(220,38,38,0.15)",
+  "colorTxt": "#DC2626",
+  "pt": {
+    "name": "Ceftazidima + Avibactam",
+    "class": "Cefalosporina de 3ª geração + Inibidor de beta-lactamase (anti-KPC, OXA-48, MBL parcial)",
+    "commercialNames": {
+      "br": [
+        "Avycaz",
+        "Zavicefta"
+      ],
+      "ar": [
+        "Avycaz",
+        "Zavicefta"
+      ]
+    },
+    "presentation": [
+      "Pó para solução injetável EV: 2 g/0,5 g (ceftazidima/avibactam) por frasco"
+    ],
+    "dose": {
+      "adultoEV": "2,5 g EV 8/8h (infusão 120 min)",
+      "pediatrica": "2500 mg EV 8/8h (ceftazidima 50 mg/kg/dose)"
+    },
+    "doseKg": {
+      "pediatrica": "50 mg/kg (ceftazidima) + 12,5 mg/kg (avibactam) EV 8/8h (máx 2,5 g/dose)"
+    },
+    "mechanism": "Ceftazidima liga-se às PBPs inibindo síntese da parede celular. Avibactam inibe beta-lactamases classes A (KPC, ESBL), C (AmpC) e algumas D (OXA-48), restaurando atividade da ceftazidima contra patógenos produtores de carbapenemase.",
+    "onset": "EV: pico sérico ao final da infusão de 120 min.",
+    "halfLife": "Meia-vida 2,7 h (ceftazidima); 2,7 h (avibactam). Eliminação renal >80%.",
+    "therapeuticRange": "T>CIM para ceftazidima; AUC/CIM para avibactam. Infusão prolongada pode otimizar T>CIM.",
+    "dilution": "Reconstituir em 10 mL de SF; diluir em 50–250 mL de SF 0,9% ou SG 5%. Estável 12h em temperatura ambiente.",
+    "speed": "Infundir em 120 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas e vômitos",
+      "Diarreia",
+      "Dor abdominal",
+      "Ansiedade / tontura",
+      "Elevação de transaminases"
+    ],
+    "dangerousAdverseEffects": [
+      "Colite por C. difficile",
+      "Anafilaxia / hipersensibilidade grave",
+      "Convulsões (especialmente em insuficiência renal)",
+      "Encefalopatia (raro)"
+    ],
+    "contraindications": [
+      "Hipersensibilidade a ceftazidima, avibactam, cefalosporinas ou penicilinas"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "INDICAÇÃO RESTRITA: Enterobacterales produtores de KPC, OXA-48 e algumas MBL — confirmação microbiológica obrigatória.",
+      "Ajuste renal rigoroso obrigatório — eliminação >80% renal; subdose aumenta risco de resistência.",
+      "NÃO cobre metalo-beta-lactamases tipo NDM/VIM/IMP — associar aztreonam se suspeita de MBL."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Avycaz / IDSA MDR Guidelines / EUCAST 2024",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "2,5 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "7,5 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg (ceftazidima) + 12,5 mg/kg (avibactam)",
+          "intervalo": "8/8h",
+          "doseMaxima": "2,5 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "CrCl >50 mL/min: dose habitual. Infusão EV em 120 min obrigatória (otimiza T>CIM da ceftazidima). Monitorar CrCl diariamente em pacientes com função renal instável (sépticos, em vasopressores ou com nefrotóxico concomitante). Uso guiado por cultura, antibiograma e infectologia."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,25 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "3,75 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25 mg/kg de ceftazidima + 6,25 mg/kg de avibactam",
+          "intervalo": "8/8h",
+          "doseMaxima": "1,25 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Corte oficial FDA label: CrCl 31–50 mL/min → 1,25 g 8/8h. Manter infusão em 120 min obrigatoriamente. Monitorar CrCl diariamente em pacientes instáveis — piora de função renal pode exigir reclassificação para faixa inferior. Subdose favorece seleção de resistência emergente de avibactam."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1,88 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "20 mg/kg de ceftazidima + 5 mg/kg de avibactam",
+          "intervalo": "12/12h",
+          "doseMaxima": "940 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Corte oficial FDA label: CrCl 16–30 mL/min → 940 mg 12/12h. Ajuste obrigatório para manter exposição farmacodinâmica de avibactam e prevenir resistência emergente durante a terapia. Manter infusão em 120 min. Monitorar função renal diariamente."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "20 mg/kg de ceftazidima + 5 mg/kg de avibactam",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Corte oficial FDA label: CrCl 6–15 mL/min → 940 mg 24/24h. Para CrCl ≤5 mL/min (sem diálise), usar somente com protocolo especializado de infectologia. Monitorar neurotoxicidade (convulsões, encefalopatia, mioclonias) — risco amplificado por acumulação renal. Resposta clínica pode ser subótima — considerar nível sérico de avibactam se disponível."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "20 mg/kg de ceftazidima + 5 mg/kg de avibactam",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Corte oficial FDA label: CrCl ≤ 5 mL/min (incluindo HD) → 940 mg 24/24h. Ceftazidima e avibactam são hemodialisáveis — administrar após hemodiálise nos dias de HD. Dose suplementar pode ser necessária após sessão prolongada (>4h) ou de alto fluxo. Monitorar neurotoxicidade (convulsões, encefalopatia) nos dias sem diálise."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Risco de falha terapêutica e seleção de resistência se a dose renal for subestimada. Monitorar CrCl diariamente em função renal instável — reclassificar faixa se houver piora. Monitorar nível sérico de avibactam se disponível (alvo AUC/MIC). Confirmar KPC/OXA-48 por PCR/MALDI antes do início. Não reduzir infusão abaixo de 120 min."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Avycaz (ceftazidime-avibactam) 2023",
+        "EMA label Zavicefta (ceftazidime-avibactam) 2023",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "IDSA MDR Gram-Negative Guidelines 2023",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "EUCAST 2024"
+      ],
+      "note": "Bloco mesclado e melhorado: cortes renais oficiais do FDA label (CrCl 31–50 / 16–30 / 6–15 / ≤5) preservados. Doses pediátricas corrigidas para incluir ambos os componentes (ceftazidima + avibactam) em todas as faixas. Obs enriquecidas com monitoramento diário de CrCl, neurotoxicidade, dose pós-HD e risco de resistência emergente. safetyFlags e warning expandidos. EMA label, Johns Hopkins e Lexicomp adicionados às fontes."
+    }
+  },
+  "es": {
+    "name": "Ceftazidima + Avibactam",
+    "class": "Cefalosporina de 3ª generación + Inhibidor de beta-lactamasa (anti-KPC, OXA-48, MBL parcial)",
+    "commercialNames": {
+      "br": [
+        "Avycaz",
+        "Zavicefta"
+      ],
+      "ar": [
+        "Avycaz",
+        "Zavicefta"
+      ]
+    },
+    "presentation": [
+      "Polvo para solución inyectable EV: 2 g/0,5 g (ceftazidima/avibactam) por frasco"
+    ],
+    "dose": {
+      "adultoEV": "2,5 g EV 8/8h (infusão 120 min)",
+      "pediatrica": "2500 mg EV cada 8h (ceftazidima 50 mg/kg/dosis)"
+    },
+    "doseKg": {
+      "pediatrica": "50 mg/kg (ceftazidima) + 12,5 mg/kg (avibactam) EV cada 8h (máx 2,5 g/dosis)"
+    },
+    "mechanism": "Ceftazidima se une a las PBPs inhibiendo la síntesis de pared celular. Avibactam inhibe beta-lactamasas clases A (KPC, ESBL), C (AmpC) y algunas D (OXA-48), restaurando la actividad de ceftazidima frente a patógenos productores de carbapenemasa.",
+    "onset": "EV: pico sérico al final de la infusión de 120 min.",
+    "halfLife": "Semivida 2,7 h (ceftazidima); 2,7 h (avibactam). Eliminación renal >80%.",
+    "therapeuticRange": "T>CIM para ceftazidima; AUC/CIM para avibactam. Infusión prolongada puede optimizar T>CIM.",
+    "dilution": "Reconstituir en 10 mL de SF; diluir en 50–250 mL de SF 0,9% o SG 5%. Estable 12h a temperatura ambiente.",
+    "speed": "Infundir en 120 minutos.",
+    "commonAdverseEffects": [
+      "Náuseas y vómitos",
+      "Diarrea",
+      "Dolor abdominal",
+      "Ansiedad / mareos",
+      "Elevación de transaminasas"
+    ],
+    "dangerousAdverseEffects": [
+      "Colitis por C. difficile",
+      "Anafilaxia / hipersensibilidad grave",
+      "Convulsiones (especialmente en insuficiencia renal)",
+      "Encefalopatía (raro)"
+    ],
+    "contraindications": [
+      "Hipersensibilidad a ceftazidima, avibactam, cefalosporinas o penicilinas"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "INDICACIÓN RESTRINGIDA: Enterobacterales productores de KPC, OXA-48 y algunas MBL — confirmación microbiológica obligatoria.",
+      "Ajuste renal riguroso obligatorio — eliminación >80% renal; infradosis aumenta riesgo de resistencia.",
+      "NO cubre metalo-beta-lactamasas tipo NDM/VIM/IMP — asociar aztreonam si sospecha de MBL."
+    ],
+    "ref": "Sanford Guide 2025 / FDA label Avycaz / IDSA MDR Guidelines / EUCAST 2024",
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": true,
+      "fgMaior50": {
+        "vo": null,
+        "ev": {
+          "dose": "2,5 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "7,5 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "50 mg/kg (ceftazidima) + 12,5 mg/kg (avibactam)",
+          "intervalo": "8/8h",
+          "doseMaxima": "2,5 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "CrCl >50 mL/min: dosis habitual. Infusión IV en 120 min obligatoria (optimiza T>CIM de ceftazidima). Monitorizar CrCl diariamente en pacientes con función renal inestable (sépticos, en vasopresores o con nefrotóxico concomitante). Uso guiado por cultivo, antibiograma e infectología."
+      },
+      "fg30a50": {
+        "vo": null,
+        "ev": {
+          "dose": "1,25 g",
+          "intervalo": "8/8h",
+          "doseMaxima": "3,75 g/dia",
+          "unidade": "g"
+        },
+        "pediatrica": {
+          "dose": "25 mg/kg de ceftazidima + 6,25 mg/kg de avibactam",
+          "intervalo": "8/8h",
+          "doseMaxima": "1,25 g/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Corte oficial FDA label: CrCl 31–50 mL/min → 1,25 g 8/8h. Mantener infusión en 120 min obligatoriamente. Monitorizar CrCl diariamente en pacientes inestables — deterioro de función renal puede exigir reclasificación a franja inferior. Infradosis favorece selección de resistencia emergente de avibactam."
+      },
+      "fg10a30": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "12/12h",
+          "doseMaxima": "1,88 g/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "20 mg/kg de ceftazidima + 5 mg/kg de avibactam",
+          "intervalo": "12/12h",
+          "doseMaxima": "940 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Corte oficial FDA label: CrCl 16–30 mL/min → 940 mg 12/12h. Ajuste obligatorio para mantener exposición farmacodinámica de avibactam y prevenir resistencia emergente durante la terapia. Mantener infusión en 120 min. Monitorizar función renal diariamente."
+      },
+      "fgMenor10": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "20 mg/kg de ceftazidima + 5 mg/kg de avibactam",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Corte oficial FDA label: CrCl 6–15 mL/min → 940 mg 24/24h. Para CrCl ≤5 mL/min (sin diálisis), usar solo con protocolo especializado de infectología. Monitorizar neurotoxicidad (convulsiones, encefalopatía, mioclonías) — riesgo amplificado por acumulación renal. Respuesta clínica puede ser subóptima — considerar nivel sérico de avibactam si disponible."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": {
+          "dose": "940 mg",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dia",
+          "unidade": "mg"
+        },
+        "pediatrica": {
+          "dose": "20 mg/kg de ceftazidima + 5 mg/kg de avibactam",
+          "intervalo": "24/24h",
+          "doseMaxima": "940 mg/dose",
+          "unidade": "mg/kg"
+        },
+        "obs": "Corte oficial FDA label: CrCl ≤ 5 mL/min (incluida HD) → 940 mg 24/24h. Ceftazidima y avibactam son hemodializables — administrar después de hemodiálisis en días de HD. Puede requerirse dosis suplementaria tras sesión prolongada (>4h) o de alto flujo. Monitorizar neurotoxicidad (convulsiones, encefalopatía) en días sin diálisis."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": true,
+      "neurotoxicityRisk": true,
+      "qtRisk": false,
+      "hepatotoxicityRisk": false,
+      "requiresCultureGuidance": true,
+      "warning": "Riesgo de falla terapéutica y selección de resistencia si la dosis renal es subestimada. Monitorizar CrCl diariamente en función renal inestable — reclasificar franja si hay deterioro. Monitorizar nivel sérico de avibactam si disponible (objetivo AUC/MIC). Confirmar KPC/OXA-48 por PCR/MALDI antes del inicio. No reducir infusión por debajo de 120 min."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review",
+      "sourcePriority": [
+        "FDA label Avycaz (ceftazidime-avibactam) 2023",
+        "EMA label Zavicefta (ceftazidime-avibactam) 2023",
+        "Sanford Guide to Antimicrobial Therapy 2025",
+        "IDSA MDR Gram-Negative Guidelines 2023",
+        "Johns Hopkins ABX Guide 2024",
+        "UpToDate 2024",
+        "Lexicomp Online 2025",
+        "EUCAST 2024"
+      ],
+      "note": "Bloque fusionado y mejorado: cortes renales oficiales del FDA label (CrCl 31–50 / 16–30 / 6–15 / ≤5) preservados. Dosis pediátricas corregidas para incluir ambos componentes (ceftazidima + avibactam) en todas las franjas. Obs enriquecidas con monitoreo diario de CrCl, neurotoxicidad, dosis post-HD y riesgo de resistencia emergente. safetyFlags y warning expandidos. EMA label, Johns Hopkins y Lexicomp añadidos a las fuentes."
+    }
+  },
+  "name": {
+    "pt": "Ceftazidima + Avibactam",
+    "es": "Ceftazidima + Avibactam"
+  },
+  "keywords": [
+    "ceftazidima_avibactam",
+    "ceftazidima + avibactam",
+    "avycaz",
+    "zavicefta",
+    "cefalosporina de 3ª geracao + inibidor de beta-lactamase (anti-kpc, oxa-48, mbl parcial)"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "antimicrobianos.js"
+}

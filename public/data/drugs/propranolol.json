@@ -1,0 +1,767 @@
+{
+  "id": "propranolol",
+  "category": "cardio",
+  "icon": "💊",
+  "color": "rgba(239,68,68,0.13)",
+  "colorTxt": "#991B1B",
+  "pt": {
+    "name": "Propranolol",
+    "class": "Betabloqueador não seletivo",
+    "commercialNames": {
+      "br": [
+        "Inderal",
+        "Rebaten",
+        "Propranolol genérico"
+      ],
+      "ar": [
+        "Inderal",
+        "Propranolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 10 mg, 40 mg, 80 mg",
+      "Cápsulas de liberação prolongada 80 mg, 120 mg, 160 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "10–40 mg VO 8/8h ou 12/12h conforme indicação; liberação prolongada 80–160 mg 1x/dia",
+      "adultoGrave": "Sem indicação de formulação EV rotineira. Ajustar dose VO conforme FC, PA e função hepática.",
+      "pediatricaPadrao": "Não rotineiramente estabelecida; uso off-label em hemangiomas infantis",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "Até 320 mg/dia em uso cardiovascular; varia conforme indicação"
+    },
+    "therapeuticRange": "Controle da FC conforme contexto; redução de sintomas adrenérgicos, angina e pressão portal",
+    "dilution": "Uso exclusivo via oral (formulação padrão). Não diluir rotineiramente.",
+    "speed": "Administrar com alimentos para reduzir variabilidade de absorção.",
+    "commonAdverseEffects": [
+      "Fadiga",
+      "Tontura",
+      "Bradicardia",
+      "Hipotensão",
+      "Extremidades frias",
+      "Distúrbios do sono e pesadelos",
+      "Disfunção sexual"
+    ],
+    "dangerousAdverseEffects": [
+      "Broncoespasmo",
+      "Bloqueio AV",
+      "Bradicardia grave",
+      "Choque cardiogênico",
+      "Piora de insuficiência cardíaca descompensada",
+      "Hipoglicemia mascarada em diabéticos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "Não suspender abruptamente — risco de angina rebote e eventos coronarianos.",
+      "Betabloqueador NÃO seletivo: contraindicado em asma grave e broncoespasmo ativo.",
+      "Metabolismo hepático (CYP2D6): titular com extrema cautela em cirrose ou insuficiência hepática.",
+      "Inibe conversão periférica de T4 → T3 em altas doses — relevante em hipertireoidismo e tireotoxicose.",
+      "Indicações extracardíacas: profilaxia de varizes esofágicas (Baveno VII), tremor essencial, enxaqueca, ansiedade de performance."
+    ],
+    "ref": "ESC Hypertension Guidelines 2023 · ESC Chronic Coronary Syndrome Guidelines 2023 · American Headache Society 2021 · ATA Hyperthyroidism Guidelines · AASLD Portal Hypertension · Goodman & Gilman 14ª ed. · Lexicomp Online 2026 · Micromedex 2026 · FDA label · EMA label",
+    "pharmacologicClass": "Betabloqueador não seletivo lipofílico de primeira geração",
+    "mechanism": "Bloqueia competitivamente receptores β1 (cardíacos) e β2 (brônquicos, vasculares, hepáticos), reduzindo FC, contratilidade, débito cardíaco, secreção de renina e PA. O bloqueio β2 reduz tremores e inibe parcialmente a conversão periférica de T4→T3 em altas doses. Elevada lipossolubilidade permite atravessar a BHE, justificando eficácia em ansiedade, enxaqueca e tremor.",
+    "pharmacodynamics": "Reduz PA, FC, angina e pressão portal (redução do DC → menor fluxo esplâncnico). Alta lipossolubilidade: penetração intensa no SNC → eficaz em tremor essencial, ansiedade de performance, profilaxia de enxaqueca e hipertireoidismo, porém aumenta pesadelos, depressão e disfunção sexual. Inibe conversão periférica de T4→T3 em altas doses — clinicamente relevante em tempestade tireoidiana.",
+    "onset": "Início do efeito entre 30–60 minutos por via oral. Efeito anti-hipertensivo máximo após 1–2 semanas de uso regular.",
+    "pharmacokinetics": {
+      "absorption": "Absorção oral rápida e quase completa (>90%). Intenso metabolismo de primeira passagem hepático reduz biodisponibilidade a ~25%. Alimento aumenta biodisponibilidade em ~50% — administrar com alimento para consistência.",
+      "bioavailability": "~25% (variável por metabolismo de primeira passagem; polimorfismo CYP2D6 pode aumentar até 2×)",
+      "proteinBinding": "80–95% (alta ligação — não dialisável)",
+      "vd": "~4 L/kg (lipofílico — ampla distribuição tecidual incluindo SNC)",
+      "metabolism": "Hepático intenso: CYP2D6 (principal), CYP1A2 e CYP2C19. Produz metabólito ativo: 4-hidroxipropranolol (atividade β-bloqueante). Polimorfismo CYP2D6: metabolizadores lentos têm exposição até 5× maior — atentar para bradicardia e hipotensão.",
+      "halfLife": "3–6 horas (formulação imediata); 8–10 horas (liberação prolongada)",
+      "elimination": "Predominantemente hepática; metabólitos eliminados pelos rins (<1% inalterado na urina). Sem necessidade de ajuste renal habitual.",
+      "dialysability": "Não removido por hemodiálise (alta ligação proteica 80–95% + lipofília). Sem suplementação pós-HD."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensão arterial sistêmica",
+        "Angina estável crônica",
+        "Controle da frequência cardíaca (FA, flutter atrial, TPSV)",
+        "Arritmias supraventriculares",
+        "Profilaxia secundária do infarto do miocárdio"
+      ],
+      "offLabel": [
+        "Tremor essencial (primeira escolha pela eficácia via bloqueio β2)",
+        "Ansiedade de performance / fobia social situacional",
+        "Profilaxia de enxaqueca (betabloqueador mais estudado para enxaqueca)",
+        "Hipertireoidismo sintomático e tempestade tireoidiana (inibe T4→T3)",
+        "Profilaxia secundária de varizes esofágicas (reduz pressão portal)",
+        "Feocromocitoma (sempre após bloqueio α completo — nunca em monoterapia)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Asma brônquica moderada ou grave / broncoespasmo ativo",
+        "DPOC grave com broncoespasmo reversível",
+        "Choque cardiogênico",
+        "Bradicardia sinusal sintomática (FC < 50 bpm)",
+        "Bloqueio AV de 2º grau (Mobitz II) ou 3º grau sem marcapasso",
+        "ICC agudamente descompensada",
+        "Feocromocitoma sem bloqueio α prévio (risco de crise hipertensiva por vasoconstrição α paradoxal)"
+      ],
+      "relative": [
+        "DPOC moderado estável (bloqueio β2 pode agravar obstrução — preferir betabloqueador cardioseletivo)",
+        "Diabetes mellitus insulinodependente (mascaramento de toda sintomatologia adrenérgica da hipoglicemia)",
+        "Insuficiência hepática grave (Child-Pugh C): exposição muito aumentada por redução do metabolismo de primeira passagem",
+        "Fenômeno de Raynaud / doença vascular periférica grave",
+        "Depressão maior (agrava sintomas neuropsiquiátricos por penetração no SNC)",
+        "Miastenia grave (pode agravar fraqueza muscular por bloqueio β2 neuromuscular)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamil EV / Diltiazem EV",
+          "mechanism": "Dupla inibição nodal AV (dromotrópico negativo aditivo)",
+          "consequence": "Bloqueio AV completo, parada cardíaca",
+          "management": "NÃO associar EV. Via oral com monitorização especializada apenas."
+        },
+        {
+          "drug": "Fenoxibenzamina / Fentolamina sem bloqueio α prévio em feocromocitoma",
+          "mechanism": "Bloqueio β sem bloqueio α → vasoconstrição α periférica paradoxal mediada por catecolaminas do tumor",
+          "consequence": "Crise hipertensiva grave e potencialmente fatal",
+          "management": "Em feocromocitoma: bloqueio α completo obrigatório (fenoxibenzamina 10–14 dias) ANTES de iniciar propranolol."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Inibição de CYP2D6/CYP1A2 pela amiodarona + efeito bradicardizante e bloqueio AV aditivos",
+          "consequence": "Bradicardia grave, bloqueio AV de alto grau, colapso cardiovascular",
+          "management": "Monitorar ECG continuamente. Reduzir dose de propranolol. Considerar substituto menos dependente de CYP2D6 (bisoprolol)."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efeito cronotrópico e dromotrópico negativo aditivo",
+          "consequence": "Bradicardia e bloqueio AV",
+          "management": "Monitorar FC e ECG. Nível terapêutico da digoxina: 0,5–0,9 ng/mL."
+        },
+        {
+          "drug": "Clonidina",
+          "mechanism": "Retirada abrupta da clonidina em uso concomitante → hipertensão rebote grave",
+          "consequence": "Crise hipertensiva grave",
+          "management": "Descontinuar propranolol vários dias antes de suspender clonidina."
+        },
+        {
+          "drug": "Insulina / sulfonilureias",
+          "mechanism": "Mascaramento de TODA sintomatologia adrenérgica da hipoglicemia (β1 e β2) — apenas sudorese persiste",
+          "consequence": "Hipoglicemia grave não reconhecida — pior que betabloqueadores cardioseletivos",
+          "management": "Monitorar glicemia com maior frequência. Preferir betabloqueador cardioseletivo em diabéticos quando possível."
+        },
+        {
+          "drug": "Epinefrina (adrenalina)",
+          "mechanism": "Bloqueio β com β2 livre → vasoconstrição α periférica sem vasodilatação β2 → hipertensão paradoxal + bradicardia reflexa",
+          "consequence": "Hipertensão grave paradoxal e bradicardia reflexa",
+          "management": "Evitar epinefrina em pacientes em propranolol. Se anestesia local necessária, usar sem vasoconstritor ou com vasoconstritor alternativo."
+        },
+        {
+          "drug": "Inibidores de CYP2D6 (fluoxetina, paroxetina, quinidina, ritonavir)",
+          "mechanism": "Inibição do metabolismo hepático do propranolol via CYP2D6 → aumento da exposição em até 2–5×",
+          "consequence": "Bradicardia, hipotensão e broncoespasmo por sobredosagem relativa",
+          "management": "Reduzir dose de propranolol ao iniciar inibidor de CYP2D6. Monitorar FC e PA rigorosamente."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, diclofenaco)",
+          "mechanism": "Antagonismo do efeito anti-hipertensivo por inibição de prostaglandinas vasodilatadoras",
+          "consequence": "Redução do controle pressórico",
+          "management": "Monitorar PA. Preferir paracetamol."
+        },
+        {
+          "drug": "Álcool",
+          "mechanism": "Inibição parcial de CYP2C19 pelo álcool + efeito hipotensor aditivo",
+          "consequence": "Hipotensão e bradicardia excessivas",
+          "management": "Orientar sobre restrição de álcool durante o tratamento."
+        },
+        {
+          "drug": "Indutores de CYP1A2 (rifampicina, tabagismo ativo)",
+          "mechanism": "Indução do metabolismo hepático do propranolol → redução dos níveis plasmáticos",
+          "consequence": "Perda do efeito betabloqueador",
+          "management": "Monitorar FC e PA. Aumentar dose conforme resposta clínica. Tabagismo: considerar aumento de dose em fumantes."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC e PA em repouso",
+        "ECG (intervalo PR, ritmo)",
+        "Função hepática (AST/ALT) — metabolismo hepático intenso CYP2D6/1A2/2C19",
+        "Histórico de asma/DPOC (contraindicação relativa/absoluta)",
+        "Glicemia basal em diabéticos",
+        "Avaliação de humor (depressão) — especialmente em uso de longa data"
+      ],
+      "followUp": [
+        "FC alvo (angina/HTA: 55–70 bpm; profilaxia enxaqueca: 55–65 bpm)",
+        "PA a cada consulta",
+        "Sintomas respiratórios (broncoespasmo, dispneia aos esforços)",
+        "Sintomas neuropsiquiátricos (pesadelos, depressão, distúrbios do sono)",
+        "Função hepática semestral em uso crônico ou em hepatopatia conhecida",
+        "ECG se sintomas de bloqueio ou arritmia"
+      ],
+      "icc": [
+        "Propranolol NÃO é indicado para ICFEr — monitorar sinais de descompensação se em uso por outra indicação (arritmia, varizes)",
+        "Peso diário e edemas periféricos",
+        "Classe funcional NYHA"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave",
+        "Hipotensão",
+        "Bloqueio AV",
+        "Broncoespasmo (pelo bloqueio β2 — mais grave que com betabloqueadores seletivos)",
+        "Convulsões (penetração intensa no SNC por lipofília)",
+        "Coma (raro mas possível em overdose maciça)",
+        "Hipoglicemia",
+        "Choque cardiogênico"
+      ],
+      "management": [
+        "1. Carvão ativado se ingesta recente < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia; repetir conforme necessário (máx 3 mg)",
+        "3. Glucagon 5–10 mg IV bolus → infusão 1–5 mg/h (antídoto específico — ativa adenilciclase independente de β1)",
+        "4. Broncodilatadores inalatórios (salbutamol/albuterol) em altas doses para broncoespasmo resistente",
+        "5. Emulsão lipídica IV 20% — ALTA EFICÁCIA neste caso (propranolol é lipofílico e altamente ligado a proteínas)",
+        "6. Dobutamina ou isoproterenol em hipotensão refratária",
+        "7. Marcapasso transcutâneo ou transvenoso em BAV refratário",
+        "8. Hemodiálise NÃO é eficaz (alta ligação proteica 80–95% + lipofília)",
+        "9. ECMO em colapso circulatório refratário"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "IR: sem ajuste renal necessário — metabolismo predominantemente hepático. Metabólitos renalmente excretados: acúmulo possível em IR grave, mas sem impacto clínico relevante estabelecido. Monitorar tolerância.",
+      "obesity": "Obesidade: amplo Vd (~4 L/kg) — distribuição tecidual não é afetada significativamente. Titular pela resposta clínica.",
+      "geriatrics": "Idoso: maior sensibilidade farmacodinâmica e risco de efeitos centrais (pesadelos, depressão, confusão) por alta lipofília e penetração no SNC. Iniciar com 10 mg 12/12h e titular lentamente. Alto risco de hipotensão ortostática e quedas.",
+      "pregnancy": "Gestação: pode causar bradicardia fetal, RCIU e hipoglicemia neonatal. Categoria FDA D (risco fetal documentado). Usar apenas se benefício superar risco. Em HTA gestacional, labetalol é preferido. Se mantido, interromper 48–72h antes do parto.",
+      "lactation": "Lactação: excretado no leite materno. Relação leite/plasma ~0,5 (menor que atenolol ~2–3 e metoprolol ~3). Monitorar lactente para bradicardia e hipoglicemia.",
+      "hepaticImpairment": "Hepatopatia: CRÍTICO — metabolismo de primeira passagem intenso. Em cirrose leve-moderada (Child-Pugh A–B): biodisponibilidade pode dobrar (primeiro passo reduzido). Iniciar com 10 mg e titular com cautela extrema. Child-Pugh C: evitar ou usar dose mínima com monitorização intensiva.",
+      "dpoc": "DPOC: propranolol é NÃO seletivo — bloqueio β2 aumenta resistência das vias aéreas. CONTRAINDICADO em DPOC com broncoespasmo reversível. Se betabloqueador for necessário em DPOC + ICC, usar bisoprolol (alta seletividade β1 ~75:1)."
+    },
+    "hepaticDose": {
+      "required": true,
+      "message": "Hepatopatia: metabolismo hepático intenso (CYP2D6/1A2/2C19) com efeito de primeiro passo. Em cirrose (Child-Pugh A–B): biodisponibilidade pode aumentar 2×. Iniciar com 10 mg e titular com cautela. Child-Pugh C: considerar alternativa; se imprescindível, dose inicial 5–10 mg com monitorização intensiva de FC e PA."
+    },
+    "patientEducation": [
+      "Nunca interromper abruptamente — risco de angina rebote, IAM e morte súbita.",
+      "Tomar com alimentos para reduzir variabilidade de absorção e pico plasmático.",
+      "Evitar automedicação com descongestionantes nasais — podem conter simpaticomiméticos.",
+      "Pacientes asmáticos: comunicar IMEDIATAMENTE qualquer piora de falta de ar ou chiado no peito.",
+      "Diabéticos: taquicardia e tremores da hipoglicemia podem estar mascarados — monitorar glicemia com frequência.",
+      "Levantar lentamente para evitar tontura e quedas (hipotensão ortostática).",
+      "Em uso para profilaxia de varizes: não pular doses — redução da pressão portal é contínua."
+    ],
+    "clinicalPearls": [
+      "É o betabloqueador de escolha para tremor essencial — eficácia mediada pelo bloqueio β2 periférico nos receptores musculares. Dose típica: 40–120 mg/dia.",
+      "Único betabloqueador com indicação para profilaxia de varizes esofágicas (Baveno VII) — reduz fluxo esplâncnico e pressão portal. Alvo: redução de pressão portal > 20% ou < 12 mmHg.",
+      "Tempestade tireoidiana: 60–80 mg VO a cada 4–6h — bloqueia sintomas adrenérgicos E inibe conversão periférica de T4→T3. EV disponível em alguns centros.",
+      "Polimorfismo CYP2D6: metabolizadores lentos (~7–10% caucasianos) têm exposição 3–5× maior — risco de bradicardia e hipotensão com doses habituais.",
+      "Lipofília: emulsão lipídica IV 20% é eficaz em intoxicação grave (sequestra propranolol do plasma) — diferente de atenolol (hidrofílico, onde lipossoma é menos eficaz).",
+      "NÃO é indicado para ICFEr — ausência de evidência de redução de mortalidade em insuficiência cardíaca. Os únicos betabloqueadores com evidência A são carvedilol, bisoprolol e metoprolol succinato.",
+      "Feocromocitoma: NUNCA iniciar sem bloqueio α completo — vasoconstrição α paradoxal por catecolaminas do tumor pode causar crise hipertensiva fatal."
+    ],
+    "guidelineRecommendations": [
+      "American Headache Society 2021: propranolol é agente de primeira linha para profilaxia de enxaqueca episódica (Classe A de evidência). Dose eficaz: 40–160 mg/dia.",
+      "ATA Hyperthyroidism Guidelines: propranolol é recomendado para controle sintomático de hipertireoidismo e tireotoxicose grave enquanto aguarda terapia definitiva.",
+      "Baveno VII (Portal Hypertension): propranolol (ou carvedilol) recomendado para profilaxia primária e secundária de sangramento de varizes esofágicas em cirrose com hipertensão portal.",
+      "AHA/ACC/HFSA 2022: propranolol NÃO está entre os 3 betabloqueadores recomendados para ICFEr (sem evidência A de redução de mortalidade)."
+    ],
+    "incompatibilities": "Formulação oral padrão: sem incompatibilidades IV a relatar. Formulação EV (disponível em alguns centros) incompatível com soluções alcalinas.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálise peritoneal: propranolol não é removido de forma relevante (alta ligação proteica 80–95% + lipofília). Manter dose habitual."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: remoção mínima por alta ligação proteica. Nenhuma suplementação de dose necessária. Monitorar FC e hemodinâmica."
+      }
+    },
+    "prescriptionErrors": [
+      "Prescrever em asma ativa ou broncoespasmo — propranolol é não seletivo (bloqueia β2): contraindicação absoluta. Usar betabloqueador cardioseletivo se necessário.",
+      "Iniciar em feocromocitoma sem bloqueio α prévio — vasoconstrição α paradoxal pode causar crise hipertensiva fatal.",
+      "Não ajustar dose em insuficiência hepática grave (Child-Pugh C) — metabolismo de primeiro passo reduzido duplica a exposição.",
+      "Suspender abruptamente em paciente com DAC — risco de angina rebote, IAM e morte súbita.",
+      "Não considerar interação com inibidores de CYP2D6 (fluoxetina, paroxetina) — exposição pode triplicar.",
+      "Usar em ICC para redução de mortalidade — propranolol não tem este benefício. Usar carvedilol, bisoprolol ou metoprolol succinato."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Propranolol é metabolizado predominantemente pelo fígado (CYP2D6). Não requer ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "10–40 mg",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "320 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dose e intervalo habituais. Sem ajuste renal necessário."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "10–40 mg",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "320 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sem ajuste renal necessário. Monitorar tolerância clínica — cautela em pacientes frágeis."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "10–40 mg",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "320 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sem ajuste renal específico, mas atenção à tolerância clínica global. Em cirrose coexistente, reduzir dose hepática."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "10–40 mg",
+          "intervalo": "Avaliar individualmente",
+          "doseMaxima": "Titular conforme FC e PA",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sem ajuste renal obrigatório. Monitoração hemodinâmica rigorosa em DRC muito grave."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Propranolol não é significativamente removido por hemodiálise. Nenhuma suplementação pós-HD necessária."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "bronchospasmRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Propranolol é não seletivo: maior atenção em asma/DPOC, diabetes com hipoglicemia, bloqueios de condução e insuficiência hepática."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ESC Hypertension Guidelines 2023",
+        "ESC Chronic Coronary Syndrome Guidelines 2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "American Headache Society 2021",
+        "ATA Hyperthyroidism Guidelines",
+        "Baveno VII Portal Hypertension",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA label",
+        "EMA label"
+      ],
+      "note": "Betabloqueador não seletivo (β1+β2) lipofílico de 1ª geração. Metabolismo hepático intenso CYP2D6/1A2/2C19 — ajuste em hepatopatia, polimorfismo CYP2D6 relevante (PM: 3–5× exposição). Múltiplas indicações extracardíacas: tremor essencial, enxaqueca, hipertireoidismo, varizes esofágicas. Não indicado para ICFEr. Auditoria V2 completada 2026-06."
+    }
+  },
+  "es": {
+    "name": "Propranolol",
+    "class": "Betabloqueante no selectivo",
+    "commercialNames": {
+      "br": [
+        "Inderal",
+        "Rebaten",
+        "Propranolol genérico"
+      ],
+      "ar": [
+        "Inderal",
+        "Propranolol genérico"
+      ]
+    },
+    "presentation": [
+      "Comprimidos 10 mg, 40 mg, 80 mg",
+      "Cápsulas de liberación prolongada 80 mg, 120 mg, 160 mg"
+    ],
+    "dose": {
+      "adultoPadrao": "10–40 mg VO cada 8h o 12h según indicación; liberación prolongada 80–160 mg 1 vez/día",
+      "adultoGrave": "Sin indicación de formulación IV rutinaria. Ajustar dosis VO según FC, PA y función hepática.",
+      "pediatricaPadrao": "No establecida rutinariamente; uso off-label en hemangiomas infantiles",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null
+    },
+    "doseKg": {
+      "padrao": null,
+      "grave": null,
+      "meningite": null,
+      "doseMaxima": "Hasta 320 mg/día en uso cardiovascular; varía según indicación"
+    },
+    "therapeuticRange": "Control de FC según contexto; reducción de síntomas adrenérgicos, angina y presión portal",
+    "dilution": "Uso exclusivo vía oral (formulación estándar). No diluir de forma rutinaria.",
+    "speed": "Administrar con alimentos para reducir variabilidad de absorción.",
+    "commonAdverseEffects": [
+      "Fatiga",
+      "Mareos",
+      "Bradicardia",
+      "Hipotensión",
+      "Extremidades frías",
+      "Trastornos del sueño y pesadillas",
+      "Disfunción sexual"
+    ],
+    "dangerousAdverseEffects": [
+      "Broncoespasmo",
+      "Bloqueo AV",
+      "Bradicardia grave",
+      "Shock cardiogénico",
+      "Empeoramiento de insuficiencia cardíaca descompensada",
+      "Hipoglucemia enmascarada en diabéticos"
+    ],
+    "risksByPatient": [],
+    "alerts": [
+      "No suspender abruptamente — riesgo de angina de rebote y eventos coronarios.",
+      "Betabloqueante NO selectivo: contraindicado en asma grave y broncoespasmo activo.",
+      "Metabolismo hepático (CYP2D6): titular con extrema precaución en cirrosis o insuficiencia hepática.",
+      "Inhibe la conversión periférica de T4 → T3 en dosis altas — relevante en hipertiroidismo y tirotoxicosis.",
+      "Indicaciones extracardíacas: profilaxis de várices esofágicas (Baveno VII), temblor esencial, migraña, ansiedad de performance."
+    ],
+    "ref": "ESC Hypertension Guidelines 2023 · ESC Chronic Coronary Syndrome Guidelines 2023 · American Headache Society 2021 · ATA Hyperthyroidism Guidelines · AASLD Portal Hypertension · Goodman & Gilman 14ª ed. · Lexicomp Online 2026 · Micromedex 2026 · FDA label · EMA label",
+    "pharmacologicClass": "Betabloqueante no selectivo lipofílico de primera generación",
+    "mechanism": "Bloquea competitivamente receptores β1 (cardíacos) y β2 (bronquiales, vasculares, hepáticos), reduciendo FC, contractilidad, gasto cardíaco, secreción de renina y PA. El bloqueo β2 reduce el temblor e inhibe parcialmente la conversión periférica de T4→T3 en dosis altas. Elevada liposolubilidad permite atravesar la BHE, justificando eficacia en ansiedad, migraña y temblor.",
+    "pharmacodynamics": "Reduce PA, FC, angina y presión portal (reducción del GC → menor flujo esplácnico). Alta liposolubilidad: penetración intensa en SNC → eficaz en temblor esencial, ansiedad de rendimiento, profilaxis de migraña e hipertiroidismo, pero aumenta pesadillas, depresión y disfunción sexual. Inhibe la conversión periférica de T4→T3 en dosis altas — clínicamente relevante en tormenta tiroidea.",
+    "onset": "Inicio del efecto entre 30–60 minutos por vía oral. Efecto antihipertensivo máximo tras 1–2 semanas de uso regular.",
+    "pharmacokinetics": {
+      "absorption": "Absorción oral rápida y casi completa (>90%). Intenso metabolismo de primer paso hepático reduce biodisponibilidad a ~25%. El alimento aumenta la biodisponibilidad en ~50% — administrar con alimento para consistencia.",
+      "bioavailability": "~25% (variable por metabolismo de primer paso; polimorfismo CYP2D6 puede aumentar hasta 2×)",
+      "proteinBinding": "80–95% (alta unión — no dializable)",
+      "vd": "~4 L/kg (lipofílico — amplia distribución tisular incluyendo SNC)",
+      "metabolism": "Hepático intenso: CYP2D6 (principal), CYP1A2 y CYP2C19. Produce metabolito activo: 4-hidroxipropranolol (actividad β-bloqueante). Polimorfismo CYP2D6: metabolizadores lentos tienen exposición hasta 5× mayor — precaución con bradicardia e hipotensión.",
+      "halfLife": "3–6 horas (formulación inmediata); 8–10 horas (liberación prolongada)",
+      "elimination": "Predominantemente hepática; metabolitos eliminados por vía renal (<1% sin cambios en orina). Sin necesidad de ajuste renal habitual.",
+      "dialysability": "No eliminado por hemodiálisis (alta unión proteica 80–95% + lipofilia). Sin suplementación post-HD."
+    },
+    "indications": {
+      "approved": [
+        "Hipertensión arterial sistémica",
+        "Angina estable crónica",
+        "Control de frecuencia cardíaca (FA, flutter auricular, TPSV)",
+        "Arritmias supraventriculares",
+        "Profilaxis secundaria del infarto de miocardio"
+      ],
+      "offLabel": [
+        "Temblor esencial (primera elección por eficacia vía bloqueo β2)",
+        "Ansiedad de rendimiento / fobia social situacional",
+        "Profilaxis de migraña (betabloqueante más estudiado para migraña)",
+        "Hipertiroidismo sintomático y tormenta tiroidea (inhibe T4→T3)",
+        "Profilaxis secundaria de várices esofágicas (reduce presión portal)",
+        "Feocromocitoma (siempre después de bloqueo α completo — nunca en monoterapia)"
+      ]
+    },
+    "contraindications": {
+      "absolute": [
+        "Asma bronquial moderada o grave / broncoespasmo activo",
+        "EPOC grave con broncoespasmo reversible",
+        "Shock cardiogénico",
+        "Bradicardia sinusal sintomática (FC < 50 lpm)",
+        "Bloqueo AV de 2º grado (Mobitz II) o 3er grado sin marcapasos",
+        "ICC agudamente descompensada",
+        "Feocromocitoma sin bloqueo α previo (riesgo de crisis hipertensiva por vasoconstricción α paradójica)"
+      ],
+      "relative": [
+        "EPOC moderado estable (bloqueo β2 puede agravar obstrucción — preferir betabloqueante cardioselectivo)",
+        "Diabetes mellitus insulinodependiente (enmascaramiento de toda la sintomatología adrenérgica de la hipoglucemia)",
+        "Insuficiencia hepática grave (Child-Pugh C): exposición muy aumentada por reducción del metabolismo de primer paso",
+        "Fenómeno de Raynaud / enfermedad vascular periférica grave",
+        "Depresión mayor (agrava síntomas neuropsiquiátricos por penetración en SNC)",
+        "Miastenia grave (puede agravar debilidad muscular por bloqueo β2 neuromuscular)"
+      ]
+    },
+    "interactions": {
+      "contraindicadas": [
+        {
+          "drug": "Verapamilo EV / Diltiazem EV",
+          "mechanism": "Doble inhibición nodal AV (dromotrópico negativo aditivo)",
+          "consequence": "Bloqueo AV completo, paro cardíaco",
+          "management": "NO asociar EV. Vía oral con monitorización especializada solamente."
+        },
+        {
+          "drug": "Fenoxibenzamina / Fentolamina sin bloqueo α previo en feocromocitoma",
+          "mechanism": "Bloqueo β sin bloqueo α → vasoconstricción α periférica paradójica mediada por catecolaminas del tumor",
+          "consequence": "Crisis hipertensiva grave y potencialmente fatal",
+          "management": "En feocromocitoma: bloqueo α completo obligatorio (fenoxibenzamina 10–14 días) ANTES de iniciar propranolol."
+        }
+      ],
+      "alta": [
+        {
+          "drug": "Amiodarona",
+          "mechanism": "Inhibición de CYP2D6/CYP1A2 por amiodarona + efecto bradicardizante y bloqueo AV aditivos",
+          "consequence": "Bradicardia grave, bloqueo AV de alto grado, colapso cardiovascular",
+          "management": "Monitorizar ECG continuamente. Reducir dosis de propranolol. Considerar sustituto menos dependiente de CYP2D6 (bisoprolol)."
+        },
+        {
+          "drug": "Digoxina",
+          "mechanism": "Efecto cronotrópico y dromotrópico negativo aditivo",
+          "consequence": "Bradicardia y bloqueo AV",
+          "management": "Monitorizar FC y ECG. Nivel terapéutico de digoxina: 0,5–0,9 ng/mL."
+        },
+        {
+          "drug": "Clonidina",
+          "mechanism": "Retirada abrupta de clonidina en uso concomitante → hipertensión de rebote grave",
+          "consequence": "Crisis hipertensiva grave",
+          "management": "Descontinuar propranolol varios días antes de suspender clonidina."
+        },
+        {
+          "drug": "Insulina / sulfonilureas",
+          "mechanism": "Enmascaramiento de TODA la sintomatología adrenérgica de la hipoglucemia (β1 y β2) — solo la sudoración persiste",
+          "consequence": "Hipoglucemia grave no reconocida — peor que betabloqueantes cardioselectivos",
+          "management": "Monitorizar glucemia con mayor frecuencia. Preferir betabloqueante cardioselectivo en diabéticos cuando sea posible."
+        },
+        {
+          "drug": "Epinefrina (adrenalina)",
+          "mechanism": "Bloqueo β con α libre → vasoconstricción α periférica sin vasodilatación β2 → hipertensión paradójica + bradicardia refleja",
+          "consequence": "Hipertensión grave paradójica y bradicardia refleja",
+          "management": "Evitar epinefrina en pacientes con propranolol. Si anestesia local necesaria, usar sin vasoconstrictor o con vasoconstrictor alternativo."
+        },
+        {
+          "drug": "Inhibidores de CYP2D6 (fluoxetina, paroxetina, quinidina, ritonavir)",
+          "mechanism": "Inhibición del metabolismo hepático del propranolol vía CYP2D6 → aumento de la exposición hasta 2–5×",
+          "consequence": "Bradicardia, hipotensión y broncoespasmo por sobredosificación relativa",
+          "management": "Reducir dosis de propranolol al iniciar inhibidor de CYP2D6. Monitorizar FC y PA rigurosamente."
+        }
+      ],
+      "moderada": [
+        {
+          "drug": "AINEs (ibuprofeno, naproxeno, diclofenaco)",
+          "mechanism": "Antagonismo del efecto antihipertensivo por inhibición de prostaglandinas vasodilatadoras",
+          "consequence": "Reducción del control presórico",
+          "management": "Monitorizar PA. Preferir paracetamol."
+        },
+        {
+          "drug": "Alcohol",
+          "mechanism": "Inhibición parcial de CYP2C19 por alcohol + efecto hipotensor aditivo",
+          "consequence": "Hipotensión y bradicardia excesivas",
+          "management": "Orientar sobre restricción de alcohol durante el tratamiento."
+        },
+        {
+          "drug": "Inductores de CYP1A2 (rifampicina, tabaquismo activo)",
+          "mechanism": "Inducción del metabolismo hepático del propranolol → reducción de los niveles plasmáticos",
+          "consequence": "Pérdida del efecto betabloqueante",
+          "management": "Monitorizar FC y PA. Aumentar dosis según respuesta clínica. Tabaquismo: considerar aumento de dosis en fumadores."
+        }
+      ]
+    },
+    "monitoring": {
+      "baseline": [
+        "FC y PA en reposo",
+        "ECG (intervalo PR, ritmo)",
+        "Función hepática (AST/ALT) — metabolismo hepático intenso CYP2D6/1A2/2C19",
+        "Antecedentes de asma/EPOC (contraindicación relativa/absoluta)",
+        "Glucemia basal en diabéticos",
+        "Evaluación del estado de ánimo (depresión) — especialmente en uso prolongado"
+      ],
+      "followUp": [
+        "FC objetivo (angina/HTA: 55–70 lpm; profilaxis migraña: 55–65 lpm)",
+        "PA en cada consulta",
+        "Síntomas respiratorios (broncoespasmo, disnea de esfuerzo)",
+        "Síntomas neuropsiquiátricos (pesadillas, depresión, trastornos del sueño)",
+        "Función hepática semestral en uso crónico o hepatopatía conocida",
+        "ECG si síntomas de bloqueo o arritmia"
+      ],
+      "icc": [
+        "Propranolol NO está indicado para ICFEr — monitorizar signos de descompensación si en uso por otra indicación (arritmia, várices)",
+        "Peso diario y edemas periféricos",
+        "Clase funcional NYHA"
+      ]
+    },
+    "overdose": {
+      "signs": [
+        "Bradicardia grave",
+        "Hipotensión",
+        "Bloqueo AV",
+        "Broncoespasmo (por bloqueo β2 — más grave que con betabloqueantes selectivos)",
+        "Convulsiones (penetración intensa en SNC por lipofilia)",
+        "Coma (raro pero posible en sobredosis masiva)",
+        "Hipoglucemia",
+        "Shock cardiogénico"
+      ],
+      "management": [
+        "1. Carbón activado si ingesta reciente < 1–2 h",
+        "2. Atropina 0,5–1 mg IV para bradicardia; repetir según necesidad (máx 3 mg)",
+        "3. Glucagón 5–10 mg IV bolo → infusión 1–5 mg/h (antídoto específico — activa adenilciclasa independiente de β1)",
+        "4. Broncodilatadores inhalados (salbutamol/albuterol) en dosis altas para broncoespasmo resistente",
+        "5. Emulsión lipídica IV 20% — ALTA EFICACIA en este caso (propranolol es lipofílico y altamente unido a proteínas)",
+        "6. Dobutamina o isoproterenol en hipotensión refractaria",
+        "7. Marcapasos transcutáneo o transvenoso en BAV refractario",
+        "8. Hemodiálisis NO es eficaz (alta unión proteica 80–95% + lipofilia)",
+        "9. ECMO en colapso circulatorio refractario"
+      ]
+    },
+    "specialPopulations": {
+      "renalImpairment": "IR: sin ajuste renal necesario — metabolismo predominantemente hepático. Metabolitos de excreción renal: acumulación posible en IR grave, pero sin impacto clínico relevante establecido. Monitorizar tolerancia.",
+      "obesity": "Obesidad: amplio Vd (~4 L/kg) — la distribución tisular no se ve afectada significativamente. Titular por respuesta clínica.",
+      "geriatrics": "Anciano: mayor sensibilidad farmacodinámica y riesgo de efectos centrales (pesadillas, depresión, confusión) por alta lipofilia y penetración en SNC. Iniciar con 10 mg cada 12h y titular lentamente. Alto riesgo de hipotensión ortostática y caídas.",
+      "pregnancy": "Embarazo: puede causar bradicardia fetal, RCIU e hipoglucemia neonatal. Categoría FDA D (riesgo fetal documentado). Usar solo si el beneficio supera el riesgo. En HTA gestacional, labetalol es preferido. Si se mantiene, interrumpir 48–72h antes del parto.",
+      "lactation": "Lactancia: excretado en leche materna. Relación leche/plasma ~0,5 (menor que atenolol ~2–3 y metoprolol ~3). Monitorizar lactante para bradicardia e hipoglucemia.",
+      "hepaticImpairment": "Hepatopatía: CRÍTICO — metabolismo de primer paso intenso. En cirrosis leve-moderada (Child-Pugh A–B): biodisponibilidad puede duplicarse (primer paso reducido). Iniciar con 10 mg y titular con extrema precaución. Child-Pugh C: evitar o usar dosis mínima con monitorización intensiva.",
+      "dpoc": "EPOC: propranolol es NO selectivo — bloqueo β2 aumenta resistencia de las vías aéreas. CONTRAINDICADO en EPOC con broncoespasmo reversible. Si se requiere betabloqueante en EPOC + ICC, usar bisoprolol (alta selectividad β1 ~75:1)."
+    },
+    "hepaticDose": {
+      "required": true,
+      "message": "Hepatopatía: metabolismo hepático intenso (CYP2D6/1A2/2C19) con efecto de primer paso. En cirrosis (Child-Pugh A–B): biodisponibilidad puede aumentar 2×. Iniciar con 10 mg y titular con precaución. Child-Pugh C: considerar alternativa; si imprescindible, dosis inicial 5–10 mg con monitorización intensiva de FC y PA."
+    },
+    "patientEducation": [
+      "Nunca suspender bruscamente — riesgo de angina rebote, IAM y muerte súbita.",
+      "Tomar con alimentos para reducir la variabilidad de absorción y el pico plasmático.",
+      "Evitar automedicación con descongestionantes nasales — pueden contener simpaticomiméticos.",
+      "Pacientes asmáticos: comunicar INMEDIATAMENTE cualquier empeoramiento de disnea o sibilancias.",
+      "Diabéticos: taquicardia y temblores de la hipoglucemia pueden estar enmascarados — monitorizar glucemia con frecuencia.",
+      "Levantarse lentamente para evitar mareos y caídas (hipotensión ortostática).",
+      "En uso para profilaxis de várices: no saltarse dosis — la reducción de la presión portal es continua."
+    ],
+    "clinicalPearls": [
+      "Es el betabloqueante de elección para el temblor esencial — eficacia mediada por bloqueo β2 periférico en receptores musculares. Dosis típica: 40–120 mg/día.",
+      "Único betabloqueante con indicación para profilaxis de várices esofágicas (Baveno VII) — reduce flujo esplácnico y presión portal. Objetivo: reducción de presión portal >20% o <12 mmHg.",
+      "Tormenta tiroidea: 60–80 mg VO cada 4–6h — bloquea síntomas adrenérgicos E inhibe conversión periférica de T4→T3. IV disponible en algunos centros.",
+      "Polimorfismo CYP2D6: metabolizadores lentos (~7–10% caucasianos) tienen exposición 3–5× mayor — riesgo de bradicardia e hipotensión con dosis habituales.",
+      "Lipofilia: emulsión lipídica IV 20% es eficaz en intoxicación grave (secuestra propranolol del plasma) — diferente de atenolol (hidrofílico, donde la emulsión lipídica es menos eficaz).",
+      "NO está indicado para ICFEr — ausencia de evidencia de reducción de mortalidad en insuficiencia cardíaca. Los únicos betabloqueantes con evidencia A son carvedilol, bisoprolol y metoprolol succinato.",
+      "Feocromocitoma: NUNCA iniciar sin bloqueo α completo — vasoconstricción α paradójica por catecolaminas del tumor puede causar crisis hipertensiva fatal."
+    ],
+    "guidelineRecommendations": [
+      "American Headache Society 2021: propranolol es agente de primera línea para profilaxis de migraña episódica (Clase A de evidencia). Dosis eficaz: 40–160 mg/día.",
+      "ATA Hyperthyroidism Guidelines: propranolol está recomendado para control sintomático del hipertiroidismo y tirotoxicosis grave mientras se espera terapia definitiva.",
+      "Baveno VII (Portal Hypertension): propranolol (o carvedilol) recomendado para profilaxis primaria y secundaria de sangrado por várices esofágicas en cirrosis con hipertensión portal.",
+      "AHA/ACC/HFSA 2022: propranolol NO está entre los 3 betabloqueantes recomendados para ICFEr (sin evidencia A de reducción de mortalidad)."
+    ],
+    "incompatibilities": "Formulación oral estándar: sin incompatibilidades IV a reportar. Formulación EV (disponible en algunos centros) incompatible con soluciones alcalinas.",
+    "renalReplacementTherapy": {
+      "dialysePeritoneal": {
+        "removido": false,
+        "obs": "Diálisis peritoneal: propranolol no se elimina de forma relevante (alta unión proteica 80–95% + lipofilia). Mantener dosis habitual."
+      },
+      "cvvh": {
+        "removido": false,
+        "obs": "CVVH/CVVHD/CVVHDF: eliminación mínima por alta unión proteica. No se requiere suplementación de dosis. Monitorizar FC y hemodinámica."
+      }
+    },
+    "prescriptionErrors": [
+      "Prescribir en asma activa o broncoespasmo — propranolol es no selectivo (bloquea β2): contraindicación absoluta. Usar betabloqueante cardioselectivo si necesario.",
+      "Iniciar en feocromocitoma sin bloqueo α previo — vasoconstricción α paradójica puede causar crisis hipertensiva fatal.",
+      "No ajustar dosis en insuficiencia hepática grave (Child-Pugh C) — metabolismo de primer paso reducido duplica la exposición.",
+      "Suspender abruptamente en paciente con DAC — riesgo de angina rebote, IAM y muerte súbita.",
+      "No considerar la interacción con inhibidores de CYP2D6 (fluoxetina, paroxetina) — la exposición puede triplicarse.",
+      "Usar en ICC para reducción de mortalidad — propranolol no tiene este beneficio. Usar carvedilol, bisoprolol o metoprolol succinato."
+    ],
+    "renalDose": {
+      "version": 2,
+      "requiresAdjustment": false,
+      "message": "Propranolol se metaboliza predominantemente en el hígado (CYP2D6). No requiere ajuste renal habitual.",
+      "fgMaior50": {
+        "vo": {
+          "dose": "10–40 mg",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "320 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Dosis e intervalo habituales. Sin ajuste renal necesario."
+      },
+      "fg30a50": {
+        "vo": {
+          "dose": "10–40 mg",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "320 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sin ajuste renal necesario. Monitorizar tolerancia clínica — precaución en pacientes frágiles."
+      },
+      "fg10a30": {
+        "vo": {
+          "dose": "10–40 mg",
+          "intervalo": "8/8h ou 12/12h",
+          "doseMaxima": "320 mg/dia",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sin ajuste renal específico, pero atención a la tolerancia clínica global. En cirrosis coexistente, reducir dosis hepática."
+      },
+      "fgMenor10": {
+        "vo": {
+          "dose": "10–40 mg",
+          "intervalo": "Avaliar individualmente",
+          "doseMaxima": "Titular conforme FC e PA",
+          "unidade": "mg"
+        },
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Sin ajuste renal obligatorio. Monitorización hemodinámica rigurosa en ERC muy grave."
+      },
+      "hemodialise": {
+        "vo": null,
+        "ev": null,
+        "pediatrica": null,
+        "obs": "Propranolol no se elimina significativamente por hemodiálisis. No se requiere suplementación post-HD."
+      }
+    },
+    "safetyFlags": {
+      "renalHighRisk": false,
+      "neurotoxicityRisk": false,
+      "qtRisk": false,
+      "hepatotoxicityRisk": true,
+      "requiresCultureGuidance": false,
+      "hypotensionRisk": true,
+      "bradycardiaRisk": true,
+      "avBlockRisk": true,
+      "bronchospasmRisk": true,
+      "pregnancyCaution": true,
+      "warning": "Propranolol es no selectivo: mayor atención en asma/EPOC, diabetes con hipoglucemia, bloqueos de conducción e insuficiencia hepática."
+    },
+    "auditNotes": {
+      "status": "excellent_after_review_V2",
+      "sourcePriority": [
+        "ESC Hypertension Guidelines 2023",
+        "ESC Chronic Coronary Syndrome Guidelines 2023",
+        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+        "American Headache Society 2021",
+        "ATA Hyperthyroidism Guidelines",
+        "Baveno VII Portal Hypertension",
+        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+        "Lexicomp Online 2026",
+        "Micromedex 2026",
+        "FDA label",
+        "EMA label"
+      ],
+      "note": "Betabloqueante no selectivo (β1+β2) lipofílico de 1ª generación. Metabolismo hepático intenso CYP2D6/1A2/2C19 — ajuste en hepatopatía, polimorfismo CYP2D6 relevante (PM: 3–5× exposición). Múltiples indicaciones extracardíacas: temblor esencial, migraña, hipertiroidismo, várices esofágicas. No indicado para ICFEr. Auditoría V2 completada 2026-06."
+    }
+  },
+  "name": {
+    "pt": "Propranolol",
+    "es": "Propranolol"
+  },
+  "keywords": [
+    "propranolol",
+    "inderal",
+    "rebaten",
+    "propranolol generico",
+    "betabloqueador nao seletivo"
+  ],
+  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "cardio.js"
+}
