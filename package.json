@@ -6,23 +6,22 @@
   "homepage": "https://medcasescalcu.com",
   "author": "MedCases Pro",
   "license": "UNLICENSED",
-
   "scripts": {
-    "export:data":  "node scripts/export-clinical-data.js",
-    "predeploy":    "npm run export:data"
+    "export:clinical": "node scripts/export-clinical-data.js",
+    "manifest:offline": "node scripts/generate-offline-manifest.js",
+    "export:data": "npm run export:clinical && npm run manifest:offline",
+    "build": "npm run export:data",
+    "predeploy": "npm run export:data"
   },
-
   "engines": {
     "node": ">=18.0.0"
   },
-
   "devDependencies": {},
   "dependencies": {},
-
   "medcases": {
     "note": "Projeto estático (HTML/CSS/JS). Sem framework, sem bundler.",
     "exportScript": "scripts/export-clinical-data.js",
     "dataOutput": "data/",
-    "appEntry":  "index.html"
+    "appEntry": "index.html"
   }
 }
