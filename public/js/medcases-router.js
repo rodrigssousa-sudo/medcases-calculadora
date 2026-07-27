@@ -1831,23 +1831,33 @@
     /* ── Detecta módulo da URL (ou aplica MODULO_FALLBACK) ── */
     var moduloKey = _detectModulo();
 
-    /* BUILD 479: se não há módulo na URL mas a URL tem pelo menos ?lang=,
-       ativa o MODULO_FALLBACK para garantir que o motor nunca fique inerte.
-       Instala também o Path-A listener para captura assíncrona.             */
+    /* BUILD 481-HOME-RESTORE: apenas parâmetros CLÍNICOS explícitos ativam
+       o MODULO_FALLBACK. Parâmetros de idioma (?lang=, ?idioma=) sozinhos
+       NÃO devem abrir nenhum modal/card — a home deve permanecer estática.
+       Clinical Defaults já foram injetados silenciosamente acima via
+       _applyClinicialFallbacks(); o DOM recebe peso/idade/creatinina sem
+       abrir qualquer overlay.                                               */
     if (!moduloKey) {
-      var hasAnyParam = params && (
-        params.get('lang')    || params.get('idioma') ||
-        params.get('peso')    || params.get('modulo') ||
-        params.get('clcr')    || params.get('creatinina')
+      var hasClinicParam = params && !!(
+        params.get('peso')       || params.get('modulo')    ||
+        params.get('clcr')       || params.get('creatinina') ||
+        params.get('idade')      || params.get('kdigo')      ||
+        params.get('child_pugh') || params.get('sexo')       ||
+        params.get('ascvd')      || params.get('has_bled')   ||
+        params.get('sofa')       || params.get('apache')     ||
+        params.get('qsofa')      || params.get('grace')
       );
 
-      if (hasAnyParam) {
-        /* URL chegou do Flutter mas sem ?modulo= — usa MODULO_FALLBACK */
+      if (hasClinicParam) {
+        /* URL clínica sem ?modulo= explícito — usa MODULO_FALLBACK */
         moduloKey = MODULO_FALLBACK;
-        console.warn('[CSR v479] URL com params mas sem ?modulo= — usando fallback: ' + MODULO_FALLBACK);
+        console.warn('[CSR v481] URL clínica sem ?modulo= — usando fallback: ' + MODULO_FALLBACK);
       } else {
-        /* Totalmente sem params — modo passivo com Path-A listener */
-        console.log('[CSR v2] Sem ?modulo= ou /condutas/ — modo passivo. Instalando URL mutation listener…');
+        /* Lang-only (?lang=pt / ?lang=es) ou sem params — modo passivo HOME.
+           Clinical Defaults já aplicados silenciosamente; DOM pronto para cálculo.
+           Nenhum modal/overlay é aberto. Path-A listener fica ativo para
+           capturar futuras navegações injectadas pelo Flutter.              */
+        console.log('[CSR v481] URL de idioma puro ou sem params — HOME estática. Defaults clínicos injetados no background.');
         _installUrlMutationListener();
         _domReady(function () {
           _ingestPatientPayload(enrichedParams);
@@ -1990,12 +2000,13 @@
   /* ── Dispara boot seguro — iOS WebView + Desktop + Android ── */
   _init();
 
-  console.log('[MedCases CSR v2.5] BUILD 479-ULTRA-RESILIENT | Locale: ' + _activeLang +
+  console.log('[MedCases CSR v2.5] BUILD 481-HOME-RESTORE | Locale: ' + _activeLang +
     ' | Módulos: ' + Object.keys(MODULE_META).join(', ') +
     ' | API: window.ClinicalSupportRouter' +
     ' | PATH-A: URL mutation listener' +
     ' | PATH-C: injectPatient(payload)' +
-    ' | FALLBACKS: clinical defaults ativos' +
+    ' | FALLBACKS: clinical defaults ativos (silent, no modal)' +
+    ' | FIX: lang-only URL → HOME estática sem MODULO_FALLBACK' +
     ' | TELEMETRY: window.toggleMCTelemetry()');
 
   /* ═══════════════════════════════════════════════════════════════
