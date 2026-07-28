@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "cca522d84c64c1b439d062bfe1c98f3189b8adcb82b25e625644329a470f3069",
+    "sourceModule": "nefro.js"
+  },
+  "drugId": "plasma_lyte",
+  "identity": {
+    "canonicalOwner": "nefro.js",
+    "category": "uti_fluidos",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "plasma_lyte",
+      "solução de plasma-lyte (148 / a)"
+    ],
+    "name": {
+      "es": "Solución de Plasma-Lyte (148 / A)",
+      "pt": "Solução de Plasma-Lyte (148 / A)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "uti_fluidos",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "#0F766E",
+      "colorTxt": "#ffffff",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Solución de Plasma-Lyte (148 / A)"
+      },
+      "icon": "💧",
+      "id": "plasma_lyte",
+      "keywords": [
+        "plasma_lyte",
+        "solução de plasma-lyte (148 / a)"
+      ],
+      "name": {
+        "es": "Solución de Plasma-Lyte (148 / A)",
+        "pt": "Solução de Plasma-Lyte (148 / A)"
+      },
+      "pt": {
+        "name": "Solução de Plasma-Lyte (148 / A)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "nefro.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

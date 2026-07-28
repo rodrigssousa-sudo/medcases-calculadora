@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "d3a440cde04da16259b5ec8a92f8c50c5d4625bf9c3b2077edf57abab5d7e594",
+    "sourceModule": "cardio.js"
+  },
+  "drugId": "evinacumab",
+  "identity": {
+    "canonicalOwner": "cardio.js",
+    "category": "cardio",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "evinacumab",
+      "evinacumabe"
+    ],
+    "name": {
+      "es": "Evinacumab",
+      "pt": "Evinacumabe"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardio",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Evinacumab"
+      },
+      "icon": "💊",
+      "id": "evinacumab",
+      "keywords": [
+        "evinacumab",
+        "evinacumabe"
+      ],
+      "name": {
+        "es": "Evinacumab",
+        "pt": "Evinacumabe"
+      },
+      "pt": {
+        "name": "Evinacumabe"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardio.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

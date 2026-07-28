@@ -1,0 +1,358 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "3239547111fea26a61c70461bae329a091b671a17d5ab4c183c487f73d15d93e",
+    "sourceModule": "cardiologia.js"
+  },
+  "drugId": "felodipina",
+  "identity": {
+    "canonicalOwner": "cardiologia.js",
+    "category": "cardiologia",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "felodipina"
+    ],
+    "name": {
+      "es": "Felodipino",
+      "pt": "Felodipina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardiologia",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "cardiologia.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "cardio",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "alerts": [
+                "Usar EXCLUSIVAMENTE formulaciones de liberación prolongada — no partir ni masticar los comprimidos.",
+                "Interacción importante: pomelo/toronja — puede aumentar significativamente los niveles séricos (CYP3A4). Evitar.",
+                "Interacciones CYP3A4: claritromicina, ketoconazol, itraconazol, ritonavir → aumentan nivel sérico.",
+                "El edema maleolar es el principal efecto adverso — frecuentemente no responde a diuréticos."
+              ],
+              "auditNotes": {
+                "note": "BCC dihidropiridínico LP útil en HTA y angina. Perfil similar a amlodipino, con vida media menor. Atención especial a la interacción con pomelo e inhibidores de CYP3A4.",
+                "sourcePriority": [
+                  "ESC Hypertension Guidelines 2023",
+                  "AHA/ACC Hypertension Guidelines 2023",
+                  "ESC Chronic Coronary Syndrome Guidelines",
+                  "Goodman & Gilman",
+                  "Lexicomp 2026",
+                  "FDA/EMA label"
+                ],
+                "status": "excellent_after_review"
+              },
+              "category": "cardio",
+              "class": "Bloqueador de los canales de calcio dihidropiridínico",
+              "commercialNames": [
+                "Plendil",
+                "Felodipina genérica"
+              ],
+              "commonAdverseEffects": [
+                "Edema maleolar",
+                "Cefalea",
+                "Rubor facial",
+                "Mareos",
+                "Palpitaciones",
+                "Fatiga",
+                "Náuseas"
+              ],
+              "dangerousAdverseEffects": [
+                "Hipotensión grave",
+                "Síncope",
+                "Angina paradójica rara",
+                "Edema periférico severo"
+              ],
+              "dose": {
+                "adultoGrave": "Dosis máxima: 10 mg/día. No hay formulación IV.",
+                "adultoPadrao": "2,5–5 mg LP VO 1 vez/día. Titular cada 2 semanas según PA y tolerabilidad."
+              },
+              "halfLife": "11–16 horas",
+              "id": "felodipina",
+              "mechanism": "Bloquea canales de calcio tipo L en el músculo liso vascular, produciendo vasodilatación arterial periférica y reducción de la resistencia vascular sistémica, con poco efecto directo sobre el nodo AV.",
+              "name": "Felodipina",
+              "onset": "2–5 horas",
+              "presentation": [
+                "Comprimidos de liberación prolongada 2,5 mg · 5 mg · 10 mg"
+              ],
+              "ref": "ESC Hypertension Guidelines · AHA/ACC Hypertension Guidelines · ESC Chronic Coronary Syndrome Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
+              "renalDose": {
+                "fg10a30": {
+                  "ev": null,
+                  "obs": "Puede usarse; monitorizar PA y síntomas de hipotensión.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "2,5–5 mg LP",
+                    "doseMaxima": "5 mg/dia",
+                    "intervalo": "1x/dia (cautela)",
+                    "unidade": "mg"
+                  }
+                },
+                "fg30a50": {
+                  "ev": null,
+                  "obs": "Sin ajuste renal específico. Monitorizar PA.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "5 mg LP",
+                    "doseMaxima": "10 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "fgMaior50": {
+                  "ev": null,
+                  "obs": "Dosis habitual. Sin ajuste renal.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "5–10 mg LP",
+                    "doseMaxima": "10 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "fgMenor10": {
+                  "ev": null,
+                  "obs": "Iniciar con dosis mínima. Monitorizar rigurosamente.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "2,5 mg LP",
+                    "doseMaxima": "2,5 mg/dia",
+                    "intervalo": "1x/dia (cautela)",
+                    "unidade": "mg"
+                  }
+                },
+                "hemodialise": {
+                  "ev": null,
+                  "obs": "No dializable. Mantener dosis mínima con precaución.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "2,5 mg LP",
+                    "doseMaxima": "5 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "message": "No requiere ajuste renal. Metabolismo predominantemente hepático (CYP3A4).",
+                "requiresAdjustment": false,
+                "version": 2
+              },
+              "risksByPatient": [
+                "Gestante: usar solo si el beneficio supera el riesgo; nifedipino tiene mayor experiencia gestacional.",
+                "Lactante: datos limitados — usar con precaución.",
+                "Anciano (40 años): iniciar con 2,5 mg/día. Monitorizar hipotensión y edema.",
+                "Insuficiencia hepática: metabolismo hepático importante — iniciar con dosis menor y titular lentamente."
+              ],
+              "safetyFlags": {
+                "avBlockRisk": false,
+                "bradycardiaRisk": false,
+                "hypotensionRisk": true,
+                "peripheralEdemaRisk": true,
+                "pregnancyCaution": true,
+                "qtRisk": false,
+                "reflexTachycardiaRisk": true,
+                "renalHighRisk": false,
+                "warning": "Felodipino puede causar edema periférico e hipotensión. Importante: interacciones por CYP3A4 y pomelo/toronja. Usar EXCLUSIVAMENTE formulación LP."
+              }
+            },
+            "icon": "💊",
+            "id": "felodipina",
+            "keywords": [
+              "felodipina",
+              "bloqueador dos canais de calcio diidropiridinico"
+            ],
+            "name": {
+              "es": "Felodipina",
+              "pt": "Felodipina"
+            },
+            "pt": {
+              "alerts": [
+                "Usar EXCLUSIVAMENTE formulações de liberação prolongada — não partir ou mastigar os comprimidos.",
+                "Interação importante: grapefruit/toranja — pode aumentar significativamente os níveis séricos (CYP3A4). Evitar.",
+                "Interações CYP3A4: claritromicina, cetoconazol, itraconazol, ritonavir → aumentam nível sérico.",
+                "Edema maleolar é o principal efeito adverso — frequentemente não responde a diuréticos."
+              ],
+              "auditNotes": {
+                "note": "BCC diidropiridínico LP útil em HAS e angina. Perfil semelhante à amlodipina, com meia-vida menor. Atenção especial à interação com grapefruit e inibidores de CYP3A4.",
+                "sourcePriority": [
+                  "ESC Hypertension Guidelines 2023",
+                  "AHA/ACC Hypertension Guidelines 2023",
+                  "ESC Chronic Coronary Syndrome Guidelines",
+                  "Goodman & Gilman",
+                  "Lexicomp 2026",
+                  "FDA/EMA label"
+                ],
+                "status": "excellent_after_review"
+              },
+              "category": "cardio",
+              "class": "Bloqueador dos canais de cálcio diidropiridínico",
+              "commercialNames": [
+                "Plendil",
+                "Felodipina genérica"
+              ],
+              "commonAdverseEffects": [
+                "Edema maleolar",
+                "Cefaleia",
+                "Rubor facial",
+                "Tontura",
+                "Palpitações",
+                "Fadiga",
+                "Náuseas"
+              ],
+              "dangerousAdverseEffects": [
+                "Hipotensão grave",
+                "Síncope",
+                "Angina paradoxal rara",
+                "Edema periférico severo"
+              ],
+              "dose": {
+                "adultoGrave": "Dose máxima: 10 mg/dia. Não há formulação IV.",
+                "adultoPadrao": "2,5–5 mg LP VO 1x/dia. Titular a cada 2 semanas conforme PA e tolerabilidade."
+              },
+              "halfLife": "11–16 horas",
+              "id": "felodipina",
+              "mechanism": "Bloqueia canais de cálcio tipo L na musculatura lisa vascular, promovendo vasodilatação arterial periférica e redução da resistência vascular sistêmica, com pouco efeito direto sobre o nó AV.",
+              "name": "Felodipina",
+              "onset": "2–5 horas",
+              "presentation": [
+                "Comprimidos de liberação prolongada 2,5 mg · 5 mg · 10 mg"
+              ],
+              "ref": "ESC Hypertension Guidelines · AHA/ACC Hypertension Guidelines · ESC Chronic Coronary Syndrome Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
+              "renalDose": {
+                "fg10a30": {
+                  "ev": null,
+                  "obs": "Pode usar; monitorar PA e sintomas de hipotensão.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "2,5–5 mg LP",
+                    "doseMaxima": "5 mg/dia",
+                    "intervalo": "1x/dia (cautela)",
+                    "unidade": "mg"
+                  }
+                },
+                "fg30a50": {
+                  "ev": null,
+                  "obs": "Sem ajuste renal específico. Monitorar PA.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "5 mg LP",
+                    "doseMaxima": "10 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "fgMaior50": {
+                  "ev": null,
+                  "obs": "Dose habitual. Sem ajuste renal.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "5–10 mg LP",
+                    "doseMaxima": "10 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "fgMenor10": {
+                  "ev": null,
+                  "obs": "Iniciar com dose mínima. Monitorar rigorosamente.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "2,5 mg LP",
+                    "doseMaxima": "2,5 mg/dia",
+                    "intervalo": "1x/dia (cautela)",
+                    "unidade": "mg"
+                  }
+                },
+                "hemodialise": {
+                  "ev": null,
+                  "obs": "Não dialisável. Manter dose mínima com cautela.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "2,5 mg LP",
+                    "doseMaxima": "5 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "message": "Não requer ajuste renal. Metabolismo predominantemente hepático (CYP3A4).",
+                "requiresAdjustment": false,
+                "version": 2
+              },
+              "risksByPatient": [
+                "Gestante: usar apenas se benefício superar risco; nifedipina tem maior experiência gestacional.",
+                "Lactante: dados limitados — usar com cautela.",
+                "Idoso (40 anos): iniciar com 2,5 mg/dia. Monitorar hipotensão e edema.",
+                "Insuficiência hepática: metabolismo hepático importante — iniciar com dose menor e titular lentamente."
+              ],
+              "safetyFlags": {
+                "avBlockRisk": false,
+                "bradycardiaRisk": false,
+                "hypotensionRisk": true,
+                "peripheralEdemaRisk": true,
+                "pregnancyCaution": true,
+                "qtRisk": false,
+                "reflexTachycardiaRisk": true,
+                "renalHighRisk": false,
+                "warning": "Felodipina pode causar edema periférico e hipotensão. Importante: interações por CYP3A4 e grapefruit/toranja. Usar EXCLUSIVAMENTE formulação LP."
+              }
+            },
+            "schema": "premium-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "cardio.js"
+          },
+          "sourceModule": "cardio.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Felodipino"
+      },
+      "icon": "💊",
+      "id": "felodipina",
+      "keywords": [
+        "felodipina"
+      ],
+      "name": {
+        "es": "Felodipino",
+        "pt": "Felodipina"
+      },
+      "pt": {
+        "name": "Felodipina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardiologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,264 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "317e6d16e949d648c5725594837c14be03d70a92a8ae60b2b8f55c249748d565",
+    "sourceModule": "psiquiatria.js"
+  },
+  "drugId": "zopiclona",
+  "identity": {
+    "canonicalOwner": "psiquiatria.js",
+    "category": "hipnotico",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "zopiclona",
+      "imovane",
+      "zopix",
+      "zopiclona bago",
+      "zopiclona gador",
+      "hipnotico nao benzodiazepinico — droga z"
+    ],
+    "name": {
+      "es": "Zopiclona",
+      "pt": "Zopiclona"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "hipnotico",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Tomar inmediatamente antes de acostarse.",
+          "Usar solo si hay tiempo adecuado para dormir.",
+          "Puede causar sabor metálico/amargo característico.",
+          "Evitar alcohol, opioides y otros sedantes.",
+          "Usar durante el menor tiempo posible."
+        ],
+        "category": "hipnotico",
+        "class": "Hipnótico no benzodiacepínico — droga Z",
+        "commercialNames": {
+          "ar": [
+            "Imovane",
+            "Zopiclona Bagó",
+            "Zopiclona Gador"
+          ],
+          "br": [
+            "Imovane",
+            "Zopix",
+            "Zopiclona"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sabor metálico o amargo",
+          "Somnolencia",
+          "Boca seca",
+          "Mareos",
+          "Cefalea",
+          "Somnolencia residual"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a zopiclona",
+          "Insuficiencia respiratoria grave",
+          "Apnea del sueño grave",
+          "Miastenia gravis",
+          "Insuficiencia hepática grave",
+          "Historia de conductas complejas del sueño con hipnóticos"
+        ],
+        "dangerousAdverseEffects": [
+          "Conductas complejas del sueño",
+          "Dependencia y abuso",
+          "Depresión respiratoria con depresores del SNC",
+          "Caídas y fracturas",
+          "Confusión o delirium en adultos mayores",
+          "Reacciones paradójicas con agitación"
+        ],
+        "dose": {
+          "adulto": "Insomnio: 7,5 mg VO inmediatamente antes de acostarse.",
+          "idoso": "Adultos mayores, frágiles o hepatopatía: iniciar 3,75 mg al acostarse.",
+          "maxDose": "Dosis máxima habitual: 7,5 mg/noche."
+        },
+        "doseKg": {
+          "maxDose": "7,5 mg/noche",
+          "pediatric": "No recomendado en pediatría.",
+          "standard": "No se utiliza cálculo por kg en adultos."
+        },
+        "halfLife": "Vida media aproximada: 5 horas; puede prolongarse en adultos mayores y hepatopatía.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Insomnio de conciliación",
+          "Insomnio de mantenimiento del sueño",
+          "Insomnio de corta duración",
+          "Insomnio transitorio",
+          "Insomnio situacional por estrés",
+          "Insomnio asociado a ansiedad leve"
+        ],
+        "interactions": [
+          "Alcohol",
+          "Opioides",
+          "Benzodiacepinas",
+          "Antipsicóticos sedativos",
+          "Antidepresivos sedativos",
+          "Inhibidores de CYP3A4"
+        ],
+        "mechanism": "Modulador positivo del receptor GABA-A en el sitio benzodiacepínico, promoviendo efecto hipnótico.",
+        "name": "Zopiclona",
+        "onset": "Inicio de acción generalmente en 30 minutos.",
+        "presentation": [
+          "Comprimido 3,75 mg",
+          "Comprimido 7,5 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "zopiclona",
+      "keywords": [
+        "zopiclona",
+        "imovane",
+        "zopix",
+        "zopiclona bago",
+        "zopiclona gador",
+        "hipnotico nao benzodiazepinico — droga z"
+      ],
+      "name": {
+        "es": "Zopiclona",
+        "pt": "Zopiclona"
+      },
+      "pt": {
+        "alerts": [
+          "Tomar imediatamente antes de deitar.",
+          "Usar somente se houver tempo adequado para dormir.",
+          "Pode causar gosto metálico/amargo característico.",
+          "Evitar álcool, opioides e outros sedativos.",
+          "Usar pelo menor tempo possível."
+        ],
+        "category": "hipnotico",
+        "class": "Hipnótico não benzodiazepínico — droga Z",
+        "commercialNames": {
+          "ar": [
+            "Imovane",
+            "Zopiclona Bagó",
+            "Zopiclona Gador"
+          ],
+          "br": [
+            "Imovane",
+            "Zopix",
+            "Zopiclona"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Gosto metálico ou amargo",
+          "Sonolência",
+          "Boca seca",
+          "Tontura",
+          "Cefaleia",
+          "Sonolência residual"
+        ],
+        "contraindications": [
+          "Hipersensibilidade à zopiclona",
+          "Insuficiência respiratória grave",
+          "Apneia do sono grave",
+          "Miastenia gravis",
+          "Insuficiência hepática grave",
+          "História de comportamentos complexos do sono com hipnóticos"
+        ],
+        "dangerousAdverseEffects": [
+          "Comportamentos complexos do sono",
+          "Dependência e abuso",
+          "Depressão respiratória com depressores do SNC",
+          "Quedas e fraturas",
+          "Confusão ou delirium em idosos",
+          "Reações paradoxais com agitação"
+        ],
+        "dose": {
+          "adulto": "Insônia: 7,5 mg VO imediatamente antes de deitar.",
+          "idoso": "Idosos, frágeis ou hepatopatia: iniciar 3,75 mg ao deitar.",
+          "maxDose": "Dose máxima usual: 7,5 mg/noite."
+        },
+        "doseKg": {
+          "maxDose": "7,5 mg/noite",
+          "pediatric": "Não recomendado em pediatria.",
+          "standard": "Não se utiliza cálculo por kg em adultos."
+        },
+        "halfLife": "Vida média aproximada: 5 horas; pode prolongar em idosos e hepatopatia.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Insônia de início do sono",
+          "Insônia de manutenção do sono",
+          "Insônia de curta duração",
+          "Insônia transitória",
+          "Insônia situacional por estresse",
+          "Insônia associada à ansiedade leve"
+        ],
+        "interactions": [
+          "Álcool",
+          "Opioides",
+          "Benzodiazepínicos",
+          "Antipsicóticos sedativos",
+          "Antidepressivos sedativos",
+          "Inibidores de CYP3A4"
+        ],
+        "mechanism": "Modulador positivo do receptor GABA-A no sítio benzodiazepínico, promovendo efeito hipnótico.",
+        "name": "Zopiclona",
+        "onset": "Início de ação geralmente em 30 minutos.",
+        "presentation": [
+          "Comprimido 3,75 mg",
+          "Comprimido 7,5 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psiquiatria.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Insomnio: 7,5 mg VO inmediatamente antes de acostarse.",
+            "idoso": "Adultos mayores, frágiles o hepatopatía: iniciar 3,75 mg al acostarse.",
+            "maxDose": "Dosis máxima habitual: 7,5 mg/noche."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Insônia: 7,5 mg VO imediatamente antes de deitar.",
+            "idoso": "Idosos, frágeis ou hepatopatia: iniciar 3,75 mg ao deitar.",
+            "maxDose": "Dose máxima usual: 7,5 mg/noite."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

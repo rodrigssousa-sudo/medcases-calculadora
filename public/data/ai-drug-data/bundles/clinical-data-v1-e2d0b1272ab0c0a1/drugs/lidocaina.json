@@ -1,0 +1,191 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "3f2e8d3523c8a35cfbcdede2d660630d1cef999915c20e0d37b8fa8a426ef6e5",
+    "sourceModule": "analgesicos.js"
+  },
+  "drugId": "lidocaina",
+  "identity": {
+    "canonicalOwner": "analgesicos.js",
+    "category": "analgesia",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "lidocaina",
+      "lidocaína"
+    ],
+    "name": {
+      "es": "Lidocaína",
+      "pt": "Lidocaína"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "analgesia",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "analgesicos.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "cardio",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "alerts": [],
+              "apresentacao": "Ampollas IV 1% (10 mg/mL) / 2% (20 mg/mL)",
+              "classe": "Antiarrítmico Clase IB | Anestésico local amida | t½ 1,5–2 h (variable)",
+              "dose": "Bolo 70–105 mg IV (1–1,5 mg/kg) → Infusión 1–4 mg/min IV",
+              "doseBolus": "70–105 mg IV (1–1,5 mg/kg) en 1–2 min",
+              "doseInfusao": "1–4 mg/min IV",
+              "doseRepetir": "53 mg IV (0,75 mg/kg) cada 5–10 min si necesario",
+              "doseTotalMax": "210 mg (3 mg/kg) en bolo acumulado",
+              "efeitosAdversos": [
+                "Somnolencia",
+                "Mareos",
+                "Parestesias",
+                "Temblor",
+                "Náuseas",
+                "Confusión",
+                "Disartria",
+                "⚠️ Convulsiones",
+                "⚠️ Coma",
+                "⚠️ Depresión respiratoria",
+                "⚠️ Bradicardia/BAV",
+                "⚠️ Colapso CV"
+              ],
+              "indicacoes": [
+                "TV estable — alternativa a amiodarona",
+                "FV/TV recurrente post-PCR",
+                "Arritmias ventriculares isquémicas/post-IAM",
+                "PCR por FV/TV sin pulso (si amiodarona no disponible)"
+              ],
+              "monitoramento": [
+                "ECG continuo",
+                "PA cada 5 min (carga)",
+                "Estado neurológico",
+                "Ritmo ventricular",
+                "K⁺ + Mg²⁺",
+                "Función hepática",
+                "Suspender si temblor/confusión/convulsión"
+              ],
+              "refs": [
+                "AHA ACLS Guidelines",
+                "ESC VA Guidelines",
+                "AHA/ACC/HRS VA Guidelines",
+                "Goodman & Gilman",
+                "Lexicomp",
+                "FDA/DailyMed label"
+              ]
+            },
+            "icon": "💊",
+            "id": "lidocaina",
+            "keywords": [
+              "lidocaina"
+            ],
+            "name": {
+              "es": "lidocaina",
+              "pt": "lidocaina"
+            },
+            "pt": {
+              "alerts": [],
+              "apresentacao": "Ampolas IV 1% (10 mg/mL) / 2% (20 mg/mL)",
+              "classe": "Antiarrítmico Classe IB | Anestésico local amida | t½ 1,5–2 h (variável)",
+              "dose": "Bolus 70–105 mg IV (1–1,5 mg/kg) → Infusão 1–4 mg/min IV",
+              "doseBolus": "70–105 mg IV (1–1,5 mg/kg) em 1–2 min",
+              "doseInfusao": "1–4 mg/min IV",
+              "doseRepetir": "53 mg IV (0,75 mg/kg) a cada 5–10 min se necessário",
+              "doseTotalMax": "210 mg (3 mg/kg) em bolus acumulado",
+              "efeitosAdversos": [
+                "Sonolência",
+                "Tontura",
+                "Parestesias",
+                "Tremor",
+                "Náuseas",
+                "Confusão",
+                "Disartria",
+                "⚠️ Convulsões",
+                "⚠️ Coma",
+                "⚠️ Depressão respiratória",
+                "⚠️ Bradicardia/BAV",
+                "⚠️ Colapso CV"
+              ],
+              "indicacoes": [
+                "TV estável — alternativa à amiodarona",
+                "FV/TV recorrente pós-PCR",
+                "Arritmias ventriculares isquêmicas/pós-IAM",
+                "PCR por FV/TV sem pulso (se amiodarona indisponível)"
+              ],
+              "monitoramento": [
+                "ECG contínuo",
+                "PA a cada 5 min (carga)",
+                "Estado neurológico",
+                "Ritmo ventricular",
+                "K⁺ + Mg²⁺",
+                "Função hepática",
+                "Suspender se tremor/confusão/convulsão"
+              ],
+              "refs": [
+                "AHA ACLS Guidelines",
+                "ESC VA Guidelines",
+                "AHA/ACC/HRS VA Guidelines",
+                "Goodman & Gilman",
+                "Lexicomp",
+                "FDA/DailyMed label"
+              ]
+            },
+            "schema": "premium-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "cardio.js"
+          },
+          "sourceModule": "cardio.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Lidocaína"
+      },
+      "icon": "💊",
+      "id": "lidocaina",
+      "keywords": [
+        "lidocaina",
+        "lidocaína"
+      ],
+      "name": {
+        "es": "Lidocaína",
+        "pt": "Lidocaína"
+      },
+      "pt": {
+        "name": "Lidocaína"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "analgesicos.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

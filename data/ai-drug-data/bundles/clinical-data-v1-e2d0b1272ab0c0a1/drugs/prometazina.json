@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "a027abc3504f396521707eb8a63225349e6802bc4e27e532a987e3a87aa3b695",
+    "sourceModule": "emergencia.js"
+  },
+  "drugId": "prometazina",
+  "identity": {
+    "canonicalOwner": "emergencia.js",
+    "category": "emergencia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "prometazina",
+      "prometazina (fenergan)"
+    ],
+    "name": {
+      "es": "Prometazina",
+      "pt": "Prometazina (Fenergan)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "emergencia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Prometazina"
+      },
+      "icon": "💊",
+      "id": "prometazina",
+      "keywords": [
+        "prometazina",
+        "prometazina (fenergan)"
+      ],
+      "name": {
+        "es": "Prometazina",
+        "pt": "Prometazina (Fenergan)"
+      },
+      "pt": {
+        "name": "Prometazina (Fenergan)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "emergencia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

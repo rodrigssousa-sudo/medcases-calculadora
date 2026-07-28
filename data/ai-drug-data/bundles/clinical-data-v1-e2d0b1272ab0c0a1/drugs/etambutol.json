@@ -1,0 +1,334 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "f88b0a255ad8ebf963825743ff8f89f4e2e6440278d888acad9d3739a12d3c99",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "etambutol",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "etambutol",
+      "etambutol generico",
+      "miambutol",
+      "antimicobacteriano (antituberculoso)"
+    ],
+    "name": {
+      "es": "Etambutol",
+      "pt": "Etambutol"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Evaluar agudeza visual y percepción de colores antes y mensualmente durante el tratamiento.",
+          "Suspender inmediatamente si hay alteración visual — riesgo de amaurosis permanente."
+        ],
+        "class": "Antimicobacteriano (antituberculoso)",
+        "commercialNames": {
+          "ar": [
+            "Etambutol Genérico",
+            "Miambutol"
+          ],
+          "br": [
+            "Etambutol Genérico",
+            "Miambutol"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Neuritis óptica (visión borrosa, discromatopsia)",
+          "Náuseas",
+          "Artralgias"
+        ],
+        "dangerousAdverseEffects": [
+          "Pérdida visual irreversible por neuritis óptica",
+          "Neuropatía periférica",
+          "Hiperuricemia"
+        ],
+        "dilution": "Uso exclusivamente oral.",
+        "dose": {
+          "adulto": "1225 mg VO 1 vez/día (15–20 mg/kg/día)",
+          "pediatrica": "1400 mg VO 1 vez/día (15–25 mg/kg/día)"
+        },
+        "doseKg": {
+          "maxDose": "1,6 g/día",
+          "standard": "15–20 mg/kg/día VO (adulto)"
+        },
+        "name": "Etambutol",
+        "presentation": [
+          "Comprimidos: 400 mg",
+          "Formulación combinada en esquema RHZE"
+        ],
+        "ref": "WHO TB Guidelines 2022 / Ministério da Saúde BR / Sanford Guide 2025",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Monitorizar toxicidad ocular.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "48/48h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "48/48h",
+              "unidade": "mg/kg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Ajustar intervalo debido a la eliminación renal predominante.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "48/48h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "48/48h",
+              "unidade": "mg/kg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dosis habitual para tuberculosis.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1,6 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Mayor riesgo de neuritis óptica.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "72/72h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "72/72h",
+              "unidade": "mg/kg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Administrar después de hemodiálisis y monitorizar agudeza visual.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "3x/semana pós-HD",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "3x/semana pós-HD",
+              "unidade": "mg/kg"
+            }
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "No aplicable (uso oral).",
+        "therapeuticRange": "Bacteriostático. Inhibe la biosíntesis de la pared celular micobacteriana."
+      },
+      "icon": "💊",
+      "id": "etambutol",
+      "keywords": [
+        "etambutol",
+        "etambutol generico",
+        "miambutol",
+        "antimicobacteriano (antituberculoso)"
+      ],
+      "name": {
+        "es": "Etambutol",
+        "pt": "Etambutol"
+      },
+      "pt": {
+        "alerts": [
+          "Avaliar acuidade visual e percepção de cores antes e mensalmente durante o tratamento.",
+          "Suspender imediatamente se alteração visual — risco de amaurose permanente."
+        ],
+        "class": "Antimicobacteriano (antituberculoso)",
+        "commercialNames": {
+          "ar": [
+            "Etambutol Genérico",
+            "Miambutol"
+          ],
+          "br": [
+            "Etambutol Genérico",
+            "Miambutol"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Neurite óptica (visão turva, discromatopsia)",
+          "Náuseas",
+          "Artralgias"
+        ],
+        "dangerousAdverseEffects": [
+          "Perda visual irreversível por neurite óptica",
+          "Neuropatia periférica",
+          "Hiperuricemia"
+        ],
+        "dilution": "Uso exclusivamente oral.",
+        "dose": {
+          "adulto": "1225 mg VO 1x/dia (15–20 mg/kg/dia)",
+          "pediatrica": "1400 mg VO 1x/dia (15–25 mg/kg/dia)"
+        },
+        "doseKg": {
+          "maxDose": "1,6 g/dia",
+          "standard": "15–20 mg/kg/dia VO (adulto)"
+        },
+        "name": "Etambutol",
+        "presentation": [
+          "Comprimidos: 400 mg",
+          "Formulação combinada no esquema RHZE"
+        ],
+        "ref": "WHO TB Guidelines 2022 / Ministério da Saúde BR / Sanford Guide 2025",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Monitorar toxicidade ocular.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "48/48h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "48/48h",
+              "unidade": "mg/kg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Ajustar intervalo devido à eliminação renal predominante.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "48/48h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "48/48h",
+              "unidade": "mg/kg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dose habitual para tuberculose.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1,6 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Maior risco de neurite óptica.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "72/72h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "72/72h",
+              "unidade": "mg/kg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Administrar após hemodiálise e monitorar acuidade visual.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "3x/semana pós-HD",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "1,6 g/dose",
+              "intervalo": "3x/semana pós-HD",
+              "unidade": "mg/kg"
+            }
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Não aplicável (uso oral).",
+        "therapeuticRange": "Bacteriostático. Inibe biossíntese da parede celular micobacteriana."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "1225 mg VO 1 vez/día (15–20 mg/kg/día)",
+            "pediatrica": "1400 mg VO 1 vez/día (15–25 mg/kg/día)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "1225 mg VO 1x/dia (15–20 mg/kg/dia)",
+            "pediatrica": "1400 mg VO 1x/dia (15–25 mg/kg/dia)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

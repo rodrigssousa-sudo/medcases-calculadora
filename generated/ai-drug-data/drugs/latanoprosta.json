@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "502ca686b3aa9102bde24718f4db22aeca6d0ead95fd4a266e02d3b1d3d4618a",
+    "sourceModule": "oftalmologia.js"
+  },
+  "drugId": "latanoprosta",
+  "identity": {
+    "canonicalOwner": "oftalmologia.js",
+    "category": "oftalmologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "latanoprosta"
+    ],
+    "name": {
+      "es": "Latanoprost",
+      "pt": "Latanoprosta"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "oftalmologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Latanoprost"
+      },
+      "icon": "💊",
+      "id": "latanoprosta",
+      "keywords": [
+        "latanoprosta"
+      ],
+      "name": {
+        "es": "Latanoprost",
+        "pt": "Latanoprosta"
+      },
+      "pt": {
+        "name": "Latanoprosta"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "oftalmologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

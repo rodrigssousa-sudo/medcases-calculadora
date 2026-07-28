@@ -1,0 +1,348 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "2a411946b1109a343352e23dca56191892ea11969bcbbdd2a9876d992f750d2a",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "cefixima",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "cefixima",
+      "cefspan",
+      "cefixima generica",
+      "cefalosporina de 3ª geracao (oral)"
+    ],
+    "name": {
+      "es": "Cefixima",
+      "pt": "Cefixima"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(20,184,166,0.15)",
+      "colorTxt": "#14B8A6",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Requiere ajuste en ClCr < 30 mL/min (reducir dosis en 50%).",
+          "Buena opción oral para infecciones respiratorias, ITU y gonorrea no complicada."
+        ],
+        "class": "Cefalosporina de 3ª generación (oral)",
+        "commercialNames": {
+          "ar": [
+            "Cefspan",
+            "Cefixima Genérica"
+          ],
+          "br": [
+            "Cefspan",
+            "Cefixima Genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Diarrea",
+          "Náuseas",
+          "Dolor abdominal",
+          "Erupción cutánea"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a cefalosporinas o penicilinas"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia / hipersensibilidad grave",
+          "Colitis seudomembranosa por C. difficile",
+          "Síndrome de Stevens-Johnson (muy raro)"
+        ],
+        "dilution": "Uso oral exclusivo.",
+        "dose": {
+          "adultoVO": "400 mg VO 24/24h",
+          "pediatrica": "400 mg VO 24h (8 mg/kg/día)"
+        },
+        "doseKg": {
+          "pediatrica": "8 mg/kg/día VO (máx 400 mg/día)"
+        },
+        "halfLife": "Semivida 3–4 h. Eliminación renal ~50% inalterada.",
+        "mechanism": "Se une a las PBPs 1, 2, 3 y 6, inhibiendo la síntesis de la pared celular bacteriana. Resistente a muchas beta-lactamasas plasmídicas.",
+        "name": "Cefixima",
+        "onset": "Absorción oral moderada — biodisponibilidad ~40–50%; Tmáx 2–6 h.",
+        "presentation": [
+          "Comprimidos: 200 mg, 400 mg",
+          "Cápsulas: 400 mg",
+          "Suspensión oral: 100 mg/5 mL"
+        ],
+        "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Reducir dosis aproximadamente un 50%.",
+            "pediatrica": {
+              "dose": "4 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Generalmente sin ajuste hasta ClCr 20–30 mL/min.",
+            "pediatrica": {
+              "dose": "8 mg/kg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "400 mg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dosis habitual.",
+            "pediatrica": {
+              "dose": "8 mg/kg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "400 mg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorizar acumulación del antibiótico.",
+            "pediatrica": {
+              "dose": "4 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Administrar después de hemodiálisis.",
+            "pediatrica": {
+              "dose": "4 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "No aplicable (uso oral).",
+        "therapeuticRange": "Tiempo sobre la CIM (T>CIM) como parámetro PK/PD."
+      },
+      "icon": "💊",
+      "id": "cefixima",
+      "keywords": [
+        "cefixima",
+        "cefspan",
+        "cefixima generica",
+        "cefalosporina de 3ª geracao (oral)"
+      ],
+      "name": {
+        "es": "Cefixima",
+        "pt": "Cefixima"
+      },
+      "pt": {
+        "alerts": [
+          "Requer ajuste em ClCr < 30 mL/min (reduzir dose em 50%).",
+          "Boa opção oral para infecções respiratórias, ITU e gonorreia não complicada."
+        ],
+        "class": "Cefalosporina de 3ª geração (oral)",
+        "commercialNames": {
+          "ar": [
+            "Cefspan",
+            "Cefixima Genérica"
+          ],
+          "br": [
+            "Cefspan",
+            "Cefixima Genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Diarreia",
+          "Náuseas",
+          "Dor abdominal",
+          "Rash cutâneo"
+        ],
+        "contraindications": [
+          "Hipersensibilidade a cefalosporinas ou penicilinas"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia / hipersensibilidade grave",
+          "Colite pseudomembranosa por C. difficile",
+          "Síndrome de Stevens-Johnson (muito raro)"
+        ],
+        "dilution": "Uso oral exclusivo.",
+        "dose": {
+          "adultoVO": "400 mg VO 24/24h",
+          "pediatrica": "400 mg VO 24/24h (8 mg/kg/dia)"
+        },
+        "doseKg": {
+          "pediatrica": "8 mg/kg/dia VO (máx 400 mg/dia)"
+        },
+        "halfLife": "Meia-vida 3–4 h. Eliminação renal ~50% inalterada.",
+        "mechanism": "Liga-se às PBPs 1, 2, 3 e 6, inibindo a síntese da parede celular bacteriana. Resistente a muitas beta-lactamases plasmídicas.",
+        "name": "Cefixima",
+        "onset": "Absorção oral moderada — biodisponibilidade ~40–50%; Tmáx 2–6 h.",
+        "presentation": [
+          "Comprimidos: 200 mg, 400 mg",
+          "Cápsulas: 400 mg",
+          "Suspensão oral: 100 mg/5 mL"
+        ],
+        "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Reduzir dose em aproximadamente 50%.",
+            "pediatrica": {
+              "dose": "4 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Geralmente sem ajuste até ClCr 20–30 mL/min.",
+            "pediatrica": {
+              "dose": "8 mg/kg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "400 mg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dose habitual.",
+            "pediatrica": {
+              "dose": "8 mg/kg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "400 mg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorar acúmulo do antibiótico.",
+            "pediatrica": {
+              "dose": "4 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Administrar após hemodiálise.",
+            "pediatrica": {
+              "dose": "4 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Não aplicável (uso oral).",
+        "therapeuticRange": "Tempo acima da CIM (T>CIM) como parâmetro PK/PD."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoVO": "400 mg VO 24/24h",
+            "pediatrica": "400 mg VO 24h (8 mg/kg/día)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoVO": "400 mg VO 24/24h",
+            "pediatrica": "400 mg VO 24/24h (8 mg/kg/dia)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

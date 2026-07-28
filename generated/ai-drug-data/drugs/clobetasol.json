@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "5bb019e89d1952fdc8305252f9099badccd1e594864b7e4a51809217836228d7",
+    "sourceModule": "alergia_imunologia.js"
+  },
+  "drugId": "clobetasol",
+  "identity": {
+    "canonicalOwner": "alergia_imunologia.js",
+    "category": "dermatologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "clobetasol",
+      "clobetasol (propionato de)"
+    ],
+    "name": {
+      "es": "Clobetasol (Propionato de)",
+      "pt": "Clobetasol (Propionato de)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "dermatologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Clobetasol (Propionato de)"
+      },
+      "icon": "💊",
+      "id": "clobetasol",
+      "keywords": [
+        "clobetasol",
+        "clobetasol (propionato de)"
+      ],
+      "name": {
+        "es": "Clobetasol (Propionato de)",
+        "pt": "Clobetasol (Propionato de)"
+      },
+      "pt": {
+        "name": "Clobetasol (Propionato de)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "alergia_imunologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

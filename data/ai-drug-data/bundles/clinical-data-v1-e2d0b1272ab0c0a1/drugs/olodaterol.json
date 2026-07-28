@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "e3f8191c9630e3be07193c9e58e5c90e87da956dd23706a849d57cf7ac8f28bd",
+    "sourceModule": "pneumologia.js"
+  },
+  "drugId": "olodaterol",
+  "identity": {
+    "canonicalOwner": "pneumologia.js",
+    "category": "pneumologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "olodaterol"
+    ],
+    "name": {
+      "es": "Olodaterol",
+      "pt": "Olodaterol"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "pneumologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Olodaterol"
+      },
+      "icon": "💊",
+      "id": "olodaterol",
+      "keywords": [
+        "olodaterol"
+      ],
+      "name": {
+        "es": "Olodaterol",
+        "pt": "Olodaterol"
+      },
+      "pt": {
+        "name": "Olodaterol"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "pneumologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

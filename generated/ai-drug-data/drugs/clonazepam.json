@@ -1,0 +1,270 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "77789f9d0e0a6f1a5e92e25f5bfd7f421a4c78f9b740442b7a868f4b514d3b2b",
+    "sourceModule": "psiquiatria.js"
+  },
+  "drugId": "clonazepam",
+  "identity": {
+    "canonicalOwner": "psiquiatria.js",
+    "category": "ansiolitico",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "clonazepam",
+      "rivotril",
+      "clonazepam ems",
+      "medley",
+      "neo quimica",
+      "clonagin",
+      "neuryl",
+      "clonazepam bago",
+      "benzodiazepinico"
+    ],
+    "name": {
+      "es": "Clonazepam",
+      "pt": "Clonazepam"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "ansiolitico",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "No suspender abruptamente.",
+          "Riesgo elevado de dependencia en uso prolongado.",
+          "Evitar asociación con alcohol."
+        ],
+        "category": "ansiolitico",
+        "class": "Benzodiacepina",
+        "commercialNames": {
+          "ar": [
+            "Rivotril",
+            "Clonagin",
+            "Neuryl",
+            "Clonazepam Bagó"
+          ],
+          "br": [
+            "Rivotril",
+            "Clonazepam EMS",
+            "Medley",
+            "Neo Química"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia",
+          "Mareos",
+          "Fatiga",
+          "Déficit de memoria",
+          "Ataxia",
+          "Disminución de la concentración"
+        ],
+        "contraindications": [
+          "Miastenia gravis",
+          "Insuficiencia respiratoria grave",
+          "Apnea del sueño grave",
+          "Hipersensibilidad a benzodiacepinas"
+        ],
+        "dangerousAdverseEffects": [
+          "Dependencia física",
+          "Síndrome de abstinencia",
+          "Depresión respiratoria",
+          "Caídas",
+          "Coma en asociación con depresores del SNC"
+        ],
+        "dose": {
+          "adulto": "Ansiedad/pánico: iniciar 0,25–0,5 mg VO 1–2 veces/día; titular según respuesta.",
+          "maxDose": "Dosis máxima habitual: 4 mg/día.",
+          "panico": "Dosis habitual: 1–2 mg/día divididos en 1–2 tomas."
+        },
+        "doseKg": {
+          "maxDose": "4 mg/día (adultos)",
+          "pediatric": "Epilepsia pediátrica: 0,01–0,05 mg/kg/día divididos en 2–3 tomas.",
+          "standard": "No se utiliza cálculo rutinario por kg en adultos."
+        },
+        "halfLife": "Vida media aproximada: 18–50 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Trastorno de pánico",
+          "Trastorno de ansiedad generalizada",
+          "Crisis de ansiedad aguda",
+          "Epilepsia",
+          "Mioclonías",
+          "Síndrome de piernas inquietas",
+          "Acatisia inducida por antipsicóticos",
+          "Insomnio asociado a ansiedad"
+        ],
+        "interactions": [
+          "Alcohol",
+          "Opioides",
+          "Barbitúricos",
+          "Antipsicóticos",
+          "Antihistamínicos sedantes"
+        ],
+        "mechanism": "Potencia la acción del GABA a través del receptor GABA-A, aumentando la entrada de cloro y reduciendo la excitabilidad neuronal.",
+        "name": "Clonazepam",
+        "onset": "Inicio de acción en 30–60 minutos.",
+        "presentation": [
+          "Comprimido 0,25 mg",
+          "Comprimido 0,5 mg",
+          "Comprimido 2 mg",
+          "Gotas 2,5 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "clonazepam",
+      "keywords": [
+        "clonazepam",
+        "rivotril",
+        "clonazepam ems",
+        "medley",
+        "neo quimica",
+        "clonagin",
+        "neuryl",
+        "clonazepam bago",
+        "benzodiazepinico"
+      ],
+      "name": {
+        "es": "Clonazepam",
+        "pt": "Clonazepam"
+      },
+      "pt": {
+        "alerts": [
+          "Não suspender abruptamente.",
+          "Risco elevado de dependência em uso prolongado.",
+          "Evitar associação com álcool."
+        ],
+        "category": "ansiolitico",
+        "class": "Benzodiazepínico",
+        "commercialNames": {
+          "ar": [
+            "Rivotril",
+            "Clonagin",
+            "Neuryl",
+            "Clonazepam Bagó"
+          ],
+          "br": [
+            "Rivotril",
+            "Clonazepam EMS",
+            "Medley",
+            "Neo Química"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência",
+          "Tontura",
+          "Fadiga",
+          "Déficit de memória",
+          "Ataxia",
+          "Redução da concentração"
+        ],
+        "contraindications": [
+          "Miastenia gravis",
+          "Insuficiência respiratória grave",
+          "Apneia do sono grave",
+          "Hipersensibilidade a benzodiazepínicos"
+        ],
+        "dangerousAdverseEffects": [
+          "Dependência física",
+          "Síndrome de abstinência",
+          "Depressão respiratória",
+          "Quedas",
+          "Coma em associação com depressores do SNC"
+        ],
+        "dose": {
+          "adulto": "Ansiedade/pânico: iniciar 0,25–0,5 mg VO 1–2x/dia; titular conforme resposta.",
+          "maxDose": "Dose máxima usual: 4 mg/dia.",
+          "panico": "Dose usual: 1–2 mg/dia divididos em 1–2 tomadas."
+        },
+        "doseKg": {
+          "maxDose": "4 mg/dia (adultos)",
+          "pediatric": "Epilepsia pediátrica: 0,01–0,05 mg/kg/dia divididos em 2–3 tomadas.",
+          "standard": "Não se utiliza cálculo rotineiro por kg em adultos."
+        },
+        "halfLife": "Vida média aproximada: 18–50 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Transtorno do pânico",
+          "Transtorno de ansiedade generalizada",
+          "Crises de ansiedade aguda",
+          "Epilepsia",
+          "Mioclonias",
+          "Síndrome das pernas inquietas",
+          "Acatisia induzida por antipsicóticos",
+          "Insônia associada à ansiedade"
+        ],
+        "interactions": [
+          "Álcool",
+          "Opioides",
+          "Barbitúricos",
+          "Antipsicóticos",
+          "Anti-histamínicos sedativos"
+        ],
+        "mechanism": "Potencializa a ação do GABA através do receptor GABA-A, aumentando a entrada de cloro e reduzindo a excitabilidade neuronal.",
+        "name": "Clonazepam",
+        "onset": "Início de ação em 30–60 minutos.",
+        "presentation": [
+          "Comprimido 0,25 mg",
+          "Comprimido 0,5 mg",
+          "Comprimido 2 mg",
+          "Gotas 2,5 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psiquiatria.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Ansiedad/pánico: iniciar 0,25–0,5 mg VO 1–2 veces/día; titular según respuesta.",
+            "maxDose": "Dosis máxima habitual: 4 mg/día.",
+            "panico": "Dosis habitual: 1–2 mg/día divididos en 1–2 tomas."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Ansiedade/pânico: iniciar 0,25–0,5 mg VO 1–2x/dia; titular conforme resposta.",
+            "maxDose": "Dose máxima usual: 4 mg/dia.",
+            "panico": "Dose usual: 1–2 mg/dia divididos em 1–2 tomadas."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

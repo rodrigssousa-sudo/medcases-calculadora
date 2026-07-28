@@ -1,0 +1,260 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "727597a400d219102a27ebd116f4c99464aee082f47a3a5f688ec8c5bb5dbaf4",
+    "sourceModule": "neurologia.js"
+  },
+  "drugId": "apomorfina",
+  "identity": {
+    "canonicalOwner": "neurologia.js",
+    "category": "antiparkinsoniano",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "apomorfina",
+      "apokinon",
+      "apokyn",
+      "agonista dopaminergico de acao rapida"
+    ],
+    "name": {
+      "es": "Apomorfina",
+      "pt": "Apomorfina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antiparkinsoniano",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Uso generalmente restringido a neurólogos especializados en Parkinson.",
+          "Monitorizar presión arterial durante la titulación.",
+          "Orientar al paciente sobre episodios de sueño súbito.",
+          "Contraindicada con ondansetrón.",
+          "Importante para rescate rápido de episodios OFF."
+        ],
+        "category": "antiparkinsoniano",
+        "class": "Agonista dopaminérgico de acción rápida",
+        "commercialNames": {
+          "ar": [
+            "Apomorfina",
+            "Apokyn"
+          ],
+          "br": [
+            "Apokinon",
+            "Apomorfina"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas",
+          "Vómitos",
+          "Somnolencia",
+          "Mareos",
+          "Hipotensión ortostática",
+          "Bostezos frecuentes",
+          "Nódulos subcutáneos"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a apomorfina",
+          "Uso concomitante con ondansetrón",
+          "Hipotensión grave no controlada",
+          "Psicosis grave activa"
+        ],
+        "dangerousAdverseEffects": [
+          "Hipotensión grave",
+          "Síncope",
+          "Alucinaciones",
+          "Psicosis",
+          "Ataques súbitos de sueño",
+          "Discinesias importantes",
+          "Prolongación QT y arritmias raras"
+        ],
+        "dose": {
+          "adulto": "Iniciar bajo supervisión especializada con 1–2 mg SC durante episodio OFF; titular según respuesta.",
+          "infusao": "Puede utilizarse en infusión subcutánea continua en pacientes seleccionados.",
+          "manutencao": "Dosis individualizada para rescate de episodios OFF o infusión continua.",
+          "maxDose": "Individualizar según protocolo especializado."
+        },
+        "doseKg": {
+          "maxDose": "Según protocolo especializado.",
+          "severe": "Titulación individual obligatoria.",
+          "standard": "No se utiliza cálculo por kg."
+        },
+        "halfLife": "Vida media aproximada: 30–60 minutos.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Episodios OFF súbitos en enfermedad de Parkinson",
+          "Fluctuaciones motoras graves",
+          "Rescate motor rápido",
+          "Enfermedad de Parkinson avanzada",
+          "Infusión continua en pacientes seleccionados",
+          "Pacientes con OFF refractario pese a levodopa optimizada"
+        ],
+        "interactions": [
+          "Ondansetrón: contraindicación absoluta por riesgo de hipotensión grave y pérdida de conciencia",
+          "Antihipertensivos: potencian hipotensión",
+          "Levodopa: aumenta riesgo de discinesias",
+          "Alcohol y sedantes: aumentan somnolencia",
+          "Antipsicóticos: antagonizan efecto terapéutico"
+        ],
+        "mechanism": "Agonista potente de receptores dopaminérgicos D1 y D2 con inicio extremadamente rápido tras administración subcutánea.",
+        "name": "Apomorfina",
+        "onset": "Inicio de acción generalmente en 5–20 minutos.",
+        "presentation": [
+          "Pluma SC 10 mg/mL",
+          "Ampolla para infusión subcutánea continua"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "MDS Parkinson Disease Guidelines",
+          "FDA/DailyMed Apomorphine Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "apomorfina",
+      "keywords": [
+        "apomorfina",
+        "apokinon",
+        "apokyn",
+        "agonista dopaminergico de acao rapida"
+      ],
+      "name": {
+        "es": "Apomorfina",
+        "pt": "Apomorfina"
+      },
+      "pt": {
+        "alerts": [
+          "Uso geralmente restrito a neurologistas especializados em Parkinson.",
+          "Monitorar pressão arterial durante titulação.",
+          "Orientar paciente sobre episódios de sono súbito.",
+          "Contraindicada com ondansetrona.",
+          "Importante para resgate rápido de episódios OFF."
+        ],
+        "category": "antiparkinsoniano",
+        "class": "Agonista dopaminérgico de ação rápida",
+        "commercialNames": {
+          "ar": [
+            "Apomorfina",
+            "Apokyn"
+          ],
+          "br": [
+            "Apokinon",
+            "Apomorfina"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas",
+          "Vômitos",
+          "Sonolência",
+          "Tontura",
+          "Hipotensão ortostática",
+          "Bocejos frequentes",
+          "Nódulos subcutâneos"
+        ],
+        "contraindications": [
+          "Hipersensibilidade à apomorfina",
+          "Uso concomitante com ondansetrona",
+          "Hipotensão grave não controlada",
+          "Psicose grave ativa"
+        ],
+        "dangerousAdverseEffects": [
+          "Hipotensão grave",
+          "Síncope",
+          "Alucinações",
+          "Psicose",
+          "Ataques súbitos de sono",
+          "Discinesias importantes",
+          "Prolongamento QT e arritmias raras"
+        ],
+        "dose": {
+          "adulto": "Iniciar sob supervisão especializada com 1–2 mg SC durante episódio OFF; titular conforme resposta.",
+          "infusao": "Pode ser utilizada em infusão subcutânea contínua em pacientes selecionados.",
+          "manutencao": "Dose individualizada para resgate de episódios OFF ou infusão contínua.",
+          "maxDose": "Individualizar conforme protocolo especializado."
+        },
+        "doseKg": {
+          "maxDose": "Conforme protocolo especializado.",
+          "severe": "Titulação individual obrigatória.",
+          "standard": "Não se utiliza cálculo por kg."
+        },
+        "halfLife": "Vida média aproximada: 30–60 minutos.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Episódios OFF súbitos na doença de Parkinson",
+          "Flutuações motoras graves",
+          "Resgate motor rápido",
+          "Doença de Parkinson avançada",
+          "Infusão contínua em pacientes selecionados",
+          "Pacientes com OFF refratário apesar de levodopa otimizada"
+        ],
+        "interactions": [
+          "Ondansetrona: contraindicação absoluta pelo risco de hipotensão grave e perda de consciência",
+          "Anti-hipertensivos: potencializam hipotensão",
+          "Levodopa: aumenta risco de discinesias",
+          "Álcool e sedativos: aumentam sonolência",
+          "Antipsicóticos: antagonizam efeito terapêutico"
+        ],
+        "mechanism": "Agonista potente dos receptores dopaminérgicos D1 e D2 com início extremamente rápido após administração subcutânea.",
+        "name": "Apomorfina",
+        "onset": "Início de ação geralmente em 5–20 minutos.",
+        "presentation": [
+          "Caneta SC 10 mg/mL",
+          "Ampola para infusão subcutânea contínua"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "MDS Parkinson Disease Guidelines",
+          "FDA/DailyMed Apomorphine Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "neurologia.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Iniciar bajo supervisión especializada con 1–2 mg SC durante episodio OFF; titular según respuesta.",
+            "infusao": "Puede utilizarse en infusión subcutánea continua en pacientes seleccionados.",
+            "manutencao": "Dosis individualizada para rescate de episodios OFF o infusión continua.",
+            "maxDose": "Individualizar según protocolo especializado."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Iniciar sob supervisão especializada com 1–2 mg SC durante episódio OFF; titular conforme resposta.",
+            "infusao": "Pode ser utilizada em infusão subcutânea contínua em pacientes selecionados.",
+            "manutencao": "Dose individualizada para resgate de episódios OFF ou infusão contínua.",
+            "maxDose": "Individualizar conforme protocolo especializado."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

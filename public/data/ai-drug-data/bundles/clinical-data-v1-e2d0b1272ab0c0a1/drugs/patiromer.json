@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "61af34727c8154108e799d9d74e624d545806a3d6e39a71b925e8cc2fa4fa45d",
+    "sourceModule": "nefro.js"
+  },
+  "drugId": "patiromer",
+  "identity": {
+    "canonicalOwner": "nefro.js",
+    "category": "nefrologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "patiromer",
+      "patiromer (sorbitex cálcico)"
+    ],
+    "name": {
+      "es": "Patiromer",
+      "pt": "Patiromer (Sorbitex Cálcico)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "nefrologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "#0369A1",
+      "colorTxt": "#ffffff",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Patiromer"
+      },
+      "icon": "🫘",
+      "id": "patiromer",
+      "keywords": [
+        "patiromer",
+        "patiromer (sorbitex cálcico)"
+      ],
+      "name": {
+        "es": "Patiromer",
+        "pt": "Patiromer (Sorbitex Cálcico)"
+      },
+      "pt": {
+        "name": "Patiromer (Sorbitex Cálcico)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "nefro.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

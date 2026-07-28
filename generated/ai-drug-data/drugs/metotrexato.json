@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "216f3a367f1b248b764cb33a51791b4bf77c6b8ad4ab7e02eeee27323d2bc5a1",
+    "sourceModule": "analgesicos.js"
+  },
+  "drugId": "metotrexato",
+  "identity": {
+    "canonicalOwner": "analgesicos.js",
+    "category": "reumato",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "metotrexato",
+      "metotrexato (mtx)"
+    ],
+    "name": {
+      "es": "Metotrexato (MTX)",
+      "pt": "Metotrexato (MTX)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "reumato",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Metotrexato (MTX)"
+      },
+      "icon": "💊",
+      "id": "metotrexato",
+      "keywords": [
+        "metotrexato",
+        "metotrexato (mtx)"
+      ],
+      "name": {
+        "es": "Metotrexato (MTX)",
+        "pt": "Metotrexato (MTX)"
+      },
+      "pt": {
+        "name": "Metotrexato (MTX)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "analgesicos.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,254 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "69a6ef1892417bcbb13bf2d595e8aa54bf2b4b3479b8c1d07d5e92255143e8d4",
+    "sourceModule": "psicofarmacos.js"
+  },
+  "drugId": "amisulprida",
+  "identity": {
+    "canonicalOwner": "psicofarmacos.js",
+    "category": "antipsicotico",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "amisulprida",
+      "socian",
+      "amisulprida gador",
+      "antipsicotico benzamida substituida"
+    ],
+    "name": {
+      "es": "Amisulprida",
+      "pt": "Amisulprida"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antipsicotico",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Ajustar dosis por función renal.",
+          "Monitorizar prolactina si hay síntomas clínicos.",
+          "Considerar ECG basal si hay riesgo de QT.",
+          "Corregir hipopotasemia/hipomagnesemia antes del uso en pacientes de riesgo.",
+          "Monitorizar EPS, especialmente en dosis altas."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico benzamida sustituida",
+        "commercialNames": {
+          "ar": [
+            "Socian",
+            "Amisulprida Gador",
+            "Amisulprida"
+          ],
+          "br": [
+            "Socian",
+            "Amisulprida"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Hiperprolactinemia",
+          "Amenorrea",
+          "Galactorrea",
+          "Disfunción sexual",
+          "Insomnio o somnolencia",
+          "Aumento de peso",
+          "Síntomas extrapiramidales"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a amisulprida",
+          "Feocromocitoma",
+          "Tumores prolactino-dependientes",
+          "QT prolongado significativo",
+          "Uso concomitante con fármacos que prolongan QT de alto riesgo",
+          "Insuficiencia renal grave sin posibilidad de ajuste/monitorización"
+        ],
+        "dangerousAdverseEffects": [
+          "Prolongación QT",
+          "Torsades de pointes en predispuestos",
+          "Síndrome neuroléptico maligno",
+          "Discinesia tardía",
+          "Convulsiones en predispuestos",
+          "Acumulación y toxicidad en insuficiencia renal"
+        ],
+        "dose": {
+          "adulto": "Esquizofrenia con síntomas positivos: 400–800 mg/día VO, en 1–2 tomas.",
+          "maxDose": "Dosis máxima habitual: 1200 mg/día.",
+          "sintomasNegativos": "Síntomas negativos predominantes: 50–300 mg/día."
+        },
+        "halfLife": "Vida media aproximada: 12 horas; eliminación predominantemente renal.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual; metabolismo hepático limitado.",
+        "indications": [
+          "Esquizofrenia",
+          "Síntomas positivos de la esquizofrenia",
+          "Síntomas negativos predominantes de la esquizofrenia",
+          "Psicosis crónica",
+          "Trastorno esquizoafectivo en casos seleccionados",
+          "Baja respuesta o intolerancia a otros antipsicóticos en casos seleccionados"
+        ],
+        "interactions": [
+          "Levodopa y agonistas dopaminérgicos: antagonismo",
+          "Antiarrítmicos y fármacos que prolongan QT",
+          "Diuréticos que causan hipopotasemia: mayor riesgo de arritmia",
+          "Alcohol y depresores del SNC",
+          "Antihipertensivos: mayor hipotensión"
+        ],
+        "mechanism": "Antagonista selectivo D2/D3; en dosis bajas puede modular síntomas negativos y en dosis altas ejerce efecto antipsicótico.",
+        "name": "Amisulprida",
+        "onset": "Efecto inicial en días a semanas; respuesta plena generalmente en 4–6 semanas.",
+        "presentation": [
+          "Comprimido 50 mg",
+          "Comprimido 100 mg",
+          "Comprimido 200 mg",
+          "Comprimido 400 mg",
+          "Solución oral 100 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal si función renal normal.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "amisulprida",
+      "keywords": [
+        "amisulprida",
+        "socian",
+        "amisulprida gador",
+        "antipsicotico benzamida substituida"
+      ],
+      "name": {
+        "es": "Amisulprida",
+        "pt": "Amisulprida"
+      },
+      "pt": {
+        "alerts": [
+          "Ajustar dose pela função renal.",
+          "Monitorar prolactina se sintomas clínicos.",
+          "Considerar ECG basal se risco de QT.",
+          "Corrigir hipocalemia/hipomagnesemia antes do uso em pacientes de risco.",
+          "Monitorar EPS, especialmente em doses altas."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico benzamida substituída",
+        "commercialNames": {
+          "ar": [
+            "Socian",
+            "Amisulprida Gador",
+            "Amisulprida"
+          ],
+          "br": [
+            "Socian",
+            "Amisulprida"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Hiperprolactinemia",
+          "Amenorreia",
+          "Galactorreia",
+          "Disfunção sexual",
+          "Insônia ou sonolência",
+          "Ganho de peso",
+          "Sintomas extrapiramidais"
+        ],
+        "contraindications": [
+          "Hipersensibilidade à amisulprida",
+          "Feocromocitoma",
+          "Tumores prolactino-dependentes",
+          "QT prolongado significativo",
+          "Uso concomitante com fármacos que prolongam QT de alto risco",
+          "Insuficiência renal grave sem possibilidade de ajuste/monitorização"
+        ],
+        "dangerousAdverseEffects": [
+          "Prolongamento QT",
+          "Torsades de pointes em predispostos",
+          "Síndrome neuroléptica maligna",
+          "Discinesia tardia",
+          "Convulsões em predispostos",
+          "Acúmulo e toxicidade em insuficiência renal"
+        ],
+        "dose": {
+          "adulto": "Esquizofrenia com sintomas positivos: 400–800 mg/dia VO, em 1–2 tomadas.",
+          "maxDose": "Dose máxima usual: 1200 mg/dia.",
+          "sintomasNegativos": "Sintomas negativos predominantes: 50–300 mg/dia."
+        },
+        "halfLife": "Vida média aproximada: 12 horas; eliminação predominantemente renal.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual; metabolismo hepático é limitado.",
+        "indications": [
+          "Esquizofrenia",
+          "Sintomas positivos da esquizofrenia",
+          "Sintomas negativos predominantes da esquizofrenia",
+          "Psicose crônica",
+          "Transtorno esquizoafetivo em casos selecionados",
+          "Baixa resposta ou intolerância a outros antipsicóticos em casos selecionados"
+        ],
+        "interactions": [
+          "Levodopa e agonistas dopaminérgicos: antagonismo",
+          "Antiarrítmicos e fármacos que prolongam QT",
+          "Diuréticos que causam hipocalemia: maior risco de arritmia",
+          "Álcool e depressores do SNC",
+          "Anti-hipertensivos: maior hipotensão"
+        ],
+        "mechanism": "Antagonista seletivo D2/D3; em doses baixas pode modular sintomas negativos e em doses altas exerce efeito antipsicótico.",
+        "name": "Amisulprida",
+        "onset": "Efeito inicial em dias a semanas; resposta plena geralmente em 4–6 semanas.",
+        "presentation": [
+          "Comprimido 50 mg",
+          "Comprimido 100 mg",
+          "Comprimido 200 mg",
+          "Comprimido 400 mg",
+          "Solução oral 100 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal se função renal normal.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psicofarmacos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Esquizofrenia con síntomas positivos: 400–800 mg/día VO, en 1–2 tomas.",
+            "maxDose": "Dosis máxima habitual: 1200 mg/día.",
+            "sintomasNegativos": "Síntomas negativos predominantes: 50–300 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Esquizofrenia com sintomas positivos: 400–800 mg/dia VO, em 1–2 tomadas.",
+            "maxDose": "Dose máxima usual: 1200 mg/dia.",
+            "sintomasNegativos": "Sintomas negativos predominantes: 50–300 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "97dbf77f17acd6f871e6340dd90c534f52ac66012c187d32a629994137b45512",
+    "sourceModule": "analgesicos.js"
+  },
+  "drugId": "indometacina",
+  "identity": {
+    "canonicalOwner": "analgesicos.js",
+    "category": "analgesia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "indometacina"
+    ],
+    "name": {
+      "es": "Indometacina",
+      "pt": "Indometacina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "analgesia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Indometacina"
+      },
+      "icon": "💊",
+      "id": "indometacina",
+      "keywords": [
+        "indometacina"
+      ],
+      "name": {
+        "es": "Indometacina",
+        "pt": "Indometacina"
+      },
+      "pt": {
+        "name": "Indometacina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "analgesicos.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

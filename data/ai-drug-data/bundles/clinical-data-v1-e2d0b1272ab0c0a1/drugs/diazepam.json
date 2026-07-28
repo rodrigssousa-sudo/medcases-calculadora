@@ -1,0 +1,295 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "4e0e8785352924ef74d6fce27396d83752000f6e74457c9c17c866c09e10315d",
+    "sourceModule": "psiquiatria.js"
+  },
+  "drugId": "diazepam",
+  "identity": {
+    "canonicalOwner": "psiquiatria.js",
+    "category": "ansiolitico",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "diazepam",
+      "valium",
+      "uni-diazepax",
+      "diazepam ems",
+      "diazepam bago",
+      "diazepam richmond",
+      "benzodiazepinico de longa acao"
+    ],
+    "name": {
+      "es": "Diazepam",
+      "pt": "Diazepam"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "ansiolitico",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "psiquiatria.js",
+        "decisionBasis": "broader_anxiolytic_and_neuropsychiatric_use",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "sedation_emergency_variant",
+          "record": {
+            "category": "sedacao_neurologia",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "name": "Diazepam"
+            },
+            "icon": "💊",
+            "id": "diazepam",
+            "keywords": [
+              "diazepam"
+            ],
+            "name": {
+              "es": "Diazepam",
+              "pt": "Diazepam"
+            },
+            "pt": {
+              "name": "Diazepam"
+            },
+            "schema": "legacy-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "sedacao.js"
+          },
+          "sourceModule": "sedacao.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Fármaco de elección para abstinencia alcohólica.",
+          "Acumulación importante en adultos mayores.",
+          "No suspender abruptamente tras uso prolongado."
+        ],
+        "category": "ansiolitico",
+        "class": "Benzodiacepina de larga duración",
+        "commercialNames": {
+          "ar": [
+            "Valium",
+            "Diazepam Bagó",
+            "Diazepam Richmond"
+          ],
+          "br": [
+            "Valium",
+            "Uni-Diazepax",
+            "Diazepam EMS"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia",
+          "Ataxia",
+          "Debilidad muscular",
+          "Confusión",
+          "Mareos"
+        ],
+        "contraindications": [
+          "Miastenia gravis",
+          "Insuficiencia respiratoria grave",
+          "Apnea del sueño grave"
+        ],
+        "dangerousAdverseEffects": [
+          "Depresión respiratoria",
+          "Coma",
+          "Dependencia",
+          "Caídas en adultos mayores"
+        ],
+        "dose": {
+          "abstinencia": "Abstinencia alcohólica: dosis individualizadas según protocolo.",
+          "adulto": "Ansiedad: 2–10 mg VO 2–4 veces/día.",
+          "maxDose": "Variable según indicación clínica."
+        },
+        "doseKg": {
+          "maxDose": "Variable según indicación",
+          "pediatric": "Convulsiones pediátricas: 0,2–0,5 mg/kg IV; máx 10 mg.",
+          "standard": "No se utiliza cálculo rutinario por kg en adultos."
+        },
+        "halfLife": "Vida media: 20–80 horas; metabolitos activos hasta 100 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Trastornos de ansiedad",
+          "Abstinencia alcohólica",
+          "Estado epiléptico",
+          "Convulsiones agudas",
+          "Espasticidad muscular",
+          "Espasmos musculares",
+          "Sedación preoperatoria",
+          "Síndrome de abstinencia benzodiacepínica"
+        ],
+        "interactions": [
+          "Alcohol",
+          "Opioides",
+          "Barbitúricos",
+          "Antipsicóticos"
+        ],
+        "mechanism": "Facilita la acción del GABA a través del receptor GABA-A.",
+        "name": "Diazepam",
+        "onset": "VO: 30–60 minutos. IV: 1–5 minutos.",
+        "presentation": [
+          "Comprimido 5 mg",
+          "Comprimido 10 mg",
+          "Ampolla 10 mg/2 mL",
+          "Solución oral"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "diazepam",
+      "keywords": [
+        "diazepam",
+        "valium",
+        "uni-diazepax",
+        "diazepam ems",
+        "diazepam bago",
+        "diazepam richmond",
+        "benzodiazepinico de longa acao"
+      ],
+      "name": {
+        "es": "Diazepam",
+        "pt": "Diazepam"
+      },
+      "pt": {
+        "alerts": [
+          "Fármaco de escolha para abstinência alcoólica.",
+          "Acúmulo importante em idosos.",
+          "Não suspender abruptamente após uso prolongado."
+        ],
+        "category": "ansiolitico",
+        "class": "Benzodiazepínico de longa ação",
+        "commercialNames": {
+          "ar": [
+            "Valium",
+            "Diazepam Bagó",
+            "Diazepam Richmond"
+          ],
+          "br": [
+            "Valium",
+            "Uni-Diazepax",
+            "Diazepam EMS"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência",
+          "Ataxia",
+          "Fraqueza muscular",
+          "Confusão",
+          "Tontura"
+        ],
+        "contraindications": [
+          "Miastenia gravis",
+          "Insuficiência respiratória grave",
+          "Apneia do sono grave"
+        ],
+        "dangerousAdverseEffects": [
+          "Depressão respiratória",
+          "Coma",
+          "Dependência",
+          "Quedas em idosos"
+        ],
+        "dose": {
+          "abstinencia": "Abstinência alcoólica: doses individualizadas conforme protocolo.",
+          "adulto": "Ansiedade: 2–10 mg VO 2–4x/dia.",
+          "maxDose": "Variável conforme indicação clínica."
+        },
+        "doseKg": {
+          "maxDose": "Variável conforme indicação",
+          "pediatric": "Convulsões pediátricas: 0,2–0,5 mg/kg IV; máx 10 mg.",
+          "standard": "Não se utiliza cálculo rotineiro por kg em adultos."
+        },
+        "halfLife": "Vida média: 20–80 horas; metabólitos ativos até 100 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Transtornos de ansiedade",
+          "Abstinência alcoólica",
+          "Estado de mal epiléptico",
+          "Convulsões agudas",
+          "Espasticidade muscular",
+          "Espasmos musculares",
+          "Sedação pré-operatória",
+          "Síndrome de abstinência benzodiazepínica"
+        ],
+        "interactions": [
+          "Álcool",
+          "Opioides",
+          "Barbitúricos",
+          "Antipsicóticos"
+        ],
+        "mechanism": "Facilita a ação do GABA através do receptor GABA-A.",
+        "name": "Diazepam",
+        "onset": "VO: 30–60 minutos. EV: 1–5 minutos.",
+        "presentation": [
+          "Comprimido 5 mg",
+          "Comprimido 10 mg",
+          "Ampola 10 mg/2 mL",
+          "Solução oral"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psiquiatria.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "abstinencia": "Abstinencia alcohólica: dosis individualizadas según protocolo.",
+            "adulto": "Ansiedad: 2–10 mg VO 2–4 veces/día.",
+            "maxDose": "Variable según indicación clínica."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "abstinencia": "Abstinência alcoólica: doses individualizadas conforme protocolo.",
+            "adulto": "Ansiedade: 2–10 mg VO 2–4x/dia.",
+            "maxDose": "Variável conforme indicação clínica."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

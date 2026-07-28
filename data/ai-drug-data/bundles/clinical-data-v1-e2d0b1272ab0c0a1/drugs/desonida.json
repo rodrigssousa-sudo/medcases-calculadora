@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "046f2bd33ea7d3d90e14d7e80121faf333e08bcd5ce1696648dc0a57263b2717",
+    "sourceModule": "alergia_imunologia.js"
+  },
+  "drugId": "desonida",
+  "identity": {
+    "canonicalOwner": "alergia_imunologia.js",
+    "category": "dermatologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "desonida"
+    ],
+    "name": {
+      "es": "Desonida",
+      "pt": "Desonida"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "dermatologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Desonida"
+      },
+      "icon": "💊",
+      "id": "desonida",
+      "keywords": [
+        "desonida"
+      ],
+      "name": {
+        "es": "Desonida",
+        "pt": "Desonida"
+      },
+      "pt": {
+        "name": "Desonida"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "alergia_imunologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

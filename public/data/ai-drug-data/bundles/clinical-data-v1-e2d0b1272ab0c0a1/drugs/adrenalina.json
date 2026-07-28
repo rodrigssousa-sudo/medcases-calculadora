@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "99d3a66e9b8fb86ba3bcdbcaf187e0b5cff679217d5d7acd270ff430737bbd69",
+    "sourceModule": "emergencia.js"
+  },
+  "drugId": "adrenalina",
+  "identity": {
+    "canonicalOwner": "emergencia.js",
+    "category": "emergencia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "adrenalina",
+      "adrenalina (epinefrina)"
+    ],
+    "name": {
+      "es": "Adrenalina (Epinefrina)",
+      "pt": "Adrenalina (Epinefrina)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "emergencia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Adrenalina (Epinefrina)"
+      },
+      "icon": "💊",
+      "id": "adrenalina",
+      "keywords": [
+        "adrenalina",
+        "adrenalina (epinefrina)"
+      ],
+      "name": {
+        "es": "Adrenalina (Epinefrina)",
+        "pt": "Adrenalina (Epinefrina)"
+      },
+      "pt": {
+        "name": "Adrenalina (Epinefrina)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "emergencia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,474 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "7be4c848ea1a87cf27dd0ccf44e11358412f048c6760379bfebaf2bb1bd0b792",
+    "sourceModule": "infectologia.js"
+  },
+  "drugId": "vancomicina",
+  "identity": {
+    "canonicalOwner": "infectologia.js",
+    "category": "infectologia",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "vancomicina"
+    ],
+    "name": {
+      "es": "Vancomicina",
+      "pt": "Vancomicina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "infectologia",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "infectologia.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "atb",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "alerts": [
+                "Monitorar niveles séricos.",
+                "Monitorar creatinina diariamente.",
+                "La infusión rápida aumenta el riesgo de Síndrome del Hombre Rojo."
+              ],
+              "auditNotes": {
+                "note": "Bloque fusionado y mejorado: franjas renales convertidas a modelo AUC/MIC (ASHP 2020) con monitorización obligatoria. Obs enriquecidas con 'Evitar ajuste aislado por valle', 'No usar tabla fija aislada', 'Alto riesgo de nefrotoxicidad' y 'siempre' en reposición post-HD. safetyFlags añadidos con pip/tazo + aminoglucósidos + anfotericina B. therapeuticMonitoring, indicationDosing, loadingDose, maintenanceDose, neurotoxicityWarning y qtRisk ya presentes (V3).",
+                "sourcePriority": [
+                  "IDSA/ASHP/SIDP Vancomycin Consensus Guidelines 2020",
+                  "Sanford Guide to Antimicrobial Therapy 2025",
+                  "Johns Hopkins ABX Guide 2024",
+                  "UpToDate 2024",
+                  "Lexicomp Online 2025",
+                  "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+                ],
+                "status": "excellent_after_review"
+              },
+              "class": "Glucopéptido",
+              "commercialNames": {
+                "ar": [
+                  "Vancomicina Richet",
+                  "Vancomicina Klonal"
+                ],
+                "br": [
+                  "Vancomicina Teuto",
+                  "Vancomicina Eurofarma"
+                ]
+              },
+              "commonAdverseEffects": [
+                "Flebitis",
+                "Exantema",
+                "Fiebre medicamentosa"
+              ],
+              "dangerousAdverseEffects": [
+                "Nefrotoxicidad",
+                "Ototoxicidad",
+                "Síndrome del Hombre Rojo",
+                "Neutropenia"
+              ],
+              "dilution": "Diluir en SF 0,9%.",
+              "dose": {
+                "ataque": "1750 mg EV dosis de carga",
+                "manutencao": "15 mg/kg por dosis"
+              },
+              "doseKg": {
+                "ataque": "20–25 mg/kg",
+                "manutencao": "15–20 mg/kg por dosis",
+                "maxDose": "4 g/día"
+              },
+              "indicationDosing": {
+                "oral": "Colitis por C. difficile grave/refractaria: 125 mg VO 6/6h por 10–14 días (uso VO no sistémico).",
+                "severe": "Infecciones graves (endocarditis, meningitis, SARM profunda): 25–30 mg/kg IV de carga seguido de 15–20 mg/kg cada 6–8h. Objetivo AUC/MIC 400–600.",
+                "standard": "Infecciones moderadas (SSTI, bacteriemia no complicada): 15–20 mg/kg IV cada 8–12h (máx 3 g/dosis). Guiar por AUC/MIC o valle sérico.",
+                "uti": "UCI / neumonía por SARM: 25–30 mg/kg IV de carga + mantenimiento ajustado por AUC/MIC. Infusión continua (24h) como alternativa para optimización farmacodinámica."
+              },
+              "loadingDose": {
+                "adult": "25–30 mg/kg IV en infecciones graves (dosis máxima única: 3 g). Infundir en ≥ 1,5–2h para dosis > 2 g.",
+                "notes": "Dosis de carga independiente de la función renal. Garantiza concentraciones terapéuticas precoces antes del estado estacionario.",
+                "pediatric": "No se recomienda dosis de carga estandarizada en pediatría. Iniciar con 15 mg/kg 6/6h y ajustar por nivel sérico."
+              },
+              "maintenanceDose": {
+                "adult": "15–20 mg/kg IV cada 8–12h (función renal normal). Total diario usual: 30–45 mg/kg/día.",
+                "pediatric": "15 mg/kg IV 6/6h (neonato tardío y lactante); monitorizar nivel de valle y ajustar.",
+                "renalAdjustment": "ClCr 50–90: intervalar 12/12h. ClCr 10–50: intervalar 24h o más. ClCr < 10: dosis única con remonitoreo 48–72h. Hemodiálisis: dosis única post-HD + monitoreo de valle antes de la próxima dosis."
+              },
+              "name": "Vancomicina",
+              "neurotoxicityWarning": {
+                "management": "Monitorizar audiometría en tratamientos > 7 días o con dosis altas. Suspender si creatinina aumenta > 0,5 mg/dL respecto al basal sin otra causa. Reducir dosis o aumentar intervalo según función renal. Ototoxicidad generalmente irreversible si no se detecta precozmente.",
+                "risk": "low",
+                "symptoms": [
+                  "Ototoxicidad (pérdida auditiva, tinnitus) — principalmente con niveles elevados",
+                  "Nefrotoxicidad (principal efecto adverso grave)"
+                ]
+              },
+              "presentation": [
+                "Frasco ampolla 500 mg",
+                "Frasco ampolla 1 g"
+              ],
+              "qtRisk": {
+                "contraindications": [],
+                "monitoring": "Sin riesgo clínicamente significativo de prolongamiento del QT.",
+                "risk": "none"
+              },
+              "ref": "ASHP Vancomycin Monitoring Guidelines 2020 / Sanford Guide / Goodman & Gilman",
+              "renalDose": {
+                "fg10a30": {
+                  "ev": {
+                    "dose": "15–20 mg/kg",
+                    "doseMaxima": "Ajustar por nível",
+                    "intervalo": "24–48/48h",
+                    "unidade": "mg/kg"
+                  },
+                  "obs": "No usar tabla fija aislada — ajustar por AUC o niveles séricos. Intervalo individualizado según valle sérico o AUC. Alto riesgo de acumulación y nefrotoxicidad en esta franja.",
+                  "pediatrica": {
+                    "dose": "15 mg/kg",
+                    "doseMaxima": "Conforme níveis séricos",
+                    "intervalo": "24/24h–48/48h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fg30a50": {
+                  "ev": {
+                    "dose": "15–20 mg/kg",
+                    "doseMaxima": "Ajustar por AUC/nível",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "obs": "Monitorización sérica obligatoria para ajuste del mantenimiento. Intervalo pediátrico: ampliar a 12–24h según ClCr. Riesgo de nefrotoxicidad aumentado en combinación con pip/tazo, aminoglucósidos o anfotericina B.",
+                  "pediatrica": {
+                    "dose": "15 mg/kg",
+                    "doseMaxima": "Conforme níveis séricos",
+                    "intervalo": "12/12h–24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMaior50": {
+                  "ev": {
+                    "dose": "15–20 mg/kg",
+                    "doseMaxima": "Ajustar por AUC",
+                    "intervalo": "8/8h–12/12h",
+                    "unidade": "mg/kg"
+                  },
+                  "obs": "Preferir monitorización por AUC/MIC objetivo 400–600 (ASHP 2020). Evitar ajuste aislado por valle sérico. Infundir en ≥60–120 min (dosis > 1 g: 2h). Monitorizar creatinina cada 48h.",
+                  "pediatrica": {
+                    "dose": "15 mg/kg",
+                    "doseMaxima": "60 mg/kg/dia",
+                    "intervalo": "6/6h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMenor10": {
+                  "ev": {
+                    "dose": "20–25 mg/kg ataque",
+                    "doseMaxima": "Conforme nível",
+                    "intervalo": "Individualizado",
+                    "unidade": "mg/kg"
+                  },
+                  "obs": "Mantenimiento guiado por nivel sérico/AUC exclusivamente. Alto riesgo de nefrotoxicidad. Intervalo ≥ 48h o guiado por nivel predosis — nunca usar esquema fijo.",
+                  "pediatrica": {
+                    "dose": "20 mg/kg ataque",
+                    "doseMaxima": "Conforme nível",
+                    "intervalo": "Individualizado",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "hemodialise": {
+                  "ev": {
+                    "dose": "20–25 mg/kg ataque",
+                    "doseMaxima": "Individualizada",
+                    "intervalo": "Pós-HD conforme nível",
+                    "unidade": "mg/kg"
+                  },
+                  "obs": "Reposición post-hemodiálisis generalmente 500–1000 mg, siempre guiada por nivel sérico. Administrar después de HD. Nivel objetivo predosis: 10–15 mg/L (infecciones moderadas) o 15–20 mg/L (infecciones graves).",
+                  "pediatrica": {
+                    "dose": "20 mg/kg ataque",
+                    "doseMaxima": "Individualizada",
+                    "intervalo": "Pós-HD conforme nível",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "requiresAdjustment": true,
+                "version": 2
+              },
+              "risksByPatient": [],
+              "safetyFlags": {
+                "hepatotoxicityRisk": false,
+                "neurotoxicityRisk": false,
+                "qtRisk": false,
+                "renalHighRisk": true,
+                "requiresCultureGuidance": true,
+                "warning": "Alto riesgo de nefrotoxicidad — especialmente en combinación con piperacilina/tazobactam, aminoglucósidos o anfotericina B (riesgo sinérgico). AUC > 650 mg·h/L asociada a mayor nefrotoxicidad. Monitorizar creatinina cada 48h. Ototoxicidad generalmente irreversible si no se detecta precozmente — monitorizar audiometría en tratamientos > 7 días."
+              },
+              "speed": "Infundir en al menos 60–120 minutos.",
+              "therapeuticMonitoring": {
+                "monitoring": "Colectar nivel de valle (30 min antes de la 4ª dosis, en estado estacionario). Si monitoreo por AUC: colectar 2 niveles (1–2h después del inicio de infusión y 30 min antes de la próxima dosis). Monitorizar creatinina sérica, urea y diuresis cada 48h. Ajustar dosis con calculadora Bayesiana cuando disponible.",
+                "notes": "Mayor riesgo de nefrotoxicidad cuando se asocia a aminoglucósidos, anfotericina B o piperacilina/tazobactam. AUC > 650 asociada a mayor nefrotoxicidad. AUC < 400 asociada a fracaso terapéutico y selección de resistencia. Síndrome del Hombre Rojo: infundir en ≥ 60 min (1–2h para dosis > 1 g).",
+                "required": true,
+                "target": "AUC/MIC objetivo 400–600 mg·h/L (ASHP 2020). Preferir monitoreo por AUC a valle sérico aislado. Si AUC no disponible: valle sérico 15–20 mg/L (infecciones graves) o 10–15 mg/L (infecciones moderadas)."
+              },
+              "therapeuticRange": "AUC/MIC objetivo 400–600."
+            },
+            "icon": "💊",
+            "id": "vancomicina",
+            "keywords": [
+              "vancomicina",
+              "vancomicina teuto",
+              "vancomicina eurofarma",
+              "vancomicina richet",
+              "vancomicina klonal",
+              "glicopeptideo"
+            ],
+            "name": {
+              "es": "Vancomicina",
+              "pt": "Vancomicina"
+            },
+            "pt": {
+              "alerts": [
+                "Monitorar níveis séricos.",
+                "Monitorar creatinina diariamente.",
+                "Infusão rápida aumenta risco de Síndrome do Homem Vermelho."
+              ],
+              "auditNotes": {
+                "note": "Bloco mesclado e melhorado: faixas renais convertidas para modelo AUC/MIC (ASHP 2020) com monitorização obrigatória. Obs enriquecidas com 'Evitar ajuste isolado por vale', 'Não usar tabela fixa isolada', 'Alto risco de nefrotoxicidade' e 'sempre' na reposição pós-HD. safetyFlags adicionados com pip/tazo + aminoglicosídeos + anfotericina B. therapeuticMonitoring, indicationDosing, loadingDose, maintenanceDose, neurotoxicityWarning e qtRisk já presentes (V3).",
+                "sourcePriority": [
+                  "IDSA/ASHP/SIDP Vancomycin Consensus Guidelines 2020",
+                  "Sanford Guide to Antimicrobial Therapy 2025",
+                  "Johns Hopkins ABX Guide 2024",
+                  "UpToDate 2024",
+                  "Lexicomp Online 2025",
+                  "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+                ],
+                "status": "excellent_after_review"
+              },
+              "class": "Glicopeptídeo",
+              "commercialNames": {
+                "ar": [
+                  "Vancomicina Richet",
+                  "Vancomicina Klonal"
+                ],
+                "br": [
+                  "Vancomicina Teuto",
+                  "Vancomicina Eurofarma"
+                ]
+              },
+              "commonAdverseEffects": [
+                "Flebite",
+                "Rash",
+                "Febre medicamentosa"
+              ],
+              "dangerousAdverseEffects": [
+                "Nefrotoxicidade",
+                "Ototoxicidade",
+                "Síndrome do Homem Vermelho",
+                "Neutropenia"
+              ],
+              "dilution": "Diluir em SF 0,9%.",
+              "dose": {
+                "ataque": "1750 mg EV dose de ataque",
+                "manutencao": "15 mg/kg por dose"
+              },
+              "doseKg": {
+                "ataque": "20–25 mg/kg",
+                "manutencao": "15–20 mg/kg por dose",
+                "maxDose": "4 g/dia"
+              },
+              "indicationDosing": {
+                "oral": "Colite por C. difficile grave/refratária: 125 mg VO 6/6h por 10–14 dias (uso VO não sistêmico).",
+                "severe": "Infecções graves (endocardite, meningite, SARM profunda): 25–30 mg/kg EV de ataque seguido de 15–20 mg/kg a cada 6–8h. Alvo AUC/MIC 400–600.",
+                "standard": "Infecções moderadas (SSTI, bacteremia não complicada): 15–20 mg/kg EV a cada 8–12h (máx 3 g/dose). Guiar por AUC/MIC ou vale sérico.",
+                "uti": "UTI / pneumonia por SARM: 25–30 mg/kg EV de ataque + manutenção ajustada por AUC/MIC. Infusão contínua (24h) como alternativa para otimização farmacodinâmica."
+              },
+              "loadingDose": {
+                "adult": "25–30 mg/kg EV em infecções graves (dose máxima única: 3 g). Infundir em ≥ 1,5–2h para doses > 2 g.",
+                "notes": "Dose de ataque independente da função renal. Garante concentrações terapêuticas precoces antes do estado estacionário.",
+                "pediatric": "Não recomendada dose de ataque padronizada em pediatria. Iniciar com 15 mg/kg 6/6h e ajustar por nível sérico."
+              },
+              "maintenanceDose": {
+                "adult": "15–20 mg/kg EV a cada 8–12h (função renal normal). Total diário usual: 30–45 mg/kg/dia.",
+                "pediatric": "15 mg/kg EV 6/6h (neonato tardio e lactente); monitorar nível de vale e ajustar.",
+                "renalAdjustment": "ClCr 50–90: intervalar 12/12h. ClCr 10–50: intervalar 24h ou mais. ClCr < 10: dose única com remonitoração 48–72h. Hemodiálise: dose única pós-HD + monitoração de vale antes da próxima dose."
+              },
+              "name": "Vancomicina",
+              "neurotoxicityWarning": {
+                "management": "Monitorar audiometria em tratamentos > 7 dias ou com doses altas. Suspender se creatinina aumentar > 0,5 mg/dL em relação ao basal sem outra causa. Reduzir dose ou aumentar intervalo conforme função renal. Ototoxicidade geralmente irreversível se não detectada precocemente.",
+                "risk": "low",
+                "symptoms": [
+                  "Ototoxicidade (perda auditiva, zumbido) — principalmente com níveis elevados",
+                  "Nefrotoxicidade (principal efeito adverso grave)"
+                ]
+              },
+              "presentation": [
+                "Frasco-ampola 500 mg",
+                "Frasco-ampola 1 g"
+              ],
+              "qtRisk": {
+                "contraindications": [],
+                "monitoring": "Sem risco clinicamente significativo de prolongamento do QT.",
+                "risk": "none"
+              },
+              "ref": "ASHP Vancomycin Monitoring Guidelines 2020 / Sanford Guide / Goodman & Gilman",
+              "renalDose": {
+                "fg10a30": {
+                  "ev": {
+                    "dose": "15–20 mg/kg",
+                    "doseMaxima": "Ajustar por nível",
+                    "intervalo": "24–48/48h",
+                    "unidade": "mg/kg"
+                  },
+                  "obs": "Não usar tabela fixa isolada — ajustar por AUC ou níveis séricos. Intervalo individualizado conforme vale sérico ou AUC. Alto risco de acumulação e nefrotoxicidade nesta faixa.",
+                  "pediatrica": {
+                    "dose": "15 mg/kg",
+                    "doseMaxima": "Conforme níveis séricos",
+                    "intervalo": "24/24h–48/48h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fg30a50": {
+                  "ev": {
+                    "dose": "15–20 mg/kg",
+                    "doseMaxima": "Ajustar por AUC/nível",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "obs": "Monitorização sérica obrigatória para ajuste da manutenção. Intervalo pediátrico: ampliar para 12–24h conforme ClCr. Risco de nefrotoxicidade aumentado em combinação com pip/tazo, aminoglicosídeos ou anfotericina B.",
+                  "pediatrica": {
+                    "dose": "15 mg/kg",
+                    "doseMaxima": "Conforme níveis séricos",
+                    "intervalo": "12/12h–24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMaior50": {
+                  "ev": {
+                    "dose": "15–20 mg/kg",
+                    "doseMaxima": "Ajustar por AUC",
+                    "intervalo": "8/8h–12/12h",
+                    "unidade": "mg/kg"
+                  },
+                  "obs": "Preferir monitorização por AUC/MIC alvo 400–600 (ASHP 2020). Evitar ajuste isolado por vale sérico. Infundir em ≥60–120 min (doses > 1 g: 2h). Monitorar creatinina a cada 48h.",
+                  "pediatrica": {
+                    "dose": "15 mg/kg",
+                    "doseMaxima": "60 mg/kg/dia",
+                    "intervalo": "6/6h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMenor10": {
+                  "ev": {
+                    "dose": "20–25 mg/kg ataque",
+                    "doseMaxima": "Conforme nível",
+                    "intervalo": "Individualizado",
+                    "unidade": "mg/kg"
+                  },
+                  "obs": "Manutenção guiada por nível sérico/AUC exclusivamente. Alto risco de nefrotoxicidade. Intervalo ≥ 48h ou guiado por nível pré-dose — nunca usar esquema fixo.",
+                  "pediatrica": {
+                    "dose": "20 mg/kg ataque",
+                    "doseMaxima": "Conforme nível",
+                    "intervalo": "Individualizado",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "hemodialise": {
+                  "ev": {
+                    "dose": "20–25 mg/kg ataque",
+                    "doseMaxima": "Individualizada",
+                    "intervalo": "Pós-HD conforme nível",
+                    "unidade": "mg/kg"
+                  },
+                  "obs": "Reposição pós-hemodiálise geralmente 500–1000 mg, sempre guiada por nível sérico. Administrar após HD. Nível alvo pré-dose: 10–15 mg/L (infecções moderadas) ou 15–20 mg/L (infecções graves).",
+                  "pediatrica": {
+                    "dose": "20 mg/kg ataque",
+                    "doseMaxima": "Individualizada",
+                    "intervalo": "Pós-HD conforme nível",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "requiresAdjustment": true,
+                "version": 2
+              },
+              "risksByPatient": [],
+              "safetyFlags": {
+                "hepatotoxicityRisk": false,
+                "neurotoxicityRisk": false,
+                "qtRisk": false,
+                "renalHighRisk": true,
+                "requiresCultureGuidance": true,
+                "warning": "Alto risco de nefrotoxicidade — especialmente em combinação com piperacilina/tazobactam, aminoglicosídeos ou anfotericina B (risco sinérgico). AUC > 650 mg·h/L associada a nefrotoxicidade aumentada. Monitorar creatinina a cada 48h. Ototoxicidade geralmente irreversível se não detectada precocemente — monitorar audiometria em tratamentos > 7 dias."
+              },
+              "speed": "Infundir em pelo menos 60–120 minutos.",
+              "therapeuticMonitoring": {
+                "monitoring": "Colher nível de vale (30 min antes da 4ª dose, em estado estacionário). Se monitoração por AUC: colher 2 níveis (1–2h após início da infusão e 30 min antes da próxima dose). Monitorar creatinina sérica, ureia e débito urinário a cada 48h. Ajustar dose conforme calculadora Bayesiana quando disponível.",
+                "notes": "Maior risco de nefrotoxicidade quando associada a aminoglicosídeos, anfotericina B ou piperacilina/tazobactam. AUC > 650 associada a nefrotoxicidade aumentada. AUC < 400 associada a falha terapêutica e seleção de resistência. Síndrome do Homem Vermelho: infundir em ≥ 60 min (1–2h para doses > 1 g).",
+                "required": true,
+                "target": "AUC/MIC alvo 400–600 mg·h/L (ASHP 2020). Preferir monitorização por AUC a vale sérico isolado. Se AUC indisponível: vale sérico 15–20 mg/L (infecções graves) ou 10–15 mg/L (infecções moderadas)."
+              },
+              "therapeuticRange": "AUC/MIC alvo 400–600."
+            },
+            "schema": "premium-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "antimicrobianos.js"
+          },
+          "sourceModule": "antimicrobianos.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Vancomicina"
+      },
+      "icon": "💊",
+      "id": "vancomicina",
+      "keywords": [
+        "vancomicina"
+      ],
+      "name": {
+        "es": "Vancomicina",
+        "pt": "Vancomicina"
+      },
+      "pt": {
+        "name": "Vancomicina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "infectologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

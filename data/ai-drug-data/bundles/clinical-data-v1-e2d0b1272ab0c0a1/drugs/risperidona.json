@@ -1,0 +1,274 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "3a2991ce2dcdb742254ee10c0822cc470944999d3093aeba0def40e6306aab0b",
+    "sourceModule": "psicofarmacos.js"
+  },
+  "drugId": "risperidona",
+  "identity": {
+    "canonicalOwner": "psicofarmacos.js",
+    "category": "antipsicotico",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "risperidona",
+      "risperdal",
+      "riss",
+      "risperidon",
+      "risperidona ems",
+      "risperin",
+      "risperidona bago",
+      "risperidona gador",
+      "antipsicotico atipico"
+    ],
+    "name": {
+      "es": "Risperidona",
+      "pt": "Risperidona"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antipsicotico",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Monitorizar peso, glucemia, lípidos y presión arterial.",
+          "Monitorizar prolactina si galactorrea, amenorrea, infertilidad o disfunción sexual.",
+          "Los EPS aumentan con dosis mayores.",
+          "Evitar uso rutinario en psicosis asociada a demencia.",
+          "Considerar ECG si hay riesgo cardiovascular o asociación con fármacos que prolongan QT."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico atípico",
+        "commercialNames": {
+          "ar": [
+            "Risperdal",
+            "Risperin",
+            "Risperidona Bagó",
+            "Risperidona Gador"
+          ],
+          "br": [
+            "Risperdal",
+            "Riss",
+            "Risperidon",
+            "Risperidona EMS"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia",
+          "Aumento de peso",
+          "Hiperprolactinemia",
+          "Acatisia",
+          "Parkinsonismo en dosis mayores",
+          "Mareos",
+          "Disfunción sexual"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a risperidona o paliperidona",
+          "Demencia con cuerpos de Lewy o Parkinson grave, salvo extrema necesidad",
+          "Antecedente de síndrome neuroléptico maligno relacionada al fármaco"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome neuroléptico maligno",
+          "Discinesia tardía",
+          "Prolongación QT en pacientes predispuestos",
+          "Hiperglucemia y dislipidemia",
+          "Eventos cerebrovasculares en adultos mayores con demencia",
+          "Convulsiones en predispuestos"
+        ],
+        "dose": {
+          "adulto": "Esquizofrenia: iniciar 1–2 mg/día VO; habitual 2–6 mg/día.",
+          "mania": "Manía aguda: 1–2 mg/día; titular según respuesta.",
+          "maxDose": "Dosis máxima habitual: 6 mg/día; dosis mayores aumentan EPS y rara vez agregan beneficio."
+        },
+        "halfLife": "Vida media aproximada: risperidona 3–20 h; metabolito activo 9-hidroxirisperidona 20–24 h.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Esquizofrenia",
+          "Trastorno bipolar — manía aguda",
+          "Mantenimiento en trastorno bipolar",
+          "Irritabilidad asociada al trastorno del espectro autista",
+          "Agitación psicótica",
+          "Trastorno esquizoafectivo",
+          "Agresividad grave en casos seleccionados"
+        ],
+        "interactions": [
+          "Levodopa y agonistas dopaminérgicos: antagonismo",
+          "Fluoxetina/paroxetina: pueden aumentar niveles por CYP2D6",
+          "Carbamazepina: puede reducir niveles",
+          "Antihipertensivos: mayor hipotensión",
+          "Alcohol y depresores del SNC",
+          "Fármacos que prolongan QT"
+        ],
+        "mechanism": "Antagonista serotoninérgico 5HT2A y dopaminérgico D2; en dosis mayores aumenta bloqueo D2 y riesgo extrapiramidal.",
+        "name": "Risperidona",
+        "onset": "Reducción de agitación puede ocurrir en días; efecto antipsicótico pleno generalmente en 2–6 semanas.",
+        "presentation": [
+          "Comprimido 1 mg",
+          "Comprimido 2 mg",
+          "Comprimido 3 mg",
+          "Solución oral 1 mg/mL",
+          "Inyectable de larga acción 25 mg",
+          "Inyectable de larga acción 37,5 mg",
+          "Inyectable de larga acción 50 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Risperidone Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "risperidona",
+      "keywords": [
+        "risperidona",
+        "risperdal",
+        "riss",
+        "risperidon",
+        "risperidona ems",
+        "risperin",
+        "risperidona bago",
+        "risperidona gador",
+        "antipsicotico atipico"
+      ],
+      "name": {
+        "es": "Risperidona",
+        "pt": "Risperidona"
+      },
+      "pt": {
+        "alerts": [
+          "Monitorar peso, glicemia, lipídios e pressão arterial.",
+          "Monitorar prolactina se galactorreia, amenorreia, infertilidade ou disfunção sexual.",
+          "EPS aumentam com doses maiores.",
+          "Evitar uso rotineiro em psicose associada à demência.",
+          "Considerar ECG se risco cardiovascular ou associação com fármacos que prolongam QT."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico atípico",
+        "commercialNames": {
+          "ar": [
+            "Risperdal",
+            "Risperin",
+            "Risperidona Bagó",
+            "Risperidona Gador"
+          ],
+          "br": [
+            "Risperdal",
+            "Riss",
+            "Risperidon",
+            "Risperidona EMS"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência",
+          "Ganho de peso",
+          "Hiperprolactinemia",
+          "Acatisia",
+          "Parkinsonismo em doses maiores",
+          "Tontura",
+          "Disfunção sexual"
+        ],
+        "contraindications": [
+          "Hipersensibilidade à risperidona ou paliperidona",
+          "Demência com corpos de Lewy ou Parkinson grave, salvo extrema necessidade",
+          "Histórico de síndrome neuroléptica maligna relacionada ao fármaco"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome neuroléptica maligna",
+          "Discinesia tardia",
+          "Prolongamento QT em pacientes predispostos",
+          "Hiperglicemia e dislipidemia",
+          "Eventos cerebrovasculares em idosos com demência",
+          "Convulsões em predispostos"
+        ],
+        "dose": {
+          "adulto": "Esquizofrenia: iniciar 1–2 mg/dia VO; usual 2–6 mg/dia.",
+          "mania": "Mania aguda: 1–2 mg/dia; titular conforme resposta.",
+          "maxDose": "Dose máxima usual: 6 mg/dia; doses maiores aumentam EPS e raramente agregam benefício."
+        },
+        "halfLife": "Vida média aproximada: risperidona 3–20 h; metabólito ativo 9-hidroxirisperidona 20–24 h.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Esquizofrenia",
+          "Transtorno bipolar — mania aguda",
+          "Manutenção no transtorno bipolar",
+          "Irritabilidade associada ao transtorno do espectro autista",
+          "Agitação psicótica",
+          "Transtorno esquizoafetivo",
+          "Agressividade grave em casos selecionados"
+        ],
+        "interactions": [
+          "Levodopa e agonistas dopaminérgicos: antagonismo",
+          "Fluoxetina/paroxetina: podem aumentar níveis por CYP2D6",
+          "Carbamazepina: pode reduzir níveis",
+          "Anti-hipertensivos: maior hipotensão",
+          "Álcool e depressores do SNC",
+          "Fármacos que prolongam QT"
+        ],
+        "mechanism": "Antagonista serotoninérgico 5HT2A e dopaminérgico D2; em doses maiores aumenta bloqueio D2 e risco extrapiramidal.",
+        "name": "Risperidona",
+        "onset": "Redução de agitação pode ocorrer em dias; efeito antipsicótico pleno geralmente em 2–6 semanas.",
+        "presentation": [
+          "Comprimido 1 mg",
+          "Comprimido 2 mg",
+          "Comprimido 3 mg",
+          "Solução oral 1 mg/mL",
+          "Injetável de longa ação 25 mg",
+          "Injetável de longa ação 37,5 mg",
+          "Injetável de longa ação 50 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Risperidone Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psicofarmacos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Esquizofrenia: iniciar 1–2 mg/día VO; habitual 2–6 mg/día.",
+            "mania": "Manía aguda: 1–2 mg/día; titular según respuesta.",
+            "maxDose": "Dosis máxima habitual: 6 mg/día; dosis mayores aumentan EPS y rara vez agregan beneficio."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Esquizofrenia: iniciar 1–2 mg/dia VO; usual 2–6 mg/dia.",
+            "mania": "Mania aguda: 1–2 mg/dia; titular conforme resposta.",
+            "maxDose": "Dose máxima usual: 6 mg/dia; doses maiores aumentam EPS e raramente agregam benefício."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

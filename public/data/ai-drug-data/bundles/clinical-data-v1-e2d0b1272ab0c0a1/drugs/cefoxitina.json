@@ -1,0 +1,308 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "67c6e8e1854ae9b9f872ee448b4e5c42ae4e9bd66456f7d3f0be9bd90403d1f1",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "cefoxitina",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "cefoxitina",
+      "mefoxin",
+      "cefoxitina generico",
+      "cefalosporina de 2ª geracao — cefamicina (anti-anaerobio)"
+    ],
+    "name": {
+      "es": "Cefoxitina",
+      "pt": "Cefoxitina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(245,158,11,0.12)",
+      "colorTxt": "#D97706",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Única cefalosporina con actividad confiable frente a Bacteroides fragilis — útil en infecciones mixtas aerobio/anaerobio.",
+          "Profilaxis quirúrgica: dosis única de 1–2 g EV 30–60 min antes de la incisión.",
+          "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+        ],
+        "class": "Cefalosporina de 2.ª generación — Cefamicina (anti-anaerobio)",
+        "commercialNames": {
+          "ar": [
+            "Mefoxin",
+            "Cefoxitina Genérico"
+          ],
+          "br": [
+            "Mefoxin",
+            "Cefoxitina Genérico"
+          ]
+        },
+        "contraindications": [
+          "Hipersensibilidad a cefalosporinas o penicilinas (reacción cruzada ~1–2%)"
+        ],
+        "dose": {
+          "adultoEV": "1–2 g EV 6/6h"
+        },
+        "doseKg": null,
+        "indication": "Infecciones intraabdominales (peritonitis, apendicitis), infecciones ginecológicas (EIP, endometritis postparto), infecciones de piel y partes blandas por anaerobios, profilaxis quirúrgica en cirugía colorrectal y ginecológica.",
+        "name": "Cefoxitina",
+        "presentation": [
+          "Polvo para solución inyectable EV/IM: 1 g y 2 g por frasco"
+        ],
+        "ref": "Sanford Guide 2025 / IDSA Intra-Abdominal Infections Guidelines / ANVISA / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "1 g",
+              "doseMaxima": "2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "g"
+            },
+            "obs": "Ajuste obligatorio.",
+            "pediatrica": {
+              "dose": "20 mg/kg",
+              "doseMaxima": "2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "6 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "g"
+            },
+            "obs": "Reducir frecuencia según ClCr.",
+            "pediatrica": {
+              "dose": "25–30 mg/kg",
+              "doseMaxima": "6 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "12 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "Dosis habitual para infecciones intraabdominales y ginecológicas.",
+            "pediatrica": {
+              "dose": "30–40 mg/kg",
+              "doseMaxima": "12 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "1 g",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "g"
+            },
+            "obs": "Monitorizar acumulación y encefalopatía.",
+            "pediatrica": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "1 g",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "g"
+            },
+            "obs": "Administrar después de HD.",
+            "pediatrica": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "spectrum": "Excelente cobertura de anaerobios (Bacteroides fragilis, Prevotella spp.). Gram-negativos: E. coli, Klebsiella spp., Proteus spp. Gram-positivos: Streptococcus spp., Staphylococcus aureus (MSSA). Sin actividad frente a Pseudomonas, MRSA ni Enterococcus."
+      },
+      "icon": "🧪",
+      "id": "cefoxitina",
+      "keywords": [
+        "cefoxitina",
+        "mefoxin",
+        "cefoxitina generico",
+        "cefalosporina de 2ª geracao — cefamicina (anti-anaerobio)"
+      ],
+      "name": {
+        "es": "Cefoxitina",
+        "pt": "Cefoxitina"
+      },
+      "pt": {
+        "alerts": [
+          "Única cefalosporina com atividade confiável contra Bacteroides fragilis — útil em infecções mistas aeróbio/anaeróbio.",
+          "Profilaxia cirúrgica: dose única de 1–2 g EV 30–60 min antes da incisão.",
+          "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+        ],
+        "class": "Cefalosporina de 2ª geração — Cefamicina (anti-anaeróbio)",
+        "commercialNames": {
+          "ar": [
+            "Mefoxin",
+            "Cefoxitina Genérico"
+          ],
+          "br": [
+            "Mefoxin",
+            "Cefoxitina Genérico"
+          ]
+        },
+        "contraindications": [
+          "Hipersensibilidade às cefalosporinas ou penicilinas (reação cruzada ~1–2%)"
+        ],
+        "dose": {
+          "adultoEV": "1–2 g EV 6/6h"
+        },
+        "doseKg": null,
+        "indication": "Infecções intra-abdominais (peritonite, apendicite), infecções ginecológicas (DIP, endometrite pós-parto), infecções de pele e partes moles por anaeróbios, profilaxia cirúrgica em cirurgia colorretal e ginecológica.",
+        "name": "Cefoxitina",
+        "presentation": [
+          "Pó para solução injetável EV/IM: 1 g e 2 g por frasco"
+        ],
+        "ref": "Sanford Guide 2025 / IDSA Intra-Abdominal Infections Guidelines / ANVISA / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "1 g",
+              "doseMaxima": "2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "g"
+            },
+            "obs": "Ajuste obrigatório.",
+            "pediatrica": {
+              "dose": "20 mg/kg",
+              "doseMaxima": "2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "6 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "g"
+            },
+            "obs": "Reduzir frequência conforme ClCr.",
+            "pediatrica": {
+              "dose": "25–30 mg/kg",
+              "doseMaxima": "6 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "12 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "Dose habitual para infecções intra-abdominais e ginecológicas.",
+            "pediatrica": {
+              "dose": "30–40 mg/kg",
+              "doseMaxima": "12 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "1 g",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "g"
+            },
+            "obs": "Monitorar acúmulo e encefalopatia.",
+            "pediatrica": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "1 g",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "g"
+            },
+            "obs": "Administrar após HD.",
+            "pediatrica": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "spectrum": "Excelente cobertura de anaeróbios (Bacteroides fragilis, Prevotella spp.). Gram-negativos: E. coli, Klebsiella spp., Proteus spp. Gram-positivos: Streptococcus spp., Staphylococcus aureus (MSSA). Sem atividade contra Pseudomonas, MRSA ou Enterococcus."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoEV": "1–2 g EV 6/6h"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoEV": "1–2 g EV 6/6h"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

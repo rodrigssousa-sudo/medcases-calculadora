@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "96c9a5b588530026b554a95c56c3bdf452cd6cb43b8742b068327cb180f9abb5",
+    "sourceModule": "endocrino_glp1.js"
+  },
+  "drugId": "tirzepatida",
+  "identity": {
+    "canonicalOwner": "endocrino_glp1.js",
+    "category": "endocrino",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "tirzepatida"
+    ],
+    "name": {
+      "es": "Tirzepatida",
+      "pt": "Tirzepatida"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "endocrino",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Tirzepatida"
+      },
+      "icon": "💊",
+      "id": "tirzepatida",
+      "keywords": [
+        "tirzepatida"
+      ],
+      "name": {
+        "es": "Tirzepatida",
+        "pt": "Tirzepatida"
+      },
+      "pt": {
+        "name": "Tirzepatida"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "endocrino_glp1.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

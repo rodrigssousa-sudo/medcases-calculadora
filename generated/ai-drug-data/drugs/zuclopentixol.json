@@ -1,0 +1,246 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "fb1f98ba19092c6c51a0044262fc040ecbccf3a21ede779f20228444c839fabc",
+    "sourceModule": "psicofarmacos.js"
+  },
+  "drugId": "zuclopentixol",
+  "identity": {
+    "canonicalOwner": "psicofarmacos.js",
+    "category": "antipsicotico",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "zuclopentixol",
+      "clopixol",
+      "antipsicotico tipico — tioxanteno"
+    ],
+    "name": {
+      "es": "Zuclopentixol",
+      "pt": "Zuclopentixol"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antipsicotico",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "La formulación acetato IM no es equivalente al decanoato de mantenimiento.",
+          "Monitorizar sedación, presión arterial y síntomas extrapiramidales.",
+          "El decanoato exige evaluación de tolerancia y plan de seguimiento.",
+          "Evitar asociación con alcohol y otros sedantes.",
+          "Considerar ECG en pacientes con riesgo cardiovascular o QT."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico típico — tioxanteno",
+        "commercialNames": {
+          "ar": [
+            "Clopixol",
+            "Zuclopentixol"
+          ],
+          "br": [
+            "Clopixol"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia",
+          "Acatisia",
+          "Parkinsonismo medicamentoso",
+          "Boca seca",
+          "Hipotensión ortostática",
+          "Hiperprolactinemia"
+        ],
+        "contraindications": [
+          "Hipersensibilidad al zuclopentixol o tioxantenos",
+          "Depresión grave del SNC o coma",
+          "Intoxicación aguda por alcohol, opioides o sedantes",
+          "Enfermedad de Parkinson grave",
+          "QT prolongado significativo"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome neuroléptico maligno",
+          "Discinesia tardía",
+          "Prolongación QT y arritmias",
+          "Depresión del SNC cuando se asocia a sedantes",
+          "Convulsiones en predispuestos"
+        ],
+        "dose": {
+          "adulto": "Psicosis: iniciar 10–25 mg/día VO; titular según respuesta.",
+          "agitacao": "Acetato IM: usado en agitación/psicosis aguda según protocolo institucional.",
+          "depot": "Decanoato IM: mantenimiento cada 2–4 semanas según respuesta y tolerabilidad.",
+          "maxDose": "La dosis máxima depende de la formulación e indicación; requiere monitorización de sedación, EPS y signos vitales."
+        },
+        "halfLife": "Vida media depende de la formulación; decanoato mantiene efecto por 2–4 semanas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Esquizofrenia",
+          "Psicosis aguda",
+          "Psicosis crónica",
+          "Agitación psicomotora grave",
+          "Manía aguda como coadyuvante",
+          "Mantenimiento antipsicótico con depot",
+          "Prevención de recaídas psicóticas"
+        ],
+        "interactions": [
+          "Alcohol y depresores del SNC",
+          "Opioides y benzodiacepinas",
+          "Levodopa y agonistas dopaminérgicos",
+          "Fármacos que prolongan QT",
+          "Antihipertensivos: mayor hipotensión"
+        ],
+        "mechanism": "Antagonista dopaminérgico D2 y D1, con acción antipsicótica, sedativa y antiagitación.",
+        "name": "Zuclopentixol",
+        "onset": "Acetato IM tiene inicio en horas; decanoato posee efecto prolongado por semanas.",
+        "presentation": [
+          "Comprimido 10 mg",
+          "Comprimido 25 mg",
+          "Acetato IM 50 mg/mL",
+          "Decanoato IM 200 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "zuclopentixol",
+      "keywords": [
+        "zuclopentixol",
+        "clopixol",
+        "antipsicotico tipico — tioxanteno"
+      ],
+      "name": {
+        "es": "Zuclopentixol",
+        "pt": "Zuclopentixol"
+      },
+      "pt": {
+        "alerts": [
+          "Formulação acetato IM não é equivalente ao decanoato de manutenção.",
+          "Monitorar sedação, pressão arterial e sintomas extrapiramidais.",
+          "Decanoato exige avaliação de tolerância e plano de seguimento.",
+          "Evitar associação com álcool e outros sedativos.",
+          "Considerar ECG em pacientes com risco cardiovascular ou QT."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico típico — tioxanteno",
+        "commercialNames": {
+          "ar": [
+            "Clopixol",
+            "Zuclopentixol"
+          ],
+          "br": [
+            "Clopixol"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência",
+          "Acatisia",
+          "Parkinsonismo medicamentoso",
+          "Boca seca",
+          "Hipotensão ortostática",
+          "Hiperprolactinemia"
+        ],
+        "contraindications": [
+          "Hipersensibilidade ao zuclopentixol ou tioxantenos",
+          "Depressão grave do SNC ou coma",
+          "Intoxicação aguda por álcool, opioides ou sedativos",
+          "Doença de Parkinson grave",
+          "QT prolongado significativo"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome neuroléptica maligna",
+          "Discinesia tardia",
+          "Prolongamento QT e arritmias",
+          "Depressão do SNC quando associado a sedativos",
+          "Convulsões em predispostos"
+        ],
+        "dose": {
+          "adulto": "Psicose: iniciar 10–25 mg/dia VO; titular conforme resposta.",
+          "agitacao": "Acetato IM: usado em agitação/psicose aguda conforme protocolo institucional.",
+          "depot": "Decanoato IM: manutenção a cada 2–4 semanas conforme resposta e tolerabilidade.",
+          "maxDose": "Dose máxima depende da formulação e indicação; requer monitorização de sedação, EPS e sinais vitais."
+        },
+        "halfLife": "Vida média depende da formulação; decanoato mantém efeito por 2–4 semanas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Esquizofrenia",
+          "Psicose aguda",
+          "Psicose crônica",
+          "Agitação psicomotora grave",
+          "Mania aguda como adjuvante",
+          "Manutenção antipsicótica com depot",
+          "Prevenção de recaídas psicóticas"
+        ],
+        "interactions": [
+          "Álcool e depressores do SNC",
+          "Opioides e benzodiazepínicos",
+          "Levodopa e agonistas dopaminérgicos",
+          "Fármacos que prolongam QT",
+          "Anti-hipertensivos: maior hipotensão"
+        ],
+        "mechanism": "Antagonista dopaminérgico D2 e D1, com ação antipsicótica, sedativa e antiagitação.",
+        "name": "Zuclopentixol",
+        "onset": "Acetato IM tem início em horas; decanoato possui efeito prolongado por semanas.",
+        "presentation": [
+          "Comprimido 10 mg",
+          "Comprimido 25 mg",
+          "Acetato IM 50 mg/mL",
+          "Decanoato IM 200 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psicofarmacos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Psicosis: iniciar 10–25 mg/día VO; titular según respuesta.",
+            "agitacao": "Acetato IM: usado en agitación/psicosis aguda según protocolo institucional.",
+            "depot": "Decanoato IM: mantenimiento cada 2–4 semanas según respuesta y tolerabilidad.",
+            "maxDose": "La dosis máxima depende de la formulación e indicación; requiere monitorización de sedación, EPS y signos vitales."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Psicose: iniciar 10–25 mg/dia VO; titular conforme resposta.",
+            "agitacao": "Acetato IM: usado em agitação/psicose aguda conforme protocolo institucional.",
+            "depot": "Decanoato IM: manutenção a cada 2–4 semanas conforme resposta e tolerabilidade.",
+            "maxDose": "Dose máxima depende da formulação e indicação; requer monitorização de sedação, EPS e sinais vitais."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,254 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "1fe72ec8d73620bdf9d2a514e66a8c1749dad5e5ba903c50305202f2ef541ec4",
+    "sourceModule": "psicofarmacos.js"
+  },
+  "drugId": "levomepromazina",
+  "identity": {
+    "canonicalOwner": "psicofarmacos.js",
+    "category": "antipsicotico",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "levomepromazina",
+      "neozine",
+      "levomepromazina cristalia",
+      "nozinan",
+      "levomepromazina northia",
+      "antipsicotico tipico sedativo — fenotiazina"
+    ],
+    "name": {
+      "es": "Levomepromazina",
+      "pt": "Levomepromazina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antipsicotico",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Antipsicótico muy sedativo; titular lentamente.",
+          "Monitorizar presión arterial y riesgo de caídas.",
+          "Cuidado en combinación con opioides, benzodiacepinas o alcohol.",
+          "Evitar en adultos mayores frágiles cuando sea posible.",
+          "Considerar ECG en pacientes con riesgo de QT."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico típico sedativo — fenotiazina",
+        "commercialNames": {
+          "ar": [
+            "Nozinan",
+            "Levomepromazina Northia"
+          ],
+          "br": [
+            "Neozine",
+            "Levomepromazina Cristália"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia intensa",
+          "Hipotensión ortostática",
+          "Boca seca",
+          "Estreñimiento",
+          "Mareos",
+          "Aumento de peso",
+          "Visión borrosa"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a fenotiazinas",
+          "Depresión grave del SNC o coma",
+          "Hipotensión grave",
+          "Insuficiencia respiratoria grave sin soporte",
+          "Enfermedad de Parkinson o demencia con cuerpos de Lewy, salvo extrema necesidad"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome neuroléptico maligno",
+          "Depresión respiratoria cuando se asocia a sedantes",
+          "Prolongación QT y arritmias",
+          "Delirium anticolinérgico",
+          "Discinesia tardía",
+          "Convulsiones en predispuestos"
+        ],
+        "dose": {
+          "adulto": "Agitación/psicosis: iniciar 25–50 mg VO por la noche o 2–3 veces/día, según sedación y respuesta.",
+          "maxDose": "La dosis máxima depende de la indicación; titular con cautela por alto riesgo de sedación e hipotensión.",
+          "paliativo": "Cuidados paliativos/náuseas/agitación: dosis bajas individualizadas según protocolo."
+        },
+        "halfLife": "Vida media aproximada: 15–30 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Agitación psicomotora",
+          "Psicosis aguda con insomnio/agitación",
+          "Esquizofrenia",
+          "Manía aguda",
+          "Insomnio grave en contexto psiquiátrico seleccionado",
+          "Náuseas y vómitos refractarios",
+          "Sedación y control de síntomas en cuidados paliativos"
+        ],
+        "interactions": [
+          "Alcohol",
+          "Opioides y benzodiacepinas: mayor depresión del SNC",
+          "Antihipertensivos: mayor hipotensión",
+          "Anticolinérgicos: mayor riesgo de retención urinaria, estreñimiento y delirium",
+          "Fármacos que prolongan QT"
+        ],
+        "mechanism": "Antagonista D2 con fuerte bloqueo H1, alfa-1, muscarínico y serotoninérgico; perfil muy sedativo e hipotensor.",
+        "name": "Levomepromazina",
+        "onset": "La sedación puede ocurrir en horas; efecto antipsicótico pleno puede tardar días a semanas.",
+        "presentation": [
+          "Comprimido 25 mg",
+          "Comprimido 100 mg",
+          "Gotas 40 mg/mL",
+          "Ampolla 25 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "levomepromazina",
+      "keywords": [
+        "levomepromazina",
+        "neozine",
+        "levomepromazina cristalia",
+        "nozinan",
+        "levomepromazina northia",
+        "antipsicotico tipico sedativo — fenotiazina"
+      ],
+      "name": {
+        "es": "Levomepromazina",
+        "pt": "Levomepromazina"
+      },
+      "pt": {
+        "alerts": [
+          "Antipsicótico muito sedativo; titular lentamente.",
+          "Monitorar pressão arterial e risco de quedas.",
+          "Cuidado em combinação com opioides, benzodiazepínicos ou álcool.",
+          "Evitar em idosos frágeis quando possível.",
+          "Considerar ECG em pacientes com risco de QT."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico típico sedativo — fenotiazina",
+        "commercialNames": {
+          "ar": [
+            "Nozinan",
+            "Levomepromazina Northia"
+          ],
+          "br": [
+            "Neozine",
+            "Levomepromazina Cristália"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência intensa",
+          "Hipotensão ortostática",
+          "Boca seca",
+          "Constipação",
+          "Tontura",
+          "Ganho de peso",
+          "Visão turva"
+        ],
+        "contraindications": [
+          "Hipersensibilidade às fenotiazinas",
+          "Depressão grave do SNC ou coma",
+          "Hipotensão grave",
+          "Insuficiência respiratória grave sem suporte",
+          "Doença de Parkinson ou demência com corpos de Lewy, salvo extrema necessidade"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome neuroléptica maligna",
+          "Depressão respiratória quando associada a sedativos",
+          "Prolongamento QT e arritmias",
+          "Delirium anticolinérgico",
+          "Discinesia tardia",
+          "Convulsões em predispostos"
+        ],
+        "dose": {
+          "adulto": "Agitação/psicose: iniciar 25–50 mg VO à noite ou 2–3x/dia, conforme sedação e resposta.",
+          "maxDose": "Dose máxima depende da indicação; titular com cautela pelo alto risco de sedação e hipotensão.",
+          "paliativo": "Cuidados paliativos/náuseas/agitação: doses baixas individualizadas conforme protocolo."
+        },
+        "halfLife": "Vida média aproximada: 15–30 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Agitação psicomotora",
+          "Psicose aguda com insônia/agitação",
+          "Esquizofrenia",
+          "Mania aguda",
+          "Insônia grave em contexto psiquiátrico selecionado",
+          "Náuseas e vômitos refratários",
+          "Sedação e controle de sintomas em cuidados paliativos"
+        ],
+        "interactions": [
+          "Álcool",
+          "Opioides e benzodiazepínicos: maior depressão do SNC",
+          "Anti-hipertensivos: maior hipotensão",
+          "Anticolinérgicos: maior risco de retenção urinária, constipação e delirium",
+          "Fármacos que prolongam QT"
+        ],
+        "mechanism": "Antagonista D2 com forte bloqueio H1, alfa-1, muscarínico e serotoninérgico; perfil muito sedativo e hipotensor.",
+        "name": "Levomepromazina",
+        "onset": "Sedação pode ocorrer em horas; efeito antipsicótico pleno pode levar dias a semanas.",
+        "presentation": [
+          "Comprimido 25 mg",
+          "Comprimido 100 mg",
+          "Gotas 40 mg/mL",
+          "Ampola 25 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psicofarmacos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Agitación/psicosis: iniciar 25–50 mg VO por la noche o 2–3 veces/día, según sedación y respuesta.",
+            "maxDose": "La dosis máxima depende de la indicación; titular con cautela por alto riesgo de sedación e hipotensión.",
+            "paliativo": "Cuidados paliativos/náuseas/agitación: dosis bajas individualizadas según protocolo."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Agitação/psicose: iniciar 25–50 mg VO à noite ou 2–3x/dia, conforme sedação e resposta.",
+            "maxDose": "Dose máxima depende da indicação; titular com cautela pelo alto risco de sedação e hipotensão.",
+            "paliativo": "Cuidados paliativos/náuseas/agitação: doses baixas individualizadas conforme protocolo."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "47dca5c9931f2aae669ab782e9acb3a3af3edd318a220137492827c9f40ab15f",
+    "sourceModule": "pneumologia.js"
+  },
+  "drugId": "tiotropio",
+  "identity": {
+    "canonicalOwner": "pneumologia.js",
+    "category": "pneumologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "tiotropio",
+      "brometo de tiotrópio"
+    ],
+    "name": {
+      "es": "Bromuro de Tiotropio",
+      "pt": "Brometo de Tiotrópio"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "pneumologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Bromuro de Tiotropio"
+      },
+      "icon": "💊",
+      "id": "tiotropio",
+      "keywords": [
+        "tiotropio",
+        "brometo de tiotrópio"
+      ],
+      "name": {
+        "es": "Bromuro de Tiotropio",
+        "pt": "Brometo de Tiotrópio"
+      },
+      "pt": {
+        "name": "Brometo de Tiotrópio"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "pneumologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

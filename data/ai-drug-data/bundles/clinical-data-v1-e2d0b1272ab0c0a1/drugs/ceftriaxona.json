@@ -1,0 +1,430 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "74f4248cb325c362a0719fb77956202f21c1f60ea64f375f6ed155602087c300",
+    "sourceModule": "infectologia.js"
+  },
+  "drugId": "ceftriaxona",
+  "identity": {
+    "canonicalOwner": "infectologia.js",
+    "category": "infectologia",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "ceftriaxona"
+    ],
+    "name": {
+      "es": "Ceftriaxona",
+      "pt": "Ceftriaxona"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "infectologia",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "infectologia.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "atb",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "alerts": [
+                "Investigar alergia a cefalosporinas y reacción grave previa a beta-lactámicos.",
+                "No administrar en la misma línea con soluciones que contengan calcio.",
+                "En meningitis, usar dosis alta y asociar cobertura según protocolo local."
+              ],
+              "auditNotes": {
+                "note": "Bloque fusionado y mejorado: message corregida a 'aislado'; fgMaior50.obs con meningitis 12/12h; fgMenor10.obs con límite de dosis ≤2 g/día en IR+IH combinadas; hemodialise.obs con 'no dializable'; safetyFlags y auditNotes añadidos.",
+                "sourcePriority": [
+                  "FDA label Rocephin (ceftriaxone) 2022",
+                  "EMA label Ceftriaxona 2022",
+                  "Sanford Guide to Antimicrobial Therapy 2025",
+                  "Johns Hopkins ABX Guide 2024",
+                  "UpToDate 2024",
+                  "Lexicomp Online 2025",
+                  "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+                ],
+                "status": "excellent_after_review"
+              },
+              "class": "Cefalosporina de 3ª generación",
+              "commercialNames": {
+                "ar": [
+                  "Rocephin",
+                  "Ceftriaxona Richet",
+                  "Ceftriaxona genérica"
+                ],
+                "br": [
+                  "Rocefin",
+                  "Ceftriaxona Eurofarma",
+                  "Ceftriaxona ABL"
+                ]
+              },
+              "commonAdverseEffects": [
+                "Dolor en el sitio de aplicación",
+                "Diarrea",
+                "Exantema cutáneo",
+                "Náuseas",
+                "Elevación de transaminasas"
+              ],
+              "dangerousAdverseEffects": [
+                "Anafilaxia",
+                "Colitis por Clostridioides difficile",
+                "Precipitación ceftriaxona-calcio en neonatos",
+                "Encefalopatía bilirrubínica en neonatos de riesgo",
+                "Barro biliar y pseudolitiasis biliar"
+              ],
+              "dilution": "EV: diluir según protocolo institucional, con solución compatible. No mezclar con soluciones que contengan calcio.",
+              "dose": {
+                "adultoGrave": "2 g EV cada 12h en infecciones graves específicas, como meningitis",
+                "adultoPadrao": "1–2 g EV/IM 1 vez/día",
+                "pediatricaGrave": "4000 mg/día EV dividido según indicación clínica",
+                "pediatricaMeningite": "2000 mg EV cada 12h, máximo 2 g por dosis",
+                "pediatricaPadrao": "2000 mg EV/IM 1 vez/día"
+              },
+              "doseKg": {
+                "doseMaxima": "Máximo usual: 4 g/día",
+                "grave": "75–100 mg/kg/día",
+                "meningite": "100 mg/kg/día dividido cada 12h",
+                "padrao": "50 mg/kg/día"
+              },
+              "name": "Ceftriaxona",
+              "presentation": [
+                "Frasco ampolla: 500 mg IM/EV",
+                "Frasco ampolla: 1 g IM/EV",
+                "Frasco ampolla: 2 g EV"
+              ],
+              "ref": "Goodman & Gilman / FDA Ceftriaxone label / Sanford Guide / IDSA",
+              "renalDose": {
+                "fg10a30": {
+                  "ev": {
+                    "dose": "1–2 g",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "g"
+                  },
+                  "obs": "No requiere ajuste renal. Precaución si existe insuficiencia hepática concomitante.",
+                  "pediatrica": {
+                    "dose": "50–100 mg/kg",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fg30a50": {
+                  "ev": {
+                    "dose": "1–2 g",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "g"
+                  },
+                  "obs": "No requiere ajuste renal aislado.",
+                  "pediatrica": {
+                    "dose": "50–100 mg/kg",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMaior50": {
+                  "ev": {
+                    "dose": "1–2 g",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "g"
+                  },
+                  "obs": "Dosis habitual. No requiere ajuste renal. Para meningitis, usar 2 g cada 12h en adultos según protocolo.",
+                  "pediatrica": {
+                    "dose": "50–100 mg/kg",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMenor10": {
+                  "ev": {
+                    "dose": "1–2 g",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "g"
+                  },
+                  "obs": "Si insuficiencia renal + hepática grave combinadas, considerar límite de dosis (≤2 g/día) y monitorización intensificada.",
+                  "pediatrica": {
+                    "dose": "50–100 mg/kg",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "hemodialise": {
+                  "ev": {
+                    "dose": "1–2 g",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "g"
+                  },
+                  "obs": "No requiere dosis suplementaria post-hemodiálisis. Altamente ligada a proteínas — no dializable.",
+                  "pediatrica": {
+                    "dose": "50–100 mg/kg",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "message": "No requiere ajuste renal aislado.",
+                "requiresAdjustment": false,
+                "version": 2
+              },
+              "risksByPatient": [],
+              "safetyFlags": {
+                "hepatotoxicityRisk": true,
+                "neurotoxicityRisk": false,
+                "qtRisk": false,
+                "renalHighRisk": false,
+                "requiresCultureGuidance": false,
+                "warning": "Evitar en neonatos con hiperbilirrubinemia o uso concomitante de calcio EV (riesgo de precipitación fatal). En insuficiencia hepática y renal combinadas graves, limitar dosis a ≤2 g/día."
+              },
+              "speed": "Infusión EV usual en 30 minutos. En neonatos, usar infusión más lenta según protocolo.",
+              "therapeuticRange": "Rango usual pediátrico: 50–100 mg/kg/día según gravedad y foco infeccioso."
+            },
+            "icon": "💊",
+            "id": "ceftriaxona",
+            "keywords": [
+              "ceftriaxona",
+              "rocefin",
+              "ceftriaxona eurofarma",
+              "ceftriaxona abl",
+              "rocephin",
+              "ceftriaxona richet",
+              "ceftriaxona generica",
+              "cefalosporina de 3ª geracao"
+            ],
+            "name": {
+              "es": "Ceftriaxona",
+              "pt": "Ceftriaxona"
+            },
+            "pt": {
+              "alerts": [
+                "Investigar alergia a cefalosporinas e reação grave prévia a beta-lactâmicos.",
+                "Não administrar na mesma linha com soluções contendo cálcio.",
+                "Em meningite, usar dose alta e associar cobertura conforme protocolo local."
+              ],
+              "auditNotes": {
+                "note": "Bloco mesclado e melhorado: message corrigida para 'isolado'; fgMaior50.obs com meningite 12/12h; fgMenor10.obs com dose limite ≤2 g/dia em IR+IH combinadas; hemodialise.obs com 'não dialisável'; safetyFlags e auditNotes adicionados.",
+                "sourcePriority": [
+                  "FDA label Rocephin (ceftriaxone) 2022",
+                  "EMA label Ceftriaxona 2022",
+                  "Sanford Guide to Antimicrobial Therapy 2025",
+                  "Johns Hopkins ABX Guide 2024",
+                  "UpToDate 2024",
+                  "Lexicomp Online 2025",
+                  "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+                ],
+                "status": "excellent_after_review"
+              },
+              "class": "Cefalosporina de 3ª geração",
+              "commercialNames": {
+                "ar": [
+                  "Rocephin",
+                  "Ceftriaxona Richet",
+                  "Ceftriaxona genérica"
+                ],
+                "br": [
+                  "Rocefin",
+                  "Ceftriaxona Eurofarma",
+                  "Ceftriaxona ABL"
+                ]
+              },
+              "commonAdverseEffects": [
+                "Dor no local da aplicação",
+                "Diarreia",
+                "Rash cutâneo",
+                "Náuseas",
+                "Elevação de transaminases"
+              ],
+              "dangerousAdverseEffects": [
+                "Anafilaxia",
+                "Colite por Clostridioides difficile",
+                "Precipitação ceftriaxona-cálcio em neonatos",
+                "Encefalopatia bilirrubínica em neonatos de risco",
+                "Lama biliar e pseudolitíase biliar"
+              ],
+              "dilution": "EV: diluir conforme protocolo institucional, com solução compatível. Não misturar com soluções contendo cálcio.",
+              "dose": {
+                "adultoGrave": "2 g EV 12/12h em infecções graves específicas, como meningite",
+                "adultoPadrao": "1–2 g EV/IM 1x/dia",
+                "pediatricaGrave": "4000 mg/dia EV dividido conforme indicação clínica",
+                "pediatricaMeningite": "2000 mg EV 12/12h, máximo 2 g por dose",
+                "pediatricaPadrao": "2000 mg EV/IM 1x/dia"
+              },
+              "doseKg": {
+                "doseMaxima": "Máximo usual: 4 g/dia",
+                "grave": "75–100 mg/kg/dia",
+                "meningite": "100 mg/kg/dia dividido 12/12h",
+                "padrao": "50 mg/kg/dia"
+              },
+              "name": "Ceftriaxona",
+              "presentation": [
+                "Frasco-ampola: 500 mg IM/EV",
+                "Frasco-ampola: 1 g IM/EV",
+                "Frasco-ampola: 2 g EV"
+              ],
+              "ref": "Goodman & Gilman / FDA Ceftriaxone label / Sanford Guide / IDSA",
+              "renalDose": {
+                "fg10a30": {
+                  "ev": {
+                    "dose": "1–2 g",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "g"
+                  },
+                  "obs": "Não necessita ajuste renal. Cautela se houver insuficiência hepática concomitante.",
+                  "pediatrica": {
+                    "dose": "50–100 mg/kg",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fg30a50": {
+                  "ev": {
+                    "dose": "1–2 g",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "g"
+                  },
+                  "obs": "Não necessita ajuste renal isolado.",
+                  "pediatrica": {
+                    "dose": "50–100 mg/kg",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMaior50": {
+                  "ev": {
+                    "dose": "1–2 g",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "g"
+                  },
+                  "obs": "Dose habitual. Não necessita ajuste renal. Para meningite, usar 2 g 12/12h em adultos conforme protocolo.",
+                  "pediatrica": {
+                    "dose": "50–100 mg/kg",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMenor10": {
+                  "ev": {
+                    "dose": "1–2 g",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "g"
+                  },
+                  "obs": "Se insuficiência renal + hepática grave combinadas, considerar limite de dose (≤2 g/dia) e monitorização intensificada.",
+                  "pediatrica": {
+                    "dose": "50–100 mg/kg",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "hemodialise": {
+                  "ev": {
+                    "dose": "1–2 g",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "g"
+                  },
+                  "obs": "Não necessita dose suplementar pós-hemodiálise. Altamente ligada a proteínas — não dialisável.",
+                  "pediatrica": {
+                    "dose": "50–100 mg/kg",
+                    "doseMaxima": "4 g/dia",
+                    "intervalo": "24/24h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "message": "Não necessita ajuste renal isolado.",
+                "requiresAdjustment": false,
+                "version": 2
+              },
+              "risksByPatient": [],
+              "safetyFlags": {
+                "hepatotoxicityRisk": true,
+                "neurotoxicityRisk": false,
+                "qtRisk": false,
+                "renalHighRisk": false,
+                "requiresCultureGuidance": false,
+                "warning": "Evitar em neonatos com hiperbilirrubinemia ou uso concomitante de cálcio EV (risco de precipitação fatal). Em insuficiência hepática e renal combinadas graves, limitar dose a ≤2 g/dia."
+              },
+              "speed": "Infusão EV usual em 30 minutos. Em neonatos, usar infusão mais lenta conforme protocolo.",
+              "therapeuticRange": "Faixa usual pediátrica: 50–100 mg/kg/dia conforme gravidade e foco infeccioso."
+            },
+            "schema": "premium-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "antimicrobianos.js"
+          },
+          "sourceModule": "antimicrobianos.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Ceftriaxona"
+      },
+      "icon": "💊",
+      "id": "ceftriaxona",
+      "keywords": [
+        "ceftriaxona"
+      ],
+      "name": {
+        "es": "Ceftriaxona",
+        "pt": "Ceftriaxona"
+      },
+      "pt": {
+        "name": "Ceftriaxona"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "infectologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,390 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "03cc9487b8013a6b10f19ad03ee240143733d3538dcff87da5c4df1e5771b4fc",
+    "sourceModule": "cardio.js"
+  },
+  "drugId": "digoxina",
+  "identity": {
+    "canonicalOwner": "cardio.js",
+    "category": "cardio",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "digoxina",
+      "lanoxin",
+      "digoxina generica",
+      "glicosideo cardiaco (inibidor da na+/k+-atpase)"
+    ],
+    "name": {
+      "es": "Digoxina",
+      "pt": "Digoxina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardio",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(245,158,11,0.15)",
+      "colorTxt": "#78350F",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "VENTANA TERAPÉUTICA ESTRECHA: nivel sérico objetivo 0,5–0,9 ng/mL en ICFEr. Obtener ≥ 6h tras última dosis.",
+          "Hipocalemia e hipomagnesemia potencian toxicidad — corregir electrolitos antes y durante el uso.",
+          "Interacciones graves: amiodarona, verapamilo, diltiazem, quinidina, macrólidos, propafenona — aumentan nivel sérico de digoxina.",
+          "Síndrome de Wolff-Parkinson-White con FA = CONTRAINDICACIÓN ABSOLUTA.",
+          "Antídoto en intoxicación grave: Fragmentos Fab antidigoxina (Digoxin Immune Fab)."
+        ],
+        "auditNotes": {
+          "note": "Glucósido cardíaco de ventana terapéutica estrecha. Eliminación renal predominante — ajuste obligatorio en ERC. Hipocalemia, hipomagnesemia y múltiples interacciones medicamentosas amplían toxicidad. Antídoto disponible: Fab antidigoxina.",
+          "sourcePriority": [
+            "ESC Heart Failure Guidelines 2021/2023",
+            "ESC Atrial Fibrillation Guidelines 2020/2024",
+            "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+            "Goodman & Gilman",
+            "Lexicomp 2026",
+            "FDA/EMA label"
+          ],
+          "status": "excellent_after_review"
+        },
+        "class": "Glucósido cardíaco (inhibidor de la Na+/K+-ATPasa)",
+        "commercialNames": {
+          "ar": [
+            "Lanoxin",
+            "Digoxina genérica"
+          ],
+          "br": [
+            "Lanoxin",
+            "Digoxina genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas",
+          "Vómitos",
+          "Anorexia",
+          "Diarrea",
+          "Fatiga",
+          "Debilidad",
+          "Mareos"
+        ],
+        "dangerousAdverseEffects": [
+          "Intoxicación digitálica (visión amarillenta, halos, confusión)",
+          "Bloqueo AV completo",
+          "Bradicardia grave",
+          "Taquicardia ventricular",
+          "Fibrilación ventricular",
+          "Paro cardíaco",
+          "Arritmias fatales"
+        ],
+        "dilution": "IV: diluir en 10x volumen de SF 0,9% o SG 5%. Administrar lentamente en 10–20 min. Oral: sin dilución.",
+        "dose": {
+          "adultoGrave": "Anciano, ERC o bajo peso: iniciar con 0,0625–0,125 mg VO 1 vez/día y titular lentamente con monitorización de nivel sérico.",
+          "adultoPadrao": "0,125–0,25 mg VO 1x/dia. Ajustar según función renal, nivel sérico (objetivo 0,5–0,9 ng/mL en ICFEr) y respuesta clínica.",
+          "pediatricaGrave": null,
+          "pediatricaMeningite": null,
+          "pediatricaPadrao": "Dosis pediátricas estrictamente por peso y función renal — consultar protocolo especializado."
+        },
+        "doseKg": {
+          "doseMaxima": "Individualizado: objetivo sérico 0,5–0,9 ng/mL en ICFEr; evitar > 1,2 ng/mL salvo excepciones",
+          "grave": null,
+          "meningite": null,
+          "padrao": null
+        },
+        "name": "Digoxina",
+        "presentation": [
+          "Comprimidos 0,125 mg",
+          "Comprimidos 0,25 mg",
+          "Solución oral 0,05 mg/mL",
+          "Ampollas IV 0,25 mg/mL (para digitalización rápida hospitalaria)"
+        ],
+        "ref": "ESC Heart Failure Guidelines · ESC Atrial Fibrillation Guidelines · AHA/ACC/HFSA Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "ERC grave: reducir dosis y/o aumentar intervalo. Nivel sérico frecuente. Considerar alternativas terapéuticas.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "0,0625–0,125 mg",
+              "doseMaxima": "0,125 mg/dia",
+              "intervalo": "1x/dia ou dias alternados",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "ERC moderada: mantener 0,125 mg/día con monitorización de nivel sérico. Intervalos en días alternos si necesario.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "0,125 mg",
+              "doseMaxima": "0,125 mg/dia",
+              "intervalo": "1x/dia",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "0,25–0,5 mg",
+              "doseMaxima": "1 mg/24h",
+              "intervalo": "Digitalização hospitalar fracionada",
+              "unidade": "mg"
+            },
+            "obs": "Dosis habitual. Monitorizar nivel sérico tras equilibrio (≥ 5 semividas = 5–7 días).",
+            "pediatrica": null,
+            "vo": {
+              "dose": "0,125–0,25 mg",
+              "doseMaxima": "0,25 mg/dia",
+              "intervalo": "1x/dia",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "ERC muy grave: dosis muy bajas con monitorización intensiva. Alto riesgo de acumulación y toxicidad. Evaluar necesidad real.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "0,0625 mg",
+              "doseMaxima": "0,0625 mg/dia",
+              "intervalo": "Dias alternados ou 3x/semana",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Digoxina NO es removida significativamente por hemodiálisis (alto Vd). Sin suplementación post-HD. Monitorizar nivel sérico y electrolitos rigurosamente.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "0,0625 mg",
+              "doseMaxima": "0,0625 mg/dose",
+              "intervalo": "3–5x/semana (não pós-HD)",
+              "unidade": "mg"
+            }
+          },
+          "message": "Sin ajuste renal obligatorio con ClCr ≥ 60 mL/min. Monitorizar nivel sérico periódicamente.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "safetyFlags": {
+          "avBlockRisk": true,
+          "bradycardiaRisk": true,
+          "digoxinToxicityRisk": true,
+          "electrolyteDependent": true,
+          "hepatotoxicityRisk": false,
+          "hypotensionRisk": false,
+          "neurotoxicityRisk": false,
+          "pregnancyCaution": true,
+          "qtRisk": false,
+          "renalHighRisk": true,
+          "requiresCultureGuidance": false,
+          "warning": "La digoxina posee VENTANA TERAPÉUTICA ESTRECHA. Hipocalemia, hipomagnesemia, ERC e interacciones medicamentosas aumentan drásticamente el riesgo de intoxicación fatal. Nivel sérico objetivo: 0,5–0,9 ng/mL en ICFEr."
+        },
+        "speed": "VO: dosis única diaria, en el mismo horario. IV (digitalización hospitalaria): fraccionada. Obtener nivel sérico ≥ 6h tras dosis.",
+        "therapeuticRange": "Nivel sérico objetivo: 0,5–0,9 ng/mL en ICFEr · Obtener nivel sérico ≥ 6h tras última dosis · Evitar > 1,2 ng/mL"
+      },
+      "icon": "⚠️",
+      "id": "digoxina",
+      "keywords": [
+        "digoxina",
+        "lanoxin",
+        "digoxina generica",
+        "glicosideo cardiaco (inibidor da na+/k+-atpase)"
+      ],
+      "name": {
+        "es": "Digoxina",
+        "pt": "Digoxina"
+      },
+      "pt": {
+        "alerts": [
+          "JANELA TERAPÊUTICA ESTREITA: nível sérico alvo 0,5–0,9 ng/mL em ICFEr. Coletar ≥ 6h após última dose.",
+          "Hipocalemia e hipomagnesemia potencializam toxicidade — corrigir eletrólitos antes e durante uso.",
+          "Interações graves: amiodarona, verapamil, diltiazem, quinidina, macrolídeos, propafenona — aumentam nível sérico de digoxina.",
+          "Síndrome de Wolff-Parkinson-White com FA = CONTRAINDICAÇÃO ABSOLUTA.",
+          "Antídoto em intoxicação grave: Fragmentos Fab antidigoxina (Digoxin Immune Fab)."
+        ],
+        "auditNotes": {
+          "note": "Glicosídeo cardíaco de janela terapêutica estreita. Eliminação renal predominante — ajuste obrigatório em DRC. Hipocalemia, hipomagnesemia e múltiplas interações medicamentosas amplificam toxicidade. Antídoto disponível: Fab antidigoxina.",
+          "sourcePriority": [
+            "ESC Heart Failure Guidelines 2021/2023",
+            "ESC Atrial Fibrillation Guidelines 2020/2024",
+            "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+            "Goodman & Gilman",
+            "Lexicomp 2026",
+            "FDA/EMA label"
+          ],
+          "status": "excellent_after_review"
+        },
+        "class": "Glicosídeo cardíaco (inibidor da Na+/K+-ATPase)",
+        "commercialNames": {
+          "ar": [
+            "Lanoxin",
+            "Digoxina genérica"
+          ],
+          "br": [
+            "Lanoxin",
+            "Digoxina genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas",
+          "Vômitos",
+          "Anorexia",
+          "Diarreia",
+          "Fadiga",
+          "Fraqueza",
+          "Tontura"
+        ],
+        "dangerousAdverseEffects": [
+          "Intoxicação digitálica (visão amarelada, halos, confusão)",
+          "Bloqueio AV completo",
+          "Bradicardia grave",
+          "Taquicardia ventricular",
+          "Fibrilação ventricular",
+          "Parada cardíaca",
+          "Arritmias fatais"
+        ],
+        "dilution": "IV: diluir em 10x volume de SF 0,9% ou SG 5%. Administrar lentamente em 10–20 min. Oral: sem diluição.",
+        "dose": {
+          "adultoGrave": "Idoso, DRC ou baixo peso: iniciar com 0,0625–0,125 mg VO 1x/dia e titular lentamente com monitorização de nível sérico.",
+          "adultoPadrao": "0,125–0,25 mg VO 1x/dia. Ajustar conforme função renal, nível sérico (alvo 0,5–0,9 ng/mL em ICFEr) e resposta clínica.",
+          "pediatricaGrave": null,
+          "pediatricaMeningite": null,
+          "pediatricaPadrao": "Doses pediátricas estritamente por peso e função renal — consultar protocolo especializado."
+        },
+        "doseKg": {
+          "doseMaxima": "Individualizado: alvo sérico 0,5–0,9 ng/mL em ICFEr; evitar > 1,2 ng/mL salvo exceções",
+          "grave": null,
+          "meningite": null,
+          "padrao": null
+        },
+        "name": "Digoxina",
+        "presentation": [
+          "Comprimidos 0,125 mg",
+          "Comprimidos 0,25 mg",
+          "Solução oral 0,05 mg/mL",
+          "Ampolas IV 0,25 mg/mL (para digitalização rápida hospitalar)"
+        ],
+        "ref": "ESC Heart Failure Guidelines · ESC Atrial Fibrillation Guidelines · AHA/ACC/HFSA Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "DRC grave: reduzir dose e/ou aumentar intervalo. Nível sérico frequente. Considerar alternativas terapêuticas.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "0,0625–0,125 mg",
+              "doseMaxima": "0,125 mg/dia",
+              "intervalo": "1x/dia ou dias alternados",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "DRC moderada: manter 0,125 mg/dia com monitoração de nível sérico. Intervalar em dias alternados se necessário.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "0,125 mg",
+              "doseMaxima": "0,125 mg/dia",
+              "intervalo": "1x/dia",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "0,25–0,5 mg",
+              "doseMaxima": "1 mg/24h",
+              "intervalo": "Digitalização hospitalar fracionada",
+              "unidade": "mg"
+            },
+            "obs": "Dose habitual. Monitorar nível sérico após equilíbrio (≥ 5 meias-vidas = 5–7 dias).",
+            "pediatrica": null,
+            "vo": {
+              "dose": "0,125–0,25 mg",
+              "doseMaxima": "0,25 mg/dia",
+              "intervalo": "1x/dia",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "DRC muito grave: doses muito baixas com monitorização intensiva. Alto risco de acúmulo e toxicidade. Avaliar necessidade real.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "0,0625 mg",
+              "doseMaxima": "0,0625 mg/dia",
+              "intervalo": "Dias alternados ou 3x/semana",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Digoxina NÃO é removida significativamente por hemodiálise (alto Vd). Sem suplementação pós-HD. Monitorar nível sérico e eletrólitos rigorosamente.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "0,0625 mg",
+              "doseMaxima": "0,0625 mg/dose",
+              "intervalo": "3–5x/semana (não pós-HD)",
+              "unidade": "mg"
+            }
+          },
+          "message": "Sem ajuste renal obrigatório em ClCr ≥ 60 mL/min. Monitorar nível sérico periodicamente.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "safetyFlags": {
+          "avBlockRisk": true,
+          "bradycardiaRisk": true,
+          "digoxinToxicityRisk": true,
+          "electrolyteDependent": true,
+          "hepatotoxicityRisk": false,
+          "hypotensionRisk": false,
+          "neurotoxicityRisk": false,
+          "pregnancyCaution": true,
+          "qtRisk": false,
+          "renalHighRisk": true,
+          "requiresCultureGuidance": false,
+          "warning": "Digoxina possui JANELA TERAPÊUTICA ESTREITA. Hipocalemia, hipomagnesemia, DRC e interações medicamentosas aumentam drasticamente o risco de intoxicação fatal. Nível sérico alvo: 0,5–0,9 ng/mL em ICFEr."
+        },
+        "speed": "VO: dose única diária, no mesmo horário. IV (digitalização hospitalar): fracionada. Coletar nível sérico ≥ 6h após dose.",
+        "therapeuticRange": "Nível sérico alvo: 0,5–0,9 ng/mL em ICFEr · Colher nível sérico ≥ 6h após última dose · Evitar > 1,2 ng/mL"
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardio.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "Anciano, ERC o bajo peso: iniciar con 0,0625–0,125 mg VO 1 vez/día y titular lentamente con monitorización de nivel sérico.",
+            "adultoPadrao": "0,125–0,25 mg VO 1x/dia. Ajustar según función renal, nivel sérico (objetivo 0,5–0,9 ng/mL en ICFEr) y respuesta clínica.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null,
+            "pediatricaPadrao": "Dosis pediátricas estrictamente por peso y función renal — consultar protocolo especializado."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "Idoso, DRC ou baixo peso: iniciar com 0,0625–0,125 mg VO 1x/dia e titular lentamente com monitorização de nível sérico.",
+            "adultoPadrao": "0,125–0,25 mg VO 1x/dia. Ajustar conforme função renal, nível sérico (alvo 0,5–0,9 ng/mL em ICFEr) e resposta clínica.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null,
+            "pediatricaPadrao": "Doses pediátricas estritamente por peso e função renal — consultar protocolo especializado."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

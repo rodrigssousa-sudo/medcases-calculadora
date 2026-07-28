@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "c0d805ff3f681d810469062e06c53c22386099146e30c78cabed4d7815b191b7",
+    "sourceModule": "ginecologia.js"
+  },
+  "drugId": "drospirenona",
+  "identity": {
+    "canonicalOwner": "ginecologia.js",
+    "category": "ginecologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "drospirenona"
+    ],
+    "name": {
+      "es": "Drospirenona",
+      "pt": "Drospirenona"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "ginecologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Drospirenona"
+      },
+      "icon": "💊",
+      "id": "drospirenona",
+      "keywords": [
+        "drospirenona"
+      ],
+      "name": {
+        "es": "Drospirenona",
+        "pt": "Drospirenona"
+      },
+      "pt": {
+        "name": "Drospirenona"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "ginecologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -9,9 +9,10 @@
   "scripts": {
     "export:clinical": "node scripts/export-clinical-data.js",
     "manifest:offline": "node scripts/generate-offline-manifest.js",
-    "export:data": "npm run export:clinical && npm run manifest:offline",
+    "export:data": "npm run export:ai && npm run manifest:offline",
     "build": "npm run export:data",
-    "predeploy": "npm run export:data"
+    "predeploy": "npm run export:data",
+    "export:ai": "./scripts/build-ai-drug-data.sh"
   },
   "engines": {
     "node": ">=18.0.0"

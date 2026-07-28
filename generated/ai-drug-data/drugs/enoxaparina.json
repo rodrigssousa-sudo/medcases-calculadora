@@ -1,0 +1,103 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "eb4ed5b6ea9c96068fe1470f6c1ea9d166dfee9923ed6170163caefd5dd189c5",
+    "sourceModule": "anticoag.js"
+  },
+  "drugId": "enoxaparina",
+  "identity": {
+    "canonicalOwner": "anticoag.js",
+    "category": "anticoag",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "enoxaparina",
+      "enoxaparina sódica (hbpm)"
+    ],
+    "name": {
+      "es": "Enoxaparina Sódica (HBPM)",
+      "pt": "Enoxaparina Sódica (HBPM)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "anticoag",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "anticoag.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "hematologia",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "name": "Enoxaparina"
+            },
+            "icon": "💊",
+            "id": "enoxaparina",
+            "keywords": [
+              "enoxaparina"
+            ],
+            "name": {
+              "es": "Enoxaparina",
+              "pt": "Enoxaparina"
+            },
+            "pt": {
+              "name": "Enoxaparina"
+            },
+            "schema": "legacy-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "hematologia.js"
+          },
+          "sourceModule": "hematologia.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Enoxaparina Sódica (HBPM)"
+      },
+      "icon": "💊",
+      "id": "enoxaparina",
+      "keywords": [
+        "enoxaparina",
+        "enoxaparina sódica (hbpm)"
+      ],
+      "name": {
+        "es": "Enoxaparina Sódica (HBPM)",
+        "pt": "Enoxaparina Sódica (HBPM)"
+      },
+      "pt": {
+        "name": "Enoxaparina Sódica (HBPM)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "anticoag.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

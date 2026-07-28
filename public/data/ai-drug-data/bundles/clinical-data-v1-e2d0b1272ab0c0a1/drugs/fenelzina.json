@@ -1,0 +1,220 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "69243ddf57cb997d159a0e1709a5a28cd9ba77855aa6ae856da745d2e4a21dd7",
+    "sourceModule": "psiquiatria.js"
+  },
+  "drugId": "fenelzina",
+  "identity": {
+    "canonicalOwner": "psiquiatria.js",
+    "category": "antidepressivo",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "fenelzina",
+      "nardil",
+      "imao irreversivel nao seletivo"
+    ],
+    "name": {
+      "es": "Fenelzina",
+      "pt": "Fenelzina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antidepressivo",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Requiere dieta restringida en tiramina.",
+          "Respetar washout de 14 días al cambiar antidepresivos."
+        ],
+        "category": "antidepressivo",
+        "class": "IMAO irreversible no selectivo",
+        "commercialNames": {
+          "ar": [
+            "Nardil"
+          ],
+          "br": [
+            "Nardil"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Hipotensión ortostática",
+          "Aumento de peso",
+          "Insomnio",
+          "Edema"
+        ],
+        "contraindications": [
+          "Uso concomitante con ISRS/IRSN",
+          "Feocromocitoma",
+          "Insuficiencia hepática"
+        ],
+        "dangerousAdverseEffects": [
+          "Crisis hipertensiva por tiramina",
+          "Síndrome serotoninérgico",
+          "Hepatotoxicidad"
+        ],
+        "dose": {
+          "adulto": "15 mg VO 3 veces/día; titular según respuesta.",
+          "maxDose": "Dosis máxima: 90 mg/día."
+        },
+        "doseKg": {
+          "maxDose": "90 mg/día",
+          "pediatric": "Uso pediátrico contraindicado.",
+          "standard": "No se utiliza cálculo por kg."
+        },
+        "halfLife": "Vida media corta, pero el efecto enzimático dura 2–3 semanas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Depresión resistente",
+          "Depresión atípica",
+          "Trastorno de pánico",
+          "Fobia social",
+          "Ansiedad resistente",
+          "TEPT refractario"
+        ],
+        "interactions": [
+          "Tiramina alimentaria",
+          "ISRS",
+          "Tramadol",
+          "Linezolid",
+          "Descongestionantes"
+        ],
+        "mechanism": "Inhibición irreversible de MAO-A y MAO-B aumentando serotonina, noradrenalina y dopamina.",
+        "name": "Fenelzina",
+        "onset": "Efecto antidepresivo generalmente en 2–4 semanas.",
+        "presentation": [
+          "Comprimido 15 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "fenelzina",
+      "keywords": [
+        "fenelzina",
+        "nardil",
+        "imao irreversivel nao seletivo"
+      ],
+      "name": {
+        "es": "Fenelzina",
+        "pt": "Fenelzina"
+      },
+      "pt": {
+        "alerts": [
+          "Necessita dieta restrita em tiramina.",
+          "Respeitar washout de 14 dias ao trocar antidepressivos."
+        ],
+        "category": "antidepressivo",
+        "class": "IMAO irreversível não seletivo",
+        "commercialNames": {
+          "ar": [
+            "Nardil"
+          ],
+          "br": [
+            "Nardil"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Hipotensão ortostática",
+          "Ganho de peso",
+          "Insônia",
+          "Edema"
+        ],
+        "contraindications": [
+          "Uso concomitante com ISRS/ISRN",
+          "Feocromocitoma",
+          "Insuficiência hepática"
+        ],
+        "dangerousAdverseEffects": [
+          "Crise hipertensiva por tiramina",
+          "Síndrome serotoninérgica",
+          "Hepatotoxicidade"
+        ],
+        "dose": {
+          "adulto": "15 mg VO 3x/dia; titular conforme resposta.",
+          "maxDose": "Dose máxima: 90 mg/dia."
+        },
+        "doseKg": {
+          "maxDose": "90 mg/dia",
+          "pediatric": "Uso pediátrico contraindicado.",
+          "standard": "Não se utiliza cálculo por kg."
+        },
+        "halfLife": "Vida média curta, porém efeito enzimático dura 2–3 semanas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Depressão resistente",
+          "Depressão atípica",
+          "Transtorno do pânico",
+          "Fobia social",
+          "Ansiedade resistente",
+          "TEPT refratário"
+        ],
+        "interactions": [
+          "Tiramina alimentar",
+          "ISRS",
+          "Tramadol",
+          "Linezolida",
+          "Descongestionantes"
+        ],
+        "mechanism": "Inibição irreversível da MAO-A e MAO-B aumentando serotonina, noradrenalina e dopamina.",
+        "name": "Fenelzina",
+        "onset": "Efeito antidepressivo geralmente em 2–4 semanas.",
+        "presentation": [
+          "Comprimido 15 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psiquiatria.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "15 mg VO 3 veces/día; titular según respuesta.",
+            "maxDose": "Dosis máxima: 90 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "15 mg VO 3x/dia; titular conforme resposta.",
+            "maxDose": "Dose máxima: 90 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

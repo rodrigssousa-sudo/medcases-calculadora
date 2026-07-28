@@ -1,0 +1,262 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "c782e94e659e5059a2ef9043466106867e6db3ffaf6e5a26e9f998d529f0e792",
+    "sourceModule": "neurologia.js"
+  },
+  "drugId": "oxcarbazepina",
+  "identity": {
+    "canonicalOwner": "neurologia.js",
+    "category": "estabilizador_humor",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "oxcarbazepina",
+      "trileptal",
+      "oxcarb",
+      "oxcarbazepina ems",
+      "oxcarbazepina gador",
+      "anticonvulsivante e estabilizador do humor off-label"
+    ],
+    "name": {
+      "es": "Oxcarbazepina",
+      "pt": "Oxcarbazepina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "estabilizador_humor",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Monitorizar sodio, especialmente en las primeras semanas y en adultos mayores.",
+          "Menos inductora enzimática que carbamazepina, pero aún puede reducir anticonceptivos.",
+          "Suspender y evaluar si rash, fiebre, mucositis o síntomas sistémicos.",
+          "La evidencia en bipolaridad es menos sólida que litio, valproato y lamotrigina.",
+          "Cautela si antecedente de alergia a carbamazepina."
+        ],
+        "category": "estabilizador_humor",
+        "class": "Anticonvulsivante y estabilizador del ánimo off-label",
+        "commercialNames": {
+          "ar": [
+            "Trileptal",
+            "Oxcarbazepina Gador",
+            "Oxcarbazepina"
+          ],
+          "br": [
+            "Trileptal",
+            "Oxcarb",
+            "Oxcarbazepina EMS"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Mareos",
+          "Somnolencia",
+          "Diplopía",
+          "Ataxia",
+          "Náuseas",
+          "Cefalea",
+          "Hiponatremia"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a oxcarbazepina o eslicarbazepina",
+          "Antecedente de reacción cutánea grave asociada al fármaco",
+          "Hiponatremia grave no corregida"
+        ],
+        "dangerousAdverseEffects": [
+          "Hiponatremia grave/SIADH",
+          "Síndrome de Stevens-Johnson/necrólisis epidérmica tóxica rara",
+          "Anafilaxia/angioedema raro",
+          "Ideación suicida",
+          "Reacción de hipersensibilidad cruzada con carbamazepina"
+        ],
+        "dose": {
+          "adulto": "Epilepsia/bipolar off-label: iniciar 300 mg VO cada 12 h; titular gradualmente.",
+          "manutencao": "Dosis habitual: 600–1200 mg/día; algunos casos usan hasta 2400 mg/día bajo especialista.",
+          "maxDose": "Dosis máxima habitual: 2400 mg/día."
+        },
+        "doseKg": {
+          "maxDose": "2400 mg/día",
+          "pediatric": "Pediatría/epilepsia: calcular por kg según protocolo especializado.",
+          "standard": "Adultos: generalmente no se calcula por kg."
+        },
+        "halfLife": "Vida media del metabolito activo: aproximadamente 8–10 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Epilepsia focal",
+          "Crisis focales con o sin generalización secundaria",
+          "Trastorno bipolar en casos seleccionados off-label",
+          "Manía aguda off-label",
+          "Neuralgia del trigémino off-label",
+          "Alternativa a carbamazepina cuando se buscan menos interacciones"
+        ],
+        "interactions": [
+          "Anticonceptivos hormonales: puede reducir eficacia",
+          "Diuréticos e ISRS/IRSN: mayor riesgo de hiponatremia",
+          "Carbamazepina/fenitoína/fenobarbital: pueden alterar niveles",
+          "Lamotrigina: posible reducción de niveles/efecto",
+          "Alcohol y sedantes: mayor depresión del SNC"
+        ],
+        "mechanism": "Profármaco convertido en derivado monohidroxilado activo; bloquea canales de sodio voltaje-dependientes y reduce excitabilidad neuronal.",
+        "name": "Oxcarbazepina",
+        "onset": "Control de crisis puede ocurrir tras titulación; efecto en ánimo es off-label y variable.",
+        "presentation": [
+          "Comprimido 300 mg",
+          "Comprimido 600 mg",
+          "Suspensión oral 60 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Oxcarbazepine Prescribing Information",
+          "CANMAT Bipolar Guidelines",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual si ClCr ≥30 mL/min.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "oxcarbazepina",
+      "keywords": [
+        "oxcarbazepina",
+        "trileptal",
+        "oxcarb",
+        "oxcarbazepina ems",
+        "oxcarbazepina gador",
+        "anticonvulsivante e estabilizador do humor off-label"
+      ],
+      "name": {
+        "es": "Oxcarbazepina",
+        "pt": "Oxcarbazepina"
+      },
+      "pt": {
+        "alerts": [
+          "Monitorar sódio, especialmente nas primeiras semanas e em idosos.",
+          "Menos indutora enzimática que carbamazepina, mas ainda pode reduzir anticoncepcionais.",
+          "Suspender e avaliar se rash, febre, mucosite ou sintomas sistêmicos.",
+          "Evidência em bipolaridade é menos sólida que lítio, valproato e lamotrigina.",
+          "Cautela se histórico de alergia à carbamazepina."
+        ],
+        "category": "estabilizador_humor",
+        "class": "Anticonvulsivante e estabilizador do humor off-label",
+        "commercialNames": {
+          "ar": [
+            "Trileptal",
+            "Oxcarbazepina Gador",
+            "Oxcarbazepina"
+          ],
+          "br": [
+            "Trileptal",
+            "Oxcarb",
+            "Oxcarbazepina EMS"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Tontura",
+          "Sonolência",
+          "Diplopia",
+          "Ataxia",
+          "Náuseas",
+          "Cefaleia",
+          "Hiponatremia"
+        ],
+        "contraindications": [
+          "Hipersensibilidade à oxcarbazepina ou eslicarbazepina",
+          "História de reação grave cutânea associada ao fármaco",
+          "Hiponatremia grave não corrigida"
+        ],
+        "dangerousAdverseEffects": [
+          "Hiponatremia grave/SIADH",
+          "Síndrome de Stevens-Johnson/necrólise epidérmica tóxica rara",
+          "Anafilaxia/angioedema raro",
+          "Ideação suicida",
+          "Reação de hipersensibilidade cruzada com carbamazepina"
+        ],
+        "dose": {
+          "adulto": "Epilepsia/bipolar off-label: iniciar 300 mg VO 12/12h; titular gradualmente.",
+          "manutencao": "Dose usual: 600–1200 mg/dia; alguns casos usam até 2400 mg/dia sob especialista.",
+          "maxDose": "Dose máxima usual: 2400 mg/dia."
+        },
+        "doseKg": {
+          "maxDose": "2400 mg/dia",
+          "pediatric": "Pediatria/epilepsia: calcular por kg conforme protocolo especializado.",
+          "standard": "Adultos: geralmente não se calcula por kg."
+        },
+        "halfLife": "Vida média do metabólito ativo: aproximadamente 8–10 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Epilepsia focal",
+          "Crises focais com ou sem generalização secundária",
+          "Transtorno bipolar em casos selecionados off-label",
+          "Mania aguda off-label",
+          "Neuralgia do trigêmeo off-label",
+          "Alternativa à carbamazepina quando se busca menos interações"
+        ],
+        "interactions": [
+          "Anticoncepcionais hormonais: pode reduzir eficácia",
+          "Diuréticos e ISRS/ISRN: maior risco de hiponatremia",
+          "Carbamazepina/fenitoína/fenobarbital: podem alterar níveis",
+          "Lamotrigina: possível redução de níveis/efeito",
+          "Álcool e sedativos: maior depressão do SNC"
+        ],
+        "mechanism": "Pró-fármaco convertido em derivado monohidroxilado ativo; bloqueia canais de sódio voltagem-dependentes e reduz excitabilidade neuronal.",
+        "name": "Oxcarbazepina",
+        "onset": "Controle de crises pode ocorrer após titulação; efeito no humor é off-label e variável.",
+        "presentation": [
+          "Comprimido 300 mg",
+          "Comprimido 600 mg",
+          "Suspensão oral 60 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Oxcarbazepine Prescribing Information",
+          "CANMAT Bipolar Guidelines",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual se ClCr ≥30 mL/min.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "neurologia.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Epilepsia/bipolar off-label: iniciar 300 mg VO cada 12 h; titular gradualmente.",
+            "manutencao": "Dosis habitual: 600–1200 mg/día; algunos casos usan hasta 2400 mg/día bajo especialista.",
+            "maxDose": "Dosis máxima habitual: 2400 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Epilepsia/bipolar off-label: iniciar 300 mg VO 12/12h; titular gradualmente.",
+            "manutencao": "Dose usual: 600–1200 mg/dia; alguns casos usam até 2400 mg/dia sob especialista.",
+            "maxDose": "Dose máxima usual: 2400 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

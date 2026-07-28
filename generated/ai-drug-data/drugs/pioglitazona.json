@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "adcd35e5fedc337d18ae5c0c43f2891d5e9644ef14b8085f7051609e5373a543",
+    "sourceModule": "endocrino.js"
+  },
+  "drugId": "pioglitazona",
+  "identity": {
+    "canonicalOwner": "endocrino.js",
+    "category": "endocrino",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "pioglitazona"
+    ],
+    "name": {
+      "es": "Pioglitazona",
+      "pt": "Pioglitazona"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "endocrino",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Pioglitazona"
+      },
+      "icon": "💊",
+      "id": "pioglitazona",
+      "keywords": [
+        "pioglitazona"
+      ],
+      "name": {
+        "es": "Pioglitazona",
+        "pt": "Pioglitazona"
+      },
+      "pt": {
+        "name": "Pioglitazona"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "endocrino.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

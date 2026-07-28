@@ -1,0 +1,103 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "2bf2360b5581adb3e9e11851ede4118a8a692c8e33c02208aaa008770ba27d7f",
+    "sourceModule": "anticoag.js"
+  },
+  "drugId": "varfarina",
+  "identity": {
+    "canonicalOwner": "anticoag.js",
+    "category": "anticoag",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "varfarina",
+      "varfarina sódica"
+    ],
+    "name": {
+      "es": "Warfarina Sódica",
+      "pt": "Varfarina Sódica"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "anticoag",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "anticoag.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "hematologia",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "name": "Warfarina"
+            },
+            "icon": "💊",
+            "id": "varfarina",
+            "keywords": [
+              "varfarina"
+            ],
+            "name": {
+              "es": "Warfarina",
+              "pt": "Varfarina"
+            },
+            "pt": {
+              "name": "Varfarina"
+            },
+            "schema": "legacy-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "hematologia.js"
+          },
+          "sourceModule": "hematologia.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Warfarina Sódica"
+      },
+      "icon": "💊",
+      "id": "varfarina",
+      "keywords": [
+        "varfarina",
+        "varfarina sódica"
+      ],
+      "name": {
+        "es": "Warfarina Sódica",
+        "pt": "Varfarina Sódica"
+      },
+      "pt": {
+        "name": "Varfarina Sódica"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "anticoag.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

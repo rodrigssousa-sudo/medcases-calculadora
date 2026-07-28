@@ -1,0 +1,274 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "6e67bd1960a4e0b1befed2eac04b650ab1161ded44da7caebd241c5bd9017452",
+    "sourceModule": "psiquiatria.js"
+  },
+  "drugId": "milnaciprano",
+  "identity": {
+    "canonicalOwner": "psiquiatria.js",
+    "category": "antidepressivo",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "milnaciprano",
+      "milnacipran",
+      "ixel",
+      "milnacipran gador",
+      "antidepressivo isrn"
+    ],
+    "name": {
+      "es": "Milnaciprán",
+      "pt": "Milnaciprano"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antidepressivo",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Monitorizar presión arterial y frecuencia cardíaca antes y durante el tratamiento.",
+          "Ajustar dosis en insuficiencia renal.",
+          "Evitar en hipertensión no controlada.",
+          "Reducir gradualmente para evitar síntomas de retirada.",
+          "Investigar historia de manía/hipomanía antes de iniciar.",
+          "Usar con cautela en glaucoma de ángulo cerrado, retención urinaria o enfermedad cardiovascular."
+        ],
+        "category": "antidepressivo",
+        "class": "Antidepresivo IRSN",
+        "commercialNames": {
+          "ar": [
+            "Ixel",
+            "Milnaciprán",
+            "Milnaciprán Gador"
+          ],
+          "br": [
+            "Ixel",
+            "Milnaciprano"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas",
+          "Cefalea",
+          "Estreñimiento",
+          "Insomnio",
+          "Mareos",
+          "Sudoración",
+          "Palpitaciones",
+          "Boca seca"
+        ],
+        "contraindications": [
+          "Hipersensibilidad al milnaciprán",
+          "Uso concomitante con IMAO",
+          "Hipertensión arterial no controlada",
+          "Enfermedad renal terminal",
+          "Trastorno bipolar sin estabilizador del ánimo"
+        ],
+        "dangerousAdverseEffects": [
+          "Hipertensión arterial",
+          "Taquicardia",
+          "Síndrome serotoninérgico",
+          "Ideación suicida en jóvenes al inicio del tratamiento",
+          "Viraje maníaco/hipomaníaco",
+          "Hiponatremia/SIADH",
+          "Convulsiones en predispuestos",
+          "Retención urinaria en predispuestos"
+        ],
+        "dose": {
+          "adulto": "Depresión/fibromialgia: iniciar 12,5 mg VO 1 vez/día; titular gradualmente hasta 50 mg cada 12 h.",
+          "maxDose": "Dosis máxima habitual: 100 mg cada 12 h, según indicación y tolerabilidad.",
+          "titulacao": "Esquema común: 12,5 mg el día 1; 12,5 mg cada 12 h días 2–3; 25 mg cada 12 h días 4–7; luego 50 mg cada 12 h."
+        },
+        "doseKg": {
+          "maxDose": "200 mg/día",
+          "pediatric": "Pediatría: no recomendado como uso rutinario; considerar solo con especialista.",
+          "standard": "No se utiliza cálculo rutinario por kg en adultos."
+        },
+        "halfLife": "Vida media aproximada: 6–8 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Fibromialgia",
+          "Trastorno depresivo mayor",
+          "Depresión con fatiga, apatía o baja energía",
+          "Depresión con síntomas dolorosos",
+          "Dolor crónico centralizado",
+          "Dolor musculoesquelético crónico seleccionado",
+          "Alternativa en pacientes con respuesta insuficiente a ISRS"
+        ],
+        "interactions": [
+          "IMAO: riesgo de síndrome serotoninérgico",
+          "Tramadol, linezolid, triptanes, litio: riesgo serotoninérgico",
+          "AINEs, AAS, anticoagulantes: mayor riesgo de sangrado",
+          "Fármacos que aumentan presión arterial o frecuencia cardíaca: mayor riesgo cardiovascular",
+          "Digoxina IV: posible aumento de efectos hemodinámicos; evitar asociación cuando sea posible",
+          "Alcohol y depresores del SNC: pueden empeorar sedación y mareos"
+        ],
+        "mechanism": "Inhibe la recaptación de serotonina y noradrenalina, con acción noradrenérgica proporcionalmente relevante; modula vías descendentes del dolor.",
+        "name": "Milnaciprán",
+        "onset": "El efecto sobre dolor/fibromialgia puede aparecer en 1–2 semanas; respuesta antidepresiva generalmente en 2–4 semanas, con evaluación plena en 6–8 semanas.",
+        "presentation": [
+          "Cápsula/comprimido 25 mg",
+          "Cápsula/comprimido 50 mg",
+          "Comprimido 100 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Milnacipran Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "milnaciprano",
+      "keywords": [
+        "milnaciprano",
+        "milnacipran",
+        "ixel",
+        "milnacipran gador",
+        "antidepressivo isrn"
+      ],
+      "name": {
+        "es": "Milnaciprán",
+        "pt": "Milnaciprano"
+      },
+      "pt": {
+        "alerts": [
+          "Monitorar pressão arterial e frequência cardíaca antes e durante o tratamento.",
+          "Ajustar dose em insuficiência renal.",
+          "Evitar em hipertensão não controlada.",
+          "Reduzir gradualmente para evitar sintomas de retirada.",
+          "Investigar história de mania/hipomania antes de iniciar.",
+          "Usar cautela em glaucoma de ângulo fechado, retenção urinária ou doença cardiovascular."
+        ],
+        "category": "antidepressivo",
+        "class": "Antidepressivo ISRN",
+        "commercialNames": {
+          "ar": [
+            "Ixel",
+            "Milnaciprán",
+            "Milnaciprán Gador"
+          ],
+          "br": [
+            "Ixel",
+            "Milnaciprano"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas",
+          "Cefaleia",
+          "Constipação",
+          "Insônia",
+          "Tontura",
+          "Sudorese",
+          "Palpitações",
+          "Boca seca"
+        ],
+        "contraindications": [
+          "Hipersensibilidade ao milnaciprano",
+          "Uso concomitante com IMAO",
+          "Hipertensão arterial não controlada",
+          "Doença renal terminal",
+          "Transtorno bipolar sem estabilizador do humor"
+        ],
+        "dangerousAdverseEffects": [
+          "Hipertensão arterial",
+          "Taquicardia",
+          "Síndrome serotoninérgica",
+          "Ideação suicida em jovens no início do tratamento",
+          "Virada maníaca/hipomaníaca",
+          "Hiponatremia/SIADH",
+          "Convulsões em predispostos",
+          "Retenção urinária em predispostos"
+        ],
+        "dose": {
+          "adulto": "Depressão/fibromialgia: iniciar 12,5 mg VO 1x/dia; titular gradualmente até 50 mg 12/12h.",
+          "maxDose": "Dose máxima usual: 100 mg 12/12h, conforme indicação e tolerabilidade.",
+          "titulacao": "Esquema comum: 12,5 mg no dia 1; 12,5 mg 12/12h nos dias 2–3; 25 mg 12/12h nos dias 4–7; depois 50 mg 12/12h."
+        },
+        "doseKg": {
+          "maxDose": "200 mg/dia",
+          "pediatric": "Pediatria: não recomendado como uso rotineiro; considerar apenas com especialista.",
+          "standard": "Não se utiliza cálculo rotineiro por kg em adultos."
+        },
+        "halfLife": "Vida média aproximada: 6–8 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Fibromialgia",
+          "Transtorno depressivo maior",
+          "Depressão com fadiga, apatia ou baixa energia",
+          "Depressão com sintomas dolorosos",
+          "Dor crônica centralizada",
+          "Dor musculoesquelética crônica selecionada",
+          "Alternativa em pacientes com resposta insuficiente a ISRS"
+        ],
+        "interactions": [
+          "IMAO: risco de síndrome serotoninérgica",
+          "Tramadol, linezolida, triptanos, lítio: risco serotoninérgico",
+          "AINEs, AAS, anticoagulantes: maior risco de sangramento",
+          "Fármacos que aumentam pressão arterial ou frequência cardíaca: maior risco cardiovascular",
+          "Digoxina EV: possível aumento de efeitos hemodinâmicos; evitar associação quando possível",
+          "Álcool e depressores do SNC: podem piorar sedação e tontura"
+        ],
+        "mechanism": "Inibe a recaptação de serotonina e noradrenalina, com ação noradrenérgica proporcionalmente relevante; modula vias descendentes de dor.",
+        "name": "Milnaciprano",
+        "onset": "Efeito sobre dor/fibromialgia pode surgir em 1–2 semanas; resposta antidepressiva geralmente em 2–4 semanas, com avaliação plena em 6–8 semanas.",
+        "presentation": [
+          "Cápsula/comprimido 25 mg",
+          "Cápsula/comprimido 50 mg",
+          "Comprimido 100 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Milnacipran Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psiquiatria.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Depresión/fibromialgia: iniciar 12,5 mg VO 1 vez/día; titular gradualmente hasta 50 mg cada 12 h.",
+            "maxDose": "Dosis máxima habitual: 100 mg cada 12 h, según indicación y tolerabilidad.",
+            "titulacao": "Esquema común: 12,5 mg el día 1; 12,5 mg cada 12 h días 2–3; 25 mg cada 12 h días 4–7; luego 50 mg cada 12 h."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Depressão/fibromialgia: iniciar 12,5 mg VO 1x/dia; titular gradualmente até 50 mg 12/12h.",
+            "maxDose": "Dose máxima usual: 100 mg 12/12h, conforme indicação e tolerabilidade.",
+            "titulacao": "Esquema comum: 12,5 mg no dia 1; 12,5 mg 12/12h nos dias 2–3; 25 mg 12/12h nos dias 4–7; depois 50 mg 12/12h."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

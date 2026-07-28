@@ -1,0 +1,104 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "5ca3236e43ef52f974413be9459e7da9ae3e95af128ba1c84621612a2e9cdf1a",
+    "sourceModule": "anticoag.js"
+  },
+  "drugId": "dalteparina",
+  "identity": {
+    "canonicalOwner": "anticoag.js",
+    "category": "anticoag",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "dalteparina",
+      "dalteparina sódica"
+    ],
+    "name": {
+      "es": "Dalteparina Sódica",
+      "pt": "Dalteparina Sódica"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "anticoag",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "anticoag.js",
+        "decisionBasis": "consolidated_anticoagulation_module",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "hematology_context_variant",
+          "record": {
+            "category": "hematologia",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "name": "Dalteparina Sódica"
+            },
+            "icon": "💊",
+            "id": "dalteparina",
+            "keywords": [
+              "dalteparina",
+              "dalteparina sódica"
+            ],
+            "name": {
+              "es": "Dalteparina Sódica",
+              "pt": "Dalteparina Sódica"
+            },
+            "pt": {
+              "name": "Dalteparina Sódica"
+            },
+            "schema": "legacy-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "hematologia.js"
+          },
+          "sourceModule": "hematologia.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Dalteparina Sódica"
+      },
+      "icon": "💊",
+      "id": "dalteparina",
+      "keywords": [
+        "dalteparina",
+        "dalteparina sódica"
+      ],
+      "name": {
+        "es": "Dalteparina Sódica",
+        "pt": "Dalteparina Sódica"
+      },
+      "pt": {
+        "name": "Dalteparina Sódica"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "anticoag.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

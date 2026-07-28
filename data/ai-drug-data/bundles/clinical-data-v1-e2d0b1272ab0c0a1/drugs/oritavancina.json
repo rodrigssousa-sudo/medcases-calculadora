@@ -1,0 +1,258 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "c8e51b02e8d32623146a4d7b5726ea87edfdeb59cb7b09fdfda3e337109b6110",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "oritavancina",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "oritavancina",
+      "orbactiv (acesso limitado no brasil)",
+      "orbactiv",
+      "glicopeptideo lipofilico de dose unica (longa meia-vida ~245h)"
+    ],
+    "name": {
+      "es": "Oritavancina",
+      "pt": "Oritavancina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(139,92,246,0.12)",
+      "colorTxt": "#6D28D9",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Dosis única de 1200 mg — alta adherencia, ideal para tratamiento ambulatorio (OPAT).",
+          "Interfiere con ensayos de coagulación (APTT, TP, INR, anti-Xa) hasta 5 días después de la dosis — no usar heparina no fraccionada.",
+          "No requiere ajuste renal — ventaja en pacientes con insuficiencia renal."
+        ],
+        "class": "Glicopéptido lipofílico de dosis única (larga semivida ~245h)",
+        "commercialNames": {
+          "ar": [
+            "Orbactiv"
+          ],
+          "br": [
+            "Orbactiv (acesso limitado no Brasil)"
+          ]
+        },
+        "contraindications": [
+          "Hipersensibilidad a los glucopéptidos",
+          "Uso concomitante de heparina no fraccionada (interfiere con APTT por 120h post-dosis)"
+        ],
+        "dose": {
+          "adultoEV": "1200 mg EV dosis única (infusión en 3 horas)"
+        },
+        "doseKg": null,
+        "indication": "Infecciones agudas de piel y partes blandas (ABSSSI) por Grampositivos, incluidos Staphylococcus aureus (MSSA y MRSA), Streptococcus pyogenes, Streptococcus agalactiae, Enterococcus faecalis (vancomicina-sensible).",
+        "name": "Oritavancina",
+        "presentation": [
+          "Polvo liofilizado para solución inyectable EV: 400 mg por frasco (3 frascos = dosis única de 1200 mg)"
+        ],
+        "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA SSTI Guidelines / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "1200 mg",
+              "doseMaxima": "1200 mg",
+              "intervalo": "Dose única",
+              "unidade": "mg"
+            },
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1200 mg",
+              "doseMaxima": "1200 mg",
+              "intervalo": "Dose única",
+              "unidade": "mg"
+            },
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1200 mg",
+              "doseMaxima": "1200 mg",
+              "intervalo": "Dose única",
+              "unidade": "mg"
+            },
+            "obs": "Dosis única para infecciones de piel por Grampositivos.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "1200 mg",
+              "doseMaxima": "1200 mg",
+              "intervalo": "Dose única",
+              "unidade": "mg"
+            },
+            "obs": "Sin ajuste documentado en insuficiencia renal grave.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "1200 mg",
+              "doseMaxima": "1200 mg",
+              "intervalo": "Dose única",
+              "unidade": "mg"
+            },
+            "obs": "No removida por hemodiálisis.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "message": "No requiere ajuste renal.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "spectrum": "Staphylococcus aureus (MSSA, MRSA, hVISA, VISA), Streptococcus spp., Enterococcus faecalis (VSE), Enterococcus faecium (VSE). Actividad frente a VRE es variable. Sin actividad frente a Gramnegativos ni anaerobios."
+      },
+      "icon": "💉",
+      "id": "oritavancina",
+      "keywords": [
+        "oritavancina",
+        "orbactiv (acesso limitado no brasil)",
+        "orbactiv",
+        "glicopeptideo lipofilico de dose unica (longa meia-vida ~245h)"
+      ],
+      "name": {
+        "es": "Oritavancina",
+        "pt": "Oritavancina"
+      },
+      "pt": {
+        "alerts": [
+          "Dose única de 1200 mg — alta adesão, ideal para tratamento ambulatorial (OPAT).",
+          "Interfere com ensaios de coagulação (APTT, TP, INR, anti-Xa) por até 5 dias após a dose — não usar heparina não fracionada.",
+          "Não necessita ajuste renal — vantagem em pacientes com insuficiência renal."
+        ],
+        "class": "Glicopeptídeo lipofílico de dose única (longa meia-vida ~245h)",
+        "commercialNames": {
+          "ar": [
+            "Orbactiv"
+          ],
+          "br": [
+            "Orbactiv (acesso limitado no Brasil)"
+          ]
+        },
+        "contraindications": [
+          "Hipersensibilidade aos glicopeptídeos",
+          "Uso concomitante de heparina não fracionada (interfere com APTT por 120h pós-dose)"
+        ],
+        "dose": {
+          "adultoEV": "1200 mg EV dose única (infusão em 3 horas)"
+        },
+        "doseKg": null,
+        "indication": "Infecções agudas de pele e partes moles (ABSSSI) por Gram-positivos, incluindo Staphylococcus aureus (MSSA e MRSA), Streptococcus pyogenes, Streptococcus agalactiae, Enterococcus faecalis (vancomicina-sensível).",
+        "name": "Oritavancina",
+        "presentation": [
+          "Pó liofilizado para solução injetável EV: 400 mg por frasco (3 frascos = dose única de 1200 mg)"
+        ],
+        "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA SSTI Guidelines / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "1200 mg",
+              "doseMaxima": "1200 mg",
+              "intervalo": "Dose única",
+              "unidade": "mg"
+            },
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1200 mg",
+              "doseMaxima": "1200 mg",
+              "intervalo": "Dose única",
+              "unidade": "mg"
+            },
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1200 mg",
+              "doseMaxima": "1200 mg",
+              "intervalo": "Dose única",
+              "unidade": "mg"
+            },
+            "obs": "Dose única para infecções de pele por Gram-positivos.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "1200 mg",
+              "doseMaxima": "1200 mg",
+              "intervalo": "Dose única",
+              "unidade": "mg"
+            },
+            "obs": "Sem ajuste documentado em insuficiência renal grave.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "1200 mg",
+              "doseMaxima": "1200 mg",
+              "intervalo": "Dose única",
+              "unidade": "mg"
+            },
+            "obs": "Não removida pela hemodiálise.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "message": "Não necessita ajuste renal.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "spectrum": "Staphylococcus aureus (MSSA, MRSA, hVISA, VISA), Streptococcus spp., Enterococcus faecalis (VSE), Enterococcus faecium (VSE). Atividade contra VRE é variável. Sem atividade contra Gram-negativos ou anaeróbios."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoEV": "1200 mg EV dosis única (infusión en 3 horas)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoEV": "1200 mg EV dose única (infusão em 3 horas)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

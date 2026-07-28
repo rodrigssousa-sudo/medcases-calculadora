@@ -1,0 +1,244 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "a5cfab5b3f7aad59a61c71f2385ddab05623f50a22234a8aa7452db0dcf5576e",
+    "sourceModule": "psicofarmacos.js"
+  },
+  "drugId": "tiotixeno",
+  "identity": {
+    "canonicalOwner": "psicofarmacos.js",
+    "category": "antipsicotico",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "tiotixeno",
+      "navane",
+      "antipsicotico tipico — tioxanteno"
+    ],
+    "name": {
+      "es": "Tiotixeno",
+      "pt": "Tiotixeno"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antipsicotico",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Monitorizar síntomas extrapiramidales desde el inicio.",
+          "Considerar ECG en pacientes con riesgo cardiovascular o QT.",
+          "Evitar en adultos mayores con demencia cuando sea posible.",
+          "Evitar asociación con alcohol y otros sedantes.",
+          "Reducir gradualmente si uso prolongado."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico típico — tioxanteno",
+        "commercialNames": {
+          "ar": [
+            "Navane",
+            "Tiotixeno"
+          ],
+          "br": [
+            "Navane",
+            "Tiotixeno"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Acatisia",
+          "Parkinsonismo medicamentoso",
+          "Distonía aguda",
+          "Somnolencia",
+          "Boca seca",
+          "Hipotensión ortostática"
+        ],
+        "contraindications": [
+          "Hipersensibilidad al tiotixeno o tioxantenos",
+          "Depresión grave del SNC o coma",
+          "Enfermedad de Parkinson grave",
+          "Demencia con cuerpos de Lewy, salvo extrema necesidad",
+          "QT prolongado significativo"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome neuroléptico maligno",
+          "Discinesia tardía",
+          "Prolongación QT y arritmias",
+          "Convulsiones en predispuestos",
+          "Depresión importante del SNC si se asocia a sedantes"
+        ],
+        "dose": {
+          "adulto": "Esquizofrenia: iniciar 2 mg VO 3 veces/día o 5 mg VO 2 veces/día; titular según respuesta.",
+          "manutencao": "Mantenimiento: generalmente 15–30 mg/día en dosis divididas.",
+          "maxDose": "Dosis máxima habitual: 60 mg/día."
+        },
+        "halfLife": "Vida media aproximada: 20–40 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Esquizofrenia",
+          "Psicosis crónica",
+          "Psicosis aguda en casos seleccionados",
+          "Agitación psicótica",
+          "Trastorno esquizoafectivo en casos seleccionados",
+          "Mantenimiento antipsicótico en pacientes previamente respondedores"
+        ],
+        "interactions": [
+          "Alcohol y depresores del SNC",
+          "Opioides y benzodiacepinas",
+          "Fármacos que prolongan QT",
+          "Levodopa y agonistas dopaminérgicos",
+          "Antihipertensivos: mayor hipotensión"
+        ],
+        "mechanism": "Antagonista dopaminérgico D2, reduciendo síntomas psicóticos positivos; posee riesgo extrapiramidal relevante.",
+        "name": "Tiotixeno",
+        "onset": "Sedación y reducción de agitación pueden ocurrir en horas a días; efecto antipsicótico pleno en días a semanas.",
+        "presentation": [
+          "Cápsula 1 mg",
+          "Cápsula 2 mg",
+          "Cápsula 5 mg",
+          "Cápsula 10 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Thiothixene Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "tiotixeno",
+      "keywords": [
+        "tiotixeno",
+        "navane",
+        "antipsicotico tipico — tioxanteno"
+      ],
+      "name": {
+        "es": "Tiotixeno",
+        "pt": "Tiotixeno"
+      },
+      "pt": {
+        "alerts": [
+          "Monitorar sintomas extrapiramidais desde o início.",
+          "Considerar ECG em pacientes com risco cardiovascular ou QT.",
+          "Evitar em idosos com demência quando possível.",
+          "Evitar associação com álcool e outros sedativos.",
+          "Reduzir gradualmente se uso prolongado."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico típico — tioxanteno",
+        "commercialNames": {
+          "ar": [
+            "Navane",
+            "Tiotixeno"
+          ],
+          "br": [
+            "Navane",
+            "Tiotixeno"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Acatisia",
+          "Parkinsonismo medicamentoso",
+          "Distonia aguda",
+          "Sonolência",
+          "Boca seca",
+          "Hipotensão ortostática"
+        ],
+        "contraindications": [
+          "Hipersensibilidade ao tiotixeno ou tioxantenos",
+          "Depressão grave do SNC ou coma",
+          "Doença de Parkinson grave",
+          "Demência com corpos de Lewy, salvo extrema necessidade",
+          "QT prolongado significativo"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome neuroléptica maligna",
+          "Discinesia tardia",
+          "Prolongamento QT e arritmias",
+          "Convulsões em predispostos",
+          "Depressão importante do SNC se associado a sedativos"
+        ],
+        "dose": {
+          "adulto": "Esquizofrenia: iniciar 2 mg VO 3x/dia ou 5 mg VO 2x/dia; titular conforme resposta.",
+          "manutencao": "Manutenção: geralmente 15–30 mg/dia em doses divididas.",
+          "maxDose": "Dose máxima usual: 60 mg/dia."
+        },
+        "halfLife": "Vida média aproximada: 20–40 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Esquizofrenia",
+          "Psicose crônica",
+          "Psicose aguda em casos selecionados",
+          "Agitação psicótica",
+          "Transtorno esquizoafetivo em casos selecionados",
+          "Manutenção antipsicótica em pacientes previamente respondedores"
+        ],
+        "interactions": [
+          "Álcool e depressores do SNC",
+          "Opioides e benzodiazepínicos",
+          "Fármacos que prolongam QT",
+          "Levodopa e agonistas dopaminérgicos",
+          "Anti-hipertensivos: maior hipotensão"
+        ],
+        "mechanism": "Antagonista dopaminérgico D2, reduzindo sintomas psicóticos positivos; possui risco extrapiramidal relevante.",
+        "name": "Tiotixeno",
+        "onset": "Sedação e redução de agitação podem ocorrer em horas a dias; efeito antipsicótico pleno em dias a semanas.",
+        "presentation": [
+          "Cápsula 1 mg",
+          "Cápsula 2 mg",
+          "Cápsula 5 mg",
+          "Cápsula 10 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Thiothixene Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psicofarmacos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Esquizofrenia: iniciar 2 mg VO 3 veces/día o 5 mg VO 2 veces/día; titular según respuesta.",
+            "manutencao": "Mantenimiento: generalmente 15–30 mg/día en dosis divididas.",
+            "maxDose": "Dosis máxima habitual: 60 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Esquizofrenia: iniciar 2 mg VO 3x/dia ou 5 mg VO 2x/dia; titular conforme resposta.",
+            "manutencao": "Manutenção: geralmente 15–30 mg/dia em doses divididas.",
+            "maxDose": "Dose máxima usual: 60 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

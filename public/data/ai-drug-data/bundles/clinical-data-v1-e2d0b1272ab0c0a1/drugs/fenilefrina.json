@@ -1,0 +1,350 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "87d8bcaafbac27af006ecd415596dd5c6e2cf5426efbe83d82415bc14bc8bdad",
+    "sourceModule": "cardio.js"
+  },
+  "drugId": "fenilefrina",
+  "identity": {
+    "canonicalOwner": "cardio.js",
+    "category": "cardio",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "fenilefrina",
+      "neo-synephrine",
+      "vasopressor alfa-1 agonista seletivo puro — sem efeito beta"
+    ],
+    "name": {
+      "es": "Fenilefrina",
+      "pt": "Fenilefrina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardio",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(5,150,105,0.13)",
+      "colorTxt": "#065F46",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "auditNotes": {
+          "status": "vasopressor_phenylephrine_master_template"
+        },
+        "class": "Vasopresor agonista alfa-1 selectivo puro — sin efecto beta",
+        "commercialNames": {
+          "ar": [
+            "Fenilefrina",
+            "Neo-Synephrine"
+          ],
+          "br": [
+            "Fenilefrina",
+            "Neo-Synephrine"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Hipertensión",
+          "Bradicardia refleja",
+          "Cefalea",
+          "Palidez",
+          "Ansiedad",
+          "Náuseas"
+        ],
+        "contraindications": {
+          "absolutas": [
+            "Hipersensibilidad a fenilefrina"
+          ],
+          "relativas": [
+            "Hipertensión grave",
+            "Bradicardia importante (FC < 50 lpm)",
+            "Shock cardiogénico con bajo gasto",
+            "Enfermedad vascular periférica grave",
+            "Isquemia mesentérica o periférica activa",
+            "Hipovolemia no corregida"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "Isquemia periférica y mesentérica",
+          "Reducción del gasto cardíaco por aumento de poscarga",
+          "Hipertensión grave",
+          "Bradicardia sintomática",
+          "Necrosis por extravasación",
+          "IAM por aumento de poscarga y vasoconstricción coronaria"
+        ],
+        "dilution": "Infusión continua en bomba. Acceso central preferido en uso prolongado o dosis altas. Bolo periférico en ambiente monitorizado. Concentración estándar: 10 mg/100 mL SF → 100 mcg/mL.",
+        "dose": {
+          "adultoGrave": "Mantenimiento: 0,2–3 mcg/kg/min. Dosis altas aumentan riesgo de isquemia y caída del gasto cardíaco.",
+          "adultoPadrao": "Bolo: 50–200 mcg IV lento según protocolo. Infusión: 0,1–0,5 mcg/kg/min IV continuo.",
+          "pediatricaGrave": null,
+          "pediatricaMeningite": null,
+          "pediatricaPadrao": "Dosis por peso según protocolo pediátrico y contexto anestésico/UCI."
+        },
+        "doseKg": {
+          "doseMaxima": "Individualizado; sin límite absoluto fijo — guiar por PAM y perfusión",
+          "grave": "0,2–3 mcg/kg/min IV — titular según PAM",
+          "meningite": null,
+          "padrao": "0,1–0,5 mcg/kg/min IV — infusión inicial"
+        },
+        "extravasationProtocol": [
+          "Suspender infusión inmediatamente.",
+          "No retirar inicialmente el catéter.",
+          "Infiltrar fentolamina alrededor de la zona (5–10 mg en SF 10 mL).",
+          "Elevar miembro; derivar a cirugía plástica si lesión extensa."
+        ],
+        "hepaticAdjustment": "Sin ajuste hepático específico.",
+        "infusionCalc": "Informe doseAtual (mcg/kg/min) y peso para calcular velocidad de infusión.",
+        "interactions": [
+          "IMAO: respuesta presora exagerada — riesgo de crisis hipertensiva.",
+          "Antidepresivos tricíclicos: aumento de respuesta alfa-adrenérgica.",
+          "Betabloqueantes: pueden intensificar bradicardia refleja.",
+          "Otros vasopresores: hipertensión e isquemia aditivas.",
+          "Oxitocina (obstetricia): puede aumentar respuesta presora."
+        ],
+        "mechanism": "Estimula receptores alfa-1 periféricos produciendo vasoconstricción arterial y venosa, elevación de la RVS y la PA, sin actividad beta significativa. Puede causar bradicardia refleja por activación barorreceptora.",
+        "monitoring": {
+          "baseline": [
+            "PAM / PA",
+            "FC",
+            "ECG continuo",
+            "Perfusión periférica",
+            "Signos de bajo gasto"
+          ],
+          "followUp": [
+            "PAM continua o frecuente",
+            "Bradicardia refleja",
+            "Signos de isquemia",
+            "Sitio de infusión (extravasación)"
+          ]
+        },
+        "name": "Fenilefrina",
+        "pharmacokinetics": {
+          "duration": "Corta; infusión continua necesaria para soporte prolongado",
+          "halfLife": "Muy corta — bolo se disipa en minutos",
+          "onset": "Segundos a pocos minutos por vía IV"
+        },
+        "presentation": [
+          "Solución inyectable IV según disponibilidad",
+          "Bolo IV 50–200 mcg",
+          "Infusión continua en bomba"
+        ],
+        "ref": [
+          "SCCM Vasopressor Guidelines",
+          "AHA/ACC Shock References",
+          "Anesthesia Hemodynamic Management Guidelines",
+          "Goodman & Gilman",
+          "Lexicomp 2026",
+          "FDA/EMA label"
+        ],
+        "renalAdjustment": "Sin ajuste renal específico.",
+        "risksByPatient": [
+          "⚠️ Puede reducir el gasto cardíaco por poscarga excesiva. Evitar como vasopresor principal en shock cardiogénico con bajo gasto.",
+          "Embarazo (anestesia obstétrica): usada para hipotensión seleccionada — monitorizar PA materna y perfusión uteroplacentaria.",
+          "Ancianos: mayor riesgo de bradicardia excesiva, isquemia y caída de gasto cardíaco."
+        ],
+        "safetyFlags": {
+          "bradycardiaRisk": true,
+          "extravasationRisk": true,
+          "highAlertMedication": true,
+          "hospitalUseOnly": true,
+          "ischemiaRisk": true,
+          "lowCardiacOutputRisk": true,
+          "pureAlphaAgonist": true,
+          "requiresInfusionPump": true,
+          "requiresTelemetry": true,
+          "vasopressor": true,
+          "warning": "Fenilefrina es alfa-1 pura: útil cuando taquiarritmia limita beta-agonistas, pero puede causar bradicardia refleja y caída del gasto cardíaco."
+        },
+        "speed": "Bolo: 50–200 mcg IV lento. Infusión: iniciar 0,1–0,2 mcg/kg/min y titular cada 5 min.",
+        "therapeuticTargets": [
+          "PAM ≥ 65 mmHg u objetivo individualizado",
+          "Control de hipotensión perioperatoria",
+          "Mantenimiento de PA sin agravar taquiarritmia",
+          "Mejoría de perfusión sistémica"
+        ]
+      },
+      "icon": "🩺",
+      "id": "fenilefrina",
+      "keywords": [
+        "fenilefrina",
+        "neo-synephrine",
+        "vasopressor alfa-1 agonista seletivo puro — sem efeito beta"
+      ],
+      "name": {
+        "es": "Fenilefrina",
+        "pt": "Fenilefrina"
+      },
+      "pt": {
+        "auditNotes": {
+          "status": "vasopressor_phenylephrine_master_template"
+        },
+        "class": "Vasopressor alfa-1 agonista seletivo puro — sem efeito beta",
+        "commercialNames": {
+          "ar": [
+            "Fenilefrina",
+            "Neo-Synephrine"
+          ],
+          "br": [
+            "Fenilefrina",
+            "Neo-Synephrine"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Hipertensão",
+          "Bradicardia reflexa",
+          "Cefaleia",
+          "Palidez",
+          "Ansiedade",
+          "Náuseas"
+        ],
+        "contraindications": {
+          "absolutas": [
+            "Hipersensibilidade à fenilefrina"
+          ],
+          "relativas": [
+            "Hipertensão grave",
+            "Bradicardia importante (FC < 50 bpm)",
+            "Choque cardiogênico com baixo débito",
+            "Doença vascular periférica grave",
+            "Isquemia mesentérica ou periférica ativa",
+            "Hipovolemia não corrigida"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "Isquemia periférica e mesentérica",
+          "Redução do débito cardíaco por aumento de pós-carga",
+          "Hipertensão grave",
+          "Bradicardia sintomática",
+          "Necrose por extravasamento",
+          "IAM por aumento de pós-carga e vasoconstrição coronária"
+        ],
+        "dilution": "Infusão contínua em bomba. Acesso central preferido em uso prolongado ou doses altas. Bolus periférico em ambiente monitorizado. Concentração padrão: 10 mg/100 mL SF → 100 mcg/mL.",
+        "dose": {
+          "adultoGrave": "Manutenção: 0,2–3 mcg/kg/min. Doses altas aumentam risco de isquemia e queda do débito cardíaco.",
+          "adultoPadrao": "Bolus: 50–200 mcg IV lento conforme protocolo. Infusão: 0,1–0,5 mcg/kg/min IV contínuo.",
+          "pediatricaGrave": null,
+          "pediatricaMeningite": null,
+          "pediatricaPadrao": "Dose por peso conforme protocolo pediátrico e contexto anestésico/UTI."
+        },
+        "doseKg": {
+          "doseMaxima": "Individualizado; sem limite absoluto fixo — guiar pela PAM e perfusão",
+          "grave": "0,2–3 mcg/kg/min IV — titular conforme PAM",
+          "meningite": null,
+          "padrao": "0,1–0,5 mcg/kg/min IV — infusão inicial"
+        },
+        "extravasationProtocol": [
+          "Suspender infusão imediatamente.",
+          "Não remover inicialmente o cateter.",
+          "Infiltrar fentolamina ao redor da área (5–10 mg em SF 10 mL).",
+          "Elevar membro; acionar cirurgia plástica se lesão extensa."
+        ],
+        "hepaticAdjustment": "Sem ajuste hepático específico.",
+        "infusionCalc": "Informe doseAtual (mcg/kg/min) e peso para calcular velocidade de infusão.",
+        "interactions": [
+          "IMAO: resposta pressora exagerada — risco de crise hipertensiva.",
+          "Antidepressivos tricíclicos: aumento da resposta alfa-adrenérgica.",
+          "Betabloqueadores: podem intensificar bradicardia reflexa.",
+          "Outros vasopressores: hipertensão e isquemia aditivas.",
+          "Oxitocina (obstetrícia): pode aumentar resposta pressora."
+        ],
+        "mechanism": "Estimula receptores alfa-1 periféricos produzindo vasoconstrição arterial e venosa, elevação da RVS e da PA, sem atividade beta significativa. Pode causar bradicardia reflexa por ativação barorreceptora.",
+        "monitoring": {
+          "baseline": [
+            "PAM / PA",
+            "FC",
+            "ECG contínuo",
+            "Perfusão periférica",
+            "Sinais de baixo débito"
+          ],
+          "followUp": [
+            "PAM contínua ou frequente",
+            "Bradicardia reflexa",
+            "Sinais de isquemia",
+            "Sítio de infusão (extravasamento)"
+          ]
+        },
+        "name": "Fenilefrina",
+        "pharmacokinetics": {
+          "duration": "Curta; infusão contínua necessária para suporte prolongado",
+          "halfLife": "Muito curta — bolus se dissipa em minutos",
+          "onset": "Segundos a poucos minutos por via IV"
+        },
+        "presentation": [
+          "Solução injetável IV conforme disponibilidade",
+          "Bolus IV 50–200 mcg",
+          "Infusão contínua em bomba"
+        ],
+        "ref": [
+          "SCCM Vasopressor Guidelines",
+          "AHA/ACC Shock References",
+          "Anesthesia Hemodynamic Management Guidelines",
+          "Goodman & Gilman",
+          "Lexicomp 2026",
+          "FDA/EMA label"
+        ],
+        "renalAdjustment": "Sem ajuste renal específico.",
+        "risksByPatient": [
+          "⚠️ Pode reduzir débito cardíaco por pós-carga excessiva. Evitar como vasopressor principal em choque cardiogênico com baixo débito.",
+          "Gestação (anestesia obstétrica): usada para hipotensão selecionada — monitorar PA materna e perfusão uteroplacentária.",
+          "Idosos: maior risco de bradicardia excessiva, isquemia e queda de débito cardíaco."
+        ],
+        "safetyFlags": {
+          "bradycardiaRisk": true,
+          "extravasationRisk": true,
+          "highAlertMedication": true,
+          "hospitalUseOnly": true,
+          "ischemiaRisk": true,
+          "lowCardiacOutputRisk": true,
+          "pureAlphaAgonist": true,
+          "requiresInfusionPump": true,
+          "requiresTelemetry": true,
+          "vasopressor": true,
+          "warning": "Fenilefrina é alfa-1 pura: útil quando taquiarritmia limita beta-agonistas, mas pode causar bradicardia reflexa e queda do débito cardíaco."
+        },
+        "speed": "Bolus: 50–200 mcg IV lento. Infusão: iniciar 0,1–0,2 mcg/kg/min e titular a cada 5 min.",
+        "therapeuticTargets": [
+          "PAM ≥ 65 mmHg ou alvo individualizado",
+          "Controle de hipotensão perioperatória",
+          "Manutenção de PA sem agravar taquiarritmia",
+          "Melhora da perfusão sistêmica"
+        ]
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardio.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "Mantenimiento: 0,2–3 mcg/kg/min. Dosis altas aumentan riesgo de isquemia y caída del gasto cardíaco.",
+            "adultoPadrao": "Bolo: 50–200 mcg IV lento según protocolo. Infusión: 0,1–0,5 mcg/kg/min IV continuo.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null,
+            "pediatricaPadrao": "Dosis por peso según protocolo pediátrico y contexto anestésico/UCI."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "Manutenção: 0,2–3 mcg/kg/min. Doses altas aumentam risco de isquemia e queda do débito cardíaco.",
+            "adultoPadrao": "Bolus: 50–200 mcg IV lento conforme protocolo. Infusão: 0,1–0,5 mcg/kg/min IV contínuo.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null,
+            "pediatricaPadrao": "Dose por peso conforme protocolo pediátrico e contexto anestésico/UTI."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

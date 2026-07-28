@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "89e1c1ee9cba2b2cae62d6ad2b974e3b154740f98352eb8334cd5399ed7a029c",
+    "sourceModule": "gastro.js"
+  },
+  "drugId": "omeprazol_iv",
+  "identity": {
+    "canonicalOwner": "gastro.js",
+    "category": "gastro",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "omeprazol_iv",
+      "omeprazol iv"
+    ],
+    "name": {
+      "es": "Omeprazol IV",
+      "pt": "Omeprazol IV"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "gastro",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(16,185,129,0.12)",
+      "colorTxt": "#065F46",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Omeprazol IV"
+      },
+      "icon": "💊",
+      "id": "omeprazol_iv",
+      "keywords": [
+        "omeprazol_iv",
+        "omeprazol iv"
+      ],
+      "name": {
+        "es": "Omeprazol IV",
+        "pt": "Omeprazol IV"
+      },
+      "pt": {
+        "name": "Omeprazol IV"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "gastro.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

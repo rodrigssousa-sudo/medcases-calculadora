@@ -1,0 +1,410 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "e165dd2ac3c10e5326470c7b0faf3848fe58cb15264feba46b106d56c27fbfb4",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "clindamicina",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "clindamicina",
+      "dalacin c",
+      "clindamicina ems",
+      "clindamicina medley",
+      "clindamicina bago",
+      "clindamicina richet",
+      "lincosamida"
+    ],
+    "name": {
+      "es": "Clindamicina",
+      "pt": "Clindamicina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Mayor riesgo de colitis asociada a antibióticos.",
+          "Suspender si aparece diarrea importante."
+        ],
+        "class": "Lincosamida",
+        "commercialNames": {
+          "ar": [
+            "Dalacin C",
+            "Clindamicina Bagó",
+            "Clindamicina Richet"
+          ],
+          "br": [
+            "Dalacin C",
+            "Clindamicina EMS",
+            "Clindamicina Medley"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Diarrea",
+          "Náuseas",
+          "Dolor abdominal",
+          "Exantema"
+        ],
+        "dangerousAdverseEffects": [
+          "Colitis por Clostridioides difficile",
+          "Anafilaxia",
+          "Stevens-Johnson",
+          "Hepatotoxicidad"
+        ],
+        "dilution": "Diluir en SF 0,9% o SG5% según protocolo institucional.",
+        "dose": {
+          "adultoEV": "600–900 mg EV cada 8h",
+          "adultoVO": "300–450 mg VO cada 6h",
+          "pediatrica": "700 mg por dosis VO/EV cada 8h"
+        },
+        "doseKg": {
+          "maxDose": "4,8 g/día",
+          "severe": "30–40 mg/kg/día",
+          "standard": "20–30 mg/kg/día"
+        },
+        "name": "Clindamicina",
+        "presentation": [
+          "Cápsulas: 300 mg",
+          "Cápsulas: 600 mg",
+          "Ampolla EV: 300 mg/2 mL",
+          "Ampolla EV: 600 mg/4 mL"
+        ],
+        "ref": "Goodman & Gilman / Sanford Guide / IDSA SSTI Guidelines",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "600–900 mg",
+              "doseMaxima": "4,8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg"
+            },
+            "obs": "No requiere ajuste renal habitual.",
+            "pediatrica": {
+              "dose": "10–13 mg/kg",
+              "doseMaxima": "40 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "300–450 mg",
+              "doseMaxima": "1,8 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "600–900 mg",
+              "doseMaxima": "4,8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg"
+            },
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "10–13 mg/kg",
+              "doseMaxima": "40 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "300–450 mg",
+              "doseMaxima": "1,8 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "600–900 mg",
+              "doseMaxima": "4,8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg"
+            },
+            "obs": "Dosis habitual. No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "10–13 mg/kg",
+              "doseMaxima": "40 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "300–450 mg",
+              "doseMaxima": "1,8 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "600–900 mg",
+              "doseMaxima": "4,8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg"
+            },
+            "obs": "No requiere ajuste renal. Monitorizar colitis por Clostridioides difficile.",
+            "pediatrica": {
+              "dose": "10–13 mg/kg",
+              "doseMaxima": "40 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "300–450 mg",
+              "doseMaxima": "1,8 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "600–900 mg",
+              "doseMaxima": "4,8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg"
+            },
+            "obs": "No requiere dosis suplementaria post-hemodiálisis.",
+            "pediatrica": {
+              "dose": "10–13 mg/kg",
+              "doseMaxima": "40 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "300–450 mg",
+              "doseMaxima": "1,8 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "message": "No requiere ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Infundir en 30–60 minutos.",
+        "therapeuticRange": "Rango habitual: 20–40 mg/kg/día."
+      },
+      "icon": "💊",
+      "id": "clindamicina",
+      "keywords": [
+        "clindamicina",
+        "dalacin c",
+        "clindamicina ems",
+        "clindamicina medley",
+        "clindamicina bago",
+        "clindamicina richet",
+        "lincosamida"
+      ],
+      "name": {
+        "es": "Clindamicina",
+        "pt": "Clindamicina"
+      },
+      "pt": {
+        "alerts": [
+          "Maior risco de colite associada a antibióticos.",
+          "Suspender se diarreia importante."
+        ],
+        "class": "Lincosamida",
+        "commercialNames": {
+          "ar": [
+            "Dalacin C",
+            "Clindamicina Bagó",
+            "Clindamicina Richet"
+          ],
+          "br": [
+            "Dalacin C",
+            "Clindamicina EMS",
+            "Clindamicina Medley"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Diarreia",
+          "Náuseas",
+          "Dor abdominal",
+          "Rash"
+        ],
+        "dangerousAdverseEffects": [
+          "Colite por Clostridioides difficile",
+          "Anafilaxia",
+          "Stevens-Johnson",
+          "Hepatotoxicidade"
+        ],
+        "dilution": "Diluir em SF 0,9% ou SG5% conforme protocolo institucional.",
+        "dose": {
+          "adultoEV": "600–900 mg EV 8/8h",
+          "adultoVO": "300–450 mg VO 6/6h",
+          "pediatrica": "700 mg por dose VO/EV 8/8h"
+        },
+        "doseKg": {
+          "maxDose": "4,8 g/dia",
+          "severe": "30–40 mg/kg/dia",
+          "standard": "20–30 mg/kg/dia"
+        },
+        "name": "Clindamicina",
+        "presentation": [
+          "Cápsulas: 300 mg",
+          "Cápsulas: 600 mg",
+          "Ampola EV: 300 mg/2 mL",
+          "Ampola EV: 600 mg/4 mL"
+        ],
+        "ref": "Goodman & Gilman / Sanford Guide / IDSA SSTI Guidelines",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "600–900 mg",
+              "doseMaxima": "4,8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg"
+            },
+            "obs": "Não necessita ajuste renal habitual.",
+            "pediatrica": {
+              "dose": "10–13 mg/kg",
+              "doseMaxima": "40 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "300–450 mg",
+              "doseMaxima": "1,8 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "600–900 mg",
+              "doseMaxima": "4,8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg"
+            },
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "10–13 mg/kg",
+              "doseMaxima": "40 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "300–450 mg",
+              "doseMaxima": "1,8 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "600–900 mg",
+              "doseMaxima": "4,8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg"
+            },
+            "obs": "Dose habitual. Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "10–13 mg/kg",
+              "doseMaxima": "40 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "300–450 mg",
+              "doseMaxima": "1,8 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "600–900 mg",
+              "doseMaxima": "4,8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg"
+            },
+            "obs": "Não necessita ajuste renal. Monitorar colite por Clostridioides difficile.",
+            "pediatrica": {
+              "dose": "10–13 mg/kg",
+              "doseMaxima": "40 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "300–450 mg",
+              "doseMaxima": "1,8 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "600–900 mg",
+              "doseMaxima": "4,8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg"
+            },
+            "obs": "Não necessita dose suplementar pós-hemodiálise.",
+            "pediatrica": {
+              "dose": "10–13 mg/kg",
+              "doseMaxima": "40 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "300–450 mg",
+              "doseMaxima": "1,8 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "message": "Não necessita ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Infundir em 30–60 minutos.",
+        "therapeuticRange": "Faixa habitual: 20–40 mg/kg/dia."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoEV": "600–900 mg EV cada 8h",
+            "adultoVO": "300–450 mg VO cada 6h",
+            "pediatrica": "700 mg por dosis VO/EV cada 8h"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoEV": "600–900 mg EV 8/8h",
+            "adultoVO": "300–450 mg VO 6/6h",
+            "pediatrica": "700 mg por dose VO/EV 8/8h"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

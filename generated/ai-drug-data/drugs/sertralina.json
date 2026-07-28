@@ -1,0 +1,254 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "3641d718cf503cedc95c5fc2ca01e576d32ef4243810b7a08e267e776fe55181",
+    "sourceModule": "psiquiatria.js"
+  },
+  "drugId": "sertralina",
+  "identity": {
+    "canonicalOwner": "psiquiatria.js",
+    "category": "antidepressivo",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "sertralina",
+      "zoloft",
+      "assert",
+      "tolrest",
+      "serenata",
+      "asertral",
+      "sertralina bago",
+      "sertralina northia",
+      "antidepressivo isrs"
+    ],
+    "name": {
+      "es": "Sertralina",
+      "pt": "Sertralina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antidepressivo",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Investigar trastorno bipolar antes de iniciar.",
+          "Evitar asociación con IMAO.",
+          "Monitorizar empeoramiento clínico e ideación suicida en jóvenes.",
+          "Monitorizar sodio en adultos mayores, usuarios de diuréticos o pacientes frágiles."
+        ],
+        "category": "antidepressivo",
+        "class": "Antidepresivo ISRS",
+        "commercialNames": {
+          "ar": [
+            "Zoloft",
+            "Asertral",
+            "Sertralina Bagó",
+            "Sertralina Northia"
+          ],
+          "br": [
+            "Zoloft",
+            "Assert",
+            "Tolrest",
+            "Serenata"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas",
+          "Diarrea",
+          "Insomnio o somnolencia",
+          "Temblor",
+          "Sudoración",
+          "Disfunción sexual"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a sertralina",
+          "Uso concomitante con IMAO",
+          "Uso concomitante con pimozida",
+          "Trastorno bipolar sin estabilizador del ánimo"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome serotoninérgico",
+          "Ideación suicida en jóvenes al inicio del tratamiento",
+          "Viraje maníaco/hipomaníaco",
+          "Hiponatremia/SIADH",
+          "Aumento del riesgo de sangrado",
+          "Convulsiones en predispuestos"
+        ],
+        "dose": {
+          "adulto": "Depresión/TOC: iniciar 50 mg VO 1 vez/día; titular semanalmente según respuesta.",
+          "maxDose": "Dosis máxima habitual: 200 mg/día.",
+          "panicoPtsdAnsiedadeSocial": "Pánico/TEPT/ansiedad social: iniciar 25 mg VO 1 vez/día por 1 semana; luego 50 mg/día."
+        },
+        "doseKg": {
+          "maxDose": "200 mg/día",
+          "pediatric": "Pediatría/TOC: uso especializado; iniciar generalmente 25–50 mg/día según edad e indicación.",
+          "standard": "No se utiliza cálculo rutinario por kg en adultos."
+        },
+        "halfLife": "Vida media aproximada: 26 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "interactions": [
+          "IMAO: riesgo de síndrome serotoninérgico",
+          "Tramadol, linezolid, triptanes, litio: riesgo serotoninérgico",
+          "AINEs, AAS, anticoagulantes: mayor riesgo de sangrado",
+          "Alcohol y depresores del SNC: pueden empeorar sedación y coordinación"
+        ],
+        "mechanism": "Inhibe selectivamente la recaptación de serotonina, aumentando serotonina en la hendidura sináptica.",
+        "name": "Sertralina",
+        "onset": "Inicio de efecto clínico generalmente en 2–4 semanas; respuesta plena puede tardar 6–8 semanas.",
+        "presentation": [
+          "Comprimido 25 mg",
+          "Comprimido 50 mg",
+          "Comprimido 100 mg",
+          "Solución oral 20 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Sertraline Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "sertralina",
+      "keywords": [
+        "sertralina",
+        "zoloft",
+        "assert",
+        "tolrest",
+        "serenata",
+        "asertral",
+        "sertralina bago",
+        "sertralina northia",
+        "antidepressivo isrs"
+      ],
+      "name": {
+        "es": "Sertralina",
+        "pt": "Sertralina"
+      },
+      "pt": {
+        "alerts": [
+          "Investigar transtorno bipolar antes de iniciar.",
+          "Evitar associação com IMAO.",
+          "Monitorar piora clínica e ideação suicida em jovens.",
+          "Monitorar sódio em idosos, usuários de diuréticos ou pacientes frágeis."
+        ],
+        "category": "antidepressivo",
+        "class": "Antidepressivo ISRS",
+        "commercialNames": {
+          "ar": [
+            "Zoloft",
+            "Asertral",
+            "Sertralina Bagó",
+            "Sertralina Northia"
+          ],
+          "br": [
+            "Zoloft",
+            "Assert",
+            "Tolrest",
+            "Serenata"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas",
+          "Diarreia",
+          "Insônia ou sonolência",
+          "Tremor",
+          "Sudorese",
+          "Disfunção sexual"
+        ],
+        "contraindications": [
+          "Hipersensibilidade à sertralina",
+          "Uso concomitante com IMAO",
+          "Uso concomitante com pimozida",
+          "Transtorno bipolar sem estabilizador do humor"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome serotoninérgica",
+          "Ideação suicida em jovens no início do tratamento",
+          "Virada maníaca/hipomaníaca",
+          "Hiponatremia/SIADH",
+          "Aumento do risco de sangramento",
+          "Convulsões em predispostos"
+        ],
+        "dose": {
+          "adulto": "Depressão/TOC: iniciar 50 mg VO 1x/dia; titular semanalmente conforme resposta.",
+          "maxDose": "Dose máxima usual: 200 mg/dia.",
+          "panicoPtsdAnsiedadeSocial": "Pânico/TEPT/ansiedade social: iniciar 25 mg VO 1x/dia por 1 semana; depois 50 mg/dia."
+        },
+        "doseKg": {
+          "maxDose": "200 mg/dia",
+          "pediatric": "Pediatria/TOC: uso especializado; iniciar geralmente 25–50 mg/dia conforme idade e indicação.",
+          "standard": "Não se utiliza cálculo rotineiro por kg em adultos."
+        },
+        "halfLife": "Vida média aproximada: 26 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "interactions": [
+          "IMAO: risco de síndrome serotoninérgica",
+          "Tramadol, linezolida, triptanos, lítio: risco serotoninérgico",
+          "AINEs, AAS, anticoagulantes: maior risco de sangramento",
+          "Álcool e depressores do SNC: podem piorar sedação e coordenação"
+        ],
+        "mechanism": "Inibe seletivamente a recaptação de serotonina, aumentando serotonina na fenda sináptica.",
+        "name": "Sertralina",
+        "onset": "Início de efeito clínico geralmente em 2–4 semanas; resposta plena pode levar 6–8 semanas.",
+        "presentation": [
+          "Comprimido 25 mg",
+          "Comprimido 50 mg",
+          "Comprimido 100 mg",
+          "Solução oral 20 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Sertraline Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psiquiatria.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Depresión/TOC: iniciar 50 mg VO 1 vez/día; titular semanalmente según respuesta.",
+            "maxDose": "Dosis máxima habitual: 200 mg/día.",
+            "panicoPtsdAnsiedadeSocial": "Pánico/TEPT/ansiedad social: iniciar 25 mg VO 1 vez/día por 1 semana; luego 50 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Depressão/TOC: iniciar 50 mg VO 1x/dia; titular semanalmente conforme resposta.",
+            "maxDose": "Dose máxima usual: 200 mg/dia.",
+            "panicoPtsdAnsiedadeSocial": "Pânico/TEPT/ansiedade social: iniciar 25 mg VO 1x/dia por 1 semana; depois 50 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

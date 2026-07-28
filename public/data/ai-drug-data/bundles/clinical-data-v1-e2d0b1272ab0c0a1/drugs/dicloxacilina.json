@@ -1,0 +1,310 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "49d6b338daee1d2d4cb43573534afb1a125bb2b12be0f556aa6bfdd988766d91",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "dicloxacilina",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "dicloxacilina",
+      "dicloxacilina generico",
+      "diclocil",
+      "penicilina resistente a penicilinase (isoxazolilpenicilina oral — anti-mssa)"
+    ],
+    "name": {
+      "es": "Dicloxacilina",
+      "pt": "Dicloxacilina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(16,185,129,0.12)",
+      "colorTxt": "#047857",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Tomar EN AYUNAS obligatorio — los alimentos reducen la absorción hasta un 50%.",
+          "Preferida a cloxacilina para uso oral por mayor biodisponibilidad.",
+          "No requiere ajuste renal."
+        ],
+        "class": "Penicilina resistente a penicilinasa (isoxazolilpenicilina oral — anti-MSSA)",
+        "commercialNames": {
+          "ar": [
+            "Dicloxacilina Genérico"
+          ],
+          "br": [
+            "Dicloxacilina Genérico",
+            "Diclocil"
+          ]
+        },
+        "contraindications": [
+          "Hipersensibilidad a las penicilinas"
+        ],
+        "dose": {
+          "adultoVO": "250–500 mg VO 6/6h (en ayunas, 30–60 min antes de las comidas)"
+        },
+        "doseKg": null,
+        "indication": "Infecciones por MSSA en tratamiento oral: impétigo, celulitis, forunculosis, foliculitis, infecciones de herida quirúrgica, artritis séptica leve, osteomielitis en terapia secuencial EV-VO.",
+        "name": "Dicloxacilina",
+        "presentation": [
+          "Cápsulas: 250 mg, 500 mg",
+          "Suspensión oral: 62,5 mg/5 mL"
+        ],
+        "ref": "Sanford Guide 2025 / IDSA SSTI Guidelines / ANVISA / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Indicada principalmente para MSSA e infecciones cutáneas.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorizar función hepática en tratamientos prolongados.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "No requiere suplementación post-HD.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "message": "No requiere ajuste renal.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "spectrum": "Staphylococcus aureus (MSSA), Staphylococcus epidermidis (MSSE), Streptococcus spp. Sin actividad frente a MRSA, Gramnegativos ni anaerobios. Mejor biodisponibilidad oral que cloxacilina."
+      },
+      "icon": "💊",
+      "id": "dicloxacilina",
+      "keywords": [
+        "dicloxacilina",
+        "dicloxacilina generico",
+        "diclocil",
+        "penicilina resistente a penicilinase (isoxazolilpenicilina oral — anti-mssa)"
+      ],
+      "name": {
+        "es": "Dicloxacilina",
+        "pt": "Dicloxacilina"
+      },
+      "pt": {
+        "alerts": [
+          "Tomar EM JEJUM obrigatório — alimentos reduzem absorção em até 50%.",
+          "Preferida à cloxacilina para uso oral por maior biodisponibilidade.",
+          "Não necessita ajuste renal."
+        ],
+        "class": "Penicilina resistente à penicilinase (isoxazolilpenicilina oral — anti-MSSA)",
+        "commercialNames": {
+          "ar": [
+            "Dicloxacilina Genérico"
+          ],
+          "br": [
+            "Dicloxacilina Genérico",
+            "Diclocil"
+          ]
+        },
+        "contraindications": [
+          "Hipersensibilidade às penicilinas"
+        ],
+        "dose": {
+          "adultoVO": "250–500 mg VO 6/6h (em jejum, 30–60 min antes das refeições)"
+        },
+        "doseKg": null,
+        "indication": "Infecções por MSSA em tratamento oral: impetigo, celulite, furunculose, foliculite, infecções de ferida cirúrgica, artrite séptica leve, osteomielite em terapia sequencial EV-VO.",
+        "name": "Dicloxacilina",
+        "presentation": [
+          "Cápsulas: 250 mg, 500 mg",
+          "Suspensão oral: 62,5 mg/5 mL"
+        ],
+        "ref": "Sanford Guide 2025 / IDSA SSTI Guidelines / ANVISA / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Indicada principalmente para MSSA e infecções cutâneas.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorar função hepática em tratamentos prolongados.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Não requer suplementação pós-HD.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "message": "Não necessita ajuste renal.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "spectrum": "Staphylococcus aureus (MSSA), Staphylococcus epidermidis (MSSE), Streptococcus spp. Sem atividade contra MRSA, Gram-negativos ou anaeróbios. Melhor biodisponibilidade oral que a cloxacilina."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoVO": "250–500 mg VO 6/6h (en ayunas, 30–60 min antes de las comidas)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoVO": "250–500 mg VO 6/6h (em jejum, 30–60 min antes das refeições)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

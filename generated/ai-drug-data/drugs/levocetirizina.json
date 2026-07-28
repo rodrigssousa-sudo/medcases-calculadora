@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "31cc2fb6c3072ad71a0e1f38bd6e20d273fe8236900c9a75e1e70faba5c5d8a0",
+    "sourceModule": "alergia_imunologia.js"
+  },
+  "drugId": "levocetirizina",
+  "identity": {
+    "canonicalOwner": "alergia_imunologia.js",
+    "category": "alergia_imunologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "levocetirizina"
+    ],
+    "name": {
+      "es": "Levocetirizina",
+      "pt": "Levocetirizina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "alergia_imunologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Levocetirizina"
+      },
+      "icon": "💊",
+      "id": "levocetirizina",
+      "keywords": [
+        "levocetirizina"
+      ],
+      "name": {
+        "es": "Levocetirizina",
+        "pt": "Levocetirizina"
+      },
+      "pt": {
+        "name": "Levocetirizina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "alergia_imunologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

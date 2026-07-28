@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "701b139c91d22c1024a9ff6949dc4661f00161c3c526f65733fa49a6fea58efe",
+    "sourceModule": "neurologia.js"
+  },
+  "drugId": "guanfacina",
+  "identity": {
+    "canonicalOwner": "neurologia.js",
+    "category": "psiquiatria",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "guanfacina"
+    ],
+    "name": {
+      "es": "Guanfacina",
+      "pt": "Guanfacina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "psiquiatria",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "#8B5CF6",
+      "colorTxt": "#ffffff",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Guanfacina"
+      },
+      "icon": "🧠",
+      "id": "guanfacina",
+      "keywords": [
+        "guanfacina"
+      ],
+      "name": {
+        "es": "Guanfacina",
+        "pt": "Guanfacina"
+      },
+      "pt": {
+        "name": "Guanfacina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "neurologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

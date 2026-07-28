@@ -1,0 +1,352 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "ac6020679db3148814cc2f09c0553472d8b637a23263f5e5608c64267fbccdc1",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "polimixina_b",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "polimixina_b",
+      "polimixina b",
+      "polimixina b generica",
+      "aerosporin",
+      "polimixina (lipopeptideo policationico)"
+    ],
+    "name": {
+      "es": "Polimixina B",
+      "pt": "Polimixina B"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Diluir OBLIGATORIAMENTE en SG 5% — incompatible con SF 0,9%.",
+          "Monitorizar creatinina cada 48–72h a pesar de no haber ajuste formal por función renal."
+        ],
+        "class": "Polimixina (lipopéptido policatiónico)",
+        "commercialNames": {
+          "ar": [
+            "Polimixina B Genérica",
+            "Aerosporin"
+          ],
+          "br": [
+            "Polimixina B Genérica",
+            "Aerosporin"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Nefrotoxicidad",
+          "Neurotoxicidad / parestesias",
+          "Dolor en el sitio de infusión"
+        ],
+        "dangerousAdverseEffects": [
+          "Insuficiencia renal aguda grave",
+          "Bloqueo neuromuscular",
+          "Apnea (raro)"
+        ],
+        "dilution": "EV: diluir en SG 5% 100–500 mL. NO usar SF (incompatible).",
+        "dose": {
+          "adultoAtaque": "158 mg EV dosis de carga (2–2,5 mg/kg)",
+          "adultoManutencao": "96 mg EV cada 12h (1,25–1,5 mg/kg)",
+          "pediatrica": "88 mg EV cada 12h (1,25 mg/kg)"
+        },
+        "doseKg": {
+          "maxDose": "3 mg/kg/día",
+          "standard": "1,25–1,5 mg/kg cada 12h EV (tras carga de 2–2,5 mg/kg)"
+        },
+        "name": "Polimixina B",
+        "presentation": [
+          "Polvo liofilizado EV: 500.000 UI (= 50 mg)"
+        ],
+        "ref": "Sanford Guide 2025 / Zavascki et al. / Goodman & Gilman",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "1,25–1,5 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Monitorizar toxicidad renal a pesar de la ausencia de ajuste formal.",
+            "pediatrica": {
+              "dose": "1,25 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1,25–1,5 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Sin ajuste habitual.",
+            "pediatrica": {
+              "dose": "1,25 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1,25–1,5 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Dosis habitual tras carga de 2–2,5 mg/kg.",
+            "pediatrica": {
+              "dose": "1,25 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "1,25–1,5 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Alto riesgo de nefrotoxicidad y neurotoxicidad.",
+            "pediatrica": {
+              "dose": "1,25 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "1,25–1,5 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "obs": "No es significativamente removida por HD.",
+            "pediatrica": {
+              "dose": "1,25 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "message": "Generalmente no requiere ajuste renal, pero requiere monitorización estricta.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "EV: infundir en 60–120 minutos.",
+        "therapeuticMonitoring": {
+          "monitoring": "Creatinina, urea, electrolitos y síntomas neurológicos.",
+          "notes": "Menor dependencia de la función renal para dosificación que la colistina, pero la toxicidad sigue siendo elevada.",
+          "required": true,
+          "target": "Monitorización intensiva de la función renal."
+        },
+        "therapeuticRange": "Bactericida. Gram-negativos MDR: KPC, NDM, Acinetobacter. Dosificación NO guiada por la función renal (diferente de colistina)."
+      },
+      "icon": "💊",
+      "id": "polimixina_b",
+      "keywords": [
+        "polimixina_b",
+        "polimixina b",
+        "polimixina b generica",
+        "aerosporin",
+        "polimixina (lipopeptideo policationico)"
+      ],
+      "name": {
+        "es": "Polimixina B",
+        "pt": "Polimixina B"
+      },
+      "pt": {
+        "alerts": [
+          "Diluir OBRIGATORIAMENTE em SG 5% — incompatível com SF 0,9%.",
+          "Monitorar creatinina a cada 48–72h apesar de não haver ajuste formal por função renal."
+        ],
+        "class": "Polimixina (lipopeptídeo policatiônico)",
+        "commercialNames": {
+          "ar": [
+            "Polimixina B Genérica",
+            "Aerosporin"
+          ],
+          "br": [
+            "Polimixina B Genérica",
+            "Aerosporin"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Nefrotoxicidade",
+          "Neurotoxicidade / parestesias",
+          "Dor no local de infusão"
+        ],
+        "dangerousAdverseEffects": [
+          "Insuficiência renal aguda grave",
+          "Bloqueio neuromuscular",
+          "Apneia (raro)"
+        ],
+        "dilution": "EV: diluir em SG 5% 100–500 mL. NÃO usar SF (incompatível).",
+        "dose": {
+          "adultoAtaque": "158 mg EV dose de ataque (2–2,5 mg/kg)",
+          "adultoManutencao": "96 mg EV 12/12h (1,25–1,5 mg/kg)",
+          "pediatrica": "88 mg EV 12/12h (1,25 mg/kg)"
+        },
+        "doseKg": {
+          "maxDose": "3 mg/kg/dia",
+          "standard": "1,25–1,5 mg/kg 12/12h EV (após ataque de 2–2,5 mg/kg)"
+        },
+        "name": "Polimixina B",
+        "presentation": [
+          "Pó liofilizado EV: 500.000 UI (= 50 mg)"
+        ],
+        "ref": "Sanford Guide 2025 / Zavascki et al. / Goodman & Gilman",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "1,25–1,5 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Monitorar toxicidade renal apesar da ausência de ajuste formal.",
+            "pediatrica": {
+              "dose": "1,25 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1,25–1,5 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Sem ajuste habitual.",
+            "pediatrica": {
+              "dose": "1,25 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1,25–1,5 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Dose habitual após ataque de 2–2,5 mg/kg.",
+            "pediatrica": {
+              "dose": "1,25 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "1,25–1,5 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Alto risco de nefrotoxicidade e neurotoxicidade.",
+            "pediatrica": {
+              "dose": "1,25 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "1,25–1,5 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Não é significativamente removida pela HD.",
+            "pediatrica": {
+              "dose": "1,25 mg/kg",
+              "doseMaxima": "3 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "message": "Geralmente não necessita ajuste renal, porém requer monitorização rigorosa.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "EV: infundir em 60–120 minutos.",
+        "therapeuticMonitoring": {
+          "monitoring": "Creatinina, ureia, eletrólitos e sintomas neurológicos.",
+          "notes": "Menor dependência da função renal para dosagem que a colistina, porém toxicidade permanece elevada.",
+          "required": true,
+          "target": "Monitorização intensiva da função renal."
+        },
+        "therapeuticRange": "Bactericida. Gram-negativos MDR: KPC, NDM, Acinetobacter. Dosagem NÃO guiada pela função renal (diferente da colistina)."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoAtaque": "158 mg EV dosis de carga (2–2,5 mg/kg)",
+            "adultoManutencao": "96 mg EV cada 12h (1,25–1,5 mg/kg)",
+            "pediatrica": "88 mg EV cada 12h (1,25 mg/kg)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoAtaque": "158 mg EV dose de ataque (2–2,5 mg/kg)",
+            "adultoManutencao": "96 mg EV 12/12h (1,25–1,5 mg/kg)",
+            "pediatrica": "88 mg EV 12/12h (1,25 mg/kg)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

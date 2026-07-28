@@ -1,0 +1,306 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "6de1259557ff8e0270e02c49b563b0e4aa683962fb3eed97c8d49c04cce6ee6a",
+    "sourceModule": "cardio.js"
+  },
+  "drugId": "nicorandil",
+  "identity": {
+    "canonicalOwner": "cardio.js",
+    "category": "cardio",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "nicorandil",
+      "ikorel",
+      "angidil",
+      "antianginoso — ativador de canais de potassio (katp) e doador de oxido nitrico (nitrato)"
+    ],
+    "name": {
+      "es": "Nicorandil",
+      "pt": "Nicorandil"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardio",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(190,24,93,0.13)",
+      "colorTxt": "#9D174D",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "administration": "Vía oral, preferentemente por la mañana y por la noche. Puede tomarse con o sin alimentos.",
+        "auditNotes": {
+          "status": "antianginoso_nicorandil_master_template"
+        },
+        "class": "Antianginoso — activador de canales de potasio (KATP) y donante de óxido nítrico (nitrato)",
+        "commercialNames": {
+          "ar": [
+            "Ikorel"
+          ],
+          "br": [
+            "Ikorel",
+            "Angidil"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Cefalea (muy común al inicio del tratamiento)",
+          "Rubor facial",
+          "Mareo",
+          "Debilidad",
+          "Palpitaciones"
+        ],
+        "contraindications": {
+          "absolutas": [
+            "Uso concomitante de inhibidores de la fosfodiesterasa tipo 5 (PDE5) (ej.: sildenafilo, tadalafilo, vardenafilo)",
+            "Uso concomitante de estimuladores de la guanilato ciclasa soluble (ej.: riociguate)",
+            "Choque cardiogénico o hipotensión severa",
+            "Insuficiencia ventricular izquierda severa con baja presión de llenado"
+          ],
+          "relativas": [
+            "Depleción de volumen no corregida",
+            "Edema pulmonar agudo",
+            "Historia de úlceras gastrointestinales, orales o cutáneas — suspender permanentemente si ocurren durante el tratamiento"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "Úlceras gastrointestinales, mucosas (orales/aftas severas) y cutáneas",
+          "Sangrado gastrointestinal",
+          "Hipotensión severa",
+          "Perforación gastrointestinal"
+        ],
+        "dose": {
+          "adultoGrave": "Dosis máxima: 30 mg VO cada 12h. Ancianos: iniciar con la menor dosis efectiva (5 mg cada 12h).",
+          "adultoPadrao": "Inicial: 10 mg VO cada 12h (5 mg cada 12h en los primeros días si propenso a la cefalea). Mantenimiento: 10–20 mg VO cada 12h.",
+          "pediatricaGrave": null,
+          "pediatricaMeningite": null,
+          "pediatricaPadrao": "No establecido — uso no aprobado en pediatría."
+        },
+        "doseKg": {
+          "doseMaxima": "30 mg cada 12h",
+          "grave": null,
+          "meningite": null,
+          "padrao": "Dosis fija — no se calcula por peso"
+        },
+        "hepaticAdjustment": "Sin necesidad de ajuste en insuficiencia leve a moderada. No estudiado en enfermedad hepática severa.",
+        "indications": {
+          "approved": [
+            "Prevención y tratamiento a largo plazo de la angina de pecho estable, generalmente como segunda línea o en casos de intolerancia/contraindicación a los antianginosos de primera línea"
+          ],
+          "offLabel": []
+        },
+        "interactions": [
+          "Inhibidores de la PDE5 (sildenafilo, tadalafilo, vardenafilo): riesgo de hipotensión fatal por acumulación de GMPc — asociación estrictamente contraindicada.",
+          "Riociguate: hipotensión aditiva grave y riesgo de choque vasopléjico — contraindicado.",
+          "Corticosteroides sistémicos: aumento del riesgo de perforación/úlceras gastrointestinales y enmascaramiento de los signos precoces de perforación — evitar asociación.",
+          "AAS y AINEs: riesgo aumentado de úlceras y sangrado gastrointestinal — monitorizar signos de sangrado; considerar protección gástrica si el uso es inevitable.",
+          "Antidepresivos y otros vasodilatadores: potenciación de la hipotensión — monitorizar presión arterial."
+        ],
+        "mechanism": "Doble mecanismo de acción: (1) activa los canales de potasio sensibles al ATP (KATP) en el músculo liso vascular, causando hiperpolarización y vasodilatación arterial (reducción de la poscarga); (2) posee grupo nitrato (donante de óxido nítrico), promoviendo venodilatación (reducción de la precarga) y vasodilatación de las arterias coronarias epicárdicas.",
+        "monitoring": {
+          "baseline": [
+            "Presión arterial",
+            "Evaluación de mucosa oral y piel",
+            "Revisión de medicaciones concomitantes (inhibidores de PDE5, riociguat, corticosteroides, AINEs)"
+          ],
+          "followUp": [
+            "Presión arterial periódica",
+            "Signos de úlceras orales, gastrointestinales o cutáneas — suspender permanentemente si ocurren",
+            "Signos de sangrado o perforación gastrointestinal",
+            "Cefalea (común al inicio — generalmente atenúa con la continuidad del tratamiento)"
+          ]
+        },
+        "name": "Nicorandil",
+        "pharmacokinetics": {
+          "duration": "Efecto mantenido con posología cada 12h",
+          "halfLife": "≈ 1 hora (uso cada 12h para mantenimiento del efecto)",
+          "onset": "Rápido — efecto antianginoso dentro de horas tras dosis oral"
+        },
+        "presentation": [
+          "Comprimido 10 mg",
+          "Comprimido 20 mg"
+        ],
+        "ref": [
+          "2019 ESC Guidelines for the Diagnosis and Management of Chronic Coronary Syndromes",
+          "NICE Guidelines — Stable Angina: Management",
+          "MHRA Drug Safety Update — Nicorandil (Ikorel) and Risk of Ulceration",
+          "Goodman & Gilman's: The Pharmacological Basis of Therapeutics"
+        ],
+        "renalAdjustment": "Sin recomendaciones específicas de ajuste. Usar con precaución en insuficiencia renal grave.",
+        "risksByPatient": [],
+        "safetyFlags": {
+          "hypotensionRisk": true,
+          "pde5Contraindication": true,
+          "ulcerationRisk": true,
+          "warning": "Alerta de úlceras: el nicorandil puede causar úlceras refractarias en cualquier parte del tracto gastrointestinal (boca a ano) y en la piel. Si ocurren úlceras orales o gastrointestinales, el medicamento DEBE SUSPENDERSE permanentemente — la cicatrización suele ocurrir rápidamente tras la retirada."
+        },
+        "specialPopulations": {
+          "elderly": "Mayor riesgo de hipotensión y úlceras. Iniciar con la menor dosis efectiva (5 mg cada 12h).",
+          "lactation": "Se desconoce si se excreta en la leche materna. Lactancia no recomendada.",
+          "pregnancy": "Evitar el uso. Datos limitados en humanos; los estudios en animales no indican efectos teratogénicos directos, pero el uso no está recomendado."
+        }
+      },
+      "icon": "💊",
+      "id": "nicorandil",
+      "keywords": [
+        "nicorandil",
+        "ikorel",
+        "angidil",
+        "antianginoso — ativador de canais de potassio (katp) e doador de oxido nitrico (nitrato)"
+      ],
+      "name": {
+        "es": "Nicorandil",
+        "pt": "Nicorandil"
+      },
+      "pt": {
+        "administration": "Via oral, preferencialmente pela manhã e à noite. Pode ser tomado com ou sem alimentos.",
+        "auditNotes": {
+          "status": "antianginoso_nicorandil_master_template"
+        },
+        "class": "Antianginoso — ativador de canais de potássio (KATP) e doador de óxido nítrico (nitrato)",
+        "commercialNames": {
+          "ar": [
+            "Ikorel"
+          ],
+          "br": [
+            "Ikorel",
+            "Angidil"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Cefaleia (muito comum no início do tratamento)",
+          "Rubor facial",
+          "Tontura",
+          "Fraqueza",
+          "Palpitações"
+        ],
+        "contraindications": {
+          "absolutas": [
+            "Uso concomitante de inibidores da fosfodiesterase tipo 5 (PDE5) (ex.: sildenafila, tadalafila, vardenafila)",
+            "Uso concomitante de estimuladores da guanilato ciclase solúvel (ex.: riociguate)",
+            "Choque cardiogênico ou hipotensão severa",
+            "Insuficiência ventricular esquerda severa com baixa pressão de enchimento"
+          ],
+          "relativas": [
+            "Depleção de volume não corrigida",
+            "Edema pulmonar agudo",
+            "História de úlceras gastrointestinais, orais ou cutâneas — suspender permanentemente se ocorrerem durante o tratamento"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "Úlceras gastrointestinais, mucosas (orais/aftas severas) e cutâneas",
+          "Sangramento gastrointestinal",
+          "Hipotensão severa",
+          "Perfuração gastrointestinal"
+        ],
+        "dose": {
+          "adultoGrave": "Dose máxima: 30 mg VO 12/12h. Idosos: iniciar com a menor dose efetiva (5 mg 12/12h).",
+          "adultoPadrao": "Inicial: 10 mg VO 12/12h (5 mg 12/12h nos primeiros dias se propenso à cefaleia). Manutenção: 10–20 mg VO 12/12h.",
+          "pediatricaGrave": null,
+          "pediatricaMeningite": null,
+          "pediatricaPadrao": "Não estabelecido — uso não aprovado em pediatria."
+        },
+        "doseKg": {
+          "doseMaxima": "30 mg 12/12h",
+          "grave": null,
+          "meningite": null,
+          "padrao": "Dose fixa — não é calculada por peso"
+        },
+        "hepaticAdjustment": "Sem necessidade de ajuste em insuficiência leve a moderada. Não estudado em doença hepática severa.",
+        "indications": {
+          "approved": [
+            "Prevenção e tratamento em longo prazo da angina pectoris estável, geralmente como segunda linha ou em casos de intolerância/contraindicação aos antianginosos de primeira linha"
+          ],
+          "offLabel": []
+        },
+        "interactions": [
+          "Inibidores da PDE5 (sildenafila, tadalafila, vardenafila): risco de hipotensão fatal por acúmulo de GMPc — associação estritamente contraindicada.",
+          "Riociguate: hipotensão aditiva grave e risco de choque vasoplégico — contraindicado.",
+          "Corticosteroides sistêmicos: aumento do risco de perfuração/úlceras gastrointestinais e mascaramento dos sinais precoces de perfuração — evitar associação.",
+          "AAS e AINEs: risco aumentado de úlceras e sangramento gastrointestinal — monitorar sinais de sangramento; considerar proteção gástrica se uso inevitável.",
+          "Antidepressivos e outros vasodilatadores: potencialização da hipotensão — monitorar pressão arterial."
+        ],
+        "mechanism": "Duplo mecanismo de ação: (1) ativa os canais de potássio sensíveis ao ATP (KATP) no músculo liso vascular, causando hiperpolarização e vasodilatação arterial (redução da pós-carga); (2) possui grupamento nitrato (doador de óxido nítrico), promovendo venodilatação (redução da pré-carga) e vasodilatação das artérias coronárias epicárdicas.",
+        "monitoring": {
+          "baseline": [
+            "Pressão arterial",
+            "Avaliação de mucosa oral e pele",
+            "Revisão de medicações concomitantes (inibidores de PDE5, riociguat, corticosteroides, AINEs)"
+          ],
+          "followUp": [
+            "Pressão arterial periódica",
+            "Sinais de úlceras orais, gastrointestinais ou cutâneas — suspender permanentemente se ocorrerem",
+            "Sinais de sangramento ou perfuração gastrointestinal",
+            "Cefaleia (comum no início — geralmente atenua com a continuidade do tratamento)"
+          ]
+        },
+        "name": "Nicorandil",
+        "pharmacokinetics": {
+          "duration": "Efeito mantido com posologia de 12/12h",
+          "halfLife": "≈ 1 hora (uso 12/12h para manutenção do efeito)",
+          "onset": "Rápido — efeito antianginoso dentro de horas após dose oral"
+        },
+        "presentation": [
+          "Comprimido 10 mg",
+          "Comprimido 20 mg"
+        ],
+        "ref": [
+          "2019 ESC Guidelines for the Diagnosis and Management of Chronic Coronary Syndromes",
+          "NICE Guidelines — Stable Angina: Management",
+          "MHRA Drug Safety Update — Nicorandil (Ikorel) and Risk of Ulceration",
+          "Goodman & Gilman's: The Pharmacological Basis of Therapeutics"
+        ],
+        "renalAdjustment": "Sem recomendações específicas de ajuste. Usar com cautela na insuficiência renal grave.",
+        "risksByPatient": [],
+        "safetyFlags": {
+          "hypotensionRisk": true,
+          "pde5Contraindication": true,
+          "ulcerationRisk": true,
+          "warning": "Alerta de úlceras: o nicorandil pode causar úlceras refratárias em qualquer parte do trato gastrointestinal (boca a ânus) e na pele. Caso ocorram úlceras orais ou gastrointestinais, o medicamento DEVE SER SUSPENSO permanentemente — a cicatrização costuma ocorrer rapidamente após a retirada."
+        },
+        "specialPopulations": {
+          "elderly": "Maior risco de hipotensão e úlceras. Iniciar com a menor dose efetiva (5 mg 12/12h).",
+          "lactation": "Desconhecido se é excretado no leite materno. Amamentação não recomendada.",
+          "pregnancy": "Evitar o uso. Dados limitados em humanos; estudos em animais não indicam efeitos teratogênicos diretos, mas o uso não é recomendado."
+        }
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardio.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "Dosis máxima: 30 mg VO cada 12h. Ancianos: iniciar con la menor dosis efectiva (5 mg cada 12h).",
+            "adultoPadrao": "Inicial: 10 mg VO cada 12h (5 mg cada 12h en los primeros días si propenso a la cefalea). Mantenimiento: 10–20 mg VO cada 12h.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null,
+            "pediatricaPadrao": "No establecido — uso no aprobado en pediatría."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "Dose máxima: 30 mg VO 12/12h. Idosos: iniciar com a menor dose efetiva (5 mg 12/12h).",
+            "adultoPadrao": "Inicial: 10 mg VO 12/12h (5 mg 12/12h nos primeiros dias se propenso à cefaleia). Manutenção: 10–20 mg VO 12/12h.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null,
+            "pediatricaPadrao": "Não estabelecido — uso não aprovado em pediatria."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,350 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "06bfd3de2c0619e7ef4f76c9dc79d9558697dc095741376785089cefbd2f27c2",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "cefpodoxima",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "cefpodoxima",
+      "orelox",
+      "cefpodoxima generica",
+      "cefalosporina de 3ª geracao (oral)"
+    ],
+    "name": {
+      "es": "Cefpodoxima",
+      "pt": "Cefpodoxima"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(6,182,212,0.15)",
+      "colorTxt": "#06B6D4",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Tomar con alimento para aumentar biodisponibilidad.",
+          "Requiere ajuste en ClCr < 30 mL/min (extender intervalo a 24h).",
+          "Útil para step-down oral tras cefalosporinas EV en infecciones respiratorias e ITU."
+        ],
+        "class": "Cefalosporina de 3ª generación (oral)",
+        "commercialNames": {
+          "ar": [
+            "Orelox",
+            "Cefpodoxima Genérica"
+          ],
+          "br": [
+            "Orelox",
+            "Cefpodoxima Genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Diarrea",
+          "Náuseas",
+          "Dolor abdominal",
+          "Erupción cutánea",
+          "Vaginitis (en mujeres)"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a cefalosporinas o penicilinas"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia / hipersensibilidad grave",
+          "Colitis por C. difficile",
+          "Síndrome de Stevens-Johnson (muy raro)"
+        ],
+        "dilution": "Uso oral exclusivo.",
+        "dose": {
+          "adultoVO": "200 mg VO 12/12h",
+          "pediatrica": "350 mg VO cada 12h (5 mg/kg/dosis)"
+        },
+        "doseKg": {
+          "pediatrica": "5 mg/kg/dosis VO cada 12h (máx 200 mg/dosis)"
+        },
+        "halfLife": "Semivida 2–3 h. Eliminación renal ~29–33% inalterada.",
+        "mechanism": "Profármaco del cefpodoxima proxetilo; tras absorción, hidrolizado a cefpodoxima activa. Se une a las PBPs, inhibiendo síntesis de pared celular. Estable frente a varias beta-lactamasas.",
+        "name": "Cefpodoxima",
+        "onset": "Absorción oral moderada — biodisponibilidad ~40–50% (aumenta con alimento); Tmáx 2–3 h.",
+        "presentation": [
+          "Comprimidos recubiertos: 100 mg, 200 mg",
+          "Suspensión oral: 40 mg/5 mL; 100 mg/5 mL"
+        ],
+        "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Extender intervalo a 24 horas.",
+            "pediatrica": {
+              "dose": "5 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Sin ajuste significativo hasta ClCr 30 mL/min.",
+            "pediatrica": {
+              "dose": "5 mg/kg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dosis habitual.",
+            "pediatrica": {
+              "dose": "5 mg/kg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorizar signos de neurotoxicidad.",
+            "pediatrica": {
+              "dose": "2,5–5 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "100–200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Administrar después de hemodiálisis.",
+            "pediatrica": {
+              "dose": "2,5–5 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "100–200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "No aplicable (uso oral).",
+        "therapeuticRange": "Tiempo sobre la CIM (T>CIM) como parámetro PK/PD. Tomar con alimento."
+      },
+      "icon": "💊",
+      "id": "cefpodoxima",
+      "keywords": [
+        "cefpodoxima",
+        "orelox",
+        "cefpodoxima generica",
+        "cefalosporina de 3ª geracao (oral)"
+      ],
+      "name": {
+        "es": "Cefpodoxima",
+        "pt": "Cefpodoxima"
+      },
+      "pt": {
+        "alerts": [
+          "Tomar com alimento para aumentar biodisponibilidade.",
+          "Requer ajuste em ClCr < 30 mL/min (estender intervalo para 24h).",
+          "Útil para step-down oral após cefalosporinas EV em infecções respiratórias e ITU."
+        ],
+        "class": "Cefalosporina de 3ª geração (oral)",
+        "commercialNames": {
+          "ar": [
+            "Orelox",
+            "Cefpodoxima Genérica"
+          ],
+          "br": [
+            "Orelox",
+            "Cefpodoxima Genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Diarreia",
+          "Náuseas",
+          "Dor abdominal",
+          "Rash cutâneo",
+          "Vaginite (em mulheres)"
+        ],
+        "contraindications": [
+          "Hipersensibilidade a cefalosporinas ou penicilinas"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia / hipersensibilidade grave",
+          "Colite por C. difficile",
+          "Síndrome de Stevens-Johnson (muito raro)"
+        ],
+        "dilution": "Uso oral exclusivo.",
+        "dose": {
+          "adultoVO": "200 mg VO 12/12h",
+          "pediatrica": "350 mg VO 12/12h (5 mg/kg/dose)"
+        },
+        "doseKg": {
+          "pediatrica": "5 mg/kg/dose VO 12/12h (máx 200 mg/dose)"
+        },
+        "halfLife": "Meia-vida 2–3 h. Eliminação renal ~29–33% inalterada.",
+        "mechanism": "Pró-fármaco do cefpodoxima proxetil; após absorção, hidrolisado a cefpodoxima ativa. Liga-se às PBPs, inibindo síntese da parede celular. Estável a várias beta-lactamases.",
+        "name": "Cefpodoxima",
+        "onset": "Absorção oral moderada — biodisponibilidade ~40–50% (aumenta com alimento); Tmáx 2–3 h.",
+        "presentation": [
+          "Comprimidos revestidos: 100 mg, 200 mg",
+          "Suspensão oral: 40 mg/5 mL; 100 mg/5 mL"
+        ],
+        "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Estender intervalo para 24 horas.",
+            "pediatrica": {
+              "dose": "5 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Sem ajuste significativo até ClCr 30 mL/min.",
+            "pediatrica": {
+              "dose": "5 mg/kg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dose habitual.",
+            "pediatrica": {
+              "dose": "5 mg/kg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "200 mg",
+              "doseMaxima": "400 mg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorar sinais de neurotoxicidade.",
+            "pediatrica": {
+              "dose": "2,5–5 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "100–200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Administrar após hemodiálise.",
+            "pediatrica": {
+              "dose": "2,5–5 mg/kg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "100–200 mg",
+              "doseMaxima": "200 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Não aplicável (uso oral).",
+        "therapeuticRange": "Tempo acima da CIM (T>CIM) como parâmetro PK/PD. Tomar com alimento."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoVO": "200 mg VO 12/12h",
+            "pediatrica": "350 mg VO cada 12h (5 mg/kg/dosis)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoVO": "200 mg VO 12/12h",
+            "pediatrica": "350 mg VO 12/12h (5 mg/kg/dose)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

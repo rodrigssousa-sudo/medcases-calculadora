@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "4592c29d03e7d16fd207f906ae6820ff9c21e4663dc04e4cd4fa142f662c8a55",
+    "sourceModule": "pneumologia.js"
+  },
+  "drugId": "omalizumabe",
+  "identity": {
+    "canonicalOwner": "pneumologia.js",
+    "category": "pneumologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "omalizumabe"
+    ],
+    "name": {
+      "es": "Omalizumab",
+      "pt": "Omalizumabe"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "pneumologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Omalizumab"
+      },
+      "icon": "💊",
+      "id": "omalizumabe",
+      "keywords": [
+        "omalizumabe"
+      ],
+      "name": {
+        "es": "Omalizumab",
+        "pt": "Omalizumabe"
+      },
+      "pt": {
+        "name": "Omalizumabe"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "pneumologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

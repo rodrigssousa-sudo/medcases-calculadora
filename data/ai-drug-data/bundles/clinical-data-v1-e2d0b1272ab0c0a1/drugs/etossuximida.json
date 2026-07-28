@@ -1,0 +1,250 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "5408bb290f903e296a471992156a5ff62c6247d4d4250fc99e27bc3d3c11d180",
+    "sourceModule": "neurologia.js"
+  },
+  "drugId": "etossuximida",
+  "identity": {
+    "canonicalOwner": "neurologia.js",
+    "category": "anticonvulsivante",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "etossuximida",
+      "etosuximida",
+      "zarontin",
+      "anticonvulsivante succinimida"
+    ],
+    "name": {
+      "es": "Etosuximida",
+      "pt": "Etossuximida"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "anticonvulsivante",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Es específica para crisis de ausencia; no cubre bien crisis tónico-clónicas aisladamente.",
+          "Monitorizar hemograma si fiebre, infecciones recurrentes, equimosis o sangrado.",
+          "Monitorizar ánimo e ideación suicida.",
+          "Titular según respuesta clínica y tolerabilidad gastrointestinal.",
+          "No suspender bruscamente en pacientes epilépticos."
+        ],
+        "category": "anticonvulsivante",
+        "class": "Anticonvulsivante succinimida",
+        "commercialNames": {
+          "ar": [
+            "Zarontin",
+            "Etosuximida"
+          ],
+          "br": [
+            "Zarontin",
+            "Etossuximida"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas",
+          "Vómitos",
+          "Dolor abdominal",
+          "Pérdida de apetito",
+          "Somnolencia",
+          "Cefalea",
+          "Mareos"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a etosuximida o succinimidas",
+          "Antecedente de reacción hematológica grave asociada al fármaco"
+        ],
+        "dangerousAdverseEffects": [
+          "Discrasias sanguíneas raras",
+          "Síndrome de Stevens-Johnson rara",
+          "Síndrome lupus-like raro",
+          "Depresión o ideación suicida",
+          "Hepatotoxicidad rara"
+        ],
+        "dose": {
+          "adulto": "Crisis de ausencia: iniciar 250 mg VO 2 veces/día; titular según respuesta.",
+          "manutencao": "Mantenimiento habitual: 20 mg/kg/día. Para 70 kg: hasta 1400 mg/día según tolerancia.",
+          "maxDose": "Dosis máxima habitual: 1500 mg/día.",
+          "pediatrica": "Dosis inicial pediátrica: 10 mg/kg/día. Para 70 kg: 700 mg/día."
+        },
+        "doseKg": {
+          "maxDose": "1500 mg/día",
+          "severe": "Titular generalmente hasta 20–40 mg/kg/día según respuesta y nivel sérico.",
+          "standard": "Iniciar 10 mg/kg/día."
+        },
+        "halfLife": "Vida media aproximada: 30–60 horas en adultos; menor en niños.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Crisis de ausencia típicas",
+          "Epilepsia ausencia infantil",
+          "Crisis de ausencia sin crisis tónico-clónicas asociadas",
+          "Alternativa al valproato cuando ausencia es el principal tipo de crisis",
+          "Terapia combinada en ausencia refractaria en casos seleccionados",
+          "Epilepsia generalizada con predominio de ausencia bajo especialista"
+        ],
+        "interactions": [
+          "Valproato: puede alterar niveles de etosuximida",
+          "Alcohol y sedantes: mayor somnolencia",
+          "Otros anticonvulsivantes: monitorizar control de crisis y eventos adversos"
+        ],
+        "mechanism": "Bloquea canales de calcio tipo T en el tálamo, reduciendo descargas rítmicas asociadas a las crisis de ausencia.",
+        "name": "Etosuximida",
+        "onset": "Control de ausencias puede ocurrir tras días a semanas de titulación.",
+        "presentation": [
+          "Cápsula 250 mg",
+          "Jarabe/solución oral 250 mg/5 mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Ethosuximide Prescribing Information",
+          "ILAE Epilepsy Guidelines",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual, pero monitorizar tolerabilidad en enfermedad renal avanzada.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "etossuximida",
+      "keywords": [
+        "etossuximida",
+        "etosuximida",
+        "zarontin",
+        "anticonvulsivante succinimida"
+      ],
+      "name": {
+        "es": "Etosuximida",
+        "pt": "Etossuximida"
+      },
+      "pt": {
+        "alerts": [
+          "É específica para crises de ausência; não cobre bem crises tônico-clônicas isoladamente.",
+          "Monitorar hemograma se febre, infecções recorrentes, equimoses ou sangramento.",
+          "Monitorar humor e ideação suicida.",
+          "Titular conforme resposta clínica e tolerabilidade gastrointestinal.",
+          "Não suspender abruptamente em pacientes epilépticos."
+        ],
+        "category": "anticonvulsivante",
+        "class": "Anticonvulsivante succinimida",
+        "commercialNames": {
+          "ar": [
+            "Zarontin",
+            "Etosuximida"
+          ],
+          "br": [
+            "Zarontin",
+            "Etossuximida"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas",
+          "Vômitos",
+          "Dor abdominal",
+          "Perda de apetite",
+          "Sonolência",
+          "Cefaleia",
+          "Tontura"
+        ],
+        "contraindications": [
+          "Hipersensibilidade à etossuximida ou succinimidas",
+          "História de reação hematológica grave associada ao fármaco"
+        ],
+        "dangerousAdverseEffects": [
+          "Discrasias sanguíneas raras",
+          "Síndrome de Stevens-Johnson rara",
+          "Lúpus-like raro",
+          "Depressão ou ideação suicida",
+          "Hepatotoxicidade rara"
+        ],
+        "dose": {
+          "adulto": "Crises de ausência: iniciar 250 mg VO 2x/dia; titular conforme resposta.",
+          "manutencao": "Manutenção usual: 20 mg/kg/dia. Para 70 kg: até 1400 mg/dia conforme tolerância.",
+          "maxDose": "Dose máxima usual: 1500 mg/dia.",
+          "pediatrica": "Dose inicial pediátrica: 10 mg/kg/dia. Para 70 kg: 700 mg/dia."
+        },
+        "doseKg": {
+          "maxDose": "1500 mg/dia",
+          "severe": "Titular geralmente até 20–40 mg/kg/dia conforme resposta e nível sérico.",
+          "standard": "Iniciar 10 mg/kg/dia."
+        },
+        "halfLife": "Vida média aproximada: 30–60 horas em adultos; menor em crianças.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Crises de ausência típicas",
+          "Epilepsia ausência infantil",
+          "Crises de ausência sem crises tônico-clônicas associadas",
+          "Alternativa ao valproato quando ausência é o principal tipo de crise",
+          "Terapia combinada em ausência refratária em casos selecionados",
+          "Epilepsia generalizada com predomínio de ausência sob especialista"
+        ],
+        "interactions": [
+          "Valproato: pode alterar níveis de etossuximida",
+          "Álcool e sedativos: maior sonolência",
+          "Outros anticonvulsivantes: monitorar controle de crises e eventos adversos"
+        ],
+        "mechanism": "Bloqueia canais de cálcio tipo T no tálamo, reduzindo descargas rítmicas associadas às crises de ausência.",
+        "name": "Etossuximida",
+        "onset": "Controle de ausência pode ocorrer após dias a semanas de titulação.",
+        "presentation": [
+          "Cápsula 250 mg",
+          "Xarope/solução oral 250 mg/5 mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Ethosuximide Prescribing Information",
+          "ILAE Epilepsy Guidelines",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual, mas monitorar tolerabilidade em doença renal avançada.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "neurologia.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Crisis de ausencia: iniciar 250 mg VO 2 veces/día; titular según respuesta.",
+            "manutencao": "Mantenimiento habitual: 20 mg/kg/día. Para 70 kg: hasta 1400 mg/día según tolerancia.",
+            "maxDose": "Dosis máxima habitual: 1500 mg/día.",
+            "pediatrica": "Dosis inicial pediátrica: 10 mg/kg/día. Para 70 kg: 700 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Crises de ausência: iniciar 250 mg VO 2x/dia; titular conforme resposta.",
+            "manutencao": "Manutenção usual: 20 mg/kg/dia. Para 70 kg: até 1400 mg/dia conforme tolerância.",
+            "maxDose": "Dose máxima usual: 1500 mg/dia.",
+            "pediatrica": "Dose inicial pediátrica: 10 mg/kg/dia. Para 70 kg: 700 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

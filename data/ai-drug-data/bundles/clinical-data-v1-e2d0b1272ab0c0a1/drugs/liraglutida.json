@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "3d55dfacac4f3242c5f05703fcd4ddc2a4a2f2e616c14346aa6ed1f56d87e198",
+    "sourceModule": "endocrino_glp1.js"
+  },
+  "drugId": "liraglutida",
+  "identity": {
+    "canonicalOwner": "endocrino_glp1.js",
+    "category": "endocrino",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "liraglutida"
+    ],
+    "name": {
+      "es": "Liraglutida",
+      "pt": "Liraglutida"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "endocrino",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Liraglutida"
+      },
+      "icon": "💊",
+      "id": "liraglutida",
+      "keywords": [
+        "liraglutida"
+      ],
+      "name": {
+        "es": "Liraglutida",
+        "pt": "Liraglutida"
+      },
+      "pt": {
+        "name": "Liraglutida"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "endocrino_glp1.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

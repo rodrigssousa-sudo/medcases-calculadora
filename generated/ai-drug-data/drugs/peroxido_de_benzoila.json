@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "e36186aab0f54a871861bf021ea69144892baf62724c810d01062666f8f1c7d8",
+    "sourceModule": "alergia_imunologia.js"
+  },
+  "drugId": "peroxido_de_benzoila",
+  "identity": {
+    "canonicalOwner": "alergia_imunologia.js",
+    "category": "dermatologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "peroxido_de_benzoila",
+      "peróxido de benzoíla"
+    ],
+    "name": {
+      "es": "Peróxido de Benzóilo",
+      "pt": "Peróxido de Benzoíla"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "dermatologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Peróxido de Benzóilo"
+      },
+      "icon": "💊",
+      "id": "peroxido_de_benzoila",
+      "keywords": [
+        "peroxido_de_benzoila",
+        "peróxido de benzoíla"
+      ],
+      "name": {
+        "es": "Peróxido de Benzóilo",
+        "pt": "Peróxido de Benzoíla"
+      },
+      "pt": {
+        "name": "Peróxido de Benzoíla"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "alergia_imunologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

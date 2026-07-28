@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "7d39c44e79ab146649a196d2a5686db6ee86c1428b5c3999340c6323fe2a6f0a",
+    "sourceModule": "ginecologia.js"
+  },
+  "drugId": "clomifeno",
+  "identity": {
+    "canonicalOwner": "ginecologia.js",
+    "category": "ginecologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "clomifeno",
+      "citrato de clomifeno"
+    ],
+    "name": {
+      "es": "Citrato de Clomifeno",
+      "pt": "Citrato de Clomifeno"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "ginecologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Citrato de Clomifeno"
+      },
+      "icon": "💊",
+      "id": "clomifeno",
+      "keywords": [
+        "clomifeno",
+        "citrato de clomifeno"
+      ],
+      "name": {
+        "es": "Citrato de Clomifeno",
+        "pt": "Citrato de Clomifeno"
+      },
+      "pt": {
+        "name": "Citrato de Clomifeno"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "ginecologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

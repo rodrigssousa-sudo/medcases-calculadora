@@ -1,0 +1,408 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "231128a45b665142c0a1a666f95e8c7148a9555666a437ac3f930152ee113b5b",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "tobramicina",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "tobramicina",
+      "tobramicina generica",
+      "tobrex (colirio)",
+      "tobrex (colirio)",
+      "aminoglicosideo"
+    ],
+    "name": {
+      "es": "Tobramicina",
+      "pt": "Tobramicina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(244,63,94,0.15)",
+      "colorTxt": "#F43F5E",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Monitorización sérica OBLIGATORIA: medir pico (30 min post-infusión) y valle (30 min pre-dosis).",
+          "Evitar asociación con otros nefrotóxicos (anfotericina, vancomicina, contraste yodado).",
+          "Hidratación adecuada antes y durante el uso reduce el riesgo de nefrotoxicidad."
+        ],
+        "class": "Aminoglucósido",
+        "commercialNames": {
+          "ar": [
+            "Tobramicina Genérica",
+            "Tobrex (colirio)"
+          ],
+          "br": [
+            "Tobramicina Genérica",
+            "Tobrex (colírio)"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Nefrotoxicidad (reversible)",
+          "Ototoxicidad auditiva (irreversible)",
+          "Ototoxicidad vestibular",
+          "Bloqueo neuromuscular (raro)"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a aminoglucósidos",
+          "Miastenia gravis (bloqueo NM)"
+        ],
+        "dangerousAdverseEffects": [
+          "Insuficiencia renal aguda",
+          "Pérdida auditiva permanente",
+          "Bloqueo neuromuscular con parálisis"
+        ],
+        "dilution": "Diluir en 50–100 mL de SF 0,9% o SG 5%.",
+        "dose": {
+          "adultoEV": "5–7 mg/kg EV 24/24h (dose estendida)",
+          "pediatrica": "2–2,5 mg/kg EV cada 8h (pediátrico)"
+        },
+        "doseKg": {
+          "adultoEstendida": "5–7 mg/kg/día EV (dosis única extendida 24h)",
+          "pediatrica": "2–2,5 mg/kg/dosis EV cada 8h"
+        },
+        "halfLife": "Semivida 2–3 h (función renal normal). Prolongada en insuficiencia renal.",
+        "indicationDosing": {
+          "severe": "Fibrosis quística / P. aeruginosa pulmonar: 10 mg/kg/día IV o 300 mg inhalatorio 12/12h (formulación para nebulización).",
+          "standard": "Dosis extendida (ODA): 5–7 mg/kg IV 24/24h. Dosis convencional: 1,5–2 mg/kg IV 8/8h (menos recomendada).",
+          "synergy": "Sinergia (endocarditis): 1 mg/kg IV 8/8h asociado a beta-lactámico por 2 semanas."
+        },
+        "mechanism": "Se une irreversiblemente a la subunidad 30S ribosomal, causando lectura errónea del mRNA y muerte bacteriana por mecanismo bactericida concentración-dependiente.",
+        "name": "Tobramicina",
+        "neurotoxicityWarning": {
+          "management": "Suspender inmediatamente si valle > 2 mcg/mL persistente, elevación de creatinina > 0,5 mg/dL, o síntomas auditivos/vestibulares. Ototoxicidad generalmente IRREVERSIBLE — sin antídoto. Audiometría basal obligatoria en tratamientos > 7 días. Bloqueo neuromuscular: gluconato de calcio IV. Contraindicado en gestación (ototoxicidad fetal).",
+          "risk": "high",
+          "symptoms": [
+            "Ototoxicidad vestibular (mareos, ataxia, nistagmo) — puede ser irreversible",
+            "Ototoxicidad coclear (pérdida auditiva de altas frecuencias, tinnitus)",
+            "Nefrotoxicidad (elevación de creatinina, oliguria)",
+            "Bloqueo neuromuscular (raro — en administración rápida o asociación con relajantes)"
+          ]
+        },
+        "onset": "EV: inicio inmediato; pico sérico a los 30–60 min post-infusión.",
+        "presentation": [
+          "Solución inyectable EV/IM: 40 mg/mL (2 mL)",
+          "Solución inyectable EV/IM: 80 mg/2 mL",
+          "Colirio oftálmico: 0,3%"
+        ],
+        "qtRisk": {
+          "contraindications": [],
+          "monitoring": "Sin riesgo clínicamente significativo de prolongamiento del QT.",
+          "risk": "none"
+        },
+        "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "Dose individualizada",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Conforme nível sérico",
+              "unidade": "mg/kg"
+            },
+            "obs": "Ajuste guiado por pico y valle séricos.",
+            "pediatrica": {
+              "dose": "Dose individualizada",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Conforme nível sérico",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "5–7 mg/kg",
+              "doseMaxima": "7 mg/kg/dose",
+              "intervalo": "36–48h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Monitorización sérica obligatoria.",
+            "pediatrica": {
+              "dose": "2 mg/kg",
+              "doseMaxima": "6 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "5–7 mg/kg",
+              "doseMaxima": "7 mg/kg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Preferir esquema de dosis extendida.",
+            "pediatrica": {
+              "dose": "2–2,5 mg/kg",
+              "doseMaxima": "7,5 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "Dose individualizada",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Conforme nível sérico",
+              "unidade": "mg/kg"
+            },
+            "obs": "Alto riesgo de nefrotoxicidad y ototoxicidad.",
+            "pediatrica": {
+              "dose": "Dose individualizada",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Conforme nível sérico",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "1–2 mg/kg",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Pós-HD",
+              "unidade": "mg/kg"
+            },
+            "obs": "Administrar después de hemodiálisis y monitorizar niveles séricos.",
+            "pediatrica": {
+              "dose": "1–2 mg/kg",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Pós-HD",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Infundir en 30–60 minutos.",
+        "therapeuticMonitoring": {
+          "monitoring": "Monitorizar pico y valle séricos antes de la 3ª dosis (estado estacionario). Creatinina sérica y urea 2–3×/semana. Audiometría formal si tratamiento > 7 días. Reevaluar dosis cada 48–72h en insuficiencia renal.",
+          "notes": "Riesgo aumentado de toxicidad cuando se asocia a otros nefrotóxicos (vancomicina, anfotericina B, contraste yodado, diuréticos de asa). Valle persistentemente > 2 mcg/mL indica acumulación — reducir dosis o ampliar intervalo urgentemente. Dosis extendida (ODA) reduce nefrotoxicidad comparada con el esquema 8/8h.",
+          "required": true,
+          "target": "Dosis extendida (ODA 5–7 mg/kg/día): pico 20–30 mcg/mL (1h después de infusión) y valle < 1 mcg/mL. Dosis convencional: pico 5–10 mcg/mL y valle < 1–2 mcg/mL. Colectar pico 30 min después del fin de infusión de 30 min y valle 30 min antes de la próxima dosis."
+        },
+        "therapeuticRange": "Dosis extendida: pico 15–20 mcg/mL; valle < 1 mcg/mL. Convencional: pico 5–10 mcg/mL; valle < 1–2 mcg/mL."
+      },
+      "icon": "💉",
+      "id": "tobramicina",
+      "keywords": [
+        "tobramicina",
+        "tobramicina generica",
+        "tobrex (colirio)",
+        "tobrex (colirio)",
+        "aminoglicosideo"
+      ],
+      "name": {
+        "es": "Tobramicina",
+        "pt": "Tobramicina"
+      },
+      "pt": {
+        "alerts": [
+          "Monitorização sérica OBRIGATÓRIA: dosar pico (30 min pós-infusão) e vale (30 min pré-dose).",
+          "Evitar associação com outros nefrotóxicos (anfotericina, vancomicina, contraste iodado).",
+          "Hidratação adequada antes e durante o uso reduz risco de nefrotoxicidade."
+        ],
+        "class": "Aminoglicosídeo",
+        "commercialNames": {
+          "ar": [
+            "Tobramicina Genérica",
+            "Tobrex (colirio)"
+          ],
+          "br": [
+            "Tobramicina Genérica",
+            "Tobrex (colírio)"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Nefrotoxicidade (reversível)",
+          "Ototoxicidade auditiva (irreversível)",
+          "Ototoxicidade vestibular",
+          "Bloqueio neuromuscular (raro)"
+        ],
+        "contraindications": [
+          "Hipersensibilidade a aminoglicosídeos",
+          "Miastenia gravis (bloqueio NM)"
+        ],
+        "dangerousAdverseEffects": [
+          "Insuficiência renal aguda",
+          "Perda auditiva permanente",
+          "Bloqueio neuromuscular com paralisia"
+        ],
+        "dilution": "Diluir em 50–100 mL de SF 0,9% ou SG 5%.",
+        "dose": {
+          "adultoEV": "5–7 mg/kg EV 24/24h (dose estendida)",
+          "pediatrica": "2–2,5 mg/kg EV 8/8h (pediátrico)"
+        },
+        "doseKg": {
+          "adultoEstendida": "5–7 mg/kg/dia EV (dose única estendida 24h)",
+          "pediatrica": "2–2,5 mg/kg/dose EV 8/8h"
+        },
+        "halfLife": "Meia-vida 2–3 h (função renal normal). Prolongada em insuficiência renal.",
+        "indicationDosing": {
+          "severe": "Fibrose cística / P. aeruginosa pulmonar: 10 mg/kg/dia EV ou 300 mg inalatório 12/12h (formulação para nebulização).",
+          "standard": "Dose estendida (ODA): 5–7 mg/kg EV 24/24h. Dose convencional: 1,5–2 mg/kg EV 8/8h (menos recomendada).",
+          "synergy": "Sinergia (endocardite): 1 mg/kg EV 8/8h associado a beta-lactâmico por 2 semanas."
+        },
+        "mechanism": "Liga-se irreversivelmente à subunidade 30S ribossomal, causando leitura errônea do mRNA e morte bacteriana por mecanismo bactericida concentração-dependente.",
+        "name": "Tobramicina",
+        "neurotoxicityWarning": {
+          "management": "Suspender imediatamente se vale > 2 mcg/mL persistente, elevação de creatinina > 0,5 mg/dL, ou sintomas auditivos/vestibulares. Ototoxicidade geralmente IRREVERSÍVEL — não há antídoto. Audiometria baseline obrigatória em tratamentos > 7 dias. Bloqueio neuromuscular: gluconato de cálcio EV. Contraindicado em gestação (ototoxicidade fetal).",
+          "risk": "high",
+          "symptoms": [
+            "Ototoxicidade vestibular (tontura, ataxia, nistagmo) — pode ser irreversível",
+            "Ototoxicidade coclear (perda auditiva de altas frequências, zumbido)",
+            "Nefrotoxicidade (elevação de creatinina, oligúria)",
+            "Bloqueio neuromuscular (raro — em administração rápida ou associação a relaxantes)"
+          ]
+        },
+        "onset": "EV: início imediato; pico sérico em 30–60 min após infusão.",
+        "presentation": [
+          "Solução injetável EV/IM: 40 mg/mL (2 mL)",
+          "Solução injetável EV/IM: 80 mg/2 mL",
+          "Colírio oftálmico: 0,3%"
+        ],
+        "qtRisk": {
+          "contraindications": [],
+          "monitoring": "Sem risco clinicamente significativo de prolongamento do QT.",
+          "risk": "none"
+        },
+        "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "Dose individualizada",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Conforme nível sérico",
+              "unidade": "mg/kg"
+            },
+            "obs": "Ajuste guiado por pico e vale séricos.",
+            "pediatrica": {
+              "dose": "Dose individualizada",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Conforme nível sérico",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "5–7 mg/kg",
+              "doseMaxima": "7 mg/kg/dose",
+              "intervalo": "36–48h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Monitorização sérica obrigatória.",
+            "pediatrica": {
+              "dose": "2 mg/kg",
+              "doseMaxima": "6 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "5–7 mg/kg",
+              "doseMaxima": "7 mg/kg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "obs": "Preferir esquema de dose estendida.",
+            "pediatrica": {
+              "dose": "2–2,5 mg/kg",
+              "doseMaxima": "7,5 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "Dose individualizada",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Conforme nível sérico",
+              "unidade": "mg/kg"
+            },
+            "obs": "Alto risco de nefrotoxicidade e ototoxicidade.",
+            "pediatrica": {
+              "dose": "Dose individualizada",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Conforme nível sérico",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "1–2 mg/kg",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Pós-HD",
+              "unidade": "mg/kg"
+            },
+            "obs": "Administrar após hemodiálise e monitorar níveis séricos.",
+            "pediatrica": {
+              "dose": "1–2 mg/kg",
+              "doseMaxima": "Individualizada",
+              "intervalo": "Pós-HD",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Infundir em 30–60 minutos.",
+        "therapeuticMonitoring": {
+          "monitoring": "Monitorar pico e vale séricos antes da 3ª dose (estado estacionário). Creatinina sérica e ureia 2–3×/semana. Audiometria formal se tratamento > 7 dias. Reavaliar dose a cada 48–72h em insuficiência renal.",
+          "notes": "Risco aumentado de toxicidade quando associada a outros nefrotóxicos (vancomicina, anfotericina B, contraste iodado, diuréticos de alça). Vale persistentemente > 2 mcg/mL indica acúmulo — reduzir dose ou ampliar intervalo urgentemente. Dose estendida (ODA) reduz nefrotoxicidade comparada ao esquema 8/8h.",
+          "required": true,
+          "target": "Dose estendida (ODA 5–7 mg/kg/dia): pico 20–30 mcg/mL (1h após infusão) e vale < 1 mcg/mL. Dose convencional: pico 5–10 mcg/mL e vale < 1–2 mcg/mL. Colher pico 30 min após fim da infusão de 30 min e vale 30 min antes da próxima dose."
+        },
+        "therapeuticRange": "Dose estendida: pico 15–20 mcg/mL; vale < 1 mcg/mL. Convencional: pico 5–10 mcg/mL; vale < 1–2 mcg/mL."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoEV": "5–7 mg/kg EV 24/24h (dose estendida)",
+            "pediatrica": "2–2,5 mg/kg EV cada 8h (pediátrico)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoEV": "5–7 mg/kg EV 24/24h (dose estendida)",
+            "pediatrica": "2–2,5 mg/kg EV 8/8h (pediátrico)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

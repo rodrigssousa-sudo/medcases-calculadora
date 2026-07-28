@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "f317c55d82dffdc9382f7f085fd2c153799812c4033579d85eb541d8e948ef8e",
+    "sourceModule": "emergencia.js"
+  },
+  "drugId": "glicose_hipertonica",
+  "identity": {
+    "canonicalOwner": "emergencia.js",
+    "category": "emergencia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "glicose_hipertonica",
+      "glicose hipertônica 50%"
+    ],
+    "name": {
+      "es": "Glucosa Hipertónica 50%",
+      "pt": "Glicose Hipertônica 50%"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "emergencia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Glucosa Hipertónica 50%"
+      },
+      "icon": "💊",
+      "id": "glicose_hipertonica",
+      "keywords": [
+        "glicose_hipertonica",
+        "glicose hipertônica 50%"
+      ],
+      "name": {
+        "es": "Glucosa Hipertónica 50%",
+        "pt": "Glicose Hipertônica 50%"
+      },
+      "pt": {
+        "name": "Glicose Hipertônica 50%"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "emergencia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

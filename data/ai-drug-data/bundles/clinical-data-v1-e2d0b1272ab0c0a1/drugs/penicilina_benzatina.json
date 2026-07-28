@@ -1,0 +1,296 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "e855506a6827e5b70a426752c0d53efc6f321c0231a130cd9305f026a58b0eb6",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "penicilina_benzatina",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "penicilina_benzatina",
+      "penicilina benzatina",
+      "penicilina benzatinica",
+      "benzetacil",
+      "penicilina benzatina teuto",
+      "penicilina benzatinica richet",
+      "penicilina de acao prolongada"
+    ],
+    "name": {
+      "es": "Penicilina Benzatínica",
+      "pt": "Penicilina Benzatina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "NUNCA administrar por vía endovenosa.",
+          "Indicada para sífilis, faringitis estreptocócica y profilaxis de fiebre reumática."
+        ],
+        "class": "Penicilina de acción prolongada",
+        "commercialNames": {
+          "ar": [
+            "Benzetacil",
+            "Penicilina Benzatínica Richet"
+          ],
+          "br": [
+            "Benzetacil",
+            "Penicilina Benzatina Teuto"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Dolor local en el sitio de inyección",
+          "Reacción de Jarisch-Herxheimer (primeras 24h)"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia",
+          "Síndrome de Hoigné (inyección IV accidental)",
+          "Embolia con inyección IV accidental"
+        ],
+        "dilution": "Administración exclusivamente IM profunda — NUNCA EV.",
+        "dose": {
+          "pediatrica": "2.40 millones UI IM dosis única",
+          "sifilisLateLatente": "2,4 millones UI IM 1×/semana durante 3 semanas",
+          "sifilisPrecoce": "2,4 millones UI IM dosis única"
+        },
+        "doseKg": {
+          "maxDose": "2,4 millones UI",
+          "standard": "25.000–50.000 UI/kg"
+        },
+        "name": "Penicilina Benzatínica",
+        "presentation": [
+          "Suspensión IM 600.000 UI/dosis",
+          "Suspensión IM 1.200.000 UI/dosis",
+          "Suspensión IM 2.400.000 UI/dosis"
+        ],
+        "ref": "CDC STI Treatment Guidelines 2021 / Sanford Guide 2025 / MS Brasil",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "2,4 milhões UI",
+              "intervalo": "Dose única",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "2,4 milhões UI",
+              "intervalo": "Dose única",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Administración exclusivamente IM profunda.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "2,4 milhões UI",
+              "intervalo": "Dose única",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "2,4 milhões UI",
+              "intervalo": "Dose única",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "No requiere dosis suplementaria post-hemodiálisis.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "2,4 milhões UI",
+              "intervalo": "Dose única",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "message": "No requiere ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "IM profunda en glúteo. Aspirar antes de inyectar.",
+        "therapeuticRange": "Liberación lenta del depósito IM — niveles sostenidos por 2–4 semanas."
+      },
+      "icon": "💊",
+      "id": "penicilina_benzatina",
+      "keywords": [
+        "penicilina_benzatina",
+        "penicilina benzatina",
+        "penicilina benzatinica",
+        "benzetacil",
+        "penicilina benzatina teuto",
+        "penicilina benzatinica richet",
+        "penicilina de acao prolongada"
+      ],
+      "name": {
+        "es": "Penicilina Benzatínica",
+        "pt": "Penicilina Benzatina"
+      },
+      "pt": {
+        "alerts": [
+          "NUNCA administrar por via endovenosa.",
+          "Indicada para sífilis, faringite estreptocócica e profilaxia de febre reumática."
+        ],
+        "class": "Penicilina de ação prolongada",
+        "commercialNames": {
+          "ar": [
+            "Benzetacil",
+            "Penicilina Benzatínica Richet"
+          ],
+          "br": [
+            "Benzetacil",
+            "Penicilina Benzatina Teuto"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Dor local no sítio de injeção",
+          "Reação de Jarisch-Herxheimer (nas primeiras 24h)"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia",
+          "Síndrome de Hoigne (injeção IV acidental)",
+          "Embolia com injeção IV acidental"
+        ],
+        "dilution": "Administração exclusivamente IM profunda — NUNCA EV.",
+        "dose": {
+          "pediatrica": "2.40 milhões UI IM dose única",
+          "sifilisLateLatente": "2,4 milhões UI IM 1×/semana por 3 semanas",
+          "sifilisPrecoce": "2,4 milhões UI IM dose única"
+        },
+        "doseKg": {
+          "maxDose": "2,4 milhões UI",
+          "standard": "25.000–50.000 UI/kg"
+        },
+        "name": "Penicilina Benzatina",
+        "presentation": [
+          "Suspensão IM 600.000 UI/dose",
+          "Suspensão IM 1.200.000 UI/dose",
+          "Suspensão IM 2.400.000 UI/dose"
+        ],
+        "ref": "CDC STI Treatment Guidelines 2021 / Sanford Guide 2025 / MS Brasil",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "2,4 milhões UI",
+              "intervalo": "Dose única",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "2,4 milhões UI",
+              "intervalo": "Dose única",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Administração exclusivamente IM profunda.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "2,4 milhões UI",
+              "intervalo": "Dose única",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "2,4 milhões UI",
+              "intervalo": "Dose única",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Não necessita dose suplementar pós-hemodiálise.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "2,4 milhões UI",
+              "intervalo": "Dose única",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "message": "Não necessita ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "IM profunda em glúteo. Aspirar antes de injetar.",
+        "therapeuticRange": "Liberação lenta do depot IM — níveis sustentados por 2–4 semanas."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "pediatrica": "2.40 millones UI IM dosis única",
+            "sifilisLateLatente": "2,4 millones UI IM 1×/semana durante 3 semanas",
+            "sifilisPrecoce": "2,4 millones UI IM dosis única"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "pediatrica": "2.40 milhões UI IM dose única",
+            "sifilisLateLatente": "2,4 milhões UI IM 1×/semana por 3 semanas",
+            "sifilisPrecoce": "2,4 milhões UI IM dose única"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

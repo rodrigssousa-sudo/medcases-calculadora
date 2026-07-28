@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "9ca0c9faf3ab34409bbe9cabfb30ed3f4c17ef72113e07716db781df4077159d",
+    "sourceModule": "analgesicos.js"
+  },
+  "drugId": "etanercepte",
+  "identity": {
+    "canonicalOwner": "analgesicos.js",
+    "category": "reumato",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "etanercepte"
+    ],
+    "name": {
+      "es": "Etanercept",
+      "pt": "Etanercepte"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "reumato",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Etanercept"
+      },
+      "icon": "💊",
+      "id": "etanercepte",
+      "keywords": [
+        "etanercepte"
+      ],
+      "name": {
+        "es": "Etanercept",
+        "pt": "Etanercepte"
+      },
+      "pt": {
+        "name": "Etanercepte"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "analgesicos.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

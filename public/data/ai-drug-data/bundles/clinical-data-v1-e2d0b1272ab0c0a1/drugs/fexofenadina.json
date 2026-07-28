@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "1bb84fc5c75a3acfaa191fc8e63339d42657203fe7fdce26045ca87af6c45497",
+    "sourceModule": "alergia_imunologia.js"
+  },
+  "drugId": "fexofenadina",
+  "identity": {
+    "canonicalOwner": "alergia_imunologia.js",
+    "category": "alergia_imunologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "fexofenadina"
+    ],
+    "name": {
+      "es": "Fexofenadina",
+      "pt": "Fexofenadina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "alergia_imunologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Fexofenadina"
+      },
+      "icon": "💊",
+      "id": "fexofenadina",
+      "keywords": [
+        "fexofenadina"
+      ],
+      "name": {
+        "es": "Fexofenadina",
+        "pt": "Fexofenadina"
+      },
+      "pt": {
+        "name": "Fexofenadina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "alergia_imunologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

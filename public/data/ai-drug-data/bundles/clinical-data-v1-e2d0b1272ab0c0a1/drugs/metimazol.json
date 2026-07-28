@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "b7626e7caeff25fe4977768c0d14fd93426f0aecbff790a57ea1563cea25d8b1",
+    "sourceModule": "endocrino.js"
+  },
+  "drugId": "metimazol",
+  "identity": {
+    "canonicalOwner": "endocrino.js",
+    "category": "endocrino",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "metimazol",
+      "metimazol / tiamazol"
+    ],
+    "name": {
+      "es": "Metimazol / Tiamazol",
+      "pt": "Metimazol / Tiamazol"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "endocrino",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Metimazol / Tiamazol"
+      },
+      "icon": "💊",
+      "id": "metimazol",
+      "keywords": [
+        "metimazol",
+        "metimazol / tiamazol"
+      ],
+      "name": {
+        "es": "Metimazol / Tiamazol",
+        "pt": "Metimazol / Tiamazol"
+      },
+      "pt": {
+        "name": "Metimazol / Tiamazol"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "endocrino.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,622 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "6c7db9d67b621be5ba2ddf27f208aa8c7a87b2feae51a8e63c83ed7bdbd4ef81",
+    "sourceModule": "cardio.js"
+  },
+  "drugId": "metildopa",
+  "identity": {
+    "canonicalOwner": "cardio.js",
+    "category": "cardio",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "metildopa",
+      "aldomet",
+      "agonista alfa-2 central / falso neurotransmissor adrenergico"
+    ],
+    "name": {
+      "es": "Metildopa",
+      "pt": "Metildopa"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardio",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(37,99,235,0.14)",
+      "colorTxt": "#1D4ED8",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "No es medicamento de elección para emergencia hipertensiva por inicio de acción lento.",
+          "Monitorizar función hepática. Suspender si hay ictericia, fiebre inexplicada, dolor abdominal, coluria o elevación importante de transaminasas.",
+          "Puede causar anemia hemolítica Coombs positiva; investigar si hay fatiga intensa, palidez, ictericia o caída de hemoglobina.",
+          "Evitar en depresión importante por riesgo de empeoramiento del ánimo."
+        ],
+        "auditNotes": {
+          "note": "Falso neurotransmisor alfa-2 central — convertida en alfa-metilnoradrenalina en el SNC. Onset 4–6h (pico 24–48h): NO usar en emergencia hipertensiva. Biodisponibilidad ~25% con alta variabilidad. Historial de seguridad fetal consolidado (ACOG/ISSHP), pero labetalol y nifedipino son preferidos en urgencias obstétricas. Hierro oral reduce absorción ~70–80% — separar 2h. CONTRAINDICADA con IMAO. Vigilancia obligatoria: hepatotoxicidad (AST/ALT primeras semanas) + anemia hemolítica Coombs+ (hemograma si síntomas). Auditoría V2 completada 2026-06.",
+          "sourcePriority": [
+            "ACOG Practice Bulletin 2024",
+            "ISSHP Hypertension in Pregnancy Guidance 2022",
+            "ESC Hypertension Guidelines 2023",
+            "AHA/ACC Hypertension Guidelines 2023",
+            "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+            "Katzung Farmacologia Básica e Clínica 15ª ed.",
+            "Lexicomp Online 2026",
+            "Micromedex 2026",
+            "FDA label",
+            "EMA label"
+          ],
+          "status": "excellent_after_review_V2"
+        },
+        "class": "Agonista alfa-2 central / falso neurotransmisor adrenérgico",
+        "clinicalPearls": [
+          "Metildopa es clásica en embarazo, pero hoy muchas veces pierde lugar frente a labetalol y nifedipino por tolerabilidad y rapidez.",
+          "No usar como droga principal en emergencia hipertensiva — inicio de acción en 4–6h, pico en 24–48h.",
+          "Anemia hemolítica Coombs positiva y hepatotoxicidad son los eventos adversos que no deben olvidarse.",
+          "Sedación y depresión limitan mucho el uso crónico fuera del embarazo."
+        ],
+        "commercialNames": {
+          "ar": [
+            "Aldomet",
+            "Metildopa"
+          ],
+          "br": [
+            "Aldomet",
+            "Metildopa"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia",
+          "Sedación",
+          "Boca seca",
+          "Mareos",
+          "Cefalea",
+          "Edema",
+          "Náuseas",
+          "Hipotensión ortostática"
+        ],
+        "contraindications": {
+          "absolute": [
+            "Enfermedad hepática activa",
+            "Historia de hepatotoxicidad por metildopa",
+            "Uso concomitante de IMAO",
+            "Hipersensibilidad a metildopa"
+          ],
+          "relative": [
+            "Depresión mayor",
+            "Anemia hemolítica previa",
+            "Enfermedad hepática previa",
+            "Adulto mayor frágil",
+            "Insuficiencia renal avanzada"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "Hepatotoxicidad",
+          "Hepatitis medicamentosa",
+          "Anemia hemolítica Coombs positiva",
+          "Síndrome lupus-like",
+          "Depresión importante",
+          "Fiebre medicamentosa",
+          "Hiperprolactinemia/galactorrea rara"
+        ],
+        "dose": {
+          "doseMaxima": "Generalmente hasta 2 g/día; algunos protocolos aceptan hasta 3 g/día, pero los efectos adversos limitan su uso.",
+          "gestacao": "250 mg VO 2–3 veces/día; titular según respuesta. Usada principalmente para control crónico, no para emergencia hipertensiva.",
+          "hipertensao": "Iniciar 250 mg VO 2–3 veces/día. Titular gradualmente según PA y tolerancia."
+        },
+        "guidelineRecommendations": [
+          "Aceptada como opción para hipertensión crónica en embarazo, especialmente cuando se prioriza historial de seguridad fetal.",
+          "No se prefiere para urgencia/emergencia hipertensiva por inicio lento."
+        ],
+        "hepaticDose": {
+          "message": "Contraindicada en enfermedad hepática activa o historia de hepatotoxicidad por metildopa. Monitorizar transaminasas en los primeros meses de uso incluso sin hepatopatía previa.",
+          "required": true
+        },
+        "indications": {
+          "approved": [
+            "Hipertensión arterial",
+            "Hipertensión crónica en embarazo"
+          ],
+          "offLabel": [
+            "Hipertensión gestacional leve/moderada en escenarios seleccionados",
+            "Alternativa cuando otros antihipertensivos no son adecuados"
+          ]
+        },
+        "interactions": {
+          "alta": [
+            {
+              "consequence": "Pérdida significativa del efecto antihipertensivo",
+              "drug": "Hierro oral (sulfato ferroso, fumarato ferroso)",
+              "management": "Separar administración por al menos 2 horas. Preferir administrar metildopa 1–2h antes del hierro.",
+              "mechanism": "Quelación en el lumen intestinal reduce absorción de metildopa hasta 70–80%"
+            },
+            {
+              "consequence": "Toxicidad por litio (temblor, confusión, ataxia, nefrotoxicidad)",
+              "drug": "Litio",
+              "management": "Monitorizar nivel sérico de litio (objetivo 0,6–1,0 mEq/L), temblor y alteraciones cognitivas. Ajustar dosis de litio si necesario.",
+              "mechanism": "Metildopa puede aumentar reabsorción renal de litio y su neurotoxicidad por mecanismo incierto"
+            },
+            {
+              "consequence": "Hipotensión sintomática, mareos, caídas especialmente en ancianos y gestantes",
+              "drug": "Otros antihipertensivos / diuréticos",
+              "management": "Monitorizar PA frecuentemente al iniciar o ajustar combinaciones. Titular escalonadamente.",
+              "mechanism": "Hipotensión aditiva por mecanismos complementarios"
+            },
+            {
+              "consequence": "Sedación profunda, depresión respiratoria, hipotensión e incapacidad funcional",
+              "drug": "Alcohol / sedantes / benzodiacepinas / opioides",
+              "management": "Evitar asociación. Si necesaria, usar dosis mínimas y monitorizar nivel de conciencia y PA.",
+              "mechanism": "Depresión aditiva del SNC potenciada por el efecto sedativo central de metildopa"
+            }
+          ],
+          "contraindicadas": [
+            {
+              "consequence": "Crisis hipertensiva grave o hipotensión profunda imprevisible",
+              "drug": "IMAO (fenelzina, tranilcipromina, selegilina)",
+              "management": "Absolutamente contraindicado. Aguardar wash-out de IMAO (≥14 días) antes de iniciar metildopa.",
+              "mechanism": "Acumulación de catecolaminas + acción alfa-metilnoradrenalina → respuesta tensional imprevisible y exagerada"
+            }
+          ],
+          "moderada": [
+            {
+              "consequence": "Empeoramiento del parkinsonismo o alteraciones tensionales imprevisibles",
+              "drug": "Levodopa",
+              "management": "Evitar combinación en parkinsonismo. Monitorizar control motor y PA si asociación inevitable.",
+              "mechanism": "Ambos compiten por la misma descarboxilasa aromática — posible antagonismo del efecto antiparkinsoniano de levodopa y efectos centrales imprevisibles"
+            },
+            {
+              "consequence": "Reducción del control tensional",
+              "drug": "Antidepresivos tricíclicos (amitriptilina, imipramina)",
+              "management": "Monitorizar PA. Considerar alternativas antidepresivas (ISRS) cuando sea posible.",
+              "mechanism": "Bloqueo alfa-2 por tricíclicos puede reducir efecto antihipertensivo de metildopa"
+            }
+          ]
+        },
+        "mechanism": "Se convierte en el sistema nervioso central en alfa-metilnoradrenalina, que estimula receptores alfa-2 centrales, reduciendo descarga simpática, resistencia vascular periférica, frecuencia cardíaca y presión arterial.",
+        "monitoring": {
+          "baseline": [
+            "Presión arterial",
+            "Frecuencia cardíaca",
+            "AST/ALT",
+            "Bilirrubina",
+            "Hemograma completo",
+            "Creatinina/ClCr",
+            "Historia de depresión"
+          ],
+          "followUp": [
+            "PA y FC seriadas",
+            "Sedación y síntomas depresivos",
+            "Transaminasas (1ª–3ª semana; luego cada 3–6 meses)",
+            "Hemograma si fatiga, palidez o ictericia",
+            "Coombs directo si sospecha de anemia hemolítica",
+            "Edema y aumento de peso",
+            "Hipotensión ortostática"
+          ]
+        },
+        "name": "Metildopa",
+        "onset": "Efecto antihipertensivo en 4–6 horas; efecto máximo puede tardar 24–48 horas.",
+        "patientEducation": [
+          "Puede causar somnolencia; evitar conducir si hay sedación.",
+          "Avisar inmediatamente piel amarilla, orina oscura, fiebre inexplicada, fatiga intensa o palidez.",
+          "No suspender sin indicación médica.",
+          "Si usa hierro, separar horarios para no reducir absorción."
+        ],
+        "pharmacodynamics": "Reduce la presión arterial de forma gradual, con baja frecuencia de taquicardia refleja. Tradicionalmente es una de las opciones más estudiadas en hipertensión del embarazo, aunque actualmente labetalol y nifedipino suelen preferirse por rapidez/tolerabilidad.",
+        "pharmacokinetics": {
+          "absorption": "Absorción oral variable (~25%); efecto de primer paso intestinal y hepático significativo.",
+          "bioavailability": "≈25%",
+          "dialysability": "Parcialmente dializable; administrar después de HD si posible y monitorizar PA.",
+          "elimination": "Eliminación renal importante, incluyendo metabolitos conjugados (~70% renal).",
+          "halfLife": "≈2 horas",
+          "metabolism": "Metabolismo intestinal y hepático parcial; conjugación con sulfato y glucurónido.",
+          "proteinBinding": "Baja unión a proteínas plasmáticas (~10–15%).",
+          "vd": "~0,6 L/kg"
+        },
+        "pharmacologicClass": "Antihipertensivo de acción central",
+        "presentation": [
+          "Comprimidos 250 mg",
+          "Comprimidos 500 mg según disponibilidad"
+        ],
+        "ref": "ACOG Practice Bulletin 2024 · ISSHP Hypertension in Pregnancy Guidance 2022 · ESC Hypertension Guidelines 2023 · AHA/ACC Hypertension Guidelines 2023 · Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed. · Katzung Farmacologia Básica e Clínica 15ª ed. · Lexicomp Online 2026 · Micromedex 2026 · FDA label · EMA label",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Reducir dosis. Mayor riesgo de sedación e hipotensión.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "125–250 mg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "12/12h–24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Titular lentamente; monitorizar hipotensión y sedación.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "250 mg",
+              "doseMaxima": "1–2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dosis usual según respuesta tensional.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "2–3 g/dia",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Individualizar; usar solo si necesario y con monitorización clínica.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "125–250 mg",
+              "doseMaxima": "500 mg–1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Parcialmente eliminada por HD; administrar tras sesión si posible. Monitorizar hipotensión postdiálisis.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "125–250 mg",
+              "doseMaxima": "500 mg–1 g/dia",
+              "intervalo": "após HD ou 24/24h conforme PA",
+              "unidade": "mg"
+            }
+          },
+          "message": "Sin ajuste necesario con función renal preservada.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "safetyFlags": {
+          "centralAlpha2Agonist": true,
+          "chronicPregnancyUse": true,
+          "coombsPositiveRisk": true,
+          "depressionRisk": true,
+          "elderlyHighRisk": true,
+          "hemolyticAnemiaRisk": true,
+          "hepatotoxicityRisk": true,
+          "imaoContraindicated": true,
+          "notForEmergency": true,
+          "orthostaticRisk": true,
+          "pregnancyHypertensionDrug": true,
+          "renalCaution": true,
+          "sedationRisk": true,
+          "slowOnset": true,
+          "warning": "Metildopa es opción clásica para hipertensión en embarazo, pero tiene inicio lento y puede causar hepatotoxicidad, anemia hemolítica Coombs positiva, sedación y depresión."
+        },
+        "therapeuticRange": "Objetivo: control gradual de PA, evitando sedación, hipotensión ortostática, bradicardia, hepatotoxicidad y anemia hemolítica."
+      },
+      "icon": "🫀",
+      "id": "metildopa",
+      "keywords": [
+        "metildopa",
+        "aldomet",
+        "agonista alfa-2 central / falso neurotransmissor adrenergico"
+      ],
+      "name": {
+        "es": "Metildopa",
+        "pt": "Metildopa"
+      },
+      "pt": {
+        "alerts": [
+          "Não é medicamento de escolha para emergência hipertensiva por início de ação lento.",
+          "Monitorar função hepática. Suspender se houver icterícia, febre inexplicada, dor abdominal, colúria ou elevação importante de transaminases.",
+          "Pode causar anemia hemolítica Coombs positiva; investigar se houver fadiga intensa, palidez, icterícia ou queda de hemoglobina.",
+          "Evitar em depressão importante por risco de piora do humor."
+        ],
+        "auditNotes": {
+          "note": "Falso neurotransmissor alfa-2 central — convertida em alfa-metilnoradrenalina no SNC. Onset 4–6h (pico 24–48h): NÃO usar em emergência hipertensiva. Biodisponibilidade ~25% com alta variabilidade. Histórico de segurança fetal consolidado (ACOG/ISSHP), mas labetalol e nifedipina são preferidos em urgências obstétricas. Ferro oral reduz absorção em ~70–80% — separar 2h. CONTRAINDICADA com IMAO. Vigilância obrigatória: hepatotoxicidade (TGO/TGP nas primeiras semanas) + anemia hemolítica Coombs+ (hemograma se sintomas). Auditoria V2 completada 2026-06.",
+          "sourcePriority": [
+            "ACOG Practice Bulletin 2024",
+            "ISSHP Hypertension in Pregnancy Guidance 2022",
+            "ESC Hypertension Guidelines 2023",
+            "AHA/ACC Hypertension Guidelines 2023",
+            "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed.",
+            "Katzung Farmacologia Básica e Clínica 15ª ed.",
+            "Lexicomp Online 2026",
+            "Micromedex 2026",
+            "FDA label",
+            "EMA label"
+          ],
+          "status": "excellent_after_review_V2"
+        },
+        "class": "Agonista alfa-2 central / falso neurotransmissor adrenérgico",
+        "clinicalPearls": [
+          "Metildopa é clássica na gestação, mas hoje muitas vezes perde espaço para labetalol e nifedipina pela tolerabilidade e rapidez.",
+          "Não usar como droga principal em emergência hipertensiva — início de ação em 4–6h, pico em 24–48h.",
+          "Anemia hemolítica Coombs positiva e hepatotoxicidade são os eventos adversos que não podem ser esquecidos.",
+          "Sedação e depressão limitam muito o uso crônico fora da gestação."
+        ],
+        "commercialNames": {
+          "ar": [
+            "Aldomet",
+            "Metildopa"
+          ],
+          "br": [
+            "Aldomet",
+            "Metildopa"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência",
+          "Sedação",
+          "Boca seca",
+          "Tontura",
+          "Cefaleia",
+          "Edema",
+          "Náuseas",
+          "Hipotensão ortostática"
+        ],
+        "contraindications": {
+          "absolute": [
+            "Doença hepática ativa",
+            "História de hepatotoxicidade por metildopa",
+            "Uso concomitante de IMAO",
+            "Hipersensibilidade à metildopa"
+          ],
+          "relative": [
+            "Depressão maior",
+            "Anemia hemolítica prévia",
+            "Doença hepática prévia",
+            "Idoso frágil",
+            "Insuficiência renal avançada"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "Hepatotoxicidade",
+          "Hepatite medicamentosa",
+          "Anemia hemolítica Coombs positiva",
+          "Síndrome lúpus-like",
+          "Depressão importante",
+          "Febre medicamentosa",
+          "Hiperprolactinemia/galactorreia rara"
+        ],
+        "dose": {
+          "doseMaxima": "Geralmente até 2 g/dia; alguns protocolos aceitam até 3 g/dia, mas efeitos adversos limitam uso.",
+          "gestacao": "250 mg VO 2–3x/dia; titular conforme resposta. Usada principalmente para controle crônico, não para emergência hipertensiva.",
+          "hipertensao": "Iniciar 250 mg VO 2–3x/dia. Titular gradualmente conforme PA e tolerância."
+        },
+        "guidelineRecommendations": [
+          "Aceita como opção para hipertensão crônica na gestação, especialmente quando se prioriza histórico de segurança fetal.",
+          "Não é preferida para urgência/emergência hipertensiva por início lento."
+        ],
+        "hepaticDose": {
+          "message": "Contraindicada em doença hepática ativa ou história de hepatotoxicidade por metildopa. Monitorar transaminases nos primeiros meses de uso mesmo sem hepatopatia prévia.",
+          "required": true
+        },
+        "indications": {
+          "approved": [
+            "Hipertensão arterial",
+            "Hipertensão crônica na gestação"
+          ],
+          "offLabel": [
+            "Hipertensão gestacional leve/moderada em cenários selecionados",
+            "Alternativa quando outros anti-hipertensivos não são adequados"
+          ]
+        },
+        "interactions": {
+          "alta": [
+            {
+              "consequence": "Perda significativa do efeito anti-hipertensivo",
+              "drug": "Ferro oral (sulfato ferroso, fumarato ferroso)",
+              "management": "Separar administração por pelo menos 2 horas. Preferir administrar metildopa 1–2h antes do ferro.",
+              "mechanism": "Quelação no lúmen intestinal reduz absorção da metildopa em até 70–80%"
+            },
+            {
+              "consequence": "Toxicidade por lítio (tremor, confusão, ataxia, nefrotoxicidade)",
+              "drug": "Lítio",
+              "management": "Monitorar nível sérico de lítio (alvo 0,6–1,0 mEq/L), tremor e alterações cognitivas. Ajustar dose de lítio se necessário.",
+              "mechanism": "Metildopa pode aumentar reabsorção renal de lítio e sua neurotoxicidade por mecanismo incerto"
+            },
+            {
+              "consequence": "Hipotensão sintomática, tonturas, quedas especialmente em idosos e gestantes",
+              "drug": "Outros anti-hipertensivos / diuréticos",
+              "management": "Monitorar PA frequentemente ao iniciar ou ajustar combinações. Titular escalonadamente.",
+              "mechanism": "Hipotensão aditiva por mecanismos complementares"
+            },
+            {
+              "consequence": "Sedação profunda, depressão respiratória, hipotensão e incapacidade funcional",
+              "drug": "Álcool / sedativos / benzodiazepínicos / opioides",
+              "management": "Evitar associação. Se necessária, usar doses mínimas e monitorar nível de consciência e PA.",
+              "mechanism": "Depressão aditiva do SNC potencializada pelo efeito sedativo central da metildopa"
+            }
+          ],
+          "contraindicadas": [
+            {
+              "consequence": "Crise hipertensiva grave ou hipotensão profunda imprevisível",
+              "drug": "IMAO (fenelzina, tranilcipromina, selegilina)",
+              "management": "Absolutamente contraindicado. Aguardar wash-out de IMAO (≥14 dias) antes de iniciar metildopa.",
+              "mechanism": "Acúmulo de catecolaminas + ação alfa-metilnoradrenalina → resposta pressórica imprevisível e exagerada"
+            }
+          ],
+          "moderada": [
+            {
+              "consequence": "Piora do parkinsonismo ou alterações pressóricas imprevisíveis",
+              "drug": "Levodopa",
+              "management": "Evitar combinação em parkinsonismo. Monitorar controle motor e PA se associação inevitável.",
+              "mechanism": "Ambos competem pela mesma descarboxilase aromática — possível antagonismo do efeito antiparkinsoniano da levodopa e efeitos centrais imprevisíveis"
+            },
+            {
+              "consequence": "Redução do controle pressórico",
+              "drug": "Antidepressivos tricíclicos (amitriptilina, imipramina)",
+              "management": "Monitorar PA. Considerar alternativas antidepressivas (ISRS) quando possível.",
+              "mechanism": "Bloqueio alfa-2 pelos tricíclicos pode reduzir efeito anti-hipertensivo da metildopa"
+            }
+          ]
+        },
+        "mechanism": "É convertida no sistema nervoso central em alfa-metilnoradrenalina, que estimula receptores alfa-2 centrais, reduzindo descarga simpática, resistência vascular periférica, frequência cardíaca e pressão arterial.",
+        "monitoring": {
+          "baseline": [
+            "Pressão arterial",
+            "Frequência cardíaca",
+            "TGO/TGP (ALT/AST)",
+            "Bilirrubina",
+            "Hemograma completo",
+            "Creatinina/ClCr",
+            "História de depressão"
+          ],
+          "followUp": [
+            "PA e FC seriadas",
+            "Sedação e sintomas depressivos",
+            "Transaminases (1ª–3ª semana; depois a cada 3–6 meses)",
+            "Hemograma se fadiga, palidez ou icterícia",
+            "Coombs direto se suspeita de anemia hemolítica",
+            "Edema e ganho de peso",
+            "Hipotensão ortostática"
+          ]
+        },
+        "name": "Metildopa",
+        "onset": "Efeito anti-hipertensivo em 4–6 horas; efeito máximo pode demorar 24–48 horas.",
+        "patientEducation": [
+          "Pode causar sonolência; evitar dirigir se houver sedação.",
+          "Avisar imediatamente pele amarela, urina escura, febre inexplicada, fadiga intensa ou palidez.",
+          "Não suspender sem orientação médica.",
+          "Se usa ferro, separar horários para não reduzir absorção."
+        ],
+        "pharmacodynamics": "Reduz a pressão arterial de forma gradual, com baixa frequência de taquicardia reflexa. É tradicionalmente uma das opções mais estudadas na hipertensão da gestação, embora atualmente labetalol e nifedipina sejam muitas vezes preferidos pela rapidez/tolerabilidade.",
+        "pharmacokinetics": {
+          "absorption": "Absorção oral variável (~25%); efeito de primeira passagem intestinal e hepático significativo.",
+          "bioavailability": "≈25%",
+          "dialysability": "Parcialmente dialisável; administrar após HD se possível e monitorar PA.",
+          "elimination": "Eliminação renal importante, incluindo metabólitos conjugados (~70% renal).",
+          "halfLife": "≈2 horas",
+          "metabolism": "Metabolismo intestinal e hepático parcial; conjugação com sulfato e glucuronídeo.",
+          "proteinBinding": "Baixa ligação a proteínas plasmáticas (~10–15%).",
+          "vd": "~0,6 L/kg"
+        },
+        "pharmacologicClass": "Anti-hipertensivo de ação central",
+        "presentation": [
+          "Comprimidos 250 mg",
+          "Comprimidos 500 mg conforme disponibilidade"
+        ],
+        "ref": "ACOG Practice Bulletin 2024 · ISSHP Hypertension in Pregnancy Guidance 2022 · ESC Hypertension Guidelines 2023 · AHA/ACC Hypertension Guidelines 2023 · Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed. · Katzung Farmacologia Básica e Clínica 15ª ed. · Lexicomp Online 2026 · Micromedex 2026 · FDA label · EMA label",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Reduzir dose. Maior risco de sedação e hipotensão.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "125–250 mg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "12/12h–24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Titular lentamente; monitorar hipotensão e sedação.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "250 mg",
+              "doseMaxima": "1–2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dose usual conforme resposta pressórica.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "2–3 g/dia",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Individualizar; usar apenas se necessário e com monitorização clínica.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "125–250 mg",
+              "doseMaxima": "500 mg–1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Parcialmente removida por HD; administrar após sessão se possível. Monitorar hipotensão pós-diálise.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "125–250 mg",
+              "doseMaxima": "500 mg–1 g/dia",
+              "intervalo": "após HD ou 24/24h conforme PA",
+              "unidade": "mg"
+            }
+          },
+          "message": "Sem ajuste necessário com função renal preservada.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "safetyFlags": {
+          "centralAlpha2Agonist": true,
+          "chronicPregnancyUse": true,
+          "coombsPositiveRisk": true,
+          "depressionRisk": true,
+          "elderlyHighRisk": true,
+          "hemolyticAnemiaRisk": true,
+          "hepatotoxicityRisk": true,
+          "imaoContraindicated": true,
+          "notForEmergency": true,
+          "orthostaticRisk": true,
+          "pregnancyHypertensionDrug": true,
+          "renalCaution": true,
+          "sedationRisk": true,
+          "slowOnset": true,
+          "warning": "Metildopa é opção clássica para hipertensão na gestação, mas tem início lento e pode causar hepatotoxicidade, anemia hemolítica Coombs positiva, sedação e depressão."
+        },
+        "therapeuticRange": "Objetivo: controle gradual da PA, evitando sedação, hipotensão ortostática, bradicardia, hepatotoxicidade e anemia hemolítica."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardio.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "doseMaxima": "Generalmente hasta 2 g/día; algunos protocolos aceptan hasta 3 g/día, pero los efectos adversos limitan su uso.",
+            "gestacao": "250 mg VO 2–3 veces/día; titular según respuesta. Usada principalmente para control crónico, no para emergencia hipertensiva.",
+            "hipertensao": "Iniciar 250 mg VO 2–3 veces/día. Titular gradualmente según PA y tolerancia."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "doseMaxima": "Geralmente até 2 g/dia; alguns protocolos aceitam até 3 g/dia, mas efeitos adversos limitam uso.",
+            "gestacao": "250 mg VO 2–3x/dia; titular conforme resposta. Usada principalmente para controle crônico, não para emergência hipertensiva.",
+            "hipertensao": "Iniciar 250 mg VO 2–3x/dia. Titular gradualmente conforme PA e tolerância."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}
