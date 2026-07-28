@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "89245ce459061515826459b906fb378a10a55002e2d83a44fbc1b1b6efab95a9",
+    "sourceModule": "emergencia.js"
+  },
+  "drugId": "ketamina",
+  "identity": {
+    "canonicalOwner": "emergencia.js",
+    "category": "emergencia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "ketamina",
+      "cetamina (ketamina)"
+    ],
+    "name": {
+      "es": "Ketamina",
+      "pt": "Cetamina (Ketamina)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "emergencia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Ketamina"
+      },
+      "icon": "💊",
+      "id": "ketamina",
+      "keywords": [
+        "ketamina",
+        "cetamina (ketamina)"
+      ],
+      "name": {
+        "es": "Ketamina",
+        "pt": "Cetamina (Ketamina)"
+      },
+      "pt": {
+        "name": "Cetamina (Ketamina)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "emergencia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

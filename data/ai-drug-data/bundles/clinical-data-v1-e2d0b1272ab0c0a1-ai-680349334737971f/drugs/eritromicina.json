@@ -1,0 +1,398 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "fbb42804806d3773e0d6dd0596f034d58893b52e8a674363795ec1e3d24470e8",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "eritromicina",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "eritromicina",
+      "ilosone",
+      "eritromicina ems",
+      "eritromicina richet",
+      "eritromicina klonal",
+      "macrolideo (1ª geracao)"
+    ],
+    "name": {
+      "es": "Eritromicina",
+      "pt": "Eritromicina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Inhibidor de CYP3A4 — múltiples interacciones medicamentosas.",
+          "Alta incidencia de efectos GI — considerar macrólido más nuevo."
+        ],
+        "class": "Macrólido (1ª generación)",
+        "commercialNames": {
+          "ar": [
+            "Eritromicina Richet",
+            "Eritromicina Klonal"
+          ],
+          "br": [
+            "Ilosone",
+            "Eritromicina EMS"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas intensas",
+          "Vómitos",
+          "Diarrea",
+          "Epigastralgia",
+          "Flebitis (EV)"
+        ],
+        "dangerousAdverseEffects": [
+          "QT prolongado",
+          "Hepatotoxicidad colestática",
+          "Estenosis pilórica (lactantes)",
+          "Colitis por C. difficile"
+        ],
+        "dilution": "EV: diluir el lactobionato en SF 0,9% — infusión lenta.",
+        "dose": {
+          "adulto": "250–500 mg VO cada 6h",
+          "pediatrica": "500 mg VO cada 6h"
+        },
+        "doseKg": {
+          "maxDose": "4 g/día",
+          "standard": "10–15 mg/kg por dosis"
+        },
+        "name": "Eritromicina",
+        "presentation": [
+          "Comprimidos 250 mg / 500 mg",
+          "Suspensión oral 125 mg / 250 mg por 5 mL",
+          "Frasco ampolla EV 500 mg (gluceptato/lactobionato)"
+        ],
+        "ref": "Goodman & Gilman / Sanford Guide 2025",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "Dosis habitual.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "Monitorizar hepatotoxicidad y prolongación del QT.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "No requiere dosis suplementaria post-hemodiálisis.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "message": "No requiere ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "EV: infundir lentamente en 20–60 minutos.",
+        "therapeuticRange": "Concentración dependiente (AUC/MIC). Buena biodisponibilidad oral."
+      },
+      "icon": "💊",
+      "id": "eritromicina",
+      "keywords": [
+        "eritromicina",
+        "ilosone",
+        "eritromicina ems",
+        "eritromicina richet",
+        "eritromicina klonal",
+        "macrolideo (1ª geracao)"
+      ],
+      "name": {
+        "es": "Eritromicina",
+        "pt": "Eritromicina"
+      },
+      "pt": {
+        "alerts": [
+          "Inibidor de CYP3A4 — múltiplas interações medicamentosas.",
+          "Alta incidência de efeitos GI — considerar macrolídeo mais novo."
+        ],
+        "class": "Macrolídeo (1ª geração)",
+        "commercialNames": {
+          "ar": [
+            "Eritromicina Richet",
+            "Eritromicina Klonal"
+          ],
+          "br": [
+            "Ilosone",
+            "Eritromicina EMS"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas intensas",
+          "Vômitos",
+          "Diarreia",
+          "Epigastralgia",
+          "Flebite (EV)"
+        ],
+        "dangerousAdverseEffects": [
+          "QT prolongado",
+          "Hepatotoxicidade colestática",
+          "Estenose pilórica (lactentes)",
+          "Colite por C. difficile"
+        ],
+        "dilution": "EV: diluir o lactobionato em SF 0,9% — infusão lenta.",
+        "dose": {
+          "adulto": "250–500 mg VO 6/6h",
+          "pediatrica": "500 mg VO 6/6h"
+        },
+        "doseKg": {
+          "maxDose": "4 g/dia",
+          "standard": "10–15 mg/kg por dose"
+        },
+        "name": "Eritromicina",
+        "presentation": [
+          "Comprimidos 250 mg / 500 mg",
+          "Suspensão oral 125 mg / 250 mg por 5 mL",
+          "Frasco-ampola EV 500 mg (gluceptato/lactobionato)"
+        ],
+        "ref": "Goodman & Gilman / Sanford Guide 2025",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "Dose habitual.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "Monitorar hepatotoxicidade e prolongamento do QT.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "g"
+            },
+            "obs": "Não necessita dose suplementar pós-hemodiálise.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h",
+              "unidade": "mg"
+            }
+          },
+          "message": "Não necessita ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "EV: infundir lentamente em 20–60 minutos.",
+        "therapeuticRange": "Concentração dependente (AUC/MIC). Boa biodisponibilidade oral."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "250–500 mg VO cada 6h",
+            "pediatrica": "500 mg VO cada 6h"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "250–500 mg VO 6/6h",
+            "pediatrica": "500 mg VO 6/6h"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

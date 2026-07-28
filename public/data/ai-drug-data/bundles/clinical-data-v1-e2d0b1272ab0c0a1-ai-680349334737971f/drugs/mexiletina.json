@@ -1,0 +1,209 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "565ab227150e517a6769931eb256ff4eebad7882cb78ff7c3565edff2441ff10",
+    "sourceModule": "analgesicos.js"
+  },
+  "drugId": "mexiletina",
+  "identity": {
+    "canonicalOwner": "analgesicos.js",
+    "category": "cardiologia",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "mexiletina"
+    ],
+    "name": {
+      "es": "Mexiletina",
+      "pt": "Mexiletina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardiologia",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "analgesicos.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "cardio",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "alerts": [
+                {
+                  "msg": "⚠️ Mexiletina reservada para TV sostenida documentada o EV potencialmente fatal. No usar para EV asintomáticas/benignas — puede aumentar mortalidad.",
+                  "tipo": "warning"
+                },
+                {
+                  "msg": "🍽️ Tomar SIEMPRE con alimentos — reduce significativamente náuseas y efectos GI.",
+                  "tipo": "info"
+                },
+                {
+                  "msg": "📦 BLACK BOX: Antiarrítmicos pueden aumentar mortalidad en arritmias no amenazantes para la vida. Reservar para TV/EV documentadas y potencialmente fatales.",
+                  "tipo": "danger"
+                }
+              ],
+              "apresentacao": "Cápsulas 150 mg / 200 mg / 250 mg (Mexitil)",
+              "classe": "Antiarrítmico Clase IB oral | Análogo oral de lidocaína | t½ 10–12 h",
+              "clcrEstimado": "90 mL/min",
+              "dose": "200 mg VO 8/8h com alimentos (titular 150–300 mg 8/8h)",
+              "doseMax": "1200 mg/día",
+              "efeitosAdversos": [
+                "Náuseas",
+                "Vómitos",
+                "Acidez",
+                "Temblor",
+                "Mareos",
+                "Ataxia",
+                "Visión borrosa",
+                "⚠️ Proarritmia ventricular",
+                "⚠️ Convulsiones",
+                "⚠️ Hepatotoxicidad",
+                "⚠️ Leucopenia rara"
+              ],
+              "indicacoes": [
+                "TV sostenida documentada",
+                "Arritmias ventriculares potencialmente fatales",
+                "Adyuvante en TV refractaria (+ amiodarona)",
+                "QT largo tipo 3 seleccionado (especialista)",
+                "EV de alto riesgo seleccionadas"
+              ],
+              "monitoramento": [
+                "ECG basal + periódico (QRS + PR)",
+                "Función hepática basal y periódica",
+                "K⁺ y Mg²⁺",
+                "Síntomas neurológicos",
+                "Síntomas GI",
+                "Recurrencia de TV",
+                "Estado mental"
+              ],
+              "refs": [
+                "ESC VA Guidelines",
+                "AHA/ACC/HRS VA Guidelines",
+                "Goodman & Gilman",
+                "Lexicomp",
+                "FDA/DailyMed label"
+              ]
+            },
+            "icon": "💊",
+            "id": "mexiletina",
+            "keywords": [
+              "mexiletina"
+            ],
+            "name": {
+              "es": "mexiletina",
+              "pt": "mexiletina"
+            },
+            "pt": {
+              "alerts": [
+                {
+                  "msg": "⚠️ Mexiletina reservada para TV sustentada documentada ou EV potencialmente fatal. Não usar para EV assintomáticas/benignas — pode aumentar mortalidade.",
+                  "tipo": "warning"
+                },
+                {
+                  "msg": "🍽️ Tomar SEMPRE com alimentos — reduz significativamente náuseas e efeitos GI.",
+                  "tipo": "info"
+                },
+                {
+                  "msg": "📦 BLACK BOX: Antiarrítmicos podem aumentar mortalidade em arritmias não ameaçadoras à vida. Reservar para TV/EV documentadas e potencialmente fatais.",
+                  "tipo": "danger"
+                }
+              ],
+              "apresentacao": "Cápsulas 150 mg / 200 mg / 250 mg (Mexitil)",
+              "classe": "Antiarrítmico Classe IB oral | Análogo oral da lidocaína | t½ 10–12 h",
+              "clcrEstimado": "90 mL/min",
+              "dose": "200 mg VO 8/8h com alimentos (titular 150–300 mg 8/8h)",
+              "doseMax": "1200 mg/dia",
+              "efeitosAdversos": [
+                "Náuseas",
+                "Vômitos",
+                "Azia",
+                "Tremor",
+                "Tontura",
+                "Ataxia",
+                "Visão turva",
+                "⚠️ Pró-arritmia ventricular",
+                "⚠️ Convulsões",
+                "⚠️ Hepatotoxicidade",
+                "⚠️ Leucopenia rara"
+              ],
+              "indicacoes": [
+                "TV sustentada documentada",
+                "Arritmias ventriculares potencialmente fatais",
+                "Adjuvante em TV refratária (+ amiodarona)",
+                "QT longo tipo 3 selecionado (especialista)",
+                "EV de alto risco selecionadas"
+              ],
+              "monitoramento": [
+                "ECG basal + periódico (QRS + PR)",
+                "Função hepática basal e periódica",
+                "K⁺ e Mg²⁺",
+                "Sintomas neurológicos",
+                "Sintomas GI",
+                "Recorrência de TV",
+                "Estado mental"
+              ],
+              "refs": [
+                "ESC VA Guidelines",
+                "AHA/ACC/HRS VA Guidelines",
+                "Goodman & Gilman",
+                "Lexicomp",
+                "FDA/DailyMed label"
+              ]
+            },
+            "schema": "premium-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "cardio.js"
+          },
+          "sourceModule": "cardio.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Mexiletina"
+      },
+      "icon": "💊",
+      "id": "mexiletina",
+      "keywords": [
+        "mexiletina"
+      ],
+      "name": {
+        "es": "Mexiletina",
+        "pt": "Mexiletina"
+      },
+      "pt": {
+        "name": "Mexiletina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "analgesicos.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

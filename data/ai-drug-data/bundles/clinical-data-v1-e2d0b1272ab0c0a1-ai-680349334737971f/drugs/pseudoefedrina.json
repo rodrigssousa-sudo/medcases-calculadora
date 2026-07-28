@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "d2d390345b2e261af381a77be71bbdeffd17460542bb456f6fa000f773a066f2",
+    "sourceModule": "pneumologia_otorrino.js"
+  },
+  "drugId": "pseudoefedrina",
+  "identity": {
+    "canonicalOwner": "pneumologia_otorrino.js",
+    "category": "pneumologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "pseudoefedrina"
+    ],
+    "name": {
+      "es": "Pseudoefedrina",
+      "pt": "Pseudoefedrina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "pneumologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Pseudoefedrina"
+      },
+      "icon": "💊",
+      "id": "pseudoefedrina",
+      "keywords": [
+        "pseudoefedrina"
+      ],
+      "name": {
+        "es": "Pseudoefedrina",
+        "pt": "Pseudoefedrina"
+      },
+      "pt": {
+        "name": "Pseudoefedrina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "pneumologia_otorrino.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

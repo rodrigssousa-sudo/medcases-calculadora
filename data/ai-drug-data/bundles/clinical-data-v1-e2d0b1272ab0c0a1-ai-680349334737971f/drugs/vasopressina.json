@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "14a251d1edeb5617566a12707b4bd4680bad9bc70327c6319b19ac0e21c86356",
+    "sourceModule": "emergencia.js"
+  },
+  "drugId": "vasopressina",
+  "identity": {
+    "canonicalOwner": "emergencia.js",
+    "category": "emergencia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "vasopressina",
+      "vasopressina (hormônio antidiurético sintético)"
+    ],
+    "name": {
+      "es": "Vasopresina (Hormona Antidiurética Sintética)",
+      "pt": "Vasopressina (Hormônio Antidiurético Sintético)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "emergencia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Vasopresina (Hormona Antidiurética Sintética)"
+      },
+      "icon": "💊",
+      "id": "vasopressina",
+      "keywords": [
+        "vasopressina",
+        "vasopressina (hormônio antidiurético sintético)"
+      ],
+      "name": {
+        "es": "Vasopresina (Hormona Antidiurética Sintética)",
+        "pt": "Vasopressina (Hormônio Antidiurético Sintético)"
+      },
+      "pt": {
+        "name": "Vasopressina (Hormônio Antidiurético Sintético)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "emergencia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

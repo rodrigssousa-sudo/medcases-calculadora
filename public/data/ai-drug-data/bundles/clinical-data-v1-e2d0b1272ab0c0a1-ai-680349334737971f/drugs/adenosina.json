@@ -1,0 +1,215 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "b43565595018b6fce3d3bd36a516d025cf78cf6d51d3f0f35f2128a1bafce6ce",
+    "sourceModule": "cardiologia.js"
+  },
+  "drugId": "adenosina",
+  "identity": {
+    "canonicalOwner": "cardiologia.js",
+    "category": "cardiologia",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "adenosina"
+    ],
+    "name": {
+      "es": "Adenosina",
+      "pt": "Adenosina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardiologia",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "cardiologia.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "cardio",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "ajusteRenal": "Sin ajuste — vida media <10 s",
+              "alerts": [
+                {
+                  "msg": "📋 ECG continuo obligatorio. Preparar desfibrilador. Registrar trazado durante administración. Flush inmediato 20 mL SF tras bolo.",
+                  "tipo": "info"
+                }
+              ],
+              "apresentacao": "Ampollas IV 3 mg/mL (6 mg/2 mL)",
+              "classe": "Antiarrítmico de acción ultracorta — bloqueador transitorio nodo AV",
+              "contraindicacoes": [
+                "Bloqueo AV 2º/3º sin marcapasos",
+                "Enfermedad del nodo sinusal sin marcapasos",
+                "Preexcitación con FA/flutter",
+                "QRS ancho irregular",
+                "Hipersensibilidad"
+              ],
+              "dose": "6 mg IV em bolus extremamente rápido + flush imediato 20 mL SF 0,9%",
+              "doseEscalonada": "Se não converter em 1–2 min: 12 mg IV bolus. Pode repetir 12 mg conforme protocolo.",
+              "efeitosAdversos": [
+                "Rubor facial",
+                "Presión/dolor torácico breve",
+                "Disnea transitoria",
+                "Sensación de muerte inminente",
+                "Náuseas",
+                "Mareos",
+                "Cefalea",
+                "⚠️ Broncoespasmo",
+                "⚠️ Bloqueo AV prolongado",
+                "⚠️ FA transitoria",
+                "⚠️ Asistolia breve"
+              ],
+              "indicacoes": [
+                "TSVP (AVNRT, AVRT ortodrómica)",
+                "Diagnóstico diferencial de taquicardias supraventriculares",
+                "QRS estrecho regular no convertido por vagales"
+              ],
+              "interacoes": [
+                "Dipiridamol: potencia mucho (usar 3 mg)",
+                "Carbamazepina: mayor riesgo bloqueo AV",
+                "Teofilina/aminofilina: antagonizan efecto",
+                "Cafeína: reduce efecto",
+                "BB/verapamilo/digoxina: mayor riesgo bradicardia"
+              ],
+              "monitoramento": [
+                "ECG continuo durante/tras bolo",
+                "PA",
+                "Registro de trazado en administración",
+                "Desfibrilador disponible",
+                "Monitorizar broncoespasmo"
+              ],
+              "refs": [
+                "AHA ACLS Guidelines",
+                "ESC SVT Guidelines",
+                "AHA/ACC/HRS SVT Guidelines",
+                "Goodman & Gilman",
+                "Lexicomp",
+                "FDA/DailyMed"
+              ]
+            },
+            "icon": "💊",
+            "id": "adenosina",
+            "keywords": [
+              "adenosina"
+            ],
+            "name": {
+              "es": "adenosina",
+              "pt": "adenosina"
+            },
+            "pt": {
+              "ajusteRenal": "Sem ajuste — meia-vida <10 s",
+              "alerts": [
+                {
+                  "msg": "📋 ECG contínuo obrigatório. Preparar desfibrilador. Registrar traçado durante administração. Flush imediato 20 mL SF após bolus.",
+                  "tipo": "info"
+                }
+              ],
+              "apresentacao": "Ampolas IV 3 mg/mL (6 mg/2 mL)",
+              "classe": "Antiarrítmico de ação ultracurta — bloqueador transitório nó AV",
+              "contraindicacoes": [
+                "Bloqueio AV 2º/3º sem marcapasso",
+                "Doença do nó sinusal sem marcapasso",
+                "Pré-excitação com FA/flutter",
+                "QRS largo irregular",
+                "Hipersensibilidade"
+              ],
+              "dose": "6 mg IV em bolus extremamente rápido + flush imediato 20 mL SF 0,9%",
+              "doseEscalonada": "Se não converter em 1–2 min: 12 mg IV bolus. Pode repetir 12 mg conforme protocolo.",
+              "efeitosAdversos": [
+                "Rubor facial",
+                "Pressão/dor torácica breve",
+                "Dispneia transitória",
+                "Sensação de morte iminente",
+                "Náuseas",
+                "Tontura",
+                "Cefaleia",
+                "⚠️ Broncoespasmo",
+                "⚠️ Bloqueio AV prolongado",
+                "⚠️ FA transitória",
+                "⚠️ Assistolia breve"
+              ],
+              "indicacoes": [
+                "TSVP (AVNRT, AVRT ortodrômica)",
+                "Diagnóstico diferencial de taquicardias supraventriculares",
+                "QRS estreito regular não convertido por vagais"
+              ],
+              "interacoes": [
+                "Dipiridamol: potencializa muito (usar 3 mg)",
+                "Carbamazepina: maior risco bloqueio AV",
+                "Teofilina/aminofilina: antagonizam efeito",
+                "Cafeína: reduz efeito",
+                "BB/verapamil/digoxina: maior risco bradicardia"
+              ],
+              "monitoramento": [
+                "ECG contínuo durante/após bolus",
+                "PA",
+                "Registro de traçado na administração",
+                "Desfibrilador disponível",
+                "Monitorar broncoespasmo"
+              ],
+              "refs": [
+                "AHA ACLS Guidelines",
+                "ESC SVT Guidelines",
+                "AHA/ACC/HRS SVT Guidelines",
+                "Goodman & Gilman",
+                "Lexicomp",
+                "FDA/DailyMed"
+              ]
+            },
+            "schema": "premium-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "cardio.js"
+          },
+          "sourceModule": "cardio.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Adenosina"
+      },
+      "icon": "💊",
+      "id": "adenosina",
+      "keywords": [
+        "adenosina"
+      ],
+      "name": {
+        "es": "Adenosina",
+        "pt": "Adenosina"
+      },
+      "pt": {
+        "name": "Adenosina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardiologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

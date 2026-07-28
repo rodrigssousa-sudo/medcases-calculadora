@@ -1,0 +1,338 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "6522c0eb176a8d302a12a3cf518468e5440ba1cedb3dfbd47f6f97121f92eaa4",
+    "sourceModule": "cardio.js"
+  },
+  "drugId": "acetazolamida",
+  "identity": {
+    "canonicalOwner": "cardio.js",
+    "category": "cardio",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "acetazolamida",
+      "inibidor da anidrase carbonica / diuretico proximal"
+    ],
+    "name": {
+      "es": "Acetazolamida",
+      "pt": "Acetazolamida"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardio",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "ADVOR Trial (NEJM 2022): acetazolamida 500 mg IV/día + asa → descongestión más rápida en IC aguda descompensada.",
+          "Monitorizar bicarbonato y pH — riesgo de acidosis metabólica como efecto adverso principal.",
+          "Contraindicada en acidosis metabólica preexistente, hiponatremia grave, hipocalemia grave e insuficiencia renal grave.",
+          "Interacción grave: aspirina en altas dosis — riesgo de toxicidad grave por acetazolamida.",
+          "Interacción grave: topiramato y zonisamida — aumento del riesgo de acidosis metabólica y nefrolitiasis.",
+          "Las parestesias en manos, pies y labios son efecto adverso frecuente — orientar al paciente."
+        ],
+        "auditNotes": {
+          "note": "Fármaco adyuvante relevante en IC aguda congestiva (ADVOR Trial), especialmente cuando hay alcalosis metabólica inducida por diuréticos de asa o necesidad de bloqueo tubular proximal.",
+          "sourcePriority": [
+            "ADVOR Trial (NEJM 2022)",
+            "ESC Heart Failure Guidelines 2021/2023",
+            "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+            "Goodman & Gilman",
+            "Lexicomp 2026",
+            "FDA label"
+          ],
+          "status": "excellent_after_review"
+        },
+        "category": "cardio",
+        "class": "Inhibidor de la anhidrasa carbónica / Diurético proximal",
+        "commercialNames": [
+          "Diamox",
+          "Acetazolamida genérica"
+        ],
+        "commonAdverseEffects": [
+          "Parestesias (manos, pies, labios)",
+          "Poliuria",
+          "Náuseas",
+          "Fatiga",
+          "Somnolencia",
+          "Alteración del gusto",
+          "Hipocalemia"
+        ],
+        "dangerousAdverseEffects": [
+          "Acidosis metabólica grave",
+          "Hipocalemia grave",
+          "Hiponatremia",
+          "Lesión renal aguda",
+          "Cálculos renales (nefrolitiasis)",
+          "Reacciones cutáneas graves raras",
+          "Encefalopatía hepática en cirrosis"
+        ],
+        "dose": {
+          "adultoGrave": "Dosis máxima: 1000 mg/día en contextos seleccionados y monitorizados.",
+          "adultoPadrao": "250–500 mg VO/IV 1 vez/día. En IC aguda: 500 mg IV/día asociado a diurético de asa (ADVOR)."
+        },
+        "halfLife": "10–15 horas",
+        "id": "acetazolamida",
+        "mechanism": "Inhibe la anhidrasa carbónica en el túbulo proximal, reduciendo la reabsorción de bicarbonato, sodio y agua. Produce bicarbonaturia, diuresis leve/moderada y acidificación metabólica relativa. Útil en alcalosis metabólica asociada a diuréticos de asa y en la congestión en IC aguda.",
+        "name": "Acetazolamida",
+        "onset": "1–2 horas VO; 2 min IV",
+        "presentation": [
+          "Comprimidos 250 mg",
+          "Ampollas inyectables 500 mg"
+        ],
+        "ref": "ADVOR Trial (NEJM 2022) · ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · Goodman & Gilman · Lexicomp · FDA label",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "ClCr 10–30 mL/min: EVITAR. Riesgo de acumulación y acidosis metabólica grave.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "250 mg",
+              "doseMaxima": "250 mg/dia",
+              "intervalo": "1x/dia (cautela)",
+              "unidade": "mg"
+            },
+            "obs": "ClCr 30–50 mL/min: dosis reducida. Monitorizar bicarbonato, pH y electrolitos frecuentemente.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "250 mg",
+              "doseMaxima": "250 mg/dia",
+              "intervalo": "1x/dia (cautela)",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "500 mg/dose",
+              "intervalo": "1x/dia (em IC aguda com diurético de alça)",
+              "unidade": "mg"
+            },
+            "obs": "Dosis habitual. Monitorizar bicarbonato, K⁺, Na⁺ y función renal.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "1000 mg/dia",
+              "intervalo": "1x/dia",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "ClCr < 10 mL/min: CONTRAINDICADA. Acumulación y toxicidad grave.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Hemodiálisis: CONTRAINDICADA en uso rutinario. Dializable — discusión especializada necesaria en caso excepcional.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "message": "ClCr ≥ 50 mL/min: uso habitual con monitorización de bicarbonato y electrolitos.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [
+          "Gestante: usar solo si el beneficio supera el riesgo; evitar en el 1er trimestre.",
+          "Lactante: generalmente compatible en dosis habituales; monitorizar al lactante.",
+          "Anciano (40 años): mayor riesgo de acidosis metabólica, trastornos electrolíticos, somnolencia, caídas y deterioro renal.",
+          "EPOC con retención crónica de CO₂: contraindicación relativa — acidosis respiratoria puede agravarse.",
+          "Cirrosis/Insuficiencia hepática grave: evitar — riesgo de precipitar encefalopatía hepática."
+        ],
+        "safetyFlags": {
+          "hypokalemiaRisk": true,
+          "hyponatremiaRisk": true,
+          "hypotensionRisk": true,
+          "metabolicAcidosisRisk": true,
+          "nephrolithiasisRisk": true,
+          "pregnancyCaution": true,
+          "qtRisk": false,
+          "renalHighRisk": true,
+          "warning": "Acetazolamida puede acelerar la descongestión en IC aguda (ADVOR), pero exige control riguroso de bicarbonato, pH, K⁺, Na⁺ y función renal. Contraindicada en acidosis metabólica, ERC grave e insuficiencia hepática grave."
+        }
+      },
+      "icon": "💊",
+      "id": "acetazolamida",
+      "keywords": [
+        "acetazolamida",
+        "inibidor da anidrase carbonica / diuretico proximal"
+      ],
+      "name": {
+        "es": "Acetazolamida",
+        "pt": "Acetazolamida"
+      },
+      "pt": {
+        "alerts": [
+          "ADVOR Trial (NEJM 2022): acetazolamida 500 mg IV/dia + alça → descongestão mais rápida na IC aguda descompensada.",
+          "Monitorar bicarbonato e pH — risco de acidose metabólica como efeito adverso principal.",
+          "Contraindicada em acidose metabólica pré-existente, hiponatremia grave, hipocalemia grave e insuficiência renal grave.",
+          "Interação grave: aspirina em altas doses — risco de toxicidade grave por acetazolamida.",
+          "Interação grave: topiramato e zonisamida — aumento do risco de acidose metabólica e nefrolitíase.",
+          "Parestesias em mãos, pés e lábios são efeito adverso comum — orientar paciente."
+        ],
+        "auditNotes": {
+          "note": "Fármaco adjuvante relevante na IC aguda congestiva (ADVOR Trial), especialmente quando há alcalose metabólica induzida por diuréticos de alça ou necessidade de bloqueio tubular proximal.",
+          "sourcePriority": [
+            "ADVOR Trial (NEJM 2022)",
+            "ESC Heart Failure Guidelines 2021/2023",
+            "AHA/ACC/HFSA Heart Failure Guidelines 2022",
+            "Goodman & Gilman",
+            "Lexicomp 2026",
+            "FDA label"
+          ],
+          "status": "excellent_after_review"
+        },
+        "category": "cardio",
+        "class": "Inibidor da anidrase carbônica / Diurético proximal",
+        "commercialNames": [
+          "Diamox",
+          "Acetazolamida genérica"
+        ],
+        "commonAdverseEffects": [
+          "Parestesias (mãos, pés, lábios)",
+          "Poliúria",
+          "Náuseas",
+          "Fadiga",
+          "Sonolência",
+          "Alteração do paladar",
+          "Hipocalemia"
+        ],
+        "dangerousAdverseEffects": [
+          "Acidose metabólica grave",
+          "Hipocalemia grave",
+          "Hiponatremia",
+          "Lesão renal aguda",
+          "Cálculos renais (nefrolitíase)",
+          "Reações cutâneas graves raras",
+          "Encefalopatia hepática em cirrose"
+        ],
+        "dose": {
+          "adultoGrave": "Dose máxima: 1000 mg/dia em contextos selecionados e monitorizados.",
+          "adultoPadrao": "250–500 mg VO/IV 1x/dia. Em IC aguda: 500 mg IV/dia associado a diurético de alça (ADVOR)."
+        },
+        "halfLife": "10–15 horas",
+        "id": "acetazolamida",
+        "mechanism": "Inibe a anidrase carbônica no túbulo proximal, reduzindo reabsorção de bicarbonato, sódio e água. Promove bicarbonatúria, diurese leve/moderada e acidificação metabólica relativa. Útil na alcalose metabólica associada a diuréticos de alça e na congestão em IC aguda.",
+        "name": "Acetazolamida",
+        "onset": "1–2 horas VO; 2 min IV",
+        "presentation": [
+          "Comprimidos 250 mg",
+          "Ampolas injetáveis 500 mg"
+        ],
+        "ref": "ADVOR Trial (NEJM 2022) · ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · Goodman & Gilman · Lexicomp · FDA label",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "ClCr 10–30 mL/min: EVITAR. Risco de acúmulo e acidose metabólica grave.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "250 mg",
+              "doseMaxima": "250 mg/dia",
+              "intervalo": "1x/dia (cautela)",
+              "unidade": "mg"
+            },
+            "obs": "ClCr 30–50 mL/min: dose reduzida. Monitorar bicarbonato, pH e eletrólitos frequentemente.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "250 mg",
+              "doseMaxima": "250 mg/dia",
+              "intervalo": "1x/dia (cautela)",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "500 mg/dose",
+              "intervalo": "1x/dia (em IC aguda com diurético de alça)",
+              "unidade": "mg"
+            },
+            "obs": "Dose habitual. Monitorar bicarbonato, K⁺, Na⁺ e função renal.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "1000 mg/dia",
+              "intervalo": "1x/dia",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "ClCr < 10 mL/min: CONTRAINDICADA. Acúmulo e toxicidade grave.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Hemodiálise: CONTRAINDICADA em uso rotineiro. Dialisável — discussão especializada necessária em caso excepcional.",
+            "pediatrica": null,
+            "vo": null
+          },
+          "message": "ClCr ≥ 50 mL/min: uso habitual com monitorização de bicarbonato e eletrólitos.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [
+          "Gestante: usar apenas se benefício superar risco; evitar no 1º trimestre.",
+          "Lactante: geralmente compatível em doses usuais; monitorar lactente.",
+          "Idoso (40 anos): maior risco de acidose metabólica, distúrbios eletrolíticos, sonolência, quedas e piora renal.",
+          "DPOC com retenção crônica de CO₂: contraindicação relativa — acidose respiratória pode ser agravada.",
+          "Cirrose/Insuficiência hepática grave: evitar — risco de precipitar encefalopatia hepática."
+        ],
+        "safetyFlags": {
+          "hypokalemiaRisk": true,
+          "hyponatremiaRisk": true,
+          "hypotensionRisk": true,
+          "metabolicAcidosisRisk": true,
+          "nephrolithiasisRisk": true,
+          "pregnancyCaution": true,
+          "qtRisk": false,
+          "renalHighRisk": true,
+          "warning": "Acetazolamida pode acelerar descongestão na IC aguda (ADVOR), mas exige controle rigoroso de bicarbonato, pH, K⁺, Na⁺ e função renal. Contraindicada em acidose metabólica, DRC grave e insuficiência hepática grave."
+        }
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardio.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "Dosis máxima: 1000 mg/día en contextos seleccionados y monitorizados.",
+            "adultoPadrao": "250–500 mg VO/IV 1 vez/día. En IC aguda: 500 mg IV/día asociado a diurético de asa (ADVOR)."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "Dose máxima: 1000 mg/dia em contextos selecionados e monitorizados.",
+            "adultoPadrao": "250–500 mg VO/IV 1x/dia. Em IC aguda: 500 mg IV/dia associado a diurético de alça (ADVOR)."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

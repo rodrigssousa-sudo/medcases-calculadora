@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "355cc92abf9419acdf7cccb584d96cac865d50758b309837f12571788644c97e",
+    "sourceModule": "infectologia.js"
+  },
+  "drugId": "cetoconazol_oral",
+  "identity": {
+    "canonicalOwner": "infectologia.js",
+    "category": "infectologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "cetoconazol_oral",
+      "cetoconazol oral"
+    ],
+    "name": {
+      "es": "Ketoconazol Oral",
+      "pt": "Cetoconazol Oral"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "infectologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Ketoconazol Oral"
+      },
+      "icon": "💊",
+      "id": "cetoconazol_oral",
+      "keywords": [
+        "cetoconazol_oral",
+        "cetoconazol oral"
+      ],
+      "name": {
+        "es": "Ketoconazol Oral",
+        "pt": "Cetoconazol Oral"
+      },
+      "pt": {
+        "name": "Cetoconazol Oral"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "infectologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

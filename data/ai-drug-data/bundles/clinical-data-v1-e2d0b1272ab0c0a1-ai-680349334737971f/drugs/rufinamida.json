@@ -1,0 +1,254 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "e5848f1f4c06f4950edd0d0e9edd383a84a488db9fc4ddfa6e04b79c372e7aba",
+    "sourceModule": "neurologia.js"
+  },
+  "drugId": "rufinamida",
+  "identity": {
+    "canonicalOwner": "neurologia.js",
+    "category": "anticonvulsivante",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "rufinamida",
+      "inovelon",
+      "anticonvulsivante triazolico modulador de canais de sodio"
+    ],
+    "name": {
+      "es": "Rufinamida",
+      "pt": "Rufinamida"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "anticonvulsivante",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Administrar con alimentos para mejor absorción.",
+          "Evitar en síndrome de QT corto familiar.",
+          "Monitorizar rash, fiebre, linfadenopatía o síntomas sistémicos.",
+          "Puede reducir eficacia de anticonceptivos hormonales.",
+          "No suspender bruscamente en epilepsia."
+        ],
+        "category": "anticonvulsivante",
+        "class": "Anticonvulsivante triazólico modulador de canales de sodio",
+        "commercialNames": {
+          "ar": [
+            "Inovelon",
+            "Rufinamida"
+          ],
+          "br": [
+            "Inovelon",
+            "Rufinamida"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia",
+          "Mareos",
+          "Fatiga",
+          "Náuseas",
+          "Vómitos",
+          "Cefalea",
+          "Diplopía"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a rufinamida",
+          "Síndrome de QT corto familiar",
+          "Hepatopatía grave",
+          "Antecedente de reacción de hipersensibilidad grave al fármaco"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome de hipersensibilidad medicamentosa/DRESS",
+          "Síndrome de Stevens-Johnson rara",
+          "Ideación suicida",
+          "Acortamiento del intervalo QT",
+          "Empeoramiento paradójico de crisis en casos raros"
+        ],
+        "dose": {
+          "adulto": "Síndrome de Lennox-Gastaut: iniciar 400–800 mg/día VO divididos cada 12 h, con comida; titular según respuesta.",
+          "manutencao": "Mantenimiento pediátrico puede llegar a 45 mg/kg/día. Para 70 kg: hasta 3150 mg/día según protocolo.",
+          "maxDose": "Dosis máxima habitual: 3200 mg/día en adultos.",
+          "pediatrica": "Pediatría: iniciar cerca de 10 mg/kg/día. Para 70 kg: 700 mg/día."
+        },
+        "doseKg": {
+          "maxDose": "3200 mg/día en adultos",
+          "severe": "Titular hasta 45 mg/kg/día según respuesta y tolerabilidad.",
+          "standard": "Pediatría: iniciar 10 mg/kg/día."
+        },
+        "halfLife": "Vida media aproximada: 6–10 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Síndrome de Lennox-Gastaut",
+          "Crisis atónicas/drop attacks asociadas a Lennox-Gastaut",
+          "Crisis tónico-clónicas en epilepsias generalizadas complejas",
+          "Terapia coadyuvante en epilepsia refractaria",
+          "Epilepsia pediátrica de difícil control bajo especialista",
+          "Crisis múltiples asociadas a encefalopatías epilépticas"
+        ],
+        "interactions": [
+          "Valproato: puede aumentar niveles de rufinamida",
+          "Carbamazepina, fenitoína, fenobarbital y primidona: pueden reducir niveles",
+          "Anticonceptivos hormonales: puede reducir eficacia",
+          "Alcohol y sedantes: mayor somnolencia"
+        ],
+        "mechanism": "Prolonga el estado inactivado de los canales de sodio voltaje-dependientes, reduciendo descargas neuronales repetitivas.",
+        "name": "Rufinamida",
+        "onset": "El control de crisis se evalúa tras titulación gradual en días a semanas.",
+        "presentation": [
+          "Comprimido 200 mg",
+          "Comprimido 400 mg",
+          "Suspensión oral 40 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "FDA/DailyMed Rufinamide Prescribing Information",
+          "ILAE Epilepsy Guidelines",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "rufinamida",
+      "keywords": [
+        "rufinamida",
+        "inovelon",
+        "anticonvulsivante triazolico modulador de canais de sodio"
+      ],
+      "name": {
+        "es": "Rufinamida",
+        "pt": "Rufinamida"
+      },
+      "pt": {
+        "alerts": [
+          "Administrar com alimentos para melhor absorção.",
+          "Evitar em síndrome do QT curto familiar.",
+          "Monitorar rash, febre, linfadenopatia ou sintomas sistêmicos.",
+          "Pode reduzir eficácia de anticoncepcionais hormonais.",
+          "Não suspender abruptamente em epilepsia."
+        ],
+        "category": "anticonvulsivante",
+        "class": "Anticonvulsivante triazólico modulador de canais de sódio",
+        "commercialNames": {
+          "ar": [
+            "Inovelon",
+            "Rufinamida"
+          ],
+          "br": [
+            "Inovelon",
+            "Rufinamida"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência",
+          "Tontura",
+          "Fadiga",
+          "Náuseas",
+          "Vômitos",
+          "Cefaleia",
+          "Diplopia"
+        ],
+        "contraindications": [
+          "Hipersensibilidade à rufinamida",
+          "Síndrome do QT curto familiar",
+          "Hepatopatia grave",
+          "História de reação de hipersensibilidade grave ao fármaco"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome de hipersensibilidade medicamentosa/DRESS",
+          "Síndrome de Stevens-Johnson rara",
+          "Ideação suicida",
+          "Encurtamento do intervalo QT",
+          "Piora paradoxal de crises em casos raros"
+        ],
+        "dose": {
+          "adulto": "Síndrome de Lennox-Gastaut: iniciar 400–800 mg/dia VO divididos 12/12h, com alimento; titular conforme resposta.",
+          "manutencao": "Manutenção pediátrica pode chegar a 45 mg/kg/dia. Para 70 kg: até 3150 mg/dia conforme protocolo.",
+          "maxDose": "Dose máxima usual: 3200 mg/dia em adultos.",
+          "pediatrica": "Pediatria: iniciar cerca de 10 mg/kg/dia. Para 70 kg: 700 mg/dia."
+        },
+        "doseKg": {
+          "maxDose": "3200 mg/dia em adultos",
+          "severe": "Titular até 45 mg/kg/dia conforme resposta e tolerabilidade.",
+          "standard": "Pediatria: iniciar 10 mg/kg/dia."
+        },
+        "halfLife": "Vida média aproximada: 6–10 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Síndrome de Lennox-Gastaut",
+          "Crises atônicas/drop attacks associadas a Lennox-Gastaut",
+          "Crises tônico-clônicas em epilepsias generalizadas complexas",
+          "Terapia adjuvante em epilepsia refratária",
+          "Epilepsia pediátrica de difícil controle sob especialista",
+          "Crises múltiplas associadas a encefalopatias epilépticas"
+        ],
+        "interactions": [
+          "Valproato: pode aumentar níveis de rufinamida",
+          "Carbamazepina, fenitoína, fenobarbital e primidona: podem reduzir níveis",
+          "Anticoncepcionais hormonais: pode reduzir eficácia",
+          "Álcool e sedativos: maior sonolência"
+        ],
+        "mechanism": "Prolonga o estado inativado dos canais de sódio voltagem-dependentes, reduzindo descargas neuronais repetitivas.",
+        "name": "Rufinamida",
+        "onset": "Controle de crises é avaliado após titulação gradual em dias a semanas.",
+        "presentation": [
+          "Comprimido 200 mg",
+          "Comprimido 400 mg",
+          "Suspensão oral 40 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "FDA/DailyMed Rufinamide Prescribing Information",
+          "ILAE Epilepsy Guidelines",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "neurologia.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Síndrome de Lennox-Gastaut: iniciar 400–800 mg/día VO divididos cada 12 h, con comida; titular según respuesta.",
+            "manutencao": "Mantenimiento pediátrico puede llegar a 45 mg/kg/día. Para 70 kg: hasta 3150 mg/día según protocolo.",
+            "maxDose": "Dosis máxima habitual: 3200 mg/día en adultos.",
+            "pediatrica": "Pediatría: iniciar cerca de 10 mg/kg/día. Para 70 kg: 700 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Síndrome de Lennox-Gastaut: iniciar 400–800 mg/dia VO divididos 12/12h, com alimento; titular conforme resposta.",
+            "manutencao": "Manutenção pediátrica pode chegar a 45 mg/kg/dia. Para 70 kg: até 3150 mg/dia conforme protocolo.",
+            "maxDose": "Dose máxima usual: 3200 mg/dia em adultos.",
+            "pediatrica": "Pediatria: iniciar cerca de 10 mg/kg/dia. Para 70 kg: 700 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,199 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "0aecf182c5e4feb6ea4aa4c4e3e1b2e8d2d8ae2e97d96194baf8bdad3908557b",
+    "sourceModule": "cardiologia.js"
+  },
+  "drugId": "amiodarona",
+  "identity": {
+    "canonicalOwner": "cardiologia.js",
+    "category": "cardiologia",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "amiodarona"
+    ],
+    "name": {
+      "es": "Amiodarona",
+      "pt": "Amiodarona"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardiologia",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "cardiologia.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "cardio",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "ajusteRenal": "Sin ajuste renal",
+              "alerts": [
+                {
+                  "msg": "📦 BLACK BOX: Toxicidad pulmonar (neumonitis/fibrosis) y hepática potencialmente fatales. Uso crónico restringido a arritmias ventriculares graves refractarias.",
+                  "tipo": "danger"
+                }
+              ],
+              "apresentacao": "Comprimidos 100 mg / 200 mg | Ampollas IV 150 mg/3 mL",
+              "classe": "Antiarrítmico Clase III (+ I + II + IV) | Vida media 40–60 días",
+              "dose": "200 mg 3×/dia (carga 4–6 semanas) → manutenção 100–200 mg/dia",
+              "doseEspecial": "PCR FV/TV sin pulso: 300 mg IV/IO bolo + 150 mg si necesario",
+              "doseIV": "150 mg IV em 10 min → infusão 1 mg/min por 6 h → 0,5 mg/min por 18 h",
+              "doseVO": "200 mg 3×/dia (carga 4–6 semanas) → manutenção 100–200 mg/dia",
+              "efeitosAdversos": [
+                "Bradicardia",
+                "Hipotensión IV",
+                "Fotosensibilidad",
+                "Estreñimiento",
+                "Temblor",
+                "⚠️ Toxicidad pulmonar",
+                "⚠️ Hepatotoxicidad",
+                "⚠️ Hipo/hipertiroidismo",
+                "⚠️ QT prolongado/Torsades",
+                "⚠️ Depósitos corneales",
+                "⚠️ Neuropatía periférica"
+              ],
+              "indicacoes": [
+                "FV/TV recurrente",
+                "TVNS/TVS en cardiopatía estructural",
+                "FA/flutter seleccionados",
+                "PCR refractaria (ACLS)"
+              ],
+              "monitoramento": [
+                "ECG + QTc",
+                "TSH/T4 libre (basal, 3–6 meses)",
+                "TGO/TGP (basal, periódico)",
+                "Rx tórax + función pulmonar (uso crónico)",
+                "INR si warfarina",
+                "Nivel digoxina si asociado",
+                "Evaluación oftalmológica"
+              ],
+              "refs": [
+                "AHA ACLS Guidelines",
+                "ESC AF Guidelines",
+                "ESC VA Guidelines",
+                "AHA/ACC/HRS Guidelines",
+                "Goodman & Gilman",
+                "Lexicomp",
+                "FDA/DailyMed"
+              ]
+            },
+            "icon": "💊",
+            "id": "amiodarona",
+            "keywords": [
+              "amiodarona"
+            ],
+            "name": {
+              "es": "amiodarona",
+              "pt": "amiodarona"
+            },
+            "pt": {
+              "ajusteRenal": "Sem ajuste renal",
+              "alerts": [
+                {
+                  "msg": "📦 BLACK BOX: Toxicidade pulmonar (pneumonite/fibrose) e hepática potencialmente fatais. Uso crônico restrito a arritmias ventriculares graves refratárias.",
+                  "tipo": "danger"
+                }
+              ],
+              "apresentacao": "Comprimidos 100 mg / 200 mg | Ampolas IV 150 mg/3 mL",
+              "classe": "Antiarrítmico Classe III (+ I + II + IV) | Meia-vida 40–60 dias",
+              "dose": "200 mg 3×/dia (carga 4–6 semanas) → manutenção 100–200 mg/dia",
+              "doseEspecial": "PCR FV/TV sem pulso: 300 mg IV/IO bolus + 150 mg se necessário",
+              "doseIV": "150 mg IV em 10 min → infusão 1 mg/min por 6 h → 0,5 mg/min por 18 h",
+              "doseVO": "200 mg 3×/dia (carga 4–6 semanas) → manutenção 100–200 mg/dia",
+              "efeitosAdversos": [
+                "Bradicardia",
+                "Hipotensão IV",
+                "Fotossensibilidade",
+                "Constipação",
+                "Tremor",
+                "⚠️ Toxicidade pulmonar",
+                "⚠️ Hepatotoxicidade",
+                "⚠️ Hipo/hipertireoidismo",
+                "⚠️ QT prolongado/Torsades",
+                "⚠️ Depósitos corneanos",
+                "⚠️ Neuropatia periférica"
+              ],
+              "indicacoes": [
+                "FV/TV recorrente",
+                "TVNS/TVS em cardiopatia estrutural",
+                "FA/flutter selecionados",
+                "PCR refratária (ACLS)"
+              ],
+              "monitoramento": [
+                "ECG + QTc",
+                "TSH/T4 livre (basal, 3–6 meses)",
+                "TGO/TGP (basal, periódico)",
+                "RX tórax + função pulmonar (uso crônico)",
+                "INR se varfarina",
+                "Nível digoxina se associado",
+                "Avaliação oftalmológica"
+              ],
+              "refs": [
+                "AHA ACLS Guidelines",
+                "ESC AF Guidelines",
+                "ESC VA Guidelines",
+                "AHA/ACC/HRS Guidelines",
+                "Goodman & Gilman",
+                "Lexicomp",
+                "FDA/DailyMed"
+              ]
+            },
+            "schema": "premium-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "cardio.js"
+          },
+          "sourceModule": "cardio.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Amiodarona"
+      },
+      "icon": "💊",
+      "id": "amiodarona",
+      "keywords": [
+        "amiodarona"
+      ],
+      "name": {
+        "es": "Amiodarona",
+        "pt": "Amiodarona"
+      },
+      "pt": {
+        "name": "Amiodarona"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardiologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

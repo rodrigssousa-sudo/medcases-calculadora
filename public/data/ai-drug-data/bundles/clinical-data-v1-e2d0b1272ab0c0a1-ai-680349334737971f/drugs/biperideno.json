@@ -1,0 +1,262 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "ec12a9b3a793d23b8d9f88f67df8c85bd4bb5b1a694c78a91cf0bd1b3d66f7e0",
+    "sourceModule": "neurologia.js"
+  },
+  "drugId": "biperideno",
+  "identity": {
+    "canonicalOwner": "neurologia.js",
+    "category": "antiparkinsoniano",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "biperideno",
+      "akineton",
+      "anticolinergico antiparkinsoniano"
+    ],
+    "name": {
+      "es": "Biperideno",
+      "pt": "Biperideno"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antiparkinsoniano",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Excelente para distonía aguda inducida por antipsicótico.",
+          "Evitar uso crónico innecesario en adultos mayores.",
+          "Monitorizar retención urinaria, estreñimiento y confusión.",
+          "Puede empeorar cognición y memoria.",
+          "Reevaluar necesidad tras control de síntomas extrapiramidales."
+        ],
+        "category": "antiparkinsoniano",
+        "class": "Anticolinérgico antiparkinsoniano",
+        "commercialNames": {
+          "ar": [
+            "Akineton",
+            "Biperideno"
+          ],
+          "br": [
+            "Akineton",
+            "Biperideno"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Boca seca",
+          "Visión borrosa",
+          "Estreñimiento",
+          "Retención urinaria",
+          "Taquicardia",
+          "Somnolencia",
+          "Náuseas"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a biperideno",
+          "Glaucoma de ángulo cerrado no tratado",
+          "Retención urinaria grave u obstrucción prostática importante",
+          "Íleo paralítico o megacolon",
+          "Miastenia gravis",
+          "Demencia o delirium activo, salvo extrema necesidad"
+        ],
+        "dangerousAdverseEffects": [
+          "Delirium anticolinérgico",
+          "Confusión grave",
+          "Glaucoma agudo de ángulo cerrado",
+          "Retención urinaria aguda",
+          "Íleo paralítico",
+          "Empeoramiento cognitivo en adultos mayores"
+        ],
+        "dose": {
+          "adulto": "Parkinsonismo: iniciar 1 mg VO 1–2 veces/día; titular lentamente.",
+          "extrapiramidal": "Distonía aguda/EPS: 2–5 mg IM/IV según protocolo; luego considerar VO por corto período.",
+          "manutencao": "Dosis habitual: 2–8 mg/día divididos.",
+          "maxDose": "Dosis máxima habitual: 16 mg/día."
+        },
+        "doseKg": {
+          "maxDose": "16 mg/día",
+          "severe": "Usar menor dosis eficaz por riesgo anticolinérgico.",
+          "standard": "No se utiliza cálculo rutinario por kg en adultos."
+        },
+        "halfLife": "Vida media aproximada: 18–24 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Parkinsonismo medicamentoso",
+          "Distonía aguda inducida por antipsicótico",
+          "Síntomas extrapiramidales por antipsicóticos",
+          "Temblor predominante en enfermedad de Parkinson en pacientes jóvenes seleccionados",
+          "Rigidez parkinsoniana leve en casos seleccionados",
+          "Acatisia/EPS cuando otras medidas no son suficientes en contexto seleccionado"
+        ],
+        "interactions": [
+          "Antidepresivos tricíclicos: mayor carga anticolinérgica",
+          "Antipsicóticos con acción anticolinérgica: mayor riesgo de delirium/estreñimiento",
+          "Antihistamínicos sedativos: mayor efecto anticolinérgico",
+          "Levodopa: puede aumentar discinesias en algunos casos",
+          "Alcohol y sedantes: mayor somnolencia/confusión"
+        ],
+        "mechanism": "Antagonista muscarínico central, reduciendo hiperactividad colinérgica relativa en ganglios basales.",
+        "name": "Biperideno",
+        "onset": "Vía parenteral puede aliviar distonía aguda en minutos; vía oral actúa en horas a días.",
+        "presentation": [
+          "Comprimido 2 mg",
+          "Comprimido de liberación prolongada 4 mg",
+          "Ampolla 5 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "MDS Parkinson Disease Guidelines",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual, pero usar con cautela en pacientes frágiles.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "biperideno",
+      "keywords": [
+        "biperideno",
+        "akineton",
+        "anticolinergico antiparkinsoniano"
+      ],
+      "name": {
+        "es": "Biperideno",
+        "pt": "Biperideno"
+      },
+      "pt": {
+        "alerts": [
+          "Excelente para distonia aguda induzida por antipsicótico.",
+          "Evitar uso crônico desnecessário em idosos.",
+          "Monitorar retenção urinária, constipação e confusão.",
+          "Pode piorar cognição e memória.",
+          "Reavaliar necessidade após controle dos sintomas extrapiramidais."
+        ],
+        "category": "antiparkinsoniano",
+        "class": "Anticolinérgico antiparkinsoniano",
+        "commercialNames": {
+          "ar": [
+            "Akineton",
+            "Biperideno"
+          ],
+          "br": [
+            "Akineton",
+            "Biperideno"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Boca seca",
+          "Visão turva",
+          "Constipação",
+          "Retenção urinária",
+          "Taquicardia",
+          "Sonolência",
+          "Náuseas"
+        ],
+        "contraindications": [
+          "Hipersensibilidade ao biperideno",
+          "Glaucoma de ângulo fechado não tratado",
+          "Retenção urinária grave ou obstrução prostática importante",
+          "Íleo paralítico ou megacólon",
+          "Miastenia gravis",
+          "Demência ou delirium ativo, salvo extrema necessidade"
+        ],
+        "dangerousAdverseEffects": [
+          "Delirium anticolinérgico",
+          "Confusão grave",
+          "Glaucoma agudo de ângulo fechado",
+          "Retenção urinária aguda",
+          "Íleo paralítico",
+          "Piora cognitiva em idosos"
+        ],
+        "dose": {
+          "adulto": "Parkinsonismo: iniciar 1 mg VO 1–2x/dia; titular lentamente.",
+          "extrapiramidal": "Distonia aguda/EPS: 2–5 mg IM/EV conforme protocolo; depois considerar VO por curto período.",
+          "manutencao": "Dose usual: 2–8 mg/dia divididos.",
+          "maxDose": "Dose máxima usual: 16 mg/dia."
+        },
+        "doseKg": {
+          "maxDose": "16 mg/dia",
+          "severe": "Usar menor dose eficaz pelo risco anticolinérgico.",
+          "standard": "Não se utiliza cálculo rotineiro por kg em adultos."
+        },
+        "halfLife": "Vida média aproximada: 18–24 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Parkinsonismo medicamentoso",
+          "Distonia aguda induzida por antipsicótico",
+          "Sintomas extrapiramidais por antipsicóticos",
+          "Tremor predominante na doença de Parkinson em pacientes jovens selecionados",
+          "Rigidez parkinsoniana leve em casos selecionados",
+          "Acatisia/EPS quando outras medidas não são suficientes em contexto selecionado"
+        ],
+        "interactions": [
+          "Antidepressivos tricíclicos: maior carga anticolinérgica",
+          "Antipsicóticos com ação anticolinérgica: maior risco de delirium/constipação",
+          "Anti-histamínicos sedativos: maior efeito anticolinérgico",
+          "Levodopa: pode aumentar discinesias em alguns casos",
+          "Álcool e sedativos: maior sonolência/confusão"
+        ],
+        "mechanism": "Antagonista muscarínico central, reduzindo hiperatividade colinérgica relativa nos gânglios da base.",
+        "name": "Biperideno",
+        "onset": "Via parenteral pode aliviar distonia aguda em minutos; via oral atua em horas a dias.",
+        "presentation": [
+          "Comprimido 2 mg",
+          "Comprimido de liberação prolongada 4 mg",
+          "Ampola 5 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "MDS Parkinson Disease Guidelines",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual, mas usar cautela em pacientes frágeis.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "neurologia.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Parkinsonismo: iniciar 1 mg VO 1–2 veces/día; titular lentamente.",
+            "extrapiramidal": "Distonía aguda/EPS: 2–5 mg IM/IV según protocolo; luego considerar VO por corto período.",
+            "manutencao": "Dosis habitual: 2–8 mg/día divididos.",
+            "maxDose": "Dosis máxima habitual: 16 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Parkinsonismo: iniciar 1 mg VO 1–2x/dia; titular lentamente.",
+            "extrapiramidal": "Distonia aguda/EPS: 2–5 mg IM/EV conforme protocolo; depois considerar VO por curto período.",
+            "manutencao": "Dose usual: 2–8 mg/dia divididos.",
+            "maxDose": "Dose máxima usual: 16 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

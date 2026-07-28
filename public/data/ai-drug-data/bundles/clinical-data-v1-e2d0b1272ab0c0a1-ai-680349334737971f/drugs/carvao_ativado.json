@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "9f2cf54e432698e95a5b686d23e77b57974b24f3eb0d6505b32696633af5e366",
+    "sourceModule": "emergencia.js"
+  },
+  "drugId": "carvao_ativado",
+  "identity": {
+    "canonicalOwner": "emergencia.js",
+    "category": "emergencia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "carvao_ativado",
+      "carvão ativado"
+    ],
+    "name": {
+      "es": "Carbón Activado",
+      "pt": "Carvão Ativado"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "emergencia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Carbón Activado"
+      },
+      "icon": "💊",
+      "id": "carvao_ativado",
+      "keywords": [
+        "carvao_ativado",
+        "carvão ativado"
+      ],
+      "name": {
+        "es": "Carbón Activado",
+        "pt": "Carvão Ativado"
+      },
+      "pt": {
+        "name": "Carvão Ativado"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "emergencia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

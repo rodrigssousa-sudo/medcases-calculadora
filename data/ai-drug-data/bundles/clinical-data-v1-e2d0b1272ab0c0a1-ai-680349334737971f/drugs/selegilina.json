@@ -1,0 +1,258 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "e543fe4347442107363b51ae6e138ede7082e0e4f3e79394368aae60b66df3c1",
+    "sourceModule": "neurologia.js"
+  },
+  "drugId": "selegilina",
+  "identity": {
+    "canonicalOwner": "neurologia.js",
+    "category": "antiparkinsoniano",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "selegilina",
+      "jumexil",
+      "niar",
+      "jumex",
+      "inibidor seletivo da mao-b"
+    ],
+    "name": {
+      "es": "Selegilina",
+      "pt": "Selegilina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antiparkinsoniano",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Evitar tomar por la noche por riesgo de insomnio.",
+          "Revisar antidepresivos y opioides antes de prescribir.",
+          "Monitorizar discinesias si se asocia a levodopa.",
+          "En dosis altas puede perder selectividad MAO-B.",
+          "Orientar signos de síndrome serotoninérgico."
+        ],
+        "category": "antiparkinsoniano",
+        "class": "Inhibidor selectivo de la MAO-B",
+        "commercialNames": {
+          "ar": [
+            "Jumex",
+            "Selegilina"
+          ],
+          "br": [
+            "Jumexil",
+            "Niar",
+            "Selegilina"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Insomnio",
+          "Náuseas",
+          "Mareos",
+          "Boca seca",
+          "Cefalea",
+          "Hipotensión ortostática",
+          "Discinesias cuando se asocia a levodopa"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a selegilina",
+          "Uso concomitante con meperidina",
+          "Uso con tramadol, metadona, propoxifeno u otros opioides serotoninérgicos de riesgo",
+          "Uso concomitante con IMAO o linezolid sin manejo especializado"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome serotoninérgico en asociaciones de riesgo",
+          "Crisis hipertensiva si pérdida de selectividad o interacciones",
+          "Alucinaciones o confusión",
+          "Hipotensión sintomática",
+          "Discinesias importantes con levodopa"
+        ],
+        "dose": {
+          "adulto": "Parkinson: 5 mg VO por la mañana; puede usarse 5 mg por la mañana + 5 mg al mediodía.",
+          "manutencao": "Dosis habitual: 5–10 mg/día.",
+          "maxDose": "Dosis máxima habitual: 10 mg/día para mantener selectividad MAO-B."
+        },
+        "doseKg": {
+          "maxDose": "10 mg/día",
+          "severe": "Usar dosis fija y evitar horarios nocturnos por insomnio.",
+          "standard": "No se utiliza cálculo por kg."
+        },
+        "halfLife": "Vida media corta, pero la inhibición enzimática es prolongada; metabolitos pueden persistir.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Enfermedad de Parkinson inicial",
+          "Coadyuvante a levodopa",
+          "Wearing-off leve",
+          "Reducción de fluctuaciones motoras en casos seleccionados",
+          "Síntomas motores leves en Parkinson",
+          "Posible reducción de necesidad de levodopa en fase inicial"
+        ],
+        "interactions": [
+          "Meperidina: contraindicado por riesgo serotoninérgico grave",
+          "ISRS/IRSN/tricíclicos: riesgo de síndrome serotoninérgico",
+          "Tramadol y metadona: riesgo serotoninérgico",
+          "Levodopa: puede aumentar discinesias y efectos dopaminérgicos",
+          "Simpaticomiméticos/descongestivos: riesgo presórico"
+        ],
+        "mechanism": "Inhibe selectivamente MAO-B en dosis habituales, reduciendo degradación de dopamina en SNC; metabolitos anfetamínicos pueden causar insomnio.",
+        "name": "Selegilina",
+        "onset": "La mejoría motora puede ocurrir en días a semanas.",
+        "presentation": [
+          "Comprimido 5 mg",
+          "Cápsula 5 mg",
+          "Formulación oral desintegrable según disponibilidad"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "MDS Parkinson Disease Guidelines",
+          "FDA/DailyMed Selegiline Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "selegilina",
+      "keywords": [
+        "selegilina",
+        "jumexil",
+        "niar",
+        "jumex",
+        "inibidor seletivo da mao-b"
+      ],
+      "name": {
+        "es": "Selegilina",
+        "pt": "Selegilina"
+      },
+      "pt": {
+        "alerts": [
+          "Evitar tomar à noite por risco de insônia.",
+          "Revisar antidepressivos e opioides antes de prescrever.",
+          "Monitorar discinesias se associada à levodopa.",
+          "Em doses altas pode perder seletividade MAO-B.",
+          "Orientar sinais de síndrome serotoninérgica."
+        ],
+        "category": "antiparkinsoniano",
+        "class": "Inibidor seletivo da MAO-B",
+        "commercialNames": {
+          "ar": [
+            "Jumex",
+            "Selegilina"
+          ],
+          "br": [
+            "Jumexil",
+            "Niar",
+            "Selegilina"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Insônia",
+          "Náuseas",
+          "Tontura",
+          "Boca seca",
+          "Cefaleia",
+          "Hipotensão ortostática",
+          "Discinesias quando associada à levodopa"
+        ],
+        "contraindications": [
+          "Hipersensibilidade à selegilina",
+          "Uso concomitante com meperidina",
+          "Uso com tramadol, metadona, propoxifeno ou outros opioides serotoninérgicos de risco",
+          "Uso concomitante com IMAO ou linezolida sem manejo especializado"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome serotoninérgica em associações de risco",
+          "Crise hipertensiva se perda de seletividade ou interações",
+          "Alucinações ou confusão",
+          "Hipotensão sintomática",
+          "Discinesias importantes com levodopa"
+        ],
+        "dose": {
+          "adulto": "Parkinson: 5 mg VO pela manhã; pode usar 5 mg pela manhã + 5 mg ao meio-dia.",
+          "manutencao": "Dose usual: 5–10 mg/dia.",
+          "maxDose": "Dose máxima usual: 10 mg/dia para manter seletividade MAO-B."
+        },
+        "doseKg": {
+          "maxDose": "10 mg/dia",
+          "severe": "Usar dose fixa e evitar horários noturnos por insônia.",
+          "standard": "Não se utiliza cálculo por kg."
+        },
+        "halfLife": "Vida média curta, mas inibição enzimática é prolongada; metabólitos podem persistir.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Doença de Parkinson inicial",
+          "Adjuvante à levodopa",
+          "Wearing-off leve",
+          "Redução de flutuações motoras em casos selecionados",
+          "Sintomas motores leves em Parkinson",
+          "Possível redução da necessidade de levodopa em fase inicial"
+        ],
+        "interactions": [
+          "Meperidina: contraindicado por risco serotoninérgico grave",
+          "ISRS/ISRN/tricíclicos: risco de síndrome serotoninérgica",
+          "Tramadol e metadona: risco serotoninérgico",
+          "Levodopa: pode aumentar discinesias e efeitos dopaminérgicos",
+          "Simpaticomiméticos/descongestionantes: risco pressórico"
+        ],
+        "mechanism": "Inibe seletivamente MAO-B em doses usuais, reduzindo degradação de dopamina no SNC; metabólitos anfetamínicos podem causar insônia.",
+        "name": "Selegilina",
+        "onset": "Melhora motora pode ocorrer em dias a semanas.",
+        "presentation": [
+          "Comprimido 5 mg",
+          "Cápsula 5 mg",
+          "Formulação oral desintegrável conforme disponibilidade"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "MDS Parkinson Disease Guidelines",
+          "FDA/DailyMed Selegiline Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "neurologia.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Parkinson: 5 mg VO por la mañana; puede usarse 5 mg por la mañana + 5 mg al mediodía.",
+            "manutencao": "Dosis habitual: 5–10 mg/día.",
+            "maxDose": "Dosis máxima habitual: 10 mg/día para mantener selectividad MAO-B."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Parkinson: 5 mg VO pela manhã; pode usar 5 mg pela manhã + 5 mg ao meio-dia.",
+            "manutencao": "Dose usual: 5–10 mg/dia.",
+            "maxDose": "Dose máxima usual: 10 mg/dia para manter seletividade MAO-B."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

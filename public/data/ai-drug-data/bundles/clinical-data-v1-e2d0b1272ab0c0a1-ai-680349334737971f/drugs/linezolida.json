@@ -1,0 +1,438 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "7e34969df868a1c0124987b9b9a67540f6f01878b782db67574d4926c2b0923c",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "linezolida",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "linezolida",
+      "zyvox",
+      "linezolida generica",
+      "oxazolidinona"
+    ],
+    "name": {
+      "es": "Linezolida",
+      "pt": "Linezolida"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Monitorizar hemograma semanalmente en tratamientos > 2 semanas.",
+          "Evitar asociación con ISRSs, IMAOs y alimentos ricos en tiramina — crisis hipertensiva.",
+          "Biodisponibilidad oral ~ 100% — cambiar EV→VO tan pronto como sea posible."
+        ],
+        "auditNotes": {
+          "note": "Bloque fusionado y mejorado: message ampliada con vigilancia hematológica; doseMaxima pediátrica corregida a 600 mg/dosis; fg10a30.obs con umbral >7–14 días; fgMenor10.obs con mielosupresión; hemodialise.obs con remoción parcial por HD; safetyFlags y auditNotes añadidos.",
+          "sourcePriority": [
+            "FDA label Zyvox (linezolid) 2023",
+            "EMA label Zyvoxid (linezolid) 2022",
+            "IDSA MRSA Guidelines 2011 (updated)",
+            "Sanford Guide to Antimicrobial Therapy 2025",
+            "Johns Hopkins ABX Guide 2024",
+            "UpToDate 2024",
+            "Lexicomp Online 2025",
+            "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+          ],
+          "status": "excellent_after_review"
+        },
+        "class": "Oxazolidinona",
+        "commercialNames": {
+          "ar": [
+            "Zyvox",
+            "Linezolida Genérica"
+          ],
+          "br": [
+            "Zyvox",
+            "Linezolida Genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas y vómitos",
+          "Cefalea",
+          "Diarrea",
+          "Insomnio"
+        ],
+        "dangerousAdverseEffects": [
+          "Trombocitopenia (uso > 2 semanas)",
+          "Síndrome serotoninérgica (con ISRSs / IMAOs)",
+          "Neuropatía óptica y periférica (uso prolongado)",
+          "Acidosis láctica"
+        ],
+        "dilution": "EV: solución lista 2 mg/mL — infundir sin dilución adicional.",
+        "dose": {
+          "adulto": "600 mg VO/EV cada 12h",
+          "pediatrica": "600 mg VO/EV cada 8h–12h (10 mg/kg/dosis)"
+        },
+        "doseKg": {
+          "maxDose": "1,2 g/día",
+          "standard": "10 mg/kg/dosis cada 8h–12h (pediátrico)"
+        },
+        "name": "Linezolida",
+        "presentation": [
+          "Comprimidos: 600 mg",
+          "Suspensión oral: 100 mg/5 mL",
+          "Solución inyectable EV: 2 mg/mL (300 mL = 600 mg)"
+        ],
+        "ref": "IDSA MRSA Guidelines 2011 / Sanford Guide 2025 / Goodman & Gilman",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Monitorizar trombocitopenia, especialmente si uso >7–14 días.",
+            "pediatrica": {
+              "dose": "10 mg/kg",
+              "doseMaxima": "600 mg/dose",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "10 mg/kg",
+              "doseMaxima": "600 mg/dose",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Dosis habitual para MRSA y Enterococcus resistente.",
+            "pediatrica": {
+              "dose": "10 mg/kg",
+              "doseMaxima": "600 mg/dose",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Mayor riesgo de mielosupresión, acidosis láctica y neuropatía óptica/periférica en uso prolongado.",
+            "pediatrica": {
+              "dose": "10 mg/kg",
+              "doseMaxima": "600 mg/dose",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Preferir administrar después de HD en días de diálisis. Linezolida es parcialmente removida por hemodiálisis.",
+            "pediatrica": {
+              "dose": "10 mg/kg",
+              "doseMaxima": "600 mg/dose",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "message": "No requiere ajuste renal habitual, pero exige vigilancia hematológica.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "safetyFlags": {
+          "hepatotoxicityRisk": false,
+          "neurotoxicityRisk": true,
+          "qtRisk": false,
+          "renalHighRisk": false,
+          "requiresCultureGuidance": true,
+          "warning": "Monitorizar hemograma y plaquetas semanalmente (trombocitopenia en uso >2 semanas). Riesgo de neuropatía óptica/periférica en uso prolongado (>28 días). Riesgo de síndrome serotoninérgico con IMAOs, ISRSs y otros serotoninérgicos. Monitorizar acidosis láctica en uso prolongado."
+        },
+        "speed": "EV: infundir en 30–120 minutos.",
+        "therapeuticRange": "Bacteriostático para Enterococcus; bactericida para Staphylococcus. MRSA, VRE, PRSP."
+      },
+      "icon": "💊",
+      "id": "linezolida",
+      "keywords": [
+        "linezolida",
+        "zyvox",
+        "linezolida generica",
+        "oxazolidinona"
+      ],
+      "name": {
+        "es": "Linezolida",
+        "pt": "Linezolida"
+      },
+      "pt": {
+        "alerts": [
+          "Monitorar hemograma semanalmente em tratamentos > 2 semanas.",
+          "Evitar associação com ISRSs, IMAOs e alimentos ricos em tiramina — crise hipertensiva.",
+          "Biodisponibilidade oral ~ 100% — trocar EV→VO assim que possível."
+        ],
+        "auditNotes": {
+          "note": "Bloco mesclado e melhorado: message expandida com vigilância hematológica; doseMaxima pediátrica corrigida para 600 mg/dose; fg10a30.obs com threshold >7–14 dias; fgMenor10.obs com mielossupressão; hemodialise.obs com remoção parcial por HD; safetyFlags e auditNotes adicionados.",
+          "sourcePriority": [
+            "FDA label Zyvox (linezolid) 2023",
+            "EMA label Zyvoxid (linezolid) 2022",
+            "IDSA MRSA Guidelines 2011 (updated)",
+            "Sanford Guide to Antimicrobial Therapy 2025",
+            "Johns Hopkins ABX Guide 2024",
+            "UpToDate 2024",
+            "Lexicomp Online 2025",
+            "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+          ],
+          "status": "excellent_after_review"
+        },
+        "class": "Oxazolidinona",
+        "commercialNames": {
+          "ar": [
+            "Zyvox",
+            "Linezolida Genérica"
+          ],
+          "br": [
+            "Zyvox",
+            "Linezolida Genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas e vômitos",
+          "Cefaleia",
+          "Diarreia",
+          "Insônia"
+        ],
+        "dangerousAdverseEffects": [
+          "Trombocitopenia (uso > 2 semanas)",
+          "Síndrome serotoninérgica (com ISRSs / IMAOs)",
+          "Neuropatia óptica e periférica (uso prolongado)",
+          "Acidose láctica"
+        ],
+        "dilution": "EV: solução pronta 2 mg/mL — infundir sem diluição adicional.",
+        "dose": {
+          "adulto": "600 mg VO/EV 12/12h",
+          "pediatrica": "600 mg VO/EV 8/8h–12/12h (10 mg/kg/dose)"
+        },
+        "doseKg": {
+          "maxDose": "1,2 g/dia",
+          "standard": "10 mg/kg/dose 8/8h–12/12h (pediátrico)"
+        },
+        "name": "Linezolida",
+        "presentation": [
+          "Comprimidos: 600 mg",
+          "Suspensão oral: 100 mg/5 mL",
+          "Solução injetável EV: 2 mg/mL (300 mL = 600 mg)"
+        ],
+        "ref": "IDSA MRSA Guidelines 2011 / Sanford Guide 2025 / Goodman & Gilman",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Monitorar trombocitopenia, especialmente se uso >7–14 dias.",
+            "pediatrica": {
+              "dose": "10 mg/kg",
+              "doseMaxima": "600 mg/dose",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "10 mg/kg",
+              "doseMaxima": "600 mg/dose",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Dose habitual para MRSA e Enterococcus resistente.",
+            "pediatrica": {
+              "dose": "10 mg/kg",
+              "doseMaxima": "600 mg/dose",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Maior risco de mielossupressão, acidose láctica e neuropatia óptica/periférica em uso prolongado.",
+            "pediatrica": {
+              "dose": "10 mg/kg",
+              "doseMaxima": "600 mg/dose",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Preferir administrar após HD nos dias de diálise. Linezolida é parcialmente removida pela hemodiálise.",
+            "pediatrica": {
+              "dose": "10 mg/kg",
+              "doseMaxima": "600 mg/dose",
+              "intervalo": "8/8h–12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "600 mg",
+              "doseMaxima": "1,2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "message": "Não necessita ajuste renal habitual, mas exige vigilância hematológica.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "safetyFlags": {
+          "hepatotoxicityRisk": false,
+          "neurotoxicityRisk": true,
+          "qtRisk": false,
+          "renalHighRisk": false,
+          "requiresCultureGuidance": true,
+          "warning": "Monitorar hemograma e plaquetas semanalmente (trombocitopenia em uso >2 semanas). Risco de neuropatia óptica/periférica em uso prolongado (>28 dias). Risco de síndrome serotoninérgica com IMAOs, ISRSs e outros serotoninérgicos. Monitorar acidose láctica em uso prolongado."
+        },
+        "speed": "EV: infundir em 30–120 minutos.",
+        "therapeuticRange": "Bacteriostático para Enterococcus; bactericida para Staphylococcus. MRSA, VRE, PRSP."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "600 mg VO/EV cada 12h",
+            "pediatrica": "600 mg VO/EV cada 8h–12h (10 mg/kg/dosis)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "600 mg VO/EV 12/12h",
+            "pediatrica": "600 mg VO/EV 8/8h–12/12h (10 mg/kg/dose)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

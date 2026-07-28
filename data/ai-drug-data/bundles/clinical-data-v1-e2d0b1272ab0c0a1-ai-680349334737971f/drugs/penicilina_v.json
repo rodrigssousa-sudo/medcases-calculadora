@@ -1,0 +1,358 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "31aa5472f9d3203105969d51e20bb076d993fe843db2edaffda0875753c01203",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "penicilina_v",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "penicilina_v",
+      "penicilina v",
+      "pen-ve-oral",
+      "meracilina",
+      "fenoximetilpenicilina generica",
+      "pen-ve-k",
+      "penicilina de espectro estreito (oral)"
+    ],
+    "name": {
+      "es": "Penicilina V",
+      "pt": "Penicilina V"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(34,197,94,0.15)",
+      "colorTxt": "#22C55E",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Droga de elección para faringoamigdalitis estreptocócica (Streptococcus pyogenes — NUNCA resistente a penicilina).",
+          "Tomar en ayunas (absorción reducida con alimentos).",
+          "No requiere ajuste renal en la práctica clínica habitual."
+        ],
+        "class": "Penicilina de espectro estrecho (oral)",
+        "commercialNames": {
+          "ar": [
+            "Pen-Ve-K",
+            "Fenoximetilpenicilina Genérica"
+          ],
+          "br": [
+            "Pen-Ve-Oral",
+            "Meracilina",
+            "Fenoximetilpenicilina Genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas y vómitos",
+          "Diarrea",
+          "Erupción cutánea",
+          "Candidiasis oral"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a penicilina o cefalosporinas (reacción cruzada ~1–2%)"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia / choque anafiláctico (0,04–0,2%)",
+          "Enfermedad del suero",
+          "Colitis por C. difficile (raro)"
+        ],
+        "dilution": "Uso oral exclusivo.",
+        "dose": {
+          "adultoVO": "250–500 mg VO cada 6h–8h por 10 días (faringoamigdalitis)",
+          "pediatrica": "500 mg VO cada 6h–8h (25–50 mg/kg/día)"
+        },
+        "doseKg": {
+          "pediatrica": "25–50 mg/kg/día dividido cada 6h–8h (máx 500 mg/dosis)"
+        },
+        "halfLife": "Semivida 30–60 min. Eliminación renal ~25–35% inalterada.",
+        "mechanism": "Se une a las PBPs inhibiendo la síntesis del peptidoglicano de la pared celular bacteriana. Bactericida tiempo-dependiente. Espectro restringido: estreptococos beta-hemolíticos, neumococo sensible, anaerobios orales.",
+        "name": "Penicilina V",
+        "onset": "Absorción oral adecuada en ayunas — biodisponibilidad ~60%; Tmáx 30–60 min.",
+        "presentation": [
+          "Comprimidos: 250 mg (400.000 UI), 500 mg (800.000 UI)",
+          "Solución oral: 125 mg/5 mL; 250 mg/5 mL"
+        ],
+        "ref": "Sanford Guide 2025 / IDSA Group A Strep Guidelines / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dosis habitual para faringoamigdalitis estreptocócica.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorizar solo en insuficiencia renal terminal.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "No requiere suplementación post-hemodiálisis.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg"
+            }
+          },
+          "message": "No requiere ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "No aplicable (uso oral).",
+        "therapeuticRange": "Tiempo sobre la CIM (T>CIM). Tomar en ayunas o con poca comida."
+      },
+      "icon": "💊",
+      "id": "penicilina_v",
+      "keywords": [
+        "penicilina_v",
+        "penicilina v",
+        "pen-ve-oral",
+        "meracilina",
+        "fenoximetilpenicilina generica",
+        "pen-ve-k",
+        "penicilina de espectro estreito (oral)"
+      ],
+      "name": {
+        "es": "Penicilina V",
+        "pt": "Penicilina V"
+      },
+      "pt": {
+        "alerts": [
+          "Droga de escolha para faringoamigdalite estreptocócica (Streptococcus pyogenes — NUNCA resistente à penicilina).",
+          "Tomar em jejum (absorção reduzida com alimentos).",
+          "Não requer ajuste renal na prática clínica habitual."
+        ],
+        "class": "Penicilina de espectro estreito (oral)",
+        "commercialNames": {
+          "ar": [
+            "Pen-Ve-K",
+            "Fenoximetilpenicilina Genérica"
+          ],
+          "br": [
+            "Pen-Ve-Oral",
+            "Meracilina",
+            "Fenoximetilpenicilina Genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Náuseas e vômitos",
+          "Diarreia",
+          "Rash cutâneo",
+          "Candidíase oral"
+        ],
+        "contraindications": [
+          "Hipersensibilidade à penicilina ou cefalosporinas (reação cruzada ~1–2%)"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia / choque anafilático (0,04–0,2%)",
+          "Doença do soro",
+          "Colite por C. difficile (raro)"
+        ],
+        "dilution": "Uso oral exclusivo.",
+        "dose": {
+          "adultoVO": "250–500 mg VO 6/6h–8/8h por 10 dias (faringoamigdalite)",
+          "pediatrica": "500 mg VO 6/6h–8/8h (25–50 mg/kg/dia)"
+        },
+        "doseKg": {
+          "pediatrica": "25–50 mg/kg/dia dividido 6/6h–8/8h (máx 500 mg/dose)"
+        },
+        "halfLife": "Meia-vida 30–60 min. Eliminação renal ~25–35% inalterada.",
+        "mechanism": "Liga-se às PBPs inibindo síntese do peptidoglicano da parede celular bacteriana. Bactericida tempo-dependente. Espectro restrito: estreptococos beta-hemolíticos, pneumococo sensível, anaeróbios orais.",
+        "name": "Penicilina V",
+        "onset": "Absorção oral adequada em jejum — biodisponibilidade ~60%; Tmáx 30–60 min.",
+        "presentation": [
+          "Comprimidos: 250 mg (400.000 UI), 500 mg (800.000 UI)",
+          "Solução oral: 125 mg/5 mL; 250 mg/5 mL"
+        ],
+        "ref": "Sanford Guide 2025 / IDSA Group A Strep Guidelines / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dose habitual para faringoamigdalite estreptocócica.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorar apenas em insuficiência renal terminal.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Não requer suplementação pós-hemodiálise.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg"
+            }
+          },
+          "message": "Não necessita ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Não aplicável (uso oral).",
+        "therapeuticRange": "Tempo acima da CIM (T>CIM). Tomar em jejum ou com pouco alimento."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoVO": "250–500 mg VO cada 6h–8h por 10 días (faringoamigdalitis)",
+            "pediatrica": "500 mg VO cada 6h–8h (25–50 mg/kg/día)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoVO": "250–500 mg VO 6/6h–8/8h por 10 dias (faringoamigdalite)",
+            "pediatrica": "500 mg VO 6/6h–8/8h (25–50 mg/kg/dia)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

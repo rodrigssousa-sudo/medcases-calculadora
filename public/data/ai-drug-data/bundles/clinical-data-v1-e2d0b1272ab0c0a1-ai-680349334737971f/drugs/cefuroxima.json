@@ -1,0 +1,406 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "61f1856b25c2bcc393597878b88ee5f3a956e79949de96bec344527294d9c8a8",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "cefuroxima",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "cefuroxima",
+      "zinnat",
+      "cefuroxima sandoz",
+      "cefuroxima generica",
+      "cefuroxima richet",
+      "cefalosporina de 2ª geracao"
+    ],
+    "name": {
+      "es": "Cefuroxima",
+      "pt": "Cefuroxima"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Útil para infecciones respiratorias, otitis, sinusitis y algunas infecciones urinarias según sensibilidad.",
+          "No cubre MRSA, Enterococcus ni Pseudomonas.",
+          "La formulación oral tiene mejor absorción cuando se administra después de comida."
+        ],
+        "class": "Cefalosporina de 2ª generación",
+        "commercialNames": {
+          "ar": [
+            "Zinnat",
+            "Cefuroxima Richet",
+            "Cefuroxima genérica"
+          ],
+          "br": [
+            "Zinnat",
+            "Cefuroxima Sandoz",
+            "Cefuroxima genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Diarrea",
+          "Náuseas",
+          "Dolor abdominal",
+          "Exantema cutáneo"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia",
+          "Colitis por Clostridioides difficile",
+          "Síndrome de Stevens-Johnson",
+          "Convulsiones en insuficiencia renal sin ajuste"
+        ],
+        "dilution": "VO: no requiere dilución. EV: reconstituir y diluir según protocolo institucional.",
+        "dose": {
+          "adultoEV": "750 mg EV/IM cada 8h; infección grave: 1,5 g EV cada 8h",
+          "adultoVO": "250–500 mg VO cada 12h",
+          "pediatricaVO": "500 mg VO cada 12h"
+        },
+        "doseKg": {
+          "maxDose": "VO: 1 g/día; EV: hasta 6 g/día en infecciones graves",
+          "standardEV": "50–100 mg/kg/día EV dividido cada 8h",
+          "standardVO": "20–30 mg/kg/día VO dividido cada 12h"
+        },
+        "name": "Cefuroxima",
+        "presentation": [
+          "Comprimidos: 250 mg, 500 mg",
+          "Suspensión oral: 250 mg/5 mL",
+          "Frasco ampolla EV/IM: 750 mg, 1,5 g"
+        ],
+        "ref": "Goodman & Gilman / Sanford Guide / Lexicomp-style dosing references",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "750 mg",
+              "doseMaxima": "750 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Ajuste obligatorio.",
+            "pediatrica": {
+              "dose": "15 mg/kg",
+              "doseMaxima": "750 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250 mg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "750 mg",
+              "doseMaxima": "1,5 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Reducción de la frecuencia debido a la disminución del aclaramiento renal.",
+            "pediatrica": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "750 mg–1,5 g",
+              "doseMaxima": "6 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "g"
+            },
+            "obs": "Dosis habitual.",
+            "pediatrica": {
+              "dose": "20–30 mg/kg",
+              "doseMaxima": "1,5 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "750 mg",
+              "doseMaxima": "750 mg",
+              "intervalo": "48/48h",
+              "unidade": "mg"
+            },
+            "obs": "Monitorizar acumulación y neurotoxicidad.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "750 mg",
+              "intervalo": "48/48h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250 mg",
+              "doseMaxima": "250 mg",
+              "intervalo": "48/48h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "750 mg",
+              "doseMaxima": "750 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Administrar después de hemodiálisis.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "750 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250 mg",
+              "doseMaxima": "250 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "VO: administrar preferentemente después de comida. EV: infundir en aproximadamente 30 minutos.",
+        "therapeuticRange": "Beta-lactámico dependiente del tiempo sobre la MIC."
+      },
+      "icon": "💊",
+      "id": "cefuroxima",
+      "keywords": [
+        "cefuroxima",
+        "zinnat",
+        "cefuroxima sandoz",
+        "cefuroxima generica",
+        "cefuroxima richet",
+        "cefalosporina de 2ª geracao"
+      ],
+      "name": {
+        "es": "Cefuroxima",
+        "pt": "Cefuroxima"
+      },
+      "pt": {
+        "alerts": [
+          "Útil para infecções respiratórias, otite, sinusite e algumas infecções urinárias conforme sensibilidade.",
+          "Não cobre MRSA, Enterococcus nem Pseudomonas.",
+          "A formulação oral tem melhor absorção quando administrada após alimento."
+        ],
+        "class": "Cefalosporina de 2ª geração",
+        "commercialNames": {
+          "ar": [
+            "Zinnat",
+            "Cefuroxima Richet",
+            "Cefuroxima genérica"
+          ],
+          "br": [
+            "Zinnat",
+            "Cefuroxima Sandoz",
+            "Cefuroxima genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Diarreia",
+          "Náuseas",
+          "Dor abdominal",
+          "Rash cutâneo"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia",
+          "Colite por Clostridioides difficile",
+          "Síndrome de Stevens-Johnson",
+          "Convulsões em insuficiência renal sem ajuste"
+        ],
+        "dilution": "VO: não necessita diluição. EV: reconstituir e diluir conforme protocolo institucional.",
+        "dose": {
+          "adultoEV": "750 mg EV/IM 8/8h; infecção grave: 1,5 g EV 8/8h",
+          "adultoVO": "250–500 mg VO 12/12h",
+          "pediatricaVO": "500 mg VO 12/12h"
+        },
+        "doseKg": {
+          "maxDose": "VO: 1 g/dia; EV: até 6 g/dia em infecções graves",
+          "standardEV": "50–100 mg/kg/dia EV dividido 8/8h",
+          "standardVO": "20–30 mg/kg/dia VO dividido 12/12h"
+        },
+        "name": "Cefuroxima",
+        "presentation": [
+          "Comprimidos: 250 mg, 500 mg",
+          "Suspensão oral: 250 mg/5 mL",
+          "Frasco-ampola EV/IM: 750 mg, 1,5 g"
+        ],
+        "ref": "Goodman & Gilman / Sanford Guide / Lexicomp-style dosing references",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "750 mg",
+              "doseMaxima": "750 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Ajuste obrigatório.",
+            "pediatrica": {
+              "dose": "15 mg/kg",
+              "doseMaxima": "750 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250 mg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "750 mg",
+              "doseMaxima": "1,5 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            },
+            "obs": "Redução da frequência devido à depuração renal reduzida.",
+            "pediatrica": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "750 mg–1,5 g",
+              "doseMaxima": "6 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "g"
+            },
+            "obs": "Dose habitual.",
+            "pediatrica": {
+              "dose": "20–30 mg/kg",
+              "doseMaxima": "1,5 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250–500 mg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "750 mg",
+              "doseMaxima": "750 mg",
+              "intervalo": "48/48h",
+              "unidade": "mg"
+            },
+            "obs": "Monitorar acúmulo e neurotoxicidade.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "750 mg",
+              "intervalo": "48/48h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250 mg",
+              "doseMaxima": "250 mg",
+              "intervalo": "48/48h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "750 mg",
+              "doseMaxima": "750 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Administrar após hemodiálise.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "750 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "250 mg",
+              "doseMaxima": "250 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "VO: administrar preferencialmente após alimento. EV: infundir em aproximadamente 30 minutos.",
+        "therapeuticRange": "Beta-lactâmico dependente do tempo acima da MIC."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoEV": "750 mg EV/IM cada 8h; infección grave: 1,5 g EV cada 8h",
+            "adultoVO": "250–500 mg VO cada 12h",
+            "pediatricaVO": "500 mg VO cada 12h"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoEV": "750 mg EV/IM 8/8h; infecção grave: 1,5 g EV 8/8h",
+            "adultoVO": "250–500 mg VO 12/12h",
+            "pediatricaVO": "500 mg VO 12/12h"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

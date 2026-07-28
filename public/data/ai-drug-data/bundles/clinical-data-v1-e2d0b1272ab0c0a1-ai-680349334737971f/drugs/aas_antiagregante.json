@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "b293ba4fd0dc1518ef2b0cdf10757c0cd27b3727277a0941ea7f7b67742ea933",
+    "sourceModule": "anticoag.js"
+  },
+  "drugId": "aas_antiagregante",
+  "identity": {
+    "canonicalOwner": "anticoag.js",
+    "category": "anticoag",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "aas_antiagregante",
+      "ácido acetilsalicílico (aas)"
+    ],
+    "name": {
+      "es": "Ácido Acetilsalicílico (AAS)",
+      "pt": "Ácido Acetilsalicílico (AAS)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "anticoag",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Ácido Acetilsalicílico (AAS)"
+      },
+      "icon": "💊",
+      "id": "aas_antiagregante",
+      "keywords": [
+        "aas_antiagregante",
+        "ácido acetilsalicílico (aas)"
+      ],
+      "name": {
+        "es": "Ácido Acetilsalicílico (AAS)",
+        "pt": "Ácido Acetilsalicílico (AAS)"
+      },
+      "pt": {
+        "name": "Ácido Acetilsalicílico (AAS)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "anticoag.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

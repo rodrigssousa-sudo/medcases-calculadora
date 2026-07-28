@@ -1,0 +1,344 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "6fb2f952c369f4a99039a9b0a3b6b16861743f914d1f4066de5918c24539feec",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "penicilina_g",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "penicilina_g",
+      "penicilina g cristalina",
+      "penicilina g cristalina blau",
+      "penicilina g teuto",
+      "penicilina g cristalina richet",
+      "penicilina g klonal",
+      "penicilina natural"
+    ],
+    "name": {
+      "es": "Penicilina G Cristalina",
+      "pt": "Penicilina G Cristalina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Indicada para neurosífilis, endocarditis por estreptococos y meningitis bacteriana.",
+          "No cubre MRSA, Pseudomonas ni enterobacterias productoras de beta-lactamasa."
+        ],
+        "class": "Penicilina natural",
+        "commercialNames": {
+          "ar": [
+            "Penicilina G Cristalina Richet",
+            "Penicilina G Klonal"
+          ],
+          "br": [
+            "Penicilina G Cristalina Blau",
+            "Penicilina G Teuto"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Flebitis",
+          "Náuseas",
+          "Diarrea"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia",
+          "Convulsiones (especialmente en IR sin ajuste)",
+          "Hiperpotasemia (formulaciones K+)",
+          "Colitis por C. difficile"
+        ],
+        "dilution": "Diluir en SF 0,9% según protocolo institucional.",
+        "dose": {
+          "adulto": "2–4 millones UI EV cada 4h",
+          "pediatrica": "3.5 millones UI EV cada 4h–6h"
+        },
+        "doseKg": {
+          "maxDose": "24 millones UI/día",
+          "standard": "50.000 UI/kg por dosis"
+        },
+        "name": "Penicilina G Cristalina",
+        "presentation": [
+          "Frasco ampolla 1.000.000 UI",
+          "Frasco ampolla 5.000.000 UI",
+          "Frasco ampolla 10.000.000 UI"
+        ],
+        "ref": "Sanford Guide 2025 / CDC STI Treatment Guidelines / Goodman & Gilman",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "2 milhões UI",
+              "doseMaxima": "8 milhões UI/dia",
+              "intervalo": "8/8h",
+              "unidade": "UI"
+            },
+            "obs": "Ajuste obligatorio para evitar neurotoxicidad.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "8 milhões UI/dia",
+              "intervalo": "8/8h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "2–4 milhões UI",
+              "doseMaxima": "16 milhões UI/dia",
+              "intervalo": "6/6h",
+              "unidade": "UI"
+            },
+            "obs": "Reducción de la frecuencia debido a la disminución del aclaramiento renal.",
+            "pediatrica": {
+              "dose": "50.000 UI/kg",
+              "doseMaxima": "16 milhões UI/dia",
+              "intervalo": "6/6h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "2–4 milhões UI",
+              "doseMaxima": "24 milhões UI/dia",
+              "intervalo": "4/4h",
+              "unidade": "UI"
+            },
+            "obs": "Dosis habitual para neurosífilis, endocarditis e infecciones graves por estreptococos.",
+            "pediatrica": {
+              "dose": "50.000 UI/kg",
+              "doseMaxima": "24 milhões UI/dia",
+              "intervalo": "4/4h–6/6h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "1–2 milhões UI",
+              "doseMaxima": "4 milhões UI/dia",
+              "intervalo": "12/12h",
+              "unidade": "UI"
+            },
+            "obs": "Monitorizar convulsiones, encefalopatía y trastornos electrolíticos.",
+            "pediatrica": {
+              "dose": "25.000 UI/kg",
+              "doseMaxima": "4 milhões UI/dia",
+              "intervalo": "12/12h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "1–2 milhões UI",
+              "doseMaxima": "4 milhões UI/dia",
+              "intervalo": "12/12h",
+              "unidade": "UI"
+            },
+            "obs": "Administrar después de hemodiálisis.",
+            "pediatrica": {
+              "dose": "25.000 UI/kg",
+              "doseMaxima": "4 milhões UI/dia",
+              "intervalo": "12/12h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Infundir en 15–30 minutos o infusión continua.",
+        "therapeuticRange": "Beta-lactámico dependiente del tiempo sobre la MIC."
+      },
+      "icon": "💊",
+      "id": "penicilina_g",
+      "keywords": [
+        "penicilina_g",
+        "penicilina g cristalina",
+        "penicilina g cristalina blau",
+        "penicilina g teuto",
+        "penicilina g cristalina richet",
+        "penicilina g klonal",
+        "penicilina natural"
+      ],
+      "name": {
+        "es": "Penicilina G Cristalina",
+        "pt": "Penicilina G Cristalina"
+      },
+      "pt": {
+        "alerts": [
+          "Indicada para neurossífilis, endocardite por estreptococos e meningite bacteriana.",
+          "Não cobre MRSA, Pseudomonas nem enterobactérias produtoras de beta-lactamase."
+        ],
+        "class": "Penicilina natural",
+        "commercialNames": {
+          "ar": [
+            "Penicilina G Cristalina Richet",
+            "Penicilina G Klonal"
+          ],
+          "br": [
+            "Penicilina G Cristalina Blau",
+            "Penicilina G Teuto"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Flebite",
+          "Náuseas",
+          "Diarreia"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia",
+          "Convulsões (especialmente em IR sem ajuste)",
+          "Hiperpotassemia (formulações K+)",
+          "Colite por C. difficile"
+        ],
+        "dilution": "Diluir em SF 0,9% conforme protocolo institucional.",
+        "dose": {
+          "adulto": "2–4 milhões UI EV 4/4h",
+          "pediatrica": "3.5 milhões UI EV 4/4h–6/6h"
+        },
+        "doseKg": {
+          "maxDose": "24 milhões UI/dia",
+          "standard": "50.000 UI/kg por dose"
+        },
+        "name": "Penicilina G Cristalina",
+        "presentation": [
+          "Frasco-ampola 1.000.000 UI",
+          "Frasco-ampola 5.000.000 UI",
+          "Frasco-ampola 10.000.000 UI"
+        ],
+        "ref": "Sanford Guide 2025 / CDC STI Treatment Guidelines / Goodman & Gilman",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "2 milhões UI",
+              "doseMaxima": "8 milhões UI/dia",
+              "intervalo": "8/8h",
+              "unidade": "UI"
+            },
+            "obs": "Ajuste obrigatório para evitar neurotoxicidade.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "8 milhões UI/dia",
+              "intervalo": "8/8h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "2–4 milhões UI",
+              "doseMaxima": "16 milhões UI/dia",
+              "intervalo": "6/6h",
+              "unidade": "UI"
+            },
+            "obs": "Redução da frequência devido à depuração renal diminuída.",
+            "pediatrica": {
+              "dose": "50.000 UI/kg",
+              "doseMaxima": "16 milhões UI/dia",
+              "intervalo": "6/6h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "2–4 milhões UI",
+              "doseMaxima": "24 milhões UI/dia",
+              "intervalo": "4/4h",
+              "unidade": "UI"
+            },
+            "obs": "Dose habitual para neurossífilis, endocardite e infecções graves por estreptococos.",
+            "pediatrica": {
+              "dose": "50.000 UI/kg",
+              "doseMaxima": "24 milhões UI/dia",
+              "intervalo": "4/4h–6/6h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "1–2 milhões UI",
+              "doseMaxima": "4 milhões UI/dia",
+              "intervalo": "12/12h",
+              "unidade": "UI"
+            },
+            "obs": "Monitorar convulsões, encefalopatia e distúrbios eletrolíticos.",
+            "pediatrica": {
+              "dose": "25.000 UI/kg",
+              "doseMaxima": "4 milhões UI/dia",
+              "intervalo": "12/12h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "1–2 milhões UI",
+              "doseMaxima": "4 milhões UI/dia",
+              "intervalo": "12/12h",
+              "unidade": "UI"
+            },
+            "obs": "Administrar após hemodiálise.",
+            "pediatrica": {
+              "dose": "25.000 UI/kg",
+              "doseMaxima": "4 milhões UI/dia",
+              "intervalo": "12/12h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Infundir em 15–30 minutos ou infusão contínua.",
+        "therapeuticRange": "Beta-lactâmico dependente do tempo acima da MIC."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "2–4 millones UI EV cada 4h",
+            "pediatrica": "3.5 millones UI EV cada 4h–6h"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "2–4 milhões UI EV 4/4h",
+            "pediatrica": "3.5 milhões UI EV 4/4h–6/6h"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

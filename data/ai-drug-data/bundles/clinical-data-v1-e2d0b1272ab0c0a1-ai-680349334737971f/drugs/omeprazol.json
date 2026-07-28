@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "ba0e3303a13d46ee848dc38fd89748a9df4372e36887dda2e70351c966c6e031",
+    "sourceModule": "gastroenterologia.js"
+  },
+  "drugId": "omeprazol",
+  "identity": {
+    "canonicalOwner": "gastroenterologia.js",
+    "category": "gastroenterologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "omeprazol",
+      "omeprazol (via oral)"
+    ],
+    "name": {
+      "es": "Omeprazol (Vía Oral)",
+      "pt": "Omeprazol (Via Oral)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "gastroenterologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Omeprazol (Vía Oral)"
+      },
+      "icon": "💊",
+      "id": "omeprazol",
+      "keywords": [
+        "omeprazol",
+        "omeprazol (via oral)"
+      ],
+      "name": {
+        "es": "Omeprazol (Vía Oral)",
+        "pt": "Omeprazol (Via Oral)"
+      },
+      "pt": {
+        "name": "Omeprazol (Via Oral)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "gastroenterologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

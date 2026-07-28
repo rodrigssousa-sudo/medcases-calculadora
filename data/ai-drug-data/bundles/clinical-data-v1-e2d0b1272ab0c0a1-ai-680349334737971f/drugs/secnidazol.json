@@ -1,0 +1,316 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "fe4a98f8c7c25614d41aa04c9e41e7b6d862be4acb04fb15786691ff14bd17e0",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "secnidazol",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "secnidazol",
+      "secnidal",
+      "secnidazol generico",
+      "nitroimidazol de 2ª geracao (meia-vida muito longa)"
+    ],
+    "name": {
+      "es": "Secnidazol",
+      "pt": "Secnidazol"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(99,102,241,0.12)",
+      "colorTxt": "#4338CA",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Efecto antabus con alcohol — orientar abstinencia durante el tratamiento y 72h después.",
+          "Semivida muy larga (~17–29h) — dosis única para la mayoría de las indicaciones.",
+          "No requiere ajuste renal habitual."
+        ],
+        "class": "Nitroimidazol de 2.ª generación (semivida muy larga)",
+        "commercialNames": {
+          "ar": [
+            "Secnidal",
+            "Secnidazol Genérico"
+          ],
+          "br": [
+            "Secnidal",
+            "Secnidazol Genérico"
+          ]
+        },
+        "contraindications": [
+          "Hipersensibilidad a los nitroimidazoles",
+          "1.er trimestre de gestación",
+          "Trastornos neurológicos graves"
+        ],
+        "dose": {
+          "adultoVO": "2 g VO dosis única"
+        },
+        "doseKg": null,
+        "indication": "Amebiasis intestinal y hepática, giardiasis, vaginosis bacteriana, tricomoniasis.",
+        "name": "Secnidazol",
+        "presentation": [
+          "Comprimidos: 500 mg",
+          "Suspensión oral: 250 mg/5 mL"
+        ],
+        "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "2 g",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "g"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "2 g",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "g"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Utilizado para amebiasis, giardiasis y vaginosis bacteriana.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "2 g",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "g"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorizar neurotoxicidad en tratamientos repetidos.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "2 g",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "g"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "No requiere suplementación post-HD.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "2 g",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "g"
+            }
+          },
+          "message": "No requiere ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "spectrum": "Entamoeba histolytica, Giardia lamblia, Trichomonas vaginalis, Gardnerella vaginalis, anaerobios (Bacteroides fragilis, Clostridium spp.). Perfil similar al tinidazol con semivida aún más larga (~17–29h)."
+      },
+      "icon": "💊",
+      "id": "secnidazol",
+      "keywords": [
+        "secnidazol",
+        "secnidal",
+        "secnidazol generico",
+        "nitroimidazol de 2ª geracao (meia-vida muito longa)"
+      ],
+      "name": {
+        "es": "Secnidazol",
+        "pt": "Secnidazol"
+      },
+      "pt": {
+        "alerts": [
+          "Efeito antabuse com álcool — orientar abstinência durante tratamento e 72h após.",
+          "Meia-vida muito longa (~17–29h) — dose única para a maioria das indicações.",
+          "Não necessita ajuste renal habitual."
+        ],
+        "class": "Nitroimidazol de 2ª geração (meia-vida muito longa)",
+        "commercialNames": {
+          "ar": [
+            "Secnidal",
+            "Secnidazol Genérico"
+          ],
+          "br": [
+            "Secnidal",
+            "Secnidazol Genérico"
+          ]
+        },
+        "contraindications": [
+          "Hipersensibilidade aos nitroimidazóis",
+          "1º trimestre de gestação",
+          "Distúrbios neurológicos graves"
+        ],
+        "dose": {
+          "adultoVO": "2 g VO dose única"
+        },
+        "doseKg": null,
+        "indication": "Amebíase intestinal e hepática, giardíase, vaginose bacteriana, tricomoníase.",
+        "name": "Secnidazol",
+        "presentation": [
+          "Comprimidos: 500 mg",
+          "Suspensão oral: 250 mg/5 mL"
+        ],
+        "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "2 g",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "g"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "2 g",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "g"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Utilizado para amebíase, giardíase e vaginose bacteriana.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "2 g",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "g"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorar neurotoxicidade em tratamentos repetidos.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "2 g",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "g"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Não requer suplementação pós-HD.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "mg/kg"
+            },
+            "vo": {
+              "dose": "2 g",
+              "doseMaxima": "2 g",
+              "intervalo": "Dose única",
+              "unidade": "g"
+            }
+          },
+          "message": "Não necessita ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "spectrum": "Entamoeba histolytica, Giardia lamblia, Trichomonas vaginalis, Gardnerella vaginalis, anaeróbios (Bacteroides fragilis, Clostridium spp.). Perfil semelhante ao tinidazol com meia-vida ainda mais longa (~17–29h)."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoVO": "2 g VO dosis única"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoVO": "2 g VO dose única"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

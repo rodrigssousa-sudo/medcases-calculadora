@@ -1,0 +1,366 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "56509e545f24e157bcd5400f74b54efdcfbb7091ddafd295a5a7064210d0baa7",
+    "sourceModule": "cardio.js"
+  },
+  "drugId": "azilsartana",
+  "identity": {
+    "canonicalOwner": "cardio.js",
+    "category": "cardio",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "azilsartana",
+      "azilsartan",
+      "edarbi",
+      "azilsartana generica",
+      "azilsartan generico",
+      "bloqueador do receptor de angiotensina ii (bra/arb) — pro-farmaco (azilsartana ativa) · geracao mais recente"
+    ],
+    "name": {
+      "es": "Azilsartán",
+      "pt": "Azilsartana"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardio",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(16,185,129,0.13)",
+      "colorTxt": "#065F46",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "DIFERENCIAL DE LA CLASE: azilsartán es el ARA-II más potente en reducción tensional (PAS y MAPA 24h) en estudios head-to-head vs. olmesartán 40 mg y valsartán 320 mg. Opción en HTA de difícil control.",
+          "Profármaco: precaución en insuficiencia hepática moderada/grave — conversión GI puede estar deteriorada.",
+          "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación. Aumento ≤ 30% de creatinina es esperado.",
+          "Evitar doble inhibición del SRAA (ARA-II + IECA): sin beneficio y riesgo aumentado de eventos adversos graves."
+        ],
+        "auditNotes": {
+          "note": "ARA-II más reciente de la clase. Profármaco (medoxomilo → azilsartán activo en TGI). Mayor potencia antihipertensiva vs. olmesartán y valsartán en estudios head-to-head. Precaución en hepatopatía. Sin aprobación pediátrica. No dializable.",
+          "sourcePriority": [
+            "FDA Edarbi (azilsartan medoxomil) label 2023",
+            "Sica DA et al. — J Clin Hypertens 2011 (head-to-head vs. olmesartan)",
+            "White WB et al. — J Clin Hypertens 2011 (head-to-head vs. valsartan)",
+            "ESC Hypertension Guidelines 2023",
+            "AHA/ACC Hypertension Guidance 2022",
+            "UpToDate 2025",
+            "Lexicomp Online 2026"
+          ],
+          "status": "excellent_after_review"
+        },
+        "class": "Bloqueante del Receptor de Angiotensina II (BRA/ARA-II) — Profármaco (azilsartán activo) · Generación más reciente",
+        "commercialNames": {
+          "ar": [
+            "Edarbi",
+            "Azilsartán genérico"
+          ],
+          "br": [
+            "Edarbi",
+            "Azilsartana genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Mareos / hipotensión",
+          "Hiperpotasemia",
+          "Elevación de creatinina",
+          "Fatiga",
+          "Diarrea (leve)"
+        ],
+        "dangerousAdverseEffects": [
+          "Angioedema (raro)",
+          "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
+          "Insuficiencia Renal Aguda",
+          "Hipotensión grave"
+        ],
+        "dilution": "Solo formulación oral. Azilsartán medoxomilo es profármaco convertido en azilsartán (activo) en el tracto GI.",
+        "dose": {
+          "adultoGrave": "HTA de difícil control: 80 mg/día 1 vez/día. En estudios head-to-head superó olmesartán 40 mg en reducción de PAS media y MAPA de 24h.",
+          "adultoPadrao": "HTA: 40 mg VO 1 vez/día inicial. Mantenimiento: 40–80 mg/día. Máximo: 80 mg/día.",
+          "pediatricaGrave": null,
+          "pediatricaMeningite": null,
+          "pediatricaPadrao": "Uso pediátrico no aprobado formalmente. Datos clínicos muy limitados."
+        },
+        "doseKg": {
+          "doseMaxima": "Adultos: 80 mg/día",
+          "grave": "HTA resistente: 80 mg/día (dosis máxima)",
+          "meningite": null,
+          "padrao": "Adultos: 40–80 mg/día (dosis fija — sin cálculo por kg aprobado)"
+        },
+        "name": "Azilsartán Medoxomilo",
+        "presentation": [
+          "Comprimidos: 40 mg, 80 mg"
+        ],
+        "ref": "FDA Edarbi (azilsartan medoxomil) label 2023 · Sica DA et al. (J Clin Hypertens 2011) · White WB et al. (J Clin Hypertens 2011) · ESC Hypertension Guidelines 2023 · Lexicomp 2026",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "IR grave: iniciar y mantener 40 mg/día. Riesgo elevado de hiperpotasemia. Monitorización intensiva.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "40 mg",
+              "doseMaxima": "40 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "IR moderada: sin ajuste obligatorio. Iniciar con 40 mg/día y monitorizar K⁺ y creatinina.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "40 mg",
+              "doseMaxima": "80 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dosis estándar. HTA: 40 mg 1 vez/día → 80 mg 1 vez/día si necesario. Mayor potencia tensional vs. olmesartán/valsartán.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "40–80 mg",
+              "doseMaxima": "80 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "IR muy grave: mantener 40 mg/día con monitorización rigurosa de K⁺. Evaluar riesgo-beneficio continuamente.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "40 mg",
+              "doseMaxima": "40 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Azilsartán no es removido significativamente por hemodiálisis. Mantener dosis reducida sin suplementación post-HD.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "40 mg",
+              "doseMaxima": "40 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "message": "Ajuste renal formal no necesario para ClCr ≥ 30 mL/min. Monitorizar K⁺ y creatinina.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "safetyFlags": {
+          "angioedemaRisk": false,
+          "avBlockRisk": false,
+          "bradycardiaRisk": false,
+          "hepatotoxicityRisk": true,
+          "hypotensionRisk": true,
+          "neurotoxicityRisk": false,
+          "pregnancyCaution": true,
+          "qtRisk": false,
+          "renalHighRisk": true,
+          "requiresCultureGuidance": false,
+          "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. ARA-II más potente en reducción tensional (MAPA 24h). Profármaco — precaución en hepatopatía. Monitorizar K⁺ y creatinina."
+        },
+        "speed": "VO: tomar 1 vez/día a la misma hora, con o sin alimento.",
+        "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. Monitorizar por PA (incluso MAPA 24h), creatinina y K⁺. Sin nivel sérico objetivo. Evidencia de reducción tensional superior a olmesartán en estudios de fase 3."
+      },
+      "icon": "💊",
+      "id": "azilsartana",
+      "keywords": [
+        "azilsartana",
+        "azilsartan",
+        "edarbi",
+        "azilsartana generica",
+        "azilsartan generico",
+        "bloqueador do receptor de angiotensina ii (bra/arb) — pro-farmaco (azilsartana ativa) · geracao mais recente"
+      ],
+      "name": {
+        "es": "Azilsartán",
+        "pt": "Azilsartana"
+      },
+      "pt": {
+        "alerts": [
+          "DIFERENCIAL DA CLASSE: azilsartana é o BRA mais potente em redução pressórica (PAS e MAPA 24h) nos estudos head-to-head vs. olmesartana 40 mg e valsartana 320 mg. Opção em HTA de difícil controle.",
+          "Pró-fármaco: cautela em insuficiência hepática moderada/grave — conversão GI pode ser prejudicada.",
+          "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação. Aumento ≤ 30% de creatinina é esperado.",
+          "Evitar dupla inibição do SRAA (BRA + IECA): sem benefício e risco aumentado de eventos adversos graves."
+        ],
+        "auditNotes": {
+          "note": "BRA mais recente da classe. Pró-fármaco (medoxomila → azilsartana ativa no TGI). Maior potência anti-hipertensiva vs. olmesartana e valsartana em estudos head-to-head. Cautela em hepatopatia. Sem aprovação pediátrica. Não dialisável.",
+          "sourcePriority": [
+            "FDA Edarbi (azilsartan medoxomil) label 2023",
+            "Sica DA et al. — J Clin Hypertens 2011 (head-to-head vs. olmesartan)",
+            "White WB et al. — J Clin Hypertens 2011 (head-to-head vs. valsartan)",
+            "ESC Hypertension Guidelines 2023",
+            "AHA/ACC Hypertension Guidance 2022",
+            "UpToDate 2025",
+            "Lexicomp Online 2026"
+          ],
+          "status": "excellent_after_review"
+        },
+        "class": "Bloqueador do Receptor de Angiotensina II (BRA/ARB) — Pró-fármaco (azilsartana ativa) · Geração mais recente",
+        "commercialNames": {
+          "ar": [
+            "Edarbi",
+            "Azilsartán genérico"
+          ],
+          "br": [
+            "Edarbi",
+            "Azilsartana genérica"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Tontura / hipotensão",
+          "Hipercalemia",
+          "Elevação de creatinina",
+          "Fadiga",
+          "Diarreia (leve)"
+        ],
+        "dangerousAdverseEffects": [
+          "Angioedema (raro)",
+          "Hipercalemia grave (K⁺ > 6 mEq/L)",
+          "Insuficiência Renal Aguda",
+          "Hipotensão grave"
+        ],
+        "dilution": "Apenas formulação oral. Azilsartana medoxomila é pró-fármaco convertido em azilsartana (ativa) no trato GI.",
+        "dose": {
+          "adultoGrave": "HTA de difícil controle: 80 mg/dia 1x/dia. Em estudos head-to-head superou olmesartana 40 mg na redução de PAS média e MAPA de 24h.",
+          "adultoPadrao": "HTA: 40 mg VO 1x/dia inicial. Manutenção: 40–80 mg/dia. Máximo: 80 mg/dia.",
+          "pediatricaGrave": null,
+          "pediatricaMeningite": null,
+          "pediatricaPadrao": "Uso pediátrico não aprovado formalmente. Dados clínicos muito limitados."
+        },
+        "doseKg": {
+          "doseMaxima": "Adultos: 80 mg/dia",
+          "grave": "HTA resistente: 80 mg/dia (dose máxima)",
+          "meningite": null,
+          "padrao": "Adultos: 40–80 mg/dia (dose fixa — sem cálculo por kg aprovado)"
+        },
+        "name": "Azilsartana Medoxomila",
+        "presentation": [
+          "Comprimidos: 40 mg, 80 mg"
+        ],
+        "ref": "FDA Edarbi (azilsartan medoxomil) label 2023 · Sica DA et al. (J Clin Hypertens 2011) · White WB et al. (J Clin Hypertens 2011) · ESC Hypertension Guidelines 2023 · Lexicomp 2026",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "IR grave: iniciar e manter 40 mg/dia. Risco elevado de hipercalemia. Monitoramento intensivo.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "40 mg",
+              "doseMaxima": "40 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "IR moderada: sem ajuste obrigatório. Iniciar com 40 mg/dia e monitorar K⁺ e creatinina.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "40 mg",
+              "doseMaxima": "80 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Dose padrão. HTA: 40 mg 1x/dia → 80 mg 1x/dia se necessário. Maior potência pressórica vs. olmesartana/valsartana.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "40–80 mg",
+              "doseMaxima": "80 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "IR muito grave: manter 40 mg/dia com monitoração rigorosa de K⁺. Avaliar risco-benefício continuamente.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "40 mg",
+              "doseMaxima": "40 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Azilsartana não é removida significativamente por hemodiálise. Manter dose reduzida sem suplementação pós-HD.",
+            "pediatrica": null,
+            "vo": {
+              "dose": "40 mg",
+              "doseMaxima": "40 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            }
+          },
+          "message": "Ajuste renal formal não necessário para ClCr ≥ 30 mL/min. Monitorar K⁺ e creatinina.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "safetyFlags": {
+          "angioedemaRisk": false,
+          "avBlockRisk": false,
+          "bradycardiaRisk": false,
+          "hepatotoxicityRisk": true,
+          "hypotensionRisk": true,
+          "neurotoxicityRisk": false,
+          "pregnancyCaution": true,
+          "qtRisk": false,
+          "renalHighRisk": true,
+          "requiresCultureGuidance": false,
+          "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. BRA mais potente em redução pressórica (MAPA 24h). Pró-fármaco — cautela em hepatopatia. Monitorar K⁺ e creatinina."
+        },
+        "speed": "VO: tomar 1x/dia no mesmo horário, com ou sem alimento.",
+        "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. Monitorar por PA (inclusive MAPA 24h), creatinina e K⁺. Sem nível sérico-alvo. Evidência de redução pressórica superior à olmesartana em estudos de fase 3."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardio.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "HTA de difícil control: 80 mg/día 1 vez/día. En estudios head-to-head superó olmesartán 40 mg en reducción de PAS media y MAPA de 24h.",
+            "adultoPadrao": "HTA: 40 mg VO 1 vez/día inicial. Mantenimiento: 40–80 mg/día. Máximo: 80 mg/día.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null,
+            "pediatricaPadrao": "Uso pediátrico no aprobado formalmente. Datos clínicos muy limitados."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "HTA de difícil controle: 80 mg/dia 1x/dia. Em estudos head-to-head superou olmesartana 40 mg na redução de PAS média e MAPA de 24h.",
+            "adultoPadrao": "HTA: 40 mg VO 1x/dia inicial. Manutenção: 40–80 mg/dia. Máximo: 80 mg/dia.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null,
+            "pediatricaPadrao": "Uso pediátrico não aprovado formalmente. Dados clínicos muito limitados."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,304 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "01efa2fa51def68f8132bc3fa870a4f5b93d712537a2dfbd476df95d92608e13",
+    "sourceModule": "cardio.js"
+  },
+  "drugId": "trimetazidina",
+  "identity": {
+    "canonicalOwner": "cardio.js",
+    "category": "cardio",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "trimetazidina",
+      "vastarel",
+      "vastarel mr",
+      "idaptan",
+      "antianginoso — modulador metabolico miocardico (inibidor da 3-cetoacil-coa tiolase de cadeia longa)"
+    ],
+    "name": {
+      "es": "Trimetazidina",
+      "pt": "Trimetazidina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardio",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(190,24,93,0.13)",
+      "colorTxt": "#9D174D",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "administration": "Administrar junto con las comidas. Los comprimidos/cápsulas no deben partirse, masticarse ni triturarse.",
+        "auditNotes": {
+          "status": "antianginoso_trimetazidina_master_template"
+        },
+        "class": "Antianginoso — modulador metabólico miocárdico (inhibidor de la 3-cetoacil-CoA tiolasa de cadena larga)",
+        "commercialNames": {
+          "ar": [
+            "Vastarel",
+            "Idaptan"
+          ],
+          "br": [
+            "Vastarel",
+            "Vastarel MR"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Mareo",
+          "Cefalea",
+          "Dolor abdominal",
+          "Diarrea",
+          "Astenia"
+        ],
+        "contraindications": {
+          "absolutas": [
+            "Enfermedad de Parkinson",
+            "Temblores, síndrome de las piernas inquietas u otros trastornos del movimiento relacionados",
+            "Insuficiencia renal grave (ClCr < 30 mL/min)"
+          ],
+          "relativas": [
+            "Ancianos con fragilidad o alto riesgo de caídas",
+            "Insuficiencia renal moderada (ClCr 30–60 mL/min) — requiere reducción de dosis",
+            "Insuficiencia hepática grave — datos insuficientes, no recomendado"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "Síntomas parkinsonianos (rigidez, temblor, acinesia)",
+          "Síndrome de las piernas inquietas",
+          "Trastornos de la marcha",
+          "Caídas (especialmente en ancianos)",
+          "Agranulocitosis (raro)"
+        ],
+        "dose": {
+          "adultoGrave": "Insuficiencia renal moderada (ClCr 30–60 mL/min): reducir a 35 mg 1x/día, por la mañana. Contraindicado si ClCr < 30 mL/min.",
+          "adultoPadrao": "Liberación modificada (MR): 35 mg VO cada 12h, con las comidas. Liberación prolongada: 80 mg VO 1x/día, con las comidas.",
+          "pediatricaGrave": null,
+          "pediatricaMeningite": null,
+          "pediatricaPadrao": "No establecido — uso no aprobado en pediatría."
+        },
+        "doseKg": {
+          "doseMaxima": "35 mg cada 12h (MR) o 80 mg 1x/día (liberación prolongada); 35 mg 1x/día si ClCr 30–60 mL/min",
+          "grave": null,
+          "meningite": null,
+          "padrao": "Dosis fija — no se calcula por peso"
+        },
+        "hepaticAdjustment": "Datos insuficientes. No recomendado en insuficiencia hepática grave.",
+        "indications": {
+          "approved": [
+            "Terapia adyuvante sintomática en pacientes adultos con angina de pecho estable inadecuadamente controlada o intolerantes a terapias antianginosas de primera línea"
+          ],
+          "offLabel": []
+        },
+        "interactions": [
+          "Antiparkinsonianos (levodopa y otros agentes dopaminérgicos): la trimetazidina antagoniza el efecto dopaminérgico — asociación contraindicada/a evitar.",
+          "Antihipertensivos: riesgo potenciado de mareo y caídas por efecto aditivo — monitorizar y orientar cambios posturales lentos."
+        ],
+        "mechanism": "Inhibe la enzima 3-cetoacil-CoA tiolasa de cadena larga mitocondrial, desviando el metabolismo energético del miocardio de la oxidación de ácidos grasos hacia la oxidación de la glucosa — vía que consume menos oxígeno por ATP producido. Optimiza la producción de energía celular bajo condiciones de isquemia, sin alterar la hemodinámica (PA o FC).",
+        "monitoring": {
+          "baseline": [
+            "Función renal (ClCr)",
+            "Evaluación de signos parkinsonianos o trastornos del movimiento preexistentes",
+            "Revisión de medicaciones concomitantes (antiparkinsonianos, antihipertensivos)"
+          ],
+          "followUp": [
+            "Signos extrapiramidales (rigidez, temblor, acinesia, trastornos de la marcha) — si ocurren, discontinuar (reversión generalmente en hasta 4 meses)",
+            "Riesgo de caídas, especialmente en ancianos",
+            "Hemograma (riesgo raro de agranulocitosis)",
+            "Función renal periódica"
+          ]
+        },
+        "name": "Trimetazidina",
+        "pharmacokinetics": {
+          "duration": "Efecto mantenido con posología cada 12h (MR) o 1x/día (liberación prolongada)",
+          "halfLife": "≈ 7 horas; eliminación predominantemente renal (fármaco inalterado)",
+          "onset": "Efecto antianginoso pleno tras días a semanas de uso regular"
+        },
+        "presentation": [
+          "Comprimido de liberación modificada 35 mg",
+          "Cápsula de liberación prolongada 80 mg"
+        ],
+        "ref": [
+          "Bula do Profissional — Vastarel MR",
+          "2019 ESC Guidelines for the Diagnosis and Management of Chronic Coronary Syndromes",
+          "EMA (European Medicines Agency) Assessment Report on Trimetazidine-containing Medicines",
+          "Goodman & Gilman's: The Pharmacological Basis of Therapeutics"
+        ],
+        "renalAdjustment": "ClCr 30–60 mL/min: reducir a 35 mg 1x/día (por la mañana). ClCr < 30 mL/min: contraindicado.",
+        "risksByPatient": [],
+        "safetyFlags": {
+          "extrapyramidalRisk": true,
+          "fallRisk": true,
+          "renalRestriction": true,
+          "warning": "Puede causar o agravar síntomas parkinsonianos (rigidez, temblor, acinesia), síndrome de las piernas inquietas y trastornos de la marcha. Monitorizar al paciente y discontinuar el tratamiento si ocurren temblores o rigidez — los síntomas generalmente son reversibles hasta 4 meses después de la suspensión."
+        },
+        "specialPopulations": {
+          "elderly": "Aumento de la exposición sistémica por reducción de la función renal relacionada con la edad. Ajuste de dosis frecuentemente necesario. Alto riesgo de síntomas extrapiramidales y caídas.",
+          "lactation": "Se desconoce si se excreta en la leche materna. No recomendado durante la lactancia.",
+          "pregnancy": "Faltan datos de seguridad en humanos. Evitar la prescripción como medida de precaución."
+        }
+      },
+      "icon": "⚡",
+      "id": "trimetazidina",
+      "keywords": [
+        "trimetazidina",
+        "vastarel",
+        "vastarel mr",
+        "idaptan",
+        "antianginoso — modulador metabolico miocardico (inibidor da 3-cetoacil-coa tiolase de cadeia longa)"
+      ],
+      "name": {
+        "es": "Trimetazidina",
+        "pt": "Trimetazidina"
+      },
+      "pt": {
+        "administration": "Administrar junto com as refeições. Os comprimidos/cápsulas não devem ser partidos, mastigados ou triturados.",
+        "auditNotes": {
+          "status": "antianginoso_trimetazidina_master_template"
+        },
+        "class": "Antianginoso — modulador metabólico miocárdico (inibidor da 3-cetoacil-CoA tiolase de cadeia longa)",
+        "commercialNames": {
+          "ar": [
+            "Vastarel",
+            "Idaptan"
+          ],
+          "br": [
+            "Vastarel",
+            "Vastarel MR"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Tontura",
+          "Cefaleia",
+          "Dor abdominal",
+          "Diarreia",
+          "Astenia"
+        ],
+        "contraindications": {
+          "absolutas": [
+            "Doença de Parkinson",
+            "Tremores, síndrome das pernas inquietas ou outros distúrbios do movimento relacionados",
+            "Insuficiência renal grave (ClCr < 30 mL/min)"
+          ],
+          "relativas": [
+            "Idosos com fragilidade ou risco elevado de quedas",
+            "Insuficiência renal moderada (ClCr 30–60 mL/min) — requer redução de dose",
+            "Insuficiência hepática grave — dados insuficientes, não recomendado"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "Sintomas parkinsonianos (rigidez, tremor, acinesia)",
+          "Síndrome das pernas inquietas",
+          "Distúrbios da marcha",
+          "Quedas (especialmente em idosos)",
+          "Agranulocitose (raro)"
+        ],
+        "dose": {
+          "adultoGrave": "Insuficiência renal moderada (ClCr 30–60 mL/min): reduzir para 35 mg 1x/dia, pela manhã. Contraindicado se ClCr < 30 mL/min.",
+          "adultoPadrao": "Liberação modificada (MR): 35 mg VO 12/12h, com as refeições. Liberação prolongada: 80 mg VO 1x/dia, com as refeições.",
+          "pediatricaGrave": null,
+          "pediatricaMeningite": null,
+          "pediatricaPadrao": "Não estabelecido — uso não aprovado em pediatria."
+        },
+        "doseKg": {
+          "doseMaxima": "35 mg 12/12h (MR) ou 80 mg 1x/dia (liberação prolongada); 35 mg 1x/dia se ClCr 30–60 mL/min",
+          "grave": null,
+          "meningite": null,
+          "padrao": "Dose fixa — não é calculada por peso"
+        },
+        "hepaticAdjustment": "Dados insuficientes. Não recomendado em insuficiência hepática grave.",
+        "indications": {
+          "approved": [
+            "Terapia adjuvante sintomática em pacientes adultos com angina pectoris estável inadequadamente controlada ou intolerantes a terapias antianginosas de primeira linha"
+          ],
+          "offLabel": []
+        },
+        "interactions": [
+          "Antiparkinsonianos (levodopa e outros agentes dopaminérgicos): a trimetazidina antagoniza o efeito dopaminérgico — associação contraindicada/a evitar.",
+          "Anti-hipertensivos: risco potencializado de tontura e quedas por efeito aditivo — monitorar e orientar mudança postural lenta."
+        ],
+        "mechanism": "Inibe a enzima 3-cetoacil-CoA tiolase de cadeia longa mitocondrial, desviando o metabolismo energético do miocárdio da oxidação de ácidos graxos para a oxidação da glicose — via que consome menos oxigênio por ATP produzido. Otimiza a produção de energia celular sob condições de isquemia, sem alterar a hemodinâmica (PA ou FC).",
+        "monitoring": {
+          "baseline": [
+            "Função renal (ClCr)",
+            "Avaliação de sinais parkinsonianos ou distúrbios do movimento pré-existentes",
+            "Revisão de medicações concomitantes (antiparkinsonianos, anti-hipertensivos)"
+          ],
+          "followUp": [
+            "Sinais extrapiramidais (rigidez, tremor, acinesia, distúrbios da marcha) — se ocorrerem, descontinuar (reversão geralmente em até 4 meses)",
+            "Risco de quedas, especialmente em idosos",
+            "Hemograma (risco raro de agranulocitose)",
+            "Função renal periódica"
+          ]
+        },
+        "name": "Trimetazidina",
+        "pharmacokinetics": {
+          "duration": "Efeito mantido com posologia de 12/12h (MR) ou 1x/dia (liberação prolongada)",
+          "halfLife": "≈ 7 horas; eliminação predominantemente renal (fármaco inalterado)",
+          "onset": "Efeito antianginoso pleno após dias a semanas de uso regular"
+        },
+        "presentation": [
+          "Comprimido de liberação modificada 35 mg",
+          "Cápsula de liberação prolongada 80 mg"
+        ],
+        "ref": [
+          "Bula do Profissional — Vastarel MR",
+          "2019 ESC Guidelines for the Diagnosis and Management of Chronic Coronary Syndromes",
+          "EMA (European Medicines Agency) Assessment Report on Trimetazidine-containing Medicines",
+          "Goodman & Gilman's: The Pharmacological Basis of Therapeutics"
+        ],
+        "renalAdjustment": "ClCr 30–60 mL/min: reduzir para 35 mg 1x/dia (pela manhã). ClCr < 30 mL/min: contraindicado.",
+        "risksByPatient": [],
+        "safetyFlags": {
+          "extrapyramidalRisk": true,
+          "fallRisk": true,
+          "renalRestriction": true,
+          "warning": "Pode causar ou agravar sintomas parkinsonianos (rigidez, tremor, acinesia), síndrome das pernas inquietas e distúrbios da marcha. Monitorar o paciente e descontinuar o tratamento caso ocorram tremores ou rigidez — os sintomas geralmente são reversíveis em até 4 meses após a suspensão."
+        },
+        "specialPopulations": {
+          "elderly": "Aumento da exposição sistêmica por redução da função renal relacionada à idade. Ajuste de dose frequentemente necessário. Alto risco de sintomas extrapiramidais e quedas.",
+          "lactation": "Desconhecido se é excretada no leite materno. Não recomendado durante a amamentação.",
+          "pregnancy": "Faltam dados de segurança em humanos. Evitar a prescrição como medida de precaução."
+        }
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardio.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "Insuficiencia renal moderada (ClCr 30–60 mL/min): reducir a 35 mg 1x/día, por la mañana. Contraindicado si ClCr < 30 mL/min.",
+            "adultoPadrao": "Liberación modificada (MR): 35 mg VO cada 12h, con las comidas. Liberación prolongada: 80 mg VO 1x/día, con las comidas.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null,
+            "pediatricaPadrao": "No establecido — uso no aprobado en pediatría."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoGrave": "Insuficiência renal moderada (ClCr 30–60 mL/min): reduzir para 35 mg 1x/dia, pela manhã. Contraindicado se ClCr < 30 mL/min.",
+            "adultoPadrao": "Liberação modificada (MR): 35 mg VO 12/12h, com as refeições. Liberação prolongada: 80 mg VO 1x/dia, com as refeições.",
+            "pediatricaGrave": null,
+            "pediatricaMeningite": null,
+            "pediatricaPadrao": "Não estabelecido — uso não aprovado em pediatria."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

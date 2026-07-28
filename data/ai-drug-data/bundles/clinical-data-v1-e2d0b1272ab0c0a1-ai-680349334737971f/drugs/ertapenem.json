@@ -1,0 +1,334 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "f6ef7f4cca2d66d1c7ad29927d49dbf223f1c4308c1703102fd88db207b91e10",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "ertapenem",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "ertapenem",
+      "invanz",
+      "ertapenem generico",
+      "carbapenemico (grupo 1 — sem atividade anti-pseudomonas)"
+    ],
+    "name": {
+      "es": "Ertapenem",
+      "pt": "Ertapenem"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "NO cubre Pseudomonas aeruginosa ni Acinetobacter — elección inadecuada para infecciones por estos microorganismos.",
+          "Ajuste obligatorio cuando ClCr < 30 mL/min (reducir a 500 mg/día)."
+        ],
+        "class": "Carbapenémico (grupo 1 — sin actividad anti-Pseudomonas)",
+        "commercialNames": {
+          "ar": [
+            "Invanz",
+            "Ertapenem Genérico"
+          ],
+          "br": [
+            "Invanz",
+            "Ertapenem Genérico"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Diarrea",
+          "Náuseas y vómitos",
+          "Cefalea",
+          "Flebitis (EV)"
+        ],
+        "dangerousAdverseEffects": [
+          "Convulsiones (especialmente con ClCr < 30 mL/min sin ajuste)",
+          "Colitis por C. difficile",
+          "Reacción alérgica grave"
+        ],
+        "dilution": "EV: diluir en SF 0,9% 50–250 mL.",
+        "dose": {
+          "adulto": "1000 mg EV/IM 1 vez/día",
+          "pediatrica": "1000 mg EV cada 12h (15 mg/kg/dosis)"
+        },
+        "doseKg": {
+          "maxDose": "1 g/día (adulto)",
+          "standard": "15 mg/kg cada 12h EV (pediátrico)"
+        },
+        "name": "Ertapenem",
+        "presentation": [
+          "Polvo liofilizado EV/IM: 1 g"
+        ],
+        "ref": "Sanford Guide 2025 / IDSA / Goodman & Gilman",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Reducir dosis aproximadamente un 50%.",
+            "pediatrica": {
+              "dose": "7,5 mg/kg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1 g",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "g"
+            },
+            "obs": "Generalmente sin ajuste hasta ClCr 30 mL/min.",
+            "pediatrica": {
+              "dose": "15 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1 g",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "g"
+            },
+            "obs": "Dosis habitual.",
+            "pediatrica": {
+              "dose": "15 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Monitorizar neurotoxicidad y convulsiones.",
+            "pediatrica": {
+              "dose": "7,5 mg/kg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Administrar después de hemodiálisis.",
+            "pediatrica": {
+              "dose": "7,5 mg/kg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "EV: infundir en 30 minutos. IM: lidocaína 1% como diluyente.",
+        "therapeuticRange": "Tiempo-dependiente. Cobertura amplia excepto Pseudomonas, Acinetobacter y MRSA. ESBL, Enterobacterales, anaerobios."
+      },
+      "icon": "💊",
+      "id": "ertapenem",
+      "keywords": [
+        "ertapenem",
+        "invanz",
+        "ertapenem generico",
+        "carbapenemico (grupo 1 — sem atividade anti-pseudomonas)"
+      ],
+      "name": {
+        "es": "Ertapenem",
+        "pt": "Ertapenem"
+      },
+      "pt": {
+        "alerts": [
+          "NÃO cobre Pseudomonas aeruginosa nem Acinetobacter — escolha inadequada para infecções por esses microrganismos.",
+          "Ajuste obrigatório quando ClCr < 30 mL/min (reduzir para 500 mg/dia)."
+        ],
+        "class": "Carbapenêmico (grupo 1 — sem atividade anti-Pseudomonas)",
+        "commercialNames": {
+          "ar": [
+            "Invanz",
+            "Ertapenem Genérico"
+          ],
+          "br": [
+            "Invanz",
+            "Ertapenem Genérico"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Diarreia",
+          "Náuseas e vômitos",
+          "Cefaleia",
+          "Flebite (EV)"
+        ],
+        "dangerousAdverseEffects": [
+          "Convulsões (especialmente com ClCr < 30 mL/min sem ajuste)",
+          "Colite por C. difficile",
+          "Reação alérgica grave"
+        ],
+        "dilution": "EV: diluir em SF 0,9% 50–250 mL.",
+        "dose": {
+          "adulto": "1000 mg EV/IM 1x/dia",
+          "pediatrica": "1000 mg EV 12/12h (15 mg/kg/dose)"
+        },
+        "doseKg": {
+          "maxDose": "1 g/dia (adulto)",
+          "standard": "15 mg/kg 12/12h EV (pediátrico)"
+        },
+        "name": "Ertapenem",
+        "presentation": [
+          "Pó liofilizado EV/IM: 1 g"
+        ],
+        "ref": "Sanford Guide 2025 / IDSA / Goodman & Gilman",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Reduzir dose em aproximadamente 50%.",
+            "pediatrica": {
+              "dose": "7,5 mg/kg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1 g",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "g"
+            },
+            "obs": "Geralmente sem ajuste até ClCr 30 mL/min.",
+            "pediatrica": {
+              "dose": "15 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1 g",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "g"
+            },
+            "obs": "Dose habitual.",
+            "pediatrica": {
+              "dose": "15 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Monitorar neurotoxicidade e convulsões.",
+            "pediatrica": {
+              "dose": "7,5 mg/kg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Administrar após hemodiálise.",
+            "pediatrica": {
+              "dose": "7,5 mg/kg",
+              "doseMaxima": "500 mg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "EV: infundir em 30 minutos. IM: lidocaína 1% como diluente.",
+        "therapeuticRange": "Tempo-dependente. Cobertura ampla exceto Pseudomonas, Acinetobacter e MRSA. ESBL, Enterobacterales, anaeróbios."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "1000 mg EV/IM 1 vez/día",
+            "pediatrica": "1000 mg EV cada 12h (15 mg/kg/dosis)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "1000 mg EV/IM 1x/dia",
+            "pediatrica": "1000 mg EV 12/12h (15 mg/kg/dose)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

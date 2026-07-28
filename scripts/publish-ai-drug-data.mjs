@@ -88,7 +88,44 @@ const index = readJson(sourceIndexPath);
 
 const source = manifest.source ?? {};
 const projection = manifest.projection ?? {};
-const bundleId = source.bundleVersion;
+
+if (typeof source.bundleVersion !== 'string') {
+  fail('Source bundle version missing');
+}
+if (
+  typeof source.bundleSha256 !== 'string' ||
+  !/^[a-f0-9]{64}$/.test(source.bundleSha256)
+) {
+  fail('Source bundle SHA-256 invalid');
+}
+
+const generatedManifestSha256 = sha256(
+  fs.readFileSync(sourceManifestPath),
+);
+const generatedIndexSha256 = sha256(
+  fs.readFileSync(sourceIndexPath),
+);
+
+const projectionIdentityPayload = {
+  schemaVersion: 'medcases-ai-drug-data-projection-identity-v1',
+  sourceBundleVersion: source.bundleVersion,
+  sourceBundleSha256: source.bundleSha256,
+  generatedManifestSha256,
+  generatedIndexSha256,
+  documents: Array.isArray(manifest.documents)
+    ? manifest.documents.map((entry) => ({
+        drugId: entry.drugId,
+        sourceDocumentSha256: entry.sourceDocumentSha256,
+        projectionSha256: entry.projectionSha256,
+      }))
+    : [],
+};
+
+const projectionBundleSha256 = sha256(
+  Buffer.from(stableJson(projectionIdentityPayload), 'utf8'),
+);
+const bundleId =
+  `${source.bundleVersion}-ai-${projectionBundleSha256.slice(0, 16)}`;
 
 ensureSafeBundleId(bundleId);
 
@@ -165,10 +202,14 @@ for (const drugId of ids) {
 }
 
 const publicationManifest = {
-  schemaVersion: 'medcases-ai-drug-data-publication-v1',
+  schemaVersion: 'medcases-ai-drug-data-publication-v2',
   bundleId,
-  bundleVersion: source.bundleVersion,
-  bundleSha256: source.bundleSha256,
+  bundleVersion: bundleId,
+  bundleSha256: projectionBundleSha256,
+  sourceBundleVersion: source.bundleVersion,
+  sourceBundleSha256: source.bundleSha256,
+  projectionIdentitySchema:
+    projectionIdentityPayload.schemaVersion,
   generatedManifestSha256:
     publishedFiles['manifest.json'].sha256,
   generatedIndexSha256:
@@ -219,8 +260,10 @@ if (fs.existsSync(finalBundleRoot)) {
 const current = {
   schemaVersion: 'medcases-ai-drug-data-current-v1',
   bundleId,
-  bundleVersion: source.bundleVersion,
-  bundleSha256: source.bundleSha256,
+  bundleVersion: bundleId,
+  bundleSha256: projectionBundleSha256,
+  sourceBundleVersion: source.bundleVersion,
+  sourceBundleSha256: source.bundleSha256,
   publicationPath: `bundles/${bundleId}/publication.json`,
   manifestPath: `bundles/${bundleId}/manifest.json`,
   indexPath: `bundles/${bundleId}/index.json`,
@@ -236,7 +279,9 @@ writeFileAtomically(currentPath, stableJson(current));
 const currentVerification = readJson(currentPath);
 if (
   currentVerification.bundleId !== bundleId ||
-  currentVerification.bundleSha256 !== source.bundleSha256
+  currentVerification.bundleVersion !== bundleId ||
+  currentVerification.bundleSha256 !== projectionBundleSha256 ||
+  currentVerification.sourceBundleSha256 !== source.bundleSha256
 ) {
   fail('Atomic current pointer verification failed');
 }

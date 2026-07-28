@@ -1,0 +1,334 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "81cbb812f11746568d311bd513858a9f478cb0c80fafc42898e4c14eea60db60",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "aztreonam",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "aztreonam",
+      "azactam",
+      "aztreonam generico",
+      "monobactamico (beta-lactamico monociclico)"
+    ],
+    "name": {
+      "es": "Aztreonam",
+      "pt": "Aztreonam"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Activo SOLO contra Gram-negativos aeróbicos — NO cubre Gram-positivos, anaerobios o hongos.",
+          "Muy baja reactividad cruzada con penicilinas — opción segura en alérgicos a beta-lactámicos."
+        ],
+        "class": "Monobactámico (beta-lactámico monocíclico)",
+        "commercialNames": {
+          "ar": [
+            "Azactam",
+            "Aztreonam Genérico"
+          ],
+          "br": [
+            "Azactam",
+            "Aztreonam Genérico"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Flebitis",
+          "Diarrea",
+          "Náuseas",
+          "Exantema"
+        ],
+        "dangerousAdverseEffects": [
+          "Hepatotoxicidad",
+          "Reacción de hipersensibilidad (raro)",
+          "Colitis por C. difficile"
+        ],
+        "dilution": "EV: diluir en SF 0,9% o SG 5% 50–100 mL.",
+        "dose": {
+          "adulto": "1–2 g EV 8/8h",
+          "pediatrica": "2000 mg EV cada 6h–8h (30 mg/kg/dosis)"
+        },
+        "doseKg": {
+          "maxDose": "8 g/día (adulto)",
+          "standard": "30 mg/kg/dosis EV cada 6h–8h (pediátrico)"
+        },
+        "name": "Aztreonam",
+        "presentation": [
+          "Polvo liofilizado EV/IM: 500 mg, 1 g, 2 g"
+        ],
+        "ref": "Sanford Guide 2025 / Goodman & Gilman / IDSA",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "g"
+            },
+            "obs": "Ajuste obligatorio.",
+            "pediatrica": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "g"
+            },
+            "obs": "Reducir frecuencia.",
+            "pediatrica": {
+              "dose": "20–30 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "g"
+            },
+            "obs": "Dosis habitual para Gramnegativos.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "8 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Monitorizar neurotoxicidad.",
+            "pediatrica": {
+              "dose": "15 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Administrar después de hemodiálisis.",
+            "pediatrica": {
+              "dose": "15 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "EV: infundir en 20–60 minutos.",
+        "therapeuticRange": "Tiempo-dependiente. EXCLUSIVAMENTE Gram-negativos aeróbicos (Pseudomonas, Enterobacterales). SIN actividad contra Gram-positivos o anaerobios."
+      },
+      "icon": "💊",
+      "id": "aztreonam",
+      "keywords": [
+        "aztreonam",
+        "azactam",
+        "aztreonam generico",
+        "monobactamico (beta-lactamico monociclico)"
+      ],
+      "name": {
+        "es": "Aztreonam",
+        "pt": "Aztreonam"
+      },
+      "pt": {
+        "alerts": [
+          "Ativo APENAS contra Gram-negativos aeróbicos — NÃO cobre Gram-positivos, anaeróbios ou fungos.",
+          "Baixíssima reatividade cruzada com penicilinas — opção segura em alérgicos a beta-lactâmicos."
+        ],
+        "class": "Monobactâmico (beta-lactâmico monocíclico)",
+        "commercialNames": {
+          "ar": [
+            "Azactam",
+            "Aztreonam Genérico"
+          ],
+          "br": [
+            "Azactam",
+            "Aztreonam Genérico"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Flebite",
+          "Diarreia",
+          "Náuseas",
+          "Exantema"
+        ],
+        "dangerousAdverseEffects": [
+          "Hepatotoxicidade",
+          "Reação de hipersensibilidade (raro)",
+          "Colite por C. difficile"
+        ],
+        "dilution": "EV: diluir em SF 0,9% ou SG 5% 50–100 mL.",
+        "dose": {
+          "adulto": "1–2 g EV 8/8h",
+          "pediatrica": "2000 mg EV 6/6h–8/8h (30 mg/kg/dose)"
+        },
+        "doseKg": {
+          "maxDose": "8 g/dia (adulto)",
+          "standard": "30 mg/kg/dose EV 6/6h–8/8h (pediátrico)"
+        },
+        "name": "Aztreonam",
+        "presentation": [
+          "Pó liofilizado EV/IM: 500 mg, 1 g, 2 g"
+        ],
+        "ref": "Sanford Guide 2025 / Goodman & Gilman / IDSA",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "g"
+            },
+            "obs": "Ajuste obrigatório.",
+            "pediatrica": {
+              "dose": "15–20 mg/kg",
+              "doseMaxima": "2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "g"
+            },
+            "obs": "Reduzir frequência.",
+            "pediatrica": {
+              "dose": "20–30 mg/kg",
+              "doseMaxima": "4 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "8 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "g"
+            },
+            "obs": "Dose habitual para Gram-negativos.",
+            "pediatrica": {
+              "dose": "30 mg/kg",
+              "doseMaxima": "8 g/dia",
+              "intervalo": "6/6h–8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Monitorar neurotoxicidade.",
+            "pediatrica": {
+              "dose": "15 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Administrar após hemodiálise.",
+            "pediatrica": {
+              "dose": "15 mg/kg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "EV: infundir em 20–60 minutos.",
+        "therapeuticRange": "Tempo-dependente. EXCLUSIVAMENTE Gram-negativos aeróbicos (Pseudomonas, Enterobacterales). SEM atividade contra Gram-positivos ou anaeróbios."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "1–2 g EV 8/8h",
+            "pediatrica": "2000 mg EV cada 6h–8h (30 mg/kg/dosis)"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "1–2 g EV 8/8h",
+            "pediatrica": "2000 mg EV 6/6h–8/8h (30 mg/kg/dose)"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

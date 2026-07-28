@@ -1,0 +1,362 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "b78ac5df2b07313fb7eb3bfc5e90f0f03663aa1be86ffc7729f5971a19c25dfc",
+    "sourceModule": "cardiologia.js"
+  },
+  "drugId": "manidipina",
+  "identity": {
+    "canonicalOwner": "cardiologia.js",
+    "category": "cardiologia",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "manidipina"
+    ],
+    "name": {
+      "es": "Manidipino",
+      "pt": "Manidipina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "cardiologia",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "cardiologia.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "cardio",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "alerts": [
+                "BCC DHP de 3ª generación con alta liposolubilidad y posible efecto protector sobre la microcirculación renal — opción en HTA asociada a DM o ERC.",
+                "Interacciones CYP3A4: ketoconazol, itraconazol, claritromicina, ritonavir → aumentan nivel sérico. Evitar pomelo/toronja.",
+                "Menor activación simpática refleja y menor incidencia de edema periférico comparado con DHP de 1ª/2ª generación."
+              ],
+              "auditNotes": {
+                "note": "BCC DHP moderno con posible beneficio microvascular y renal. Frecuentemente indicado en HTA asociada a síndrome metabólico, DM y ERC estable.",
+                "sourcePriority": [
+                  "ESC Hypertension Guidelines 2023",
+                  "ESH Guidelines",
+                  "AHA/ACC Hypertension Guidelines 2023",
+                  "Goodman & Gilman",
+                  "Lexicomp 2026",
+                  "EMA Label"
+                ],
+                "status": "excellent_after_review"
+              },
+              "category": "cardio",
+              "class": "Bloqueador de los canales de calcio dihidropiridínico de tercera generación",
+              "commercialNames": [
+                "Manidip",
+                "Madipina",
+                "Manidipina genérica"
+              ],
+              "commonAdverseEffects": [
+                "Cefalea",
+                "Rubor facial",
+                "Mareos",
+                "Edema maleolar",
+                "Palpitaciones",
+                "Fatiga",
+                "Sensación de calor"
+              ],
+              "dangerousAdverseEffects": [
+                "Hipotensión grave",
+                "Síncope",
+                "Edema periférico importante",
+                "Taquicardia refleja significativa (rara)"
+              ],
+              "dose": {
+                "adultoGrave": "Dosis máxima: 20 mg/día. No hay formulación IV.",
+                "adultoPadrao": "10 mg VO 1 vez/día. Aumentar a 20 mg después de 2–4 semanas si es necesario."
+              },
+              "halfLife": "7–12 horas",
+              "id": "manidipina",
+              "mechanism": "Bloquea canales de calcio tipo L del músculo liso vascular produciendo vasodilatación arterial periférica. Elevada liposolubilidad garantiza acción prolongada y menor activación simpática refleja. Posible efecto favorable sobre la microcirculación renal.",
+              "name": "Manidipina",
+              "onset": "2–4 horas",
+              "presentation": [
+                "Comprimidos 10 mg",
+                "Comprimidos 20 mg"
+              ],
+              "ref": "ESC Hypertension Guidelines · ESH Guidelines · AHA/ACC Hypertension Guidelines · Goodman & Gilman · Lexicomp · EMA Label",
+              "renalDose": {
+                "fg10a30": {
+                  "ev": null,
+                  "obs": "Usar con precaución. Monitorizar PA y tolerabilidad.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "10 mg",
+                    "doseMaxima": "10 mg/dia",
+                    "intervalo": "1x/dia (cautela)",
+                    "unidade": "mg"
+                  }
+                },
+                "fg30a50": {
+                  "ev": null,
+                  "obs": "Sin ajuste renal específico. Monitorizar PA y función renal.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "10 mg",
+                    "doseMaxima": "20 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "fgMaior50": {
+                  "ev": null,
+                  "obs": "Dosis habitual. Sin ajuste renal.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "10–20 mg",
+                    "doseMaxima": "20 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "fgMenor10": {
+                  "ev": null,
+                  "obs": "Datos limitados. Usar con precaución y monitorización intensiva.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "10 mg",
+                    "doseMaxima": "10 mg/dia",
+                    "intervalo": "1x/dia (cautela)",
+                    "unidade": "mg"
+                  }
+                },
+                "hemodialise": {
+                  "ev": null,
+                  "obs": "No dializable. Mantener dosis mínima con precaución.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "10 mg",
+                    "doseMaxima": "10 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "message": "No requiere ajuste renal habitual. Usar con precaución en ERC avanzada; monitorizar PA y función renal.",
+                "requiresAdjustment": false,
+                "version": 2
+              },
+              "risksByPatient": [
+                "Gestante: datos insuficientes — preferir medicamentos con mayor experiencia clínica durante el embarazo.",
+                "Lactante: datos limitados — usar solo cuando sea necesario.",
+                "Anciano (40 años): buena opción — perfil hemodinámico estable y menor edema periférico.",
+                "Insuficiencia hepática: metabolismo hepático — iniciar con dosis menor y titular lentamente."
+              ],
+              "safetyFlags": {
+                "avBlockRisk": false,
+                "bradycardiaRisk": false,
+                "hypotensionRisk": true,
+                "peripheralEdemaRisk": true,
+                "pregnancyCaution": true,
+                "qtRisk": false,
+                "reflexTachycardiaRisk": false,
+                "renalHighRisk": false,
+                "renalProtectionPotential": true,
+                "warning": "Manidipino presenta buen perfil metabólico y vascular con posible beneficio renal en DM/ERC. Atención a las interacciones vía CYP3A4 y al edema periférico."
+              }
+            },
+            "icon": "💊",
+            "id": "manidipina",
+            "keywords": [
+              "manidipina",
+              "bloqueador dos canais de calcio diidropiridinico de terceira geracao"
+            ],
+            "name": {
+              "es": "Manidipina",
+              "pt": "Manidipina"
+            },
+            "pt": {
+              "alerts": [
+                "BCC DHP de 3ª geração com alta lipossolubilidade e possível efeito protetor sobre a microcirculação renal — opção em HAS associada a DM ou DRC.",
+                "Interações CYP3A4: cetoconazol, itraconazol, claritromicina, ritonavir → aumentam nível sérico. Evitar grapefruit/toranja.",
+                "Menor ativação simpática reflexa e menor incidência de edema periférico comparado às DHP de 1ª/2ª geração."
+              ],
+              "auditNotes": {
+                "note": "BCC DHP moderno com possível benefício microvascular e renal. Frequentemente indicado em HAS associada a síndrome metabólica, DM e DRC estável.",
+                "sourcePriority": [
+                  "ESC Hypertension Guidelines 2023",
+                  "ESH Guidelines",
+                  "AHA/ACC Hypertension Guidelines 2023",
+                  "Goodman & Gilman",
+                  "Lexicomp 2026",
+                  "EMA Label"
+                ],
+                "status": "excellent_after_review"
+              },
+              "category": "cardio",
+              "class": "Bloqueador dos canais de cálcio diidropiridínico de terceira geração",
+              "commercialNames": [
+                "Manidip",
+                "Madipina",
+                "Manidipina genérica"
+              ],
+              "commonAdverseEffects": [
+                "Cefaleia",
+                "Rubor facial",
+                "Tontura",
+                "Edema maleolar",
+                "Palpitações",
+                "Fadiga",
+                "Sensação de calor"
+              ],
+              "dangerousAdverseEffects": [
+                "Hipotensão grave",
+                "Síncope",
+                "Edema periférico importante",
+                "Taquicardia reflexa significativa (rara)"
+              ],
+              "dose": {
+                "adultoGrave": "Dose máxima: 20 mg/dia. Não há formulação IV.",
+                "adultoPadrao": "10 mg VO 1x/dia. Aumentar para 20 mg após 2–4 semanas se necessário."
+              },
+              "halfLife": "7–12 horas",
+              "id": "manidipina",
+              "mechanism": "Bloqueia canais de cálcio tipo L da musculatura lisa vascular promovendo vasodilatação arterial periférica. Elevada lipossolubilidade garante ação prolongada e menor ativação simpática reflexa. Possui possível efeito favorável sobre a microcirculação renal.",
+              "name": "Manidipina",
+              "onset": "2–4 horas",
+              "presentation": [
+                "Comprimidos 10 mg",
+                "Comprimidos 20 mg"
+              ],
+              "ref": "ESC Hypertension Guidelines · ESH Guidelines · AHA/ACC Hypertension Guidelines · Goodman & Gilman · Lexicomp · EMA Label",
+              "renalDose": {
+                "fg10a30": {
+                  "ev": null,
+                  "obs": "Usar com cautela. Monitorar PA e tolerabilidade.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "10 mg",
+                    "doseMaxima": "10 mg/dia",
+                    "intervalo": "1x/dia (cautela)",
+                    "unidade": "mg"
+                  }
+                },
+                "fg30a50": {
+                  "ev": null,
+                  "obs": "Sem ajuste renal específico. Monitorar PA e função renal.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "10 mg",
+                    "doseMaxima": "20 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "fgMaior50": {
+                  "ev": null,
+                  "obs": "Dose habitual. Sem ajuste renal.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "10–20 mg",
+                    "doseMaxima": "20 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "fgMenor10": {
+                  "ev": null,
+                  "obs": "Dados limitados. Usar com cautela e monitorização intensiva.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "10 mg",
+                    "doseMaxima": "10 mg/dia",
+                    "intervalo": "1x/dia (cautela)",
+                    "unidade": "mg"
+                  }
+                },
+                "hemodialise": {
+                  "ev": null,
+                  "obs": "Não dialisável. Manter dose mínima com cautela.",
+                  "pediatrica": null,
+                  "vo": {
+                    "dose": "10 mg",
+                    "doseMaxima": "10 mg/dia",
+                    "intervalo": "1x/dia",
+                    "unidade": "mg"
+                  }
+                },
+                "message": "Não requer ajuste renal habitual. Usar com cautela em DRC avançada; monitorar PA e função renal.",
+                "requiresAdjustment": false,
+                "version": 2
+              },
+              "risksByPatient": [
+                "Gestante: dados insuficientes — preferir medicamentos com maior experiência clínica durante a gestação.",
+                "Lactante: dados limitados — usar apenas quando necessário.",
+                "Idoso (40 anos): boa opção — perfil hemodinâmico estável e menor edema periférico.",
+                "Insuficiência hepática: metabolismo hepático — iniciar com dose menor e titular lentamente."
+              ],
+              "safetyFlags": {
+                "avBlockRisk": false,
+                "bradycardiaRisk": false,
+                "hypotensionRisk": true,
+                "peripheralEdemaRisk": true,
+                "pregnancyCaution": true,
+                "qtRisk": false,
+                "reflexTachycardiaRisk": false,
+                "renalHighRisk": false,
+                "renalProtectionPotential": true,
+                "warning": "Manidipina apresenta bom perfil metabólico e vascular com possível benefício renal em DM/DRC. Atenção às interações via CYP3A4 e ao edema periférico."
+              }
+            },
+            "schema": "premium-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "cardio.js"
+          },
+          "sourceModule": "cardio.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Manidipino"
+      },
+      "icon": "💊",
+      "id": "manidipina",
+      "keywords": [
+        "manidipina"
+      ],
+      "name": {
+        "es": "Manidipino",
+        "pt": "Manidipina"
+      },
+      "pt": {
+        "name": "Manidipina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "cardiologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

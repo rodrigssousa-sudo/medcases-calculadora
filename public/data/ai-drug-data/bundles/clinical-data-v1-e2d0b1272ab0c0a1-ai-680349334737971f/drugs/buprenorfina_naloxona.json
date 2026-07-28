@@ -1,0 +1,212 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "1f60e8b4a2176cd378dc4d4e7141a5cf33f391964add4ff2b76fc418c6940ec5",
+    "sourceModule": "toxicologia.js"
+  },
+  "drugId": "buprenorfina_naloxona",
+  "identity": {
+    "canonicalOwner": "toxicologia.js",
+    "category": "dependencia_opioide",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "buprenorfina_naloxona",
+      "buprenorfina + naloxona",
+      "suboxone (buprenorfina 8mg + naloxona 2mg sl)",
+      "suboxone",
+      "buprenorfina/naloxona generico",
+      "agonista parcial μ + antagonista κ / antagonista opioides (naloxona) — terapia de manutencao"
+    ],
+    "name": {
+      "es": "Buprenorfina + Naloxona",
+      "pt": "Buprenorfina + Naloxona"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "dependencia_opioide",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "category": "dependencia_opioide",
+        "class": "Agonista Parcial μ + Antagonista κ / Antagonista Opioides (Naloxona) — Terapia de Mantenimiento",
+        "commercialNames": {
+          "ar": [
+            "Suboxone",
+            "Buprenorfina/Naloxona Genérico"
+          ],
+          "br": [
+            "Suboxone (buprenorfina 8mg + naloxona 2mg SL)"
+          ]
+        },
+        "contraindications": {
+          "absolute": [
+            "Hipersensibilidad a buprenorfina o naloxona"
+          ],
+          "relative": [
+            "Gestación (usar monofármaco)",
+            "Hepatopatía grave (Child-Pugh C)",
+            "Uso concomitante de BZD o alcohol"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "ABSTINENCIA PRECIPITADA: iniciar antes de COWS ≥ 8 causa abstinencia aguda grave",
+          "Depresión respiratoria (raro — efecto techo, pero posible con BZD + alcohol)",
+          "Hepatotoxicidad (monitorizar TGO/TGP)"
+        ],
+        "dose": {
+          "buprenorfina_mono": null,
+          "inducao": "INDUCCIÓN: Iniciar SOLO cuando COWS ≥ 8–12. Dosis inicial: 2–4 mg SL. Reevaluar en 1h. Día 1 máximo: 8 mg. Día 2: titular hasta 8–16 mg.",
+          "manutencao": "MANTENIMIENTO: 16–24 mg SL 1×/día (dosis habitual). Rango: 4–32 mg/día. Naloxona sublingual tiene baja biodisponibilidad — presente solo para disuadir uso IV."
+        },
+        "halfLife": "Buprenorfina: vida media 24–60h (dosis única). Permite administración 1×/día o cada 48h.",
+        "hepaticAdjustment": "Hepatopatía leve: sin ajuste necesario.",
+        "mechanism": "Buprenorfina: agonista parcial μ (alta afinidad, disociación lenta — bloquea otros opioides) + antagonista κ. Efecto \"techo\" para depresión respiratoria. Naloxona: antagonista puro — activa si inyectada IV, precipitando abstinencia aguda.",
+        "monitoring": [
+          "COWS antes de cada dosis primeras 48–72h",
+          "TGO/TGP — basal, 1 mes, 3 meses, luego semestral",
+          "Urianálisis toxicológico mensual",
+          "Evaluación de salud mental y riesgo de recaída"
+        ],
+        "name": "Buprenorfina/Naloxona (Suboxone®)",
+        "presentation": [
+          "Comprimido/film sublingual: Buprenorfina 2 mg + Naloxona 0,5 mg",
+          "Comprimido/film sublingual: Buprenorfina 8 mg + Naloxona 2 mg"
+        ],
+        "references": [
+          "SAMHSA 2021 — Medications for Opioid Use Disorder (TIP 63)",
+          "Wesson DR & Ling W. J Psychoactive Drugs 2003 — COWS scale",
+          "Mattick RP et al. Cochrane 2014 — Buprenorphine maintenance vs placebo",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "risksByPatient": [],
+        "safetyFlags": {
+          "antidote": "Naloxona 0,4–2 mg IV/IM (repetir cada 2–3 min). Altas dosis pueden necesitarse por la alta afinidad de buprenorfina al receptor μ.",
+          "antidoteAvailable": true,
+          "bleedingRisk": false,
+          "hepaticCaution": true,
+          "highAlertMedication": true,
+          "renalHighRisk": false,
+          "warning": "⚠️ NUNCA INICIAR SI COWS < 8: El error clínico más grave es inducir antes de los síntomas de abstinencia — causa abstinencia precipitada grave."
+        }
+      },
+      "icon": "💊",
+      "id": "buprenorfina_naloxona",
+      "keywords": [
+        "buprenorfina_naloxona",
+        "buprenorfina + naloxona",
+        "suboxone (buprenorfina 8mg + naloxona 2mg sl)",
+        "suboxone",
+        "buprenorfina/naloxona generico",
+        "agonista parcial μ + antagonista κ / antagonista opioides (naloxona) — terapia de manutencao"
+      ],
+      "name": {
+        "es": "Buprenorfina + Naloxona",
+        "pt": "Buprenorfina + Naloxona"
+      },
+      "pt": {
+        "category": "dependencia_opioide",
+        "class": "Agonista Parcial μ + Antagonista κ / Antagonista Opioides (Naloxona) — Terapia de Manutenção",
+        "commercialNames": {
+          "ar": [
+            "Suboxone",
+            "Buprenorfina/Naloxona Genérico"
+          ],
+          "br": [
+            "Suboxone (buprenorfina 8mg + naloxona 2mg SL)"
+          ]
+        },
+        "contraindications": {
+          "absolute": [
+            "Hipersensibilidade à buprenorfina ou naloxona"
+          ],
+          "relative": [
+            "Gestação (usar monofármaco)",
+            "Hepatopatia grave (Child-Pugh C)",
+            "Uso concomitante de BZD ou álcool (risco de depressão respiratória)"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "ABSTINÊNCIA PRECIPITADA: iniciar antes de COWS ≥ 8 causa abstinência aguda grave (agitação, vômitos, cólicas, diaforese severa)",
+          "Depressão respiratória (raro — efeito teto, mas possível com BZD + álcool)",
+          "Hepatotoxicidade (monitorar TGO/TGP)"
+        ],
+        "dose": {
+          "buprenorfina_mono": null,
+          "inducao": "INDUÇÃO: Iniciar APENAS quando COWS ≥ 8–12 (sintomas de abstinência moderados). Dose inicial: 2–4 mg SL. Reavaliar em 1h — se sem sintomas de abstinência precipitada: adicionar 2–4 mg. D1 máximo: 8 mg. D2: titular até 8–16 mg.",
+          "manutencao": "MANUTENÇÃO: 16–24 mg SL 1×/dia (dose habitual). Range: 4–32 mg/dia. A naloxona sublingual tem baixa biodisponibilidade — presente apenas para dissuadir uso IV."
+        },
+        "halfLife": "Buprenorfina: meia-vida 24–60h (dose única). Permite administração 1×/dia ou a cada 48h.",
+        "hepaticAdjustment": "Hepatopatia leve: sem ajuste necessário.",
+        "mechanism": "Buprenorfina: agonista parcial μ (alta afinidade, dissociação lenta — bloqueia outros opioides) + antagonista κ (antidepressivo-like). Efeito \"teto\" para depressão respiratória — mais seguro que metadona em overdose. Naloxona: antagonista puro — ativa se injetada IV, precipitando abstinência aguda (dissuasão ao uso injetável).",
+        "monitoring": [
+          "COWS antes de cada dose nas primeiras 48–72h",
+          "TGO/TGP — basal, 1 mês, 3 meses, depois semestralmente",
+          "Urinálise toxicológica mensal",
+          "Avaliação de saúde mental e risco de recaída"
+        ],
+        "name": "Buprenorfina/Naloxona (Suboxone®)",
+        "presentation": [
+          "Comprimido/filme sublingual: Buprenorfina 2 mg + Naloxona 0,5 mg",
+          "Comprimido/filme sublingual: Buprenorfina 8 mg + Naloxona 2 mg"
+        ],
+        "references": [
+          "SAMHSA 2021 — Medications for Opioid Use Disorder (TIP 63)",
+          "Wesson DR & Ling W. J Psychoactive Drugs 2003 — COWS scale",
+          "Mattick RP et al. Cochrane 2014 — Buprenorphine maintenance vs placebo",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "risksByPatient": [],
+        "safetyFlags": {
+          "antidote": "Naloxona 0,4–2 mg IV/IM (repetir a cada 2–3 min). Altas doses podem ser necessárias dada a alta afinidade da buprenorfina ao receptor μ.",
+          "antidoteAvailable": true,
+          "bleedingRisk": false,
+          "hepaticCaution": true,
+          "highAlertMedication": true,
+          "renalHighRisk": false,
+          "warning": "⚠️ NUNCA INICIAR SE COWS < 8: O erro clínico mais grave é induzir antes dos sintomas de abstinência — causa abstinência precipitada grave e destrói o vínculo terapêutico. Confirmar sempre última dose de opioide e tempo de abstinência."
+        }
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "toxicologia.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "buprenorfina_mono": null,
+            "inducao": "INDUCCIÓN: Iniciar SOLO cuando COWS ≥ 8–12. Dosis inicial: 2–4 mg SL. Reevaluar en 1h. Día 1 máximo: 8 mg. Día 2: titular hasta 8–16 mg.",
+            "manutencao": "MANTENIMIENTO: 16–24 mg SL 1×/día (dosis habitual). Rango: 4–32 mg/día. Naloxona sublingual tiene baja biodisponibilidad — presente solo para disuadir uso IV."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "buprenorfina_mono": null,
+            "inducao": "INDUÇÃO: Iniciar APENAS quando COWS ≥ 8–12 (sintomas de abstinência moderados). Dose inicial: 2–4 mg SL. Reavaliar em 1h — se sem sintomas de abstinência precipitada: adicionar 2–4 mg. D1 máximo: 8 mg. D2: titular até 8–16 mg.",
+            "manutencao": "MANUTENÇÃO: 16–24 mg SL 1×/dia (dose habitual). Range: 4–32 mg/dia. A naloxona sublingual tem baixa biodisponibilidade — presente apenas para dissuadir uso IV."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

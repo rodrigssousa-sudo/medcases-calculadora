@@ -1,0 +1,248 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "2f54a5062161b554768db415b8f6a2d1659a79e60f545a89fa9f29c44f6f00e8",
+    "sourceModule": "psiquiatria.js"
+  },
+  "drugId": "trimipramina",
+  "identity": {
+    "canonicalOwner": "psiquiatria.js",
+    "category": "antidepressivo",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "trimipramina",
+      "surmontil",
+      "trimipramina northia",
+      "trimipramina klonal",
+      "antidepressivo triciclico"
+    ],
+    "name": {
+      "es": "Trimipramina",
+      "pt": "Trimipramina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antidepressivo",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Uno de los tricíclicos más sedativos.",
+          "Preferir administración nocturna.",
+          "Monitorizar ECG en pacientes de riesgo."
+        ],
+        "category": "antidepressivo",
+        "class": "Antidepresivo tricíclico",
+        "commercialNames": {
+          "ar": [
+            "Surmontil",
+            "Trimipramina Northia",
+            "Trimipramina Klonal"
+          ],
+          "br": [
+            "Surmontil",
+            "Trimipramina"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia",
+          "Boca seca",
+          "Estreñimiento",
+          "Hipotensión ortostática",
+          "Aumento de peso",
+          "Mareos"
+        ],
+        "contraindications": [
+          "Uso concomitante con IMAO",
+          "Infarto reciente",
+          "Glaucoma de ángulo cerrado"
+        ],
+        "dangerousAdverseEffects": [
+          "Arritmias cardíacas",
+          "Cardiotoxicidad en sobredosis",
+          "Convulsiones",
+          "Delirium anticolinérgico",
+          "Viraje maníaco"
+        ],
+        "dose": {
+          "adulto": "Depresión: iniciar 25–50 mg VO por la noche; dosis habitual 75–150 mg/día.",
+          "insoniaAnsiedade": "Insomnio/ansiedad: 25–100 mg VO por la noche.",
+          "maxDose": "Dosis máxima habitual: 300 mg/día."
+        },
+        "doseKg": {
+          "maxDose": "300 mg/día",
+          "pediatric": "Uso pediátrico poco frecuente y especializado.",
+          "standard": "No se utiliza cálculo por kg en adultos."
+        },
+        "halfLife": "Vida media aproximada: 12–24 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Trastorno depresivo mayor",
+          "Insomnio crónico",
+          "Trastornos de ansiedad",
+          "Depresión con agitación",
+          "Depresión asociada a trastornos del sueño",
+          "Dolor crónico",
+          "Fibromialgia"
+        ],
+        "interactions": [
+          "IMAO",
+          "Alcohol",
+          "Benzodiazepinas",
+          "Opioides"
+        ],
+        "mechanism": "Antidepresivo tricíclico con potente acción antihistamínica y sedativa.",
+        "name": "Trimipramina",
+        "onset": "La mejoría del sueño puede ocurrir en pocos días; efecto antidepresivo en 2–4 semanas.",
+        "presentation": [
+          "Comprimido 25 mg",
+          "Comprimido 50 mg",
+          "Gotas orales"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "trimipramina",
+      "keywords": [
+        "trimipramina",
+        "surmontil",
+        "trimipramina northia",
+        "trimipramina klonal",
+        "antidepressivo triciclico"
+      ],
+      "name": {
+        "es": "Trimipramina",
+        "pt": "Trimipramina"
+      },
+      "pt": {
+        "alerts": [
+          "Um dos tricíclicos mais sedativos.",
+          "Preferir administração noturna.",
+          "Monitorar ECG em pacientes de risco."
+        ],
+        "category": "antidepressivo",
+        "class": "Antidepressivo tricíclico",
+        "commercialNames": {
+          "ar": [
+            "Surmontil",
+            "Trimipramina Northia",
+            "Trimipramina Klonal"
+          ],
+          "br": [
+            "Surmontil",
+            "Trimipramina"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência",
+          "Boca seca",
+          "Constipação",
+          "Hipotensão ortostática",
+          "Ganho de peso",
+          "Tontura"
+        ],
+        "contraindications": [
+          "Uso concomitante com IMAO",
+          "Infarto recente",
+          "Glaucoma de ângulo fechado"
+        ],
+        "dangerousAdverseEffects": [
+          "Arritmias cardíacas",
+          "Cardiotoxicidade em superdose",
+          "Convulsões",
+          "Delirium anticolinérgico",
+          "Virada maníaca"
+        ],
+        "dose": {
+          "adulto": "Depressão: iniciar 25–50 mg VO à noite; dose usual 75–150 mg/dia.",
+          "insoniaAnsiedade": "Insônia/ansiedade: 25–100 mg VO à noite.",
+          "maxDose": "Dose máxima usual: 300 mg/dia."
+        },
+        "doseKg": {
+          "maxDose": "300 mg/dia",
+          "pediatric": "Uso pediátrico incomum e especializado.",
+          "standard": "Não se utiliza cálculo por kg em adultos."
+        },
+        "halfLife": "Vida média aproximada: 12–24 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Transtorno depressivo maior",
+          "Insônia crônica",
+          "Transtornos de ansiedade",
+          "Depressão com agitação",
+          "Depressão associada a distúrbios do sono",
+          "Dor crônica",
+          "Fibromialgia"
+        ],
+        "interactions": [
+          "IMAO",
+          "Álcool",
+          "Benzodiazepínicos",
+          "Opioides"
+        ],
+        "mechanism": "Antidepressivo tricíclico com potente ação anti-histamínica e sedativa.",
+        "name": "Trimipramina",
+        "onset": "Melhora do sono pode ocorrer em poucos dias; efeito antidepressivo em 2–4 semanas.",
+        "presentation": [
+          "Comprimido 25 mg",
+          "Comprimido 50 mg",
+          "Gotas orais"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psiquiatria.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Depresión: iniciar 25–50 mg VO por la noche; dosis habitual 75–150 mg/día.",
+            "insoniaAnsiedade": "Insomnio/ansiedad: 25–100 mg VO por la noche.",
+            "maxDose": "Dosis máxima habitual: 300 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Depressão: iniciar 25–50 mg VO à noite; dose usual 75–150 mg/dia.",
+            "insoniaAnsiedade": "Insônia/ansiedade: 25–100 mg VO à noite.",
+            "maxDose": "Dose máxima usual: 300 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

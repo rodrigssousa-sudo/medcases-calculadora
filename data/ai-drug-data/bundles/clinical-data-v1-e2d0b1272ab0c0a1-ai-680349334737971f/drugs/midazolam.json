@@ -1,0 +1,302 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "a3445736c7f6250f5857277128c09dc49b6f26c690cdc053a63071bd6dcf8387",
+    "sourceModule": "sedacao.js"
+  },
+  "drugId": "midazolam",
+  "identity": {
+    "canonicalOwner": "sedacao.js",
+    "category": "sedacao_neurologia",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "midazolam"
+    ],
+    "name": {
+      "es": "Midazolam",
+      "pt": "Midazolam"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "sedacao_neurologia",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "sedacao.js",
+        "decisionBasis": "primary_procedural_and_critical_sedation_use",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "psychiatry_context_variant",
+          "record": {
+            "category": "ansiolitico",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "alerts": [
+                "Usar IV solo con monitorización y soporte ventilatorio disponible.",
+                "Alto riesgo de depresión respiratoria con opioides.",
+                "Administrar lentamente por vía IV.",
+                "Flumazenil puede revertir el efecto, pero puede precipitar convulsiones en dependientes o intoxicación mixta.",
+                "Evitar uso prolongado sin estrategia de retirada."
+              ],
+              "category": "ansiolitico",
+              "class": "Benzodiacepina de acción corta",
+              "commercialNames": {
+                "ar": [
+                  "Dormicum",
+                  "Midazolam Richmond",
+                  "Midazolam Klonal",
+                  "Midazolam Denver Farma"
+                ],
+                "br": [
+                  "Dormonid",
+                  "Dormire",
+                  "Midazolam Cristália",
+                  "Midazolam União Química"
+                ]
+              },
+              "commonAdverseEffects": [
+                "Somnolencia",
+                "Amnesia anterógrada",
+                "Mareos",
+                "Hipotensión",
+                "Ataxia",
+                "Náuseas"
+              ],
+              "contraindications": [
+                "Hipersensibilidad a benzodiacepinas",
+                "Insuficiencia respiratoria grave sin soporte ventilatorio",
+                "Apnea del sueño grave sin monitorización",
+                "Miastenia gravis",
+                "Shock o inestabilidad hemodinámica sin soporte adecuado"
+              ],
+              "dangerousAdverseEffects": [
+                "Depresión respiratoria",
+                "Apnea",
+                "Hipotensión grave",
+                "Paro cardiorrespiratorio en pacientes vulnerables o asociación con opioides",
+                "Sedación prolongada",
+                "Reacción paradójica con agitación"
+              ],
+              "dose": {
+                "adulto": "Sedación procedural: 1–2 mg IV lento, repetir pequeñas dosis según respuesta.",
+                "convulsao": "Convulsión/estado epiléptico: aproximadamente 14.0 mg IM/IN según protocolo.",
+                "dosePesoSedacao": "Sedación IV por peso: 1.4–3.5 mg por dosis.",
+                "maxDose": "La dosis máxima depende de indicación, vía, edad, comorbilidades y nivel de monitorización."
+              },
+              "doseKg": {
+                "maxDose": "Individualizar según protocolo y monitorización.",
+                "severe": "Convulsión: 0,2 mg/kg IM/IN según protocolo local.",
+                "standard": "Sedación: 0,02–0,05 mg/kg IV lentamente."
+              },
+              "halfLife": "Vida media aproximada: 1,5–3 horas, pudiendo prolongarse en adultos mayores, obesidad, hepatopatía o infusión continua.",
+              "hepaticAdjustment": "Sin ajuste hepático habitual en dosis única.",
+              "indications": [
+                "Sedación procedural",
+                "Sedación en UCI",
+                "Inducción anestésica",
+                "Premedicación anestésica",
+                "Estado epiléptico",
+                "Convulsiones agudas",
+                "Agitación grave en contexto monitorizado",
+                "Amnesia anterógrada para procedimientos"
+              ],
+              "interactions": [
+                "Opioides",
+                "Alcohol",
+                "Propofol y otros anestésicos",
+                "Barbitúricos",
+                "Inhibidores fuertes de CYP3A4 como ketoconazol, claritromicina y ritonavir",
+                "Antipsicóticos y antihistamínicos sedantes"
+              ],
+              "mechanism": "Potencia el GABA en el receptor GABA-A, produciendo sedación, ansiólisis, anticonvulsión, relajación muscular y amnesia.",
+              "name": "Midazolam",
+              "onset": "IV: 1–5 min; IM: 5–15 min; intranasal: 5–10 min; VO: 15–30 min.",
+              "presentation": [
+                "Ampolla 5 mg/mL",
+                "Ampolla 1 mg/mL",
+                "Comprimido 7,5 mg",
+                "Comprimido 15 mg",
+                "Solución oral 2 mg/mL"
+              ],
+              "ref": [
+                "Goodman & Gilman 14ª Ed.",
+                "Stahl's Essential Psychopharmacology",
+                "FDA/DailyMed Midazolam Prescribing Information",
+                "Lexicomp",
+                "Micromedex",
+                "UpToDate"
+              ],
+              "renalAdjustment": "Sin ajuste renal habitual en dosis única.",
+              "risksByPatient": []
+            },
+            "icon": "💊",
+            "id": "midazolam",
+            "keywords": [
+              "midazolam",
+              "dormonid",
+              "dormire",
+              "midazolam cristalia",
+              "midazolam uniao quimica",
+              "dormicum",
+              "midazolam richmond",
+              "midazolam klonal",
+              "midazolam denver farma",
+              "benzodiazepinico de curta acao"
+            ],
+            "name": {
+              "es": "Midazolam",
+              "pt": "Midazolam"
+            },
+            "pt": {
+              "alerts": [
+                "Usar EV apenas com monitorização e suporte ventilatório disponível.",
+                "Alto risco de depressão respiratória com opioides.",
+                "Administrar lentamente por via EV.",
+                "Flumazenil pode reverter efeito, mas pode precipitar convulsões em dependentes ou intoxicação mista.",
+                "Evitar uso prolongado sem estratégia de desmame."
+              ],
+              "category": "ansiolitico",
+              "class": "Benzodiazepínico de curta ação",
+              "commercialNames": {
+                "ar": [
+                  "Dormicum",
+                  "Midazolam Richmond",
+                  "Midazolam Klonal",
+                  "Midazolam Denver Farma"
+                ],
+                "br": [
+                  "Dormonid",
+                  "Dormire",
+                  "Midazolam Cristália",
+                  "Midazolam União Química"
+                ]
+              },
+              "commonAdverseEffects": [
+                "Sonolência",
+                "Amnésia anterógrada",
+                "Tontura",
+                "Hipotensão",
+                "Ataxia",
+                "Náuseas"
+              ],
+              "contraindications": [
+                "Hipersensibilidade a benzodiazepínicos",
+                "Insuficiência respiratória grave sem suporte ventilatório",
+                "Apneia do sono grave sem monitorização",
+                "Miastenia gravis",
+                "Choque ou instabilidade hemodinâmica sem suporte adequado"
+              ],
+              "dangerousAdverseEffects": [
+                "Depressão respiratória",
+                "Apneia",
+                "Hipotensão grave",
+                "Parada cardiorrespiratória em pacientes vulneráveis ou associação com opioides",
+                "Sedação prolongada",
+                "Reação paradoxal com agitação"
+              ],
+              "dose": {
+                "adulto": "Sedação procedural: 1–2 mg EV lento, repetir pequenas doses conforme resposta.",
+                "convulsao": "Convulsão/estado epiléptico: aproximadamente 14.0 mg IM/IN conforme protocolo.",
+                "dosePesoSedacao": "Sedação EV por peso: 1.4–3.5 mg por dose.",
+                "maxDose": "Dose máxima depende da indicação, via, idade, comorbidades e nível de monitorização."
+              },
+              "doseKg": {
+                "maxDose": "Individualizar conforme protocolo e monitorização.",
+                "severe": "Convulsão: 0,2 mg/kg IM/IN conforme protocolo local.",
+                "standard": "Sedação: 0,02–0,05 mg/kg EV lentamente."
+              },
+              "halfLife": "Vida média aproximada: 1,5–3 horas, podendo prolongar em idosos, obesidade, hepatopatia ou infusão contínua.",
+              "hepaticAdjustment": "Sem ajuste hepático habitual em dose única.",
+              "indications": [
+                "Sedação procedural",
+                "Sedação em UTI",
+                "Indução anestésica",
+                "Pré-medicação anestésica",
+                "Estado de mal epiléptico",
+                "Convulsões agudas",
+                "Agitação grave em contexto monitorizado",
+                "Amnésia anterógrada para procedimentos"
+              ],
+              "interactions": [
+                "Opioides",
+                "Álcool",
+                "Propofol e outros anestésicos",
+                "Barbitúricos",
+                "Inibidores fortes de CYP3A4 como cetoconazol, claritromicina e ritonavir",
+                "Antipsicóticos e anti-histamínicos sedativos"
+              ],
+              "mechanism": "Potencializa o GABA no receptor GABA-A, produzindo sedação, ansiólise, anticonvulsão, relaxamento muscular e amnésia.",
+              "name": "Midazolam",
+              "onset": "EV: 1–5 min; IM: 5–15 min; intranasal: 5–10 min; VO: 15–30 min.",
+              "presentation": [
+                "Ampola 5 mg/mL",
+                "Ampola 1 mg/mL",
+                "Comprimido 7,5 mg",
+                "Comprimido 15 mg",
+                "Solução oral 2 mg/mL"
+              ],
+              "ref": [
+                "Goodman & Gilman 14ª Ed.",
+                "Stahl's Essential Psychopharmacology",
+                "FDA/DailyMed Midazolam Prescribing Information",
+                "Lexicomp",
+                "Micromedex",
+                "UpToDate"
+              ],
+              "renalAdjustment": "Sem ajuste renal habitual em dose única.",
+              "risksByPatient": []
+            },
+            "schema": "premium-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "psiquiatria.js"
+          },
+          "sourceModule": "psiquiatria.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Midazolam"
+      },
+      "icon": "💊",
+      "id": "midazolam",
+      "keywords": [
+        "midazolam"
+      ],
+      "name": {
+        "es": "Midazolam",
+        "pt": "Midazolam"
+      },
+      "pt": {
+        "name": "Midazolam"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "sedacao.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

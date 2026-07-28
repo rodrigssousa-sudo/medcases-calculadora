@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "fa83db0b710a0014bb0fcdee2c52128066560d13f881a55866b5b4e18f32f0d0",
+    "sourceModule": "gastroenterologia.js"
+  },
+  "drugId": "bisacodil",
+  "identity": {
+    "canonicalOwner": "gastroenterologia.js",
+    "category": "gastroenterologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "bisacodil"
+    ],
+    "name": {
+      "es": "Bisacodilo",
+      "pt": "Bisacodil"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "gastroenterologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Bisacodilo"
+      },
+      "icon": "💊",
+      "id": "bisacodil",
+      "keywords": [
+        "bisacodil"
+      ],
+      "name": {
+        "es": "Bisacodilo",
+        "pt": "Bisacodil"
+      },
+      "pt": {
+        "name": "Bisacodil"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "gastroenterologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

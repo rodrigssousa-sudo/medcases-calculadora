@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "016daa3ce0c17fc26218240cb584d0e0afa65339e15d454f8410e874ad22f3b2",
+    "sourceModule": "infectologia.js"
+  },
+  "drugId": "oseltamivir",
+  "identity": {
+    "canonicalOwner": "infectologia.js",
+    "category": "infectologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "oseltamivir"
+    ],
+    "name": {
+      "es": "Oseltamivir",
+      "pt": "Oseltamivir"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "infectologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Oseltamivir"
+      },
+      "icon": "💊",
+      "id": "oseltamivir",
+      "keywords": [
+        "oseltamivir"
+      ],
+      "name": {
+        "es": "Oseltamivir",
+        "pt": "Oseltamivir"
+      },
+      "pt": {
+        "name": "Oseltamivir"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "infectologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

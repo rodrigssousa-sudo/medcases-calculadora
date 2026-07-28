@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "dbd29d345dc4e2383c9657520904c09c1368e3575fe83fe106016d828b9d2b33",
+    "sourceModule": "nefro.js"
+  },
+  "drugId": "fosfato_de_potassio",
+  "identity": {
+    "canonicalOwner": "nefro.js",
+    "category": "uti_fluidos",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "fosfato_de_potassio",
+      "fosfato de potássio"
+    ],
+    "name": {
+      "es": "Fosfato de Potasio",
+      "pt": "Fosfato de Potássio"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "uti_fluidos",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "#B45309",
+      "colorTxt": "#ffffff",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Fosfato de Potasio"
+      },
+      "icon": "💧",
+      "id": "fosfato_de_potassio",
+      "keywords": [
+        "fosfato_de_potassio",
+        "fosfato de potássio"
+      ],
+      "name": {
+        "es": "Fosfato de Potasio",
+        "pt": "Fosfato de Potássio"
+      },
+      "pt": {
+        "name": "Fosfato de Potássio"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "nefro.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

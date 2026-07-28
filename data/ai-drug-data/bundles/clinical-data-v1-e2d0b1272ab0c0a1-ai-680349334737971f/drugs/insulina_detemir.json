@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "05f9a54eba44987e566c2d48f51d8fd508d883c11ed220644b04116e49d4cb8c",
+    "sourceModule": "endocrino.js"
+  },
+  "drugId": "insulina_detemir",
+  "identity": {
+    "canonicalOwner": "endocrino.js",
+    "category": "endocrino",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "insulina_detemir",
+      "insulina detemir"
+    ],
+    "name": {
+      "es": "Insulina Detemir",
+      "pt": "Insulina Detemir"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "endocrino",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Insulina Detemir"
+      },
+      "icon": "💊",
+      "id": "insulina_detemir",
+      "keywords": [
+        "insulina_detemir",
+        "insulina detemir"
+      ],
+      "name": {
+        "es": "Insulina Detemir",
+        "pt": "Insulina Detemir"
+      },
+      "pt": {
+        "name": "Insulina Detemir"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "endocrino.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

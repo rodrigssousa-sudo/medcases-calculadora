@@ -1,0 +1,228 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "c1fa9aeebdc39140a57e6493b964fb96b25a70555f4e8a8cdb966f3fb6f4ac75",
+    "sourceModule": "toxicologia.js"
+  },
+  "drugId": "dissulfiram",
+  "identity": {
+    "canonicalOwner": "toxicologia.js",
+    "category": "dependencia_alcool",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "dissulfiram",
+      "disulfiram",
+      "antabuse",
+      "dissulfiram generico",
+      "inibidor da aldeido desidrogenase — terapia aversiva"
+    ],
+    "name": {
+      "es": "Disulfiram",
+      "pt": "Dissulfiram"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "dependencia_alcool",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "category": "dependencia_alcool",
+        "class": "Inhibidor de Aldehído Deshidrogenasa — Terapia Aversiva",
+        "commercialNames": {
+          "ar": [
+            "Antabuse",
+            "Disulfiram"
+          ],
+          "br": [
+            "Antabuse",
+            "Dissulfiram Genérico"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia y fatiga al inicio",
+          "Sabor metálico / ajo",
+          "Cetosis leve",
+          "Acné, dermatitis de contacto"
+        ],
+        "contraindications": {
+          "absolute": [
+            "Uso de alcohol en las últimas 12–24h",
+            "Hepatitis aguda / Cirrosis descompensada",
+            "Enfermedad cardiovascular grave",
+            "Psicosis activa",
+            "Gestación",
+            "Hipersensibilidad al disulfiram o tiuramos"
+          ],
+          "relative": [
+            "Diabetes mellitus",
+            "Hipotiroidismo",
+            "Nefropatía moderada"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "REACCIÓN DISULFIRAM-ALCOHOL: rubor intenso, cefalea pulsátil, vómitos, taquicardia, hipotensión grave. Puede ser fatal.",
+          "Hepatotoxicidad (raro pero grave)",
+          "Neuropatía periférica (uso prolongado)",
+          "Psicosis (raro)"
+        ],
+        "dose": {
+          "duracao": "Duración: meses a años. Monitorizar enzimas hepáticas cada 6 meses.",
+          "inicial": "Dosis de ataque: 500 mg VO 1×/día por 1–2 semanas (tras 12–24h de abstinencia TOTAL).",
+          "manutencao": "Mantenimiento: 250 mg VO 1×/día (rango: 125–500 mg/día). Dosis máxima: 500 mg/día."
+        },
+        "halfLife": "Metabolismo lento: efecto dura 1–2 semanas tras suspensión.",
+        "mechanism": "Inhibe irreversiblemente la aldehído deshidrogenasa (ALDH), bloqueando el metabolismo del etanol a nivel del acetaldehído. La acumulación genera reacción aversiva intensa. Efecto persiste 1–2 semanas tras la última dosis.",
+        "monitoring": [
+          "TGO / TGP antes y cada 3–6 meses",
+          "Monitorizar signos de neuropatía",
+          "Revisar medicaciones concomitantes"
+        ],
+        "name": "Disulfiram",
+        "presentation": [
+          "Comprimido 250 mg, 500 mg"
+        ],
+        "references": [
+          "ANVISA — Antabuse/Dissulfiram Bula",
+          "Fuller RK et al. JAMA 1986 — Veterans Affairs Cooperative Study",
+          "Diehl A et al. Alcohol Alcohol 2010",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "risksByPatient": [],
+        "safetyFlags": {
+          "antidoteAvailable": false,
+          "bleedingRisk": false,
+          "hepaticCaution": true,
+          "highAlertMedication": true,
+          "renalHighRisk": false,
+          "warning": "🚨 ALTA VIGILANCIA: Paciente DEBE ser informado que cualquier fuente de alcohol puede desencadenar la reacción. Identidad del paciente debe constar para equipos de emergencia."
+        }
+      },
+      "icon": "💊",
+      "id": "dissulfiram",
+      "keywords": [
+        "dissulfiram",
+        "disulfiram",
+        "antabuse",
+        "dissulfiram generico",
+        "inibidor da aldeido desidrogenase — terapia aversiva"
+      ],
+      "name": {
+        "es": "Disulfiram",
+        "pt": "Dissulfiram"
+      },
+      "pt": {
+        "category": "dependencia_alcool",
+        "class": "Inibidor da Aldeído Desidrogenase — Terapia Aversiva",
+        "commercialNames": {
+          "ar": [
+            "Antabuse",
+            "Disulfiram"
+          ],
+          "br": [
+            "Antabuse",
+            "Dissulfiram Genérico"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência e fadiga no início do tratamento",
+          "Sabor metálico / alho",
+          "Cetose leve",
+          "Acne, dermatite de contato"
+        ],
+        "contraindications": {
+          "absolute": [
+            "Uso de álcool nas últimas 12–24h",
+            "Hepatite aguda / Cirrose descompensada",
+            "Doença cardiovascular grave",
+            "Psicose ativa",
+            "Gestação",
+            "Hipersensibilidade ao dissulfiram ou tiourams"
+          ],
+          "relative": [
+            "Diabetes mellitus",
+            "Hipotireoidismo",
+            "Nefropatia moderada"
+          ]
+        },
+        "dangerousAdverseEffects": [
+          "REAÇÃO DISSULFIRAM-ÁLCOOL: rubor intenso, cefaleia pulsátil, vômitos, taquicardia, hipotensão grave, colapso cardiovascular. Pode ser fatal com consumo elevado de etanol.",
+          "Hepatotoxicidade (raro mas grave — monitorar TGO/TGP)",
+          "Neuropatia periférica (uso prolongado)",
+          "Psicose (raro)"
+        ],
+        "dose": {
+          "duracao": "Duração: meses a anos. Monitorar enzimas hepáticas a cada 6 meses.",
+          "inicial": "Dose de ataque: 500 mg VO 1×/dia por 1–2 semanas (após 12–24h de abstinência TOTAL).",
+          "manutencao": "Manutenção: 250 mg VO 1×/dia (range: 125–500 mg/dia). Dose máxima: 500 mg/dia."
+        },
+        "halfLife": "Metabolismo lento: efeito dura 1–2 semanas após suspensão.",
+        "mechanism": "Inibe irreversivelmente a aldeído desidrogenase (ALDH), bloqueando o metabolismo do etanol no nível do acetaldeído. O acúmulo de acetaldeído causa reação aversiva intensa (rubor, taquicardia, dispneia, hipotensão, vômitos) — dissuadindo o consumo de álcool. Efeito persiste 1–2 semanas após a última dose.",
+        "monitoring": [
+          "TGO / TGP antes e a cada 3–6 meses",
+          "Monitorar sinais de neuropatia (parestesias)",
+          "Revisar todas as medicações concomitantes (interações graves com metronidazol, isoniazida, anticoagulantes)"
+        ],
+        "name": "Dissulfiram",
+        "presentation": [
+          "Comprimido 250 mg, 500 mg"
+        ],
+        "references": [
+          "ANVISA — Antabuse/Dissulfiram Bula",
+          "Fuller RK et al. JAMA 1986 — Veterans Affairs Cooperative Study",
+          "Diehl A et al. Alcohol Alcohol 2010",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "risksByPatient": [],
+        "safetyFlags": {
+          "antidoteAvailable": false,
+          "bleedingRisk": false,
+          "hepaticCaution": true,
+          "highAlertMedication": true,
+          "renalHighRisk": false,
+          "warning": "🚨 ALTA VIGILÂNCIA: Paciente DEVE ser informado que qualquer fonte de álcool (incluindo antissépticos, perfumes, vinagres, alguns alimentos) pode desencadear a reação. Identidade do paciente deve constar para equipes de emergência."
+        }
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "toxicologia.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "duracao": "Duración: meses a años. Monitorizar enzimas hepáticas cada 6 meses.",
+            "inicial": "Dosis de ataque: 500 mg VO 1×/día por 1–2 semanas (tras 12–24h de abstinencia TOTAL).",
+            "manutencao": "Mantenimiento: 250 mg VO 1×/día (rango: 125–500 mg/día). Dosis máxima: 500 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "duracao": "Duração: meses a anos. Monitorar enzimas hepáticas a cada 6 meses.",
+            "inicial": "Dose de ataque: 500 mg VO 1×/dia por 1–2 semanas (após 12–24h de abstinência TOTAL).",
+            "manutencao": "Manutenção: 250 mg VO 1×/dia (range: 125–500 mg/dia). Dose máxima: 500 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

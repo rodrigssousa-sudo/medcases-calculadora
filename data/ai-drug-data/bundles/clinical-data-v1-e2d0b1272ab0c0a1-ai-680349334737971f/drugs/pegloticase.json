@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "d85e9e61c67b5bc28612ec7f0ec74cc95e4864fd44363023b46e90e8216f4806",
+    "sourceModule": "analgesicos.js"
+  },
+  "drugId": "pegloticase",
+  "identity": {
+    "canonicalOwner": "analgesicos.js",
+    "category": "reumato",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "pegloticase"
+    ],
+    "name": {
+      "es": "Pegloticasa",
+      "pt": "Pegloticase"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "reumato",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Pegloticasa"
+      },
+      "icon": "💊",
+      "id": "pegloticase",
+      "keywords": [
+        "pegloticase"
+      ],
+      "name": {
+        "es": "Pegloticasa",
+        "pt": "Pegloticase"
+      },
+      "pt": {
+        "name": "Pegloticase"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "analgesicos.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

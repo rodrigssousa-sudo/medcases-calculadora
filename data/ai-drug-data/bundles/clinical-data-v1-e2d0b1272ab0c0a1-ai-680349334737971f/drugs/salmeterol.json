@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "5bda584f21308773a5b6a37c7cdea51dbb7298245b4b08eecf21a7133eb15b9f",
+    "sourceModule": "pneumologia.js"
+  },
+  "drugId": "salmeterol",
+  "identity": {
+    "canonicalOwner": "pneumologia.js",
+    "category": "pneumologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "salmeterol"
+    ],
+    "name": {
+      "es": "Salmeterol",
+      "pt": "Salmeterol"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "pneumologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Salmeterol"
+      },
+      "icon": "💊",
+      "id": "salmeterol",
+      "keywords": [
+        "salmeterol"
+      ],
+      "name": {
+        "es": "Salmeterol",
+        "pt": "Salmeterol"
+      },
+      "pt": {
+        "name": "Salmeterol"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "pneumologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

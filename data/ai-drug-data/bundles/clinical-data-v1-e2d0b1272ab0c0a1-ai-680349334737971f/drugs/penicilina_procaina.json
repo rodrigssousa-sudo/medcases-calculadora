@@ -1,0 +1,264 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "7af59fc06e90370a5f1c40d0d5bf7b78d7027425658e4f0619c8ace0f262d849",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "penicilina_procaina",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "penicilina_procaina",
+      "penicilina procaina",
+      "despacilina",
+      "wycillin",
+      "penicilina natural de acao prolongada (im)"
+    ],
+    "name": {
+      "es": "Penicilina Procaína",
+      "pt": "Penicilina Procaína"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "rgba(59,130,246,0.12)",
+      "colorTxt": "#2563EB",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Administración EXCLUSIVAMENTE INTRAMUSCULAR profunda — nunca IV.",
+          "Síndrome de Hoigné: reacción pseudoanafláctica aguda por inyección intravascular accidental (agitación, miedo a la muerte, parestesias).",
+          "No requiere ajuste renal en la práctica clínica habitual."
+        ],
+        "class": "Penicilina natural de acción prolongada (IM)",
+        "commercialNames": {
+          "ar": [
+            "Despacilina",
+            "Wycillin"
+          ],
+          "br": [
+            "Despacilina",
+            "Wycillin"
+          ]
+        },
+        "contraindications": [
+          "Hipersensibilidad a la penicilina o procaína",
+          "Vía intravenosa CONTRAINDICADA (riesgo de síndrome de Hoigné)"
+        ],
+        "dose": {
+          "adultoIM": "600.000–1.200.000 UI IM 24/24h"
+        },
+        "doseKg": null,
+        "indication": "Sífilis primaria y secundaria, infecciones por Streptococcus pyogenes (amigdalitis, erisipela, escarlatina), profilaxis de fiebre reumática.",
+        "name": "Penicilina Procaína",
+        "presentation": [
+          "Suspensión inyectable IM: 400.000 UI/mL — frascos de 1.200.000 UI y 600.000 UI"
+        ],
+        "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "1,2 milhões UI/dia",
+              "intervalo": "24/24h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "No requiere ajuste renal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "1,2 milhões UI/dia",
+              "intervalo": "24/24h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Administración exclusivamente IM.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "1,2 milhões UI/dia",
+              "intervalo": "24/24h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorizar solo en insuficiencia renal terminal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "1,2 milhões UI/dia",
+              "intervalo": "24/24h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "No requiere suplementación post-hemodiálisis.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "1,2 milhões UI/dia",
+              "intervalo": "24/24h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "message": "No requiere ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "spectrum": "Streptococcus pyogenes (Grupo A), Streptococcus del grupo B, Treponema pallidum, Clostridium perfringens. Sin actividad frente a Staphylococcus aureus productor de penicilinasa."
+      },
+      "icon": "💉",
+      "id": "penicilina_procaina",
+      "keywords": [
+        "penicilina_procaina",
+        "penicilina procaina",
+        "despacilina",
+        "wycillin",
+        "penicilina natural de acao prolongada (im)"
+      ],
+      "name": {
+        "es": "Penicilina Procaína",
+        "pt": "Penicilina Procaína"
+      },
+      "pt": {
+        "alerts": [
+          "Administração EXCLUSIVAMENTE INTRAMUSCULAR profunda — nunca EV.",
+          "Síndrome de Hoigné: reação pseudoanafilática aguda por injeção intravascular acidental (agitação, medo de morte, parestesias).",
+          "Não necessita ajuste renal na prática clínica habitual."
+        ],
+        "class": "Penicilina natural de ação prolongada (IM)",
+        "commercialNames": {
+          "ar": [
+            "Despacilina",
+            "Wycillin"
+          ],
+          "br": [
+            "Despacilina",
+            "Wycillin"
+          ]
+        },
+        "contraindications": [
+          "Hipersensibilidade à penicilina ou procaína",
+          "Via intravenosa CONTRAINDICADA (risco de síndrome de Hoigné)"
+        ],
+        "dose": {
+          "adultoIM": "600.000–1.200.000 UI IM 24/24h"
+        },
+        "doseKg": null,
+        "indication": "Sífilis primária e secundária, infecções por Streptococcus pyogenes (amigdalite, erisipela, escarlatina), profilaxia de febre reumática.",
+        "name": "Penicilina Procaína",
+        "presentation": [
+          "Suspensão injetável IM: 400.000 UI/mL — frascos de 1.200.000 UI e 600.000 UI"
+        ],
+        "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / Goodman & Gilman 14ª ed.",
+        "renalDose": {
+          "fg10a30": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "1,2 milhões UI/dia",
+              "intervalo": "24/24h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": null,
+            "obs": "Não necessita ajuste renal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "1,2 milhões UI/dia",
+              "intervalo": "24/24h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": null,
+            "obs": "Administração exclusivamente IM.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "1,2 milhões UI/dia",
+              "intervalo": "24/24h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": null,
+            "obs": "Monitorar apenas em insuficiência renal terminal.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "1,2 milhões UI/dia",
+              "intervalo": "24/24h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": null,
+            "obs": "Não requer suplementação pós-hemodiálise.",
+            "pediatrica": {
+              "dose": "25.000–50.000 UI/kg",
+              "doseMaxima": "1,2 milhões UI/dia",
+              "intervalo": "24/24h",
+              "unidade": "UI/kg"
+            },
+            "vo": null
+          },
+          "message": "Não necessita ajuste renal habitual.",
+          "requiresAdjustment": false,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "spectrum": "Streptococcus pyogenes (Grupo A), Streptococcus do grupo B, Treponema pallidum, Clostridium perfringens. Sem atividade contra Staphylococcus aureus produtor de penicilinase."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoIM": "600.000–1.200.000 UI IM 24/24h"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adultoIM": "600.000–1.200.000 UI IM 24/24h"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

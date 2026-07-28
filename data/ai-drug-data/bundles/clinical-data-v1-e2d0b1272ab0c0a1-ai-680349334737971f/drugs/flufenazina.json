@@ -1,0 +1,248 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "4a5a64616c109e41bdf0fbeb9a04460f6b0e6ce67a48a073185844d636d71172",
+    "sourceModule": "psicofarmacos.js"
+  },
+  "drugId": "flufenazina",
+  "identity": {
+    "canonicalOwner": "psicofarmacos.js",
+    "category": "antipsicotico",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "flufenazina",
+      "anatensol",
+      "flufenan",
+      "modecate",
+      "antipsicotico tipico de alta potencia — fenotiazina"
+    ],
+    "name": {
+      "es": "Flufenazina",
+      "pt": "Flufenazina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antipsicotico",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Alto riesgo extrapiramidal; monitorizar acatisia, distonía y parkinsonismo.",
+          "La formulación depot es útil para baja adherencia, pero exige tolerancia previa al fármaco oral.",
+          "Considerar ECG si hay riesgo de QT.",
+          "Monitorizar prolactina si hay síntomas clínicos."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico típico de alta potencia — fenotiazina",
+        "commercialNames": {
+          "ar": [
+            "Modecate",
+            "Flufenazina"
+          ],
+          "br": [
+            "Anatensol",
+            "Flufenan",
+            "Flufenazina"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Acatisia",
+          "Distonía aguda",
+          "Parkinsonismo medicamentoso",
+          "Hiperprolactinemia",
+          "Insomnio o inquietud",
+          "Boca seca"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a fenotiazinas",
+          "Depresión grave del SNC o coma",
+          "Enfermedad de Parkinson grave",
+          "Demencia con cuerpos de Lewy, salvo extrema necesidad",
+          "QT prolongado significativo"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome neuroléptico maligno",
+          "Discinesia tardía",
+          "Prolongación QT y arritmias",
+          "Distonía laríngea rara",
+          "Convulsiones en predispuestos"
+        ],
+        "dose": {
+          "adulto": "Psicosis: iniciar 1–2,5 mg VO 2–3 veces/día; titular según respuesta.",
+          "depot": "Decanoato: 12,5–25 mg IM profunda cada 2–4 semanas, según respuesta y tolerabilidad.",
+          "maxDose": "La dosis máxima depende de indicación; evitar dosis altas sin monitorización de EPS y ECG."
+        },
+        "halfLife": "Vida media variable; decanoato posee duración prolongada por 2–4 semanas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Esquizofrenia",
+          "Psicosis crónica",
+          "Mantenimiento antipsicótico con formulación depot",
+          "Prevención de recaídas psicóticas",
+          "Trastorno esquizoafectivo en casos seleccionados",
+          "Agitación psicótica en contexto seleccionado"
+        ],
+        "interactions": [
+          "Levodopa y agonistas dopaminérgicos",
+          "Fármacos que prolongan QT",
+          "Litio: riesgo de neurotoxicidad",
+          "Alcohol y depresores del SNC",
+          "Anticolinérgicos usados para EPS: mayor riesgo de delirium/estreñimiento"
+        ],
+        "mechanism": "Antagonista potente de receptores D2; alta potencia antipsicótica con mayor riesgo de síntomas extrapiramidales.",
+        "name": "Flufenazina",
+        "onset": "VO: efecto inicial en días; depot: liberación prolongada con efecto por semanas.",
+        "presentation": [
+          "Comprimido 1 mg",
+          "Comprimido 5 mg",
+          "Solución oral/gotas",
+          "Decanoato 25 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Fluphenazine Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "flufenazina",
+      "keywords": [
+        "flufenazina",
+        "anatensol",
+        "flufenan",
+        "modecate",
+        "antipsicotico tipico de alta potencia — fenotiazina"
+      ],
+      "name": {
+        "es": "Flufenazina",
+        "pt": "Flufenazina"
+      },
+      "pt": {
+        "alerts": [
+          "Alto risco extrapiramidal; monitorar acatisia, distonia e parkinsonismo.",
+          "Formulação depot é útil para baixa adesão, mas exige tolerância prévia ao fármaco oral.",
+          "Considerar ECG se risco de QT.",
+          "Monitorar prolactina se sintomas clínicos."
+        ],
+        "category": "antipsicotico",
+        "class": "Antipsicótico típico de alta potência — fenotiazina",
+        "commercialNames": {
+          "ar": [
+            "Modecate",
+            "Flufenazina"
+          ],
+          "br": [
+            "Anatensol",
+            "Flufenan",
+            "Flufenazina"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Acatisia",
+          "Distonia aguda",
+          "Parkinsonismo medicamentoso",
+          "Hiperprolactinemia",
+          "Insônia ou inquietação",
+          "Boca seca"
+        ],
+        "contraindications": [
+          "Hipersensibilidade às fenotiazinas",
+          "Depressão grave do SNC ou coma",
+          "Doença de Parkinson grave",
+          "Demência com corpos de Lewy, salvo extrema necessidade",
+          "QT prolongado significativo"
+        ],
+        "dangerousAdverseEffects": [
+          "Síndrome neuroléptica maligna",
+          "Discinesia tardia",
+          "Prolongamento QT e arritmias",
+          "Distonia laríngea rara",
+          "Convulsões em predispostos"
+        ],
+        "dose": {
+          "adulto": "Psicose: iniciar 1–2,5 mg VO 2–3x/dia; titular conforme resposta.",
+          "depot": "Decanoato: 12,5–25 mg IM profunda a cada 2–4 semanas, conforme resposta e tolerabilidade.",
+          "maxDose": "Dose máxima depende da indicação; evitar doses altas sem monitorização de EPS e ECG."
+        },
+        "halfLife": "Vida média variável; decanoato possui duração prolongada por 2–4 semanas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Esquizofrenia",
+          "Psicose crônica",
+          "Manutenção antipsicótica com formulação depot",
+          "Prevenção de recaídas psicóticas",
+          "Transtorno esquizoafetivo em casos selecionados",
+          "Agitação psicótica em contexto selecionado"
+        ],
+        "interactions": [
+          "Levodopa e agonistas dopaminérgicos",
+          "Fármacos que prolongam QT",
+          "Lítio: risco de neurotoxicidade",
+          "Álcool e depressores do SNC",
+          "Anticolinérgicos usados para EPS: maior risco de delirium/constipação"
+        ],
+        "mechanism": "Antagonista potente dos receptores D2; alta potência antipsicótica com maior risco de sintomas extrapiramidais.",
+        "name": "Flufenazina",
+        "onset": "VO: efeito inicial em dias; depot: liberação prolongada com efeito por semanas.",
+        "presentation": [
+          "Comprimido 1 mg",
+          "Comprimido 5 mg",
+          "Solução oral/gotas",
+          "Decanoato 25 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Fluphenazine Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psicofarmacos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Psicosis: iniciar 1–2,5 mg VO 2–3 veces/día; titular según respuesta.",
+            "depot": "Decanoato: 12,5–25 mg IM profunda cada 2–4 semanas, según respuesta y tolerabilidad.",
+            "maxDose": "La dosis máxima depende de indicación; evitar dosis altas sin monitorización de EPS y ECG."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Psicose: iniciar 1–2,5 mg VO 2–3x/dia; titular conforme resposta.",
+            "depot": "Decanoato: 12,5–25 mg IM profunda a cada 2–4 semanas, conforme resposta e tolerabilidade.",
+            "maxDose": "Dose máxima depende da indicação; evitar doses altas sem monitorização de EPS e ECG."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

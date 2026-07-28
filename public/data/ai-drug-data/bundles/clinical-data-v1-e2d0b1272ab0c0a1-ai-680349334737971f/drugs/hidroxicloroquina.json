@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "a837d899526c7c054bfc22558070a590b7c848dcc419b0456af3f980444273e7",
+    "sourceModule": "analgesicos.js"
+  },
+  "drugId": "hidroxicloroquina",
+  "identity": {
+    "canonicalOwner": "analgesicos.js",
+    "category": "reumato",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "hidroxicloroquina"
+    ],
+    "name": {
+      "es": "Hidroxicloroquina",
+      "pt": "Hidroxicloroquina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "reumato",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Hidroxicloroquina"
+      },
+      "icon": "💊",
+      "id": "hidroxicloroquina",
+      "keywords": [
+        "hidroxicloroquina"
+      ],
+      "name": {
+        "es": "Hidroxicloroquina",
+        "pt": "Hidroxicloroquina"
+      },
+      "pt": {
+        "name": "Hidroxicloroquina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "analgesicos.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

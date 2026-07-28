@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "921435a32c45078891d77b67d5d68de7a819d1d69d16d1c51cdd2dd122c52ba2",
+    "sourceModule": "nefro.js"
+  },
+  "drugId": "gluconato_ferroso",
+  "identity": {
+    "canonicalOwner": "nefro.js",
+    "category": "hematologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "gluconato_ferroso",
+      "gluconato ferroso"
+    ],
+    "name": {
+      "es": "Gluconato Ferroso",
+      "pt": "Gluconato Ferroso"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "hematologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "#B91C1C",
+      "colorTxt": "#ffffff",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Gluconato Ferroso"
+      },
+      "icon": "🩸",
+      "id": "gluconato_ferroso",
+      "keywords": [
+        "gluconato_ferroso",
+        "gluconato ferroso"
+      ],
+      "name": {
+        "es": "Gluconato Ferroso",
+        "pt": "Gluconato Ferroso"
+      },
+      "pt": {
+        "name": "Gluconato Ferroso"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "nefro.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

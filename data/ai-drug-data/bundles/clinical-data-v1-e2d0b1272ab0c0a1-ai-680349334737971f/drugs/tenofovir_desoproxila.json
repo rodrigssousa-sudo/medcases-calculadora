@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "2ff93261471ef63dadc02fac7bb2640200ec2b00caa7e39818a0ca2444d8f955",
+    "sourceModule": "infectologia.js"
+  },
+  "drugId": "tenofovir_desoproxila",
+  "identity": {
+    "canonicalOwner": "infectologia.js",
+    "category": "infectologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "tenofovir_desoproxila",
+      "tenofovir desoproxila (fumarato de / tdf)"
+    ],
+    "name": {
+      "es": "Tenofovir Disoproxilo (Fumarato de / TDF)",
+      "pt": "Tenofovir Desoproxila (Fumarato de / TDF)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "infectologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Tenofovir Disoproxilo (Fumarato de / TDF)"
+      },
+      "icon": "💊",
+      "id": "tenofovir_desoproxila",
+      "keywords": [
+        "tenofovir_desoproxila",
+        "tenofovir desoproxila (fumarato de / tdf)"
+      ],
+      "name": {
+        "es": "Tenofovir Disoproxilo (Fumarato de / TDF)",
+        "pt": "Tenofovir Desoproxila (Fumarato de / TDF)"
+      },
+      "pt": {
+        "name": "Tenofovir Desoproxila (Fumarato de / TDF)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "infectologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

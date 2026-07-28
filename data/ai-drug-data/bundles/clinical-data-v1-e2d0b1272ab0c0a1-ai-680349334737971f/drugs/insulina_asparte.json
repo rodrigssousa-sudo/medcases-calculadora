@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "45d1631f0dfceeb587682ca27419c4624a39dd6e1ec815fd1d84c2fc64c1a6c8",
+    "sourceModule": "endocrino.js"
+  },
+  "drugId": "insulina_asparte",
+  "identity": {
+    "canonicalOwner": "endocrino.js",
+    "category": "endocrino",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "insulina_asparte",
+      "insulina asparte"
+    ],
+    "name": {
+      "es": "Insulina Aspart",
+      "pt": "Insulina Asparte"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "endocrino",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Insulina Aspart"
+      },
+      "icon": "💊",
+      "id": "insulina_asparte",
+      "keywords": [
+        "insulina_asparte",
+        "insulina asparte"
+      ],
+      "name": {
+        "es": "Insulina Aspart",
+        "pt": "Insulina Asparte"
+      },
+      "pt": {
+        "name": "Insulina Asparte"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "endocrino.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

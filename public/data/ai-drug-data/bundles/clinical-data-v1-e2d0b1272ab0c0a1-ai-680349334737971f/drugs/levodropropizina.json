@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "1b95ff64d6efaf1c3047380e6289f7ee6d97cc73819948e97b1f777c6b98cfe4",
+    "sourceModule": "pneumologia.js"
+  },
+  "drugId": "levodropropizina",
+  "identity": {
+    "canonicalOwner": "pneumologia.js",
+    "category": "pneumologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "levodropropizina"
+    ],
+    "name": {
+      "es": "Levodropropizina",
+      "pt": "Levodropropizina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "pneumologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Levodropropizina"
+      },
+      "icon": "💊",
+      "id": "levodropropizina",
+      "keywords": [
+        "levodropropizina"
+      ],
+      "name": {
+        "es": "Levodropropizina",
+        "pt": "Levodropropizina"
+      },
+      "pt": {
+        "name": "Levodropropizina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "pneumologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

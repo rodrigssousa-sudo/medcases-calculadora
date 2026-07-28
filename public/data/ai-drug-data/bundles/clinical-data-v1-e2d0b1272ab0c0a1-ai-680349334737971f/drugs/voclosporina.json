@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "490ec5d152b5025346c8c5153cc71eb21bc28f06e19d67a15eeee9a35812ea5a",
+    "sourceModule": "nefro.js"
+  },
+  "drugId": "voclosporina",
+  "identity": {
+    "canonicalOwner": "nefro.js",
+    "category": "nefrologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "voclosporina"
+    ],
+    "name": {
+      "es": "Voclosporina",
+      "pt": "Voclosporina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "nefrologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "#0369A1",
+      "colorTxt": "#ffffff",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Voclosporina"
+      },
+      "icon": "🫘",
+      "id": "voclosporina",
+      "keywords": [
+        "voclosporina"
+      ],
+      "name": {
+        "es": "Voclosporina",
+        "pt": "Voclosporina"
+      },
+      "pt": {
+        "name": "Voclosporina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "nefro.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

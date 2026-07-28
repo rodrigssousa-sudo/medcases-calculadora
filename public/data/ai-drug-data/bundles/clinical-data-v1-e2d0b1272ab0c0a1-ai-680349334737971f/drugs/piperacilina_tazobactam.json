@@ -1,0 +1,408 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "a5ba9fc3ba196cb995990c407c1682bbdd8c0bfe912cc7fb632bc128ff24eb1b",
+    "sourceModule": "infectologia.js"
+  },
+  "drugId": "piperacilina_tazobactam",
+  "identity": {
+    "canonicalOwner": "infectologia.js",
+    "category": "infectologia",
+    "contextVariantCount": 1,
+    "hasContextVariants": true,
+    "keywords": [
+      "piperacilina_tazobactam",
+      "piperacilina + tazobactam"
+    ],
+    "name": {
+      "es": "Piperacilina + Tazobactam",
+      "pt": "Piperacilina + Tazobactam"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "infectologia",
+      "clinicalCollision": {
+        "automaticFieldMerge": false,
+        "canonicalOwner": "infectologia.js",
+        "decisionBasis": "structural_score_and_git_recency_agree",
+        "discardSecondaryRecord": false,
+        "exportPolicy": "canonical_base_with_context_variants",
+        "policySchema": "clinical-collision-policy-v1",
+        "policySha256": "54ab771c13833ef15626eed228be0a46db6443a43d52bb68d4f1dbe1468f8eaf",
+        "policyStatus": "proposed"
+      },
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "clinicalContextVariants": [
+        {
+          "context": "secondary_clinical_variant",
+          "record": {
+            "category": "atb",
+            "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+            "color": null,
+            "colorTxt": null,
+            "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+            "es": {
+              "alerts": [
+                "Cobertura para Pseudomonas aeruginosa.",
+                "Monitorar función renal diariamente en pacientes críticos."
+              ],
+              "auditNotes": {
+                "note": "Bloque fusionado y mejorado: pediátrica fgMaior50 dosis actualizada a 100 mg/kg; fgMaior50.obs con infusión extendida; fg10a30.obs con sodio sérico; fgMenor10.ev.intervalo corregido a 8/8h con doseMaxima 6,75 g/día; hemodialise.obs con remoción por HD; safetyFlags y auditNotes añadidos.",
+                "sourcePriority": [
+                  "FDA label Zosyn (piperacillin-tazobactam) 2023",
+                  "EMA label Tazocin (piperacillin-tazobactam) 2022",
+                  "IDSA HAP/VAP Guidelines 2016 (updated)",
+                  "Sanford Guide to Antimicrobial Therapy 2025",
+                  "Johns Hopkins ABX Guide 2024",
+                  "UpToDate 2024",
+                  "Lexicomp Online 2025",
+                  "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+                ],
+                "status": "excellent_after_review"
+              },
+              "class": "Penicilina antipseudomona + inhibidor de beta-lactamasa",
+              "commercialNames": {
+                "ar": [
+                  "Tazocin",
+                  "Piperacilina/Tazobactam Richet"
+                ],
+                "br": [
+                  "Tazocin",
+                  "Piperacilina/Tazobactam Eurofarma"
+                ]
+              },
+              "commonAdverseEffects": [
+                "Diarrea",
+                "Náuseas",
+                "Exantema"
+              ],
+              "dangerousAdverseEffects": [
+                "Anafilaxia",
+                "Nefrotoxicidad",
+                "Convulsiones",
+                "Leucopenia"
+              ],
+              "dilution": "Diluir según protocolo institucional.",
+              "dose": {
+                "adulto": "4,5 g EV cada 6h",
+                "infusaoProlongada": "4,5 g EV en 4 horas",
+                "sepse": "4,5 g EV cada 6h"
+              },
+              "doseKg": {
+                "maxDose": "18 g/día de piperacilina",
+                "standard": "80–100 mg/kg por dosis (componente piperacilina)"
+              },
+              "name": "Piperacilina + Tazobactam",
+              "presentation": [
+                "Frasco ampolla: 2,25 g",
+                "Frasco ampolla: 4,5 g"
+              ],
+              "ref": "Goodman & Gilman / Sanford Guide / IDSA HAP/VAP",
+              "renalDose": {
+                "fg10a30": {
+                  "ev": {
+                    "dose": "2,25–4,5 g",
+                    "doseMaxima": "9 g/dia",
+                    "intervalo": "8/8h",
+                    "unidade": "g"
+                  },
+                  "obs": "Monitorizar función renal y sodio sérico. Ajustar según gravedad de la infección y sensibilidad microbiológica.",
+                  "pediatrica": {
+                    "dose": "40–80 mg/kg de piperacilina",
+                    "doseMaxima": "9 g/dia",
+                    "intervalo": "8/8h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fg30a50": {
+                  "ev": {
+                    "dose": "4,5 g",
+                    "doseMaxima": "13,5 g/dia",
+                    "intervalo": "8/8h",
+                    "unidade": "g"
+                  },
+                  "obs": "Reducción del intervalo según función renal (ajuste oficial recomendado).",
+                  "pediatrica": {
+                    "dose": "80–100 mg/kg de piperacilina",
+                    "doseMaxima": "13,5 g/dia",
+                    "intervalo": "8/8h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMaior50": {
+                  "ev": {
+                    "dose": "4,5 g",
+                    "doseMaxima": "18 g/dia",
+                    "intervalo": "6/6h",
+                    "unidade": "g"
+                  },
+                  "obs": "Dosis habitual para infecciones moderadas a graves. Preferir infusión extendida de 4 horas en shock séptico y Pseudomonas.",
+                  "pediatrica": {
+                    "dose": "100 mg/kg de piperacilina",
+                    "doseMaxima": "18 g/dia",
+                    "intervalo": "6/6h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMenor10": {
+                  "ev": {
+                    "dose": "2,25 g",
+                    "doseMaxima": "6,75 g/dia",
+                    "intervalo": "8/8h",
+                    "unidade": "g"
+                  },
+                  "obs": "Mayor riesgo de acumulación y neurotoxicidad. Monitorizar sodio sérico (alta carga de sodio de la formulación).",
+                  "pediatrica": {
+                    "dose": "40 mg/kg de piperacilina",
+                    "doseMaxima": "4,5 g/dia",
+                    "intervalo": "12/12h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "hemodialise": {
+                  "ev": {
+                    "dose": "2,25 g",
+                    "doseMaxima": "4,5 g/dia",
+                    "intervalo": "12/12h",
+                    "unidade": "g"
+                  },
+                  "obs": "Administrar dosis suplementaria de aproximadamente 0,75 g después de hemodiálisis. Piperacilina es extensamente removida por HD.",
+                  "pediatrica": {
+                    "dose": "40 mg/kg de piperacilina",
+                    "doseMaxima": "4,5 g/dia",
+                    "intervalo": "12/12h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "requiresAdjustment": true,
+                "version": 2
+              },
+              "risksByPatient": [],
+              "safetyFlags": {
+                "hepatotoxicityRisk": false,
+                "neurotoxicityRisk": true,
+                "qtRisk": false,
+                "renalHighRisk": true,
+                "requiresCultureGuidance": true,
+                "warning": "Asociada a mayor riesgo de lesión renal aguda cuando se combina con vancomicina (sinergia nefrotóxica — evitar combinación cuando sea posible). Monitorizar función renal diariamente en UCI. Riesgo de neurotoxicidad por acumulación en IR grave."
+              },
+              "speed": "Infusión en 30 min o prolongada en 4 horas.",
+              "therapeuticRange": "Antibiótico dependiente del tiempo por encima de la MIC."
+            },
+            "icon": "💊",
+            "id": "piperacilina_tazobactam",
+            "keywords": [
+              "piperacilina_tazobactam",
+              "piperacilina + tazobactam",
+              "tazocin",
+              "piperacilina/tazobactam eurofarma",
+              "piperacilina/tazobactam richet",
+              "penicilina antipseudomonas + inibidor de beta-lactamase"
+            ],
+            "name": {
+              "es": "Piperacilina + Tazobactam",
+              "pt": "Piperacilina + Tazobactam"
+            },
+            "pt": {
+              "alerts": [
+                "Cobertura para Pseudomonas aeruginosa.",
+                "Monitorar função renal diariamente em pacientes críticos."
+              ],
+              "auditNotes": {
+                "note": "Bloco mesclado e melhorado: pediátrica fgMaior50 dose atualizada para 100 mg/kg; fgMaior50.obs com infusão estendida; fg10a30.obs com sódio sérico; fgMenor10.ev.intervalo corrigido para 8/8h com doseMaxima 6,75 g/dia; hemodialise.obs com remoção por HD; safetyFlags e auditNotes adicionados.",
+                "sourcePriority": [
+                  "FDA label Zosyn (piperacillin-tazobactam) 2023",
+                  "EMA label Tazocin (piperacillin-tazobactam) 2022",
+                  "IDSA HAP/VAP Guidelines 2016 (updated)",
+                  "Sanford Guide to Antimicrobial Therapy 2025",
+                  "Johns Hopkins ABX Guide 2024",
+                  "UpToDate 2024",
+                  "Lexicomp Online 2025",
+                  "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
+                ],
+                "status": "excellent_after_review"
+              },
+              "class": "Penicilina antipseudomonas + inibidor de beta-lactamase",
+              "commercialNames": {
+                "ar": [
+                  "Tazocin",
+                  "Piperacilina/Tazobactam Richet"
+                ],
+                "br": [
+                  "Tazocin",
+                  "Piperacilina/Tazobactam Eurofarma"
+                ]
+              },
+              "commonAdverseEffects": [
+                "Diarreia",
+                "Náuseas",
+                "Rash"
+              ],
+              "dangerousAdverseEffects": [
+                "Anafilaxia",
+                "Nefrotoxicidade",
+                "Convulsões",
+                "Leucopenia"
+              ],
+              "dilution": "Diluir conforme protocolo institucional.",
+              "dose": {
+                "adulto": "4,5 g EV 6/6h",
+                "infusaoProlongada": "4,5 g EV em 4 horas",
+                "sepse": "4,5 g EV 6/6h"
+              },
+              "doseKg": {
+                "maxDose": "18 g/dia de piperacilina",
+                "standard": "80–100 mg/kg por dose (componente piperacilina)"
+              },
+              "name": "Piperacilina + Tazobactam",
+              "presentation": [
+                "Frasco-ampola: 2,25 g",
+                "Frasco-ampola: 4,5 g"
+              ],
+              "ref": "Goodman & Gilman / Sanford Guide / IDSA HAP/VAP",
+              "renalDose": {
+                "fg10a30": {
+                  "ev": {
+                    "dose": "2,25–4,5 g",
+                    "doseMaxima": "9 g/dia",
+                    "intervalo": "8/8h",
+                    "unidade": "g"
+                  },
+                  "obs": "Monitorar função renal e sódio sérico. Ajustar conforme gravidade da infecção e sensibilidade microbiológica.",
+                  "pediatrica": {
+                    "dose": "40–80 mg/kg de piperacilina",
+                    "doseMaxima": "9 g/dia",
+                    "intervalo": "8/8h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fg30a50": {
+                  "ev": {
+                    "dose": "4,5 g",
+                    "doseMaxima": "13,5 g/dia",
+                    "intervalo": "8/8h",
+                    "unidade": "g"
+                  },
+                  "obs": "Redução do intervalo conforme função renal (ajuste oficial recomendado).",
+                  "pediatrica": {
+                    "dose": "80–100 mg/kg de piperacilina",
+                    "doseMaxima": "13,5 g/dia",
+                    "intervalo": "8/8h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMaior50": {
+                  "ev": {
+                    "dose": "4,5 g",
+                    "doseMaxima": "18 g/dia",
+                    "intervalo": "6/6h",
+                    "unidade": "g"
+                  },
+                  "obs": "Dose habitual para infecções moderadas a graves. Preferir infusão estendida de 4 horas em choque séptico e Pseudomonas.",
+                  "pediatrica": {
+                    "dose": "100 mg/kg de piperacilina",
+                    "doseMaxima": "18 g/dia",
+                    "intervalo": "6/6h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "fgMenor10": {
+                  "ev": {
+                    "dose": "2,25 g",
+                    "doseMaxima": "6,75 g/dia",
+                    "intervalo": "8/8h",
+                    "unidade": "g"
+                  },
+                  "obs": "Maior risco de acúmulo e neurotoxicidade. Monitorar sódio sérico (alta carga de sódio da formulação).",
+                  "pediatrica": {
+                    "dose": "40 mg/kg de piperacilina",
+                    "doseMaxima": "4,5 g/dia",
+                    "intervalo": "12/12h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "hemodialise": {
+                  "ev": {
+                    "dose": "2,25 g",
+                    "doseMaxima": "4,5 g/dia",
+                    "intervalo": "12/12h",
+                    "unidade": "g"
+                  },
+                  "obs": "Administrar dose suplementar de aproximadamente 0,75 g após hemodiálise. Piperacilina é extensamente removida pela HD.",
+                  "pediatrica": {
+                    "dose": "40 mg/kg de piperacilina",
+                    "doseMaxima": "4,5 g/dia",
+                    "intervalo": "12/12h",
+                    "unidade": "mg/kg"
+                  },
+                  "vo": null
+                },
+                "requiresAdjustment": true,
+                "version": 2
+              },
+              "risksByPatient": [],
+              "safetyFlags": {
+                "hepatotoxicityRisk": false,
+                "neurotoxicityRisk": true,
+                "qtRisk": false,
+                "renalHighRisk": true,
+                "requiresCultureGuidance": true,
+                "warning": "Associada a maior risco de lesão renal aguda quando combinada com vancomicina (sinergia nefrotóxica — evitar combinação quando possível). Monitorar função renal diariamente em UTI. Risco de neurotoxicidade por acúmulo em IR grave."
+              },
+              "speed": "Infusão em 30 min ou prolongada em 4 horas.",
+              "therapeuticRange": "Antibiótico dependente do tempo acima da MIC."
+            },
+            "schema": "premium-v1",
+            "source": "medcases-calculadora",
+            "sourceModule": "antimicrobianos.js"
+          },
+          "sourceModule": "antimicrobianos.js"
+        }
+      ],
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Piperacilina + Tazobactam"
+      },
+      "icon": "💊",
+      "id": "piperacilina_tazobactam",
+      "keywords": [
+        "piperacilina_tazobactam",
+        "piperacilina + tazobactam"
+      ],
+      "name": {
+        "es": "Piperacilina + Tazobactam",
+        "pt": "Piperacilina + Tazobactam"
+      },
+      "pt": {
+        "name": "Piperacilina + Tazobactam"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "infectologia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

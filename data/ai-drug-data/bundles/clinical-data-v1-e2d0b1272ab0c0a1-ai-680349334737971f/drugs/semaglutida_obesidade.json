@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "046f8d1ba3d909fa869ca0527d91e7ab8bce5b1ecccc81704fe15c6df5b3a46d",
+    "sourceModule": "obesidade.js"
+  },
+  "drugId": "semaglutida_obesidade",
+  "identity": {
+    "canonicalOwner": "obesidade.js",
+    "category": "obesidade",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "semaglutida_obesidade",
+      "semaglutida (uso na obesidade)"
+    ],
+    "name": {
+      "es": "Semaglutida (Uso en Obesidad)",
+      "pt": "Semaglutida (Uso na Obesidade)"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "obesidade",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Semaglutida (Uso en Obesidad)"
+      },
+      "icon": "💊",
+      "id": "semaglutida_obesidade",
+      "keywords": [
+        "semaglutida_obesidade",
+        "semaglutida (uso na obesidade)"
+      ],
+      "name": {
+        "es": "Semaglutida (Uso en Obesidad)",
+        "pt": "Semaglutida (Uso na Obesidade)"
+      },
+      "pt": {
+        "name": "Semaglutida (Uso na Obesidade)"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "obesidade.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,270 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "a251addeb6886032bc4cf61ccdfbf84c586a8ecd9583161dd0a71b3cb61ccd10",
+    "sourceModule": "neurologia.js"
+  },
+  "drugId": "fenobarbital",
+  "identity": {
+    "canonicalOwner": "neurologia.js",
+    "category": "anticonvulsivante",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "fenobarbital",
+      "gardenal",
+      "luminal",
+      "barbiturico anticonvulsivante"
+    ],
+    "name": {
+      "es": "Fenobarbital",
+      "pt": "Fenobarbital"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "anticonvulsivante",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Monitorizar nivel sérico, sedación y función respiratoria en dosis altas.",
+          "No suspender bruscamente por riesgo de abstinencia y crisis.",
+          "Potente inductor enzimático: revisar interacciones siempre.",
+          "Evitar alcohol y otros depresores del SNC.",
+          "En uso crónico, considerar salud ósea y vitamina D según riesgo."
+        ],
+        "category": "anticonvulsivante",
+        "class": "Barbitúrico anticonvulsivante",
+        "commercialNames": {
+          "ar": [
+            "Luminal",
+            "Fenobarbital"
+          ],
+          "br": [
+            "Gardenal",
+            "Fenobarbital"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia",
+          "Sedación",
+          "Ataxia",
+          "Mareos",
+          "Deterioro cognitivo",
+          "Náuseas",
+          "Hiperactividad paradójica en niños"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a barbitúricos",
+          "Porfiria aguda intermitente",
+          "Insuficiencia respiratoria grave sin soporte",
+          "Enfermedad hepática grave",
+          "Intoxicación aguda por depresores del SNC"
+        ],
+        "dangerousAdverseEffects": [
+          "Depresión respiratoria",
+          "Coma en intoxicación",
+          "Dependencia física",
+          "Síndrome de abstinencia grave",
+          "Reacciones cutáneas graves",
+          "Depresión o ideación suicida",
+          "Osteopenia/osteomalacia en uso crónico"
+        ],
+        "dose": {
+          "adulto": "Dosis de carga: 10–20 mg/kg. Para 70 kg: 700–1400 mg.",
+          "alvoSerico": "Nivel sérico habitual: 10–40 mcg/mL.",
+          "manutencao": "Mantenimiento: 1–3 mg/kg/día. Para 70 kg: 70–210 mg/día.",
+          "maxDose": "La dosis máxima debe individualizarse por nivel sérico, sedación y función respiratoria."
+        },
+        "doseKg": {
+          "maxDose": "Individualizar por nivel sérico.",
+          "severe": "Carga: 10–20 mg/kg según protocolo.",
+          "standard": "Mantenimiento: 1–3 mg/kg/día."
+        },
+        "halfLife": "Vida media larga: aproximadamente 2–5 días en adultos.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Crisis tónico-clónicas generalizadas",
+          "Crisis focales",
+          "Estado epiléptico como segunda/tercera línea",
+          "Convulsiones neonatales",
+          "Epilepsia en contextos con bajo acceso a otros anticonvulsivantes",
+          "Sedación en contextos específicos y monitorizados"
+        ],
+        "interactions": [
+          "Alcohol, opioides y benzodiacepinas: mayor depresión respiratoria",
+          "Anticonceptivos hormonales: reduce eficacia",
+          "Warfarina/DOACs: puede reducir anticoagulación",
+          "Corticoides, antirretrovirales e inmunosupresores: puede reducir niveles",
+          "Valproato: puede aumentar niveles de fenobarbital",
+          "Otros anticonvulsivantes: interacciones por inducción enzimática"
+        ],
+        "mechanism": "Potencia GABA-A, aumentando duración de apertura del canal de cloro; en dosis altas puede activar GABA-A directamente.",
+        "name": "Fenobarbital",
+        "onset": "IV/IM tiene acción relativamente rápida; uso crónico requiere días a semanas para estabilización sérica.",
+        "presentation": [
+          "Comprimido 50 mg",
+          "Comprimido 100 mg",
+          "Solución oral/gotas 40 mg/mL",
+          "Ampolla 100 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Phenobarbital Prescribing Information",
+          "ILAE Epilepsy Guidelines",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "fenobarbital",
+      "keywords": [
+        "fenobarbital",
+        "gardenal",
+        "luminal",
+        "barbiturico anticonvulsivante"
+      ],
+      "name": {
+        "es": "Fenobarbital",
+        "pt": "Fenobarbital"
+      },
+      "pt": {
+        "alerts": [
+          "Monitorar nível sérico, sedação e função respiratória em doses altas.",
+          "Não suspender abruptamente pelo risco de abstinência e crises.",
+          "Potente indutor enzimático: revisar interações sempre.",
+          "Evitar álcool e outros depressores do SNC.",
+          "Em uso crônico, considerar saúde óssea e vitamina D conforme risco."
+        ],
+        "category": "anticonvulsivante",
+        "class": "Barbitúrico anticonvulsivante",
+        "commercialNames": {
+          "ar": [
+            "Luminal",
+            "Fenobarbital"
+          ],
+          "br": [
+            "Gardenal",
+            "Fenobarbital"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência",
+          "Sedação",
+          "Ataxia",
+          "Tontura",
+          "Déficit cognitivo",
+          "Náuseas",
+          "Hiperatividade paradoxal em crianças"
+        ],
+        "contraindications": [
+          "Hipersensibilidade a barbitúricos",
+          "Porfiria aguda intermitente",
+          "Insuficiência respiratória grave sem suporte",
+          "Doença hepática grave",
+          "Intoxicação aguda por depressores do SNC"
+        ],
+        "dangerousAdverseEffects": [
+          "Depressão respiratória",
+          "Coma em intoxicação",
+          "Dependência física",
+          "Síndrome de abstinência grave",
+          "Reações cutâneas graves",
+          "Depressão ou ideação suicida",
+          "Osteopenia/osteomalácia em uso crônico"
+        ],
+        "dose": {
+          "adulto": "Dose de ataque: 10–20 mg/kg. Para 70 kg: 700–1400 mg.",
+          "alvoSerico": "Nível sérico usual: 10–40 mcg/mL.",
+          "manutencao": "Manutenção: 1–3 mg/kg/dia. Para 70 kg: 70–210 mg/dia.",
+          "maxDose": "Dose máxima deve ser individualizada por nível sérico, sedação e função respiratória."
+        },
+        "doseKg": {
+          "maxDose": "Individualizar por nível sérico.",
+          "severe": "Ataque: 10–20 mg/kg conforme protocolo.",
+          "standard": "Manutenção: 1–3 mg/kg/dia."
+        },
+        "halfLife": "Vida média longa: aproximadamente 2–5 dias em adultos.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Crises tônico-clônicas generalizadas",
+          "Crises focais",
+          "Estado de mal epiléptico como segunda/terceira linha",
+          "Convulsões neonatais",
+          "Epilepsia em contextos com baixo acesso a outros anticonvulsivantes",
+          "Sedação em contextos específicos e monitorizados"
+        ],
+        "interactions": [
+          "Álcool, opioides e benzodiazepínicos: maior depressão respiratória",
+          "Anticoncepcionais hormonais: reduz eficácia",
+          "Varfarina/DOACs: pode reduzir anticoagulação",
+          "Corticosteroides, antirretrovirais e imunossupressores: pode reduzir níveis",
+          "Valproato: pode aumentar níveis de fenobarbital",
+          "Outros anticonvulsivantes: interações por indução enzimática"
+        ],
+        "mechanism": "Potencializa GABA-A, aumentando duração de abertura do canal de cloro; em doses altas pode ativar GABA-A diretamente.",
+        "name": "Fenobarbital",
+        "onset": "EV/IM tem ação relativamente rápida; uso crônico exige dias a semanas para estabilização sérica.",
+        "presentation": [
+          "Comprimido 50 mg",
+          "Comprimido 100 mg",
+          "Solução oral/gotas 40 mg/mL",
+          "Ampola 100 mg/mL"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Phenobarbital Prescribing Information",
+          "ILAE Epilepsy Guidelines",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "neurologia.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Dosis de carga: 10–20 mg/kg. Para 70 kg: 700–1400 mg.",
+            "alvoSerico": "Nivel sérico habitual: 10–40 mcg/mL.",
+            "manutencao": "Mantenimiento: 1–3 mg/kg/día. Para 70 kg: 70–210 mg/día.",
+            "maxDose": "La dosis máxima debe individualizarse por nivel sérico, sedación y función respiratoria."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Dose de ataque: 10–20 mg/kg. Para 70 kg: 700–1400 mg.",
+            "alvoSerico": "Nível sérico usual: 10–40 mcg/mL.",
+            "manutencao": "Manutenção: 1–3 mg/kg/dia. Para 70 kg: 70–210 mg/dia.",
+            "maxDose": "Dose máxima deve ser individualizada por nível sérico, sedação e função respiratória."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

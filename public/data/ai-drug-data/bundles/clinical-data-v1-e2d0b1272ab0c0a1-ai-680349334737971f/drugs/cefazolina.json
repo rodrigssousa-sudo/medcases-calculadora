@@ -1,0 +1,358 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "27e4c959c23f4de29d6808fdf065df38f8acf29591fbbbcfab7e77f56188a229",
+    "sourceModule": "antimicrobianos.js"
+  },
+  "drugId": "cefazolina",
+  "identity": {
+    "canonicalOwner": "antimicrobianos.js",
+    "category": "atb",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "cefazolina",
+      "kefazol",
+      "cefazolina abl",
+      "cefazolina eurofarma",
+      "cefazolina richet",
+      "cefazolina klonal",
+      "cefazolina generica",
+      "cefalosporina de 1ª geracao"
+    ],
+    "name": {
+      "es": "Cefazolina",
+      "pt": "Cefazolina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "atb",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Excelente opción para MSSA sensible y profilaxis quirúrgica.",
+          "No cubre MRSA, Enterococcus ni Pseudomonas.",
+          "Investigar reacción grave previa a beta-lactámicos."
+        ],
+        "class": "Cefalosporina de 1ª generación",
+        "commercialNames": {
+          "ar": [
+            "Cefazolina Richet",
+            "Cefazolina Klonal",
+            "Cefazolina genérica"
+          ],
+          "br": [
+            "Kefazol",
+            "Cefazolina ABL",
+            "Cefazolina Eurofarma"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Dolor en el sitio de aplicación",
+          "Diarrea",
+          "Náuseas",
+          "Exantema cutáneo"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia",
+          "Colitis por Clostridioides difficile",
+          "Neutropenia en uso prolongado",
+          "Convulsiones en insuficiencia renal sin ajuste"
+        ],
+        "dilution": "Diluir en SF 0,9% o SG5% según protocolo institucional.",
+        "dose": {
+          "adulto": "1–2 g EV cada 8h",
+          "pediatrica": "2000 mg EV cada 8h",
+          "profilaxiaCirurgica": "2 g EV 30–60 min antes de la incisión; 3 g si peso ≥120 kg"
+        },
+        "doseKg": {
+          "maxDose": "6 g/día; hasta 12 g/día en infecciones graves seleccionadas",
+          "profilaxiaPediatrica": "30 mg/kg dosis única antes de la incisión",
+          "standard": "25–33 mg/kg por dosis cada 8h"
+        },
+        "name": "Cefazolina",
+        "presentation": [
+          "Frasco ampolla 500 mg",
+          "Frasco ampolla 1 g"
+        ],
+        "ref": "Goodman & Gilman / Sanford Guide / ASHP Surgical Prophylaxis Guidelines",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "g"
+            },
+            "obs": "Ajuste obligatorio para evitar acumulación.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "50 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "6 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "g"
+            },
+            "obs": "Reducir frecuencia de administración.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "75 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "12 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "g"
+            },
+            "obs": "Dosis habitual para infecciones por MSSA y profilaxis quirúrgica.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "100 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Monitorizar neurotoxicidad en insuficiencia renal avanzada.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "25 mg/kg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "g"
+            },
+            "obs": "Administrar después de hemodiálisis.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "25 mg/kg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Infundir en 30 minutos; en profilaxis quirúrgica puede administrarse lentamente según protocolo.",
+        "therapeuticRange": "Beta-lactámico dependiente del tiempo sobre la MIC."
+      },
+      "icon": "💊",
+      "id": "cefazolina",
+      "keywords": [
+        "cefazolina",
+        "kefazol",
+        "cefazolina abl",
+        "cefazolina eurofarma",
+        "cefazolina richet",
+        "cefazolina klonal",
+        "cefazolina generica",
+        "cefalosporina de 1ª geracao"
+      ],
+      "name": {
+        "es": "Cefazolina",
+        "pt": "Cefazolina"
+      },
+      "pt": {
+        "alerts": [
+          "Excelente opção para MSSA sensível e profilaxia cirúrgica.",
+          "Não cobre MRSA, Enterococcus nem Pseudomonas.",
+          "Investigar reação grave prévia a beta-lactâmicos."
+        ],
+        "class": "Cefalosporina de 1ª geração",
+        "commercialNames": {
+          "ar": [
+            "Cefazolina Richet",
+            "Cefazolina Klonal",
+            "Cefazolina genérica"
+          ],
+          "br": [
+            "Kefazol",
+            "Cefazolina ABL",
+            "Cefazolina Eurofarma"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Dor no local da aplicação",
+          "Diarreia",
+          "Náuseas",
+          "Rash cutâneo"
+        ],
+        "dangerousAdverseEffects": [
+          "Anafilaxia",
+          "Colite por Clostridioides difficile",
+          "Neutropenia em uso prolongado",
+          "Convulsões em insuficiência renal sem ajuste"
+        ],
+        "dilution": "Diluir em SF 0,9% ou SG5% conforme protocolo institucional.",
+        "dose": {
+          "adulto": "1–2 g EV 8/8h",
+          "pediatrica": "2000 mg EV 8/8h",
+          "profilaxiaCirurgica": "2 g EV 30–60 min antes da incisão; 3 g se peso ≥120 kg"
+        },
+        "doseKg": {
+          "maxDose": "6 g/dia; até 12 g/dia em infecções graves selecionadas",
+          "profilaxiaPediatrica": "30 mg/kg dose única antes da incisão",
+          "standard": "25–33 mg/kg por dose 8/8h"
+        },
+        "name": "Cefazolina",
+        "presentation": [
+          "Frasco-ampola 500 mg",
+          "Frasco-ampola 1 g"
+        ],
+        "ref": "Goodman & Gilman / Sanford Guide / ASHP Surgical Prophylaxis Guidelines",
+        "renalDose": {
+          "fg10a30": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "2 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "g"
+            },
+            "obs": "Ajuste obrigatório para evitar acúmulo.",
+            "pediatrica": {
+              "dose": "15–25 mg/kg",
+              "doseMaxima": "50 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fg30a50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "6 g/dia",
+              "intervalo": "12/12h",
+              "unidade": "g"
+            },
+            "obs": "Reduzir frequência de administração.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "75 mg/kg/dia",
+              "intervalo": "12/12h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMaior50": {
+            "ev": {
+              "dose": "1–2 g",
+              "doseMaxima": "12 g/dia",
+              "intervalo": "8/8h",
+              "unidade": "g"
+            },
+            "obs": "Dose habitual para infecções por MSSA e profilaxia cirúrgica.",
+            "pediatrica": {
+              "dose": "25–50 mg/kg",
+              "doseMaxima": "100 mg/kg/dia",
+              "intervalo": "8/8h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "fgMenor10": {
+            "ev": {
+              "dose": "500 mg",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg"
+            },
+            "obs": "Monitorar neurotoxicidade em insuficiência renal avançada.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "25 mg/kg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "hemodialise": {
+            "ev": {
+              "dose": "500 mg–1 g",
+              "doseMaxima": "1 g/dia",
+              "intervalo": "24/24h",
+              "unidade": "g"
+            },
+            "obs": "Administrar após hemodiálise.",
+            "pediatrica": {
+              "dose": "10–15 mg/kg",
+              "doseMaxima": "25 mg/kg/dia",
+              "intervalo": "24/24h",
+              "unidade": "mg/kg"
+            },
+            "vo": null
+          },
+          "requiresAdjustment": true,
+          "version": 2
+        },
+        "risksByPatient": [],
+        "speed": "Infundir em 30 minutos; na profilaxia cirúrgica pode ser administrada lentamente conforme protocolo.",
+        "therapeuticRange": "Beta-lactâmico dependente do tempo acima da MIC."
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "antimicrobianos.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "1–2 g EV cada 8h",
+            "pediatrica": "2000 mg EV cada 8h",
+            "profilaxiaCirurgica": "2 g EV 30–60 min antes de la incisión; 3 g si peso ≥120 kg"
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "1–2 g EV 8/8h",
+            "pediatrica": "2000 mg EV 8/8h",
+            "profilaxiaCirurgica": "2 g EV 30–60 min antes da incisão; 3 g se peso ≥120 kg"
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

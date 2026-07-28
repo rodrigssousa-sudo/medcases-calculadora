@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "e6fc32ab2a41093fa37b4e0d9fcd5106efd11aae9e38d7f058b824a1de3d1ba3",
+    "sourceModule": "pneumologia_otorrino.js"
+  },
+  "drugId": "oximetazolina",
+  "identity": {
+    "canonicalOwner": "pneumologia_otorrino.js",
+    "category": "otorrino",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "oximetazolina"
+    ],
+    "name": {
+      "es": "Oximetazolina",
+      "pt": "Oximetazolina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "otorrino",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Oximetazolina"
+      },
+      "icon": "💊",
+      "id": "oximetazolina",
+      "keywords": [
+        "oximetazolina"
+      ],
+      "name": {
+        "es": "Oximetazolina",
+        "pt": "Oximetazolina"
+      },
+      "pt": {
+        "name": "Oximetazolina"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "pneumologia_otorrino.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,250 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "2484e48f449a3db25f28dd5ae2e168fe6d220beca685dc0c37cd5f4a4baf4a23",
+    "sourceModule": "psiquiatria.js"
+  },
+  "drugId": "oxazepam",
+  "identity": {
+    "canonicalOwner": "psiquiatria.js",
+    "category": "ansiolitico",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "oxazepam",
+      "serax",
+      "benzodiazepinico de acao intermediaria"
+    ],
+    "name": {
+      "es": "Oxazepam",
+      "pt": "Oxazepam"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "ansiolitico",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Usar durante el menor tiempo posible.",
+          "No suspender abruptamente tras uso prolongado.",
+          "Menor dependencia de metabolismo hepático oxidativo.",
+          "Evitar asociación con alcohol y opioides."
+        ],
+        "category": "ansiolitico",
+        "class": "Benzodiacepina de acción intermedia",
+        "commercialNames": {
+          "ar": [
+            "Oxazepam",
+            "Serax"
+          ],
+          "br": [
+            "Oxazepam",
+            "Serax"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia",
+          "Mareos",
+          "Fatiga",
+          "Ataxia",
+          "Enlentecimiento psicomotor",
+          "Déficit de memoria"
+        ],
+        "contraindications": [
+          "Hipersensibilidad a benzodiacepinas",
+          "Miastenia gravis",
+          "Insuficiencia respiratoria grave",
+          "Apnea del sueño grave",
+          "Intoxicación aguda por alcohol o depresores del SNC"
+        ],
+        "dangerousAdverseEffects": [
+          "Dependencia física",
+          "Síndrome de abstinencia",
+          "Depresión respiratoria",
+          "Caídas y fracturas en adultos mayores",
+          "Reacción paradójica con agitación"
+        ],
+        "dose": {
+          "abstinencia": "Abstinencia alcohólica: 15–30 mg VO 3–4 veces/día, según protocolo.",
+          "adulto": "Ansiedad: 10–30 mg VO 3–4 veces/día.",
+          "maxDose": "Dosis máxima habitual: 120 mg/día."
+        },
+        "doseKg": {
+          "maxDose": "120 mg/día",
+          "pediatric": "Uso pediátrico no rutinario.",
+          "standard": "No se utiliza cálculo rutinario por kg."
+        },
+        "halfLife": "Vida media aproximada: 5–15 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Trastorno de ansiedad generalizada",
+          "Crisis de ansiedad aguda",
+          "Insomnio asociado a ansiedad",
+          "Abstinencia alcohólica",
+          "Agitación leve a moderada",
+          "Ansiedad en adultos mayores cuando benzodiacepina es inevitable",
+          "Ansiedad en hepatopatía cuando benzodiacepina es necesaria"
+        ],
+        "interactions": [
+          "Alcohol",
+          "Opioides",
+          "Barbitúricos",
+          "Antipsicóticos sedativos",
+          "Antihistamínicos sedantes"
+        ],
+        "mechanism": "Potencia la acción del GABA en el receptor GABA-A, promoviendo ansiólisis, sedación y relajación muscular.",
+        "name": "Oxazepam",
+        "onset": "Inicio de acción generalmente en 1–2 horas.",
+        "presentation": [
+          "Comprimido 10 mg",
+          "Comprimido 15 mg",
+          "Comprimido 30 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "oxazepam",
+      "keywords": [
+        "oxazepam",
+        "serax",
+        "benzodiazepinico de acao intermediaria"
+      ],
+      "name": {
+        "es": "Oxazepam",
+        "pt": "Oxazepam"
+      },
+      "pt": {
+        "alerts": [
+          "Usar pelo menor tempo possível.",
+          "Não suspender abruptamente após uso prolongado.",
+          "Menor dependência de metabolismo hepático oxidativo.",
+          "Evitar associação com álcool e opioides."
+        ],
+        "category": "ansiolitico",
+        "class": "Benzodiazepínico de ação intermediária",
+        "commercialNames": {
+          "ar": [
+            "Oxazepam",
+            "Serax"
+          ],
+          "br": [
+            "Oxazepam",
+            "Serax"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência",
+          "Tontura",
+          "Fadiga",
+          "Ataxia",
+          "Lentificação psicomotora",
+          "Déficit de memória"
+        ],
+        "contraindications": [
+          "Hipersensibilidade a benzodiazepínicos",
+          "Miastenia gravis",
+          "Insuficiência respiratória grave",
+          "Apneia do sono grave",
+          "Intoxicação aguda por álcool ou depressores do SNC"
+        ],
+        "dangerousAdverseEffects": [
+          "Dependência física",
+          "Síndrome de abstinência",
+          "Depressão respiratória",
+          "Quedas e fraturas em idosos",
+          "Reação paradoxal com agitação"
+        ],
+        "dose": {
+          "abstinencia": "Abstinência alcoólica: 15–30 mg VO 3–4x/dia, conforme protocolo.",
+          "adulto": "Ansiedade: 10–30 mg VO 3–4x/dia.",
+          "maxDose": "Dose máxima usual: 120 mg/dia."
+        },
+        "doseKg": {
+          "maxDose": "120 mg/dia",
+          "pediatric": "Uso pediátrico não rotineiro.",
+          "standard": "Não se utiliza cálculo rotineiro por kg."
+        },
+        "halfLife": "Vida média aproximada: 5–15 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Transtorno de ansiedade generalizada",
+          "Crises de ansiedade aguda",
+          "Insônia associada à ansiedade",
+          "Abstinência alcoólica",
+          "Agitação leve a moderada",
+          "Ansiedade em idosos quando benzodiazepínico é inevitável",
+          "Ansiedade em hepatopatia quando benzodiazepínico é necessário"
+        ],
+        "interactions": [
+          "Álcool",
+          "Opioides",
+          "Barbitúricos",
+          "Antipsicóticos sedativos",
+          "Anti-histamínicos sedativos"
+        ],
+        "mechanism": "Potencializa a ação do GABA no receptor GABA-A, promovendo ansiólise, sedação e relaxamento muscular.",
+        "name": "Oxazepam",
+        "onset": "Início de ação geralmente em 1–2 horas.",
+        "presentation": [
+          "Comprimido 10 mg",
+          "Comprimido 15 mg",
+          "Comprimido 30 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psiquiatria.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "abstinencia": "Abstinencia alcohólica: 15–30 mg VO 3–4 veces/día, según protocolo.",
+            "adulto": "Ansiedad: 10–30 mg VO 3–4 veces/día.",
+            "maxDose": "Dosis máxima habitual: 120 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "abstinencia": "Abstinência alcoólica: 15–30 mg VO 3–4x/dia, conforme protocolo.",
+            "adulto": "Ansiedade: 10–30 mg VO 3–4x/dia.",
+            "maxDose": "Dose máxima usual: 120 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "26cf2b5f0b48383fb411287dfff7ebd57b8eff0b9e9992285082c2915fec72ac",
+    "sourceModule": "nefro.js"
+  },
+  "drugId": "gluconato_ferrico",
+  "identity": {
+    "canonicalOwner": "nefro.js",
+    "category": "nefrologia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "gluconato_ferrico",
+      "gluconato férrico sódico"
+    ],
+    "name": {
+      "es": "Gluconato Férrico de Sodio",
+      "pt": "Gluconato Férrico Sódico"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "nefrologia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": "#0369A1",
+      "colorTxt": "#ffffff",
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Gluconato Férrico de Sodio"
+      },
+      "icon": "🫘",
+      "id": "gluconato_ferrico",
+      "keywords": [
+        "gluconato_ferrico",
+        "gluconato férrico sódico"
+      ],
+      "name": {
+        "es": "Gluconato Férrico de Sodio",
+        "pt": "Gluconato Férrico Sódico"
+      },
+      "pt": {
+        "name": "Gluconato Férrico Sódico"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "nefro.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

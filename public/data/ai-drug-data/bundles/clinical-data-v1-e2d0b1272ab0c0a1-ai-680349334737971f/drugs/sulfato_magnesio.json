@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "28f7f730117689d72c987cddfaa18a89dd538e8c742ba14f8e091b46deea0add",
+    "sourceModule": "emergencia.js"
+  },
+  "drugId": "sulfato_magnesio",
+  "identity": {
+    "canonicalOwner": "emergencia.js",
+    "category": "emergencia",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "sulfato_magnesio",
+      "sulfato de magnésio"
+    ],
+    "name": {
+      "es": "Sulfato de Magnesio",
+      "pt": "Sulfato de Magnésio"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "emergencia",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Sulfato de Magnesio"
+      },
+      "icon": "💊",
+      "id": "sulfato_magnesio",
+      "keywords": [
+        "sulfato_magnesio",
+        "sulfato de magnésio"
+      ],
+      "name": {
+        "es": "Sulfato de Magnesio",
+        "pt": "Sulfato de Magnésio"
+      },
+      "pt": {
+        "name": "Sulfato de Magnésio"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "emergencia.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

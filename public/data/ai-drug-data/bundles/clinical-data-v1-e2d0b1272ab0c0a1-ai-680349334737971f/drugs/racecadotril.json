@@ -1,0 +1,60 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "d59d0cb31e0d8efba61b6de03f0015bff56b85d16644140a5c69f50b076d2cb8",
+    "sourceModule": "gastro.js"
+  },
+  "drugId": "racecadotril",
+  "identity": {
+    "canonicalOwner": "gastro.js",
+    "category": "gastro",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "racecadotril"
+    ],
+    "name": {
+      "es": "Racecadotrilo",
+      "pt": "Racecadotril"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "gastro",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Racecadotrilo"
+      },
+      "icon": "💊",
+      "id": "racecadotril",
+      "keywords": [
+        "racecadotril"
+      ],
+      "name": {
+        "es": "Racecadotrilo",
+        "pt": "Racecadotril"
+      },
+      "pt": {
+        "name": "Racecadotril"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "gastro.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

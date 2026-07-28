@@ -1,0 +1,256 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "premium-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "054942521241f1ecd308982d52bdd4b1d187fe07da9ede987af063ccd77a81df",
+    "sourceModule": "psiquiatria.js"
+  },
+  "drugId": "mirtazapina",
+  "identity": {
+    "canonicalOwner": "psiquiatria.js",
+    "category": "antidepressivo",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "mirtazapina",
+      "remeron",
+      "menelat",
+      "mirtazapina ems",
+      "mirtazapina bago",
+      "mirtazapina gador",
+      "antidepressivo nassa"
+    ],
+    "name": {
+      "es": "Mirtazapina",
+      "pt": "Mirtazapina"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "antidepressivo",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "alerts": [
+          "Excelente opción para depresión con insomnio y pérdida de peso.",
+          "Puede causar aumento ponderal importante.",
+          "Monitorizar hemograma si se sospecha neutropenia."
+        ],
+        "category": "antidepressivo",
+        "class": "Antidepresivo NaSSA",
+        "commercialNames": {
+          "ar": [
+            "Remeron",
+            "Mirtazapina Bagó",
+            "Mirtazapina Gador"
+          ],
+          "br": [
+            "Remeron",
+            "Menelat",
+            "Mirtazapina EMS"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Somnolencia",
+          "Aumento de peso",
+          "Aumento del apetito",
+          "Boca seca",
+          "Estreñimiento",
+          "Mareos"
+        ],
+        "contraindications": [
+          "Uso concomitante con IMAO",
+          "Hipersensibilidad al fármaco"
+        ],
+        "dangerousAdverseEffects": [
+          "Neutropenia/agranulocitosis rara",
+          "Síndrome serotoninérgico",
+          "Viraje maníaco",
+          "Ideación suicida"
+        ],
+        "dose": {
+          "adulto": "Iniciar 15 mg VO por la noche; dosis habitual 15–45 mg/día.",
+          "insonia": "Insomnio asociado a depresión: generalmente 15 mg por la noche.",
+          "maxDose": "Dosis máxima habitual: 45 mg/día."
+        },
+        "doseKg": {
+          "maxDose": "45 mg/día",
+          "pediatric": "Uso pediátrico especializado.",
+          "standard": "No se utiliza cálculo por kg en adultos."
+        },
+        "halfLife": "Vida media aproximada: 20–40 horas.",
+        "hepaticAdjustment": "Sin ajuste hepático habitual.",
+        "indications": [
+          "Trastorno depresivo mayor",
+          "Depresión con insomnio",
+          "Depresión con pérdida de apetito",
+          "Depresión con pérdida de peso",
+          "Trastorno de ansiedad generalizada",
+          "Trastorno de pánico",
+          "Insomnio crónico (off-label)",
+          "Cuidados paliativos con anorexia"
+        ],
+        "interactions": [
+          "IMAO",
+          "Alcohol",
+          "Benzodiazepinas",
+          "Opioides"
+        ],
+        "mechanism": "Antagonista α2 presináptico y antagonista 5HT2/5HT3, aumentando liberación de serotonina y noradrenalina.",
+        "name": "Mirtazapina",
+        "onset": "Mejoría del sueño y apetito en pocos días; efecto antidepresivo en 2–4 semanas.",
+        "presentation": [
+          "Comprimido 15 mg",
+          "Comprimido 30 mg",
+          "Comprimido 45 mg",
+          "Comprimido bucodispersable 15 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Mirtazapine Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sin ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "icon": "💊",
+      "id": "mirtazapina",
+      "keywords": [
+        "mirtazapina",
+        "remeron",
+        "menelat",
+        "mirtazapina ems",
+        "mirtazapina bago",
+        "mirtazapina gador",
+        "antidepressivo nassa"
+      ],
+      "name": {
+        "es": "Mirtazapina",
+        "pt": "Mirtazapina"
+      },
+      "pt": {
+        "alerts": [
+          "Excelente opção para depressão com insônia e perda de peso.",
+          "Pode causar ganho ponderal importante.",
+          "Monitorar hemograma se suspeita de neutropenia."
+        ],
+        "category": "antidepressivo",
+        "class": "Antidepressivo NaSSA",
+        "commercialNames": {
+          "ar": [
+            "Remeron",
+            "Mirtazapina Bagó",
+            "Mirtazapina Gador"
+          ],
+          "br": [
+            "Remeron",
+            "Menelat",
+            "Mirtazapina EMS"
+          ]
+        },
+        "commonAdverseEffects": [
+          "Sonolência",
+          "Ganho de peso",
+          "Aumento do apetite",
+          "Boca seca",
+          "Constipação",
+          "Tontura"
+        ],
+        "contraindications": [
+          "Uso concomitante com IMAO",
+          "Hipersensibilidade ao fármaco"
+        ],
+        "dangerousAdverseEffects": [
+          "Neutropenia/agranulocitose rara",
+          "Síndrome serotoninérgica",
+          "Virada maníaca",
+          "Ideação suicida"
+        ],
+        "dose": {
+          "adulto": "Iniciar 15 mg VO à noite; dose usual 15–45 mg/dia.",
+          "insonia": "Insônia associada à depressão: geralmente 15 mg à noite.",
+          "maxDose": "Dose máxima usual: 45 mg/dia."
+        },
+        "doseKg": {
+          "maxDose": "45 mg/dia",
+          "pediatric": "Uso pediátrico especializado.",
+          "standard": "Não se utiliza cálculo por kg em adultos."
+        },
+        "halfLife": "Vida média aproximada: 20–40 horas.",
+        "hepaticAdjustment": "Sem ajuste hepático habitual.",
+        "indications": [
+          "Transtorno depressivo maior",
+          "Depressão com insônia",
+          "Depressão com perda de apetite",
+          "Depressão com perda de peso",
+          "Transtorno de ansiedade generalizada",
+          "Transtorno do pânico",
+          "Insônia crônica (off-label)",
+          "Cuidados paliativos com anorexia"
+        ],
+        "interactions": [
+          "IMAO",
+          "Álcool",
+          "Benzodiazepínicos",
+          "Opioides"
+        ],
+        "mechanism": "Antagonista α2 pré-sináptico e antagonista 5HT2/5HT3, aumentando liberação de serotonina e noradrenalina.",
+        "name": "Mirtazapina",
+        "onset": "Melhora do sono e apetite em poucos dias; efeito antidepressivo em 2–4 semanas.",
+        "presentation": [
+          "Comprimido 15 mg",
+          "Comprimido 30 mg",
+          "Comprimido 45 mg",
+          "Comprimido orodispersível 15 mg"
+        ],
+        "ref": [
+          "Goodman & Gilman 14ª Ed.",
+          "Stahl's Essential Psychopharmacology",
+          "FDA/DailyMed Mirtazapine Prescribing Information",
+          "Lexicomp",
+          "Micromedex",
+          "UpToDate"
+        ],
+        "renalAdjustment": "Sem ajuste renal habitual.",
+        "risksByPatient": []
+      },
+      "schema": "premium-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "psiquiatria.js"
+    },
+    "doseText": {
+      "es": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Iniciar 15 mg VO por la noche; dosis habitual 15–45 mg/día.",
+            "insonia": "Insomnio asociado a depresión: generalmente 15 mg por la noche.",
+            "maxDose": "Dosis máxima habitual: 45 mg/día."
+          }
+        }
+      ],
+      "pt": [
+        {
+          "field": "dose",
+          "text": {
+            "adulto": "Iniciar 15 mg VO à noite; dose usual 15–45 mg/dia.",
+            "insonia": "Insônia associada à depressão: geralmente 15 mg à noite.",
+            "maxDose": "Dose máxima usual: 45 mg/dia."
+          }
+        }
+      ]
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}

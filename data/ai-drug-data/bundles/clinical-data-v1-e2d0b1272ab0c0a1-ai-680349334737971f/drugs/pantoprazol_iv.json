@@ -1,0 +1,62 @@
+{
+  "calculatorBinding": {
+    "bundleSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "bundleVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorSchema": "legacy-v1",
+    "identitySchema": "clinical-source-content-v1",
+    "sourceDocumentSha256": "ff11b53e4a8246d81ee2306e5eb4e06302475f27faa217c867d3c40860cc33b2",
+    "sourceModule": "gastro.js"
+  },
+  "drugId": "pantoprazol_iv",
+  "identity": {
+    "canonicalOwner": "gastro.js",
+    "category": "gastro",
+    "contextVariantCount": 0,
+    "hasContextVariants": false,
+    "keywords": [
+      "pantoprazol_iv",
+      "pantoprazol iv"
+    ],
+    "name": {
+      "es": "Pantoprazol IV",
+      "pt": "Pantoprazol IV"
+    }
+  },
+  "publishableForDeterministicDosing": false,
+  "schemaVersion": "medcases-ai-drug-data-v1",
+  "sourceEvidence": {
+    "calculatorDocument": {
+      "category": "gastro",
+      "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+      "color": null,
+      "colorTxt": null,
+      "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+      "es": {
+        "name": "Pantoprazol IV"
+      },
+      "icon": "💊",
+      "id": "pantoprazol_iv",
+      "keywords": [
+        "pantoprazol_iv",
+        "pantoprazol iv"
+      ],
+      "name": {
+        "es": "Pantoprazol IV",
+        "pt": "Pantoprazol IV"
+      },
+      "pt": {
+        "name": "Pantoprazol IV"
+      },
+      "schema": "legacy-v1",
+      "source": "medcases-calculadora",
+      "sourceModule": "gastro.js"
+    },
+    "doseText": {
+      "es": null,
+      "pt": null
+    }
+  },
+  "typedRegimenInferenceUsed": false,
+  "typedRegimenStatus": "not_available",
+  "typedRegimens": []
+}
