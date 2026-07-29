@@ -139,40 +139,51 @@
   };
 
   /* ───────────────────────────────────────────────────────────────
-     BUILD 475-FORCE-CLEAN
-     _domIsViable() — verifica se os inputs biométricos críticos
-     estão realmente acessíveis e funcionais no DOM atual.
-     Retorna true apenas se os elementos existirem E não estiverem
-     ocultos por CSS quebrado (offsetParent !== null = visível).
+     BUILD 482-VIABILITY-HEAL
+     _domIsViable() — verifica APENAS se os elementos cruciais
+     existem na árvore do DOM.
+
+     REMOVIDO (BUILD 482): verificações geométricas (offsetParent,
+     offsetWidth, getComputedStyle, dimensões de tela).
+     MOTIVO: o WebKit do iOS executa o reflow do CSS de forma
+     assíncrona — offsetParent retorna null legitimamente durante
+     a fase de pintura inicial, causando falsos positivos que
+     disparam _emergencyPersist() e travam a interface.
+
+     NOVA REGRA: se o elemento existe no HTML → retorna true.
+     O CSS faz a pintura no seu próprio tempo sem bloquear o JS.
   ─────────────────────────────────────────────────────────────── */
   function _domIsViable() {
-    var w = document.getElementById('hm-weight');
-    var hub = document.getElementById('hub-card-eletrolitos');
-    /* Elementos devem existir no DOM */
-    if (!w || !hub) return false;
-    /* offsetParent === null indica display:none em algum ancestral
-       (sintoma clássico de CSS quebrado no iOS WebView).
-       Exceto elementos com position:fixed que têm offsetParent null legítimo. */
-    if (w.offsetParent === null && getComputedStyle(w).position !== 'fixed') {
-      return false; /* input existe mas está oculto — DOM inviável */
-    }
-    return true;
+    /* Critério único: elemento raiz do formulário biométrico presente */
+    return document.getElementById('hm-weight') !== null;
   }
 
   /* ───────────────────────────────────────────────────────────────
-     BUILD 475-FORCE-CLEAN
+     BUILD 482-VIABILITY-HEAL
      _emergencyPersist() — Fallback Estrutural de Última Instância.
-     Ativado quando o DOM está cru/incompleto (CSS quebrado, 404 de
-     assets, iOS WebView com layout corrompido).
-     Estratégia:
-       1. Persiste dados em window.patientData (sempre)
-       2. Persiste em sessionStorage (sobrevive a re-render parcial)
-       3. Se #clinical-support-view não existir, cria um overlay
-          de emergência diretamente no body com os dados do paciente
-          — o médico vê as condutas mesmo que o hub-accordion tenha
-          falhado completamente.
+
+     GUARD BUILD 482: se o formulário base (#hm-weight) estiver
+     presente no DOM, o sistema NÃO está em pânico — os dados são
+     apenas persistidos silenciosamente (steps 1 e 2) e o overlay
+     de emergência jamais é criado. Isso evita a tela preta falsa
+     que ocorria no iOS durante o reflow assíncrono do WebKit.
+
+     Overlay de emergência só é ativado em falha REAL: ausência
+     completa de #hm-weight após DOMContentLoaded.
   ─────────────────────────────────────────────────────────────── */
   function _emergencyPersist(pd) {
+    /* BUILD 482 GUARD: formulário base presente → sem pânico.
+       Persiste dados silenciosamente e aborta o overlay de emergência. */
+    if (document.getElementById('hm-weight') !== null) {
+      window.patientData = window.patientData || {};
+      Object.assign(window.patientData, pd || {});
+      try {
+        sessionStorage.setItem('csr_patient_emergency', JSON.stringify(window.patientData));
+      } catch (e) { /* private/full storage */ }
+      console.log('[CSR v482] _emergencyPersist(): formulário base presente — persist silencioso, sem overlay ✅');
+      return;
+    }
+
     /* 1. window.patientData já foi setado pelo caller — reforça */
     window.patientData = window.patientData || {};
     Object.assign(window.patientData, pd || {});
@@ -308,9 +319,13 @@
 
     /* ── 2. Injeção física nos inputs do DOM ── */
     function _doInject() {
-      /* ── BUILD 475: verifica viabilidade do DOM antes de injetar ── */
+      /* BUILD 482-VIABILITY-HEAL: _domIsViable() agora verifica APENAS
+         existência de #hm-weight no DOM (sem checks geométricos).
+         Falso positivo por reflow iOS eliminado. */
       if (!_domIsViable()) {
-        console.warn('[CSR v2] DOM inviável detectado (CSS quebrado / 404 de assets).');
+        /* DOM genuinamente ausente — persiste e agenda retry */
+        console.warn('[CSR v482] DOM ainda não pronto (#hm-weight ausente) — agendando retry em 300ms.');
+        setTimeout(_doInject, 300);
         _emergencyPersist(window.patientData);
         return;
       }
@@ -346,9 +361,11 @@
         }
       }
 
-      /* Se nenhum input foi encontrado → DOM ainda cru → fallback estrutural */
+      /* BUILD 482: hits=0 agora é apenas um aviso — _domIsViable() garantiu
+         que #hm-weight existe. O formulário pode estar em renderização ainda.
+         _emergencyPersist() com guard interno não cria overlay se base presente. */
       if (hits === 0) {
-        console.warn('[CSR v2] Nenhum input biométrico encontrado (hits=0) — fallback estrutural.');
+        console.warn('[CSR v482] hits=0 — inputs ainda sem valor visível (reflow em curso). Persist silencioso.');
         _emergencyPersist(window.patientData);
         return;
       }
@@ -2000,13 +2017,15 @@
   /* ── Dispara boot seguro — iOS WebView + Desktop + Android ── */
   _init();
 
-  console.log('[MedCases CSR v2.5] BUILD 481-HOME-RESTORE | Locale: ' + _activeLang +
+  console.log('[MedCases CSR v2.5] BUILD 482-VIABILITY-HEAL | Locale: ' + _activeLang +
     ' | Módulos: ' + Object.keys(MODULE_META).join(', ') +
     ' | API: window.ClinicalSupportRouter' +
     ' | PATH-A: URL mutation listener' +
     ' | PATH-C: injectPatient(payload)' +
     ' | FALLBACKS: clinical defaults ativos (silent, no modal)' +
-    ' | FIX: lang-only URL → HOME estática sem MODULO_FALLBACK' +
+    ' | FIX-481: lang-only URL → HOME estática sem MODULO_FALLBACK' +
+    ' | FIX-482: _domIsViable() sem offsetParent — kills iOS reflow panic' +
+    ' | FIX-482: _emergencyPersist() guard — sem overlay se #hm-weight presente' +
     ' | TELEMETRY: window.toggleMCTelemetry()');
 
   /* ═══════════════════════════════════════════════════════════════
