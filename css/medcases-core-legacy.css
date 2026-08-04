@@ -257,14 +257,13 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 input[type="number"] { -moz-appearance: textfield; }
 
-/* BUILD 487-PASSO2: Inputs base — fundo oficial, altura 54px, radius 18px.
-   Seletores scoped ao hub accordion e módulos de cálculo para não quebrar
-   selects, checkboxes, radio ou inputs de contextos externos. */
+/* BUILD 487-PASSO2 (refined in 3.1): Inputs base — fundo oficial, altura 54px, radius 18px.
+   Seletores scoped ao hub accordion e módulos de cálculo. NÃO usa seletor genérico
+   input[type] dentro de .hub-accordion para evitar quebrar o grid interno do card paciente
+   via min-width. Cada classe nominal é listada explicitamente. */
 .hm-field-input, .elec2-field-input, input[type="text"].elec2-field-input,
 .hm-input, .hm-search,
 .meds-search, #hm-drug-search, #input-busca-interacao,
-.hub-accordion input[type="number"], .hub-accordion input[type="text"],
-.calc-overlay input[type="number"], .calc-overlay input[type="text"],
 .univ-input-group input[type="number"], .univ-input-group input[type="text"] {
   -webkit-appearance: none;
   appearance: none;
@@ -272,12 +271,18 @@ input[type="number"] { -moz-appearance: textfield; }
   padding: 0 var(--mc-input-pad-h, 16px) !important;
   border-radius: var(--mc-input-radius, 18px) !important;
   width: 100% !important;
+  min-width: 0 !important;           /* FIX 3.1: evita overflow do item de grid */
   box-sizing: border-box !important;
   background: var(--mc-bg-input, #171B22) !important;
   border: var(--mc-border-width, 0.8px) solid var(--mc-border, #374151) !important;
   color: var(--mc-text-primary, #FFFFFF) !important;
   font-size: var(--mc-input-font, 15px) !important;
   transition: border-color 0.18s ease !important;
+}
+/* FIX 3.1: item de grid precisa de min-width:0 para não vazar a coluna */
+.hm-input-wrap, .hub-l2-grid > *, .hub-l3-row > *,
+.univ-input-group, .elec2-fields-grid > * {
+  min-width: 0;
 }
 
 /* Focus premium: borda verde discreta, sem glow, sem outline azul do browser */
@@ -1289,6 +1294,33 @@ body.light-mode .univ-result-conduct {
 /* Eletrólitos: borda lateral violeta */
 #hub-card-eletrolitos { border-left-width: 2px !important; border-left-color: rgba(129,140,248,0.35) !important; }
 
+/* ── HOTFIX 3.1: Grid interno do card Dados do Paciente ──────── */
+/* .hm-input-grid é o container dos 4 campos (Peso/Idade/Altura/Creat).
+   Definição base: 2 colunas mobile → 4 colunas tablet/desktop.
+   min-width:0 nos itens impede que o min-width intrínseco do <input>
+   vaze a coluna do grid (bug de 90% de largura no Peso). */
+.hm-input-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;     /* mobile: 2 colunas */
+  gap: 10px !important;
+  margin-bottom: 12px !important;
+}
+.hm-input-grid > * {
+  min-width: 0 !important;                        /* FIX: impede overflow do item de grid */
+}
+@media (min-width: 768px) {
+  .hm-input-grid {
+    grid-template-columns: repeat(4, 1fr) !important;  /* desktop: 4 campos numa linha */
+    gap: 12px !important;
+  }
+  .hm-sex-wrap { grid-column: 1 / -1 !important; }     /* sexo ocupa linha inteira */
+}
+/* Botão Calcular ClCr ocupa linha inteira no grid do paciente */
+#hub-card-patient .hm-btn--primary,
+#hub-card-clcr   .hm-btn--primary {
+  grid-column: 1 / -1 !important;
+}
+
 /* Módulo fármacos inline no modal fd */
 body.light-mode #hm-patient-card .hm-card-title { color: #0F172A !important; }
 body.light-mode #hm-patient-card .hm-label      { color: #475569 !important; }
@@ -1419,6 +1451,11 @@ body.light-mode .elec2-state-btn.active {
   font-weight: 700 !important;
   height: 52px !important;
   padding: 0 20px !important;
+  display: flex !important;          /* FIX 3.1: texto visível com height fixo */
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
   transition: border-color 0.18s ease, background 0.18s ease !important;
 }
 .ix-verify-btn:not(:disabled):hover,
@@ -1447,31 +1484,42 @@ body.light-mode .intx-verify-btn {
 }
 
 /* ── 2) Sex Toggle — Verde como outline premium, não bloco maciço ── */
-/* Inativo: igual ao BUILD 486 (surface2 + border sutil) */
-/* Ativo Masculino: borda verde + fundo levemente tintado, sem preencher tudo */
+/* FIX 3.1: display:flex garante texto centralizado e visível */
+/* Ativo Masculino: tint verde + borda + texto verde legível */
 .hm-sex-btn--active:not(.hm-sex-btn--fem) {
-  background: rgba(16, 185, 129, 0.15) !important; /* tint verde suave */
-  color: var(--mc-accent, #10B981) !important;
+  background: rgba(16, 185, 129, 0.18) !important;
+  color: #34D399 !important;                       /* verde claro legível sobre fundo escuro */
   border: 1.5px solid var(--mc-accent, #10B981) !important;
   box-shadow: none !important;
   font-weight: 800 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
-/* Feminino ativo: rosa identitário como outline */
+/* Feminino ativo: tint rosa + texto rosa legível */
 .hm-sex-btn--fem.hm-sex-btn--active {
-  background: rgba(244, 63, 94, 0.15) !important; /* tint rosa suave */
-  color: #F43F5E !important;
+  background: rgba(244, 63, 94, 0.18) !important;
+  color: #FB7185 !important;                       /* rosa claro legível sobre fundo escuro */
   border: 1.5px solid #F43F5E !important;
   box-shadow: none !important;
   font-weight: 800 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 body.light-mode .hm-sex-btn--active:not(.hm-sex-btn--fem) {
-  background: rgba(16, 185, 129, 0.12) !important;
+  background: rgba(16, 185, 129, 0.14) !important;
   color: #059669 !important;
   border-color: #059669 !important;
 }
+body.light-mode .hm-sex-btn--fem.hm-sex-btn--active {
+  background: rgba(244, 63, 94, 0.14) !important;
+  color: #E11D48 !important;
+  border-color: #E11D48 !important;
+}
 
 /* ── 3) Botões de Ação Principal — Calcular / Limpar ─────────── */
-/* height 52px, radius 16px, sem bordas grossas */
+/* FIX 3.1: display:flex + align-items:center garantem texto visível com height fixo */
 .hm-btn--primary, button.hm-btn--primary {
   height: var(--mc-btn-height, 52px) !important;
   padding: 0 var(--mc-btn-pad-h, 20px) !important;
@@ -1483,6 +1531,11 @@ body.light-mode .hm-sex-btn--active:not(.hm-sex-btn--fem) {
   font-weight: var(--mc-btn-weight, 700) !important;
   box-shadow: none !important;
   letter-spacing: -0.1px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
   transition: opacity 0.15s ease, transform 0.12s ease !important;
 }
 .hm-btn--secondary, button.hm-btn--secondary {
@@ -1495,6 +1548,11 @@ body.light-mode .hm-sex-btn--active:not(.hm-sex-btn--fem) {
   font-size: var(--mc-btn-font, 14px) !important;
   font-weight: 600 !important;
   box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
   transition: opacity 0.15s ease, transform 0.12s ease !important;
 }
 /* Calcular / Limpar genéricos nos cards de cálculo */
@@ -1510,6 +1568,9 @@ body.light-mode .hm-sex-btn--active:not(.hm-sex-btn--fem) {
   font-weight: 700 !important;
   box-shadow: none !important;
   border-width: var(--mc-border-width, 0.8px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 /* Snap-exact e botões de seleção de dose — radius menor para contexto de lista */
 .snap-exact, .dose-snap-btn {
