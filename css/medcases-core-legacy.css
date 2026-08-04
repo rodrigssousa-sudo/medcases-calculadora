@@ -301,12 +301,13 @@ button:active { transform: scale(0.97) !important; opacity: 0.88 !important; }
    §2 — HUB ACCORDION — LAYOUT & GRID
 ================================================================ */
 
-/* Container principal */
+/* BUILD 486-GRID-RESTORE: Container principal — grid mobile-first (flex colapsava masonry) */
 .hub-accordion {
-  display: flex;
-  flex-direction: column;
-  gap: var(--mc-card-gap) !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: var(--mc-card-gap, 16px) !important;
   width: 100%;
+  align-items: start;
 }
 
 /* Grid 2 colunas obrigatório (build254 — anti-colapso iOS) */
@@ -340,24 +341,25 @@ button:active { transform: scale(0.97) !important; opacity: 0.88 !important; }
 
 @media (max-width: 359px) { .hub-row { grid-template-columns: 1fr; } }
 
+/* BUILD 486-GRID-RESTORE: ≥768px — masonry 2 colunas (tablets e web) */
 @media (min-width: 768px) {
-  .hub-l1-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--mc-card-gap); align-items: start; }
-  .hub-l2-grid  { display: grid; grid-template-columns: 1fr 1fr; gap: var(--mc-card-gap); align-items: start; }
-  .hub-accordion { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: start; }
-  #hub-card-patient, #hub-card-interacoes { grid-column: span 2; }
+  .hub-l1-pair { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: var(--mc-card-gap) !important; align-items: start; }
+  .hub-l2-grid  { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: var(--mc-card-gap) !important; align-items: start; }
+  .hub-accordion { grid-template-columns: repeat(2, 1fr) !important; gap: var(--mc-card-gap, 16px) !important; }
+  #hub-card-patient, #hub-card-interacoes { grid-column: span 2 !important; }
 }
 @media (min-width: 900px) {
   .elec2-fields-grid { grid-template-columns: repeat(3, 1fr) !important; }
 }
 @media (min-width: 1024px) {
-  .hub-l2-grid { grid-template-columns: 1fr 1fr; gap: var(--mc-card-gap); }
+  .hub-l2-grid { grid-template-columns: 1fr 1fr !important; gap: var(--mc-card-gap) !important; }
   .hub-card[data-level="1"] .hub-card-inner { padding: 22px 24px !important; }
   .hub-card[data-level="2"] .hub-card-inner { padding: 18px 20px !important; }
   .hub-card[data-level="3"] .hub-card-inner { padding: 16px 18px !important; }
 }
 @media (min-width: 1200px) {
-  .hub-accordion { grid-template-columns: repeat(3, 1fr); }
-  #hub-card-patient, #hub-card-interacoes { grid-column: span 3; }
+  .hub-accordion { grid-template-columns: repeat(3, 1fr) !important; }
+  #hub-card-patient, #hub-card-interacoes { grid-column: span 3 !important; }
 }
 @media (min-width: 600px) {
   .hub-card-inner { padding: 14px 18px 16px !important; }
@@ -1276,4 +1278,102 @@ body.light-mode #hm-patient-card .hm-label-unit { color: #94A3B8 !important; }
 .toast-notification, #toast-message { transition: opacity 0.2s ease, transform 0.2s ease !important; }
 
 /* Acessibilidade: foco visível */
-:focus-visible { outline: 2px solid var(--theme-accent, #38BDF8); outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--mc-accent, #10B981); outline-offset: 2px; }
+
+/* ================================================================
+   §13 — BUILD 486 — COLOR PURGE: Sex Toggle + Interações
+   Eliminação dos últimos resíduos de azul/ciano herdados de
+   inline <style> blocks do index.html. As regras externas com
+   !important sobrepõem as inline sem !important.
+================================================================ */
+
+/* ── HM Sex Toggle (card Dados do Paciente na Home) ──────────── */
+/* Inativo — superfície plana do contrato visual */
+.hm-sex-btn {
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  border: var(--mc-border-width, 0.8px) solid var(--mc-border, #374151) !important;
+  box-shadow: none !important;
+}
+/* Ativo Masculino — verde MedCases (sem gradiente azul/ciano) */
+.hm-sex-btn--active {
+  background: var(--mc-accent, #10B981) !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+/* Ativo Feminino — rosa identitário mantido (não é azul/ciano) */
+.hm-sex-btn--fem.hm-sex-btn--active {
+  background: linear-gradient(135deg, #9D174D, #F43F5E) !important;
+  color: #FFFFFF !important;
+  box-shadow: none !important;
+}
+/* Light mode overrides */
+body.light-mode .hm-sex-btn {
+  background: var(--mc-bg-surface2, #E5E7EB) !important;
+  color: var(--mc-text-secondary, #4B5563) !important;
+  border: var(--mc-border-width, 0.8px) solid var(--mc-border, #D1D5DB) !important;
+}
+body.light-mode .hm-sex-btn--active {
+  background: var(--mc-accent, #10B981) !important;
+  color: #FFFFFF !important;
+}
+
+/* ── ClCr Inline sex-btn (#btn-male / #btn-female) ───────────── */
+/* Masculino ativo — elimina gradiente ciano legacy */
+#btn-male.active {
+  background: var(--mc-accent, #10B981) !important;
+  color: #FFFFFF !important;
+  box-shadow: none !important;
+}
+/* Feminino ativo — rosa identitário mantido */
+#btn-female.active {
+  background: linear-gradient(135deg, #9D174D, #F43F5E) !important;
+  color: #FFFFFF !important;
+  box-shadow: none !important;
+}
+
+/* ── Interações — ícone e acento mantidos em ciano identitário,
+   mas botões de estado internos usam --mc-accent (verde) ─────── */
+/* Botões de estado elétrico (elec2-state-btn) — dark mode */
+.elec2-state-btn {
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  border: var(--mc-border-width, 0.8px) solid var(--mc-border, #374151) !important;
+  box-shadow: none !important;
+}
+.elec2-state-btn.active {
+  background: var(--mc-accent, #10B981) !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+}
+/* Light mode já existia em §5 (linhas 742-743), reforçamos aqui */
+body.light-mode .elec2-state-btn {
+  background: var(--mc-bg-surface2, #E5E7EB) !important;
+  color: var(--mc-text-secondary, #4B5563) !important;
+  border: var(--mc-border-width, 0.8px) solid var(--mc-border, #D1D5DB) !important;
+}
+body.light-mode .elec2-state-btn.active {
+  background: var(--mc-accent, #10B981) !important;
+  color: #FFFFFF !important;
+}
+
+/* ── qe-sex-btn (Quick Entry / inline calculators) ───────────── */
+.qe-sex-btn {
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  border: var(--mc-border-width, 0.8px) solid var(--mc-border, #374151) !important;
+  box-shadow: none !important;
+}
+.qe-sex-btn.active-m {
+  background: var(--mc-accent, #10B981) !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+/* active-f mantém rosa identitário */
+.qe-sex-btn.active-f {
+  background: linear-gradient(135deg, #9D174D, #F43F5E) !important;
+  color: #FFFFFF !important;
+  box-shadow: none !important;
+}

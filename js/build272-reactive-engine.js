@@ -199,7 +199,22 @@
     return (isNaN(v) || v <= 0) ? null : v;
   }
 
+  /* BUILD 486-LOOP-KILL: re-entrance guard.
+     hmCalcCockcroft() dispatches 'input' on #hm-clcr which is in PATIENT_FIELDS.
+     Without this lock the call chain is infinite:
+       _reactivePatientTick → hmCalcCockcroft → input@hm-clcr → _reactivePatientTick ...
+     The debounce(280ms) wrapping the 'input' listener does NOT protect against
+     synchronous recursion — it only coalesces burst keystrokes. The lock must live
+     here, at the synchronous entry point, to catch both the 'input' (debounced) and
+     'change' (direct) listeners wired to #hm-clcr in PATIENT_FIELDS. */
+  var _clcrReactiveLock = false;
+
   function _reactivePatientTick() {
+    /* BUILD 486-LOOP-KILL: break infinite re-entrance before anything else */
+    if (_clcrReactiveLock) return;
+    _clcrReactiveLock = true;
+    try {
+
     /* 1) Recalcula ClCr (Cockcroft-Gault / Ur24h) se o motor estiver pronto */
     if (typeof window.hmCalcCockcroft === 'function') {
       window.hmCalcCockcroft();
@@ -242,6 +257,10 @@
 
     /* 4) Live Dashboard da Home — Pilar 3 */
     syncClcrLiveDashboard();
+
+    } finally {
+      _clcrReactiveLock = false; /* BUILD 486-LOOP-KILL: always release lock */
+    }
   }
 
   /* BUILD 274: versão debounced do tick — usada nos listeners de 'input' */
