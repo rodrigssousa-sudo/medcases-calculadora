@@ -102,11 +102,11 @@
   --mc-ico-font-l1: 18px;  --mc-ico-font-l2: 15px;  --mc-ico-font-l3: 13px;
   --mc-ico-radius-l1: 13px; --mc-ico-radius-l2: 10px; --mc-ico-radius-l3: 9px;
 
-  /* ── Button & Input ── */
-  --mc-btn-height: 40px; --mc-btn-pad-h: 16px; --mc-btn-radius: 10px;
-  --mc-btn-font: 13.5px; --mc-btn-weight: 600;
-  --mc-input-height: 42px; --mc-input-pad-v: 10px; --mc-input-pad-h: 12px;
-  --mc-input-radius: 9px; --mc-input-font: 15px;
+  /* ── Button & Input — BUILD 487 tokens ── */
+  --mc-btn-height: 52px; --mc-btn-pad-h: 20px; --mc-btn-radius: 16px;
+  --mc-btn-font: 14px; --mc-btn-weight: 700;
+  --mc-input-height: 54px; --mc-input-pad-v: 0px; --mc-input-pad-h: 16px;
+  --mc-input-radius: 18px; --mc-input-font: 15px;
 
   /* ── Shadows: REMOVIDOS por contrato flat — apenas borda 0.8px ── */
   /* box-shadow eliminado em §2. Variáveis mantidas vazias para legacy. */
@@ -257,22 +257,40 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 input[type="number"] { -moz-appearance: textfield; }
 
-/* Inputs base — fundo oficial */
-.hm-field-input, .elec2-field-input, input[type="text"].elec2-field-input {
+/* BUILD 487-PASSO2: Inputs base — fundo oficial, altura 54px, radius 18px.
+   Seletores scoped ao hub accordion e módulos de cálculo para não quebrar
+   selects, checkboxes, radio ou inputs de contextos externos. */
+.hm-field-input, .elec2-field-input, input[type="text"].elec2-field-input,
+.hm-input, .hm-search,
+.meds-search, #hm-drug-search, #input-busca-interacao,
+.hub-accordion input[type="number"], .hub-accordion input[type="text"],
+.calc-overlay input[type="number"], .calc-overlay input[type="text"],
+.univ-input-group input[type="number"], .univ-input-group input[type="text"] {
   -webkit-appearance: none;
   appearance: none;
-  padding: 10px 12px !important;
-  border-radius: var(--mc-radius-sm, 8px) !important;
+  height: var(--mc-input-height, 54px) !important;
+  padding: 0 var(--mc-input-pad-h, 16px) !important;
+  border-radius: var(--mc-input-radius, 18px) !important;
   width: 100% !important;
   box-sizing: border-box !important;
   background: var(--mc-bg-input, #171B22) !important;
   border: var(--mc-border-width, 0.8px) solid var(--mc-border, #374151) !important;
   color: var(--mc-text-primary, #FFFFFF) !important;
+  font-size: var(--mc-input-font, 15px) !important;
+  transition: border-color 0.18s ease !important;
 }
 
-/* Focus premium: borda verde, sem box-shadow de glow */
+/* Focus premium: borda verde discreta, sem glow, sem outline azul do browser */
 input:focus, select:focus, textarea:focus {
-  transition: border-color 0.18s ease !important;
+  outline: none !important;
+  border-color: var(--mc-accent, #10B981) !important;
+  box-shadow: none !important;
+}
+/* Reforço para os seletores expandidos no BUILD 487 */
+.hm-field-input:focus, .elec2-field-input:focus,
+.hm-input:focus, .hm-search:focus,
+.meds-search:focus, #hm-drug-search:focus, #input-busca-interacao:focus,
+.hub-accordion input:focus, .calc-overlay input:focus {
   outline: none !important;
   border-color: var(--mc-accent, #10B981) !important;
   box-shadow: none !important;
@@ -424,11 +442,18 @@ body.calc-overlay-open #scroll-content { overflow: hidden !important; touch-acti
   border: var(--mc-border-width, 0.8px) solid var(--mc-border, #374151) !important;
   border-radius: var(--mc-radius-lg, 16px) !important;
   box-shadow: none !important;
+  overflow: hidden; /* garante que trigger herda o border-radius do card pai */
 }
+/* BUILD 487-PASSO1: trigger transparente — peça única com o card, sem "adesivo preto".
+   O fundo é herdado do .hub-card pai (#252930). overflow:hidden no .hub-card garante
+   que o trigger fique contido dentro do border-radius do card sem criar um recorte visível.
+   border-bottom cromáticos por módulo (ex: #hub-card-patient .hub-card-trigger) continuam
+   funcionando pois já têm !important e specificidade maior. */
 .hub-card-trigger {
-  background: var(--mc-bg-surface, #252930) !important;
+  background: transparent !important;
   box-shadow: none !important;
 }
+/* Trigger aberto: sinaliza estado com surface2 sem criar contraste agressivo */
 .hub-card.is-open .hub-card-trigger {
   background: var(--mc-bg-surface2, #2D3340) !important;
 }
@@ -1376,4 +1401,118 @@ body.light-mode .elec2-state-btn.active {
   background: linear-gradient(135deg, #9D174D, #F43F5E) !important;
   color: #FFFFFF !important;
   box-shadow: none !important;
+}
+
+/* ================================================================
+   §14 — BUILD 487 — POLIMENTO FASE 3: Botões + Superfícies
+================================================================ */
+
+/* ── 1) Botões "Verificar Interações" — ROXO → Ação Secundária ── */
+/* .ix-verify-btn (card ClCr inline) e .intx-verify-btn (módulo Interações) */
+.ix-verify-btn,
+.intx-verify-btn {
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  color: var(--mc-text-primary, #FFFFFF) !important;
+  border: var(--mc-border-width, 0.8px) solid var(--mc-border, #374151) !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+  font-weight: 700 !important;
+  height: 52px !important;
+  padding: 0 20px !important;
+  transition: border-color 0.18s ease, background 0.18s ease !important;
+}
+.ix-verify-btn:not(:disabled):hover,
+.intx-verify-btn:not(:disabled):hover {
+  border-color: var(--mc-accent, #10B981) !important;
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  box-shadow: none !important;
+}
+.ix-verify-btn:not(:disabled):active,
+.intx-verify-btn:not(:disabled):active {
+  transform: scale(0.97) !important;
+  box-shadow: none !important;
+}
+.ix-verify-btn:disabled,
+.intx-verify-btn:disabled {
+  opacity: 0.35 !important;
+  cursor: not-allowed !important;
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  box-shadow: none !important;
+}
+body.light-mode .ix-verify-btn,
+body.light-mode .intx-verify-btn {
+  background: var(--mc-bg-surface2, #E5E7EB) !important;
+  color: var(--mc-text-primary, #111827) !important;
+  border-color: var(--mc-border, #D1D5DB) !important;
+}
+
+/* ── 2) Sex Toggle — Verde como outline premium, não bloco maciço ── */
+/* Inativo: igual ao BUILD 486 (surface2 + border sutil) */
+/* Ativo Masculino: borda verde + fundo levemente tintado, sem preencher tudo */
+.hm-sex-btn--active:not(.hm-sex-btn--fem) {
+  background: rgba(16, 185, 129, 0.15) !important; /* tint verde suave */
+  color: var(--mc-accent, #10B981) !important;
+  border: 1.5px solid var(--mc-accent, #10B981) !important;
+  box-shadow: none !important;
+  font-weight: 800 !important;
+}
+/* Feminino ativo: rosa identitário como outline */
+.hm-sex-btn--fem.hm-sex-btn--active {
+  background: rgba(244, 63, 94, 0.15) !important; /* tint rosa suave */
+  color: #F43F5E !important;
+  border: 1.5px solid #F43F5E !important;
+  box-shadow: none !important;
+  font-weight: 800 !important;
+}
+body.light-mode .hm-sex-btn--active:not(.hm-sex-btn--fem) {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #059669 !important;
+  border-color: #059669 !important;
+}
+
+/* ── 3) Botões de Ação Principal — Calcular / Limpar ─────────── */
+/* height 52px, radius 16px, sem bordas grossas */
+.hm-btn--primary, button.hm-btn--primary {
+  height: var(--mc-btn-height, 52px) !important;
+  padding: 0 var(--mc-btn-pad-h, 20px) !important;
+  border-radius: var(--mc-btn-radius, 16px) !important;
+  border: none !important;
+  background: var(--mc-accent, #10B981) !important;
+  color: #FFFFFF !important;
+  font-size: var(--mc-btn-font, 14px) !important;
+  font-weight: var(--mc-btn-weight, 700) !important;
+  box-shadow: none !important;
+  letter-spacing: -0.1px !important;
+  transition: opacity 0.15s ease, transform 0.12s ease !important;
+}
+.hm-btn--secondary, button.hm-btn--secondary {
+  height: var(--mc-btn-height, 52px) !important;
+  padding: 0 var(--mc-btn-pad-h, 20px) !important;
+  border-radius: var(--mc-btn-radius, 16px) !important;
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  border: var(--mc-border-width, 0.8px) solid var(--mc-border, #374151) !important;
+  font-size: var(--mc-btn-font, 14px) !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  transition: opacity 0.15s ease, transform 0.12s ease !important;
+}
+/* Calcular / Limpar genéricos nos cards de cálculo */
+.hub-accordion button[type="submit"],
+.hub-accordion button.calc-btn,
+.hub-accordion button.btn-calcular,
+.hub-accordion button.btn-limpar,
+.calc-overlay button[type="submit"],
+.calc-overlay button.calc-btn {
+  height: 52px !important;
+  border-radius: 16px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+  border-width: var(--mc-border-width, 0.8px) !important;
+}
+/* Snap-exact e botões de seleção de dose — radius menor para contexto de lista */
+.snap-exact, .dose-snap-btn {
+  border-radius: 10px !important;
+  height: auto !important;
 }
