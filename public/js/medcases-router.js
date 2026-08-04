@@ -2017,7 +2017,7 @@
   /* ── Dispara boot seguro — iOS WebView + Desktop + Android ── */
   _init();
 
-  console.log('[MedCases CSR v2.5] BUILD 484-CSS-CONSOLIDATION | Locale: ' + _activeLang +
+  console.log('[MedCases CSR v2.5] BUILD 485-PREMIUM-TOKENS | Locale: ' + _activeLang +
     ' | Módulos: ' + Object.keys(MODULE_META).join(', ') +
     ' | API: window.ClinicalSupportRouter' +
     ' | PATH-A: URL mutation listener' +
