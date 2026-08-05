@@ -26,7 +26,7 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v499-home-r5c-r6';
+const CACHE_VERSION   = 'medcases-v500-patient-v1b-r1';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
 /* ── Lista canônica de assets pré-cacheados no install ──────
@@ -44,7 +44,7 @@ const ASSETS_TO_CACHE = [
   /* ── CSS (BUILD 484-CSS-CONSOLIDATION: 14 arquivos → 1 fonte unificada) ── */
   './css/medcases-core-legacy.css?v=484',
 
-  './css/medcases-webview-home-v1.css?v=499-home-r5c-r6',
+  './css/medcases-webview-home-v1.css?v=500-patient-v1b-r1',
   /* ── JS (10 arquivos — stack completa BUILD 477) ── */
   './js/medcases-ux-v2.js?v=484',
   './js/hub-accordion.js?v=484',
