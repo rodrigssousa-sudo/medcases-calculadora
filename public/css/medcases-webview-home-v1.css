@@ -2976,3 +2976,260 @@ p.hm-urine-note {
 }
 
 /* MEDCASES PATIENT V1-B-R5 END */
+
+/* MEDCASES PATIENT V1-B-R6 START */
+
+/* --------------------------------------------------------------------------
+   Sexo: estados ativos sólidos e consistentes.
+   Gestante: dois retângulos independentes, sem cápsula externa e sem
+   divisores horizontais atravessando o bloco.
+   -------------------------------------------------------------------------- */
+
+/* Masculino / Feminino */
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+.hm-sex-toggle {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 7px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+button.hm-sex-btn {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  max-height: 36px !important;
+  padding: 0 10px !important;
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  -webkit-text-fill-color: var(--mc-text-secondary, #D1D5DB) !important;
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  background-image: none !important;
+  border: 1px solid var(--mc-border, #374151) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 650 !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+button.hm-sex-btn::before,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+button.hm-sex-btn::after {
+  content: none !important;
+  display: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-btn-male.hm-sex-btn--active {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: #4C8FD8 !important;
+  background-color: #4C8FD8 !important;
+  background-image: none !important;
+  border-color: #4C8FD8 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-btn-female.hm-sex-btn--active {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: #D94D7A !important;
+  background-color: #D94D7A !important;
+  background-image: none !important;
+  border-color: #D94D7A !important;
+  box-shadow: none !important;
+}
+
+/* Gestante: remove as linhas completas do bloco. */
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-toggle-wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  width: 100% !important;
+  margin: 2px 0 0 !important;
+  padding: 7px 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-switch {
+  display: grid !important;
+  grid-template-columns: repeat(2, 48px) !important;
+  gap: 5px !important;
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  overflow: visible !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-switch::before,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-switch::after {
+  content: none !important;
+  display: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button.preg-opt {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  box-sizing: border-box !important;
+  width: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  -webkit-text-fill-color: var(--mc-text-secondary, #D1D5DB) !important;
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  background-color: var(--mc-bg-surface2, #2D3340) !important;
+  background-image: none !important;
+  border: 1px solid var(--mc-border, #374151) !important;
+  border-radius: 7px !important;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+  font-family: inherit !important;
+  font-size: 10.5px !important;
+  font-weight: 650 !important;
+  line-height: 30px !important;
+  text-align: center !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button.preg-opt::before,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button.preg-opt::after {
+  content: none !important;
+  display: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-no.active-no,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-no.active {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: #4B5563 !important;
+  background-color: #4B5563 !important;
+  background-image: none !important;
+  border-color: #4B5563 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-yes.active-yes,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-yes.active {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: #D94D7A !important;
+  background-color: #D94D7A !important;
+  background-image: none !important;
+  border-color: #D94D7A !important;
+  box-shadow: none !important;
+}
+
+/* Neutraliza qualquer raio lateral herdado de segmented controls antigos. */
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-no,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-yes {
+  border-radius: 7px !important;
+}
+
+/* Light mode */
+body.light-mode
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+button.hm-sex-btn {
+  color: var(--mc-text-secondary, #374151) !important;
+  -webkit-text-fill-color: var(--mc-text-secondary, #374151) !important;
+  background: var(--mc-bg-surface2, #F3F4F6) !important;
+  border-color: var(--mc-border, #D1D5DB) !important;
+}
+
+body.light-mode
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-btn-male.hm-sex-btn--active,
+body.light-mode
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-btn-female.hm-sex-btn--active,
+body.light-mode
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-no.active-no,
+body.light-mode
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-no.active,
+body.light-mode
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-yes.active-yes,
+body.light-mode
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-yes.active {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* MEDCASES PATIENT V1-B-R6 END */
