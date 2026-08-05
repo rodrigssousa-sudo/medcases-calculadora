@@ -3795,3 +3795,98 @@ html.hm-user-results-ready
 }
 
 /* MEDCASES V513 HOME LINE PRESS END */
+
+/* MEDCASES V514 HOME SEMANTIC LINE NO FILL START */
+
+/*
+ * Estado definitivo da Home:
+ * hover, toque, foco e card aberto nunca preenchem a superfície.
+ * O único feedback permitido é a linha semântica inferior.
+ */
+#page-home .hub-card-trigger:hover,
+#page-home .hub-card-trigger:active,
+#page-home .hub-card-trigger:focus,
+#page-home .hub-card-trigger:focus-visible,
+#page-home .hub-card.is-open .hub-card-trigger,
+#page-home .hub-card.mc-semantic-press .hub-card-trigger {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  outline: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+/*
+ * Desativa o pseudo-elemento transitório da V513.
+ * O owner correto da linha passa a ser o próprio artigo .hub-card.
+ */
+#page-home .hub-card .hub-card-trigger::after,
+#page-home .hub-card:not(.is-open) .hub-card-trigger::after,
+#page-home .hub-card:not(.is-open) .hub-card-trigger:active::after,
+#page-home .hub-card:not(.is-open) .hub-card-trigger:focus-visible::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/*
+ * A linha fica sobre a borda inferior existente, sem criar card,
+ * sombra, faixa ou superfície adicional.
+ */
+#page-home .hub-card::after,
+#page-home article.hub-card::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 4 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 2px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: none !important;
+  transition: opacity 0.08s ease !important;
+}
+
+#page-home .hub-card.mc-semantic-press::after,
+#page-home article.hub-card.mc-semantic-press::after {
+  background: var(--mcw-accent) !important;
+  background-color: var(--mcw-accent) !important;
+  opacity: 1 !important;
+}
+
+/*
+ * Defesa específica para telas touch/coarse, onde :hover pode
+ * permanecer após o toque.
+ */
+@media (hover: none), (pointer: coarse) {
+  #page-home .hub-card-trigger:hover,
+  #page-home .hub-card-trigger:active,
+  #page-home .hub-card-trigger:focus,
+  #page-home .hub-card-trigger:focus-visible,
+  #page-home .hub-card.is-open .hub-card-trigger {
+    background: transparent !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* MEDCASES V514 HOME SEMANTIC LINE NO FILL END */

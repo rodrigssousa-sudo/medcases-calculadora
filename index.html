@@ -24808,7 +24808,7 @@ window.MedCasesBridge = {
 (() => {
   'use strict';
 
-  const EXPECTED_VERSION = 'medcases-v513-home-line-press-smart-keyboard';
+  const EXPECTED_VERSION = 'medcases-v514-home-semantic-line-no-fill';
   const CACHE_PREFIX = 'medcases-calc-';
   const LAST_VERSION_KEY = 'medcases-cache-version';
   let updateInFlight = null;
@@ -25522,7 +25522,7 @@ window.MedCasesBridge = {
 
 
   <!-- MEDCASES WEBVIEW HOME V1: somente #page-home; não altera topbar Flutter -->
-  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=513-home-line-press-smart-keyboard">
+  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=514-home-semantic-line-no-fill">
 
 <!-- MEDCASES PATIENT HOME V1-C-R1 START -->
 <script id="medcases-patient-explicit-results-gate-v1">
@@ -25907,6 +25907,116 @@ window.MedCasesBridge = {
 })();
 </script>
 <!-- MEDCASES V513 SMART KEYBOARD END -->
+
+
+<!-- MEDCASES V514 HOME PRESS STATE START -->
+<script id="medcases-home-semantic-press-v514">
+(() => {
+  'use strict';
+
+  if (window.__mcHomeSemanticPressV514) return;
+  window.__mcHomeSemanticPressV514 = true;
+
+  const ACTIVE_CLASS = 'mc-semantic-press';
+  const MIN_VISIBLE_MS = 220;
+
+  let activeCard = null;
+  let clearTimer = 0;
+  let lastActivationAt = 0;
+
+  const clearActiveCard = () => {
+    if (clearTimer) {
+      window.clearTimeout(clearTimer);
+      clearTimer = 0;
+    }
+
+    if (activeCard) {
+      activeCard.classList.remove(ACTIVE_CLASS);
+      activeCard = null;
+    }
+  };
+
+  const activateFromEvent = event => {
+    if (!event.isTrusted) return;
+
+    const target = event.target;
+    const trigger = target && target.closest
+      ? target.closest('#page-home .hub-card-trigger')
+      : null;
+
+    if (!trigger) return;
+
+    const card = trigger.closest('.hub-card');
+    if (!card) return;
+
+    const now = Date.now();
+
+    if (
+      card === activeCard &&
+      now - lastActivationAt < 80
+    ) {
+      return;
+    }
+
+    clearActiveCard();
+
+    activeCard = card;
+    lastActivationAt = now;
+    activeCard.classList.add(ACTIVE_CLASS);
+
+    clearTimer = window.setTimeout(
+      clearActiveCard,
+      MIN_VISIBLE_MS
+    );
+  };
+
+  const preventSelectionOnHomeTrigger = event => {
+    const target = event.target;
+    const trigger = target && target.closest
+      ? target.closest('#page-home .hub-card-trigger')
+      : null;
+
+    if (!trigger) return;
+    event.preventDefault();
+  };
+
+  if ('PointerEvent' in window) {
+    document.addEventListener(
+      'pointerdown',
+      activateFromEvent,
+      true
+    );
+  } else {
+    document.addEventListener(
+      'touchstart',
+      activateFromEvent,
+      {
+        capture: true,
+        passive: true
+      }
+    );
+  }
+
+  document.addEventListener(
+    'selectstart',
+    preventSelectionOnHomeTrigger,
+    true
+  );
+
+  document.addEventListener(
+    'contextmenu',
+    preventSelectionOnHomeTrigger,
+    true
+  );
+
+  window.addEventListener(
+    'pagehide',
+    clearActiveCard,
+    { passive: true }
+  );
+})();
+</script>
+<!-- MEDCASES V514 HOME PRESS STATE END -->
 
 </body>
 </html>
