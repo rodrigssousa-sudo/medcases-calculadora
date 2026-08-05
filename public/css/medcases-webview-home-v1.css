@@ -853,14 +853,6 @@ body.light-mode #page-home .hub-card-body .category-chip {
   line-height: 1.18 !important;
 }
 
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger .hub-card-name *,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger .hub-card-name *,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger .hub-card-name * {
-  display: inline !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  color: inherit !important;
-}
 
 /* Somente o subtítulo real permanece oculto. */
 #page-home #hub-card-farmacos:not(.is-open) .hub-card-desc,
@@ -1178,3 +1170,65 @@ body[data-lang^="pt-"] #page-home .lang-hub-pt {
 }
 
 /* MEDCASES MICROBUILD R5-C-R4-R2 END */
+
+/* MEDCASES MICROBUILD R5-C-R5 START */
+
+/*
+ * Regra final e específica para os títulos dos cards fechados.
+ * Nenhum seletor descendente genérico pode voltar a exibir os dois idiomas.
+ */
+
+/* Português canônico. */
+body[data-lang="pt"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-pt,
+body[data-lang="lang-pt"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-pt,
+body[data-lang^="pt-"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-pt,
+body.lang-pt #page-home .hub-card-trigger .hub-card-name > .lang-hub-pt {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body[data-lang="pt"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-es,
+body[data-lang="lang-pt"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-es,
+body[data-lang^="pt-"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-es,
+body.lang-pt #page-home .hub-card-trigger .hub-card-name > .lang-hub-es {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Espanhol canônico. */
+body[data-lang="es"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-es,
+body[data-lang="lang-es"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-es,
+body[data-lang^="es-"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-es,
+body.lang-es #page-home .hub-card-trigger .hub-card-name > .lang-hub-es {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body[data-lang="es"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-pt,
+body[data-lang="lang-es"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-pt,
+body[data-lang^="es-"] #page-home .hub-card-trigger .hub-card-name > .lang-hub-pt,
+body.lang-es #page-home .hub-card-trigger .hub-card-name > .lang-hub-pt {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Fallback sem sinal resolvido. */
+body:not([data-lang]):not(.lang-es) #page-home
+.hub-card-trigger .hub-card-name > .lang-hub-pt {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body:not([data-lang]):not(.lang-es) #page-home
+.hub-card-trigger .hub-card-name > .lang-hub-es {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* MEDCASES MICROBUILD R5-C-R5 END */
