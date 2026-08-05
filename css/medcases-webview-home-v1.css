@@ -758,3 +758,150 @@ body.light-mode #page-home .hub-card-body .category-chip {
 }
 
 /* MEDCASES MICROBUILD R5-B-R4 END */
+
+/* MEDCASES MICROBUILD R5-B-R5 START */
+
+/* Esconde subtítulos e textos auxiliares dos cards fechados da Home. */
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-header p,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-head p,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary p,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger p,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-header small,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-head small,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary small,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger small,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-header [class*="subtitle"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-head [class*="subtitle"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary [class*="subtitle"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger [class*="subtitle"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-header [class*="subTitle"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-head [class*="subTitle"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary [class*="subTitle"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger [class*="subTitle"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-header [class*="meta"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-head [class*="meta"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary [class*="meta"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger [class*="meta"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-header [class*="desc"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-head [class*="desc"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary [class*="desc"],
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger [class*="desc"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header p,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head p,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary p,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger p,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header small,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head small,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary small,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger small,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header [class*="subtitle"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head [class*="subtitle"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary [class*="subtitle"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger [class*="subtitle"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header [class*="subTitle"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head [class*="subTitle"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary [class*="subTitle"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger [class*="subTitle"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header [class*="meta"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head [class*="meta"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary [class*="meta"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger [class*="meta"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header [class*="desc"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head [class*="desc"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary [class*="desc"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger [class*="desc"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header p,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head p,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary p,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger p,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header small,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head small,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary small,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger small,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header [class*="subtitle"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head [class*="subtitle"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary [class*="subtitle"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger [class*="subtitle"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header [class*="subTitle"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head [class*="subTitle"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary [class*="subTitle"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger [class*="subTitle"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header [class*="meta"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head [class*="meta"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary [class*="meta"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger [class*="meta"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header [class*="desc"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head [class*="desc"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary [class*="desc"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger [class*="desc"] {
+  display: none !important;
+}
+
+/* Recompacta os cabeçalhos após remover os subtítulos. */
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-header,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-head,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+}
+
+#page-home #hub-card-farmacos:not(.is-open) h2,
+#page-home #hub-card-farmacos:not(.is-open) h3,
+#page-home #hub-card-farmacos:not(.is-open) h4,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) h2,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) h3,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) h4,
+#page-home .hub-l3-row > .hub-card:not(.is-open) h2,
+#page-home .hub-l3-row > .hub-card:not(.is-open) h3,
+#page-home .hub-l3-row > .hub-card:not(.is-open) h4 {
+  margin-bottom: 0 !important;
+}
+
+/* Remove a linha inferior extra da última linha do grid clínico. */
+#page-home #hub-l2-grid > .hub-card:nth-last-child(-n+2):not(.is-open) {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+/* As linhas verticais ficam delicadas e soltas, sem tocar nas horizontais. */
+#page-home #hub-l2-grid > .hub-card:nth-child(2n):not(.is-open),
+#page-home .hub-l3-row > .hub-card:nth-child(2n):not(.is-open) {
+  border-left: 0 !important;
+  padding-left: 10px !important;
+  position: relative !important;
+}
+
+#page-home #hub-l2-grid > .hub-card:nth-child(2n):not(.is-open)::before,
+#page-home .hub-l3-row > .hub-card:nth-child(2n):not(.is-open)::before {
+  content: "" !important;
+  position: absolute !important;
+  left: -5px !important;
+  top: 18px !important;
+  bottom: 18px !important;
+  width: 1px !important;
+  background: rgba(89, 99, 122, 0.22) !important;
+  pointer-events: none !important;
+}
+
+#page-home #hub-l2-grid > .hub-card:nth-child(2n-1):not(.is-open),
+#page-home .hub-l3-row > .hub-card:nth-child(2n-1):not(.is-open) {
+  padding-right: 10px !important;
+}
+
+/* Estados abertos e última linha não carregam divisor vertical. */
+#page-home #hub-l2-grid > .hub-card.is-open::before,
+#page-home .hub-l3-row > .hub-card.is-open::before,
+#page-home #hub-l2-grid > .hub-card:nth-last-child(-n+2):not(.is-open)::before {
+  content: none !important;
+}
+
+/* MEDCASES MICROBUILD R5-B-R5 END */
