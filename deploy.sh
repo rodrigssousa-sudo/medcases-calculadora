@@ -58,6 +58,20 @@ git merge "origin/$BRANCH" --allow-unrelated-histories --no-edit 2>/dev/null || 
 echo "✅ Sincronização concluída."
 
 # Stage e commit
+# MEDCASES AUTO OFFLINE MANIFEST START
+echo "🧭 Atualizando manifesto offline canônico..."
+if [ ! -f "scripts/generate-offline-manifest.js" ]; then
+  echo "❌ ERRO: gerador offline ausente."
+  exit 1
+fi
+node scripts/generate-offline-manifest.js
+cmp -s manifest-offline.json public/manifest-offline.json || {
+  echo "❌ ERRO: manifestos offline root/public divergentes."
+  exit 1
+}
+echo "✅ Manifesto offline atualizado."
+# MEDCASES AUTO OFFLINE MANIFEST END
+
 git add .
 
 if git diff --cached --quiet; then

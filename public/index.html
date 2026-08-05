@@ -24808,7 +24808,7 @@ window.MedCasesBridge = {
 (() => {
   'use strict';
 
-  const EXPECTED_VERSION = 'medcases-v515-hide-global-patient-bar-in-overlay';
+  const EXPECTED_VERSION = 'medcases-v517-gpb-focus-suppression';
   const CACHE_PREFIX = 'medcases-calc-';
   const LAST_VERSION_KEY = 'medcases-cache-version';
   let updateInFlight = null;
@@ -25522,7 +25522,7 @@ window.MedCasesBridge = {
 
 
   <!-- MEDCASES WEBVIEW HOME V1: somente #page-home; não altera topbar Flutter -->
-  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=515-hide-global-patient-bar-in-overlay">
+  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=517-gpb-focus-suppression">
 
 <!-- MEDCASES PATIENT HOME V1-C-R1 START -->
 <script id="medcases-patient-explicit-results-gate-v1">
@@ -26017,6 +26017,174 @@ window.MedCasesBridge = {
 })();
 </script>
 <!-- MEDCASES V514 HOME PRESS STATE END -->
+
+
+<!-- MEDCASES V517 GPB FOCUS RUNTIME START -->
+<script id="medcases-gpb-focus-suppression-v517">
+(() => {
+  'use strict';
+
+  if (window.__mcGpbFocusSuppressionV517) return;
+  window.__mcGpbFocusSuppressionV517 = true;
+
+  const CLASS_NAME = 'mc-gpb-input-suppressed';
+  const EDITABLE_SELECTOR = [
+    'input:not([type="hidden"]):not([disabled])',
+    'textarea:not([disabled])',
+    'select:not([disabled])',
+    '[contenteditable="true"]',
+    '[contenteditable="plaintext-only"]'
+  ].join(',');
+
+  let releaseTimer = 0;
+
+  const body = () => document.body;
+
+  const setSuppressed = value => {
+    document.documentElement.classList.toggle(CLASS_NAME, value);
+    body()?.classList.toggle(CLASS_NAME, value);
+  };
+
+  const resolveEditable = target => {
+    if (!(target instanceof Element)) return null;
+
+    const editable = target.closest(EDITABLE_SELECTOR);
+    if (!editable) return null;
+    if (editable.closest('#global-patient-bar')) return null;
+
+    return editable;
+  };
+
+  const activeExternalEditable = () => {
+    const active = document.activeElement;
+    return resolveEditable(active);
+  };
+
+  const cancelRelease = () => {
+    if (!releaseTimer) return;
+    window.clearTimeout(releaseTimer);
+    releaseTimer = 0;
+  };
+
+  const preArm = event => {
+    if (!event.isTrusted) return;
+    if (!resolveEditable(event.target)) return;
+
+    cancelRelease();
+    setSuppressed(true);
+  };
+
+  const synchronizeFromFocus = () => {
+    cancelRelease();
+    setSuppressed(Boolean(activeExternalEditable()));
+  };
+
+  const scheduleReleaseCheck = () => {
+    cancelRelease();
+
+    /*
+     * Mantém a barra oculta durante a troca Peso → Idade → Altura →
+     * Creatinina. O pequeno atraso cobre o intervalo entre focusout e
+     * focusin sem produzir flash ou salto de viewport.
+     */
+    releaseTimer = window.setTimeout(
+      synchronizeFromFocus,
+      180
+    );
+  };
+
+  if ('PointerEvent' in window) {
+    document.addEventListener(
+      'pointerdown',
+      preArm,
+      true
+    );
+  } else {
+    document.addEventListener(
+      'touchstart',
+      preArm,
+      {
+        capture: true,
+        passive: true
+      }
+    );
+  }
+
+  /*
+   * Em alguns WebViews Android antigos PointerEvent existe, mas o
+   * touchstart chega antes da ativação do input. O segundo listener é
+   * deliberadamente idempotente e garante o pré-armamento.
+   */
+  document.addEventListener(
+    'touchstart',
+    preArm,
+    {
+      capture: true,
+      passive: true
+    }
+  );
+
+  document.addEventListener(
+    'focusin',
+    event => {
+      if (!resolveEditable(event.target)) return;
+      cancelRelease();
+      setSuppressed(true);
+    },
+    true
+  );
+
+  document.addEventListener(
+    'focusout',
+    scheduleReleaseCheck,
+    true
+  );
+
+  window.visualViewport?.addEventListener(
+    'resize',
+    synchronizeFromFocus,
+    { passive: true }
+  );
+
+  window.visualViewport?.addEventListener(
+    'scroll',
+    synchronizeFromFocus,
+    { passive: true }
+  );
+
+  window.addEventListener(
+    'orientationchange',
+    () => {
+      setSuppressed(Boolean(activeExternalEditable()));
+      window.setTimeout(synchronizeFromFocus, 80);
+      window.setTimeout(synchronizeFromFocus, 320);
+    },
+    { passive: true }
+  );
+
+  window.addEventListener(
+    'pageshow',
+    synchronizeFromFocus,
+    { passive: true }
+  );
+
+  window.addEventListener(
+    'pagehide',
+    () => {
+      cancelRelease();
+      setSuppressed(false);
+    },
+    { passive: true }
+  );
+
+  document.addEventListener(
+    'DOMContentLoaded',
+    synchronizeFromFocus,
+    { once: true }
+  );
+})();
+</script>
+<!-- MEDCASES V517 GPB FOCUS RUNTIME END -->
 
 </body>
 </html>

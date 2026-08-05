@@ -3936,3 +3936,49 @@ body.calc-overlay-open #global-patient-bar .gpb-mini-save-btn {
 }
 
 /* MEDCASES V515 HIDE GLOBAL PATIENT BAR IN OVERLAY END */
+
+/* MEDCASES V517 GPB EXTERNAL INPUT FOCUS SUPPRESSION START */
+
+/*
+ * Owner definitivo:
+ * a barra global de paciente não pode coexistir com o teclado de um
+ * input externo a ela. A classe é armada antes do foco, no pointerdown
+ * ou touchstart, evitando o salto inicial em paisagem.
+ */
+html.mc-gpb-input-suppressed #global-patient-bar,
+body.mc-gpb-input-suppressed #global-patient-bar,
+html.mc-gpb-input-suppressed #global-patient-bar.gpb-web-mode,
+body.mc-gpb-input-suppressed #global-patient-bar.gpb-web-mode {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: fixed !important;
+  left: 0 !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  transform: none !important;
+  translate: none !important;
+  scale: 0 !important;
+  z-index: -2147483648 !important;
+}
+
+html.mc-gpb-input-suppressed #global-patient-bar *,
+body.mc-gpb-input-suppressed #global-patient-bar * {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* MEDCASES V517 GPB EXTERNAL INPUT FOCUS SUPPRESSION END */
