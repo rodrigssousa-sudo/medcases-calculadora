@@ -2926,3 +2926,53 @@ body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body
 }
 
 /* MEDCASES PATIENT V1-B-R4 END */
+
+/* MEDCASES PATIENT V1-B-R5 START */
+
+/*
+ * Nota clínica da Urina 24h.
+ * Redução visual aproximada de 50%, mantendo leitura e hierarquia.
+ */
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-urine-body
+p.hm-urine-note {
+  display: block !important;
+  width: 100% !important;
+  margin: 5px 0 1px !important;
+  padding: 0 !important;
+  color: var(--mc-text-muted, #6B7280) !important;
+  -webkit-text-fill-color: var(--mc-text-muted, #6B7280) !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: inherit !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+  text-align: left !important;
+  text-transform: none !important;
+  opacity: 0.82 !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-urine-body
+p.hm-urine-note br {
+  display: none !important;
+}
+
+body.light-mode
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-urine-body
+p.hm-urine-note {
+  color: var(--mc-text-muted, #6B7280) !important;
+  -webkit-text-fill-color: var(--mc-text-muted, #6B7280) !important;
+  opacity: 0.88 !important;
+}
+
+/* MEDCASES PATIENT V1-B-R5 END */
