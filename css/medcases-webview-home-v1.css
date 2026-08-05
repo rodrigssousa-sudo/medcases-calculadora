@@ -2187,3 +2187,335 @@ body.light-mode #page-home #hub-card-patient #hm-btn-female.hm-sex-btn--active {
 }
 
 /* MEDCASES PATIENT V1-B-R2 END */
+
+/* MEDCASES PATIENT V1-B-R3 START */
+
+/* --------------------------------------------------------------------------
+   V1-B-R3
+   - Inputs 42px -> 33px: redução de 21,4%.
+   - Botões mais baixos e delicados.
+   - Resultados com o contrato dos mini-cards da Home.
+   - Urina 24h sem aparência branca/nativa.
+   -------------------------------------------------------------------------- */
+
+/* Compactação vertical global do conteúdo aberto. */
+#page-home #hub-card-patient.is-open .hub-card-body {
+  padding: 0 10px 9px !important;
+}
+
+#page-home #hub-card-patient.is-open .hub-card-inner {
+  padding-top: 8px !important;
+}
+
+#page-home #hub-card-patient .hm-input-grid {
+  gap: 6px 8px !important;
+}
+
+#page-home #hub-card-patient .hm-input-wrap {
+  gap: 3px !important;
+}
+
+#page-home #hub-card-patient .hm-label {
+  font-size: 10px !important;
+  line-height: 1.1 !important;
+}
+
+#page-home #hub-card-patient .hm-label-unit {
+  font-size: 8.5px !important;
+}
+
+/* 42px na R2 -> 33px na R3 = redução efetiva de 21,4%. */
+#page-home #hub-card-patient input.hm-input {
+  height: 33px !important;
+  min-height: 33px !important;
+  max-height: 33px !important;
+  padding: 0 10px !important;
+  border-radius: 7px !important;
+  font-size: 13px !important;
+  line-height: 33px !important;
+}
+
+#page-home #hub-card-patient input.hm-input::placeholder {
+  font-size: 12px !important;
+}
+
+#page-home #hub-card-patient input.hm-input:focus {
+  outline-width: 1px !important;
+}
+
+/* Seletores de sexo menores e sem peso visual excessivo. */
+#page-home #hub-card-patient .hm-sex-wrap {
+  padding-top: 0 !important;
+}
+
+#page-home #hub-card-patient .hm-sex-toggle {
+  gap: 6px !important;
+}
+
+#page-home #hub-card-patient button.hm-sex-btn {
+  height: 34px !important;
+  min-height: 34px !important;
+  max-height: 34px !important;
+  padding: 0 9px !important;
+  border-radius: 7px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+#page-home #hub-card-patient button.hm-sex-btn i {
+  font-size: 11px !important;
+}
+
+/* Gestante mais compacta e sem card visual. */
+#page-home #hub-card-patient .preg-toggle-wrap {
+  min-height: 0 !important;
+  margin-top: 0 !important;
+  padding: 6px 0 !important;
+}
+
+#page-home #hub-card-patient .preg-toggle-title {
+  font-size: 11.5px !important;
+}
+
+#page-home #hub-card-patient .preg-toggle-sub {
+  margin-top: 1px !important;
+  font-size: 9.5px !important;
+}
+
+#page-home #hub-card-patient button.preg-opt {
+  min-width: 36px !important;
+  height: 27px !important;
+  min-height: 27px !important;
+  max-height: 27px !important;
+  padding: 0 7px !important;
+  border-radius: 6px !important;
+  font-size: 10.5px !important;
+}
+
+/* Urina de 24h: neutraliza estilos nativos e regras antigas mais específicas. */
+#page-home #hub-card-patient #hm-urine-accordion,
+body.light-mode #page-home #hub-card-patient #hm-urine-accordion {
+  margin-top: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#page-home #hub-card-patient button#hm-urine-toggle-btn,
+body.light-mode #page-home #hub-card-patient button#hm-urine-toggle-btn {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: flex !important;
+  min-height: 34px !important;
+  height: 34px !important;
+  max-height: 34px !important;
+  padding: 0 !important;
+  color: var(--mcw-text-2) !important;
+  -webkit-text-fill-color: var(--mcw-text-2) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+#page-home #hub-card-patient button#hm-urine-toggle-btn *,
+body.light-mode #page-home #hub-card-patient button#hm-urine-toggle-btn * {
+  -webkit-text-fill-color: currentColor !important;
+}
+
+#page-home #hub-card-patient #hm-urine-toggle-btn .hm-urine-header-left {
+  gap: 6px !important;
+  min-width: 0 !important;
+}
+
+#page-home #hub-card-patient #hm-urine-toggle-btn .hm-urine-icon {
+  color: var(--mcw-green) !important;
+  font-size: 10.5px !important;
+}
+
+#page-home #hub-card-patient #hm-urine-toggle-btn .hm-urine-header-title {
+  color: var(--mcw-text-2) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+
+#page-home #hub-card-patient #hm-urine-toggle-btn .hm-urine-badge {
+  color: var(--mcw-muted) !important;
+  font-size: 9px !important;
+  font-weight: 450 !important;
+  white-space: nowrap !important;
+}
+
+#page-home #hub-card-patient #hm-urine-toggle-btn .hm-urine-chevron {
+  color: var(--mcw-muted) !important;
+  font-size: 9.5px !important;
+}
+
+#page-home #hub-card-patient .hm-urine-body {
+  padding-top: 6px !important;
+}
+
+#page-home #hub-card-patient .hm-urine-fields {
+  gap: 6px 8px !important;
+}
+
+#page-home #hub-card-patient .hm-urine-note {
+  margin-top: 5px !important;
+  font-size: 9.5px !important;
+}
+
+/* Mini-cards: mesmo contrato visual da Home, em grade 2×2 no mobile. */
+#page-home #hub-card-patient #hm-result-pills.hm-result-pills {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 5px !important;
+  margin: 7px 0 0 !important;
+}
+
+#page-home #hub-card-patient #hm-result-pills .hm-pill,
+body.light-mode #page-home #hub-card-patient #hm-result-pills .hm-pill {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  min-height: 47px !important;
+  padding: 6px 4px 5px !important;
+  color: var(--mcw-text) !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  background-image: none !important;
+  border: 1px solid rgba(107, 114, 128, 0.20) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+#page-home #hub-card-patient #hm-result-pills .hm-pill::before,
+#page-home #hub-card-patient #hm-result-pills .hm-pill::after {
+  content: none !important;
+  display: none !important;
+}
+
+#page-home #hub-card-patient #hm-result-pills .hm-pill-val {
+  display: block !important;
+  margin: 0 !important;
+  color: var(--mcw-text) !important;
+  font-size: 16px !important;
+  font-weight: 750 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.25px !important;
+  text-align: center !important;
+}
+
+#page-home #hub-card-patient #hm-result-pills .hm-pill-lbl {
+  display: block !important;
+  margin: 3px 0 0 !important;
+  color: var(--mcw-muted) !important;
+  font-size: 8px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.02em !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+}
+
+#page-home #hub-card-patient #hm-result-pills #hm-pv-clcr-src {
+  margin-top: 2px !important;
+  color: var(--mcw-muted) !important;
+  font-size: 7px !important;
+  font-weight: 500 !important;
+  opacity: 0.65 !important;
+}
+
+body.light-mode #page-home #hub-card-patient #hm-result-pills .hm-pill {
+  background: rgba(17, 24, 39, 0.025) !important;
+  border-color: rgba(107, 114, 128, 0.20) !important;
+}
+
+/* Hemodiálise em linha clínica compacta. */
+#page-home #hub-card-patient .hm-hd-wrap {
+  margin-top: 7px !important;
+}
+
+#page-home #hub-card-patient label.hm-hd-toggle {
+  min-height: 34px !important;
+  height: 34px !important;
+  max-height: 34px !important;
+  gap: 7px !important;
+}
+
+#page-home #hub-card-patient .hm-hd-track {
+  width: 30px !important;
+  min-width: 30px !important;
+  height: 17px !important;
+}
+
+#page-home #hub-card-patient .hm-hd-thumb {
+  width: 11px !important;
+  height: 11px !important;
+}
+
+#page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-thumb {
+  transform: translateX(13px) !important;
+}
+
+#page-home #hub-card-patient .hm-hd-text {
+  font-size: 11.5px !important;
+}
+
+#page-home #hub-card-patient .hm-hd-text i {
+  font-size: 10px !important;
+}
+
+/* Ações menores; somente Calcular/Fixar continua preenchida. */
+#page-home #hub-card-patient .hm-card-footer {
+  gap: 6px !important;
+  margin-top: 7px !important;
+}
+
+#page-home #hub-card-patient button.hm-btn {
+  min-height: 34px !important;
+  height: 34px !important;
+  max-height: 34px !important;
+  padding: 0 11px !important;
+  border-radius: 7px !important;
+  font-size: 11.5px !important;
+  font-weight: 650 !important;
+}
+
+#page-home #hub-card-patient button.hm-btn i {
+  font-size: 10.5px !important;
+}
+
+/* Ajuste fino para telas pequenas. */
+@media (max-width: 360px) {
+  #page-home #hub-card-patient input.hm-input {
+    height: 32px !important;
+    min-height: 32px !important;
+    max-height: 32px !important;
+    line-height: 32px !important;
+    font-size: 12.5px !important;
+  }
+
+  #page-home #hub-card-patient #hm-result-pills .hm-pill {
+    min-height: 45px !important;
+  }
+}
+
+/* Em tablet, resultados podem voltar a quatro colunas. */
+@media (min-width: 768px) {
+  #page-home #hub-card-patient #hm-result-pills.hm-result-pills {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* MEDCASES PATIENT V1-B-R3 END */
