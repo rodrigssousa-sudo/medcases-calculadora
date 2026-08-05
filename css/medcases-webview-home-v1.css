@@ -3583,75 +3583,141 @@ html.hm-user-results-ready #page-home #hub-card-clcr {
 
 /* MEDCASES PATIENT HOME V1-C-R1 END */
 
-/* MEDCASES PATIENT HOME V1-C-R2-R3 SUPERBUILD START */
+/* MEDCASES HOME V512-R2 PERSISTENT PLACEHOLDER CARDS START */
 
 /*
- * Quando os resultados ainda não foram solicitados, a linha abaixo
- * ocupa a faixa do antigo mini-card e elimina o vazio entre
- * Dados do Paciente e Fármacos.
+ * Os quatro mini-cards permanecem visíveis desde a abertura.
+ * Antes de Calcular/Fixar, a área numérica mostra apenas "---".
  */
-html:not(.hm-user-results-ready)
 #page-home
 .hub-l1-row.hm-home-result-divider-row {
   display: block !important;
   box-sizing: border-box !important;
   width: 100% !important;
-  height: 1px !important;
-  min-height: 1px !important;
-  max-height: 1px !important;
-  margin: 14px 0 18px !important;
-  padding: 0 !important;
-  overflow: visible !important;
-  background: transparent !important;
-  border: 0 !important;
-  border-bottom: 1px solid var(--mcw-border, #374151) !important;
-  box-shadow: none !important;
-  pointer-events: none !important;
-}
-
-html:not(.hm-user-results-ready)
-#page-home
-.hub-l1-row.hm-home-result-divider-row
-#hub-card-clcr {
-  display: none !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
-  min-height: 0 !important;
-  max-height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  border: 0 !important;
-  pointer-events: none !important;
-}
-
-/*
- * Quando Calcular/Fixar libera os resultados, a faixa volta
- * integralmente ao layout original e o divisor desaparece.
- */
-html.hm-user-results-ready
-#page-home
-.hub-l1-row.hm-home-result-divider-row {
   height: auto !important;
   min-height: 0 !important;
   max-height: none !important;
-  margin: revert !important;
-  padding: revert !important;
+  margin: 10px 0 16px !important;
+  padding: 0 !important;
   overflow: visible !important;
-  background: revert !important;
+  background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
   pointer-events: auto !important;
 }
 
+html:not(.hm-user-results-ready)
+#page-home
+#hub-card-clcr,
+html:not(.hm-user-results-ready)
+#page-home
+.hub-l1-row.hm-home-result-divider-row
+#hub-card-clcr {
+  display: block !important;
+  visibility: visible !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  pointer-events: none !important;
+}
+
 /*
- * Gestantes recebe a mesma linha inferior independente
- * que já delimita a coluna de Pediatria.
+ * O valor real pode continuar sendo atualizado internamente,
+ * mas fica transparente até o cálculo explícito.
+ * O pseudo-elemento exibe "---" no mesmo espaço.
  */
+html:not(.hm-user-results-ready)
+#page-home
+#home-live-clcr,
+html:not(.hm-user-results-ready)
+#page-home
+#home-live-imc,
+html:not(.hm-user-results-ready)
+#page-home
+#home-live-peso,
+html:not(.hm-user-results-ready)
+#page-home
+#home-live-bsa {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 3ch !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
+
+html:not(.hm-user-results-ready)
+#page-home
+#home-live-clcr::after,
+html:not(.hm-user-results-ready)
+#page-home
+#home-live-imc::after,
+html:not(.hm-user-results-ready)
+#page-home
+#home-live-peso::after,
+html:not(.hm-user-results-ready)
+#page-home
+#home-live-bsa::after {
+  content: "---" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--mcw-text, #F3F4F6) !important;
+  -webkit-text-fill-color: var(--mcw-text, #F3F4F6) !important;
+  text-shadow: none !important;
+  opacity: 0.72 !important;
+  pointer-events: none !important;
+}
+
+html.hm-user-results-ready
+#page-home
+#home-live-clcr,
+html.hm-user-results-ready
+#page-home
+#home-live-imc,
+html.hm-user-results-ready
+#page-home
+#home-live-peso,
+html.hm-user-results-ready
+#page-home
+#home-live-bsa {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+html.hm-user-results-ready
+#page-home
+#home-live-clcr::after,
+html.hm-user-results-ready
+#page-home
+#home-live-imc::after,
+html.hm-user-results-ready
+#page-home
+#home-live-peso::after,
+html.hm-user-results-ready
+#page-home
+#home-live-bsa::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Gestantes preserva a linha inferior homologada. */
 #page-home #hub-card-gestante {
   box-sizing: border-box !important;
   border-bottom: 1px solid var(--mcw-border, #374151) !important;
 }
 
-/* MEDCASES PATIENT HOME V1-C-R2-R3 SUPERBUILD END */
+/* MEDCASES HOME V512-R2 PERSISTENT PLACEHOLDER CARDS END */
