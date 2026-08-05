@@ -2519,3 +2519,410 @@ body.light-mode #page-home #hub-card-patient #hm-result-pills .hm-pill {
 }
 
 /* MEDCASES PATIENT V1-B-R3 END */
+
+/* MEDCASES PATIENT V1-B-R4 START */
+
+/* --------------------------------------------------------------------------
+   OWNER REAL EM EXECUÇÃO
+   calculator-overlay.js move .hub-card-inner para #calculator-overlay-body.
+   Portanto, o layout aberto deve ser estilizado pelo novo ancestral.
+   -------------------------------------------------------------------------- */
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-patient-form {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-patient-form .hm-input-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 7px 8px !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-patient-form .hm-input-wrap {
+  min-width: 0 !important;
+  gap: 3px !important;
+  margin: 0 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-patient-form .hm-label {
+  margin: 0 !important;
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  font-size: 10.5px !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-patient-form .hm-label-unit {
+  margin-left: 2px !important;
+  color: var(--mc-text-muted, #6B7280) !important;
+  font-size: 9px !important;
+  font-weight: 450 !important;
+}
+
+/* 54px do contrato legado -> 42px: redução efetiva de 22,2%. */
+#calculator-overlay-container.is-active #calculator-overlay-body input.hm-input {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+  padding: 0 11px !important;
+  color: var(--mc-text-primary, #FFFFFF) !important;
+  -webkit-text-fill-color: var(--mc-text-primary, #FFFFFF) !important;
+  background: var(--mc-bg-input, #171B22) !important;
+  background-image: none !important;
+  border: 1px solid var(--mc-border, #374151) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 42px !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body input.hm-input::placeholder {
+  color: var(--mc-text-muted, #6B7280) !important;
+  -webkit-text-fill-color: var(--mc-text-muted, #6B7280) !important;
+  font-size: 13px !important;
+  opacity: 0.7 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body input.hm-input:focus {
+  outline: 1px solid var(--mc-accent, #10B981) !important;
+  outline-offset: 0 !important;
+  border-color: var(--mc-accent, #10B981) !important;
+  box-shadow: none !important;
+}
+
+/* Sexo: menor, flat e sem glow. */
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-sex-wrap {
+  grid-column: 1 / -1 !important;
+  padding-top: 0 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-sex-toggle {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 7px !important;
+  width: 100% !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body button.hm-sex-btn {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  max-height: 36px !important;
+  padding: 0 10px !important;
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  background-image: none !important;
+  border: 1px solid var(--mc-border, #374151) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  filter: none !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-btn-male.hm-sex-btn--active {
+  color: #46D7A1 !important;
+  background: rgba(16, 185, 129, 0.10) !important;
+  border-color: rgba(16, 185, 129, 0.48) !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-btn-female.hm-sex-btn--active {
+  color: #E284A9 !important;
+  background: rgba(198, 106, 136, 0.10) !important;
+  border-color: rgba(198, 106, 136, 0.46) !important;
+  box-shadow: none !important;
+}
+
+/* Gestante: linha clínica, não card. */
+#calculator-overlay-container.is-active #calculator-overlay-body .preg-toggle-wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 1px 0 0 !important;
+  padding: 7px 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-top: 1px solid var(--mc-border, #374151) !important;
+  border-bottom: 1px solid var(--mc-border, #374151) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .preg-toggle-title {
+  color: var(--mc-text-primary, #FFFFFF) !important;
+  font-size: 11.5px !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .preg-toggle-sub {
+  margin-top: 2px !important;
+  color: var(--mc-text-muted, #6B7280) !important;
+  font-size: 9.5px !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body button.preg-opt {
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 28px !important;
+  min-width: 38px !important;
+  padding: 0 8px !important;
+  border-radius: 7px !important;
+  box-shadow: none !important;
+  font-size: 10.5px !important;
+}
+
+/* Urina 24h: remove o estilo branco/nativo observado no dispositivo. */
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-urine-accordion {
+  width: 100% !important;
+  margin: 1px 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-top: 1px solid var(--mc-border, #374151) !important;
+  border-bottom: 1px solid var(--mc-border, #374151) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body button#hm-urine-toggle-btn {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  max-height: 36px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  -webkit-text-fill-color: var(--mc-text-secondary, #D1D5DB) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-urine-toggle-btn .hm-urine-header-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  min-width: 0 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-urine-toggle-btn .hm-urine-icon {
+  color: var(--mc-accent, #10B981) !important;
+  font-size: 10.5px !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-urine-toggle-btn .hm-urine-header-title {
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  -webkit-text-fill-color: var(--mc-text-secondary, #D1D5DB) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-urine-toggle-btn .hm-urine-badge {
+  color: var(--mc-text-muted, #6B7280) !important;
+  -webkit-text-fill-color: var(--mc-text-muted, #6B7280) !important;
+  background: transparent !important;
+  border: 0 !important;
+  font-size: 9px !important;
+  font-weight: 450 !important;
+  white-space: nowrap !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-urine-toggle-btn .hm-urine-chevron {
+  color: var(--mc-text-muted, #6B7280) !important;
+  -webkit-text-fill-color: var(--mc-text-muted, #6B7280) !important;
+  font-size: 9.5px !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-urine-body {
+  width: 100% !important;
+  padding: 7px 0 1px !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-urine-fields {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 7px 8px !important;
+}
+
+/* Resultados: contrato visual dos mini-cards da Home, 2×2. */
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-result-pills.hm-result-pills {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 5px !important;
+  width: 100% !important;
+  margin: 7px 0 0 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-result-pills .hm-pill {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  min-height: 48px !important;
+  padding: 6px 4px 5px !important;
+  color: var(--mc-text-primary, #FFFFFF) !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  background-image: none !important;
+  border: 1px solid rgba(107, 114, 128, 0.20) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-result-pills .hm-pill-val {
+  margin: 0 !important;
+  color: var(--mc-text-primary, #FFFFFF) !important;
+  font-size: 16px !important;
+  font-weight: 750 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-result-pills .hm-pill-lbl {
+  margin: 3px 0 0 !important;
+  color: var(--mc-text-muted, #6B7280) !important;
+  font-size: 8px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-pv-clcr-src {
+  margin-top: 2px !important;
+  color: var(--mc-text-muted, #6B7280) !important;
+  font-size: 7px !important;
+  opacity: 0.65 !important;
+}
+
+/* Hemodiálise e ações menores. */
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-wrap {
+  margin-top: 7px !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body label.hm-hd-toggle {
+  height: 36px !important;
+  min-height: 36px !important;
+  max-height: 36px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid var(--mc-border, #374151) !important;
+  border-bottom: 1px solid var(--mc-border, #374151) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-track {
+  width: 30px !important;
+  min-width: 30px !important;
+  height: 17px !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-thumb {
+  width: 11px !important;
+  height: 11px !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-thumb {
+  transform: translateX(13px) !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text {
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  font-size: 11.5px !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-card-footer {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  gap: 6px !important;
+  width: 100% !important;
+  margin: 7px 0 0 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body button.hm-btn {
+  height: 36px !important;
+  min-height: 36px !important;
+  max-height: 36px !important;
+  padding: 0 11px !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  font-size: 11.5px !important;
+  font-weight: 650 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body button.hm-btn--ghost {
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  background: transparent !important;
+  border: 1px solid var(--mc-border, #374151) !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body button.hm-btn--primary {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: var(--mc-accent, #10B981) !important;
+  background-image: none !important;
+  border: 1px solid var(--mc-accent, #10B981) !important;
+}
+
+/* Light mode do owner real. */
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body input.hm-input {
+  color: var(--mc-text-primary, #111827) !important;
+  -webkit-text-fill-color: var(--mc-text-primary, #111827) !important;
+  background: var(--mc-bg-input, #F9FAFB) !important;
+  border-color: var(--mc-border, #D1D5DB) !important;
+}
+
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body #hm-result-pills .hm-pill {
+  color: var(--mc-text-primary, #111827) !important;
+  background: rgba(17, 24, 39, 0.025) !important;
+  border-color: rgba(107, 114, 128, 0.20) !important;
+}
+
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body #hm-result-pills .hm-pill-val {
+  color: var(--mc-text-primary, #111827) !important;
+}
+
+@media (min-width: 768px) {
+  #calculator-overlay-container.is-active #calculator-overlay-body #hm-patient-form .hm-input-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  #calculator-overlay-container.is-active #calculator-overlay-body #hm-result-pills.hm-result-pills {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* MEDCASES PATIENT V1-B-R4 END */
