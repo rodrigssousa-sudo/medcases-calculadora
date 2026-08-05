@@ -24797,50 +24797,162 @@ window.MedCasesBridge = {
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
 <script defer src="js/build283-accessory-bar.js?v=484"></script>
 
-<!-- PWA Offline Service Worker Registration -->
-<script>
-  /* ================================================================
-     BUILD 251 — Guard de Secure Context para WebView Android local
-     ----------------------------------------------------------------
-     Service Workers exigem "secure context" (https:// ou localhost).
-     Sob protocolo file:// (WebView Android empacotado, ex.:
-     file:///data/user/0/com.medcasespro.med/files/...), o navegador
-     NUNCA permite registrar um SW — isso é uma limitação de
-     especificação do navegador/WebView, não um bug deste app.
+<!-- MEDCASES SILENT CACHE SELF-HEAL V511 START -->
+<script id="medcases-silent-cache-self-heal-v511">
+(() => {
+  'use strict';
 
-     SEM este guard: a tentativa de registro sob file:// gera erro
-     de console ("SW registration failed... only supported in
-     secure contexts") que pode se misturar/mascarar outros erros
-     reais de carregamento no WebView (ex.: net::ERR_ACCESS_DENIED
-     de configuração nativa do WebView), dificultando o diagnóstico.
+  const EXPECTED_VERSION = 'medcases-v511-silent-webview-cache-self-heal';
+  const CACHE_PREFIX = 'medcases-calc-';
+  const LAST_VERSION_KEY = 'medcases-cache-version';
+  let updateInFlight = null;
 
-     COM o guard: detectamos o protocolo ANTES de tentar registrar.
-     Sob file://, pulamos o registro silenciosamente (o app funciona
-     normalmente sem SW, pois todos os assets já estão no disco local
-     dentro do pacote do app — cache offline via SW só faz sentido
-     quando servido via http(s)). Sob http(s), o comportamento
-     original é mantido 100% inalterado.
-  ================================================================ */
-  if ('serviceWorker' in navigator) {
-    const isSecureForSW = window.location.protocol === 'https:' ||
-                           window.location.hostname === 'localhost' ||
-                           window.location.hostname === '127.0.0.1';
+  const isSecureForSW =
+    window.location.protocol === 'https:' ||
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1';
 
-    if (isSecureForSW) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then((registration) => {
-            console.log('🚀 [PWA] Service Worker registrado para todo o banco de dados. Escopo:', registration.scope);
-          })
-          .catch((error) => {
-            console.error('❌ [PWA] Falha ao registrar o Service Worker:', error);
-          });
+  if (!('serviceWorker' in navigator) || !isSecureForSW) return;
+
+  const extractRemoteVersion = source => {
+    const match = source.match(
+      /const\s+CACHE_VERSION\s*=\s*['"]([^'"]+)['"]/
+    );
+    return match ? match[1] : null;
+  };
+
+  const purgeObsoleteCaches = async remoteVersion => {
+    if (!('caches' in window)) return;
+
+    const currentName = CACHE_PREFIX + remoteVersion;
+    const keys = await caches.keys();
+
+    await Promise.all(
+      keys
+        .filter(key =>
+          key.startsWith(CACHE_PREFIX) &&
+          key !== currentName
+        )
+        .map(key => caches.delete(key))
+    );
+  };
+
+  const reloadForVersionOnce = remoteVersion => {
+    const guardKey = 'medcases-cache-reload-' + remoteVersion;
+
+    if (sessionStorage.getItem(guardKey) === '1') return;
+    sessionStorage.setItem(guardKey, '1');
+
+    const url = new URL(window.location.href);
+    url.searchParams.set('_mc_cache', remoteVersion);
+    window.location.replace(url.toString());
+  };
+
+  const requestSkipWaiting = registration => {
+    if (registration && registration.waiting) {
+      registration.waiting.postMessage({
+        type: 'MEDCASES_SKIP_WAITING'
       });
-    } else {
-      console.log('[PWA] Service Worker não registrado — protocolo "' + window.location.protocol + '" não é secure context (ex.: file:// em WebView Android empacotado). App funciona normalmente com os assets locais do pacote.');
     }
-  }
+  };
+
+  const checkAndRefresh = () => {
+    if (updateInFlight) return updateInFlight;
+
+    updateInFlight = (async () => {
+      try {
+        const probeUrl = './sw.js?mc_probe=' + Date.now();
+
+        const response = await fetch(probeUrl, {
+          cache: 'no-store',
+          credentials: 'same-origin'
+        });
+
+        if (!response.ok) return;
+
+        const source = await response.text();
+        const remoteVersion =
+          extractRemoteVersion(source) || EXPECTED_VERSION;
+
+        const registration =
+          await navigator.serviceWorker.register(
+            './sw.js?mc_register=' +
+              encodeURIComponent(remoteVersion),
+            {
+              scope: './',
+              updateViaCache: 'none'
+            }
+          );
+
+        await registration.update();
+        requestSkipWaiting(registration);
+
+        const previousVersion =
+          localStorage.getItem(LAST_VERSION_KEY);
+
+        if (previousVersion !== remoteVersion) {
+          await purgeObsoleteCaches(remoteVersion);
+          localStorage.setItem(
+            LAST_VERSION_KEY,
+            remoteVersion
+          );
+
+          requestSkipWaiting(registration);
+
+          setTimeout(
+            () => reloadForVersionOnce(remoteVersion),
+            180
+          );
+          return;
+        }
+
+        const worker =
+          registration.active ||
+          navigator.serviceWorker.controller;
+
+        if (worker) {
+          worker.postMessage({
+            type: 'MEDCASES_PRUNE_OLD_CACHES'
+          });
+        }
+      } catch (_) {
+        /* Falha de rede não bloqueia a abertura do aplicativo. */
+      } finally {
+        updateInFlight = null;
+      }
+    })();
+
+    return updateInFlight;
+  };
+
+  navigator.serviceWorker.addEventListener(
+    'controllerchange',
+    () => {
+      const version =
+        localStorage.getItem(LAST_VERSION_KEY);
+
+      if (version) reloadForVersionOnce(version);
+    }
+  );
+
+  checkAndRefresh();
+
+  window.addEventListener(
+    'pageshow',
+    checkAndRefresh
+  );
+
+  document.addEventListener(
+    'visibilitychange',
+    () => {
+      if (document.visibilityState === 'visible') {
+        checkAndRefresh();
+      }
+    }
+  );
+})();
 </script>
+<!-- MEDCASES SILENT CACHE SELF-HEAL V511 END -->
 
 <!-- ══════════════════════════════════════════════════════════════
      MOBILE KEYBOARD HANDLER v2.0  (BUILD 232)
@@ -25459,15 +25571,13 @@ window.MedCasesBridge = {
 })();
 </script>
 <!-- MEDCASES PATIENT HOME V1-C-R1 END -->
-
-
-<!-- MEDCASES PATIENT HOME V1-C-R2-R3 SUPERBUILD START -->
-<script id="medcases-patient-home-v1-c-r2-r3-superbuild">
+<!-- MEDCASES PATIENT HOME V1-C-R2-R4 PERFORMANCE START -->
+<script id="medcases-patient-home-v1-c-r2-r4-performance">
 (() => {
   'use strict';
 
-  if (window.__mcPatientHomeV1CR2R3Superbuild) return;
-  window.__mcPatientHomeV1CR2R3Superbuild = true;
+  if (window.__mcPatientHomeV1CR2R4Performance) return;
+  window.__mcPatientHomeV1CR2R4Performance = true;
 
   const FIELD_IDS = new Set([
     'hm-weight',
@@ -25478,44 +25588,38 @@ window.MedCasesBridge = {
     'hm-urine-creat'
   ]);
 
-  let patientSessionOpen = false;
+  let sessionArmed = false;
   let editedFields = new Set();
 
-  const overlayBody = () =>
-    document.getElementById('calculator-overlay-body');
-
-  const patientForm = () =>
-    document.getElementById('hm-patient-form');
-
   const patientIsInsideOverlay = () => {
-    const body = overlayBody();
-    const form = patientForm();
+    const body = document.getElementById('calculator-overlay-body');
+    const form = document.getElementById('hm-patient-form');
     return Boolean(body && form && body.contains(form));
+  };
+
+  const armPatientSession = () => {
+    sessionArmed = true;
+    editedFields = new Set();
+  };
+
+  const disarmPatientSession = () => {
+    sessionArmed = false;
+    editedFields = new Set();
+  };
+
+  const ensurePatientSession = () => {
+    if (!patientIsInsideOverlay()) return false;
+    if (!sessionArmed) armPatientSession();
+    return true;
   };
 
   const markHomeResultRow = () => {
     const card = document.getElementById('hub-card-clcr');
-    if (!card) return;
+    const row = card && card.closest
+      ? card.closest('.hub-l1-row')
+      : null;
 
-    const row = card.closest('.hub-l1-row');
-    if (row) {
-      row.classList.add('hm-home-result-divider-row');
-    }
-  };
-
-  const syncPatientSession = () => {
-    const isOpen = patientIsInsideOverlay();
-
-    if (isOpen && !patientSessionOpen) {
-      patientSessionOpen = true;
-      editedFields = new Set();
-      return;
-    }
-
-    if (!isOpen && patientSessionOpen) {
-      patientSessionOpen = false;
-      editedFields = new Set();
-    }
+    if (row) row.classList.add('hm-home-result-divider-row');
   };
 
   const resolveField = target => {
@@ -25531,13 +25635,10 @@ window.MedCasesBridge = {
 
   const clearStoredValueOnFirstInteraction = event => {
     if (!event.isTrusted) return;
-
-    syncPatientSession();
-    if (!patientSessionOpen) return;
+    if (!ensurePatientSession()) return;
 
     const field = resolveField(event.target);
-    if (!field) return;
-    if (editedFields.has(field.id)) return;
+    if (!field || editedFields.has(field.id)) return;
 
     editedFields.add(field.id);
 
@@ -25556,16 +25657,41 @@ window.MedCasesBridge = {
   };
 
   const preserveUserValueAfterEditing = event => {
-    if (!event.isTrusted) return;
-
-    syncPatientSession();
-    if (!patientSessionOpen) return;
+    if (!event.isTrusted || !ensurePatientSession()) return;
 
     const field = resolveField(event.target);
-    if (!field) return;
-
-    editedFields.add(field.id);
+    if (field) editedFields.add(field.id);
   };
+
+  const handleSessionControls = event => {
+    if (!event.isTrusted) return;
+
+    const target = event.target && event.target.closest
+      ? event.target.closest(
+          '#hub-card-patient, #calculator-overlay-close'
+        )
+      : null;
+
+    if (!target) return;
+
+    if (target.id === 'hub-card-patient') {
+      armPatientSession();
+    } else {
+      disarmPatientSession();
+    }
+  };
+
+  document.addEventListener(
+    'pointerdown',
+    handleSessionControls,
+    true
+  );
+
+  document.addEventListener(
+    'click',
+    handleSessionControls,
+    true
+  );
 
   document.addEventListener(
     'pointerdown',
@@ -25591,33 +25717,17 @@ window.MedCasesBridge = {
     true
   );
 
-  const observer = new MutationObserver(() => {
-    markHomeResultRow();
-    syncPatientSession();
-  });
-
-  const start = () => {
-    markHomeResultRow();
-    syncPatientSession();
-
-    observer.observe(document.documentElement, {
-      subtree: true,
-      childList: true,
-      attributes: true,
-      attributeFilter: ['class']
-    });
-  };
-
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', start, {
-      once: true
-    });
+    document.addEventListener(
+      'DOMContentLoaded',
+      markHomeResultRow,
+      { once: true }
+    );
   } else {
-    start();
+    markHomeResultRow();
   }
 })();
 </script>
-<!-- MEDCASES PATIENT HOME V1-C-R2-R3 SUPERBUILD END -->
-
+<!-- MEDCASES PATIENT HOME V1-C-R2-R4 PERFORMANCE END -->
 </body>
 </html>

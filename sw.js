@@ -26,7 +26,7 @@
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v510-patient-home-v1c-r2-r3-superbuild';
+const CACHE_VERSION   = 'medcases-v511-silent-webview-cache-self-heal';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
 /* ── Lista canônica de assets pré-cacheados no install ──────
@@ -90,6 +90,8 @@ const ASSETS_TO_CACHE = [
   './database/analgesia_opioides.js?v=484',
 ];
 
+const CRITICAL_ASSETS = ASSETS_TO_CACHE.slice(0, 5);
+
 /* ============================================================
    INSTALL — Pre-caching atômico de todos os assets críticos
    event.waitUntil garante que o SW só avança para 'activate'
@@ -101,19 +103,26 @@ const ASSETS_TO_CACHE = [
    Garante que iOS WebView receba o novo SW sem ficar preso no
    estado 'waiting' por tabs abertas.
 ============================================================ */
-self.addEventListener('install', (e) => {
-  console.log(`[SW ${CACHE_VERSION}] Install: skipWaiting() imediato — BUILD 475-FORCE-CLEAN`);
-  /* skipWaiting() ANTES de qualquer waitUntil — entra em activate
-     imediatamente, sem aguardar pre-cache ou tabs fecharem.      */
+self.addEventListener('install', (event) => {
   self.skipWaiting();
-  e.waitUntil(
+
+  event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(ASSETS_TO_CACHE))
-      .then(() => console.log(`[SW ${CACHE_VERSION}] Pre-cache concluído (${ASSETS_TO_CACHE.length} assets).`))
-      .catch((err) => console.warn(`[SW ${CACHE_VERSION}] Pre-cache parcial (não fatal):`, err))
+      .then((cache) =>
+        Promise.allSettled(
+          CRITICAL_ASSETS.map(async (asset) => {
+            const response = await fetch(
+              new Request(asset, { cache: 'reload' })
+            );
+
+            if (response && response.ok) {
+              await cache.put(asset, response.clone());
+            }
+          })
+        )
+      )
   );
 });
-
 /* ============================================================
    ACTIVATE — Expurgo cirúrgico de caches de versões anteriores
    Mantém APENAS o CACHE_NAME atual; deleta todos os demais.
@@ -126,23 +135,69 @@ self.addEventListener('install', (e) => {
    Qualquer cache com nome diferente de CACHE_NAME é deletado
    sem exceção — resolve corrupção de cache no iOS WebView.
 ============================================================ */
-self.addEventListener('activate', (e) => {
-  console.log(`[SW ${CACHE_VERSION}] Activate: PURGA ABSOLUTA BUILD 475-FORCE-CLEAN`);
-  e.waitUntil(
-    caches.keys()
-      .then((keys) => Promise.all(
-        keys.map((k) => {
-          if (k !== CACHE_NAME) {
-            console.log(`[SW ${CACHE_VERSION}] Deletando cache obsoleto: "${k}"`);
-            return caches.delete(k);
+self.addEventListener('activate', (event) => {
+  event.waitUntil((async () => {
+    await pruneOldCaches();
+    await self.clients.claim();
+
+    const clients = await self.clients.matchAll({
+      type: 'window',
+      includeUncontrolled: true
+    });
+
+    await Promise.all(
+      clients.map((client) => {
+        try {
+          const url = new URL(client.url);
+
+          if (url.origin !== self.location.origin) {
+            return Promise.resolve();
           }
-        })
-      ))
-      .then(() => {
-        console.log(`[SW ${CACHE_VERSION}] Limpeza concluída. Assumindo controle imediato de todos os clients.`);
-        return self.clients.claim();
+
+          if (
+            url.searchParams.get('_mc_cache') ===
+            CACHE_VERSION
+          ) {
+            return Promise.resolve();
+          }
+
+          url.searchParams.set(
+            '_mc_cache',
+            CACHE_VERSION
+          );
+
+          return client.navigate(url.toString());
+        } catch (_) {
+          return Promise.resolve();
+        }
       })
+    );
+  })());
+});
+async function pruneOldCaches() {
+  const keys = await caches.keys();
+
+  await Promise.all(
+    keys
+      .filter((key) =>
+        key.startsWith('medcases-calc-') &&
+        key !== CACHE_NAME
+      )
+      .map((key) => caches.delete(key))
   );
+}
+
+self.addEventListener('message', (event) => {
+  const type = event.data && event.data.type;
+
+  if (type === 'MEDCASES_SKIP_WAITING') {
+    self.skipWaiting();
+    return;
+  }
+
+  if (type === 'MEDCASES_PRUNE_OLD_CACHES') {
+    event.waitUntil(pruneOldCaches());
+  }
 });
 
 /* ============================================================
