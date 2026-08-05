@@ -1008,17 +1008,6 @@ body.light-mode #page-home #hub-card-clcr #home-live-bsa {
   line-height: 1.18 !important;
 }
 
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-name *,
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-title *,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-name *,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-title *,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-name *,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-title * {
-  display: inline !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  color: inherit !important;
-}
 
 /* O badge Em breve continua independente do título. */
 #page-home .hub-l3-row > .hub-card:not(.is-open) .hub-soon-badge {
@@ -1026,3 +1015,69 @@ body.light-mode #page-home #hub-card-clcr #home-live-bsa {
 }
 
 /* MEDCASES MICROBUILD R5-C-R2 END */
+
+/* MEDCASES MICROBUILD R5-C-R3 START */
+
+/* Nunca exibe simultaneamente as duas traduções do título. */
+#page-home .hub-card-name .lang-hub-pt,
+#page-home .hub-card-name .lang-hub-es,
+#page-home .hub-card-title .lang-hub-pt,
+#page-home .hub-card-title .lang-hub-es {
+  display: none !important;
+}
+
+/* Fallback seguro antes da chegada do idioma: português. */
+body:not([data-lang]) #page-home .hub-card-name .lang-hub-pt,
+body:not([data-lang]) #page-home .hub-card-title .lang-hub-pt {
+  display: inline !important;
+}
+
+body:not([data-lang]) #page-home .hub-card-name .lang-hub-es,
+body:not([data-lang]) #page-home .hub-card-title .lang-hub-es {
+  display: none !important;
+}
+
+/* Aplicativo em português. */
+body[data-lang="pt"] #page-home .hub-card-name .lang-hub-pt,
+body[data-lang="pt"] #page-home .hub-card-title .lang-hub-pt {
+  display: inline !important;
+}
+
+body[data-lang="pt"] #page-home .hub-card-name .lang-hub-es,
+body[data-lang="pt"] #page-home .hub-card-title .lang-hub-es {
+  display: none !important;
+}
+
+/* Aplicativo em espanhol. */
+body[data-lang="es"] #page-home .hub-card-name .lang-hub-es,
+body[data-lang="es"] #page-home .hub-card-title .lang-hub-es {
+  display: inline !important;
+}
+
+body[data-lang="es"] #page-home .hub-card-name .lang-hub-pt,
+body[data-lang="es"] #page-home .hub-card-title .lang-hub-pt {
+  display: none !important;
+}
+
+/* Compatibilidade defensiva com o atributo global alternativo. */
+[data-current-lang="pt"] #page-home .hub-card-name .lang-hub-pt,
+[data-current-lang="pt"] #page-home .hub-card-title .lang-hub-pt {
+  display: inline !important;
+}
+
+[data-current-lang="pt"] #page-home .hub-card-name .lang-hub-es,
+[data-current-lang="pt"] #page-home .hub-card-title .lang-hub-es {
+  display: none !important;
+}
+
+[data-current-lang="es"] #page-home .hub-card-name .lang-hub-es,
+[data-current-lang="es"] #page-home .hub-card-title .lang-hub-es {
+  display: inline !important;
+}
+
+[data-current-lang="es"] #page-home .hub-card-name .lang-hub-pt,
+[data-current-lang="es"] #page-home .hub-card-title .lang-hub-pt {
+  display: none !important;
+}
+
+/* MEDCASES MICROBUILD R5-C-R3 END */
