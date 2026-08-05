@@ -3721,3 +3721,77 @@ html.hm-user-results-ready
 }
 
 /* MEDCASES HOME V512-R2 PERSISTENT PLACEHOLDER CARDS END */
+
+/* MEDCASES V513 HOME LINE PRESS START */
+
+/*
+ * Remove seleção de texto, alças azuis e tap-highlight retangular
+ * somente nos gatilhos fechados da Home.
+ */
+#page-home .hub-card-trigger,
+#page-home .hub-card-trigger * {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+#page-home .hub-card-trigger {
+  position: relative !important;
+  touch-action: manipulation !important;
+  outline: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  transition:
+    color 0.12s ease,
+    opacity 0.12s ease !important;
+}
+
+#page-home .hub-card-trigger:active,
+#page-home .hub-card-trigger:focus,
+#page-home .hub-card-trigger:focus-visible {
+  outline: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+#page-home .hub-card-trigger *::selection {
+  color: inherit !important;
+  background: transparent !important;
+}
+
+/*
+ * A linha semântica sobrepõe a borda neutra somente durante o toque.
+ * Nenhuma superfície retangular muda de cor.
+ */
+#page-home .hub-card:not(.is-open) .hub-card-trigger::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: -1px !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: none !important;
+  transition:
+    background-color 0.10s ease,
+    opacity 0.10s ease !important;
+}
+
+#page-home .hub-card:not(.is-open) .hub-card-trigger:active::after,
+#page-home .hub-card:not(.is-open) .hub-card-trigger:focus-visible::after {
+  background: var(--mcw-accent) !important;
+  background-color: var(--mcw-accent) !important;
+  opacity: 1 !important;
+}
+
+/* MEDCASES V513 HOME LINE PRESS END */

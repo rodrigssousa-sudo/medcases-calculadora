@@ -7956,24 +7956,27 @@
                     <input class="hm-input" id="hm-weight" type="text" inputmode="decimal" pattern="[0-9.,]*"
                       autocomplete="off" autocorrect="off" spellcheck="false"
                       step="any"
-                      enterkeyhint="done"
-                      placeholder="70" oninput="this.value=this.value.replace(/,/g,'.');window.hmUpdatePatientCardColor&&hmUpdatePatientCardColor()" />
+                      enterkeyhint="next"
+                      placeholder="70" oninput="this.value=this.value.replace(/,/g,'.');window.hmUpdatePatientCardColor&&hmUpdatePatientCardColor()"
+                      data-mc-next="hm-age" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label">Idade <span class="hm-label-unit">anos</span></label>
-                    <input class="hm-input" id="hm-age" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                    <input class="hm-input" id="hm-age" type="text" inputmode="numeric" pattern="[0-9]*"
                       autocomplete="off" autocorrect="off" spellcheck="false"
                       step="any"
-                      enterkeyhint="done"
-                      placeholder="45" oninput="this.value=this.value.replace(/,/g,'.');window.hmUpdatePatientCardColor&&hmUpdatePatientCardColor()" />
+                      enterkeyhint="next"
+                      placeholder="45" oninput="this.value=this.value.replace(/,/g,'.');window.hmUpdatePatientCardColor&&hmUpdatePatientCardColor()"
+                      data-mc-next="hm-height" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label">Altura <span class="hm-label-unit">cm</span></label>
-                    <input class="hm-input" id="hm-height" type="text" inputmode="decimal" pattern="[0-9.,]*"
+                    <input class="hm-input" id="hm-height" type="text" inputmode="numeric" pattern="[0-9]*"
                       autocomplete="off" autocorrect="off" spellcheck="false"
                       step="any"
-                      enterkeyhint="done"
-                      placeholder="170" oninput="this.value=this.value.replace(/,/g,'.')" />
+                      enterkeyhint="next"
+                      placeholder="170" oninput="this.value=this.value.replace(/,/g,'.')"
+                      data-mc-next="hm-creatinina" />
                   </div>
                   <div class="hm-input-wrap">
                     <label class="hm-label" for="hm-creatinina">Creatinina <span class="hm-label-unit">mg/dL</span></label>
@@ -7981,7 +7984,8 @@
                       autocomplete="off" autocorrect="off" spellcheck="false"
                       step="any"
                       enterkeyhint="done"
-                      placeholder="Ex: 1.0" oninput="this.value=this.value.replace(/,/g,'.')" />
+                      placeholder="Ex: 1.0" oninput="this.value=this.value.replace(/,/g,'.')"
+                      data-mc-next="" />
                     <input type="hidden" id="hm-clcr" value="" />
                   </div>
                   <!-- Seletor de Sexo M/F -->
@@ -8059,11 +8063,12 @@
                             Volume Urina <span class="hm-label-unit">mL/24h</span>
                           </label>
                           <input class="hm-input" id="hm-urine24"
-                            type="text" inputmode="decimal" pattern="[0-9.,]*"
+                            type="text" inputmode="numeric" pattern="[0-9]*"
                             autocomplete="off" autocorrect="off" spellcheck="false"
                             enterkeyhint="next"
                             placeholder="Ex: 1500"
-                            oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
+                            oninput="window.hmCalcCockcroft && hmCalcCockcroft()"
+                      data-mc-next="hm-urine-creat" />
                         </div>
                         <div class="hm-input-wrap">
                           <label class="hm-label" for="hm-urine-creat">
@@ -8074,7 +8079,8 @@
                             autocomplete="off" autocorrect="off" spellcheck="false"
                             enterkeyhint="done"
                             placeholder="Ex: 80"
-                            oninput="window.hmCalcCockcroft && hmCalcCockcroft()" />
+                            oninput="window.hmCalcCockcroft && hmCalcCockcroft()"
+                      data-mc-next="" />
                         </div>
                       </div>
                       <p class="hm-urine-note" data-i18n="hm_urine24_note">
@@ -24802,7 +24808,7 @@ window.MedCasesBridge = {
 (() => {
   'use strict';
 
-  const EXPECTED_VERSION = 'medcases-v512-r2-home-persistent-placeholder-cards';
+  const EXPECTED_VERSION = 'medcases-v513-home-line-press-smart-keyboard';
   const CACHE_PREFIX = 'medcases-calc-';
   const LAST_VERSION_KEY = 'medcases-cache-version';
   let updateInFlight = null;
@@ -25516,7 +25522,7 @@ window.MedCasesBridge = {
 
 
   <!-- MEDCASES WEBVIEW HOME V1: somente #page-home; não altera topbar Flutter -->
-  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=512-r2-home-persistent-placeholder-cards">
+  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=513-home-line-press-smart-keyboard">
 
 <!-- MEDCASES PATIENT HOME V1-C-R1 START -->
 <script id="medcases-patient-explicit-results-gate-v1">
@@ -25729,5 +25735,178 @@ window.MedCasesBridge = {
 })();
 </script>
 <!-- MEDCASES PATIENT HOME V1-C-R2-R4 PERFORMANCE END -->
+
+<!-- MEDCASES V513 SMART KEYBOARD START -->
+<script id="medcases-smart-keyboard-v513">
+(() => {
+  'use strict';
+
+  if (window.__mcSmartKeyboardV513) return;
+  window.__mcSmartKeyboardV513 = true;
+
+  const isEditableInput = element => {
+    if (!element || element.disabled || element.readOnly) return false;
+
+    const tag = element.tagName;
+    if (tag === 'TEXTAREA') return true;
+    if (tag !== 'INPUT') return false;
+
+    return ![
+      'hidden',
+      'button',
+      'submit',
+      'reset',
+      'checkbox',
+      'radio',
+      'file',
+      'range',
+      'color'
+    ].includes((element.type || 'text').toLowerCase());
+  };
+
+  const inferInputMode = element => {
+    const explicit = (element.getAttribute('inputmode') || '').trim();
+    if (explicit) return explicit;
+
+    const type = (element.type || 'text').toLowerCase();
+
+    if (type === 'email') return 'email';
+    if (type === 'tel') return 'tel';
+    if (type === 'url') return 'url';
+    if (type === 'search') return 'search';
+
+    const pattern = element.getAttribute('pattern') || '';
+    const step = element.getAttribute('step') || '';
+
+    const numericCue =
+      type === 'number' ||
+      /\[0-9/.test(pattern) ||
+      /\d/.test(pattern);
+
+    if (numericCue) {
+      const decimalCue =
+        step === 'any' ||
+        /[.,]/.test(pattern) ||
+        (step && step.includes('.'));
+
+      return decimalCue ? 'decimal' : 'numeric';
+    }
+
+    return 'text';
+  };
+
+  const normalizeInput = element => {
+    if (!isEditableInput(element)) return;
+
+    if (!element.getAttribute('inputmode')) {
+      element.setAttribute(
+        'inputmode',
+        inferInputMode(element)
+      );
+    }
+
+    if (!element.getAttribute('enterkeyhint')) {
+      element.setAttribute('enterkeyhint', 'done');
+    }
+  };
+
+  const normalizeCurrentInputs = root => {
+    const scope = root && root.querySelectorAll
+      ? root
+      : document;
+
+    scope
+      .querySelectorAll('input, textarea')
+      .forEach(normalizeInput);
+  };
+
+  const moveToConfiguredNext = event => {
+    if (
+      event.key !== 'Enter' ||
+      !event.target ||
+      !event.target.matches('#hm-patient-form input')
+    ) {
+      return;
+    }
+
+    const field = event.target;
+    const nextId = field.dataset.mcNext || '';
+
+    event.preventDefault();
+
+    if (nextId) {
+      const nextField = document.getElementById(nextId);
+
+      if (
+        nextField &&
+        !nextField.disabled &&
+        nextField.offsetParent !== null
+      ) {
+        nextField.focus({
+          preventScroll: true
+        });
+
+        try {
+          nextField.select();
+        } catch (_) {
+          /* Alguns tipos de input não oferecem select(). */
+        }
+
+        setTimeout(() => {
+          nextField.scrollIntoView({
+            block: 'center',
+            behavior: 'smooth'
+          });
+        }, 80);
+
+        return;
+      }
+    }
+
+    field.blur();
+  };
+
+  const prepareBeforeFocus = event => {
+    const target = event.target && event.target.closest
+      ? event.target.closest('input, textarea')
+      : null;
+
+    if (target) normalizeInput(target);
+  };
+
+  document.addEventListener(
+    'pointerdown',
+    prepareBeforeFocus,
+    true
+  );
+
+  document.addEventListener(
+    'touchstart',
+    prepareBeforeFocus,
+    {
+      capture: true,
+      passive: true
+    }
+  );
+
+  document.addEventListener(
+    'keydown',
+    moveToConfiguredNext,
+    true
+  );
+
+  if (document.readyState === 'loading') {
+    document.addEventListener(
+      'DOMContentLoaded',
+      () => normalizeCurrentInputs(document),
+      { once: true }
+    );
+  } else {
+    normalizeCurrentInputs(document);
+  }
+})();
+</script>
+<!-- MEDCASES V513 SMART KEYBOARD END -->
+
 </body>
 </html>
