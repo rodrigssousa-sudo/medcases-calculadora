@@ -25368,5 +25368,135 @@ window.MedCasesBridge = {
 
   <!-- MEDCASES WEBVIEW HOME V1: somente #page-home; não altera topbar Flutter -->
   <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=506-patient-v1b-r7-r2">
+
+  <!-- MEDCASES PATIENT V1-B-R8 START -->
+  <script id="medcases-patient-pregnancy-direct-touch-bridge-v1">
+  (() => {
+    'use strict';
+
+    if (window.__mcPregnancyDirectTouchBridgeV1) return;
+    window.__mcPregnancyDirectTouchBridgeV1 = true;
+
+    let suppressSyntheticClickUntil = 0;
+    let lastActivationAt = 0;
+    let lastActivationValue = null;
+
+    const buttons = () => ({
+      no: document.getElementById('hm-preg-no'),
+      yes: document.getElementById('hm-preg-yes')
+    });
+
+    const pointInside = (element, x, y) => {
+      if (!element) return false;
+      const rect = element.getBoundingClientRect();
+      if (rect.width <= 0 || rect.height <= 0) return false;
+      return (
+        x >= rect.left &&
+        x <= rect.right &&
+        y >= rect.top &&
+        y <= rect.bottom
+      );
+    };
+
+    const valueAtPoint = (x, y) => {
+      const current = buttons();
+      if (pointInside(current.no, x, y)) return false;
+      if (pointInside(current.yes, x, y)) return true;
+      return null;
+    };
+
+    const valueFromTarget = target => {
+      const element = target && target.closest
+        ? target.closest('#hm-preg-no, #hm-preg-yes')
+        : null;
+
+      if (!element) return null;
+      return element.id === 'hm-preg-yes';
+    };
+
+    const activate = value => {
+      if (typeof window.hmSetPregnant !== 'function') return false;
+
+      const now = Date.now();
+      if (
+        lastActivationValue === value &&
+        now - lastActivationAt < 280
+      ) {
+        return true;
+      }
+
+      lastActivationAt = now;
+      lastActivationValue = value;
+
+      window.hmSetPregnant(value);
+
+      const current = buttons();
+      if (current.no) {
+        current.no.setAttribute('aria-pressed', String(!value));
+      }
+      if (current.yes) {
+        current.yes.setAttribute('aria-pressed', String(value));
+      }
+
+      return true;
+    };
+
+    const consume = event => {
+      if (event.cancelable) event.preventDefault();
+      event.stopPropagation();
+      if (typeof event.stopImmediatePropagation === 'function') {
+        event.stopImmediatePropagation();
+      }
+    };
+
+    document.addEventListener('touchstart', event => {
+      const touch = event.changedTouches && event.changedTouches[0];
+      if (!touch) return;
+
+      const value = valueAtPoint(touch.clientX, touch.clientY);
+      if (value === null) return;
+
+      consume(event);
+      suppressSyntheticClickUntil = Date.now() + 700;
+      activate(value);
+    }, { capture: true, passive: false });
+
+    document.addEventListener('pointerdown', event => {
+      if (event.pointerType === 'touch') return;
+
+      let value = valueFromTarget(event.target);
+      if (value === null) {
+        value = valueAtPoint(event.clientX, event.clientY);
+      }
+      if (value === null) return;
+
+      consume(event);
+      suppressSyntheticClickUntil = Date.now() + 400;
+      activate(value);
+    }, true);
+
+    document.addEventListener('click', event => {
+      const value = valueFromTarget(event.target);
+      if (value === null) return;
+
+      consume(event);
+
+      if (Date.now() < suppressSyntheticClickUntil) return;
+      activate(value);
+    }, true);
+
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+
+      const value = valueFromTarget(event.target);
+      if (value === null) return;
+
+      consume(event);
+      activate(value);
+    }, true);
+  })();
+  </script>
+  <!-- MEDCASES PATIENT V1-B-R8 END -->
+
 </body>
 </html>
