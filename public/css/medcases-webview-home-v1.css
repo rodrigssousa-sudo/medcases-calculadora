@@ -761,79 +761,10 @@ body.light-mode #page-home .hub-card-body .category-chip {
 
 /* MEDCASES MICROBUILD R5-B-R5 START */
 
-/* Esconde subtítulos e textos auxiliares dos cards fechados da Home. */
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-header p,
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-head p,
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary p,
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger p,
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-header small,
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-head small,
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary small,
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger small,
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-header [class*="subtitle"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-head [class*="subtitle"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary [class*="subtitle"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger [class*="subtitle"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-header [class*="subTitle"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-head [class*="subTitle"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary [class*="subTitle"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger [class*="subTitle"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-header [class*="meta"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-head [class*="meta"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary [class*="meta"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger [class*="meta"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-header [class*="desc"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-head [class*="desc"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary [class*="desc"],
-#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger [class*="desc"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header p,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head p,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary p,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger p,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header small,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head small,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary small,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger small,
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header [class*="subtitle"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head [class*="subtitle"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary [class*="subtitle"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger [class*="subtitle"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header [class*="subTitle"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head [class*="subTitle"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary [class*="subTitle"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger [class*="subTitle"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header [class*="meta"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head [class*="meta"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary [class*="meta"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger [class*="meta"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header [class*="desc"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head [class*="desc"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary [class*="desc"],
-#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger [class*="desc"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header p,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head p,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary p,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger p,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header small,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head small,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary small,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger small,
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header [class*="subtitle"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head [class*="subtitle"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary [class*="subtitle"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger [class*="subtitle"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header [class*="subTitle"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head [class*="subTitle"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary [class*="subTitle"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger [class*="subTitle"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header [class*="meta"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head [class*="meta"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary [class*="meta"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger [class*="meta"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header [class*="desc"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head [class*="desc"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary [class*="desc"],
-#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger [class*="desc"] {
+/* Oculta somente o subtítulo real, sem atingir os títulos principais. */
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-desc,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-desc,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-desc {
   display: none !important;
 }
 
@@ -1057,3 +988,41 @@ body.light-mode #page-home #hub-card-clcr #home-live-bsa {
 }
 
 /* MEDCASES MICROBUILD R5-C-R1 END */
+
+/* MEDCASES MICROBUILD R5-C-R2 START */
+
+/* Garante visibilidade dos títulos independentemente da tag HTML usada. */
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-name,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-title,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-name,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-title,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-name,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-title {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+  color: var(--mcw-text) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.18 !important;
+}
+
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-name *,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-title *,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-name *,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-title *,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-name *,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-title * {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: inherit !important;
+}
+
+/* O badge Em breve continua independente do título. */
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-soon-badge {
+  display: inline-flex !important;
+}
+
+/* MEDCASES MICROBUILD R5-C-R2 END */
