@@ -655,3 +655,106 @@ body.light-mode #page-home .hub-card-body .category-chip {
 }
 
 /* MEDCASES MICROBUILD R5-B-R3 END */
+
+/* MEDCASES MICROBUILD R5-B-R4 START */
+
+/* Remover linhas superiores redundantes e deixar a leitura mais leve. */
+#page-home #hub-card-farmacos,
+#page-home #hub-l2-grid,
+#page-home .hub-l3-row {
+  border-top: 0 !important;
+}
+
+/* Mantém separação mais delicada entre blocos. */
+#page-home #hub-card-farmacos {
+  margin-top: 12px !important;
+  padding-top: 10px !important;
+}
+
+#page-home #hub-l2-grid,
+#page-home .hub-l3-row {
+  margin-top: 12px !important;
+  padding-top: 8px !important;
+}
+
+/* Linha central sutil entre colunas dos grids fechados. */
+#page-home #hub-l2-grid > .hub-card:nth-child(2n):not(.is-open),
+#page-home .hub-l3-row > .hub-card:nth-child(2n):not(.is-open) {
+  border-left: 1px solid rgba(89, 99, 122, 0.24) !important;
+  padding-left: 10px !important;
+}
+
+#page-home #hub-l2-grid > .hub-card:nth-child(2n-1):not(.is-open),
+#page-home .hub-l3-row > .hub-card:nth-child(2n-1):not(.is-open) {
+  padding-right: 10px !important;
+}
+
+/* Redução aproximada de 10% da altura visual dos módulos fechados. */
+#page-home #hub-card-farmacos:not(.is-open),
+#page-home #hub-l2-grid > .hub-card:not(.is-open),
+#page-home .hub-l3-row > .hub-card:not(.is-open) {
+  min-height: 0 !important;
+}
+
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-header,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-head,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-summary,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-header,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-head,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-summary,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-header,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-head,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-summary,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger {
+  min-height: 0 !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+/* Títulos e subtítulos mais delicados e melhor encaixados. */
+#page-home #hub-card-farmacos:not(.is-open) h2,
+#page-home #hub-card-farmacos:not(.is-open) h3,
+#page-home #hub-card-farmacos:not(.is-open) h4,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) h2,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) h3,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) h4,
+#page-home .hub-l3-row > .hub-card:not(.is-open) h2,
+#page-home .hub-l3-row > .hub-card:not(.is-open) h3,
+#page-home .hub-l3-row > .hub-card:not(.is-open) h4 {
+  margin-bottom: 2px !important;
+  line-height: 1.12 !important;
+}
+
+#page-home #hub-card-farmacos:not(.is-open) p,
+#page-home #hub-card-farmacos:not(.is-open) small,
+#page-home #hub-card-farmacos:not(.is-open) [class*="subtitle"],
+#page-home #hub-card-farmacos:not(.is-open) [class*="subTitle"],
+#page-home #hub-card-farmacos:not(.is-open) [class*="meta"],
+#page-home #hub-card-farmacos:not(.is-open) [class*="desc"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) p,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) small,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) [class*="subtitle"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) [class*="subTitle"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) [class*="meta"],
+#page-home #hub-l2-grid > .hub-card:not(.is-open) [class*="desc"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) p,
+#page-home .hub-l3-row > .hub-card:not(.is-open) small,
+#page-home .hub-l3-row > .hub-card:not(.is-open) [class*="subtitle"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) [class*="subTitle"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) [class*="meta"],
+#page-home .hub-l3-row > .hub-card:not(.is-open) [class*="desc"] {
+  font-size: 0.92em !important;
+  line-height: 1.16 !important;
+}
+
+/* Estado aberto continua ocupando largura total, sem herdar o divisor central. */
+#page-home #hub-l2-grid > .hub-card.is-open,
+#page-home .hub-l3-row > .hub-card.is-open {
+  border-left: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* MEDCASES MICROBUILD R5-B-R4 END */
