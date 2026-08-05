@@ -495,3 +495,27 @@ body.light-mode #page-home .hub-card-body .category-chip {
   border: 1px solid var(--mcw-border) !important;
 }
 /* MEDCASES WEBVIEW HOME R4 END */
+
+/* MEDCASES MICROBUILD R5-A START */
+#page-home .hub-card:not(.is-open) {
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+#page-home .hub-card:not(.is-open) .hub-card-body,
+#page-home .hub-card:not(.is-open) [id^="hub-body-"] {
+  display: none !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+/* MEDCASES MICROBUILD R5-A END */
