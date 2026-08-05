@@ -519,3 +519,139 @@ body.light-mode #page-home .hub-card-body .category-chip {
   pointer-events: none !important;
 }
 /* MEDCASES MICROBUILD R5-A END */
+
+/* MEDCASES MICROBUILD R5-B-R3 START */
+
+/* O accordion principal preserva seus três wrappers produtivos. */
+#page-home #hub-accordion {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+/* Nível 1: Dados, resultados e Fármacos permanecem em linhas completas. */
+#page-home #hub-accordion > .hub-section,
+#page-home #hub-accordion > .hub-section > .hub-l1-section,
+#page-home .hub-l1-section > .hub-l1-row {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+#page-home .hub-l1-section > .hub-l1-row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#page-home .hub-l1-section > .hub-l1-row > .hub-card {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+/* Divisor oficial entre resultados do paciente e Fármacos. */
+#page-home #hub-card-farmacos {
+  margin-top: 14px !important;
+  padding-top: 14px !important;
+  border-top: 1px solid var(--mcw-border) !important;
+}
+
+/* Nível 2: seis módulos clínicos em três linhas de duas colunas. */
+#page-home #hub-l2-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  grid-auto-rows: auto !important;
+  align-items: stretch !important;
+  gap: 10px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 14px 0 0 !important;
+  padding: 14px 0 0 !important;
+  border-top: 1px solid var(--mcw-border) !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+#page-home #hub-l2-grid > .hub-card {
+  display: block !important;
+  grid-column: auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#page-home #hub-l2-grid > .hub-card.is-open {
+  grid-column: 1 / -1 !important;
+}
+
+/* Nível 3: Pediatria e Gestantes em uma linha final de duas colunas. */
+#page-home .hub-l3-row {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  align-items: stretch !important;
+  gap: 10px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 14px 0 0 !important;
+  padding: 14px 0 0 !important;
+  border-top: 1px solid var(--mcw-border) !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+#page-home .hub-l3-row > .hub-card {
+  display: block !important;
+  grid-column: auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#page-home .hub-l3-row > .hub-card.is-open {
+  grid-column: 1 / -1 !important;
+}
+
+/* Nenhum breakpoint pode transformar os wrappers em três colunas. */
+@media (min-width: 768px) {
+  #page-home #hub-accordion {
+    display: block !important;
+  }
+
+  #page-home #hub-l2-grid,
+  #page-home .hub-l3-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 1180px) {
+  #page-home #hub-accordion {
+    display: block !important;
+  }
+
+  #page-home #hub-l2-grid,
+  #page-home .hub-l3-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* MEDCASES MICROBUILD R5-B-R3 END */
