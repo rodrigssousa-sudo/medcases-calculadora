@@ -8453,7 +8453,7 @@
       </nav><!-- /hub-accordion -->
 
       <!-- ── Versão discreta no rodapé da home ── -->
-      <p class="hub-version-footer" id="hub-version-footer">v2.0 — Hub Accordion</p>
+      <p class="hub-version-footer" id="hub-version-footer">MEDCASES PRO</p>
 
       <!-- ══════════════════════════════════════════
            LEGACY WRAPPERS — Mantidos para compat.
@@ -22798,6 +22798,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    /* MEDCASES V1-C-R1: resultados somente após ação explícita válida. */
+    window.__hmUserRequestedResults = true;
+    document.documentElement.classList.add('hm-user-results-ready');
+
     /* Alerta visual se creatinina não foi informada */
     const warnEl = document.getElementById('hm-clcr-warn');
     if (warnEl) {
@@ -23100,6 +23104,10 @@ document.addEventListener('DOMContentLoaded', () => {
      Apaga dados salvos e reseta a UI.
   ───────────────────────────────────────────── */
   window.hmClearPatient = function() {
+    /* MEDCASES V1-C-R1: ao limpar, nenhum resultado permanece visível. */
+    window.__hmUserRequestedResults = false;
+    document.documentElement.classList.remove('hm-user-results-ready');
+
     /* BUILD 249: cancela watcher de auto-expiração pendente (dados já foram limpos) */
     if (_hmAutoClearTimer) { clearTimeout(_hmAutoClearTimer); _hmAutoClearTimer = null; }
     try { localStorage.removeItem(HM_KEY); } catch(e) {}
@@ -25396,6 +25404,61 @@ window.MedCasesBridge = {
 
 
   <!-- MEDCASES WEBVIEW HOME V1: somente #page-home; não altera topbar Flutter -->
-  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=508-patient-v1b-r9-native-radio">
+  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=509-patient-home-v1c-r1">
+
+<!-- MEDCASES PATIENT HOME V1-C-R1 START -->
+<script id="medcases-patient-explicit-results-gate-v1">
+(() => {
+  'use strict';
+
+  if (window.__mcPatientExplicitResultsGateV1) return;
+  window.__mcPatientExplicitResultsGateV1 = true;
+  window.__hmUserRequestedResults = false;
+  document.documentElement.classList.remove('hm-user-results-ready');
+
+  window.hmInvalidatePatientResults = function() {
+    window.__hmUserRequestedResults = false;
+    document.documentElement.classList.remove('hm-user-results-ready');
+  };
+
+  const textInputs = new Set([
+    'hm-weight',
+    'hm-age',
+    'hm-height',
+    'hm-creatinina',
+    'hm-urine24',
+    'hm-urine-creat'
+  ]);
+
+  const changeInputs = new Set([
+    'hm-hemodialise',
+    'hm-preg-native-no',
+    'hm-preg-native-yes'
+  ]);
+
+  document.addEventListener('input', event => {
+    const target = event.target;
+    if (!event.isTrusted || !target || !textInputs.has(target.id)) return;
+    window.hmInvalidatePatientResults();
+  }, true);
+
+  document.addEventListener('change', event => {
+    const target = event.target;
+    if (!event.isTrusted || !target || !changeInputs.has(target.id)) return;
+    window.hmInvalidatePatientResults();
+  }, true);
+
+  document.addEventListener('click', event => {
+    if (!event.isTrusted) return;
+    const target = event.target && event.target.closest
+      ? event.target.closest('#hm-btn-male, #hm-btn-female, button[onclick*="hmClearPatient"]')
+      : null;
+    if (!target) return;
+    window.hmInvalidatePatientResults();
+  }, true);
+})();
+</script>
+<!-- MEDCASES PATIENT HOME V1-C-R1 END -->
+
 </body>
 </html>

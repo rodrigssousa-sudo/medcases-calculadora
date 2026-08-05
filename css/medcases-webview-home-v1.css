@@ -3537,3 +3537,48 @@ span.preg-opt {
 }
 
 /* MEDCASES PATIENT V1-B-R9 END */
+
+/* MEDCASES PATIENT HOME V1-C-R1 START */
+
+/*
+ * Nenhum resultado clínico é mostrado no carregamento.
+ * A classe hm-user-results-ready só é aplicada por hmFixarDados()
+ * depois que a validação mínima foi aprovada.
+ */
+html:not(.hm-user-results-ready) #hm-result-pills,
+html:not(.hm-user-results-ready) #page-home #hub-card-clcr {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+html.hm-user-results-ready #hm-result-pills {
+  display: grid !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+html.hm-user-results-ready #page-home #hub-card-clcr {
+  display: block !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* Marca institucional discreta no rodapé da Home. */
+#page-home #hub-version-footer {
+  display: block !important;
+  width: 100% !important;
+  margin: 16px auto 4px !important;
+  padding: 0 !important;
+  color: var(--mcw-muted, #9CA3AF) !important;
+  font-family: inherit !important;
+  font-size: 10px !important;
+  font-weight: 650 !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0.8px !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  opacity: 0.72 !important;
+}
+
+/* MEDCASES PATIENT HOME V1-C-R1 END */
