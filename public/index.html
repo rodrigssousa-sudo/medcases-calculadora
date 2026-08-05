@@ -25404,7 +25404,7 @@ window.MedCasesBridge = {
 
 
   <!-- MEDCASES WEBVIEW HOME V1: somente #page-home; não altera topbar Flutter -->
-  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=509-patient-home-v1c-r1">
+  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=510-patient-home-v1c-r2-r3-superbuild">
 
 <!-- MEDCASES PATIENT HOME V1-C-R1 START -->
 <script id="medcases-patient-explicit-results-gate-v1">
@@ -25459,6 +25459,165 @@ window.MedCasesBridge = {
 })();
 </script>
 <!-- MEDCASES PATIENT HOME V1-C-R1 END -->
+
+
+<!-- MEDCASES PATIENT HOME V1-C-R2-R3 SUPERBUILD START -->
+<script id="medcases-patient-home-v1-c-r2-r3-superbuild">
+(() => {
+  'use strict';
+
+  if (window.__mcPatientHomeV1CR2R3Superbuild) return;
+  window.__mcPatientHomeV1CR2R3Superbuild = true;
+
+  const FIELD_IDS = new Set([
+    'hm-weight',
+    'hm-age',
+    'hm-height',
+    'hm-creatinina',
+    'hm-urine24',
+    'hm-urine-creat'
+  ]);
+
+  let patientSessionOpen = false;
+  let editedFields = new Set();
+
+  const overlayBody = () =>
+    document.getElementById('calculator-overlay-body');
+
+  const patientForm = () =>
+    document.getElementById('hm-patient-form');
+
+  const patientIsInsideOverlay = () => {
+    const body = overlayBody();
+    const form = patientForm();
+    return Boolean(body && form && body.contains(form));
+  };
+
+  const markHomeResultRow = () => {
+    const card = document.getElementById('hub-card-clcr');
+    if (!card) return;
+
+    const row = card.closest('.hub-l1-row');
+    if (row) {
+      row.classList.add('hm-home-result-divider-row');
+    }
+  };
+
+  const syncPatientSession = () => {
+    const isOpen = patientIsInsideOverlay();
+
+    if (isOpen && !patientSessionOpen) {
+      patientSessionOpen = true;
+      editedFields = new Set();
+      return;
+    }
+
+    if (!isOpen && patientSessionOpen) {
+      patientSessionOpen = false;
+      editedFields = new Set();
+    }
+  };
+
+  const resolveField = target => {
+    if (!target) return null;
+
+    const field = target.closest
+      ? target.closest('input')
+      : target;
+
+    if (!field || !FIELD_IDS.has(field.id)) return null;
+    return field;
+  };
+
+  const clearStoredValueOnFirstInteraction = event => {
+    if (!event.isTrusted) return;
+
+    syncPatientSession();
+    if (!patientSessionOpen) return;
+
+    const field = resolveField(event.target);
+    if (!field) return;
+    if (editedFields.has(field.id)) return;
+
+    editedFields.add(field.id);
+
+    const previousValue = String(field.value ?? '');
+    if (previousValue.trim() === '') return;
+
+    field.value = '';
+
+    if (typeof window.hmInvalidatePatientResults === 'function') {
+      window.hmInvalidatePatientResults();
+    }
+
+    field.dispatchEvent(new Event('input', {
+      bubbles: true
+    }));
+  };
+
+  const preserveUserValueAfterEditing = event => {
+    if (!event.isTrusted) return;
+
+    syncPatientSession();
+    if (!patientSessionOpen) return;
+
+    const field = resolveField(event.target);
+    if (!field) return;
+
+    editedFields.add(field.id);
+  };
+
+  document.addEventListener(
+    'pointerdown',
+    clearStoredValueOnFirstInteraction,
+    true
+  );
+
+  document.addEventListener(
+    'touchstart',
+    clearStoredValueOnFirstInteraction,
+    { capture: true, passive: true }
+  );
+
+  document.addEventListener(
+    'focusin',
+    clearStoredValueOnFirstInteraction,
+    true
+  );
+
+  document.addEventListener(
+    'input',
+    preserveUserValueAfterEditing,
+    true
+  );
+
+  const observer = new MutationObserver(() => {
+    markHomeResultRow();
+    syncPatientSession();
+  });
+
+  const start = () => {
+    markHomeResultRow();
+    syncPatientSession();
+
+    observer.observe(document.documentElement, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+      attributeFilter: ['class']
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start, {
+      once: true
+    });
+  } else {
+    start();
+  }
+})();
+</script>
+<!-- MEDCASES PATIENT HOME V1-C-R2-R3 SUPERBUILD END -->
 
 </body>
 </html>

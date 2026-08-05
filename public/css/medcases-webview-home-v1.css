@@ -3582,3 +3582,76 @@ html.hm-user-results-ready #page-home #hub-card-clcr {
 }
 
 /* MEDCASES PATIENT HOME V1-C-R1 END */
+
+/* MEDCASES PATIENT HOME V1-C-R2-R3 SUPERBUILD START */
+
+/*
+ * Quando os resultados ainda não foram solicitados, a linha abaixo
+ * ocupa a faixa do antigo mini-card e elimina o vazio entre
+ * Dados do Paciente e Fármacos.
+ */
+html:not(.hm-user-results-ready)
+#page-home
+.hub-l1-row.hm-home-result-divider-row {
+  display: block !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 1px !important;
+  min-height: 1px !important;
+  max-height: 1px !important;
+  margin: 14px 0 18px !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mcw-border, #374151) !important;
+  box-shadow: none !important;
+  pointer-events: none !important;
+}
+
+html:not(.hm-user-results-ready)
+#page-home
+.hub-l1-row.hm-home-result-divider-row
+#hub-card-clcr {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  pointer-events: none !important;
+}
+
+/*
+ * Quando Calcular/Fixar libera os resultados, a faixa volta
+ * integralmente ao layout original e o divisor desaparece.
+ */
+html.hm-user-results-ready
+#page-home
+.hub-l1-row.hm-home-result-divider-row {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: revert !important;
+  padding: revert !important;
+  overflow: visible !important;
+  background: revert !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  pointer-events: auto !important;
+}
+
+/*
+ * Gestantes recebe a mesma linha inferior independente
+ * que já delimita a coluna de Pediatria.
+ */
+#page-home #hub-card-gestante {
+  box-sizing: border-box !important;
+  border-bottom: 1px solid var(--mcw-border, #374151) !important;
+}
+
+/* MEDCASES PATIENT HOME V1-C-R2-R3 SUPERBUILD END */
