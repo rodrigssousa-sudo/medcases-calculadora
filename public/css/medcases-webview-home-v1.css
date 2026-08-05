@@ -3233,3 +3233,173 @@ body.light-mode
 }
 
 /* MEDCASES PATIENT V1-B-R6 END */
+
+/* MEDCASES PATIENT V1-B-R7-R2 START */
+
+/*
+ * Correção de interação do seletor Gestante no owner real do overlay.
+ * window.hmSetPregnant e os callbacks inline permanecem intactos.
+ */
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row {
+  position: relative !important;
+  z-index: 20 !important;
+  pointer-events: auto !important;
+  isolation: isolate !important;
+  overflow: visible !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row::before,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row::after {
+  pointer-events: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-toggle-wrap {
+  position: relative !important;
+  z-index: 21 !important;
+  pointer-events: auto !important;
+  overflow: visible !important;
+  isolation: isolate !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-toggle-wrap::before,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-toggle-wrap::after {
+  pointer-events: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-toggle-info {
+  position: relative !important;
+  z-index: 1 !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  pointer-events: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-switch {
+  position: relative !important;
+  z-index: 30 !important;
+  flex: 0 0 auto !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+  isolation: isolate !important;
+  overflow: visible !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-switch::before,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-switch::after {
+  pointer-events: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button#hm-preg-no,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button#hm-preg-yes {
+  position: relative !important;
+  z-index: 40 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  opacity: 1 !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button#hm-preg-no::before,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button#hm-preg-no::after,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button#hm-preg-yes::before,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button#hm-preg-yes::after {
+  pointer-events: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button#hm-preg-no:active,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+button#hm-preg-yes:active {
+  transform: scale(0.97) !important;
+  opacity: 0.88 !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-no.active-no,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-no.active,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-no[aria-pressed="true"] {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: #4B5563 !important;
+  background-color: #4B5563 !important;
+  border-color: #4B5563 !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-yes.active-yes,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-yes.active,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-yes[aria-pressed="true"] {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: #D94D7A !important;
+  background-color: #D94D7A !important;
+  border-color: #D94D7A !important;
+}
+
+/* MEDCASES PATIENT V1-B-R7-R2 END */
