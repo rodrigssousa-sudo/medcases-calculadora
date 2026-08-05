@@ -374,3 +374,124 @@ body.light-mode #page-home .hub-card-chevron {
 }
 
 /* Contrato explícito: esta folha atua somente dentro de #page-home. */
+
+/* MEDCASES WEBVIEW HOME R4 START */
+#page-home .hub-card-body,
+#page-home .hub-card-body *:not(input):not(select):not(textarea):not(option):not(svg):not(path):not(i) {
+  color: var(--mcw-text-2) !important;
+}
+
+#page-home .hub-card-body h1,
+#page-home .hub-card-body h2,
+#page-home .hub-card-body h3,
+#page-home .hub-card-body h4,
+#page-home .hub-card-body h5,
+#page-home .hub-card-body h6,
+#page-home .hub-card-body strong,
+#page-home .hub-card-body b,
+#page-home .hub-card-body label,
+#page-home .hub-card-body legend,
+#page-home .hub-card-body [class*="title"],
+#page-home .hub-card-body [class*="name"],
+#page-home .hub-card-body [class*="value"],
+#page-home .hub-card-body [class*="result"],
+#page-home .hub-card-body [class*="metric"],
+#page-home .hub-card-body [class*="stat"],
+#page-home .hub-card-body [class*="score"],
+#page-home .hub-card-body [class*="output"],
+#page-home .hub-card-body [class*="clcr"],
+#page-home .hub-card-body [class*="imc"],
+#page-home .hub-card-body [class*="peso"],
+#page-home .hub-card-body [class*="bsa"] {
+  color: var(--mcw-text) !important;
+}
+
+#page-home .hub-card-body [class*="hint"],
+#page-home .hub-card-body [class*="helper"],
+#page-home .hub-card-body [class*="placeholder"],
+#page-home .hub-card-body [class*="subtitle"],
+#page-home .hub-card-body [class*="desc"],
+#page-home .hub-card-body small {
+  color: var(--mcw-text-2) !important;
+  opacity: 0.92 !important;
+}
+
+#page-home .hub-card-body [class*="empty"],
+#page-home .hub-card-body [class*="no-result"],
+#page-home .hub-card-body [class*="noResult"],
+#page-home .hub-card-body [class*="welcome"],
+#page-home .hub-card-body [class*="search-hint"],
+#page-home .hub-card-body [class*="searchHint"] {
+  color: var(--mcw-text) !important;
+  opacity: 0.96 !important;
+}
+
+#page-home .hub-card-body [class*="chip"],
+#page-home .hub-card-body [class*="pill"],
+#page-home .hub-card-body [class*="tag"],
+#page-home .hub-card-body [class*="badge"],
+#page-home .hub-card-body .drug-category-chip,
+#page-home .hub-card-body .drug-tag,
+#page-home .hub-card-body .category-chip {
+  color: var(--mcw-text) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--mcw-border) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+#page-home .hub-card-body [class*="tile"],
+#page-home .hub-card-body [class*="panel"],
+#page-home .hub-card-body [class*="metric-card"],
+#page-home .hub-card-body [class*="result-card"],
+#page-home .hub-card-body [class*="summary-card"] {
+  color: var(--mcw-text) !important;
+}
+
+#page-home .hub-card-body ::placeholder {
+  color: var(--mcw-text-2) !important;
+  opacity: 0.78 !important;
+}
+
+body.light-mode #page-home .hub-card-body,
+body.light-mode #page-home .hub-card-body *:not(input):not(select):not(textarea):not(option):not(svg):not(path):not(i) {
+  color: var(--mcw-text-2) !important;
+}
+
+body.light-mode #page-home .hub-card-body h1,
+body.light-mode #page-home .hub-card-body h2,
+body.light-mode #page-home .hub-card-body h3,
+body.light-mode #page-home .hub-card-body h4,
+body.light-mode #page-home .hub-card-body h5,
+body.light-mode #page-home .hub-card-body h6,
+body.light-mode #page-home .hub-card-body strong,
+body.light-mode #page-home .hub-card-body b,
+body.light-mode #page-home .hub-card-body label,
+body.light-mode #page-home .hub-card-body legend,
+body.light-mode #page-home .hub-card-body [class*="title"],
+body.light-mode #page-home .hub-card-body [class*="name"],
+body.light-mode #page-home .hub-card-body [class*="value"],
+body.light-mode #page-home .hub-card-body [class*="result"],
+body.light-mode #page-home .hub-card-body [class*="metric"],
+body.light-mode #page-home .hub-card-body [class*="stat"],
+body.light-mode #page-home .hub-card-body [class*="score"],
+body.light-mode #page-home .hub-card-body [class*="output"],
+body.light-mode #page-home .hub-card-body [class*="clcr"],
+body.light-mode #page-home .hub-card-body [class*="imc"],
+body.light-mode #page-home .hub-card-body [class*="peso"],
+body.light-mode #page-home .hub-card-body [class*="bsa"] {
+  color: var(--mcw-text) !important;
+}
+
+body.light-mode #page-home .hub-card-body [class*="chip"],
+body.light-mode #page-home .hub-card-body [class*="pill"],
+body.light-mode #page-home .hub-card-body [class*="tag"],
+body.light-mode #page-home .hub-card-body [class*="badge"],
+body.light-mode #page-home .hub-card-body .drug-category-chip,
+body.light-mode #page-home .hub-card-body .drug-tag,
+body.light-mode #page-home .hub-card-body .category-chip {
+  color: var(--mcw-text) !important;
+  background: rgba(17, 24, 39, 0.06) !important;
+  border: 1px solid var(--mcw-border) !important;
+}
+/* MEDCASES WEBVIEW HOME R4 END */
