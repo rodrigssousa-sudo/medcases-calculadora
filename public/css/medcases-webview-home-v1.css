@@ -1016,68 +1016,165 @@ body.light-mode #page-home #hub-card-clcr #home-live-bsa {
 
 /* MEDCASES MICROBUILD R5-C-R2 END */
 
-/* MEDCASES MICROBUILD R5-C-R3 START */
+/* MEDCASES MICROBUILD R5-C-R4-R2 START */
 
-/* Nunca exibe simultaneamente as duas traduções do título. */
-#page-home .hub-card-name .lang-hub-pt,
-#page-home .hub-card-name .lang-hub-es,
-#page-home .hub-card-title .lang-hub-pt,
-#page-home .hub-card-title .lang-hub-es {
+/* Base exclusiva: ambos ocultos antes da resolução do idioma. */
+#page-home .lang-hub-pt,
+#page-home .lang-hub-es {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
-/* Fallback seguro antes da chegada do idioma: português. */
-body:not([data-lang]) #page-home .hub-card-name .lang-hub-pt,
-body:not([data-lang]) #page-home .hub-card-title .lang-hub-pt {
+/* Fallback sem sinal reconhecido: português. */
+#page-home .lang-hub-pt {
   display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-body:not([data-lang]) #page-home .hub-card-name .lang-hub-es,
-body:not([data-lang]) #page-home .hub-card-title .lang-hub-es {
+#page-home .lang-hub-es {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
-/* Aplicativo em português. */
-body[data-lang="pt"] #page-home .hub-card-name .lang-hub-pt,
-body[data-lang="pt"] #page-home .hub-card-title .lang-hub-pt {
+/*
+ * Sinais secundários. A ordem define prioridade:
+ * html lang/class < body class < data-current-lang < body[data-lang].
+ */
+
+/* Documento em espanhol. */
+html[lang^="es"] #page-home .lang-hub-pt,
+html.lang-es #page-home .lang-hub-pt,
+html[data-lang="es"] #page-home .lang-hub-pt,
+html[data-lang="lang-es"] #page-home .lang-hub-pt,
+html[data-lang^="es-"] #page-home .lang-hub-pt {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+html[lang^="es"] #page-home .lang-hub-es,
+html.lang-es #page-home .lang-hub-es,
+html[data-lang="es"] #page-home .lang-hub-es,
+html[data-lang="lang-es"] #page-home .lang-hub-es,
+html[data-lang^="es-"] #page-home .lang-hub-es {
   display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-body[data-lang="pt"] #page-home .hub-card-name .lang-hub-es,
-body[data-lang="pt"] #page-home .hub-card-title .lang-hub-es {
+/* Documento em português. */
+html[lang^="pt"] #page-home .lang-hub-es,
+html.lang-pt #page-home .lang-hub-es,
+html[data-lang="pt"] #page-home .lang-hub-es,
+html[data-lang="lang-pt"] #page-home .lang-hub-es,
+html[data-lang^="pt-"] #page-home .lang-hub-es {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
-/* Aplicativo em espanhol. */
-body[data-lang="es"] #page-home .hub-card-name .lang-hub-es,
-body[data-lang="es"] #page-home .hub-card-title .lang-hub-es {
+html[lang^="pt"] #page-home .lang-hub-pt,
+html.lang-pt #page-home .lang-hub-pt,
+html[data-lang="pt"] #page-home .lang-hub-pt,
+html[data-lang="lang-pt"] #page-home .lang-hub-pt,
+html[data-lang^="pt-"] #page-home .lang-hub-pt {
   display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-body[data-lang="es"] #page-home .hub-card-name .lang-hub-pt,
-body[data-lang="es"] #page-home .hub-card-title .lang-hub-pt {
+/* Classes aplicadas diretamente no body pela WebView. */
+body.lang-es #page-home .lang-hub-pt {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
-/* Compatibilidade defensiva com o atributo global alternativo. */
-[data-current-lang="pt"] #page-home .hub-card-name .lang-hub-pt,
-[data-current-lang="pt"] #page-home .hub-card-title .lang-hub-pt {
+body.lang-es #page-home .lang-hub-es {
   display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-[data-current-lang="pt"] #page-home .hub-card-name .lang-hub-es,
-[data-current-lang="pt"] #page-home .hub-card-title .lang-hub-es {
+body.lang-pt #page-home .lang-hub-es {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
-[data-current-lang="es"] #page-home .hub-card-name .lang-hub-es,
-[data-current-lang="es"] #page-home .hub-card-title .lang-hub-es {
+body.lang-pt #page-home .lang-hub-pt {
   display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-[data-current-lang="es"] #page-home .hub-card-name .lang-hub-pt,
-[data-current-lang="es"] #page-home .hub-card-title .lang-hub-pt {
+/* Atributo alternativo usado por integrações anteriores. */
+body[data-current-lang="es"] #page-home .lang-hub-pt,
+body[data-current-lang="lang-es"] #page-home .lang-hub-pt,
+body[data-current-lang^="es-"] #page-home .lang-hub-pt {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
-/* MEDCASES MICROBUILD R5-C-R3 END */
+body[data-current-lang="es"] #page-home .lang-hub-es,
+body[data-current-lang="lang-es"] #page-home .lang-hub-es,
+body[data-current-lang^="es-"] #page-home .lang-hub-es {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body[data-current-lang="pt"] #page-home .lang-hub-es,
+body[data-current-lang="lang-pt"] #page-home .lang-hub-es,
+body[data-current-lang^="pt-"] #page-home .lang-hub-es {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+body[data-current-lang="pt"] #page-home .lang-hub-pt,
+body[data-current-lang="lang-pt"] #page-home .lang-hub-pt,
+body[data-current-lang^="pt-"] #page-home .lang-hub-pt {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Sinal canônico e prioritário produzido pelo router. */
+body[data-lang="es"] #page-home .lang-hub-pt,
+body[data-lang="lang-es"] #page-home .lang-hub-pt,
+body[data-lang^="es-"] #page-home .lang-hub-pt {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+body[data-lang="es"] #page-home .lang-hub-es,
+body[data-lang="lang-es"] #page-home .lang-hub-es,
+body[data-lang^="es-"] #page-home .lang-hub-es {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body[data-lang="pt"] #page-home .lang-hub-es,
+body[data-lang="lang-pt"] #page-home .lang-hub-es,
+body[data-lang^="pt-"] #page-home .lang-hub-es {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+body[data-lang="pt"] #page-home .lang-hub-pt,
+body[data-lang="lang-pt"] #page-home .lang-hub-pt,
+body[data-lang^="pt-"] #page-home .lang-hub-pt {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* MEDCASES MICROBUILD R5-C-R4-R2 END */
