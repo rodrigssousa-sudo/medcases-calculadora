@@ -3890,3 +3890,49 @@ html.hm-user-results-ready
 }
 
 /* MEDCASES V514 HOME SEMANTIC LINE NO FILL END */
+
+/* MEDCASES V515 HIDE GLOBAL PATIENT BAR IN OVERLAY START */
+
+/*
+ * A barra azul com o botão "OK" não pertence ao teclado nativo.
+ * Ela é o #global-patient-bar em modo gpb-web-mode.
+ *
+ * Enquanto qualquer módulo do Hub estiver aberto no
+ * CalculatorOverlay, a barra global deve permanecer totalmente fora
+ * do layout. O teclado e a navegação Próximo continuam sob o contrato
+ * dos próprios inputs do módulo.
+ */
+body.calc-overlay-open #global-patient-bar,
+body.calc-overlay-open #global-patient-bar.gpb-web-mode {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  transform: none !important;
+  translate: none !important;
+  z-index: -1 !important;
+}
+
+/*
+ * Defesa adicional: mesmo que o conteúdo interno tenha sido criado
+ * antes da abertura do overlay, nenhuma parte da barra ou o botão OK
+ * pode permanecer visível acima do teclado.
+ */
+body.calc-overlay-open #global-patient-bar .gpb-inner,
+body.calc-overlay-open #global-patient-bar .gpb-info,
+body.calc-overlay-open #global-patient-bar .gpb-mini-inputs,
+body.calc-overlay-open #global-patient-bar .gpb-mini-save-btn {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* MEDCASES V515 HIDE GLOBAL PATIENT BAR IN OVERLAY END */
