@@ -3403,3 +3403,137 @@ button#hm-preg-yes:active {
 }
 
 /* MEDCASES PATIENT V1-B-R7-R2 END */
+
+/* MEDCASES PATIENT V1-B-R9 START */
+
+/*
+ * Gestante: controles radio nativos sobre os dois retângulos.
+ * O input nativo recebe o toque; o span mantém o visual aprovado.
+ */
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-switch {
+  display: grid !important;
+  grid-template-columns: repeat(2, 48px) !important;
+  gap: 5px !important;
+  width: auto !important;
+  min-width: 0 !important;
+  position: relative !important;
+  z-index: 100 !important;
+  pointer-events: auto !important;
+  overflow: visible !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-choice {
+  position: relative !important;
+  display: block !important;
+  width: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 7px !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+  cursor: pointer !important;
+  overflow: visible !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+input.preg-native-radio {
+  appearance: auto !important;
+  -webkit-appearance: radio !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 120 !important;
+  display: block !important;
+  width: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0.001 !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+  cursor: pointer !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+span.preg-opt {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 110 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  width: 48px !important;
+  height: 30px !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+  color: var(--mc-text-secondary, #D1D5DB) !important;
+  -webkit-text-fill-color: var(--mc-text-secondary, #D1D5DB) !important;
+  background: var(--mc-bg-surface2, #2D3340) !important;
+  background-image: none !important;
+  border: 1px solid var(--mc-border, #374151) !important;
+  border-radius: 7px !important;
+  box-shadow: none !important;
+  font-family: inherit !important;
+  font-size: 10.5px !important;
+  font-weight: 650 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  pointer-events: none !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-native-no:checked + #hm-preg-no,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-no.active-no {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: #4B5563 !important;
+  background-color: #4B5563 !important;
+  border-color: #4B5563 !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-native-yes:checked + #hm-preg-yes,
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-yes.active-yes {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: #D94D7A !important;
+  background-color: #D94D7A !important;
+  border-color: #D94D7A !important;
+}
+
+#calculator-overlay-container.is-active
+#calculator-overlay-body
+#hm-preg-row
+.preg-choice:active
+span.preg-opt {
+  transform: scale(0.97) !important;
+  opacity: 0.88 !important;
+}
+
+/* MEDCASES PATIENT V1-B-R9 END */
