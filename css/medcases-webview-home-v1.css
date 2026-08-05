@@ -1,0 +1,376 @@
+/* ==========================================================================
+   MEDCASES PRO — WEBVIEW HOME V1
+   Escopo estrito: #page-home
+   Escopo estrito da superfície WebView Home; páginas clínicas, fórmulas e JavaScript permanecem intactos.
+   ========================================================================== */
+
+#page-home {
+  --mcw-bg: var(--mc-bg-body, #1A1D23);
+  --mcw-surface: var(--mc-bg-surface, #252930);
+  --mcw-surface-2: var(--mc-bg-surface2, #2D3340);
+  --mcw-input: var(--mc-bg-input, #171B22);
+  --mcw-border: var(--mc-border, #374151);
+  --mcw-text: var(--mc-text-primary, #FFFFFF);
+  --mcw-text-2: var(--mc-text-secondary, #D1D5DB);
+  --mcw-muted: var(--mc-text-muted, #9CA3AF);
+  --mcw-green: var(--mc-accent, #2FB57C);
+  --mcw-radius: 12px;
+
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 10px 10px calc(20px + env(safe-area-inset-bottom, 0px));
+  background: var(--mcw-bg) !important;
+  color: var(--mcw-text) !important;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  overflow-x: hidden !important;
+}
+
+body.light-mode #page-home {
+  --mcw-bg: var(--mc-bg-body, #F3F4F6);
+  --mcw-surface: var(--mc-bg-surface, #FFFFFF);
+  --mcw-surface-2: var(--mc-bg-surface2, #E5E7EB);
+  --mcw-input: var(--mc-bg-input, #F9FAFB);
+  --mcw-border: var(--mc-border, #D1D5DB);
+  --mcw-text: var(--mc-text-primary, #111827);
+  --mcw-text-2: var(--mc-text-secondary, #4B5563);
+  --mcw-muted: var(--mc-text-muted, #6B7280);
+}
+
+/* A Home vira uma superfície clínica limpa, sem mosaico colorido. */
+#page-home .hub-accordion,
+#page-home .hub-section,
+#page-home .hub-l1-section,
+#page-home .hub-l2-section,
+#page-home .hub-l3-section,
+#page-home .hub-l1-pair,
+#page-home .hub-l2-grid,
+#page-home .hub-l3-row {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#page-home .hub-accordion,
+#page-home .hub-l1-pair,
+#page-home .hub-l2-grid,
+#page-home .hub-l3-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 0 !important;
+  align-items: stretch !important;
+  background: var(--mcw-surface) !important;
+  border: 0 !important;
+  border-radius: var(--mcw-radius) !important;
+  box-shadow: none !important;
+  filter: none !important;
+  overflow: hidden !important;
+}
+
+#page-home .hub-section,
+#page-home .hub-l1-section,
+#page-home .hub-l2-section,
+#page-home .hub-l3-section {
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#page-home .hub-divider {
+  height: 1px !important;
+  margin: 10px 4px !important;
+  background: var(--mcw-border) !important;
+  border: 0 !important;
+  opacity: 0.55 !important;
+}
+
+/* Cada módulo é uma linha clínica, e não um card decorativo independente. */
+#page-home .hub-card,
+#page-home article.hub-card {
+  --mcw-accent: var(--mcw-green);
+
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mcw-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  overflow: hidden !important;
+}
+
+#page-home .hub-card:last-child {
+  border-bottom: 0 !important;
+}
+
+#page-home .hub-card::before,
+#page-home .hub-card::after,
+#page-home .hub-card-trigger::before,
+#page-home .hub-card-trigger::after {
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Paleta semântica sem roxo, sem dourado e sem grandes superfícies coloridas. */
+#page-home #hub-card-patient       { --mcw-accent: #2FB57C; }
+#page-home #hub-card-clcr          { --mcw-accent: #2FAE9B; }
+#page-home #hub-card-farmacos      { --mcw-accent: #45B982; }
+#page-home #hub-card-interacoes    { --mcw-accent: #4C8FD8; }
+#page-home #hub-card-pediatria     { --mcw-accent: #5B83C1; }
+#page-home #hub-card-gestante      { --mcw-accent: #C66A88; }
+#page-home #hub-card-infusao       { --mcw-accent: #5B7FA3; }
+#page-home #hub-card-fluidos       { --mcw-accent: #3FA97C; }
+#page-home #hub-card-eletrolitos   { --mcw-accent: #D18B47; }
+#page-home #hub-card-hemodinamica  { --mcw-accent: #D86868; }
+#page-home #hub-card-scores        { --mcw-accent: #94A3B8; }
+
+#page-home .hub-card-trigger {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 11px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 66px !important;
+  margin: 0 !important;
+  padding: 12px 13px !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+  color: var(--mcw-text) !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+#page-home .hub-card-trigger:hover {
+  background: var(--mcw-surface-2) !important;
+}
+
+#page-home .hub-card-trigger:active {
+  background: var(--mcw-surface-2) !important;
+  opacity: 0.86 !important;
+  transform: none !important;
+}
+
+#page-home .hub-card-trigger:focus-visible {
+  outline: 2px solid var(--mcw-green) !important;
+  outline-offset: -2px !important;
+}
+
+#page-home .hub-card-ico {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 38px !important;
+  width: 38px !important;
+  height: 38px !important;
+  margin: 0 !important;
+  color: var(--mcw-accent) !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  filter: none !important;
+  font-size: 18px !important;
+}
+
+#page-home .hub-card-ico i,
+#page-home .hub-card-ico svg {
+  color: var(--mcw-accent) !important;
+  fill: currentColor !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+#page-home .hub-card-meta {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+#page-home .hub-card-name,
+#page-home .hub-card-name *,
+body.light-mode #page-home .hub-card-name,
+body.light-mode #page-home .hub-card-name * {
+  color: var(--mcw-text) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.15px !important;
+  text-transform: none !important;
+  text-shadow: none !important;
+}
+
+#page-home .hub-card-desc,
+#page-home .hub-card-desc *,
+body.light-mode #page-home .hub-card-desc,
+body.light-mode #page-home .hub-card-desc * {
+  margin-top: 3px !important;
+  color: var(--mcw-muted) !important;
+  font-size: 11.5px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+  text-shadow: none !important;
+}
+
+#page-home .hub-card-chevron,
+body.light-mode #page-home .hub-card-chevron {
+  flex: 0 0 auto !important;
+  margin-left: auto !important;
+  color: var(--mcw-muted) !important;
+  opacity: 0.8 !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+#page-home .hub-card.is-open {
+  grid-column: 1 / -1 !important;
+  background: var(--mcw-surface) !important;
+}
+
+#page-home .hub-card.is-open .hub-card-trigger {
+  background: var(--mcw-surface-2) !important;
+}
+
+#page-home .hub-card.is-open .hub-card-chevron {
+  color: var(--mcw-text-2) !important;
+  opacity: 1 !important;
+}
+
+#page-home .hub-card-body {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  padding: 12px !important;
+  color: var(--mcw-text) !important;
+  background: var(--mcw-surface) !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-top: 1px solid var(--mcw-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Inputs da Home: funcionais, discretos e sem glow. */
+#page-home input,
+#page-home select,
+#page-home textarea,
+#page-home .hm-input,
+#page-home .hm-search-input,
+#page-home .intx-search {
+  box-sizing: border-box !important;
+  color: var(--mcw-text) !important;
+  background: var(--mcw-input) !important;
+  background-image: none !important;
+  border: 1px solid var(--mcw-border) !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+  filter: none !important;
+  font-family: inherit !important;
+}
+
+#page-home input:focus,
+#page-home select:focus,
+#page-home textarea:focus,
+#page-home .hm-input:focus,
+#page-home .hm-search-input:focus,
+#page-home .intx-search:focus {
+  outline: 2px solid rgba(47, 181, 124, 0.32) !important;
+  outline-offset: 0 !important;
+  border-color: var(--mcw-green) !important;
+  box-shadow: none !important;
+}
+
+#page-home input::placeholder,
+#page-home textarea::placeholder {
+  color: var(--mcw-muted) !important;
+  opacity: 0.72 !important;
+}
+
+/* Remoção defensiva de decoração antiga somente nos triggers da Home. */
+#page-home .hub-card-trigger,
+#page-home .hub-card-trigger *,
+#page-home .hub-card-ico,
+#page-home .hub-card-chevron {
+  animation: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Mobile/WebView: uma coluna legível. */
+@media (max-width: 767px) {
+  #page-home {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+
+  #page-home .hub-accordion,
+  #page-home .hub-l1-pair,
+  #page-home .hub-l2-grid,
+  #page-home .hub-l3-row {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+/* Tablet e web: duas colunas sem masonry irregular. */
+@media (min-width: 768px) {
+  #page-home {
+    padding: 14px 16px 24px !important;
+  }
+
+  #page-home .hub-accordion,
+  #page-home .hub-l1-pair,
+  #page-home .hub-l2-grid,
+  #page-home .hub-l3-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    background: transparent !important;
+    overflow: visible !important;
+  }
+
+  #page-home .hub-card,
+  #page-home article.hub-card {
+    background: var(--mcw-surface) !important;
+    border: 0 !important;
+    border-radius: var(--mcw-radius) !important;
+  }
+
+  #page-home .hub-card-trigger,
+  #page-home .hub-card-body {
+    border-radius: var(--mcw-radius) !important;
+  }
+
+  #page-home .hub-card.is-open {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+/* Desktop amplo: máximo de três colunas, mantendo leitura clínica. */
+@media (min-width: 1180px) {
+  #page-home .hub-accordion,
+  #page-home .hub-l2-grid,
+  #page-home .hub-l3-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Contrato explícito: esta folha atua somente dentro de #page-home. */
