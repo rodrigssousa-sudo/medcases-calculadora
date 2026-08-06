@@ -89,7 +89,7 @@
          NUNCA: translateY, height fixa, overflow:hidden extra
        • #scroll-content: -webkit-overflow-scrolling:touch sempre ativo
     ═══════════════════════════════════════════════════════════ */
-    html {
+    html:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"]):not(:has(body.light-mode)):not(:has(body.theme-light)):not(:has(body[data-theme="light"])):not(:has(body[data-current-theme="light"])){
       /* height: cobre tela toda; min-height: nunca encolhe */
       height: 100%;
       min-height: 100%;
@@ -101,7 +101,7 @@
       /* Bloqueia scroll no html — apenas #scroll-content rola */
       overflow: hidden;
     }
-    body {
+    body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"]){
       /* BUILD 232: REMOVIDO position:fixed — causava viewport vazia no WebView
          iOS ao trocar de campo (focusin→focusout loop quebrava o layout).
          Substituído por overflow:hidden que previne double-scroll sem
@@ -127,7 +127,7 @@
       /* CSS var atualizada pelo applyKeyboardSafePadding() em JS */
       /* Não aplica nada no body — o padding vai direto no #scroll-content via JS */
     }
-    #app {
+    body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"]) #app{
       /* Responsivo: 100% mobile → 1280px desktop */
       width: 100%;
       max-width: 1280px;
@@ -4717,7 +4717,7 @@
       .cmd-card-title { font-size:11px; }
     }
     @media (min-width:500px) {
-      body { background:#141719; }
+      body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"]){ background:#141719; }
       .adult-dashboard-grid { gap:14px; }
       .adult-cmd-card { min-height:100px; padding:14px 14px 12px; }
       .cmd-card-icon  { width:52px; height:52px; font-size:24px; }
@@ -8406,11 +8406,14 @@
                   <span class="lang-hub-es">Pediatría</span>
                 </div>
                 <div class="hub-card-desc">
-                  <span class="lang-hub-pt">mg/kg · Broselow</span>
-                  <span class="lang-hub-es">mg/kg · Broselow</span>
+                  <span class="lang-hub-pt">Doses por peso · Broselow</span>
+                  <span class="lang-hub-es">Dosis por peso · Broselow</span>
                 </div>
               </div>
-              <span class="hub-soon-badge">Em breve</span>
+              <span class="hub-soon-badge">
+                <span class="lang-hub-pt">Em breve</span>
+                <span class="lang-hub-es">Próximamente</span>
+              </span>
               <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
             </button>
             <div class="hub-card-body" id="hub-body-pediatria" role="region">
@@ -8432,14 +8435,17 @@
               <div class="hub-card-meta">
                 <div class="hub-card-name">
                   <span class="lang-hub-pt">Gestantes</span>
-                  <span class="lang-hub-es">Gestantes</span>
+                  <span class="lang-hub-es">Embarazadas</span>
                 </div>
                 <div class="hub-card-desc">
-                  <span class="lang-hub-pt">Módulo obstétrico</span>
-                  <span class="lang-hub-es">Módulo obstétrico</span>
+                  <span class="lang-hub-pt">Obstetrícia · Risco materno</span>
+                  <span class="lang-hub-es">Obstetricia · Riesgo materno</span>
                 </div>
               </div>
-              <span class="hub-soon-badge">Em breve</span>
+              <span class="hub-soon-badge">
+                <span class="lang-hub-pt">Em breve</span>
+                <span class="lang-hub-es">Próximamente</span>
+              </span>
               <i class="fa-solid fa-chevron-down hub-card-chevron"></i>
             </button>
             <div class="hub-card-body" id="hub-body-gestante" role="region">
@@ -25257,8 +25263,8 @@ window.MedCasesBridge = {
      Garante que nunca apareça resíduo colorido nas laterais
      quando #app é mais estreito que o viewport (iPad / desktop)
   ═══════════════════════════════════════════════════ */
-  html,
-  body {
+  html:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"]):not(:has(body.light-mode)):not(:has(body.theme-light)):not(:has(body[data-theme="light"])):not(:has(body[data-current-theme="light"])),
+body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"]){
     background: #0B0F17 !important;
     background-attachment: fixed !important;
   }
@@ -26185,6 +26191,5 @@ window.MedCasesBridge = {
 })();
 </script>
 <!-- MEDCASES V517 GPB FOCUS RUNTIME END -->
-
 </body>
 </html>

@@ -811,8 +811,8 @@ body.light-mode #page-home .hub-card-body .category-chip {
   position: relative !important;
 }
 
-#page-home #hub-l2-grid > .hub-card:nth-child(2n):not(.is-open)::before,
-#page-home .hub-l3-row > .hub-card:nth-child(2n):not(.is-open)::before {
+body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"]) #page-home #hub-l2-grid > .hub-card:nth-child(2n):not(.is-open)::before,
+body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"]) #page-home .hub-l3-row > .hub-card:nth-child(2n):not(.is-open)::before{
   content: "" !important;
   position: absolute !important;
   left: -5px !important;
@@ -3982,3 +3982,285 @@ body.mc-gpb-input-suppressed #global-patient-bar * {
 }
 
 /* MEDCASES V517 GPB EXTERNAL INPUT FOCUS SUPPRESSION END */
+
+/* MEDCASES CALC UX M1 FOUNDATION START
+   Escopo: fundação visual compartilhada da Home e do overlay.
+   Contrato: somente layout/UX; sem lógica clínica ou funcional. */
+
+#page-home,
+#calculator-overlay-container {
+  --mcux-bg: #1a1d23;
+  --mcux-surface: #252930;
+  --mcux-surface-soft: #2d3340;
+  --mcux-border: #374151;
+  --mcux-divider: rgba(148, 163, 184, 0.18);
+  --mcux-text: #f8fafc;
+  --mcux-text-soft: #cbd5e1;
+  --mcux-text-muted: #94a3b8;
+  --mcux-primary: #22c55e;
+  --mcux-primary-pressed: #16a34a;
+  --mcux-focus: rgba(34, 197, 94, 0.72);
+  --mcux-danger: #ef4444;
+  --mcux-warning: #f59e0b;
+  --mcux-info: #3b82f6;
+  --mcux-radius-field: 10px;
+  --mcux-radius-surface: 12px;
+  --mcux-space-1: 4px;
+  --mcux-space-2: 8px;
+  --mcux-space-3: 12px;
+  --mcux-space-4: 16px;
+  --mcux-space-5: 20px;
+}
+
+body.light-mode #page-home,
+body.light-mode #calculator-overlay-container,
+body[data-theme="light"] #page-home,
+body[data-theme="light"] #calculator-overlay-container,
+html[data-theme="light"] #page-home,
+html[data-theme="light"] #calculator-overlay-container {
+  --mcux-bg: #f4f6f8;
+  --mcux-surface: #ffffff;
+  --mcux-surface-soft: #eef1f4;
+  --mcux-border: #d6dbe1;
+  --mcux-divider: rgba(71, 85, 105, 0.20);
+  --mcux-text: #18202a;
+  --mcux-text-soft: #475569;
+  --mcux-text-muted: #64748b;
+  --mcux-focus: rgba(22, 163, 74, 0.60);
+}
+
+#page-home,
+#calculator-overlay-container,
+#page-home *,
+#calculator-overlay-container * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#page-home button,
+#calculator-overlay-container button,
+#page-home [role="button"],
+#calculator-overlay-container [role="button"] {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#page-home .hub-card,
+#page-home .hub-card-inner,
+#page-home .adult-sub-view,
+#calculator-overlay-container .hub-card,
+#calculator-overlay-container .hub-card-inner,
+#calculator-overlay-container .adult-sub-view {
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+#page-home input,
+#page-home select,
+#page-home textarea,
+#calculator-overlay-container input,
+#calculator-overlay-container select,
+#calculator-overlay-container textarea {
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#page-home input:focus-visible,
+#page-home select:focus-visible,
+#page-home textarea:focus-visible,
+#page-home button:focus-visible,
+#calculator-overlay-container input:focus-visible,
+#calculator-overlay-container select:focus-visible,
+#calculator-overlay-container textarea:focus-visible,
+#calculator-overlay-container button:focus-visible {
+  outline: 2px solid var(--mcux-focus) !important;
+  outline-offset: 2px;
+}
+
+#page-home button:active,
+#page-home [role="button"]:active,
+#calculator-overlay-container button:active,
+#calculator-overlay-container [role="button"]:active {
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+#page-home table,
+#calculator-overlay-container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#page-home hr,
+#calculator-overlay-container hr {
+  border: 0;
+  border-top: 1px solid var(--mcux-divider);
+}
+
+/* MEDCASES CALC UX M1 FOUNDATION END */
+
+/* CALC-UX-M1-R16-R5-LIGHT-ICON-SUBTITLE-FIX
+ * Source: runtime Dark vs Light comparison.
+ * Preserves the semantic icon color already approved in Dark.
+ * Restores card subtitles only in Light.
+ */
+body.light-mode #page-home #hub-card-eletrolitos .hub-card-trigger div.hub-card-ico.hub-ico--elec > i.fa-solid.fa-bolt,
+body.theme-light #page-home #hub-card-eletrolitos .hub-card-trigger div.hub-card-ico.hub-ico--elec > i.fa-solid.fa-bolt,
+body[data-theme="light"] #page-home #hub-card-eletrolitos .hub-card-trigger div.hub-card-ico.hub-ico--elec > i.fa-solid.fa-bolt,
+body[data-current-theme="light"] #page-home #hub-card-eletrolitos .hub-card-trigger div.hub-card-ico.hub-ico--elec > i.fa-solid.fa-bolt {
+  color: rgb(209, 139, 71) !important;
+  fill: currentColor !important;
+}
+body.light-mode #page-home #hub-card-farmacos .hub-card-trigger div.hub-card-ico.hub-ico--farmacos > i.fa-solid.fa-pills,
+body.theme-light #page-home #hub-card-farmacos .hub-card-trigger div.hub-card-ico.hub-ico--farmacos > i.fa-solid.fa-pills,
+body[data-theme="light"] #page-home #hub-card-farmacos .hub-card-trigger div.hub-card-ico.hub-ico--farmacos > i.fa-solid.fa-pills,
+body[data-current-theme="light"] #page-home #hub-card-farmacos .hub-card-trigger div.hub-card-ico.hub-ico--farmacos > i.fa-solid.fa-pills {
+  color: rgb(69, 185, 130) !important;
+  fill: currentColor !important;
+}
+body.light-mode #page-home #hub-card-fluidos .hub-card-trigger div.hub-card-ico.hub-ico--fluidos > i.fa-solid.fa-droplet,
+body.theme-light #page-home #hub-card-fluidos .hub-card-trigger div.hub-card-ico.hub-ico--fluidos > i.fa-solid.fa-droplet,
+body[data-theme="light"] #page-home #hub-card-fluidos .hub-card-trigger div.hub-card-ico.hub-ico--fluidos > i.fa-solid.fa-droplet,
+body[data-current-theme="light"] #page-home #hub-card-fluidos .hub-card-trigger div.hub-card-ico.hub-ico--fluidos > i.fa-solid.fa-droplet {
+  color: rgb(63, 169, 124) !important;
+  fill: currentColor !important;
+}
+body.light-mode #page-home #hub-card-gestante .hub-card-trigger div.hub-card-ico.hub-ico--gestante > i.fa-solid.fa-person-pregnant,
+body.theme-light #page-home #hub-card-gestante .hub-card-trigger div.hub-card-ico.hub-ico--gestante > i.fa-solid.fa-person-pregnant,
+body[data-theme="light"] #page-home #hub-card-gestante .hub-card-trigger div.hub-card-ico.hub-ico--gestante > i.fa-solid.fa-person-pregnant,
+body[data-current-theme="light"] #page-home #hub-card-gestante .hub-card-trigger div.hub-card-ico.hub-ico--gestante > i.fa-solid.fa-person-pregnant {
+  color: rgb(198, 106, 136) !important;
+  fill: currentColor !important;
+}
+body.light-mode #page-home #hub-card-hemodinamica .hub-card-trigger div.hub-card-ico.hub-ico--hemo > i.fa-solid.fa-heart-pulse,
+body.theme-light #page-home #hub-card-hemodinamica .hub-card-trigger div.hub-card-ico.hub-ico--hemo > i.fa-solid.fa-heart-pulse,
+body[data-theme="light"] #page-home #hub-card-hemodinamica .hub-card-trigger div.hub-card-ico.hub-ico--hemo > i.fa-solid.fa-heart-pulse,
+body[data-current-theme="light"] #page-home #hub-card-hemodinamica .hub-card-trigger div.hub-card-ico.hub-ico--hemo > i.fa-solid.fa-heart-pulse {
+  color: rgb(216, 104, 104) !important;
+  fill: currentColor !important;
+}
+body.light-mode #page-home #hub-card-infusao .hub-card-trigger div.hub-card-ico.hub-ico--infusao > i.fa-solid.fa-syringe,
+body.theme-light #page-home #hub-card-infusao .hub-card-trigger div.hub-card-ico.hub-ico--infusao > i.fa-solid.fa-syringe,
+body[data-theme="light"] #page-home #hub-card-infusao .hub-card-trigger div.hub-card-ico.hub-ico--infusao > i.fa-solid.fa-syringe,
+body[data-current-theme="light"] #page-home #hub-card-infusao .hub-card-trigger div.hub-card-ico.hub-ico--infusao > i.fa-solid.fa-syringe {
+  color: rgb(91, 127, 163) !important;
+  fill: currentColor !important;
+}
+body.light-mode #page-home #hub-card-interacoes .hub-card-trigger div.hub-card-ico.hub-ico--interacoes > i.fa-solid.fa-triangle-exclamation,
+body.theme-light #page-home #hub-card-interacoes .hub-card-trigger div.hub-card-ico.hub-ico--interacoes > i.fa-solid.fa-triangle-exclamation,
+body[data-theme="light"] #page-home #hub-card-interacoes .hub-card-trigger div.hub-card-ico.hub-ico--interacoes > i.fa-solid.fa-triangle-exclamation,
+body[data-current-theme="light"] #page-home #hub-card-interacoes .hub-card-trigger div.hub-card-ico.hub-ico--interacoes > i.fa-solid.fa-triangle-exclamation {
+  color: rgb(76, 143, 216) !important;
+  fill: currentColor !important;
+}
+body.light-mode #page-home #hub-card-patient .hub-card-trigger div.hub-card-ico.hub-ico--patient > i.fa-solid.fa-user-injured,
+body.theme-light #page-home #hub-card-patient .hub-card-trigger div.hub-card-ico.hub-ico--patient > i.fa-solid.fa-user-injured,
+body[data-theme="light"] #page-home #hub-card-patient .hub-card-trigger div.hub-card-ico.hub-ico--patient > i.fa-solid.fa-user-injured,
+body[data-current-theme="light"] #page-home #hub-card-patient .hub-card-trigger div.hub-card-ico.hub-ico--patient > i.fa-solid.fa-user-injured {
+  color: rgb(47, 181, 124) !important;
+  fill: currentColor !important;
+}
+body.light-mode #page-home #hub-card-pediatria .hub-card-trigger div.hub-card-ico.hub-ico--ped > i.fa-solid.fa-baby,
+body.theme-light #page-home #hub-card-pediatria .hub-card-trigger div.hub-card-ico.hub-ico--ped > i.fa-solid.fa-baby,
+body[data-theme="light"] #page-home #hub-card-pediatria .hub-card-trigger div.hub-card-ico.hub-ico--ped > i.fa-solid.fa-baby,
+body[data-current-theme="light"] #page-home #hub-card-pediatria .hub-card-trigger div.hub-card-ico.hub-ico--ped > i.fa-solid.fa-baby {
+  color: rgb(91, 131, 193) !important;
+  fill: currentColor !important;
+}
+body.light-mode #page-home #hub-card-scores .hub-card-trigger div.hub-card-ico.hub-ico--scores > i.fa-solid.fa-chart-bar,
+body.theme-light #page-home #hub-card-scores .hub-card-trigger div.hub-card-ico.hub-ico--scores > i.fa-solid.fa-chart-bar,
+body[data-theme="light"] #page-home #hub-card-scores .hub-card-trigger div.hub-card-ico.hub-ico--scores > i.fa-solid.fa-chart-bar,
+body[data-current-theme="light"] #page-home #hub-card-scores .hub-card-trigger div.hub-card-ico.hub-ico--scores > i.fa-solid.fa-chart-bar {
+  color: rgb(148, 163, 184) !important;
+  fill: currentColor !important;
+}
+body.light-mode #page-home .hub-card .hub-card-desc,
+body.light-mode #page-home .hub-card [class*="subtitle"],
+body.light-mode #page-home .hub-card [data-subtitle],
+body.theme-light #page-home .hub-card .hub-card-desc,
+body.theme-light #page-home .hub-card [class*="subtitle"],
+body.theme-light #page-home .hub-card [data-subtitle],
+body[data-theme="light"] #page-home .hub-card .hub-card-desc,
+body[data-theme="light"] #page-home .hub-card [class*="subtitle"],
+body[data-theme="light"] #page-home .hub-card [data-subtitle],
+body[data-current-theme="light"] #page-home .hub-card .hub-card-desc,
+body[data-current-theme="light"] #page-home .hub-card [class*="subtitle"],
+body[data-current-theme="light"] #page-home .hub-card [data-subtitle] {
+  display: block !important;
+  visibility: visible !important;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  opacity: 0.68 !important;
+  color: var(--border-subtle) !important;
+}
+
+
+/* CALC-UX-M1-R17-R5-THREE-SUBTITLES-FINAL-FIX: light-only chromatic restoration for the three audited subtitles. */
+body.light-mode #hub-card-patient .hub-card-desc,
+body.light-mode #hub-card-patient .hub-card-desc span,
+body.light-mode #hub-card-pediatria .hub-soon-badge,
+body.light-mode #hub-card-pediatria .hub-soon-badge span,
+body.light-mode #hub-card-gestante .hub-soon-badge,
+body.light-mode #hub-card-gestante .hub-soon-badge span,
+body.theme-light #hub-card-patient .hub-card-desc,
+body.theme-light #hub-card-patient .hub-card-desc span,
+body.theme-light #hub-card-pediatria .hub-soon-badge,
+body.theme-light #hub-card-pediatria .hub-soon-badge span,
+body.theme-light #hub-card-gestante .hub-soon-badge,
+body.theme-light #hub-card-gestante .hub-soon-badge span,
+body[data-theme="light"] #hub-card-patient .hub-card-desc,
+body[data-theme="light"] #hub-card-patient .hub-card-desc span,
+body[data-theme="light"] #hub-card-pediatria .hub-soon-badge,
+body[data-theme="light"] #hub-card-pediatria .hub-soon-badge span,
+body[data-theme="light"] #hub-card-gestante .hub-soon-badge,
+body[data-theme="light"] #hub-card-gestante .hub-soon-badge span,
+body[data-current-theme="light"] #hub-card-patient .hub-card-desc,
+body[data-current-theme="light"] #hub-card-patient .hub-card-desc span,
+body[data-current-theme="light"] #hub-card-pediatria .hub-soon-badge,
+body[data-current-theme="light"] #hub-card-pediatria .hub-soon-badge span,
+body[data-current-theme="light"] #hub-card-gestante .hub-soon-badge,
+body[data-current-theme="light"] #hub-card-gestante .hub-soon-badge span,
+html.light-mode body #hub-card-patient .hub-card-desc,
+html.light-mode body #hub-card-patient .hub-card-desc span,
+html.light-mode body #hub-card-pediatria .hub-soon-badge,
+html.light-mode body #hub-card-pediatria .hub-soon-badge span,
+html.light-mode body #hub-card-gestante .hub-soon-badge,
+html.light-mode body #hub-card-gestante .hub-soon-badge span,
+html.theme-light body #hub-card-patient .hub-card-desc,
+html.theme-light body #hub-card-patient .hub-card-desc span,
+html.theme-light body #hub-card-pediatria .hub-soon-badge,
+html.theme-light body #hub-card-pediatria .hub-soon-badge span,
+html.theme-light body #hub-card-gestante .hub-soon-badge,
+html.theme-light body #hub-card-gestante .hub-soon-badge span,
+html[data-theme="light"] body #hub-card-patient .hub-card-desc,
+html[data-theme="light"] body #hub-card-patient .hub-card-desc span,
+html[data-theme="light"] body #hub-card-pediatria .hub-soon-badge,
+html[data-theme="light"] body #hub-card-pediatria .hub-soon-badge span,
+html[data-theme="light"] body #hub-card-gestante .hub-soon-badge,
+html[data-theme="light"] body #hub-card-gestante .hub-soon-badge span,
+html[data-current-theme="light"] body #hub-card-patient .hub-card-desc,
+html[data-current-theme="light"] body #hub-card-patient .hub-card-desc span,
+html[data-current-theme="light"] body #hub-card-pediatria .hub-soon-badge,
+html[data-current-theme="light"] body #hub-card-pediatria .hub-soon-badge span,
+html[data-current-theme="light"] body #hub-card-gestante .hub-soon-badge,
+html[data-current-theme="light"] body #hub-card-gestante .hub-soon-badge span {
+  color: var(--text-muted);
+}
+/* END CALC-UX-M1-R17-R5-THREE-SUBTITLES-FINAL-FIX */
+
+/* CALC-UX-M1-R17-R6-THREE-SUBTITLES-LIGHT-FINAL-BLACK START */
+body.light-mode #hub-card-patient .hub-card-desc span{
+  color:#0F172A !important;
+}
+body.light-mode #hub-card-pediatria .hub-soon-badge,
+body.light-mode #hub-card-pediatria .hub-soon-badge span,
+body.light-mode #hub-card-gestante .hub-soon-badge,
+body.light-mode #hub-card-gestante .hub-soon-badge span{
+  color:#0F172A !important;
+}
+/* CALC-UX-M1-R17-R6-THREE-SUBTITLES-LIGHT-FINAL-BLACK END */
