@@ -4264,3 +4264,408 @@ body.light-mode #hub-card-gestante .hub-soon-badge span{
   color:#0F172A !important;
 }
 /* CALC-UX-M1-R17-R6-THREE-SUBTITLES-LIGHT-FINAL-BLACK END */
+
+/* CALC-FARMACOS-V1-R10-R2-SEARCH-ICON-ALIGNMENT START */
+#farmacos-v2-shell{
+  --farm-v2-surface:transparent;
+  --farm-v2-surface-soft:#2D3340;
+  --farm-v2-border:#374151;
+  --farm-v2-text:#F8FAFC;
+  --farm-v2-muted:#A8B0BD;
+  --farm-v2-selected:#6B7280;
+  width:100%;
+  margin:8px 0 0;
+  color:var(--farm-v2-text);
+  background:var(--farm-v2-surface);
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  min-height:120px;
+  overflow:visible;
+}
+body.light-mode #farmacos-v2-shell{
+  --farm-v2-surface:transparent;
+  --farm-v2-surface-soft:#F5F7F9;
+  --farm-v2-border:#D8E0E7;
+  --farm-v2-text:#0F172A;
+  --farm-v2-muted:#667085;
+  --farm-v2-selected:#475467;
+}
+#farmacos-v2-shell,
+#farmacos-v2-shell *{
+  box-sizing:border-box;
+}
+#farmacos-v2-shell .farmacos-v2-tabs{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  padding:0 2px;
+  border-bottom:1px solid var(--farm-v2-border);
+  scrollbar-width:none;
+}
+#farmacos-v2-shell .farmacos-v2-tabs::-webkit-scrollbar{
+  display:none;
+}
+#farmacos-v2-shell .farmacos-v2-tab{
+  position:relative;
+  flex:0 0 auto;
+  border:0;
+  background:transparent;
+  color:var(--farm-v2-muted);
+  padding:12px 0 13px;
+  font:600 13px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  cursor:pointer;
+}
+#farmacos-v2-shell .farmacos-v2-tab.is-active{
+  color:var(--farm-v2-text);
+}
+#farmacos-v2-shell .farmacos-v2-tab.is-active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:2px;
+  border-radius:2px;
+  background:var(--farm-v2-selected);
+}
+#farmacos-v2-shell .farmacos-v2-panel{
+  display:none;
+}
+#farmacos-v2-shell .farmacos-v2-panel.is-active{
+  display:block;
+}
+#farmacos-v2-shell .farmacos-v2-section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  padding:15px 2px 8px;
+}
+#farmacos-v2-shell .farmacos-v2-section-title{
+  color:var(--farm-v2-text);
+  font-size:13px;
+  font-weight:700;
+  line-height:1.25;
+  letter-spacing:.01em;
+}
+#farmacos-v2-shell .farmacos-v2-section-help{
+  color:var(--farm-v2-muted);
+  font-size:11px;
+  line-height:1.25;
+  text-align:right;
+}
+#farmacos-v2-shell .farmacos-v2-quick-label{
+  color:var(--farm-v2-muted);
+  font-size:10px;
+  font-weight:650;
+  line-height:1.2;
+  margin:1px 2px 7px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+#farmacos-v2-shell .farmacos-v2-quick{
+  display:flex;
+  gap:7px;
+  overflow-x:auto;
+  padding:0 2px 13px;
+  scrollbar-width:none;
+}
+#farmacos-v2-shell .farmacos-v2-quick::-webkit-scrollbar{
+  display:none;
+}
+#farmacos-v2-shell .farmacos-v2-chip{
+  flex:0 0 auto;
+  border:1px solid var(--farm-v2-border);
+  border-radius:999px;
+  background:transparent;
+  color:var(--farm-v2-muted);
+  padding:7px 10px;
+  font-size:11px;
+  font-weight:600;
+  line-height:1.2;
+  white-space:nowrap;
+  cursor:pointer;
+}
+#farmacos-v2-shell .farmacos-v2-chip.is-active{
+  background:var(--farm-v2-surface-soft);
+  color:var(--farm-v2-text);
+}
+#farmacos-v2-shell .farmacos-v2-context-list,
+#farmacos-v2-shell .farmacos-v2-group-list{
+  border-top:1px solid var(--farm-v2-border);
+}
+#farmacos-v2-shell .farmacos-v2-context-row,
+#farmacos-v2-shell .farmacos-v2-module-row,
+#farmacos-v2-shell .farmacos-v2-group-row{
+  width:100%;
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  border:0;
+  border-bottom:1px solid var(--farm-v2-border);
+  background:transparent;
+  color:var(--farm-v2-text);
+  padding:12px 2px;
+  text-align:left;
+  cursor:pointer;
+}
+#farmacos-v2-shell .farmacos-v2-module-row{
+  min-height:52px;
+  padding-left:20px;
+  padding-right:2px;
+}
+#farmacos-v2-shell .farmacos-v2-context-row:hover,
+#farmacos-v2-shell .farmacos-v2-module-row:hover,
+#farmacos-v2-shell .farmacos-v2-group-row:hover{
+  background:var(--farm-v2-surface-soft);
+}
+#farmacos-v2-shell .farmacos-v2-row-main{
+  min-width:0;
+  flex:1;
+  display:block;
+}
+#farmacos-v2-shell .farmacos-v2-row-title{
+  display:block;
+  color:var(--farm-v2-text);
+  font-size:14px;
+  font-weight:650;
+  line-height:1.25;
+}
+#farmacos-v2-shell .farmacos-v2-row-subtitle{
+  display:block;
+  color:var(--farm-v2-muted);
+  font-size:11px;
+  line-height:1.3;
+  margin-top:4px;
+}
+#farmacos-v2-shell .farmacos-v2-row-count{
+  flex:0 0 auto;
+  color:var(--farm-v2-muted);
+  font-size:11px;
+  line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+#farmacos-v2-shell .farmacos-v2-chevron{
+  flex:0 0 auto;
+  color:var(--farm-v2-muted);
+  font-size:18px;
+  line-height:1;
+  transition:transform .18s ease;
+}
+#farmacos-v2-shell .farmacos-v2-context.is-open > .farmacos-v2-context-row .farmacos-v2-chevron{
+  transform:rotate(90deg);
+}
+#farmacos-v2-shell .farmacos-v2-modules{
+  display:none;
+  background:var(--farm-v2-surface-soft);
+}
+#farmacos-v2-shell .farmacos-v2-context.is-open > .farmacos-v2-modules{
+  display:block;
+}
+#farmacos-v2-shell .farmacos-v2-empty{
+  color:var(--farm-v2-muted);
+  padding:32px 14px;
+  text-align:center;
+  font-size:12px;
+  line-height:1.45;
+  border-bottom:1px solid var(--farm-v2-border);
+}
+@media (max-width:520px){
+  #farmacos-v2-shell .farmacos-v2-tabs{
+    gap:17px;
+  }
+  #farmacos-v2-shell .farmacos-v2-section-head{
+    padding-top:13px;
+  }
+  #farmacos-v2-shell .farmacos-v2-row-title{
+    font-size:13.5px;
+  }
+}
+#farmacos-v2-shell ~ [data-farmacos-v2-legacy-control],
+[data-farmacos-v2-legacy-control][style*="display: none"]{
+  display:none !important;
+}
+#farmacos-v2-shell{
+  position:relative;
+  z-index:1;
+}
+[data-farmacos-v2-legacy-control]{
+  display:none !important;
+}
+#farmacos-v2-shell[data-farmacos-owner="drug-visible-surface"]{
+  margin-top:12px;
+}
+#farmacos-v2-shell[data-farmacos-mount-strategy="stable-after-search"]{
+  display:block !important;
+  position:relative;
+  width:100%;
+  max-width:none;
+}
+#farmacos-v2-shell[data-farmacos-mount-strategy="visible-overlay-after-search"]{
+  display:block !important;
+  position:relative !important;
+  width:100% !important;
+  min-width:0 !important;
+  max-width:none !important;
+  height:auto !important;
+  min-height:120px !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  transform:none !important;
+  margin:12px 0 0 !important;
+}
+#farmacos-v2-shell[data-farmacos-mount-strategy="visible-overlay-after-search"] .farmacos-v2-tabs{
+  width:100%;
+}
+[data-farmacos-v2-search-wrapper="true"]{
+  position:relative !important;
+}
+[data-farmacos-v2-search-input="true"]{
+  box-sizing:border-box !important;
+  padding-left:52px !important;
+  padding-right:18px !important;
+  line-height:normal !important;
+  text-indent:0 !important;
+  background-position:18px 50% !important;
+  background-size:18px 18px !important;
+  background-repeat:no-repeat !important;
+}
+[data-farmacos-v2-search-icon="true"]{
+  position:absolute !important;
+  left:18px !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  width:18px !important;
+  height:18px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  line-height:1 !important;
+  margin:0 !important;
+  pointer-events:none !important;
+  z-index:2 !important;
+}
+@media (max-width:520px){
+  [data-farmacos-v2-search-input="true"]{
+    padding-left:48px !important;
+    padding-right:16px !important;
+    background-position:16px 50% !important;
+  }
+  [data-farmacos-v2-search-icon="true"]{
+    left:16px !important;
+  }
+}
+/* CALC-FARMACOS-V1-R10-R2-SEARCH-ICON-ALIGNMENT END */
+
+/* CALC-FARMACOS-DETAIL-V1-R22-OUTER-CONTAINER-CASCADE-FIX START
+   Fallback CSS; o runtime reforça as mesmas propriedades inline !important.
+*/
+body.calc-overlay-open
+#calculator-overlay-container:has(#fd-modal.open) {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+body.calc-overlay-open
+#calculator-overlay-container:has(#fd-modal.open)
+#calculator-overlay-header {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+body.calc-overlay-open
+#calculator-overlay-container:has(#fd-modal.open)
+#calculator-overlay-close {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+body.calc-overlay-open
+#calculator-overlay-container:has(#fd-modal.open)
+#fd-modal-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+body.calc-overlay-open
+#calculator-overlay-container:has(#fd-modal.open)
+#fd-modal-overlay > #fd-modal.open[data-current-drug-id] {
+  position: relative !important;
+  inset: auto !important;
+  top: 0 !important;
+  width: min(100%, 820px) !important;
+  max-width: 820px !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  max-height: 100vh !important;
+  max-height: 100dvh !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  transform: none !important;
+  border-radius: 0 !important;
+}
+
+body.calc-overlay-open
+#calculator-overlay-container:has(#fd-modal.open)
+#fd-modal.open > .fd-header {
+  position: relative !important;
+  inset: auto !important;
+  flex: 0 0 auto !important;
+  min-height: 76px !important;
+  margin: 0 !important;
+  padding:
+    calc(14px + env(safe-area-inset-top))
+    60px
+    13px
+    18px !important;
+  transform: none !important;
+  border-radius: 0 !important;
+}
+
+body.calc-overlay-open
+#calculator-overlay-container:has(#fd-modal.open)
+#fd-modal.open > #fd-body.fd-body {
+  position: relative !important;
+  inset: auto !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  height: auto !important;
+  max-height: none !important;
+  margin: 0 !important;
+  transform: none !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+/* CALC-FARMACOS-DETAIL-V1-R22-OUTER-CONTAINER-CASCADE-FIX END */

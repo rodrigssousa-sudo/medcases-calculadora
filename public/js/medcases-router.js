@@ -1737,43 +1737,13 @@
      recebam dados viáveis independente da completude da URL.
   ─────────────────────────────────────────────────────────────── */
   function _applyClinicialFallbacks(params) {
-    var enriched = {};
-
-    /* Copia todos os campos da URL real primeiro */
-    var BIOMETRIC_KEYS = ['peso', 'altura', 'idade', 'creatinina', 'clcr',
-                          'sexo', 'kdigo', 'child_pugh', 'chads_vasc',
-                          'has_bled', 'ascvd', 'hco3', 'na', 'k', 'mg',
-                          'lang', 'idioma', 'modulo'];
-    BIOMETRIC_KEYS.forEach(function (k) {
-      var v = params ? params.get(k) : null;
-      if (v !== null && v !== '') { enriched[k] = v; }
-    });
-
-    /* Aplica defaults apenas para campos biométricos ausentes */
-    var applied = [];
-    Object.keys(CLINICAL_DEFAULTS).forEach(function (k) {
-      if (!enriched[k]) {
-        enriched[k] = CLINICAL_DEFAULTS[k];
-        applied.push(k + '=' + CLINICAL_DEFAULTS[k]);
-      }
-    });
-
-    if (applied.length > 0) {
-      console.warn('[CSR v479] URL incompleta — aplicando fallbacks clínicos seguros: ' + applied.join(', '));
-      /* Expõe para o painel de telemetria */
-      window._csrFallbacksApplied = applied.join(' | ');
-    } else {
-      window._csrFallbacksApplied = null;
-    }
-
-    /* Retorna adapter duck-typed compatível com URLSearchParams.get() */
-    return {
-      get: function (k) {
-        return (enriched[k] !== undefined && enriched[k] !== null) ? String(enriched[k]) : null;
-      },
-      _enriched: enriched,   /* debug: acesso direto ao mapa */
-      _hadFallbacks: applied.length > 0
-    };
+    /* CALC-PATIENT-BOOT-V1-R1:
+       NÃO inventar biometria no boot.
+       Somente parâmetros clínicos explicitamente recebidos podem formar patientData.
+       ClinicalSupportRouter.injectPatient(payload) permanece independente deste fluxo. */
+    if (!params) params = new URLSearchParams();
+    try { params._hadFallbacks = false; } catch (e) {}
+    return params;
   }
 
   /* ───────────────────────────────────────────────────────────────
@@ -1871,7 +1841,7 @@
         console.warn('[CSR v481] URL clínica sem ?modulo= — usando fallback: ' + MODULO_FALLBACK);
       } else {
         /* Lang-only (?lang=pt / ?lang=es) ou sem params — modo passivo HOME.
-           Clinical Defaults já aplicados silenciosamente; DOM pronto para cálculo.
+           Sem Clinical Defaults; HOME permanece sem paciente até receber dados explícitos.
            Nenhum modal/overlay é aberto. Path-A listener fica ativo para
            capturar futuras navegações injectadas pelo Flutter.              */
         console.log('[CSR v481] URL de idioma puro ou sem params — HOME estática. Defaults clínicos injetados no background.');
@@ -2022,7 +1992,7 @@
     ' | API: window.ClinicalSupportRouter' +
     ' | PATH-A: URL mutation listener' +
     ' | PATH-C: injectPatient(payload)' +
-    ' | FALLBACKS: clinical defaults ativos (silent, no modal)' +
+    ' | FALLBACKS: desativados — paciente vazio sem dados explícitos' +
     ' | FIX-481: lang-only URL → HOME estática sem MODULO_FALLBACK' +
     ' | FIX-482: _domIsViable() sem offsetParent — kills iOS reflow panic' +
     ' | FIX-482: _emergencyPersist() guard — sem overlay se #hm-weight presente' +
