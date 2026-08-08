@@ -21108,12 +21108,12 @@ function _adaptExternalDB(dbObj, categoryLabel) {
           /* Path 1: drogaA → drogaB  (O(1) hasOwnProperty — prototype-safe) */
           if (Object.prototype.hasOwnProperty.call(db, fA) &&
               Object.prototype.hasOwnProperty.call(db[fA], fB))
-            _addCandidate(db[fA][fB], 'direto', '');
+            _addCandidate(db[fA][fB], 'par_exato', '');
 
           /* Path 2: drogaB → drogaA  (O(1) hasOwnProperty — prototype-safe) */
           if (Object.prototype.hasOwnProperty.call(db, fB) &&
               Object.prototype.hasOwnProperty.call(db[fB], fA))
-            _addCandidate(db[fB][fA], 'direto', '');
+            _addCandidate(db[fB][fA], 'par_exato', '');
 
           /* Path 3: drogaA → classeB */
           for (const cls of classesB) {
@@ -21143,24 +21143,81 @@ function _adaptExternalDB(dbObj, categoryLabel) {
             }
           }
 
-          /* CALC-INTERACOES-MOTOR-V2-M1 — specificity-first
-           Regra clínica de seleção:
-           par específico > fármaco×classe > classe×classe;
-           scoreClinico desempata somente dentro do mesmo nível. */
+          /* CALC-INTERACOES-V2-M4 — CLINICAL-GRADE TRUTH ENGINE
+           Contrato clínico conservador:
+           1) proveniência nasce EXCLUSIVAMENTE do caminho real do lookup;
+           2) texto nunca promove fallback para par exato;
+           3) linguagem inequivocamente ampla pode apenas REBAIXAR par direto;
+           4) conteúdo clínico (descrição/conduta/score) não é inventado nem reescrito;
+           5) desempate preserva especificidade primeiro e score depois.
+           Ordem: PAR_EXATO > FARMACO_CLASSE > CLASSE_CLASSE. */
+        const _mcIntxFlattenEvidence = (value, depth = 0) => {
+          if (depth > 5 || value === null || value === undefined) return '';
+          if (typeof value === 'string' || typeof value === 'number') return String(value);
+          if (Array.isArray(value)) return value.map(v => _mcIntxFlattenEvidence(v, depth + 1)).join(' ');
+          if (typeof value === 'object') return Object.keys(value).map(k => _mcIntxFlattenEvidence(value[k], depth + 1)).join(' ');
+          return '';
+        };
+        const _mcIntxNormEvidenceText = (value) => String(value || '')
+          .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+          .toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
+        const _mcIntxGenericSignals = (candidate) => {
+          const t = _mcIntxNormEvidenceText(_mcIntxFlattenEvidence(candidate && candidate.dados));
+          if (!t) return [];
+          const out = [];
+          if (/\b(dois|duas)\s+ou\s+mais\b/.test(t) || /\b(dos|tres)\s+o\s+mas\b/.test(t)) out.push('MULTI_DRUG_COUNT');
+          if (/\b(multiplos|multiplas|multiples)\s+(farmacos|medicamentos|drogas|anticonvulsivantes|antiepilepticos|combinacoes|combinaciones)\b/.test(t)) out.push('MULTIPLE_GROUP');
+          if (/\b(por\s+exemplo|por\s+ejemplo|exemplos?|ejemplos?)\b/.test(t)) out.push('EXAMPLE_LANGUAGE');
+          if (/\b(combinacoes|combinaciones|associacoes|asociaciones)\s+(como|entre|de|con)\b/.test(t)) out.push('COMBINATION_LANGUAGE');
+          if (/\b(outros|outras|otros|otras)\s+(farmacos|medicamentos|drogas|anticonvulsivantes|antiepilepticos)\b/.test(t)) out.push('OTHER_DRUGS');
+          return out;
+        };
+        const _mcIntxLooksGenericRecord = (candidate) => _mcIntxGenericSignals(candidate).length > 0;
+        const _mcIntxPairMentions = (candidate) => {
+          const t = _mcIntxNormEvidenceText(_mcIntxFlattenEvidence(candidate && candidate.dados));
+          const a = _mcIntxNormEvidenceText(fA);
+          const b = _mcIntxNormEvidenceText(fB);
+          return {
+            a: !!(a && a.length > 2 && t.indexOf(a) >= 0),
+            b: !!(b && b.length > 2 && t.indexOf(b) >= 0)
+          };
+        };
+        const _mcIntxCanonicalMatchType = (candidate) => {
+          const mt = String((candidate && candidate.matchTipo) || '').toLowerCase();
+          if (mt === 'classe_classe') return 'classe_classe';
+          if (mt === 'droga_classe' || mt === 'farmaco_classe') return 'farmaco_classe';
+          if (mt !== 'par_exato') return 'classe_classe';
+          if (!_mcIntxLooksGenericRecord(candidate)) return 'par_exato';
+          const pm = _mcIntxPairMentions(candidate);
+          return (pm.a || pm.b) ? 'farmaco_classe' : 'classe_classe';
+        };
         const _mcIntxSpecificityRank = (candidate) => {
-          const mt = String((candidate && candidate.matchTipo) || '');
-          if (mt === 'classe_classe') return 1;
-          if (mt === 'droga_classe') return 2;
-          return 3;
+          const mt = _mcIntxCanonicalMatchType(candidate);
+          if (mt === 'par_exato') return 3;
+          if (mt === 'farmaco_classe') return 2;
+          return 1;
         };
         const best = candidates.reduce((prev, cur) => {
           const prevRank = _mcIntxSpecificityRank(prev);
           const curRank  = _mcIntxSpecificityRank(cur);
           if (curRank !== prevRank) return curRank > prevRank ? cur : prev;
-          return ((cur.dados.scoreClinico || 0) > (prev.dados.scoreClinico || 0))
-            ? cur
-            : prev;
+          return ((cur.dados.scoreClinico || 0) > (prev.dados.scoreClinico || 0)) ? cur : prev;
         });
+        try {
+          const _mcSignals = _mcIntxGenericSignals(best);
+          const _mcMentions = _mcIntxPairMentions(best);
+          window.__MC_INTX_LAST_TRACE__ = Object.freeze({
+            build: 'CALC-INTERACOES-V2-M4-CLINICAL-GRADE-FINAL',
+            pair: [String(fA || ''), String(fB || '')],
+            candidates: candidates.length,
+            lookupTypeRaw: String((best && best.matchTipo) || ''),
+            canonicalType: _mcIntxCanonicalMatchType(best),
+            classPath: String((best && best.classeVia) || ''),
+            genericSignals: _mcSignals.slice(),
+            pairMentions: { a: !!_mcMentions.a, b: !!_mcMentions.b },
+            scoreClinico: Number((best && best.dados && best.dados.scoreClinico) || 0)
+          });
+        } catch (_) {}
 
           /* ── Push sem duplicatas ── */
           const jaExiste = interacoesEncontradas.some(it =>
@@ -21172,7 +21229,7 @@ function _adaptExternalDB(dbObj, categoryLabel) {
               med1:      nomA,
               med2:      nomB,
               config:    best.dados,
-              matchTipo: best.matchTipo,
+              matchTipo: _mcIntxCanonicalMatchType(best),
               classeVia: best.classeVia
             });
           }
@@ -21282,19 +21339,20 @@ function _adaptExternalDB(dbObj, categoryLabel) {
         } else {
           txtGravidade = isES ? 'GRAVEDAD LEVE' : 'GRAVIDADE LEVE';
         }
-        const _mcIntxMatchTipo = String(item.matchTipo || '');
-        if (_mcIntxMatchTipo === 'classe_classe') {
+        const _mcIntxMatchTipo = String(item.matchTipo || '').toLowerCase();
+        if (_mcIntxMatchTipo === 'par_exato') {
           riskGroup = isES
-            ? 'Base: correspondencia entre clases farmacologicas'
-            : 'Base: correspondência entre classes farmacológicas';
-        } else if (_mcIntxMatchTipo === 'droga_classe') {
+            ? 'Precisión de la base: correspondencia específica del par'
+            : 'Precisão da base: correspondência específica do par';
+        } else if (_mcIntxMatchTipo === 'farmaco_classe' ||
+                   _mcIntxMatchTipo === 'droga_classe') {
           riskGroup = isES
-            ? 'Base: correspondencia farmaco-clase'
-            : 'Base: correspondência fármaco-classe';
+            ? 'Precisión de la base: correspondencia por clase farmacológica'
+            : 'Precisão da base: correspondência por classe farmacológica';
         } else {
           riskGroup = isES
-            ? 'Base: correspondencia especifica del par'
-            : 'Base: correspondência específica do par';
+            ? 'Precisión de la base: inferencia por grupo terapéutico'
+            : 'Precisão da base: inferência por grupo terapêutico';
         }
 
         /* ── Campo 2: SCORE CLÍNICO + agrupamento ── */
@@ -31566,46 +31624,228 @@ body.mc-intx-final-active .card-interactions-container{
 </style>
 <script id="calc-intx-m3-r5-script">
 (function(){
-  const BUILD='CALC-INTERACOES-V1-M3-R5-COMPACT-BUTTON-DECARD';
+  const BUILD='CALC-RUNTIME-FREEZE-V1-R1-R5-OBSERVER-IDEMPOTENT';
+  let scheduled=false;
+
+  function setStyleIfChanged(el, prop, value){
+    if (el && el.style && el.style[prop] !== value) el.style[prop]=value;
+  }
+
   function normalizeVerifyButton(root=document){
-    const candidates = Array.from(root.querySelectorAll('#btn-verificar-interacoes, .btn-verificar-interacoes, .card-btn-drugs, button'))
-      .filter(el => /verificar\s*intera/i.test((el.textContent||'') + ' ' + (el.innerText||'')) || (el.getAttribute('onclick')||'').includes('executarChecagemInteracoes'));
-    candidates.forEach(btn => {
-      btn.textContent = 'Verificar Interações';
-      btn.innerHTML = 'Verificar Interações';
-      btn.setAttribute('aria-label','Verificar Interações');
-      btn.style.minHeight='40px';
-      btn.style.height='40px';
-      btn.style.padding='0 14px';
-      btn.style.borderRadius='12px';
-      btn.style.fontSize='15px';
-      btn.style.fontWeight='700';
-      btn.style.lineHeight='1.1';
-      btn.style.gap='8px';
+    const buttons=Array.from(root.querySelectorAll(
+      '#btn-verificar-interacoes, .btn-verificar-interacoes, .card-btn-drugs, button'
+    )).filter(el =>
+      /verificar\s*intera/i.test((el.textContent||'')+' '+(el.innerText||'')) ||
+      (el.getAttribute('onclick')||'').includes('executarChecagemInteracoes')
+    );
+
+    buttons.forEach(btn => {
+      const desired='Verificar Interações';
+      if ((btn.textContent||'').trim() !== desired || btn.children.length > 0) {
+        btn.textContent=desired;
+      }
+      if (btn.getAttribute('aria-label') !== desired) btn.setAttribute('aria-label',desired);
+      setStyleIfChanged(btn,'minHeight','40px');
+      setStyleIfChanged(btn,'height','40px');
+      setStyleIfChanged(btn,'padding','0px 14px');
+      setStyleIfChanged(btn,'borderRadius','12px');
+      setStyleIfChanged(btn,'fontSize','15px');
+      setStyleIfChanged(btn,'fontWeight','700');
+      setStyleIfChanged(btn,'lineHeight','1.1');
+      setStyleIfChanged(btn,'gap','8px');
     });
   }
+
   function cleanResidualCardLines(root=document){
     const selectors=[
-      '.interaction-alert','.interactions-alert-box','.result-dashboard','.drug-result-area','.drug-result-card',
-      '.interaction-item','.interaction-list','.interaction-pair','.interaction-pair-action','.interaction-pair-desc',
-      '.result-item','.calc-drug-result','.subview-drugs','.cmdcard-drugs','.interaction-alert-header','.interaction-pair-drugs'
+      '.interaction-alert','.interactions-alert-box','.result-dashboard','.drug-result-area',
+      '.drug-result-card','.interaction-item','.interaction-list','.interaction-pair',
+      '.interaction-pair-action','.interaction-pair-desc','.result-item','.calc-drug-result',
+      '.subview-drugs','.cmdcard-drugs','.interaction-alert-header','.interaction-pair-drugs'
     ];
     root.querySelectorAll(selectors.join(',')).forEach(el => {
-      el.style.boxShadow='none';
-      el.style.background='transparent';
-      el.style.borderLeftWidth='0';
-      el.style.borderRightWidth='0';
-      el.style.borderTopWidth='0';
+      setStyleIfChanged(el,'boxShadow','none');
+      setStyleIfChanged(el,'background','transparent');
+      setStyleIfChanged(el,'borderLeftWidth','0px');
+      setStyleIfChanged(el,'borderRightWidth','0px');
+      setStyleIfChanged(el,'borderTopWidth','0px');
     });
   }
+
   function run(){
     normalizeVerifyButton(document);
     cleanResidualCardLines(document);
   }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', run, {once:true});
-  else run();
-  new MutationObserver(run).observe(document.documentElement, {childList:true, subtree:true});
+
+  function schedule(){
+    if (scheduled) return;
+    scheduled=true;
+    requestAnimationFrame(() => {
+      scheduled=false;
+      run();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', schedule, {once:true});
+  } else {
+    schedule();
+  }
+
+  const observer=new MutationObserver((mutations) => {
+    for (const m of mutations) {
+      if (m.type === 'childList' && (m.addedNodes.length || m.removedNodes.length)) {
+        schedule();
+        break;
+      }
+    }
+  });
+  observer.observe(document.documentElement,{childList:true,subtree:true});
+  window.__MC_INTX_R5_OBSERVER__=observer;
   console.log('['+BUILD+'] mounted');
+})();
+</script>
+
+
+
+<style id="mc-intx-v2-m4-clinical-grade-style">
+/* V2-M4 — resultado flat final. Ativação determinística pelo runtime. */
+body.mc-intx-final-active [data-mc-intx-verify="true"]{
+  width:60%!important;max-width:360px!important;min-width:0!important;
+  min-height:40px!important;height:40px!important;margin-left:auto!important;margin-right:auto!important;
+  padding:0 14px!important;border-radius:10px!important;display:flex!important;align-items:center!important;
+  justify-content:center!important;font-size:15px!important;line-height:1!important;box-shadow:none!important;
+}
+body.mc-intx-final-active [data-mc-intx-hide-class-bubble="true"]{display:none!important;visibility:hidden!important}
+
+body.mc-intx-final-active [data-mc-intx-result-flat="true"] :where(
+  .intx-card,.interaction-alert,.interaction-item,.interaction-pair,.interaction-alert-pairs,
+  .interactions-alert-box,.interaction-alert-box,.drug-result-card,.calc-drug-result,.hm-inline-result,
+  .result-dashboard,.results-grid,.result-item
+):not([data-mc-intx-score-box="true"]){
+  background:transparent!important;background-color:transparent!important;background-image:none!important;
+  border:0!important;border-radius:0!important;box-shadow:none!important;
+}
+body.mc-intx-final-active [data-mc-intx-result-flat="true"] [class*="card"]:not([data-mc-intx-score-box="true"]){
+  background:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+}
+
+/* Única caixa estrutural preservada: Score + precisão da base. */
+body.mc-intx-final-active [data-mc-intx-score-box="true"]{
+  display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:10px!important;
+  margin:10px 0 14px!important;padding:10px 12px!important;background:transparent!important;
+  border:1px solid rgba(255,255,255,.84)!important;border-radius:8px!important;box-shadow:none!important;
+}
+body.mc-intx-final-active [data-mc-intx-score-box="true"] *{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+body.mc-intx-final-active [data-mc-intx-evidence-note="true"]{border:0!important;background:transparent!important;box-shadow:none!important;padding:0!important;margin:0!important;font-size:.86em!important;line-height:1.45!important;opacity:.82!important;font-style:italic!important}
+
+/* Conduta sem qualquer trilho/lateral azul, inclusive wrappers e pseudos. */
+body.mc-intx-final-active [data-mc-intx-conduct-flat="true"],
+body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *{
+  margin-left:0!important;padding-left:0!important;background-image:none!important;border-left:0!important;box-shadow:none!important;
+}
+body.mc-intx-final-active [data-mc-intx-conduct-flat="true"]::before,
+body.mc-intx-final-active [data-mc-intx-conduct-flat="true"]::after,
+body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::before,
+body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
+  border-left:0!important;box-shadow:none!important;background-image:none!important;
+}
+</style>
+<script id="mc-intx-v2-m5-r1-class-badge-final-runtime">
+(function(){
+  'use strict';
+  const BUILD='mc-intx-v2-m5-r1-class-badge-final-runtime';
+  if(window.__MC_INTX_V2_M5_R1__)return;window.__MC_INTX_V2_M5_R1__=true;
+  const norm=v=>String(v||'').replace(/\s+/g,' ').trim();
+  const ROOTS='#resultados-interacoes-container,.intx-resultados,#card-interactions-container,.resultados-interacoes-container,.interactions-alert-box,.interaction-list,#hub-card-interacoes';
+  const CLASS_BADGE_RE=/(Classe|Clase)\s*[x×✕X]\s*(Classe|Clase)\s*:/i;
+  const CLASS_BADGE_BLOCK_RE=/GRAVIDADE|GRAVEDAD|CONTRAINDICAD|Score cl[ií]nico|Puntuaci[oó]n cl[ií]nica|EFEITO E MECANISMO|EFECTO Y MECANISMO|CONDUTA RECOMENDADA|CONDUCTA RECOMENDADA/i;
+  const isES=()=>{const l=String(document.documentElement.lang||'').toLowerCase();return l.startsWith('es');};
+  const buttonLabel=()=>isES()?'Verificar Interacciones':'Verificar Interações';
+  function scopes(){const a=[...document.querySelectorAll(ROOTS)];return a.length?a:[document.body];}
+  function leaf(scope,p){return [...scope.querySelectorAll('div,span,p,strong,h3,h4,h5,small')].find(el=>{const t=norm(el.textContent);if(!t||!p(t))return false;return ![...el.children].some(c=>p(norm(c.textContent)));})||null;}
+  function pureWrapper(el,max=260){
+    if(!el)return null;const target=norm(el.textContent);let best=el,c=el.parentElement;
+    for(let i=0;i<4&&c&&c!==document.body;i++,c=c.parentElement){const t=norm(c.textContent);if(t===target&&t.length<=max)best=c;else break;}
+    return best;
+  }
+  function classBadgeWrapper(el){
+    if(!el)return null;
+    let best=el,c=el.parentElement;
+    for(let i=0;i<5&&c&&c!==document.body;i++,c=c.parentElement){
+      const t=norm(c.textContent);
+      if(!CLASS_BADGE_RE.test(t)||t.length>260||CLASS_BADGE_BLOCK_RE.test(t))break;
+      best=c;
+    }
+    return best;
+  }
+  function scoreWrapper(el){if(!el)return null;let c=el;for(let i=0;i<5&&c&&c!==document.body;i++,c=c.parentElement){const t=norm(c.textContent);if(/Score cl[ií]nico\s*:/i.test(t)&&/(Precis[aã]o da base|Precisi[oó]n de la base|Base:)\s*/i.test(t)&&t.length<=420)return c;}return pureWrapper(el,320);}
+  function markBody(){if(document.body)document.body.classList.add('mc-intx-final-active');}
+  function cleanButton(){
+    const label=buttonLabel();
+    [...document.querySelectorAll('button,#btn-verificar-interacoes,.btn-verificar-interacoes,.card-btn-drugs')].filter(b=>{
+      const t=norm(b.textContent);const oc=b.getAttribute&&String(b.getAttribute('onclick')||'');
+      return /verificar\s*intera/i.test(t)||/executarChecagemInteracoes|checkInteractions/i.test(oc);
+    }).forEach(b=>{b.setAttribute('data-mc-intx-verify','true');if(norm(b.textContent)!==label||b.children.length)b.textContent=label;b.setAttribute('aria-label',label);});
+  }
+  function hideClassBubble(scope){
+    let hidden=0;
+    [...scope.querySelectorAll('div,span,p,strong,small')].forEach(el=>{
+      const t=norm(el.textContent);
+      if(!CLASS_BADGE_RE.test(t)||t.length>260)return;
+      if([...el.children].some(c=>CLASS_BADGE_RE.test(norm(c.textContent))))return;
+      const target=classBadgeWrapper(el)||el;
+      target.setAttribute('data-mc-intx-hide-class-bubble','true');
+      target.setAttribute('aria-hidden','true');
+      target.setAttribute('hidden','');
+      target.style.setProperty('display','none','important');
+      target.style.setProperty('visibility','hidden','important');
+      target.style.setProperty('width','0','important');
+      target.style.setProperty('height','0','important');
+      target.style.setProperty('min-width','0','important');
+      target.style.setProperty('min-height','0','important');
+      target.style.setProperty('margin','0','important');
+      target.style.setProperty('padding','0','important');
+      target.style.setProperty('border','0','important');
+      hidden++;
+    });
+    return hidden;
+  }
+  function decorateScore(scope){
+    const sc=leaf(scope,t=>/^Score cl[ií]nico\s*:/i.test(t));if(!sc)return;
+    const box=scoreWrapper(sc);if(box)box.setAttribute('data-mc-intx-score-box','true');
+    const base=leaf(box||scope,t=>/^(Base:|Precis[aã]o da base:|Precisi[oó]n de la base:)/i.test(t));if(base)base.setAttribute('data-mc-intx-evidence-note','true');
+  }
+  function flattenConduct(scope){
+    const h=leaf(scope,t=>/^CONDUTA RECOMENDADA\b/i.test(t)||/^CONDUCTA RECOMENDADA\b/i.test(t));if(!h)return;
+    let section=h;let c=h.parentElement;
+    for(let i=0;i<6&&c&&c!==scope&&c!==document.body;i++,c=c.parentElement){const t=norm(c.textContent);if((/CONDUTA RECOMENDADA/i.test(t)||/CONDUCTA RECOMENDADA/i.test(t))&&t.length<=2200)section=c;else break;}
+    let x=section;for(let i=0;i<4&&x&&x!==document.body;i++,x=x.parentElement){x.setAttribute('data-mc-intx-conduct-flat','true');x.style.setProperty('border-left','0','important');x.style.setProperty('box-shadow','none','important');if(x===scope)break;}
+    section.querySelectorAll('*').forEach(el=>{const cs=getComputedStyle(el);if(parseFloat(cs.borderLeftWidth||'0')>0||cs.boxShadow!=='none'){el.setAttribute('data-mc-intx-conduct-flat','true');el.style.setProperty('border-left','0','important');el.style.setProperty('box-shadow','none','important');}});
+  }
+  function remainingClassBubbles(){
+    return [...document.querySelectorAll('div,span,p,strong,small')].filter(el=>{
+      const t=norm(el.textContent);if(!CLASS_BADGE_RE.test(t)||t.length>260)return false;
+      if([...el.children].some(c=>CLASS_BADGE_RE.test(norm(c.textContent))))return false;
+      const cs=getComputedStyle(el);return cs.display!=='none'&&cs.visibility!=='hidden';
+    }).length;
+  }
+  function decorate(){
+    markBody();cleanButton();let hidden=0;
+    scopes().forEach(scope=>{scope.setAttribute&&scope.setAttribute('data-mc-intx-result-flat','true');hidden+=hideClassBubble(scope);decorateScore(scope);flattenConduct(scope);});
+    window.__MC_INTX_VISUAL_AUDIT__={build:BUILD,hiddenClassBadges:hidden,remainingClassBadges:remainingClassBubbles(),at:Date.now()};
+  }
+  function schedule(){requestAnimationFrame(decorate);[20,60,140,300,650,1100,1700].forEach(ms=>setTimeout(decorate,ms));}
+  function isVerifyTrigger(el){if(!el||!el.closest)return false;const b=el.closest('button,#btn-verificar-interacoes,.btn-verificar-interacoes,.card-btn-drugs');if(!b)return false;const t=norm(b.textContent),oc=String(b.getAttribute('onclick')||'');return /verificar\s*intera/i.test(t)||/executarChecagemInteracoes|checkInteractions/i.test(oc);}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',schedule,{once:true});else schedule();
+  window.addEventListener('load',schedule,{once:true});
+  document.addEventListener('click',e=>{if(isVerifyTrigger(e.target))schedule();},true);
+  document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target&&e.target.closest&&e.target.closest('#input-busca-interacao,[id*="interacao"],[id*="interaccion"]'))schedule();},true);
+  ['executarChecagemInteracoes','checkInteractions'].forEach(name=>{
+    const fn=window[name];if(typeof fn!=='function'||fn.__mcV2M5Wrapped)return;
+    const wrapped=function(){const out=fn.apply(this,arguments);schedule();return out;};wrapped.__mcV2M5Wrapped=true;wrapped.__mcV2M5Original=fn;window[name]=wrapped;
+  });
+  console.info('['+BUILD+'] mounted');
 })();
 </script>
 </body>
