@@ -25562,7 +25562,55 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
 
 
   <!-- MEDCASES WEBVIEW HOME V1: somente #page-home; não altera topbar Flutter -->
-  <link id="medcases-webview-home-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=517-gpb-focus-suppression">
+  <!-- CALC-ELETROLITOS-V1-M3-R1-RUNTIME-ORIGIN-CSS-CUTOVER START -->
+  <link
+    id="medcases-webview-home-v1-css"
+    rel="stylesheet"
+    data-medcases-path="/css/medcases-webview-home-v1.css?v=517-gpb-focus-suppression"
+  >
+  <script id="medcases-webview-home-v1-runtime-origin-r1">
+  (() => {
+    'use strict';
+
+    const BUILD = 'CALC-ELETROLITOS-V1-M3-R1-RUNTIME-ORIGIN-CSS-CUTOVER';
+    const link = document.getElementById('medcases-webview-home-v1-css');
+    if (!link) return;
+
+    const assetPath = link.getAttribute('data-medcases-path');
+    const hasUsableHttpOrigin =
+      (window.location.protocol === 'http:' || window.location.protocol === 'https:') &&
+      Boolean(window.location.hostname);
+
+    const runtimeOrigin = hasUsableHttpOrigin
+      ? window.location.origin
+      : 'https://medcasescalcu.com';
+
+    const href = runtimeOrigin.replace(/\/$/, '') + assetPath;
+
+    window.__MC_WEBVIEW_HOME_CSS_OWNER__ = {
+      build: BUILD,
+      runtimeOrigin,
+      href,
+      loaded: false,
+      error: false
+    };
+
+    link.addEventListener('load', () => {
+      if (window.__MC_WEBVIEW_HOME_CSS_OWNER__) {
+        window.__MC_WEBVIEW_HOME_CSS_OWNER__.loaded = true;
+      }
+    }, { once: true });
+
+    link.addEventListener('error', () => {
+      if (window.__MC_WEBVIEW_HOME_CSS_OWNER__) {
+        window.__MC_WEBVIEW_HOME_CSS_OWNER__.error = true;
+      }
+    }, { once: true });
+
+    link.setAttribute('href', href);
+  })();
+  </script>
+  <!-- CALC-ELETROLITOS-V1-M3-R1-RUNTIME-ORIGIN-CSS-CUTOVER END -->
 
 <!-- MEDCASES PATIENT HOME V1-C-R1 START -->
 <script id="medcases-patient-explicit-results-gate-v1">
@@ -31848,5 +31896,1667 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
   console.info('['+BUILD+'] mounted');
 })();
 </script>
+
+
+<!-- CALC-ELETROLITOS-V1-M4B-SEMANTIC-GROUPING-HIERARCHY START -->
+<script id="medcases-elec-m4b-semantic-layout-runtime">
+(() => {
+  'use strict';
+
+  if (window.__mcElecM4BSemanticLayout) return;
+  window.__mcElecM4BSemanticLayout = true;
+
+  const LABELS = {
+    pt: {
+      sexo: 'Sexo / faixa etária',
+      nivel: 'Nível sérico',
+      gravidade: 'Gravidade clínica',
+      sintomas: 'Presença de sintomas',
+      ecg: 'Alterações no ECG',
+      clcrFiltro: 'Função renal (ClCr)',
+      acesso: 'Acesso venoso',
+      acidbase: 'Estado ácido-base',
+      formulacao: 'Formulação disponível',
+      dose: 'Dose',
+      volume: 'Volume final da diluição',
+      tempo: 'Tempo de infusão',
+      equipo: 'Equipo de infusão'
+    },
+    es: {
+      sexo: 'Sexo / grupo etario',
+      nivel: 'Nivel sérico',
+      gravidade: 'Gravedad clínica',
+      sintomas: 'Presencia de síntomas',
+      ecg: 'Alteraciones en el ECG',
+      clcrFiltro: 'Función renal (ClCr)',
+      acesso: 'Acceso venoso',
+      acidbase: 'Estado ácido-base',
+      formulacao: 'Formulación disponible',
+      dose: 'Dosis',
+      volume: 'Volumen final de la dilución',
+      tempo: 'Tiempo de infusión',
+      equipo: 'Equipo de infusión'
+    }
+  };
+
+  const STEP_LABELS = {
+    pt: ['Eletrólito', 'Dados e estado clínico', 'Parâmetros da reposição'],
+    es: ['Electrolito', 'Datos y estado clínico', 'Parámetros de reposición']
+  };
+
+  function lang() {
+    const raw =
+      (typeof window.currentLang !== 'undefined' && window.currentLang) ||
+      (typeof window.lang !== 'undefined' && window.lang) ||
+      document.documentElement.lang ||
+      'pt';
+    return String(raw).toLowerCase().startsWith('es') ? 'es' : 'pt';
+  }
+
+  function findLabelForRow(row) {
+    const allowed =
+      '.elec2-state-lbl,.elec2-preset-lbl,.elec2-label,' +
+      '.elec2-group-label,.elec2-state-label,.elec2-preset-label';
+
+    const prev = row.previousElementSibling;
+    if (prev && prev.matches(allowed)) return prev;
+
+    let node = row.previousSibling;
+    while (node && node.nodeType === Node.TEXT_NODE && !node.textContent.trim()) {
+      node = node.previousSibling;
+    }
+
+    if (node && node.nodeType === Node.TEXT_NODE && node.textContent.trim().length <= 60) {
+      const label = document.createElement('div');
+      label.className = 'elec2-semantic-label';
+      node.replaceWith(label);
+      return label;
+    }
+
+    return null;
+  }
+
+  function decorateRows(root, language) {
+    root.querySelectorAll('.elec2-btn-row').forEach(row => {
+      const btn = row.querySelector(
+        '.elec2-state-btn[data-state-key],.elec2-preset-btn[data-state-key]'
+      );
+      if (!btn) return;
+
+      const key = btn.getAttribute('data-state-key');
+      if (!key) return;
+
+      if (row.getAttribute('data-elec-group') !== key) {
+        row.setAttribute('data-elec-group', key);
+      }
+      row.classList.add('elec2-semantic-options');
+
+      const desired = LABELS[language][key];
+      if (!desired) return;
+
+      const label = findLabelForRow(row);
+      if (!label) return;
+
+      label.classList.add('elec2-semantic-label');
+      if (label.getAttribute('data-elec-group-label') !== key) {
+        label.setAttribute('data-elec-group-label', key);
+      }
+      if (label.textContent.trim() !== desired) {
+        label.textContent = desired;
+      }
+    });
+  }
+
+  function decorateSteps(root, language) {
+    [1,2,3].forEach(n => {
+      const step = root.querySelector('#elec2-step' + n);
+      if (!step) return;
+
+      let title = step.querySelector(
+        ':scope > .elec2-step-title,:scope > .elec2-section-title,:scope > .elec2-title'
+      );
+
+      if (!title) {
+        const first = step.firstElementChild;
+        if (
+          first &&
+          !first.matches('.elec2-elec-grid,.elec2-fields-grid,.elec2-btn-row') &&
+          !first.querySelector('button,input,select,textarea') &&
+          String(first.textContent || '').trim().startsWith(String(n))
+        ) {
+          title = first;
+          title.classList.add('elec2-step-title');
+        }
+      }
+
+      if (!title) return;
+
+      const desiredLabel = STEP_LABELS[language][n - 1];
+      const signature = n + '|' + desiredLabel;
+      if (title.getAttribute('data-elec-step-signature') === signature) return;
+
+      title.setAttribute('data-elec-step-signature', signature);
+      title.innerHTML =
+        '<span class="elec2-step-num">' + n + '</span>' +
+        '<span class="elec2-step-label">' + desiredLabel + '</span>';
+    });
+  }
+
+  let scheduled = false;
+
+  function decorate() {
+    scheduled = false;
+    const root = document.getElementById('elec2-calc');
+    if (!root) return;
+
+    const language = lang();
+    decorateSteps(root, language);
+    decorateRows(root, language);
+    root.setAttribute('data-m4b-semantic-layout', 'true');
+    root.setAttribute('data-m4b-lang', language);
+  }
+
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(decorate);
+  }
+
+  const observer = new MutationObserver(schedule);
+  observer.observe(document.documentElement, {
+    subtree: true,
+    childList: true
+  });
+
+  document.addEventListener('langChange', schedule);
+  window.addEventListener('load', schedule);
+
+  schedule();
+  setTimeout(schedule, 150);
+  setTimeout(schedule, 600);
+})();
+</script>
+<!-- CALC-ELETROLITOS-V1-M4B-SEMANTIC-GROUPING-HIERARCHY END -->
+
+
+
+<!-- CALC-ELETROLITOS-V1-M4C-REDUNDANCY-AUTO-LEVEL-UNIVERSAL-RESULTS START -->
+<script id="medcases-elec-m4c-runtime">
+(() => {
+  'use strict';
+
+  if (window.__mcElecM4C) return;
+  window.__mcElecM4C = true;
+
+  const TEXT = {
+    pt: {
+      severity: 'Gravidade clínica',
+      severe: 'Grave',
+      moderate: 'Moderada',
+      mild: 'Leve',
+      normal: 'Sem sinal de gravidade',
+      unclassified: 'Não classificada',
+      summary: 'Resumo clínico',
+      mainConduct: 'Conduta principal',
+      alternative: 'Conduta alternativa',
+      criticalAlerts: 'Alertas críticos',
+      recheck: 'Recontrole',
+      details: 'Detalhes clínicos',
+      derivedResult: 'Classificação do resultado'
+    },
+    es: {
+      severity: 'Gravedad clínica',
+      severe: 'Grave',
+      moderate: 'Moderada',
+      mild: 'Leve',
+      normal: 'Sin señal de gravedad',
+      unclassified: 'No clasificada',
+      summary: 'Resumen clínico',
+      mainConduct: 'Conducta principal',
+      alternative: 'Conducta alternativa',
+      criticalAlerts: 'Alertas críticos',
+      recheck: 'Recontrol',
+      details: 'Detalles clínicos',
+      derivedResult: 'Clasificación del resultado'
+    }
+  };
+
+  const FIELD_LABELS = [
+    'Valor Sérico','Valor sérico','Valor sérico corregido',
+    'Na⁺ Corrigido','Na+ Corrigido','Na Corrigido',
+    'Ca corrigido','Ca corr.','Osmolaridade','Osmolaridad',
+    'ACT (Água Corporal Total)','ACT (Agua Corporal Total)',
+    'Déficit Na⁺','Déficit Na+','Déficit de Na⁺','Déficit de Na+',
+    'Déficit Água Livre','Déficit de Água Livre','Déficit de agua libre',
+    'ClCr','Indicação','Indicación','Dose','Dosis','Formulação','Formulación',
+    'Diluir em','Diluir en','Volume Final','Volumen final','Tempo','Tiempo',
+    'Bomba (mL/h)','Bomba','Macrogotas','Microgotas','Acesso','Acceso',
+    'pH','pCO2','HCO₃⁻','HCO3-','Ânion Gap','Anión Gap','AG corrigido',
+    'AG corregido','Albumina','Albúmina','Glicose','Glucosa','Ureia','Urea'
+  ].sort((a,b) => b.length - a.length);
+
+  function lang() {
+    const raw =
+      (typeof window.currentLang !== 'undefined' && window.currentLang) ||
+      (typeof window.lang !== 'undefined' && window.lang) ||
+      document.documentElement.lang ||
+      'pt';
+    return String(raw).toLowerCase().startsWith('es') ? 'es' : 'pt';
+  }
+
+  function root() {
+    return document.getElementById('elec2-calc');
+  }
+
+  function state() {
+    try {
+      return window.ElecCalc && typeof window.ElecCalc.getState === 'function'
+        ? window.ElecCalc.getState()
+        : {};
+    } catch (_) {
+      return {};
+    }
+  }
+
+  function parseNumber(raw) {
+    if (raw == null) return null;
+    const cleaned = String(raw)
+      .trim()
+      .replace(/\s/g,'')
+      .replace(',', '.')
+      .replace(/[^0-9.+-]/g,'');
+    if (!cleaned || cleaned === '-' || cleaned === '.' || cleaned === '+') return null;
+    const n = Number(cleaned);
+    return Number.isFinite(n) ? n : null;
+  }
+
+  function parseRange(input) {
+    if (!input) return null;
+    const raw = input.getAttribute('placeholder') || '';
+    const nums = raw.match(/-?\d+(?:[.,]\d+)?/g);
+    if (!nums || nums.length < 2) return null;
+    const low = parseNumber(nums[0]);
+    const high = parseNumber(nums[1]);
+    if (low == null || high == null) return null;
+    return { low: Math.min(low,high), high: Math.max(low,high) };
+  }
+
+  function deriveLevel() {
+    const r = root();
+    if (!r || !window.ElecCalc || typeof window.ElecCalc.setState !== 'function') return null;
+
+    const input = r.querySelector('#elec2-in-valor');
+    if (!input) return null;
+
+    const range = parseRange(input);
+    const value = parseNumber(input.value);
+    if (!range || value == null) return null;
+
+    const level = value < range.low ? 'baixo' : (value > range.high ? 'alto' : 'normal');
+    const current = state().nivel;
+
+    if (current !== level) {
+      try { window.ElecCalc.setState('nivel', level); } catch (_) {}
+    }
+
+    r.setAttribute('data-m4c-derived-level', level);
+    return level;
+  }
+
+  function hideDuplicateSexInput() {
+    const r = root();
+    if (!r) return;
+
+    const input = r.querySelector('#elec2-in-sexo');
+    if (!input) return;
+
+    const field = input.closest('.elec2-field');
+    if (field && !field.querySelector('[data-state-key="sexo"]')) {
+      field.classList.add('m4c-hidden-redundant');
+      field.setAttribute('aria-hidden','true');
+    }
+  }
+
+  function hideRedundantLevelSelector() {
+    const r = root();
+    if (!r) return;
+
+    const hasDirectValue = Boolean(r.querySelector('#elec2-in-valor'));
+    const btn = r.querySelector('[data-state-key="nivel"]');
+    if (!btn) return;
+
+    const row = btn.closest('.elec2-btn-row');
+    if (!row) return;
+
+    const label =
+      row.previousElementSibling &&
+      row.previousElementSibling.matches(
+        '.elec2-state-lbl,.elec2-semantic-label,.elec2-preset-lbl,.elec2-group-label'
+      )
+        ? row.previousElementSibling
+        : null;
+
+    if (hasDirectValue) {
+      deriveLevel();
+      row.classList.add('m4c-hidden-redundant');
+      row.setAttribute('aria-hidden','true');
+      if (label) {
+        label.classList.add('m4c-hidden-redundant');
+        label.setAttribute('aria-hidden','true');
+      }
+    } else if (label) {
+      label.textContent = TEXT[lang()].derivedResult;
+    }
+  }
+
+  function cleanLine(v) {
+    return String(v || '')
+      .replace(/\u00a0/g,' ')
+      .replace(/[ \t]+/g,' ')
+      .trim();
+  }
+
+  function sectionKind(line) {
+    const s = line.toLowerCase();
+    if (/^(estado|estado clínico|estado clinico)$/.test(s)) return 'summary';
+    if (/^(opção|opcao|opción|opcion)\s*1\b/.test(s)) return 'main';
+    if (/^(opção|opcao|opción|opcion)\s*[23]\b/.test(s)) return 'alternative';
+    if (/^alertas?\s+cr[ií]ticos?/.test(s) || /^alertas?\s+cr[ií]ticas?/.test(s)) return 'alerts';
+    if (/^(recontrole|recontrol)\b/.test(s)) return 'recheck';
+    return null;
+  }
+
+  function isStateChipConcat(line) {
+    const compact = line
+      .toLowerCase()
+      .replace(/\s/g,'')
+      .replace(/[<>/=0-9.,+-]/g,'');
+
+    if (!compact) return false;
+
+    const tokens = [
+      'baixo','normal','alto','leve','moderado','grave',
+      'periférico','periferico','central','sintomático','sintomatico',
+      'assintomático','assintomatico','ecgalterado','ecgs/alteração',
+      'ecgs/alteracao'
+    ];
+
+    let rest = compact;
+    for (const token of tokens) {
+      rest = rest.split(token.replace(/\s/g,'')).join('');
+    }
+    return rest.length === 0;
+  }
+
+  function splitKnown(line) {
+    for (const label of FIELD_LABELS) {
+      if (line.toLowerCase().startsWith(label.toLowerCase())) {
+        const value = cleanLine(line.slice(label.length));
+        if (value) return { label, value };
+      }
+    }
+
+    const colon = line.indexOf(':');
+    if (colon > 0 && colon < 35) {
+      return {
+        label: cleanLine(line.slice(0,colon)),
+        value: cleanLine(line.slice(colon+1))
+      };
+    }
+
+    return null;
+  }
+
+  function severityFrom(stateObj, interpretation, rawText) {
+    const all = (interpretation + ' ' + rawText).toLowerCase();
+
+    let tone = stateObj.gravidade || '';
+    if (
+      /urg[eê]ncia|emerg[eê]ncia|alertas?\s+cr[ií]ticos?|alertas?\s+cr[ií]ticas?/.test(all) ||
+      /\bgrave\b/.test(all)
+    ) {
+      tone = 'grave';
+    } else if (!tone && /\bmoderad[oa]\b/.test(all)) {
+      tone = 'moderado';
+    } else if (!tone && /\bleve\b/.test(all)) {
+      tone = 'leve';
+    } else if (!tone && stateObj.nivel === 'normal') {
+      tone = 'normal';
+    }
+
+    const L = TEXT[lang()];
+    const labels = {
+      grave: L.severe,
+      moderado: L.moderate,
+      leve: L.mild,
+      normal: L.normal
+    };
+
+    return {
+      tone: tone || 'unclassified',
+      label: labels[tone] || L.unclassified
+    };
+  }
+
+  function makeRow(doc, label, value) {
+    const row = doc.createElement('div');
+    row.className = 'm4c-row';
+
+    const l = doc.createElement('div');
+    l.className = 'm4c-row-label';
+    l.textContent = label;
+
+    const v = doc.createElement('div');
+    v.className = 'm4c-row-value';
+    v.textContent = value;
+
+    row.append(l,v);
+    return row;
+  }
+
+  function renderSection(doc, title, items, kind) {
+    const sec = doc.createElement('section');
+    sec.className = 'm4c-section';
+    sec.setAttribute('data-section', kind);
+
+    const h = doc.createElement('h4');
+    h.className = 'm4c-section-title';
+    h.textContent = title;
+    sec.appendChild(h);
+
+    for (const item of items) {
+      if (item.type === 'row') {
+        sec.appendChild(makeRow(doc,item.label,item.value));
+      } else if (item.type === 'alert') {
+        const p = doc.createElement('div');
+        p.className =
+          'm4c-alert' +
+          (/urg[eê]ncia|emerg[eê]ncia|hernia|mielin|arr[ií]tm|parada|cr[ií]tic/i.test(item.text)
+            ? ' m4c-alert--critical'
+            : '');
+        p.textContent = item.text;
+        sec.appendChild(p);
+      } else {
+        const p = doc.createElement('p');
+        p.className = 'm4c-paragraph';
+        p.textContent = item.text;
+        sec.appendChild(p);
+      }
+    }
+
+    return sec;
+  }
+
+  function organizeResult() {
+    const area = document.getElementById('elec2-result-area');
+    if (!area || area.style.display === 'none') return;
+    if (area.querySelector(':scope > .m4c-result')) return;
+
+    const header = area.querySelector('.univ-result-header');
+    const number = area.querySelector('.univ-result-number');
+    const interpretationNode = area.querySelector('.univ-result-sub');
+    const conduct = area.querySelector('.univ-result-conduct');
+    if (!conduct) return;
+
+    const originalText = cleanLine(conduct.innerText || conduct.textContent || '');
+    if (!originalText) return;
+
+    const lines = (conduct.innerText || conduct.textContent || '')
+      .split(/\n+/)
+      .map(cleanLine)
+      .filter(Boolean);
+
+    const buckets = {
+      summary: [],
+      main: [],
+      alternative: [],
+      alerts: [],
+      recheck: [],
+      details: []
+    };
+
+    let current = 'summary';
+
+    for (const line of lines) {
+      const kind = sectionKind(line);
+      if (kind) {
+        current = kind;
+        continue;
+      }
+
+      if (current === 'summary' && isStateChipConcat(line)) continue;
+
+      const pair = splitKnown(line);
+      if (pair) {
+        buckets[current].push({type:'row', label:pair.label, value:pair.value});
+      } else if (/^[⚠️🚨❗]/u.test(line) || current === 'alerts') {
+        buckets[current].push({type:'alert', text:line});
+      } else {
+        buckets[current].push({type:'text', text:line});
+      }
+    }
+
+    const st = state();
+    const interpretation = cleanLine(
+      interpretationNode ? interpretationNode.textContent : ''
+    );
+    const sev = severityFrom(st, interpretation, originalText);
+    const L = TEXT[lang()];
+
+    const doc = area.ownerDocument;
+    const shell = doc.createElement('div');
+    shell.className = 'm4c-result';
+
+    const severity = doc.createElement('section');
+    severity.className = 'm4c-severity';
+    severity.setAttribute('data-tone', sev.tone);
+
+    const kicker = doc.createElement('div');
+    kicker.className = 'm4c-kicker';
+    kicker.textContent = L.severity;
+
+    const sevValue = doc.createElement('div');
+    sevValue.className = 'm4c-severity-value';
+    sevValue.textContent = sev.label;
+
+    severity.append(kicker,sevValue);
+
+    if (interpretation) {
+      const note = doc.createElement('div');
+      note.className = 'm4c-severity-note';
+      note.textContent = interpretation;
+      severity.appendChild(note);
+    }
+
+    shell.appendChild(severity);
+
+    const summaryHead = doc.createElement('section');
+    summaryHead.className = 'm4c-summary-head';
+
+    const name = doc.createElement('div');
+    name.className = 'm4c-summary-name';
+    name.textContent = cleanLine(header ? header.textContent : '');
+
+    const num = doc.createElement('div');
+    num.className = 'm4c-summary-number';
+    num.textContent = cleanLine(number ? number.textContent : '');
+
+    if (name.textContent) summaryHead.appendChild(name);
+    if (num.textContent) summaryHead.appendChild(num);
+    shell.appendChild(summaryHead);
+
+    const titles = {
+      summary: L.summary,
+      main: L.mainConduct,
+      alternative: L.alternative,
+      alerts: L.criticalAlerts,
+      recheck: L.recheck,
+      details: L.details
+    };
+
+    for (const key of ['summary','main','alternative','alerts','recheck','details']) {
+      if (buckets[key].length) {
+        shell.appendChild(renderSection(doc,titles[key],buckets[key],key));
+      }
+    }
+
+    const actions = area.querySelector('.elec2-result-actions');
+    if (actions) actions.remove();
+
+    area.replaceChildren(shell);
+    if (actions) area.appendChild(actions);
+
+    area.setAttribute('data-m4c-result','true');
+  }
+
+  function decorate() {
+    hideDuplicateSexInput();
+    hideRedundantLevelSelector();
+    organizeResult();
+  }
+
+  let scheduled = false;
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => {
+      scheduled = false;
+      decorate();
+    });
+  }
+
+  document.addEventListener('click', event => {
+    const calc = event.target.closest &&
+      event.target.closest('#elec2-calc .elec2-calc-btn');
+    if (calc) deriveLevel();
+  }, true);
+
+  document.addEventListener('blur', event => {
+    if (event.target && event.target.id === 'elec2-in-valor') {
+      deriveLevel();
+    }
+  }, true);
+
+  const observer = new MutationObserver(schedule);
+  observer.observe(document.documentElement, {
+    subtree:true,
+    childList:true
+  });
+
+  window.addEventListener('load', schedule);
+  document.addEventListener('langChange', schedule);
+
+  schedule();
+  setTimeout(schedule,150);
+  setTimeout(schedule,700);
+})();
+</script>
+<!-- CALC-ELETROLITOS-V1-M4C-REDUNDANCY-AUTO-LEVEL-UNIVERSAL-RESULTS END -->
+
+
+
+<!-- CALC-ELETROLITOS-V1-M4D-OPTIONAL-PARAMETERS-COLLAPSE START -->
+<script id="medcases-elec-m4d-optional-parameters-runtime">
+(() => {
+  'use strict';
+
+  if (window.__mcElecM4DOptionalParameters) return;
+  window.__mcElecM4DOptionalParameters = true;
+
+  const TEXT = {
+    pt: {
+      title: 'Parâmetros avançados',
+      helper: 'Opcional · ajuste manual de formulação, volume, tempo e equipo.',
+      open: 'Ajustar parâmetros manualmente',
+      close: 'Ocultar parâmetros avançados'
+    },
+    es: {
+      title: 'Parámetros avanzados',
+      helper: 'Opcional · ajuste manual de formulación, volumen, tiempo y equipo.',
+      open: 'Ajustar parámetros manualmente',
+      close: 'Ocultar parámetros avanzados'
+    }
+  };
+
+  function lang() {
+    const raw =
+      (typeof window.currentLang !== 'undefined' && window.currentLang) ||
+      (typeof window.lang !== 'undefined' && window.lang) ||
+      document.documentElement.lang ||
+      'pt';
+    return String(raw).toLowerCase().startsWith('es') ? 'es' : 'pt';
+  }
+
+  function setToggleText(btn, expanded) {
+    const L=TEXT[lang()];
+    const label=btn.querySelector('.m4d-toggle-label');
+    if (label) label.textContent=expanded ? L.close : L.open;
+    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  }
+
+  function decorate() {
+    const root=document.getElementById('elec2-calc');
+    if (!root) return;
+
+    const step=root.querySelector('#elec2-step3');
+    if (!step) return;
+
+    const L=TEXT[lang()];
+    const title=step.querySelector(
+      ':scope > .elec2-step-title,:scope > .elec2-section-title,:scope > .elec2-title'
+    );
+
+    if (title) {
+      const label=title.querySelector('.elec2-step-label');
+      if (label && label.textContent !== L.title) label.textContent=L.title;
+    }
+
+    let helper=step.querySelector(':scope > .m4d-advanced-helper');
+    if (!helper) {
+      helper=document.createElement('div');
+      helper.className='m4d-advanced-helper';
+      if (title) title.insertAdjacentElement('afterend',helper);
+      else step.prepend(helper);
+    }
+    helper.textContent=L.helper;
+
+    let toggle=step.querySelector(':scope > .m4d-advanced-toggle');
+    if (!toggle) {
+      toggle=document.createElement('button');
+      toggle.type='button';
+      toggle.className='m4d-advanced-toggle';
+      toggle.innerHTML=
+        '<span class="m4d-toggle-label"></span>' +
+        '<span class="m4d-chevron" aria-hidden="true">›</span>';
+      helper.insertAdjacentElement('afterend',toggle);
+
+      toggle.addEventListener('click',() => {
+        const expanded=!step.classList.contains('m4d-expanded');
+        step.classList.toggle('m4d-expanded',expanded);
+        step.classList.toggle('m4d-collapsed',!expanded);
+        setToggleText(toggle,expanded);
+      });
+    }
+
+    step.classList.add('m4d-advanced-section');
+
+    if (!step.hasAttribute('data-m4d-initialized')) {
+      step.classList.add('m4d-collapsed');
+      step.classList.remove('m4d-expanded');
+      step.setAttribute('data-m4d-initialized','true');
+    }
+
+    const calc=step.querySelector('.elec2-calc-btn');
+
+    [...step.children].forEach(child => {
+      if (
+        child===title ||
+        child===helper ||
+        child===toggle
+      ) return;
+
+      if (calc && (child===calc || child.contains(calc))) {
+        child.classList.add('m4d-calc-preserved');
+        child.classList.remove('m4d-advanced-content');
+        return;
+      }
+
+      child.classList.add('m4d-advanced-content');
+    });
+
+    setToggleText(toggle,step.classList.contains('m4d-expanded'));
+
+    root.setAttribute('data-m4d-optional-parameters','true');
+  }
+
+  let scheduled=false;
+  function schedule(){
+    if (scheduled) return;
+    scheduled=true;
+    requestAnimationFrame(() => {
+      scheduled=false;
+      decorate();
+    });
+  }
+
+  const observer=new MutationObserver(schedule);
+  observer.observe(document.documentElement,{subtree:true,childList:true});
+
+  document.addEventListener('langChange',schedule);
+  window.addEventListener('load',schedule);
+
+  schedule();
+  setTimeout(schedule,150);
+  setTimeout(schedule,700);
+})();
+</script>
+<!-- CALC-ELETROLITOS-V1-M4D-OPTIONAL-PARAMETERS-COLLAPSE END -->
+
+
+
+<!-- CALC-ELETROLITOS-V1-M4E-GRAVITY-OUT-MAIN-COMPACT-SPACING START -->
+<script id="medcases-elec-m4e-gravity-optional-runtime">
+(() => {
+  'use strict';
+
+  if (window.__mcElecM4EGravityOptional) return;
+  window.__mcElecM4EGravityOptional = true;
+
+  const TEXT = {
+    pt: {
+      label: 'Gravidade clínica · ajuste opcional',
+      helper: 'Use somente se a gravidade clínica não estiver representada pelos dados objetivos, sintomas ou ECG.'
+    },
+    es: {
+      label: 'Gravedad clínica · ajuste opcional',
+      helper: 'Use solo si la gravedad clínica no está representada por los datos objetivos, síntomas o ECG.'
+    }
+  };
+
+  function lang() {
+    const raw =
+      (typeof window.currentLang !== 'undefined' && window.currentLang) ||
+      (typeof window.lang !== 'undefined' && window.lang) ||
+      document.documentElement.lang ||
+      'pt';
+    return String(raw).toLowerCase().startsWith('es') ? 'es' : 'pt';
+  }
+
+  function decorate() {
+    const root=document.getElementById('elec2-calc');
+    if (!root) return;
+
+    const step2=root.querySelector('#elec2-step2');
+    const step3=root.querySelector('#elec2-step3');
+    if (!step2 || !step3) return;
+
+    const gravityBtn=step2.querySelector('[data-state-key="gravidade"]');
+    if (!gravityBtn) {
+      const existing=step3.querySelector('.m4e-gravity-override');
+      if (existing) {
+        const label=existing.querySelector(
+          '.elec2-state-lbl,.elec2-semantic-label,.elec2-group-label'
+        );
+        const helper=existing.querySelector('.m4e-gravity-helper');
+        const L=TEXT[lang()];
+        if (label) label.textContent=L.label;
+        if (helper) helper.textContent=L.helper;
+      }
+      return;
+    }
+
+    const row=gravityBtn.closest('.elec2-btn-row');
+    if (!row) return;
+
+    let label=row.previousElementSibling;
+    if (
+      !label ||
+      !label.matches(
+        '.elec2-state-lbl,.elec2-semantic-label,.elec2-group-label,.elec2-preset-lbl'
+      )
+    ) {
+      label=null;
+    }
+
+    const L=TEXT[lang()];
+    const wrap=document.createElement('div');
+    wrap.className='m4e-gravity-override m4d-advanced-content';
+    wrap.setAttribute('data-m4e-gravity-override','true');
+
+    if (label) {
+      label.textContent=L.label;
+      wrap.appendChild(label);
+    } else {
+      const newLabel=document.createElement('div');
+      newLabel.className='elec2-semantic-label';
+      newLabel.textContent=L.label;
+      wrap.appendChild(newLabel);
+    }
+
+    const helper=document.createElement('div');
+    helper.className='m4e-gravity-helper';
+    helper.textContent=L.helper;
+    wrap.appendChild(helper);
+    wrap.appendChild(row);
+
+    const toggle=step3.querySelector(':scope > .m4d-advanced-toggle');
+    if (toggle) {
+      toggle.insertAdjacentElement('afterend',wrap);
+    } else {
+      step3.prepend(wrap);
+    }
+
+    root.setAttribute('data-m4e-gravity-main-flow','removed');
+    root.setAttribute('data-m4e-gravity-override','advanced');
+  }
+
+  let scheduled=false;
+  function schedule(){
+    if (scheduled) return;
+    scheduled=true;
+    requestAnimationFrame(() => {
+      scheduled=false;
+      decorate();
+    });
+  }
+
+  const observer=new MutationObserver(schedule);
+  observer.observe(document.documentElement,{subtree:true,childList:true});
+
+  document.addEventListener('langChange',schedule);
+  window.addEventListener('load',schedule);
+
+  schedule();
+  setTimeout(schedule,150);
+  setTimeout(schedule,700);
+})();
+</script>
+<!-- CALC-ELETROLITOS-V1-M4E-GRAVITY-OUT-MAIN-COMPACT-SPACING END -->
+
+
+
+<!-- CALC-ELETROLITOS-V1-M4F-PATIENT-PROFILE-COMPACT-CLINICAL-GROUPS START -->
+<script id="medcases-elec-m4f-patient-profile-runtime">
+(() => {
+  'use strict';
+
+  if (window.__mcElecM4FPatientProfile) return;
+  window.__mcElecM4FPatientProfile = true;
+
+  const TEXT = {
+    pt: {
+      profile: 'Perfil do paciente'
+    },
+    es: {
+      profile: 'Perfil del paciente'
+    }
+  };
+
+  function lang() {
+    const raw =
+      (typeof window.currentLang !== 'undefined' && window.currentLang) ||
+      (typeof window.lang !== 'undefined' && window.lang) ||
+      document.documentElement.lang ||
+      'pt';
+    return String(raw).toLowerCase().startsWith('es') ? 'es' : 'pt';
+  }
+
+  function labelForRow(row) {
+    if (!row) return null;
+
+    const prev=row.previousElementSibling;
+    if (
+      prev &&
+      prev.matches(
+        '.elec2-state-lbl,.elec2-semantic-label,.elec2-group-label,.elec2-preset-lbl'
+      )
+    ) return prev;
+
+    const key=row.getAttribute('data-elec-group');
+    if (key) {
+      return document.querySelector(
+        '#elec2-step2 [data-elec-group-label="' + CSS.escape(key) + '"]'
+      );
+    }
+
+    return null;
+  }
+
+  function decorate() {
+    const root=document.getElementById('elec2-calc');
+    const step2=root && root.querySelector('#elec2-step2');
+    if (!step2) return;
+
+    const profileBtn=step2.querySelector('[data-state-key="sexo"]');
+    if (profileBtn) {
+      const row=profileBtn.closest('.elec2-btn-row');
+      const label=labelForRow(row);
+
+      if (row) row.classList.add('m4f-profile-row');
+      if (label) {
+        label.classList.add('m4f-profile-label');
+        const desired=TEXT[lang()].profile;
+        if (label.textContent.trim() !== desired) label.textContent=desired;
+      }
+    }
+
+    step2.querySelectorAll('.elec2-btn-row').forEach(row => {
+      const stateBtn=row.querySelector('.elec2-state-btn[data-state-key]');
+      if (!stateBtn) return;
+      if (stateBtn.getAttribute('data-state-key') === 'sexo') return;
+
+      row.classList.add('m4f-clinical-row');
+      const label=labelForRow(row);
+      if (label) label.classList.add('m4f-clinical-label');
+    });
+
+    root.setAttribute('data-m4f-profile-label',lang()==='es'?'perfil-del-paciente':'perfil-do-paciente');
+  }
+
+  let scheduled=false;
+  function schedule(){
+    if (scheduled) return;
+    scheduled=true;
+    requestAnimationFrame(() => {
+      scheduled=false;
+      decorate();
+    });
+  }
+
+  const observer=new MutationObserver(schedule);
+  observer.observe(document.documentElement,{subtree:true,childList:true});
+
+  document.addEventListener('langChange',schedule);
+  window.addEventListener('load',schedule);
+
+  schedule();
+  setTimeout(schedule,120);
+  setTimeout(schedule,500);
+})();
+</script>
+<!-- CALC-ELETROLITOS-V1-M4F-PATIENT-PROFILE-COMPACT-CLINICAL-GROUPS END -->
+
+
+
+<!-- CALC-ELETROLITOS-V1-M4G-EXPLICIT-CLINICAL-GROUP-LABELS START -->
+<script id="medcases-elec-m4g-explicit-clinical-labels-runtime">
+(() => {
+  'use strict';
+
+  if (window.__mcElecM4GExplicitClinicalLabels) return;
+  window.__mcElecM4GExplicitClinicalLabels = true;
+
+  const TEXT = {
+    pt: {
+      sexo: ['Perfil do paciente','Selecione um perfil'],
+      sintomas: ['Presença de sintomas','Selecione uma opção'],
+      acesso: ['Acesso venoso','Selecione o acesso previsto'],
+      ecg: ['Alterações no ECG','Selecione uma opção'],
+      clcr: ['Função renal','Selecione a faixa de ClCr'],
+      nivel: ['Nível sérico','Selecione uma classificação']
+    },
+    es: {
+      sexo: ['Perfil del paciente','Seleccione un perfil'],
+      sintomas: ['Presencia de síntomas','Seleccione una opción'],
+      acesso: ['Acceso venoso','Seleccione el acceso previsto'],
+      ecg: ['Alteraciones en el ECG','Seleccione una opción'],
+      clcr: ['Función renal','Seleccione el rango de ClCr'],
+      nivel: ['Nivel sérico','Seleccione una clasificación']
+    }
+  };
+
+  const KNOWN_KEYS = ['sexo','sintomas','acesso','ecg','clcr','nivel'];
+
+  function lang() {
+    const raw =
+      (typeof window.currentLang !== 'undefined' && window.currentLang) ||
+      (typeof window.lang !== 'undefined' && window.lang) ||
+      document.documentElement.lang ||
+      'pt';
+    return String(raw).toLowerCase().startsWith('es') ? 'es' : 'pt';
+  }
+
+  function directValueExists(step2) {
+    return Boolean(step2 && step2.querySelector('#elec2-in-valor'));
+  }
+
+  function nearestLegacyLabel(row) {
+    if (!row) return null;
+    const prev=row.previousElementSibling;
+    if (
+      prev &&
+      prev.matches(
+        '.elec2-state-lbl,.elec2-semantic-label,.elec2-group-label,.elec2-preset-lbl,' +
+        '.m4f-profile-label,.m4f-clinical-label'
+      )
+    ) return prev;
+    return null;
+  }
+
+  function ensureGroup(step2,key) {
+    const first=step2.querySelector('.elec2-state-btn[data-state-key="'+key+'"]');
+    if (!first) return;
+
+    const row=first.closest('.elec2-btn-row');
+    if (!row) return;
+
+    if (key==='nivel' && directValueExists(step2)) {
+      row.classList.add('m4g-hidden-redundant');
+      row.setAttribute('aria-hidden','true');
+      const old=nearestLegacyLabel(row);
+      if (old) {
+        old.classList.add('m4g-hidden-redundant');
+        old.setAttribute('aria-hidden','true');
+      }
+      return;
+    }
+
+    let group=row.closest('.m4g-group');
+    if (!group) {
+      group=document.createElement('div');
+      group.className='m4g-group';
+      group.setAttribute('data-m4g-group',key);
+
+      const oldLabel=nearestLegacyLabel(row);
+      if (oldLabel) oldLabel.remove();
+
+      row.insertAdjacentElement('beforebegin',group);
+      group.appendChild(row);
+    }
+
+    row.classList.add('m4g-group-row');
+    row.classList.remove('m4f-profile-row','m4f-clinical-row');
+
+    const L=TEXT[lang()][key] || [key,''];
+
+    let title=group.querySelector(':scope > .m4g-group-title');
+    if (!title) {
+      title=document.createElement('div');
+      title.className='m4g-group-title';
+      group.prepend(title);
+    }
+    title.textContent=L[0];
+
+    let helper=group.querySelector(':scope > .m4g-group-helper');
+    if (!helper) {
+      helper=document.createElement('div');
+      helper.className='m4g-group-helper';
+      title.insertAdjacentElement('afterend',helper);
+    }
+    helper.textContent=L[1];
+
+    group.setAttribute('role','group');
+    group.setAttribute('aria-label',L[0]);
+
+    row.querySelectorAll('.elec2-state-btn[data-state-key="'+key+'"]').forEach(btn => {
+      btn.setAttribute('aria-pressed',btn.classList.contains('active')?'true':'false');
+    });
+  }
+
+  function cleanLegacyOrphans(step2) {
+    step2.querySelectorAll(
+      '.m4f-profile-label,.m4f-clinical-label'
+    ).forEach(label => {
+      const txt=(label.textContent||'').trim().toLowerCase();
+      if (
+        txt==='sexo/idade' ||
+        txt==='sexo/edad' ||
+        txt==='nível sérico' ||
+        txt==='nivel sérico' ||
+        txt==='nivel serico'
+      ) {
+        label.classList.add('m4g-hidden-redundant');
+      }
+    });
+  }
+
+  function decorate() {
+    const root=document.getElementById('elec2-calc');
+    const step2=root && root.querySelector('#elec2-step2');
+    if (!step2) return;
+
+    KNOWN_KEYS.forEach(key => ensureGroup(step2,key));
+    cleanLegacyOrphans(step2);
+
+    root.setAttribute('data-m4g-explicit-groups','true');
+  }
+
+  document.addEventListener('click',event => {
+    const btn=event.target.closest &&
+      event.target.closest('#elec2-step2 .elec2-state-btn[data-state-key]');
+    if (!btn) return;
+
+    requestAnimationFrame(() => {
+      const key=btn.getAttribute('data-state-key');
+      const row=btn.closest('.m4g-group-row,.elec2-btn-row');
+      if (!row) return;
+      row.querySelectorAll('.elec2-state-btn[data-state-key="'+key+'"]').forEach(b => {
+        b.setAttribute('aria-pressed',b.classList.contains('active')?'true':'false');
+      });
+    });
+  },true);
+
+  let scheduled=false;
+  function schedule(){
+    if (scheduled) return;
+    scheduled=true;
+    requestAnimationFrame(() => {
+      scheduled=false;
+      decorate();
+    });
+  }
+
+  const observer=new MutationObserver(schedule);
+  observer.observe(document.documentElement,{subtree:true,childList:true});
+
+  document.addEventListener('langChange',schedule);
+  window.addEventListener('load',schedule);
+
+  schedule();
+  setTimeout(schedule,120);
+  setTimeout(schedule,500);
+})();
+</script>
+<!-- CALC-ELETROLITOS-V1-M4G-EXPLICIT-CLINICAL-GROUP-LABELS END -->
+
+
+
+<!-- CALC-ELETROLITOS-V1-M4H-SEMANTIC-CLEANUP-BALANCED-SPACING START -->
+<script id="medcases-elec-m4h-semantic-cleanup-runtime">
+(() => {
+  'use strict';
+
+  if (window.__mcElecM4HSemanticCleanup) return;
+  window.__mcElecM4HSemanticCleanup = true;
+
+  const LEGACY = new Set([
+    'sexo/idade',
+    'sexo / idade',
+    'sexo/edad',
+    'sexo / edad'
+  ]);
+
+  function cleanup() {
+    const root=document.getElementById('elec2-calc');
+    const step2=root && root.querySelector('#elec2-step2');
+    if (!step2) return;
+
+    /* Helpers ficam ocultos visualmente e para leitores de tela,
+       pois o próprio título já explica a escolha. */
+    step2.querySelectorAll('.m4g-group-helper').forEach(el => {
+      el.setAttribute('aria-hidden','true');
+    });
+
+    /* Remove qualquer label legado Sexo/Idade que tenha sobrevivido
+       fora do owner explícito M4G. Só elementos cujo texto inteiro
+       corresponde ao legado são afetados. */
+    step2.querySelectorAll('div,span,label,p,strong').forEach(el => {
+      if (el.closest('.m4g-group-title')) return;
+      if (el.querySelector('button,input,select,textarea')) return;
+
+      const txt=(el.textContent||'')
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g,' ');
+
+      if (LEGACY.has(txt)) {
+        el.classList.add('m4h-legacy-label');
+        el.setAttribute('aria-hidden','true');
+      }
+    });
+
+    root.setAttribute('data-m4h-clinical-layout','title-options-balanced');
+  }
+
+  let scheduled=false;
+  function schedule(){
+    if (scheduled) return;
+    scheduled=true;
+    requestAnimationFrame(() => {
+      scheduled=false;
+      cleanup();
+    });
+  }
+
+  const observer=new MutationObserver(schedule);
+  observer.observe(document.documentElement,{subtree:true,childList:true});
+
+  document.addEventListener('langChange',schedule);
+  window.addEventListener('load',schedule);
+
+  schedule();
+  setTimeout(schedule,120);
+  setTimeout(schedule,500);
+})();
+</script>
+<!-- CALC-ELETROLITOS-V1-M4H-SEMANTIC-CLEANUP-BALANCED-SPACING END -->
+
+
+
+<!-- CALC-ELETROLITOS-V1-M4I-RESULT-SEMANTIC-NORMALIZATION START -->
+<script id="medcases-elec-m4i-result-normalization-runtime">
+(() => {
+  'use strict';
+
+  if (window.__mcElecM4IResultNormalization) return;
+  window.__mcElecM4IResultNormalization = true;
+
+  function clean(v){
+    return String(v || '')
+      .replace(/\u00a0/g,' ')
+      .replace(/[ \t]+/g,' ')
+      .trim();
+  }
+
+  function normalizeSeverity(result){
+    const severity=result.querySelector('.m4c-severity');
+    const value=severity && severity.querySelector('.m4c-severity-value');
+    const note=severity && severity.querySelector('.m4c-severity-note');
+    if (!severity || !value || !note) return;
+
+    const raw=clean(note.textContent);
+    const m=raw.match(/^(grave|moderad[oa]?|leve|normal)\s*[—–-]\s*(.+)$/i);
+    if (!m) return;
+
+    const token=m[1].toLowerCase();
+    let tone='normal';
+    let label=m[1];
+
+    if (token.startsWith('grave')) {
+      tone='grave';
+      label='Grave';
+    } else if (token.startsWith('moderad')) {
+      tone='moderado';
+      label='Moderada';
+    } else if (token.startsWith('leve')) {
+      tone='leve';
+      label='Leve';
+    } else {
+      tone='normal';
+      label='Sem sinal de gravidade';
+    }
+
+    severity.setAttribute('data-tone',tone);
+    value.textContent=label;
+    note.textContent=clean(m[2]);
+    severity.setAttribute('data-m4i-severity-source','explicit-result');
+  }
+
+  function stateCategoryCount(text){
+    const t=clean(text).toLowerCase();
+    const groups=[
+      /\b(baixo|normal|alto)\b/i,
+      /\becg\b/i,
+      /\bclcr\b/i,
+      /\b(perif[eé]rico|central)\b/i,
+      /\b(sintom[aá]tico|assintom[aá]tico)\b/i,
+      /\b(leve|moderad[oa]|grave)\b/i
+    ];
+    return groups.reduce((n,rx)=>n+(rx.test(t)?1:0),0);
+  }
+
+  function removeConcatenatedStateSummary(result){
+    const summary=result.querySelector('.m4c-section[data-section="summary"]');
+    if (!summary) return;
+
+    summary.querySelectorAll('.m4c-paragraph').forEach(p=>{
+      if (stateCategoryCount(p.textContent) >= 2) {
+        p.classList.add('m4i-hidden');
+        p.setAttribute('aria-hidden','true');
+      }
+    });
+  }
+
+  const PARAGRAPH_PREFIXES=[
+    ['Volume a Aspirar','Volume a aspirar'],
+    ['Concentração na Solução','Concentração na solução'],
+    ['Concentración en la Solución','Concentración en la solución'],
+    ['Concentración en la solución','Concentración en la solución'],
+    ['Velocidade de infusão','Velocidade de infusão'],
+    ['Velocidad de infusión','Velocidad de infusión']
+  ];
+
+  function makeRow(doc,label,value){
+    const row=doc.createElement('div');
+    row.className='m4i-row';
+
+    const l=doc.createElement('div');
+    l.className='m4i-row-label';
+    l.textContent=label;
+
+    const v=doc.createElement('div');
+    v.className='m4i-row-value';
+    v.textContent=value;
+
+    row.append(l,v);
+    return row;
+  }
+
+  function normalizeConductParagraphs(result){
+    result.querySelectorAll(
+      '.m4c-section[data-section="main"] .m4c-paragraph,' +
+      '.m4c-section[data-section="alternative"] .m4c-paragraph'
+    ).forEach(p=>{
+      const text=clean(p.textContent);
+      if (!text) return;
+
+      if (/⚠|🚨|❗/u.test(text)) {
+        p.classList.remove('m4c-paragraph');
+        p.classList.add('m4c-alert','m4i-promoted-alert');
+        return;
+      }
+
+      for (const [prefix,label] of PARAGRAPH_PREFIXES) {
+        if (text.toLowerCase().startsWith(prefix.toLowerCase())) {
+          const value=clean(text.slice(prefix.length));
+          if (!value) return;
+          p.replaceWith(makeRow(p.ownerDocument,label,value));
+          return;
+        }
+      }
+    });
+  }
+
+  function normalizeExistingRows(result){
+    result.querySelectorAll('.m4c-row').forEach(row=>{
+      const label=row.querySelector('.m4c-row-label');
+      const value=row.querySelector('.m4c-row-value');
+      if (!label || !value) return;
+
+      const l=clean(label.textContent).toLowerCase();
+      let v=clean(value.textContent);
+
+      if (l==='macrogotas') {
+        v=v.replace(/^\(\s*gt\/min\s*\)\s*/i,'');
+        value.textContent=v;
+      }
+
+      if (l==='microgotas') {
+        v=v.replace(/^\(\s*[µμu]?gt\/min\s*\)\s*/i,'');
+        value.textContent=v;
+      }
+    });
+  }
+
+  function relocateDeficit(result){
+    const alerts=result.querySelector('.m4c-section[data-section="alerts"]');
+    const summary=result.querySelector('.m4c-section[data-section="summary"]');
+    if (!alerts || !summary) return;
+
+    alerts.querySelectorAll('.m4c-row').forEach(row=>{
+      const label=row.querySelector('.m4c-row-label');
+      const txt=clean(label && label.textContent).toLowerCase();
+      if (/d[eé]ficit estimado/.test(txt)) {
+        summary.appendChild(row);
+      }
+    });
+
+    const meaningful=alerts.querySelector(
+      '.m4c-alert,.m4c-paragraph,.m4c-row'
+    );
+    if (!meaningful) alerts.remove();
+  }
+
+  function normalize(){
+    const result=document.querySelector('#elec2-result-area > .m4c-result');
+    if (!result) return;
+
+    normalizeSeverity(result);
+    removeConcatenatedStateSummary(result);
+    normalizeConductParagraphs(result);
+    normalizeExistingRows(result);
+    relocateDeficit(result);
+
+    result.setAttribute('data-m4i-normalized','true');
+  }
+
+  let scheduled=false;
+  function schedule(){
+    if (scheduled) return;
+    scheduled=true;
+    requestAnimationFrame(()=>{
+      scheduled=false;
+      normalize();
+    });
+  }
+
+  const observer=new MutationObserver(schedule);
+  observer.observe(document.documentElement,{subtree:true,childList:true});
+
+  window.addEventListener('load',schedule);
+  schedule();
+  setTimeout(schedule,120);
+  setTimeout(schedule,500);
+})();
+</script>
+<!-- CALC-ELETROLITOS-V1-M4I-RESULT-SEMANTIC-NORMALIZATION END -->
+
+
+
+<!-- CALC-ELETROLITOS-V1-M4J-REMOVE-CONCATENATED-SUMMARY-STATE START -->
+<script id="medcases-elec-m4j-summary-state-cleanup-runtime">
+(() => {
+  'use strict';
+
+  if (window.__mcElecM4JSummaryStateCleanup) return;
+  window.__mcElecM4JSummaryStateCleanup = true;
+
+  function clean(v){
+    return String(v || '')
+      .replace(/\u00a0/g,' ')
+      .replace(/[ \t]+/g,' ')
+      .trim();
+  }
+
+  function categoryCount(text){
+    const t=clean(text);
+    const groups=[
+      /\b(baixo|normal|alto)\b/i,
+      /\becg\b/i,
+      /\bclcr\b/i,
+      /\b(perif[eé]rico|central)\b/i,
+      /\b(sintom[aá]tico|assintom[aá]tico)\b/i,
+      /\b(leve|moderad[oa]|grave)\b/i
+    ];
+    return groups.reduce((n,rx)=>n+(rx.test(t)?1:0),0);
+  }
+
+  function isConcatenatedState(text){
+    const t=clean(text);
+    if (!t || t.length > 120) return false;
+    return categoryCount(t) >= 2;
+  }
+
+  function cleanup(){
+    const summary=document.querySelector(
+      '#elec2-result-area > .m4c-result .m4c-section[data-section="summary"]'
+    );
+    if (!summary) return;
+
+    /* 1. Elementos folha contendo somente a projeção redundante. */
+    summary.querySelectorAll('*').forEach(el=>{
+      if (el.matches('.m4c-row,.m4i-row,.m4c-row-label,.m4c-row-value,.m4i-row-label,.m4i-row-value')) return;
+      if (el.children.length) return;
+
+      const txt=clean(el.textContent);
+      if (isConcatenatedState(txt)) {
+        el.classList.add('m4j-concatenated-state');
+        el.setAttribute('aria-hidden','true');
+      }
+    });
+
+    /* 2. Caso o owner anterior tenha deixado a string como text node solto. */
+    const walker=document.createTreeWalker(summary,NodeFilter.SHOW_TEXT);
+    const nodes=[];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+
+    nodes.forEach(node=>{
+      const parent=node.parentElement;
+      if (!parent) return;
+      if (parent.closest('.m4c-row,.m4i-row')) return;
+
+      const txt=clean(node.nodeValue);
+      if (isConcatenatedState(txt)) {
+        node.nodeValue='';
+        parent.setAttribute('data-m4j-orphan-state-cleaned','true');
+      }
+    });
+
+    summary.setAttribute('data-m4j-summary-clean','true');
+  }
+
+  let scheduled=false;
+  function schedule(){
+    if (scheduled) return;
+    scheduled=true;
+    requestAnimationFrame(()=>{
+      scheduled=false;
+      cleanup();
+    });
+  }
+
+  const observer=new MutationObserver(schedule);
+  observer.observe(document.documentElement,{subtree:true,childList:true});
+
+  window.addEventListener('load',schedule);
+  schedule();
+  setTimeout(schedule,100);
+  setTimeout(schedule,400);
+})();
+</script>
+<!-- CALC-ELETROLITOS-V1-M4J-REMOVE-CONCATENATED-SUMMARY-STATE END -->
+
+
+
+<!-- CALC-ELETROLITOS-V1-M4K-SEVERITY-HEADER-EXPLICIT-CLASSIFICATION START -->
+<script id="medcases-elec-m4k-severity-explicit-runtime">
+(() => {
+  'use strict';
+
+  if (window.__mcElecM4KSeverityExplicit) return;
+  window.__mcElecM4KSeverityExplicit = true;
+
+  function clean(v){
+    return String(v || '')
+      .replace(/\u00a0/g,' ')
+      .replace(/[ \t]+/g,' ')
+      .trim();
+  }
+
+  function stripLeadingIcons(v){
+    return clean(v).replace(/^[\s🚨⚠️❗🛑🔴🟠🟡🟢]+/u,'').trim();
+  }
+
+  function explicitSeverity(text){
+    const t=stripLeadingIcons(text);
+
+    /* Prioridade: classificação escrita na parte descritiva antes do travessão. */
+    const descriptor=(t.split(/\s+[—–-]\s+/)[0] || t).trim();
+
+    if (/\bgrave\b/i.test(descriptor)) {
+      return {tone:'grave', label:'Grave'};
+    }
+
+    if (/\bmoderad[oa]\b/i.test(descriptor)) {
+      return {tone:'moderado', label:'Moderada'};
+    }
+
+    if (/\bleve\b/i.test(descriptor)) {
+      return {tone:'leve', label:'Leve'};
+    }
+
+    if (/\b(normal|sem gravidade|sin gravedad)\b/i.test(descriptor)) {
+      return {tone:'normal', label:'Sem sinal de gravidade'};
+    }
+
+    return null;
+  }
+
+  function normalize(){
+    const result=document.querySelector('#elec2-result-area > .m4c-result');
+    if (!result) return;
+
+    const severity=result.querySelector('.m4c-severity');
+    const value=severity && severity.querySelector('.m4c-severity-value');
+    const note=severity && severity.querySelector('.m4c-severity-note');
+
+    if (!severity || !value || !note) return;
+
+    const source=clean(note.textContent);
+    const found=explicitSeverity(source);
+    if (!found) return;
+
+    value.textContent=found.label;
+    severity.setAttribute('data-tone',found.tone);
+    severity.setAttribute('data-m4k-severity-source','descriptor-text');
+
+    /* Em classificação leve/moderada, remove apenas ícone visual de urgência
+       herdado do texto; a frase clínica permanece integral. */
+    if (found.tone==='leve' || found.tone==='moderado') {
+      note.textContent=stripLeadingIcons(source);
+    }
+  }
+
+  let scheduled=false;
+  function schedule(){
+    if (scheduled) return;
+    scheduled=true;
+    requestAnimationFrame(()=>{
+      scheduled=false;
+      normalize();
+    });
+  }
+
+  const observer=new MutationObserver(schedule);
+  observer.observe(document.documentElement,{subtree:true,childList:true,characterData:true});
+
+  window.addEventListener('load',schedule);
+  schedule();
+  setTimeout(schedule,100);
+  setTimeout(schedule,400);
+})();
+</script>
+<!-- CALC-ELETROLITOS-V1-M4K-SEVERITY-HEADER-EXPLICIT-CLASSIFICATION END -->
+
 </body>
 </html>

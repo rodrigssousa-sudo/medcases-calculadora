@@ -4669,3 +4669,1818 @@ body.calc-overlay-open
   -webkit-overflow-scrolling: touch !important;
 }
 /* CALC-FARMACOS-DETAIL-V1-R22-OUTER-CONTAINER-CASCADE-FIX END */
+
+/* CALC-ELETROLITOS-V1-M1-FULL-VISUAL-RECOVERY START
+   Owner visual exclusivo da aba Eletrólitos.
+   CSS-only: nenhuma fórmula, callback, dado ou estado clínico é alterado.
+*/
+
+/* ============================================================
+   1. TOKENS E SUPERFÍCIE
+   ============================================================ */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body){
+  --mce-bg:transparent;
+  --mce-surface:#252930;
+  --mce-surface-soft:#20242B;
+  --mce-surface-strong:#2D3340;
+  --mce-border:#374151;
+  --mce-border-soft:rgba(107,114,128,.28);
+  --mce-text:#F8FAFC;
+  --mce-text-2:#E5E7EB;
+  --mce-muted:#9CA3AF;
+  --mce-accent:#E6902E;
+  --mce-accent-soft:rgba(230,144,46,.14);
+  --mce-green:#10B981;
+  --mce-green-soft:rgba(16,185,129,.14);
+  --mce-red:#EF4444;
+  --mce-red-soft:rgba(239,68,68,.13);
+  --mce-yellow:#F59E0B;
+  --mce-radius:11px;
+  --mce-input-h:48px;
+
+  width:min(100%,860px)!important;
+  max-width:860px!important;
+  margin:0 auto!important;
+  padding:24px 18px 42px!important;
+  color:var(--mce-text)!important;
+  background:transparent!important;
+  box-sizing:border-box!important;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body){
+  --mce-surface:#FFFFFF;
+  --mce-surface-soft:#F7F9FA;
+  --mce-surface-strong:#EEF2F4;
+  --mce-border:#D8E0E7;
+  --mce-border-soft:#E1E7ED;
+  --mce-text:#111827;
+  --mce-text-2:#25313B;
+  --mce-muted:#667085;
+  --mce-accent:#D97706;
+  --mce-accent-soft:rgba(217,119,6,.10);
+  --mce-green:#0D9E6E;
+  --mce-green-soft:rgba(13,158,110,.10);
+  --mce-red:#DC2626;
+  --mce-red-soft:rgba(220,38,38,.09);
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body),
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) *{
+  box-sizing:border-box!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)::before,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)::after{
+  content:none!important;
+}
+
+/* ============================================================
+   2. HIERARQUIA — ELETRÓLITO > ESTADO CLÍNICO > PARÂMETROS
+   ============================================================ */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [id^="elec2-step"]{
+  width:100%!important;
+  min-width:0!important;
+  margin:0!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-step2{
+  margin-top:20px!important;
+  padding-top:18px!important;
+  border-top:1px solid var(--mce-border-soft)!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-step-title,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-section-title,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-title,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [class*="elec2-step-title"],
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [class*="elec2-section-title"]{
+  display:flex!important;
+  align-items:center!important;
+  gap:7px!important;
+  width:100%!important;
+  margin:0 0 11px!important;
+  padding:0!important;
+  color:var(--mce-muted)!important;
+  -webkit-text-fill-color:var(--mce-muted)!important;
+  font-size:11px!important;
+  font-weight:750!important;
+  line-height:1.25!important;
+  letter-spacing:.075em!important;
+  text-transform:uppercase!important;
+  background:transparent!important;
+  border:0!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-step-num,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [class*="elec2-step-num"]{
+  color:var(--mce-accent)!important;
+  -webkit-text-fill-color:var(--mce-accent)!important;
+  font-weight:800!important;
+}
+
+/* ============================================================
+   3. SELETOR PRINCIPAL DE ELETRÓLITOS / CALCULADORAS
+   ============================================================ */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-elec-btn{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:7px!important;
+  width:100%!important;
+  min-width:0!important;
+  min-height:44px!important;
+  height:44px!important;
+  margin:0!important;
+  padding:0 12px!important;
+  color:var(--mce-text-2)!important;
+  -webkit-text-fill-color:var(--mce-text-2)!important;
+  background:var(--mce-surface-soft)!important;
+  background-image:none!important;
+  border:1px solid var(--mce-border)!important;
+  border-radius:10px!important;
+  box-shadow:none!important;
+  font-size:13px!important;
+  font-weight:650!important;
+  line-height:1!important;
+  letter-spacing:0!important;
+  opacity:1!important;
+  filter:none!important;
+  transition:border-color .16s ease,background .16s ease,color .16s ease!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-elec-btn:hover,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-elec-btn:focus-visible{
+  color:var(--mce-text)!important;
+  -webkit-text-fill-color:var(--mce-text)!important;
+  background:var(--mce-surface)!important;
+  border-color:var(--mce-accent)!important;
+  outline:none!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-elec-btn--active,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-elec-btn.active{
+  color:var(--mce-accent)!important;
+  -webkit-text-fill-color:var(--mce-accent)!important;
+  background:var(--mce-accent-soft)!important;
+  border-color:var(--mce-accent)!important;
+  font-weight:750!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-elec-btn i{
+  color:inherit!important;
+  font-size:12px!important;
+  opacity:.95!important;
+}
+
+/* Caso o grid nominal exista, padroniza 2 colunas. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-elec-grid,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-electrolytes-grid,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [class*="elec2-elec-grid"]{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:8px 10px!important;
+  width:100%!important;
+}
+
+/* ============================================================
+   4. CAMPOS DE DADOS
+   ============================================================ */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-fields-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:10px!important;
+  width:100%!important;
+  margin:0 0 16px!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-field,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-field-wrap,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .univ-input-group{
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-field-label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [class*="elec2-label"]{
+  display:block!important;
+  margin:0 0 6px!important;
+  padding:0!important;
+  color:var(--mce-text-2)!important;
+  -webkit-text-fill-color:var(--mce-text-2)!important;
+  background:transparent!important;
+  border:0!important;
+  font-size:12px!important;
+  font-weight:600!important;
+  line-height:1.25!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-field-input,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) input[type="number"],
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) input[type="text"],
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) select{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+  height:var(--mce-input-h)!important;
+  min-height:var(--mce-input-h)!important;
+  margin:0!important;
+  padding:0 13px!important;
+  color:var(--mce-text)!important;
+  -webkit-text-fill-color:var(--mce-text)!important;
+  caret-color:var(--mce-accent)!important;
+  background:var(--mce-surface-soft)!important;
+  background-image:none!important;
+  border:1px solid var(--mce-border)!important;
+  border-radius:10px!important;
+  box-shadow:none!important;
+  outline:none!important;
+  font-size:14px!important;
+  font-weight:500!important;
+  line-height:1!important;
+  opacity:1!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-field-input::placeholder,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) input::placeholder{
+  color:var(--mce-muted)!important;
+  -webkit-text-fill-color:var(--mce-muted)!important;
+  opacity:.72!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-field-input:focus,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) input[type="number"]:focus,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) input[type="text"]:focus,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) select:focus{
+  border-color:var(--mce-accent)!important;
+  background:var(--mce-surface)!important;
+  box-shadow:none!important;
+  outline:none!important;
+}
+
+/* ============================================================
+   5. ESTADO CLÍNICO E PRESETS
+   Corrige o problema atual de opções coladas sem espaço.
+   ============================================================ */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-state-btn,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-preset-btn{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:auto!important;
+  min-width:0!important;
+  min-height:34px!important;
+  height:34px!important;
+  margin:0 6px 7px 0!important;
+  padding:0 10px!important;
+  color:var(--mce-text-2)!important;
+  -webkit-text-fill-color:var(--mce-text-2)!important;
+  background:var(--mce-surface-soft)!important;
+  background-image:none!important;
+  border:1px solid var(--mce-border)!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+  font-size:12px!important;
+  font-weight:600!important;
+  line-height:1!important;
+  white-space:nowrap!important;
+  opacity:1!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-state-btn:hover,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-preset-btn:hover{
+  color:var(--mce-text)!important;
+  -webkit-text-fill-color:var(--mce-text)!important;
+  border-color:var(--mce-muted)!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-state-btn.active,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-preset-btn.active{
+  color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;
+  background:var(--mce-green)!important;
+  border-color:var(--mce-green)!important;
+  font-weight:700!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-state-btn--ecg-danger.active,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [class*="elec2-state-btn--grav-grave"].active,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [class*="elec2-state-btn--nivel-alto"].active{
+  background:var(--mce-red)!important;
+  border-color:var(--mce-red)!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [class*="elec2-state-btn--grav-moder"].active{
+  background:var(--mce-yellow)!important;
+  border-color:var(--mce-yellow)!important;
+}
+
+/* Espaçamento mesmo quando o owner antigo não oferece container flex. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-state-row,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-state-group,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-preset-row,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-presets,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [class*="elec2-options"]{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  gap:0!important;
+  width:100%!important;
+  margin:0 0 7px!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+}
+
+/* ============================================================
+   6. BOTÃO CALCULAR E AÇÕES
+   ============================================================ */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-calc-btn{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:7px!important;
+  width:min(100%,360px)!important;
+  min-width:0!important;
+  height:44px!important;
+  min-height:44px!important;
+  margin:16px auto 0!important;
+  padding:0 16px!important;
+  color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;
+  background:var(--mce-accent)!important;
+  background-image:none!important;
+  border:1px solid var(--mce-accent)!important;
+  border-radius:10px!important;
+  box-shadow:none!important;
+  font-size:14px!important;
+  font-weight:750!important;
+  line-height:1!important;
+  opacity:1!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-calc-btn:disabled{
+  color:var(--mce-muted)!important;
+  -webkit-text-fill-color:var(--mce-muted)!important;
+  background:var(--mce-surface-strong)!important;
+  border-color:var(--mce-border)!important;
+  opacity:.72!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-result-actions{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:8px!important;
+  margin:14px 0 0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-action-btn{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px!important;
+  width:auto!important;
+  min-height:36px!important;
+  height:36px!important;
+  margin:0!important;
+  padding:0 12px!important;
+  color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;
+  background:var(--mce-green)!important;
+  background-image:none!important;
+  border:1px solid var(--mce-green)!important;
+  border-radius:8px!important;
+  font-size:12px!important;
+  font-weight:700!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-action-btn--secondary{
+  color:var(--mce-text-2)!important;
+  -webkit-text-fill-color:var(--mce-text-2)!important;
+  background:transparent!important;
+  border-color:var(--mce-border)!important;
+}
+
+/* ============================================================
+   7. RESULTADO — FLAT, CLÍNICO, SEM CARD DENTRO DE CARD
+   ============================================================ */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-result{
+  width:100%!important;
+  min-height:0!important;
+  margin:20px 0 0!important;
+  padding:18px 0 0!important;
+  color:var(--mce-text)!important;
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  border-top:1px solid var(--mce-border-soft)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area .univ-result-card,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area .univ-result-card-inner,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area .univ-result-conduct,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area [class*="result-card"]{
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  color:var(--mce-text)!important;
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area .univ-result-header{
+  margin:0 0 8px!important;
+  color:var(--mce-muted)!important;
+  -webkit-text-fill-color:var(--mce-muted)!important;
+  font-size:11px!important;
+  font-weight:750!important;
+  line-height:1.25!important;
+  letter-spacing:.07em!important;
+  text-transform:uppercase!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area .univ-result-number{
+  margin:0 0 10px!important;
+  color:var(--mce-text)!important;
+  -webkit-text-fill-color:var(--mce-text)!important;
+  font-size:28px!important;
+  font-weight:780!important;
+  line-height:1.1!important;
+  letter-spacing:-.02em!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area .univ-result-sub,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area .univ-result-interpretation{
+  color:var(--mce-text-2)!important;
+  -webkit-text-fill-color:var(--mce-text-2)!important;
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area > * + *,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area .univ-result-conduct > * + *{
+  margin-top:12px!important;
+}
+
+/* Blocos de alerta/conduta preservam cor sem virar card decorativo. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area [class*="alert"],
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area [class*="warning"]{
+  padding:10px 0 10px 12px!important;
+  background:transparent!important;
+  border:0!important;
+  border-left:2px solid var(--mce-red)!important;
+  border-radius:0!important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area p,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area li{
+  color:var(--mce-text-2)!important;
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+
+/* ============================================================
+   8. RESPONSIVIDADE
+   ============================================================ */
+@media (max-width:780px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body){
+    width:100%!important;
+    padding:18px 14px 34px!important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-fields-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
+@media (max-width:520px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body){
+    padding:16px 12px 30px!important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-elec-grid,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-electrolytes-grid,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) [class*="elec2-elec-grid"]{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:7px!important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-elec-btn{
+    min-height:42px!important;
+    height:42px!important;
+    padding:0 8px!important;
+    font-size:12px!important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-fields-grid{
+    grid-template-columns:1fr!important;
+    gap:9px!important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-field-input,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) input[type="number"],
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) input[type="text"],
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) select{
+    height:46px!important;
+    min-height:46px!important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-state-btn,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-preset-btn{
+    min-height:33px!important;
+    height:33px!important;
+    margin-right:5px!important;
+    margin-bottom:6px!important;
+    padding:0 9px!important;
+    font-size:11.5px!important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-calc-btn{
+    width:100%!important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-result-actions{
+    justify-content:stretch!important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) .elec2-action-btn{
+    flex:1 1 0!important;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-M1-FULL-VISUAL-RECOVERY END */
+
+/* CALC-ELETROLITOS-V1-M2-OVERLAY-OWNER-CUTOVER START
+   O calculator-overlay move .hub-card-inner para #calculator-overlay-body.
+   A M1 estava corretamente isolada, porém no owner de origem já vazio.
+   M2 promove todos os seletores M1 ao duplo owner:
+   - origem: #hub-elec-slot
+   - runtime visível: #calculator-overlay-container.is-active #calculator-overlay-body
+   Nenhuma lógica clínica, fórmula, callback ou JS é alterado.
+*/
+/* CALC-ELETROLITOS-V1-M2-OVERLAY-OWNER-CUTOVER END */
+
+/* CALC-ELETROLITOS-V1-M4A-R2-TYPOGRAPHY-CONTROLS-PREMIUM START
+   Microfase visual:
+   - tipografia Inter clinica consistente
+   - cards/botoes padronizados
+   - inputs mais delicados
+   - botao Calcular com 60% da largura anterior (-40%)
+   - sem alterar logica, formulas, callbacks ou dados clinicos
+*/
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc{
+  --elec-font:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",sans-serif;
+  --elec-surface:#20252D;
+  --elec-surface-input:#181D24;
+  --elec-border:#394352;
+  --elec-text:#E8ECF1;
+  --elec-muted:#AAB3BF;
+  --elec-accent:#F59E0B;
+  --elec-active:#10B981;
+
+  font-family:var(--elec-font) !important;
+  font-size:15px;
+  line-height:1.45;
+  letter-spacing:-0.08px;
+  color:var(--elec-text);
+  font-variant-numeric:tabular-nums;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc{
+  --elec-surface:#FFFFFF;
+  --elec-surface-input:#F7F9FA;
+  --elec-border:#D8E0E7;
+  --elec-text:#171A1F;
+  --elec-muted:#66717F;
+  --elec-accent:#D97706;
+  --elec-active:#059669;
+}
+
+/* Tipografia */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc button,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc input,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc select,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc textarea{
+  font-family:var(--elec-font) !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc h1,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc h2,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc h3,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc h4,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-step-title,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-section-title{
+  font-weight:700 !important;
+  letter-spacing:-0.22px !important;
+  line-height:1.22 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-field-label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-state-label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-preset-label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-group-label{
+  font-size:12.5px !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+  letter-spacing:0 !important;
+  color:var(--elec-text) !important;
+}
+
+/* Grid e campos */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-fields-grid{
+  gap:12px 14px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc input:not([type="checkbox"]):not([type="radio"]),
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc select,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc textarea,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-field-input{
+  min-height:46px !important;
+  height:46px !important;
+  padding:0 13px !important;
+  border:1px solid var(--elec-border) !important;
+  border-radius:10px !important;
+  background:var(--elec-surface-input) !important;
+  color:var(--elec-text) !important;
+  box-shadow:none !important;
+  outline:none !important;
+  font-size:15px !important;
+  font-weight:500 !important;
+  line-height:1 !important;
+  letter-spacing:-0.08px !important;
+  transition:border-color 120ms ease,background-color 120ms ease !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc input::placeholder,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc textarea::placeholder{
+  color:var(--elec-muted) !important;
+  opacity:.62 !important;
+  font-size:13px !important;
+  font-weight:400 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc input:focus,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc select:focus,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc textarea:focus{
+  border-color:color-mix(in srgb,var(--elec-accent) 70%,var(--elec-border)) !important;
+  box-shadow:none !important;
+}
+
+/* Grade principal de eletrólitos */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-elec-grid{
+  gap:10px 12px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-elec-btn{
+  min-height:48px !important;
+  height:48px !important;
+  padding:0 14px !important;
+  border:1px solid var(--elec-border) !important;
+  border-radius:10px !important;
+  background:var(--elec-surface) !important;
+  color:var(--elec-text) !important;
+  box-shadow:none !important;
+  font-size:14px !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+  letter-spacing:-0.1px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-elec-btn--active{
+  border-color:var(--elec-accent) !important;
+  color:var(--elec-text) !important;
+}
+
+/* Controles clínicos e presets */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-btn-row{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  gap:8px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-state-btn,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-preset-btn{
+  min-height:36px !important;
+  height:36px !important;
+  margin:0 !important;
+  padding:0 12px !important;
+  border:1px solid var(--elec-border) !important;
+  border-radius:9px !important;
+  background:var(--elec-surface) !important;
+  color:var(--elec-text) !important;
+  box-shadow:none !important;
+  font-size:12.5px !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+  letter-spacing:-0.05px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-state-btn.active{
+  background:var(--elec-active) !important;
+  border-color:var(--elec-active) !important;
+  color:#FFFFFF !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-preset-btn.active{
+  border-color:var(--elec-accent) !important;
+}
+
+/* Botão Calcular: 40% menor na largura, mantendo altura de toque clínica */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-calc-btn{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:60% !important;
+  max-width:320px !important;
+  min-width:180px !important;
+  min-height:44px !important;
+  height:44px !important;
+  margin:18px auto 0 !important;
+  padding:0 18px !important;
+  border-radius:10px !important;
+  box-shadow:none !important;
+  font-size:13.5px !important;
+  font-weight:800 !important;
+  line-height:1 !important;
+  letter-spacing:-0.08px !important;
+}
+
+@media (max-width:600px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc{
+    font-size:14px;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-elec-grid{
+    gap:8px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-elec-btn{
+    min-height:46px !important;
+    height:46px !important;
+    font-size:13.5px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc input:not([type="checkbox"]):not([type="radio"]),
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc select,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc textarea,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-field-input{
+    min-height:44px !important;
+    height:44px !important;
+    font-size:14.5px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-state-btn,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-preset-btn{
+    min-height:34px !important;
+    height:34px !important;
+    padding:0 10px !important;
+    font-size:12px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-calc-btn{
+    width:60% !important;
+    min-width:170px !important;
+    max-width:280px !important;
+    min-height:42px !important;
+    height:42px !important;
+    font-size:13px !important;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-M4A-R2-TYPOGRAPHY-CONTROLS-PREMIUM END */
+
+/* CALC-ELETROLITOS-V1-M4B-SEMANTIC-GROUPING-HIERARCHY START
+   Hierarquia visual clínica:
+   - título sempre acima
+   - opções sempre abaixo
+   - grupos com ritmo vertical constante
+   - rótulos semânticos mais claros, sem alterar lógica clínica
+*/
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc [id^="elec2-step"]{
+  width:100% !important;
+  min-width:0 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc #elec2-step2,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc #elec2-step3{
+  margin-top:22px !important;
+  padding-top:20px !important;
+  border-top:1px solid rgba(107,114,128,.25) !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-step-title,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-section-title,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-title{
+  display:flex !important;
+  align-items:baseline !important;
+  gap:6px !important;
+  width:100% !important;
+  margin:0 0 14px !important;
+  padding:0 !important;
+  color:var(--elec-text) !important;
+  text-transform:none !important;
+  letter-spacing:-.16px !important;
+  font-size:15px !important;
+  font-weight:650 !important;
+  line-height:1.25 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-step-num{
+  color:var(--elec-accent) !important;
+  font-size:15px !important;
+  font-weight:800 !important;
+  letter-spacing:-.1px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-step-label{
+  color:var(--elec-text) !important;
+  font-weight:650 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-field{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:stretch !important;
+  gap:7px !important;
+  min-width:0 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-field > label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-field-label{
+  display:block !important;
+  width:100% !important;
+  margin:0 !important;
+  padding:0 !important;
+  color:var(--elec-text) !important;
+  font-size:12.5px !important;
+  font-weight:650 !important;
+  line-height:1.25 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-state-lbl,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-semantic-label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-preset-lbl,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-group-label{
+  display:block !important;
+  width:100% !important;
+  float:none !important;
+  clear:both !important;
+  margin:15px 0 7px !important;
+  padding:0 !important;
+  color:var(--elec-text) !important;
+  font-size:13px !important;
+  font-weight:650 !important;
+  line-height:1.25 !important;
+  letter-spacing:-.08px !important;
+  text-transform:none !important;
+  background:transparent !important;
+  border:0 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-btn-row,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-semantic-options{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  width:100% !important;
+  max-width:100% !important;
+  float:none !important;
+  clear:both !important;
+  gap:8px !important;
+  margin:0 0 5px !important;
+  padding:0 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-state-btn,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-preset-btn{
+  flex:0 0 auto !important;
+  width:auto !important;
+  max-width:100% !important;
+  white-space:nowrap !important;
+}
+
+@media (max-width:600px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc #elec2-step2,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc #elec2-step3{
+    margin-top:20px !important;
+    padding-top:18px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-step-title,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-section-title,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-title{
+    margin-bottom:13px !important;
+    font-size:14px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-step-num{
+    font-size:14px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-state-lbl,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-semantic-label,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-preset-lbl,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc .elec2-group-label{
+    margin-top:14px !important;
+    margin-bottom:7px !important;
+    font-size:12.5px !important;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-M4B-SEMANTIC-GROUPING-HIERARCHY END */
+
+/* CALC-ELETROLITOS-V1-M4B-R1-LIGHT-ACTIVE-VISIBILITY START
+   Corrige exclusivamente o contraste dos controles ativos no modo Light.
+   Dark permanece inalterado.
+*/
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-preset-btn.active{
+  background:#FFF7ED !important;
+  border-color:#F59E0B !important;
+  color:#1F2937 !important;
+  box-shadow:none !important;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-preset-btn.active *,
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-preset-btn.active i,
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-preset-btn.active span{
+  color:#1F2937 !important;
+}
+
+/* Mantém estados clínicos verdes no Light, com texto branco legível. */
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-state-btn.active{
+  background:#10B981 !important;
+  border-color:#10B981 !important;
+  color:#FFFFFF !important;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-state-btn.active *{
+  color:#FFFFFF !important;
+}
+
+/* Eletrólito selecionado: destaque laranja sutil sem apagar o rótulo. */
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-elec-btn--active{
+  background:#FFF7ED !important;
+  border-color:#F59E0B !important;
+  color:#1F2937 !important;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-elec-btn--active *{
+  color:#1F2937 !important;
+}
+
+/* CALC-ELETROLITOS-V1-M4B-R1-LIGHT-ACTIVE-VISIBILITY END */
+
+/* CALC-ELETROLITOS-V1-M4B-R2-LIGHT-TEXT-FILL-FIX START
+   Probe runtime confirmou:
+   color = rgb(31,41,55) correto
+   -webkit-text-fill-color = rgb(255,255,255) incorreto
+   Corrige exclusivamente o text-fill dos presets ativos no Light.
+*/
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-preset-btn.active{
+  color:#1F2937 !important;
+  -webkit-text-fill-color:#1F2937 !important;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-preset-btn.active *,
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-preset-btn.active span,
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .elec2-preset-btn.active i{
+  color:#1F2937 !important;
+  -webkit-text-fill-color:#1F2937 !important;
+}
+
+/* CALC-ELETROLITOS-V1-M4B-R2-LIGHT-TEXT-FILL-FIX END */
+
+/* CALC-ELETROLITOS-V1-M4C-REDUNDANCY-AUTO-LEVEL-UNIVERSAL-RESULTS START
+   - remove visualmente entrada de sexo duplicada, preservando seletor real
+   - nível é derivado do valor sérico quando existe input direto
+   - resultado clínico universal, flat, com gravidade em primeiro lugar
+*/
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .m4c-hidden-redundant{
+  display:none !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-result{
+  --m4c-line:rgba(148,163,184,.22);
+  --m4c-text:#E8ECF1;
+  --m4c-muted:#9CA8B7;
+  --m4c-danger:#EF4444;
+  --m4c-warning:#F59E0B;
+  --m4c-ok:#10B981;
+  width:100%;
+  color:var(--m4c-text);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-result{
+  --m4c-line:#DDE3E9;
+  --m4c-text:#17202B;
+  --m4c-muted:#657180;
+  --m4c-danger:#DC2626;
+  --m4c-warning:#D97706;
+  --m4c-ok:#059669;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity{
+  margin:0 0 18px;
+  padding:2px 0 3px 14px;
+  border-left:3px solid var(--m4c-warning);
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity[data-tone="grave"]{
+  border-left-color:var(--m4c-danger);
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity[data-tone="leve"],
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity[data-tone="moderado"]{
+  border-left-color:var(--m4c-warning);
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity[data-tone="normal"]{
+  border-left-color:var(--m4c-ok);
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-kicker,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-section-title{
+  margin:0;
+  color:var(--m4c-muted);
+  font-size:10.5px;
+  font-weight:800;
+  line-height:1.2;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity-value{
+  margin:5px 0 0;
+  color:var(--m4c-warning);
+  font-size:23px;
+  font-weight:800;
+  line-height:1.05;
+  letter-spacing:-.4px;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity[data-tone="grave"] .m4c-severity-value{
+  color:var(--m4c-danger);
+}
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity[data-tone="normal"] .m4c-severity-value{
+  color:var(--m4c-ok);
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity-note{
+  margin:5px 0 0;
+  color:var(--m4c-text);
+  font-size:13px;
+  font-weight:600;
+  line-height:1.4;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-summary-head{
+  margin:0;
+  padding:0 0 15px;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-summary-name{
+  color:var(--m4c-muted);
+  font-size:11px;
+  font-weight:750;
+  line-height:1.3;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-summary-number{
+  margin-top:3px;
+  color:var(--m4c-text);
+  font-size:28px;
+  font-weight:800;
+  line-height:1.08;
+  letter-spacing:-.5px;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-summary-interpretation{
+  margin-top:7px;
+  color:var(--m4c-text);
+  font-size:13px;
+  font-weight:650;
+  line-height:1.42;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-section{
+  margin:0;
+  padding:15px 0;
+  border-top:1px solid var(--m4c-line);
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-section-title{
+  margin-bottom:10px;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-row{
+  display:grid;
+  grid-template-columns:minmax(115px,38%) minmax(0,1fr);
+  gap:10px;
+  align-items:start;
+  margin:0 0 7px;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-row:last-child{
+  margin-bottom:0;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-row-label{
+  color:var(--m4c-muted);
+  font-size:11.5px;
+  font-weight:650;
+  line-height:1.38;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-row-value{
+  color:var(--m4c-text);
+  font-size:12.5px;
+  font-weight:650;
+  line-height:1.4;
+  overflow-wrap:anywhere;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-paragraph{
+  margin:0 0 7px;
+  color:var(--m4c-text);
+  font-size:12.5px;
+  font-weight:550;
+  line-height:1.45;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-alert{
+  margin:0 0 9px;
+  padding:0 0 0 10px;
+  border-left:2px solid var(--m4c-warning);
+  color:var(--m4c-text);
+  font-size:12.5px;
+  font-weight:600;
+  line-height:1.45;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-alert--critical{
+  border-left-color:var(--m4c-danger);
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area > .elec2-result-actions,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .elec2-result-actions{
+  margin-top:10px !important;
+  padding-top:12px !important;
+  border-top:1px solid var(--m4c-line) !important;
+}
+
+@media (max-width:600px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-result-area .m4c-severity-value{
+    font-size:21px;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-result-area .m4c-summary-number{
+    font-size:26px;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-result-area .m4c-row{
+    grid-template-columns:minmax(100px,36%) minmax(0,1fr);
+    gap:8px;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-M4C-REDUNDANCY-AUTO-LEVEL-UNIVERSAL-RESULTS END */
+
+/* CALC-ELETROLITOS-V1-M4D-OPTIONAL-PARAMETERS-COLLAPSE START
+   Step 3 permanece funcional, porém colapsado por padrão.
+   O botão Calcular permanece sempre visível.
+*/
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3.m4d-advanced-section{
+  margin-top:20px !important;
+  padding-top:18px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3 .m4d-advanced-helper{
+  margin:4px 0 10px !important;
+  color:var(--elec-muted) !important;
+  font-size:11.5px !important;
+  font-weight:500 !important;
+  line-height:1.4 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3 .m4d-advanced-toggle{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  width:100% !important;
+  min-height:42px !important;
+  margin:0 0 14px !important;
+  padding:0 12px !important;
+  border:1px solid var(--elec-border) !important;
+  border-radius:10px !important;
+  background:transparent !important;
+  color:var(--elec-text) !important;
+  box-shadow:none !important;
+  font-family:var(--elec-font) !important;
+  font-size:12.5px !important;
+  font-weight:650 !important;
+  line-height:1 !important;
+  text-align:left !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3 .m4d-advanced-toggle:active{
+  opacity:.78 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3 .m4d-chevron{
+  display:inline-block !important;
+  margin-left:12px !important;
+  color:var(--elec-muted) !important;
+  font-size:18px !important;
+  font-weight:500 !important;
+  line-height:1 !important;
+  transform:rotate(90deg);
+  transition:transform 140ms ease;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3.m4d-expanded .m4d-chevron{
+  transform:rotate(-90deg);
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3.m4d-collapsed > .m4d-advanced-content{
+  display:none !important;
+}
+
+/* Calcular nunca participa do colapso. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3 .m4d-calc-preserved{
+  display:flex !important;
+}
+
+/* Visual Light */
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3 .m4d-advanced-toggle{
+  background:#FFFFFF !important;
+  border-color:#D8E0E7 !important;
+  color:#17202B !important;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3 .m4d-advanced-helper,
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3 .m4d-chevron{
+  color:#66717F !important;
+}
+
+@media (max-width:600px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step3 .m4d-advanced-toggle{
+    min-height:40px !important;
+    font-size:12px !important;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-M4D-OPTIONAL-PARAMETERS-COLLAPSE END */
+
+/* CALC-ELETROLITOS-V1-M4E-GRAVITY-OUT-MAIN-COMPACT-SPACING START
+   - gravidade sai do fluxo principal e vira override opcional em avançados
+   - reduz espaço morto mantendo legibilidade e touch targets
+*/
+
+/* Ritmo vertical mais compacto na etapa clínica */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .elec2-fields-grid{
+  row-gap:12px !important;
+  column-gap:12px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .elec2-field{
+  gap:5px !important;
+  margin-bottom:0 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .elec2-state-lbl,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .elec2-semantic-label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .elec2-preset-lbl,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .elec2-group-label{
+  margin-top:10px !important;
+  margin-bottom:6px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .elec2-btn-row{
+  gap:7px !important;
+  margin-bottom:1px !important;
+}
+
+/* Menos vazio antes dos parâmetros avançados */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3.m4d-advanced-section{
+  margin-top:14px !important;
+  padding-top:14px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3 .m4d-advanced-helper{
+  margin:3px 0 8px !important;
+}
+
+/* Override de gravidade fica dentro dos avançados, sem competir com o fluxo principal */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .m4e-gravity-override{
+  margin:0 0 12px !important;
+  padding:0 0 12px !important;
+  border-bottom:1px solid rgba(148,163,184,.18) !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .m4e-gravity-helper{
+  margin:0 0 7px !important;
+  color:var(--elec-muted) !important;
+  font-size:11px !important;
+  font-weight:500 !important;
+  line-height:1.4 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .m4e-gravity-override .elec2-state-lbl,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .m4e-gravity-override .elec2-semantic-label{
+  margin:0 0 6px !important;
+  font-size:12.5px !important;
+  font-weight:650 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .m4e-gravity-override .elec2-btn-row{
+  margin:0 !important;
+  gap:7px !important;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc .m4e-gravity-override{
+  border-bottom-color:#E1E7ED !important;
+}
+
+@media (max-width:600px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .elec2-fields-grid{
+    row-gap:10px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .elec2-state-lbl,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .elec2-semantic-label,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .elec2-preset-lbl,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .elec2-group-label{
+    margin-top:9px !important;
+    margin-bottom:5px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step3.m4d-advanced-section{
+    margin-top:12px !important;
+    padding-top:12px !important;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-M4E-GRAVITY-OUT-MAIN-COMPACT-SPACING END */
+
+/* CALC-ELETROLITOS-V1-M4F-PATIENT-PROFILE-COMPACT-CLINICAL-GROUPS START
+   - "Sexo/Idade" passa a "Perfil do paciente"
+   - grupos clínicos ganham ritmo vertical compacto e uniforme
+*/
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4f-profile-label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4f-clinical-label{
+  margin-top:6px !important;
+  margin-bottom:5px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4f-profile-row,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4f-clinical-row{
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+  gap:6px !important;
+}
+
+/* Neutraliza wrappers antigos que ainda adicionavam espaço morto. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .elec2-state-group,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .elec2-state-row{
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  row-gap:6px !important;
+}
+
+/* Distância real entre uma escolha clínica e o próximo título. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4f-clinical-row + .m4f-clinical-label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4f-profile-row + .m4f-clinical-label{
+  margin-top:8px !important;
+}
+
+/* Perfil mantém uma linha quando houver espaço; wrap limpo em telas estreitas. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4f-profile-row{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  width:100% !important;
+}
+
+/* Todos os grupos subsequentes usam o mesmo ritmo. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4f-clinical-row{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  width:100% !important;
+}
+
+/* Remove folga herdada entre blocos do step2 sem tocar nos inputs. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2{
+  row-gap:0 !important;
+}
+
+@media (max-width:600px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .m4f-profile-label,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .m4f-clinical-label{
+    margin-top:5px !important;
+    margin-bottom:4px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .m4f-profile-row,
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .m4f-clinical-row{
+    gap:6px !important;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-M4F-PATIENT-PROFILE-COMPACT-CLINICAL-GROUPS END */
+
+/* CALC-ELETROLITOS-V1-M4G-EXPLICIT-CLINICAL-GROUP-LABELS START */
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group{
+  display:block !important;
+  width:100% !important;
+  margin:0 0 10px !important;
+  padding:0 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group:last-child{
+  margin-bottom:0 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group-title{
+  display:block !important;
+  margin:0 0 6px !important;
+  padding:0 !important;
+  color:var(--elec-text) !important;
+  font-family:var(--elec-font) !important;
+  font-size:12.5px !important;
+  font-weight:700 !important;
+  line-height:1.25 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group-helper{
+  display:block !important;
+  margin:-1px 0 6px !important;
+  color:var(--elec-muted) !important;
+  font-size:10.5px !important;
+  font-weight:500 !important;
+  line-height:1.3 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group-row{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  gap:6px !important;
+  width:100% !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-hidden-redundant{
+  display:none !important;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group-title{
+  color:#17202B !important;
+}
+
+body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group-helper{
+  color:#66717F !important;
+}
+
+@media (max-width:600px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .m4g-group{
+    margin-bottom:9px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .m4g-group-title{
+    margin-bottom:5px !important;
+    font-size:12px !important;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-M4G-EXPLICIT-CLINICAL-GROUP-LABELS END */
+
+/* CALC-ELETROLITOS-V1-M4H-SEMANTIC-CLEANUP-BALANCED-SPACING START
+   Fechamento semântico da etapa clínica:
+   - sem subtítulos instrucionais repetitivos
+   - título + opções
+   - ritmo vertical equilibrado
+   - legado Sexo/Idade oculto
+*/
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group-helper{
+  display:none !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4h-legacy-label{
+  display:none !important;
+}
+
+/* Um grupo clínico = título + opções, com respiro uniforme. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group{
+  display:block !important;
+  width:100% !important;
+  margin:0 0 16px !important;
+  padding:0 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group:last-of-type{
+  margin-bottom:8px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group-title{
+  display:block !important;
+  margin:0 0 8px !important;
+  padding:0 !important;
+  font-size:12.5px !important;
+  font-weight:700 !important;
+  line-height:1.25 !important;
+  letter-spacing:0 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group-row{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  gap:7px !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+/* Neutraliza margens antigas que causavam distância irregular. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group .elec2-state-lbl,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group .elec2-semantic-label,
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step2 .m4g-group .elec2-group-label{
+  margin:0 !important;
+}
+
+/* Mantém separação clara antes dos parâmetros avançados. */
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-calc #elec2-step3.m4d-advanced-section{
+  margin-top:16px !important;
+  padding-top:16px !important;
+}
+
+@media (max-width:600px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .m4g-group{
+    margin-bottom:14px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .m4g-group-title{
+    margin-bottom:7px !important;
+    font-size:12px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step2 .m4g-group-row{
+    gap:6px !important;
+  }
+
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-calc #elec2-step3.m4d-advanced-section{
+    margin-top:14px !important;
+    padding-top:14px !important;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-M4H-SEMANTIC-CLEANUP-BALANCED-SPACING END */
+
+/* CALC-ELETROLITOS-V1-M4I-RESULT-SEMANTIC-NORMALIZATION START
+   Normalização exclusivamente visual/semântica do resultado universal.
+*/
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4i-hidden{
+  display:none !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4i-row{
+  display:grid !important;
+  grid-template-columns:minmax(125px,39%) minmax(0,1fr) !important;
+  gap:12px !important;
+  align-items:start !important;
+  margin:0 0 8px !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4i-row-label{
+  color:var(--m4c-muted) !important;
+  font-size:11.5px !important;
+  font-weight:650 !important;
+  line-height:1.4 !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4i-row-value{
+  min-width:0 !important;
+  color:var(--m4c-text) !important;
+  font-size:12.5px !important;
+  font-weight:650 !important;
+  line-height:1.4 !important;
+  overflow-wrap:anywhere !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-row-value{
+  overflow-wrap:anywhere !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-alert.m4i-promoted-alert{
+  margin:10px 0 4px !important;
+  padding-left:11px !important;
+}
+
+@media (max-width:600px){
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+  #elec2-result-area .m4i-row{
+    grid-template-columns:minmax(112px,38%) minmax(0,1fr) !important;
+    gap:9px !important;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-M4I-RESULT-SEMANTIC-NORMALIZATION END */
+
+/* CALC-ELETROLITOS-V1-M4J-REMOVE-CONCATENATED-SUMMARY-STATE START */
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4j-concatenated-state{
+  display:none !important;
+}
+
+/* CALC-ELETROLITOS-V1-M4J-REMOVE-CONCATENATED-SUMMARY-STATE END */
+
+/* CALC-ELETROLITOS-V1-M4K-SEVERITY-HEADER-EXPLICIT-CLASSIFICATION START */
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity[data-tone="leve"]{
+  --m4c-severity:#22c55e !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity[data-tone="moderado"]{
+  --m4c-severity:#f59e0b !important;
+}
+
+:is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body)
+#elec2-result-area .m4c-severity[data-tone="grave"]{
+  --m4c-severity:#ef4444 !important;
+}
+
+/* CALC-ELETROLITOS-V1-M4K-SEVERITY-HEADER-EXPLICIT-CLASSIFICATION END */
