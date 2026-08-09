@@ -7988,3 +7988,140 @@ body.light-mode #hub-fluidos-slot #fluid-temp:focus-visible {
 }
 
 /* CALC-FLUIDOS-V1-M1-R3-FINAL-DARK-PT-REFINEMENT END */
+
+/* CALC-FLUIDOS-V1-M2-WEIGHT-FALLBACK START */
+/*
+  Fallback visual de peso para Fluidoterapia.
+  Exibido somente quando _fluidUpdateChip recebe peso ausente/inválido.
+  Mantém a linguagem flat da frente FLUIDOS V1.
+*/
+
+#subview-fluids .fluid-weight-fallback,
+#hub-fluidos-slot .fluid-weight-fallback {
+  margin: 8px 0 11px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+#subview-fluids .fluid-weight-fallback[hidden],
+#hub-fluidos-slot .fluid-weight-fallback[hidden] {
+  display: none !important;
+}
+
+#subview-fluids .fluid-weight-fallback-label,
+#hub-fluidos-slot .fluid-weight-fallback-label {
+  display: block !important;
+  margin: 0 0 6px !important;
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  font-weight: 650 !important;
+  letter-spacing: 0.01em !important;
+  color: rgba(203, 213, 225, 0.84) !important;
+}
+
+#subview-fluids .fluid-weight-fallback-es,
+#hub-fluidos-slot .fluid-weight-fallback-es {
+  display: none !important;
+}
+
+html[lang="es"] #subview-fluids .fluid-weight-fallback-pt,
+html[lang="es"] #hub-fluidos-slot .fluid-weight-fallback-pt {
+  display: none !important;
+}
+
+html[lang="es"] #subview-fluids .fluid-weight-fallback-es,
+html[lang="es"] #hub-fluidos-slot .fluid-weight-fallback-es {
+  display: inline !important;
+}
+
+#subview-fluids .fluid-weight-fallback-control,
+#hub-fluidos-slot .fluid-weight-fallback-control {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+#subview-fluids .fluid-weight-fallback-input,
+#hub-fluidos-slot .fluid-weight-fallback-input {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-height: 42px !important;
+  padding: 9px 44px 9px 11px !important;
+  border: 1px solid rgba(148, 163, 184, 0.22) !important;
+  border-radius: 8px !important;
+  background: rgba(15, 23, 42, 0.38) !important;
+  color: var(--text-primary) !important;
+  font: inherit !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+#subview-fluids .fluid-weight-fallback-input::placeholder,
+#hub-fluidos-slot .fluid-weight-fallback-input::placeholder {
+  color: rgba(148, 163, 184, 0.5) !important;
+  font-weight: 500 !important;
+}
+
+#subview-fluids .fluid-weight-fallback-unit,
+#hub-fluidos-slot .fluid-weight-fallback-unit {
+  position: absolute !important;
+  right: 11px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  pointer-events: none !important;
+  color: rgba(148, 163, 184, 0.82) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+#subview-fluids .fluid-weight-fallback-input:focus,
+#subview-fluids .fluid-weight-fallback-input:focus-visible,
+#hub-fluidos-slot .fluid-weight-fallback-input:focus,
+#hub-fluidos-slot .fluid-weight-fallback-input:focus-visible {
+  border-color: #22C87A !important;
+  box-shadow: 0 0 0 1px rgba(34, 200, 122, 0.34) !important;
+}
+
+#subview-fluids .fluid-weight-fallback-input[aria-invalid="true"],
+#hub-fluidos-slot .fluid-weight-fallback-input[aria-invalid="true"] {
+  border-color: rgba(239, 68, 68, 0.72) !important;
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.16) !important;
+}
+
+body.light-mode #subview-fluids .fluid-weight-fallback-label,
+body.light-mode #hub-fluidos-slot .fluid-weight-fallback-label {
+  color: rgba(51, 65, 85, 0.78) !important;
+}
+
+body.light-mode #subview-fluids .fluid-weight-fallback-input,
+body.light-mode #hub-fluidos-slot .fluid-weight-fallback-input {
+  background: rgba(255, 255, 255, 0.72) !important;
+  border-color: rgba(100, 116, 139, 0.24) !important;
+  color: #0F172A !important;
+}
+
+body.light-mode #subview-fluids .fluid-weight-fallback-unit,
+body.light-mode #hub-fluidos-slot .fluid-weight-fallback-unit {
+  color: rgba(71, 85, 105, 0.76) !important;
+}
+
+@media (max-width: 430px) {
+  #subview-fluids .fluid-weight-fallback,
+  #hub-fluidos-slot .fluid-weight-fallback {
+    margin-top: 7px !important;
+    margin-bottom: 10px !important;
+  }
+
+  #subview-fluids .fluid-weight-fallback-input,
+  #hub-fluidos-slot .fluid-weight-fallback-input {
+    min-height: 40px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* CALC-FLUIDOS-V1-M2-WEIGHT-FALLBACK END */

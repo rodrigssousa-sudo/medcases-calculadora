@@ -9345,6 +9345,27 @@
 
           <!-- Aviso de peso do paciente (chip inline) -->
           <div id="fluid-patient-chip" class="patient-banner" style="margin-bottom:10px;display:none"></div>
+            <!-- CALC-FLUIDOS-V1-M2-WEIGHT-FALLBACK-HTML -->
+            <div id="fluid-weight-fallback" class="fluid-weight-fallback" hidden>
+              <label class="fluid-weight-fallback-label" for="fluid-weight-fallback-input">
+                <span class="fluid-weight-fallback-pt">Peso do paciente</span>
+                <span class="fluid-weight-fallback-es">Peso del paciente</span>
+              </label>
+              <div class="fluid-weight-fallback-control">
+                <input
+                  id="fluid-weight-fallback-input"
+                  class="fluid-weight-fallback-input"
+                  type="text"
+                  inputmode="decimal"
+                  autocomplete="off"
+                  placeholder="70"
+                  aria-label="Peso do paciente / Peso del paciente"
+                  onchange="fluidApplyWeightFallback(this)"
+                  onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}"
+                />
+                <span class="fluid-weight-fallback-unit">kg</span>
+              </div>
+            </div>
 
           <!-- ── SELETOR DE MODO ── -->
           <div class="input-group" style="margin-bottom:9px">
@@ -18761,7 +18782,98 @@ function _fluidHighlightField(el) {
 }
 
 /* ── Chip inline de paciente no topo do card ── */
+
+  /* CALC-FLUIDOS-V1-M2-WEIGHT-FALLBACK-JS
+     Fallback de entrada apenas quando o peso canônico está ausente.
+     Não cria fórmula nem estado clínico paralelo: espelha o valor em
+     #hm-weight e window.patientData.weight antes de chamar calcFluids().
+  */
+  function _fluidWeightNumber(value) {
+    if (value === null || value === undefined) return NaN;
+    var normalized = String(value).trim().replace(',', '.');
+    if (!normalized) return NaN;
+    return Number(normalized);
+  }
+
+  function _fluidSyncWeightFallbackUI(peso) {
+    var wrap = document.getElementById('fluid-weight-fallback');
+    var input = document.getElementById('fluid-weight-fallback-input');
+    if (!wrap || !input) return;
+
+    var n = _fluidWeightNumber(peso);
+    var hasWeight = Number.isFinite(n) && n > 0;
+
+    wrap.hidden = hasWeight;
+
+    if (hasWeight) {
+      input.value = '';
+      input.removeAttribute('aria-invalid');
+    }
+  }
+
+
+  /* CALC-FLUIDOS-V1-M2-R1-EDIT-WEIGHT-INLINE
+     O botão Editar do chip reabre o mesmo fallback local, pré-preenchido.
+     Se o fallback não existir, preserva o comportamento legado.
+  */
+  function fluidEditWeightFallback() {
+    var wrap = document.getElementById('fluid-weight-fallback');
+    var input = document.getElementById('fluid-weight-fallback-input');
+
+    if (!wrap || !input) {
+      if (typeof _fluidScrollToWeight === 'function') _fluidScrollToWeight();
+      return;
+    }
+
+    var canonical = document.getElementById('hm-weight');
+    var current = _fluidWeightNumber(
+      (window.patientData && window.patientData.weight) ||
+      (canonical && canonical.value)
+    );
+
+    wrap.hidden = false;
+    input.value = (Number.isFinite(current) && current > 0) ? String(current) : '';
+    input.removeAttribute('aria-invalid');
+
+    requestAnimationFrame(function () {
+      try {
+        input.focus({ preventScroll: true });
+      } catch (_) {
+        input.focus();
+      }
+      if (typeof input.select === 'function') input.select();
+    });
+  }
+
+  function fluidApplyWeightFallback(source) {
+    var input = source || document.getElementById('fluid-weight-fallback-input');
+    if (!input) return;
+
+    var peso = _fluidWeightNumber(input.value);
+    if (!Number.isFinite(peso) || peso <= 0) {
+      input.setAttribute('aria-invalid', 'true');
+      return;
+    }
+
+    input.removeAttribute('aria-invalid');
+
+    var canonical = document.getElementById('hm-weight');
+    if (canonical) {
+      canonical.value = String(peso);
+      canonical.dispatchEvent(new Event('input', { bubbles: true }));
+      canonical.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    window.patientData = window.patientData || {};
+    window.patientData.weight = peso;
+
+    if (typeof calcFluids === 'function') {
+      calcFluids();
+    }
+  }
+
 function _fluidUpdateChip(peso) {
+    _fluidSyncWeightFallbackUI(peso);
   const chip = document.getElementById('fluid-patient-chip');
   if (!chip) return;
   if (!peso) { chip.style.display = 'none'; return; }
@@ -18770,7 +18882,7 @@ function _fluidUpdateChip(peso) {
   /* OBJ5 BUILD 233: botão "Editar" redireciona para o campo de peso (scroll+highlight) */
   chip.innerHTML = `<i class="fa-solid fa-weight-scale" style="color:var(--green-glow);font-size:11px"></i>
     <span style="font-size:11.5px;color:var(--text-secondary)">${isES ? 'Paciente' : 'Paciente'}: <strong style="color:var(--text-primary)">${peso} kg</strong></span>
-    <button class="qe-trigger" onclick="_fluidScrollToWeight()" style="margin-left:auto;padding:3px 10px;font-size:11px">
+    <button class="qe-trigger" onclick="fluidEditWeightFallback()" style="margin-left:auto;padding:3px 10px;font-size:11px">
       <i class="fa-solid fa-pen" style="font-size:10px"></i> ${isES ? 'Editar' : 'Editar'}
     </button>`;
 }
