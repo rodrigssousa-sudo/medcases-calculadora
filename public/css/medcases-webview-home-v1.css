@@ -8125,3 +8125,3608 @@ body.light-mode #hub-fluidos-slot .fluid-weight-fallback-unit {
 }
 
 /* CALC-FLUIDOS-V1-M2-WEIGHT-FALLBACK END */
+
+/* CALC-INFUSAO-V1-M1-CLINICAL-FLAT-MACROBUILD START */
+/*
+  INFUSÃO V1 — superfície clínica flat.
+  Owner físico confirmado: #hub-infusao-slot.
+  Fallback lógico preservado em #page-infusion.
+  Sem alteração de fórmulas, callbacks, banco, textos ou navegação.
+*/
+
+/* -------------------------------------------------------------
+   0. Browser A–Z / Contextos / Todos os grupos
+   Esse shell pertence a Fármacos. Se for montado por runtime
+   dentro da superfície visível de Infusão, fica suprimido APENAS
+   dentro de Infusão. Fármacos permanece intacto.
+   ------------------------------------------------------------- */
+#hub-infusao-slot #farmacos-v2-shell,
+#hub-infusao-slot [data-farmacos-owner],
+#page-infusion #farmacos-v2-shell,
+#page-infusion [data-farmacos-owner] {
+  display: none !important;
+}
+
+/* -------------------------------------------------------------
+   1. Superfície principal
+   ------------------------------------------------------------- */
+#hub-infusao-slot .infusion-module,
+#page-infusion .infusion-module {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 14px 16px 22px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--text-primary) !important;
+}
+
+/* Título-seção editorial, sem linha decorativa expansiva. */
+#hub-infusao-slot .infusion-sec-label,
+#page-infusion .infusion-sec-label {
+  display: block !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: rgba(148,163,184,.82) !important;
+  font-size: 10.5px !important;
+  font-weight: 750 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .055em !important;
+  text-transform: uppercase !important;
+}
+
+#hub-infusao-slot .infusion-sec-label::after,
+#page-infusion .infusion-sec-label::after {
+  display: none !important;
+}
+
+/* -------------------------------------------------------------
+   2. Modos: Cálculo Livre / Selecionar Droga
+   Sai o aspecto de botões-pílula e entra tab clínica flat.
+   ------------------------------------------------------------- */
+#hub-infusao-slot .infusion-mode-bar,
+#page-infusion .infusion-mode-bar {
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 22px !important;
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.16) !important;
+  background: transparent !important;
+}
+
+#hub-infusao-slot .infusion-mode-btn,
+#page-infusion .infusion-mode-btn {
+  position: relative !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 0 10px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(148,163,184,.86) !important;
+  font-size: 12px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+}
+
+#hub-infusao-slot .infusion-mode-btn.active,
+#page-infusion .infusion-mode-btn.active {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+}
+
+#hub-infusao-slot .infusion-mode-btn.active::after,
+#page-infusion .infusion-mode-btn.active::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: -1px !important;
+  height: 2px !important;
+  border-radius: 2px !important;
+  background: #22D3EE !important;
+}
+
+/* -------------------------------------------------------------
+   3. Droga livre / busca de droga
+   ------------------------------------------------------------- */
+#hub-infusao-slot .inf-free-drug-wrap,
+#page-infusion .inf-free-drug-wrap,
+#hub-infusao-slot .infusion-drug-panel,
+#page-infusion .infusion-drug-panel {
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-infusao-slot .inf-free-drug-label,
+#page-infusion .inf-free-drug-label,
+#hub-infusao-slot .infusion-field-label,
+#page-infusion .infusion-field-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin: 0 0 6px !important;
+  color: rgba(226,232,240,.92) !important;
+  font-size: 11.5px !important;
+  font-weight: 650 !important;
+  line-height: 1.25 !important;
+}
+
+#hub-infusao-slot .inf-free-drug-label i,
+#page-infusion .inf-free-drug-label i,
+#hub-infusao-slot .infusion-field-label i,
+#page-infusion .infusion-field-label i {
+  color: #22D3EE !important;
+  opacity: .9 !important;
+}
+
+#hub-infusao-slot .optional-tag,
+#page-infusion .optional-tag {
+  margin-left: 2px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(148,163,184,.72) !important;
+  font-size: 10px !important;
+  font-weight: 550 !important;
+}
+
+#hub-infusao-slot .inf-free-drug-input,
+#page-infusion .inf-free-drug-input,
+#hub-infusao-slot .inf-autocomplete-input,
+#page-infusion .inf-autocomplete-input,
+#hub-infusao-slot .infusion-input,
+#page-infusion .infusion-input,
+#hub-infusao-slot .infusion-unit-select,
+#page-infusion .infusion-unit-select,
+#hub-infusao-slot .infusion-weight-inline-input,
+#page-infusion .infusion-weight-inline-input {
+  box-sizing: border-box !important;
+  min-height: 42px !important;
+  border: 1px solid rgba(148,163,184,.22) !important;
+  border-radius: 8px !important;
+  background: rgba(15,23,42,.28) !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  font-size: 13px !important;
+}
+
+#hub-infusao-slot .inf-free-drug-input,
+#page-infusion .inf-free-drug-input,
+#hub-infusao-slot .infusion-input,
+#page-infusion .infusion-input,
+#hub-infusao-slot .infusion-weight-inline-input,
+#page-infusion .infusion-weight-inline-input {
+  padding: 9px 11px !important;
+}
+
+#hub-infusao-slot .inf-autocomplete-input,
+#page-infusion .inf-autocomplete-input {
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+}
+
+#hub-infusao-slot .infusion-unit-select,
+#page-infusion .infusion-unit-select {
+  padding: 8px 30px 8px 10px !important;
+}
+
+#hub-infusao-slot .inf-free-drug-input:focus,
+#page-infusion .inf-free-drug-input:focus,
+#hub-infusao-slot .inf-autocomplete-input:focus,
+#page-infusion .inf-autocomplete-input:focus,
+#hub-infusao-slot .infusion-input:focus,
+#page-infusion .infusion-input:focus,
+#hub-infusao-slot .infusion-unit-select:focus,
+#page-infusion .infusion-unit-select:focus,
+#hub-infusao-slot .infusion-weight-inline-input:focus,
+#page-infusion .infusion-weight-inline-input:focus {
+  border-color: rgba(34,211,238,.72) !important;
+  box-shadow: 0 0 0 1px rgba(34,211,238,.18) !important;
+}
+
+#hub-infusao-slot .inf-dropdown-list,
+#page-infusion .inf-dropdown-list {
+  border: 1px solid rgba(148,163,184,.18) !important;
+  border-radius: 8px !important;
+  background: #1F242C !important;
+  box-shadow: none !important;
+}
+
+/* -------------------------------------------------------------
+   4. Presets e diluição: sem card dentro de card
+   ------------------------------------------------------------- */
+#hub-infusao-slot #bic-preset-section,
+#page-infusion #bic-preset-section,
+#hub-infusao-slot .infusion-dilution-box,
+#page-infusion .infusion-dilution-box {
+  margin: 8px 0 14px !important;
+  padding: 10px 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.14) !important;
+  border-bottom: 1px solid rgba(148,163,184,.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* -------------------------------------------------------------
+   5. Peso: chip e fallback mais editoriais
+   ------------------------------------------------------------- */
+#hub-infusao-slot .infusion-module .home-data-chip,
+#page-infusion .infusion-module .home-data-chip {
+  margin: 9px 0 13px !important;
+  padding: 8px 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.14) !important;
+  border-bottom: 1px solid rgba(148,163,184,.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-infusao-slot .infusion-weight-inline,
+#page-infusion .infusion-weight-inline {
+  gap: 10px !important;
+  margin: 9px 0 13px !important;
+  padding: 10px 0 10px 11px !important;
+  border: 0 !important;
+  border-left: 2px solid rgba(245,158,11,.78) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-infusao-slot .infusion-weight-inline-icon,
+#page-infusion .infusion-weight-inline-icon {
+  display: none !important;
+}
+
+#hub-infusao-slot .infusion-weight-inline-title,
+#page-infusion .infusion-weight-inline-title {
+  color: #F3C96B !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+}
+
+#hub-infusao-slot .infusion-weight-inline-desc,
+#page-infusion .infusion-weight-inline-desc {
+  color: rgba(148,163,184,.86) !important;
+  font-size: 10.5px !important;
+  line-height: 1.35 !important;
+}
+
+/* -------------------------------------------------------------
+   6. Ritmo dos parâmetros
+   ------------------------------------------------------------- */
+#hub-infusao-slot .infusion-field-label,
+#page-infusion .infusion-field-label {
+  margin-top: 11px !important;
+}
+
+#hub-infusao-slot .infusion-unit-row,
+#page-infusion .infusion-unit-row {
+  gap: 8px !important;
+}
+
+#hub-infusao-slot .infusion-bidir-row,
+#page-infusion .infusion-bidir-row {
+  display: grid !important;
+  grid-template-columns: 18px minmax(0,1fr) !important;
+  align-items: end !important;
+  gap: 7px !important;
+  margin: 12px 0 0 !important;
+  padding: 11px 0 0 !important;
+  border-top: 1px solid rgba(148,163,184,.14) !important;
+}
+
+#hub-infusao-slot .infusion-bidir-arrow,
+#page-infusion .infusion-bidir-arrow {
+  align-self: center !important;
+  color: rgba(34,211,238,.62) !important;
+  font-size: 14px !important;
+}
+
+/* -------------------------------------------------------------
+   7. Resultado: hierarquia Vazão → Concentração → Dose
+   ------------------------------------------------------------- */
+#hub-infusao-slot .infusion-result-area,
+#page-infusion .infusion-result-area {
+  margin: 15px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+#hub-infusao-slot .infusion-result-main,
+#page-infusion .infusion-result-main {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 14px 0 13px !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.16) !important;
+  border-bottom: 1px solid rgba(148,163,184,.16) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-align: left !important;
+}
+
+#hub-infusao-slot .infusion-result-main::before,
+#page-infusion .infusion-result-main::before,
+#hub-infusao-slot .infusion-result-glow,
+#page-infusion .infusion-result-glow {
+  display: none !important;
+}
+
+#hub-infusao-slot .infusion-result-label,
+#page-infusion .infusion-result-label {
+  margin: 0 0 4px !important;
+  color: rgba(148,163,184,.78) !important;
+  font-size: 10px !important;
+  font-weight: 750 !important;
+  letter-spacing: .055em !important;
+}
+
+#hub-infusao-slot .infusion-result-value,
+#page-infusion .infusion-result-value {
+  display: inline !important;
+  color: #F8FAFC !important;
+  font-size: 28px !important;
+  font-weight: 780 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.025em !important;
+}
+
+#hub-infusao-slot .infusion-result-unit,
+#page-infusion .infusion-result-unit {
+  display: inline !important;
+  margin-left: 5px !important;
+  color: #22D3EE !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+#hub-infusao-slot .infusion-result-conc,
+#page-infusion .infusion-result-conc {
+  display: block !important;
+  margin-top: 5px !important;
+  color: rgba(148,163,184,.86) !important;
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+}
+
+#hub-infusao-slot .infusion-secondary-row,
+#page-infusion .infusion-secondary-row {
+  display: grid !important;
+  grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.16) !important;
+}
+
+#hub-infusao-slot .infusion-secondary-card,
+#page-infusion .infusion-secondary-card {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 12px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-infusao-slot .infusion-secondary-card + .infusion-secondary-card,
+#page-infusion .infusion-secondary-card + .infusion-secondary-card {
+  padding-left: 13px !important;
+  border-left: 1px solid rgba(148,163,184,.14) !important;
+}
+
+#hub-infusao-slot .infusion-secondary-card-label,
+#page-infusion .infusion-secondary-card-label {
+  color: rgba(148,163,184,.76) !important;
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: .025em !important;
+}
+
+#hub-infusao-slot .infusion-secondary-card-val,
+#page-infusion .infusion-secondary-card-val {
+  margin-top: 3px !important;
+  color: var(--text-primary) !important;
+  font-size: 16px !important;
+  font-weight: 750 !important;
+}
+
+#hub-infusao-slot .infusion-secondary-card-unit,
+#page-infusion .infusion-secondary-card-unit {
+  color: rgba(148,163,184,.75) !important;
+  font-size: 10px !important;
+}
+
+#hub-infusao-slot .infusion-reverse-card,
+#page-infusion .infusion-reverse-card {
+  margin: 0 !important;
+  padding: 12px 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.16) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-infusao-slot .infusion-reverse-value,
+#page-infusion .infusion-reverse-value {
+  color: var(--text-primary) !important;
+  font-size: 17px !important;
+  font-weight: 750 !important;
+}
+
+#hub-infusao-slot .infusion-empty-hint,
+#page-infusion .infusion-empty-hint {
+  margin: 0 !important;
+  padding: 18px 6px 10px !important;
+  min-height: 0 !important;
+  color: rgba(148,163,184,.78) !important;
+}
+
+#hub-infusao-slot .infusion-empty-hint i,
+#page-infusion .infusion-empty-hint i {
+  font-size: 18px !important;
+  opacity: .38 !important;
+}
+
+#hub-infusao-slot .infusion-empty-hint p,
+#page-infusion .infusion-empty-hint p {
+  margin: 7px 0 0 !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+}
+
+#hub-infusao-slot .infusion-disclaimer,
+#page-infusion .infusion-disclaimer {
+  margin: 13px 0 0 !important;
+  padding: 10px 0 0 !important;
+  border-top: 1px solid rgba(148,163,184,.12) !important;
+  color: rgba(148,163,184,.68) !important;
+  font-size: 9.75px !important;
+  line-height: 1.42 !important;
+}
+
+/* -------------------------------------------------------------
+   8. Light mode
+   ------------------------------------------------------------- */
+body.light-mode #hub-infusao-slot .infusion-module,
+body.light-mode #page-infusion .infusion-module {
+  color: #0F172A !important;
+}
+
+body.light-mode #hub-infusao-slot .infusion-sec-label,
+body.light-mode #page-infusion .infusion-sec-label,
+body.light-mode #hub-infusao-slot .infusion-result-label,
+body.light-mode #page-infusion .infusion-result-label {
+  color: rgba(71,85,105,.72) !important;
+}
+
+body.light-mode #hub-infusao-slot .infusion-mode-bar,
+body.light-mode #page-infusion .infusion-mode-bar,
+body.light-mode #hub-infusao-slot .infusion-result-main,
+body.light-mode #page-infusion .infusion-result-main,
+body.light-mode #hub-infusao-slot .infusion-secondary-row,
+body.light-mode #page-infusion .infusion-secondary-row,
+body.light-mode #hub-infusao-slot .infusion-reverse-card,
+body.light-mode #page-infusion .infusion-reverse-card,
+body.light-mode #hub-infusao-slot .infusion-bidir-row,
+body.light-mode #page-infusion .infusion-bidir-row {
+  border-color: rgba(100,116,139,.18) !important;
+}
+
+body.light-mode #hub-infusao-slot .infusion-mode-btn,
+body.light-mode #page-infusion .infusion-mode-btn {
+  color: rgba(71,85,105,.76) !important;
+}
+
+body.light-mode #hub-infusao-slot .infusion-mode-btn.active,
+body.light-mode #page-infusion .infusion-mode-btn.active,
+body.light-mode #hub-infusao-slot .infusion-field-label,
+body.light-mode #page-infusion .infusion-field-label,
+body.light-mode #hub-infusao-slot .inf-free-drug-label,
+body.light-mode #page-infusion .inf-free-drug-label {
+  color: #0F172A !important;
+}
+
+body.light-mode #hub-infusao-slot .inf-free-drug-input,
+body.light-mode #page-infusion .inf-free-drug-input,
+body.light-mode #hub-infusao-slot .inf-autocomplete-input,
+body.light-mode #page-infusion .inf-autocomplete-input,
+body.light-mode #hub-infusao-slot .infusion-input,
+body.light-mode #page-infusion .infusion-input,
+body.light-mode #hub-infusao-slot .infusion-unit-select,
+body.light-mode #page-infusion .infusion-unit-select,
+body.light-mode #hub-infusao-slot .infusion-weight-inline-input,
+body.light-mode #page-infusion .infusion-weight-inline-input {
+  background: rgba(255,255,255,.72) !important;
+  border-color: rgba(100,116,139,.24) !important;
+  color: #0F172A !important;
+}
+
+body.light-mode #hub-infusao-slot .inf-dropdown-list,
+body.light-mode #page-infusion .inf-dropdown-list {
+  background: #FFFFFF !important;
+  border-color: rgba(100,116,139,.20) !important;
+}
+
+body.light-mode #hub-infusao-slot .infusion-result-value,
+body.light-mode #page-infusion .infusion-result-value,
+body.light-mode #hub-infusao-slot .infusion-secondary-card-val,
+body.light-mode #page-infusion .infusion-secondary-card-val,
+body.light-mode #hub-infusao-slot .infusion-reverse-value,
+body.light-mode #page-infusion .infusion-reverse-value {
+  color: #0F172A !important;
+}
+
+body.light-mode #hub-infusao-slot .infusion-result-conc,
+body.light-mode #page-infusion .infusion-result-conc,
+body.light-mode #hub-infusao-slot .infusion-secondary-card-unit,
+body.light-mode #page-infusion .infusion-secondary-card-unit,
+body.light-mode #hub-infusao-slot .infusion-disclaimer,
+body.light-mode #page-infusion .infusion-disclaimer {
+  color: rgba(71,85,105,.72) !important;
+}
+
+/* -------------------------------------------------------------
+   9. Mobile 390–430 px
+   ------------------------------------------------------------- */
+@media (max-width: 430px) {
+  #hub-infusao-slot .infusion-module,
+  #page-infusion .infusion-module {
+    padding: 13px 14px 20px !important;
+  }
+
+  #hub-infusao-slot .infusion-mode-bar,
+  #page-infusion .infusion-mode-bar {
+    gap: 18px !important;
+  }
+
+  #hub-infusao-slot .infusion-mode-btn,
+  #page-infusion .infusion-mode-btn {
+    font-size: 11.5px !important;
+  }
+
+  #hub-infusao-slot .inf-free-drug-input,
+  #page-infusion .inf-free-drug-input,
+  #hub-infusao-slot .inf-autocomplete-input,
+  #page-infusion .inf-autocomplete-input,
+  #hub-infusao-slot .infusion-input,
+  #page-infusion .infusion-input,
+  #hub-infusao-slot .infusion-unit-select,
+  #page-infusion .infusion-unit-select {
+    min-height: 40px !important;
+  }
+
+  #hub-infusao-slot .infusion-result-value,
+  #page-infusion .infusion-result-value {
+    font-size: 26px !important;
+  }
+}
+
+/* CALC-INFUSAO-V1-M1-CLINICAL-FLAT-MACROBUILD END */
+
+/* CALC-INFUSAO-V1-M2-PREMIUM-FINAL-REFINEMENT START */
+/*
+  Fechamento visual da aba Infusão.
+  Somente tipografia, proporções, densidade, inputs, resultado e CTA.
+  Fórmulas, callbacks, banco de infusões, navegação e conteúdo clínico:
+  INALTERADOS.
+*/
+
+/* 1. Ritmo geral mais compacto/editorial */
+#hub-infusao-slot .infusion-module,
+#page-infusion .infusion-module {
+  padding-top: 12px !important;
+  padding-bottom: 18px !important;
+}
+
+#hub-infusao-slot .infusion-sec-label,
+#page-infusion .infusion-sec-label {
+  margin-bottom: 9px !important;
+  font-size: 9.75px !important;
+  font-weight: 720 !important;
+  letter-spacing: .065em !important;
+}
+
+/* 2. Tabs com peso visual menor e underline mais delicado */
+#hub-infusao-slot .infusion-mode-bar,
+#page-infusion .infusion-mode-bar {
+  gap: 20px !important;
+  margin-bottom: 13px !important;
+}
+
+#hub-infusao-slot .infusion-mode-btn,
+#page-infusion .infusion-mode-btn {
+  padding-bottom: 9px !important;
+  font-size: 11.5px !important;
+  font-weight: 620 !important;
+}
+
+#hub-infusao-slot .infusion-mode-btn.active::after,
+#page-infusion .infusion-mode-btn.active::after {
+  height: 1.5px !important;
+}
+
+/* 3. Labels e ícones menos pesados */
+#hub-infusao-slot .inf-free-drug-label,
+#page-infusion .inf-free-drug-label,
+#hub-infusao-slot .infusion-field-label,
+#page-infusion .infusion-field-label {
+  gap: 5px !important;
+  margin-bottom: 5px !important;
+  font-size: 11px !important;
+  font-weight: 620 !important;
+}
+
+#hub-infusao-slot .inf-free-drug-label i,
+#page-infusion .inf-free-drug-label i,
+#hub-infusao-slot .infusion-field-label i,
+#page-infusion .infusion-field-label i {
+  width: 13px !important;
+  font-size: 10.5px !important;
+}
+
+/* 4. Inputs: altura clínica premium, sem caixas grandes */
+#hub-infusao-slot .inf-free-drug-input,
+#page-infusion .inf-free-drug-input,
+#hub-infusao-slot .inf-autocomplete-input,
+#page-infusion .inf-autocomplete-input,
+#hub-infusao-slot .infusion-input,
+#page-infusion .infusion-input,
+#hub-infusao-slot .infusion-unit-select,
+#page-infusion .infusion-unit-select,
+#hub-infusao-slot .infusion-weight-inline-input,
+#page-infusion .infusion-weight-inline-input {
+  min-height: 40px !important;
+  border-radius: 7px !important;
+  font-size: 12.5px !important;
+}
+
+#hub-infusao-slot .inf-free-drug-input,
+#page-infusion .inf-free-drug-input,
+#hub-infusao-slot .infusion-input,
+#page-infusion .infusion-input,
+#hub-infusao-slot .infusion-weight-inline-input,
+#page-infusion .infusion-weight-inline-input {
+  padding: 8px 10px !important;
+}
+
+#hub-infusao-slot .inf-free-drug-input::placeholder,
+#page-infusion .inf-free-drug-input::placeholder,
+#hub-infusao-slot .inf-autocomplete-input::placeholder,
+#page-infusion .inf-autocomplete-input::placeholder,
+#hub-infusao-slot .infusion-input::placeholder,
+#page-infusion .infusion-input::placeholder {
+  font-size: 11.75px !important;
+  font-weight: 450 !important;
+  opacity: .72 !important;
+}
+
+/* 5. Painel de peso ausente: mais curto e coerente com o input local */
+#hub-infusao-slot .infusion-weight-inline,
+#page-infusion .infusion-weight-inline {
+  margin: 8px 0 11px !important;
+  padding: 8px 0 8px 10px !important;
+}
+
+#hub-infusao-slot .infusion-weight-inline-title,
+#page-infusion .infusion-weight-inline-title {
+  margin-bottom: 3px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+#hub-infusao-slot .infusion-weight-inline-desc,
+#page-infusion .infusion-weight-inline-desc {
+  margin-bottom: 7px !important;
+  max-width: 330px !important;
+  font-size: 10.25px !important;
+  line-height: 1.35 !important;
+}
+
+/* 6. Campos clínicos mais próximos entre si */
+#hub-infusao-slot .infusion-field-label,
+#page-infusion .infusion-field-label {
+  margin-top: 9px !important;
+}
+
+/* 7. CORREÇÃO PRINCIPAL: valor da dose não pode virar um campo minúsculo */
+#hub-infusao-slot .infusion-unit-row,
+#page-infusion .infusion-unit-row {
+  display: grid !important;
+  grid-template-columns: minmax(96px, .72fr) minmax(0, 1.28fr) !important;
+  align-items: stretch !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+#hub-infusao-slot .infusion-unit-row .infusion-input,
+#page-infusion .infusion-unit-row .infusion-input,
+#hub-infusao-slot .infusion-unit-row .infusion-unit-select,
+#page-infusion .infusion-unit-row .infusion-unit-select {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+/* 8. Conversor reverso: sem ícone flutuando à esquerda */
+#hub-infusao-slot .infusion-bidir-row,
+#page-infusion .infusion-bidir-row {
+  display: block !important;
+  margin-top: 10px !important;
+  padding-top: 10px !important;
+}
+
+#hub-infusao-slot .infusion-bidir-arrow,
+#page-infusion .infusion-bidir-arrow {
+  display: none !important;
+}
+
+#hub-infusao-slot .infusion-bidir-unit-badge,
+#page-infusion .infusion-bidir-unit-badge {
+  margin-left: 3px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(148,163,184,.72) !important;
+  font-size: 9.5px !important;
+  font-weight: 620 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+/* 9. Resultado: números mais fortes, texto auxiliar mais silencioso */
+#hub-infusao-slot .infusion-result-main,
+#page-infusion .infusion-result-main {
+  padding-top: 13px !important;
+  padding-bottom: 12px !important;
+}
+
+#hub-infusao-slot .infusion-result-label,
+#page-infusion .infusion-result-label {
+  margin-bottom: 5px !important;
+  font-size: 9.5px !important;
+  letter-spacing: .06em !important;
+}
+
+#hub-infusao-slot .infusion-result-value,
+#page-infusion .infusion-result-value {
+  font-size: 30px !important;
+  font-weight: 760 !important;
+}
+
+#hub-infusao-slot .infusion-result-unit,
+#page-infusion .infusion-result-unit {
+  font-size: 12.5px !important;
+  font-weight: 680 !important;
+}
+
+#hub-infusao-slot .infusion-result-conc,
+#page-infusion .infusion-result-conc {
+  margin-top: 4px !important;
+  font-size: 10.5px !important;
+}
+
+#hub-infusao-slot .infusion-weight-note,
+#page-infusion .infusion-weight-note {
+  margin-top: 8px !important;
+  gap: 6px !important;
+  font-size: 10.25px !important;
+  line-height: 1.35 !important;
+}
+
+#hub-infusao-slot .infusion-secondary-card,
+#page-infusion .infusion-secondary-card {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+#hub-infusao-slot .infusion-secondary-card-label,
+#page-infusion .infusion-secondary-card-label {
+  font-size: 9px !important;
+}
+
+#hub-infusao-slot .infusion-secondary-card-val,
+#page-infusion .infusion-secondary-card-val {
+  font-size: 15px !important;
+}
+
+/* 10. CTA de prescrição: compacto, retangular, sem aspecto de cápsula */
+#hub-infusao-slot .inf-copy-rx-btn,
+#page-infusion .inf-copy-rx-btn {
+  min-height: 40px !important;
+  margin-top: 12px !important;
+  padding: 8px 13px !important;
+  border: 1px solid rgba(34,211,238,.34) !important;
+  border-radius: 8px !important;
+  background: rgba(34,211,238,.055) !important;
+  box-shadow: none !important;
+  color: var(--text-primary) !important;
+  font-size: 12px !important;
+  font-weight: 650 !important;
+  letter-spacing: 0 !important;
+}
+
+#hub-infusao-slot .inf-copy-rx-btn i,
+#page-infusion .inf-copy-rx-btn i {
+  font-size: 11px !important;
+}
+
+/* 11. Disclaimer: editorial, alinhado à esquerda */
+#hub-infusao-slot .infusion-disclaimer,
+#page-infusion .infusion-disclaimer {
+  margin-top: 11px !important;
+  padding-top: 9px !important;
+  text-align: left !important;
+  font-size: 9.25px !important;
+  line-height: 1.4 !important;
+}
+
+/* 12. Light mode mantém a mesma densidade */
+body.light-mode #hub-infusao-slot .infusion-bidir-unit-badge,
+body.light-mode #page-infusion .infusion-bidir-unit-badge {
+  color: rgba(71,85,105,.68) !important;
+}
+
+body.light-mode #hub-infusao-slot .inf-copy-rx-btn,
+body.light-mode #page-infusion .inf-copy-rx-btn {
+  border-color: rgba(3,105,161,.22) !important;
+  background: rgba(14,165,233,.035) !important;
+  color: #0F172A !important;
+}
+
+/* 13. Mobile: mantém tudo confortável em 390–430px */
+@media (max-width: 430px) {
+  #hub-infusao-slot .infusion-module,
+  #page-infusion .infusion-module {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  #hub-infusao-slot .infusion-unit-row,
+  #page-infusion .infusion-unit-row {
+    grid-template-columns: minmax(90px, .70fr) minmax(0, 1.30fr) !important;
+  }
+
+  #hub-infusao-slot .infusion-result-value,
+  #page-infusion .infusion-result-value {
+    font-size: 28px !important;
+  }
+}
+
+/* CALC-INFUSAO-V1-M2-PREMIUM-FINAL-REFINEMENT END */
+
+/* CALC-INFUSAO-V1-M2-R1-DENSITY-READABILITY-REFINEMENT START */
+/*
+  Fechamento fino da aba Infusão:
+  - caixas mais baixas/compactas
+  - menos espaço vertical
+  - legibilidade melhor em textos secundários/auxiliares
+  - sem alterar motor, fórmulas, callbacks ou conteúdo clínico
+*/
+
+/* 1. Campos: menos altura e menos "vazio" interno */
+#hub-infusao-slot .inf-free-drug-input,
+#page-infusion .inf-free-drug-input,
+#hub-infusao-slot .inf-autocomplete-input,
+#page-infusion .inf-autocomplete-input,
+#hub-infusao-slot .infusion-input,
+#page-infusion .infusion-input,
+#hub-infusao-slot .infusion-unit-select,
+#page-infusion .infusion-unit-select,
+#hub-infusao-slot .infusion-weight-inline-input,
+#page-infusion .infusion-weight-inline-input {
+  min-height: 36px !important;
+  border-radius: 7px !important;
+  font-size: 12.25px !important;
+  line-height: 1.15 !important;
+}
+
+#hub-infusao-slot .inf-free-drug-input,
+#page-infusion .inf-free-drug-input,
+#hub-infusao-slot .infusion-input,
+#page-infusion .infusion-input,
+#hub-infusao-slot .infusion-weight-inline-input,
+#page-infusion .infusion-weight-inline-input {
+  padding: 6px 10px !important;
+}
+
+#hub-infusao-slot .inf-autocomplete-input,
+#page-infusion .inf-autocomplete-input {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+#hub-infusao-slot .infusion-unit-select,
+#page-infusion .infusion-unit-select {
+  padding: 6px 28px 6px 10px !important;
+}
+
+/* 2. Placeholders e textos esmaecidos mais legíveis */
+#hub-infusao-slot .inf-free-drug-input::placeholder,
+#page-infusion .inf-free-drug-input::placeholder,
+#hub-infusao-slot .inf-autocomplete-input::placeholder,
+#page-infusion .inf-autocomplete-input::placeholder,
+#hub-infusao-slot .infusion-input::placeholder,
+#page-infusion .infusion-input::placeholder,
+#hub-infusao-slot .infusion-weight-inline-input::placeholder,
+#page-infusion .infusion-weight-inline-input::placeholder {
+  color: rgba(203,213,225,.76) !important;
+  font-size: 11.5px !important;
+  font-weight: 460 !important;
+  opacity: 1 !important;
+}
+
+#hub-infusao-slot .optional-tag,
+#page-infusion .optional-tag,
+#hub-infusao-slot .infusion-weight-inline-desc,
+#page-infusion .infusion-weight-inline-desc,
+#hub-infusao-slot .infusion-result-conc,
+#page-infusion .infusion-result-conc,
+#hub-infusao-slot .infusion-secondary-card-unit,
+#page-infusion .infusion-secondary-card-unit,
+#hub-infusao-slot .infusion-disclaimer,
+#page-infusion .infusion-disclaimer {
+  color: rgba(203,213,225,.74) !important;
+}
+
+/* 3. Textos corridos da diluição e orientações mais claros */
+#hub-infusao-slot .infusion-dilution-text,
+#page-infusion .infusion-dilution-text,
+#hub-infusao-slot .infusion-dilution-box p,
+#page-infusion .infusion-dilution-box p,
+#hub-infusao-slot .infusion-empty-hint p,
+#page-infusion .infusion-empty-hint p,
+#hub-infusao-slot .infusion-weight-note,
+#page-infusion .infusion-weight-note {
+  color: rgba(226,232,240,.82) !important;
+}
+
+#hub-infusao-slot .infusion-dilution-title,
+#page-infusion .infusion-dilution-title,
+#hub-infusao-slot .infusion-dilution-box strong,
+#page-infusion .infusion-dilution-box strong {
+  color: rgba(248,250,252,.94) !important;
+}
+
+/* 4. Densidade vertical mais premium */
+#hub-infusao-slot .infusion-sec-label,
+#page-infusion .infusion-sec-label {
+  margin-bottom: 8px !important;
+}
+
+#hub-infusao-slot .infusion-mode-bar,
+#page-infusion .infusion-mode-bar {
+  margin-bottom: 11px !important;
+}
+
+#hub-infusao-slot .inf-free-drug-wrap,
+#page-infusion .inf-free-drug-wrap,
+#hub-infusao-slot .infusion-drug-panel,
+#page-infusion .infusion-drug-panel {
+  margin-bottom: 11px !important;
+}
+
+#hub-infusao-slot .infusion-field-label,
+#page-infusion .infusion-field-label {
+  margin-top: 8px !important;
+  margin-bottom: 4px !important;
+}
+
+#hub-infusao-slot #bic-preset-section,
+#page-infusion #bic-preset-section,
+#hub-infusao-slot .infusion-dilution-box,
+#page-infusion .infusion-dilution-box {
+  margin: 7px 0 11px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+#hub-infusao-slot .infusion-weight-inline,
+#page-infusion .infusion-weight-inline {
+  margin: 7px 0 10px !important;
+  padding: 7px 0 7px 10px !important;
+}
+
+#hub-infusao-slot .infusion-bidir-row,
+#page-infusion .infusion-bidir-row {
+  margin-top: 9px !important;
+  padding-top: 9px !important;
+}
+
+/* 5. Resultados e CTA um pouco mais enxutos */
+#hub-infusao-slot .infusion-result-main,
+#page-infusion .infusion-result-main {
+  padding-top: 11px !important;
+  padding-bottom: 10px !important;
+}
+
+#hub-infusao-slot .infusion-secondary-card,
+#page-infusion .infusion-secondary-card,
+#hub-infusao-slot .infusion-reverse-card,
+#page-infusion .infusion-reverse-card {
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+}
+
+#hub-infusao-slot .inf-copy-rx-btn,
+#page-infusion .inf-copy-rx-btn {
+  min-height: 38px !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+
+/* 6. Light mode mantém leitura boa */
+body.light-mode #hub-infusao-slot .inf-free-drug-input::placeholder,
+body.light-mode #page-infusion .inf-free-drug-input::placeholder,
+body.light-mode #hub-infusao-slot .inf-autocomplete-input::placeholder,
+body.light-mode #page-infusion .inf-autocomplete-input::placeholder,
+body.light-mode #hub-infusao-slot .infusion-input::placeholder,
+body.light-mode #page-infusion .infusion-input::placeholder,
+body.light-mode #hub-infusao-slot .infusion-weight-inline-input::placeholder,
+body.light-mode #page-infusion .infusion-weight-inline-input::placeholder {
+  color: rgba(71,85,105,.72) !important;
+}
+
+body.light-mode #hub-infusao-slot .optional-tag,
+body.light-mode #page-infusion .optional-tag,
+body.light-mode #hub-infusao-slot .infusion-weight-inline-desc,
+body.light-mode #page-infusion .infusion-weight-inline-desc,
+body.light-mode #hub-infusao-slot .infusion-result-conc,
+body.light-mode #page-infusion .infusion-result-conc,
+body.light-mode #hub-infusao-slot .infusion-secondary-card-unit,
+body.light-mode #page-infusion .infusion-secondary-card-unit,
+body.light-mode #hub-infusao-slot .infusion-disclaimer,
+body.light-mode #page-infusion .infusion-disclaimer {
+  color: rgba(71,85,105,.72) !important;
+}
+
+body.light-mode #hub-infusao-slot .infusion-dilution-text,
+body.light-mode #page-infusion .infusion-dilution-text,
+body.light-mode #hub-infusao-slot .infusion-dilution-box p,
+body.light-mode #page-infusion .infusion-dilution-box p,
+body.light-mode #hub-infusao-slot .infusion-empty-hint p,
+body.light-mode #page-infusion .infusion-empty-hint p,
+body.light-mode #hub-infusao-slot .infusion-weight-note,
+body.light-mode #page-infusion .infusion-weight-note {
+  color: rgba(51,65,85,.86) !important;
+}
+
+body.light-mode #hub-infusao-slot .infusion-dilution-title,
+body.light-mode #page-infusion .infusion-dilution-title,
+body.light-mode #hub-infusao-slot .infusion-dilution-box strong,
+body.light-mode #page-infusion .infusion-dilution-box strong {
+  color: #0F172A !important;
+}
+
+/* 7. Mobile fino */
+@media (max-width: 430px) {
+  #hub-infusao-slot .inf-free-drug-input,
+  #page-infusion .inf-free-drug-input,
+  #hub-infusao-slot .inf-autocomplete-input,
+  #page-infusion .inf-autocomplete-input,
+  #hub-infusao-slot .infusion-input,
+  #page-infusion .infusion-input,
+  #hub-infusao-slot .infusion-unit-select,
+  #page-infusion .infusion-unit-select,
+  #hub-infusao-slot .infusion-weight-inline-input,
+  #page-infusion .infusion-weight-inline-input {
+    min-height: 35px !important;
+  }
+}
+
+/* CALC-INFUSAO-V1-M2-R1-DENSITY-READABILITY-REFINEMENT END */
+
+/* CALC-HEMODINAMICA-V1-M1-CLINICAL-FLAT-MACROBUILD START */
+/*
+  HEMODINÂMICA V1
+  Owner físico confirmado: #hub-hemo-slot.
+  Owner lógico preservado: #subview-hemo.
+  Escopo: apresentação visual de PAS/PAD/FC/SpO2/FR/Temp e resultados.
+  calcHemo(), thresholds, NEWS2, PAM, choque, alertas e textos clínicos:
+  INALTERADOS.
+*/
+
+/* -------------------------------------------------------------
+   1. Superfície clínica contínua — remove card dentro de card
+   ------------------------------------------------------------- */
+#hub-hemo-slot > .card,
+#subview-hemo > .card,
+#hub-hemo-slot #hemo-result > .card,
+#subview-hemo #hemo-result > .card {
+  margin: 0 !important;
+  padding: 13px 15px 14px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+/* primeiro bloco não precisa de padding inferior exagerado */
+#hub-hemo-slot > .card,
+#subview-hemo > .card {
+  padding-bottom: 12px !important;
+}
+
+/* -------------------------------------------------------------
+   2. Título PAM / Choque / NEWS2 — editorial, sem header colorido
+   ------------------------------------------------------------- */
+#hub-hemo-slot > .card > .card-title,
+#subview-hemo > .card > .card-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  min-height: 0 !important;
+  margin: 0 0 12px !important;
+  padding: 0 0 9px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.15) !important;
+  background: transparent !important;
+  color: var(--text-primary) !important;
+  font-size: 12.5px !important;
+  font-weight: 680 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+}
+
+#hub-hemo-slot > .card > .card-title i,
+#subview-hemo > .card > .card-title i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #FB7185 !important;
+  font-size: 12px !important;
+  box-shadow: none !important;
+}
+
+/* -------------------------------------------------------------
+   3. Inputs em pares: PAS/PAD · FC/SpO2 · FR/Temp
+   ------------------------------------------------------------- */
+#hub-hemo-slot .input-grid,
+#subview-hemo .input-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 9px 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#hub-hemo-slot .input-group,
+#subview-hemo .input-group {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#hub-hemo-slot .input-label,
+#subview-hemo .input-label {
+  display: block !important;
+  margin: 0 0 4px !important;
+  padding: 0 !important;
+  color: rgba(226,232,240,.86) !important;
+  font-size: 10px !important;
+  font-weight: 660 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .025em !important;
+}
+
+#hub-hemo-slot .input-field,
+#subview-hemo .input-field {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  margin: 0 !important;
+  padding: 6px 9px !important;
+  border: 1px solid rgba(148,163,184,.20) !important;
+  border-radius: 7px !important;
+  background: rgba(15,23,42,.26) !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  font-size: 12.5px !important;
+  font-weight: 560 !important;
+  line-height: 1.15 !important;
+}
+
+#hub-hemo-slot .input-field::placeholder,
+#subview-hemo .input-field::placeholder {
+  color: rgba(203,213,225,.64) !important;
+  opacity: 1 !important;
+  font-weight: 460 !important;
+}
+
+#hub-hemo-slot .input-field:focus,
+#hub-hemo-slot .input-field:focus-visible,
+#subview-hemo .input-field:focus,
+#subview-hemo .input-field:focus-visible {
+  border-color: rgba(251,113,133,.58) !important;
+  box-shadow: 0 0 0 1px rgba(251,113,133,.14) !important;
+}
+
+/* -------------------------------------------------------------
+   4. Resultado — superfície plana, hierarquia clínica
+   ------------------------------------------------------------- */
+#hub-hemo-slot #hemo-result,
+#subview-hemo #hemo-result {
+  margin: 0 !important;
+  padding: 0 15px 16px !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+/* Resultado Hemodinâmico como overline discreto */
+#hub-hemo-slot #hemo-result > .card > .card-title,
+#subview-hemo #hemo-result > .card > .card-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin: 0 !important;
+  padding: 11px 0 8px !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.15) !important;
+  background: transparent !important;
+  color: rgba(203,213,225,.78) !important;
+  font-size: 9.75px !important;
+  font-weight: 720 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .055em !important;
+  text-transform: uppercase !important;
+}
+
+#hub-hemo-slot #hemo-result > .card > .card-title i,
+#subview-hemo #hemo-result > .card > .card-title i {
+  color: #FB7185 !important;
+  font-size: 10px !important;
+}
+
+/* -------------------------------------------------------------
+   5. PAM / choque / score: grid contínuo, sem mini-cards
+   ------------------------------------------------------------- */
+#hub-hemo-slot #hemo-result .results-grid,
+#subview-hemo #hemo-result .results-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.13) !important;
+  border-bottom: 1px solid rgba(148,163,184,.13) !important;
+  background: transparent !important;
+}
+
+#hub-hemo-slot #hemo-result .results-grid > *,
+#subview-hemo #hemo-result .results-grid > * {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 10px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-hemo-slot #hemo-result .results-grid > *:nth-child(even),
+#subview-hemo #hemo-result .results-grid > *:nth-child(even) {
+  padding-left: 12px !important;
+  border-left: 1px solid rgba(148,163,184,.13) !important;
+}
+
+#hub-hemo-slot #hemo-result .result-label,
+#subview-hemo #hemo-result .result-label {
+  margin: 0 0 3px !important;
+  color: rgba(148,163,184,.78) !important;
+  font-size: 9.25px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .035em !important;
+  text-transform: uppercase !important;
+}
+
+#hub-hemo-slot #hemo-result .result-value,
+#subview-hemo #hemo-result .result-value {
+  color: var(--text-primary) !important;
+  font-size: 18px !important;
+  font-weight: 760 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -.015em !important;
+}
+
+#hub-hemo-slot #hemo-result .result-interpretation,
+#subview-hemo #hemo-result .result-interpretation {
+  display: inline-block !important;
+  margin-top: 4px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(203,213,225,.74) !important;
+  font-size: 9.75px !important;
+  font-weight: 520 !important;
+  line-height: 1.35 !important;
+}
+
+/* -------------------------------------------------------------
+   6. Linhas/alertas clínicos gerados pelo motor — flat
+   ------------------------------------------------------------- */
+#hub-hemo-slot #hemo-result .drug-result-row,
+#subview-hemo #hemo-result .drug-result-row {
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 9px 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.12) !important;
+  background: transparent !important;
+}
+
+#hub-hemo-slot #hemo-result .drug-result-icon,
+#subview-hemo #hemo-result .drug-result-icon {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 10px !important;
+}
+
+#hub-hemo-slot #hemo-result .drug-result-key,
+#subview-hemo #hemo-result .drug-result-key {
+  color: rgba(148,163,184,.78) !important;
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .025em !important;
+}
+
+#hub-hemo-slot #hemo-result .drug-result-value,
+#subview-hemo #hemo-result .drug-result-value {
+  color: var(--text-primary) !important;
+  font-size: 14px !important;
+  font-weight: 720 !important;
+  line-height: 1.25 !important;
+}
+
+#hub-hemo-slot #hemo-result .drug-result-note,
+#subview-hemo #hemo-result .drug-result-note {
+  margin-top: 2px !important;
+  color: rgba(203,213,225,.76) !important;
+  font-size: 10.25px !important;
+  line-height: 1.4 !important;
+}
+
+/* Preserva a semântica de alertas, mas sem caixa decorativa pesada */
+#hub-hemo-slot #hemo-result .drug-alert,
+#subview-hemo #hemo-result .drug-alert {
+  margin: 9px 0 0 !important;
+  padding: 8px 0 8px 10px !important;
+  border: 0 !important;
+  border-left: 2px solid currentColor !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 10.5px !important;
+  line-height: 1.42 !important;
+}
+
+/* -------------------------------------------------------------
+   7. Light mode
+   ------------------------------------------------------------- */
+body.light-mode #hub-hemo-slot > .card,
+body.light-mode #subview-hemo > .card,
+body.light-mode #hub-hemo-slot #hemo-result > .card,
+body.light-mode #subview-hemo #hemo-result > .card {
+  color: #0F172A !important;
+}
+
+body.light-mode #hub-hemo-slot > .card > .card-title,
+body.light-mode #subview-hemo > .card > .card-title {
+  color: #0F172A !important;
+  border-bottom-color: rgba(100,116,139,.17) !important;
+}
+
+body.light-mode #hub-hemo-slot .input-label,
+body.light-mode #subview-hemo .input-label {
+  color: rgba(51,65,85,.88) !important;
+}
+
+body.light-mode #hub-hemo-slot .input-field,
+body.light-mode #subview-hemo .input-field {
+  background: rgba(255,255,255,.72) !important;
+  border-color: rgba(100,116,139,.22) !important;
+  color: #0F172A !important;
+}
+
+body.light-mode #hub-hemo-slot .input-field::placeholder,
+body.light-mode #subview-hemo .input-field::placeholder {
+  color: rgba(71,85,105,.58) !important;
+}
+
+body.light-mode #hub-hemo-slot #hemo-result > .card > .card-title,
+body.light-mode #subview-hemo #hemo-result > .card > .card-title,
+body.light-mode #hub-hemo-slot #hemo-result .result-label,
+body.light-mode #subview-hemo #hemo-result .result-label,
+body.light-mode #hub-hemo-slot #hemo-result .drug-result-key,
+body.light-mode #subview-hemo #hemo-result .drug-result-key {
+  color: rgba(71,85,105,.72) !important;
+}
+
+body.light-mode #hub-hemo-slot #hemo-result .result-value,
+body.light-mode #subview-hemo #hemo-result .result-value,
+body.light-mode #hub-hemo-slot #hemo-result .drug-result-value,
+body.light-mode #subview-hemo #hemo-result .drug-result-value {
+  color: #0F172A !important;
+}
+
+body.light-mode #hub-hemo-slot #hemo-result .result-interpretation,
+body.light-mode #subview-hemo #hemo-result .result-interpretation,
+body.light-mode #hub-hemo-slot #hemo-result .drug-result-note,
+body.light-mode #subview-hemo #hemo-result .drug-result-note {
+  color: rgba(51,65,85,.78) !important;
+}
+
+/* -------------------------------------------------------------
+   8. Mobile alvo 390–430px
+   ------------------------------------------------------------- */
+@media (max-width: 430px) {
+  #hub-hemo-slot > .card,
+  #subview-hemo > .card {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  #hub-hemo-slot #hemo-result,
+  #subview-hemo #hemo-result {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  #hub-hemo-slot .input-grid,
+  #subview-hemo .input-grid {
+    gap: 8px 9px !important;
+  }
+
+  #hub-hemo-slot .input-field,
+  #subview-hemo .input-field {
+    height: 35px !important;
+    min-height: 35px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  #hub-hemo-slot .input-grid,
+  #subview-hemo .input-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* CALC-HEMODINAMICA-V1-M1-CLINICAL-FLAT-MACROBUILD END */
+
+/* CALC-HEMODINAMICA-V1-M1-R1-FINAL-RESULT-REFINEMENT START */
+/*
+  Fechamento do RESULTADO de Hemodinâmica com base no DOM real:
+  #hemo-result > .card
+    > .card-title
+    > .results-grid
+    > div (risco principal, sem classe)
+    > .drug-alert...
+  Nenhum texto, threshold, fórmula, callback ou classificação clínica é alterado.
+*/
+
+/* 1. Header do resultado: ícone sem caixa */
+#hub-hemo-slot #hemo-result > .card > .card-title,
+#subview-hemo #hemo-result > .card > .card-title {
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 10px 0 8px !important;
+  gap: 6px !important;
+  border-top: 1px solid rgba(148,163,184,.15) !important;
+  border-bottom: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(203,213,225,.78) !important;
+  font-size: 9.5px !important;
+  font-weight: 720 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .055em !important;
+}
+
+#hub-hemo-slot #hemo-result > .card > .card-title > i.fa-solid.fa-chart-area,
+#subview-hemo #hemo-result > .card > .card-title > i.fa-solid.fa-chart-area {
+  display: inline-block !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #FB7185 !important;
+  font-size: 9.5px !important;
+  line-height: 1 !important;
+}
+
+/* 2. Métricas: superfície contínua */
+#hub-hemo-slot #hemo-result .results-grid,
+#subview-hemo #hemo-result .results-grid {
+  margin: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.12) !important;
+  border-bottom: 1px solid rgba(148,163,184,.12) !important;
+  background: transparent !important;
+}
+
+#hub-hemo-slot #hemo-result .results-grid > .result-item,
+#subview-hemo #hemo-result .results-grid > .result-item {
+  min-height: 0 !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-hemo-slot #hemo-result .results-grid > .result-item:nth-child(3),
+#subview-hemo #hemo-result .results-grid > .result-item:nth-child(3) {
+  grid-column: 1 / -1 !important;
+  padding-left: 0 !important;
+  border-left: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.12) !important;
+}
+
+#hub-hemo-slot #hemo-result .result-label,
+#subview-hemo #hemo-result .result-label {
+  margin-bottom: 3px !important;
+  color: rgba(148,163,184,.82) !important;
+  font-size: 9px !important;
+}
+
+#hub-hemo-slot #hemo-result .result-value,
+#subview-hemo #hemo-result .result-value {
+  font-size: 17px !important;
+  font-weight: 760 !important;
+  line-height: 1.12 !important;
+}
+
+#hub-hemo-slot #hemo-result .results-grid > .result-item:nth-child(3) .result-value,
+#subview-hemo #hemo-result .results-grid > .result-item:nth-child(3) .result-value {
+  font-size: 20px !important;
+}
+
+#hub-hemo-slot #hemo-result .result-unit,
+#subview-hemo #hemo-result .result-unit {
+  margin-top: 2px !important;
+  color: rgba(203,213,225,.72) !important;
+  font-size: 9.5px !important;
+  line-height: 1.25 !important;
+}
+
+/* NEWS2 deixa de parecer badge/pílula */
+#hub-hemo-slot #hemo-result .score-result-interp,
+#hub-hemo-slot #hemo-result .score-result-interp.severity-high,
+#subview-hemo #hemo-result .score-result-interp,
+#subview-hemo #hemo-result .score-result-interp.severity-high {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 9.75px !important;
+  font-weight: 650 !important;
+  line-height: 1.3 !important;
+}
+
+/* 3. Risco principal: remove caixa preta sem tocar no texto gerado */
+#hub-hemo-slot #hemo-result > .card > .results-grid + div,
+#subview-hemo #hemo-result > .card > .results-grid + div {
+  margin: 10px 0 0 !important;
+  padding: 8px 0 8px 10px !important;
+  border: 0 !important;
+  border-left: 2px solid #F87171 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-hemo-slot #hemo-result > .card > .results-grid + div > div:first-child,
+#subview-hemo #hemo-result > .card > .results-grid + div > div:first-child {
+  margin: 0 0 3px !important;
+  font-size: 12px !important;
+  font-weight: 720 !important;
+  line-height: 1.25 !important;
+}
+
+#hub-hemo-slot #hemo-result > .card > .results-grid + div > div:last-child,
+#subview-hemo #hemo-result > .card > .results-grid + div > div:last-child {
+  color: rgba(226,232,240,.80) !important;
+  font-size: 10.5px !important;
+  font-weight: 470 !important;
+  line-height: 1.45 !important;
+}
+
+/* 4. Alertas individuais: uma lista clínica flat, sem caixas pretas */
+#hub-hemo-slot #hemo-result > .card > .drug-alert,
+#subview-hemo #hemo-result > .card > .drug-alert {
+  display: grid !important;
+  grid-template-columns: 16px minmax(0,1fr) !important;
+  align-items: start !important;
+  column-gap: 7px !important;
+  margin: 0 !important;
+  padding: 8px 0 8px 9px !important;
+  border: 0 !important;
+  border-left: 2px solid currentColor !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(226,232,240,.82) !important;
+  font-size: 10.25px !important;
+  font-weight: 470 !important;
+  line-height: 1.45 !important;
+}
+
+#hub-hemo-slot #hemo-result > .card > .drug-alert + .drug-alert,
+#subview-hemo #hemo-result > .card > .drug-alert + .drug-alert {
+  margin-top: 2px !important;
+}
+
+#hub-hemo-slot #hemo-result > .card > .drug-alert > i,
+#subview-hemo #hemo-result > .card > .drug-alert > i {
+  width: 14px !important;
+  margin-top: 2px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 9.5px !important;
+  line-height: 1 !important;
+}
+
+/* 5. Light */
+body.light-mode #hub-hemo-slot #hemo-result > .card > .card-title,
+body.light-mode #subview-hemo #hemo-result > .card > .card-title,
+body.light-mode #hub-hemo-slot #hemo-result .result-label,
+body.light-mode #subview-hemo #hemo-result .result-label {
+  color: rgba(71,85,105,.72) !important;
+}
+
+body.light-mode #hub-hemo-slot #hemo-result .result-unit,
+body.light-mode #subview-hemo #hemo-result .result-unit {
+  color: rgba(71,85,105,.70) !important;
+}
+
+body.light-mode #hub-hemo-slot #hemo-result > .card > .results-grid + div > div:last-child,
+body.light-mode #subview-hemo #hemo-result > .card > .results-grid + div > div:last-child,
+body.light-mode #hub-hemo-slot #hemo-result > .card > .drug-alert,
+body.light-mode #subview-hemo #hemo-result > .card > .drug-alert {
+  color: rgba(51,65,85,.82) !important;
+}
+
+/* CALC-HEMODINAMICA-V1-M1-R1-FINAL-RESULT-REFINEMENT END */
+
+/* CALC-SCORES-V1-M1-ALL-SCORES-CLINICAL-FLAT-MACROBUILD START */
+/*
+  SCORES V1 — linguagem visual única.
+  Owner físico: #hub-scores-slot.
+  Universal scores: #score-calc-area + .univ-*.
+  NEWS2: página própria #page-news2.
+  Somente visual. Pontuação, thresholds, fórmulas, interpret(), condutas,
+  callbacks, reset e PT/ES permanecem intactos.
+*/
+
+#hub-scores-slot {
+  --mcs-text: #F3F4F6;
+  --mcs-text-2: #CBD5E1;
+  --mcs-muted: #94A3B8;
+  --mcs-line: rgba(148,163,184,.15);
+  --mcs-line-strong: rgba(148,163,184,.22);
+  --mcs-input: rgba(15,23,42,.24);
+  --mcs-accent: #FBBF24;
+  --mcs-info: #38BDF8;
+  --mcs-warning: #F59E0B;
+  --mcs-danger: #F87171;
+  --mcs-success: #34D399;
+}
+
+/* =============================================================
+   1. SELETOR DE SCORES — 10 opções, flat e compacto
+   ============================================================= */
+#hub-scores-slot > .drug-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+  gap: 0 12px !important;
+  width: 100% !important;
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+  border-top: 1px solid var(--mcs-line) !important;
+  border-bottom: 1px solid var(--mcs-line) !important;
+  background: transparent !important;
+}
+
+#hub-scores-slot > .drug-grid > .drug-card,
+#hub-scores-slot [id^="scard-"] {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  min-height: 48px !important;
+  margin: 0 !important;
+  padding: 8px 2px !important;
+  gap: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.11) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+#hub-scores-slot > .drug-grid > .drug-card:nth-last-child(-n+2),
+#hub-scores-slot [id^="scard-"]:nth-last-child(-n+2) {
+  border-bottom: 0 !important;
+}
+
+/* Emojis/caixinhas decorativas saem; conteúdo clínico fica. */
+#hub-scores-slot [id^="scard-"] > .drug-card-icon {
+  display: none !important;
+}
+
+#hub-scores-slot [id^="scard-"] > div:last-child {
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+#hub-scores-slot [id^="scard-"] .drug-card-name {
+  margin: 0 !important;
+  color: var(--mcs-text) !important;
+  font-size: 12px !important;
+  font-weight: 680 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+}
+
+#hub-scores-slot [id^="scard-"] .drug-card-class {
+  margin-top: 2px !important;
+  color: var(--mcs-muted) !important;
+  font-size: 9.75px !important;
+  font-weight: 470 !important;
+  line-height: 1.25 !important;
+}
+
+#hub-scores-slot [id^="scard-"].selected,
+#hub-scores-slot [id^="scard-"].active,
+#hub-scores-slot [id^="scard-"].is-active {
+  padding-left: 9px !important;
+  border-left: 2px solid var(--mcs-accent) !important;
+  background: rgba(251,191,36,.035) !important;
+}
+
+/* =============================================================
+   2. ÁREA DO SCORE ATIVO
+   ============================================================= */
+#hub-scores-slot #score-calc-area {
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 2px 0 16px !important;
+  color: var(--mcs-text) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#hub-scores-slot #score-calc-area > .card,
+#hub-scores-slot #score-calc-area [class*="score-card"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* =============================================================
+   3. GRUPOS UNIVERSAIS — SOFA, Glasgow, Wells, CURB-65,
+      CHA2DS2-VASc, HAS-BLED, Child-Pugh, TIMI
+   ============================================================= */
+#hub-scores-slot #score-calc-area .univ-score-section {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 10px 0 2px !important;
+  border: 0 !important;
+  border-top: 1px solid var(--mcs-line) !important;
+  background: transparent !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-score-section:first-child {
+  padding-top: 6px !important;
+  border-top: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-score-group-title {
+  display: block !important;
+  margin: 0 0 6px !important;
+  padding: 0 !important;
+  color: var(--mcs-muted) !important;
+  font-size: 9.5px !important;
+  font-weight: 740 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .055em !important;
+  text-transform: uppercase !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-score-group-title::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Critérios selecionáveis: linha clínica, não mini-card. */
+#hub-scores-slot #score-calc-area .univ-toggle-btn {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 9px !important;
+  width: 100% !important;
+  min-height: 36px !important;
+  margin: 0 !important;
+  padding: 7px 0 !important;
+  color: var(--mcs-text-2) !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.10) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: inherit !important;
+  font-size: 11px !important;
+  font-weight: 520 !important;
+  line-height: 1.3 !important;
+  text-align: left !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-toggle-btn:last-child {
+  border-bottom: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-toggle-btn.is-active,
+#hub-scores-slot #score-calc-area .univ-toggle-btn.active,
+#hub-scores-slot #score-calc-area .univ-toggle-btn:has(input:checked) {
+  color: var(--mcs-text) !important;
+  background: rgba(251,191,36,.035) !important;
+}
+
+/* Checkbox canônico menor. */
+#hub-scores-slot #score-calc-area input.score-check,
+#hub-scores-slot #score-calc-area .score-check {
+  flex: 0 0 auto !important;
+  width: 18px !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  min-height: 18px !important;
+  margin: 0 !important;
+  border: 1px solid var(--mcs-line-strong) !important;
+  border-radius: 5px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-scores-slot #score-calc-area input.score-check:checked,
+#hub-scores-slot #score-calc-area .score-check:checked {
+  border-color: var(--mcs-accent) !important;
+  background: var(--mcs-accent) !important;
+}
+
+/* Stepper compacto. */
+#hub-scores-slot #score-calc-area .univ-stepper-btn {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 30px !important;
+  min-width: 30px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mcs-text-2) !important;
+  background: transparent !important;
+  border: 1px solid var(--mcs-line-strong) !important;
+  border-radius: 7px !important;
+  box-shadow: none !important;
+  font-size: 15px !important;
+  font-weight: 620 !important;
+  line-height: 1 !important;
+}
+
+#hub-scores-slot #score-calc-area [class*="univ-stepper"] {
+  color: var(--mcs-text-2) !important;
+}
+
+/* =============================================================
+   4. RESULTADO UNIVERSAL — número > interpretação > conduta
+   ============================================================= */
+#hub-scores-slot #score-calc-area .univ-result-card {
+  width: 100% !important;
+  margin: 12px 0 0 !important;
+  padding: 12px 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--mcs-line-strong) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-card-inner,
+#hub-scores-slot #score-calc-area .univ-result-conduct {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-header {
+  margin: 0 0 4px !important;
+  color: var(--mcs-muted) !important;
+  font-size: 9.5px !important;
+  font-weight: 740 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-number {
+  margin: 0 0 5px !important;
+  color: var(--mcs-text) !important;
+  -webkit-text-fill-color: var(--mcs-text) !important;
+  font-size: 29px !important;
+  font-weight: 780 !important;
+  line-height: 1.05 !important;
+  letter-spacing: -.02em !important;
+  text-shadow: none !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-sub,
+#hub-scores-slot #score-calc-area .univ-result-interpretation {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mcs-text-2) !important;
+  font-size: 11.25px !important;
+  font-weight: 520 !important;
+  line-height: 1.45 !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-conduct {
+  margin-top: 9px !important;
+  padding-top: 9px !important;
+  border-top: 1px solid var(--mcs-line) !important;
+  color: var(--mcs-text-2) !important;
+  font-size: 10.75px !important;
+  line-height: 1.45 !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-conduct p,
+#hub-scores-slot #score-calc-area .univ-result-conduct li {
+  color: var(--mcs-text-2) !important;
+  font-size: 10.75px !important;
+  line-height: 1.45 !important;
+}
+
+/* =============================================================
+   5. NEWS2 — página própria, mesmo padrão visual
+   ============================================================= */
+#page-news2 #news2-calculator.news2-section {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 14px 15px 22px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+#page-news2 #news2-calculator::before {
+  display: none !important;
+  content: none !important;
+}
+
+#page-news2 .news2-sep {
+  display: block !important;
+  margin: 0 0 8px !important;
+  padding: 10px 0 6px !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.15) !important;
+  color: rgba(148,163,184,.82) !important;
+  font-size: 9.5px !important;
+  font-weight: 740 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .055em !important;
+  text-transform: uppercase !important;
+}
+
+#page-news2 .news2-sep:first-child {
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+
+#page-news2 .news2-sep::after {
+  display: none !important;
+}
+
+#page-news2 .news2-param-label {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  margin: 8px 0 4px !important;
+  color: rgba(226,232,240,.88) !important;
+  font-size: 10.5px !important;
+  font-weight: 620 !important;
+  line-height: 1.25 !important;
+}
+
+#page-news2 .news2-param-score {
+  min-width: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(148,163,184,.76) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+}
+
+#page-news2 .news2-param-score.s1,
+#page-news2 .news2-param-score.s2 {
+  color: #F59E0B !important;
+  background: transparent !important;
+}
+
+#page-news2 .news2-param-score.s3 {
+  color: #F87171 !important;
+  background: transparent !important;
+}
+
+#page-news2 .news2-select {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  margin: 0 !important;
+  padding: 6px 30px 6px 10px !important;
+  border: 1px solid rgba(148,163,184,.20) !important;
+  border-radius: 7px !important;
+  background: rgba(15,23,42,.24) !important;
+  background-image: none !important;
+  color: #F3F4F6 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  font-size: 11.5px !important;
+  font-weight: 520 !important;
+  line-height: 1.2 !important;
+}
+
+#page-news2 .news2-select:focus,
+#page-news2 .news2-select:focus-visible {
+  border-color: rgba(56,189,248,.62) !important;
+  box-shadow: 0 0 0 1px rgba(56,189,248,.14) !important;
+}
+
+#page-news2 .news2-select.scored-1,
+#page-news2 .news2-select.scored-2 {
+  border-color: rgba(245,158,11,.42) !important;
+  box-shadow: none !important;
+}
+
+#page-news2 .news2-select.scored-3 {
+  border-color: rgba(248,113,113,.52) !important;
+  box-shadow: none !important;
+}
+
+/* Escala 1 / Escala 2 como tabs, não pills. */
+#page-news2 .news2-scale-toggle {
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 18px !important;
+  margin: 0 0 4px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.15) !important;
+  background: transparent !important;
+}
+
+#page-news2 .news2-scale-btn {
+  position: relative !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 0 8px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(148,163,184,.80) !important;
+  font-size: 10.5px !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+}
+
+#page-news2 .news2-scale-btn.active {
+  color: #F3F4F6 !important;
+  background: transparent !important;
+}
+
+#page-news2 .news2-scale-btn.active::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: -1px !important;
+  height: 1.5px !important;
+  background: #38BDF8 !important;
+}
+
+/* Resultado NEWS2: sem gradientes, score em prioridade. */
+#page-news2 #news2-result-area.news2-result-area {
+  margin: 14px 0 0 !important;
+  padding: 12px 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.18) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+#page-news2 .news2-total-bar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 0 !important;
+  padding: 0 0 10px !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+#page-news2 .news2-total-score {
+  min-width: 38px !important;
+  color: #F3F4F6 !important;
+  font-size: 30px !important;
+  font-weight: 790 !important;
+  line-height: 1 !important;
+  letter-spacing: -.025em !important;
+  text-shadow: none !important;
+}
+
+#page-news2 .news2-total-label {
+  color: rgba(148,163,184,.78) !important;
+  font-size: 9px !important;
+  font-weight: 740 !important;
+  letter-spacing: .055em !important;
+}
+
+#page-news2 .news2-risk-badge,
+#page-news2 .news2-risk-low,
+#page-news2 .news2-risk-low-med,
+#page-news2 .news2-risk-med,
+#page-news2 .news2-risk-high {
+  display: inline-flex !important;
+  margin: 3px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 10.5px !important;
+  font-weight: 680 !important;
+}
+
+#page-news2 .news2-score-bar-wrap {
+  height: 2px !important;
+  margin: 0 0 10px !important;
+  border-radius: 0 !important;
+  background: rgba(148,163,184,.14) !important;
+  overflow: hidden !important;
+}
+
+#page-news2 .news2-score-bar-fill {
+  height: 2px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#page-news2 .risk-low .news2-score-bar-fill { background: #34D399 !important; }
+#page-news2 .risk-low-med .news2-score-bar-fill { background: #FBBF24 !important; }
+#page-news2 .risk-med .news2-score-bar-fill { background: #F59E0B !important; }
+#page-news2 .risk-high .news2-score-bar-fill { background: #F87171 !important; }
+
+#page-news2 .news2-trigger-alert,
+#page-news2 .news2-critical-alert {
+  margin: 7px 0 0 !important;
+  padding: 7px 0 7px 9px !important;
+  border: 0 !important;
+  border-left: 2px solid currentColor !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 10.25px !important;
+  line-height: 1.42 !important;
+}
+
+#page-news2 .news2-conduct {
+  margin: 9px 0 0 !important;
+  padding: 9px 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#page-news2 .news2-conduct-title {
+  margin: 0 0 6px !important;
+  color: #F3F4F6 !important;
+  font-size: 10.5px !important;
+  font-weight: 680 !important;
+}
+
+#page-news2 .news2-conduct-list {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+#page-news2 .news2-conduct-list li {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 5px 0 5px 11px !important;
+  border-bottom: 1px solid rgba(148,163,184,.09) !important;
+  color: rgba(203,213,225,.82) !important;
+  font-size: 10.25px !important;
+  line-height: 1.42 !important;
+}
+
+#page-news2 .news2-conduct-list li:last-child {
+  border-bottom: 0 !important;
+}
+
+#page-news2 .news2-conduct-list li::before {
+  left: 0 !important;
+  top: 10px !important;
+  width: 3px !important;
+  height: 3px !important;
+  border-radius: 50% !important;
+  background: currentColor !important;
+}
+
+/* =============================================================
+   6. LIGHT MODE
+   ============================================================= */
+body.light-mode #hub-scores-slot {
+  --mcs-text: #0F172A;
+  --mcs-text-2: #334155;
+  --mcs-muted: #64748B;
+  --mcs-line: rgba(100,116,139,.16);
+  --mcs-line-strong: rgba(100,116,139,.22);
+  --mcs-input: rgba(255,255,255,.72);
+}
+
+body.light-mode #hub-scores-slot [id^="scard-"] .drug-card-name,
+body.light-mode #hub-scores-slot #score-calc-area .univ-result-number {
+  color: #0F172A !important;
+  -webkit-text-fill-color: #0F172A !important;
+}
+
+body.light-mode #page-news2 .news2-param-label,
+body.light-mode #page-news2 .news2-scale-btn.active,
+body.light-mode #page-news2 .news2-total-score,
+body.light-mode #page-news2 .news2-conduct-title {
+  color: #0F172A !important;
+}
+
+body.light-mode #page-news2 .news2-select {
+  background: rgba(255,255,255,.76) !important;
+  border-color: rgba(100,116,139,.22) !important;
+  color: #0F172A !important;
+}
+
+body.light-mode #page-news2 .news2-sep,
+body.light-mode #page-news2 .news2-total-label {
+  color: rgba(71,85,105,.72) !important;
+}
+
+body.light-mode #page-news2 .news2-conduct-list li {
+  color: rgba(51,65,85,.82) !important;
+}
+
+/* =============================================================
+   7. MOBILE
+   ============================================================= */
+@media (max-width: 430px) {
+  #hub-scores-slot > .drug-grid {
+    gap: 0 10px !important;
+  }
+
+  #hub-scores-slot [id^="scard-"] {
+    min-height: 45px !important;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+  }
+
+  #hub-scores-slot #score-calc-area .univ-toggle-btn {
+    min-height: 35px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+
+  #page-news2 #news2-calculator.news2-section {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  #page-news2 .news2-select {
+    height: 35px !important;
+    min-height: 35px !important;
+  }
+}
+
+/* CALC-SCORES-V1-M1-ALL-SCORES-CLINICAL-FLAT-MACROBUILD END */
+
+/* CALC-SCORES-V1-M1-R1-CONTROLS-RESULT-FINAL-REFINEMENT START */
+/*
+  Correção da homologação visual Dark+PT:
+  - restaura affordance real dos critérios selecionáveis;
+  - alinha critério e pontuação na mesma linha;
+  - elimina mini-pills de pontos;
+  - remove caixa decorativa do ícone do score ativo;
+  - resultado passa a hierarquia editorial, alinhada à esquerda;
+  - interpretação/risco deixa de ser faixa preenchida.
+  Somente CSS. Motor, fórmulas, thresholds, callbacks e textos clínicos intactos.
+*/
+
+/* =============================================================
+   1. CABEÇALHO DO SCORE ATIVO — editorial, sem ícone em caixa
+   ============================================================= */
+#hub-scores-slot #score-calc-area > .drug-card,
+#hub-scores-slot #score-calc-area .score-card,
+#hub-scores-slot #score-calc-area .univ-score-card {
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 0 8px !important;
+  padding: 0 0 9px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mcs-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+#hub-scores-slot #score-calc-area .drug-card-icon,
+#hub-scores-slot #score-calc-area [class*="score-icon"],
+#hub-scores-slot #score-calc-area [class*="icon-wrap"] {
+  display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#hub-scores-slot #score-calc-area .drug-card-name,
+#hub-scores-slot #score-calc-area [class*="score-title"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mcs-text) !important;
+  font-size: 13px !important;
+  font-weight: 720 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area .drug-card-class,
+#hub-scores-slot #score-calc-area [class*="score-subtitle"] {
+  margin: 2px 0 0 !important;
+  padding: 0 !important;
+  color: var(--mcs-muted) !important;
+  font-size: 10px !important;
+  font-weight: 470 !important;
+  line-height: 1.35 !important;
+}
+
+/* =============================================================
+   2. CRITÉRIOS — checkbox visível + texto + pontos alinhados
+   ============================================================= */
+#hub-scores-slot #score-calc-area .univ-score-section {
+  padding: 9px 0 3px !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-score-group-title {
+  margin-bottom: 4px !important;
+  font-size: 9.25px !important;
+  letter-spacing: .05em !important;
+}
+
+/* O M1 deixou o container flex, mas o legado ainda escondia o input
+   e mantinha o badge de pontos. A R1 fixa os três filhos estruturalmente. */
+#hub-scores-slot #score-calc-area .univ-toggle-btn {
+  display: grid !important;
+  grid-template-columns: 16px minmax(0,1fr) auto !important;
+  align-items: center !important;
+  justify-content: stretch !important;
+  column-gap: 8px !important;
+  row-gap: 0 !important;
+  width: 100% !important;
+  min-height: 34px !important;
+  padding: 6px 2px !important;
+  color: var(--mcs-text-2) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.095) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-align: left !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-toggle-btn:last-child {
+  border-bottom: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-toggle-btn > * {
+  min-width: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Input real volta a ficar visível; mantém onchange e clique nativos. */
+#hub-scores-slot #score-calc-area .univ-toggle-btn > input.score-check,
+#hub-scores-slot #score-calc-area input.score-check {
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+  display: inline-block !important;
+  position: static !important;
+  inset: auto !important;
+  grid-column: 1 !important;
+  width: 15px !important;
+  min-width: 15px !important;
+  max-width: 15px !important;
+  height: 15px !important;
+  min-height: 15px !important;
+  max-height: 15px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  clip: auto !important;
+  clip-path: none !important;
+  transform: none !important;
+  pointer-events: auto !important;
+  accent-color: var(--mcs-accent) !important;
+  box-shadow: none !important;
+}
+
+/* Texto clínico do critério. */
+#hub-scores-slot #score-calc-area .univ-toggle-btn > span:not(:last-child),
+#hub-scores-slot #score-calc-area .univ-toggle-btn > label,
+#hub-scores-slot #score-calc-area .univ-toggle-btn [class*="label"] {
+  grid-column: 2 !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: inherit !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  font-size: 11px !important;
+  font-weight: 540 !important;
+  line-height: 1.35 !important;
+}
+
+/* Pontos à direita: texto funcional, não cápsula. */
+#hub-scores-slot #score-calc-area .univ-toggle-btn > span:last-child,
+#hub-scores-slot #score-calc-area .univ-toggle-btn [class*="point"],
+#hub-scores-slot #score-calc-area .univ-toggle-btn [class*="pts"] {
+  grid-column: 3 !important;
+  justify-self: end !important;
+  width: auto !important;
+  min-width: 28px !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mcs-muted) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 9.5px !important;
+  font-weight: 680 !important;
+  line-height: 1.2 !important;
+  text-align: right !important;
+  white-space: nowrap !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-toggle-btn:has(input.score-check:checked) {
+  padding-left: 6px !important;
+  color: var(--mcs-text) !important;
+  background: rgba(251,191,36,.025) !important;
+  border-left: 2px solid var(--mcs-accent) !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-toggle-btn:has(input.score-check:checked) > span:last-child,
+#hub-scores-slot #score-calc-area .univ-toggle-btn:has(input.score-check:checked) [class*="point"],
+#hub-scores-slot #score-calc-area .univ-toggle-btn:has(input.score-check:checked) [class*="pts"] {
+  color: var(--mcs-accent) !important;
+}
+
+/* Stepper: linha única, sem card. */
+#hub-scores-slot #score-calc-area [class*="univ-stepper"]:not(.univ-stepper-btn) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 7px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 5px 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-stepper-btn {
+  width: 28px !important;
+  min-width: 28px !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  border-radius: 6px !important;
+}
+
+/* =============================================================
+   3. RESULTADO — esquerda, sem faixa preenchida/pill
+   ============================================================= */
+#hub-scores-slot #score-calc-area .univ-result-card {
+  margin-top: 10px !important;
+  padding-top: 11px !important;
+  text-align: left !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-card,
+#hub-scores-slot #score-calc-area .univ-result-card-inner,
+#hub-scores-slot #score-calc-area .univ-result-card * {
+  text-shadow: none !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-header,
+#hub-scores-slot #score-calc-area .univ-result-number,
+#hub-scores-slot #score-calc-area .univ-result-sub,
+#hub-scores-slot #score-calc-area .univ-result-interpretation,
+#hub-scores-slot #score-calc-area .univ-result-conduct {
+  text-align: left !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-header {
+  margin: 0 0 5px !important;
+  font-size: 9.25px !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-number {
+  display: block !important;
+  width: auto !important;
+  margin: 0 0 7px !important;
+  padding: 0 !important;
+  font-size: 28px !important;
+  line-height: 1 !important;
+}
+
+/* Captura também as classes legadas que ainda pintavam o risco. */
+#hub-scores-slot #score-calc-area .univ-result-sub,
+#hub-scores-slot #score-calc-area .univ-result-interpretation,
+#hub-scores-slot #score-calc-area .score-result-interp,
+#hub-scores-slot #score-calc-area [class*="result-interp"],
+#hub-scores-slot #score-calc-area [class*="risk-badge"] {
+  display: block !important;
+  width: auto !important;
+  max-width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+}
+
+/* Evita a faixa verde/laranja/vermelha ocupar largura inteira. */
+#hub-scores-slot #score-calc-area .univ-result-card [class*="low"],
+#hub-scores-slot #score-calc-area .univ-result-card [class*="moder"],
+#hub-scores-slot #score-calc-area .univ-result-card [class*="high"],
+#hub-scores-slot #score-calc-area .univ-result-card [class*="risk"] {
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Nota/endpoint e conduta com leitura clínica, sem caixa. */
+#hub-scores-slot #score-calc-area .univ-result-conduct {
+  margin-top: 8px !important;
+  padding-top: 8px !important;
+  border-top: 1px solid var(--mcs-line) !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  font-size: 10.75px !important;
+  line-height: 1.45 !important;
+}
+
+/* =============================================================
+   4. LIGHT — mesma hierarquia, contraste preservado
+   ============================================================= */
+body.light-mode #hub-scores-slot #score-calc-area .univ-toggle-btn:has(input.score-check:checked) {
+  background: rgba(180,120,0,.035) !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area .univ-toggle-btn > span:last-child,
+body.light-mode #hub-scores-slot #score-calc-area .univ-toggle-btn [class*="point"],
+body.light-mode #hub-scores-slot #score-calc-area .univ-toggle-btn [class*="pts"] {
+  color: #64748B !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area .univ-toggle-btn:has(input.score-check:checked) > span:last-child,
+body.light-mode #hub-scores-slot #score-calc-area .univ-toggle-btn:has(input.score-check:checked) [class*="point"],
+body.light-mode #hub-scores-slot #score-calc-area .univ-toggle-btn:has(input.score-check:checked) [class*="pts"] {
+  color: #A16207 !important;
+}
+
+/* =============================================================
+   5. MOBILE 390–430 px
+   ============================================================= */
+@media (max-width: 430px) {
+  #hub-scores-slot #score-calc-area .univ-toggle-btn {
+    grid-template-columns: 15px minmax(0,1fr) auto !important;
+    column-gap: 7px !important;
+    min-height: 33px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  #hub-scores-slot #score-calc-area .univ-toggle-btn > span:not(:last-child),
+  #hub-scores-slot #score-calc-area .univ-toggle-btn > label,
+  #hub-scores-slot #score-calc-area .univ-toggle-btn [class*="label"] {
+    font-size: 10.75px !important;
+  }
+
+  #hub-scores-slot #score-calc-area .univ-result-number {
+    font-size: 27px !important;
+  }
+}
+
+/* CALC-SCORES-V1-M1-R1-CONTROLS-RESULT-FINAL-REFINEMENT END */
+
+/* CALC-SCORES-V1-M1-R2-EXACT-DOM-CONTROLS-HEADER-FIX START */
+/*
+  R2 baseada no DOM REAL confirmado em runtime:
+    label.univ-toggle-btn
+      > div.univ-toggle-label
+      > span.univ-toggle-pts
+      > input[type=radio].univ-toggle-input (inline hidden)
+  e:
+    #score-calc-area > .card > .card-title > i.fa-stethoscope + span
+
+  Objetivo: corrigir affordance e acabamento sem tocar no motor clínico.
+*/
+
+/* =============================================================
+   1. CARD DO SCORE ATIVO — remove o card legado e a caixa do ícone
+   ============================================================= */
+#hub-scores-slot #score-calc-area > .card {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+#hub-scores-slot #score-calc-area > .card > .card-title {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 0 !important;
+  min-height: 0 !important;
+  margin: 0 0 8px !important;
+  padding: 0 0 9px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mcs-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--mcs-text) !important;
+  font-size: 12.75px !important;
+  font-weight: 720 !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area > .card > .card-title > i.fa-stethoscope {
+  display: none !important;
+}
+
+#hub-scores-slot #score-calc-area > .card > .card-title > span {
+  display: inline !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mcs-text) !important;
+  line-height: 1.3 !important;
+}
+
+/* Subtítulo inline já possui span próprio no DOM; melhora contraste. */
+#hub-scores-slot #score-calc-area > .card > .card-title > span > span {
+  color: rgba(203,213,225,.72) !important;
+  font-size: 10px !important;
+  font-weight: 470 !important;
+  line-height: 1.35 !important;
+}
+
+/* =============================================================
+   2. RADIO REAL — sobrescreve o style inline que o escondia
+   ============================================================= */
+#hub-scores-slot #score-calc-area label.univ-toggle-btn {
+  display: grid !important;
+  grid-template-columns: 15px minmax(0,1fr) auto !important;
+  align-items: center !important;
+  column-gap: 8px !important;
+  row-gap: 0 !important;
+  width: 100% !important;
+  min-height: 34px !important;
+  margin: 0 !important;
+  padding: 6px 2px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.095) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn:last-child {
+  border-bottom: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn > input.univ-toggle-input {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: block !important;
+  position: static !important;
+  inset: auto !important;
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  place-self: center !important;
+  width: 14px !important;
+  min-width: 14px !important;
+  max-width: 14px !important;
+  height: 14px !important;
+  min-height: 14px !important;
+  max-height: 14px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  clip: auto !important;
+  clip-path: none !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  border: 1.5px solid rgba(148,163,184,.52) !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  cursor: pointer !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn > input.univ-toggle-input:checked {
+  border-color: var(--mcs-accent) !important;
+  background: var(--mcs-accent) !important;
+  box-shadow: inset 0 0 0 3px #1A1D23 !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn > input.univ-toggle-input:focus-visible {
+  outline: 2px solid rgba(251,191,36,.35) !important;
+  outline-offset: 2px !important;
+}
+
+/* =============================================================
+   3. LABEL E PONTUAÇÃO — mesma linha, sem mini-cápsula
+   ============================================================= */
+#hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-label {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  min-width: 0 !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mcs-text-2) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 10.9px !important;
+  font-weight: 520 !important;
+  line-height: 1.32 !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-label strong {
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: 600 !important;
+  line-height: inherit !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-pts {
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+  align-self: center !important;
+  display: block !important;
+  width: auto !important;
+  min-width: 30px !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: rgba(148,163,184,.84) !important;
+  font-size: 9.3px !important;
+  font-weight: 690 !important;
+  line-height: 1.15 !important;
+  text-align: right !important;
+  white-space: nowrap !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn:has(> input.univ-toggle-input:checked) {
+  padding-left: 6px !important;
+  border-left: 2px solid var(--mcs-accent) !important;
+  background: rgba(251,191,36,.03) !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn:has(> input.univ-toggle-input:checked) > .univ-toggle-label {
+  color: var(--mcs-text) !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn:has(> input.univ-toggle-input:checked) > .univ-toggle-pts {
+  color: var(--mcs-accent) !important;
+}
+
+/* =============================================================
+   4. RESULTADO R1 PRESERVADO, com contraste fino no subtítulo
+   ============================================================= */
+#hub-scores-slot #score-calc-area .univ-result-card .univ-result-sub,
+#hub-scores-slot #score-calc-area .univ-result-card .score-result-interp,
+#hub-scores-slot #score-calc-area .univ-result-card [class*="result-interp"] {
+  color: rgba(226,232,240,.82) !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-conduct {
+  color: rgba(203,213,225,.78) !important;
+}
+
+/* =============================================================
+   5. LIGHT
+   ============================================================= */
+body.light-mode #hub-scores-slot #score-calc-area > .card > .card-title > span > span {
+  color: rgba(71,85,105,.72) !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area label.univ-toggle-btn > input.univ-toggle-input:checked {
+  box-shadow: inset 0 0 0 3px #FFFFFF !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-label {
+  color: #334155 !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-pts {
+  color: #64748B !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area label.univ-toggle-btn:has(> input.univ-toggle-input:checked) > .univ-toggle-label {
+  color: #0F172A !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area label.univ-toggle-btn:has(> input.univ-toggle-input:checked) > .univ-toggle-pts {
+  color: #A16207 !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area .univ-result-card .univ-result-sub,
+body.light-mode #hub-scores-slot #score-calc-area .univ-result-card .score-result-interp,
+body.light-mode #hub-scores-slot #score-calc-area .univ-result-card [class*="result-interp"] {
+  color: rgba(51,65,85,.82) !important;
+}
+
+/* =============================================================
+   6. MOBILE
+   ============================================================= */
+@media (max-width: 430px) {
+  #hub-scores-slot #score-calc-area label.univ-toggle-btn {
+    grid-template-columns: 14px minmax(0,1fr) auto !important;
+    column-gap: 7px !important;
+    min-height: 33px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  #hub-scores-slot #score-calc-area label.univ-toggle-btn > input.univ-toggle-input {
+    width: 13px !important;
+    min-width: 13px !important;
+    max-width: 13px !important;
+    height: 13px !important;
+    min-height: 13px !important;
+    max-height: 13px !important;
+  }
+
+  #hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-label {
+    font-size: 10.6px !important;
+  }
+}
+
+/* CALC-SCORES-V1-M1-R2-EXACT-DOM-CONTROLS-HEADER-FIX END */
+
+/* CALC-SCORES-V1-M1-R3-DENSITY-CLEAR-ACTION START */
+/* R3: reduz ruído de linhas, compacta critérios e estiliza ação Limpar. */
+
+#hub-scores-slot #score-calc-area .mcs-score-clear-row {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: -1px 0 7px !important;
+  padding: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area .mcs-score-clear-btn {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 20px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(148,163,184,.84) !important;
+  font-size: 10px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .01em !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+#hub-scores-slot #score-calc-area .mcs-score-clear-btn:hover,
+#hub-scores-slot #score-calc-area .mcs-score-clear-btn:focus-visible {
+  color: var(--mcs-text) !important;
+  outline: none !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-score-section {
+  margin: 0 0 10px !important;
+  padding: 0 0 8px !important;
+  border-bottom: 1px solid rgba(148,163,184,.08) !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-score-section:last-of-type {
+  margin-bottom: 8px !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-score-group-title {
+  margin-bottom: 4px !important;
+  color: rgba(148,163,184,.88) !important;
+  font-size: 10.2px !important;
+  font-weight: 720 !important;
+  line-height: 1.28 !important;
+  letter-spacing: .015em !important;
+  text-transform: uppercase !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn {
+  min-height: 30px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  border-bottom: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn + label.univ-toggle-btn {
+  margin-top: 1px !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-label {
+  color: rgba(226,232,240,.92) !important;
+  font-size: 10.75px !important;
+  line-height: 1.28 !important;
+}
+
+#hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-pts {
+  color: rgba(203,213,225,.78) !important;
+  font-size: 9.1px !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-card,
+#hub-scores-slot #score-calc-area .univ-result-card-inner {
+  margin-top: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-conduct {
+  margin-top: 8px !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area .mcs-score-clear-btn {
+  color: #64748B !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area .mcs-score-clear-btn:hover,
+body.light-mode #hub-scores-slot #score-calc-area .mcs-score-clear-btn:focus-visible {
+  color: #0F172A !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area .univ-score-group-title {
+  color: rgba(71,85,105,.86) !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-label {
+  color: #1E293B !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-pts {
+  color: #64748B !important;
+}
+
+@media (max-width: 430px) {
+  #hub-scores-slot #score-calc-area .mcs-score-clear-row {
+    margin-bottom: 6px !important;
+  }
+
+  #hub-scores-slot #score-calc-area label.univ-toggle-btn {
+    min-height: 29px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+  }
+
+  #hub-scores-slot #score-calc-area label.univ-toggle-btn > .univ-toggle-label {
+    font-size: 10.5px !important;
+  }
+}
+
+/* CALC-SCORES-V1-M1-R3-DENSITY-CLEAR-ACTION END */
+
+/* CALC-SCORES-V1-M1-R4-CENTER-TITLE-RESULT START */
+/* R4: centraliza o título do score aberto e a leitura do resultado final. */
+
+#hub-scores-slot #score-calc-area > .card > .card-title,
+#hub-scores-slot #score-calc-area .card > .card-title {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  text-align: center !important;
+}
+
+#hub-scores-slot #score-calc-area > .card > .card-title i,
+#hub-scores-slot #score-calc-area .card > .card-title i {
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+#hub-scores-slot #score-calc-area > .card > .card-title > span,
+#hub-scores-slot #score-calc-area .card > .card-title > span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 4px !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+#hub-scores-slot #score-calc-area > .card > .card-title > span > span,
+#hub-scores-slot #score-calc-area .card > .card-title > span > span {
+  text-align: center !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-card,
+#hub-scores-slot #score-calc-area .univ-result-card-inner,
+#hub-scores-slot #score-calc-area .univ-result-header,
+#hub-scores-slot #score-calc-area .univ-result-sub,
+#hub-scores-slot #score-calc-area .univ-result-conduct {
+  text-align: center !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-card,
+#hub-scores-slot #score-calc-area .univ-result-card-inner {
+  align-items: center !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-number {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-sub,
+#hub-scores-slot #score-calc-area .univ-result-conduct {
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-conduct strong,
+#hub-scores-slot #score-calc-area .univ-result-sub strong {
+  display: inline !important;
+}
+
+@media (max-width: 430px) {
+  #hub-scores-slot #score-calc-area > .card > .card-title,
+  #hub-scores-slot #score-calc-area .card > .card-title {
+    gap: 5px !important;
+  }
+
+  #hub-scores-slot #score-calc-area > .card > .card-title > span,
+  #hub-scores-slot #score-calc-area .card > .card-title > span {
+    line-height: 1.28 !important;
+  }
+}
+
+/* CALC-SCORES-V1-M1-R4-CENTER-TITLE-RESULT END */
+
+/* CALC-SCORES-V1-M1-R5-SINGLE-DIVIDER-RISK-RESET-FINAL START */
+/* Divisor único + alerta semântico canônico. */
+
+#hub-scores-slot #score-calc-area .univ-score-section {
+  border-top: 0 !important;
+  border-bottom: 1px solid rgba(148,163,184,.10) !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-score-section + .univ-score-section {
+  border-top: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-result-card,
+#hub-scores-slot #score-calc-area .univ-result-card-inner {
+  border-top: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area .univ-score-section:last-of-type {
+  border-bottom: 1px solid rgba(148,163,184,.12) !important;
+}
+
+#hub-scores-slot #score-calc-area [class*="univ-stepper"]:not(.univ-stepper-btn) {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+
+#hub-scores-slot #score-calc-area .mcs-score-risk-alert {
+  --mcs-risk-color: #94A3B8;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  width: 100% !important;
+  margin: 7px 0 0 !important;
+  padding: 7px 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(148,163,184,.10) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--mcs-risk-color) !important;
+  font-size: 9.75px !important;
+  font-weight: 760 !important;
+  line-height: 1.25 !important;
+  letter-spacing: .035em !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+}
+
+#hub-scores-slot #score-calc-area .mcs-score-risk-alert::before {
+  content: "" !important;
+  display: inline-block !important;
+  width: 6px !important;
+  min-width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: var(--mcs-risk-color) !important;
+}
+
+#hub-scores-slot #score-calc-area .mcs-score-risk-alert.severity-low {
+  --mcs-risk-color: #34D399;
+}
+
+#hub-scores-slot #score-calc-area .mcs-score-risk-alert.severity-mid,
+#hub-scores-slot #score-calc-area .mcs-score-risk-alert.severity-medium,
+#hub-scores-slot #score-calc-area .mcs-score-risk-alert.severity-moderate {
+  --mcs-risk-color: #FBBF24;
+}
+
+#hub-scores-slot #score-calc-area .mcs-score-risk-alert.severity-high {
+  --mcs-risk-color: #F87171;
+}
+
+#hub-scores-slot #score-calc-area .mcs-score-risk-alert + .univ-result-conduct {
+  margin-top: 7px !important;
+  padding-top: 7px !important;
+}
+
+#page-news2 #n2-risk-badge.news2-risk-badge {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area .univ-score-section {
+  border-bottom-color: rgba(100,116,139,.14) !important;
+}
+
+body.light-mode #hub-scores-slot #score-calc-area .mcs-score-risk-alert {
+  border-top-color: rgba(100,116,139,.13) !important;
+}
+
+/* CALC-SCORES-V1-M1-R5-SINGLE-DIVIDER-RISK-RESET-FINAL END */
+
+/* CALC-DADOS-PACIENTE-V1-M1-R2-HEMODIALISE-FINAL-REFINEMENT START
+   Escopo estritamente visual:
+   - Hemodiálise com contraste real em Dark/Light.
+   - Redução de linhas duplicadas entre Urina 24h, Hemodiálise e ações.
+   - Nenhuma alteração de DOM, callback, cálculo, estado clínico ou dados.
+*/
+
+/* ---------- Estrutura: somente dois divisores clínicos ---------- */
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-urine-accordion,
+#page-home #hub-card-patient #hm-urine-accordion {
+  margin-top: 5px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(107, 114, 128, 0.34) !important;
+  border-bottom: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body button#hm-urine-toggle-btn,
+#page-home #hub-card-patient button#hm-urine-toggle-btn {
+  min-height: 38px !important;
+  height: 38px !important;
+  max-height: 38px !important;
+  margin: 0 !important;
+  padding: 0 2px !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-urine-body,
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-urine-fields,
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-urine-note,
+#page-home #hub-card-patient #hm-urine-body,
+#page-home #hub-card-patient .hm-urine-fields,
+#page-home #hub-card-patient .hm-urine-note {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-wrap,
+#page-home #hub-card-patient .hm-hd-wrap {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(107, 114, 128, 0.34) !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body label.hm-hd-toggle,
+#page-home #hub-card-patient label.hm-hd-toggle {
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  width: 100% !important;
+  min-height: 40px !important;
+  height: 40px !important;
+  max-height: 40px !important;
+  margin: 0 !important;
+  padding: 0 2px !important;
+  color: #E5E7EB !important;
+  -webkit-text-fill-color: #E5E7EB !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+/* ---------- Toggle OFF: visível no Dark sem virar botão chamativo ---------- */
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-track,
+#page-home #hub-card-patient .hm-hd-track {
+  position: relative !important;
+  display: inline-block !important;
+  flex: 0 0 36px !important;
+  width: 36px !important;
+  min-width: 36px !important;
+  height: 20px !important;
+  box-sizing: border-box !important;
+  background: #374151 !important;
+  background-image: none !important;
+  border: 1px solid #6B7280 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-thumb,
+#page-home #hub-card-patient .hm-hd-thumb {
+  position: absolute !important;
+  top: 2px !important;
+  left: 2px !important;
+  display: block !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 !important;
+  background: #E5E7EB !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+/* ---------- Toggle ON: verde semântico, contrato funcional intacto ---------- */
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-track,
+#page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-track {
+  background: #10B981 !important;
+  border-color: #10B981 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-thumb,
+#page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-thumb {
+  background: #FFFFFF !important;
+  transform: translateX(16px) !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text,
+#page-home #hub-card-patient .hm-hd-text {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  min-width: 0 !important;
+  color: #E5E7EB !important;
+  -webkit-text-fill-color: #E5E7EB !important;
+  font-size: 12.5px !important;
+  font-weight: 620 !important;
+  line-height: 1.2 !important;
+  opacity: 1 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text i,
+#page-home #hub-card-patient .hm-hd-text i {
+  color: #9CA3AF !important;
+  -webkit-text-fill-color: #9CA3AF !important;
+  font-size: 11px !important;
+  opacity: 1 !important;
+}
+
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-text i,
+#page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-text i {
+  color: #10B981 !important;
+  -webkit-text-fill-color: #10B981 !important;
+}
+
+/* ---------- Footer sem nova linha decorativa ---------- */
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-card-footer,
+#page-home #hub-card-patient .hm-card-footer {
+  margin-top: 7px !important;
+  padding-top: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Light: contraste explícito e neutro ---------- */
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body label.hm-hd-toggle,
+body.theme-light #calculator-overlay-container.is-active #calculator-overlay-body label.hm-hd-toggle,
+body[data-theme="light"] #calculator-overlay-container.is-active #calculator-overlay-body label.hm-hd-toggle,
+html[data-theme="light"] body #calculator-overlay-container.is-active #calculator-overlay-body label.hm-hd-toggle,
+body.light-mode #page-home #hub-card-patient label.hm-hd-toggle,
+body.theme-light #page-home #hub-card-patient label.hm-hd-toggle,
+body[data-theme="light"] #page-home #hub-card-patient label.hm-hd-toggle,
+html[data-theme="light"] body #page-home #hub-card-patient label.hm-hd-toggle {
+  color: #374151 !important;
+  -webkit-text-fill-color: #374151 !important;
+}
+
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-track,
+body.theme-light #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-track,
+body[data-theme="light"] #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-track,
+html[data-theme="light"] body #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-track,
+body.light-mode #page-home #hub-card-patient .hm-hd-track,
+body.theme-light #page-home #hub-card-patient .hm-hd-track,
+body[data-theme="light"] #page-home #hub-card-patient .hm-hd-track,
+html[data-theme="light"] body #page-home #hub-card-patient .hm-hd-track {
+  background: #E5E7EB !important;
+  border-color: #9CA3AF !important;
+}
+
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-thumb,
+body.theme-light #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-thumb,
+body[data-theme="light"] #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-thumb,
+html[data-theme="light"] body #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-thumb,
+body.light-mode #page-home #hub-card-patient .hm-hd-thumb,
+body.theme-light #page-home #hub-card-patient .hm-hd-thumb,
+body[data-theme="light"] #page-home #hub-card-patient .hm-hd-thumb,
+html[data-theme="light"] body #page-home #hub-card-patient .hm-hd-thumb {
+  background: #6B7280 !important;
+}
+
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text,
+body.theme-light #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text,
+body[data-theme="light"] #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text,
+html[data-theme="light"] body #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text,
+body.light-mode #page-home #hub-card-patient .hm-hd-text,
+body.theme-light #page-home #hub-card-patient .hm-hd-text,
+body[data-theme="light"] #page-home #hub-card-patient .hm-hd-text,
+html[data-theme="light"] body #page-home #hub-card-patient .hm-hd-text {
+  color: #374151 !important;
+  -webkit-text-fill-color: #374151 !important;
+}
+
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text i,
+body.theme-light #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text i,
+body[data-theme="light"] #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text i,
+html[data-theme="light"] body #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-text i,
+body.light-mode #page-home #hub-card-patient .hm-hd-text i,
+body.theme-light #page-home #hub-card-patient .hm-hd-text i,
+body[data-theme="light"] #page-home #hub-card-patient .hm-hd-text i,
+html[data-theme="light"] body #page-home #hub-card-patient .hm-hd-text i {
+  color: #6B7280 !important;
+  -webkit-text-fill-color: #6B7280 !important;
+}
+
+/* ON precisa vencer explicitamente os overrides Light acima. */
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-track,
+body.theme-light #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-track,
+body[data-theme="light"] #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-track,
+html[data-theme="light"] body #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-track,
+body.light-mode #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-track,
+body.theme-light #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-track,
+body[data-theme="light"] #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-track,
+html[data-theme="light"] body #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-track {
+  background: #10B981 !important;
+  border-color: #10B981 !important;
+}
+
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-thumb,
+body.theme-light #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-thumb,
+body[data-theme="light"] #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-thumb,
+html[data-theme="light"] body #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-thumb,
+body.light-mode #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-thumb,
+body.theme-light #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-thumb,
+body[data-theme="light"] #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-thumb,
+html[data-theme="light"] body #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-thumb {
+  background: #FFFFFF !important;
+}
+
+body.light-mode #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-text i,
+body.theme-light #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-text i,
+body[data-theme="light"] #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-text i,
+html[data-theme="light"] body #calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-toggle:has(input:checked) .hm-hd-text i,
+body.light-mode #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-text i,
+body.theme-light #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-text i,
+body[data-theme="light"] #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-text i,
+html[data-theme="light"] body #page-home #hub-card-patient .hm-hd-toggle:has(input:checked) .hm-hd-text i {
+  color: #10B981 !important;
+  -webkit-text-fill-color: #10B981 !important;
+}
+
+/* Remove pseudo-elementos decorativos que possam gerar linhas extras. */
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-urine-accordion::before,
+#calculator-overlay-container.is-active #calculator-overlay-body #hm-urine-accordion::after,
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-wrap::before,
+#calculator-overlay-container.is-active #calculator-overlay-body .hm-hd-wrap::after,
+#calculator-overlay-container.is-active #calculator-overlay-body label.hm-hd-toggle::before,
+#calculator-overlay-container.is-active #calculator-overlay-body label.hm-hd-toggle::after,
+#page-home #hub-card-patient #hm-urine-accordion::before,
+#page-home #hub-card-patient #hm-urine-accordion::after,
+#page-home #hub-card-patient .hm-hd-wrap::before,
+#page-home #hub-card-patient .hm-hd-wrap::after,
+#page-home #hub-card-patient label.hm-hd-toggle::before,
+#page-home #hub-card-patient label.hm-hd-toggle::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* CALC-DADOS-PACIENTE-V1-M1-R2-HEMODIALISE-FINAL-REFINEMENT END */

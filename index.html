@@ -25678,7 +25678,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
   <link
     id="medcases-webview-home-v1-css"
     rel="stylesheet"
-    data-medcases-path="/css/medcases-webview-home-v1.css?v=517-gpb-focus-suppression"
+    data-medcases-path="/css/medcases-webview-home-v1.css?v=519-patient-hd-r2-final"
   >
   <script id="medcases-webview-home-v1-runtime-origin-r1">
   (() => {
@@ -26231,8 +26231,9 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
 /* CALC-FARMACOS-V1-R10-R2-SEARCH-ICON-ALIGNMENT START */
 (function () {
   var MARKER = "CALC-FARMACOS-V1-R10-R2-SEARCH-ICON-ALIGNMENT";
+  /* CALC-FARMACOS-V1-M1-R2-CANONICAL-BROWSER-OWNER-FIX */
   var initialized = false;
-  var currentMode = "contexts";
+  var currentMode = "az";
   var activeContext = "";
   var cachedLanguage = "";
   var mountedElements = null;
@@ -27004,6 +27005,10 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
           '<div class="farmacos-v2-section-help"></div>' +
         '</div>' +
         '<div class="farmacos-v2-group-list"></div>' +
+      '</div>' +
+      '<div class="farmacos-v2-panel" data-farmacos-panel="az">' +
+        '<div class="farmacos-v2-az-all-list"></div>' +
+        '<div class="farmacos-v2-az-native-host"></div>' +
       '</div>';
 
     if (!placeShellInVisibleOverlay(shell, elements)) {
@@ -27012,7 +27017,233 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     }
 
     prepareLegacySurface(elements, shell);
+    mountCanonicalAzOwners(shell, elements);
     return shell;
+  }
+
+
+  /* CALC-FARMACOS-V1-M1-R2-CANONICAL-BROWSER-OWNER-FIX */
+  function canonicalAzDrugId(drug) {
+    return String(
+      (drug && (drug.id || drug.key || drug.slug || drug.drugId)) || ""
+    ).trim();
+  }
+
+  function canonicalAzValue(value, lang) {
+    if (value == null) return "";
+    if (typeof value === "string" || typeof value === "number") {
+      return String(value);
+    }
+    if (typeof value === "object") {
+      return String(
+        value[lang] || value.pt || value.es ||
+        value.name || value.label || ""
+      );
+    }
+    return "";
+  }
+
+  function canonicalAzDrugName(drug) {
+    try {
+      if (typeof window._fdResolveName === "function") {
+        var resolved = window._fdResolveName(drug);
+        if (resolved && String(resolved).trim()) {
+          return String(resolved).trim();
+        }
+      }
+    } catch (error) {}
+
+    var lang=getLanguage();
+    return canonicalAzValue(
+      drug && (
+        drug.name || drug.nome || drug.label ||
+        drug.namePt || drug.nameEs || drug.nomePt || drug.nomeEs
+      ),
+      lang
+    ).trim() || canonicalAzDrugId(drug);
+  }
+
+  function canonicalAzDrugClass(drug) {
+    try {
+      if (typeof window._fdResolveClass === "function") {
+        var resolved = window._fdResolveClass(drug);
+        if (resolved && String(resolved).trim()) {
+          return String(resolved).trim();
+        }
+      }
+    } catch (error) {}
+
+    return canonicalAzValue(
+      drug && (
+        drug.class || drug.classe || drug.pharmacologicClass ||
+        drug.category || drug.categoria || drug.group
+      ),
+      getLanguage()
+    ).trim();
+  }
+
+  function mountCanonicalAzOwners(shell, elements) {
+    if (!shell || !elements || !elements.list) return false;
+
+    var panel=shell.querySelector('[data-farmacos-panel="az"]');
+    var nativeHost=panel && panel.querySelector(".farmacos-v2-az-native-host");
+    if (!panel || !nativeHost) return false;
+
+    if (elements.list.parentNode !== nativeHost) {
+      nativeHost.appendChild(elements.list);
+    }
+
+    elements.list.removeAttribute("data-mc-farm-final-az");
+    elements.list.removeAttribute("data-mc-farm-final-count");
+    return true;
+  }
+
+  function setCanonicalAzPhase(shell, elements, searching) {
+    if (!shell || !elements || !elements.list) return;
+
+    var panel=shell.querySelector('[data-farmacos-panel="az"]');
+    var allHost=panel && panel.querySelector(".farmacos-v2-az-all-list");
+    var nativeHost=panel && panel.querySelector(".farmacos-v2-az-native-host");
+    if (!panel || !allHost || !nativeHost) return;
+
+    if (searching) {
+      allHost.style.display="none";
+      nativeHost.style.display="block";
+      elements.list.style.removeProperty("display");
+    } else {
+      allHost.style.display="block";
+      nativeHost.style.display="none";
+    }
+  }
+
+  function openCanonicalAzDrug(id) {
+    if (!id) return;
+
+    try {
+      if (typeof window.hmOpenDrug === "function") {
+        window.hmOpenDrug(id);
+        return;
+      }
+    } catch (error) {}
+
+    try {
+      if (typeof window.openFarmacoDetail === "function") {
+        window.openFarmacoDetail(id);
+      }
+    } catch (error) {}
+  }
+
+  function renderCanonicalAz(shell, elements, force) {
+    if (!shell || !elements || !elements.input) return false;
+    if (String(elements.input.value || "").trim()) return false;
+    if (!mountCanonicalAzOwners(shell, elements)) return false;
+
+    var panel=shell.querySelector('[data-farmacos-panel="az"]');
+    var host=panel && panel.querySelector(".farmacos-v2-az-all-list");
+    if (!host) return false;
+
+    var source=getDrugDb();
+    var seen=Object.create(null);
+    var rows=[];
+
+    source.forEach(function (drug) {
+      var id=canonicalAzDrugId(drug);
+      var name=canonicalAzDrugName(drug);
+      if (!id || !name || seen[id]) return;
+      seen[id]=true;
+      rows.push({
+        id:id,
+        name:name,
+        className:canonicalAzDrugClass(drug)
+      });
+    });
+
+    rows.sort(function (a,b) {
+      return a.name.localeCompare(
+        b.name,
+        getLanguage(),
+        {sensitivity:"base"}
+      );
+    });
+
+    var signature=
+      getLanguage()+":"+rows.length+":"+
+      (rows[0] ? rows[0].id : "")+":"+
+      (rows.length ? rows[rows.length-1].id : "");
+
+    if (
+      !force &&
+      host.getAttribute("data-mc-farm-canonical-az-signature")===signature &&
+      host.children.length
+    ) {
+      setCanonicalAzPhase(shell,elements,false);
+      return true;
+    }
+
+    host.textContent="";
+
+    if (!rows.length) {
+      var empty=document.createElement("div");
+      empty.className="farmacos-v2-empty";
+      empty.textContent=
+        getLanguage()==="es"
+          ? "Cargando fármacos…"
+          : "Carregando fármacos…";
+      host.appendChild(empty);
+      host.setAttribute("data-mc-farm-canonical-az-signature",signature);
+      setCanonicalAzPhase(shell,elements,false);
+      return false;
+    }
+
+    var fragment=document.createDocumentFragment();
+
+    rows.forEach(function (row) {
+      var button=document.createElement("button");
+      button.type="button";
+      button.className="farmacos-v2-group-row";
+      button.setAttribute("data-mc-farm-canonical-drug",row.id);
+
+      var main=document.createElement("span");
+      main.className="farmacos-v2-row-main";
+
+      var title=document.createElement("span");
+      title.className="farmacos-v2-row-title";
+      title.textContent=row.name;
+      main.appendChild(title);
+
+      if (row.className) {
+        var subtitle=document.createElement("span");
+        subtitle.className="farmacos-v2-row-subtitle";
+        subtitle.textContent=row.className;
+        main.appendChild(subtitle);
+      }
+
+      var chevron=document.createElement("span");
+      chevron.className="farmacos-v2-chevron";
+      chevron.setAttribute("aria-hidden","true");
+      chevron.textContent="›";
+
+      button.appendChild(main);
+      button.appendChild(chevron);
+
+      button.addEventListener("click",(function (drugId) {
+        return function () {
+          openCanonicalAzDrug(drugId);
+        };
+      })(row.id));
+
+      fragment.appendChild(button);
+    });
+
+    host.appendChild(fragment);
+    host.setAttribute("data-mc-farm-canonical-az-signature",signature);
+    host.setAttribute("data-mc-farm-canonical-az-count",String(rows.length));
+
+    var count=document.getElementById("hm-drug-count");
+    if (count) count.textContent=rows.length+" fármacos";
+
+    setCanonicalAzPhase(shell,elements,false);
+    return true;
   }
 
   function setNativeResultsVisibility(elements, visible) {
@@ -27207,6 +27438,12 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     elements.input.setAttribute("placeholder", text.searchHint);
     renderContexts(shell, elements, db, lang, text);
     renderGroups(shell, elements, db, lang, text);
+    if (
+      currentMode === "az" &&
+      !String(elements.input.value || "").trim()
+    ) {
+      renderCanonicalAz(shell, elements, true);
+    }
   }
 
   function renderContexts(shell, elements, db, lang, text) {
@@ -27351,8 +27588,23 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
       button.addEventListener("click", function () {
         var mode = button.getAttribute("data-farmacos-mode");
         setMode(mode, elements, shell);
-        if (mode === "az" && elements.input.value) {
-          elements.input.dispatchEvent(new Event("input", { bubbles: true }));
+
+        var liveDb=getDrugDb();
+        var lang=getLanguage();
+        var text=I18N[lang];
+
+        if (mode === "contexts") {
+          renderContexts(shell, elements, liveDb, lang, text);
+        } else if (mode === "groups") {
+          renderGroups(shell, elements, liveDb, lang, text);
+        } else if (mode === "az") {
+          mountCanonicalAzOwners(shell, elements);
+          if (String(elements.input.value || "").trim()) {
+            setCanonicalAzPhase(shell,elements,true);
+            elements.input.dispatchEvent(new Event("input", { bubbles: true }));
+          } else {
+            renderCanonicalAz(shell, elements, true);
+          }
         }
       });
     });
@@ -27367,6 +27619,13 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
         var text = I18N[lang];
         if (currentMode === "contexts") renderContexts(currentShell, currentElements, getDrugDb(), lang, text);
         if (currentMode === "groups") renderGroups(currentShell, currentElements, getDrugDb(), lang, text);
+        if (currentMode === "az") {
+          var query=String(currentElements.input.value || "").trim();
+          setCanonicalAzPhase(currentShell,currentElements,Boolean(query));
+          if (!query) {
+            renderCanonicalAz(currentShell,currentElements,true);
+          }
+        }
       });
     }
 
@@ -27384,7 +27643,24 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     });
 
     renderLanguage(shell, elements, db);
-    setMode(currentMode || "contexts", elements, shell);
+    setMode(currentMode || "az", elements, shell);
+
+    if (!String(elements.input.value || "").trim()) {
+      renderCanonicalAz(shell, elements, true);
+    }
+
+    [180,500,1000,1800,3200,5200].forEach(function (delay) {
+      window.setTimeout(function () {
+        if (
+          shell.isConnected &&
+          mountedElements === elements &&
+          currentMode === "az" &&
+          !String(elements.input.value || "").trim()
+        ) {
+          renderCanonicalAz(shell, elements, true);
+        }
+      },delay);
+    });
   }
 
   function mountVisibleSurface(reason) {
@@ -29986,7 +30262,7 @@ body.light [data-mc-farm-browser-r6-search-input="true"]::placeholder{
     var contexts=modeButton(shell,"contexts");
     var groups=modeButton(shell,"groups");
     if(az)az.textContent="A–Z";
-    if(contexts)contexts.textContent="Contexto";
+    if(contexts)contexts.textContent="Contextos";
     if(groups)groups.textContent="Todos os grupos";
   }
 
@@ -31388,16 +31664,8 @@ body:has(.card-interactions-container) #farmacos-v2-shell[data-farmacos-owner="d
 
 
 
-<style id="mc-interacoes-v1-m3-final-lean-style">
-body.mc-intx-final-active .farmacos-v2-tabs,
-body.mc-intx-final-active [data-farmacos-panel],
-body.mc-intx-final-active .hm-category-pills-wrap,
-body.mc-intx-final-active .hm-category-pills,
-body.mc-intx-final-active .hm-cat-pill-count,
-body.mc-intx-final-active .drug-list-container,
-body.mc-intx-final-active .meds-section,
-body.mc-intx-final-active .drug-search-hint,
-body.mc-intx-final-active .drug-search-hint-text,
+<style id="mc-interacoes-v1-m3-final-lean-style">/* CALC-FARMACOS-V1-M1-R3-R1-INTERACOES-STATE-LEAK-FIX — legacy interaction state isolated from Farmacos */
+
 body.mc-intx-final-active [data-mc-intx-hide-class="true"]{
   display:none!important;
 }
@@ -31530,7 +31798,8 @@ body.mc-intx-final-active .card-interactions-container{
   padding-top:18px!important;
 }
 </style>
-<script id="mc-interacoes-v1-m3-final-lean-runtime">
+<script id="mc-interacoes-v1-m3-final-lean-runtime">  /* CALC-FARMACOS-V1-M1-R3-R1-INTERACOES-STATE-LEAK-FIX */
+
 (function(){
   'use strict';
   if(window.__mcIntxV1M3R4Canonical) return;
@@ -31543,6 +31812,11 @@ body.mc-intx-final-active .card-interactions-container{
   }
 
   function active(){
+    var hub=document.getElementById('hub-card-interacoes');
+    if(hub){
+      return hub.classList.contains('is-open');
+    }
+
     var title=document.getElementById('txt-inter-titulo');
     var container=document.querySelector('.card-interactions-container');
     var input=document.getElementById('input-busca-interacao');
@@ -31690,12 +31964,47 @@ body.mc-intx-final-active .card-interactions-container{
     });
   }
 
+  function restoreFarmacosAfterInteractions(){
+    document.body.classList.remove('mc-intx-final-active');
+
+    var shell=document.getElementById('farmacos-v2-shell');
+    if(!shell) return;
+
+    shell.removeAttribute('data-mc-intx-hide-shell');
+    shell.style.removeProperty('display');
+    shell.style.removeProperty('visibility');
+    shell.style.removeProperty('opacity');
+    shell.style.removeProperty('height');
+    shell.style.removeProperty('min-height');
+    shell.style.removeProperty('max-height');
+    shell.style.removeProperty('margin');
+    shell.style.removeProperty('padding');
+    shell.style.removeProperty('overflow');
+
+    shell.querySelectorAll(
+      '.farmacos-v2-tabs,[data-farmacos-panel],.hm-category-pills-wrap,'+
+      '.hm-category-pills,.hm-cat-pill-count,.drug-list-container,'+
+      '.meds-section,.drug-search-hint,.drug-search-hint-text'
+    ).forEach(function(el){
+      el.style.removeProperty('display');
+      if(el.getAttribute('aria-hidden')==='true'){
+        el.removeAttribute('aria-hidden');
+      }
+    });
+  }
+
   var queued=false;
   function reconcile(){
     if(queued) return;
     queued=true;
     requestAnimationFrame(function(){
       queued=false;
+
+      if(!active()){
+        restoreFarmacosAfterInteractions();
+        return;
+      }
+
       hideBrowseAndCollapse();
       flattenResults();
     });
@@ -31704,7 +32013,12 @@ body.mc-intx-final-active .card-interactions-container{
   function start(){
     reconcile();
     var mo=new MutationObserver(reconcile);
-    mo.observe(document.body,{subtree:true,childList:true});
+    mo.observe(document.body,{
+      subtree:true,
+      childList:true,
+      attributes:true,
+      attributeFilter:['class','aria-expanded']
+    });
     window.addEventListener('resize',reconcile,{passive:true});
     window.addEventListener('pageshow',reconcile,{passive:true});
   }
@@ -36480,5 +36794,447 @@ html.light-mode [data-mc-intx-m4-r6-card="true"] :is(.intx-card-pair,.intx-mecan
 <!-- CALC-INTERACOES-V2-M4-R7-PAIR-SEPARATOR-FINAL START -->
 <!-- microfix: only text nodes inside exact .intx-card-pair owner -->
 <!-- CALC-INTERACOES-V2-M4-R7-PAIR-SEPARATOR-FINAL END -->
+
+<!-- CALC-SCORES-V1-M1-R3-DENSITY-CLEAR-ACTION START -->
+<script>
+(function () {
+  var STARTED = '__mcsScoresR3DensityClearStarted';
+  if (window[STARTED]) return;
+  window[STARTED] = true;
+
+  function detectLang() {
+    var raw = (
+      (document.documentElement && document.documentElement.lang) ||
+      (document.body && document.body.getAttribute('lang')) ||
+      (document.body && document.body.dataset && document.body.dataset.lang) ||
+      window.currentLanguage ||
+      window.appLanguage ||
+      'pt'
+    ).toString().toLowerCase();
+    return raw.indexOf('es') >= 0 ? 'es' : 'pt';
+  }
+
+  function labels() {
+    return detectLang() === 'es'
+      ? { clear: 'Limpiar', title: 'Limpiar criterios del score' }
+      : { clear: 'Limpar', title: 'Limpar critérios do score' };
+  }
+
+  function normalizeText(s) {
+    return (s || '')
+      .replace(/[—–-].*$/, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toLowerCase();
+  }
+
+  function currentScoreKey(root) {
+    var input = root && root.querySelector('input.univ-toggle-input[name^="sg_"]');
+    if (input && input.name) {
+      var m = input.name.match(/^sg_([^_]+)_/);
+      if (m) return m[1];
+    }
+    return '';
+  }
+
+  function currentScoreName(root) {
+    var title = root && root.querySelector(':scope > .card > .card-title > span');
+    return normalizeText(title ? title.textContent : '');
+  }
+
+  function rerenderByKnownApis(key) {
+    var fns = [
+      'renderUniversalScore',
+      'renderScoreUniversal',
+      'renderScore',
+      'openScore',
+      'selectScore',
+      'showScore',
+      'renderSelectedScore'
+    ];
+    for (var i = 0; i < fns.length; i++) {
+      var fn = window[fns[i]];
+      if (typeof fn === 'function') {
+        try {
+          var out = fn(key);
+          if (out !== false) return true;
+        } catch (e) {}
+      }
+    }
+    return false;
+  }
+
+  function rerenderByCurrentTile(nameNorm) {
+    var scope = document.getElementById('subview-scores') || document;
+    var candidates = scope.querySelectorAll('button, [onclick], .score-item, .score-card, .score-tile, .hub-grid-card, .list-item');
+    for (var i = 0; i < candidates.length; i++) {
+      var el = candidates[i];
+      var t = normalizeText(el.textContent || '');
+      if (!t) continue;
+      if (t === nameNorm || t.indexOf(nameNorm) >= 0 || nameNorm.indexOf(t) >= 0) {
+        try { el.click(); return true; } catch (e) {}
+      }
+    }
+    return false;
+  }
+
+  function resetVisualFallback(root) {
+    root.querySelectorAll('input.univ-toggle-input').forEach(function (el) {
+      el.checked = false;
+    });
+    root.querySelectorAll('label.univ-toggle-btn').forEach(function (el) {
+      el.classList.remove('is-active', 'active', 'checked', 'selected');
+    });
+    var num = root.querySelector('.univ-result-number');
+    if (num) num.textContent = '0';
+  }
+
+  window.medcasesScoreUniversalClear = function () {
+    var root = document.getElementById('score-calc-area');
+    if (!root) return;
+    var key = currentScoreKey(root);
+    var nameNorm = currentScoreName(root);
+
+    if (rerenderByKnownApis(key)) return;
+    if (rerenderByCurrentTile(nameNorm)) return;
+
+    resetVisualFallback(root);
+  };
+
+  function injectButton() {
+    var root = document.getElementById('score-calc-area');
+    if (!root) return;
+    var card = root.querySelector(':scope > .card');
+    var title = card && card.querySelector(':scope > .card-title');
+    if (!card || !title) return;
+    if (card.querySelector('.mcs-score-clear-row')) return;
+    if (!card.querySelector('input.univ-toggle-input')) return;
+
+    var copy = labels();
+    var row = document.createElement('div');
+    row.className = 'mcs-score-clear-row';
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'mcs-score-clear-btn';
+    btn.textContent = copy.clear;
+    btn.setAttribute('title', copy.title);
+    btn.setAttribute('aria-label', copy.title);
+    btn.addEventListener('click', function () {
+      window.medcasesScoreUniversalClear();
+    });
+
+    row.appendChild(btn);
+    title.insertAdjacentElement('afterend', row);
+  }
+
+  var mo = new MutationObserver(function () {
+    injectButton();
+  });
+
+  function boot() {
+    injectButton();
+    if (document.body) {
+      mo.observe(document.body, { childList: true, subtree: true });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    boot();
+  }
+})();
+</script>
+<!-- CALC-SCORES-V1-M1-R3-DENSITY-CLEAR-ACTION END -->
+
+
+<!-- CALC-SCORES-V1-M1-R5-SINGLE-DIVIDER-RISK-RESET-FINAL START -->
+<script>
+(function () {
+  if (window.__mcsScoresR5FinalStarted) return;
+  window.__mcsScoresR5FinalStarted = true;
+
+  function langIsEs() {
+    var raw = (
+      (document.body && document.body.getAttribute('data-lang')) ||
+      (document.documentElement && document.documentElement.lang) ||
+      window.currentLang ||
+      window.currentLanguage ||
+      'pt'
+    ).toString().toLowerCase();
+    return raw.indexOf('es') === 0 || raw.indexOf('es') >= 0;
+  }
+
+  function riskLabel(cls) {
+    var es = langIsEs();
+    if (cls === 'severity-low') return es ? 'Riesgo / gravedad: bajo' : 'Risco / gravidade: baixo';
+    if (cls === 'severity-mid' || cls === 'severity-medium' || cls === 'severity-moderate') {
+      return es ? 'Riesgo / gravedad: medio' : 'Risco / gravidade: médio';
+    }
+    if (cls === 'severity-high') return es ? 'Riesgo / gravedad: alto' : 'Risco / gravidade: alto';
+    return '';
+  }
+
+  function renderCanonicalRiskAlert(key) {
+    var root = document.getElementById('score-calc-area');
+    if (!root || !key) return;
+
+    var card = root.querySelector('.univ-result-card');
+    if (!card) return;
+
+    var old = card.querySelector('.mcs-score-risk-alert');
+    if (old) old.remove();
+
+    try {
+      if (typeof SCORES === 'undefined' || !SCORES[key]) return;
+      var sc = SCORES[key];
+      if (typeof sc.interpret !== 'function') return;
+
+      var score = (typeof calcScoreTotal === 'function') ? calcScoreTotal(key) : 0;
+      var interpretation = sc.interpret(score);
+      if (!interpretation || !interpretation.cls) return;
+
+      var cls = String(interpretation.cls);
+      var label = riskLabel(cls);
+      if (!label) return;
+
+      var alert = document.createElement('div');
+      alert.className = 'mcs-score-risk-alert ' + cls;
+      alert.setAttribute('role', 'status');
+      alert.setAttribute('aria-live', 'polite');
+      alert.textContent = label;
+
+      var conduct = card.querySelector('.univ-result-conduct');
+      if (conduct) conduct.insertAdjacentElement('beforebegin', alert);
+      else card.appendChild(alert);
+    } catch (e) {
+      console.warn('[SCORES R5] alerta semântico não aplicado.', e);
+    }
+  }
+
+  function clearSelectionsCanonical() {
+    try {
+      if (window.scoreSelections && typeof window.scoreSelections === 'object') {
+        Object.keys(window.scoreSelections).forEach(function (k) { delete window.scoreSelections[k]; });
+      }
+    } catch (e) {}
+
+    try {
+      if (typeof scoreSelections !== 'undefined' && scoreSelections) {
+        Object.keys(scoreSelections).forEach(function (k) { delete scoreSelections[k]; });
+      }
+    } catch (e) {}
+  }
+
+  function currentScoreKey() {
+    try {
+      if (typeof activeScore !== 'undefined' && activeScore) return activeScore;
+    } catch (e) {}
+    try {
+      if (window.activeScore) return window.activeScore;
+    } catch (e) {}
+
+    var root = document.getElementById('score-calc-area');
+    var input = root && root.querySelector('input.univ-toggle-input[name^="sg_"]');
+    if (input && input.name) {
+      var m = input.name.match(/^sg_([^_]+)_/);
+      if (m) return m[1];
+    }
+    return '';
+  }
+
+  function clearActiveScoreBinding() {
+    try {
+      if (typeof activeScore !== 'undefined') activeScore = null;
+    } catch (e) {}
+    try { window.activeScore = null; } catch (e) {}
+  }
+
+  function clearScoreCardSelection() {
+    var scope = document.getElementById('hub-scores-slot') || document;
+    scope.querySelectorAll('[id^="scard-"]').forEach(function (el) {
+      el.classList.remove('selected','active','is-active');
+    });
+  }
+
+  function clearScoreArea() {
+    var root = document.getElementById('score-calc-area');
+    if (root) root.innerHTML = '';
+  }
+
+  function resetNews2Standalone() {
+    var page = document.getElementById('page-news2');
+    if (!page) return;
+
+    page.querySelectorAll('.news2-select').forEach(function (sel) {
+      try { sel.selectedIndex = 0; } catch (e) {}
+      sel.classList.remove('scored-1','scored-2','scored-3');
+    });
+
+    var b1 = document.getElementById('n2-scale-1');
+    var b2 = document.getElementById('n2-scale-2');
+    if (b1) b1.classList.add('active');
+    if (b2) b2.classList.remove('active');
+
+    var area = document.getElementById('news2-result-area');
+    if (area) area.classList.remove('show','risk-low','risk-low-med','risk-med','risk-high');
+
+    var trig = document.getElementById('n2-trigger-alert');
+    var crit = document.getElementById('n2-critical-alert');
+    if (trig) trig.classList.remove('show');
+    if (crit) crit.classList.remove('show');
+  }
+
+  function resetAndCloseScores() {
+    clearSelectionsCanonical();
+    clearActiveScoreBinding();
+    clearScoreCardSelection();
+    clearScoreArea();
+    resetNews2Standalone();
+  }
+
+  window.medcasesScoresResetAndClose = resetAndCloseScores;
+
+  window.medcasesScoreUniversalClear = function () {
+    var key = currentScoreKey();
+    clearSelectionsCanonical();
+
+    if (key && typeof renderScoreCalc === 'function') {
+      try {
+        renderScoreCalc(key);
+        renderCanonicalRiskAlert(key);
+        return;
+      } catch (e) {
+        console.warn('[SCORES R5] re-render após Limpar falhou.', e);
+      }
+    }
+
+    clearScoreArea();
+  };
+
+  function patchScoreRenderers() {
+    if (window.__mcsScoresR5RenderersPatched) return;
+    window.__mcsScoresR5RenderersPatched = true;
+
+    try {
+      if (typeof updateScoreResult === 'function') {
+        var originalUpdate = updateScoreResult;
+        updateScoreResult = function (key) {
+          var out = originalUpdate.apply(this, arguments);
+          renderCanonicalRiskAlert(key);
+          return out;
+        };
+      }
+    } catch (e) {
+      console.warn('[SCORES R5] wrapper updateScoreResult não aplicado.', e);
+    }
+
+    try {
+      if (typeof renderScoreCalc === 'function') {
+        var originalRender = renderScoreCalc;
+        renderScoreCalc = function (key) {
+          var out = originalRender.apply(this, arguments);
+          renderCanonicalRiskAlert(key);
+          return out;
+        };
+      }
+    } catch (e) {
+      console.warn('[SCORES R5] wrapper renderScoreCalc não aplicado.', e);
+    }
+  }
+
+  function patchNavigation() {
+    if (window.__mcsScoresR5NavigationPatched) return;
+    window.__mcsScoresR5NavigationPatched = true;
+
+    try {
+      if (typeof fecharModal === 'function') {
+        var originalFecharModal = fecharModal;
+        fecharModal = function () {
+          resetAndCloseScores();
+          return originalFecharModal.apply(this, arguments);
+        };
+      }
+    } catch (e) {}
+
+    try {
+      if (typeof showAdultPanel === 'function') {
+        var originalShowAdultPanel = showAdultPanel;
+        showAdultPanel = function (panel) {
+          if (panel !== 'scores') resetAndCloseScores();
+          return originalShowAdultPanel.apply(this, arguments);
+        };
+      }
+    } catch (e) {}
+
+    try {
+      if (typeof hubOpen === 'function') {
+        var originalHubOpen = hubOpen;
+        hubOpen = function (id) {
+          if (id !== 'scores') resetAndCloseScores();
+          return originalHubOpen.apply(this, arguments);
+        };
+      }
+    } catch (e) {}
+
+    try {
+      if (typeof hubToggle === 'function') {
+        var originalHubToggle = hubToggle;
+        hubToggle = function (id) {
+          var out = originalHubToggle.apply(this, arguments);
+          if (id === 'scores') {
+            setTimeout(function () {
+              var card = document.getElementById('hub-card-scores');
+              if (!card || !card.classList.contains('is-open')) resetAndCloseScores();
+            }, 0);
+          } else {
+            resetAndCloseScores();
+          }
+          return out;
+        };
+      }
+    } catch (e) {}
+  }
+
+  function installClickFallback() {
+    if (window.__mcsScoresR5ClickFallback) return;
+    window.__mcsScoresR5ClickFallback = true;
+
+    document.addEventListener('click', function (ev) {
+      var target = ev.target;
+      if (!target || !target.closest) return;
+
+      if (target.closest('#calculator-overlay-close')) {
+        setTimeout(resetAndCloseScores, 0);
+        return;
+      }
+
+      var trigger = target.closest('.hub-card-trigger');
+      if (trigger && !trigger.closest('#hub-card-scores')) {
+        setTimeout(resetAndCloseScores, 0);
+      }
+    }, true);
+  }
+
+  function boot() {
+    patchScoreRenderers();
+    patchNavigation();
+    installClickFallback();
+
+    var key = currentScoreKey();
+    if (key) renderCanonicalRiskAlert(key);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    boot();
+  }
+})();
+</script>
+<!-- CALC-SCORES-V1-M1-R5-SINGLE-DIVIDER-RISK-RESET-FINAL END -->
+
+
 </body>
 </html>
