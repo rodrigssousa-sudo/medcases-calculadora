@@ -1,0 +1,58 @@
+{
+  "$id": "https://medcasespro.com/schema/clinical-knowledge/prescription-template-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "context": {
+      "enum": [
+        "emergency",
+        "inpatient",
+        "discharge",
+        "outpatient"
+      ]
+    },
+    "localized": {
+      "additionalProperties": false,
+      "properties": {
+        "es": {
+          "type": "object"
+        },
+        "pt": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "pt",
+        "es"
+      ],
+      "type": "object"
+    },
+    "protocolId": {
+      "pattern": "^[a-z0-9_-]+$",
+      "type": "string"
+    },
+    "regimenIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "schemaVersion": {
+      "const": "medcases-prescription-template-v1"
+    },
+    "templateId": {
+      "pattern": "^[a-z0-9_-]+$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "templateId",
+    "protocolId",
+    "regimenIds",
+    "context",
+    "localized"
+  ],
+  "title": "MedCases Prescription Template",
+  "type": "object"
+}

@@ -1,0 +1,128 @@
+{
+  "$id": "https://medcasespro.com/schema/clinical-knowledge/canonical-protocol-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "aliases": {
+      "additionalProperties": false,
+      "properties": {
+        "es": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "pt": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pt",
+        "es"
+      ],
+      "type": "object"
+    },
+    "drugRelations": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "localized": {
+      "additionalProperties": false,
+      "properties": {
+        "es": {
+          "type": "object"
+        },
+        "pt": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "pt",
+        "es"
+      ],
+      "type": "object"
+    },
+    "population": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "protocolId": {
+      "pattern": "^[a-z0-9_-]+$",
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": "medcases-canonical-protocol-v1"
+    },
+    "sourceRefs": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "stage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "review",
+        "validated",
+        "publishable",
+        "deprecated",
+        "superseded"
+      ]
+    },
+    "strategy": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "supersededBy": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "additionalProperties": false,
+      "properties": {
+        "es": {
+          "type": "string"
+        },
+        "pt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pt",
+        "es"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "protocolId",
+    "status",
+    "title",
+    "aliases",
+    "population",
+    "sourceRefs",
+    "drugRelations",
+    "localized"
+  ],
+  "title": "MedCases Canonical Protocol",
+  "type": "object"
+}

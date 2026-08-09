@@ -6484,3 +6484,1507 @@ body.light-mode :is(#hub-elec-slot,#calculator-overlay-container.is-active #calc
 }
 
 /* CALC-ELETROLITOS-V1-M4K-SEVERITY-HEADER-EXPLICIT-CLASSIFICATION END */
+
+/* CALC-INTERACOES-V2-MACROBUILD-M1-R1-PRESERVE-PREEXISTING-CLINICAL-UNTRACKED START */
+
+#hub-card-interacoes{
+  --intx-m1-surface:#20252D;
+  --intx-m1-surface-soft:#252930;
+  --intx-m1-border:#374151;
+  --intx-m1-border-soft:rgba(148,163,184,.16);
+  --intx-m1-text:#F4F6F8;
+  --intx-m1-muted:#9AA4B2;
+  --intx-m1-accent:#22B573;
+  --intx-m1-accent-soft:rgba(34,181,115,.10);
+}
+
+body.light-mode #hub-card-interacoes,
+body[data-theme="light"] #hub-card-interacoes,
+html.light-mode #hub-card-interacoes{
+  --intx-m1-surface:#FFFFFF;
+  --intx-m1-surface-soft:#F5F7F8;
+  --intx-m1-border:#D8E0E7;
+  --intx-m1-border-soft:rgba(100,116,139,.16);
+  --intx-m1-text:#17202A;
+  --intx-m1-muted:#687484;
+  --intx-m1-accent:#15945D;
+  --intx-m1-accent-soft:rgba(21,148,93,.09);
+}
+
+#hub-card-interacoes [data-mc-intx-m1-native-search="true"],
+#hub-card-interacoes #chips-interacoes-wrapper,
+#hub-card-interacoes .chips-interacoes-wrapper,
+#hub-card-interacoes [data-mc-intx-m1-native-counter="true"]{
+  display:none!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-shell{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  width:100%;
+  margin:0 0 14px;
+  padding:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+
+#hub-card-interacoes .mc-intx-m1-intro{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  padding:0 1px;
+}
+
+#hub-card-interacoes .mc-intx-m1-title{
+  margin:0;
+  color:var(--intx-m1-text);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
+  font-size:15px;
+  line-height:1.3;
+  font-weight:720;
+  letter-spacing:-.15px;
+}
+
+#hub-card-interacoes .mc-intx-m1-subtitle{
+  margin:3px 0 0;
+  color:var(--intx-m1-muted);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
+  font-size:11.5px;
+  line-height:1.4;
+  font-weight:500;
+}
+
+#hub-card-interacoes .mc-intx-m1-limit{
+  flex:0 0 auto;
+  color:var(--intx-m1-muted);
+  font-size:10.5px;
+  line-height:1;
+  font-weight:650;
+}
+
+#hub-card-interacoes .mc-intx-m1-slots{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+#hub-card-interacoes .mc-intx-m1-slot{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin:0;
+  padding:0;
+  background:transparent;
+  border:0;
+}
+
+#hub-card-interacoes .mc-intx-m1-slot-label{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:16px;
+  padding:0 1px;
+  color:var(--intx-m1-text);
+  font-size:11.5px;
+  line-height:1.2;
+  font-weight:650;
+}
+
+#hub-card-interacoes .mc-intx-m1-slot-optional{
+  color:var(--intx-m1-muted);
+  font-size:10px;
+  font-weight:500;
+}
+
+#hub-card-interacoes .mc-intx-m1-field{
+  position:relative;
+  display:flex;
+  align-items:center;
+  width:100%;
+  min-height:46px;
+  background:var(--intx-m1-surface);
+  border:1px solid var(--intx-m1-border);
+  border-radius:11px;
+  box-shadow:none;
+}
+
+#hub-card-interacoes .mc-intx-m1-field:focus-within{
+  border-color:var(--intx-m1-accent);
+  box-shadow:0 0 0 1px var(--intx-m1-accent);
+}
+
+#hub-card-interacoes .mc-intx-m1-search-icon{
+  position:absolute;
+  left:13px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--intx-m1-muted);
+  font-size:13px;
+  pointer-events:none;
+}
+
+#hub-card-interacoes .mc-intx-m1-input{
+  width:100%;
+  height:44px;
+  min-height:44px;
+  padding:0 42px 0 38px;
+  color:var(--intx-m1-text);
+  background:transparent;
+  border:0;
+  outline:0;
+  box-shadow:none;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
+  font-size:14px;
+  font-weight:500;
+  -webkit-text-fill-color:var(--intx-m1-text);
+}
+
+#hub-card-interacoes .mc-intx-m1-input::placeholder{
+  color:var(--intx-m1-muted);
+  opacity:.82;
+  -webkit-text-fill-color:var(--intx-m1-muted);
+}
+
+#hub-card-interacoes .mc-intx-m1-clear{
+  position:absolute;
+  right:7px;
+  top:50%;
+  transform:translateY(-50%);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  width:30px;
+  height:30px;
+  padding:0;
+  color:var(--intx-m1-muted);
+  background:transparent;
+  border:0;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:15px;
+}
+
+#hub-card-interacoes .mc-intx-m1-slot[data-selected="true"] .mc-intx-m1-clear{
+  display:flex;
+}
+
+#hub-card-interacoes .mc-intx-m1-slot[data-selected="true"] .mc-intx-m1-field{
+  border-color:rgba(34,181,115,.42);
+  background:var(--intx-m1-accent-soft);
+}
+
+#hub-card-interacoes .mc-intx-m1-dropdown{
+  position:absolute;
+  z-index:80;
+  top:calc(100% + 6px);
+  left:0;
+  right:0;
+  display:none;
+  max-height:248px;
+  overflow:auto;
+  padding:0;
+  background:var(--intx-m1-surface);
+  border:1px solid var(--intx-m1-border);
+  border-radius:10px;
+  box-shadow:0 10px 28px rgba(0,0,0,.22);
+}
+
+#hub-card-interacoes .mc-intx-m1-dropdown[data-open="true"]{
+  display:block;
+}
+
+#hub-card-interacoes .mc-intx-m1-suggestion{
+  display:flex;
+  align-items:center;
+  min-height:42px;
+  width:100%;
+  padding:9px 12px;
+  color:var(--intx-m1-text);
+  background:transparent;
+  border:0;
+  border-bottom:1px solid var(--intx-m1-border-soft);
+  border-radius:0;
+  text-align:left;
+  font-size:13.5px;
+  font-weight:560;
+  cursor:pointer;
+}
+
+#hub-card-interacoes .mc-intx-m1-suggestion:last-child{border-bottom:0}
+#hub-card-interacoes .mc-intx-m1-suggestion:hover,
+#hub-card-interacoes .mc-intx-m1-suggestion:focus{
+  background:var(--intx-m1-surface-soft);
+  outline:0;
+}
+
+#hub-card-interacoes .mc-intx-m1-empty{
+  padding:12px;
+  color:var(--intx-m1-muted);
+  font-size:12px;
+}
+
+#hub-card-interacoes .mc-intx-m1-add{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:42px;
+  width:100%;
+  padding:0 14px;
+  color:var(--intx-m1-accent);
+  background:transparent;
+  border:1px solid rgba(34,181,115,.34);
+  border-radius:10px;
+  box-shadow:none;
+  font-size:13px;
+  font-weight:680;
+  cursor:pointer;
+}
+
+#hub-card-interacoes .mc-intx-m1-add:hover,
+#hub-card-interacoes .mc-intx-m1-add:focus{
+  background:var(--intx-m1-accent-soft);
+  outline:0;
+}
+
+#hub-card-interacoes .mc-intx-m1-add[hidden]{display:none!important}
+
+#hub-card-interacoes #btn-verificar-interacoes{
+  min-height:46px!important;
+  height:46px!important;
+  margin-top:0!important;
+  padding:0 16px!important;
+  border-radius:11px!important;
+  background:var(--intx-m1-accent)!important;
+  color:#FFFFFF!important;
+  box-shadow:none!important;
+  font-size:14px!important;
+  font-weight:720!important;
+}
+
+#hub-card-interacoes #btn-verificar-interacoes:disabled{
+  background:var(--intx-m1-surface-soft)!important;
+  color:var(--intx-m1-muted)!important;
+  border:1px solid var(--intx-m1-border)!important;
+  opacity:1!important;
+  cursor:not-allowed!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-reset-wrap{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  margin:16px 0 2px;
+  padding-top:14px;
+  border-top:1px solid var(--intx-m1-border-soft);
+}
+
+#hub-card-interacoes .mc-intx-m1-reset{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  width:min(100%,320px);
+  padding:0 16px;
+  color:var(--intx-m1-text);
+  background:transparent;
+  border:1px solid var(--intx-m1-border);
+  border-radius:10px;
+  box-shadow:none;
+  font-size:13px;
+  font-weight:680;
+  cursor:pointer;
+}
+
+#hub-card-interacoes .mc-intx-m1-reset:hover,
+#hub-card-interacoes .mc-intx-m1-reset:focus{
+  background:var(--intx-m1-surface-soft);
+  outline:0;
+}
+
+@media (max-width:560px){
+  #hub-card-interacoes .mc-intx-m1-input{
+    height:44px;
+    min-height:44px;
+    font-size:16px;
+  }
+}
+
+/* CALC-INTERACOES-V2-MACROBUILD-M1-R1-PRESERVE-PREEXISTING-CLINICAL-UNTRACKED END */
+
+/* CALC-INTERACOES-V2-M2-COMPACT-CLINICAL-HIERARCHY START
+   Refinamento visual sobre a estrutura progressiva M1-R1.
+   Sem alteração de motor, database, busca clínica ou callbacks produtivos. */
+
+#hub-card-interacoes{
+  --intx-m2-field:#252930;
+  --intx-m2-field-strong:#2D3340;
+  --intx-m2-popover:#20252D;
+  --intx-m2-border:rgba(148,163,184,.22);
+  --intx-m2-divider:rgba(148,163,184,.14);
+}
+
+body.light-mode #hub-card-interacoes,
+body[data-theme="light"] #hub-card-interacoes,
+html.light-mode #hub-card-interacoes{
+  --intx-m2-field:#F2F5F7;
+  --intx-m2-field-strong:#E8EDF1;
+  --intx-m2-popover:#F7F9FA;
+  --intx-m2-border:rgba(71,85,105,.20);
+  --intx-m2-divider:rgba(71,85,105,.12);
+}
+
+/* Cabeçalho nativo vira o único cabeçalho visível. */
+#hub-card-interacoes #txt-inter-titulo{
+  margin:0!important;
+  font-size:18px!important;
+  line-height:1.18!important;
+  font-weight:740!important;
+  letter-spacing:-.18px!important;
+}
+
+#hub-card-interacoes #txt-inter-sub{
+  margin:3px 0 10px!important;
+  max-width:none!important;
+  font-size:12px!important;
+  line-height:1.35!important;
+  font-weight:500!important;
+}
+
+/* Remove a segunda camada textual criada pela M1; preserva apenas 0/5. */
+#hub-card-interacoes .mc-intx-m1-shell{
+  gap:10px!important;
+  margin:0 0 12px!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-intro{
+  min-height:14px!important;
+  margin:-2px 0 -1px!important;
+  padding:0 1px!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-intro > div:first-child,
+#hub-card-interacoes .mc-intx-m1-title,
+#hub-card-interacoes .mc-intx-m1-subtitle{
+  display:none!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-limit{
+  display:block!important;
+  padding:0!important;
+  color:var(--intx-m1-muted)!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  font-size:10.5px!important;
+  line-height:1!important;
+  font-weight:680!important;
+  font-variant-numeric:tabular-nums!important;
+}
+
+/* Blocos mais compactos, sem card dentro de card. */
+#hub-card-interacoes .mc-intx-m1-slots{
+  gap:10px!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-slot{
+  gap:4px!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-slot-label{
+  min-height:14px!important;
+  padding:0 1px!important;
+  font-size:11.25px!important;
+  line-height:1.2!important;
+  font-weight:650!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-slot-optional{
+  font-size:9.75px!important;
+  font-weight:500!important;
+}
+
+/* Campos: chumbo/grafite no dark; claro suave no light; nunca branco estourado. */
+#hub-card-interacoes .mc-intx-m1-field{
+  min-height:40px!important;
+  height:40px!important;
+  background:var(--intx-m2-field)!important;
+  background-image:none!important;
+  border:1px solid var(--intx-m2-border)!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-field:focus-within{
+  border-color:rgba(34,181,115,.62)!important;
+  box-shadow:none!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-slot[data-selected="true"] .mc-intx-m1-field{
+  background:rgba(34,181,115,.08)!important;
+  background-image:none!important;
+  border-color:rgba(34,181,115,.42)!important;
+  box-shadow:none!important;
+}
+
+body.light-mode #hub-card-interacoes .mc-intx-m1-slot[data-selected="true"] .mc-intx-m1-field,
+body[data-theme="light"] #hub-card-interacoes .mc-intx-m1-slot[data-selected="true"] .mc-intx-m1-field,
+html.light-mode #hub-card-interacoes .mc-intx-m1-slot[data-selected="true"] .mc-intx-m1-field{
+  background:rgba(21,148,93,.07)!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-search-icon{
+  left:11px!important;
+  font-size:12px!important;
+  color:var(--intx-m1-muted)!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-input{
+  height:38px!important;
+  min-height:38px!important;
+  padding:0 36px 0 32px!important;
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  font-size:13.25px!important;
+  line-height:1.2!important;
+  font-weight:500!important;
+  color:var(--intx-m1-text)!important;
+  -webkit-text-fill-color:var(--intx-m1-text)!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-input::placeholder{
+  color:var(--intx-m1-muted)!important;
+  -webkit-text-fill-color:var(--intx-m1-muted)!important;
+  opacity:.78!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-clear{
+  right:5px!important;
+  width:28px!important;
+  height:28px!important;
+  min-width:28px!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:7px!important;
+  box-shadow:none!important;
+}
+
+/* Dropdown leve e coerente; sem bloco branco no dark. */
+#hub-card-interacoes .mc-intx-m1-dropdown{
+  top:calc(100% + 5px)!important;
+  max-height:220px!important;
+  padding:0!important;
+  background:var(--intx-m2-popover)!important;
+  background-image:none!important;
+  border:1px solid var(--intx-m2-border)!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-suggestion{
+  min-height:38px!important;
+  padding:8px 10px!important;
+  color:var(--intx-m1-text)!important;
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  border-bottom:1px solid var(--intx-m2-divider)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  font-size:13px!important;
+  line-height:1.25!important;
+  font-weight:540!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-suggestion:last-child{
+  border-bottom:0!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-suggestion:hover,
+#hub-card-interacoes .mc-intx-m1-suggestion:focus{
+  background:var(--intx-m2-field-strong)!important;
+  outline:0!important;
+}
+
+/* Adicionar deixa de parecer uma barra quebrada. */
+#hub-card-interacoes .mc-intx-m1-add{
+  align-self:flex-start!important;
+  width:auto!important;
+  min-width:0!important;
+  min-height:34px!important;
+  height:34px!important;
+  margin:0!important;
+  padding:0 10px!important;
+  color:var(--intx-m1-muted)!important;
+  background:transparent!important;
+  background-image:none!important;
+  border:1px solid var(--intx-m2-border)!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+  font-size:11.75px!important;
+  line-height:1!important;
+  font-weight:630!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-add:hover,
+#hub-card-interacoes .mc-intx-m1-add:focus{
+  color:var(--intx-m1-text)!important;
+  background:var(--intx-m2-field)!important;
+  border-color:var(--intx-m2-border)!important;
+  outline:0!important;
+}
+
+/* CTA principal inequívoco. */
+#hub-card-interacoes #btn-verificar-interacoes{
+  width:100%!important;
+  min-height:42px!important;
+  height:42px!important;
+  margin:2px 0 0!important;
+  padding:0 14px!important;
+  border:1px solid var(--intx-m1-accent)!important;
+  border-radius:9px!important;
+  background:var(--intx-m1-accent)!important;
+  background-image:none!important;
+  color:#FFFFFF!important;
+  box-shadow:none!important;
+  font-size:13.5px!important;
+  line-height:1!important;
+  font-weight:720!important;
+}
+
+#hub-card-interacoes #btn-verificar-interacoes:disabled{
+  background:var(--intx-m2-field)!important;
+  background-image:none!important;
+  color:var(--intx-m1-muted)!important;
+  border-color:var(--intx-m2-border)!important;
+  box-shadow:none!important;
+  opacity:.72!important;
+}
+
+/* Ação secundária de limpeza após resultado. */
+#hub-card-interacoes .mc-intx-m1-reset-wrap{
+  justify-content:flex-end!important;
+  margin:12px 0 0!important;
+  padding-top:10px!important;
+  border-top:1px solid var(--intx-m2-divider)!important;
+}
+
+#hub-card-interacoes .mc-intx-m1-reset{
+  width:auto!important;
+  min-width:0!important;
+  min-height:34px!important;
+  height:34px!important;
+  padding:0 10px!important;
+  color:var(--intx-m1-muted)!important;
+  background:transparent!important;
+  background-image:none!important;
+  border:1px solid var(--intx-m2-border)!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+  font-size:11.75px!important;
+  font-weight:630!important;
+}
+
+/* Blindagem explícita contra chips/barras nativos residuais. */
+#hub-card-interacoes [data-mc-intx-m1-native-search="true"],
+#hub-card-interacoes #chips-interacoes-wrapper,
+#hub-card-interacoes .chips-interacoes-wrapper,
+#hub-card-interacoes [data-mc-intx-m1-native-counter="true"]{
+  display:none!important;
+}
+
+@media (max-width:560px){
+  #hub-card-interacoes #txt-inter-titulo{
+    font-size:17px!important;
+  }
+
+  #hub-card-interacoes #txt-inter-sub{
+    font-size:11.75px!important;
+    margin-bottom:9px!important;
+  }
+
+  #hub-card-interacoes .mc-intx-m1-input{
+    height:40px!important;
+    min-height:40px!important;
+    font-size:16px!important; /* evita zoom automatico no iOS */
+  }
+
+  #hub-card-interacoes .mc-intx-m1-field{
+    min-height:42px!important;
+    height:42px!important;
+  }
+}
+
+/* CALC-INTERACOES-V2-M2-COMPACT-CLINICAL-HIERARCHY END */
+
+/* CALC-FLUIDOS-V1-M1-CLINICAL-FLAT-MACROBUILD START
+   Owner visual exclusivo: #subview-fluids
+   Objetivo: superfície clínica contínua, sem cards aninhados,
+   hierarquia compacta, mobile-first, dark/light e PT/ES preservados.
+   Motor clínico / callbacks / textos / fórmulas: NÃO ALTERADOS.
+*/
+
+/* ── 1. Tokens locais da frente Fluidos ───────────────────── */
+#subview-fluids {
+  --mc-fluid-accent: var(--green-glow, #22C87A);
+  --mc-fluid-divider: rgba(148, 163, 184, 0.14);
+  --mc-fluid-field-bg: rgba(255, 255, 255, 0.025);
+  --mc-fluid-field-border: rgba(148, 163, 184, 0.22);
+  --mc-fluid-soft: rgba(148, 163, 184, 0.06);
+}
+
+/* ── 2. Superfície principal flat ──────────────────────────── */
+#subview-fluids > .card,
+#subview-fluids #fluid-result > .card {
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#subview-fluids > .card {
+  padding: 12px 14px 10px !important;
+}
+
+#subview-fluids #fluid-result {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#subview-fluids #fluid-result > .card {
+  padding: 0 14px 14px !important;
+}
+
+/* O título do resultado duplicava o contexto já informado no topo. */
+#subview-fluids #fluid-result > .card > .card-title {
+  display: none !important;
+}
+
+/* ── 3. Cabeçalho clínico ──────────────────────────────────── */
+#subview-fluids > .card > .card-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  margin: 0 0 10px !important;
+  padding: 0 0 10px !important;
+  border-bottom: 1px solid var(--mc-fluid-divider) !important;
+  color: var(--text-primary) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+}
+
+#subview-fluids > .card > .card-title > i {
+  color: var(--mc-fluid-accent) !important;
+  font-size: 12px !important;
+  width: 15px !important;
+  text-align: center !important;
+  opacity: 0.95 !important;
+}
+
+/* ── 4. Paciente: linha editorial, não pill ────────────────── */
+#subview-fluids #fluid-patient-chip.patient-banner {
+  min-height: 0 !important;
+  margin: 0 0 10px !important;
+  padding: 0 0 9px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mc-fluid-divider) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  gap: 7px !important;
+}
+
+#subview-fluids #fluid-patient-chip > i {
+  color: var(--mc-fluid-accent) !important;
+  font-size: 11px !important;
+  width: 15px !important;
+  text-align: center !important;
+}
+
+#subview-fluids #fluid-patient-chip > span {
+  color: var(--text-secondary) !important;
+  font-size: 11.5px !important;
+  line-height: 1.3 !important;
+}
+
+#subview-fluids #fluid-patient-chip > span strong {
+  color: var(--text-primary) !important;
+  font-size: 12.5px !important;
+  font-weight: 750 !important;
+}
+
+#subview-fluids #fluid-patient-chip .qe-trigger {
+  margin-left: auto !important;
+  padding: 4px 0 4px 8px !important;
+  min-height: 28px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--mc-fluid-accent) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+#subview-fluids #fluid-patient-chip .qe-trigger i {
+  font-size: 9px !important;
+}
+
+/* ── 5. Formulário compacto ───────────────────────────────── */
+#subview-fluids .input-group {
+  min-width: 0 !important;
+}
+
+#subview-fluids .input-label {
+  display: block !important;
+  margin: 0 0 6px !important;
+  color: var(--text-secondary) !important;
+  font-size: 10px !important;
+  font-weight: 750 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.055em !important;
+  text-transform: uppercase !important;
+}
+
+#subview-fluids #fluid-type,
+#subview-fluids #fluid-dehy,
+#subview-fluids #fluid-temp {
+  min-height: 42px !important;
+  height: auto !important;
+  padding: 9px 34px 9px 11px !important;
+  background: var(--mc-fluid-field-bg) !important;
+  border: 1px solid var(--mc-fluid-field-border) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  color: var(--text-primary) !important;
+  font-size: 13px !important;
+  font-weight: 560 !important;
+  line-height: 1.28 !important;
+}
+
+#subview-fluids #fluid-temp {
+  padding-right: 10px !important;
+}
+
+#subview-fluids #fluid-type:focus,
+#subview-fluids #fluid-dehy:focus,
+#subview-fluids #fluid-temp:focus {
+  border-color: var(--mc-fluid-accent) !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 1px var(--mc-fluid-accent) !important;
+}
+
+#subview-fluids #fluid-deficit-panel,
+#subview-fluids #fluid-insens-panel {
+  margin-top: 1px !important;
+}
+
+#subview-fluids #fluid-insens-panel .input-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: end !important;
+  gap: 12px !important;
+  margin-bottom: 9px !important;
+}
+
+#subview-fluids .fluid-toggle-label {
+  min-height: 42px !important;
+  padding-top: 0 !important;
+  gap: 7px !important;
+  align-items: center !important;
+}
+
+#subview-fluids .fluid-toggle-label > span {
+  color: var(--text-secondary) !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+}
+
+#subview-fluids #fluid-taqui-wrap {
+  box-shadow: none !important;
+}
+
+#subview-fluids #fluid-taqui-knob {
+  box-shadow: none !important;
+}
+
+/* ── 6. Resultado = continuidade da mesma superfície ───────── */
+#subview-fluids #fluid-result .drug-result-row {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  padding: 12px 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mc-fluid-divider) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#subview-fluids #fluid-result .drug-result-row:last-child {
+  border-bottom: 0 !important;
+}
+
+/* Remove as "caixinhas" coloridas dos ícones sem remover o ícone. */
+#subview-fluids #fluid-result .drug-result-icon {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  flex: 0 0 17px !important;
+  width: 17px !important;
+  height: 20px !important;
+  min-width: 17px !important;
+  margin-top: 1px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+}
+
+/* Neutraliza especificamente o antigo roxo decorativo do ícone de eletrólitos. */
+#subview-fluids #fluid-result .drug-result-icon .fa-flask {
+  color: var(--mc-fluid-accent) !important;
+}
+
+#subview-fluids #fluid-result .drug-result-content {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+#subview-fluids #fluid-result .drug-result-key {
+  margin: 0 0 4px !important;
+  color: var(--text-muted) !important;
+  font-size: 10px !important;
+  font-weight: 760 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.055em !important;
+  text-transform: uppercase !important;
+}
+
+#subview-fluids #fluid-result .drug-result-value {
+  margin: 0 !important;
+  color: var(--text-primary) !important;
+  font-size: 18px !important;
+  font-weight: 760 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.015em !important;
+}
+
+#subview-fluids #fluid-result .drug-result-note {
+  margin-top: 4px !important;
+  color: var(--text-secondary) !important;
+  font-size: 11.5px !important;
+  font-weight: 450 !important;
+  line-height: 1.45 !important;
+}
+
+#subview-fluids #fluid-result .drug-result-note strong {
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* ── 7. Alertas permanecem semânticos, mas deixam de ser card ─ */
+#subview-fluids #fluid-result .drug-alert {
+  margin: 8px 0 0 !important;
+  padding: 8px 0 8px 10px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-left: 2px solid var(--warning) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--text-secondary) !important;
+  font-size: 11.5px !important;
+  line-height: 1.45 !important;
+}
+
+#subview-fluids #fluid-result .drug-alert > i {
+  color: var(--warning) !important;
+  margin-right: 6px !important;
+}
+
+/* ── 8. Light mode ─────────────────────────────────────────── */
+body.light-mode #subview-fluids {
+  --mc-fluid-divider: #E1E7ED;
+  --mc-fluid-field-bg: #FFFFFF;
+  --mc-fluid-field-border: #D8E0E7;
+  --mc-fluid-soft: rgba(15, 23, 42, 0.025);
+}
+
+body.light-mode #subview-fluids > .card,
+body.light-mode #subview-fluids #fluid-result > .card {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.light-mode #subview-fluids #fluid-type,
+body.light-mode #subview-fluids #fluid-dehy,
+body.light-mode #subview-fluids #fluid-temp {
+  background: #FFFFFF !important;
+  border-color: #D8E0E7 !important;
+  color: #111827 !important;
+}
+
+body.light-mode #subview-fluids #fluid-patient-chip.patient-banner {
+  background: transparent !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-top: 0 !important;
+  border-bottom-color: #E1E7ED !important;
+}
+
+body.light-mode #subview-fluids #fluid-result .drug-result-row {
+  background: transparent !important;
+  border-bottom-color: #E1E7ED !important;
+}
+
+body.light-mode #subview-fluids #fluid-result .drug-result-key {
+  color: #64748B !important;
+}
+
+body.light-mode #subview-fluids #fluid-result .drug-result-value {
+  color: #111827 !important;
+}
+
+body.light-mode #subview-fluids #fluid-result .drug-result-note,
+body.light-mode #subview-fluids #fluid-result .drug-alert {
+  color: #475569 !important;
+}
+
+/* ── 9. Mobile-first 390–430px ────────────────────────────── */
+@media (max-width: 430px) {
+  #subview-fluids > .card {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  #subview-fluids #fluid-result > .card {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  #subview-fluids #fluid-type,
+  #subview-fluids #fluid-dehy,
+  #subview-fluids #fluid-temp {
+    font-size: 12.8px !important;
+  }
+
+  #subview-fluids #fluid-result .drug-result-value {
+    font-size: 17.5px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  #subview-fluids #fluid-insens-panel .input-grid {
+    gap: 9px !important;
+  }
+
+  #subview-fluids #fluid-patient-chip > span {
+    font-size: 11px !important;
+  }
+
+  #subview-fluids #fluid-result .drug-result-note {
+    font-size: 11px !important;
+  }
+}
+
+/* CALC-FLUIDOS-V1-M1-CLINICAL-FLAT-MACROBUILD END */
+
+/* CALC-FLUIDOS-V1-M1-R2-VISIBLE-OWNER-CUTOVER START */
+/*
+  OWNER FÍSICO CONFIRMADO EM BROWSER:
+  #hub-fluidos-slot -> conteúdo movido pelo Hub/CalculatorOverlay.
+  O desenho M1 é preservado; somente a autoridade estrutural passa
+  de #subview-fluids para #hub-fluidos-slot.
+  JS, callbacks, fórmulas e textos clínicos: INALTERADOS.
+*/
+
+
+/* ── 1. Tokens locais da frente Fluidos ───────────────────── */
+#hub-fluidos-slot {
+  --mc-fluid-accent: var(--green-glow, #22C87A);
+  --mc-fluid-divider: rgba(148, 163, 184, 0.14);
+  --mc-fluid-field-bg: rgba(255, 255, 255, 0.025);
+  --mc-fluid-field-border: rgba(148, 163, 184, 0.22);
+  --mc-fluid-soft: rgba(148, 163, 184, 0.06);
+}
+
+/* ── 2. Superfície principal flat ──────────────────────────── */
+#hub-fluidos-slot > .card,
+#hub-fluidos-slot #fluid-result > .card {
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#hub-fluidos-slot > .card {
+  padding: 12px 14px 10px !important;
+}
+
+#hub-fluidos-slot #fluid-result {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#hub-fluidos-slot #fluid-result > .card {
+  padding: 0 14px 14px !important;
+}
+
+/* O título do resultado duplicava o contexto já informado no topo. */
+#hub-fluidos-slot #fluid-result > .card > .card-title {
+  display: none !important;
+}
+
+/* ── 3. Cabeçalho clínico ──────────────────────────────────── */
+#hub-fluidos-slot > .card > .card-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  margin: 0 0 10px !important;
+  padding: 0 0 10px !important;
+  border-bottom: 1px solid var(--mc-fluid-divider) !important;
+  color: var(--text-primary) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+}
+
+#hub-fluidos-slot > .card > .card-title > i {
+  color: var(--mc-fluid-accent) !important;
+  font-size: 12px !important;
+  width: 15px !important;
+  text-align: center !important;
+  opacity: 0.95 !important;
+}
+
+/* ── 4. Paciente: linha editorial, não pill ────────────────── */
+#hub-fluidos-slot #fluid-patient-chip.patient-banner {
+  min-height: 0 !important;
+  margin: 0 0 10px !important;
+  padding: 0 0 9px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mc-fluid-divider) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  gap: 7px !important;
+}
+
+#hub-fluidos-slot #fluid-patient-chip > i {
+  color: var(--mc-fluid-accent) !important;
+  font-size: 11px !important;
+  width: 15px !important;
+  text-align: center !important;
+}
+
+#hub-fluidos-slot #fluid-patient-chip > span {
+  color: var(--text-secondary) !important;
+  font-size: 11.5px !important;
+  line-height: 1.3 !important;
+}
+
+#hub-fluidos-slot #fluid-patient-chip > span strong {
+  color: var(--text-primary) !important;
+  font-size: 12.5px !important;
+  font-weight: 750 !important;
+}
+
+#hub-fluidos-slot #fluid-patient-chip .qe-trigger {
+  margin-left: auto !important;
+  padding: 4px 0 4px 8px !important;
+  min-height: 28px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--mc-fluid-accent) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+#hub-fluidos-slot #fluid-patient-chip .qe-trigger i {
+  font-size: 9px !important;
+}
+
+/* ── 5. Formulário compacto ───────────────────────────────── */
+#hub-fluidos-slot .input-group {
+  min-width: 0 !important;
+}
+
+#hub-fluidos-slot .input-label {
+  display: block !important;
+  margin: 0 0 6px !important;
+  color: var(--text-secondary) !important;
+  font-size: 10px !important;
+  font-weight: 750 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.055em !important;
+  text-transform: uppercase !important;
+}
+
+#hub-fluidos-slot #fluid-type,
+#hub-fluidos-slot #fluid-dehy,
+#hub-fluidos-slot #fluid-temp {
+  min-height: 42px !important;
+  height: auto !important;
+  padding: 9px 34px 9px 11px !important;
+  background: var(--mc-fluid-field-bg) !important;
+  border: 1px solid var(--mc-fluid-field-border) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  color: var(--text-primary) !important;
+  font-size: 13px !important;
+  font-weight: 560 !important;
+  line-height: 1.28 !important;
+}
+
+#hub-fluidos-slot #fluid-temp {
+  padding-right: 10px !important;
+}
+
+#hub-fluidos-slot #fluid-type:focus,
+#hub-fluidos-slot #fluid-dehy:focus,
+#hub-fluidos-slot #fluid-temp:focus {
+  border-color: var(--mc-fluid-accent) !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 1px var(--mc-fluid-accent) !important;
+}
+
+#hub-fluidos-slot #fluid-deficit-panel,
+#hub-fluidos-slot #fluid-insens-panel {
+  margin-top: 1px !important;
+}
+
+#hub-fluidos-slot #fluid-insens-panel .input-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: end !important;
+  gap: 12px !important;
+  margin-bottom: 9px !important;
+}
+
+#hub-fluidos-slot .fluid-toggle-label {
+  min-height: 42px !important;
+  padding-top: 0 !important;
+  gap: 7px !important;
+  align-items: center !important;
+}
+
+#hub-fluidos-slot .fluid-toggle-label > span {
+  color: var(--text-secondary) !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+}
+
+#hub-fluidos-slot #fluid-taqui-wrap {
+  box-shadow: none !important;
+}
+
+#hub-fluidos-slot #fluid-taqui-knob {
+  box-shadow: none !important;
+}
+
+/* ── 6. Resultado = continuidade da mesma superfície ───────── */
+#hub-fluidos-slot #fluid-result .drug-result-row {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  padding: 12px 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mc-fluid-divider) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#hub-fluidos-slot #fluid-result .drug-result-row:last-child {
+  border-bottom: 0 !important;
+}
+
+/* Remove as "caixinhas" coloridas dos ícones sem remover o ícone. */
+#hub-fluidos-slot #fluid-result .drug-result-icon {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  flex: 0 0 17px !important;
+  width: 17px !important;
+  height: 20px !important;
+  min-width: 17px !important;
+  margin-top: 1px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+}
+
+/* Neutraliza especificamente o antigo roxo decorativo do ícone de eletrólitos. */
+#hub-fluidos-slot #fluid-result .drug-result-icon .fa-flask {
+  color: var(--mc-fluid-accent) !important;
+}
+
+#hub-fluidos-slot #fluid-result .drug-result-content {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+#hub-fluidos-slot #fluid-result .drug-result-key {
+  margin: 0 0 4px !important;
+  color: var(--text-muted) !important;
+  font-size: 10px !important;
+  font-weight: 760 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.055em !important;
+  text-transform: uppercase !important;
+}
+
+#hub-fluidos-slot #fluid-result .drug-result-value {
+  margin: 0 !important;
+  color: var(--text-primary) !important;
+  font-size: 18px !important;
+  font-weight: 760 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.015em !important;
+}
+
+#hub-fluidos-slot #fluid-result .drug-result-note {
+  margin-top: 4px !important;
+  color: var(--text-secondary) !important;
+  font-size: 11.5px !important;
+  font-weight: 450 !important;
+  line-height: 1.45 !important;
+}
+
+#hub-fluidos-slot #fluid-result .drug-result-note strong {
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* ── 7. Alertas permanecem semânticos, mas deixam de ser card ─ */
+#hub-fluidos-slot #fluid-result .drug-alert {
+  margin: 8px 0 0 !important;
+  padding: 8px 0 8px 10px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-left: 2px solid var(--warning) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--text-secondary) !important;
+  font-size: 11.5px !important;
+  line-height: 1.45 !important;
+}
+
+#hub-fluidos-slot #fluid-result .drug-alert > i {
+  color: var(--warning) !important;
+  margin-right: 6px !important;
+}
+
+/* ── 8. Light mode ─────────────────────────────────────────── */
+body.light-mode #hub-fluidos-slot {
+  --mc-fluid-divider: #E1E7ED;
+  --mc-fluid-field-bg: #FFFFFF;
+  --mc-fluid-field-border: #D8E0E7;
+  --mc-fluid-soft: rgba(15, 23, 42, 0.025);
+}
+
+body.light-mode #hub-fluidos-slot > .card,
+body.light-mode #hub-fluidos-slot #fluid-result > .card {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.light-mode #hub-fluidos-slot #fluid-type,
+body.light-mode #hub-fluidos-slot #fluid-dehy,
+body.light-mode #hub-fluidos-slot #fluid-temp {
+  background: #FFFFFF !important;
+  border-color: #D8E0E7 !important;
+  color: #111827 !important;
+}
+
+body.light-mode #hub-fluidos-slot #fluid-patient-chip.patient-banner {
+  background: transparent !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-top: 0 !important;
+  border-bottom-color: #E1E7ED !important;
+}
+
+body.light-mode #hub-fluidos-slot #fluid-result .drug-result-row {
+  background: transparent !important;
+  border-bottom-color: #E1E7ED !important;
+}
+
+body.light-mode #hub-fluidos-slot #fluid-result .drug-result-key {
+  color: #64748B !important;
+}
+
+body.light-mode #hub-fluidos-slot #fluid-result .drug-result-value {
+  color: #111827 !important;
+}
+
+body.light-mode #hub-fluidos-slot #fluid-result .drug-result-note,
+body.light-mode #hub-fluidos-slot #fluid-result .drug-alert {
+  color: #475569 !important;
+}
+
+/* ── 9. Mobile-first 390–430px ────────────────────────────── */
+@media (max-width: 430px) {
+  #hub-fluidos-slot > .card {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  #hub-fluidos-slot #fluid-result > .card {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  #hub-fluidos-slot #fluid-type,
+  #hub-fluidos-slot #fluid-dehy,
+  #hub-fluidos-slot #fluid-temp {
+    font-size: 12.8px !important;
+  }
+
+  #hub-fluidos-slot #fluid-result .drug-result-value {
+    font-size: 17.5px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  #hub-fluidos-slot #fluid-insens-panel .input-grid {
+    gap: 9px !important;
+  }
+
+  #hub-fluidos-slot #fluid-patient-chip > span {
+    font-size: 11px !important;
+  }
+
+  #hub-fluidos-slot #fluid-result .drug-result-note {
+    font-size: 11px !important;
+  }
+}
+/* CALC-FLUIDOS-V1-M1-R2-VISIBLE-OWNER-CUTOVER END */
+
+/* CALC-FLUIDOS-V1-M1-R3-FINAL-DARK-PT-REFINEMENT START
+   Refinamento final do estado Dark+PT já homologado estruturalmente.
+   Somente apresentação: foco dos campos, microespaçamento, toggle
+   e legibilidade do bloco de soluções na ressuscitação.
+   Zero alteração clínica, fórmula, callback, texto ou runtime.
+*/
+
+/* Foco semântico de Fluidos — elimina a borda laranja concorrente. */
+#hub-fluidos-slot #fluid-type:focus,
+#hub-fluidos-slot #fluid-type:focus-visible,
+#hub-fluidos-slot #fluid-dehy:focus,
+#hub-fluidos-slot #fluid-dehy:focus-visible,
+#hub-fluidos-slot #fluid-temp:focus,
+#hub-fluidos-slot #fluid-temp:focus-visible {
+  border-color: #22C87A !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 1px rgba(34, 200, 122, 0.36) !important;
+}
+
+/* Compactação final entre formulário e resultado. */
+#hub-fluidos-slot > .card {
+  padding-bottom: 6px !important;
+}
+
+#hub-fluidos-slot #fluid-result > .card {
+  padding-top: 0 !important;
+}
+
+#hub-fluidos-slot #fluid-result .drug-result-row:first-of-type {
+  padding-top: 10px !important;
+}
+
+/* Labels clínicos um pouco mais legíveis no dark sem ganhar protagonismo. */
+body:not(.light-mode) #hub-fluidos-slot #fluid-result .drug-result-key {
+  color: rgba(148, 163, 184, 0.78) !important;
+}
+
+/* Toggle de taquipneia: alinhamento óptico com o campo de temperatura. */
+#hub-fluidos-slot #fluid-insens-panel .input-grid {
+  align-items: end !important;
+}
+
+#hub-fluidos-slot #fluid-insens-panel .fluid-toggle-label {
+  align-self: end !important;
+  min-height: 42px !important;
+  padding: 0 0 1px !important;
+}
+
+#hub-fluidos-slot #fluid-insens-panel #fluid-taqui-wrap {
+  margin-top: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+/* Ressuscitação: o estado que possui .drug-alert é único.
+   Refinamos apenas a segunda linha (Soluções disponíveis),
+   sem alterar qualquer conteúdo clínico ou identificador. */
+#hub-fluidos-slot #fluid-result > .card:has(> .drug-alert)
+  .drug-result-row + .drug-result-row {
+  padding-top: 10px !important;
+  padding-bottom: 11px !important;
+}
+
+#hub-fluidos-slot #fluid-result > .card:has(> .drug-alert)
+  .drug-result-row + .drug-result-row .drug-result-key {
+  margin-bottom: 6px !important;
+  color: rgba(148, 163, 184, 0.82) !important;
+}
+
+#hub-fluidos-slot #fluid-result > .card:has(> .drug-alert)
+  .drug-result-row + .drug-result-row .drug-result-note {
+  max-width: 100% !important;
+  font-size: 11.25px !important;
+  line-height: 1.58 !important;
+  color: var(--text-secondary) !important;
+}
+
+#hub-fluidos-slot #fluid-result > .card:has(> .drug-alert)
+  .drug-result-row + .drug-result-row .drug-result-note strong {
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* Alerta de reavaliação com respiração editorial um pouco melhor. */
+#hub-fluidos-slot #fluid-result > .card:has(> .drug-alert) > .drug-alert {
+  margin-top: 9px !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+
+/* Light: preserva o mesmo foco semântico e contraste. */
+body.light-mode #hub-fluidos-slot #fluid-type:focus,
+body.light-mode #hub-fluidos-slot #fluid-type:focus-visible,
+body.light-mode #hub-fluidos-slot #fluid-dehy:focus,
+body.light-mode #hub-fluidos-slot #fluid-dehy:focus-visible,
+body.light-mode #hub-fluidos-slot #fluid-temp:focus,
+body.light-mode #hub-fluidos-slot #fluid-temp:focus-visible {
+  border-color: #22C87A !important;
+  box-shadow: 0 0 0 1px rgba(34, 200, 122, 0.28) !important;
+}
+
+/* CALC-FLUIDOS-V1-M1-R3-FINAL-DARK-PT-REFINEMENT END */

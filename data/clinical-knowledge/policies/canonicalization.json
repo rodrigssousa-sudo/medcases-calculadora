@@ -1,0 +1,45 @@
+{
+  "automaticActions": {
+    "delete": false,
+    "merge": false,
+    "overwrite": false,
+    "publish": false
+  },
+  "genericAliasTokensForbiddenAsStandaloneEntityAliases": [
+    "aguda",
+    "agudo",
+    "cronica",
+    "cronico",
+    "leve",
+    "moderada",
+    "moderado",
+    "grave",
+    "adulto",
+    "adultos",
+    "pediatrica",
+    "pediatrico",
+    "gestante",
+    "controle",
+    "manejo",
+    "tratamento",
+    "emergencia",
+    "urgencia",
+    "dor"
+  ],
+  "knownHarnessFalsePositiveExamples": [
+    {
+      "a": "ASMA AGUDA LEVE/ MODERADA",
+      "b": "INSÔNIA LEVE/MODERADA",
+      "reason": "generic modifier overlap must never establish entity identity"
+    }
+  ],
+  "principles": {
+    "currentProtocolMayBeOverwrittenAutomatically": false,
+    "fuzzySimilarityCanDeleteMergeOrOverwrite": false,
+    "oneCanonicalProtocolPerClinicalEntityOrExplicitSubtype": true,
+    "populationStageStrategySubtypesMustBePreserved": true,
+    "semanticDecisionRequiresClinicalEntityEvidence": true,
+    "sourceOrderCanResolveClinicalConflict": false
+  },
+  "schemaVersion": "medcases-canonicalization-policy-v1"
+}
