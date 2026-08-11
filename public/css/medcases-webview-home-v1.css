@@ -11730,3 +11730,186 @@ html[data-theme="light"] body #page-home #hub-card-patient .hm-hd-toggle:has(inp
 }
 
 /* CALC-DADOS-PACIENTE-V1-M1-R2-HEMODIALISE-FINAL-REFINEMENT END */
+
+/* CALC-GLOBAL-MOBILE-BASELINE-V1-B MODULES START */
+@media (max-width: 767px) {
+  /* HOME / HIERARQUIA PRINCIPAL */
+  #page-home .hub-card-name,
+  #page-home .hub-card-name * {
+    font-size: var(--mc-font-internal-title) !important;
+    font-weight: 650 !important;
+    letter-spacing: 0 !important;
+  }
+  #page-home .hub-card-desc,
+  #page-home .hub-card-desc * {
+    font-size: var(--mc-font-auxiliary) !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0 !important;
+  }
+  #page-home .hub-soon-badge { font-size: var(--mc-font-micro) !important; }
+  #page-home .calc-hub-title { font-size: var(--mc-font-internal-title) !important; letter-spacing: 0 !important; }
+  #calculator-overlay-title { font-size: var(--mc-font-screen-title) !important; font-weight: 700 !important; letter-spacing: 0 !important; }
+
+  /* DADOS DO PACIENTE — texto clínico e controles */
+  :is(#page-home #hub-card-patient, #calculator-overlay-container.is-active #calculator-overlay-body) .hm-label {
+    font-size: var(--mc-font-section) !important; font-weight: 650 !important; letter-spacing: 0 !important;
+  }
+  :is(#page-home #hub-card-patient, #calculator-overlay-container.is-active #calculator-overlay-body) .hm-label-unit {
+    font-size: var(--mc-font-micro) !important; font-weight: 500 !important; letter-spacing: 0 !important;
+  }
+  :is(#page-home #hub-card-patient, #calculator-overlay-container.is-active #calculator-overlay-body) input.hm-input,
+  :is(#page-home #hub-card-patient, #calculator-overlay-container.is-active #calculator-overlay-body) .hm-input {
+    font-size: var(--mc-font-clinical-body) !important;
+  }
+  :is(#page-home #hub-card-patient, #calculator-overlay-container.is-active #calculator-overlay-body) .hm-input::placeholder {
+    font-size: var(--mc-font-auxiliary) !important;
+  }
+  :is(#page-home #hub-card-patient, #calculator-overlay-container.is-active #calculator-overlay-body) :is(.hm-sex-btn,.preg-opt,.hm-btn) {
+    font-size: var(--mc-font-section) !important;
+  }
+  :is(#page-home #hub-card-patient, #calculator-overlay-container.is-active #calculator-overlay-body) :is(.preg-toggle-title,.hm-urine-header-title,.hm-hd-text) {
+    font-size: var(--mc-font-section) !important; letter-spacing: 0 !important;
+  }
+  :is(#page-home #hub-card-patient, #calculator-overlay-container.is-active #calculator-overlay-body) :is(.preg-toggle-sub,.hm-urine-note,#hm-clcr-warn) {
+    font-size: var(--mc-font-auxiliary) !important; line-height: 1.4 !important;
+  }
+  :is(#page-home #hub-card-patient, #calculator-overlay-container.is-active #calculator-overlay-body) :is(.hm-urine-badge,#hm-fixed-badge,.hm-pill-lbl,#hm-pv-clcr-src) {
+    font-size: var(--mc-font-micro) !important; letter-spacing: 0 !important;
+  }
+  :is(#page-home #hub-card-patient, #calculator-overlay-container.is-active #calculator-overlay-body) .hm-pill-val {
+    font-size: var(--mc-font-clinical-body) !important;
+  }
+
+  /* FÁRMACOS — superfície principal */
+  #farmacos-v2-shell .farmacos-v2-tab { font-size: var(--mc-font-section) !important; }
+  #farmacos-v2-shell .farmacos-v2-section-title,
+  #farmacos-v2-shell .farmacos-v2-quick-label {
+    font-size: var(--mc-font-section) !important; letter-spacing: 0 !important;
+  }
+  #farmacos-v2-shell .farmacos-v2-section-help,
+  #farmacos-v2-shell .farmacos-v2-row-subtitle {
+    font-size: var(--mc-font-auxiliary) !important; line-height: 1.4 !important;
+  }
+  #farmacos-v2-shell .farmacos-v2-chip { font-size: var(--mc-font-section) !important; }
+  #farmacos-v2-shell .farmacos-v2-row-title { font-size: var(--mc-font-clinical-body) !important; }
+  #farmacos-v2-shell .farmacos-v2-row-count { font-size: var(--mc-font-micro) !important; }
+  #farmacos-v2-shell .farmacos-v2-empty { font-size: var(--mc-font-auxiliary) !important; }
+
+  /* INTERAÇÕES */
+  #hub-card-interacoes :is(.mc-intx-m1-title,#txt-inter-titulo) {
+    font-size: var(--mc-font-internal-title) !important; font-weight: 650 !important; letter-spacing: 0 !important;
+  }
+  #hub-card-interacoes :is(.mc-intx-m1-subtitle,#txt-inter-sub,.mc-intx-m1-slot-label) {
+    font-size: var(--mc-font-section) !important; line-height: 1.4 !important;
+  }
+  #hub-card-interacoes :is(.mc-intx-m1-limit,.mc-intx-m1-slot-optional) { font-size: var(--mc-font-micro) !important; }
+  #hub-card-interacoes .mc-intx-m1-input { font-size: var(--mc-font-clinical-body) !important; }
+  #hub-card-interacoes :is(.mc-intx-m1-suggestion,.mc-intx-m1-empty,.mc-intx-m1-add,.mc-intx-m1-reset,#btn-verificar-interacoes) {
+    font-size: var(--mc-font-section) !important;
+  }
+
+  /* ELETRÓLITOS */
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc :is(.elec2-step-title,.elec2-title) {
+    font-size: var(--mc-font-internal-title) !important; font-weight: 650 !important; letter-spacing: 0 !important;
+  }
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc :is(.elec2-section-title,.elec2-label,.elec2-field-label,.elec2-state-label,.elec2-state-lbl,.elec2-semantic-label,.m4g-group-title) {
+    font-size: var(--mc-font-section) !important; letter-spacing: 0 !important;
+  }
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc :is(input:not([type="checkbox"]):not([type="radio"]),select,textarea,.elec2-field-input) {
+    font-size: var(--mc-font-clinical-body) !important;
+  }
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn,.elec2-calc-btn,.elec2-action-btn,.m4d-advanced-toggle) {
+    font-size: var(--mc-font-section) !important;
+  }
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-calc :is(.m4d-advanced-helper,.m4e-gravity-helper,.m4g-group-helper) {
+    font-size: var(--mc-font-auxiliary) !important; line-height: 1.4 !important;
+  }
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area :is(.univ-result-header,.m4c-kicker,.m4c-section-title,.m4c-summary-name,.m4c-row-label,.m4i-row-label) {
+    font-size: var(--mc-font-section) !important; letter-spacing: 0 !important;
+  }
+  :is(#hub-elec-slot,#calculator-overlay-container.is-active #calculator-overlay-body) #elec2-result-area :is(.univ-result-sub,.univ-result-interpretation,.m4c-severity-note,.m4c-summary-interpretation,.m4c-row-value,.m4i-row-value,.m4c-paragraph,.m4c-alert,p,li) {
+    font-size: var(--mc-font-clinical-body) !important; line-height: 1.45 !important;
+  }
+
+  /* INFUSÃO */
+  :is(#hub-infusao-slot,#page-infusion) .infusion-sec-label {
+    font-size: var(--mc-font-section) !important; letter-spacing: 0 !important;
+  }
+  :is(#hub-infusao-slot,#page-infusion) :is(.inf-free-drug-label,.infusion-field-label,.infusion-weight-inline-title,.infusion-result-label,.infusion-secondary-card-label) {
+    font-size: var(--mc-font-section) !important; letter-spacing: 0 !important;
+  }
+  :is(#hub-infusao-slot,#page-infusion) :is(.optional-tag,.infusion-result-unit,.infusion-secondary-card-unit,.infusion-bidir-unit-badge) {
+    font-size: var(--mc-font-micro) !important;
+  }
+  :is(#hub-infusao-slot,#page-infusion) :is(.inf-free-drug-input,.inf-autocomplete-input,.infusion-input,.infusion-unit-select,.infusion-weight-inline-input) {
+    font-size: var(--mc-font-clinical-body) !important;
+  }
+  :is(#hub-infusao-slot,#page-infusion) :is(.infusion-weight-inline-desc,.infusion-result-conc,.infusion-empty-hint p,.infusion-disclaimer,.infusion-weight-note) {
+    font-size: var(--mc-font-auxiliary) !important; line-height: 1.45 !important;
+  }
+  :is(#hub-infusao-slot,#page-infusion) :is(.infusion-mode-btn,.inf-copy-rx-btn) { font-size: var(--mc-font-section) !important; }
+
+  /* FLUIDOS */
+  :is(#hub-fluidos-slot,#subview-fluids) > .card > .card-title {
+    font-size: var(--mc-font-internal-title) !important; letter-spacing: 0 !important;
+  }
+  :is(#hub-fluidos-slot,#subview-fluids) :is(.input-label,.fluid-weight-fallback-label) {
+    font-size: var(--mc-font-section) !important; letter-spacing: 0 !important;
+  }
+  :is(#hub-fluidos-slot,#subview-fluids) :is(#fluid-type,#fluid-dehy,#fluid-temp,.fluid-weight-fallback-input) {
+    font-size: var(--mc-font-clinical-body) !important;
+  }
+  :is(#hub-fluidos-slot,#subview-fluids) :is(.fluid-toggle-label > span,#fluid-patient-chip > span,.drug-result-note,.drug-alert) {
+    font-size: var(--mc-font-auxiliary) !important; line-height: 1.45 !important;
+  }
+  :is(#hub-fluidos-slot,#subview-fluids) #fluid-patient-chip > span strong { font-size: var(--mc-font-clinical-body) !important; }
+  :is(#hub-fluidos-slot,#subview-fluids) #fluid-result .drug-result-key { font-size: var(--mc-font-section) !important; }
+  :is(#hub-fluidos-slot,#subview-fluids) .fluid-weight-fallback-unit { font-size: var(--mc-font-micro) !important; }
+
+  /* HEMODINÂMICA */
+  :is(#hub-hemo-slot,#subview-hemo) > .card > .card-title {
+    font-size: var(--mc-font-internal-title) !important; letter-spacing: 0 !important;
+  }
+  :is(#hub-hemo-slot,#subview-hemo) .input-label,
+  :is(#hub-hemo-slot,#subview-hemo) #hemo-result :is(.result-label,.drug-result-key) {
+    font-size: var(--mc-font-section) !important; letter-spacing: 0 !important;
+  }
+  :is(#hub-hemo-slot,#subview-hemo) .input-field { font-size: var(--mc-font-clinical-body) !important; }
+  :is(#hub-hemo-slot,#subview-hemo) #hemo-result :is(.result-interpretation,.drug-result-note,.drug-alert,.score-result-interp) {
+    font-size: var(--mc-font-clinical-body) !important; line-height: 1.45 !important;
+  }
+  :is(#hub-hemo-slot,#subview-hemo) #hemo-result :is(.result-unit) { font-size: var(--mc-font-micro) !important; }
+  :is(#hub-hemo-slot,#subview-hemo) #hemo-result > .card > .card-title {
+    font-size: var(--mc-font-section) !important; letter-spacing: 0 !important;
+  }
+  :is(#hub-hemo-slot,#subview-hemo) #hemo-result > .card > .results-grid + div > div:first-child { font-size: var(--mc-font-section) !important; }
+  :is(#hub-hemo-slot,#subview-hemo) #hemo-result > .card > .results-grid + div > div:last-child { font-size: var(--mc-font-clinical-body) !important; line-height: 1.45 !important; }
+
+  /* SCORES */
+  #hub-scores-slot [id^="scard-"] .drug-card-name,
+  #hub-scores-slot #score-calc-area .drug-card-name,
+  #hub-scores-slot #score-calc-area [class*="score-title"],
+  #hub-scores-slot #score-calc-area > .card > .card-title {
+    font-size: var(--mc-font-internal-title) !important; letter-spacing: 0 !important;
+  }
+  #hub-scores-slot [id^="scard-"] .drug-card-class,
+  #hub-scores-slot #score-calc-area :is(.drug-card-class,[class*="score-subtitle"]) {
+    font-size: var(--mc-font-auxiliary) !important;
+  }
+  #hub-scores-slot #score-calc-area .univ-score-group-title,
+  #hub-scores-slot #score-calc-area .univ-result-header {
+    font-size: var(--mc-font-section) !important; letter-spacing: 0 !important;
+  }
+  #hub-scores-slot #score-calc-area :is(.univ-toggle-btn,.univ-toggle-label) {
+    font-size: var(--mc-font-clinical-body) !important; line-height: 1.4 !important;
+  }
+  #hub-scores-slot #score-calc-area :is(.univ-toggle-pts,[class*="point"],[class*="pts"]) {
+    font-size: var(--mc-font-micro) !important;
+  }
+  #hub-scores-slot #score-calc-area :is(.univ-result-sub,.univ-result-interpretation,.score-result-interp,.univ-result-conduct,.univ-result-conduct p,.univ-result-conduct li) {
+    font-size: var(--mc-font-clinical-body) !important; line-height: 1.45 !important;
+  }
+  #hub-scores-slot #score-calc-area .mcs-score-clear-btn { font-size: var(--mc-font-section) !important; }
+  #hub-scores-slot #score-calc-area .mcs-score-risk-alert { font-size: var(--mc-font-auxiliary) !important; letter-spacing: 0 !important; }
+}
+/* CALC-GLOBAL-MOBILE-BASELINE-V1-B MODULES END */

@@ -6949,7 +6949,8 @@ Object.assign(window.ANTIMICROBIANOS_DRUGS_DB, {
           ? "5–7 mg/kg EV 36–48h (ajuste renal)"
           : "Dose individualizada conforme nível sérico";
 
-      const dosePediatrica = idade < 12 && peso > 0
+      /* CALC-PEDS-AGE-ROUTING-SAFETY-V1-B — alinha o outlier ao contexto pediátrico <18 já usado no banco */
+      const dosePediatrica = idade < 18 && peso > 0
         ? `${Math.round(peso * 2.5)} mg EV 8/8h (${Math.round(peso * 2.5)} mg/dose)`
         : null;
 
