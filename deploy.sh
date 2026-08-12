@@ -59,6 +59,24 @@ echo "✅ Sincronização concluída."
 
 # Stage e commit
 # MEDCASES AUTO OFFLINE MANIFEST START
+
+# CALC-PUBLIC-CLINICAL-KNOWLEDGE-EXCLUSION-V1
+# data/clinical-knowledge é canônico/protegido e nunca deve ser publicado.
+MC_REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+MC_PUBLIC_CLINICAL="$MC_REPO_ROOT/public/data/clinical-knowledge"
+
+if [ -e "$MC_PUBLIC_CLINICAL" ]; then
+  echo "🛡️ Removendo cópia pública não-canônica de clinical-knowledge..."
+  rm -rf "$MC_PUBLIC_CLINICAL"
+fi
+
+if [ -e "$MC_PUBLIC_CLINICAL" ]; then
+  echo "❌ ERRO: public/data/clinical-knowledge ainda existe."
+  exit 1
+fi
+
+echo "✅ public/data/clinical-knowledge excluído do deploy."
+
 echo "🧭 Atualizando manifesto offline canônico..."
 if [ ! -f "scripts/generate-offline-manifest.js" ]; then
   echo "❌ ERRO: gerador offline ausente."
