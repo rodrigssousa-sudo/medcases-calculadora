@@ -25,6 +25,272 @@
 (function () {
   'use strict';
 
+  /* MEDCASES_CALCULATOR_SESSION_ISOLATION_V1_B_R0_R1
+     Sessão clínica efêmera:
+       - limpa estado residual uma única vez na criação do documento;
+       - recebe apenas payload explícito desta abertura;
+       - espelha aliases App → Calculadora;
+       - limpa novamente no pagehide/saída;
+       - NUNCA persiste identificadores pessoais. */
+  (function _installMedCasesPatientSession() {
+    if (window.MedCasesPatientSession &&
+        window.MedCasesPatientSession.version === 'V1-B-R0-R1') return;
+
+    var STORAGE_KEYS = ['medcases_hm_patient_v1', 'pacienteAtual'];
+
+    var ALIASES = {
+      age:'idade', edad:'idade',
+      sex:'sexo', gender:'sexo',
+      weight:'peso',
+      height:'altura',
+      cr:'creatinina', creatinine:'creatinina',
+      egfr:'tfg',
+      gestante:'pregnant', embarazo:'pregnant',
+      hemodialise:'hemodialysis', dialysis:'hemodialysis'
+    };
+
+    var ACCEPTED = {
+      lang:1, idioma:1, modulo:1,
+      peso:1, altura:1, idade:1, creatinina:1, clcr:1, sexo:1,
+      tfg:1, pregnant:1, hemodialysis:1,
+      ph:1, pco2:1, hco3:1, be:1, na:1, cl:1, gluc:1, ca:1, bun:1, alb:1,
+      pas:1, col:1, qt:1, fc:1,
+      bili:1, inr:1, ast:1, alt:1, plat:1,
+      k:1, mg:1, kdigo:1, child_pugh:1, chads_vasc:1, has_bled:1, ascvd:1
+    };
+
+    var ENGLISH_MIRROR = {
+      peso:'weight',
+      altura:'height',
+      idade:'age',
+      creatinina:'creatinine',
+      sexo:'sex'
+    };
+
+    var DOM_MAP = {
+      peso:['hm-weight'],
+      altura:['hm-height'],
+      idade:['hm-age'],
+      creatinina:['hm-creatinina'],
+      clcr:['hm-clcr'],
+      na:['elec-na','elec2-in-na'],
+      cl:['elec-cl','elec2-in-cl'],
+      hco3:['elec-hco3','elec2-in-hco3'],
+      gluc:['elec-glicose','elec2-in-glicose'],
+      ca:['elec-ca','elec2-in-ca'],
+      alb:['elec-alb','elec2-in-albumina'],
+      bun:['elec-ureia','elec2-in-ureia'],
+      ph:['elec2-in-ph'],
+      pco2:['elec2-in-pco2'],
+      be:['elec2-in-be'],
+      pas:['h-pas'],
+      fc:['h-fc']
+    };
+
+    function _neutralPatient() {
+      return {
+        age:null, sex:null, weight:null, height:null, creatinine:null,
+        bsa:null, clcr:null, imc:null, pesoIdeal:null, tfg:null,
+        pregnant:false, hemodialysis:false
+      };
+    }
+
+    function _normalize(payload) {
+      var out = {};
+      if (!payload || typeof payload !== 'object') return out;
+      Object.keys(payload).forEach(function(key) {
+        var canonical = ALIASES[key] || key;
+        if (!ACCEPTED[canonical]) return;
+        var value = payload[key];
+        if (value === null || value === undefined || value === '') return;
+        out[canonical] = value;
+      });
+      return out;
+    }
+
+    function _dispatch(el) {
+      ['input','change'].forEach(function(name) {
+        try { el.dispatchEvent(new Event(name, { bubbles:true })); } catch (_) {}
+      });
+    }
+
+    function _fillIds(ids, value) {
+      if (!ids || value === null || value === undefined || value === '') return;
+      ids.forEach(function(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        if (el.type === 'checkbox') {
+          el.checked = value === true ||
+            String(value).toLowerCase() === 'true' ||
+            String(value) === '1';
+        } else {
+          el.value = String(value).replace('.', ',');
+        }
+        _dispatch(el);
+      });
+    }
+
+    function _syncSex(value) {
+      var sex = String(value || '').toUpperCase();
+      if (sex !== 'M' && sex !== 'F') return;
+      var male = document.getElementById('hm-btn-male');
+      var female = document.getElementById('hm-btn-female');
+      [male, female].forEach(function(btn) {
+        if (!btn) return;
+        btn.classList.remove('hm-sex-btn--active','hm-sex-btn--fem');
+      });
+      var active = sex === 'F' ? female : male;
+      if (active) {
+        active.classList.add('hm-sex-btn--active');
+        if (sex === 'F') active.classList.add('hm-sex-btn--fem');
+        try { active.click(); } catch (_) {}
+      }
+      try { if (typeof currentSex !== 'undefined') currentSex = sex; } catch (_) {}
+    }
+
+    function _syncFlags(data) {
+      var hd = document.getElementById('hm-hemodialise');
+      if (hd && data.hemodialysis !== undefined) {
+        hd.checked = data.hemodialysis === true ||
+          String(data.hemodialysis).toLowerCase() === 'true' ||
+          String(data.hemodialysis) === '1';
+        _dispatch(hd);
+      }
+      if (data.pregnant !== undefined) {
+        try {
+          if (typeof currentPregnant !== 'undefined') {
+            currentPregnant = data.pregnant === true ||
+              String(data.pregnant).toLowerCase() === 'true' ||
+              String(data.pregnant) === '1';
+          }
+        } catch (_) {}
+      }
+    }
+
+    function _syncDom(data) {
+      Object.keys(DOM_MAP).forEach(function(field) {
+        if (data[field] !== undefined) _fillIds(DOM_MAP[field], data[field]);
+      });
+      if (data.sexo !== undefined) _syncSex(data.sexo);
+      _syncFlags(data);
+      try { if (typeof window.hmCalcCockcroft === 'function') window.hmCalcCockcroft(); } catch (_) {}
+      try {
+        if (typeof window._hmComputeDerived === 'function') {
+          var pd = window.patientData || {};
+          var derived = window._hmComputeDerived(pd) || {};
+          window.patientData = Object.assign(pd, derived);
+        }
+      } catch (_) {}
+      try { if (typeof window._hmUpdatePills === 'function') window._hmUpdatePills(window.patientData || {}); } catch (_) {}
+      try { if (typeof window._clcrLiveDashboardSync === 'function') window._clcrLiveDashboardSync(); } catch (_) {}
+    }
+
+    function _clearStorage() {
+      STORAGE_KEYS.forEach(function(key) {
+        try { localStorage.removeItem(key); } catch (_) {}
+        try { sessionStorage.removeItem(key); } catch (_) {}
+      });
+    }
+
+    function _clearDom() {
+      Object.keys(DOM_MAP).forEach(function(field) {
+        (DOM_MAP[field] || []).forEach(function(id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          if (el.type === 'checkbox') el.checked = false;
+          else el.value = '';
+          try { delete el.dataset.hmClearOnFirstEdit; } catch (_) {}
+        });
+      });
+      var male = document.getElementById('hm-btn-male');
+      var female = document.getElementById('hm-btn-female');
+      [male, female].forEach(function(btn) {
+        if (!btn) return;
+        btn.classList.remove('hm-sex-btn--active','hm-sex-btn--fem');
+      });
+      var hd = document.getElementById('hm-hemodialise');
+      if (hd) hd.checked = false;
+      try { document.documentElement.classList.remove('hm-user-results-ready'); } catch (_) {}
+    }
+
+    function clear(reason) {
+      _clearStorage();
+      window.hmPatientState = {};
+      window.patientData = _neutralPatient();
+      try { if (typeof currentSex !== 'undefined') currentSex = null; } catch (_) {}
+      try { if (typeof currentPregnant !== 'undefined') currentPregnant = false; } catch (_) {}
+      _clearDom();
+      try { if (typeof window.hmInvalidatePatientResults === 'function') window.hmInvalidatePatientResults(); } catch (_) {}
+      try { if (typeof window._updateHomeLiveDash === 'function') window._updateHomeLiveDash(); } catch (_) {}
+      try { if (typeof window._clcrLiveDashboardSync === 'function') window._clcrLiveDashboardSync(); } catch (_) {}
+      window.__mcPatientSessionHydrated = false;
+      try { console.info('[MC PatientSession] clear reason=' + (reason || 'unknown')); } catch (_) {}
+      return true;
+    }
+
+    function hydrate(payload, reason) {
+      var data = _normalize(payload);
+      var keys = Object.keys(data).filter(function(k) {
+        return k !== 'lang' && k !== 'idioma' && k !== 'modulo';
+      });
+      if (!keys.length) return false;
+      window.patientData = window.patientData || {};
+      keys.forEach(function(field) {
+        var value = data[field];
+        window.patientData[field] = value;
+        var mirror = ENGLISH_MIRROR[field];
+        if (mirror) window.patientData[mirror] = value;
+      });
+      _syncDom(data);
+      window.__mcPatientSessionHydrated = true;
+      try {
+        console.info('[MC PatientSession] hydrate reason=' + (reason || 'unknown') + ' fields=' + keys.join(','));
+      } catch (_) {}
+      return true;
+    }
+
+    function hydrateFromUrl(reason) {
+      var params;
+      try { params = new URLSearchParams(window.location.search || ''); }
+      catch (_) { return false; }
+      var payload = {};
+      params.forEach(function(value, key) { payload[key] = value; });
+      return hydrate(payload, reason || 'url');
+    }
+
+    window.MedCasesPatientSession = {
+      version:'V1-B-R0-R1',
+      clear:clear,
+      hydrate:hydrate,
+      hydrateFromUrl:hydrateFromUrl,
+      normalize:_normalize
+    };
+
+    clear('document-start');
+    setTimeout(function(){ hydrateFromUrl('document-start-url'); }, 0);
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        hydrateFromUrl('dom-ready');
+      }, { once:true });
+    } else {
+      setTimeout(function(){ hydrateFromUrl('dom-ready'); }, 0);
+    }
+
+    window.addEventListener('load', function() {
+      hydrateFromUrl('load');
+    }, { once:true });
+
+    window.addEventListener('pageshow', function() {
+      hydrateFromUrl('pageshow');
+    });
+
+    window.addEventListener('pagehide', function() {
+      clear('pagehide');
+    });
+  })();
+
+
   /* ───────────────────────────────────────────────────────────────
      HELPERS UTILITÁRIOS
   ─────────────────────────────────────────────────────────────── */
@@ -135,7 +401,8 @@
     peso:       'hm-weight',
     altura:     'hm-height',
     idade:      'hm-age',
-    creatinina: 'hm-creatinina'
+    creatinina: 'hm-creatinina',
+    clcr:       'hm-clcr'
   };
 
   /* ───────────────────────────────────────────────────────────────
@@ -302,17 +569,50 @@
     if (!params) return;
     window.patientData = window.patientData || {};
 
-    /* ── 1. Campos clínicos → window.patientData ── */
-    var fields = [
-      'peso', 'altura', 'idade', 'creatinina', 'clcr',
-      'kdigo', 'child_pugh', 'chads_vasc', 'has_bled', 'ascvd',
-      'hco3', 'na', 'k', 'mg', 'sexo'
+    /* ── 1. Campos clínicos → normalização canônica ── */
+    var aliasGroups = {
+      peso:       ['peso','weight'],
+      altura:     ['altura','height'],
+      idade:      ['idade','age','edad'],
+      creatinina: ['creatinina','creatinine','cr'],
+      clcr:       ['clcr','clearance'],
+      sexo:       ['sexo','sex','gender'],
+      tfg:        ['tfg','egfr'],
+      pregnant:   ['pregnant','gestante','embarazo'],
+      hemodialysis:['hemodialysis','hemodialise','dialysis']
+    };
+
+    var specialtyFields = [
+      'kdigo','child_pugh','chads_vasc','has_bled','ascvd',
+      'ph','pco2','hco3','be','na','cl','gluc','ca','bun','alb',
+      'pas','col','qt','fc','bili','inr','ast','alt','plat','k','mg'
     ];
-    var updated = false;
-    fields.forEach(function (f) {
-      var v = params.get(f);
-      if (v !== null && v !== '') { window.patientData[f] = v; updated = true; }
+
+    var payload = {};
+    Object.keys(aliasGroups).forEach(function(canonical) {
+      var aliases = aliasGroups[canonical];
+      for (var i = 0; i < aliases.length; i++) {
+        var v = params.get(aliases[i]);
+        if (v !== null && v !== '') {
+          payload[canonical] = v;
+          break;
+        }
+      }
     });
+
+    specialtyFields.forEach(function(f) {
+      var v = params.get(f);
+      if (v !== null && v !== '') payload[f] = v;
+    });
+
+    var updated = Object.keys(payload).length > 0;
+    if (updated &&
+        window.MedCasesPatientSession &&
+        typeof window.MedCasesPatientSession.hydrate === 'function') {
+      window.MedCasesPatientSession.hydrate(payload, 'csr-url-ingest');
+    } else if (updated) {
+      Object.assign(window.patientData, payload);
+    }
 
     if (!updated) return;
     console.log('[CSR v2] patientData ingerido:', JSON.stringify(window.patientData));
@@ -1888,7 +2188,13 @@
       if (lang) p.set('lang', lang);
       p.set('modulo', _norm(modulo));
       if (patientData) {
-        ['peso','idade','clcr','kdigo','child_pugh','chads_vasc','has_bled','creatinina'].forEach(function (f) {
+        [
+          'peso','altura','idade','creatinina','clcr','sexo','tfg',
+          'pregnant','hemodialysis',
+          'kdigo','child_pugh','chads_vasc','has_bled','ascvd',
+          'ph','pco2','hco3','be','na','cl','gluc','ca','bun','alb',
+          'pas','col','qt','fc','bili','inr','ast','alt','plat','k','mg'
+        ].forEach(function (f) {
           if (patientData[f] != null) p.set(f, patientData[f]);
         });
       }
@@ -1955,6 +2261,12 @@
       /* ── 3. Constrói adapter de params compatível com _ingestPatientPayload ──
               Usa duck-typing sobre objeto simples — evita new URLSearchParams
               que pode falhar em contextos file:// muito restritivos.           */
+      if (window.MedCasesPatientSession &&
+          typeof window.MedCasesPatientSession.hydrate === 'function') {
+        window.MedCasesPatientSession.hydrate(payload, 'csr-path-c');
+        payload = Object.assign({}, window.patientData || {}, payload);
+      }
+
       var _payloadAdapter = {
         get: function (k) {
           var v = payload[k];
@@ -1965,9 +2277,11 @@
       /* ── 4. Actualiza window.patientData com todos os campos recebidos ── */
       window.patientData = window.patientData || {};
       var PATIENT_FIELDS_INJECT = [
-        'peso','altura','idade','creatinina','clcr',
+        'peso','altura','idade','creatinina','clcr','sexo','tfg',
+        'pregnant','hemodialysis',
         'kdigo','child_pugh','chads_vasc','has_bled','ascvd',
-        'hco3','na','k','mg','sexo'
+        'ph','pco2','hco3','be','na','cl','gluc','ca','bun','alb',
+        'pas','col','qt','fc','bili','inr','ast','alt','plat','k','mg'
       ];
       PATIENT_FIELDS_INJECT.forEach(function (f) {
         var v = _payloadAdapter.get(f);

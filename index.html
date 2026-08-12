@@ -31015,11 +31015,31 @@ body.calc-overlay-open #fd-modal.open .fdm1-state-action:active{
     invalidate();
   };
 
-  /* Limpa imediatamente e novamente no fim do boot. Depois disso,
-     novas injecoes explicitas de paciente permanecem intactas. */
-  clearBootPatient();
-  window.addEventListener('load', () => setTimeout(clearBootPatient, 0), { once:true });
-  window.addEventListener('pageshow', () => setTimeout(clearBootPatient, 0), { once:true });
+  /* MEDCASES_PATIENT_SESSION_R40_CUTOVER_V1_B_R0_R1
+     O owner de sessão agora nasce cedo em medcases-router.js.
+     R40 deixa de apagar dados em load/pageshow — esse late wipe causava
+     perda do payload explícito recebido do MedCases. */
+  if (window.MedCasesPatientSession &&
+      typeof window.MedCasesPatientSession.hydrateFromUrl === 'function') {
+    window.MedCasesPatientSession.hydrateFromUrl('r40-cutover');
+  } else {
+    /* Fallback legado: limpa UMA vez, nunca após o payload já estar hidratado. */
+    clearBootPatient();
+  }
+
+  window.addEventListener('load', () => {
+    if (window.MedCasesPatientSession &&
+        typeof window.MedCasesPatientSession.hydrateFromUrl === 'function') {
+      window.MedCasesPatientSession.hydrateFromUrl('r40-load');
+    }
+  }, { once:true });
+
+  window.addEventListener('pageshow', () => {
+    if (window.MedCasesPatientSession &&
+        typeof window.MedCasesPatientSession.hydrateFromUrl === 'function') {
+      window.MedCasesPatientSession.hydrateFromUrl('r40-pageshow');
+    }
+  });
 })();
 </script>
 <!-- CALC-PATIENT-HOME-V1-R40-M1-TRUE-CLEAN-BOOT:end -->
