@@ -1,0 +1,25 @@
+{
+  "canonicalAssignmentEnabled": false,
+  "classificationCounts": {
+    "ADJUNCT_THERAPY_MODULE": 1,
+    "IDENTITY_DOMAIN_REVIEW": 96,
+    "MULTI_ENTITY_SOURCE_REVIEW": 1,
+    "NEW_SINGLE_SOURCE_CANDIDATE": 54,
+    "REFERENCE_MODULE": 15,
+    "THERAPEUTIC_STRATEGY_MODULE": 1
+  },
+  "identityDomainCount": 62,
+  "incomingSourceCount": 168,
+  "legacyOwnerCount": 123,
+  "populationSubtypePointerCount": 5,
+  "productionIntegrationEnabled": false,
+  "publicationEnabled": false,
+  "rules": {
+    "clinicalReviewRequiredBeforeCanonicalAssignment": true,
+    "identityDomainIsNotCanonicalProtocol": true,
+    "numericRegimenReviewDeferred": true,
+    "ptEsRequiredBeforePublication": true
+  },
+  "schemaVersion": "medcases-clinical-identity-index-draft-v1",
+  "status": "shadow_review_only"
+}

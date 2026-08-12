@@ -7866,6 +7866,35 @@
       .csr-drug-list    { grid-template-columns: 1fr; }
     }
   </style>
+
+<!-- CALC-PERF-V1-B-R1-R1 WEBVIEW-STABLE-FIRST-PAINT -->
+<style id="mc-perf-v1-b-r1-r1-boot-shield">
+  html.mc-boot-pending body {
+    visibility: hidden !important;
+  }
+
+  html.mc-boot-pending::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    display: block;
+    background: #1A1D23;
+  }
+
+  html.light-mode.mc-boot-pending::before,
+  html[data-theme="light"].mc-boot-pending::before {
+    background: #ECF1F3;
+  }
+</style>
+<script>
+(function () {
+  try {
+    document.documentElement.classList.add('mc-boot-pending');
+  } catch (_) {}
+})();
+</script>
+
 </head>
 <body>
 <div id="app">
@@ -24658,6 +24687,23 @@ window.MedCasesBridge = {
    */
   setTheme(theme) {
     const root = document.documentElement;
+    // MEDCASES_CALCULATOR_THEME_SYNC_V2_B_R0
+    const isLight = theme === 'light';
+    const body = document.body;
+
+    root.classList.toggle('light-mode', isLight);
+    root.classList.toggle('theme-light', isLight);
+    root.setAttribute('data-theme', theme);
+    root.setAttribute('data-current-theme', theme);
+    root.style.colorScheme = theme;
+
+    if (body) {
+      body.classList.toggle('light-mode', isLight);
+      body.classList.toggle('theme-light', isLight);
+      body.setAttribute('data-theme', theme);
+      body.setAttribute('data-current-theme', theme);
+    }
+
     if (theme === 'light') {
       root.style.setProperty('--bg-deep',    '#F0F4F2');
       root.style.setProperty('--bg-card',    '#FFFFFF');
@@ -24696,6 +24742,22 @@ window.MedCasesBridge = {
     };
   }
 };
+
+/* MEDCASES_CALCULATOR_THEME_QUERY_BOOT_V2_B_R0 */
+(function _medcasesThemeQueryBoot() {
+  try {
+    const params = new URLSearchParams(window.location.search || '');
+    const theme = params.get('theme');
+    if ((theme === 'light' || theme === 'dark') &&
+        window.MedCasesBridge &&
+        typeof window.MedCasesBridge.setTheme === 'function') {
+      window.MedCasesBridge.setTheme(theme);
+    }
+  } catch (_) {
+    /* Runtime bridge from native app remains the fallback. */
+  }
+})();
+
 
 /* ══════════════════════════════════════════════════════════════
    REQ-6 — PRÉ-INICIALIZAÇÃO SILENCIOSA DAS CALCULADORAS
@@ -24911,15 +24973,16 @@ window.MedCasesBridge = {
 <script src="database/endocrino_glp1.js?v=484"></script>
 <script src="database/infusoes.js?v=484"></script>
 <script src="database/emergencia.js?v=484"></script>
-<script src="database/infectologia.js?v=484"></script>
+<!-- CALC-PERF-V1-B-R0 SAFE-DEFER-3-DBS -->
+<script src="database/infectologia.js?v=484" defer></script>
 <script src="database/sedacao.js?v=484"></script>
 <script src="database/hematologia.js?v=484"></script>
 <script src="database/pneumologia.js?v=484"></script>
 <script src="database/gastroenterologia.js?v=484"></script>
 <script src="database/cardiologia.js?v=484"></script>
 <script src="database/analgesia_opioides.js?v=484"></script>
-<script src="database/alergia_imunologia.js?v=484"></script>
-<script src="database/pneumologia_otorrino.js?v=484"></script>
+<script src="database/alergia_imunologia.js?v=484" defer></script>
+<script src="database/pneumologia_otorrino.js?v=484" defer></script>
 <script src="database/neurologia.js?v=484"></script>
 <script src="database/nefro.js?v=484"></script>
 <script src="database/reumatologia.js?v=484"></script>
@@ -24942,7 +25005,7 @@ window.MedCasesBridge = {
 <script defer src="js/build240b-accordion-fix.js?v=484"></script>
 
 <!-- BUILD 243: Calculator Overlay Controller — Sub-tela Full-Screen (substitui expansão inline) -->
-<script defer src="js/calculator-overlay.js?v=484"></script>
+
 
 <!-- BUILD 244: Navegação por Categorias Clínicas — pills horizontais na busca de fármacos -->
 <script defer src="js/category-pills.js?v=484"></script>
@@ -24958,7 +25021,7 @@ window.MedCasesBridge = {
 <script defer src="js/build272-reactive-engine.js?v=484"></script>
 
 <!-- BUILD 283: Sticky Accessory Bar — navegação entre campos sem fechar teclado mobile -->
-<script defer src="js/build283-accessory-bar.js?v=484"></script>
+
 
 <!-- MEDCASES SILENT CACHE SELF-HEAL V511 START -->
 <script id="medcases-silent-cache-self-heal-v511">
@@ -25098,7 +25161,34 @@ window.MedCasesBridge = {
     }
   );
 
-  checkAndRefresh();
+  /* CALC-PERF-V1-B-R1-R1: first SW check runs after boot/idle. */
+  const schedulePostBootUpdateCheck = () => {
+    const started = Date.now();
+
+    const runWhenStable = () => {
+      const bootReady = window._appBootComplete === true;
+      const timedOut = Date.now() - started >= 1800;
+
+      if (!bootReady && !timedOut) {
+        setTimeout(runWhenStable, 100);
+        return;
+      }
+
+      const run = () => {
+        checkAndRefresh();
+      };
+
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(run, { timeout: 1200 });
+      } else {
+        setTimeout(run, 250);
+      }
+    };
+
+    runWhenStable();
+  };
+
+  schedulePostBootUpdateCheck();
 
   window.addEventListener(
     'pageshow',
@@ -26234,6 +26324,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
 
 <script>
 /* CALC-FARMACOS-V1-R10-R2-SEARCH-ICON-ALIGNMENT START */
+/* CALC-FARMACOS-FREEZE-V1-B-R3-R1-STABLE-HUB-PORTAL-NO-REPARENT */
 (function () {
   var MARKER = "CALC-FARMACOS-V1-R10-R2-SEARCH-ICON-ALIGNMENT";
   /* CALC-FARMACOS-V1-M1-R2-CANONICAL-BROWSER-OWNER-FIX */
@@ -26807,6 +26898,19 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     return true;
   }
 
+  function mcNoReparentProjectionActive() {
+    var ov=document.getElementById("calculator-overlay-container");
+    return !!(
+      ov &&
+      ov.getAttribute("data-mc-owner")==="NO_REPARENT_PROJECTION_V1"
+    );
+  }
+
+  function mcStableFarmacosHub(input) {
+    if(!input || !input.closest)return null;
+    return input.closest("#hub-card-farmacos");
+  }
+
   function findElements() {
     var inputs = Array.prototype.slice.call(
       document.querySelectorAll("input")
@@ -26830,6 +26934,19 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
 
     var selected = candidates[0];
     var root = findVisibleFarmacosRoot(selected.input);
+
+    /* CALC-FARMACOS-FREEZE-V1-B-R3-R1-STABLE-HUB-PORTAL-NO-REPARENT
+       No controller no-reparent, o overlay-body é somente um placeholder
+       oculto. O conteúdo produtivo permanece no hub-card original. */
+    if (mcNoReparentProjectionActive()) {
+      var stableHub = mcStableFarmacosHub(selected.input);
+      if (stableHub) {
+        root = stableHub;
+      } else if (root && root.id === "calculator-overlay-body") {
+        return null;
+      }
+    }
+
     if (!root || !elementVisible(root)) return null;
 
     var searchWrapper = findVisibleSearchWrapper(selected.input, root);
@@ -26901,8 +27018,22 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
   }
 
   function placeShellInVisibleOverlay(shell, elements) {
+    if (mcNoReparentProjectionActive()) {
+      var stableHub = mcStableFarmacosHub(elements && elements.input);
+      if (!stableHub || !elements || !elements.searchWrapper) return false;
+      if (!stableHub.contains(elements.searchWrapper)) return false;
+      elements.root = stableHub;
+    }
+
     var placement = getVisiblePortalPlacement(elements);
     if (!placement) return false;
+
+    if (
+      mcNoReparentProjectionActive() &&
+      (!elements.root || elements.root.id === "calculator-overlay-body")
+    ) {
+      return false;
+    }
 
     if (
       shell.parentNode !== placement.parent ||
@@ -26924,6 +27055,15 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
       "data-farmacos-overlay-root",
       elements.root.id || elements.root.className || elements.root.tagName
     );
+
+    if (mcNoReparentProjectionActive()) {
+      shell.setAttribute("data-mc-farmacos-stable-hub-owner","true");
+      shell.setAttribute("data-mc-farmacos-reparent-outside-hub","false");
+    } else {
+      shell.removeAttribute("data-mc-farmacos-stable-hub-owner");
+      shell.removeAttribute("data-mc-farmacos-reparent-outside-hub");
+    }
+
     return true;
   }
 
@@ -26991,11 +27131,11 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     shell.setAttribute("data-build", MARKER);
     shell.innerHTML =
       '<nav class="farmacos-v2-tabs" aria-label="Navegação de fármacos">' +
-        '<button type="button" class="farmacos-v2-tab is-active" data-farmacos-mode="contexts"></button>' +
+        '<button type="button" class="farmacos-v2-tab" data-farmacos-mode="contexts"></button>' +
         '<button type="button" class="farmacos-v2-tab" data-farmacos-mode="groups"></button>' +
-        '<button type="button" class="farmacos-v2-tab" data-farmacos-mode="az"></button>' +
+        '<button type="button" class="farmacos-v2-tab is-active" data-farmacos-mode="az"></button>' +
       '</nav>' +
-      '<div class="farmacos-v2-panel is-active" data-farmacos-panel="contexts">' +
+      '<div class="farmacos-v2-panel" data-farmacos-panel="contexts">' +
         '<div class="farmacos-v2-section-head">' +
           '<div class="farmacos-v2-section-title"></div>' +
           '<div class="farmacos-v2-section-help"></div>' +
@@ -27011,7 +27151,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
         '</div>' +
         '<div class="farmacos-v2-group-list"></div>' +
       '</div>' +
-      '<div class="farmacos-v2-panel" data-farmacos-panel="az">' +
+      '<div class="farmacos-v2-panel is-active" data-farmacos-panel="az">' +
         '<div class="farmacos-v2-az-all-list"></div>' +
         '<div class="farmacos-v2-az-native-host"></div>' +
       '</div>';
@@ -27023,6 +27163,13 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
 
     prepareLegacySurface(elements, shell);
     mountCanonicalAzOwners(shell, elements);
+
+    /* CALC-FARMACOS-AZ-V2-R1-R1 INITIAL-FULL-LIST
+       Reutiliza o renderer canônico já existente.
+       Sem segundo renderer, observer, polling ou timer. */
+    setMode("az", elements, shell);
+    renderCanonicalAz(shell, elements, true);
+
     return shell;
   }
 
@@ -27088,23 +27235,36 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
   }
 
   function mountCanonicalAzOwners(shell, elements) {
-    if (!shell || !elements || !elements.list) return false;
+    if (!shell || !elements) return false;
+
+    /* CALC-FARMACOS-AZ-V2-R1-R2-R1 EXACT-LIST-BRIDGE */
+    var nativeList =
+      elements.list ||
+      document.getElementById("hm-drug-list");
+
+    if (!nativeList) return false;
 
     var panel=shell.querySelector('[data-farmacos-panel="az"]');
     var nativeHost=panel && panel.querySelector(".farmacos-v2-az-native-host");
     if (!panel || !nativeHost) return false;
 
-    if (elements.list.parentNode !== nativeHost) {
-      nativeHost.appendChild(elements.list);
+    if (nativeList.parentNode !== nativeHost) {
+      nativeHost.appendChild(nativeList);
     }
 
-    elements.list.removeAttribute("data-mc-farm-final-az");
-    elements.list.removeAttribute("data-mc-farm-final-count");
+    nativeList.removeAttribute("data-mc-farm-final-az");
+    nativeList.removeAttribute("data-mc-farm-final-count");
     return true;
   }
 
   function setCanonicalAzPhase(shell, elements, searching) {
-    if (!shell || !elements || !elements.list) return;
+    if (!shell || !elements) return;
+
+    var nativeList =
+      elements.list ||
+      document.getElementById("hm-drug-list");
+
+    if (!nativeList) return;
 
     var panel=shell.querySelector('[data-farmacos-panel="az"]');
     var allHost=panel && panel.querySelector(".farmacos-v2-az-all-list");
@@ -27114,7 +27274,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     if (searching) {
       allHost.style.display="none";
       nativeHost.style.display="block";
-      elements.list.style.removeProperty("display");
+      nativeList.style.removeProperty("display");
     } else {
       allHost.style.display="block";
       nativeHost.style.display="none";
@@ -27773,22 +27933,56 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
   }
 
   function installMaintenance() {
-    if (maintenanceTimer) return;
-    maintenanceTimer = window.setInterval(maintainMount, 900);
+    /* CALC-FARMACOS-FREEZE-V1-B-R3-R1-STABLE-HUB-PORTAL-NO-REPARENT
+       O portal antigo fazia polling global + observava document.body.
+       Agora a manutenção fica restrita ao card Fármacos. */
 
-    if (window.MutationObserver && document.body) {
-      var observer = new MutationObserver(function () {
+    if (maintenanceTimer) {
+      window.clearInterval(maintenanceTimer);
+      maintenanceTimer = null;
+    }
+
+    if (
+      window.__MC_FARMACOS_V2_OBSERVER &&
+      typeof window.__MC_FARMACOS_V2_OBSERVER.disconnect === "function"
+    ) {
+      try { window.__MC_FARMACOS_V2_OBSERVER.disconnect(); } catch (_) {}
+      window.__MC_FARMACOS_V2_OBSERVER = null;
+    }
+
+    var host = document.getElementById("hub-card-farmacos");
+    if (window.MutationObserver && host) {
+      var observer = new MutationObserver(function (mutations) {
+        var relevant = mutations.some(function (mu) {
+          return mu.type === "childList";
+        });
+        if (!relevant) return;
+
         window.clearTimeout(observer.__mcTimer);
-        observer.__mcTimer = window.setTimeout(maintainMount, 80);
+        observer.__mcTimer = window.setTimeout(function () {
+          maintainMount();
+        }, 80);
       });
-      observer.observe(document.body, {
+
+      observer.observe(host, {
         childList: true,
-        subtree: true,
-        attributes: true,
-        attributeFilter: ["class", "style", "aria-hidden", "aria-expanded"]
+        subtree: true
       });
+
       window.__MC_FARMACOS_V2_OBSERVER = observer;
     }
+
+    window.__MC_FARMACOS_FREEZE_V1_B_R3 = {
+      build: "CALC-FARMACOS-FREEZE-V1-B-R3-R1-STABLE-HUB-PORTAL-NO-REPARENT",
+      target: "VISIBLE_OVERLAY_PORTAL_REPARENT_TO_HIDDEN_OVERLAY_BODY",
+      overlayBodyRejected: true,
+      stableHubOwner: "hub-card-farmacos",
+      shellReparentOutsideHub: false,
+      globalBodyObserver: false,
+      maintenanceInterval: false,
+      scopedObserver: "hub-card-farmacos:childList+subtree",
+      clinicalDataMutation: false
+    };
   }
 
   function boot(attempt) {
@@ -27826,240 +28020,214 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
   "use strict";
 
   var BUILD = "CALC-FARMACOS-RESULTS-V1-R15-LIST-ANCHOR-FIT";
+  var PATCH = "CALC-FARMACOS-FREEZE-V1-B-R4-R15-SCOPED-O1-LAYOUT";
   var TARGET_GAP = 12;
   var scheduled = false;
-  var boundInput = null;
+  var boundCard = null;
 
-  function visible(element) {
-    if (!element || !element.getBoundingClientRect) return false;
-    var rect = element.getBoundingClientRect();
-    if (rect.width < 1 || rect.height < 1) return false;
-
-    var current = element;
-    while (current && current.nodeType === 1) {
-      var style = window.getComputedStyle(current);
-      if (
-        style.display === "none" ||
-        style.visibility === "hidden" ||
-        Number(style.opacity) === 0
-      ) return false;
-      current = current.parentElement;
-    }
-    return true;
+  function card(){
+    return document.getElementById("hub-card-farmacos");
   }
 
-  function textOf(element) {
-    return String(
-      element && (element.innerText || element.textContent) || ""
-    ).trim().replace(/\s+/g, " ");
+  function isFarmacosOpen(c){
+    if(!c)return false;
+    return (
+      c.classList.contains("is-open") ||
+      c.classList.contains("mc-overlay-projected-card")
+    );
   }
 
-  function commonAncestor(elements) {
-    if (!elements.length) return null;
-    var chain = [];
-    var current = elements[0];
-
-    while (current && current.nodeType === 1) {
-      chain.push(current);
-      current = current.parentElement;
-    }
-
-    for (var index = 0; index < chain.length; index += 1) {
-      var candidate = chain[index];
-      if (elements.every(function (element) {
-        return candidate.contains(element);
-      })) return candidate;
-    }
-    return null;
+  function visible(el){
+    if(!el || !el.getBoundingClientRect)return false;
+    var r=el.getBoundingClientRect();
+    if(r.width<1 || r.height<1)return false;
+    var st=window.getComputedStyle(el);
+    return (
+      st.display!=="none" &&
+      st.visibility!=="hidden" &&
+      Number(st.opacity)!==0
+    );
   }
 
-  function findTabs() {
-    var directSelectors = [
+  function findLocal(root,selectors){
+    for(var i=0;i<selectors.length;i+=1){
+      var el=root.querySelector(selectors[i]);
+      if(el && visible(el))return el
+    }
+    return null
+  }
+
+  function findTabs(root){
+    return findLocal(root,[
       ".farmacos-v2-tabs",
       ".farmacos-v2-tablist",
       ".hm-drug-tabs",
       ".hm-tabs",
       '[role="tablist"]'
-    ];
-
-    for (var index = 0; index < directSelectors.length; index += 1) {
-      var found = Array.prototype.slice.call(
-        document.querySelectorAll(directSelectors[index])
-      ).filter(visible);
-      if (found.length) return found[0];
-    }
-
-    var patterns = [
-      /^(Contextos|Contexts)$/i,
-      /^(Todos os grupos|Todos los grupos|All groups)$/i,
-      /^A\s*[–—-]?\s*Z$/i
-    ];
-
-    var labels = [];
-    patterns.forEach(function (pattern) {
-      var item = Array.prototype.slice.call(
-        document.querySelectorAll(
-          ".farmacos-v2-tab,[data-farmacos-mode],button,[role=tab],span,div"
-        )
-      ).filter(visible).filter(function (element) {
-        return pattern.test(textOf(element));
-      }).sort(function (a, b) {
-        return a.children.length - b.children.length;
-      })[0];
-
-      if (item) labels.push(item);
-    });
-
-    if (labels.length < 2) return null;
-
-    var ancestor = commonAncestor(labels);
-    while (ancestor && ancestor.parentElement) {
-      var rect = ancestor.getBoundingClientRect();
-      if (rect.height >= 28 && rect.height <= 110 && rect.width >= 180) {
-        return ancestor;
-      }
-      ancestor = ancestor.parentElement;
-    }
-
-    return commonAncestor(labels);
+    ])
   }
 
-  function resetList(list) {
-    ["margin-top", "max-height"].forEach(function (property) {
-      list.style.removeProperty(property);
+  function resetList(list){
+    ["margin-top","max-height"].forEach(function(prop){
+      list.style.removeProperty(prop)
     });
-    list.removeAttribute("data-mc-list-anchor-fit");
+    list.removeAttribute("data-mc-list-anchor-fit")
   }
 
-  function getViewportHeight() {
-    if (window.visualViewport && Number(window.visualViewport.height) > 0) {
-      return Number(window.visualViewport.height);
-    }
+  function getViewportHeight(){
     return Number(
       window.innerHeight ||
       document.documentElement.clientHeight ||
       0
-    );
+    )
   }
 
-  function fit() {
-    scheduled = false;
+  function fit(){
+    scheduled=false;
 
-    var input = document.getElementById("hm-drug-search");
-    var list = document.getElementById("hm-drug-list");
-    var tabs = findTabs();
+    var root=card();
+    if(!root || !isFarmacosOpen(root))return false;
 
-    if (!input || !list || !tabs || !visible(list)) return false;
+    var input=root.querySelector("#hm-drug-search");
+    var list=root.querySelector("#hm-drug-list");
+    var tabs=findTabs(root);
 
-    if (boundInput !== input) {
-      boundInput = input;
-      ["input", "change", "focus", "blur"].forEach(function (name) {
-        input.addEventListener(name, schedule, true);
-      });
-    }
+    if(!input || !list || !tabs || !visible(list))return false;
 
-    var active = String(input.value || "").trim().length > 0;
+    var active=String(input.value||"").trim().length>0;
     resetList(list);
 
-    if (!active) return true;
-
-    var tabsRect = tabs.getBoundingClientRect();
-    var listRect = list.getBoundingClientRect();
-    var targetTop = Math.round(tabsRect.bottom + TARGET_GAP);
-    var naturalTop = Math.round(listRect.top);
-    var reduction = Math.max(0, Math.min(180, naturalTop - targetTop));
-
-    if (reduction > 4) {
-      list.style.setProperty(
-        "margin-top",
-        String(-reduction) + "px",
-        "important"
-      );
+    if(!active){
+      window.__MC_FARMACOS_LIST_ANCHOR_V1_R15={
+        build:BUILD,
+        performancePatch:PATCH,
+        strategy:"SCOPED_O1",
+        active:false,
+        globalDocumentScan:false,
+        globalClickBurst:false,
+        visualViewportListener:false,
+        timestamp:Date.now()
+      };
+      return true
     }
 
-    var fittedTop = list.getBoundingClientRect().top;
-    var available = Math.floor(getViewportHeight() - fittedTop - 18);
-    var maxHeight = Math.max(240, Math.min(560, available));
+    var tabsRect=tabs.getBoundingClientRect();
+    var listRect=list.getBoundingClientRect();
+    var targetTop=Math.round(tabsRect.bottom+TARGET_GAP);
+    var naturalTop=Math.round(listRect.top);
+    var reduction=Math.max(0,Math.min(180,naturalTop-targetTop));
+
+    if(reduction>4){
+      list.style.setProperty(
+        "margin-top",
+        String(-reduction)+"px",
+        "important"
+      )
+    }
+
+    var fittedTop=list.getBoundingClientRect().top;
+    var available=Math.floor(getViewportHeight()-fittedTop-18);
+    var maxHeight=Math.max(240,Math.min(560,available));
 
     list.style.setProperty(
       "max-height",
-      String(maxHeight) + "px",
+      String(maxHeight)+"px",
       "important"
     );
-    list.setAttribute("data-mc-list-anchor-fit", "true");
+    list.setAttribute("data-mc-list-anchor-fit","true");
 
-    window.__MC_FARMACOS_LIST_ANCHOR_V1_R15 = {
-      build: BUILD,
-      tabsBottom: Number(tabsRect.bottom.toFixed(2)),
-      naturalListTop: naturalTop,
-      targetListTop: targetTop,
-      reduction: reduction,
-      fittedListTop: Number(
+    window.__MC_FARMACOS_LIST_ANCHOR_V1_R15={
+      build:BUILD,
+      performancePatch:PATCH,
+      strategy:"SCOPED_O1",
+      active:true,
+      globalDocumentScan:false,
+      globalClickBurst:false,
+      visualViewportListener:false,
+      tabsBottom:Number(tabsRect.bottom.toFixed(2)),
+      naturalListTop:naturalTop,
+      targetListTop:targetTop,
+      reduction:reduction,
+      fittedListTop:Number(
         list.getBoundingClientRect().top.toFixed(2)
       ),
-      maxHeight: maxHeight,
-      timestamp: Date.now()
+      maxHeight:maxHeight,
+      timestamp:Date.now()
     };
-    /* V1-R20-R2: reaplicação silenciosa e sem spam no console. */
-return true;
-  }
 
-  function schedule() {
-    if (scheduled) return;
-    scheduled = true;
-    window.requestAnimationFrame(fit);
-  }
-
-  function boot() {
-    schedule();
-
-    [80, 220, 500, 1000, 1800, 3200, 5200].forEach(
-      function (delay) {
-        window.setTimeout(schedule, delay);
-      }
+    console.info(
+      "["+PATCH+"] APPLIED",
+      window.__MC_FARMACOS_LIST_ANCHOR_V1_R15
     );
 
-    document.addEventListener("input", function () {
-      [0, 80, 220, 500].forEach(function (delay) {
-        window.setTimeout(schedule, delay);
-      });
-    }, true);
+    return true
+  }
 
-    document.addEventListener("click", function () {
-      [0, 100, 300, 700, 1400].forEach(function (delay) {
-        window.setTimeout(schedule, delay);
-      });
-    }, true);
+  function schedule(){
+    if(scheduled)return;
+    scheduled=true;
+    window.requestAnimationFrame(fit)
+  }
 
-    window.addEventListener("resize", schedule, { passive: true });
+  function bind(){
+    var root=card();
+    if(!root || boundCard===root)return !!root;
+    boundCard=root;
+
+    root.addEventListener("input",schedule,true);
+    root.addEventListener("change",schedule,true);
+    root.addEventListener("focusin",schedule,true);
+    root.addEventListener("focusout",schedule,true);
+    root.addEventListener("click",schedule,true);
+    root.addEventListener("pointerup",schedule,true);
+
+    return true
+  }
+
+  function boot(){
+    bind();
+
+    [0,250,900].forEach(function(ms){
+      window.setTimeout(function(){
+        bind();
+        schedule()
+      },ms)
+    });
+
+    window.addEventListener("resize",schedule,{passive:true});
     window.addEventListener(
       "orientationchange",
       schedule,
-      { passive: true }
+      {passive:true}
     );
 
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener(
-        "resize",
-        schedule,
-        { passive: true }
-      );
-    }
+    window.__MC_FARMACOS_FREEZE_V1_B_R4={
+      build:PATCH,
+      target:"R15_GLOBAL_DOM_SCAN_AND_CLICK_BURST",
+      globalDocumentScanRemoved:true,
+      globalClickBurstRemoved:true,
+      visualViewportListenerRemoved:true,
+      owner:"hub-card-farmacos",
+      scheduling:"SINGLE_RAF",
+      bootRetries:[0,250,900],
+      clinicalDataMutation:false
+    };
 
-    console.log("[" + BUILD + "] MOUNTED");
+    console.log("["+PATCH+"] MOUNTED");
   }
 
-  if (document.readyState === "loading") {
+  if(document.readyState==="loading"){
     document.addEventListener(
       "DOMContentLoaded",
       boot,
-      { once: true }
-    );
-  } else {
-    boot();
+      {once:true}
+    )
+  }else{
+    boot()
   }
 })();
 </script>
+<!-- CALC-FARMACOS-FREEZE-V1-B-R4-R15-SCOPED-O1-LAYOUT -->
 <!-- CALC-FARMACOS-RESULTS-V1-R15-LIST-ANCHOR-FIT END -->
 
 
@@ -38284,36 +38452,123 @@ body.light-mode.calc-overlay-open #fd-modal.open .mc-r10-input{
     }
   },true);
 
-  var mo=new MutationObserver(function(){
-    setTimeout(function(){ensure();schedule();},20);
-  });
-  mo.observe(document.documentElement,{
-    childList:true,
-    subtree:true,
-    attributes:true,
-    attributeFilter:['class']
+  /* CALC-FARMACOS-FREEZE-V1-B-R2-QUICK-PATIENT-SCOPED-EVENT-DRIVEN */
+  var scopedModalObserver=null;
+  var observedModal=null;
+  var ensureTimer=0;
+
+  function scheduleEnsure(ms){
+    if(ensureTimer){
+      clearTimeout(ensureTimer);
+      ensureTimer=0
+    }
+    ensureTimer=setTimeout(function(){
+      ensureTimer=0;
+      ensure();
+      schedule()
+    },Math.max(0,Number(ms)||0))
+  }
+
+  function armScopedModal(){
+    var m=document.getElementById('fd-modal');
+    if(!m)return false;
+    if(observedModal===m&&scopedModalObserver)return true;
+
+    if(scopedModalObserver){
+      try{scopedModalObserver.disconnect()}catch(_){}
+    }
+
+    observedModal=m;
+    scopedModalObserver=new MutationObserver(function(mutations){
+      var relevant=mutations.some(function(mu){
+        return (
+          mu.type==='attributes'&&
+          (mu.attributeName==='class'||mu.attributeName==='data-current-drug-id')
+        )
+      });
+
+      if(relevant){
+        scheduleEnsure(20)
+      }
+    });
+
+    scopedModalObserver.observe(m,{
+      attributes:true,
+      attributeFilter:['class','data-current-drug-id']
+    });
+
+    return true
+  }
+
+  function finiteArmBurst(){
+    [0,120,400,900,1800].forEach(function(ms){
+      setTimeout(function(){
+        if(armScopedModal()&&modal()){
+          scheduleEnsure(20)
+        }
+      },ms)
+    })
+  }
+
+  document.addEventListener('click',function(ev){
+    var t=ev.target;
+    if(!t||!t.closest)return;
+
+    var farmCard=t.closest('#hub-card-farmacos');
+    var drugRow=t.closest(
+      '[data-mc-farm-canonical-drug],.mc-fnav-drug-row,#hm-drug-list .hm-drug-item'
+    );
+
+    if(farmCard||drugRow){
+      finiteArmBurst()
+    }
+  },true);
+
+  window.addEventListener('load',function(){
+    finiteArmBurst();
+    setTimeout(function(){
+      if(modal())scheduleEnsure(20)
+    },120)
   });
 
-  window.addEventListener('load',function(){setTimeout(function(){ensure();schedule();},120);});
   window.addEventListener('resize',schedule);
 
-  setInterval(function(){
-    if(modal()) ensure();
-  },250);
-
-  setTimeout(function(){ensure();schedule();},0);
-  setTimeout(function(){ensure();schedule();},120);
+  finiteArmBurst();
+  setTimeout(function(){
+    if(modal())scheduleEnsure(20)
+  },120);
 
   window.__MC_FDQP_R10={
     build:'CALC-FARMACOS-QUICK-PATIENT-V1-R10-RESTORE-DOM-OWNER',
-    owner:'DOM_OBSERVER_SINGLETON',
+    owner:'SCOPED_MODAL_EVENT_DRIVEN',
     routing:'PED_LT_18_ADULT_GTE_18',
-    safety:'NO_AGE_NO_PERSONALIZED_DOSE'
+    safety:'NO_AGE_NO_PERSONALIZED_DOSE',
+    performancePatch:'CALC-FARMACOS-FREEZE-V1-B-R2-QUICK-PATIENT-SCOPED-EVENT-DRIVEN',
+    globalDocumentObserver:false,
+    bodyObserver:false,
+    pollingInterval:false,
+    scopedModalObserver:true,
+    finiteArmRetries:[0,120,400,900,1800]
+  };
+
+  window.__MC_FARMACOS_FREEZE_V1_B_R2={
+    build:'CALC-FARMACOS-FREEZE-V1-B-R2-QUICK-PATIENT-SCOPED-EVENT-DRIVEN',
+    target:'QUICK_PATIENT_GLOBAL_OBSERVER_AND_POLLING',
+    globalObserverRemoved:true,
+    pollingRemoved:true,
+    clinicalDataMutation:false
   };
 })();
 </script>
+<!-- CALC-FARMACOS-FREEZE-V1-B-R2-QUICK-PATIENT-SCOPED-EVENT-DRIVEN -->
 <!-- CALC-FARMACOS-QUICK-PATIENT-V1-R10-RESTORE-DOM-OWNER END -->
 
+
+
+<!-- CALC-FARMACOS-GROUPS-V2-C-R0-R2-SINGLE-OWNER-RENDER-ONLY FLAG -->
+<script id="mc-farmacos-groups-v2-c-r0-flag">
+window.__MC_FARMACOS_GROUPS_PHASE1_RENDER_ONLY=true;
+</script>
 
 <!-- CALC-FARMACOS-BROWSER-V2-M1-NAV-CLICK-GROUPS START -->
 <style id="mc-farm-browser-v2-m1-style">
@@ -38812,7 +39067,10 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
     if(!sh)return;
     sh.removeAttribute('data-mc-fnav-results-active');
     var host=sh.querySelector('.mc-fnav-results');
-    if(host)host.removeAttribute('data-source-mode')
+    if(host)host.removeAttribute('data-source-mode');
+    if(typeof window.__MC_FARMACOS_APP_SUBPAGE_EXIT==='function'){
+      window.__MC_FARMACOS_APP_SUBPAGE_EXIT(sh)
+    }
   }
 
   function renderDrugResults(title,items,sourceMode){
@@ -38865,7 +39123,10 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
       });
       list.appendChild(frag)
     }
-    sh.setAttribute('data-mc-fnav-results-active','true')
+    sh.setAttribute('data-mc-fnav-results-active','true');
+    if(typeof window.__MC_FARMACOS_APP_SUBPAGE_ENTER==='function'){
+      window.__MC_FARMACOS_APP_SUBPAGE_ENTER(title||'',sh)
+    }
   }
 
   function contextTokens(query,label){
@@ -38903,6 +39164,12 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
   }
 
   function renderClinicalGroups(){
+    if(window.__MC_FARMACOS_GROUPS_PHASE1_RENDER_ONLY){
+      var fn=window.__MC_FARMACOS_GROUPS_PHASE1_RENDER;
+      return typeof fn==='function'
+        ? fn('browser-delegated')
+        : false
+    }
     if(state.applyingGroups)return;
     var sh=shell();
     if(!sh)return;
@@ -39021,6 +39288,10 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
     if(!target||!target.closest)return null;
     var btn=target.closest('button,[role="button"]');
     if(!btn)return null;
+
+    /* CALC-WEBVIEW-MOBILE-FREEZE-V1-B-R0:
+       o X externo pertence exclusivamente ao calculator-overlay.js. */
+    if(btn.id==='calculator-overlay-close')return null;
 
     var sh=shell();
     if(!sh)return null;
@@ -39307,22 +39578,10 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
     }
   },true);
 
-  var obs=new MutationObserver(function(){
-    window.setTimeout(function(){
-      renderClinicalGroups();
-      var sh=shell();
-      if(sh&&sh.getAttribute('data-mc-fnav-results-active')==='true'){
-        /* evita que rerender nativo torne painel antigo visível */
-        sh.setAttribute('data-mc-fnav-results-active','true')
-      }
-    },35)
-  });
-
+  /* CALC-FARMACOS-GROUPS-V2-C-R0
+     O renderer de grupos tem owner único externo.
+     Browser V2 NÃO observa document.body para reconstruir grupos. */
   function boot(){
-    if(document.body&&!obs.__bound){
-      obs.__bound=true;
-      obs.observe(document.body,{childList:true,subtree:true})
-    }
     renderClinicalGroups()
   }
 
@@ -39331,64 +39590,6 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
   }else{
     boot()
   }
-  function _mcRefreshGroupsAfterClassDiscovery(){
-    [120,350,800,1600,2800].forEach(function(ms){
-      setTimeout(function(){
-        try{
-          var sh=shell();
-          if(sh&&activeMode(sh)==='groups')renderClinicalGroups()
-        }catch(_){}
-      },ms)
-    })
-  }
-
-  window.addEventListener('load',function(){
-    setTimeout(renderClinicalGroups,160);
-    _mcRefreshGroupsAfterClassDiscovery()
-  });
-  document.addEventListener('click',function(ev){
-    var sh=shell();
-    var tab=ev.target&&ev.target.closest?ev.target.closest('[data-farmacos-mode]'):null;
-    if(sh&&tab&&sh.contains(tab)&&(tab.getAttribute('data-farmacos-mode')||'')==='groups'){
-      _mcRefreshGroupsAfterClassDiscovery()
-    }
-  },true);
-  setTimeout(renderClinicalGroups,250);
-  _mcRefreshGroupsAfterClassDiscovery();
-
-  window.__MC_FARM_BROWSER_V2_M1_R1_CLASS_INDEX_SYNC={
-    build:'CALC-FARMACOS-BROWSER-V2-M1-R1-CLASS-INDEX-SYNC',
-    classSources:['DRUG_DB.class','DRUG_DB._source','DRUG_DB.category','_searchIndex.class'],
-    glucocorticoidGroup:'Glucocorticoides',
-    clinicalDataMutation:false
-  };
-
-  window.__MC_FARM_BROWSER_V2_M1_R2_LIVE_GROUP_SEARCH={
-    build:'CALC-FARMACOS-BROWSER-V2-M1-R2-LIVE-GROUP-SEARCH',
-    groupsInput:'LIVE_FILTER',
-    azInput:'NATIVE_SEARCH_PRESERVED',
-    queryExample:'glucocor -> Glucocorticoides',
-    clinicalDataMutation:false
-  };
-
-  window.__MC_FARM_BROWSER_V2_M1_R3_INSTANT_TAP={
-    build:'CALC-FARMACOS-BROWSER-V2-M1-R3-FINAL-INSTANT-TAP-CLOSE',
-    trigger:'POINTERUP_SYNC',
-    drugOpenTimerMs:0,
-    closeX:'POINTERUP_SYNC_PROGRAMMATIC_CLICK',
-    maxMovementPx:12,
-    syntheticClickSuppressionMs:420,
-    clinicalDataMutation:false
-  };
-
-  /* CALC-FARMACOS-V2-GROUPS-CANONICAL-AUTHORITY-V1-R1
-     Reusa o renderer canônico já existente; nenhum segundo catálogo. */
-  window.__MC_FARMACOS_V2_FORCE_CANONICAL_GROUPS=function(){
-    renderClinicalGroups();
-    var input=searchInput();
-    _mcFilterClinicalGroups(String((input&&input.value)||''));
-    return true
-  };
 
   window.__MC_FARM_BROWSER_V2_M1_STATE={
     build:'CALC-FARMACOS-BROWSER-V2-M1-NAV-CLICK-GROUPS',
@@ -39407,6 +39608,528 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
 
 
 
+
+
+<!-- CALC-FARMACOS-CONTEXTS-V2-C-R1-MATCH-GROUPS-VISUAL START -->
+<style id="mc-farmacos-contexts-v2-c-r1-match-groups-visual">
+/*
+  CONTEXTOS V2 — mesma gramática visual homologada em Todos os grupos.
+  Apenas CSS. Nenhuma alteração de renderer, dados, callbacks ou navegação.
+*/
+
+/* Lista começa imediatamente abaixo das tabs, como Todos os grupos. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+> .farmacos-v2-context-list{
+  width:100% !important;
+  margin-top:0 !important;
+  padding-top:0 !important;
+  border-top:1px solid rgba(148,163,184,.14) !important;
+}
+
+/* Cada área clínica vira uma seção flat, sem card/background próprio. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context{
+  display:block !important;
+  width:100% !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  border-bottom:1px solid rgba(148,163,184,.14) !important;
+}
+
+/* Cabeçalho da área = mesmo padrão dos títulos de Todos os grupos. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row{
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  width:100% !important;
+  min-height:54px !important;
+  margin:0 !important;
+  padding:12px 2px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  text-align:left !important;
+  color:inherit !important;
+}
+
+/* Área clínica: título forte, sem segunda linha visual. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row
+.farmacos-v2-row-main{
+  flex:1 1 auto !important;
+  min-width:0 !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row
+.farmacos-v2-row-title{
+  display:block !important;
+  font-size:14px !important;
+  line-height:1.25 !important;
+  font-weight:750 !important;
+  letter-spacing:-.01em !important;
+  margin:0 !important;
+}
+
+/* "3 módulos" não compete com o título; o contador lateral já resolve. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row
+.farmacos-v2-row-subtitle{
+  display:none !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row
+.farmacos-v2-row-count{
+  flex:0 0 auto !important;
+  font-size:12px !important;
+  line-height:1 !important;
+  opacity:.58 !important;
+  font-variant-numeric:tabular-nums !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row
+.farmacos-v2-chevron{
+  flex:0 0 auto !important;
+  width:18px !important;
+  font-size:18px !important;
+  line-height:1 !important;
+  text-align:center !important;
+  opacity:.56 !important;
+  transition:transform .12s ease !important;
+}
+
+/* Remove o antigo fundo de "card interno". */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-modules{
+  display:none;
+  margin:0 !important;
+  padding:0 0 4px 14px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context.is-open
+> .farmacos-v2-modules{
+  display:block !important;
+}
+
+/* Módulos: mesma densidade/indentação dos itens de Todos os grupos. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row{
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  width:100% !important;
+  min-height:48px !important;
+  margin:0 !important;
+  padding:9px 0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  border-bottom:1px solid rgba(148,163,184,.10) !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  color:inherit !important;
+  text-align:left !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row
+.farmacos-v2-row-main{
+  flex:1 1 auto !important;
+  min-width:0 !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row
+.farmacos-v2-row-title{
+  display:block !important;
+  font-size:13.5px !important;
+  line-height:1.25 !important;
+  font-weight:650 !important;
+  margin:0 !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row
+.farmacos-v2-row-subtitle{
+  display:block !important;
+  margin-top:2px !important;
+  font-size:11.5px !important;
+  line-height:1.2 !important;
+  opacity:.55 !important;
+}
+
+/* Evita dois números concorrendo na mesma linha.
+   Mantém a quantidade textual "N fármacos" abaixo do título. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row
+.farmacos-v2-row-count{
+  display:none !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row
+.farmacos-v2-chevron{
+  flex:0 0 auto !important;
+  width:20px !important;
+  font-size:18px !important;
+  line-height:1 !important;
+  text-align:right !important;
+  opacity:.38 !important;
+}
+
+/* Interação discreta; sem "card fill" permanente. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row:hover,
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row:hover{
+  background:transparent !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row:active,
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row:active{
+  opacity:.82 !important;
+}
+
+/* Light mode: mantém a mesma estrutura flat. */
+body.light-mode
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context,
+body.light
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context{
+  background:transparent !important;
+  box-shadow:none !important;
+}
+
+body.light-mode
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-modules,
+body.light
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-modules{
+  background:transparent !important;
+}
+</style>
+
+<script id="mc-farmacos-contexts-v2-c-r1-state">
+window.__MC_FARMACOS_CONTEXTS_V2_C_R1={
+  build:"CALC-FARMACOS-CONTEXTS-V2-C-R1-MATCH-GROUPS-VISUAL",
+  scope:"VISUAL_ONLY",
+  owner:"EXISTING_CONTEXT_RENDERER",
+  hierarchy:"CLINICAL_AREA_TO_MODULE",
+  sectionMinHeight:54,
+  moduleMinHeight:48,
+  moduleIndent:14,
+  nestedCardBackground:false,
+  callbacksChanged:false,
+  dataChanged:false,
+  clinicalDataMutation:false
+};
+</script>
+<!-- CALC-FARMACOS-CONTEXTS-V2-C-R1-MATCH-GROUPS-VISUAL END -->
+
+
+<!-- CALC-FARMACOS-CONTEXTS-V2-C-R1-R2-MATCH-GROUPS-VISUAL START -->
+<style id="mc-farmacos-contexts-v2-c-r1-r2-match-groups-visual">
+/*
+  CONTEXTOS V2 — mesma gramática visual homologada em Todos os grupos.
+  Apenas CSS. Nenhuma alteração de renderer, dados, callbacks ou navegação.
+*/
+
+/* Lista começa imediatamente abaixo das tabs, como Todos os grupos. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+> .farmacos-v2-context-list{
+  width:100% !important;
+  margin-top:0 !important;
+  padding-top:0 !important;
+  border-top:1px solid rgba(148,163,184,.14) !important;
+}
+
+/* Cada área clínica vira uma seção flat, sem card/background próprio. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context{
+  display:block !important;
+  width:100% !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  border-bottom:1px solid rgba(148,163,184,.14) !important;
+}
+
+/* Cabeçalho da área = mesmo padrão dos títulos de Todos os grupos. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row{
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  width:100% !important;
+  min-height:54px !important;
+  margin:0 !important;
+  padding:12px 2px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  text-align:left !important;
+  color:inherit !important;
+}
+
+/* Área clínica: título forte, sem segunda linha visual. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row
+.farmacos-v2-row-main{
+  flex:1 1 auto !important;
+  min-width:0 !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row
+.farmacos-v2-row-title{
+  display:block !important;
+  font-size:14px !important;
+  line-height:1.25 !important;
+  font-weight:750 !important;
+  letter-spacing:-.01em !important;
+  margin:0 !important;
+}
+
+/* "3 módulos" não compete com o título; o contador lateral já resolve. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row
+.farmacos-v2-row-subtitle{
+  display:none !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row
+.farmacos-v2-row-count{
+  flex:0 0 auto !important;
+  font-size:12px !important;
+  line-height:1 !important;
+  opacity:.58 !important;
+  font-variant-numeric:tabular-nums !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row
+.farmacos-v2-chevron{
+  flex:0 0 auto !important;
+  width:18px !important;
+  font-size:18px !important;
+  line-height:1 !important;
+  text-align:center !important;
+  opacity:.56 !important;
+  transition:transform .12s ease !important;
+}
+
+/* Remove o antigo fundo de "card interno". */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-modules{
+  display:none;
+  margin:0 !important;
+  padding:0 0 4px 14px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context.is-open
+> .farmacos-v2-modules{
+  display:block !important;
+}
+
+/* Módulos: mesma densidade/indentação dos itens de Todos os grupos. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row{
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  width:100% !important;
+  min-height:48px !important;
+  margin:0 !important;
+  padding:9px 0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  border-bottom:1px solid rgba(148,163,184,.10) !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  color:inherit !important;
+  text-align:left !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row
+.farmacos-v2-row-main{
+  flex:1 1 auto !important;
+  min-width:0 !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row
+.farmacos-v2-row-title{
+  display:block !important;
+  font-size:13.5px !important;
+  line-height:1.25 !important;
+  font-weight:650 !important;
+  margin:0 !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row
+.farmacos-v2-row-subtitle{
+  display:block !important;
+  margin-top:2px !important;
+  font-size:11.5px !important;
+  line-height:1.2 !important;
+  opacity:.55 !important;
+}
+
+/* Evita dois números concorrendo na mesma linha.
+   Mantém a quantidade textual "N fármacos" abaixo do título. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row
+.farmacos-v2-row-count{
+  display:none !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row
+.farmacos-v2-chevron{
+  flex:0 0 auto !important;
+  width:20px !important;
+  font-size:18px !important;
+  line-height:1 !important;
+  text-align:right !important;
+  opacity:.38 !important;
+}
+
+/* Interação discreta; sem "card fill" permanente. */
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row:hover,
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row:hover{
+  background:transparent !important;
+}
+
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context-row:active,
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-module-row:active{
+  opacity:.82 !important;
+}
+
+/* Light mode: mantém a mesma estrutura flat. */
+body.light-mode
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context,
+body.light
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-context{
+  background:transparent !important;
+  box-shadow:none !important;
+}
+
+body.light-mode
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-modules,
+body.light
+#farmacos-v2-shell
+[data-farmacos-panel="contexts"]
+.farmacos-v2-modules{
+  background:transparent !important;
+}
+</style>
+
+<script id="mc-farmacos-contexts-v2-c-r1-r2-state">
+window.__MC_FARMACOS_CONTEXTS_V2_C_R1_R2={
+  build:"CALC-FARMACOS-CONTEXTS-V2-C-R1-R2-MATCH-GROUPS-VISUAL",
+  scope:"VISUAL_ONLY",
+  owner:"EXISTING_CONTEXT_RENDERER",
+  hierarchy:"CLINICAL_AREA_TO_MODULE",
+  sectionMinHeight:54,
+  moduleMinHeight:48,
+  moduleIndent:14,
+  nestedCardBackground:false,
+  callbacksChanged:false,
+  dataChanged:false,
+  clinicalDataMutation:false
+};
+</script>
+<!-- CALC-FARMACOS-CONTEXTS-V2-C-R1-R2-MATCH-GROUPS-VISUAL END -->
 
 <!-- CALC-FARMACOS-V2-GROUPS-CLINICAL-HIERARCHY-V1-R3 START -->
 <style id="mc-farmacos-v2-groups-clinical-hierarchy-v1-r3-style">
@@ -39457,75 +40180,57 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
   line-height:1;
   text-align:center;
   opacity:.56;
-  transform:rotate(0deg);
   transition:transform .12s ease;
 }
-#farmacos-v2-shell .mc-farm-clinical-section.is-open >
-.mc-farm-clinical-section-head .mc-farm-clinical-section-chevron{
+#farmacos-v2-shell .mc-farm-clinical-section.is-open
+.mc-farm-clinical-section-chevron{
   transform:rotate(90deg);
 }
 #farmacos-v2-shell .mc-farm-clinical-section-body{
   display:none;
   padding:0 0 4px 14px;
 }
-#farmacos-v2-shell .mc-farm-clinical-section.is-open >
+#farmacos-v2-shell .mc-farm-clinical-section.is-open
 .mc-farm-clinical-section-body{
   display:block;
 }
-#farmacos-v2-shell .mc-farm-clinical-section-body .farmacos-v2-group-row,
-#farmacos-v2-shell .mc-farm-clinical-section-body .mc-farm-context-row{
-  min-height:48px;
-  padding-left:0!important;
-}
-#farmacos-v2-shell .mc-farm-context-row{
-  appearance:none;
-  -webkit-appearance:none;
+#farmacos-v2-shell .mc-farm-render-only-row{
   width:100%;
-  margin:0;
-  border:0;
-  border-radius:0;
-  background:transparent;
-  color:inherit;
-  display:flex;
-  align-items:center;
   min-height:48px;
   padding:9px 0;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border:0;
+  border-bottom:1px solid rgba(148,163,184,.10);
+  background:transparent;
+  color:inherit;
   text-align:left;
   font:inherit;
-  cursor:pointer;
 }
-#farmacos-v2-shell .mc-farm-context-row-main{
+#farmacos-v2-shell .mc-farm-render-only-main{
   flex:1 1 auto;
   min-width:0;
 }
-#farmacos-v2-shell .mc-farm-context-row-title{
+#farmacos-v2-shell .mc-farm-render-only-title{
   display:block;
   font-size:13.5px;
   line-height:1.25;
   font-weight:650;
 }
-#farmacos-v2-shell .mc-farm-context-row-subtitle{
+#farmacos-v2-shell .mc-farm-render-only-subtitle{
   display:block;
   margin-top:2px;
   font-size:11.5px;
   line-height:1.2;
   opacity:.55;
 }
-#farmacos-v2-shell .mc-farm-context-row-chevron{
+#farmacos-v2-shell .mc-farm-render-only-chevron{
   flex:0 0 auto;
   width:20px;
   text-align:right;
   font-size:18px;
-  opacity:.5;
-}
-#farmacos-v2-shell .mc-farm-clinical-search-empty{
-  display:none;
-  padding:18px 2px;
-  font-size:13px;
-  opacity:.62;
-}
-#farmacos-v2-shell .mc-farm-clinical-search-empty.is-visible{
-  display:block;
+  opacity:.38;
 }
 </style>
 
@@ -39533,94 +40238,67 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
 (function(){
   'use strict';
 
-  if(window.__MC_FARMACOS_V2_GROUPS_CLINICAL_HIERARCHY_V1_R3)return;
-  window.__MC_FARMACOS_V2_GROUPS_CLINICAL_HIERARCHY_V1_R3=true;
+  var BUILD='CALC-FARMACOS-GROUPS-V2-C-R0-R2-SINGLE-OWNER-RENDER-ONLY';
 
-  /*
-   * Hierarquia UI aprovada.
-   * classIds apontam exclusivamente para GROUPS já existente.
-   * contextRows reutilizam CONTEXT_TOKENS/eventos já existentes.
-   */
+  var LABELS={
+    analgesicos:{pt:'Analgésicos e antipiréticos',es:'Analgésicos y antipiréticos'},
+    antiinflamatorios:{pt:'Anti-inflamatórios',es:'Antiinflamatorios'},
+    opioides:{pt:'Opioides',es:'Opioides'},
+    anticoagulantes:{pt:'Anticoagulantes',es:'Anticoagulantes'},
+    antiagregantes:{pt:'Antiagregantes plaquetários',es:'Antiagregantes plaquetarios'},
+    antiarritmicos:{pt:'Antiarrítmicos',es:'Antiarrítmicos'},
+    antihipertensivos:{pt:'Anti-hipertensivos',es:'Antihipertensivos'},
+    cardiovasculares:{pt:'Cardiovasculares',es:'Cardiovasculares'},
+    diureticos:{pt:'Diuréticos',es:'Diuréticos'},
+    hipolipemiantes:{pt:'Hipolipemiantes',es:'Hipolipemiantes'},
+    antidiabeticos:{pt:'Antidiabéticos',es:'Antidiabéticos'},
+    antimicrobianos:{pt:'Antimicrobianos',es:'Antimicrobianos'},
+    antifungicos:{pt:'Antifúngicos',es:'Antifúngicos'},
+    antivirais:{pt:'Antivirais',es:'Antivirales'},
+    antiparasitarios:{pt:'Antiparasitários',es:'Antiparasitarios'},
+    glucocorticoides:{pt:'Glucocorticoides',es:'Glucocorticoides'},
+    anticonvulsivantes:{pt:'Anticonvulsivantes',es:'Anticonvulsivantes'},
+    antidepressivos:{pt:'Antidepressivos',es:'Antidepresivos'},
+    antipsicoticos:{pt:'Antipsicóticos',es:'Antipsicóticos'},
+    ansioliticos:{pt:'Ansiolíticos e sedativos',es:'Ansiolíticos y sedantes'},
+    anestesicos:{pt:'Anestésicos',es:'Anestésicos'},
+    respiratorios:{pt:'Respiratórios e broncodilatadores',es:'Respiratorios y broncodilatadores'},
+    antihistaminicos:{pt:'Anti-histamínicos',es:'Antihistamínicos'},
+    antiemeticos:{pt:'Antieméticos',es:'Antieméticos'},
+    gastrointestinais:{pt:'Gastrointestinais',es:'Gastrointestinales'},
+    hematologicos:{pt:'Hematológicos',es:'Hematológicos'},
+    urologicos:{pt:'Urológicos',es:'Urológicos'},
+    hormonais:{pt:'Hormonais e reprodutivos',es:'Hormonales y reproductivos'}
+  };
+
   var SECTIONS=[
-    {
-      id:'infectologia',
-      pt:'Antimicrobianos e Infectologia',
-      es:'Antimicrobianos e Infectología',
-      classIds:['antimicrobianos','antifungicos','antivirais','antiparasitarios']
-    },
-    {
-      id:'dor_reumato',
-      pt:'Dor, Inflamação e Reumatologia',
-      es:'Dolor, Inflamación y Reumatología',
-      classIds:['analgesicos','antiinflamatorios','opioides']
-    },
-    {
-      id:'neuro_psiquiatria',
-      pt:'Neurologia, Psiquiatria e Sedação',
-      es:'Neurología, Psiquiatría y Sedación',
-      classIds:['anticonvulsivantes','antidepressivos','antipsicoticos','ansioliticos']
-    },
-    {
-      id:'cardiorrenal',
-      pt:'Cardiovascular, Renal e Anticoagulação',
-      es:'Cardiovascular, Renal y Anticoagulación',
-      classIds:[
-        'anticoagulantes','antiagregantes','antiarritmicos',
-        'antihipertensivos','cardiovasculares','diureticos','hipolipemiantes'
-      ],
+    {id:'infectologia',pt:'Antimicrobianos e Infectologia',es:'Antimicrobianos e Infectología',
+      classes:['antimicrobianos','antifungicos','antivirais','antiparasitarios']},
+    {id:'dor_reumato',pt:'Dor, Inflamação e Reumatologia',es:'Dolor, Inflamación y Reumatología',
+      classes:['analgesicos','antiinflamatorios','opioides']},
+    {id:'neuro_psiquiatria',pt:'Neurologia, Psiquiatria e Sedação',es:'Neurología, Psiquiatría y Sedación',
+      classes:['anticonvulsivantes','antidepressivos','antipsicoticos','ansioliticos']},
+    {id:'cardiorrenal',pt:'Cardiovascular, Renal e Anticoagulação',es:'Cardiovascular, Renal y Anticoagulación',
+      classes:['anticoagulantes','antiagregantes','antiarritmicos','antihipertensivos','cardiovasculares','diureticos','hipolipemiantes'],
+      contexts:[{pt:'Nefrologia',es:'Nefrología'}]},
+    {id:'resp_imuno',pt:'Respiratório, Alergia e Imunologia',es:'Respiratorio, Alergia e Inmunología',
+      classes:['respiratorios','antihistaminicos','glucocorticoides']},
+    {id:'gastro_endocrino',pt:'Gastroenterologia e Endócrino-Metabólico',es:'Gastroenterología y Endocrino-Metabólico',
+      classes:['gastrointestinais','antiemeticos','antidiabeticos']},
+    {id:'emergencia_tox',pt:'Emergência, Infusões e Toxicologia',es:'Emergencia, Infusiones y Toxicología',
+      classes:['anestesicos'],
       contexts:[
-        {id:'nefrologia',pt:'Nefrologia',es:'Nefrología'}
-      ]
-    },
-    {
-      id:'resp_imuno',
-      pt:'Respiratório, Alergia e Imunologia',
-      es:'Respiratorio, Alergia e Inmunología',
-      classIds:['respiratorios','antihistaminicos','glucocorticoides']
-    },
-    {
-      id:'gastro_endocrino',
-      pt:'Gastroenterologia e Endócrino-Metabólico',
-      es:'Gastroenterología y Endocrino-Metabólico',
-      classIds:['gastrointestinais','antiemeticos','antidiabeticos']
-    },
-    {
-      id:'emergencia_tox',
-      pt:'Emergência, Infusões e Toxicologia',
-      es:'Emergencia, Infusiones y Toxicología',
-      classIds:['anestesicos'],
-      contexts:[
-        {id:'emergencia',pt:'Emergência',es:'Emergencia'},
-        {id:'infusao',pt:'Infusões',es:'Infusiones'},
-        {id:'toxicologia',pt:'Toxicologia',es:'Toxicología'}
-      ]
-    },
-    {
-      id:'hematologia',
-      pt:'Hematologia',
-      es:'Hematología',
-      classIds:['hematologicos']
-    },
-    {
-      id:'gineco_uro',
-      pt:'Ginecologia, Urologia e Saúde Reprodutiva',
-      es:'Ginecología, Urología y Salud Reproductiva',
-      classIds:['urologicos','hormonais']
-    },
-    {
-      id:'oftalmologia',
-      pt:'Oftalmologia',
-      es:'Oftalmología',
-      classIds:[],
-      contexts:[
-        {id:'oftalmologia',pt:'Oftalmologia',es:'Oftalmología'}
-      ]
-    }
+        {pt:'Emergência',es:'Emergencia'},
+        {pt:'Infusões',es:'Infusiones'},
+        {pt:'Toxicologia',es:'Toxicología'}
+      ]},
+    {id:'hematologia',pt:'Hematologia',es:'Hematología',
+      classes:['hematologicos']},
+    {id:'gineco_uro',pt:'Ginecologia, Urologia e Saúde Reprodutiva',es:'Ginecología, Urología y Salud Reproductiva',
+      classes:['urologicos','hormonais']},
+    {id:'oftalmologia',pt:'Oftalmologia',es:'Oftalmología',
+      classes:[],contexts:[{pt:'Oftalmologia',es:'Oftalmología'}]}
   ];
-
-  var openState=Object.create(null);
-  var running=false;
-  var pending=0;
 
   function lang(){
     var x='';
@@ -39628,352 +40306,1806 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
     return x.indexOf('es')===0?'es':'pt'
   }
 
-  function norm(v){
-    var t=String(v==null?'':v).toLowerCase();
-    if(t.normalize)t=t.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-    return t.replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim()
+  function host(){
+    var sh=document.getElementById('farmacos-v2-shell');
+    return sh?sh.querySelector('.farmacos-v2-group-list'):null
   }
 
-  function groupHosts(){
-    return Array.from(document.querySelectorAll('.farmacos-v2-group-list'))
+  function makeRow(title,subtitle,id){
+    var row=document.createElement('div');
+    row.className='mc-farm-render-only-row';
+    row.setAttribute('data-mc-render-only-group',id||'context');
+    row.setAttribute('aria-disabled','true');
+
+    var main=document.createElement('span');
+    main.className='mc-farm-render-only-main';
+
+    var t=document.createElement('span');
+    t.className='mc-farm-render-only-title';
+    t.textContent=title;
+
+    var sub=document.createElement('span');
+    sub.className='mc-farm-render-only-subtitle';
+    sub.textContent=subtitle;
+
+    var ch=document.createElement('span');
+    ch.className='mc-farm-render-only-chevron';
+    ch.textContent='›';
+
+    main.appendChild(t);
+    main.appendChild(sub);
+    row.appendChild(main);
+    row.appendChild(ch);
+    return row
   }
 
-  function visibleSearch(){
-    var all=Array.from(document.querySelectorAll('#hm-drug-search'));
-    var v=all.find(function(el){
-      var r=el.getBoundingClientRect();
-      var cs=getComputedStyle(el);
-      return r.width>0&&r.height>0&&cs.display!=='none'&&cs.visibility!=='hidden'
-    });
-    return v||all[0]||null
-  }
-
-  function currentTerm(){
-    var input=visibleSearch();
-    return String((input&&input.value)||'')
-  }
-
-  function buildCanonicalMap(){
-    var fn=window.__MC_FARMACOS_V2_FORCE_CANONICAL_GROUPS;
-    if(typeof fn!=='function')return null;
-
-    fn();
-
-    var source=groupHosts().find(function(h){
-      return h.querySelector('.farmacos-v2-group-row[data-mc-fnav-group]')
-    });
-    if(!source)return null;
-
-    var map=Object.create(null);
-    source.querySelectorAll('.farmacos-v2-group-row[data-mc-fnav-group]').forEach(function(row){
-      var id=row.getAttribute('data-mc-fnav-group')||'';
-      if(id&&!map[id])map[id]=row.cloneNode(true)
-    });
-    return map
-  }
-
-  function makeContextRow(ctx,l){
-    var btn=document.createElement('button');
-    btn.type='button';
-    btn.className='mc-farm-context-row';
-    btn.setAttribute('data-farmacos-query',ctx.id);
-    btn.setAttribute('data-mc-clinical-context',ctx.id);
-    btn.innerHTML=
-      '<span class="mc-farm-context-row-main">'+
-        '<span class="mc-farm-context-row-title"></span>'+
-        '<span class="mc-farm-context-row-subtitle"></span>'+
-      '</span>'+
-      '<span class="mc-farm-context-row-chevron">›</span>';
-
-    btn.querySelector('.mc-farm-context-row-title').textContent=
-      l==='es'?ctx.es:ctx.pt;
-
-    btn.querySelector('.mc-farm-context-row-subtitle').textContent=
-      l==='es'?'Contexto clínico':'Contexto clínico';
-
-    return btn
-  }
-
-  function buildSection(sec,map,l){
-    var wrapper=document.createElement('section');
-    wrapper.className='mc-farm-clinical-section';
-    wrapper.setAttribute('data-mc-clinical-section',sec.id);
+  function buildSection(sec,l){
+    var wrap=document.createElement('section');
+    wrap.className='mc-farm-clinical-section';
+    wrap.setAttribute('data-mc-clinical-section',sec.id);
 
     var head=document.createElement('button');
     head.type='button';
     head.className='mc-farm-clinical-section-head';
     head.setAttribute('data-mc-clinical-section-toggle',sec.id);
 
+    var title=document.createElement('span');
+    title.className='mc-farm-clinical-section-title';
+    title.textContent=l==='es'?sec.es:sec.pt;
+
+    var count=(sec.classes||[]).length+(sec.contexts||[]).length;
+    var meta=document.createElement('span');
+    meta.className='mc-farm-clinical-section-meta';
+    meta.textContent=String(count);
+
+    var chevron=document.createElement('span');
+    chevron.className='mc-farm-clinical-section-chevron';
+    chevron.textContent='›';
+
+    head.appendChild(title);
+    head.appendChild(meta);
+    head.appendChild(chevron);
+
     var body=document.createElement('div');
     body.className='mc-farm-clinical-section-body';
 
-    var childCount=0;
-
-    (sec.classIds||[]).forEach(function(id){
-      if(!map[id])return;
-      body.appendChild(map[id].cloneNode(true));
-      childCount+=1
+    (sec.classes||[]).forEach(function(id){
+      var x=LABELS[id];
+      if(!x)return;
+      body.appendChild(
+        makeRow(
+          l==='es'?x.es:x.pt,
+          l==='es'?'Clase farmacológica':'Classe farmacológica',
+          id
+        )
+      )
     });
 
     (sec.contexts||[]).forEach(function(ctx){
-      body.appendChild(makeContextRow(ctx,l));
-      childCount+=1
+      body.appendChild(
+        makeRow(
+          l==='es'?ctx.es:ctx.pt,
+          l==='es'?'Contexto clínico':'Contexto clínico',
+          'context'
+        )
+      )
     });
 
-    if(!childCount)return null;
-
-    head.innerHTML=
-      '<span class="mc-farm-clinical-section-title"></span>'+
-      '<span class="mc-farm-clinical-section-meta"></span>'+
-      '<span class="mc-farm-clinical-section-chevron">›</span>';
-
-    head.querySelector('.mc-farm-clinical-section-title').textContent=
-      l==='es'?sec.es:sec.pt;
-
-    head.querySelector('.mc-farm-clinical-section-meta').textContent=
-      childCount+' '+(l==='es'?(childCount===1?'grupo':'grupos'):(childCount===1?'grupo':'grupos'));
-
-    wrapper.appendChild(head);
-    wrapper.appendChild(body);
-
-    if(openState[sec.id])wrapper.classList.add('is-open');
-    head.setAttribute('aria-expanded',wrapper.classList.contains('is-open')?'true':'false');
-
-    return wrapper
+    wrap.appendChild(head);
+    wrap.appendChild(body);
+    return wrap
   }
 
-  function buildTree(map,l){
+  function render(reason){
+    var h=host();
+    if(!h)return false;
+
+    if(
+      h.getAttribute('data-mc-groups-ui-owner')==='SINGLE_RENDER_ONLY_C_R0' &&
+      h.querySelectorAll(':scope > .mc-farm-clinical-sections > .mc-farm-clinical-section').length===10
+    ){
+      return true
+    }
+
+    var l=lang();
     var root=document.createElement('div');
     root.className='mc-farm-clinical-sections';
 
     SECTIONS.forEach(function(sec){
-      var node=buildSection(sec,map,l);
-      if(node)root.appendChild(node)
+      root.appendChild(buildSection(sec,l))
     });
 
-    var empty=document.createElement('div');
-    empty.className='mc-farm-clinical-search-empty';
-    empty.textContent=l==='es'
-      ?'No se encontraron grupos farmacológicos.'
-      :'Nenhum grupo farmacológico encontrado.';
-    root.appendChild(empty);
+    h.textContent='';
+    h.appendChild(root);
+    h.setAttribute('data-mc-clinical-groups','true');
+    h.setAttribute('data-mc-groups-ui-owner','SINGLE_RENDER_ONLY_C_R0');
+    h.setAttribute('data-mc-groups-ui-reason',reason||'unknown');
 
-    return root
+    return true
   }
 
-  function applySearch(host,term){
-    var q=norm(term);
-    var anySection=false;
+  function bind(){
+    var h=host();
+    if(!h||h.__mcRenderOnlyBound)return;
+    h.__mcRenderOnlyBound=true;
 
-    host.querySelectorAll('.mc-farm-clinical-section').forEach(function(section){
-      var secId=section.getAttribute('data-mc-clinical-section')||'';
-      var title=(section.querySelector('.mc-farm-clinical-section-title')||{}).textContent||'';
-      var sectionHit=!!q && norm(title+' '+secId).indexOf(q)!==-1;
+    h.addEventListener('click',function(ev){
+      var head=ev.target.closest&&ev.target.closest('[data-mc-clinical-section-toggle]');
+      if(!head||!h.contains(head))return;
+
+      ev.preventDefault();
+      ev.stopPropagation();
+
+      var sec=head.closest('.mc-farm-clinical-section');
+      if(sec)sec.classList.toggle('is-open')
+    });
+  }
+
+  window.__MC_FARMACOS_GROUPS_PHASE1_RENDER=function(reason){
+    var ok=render(reason||'external');
+    bind();
+    return ok
+  };
+
+  window.__MC_FARMACOS_GROUPS_PHASE1_FILTER=function(){
+    return 0
+  };
+
+  /*
+    Compatibilidade autoritativa C-R0-R2:
+    qualquer caller legado que ainda invoque FORCE_CANONICAL_GROUPS
+    cai no mesmo owner visual, sem DB/clone/observer.
+  */
+  window.__MC_FARMACOS_V2_FORCE_CANONICAL_GROUPS=function(){
+    return window.__MC_FARMACOS_GROUPS_PHASE1_RENDER(
+      'compat-force-canonical'
+    )
+  };
+
+  window.__MC_FARMACOS_V2_FILTER_CANONICAL_GROUPS=function(){
+    return 0
+  };
+
+  window.__MC_FARMACOS_GROUPS_PHASE1_STATE={
+    build:BUILD,
+    owner:'SINGLE_RENDER_ONLY_C_R0',
+    sections:10,
+    databaseRead:false,
+    canonicalForce:false,
+    cloneRows:false,
+    mutationObserver:false,
+    interval:false,
+    watchdog:false,
+    groupOpen:false,
+    drugOpen:false,
+    sectionToggleOnly:true,
+    clinicalDataMutation:false
+  };
+
+  render('runtime-init');
+  bind();
+
+  console.log('[Farmacos Groups C-R0] SINGLE RENDER OWNER ACTIVE');
+})();
+</script>
+<!-- CALC-FARMACOS-GROUPS-V2-C-R0-R2-SINGLE-OWNER-RENDER-ONLY -->
+<!-- CALC-FARMACOS-V2-GROUPS-CLINICAL-HIERARCHY-V1-R3 END -->
+
+<!-- CALC-FARMACOS-NAV-V2-C-R2-R1-APP-SUBPAGE-LOCAL-SEARCH START -->
+<style id="mc-farmacos-nav-v2-c-r2-r1-app-subpage-style">
+/*
+  RAIZ: busca + A-Z / Contextos / Todos os grupos.
+  SUBTELA: voltar no header + título centralizado + lista de fármacos.
+*/
+
+/* Resultado não compete com busca/tabs da raiz. */
+#farmacos-v2-shell[data-mc-fnav-results-active="true"]
+:is(
+  .hm-search-wrap,
+  .farmacos-search-wrapper,
+  .hm-drug-search-wrapper,
+  .search-wrapper,
+  .search-box,
+  [data-farmacos-v2-search-wrapper],
+  [data-mc-farmacos-search-wrapper-refined],
+  [data-mc-farm-browser-r6-search-shell="true"],
+  .farmacos-v2-tabs
+){
+  display:none!important;
+}
+
+#farmacos-v2-shell[data-mc-fnav-results-active="true"]
+[data-mc-farm-browser-r6-results-host="true"]{
+  display:none!important;
+}
+
+/* O header interno antigo desaparece; o header real do overlay vira topbar. */
+#farmacos-v2-shell[data-mc-fnav-results-active="true"] .mc-fnav-results-head{
+  display:none!important;
+}
+
+#farmacos-v2-shell[data-mc-fnav-results-active="true"] .mc-fnav-results{
+  display:block!important;
+  margin:0!important;
+  padding:6px 2px 10px!important;
+}
+
+#farmacos-v2-shell[data-mc-fnav-results-active="true"] .mc-fnav-list{
+  width:100%!important;
+  margin:6px 0 0!important;
+  padding:0!important;
+}
+
+#mc-farmacos-subpage-search-wrap{
+  width:100%!important;
+  min-height:38px!important;
+  margin:0!important;
+  padding:0 10px!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  border:1px solid rgba(148,163,184,.28)!important;
+  border-radius:10px!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+#mc-farmacos-subpage-search-icon{
+  flex:0 0 auto!important;
+  width:15px!important;
+  height:15px!important;
+  opacity:.56!important;
+  pointer-events:none!important;
+}
+
+#mc-farmacos-subpage-search{
+  flex:1 1 auto!important;
+  width:100%!important;
+  min-width:0!important;
+  height:36px!important;
+  min-height:36px!important;
+  margin:0!important;
+  padding:0!important;
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  border:0!important;
+  outline:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:var(--farm-v2-text,#F8FAFC)!important;
+  font:500 13px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+
+#mc-farmacos-subpage-search::placeholder{
+  color:var(--farm-v2-muted,#A8B0BD)!important;
+  opacity:.72!important;
+}
+
+#mc-farmacos-subpage-search::-webkit-search-cancel-button{
+  opacity:.55!important;
+}
+
+#mc-farmacos-subpage-local-empty{
+  display:none;
+  padding:22px 8px!important;
+  text-align:center!important;
+  color:var(--farm-v2-muted,#A8B0BD)!important;
+  font-size:13px!important;
+  line-height:1.4!important;
+}
+
+#farmacos-v2-shell[data-mc-fnav-results-active="true"] .mc-fnav-drug-row{
+  min-height:52px!important;
+  margin:0!important;
+  padding:10px 2px!important;
+  border:0!important;
+  border-bottom:1px solid rgba(148,163,184,.14)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+/* Linhas render-only passam a ser controles reais, mantendo o visual flat. */
+#farmacos-v2-shell .mc-farm-render-only-row[data-mc-nav-functional="true"]{
+  cursor:pointer!important;
+  touch-action:manipulation!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+
+/* Header real do overlay na subtela. */
+#calculator-overlay-container.mc-farmacos-app-subpage-active #calculator-overlay-header{
+  padding-left:68px!important;
+  padding-right:58px!important;
+  justify-content:center!important;
+}
+
+#calculator-overlay-container.mc-farmacos-app-subpage-active #calculator-overlay-title{
+  width:100%!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  text-align:center!important;
+  font-size:17px!important;
+  font-weight:700!important;
+  line-height:1.2!important;
+  letter-spacing:-.01em!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+
+#mc-farmacos-subpage-back{
+  position:absolute!important;
+  left:12px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  z-index:4!important;
+
+  min-width:48px!important;
+  min-height:44px!important;
+  padding:0!important;
+  margin:0!important;
+
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+
+  display:none;
+  align-items:center!important;
+  justify-content:flex-start!important;
+
+  color:var(--text-secondary,#A8B0BD)!important;
+  font:650 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+  white-space:nowrap!important;
+  cursor:pointer!important;
+  touch-action:manipulation!important;
+}
+
+#calculator-overlay-container.mc-farmacos-app-subpage-active #mc-farmacos-subpage-back{
+  display:flex!important;
+}
+
+body.light-mode #mc-farmacos-subpage-back,
+body.light #mc-farmacos-subpage-back{
+  color:#64748B!important;
+}
+
+body.light-mode #mc-farmacos-subpage-search,
+body.light #mc-farmacos-subpage-search{
+  color:#0F172A!important;
+}
+
+body.light-mode #mc-farmacos-subpage-search-wrap,
+body.light #mc-farmacos-subpage-search-wrap{
+  border-color:rgba(100,116,139,.30)!important;
+}
+</style>
+
+<script id="mc-farmacos-nav-v2-c-r2-r1-app-subpage-runtime">
+(function(){
+  'use strict';
+
+  if(window.__MC_FARMACOS_NAV_V2_C_R2_R1)return;
+
+  var BUILD='CALC-FARMACOS-NAV-V2-C-R2-R1-APP-SUBPAGE-LOCAL-SEARCH';
+  var savedOverlayTitle='';
+  var backGestureAt=0;
+
+  function norm(v){
+    var t=String(v==null?'':v).toLowerCase();
+    if(t.normalize)t=t.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    return t.replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim()
+  }
+
+  function lang(){
+    var raw=String(
+      window.currentLang||
+      document.body.getAttribute('data-lang')||
+      document.documentElement.lang||
+      'pt'
+    ).toLowerCase();
+    return raw.indexOf('es')===0?'es':'pt'
+  }
+
+  function shell(){
+    return document.getElementById('farmacos-v2-shell')
+  }
+
+  function groupsHost(){
+    var sh=shell();
+    return sh?sh.querySelector('.farmacos-v2-group-list'):null
+  }
+
+  function overlay(){
+    return document.getElementById('calculator-overlay-container')
+  }
+
+  function overlayHeader(){
+    return document.getElementById('calculator-overlay-header')
+  }
+
+  function overlayTitle(){
+    return document.getElementById('calculator-overlay-title')
+  }
+
+  function contextQueryFromTitle(title){
+    var key=norm(title);
+    var map={
+      'nefrologia':'nefrologia',
+      'emergencia':'emergencia',
+      'infusoes':'infusao',
+      'infusiones':'infusao',
+      'toxicologia':'toxicologia',
+      'oftalmologia':'oftalmologia'
+    };
+    return map[key]||''
+  }
+
+  function functionalGroupId(id){
+    return id==='glucocorticoides'?'corticoides':id
+  }
+
+  function wireRows(){
+    var h=groupsHost();
+    if(!h)return 0;
+
+    var rows=Array.from(h.querySelectorAll('.mc-farm-render-only-row[data-mc-render-only-group]'));
+    var wired=0;
+
+    rows.forEach(function(row){
+      var visualId=String(row.getAttribute('data-mc-render-only-group')||'').trim();
+      var titleNode=row.querySelector('.mc-farm-render-only-title');
+      var title=String(titleNode?titleNode.textContent:'').trim();
+
+      row.removeAttribute('aria-disabled');
+      row.setAttribute('role','button');
+      row.setAttribute('tabindex','0');
+      row.setAttribute('data-mc-nav-functional','true');
+
+      if(visualId&&visualId!=='context'){
+        row.setAttribute('data-mc-fnav-group',functionalGroupId(visualId));
+        row.setAttribute('data-mc-fnav-group-title',title);
+        wired+=1;
+        return
+      }
+
+      var query=contextQueryFromTitle(title);
+      if(query){
+        row.setAttribute('data-farmacos-query',query);
+        wired+=1
+      }
+    });
+
+    h.setAttribute('data-mc-functional-group-rows',String(wired));
+    return wired
+  }
+
+  function filterGroups(term){
+    var h=groupsHost();
+    if(!h)return 0;
+
+    wireRows();
+
+    var q=norm(term);
+    var sections=Array.from(h.querySelectorAll('.mc-farm-clinical-section'));
+    var visibleRows=0;
+
+    sections.forEach(function(sec){
+      var head=sec.querySelector('.mc-farm-clinical-section-title');
+      var sectionHay=norm(head?head.textContent:'');
+      var sectionMatch=!!q&&sectionHay.indexOf(q)!==-1;
+      var rows=Array.from(sec.querySelectorAll('.mc-farm-render-only-row'));
       var matches=0;
 
-      section.querySelectorAll(
-        '.farmacos-v2-group-row[data-mc-fnav-group],.mc-farm-context-row'
-      ).forEach(function(row){
-        var id=
-          row.getAttribute('data-mc-fnav-group')||
-          row.getAttribute('data-mc-clinical-context')||
-          row.getAttribute('data-farmacos-query')||'';
+      rows.forEach(function(row){
+        var hay=norm([
+          row.textContent||'',
+          row.getAttribute('data-mc-fnav-group')||'',
+          row.getAttribute('data-farmacos-query')||''
+        ].join(' '));
 
-        var titleNode=
-          row.querySelector('.farmacos-v2-row-title')||
-          row.querySelector('.mc-farm-context-row-title');
-
-        var rowTitle=titleNode?titleNode.textContent:'';
-        var hay=norm(id+' '+rowTitle);
-        var show=!q||sectionHit||hay.indexOf(q)!==-1;
-
-        row.style.setProperty('display',show?'':'none',show?'':'important');
-        if(show)matches+=1
+        var show=!q||sectionMatch||hay.indexOf(q)!==-1;
+        row.style.display=show?'':'none';
+        row.setAttribute('aria-hidden',show?'false':'true');
+        if(show){
+          matches+=1;
+          visibleRows+=1
+        }
       });
 
-      var showSection=!q||sectionHit||matches>0;
-      section.style.setProperty('display',showSection?'':'none',showSection?'':'important');
+      var showSection=!q||sectionMatch||matches>0;
+      sec.style.display=showSection?'':'none';
+      sec.setAttribute('aria-hidden',showSection?'false':'true');
 
-      if(showSection)anySection=true;
-
-      if(q&&showSection){
-        section.classList.add('is-open')
-      }else if(!q){
-        section.classList.toggle('is-open',!!openState[secId])
-      }
-
-      var head=section.querySelector('.mc-farm-clinical-section-head');
-      if(head)head.setAttribute('aria-expanded',section.classList.contains('is-open')?'true':'false')
+      if(q&&showSection)sec.classList.add('is-open')
     });
 
-    var empty=host.querySelector('.mc-farm-clinical-search-empty');
-    if(empty)empty.classList.toggle('is-visible',Boolean(q)&&!anySection)
+    h.setAttribute('data-mc-groups-filter-query',q);
+    h.setAttribute('data-mc-groups-filter-visible',String(visibleRows));
+    return visibleRows
   }
 
-  function materialize(reason){
-    pending=0;
-    if(running)return false;
-
-    var map=buildCanonicalMap();
-    if(!map)return false;
-
-    running=true;
-    try{
-      var l=lang();
-      groupHosts().forEach(function(host){
-        host.textContent='';
-        host.appendChild(buildTree(map,l));
-        host.setAttribute('data-mc-groups-ui-owner','CLINICAL_HIERARCHY_V1_R3');
-        host.setAttribute('data-mc-groups-ui-reason',reason||'unknown');
-        applySearch(host,currentTerm())
-      });
-      return true
-    }finally{
-      running=false
-    }
+  function localSearchWrap(){
+    return document.getElementById('mc-farmacos-subpage-search-wrap')
   }
 
-  function schedule(reason,delay){
-    if(pending)clearTimeout(pending);
-    pending=setTimeout(function(){materialize(reason)},delay||20)
+  function localSearchInput(){
+    return document.getElementById('mc-farmacos-subpage-search')
   }
 
-  document.addEventListener('pointerup',function(e){
-    var toggle=e.target&&e.target.closest
-      ? e.target.closest('[data-mc-clinical-section-toggle]')
-      : null;
+  function localEmpty(){
+    return document.getElementById('mc-farmacos-subpage-local-empty')
+  }
 
-    if(toggle){
-      var section=toggle.closest('.mc-farm-clinical-section');
-      if(!section)return;
+  function filterSubpage(term){
+    var sh=shell();
+    if(!sh)return 0;
 
-      var id=toggle.getAttribute('data-mc-clinical-section-toggle')||'';
-      var open=!section.classList.contains('is-open');
+    var host=sh.querySelector('.mc-fnav-results');
+    var list=host&&host.querySelector('.mc-fnav-list');
+    if(!list)return 0;
 
-      section.classList.toggle('is-open',open);
-      toggle.setAttribute('aria-expanded',open?'true':'false');
-      openState[id]=open;
-      return
+    var q=norm(term);
+    var rows=Array.from(list.querySelectorAll('.mc-fnav-drug-row'));
+    var shown=0;
+
+    rows.forEach(function(row){
+      var hay=norm(row.textContent||'');
+      var visible=!q||hay.indexOf(q)!==-1;
+      row.style.display=visible?'':'none';
+      row.setAttribute('aria-hidden',visible?'false':'true');
+      if(visible)shown+=1
+    });
+
+    var empty=localEmpty();
+    if(empty){
+      var showEmpty=!!q&&rows.length>0&&shown===0;
+      empty.style.display=showEmpty?'block':'none';
+      empty.setAttribute('aria-hidden',showEmpty?'false':'true')
     }
 
-    var groupsTab=e.target&&e.target.closest
-      ? e.target.closest('[data-farmacos-mode="groups"]')
-      : null;
-
-    if(groupsTab){
-      [0,40,120,260].forEach(function(ms){
-        setTimeout(function(){materialize('groups-tab-'+ms)},ms)
-      })
+    if(host){
+      host.setAttribute('data-mc-local-search-query',q);
+      host.setAttribute('data-mc-local-search-visible',String(shown))
     }
-  },true);
 
-  document.addEventListener('input',function(e){
-    if(!e.target||e.target.id!=='hm-drug-search')return;
-    groupHosts().forEach(function(host){
-      if(host.getAttribute('data-mc-groups-ui-owner')==='CLINICAL_HIERARCHY_V1_R3'){
-        applySearch(host,e.target.value)
+    return shown
+  }
+
+  function ensureLocalSearch(sh){
+    sh=sh||shell();
+    if(!sh)return null;
+
+    var host=sh.querySelector('.mc-fnav-results');
+    if(!host)return null;
+
+    var list=host.querySelector('.mc-fnav-list');
+    if(!list)return null;
+
+    var wrap=localSearchWrap();
+    if(!wrap){
+      wrap=document.createElement('label');
+      wrap.id='mc-farmacos-subpage-search-wrap';
+      wrap.setAttribute(
+        'aria-label',
+        lang()==='es'?'Buscar fármaco en este grupo':'Buscar fármaco neste grupo'
+      );
+
+      wrap.innerHTML=
+        '<svg id="mc-farmacos-subpage-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'+
+          '<circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"></circle>'+
+          '<path d="M16 16l4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>'+
+        '</svg>'+
+        '<input id="mc-farmacos-subpage-search" type="search" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">';
+
+      host.insertBefore(wrap,list);
+
+      var empty=document.createElement('div');
+      empty.id='mc-farmacos-subpage-local-empty';
+      empty.setAttribute('aria-hidden','true');
+      empty.textContent=lang()==='es'
+        ?'No se encontraron fármacos en este grupo.'
+        :'Nenhum fármaco encontrado neste grupo.';
+      host.insertBefore(empty,list);
+
+      var input=localSearchInput();
+      if(input){
+        input.addEventListener('input',function(){
+          filterSubpage(input.value||'')
+        })
+      }
+    }
+
+    var input=localSearchInput();
+    if(input){
+      input.placeholder=lang()==='es'
+        ?'Buscar fármaco en este grupo'
+        :'Buscar fármaco neste grupo'
+    }
+
+    var empty=localEmpty();
+    if(empty){
+      empty.textContent=lang()==='es'
+        ?'No se encontraron fármacos en este grupo.'
+        :'Nenhum fármaco encontrado neste grupo.'
+    }
+
+    return wrap
+  }
+
+  function resetLocalSearch(){
+    var input=localSearchInput();
+    if(input)input.value='';
+    filterSubpage('')
+  }
+
+  function resetHeaderOnly(){
+    var ov=overlay();
+    var title=overlayTitle();
+    var back=document.getElementById('mc-farmacos-subpage-back');
+
+    if(title&&savedOverlayTitle){
+      title.textContent=savedOverlayTitle
+    }
+
+    if(ov)ov.classList.remove('mc-farmacos-app-subpage-active');
+    if(back)back.setAttribute('aria-hidden','true');
+
+    var sh=shell();
+    if(sh)sh.removeAttribute('data-mc-app-subpage');
+
+    resetLocalSearch();
+    savedOverlayTitle=''
+  }
+
+  function triggerNativeBack(){
+    var sh=shell();
+    if(!sh)return false;
+    var nativeBack=sh.querySelector('.mc-fnav-back');
+    if(!nativeBack)return false;
+    nativeBack.click();
+    return true
+  }
+
+  function onHeaderBack(ev){
+    if(ev){
+      ev.preventDefault();
+      ev.stopImmediatePropagation()
+    }
+
+    var now=Date.now();
+    if(now-backGestureAt<320)return;
+    backGestureAt=now;
+    triggerNativeBack()
+  }
+
+  function ensureHeaderBack(){
+    var header=overlayHeader();
+    if(!header)return null;
+
+    var back=document.getElementById('mc-farmacos-subpage-back');
+    if(!back){
+      back=document.createElement('button');
+      back.type='button';
+      back.id='mc-farmacos-subpage-back';
+      back.setAttribute('aria-hidden','true');
+      header.appendChild(back);
+
+      back.addEventListener('pointerup',onHeaderBack,true);
+      back.addEventListener('click',onHeaderBack,true)
+    }
+
+    back.textContent=lang()==='es'?'‹ Volver':'‹ Voltar';
+
+    var close=document.getElementById('calculator-overlay-close');
+    if(close&&!close.__mcFarmSubpageResetBound){
+      close.__mcFarmSubpageResetBound=true;
+      close.addEventListener('pointerdown',function(){
+        resetHeaderOnly()
+      },true)
+    }
+
+    return back
+  }
+
+  function enterSubpage(title,sh){
+    sh=sh||shell();
+    if(!sh)return false;
+
+    var ov=overlay();
+    var titleNode=overlayTitle();
+    var back=ensureHeaderBack();
+    if(!ov||!titleNode||!back)return false;
+
+    if(!savedOverlayTitle){
+      savedOverlayTitle=String(titleNode.textContent||'Fármacos').trim()||'Fármacos'
+    }
+
+    titleNode.textContent=String(title||'').trim()||savedOverlayTitle;
+    back.setAttribute('aria-hidden','false');
+    ov.classList.add('mc-farmacos-app-subpage-active');
+    sh.setAttribute('data-mc-app-subpage','true');
+
+    ensureLocalSearch(sh);
+    resetLocalSearch();
+    return true
+  }
+
+  function exitSubpage(sh){
+    resetHeaderOnly();
+    if(sh)sh.removeAttribute('data-mc-app-subpage');
+    return true
+  }
+
+  function bindGlobalSearch(){
+    var inp=document.getElementById('hm-drug-search');
+    if(!inp||inp.__mcFarmGroupsC2R1SearchBound)return;
+    inp.__mcFarmGroupsC2R1SearchBound=true;
+    inp.addEventListener('input',function(){
+      filterGroups(inp.value||'')
+    },{passive:true})
+  }
+
+  function bindKeyboardActivation(){
+    var h=groupsHost();
+    if(!h||h.__mcFarmGroupsC2R1KeyboardBound)return;
+    h.__mcFarmGroupsC2R1KeyboardBound=true;
+    h.addEventListener('keydown',function(ev){
+      if(ev.key!=='Enter'&&ev.key!==' ')return;
+      var row=ev.target.closest&&ev.target.closest('.mc-farm-render-only-row[data-mc-nav-functional="true"]');
+      if(!row||!h.contains(row))return;
+      ev.preventDefault();
+      row.click()
+    })
+  }
+
+  var baseRender=window.__MC_FARMACOS_GROUPS_PHASE1_RENDER;
+  if(typeof baseRender==='function'&&!baseRender.__mcC2R1Wrapped){
+    var wrapped=function(reason){
+      var ok=baseRender(reason);
+      wireRows();
+      bindKeyboardActivation();
+      return ok
+    };
+    wrapped.__mcC2R1Wrapped=true;
+    window.__MC_FARMACOS_GROUPS_PHASE1_RENDER=wrapped
+  }
+
+  window.__MC_FARMACOS_GROUPS_PHASE1_FILTER=function(term){
+    return filterGroups(term||'')
+  };
+
+  window.__MC_FARMACOS_V2_FILTER_CANONICAL_GROUPS=function(term){
+    return filterGroups(term||'')
+  };
+
+  window.__MC_FARMACOS_APP_SUBPAGE_ENTER=enterSubpage;
+  window.__MC_FARMACOS_APP_SUBPAGE_EXIT=exitSubpage;
+
+  wireRows();
+  bindGlobalSearch();
+  bindKeyboardActivation();
+  ensureHeaderBack();
+
+  if(window.__MC_FARMACOS_GROUPS_PHASE1_STATE){
+    window.__MC_FARMACOS_GROUPS_PHASE1_STATE.groupOpen=true;
+    window.__MC_FARMACOS_GROUPS_PHASE1_STATE.drugOpen=true;
+    window.__MC_FARMACOS_GROUPS_PHASE1_STATE.sectionToggleOnly=false;
+    window.__MC_FARMACOS_GROUPS_PHASE1_STATE.navigationDatabaseRead='BROWSER_V2_ON_CLICK';
+    window.__MC_FARMACOS_GROUPS_PHASE1_STATE.resultView='APP_SUBPAGE_C_R2_R1'
+  }
+
+  window.__MC_FARMACOS_NAV_V2_C_R2_R1={
+    build:BUILD,
+    root:'GLOBAL_SEARCH_PLUS_AZ_CONTEXTS_GROUPS',
+    subpage:'BACK_LEFT_CENTERED_TITLE_LOCAL_SEARCH_DRUG_LIST',
+    topbarTitle:'CENTERED_GROUP_OR_CONTEXT',
+    topbarToSearchGapPx:6,
+    searchToDrugsGapPx:6,
+    localSearch:'FILTER_EXISTING_RESULT_ROWS',
+    localSearchScope:'CURRENT_GROUP_OR_CONTEXT_ONLY',
+    resultsRenderer:'EXISTING_BROWSER_V2_M1',
+    groupRows:'WIRED_TO_EXISTING_GROUP_BY_ID',
+    contextRows:'WIRED_TO_EXISTING_CONTEXT_QUERY',
+    glucocorticoidesAlias:'corticoides',
+    groupSearch:'SCOPED_STATIC_10_SECTIONS',
+    mutationObserver:false,
+    interval:false,
+    watchdog:false,
+    secondRenderer:false,
+    clinicalDataMutation:false
+  };
+
+  console.log('[Farmacos Nav C-R2-R1] app subpage + local search + functional groups active');
+})();
+</script>
+<!-- CALC-FARMACOS-NAV-V2-C-R2-R1-APP-SUBPAGE-LOCAL-SEARCH END -->
+
+<!-- CALC-FARMACOS-NAV-V2-C-R2-R2-HIDE-GLOBAL-SEARCH-IN-SUBPAGE START -->
+<style id="mc-farmacos-nav-v2-c-r2-r2-hide-global-search">
+/*
+  A busca global pertence somente à raiz de Fármacos.
+  Na subtela existe exclusivamente #mc-farmacos-subpage-search.
+*/
+[data-mc-farm-subpage-global-search-hidden="true"]{
+  display:none !important;
+}
+
+/* fallback: se o wrapper real não puder ser resolvido, oculta os
+   nós marcados individualmente sem tocar na busca local. */
+#hm-drug-search[data-mc-farm-subpage-global-input-hidden="true"],
+[data-mc-farm-subpage-global-icon-hidden="true"]{
+  display:none !important;
+}
+</style>
+
+<script id="mc-farmacos-nav-v2-c-r2-r2-runtime">
+(function(){
+  'use strict';
+
+  if(window.__MC_FARMACOS_NAV_V2_C_R2_R2)return;
+
+  var BUILD=
+    'CALC-FARMACOS-NAV-V2-C-R2-R2-HIDE-GLOBAL-SEARCH-IN-SUBPAGE';
+
+  var baseEnter=window.__MC_FARMACOS_APP_SUBPAGE_ENTER;
+  var baseExit=window.__MC_FARMACOS_APP_SUBPAGE_EXIT;
+
+  if(typeof baseEnter!=='function'||typeof baseExit!=='function'){
+    console.warn('['+BUILD+'] C-R2-R1 API ausente.');
+    return
+  }
+
+  function globalInput(){
+    return document.getElementById('hm-drug-search')
+  }
+
+  function globalSearchShell(inp){
+    if(!inp)return null;
+
+    return inp.closest(
+      '[data-mc-farm-browser-r6-search-shell="true"],'+
+      '[data-farmacos-v2-search-wrapper],'+
+      '[data-mc-farmacos-search-wrapper-refined],'+
+      '.hm-search-wrap,'+
+      '.farmacos-search-wrapper,'+
+      '.hm-drug-search-wrapper,'+
+      '.drug-search-wrap,'+
+      '.search-wrapper,'+
+      '.search-box,'+
+      '[class*="search-wrap"],'+
+      '[class*="search-container"]'
+    ) || inp.parentElement
+  }
+
+  function markFallbackIcon(shell,inp,hide){
+    if(!shell)return;
+
+    var nodes=Array.from(
+      shell.querySelectorAll(
+        '.hm-search-icon,'+
+        '.drug-search-icon,'+
+        '.farmacos-search-icon,'+
+        'i[class*="search"],'+
+        'svg'
+      )
+    );
+
+    nodes.forEach(function(node){
+      if(node===inp||node.contains(inp)||inp.contains(node))return;
+
+      if(hide){
+        node.setAttribute(
+          'data-mc-farm-subpage-global-icon-hidden',
+          'true'
+        )
+      }else{
+        node.removeAttribute(
+          'data-mc-farm-subpage-global-icon-hidden'
+        )
       }
     })
-  },true);
+  }
 
-  /* CALC-FARMACOS-V2-GROUPS-CLINICAL-HIERARCHY-V1-R4-R1-INTEGRITY-WATCH */
-  function hierarchyIsIntact(host){
-    if(!host)return false;
+  function hideGlobalSearch(){
+    var inp=globalInput();
+    if(!inp)return false;
 
-    var root=host.querySelector(':scope > .mc-farm-clinical-sections');
-    if(!root)return false;
+    var shell=globalSearchShell(inp);
 
-    var sections=root.querySelectorAll(':scope > .mc-farm-clinical-section');
-    if(sections.length!==10)return false;
+    if(
+      shell &&
+      !shell.contains(
+        document.getElementById('mc-farmacos-subpage-search')
+      )
+    ){
+      shell.setAttribute(
+        'data-mc-farm-subpage-global-search-hidden',
+        'true'
+      );
 
-    if(host.querySelector(':scope > .farmacos-v2-group-row'))return false;
+      inp.removeAttribute(
+        'data-mc-farm-subpage-global-input-hidden'
+      );
 
-    if(host.getAttribute('data-mc-groups-ui-owner')!=='CLINICAL_HIERARCHY_V1_R3'){
-      return false
+      markFallbackIcon(shell,inp,false);
+
+      window.__MC_FARMACOS_NAV_V2_C_R2_R2.lastGlobalOwner=
+        shell.id||
+        shell.getAttribute(
+          'data-mc-farm-browser-r6-search-shell'
+        )||
+        shell.className||
+        shell.tagName;
+
+      return true
+    }
+
+    inp.setAttribute(
+      'data-mc-farm-subpage-global-input-hidden',
+      'true'
+    );
+
+    if(shell)markFallbackIcon(shell,inp,true);
+
+    window.__MC_FARMACOS_NAV_V2_C_R2_R2.lastGlobalOwner=
+      'INPUT_FALLBACK';
+
+    return true
+  }
+
+  function showGlobalSearch(){
+    var inp=globalInput();
+
+    var marked=Array.from(
+      document.querySelectorAll(
+        '[data-mc-farm-subpage-global-search-hidden="true"]'
+      )
+    );
+
+    marked.forEach(function(node){
+      node.removeAttribute(
+        'data-mc-farm-subpage-global-search-hidden'
+      )
+    });
+
+    var hiddenIcons=Array.from(
+      document.querySelectorAll(
+        '[data-mc-farm-subpage-global-icon-hidden="true"]'
+      )
+    );
+
+    hiddenIcons.forEach(function(node){
+      node.removeAttribute(
+        'data-mc-farm-subpage-global-icon-hidden'
+      )
+    });
+
+    if(inp){
+      inp.removeAttribute(
+        'data-mc-farm-subpage-global-input-hidden'
+      )
     }
 
     return true
   }
 
-  function repairIfNeeded(reason){
-    if(running)return false;
-
-    var hosts=groupHosts();
-    if(!hosts.length)return false;
-
-    var broken=hosts.some(function(host){
-      return !hierarchyIsIntact(host)
-    });
-
-    if(!broken)return false;
-
-    console.warn('[Farmacos V2 Groups R4] overwrite detectado -> reparando:',reason);
-    return materialize('R4-'+reason)
-  }
-
-  var observer=new MutationObserver(function(mutations){
-    if(running)return;
-
-    var touchedGroups=mutations.some(function(m){
-      var target=m.target;
-
-      if(target&&target.matches&&target.matches('.farmacos-v2-group-list')){
-        return true
-      }
-
-      return !!(
-        target&&target.closest&&
-        target.closest('.farmacos-v2-group-list')
-      )
-    });
-
-    if(touchedGroups){
-      setTimeout(function(){repairIfNeeded('mutation')},0)
-    }
-  });
-
-  function boot(){
-    observer.observe(document.documentElement,{
-      childList:true,
-      subtree:true
-    });
-
-    [0,40,100,220,450,900,1500,2500,4000,6500,10000].forEach(function(ms){
-      setTimeout(function(){repairIfNeeded('boot-'+ms)},ms)
-    });
-
-    var checks=0;
-    var stabilizer=setInterval(function(){
-      checks+=1;
-      repairIfNeeded('stabilizer-'+checks);
-      if(checks>=30)clearInterval(stabilizer)
-    },500)
-  }
-
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',boot,{once:true})
-  }else{
-    boot()
-  }
-
-  window.__MC_FARMACOS_V2_GROUPS_CLINICAL_HIERARCHY_STATE={
-    build:'CALC-FARMACOS-V2-GROUPS-CLINICAL-HIERARCHY-V1-R3',
-    levels:'AREA_CLINICA_TO_CLASS_OR_CONTEXT_TO_DRUGS',
-    sectionCount:10,
-    sections:SECTIONS.map(function(s){return s.id}),
-    canonicalClassSource:'EXISTING_GROUPS_GROUPROWS',
-    canonicalContextSource:'EXISTING_CONTEXT_TOKENS',
-    duplicateDrugData:false,
-    liveSearchPreserved:true,
-    clinicalDataMutation:false,
-    integrityWatch:'R4_R1_DOM_STRUCTURE',
-    legacyOverwriteRepair:true
+  window.__MC_FARMACOS_APP_SUBPAGE_ENTER=function(title,sh){
+    var ok=baseEnter(title,sh);
+    hideGlobalSearch();
+    return ok
   };
 
-  console.log('[Farmacos V2 Groups R3] clinical hierarchy armed.');
+  window.__MC_FARMACOS_APP_SUBPAGE_EXIT=function(sh){
+    showGlobalSearch();
+    return baseExit(sh)
+  };
+
+  var close=document.getElementById('calculator-overlay-close');
+
+  if(close&&!close.__mcFarmC2R2GlobalSearchBound){
+    close.__mcFarmC2R2GlobalSearchBound=true;
+
+    close.addEventListener(
+      'pointerdown',
+      showGlobalSearch,
+      true
+    );
+
+    close.addEventListener(
+      'click',
+      showGlobalSearch,
+      true
+    )
+  }
+
+  /* estado inicial sempre é raiz */
+  showGlobalSearch();
+
+  window.__MC_FARMACOS_NAV_V2_C_R2_R2={
+    build:BUILD,
+    target:'DUPLICATED_GLOBAL_AND_LOCAL_SEARCH_IN_SUBPAGE',
+    rootSearch:'VISIBLE_ONLY_IN_ROOT',
+    subpageSearch:'LOCAL_ONLY',
+    wrapperResolution:'SAME_OWNER_CHAIN_AS_HM_DRUG_SEARCH',
+    restoreOnBack:true,
+    restoreOnOverlayClose:true,
+    mutationObserver:false,
+    interval:false,
+    watchdog:false,
+    secondRenderer:false,
+    clinicalDataMutation:false,
+    lastGlobalOwner:''
+  };
+
+  console.log(
+    '[Farmacos Nav C-R2-R2] global search hidden in subpage'
+  );
 })();
 </script>
-<!-- CALC-FARMACOS-V2-GROUPS-CLINICAL-HIERARCHY-V1-R3 END -->
+<!-- CALC-FARMACOS-NAV-V2-C-R2-R2-HIDE-GLOBAL-SEARCH-IN-SUBPAGE END -->
+
+<!-- CALC-FARMACOS-NAV-V2-C-R2-R3-R1-LOCAL-SEARCH-VISUAL-POLISH START -->
+<style id="mc-farmacos-nav-v2-c-r2-r3-r1-local-search-visual-polish">
+/*
+  VISUAL ONLY
+  Busca local da subtela:
+  - lupa rigorosamente DENTRO do campo;
+  - 6px reais entre ícone e texto;
+  - bordas arredondadas;
+  - nenhum foco/borda global aplicado diretamente ao input.
+*/
+
+#mc-farmacos-subpage-search-wrap{
+  position:relative !important;
+  inset:auto !important;
+
+  width:100% !important;
+  height:44px !important;
+  min-height:44px !important;
+  max-height:44px !important;
+  box-sizing:border-box !important;
+
+  margin:0 !important;
+  padding:0 12px !important;
+
+  display:grid !important;
+  grid-template-columns:16px minmax(0,1fr) !important;
+  column-gap:6px !important;
+  align-items:center !important;
+
+  border:1px solid rgba(148,163,184,.30) !important;
+  border-radius:14px !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  outline:0 !important;
+  overflow:hidden !important;
+}
+
+/* Focus premium e discreto pertence ao wrapper, nunca ao input. */
+#mc-farmacos-subpage-search-wrap:focus-within{
+  border-color:rgba(148,163,184,.50) !important;
+  box-shadow:none !important;
+  outline:0 !important;
+}
+
+/* Neutraliza qualquer regra antiga que tente posicionar a lupa
+   de forma absoluta/acima do campo. */
+#mc-farmacos-subpage-search-icon{
+  position:static !important;
+  inset:auto !important;
+  top:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  left:auto !important;
+  transform:none !important;
+
+  display:block !important;
+  grid-column:1 !important;
+  justify-self:center !important;
+  align-self:center !important;
+
+  width:16px !important;
+  height:16px !important;
+  min-width:16px !important;
+  max-width:16px !important;
+  min-height:16px !important;
+  max-height:16px !important;
+
+  margin:0 !important;
+  padding:0 !important;
+
+  color:var(--farm-v2-muted,#A8B0BD) !important;
+  opacity:.62 !important;
+  pointer-events:none !important;
+}
+
+/* O input começa exatamente depois da coluna da lupa + gap de 6px. */
+#mc-farmacos-subpage-search{
+  position:static !important;
+  inset:auto !important;
+  top:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  left:auto !important;
+  transform:none !important;
+
+  grid-column:2 !important;
+  justify-self:stretch !important;
+  align-self:stretch !important;
+
+  width:100% !important;
+  min-width:0 !important;
+  max-width:none !important;
+  height:42px !important;
+  min-height:42px !important;
+  max-height:42px !important;
+  box-sizing:border-box !important;
+
+  margin:0 !important;
+  padding:0 24px 0 0 !important;
+  text-indent:0 !important;
+
+  border:0 !important;
+  border-radius:0 !important;
+  outline:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+
+  color:var(--farm-v2-text,#F8FAFC) !important;
+  font:500 13px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif !important;
+  letter-spacing:0 !important;
+  appearance:none !important;
+  -webkit-appearance:none !important;
+}
+
+/* Impede o focus global verde/quadrado observado na captura. */
+#mc-farmacos-subpage-search:focus,
+#mc-farmacos-subpage-search:focus-visible,
+#mc-farmacos-subpage-search:active{
+  border:0 !important;
+  border-radius:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+  background:transparent !important;
+}
+
+#mc-farmacos-subpage-search::placeholder{
+  color:var(--farm-v2-muted,#A8B0BD) !important;
+  opacity:.72 !important;
+}
+
+/* Reserva a extremidade direita para o clear/cancel sem invadir texto. */
+#mc-farmacos-subpage-search::-webkit-search-decoration{
+  display:none !important;
+}
+
+#mc-farmacos-subpage-search::-webkit-search-cancel-button{
+  margin:0 !important;
+  opacity:.52 !important;
+  cursor:pointer !important;
+}
+
+/* Light mode. */
+body.light-mode #mc-farmacos-subpage-search-wrap,
+body.light #mc-farmacos-subpage-search-wrap{
+  border-color:rgba(100,116,139,.30) !important;
+}
+
+body.light-mode #mc-farmacos-subpage-search-wrap:focus-within,
+body.light #mc-farmacos-subpage-search-wrap:focus-within{
+  border-color:rgba(100,116,139,.48) !important;
+}
+
+body.light-mode #mc-farmacos-subpage-search,
+body.light #mc-farmacos-subpage-search{
+  color:#0F172A !important;
+}
+</style>
+
+<script id="mc-farmacos-nav-v2-c-r2-r3-r1-state">
+window.__MC_FARMACOS_NAV_V2_C_R2_R3_R1={
+  build:"CALC-FARMACOS-NAV-V2-C-R2-R3-R1-LOCAL-SEARCH-VISUAL-POLISH",
+  scope:"VISUAL_ONLY",
+  target:"LOCAL_SEARCH_ICON_INSIDE_ROUNDED_FIELD",
+  fieldHeightPx:44,
+  borderRadiusPx:14,
+  iconSizePx:16,
+  iconTextGapPx:6,
+  topbarToSearchGapPx:6,
+  searchToDrugsGapPx:6,
+  iconInsideField:true,
+  inputOwnBorder:false,
+  wrapperOwnsFocusBorder:true,
+  callbacksChanged:false,
+  navigationChanged:false,
+  filteringChanged:false,
+  rendererChanged:false,
+  clinicalDataMutation:false
+};
+</script>
+<!-- CALC-FARMACOS-NAV-V2-C-R2-R3-R1-LOCAL-SEARCH-VISUAL-POLISH END -->
+
+<!-- CALC-FARMACOS-NAV-V2-C-R2-R4-LOCAL-SEARCH-INLINE-GEOMETRY-OWNER START -->
+<style id="mc-farmacos-nav-v2-c-r2-r4-inline-geometry-owner">
+/*
+  Fallback visual estático.
+  A autoridade real desta microbuild é o inline geometry owner abaixo.
+*/
+#mc-farmacos-subpage-search-wrap[data-mc-inline-geometry-owner="true"]{
+  box-sizing:border-box !important;
+  width:100% !important;
+  height:44px !important;
+  min-height:44px !important;
+  max-height:44px !important;
+  border-radius:14px !important;
+  overflow:hidden !important;
+}
+
+#mc-farmacos-subpage-search-icon[data-mc-inline-geometry-owner="true"]{
+  width:16px !important;
+  height:16px !important;
+}
+
+#mc-farmacos-subpage-search[data-mc-inline-geometry-owner="true"]{
+  min-width:0 !important;
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+}
+</style>
+
+<script id="mc-farmacos-nav-v2-c-r2-r4-runtime">
+(function(){
+  'use strict';
+
+  if(window.__MC_FARMACOS_NAV_V2_C_R2_R4)return;
+
+  var BUILD=
+    'CALC-FARMACOS-NAV-V2-C-R2-R4-LOCAL-SEARCH-INLINE-GEOMETRY-OWNER';
+
+  var baseEnter=window.__MC_FARMACOS_APP_SUBPAGE_ENTER;
+  var baseExit=window.__MC_FARMACOS_APP_SUBPAGE_EXIT;
+
+  if(typeof baseEnter!=='function'||typeof baseExit!=='function'){
+    console.warn('['+BUILD+'] API C-R2 ausente.');
+    return
+  }
+
+  function imp(el,prop,value){
+    if(!el||!el.style)return;
+    el.style.setProperty(prop,value,'important')
+  }
+
+  function localParts(){
+    return {
+      wrap:document.getElementById(
+        'mc-farmacos-subpage-search-wrap'
+      ),
+      icon:document.getElementById(
+        'mc-farmacos-subpage-search-icon'
+      ),
+      input:document.getElementById(
+        'mc-farmacos-subpage-search'
+      )
+    }
+  }
+
+  function applyGeometry(){
+    var x=localParts();
+    var wrap=x.wrap;
+    var icon=x.icon;
+    var input=x.input;
+
+    if(!wrap||!icon||!input)return false;
+
+    /* WRAPPER — owner único da caixa visual */
+    imp(wrap,'position','relative');
+    imp(wrap,'inset','auto');
+    imp(wrap,'top','auto');
+    imp(wrap,'right','auto');
+    imp(wrap,'bottom','auto');
+    imp(wrap,'left','auto');
+    imp(wrap,'transform','none');
+
+    imp(wrap,'box-sizing','border-box');
+    imp(wrap,'width','100%');
+    imp(wrap,'height','44px');
+    imp(wrap,'min-height','44px');
+    imp(wrap,'max-height','44px');
+
+    imp(wrap,'margin','0');
+    imp(wrap,'padding','0 12px');
+
+    imp(wrap,'display','flex');
+    imp(wrap,'flex-direction','row');
+    imp(wrap,'align-items','center');
+    imp(wrap,'justify-content','flex-start');
+    imp(wrap,'gap','6px');
+
+    imp(wrap,'border-top','1px solid rgba(148,163,184,.30)');
+    imp(wrap,'border-right','1px solid rgba(148,163,184,.30)');
+    imp(wrap,'border-bottom','1px solid rgba(148,163,184,.30)');
+    imp(wrap,'border-left','1px solid rgba(148,163,184,.30)');
+    imp(wrap,'border-radius','14px');
+
+    imp(wrap,'background','transparent');
+    imp(wrap,'background-image','none');
+    imp(wrap,'box-shadow','none');
+    imp(wrap,'outline','0');
+    imp(wrap,'overflow','hidden');
+
+    /* LUPA — jamais absoluta / jamais fora do wrapper */
+    imp(icon,'position','static');
+    imp(icon,'inset','auto');
+    imp(icon,'top','auto');
+    imp(icon,'right','auto');
+    imp(icon,'bottom','auto');
+    imp(icon,'left','auto');
+    imp(icon,'transform','none');
+
+    imp(icon,'display','block');
+    imp(icon,'flex','0 0 16px');
+    imp(icon,'align-self','center');
+
+    imp(icon,'width','16px');
+    imp(icon,'min-width','16px');
+    imp(icon,'max-width','16px');
+    imp(icon,'height','16px');
+    imp(icon,'min-height','16px');
+    imp(icon,'max-height','16px');
+
+    imp(icon,'margin','0');
+    imp(icon,'padding','0');
+    imp(icon,'opacity','.62');
+    imp(icon,'pointer-events','none');
+
+    /* INPUT — começa somente após ícone + gap do flex */
+    imp(input,'position','static');
+    imp(input,'inset','auto');
+    imp(input,'top','auto');
+    imp(input,'right','auto');
+    imp(input,'bottom','auto');
+    imp(input,'left','auto');
+    imp(input,'transform','none');
+
+    imp(input,'display','block');
+    imp(input,'flex','1 1 auto');
+    imp(input,'align-self','stretch');
+
+    imp(input,'box-sizing','border-box');
+    imp(input,'width','auto');
+    imp(input,'min-width','0');
+    imp(input,'max-width','none');
+    imp(input,'height','42px');
+    imp(input,'min-height','42px');
+    imp(input,'max-height','42px');
+
+    imp(input,'margin','0');
+    imp(input,'padding','0 24px 0 0');
+    imp(input,'text-indent','0');
+
+    imp(input,'border-top','0');
+    imp(input,'border-right','0');
+    imp(input,'border-bottom','0');
+    imp(input,'border-left','0');
+    imp(input,'border-radius','0');
+
+    imp(input,'background','transparent');
+    imp(input,'background-image','none');
+    imp(input,'box-shadow','none');
+    imp(input,'outline','0');
+    imp(input,'appearance','none');
+    imp(input,'-webkit-appearance','none');
+
+    wrap.setAttribute(
+      'data-mc-inline-geometry-owner',
+      'true'
+    );
+    icon.setAttribute(
+      'data-mc-inline-geometry-owner',
+      'true'
+    );
+    input.setAttribute(
+      'data-mc-inline-geometry-owner',
+      'true'
+    );
+
+    if(!input.__mcC2R4GeometryBound){
+      input.__mcC2R4GeometryBound=true;
+
+      /*
+        Eventos locais apenas.
+        Sem observer, timer, polling ou RAF.
+        Reaplica depois de qualquer focus/input legado.
+      */
+      input.addEventListener(
+        'focus',
+        applyGeometry,
+        false
+      );
+      input.addEventListener(
+        'blur',
+        applyGeometry,
+        false
+      );
+      input.addEventListener(
+        'input',
+        applyGeometry,
+        false
+      )
+    }
+
+    window.__MC_FARMACOS_NAV_V2_C_R2_R4.lastApply={
+      wrapperWidth:wrap.getBoundingClientRect().width,
+      wrapperHeight:wrap.getBoundingClientRect().height,
+      iconWidth:icon.getBoundingClientRect().width,
+      iconHeight:icon.getBoundingClientRect().height,
+      inputHeight:input.getBoundingClientRect().height,
+      timestamp:Date.now()
+    };
+
+    return true
+  }
+
+  window.__MC_FARMACOS_APP_SUBPAGE_ENTER=function(title,sh){
+    var ok=baseEnter(title,sh);
+    applyGeometry();
+    return ok
+  };
+
+  window.__MC_FARMACOS_APP_SUBPAGE_EXIT=function(sh){
+    return baseExit(sh)
+  };
+
+  /* Se a subtela já estiver aberta no hot reload/local reload. */
+  applyGeometry();
+
+  window.__MC_FARMACOS_NAV_V2_C_R2_R4={
+    build:BUILD,
+    target:'LEGACY_SEARCH_CSS_OVERRIDING_LOCAL_FIELD_GEOMETRY',
+    geometryOwner:'INLINE_IMPORTANT',
+    wrapperLayout:'FLEX_ROW',
+    fieldHeightPx:44,
+    borderRadiusPx:14,
+    iconSizePx:16,
+    iconTextGapPx:6,
+    iconPosition:'STATIC_INSIDE_WRAPPER',
+    inputPosition:'STATIC_AFTER_ICON',
+    newMutationObserver:false,
+    newInterval:false,
+    newTimeout:false,
+    newRAF:false,
+    secondRenderer:false,
+    callbacksChanged:false,
+    filteringChanged:false,
+    navigationChanged:false,
+    clinicalDataMutation:false,
+    lastApply:null
+  };
+
+  console.log(
+    '[Farmacos Nav C-R2-R4] inline geometry owner active'
+  );
+})();
+</script>
+<!-- CALC-FARMACOS-NAV-V2-C-R2-R4-LOCAL-SEARCH-INLINE-GEOMETRY-OWNER END -->
+
+
+
+
+<!-- CALC-WEBVIEW-MOBILE-FREEZE-V1-B-R0-R2-R3-R1-NORMALIZE-CUTOVER-BASH32 -->
+
+<!-- CALC-WEBVIEW-MOBILE-FREEZE-V1-D-R0-R2-NORMALIZE-SINGLE-OWNER-NO-REPARENT -->
+<script src="/js/calculator-overlay.js?v=494-webview-v1-d-r0-r2-normalized-no-reparent" defer></script>
+<!-- CALC-HOME-MEDCASES-V1-B-R0 START -->
+<style id="calc-home-medcases-v1-b-r0">
+/*
+ * MedCases Home V2 -> Calculadora Home
+ * VISUAL OWNER ONLY.
+ * Scope: page background + CLOSED home surfaces + standalone CLCR mini-results.
+ * Explicitly excludes .is-open contents and Farmacos V2 internal UI.
+ */
+
+#page-home {
+  --mch-bg: #1A1D23;
+  --mch-surface: #252930;
+  --mch-surface-strong: #2D3340;
+  --mch-border: #374151;
+  --mch-divider: #2D3340;
+  --mch-divider-strong: #374151;
+  --mch-text: #FFFFFF;
+  --mch-text-secondary: #FFFFFF;
+  --mch-text-muted: rgba(255,255,255,.68);
+  --mch-radius: 6px;
+  --mch-border-width: .6px;
+
+  background-color: var(--mch-bg) !important;
+  background-image: none !important;
+}
+
+body.light-mode #page-home,
+body.theme-light #page-home,
+body[data-theme="light"] #page-home,
+body[data-current-theme="light"] #page-home,
+html[data-theme="light"] #page-home {
+  --mch-bg: #ECF1F3;
+  --mch-surface: #FFFFFF;
+  --mch-surface-strong: #F8FAFC;
+  --mch-border: #E7EBEF;
+  --mch-divider: #E1E7ED;
+  --mch-divider-strong: #D8E0E7;
+  --mch-text: #05070A;
+  --mch-text-secondary: #59636E;
+  --mch-text-muted: #8A939D;
+
+  background-color: var(--mch-bg) !important;
+  background-image: none !important;
+}
+
+#page-home #hub-card-patient:not(.is-open),
+#page-home #hub-card-farmacos:not(.is-open),
+#page-home #hub-l2-grid > .hub-card:not(.is-open),
+#page-home .hub-l3-row > .hub-card:not(.is-open) {
+  box-sizing: border-box !important;
+  background: var(--mch-surface) !important;
+  background-image: none !important;
+  border: var(--mch-border-width) solid var(--mch-border) !important;
+  border-radius: var(--mch-radius) !important;
+  box-shadow: none !important;
+  filter: none !important;
+  overflow: hidden !important;
+  height: 85px !important;
+  min-height: 85px !important;
+}
+
+#page-home #hub-l2-grid > .hub-card:not(.is-open)::before,
+#page-home #hub-l2-grid > .hub-card:not(.is-open)::after,
+#page-home .hub-l3-row > .hub-card:not(.is-open)::before,
+#page-home .hub-l3-row > .hub-card:not(.is-open)::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* CALC-HOME-MEDCASES-V1-B-R1 CANONICAL-104PX-GAP3 */
+/* CALC-HOME-MEDCASES-V1-B-R1-R1 MINUS10PCT */
+/* CALC-HOME-MEDCASES-V1-B-R1-R2 FINAL-MINUS10PCT */
+#page-home #hub-accordion,
+#page-home .hub-l1-section > .hub-l1-row,
+#page-home #hub-l2-grid,
+#page-home .hub-l3-row {
+  gap: 3px !important;
+  row-gap: 3px !important;
+  column-gap: 3px !important;
+}
+
+#page-home #hub-card-patient:not(.is-open) .hub-card-trigger,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger {
+  height: 100% !important;
+  min-height: 85px !important;
+  padding: 10px !important;
+  gap: 8px !important;
+  color: var(--mch-text) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: var(--mch-radius) !important;
+  box-shadow: none !important;
+  transition:
+    background-color 90ms ease,
+    opacity 90ms ease,
+    border-color 90ms ease !important;
+}
+
+#page-home #hub-card-patient:not(.is-open) .hub-card-trigger:hover,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger:hover,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger:hover,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger:hover,
+#page-home #hub-card-patient:not(.is-open) .hub-card-trigger:active,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger:active,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger:active,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger:active {
+  background: var(--mch-surface-strong) !important;
+  transform: none !important;
+}
+
+#page-home #hub-card-patient:not(.is-open) .hub-card-ico,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-ico,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-ico,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-ico {
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#page-home #hub-card-patient:not(.is-open) .hub-card-ico i,
+#page-home #hub-card-patient:not(.is-open) .hub-card-ico svg,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-ico i,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-ico svg,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-ico i,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-ico svg,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-ico i,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-ico svg {
+  font-size: 20px !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+/* Keep the legacy two-line Pediatrics/Gestantes layout compatible with the 54px visual slot. */
+#page-home #hub-card-pediatria:not(.is-open) .hub-card-trigger,
+#page-home #hub-card-gestante:not(.is-open) .hub-card-trigger {
+  grid-template-columns: 44px minmax(0, 1fr) 18px !important;
+  min-height: 85px !important;
+}
+
+/* Direct semantic equivalents from MedCases Home V2. */
+#page-home #hub-card-patient:not(.is-open) { --mcw-accent: #60A5FA; }
+#page-home #hub-card-farmacos:not(.is-open) { --mcw-accent: #2DD4BF; }
+#page-home #hub-card-pediatria:not(.is-open) { --mcw-accent: #FBBF24; }
+
+body.light-mode #page-home #hub-card-patient:not(.is-open),
+body.theme-light #page-home #hub-card-patient:not(.is-open),
+body[data-theme="light"] #page-home #hub-card-patient:not(.is-open),
+body[data-current-theme="light"] #page-home #hub-card-patient:not(.is-open),
+html[data-theme="light"] #page-home #hub-card-patient:not(.is-open) {
+  --mcw-accent: #3478C7;
+}
+
+body.light-mode #page-home #hub-card-farmacos:not(.is-open),
+body.theme-light #page-home #hub-card-farmacos:not(.is-open),
+body[data-theme="light"] #page-home #hub-card-farmacos:not(.is-open),
+body[data-current-theme="light"] #page-home #hub-card-farmacos:not(.is-open),
+html[data-theme="light"] #page-home #hub-card-farmacos:not(.is-open) {
+  --mcw-accent: #087F7B;
+}
+
+body.light-mode #page-home #hub-card-pediatria:not(.is-open),
+body.theme-light #page-home #hub-card-pediatria:not(.is-open),
+body[data-theme="light"] #page-home #hub-card-pediatria:not(.is-open),
+body[data-current-theme="light"] #page-home #hub-card-pediatria:not(.is-open),
+html[data-theme="light"] #page-home #hub-card-pediatria:not(.is-open) {
+  --mcw-accent: #C58A1A;
+}
+
+#page-home #hub-card-patient:not(.is-open) .hub-card-name,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-name,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-name,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-name {
+  color: var(--mch-text) !important;
+  -webkit-text-fill-color: var(--mch-text) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+  letter-spacing: .2px !important;
+  text-shadow: none !important;
+}
+
+#page-home #hub-card-patient:not(.is-open) .hub-card-chevron,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-chevron,
+#page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-chevron,
+#page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-chevron {
+  color: var(--mch-text-muted) !important;
+  -webkit-text-fill-color: var(--mch-text-muted) !important;
+  opacity: 1 !important;
+}
+
+/* CLCR external card is already removed, so these are standalone mini-results. */
+#page-home #hub-card-clcr .grid-card-clcr {
+  background: var(--mch-surface-strong) !important;
+  background-image: none !important;
+  border: var(--mch-border-width) solid var(--mch-border) !important;
+  border-radius: var(--mch-radius) !important;
+  box-shadow: none !important;
+}
+
+#page-home #hub-card-clcr .grid-card-title {
+  color: var(--mch-text-muted) !important;
+  -webkit-text-fill-color: var(--mch-text-muted) !important;
+}
+
+#page-home #hub-card-clcr .grid-card-value,
+#page-home #hub-card-clcr #home-live-clcr,
+#page-home #hub-card-clcr #home-live-imc,
+#page-home #hub-card-clcr #home-live-peso,
+#page-home #hub-card-clcr #home-live-bsa {
+  color: var(--mch-text) !important;
+  -webkit-text-fill-color: var(--mch-text) !important;
+}
+
+/*
+ * No selector below styles Farmacos V2 internals.
+ * .is-open is deliberately absent from all surface/geometry owners above.
+ */
+</style>
+<!-- CALC-HOME-MEDCASES-V1-B-R0 END -->
+
+<script>
+/* CALC-PERF-V1-B-R1-R1 WEBVIEW-STABLE-FIRST-PAINT RELEASE */
+(function () {
+  'use strict';
+
+  var released = false;
+  var startedAt = Date.now();
+  var MAX_WAIT_MS = 2200;
+
+  function release(reason) {
+    if (released) return;
+    released = true;
+
+    var root = document.documentElement;
+    root.classList.remove('mc-boot-pending');
+    root.classList.add('mc-boot-stable');
+
+    try {
+      window.__MC_BOOT_PAINT = {
+        reason: reason,
+        elapsedMs: Date.now() - startedAt
+      };
+    } catch (_) {}
+  }
+
+  function afterTwoFrames(reason) {
+    if (released) return;
+
+    if (typeof window.requestAnimationFrame === 'function') {
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
+          release(reason);
+        });
+      });
+      return;
+    }
+
+    setTimeout(function () {
+      release(reason);
+    }, 32);
+  }
+
+  function probe() {
+    if (released) return;
+
+    if (
+      document.readyState !== 'loading' &&
+      window._appBootComplete === true
+    ) {
+      afterTwoFrames('boot-complete');
+      return;
+    }
+
+    if (Date.now() - startedAt >= MAX_WAIT_MS) {
+      afterTwoFrames('safety-timeout');
+      return;
+    }
+
+    setTimeout(probe, 50);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+        setTimeout(probe, 0);
+      },
+      { once: true }
+    );
+  } else {
+    setTimeout(probe, 0);
+  }
+
+  setTimeout(function () {
+    if (!released) {
+      afterTwoFrames('hard-safety-release');
+    }
+  }, MAX_WAIT_MS + 300);
+})();
+</script>
 
 </body>
 </html>

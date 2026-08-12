@@ -1,0 +1,1697 @@
+{
+  "createdFrom": {
+    "calculatorCanonicalDrugCount": 838,
+    "calculatorClinicalDataSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+    "calculatorClinicalDataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
+    "calculatorHead": "29609c950ef6bb599867f020fd6d0f9d5b03ae26",
+    "exactNormalizationArchiveSha256": "3ce18eab32fe402e023a21c5d6da1f15bf68de0962f2a9a7f5e40ace2fcf1ed2",
+    "medcasesHead": "c9e21ad6afbc32bf8c28192e0b330a35b9ecda15",
+    "pdfEmergencySha256": "5925b682a38819e68a16e1cdd04c6062d5b63c30e3f2a02ab9e04087a6158996",
+    "pdfPsAdultSha256": "e0f0ba400afec676c14f9b439814b05b964e7b28341bd802c372a9fe2aa92a7e",
+    "protocolsDatabaseSha256": "c3ff7713892de1d257d5fb6e82c597baebe532efc4d099dbba35ed11b1f2d3a3"
+  },
+  "fileInventory": [
+    {
+      "bytes": 1397,
+      "path": "README.md",
+      "sha256": "b919617ca062613de31e9c90d46d0dac8054c65065974f1444b81c770d3bc962"
+    },
+    {
+      "bytes": 790,
+      "path": "canonical/identity-index.draft.json",
+      "sha256": "b3bd80d9fe04528b02f0afdce2bcabda001714830a21179aabaaf01c4c63f3de"
+    },
+    {
+      "bytes": 115,
+      "path": "canonical/prescription-templates/README.md",
+      "sha256": "45359d4f1a803bf283b38b8a38b7c877c8a6f4be5925ffd25c37eef0241d6007"
+    },
+    {
+      "bytes": 91566,
+      "path": "canonical/protocol-manifest.draft.json",
+      "sha256": "9b0fc3dfe32dab70bd249583dbd6c3f26fffffe298bc2b87ef22d4ff54899908"
+    },
+    {
+      "bytes": 153,
+      "path": "canonical/protocols/README.md",
+      "sha256": "884bf36119d156dbb8bed61f80804465433a61e787377fb9f99f242c3362e75d"
+    },
+    {
+      "bytes": 99,
+      "path": "canonical/regimens/README.md",
+      "sha256": "8eb4c842cddec540b275a6e1621d4e2ba935deb617dd8c5152972829f7f74f53"
+    },
+    {
+      "bytes": 1118,
+      "path": "policies/canonicalization.json",
+      "sha256": "35ca67d2c9d653d40a131450ad208f407d37e2bb209db4a882ed337755508aaf"
+    },
+    {
+      "bytes": 557,
+      "path": "policies/localization.json",
+      "sha256": "68f1c8fe86744c92aaee0a7a6d461fb54c1d6880adf3fdd7fe639a454dd9e4cf"
+    },
+    {
+      "bytes": 24500,
+      "path": "review/identity-domains.v1.json",
+      "sha256": "b2314b3ee7ff374d57e9bec0c7d2d0bafb198ca7891b6d18d4ca02632d358aa7"
+    },
+    {
+      "bytes": 103633,
+      "path": "review/incoming-classification.v1.json",
+      "sha256": "ea748294c4028c596cb7a1eb125ebf24e6ad7a2e6577117ce8ac933152d2bbf6"
+    },
+    {
+      "bytes": 4418,
+      "path": "review/legacy-owner-relations.v1.json",
+      "sha256": "2e00438303407fd9db87ebdfa0e63cc38ca7dff161b7afc1d3db529a5f38a948"
+    },
+    {
+      "bytes": 48754,
+      "path": "review/pending-reconciliation.json",
+      "sha256": "b014f3f2908a9048e586446673e584cb6065acec1a2513e347db5b75b0a21ebe"
+    },
+    {
+      "bytes": 1970,
+      "path": "review/population-subtype-reconciliation.v1.json",
+      "sha256": "80ca0e8897a203dbb3dad6fe18b9a1cfd216881294cec2900eebda1365112ec0"
+    },
+    {
+      "bytes": 596,
+      "path": "review/reconciliation-summary.v1.json",
+      "sha256": "906cfb3680913f736b84f63f8cbb16d47b1fbe0a1b4edd173bfe66a1c6bc7a76"
+    },
+    {
+      "bytes": 2863,
+      "path": "review/reference-modules.json",
+      "sha256": "9b4be2dd74e3acfa018bb02afae0fed7ad3f71e886cdcc1f9bbc4b75160ffb68"
+    },
+    {
+      "bytes": 511,
+      "path": "review/semantic-harness-history.json",
+      "sha256": "632fb4f90e87fb2720ec24b2157a5354957c94b98ddd9b164eb0e71561fd33ab"
+    },
+    {
+      "bytes": 590,
+      "path": "review/source-title-ambiguities.json",
+      "sha256": "c4865834e609660d58cd6ef77ebc95b0cd416a30579e77a1482079a9ef94e16d"
+    },
+    {
+      "bytes": 2304,
+      "path": "schema/canonical-protocol.schema.json",
+      "sha256": "9195abf4ff59e135fac55f56bcbfd64c03d4265e96a4086cf0e0c4259382a13c"
+    },
+    {
+      "bytes": 1164,
+      "path": "schema/prescription-template.schema.json",
+      "sha256": "f53d74d399ee87aa68117980fc0ea981fe7b5dc066148725fcfb8d43366b98ed"
+    },
+    {
+      "bytes": 1522,
+      "path": "schema/source-record.schema.json",
+      "sha256": "38b052a2f5093f2166d219a308b9e61a204edb1314df481607487ab58b75471b"
+    },
+    {
+      "bytes": 1695,
+      "path": "schema/typed-regimen.schema.json",
+      "sha256": "fd57d766d4405af39fd54f2e206ee5bcd5c5b2148da1042283368add6779e71e"
+    },
+    {
+      "bytes": 1900,
+      "path": "source-registry.json",
+      "sha256": "83f22ba8f10d307dca4900d446bd551a4e2d508e2e5746de562f88ded4eb9578"
+    },
+    {
+      "bytes": 1247340,
+      "path": "sources/artifacts/current-protocols_database.dart.txt",
+      "sha256": "c3ff7713892de1d257d5fb6e82c597baebe532efc4d099dbba35ed11b1f2d3a3"
+    },
+    {
+      "bytes": 207037,
+      "path": "sources/artifacts/pdf-emergency-2026.pages.json",
+      "sha256": "f8e1e2e229421228e5f19c6a2901befd733fe2d6bfa2cfa69ed5a84e48bded02"
+    },
+    {
+      "bytes": 28812,
+      "path": "sources/artifacts/pdf-ps-adult.pages.json",
+      "sha256": "768a6765ccc856ab81b21ef8d04f387818d9634687f396f8fca51059ce1f7060"
+    },
+    {
+      "bytes": 1147,
+      "path": "sources/audit-baselines/exact-normalization-r2-policy.md",
+      "sha256": "64de714836e2099d1f07331c4832448ff374130af02d12fb21787202c37de433"
+    },
+    {
+      "bytes": 949,
+      "path": "sources/audit-baselines/exact-normalization-r2-summary.txt",
+      "sha256": "7be883dcd18929bc1a11f2e23462bec91565f968983f2c230ae9a2271dd249af"
+    },
+    {
+      "bytes": 1459,
+      "path": "sources/current-medcases/agitacao_psicomotora.json",
+      "sha256": "4ff4c2a3cac29228a57b625bf0e3a4a14e42e0b7ff0153fcd7c7440165a61731"
+    },
+    {
+      "bytes": 1383,
+      "path": "sources/current-medcases/anafilaxia.json",
+      "sha256": "df67bbb4c7ebd8efe2cf3d21062ef639555855844e9838fb988d55c16b9792c1"
+    },
+    {
+      "bytes": 1392,
+      "path": "sources/current-medcases/anafilaxia_ped.json",
+      "sha256": "964da50e636de71668b0c6757a9b9280dc2592d468dd464a4e217fc05437e70a"
+    },
+    {
+      "bytes": 1358,
+      "path": "sources/current-medcases/anafilaxia_refrataria.json",
+      "sha256": "2b065140a7c285e2a9534a1af6f43c48c17903e4cb04e2564a9eceb938f89c60"
+    },
+    {
+      "bytes": 1455,
+      "path": "sources/current-medcases/apendicite_aguda.json",
+      "sha256": "03574d9804cb52a30e24b909973145e41739bf1e0658f56d35416ede89a51b30"
+    },
+    {
+      "bytes": 1494,
+      "path": "sources/current-medcases/asma_grave.json",
+      "sha256": "d13fba8e9927314e930de7bb36ce62c9212dcadf556c8960307db3e02f257531"
+    },
+    {
+      "bytes": 1630,
+      "path": "sources/current-medcases/avc_hemorragico.json",
+      "sha256": "0f7d2794f402c0c50045c1e44d03b524a1e96ae8aa64def12c2d6c703133205f"
+    },
+    {
+      "bytes": 1404,
+      "path": "sources/current-medcases/avc_isquemico.json",
+      "sha256": "db2e2b5d1f858c3ec7a38799cc44c43f8db2b9a1ec6645b5e688d0cf0a16171d"
+    },
+    {
+      "bytes": 1535,
+      "path": "sources/current-medcases/bradiarritmia_grave.json",
+      "sha256": "353e2c14e56c3dbbd78966c323563b405cb7e09ec4e1aaa61f24c45231db5c82"
+    },
+    {
+      "bytes": 1342,
+      "path": "sources/current-medcases/bronquiolite_aguda.json",
+      "sha256": "32e01432f012a59a2630d7dda345f33825f20ee6be2a5658505b061a52e85a43"
+    },
+    {
+      "bytes": 1408,
+      "path": "sources/current-medcases/cad_shh.json",
+      "sha256": "9ae6a8dde9721cfff1a0d3d73cb5ad395f3c133630025c8952efde8b332a071d"
+    },
+    {
+      "bytes": 1396,
+      "path": "sources/current-medcases/caso_anafilaxia_grave.json",
+      "sha256": "374a9d0fa2749a63115395c436e298f6a468e4b3c242c7ec744b3ffef64a7890"
+    },
+    {
+      "bytes": 1406,
+      "path": "sources/current-medcases/caso_avc_isquemico.json",
+      "sha256": "03bdfd4137e2c0703b58d418a1517ef49b89cb253feea39b0dd91726d57de25f"
+    },
+    {
+      "bytes": 1342,
+      "path": "sources/current-medcases/caso_cetoacidose_diabetica.json",
+      "sha256": "d4e7649977245ca01b90990f0d79d32ff0ceec88481fa55c0cfd001500a3b840"
+    },
+    {
+      "bytes": 1344,
+      "path": "sources/current-medcases/caso_cistite_aguda.json",
+      "sha256": "16d8acfdf58b41a8e9d7cdf7c4d2dfdf30a4fd2ebc401e1f566ceb1a28690d48"
+    },
+    {
+      "bytes": 1454,
+      "path": "sources/current-medcases/caso_enxaqueca_aura.json",
+      "sha256": "a12e9be14b5c8632d6b42942e58b34fa2b4cd99e332b3d1c6ee490e9e85d5b5c"
+    },
+    {
+      "bytes": 1387,
+      "path": "sources/current-medcases/caso_hda_varicosa.json",
+      "sha256": "18cbcd98669d818c4d21a323adc5ce8f5923e80c320c669434e95d3786e2b51b"
+    },
+    {
+      "bytes": 1491,
+      "path": "sources/current-medcases/caso_icc_descompensada.json",
+      "sha256": "21034903f21b55473364faada3b62f28daea83d0a18bc6d3f984f56c283f4114"
+    },
+    {
+      "bytes": 1303,
+      "path": "sources/current-medcases/caso_itu_recorrente.json",
+      "sha256": "fd1f912a9b8dc62525adb6ebf82800fefe28aced541eaed0406514185e90c644"
+    },
+    {
+      "bytes": 1417,
+      "path": "sources/current-medcases/caso_pac_grave.json",
+      "sha256": "7dba1f9d50c6103c52ebe0a1e85f4fc158c7fc795f52be37bdb5709ec42ab222"
+    },
+    {
+      "bytes": 1431,
+      "path": "sources/current-medcases/caso_sepse_idoso.json",
+      "sha256": "ad023ac9bc42566a71c40a064c3f45ec2dad74be2527d6fe5553bee5437ca943"
+    },
+    {
+      "bytes": 1445,
+      "path": "sources/current-medcases/caso_status_epilepticus.json",
+      "sha256": "3a27ce182a9ada3053cdad8f230e8694f5d3bf2dc1b9232d107ab869c13235c6"
+    },
+    {
+      "bytes": 1432,
+      "path": "sources/current-medcases/caso_stemi.json",
+      "sha256": "99f86643becb4afa7e0b6741ab4821e71c47b081b98f07b9447e12b8bbffb189"
+    },
+    {
+      "bytes": 1421,
+      "path": "sources/current-medcases/caso_tep_alto_risco.json",
+      "sha256": "39e0999ec7ae1a372ad68ce38b0fb44bf0ab7248e9482530e2810b7c6006f4b5"
+    },
+    {
+      "bytes": 1603,
+      "path": "sources/current-medcases/celulite_erisipela.json",
+      "sha256": "4927cc3ff6cfbd7430ed5242e7cdb631c4cb47a0ce98e746ad1a68512ebe115f"
+    },
+    {
+      "bytes": 1432,
+      "path": "sources/current-medcases/cetoacidose_diabetica.json",
+      "sha256": "aecb14461282001ae80513b26254495e9163d4736c8195d07304f6af93c290dd"
+    },
+    {
+      "bytes": 1368,
+      "path": "sources/current-medcases/choque_cardiogenico.json",
+      "sha256": "6bda3a51905c5faf297c07163eb13e269573fbf607c96b7dbb9d4b354ff5de6c"
+    },
+    {
+      "bytes": 1346,
+      "path": "sources/current-medcases/choque_hipovolemico.json",
+      "sha256": "3cfea8e4b6dd7a98902a4dcc3f150b54d4f684ba2eba94b998a4d83109ecffb0"
+    },
+    {
+      "bytes": 1563,
+      "path": "sources/current-medcases/choque_septico_avancado.json",
+      "sha256": "ed55da50cf7b0f3857d7c389adbb214aab48c3078cc036f198b46e84f3274e60"
+    },
+    {
+      "bytes": 1428,
+      "path": "sources/current-medcases/coagulacao_intravascular.json",
+      "sha256": "07a136f8c6645c25fc377946da9cba3834b8f36c5510bce3aa7303149aeea3a9"
+    },
+    {
+      "bytes": 1334,
+      "path": "sources/current-medcases/colangite_aguda.json",
+      "sha256": "122f370343ee84de5988151105d47268d95c0aec90b6930e33e637cf65916f74"
+    },
+    {
+      "bytes": 1381,
+      "path": "sources/current-medcases/colica_nefretica.json",
+      "sha256": "d306161dbddb9fe79072ac840f628dc795726bd05f3482f9dec6e61329129953"
+    },
+    {
+      "bytes": 1330,
+      "path": "sources/current-medcases/convulsao_febril_ped.json",
+      "sha256": "04b4657c4e00d60879f9c663689d60c0a74ac2a9591dda1d1ca78a4993af26f5"
+    },
+    {
+      "bytes": 1379,
+      "path": "sources/current-medcases/crise_adrenal.json",
+      "sha256": "903218a833890ed62396e6f742502e6bb62c2c4d053b7a580d4ad34df1569f23"
+    },
+    {
+      "bytes": 1426,
+      "path": "sources/current-medcases/crise_asmatica_ped.json",
+      "sha256": "5061c537becdcfe122064d471fc8cb6cf00b9efa252ddaef05a975be30ddde1d"
+    },
+    {
+      "bytes": 1389,
+      "path": "sources/current-medcases/crise_asmatica_quase_fatal.json",
+      "sha256": "e75659fdd08b747ddd47f8f5cebeead3949744f2cc98750983dc2c9ca4ff1214"
+    },
+    {
+      "bytes": 1586,
+      "path": "sources/current-medcases/crise_convulsiva.json",
+      "sha256": "8d6c784df11932e74786d08e7e11765f3067ae90b66f732514330b95c1ad1a71"
+    },
+    {
+      "bytes": 1337,
+      "path": "sources/current-medcases/crise_de_anemia_falciforme.json",
+      "sha256": "798bee6d3babfaf026e424c111c31365d46d6668f4e7148b5f28a0400600f01b"
+    },
+    {
+      "bytes": 1408,
+      "path": "sources/current-medcases/crise_gota.json",
+      "sha256": "a7db3e8ab046a39d71e62646d9e8b9d5e72e5ae30586a283c6042a8b2c1d8657"
+    },
+    {
+      "bytes": 1532,
+      "path": "sources/current-medcases/crise_hipertensiva.json",
+      "sha256": "67309671ac4dbc9de03f9ff5b512d3fd71036a3c50eb52270d04c1f1b370547c"
+    },
+    {
+      "bytes": 1416,
+      "path": "sources/current-medcases/crise_hipertensiva_ped.json",
+      "sha256": "ec34008af2b89c771338ab964d299db15e3acb6dd73baf32c6e0c0269da16320"
+    },
+    {
+      "bytes": 1449,
+      "path": "sources/current-medcases/crise_tireotoxica.json",
+      "sha256": "48029758868af8c10c3aa82dea22b9402ab8f8acd628e30011da9d2e49b473fa"
+    },
+    {
+      "bytes": 1482,
+      "path": "sources/current-medcases/delirium_tremens.json",
+      "sha256": "8f4031b655dc88c141fb838f43dccd6163018b9c1250fffc41839afb4f76b4c7"
+    },
+    {
+      "bytes": 1393,
+      "path": "sources/current-medcases/dengue_manejo.json",
+      "sha256": "2836fb4d04e7a2372b9d7fc43b24d02bc1b44fc402ae70fa0f0122651380a6be"
+    },
+    {
+      "bytes": 1302,
+      "path": "sources/current-medcases/descolamento_placenta.json",
+      "sha256": "0344003e33e98863872dd3e15c716b3f27745a2e9d744c92e5c90a682499f36f"
+    },
+    {
+      "bytes": 1385,
+      "path": "sources/current-medcases/diarrea_aguda_009.json",
+      "sha256": "2e99300ed0379448612eec7f137f1fac61c436c0ff1bace34dad6d40253444a9"
+    },
+    {
+      "bytes": 1421,
+      "path": "sources/current-medcases/diverticulitis_aguda_015.json",
+      "sha256": "514ee814ea876654207cef40a237682d5b4c787cb86417d7ca1e85f8b115f75b"
+    },
+    {
+      "bytes": 1524,
+      "path": "sources/current-medcases/dpoc_exacerbacao.json",
+      "sha256": "877df95862529ce15cce8a493040d89dab638f157f545fa404783b2bc91d4a22"
+    },
+    {
+      "bytes": 1457,
+      "path": "sources/current-medcases/eclampsia_hellp.json",
+      "sha256": "c48f24563f7ee6c03a3e29281e9a5b6e1325cc5ba2776708198e23a6cdd2c2bd"
+    },
+    {
+      "bytes": 1511,
+      "path": "sources/current-medcases/edema_agudo_pulmao.json",
+      "sha256": "6a4242b399a3ec0ad144411595b5aa33b95f12b6651ab6e9de601e5349ef49ad"
+    },
+    {
+      "bytes": 1402,
+      "path": "sources/current-medcases/encefalopatia_hepatica.json",
+      "sha256": "9f49319e3c490676c393a32bc1795499798cfc027a7a9db7d282f0aaf095216e"
+    },
+    {
+      "bytes": 1541,
+      "path": "sources/current-medcases/fa_aguda.json",
+      "sha256": "813f6e0469c45fdcfc9c5e9740b52b180cf1a500975fa576b3c9d483a79da136"
+    },
+    {
+      "bytes": 1568,
+      "path": "sources/current-medcases/faringite_estrep.json",
+      "sha256": "9fff5ee0e64582bb6f9b9bea46c6029d029b905cbed2cf220ae5e9ff74469fa8"
+    },
+    {
+      "bytes": 1417,
+      "path": "sources/current-medcases/faringitis_bacteriana_012.json",
+      "sha256": "3e296c9b115a142993deee86eeca352579fabafa3de5e6aa1fc209e20cc80f5e"
+    },
+    {
+      "bytes": 1391,
+      "path": "sources/current-medcases/faringitis_estreptococica_008.json",
+      "sha256": "2dfc6158f99781ec62886ee856a357a1e316e7275421604c779357690cba4d68"
+    },
+    {
+      "bytes": 1347,
+      "path": "sources/current-medcases/faringitis_viral_011.json",
+      "sha256": "d9f4f6d5d91e9ee8451ad5e409aa9483e03a28e49ee5017c77d164819c78c153"
+    },
+    {
+      "bytes": 1389,
+      "path": "sources/current-medcases/gripe_influenza_010.json",
+      "sha256": "45d1c565822f78166ce679723e6783d40bc81f15b42e851cfc2cebbb854fce64"
+    },
+    {
+      "bytes": 1437,
+      "path": "sources/current-medcases/hda_nao_varicosa.json",
+      "sha256": "0827e58835f896db7c938365b6c52641c3b2d054ed9d31192a328ad3eec58988"
+    },
+    {
+      "bytes": 1345,
+      "path": "sources/current-medcases/hda_ulcera_peptica_013.json",
+      "sha256": "b7e86aa521f2b637103881dc854fb53a893f4492f95f224d66a8a536ff4a9e4f"
+    },
+    {
+      "bytes": 1568,
+      "path": "sources/current-medcases/hda_varizeal.json",
+      "sha256": "ae23f0a9e3dbab8b68b976d726bb4ededc45e8079154aac48a2797314cd66f57"
+    },
+    {
+      "bytes": 1301,
+      "path": "sources/current-medcases/hdb_sangrado_rectal_014.json",
+      "sha256": "5454ef28b692ff695076aaec87897fab6d20d5b4d5cd51d46bc211c211470c1d"
+    },
+    {
+      "bytes": 1337,
+      "path": "sources/current-medcases/hemoptise_macica.json",
+      "sha256": "c55726ef66070e63ae5fefd55381043ea37d19824c16bcd4b982e46ba4ca3a53"
+    },
+    {
+      "bytes": 1351,
+      "path": "sources/current-medcases/hemorragia_digestiva_baixa.json",
+      "sha256": "249adead276ccc80bccacb761fffacbcf94a77b1da25aee3ab628085fe3c97da"
+    },
+    {
+      "bytes": 1322,
+      "path": "sources/current-medcases/hemorragia_intra_abdominal.json",
+      "sha256": "77748399ab0a84b03e4507520b9b5d3d1eaa10a49c1df2aed27a8ee635d1f54e"
+    },
+    {
+      "bytes": 1390,
+      "path": "sources/current-medcases/hemorragia_pos_parto.json",
+      "sha256": "906e8cf613138605cb6f5dc5decbe2cd4503c081f6f5131c40d5b7f11b6635f8"
+    },
+    {
+      "bytes": 1426,
+      "path": "sources/current-medcases/hepatitis_b_aguda_detallada_2026.json",
+      "sha256": "806c0893cad7fb6b7979f48a8534a6a4f8a211fe3f5890e96c662d0bc2090e0d"
+    },
+    {
+      "bytes": 1431,
+      "path": "sources/current-medcases/hepatitis_c_cronica_detallada_2026.json",
+      "sha256": "73642e0fc1a0141060220b5858b6559abea3d485dd73d0b2ab53ab04c30e2b21"
+    },
+    {
+      "bytes": 1424,
+      "path": "sources/current-medcases/hipercalemia_grave.json",
+      "sha256": "67bd6ecf35c9cb386d36c9093bc64d9fdc56cb9dcafa3cf69bdf6a10291bc0ec"
+    },
+    {
+      "bytes": 1310,
+      "path": "sources/current-medcases/hipernatremia_grave.json",
+      "sha256": "bc23449d69086f3f416fb8f0a3f3091bbcb91840e13121157b8bf61c247381ae"
+    },
+    {
+      "bytes": 1504,
+      "path": "sources/current-medcases/hiperpotassemia_grave.json",
+      "sha256": "aafbc4da72cbc76fe29b033ddfaa2c25510b3bd3bc949847c81d20f9ef95ec6a"
+    },
+    {
+      "bytes": 1314,
+      "path": "sources/current-medcases/hipocalcemia_grave.json",
+      "sha256": "fee0dbe5db3a26995955ce46586cf456fc41b34e745c681ce397728020e46435"
+    },
+    {
+      "bytes": 1334,
+      "path": "sources/current-medcases/hipoglicemia_grave.json",
+      "sha256": "879aa9b0426f8abb08d234b6090cf42361b25975170c065fae911a41088a82e1"
+    },
+    {
+      "bytes": 1368,
+      "path": "sources/current-medcases/hiponatremia_grave.json",
+      "sha256": "fdbafe13aa32208a04c98646acd6dd188e54a7e3da58373a7fb02c94b5064ef4"
+    },
+    {
+      "bytes": 1551,
+      "path": "sources/current-medcases/iam_congestao.json",
+      "sha256": "29a15440df0dcad28f3c324bdc54e32b0125c4ea8bc4992d625decd5d7751b77"
+    },
+    {
+      "bytes": 1481,
+      "path": "sources/current-medcases/iam_supra.json",
+      "sha256": "5515532689525daf5b40192d90b0bf1d31662c8892f7b4cc999864ed4caee409"
+    },
+    {
+      "bytes": 1460,
+      "path": "sources/current-medcases/insuficiencia_cardiaca_descomp.json",
+      "sha256": "046e0a2ce79837f4045b2217e3240c9570f611168db0bcb1f08a15bf6e720fe4"
+    },
+    {
+      "bytes": 1492,
+      "path": "sources/current-medcases/intox_benzodiazepinas.json",
+      "sha256": "527d99d2b7554eabddd854268ff84eae7ce70812e5de5686eae87fc0fbd20c0e"
+    },
+    {
+      "bytes": 1375,
+      "path": "sources/current-medcases/intox_betabloqueadores.json",
+      "sha256": "099ef2a1ee057a4636e8a218bcec3bc9f35f37fa4cd2683428ba3ff44cb13011"
+    },
+    {
+      "bytes": 1363,
+      "path": "sources/current-medcases/intox_metanol_etilenoglicol.json",
+      "sha256": "c1181438ac24f9a47fef40d75799ccf03eb17efd7e161e5ac1d8c65d3b8f2c67"
+    },
+    {
+      "bytes": 1297,
+      "path": "sources/current-medcases/intox_monoxido_carbono.json",
+      "sha256": "5131f73b1aefbb81b1dddf2036b437226e196550d5e2a72a68bf9a9b63ba4f17"
+    },
+    {
+      "bytes": 1459,
+      "path": "sources/current-medcases/intox_opioides.json",
+      "sha256": "828c0b53431c30153d4710025ebf77435e1086bf7061e236f7ee4afc23c07f85"
+    },
+    {
+      "bytes": 1509,
+      "path": "sources/current-medcases/intox_organofosforados.json",
+      "sha256": "b49558b2d51b8bfb8d902ae8f342a1e3d40eb35824382de6944e04e074e212ea"
+    },
+    {
+      "bytes": 1424,
+      "path": "sources/current-medcases/intox_paracetamol.json",
+      "sha256": "c36b1632f8c83bea00a962134d228c9ec84abe977de0f57a3cfe27d090a1cb1c"
+    },
+    {
+      "bytes": 1351,
+      "path": "sources/current-medcases/intox_triciclicos.json",
+      "sha256": "b83a8249ba68f54fa87199a4f3ab330850862cd63ec2afc953d4b7d9b859aceb"
+    },
+    {
+      "bytes": 1729,
+      "path": "sources/current-medcases/intoxicacao_exogena.json",
+      "sha256": "bb95bc4df98bf47399a76169a4d8a9f0ac5568b3eea360b27c4fd0fa34150e49"
+    },
+    {
+      "bytes": 1622,
+      "path": "sources/current-medcases/intoxicacao_overdose.json",
+      "sha256": "77e721f561631a91eebe01a77f3d3d50ee00e5759b120026dc17602bb5e9c433"
+    },
+    {
+      "bytes": 1365,
+      "path": "sources/current-medcases/laringite_estridulosa.json",
+      "sha256": "57fd332430c0e32f69729d7a546b8923d1fb0ed02725857a3e2bfeb810a6f6d7"
+    },
+    {
+      "bytes": 1481,
+      "path": "sources/current-medcases/lesao_renal_aguda.json",
+      "sha256": "70215c6a15efbb0471914b6275f046977f18472908e8db69ba9c60e1511fdaf7"
+    },
+    {
+      "bytes": 1401,
+      "path": "sources/current-medcases/mal_asmatico_ped.json",
+      "sha256": "c57c009712bcdc21302271ccdc5ab9b6858e83182ffadd0cf8824aac3a96bef6"
+    },
+    {
+      "bytes": 1282,
+      "path": "sources/current-medcases/mastoidite_aguda.json",
+      "sha256": "f7f7cb31bd7a851c830222f9ebb24037dfd794021824e87162a9f11818a0fa17"
+    },
+    {
+      "bytes": 1476,
+      "path": "sources/current-medcases/meningite_bacteriana.json",
+      "sha256": "4051c85befbb3b21791c1ac9c95b87bc8664f217503f1a6a209e01840c6b7861"
+    },
+    {
+      "bytes": 1417,
+      "path": "sources/current-medcases/meningite_pediatrica.json",
+      "sha256": "c2c04f63a14e76552adce42a72e045cc4450262e244393e82660586d8b85581a"
+    },
+    {
+      "bytes": 1320,
+      "path": "sources/current-medcases/miocardite_aguda.json",
+      "sha256": "a9aa538619ed989d7d624f080a3367de98cb367270476f2852eb6ff5afa7e26d"
+    },
+    {
+      "bytes": 1448,
+      "path": "sources/current-medcases/neutropenia_febril.json",
+      "sha256": "d2c6506ef22c06be4b0d10059940605db40a23938408d129f0333e4376bf79cd"
+    },
+    {
+      "bytes": 1481,
+      "path": "sources/current-medcases/obstrucao_intestinal.json",
+      "sha256": "d9fb2ff18d66856936e57e66065411e3559eba262658e0d10b0f233d6d80bc34"
+    },
+    {
+      "bytes": 1409,
+      "path": "sources/current-medcases/pancreatite_aguda.json",
+      "sha256": "a81a78aac0ea98a9fa47bef3dcb970313955f4fa35f27d8e707c48a781db8c26"
+    },
+    {
+      "bytes": 1506,
+      "path": "sources/current-medcases/pancreatite_aguda_grave.json",
+      "sha256": "158e26b5e12a19ada19b782be4d4a01dba4e3f283378d2d881d3cc4cdb177fe6"
+    },
+    {
+      "bytes": 1380,
+      "path": "sources/current-medcases/pancreatitis_aguda_005.json",
+      "sha256": "e7d86d8b5b8a7c72769dbd0dde62f7939d1ef4d3335fadb45f0ee4dfcd744705"
+    },
+    {
+      "bytes": 1481,
+      "path": "sources/current-medcases/parada_respiratoria.json",
+      "sha256": "2317e29874c2645c70f0f40f514d338bf24775b0d40c8477927adc8b2d882f31"
+    },
+    {
+      "bytes": 1496,
+      "path": "sources/current-medcases/pbe_cirrose.json",
+      "sha256": "86bafe3b1cf4b455a35569446e579fe4e9df8b0b5e64fe30a7ae115cacbc2af3"
+    },
+    {
+      "bytes": 1453,
+      "path": "sources/current-medcases/pcr_adulto.json",
+      "sha256": "28577ee6d2119c94bd8a333c284fc7ca4c789cfafc9057dc6eca75fe373f8112"
+    },
+    {
+      "bytes": 1381,
+      "path": "sources/current-medcases/pcr_pediatrica.json",
+      "sha256": "b3509fe65b9aa368ff17cb0713b867c14fc7013df624e5ad2899b8467a833dd9"
+    },
+    {
+      "bytes": 1339,
+      "path": "sources/current-medcases/pericardite_aguda.json",
+      "sha256": "e0bf03dff6bc41562eb13b129ef7ff37fedd96faed6b31f67afdd37fb0447a31"
+    },
+    {
+      "bytes": 1526,
+      "path": "sources/current-medcases/pielonefrite_aguda.json",
+      "sha256": "42cf29deb806bb104345ab9e26d2d07f9d044452092c47f341bc5845e3788ad9"
+    },
+    {
+      "bytes": 1298,
+      "path": "sources/current-medcases/pneumonia_aspirativa.json",
+      "sha256": "403ce06c823dbc384e428e4338123290441d4d2f45fae51d0f662c88bfb6a9bf"
+    },
+    {
+      "bytes": 1587,
+      "path": "sources/current-medcases/pneumonia_grave.json",
+      "sha256": "5b43b32aa40094ee9f82ebf28325a1f632d0ecfdc41eef9a52488b2caf8eec91"
+    },
+    {
+      "bytes": 1417,
+      "path": "sources/current-medcases/politrauma_atls.json",
+      "sha256": "f43cab70eb01e5440434871b77ed888ec658fbdd28279f3b46f51263757be29f"
+    },
+    {
+      "bytes": 1327,
+      "path": "sources/current-medcases/priapismo_emergencia.json",
+      "sha256": "896791da488e7f9ee3d5a636677af964391921fea1c6a0e1cc265e5ff52706c7"
+    },
+    {
+      "bytes": 1375,
+      "path": "sources/current-medcases/rabdomiolise_aguda.json",
+      "sha256": "6d9d879fec58e5bd79afa294b6b16b8bf8e70f3e35e04842b5d4836c672c8837"
+    },
+    {
+      "bytes": 1401,
+      "path": "sources/current-medcases/rinosinusitis_aguda_007.json",
+      "sha256": "17b7464c3f683743b0686010562bf74bca0a6bb12ec56a1a215a7bd370357166"
+    },
+    {
+      "bytes": 1481,
+      "path": "sources/current-medcases/sepse.json",
+      "sha256": "6cb5bd7c796e18be15e9744cb06ecb306d6b4d325200b199d8385a9b609cb964"
+    },
+    {
+      "bytes": 1314,
+      "path": "sources/current-medcases/sepse_foco_urinario.json",
+      "sha256": "a0d0519a01d666c04d5f6c780909e749e0b51bda78ffbb39b339002a62d0f17e"
+    },
+    {
+      "bytes": 1367,
+      "path": "sources/current-medcases/sindrome_abst_opioides.json",
+      "sha256": "498d1d7907e307293e505afbdfc93319c70ad0388b2a7a7570438f9296ffebad"
+    },
+    {
+      "bytes": 1509,
+      "path": "sources/current-medcases/sindrome_ascitico_debut_016.json",
+      "sha256": "47152c78c272f898f8e771fb5b12f38c59f6189ade3912e7029e276254cd0519"
+    },
+    {
+      "bytes": 1495,
+      "path": "sources/current-medcases/sindrome_ascitico_edematoso_017.json",
+      "sha256": "ac030e8aeec50d16a9957a77e98c10a15473cdec0c9206d9cacd1a31472d7f6d"
+    },
+    {
+      "bytes": 1299,
+      "path": "sources/current-medcases/sindrome_compartimental.json",
+      "sha256": "b9ff2e67edf2b793319ee7667008c1e81b6292b3e2461b17462ece8d24f4853d"
+    },
+    {
+      "bytes": 1596,
+      "path": "sources/current-medcases/sindrome_coronariana_sem_st.json",
+      "sha256": "be94f4b8708a20f2a8f81012595a56cf58ca883e51b830a1f7722dec10e27e28"
+    },
+    {
+      "bytes": 1415,
+      "path": "sources/current-medcases/sinusite_bacteriana_ped.json",
+      "sha256": "f65e3969725631e0ca8074204eda50baf4469597b551e442cb2a14b3f5d0aaf3"
+    },
+    {
+      "bytes": 1623,
+      "path": "sources/current-medcases/status_epilepticus.json",
+      "sha256": "02f2d8e065aedc681acbbe859652d3b9d8dce6412d3d61d46db797cffa137081"
+    },
+    {
+      "bytes": 1456,
+      "path": "sources/current-medcases/tep_agudo.json",
+      "sha256": "f92d9e141b780bf9d82bc0f881a1f7442a71ace3f8be1f385a703d397e2c645c"
+    },
+    {
+      "bytes": 1426,
+      "path": "sources/current-medcases/tpsv.json",
+      "sha256": "708de3b94c7030138af1fcbc9527bebb065c4d989fac7165d8b801117dc4317a"
+    },
+    {
+      "bytes": 1479,
+      "path": "sources/current-medcases/tromboembolismo_pulmonar.json",
+      "sha256": "eee4df238636f173c61001f604b665f89f12aac2d730af404bc6357678a08751"
+    },
+    {
+      "bytes": 1413,
+      "path": "sources/current-medcases/tromboembolismo_venoso_ped.json",
+      "sha256": "de417f80447d0502f7faae034e4dd865333bb12881d07030ed0927852da034c3"
+    },
+    {
+      "bytes": 56476,
+      "path": "sources/inventories/current-exact.json",
+      "sha256": "0416102f0271326994570dfa021079b0b2a426315f359b2f93cf7b8b5a9f85c9"
+    },
+    {
+      "bytes": 52062,
+      "path": "sources/inventories/pdf-emergency-2026-exact.json",
+      "sha256": "148e608071a725f55a9617a87fde9b3f849e6ed44a44a321236e7b2f6fb1d23d"
+    },
+    {
+      "bytes": 1493,
+      "path": "sources/inventories/pdf-emergency-2026-gestante-subtypes.json",
+      "sha256": "2c117338f04ecd68dd75d384236a644789ab4c754bcd96b888373679511dde57"
+    },
+    {
+      "bytes": 22411,
+      "path": "sources/inventories/pdf-ps-adult-exact.json",
+      "sha256": "5879b1a307020f2a47ed3c1619f65a3029571ffd973eae500ca1a2f4d1c22895"
+    },
+    {
+      "bytes": 1135,
+      "path": "sources/pdf-emergency-2026-gestante/01_nauseas_e_vomitos.json",
+      "sha256": "4d565875dc1f83ecc2ca21db5fad9c81a572c164a3f004eb2633609b2cf6e94b"
+    },
+    {
+      "bytes": 1105,
+      "path": "sources/pdf-emergency-2026-gestante/02_dor.json",
+      "sha256": "3ecef32eda759da8d9bf7afa62b6b7096e451f49720a8337c243908e297c815f"
+    },
+    {
+      "bytes": 1117,
+      "path": "sources/pdf-emergency-2026-gestante/03_enxaqueca.json",
+      "sha256": "0512d5c22be5968b6f7c6480d787bf4387a9c4c4c549da6891d937123541bb31"
+    },
+    {
+      "bytes": 1117,
+      "path": "sources/pdf-emergency-2026-gestante/04_dispepsia.json",
+      "sha256": "fb7cd603183288e93b65885e3d1a57601f8a9ab6398d8694314c5e5617cd70b2"
+    },
+    {
+      "bytes": 1136,
+      "path": "sources/pdf-emergency-2026-gestante/05_candidiase_vaginal.json",
+      "sha256": "c9dd16fc9a85a8c327efe74b8be1a1f0b233ae3ec782f1c8ee300d6f08da30e4"
+    },
+    {
+      "bytes": 1148,
+      "path": "sources/pdf-emergency-2026/001_taquicardia_supraventricular.json",
+      "sha256": "cc61edfe84ef9fc07d248af79c6a435967a826327c37abfc7140a2009ca8a592"
+    },
+    {
+      "bytes": 1145,
+      "path": "sources/pdf-emergency-2026/002_taquicardia_ventricular.json",
+      "sha256": "faef578b31f52a4e54d65f8928bb4a444477747ade5402e7aa732a4e1777d2d7"
+    },
+    {
+      "bytes": 1337,
+      "path": "sources/pdf-emergency-2026/003_fibrilacao_atrial_e_flutter.json",
+      "sha256": "55bfbb52c1513523bd5abbec47907330ff889eb8feafd411d7b9615622edda15"
+    },
+    {
+      "bytes": 1170,
+      "path": "sources/pdf-emergency-2026/004_bradiarritmias.json",
+      "sha256": "c7235008d5822ce3218bff7db1ff0d339c89f01a122475be488a8ed58eb43244"
+    },
+    {
+      "bytes": 1314,
+      "path": "sources/pdf-emergency-2026/005_sindrome_coronariana_aguda.json",
+      "sha256": "cf050eb4d154ba1577f8ea7b64fa5ac8e50d973b542f0c77a39b286bb9fb64db"
+    },
+    {
+      "bytes": 1266,
+      "path": "sources/pdf-emergency-2026/006_insuficiencia_cardiaca_agudamente_descompensada_icad_e_edema_agudo_de_pu.json",
+      "sha256": "731bfcbdf050d3c3af3d786a8c18b9795e6e4b39acb2e6a957be31955819d68a"
+    },
+    {
+      "bytes": 1164,
+      "path": "sources/pdf-emergency-2026/007_urgencia_e_emergencia_hipertensiva.json",
+      "sha256": "c45dbd0a187eda06da6fb503e6e738d9cb6e63c586f4cea54ff6930157cfdbc8"
+    },
+    {
+      "bytes": 1180,
+      "path": "sources/pdf-emergency-2026/008_disseccao_aguda_de_aorta.json",
+      "sha256": "68b7ff235441173b52b5a14ef32549477359ce1199f08672c0549716a378b024"
+    },
+    {
+      "bytes": 1225,
+      "path": "sources/pdf-emergency-2026/009_trombose_venosa_profunda_tvp_e_tromboembolismo_pulmonar_tep.json",
+      "sha256": "de8f4fecc330dad7b549daeec92ef799b778996bdd3dfc9bdb700f8197f1d128"
+    },
+    {
+      "bytes": 1201,
+      "path": "sources/pdf-emergency-2026/010_cefaleia_primaria.json",
+      "sha256": "dc347747fe1d318902db6a2b8b222c25130effe8ba14a4508c9bd2bcf34eec5b"
+    },
+    {
+      "bytes": 1272,
+      "path": "sources/pdf-emergency-2026/011_enxaqueca.json",
+      "sha256": "cfdebe9bab290012b80af6ee7f9e93d52d0a4967f75e553ac3750006117d5255"
+    },
+    {
+      "bytes": 1132,
+      "path": "sources/pdf-emergency-2026/012_vertigem.json",
+      "sha256": "993c896f085bd17cb0e0178878d1f7943f5b2dfa1b552f6b2fe1f8aceb30c352"
+    },
+    {
+      "bytes": 1390,
+      "path": "sources/pdf-emergency-2026/013_trombolise.json",
+      "sha256": "d02304e9327388067009006c9a8e6b1aa8e4aaf43837761cd763c1edab6338ca"
+    },
+    {
+      "bytes": 1267,
+      "path": "sources/pdf-emergency-2026/014_crise_asmatica.json",
+      "sha256": "83f1c3901020c7a2d1e20592bd705a096f2c74ed5f452f181841551bc6cc970b"
+    },
+    {
+      "bytes": 1382,
+      "path": "sources/pdf-emergency-2026/015_dpoc.json",
+      "sha256": "db1d56daa371f5a953b15afae389ffe58b3bdc8126e19712c5165b5a4cce1c52"
+    },
+    {
+      "bytes": 1208,
+      "path": "sources/pdf-emergency-2026/016_pneumonia.json",
+      "sha256": "d917139ed4e2b6365a3787bb6c70f92832b9218e75520dc285f5b866cd54dec0"
+    },
+    {
+      "bytes": 1256,
+      "path": "sources/pdf-emergency-2026/017_sintomaticos.json",
+      "sha256": "5f4aadef4078d4853159d27d6c4e7133218e9c38a8fcc56363300f8791740cd8"
+    },
+    {
+      "bytes": 1192,
+      "path": "sources/pdf-emergency-2026/018_tuberculose.json",
+      "sha256": "d4ba5dc7b66c48cb118c62264bd5e9cbede3cf0f30414d6b8a29f83e91aadf05"
+    },
+    {
+      "bytes": 1218,
+      "path": "sources/pdf-emergency-2026/019_pneumotorax_hemotorax.json",
+      "sha256": "48d4116f5400b5c993c7d2170259bf019eb828024f8d2e8fea899bf3e2e3bbc4"
+    },
+    {
+      "bytes": 1447,
+      "path": "sources/pdf-emergency-2026/020_otite_media_aguda.json",
+      "sha256": "9311626d425c856f9c0fcbe73746e39541e5d7c4e225d5450f9c1d920d26c69c"
+    },
+    {
+      "bytes": 1311,
+      "path": "sources/pdf-emergency-2026/021_rinossinusite_aguda.json",
+      "sha256": "577ae7a5120d5cf0bb61a250879f501aedc5b4c579e2547c4cf11022f2f4a1ca"
+    },
+    {
+      "bytes": 1260,
+      "path": "sources/pdf-emergency-2026/022_faringoamigdalite.json",
+      "sha256": "4f2622c45a4cd0f0195c0a6424a12c483d6274957dfbd90d87f8bd97db0b9022"
+    },
+    {
+      "bytes": 1200,
+      "path": "sources/pdf-emergency-2026/023_epistaxe.json",
+      "sha256": "1d5964956ce1ff037b6d6135978851fdc4fa33d1d4483b2848ea299f5f3159f9"
+    },
+    {
+      "bytes": 1207,
+      "path": "sources/pdf-emergency-2026/024_nauseas_e_vomitos.json",
+      "sha256": "e3e0d227b4277613efc3246f17a22a0ccf5e7b36f729a139700a14960c6d02b9"
+    },
+    {
+      "bytes": 1214,
+      "path": "sources/pdf-emergency-2026/025_diarreia.json",
+      "sha256": "9576b4159e75842db86f441dccfcf419bf9cd22c7cc0b50f7fd9a72aa732cc74"
+    },
+    {
+      "bytes": 1166,
+      "path": "sources/pdf-emergency-2026/026_doenca_hemorroidaria.json",
+      "sha256": "6ef8854b2b498010065860c710f9917a7c35ac783cf5f0dd0dc88072e9bfb510"
+    },
+    {
+      "bytes": 1286,
+      "path": "sources/pdf-emergency-2026/027_hemorragia_digestiva_alta.json",
+      "sha256": "4d0be407023954188296cd826ee6534ccc15abdb48c2533727eb6ab3144b6216"
+    },
+    {
+      "bytes": 1170,
+      "path": "sources/pdf-emergency-2026/028_hemorragia_digestiva_baixa.json",
+      "sha256": "3b602c2d7e007c9fcee72d577479252f9772b00b2e51f21a8b7e7a46360f2b6f"
+    },
+    {
+      "bytes": 1205,
+      "path": "sources/pdf-emergency-2026/029_encefalopatia_hepatica.json",
+      "sha256": "8df6778734ba5f93a6ae33e668c353be9708d81ed241c841b56fcd913c3c267a"
+    },
+    {
+      "bytes": 1233,
+      "path": "sources/pdf-emergency-2026/030_pancreatite_aguda.json",
+      "sha256": "3e9631ff0649f7cdf4abad936d334e26a75f558c536fe8de2c607b311c9d0507"
+    },
+    {
+      "bytes": 1233,
+      "path": "sources/pdf-emergency-2026/031_colelitiase.json",
+      "sha256": "7b40a1f4ff9a46deaacc2c29447f86ffacc436a9091ce4153106c3d8037188ec"
+    },
+    {
+      "bytes": 1242,
+      "path": "sources/pdf-emergency-2026/032_colecistite.json",
+      "sha256": "205f8aa6a23006e41de90747cf5e2e71cbbcc05d0417e243fc6493351e64555f"
+    },
+    {
+      "bytes": 1259,
+      "path": "sources/pdf-emergency-2026/033_colangite.json",
+      "sha256": "bbee39e2d52ca70d18597bd695c5d59d99cfcddc5e2a40efa9b65bc0350bb555"
+    },
+    {
+      "bytes": 1186,
+      "path": "sources/pdf-emergency-2026/034_refluxo_gastroesofagico.json",
+      "sha256": "bd0d59c50fc792c826b988622eb72a837d535d27fc3bb3fd05552d8bf67fe32b"
+    },
+    {
+      "bytes": 1228,
+      "path": "sources/pdf-emergency-2026/035_doenca_ulcerosa_peptica.json",
+      "sha256": "5ec783f14a81a998f22911bb96baa05d8f0cdacb747a152615e1bc4db3fdb6f1"
+    },
+    {
+      "bytes": 1275,
+      "path": "sources/pdf-emergency-2026/036_ascite.json",
+      "sha256": "9d4a865532148c47a5bde85ef52515f39897796d9673d97ca7daa2b8c22e3505"
+    },
+    {
+      "bytes": 1405,
+      "path": "sources/pdf-emergency-2026/037_diverticulite_aguda_nao_complicada.json",
+      "sha256": "ae3c2fed94f496d2edad285e2fb400342e2112c20ea7a986e31c906f54abc848"
+    },
+    {
+      "bytes": 1247,
+      "path": "sources/pdf-emergency-2026/038_apendicite_aguda.json",
+      "sha256": "073e60b6def4ff3b35406e547e476dc6e41176a94e6202deeb7467ae6c55beba"
+    },
+    {
+      "bytes": 1190,
+      "path": "sources/pdf-emergency-2026/039_abdome_agudo_obstrutivo.json",
+      "sha256": "891b31bc22c0bc6342700e1f9773c09c2f931ddf836fb5711e09f82f1a006fd1"
+    },
+    {
+      "bytes": 1272,
+      "path": "sources/pdf-emergency-2026/040_abdome_agudo_perfurativo.json",
+      "sha256": "4ee62f9e907bbc77f1b450070b7bf2196b6c970b3facf278bb6281e64b21b10d"
+    },
+    {
+      "bytes": 1182,
+      "path": "sources/pdf-emergency-2026/041_abdome_agudo_vascular.json",
+      "sha256": "b93d574423c6197c00ce4a01eea8eea4d900f89fdf5d45035597286af73c8235"
+    },
+    {
+      "bytes": 1175,
+      "path": "sources/pdf-emergency-2026/042_abdome_agudo_hemorragico.json",
+      "sha256": "b5da1c5a12fb9a7f0520b734a963433c9c1808c2e1f68680570d2659b170afb7"
+    },
+    {
+      "bytes": 1177,
+      "path": "sources/pdf-emergency-2026/043_anemia_ferropriva.json",
+      "sha256": "79aaf716c6963b07c98f4217a0889bd0ac804c934ce96060f6759e1c4d4c4861"
+    },
+    {
+      "bytes": 1300,
+      "path": "sources/pdf-emergency-2026/044_neutropenia_febril.json",
+      "sha256": "cb4041c31b3fcea7f3b8e37a1271b1a2f47d38cb69b01f8d8e929e19c41f392d"
+    },
+    {
+      "bytes": 1177,
+      "path": "sources/pdf-emergency-2026/045_cetoacidose_diabetica_cad_e_estado_hiperglicemico_hiperosmolar_ehh.json",
+      "sha256": "b55d661274d06c18c4f8c90a7073612de9dda7003106cd8a5baba97aecce5986"
+    },
+    {
+      "bytes": 1130,
+      "path": "sources/pdf-emergency-2026/046_controle_glicemico.json",
+      "sha256": "fe7e9e09df09ba8761233e07a84d79f013b0e4b0566b5e12b685f381cdac5289"
+    },
+    {
+      "bytes": 1170,
+      "path": "sources/pdf-emergency-2026/047_cetoacidose_diabetica_na_pediatria.json",
+      "sha256": "8c114564433862796a01c2faba552b755779bf09df64054b4b8580eda5e02ff3"
+    },
+    {
+      "bytes": 1137,
+      "path": "sources/pdf-emergency-2026/048_hipoglicemia.json",
+      "sha256": "f2c30bc8976f8c5b37fd8aa5717c24d2ca32888a3aecebb5116eb911cbd67f70"
+    },
+    {
+      "bytes": 1393,
+      "path": "sources/pdf-emergency-2026/049_infeccao_do_trato_urinario.json",
+      "sha256": "f729a76c61e31e0e628d6702cac414658887ea634a6375ab5023da0dfe545674"
+    },
+    {
+      "bytes": 1183,
+      "path": "sources/pdf-emergency-2026/050_candidiase_vaginal.json",
+      "sha256": "c6ed83201f364cde37d2d2b5da810fd7554b5796d30cecf42ba3fef42e0e8ee6"
+    },
+    {
+      "bytes": 1169,
+      "path": "sources/pdf-emergency-2026/051_vaginose_bacteriana.json",
+      "sha256": "1aa0875e5f931888db8e42398f8337219c841f904db8ccd749610f042ca7ef5d"
+    },
+    {
+      "bytes": 1155,
+      "path": "sources/pdf-emergency-2026/052_vaginose_citolitica.json",
+      "sha256": "dbb778d055034aa307772b78ea6208a2d73c24c07313d266659fedd9edfcb08c"
+    },
+    {
+      "bytes": 1178,
+      "path": "sources/pdf-emergency-2026/053_tricomoniase.json",
+      "sha256": "28862963a30f1674552911860bde6884786fce08e4ad98580b39d012ea458bc1"
+    },
+    {
+      "bytes": 1161,
+      "path": "sources/pdf-emergency-2026/054_herpes_genital.json",
+      "sha256": "e47f28e69fa5c257ce73b0dd9af4cda32018cc0639a8a3dbb0a45d82c75f0f2b"
+    },
+    {
+      "bytes": 1188,
+      "path": "sources/pdf-emergency-2026/055_uretrite_gonococica.json",
+      "sha256": "ec8f80a997dd914349bca445c93f90d147b727078c72ad8fe7fac829b2209e5d"
+    },
+    {
+      "bytes": 1174,
+      "path": "sources/pdf-emergency-2026/056_uretrite_nao_gonococica.json",
+      "sha256": "34a66fd95ec04854dc278a24343b6b1957cb224c3ae8ed7fc85d191a5ede02ae"
+    },
+    {
+      "bytes": 1216,
+      "path": "sources/pdf-emergency-2026/057_ureterolitiase_colica_nefretica.json",
+      "sha256": "e05670193c75eb9f8d2c14fa127a99983f11dbcb3422172c9f5e97fb2a201f68"
+    },
+    {
+      "bytes": 1245,
+      "path": "sources/pdf-emergency-2026/058_orquiepididimite.json",
+      "sha256": "7d55c4c453d9b443003b7afc153f4f54b028242732e6bfe3c64f4c5f7721f7df"
+    },
+    {
+      "bytes": 1154,
+      "path": "sources/pdf-emergency-2026/059_sangramento_uterino_anormal.json",
+      "sha256": "057c57321f950e61de1a8986216ff4aef98557b4a3d64b75ea664328e7e5f2c4"
+    },
+    {
+      "bytes": 1307,
+      "path": "sources/pdf-emergency-2026/060_controle_da_dor_musculoesqueletica_no_pronto_socorro.json",
+      "sha256": "62c2c9d5bf037cf13137f970a5100d4cb9e295b6275f350c8607019c6d466615"
+    },
+    {
+      "bytes": 1275,
+      "path": "sources/pdf-emergency-2026/061_lombalgia_mecanica_e_torcicolo.json",
+      "sha256": "0b82f956943ebc082a8380d203a4d6ae2fd51341bc56d33dcfcd8812f935b6f6"
+    },
+    {
+      "bytes": 1221,
+      "path": "sources/pdf-emergency-2026/062_fratura_exposta.json",
+      "sha256": "ee5a5f188ec9529add6d1c832ff89f8b681bb3d22fecc5b0c70b9a89fb41dc33"
+    },
+    {
+      "bytes": 1272,
+      "path": "sources/pdf-emergency-2026/063_gota.json",
+      "sha256": "a02d70b5c4b2bf1ca4dbbc05ec989897223b3c63ead105de684fe5a2b9d6da0e"
+    },
+    {
+      "bytes": 1190,
+      "path": "sources/pdf-emergency-2026/064_acatisia.json",
+      "sha256": "9167164058981fa066141938319c62f7434efc5bb3bbc2f467c18a7c677b7340"
+    },
+    {
+      "bytes": 1255,
+      "path": "sources/pdf-emergency-2026/065_sindrome_psicotica.json",
+      "sha256": "ae6954c69d425099a3e5d9b90d4166778b895859b9649321e6b1ffd2de7ee948"
+    },
+    {
+      "bytes": 1204,
+      "path": "sources/pdf-emergency-2026/066_sindrome_psicotica.json",
+      "sha256": "028cb5a77e70d9930c4a3b5a60efb4b69e9811944daede0c8aa50ca3d775cb97"
+    },
+    {
+      "bytes": 1291,
+      "path": "sources/pdf-emergency-2026/067_agressividade_e_agitacao_psicomotora.json",
+      "sha256": "d59f8e5283e691f8f00fd81c07cf2eee6974cbe8e9d05a31a8e3ecbaa87097cb"
+    },
+    {
+      "bytes": 1213,
+      "path": "sources/pdf-emergency-2026/068_ansiedade_aguda_e_crise_de_panico.json",
+      "sha256": "46ef8111d3d691fb0b659894445764b4e21d7ceaf335f2a8973890a5574eb9d1"
+    },
+    {
+      "bytes": 1214,
+      "path": "sources/pdf-emergency-2026/069_hipercalemia.json",
+      "sha256": "84f649a7438f24982bda4ef03e4575623bee2a387ed2ea87021cb1cc2e277169"
+    },
+    {
+      "bytes": 1119,
+      "path": "sources/pdf-emergency-2026/070_hipocalemia.json",
+      "sha256": "f5902036b642f114c2e41f1846483bb6bc07b6349a8ea5c165e0a46535a8b679"
+    },
+    {
+      "bytes": 1120,
+      "path": "sources/pdf-emergency-2026/071_hiponatremia.json",
+      "sha256": "a62f3c634a4d2026d874c4cbc8497c72e2645d9b06619e93a27eeb14bce42bd9"
+    },
+    {
+      "bytes": 1145,
+      "path": "sources/pdf-emergency-2026/072_hipernatremia.json",
+      "sha256": "9fac0b3830aa3604023317ff9e91e36a9b41750570817be18c29e417afb3e2b2"
+    },
+    {
+      "bytes": 1146,
+      "path": "sources/pdf-emergency-2026/073_hipocalcemia.json",
+      "sha256": "59463f4529474d3c956984869022e822b2aa0726d8d298fec883f772ae465c68"
+    },
+    {
+      "bytes": 1121,
+      "path": "sources/pdf-emergency-2026/074_hipercalcemia.json",
+      "sha256": "8ce062e00a1e2dcda5e9b5cb5db2cc16429125c93cae512fc6bf3787a5e30c2f"
+    },
+    {
+      "bytes": 1173,
+      "path": "sources/pdf-emergency-2026/075_hipomagnesemia.json",
+      "sha256": "72316d05f903a7ab70c0f253508338201492c2610b310cf6440e6c1e1f28ecb9"
+    },
+    {
+      "bytes": 1167,
+      "path": "sources/pdf-emergency-2026/076_hipermagnesemia.json",
+      "sha256": "25fadeec5098baced1b18935c3accbe7abb3530f372a2cd08e8ec823663003ef"
+    },
+    {
+      "bytes": 1192,
+      "path": "sources/pdf-emergency-2026/077_sifilis.json",
+      "sha256": "bce94c888a5a6f4d54c93c3dbc5ce732b6eea657d1572914440533dab384b56e"
+    },
+    {
+      "bytes": 1235,
+      "path": "sources/pdf-emergency-2026/078_dengue.json",
+      "sha256": "bd43efa00d178e2c72ee6f371c0d952cc20b7827db645144982840108d0b6254"
+    },
+    {
+      "bytes": 1161,
+      "path": "sources/pdf-emergency-2026/079_herpes_simples.json",
+      "sha256": "b94e1febe7c4521b565e645ac9ffb01dfc44f3604d4cad75bfdd46b983974ec1"
+    },
+    {
+      "bytes": 1144,
+      "path": "sources/pdf-emergency-2026/080_conjuntivite.json",
+      "sha256": "016e5a36912e8944bc0cf68de5e69cb44428e37f7dab96c2db50952db3ec3d12"
+    },
+    {
+      "bytes": 1176,
+      "path": "sources/pdf-emergency-2026/081_tetano.json",
+      "sha256": "4099ce24ee21df77193ef32303e71f86a2aa7efb11690f167b00e09eccebdbec"
+    },
+    {
+      "bytes": 1219,
+      "path": "sources/pdf-emergency-2026/082_leptospirose.json",
+      "sha256": "80bfaa00ded7c53dc2768d15c3e107c110c1f477e792cd45784288980614d3f9"
+    },
+    {
+      "bytes": 1218,
+      "path": "sources/pdf-emergency-2026/083_sepse_e_choque_septico.json",
+      "sha256": "f84a8d14c020bc6142a4804eed426041f47738c56b6c1009d0be6dbae5e166fc"
+    },
+    {
+      "bytes": 1299,
+      "path": "sources/pdf-emergency-2026/084_bacterianas_superficiais_celulite_e_erisipela.json",
+      "sha256": "9d936047fcdfc4c4c3772da4bc6dfcc7971e6f58aa4463af55e2b14090e1d5d6"
+    },
+    {
+      "bytes": 1230,
+      "path": "sources/pdf-emergency-2026/085_bacterianas_purulentas_furunculose_e_abscesso.json",
+      "sha256": "dd7b3d2341021713cc9b90db84f2e88eb533214cc85f93cc0a7e9b41a843bf0a"
+    },
+    {
+      "bytes": 1274,
+      "path": "sources/pdf-emergency-2026/086_bacterianas_graves_ou_profundas_sinais_sistemicos_internacao_fatores_de_.json",
+      "sha256": "1cf88453d7aa3f1b2c17bb9c2ea4960702fcbcb893d77861a2f84301ce4e3fb9"
+    },
+    {
+      "bytes": 1446,
+      "path": "sources/pdf-emergency-2026/087_associar_terapeutica_para_gram_negativos_e_anaerobios.json",
+      "sha256": "855319820b53fc8260f46352e32f4f52d29aeea28de7bc6eb9bb7a967a2169cc"
+    },
+    {
+      "bytes": 1185,
+      "path": "sources/pdf-emergency-2026/088_pe_diabetico.json",
+      "sha256": "c32c0c53814ff280887ffebe2e04b9246ca2385a81484b8d745aef39013cc495"
+    },
+    {
+      "bytes": 1147,
+      "path": "sources/pdf-emergency-2026/089_choque_anafilatico.json",
+      "sha256": "b7615dba5db1548fcb8eed05c21679d4788e463e8f1c44067b9b1f500831e730"
+    },
+    {
+      "bytes": 1234,
+      "path": "sources/pdf-emergency-2026/090_adjuvantes.json",
+      "sha256": "be72d8a05e08a6e95e2ec909fc7c30a8320464ba1258397770e4552c7c821baf"
+    },
+    {
+      "bytes": 1316,
+      "path": "sources/pdf-emergency-2026/091_alergias.json",
+      "sha256": "a8eaae9d8c267890c38b6709d81471b68f5b80742ae6426619ab454ee5962094"
+    },
+    {
+      "bytes": 1205,
+      "path": "sources/pdf-emergency-2026/092_descontaminacao.json",
+      "sha256": "7c53a417fb12b6e7dfee174cb9eb52e6de724c2d895b16c92905c05d3f01fdd6"
+    },
+    {
+      "bytes": 1162,
+      "path": "sources/pdf-emergency-2026/093_paracetamol.json",
+      "sha256": "cfe884b743511bca4ed9604796b6bde2e246493eb8bbdd6a17acf99af37006c1"
+    },
+    {
+      "bytes": 1153,
+      "path": "sources/pdf-emergency-2026/094_organofosforados_carbamatos.json",
+      "sha256": "3df8eefb9eb330800f911fa55eb845d8f849b4c6f755c00515061a9caf7513ef"
+    },
+    {
+      "bytes": 1151,
+      "path": "sources/pdf-emergency-2026/095_cocaina.json",
+      "sha256": "c9e67d6793c8d7d314d87c089fc1fbf1900d032f564d1d0649ebe369c2604070"
+    },
+    {
+      "bytes": 1134,
+      "path": "sources/pdf-emergency-2026/096_opioides.json",
+      "sha256": "4d12b399d026405c09ba43bcb40546023bc3f7a8838c1936573d6af777090297"
+    },
+    {
+      "bytes": 1164,
+      "path": "sources/pdf-emergency-2026/097_intoxicacao_por_benzodiazepinicos.json",
+      "sha256": "7065d2b5af1a42855c1a239649916d9f2330393709edc87da9bb53108cd28a4f"
+    },
+    {
+      "bytes": 1244,
+      "path": "sources/pdf-emergency-2026/098_intoxicacao_alcoolica.json",
+      "sha256": "85bca1f627cda5bf723363851c9090c361ac22b76be93c2da59a9fbc88a718bc"
+    },
+    {
+      "bytes": 1456,
+      "path": "sources/pdf-emergency-2026/099_abstinencia_alcoolica.json",
+      "sha256": "a061f0b2946a8609534e0155d45c90a7d1968a3a86a7172c2e1c7a30c66f1754"
+    },
+    {
+      "bytes": 1194,
+      "path": "sources/pdf-emergency-2026/100_acidente_ofidico.json",
+      "sha256": "5304139df3013ec5946e76cf54819fb799a3086df1951db1af9203cdf1d1027e"
+    },
+    {
+      "bytes": 1122,
+      "path": "sources/pdf-emergency-2026/101_escorpionismo.json",
+      "sha256": "4fd4a24d0f9bfe2de0e90503acdeb8eeeafa6dfbf045e6eaf9426351ab69c382"
+    },
+    {
+      "bytes": 1184,
+      "path": "sources/pdf-emergency-2026/102_araneismo_aranha_marrom_e_armadeira.json",
+      "sha256": "81908a687ef3c43c387776385bc62d5c19b52b562df817ab240e29aa103251df"
+    },
+    {
+      "bytes": 1139,
+      "path": "sources/pdf-emergency-2026/103_concentrado_de_hemacias.json",
+      "sha256": "9ce630821f80165d9e611257794867d19ac2e6bad0d3a22f22a75792f4206432"
+    },
+    {
+      "bytes": 1139,
+      "path": "sources/pdf-emergency-2026/104_concentrado_de_plaquetas.json",
+      "sha256": "0a52e3e584eb15b2da76c67650950d84d18096cc2349eba38cf39c3d46215b72"
+    },
+    {
+      "bytes": 1130,
+      "path": "sources/pdf-emergency-2026/105_crioprecipitado.json",
+      "sha256": "1b9eda1dce8988f5d0bb95d419aedd6ee163e8285d66d14329bd5191bb85349a"
+    },
+    {
+      "bytes": 1138,
+      "path": "sources/pdf-emergency-2026/106_plasma_fresco_congelado.json",
+      "sha256": "58d3aabba820c13a79b43c8d1a187f0d18c58e2bbeeb6c028b02f117382b890d"
+    },
+    {
+      "bytes": 1587,
+      "path": "sources/pdf-emergency-2026/107_antimicrobianos.json",
+      "sha256": "fcafd9f286a07505fec8e26839d7d7ebf1c636c3ef1a7e3f1e1912cb69e2ee8e"
+    },
+    {
+      "bytes": 1272,
+      "path": "sources/pdf-emergency-2026/108_analgesicos.json",
+      "sha256": "989ebb5c286fc421c74f81f5ed09f58b19bf0eb68f6267075dad9a0416d35a82"
+    },
+    {
+      "bytes": 1231,
+      "path": "sources/pdf-emergency-2026/109_aminas_vasoativas.json",
+      "sha256": "f1ec3207465a959ec1c25fe090322ed32a8f5559b35c75d7a0ad47ed15adebb5"
+    },
+    {
+      "bytes": 1445,
+      "path": "sources/pdf-emergency-2026/110_intubacao.json",
+      "sha256": "fd5b644eb00dea83232123f14fd15cde3873ee4fda934327d9b16a659346450b"
+    },
+    {
+      "bytes": 1305,
+      "path": "sources/pdf-emergency-2026/111_especial_gestantes.json",
+      "sha256": "9edddf16238f70782d9c45792428e779f17641e73591af13229c0ace81c543a7"
+    },
+    {
+      "bytes": 1112,
+      "path": "sources/pdf-ps-adult/01_abscesso_furunculo.json",
+      "sha256": "cae0f4701960c79b9a41f3a18cabbd5dfa84ff2e65f8973d00d51a41984c2848"
+    },
+    {
+      "bytes": 1133,
+      "path": "sources/pdf-ps-adult/02_amigdalite.json",
+      "sha256": "5f0d1afc3a3077a22b504606c3f4943dee1166ce73ebd99123592527ae380375"
+    },
+    {
+      "bytes": 1088,
+      "path": "sources/pdf-ps-adult/03_anemia_ferropriva_sintomatica.json",
+      "sha256": "4a3ebf0b054b613f76985561c7c28d02bf1c28af27c47d2dd280b3dfb012462e"
+    },
+    {
+      "bytes": 1096,
+      "path": "sources/pdf-ps-adult/04_asma_aguda_leve_moderada.json",
+      "sha256": "eaa4109a19211ec33ee7b50fc5686dc838158d8809e82a023640fe47e38dde58"
+    },
+    {
+      "bytes": 1102,
+      "path": "sources/pdf-ps-adult/05_candidiase_vaginal_corrimento.json",
+      "sha256": "b05158e5c40ef00f7319c028d9647cdc2fd7504eacc4695e3e3e11791c1cef79"
+    },
+    {
+      "bytes": 1056,
+      "path": "sources/pdf-ps-adult/06_cerume_impactado_cera.json",
+      "sha256": "93a8b54a18fe9851e380f8188050b5089d7b25e8ee1424682e4b1539866206f2"
+    },
+    {
+      "bytes": 1099,
+      "path": "sources/pdf-ps-adult/07_cefaleia_tensional_cefaleia_dor_de_cabeca.json",
+      "sha256": "03134963f79d76bc1dd715dc97242d16aa713ab13e475278673c3826cda7734f"
+    },
+    {
+      "bytes": 1138,
+      "path": "sources/pdf-ps-adult/08_colica_biliar_litiase_biliar_pedra_nos_rins.json",
+      "sha256": "1b328bb1265fc457b2f2b12a7090372513903317b224c8bdf698004e50a1bb49"
+    },
+    {
+      "bytes": 1066,
+      "path": "sources/pdf-ps-adult/09_conjuntivite.json",
+      "sha256": "027bc532a3aafb956821e744ec5130ece9e064ba9dba2727a517a389f3819e07"
+    },
+    {
+      "bytes": 1083,
+      "path": "sources/pdf-ps-adult/10_constipacao_funcional.json",
+      "sha256": "9d235cb0098b2e2b3efc45eef51549c4e8de74bf7c0bad65c46daa754532a613"
+    },
+    {
+      "bytes": 1080,
+      "path": "sources/pdf-ps-adult/11_crise_convulsiva_epilepsia.json",
+      "sha256": "2d81ca95e52a5d12764910d5b41113f50736571b645901f6bf58df362d197bbf"
+    },
+    {
+      "bytes": 1073,
+      "path": "sources/pdf-ps-adult/12_crise_hipertensiva.json",
+      "sha256": "f405d52e7a412b2161e356514ed3f49650cf07ebd2c7681dd1d308e89d444a1f"
+    },
+    {
+      "bytes": 1157,
+      "path": "sources/pdf-ps-adult/13_dengue.json",
+      "sha256": "14f7f7db92b55bd637adb59a4e78ff59a4cc187cf0362e23629ea4682e08e56b"
+    },
+    {
+      "bytes": 1147,
+      "path": "sources/pdf-ps-adult/14_dermatite_de_contato_reacao_alergica_leve.json",
+      "sha256": "4362978ed076c725f8ed620eea2d326ec14ce714b044a95057dba4e963944ec2"
+    },
+    {
+      "bytes": 1085,
+      "path": "sources/pdf-ps-adult/15_dermatite_seborreica_leve.json",
+      "sha256": "561cfd4db4e5495c330112298353e5f9750e43cc83691a3e24a315280221ca25"
+    },
+    {
+      "bytes": 1078,
+      "path": "sources/pdf-ps-adult/16_dermatofitose_interdigital_pe_de_atleta.json",
+      "sha256": "42c6b845421d14953fe2a569a8bf9517b9f835e5e0c883a3704a937025a10765"
+    },
+    {
+      "bytes": 1172,
+      "path": "sources/pdf-ps-adult/17_dpoc_em_exacerbacao.json",
+      "sha256": "2b5d173fa59f2777cca442e9372f0da75b9d425b4a24eeb9b3b559503109ca45"
+    },
+    {
+      "bytes": 1112,
+      "path": "sources/pdf-ps-adult/18_dor_muscular_lombalgia_algia.json",
+      "sha256": "390bbaa6caec044bebff2253754046f6bfdc1281f245b1fb6869b4ba7b03fe17"
+    },
+    {
+      "bytes": 1096,
+      "path": "sources/pdf-ps-adult/19_enterobiase_infestacao_por_oxiuros.json",
+      "sha256": "34a01a78f474a5ce466e64a82019ff6ecb46944db852f1d5d17ffa94e05cba28"
+    },
+    {
+      "bytes": 1117,
+      "path": "sources/pdf-ps-adult/20_enxaqueca_migranea.json",
+      "sha256": "a4e36a41bdf54e6b6b40d5407eeeca64e9188d1be81d225ceb2be95560e68894"
+    },
+    {
+      "bytes": 1053,
+      "path": "sources/pdf-ps-adult/21_escabiose_sarna.json",
+      "sha256": "1f4c0a6a35e671b42f8d40888d5992a3faa4f01500b4db6dc463d701965c17ae"
+    },
+    {
+      "bytes": 1102,
+      "path": "sources/pdf-ps-adult/22_erisipela.json",
+      "sha256": "256165fb87cfb01d50b34b76d5817cb228bd8597ac96aeaedbc68115b7d976d8"
+    },
+    {
+      "bytes": 1065,
+      "path": "sources/pdf-ps-adult/23_escoriacoes_feridas_leves.json",
+      "sha256": "901fd53c3a8dbd1fdc9d1c81074bf1676c50245cfc6d18027641bd9a4fc3e625"
+    },
+    {
+      "bytes": 1097,
+      "path": "sources/pdf-ps-adult/24_faringite_viral_faringoamigdalite_viral.json",
+      "sha256": "ed208dfc7e1ce9ff156584a955d903dbf1e59e8214f86b03c7a980fcdc47ad8e"
+    },
+    {
+      "bytes": 1068,
+      "path": "sources/pdf-ps-adult/25_febre_sem_sinais_localizatorios.json",
+      "sha256": "694b5e644f1c4186e463753424a99f44ae0286c19778464dece12286f719baa8"
+    },
+    {
+      "bytes": 1121,
+      "path": "sources/pdf-ps-adult/26_gastrite_drge_dispepsia_dor_no_estomago.json",
+      "sha256": "01ce47f4c64db12929923371d4b00c9157e72b985f13982a8903758bbcb50c6b"
+    },
+    {
+      "bytes": 1124,
+      "path": "sources/pdf-ps-adult/27_geca_gastroenterite_aguda.json",
+      "sha256": "8c162cfacb98dcaf7a0584b601887c6bd4eaca8977aea390e36639b0cb0a2ed3"
+    },
+    {
+      "bytes": 1088,
+      "path": "sources/pdf-ps-adult/28_hemorragia_nasal_epistaxe_leve.json",
+      "sha256": "29fac10d8d0916aea2433a4a0cfd08c2d86a84256fa114f39255c7e872e14a5e"
+    },
+    {
+      "bytes": 1066,
+      "path": "sources/pdf-ps-adult/29_hemorroida.json",
+      "sha256": "ef9899d69691b24170c20c70e452b35eca9e4dbb412334eb855f6a17194b3309"
+    },
+    {
+      "bytes": 1069,
+      "path": "sources/pdf-ps-adult/30_herpes_simples.json",
+      "sha256": "961b159586986d98779f64167cabe2bca6370a8f0a01b6d4a5adcc76f5450c7a"
+    },
+    {
+      "bytes": 1075,
+      "path": "sources/pdf-ps-adult/31_hiperglicemia_descompensacao_do_dm2.json",
+      "sha256": "a874f2d646400cf60dfab8015bf988cd66c9dd8bcbfc6eafa72724334611e515"
+    },
+    {
+      "bytes": 1091,
+      "path": "sources/pdf-ps-adult/32_hipertensao_arterial_descompensada.json",
+      "sha256": "588dfec0a86464209655ee446a7443d3af159ebcc1ece8e0a9910417de5518aa"
+    },
+    {
+      "bytes": 1061,
+      "path": "sources/pdf-ps-adult/33_hipoglicemia_sintomatica.json",
+      "sha256": "971ffa45f52d88901c9b682a714ffae2667a2ebfc53f28eb504f1946eab669d3"
+    },
+    {
+      "bytes": 1064,
+      "path": "sources/pdf-ps-adult/34_impetigo.json",
+      "sha256": "1a0babb365e718b3b653a23c300026253a9dca191c15ce5c74431301055ebbef"
+    },
+    {
+      "bytes": 1147,
+      "path": "sources/pdf-ps-adult/35_infeccao_de_urina_itu.json",
+      "sha256": "e9df0db7e46dc8831a7fd20ffe1131ab760668c0489fba606f6c010b6e2a8789"
+    },
+    {
+      "bytes": 1058,
+      "path": "sources/pdf-ps-adult/36_insonia_leve_moderada.json",
+      "sha256": "254bbe44c2eaee81972d9cd23d104b821d7135b91b4eee8c772dbad3d4e699e0"
+    },
+    {
+      "bytes": 1088,
+      "path": "sources/pdf-ps-adult/37_intoxicacao_alimentar_leve.json",
+      "sha256": "bc20d33a753f03108470339c98655c67755b4859928c1c6252a4f611150d3e68"
+    },
+    {
+      "bytes": 1086,
+      "path": "sources/pdf-ps-adult/38_labirintite.json",
+      "sha256": "92c8365548165edae8c0dced0a78ed653149f0677713f6dba8c335dfa095926e"
+    },
+    {
+      "bytes": 1054,
+      "path": "sources/pdf-ps-adult/39_molusco_contagioso.json",
+      "sha256": "a116db7bc7045850b4fd558d6efc5dd7364ae3100ae30b17dad471fccc43ac07"
+    },
+    {
+      "bytes": 1105,
+      "path": "sources/pdf-ps-adult/40_nefrolitiase_colica_renal.json",
+      "sha256": "dedccb4719ecbdd397768e366843e2a21e788656ac84e0c5dc83828834734f09"
+    },
+    {
+      "bytes": 1129,
+      "path": "sources/pdf-ps-adult/41_otite_externa.json",
+      "sha256": "6dedf35b0587d2eae6b32a22b7dfe7acd3f80b2ba3675d4956ea4aee2946ed7c"
+    },
+    {
+      "bytes": 1093,
+      "path": "sources/pdf-ps-adult/42_otite_media_aguda.json",
+      "sha256": "5b3cc54cbe0aaa76201da552d019989933368fa21986d64d30e25d9023cc3557"
+    },
+    {
+      "bytes": 1116,
+      "path": "sources/pdf-ps-adult/43_pep_profilaxia_pos_exposicao_sexual.json",
+      "sha256": "af1242c68dfea0e852e44e9a452e4447cf652681df6475069105b4104f10a010"
+    },
+    {
+      "bytes": 1152,
+      "path": "sources/pdf-ps-adult/44_picada_de_inseto_com_reacao_inflamatoria_local.json",
+      "sha256": "b501767b4d31ba01d289fce2ebd3b2632234f2ae044d4f8b221a3771add92895"
+    },
+    {
+      "bytes": 1231,
+      "path": "sources/pdf-ps-adult/45_pneumonias_pneumonia_broncopneumonia_bcp.json",
+      "sha256": "6cec274a71a03f5be529b84390f1fec51b73599d6e760d2646e3f7c2e910d21b"
+    },
+    {
+      "bytes": 1074,
+      "path": "sources/pdf-ps-adult/46_psoriase_leve.json",
+      "sha256": "5de55eedcc3b3173f352847145e4a60258a5e1f69b2661644be6010635c77a8b"
+    },
+    {
+      "bytes": 1077,
+      "path": "sources/pdf-ps-adult/47_queimadura_solar_leve.json",
+      "sha256": "f37d2bbeaa8a7f1052b9a99eeb1aab306250c8debdddf744e316eb5c5806e94b"
+    },
+    {
+      "bytes": 1097,
+      "path": "sources/pdf-ps-adult/48_rinite_alergica.json",
+      "sha256": "dcc8855123f8840f5e740870d35e3b075170bfd6889ecfcab5bf2f4d498c9bde"
+    },
+    {
+      "bytes": 1097,
+      "path": "sources/pdf-ps-adult/49_sindrome_ansiosa_crise_de_ansiedade_leve.json",
+      "sha256": "3ecd2febab228960f0b43238a77f01fb8a37346ba1460d7d083faea8d9f06577"
+    },
+    {
+      "bytes": 1104,
+      "path": "sources/pdf-ps-adult/50_sindrome_gripal_viral_simples.json",
+      "sha256": "ef8ad78140d4040ebb73d76f2f17c6a81512c569435a10abde8d095bf6b0a76b"
+    },
+    {
+      "bytes": 1089,
+      "path": "sources/pdf-ps-adult/51_sinusite_aguda.json",
+      "sha256": "095cf3d7c701a7a642a012d26936506b383807bffa5ebf48ddfb55b37f85e4ae"
+    },
+    {
+      "bytes": 1071,
+      "path": "sources/pdf-ps-adult/52_tetano_conduta_para_ferimentos.json",
+      "sha256": "f6ca597dd674d39f870663d01dc43758c7cfde4a64598c5d4b7b981e087f60a1"
+    },
+    {
+      "bytes": 1078,
+      "path": "sources/pdf-ps-adult/53_tinea_micose_de_pele_ou_couro_cabeludo.json",
+      "sha256": "22e3757cf2574b00843fb91d1e88da2d9fca675b3f9e58175a7bf0e9f8441e26"
+    },
+    {
+      "bytes": 1078,
+      "path": "sources/pdf-ps-adult/54_tosse_seca_persistente.json",
+      "sha256": "37cec5c4bcc1b7579d612cc2907d0169fc4682e4166b47b413d24e06d317b298"
+    },
+    {
+      "bytes": 1137,
+      "path": "sources/pdf-ps-adult/55_urticaria_aguda.json",
+      "sha256": "3ff314062803ac903122b3f8c52a44e26171bb2f5ed075ccad9b4316089360fb"
+    },
+    {
+      "bytes": 1066,
+      "path": "sources/pdf-ps-adult/56_varizes_dos_membros_inferiores.json",
+      "sha256": "7807ec05e6186a0fe1c3bb12fc3cf0fa3846b3ea0b67ecc91cabd58b849d1d06"
+    },
+    {
+      "bytes": 1061,
+      "path": "sources/pdf-ps-adult/57_vacinacao_antitetanica.json",
+      "sha256": "3c9cd3b36aabf76337e20dd2bb6b3517e68f1bcfc657172ae98f51131fd40ec6"
+    }
+  ],
+  "inventory": {
+    "canonicalProtocolFiles": 0,
+    "currentProtocols": 123,
+    "gestanteSubtypePointers": 5,
+    "incomingTopLevelEntries": 168,
+    "legacyCanonicalOwners": 123,
+    "pdfEmergencyTopLevelEntries": 111,
+    "pdfPsAdultEntries": 57,
+    "prescriptionTemplateFiles": 0,
+    "totalSourceArtifacts": 296,
+    "totalTopLevelSourceRecords": 291,
+    "typedRegimenFiles": 0
+  },
+  "inventorySha256": "a394015a47d6c5594834b56a43a74296721a64e08329acce4c12eb554b1ffa3c",
+  "localization": {
+    "currentProtocolsPtEs": 123,
+    "incomingSourceLocale": "pt",
+    "incomingSpanishStatus": "required_before_publication",
+    "numericRegimenLocaleIndependent": true,
+    "requiredLocales": [
+      "pt",
+      "es"
+    ]
+  },
+  "productionIntegrationEnabled": false,
+  "publicationEnabled": false,
+  "reconciliation": {
+    "canonicalProtocolIdsAssigned": 0,
+    "identityDomainCount": 62,
+    "incomingClassified": 168,
+    "legacyRelationGroupCount": 17,
+    "numericRegimenReviewDeferred": true,
+    "populationSubtypePointersClassified": 5,
+    "schemaVersion": "medcases-clinical-identity-index-draft-v1",
+    "status": "shadow_review_only"
+  },
+  "safety": {
+    "automaticDelete": false,
+    "automaticMerge": false,
+    "automaticOverwrite": false,
+    "automaticPublish": false,
+    "fuzzyMatchCanModifyCanonicalOwnership": false,
+    "semanticAuditDecisionsImported": false
+  },
+  "schemaVersion": "medcases-clinical-knowledge-foundation-v1",
+  "sourceOfTruthRepository": "medcases-calculadora",
+  "status": "shadow_foundation"
+}

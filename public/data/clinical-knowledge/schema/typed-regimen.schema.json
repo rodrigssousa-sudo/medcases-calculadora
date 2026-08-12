@@ -1,0 +1,98 @@
+{
+  "$id": "https://medcasespro.com/schema/clinical-knowledge/typed-regimen-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "contraindications": {
+      "type": "array"
+    },
+    "doseModel": {
+      "type": "object"
+    },
+    "drugId": {
+      "pattern": "^[a-z0-9_-]+$",
+      "type": "string"
+    },
+    "duration": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "frequency": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hepaticRule": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "maxDose": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "monitoring": {
+      "type": "array"
+    },
+    "population": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "protocolId": {
+      "pattern": "^[a-z0-9_-]+$",
+      "type": "string"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "regimenId": {
+      "pattern": "^[a-z0-9_-]+$",
+      "type": "string"
+    },
+    "renalRule": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "route": {
+      "type": [
+        "string",
+        "array"
+      ]
+    },
+    "schemaVersion": {
+      "const": "medcases-typed-regimen-v1"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "review",
+        "validated",
+        "publishable",
+        "deprecated"
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "regimenId",
+    "drugId",
+    "protocolId",
+    "status",
+    "population",
+    "doseModel",
+    "route",
+    "provenance"
+  ],
+  "title": "MedCases Typed Regimen",
+  "type": "object"
+}

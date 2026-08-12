@@ -1,0 +1,82 @@
+{
+  "$id": "https://medcasespro.com/schema/clinical-knowledge/source-record-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "content": {
+      "type": "object"
+    },
+    "localization": {
+      "type": "object"
+    },
+    "observedDrugIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "review": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "const": "medcases-source-record-v1"
+    },
+    "sourceKind": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "sourceLocale": {
+      "enum": [
+        "pt",
+        "pt+es"
+      ]
+    },
+    "sourceRecordId": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "sourceType": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "title": {
+      "additionalProperties": false,
+      "properties": {
+        "es": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "pt",
+        "es"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "sourceRecordId",
+    "sourceType",
+    "sourceKind",
+    "sourceLocale",
+    "title",
+    "content",
+    "provenance",
+    "localization",
+    "review"
+  ],
+  "title": "MedCases Clinical Knowledge Source Record",
+  "type": "object"
+}
