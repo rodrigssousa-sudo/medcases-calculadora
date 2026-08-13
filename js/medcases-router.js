@@ -34,7 +34,7 @@
        - NUNCA persiste identificadores pessoais. */
   (function _installMedCasesPatientSession() {
     if (window.MedCasesPatientSession &&
-        window.MedCasesPatientSession.version === 'V1-B-R0-R1') return;
+        window.MedCasesPatientSession.version === 'V1-B-R0-R2') return;
 
     var STORAGE_KEYS = ['medcases_hm_patient_v1', 'pacienteAtual'];
 
@@ -79,7 +79,7 @@
       gluc:['elec-glicose','elec2-in-glicose'],
       ca:['elec-ca','elec2-in-ca'],
       alb:['elec-alb','elec2-in-albumina'],
-      bun:['elec-ureia','elec2-in-ureia'],
+      /* BUN transportado, mas sem autofill em Ureia: unidades/analitos não são equivalentes. */
       ph:['elec2-in-ph'],
       pco2:['elec2-in-pco2'],
       be:['elec2-in-be'],
@@ -95,16 +95,65 @@
       };
     }
 
+    /* CALC_PATIENT_BRIDGE_SAFETY_HARDENING_V1_B_R0_R1 */
+    /* CALC_PATIENT_BRIDGE_SAFETY_HARDENING_V1_B_R0
+       Campos laboratoriais/demográficos numéricos:
+       - aceita vírgula decimal;
+       - distingue zero de ausente;
+       - rejeita texto parcial, NaN e ±Infinity;
+       - NÃO inventa faixas clínicas universais. */
+    var NUMERIC_FIELDS = {
+      peso:1, altura:1, idade:1, creatinina:1, clcr:1, tfg:1,
+      ph:1, pco2:1, hco3:1, be:1, na:1, cl:1, gluc:1, ca:1, bun:1, alb:1,
+      pas:1, col:1, qt:1, fc:1, bili:1, inr:1, ast:1, alt:1, plat:1,
+      k:1, mg:1, chads_vasc:1, has_bled:1, ascvd:1
+    };
+
+    /* Apenas domínio matemático seguro, sem impor faixas clínicas máximas.
+       Base Excess pode ser negativo; os demais campos desta whitelist não. */
+    var SIGNED_NUMERIC_FIELDS = { be:1 };
+
+    function _normalizeNumeric(value, canonical) {
+      if (typeof value === 'number') {
+        return Number.isFinite(value) ? String(value) : null;
+      }
+      var raw = String(value).trim();
+      if (!raw) return null;
+
+      /* PT/ES mobile: 7,40 -> 7.40. */
+      var normalized = raw.replace(',', '.');
+      if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/.test(normalized)) {
+        return null;
+      }
+
+      var numeric = Number(normalized);
+      if (!Number.isFinite(numeric)) return null;
+      if (!SIGNED_NUMERIC_FIELDS[canonical] && numeric < 0) return null;
+      return String(numeric);
+    }
+
     function _normalize(payload) {
       var out = {};
       if (!payload || typeof payload !== 'object') return out;
+
       Object.keys(payload).forEach(function(key) {
         var canonical = ALIASES[key] || key;
         if (!ACCEPTED[canonical]) return;
+
         var value = payload[key];
         if (value === null || value === undefined || value === '') return;
+
+        if (NUMERIC_FIELDS[canonical]) {
+          value = _normalizeNumeric(value, canonical);
+          if (value === null) return;
+        } else if (typeof value === 'string') {
+          value = value.trim();
+          if (!value) return;
+        }
+
         out[canonical] = value;
       });
+
       return out;
     }
 
@@ -259,7 +308,7 @@
     }
 
     window.MedCasesPatientSession = {
-      version:'V1-B-R0-R1',
+      version:'V1-B-R0-R2',
       clear:clear,
       hydrate:hydrate,
       hydrateFromUrl:hydrateFromUrl,
@@ -615,7 +664,7 @@
     }
 
     if (!updated) return;
-    console.log('[CSR v2] patientData ingerido:', JSON.stringify(window.patientData));
+    console.info('[CSR v2] patientData ingerido fields=' + Object.keys(payload).sort().join(','));
 
     /* ── 2. Injeção física nos inputs do DOM ── */
     function _doInject() {
@@ -1972,8 +2021,7 @@
     /* Re-executa o boot completo com a URL atual (já mutada pelo Flutter) */
     function _reBootFromCurrentUrl() {
       if (!_hasClinicalParams()) return; /* URL sem dados clínicos — ignora */
-      console.log('[CSR v2 PATH-A] URL mutation detectada com params clínicos — re-init…',
-                  window.location.search);
+      console.info('[CSR v2 PATH-A] URL mutation clínica detectada — re-init sem registrar query.');
       /* Reset guard para permitir re-execução idempotente */
       window._csrUrlListenerActive = false;
       _init();
@@ -2238,10 +2286,10 @@
     ─────────────────────────────────────────────────────────────── */
     injectPatient: function (payload) {
       if (!payload || typeof payload !== 'object') {
-        console.warn('[CSR PATH-C] injectPatient: payload inválido ou ausente.', payload);
+        console.warn('[CSR PATH-C] injectPatient: payload inválido ou ausente.');
         return;
       }
-      console.log('[CSR PATH-C] injectPatient chamado com:', JSON.stringify(payload));
+      console.info('[CSR PATH-C] injectPatient fields=' + Object.keys(payload).sort().join(','));
 
       /* ── 1. Normaliza idioma do payload ── */
       var lang = payload.lang || payload.idioma || null;
@@ -2264,9 +2312,12 @@
               Usa duck-typing sobre objeto simples — evita new URLSearchParams
               que pode falhar em contextos file:// muito restritivos.           */
       if (window.MedCasesPatientSession &&
+          typeof window.MedCasesPatientSession.normalize === 'function' &&
           typeof window.MedCasesPatientSession.hydrate === 'function') {
-        window.MedCasesPatientSession.hydrate(payload, 'csr-path-c');
-        payload = Object.assign({}, window.patientData || {}, payload);
+        var normalizedPayload = window.MedCasesPatientSession.normalize(payload);
+        window.MedCasesPatientSession.hydrate(normalizedPayload, 'csr-path-c');
+        /* Normalizado vence; payload bruto não volta a contaminar o adapter. */
+        payload = Object.assign({}, window.patientData || {}, normalizedPayload);
       }
 
       var _payloadAdapter = {
@@ -2418,16 +2469,16 @@
       var elErr  = document.getElementById('tel-err');
       if (!elUrl) { clearInterval(_telTimer); return; }
 
-      var search = window.location.search || '(vazio)';
-      elUrl.innerText = window.location.protocol + ' ' + search;
+      /* Privacy hardening: nunca renderizar query clínica na telemetria. */
+      elUrl.innerText = window.location.protocol + ' [query redacted]';
 
       var pd = window.patientData;
       if (pd && typeof pd === 'object') {
         var parts = [];
         ['peso','idade','clcr','sexo','creatinina'].forEach(function(k){
-          if (pd[k] != null) parts.push(k + ':' + pd[k]);
+          if (pd[k] != null) parts.push(k);
         });
-        elData.innerText = parts.length ? '{' + parts.join(', ') + '}' : '{}';
+        elData.innerText = parts.length ? 'fields={' + parts.join(', ') + '}' : 'fields={}';
       } else { elData.innerText = 'null'; }
 
       var boot = window._appBootComplete === true;
