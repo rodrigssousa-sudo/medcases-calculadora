@@ -9251,7 +9251,7 @@ body.light-mode #clinical-support-view,body.theme-light #clinical-support-view,b
         <input class="input-field" id="inp-creatinine" type="number" />
         <input class="input-field" id="inp-cr-urina"  type="number" />
         <input class="input-field" id="inp-vol24h"    type="number" />
-        <button id="btn-male"   class="sex-btn active" onclick="setSex('M')"></button>
+        <button id="btn-male"   class="sex-btn" onclick="setSex('M')"></button>
         <button id="btn-female" class="sex-btn"        onclick="setSex('F')"></button>
         <button id="preg-yes" class="preg-opt" onclick="setPregnant(true)"></button>
         <button id="preg-no"  class="preg-opt active-no" onclick="setPregnant(false)"></button>
@@ -10581,7 +10581,7 @@ body.light-mode #clinical-support-view,body.theme-light #clinical-support-view,b
     <div class="qe-field">
       <label class="qe-label"><span class="qe-label-icon">⚧</span> Sexo Biológico</label>
       <div class="qe-sex-row">
-        <button class="qe-sex-btn active-m" id="qe-btn-m" onclick="qeSetSex('M')">
+        <button class="qe-sex-btn" id="qe-btn-m" onclick="qeSetSex('M')">
           <i class="fa-solid fa-mars"></i> Masculino
         </button>
         <button class="qe-sex-btn" id="qe-btn-f" onclick="qeSetSex('F')">
@@ -12905,125 +12905,126 @@ function setPregnant(val, silent){
    Compatibilidade: mantém _classRenal() e retorno { valor, metodo, status, referencia }
                     além dos novos campos { tipo, superficieCorporal, valorBruto }
    ═════════════════════════════════════════════════════════════════ */
+/* MEDCASES_RENAL_CLINICAL_TRUTH_V1_B_R0
+   Renal contract:
+   - ClCr is ALWAYS absolute mL/min for Cockcroft-Gault / drug-dose handoff.
+   - Measured 24h ClCr remains absolute in `valor`; optional BSA-indexed value
+     is exposed separately as `valorIndexado`.
+   - eGFR is calculated independently by CKD-EPI 2021 (adults >=18).
+   - Unknown sex is never silently coerced to male.
+*/
+window.calcularTFGCKDEPI2021 = function(creatininaMgDl, idadeAnos, sexo) {
+  const scr = Number(creatininaMgDl);
+  const age = Number(idadeAnos);
+  const sx  = String(sexo || '').toUpperCase();
+
+  if (!Number.isFinite(scr) || scr <= 0) return null;
+  if (!Number.isFinite(age) || age < 18) return null;
+  if (sx !== 'M' && sx !== 'F') return null;
+
+  const kappa = sx === 'F' ? 0.7 : 0.9;
+  const alpha = sx === 'F' ? -0.241 : -0.302;
+  const ratio = scr / kappa;
+
+  let egfr =
+    142 *
+    Math.pow(Math.min(ratio, 1), alpha) *
+    Math.pow(Math.max(ratio, 1), -1.200) *
+    Math.pow(0.9938, age);
+
+  if (sx === 'F') egfr *= 1.012;
+
+  return Number.isFinite(egfr) ? Math.max(0, Number(egfr.toFixed(2))) : null;
+};
+
 window.calcularClearanceAvancado = function(dados, lang) {
   const l = (lang === 'es') ? 'es' : 'pt';
 
-  const crSangue   = parseFloat(dados.creatininaSangue);
-  const peso       = parseFloat(dados.peso);
-  const idade      = parseInt(dados.idade, 10);
-  const sexo       = dados.sexo ? dados.sexo.toUpperCase() : 'M';
-  const crUrina    = parseFloat(dados.creatininaUrina)  || null;
-  const volume24h  = parseFloat(dados.volume24h)        || null;
-  const altura     = parseFloat(dados.altura)           || null;
+  const crSangue   = Number(dados.creatininaSangue);
+  const peso       = Number(dados.peso);
+  const idade      = Number(dados.idade);
+  const sexoRaw    = String(dados.sexo || '').toUpperCase();
+  const sexo       = (sexoRaw === 'M' || sexoRaw === 'F') ? sexoRaw : '';
+  const crUrina    = Number(dados.creatininaUrina);
+  const volume24h  = Number(dados.volume24h);
+  const altura     = Number(dados.altura);
 
-  /* Dicionário interno bilíngue */
   const msg = {
     pt: {
-      erro:      'Dados básicos obrigatórios ausentes (Creatinina sérica, Peso, Idade, Sexo).',
-      medido:    'Medido (Urina 24h)',
-      medidoSC:  'Medido (Urina 24h · Corrigido SC)',
-      estimado:  'Estimado (Cockcroft-Gault)',
-      refF:      'Referência feminina: 88–128 mL/min',
-      refM:      'Referência masculina: 97–137 mL/min',
-      stNormal:  'Função renal normal ou elevada',
-      stLeve:    'Queda leve da função renal',
-      stModerada:'Queda moderada da função renal (Alerta)',
-      stGrave:   'Queda grave da função renal',
-      stTerminal:'Falência renal — Estágio terminal'
+      erroBase:   'Creatinina sérica inválida.',
+      erroCG:     'Cockcroft-Gault requer paciente adulto (≥18 anos), peso, creatinina sérica e sexo informado.',
+      medido:     'Medido (Urina 24h)',
+      estimado:   'Estimado (Cockcroft-Gault · peso informado)'
     },
     es: {
-      erro:      'Faltan datos básicos obligatorios (Creatinina sérica, Peso, Edad, Sexo).',
-      medido:    'Medido (Orina 24h)',
-      medidoSC:  'Medido (Orina 24h · Corregido SC)',
-      estimado:  'Estimado (Cockcroft-Gault)',
-      refF:      'Referencia femenina: 88–128 mL/min',
-      refM:      'Referencia masculina: 97–137 mL/min',
-      stNormal:  'Función renal normal o elevada',
-      stLeve:    'Disminución leve de la función renal',
-      stModerada:'Disminución moderada de la función renal (Alerta)',
-      stGrave:   'Disminución grave de la función renal',
-      stTerminal:'Fallo renal — Estadio terminal'
+      erroBase:   'Creatinina sérica inválida.',
+      erroCG:     'Cockcroft-Gault requiere paciente adulto (≥18 años), peso, creatinina sérica y sexo informado.',
+      medido:     'Medido (Orina 24h)',
+      estimado:   'Estimado (Cockcroft-Gault · peso informado)'
     }
   };
   const tx = msg[l];
 
-  /* Validação mínima */
-  if (!crSangue || crSangue <= 0 || !peso || peso <= 0 || !idade || idade <= 0 || !sexo) {
-    return { erro: tx.erro };
+  if (!Number.isFinite(crSangue) || crSangue <= 0) {
+    return { erro: tx.erroBase };
   }
 
-  const ehF = (sexo === 'F');
-  const ref  = ehF ? tx.refF : tx.refM;
+  const hasMeasured =
+    Number.isFinite(crUrina) && crUrina > 0 &&
+    Number.isFinite(volume24h) && volume24h > 0;
 
-  /* ── Função auxiliar de classificação renal ── */
-  function _classif(v) {
-    if (v >= 90) return tx.stNormal;
-    if (v >= 60) return tx.stLeve;
-    if (v >= 30) return tx.stModerada;
-    if (v >= 15) return tx.stGrave;
-    return tx.stTerminal;
-  }
-
-  /* ══════════════════════════════════════════════════
-     CASO 1: CLEARANCE REAL — URINA DE 24 HORAS
-     Fórmula: ClCr = (CrUrina × Volume24h) / (CrSangue × 1440)
-     Unidades: CrUrina e CrSangue em mg/dL; Volume24h em mL
-     Resultado em mL/min (mesmo sinal dimensional de ambas)
-     Correção Du Bois (se altura disponível):
-       SC = 0.007184 × Peso^0.425 × Altura^0.725
-       ClCr_corrigido = (ClCr_bruto × 1.73) / SC
-  ══════════════════════════════════════════════════ */
-  if (crUrina && crUrina > 0 && volume24h && volume24h > 0) {
+  if (hasMeasured) {
     const clCrBruto = (crUrina * volume24h) / (crSangue * 1440);
+    const valorAbs  = Number(clCrBruto.toFixed(2));
 
-    let sc             = null;
-    let clCrFinal      = clCrBruto;
-    let metodo         = tx.medido;
-    let corrigidoSC    = false;
-
-    if (altura && altura > 0) {
-      sc          = 0.007184 * Math.pow(peso, 0.425) * Math.pow(altura, 0.725);
-      clCrFinal   = (clCrBruto * 1.73) / sc;
-      metodo      = tx.medidoSC;
-      corrigidoSC = true;
+    let sc = null;
+    let valorIndexado = null;
+    if (Number.isFinite(peso) && peso > 0 && Number.isFinite(altura) && altura > 0) {
+      sc = 0.007184 * Math.pow(peso, 0.425) * Math.pow(altura, 0.725);
+      if (Number.isFinite(sc) && sc > 0) {
+        valorIndexado = Number((clCrBruto * 1.73 / sc).toFixed(2));
+      }
     }
 
-    const vf = Math.max(0, parseFloat(clCrFinal.toFixed(2)));
-
     return {
-      /* ── campos legados (compatibilidade total com renderResults) ── */
-      metodo,
-      valor:             vf,
-      status:            _classif(vf),
-      referencia:        ref,
-      /* ── campos novos ── */
-      tipo:              'MEDIDO',
-      superficieCorporal: sc ? parseFloat(sc.toFixed(3)) : null,
-      valorBruto:        parseFloat(clCrBruto.toFixed(2)),
-      corrigidoSC
+      metodo:               tx.medido,
+      valor:                Math.max(0, valorAbs),
+      status:               '',
+      referencia:           '',
+      tipo:                 'MEDIDO',
+      superficieCorporal:   sc ? Number(sc.toFixed(3)) : null,
+      valorBruto:           Math.max(0, valorAbs),
+      valorIndexado:        valorIndexado,
+      corrigidoSC:          false
     };
   }
 
-  /* ══════════════════════════════════════════════════
-     CASO 2: ESTIMADO — COCKCROFT-GAULT
-     ClCr = [(140 − Idade) × Peso] / (72 × CrSangue)
-     × 0.85 se Feminino
-  ══════════════════════════════════════════════════ */
-  let clCrEst = ((140 - idade) * peso) / (72 * crSangue);
-  if (ehF) clCrEst *= 0.85;
-  const vfEst = Math.max(0, parseFloat(clCrEst.toFixed(2)));
+  if (!Number.isFinite(idade) || idade < 18 ||
+      !Number.isFinite(peso) || peso <= 0 ||
+      (sexo !== 'M' && sexo !== 'F')) {
+    return { erro: tx.erroCG };
+  }
 
+  let clCrEst = ((140 - idade) * peso) / (72 * crSangue);
+  if (sexo === 'F') clCrEst *= 0.85;
+
+  if (!Number.isFinite(clCrEst) || clCrEst < 0) {
+    return { erro: tx.erroCG };
+  }
+
+  const valor = Number(clCrEst.toFixed(2));
   return {
-    metodo:             tx.estimado,
-    valor:              vfEst,
-    status:             _classif(vfEst),
-    referencia:         ref,
-    tipo:               'ESTIMADO',
-    superficieCorporal: null,
-    valorBruto:         vfEst,
-    corrigidoSC:        false
+    metodo:               tx.estimado,
+    valor,
+    status:               '',
+    referencia:           '',
+    tipo:                 'ESTIMADO',
+    superficieCorporal:   null,
+    valorBruto:           valor,
+    valorIndexado:        null,
+    corrigidoSC:          false
   };
-};
+};;
 
 /* Alias legado — mantém chamadas internas existentes funcionando */
 function calcularClCr(dados, lang = 'pt') {
@@ -13037,27 +13038,43 @@ function _classRenal(v, tx) {
   if (v >= 15) return tx.statusGrave   || tx.stGrave    || '';
   return         tx.statusTerminal     || tx.stTerminal  || '';
 }
-
 function recalculate() {
-  /* ── 1. Leitura dos inputs ── */
   const age = parseFloat(document.getElementById('inp-age').value);
   const wt  = parseFloat(document.getElementById('inp-weight').value);
   const ht  = parseFloat(document.getElementById('inp-height').value);
   const cr  = parseFloat(document.getElementById('inp-creatinine').value);
-  const sex = currentSex;
+  const sex = (currentSex === 'M' || currentSex === 'F') ? currentSex : null;
 
-  /* Inputs opcionais — Urina 24h (Padrão-Ouro) */
   const crUrEl  = document.getElementById('inp-cr-urina');
   const vol24El = document.getElementById('inp-vol24h');
   const crUrina   = crUrEl  ? parseFloat(crUrEl.value)  : NaN;
   const volume24h = vol24El ? parseFloat(vol24El.value) : NaN;
 
-  /* ── 2. Pré-condições ── */
-  const hasBSA  = !isNaN(wt) && wt > 0 && !isNaN(ht) && ht > 0;
-  const hasClCr = !isNaN(age) && age > 0 && !isNaN(wt) && wt > 0 && !isNaN(cr) && cr > 0;
-  if (!hasBSA && !hasClCr) { resetResults(); return; }
+  const hasBSA =
+    Number.isFinite(wt) && wt > 0 &&
+    Number.isFinite(ht) && ht > 0;
 
-  /* ── 3. BSA (Mosteller) e derivados ── */
+  const hasMeasured =
+    Number.isFinite(cr) && cr > 0 &&
+    Number.isFinite(crUrina) && crUrina > 0 &&
+    Number.isFinite(volume24h) && volume24h > 0;
+
+  const hasCG =
+    Number.isFinite(age) && age >= 18 &&
+    Number.isFinite(wt) && wt > 0 &&
+    Number.isFinite(cr) && cr > 0 &&
+    (sex === 'M' || sex === 'F');
+
+  const hasEGFR =
+    Number.isFinite(age) && age >= 18 &&
+    Number.isFinite(cr) && cr > 0 &&
+    (sex === 'M' || sex === 'F');
+
+  if (!hasBSA && !hasMeasured && !hasCG && !hasEGFR) {
+    resetResults();
+    return;
+  }
+
   let bsa = null;
   if (hasBSA) bsa = Math.sqrt((wt * ht) / 3600);
 
@@ -13065,80 +13082,71 @@ function recalculate() {
   if (hasBSA) imc = wt / Math.pow(ht / 100, 2);
 
   let pi = null;
-  if (!isNaN(ht) && ht > 0) {
+  if ((sex === 'M' || sex === 'F') && Number.isFinite(ht) && ht > 0) {
     const htIn = ht / 2.54;
     pi = (sex === 'M' ? 50 : 45.5) + 2.3 * (htIn - 60);
-    if (pi < 0) pi = null;
+    if (!Number.isFinite(pi) || pi < 0) pi = null;
   }
 
-  /* ── 4. Motor de Clearance Definitivo ── */
   let clcr = null, clcrStatus = '', clcrMetodo = '', clcrRef = '';
-  let clcrTipo = 'ESTIMADO', clcrSC = null, clcrBruto = null, clcrCorrigidoSC = false;
+  let clcrTipo = null, clcrSC = null, clcrBruto = null, clcrIndexado = null;
+  let clcrCorrigidoSC = false;
 
-  if (hasClCr) {
+  if (hasMeasured || hasCG) {
     const dados = {
       creatininaSangue: cr,
-      peso:             wt,
-      idade:            age,
-      sexo:             sex,
-      altura:           !isNaN(ht) && ht > 0 ? ht : null,
-      creatininaUrina:  !isNaN(crUrina)   && crUrina > 0   ? crUrina   : null,
-      volume24h:        !isNaN(volume24h) && volume24h > 0 ? volume24h : null
+      peso:              Number.isFinite(wt) && wt > 0 ? wt : null,
+      idade:             Number.isFinite(age) ? age : null,
+      sexo:              sex,
+      altura:            Number.isFinite(ht) && ht > 0 ? ht : null,
+      creatininaUrina:   hasMeasured ? crUrina : null,
+      volume24h:         hasMeasured ? volume24h : null
     };
 
     const res = window.calcularClearanceAvancado(dados, currentLang);
-
-    if (!res.erro) {
-      clcr           = res.valor;
-      clcrStatus     = res.status;
-      clcrMetodo     = res.metodo;
-      clcrRef        = res.referencia;
-      clcrTipo       = res.tipo             || 'ESTIMADO';
-      clcrSC         = res.superficieCorporal || null;
-      clcrBruto      = res.valorBruto       || res.valor;
-      clcrCorrigidoSC= res.corrigidoSC      || false;
+    if (res && !res.erro) {
+      clcr             = res.valor;
+      clcrStatus       = res.status || '';
+      clcrMetodo       = res.metodo || '';
+      clcrRef          = res.referencia || '';
+      clcrTipo         = res.tipo || null;
+      clcrSC           = res.superficieCorporal || null;
+      clcrBruto        = res.valorBruto ?? res.valor;
+      clcrIndexado     = res.valorIndexado ?? null;
+      clcrCorrigidoSC  = false;
     }
   }
 
-  /* ── 5. TFG — só recalcula se método ESTIMADO (Caso 2)
-          Se MEDIDO + SC já está corrigido pela fórmula Du Bois → valor final é a TFG ── */
   let tfg = null;
-  if (clcr != null) {
-    if (clcrTipo === 'MEDIDO' && clcrCorrigidoSC) {
-      /* ClCr já foi corrigido por SC 1.73 m² → TFG = ClCr corrigido */
-      tfg = clcr;
-    } else if (clcr && bsa) {
-      /* Estimado ou Medido sem correção SC → aplicar BSA Mosteller */
-      tfg = clcr * (1.73 / bsa);
-    } else {
-      tfg = clcr;
-    }
+  if (hasEGFR && typeof window.calcularTFGCKDEPI2021 === 'function') {
+    tfg = window.calcularTFGCKDEPI2021(cr, age, sex);
   }
 
-  /* ── 6. Persistência global ── */
   window.patientData = {
-    age, sex, weight: wt, height: ht, creatinine: cr,
-    bsa, clcr, imc, pesoIdeal: pi, tfg,
+    age: Number.isFinite(age) ? age : null,
+    sex,
+    weight: Number.isFinite(wt) ? wt : null,
+    height: Number.isFinite(ht) ? ht : null,
+    creatinine: Number.isFinite(cr) ? cr : null,
+    bsa, clcr, imc, pesoIdeal: pi,
+    tfg,
+    egfr: tfg,
+    ckd_epi: tfg,
+    egfrEquation: tfg != null ? 'CKD-EPI 2021' : null,
     clcrStatus, clcrMetodo, clcrRef,
-    clcrTipo, clcrSC, clcrBruto, clcrCorrigidoSC,
+    clcrTipo, clcrSC, clcrBruto, clcrIndexado, clcrCorrigidoSC,
     pregnant: (sex === 'F' && currentPregnant === true)
   };
 
-  /* ── 7. Renderização ── */
-  renderResults({ bsa, clcr, imc, pi, tfg, clcrStatus, clcrMetodo, clcrRef, clcrCorrigidoSC, clcrSC, clcrBruto });
+  renderResults({
+    bsa, clcr, imc, pi, tfg,
+    clcrStatus, clcrMetodo, clcrRef,
+    clcrCorrigidoSC, clcrSC, clcrBruto, clcrIndexado
+  });
 
-  /* ── 8. Salva dados para o botão "Ver Diagnóstico" disparar o modal ── */
-  /* O modal NÃO abre automaticamente — apenas no clique do btn-diagnostico */
   _updateDiagnosticoBtn(tfg);
-
-  /* ── 9. Notifica todas as calculadoras sobre novos dados ── */
   _onPatientDataUpdated();
-
-  /* ── 10. REQ-2: Atualiza o card global de Paciente Atual ── */
   if (typeof _updateGlobalPatientBar === 'function') _updateGlobalPatientBar();
-
-  /* ── 11. NÃO abre modal aqui — recalculate() é chamado também por outros contextos ──
-     O modal só abre quando o usuário clicar no botão "Calcular" via calcularEAbrirModal() */
 }
 
 /* =========================================================
@@ -13190,42 +13198,53 @@ function openDiagnosticoModal(){
   if(!d||d.tfg===null||d.clcr===null) return;
   _checkRenalAlert(d.tfg, d.clcr, d.clcrMetodo||'—');
 }
+function _checkRenalAlert(tfg, clcr, metodo) {
+  if (tfg == null || !Number.isFinite(Number(tfg))) return;
+  const egfr = Number(tfg);
+  const isES = currentLang === 'es';
+  const unit = 'mL/min/1.73m² · CKD-EPI 2021';
 
-function _checkRenalAlert(tfg,clcr,metodo){
-  if(tfg===null||clcr===null) return;
-  const isES=currentLang==='es';
-  if(tfg<15){
+  if (egfr < 15) {
     showRiskAlert({
-      icon:'🚨',severity:'danger',
-      tag:  isES?'FALLO RENAL CRÍTICO':'FALÊNCIA RENAL CRÍTICA',
-      title:isES?'Falla Renal — Estadio Terminal':'Falência Renal — Estágio Terminal',
-      value:clcr.toFixed(1),unit:'mL/min · '+metodo,
-      body: isES?'ClCr por debajo de 15 mL/min. Riesgo extremo de acumulación farmacológica y toxicidad sistémica grave.'
-               :'ClCr abaixo de 15 mL/min. Risco extremo de acúmulo de fármacos e toxicidade sistêmica grave.',
-      action:isES?'<strong>🚨 Conducta:</strong> Suspender fármacos de excreción renal sin ajuste. Contactar nefrología INMEDIATAMENTE. Evaluar diálisis urgente.'
-                :'<strong>🚨 Conduta:</strong> Suspender fármacos excretados por via renal. Contactar nefrologia IMEDIATAMENTE. Avaliar indicação de diálise urgente.'
+      icon:'🚨', severity:'danger',
+      tag:   isES ? 'eGFR EN RANGO G5' : 'eGFR NA FAIXA G5',
+      title: isES ? 'Filtración glomerular severamente reducida'
+                  : 'Filtração glomerular severamente reduzida',
+      value: egfr.toFixed(1), unit,
+      body:  isES
+        ? 'eGFR <15 mL/min/1,73 m² (categoría G5). Un valor aislado no distingue lesión renal aguda de enfermedad renal crónica.'
+        : 'eGFR <15 mL/min/1,73 m² (categoria G5). Um valor isolado não distingue lesão renal aguda de doença renal crônica.',
+      action:isES
+        ? '<strong>Conducta:</strong> correlacionar con evolución de creatinina, diuresis, electrolitos, estado de volumen y contexto clínico; considerar evaluación nefrológica urgente.'
+        : '<strong>Conduta:</strong> correlacionar com evolução da creatinina, diurese, eletrólitos, estado volêmico e contexto clínico; considerar avaliação nefrológica urgente.'
     });
-  } else if(tfg<30){
+  } else if (egfr < 30) {
     showRiskAlert({
-      icon:'⚠️',severity:'danger',
-      tag:  isES?'INSUFICIENCIA RENAL GRAVE':'INSUFICIÊNCIA RENAL GRAVE',
-      title:isES?'Reducción Grave de la Función Renal':'Redução Grave da Função Renal',
-      value:clcr.toFixed(1),unit:'mL/min · '+metodo,
-      body: isES?'ClCr entre 15 y 29 mL/min. Alto riesgo de toxicidad farmacológica. Ajuste inmediato de dosis obligatorio.'
-               :'ClCr entre 15 e 29 mL/min. Alto risco de toxicidade medicamentosa. Ajuste imediato de doses obrigatório.',
-      action:isES?'<strong>⚕️ Conducta:</strong> Revisar todos los fármacos. Evitar nefrotóxicos (AINEs, aminoglucósidos, contraste yodado). Evaluación nefrológica urgente.'
-                :'<strong>⚕️ Conduta:</strong> Revisar todos os fármacos. Evitar nefrotóxicos (AINEs, aminoglicosídeos, contraste iodado). Avaliação nefrológica urgente.'
+      icon:'⚠️', severity:'danger',
+      tag:   isES ? 'eGFR EN RANGO G4' : 'eGFR NA FAIXA G4',
+      title: isES ? 'Filtración glomerular muy reducida'
+                  : 'Filtração glomerular muito reduzida',
+      value: egfr.toFixed(1), unit,
+      body:  isES
+        ? 'eGFR 15–29 mL/min/1,73 m² (categoría G4). La categoría G aislada no establece por sí sola el diagnóstico de ERC.'
+        : 'eGFR 15–29 mL/min/1,73 m² (categoria G4). A categoria G isolada não estabelece por si só o diagnóstico de DRC.',
+      action:isES
+        ? '<strong>Conducta:</strong> revisar función renal, tendencia, albuminuria/otros marcadores y cada medicamento según su recomendación renal específica.'
+        : '<strong>Conduta:</strong> revisar função renal, tendência, albuminúria/outros marcadores e cada medicamento conforme sua recomendação renal específica.'
     });
-  } else if(tfg<45){
+  } else if (egfr < 45) {
     showRiskAlert({
-      icon:'🔶',severity:'warning',
-      tag:  isES?'FUNCIÓN RENAL REDUCIDA':'FUNÇÃO RENAL REDUZIDA',
-      title:isES?'Reducción Moderada (CKD G3b)':'Redução Moderada (CKD G3b)',
-      value:clcr.toFixed(1),unit:'mL/min · '+metodo,
-      body: isES?'ClCr entre 30 y 44 mL/min. Varios fármacos requieren ajuste de dosis. Monitorizar creatinina regularmente.'
-               :'ClCr entre 30 e 44 mL/min. Vários fármacos requerem ajuste de dose. Monitorar creatinina regularmente.',
-      action:isES?'<strong>⚕️ Conducta:</strong> Revisar antibióticos, anticoagulantes, analgésicos y diuréticos. Control nefrológico recomendado.'
-                :'<strong>⚕️ Conduta:</strong> Revisar antibióticos, anticoagulantes, analgésicos e diuréticos. Acompanhamento nefrológico recomendado.'
+      icon:'🔶', severity:'warning',
+      tag:   isES ? 'eGFR EN RANGO G3b' : 'eGFR NA FAIXA G3b',
+      title: isES ? 'Filtración glomerular reducida'
+                  : 'Filtração glomerular reduzida',
+      value: egfr.toFixed(1), unit,
+      body:  isES
+        ? 'eGFR 30–44 mL/min/1,73 m² (categoría G3b). Interpretar junto con albuminuria, tendencia temporal y contexto clínico.'
+        : 'eGFR 30–44 mL/min/1,73 m² (categoria G3b). Interpretar junto com albuminúria, tendência temporal e contexto clínico.',
+      action:isES
+        ? '<strong>Conducta:</strong> revisar fármacos individualmente; no sustituir eGFR por ClCr cuando la ficha técnica exige Cockcroft-Gault.'
+        : '<strong>Conduta:</strong> revisar fármacos individualmente; não substituir eGFR por ClCr quando a bula/referência exige Cockcroft-Gault.'
     });
   }
 }
@@ -13233,10 +13252,10 @@ function _checkRenalAlert(tfg,clcr,metodo){
    renderResults() — Alimenta o novo Result Dashboard (rd-*)
    Mantém compat. total com os IDs legados ocultos
 ============================================================ */
-function renderResults({bsa,clcr,imc,pi,tfg,clcrStatus,clcrMetodo,clcrRef,clcrCorrigidoSC,clcrSC,clcrBruto}) {
+function renderResults({bsa,clcr,imc,pi,tfg,clcrStatus,clcrMetodo,clcrRef,clcrCorrigidoSC,clcrSC,clcrBruto,clcrIndexado}) {
 
   /* Persiste o último payload para re-renderização ao trocar idioma */
-  window._lastResults = {bsa,clcr,imc,pi,tfg,clcrStatus,clcrMetodo,clcrRef,clcrCorrigidoSC,clcrSC,clcrBruto};
+  window._lastResults = {bsa,clcr,imc,pi,tfg,clcrStatus,clcrMetodo,clcrRef,clcrCorrigidoSC,clcrSC,clcrBruto,clcrIndexado};
 
   /* ── Helpers ── */
   const $  = id => document.getElementById(id);
@@ -13262,14 +13281,16 @@ function renderResults({bsa,clcr,imc,pi,tfg,clcrStatus,clcrMetodo,clcrRef,clcrCo
     document.querySelectorAll('.rd-sc-tag,.rd-clcr-status,.rd-clcr-ref').forEach(e => e.remove());
     clcrCard.classList.toggle('has-value', clcr != null);
 
-    if (clcr && clcrCorrigidoSC && clcrSC) {
+    if (clcrIndexado != null && clcrSC) {
       const scTag = document.createElement('div');
       scTag.className = 'rd-sc-tag';
       scTag.style.cssText = 'display:inline-flex;align-items:center;gap:4px;margin-top:5px;' +
         'padding:2px 7px;background:rgba(66,168,212,0.12);border:1px solid rgba(66,168,212,0.28);' +
         'border-radius:20px;font-size:9px;font-weight:700;color:var(--info);';
       scTag.innerHTML = `<i class="fa-solid fa-ruler" style="font-size:8px"></i> ` +
-        (isES ? `Corregido SC: ${clcrSC} m²` : `Corrigido SC: ${clcrSC} m²`);
+        (isES
+          ? `ClCr indexado: ${fmt(clcrIndexado,1)} mL/min/1,73 m² · SC ${clcrSC} m²`
+          : `ClCr indexado: ${fmt(clcrIndexado,1)} mL/min/1,73 m² · SC ${clcrSC} m²`);
       clcrCard.appendChild(scTag);
     }
     if (clcr && clcrStatus) {
@@ -13365,7 +13386,7 @@ function renderResults({bsa,clcr,imc,pi,tfg,clcrStatus,clcrMetodo,clcrRef,clcrCo
   if (rdCkdStage && ckdKey) {
     rdCkdStage.innerHTML =
       `<span class="ckd-badge ${ckdCls}" style="font-size:9px;padding:2px 6px;">${ckdKey.replace('ckd_','').toUpperCase()}</span>` +
-      `<span style="margin-left:5px;font-size:9.5px;color:var(--text-muted);">${t(ckdKey)}</span>`;
+      `<span style="margin-left:5px;font-size:9.5px;color:var(--text-muted);">${t(ckdKey)} · ${isES?'categoría G':'categoria G'}</span>`;
   } else if (rdCkdStage) {
     rdCkdStage.innerHTML = '';
   }
@@ -13405,14 +13426,16 @@ function resetResults() {
 function clearAll() {
   ['inp-age','inp-weight','inp-height','inp-creatinine','inp-cr-urina','inp-vol24h']
     .forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
-  setSex('M');
+  currentSex = null; currentPregnant = false;
+  document.getElementById('btn-male')?.classList.remove('active');
+  document.getElementById('btn-female')?.classList.remove('active');
   resetResults();
   /* Reseta estado gestante */
   currentPregnant = false;
   setPregnant(false, true);
 
   window.patientData = {
-    age:null, sex:'M', weight:null, height:null, creatinine:null,
+    age:null, sex:null, weight:null, height:null, creatinine:null,
     bsa:null, clcr:null, imc:null, pesoIdeal:null, tfg:null,
     clcrTipo:'ESTIMADO', clcrSC:null, clcrBruto:null, clcrCorrigidoSC:false,
     pregnant:false
@@ -13588,14 +13611,13 @@ function openDiagnosticModal() {
   const imc  = pd.imc;
   const tfg  = pd.tfg;
 
-  /* ClCr — faixas clínicas */
-  const clcrInfo = clcr != null ? (() => {
-    if (clcr >= 90) return { label: isES?'Adecuado':'Adequado',           color:'var(--green-glow)', cls:'ckd-g1', icon:'✅' };
-    if (clcr >= 60) return { label: isES?'Levemente Reducido':'Levemente Reduzido', color:'#8BC34A',          cls:'ckd-g2', icon:'🟡' };
-    if (clcr >= 30) return { label: isES?'Moderadamente Reducido':'Moderadamente Reduzido', color:'var(--warning)', cls:'ckd-g3b',icon:'🔶' };
-    if (clcr >= 15) return { label: isES?'Gravemente Reducido':'Gravemente Reduzido',   color:'var(--danger)',  cls:'ckd-g4', icon:'🔴' };
-    return               { label: isES?'Falla Renal Terminal':'Falência Renal Terminal',color:'var(--danger)',  cls:'ckd-g5', icon:'🚨' };
-  })() : null;
+  /* ClCr — métrica absoluta para contexto farmacológico; não recebe estágio G. */
+  const clcrInfo = clcr != null ? {
+    label: isES ? 'Para ajuste farmacológico individual' : 'Para ajuste farmacológico individual',
+    color: 'var(--info)',
+    cls: 'severity-info',
+    icon: '🧮'
+  } : null;
 
   /* IMC — OMS */
   const imcInfo = imc != null ? (() => {
@@ -13607,36 +13629,54 @@ function openDiagnosticModal() {
     return               { label:isES?'Obesidad Mórbida':'Obesidade Mórbida',color:'var(--danger)',icon:'🚨', badgeCls:'severity-high' };
   })() : null;
 
-  /* ── Veredito geral ── */
-  const hasRenalRisk = clcr != null && clcr < 60;
-  const hasImcRisk   = imc  != null && imc  >= 30;
+  /* ── Veredito geral — baseado em eGFR, sem diagnosticar DRC por ponto isolado ── */
+  const hasImcRisk = imc != null && imc >= 30;
   let verdict;
-  if (!hasRenalRisk && !hasImcRisk) {
+
+  if (tfg == null) {
     verdict = {
-      icon:'🟢', color:'var(--green-glow)',
-      bg:'rgba(34,200,122,0.08)', border:'rgba(34,200,122,0.25)',
-      title: isES ? 'Perfil de Bajo Riesgo' : 'Perfil de Baixo Risco',
-      desc:  isES
-        ? 'Función renal y parámetros corporales dentro de los parámetros normales. Las calculadoras usarán dosis estándar sin ajuste.'
-        : 'Função renal e parâmetros corporais dentro do esperado. As calculadoras utilizarão doses-padrão sem ajuste renal.'
+      icon:'ℹ️', color:'var(--info)',
+      bg:'rgba(66,168,212,0.08)', border:'rgba(66,168,212,0.25)',
+      title: isES ? 'eGFR no disponible' : 'eGFR indisponível',
+      desc: isES
+        ? 'La eGFR CKD-EPI 2021 requiere creatinina sérica, edad ≥18 años y sexo informado. El ClCr puede seguir utilizándose cuando esté disponible para recomendaciones farmacológicas que lo exijan.'
+        : 'A eGFR CKD-EPI 2021 requer creatinina sérica, idade ≥18 anos e sexo informado. O ClCr pode continuar sendo usado, quando disponível, para recomendações farmacológicas que o exijam.'
     };
-  } else if (clcr != null && clcr < 30) {
+  } else if (tfg < 30) {
     verdict = {
       icon:'🚨', color:'var(--danger)',
       bg:'rgba(224,92,107,0.09)', border:'rgba(224,92,107,0.35)',
-      title: isES ? 'Riesgo Clínico Elevado' : 'Risco Clínico Elevado',
-      desc:  isES
-        ? 'Disfunción renal grave detectada. Todos los fármacos con excreción renal requieren ajuste urgente de dosis. Revise cada prescripción individualmente.'
-        : 'Disfunção renal grave detectada. Todos os fármacos com excreção renal requerem ajuste urgente de dose. Revise cada prescrição individualmente.'
+      title: isES ? 'eGFR muy reducida' : 'eGFR muito reduzida',
+      desc: isES
+        ? 'CKD-EPI 2021 en rango G4/G5. Diferenciar lesión renal aguda de enfermedad renal crónica; la ERC requiere cronicidad y contexto clínico.'
+        : 'CKD-EPI 2021 na faixa G4/G5. Diferenciar lesão renal aguda de doença renal crônica; DRC requer cronicidade e contexto clínico.'
     };
-  } else {
+  } else if (tfg < 60) {
     verdict = {
       icon:'🔶', color:'var(--warning)',
       bg:'rgba(240,168,66,0.08)', border:'rgba(240,168,66,0.30)',
-      title: isES ? 'Riesgo Clínico Moderado' : 'Risco Clínico Moderado',
-      desc:  isES
-        ? 'Función renal reducida o sobrepeso detectados. Revise dosis de antibióticos, anticoagulantes y nefrotóxicos. Monitorización recomendada.'
-        : 'Função renal reduzida ou sobrepeso detectados. Revise doses de antibióticos, anticoagulantes e nefrotóxicos. Monitorização recomendada.'
+      title: isES ? 'eGFR reducida' : 'eGFR reduzida',
+      desc: isES
+        ? 'CKD-EPI 2021 por debajo de 60 mL/min/1,73 m². Interpretar con tendencia temporal, albuminuria y otros marcadores de daño renal.'
+        : 'CKD-EPI 2021 abaixo de 60 mL/min/1,73 m². Interpretar com tendência temporal, albuminúria e outros marcadores de lesão renal.'
+    };
+  } else if (hasImcRisk) {
+    verdict = {
+      icon:'ℹ️', color:'var(--info)',
+      bg:'rgba(66,168,212,0.08)', border:'rgba(66,168,212,0.25)',
+      title: isES ? 'eGFR sin reducción importante en esta estimación' : 'eGFR sem redução importante nesta estimativa',
+      desc: isES
+        ? 'La categoría G aislada no diagnostica ERC. El IMC debe interpretarse por separado.'
+        : 'A categoria G isolada não diagnostica DRC. O IMC deve ser interpretado separadamente.'
+    };
+  } else {
+    verdict = {
+      icon:'🟢', color:'var(--green-glow)',
+      bg:'rgba(34,200,122,0.08)', border:'rgba(34,200,122,0.25)',
+      title: isES ? 'eGFR ≥60 en esta estimación' : 'eGFR ≥60 nesta estimativa',
+      desc: isES
+        ? 'Este valor aislado no excluye enfermedad renal crónica. Integrar albuminuria, otros marcadores y evolución ≥3 meses cuando corresponda.'
+        : 'Este valor isolado não exclui doença renal crônica. Integrar albuminúria, outros marcadores e evolução ≥3 meses quando aplicável.'
     };
   }
 
@@ -13678,13 +13718,16 @@ function openDiagnosticModal() {
     <div class="diag-metric" style="border-color:${tfgColor}22;">
       <div class="diag-metric-icon" style="background:${tfgColor}18;color:${tfgColor};">🫘</div>
       <div class="diag-metric-content">
-        <div class="diag-metric-label">${isES?'TFG Estimada (CKD-EPI)':'TFG Estimada (CKD-EPI)'}</div>
+        <div class="diag-metric-label">${isES?'eGFR (CKD-EPI 2021)':'eGFR (CKD-EPI 2021)'}</div>
         <div>
           <span class="diag-metric-value" style="color:${tfgColor};">${tfg.toFixed(1)}</span>
           <span class="diag-metric-unit">mL/min/1.73m²</span>
         </div>
         <div class="diag-metric-status" style="color:${tfgColor};">
           <span style="font-size:11px;font-weight:700;">${tfgLabel}</span>
+          <div style="font-size:9px;color:var(--text-muted);margin-top:3px;">${isES
+            ? 'Categoría G aislada ≠ diagnóstico de ERC'
+            : 'Categoria G isolada ≠ diagnóstico de DRC'}</div>
         </div>
       </div>
     </div>`;
@@ -14281,7 +14324,7 @@ function checkInteractions(currentDrugId) {
    context: 'weight' | 'age' | 'creatinine' | 'full'
 ========================================================= */
 let _qeContext = 'full';
-let _qeSex = 'M';
+let _qeSex = null;
 
 function openQuickEdit(context) {
   _qeContext = context || 'full';
@@ -14296,7 +14339,7 @@ function openQuickEdit(context) {
   setVal('qe-creatinine', pd.creatinine);
 
   /* Sexo */
-  _qeSex = pd.sex || 'M';
+  _qeSex = (pd.sex === 'M' || pd.sex === 'F') ? pd.sex : null;
   _qeUpdateSexBtns();
 
   /* i18n textos do modal */
@@ -14621,7 +14664,7 @@ function qeEdit(context) { openQuickEdit(context || 'full'); }
    Chamado por: navigate(), saveQuickEdit(), recalculate().
 ══════════════════════════════════════════════════════════════ */
 /* ── _gpbMiniSex — estado do toggle de sexo nos mini-inputs ── */
-let _gpbMiniSex = 'M';
+let _gpbMiniSex = null;
 
 function _gpbSetMiniSex(sex) {
   _gpbMiniSex = sex;
@@ -15668,14 +15711,36 @@ window._renderFarmacosListDebounced = _renderFarmacosListDebounced;
    em cada fármaco; se não houver regime pediátrico compatível, é proibido
    cair silenciosamente em dose adulta. */
 function _fdResolveHeroPatient(drug, pd, lang) {
-  const isES     = lang === 'es';
-  const age      = pd && pd.age    != null ? Number(pd.age)    : null;
-  const weight   = pd && pd.weight != null ? Number(pd.weight) : null;
-  const clcr     = pd && pd.clcr   != null ? Number(pd.clcr)   : null;
-  const isHD     = Boolean(document.getElementById('hm-hemodialise')?.checked);
-  const sex      = pd && pd.sex    ? pd.sex : (window.currentSex || 'M');
-  const isFemale = (sex === 'F');
-  const pregnant = Boolean(pd && pd.pregnant);
+  /* MEDCASES_RENAL_FD_PATIENT_SAFETY_V1_B_R13
+     Contrato: dados reais ausentes permanecem null. Defaults neutros são
+     permitidos somente quando não existe qualquer contexto de paciente. */
+  const isES = lang === 'es';
+  const _fdNum = (v) => {
+    if (v === null || v === undefined || v === '') return null;
+    const n = Number(v);
+    return Number.isFinite(n) ? n : null;
+  };
+  const age        = _fdNum(pd?.age);
+  const weight     = _fdNum(pd?.weight);
+  const height     = _fdNum(pd?.height);
+  const creatinine = _fdNum(pd?.creatinine);
+  const clcr       = _fdNum(pd?.clcr);
+  const imc        = _fdNum(pd?.imc);
+  const pesoIdeal  = _fdNum(pd?.pesoIdeal);
+  const isHD       = Boolean(document.getElementById('hm-hemodialise')?.checked);
+  const pdSex      = (pd?.sex === 'M' || pd?.sex === 'F') ? pd.sex : null;
+  const globalSex  = (window.currentSex === 'M' || window.currentSex === 'F') ? window.currentSex : null;
+  const sex        = pdSex || globalSex || null;
+  const pregnant   = (pd && typeof pd.pregnant === 'boolean') ? pd.pregnant : null;
+  const lactante   = (pd && typeof pd.lactante === 'boolean') ? pd.lactante : null;
+  const hepatopatia= (pd && typeof pd.hepatopatia === 'boolean') ? pd.hepatopatia : null;
+  const hasPatientContext = Boolean(pd && [
+    'age','weight','sex','height','creatinine','clcr','imc','pesoIdeal',
+    'pregnant','lactante','hepatopatia'
+  ].some(k => pd[k] !== null && pd[k] !== undefined && pd[k] !== '')) || sex !== null;
+  const useNeutralDefaults = !hasPatientContext;
+  const routingAge = age !== null ? age : (useNeutralDefaults ? 40 : null);
+  const isFemale = sex === 'F' ? true : (sex === 'M' ? false : null);
 
   /* ═══════════════════════════════════════════════════════════════
      PASSO 1 — SELEÇÃO DE PERFIL POR IDADE (nó raiz da hierarquia)
@@ -15683,27 +15748,30 @@ function _fdResolveHeroPatient(drug, pd, lang) {
      age < 18 → PEDIÁTRICO (ignora totalmente blocos adulto)
      age >= 18 → ADULTO
   ═══════════════════════════════════════════════════════════════ */
-  const isPediatric = (age !== null && age < 18);
-  const perfil      = isPediatric ? 'pediatrico' : 'adulto';
+  const isPediatric = routingAge !== null ? (routingAge < 18) : null;
+  const perfil = isPediatric === true
+    ? 'pediatrico'
+    : (isPediatric === false ? 'adulto' : 'indeterminado');
 
   /* ─ 2. Monta objeto paciente REAL para drug.dose() ─ */
+  const doseSex = sex !== null ? sex : (useNeutralDefaults ? 'M' : null);
   const realPatient = {
-    weight:  weight  || 70,
-    age:     age     !== null ? age : 40,
-    sex:     sex,
-    height:  pd?.height || 170,
-    creatinine: pd?.creatinine || 1.0,
-    clcr:    clcr    !== null ? clcr : 90,
-    imc:     pd?.imc || 24,
-    pesoIdeal: pd?.pesoIdeal || 70,
-    pregnant: pregnant,
+    weight:      weight      !== null ? weight      : (useNeutralDefaults ? 70  : null),
+    age:         age         !== null ? age         : (useNeutralDefaults ? 40  : null),
+    sex:         doseSex,
+    height:      height      !== null ? height      : (useNeutralDefaults ? 170 : null),
+    creatinine:  creatinine  !== null ? creatinine  : (useNeutralDefaults ? 1.0 : null),
+    clcr:        clcr        !== null ? clcr        : (useNeutralDefaults ? 90  : null),
+    imc:         imc         !== null ? imc         : (useNeutralDefaults ? 24  : null),
+    pesoIdeal:   pesoIdeal   !== null ? pesoIdeal   : (useNeutralDefaults ? 70  : null),
+    pregnant:    pregnant    !== null ? pregnant    : (useNeutralDefaults ? false : null),
     /* Aliases para módulos externos (antimicrobianos.js usa estes) */
-    peso:    weight  || 70,
-    idade:   age     !== null ? age : 40,
-    sexo:    sex,
-    gestante: pregnant,
-    lactante: false,
-    hepatopatia: false
+    peso:        weight      !== null ? weight      : (useNeutralDefaults ? 70 : null),
+    idade:       age         !== null ? age         : (useNeutralDefaults ? 40 : null),
+    sexo:        doseSex,
+    gestante:    pregnant    !== null ? pregnant    : (useNeutralDefaults ? false : null),
+    lactante:    lactante    !== null ? lactante    : (useNeutralDefaults ? false : null),
+    hepatopatia: hepatopatia !== null ? hepatopatia : (useNeutralDefaults ? false : null)
   };
 
   /* ─ 3. Chama drug.dose() com paciente REAL ─
@@ -15768,7 +15836,7 @@ function _fdResolveHeroPatient(drug, pd, lang) {
   ═══════════════════════════════════════════════════════════════ */
   let heroDose = '', heroFreq = '', heroVia = '', calcDoseMgKg = null, _heroKey = null;
 
-  if (isPediatric) {
+  if (isPediatric === true) {
     /* ══ CENÁRIO PEDIÁTRICO ══
        Regra absoluta: NÃO usar result.dose (= adultoVO extraído pelo adaptador)
        NÃO usar renalDados genérico (pode ser vo/ev adulto)                    */
@@ -15919,9 +15987,9 @@ function _fdResolveHeroPatient(drug, pd, lang) {
       }
     }
 
-  } else {
+  } else if (isPediatric === false) {
     /* ═══════════════════════════════════════════════════════════════
-       CENÁRIO ADULTO (age >= 18 ou sem dados de paciente)
+       CENÁRIO ADULTO (idade conhecida >= 18 ou contexto sintético neutro)
        Prioridade: renalDose[faixaKey].vo > renalDados ajustado > result.dose
     ═══════════════════════════════════════════════════════════════ */
 
@@ -15998,13 +16066,27 @@ function _fdResolveHeroPatient(drug, pd, lang) {
       const fm = String(heroDose).match(/(\d+\/\d+h|\d+x\/dia|1\s*vez\/dia|cada\s*\d+h)/i);
       if (fm) heroFreq = fm[0];
     }
+
+  } else {
+    /* Idade ausente em contexto real: não inferir adulto/pediátrico
+       nem apresentar uma dose contextualizada como se a população fosse conhecida. */
+    heroDose = isES
+      ? 'Informar edad para dosis contextualizada'
+      : 'Informar idade para dose contextualizada';
+    heroFreq = '';
+    heroVia = '';
+    renalFaixa = null;
+    renalState = 'unknown';
+    renalAdj = false;
+    renalDados = null;
+    faixaKey = null;
   }
 
   /* ═══════════════════════════════════════════════════════════════
      PASSO 4 — GATILHOS DE SEXO E GRAVIDEZ
   ═══════════════════════════════════════════════════════════════ */
   let pregAlert = null;
-  if (isFemale && pregnant) {
+  if (isFemale === true && pregnant === true) {
     /* Busca alerta específico de gestante no rich */
     const alerts = rich?.alerts || [];
     const pregWarning = alerts.find(a => /gestante|gravidez|gestación|embaraz|teratog|pregnancy|fetal/i.test(a||''));
@@ -16031,6 +16113,7 @@ function _fdResolveHeroPatient(drug, pd, lang) {
 
   return {
     perfil, isPediatric, age, weight, clcr, isHD,
+    hasPatientContext, isSyntheticNeutral: useNeutralDefaults,
     isFemale, isPregnant: pregnant,
     heroDose, heroFreq, heroVia,
     renalFaixa, renalState, renalAdj,
@@ -16183,7 +16266,9 @@ function openFarmacoDetail(id) {
   }
 
   /* ── Hero de dose com contexto do paciente ── */
-  const hasRealPatient = Boolean(pd && (pd.weight || pd.clcr));
+  const hasRealPatient = Boolean(pd && [
+      'weight','clcr','age','sex','height','creatinine','pregnant'
+    ].some(k => pd[k] !== null && pd[k] !== undefined && pd[k] !== ''));
   const heroViaIcon = /EV|IV/i.test(hero.heroVia) ? 'fa-syringe' : 'fa-pills';
   const clcrColor   = hero.clcr < 10 ? '#F87171' : hero.clcr < 30 ? '#FBBF24' : hero.clcr < 50 ? '#FB923C' : '#38BDF8';
 
@@ -16198,7 +16283,7 @@ function openFarmacoDetail(id) {
   htmlDosing += `<div class="fd-dose-hero ${heroStateCls}">
     <div class="fd-dose-hero-label">
       <i class="fa-solid fa-${heroViaIcon}"></i>
-      ${hero.isPediatric
+      ${hero.isPediatric == null ? '' : hero.isPediatric
         ? (isES ? `POSOLOGÍA PEDIÁTRICA — ${hero.weight||'?'} kg · ${hero.age||'?'} ${isES?'años':'anos'}`
                 : `POSOLOGIA PEDIÁTRICA — ${hero.weight||'?'} kg · ${hero.age||'?'} anos`)
         : (isES ? 'POSOLOGÍA' : 'POSOLOGIA')}
@@ -16207,7 +16292,7 @@ function openFarmacoDetail(id) {
   /* Dose principal */
   htmlDosing += `<div class="fd-dose-item fd-dose-item--hero">
     <div class="fd-dose-key">
-      ${hero.isPediatric
+      ${hero.isPediatric == null ? '' : hero.isPediatric
         ? (isES ? `<i class="fa-solid fa-child" style="color:#38BDF8"></i> Pediátrico`
                 : `<i class="fa-solid fa-child" style="color:#38BDF8"></i> Pediátrico`)
         : (isES ? `<i class="fa-solid fa-user"></i> Adulto`
@@ -16229,7 +16314,7 @@ function openFarmacoDetail(id) {
 
   /* ── Barra de contexto do paciente (dentro do hero) ── */
   if (hasRealPatient) {
-    const sexLbl = hero.isFemale ? (isES ? 'Fem.' : 'Fem.') : (isES ? 'Masc.' : 'Masc.');
+    const sexLbl = hero.isFemale === true ? 'Fem.' : (hero.isFemale === false ? 'Masc.' : '—');
     htmlDosing += `<div class="fd-patient-context-bar">
       <i class="fa-solid fa-user-injured" style="color:var(--text-muted);font-size:10px;"></i>
       ${hero.weight ? `<span>${hero.weight} kg</span>` : ''}
@@ -17879,8 +17964,7 @@ function calcShowInlineResult(drugId) {
     const hero = _fdResolveHeroPatient(drug, pd, lang);
 
     const clcrColor = hero.clcr < 10 ? '#F87171' : hero.clcr < 30 ? '#FBBF24' : hero.clcr < 50 ? '#FB923C' : '#38BDF8';
-    const sexLbl    = hero.isFemale ? (isES ? 'Fem.' : 'Fem.') : (isES ? 'Masc.' : 'Masc.');
-
+    const sexLbl = hero.isFemale === true ? 'Fem.' : (hero.isFemale === false ? 'Masc.' : '—');
     /* Badge renal */
     let renalHtml = '';
     if (hero.renalFaixa) {
@@ -17916,13 +18000,14 @@ function calcShowInlineResult(drugId) {
       : '';
 
     /* Label perfil pediátrico */
-    const profileLabel = hero.isPediatric
+    let profileLabel = hero.isPediatric
       ? `<span class="hm-inline-pedi-badge">
            <i class="fa-solid fa-child"></i>
            ${isES ? `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} años`
                   : `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} anos`}
          </span>`
       : '';
+    if (hero.isPediatric == null) profileLabel = 'Perfil n/d';
 
     /* Cálculo mg absoluto */
     const calcHtml = (hero.isPediatric && hero.calcDoseMgKg && hero.weight)
@@ -21884,7 +21969,147 @@ if (typeof window.hmUpdatePatientCardColor !== 'function') {
   window.hmUpdatePatientCardColor = function() { /* pre-stub: aguardando DOMContentLoaded */ };
 }
 if (typeof window.hmCalcCockcroft !== 'function') {
-  window.hmCalcCockcroft = function() { /* pre-stub: aguardando DOMContentLoaded */ };
+window.hmCalcCockcroft = function() {
+    try {
+      const creat  = parseFloat((document.getElementById('hm-creatinina')?.value || '').replace(',', '.'));
+      const weight = parseFloat((document.getElementById('hm-weight')?.value    || '').replace(',', '.'));
+      const age    = parseFloat((document.getElementById('hm-age')?.value       || '').replace(',', '.'));
+      const height = parseFloat((document.getElementById('hm-height')?.value    || '').replace(',', '.'));
+
+      const clcrHid  = document.getElementById('hm-clcr');
+      const pillVal  = document.getElementById('hm-pv-clcr');
+      const pillSrc  = document.getElementById('hm-pv-clcr-src');
+      const pillWrap = document.getElementById('hm-result-pills');
+
+      const urineBody  = document.getElementById('hm-urine-body');
+      const panelOpen  = urineBody && urineBody.style.display !== 'none';
+      const urine24    = panelOpen ? parseFloat((document.getElementById('hm-urine24')?.value || '').replace(',', '.')) : NaN;
+      const urineCreat = panelOpen ? parseFloat((document.getElementById('hm-urine-creat')?.value || '').replace(',', '.')) : NaN;
+
+      if (!Number.isFinite(creat) || creat <= 0) {
+        if (clcrHid) clcrHid.value = '';
+        if (pillVal) pillVal.textContent = '—';
+        if (pillSrc) { pillSrc.textContent = 'CG'; pillSrc.style.display = 'none'; }
+        if (window.patientData) {
+          window.patientData.clcr = null;
+          window.patientData.clcrIndexado = null;
+        }
+        return;
+      }
+
+      const sex = (currentSex === 'M' || currentSex === 'F') ? currentSex : null;
+      const hasUrine = panelOpen &&
+        Number.isFinite(urine24) && urine24 > 0 &&
+        Number.isFinite(urineCreat) && urineCreat > 0;
+
+      let clcr = null;
+      let clcrIndexado = null;
+      let method = null;
+
+      if (hasUrine) {
+        const V = urine24 / 1440;
+        const clcrBruto = (urineCreat * V) / creat;
+        clcr = clcrBruto;
+        method = 'Ur24';
+
+        const hasBSA =
+          Number.isFinite(weight) && weight > 0 &&
+          Number.isFinite(height) && height > 0;
+        if (hasBSA) {
+          const bsa = Math.sqrt((weight * height) / 3600);
+          if (Number.isFinite(bsa) && bsa > 0) {
+            clcrIndexado = clcrBruto * (1.73 / bsa);
+          }
+        }
+      } else {
+        if (!Number.isFinite(weight) || weight <= 0 ||
+            !Number.isFinite(age) || age < 18 ||
+            (sex !== 'M' && sex !== 'F')) {
+          if (clcrHid) clcrHid.value = '';
+          if (pillVal) pillVal.textContent = '—';
+          if (pillSrc) { pillSrc.textContent = 'CG'; pillSrc.style.display = 'none'; }
+          if (window.patientData) {
+            window.patientData.clcr = null;
+            window.patientData.clcrIndexado = null;
+          }
+          return;
+        }
+
+        clcr = ((140 - age) * weight) / (72 * creat);
+        if (sex === 'F') clcr *= 0.85;
+        method = 'CG';
+      }
+
+      if (!Number.isFinite(clcr) || clcr < 0) {
+        if (clcrHid) clcrHid.value = '';
+        if (pillVal) pillVal.textContent = '—';
+        if (window.patientData) {
+          window.patientData.clcr = null;
+          window.patientData.clcrIndexado = null;
+        }
+        return;
+      }
+
+      clcr = Math.round(clcr * 10) / 10;
+      if (clcrIndexado != null && Number.isFinite(clcrIndexado)) {
+        clcrIndexado = Math.round(clcrIndexado * 10) / 10;
+      } else {
+        clcrIndexado = null;
+      }
+
+      if (clcrHid) {
+        clcrHid.value = clcr;
+        clcrHid.dispatchEvent(new Event('input',  { bubbles: true }));
+        clcrHid.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+
+      if (pillVal) {
+        pillVal.textContent = clcr;
+        const pill = document.getElementById('hm-pill-clcr');
+        if (pill) {
+          pill.style.borderColor =
+            clcr < 10 ? 'rgba(248,113,113,0.55)' :
+            clcr < 30 ? 'rgba(251,191, 36,0.50)' :
+            clcr < 50 ? 'rgba(251,146, 60,0.50)' :
+                        'rgba( 56,189,248,0.30)';
+          pill.style.transition = 'border-color 0.35s ease';
+        }
+      }
+
+      if (pillSrc) {
+        pillSrc.textContent = method;
+        pillSrc.style.display = '';
+        pillSrc.style.color = hasUrine ? 'rgba(52,211,153,0.90)' : '';
+        pillSrc.title = clcrIndexado != null
+          ? `ClCr indexado: ${clcrIndexado} mL/min/1,73 m²`
+          : '';
+      }
+
+      if (pillWrap && pillWrap.style.display === 'none') pillWrap.style.display = 'grid';
+
+      window.patientData = window.patientData || {};
+      window.patientData.clcr         = clcr;
+      window.patientData.clcrIndexado = clcrIndexado;
+      window.patientData.creatinine   = creat;
+      window.patientData.clcrMethod   = method;
+
+      _updateHomeLiveDash();
+
+      const activeCard = document.querySelector('.hm-drug-inline-card');
+      if (activeCard) {
+        const drugIdAttr = activeCard.getAttribute('data-drug-id');
+        if (drugIdAttr && typeof window.hmShowInlineResult === 'function') {
+          window.hmShowInlineResult(drugIdAttr);
+        }
+      }
+    } catch(calcErr) {
+      console.warn('[hmCalcCockcroft] erro capturado:', calcErr.message);
+      try {
+        const pv = document.getElementById('hm-pv-clcr');
+        if (pv) pv.textContent = '—';
+      } catch(e2) {}
+    }
+  };;
 }
 if (typeof window.hmShowInlineResult !== 'function') {
   window.hmShowInlineResult = function() { /* pre-stub: aguardando DOMContentLoaded */ };
@@ -21912,7 +22137,7 @@ if (typeof window.hmFilterDrugs !== 'function') {
        sexo:       'M'|'F',
        altura:     Number,   // cm
        creat:      Number,   // mg/dL — creatinina sérica atual
-       ckd_epi:    Number,   // TFG CKD-EPI (mL/min/1.73m²)
+       ckd_epi:    Number,   // eGFR CKD-EPI 2021 (mL/min/1.73m²)
        cockcroft:  Number,   // ClCr Cockcroft-Gault (mL/min)
        kdigo:      Number    // estágio KDIGO 0-5 (0 = sem LRA)
      }
@@ -22264,7 +22489,7 @@ document.addEventListener('DOMContentLoaded', () => {
               ? 'HTA: 12,5–25 mg VO 2–3 veces/día. Máx 150 mg/día. IC: 6,25 mg 3 veces/día → 50 mg 3 veces/día.'
               : 'HTA: 12,5–25 mg VO 2–3x/dia. Máx 150 mg/dia. IC: 6,25 mg 3x/dia → 50 mg 3x/dia.',
             freq: '8/8h ou 6/6h', via: 'VO',
-            adj: p.clcr < 30 ? 'Ajuste renal obrigatório em ClCr < 30 mL/min.' : '',
+            adj: Number.isFinite(Number(p.clcr)) && Number(p.clcr) > 0 && Number(p.clcr) < 30 ? 'Ajuste renal obrigatório em ClCr < 30 mL/min.' : '',
             note: lang === 'es'
               ? 'Consultar ficha completa en módulo de fármacos.'
               : 'Consulte ficha completa no módulo de fármacos.'
@@ -22340,7 +22565,7 @@ document.addEventListener('DOMContentLoaded', () => {
               ? 'Dislipidemia: 5–40 mg VO 1 vez/día. Máx 40 mg/día. Ajuste en ClCr < 30: máx 10 mg/día.'
               : 'Dislipidemia: 5–40 mg VO 1x/dia. Máx 40 mg/dia. Ajuste em ClCr < 30: máx 10 mg/dia.',
             freq: '1x/dia', via: 'VO',
-            adj: (p.clcr || 90) < 30 ? 'Dose máxima 10 mg/dia em ClCr < 30 mL/min.' : '',
+            adj: Number.isFinite(Number(p.clcr)) && Number(p.clcr) > 0 && Number(p.clcr) < 30 ? 'Dose máxima 10 mg/dia em ClCr < 30 mL/min.' : '',
             note: lang === 'es'
               ? 'Monitorar TGO/TGP. Riesgo de miopatía y rabdomiólisis.'
               : 'Monitorar TGO/TGP. Risco de miopatia e rabdomiólise.'
@@ -22599,8 +22824,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       /* Barra de contexto do paciente */
       const clcrColor = hero.clcr < 10 ? '#F87171' : hero.clcr < 30 ? '#FBBF24' : hero.clcr < 50 ? '#FB923C' : '#38BDF8';
-      const sexLbl    = hero.isFemale ? 'Fem.' : 'Masc.';
-
+      const sexLbl = hero.isFemale === true ? 'Fem.' : (hero.isFemale === false ? 'Masc.' : '—');
       /* Badge renal */
       let renalHtml = '';
       if (hero.renalFaixa) {
@@ -22636,13 +22860,14 @@ document.addEventListener('DOMContentLoaded', () => {
         : '';
 
       /* Label de perfil pediátrico */
-      const profileLabel = hero.isPediatric
+      let profileLabel = hero.isPediatric
         ? `<span class="hm-inline-pedi-badge">
              <i class="fa-solid fa-child"></i>
              ${isES ? `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} años`
                     : `Pediátrico · ${hero.weight||'?'} kg · ${hero.age||'?'} anos`}
            </span>`
         : '';
+    if (hero.isPediatric == null) profileLabel = 'Perfil n/d';
 
       /* Dose calculada mg/kg (só pediátrico) */
       const calcHtml = (hero.isPediatric && hero.calcDoseMgKg && hero.weight)
@@ -22798,11 +23023,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  /* MEDCASES_RENAL_RESIDUAL_SEX_FIX_V1_B_R6_R1_R1
+     Sexo desconhecido é neutro: não inferir perfil masculino/feminino. */
   window.hmUpdatePatientCardColor = function() {
     const card = document.getElementById('hm-patient-card');
     if (!card) return;
     const age = parseFloat((document.getElementById('hm-age')?.value || '').replace(',', '.')) || 0;
-    const sex = currentSex || 'M';
+    const sex = (currentSex === 'M' || currentSex === 'F') ? currentSex : null;
 
     card.classList.remove('hm-profile-pedia', 'hm-profile-female', 'hm-profile-male');
 
@@ -22810,7 +23037,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.classList.add('hm-profile-pedia');
     } else if (sex === 'F') {
       card.classList.add('hm-profile-female');
-    } else {
+    } else if (sex === 'M') {
       card.classList.add('hm-profile-male');
     }
   };
@@ -23187,7 +23414,7 @@ document.addEventListener('DOMContentLoaded', () => {
       height:     data.height,
       creatinine: data.creatinine,
       clcr:       data.clcr,
-      sex:        currentSex || 'M',
+      sex:        (currentSex === 'M' || currentSex === 'F') ? currentSex : null,
       imc:        derived.imc        || null,
       pesoIdeal:  derived.pesoIdeal  || null,
       bsa:        derived.bsa        || null,
@@ -23568,133 +23795,10 @@ document.addEventListener('DOMContentLoaded', () => {
        • #hm-pv-clcr-src   → badge "CG" ou "Ur24·BSA"
        • window.patientData.clcr
   ============================================================ */
-  window.hmCalcCockcroft = function() {
-    /* BUILD 366: outer try/catch — nenhum erro de propriedade nula
-       pode congelar o painel de dados do paciente */
-    try {
-
-    /* ── Leituras de DOM ── */
-    /* BUILD 283 — sanitização vírgula→ponto para decimais pt-BR / es */
-    const creat  = parseFloat((document.getElementById('hm-creatinina')?.value || '').replace(',', '.'));
-    const weight = parseFloat((document.getElementById('hm-weight')?.value    || '').replace(',', '.'));
-    const age    = parseFloat((document.getElementById('hm-age')?.value        || '').replace(',', '.'));
-    const height = parseFloat((document.getElementById('hm-height')?.value     || '').replace(',', '.'));
-
-    const clcrHid  = document.getElementById('hm-clcr');
-    const pillVal  = document.getElementById('hm-pv-clcr');
-    const pillSrc  = document.getElementById('hm-pv-clcr-src');
-    const pillWrap = document.getElementById('hm-result-pills');
-
-    /* Campos Urina 24h — apenas lidos se painel estiver expandido */
-    const urineBody  = document.getElementById('hm-urine-body');
-    const panelOpen  = urineBody && urineBody.style.display !== 'none';
-    const urine24    = panelOpen ? parseFloat(document.getElementById('hm-urine24')?.value)    : NaN;
-    const urineCreat = panelOpen ? parseFloat(document.getElementById('hm-urine-creat')?.value) : NaN;
-
-    /* ── Validação base (creat + weight + age obrigatórios) ── */
-    if (isNaN(creat) || creat <= 0 || isNaN(weight) || weight <= 0 || isNaN(age) || age <= 0) {
-      if (clcrHid) clcrHid.value = '';
-      if (pillVal) pillVal.textContent = '—';
-      if (pillSrc) { pillSrc.textContent = 'CG'; pillSrc.style.display = 'none'; }
-      if (window.patientData) window.patientData.clcr = null;
-      return;
-    }
-
-    /* ── Sexo ── */
-    const sex = (typeof currentSex !== 'undefined' && currentSex)
-      ? currentSex
-      : (document.getElementById('hm-btn-female')?.classList.contains('hm-sex-btn--active') ? 'F' : 'M');
-
-    /* ── Cálculo ── */
-    let clcr;
-    let method;
-
-    const hasUrine = panelOpen && !isNaN(urine24) && urine24 > 0
-                               && !isNaN(urineCreat) && urineCreat > 0;
-
-    if (hasUrine) {
-      /* ═══ MODALIDADE B: Depuração Medida + Correção BSA (Mosteller) ═══
-         Passo 1: V = Vol_urina_mL / 1440 (mL/min)
-         Passo 2: ClCr_bruto = (Cr_urinária × V) / Cr_sérica
-         Passo 3: BSA = √[(Peso × Altura) / 3600]          (Mosteller)
-         Passo 4: ClCr_corr = ClCr_bruto × (1.73 / BSA)   (normaliz. 1.73 m²)
-      */
-      const V          = urine24 / 1440;
-      const clcrBruto  = (urineCreat * V) / creat;
-      const hasHeight  = !isNaN(height) && height > 0;
-      if (hasHeight) {
-        const bsa      = Math.sqrt((weight * height) / 3600);
-        clcr           = clcrBruto * (1.73 / bsa);
-        method         = 'Ur24·BSA';
-      } else {
-        /* Sem altura: usa ClCr bruto sem correção BSA */
-        clcr   = clcrBruto;
-        method = 'Ur24';
-      }
-    } else {
-      /* ═══ MODALIDADE A: Cockcroft-Gault clássica ═══ */
-      clcr   = ((140 - age) * weight) / (72 * creat);
-      if (sex === 'F') clcr *= 0.85;
-      method = 'CG';
-    }
-
-    clcr = Math.max(1, Math.min(400, Math.round(clcr * 10) / 10));
-
-    /* ── Propaga para hidden input → motor renal ── */
-    if (clcrHid) {
-      clcrHid.value = clcr;
-      clcrHid.dispatchEvent(new Event('input',  { bubbles: true }));
-      clcrHid.dispatchEvent(new Event('change', { bubbles: true }));
-    }
-
-    /* ── Atualiza pill semafórica ── */
-    if (pillVal) {
-      pillVal.textContent = clcr;
-      const pill = document.getElementById('hm-pill-clcr');
-      if (pill) {
-        pill.style.borderColor =
-          clcr < 10  ? 'rgba(248,113,113,0.55)' :
-          clcr < 30  ? 'rgba(251,191, 36,0.50)' :
-          clcr < 50  ? 'rgba(251,146, 60,0.50)' :
-                       'rgba( 56,189,248,0.30)';
-        pill.style.transition = 'border-color 0.35s ease';
-      }
-    }
-    if (pillSrc) {
-      pillSrc.textContent = method;
-      pillSrc.style.display = '';
-      /* Destaque visual quando usando Modalidade B */
-      pillSrc.style.color = hasUrine ? 'rgba(52,211,153,0.90)' : '';
-    }
-    if (pillWrap && pillWrap.style.display === 'none') pillWrap.style.display = 'grid';
-
-    /* ── Sincroniza patientData ── */
-    window.patientData = window.patientData || {};
-    window.patientData.clcr       = clcr;
-    window.patientData.creatinine = creat;
-    window.patientData.clcrMethod = method;
-
-    /* ── BUILD 306: Atualiza Live Dashboard da Home via getElementById direto ── */
-    _updateHomeLiveDash();
-
-    /* ── Re-render inline result se visível (BUILD 302: detecta via .hm-drug-inline-card) ── */
-    const activeCard = document.querySelector('.hm-drug-inline-card');
-    if (activeCard) {
-      const drugIdAttr = activeCard.getAttribute('data-drug-id');
-      if (drugIdAttr && typeof window.hmShowInlineResult === 'function') {
-        window.hmShowInlineResult(drugIdAttr);
-      }
-    }
-
-    } catch(calcErr) {
-      /* BUILD 366: falha silenciosa — exibe '—' nos quadrantes */
-      console.warn('[hmCalcCockcroft] erro capturado:', calcErr.message);
-      try {
-        const pv = document.getElementById('hm-pv-clcr');
-        if (pv) pv.textContent = '—';
-      } catch(e2) { /* silencioso */ }
-    }
-  };
+  /* MEDCASES_RENAL_HM_DUPLICATE_OWNER_REMOVED_V1_B_R0_R1
+   The later legacy window.hmCalcCockcroft assignment was removed because it
+   overwrote the earlier clinically reconciled owner in normal JS source order.
+*/
 
   /* ── hmToggleUrine24: abre/fecha accordion + limpa campos ao fechar ── */
   window.hmToggleUrine24 = function() {
