@@ -12038,23 +12038,27 @@ const CalculadoraMeioInterno = {
     if (!Number.isFinite(act)) return null;
     return act * ((naMedido / naMeta) - 1);
   },
+  /* MEDCASES_HIPOKALEMIA_K_REPLACEMENT_CLINICAL_SAFETY_V1_B_R6
+     Classifica K sérico; não converte automaticamente K isolado em déficit corporal ou prescrição. */
   estimativaDeficitPotassio: function(kMedido) {
-    if (kMedido >= 3.5) return { deficitMeq: 0, taxaMax: 0, msgPt: 'Normocalemia.', msgEs: 'Normocalemia.' };
-    let def = 0, tx = 10, pt = '', es = '';
-    if (kMedido >= 3.0 && kMedido < 3.5) {
-      def = (3.5 - kMedido) * 200; tx = 10;
-      pt = 'Hipokalemia leve. Reposição preferencialmente VO ou IV lenta.';
-      es = 'Hipopotasemia leve. Reposición preferentemente VO o IV lenta.';
-    } else if (kMedido >= 2.5 && kMedido < 3.0) {
-      def = 100 + ((3.0 - kMedido) * 400); tx = 20;
-      pt = 'Hipokalemia moderada. Reposição IV sob monitorização por ECG.';
-      es = 'Hipopotasemia moderada. Reposición IV bajo monitorización por ECG.';
-    } else {
-      def = 300 + ((2.5 - kMedido) * 600); tx = 40;
-      pt = '🚨 Hipokalemia GRAVE. Emergência! Exige acesso central e ambiente de UTI.';
-      es = '🚨 Hipopotasemia GRAVE. ¡Emergencia! Exige acceso central y entorno de UCI.';
-    }
-    return { deficitMeq: Math.round(def), taxaMax: tx, msgPt: pt, msgEs: es };
+    const k = Number(kMedido);
+    if (!Number.isFinite(k) || k <= 0)
+      return { classe: 'indeterminada', grave: false, profunda: false };
+
+    if (k >= 3.5)
+      return { classe: 'normal', grave: false, profunda: false };
+
+    if (k >= 3.0)
+      return { classe: 'leve', grave: false, profunda: false };
+
+    if (k >= 2.5)
+      return { classe: 'moderada', grave: false, profunda: false };
+
+    return {
+      classe: k < 2.0 ? 'grave-profunda' : 'grave',
+      grave: true,
+      profunda: k < 2.0
+    };
   },
   deficitBicarbonato: function(hco3Medido, hco3Meta, peso) {
     if (hco3Medido >= hco3Meta) return { totalMeq: 0, doseInicialMeq: 0, ml84: 0 };
@@ -12326,13 +12330,95 @@ function calcEletrolitosAll() {
     const alertsK = document.getElementById('elec-alerts-k');
     if (k < 3.5) {
       const resK = CalculadoraMeioInterno.estimativaDeficitPotassio(k);
-      _elecSetResult('elec-res-deficit-k', '-' + resK.deficitMeq + ' mEq · Tx máx: ' + resK.taxaMax + ' mEq/h', '');
-      if (alertsK) alertsK.innerHTML =
-        _elecAlert('yellow', 'triangle-exclamation',
-          isEs ? 'Hipopotasemia' : 'Hipokalemia') +
-        _elecAlert(k < 2.5 ? 'red' : 'yellow', 'bolt',
-          (isEs ? 'Taxa máx: ' : 'Taxa máx: ') + '<b>' + resK.taxaMax + ' mEq/h</b>. ' +
-          (isEs ? resK.msgEs : resK.msgPt));
+      const adultConfirmed = idade !== null && idade >= 18;
+
+      if (!adultConfirmed) {
+        _elecSetResult('elec-res-deficit-k',
+          isEs ? 'Protocolo por edad' : 'Protocolo por idade',
+          'muted');
+
+        if (alertsK) {
+          alertsK.innerHTML =
+            _elecAlert(k < 2.5 ? 'red' : 'yellow','triangle-exclamation',
+              isEs ? 'Hipopotasemia — no aplicar automáticamente velocidades/dosis de reposición de adulto sin edad adulta confirmada.'
+                   : 'Hipokalemia — não aplicar automaticamente velocidades/doses de reposição de adulto sem idade adulta confirmada.') +
+            _elecAlert('info','circle-info',
+              isEs ? 'Usar protocolo pediátrico/específico para la edad y monitorizar K, Mg, función renal y ECG según gravedad.'
+                   : 'Usar protocolo pediátrico/específico para a idade e monitorar K, Mg, função renal e ECG conforme gravidade.');
+        }
+
+      } else {
+        const classPt = resK.classe === 'leve' ? 'Leve'
+          : resK.classe === 'moderada' ? 'Moderada'
+          : resK.profunda ? 'Grave · K <2,0'
+          : 'Grave';
+        const classEs = resK.classe === 'leve' ? 'Leve'
+          : resK.classe === 'moderada' ? 'Moderada'
+          : resK.profunda ? 'Grave · K <2,0'
+          : 'Grave';
+
+        _elecSetResult('elec-res-deficit-k',
+          (isEs ? classEs : classPt) + ' · ' +
+          (isEs ? 'reposición individualizada' : 'reposição individualizada'),
+          resK.grave ? '' : 'warn-yellow');
+
+        let html = _elecAlert(resK.grave ? 'red' : 'yellow','triangle-exclamation',
+          isEs ? 'Hipopotasemia ' + classEs.toLowerCase() + ' (' + k.toFixed(1) + ' mmol/L).'
+               : 'Hipokalemia ' + classPt.toLowerCase() + ' (' + k.toFixed(1) + ' mmol/L).');
+
+        if (resK.classe === 'leve') {
+          html += _elecAlert('info','capsules',
+            isEs ? 'Preferir reposición oral/enteral cuando sea posible. No se calcula un “déficit corporal total” automático a partir del K sérico aislado.'
+                 : 'Preferir reposição oral/enteral quando possível. Não é calculado “déficit corporal total” automático a partir do K sérico isolado.');
+
+        } else if (resK.classe === 'moderada') {
+          html += _elecAlert('yellow','capsules',
+            isEs ? 'La vía oral/enteral sigue siendo preferida cuando es factible; usar vía IV si la vía enteral no es posible o el contexto clínico lo exige.'
+                 : 'A via oral/enteral continua preferida quando factível; usar via IV se a via enteral não for possível ou o contexto clínico exigir.');
+          html += _elecAlert('info','syringe',
+            isEs ? 'Si se usa KCl IV, la velocidad no debe normalmente exceder 10 mEq/h. Individualizar concentración, acceso y monitorización.'
+                 : 'Se for usado KCl IV, a velocidade não deve normalmente exceder 10 mEq/h. Individualizar concentração, acesso e monitorização.');
+
+        } else {
+          html += _elecAlert('red','hospital',
+            isEs ? 'K <2,5 mmol/L: reposición IV en ambiente hospitalario. La velocidad habitual no debe normalmente exceder 10 mEq/h.'
+                 : 'K <2,5 mmol/L: reposição IV em ambiente hospitalar. A velocidade habitual não deve normalmente exceder 10 mEq/h.');
+
+          if (resK.profunda) {
+            html += _elecAlert('red','heart-pulse',
+              isEs ? 'Hasta 40 mEq/h se reserva para tratamiento urgente con K <2,0 mmol/L Y cambios ECG y/o parálisis muscular, con monitorización cardíaca continua y controles frecuentes de K; no se autoriza automáticamente desde esta calculadora.'
+                   : 'Até 40 mEq/h fica reservado para tratamento urgente com K <2,0 mmol/L E alterações de ECG e/ou paralisia muscular, com monitorização cardíaca contínua e controles frequentes de K; não é autorizado automaticamente por esta calculadora.');
+          }
+        }
+
+        if (resK.classe !== 'leve') {
+          html += _elecAlert('info','droplet',
+            isEs ? 'Por vía periférica, no exceder 40 mmol/L; concentraciones mayores requieren protocolo de vía central y bomba de infusión.'
+                 : 'Por via periférica, não exceder 40 mmol/L; concentrações maiores requerem protocolo de via central e bomba de infusão.');
+        }
+
+        html += _elecAlert('info','circle-info',
+          isEs ? 'Monitorizar potasio sérico, magnesio y función renal; usar ECG con potasio IV de alta concentración o según gravedad clínica.'
+               : 'Monitorar potássio sérico, magnésio e função renal; usar ECG com potássio IV de alta concentração ou conforme gravidade clínica.');
+
+        if (mg === null) {
+          html += _elecAlert('info','circle-info',
+            isEs ? 'Magnesio no informado: la hipomagnesemia puede dificultar la corrección del potasio.'
+                 : 'Magnésio não informado: hipomagnesemia pode dificultar a correção do potássio.');
+        }
+
+        if (clcr === null) {
+          html += _elecAlert('info','kidneys',
+            isEs ? 'ClCr no informado: no asumir excreción renal normal al planificar reposición de K.'
+                 : 'ClCr não informado: não assumir excreção renal normal ao planejar reposição de K.');
+        } else if (clcr < 30) {
+          html += _elecAlert('red','kidneys',
+            isEs ? 'ClCr <30 mL/min: mayor riesgo de sobrecorrección/hiperpotasemia; individualizar dosis y monitorizar de cerca.'
+                 : 'ClCr <30 mL/min: maior risco de sobrecorreção/hiperkalemia; individualizar dose e monitorar de perto.');
+        }
+
+        if (alertsK) alertsK.innerHTML = html;
+      }
 
     } else if (k >= 6.5) {
       _elecSetResult('elec-res-deficit-k', '--', 'muted');
@@ -12405,12 +12491,6 @@ function calcEletrolitosAll() {
       _elecSetResult('elec-res-deficit-k', isEs ? 'Sin déficit' : 'Sem déficit', 'normal');
     }
 
-    if (clcr !== null && clcr < 30 && k < 3.5) {
-      const alertsK2 = document.getElementById('elec-alerts-k');
-      if (alertsK2) alertsK2.innerHTML += _elecAlert('red','kidneys',
-        isEs ? 'ClCr <30 mL/min con hipopotasemia — mayor riesgo de sobrecorrección. Reponer K con cautela y monitorización.'
-             : 'ClCr <30 mL/min com hipokalemia — maior risco de sobrecorreção. Repor K com cautela e monitorização.');
-    }
   } else {
     _elecSetResult('elec-res-deficit-k', '--', 'muted');
   }
