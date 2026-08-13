@@ -1432,11 +1432,12 @@
   ─────────────────────────────────────────────────────────────── */
 
   /* Badge de tier */
+  /* CALC_CLINICAL_DEEPLINK_FLAT_LANG_THEME_V1_B_R0 */
   var TIER_CONFIG = {
-    '1a':        { label: '1ª LINHA', cls: 'csr-tier-1', icon: '🟢' },
-    '2a':        { label: '2ª LINHA', cls: 'csr-tier-2', icon: '🔵' },
-    '3a':        { label: '3ª LINHA', cls: 'csr-tier-3', icon: '🟡' },
-    'refratario':{ label: 'REFRATÁRIO', cls: 'csr-tier-r', icon: '🔴' }
+    '1a':        { label:{pt:'1ª LINHA',es:'1ª LÍNEA'}, cls:'csr-tier-1' },
+    '2a':        { label:{pt:'2ª LINHA',es:'2ª LÍNEA'}, cls:'csr-tier-2' },
+    '3a':        { label:{pt:'3ª LINHA',es:'3ª LÍNEA'}, cls:'csr-tier-3' },
+    'refratario':{ label:{pt:'REFRATÁRIO',es:'REFRACTARIO'}, cls:'csr-tier-r' }
   };
 
   function _buildDrugCard(drug, moduloKey, pd, lang) {
@@ -1533,7 +1534,7 @@
         'if(b.style.display===\'none\'||!b.style.display){b.style.display=\'block\';a.textContent=\'▲\';}' +
         'else{b.style.display=\'none\';a.textContent=\'▼\';}' +
       '">' +
-        '<div class="csr-card-name">💊 ' + _esc(drugName) + '</div>' +
+        '<div class="csr-card-name">' + _esc(drugName) + '</div>' +
         '<span class="csr-card-arrow">▼</span>' +
       '</div>' +
       '<div class="csr-card-body" style="display:none">' +
@@ -1608,7 +1609,9 @@
     }
 
     if (!therapy) {
-      container.innerHTML = '<div class="csr-empty">Módulo não configurado.</div>';
+      container.innerHTML = '<div class="csr-empty">' +
+        (lang === 'es' ? 'Módulo no configurado.' : 'Módulo não configurado.') +
+        '</div>';
       return;
     }
 
@@ -1636,7 +1639,7 @@
 
       html += '<div class="csr-therapy-line">' +
         '<div class="csr-line-header">' +
-          '<span class="csr-tier-badge ' + tc.cls + '">' + tc.icon + ' ' + tc.label + '</span>' +
+          '<span class="csr-tier-badge ' + tc.cls + '">' + _esc(_txt(tc.label, lang)) + '</span>' +
           '<span class="csr-line-label">' + _esc(lineLabel) + '</span>' +
         '</div>' +
         '<div class="csr-line-drugs">';
@@ -1710,18 +1713,19 @@
 
     /* Dicionário de UI — PT / ES */
     var I18N = {
-      bannerTitle: lang === 'es' ? 'Soporte de Decisión Médica' : 'Suporte de Decisão Médica',
-      closeBtnTxt: lang === 'es' ? '← Volver a la Calculadora'  : '← Voltar para a Calculadora'
+      ariaPrefix: lang === 'es' ? 'Soporte clínico — ' : 'Suporte clínico — ',
+      closeBtnTxt: lang === 'es' ? '← Volver a la Calculadora' : '← Voltar para a Calculadora'
     };
+    var moduleLabel = lang === 'es' ? meta.label.es : meta.label.pt;
 
     _waitEl('clinical-support-view', function (view) {
       /* ── CSS ABSOLUTO INVIOLÁVEL (z-index:9999999) ── */
       view.style.cssText = [
         'position:fixed', 'top:0', 'left:0',
         'width:100vw', 'height:100vh',
-        'background:#111827', 'z-index:9999999',
-        'overflow-y:auto', 'padding:20px',
-        'box-sizing:border-box', 'color:#fff',
+        'background:var(--csr-bg,#1A1D23)', 'z-index:9999999',
+        'overflow-y:auto', 'padding:0',
+        'box-sizing:border-box', 'color:var(--csr-text,#FFFFFF)',
         'font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
         'display:flex', 'flex-direction:column'
       ].join(';') + ';';
@@ -1729,12 +1733,10 @@
       view.style.setProperty('--csr-color', meta.color);
       view.style.setProperty('--csr-accent', meta.accent);
 
-      /* Banner — I18N completo PT/ES */
+      /* Header flat — contexto clínico, sem hero/banner duplicado. */
+      view.setAttribute('aria-label', I18N.ariaPrefix + moduleLabel);
       var bannerEl = document.getElementById('csr-banner-title');
-      if (bannerEl) {
-        bannerEl.textContent = meta.emoji + '  ' + I18N.bannerTitle + ' — ' +
-          (lang === 'es' ? meta.label.es : meta.label.pt);
-      }
+      if (bannerEl) bannerEl.textContent = moduleLabel;
 
       /* Botão Fechar — handler DOM direto com texto I18N */
       var closeBtn = document.getElementById('csr-close-btn');
