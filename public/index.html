@@ -11999,15 +11999,23 @@ function _elecSetResult(id, text, cls) {
    Fonte de dados: window.patientData (weight, sex, age) — sem localStorage
 ========================================================= */
 const CalculadoraMeioInterno = {
+  /* MEDCASES_ELETROLITOS_ACIDBASE_CLINICAL_SAFETY_V1_B_R3_R1
+     ACT depende de sexo + idade explícitos. Ausência não pode virar homem adulto. */
   calcularACT: function(peso, genero, idade) {
-    const isIdoso = parseInt(idade) >= 65;
-    const gen = String(genero).toLowerCase();
+    const w = Number(peso);
+    const a = (idade === null || idade === undefined || String(idade).trim() === '')
+      ? null
+      : Number(idade);
+    const gen = String(genero ?? '').trim().toLowerCase();
+    if (!Number.isFinite(w) || w <= 0 || !Number.isFinite(a) || a < 0) return null;
+    const isIdoso = a >= 65;
     if (gen === 'masculino' || gen === 'm' || gen === 'masc.') {
-      return isIdoso ? peso * 0.50 : peso * 0.60;
-    } else if (gen === 'feminino' || gen === 'f' || gen === 'fem.') {
-      return isIdoso ? peso * 0.45 : peso * 0.50;
+      return isIdoso ? w * 0.50 : w * 0.60;
     }
-    return peso * 0.60;
+    if (gen === 'feminino' || gen === 'f' || gen === 'fem.') {
+      return isIdoso ? w * 0.45 : w * 0.50;
+    }
+    return null;
   },
   sodioCorrigidoGlicemia: function(naMedido, glicemia) {
     if (glicemia <= 100) return naMedido;
@@ -12016,15 +12024,18 @@ const CalculadoraMeioInterno = {
   deficitSodio: function(naMedido, naMeta, peso, genero, idade) {
     if (naMeta <= naMedido) return 0;
     const act = this.calcularACT(peso, genero, idade);
+    if (!Number.isFinite(act)) return null;
     return act * (naMeta - naMedido);
   },
   adrogueMadiasSodio: function(naSolucao, naMedido, peso, genero, idade) {
     const act = this.calcularACT(peso, genero, idade);
+    if (!Number.isFinite(act)) return null;
     return (naSolucao - naMedido) / (act + 1);
   },
   deficitAguaLivre: function(naMedido, naMeta, peso, genero, idade) {
     if (naMedido <= naMeta) return 0;
     const act = this.calcularACT(peso, genero, idade);
+    if (!Number.isFinite(act)) return null;
     return act * ((naMedido / naMeta) - 1);
   },
   estimativaDeficitPotassio: function(kMedido) {
@@ -12172,22 +12183,31 @@ function calcEletrolitosAll() {
   var _inlineForm = document.getElementById('inline-patient-form');
   if (_inlineForm) _inlineForm.remove();
 
-  const peso   = parseFloat(p.weight);
-  const genero = p.sex   || 'M';
-  const idade  = parseInt(p.age) || 30;
-  const clcr   = p.clcr  || 0;
+  const peso = Number.parseFloat(p.weight);
+  const _sexRaw = String(p.sex ?? '').trim().toUpperCase();
+  const genero = (_sexRaw === 'M' || _sexRaw === 'F') ? _sexRaw : null;
+  const _ageRaw = (p.age === null || p.age === undefined || p.age === '') ? null : Number(p.age);
+  const idade = Number.isFinite(_ageRaw) && _ageRaw >= 0 ? _ageRaw : null;
+  const _clcrRaw = (p.clcr === null || p.clcr === undefined || p.clcr === '') ? null : Number(p.clcr);
+  const clcr = Number.isFinite(_clcrRaw) && _clcrRaw > 0 ? _clcrRaw : null;
 
-  /* ── Leitura dos 9 inputs ── */
-  const na   = parseFloat(document.getElementById('elec-na'     )?.value) || 0;
-  const gli  = parseFloat(document.getElementById('elec-glicose')?.value) || 0;
-  const alb  = parseFloat(document.getElementById('elec-alb'    )?.value);
-  const albVal = isNaN(alb) ? 4.0 : alb;
-  const ur   = parseFloat(document.getElementById('elec-ureia'  )?.value) || 0;
-  const k    = parseFloat(document.getElementById('elec-k'      )?.value) || 0;
-  const ca   = parseFloat(document.getElementById('elec-ca'     )?.value) || 0;
-  const mg   = parseFloat(document.getElementById('elec-mg'     )?.value) || 0;
-  const cl   = parseFloat(document.getElementById('elec-cl'     )?.value) || 0;
-  const hco3 = parseFloat(document.getElementById('elec-hco3'   )?.value) || 0;
+  const _elecNum = function(id) {
+    const raw = document.getElementById(id)?.value;
+    if (raw === null || raw === undefined || String(raw).trim() === '') return null;
+    const n = Number(String(raw).trim().replace(',', '.'));
+    return Number.isFinite(n) ? n : null;
+  };
+
+  /* ── Leitura dos 9 inputs: missing != zero ── */
+  const na   = _elecNum('elec-na');
+  const gli  = _elecNum('elec-glicose');
+  const alb  = _elecNum('elec-alb');
+  const ur   = _elecNum('elec-ureia');
+  const k    = _elecNum('elec-k');
+  const ca   = _elecNum('elec-ca');
+  const mg   = _elecNum('elec-mg');
+  const cl   = _elecNum('elec-cl');
+  const hco3 = _elecNum('elec-hco3');
 
   /* ── Reset de alertas ── */
   ['elec-alerts-na','elec-alerts-k','elec-alerts-ag'].forEach(function(id){
@@ -12195,45 +12215,79 @@ function calcEletrolitosAll() {
   });
 
   /* ══ SÓDIO ══ */
-  if (na > 0) {
-    const naCorr = CalculadoraMeioInterno.sodioCorrigidoGlicemia(na, gli);
+  if (na !== null && na > 0) {
+    const hasGlicose = gli !== null && gli >= 0;
+    const naCorr = hasGlicose ? CalculadoraMeioInterno.sodioCorrigidoGlicemia(na, gli) : na;
+    const naSuffix = hasGlicose
+      ? (naCorr - na > 0.05 ? ' (+' + (naCorr - na).toFixed(1) + ')' : '')
+      : (isEs ? ' (Na medido; glucosa no informada)' : ' (Na medido; glicose não informada)');
+
     _elecSetResult('elec-res-na-corr',
-      naCorr.toFixed(1) + ' mEq/L' + (naCorr - na > 0.05 ? ' (+' + (naCorr - na).toFixed(1) + ')' : ''),
-      naCorr - na > 2 ? 'warn-yellow' : 'normal');
+      naCorr.toFixed(1) + ' mEq/L' + naSuffix,
+      hasGlicose && naCorr - na > 2 ? 'warn-yellow' : 'normal');
+
+    const hasACT = genero !== null && idade !== null;
 
     if (naCorr < 135) {
-      const defNa     = CalculadoraMeioInterno.deficitSodio(naCorr, 130, peso, genero, idade);
-      const mlSalina3 = defNa / 0.513;
-      const deltaAdrogue = CalculadoraMeioInterno.adrogueMadiasSodio(513, na, peso, genero, idade);
-
-      _elecSetResult('elec-res-deficit-na', '-' + Math.round(defNa) + ' mEq', '');
-      _elecSetResult('elec-res-agua-livre', '0.0 L', 'muted');
-
       const alertsNa = document.getElementById('elec-alerts-na');
-      if (alertsNa) alertsNa.innerHTML =
-        _elecAlert('yellow', 'triangle-exclamation',
-          isEs ? 'Hiponatremia' : 'Hiponatremia') +
-        _elecAlert('info', 'droplet',
-          (isEs ? 'Volumen NaCl 3% estimado' : 'Volume de NaCl 3% estimado') +
-          ': <b>' + Math.round(mlSalina3) + ' mL</b>') +
-        _elecAlert('info', 'chart-line',
-          (isEs ? 'Impacto ΔNa por Litro infundido' : 'Impacto ΔNa por Litro infundido') +
-          ': <b>+' + deltaAdrogue.toFixed(2) + ' mEq/L</b>') +
-        _elecAlert('red', 'circle-exclamation',
-          isEs ? 'Seguridad: No elevar Na⁺ > 8–10 mEq/24h — riesgo de Mielinólisis Pontina.'
-               : 'Segurança: Não elevar Na⁺ > 8–10 mEq/24h — risco de Mielinólise Pontina.');
+      let html = _elecAlert('yellow', 'triangle-exclamation',
+        isEs ? 'Hiponatremia' : 'Hiponatremia');
+
+      if (hasACT) {
+        const defNa = CalculadoraMeioInterno.deficitSodio(naCorr, 130, peso, genero, idade);
+        const deltaAdrogue = CalculadoraMeioInterno.adrogueMadiasSodio(513, na, peso, genero, idade);
+        _elecSetResult('elec-res-deficit-na',
+          Number.isFinite(defNa) ? '-' + Math.round(defNa) + ' mEq (estimativa até Na 130)' : '--',
+          Number.isFinite(defNa) ? '' : 'muted');
+        _elecSetResult('elec-res-agua-livre', '0.0 L', 'muted');
+
+        if (Number.isFinite(deltaAdrogue)) {
+          html += _elecAlert('info', 'chart-line',
+            (isEs ? 'Adrogué–Madias: ΔNa estimada por 1 L de NaCl 3%' : 'Adrogué–Madias: ΔNa estimada por 1 L de NaCl 3%') +
+            ': <b>+' + deltaAdrogue.toFixed(2) + ' mEq/L</b>');
+        }
+      } else {
+        _elecSetResult('elec-res-deficit-na', '--', 'muted');
+        _elecSetResult('elec-res-agua-livre', '--', 'muted');
+        html += _elecAlert('info','circle-info',
+          isEs
+            ? 'Edad y sexo explícitos son necesarios para estimaciones basadas en agua corporal total.'
+            : 'Idade e sexo explícitos são necessários para estimativas baseadas em água corporal total.');
+      }
+
+      html += _elecAlert('red','circle-exclamation',
+        isEs
+          ? 'Seguridad: no usar el déficit total como volumen automático de NaCl 3%. En síntomas neurológicos graves, seguir protocolo institucional de bolos de solución hipertónica con Na seriado y prevención de sobrecorrección.'
+          : 'Segurança: não usar o déficit total como volume automático de NaCl 3%. Em sintomas neurológicos graves, seguir protocolo institucional de bolus de solução hipertônica com Na seriado e prevenção de sobrecorreção.');
+
+      if (alertsNa) alertsNa.innerHTML = html;
 
     } else if (naCorr > 145) {
-      const defAgua = CalculadoraMeioInterno.deficitAguaLivre(naCorr, 140, peso, genero, idade);
-      _elecSetResult('elec-res-deficit-na', '+' + (naCorr - 145).toFixed(1) + ' mEq', '');
-      _elecSetResult('elec-res-agua-livre', defAgua.toFixed(1) + ' L', '');
+      if (hasACT) {
+        const defAgua = CalculadoraMeioInterno.deficitAguaLivre(naCorr, 140, peso, genero, idade);
+        _elecSetResult('elec-res-deficit-na', '+' + (naCorr - 145).toFixed(1) + ' mEq', '');
+        _elecSetResult('elec-res-agua-livre',
+          Number.isFinite(defAgua) ? defAgua.toFixed(1) + ' L (estimativa)' : '--',
+          Number.isFinite(defAgua) ? '' : 'muted');
 
-      const alertsNa = document.getElementById('elec-alerts-na');
-      if (alertsNa) alertsNa.innerHTML =
-        _elecAlert('yellow', 'triangle-exclamation', isEs ? 'Hipernatremia' : 'Hipernatremia') +
-        _elecAlert('info', 'droplet',
-          (isEs ? 'Déficit de Agua Libre para infundir' : 'Déficit de Água Livre para infundir') +
-          ': <b>' + defAgua.toFixed(1) + ' Litros</b>');
+        const alertsNa = document.getElementById('elec-alerts-na');
+        if (alertsNa) alertsNa.innerHTML =
+          _elecAlert('yellow','triangle-exclamation', isEs ? 'Hipernatremia' : 'Hipernatremia') +
+          _elecAlert('info','droplet',
+            isEs
+              ? 'Déficit de agua libre es una estimación matemática; individualizar reposición y velocidad según estado clínico.'
+              : 'Déficit de água livre é uma estimativa matemática; individualizar reposição e velocidade conforme estado clínico.');
+      } else {
+        _elecSetResult('elec-res-deficit-na', '+' + (naCorr - 145).toFixed(1) + ' mEq', '');
+        _elecSetResult('elec-res-agua-livre', '--', 'muted');
+        const alertsNa = document.getElementById('elec-alerts-na');
+        if (alertsNa) alertsNa.innerHTML =
+          _elecAlert('yellow','triangle-exclamation', isEs ? 'Hipernatremia' : 'Hipernatremia') +
+          _elecAlert('info','circle-info',
+            isEs
+              ? 'Edad y sexo explícitos son necesarios para estimar déficit de agua libre.'
+              : 'Idade e sexo explícitos são necessários para estimar déficit de água livre.');
+      }
 
     } else {
       _elecSetResult('elec-res-deficit-na', isEs ? 'Sin déficit' : 'Sem déficit', 'normal');
@@ -12244,26 +12298,31 @@ function calcEletrolitosAll() {
   }
 
   /* ══ OSMOLARIDADE ══ */
-  if (na > 0) {
+  if (na !== null && na > 0 && gli !== null && gli >= 0 && ur !== null && ur >= 0) {
     const osm = CalculadoraMeioInterno.osmolaridadePlasmatica(na, gli, ur);
     const osmCls = osm > 320 ? '' : osm > 295 ? 'warn-yellow' : 'normal';
     _elecSetResult('elec-res-osm', osm + ' mOsm/kg', osmCls);
-    /* Alerta complementar de hiperosmolaridade no painel de Na */
     const alertsNa = document.getElementById('elec-alerts-na');
     if (alertsNa && osm > 320)
       alertsNa.innerHTML += _elecAlert('red','circle-exclamation',
-        isEs ? 'Hiperosmolaridad grave (>' + osm + ' mOsm/kg) — evaluar reposición hídrica urgente.'
-             : 'Hiperosmolaridade grave (>' + osm + ' mOsm/kg) — avaliar reposição hídrica urgente.');
+        isEs ? 'Hiperosmolaridad calculada >320 mOsm/kg — evaluar causa y manejo urgente.'
+             : 'Hiperosmolaridade calculada >320 mOsm/kg — avaliar causa e manejo urgente.');
     else if (alertsNa && osm > 295 && na >= 135)
       alertsNa.innerHTML += _elecAlert('yellow','triangle-exclamation',
-        isEs ? 'Osmolaridad límite (' + osm + ' mOsm/kg). Normal: 285–295.'
-             : 'Osmolaridade limítrofe (' + osm + ' mOsm/kg). Normal: 285–295.');
+        isEs ? 'Osmolaridad calculada por encima del intervalo orientativo 285–295 mOsm/kg.'
+             : 'Osmolaridade calculada acima do intervalo orientativo 285–295 mOsm/kg.');
   } else {
     _elecSetResult('elec-res-osm', '--', 'muted');
+    const alertsNa = document.getElementById('elec-alerts-na');
+    if (alertsNa && na !== null && na > 0 && (gli === null || ur === null))
+      alertsNa.innerHTML += _elecAlert('info','circle-info',
+        isEs
+          ? 'Glucosa y urea son necesarias para calcular la osmolaridad con esta ecuación.'
+          : 'Glicose e ureia são necessárias para calcular a osmolaridade com esta equação.');
   }
 
   /* ══ POTÁSSIO ══ */
-  if (k > 0) {
+  if (k !== null && k > 0) {
     const alertsK = document.getElementById('elec-alerts-k');
     if (k < 3.5) {
       const resK = CalculadoraMeioInterno.estimativaDeficitPotassio(k);
@@ -12274,153 +12333,180 @@ function calcEletrolitosAll() {
         _elecAlert(k < 2.5 ? 'red' : 'yellow', 'bolt',
           (isEs ? 'Taxa máx: ' : 'Taxa máx: ') + '<b>' + resK.taxaMax + ' mEq/h</b>. ' +
           (isEs ? resK.msgEs : resK.msgPt));
+
+    } else if (k >= 6.5) {
+      _elecSetResult('elec-res-deficit-k', '--', 'muted');
+      if (alertsK) {
+        if (idade !== null && idade >= 18) {
+          alertsK.innerHTML =
+            _elecAlert('red','circle-exclamation',
+              isEs ? 'Hiperpotasemia grave (K ≥6,5 mmol/L) — emergencia hospitalaria.'
+                   : 'Hiperkalemia grave (K ≥6,5 mmol/L) — emergência hospitalar.') +
+            _elecAlert('red','heart-pulse',
+              isEs ? 'ECG de 12 derivaciones urgente y monitorización cardíaca continua.'
+                   : 'ECG de 12 derivações urgente e monitorização cardíaca contínua.') +
+            _elecAlert('red','bolt',
+              isEs ? '<b>Desplazamiento intracelular:</b> insulina soluble 10 U + glucosa 25 g IV; monitorizar glucemia.'
+                   : '<b>Deslocamento intracelular:</b> insulina solúvel 10 U + glicose 25 g IV; monitorar glicemia.') +
+            _elecAlert('red','heart',
+              isEs ? '<b>Calcio IV solo si hay cambios ECG por hiperpotasemia:</b> gluconato de calcio 10% 30 mL IV en 10 min fuera de parada/periparada; en reanimación, seguir protocolo específico.'
+                   : '<b>Cálcio IV somente se houver alterações ECG por hiperkalemia:</b> gluconato de cálcio 10% 30 mL IV em 10 min fora de parada/periparada; em reanimação, seguir protocolo específico.') +
+            _elecAlert('info','circle-info',
+              isEs ? 'Considerar salbutamol nebulizado como adyuvante y estrategia de eliminación de K (incluida diálisis/ligantes) según contexto y protocolo local.'
+                   : 'Considerar salbutamol nebulizado como adjuvante e estratégia de remoção de K (incluindo diálise/ligantes) conforme contexto e protocolo local.');
+        } else {
+          alertsK.innerHTML =
+            _elecAlert('red','circle-exclamation',
+              isEs ? 'K ≥6,5 mmol/L — evaluación urgente. El protocolo terapéutico adulto requiere edad adulta confirmada.'
+                   : 'K ≥6,5 mmol/L — avaliação urgente. O protocolo terapêutico adulto requer idade adulta confirmada.') +
+            _elecAlert('red','heart-pulse',
+              isEs ? 'Obtener ECG urgente y seguir protocolo específico para la edad/población.'
+                   : 'Obter ECG urgente e seguir protocolo específico para a idade/população.');
+        }
+      }
+
     } else if (k >= 6.0) {
       _elecSetResult('elec-res-deficit-k', '--', 'muted');
-      if (alertsK) alertsK.innerHTML =
-        _elecAlert('red','circle-exclamation',
-          '🚨 ' + (isEs ? 'Hiperpotasemia Grave' : 'Hiperkalemia Grave') + ' (≥6.0 mEq/L)') +
-        _elecAlert('red','bolt',
-          '<b>' + (isEs ? 'Estabilización' : 'Estabilização') + ':</b> Gluconato de C' +
-          (isEs ? 'alcio' : 'álcio') + ' 10% — 10 mL IV em 5–10 min.') +
-        _elecAlert('red','bolt',
-          '<b>' + (isEs ? 'Cambio Intracelular' : 'Mudança Intracelular') + ':</b> ' +
-          (isEs ? 'Solución Polarizante' : 'Solução Polarizante') +
-          ' (10 UI Insulina Reg + 50 g Glicose 50% EV).') +
-        _elecAlert('red','bolt',
-          '<b>' + (isEs ? 'Eliminación' : 'Eliminação') + ':</b> Furosemida 40 mg IV · Resinas de troca.');
-    } else if (k > 5.5) {
+      if (alertsK) {
+        if (idade !== null && idade >= 18) {
+          alertsK.innerHTML =
+            _elecAlert('red','triangle-exclamation',
+              isEs ? 'Hiperpotasemia moderada (K 6,0–6,4 mmol/L).'
+                   : 'Hiperkalemia moderada (K 6,0–6,4 mmol/L).') +
+            _elecAlert('red','heart-pulse',
+              isEs ? 'ECG de 12 derivaciones urgente. Monitorización continua si hay cambios ECG, enfermedad clínica o riesgo de ascenso rápido.'
+                   : 'ECG de 12 derivações urgente. Monitorização contínua se houver alterações ECG, doença clínica ou risco de elevação rápida.') +
+            _elecAlert('yellow','bolt',
+              isEs ? 'Puede considerarse insulina soluble 10 U + glucosa 25 g IV; monitorizar glucemia. Calcio IV se reserva para cambios ECG compatibles.'
+                   : 'Pode-se considerar insulina solúvel 10 U + glicose 25 g IV; monitorar glicemia. Cálcio IV fica reservado para alterações ECG compatíveis.');
+        } else {
+          alertsK.innerHTML =
+            _elecAlert('red','triangle-exclamation',
+              isEs ? 'K 6,0–6,4 mmol/L — ECG urgente y evaluación clínica; no aplicar automáticamente protocolo adulto sin edad adulta confirmada.'
+                   : 'K 6,0–6,4 mmol/L — ECG urgente e avaliação clínica; não aplicar automaticamente protocolo adulto sem idade adulta confirmada.');
+        }
+      }
+
+    } else if (k >= 5.5) {
       _elecSetResult('elec-res-deficit-k', '--', 'muted');
-      if (alertsK) alertsK.innerHTML = _elecAlert('red','triangle-exclamation',
-        isEs ? 'Hiperpotasemia moderada-grave (K 5.5–6.0 mEq/L) — monitorización cardíaca continua.'
-             : 'Hiperkalemia moderada-grave (K 5.5–6.0 mEq/L) — monitorização cardíaca contínua.');
+      if (alertsK) alertsK.innerHTML =
+        _elecAlert('yellow','triangle-exclamation',
+          isEs ? 'Hiperpotasemia leve (K 5,5–5,9 mmol/L) — confirmar resultado, revisar función renal, medicamentos y causa.'
+               : 'Hiperkalemia leve (K 5,5–5,9 mmol/L) — confirmar resultado, revisar função renal, medicamentos e causa.');
+
     } else if (k > 5.0) {
       _elecSetResult('elec-res-deficit-k', '--', 'muted');
-      if (alertsK) alertsK.innerHTML = _elecAlert('yellow','triangle-exclamation',
-        isEs ? 'Hiperpotasemia leve (K 5.0–5.5 mEq/L) — limitar aporte y revisar medicamentos.'
-             : 'Hiperkalemia leve (K 5.0–5.5 mEq/L) — limitar aporte e revisar medicamentos.');
+      if (alertsK) alertsK.innerHTML =
+        _elecAlert('info','circle-info',
+          isEs ? 'K por encima de 5,0 mmol/L; interpretar con el intervalo del laboratorio. La clasificación UKKA de hiperpotasemia inicia en 5,5 mmol/L.'
+               : 'K acima de 5,0 mmol/L; interpretar com o intervalo do laboratório. A classificação UKKA de hiperkalemia inicia em 5,5 mmol/L.');
+
     } else {
       _elecSetResult('elec-res-deficit-k', isEs ? 'Sin déficit' : 'Sem déficit', 'normal');
     }
-    /* Alerta ClCr < 30 com hipocalemia */
-    if (clcr > 0 && clcr < 30 && k < 3.5) {
+
+    if (clcr !== null && clcr < 30 && k < 3.5) {
       const alertsK2 = document.getElementById('elec-alerts-k');
       if (alertsK2) alertsK2.innerHTML += _elecAlert('red','kidneys',
-        isEs ? 'ClCr < 30 mL/min con hipopotasemia — alto riesgo de rebote hiperpotasémico. Reponer K con cautela.'
-             : 'ClCr < 30 mL/min com hipocalemia — alto risco de hipercalemia rebote. Repor K com cautela.');
+        isEs ? 'ClCr <30 mL/min con hipopotasemia — mayor riesgo de sobrecorrección. Reponer K con cautela y monitorización.'
+             : 'ClCr <30 mL/min com hipokalemia — maior risco de sobrecorreção. Repor K com cautela e monitorização.');
     }
   } else {
     _elecSetResult('elec-res-deficit-k', '--', 'muted');
   }
 
-  /* ══ CÁLCIO CORRIGIDO ══ */
-  if (ca > 0) {
-    const caCorr = ca + (0.8 * (4.0 - albVal));
+  /* ══ CÁLCIO — TOTAL / IONIZADO ══ */
+  if (ca !== null && ca > 0) {
     _elecSetResult('elec-res-ca-corr',
-      caCorr.toFixed(2) + ' mg/dL' + (Math.abs(caCorr - ca) > 0.01 ? ' (corr. alb.)' : ''),
-      (caCorr < 8.5 || caCorr > 10.5) ? '' : 'normal');
-    /* Alertas de cálcio no painel K */
+      ca.toFixed(2) + ' mg/dL ' + (isEs ? '(Ca total; preferir iCa)' : '(Ca total; preferir iCa)'),
+      'normal');
+
     const alertsK = document.getElementById('elec-alerts-k');
     if (alertsK) {
-      if      (caCorr < 7.0)  alertsK.innerHTML += _elecAlert('red','circle-exclamation',
-        isEs ? 'Hipocalcemia grave (Ca corr. < 7.0 mg/dL) — riesgo de tetania/arritmia. Gluconato de Calcio 10% IV.'
-             : 'Hipocalcemia grave (Ca corr. < 7.0 mg/dL) — risco de tetania/arritmia. Gluconato de Cálcio 10% IV.');
-      else if (caCorr < 8.5)  alertsK.innerHTML += _elecAlert('yellow','triangle-exclamation',
-        isEs ? 'Hipocalcemia (Ca corr. < 8.5 mg/dL) — verificar PTH, vitamina D.'
-             : 'Hipocalcemia (Ca corr. < 8.5 mg/dL) — verificar PTH, vitamina D.');
-      else if (caCorr > 12.0) alertsK.innerHTML += _elecAlert('red','circle-exclamation',
-        isEs ? 'Hipercalcemia grave (Ca corr. > 12.0 mg/dL) — hidratación agresiva y evaluar causa.'
-             : 'Hipercalcemia grave (Ca corr. > 12.0 mg/dL) — hidratação agressiva e avaliar causa.');
-      else if (caCorr > 10.5) alertsK.innerHTML += _elecAlert('yellow','triangle-exclamation',
-        isEs ? 'Hipercalcemia leve-moderada (Ca corr. > 10.5 mg/dL) — investigar causa.'
-             : 'Hipercalcemia leve-moderada (Ca corr. > 10.5 mg/dL) — investigar causa.');
+      alertsK.innerHTML += _elecAlert('info','circle-info',
+        isEs
+          ? 'No se aplica corrección rutinaria por albúmina. Para decisiones clínicas sobre el estado del calcio, preferir calcio ionizado, especialmente con hipoalbuminemia, enfermedad renal o trastornos ácido-base.'
+          : 'Não é aplicada correção rotineira por albumina. Para decisões clínicas sobre o estado do cálcio, preferir cálcio ionizado, especialmente com hipoalbuminemia, doença renal ou distúrbios ácido-base.');
     }
   } else {
     _elecSetResult('elec-res-ca-corr', '--', 'muted');
   }
 
   /* ══ MAGNÉSIO ══ */
-  if (mg > 0) {
-    let defMg = 0;
-    if (mg < 2.0) defMg = (2.0 - mg) * 2 * (peso > 0 ? peso / 70 : 1);
-    const doseMg = (clcr > 0 && clcr < 30) ? defMg * 0.5 : defMg;
-    if (doseMg > 0) {
-      _elecSetResult('elec-res-mg-dose',
-        (clcr > 0 && clcr < 30 ? doseMg.toFixed(1) + ' g MgSO₄ (↓50% ClCr<30)' : doseMg.toFixed(1) + ' g MgSO₄ IV'), '');
-      /* Alerta Mg no painel K */
+  if (mg !== null && mg > 0) {
+    if (mg < 2.0) {
+      _elecSetResult('elec-res-mg-dose', '--', 'muted');
       const alertsK = document.getElementById('elec-alerts-k');
       if (alertsK) {
-        if (clcr > 0 && clcr < 30)
-          alertsK.innerHTML += _elecAlert('red','triangle-exclamation',
-            isEs ? 'ClCr < 30 mL/min: dosis MgSO₄ reducida 50% (' + doseMg.toFixed(1) + ' g). Monitorear reflejos y función renal.'
-                 : 'ClCr < 30 mL/min: dose MgSO₄ reduzida 50% (' + doseMg.toFixed(1) + ' g). Monitorar reflexos e função renal.');
-        else if (mg < 1.0)
-          alertsK.innerHTML += _elecAlert('red','circle-exclamation',
-            isEs ? 'Hipomagnesemia grave (Mg < 1.0 mg/dL) — reponer por vía IV urgente.'
-                 : 'Hipomagnesemia grave (Mg < 1.0 mg/dL) — repor por via IV urgente.');
-        else
-          alertsK.innerHTML += _elecAlert('yellow','triangle-exclamation',
-            isEs ? 'Hipomagnesemia (Mg < 2.0 mg/dL) — reposición sugerida: ' + doseMg.toFixed(1) + ' g MgSO₄.'
-                 : 'Hipomagnesemia (Mg < 2.0 mg/dL) — reposição sugerida: ' + doseMg.toFixed(1) + ' g MgSO₄.');
+        alertsK.innerHTML += _elecAlert(mg < 1.0 ? 'red' : 'yellow','triangle-exclamation',
+          isEs
+            ? 'Hipomagnesemia — la reposición automática fue suspendida hasta validar un protocolo fuente-específico; individualizar vía/dosis por gravedad, síntomas y función renal.'
+            : 'Hipomagnesemia — a reposição automática foi suspensa até validação de protocolo fonte-específico; individualizar via/dose por gravidade, sintomas e função renal.');
+        if (clcr === null) {
+          alertsK.innerHTML += _elecAlert('info','kidneys',
+            isEs ? 'ClCr no informado: no asumir función renal normal para reposición de magnesio.'
+                 : 'ClCr não informado: não assumir função renal normal para reposição de magnésio.');
+        } else if (clcr < 30) {
+          alertsK.innerHTML += _elecAlert('red','kidneys',
+            isEs ? 'ClCr <30 mL/min: riesgo aumentado de acumulación de magnesio; requiere individualización/monitorización.'
+                 : 'ClCr <30 mL/min: risco aumentado de acúmulo de magnésio; requer individualização/monitorização.');
+        }
       }
     } else {
-      _elecSetResult('elec-res-mg-dose', isEs ? 'Sin déficit' : 'Sem déficit', 'normal');
+      _elecSetResult('elec-res-mg-dose', isEs ? 'Sin déficit aparente' : 'Sem déficit aparente', 'normal');
     }
   } else {
     _elecSetResult('elec-res-mg-dose', '--', 'muted');
   }
 
   /* ══ ÂNION GAP + HCO₃⁻ ══ */
-  if (na > 0 && cl > 0 && hco3 > 0) {
-    const ag     = na - (cl + hco3);
-    const agCorr = ag + (2.5 * (4.0 - albVal));
-    _elecSetResult('elec-res-ag',      ag.toFixed(1)     + ' mEq/L', ag > 16 ? '' : ag < 8 ? '' : 'normal');
-    _elecSetResult('elec-res-ag-corr', agCorr.toFixed(1) + ' mEq/L', agCorr > 16 ? '' : 'normal');
+  if (na !== null && na > 0 && cl !== null && cl > 0 && hco3 !== null && hco3 > 0) {
+    const ag = na - (cl + hco3);
+    const hasAlbumin = alb !== null && alb > 0;
+    const agCorr = hasAlbumin ? ag + (2.5 * (4.0 - alb)) : null;
+
+    _elecSetResult('elec-res-ag', ag.toFixed(1) + ' mEq/L', '');
+    _elecSetResult('elec-res-ag-corr',
+      Number.isFinite(agCorr) ? agCorr.toFixed(1) + ' mEq/L (estimativa)' : '--',
+      Number.isFinite(agCorr) ? '' : 'muted');
 
     const alertsAg = document.getElementById('elec-alerts-ag');
     if (alertsAg) {
-      let html = '';
-      if      (ag > 20) html += _elecAlert('red','circle-exclamation',
-        isEs ? 'Anión Gap muy elevado (' + ag.toFixed(0) + ' mEq/L) — acidosis metabólica: investigar cetoacidosis, acidosis láctica, uremia, intoxicación, salicilato.'
-             : 'Ânion Gap muito elevado (' + ag.toFixed(0) + ' mEq/L) — acidose metabólica: investigar cetoacidose, lactato, uremia, intoxicação, salicilato.');
-      else if (ag > 16) html += _elecAlert('yellow','triangle-exclamation',
-        isEs ? 'Anión Gap aumentado (' + ag.toFixed(0) + ' mEq/L, ref 8–12) — descartar causas de acidosis metabólica.'
-             : 'Ânion Gap aumentado (' + ag.toFixed(0) + ' mEq/L, ref 8–12) — afastar causas de acidose metabólica.');
-      else if (ag < 8)  html += _elecAlert('yellow','triangle-exclamation',
-        isEs ? 'Anión Gap bajo (' + ag.toFixed(0) + ' mEq/L) — considerar hipoalbuminemia, paraproteinemia.'
-             : 'Ânion Gap baixo (' + ag.toFixed(0) + ' mEq/L) — considerar hipoalbuminemia, paraproteinemia.');
-      else              html += _elecAlert('green','circle-check',
-        isEs ? 'Anión Gap normal (' + ag.toFixed(0) + ' mEq/L, ref 8–12 mEq/L).'
-             : 'Ânion Gap normal (' + ag.toFixed(0) + ' mEq/L, ref 8–12 mEq/L).');
+      let html = _elecAlert('info','circle-info',
+        isEs
+          ? 'Anión gap calculado sin K. Interpretar con el intervalo de referencia del laboratorio/método.'
+          : 'Ânion gap calculado sem K. Interpretar com o intervalo de referência do laboratório/método.');
 
-      if (Math.abs(agCorr - ag) > 2)
+      if (!hasAlbumin) {
         html += _elecAlert('info','circle-info',
-          isEs ? 'AG corregido (' + agCorr.toFixed(1) + ' mEq/L) difiere del bruto por albúmina alterada (' + albVal.toFixed(1) + ' g/dL). Usar AG corregido.'
-               : 'AG corrigido (' + agCorr.toFixed(1) + ' mEq/L) difere do bruto pela albumina alterada (' + albVal.toFixed(1) + ' g/dL). Usar AG corrigido.');
+          isEs ? 'Albúmina no informada: no se calcula AG corregido por albúmina.'
+               : 'Albumina não informada: AG corrigido por albumina não é calculado.');
+      }
 
       if (hco3 < 22) {
-        const defBic = CalculadoraMeioInterno.deficitBicarbonato(hco3, 12, peso);
-        if (defBic.totalMeq > 0) {
-          html += _elecAlert('yellow','triangle-exclamation',
-            isEs ? 'Acidosis Metabólica — Déficit total HCO₃⁻: <b>' + defBic.totalMeq + ' mEq</b>'
-                 : 'Acidose Metabólica — Déficit total HCO₃⁻: <b>' + defBic.totalMeq + ' mEq</b>');
-          html += _elecAlert('info','syringe',
-            (isEs ? 'Dosis Inicial Segura (50%)' : 'Dose Inicial Segura (50%)') +
-            ': <b>' + defBic.doseInicialMeq + ' mEq (' + defBic.ml84 + ' mL de NaHCO₃ 8,4%)</b>');
-          if (hco3 < 15)
-            html += _elecAlert('red','circle-exclamation',
-              isEs ? 'HCO₃⁻ < 15 mEq/L — acidosis metabólica significativa. Evaluar gasometría, AG y causa base urgente.'
-                   : 'HCO₃⁻ < 15 mEq/L — acidose metabólica significativa. Avaliar gasometria, AG e causa base urgente.');
-        }
-      }
-      if (hco3 > 28)
         html += _elecAlert('yellow','triangle-exclamation',
-          isEs ? 'HCO₃⁻ elevado (' + hco3 + ' mEq/L) — considerar alcalosis metabólica o compensación de acidosis respiratoria crónica.'
-               : 'HCO₃⁻ elevado (' + hco3 + ' mEq/L) — considerar alcalose metabólica ou compensação de acidose respiratória crônica.');
+          isEs ? 'HCO₃⁻ bajo — evaluar gasometría, pH, anión gap y causa del trastorno ácido-base.'
+               : 'HCO₃⁻ baixo — avaliar gasometria, pH, ânion gap e causa do distúrbio ácido-base.');
+        if (hco3 < 15) {
+          html += _elecAlert('red','circle-exclamation',
+            isEs ? 'HCO₃⁻ <15 mEq/L — alteración significativa; requiere evaluación clínica urgente según contexto.'
+                 : 'HCO₃⁻ <15 mEq/L — alteração significativa; requer avaliação clínica urgente conforme contexto.');
+        }
+        html += _elecAlert('info','circle-info',
+          isEs ? 'No se genera dosis automática de NaHCO₃ a partir de HCO₃⁻ aislado; el tratamiento depende de pH, causa y contexto clínico.'
+               : 'Não é gerada dose automática de NaHCO₃ a partir de HCO₃⁻ isolado; o tratamento depende de pH, causa e contexto clínico.');
+      }
+
+      if (hco3 > 28) {
+        html += _elecAlert('yellow','triangle-exclamation',
+          isEs ? 'HCO₃⁻ elevado — considerar alcalosis metabólica o compensación de trastorno respiratorio; correlacionar con gasometría.'
+               : 'HCO₃⁻ elevado — considerar alcalose metabólica ou compensação de distúrbio respiratório; correlacionar com gasometria.');
+      }
 
       alertsAg.innerHTML = html;
     }
   } else {
-    _elecSetResult('elec-res-ag',      '--', 'muted');
+    _elecSetResult('elec-res-ag', '--', 'muted');
     _elecSetResult('elec-res-ag-corr', '--', 'muted');
   }
 
