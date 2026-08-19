@@ -31178,18 +31178,20 @@ function values(bucket){var a=[];(bucket||[]).forEach(function(x){a=a.concat(fla
 function section(label,body){return body?'<section class="fd-meta-section"><div class="fd-meta-title">'+esc(label)+'</div>'+body+'</section>':""}
 function list(a){a=uniq(a);return a.length?'<ul class="fd-meta-list">'+a.map(function(x){return"<li>"+esc(x)+"</li>"}).join("")+"</ul>":""}
 function text(a){a=uniq(a);if(!a.length)return"";return a.length===1?'<p class="fd-meta-text">'+esc(a[0])+"</p>":list(a)}
-function renderSafety(id,data){var p=panel("safety");if(!p)return;var old=p.querySelector(":scope > .fd-meta-merge");if(old)old.remove();var a=aggregate(id,data),html="",x;x=diffItems(values(a.common),p);if(x.length)html+=section(t("Efeitos adversos adicionais","Efectos adversos adicionales"),list(x));x=diffItems(values(a.severe),p);if(x.length)html+=section(t("Efeitos adversos graves adicionais","Efectos adversos graves adicionales"),list(x));x=diffItems(values(a.contra),p);if(x.length)html+=section(t("Contraindicações","Contraindicaciones"),list(x));x=diffItems(values(a.warnings),p);if(x.length)html+=section(t("Advertências adicionais","Advertencias adicionales"),list(x));x=diffItems(values(a.pregnancy),p);if(x.length)html+=section(t("Gravidez","Embarazo"),text(x));x=diffItems(values(a.lactation),p);if(x.length)html+=section(t("Lactação","Lactancia"),text(x));x=diffItems(values(a.monitoring),p);if(x.length)html+=section(t("Monitorização","Monitoreo"),list(x));
-x=diffItems(values(a.interactions),p);if(x.length)html+=section(t("Interações medicamentosas","Interacciones medicamentosas"),list(x));
-x=diffItems(values(a.foodInteractions),p);if(x.length)html+=section(t("Interações com alimentos","Interacciones con alimentos"),list(x));
-if(!html)return;var d=document.createElement("div");d.className="fd-meta-merge";d.innerHTML=html;p.appendChild(d)}
-function renderPharma(id,data){var p=panel("pharma");if(!p)return;var old=p.querySelector(":scope > .fd-meta-merge");if(old)old.remove();var a=aggregate(id,data),html="",x;x=diffItems(values(a.mechanism),p);if(x.length)html+=section(t("Mecanismo de ação","Mecanismo de acción"),text(x));x=diffItems(values(a.pk),p);if(x.length)html+=section(t("Farmacocinética","Farmacocinética"),list(x));x=diffItems(values(a.halfLife),p);if(x.length)html+=section(t("Meia-vida","Semivida"),text(x));x=diffItems(values(a.onset),p);if(x.length)html+=section(t("Início de ação","Inicio de acción"),text(x));x=diffItems(values(a.indications),p);if(x.length)html+=section(t("Indicações","Indicaciones"),list(x));x=diffItems(values(a.presentation),p);if(x.length)html+=section(t("Apresentações adicionais","Presentaciones adicionales"),list(x));
-x=diffItems(values(a.administration),p);if(x.length)html+=section(t("Administração","Administración"),list(x));
-x=diffItems(values(a.missedDose),p);if(x.length)html+=section(t("Esquecimento de dose","Dosis olvidada"),text(x));
-x=diffItems(values(a.geriatric),p);if(x.length)html+=section(t("Uso geriátrico","Uso geriátrico"),text(x));
-x=diffItems(values(a.perioperative),p);if(x.length)html+=section(t("Uso perioperatório","Uso perioperatorio"),text(x));
-x=diffItems(values(a.tube),p);if(x.length)html+=section(t("Uso em sonda","Uso por sonda"),list(x));
-x=diffItems(values(a.counseling),p);if(x.length)html+=section(t("Orientações ao paciente","Orientaciones al paciente"),list(x));
-if(!html)return;var d=document.createElement("div");d.className="fd-meta-merge";d.innerHTML=html;p.appendChild(d)}
+function officialContent(sec,fallback){var q=document.querySelector('#fd-body [data-fd-official-section="'+sec+'"] > .fd-official-native-content');if(!q&&window.__MC_FD_OFFICIAL_NATIVE_R3&&typeof window.__MC_FD_OFFICIAL_NATIVE_R3.ensure==="function"){try{window.__MC_FD_OFFICIAL_NATIVE_R3.ensure()}catch(e){}q=document.querySelector('#fd-body [data-fd-official-section="'+sec+'"] > .fd-official-native-content')}return q||panel(fallback)}
+function clearBucket(target,bucket){if(!target)return;var old=target.querySelector(':scope > .fd-meta-merge[data-mc-m2-bucket="'+bucket+'"]');if(old)old.remove()}
+function writeBucket(target,bucket,html){if(!target)return;clearBucket(target,bucket);if(!html)return;var d=document.createElement("div");d.className="fd-meta-merge";d.setAttribute("data-mc-m2-bucket",bucket);d.innerHTML=html;target.appendChild(d)}
+function renderSafety(id,data){var a=aggregate(id,data),html="",x,t5=officialContent(5,"safety"),t6=officialContent(6,"safety"),t7=officialContent(7,"safety"),t8=officialContent(8,"safety");
+html="";x=diffItems(values(a.contra),t5);if(x.length)html+=section(t("Contraindicações","Contraindicaciones"),list(x));x=diffItems(values(a.warnings),t5);if(x.length)html+=section(t("Advertências adicionais","Advertencias adicionales"),list(x));x=diffItems(values(a.monitoring),t5);if(x.length)html+=section(t("Monitorização","Monitoreo"),list(x));writeBucket(t5,"alerts",html);
+html="";x=diffItems(values(a.pregnancy),t6);if(x.length)html+=section(t("Gravidez","Embarazo"),text(x));x=diffItems(values(a.lactation),t6);if(x.length)html+=section(t("Lactação","Lactancia"),text(x));writeBucket(t6,"special",html);
+html="";x=diffItems(values(a.interactions),t7);if(x.length)html+=section(t("Interações medicamentosas","Interacciones medicamentosas"),list(x));x=diffItems(values(a.foodInteractions),t7);if(x.length)html+=section(t("Interações com alimentos","Interacciones con alimentos"),list(x));writeBucket(t7,"interactions",html);
+html="";x=diffItems(values(a.common),t8);if(x.length)html+=section(t("Efeitos adversos adicionais","Efectos adversos adicionales"),list(x));x=diffItems(values(a.severe),t8);if(x.length)html+=section(t("Efeitos adversos graves adicionais","Efectos adversos graves adicionales"),list(x));writeBucket(t8,"effects",html)}
+function renderPharma(id,data){var a=aggregate(id,data),html="",x,t2=officialContent(2,"pharma"),t4=officialContent(4,"pharma"),t6=officialContent(6,"pharma"),t9=officialContent(9,"pharma"),t10=officialContent(10,"pharma");
+html="";x=diffItems(values(a.indications),t2);if(x.length)html+=section(t("Indicações","Indicaciones"),list(x));writeBucket(t2,"indications",html);
+html="";x=diffItems(values(a.administration),t4);if(x.length)html+=section(t("Administração","Administración"),list(x));x=diffItems(values(a.missedDose),t4);if(x.length)html+=section(t("Esquecimento de dose","Dosis olvidada"),text(x));x=diffItems(values(a.tube),t4);if(x.length)html+=section(t("Uso em sonda","Uso por sonda"),list(x));x=diffItems(values(a.counseling),t4);if(x.length)html+=section(t("Orientações ao paciente","Orientaciones al paciente"),list(x));writeBucket(t4,"administration",html);
+html="";x=diffItems(values(a.geriatric),t6);if(x.length)html+=section(t("Uso geriátrico","Uso geriátrico"),text(x));x=diffItems(values(a.perioperative),t6);if(x.length)html+=section(t("Uso perioperatório","Uso perioperatorio"),text(x));writeBucket(t6,"special-pharma",html);
+html="";x=diffItems(values(a.mechanism),t9);if(x.length)html+=section(t("Mecanismo de ação","Mecanismo de acción"),text(x));x=diffItems(values(a.pk),t9);if(x.length)html+=section(t("Farmacocinética","Farmacocinética"),list(x));x=diffItems(values(a.halfLife),t9);if(x.length)html+=section(t("Meia-vida","Semivida"),text(x));x=diffItems(values(a.onset),t9);if(x.length)html+=section(t("Início de ação","Inicio de acción"),text(x));writeBucket(t9,"pharmacology",html);
+html="";x=diffItems(values(a.presentation),t10);if(x.length)html+=section(t("Apresentações adicionais","Presentaciones adicionales"),list(x));writeBucket(t10,"presentations",html)}
 function apply(data,id){if(id!==activeId())return;renderSafety(id,data);renderPharma(id,data);NS.last={id:id,lang:lang(),rawOwners:rawSources(id).length,ok:true}}
 function load(){var id=activeId();if(!id)return;if(Object.prototype.hasOwnProperty.call(NS.cache,id)){apply(NS.cache[id],id);return}fetch((new URL("data/drugs/"+encodeURIComponent(id)+".json",window.location.href)).href,{cache:"force-cache"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()}).then(function(j){NS.cache[id]=j;apply(j,id)}).catch(function(){NS.cache[id]=null;apply(null,id)})}
 function schedule(){clearTimeout(schedule._t);schedule._t=setTimeout(load,70)}
@@ -38218,58 +38220,6 @@ html.light-mode [data-mc-intx-m4-r6-card="true"] :is(.intx-card-pair,.intx-mecan
 
 
 <!-- CALC-GLOBAL-MOBILE-BASELINE-V1-B-R2 FARMACOS-HERO-METADATA START -->
-<style id="mc-global-mobile-baseline-v1-b-r2-farmacos-hero-metadata">
-@media (max-width: 767px) {
-  /*
-   * R2 — detalhe de Fármacos / hero da posologia.
-   * A R1 preservou 16px clínico, porém frequência/via auxiliares ficaram coladas à
-   * dose principal. Esta camada NÃO reescreve, oculta nem interpreta dados: apenas
-   * inicia o metadata já existente em uma segunda linha visual compacta.
-   */
-
-  body.calc-overlay-open #fd-modal.open .fd-dose-val--hero .fd-dose-freq-inline::before {
-    content: "\A" !important;
-    white-space: pre !important;
-  }
-
-  body.calc-overlay-open #fd-modal.open .fd-dose-val--hero .fd-dose-freq-inline {
-    display: inline !important;
-    width: auto !important;
-    height: auto !important;
-    min-height: 0 !important;
-    margin: 0 3px 0 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    background: transparent !important;
-    font-size: var(--mc-font-auxiliary, 14px) !important;
-    font-weight: 500 !important;
-    line-height: 1.28 !important;
-    white-space: nowrap !important;
-    vertical-align: baseline !important;
-  }
-
-  body.calc-overlay-open #fd-modal.open .fd-dose-val--hero .fd-dose-freq-inline i {
-    font-size: 12px !important;
-    vertical-align: baseline !important;
-  }
-
-  body.calc-overlay-open #fd-modal.open .fd-dose-val--hero .fd-dose-via-inline {
-    display: inline !important;
-    width: auto !important;
-    height: auto !important;
-    min-height: 0 !important;
-    margin: 0 0 0 3px !important;
-    padding: 0 !important;
-    border: 0 !important;
-    background: transparent !important;
-    font-size: var(--mc-font-auxiliary, 14px) !important;
-    font-weight: 600 !important;
-    line-height: 1.28 !important;
-    white-space: nowrap !important;
-    vertical-align: baseline !important;
-  }
-}
-</style>
 <!-- CALC-GLOBAL-MOBILE-BASELINE-V1-B-R2 FARMACOS-HERO-METADATA END -->
 
 
@@ -44671,6 +44621,399 @@ body.calc-overlay-open #fd-modal.open > .fd-header > .fd-close{
 }
 /* MEDCASES-CALCULADORA-FARMACOS-DETAIL-TOPBAR-OPTICAL-AXIS-ALIGNMENT-V1-B-R13 END */
 
+/* MEDCASES-CALCULADORA-W1-P1-HERO-METADATA-REMAINDER-MIGRATION-V1-B-R4 START */
+/* W1/P1 migration: preserve the final two live hero-metadata declarations in canonical owner. */
+body.calc-overlay-open #fd-modal.open .fd-dose-val--hero .fd-dose-freq-inline{
+  height:auto!important;
+  min-height:0!important;
+}
+/* MEDCASES-CALCULADORA-W1-P1-HERO-METADATA-REMAINDER-MIGRATION-V1-B-R4 END */
+
+/* MEDCASES-CALCULADORA-FARMACOS-CLOSE-FLASH-ATOMIC-VISIBILITY-GUARD-V1-B-R9 START */
+/* Keep legacy close animation/timer offscreen: never expose pre-canonical modal surface. */
+#fd-modal-overlay:has(> #fd-modal:not(.open)){
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+/* MEDCASES-CALCULADORA-FARMACOS-CLOSE-FLASH-ATOMIC-VISIBILITY-GUARD-V1-B-R9 END */
+
 </style>
+
+<!-- CALC-FARMACOS-DETAIL-OFFICIAL-LAYOUT-V1-B-R0-R3-NATIVE-DOM-PEDIATRIC-PRESERVATION START -->
+<style id="mc-fd-official-native-r3-style">
+body.calc-overlay-open #fd-modal.open{
+  --fd-o-bg:#1A1D23;--fd-o-surface:#252930;--fd-o-text:#F7F8FA;--fd-o-muted:#9AA5B3;
+  --fd-o-line:rgba(148,163,184,.16);--fd-o-accent:#28A875;--fd-o-alert:#D95D69;
+}
+body.light-mode.calc-overlay-open #fd-modal.open{
+  --fd-o-bg:#ECF1F3;--fd-o-surface:#FFFFFF;--fd-o-text:#27313A;--fd-o-muted:#66717D;
+  --fd-o-line:rgba(71,85,105,.15);--fd-o-accent:#168A5A;--fd-o-alert:#B42318;
+}
+body.calc-overlay-open #fd-modal.open > .fd-header{
+  min-height:48px!important;padding:6px 12px!important;background:var(--fd-o-surface)!important;
+  border:0!important;border-bottom:1px solid var(--fd-o-line)!important;box-shadow:none!important;
+}
+body.calc-overlay-open #fd-modal.open #fd-header-name{
+  color:var(--fd-o-text)!important;font-size:17px!important;font-weight:760!important;line-height:1.16!important;
+}
+body.calc-overlay-open #fd-modal.open #fd-header-class{
+  display:block!important;visibility:visible!important;opacity:1!important;max-height:none!important;
+  margin-top:2px!important;color:var(--fd-o-muted)!important;font-size:11px!important;font-weight:500!important;line-height:1.2!important;
+}
+body.calc-overlay-open #fd-modal.open .fd-tabs-nav{display:none!important}
+body.calc-overlay-open #fd-modal.open #fd-body{
+  display:block!important;height:auto!important;min-height:0!important;margin:0!important;
+  padding:0 16px calc(74px + env(safe-area-inset-bottom))!important;background:var(--fd-o-bg)!important;
+}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"]{
+  display:block!important;position:static!important;float:none!important;transform:none!important;
+  width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;
+  margin:0!important;padding:0!important;background:transparent!important;overflow:visible!important;
+}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] > .fd-document-title{display:none!important}
+body.calc-overlay-open #fd-modal.open .fd-official-native-head,
+body.calc-overlay-open #fd-modal.open .fd-official-posology-head{
+  width:100%!important;min-height:42px!important;margin:0!important;padding:12px 0 8px!important;
+  display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;
+  background:transparent!important;border:0!important;border-top:1px solid var(--fd-o-line)!important;border-radius:0!important;
+  box-shadow:none!important;color:var(--fd-o-text)!important;font-size:13px!important;font-weight:720!important;line-height:1.25!important;
+}
+body.calc-overlay-open #fd-modal.open [data-fd-official-section="2"] > .fd-official-native-head,
+body.calc-overlay-open #fd-modal.open .fd-official-posology-head{
+  border-top:0!important;padding-top:14px!important;
+}
+body.calc-overlay-open #fd-modal.open .fd-official-native-head-left{
+  display:flex!important;align-items:center!important;gap:8px!important;min-width:0!important
+}
+body.calc-overlay-open #fd-modal.open .fd-official-native-head i:first-child,
+body.calc-overlay-open #fd-modal.open .fd-official-posology-head i:first-child{
+  width:17px!important;color:var(--fd-o-accent)!important;text-align:center!important;font-size:13px!important
+}
+body.calc-overlay-open #fd-modal.open [data-fd-official-section="5"] > .fd-official-native-head i:first-child{color:var(--fd-o-alert)!important}
+body.calc-overlay-open #fd-modal.open .fd-official-native-chevron{color:var(--fd-o-muted)!important;font-size:10px!important;transition:transform .14s ease!important}
+body.calc-overlay-open #fd-modal.open .fd-official-native-head[aria-expanded="true"] .fd-official-native-chevron{transform:rotate(180deg)!important}
+body.calc-overlay-open #fd-modal.open .fd-official-native-section,
+body.calc-overlay-open #fd-modal.open .fd-official-native-content{
+  display:block!important;position:static!important;float:none!important;transform:none!important;
+  width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;
+  margin:0!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;
+  box-shadow:none!important;overflow:visible!important;
+}
+body.calc-overlay-open #fd-modal.open .fd-official-native-content[hidden]{display:none!important}
+body.calc-overlay-open #fd-modal.open .fd-official-source-stub{display:none!important}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] :where(
+  .fd-dose-hero,.fd-dose-item,.fd-dose-item--hero,.fd-ref-block,.fd-ref-body,.fd-ref-cat,.fd-ref-row,
+  .fd-renal-block,.fd-renal-body,.fd-renal-timeline,.fd-renal-faixa,.fd-renal-doses,.fd-renal-dose-pill,
+  .fd-renal-dose-pill--ped,.fd-renal-dose-pill--vo,.fd-renal-dose-pill--ev
+){
+  position:static!important;float:none!important;transform:none!important;
+  height:auto!important;min-height:0!important;max-height:none!important;opacity:1!important;visibility:visible!important;
+}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] .fd-ref-body{display:block!important}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] .fd-dose-hero{
+  margin:0!important;padding:9px 0 12px!important;background:transparent!important;background-image:none!important;
+  border:0!important;border-bottom:1px solid var(--fd-o-line)!important;border-radius:0!important;box-shadow:none!important;
+}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] .fd-dose-hero-label{
+  margin:0 0 5px!important;padding:0!important;background:transparent!important;border:0!important;
+  color:var(--fd-o-muted)!important;font-size:11.5px!important;font-weight:650!important;line-height:1.25!important;
+}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] :where(.fd-dose-item,.fd-dose-item--hero){
+  margin:0!important;padding:2px 0!important;background:transparent!important;border:0!important;box-shadow:none!important
+}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] .fd-dose-val--hero{
+  color:var(--fd-o-text)!important;font-size:18px!important;font-weight:760!important;line-height:1.25!important
+}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] :where(.fd-ref-block,.fd-renal-block){
+  margin:0!important;padding:10px 0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important
+}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] :where(.fd-ref-header,.fd-renal-header){
+  min-height:36px!important;margin:0!important;padding:6px 0!important;background:transparent!important;border:0!important;
+  border-bottom:1px solid var(--fd-o-line)!important;border-radius:0!important;box-shadow:none!important;
+  color:var(--fd-o-text)!important;font-size:12px!important;font-weight:680!important
+}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] :where(.fd-ref-row,.fd-ref-cat,.fd-renal-faixa,.fd-renal-dose-pill){
+  margin:0!important;padding-top:5px!important;padding-bottom:5px!important;background:transparent!important;
+  border-left:0!important;border-right:0!important;border-radius:0!important;box-shadow:none!important
+}
+body.calc-overlay-open #fd-modal.open .fd-official-native-content :where(.fd-section,.fd-meta-section){
+  display:block!important;position:static!important;float:none!important;transform:none!important;
+  margin:0!important;padding:5px 0 9px!important;background:transparent!important;border:0!important;border-radius:0!important;
+  box-shadow:none!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important
+}
+body.calc-overlay-open #fd-modal.open .fd-official-native-content :where(.fd-section-label,.fd-meta-title){
+  margin:3px 0 4px!important;padding:0!important;background:transparent!important;border:0!important;
+  color:var(--fd-o-muted)!important;font-size:11.5px!important;font-weight:650!important;line-height:1.3!important;
+  letter-spacing:0!important;text-transform:none!important
+}
+body.calc-overlay-open #fd-modal.open .fd-official-native-content :where(
+  .fd-section-text,.fd-meta-text,.fd-meta-list>li,.fd-clean-list li
+){
+  color:var(--fd-o-text)!important;font-size:12.5px!important;font-weight:400!important;line-height:1.46!important
+}
+body.calc-overlay-open #fd-modal.open :where(
+  [data-fd-document-section="dosing"],.fd-official-native-content
+) :where(.fd-clean-list,.fd-meta-list,.posologia-list-v2){
+  margin:0!important;padding:0!important;list-style:none!important
+}
+body.calc-overlay-open #fd-modal.open :where(
+  [data-fd-document-section="dosing"],.fd-official-native-content
+) :where(.fd-clean-list li,.fd-meta-list>li,.posologia-list-v2 li){
+  position:relative!important;display:block!important;margin:0!important;padding:3px 0 3px 14px!important;list-style:none!important;border:0!important
+}
+body.calc-overlay-open #fd-modal.open :where(
+  [data-fd-document-section="dosing"],.fd-official-native-content
+) :where(.fd-clean-list li,.fd-meta-list>li,.posologia-list-v2 li)::marker{content:""!important;font-size:0!important}
+body.calc-overlay-open #fd-modal.open :where(
+  [data-fd-document-section="dosing"],.fd-official-native-content
+) :where(.fd-clean-list li,.fd-meta-list>li,.posologia-list-v2 li)::before{
+  content:""!important;display:block!important;position:absolute!important;left:2px!important;top:.72em!important;
+  width:4px!important;height:4px!important;border-radius:50%!important;background:var(--fd-o-muted)!important;opacity:.72!important
+}
+body.calc-overlay-open #fd-modal.open :where(.fd-cl-dot,.fdm6-dot,.fd-list-dot,.fd-bullet,.fd-safe-dot){display:none!important}
+body.calc-overlay-open #fd-modal.open [data-fd-official-section="5"] .fd-official-native-content{
+  border-left:2px solid color-mix(in srgb,var(--fd-o-alert) 76%,transparent)!important;padding-left:10px!important
+}
+body.calc-overlay-open #fd-modal.open > .fd-footer{
+  background:var(--fd-o-surface)!important;border-top:1px solid var(--fd-o-line)!important;box-shadow:none!important
+}
+/* CALC-FARMACOS-DETAIL-R3-R1-ALL-OPEN-DEFAULT */
+body.calc-overlay-open #fd-modal.open #fd-body > :where(
+  [data-fd-panel="safety"].fd-official-source-stub,
+  [data-fd-panel="pharma"].fd-official-source-stub
+){
+  display:none!important;height:0!important;min-height:0!important;
+  margin:0!important;padding:0!important;border:0!important;overflow:hidden!important;
+}
+body.calc-overlay-open #fd-modal.open .fd-official-native-content{
+  display:block!important;visibility:visible!important;opacity:1!important;
+  height:auto!important;min-height:0!important;max-height:none!important;
+}
+body.calc-overlay-open #fd-modal.open .fd-official-native-content[hidden]{display:block!important}
+body.calc-overlay-open #fd-modal.open [data-fd-document-section="dosing"] :where(.fd-ref-body,.fd-renal-body){
+  display:block!important;visibility:visible!important;opacity:1!important;
+  height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;
+}
+/* CALC-FARMACOS-DETAIL-R3-R2-PEDIATRIC-ZERO-MG-REFERENCE-PRESENTATION-GUARD */
+body.calc-overlay-open #fd-modal.open .fd-ref-zero-ped-note{
+  color:var(--fd-o-muted,#9AA5B3)!important;
+  font-size:12.5px!important;
+  font-weight:500!important;
+  line-height:1.42!important;
+}
+body.calc-overlay-open #fd-modal.open .fd-ref-zero-ped-note i{
+  margin-right:5px!important;
+  font-size:10px!important;
+  opacity:.78!important;
+}
+</style>
+<script id="mc-fd-official-native-r3-runtime">
+(function(){
+"use strict";
+if(window.__MC_FD_OFFICIAL_NATIVE_R3)return;
+
+var config={
+  2:{pt:"Indicações de Uso",es:"Indicaciones de uso",icon:"fa-circle-check",open:true},
+  4:{pt:"Administração e Preparo",es:"Administración y preparación",icon:"fa-syringe"},
+  5:{pt:"Alertas Críticos",es:"Alertas críticos",icon:"fa-triangle-exclamation"},
+  6:{pt:"Usos Especiais",es:"Usos especiales",icon:"fa-person-circle-exclamation"},
+  7:{pt:"Interações Medicamentosas",es:"Interacciones medicamentosas",icon:"fa-arrows-left-right"},
+  8:{pt:"Efeitos Colaterais",es:"Efectos adversos",icon:"fa-heart-pulse"},
+  9:{pt:"Dados Farmacológicos",es:"Datos farmacológicos",icon:"fa-atom"},
+  10:{pt:"Apresentações",es:"Presentaciones",icon:"fa-box"}
+};
+
+var NS=window.__MC_FD_OFFICIAL_NATIVE_R3={
+  build:"CALC-FARMACOS-DETAIL-OFFICIAL-LAYOUT-V1-B-R0-R3-NATIVE-DOM-PEDIATRIC-PRESERVATION",
+  drugId:"",open:{"4":true,"5":true,"6":true,"7":true,"8":true,"9":true,"10":true},ensure:null,last:null
+};
+
+var bodyObserver=null,modalObserver=null,scheduled=false;
+
+function L(){
+  try{return String(window.currentLang||"pt").toLowerCase()==="es"?"es":"pt"}catch(e){return"pt"}
+}
+function norm(v){
+  return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/\s+/g," ").trim()
+}
+function label(node){
+  var x=node&&node.querySelector(":scope > .fd-section-label,:scope > .fd-meta-title");
+  return norm(x?x.textContent:"")
+}
+function classifyNative(node,source){
+  var t=label(node);
+  if(/contraind|alerta|advert|warning|monitor/.test(t))return 5;
+  if(/advers|efeito colateral|efecto secund|reacao advers|reaccion advers/.test(t))return 8;
+  if(/ajuste hepatic|ajuste hepatico|gesta|embaraz|lacta|geriat|idos|perioper/.test(t))return 6;
+  if(/apresent|presentacion/.test(t))return 10;
+  if(/mecanismo|farmacocinet|meia-vida|semivida|inicio de acao|inicio de accion/.test(t))return 9;
+  return source==="safety"?5:9
+}
+function headHTML(title,icon,collapsible){
+  return '<span class="fd-official-native-head-left"><i class="fa-solid '+icon+'" aria-hidden="true"></i><span>'+title+'</span></span>'+
+    (collapsible?'<i class="fa-solid fa-chevron-down fd-official-native-chevron" aria-hidden="true"></i>':"")
+}
+function setOpen(shell,sec,value){
+  NS.open[String(sec)]=!!value;
+  var h=shell.querySelector(":scope > .fd-official-native-head");
+  var c=shell.querySelector(":scope > .fd-official-native-content");
+  if(h)h.setAttribute("aria-expanded",value?"true":"false");
+  if(c)c.hidden=!value
+}
+function makeShell(body,sec,beforeNode){
+  var shell=body.querySelector(':scope > .fd-official-native-section[data-fd-official-section="'+sec+'"]');
+  if(!shell){
+    shell=document.createElement("section");
+    shell.className="fd-official-native-section";
+    shell.setAttribute("data-fd-official-section",String(sec));
+    var btn=document.createElement(sec===2?"div":"button");
+    btn.className="fd-official-native-head";
+    if(sec!==2)btn.type="button";
+    var content=document.createElement("div");
+    content.className="fd-official-native-content";
+    shell.appendChild(btn);shell.appendChild(content);
+    body.insertBefore(shell,beforeNode||null);
+    if(sec!==2){
+      btn.addEventListener("click",function(){setOpen(shell,sec,!(NS.open[String(sec)]===true))})
+    }
+  }
+  var cfg=config[sec],isOpen=sec===2?true:NS.open[String(sec)]===true;
+  var h=shell.querySelector(":scope > .fd-official-native-head");
+  h.innerHTML=headHTML(cfg[L()],cfg.icon,sec!==2);
+  if(sec!==2)setOpen(shell,sec,isOpen);else{
+    h.removeAttribute("aria-expanded");
+    shell.querySelector(":scope > .fd-official-native-content").hidden=false
+  }
+  return shell
+}
+function ensurePosologyHead(dosing){
+  var h=dosing.querySelector(":scope > .fd-official-posology-head");
+  if(!h){
+    h=document.createElement("div");h.className="fd-official-posology-head";
+    var title=dosing.querySelector(":scope > .fd-document-title");
+    if(title&&title.nextSibling)dosing.insertBefore(h,title.nextSibling);
+    else dosing.insertBefore(h,dosing.firstChild)
+  }
+  h.innerHTML=headHTML(L()==="es"?"Posología":"Posologia","fa-prescription-bottle-medical",false)
+}
+function moveNative(sourcePanel,targetMap){
+  if(!sourcePanel)return 0;
+  var moved=0;
+  Array.from(sourcePanel.children).forEach(function(node){
+    if(!node.classList||!node.classList.contains("fd-section"))return;
+    var sec=classifyNative(node,sourcePanel.getAttribute("data-fd-panel")||"");
+    var target=targetMap[sec]&&targetMap[sec].querySelector(":scope > .fd-official-native-content");
+    if(target){target.appendChild(node);moved++}
+  });
+  sourcePanel.classList.add("fd-official-source-stub");
+  return moved
+}
+function sanitizeZeroPediatricReference(dosing){
+  if(!dosing)return 0;
+
+  var pd=window.patientData||null;
+  var rawWeight=pd ? (pd.weight ?? pd.peso ?? null) : null;
+  var weight=Number(String(rawWeight ?? "").replace(",","."));
+  if(Number.isFinite(weight)&&weight>0)return 0;
+
+  var isES=L()==="es";
+  var changed=0;
+
+  dosing.querySelectorAll(".fd-ref-cat").forEach(function(cat){
+    var title=cat.querySelector(":scope > .fd-ref-cat-title");
+    var titleText=norm(title?title.textContent:"");
+    var isPed=!!(title&&title.querySelector(".fa-child"))||/pediatr/.test(titleText);
+    if(!isPed)return;
+
+    cat.querySelectorAll(":scope > .fd-ref-row").forEach(function(row){
+      var value=row.querySelector(":scope > .fd-ref-val");
+      if(!value)return;
+
+      var plain=String(value.textContent||"").replace(/\s+/g," ").trim();
+      if(!/^0(?:[.,]0+)?\s*mg\b/i.test(plain))return;
+
+      value.innerHTML=
+        '<span class="fd-ref-zero-ped-note" data-mc-zero-ped-reference="true">'+
+        '<i class="fa-solid fa-weight-scale" aria-hidden="true"></i>'+
+        (isES
+          ? 'Informar peso para calcular la dosis absoluta; ver dosis por peso abajo.'
+          : 'Informe o peso para calcular a dose absoluta; veja a dose por peso abaixo.')+
+        '</span>';
+      changed++;
+    });
+  });
+
+  return changed;
+}
+function ensure(){
+  scheduled=false;
+  var body=document.getElementById("fd-body"),modal=document.getElementById("fd-modal");
+  if(!body||!modal)return false;
+  var dosing=body.querySelector(':scope > [data-fd-document-section="dosing"]');
+  var safety=body.querySelector(':scope > [data-fd-document-section="safety"]');
+  var pharma=body.querySelector(':scope > [data-fd-document-section="pharma"]');
+  if(!dosing)return false;
+
+  var drug=String(modal.getAttribute("data-current-drug-id")||window._fdActiveDrugId||"").trim();
+  if(drug&&drug!==NS.drugId){NS.drugId=drug;NS.open={"4":true,"5":true,"6":true,"7":true,"8":true,"9":true,"10":true}}
+
+  dosing.setAttribute("data-fd-official-section","3");
+  ensurePosologyHead(dosing);
+
+  var map={};
+  map[2]=makeShell(body,2,dosing);
+  var anchor=safety||pharma||null;
+  [4,5,6,7,8,9,10].forEach(function(sec){map[sec]=makeShell(body,sec,anchor)});
+
+  var moved=0;
+  moved+=moveNative(safety,map);
+  moved+=moveNative(pharma,map);
+  /* CALC-FARMACOS-DETAIL-R3-R1-ALL-OPEN-DEFAULT */
+  dosing.querySelectorAll(".fd-ref-block").forEach(function(block){
+    block.classList.add("fd-ref-open");
+    var h=block.querySelector(":scope > .fd-ref-header");
+    if(h)h.setAttribute("aria-expanded","true");
+  });
+  dosing.querySelectorAll(".fd-renal-block").forEach(function(block){
+    block.classList.add("fd-renal-open");
+    var h=block.querySelector(":scope > .fd-renal-header");
+    if(h)h.setAttribute("aria-expanded","true");
+  });
+
+  var pediatricNodes=dosing.querySelectorAll('.fd-ref-cat .fa-child,.fd-renal-dose-pill--ped,.fd-dose-key .fa-child').length;
+  var renalPed=dosing.querySelectorAll(".fd-renal-dose-pill--ped").length;
+  var zeroPedReferenceSanitized=sanitizeZeroPediatricReference(dosing);
+  var refRows=dosing.querySelectorAll(".fd-ref-row").length;
+
+  body.setAttribute("data-fd-official-native-r3","true");
+  modal.setAttribute("data-fd-official-native-r3","true");
+  NS.last={drugId:drug,movedNative:moved,pediatricNodes:pediatricNodes,renalPediatric:renalPed,referenceRows:refRows,zeroPedReferenceSanitized:zeroPedReferenceSanitized,lang:L(),at:Date.now()};
+  return true
+}
+NS.ensure=ensure;
+
+function schedule(){
+  if(scheduled)return;scheduled=true;
+  requestAnimationFrame(function(){ensure()})
+}
+function bind(){
+  var body=document.getElementById("fd-body"),modal=document.getElementById("fd-modal");
+  if(body&&!bodyObserver){
+    bodyObserver=new MutationObserver(function(ms){
+      if(ms.some(function(m){return m.type==="childList"&&(m.addedNodes.length||m.removedNodes.length)}))schedule()
+    });
+    bodyObserver.observe(body,{childList:true,subtree:false})
+  }
+  if(modal&&!modalObserver){
+    modalObserver=new MutationObserver(function(){schedule()});
+    modalObserver.observe(modal,{attributes:true,attributeFilter:["class","data-current-drug-id"]})
+  }
+  schedule()
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",bind,{once:true});else bind()
+})();
+</script>
+<!-- CALC-FARMACOS-DETAIL-OFFICIAL-LAYOUT-V1-B-R0-R3-NATIVE-DOM-PEDIATRIC-PRESERVATION END -->
 </body>
 </html>
