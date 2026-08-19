@@ -15,8 +15,9 @@
 
   if (window.__MC_OVERLAY_PROJECTION_V1) return;
 
-  var BUILD = 'CALC-WEBVIEW-MOBILE-FREEZE-V1-D-R0-R2-NORMALIZE-SINGLE-OWNER-NO-REPARENT';
+  var BUILD = 'MEDCASES-MODULE-SURFACE-SINGLE-OWNER-V1-B-R0-R1';
   var currentId = null;
+  var transitionId = null;
   var pendingOpenTimer = 0;
   var measureRaf = 0;
 
@@ -81,7 +82,7 @@
       'display:block!important;',
       'margin:0!important;',
       'padding:0!important;',
-      'background:transparent!important;',
+      'background:var(--mc-bg-body,#1A1D23)!important;',
       'background-image:none!important;',
       'transform:none!important;',
       'visibility:hidden!important;',
@@ -93,6 +94,9 @@
       'visibility:visible!important;',
       'transform:none!important;',
       'pointer-events:none!important;',
+      '}',
+      'body.light-mode #calculator-overlay-container[data-mc-owner="NO_REPARENT_PROJECTION_V1"]{',
+      'background:var(--mc-bg-body,#F3F4F6)!important;',
       '}',
 
       '#calculator-overlay-container[data-mc-owner="NO_REPARENT_PROJECTION_V1"] #calculator-overlay-header{',
@@ -143,11 +147,12 @@
       'left:0!important;',
       'right:0!important;',
       'bottom:0!important;',
-      'width:100vw!important;',
+      'width:auto!important;',
       'height:auto!important;',
       'min-height:0!important;',
       'max-height:none!important;',
-      'z-index:2147482999!important;',
+      'box-sizing:border-box!important;',
+      'z-index:2147483001!important;',
       'display:block!important;',
       'grid-column:auto!important;',
       'margin:0!important;',
@@ -201,7 +206,7 @@
       'max-height:none!important;',
       'box-sizing:border-box!important;',
       'margin:0!important;',
-      'padding:14px 13px 32px!important;',
+      'padding:14px 4px 32px!important;',
       'transform:none!important;',
       'overflow:visible!important;',
       'animation:none!important;',
@@ -299,6 +304,7 @@
 
     if (oldId) clearProjectedClass(oldId);
     currentId = null;
+    transitionId = null;
 
     var ov = overlay();
     if (ov) ov.classList.remove('is-active');
@@ -318,6 +324,15 @@
     try {
       if (
         window.HubAccordion &&
+        typeof window.HubAccordion.cancelPendingOpen === 'function'
+      ) {
+        window.HubAccordion.cancelPendingOpen();
+      }
+    } catch (_) {}
+
+    try {
+      if (
+        window.HubAccordion &&
         typeof window.HubAccordion.close === 'function'
       ) {
         window.HubAccordion.close(id);
@@ -333,27 +348,53 @@
     if (trigger) trigger.setAttribute('aria-expanded', 'false');
   }
 
+  function beginTransition(id) {
+    ensureStyle();
+    var ov = ensureOverlay();
+    if (!ov) return false;
+
+    transitionId = id || null;
+
+    var title = byId('calculator-overlay-title');
+    if (title && id) title.textContent = getTitle(id);
+
+    document.documentElement.classList.add('mc-overlay-projection-open');
+    document.body.classList.add('calc-overlay-open');
+    ov.classList.add('is-active');
+
+    return true;
+  }
+
+  function projectWhenReady(id, tries) {
+    if (transitionId !== id) return false;
+
+    if (project(id, 'hubOpen-ready')) return true;
+
+    if (tries > 0) {
+      requestAnimationFrame(function () {
+        projectWhenReady(id, tries - 1);
+      });
+      return true;
+    }
+
+    deactivateVisual();
+    return false;
+  }
+
   function project(id, reason) {
     var c = card(id);
     if (!c || !c.classList.contains('is-open')) return false;
 
-    ensureStyle();
-    var ov = ensureOverlay();
-    if (!ov) return false;
+    if (!beginTransition(id)) return false;
 
     if (currentId && currentId !== id) {
       clearProjectedClass(currentId);
     }
 
     currentId = id;
-
-    var title = byId('calculator-overlay-title');
-    if (title) title.textContent = getTitle(id);
+    transitionId = null;
 
     c.classList.add('mc-overlay-projected-card');
-    document.documentElement.classList.add('mc-overlay-projection-open');
-    document.body.classList.add('calc-overlay-open');
-    ov.classList.add('is-active');
 
     scheduleMeasure();
 
@@ -369,10 +410,10 @@
   function closeOverlay() {
     cancelPendingOpen();
 
-    var closingId = currentId;
-    deactivateVisual();
+    var closingId = currentId || transitionId;
 
     if (closingId) forceHubClosed(closingId);
+    deactivateVisual();
 
     window.__MC_OVERLAY_PROJECTION_V1.lastClose = {
       id: closingId || null,
@@ -389,21 +430,24 @@
     var wrapped = function (id) {
       cancelPendingOpen();
 
-      if (currentId === id) {
+      if (currentId === id || transitionId === id) {
         closeOverlay();
         return;
       }
 
       if (currentId && currentId !== id) {
-        deactivateVisual();
+        clearProjectedClass(currentId);
+        currentId = null;
       }
+
+      beginTransition(id);
 
       var result = original.apply(this, arguments);
       var c = card(id);
 
       if (c && c.classList.contains('is-open')) {
         project(id, 'hubToggle');
-      } else if (currentId === id) {
+      } else {
         deactivateVisual();
       }
 
@@ -426,15 +470,18 @@
       cancelPendingOpen();
 
       if (currentId && currentId !== id) {
-        deactivateVisual();
+        clearProjectedClass(currentId);
+        currentId = null;
       }
+
+      beginTransition(id);
 
       var result = original.apply(this, arguments);
 
       pendingOpenTimer = setTimeout(function () {
         pendingOpenTimer = 0;
-        project(id, 'hubOpen-140ms');
-      }, 140);
+        projectWhenReady(id, 10);
+      }, 90);
 
       return result;
     };
@@ -473,38 +520,31 @@
     patchHubOpen();
     exposeApi();
 
-    /*
-      HubAccordion BUILD 276 restaura window.hubOpen após ~2200 ms.
-      Em vez do retry/setInterval legado, fazemos UMA reconciliação finita.
-    */
-    setTimeout(function () {
-      patchHubOpen();
-      exposeApi();
-      window.__MC_OVERLAY_PROJECTION_V1.postBootReconciled = true;
-    }, 2400);
-
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && currentId) closeOverlay();
+      if (e.key === 'Escape' && (currentId || transitionId)) closeOverlay();
     });
 
     window.addEventListener('orientationchange', scheduleMeasure, { passive: true });
 
-    console.log('[MC-OVERLAY-PROJECTION-V1] ACTIVE', window.__MC_OVERLAY_PROJECTION_V1);
+    console.log('[MC-MODULE-SURFACE-SINGLE-OWNER] ACTIVE', window.__MC_OVERLAY_PROJECTION_V1);
   }
 
   window.__MC_OVERLAY_PROJECTION_V1 = {
     build: BUILD,
-    owner: 'SINGLE',
-    contentStrategy: 'CSS_FIXED_CARD_PROJECTION_NO_DOM_REPARENT',
+    owner: 'SINGLE_MODULE_SURFACE_COMPAT',
+    contentStrategy: 'OPAQUE_SHELL_PLUS_NO_REPARENT_MODULE_SCROLL',
     domReparent: false,
     legacyAuthority: false,
     mutationObserver: false,
     intervalWatchdog: false,
-    pendingOpen: 'SINGLE_CANCELABLE_140MS',
-    postBootReconcile: 'ONE_SHOT_2400MS',
+    pendingOpen: 'SINGLE_CANCELABLE_90MS_PLUS_FINITE_RAF',
+    postBootReconcile: 'NOT_REQUIRED_CONDITIONAL_HUB_GUARD',
     closeOwner: 'POINTERUP_PLUS_CLICK',
+    shellBackgroundOwner: 'CALCULATOR_OVERLAY_CONTAINER',
+    scrollOwner: 'MC_OVERLAY_PROJECTED_CARD_ONLY',
+    horizontalGutterPx: 4,
     clinicalDataMutation: false,
-    postBootReconciled: false,
+    postBootReconciled: true,
     lastOpen: null,
     lastClose: null
   };

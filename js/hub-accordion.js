@@ -37,6 +37,7 @@
   /* ── Estado interno ── */
   var _mounted   = {};   /* slots já montados */
   var _openCard  = null; /* ID do card atualmente aberto */
+  var _programmaticOpenTimer = 0; /* single-owner: hubOpen cancelável */
 
   /* ── Delay padrão para scroll ── */
   var SCROLL_DELAY = 180;
@@ -45,6 +46,10 @@
      UTIL: scroll suave até o card no #scroll-content
   ──────────────────────────────────────────────────────────────── */
   function _scrollToCard(cardId, delay) {
+    if (document.body && document.body.classList.contains('calc-overlay-open')) {
+      return;
+    }
+
     setTimeout(function () {
       var card = document.getElementById(cardId);
       var sc   = document.getElementById('scroll-content');
@@ -442,7 +447,15 @@
    * Abre ou fecha o card. Fecha o card anteriormente aberto (accordion).
    * @param {string} id - data-hub do card (ex: 'farmacos', 'interacoes')
    */
+  function _cancelProgrammaticOpen() {
+    if (_programmaticOpenTimer) {
+      clearTimeout(_programmaticOpenTimer);
+      _programmaticOpenTimer = 0;
+    }
+  }
+
   function hubToggle(id) {
+    _cancelProgrammaticOpen();
     var card = document.getElementById('hub-card-' + id);
     if (!card) return;
     var isOpen = card.classList.contains('is-open');
@@ -487,6 +500,12 @@
     if (trigger) {
       trigger.setAttribute('aria-expanded', 'true');
     }
+
+    try {
+      document.dispatchEvent(new CustomEvent('mc:hub-open', {
+        detail: { id: id }
+      }));
+    } catch (_) {}
 
     /* Fallback para browsers sem :has() */
     _updateAccordionState(true);
@@ -598,7 +617,9 @@
     }
 
     /* Pequeno delay para garantir que a page-home esteja visível */
-    setTimeout(function () {
+    _cancelProgrammaticOpen();
+    _programmaticOpenTimer = setTimeout(function () {
+      _programmaticOpenTimer = 0;
       /* Fecha todos antes de abrir o novo */
       hubCloseAll();
 
@@ -760,6 +781,7 @@
     window.HubAccordion = {
       open:     function (id, opts) { return window.hubOpen(id, opts); },
       close:    _closeCard,
+      cancelPendingOpen: _cancelProgrammaticOpen,
       toggle:   function (id) { return window.hubToggle(id); },
       closeAll: hubCloseAll,
       syncLang: _syncLang,
@@ -816,18 +838,33 @@
        setLang→calcFluids→_fluidScrollToWeight e a bloqueia silenciosamente.
        Após 2s o interceptor se remove e hubOpen funciona normalmente. */
     var _origHubOpen = window.hubOpen;
-    window.hubOpen = function(id, opts) {
+    var _bootGuardHubOpen = function(id, opts) {
       if (id === 'patient' && !window._appBootComplete) {
         console.log('[HubAccordion] BUILD 276: hubOpen("patient") BLOQUEADO no boot.');
         return;
       }
       return _origHubOpen ? _origHubOpen(id, opts) : hubOpen(id, opts);
     };
-    /* Restaura hubOpen original após janela de boot */
+    window.hubOpen = _bootGuardHubOpen;
+
+    /* Single-owner: só restaura se NINGUÉM instalou novo owner depois.
+       Se calculator-overlay já embrulhou o guard, preserva esse owner. */
     setTimeout(function() {
-      window.hubOpen = _origHubOpen || hubOpen;
-      console.log('[HubAccordion] BUILD 276: interceptor de boot removido — hubOpen restaurado.');
+      if (window.hubOpen === _bootGuardHubOpen) {
+        window.hubOpen = _origHubOpen || hubOpen;
+        console.log('[HubAccordion] BUILD 276: boot guard removido sem owner externo.');
+      } else {
+        console.log('[HubAccordion] BUILD 276: owner externo preservado após boot.');
+      }
     }, 2200);
+
+    window.__MC_HUB_SINGLE_OWNER_LIFECYCLE_V1_B_R0 = {
+      programmaticOpenTimer: 'SINGLE_CANCELABLE',
+      moduleOpenEvent: 'mc:hub-open',
+      overlayScrollBypass: true,
+      bootGuardRestorePolicy: 'CONDITIONAL_IDENTITY_ONLY',
+      clinicalDataMutation: false
+    };
 
     console.log('[HubAccordion] v2.2 (BUILD 276) pronto. Cards: patient, clcr, farmacos, interacoes, pediatria, gestante, infusao, hemodinamica, scores, fluidos, eletrolitos');
   }
