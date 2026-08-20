@@ -8968,6 +8968,77 @@ body.light-mode.calc-overlay-open #fd-modal .fd-tabs-nav{
   border-bottom-color:#E2E8F0!important;
 }
 </style>
+  <style id="ciclofosfamida-posology-pathology-dose-r6">
+    /* CALC-CICLOFOSFAMIDA-POSOLOGY-PATHOLOGY-DOSE-COMPACT-V1-B-R6 */
+    .fd-ref-cat--indication .fd-indication-wrap {
+      padding-top: 2px;
+    }
+    .fd-ref-cat--indication .fd-ref-cat-title {
+      margin-bottom: 10px;
+    }
+    .fd-pathology-block {
+      margin: 0 0 14px;
+      padding: 0;
+      border: 0;
+      text-align: left;
+    }
+    .fd-pathology-block:last-child {
+      margin-bottom: 2px;
+    }
+    .fd-pathology-name {
+      color: var(--text-primary);
+      font-size: 12.5px;
+      font-weight: 700;
+      line-height: 1.32;
+      margin: 0 0 4px;
+    }
+    .fd-pathology-dose-label {
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      margin: 0 0 3px;
+    }
+    .fd-pathology-dose-line {
+      display: block;
+      color: var(--text-primary);
+      font-size: 11.75px;
+      line-height: 1.38;
+      margin: 2px 0;
+      padding: 0;
+      text-align: left;
+    }
+    .fd-pathology-regimen {
+      font-weight: 700;
+      margin-right: 5px;
+    }
+    .fd-pathology-dose-value {
+      font-weight: 400;
+    }
+    .fd-pathology-dose-value strong {
+      font-weight: 700;
+    }
+    .fd-pathology-note {
+      color: var(--text-muted);
+      font-size: 11.25px;
+      line-height: 1.35;
+      margin-top: 4px;
+      text-align: left;
+    }
+    .fd-pathology-dose-fallback {
+      font-size: 11.75px;
+      line-height: 1.38;
+      text-align: left;
+    }
+    @media (max-width: 460px) {
+      .fd-pathology-block { margin-bottom: 13px; }
+      .fd-pathology-name { font-size: 12px; }
+      .fd-pathology-dose-line { font-size: 11.5px; }
+      .fd-pathology-note { font-size: 11px; }
+    }
+  </style>
 </head>
 <body>
 <div id="app">
@@ -17559,8 +17630,167 @@ function openFarmacoDetail(id) {
 
       const allEntries = Object.entries(doseSrc).filter(([k,v]) => v && v !== '—');
 
+      /* CALC-CICLOFOSFAMIDA-POSOLOGY-PATHOLOGY-DOSE-COMPACT-V1-B-R6
+         Presentation-only. Conteúdo clínico permanece no source owner.
+         Contrato visual: PATOLOGIA -> DOSE, sem grids, sem centralização,
+         sem divisores entre patologias e sem parser que injete quebras extras. */
+      const _fdIsIndicationStructuredDose = ([k,v]) => {
+        if (!/^adulto/i.test(k || '')) return false;
+        const raw = String(v || '');
+        return /Glomerulonefrite crescêntica\/extracapilar|Glomerulonefritis crescéntica\/extracapilar/i.test(raw)
+          && /Euro-Lupus/i.test(raw)
+          && /ANCA/i.test(raw)
+          && /(?:anti-MBG|Goodpasture)/i.test(raw);
+      };
+
+      const _fdEscapeDoseText = value => String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+
+      const _fdDoseHtml = value => {
+        const safe = _fdEscapeDoseText(value);
+        return safe.replace(
+          /(\d+(?:[.,]\d+)?(?:\s*(?:a|–|-)\s*\d+(?:[.,]\d+)?)?\s*(?:mg\/m²|mg\/kg\/dia|mg\/kg|mg|mL\/min\/1,73\s*m²))/gi,
+          '<strong>$1</strong>'
+        );
+      };
+
+      const _fdRenderIndicationDose = value => {
+        const raw = String(value || '').trim();
+        const isSpanish = /Glomerulonefritis|Nefritis lúpica|Vasculitis|Enfermedad anti-MBG/i.test(raw);
+        const doseWord = isSpanish ? 'Dosis' : 'Dose';
+
+        const firstLupus = isSpanish ? 'Nefritis lúpica proliferativa' : 'Nefrite lúpica proliferativa';
+        const firstAnca  = isSpanish ? 'Vasculitis ANCA' : 'Vasculite ANCA';
+        const firstAnti  = isSpanish ? 'Enfermedad anti-MBG' : 'Doença anti-MBG';
+
+        const iLupus = raw.indexOf(firstLupus);
+        const iAnca  = raw.indexOf(firstAnca);
+        const iAnti  = raw.indexOf(firstAnti);
+
+        if (!(iLupus > 0 && iAnca > iLupus && iAnti > iAnca)) {
+          return `<div class="fd-pathology-dose-fallback">${_fdDoseHtml(raw)}</div>`;
+        }
+
+        const intro = raw.slice(0, iLupus).trim();
+        const lupus = raw.slice(iLupus, iAnca).trim();
+        const anca  = raw.slice(iAnca, iAnti).trim();
+        const anti  = raw.slice(iAnti).trim();
+
+        const splitTitle = block => {
+          const idx = block.indexOf(' — ');
+          return idx >= 0
+            ? [block.slice(0, idx).trim(), block.slice(idx + 3).trim()]
+            : [block.trim(), ''];
+        };
+
+        const splitIntro = block => {
+          const idx = block.indexOf(':');
+          return idx >= 0
+            ? [block.slice(0, idx).trim(), block.slice(idx + 1).trim()]
+            : [block.trim(), ''];
+        };
+
+        const semicolonParts = text => text.split(';').map(x => x.trim()).filter(Boolean);
+        const cleanPrefix = (txt, prefix) =>
+          txt.replace(new RegExp('^' + prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*', 'i'), '').trim();
+
+        const pathology = (name, lines, note='') => {
+          let html = `<div class="fd-pathology-block">`;
+          html += `<div class="fd-pathology-name">${_fdEscapeDoseText(name)}</div>`;
+          html += `<div class="fd-pathology-dose-label">${doseWord}</div>`;
+          lines.filter(x => x && x.text).forEach(x => {
+            html += `<div class="fd-pathology-dose-line">`;
+            if (x.label) html += `<span class="fd-pathology-regimen">${_fdEscapeDoseText(x.label)}</span>`;
+            html += `<span class="fd-pathology-dose-value">${_fdDoseHtml(x.text)}</span>`;
+            html += `</div>`;
+          });
+          if (note) {
+            html += `<div class="fd-pathology-note">${_fdDoseHtml(note)}</div>`;
+          }
+          html += `</div>`;
+          return html;
+        };
+
+        const [introTitle, introBody] = splitIntro(intro);
+        const [lupusTitle, lupusBody] = splitTitle(lupus);
+        const [ancaTitle,  ancaBody]  = splitTitle(anca);
+        const [antiTitle,  antiBody]  = splitTitle(anti);
+
+        const lupusParts = semicolonParts(lupusBody);
+        const lupusEuro = lupusParts.find(x => /^Euro-Lupus:/i.test(x)) || '';
+        const lupusNIH  = lupusParts.find(x => /^NIH:/i.test(x)) || '';
+        const lupusVO   = lupusParts.find(x => /^VO:/i.test(x)) || '';
+
+        const ancaIvEnd = ancaBody.search(/\.\s*(?:Redução IV por idade|Reducción IV por edad):/i);
+        const ancaVoPos = ancaBody.search(/\bVO:/i);
+        let ancaIV='', ancaAdj='', ancaVO='';
+
+        if (ancaIvEnd >= 0) {
+          ancaIV = ancaBody.slice(0, ancaIvEnd + 1).trim();
+          const rest = ancaBody.slice(ancaIvEnd + 1).trim();
+          const vo = rest.search(/\bVO:/i);
+          if (vo >= 0) {
+            ancaAdj = rest.slice(0, vo).trim();
+            ancaVO = rest.slice(vo).trim();
+          } else {
+            ancaAdj = rest;
+          }
+        } else if (ancaVoPos >= 0) {
+          ancaIV = ancaBody.slice(0, ancaVoPos).trim();
+          ancaVO = ancaBody.slice(ancaVoPos).trim();
+        } else {
+          ancaIV = ancaBody;
+        }
+
+        const antiObsNeedle = isSpanish ? '. La experiencia' : '. A experiência';
+        const antiObsPos = antiBody.indexOf(antiObsNeedle);
+        let antiDose = antiBody;
+        let antiObs = '';
+        if (antiObsPos >= 0) {
+          antiDose = antiBody.slice(0, antiObsPos + 1).trim();
+          antiObs = antiBody.slice(antiObsPos + 2).trim();
+        }
+
+        let html = '';
+        html += pathology(introTitle, [{label:'', text:introBody}]);
+        html += pathology(lupusTitle, [
+          {label:'Euro-Lupus', text:cleanPrefix(lupusEuro, 'Euro-Lupus:')},
+          {label:'NIH', text:cleanPrefix(lupusNIH, 'NIH:')},
+          {label:'VO', text:cleanPrefix(lupusVO, 'VO:')}
+        ]);
+        html += pathology(ancaTitle, [
+          {label:'IV', text:cleanPrefix(ancaIV, 'IV:')},
+          {label:'Ajuste', text:ancaAdj.replace(/^(Redução IV por idade|Reducción IV por edad):\s*/i, '')},
+          {label:'VO', text:cleanPrefix(ancaVO, 'VO:')}
+        ]);
+        html += pathology(antiTitle, [
+          {label:'VO', text:cleanPrefix(antiDose, 'VO:')}
+        ], antiObs);
+
+        return html;
+      };
+
+      const adultoIndicacao = allEntries.filter(_fdIsIndicationStructuredDose);
+
+      if (adultoIndicacao.length) {
+        htmlDosing += `<div class="fd-ref-cat fd-ref-cat--indication">
+          <div class="fd-ref-cat-title">
+            <i class="fa-solid fa-list-check" style="color:#38BDF8;font-size:10px;"></i>
+            ${isES ? 'Adulto' : 'Adulto'}
+          </div>`;
+
+        adultoIndicacao.forEach(([k,v]) => {
+          htmlDosing += `<div class="fd-indication-wrap">${_fdRenderIndicationDose(v)}</div>`;
+        });
+
+        htmlDosing += `</div>`;
+      }
+
       /* Adulto VO */
-      const adultoVO = allEntries.filter(([k]) => _isAdultoVO(k));
+      const adultoVO = allEntries.filter(([k,v]) => _isAdultoVO(k) && !_fdIsIndicationStructuredDose([k,v]));
       if (adultoVO.length) {
         htmlDosing += `<div class="fd-ref-cat">
           <div class="fd-ref-cat-title">

@@ -17,9 +17,156 @@
   "keywords": [
     "ciclofosfamida"
   ],
-  "dataVersion": "clinical-data-v1-e2d0b1272ab0c0a1",
-  "clinicalContentSha256": "e2d0b1272ab0c0a107e835770f08691b8b7a737107c4894dd76035c3c3f9ed32",
+  "dataVersion": "clinical-data-v1-5f4ea56c13f2f3cd",
+  "clinicalContentSha256": "5f4ea56c13f2f3cdc77a3efdc2dbe245453b92b77ae6773d1d95625a6b386041",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "class": {
+    "pt": "Agente Alquilante / Antineoplásico e Imunossupressor",
+    "es": "Agente Alquilante / Antineoplásico e Inmunosupresor"
+  },
+  "indications": {
+    "pt": [
+      "Lúpus Eritematoso Sistêmico grave (Nefrite lúpica, neurolúpus)",
+      "Vasculites sistêmicas (Granulomatose com poliangiite)",
+      "Neoplasias (mama, leucemias)"
+    ],
+    "es": [
+      "Lupus Eritematoso Sistémico grave (Nefritis lúpica, neurolupus)",
+      "Vasculitis sistémicas (Granulomatosis con poliangeítis)",
+      "Neoplasias (mama, leucemias)"
+    ]
+  },
+  "commercialNames": {
+    "br": [
+      "Genuxal"
+    ],
+    "ar": [
+      "Endoxan"
+    ]
+  },
+  "presentation": {
+    "pt": [
+      "Drágeas 50 mg",
+      "Frasco-ampola liofilizado 200 mg, 1 g"
+    ],
+    "es": [
+      "Grageas 50 mg",
+      "Vial liofilizado 200 mg, 1 g"
+    ]
+  },
+  "mechanism": {
+    "pt": "Pró-fármaco ativado no fígado (CYP450). Seu metabólito ativo anexa grupos alquil aos pares de bases de DNA (cross-linking de guanina), impedindo a separação e transcrição das fitas de DNA. Causa morte celular drástica de células de proliferação rápida (linfócitos).",
+    "es": "Profármaco activado en el hígado (CYP450). Su metabolito activo anexa grupos alquilo a los pares de bases de ADN (cross-linking de guanina), impidiendo la separación y transcripción de las cadenas de ADN. Causa muerte celular drástica de células de proliferación rápida (linfocitos)."
+  },
+  "dose": {
+    "adult": {
+      "standard": {
+        "pt": "Glomerulonefrite crescêntica/extracapilar: não existe dose IV única universal; o esquema depende da etiologia. Nefrite lúpica proliferativa (classes III/IV) — Euro-Lupus: 500 mg IV a cada 2 semanas por 3 meses (6 doses); NIH: 500 a 1000 mg/m² IV 1 vez ao mês por 6 meses; VO: 1 a 1,5 mg/kg/dia (máx. 150 mg/dia) por 2 a 6 meses. Vasculite ANCA com acometimento renal / glomerulonefrite rapidamente progressiva — IV: 15 mg/kg nas semanas 0, 2, 4, 7, 10 e 13; semanas 16, 19, 21 e 24 se necessário. Redução IV por idade: 12,5 mg/kg aos 60 anos e 10 mg/kg aos 70 anos; reduzir mais 2,5 mg/kg se TFG < 30 mL/min/1,73 m². VO: 2 mg/kg/dia por 3 meses, podendo continuar até 6 meses se houver atividade persistente; 1,5 mg/kg/dia aos 60 anos e 1 mg/kg/dia aos 70 anos; reduzir mais 0,5 mg/kg/dia se TFG < 30 mL/min/1,73 m². Doença anti-MBG (Goodpasture) — VO: 2 a 3 mg/kg/dia por 2 a 3 meses, em associação ao tratamento específico; ajustar para idade e função renal. A experiência com pulsos IV na doença anti-MBG isolada é limitada.",
+        "es": "Glomerulonefritis crescéntica/extracapilar: no existe una dosis IV única universal; el esquema depende de la etiología. Nefritis lúpica proliferativa (clases III/IV) — Euro-Lupus: 500 mg IV cada 2 semanas durante 3 meses (6 dosis); NIH: 500 a 1000 mg/m² IV 1 vez al mes durante 6 meses; VO: 1 a 1,5 mg/kg/día (máx. 150 mg/día) durante 2 a 6 meses. Vasculitis ANCA con compromiso renal / glomerulonefritis rápidamente progresiva — IV: 15 mg/kg en las semanas 0, 2, 4, 7, 10 y 13; semanas 16, 19, 21 y 24 si fuera necesario. Reducción IV por edad: 12,5 mg/kg a los 60 años y 10 mg/kg a los 70 años; reducir 2,5 mg/kg adicionales si TFG < 30 mL/min/1,73 m². VO: 2 mg/kg/día durante 3 meses, pudiendo continuar hasta 6 meses si persiste actividad; 1,5 mg/kg/día a los 60 años y 1 mg/kg/día a los 70 años; reducir 0,5 mg/kg/día adicionales si TFG < 30 mL/min/1,73 m². Enfermedad anti-MBG (Goodpasture) — VO: 2 a 3 mg/kg/día durante 2 a 3 meses, asociado al tratamiento específico; ajustar por edad y función renal. La experiencia con pulsos IV en enfermedad anti-MBG aislada es limitada."
+      }
+    },
+    "pediatric": {
+      "standard": {
+        "pt": "Reumatologia: Pulsos de 500 mg/m² a cada 3 a 4 semanas.",
+        "es": "Reumatología: Pulsos de 500 mg/m² cada 3 a 4 semanas."
+      }
+    }
+  },
+  "administration": {
+    "pt": [
+      "Requer hiperhidratação antes e depois do pulso (para evitar cistite hemorrágica).",
+      "Pode exigir a prescrição do antídoto MESNA concomitante no pulso."
+    ],
+    "es": [
+      "Requiere hiperhidratación antes y después del pulso (para evitar cistitis hemorrágica).",
+      "Puede exigir la prescripción del antídoto MESNA concomitante en el pulso."
+    ]
+  },
+  "renalAdjustment": {
+    "required": true,
+    "message": {
+      "pt": "O ajuste depende da indicação e do protocolo. Na vasculite ANCA: reduzir o pulso IV em 2,5 mg/kg se TFG < 30 mL/min/1,73 m²; no esquema VO, reduzir 0,5 mg/kg/dia. Em insuficiência renal grave e em outras indicações, individualizar conforme protocolo especializado.",
+      "es": "El ajuste depende de la indicación y del protocolo. En vasculitis ANCA: reducir el pulso IV en 2,5 mg/kg si TFG < 30 mL/min/1,73 m²; en el esquema VO, reducir 0,5 mg/kg/día. En insuficiencia renal grave y en otras indicaciones, individualizar según protocolo especializado."
+    }
+  },
+  "hepaticAdjustment": {
+    "required": true,
+    "message": {
+      "pt": "Como é pró-fármaco ativado no fígado, a disfunção grave pode reduzir sua eficácia e aumentar a toxicidade (diminuir dose).",
+      "es": "Como es profármaco activado en el hígado, la disfunción grave puede reducir su eficacia y aumentar la toxicidad (disminuir dosis)."
+    }
+  },
+  "commonAdverseEffects": {
+    "pt": [
+      "Alopecia total (queda de cabelo reversível)",
+      "Náusea e Vômito severos pós-pulso",
+      "Infertilidade amenorreia/azoospermia"
+    ],
+    "es": [
+      "Alopecia total (caída de cabello reversible)",
+      "Náusea y Vómito severos pos-pulso",
+      "Infertilidad amenorrea/azoospermia"
+    ]
+  },
+  "dangerousAdverseEffects": {
+    "pt": [
+      "Cistite Hemorrágica (causada pelo metabólito acroleína)",
+      "Supressão medular letal",
+      "Câncer secundário (especialmente carcinoma de bexiga tardio)",
+      "Cardiotoxicidade em altas doses"
+    ],
+    "es": [
+      "Cistitis Hemorrágica (causada por el metabolito acroleína)",
+      "Supresión medular letal",
+      "Cáncer secundario (especialmente carcinoma de vejiga tardío)",
+      "Cardiotoxicidad en altas dosis"
+    ]
+  },
+  "contraindications": {
+    "absolute": {
+      "pt": [
+        "Gravidez (Teratogênico)",
+        "Infecção grave ativa",
+        "Mielossupressão basal severa",
+        "Cistite hemorrágica prévia severa"
+      ],
+      "es": [
+        "Embarazo (Teratogénico)",
+        "Infección grave activa",
+        "Mielosupresión basal severa",
+        "Cistitis hemorrágica previa severa"
+      ]
+    },
+    "relative": {
+      "pt": [
+        "Desejo reprodutivo (congelar óvulos/espermatozoides antes do uso)"
+      ],
+      "es": [
+        "Deseo reproductivo (congelar óvulos/espermatozoides antes del uso)"
+      ]
+    }
+  },
+  "safetyFlags": {
+    "bleedingRisk": true,
+    "renalHighRisk": false,
+    "hepaticCaution": true,
+    "antidoteAvailable": true,
+    "highAlertMedication": true,
+    "warning": {
+      "pt": "Risco de toxicidade gonadal irreversível (preservação da fertilidade deve ser discutida). O uso do MESNA (protetor vesical) e hidratação vigorosa previne o acúmulo da toxina acroleína na bexiga.",
+      "es": "Riesgo de toxicidad gonadal irreversible (preservación de la fertilidad debe ser discutida). El uso de MESNA (protector vesical) e hidratación vigorosa previene la acumulación de la toxina acroleína en la vejiga."
+    }
+  },
+  "clinicalEnrichment": {
+    "status": "enriched-from-source-module",
+    "sourceModule": "analgesicos.js",
+    "doseOwnerPath": "dose.adult.standard",
+    "references": [
+      "KDIGO 2024 Lupus Nephritis",
+      "KDIGO 2024 ANCA-Associated Vasculitis",
+      "KDIGO 2021 Glomerular Diseases — anti-GBM"
+    ]
+  }
 }

@@ -42,6 +42,9 @@ fi
 
 restore_preserved_ai_drug_data
 
+echo "Aplicando mirrors clínicos persistentes de registros legacy..."
+node scripts/apply-clinical-source-mirrors.mjs
+
 echo "Gerando projeção farmacológica para a IA..."
 node scripts/generate-ai-drug-data.mjs
 
