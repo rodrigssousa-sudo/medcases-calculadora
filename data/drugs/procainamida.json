@@ -1,77 +1,270 @@
 {
-  "id": "procainamida",
   "category": "cardio",
-  "icon": "💊",
+  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "clinicalEnrichment": {
+    "commonAdverseEffects": {
+      "es": [
+        "Hipotensión durante la infusión",
+        "Náuseas",
+        "Mareos",
+        "Rubor",
+        "Bradicardia"
+      ],
+      "pt": [
+        "Hipotensão durante infusão",
+        "Náuseas",
+        "Tontura",
+        "Rubor",
+        "Bradicardia"
+      ]
+    },
+    "contraindications": {
+      "es": {
+        "absolute": [
+          "Bloqueo AV completo sin marcapasos",
+          "Lupus eritematoso sistémico establecido",
+          "Hipersensibilidad a procainamida"
+        ],
+        "relative": [
+          "QT prolongado",
+          "Insuficiencia cardíaca aguda/descompensada",
+          "Hipotensión importante",
+          "Alteraciones de K⁺/Mg²⁺ no corregidas"
+        ]
+      },
+      "pt": {
+        "absolute": [
+          "Bloqueio AV completo sem marcapasso",
+          "Lúpus eritematoso sistêmico estabelecido",
+          "Hipersensibilidade à procainamida"
+        ],
+        "relative": [
+          "QT prolongado",
+          "Insuficiência cardíaca aguda/descompensada",
+          "Hipotensão importante",
+          "Distúrbios de K⁺/Mg²⁺ não corrigidos"
+        ]
+      }
+    },
+    "dangerousAdverseEffects": {
+      "es": [
+        "Torsades de Pointes y proarritmia",
+        "TV/FV",
+        "Agranulocitosis/discrasias sanguíneas",
+        "Lupus inducido por fármacos en uso crónico"
+      ],
+      "pt": [
+        "Torsades de Pointes e pró-arritmia",
+        "TV/FV",
+        "Agranulocitose/discrasias sanguíneas",
+        "Lúpus induzido por fármaco no uso crônico"
+      ]
+    },
+    "doseByIndication": {
+      "es": [
+        {
+          "indication": "Taquicardia estable de QRS ancho / TV monomórfica",
+          "note": "Evitar si hay QT prolongado o insuficiencia cardíaca aguda/descompensada.",
+          "rows": [
+            {
+              "dose": "20–50 mg/min hasta suprimir la arritmia, aparecer hipotensión, aumentar QRS >50% o alcanzar 17 mg/kg.",
+              "label": "Carga IV"
+            },
+            {
+              "dose": "1–4 mg/min IV continuo.",
+              "label": "Mantenimiento"
+            }
+          ]
+        },
+        {
+          "indication": "FA preexcitada (WPW), estable",
+          "note": "Inestabilidad hemodinámica → cardioversión eléctrica; evitar bloqueadores del nodo AV.",
+          "rows": [
+            {
+              "dose": "15–18 mg/kg en 25–30 min, sin exceder 50 mg/min; mantenimiento 1–4 mg/min.",
+              "label": "IV"
+            }
+          ]
+        }
+      ],
+      "pt": [
+        {
+          "indication": "Taquicardia estável de QRS largo / TV monomórfica",
+          "note": "Evitar se QT prolongado ou insuficiência cardíaca aguda/descompensada.",
+          "rows": [
+            {
+              "dose": "20–50 mg/min até suprimir a arritmia, surgir hipotensão, QRS aumentar >50% ou atingir 17 mg/kg.",
+              "label": "Carga IV"
+            },
+            {
+              "dose": "1–4 mg/min IV contínuo.",
+              "label": "Manutenção"
+            }
+          ]
+        },
+        {
+          "indication": "FA pré-excitada (WPW), estável",
+          "note": "Instabilidade hemodinâmica → cardioversão elétrica; evitar bloqueadores do nó AV.",
+          "rows": [
+            {
+              "dose": "15–18 mg/kg em 25–30 min, sem exceder 50 mg/min; manutenção 1–4 mg/min.",
+              "label": "IV"
+            }
+          ]
+        }
+      ]
+    },
+    "indications": {
+      "es": [
+        "Taquicardia ventricular monomórfica estable",
+        "Taquicardia de QRS ancho de origen indeterminado",
+        "FA/flutter con preexcitación (WPW)"
+      ],
+      "pt": [
+        "Taquicardia ventricular monomórfica estável",
+        "Taquicardia de QRS largo de origem indeterminada",
+        "FA/flutter com pré-excitação (WPW)"
+      ]
+    },
+    "references": [
+      "AHA ACLS 2025",
+      "ACC/AHA/ACCP/HRS AF 2023",
+      "DailyMed Procainamide"
+    ]
+  },
   "color": null,
   "colorTxt": null,
-  "pt": {
-    "dose": "Carga: 1050–1260 mg IV a 20–50 mg/min (máx 17 mg/kg)",
-    "doseCarga": "1050–1260 mg IV (15–18 mg/kg) a 20–50 mg/min",
-    "doseInfusao": "1–4 mg/min IV contínuo",
-    "clcrEstimado": "90 mL/min",
-    "apresentacao": "Ampola IV | Comprimidos VO (mercados limitados)",
-    "classe": "Antiarrítmico Classe IA | Bloqueador Na⁺ + K⁺ | t½ 3–5 h (NAPA 6–10 h)",
-    "indicacoes": [
-      "TV estável de QRS largo",
-      "Taquicardia QRS largo indiferenciada",
-      "FA/flutter com pré-excitação (WPW) — fármaco de escolha",
-      "Arritmias ventriculares refratárias"
+  "commonAdverseEffects": {
+    "es": [
+      "Hipotensión durante la infusión",
+      "Náuseas",
+      "Mareos",
+      "Rubor",
+      "Bradicardia"
     ],
-    "ajusteRenal": "ClCr 90 mL/min — dose padrão",
-    "efeitosAdversos": [
-      "Hipotensão durante carga IV",
+    "pt": [
+      "Hipotensão durante infusão",
       "Náuseas",
       "Tontura",
       "Rubor",
-      "Bradicardia",
-      "⚠️ Torsades de Pointes",
-      "⚠️ TV/FV",
-      "⚠️ Lúpus induzido (uso crônico)",
-      "⚠️ Agranulocitose (uso crônico oral)",
-      "⚠️ Choque"
+      "Bradicardia"
+    ]
+  },
+  "contraindications": {
+    "es": {
+      "absolute": [
+        "Bloqueo AV completo sin marcapasos",
+        "Lupus eritematoso sistémico establecido",
+        "Hipersensibilidad a procainamida"
+      ],
+      "relative": [
+        "QT prolongado",
+        "Insuficiencia cardíaca aguda/descompensada",
+        "Hipotensión importante",
+        "Alteraciones de K⁺/Mg²⁺ no corregidas"
+      ]
+    },
+    "pt": {
+      "absolute": [
+        "Bloqueio AV completo sem marcapasso",
+        "Lúpus eritematoso sistêmico estabelecido",
+        "Hipersensibilidade à procainamida"
+      ],
+      "relative": [
+        "QT prolongado",
+        "Insuficiência cardíaca aguda/descompensada",
+        "Hipotensão importante",
+        "Distúrbios de K⁺/Mg²⁺ não corrigidos"
+      ]
+    }
+  },
+  "dangerousAdverseEffects": {
+    "es": [
+      "Torsades de Pointes y proarritmia",
+      "TV/FV",
+      "Agranulocitosis/discrasias sanguíneas",
+      "Lupus inducido por fármacos en uso crónico"
     ],
-    "monitoramento": [
-      "ECG contínuo (QRS + QTc + PR)",
-      "PA a cada 5 min durante carga",
-      "Suspender se QRS >50% ou QTc >500 ms",
-      "K⁺ e Mg²⁺ antes e durante",
-      "Nível sérico procainamida + NAPA (DRC)",
-      "ANC (uso crônico)",
-      "ANA/anti-DNA (lúpus)"
-    ],
-    "refs": [
-      "AHA ACLS Guidelines",
-      "ESC VA Guidelines",
-      "AHA/ACC/HRS AF Guidelines",
-      "Goodman & Gilman",
-      "Lexicomp",
-      "FDA label"
-    ],
-    "alerts": [
+    "pt": [
+      "Torsades de Pointes e pró-arritmia",
+      "TV/FV",
+      "Agranulocitose/discrasias sanguíneas",
+      "Lúpus induzido por fármaco no uso crônico"
+    ]
+  },
+  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
+  "doseByIndication": {
+    "es": [
       {
-        "tipo": "danger",
-        "msg": "📋 SUSPENDER se: QRS alargar >50%, QTc >500 ms, hipotensão grave ou conversão da arritmia."
+        "indication": "Taquicardia estable de QRS ancho / TV monomórfica",
+        "note": "Evitar si hay QT prolongado o insuficiencia cardíaca aguda/descompensada.",
+        "rows": [
+          {
+            "dose": "20–50 mg/min hasta suprimir la arritmia, aparecer hipotensión, aumentar QRS >50% o alcanzar 17 mg/kg.",
+            "label": "Carga IV"
+          },
+          {
+            "dose": "1–4 mg/min IV continuo.",
+            "label": "Mantenimiento"
+          }
+        ]
       },
       {
-        "tipo": "danger",
-        "msg": "📦 BLACK BOX: Risco de Torsades. Lúpus induzido por droga (uso crônico). Agranulocitose (uso crônico oral)."
+        "indication": "FA preexcitada (WPW), estable",
+        "note": "Inestabilidad hemodinámica → cardioversión eléctrica; evitar bloqueadores del nodo AV.",
+        "rows": [
+          {
+            "dose": "15–18 mg/kg en 25–30 min, sin exceder 50 mg/min; mantenimiento 1–4 mg/min.",
+            "label": "IV"
+          }
+        ]
+      }
+    ],
+    "pt": [
+      {
+        "indication": "Taquicardia estável de QRS largo / TV monomórfica",
+        "note": "Evitar se QT prolongado ou insuficiência cardíaca aguda/descompensada.",
+        "rows": [
+          {
+            "dose": "20–50 mg/min até suprimir a arritmia, surgir hipotensão, QRS aumentar >50% ou atingir 17 mg/kg.",
+            "label": "Carga IV"
+          },
+          {
+            "dose": "1–4 mg/min IV contínuo.",
+            "label": "Manutenção"
+          }
+        ]
+      },
+      {
+        "indication": "FA pré-excitada (WPW), estável",
+        "note": "Instabilidade hemodinâmica → cardioversão elétrica; evitar bloqueadores do nó AV.",
+        "rows": [
+          {
+            "dose": "15–18 mg/kg em 25–30 min, sem exceder 50 mg/min; manutenção 1–4 mg/min.",
+            "label": "IV"
+          }
+        ]
       }
     ]
   },
   "es": {
+    "ajusteRenal": "ClCr 90 mL/min — dosis estándar",
+    "alerts": [
+      {
+        "msg": "📋 SUSPENDER si: QRS ensancha >50%, QTc >500 ms, hipotensión grave o conversión de la arritmia.",
+        "tipo": "danger"
+      },
+      {
+        "msg": "📦 BLACK BOX: Riesgo de Torsades. Lupus inducido por fármaco (uso crónico). Agranulocitosis (uso crónico oral).",
+        "tipo": "danger"
+      }
+    ],
+    "apresentacao": "Ampolla IV | Comprimidos VO (mercados limitados)",
+    "classe": "Antiarrítmico Clase IA | Bloqueador Na⁺ + K⁺ | t½ 3–5 h (NAPA 6–10 h)",
+    "clcrEstimado": "90 mL/min",
     "dose": "Carga: 1050–1260 mg IV a 20–50 mg/min (máx 17 mg/kg)",
     "doseCarga": "1050–1260 mg IV (15–18 mg/kg) a 20–50 mg/min",
     "doseInfusao": "1–4 mg/min IV contínuo",
-    "clcrEstimado": "90 mL/min",
-    "apresentacao": "Ampolla IV | Comprimidos VO (mercados limitados)",
-    "classe": "Antiarrítmico Clase IA | Bloqueador Na⁺ + K⁺ | t½ 3–5 h (NAPA 6–10 h)",
-    "indicacoes": [
-      "TV estable de QRS ancho",
-      "Taquicardia QRS ancho indiferenciada",
-      "FA/flutter con preexcitación (WPW) — fármaco de elección",
-      "Arritmias ventriculares refractarias"
-    ],
-    "ajusteRenal": "ClCr 90 mL/min — dosis estándar",
     "efeitosAdversos": [
       "Hipotensión durante carga IV",
       "Náuseas",
@@ -83,6 +276,12 @@
       "⚠️ Lupus inducido (uso crónico)",
       "⚠️ Agranulocitosis (uso crónico oral)",
       "⚠️ Shock"
+    ],
+    "indicacoes": [
+      "TV estable de QRS ancho",
+      "Taquicardia QRS ancho indiferenciada",
+      "FA/flutter con preexcitación (WPW) — fármaco de elección",
+      "Arritmias ventriculares refractarias"
     ],
     "monitoramento": [
       "ECG continuo (QRS + QTc + PR)",
@@ -100,28 +299,89 @@
       "Goodman & Gilman",
       "Lexicomp",
       "FDA label"
-    ],
-    "alerts": [
-      {
-        "tipo": "danger",
-        "msg": "📋 SUSPENDER si: QRS ensancha >50%, QTc >500 ms, hipotensión grave o conversión de la arritmia."
-      },
-      {
-        "tipo": "danger",
-        "msg": "📦 BLACK BOX: Riesgo de Torsades. Lupus inducido por fármaco (uso crónico). Agranulocitosis (uso crónico oral)."
-      }
     ]
   },
-  "name": {
-    "pt": "Procainamida",
-    "es": "Procainamida"
+  "icon": "💊",
+  "id": "procainamida",
+  "indications": {
+    "es": [
+      "Taquicardia ventricular monomórfica estable",
+      "Taquicardia de QRS ancho de origen indeterminado",
+      "FA/flutter con preexcitación (WPW)"
+    ],
+    "pt": [
+      "Taquicardia ventricular monomórfica estável",
+      "Taquicardia de QRS largo de origem indeterminada",
+      "FA/flutter com pré-excitação (WPW)"
+    ]
   },
   "keywords": [
     "procainamida"
   ],
-  "dataVersion": "clinical-data-v1-5f4ea56c13f2f3cd",
-  "clinicalContentSha256": "5f4ea56c13f2f3cdc77a3efdc2dbe245453b92b77ae6773d1d95625a6b386041",
-  "source": "medcases-calculadora",
+  "name": {
+    "es": "Procainamida",
+    "pt": "Procainamida"
+  },
+  "pt": {
+    "ajusteRenal": "ClCr 90 mL/min — dose padrão",
+    "alerts": [
+      {
+        "msg": "📋 SUSPENDER se: QRS alargar >50%, QTc >500 ms, hipotensão grave ou conversão da arritmia.",
+        "tipo": "danger"
+      },
+      {
+        "msg": "📦 BLACK BOX: Risco de Torsades. Lúpus induzido por droga (uso crônico). Agranulocitose (uso crônico oral).",
+        "tipo": "danger"
+      }
+    ],
+    "apresentacao": "Ampola IV | Comprimidos VO (mercados limitados)",
+    "classe": "Antiarrítmico Classe IA | Bloqueador Na⁺ + K⁺ | t½ 3–5 h (NAPA 6–10 h)",
+    "clcrEstimado": "90 mL/min",
+    "dose": "Carga: 1050–1260 mg IV a 20–50 mg/min (máx 17 mg/kg)",
+    "doseCarga": "1050–1260 mg IV (15–18 mg/kg) a 20–50 mg/min",
+    "doseInfusao": "1–4 mg/min IV contínuo",
+    "efeitosAdversos": [
+      "Hipotensão durante carga IV",
+      "Náuseas",
+      "Tontura",
+      "Rubor",
+      "Bradicardia",
+      "⚠️ Torsades de Pointes",
+      "⚠️ TV/FV",
+      "⚠️ Lúpus induzido (uso crônico)",
+      "⚠️ Agranulocitose (uso crônico oral)",
+      "⚠️ Choque"
+    ],
+    "indicacoes": [
+      "TV estável de QRS largo",
+      "Taquicardia QRS largo indiferenciada",
+      "FA/flutter com pré-excitação (WPW) — fármaco de escolha",
+      "Arritmias ventriculares refratárias"
+    ],
+    "monitoramento": [
+      "ECG contínuo (QRS + QTc + PR)",
+      "PA a cada 5 min durante carga",
+      "Suspender se QRS >50% ou QTc >500 ms",
+      "K⁺ e Mg²⁺ antes e durante",
+      "Nível sérico procainamida + NAPA (DRC)",
+      "ANC (uso crônico)",
+      "ANA/anti-DNA (lúpus)"
+    ],
+    "refs": [
+      "AHA ACLS Guidelines",
+      "ESC VA Guidelines",
+      "AHA/ACC/HRS AF Guidelines",
+      "Goodman & Gilman",
+      "Lexicomp",
+      "FDA label"
+    ]
+  },
+  "references": [
+    "AHA ACLS 2025",
+    "ACC/AHA/ACCP/HRS AF 2023",
+    "DailyMed Procainamide"
+  ],
   "schema": "premium-v1",
+  "source": "medcases-calculadora",
   "sourceModule": "cardio.js"
 }

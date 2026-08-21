@@ -1,74 +1,90 @@
 #!/usr/bin/env node
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
+import process from 'node:process';
 import vm from 'node:vm';
-import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const repo = path.resolve(__dirname, '..');
+const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
-function fail(msg) {
-  console.error(`ERRO: ${msg}`);
+function fail(message) {
+  console.error(`ERRO: ${message}`);
   process.exit(1);
 }
 
-function scanBalanced(text, start) {
+function clone(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function stable(value) {
+  if (Array.isArray(value)) return value.map(stable);
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(
+      Object.keys(value).sort().map((key) => [key, stable(value[key])]),
+    );
+  }
+  return value;
+}
+
+function serialize(value) {
+  return `${JSON.stringify(stable(value), null, 2)}\n`;
+}
+
+function scanBalanced(source, start) {
   let depth = 0;
   let state = 'code';
   let quote = null;
-  let esc = false;
+  let escaped = false;
 
-  for (let i = start; i < text.length; i += 1) {
-    const c = text[i];
-    const n = text[i + 1] ?? '';
+  for (let i = start; i < source.length; i += 1) {
+    const ch = source[i];
+    const next = source[i + 1] ?? '';
 
     if (state === 'line') {
-      if (c === '\n') state = 'code';
+      if (ch === '\n') state = 'code';
       continue;
     }
     if (state === 'block') {
-      if (c === '*' && n === '/') {
+      if (ch === '*' && next === '/') {
         state = 'code';
         i += 1;
       }
       continue;
     }
     if (state === 'string') {
-      if (esc) {
-        esc = false;
+      if (escaped) {
+        escaped = false;
         continue;
       }
-      if (c === '\\') {
-        esc = true;
+      if (ch === '\\') {
+        escaped = true;
         continue;
       }
-      if (c === quote) {
+      if (ch === quote) {
         state = 'code';
         quote = null;
       }
       continue;
     }
 
-    if (c === '/' && n === '/') {
+    if (ch === '/' && next === '/') {
       state = 'line';
       i += 1;
       continue;
     }
-    if (c === '/' && n === '*') {
+    if (ch === '/' && next === '*') {
       state = 'block';
       i += 1;
       continue;
     }
-    if (c === "'" || c === '"' || c === '`') {
+    if (ch === "'" || ch === '"' || ch === '`') {
       state = 'string';
-      quote = c;
+      quote = ch;
       continue;
     }
-
-    if (c === '{') depth += 1;
-    if (c === '}') {
+    if (ch === '{') depth += 1;
+    if (ch === '}') {
       depth -= 1;
       if (depth === 0) return i + 1;
     }
@@ -77,55 +93,139 @@ function scanBalanced(text, start) {
   fail('registro clínico não balanceado');
 }
 
-function extractRecord(source) {
-  const re = /["']ciclofosfamida["']\s*:\s*\{/gi;
+function extractRecord(source, id, mode) {
+  const escaped = id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(`["']?${escaped}["']?\\s*:\\s*\\{`, 'gi');
   const candidates = [];
 
   for (const match of source.matchAll(re)) {
     const brace = source.indexOf('{', match.index);
     const end = scanBalanced(source, brace);
     const body = source.slice(brace, end);
+    const hasName = /\bname\s*:/.test(body);
+    const hasClinicalOwner =
+      mode === 'legacy'
+        ? /\b(?:dose|indications|contraindications|mechanism)\s*:/.test(body)
+        : /\bcalculate\s*(?::|\()/.test(body) && /\bclinicalEnrichment\s*:/.test(body);
 
-    if (
-      /\bname\s*:/.test(body) &&
-      /\bdose\s*:/.test(body) &&
-      /\brenalAdjustment\s*:/.test(body)
-    ) {
-      candidates.push(body);
-    }
+    if (hasName && hasClinicalOwner) candidates.push(body);
   }
 
   if (candidates.length !== 1) {
-    fail(`registro Ciclofosfamida ambíguo: ${candidates.length}`);
+    fail(`${id}: owner_count=${candidates.length}`);
   }
-
   return candidates[0];
 }
 
-const sourcePath = path.join(repo, 'database', 'analgesicos.js');
-const drugPath = path.join(repo, 'data', 'drugs', 'ciclofosfamida.json');
-const publicDrugPath = path.join(repo, 'public', 'data', 'drugs', 'ciclofosfamida.json');
+function evaluateRecord(expr, id) {
+  const context = {
+    Math,
+    Number,
+    String,
+    Boolean,
+    Array,
+    Object,
+    JSON,
+    Date,
+    RegExp,
+    parseFloat,
+    parseInt,
+    isNaN,
+    Infinity,
+    NaN,
+    t: (lang, pt, es) =>
+      String(lang ?? 'pt').toLowerCase().startsWith('es') ? es : pt,
+    console: { log() {}, warn() {}, error() {} },
+  };
 
-if (!fs.existsSync(sourcePath)) fail('database/analgesicos.js ausente');
-if (!fs.existsSync(drugPath)) fail('data/drugs/ciclofosfamida.json ausente');
-
-const source = fs.readFileSync(sourcePath, 'utf8');
-const recordExpr = extractRecord(source);
-
-let rich;
-try {
-  rich = vm.runInNewContext(`(${recordExpr})`, Object.create(null), { timeout: 1000 });
-} catch (error) {
-  fail(`não foi possível avaliar registro Ciclofosfamida: ${error.message}`);
+  try {
+    return vm.runInNewContext(`(${expr})`, context, { timeout: 1500 });
+  } catch (error) {
+    fail(`${id}: não foi possível avaliar owner: ${error.message}`);
+  }
 }
 
-const doc = JSON.parse(fs.readFileSync(drugPath, 'utf8'));
+const specs = [
+  {
+    id: 'ciclofosfamida',
+    source: 'database/analgesicos.js',
+    sourceModule: 'analgesicos.js',
+    schema: 'legacy-v1',
+    mode: 'legacy',
+  },
+  {
+    id: 'procainamida',
+    source: 'database/cardio.js',
+    sourceModule: 'cardio.js',
+    schema: 'premium-v1',
+    mode: 'enrichment',
+  },
+  {
+    id: 'atenolol',
+    source: 'database/cardio.js',
+    sourceModule: 'cardio.js',
+    schema: 'premium-v1',
+    mode: 'enrichment',
+  },
+  {
+    id: 'bisoprolol',
+    source: 'database/cardio.js',
+    sourceModule: 'cardio.js',
+    schema: 'premium-v1',
+    mode: 'enrichment',
+  },
+  {
+    id: 'carvedilol',
+    source: 'database/cardio.js',
+    sourceModule: 'cardio.js',
+    schema: 'premium-v1',
+    mode: 'enrichment',
+  },
+  {
+    id: 'dapagliflozina',
+    source: 'database/cardio.js',
+    sourceModule: 'cardio.js',
+    schema: 'premium-v1',
+    mode: 'enrichment',
+  },
+  {
+    id: 'acetazolamida',
+    source: 'database/cardio.js',
+    sourceModule: 'cardio.js',
+    schema: 'premium-v1',
+    mode: 'enrichment',
+  },
+  {
+    id: 'bumetanida',
+    source: 'database/cardio.js',
+    sourceModule: 'cardio.js',
+    schema: 'premium-v1',
+    mode: 'enrichment',
+  },
+  {
+    id: 'amilorida',
+    source: 'database/cardio.js',
+    sourceModule: 'cardio.js',
+    schema: 'premium-v1',
+    mode: 'enrichment',
+  },
+  {
+    id: 'candesartana',
+    source: 'database/cardio.js',
+    sourceModule: 'cardio.js',
+    schema: 'premium-v1',
+    mode: 'enrichment',
+  },
+  {
+    id: 'carbamazepina',
+    source: 'database/neurologia.js',
+    sourceModule: 'neurologia.js',
+    schema: 'premium-v1',
+    mode: 'enrichment',
+  },
+];
 
-if (doc.id !== 'ciclofosfamida') fail('id canônico divergente');
-if (doc.sourceModule !== 'analgesicos.js') fail('sourceModule canônico divergente');
-if (doc.schema !== 'legacy-v1') fail(`schema inesperado: ${doc.schema}`);
-
-const mirroredFields = [
+const legacyFields = [
   'class',
   'indications',
   'commercialNames',
@@ -141,40 +241,86 @@ const mirroredFields = [
   'safetyFlags',
 ];
 
-for (const field of mirroredFields) {
-  if (!(field in rich)) fail(`campo fonte ausente: ${field}`);
-  doc[field] = JSON.parse(JSON.stringify(rich[field]));
+const batchMirroredTopLevel = [
+  'doseByIndication',
+  'indications',
+  'commonAdverseEffects',
+  'dangerousAdverseEffects',
+  'contraindications',
+  'references',
+  'doseOverride',
+];
+
+const mirrored = [];
+
+for (const spec of specs) {
+  const sourcePath = path.join(repo, spec.source);
+  const drugPath = path.join(repo, 'data', 'drugs', `${spec.id}.json`);
+  const publicDrugPath = path.join(repo, 'public', 'data', 'drugs', `${spec.id}.json`);
+
+  if (!fs.existsSync(sourcePath)) fail(`${spec.id}: source ausente`);
+  if (!fs.existsSync(drugPath)) fail(`${spec.id}: canonical ausente`);
+
+  const source = fs.readFileSync(sourcePath, 'utf8');
+  const expr = extractRecord(source, spec.id, spec.mode);
+  const rich = evaluateRecord(expr, spec.id);
+  const doc = JSON.parse(fs.readFileSync(drugPath, 'utf8'));
+
+  if (doc.id !== spec.id) fail(`${spec.id}: id canônico divergente`);
+  if (doc.sourceModule !== spec.sourceModule) {
+    fail(`${spec.id}: sourceModule divergente: ${String(doc.sourceModule)}`);
+  }
+  if (doc.schema !== spec.schema) {
+    fail(`${spec.id}: schema inesperado: ${String(doc.schema)}`);
+  }
+
+  if (spec.mode === 'legacy') {
+    for (const field of legacyFields) {
+      if (!(field in rich)) fail(`${spec.id}: campo fonte ausente: ${field}`);
+      doc[field] = clone(rich[field]);
+    }
+    doc.clinicalEnrichment = {
+      status: 'enriched-from-source-module',
+      sourceModule: 'analgesicos.js',
+      doseOwnerPath: 'dose.adult.standard',
+      references: [
+        'KDIGO 2024 Lupus Nephritis',
+        'KDIGO 2024 ANCA-Associated Vasculitis',
+        'KDIGO 2021 Glomerular Diseases — anti-GBM',
+      ],
+    };
+  } else {
+    const ce = rich.clinicalEnrichment;
+    if (!ce || typeof ce !== 'object') {
+      fail(`${spec.id}: clinicalEnrichment ausente no owner`);
+    }
+    if (!ce.doseByIndication) {
+      fail(`${spec.id}: clinicalEnrichment.doseByIndication ausente`);
+    }
+
+    doc.clinicalEnrichment = clone(ce);
+
+    for (const field of batchMirroredTopLevel) {
+      if (ce[field] !== undefined) {
+        doc[field] = clone(ce[field]);
+      } else if (field === 'indications' && rich.indications !== undefined) {
+        doc[field] = clone(rich.indications);
+      }
+    }
+  }
+
+  const text = serialize(doc);
+  fs.writeFileSync(drugPath, text, 'utf8');
+  fs.mkdirSync(path.dirname(publicDrugPath), { recursive: true });
+  fs.writeFileSync(publicDrugPath, text, 'utf8');
+
+  const digest = crypto.createHash('sha256').update(text).digest('hex');
+  mirrored.push({ id: spec.id, schema: spec.schema, sourceModule: spec.sourceModule, sha256: digest });
+  console.log(`MIRRORED_DRUG=${spec.id}`);
+  console.log(`MIRRORED_SCHEMA=${spec.schema}`);
+  console.log(`MIRRORED_SHA256=${digest}`);
 }
 
-doc.clinicalEnrichment = {
-  status: 'enriched-from-source-module',
-  sourceModule: 'analgesicos.js',
-  doseOwnerPath: 'dose.adult.standard',
-  references: [
-    'KDIGO 2024 Lupus Nephritis',
-    'KDIGO 2024 ANCA-Associated Vasculitis',
-    'KDIGO 2021 Glomerular Diseases — anti-GBM',
-  ],
-};
-
-const serialized = `${JSON.stringify(doc, null, 2)}\n`;
-
-for (const token of [
-  'Euro-Lupus',
-  '500 a 1000 mg/m² IV 1 vez ao mês por 6 meses',
-  '15 mg/kg nas semanas 0, 2, 4, 7, 10 e 13',
-  'Doença anti-MBG (Goodpasture)',
-  'Enfermedad anti-MBG (Goodpasture)',
-]) {
-  if (!serialized.includes(token)) fail(`token clínico ausente após mirror: ${token}`);
-}
-
-fs.writeFileSync(drugPath, serialized, 'utf8');
-fs.mkdirSync(path.dirname(publicDrugPath), { recursive: true });
-fs.writeFileSync(publicDrugPath, serialized, 'utf8');
-
-const digest = crypto.createHash('sha256').update(serialized).digest('hex');
 console.log('CLINICAL_SOURCE_MIRROR=PASS');
-console.log('MIRRORED_DRUG=ciclofosfamida');
-console.log(`MIRRORED_FIELDS=${mirroredFields.join(',')}`);
-console.log(`CANONICAL_CICLOFOSFAMIDA_SHA256=${digest}`);
+console.log(`MIRRORED_DRUG_COUNT=${mirrored.length}`);
+console.log(`BATCH1_MIRRORED_COUNT=${mirrored.filter((x) => x.schema === 'premium-v1').length}`);

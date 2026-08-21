@@ -42,7 +42,7 @@ fi
 
 restore_preserved_ai_drug_data
 
-echo "Aplicando mirrors clínicos persistentes de registros legacy..."
+echo "Aplicando mirrors clínicos persistentes de registros enriquecidos..."
 node scripts/apply-clinical-source-mirrors.mjs
 
 echo "Gerando projeção farmacológica para a IA..."
@@ -122,5 +122,19 @@ echo "BUILD_AI_DRUG_DATA_PASS"
 
 echo "Publicando projeção farmacológica versionada..."
 node scripts/publish-ai-drug-data.mjs
+
+echo "Sincronizando projeção farmacológica versionada para public..."
+rm -rf "$REPO/public/data/ai-drug-data"
+mkdir -p "$REPO/public/data"
+cp -R "$REPO/data/ai-drug-data" "$REPO/public/data/ai-drug-data"
+
+cmp -s \
+  "$REPO/data/ai-drug-data/current.json" \
+  "$REPO/public/data/ai-drug-data/current.json" || {
+    echo "ERRO: current.json AI sem paridade root/public."
+    exit 1
+  }
+
+echo "PUBLIC_AI_DRUG_DATA_MIRROR_PASS"
 
 echo "PUBLICATION_AI_DRUG_DATA_PASS"

@@ -1,152 +1,184 @@
 {
-  "id": "carbamazepina",
   "category": "estabilizador_humor",
-  "icon": "💊",
-  "color": null,
-  "colorTxt": null,
-  "pt": {
-    "name": "Carbamazepina",
-    "class": "Estabilizador do humor e anticonvulsivante",
-    "category": "estabilizador_humor",
-    "commercialNames": {
-      "br": [
-        "Tegretol",
-        "Tegretol CR",
-        "Carbamazepina EMS"
+  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "clinicalEnrichment": {
+    "doseByIndication": {
+      "es": [
+        {
+          "indication": "Epilepsia — adultos y >12 años",
+          "rows": [
+            {
+              "dose": "200 mg VO cada 12 h (400 mg/día).",
+              "label": "Inicial"
+            },
+            {
+              "dose": "Aumentar hasta 200 mg/día a intervalos semanales.",
+              "label": "Titulación"
+            },
+            {
+              "dose": "1200 mg/día en >15 años; hasta 1600 mg/día en adultos, rara vez.",
+              "label": "Máximo"
+            }
+          ]
+        },
+        {
+          "indication": "Neuralgia del trigémino",
+          "rows": [
+            {
+              "dose": "100 mg VO cada 12 h.",
+              "label": "Inicial"
+            },
+            {
+              "dose": "Aumentar hasta 200 mg/día en incrementos de 100 mg cada 12 h.",
+              "label": "Titulación"
+            },
+            {
+              "dose": "400–800 mg/día; máximo 1200 mg/día.",
+              "label": "Mantenimiento"
+            }
+          ]
+        }
       ],
-      "ar": [
-        "Tegretol",
-        "Carbamazepina Gador",
-        "Carbamazepina Denver Farma"
+      "pt": [
+        {
+          "indication": "Epilepsia — adultos e >12 anos",
+          "rows": [
+            {
+              "dose": "200 mg VO 12/12h (400 mg/dia).",
+              "label": "Inicial"
+            },
+            {
+              "dose": "Aumentar até 200 mg/dia em intervalos semanais.",
+              "label": "Titulação"
+            },
+            {
+              "dose": "1200 mg/dia em >15 anos; até 1600 mg/dia em adultos, raramente.",
+              "label": "Máximo"
+            }
+          ]
+        },
+        {
+          "indication": "Neuralgia do trigêmeo",
+          "rows": [
+            {
+              "dose": "100 mg VO 12/12h.",
+              "label": "Inicial"
+            },
+            {
+              "dose": "Aumentar até 200 mg/dia em incrementos de 100 mg a cada 12 h.",
+              "label": "Titulação"
+            },
+            {
+              "dose": "400–800 mg/dia; máximo 1200 mg/dia.",
+              "label": "Manutenção"
+            }
+          ]
+        }
       ]
     },
-    "presentation": [
-      "Comprimido 200 mg",
-      "Comprimido 400 mg CR",
-      "Suspensão oral 100 mg/5 mL"
+    "references": [
+      "DailyMed Carbamazepine"
+    ]
+  },
+  "color": null,
+  "colorTxt": null,
+  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
+  "doseByIndication": {
+    "es": [
+      {
+        "indication": "Epilepsia — adultos y >12 años",
+        "rows": [
+          {
+            "dose": "200 mg VO cada 12 h (400 mg/día).",
+            "label": "Inicial"
+          },
+          {
+            "dose": "Aumentar hasta 200 mg/día a intervalos semanales.",
+            "label": "Titulación"
+          },
+          {
+            "dose": "1200 mg/día en >15 años; hasta 1600 mg/día en adultos, rara vez.",
+            "label": "Máximo"
+          }
+        ]
+      },
+      {
+        "indication": "Neuralgia del trigémino",
+        "rows": [
+          {
+            "dose": "100 mg VO cada 12 h.",
+            "label": "Inicial"
+          },
+          {
+            "dose": "Aumentar hasta 200 mg/día en incrementos de 100 mg cada 12 h.",
+            "label": "Titulación"
+          },
+          {
+            "dose": "400–800 mg/día; máximo 1200 mg/día.",
+            "label": "Mantenimiento"
+          }
+        ]
+      }
     ],
-    "dose": {
-      "adulto": "Bipolar/epilepsia: iniciar 100–200 mg VO 1–2x/dia; titular gradualmente.",
-      "manutencao": "Dose usual: 400–1200 mg/dia em 2–4 tomadas.",
-      "alvoSerico": "Nível sérico usual: 4–12 mcg/mL.",
-      "maxDose": "Dose máxima usual: 1600 mg/dia em adultos selecionados."
-    },
-    "doseKg": {
-      "standard": "Adultos: geralmente não se calcula por kg.",
-      "pediatric": "Pediatria/epilepsia: ajustar por peso e nível sérico conforme protocolo.",
-      "maxDose": "1600 mg/dia"
-    },
-    "indications": [
-      "Transtorno bipolar — mania aguda",
-      "Manutenção do transtorno bipolar em casos selecionados",
-      "Epilepsia focal",
-      "Crises tônico-clônicas generalizadas",
-      "Neuralgia do trigêmeo",
-      "Neuralgia glossofaríngea",
-      "Impulsividade/agressividade em casos selecionados"
-    ],
-    "renalAdjustment": "Sem ajuste renal habitual, mas monitorar sódio e toxicidade em pacientes frágeis.",
-    "hepaticAdjustment": "Monitorar função hepática periodicamente.",
-    "mechanism": "Bloqueia canais de sódio voltagem-dependentes, reduzindo descargas neuronais repetitivas; potente indutor enzimático.",
-    "onset": "Efeito antimaníaco pode surgir em dias a 1–2 semanas; autoindução reduz níveis após semanas.",
-    "halfLife": "Vida média inicial 25–65 h; após autoindução pode cair para 12–17 h.",
-    "commonAdverseEffects": [
-      "Tontura",
-      "Sonolência",
-      "Diplopia",
-      "Ataxia",
-      "Náuseas",
-      "Hiponatremia",
-      "Rash cutâneo"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome de Stevens-Johnson/necrólise epidérmica tóxica",
-      "Agranulocitose",
-      "Anemia aplásica",
-      "Hepatotoxicidade",
-      "Hiponatremia grave/SIADH",
-      "Pancreatite rara",
-      "Ideação suicida"
-    ],
-    "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade à carbamazepina ou tricíclicos",
-      "História de depressão medular",
-      "Uso concomitante com IMAO",
-      "Porfiria hepática",
-      "História de SJS/TEN associada à carbamazepina"
-    ],
-    "interactions": [
-      "Anticoncepcionais hormonais: reduz eficácia",
-      "Varfarina/DOACs: pode reduzir anticoagulação",
-      "Lamotrigina, valproato, fenitoína: interações bidirecionais",
-      "Macrolídeos/azólicos: aumentam níveis e toxicidade",
-      "Lítio e antipsicóticos: possível neurotoxicidade",
-      "Álcool e sedativos: maior depressão do SNC"
-    ],
-    "alerts": [
-      "Solicitar hemograma, TGO/TGP, sódio e nível sérico conforme necessidade.",
-      "Considerar HLA-B*1502 em populações asiáticas de risco antes de iniciar.",
-      "Suspender e avaliar se rash, febre, lesões mucosas ou sintomas sistêmicos.",
-      "Atenção extrema às interações por indução enzimática.",
-      "Pode reduzir eficácia de anticoncepcionais hormonais."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Carbamazepine Prescribing Information",
-      "CANMAT Bipolar Guidelines",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "pt": [
+      {
+        "indication": "Epilepsia — adultos e >12 anos",
+        "rows": [
+          {
+            "dose": "200 mg VO 12/12h (400 mg/dia).",
+            "label": "Inicial"
+          },
+          {
+            "dose": "Aumentar até 200 mg/dia em intervalos semanais.",
+            "label": "Titulação"
+          },
+          {
+            "dose": "1200 mg/dia em >15 anos; até 1600 mg/dia em adultos, raramente.",
+            "label": "Máximo"
+          }
+        ]
+      },
+      {
+        "indication": "Neuralgia do trigêmeo",
+        "rows": [
+          {
+            "dose": "100 mg VO 12/12h.",
+            "label": "Inicial"
+          },
+          {
+            "dose": "Aumentar até 200 mg/dia em incrementos de 100 mg a cada 12 h.",
+            "label": "Titulação"
+          },
+          {
+            "dose": "400–800 mg/dia; máximo 1200 mg/dia.",
+            "label": "Manutenção"
+          }
+        ]
+      }
     ]
   },
   "es": {
-    "name": "Carbamazepina",
-    "class": "Estabilizador del ánimo y anticonvulsivante",
+    "alerts": [
+      "Solicitar hemograma, TGO/TGP, sodio y nivel sérico según necesidad.",
+      "Considerar HLA-B*1502 en poblaciones asiáticas de riesgo antes de iniciar.",
+      "Suspender y evaluar si rash, fiebre, lesiones mucosas o síntomas sistémicos.",
+      "Atención extrema a interacciones por inducción enzimática.",
+      "Puede reducir eficacia de anticonceptivos hormonales."
+    ],
     "category": "estabilizador_humor",
+    "class": "Estabilizador del ánimo y anticonvulsivante",
     "commercialNames": {
-      "br": [
-        "Tegretol",
-        "Tegretol CR",
-        "Carbamazepina EMS"
-      ],
       "ar": [
         "Tegretol",
         "Carbamazepina Gador",
         "Carbamazepina Denver Farma"
+      ],
+      "br": [
+        "Tegretol",
+        "Tegretol CR",
+        "Carbamazepina EMS"
       ]
     },
-    "presentation": [
-      "Comprimido 200 mg",
-      "Comprimido 400 mg LP",
-      "Suspensión oral 100 mg/5 mL"
-    ],
-    "dose": {
-      "adulto": "Bipolar/epilepsia: iniciar 100–200 mg VO 1–2 veces/día; titular gradualmente.",
-      "manutencao": "Dosis habitual: 400–1200 mg/día en 2–4 tomas.",
-      "alvoSerico": "Nivel sérico habitual: 4–12 mcg/mL.",
-      "maxDose": "Dosis máxima habitual: 1600 mg/día en adultos seleccionados."
-    },
-    "doseKg": {
-      "standard": "Adultos: generalmente no se calcula por kg.",
-      "pediatric": "Pediatría/epilepsia: ajustar por peso y nivel sérico según protocolo.",
-      "maxDose": "1600 mg/día"
-    },
-    "indications": [
-      "Trastorno bipolar — manía aguda",
-      "Mantenimiento del trastorno bipolar en casos seleccionados",
-      "Epilepsia focal",
-      "Crisis tónico-clónicas generalizadas",
-      "Neuralgia del trigémino",
-      "Neuralgia glosofaríngea",
-      "Impulsividad/agresividad en casos seleccionados"
-    ],
-    "renalAdjustment": "Sin ajuste renal habitual, pero monitorizar sodio y toxicidad en pacientes frágiles.",
-    "hepaticAdjustment": "Monitorizar función hepática periódicamente.",
-    "mechanism": "Bloquea canales de sodio voltaje-dependientes, reduciendo descargas neuronales repetitivas; potente inductor enzimático.",
-    "onset": "Efecto antimaníaco puede aparecer en días a 1–2 semanas; autoinducción reduce niveles tras semanas.",
-    "halfLife": "Vida media inicial 25–65 h; tras autoinducción puede caer a 12–17 h.",
     "commonAdverseEffects": [
       "Mareos",
       "Somnolencia",
@@ -155,6 +187,13 @@
       "Náuseas",
       "Hiponatremia",
       "Rash cutáneo"
+    ],
+    "contraindications": [
+      "Hipersensibilidad a carbamazepina o tricíclicos",
+      "Antecedente de depresión medular",
+      "Uso concomitante con IMAO",
+      "Porfiria hepática",
+      "Antecedente de SJS/TEN asociada a carbamazepina"
     ],
     "dangerousAdverseEffects": [
       "Síndrome de Stevens-Johnson/necrólisis epidérmica tóxica",
@@ -165,13 +204,27 @@
       "Pancreatitis rara",
       "Ideación suicida"
     ],
-    "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a carbamazepina o tricíclicos",
-      "Antecedente de depresión medular",
-      "Uso concomitante con IMAO",
-      "Porfiria hepática",
-      "Antecedente de SJS/TEN asociada a carbamazepina"
+    "dose": {
+      "adulto": "Bipolar/epilepsia: iniciar 100–200 mg VO 1–2 veces/día; titular gradualmente.",
+      "alvoSerico": "Nivel sérico habitual: 4–12 mcg/mL.",
+      "manutencao": "Dosis habitual: 400–1200 mg/día en 2–4 tomas.",
+      "maxDose": "Dosis máxima habitual: 1600 mg/día en adultos seleccionados."
+    },
+    "doseKg": {
+      "maxDose": "1600 mg/día",
+      "pediatric": "Pediatría/epilepsia: ajustar por peso y nivel sérico según protocolo.",
+      "standard": "Adultos: generalmente no se calcula por kg."
+    },
+    "halfLife": "Vida media inicial 25–65 h; tras autoinducción puede caer a 12–17 h.",
+    "hepaticAdjustment": "Monitorizar función hepática periódicamente.",
+    "indications": [
+      "Trastorno bipolar — manía aguda",
+      "Mantenimiento del trastorno bipolar en casos seleccionados",
+      "Epilepsia focal",
+      "Crisis tónico-clónicas generalizadas",
+      "Neuralgia del trigémino",
+      "Neuralgia glosofaríngea",
+      "Impulsividad/agresividad en casos seleccionados"
     ],
     "interactions": [
       "Anticonceptivos hormonales: reduce eficacia",
@@ -181,12 +234,13 @@
       "Litio y antipsicóticos: posible neurotoxicidad",
       "Alcohol y sedantes: mayor depresión del SNC"
     ],
-    "alerts": [
-      "Solicitar hemograma, TGO/TGP, sodio y nivel sérico según necesidad.",
-      "Considerar HLA-B*1502 en poblaciones asiáticas de riesgo antes de iniciar.",
-      "Suspender y evaluar si rash, fiebre, lesiones mucosas o síntomas sistémicos.",
-      "Atención extrema a interacciones por inducción enzimática.",
-      "Puede reducir eficacia de anticonceptivos hormonales."
+    "mechanism": "Bloquea canales de sodio voltaje-dependientes, reduciendo descargas neuronales repetitivas; potente inductor enzimático.",
+    "name": "Carbamazepina",
+    "onset": "Efecto antimaníaco puede aparecer en días a 1–2 semanas; autoinducción reduce niveles tras semanas.",
+    "presentation": [
+      "Comprimido 200 mg",
+      "Comprimido 400 mg LP",
+      "Suspensión oral 100 mg/5 mL"
     ],
     "ref": [
       "Goodman & Gilman 14ª Ed.",
@@ -196,12 +250,12 @@
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "renalAdjustment": "Sin ajuste renal habitual, pero monitorizar sodio y toxicidad en pacientes frágiles.",
+    "risksByPatient": []
   },
-  "name": {
-    "pt": "Carbamazepina",
-    "es": "Carbamazepina"
-  },
+  "icon": "💊",
+  "id": "carbamazepina",
   "keywords": [
     "carbamazepina",
     "tegretol",
@@ -211,9 +265,111 @@
     "carbamazepina denver farma",
     "estabilizador do humor e anticonvulsivante"
   ],
-  "dataVersion": "clinical-data-v1-5f4ea56c13f2f3cd",
-  "clinicalContentSha256": "5f4ea56c13f2f3cdc77a3efdc2dbe245453b92b77ae6773d1d95625a6b386041",
-  "source": "medcases-calculadora",
+  "name": {
+    "es": "Carbamazepina",
+    "pt": "Carbamazepina"
+  },
+  "pt": {
+    "alerts": [
+      "Solicitar hemograma, TGO/TGP, sódio e nível sérico conforme necessidade.",
+      "Considerar HLA-B*1502 em populações asiáticas de risco antes de iniciar.",
+      "Suspender e avaliar se rash, febre, lesões mucosas ou sintomas sistêmicos.",
+      "Atenção extrema às interações por indução enzimática.",
+      "Pode reduzir eficácia de anticoncepcionais hormonais."
+    ],
+    "category": "estabilizador_humor",
+    "class": "Estabilizador do humor e anticonvulsivante",
+    "commercialNames": {
+      "ar": [
+        "Tegretol",
+        "Carbamazepina Gador",
+        "Carbamazepina Denver Farma"
+      ],
+      "br": [
+        "Tegretol",
+        "Tegretol CR",
+        "Carbamazepina EMS"
+      ]
+    },
+    "commonAdverseEffects": [
+      "Tontura",
+      "Sonolência",
+      "Diplopia",
+      "Ataxia",
+      "Náuseas",
+      "Hiponatremia",
+      "Rash cutâneo"
+    ],
+    "contraindications": [
+      "Hipersensibilidade à carbamazepina ou tricíclicos",
+      "História de depressão medular",
+      "Uso concomitante com IMAO",
+      "Porfiria hepática",
+      "História de SJS/TEN associada à carbamazepina"
+    ],
+    "dangerousAdverseEffects": [
+      "Síndrome de Stevens-Johnson/necrólise epidérmica tóxica",
+      "Agranulocitose",
+      "Anemia aplásica",
+      "Hepatotoxicidade",
+      "Hiponatremia grave/SIADH",
+      "Pancreatite rara",
+      "Ideação suicida"
+    ],
+    "dose": {
+      "adulto": "Bipolar/epilepsia: iniciar 100–200 mg VO 1–2x/dia; titular gradualmente.",
+      "alvoSerico": "Nível sérico usual: 4–12 mcg/mL.",
+      "manutencao": "Dose usual: 400–1200 mg/dia em 2–4 tomadas.",
+      "maxDose": "Dose máxima usual: 1600 mg/dia em adultos selecionados."
+    },
+    "doseKg": {
+      "maxDose": "1600 mg/dia",
+      "pediatric": "Pediatria/epilepsia: ajustar por peso e nível sérico conforme protocolo.",
+      "standard": "Adultos: geralmente não se calcula por kg."
+    },
+    "halfLife": "Vida média inicial 25–65 h; após autoindução pode cair para 12–17 h.",
+    "hepaticAdjustment": "Monitorar função hepática periodicamente.",
+    "indications": [
+      "Transtorno bipolar — mania aguda",
+      "Manutenção do transtorno bipolar em casos selecionados",
+      "Epilepsia focal",
+      "Crises tônico-clônicas generalizadas",
+      "Neuralgia do trigêmeo",
+      "Neuralgia glossofaríngea",
+      "Impulsividade/agressividade em casos selecionados"
+    ],
+    "interactions": [
+      "Anticoncepcionais hormonais: reduz eficácia",
+      "Varfarina/DOACs: pode reduzir anticoagulação",
+      "Lamotrigina, valproato, fenitoína: interações bidirecionais",
+      "Macrolídeos/azólicos: aumentam níveis e toxicidade",
+      "Lítio e antipsicóticos: possível neurotoxicidade",
+      "Álcool e sedativos: maior depressão do SNC"
+    ],
+    "mechanism": "Bloqueia canais de sódio voltagem-dependentes, reduzindo descargas neuronais repetitivas; potente indutor enzimático.",
+    "name": "Carbamazepina",
+    "onset": "Efeito antimaníaco pode surgir em dias a 1–2 semanas; autoindução reduz níveis após semanas.",
+    "presentation": [
+      "Comprimido 200 mg",
+      "Comprimido 400 mg CR",
+      "Suspensão oral 100 mg/5 mL"
+    ],
+    "ref": [
+      "Goodman & Gilman 14ª Ed.",
+      "Stahl's Essential Psychopharmacology",
+      "FDA/DailyMed Carbamazepine Prescribing Information",
+      "CANMAT Bipolar Guidelines",
+      "Lexicomp",
+      "Micromedex",
+      "UpToDate"
+    ],
+    "renalAdjustment": "Sem ajuste renal habitual, mas monitorar sódio e toxicidade em pacientes frágeis.",
+    "risksByPatient": []
+  },
+  "references": [
+    "DailyMed Carbamazepine"
+  ],
   "schema": "premium-v1",
+  "source": "medcases-calculadora",
   "sourceModule": "neurologia.js"
 }

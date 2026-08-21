@@ -1,161 +1,143 @@
 {
-  "id": "bumetanida",
   "category": "cardio",
-  "icon": "💊",
-  "color": "rgba(59,130,246,0.10)",
-  "colorTxt": "#1E3A5F",
-  "pt": {
-    "name": "Bumetanida",
-    "class": "Diurético de alça — Inibidor do cotransportador Na+/K+/2Cl- (NKCC2) · Alternativa à furosemida",
-    "commercialNames": {
-      "br": [
-        "Burinax",
-        "Bumetanida genérica"
-      ],
-      "ar": [
-        "Bumetanida genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 1 mg",
-      "Ampolas IV/IM 0,5 mg/mL"
-    ],
-    "dose": {
-      "adultoPadrao": "0,5–1 mg VO/IV 1–2x/dia; ajustar conforme resposta diurética. Equivalência: 1 mg bumetanida ≈ 40 mg furosemida.",
-      "adultoGrave": "IC avançada ou resistência à furosemida: 1–2 mg IV, repetir conforme necessário. Máx 10 mg/dia em ambiente monitorizado.",
-      "pediatricaPadrao": "Uso pediátrico off-label. Consultar protocolo institucional e especialista.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": null,
-      "grave": null,
-      "meningite": null,
-      "doseMaxima": "10 mg/dia em ambiente monitorizado. Equivalência: 1 mg ≈ 40 mg furosemida VO/IV."
-    },
-    "therapeuticRange": "Redução de congestão; balanço hídrico negativo quando indicado; resposta diurética adequada",
-    "dilution": "IV: pode ser administrado sem diluição ou diluído em SF 0,9%. Não usar SG5% (instabilidade). Administrar lentamente.",
-    "speed": "Administrar bólus IV lentamente (1–2 min). Reavaliação de resposta diurética em 30–60 min após dose IV.",
-    "commonAdverseEffects": [
-      "Poliúria",
-      "Tontura",
-      "Hipotensão",
-      "Hipocalemia",
-      "Hipomagnesemia",
-      "Hiponatremia",
-      "Aumento de creatinina",
-      "Cãibras musculares"
-    ],
-    "dangerousAdverseEffects": [
-      "Desidratação grave",
-      "Lesão renal aguda",
-      "Hipocalemia grave com arritmias",
-      "Hiponatremia grave",
-      "Ototoxicidade (rara — doses altas IV)",
-      "Alcalose metabólica",
-      "Encefalopatia hepática em cirrose vulnerável"
-    ],
-    "risksByPatient": [],
-    "alerts": [
-      "Equivalência: 1 mg bumetanida ≈ 40 mg furosemida VO/IV — atenção ao converter doses.",
-      "Interações graves: digoxina (hipocalemia amplifica toxicidade); aminoglicosídeos (ototoxicidade/hipocalemia); lítio (toxicidade).",
-      "AINEs reduzem efeito diurético e aumentam risco de lesão renal — evitar associação.",
-      "Cirrose: cautela — risco de hipovolemia, encefalopatia hepática e síndrome hepatorrenal."
-    ],
-    "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Sem ajuste renal obrigatório em ClCr ≥ 30 mL/min. Monitorar eletrólitos e função renal.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "0,5–1 mg",
-          "intervalo": "1–2x/dia",
-          "doseMaxima": "10 mg/dia (amb. monitorizado)",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "0,5–1 mg",
-          "intervalo": "Bólus IV conforme resposta",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Dose habitual. Monitorar eletrólitos periodicamente."
+  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "clinicalEnrichment": {
+    "contraindications": {
+      "es": {
+        "absolute": [
+          "Anuria",
+          "Coma hepático",
+          "Depleción electrolítica grave hasta su corrección"
+        ],
+        "relative": [
+          "Enfermedad renal progresiva con aumento importante de urea/creatinina u oliguria durante el tratamiento"
+        ]
       },
-      "fg30a50": {
-        "vo": {
-          "dose": "1–2 mg",
-          "intervalo": "1–2x/dia",
-          "doseMaxima": "4 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 mg",
-          "intervalo": "Conforme resposta diurética",
-          "doseMaxima": "4 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "DRC moderada: pode requerer doses levemente maiores. Monitorar função renal, K⁺, Mg²⁺ e Na⁺."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2–4 mg",
-          "intervalo": "1–2x/dia (titulada)",
-          "doseMaxima": "8 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 mg",
-          "intervalo": "Ou infusão conforme necessidade",
-          "doseMaxima": "8 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "DRC grave: doses escaladas por resistência diurética. Monitoração intensiva obrigatória."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2–4 mg",
-          "intervalo": "Individualizado (se diurese residual)",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "DRC muito grave: resistência diurética extrema. Avaliar terapia de substituição renal."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "1 mg",
-          "intervalo": "Se diurese residual presente",
-          "doseMaxima": "Conforme resposta",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Bumetanida é parcialmente removida por hemodiálise. Em pacientes anúricos, raramente eficaz. Manter apenas com diurese residual documentada."
+      "pt": {
+        "absolute": [
+          "Anúria",
+          "Coma hepático",
+          "Depleção eletrolítica grave até correção"
+        ],
+        "relative": [
+          "Doença renal progressiva com aumento importante de ureia/creatinina ou oligúria durante o tratamento"
+        ]
       }
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "electrolyteRisk": true,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "ototoxicityRisk": true,
-      "pregnancyCaution": true,
-      "warning": "Bumetanida é diurético de alça potente (1 mg ≈ 40 mg furosemida). Atenção a hipovolemia, lesão renal aguda, hipocalemia, hiponatremia e conversão correta de dose ao substituir furosemida."
+    "doseByIndication": {
+      "es": [
+        {
+          "indication": "Edema — IC, enfermedad renal o hepática",
+          "rows": [
+            {
+              "dose": "0,5–2 mg/día, generalmente en dosis única.",
+              "label": "VO"
+            },
+            {
+              "dose": "Si la respuesta es insuficiente, 2ª o 3ª dosis en intervalos de 4–5 h; máximo 10 mg/día.",
+              "label": "Repetición"
+            }
+          ]
+        }
+      ],
+      "pt": [
+        {
+          "indication": "Edema — IC, doença renal ou hepática",
+          "rows": [
+            {
+              "dose": "0,5–2 mg/dia, geralmente em dose única.",
+              "label": "VO"
+            },
+            {
+              "dose": "Se resposta insuficiente, 2ª ou 3ª dose em intervalos de 4–5 h; máximo 10 mg/dia.",
+              "label": "Repetição"
+            }
+          ]
+        }
+      ]
     },
+    "indications": {
+      "es": [
+        "Edema asociado a insuficiencia cardíaca",
+        "Edema asociado a enfermedad hepática",
+        "Edema asociado a enfermedad renal, incluido síndrome nefrótico"
+      ],
+      "pt": [
+        "Edema associado à insuficiência cardíaca",
+        "Edema associado à doença hepática",
+        "Edema associado à doença renal, incluindo síndrome nefrótica"
+      ]
+    },
+    "references": [
+      "DailyMed Bumetanide 2026"
+    ]
+  },
+  "color": "rgba(59,130,246,0.10)",
+  "colorTxt": "#1E3A5F",
+  "contraindications": {
+    "es": {
+      "absolute": [
+        "Anuria",
+        "Coma hepático",
+        "Depleción electrolítica grave hasta su corrección"
+      ],
+      "relative": [
+        "Enfermedad renal progresiva con aumento importante de urea/creatinina u oliguria durante el tratamiento"
+      ]
+    },
+    "pt": {
+      "absolute": [
+        "Anúria",
+        "Coma hepático",
+        "Depleção eletrolítica grave até correção"
+      ],
+      "relative": [
+        "Doença renal progressiva com aumento importante de ureia/creatinina ou oligúria durante o tratamento"
+      ]
+    }
+  },
+  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
+  "doseByIndication": {
+    "es": [
+      {
+        "indication": "Edema — IC, enfermedad renal o hepática",
+        "rows": [
+          {
+            "dose": "0,5–2 mg/día, generalmente en dosis única.",
+            "label": "VO"
+          },
+          {
+            "dose": "Si la respuesta es insuficiente, 2ª o 3ª dosis en intervalos de 4–5 h; máximo 10 mg/día.",
+            "label": "Repetición"
+          }
+        ]
+      }
+    ],
+    "pt": [
+      {
+        "indication": "Edema — IC, doença renal ou hepática",
+        "rows": [
+          {
+            "dose": "0,5–2 mg/dia, geralmente em dose única.",
+            "label": "VO"
+          },
+          {
+            "dose": "Se resposta insuficiente, 2ª ou 3ª dose em intervalos de 4–5 h; máximo 10 mg/dia.",
+            "label": "Repetição"
+          }
+        ]
+      }
+    ]
+  },
+  "es": {
+    "alerts": [
+      "Equivalencia: 1 mg bumetanida ≈ 40 mg furosemida VO/IV — atención al convertir dosis.",
+      "Interacciones graves: digoxina (hipocalemia amplifica toxicidad); aminoglucósidos (ototoxicidad/hipocalemia); litio (toxicidad).",
+      "AINEs reducen efecto diurético y aumentan riesgo de lesión renal — evitar asociación.",
+      "Cirrosis: precaución — riesgo de hipovolemia, encefalopatía hepática y síndrome hepatorrenal."
+    ],
     "auditNotes": {
-      "status": "excellent_after_review",
+      "note": "Diurético de asa potente con mayor biodisponibilidad oral que furosemida (~80% vs 50–70%). Equivalencia 1:40 con furosemida. Útil en resistencia diurética o variabilidad de absorción oral de furosemida.",
       "sourcePriority": [
         "ESC Heart Failure Guidelines 2021/2023",
         "AHA/ACC/HFSA Heart Failure Guidelines 2022",
@@ -164,41 +146,18 @@
         "Lexicomp 2026",
         "FDA/EMA label"
       ],
-      "note": "Diurético de alça potente com maior biodisponibilidade oral que furosemida (~80% vs 50–70%). Equivalência 1:40 com furosemida. Útil em resistência diurética ou variabilidade de absorção oral da furosemida."
-    }
-  },
-  "es": {
-    "name": "Bumetanida",
+      "status": "excellent_after_review"
+    },
     "class": "Diurético de asa — Inhibidor del cotransportador Na+/K+/2Cl- (NKCC2) · Alternativa a furosemida",
     "commercialNames": {
+      "ar": [
+        "Bumetanida genérica"
+      ],
       "br": [
         "Burinax",
         "Bumetanida genérica"
-      ],
-      "ar": [
-        "Bumetanida genérica"
       ]
     },
-    "presentation": [
-      "Comprimidos 1 mg",
-      "Ampollas IV/IM 0,5 mg/mL"
-    ],
-    "dose": {
-      "adultoPadrao": "0,5–1 mg VO/IV 1–2 veces/día; ajustar según respuesta diurética. Equivalencia: 1 mg bumetanida ≈ 40 mg furosemida.",
-      "adultoGrave": "IC avanzada o resistencia a furosemida: 1–2 mg IV, repetir según necesidad. Máx 10 mg/día en ambiente monitorizado.",
-      "pediatricaPadrao": "Uso pediátrico off-label. Consultar protocolo institucional y especialista.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": null,
-      "grave": null,
-      "meningite": null,
-      "doseMaxima": "10 mg/día en ambiente monitorizado. Equivalencia: 1 mg ≈ 40 mg furosemida VO/IV."
-    },
-    "therapeuticRange": "Reducción de congestión; balance hídrico negativo cuando indicado; respuesta diurética adecuada",
-    "dilution": "IV: puede administrarse sin dilución o diluido en SF 0,9%. No usar SG5% (inestabilidad). Administrar lentamente.",
-    "speed": "Administrar bolo IV lentamente (1–2 min). Reevaluación de respuesta diurética en 30–60 min tras dosis IV.",
     "commonAdverseEffects": [
       "Poliuria",
       "Mareos",
@@ -218,107 +177,154 @@
       "Alcalosis metabólica",
       "Encefalopatía hepática en cirrosis vulnerable"
     ],
-    "risksByPatient": [],
-    "alerts": [
-      "Equivalencia: 1 mg bumetanida ≈ 40 mg furosemida VO/IV — atención al convertir dosis.",
-      "Interacciones graves: digoxina (hipocalemia amplifica toxicidad); aminoglucósidos (ototoxicidad/hipocalemia); litio (toxicidad).",
-      "AINEs reducen efecto diurético y aumentan riesgo de lesión renal — evitar asociación.",
-      "Cirrosis: precaución — riesgo de hipovolemia, encefalopatía hepática y síndrome hepatorrenal."
+    "dilution": "IV: puede administrarse sin dilución o diluido en SF 0,9%. No usar SG5% (inestabilidad). Administrar lentamente.",
+    "dose": {
+      "adultoGrave": "IC avanzada o resistencia a furosemida: 1–2 mg IV, repetir según necesidad. Máx 10 mg/día en ambiente monitorizado.",
+      "adultoPadrao": "0,5–1 mg VO/IV 1–2 veces/día; ajustar según respuesta diurética. Equivalencia: 1 mg bumetanida ≈ 40 mg furosemida.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null,
+      "pediatricaPadrao": "Uso pediátrico off-label. Consultar protocolo institucional y especialista."
+    },
+    "doseKg": {
+      "doseMaxima": "10 mg/día en ambiente monitorizado. Equivalencia: 1 mg ≈ 40 mg furosemida VO/IV.",
+      "grave": null,
+      "meningite": null,
+      "padrao": null
+    },
+    "name": "Bumetanida",
+    "presentation": [
+      "Comprimidos 1 mg",
+      "Ampollas IV/IM 0,5 mg/mL"
     ],
     "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
     "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Sin ajuste renal obligatorio con ClCr ≥ 30 mL/min. Monitorizar electrolitos y función renal.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "0,5–1 mg",
-          "intervalo": "1–2x/dia",
-          "doseMaxima": "10 mg/dia (amb. monitorizado)",
-          "unidade": "mg"
-        },
+      "fg10a30": {
         "ev": {
-          "dose": "0,5–1 mg",
-          "intervalo": "Bólus IV conforme resposta",
-          "doseMaxima": "10 mg/dia",
+          "dose": "1–2 mg",
+          "doseMaxima": "8 mg/dia",
+          "intervalo": "Ou infusão conforme necessidade",
           "unidade": "mg"
         },
+        "obs": "ERC grave: dosis escaladas por resistencia diurética. Monitorización intensiva obligatoria.",
         "pediatrica": null,
-        "obs": "Dosis habitual. Monitorizar electrolitos periódicamente."
+        "vo": {
+          "dose": "2–4 mg",
+          "doseMaxima": "8 mg/dia",
+          "intervalo": "1–2x/dia (titulada)",
+          "unidade": "mg"
+        }
       },
       "fg30a50": {
-        "vo": {
-          "dose": "1–2 mg",
-          "intervalo": "1–2x/dia",
-          "doseMaxima": "4 mg/dia",
-          "unidade": "mg"
-        },
         "ev": {
           "dose": "1–2 mg",
+          "doseMaxima": "4 mg/dia",
           "intervalo": "Conforme resposta diurética",
-          "doseMaxima": "4 mg/dia",
           "unidade": "mg"
         },
+        "obs": "ERC moderada: puede requerir dosis ligeramente mayores. Monitorizar función renal, K⁺, Mg²⁺ y Na⁺.",
         "pediatrica": null,
-        "obs": "ERC moderada: puede requerir dosis ligeramente mayores. Monitorizar función renal, K⁺, Mg²⁺ y Na⁺."
-      },
-      "fg10a30": {
         "vo": {
-          "dose": "2–4 mg",
-          "intervalo": "1–2x/dia (titulada)",
-          "doseMaxima": "8 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
           "dose": "1–2 mg",
-          "intervalo": "Ou infusão conforme necessidade",
-          "doseMaxima": "8 mg/dia",
+          "doseMaxima": "4 mg/dia",
+          "intervalo": "1–2x/dia",
+          "unidade": "mg"
+        }
+      },
+      "fgMaior50": {
+        "ev": {
+          "dose": "0,5–1 mg",
+          "doseMaxima": "10 mg/dia",
+          "intervalo": "Bólus IV conforme resposta",
           "unidade": "mg"
         },
+        "obs": "Dosis habitual. Monitorizar electrolitos periódicamente.",
         "pediatrica": null,
-        "obs": "ERC grave: dosis escaladas por resistencia diurética. Monitorización intensiva obligatoria."
+        "vo": {
+          "dose": "0,5–1 mg",
+          "doseMaxima": "10 mg/dia (amb. monitorizado)",
+          "intervalo": "1–2x/dia",
+          "unidade": "mg"
+        }
       },
       "fgMenor10": {
+        "ev": null,
+        "obs": "ERC muy grave: resistencia diurética extrema. Evaluar terapia de sustitución renal.",
+        "pediatrica": null,
         "vo": {
           "dose": "2–4 mg",
-          "intervalo": "Individualizado (se diurese residual)",
           "doseMaxima": "10 mg/dia",
+          "intervalo": "Individualizado (se diurese residual)",
           "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ERC muy grave: resistencia diurética extrema. Evaluar terapia de sustitución renal."
+        }
       },
       "hemodialise": {
+        "ev": null,
+        "obs": "Bumetanida es parcialmente removida por hemodiálisis. En pacientes anúricos, raramente eficaz. Mantener solo con diuresis residual documentada.",
+        "pediatrica": null,
         "vo": {
           "dose": "1 mg",
-          "intervalo": "Se diurese residual presente",
           "doseMaxima": "Conforme resposta",
+          "intervalo": "Se diurese residual presente",
           "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Bumetanida es parcialmente removida por hemodiálisis. En pacientes anúricos, raramente eficaz. Mantener solo con diuresis residual documentada."
-      }
+        }
+      },
+      "message": "Sin ajuste renal obligatorio con ClCr ≥ 30 mL/min. Monitorizar electrolitos y función renal.",
+      "requiresAdjustment": false,
+      "version": 2
     },
+    "risksByPatient": [],
     "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
       "avBlockRisk": false,
+      "bradycardiaRisk": false,
       "electrolyteRisk": true,
+      "hepatotoxicityRisk": false,
       "hypokalemiaRisk": true,
       "hyponatremiaRisk": true,
+      "hypotensionRisk": true,
+      "neurotoxicityRisk": false,
       "ototoxicityRisk": true,
       "pregnancyCaution": true,
+      "qtRisk": false,
+      "renalHighRisk": true,
+      "requiresCultureGuidance": false,
       "warning": "Bumetanida es diurético de asa potente (1 mg ≈ 40 mg furosemida). Atención a hipovolemia, lesión renal aguda, hipocalemia, hiponatremia y conversión correcta de dosis al sustituir furosemida."
     },
+    "speed": "Administrar bolo IV lentamente (1–2 min). Reevaluación de respuesta diurética en 30–60 min tras dosis IV.",
+    "therapeuticRange": "Reducción de congestión; balance hídrico negativo cuando indicado; respuesta diurética adecuada"
+  },
+  "icon": "💊",
+  "id": "bumetanida",
+  "indications": {
+    "es": [
+      "Edema asociado a insuficiencia cardíaca",
+      "Edema asociado a enfermedad hepática",
+      "Edema asociado a enfermedad renal, incluido síndrome nefrótico"
+    ],
+    "pt": [
+      "Edema associado à insuficiência cardíaca",
+      "Edema associado à doença hepática",
+      "Edema associado à doença renal, incluindo síndrome nefrótica"
+    ]
+  },
+  "keywords": [
+    "bumetanida",
+    "burinax",
+    "bumetanida generica",
+    "diuretico de alca — inibidor do cotransportador na+/k+/2cl- (nkcc2) · alternativa a furosemida"
+  ],
+  "name": {
+    "es": "Bumetanida",
+    "pt": "Bumetanida"
+  },
+  "pt": {
+    "alerts": [
+      "Equivalência: 1 mg bumetanida ≈ 40 mg furosemida VO/IV — atenção ao converter doses.",
+      "Interações graves: digoxina (hipocalemia amplifica toxicidade); aminoglicosídeos (ototoxicidade/hipocalemia); lítio (toxicidade).",
+      "AINEs reduzem efeito diurético e aumentam risco de lesão renal — evitar associação.",
+      "Cirrose: cautela — risco de hipovolemia, encefalopatia hepática e síndrome hepatorrenal."
+    ],
     "auditNotes": {
-      "status": "excellent_after_review",
+      "note": "Diurético de alça potente com maior biodisponibilidade oral que furosemida (~80% vs 50–70%). Equivalência 1:40 com furosemida. Útil em resistência diurética ou variabilidade de absorção oral da furosemida.",
       "sourcePriority": [
         "ESC Heart Failure Guidelines 2021/2023",
         "AHA/ACC/HFSA Heart Failure Guidelines 2022",
@@ -327,22 +333,156 @@
         "Lexicomp 2026",
         "FDA/EMA label"
       ],
-      "note": "Diurético de asa potente con mayor biodisponibilidad oral que furosemida (~80% vs 50–70%). Equivalencia 1:40 con furosemida. Útil en resistencia diurética o variabilidad de absorción oral de furosemida."
-    }
+      "status": "excellent_after_review"
+    },
+    "class": "Diurético de alça — Inibidor do cotransportador Na+/K+/2Cl- (NKCC2) · Alternativa à furosemida",
+    "commercialNames": {
+      "ar": [
+        "Bumetanida genérica"
+      ],
+      "br": [
+        "Burinax",
+        "Bumetanida genérica"
+      ]
+    },
+    "commonAdverseEffects": [
+      "Poliúria",
+      "Tontura",
+      "Hipotensão",
+      "Hipocalemia",
+      "Hipomagnesemia",
+      "Hiponatremia",
+      "Aumento de creatinina",
+      "Cãibras musculares"
+    ],
+    "dangerousAdverseEffects": [
+      "Desidratação grave",
+      "Lesão renal aguda",
+      "Hipocalemia grave com arritmias",
+      "Hiponatremia grave",
+      "Ototoxicidade (rara — doses altas IV)",
+      "Alcalose metabólica",
+      "Encefalopatia hepática em cirrose vulnerável"
+    ],
+    "dilution": "IV: pode ser administrado sem diluição ou diluído em SF 0,9%. Não usar SG5% (instabilidade). Administrar lentamente.",
+    "dose": {
+      "adultoGrave": "IC avançada ou resistência à furosemida: 1–2 mg IV, repetir conforme necessário. Máx 10 mg/dia em ambiente monitorizado.",
+      "adultoPadrao": "0,5–1 mg VO/IV 1–2x/dia; ajustar conforme resposta diurética. Equivalência: 1 mg bumetanida ≈ 40 mg furosemida.",
+      "pediatricaGrave": null,
+      "pediatricaMeningite": null,
+      "pediatricaPadrao": "Uso pediátrico off-label. Consultar protocolo institucional e especialista."
+    },
+    "doseKg": {
+      "doseMaxima": "10 mg/dia em ambiente monitorizado. Equivalência: 1 mg ≈ 40 mg furosemida VO/IV.",
+      "grave": null,
+      "meningite": null,
+      "padrao": null
+    },
+    "name": "Bumetanida",
+    "presentation": [
+      "Comprimidos 1 mg",
+      "Ampolas IV/IM 0,5 mg/mL"
+    ],
+    "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
+    "renalDose": {
+      "fg10a30": {
+        "ev": {
+          "dose": "1–2 mg",
+          "doseMaxima": "8 mg/dia",
+          "intervalo": "Ou infusão conforme necessidade",
+          "unidade": "mg"
+        },
+        "obs": "DRC grave: doses escaladas por resistência diurética. Monitoração intensiva obrigatória.",
+        "pediatrica": null,
+        "vo": {
+          "dose": "2–4 mg",
+          "doseMaxima": "8 mg/dia",
+          "intervalo": "1–2x/dia (titulada)",
+          "unidade": "mg"
+        }
+      },
+      "fg30a50": {
+        "ev": {
+          "dose": "1–2 mg",
+          "doseMaxima": "4 mg/dia",
+          "intervalo": "Conforme resposta diurética",
+          "unidade": "mg"
+        },
+        "obs": "DRC moderada: pode requerer doses levemente maiores. Monitorar função renal, K⁺, Mg²⁺ e Na⁺.",
+        "pediatrica": null,
+        "vo": {
+          "dose": "1–2 mg",
+          "doseMaxima": "4 mg/dia",
+          "intervalo": "1–2x/dia",
+          "unidade": "mg"
+        }
+      },
+      "fgMaior50": {
+        "ev": {
+          "dose": "0,5–1 mg",
+          "doseMaxima": "10 mg/dia",
+          "intervalo": "Bólus IV conforme resposta",
+          "unidade": "mg"
+        },
+        "obs": "Dose habitual. Monitorar eletrólitos periodicamente.",
+        "pediatrica": null,
+        "vo": {
+          "dose": "0,5–1 mg",
+          "doseMaxima": "10 mg/dia (amb. monitorizado)",
+          "intervalo": "1–2x/dia",
+          "unidade": "mg"
+        }
+      },
+      "fgMenor10": {
+        "ev": null,
+        "obs": "DRC muito grave: resistência diurética extrema. Avaliar terapia de substituição renal.",
+        "pediatrica": null,
+        "vo": {
+          "dose": "2–4 mg",
+          "doseMaxima": "10 mg/dia",
+          "intervalo": "Individualizado (se diurese residual)",
+          "unidade": "mg"
+        }
+      },
+      "hemodialise": {
+        "ev": null,
+        "obs": "Bumetanida é parcialmente removida por hemodiálise. Em pacientes anúricos, raramente eficaz. Manter apenas com diurese residual documentada.",
+        "pediatrica": null,
+        "vo": {
+          "dose": "1 mg",
+          "doseMaxima": "Conforme resposta",
+          "intervalo": "Se diurese residual presente",
+          "unidade": "mg"
+        }
+      },
+      "message": "Sem ajuste renal obrigatório em ClCr ≥ 30 mL/min. Monitorar eletrólitos e função renal.",
+      "requiresAdjustment": false,
+      "version": 2
+    },
+    "risksByPatient": [],
+    "safetyFlags": {
+      "avBlockRisk": false,
+      "bradycardiaRisk": false,
+      "electrolyteRisk": true,
+      "hepatotoxicityRisk": false,
+      "hypokalemiaRisk": true,
+      "hyponatremiaRisk": true,
+      "hypotensionRisk": true,
+      "neurotoxicityRisk": false,
+      "ototoxicityRisk": true,
+      "pregnancyCaution": true,
+      "qtRisk": false,
+      "renalHighRisk": true,
+      "requiresCultureGuidance": false,
+      "warning": "Bumetanida é diurético de alça potente (1 mg ≈ 40 mg furosemida). Atenção a hipovolemia, lesão renal aguda, hipocalemia, hiponatremia e conversão correta de dose ao substituir furosemida."
+    },
+    "speed": "Administrar bólus IV lentamente (1–2 min). Reavaliação de resposta diurética em 30–60 min após dose IV.",
+    "therapeuticRange": "Redução de congestão; balanço hídrico negativo quando indicado; resposta diurética adequada"
   },
-  "name": {
-    "pt": "Bumetanida",
-    "es": "Bumetanida"
-  },
-  "keywords": [
-    "bumetanida",
-    "burinax",
-    "bumetanida generica",
-    "diuretico de alca — inibidor do cotransportador na+/k+/2cl- (nkcc2) · alternativa a furosemida"
+  "references": [
+    "DailyMed Bumetanide 2026"
   ],
-  "dataVersion": "clinical-data-v1-5f4ea56c13f2f3cd",
-  "clinicalContentSha256": "5f4ea56c13f2f3cdc77a3efdc2dbe245453b92b77ae6773d1d95625a6b386041",
-  "source": "medcases-calculadora",
   "schema": "premium-v1",
+  "source": "medcases-calculadora",
   "sourceModule": "cardio.js"
 }
