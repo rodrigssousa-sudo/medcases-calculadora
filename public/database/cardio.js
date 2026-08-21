@@ -614,6 +614,88 @@
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#991B1B',
 
+      clinicalEnrichment: {
+        "doseByIndication": {
+          "pt": [
+            {
+              "indication": "ICFEr",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "1,25 mg VO 1x/dia."
+                },
+                {
+                  "label": "Alvo",
+                  "dose": "10 mg VO 1x/dia, com titulação progressiva conforme tolerância."
+                }
+              ]
+            },
+            {
+              "indication": "Hipertensão arterial",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "5 mg VO 1x/dia; 2,5 mg pode ser adequado em alguns pacientes."
+                },
+                {
+                  "label": "Ajuste",
+                  "dose": "10 mg e, se necessário, 20 mg 1x/dia."
+                }
+              ]
+            },
+            {
+              "indication": "ClCr <40 mL/min ou hepatopatia",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "2,5 mg VO 1x/dia; titular com cautela."
+                }
+              ]
+            }
+          ],
+          "es": [
+            {
+              "indication": "ICFEr",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "1,25 mg VO 1 vez/día."
+                },
+                {
+                  "label": "Objetivo",
+                  "dose": "10 mg VO 1 vez/día, con titulación progresiva según tolerancia."
+                }
+              ]
+            },
+            {
+              "indication": "Hipertensión arterial",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "5 mg VO 1 vez/día; 2,5 mg puede ser adecuado en algunos pacientes."
+                },
+                {
+                  "label": "Ajuste",
+                  "dose": "10 mg y, si es necesario, 20 mg 1 vez/día."
+                }
+              ]
+            },
+            {
+              "indication": "ClCr <40 mL/min o hepatopatía",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "2,5 mg VO 1 vez/día; titular con precaución."
+                }
+              ]
+            }
+          ]
+        },
+        "references": [
+          "AHA/ACC/HFSA HF 2022",
+          "DailyMed Bisoprolol"
+        ]
+      },
       calculate: (paciente, lang = 'pt') => {
         const peso     = Number(paciente.peso    || 0);
         const idade    = Number(paciente.idade   || 0);
@@ -2991,6 +3073,152 @@
       color:    'rgba(16,185,129,0.13)',
       colorTxt: '#047857',
 
+      clinicalEnrichment: {
+        "doseByIndication": {
+          "pt": [
+            {
+              "indication": "Hipertensão arterial — adultos",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "16 mg VO 1x/dia quando não há depleção de volume."
+                },
+                {
+                  "label": "Faixa",
+                  "dose": "8–32 mg/dia, em 1 ou 2 tomadas."
+                }
+              ]
+            },
+            {
+              "indication": "ICFEr",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "4 mg VO 1x/dia."
+                },
+                {
+                  "label": "Alvo",
+                  "dose": "32 mg VO 1x/dia; dobrar aproximadamente a cada 2 semanas conforme tolerância."
+                }
+              ]
+            },
+            {
+              "indication": "Hipertensão pediátrica",
+              "rows": [
+                {
+                  "label": "1–<6 anos",
+                  "dose": "0,2 mg/kg VO 1x/dia; faixa 0,05–0,4 mg/kg/dia."
+                },
+                {
+                  "label": "6–<17 anos <50 kg",
+                  "dose": "Iniciar 4–8 mg/dia; faixa 4–16 mg/dia."
+                },
+                {
+                  "label": "6–<17 anos ≥50 kg",
+                  "dose": "Iniciar 8–16 mg/dia; faixa 4–32 mg/dia."
+                }
+              ]
+            }
+          ],
+          "es": [
+            {
+              "indication": "Hipertensión arterial — adultos",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "16 mg VO 1 vez/día cuando no existe depleción de volumen."
+                },
+                {
+                  "label": "Rango",
+                  "dose": "8–32 mg/día, en 1 o 2 tomas."
+                }
+              ]
+            },
+            {
+              "indication": "ICFEr",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "4 mg VO 1 vez/día."
+                },
+                {
+                  "label": "Objetivo",
+                  "dose": "32 mg VO 1 vez/día; duplicar aproximadamente cada 2 semanas según tolerancia."
+                }
+              ]
+            },
+            {
+              "indication": "Hipertensión pediátrica",
+              "rows": [
+                {
+                  "label": "1–<6 años",
+                  "dose": "0,2 mg/kg VO 1 vez/día; rango 0,05–0,4 mg/kg/día."
+                },
+                {
+                  "label": "6–<17 años <50 kg",
+                  "dose": "Iniciar 4–8 mg/día; rango 4–16 mg/día."
+                },
+                {
+                  "label": "6–<17 años ≥50 kg",
+                  "dose": "Iniciar 8–16 mg/día; rango 4–32 mg/día."
+                }
+              ]
+            }
+          ]
+        },
+        "doseOverride": {
+          "pt": {
+            "pediatricaPadrao": "HTA 1–<6 anos: 0,2 mg/kg VO 1x/dia (faixa 0,05–0,4 mg/kg/dia). 6–<17 anos: <50 kg iniciar 4–8 mg/dia; ≥50 kg iniciar 8–16 mg/dia.",
+            "pediatricaGrave": "6–<17 anos: <50 kg faixa 4–16 mg/dia; ≥50 kg faixa 4–32 mg/dia."
+          },
+          "es": {
+            "pediatricaPadrao": "HTA 1–<6 años: 0,2 mg/kg VO 1 vez/día (rango 0,05–0,4 mg/kg/día). 6–<17 años: <50 kg iniciar 4–8 mg/día; ≥50 kg iniciar 8–16 mg/día.",
+            "pediatricaGrave": "6–<17 años: <50 kg rango 4–16 mg/día; ≥50 kg rango 4–32 mg/día."
+          }
+        },
+        "indications": {
+          "pt": [
+            "Hipertensão arterial em adultos",
+            "Hipertensão pediátrica 1–<17 anos",
+            "Insuficiência cardíaca / ICFEr"
+          ],
+          "es": [
+            "Hipertensión arterial en adultos",
+            "Hipertensión pediátrica 1–<17 años",
+            "Insuficiencia cardíaca / ICFEr"
+          ]
+        },
+        "contraindications": {
+          "pt": {
+            "absolute": [
+              "Hipersensibilidade à candesartana",
+              "Coadministração de aliscireno em pacientes com diabetes"
+            ],
+            "relative": [
+              "Gestação — toxicidade fetal",
+              "Hipercalemia",
+              "Hipotensão/hipovolemia",
+              "Deterioração renal relevante"
+            ]
+          },
+          "es": {
+            "absolute": [
+              "Hipersensibilidad a candesartán",
+              "Coadministración de aliskireno en pacientes con diabetes"
+            ],
+            "relative": [
+              "Embarazo — toxicidad fetal",
+              "Hiperpotasemia",
+              "Hipotensión/hipovolemia",
+              "Deterioro renal relevante"
+            ]
+          }
+        },
+        "references": [
+          "DailyMed Candesartan 2026",
+          "AHA/ACC/HFSA HF 2022"
+        ]
+      },
       calculate: (paciente, lang = 'pt') => {
         const peso     = Number(paciente.peso    || 0);
         const idade    = Number(paciente.idade   || 0);
@@ -4749,6 +4977,111 @@
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#B91C1C',
 
+      clinicalEnrichment: {
+        "doseByIndication": {
+          "pt": [
+            {
+              "indication": "Hipertensão arterial",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "50 mg VO 1x/dia."
+                },
+                {
+                  "label": "Ajuste",
+                  "dose": "Se necessário, 100 mg 1x/dia; >100 mg/dia geralmente não acrescenta benefício anti-hipertensivo."
+                }
+              ]
+            },
+            {
+              "indication": "Angina estável",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "50 mg VO 1x/dia."
+                },
+                {
+                  "label": "Ajuste",
+                  "dose": "100 mg 1x/dia; alguns pacientes podem necessitar 200 mg/dia."
+                }
+              ]
+            },
+            {
+              "indication": "Insuficiência renal",
+              "rows": [
+                {
+                  "label": "ClCr 15–35",
+                  "dose": "Máximo 50 mg/dia."
+                },
+                {
+                  "label": "ClCr <15",
+                  "dose": "Máximo 25 mg/dia."
+                },
+                {
+                  "label": "Hemodiálise",
+                  "dose": "25–50 mg após cada sessão, sob supervisão."
+                }
+              ]
+            }
+          ],
+          "es": [
+            {
+              "indication": "Hipertensión arterial",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "50 mg VO 1 vez/día."
+                },
+                {
+                  "label": "Ajuste",
+                  "dose": "Si es necesario, 100 mg 1 vez/día; >100 mg/día generalmente no añade beneficio antihipertensivo."
+                }
+              ]
+            },
+            {
+              "indication": "Angina estable",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "50 mg VO 1 vez/día."
+                },
+                {
+                  "label": "Ajuste",
+                  "dose": "100 mg 1 vez/día; algunos pacientes pueden requerir 200 mg/día."
+                }
+              ]
+            },
+            {
+              "indication": "Insuficiencia renal",
+              "rows": [
+                {
+                  "label": "ClCr 15–35",
+                  "dose": "Máximo 50 mg/día."
+                },
+                {
+                  "label": "ClCr <15",
+                  "dose": "Máximo 25 mg/día."
+                },
+                {
+                  "label": "Hemodiálisis",
+                  "dose": "25–50 mg después de cada sesión, bajo supervisión."
+                }
+              ]
+            }
+          ]
+        },
+        "doseOverride": {
+          "pt": {
+            "adultoPadrao": "HTA: 50 mg VO 1x/dia; se necessário 100 mg/dia. Angina: 50 mg/dia; pode aumentar para 100 mg e, em alguns pacientes, 200 mg/dia."
+          },
+          "es": {
+            "adultoPadrao": "HTA: 50 mg VO 1 vez/día; si es necesario 100 mg/día. Angina: 50 mg/día; puede aumentar a 100 mg y, en algunos pacientes, 200 mg/día."
+          }
+        },
+        "references": [
+          "DailyMed Atenolol 2026"
+        ]
+      },
       calculate: (paciente, lang = 'pt') => {
         const fg       = Number(paciente.clcr || paciente.fg || 90);
         const gestante = Boolean(paciente.gestante);
@@ -8926,6 +9259,77 @@
       color:    'rgba(59,130,246,0.10)',
       colorTxt: '#1E3A5F',
 
+      clinicalEnrichment: {
+        "doseByIndication": {
+          "pt": [
+            {
+              "indication": "Edema — IC, doença renal ou hepática",
+              "rows": [
+                {
+                  "label": "VO",
+                  "dose": "0,5–2 mg/dia, geralmente em dose única."
+                },
+                {
+                  "label": "Repetição",
+                  "dose": "Se resposta insuficiente, 2ª ou 3ª dose em intervalos de 4–5 h; máximo 10 mg/dia."
+                }
+              ]
+            }
+          ],
+          "es": [
+            {
+              "indication": "Edema — IC, enfermedad renal o hepática",
+              "rows": [
+                {
+                  "label": "VO",
+                  "dose": "0,5–2 mg/día, generalmente en dosis única."
+                },
+                {
+                  "label": "Repetición",
+                  "dose": "Si la respuesta es insuficiente, 2ª o 3ª dosis en intervalos de 4–5 h; máximo 10 mg/día."
+                }
+              ]
+            }
+          ]
+        },
+        "indications": {
+          "pt": [
+            "Edema associado à insuficiência cardíaca",
+            "Edema associado à doença hepática",
+            "Edema associado à doença renal, incluindo síndrome nefrótica"
+          ],
+          "es": [
+            "Edema asociado a insuficiencia cardíaca",
+            "Edema asociado a enfermedad hepática",
+            "Edema asociado a enfermedad renal, incluido síndrome nefrótico"
+          ]
+        },
+        "contraindications": {
+          "pt": {
+            "absolute": [
+              "Anúria",
+              "Coma hepático",
+              "Depleção eletrolítica grave até correção"
+            ],
+            "relative": [
+              "Doença renal progressiva com aumento importante de ureia/creatinina ou oligúria durante o tratamento"
+            ]
+          },
+          "es": {
+            "absolute": [
+              "Anuria",
+              "Coma hepático",
+              "Depleción electrolítica grave hasta su corrección"
+            ],
+            "relative": [
+              "Enfermedad renal progresiva con aumento importante de urea/creatinina u oliguria durante el tratamiento"
+            ]
+          }
+        },
+        "references": [
+          "DailyMed Bumetanide 2026"
+        ]
+      },
       calculate: (paciente, lang = 'pt') => {
         const fg       = Number(paciente.clcr || paciente.fg || 90);
         const gestante = Boolean(paciente.gestante);
@@ -9918,6 +10322,77 @@
       color:    'rgba(16,185,129,0.08)',
       colorTxt: '#064E3B',
 
+      clinicalEnrichment: {
+        "doseByIndication": {
+          "pt": [
+            {
+              "indication": "HTA/IC com hipocalemia induzida por diurético",
+              "rows": [
+                {
+                  "label": "Adjuvante",
+                  "dose": "5 mg VO 1x/dia junto ao diurético kaliurético; pode aumentar para 10 mg/dia."
+                },
+                {
+                  "label": "Hipocalemia persistente",
+                  "dose": "Se documentada apesar de 10 mg/dia, pode aumentar para 15 mg e depois 20 mg/dia com monitorização rigorosa."
+                }
+              ]
+            }
+          ],
+          "es": [
+            {
+              "indication": "HTA/IC con hipopotasemia inducida por diurético",
+              "rows": [
+                {
+                  "label": "Adyuvante",
+                  "dose": "5 mg VO 1 vez/día junto al diurético kaliurético; puede aumentarse a 10 mg/día."
+                },
+                {
+                  "label": "Hipopotasemia persistente",
+                  "dose": "Si persiste pese a 10 mg/día, puede aumentarse a 15 mg y luego 20 mg/día con monitorización estricta."
+                }
+              ]
+            }
+          ]
+        },
+        "indications": {
+          "pt": [
+            "Adjuvante a diuréticos kaliuréticos em HTA/IC para corrigir ou prevenir hipocalemia"
+          ],
+          "es": [
+            "Adyuvante de diuréticos kaliuréticos en HTA/IC para corregir o prevenir hipopotasemia"
+          ]
+        },
+        "contraindications": {
+          "pt": {
+            "absolute": [
+              "K⁺ sérico >5,5 mEq/L",
+              "Outros poupadores de potássio",
+              "Anúria ou insuficiência renal importante",
+              "Nefropatia diabética",
+              "Hipersensibilidade à amilorida"
+            ],
+            "relative": [
+              "Suplementos de potássio/substitutos de sal ricos em K⁺ salvo indicação específica"
+            ]
+          },
+          "es": {
+            "absolute": [
+              "K⁺ sérico >5,5 mEq/L",
+              "Otros ahorradores de potasio",
+              "Anuria o insuficiencia renal importante",
+              "Nefropatía diabética",
+              "Hipersensibilidad a amilorida"
+            ],
+            "relative": [
+              "Suplementos de potasio/sustitutos de sal ricos en K⁺ salvo indicación específica"
+            ]
+          }
+        },
+        "references": [
+          "DailyMed Amiloride 2026"
+        ]
+      },
       calculate: (paciente, lang = 'pt') => {
         const fg       = Number(paciente.clcr || paciente.fg || 90);
         const gestante = Boolean(paciente.gestante);
@@ -11166,6 +11641,141 @@
       category: 'cardio',
       commercialNames: ['Diamox', 'Acetazolamida genérica'],
 
+      clinicalEnrichment: {
+        "doseByIndication": {
+          "pt": [
+            {
+              "indication": "Glaucoma de ângulo aberto crônico",
+              "rows": [
+                {
+                  "label": "VO",
+                  "dose": "250 mg a 1 g/24 h; dividir as doses quando o total for >250 mg."
+                }
+              ]
+            },
+            {
+              "indication": "Glaucoma secundário / ângulo fechado agudo — pré-operatório",
+              "rows": [
+                {
+                  "label": "VO",
+                  "dose": "250 mg a cada 4 h; alguns casos respondem a 250 mg 12/12h."
+                },
+                {
+                  "label": "Agudo",
+                  "dose": "500 mg inicial, seguido de 125–250 mg a cada 4 h conforme o caso."
+                }
+              ]
+            },
+            {
+              "indication": "Doença aguda da altitude",
+              "rows": [
+                {
+                  "label": "VO",
+                  "dose": "500–1000 mg/dia em doses divididas; iniciar 24–48 h antes da subida e manter por 48 h em altitude ou conforme sintomas."
+                }
+              ]
+            },
+            {
+              "indication": "Edema por insuficiência cardíaca",
+              "rows": [
+                {
+                  "label": "VO",
+                  "dose": "250–375 mg pela manhã; pode requerer esquema intermitente."
+                }
+              ]
+            }
+          ],
+          "es": [
+            {
+              "indication": "Glaucoma crónico de ángulo abierto",
+              "rows": [
+                {
+                  "label": "VO",
+                  "dose": "250 mg a 1 g/24 h; dividir las dosis cuando el total sea >250 mg."
+                }
+              ]
+            },
+            {
+              "indication": "Glaucoma secundario / ángulo cerrado agudo — preoperatorio",
+              "rows": [
+                {
+                  "label": "VO",
+                  "dose": "250 mg cada 4 h; algunos casos responden a 250 mg cada 12 h."
+                },
+                {
+                  "label": "Agudo",
+                  "dose": "500 mg inicial, seguido de 125–250 mg cada 4 h según el caso."
+                }
+              ]
+            },
+            {
+              "indication": "Mal agudo de montaña",
+              "rows": [
+                {
+                  "label": "VO",
+                  "dose": "500–1000 mg/día en dosis divididas; iniciar 24–48 h antes del ascenso y mantener 48 h en altura o según síntomas."
+                }
+              ]
+            },
+            {
+              "indication": "Edema por insuficiencia cardíaca",
+              "rows": [
+                {
+                  "label": "VO",
+                  "dose": "250–375 mg por la mañana; puede requerir esquema intermitente."
+                }
+              ]
+            }
+          ]
+        },
+        "indications": {
+          "pt": [
+            "Glaucoma",
+            "Doença aguda da altitude",
+            "Edema associado à insuficiência cardíaca",
+            "Algumas epilepsias como adjuvante"
+          ],
+          "es": [
+            "Glaucoma",
+            "Mal agudo de montaña",
+            "Edema asociado a insuficiencia cardíaca",
+            "Algunas epilepsias como adyuvante"
+          ]
+        },
+        "contraindications": {
+          "pt": {
+            "absolute": [
+              "Hipersensibilidade à acetazolamida/sulfonamidas",
+              "Hiponatremia ou hipocalemia importantes",
+              "Doença renal ou hepática marcada",
+              "Insuficiência suprarrenal",
+              "Acidose hiperclorêmica",
+              "Cirrose"
+            ],
+            "relative": [
+              "Ventilação alveolar comprometida",
+              "Altas doses de aspirina"
+            ]
+          },
+          "es": {
+            "absolute": [
+              "Hipersensibilidad a acetazolamida/sulfonamidas",
+              "Hiponatremia o hipopotasemia importantes",
+              "Enfermedad renal o hepática marcada",
+              "Insuficiencia suprarrenal",
+              "Acidosis hiperclorémica",
+              "Cirrosis"
+            ],
+            "relative": [
+              "Ventilación alveolar comprometida",
+              "Dosis altas de aspirina"
+            ]
+          }
+        },
+        "references": [
+          "DailyMed Acetazolamide 2026"
+        ]
+      },
       calculate(paciente, lang = 'pt') {
         const peso  = paciente?.peso  || 70;
         const idade = paciente?.idade || 50;
@@ -14293,6 +14903,137 @@
         hemodialise:{ vo: null, ev: 'Dados limitados — evitar ou usar com monitorização intensiva', obs: 'NAPA não dialisável eficientemente' }
       },
 
+      clinicalEnrichment: {
+        "doseByIndication": {
+          "pt": [
+            {
+              "indication": "Taquicardia estável de QRS largo / TV monomórfica",
+              "rows": [
+                {
+                  "label": "Carga IV",
+                  "dose": "20–50 mg/min até suprimir a arritmia, surgir hipotensão, QRS aumentar >50% ou atingir 17 mg/kg."
+                },
+                {
+                  "label": "Manutenção",
+                  "dose": "1–4 mg/min IV contínuo."
+                }
+              ],
+              "note": "Evitar se QT prolongado ou insuficiência cardíaca aguda/descompensada."
+            },
+            {
+              "indication": "FA pré-excitada (WPW), estável",
+              "rows": [
+                {
+                  "label": "IV",
+                  "dose": "15–18 mg/kg em 25–30 min, sem exceder 50 mg/min; manutenção 1–4 mg/min."
+                }
+              ],
+              "note": "Instabilidade hemodinâmica → cardioversão elétrica; evitar bloqueadores do nó AV."
+            }
+          ],
+          "es": [
+            {
+              "indication": "Taquicardia estable de QRS ancho / TV monomórfica",
+              "rows": [
+                {
+                  "label": "Carga IV",
+                  "dose": "20–50 mg/min hasta suprimir la arritmia, aparecer hipotensión, aumentar QRS >50% o alcanzar 17 mg/kg."
+                },
+                {
+                  "label": "Mantenimiento",
+                  "dose": "1–4 mg/min IV continuo."
+                }
+              ],
+              "note": "Evitar si hay QT prolongado o insuficiencia cardíaca aguda/descompensada."
+            },
+            {
+              "indication": "FA preexcitada (WPW), estable",
+              "rows": [
+                {
+                  "label": "IV",
+                  "dose": "15–18 mg/kg en 25–30 min, sin exceder 50 mg/min; mantenimiento 1–4 mg/min."
+                }
+              ],
+              "note": "Inestabilidad hemodinámica → cardioversión eléctrica; evitar bloqueadores del nodo AV."
+            }
+          ]
+        },
+        "indications": {
+          "pt": [
+            "Taquicardia ventricular monomórfica estável",
+            "Taquicardia de QRS largo de origem indeterminada",
+            "FA/flutter com pré-excitação (WPW)"
+          ],
+          "es": [
+            "Taquicardia ventricular monomórfica estable",
+            "Taquicardia de QRS ancho de origen indeterminado",
+            "FA/flutter con preexcitación (WPW)"
+          ]
+        },
+        "commonAdverseEffects": {
+          "pt": [
+            "Hipotensão durante infusão",
+            "Náuseas",
+            "Tontura",
+            "Rubor",
+            "Bradicardia"
+          ],
+          "es": [
+            "Hipotensión durante la infusión",
+            "Náuseas",
+            "Mareos",
+            "Rubor",
+            "Bradicardia"
+          ]
+        },
+        "dangerousAdverseEffects": {
+          "pt": [
+            "Torsades de Pointes e pró-arritmia",
+            "TV/FV",
+            "Agranulocitose/discrasias sanguíneas",
+            "Lúpus induzido por fármaco no uso crônico"
+          ],
+          "es": [
+            "Torsades de Pointes y proarritmia",
+            "TV/FV",
+            "Agranulocitosis/discrasias sanguíneas",
+            "Lupus inducido por fármacos en uso crónico"
+          ]
+        },
+        "contraindications": {
+          "pt": {
+            "absolute": [
+              "Bloqueio AV completo sem marcapasso",
+              "Lúpus eritematoso sistêmico estabelecido",
+              "Hipersensibilidade à procainamida"
+            ],
+            "relative": [
+              "QT prolongado",
+              "Insuficiência cardíaca aguda/descompensada",
+              "Hipotensão importante",
+              "Distúrbios de K⁺/Mg²⁺ não corrigidos"
+            ]
+          },
+          "es": {
+            "absolute": [
+              "Bloqueo AV completo sin marcapasos",
+              "Lupus eritematoso sistémico establecido",
+              "Hipersensibilidad a procainamida"
+            ],
+            "relative": [
+              "QT prolongado",
+              "Insuficiencia cardíaca aguda/descompensada",
+              "Hipotensión importante",
+              "Alteraciones de K⁺/Mg²⁺ no corregidas"
+            ]
+          }
+        },
+        "references": [
+          "AHA ACLS 2025",
+          "ACC/AHA/ACCP/HRS AF 2023",
+          "DailyMed Procainamide"
+        ]
+      },
       calculate(paciente, lang = 'pt') {
         const { peso = 70, idade = 60, sexo = 'M',
                 fc = 150, paSistolica = 110,
@@ -24338,6 +25079,79 @@
       color:    'rgba(16,185,129,0.13)',
       colorTxt: '#065F46',
 
+      clinicalEnrichment: {
+        "doseByIndication": {
+          "pt": [
+            {
+              "indication": "DM2 — controle glicêmico",
+              "rows": [
+                {
+                  "label": "eGFR ≥45",
+                  "dose": "5 mg VO 1x/dia; pode aumentar para 10 mg 1x/dia."
+                }
+              ]
+            },
+            {
+              "indication": "IC / DRC",
+              "rows": [
+                {
+                  "label": "eGFR ≥25",
+                  "dose": "10 mg VO 1x/dia."
+                },
+                {
+                  "label": "eGFR <25",
+                  "dose": "Não iniciar; se já estiver em uso, pode manter 10 mg 1x/dia para benefício cardiorrenal conforme bula."
+                }
+              ]
+            },
+            {
+              "indication": "Cirurgia ou jejum prolongado",
+              "rows": [
+                {
+                  "label": "Suspensão",
+                  "dose": "Suspender pelo menos 3 dias antes, quando possível; reiniciar quando estável e com ingestão oral restabelecida."
+                }
+              ]
+            }
+          ],
+          "es": [
+            {
+              "indication": "DM2 — control glucémico",
+              "rows": [
+                {
+                  "label": "eGFR ≥45",
+                  "dose": "5 mg VO 1 vez/día; puede aumentarse a 10 mg 1 vez/día."
+                }
+              ]
+            },
+            {
+              "indication": "IC / ERC",
+              "rows": [
+                {
+                  "label": "eGFR ≥25",
+                  "dose": "10 mg VO 1 vez/día."
+                },
+                {
+                  "label": "eGFR <25",
+                  "dose": "No iniciar; si ya está en uso, puede mantenerse 10 mg 1 vez/día para beneficio cardiorrenal según ficha técnica."
+                }
+              ]
+            },
+            {
+              "indication": "Cirugía o ayuno prolongado",
+              "rows": [
+                {
+                  "label": "Suspensión",
+                  "dose": "Suspender al menos 3 días antes, cuando sea posible; reiniciar cuando esté estable y haya retomado la ingesta oral."
+                }
+              ]
+            }
+          ]
+        },
+        "references": [
+          "DailyMed FARXIGA 2026"
+        ]
+      },
       calculate(paciente, lang = 'pt') {
         const peso            = Number(paciente?.peso          || paciente?.weight || 70);
         const paSist          = Number(paciente?.paSistolica   || 0);
@@ -24361,8 +25175,8 @@
         if (egfr < 25) {
           elegivel  = false;
           egfrAlert = t(lang,
-            `⛔ eGFR ${egfr} mL/min/1,73m² — abaixo do limite aprovado para IC/DRC. Verificar bula local e protocolo antes de iniciar ou continuar.`,
-            `⛔ eGFR ${egfr} mL/min/1,73m² — por debajo del límite aprobado para IC/ERC. Verificar prospecto local y protocolo antes de iniciar o continuar.`
+            `⛔ eGFR ${egfr} mL/min/1,73m² — não iniciar abaixo de 25. Se já estiver em uso por IC/DRC, a bula permite manter 10 mg/dia para benefício cardiorrenal; reavaliar individualmente.`,
+            `⛔ eGFR ${egfr} mL/min/1,73m² — no iniciar por debajo de 25. Si ya está en uso por IC/ERC, la ficha técnica permite mantener 10 mg/día para beneficio cardiorrenal; reevaluar individualmente.`
           );
         } else if (egfr < 45) {
           egfrAlert = t(lang,
@@ -24433,8 +25247,8 @@
               `Dosis: 10 mg VO 1 vez/día (IC-FEr, IC-FEp, ERC). ${!diabetes ? 'Beneficio cardiorrenal independiente del control glucémico.' : 'Diabetes: 5–10 mg según objetivo.'}`
             )
           : t(lang,
-              `Verificar elegibilidade: eGFR ${egfr} mL/min/1,73m² pode estar abaixo do limite para esta indicação. Consultar bula local.`,
-              `Verificar elegibilidad: eGFR ${egfr} mL/min/1,73m² puede estar por debajo del límite para esta indicación. Consultar prospecto local.`
+              `eGFR ${egfr} mL/min/1,73m²: não iniciar dapagliflozina abaixo de 25. Se já estiver em uso por IC/DRC, pode manter 10 mg/dia conforme bula; reavaliar individualmente.`,
+              `eGFR ${egfr} mL/min/1,73m²: no iniciar dapagliflozina por debajo de 25. Si ya está en uso por IC/ERC, puede mantener 10 mg/día según ficha técnica; reevaluar individualmente.`
             );
 
         return {
@@ -36759,6 +37573,96 @@
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#991B1B',
 
+      clinicalEnrichment: {
+        "doseByIndication": {
+          "pt": [
+            {
+              "indication": "ICFEr",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "3,125 mg VO 12/12h por 2 semanas."
+                },
+                {
+                  "label": "Titulação",
+                  "dose": "6,25 → 12,5 → 25 mg 12/12h, a cada ≥2 semanas; até 50 mg 12/12h foi administrado em pacientes >85 kg com IC leve-moderada."
+                }
+              ]
+            },
+            {
+              "indication": "Hipertensão arterial",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "6,25 mg VO 12/12h."
+                },
+                {
+                  "label": "Ajuste",
+                  "dose": "12,5 mg e depois 25 mg 12/12h em intervalos de 1–2 semanas; máximo 50 mg/dia."
+                }
+              ]
+            },
+            {
+              "indication": "Disfunção ventricular esquerda pós-IAM",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "6,25 mg VO 12/12h."
+                },
+                {
+                  "label": "Ajuste",
+                  "dose": "12,5 mg e depois 25 mg 12/12h em intervalos de 3–10 dias."
+                }
+              ]
+            }
+          ],
+          "es": [
+            {
+              "indication": "ICFEr",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "3,125 mg VO cada 12 h durante 2 semanas."
+                },
+                {
+                  "label": "Titulación",
+                  "dose": "6,25 → 12,5 → 25 mg cada 12 h, cada ≥2 semanas; hasta 50 mg cada 12 h se ha administrado en pacientes >85 kg con IC leve-moderada."
+                }
+              ]
+            },
+            {
+              "indication": "Hipertensión arterial",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "6,25 mg VO cada 12 h."
+                },
+                {
+                  "label": "Ajuste",
+                  "dose": "12,5 mg y luego 25 mg cada 12 h en intervalos de 1–2 semanas; máximo 50 mg/día."
+                }
+              ]
+            },
+            {
+              "indication": "Disfunción ventricular izquierda post-IAM",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "6,25 mg VO cada 12 h."
+                },
+                {
+                  "label": "Ajuste",
+                  "dose": "12,5 mg y luego 25 mg cada 12 h en intervalos de 3–10 días."
+                }
+              ]
+            }
+          ]
+        },
+        "references": [
+          "AHA/ACC/HFSA HF 2022",
+          "DailyMed Carvedilol 2026"
+        ]
+      },
       calculate: (paciente, lang = 'pt') => {
         const peso     = Number(paciente.peso    || 0);
         const idade    = Number(paciente.idade   || 0);

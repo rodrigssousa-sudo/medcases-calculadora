@@ -4197,6 +4197,85 @@
       name: { pt: "Carbamazepina", es: "Carbamazepina" },
       category: "estabilizador_humor",
 
+      clinicalEnrichment: {
+        "doseByIndication": {
+          "pt": [
+            {
+              "indication": "Epilepsia — adultos e >12 anos",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "200 mg VO 12/12h (400 mg/dia)."
+                },
+                {
+                  "label": "Titulação",
+                  "dose": "Aumentar até 200 mg/dia em intervalos semanais."
+                },
+                {
+                  "label": "Máximo",
+                  "dose": "1200 mg/dia em >15 anos; até 1600 mg/dia em adultos, raramente."
+                }
+              ]
+            },
+            {
+              "indication": "Neuralgia do trigêmeo",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "100 mg VO 12/12h."
+                },
+                {
+                  "label": "Titulação",
+                  "dose": "Aumentar até 200 mg/dia em incrementos de 100 mg a cada 12 h."
+                },
+                {
+                  "label": "Manutenção",
+                  "dose": "400–800 mg/dia; máximo 1200 mg/dia."
+                }
+              ]
+            }
+          ],
+          "es": [
+            {
+              "indication": "Epilepsia — adultos y >12 años",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "200 mg VO cada 12 h (400 mg/día)."
+                },
+                {
+                  "label": "Titulación",
+                  "dose": "Aumentar hasta 200 mg/día a intervalos semanales."
+                },
+                {
+                  "label": "Máximo",
+                  "dose": "1200 mg/día en >15 años; hasta 1600 mg/día en adultos, rara vez."
+                }
+              ]
+            },
+            {
+              "indication": "Neuralgia del trigémino",
+              "rows": [
+                {
+                  "label": "Inicial",
+                  "dose": "100 mg VO cada 12 h."
+                },
+                {
+                  "label": "Titulación",
+                  "dose": "Aumentar hasta 200 mg/día en incrementos de 100 mg cada 12 h."
+                },
+                {
+                  "label": "Mantenimiento",
+                  "dose": "400–800 mg/día; máximo 1200 mg/día."
+                }
+              ]
+            }
+          ]
+        },
+        "references": [
+          "DailyMed Carbamazepine"
+        ]
+      },
       calculate: (paciente, lang = "pt") => {
         const idade = Number(paciente.idade || 0);
         const gestante = Boolean(paciente.gestante);

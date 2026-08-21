@@ -17559,6 +17559,63 @@ function openFarmacoDetail(id) {
         : (isES ? 'POSOLOGÍA' : 'POSOLOGIA')}
     </div>`;
 
+
+  /* Missing weight must never become an apparent 0–0 mg dose. */
+  const _fdHeroDoseVisible = (() => {
+    const raw = String(hero?.heroDose || '');
+    if (!hero?.weight && /\b0\s*[–-]\s*0\s*mg\b/i.test(raw)) {
+      return isES
+        ? 'Informe el peso para calcular la dosis absoluta.'
+        : 'Informe o peso para calcular a dose absoluta.';
+    }
+    return hero?.heroDose || '—';
+  })();
+
+  /* Prevent structured renal objects from leaking as [object Object]. */
+  const _fdRenalMessage = value => {
+    const scalar = v => {
+      if (v === null || v === undefined) return '';
+      if (typeof v === 'string') return v === '[object Object]' ? '' : v;
+      if (Array.isArray(v)) return v.map(scalar).filter(Boolean).join(' · ');
+      if (typeof v === 'object') {
+        const loc = v[isES ? 'es' : 'pt'] ?? v.pt ?? v.es;
+        if (loc !== undefined && loc !== v) {
+          const s = scalar(loc);
+          if (s) return s;
+        }
+        for (const k of ['message','msg','obs','dose','intervalo']) {
+          if (v[k] !== undefined) {
+            const s = scalar(v[k]);
+            if (s) return s;
+          }
+        }
+      }
+      return '';
+    };
+
+    let out = scalar(value);
+    if (out) return out;
+
+    if (!hero?.clcr) {
+      return isES
+        ? 'Consulte los rangos de ClCr abajo; informe la función renal para destacar el rango del paciente.'
+        : 'Consulte as faixas de ClCr abaixo; informe a função renal para destacar a faixa do paciente.';
+    }
+
+    for (const candidate of [
+      hero?.rich?.ajusteRenal,
+      hero?.rich?.renalAdjustment,
+      hero?.result?._richResult?.ajusteRenal,
+      hero?.result?._richResult?.renalAdjustment,
+      hero?.source?.renalAdjustment?.message
+    ]) {
+      out = scalar(candidate);
+      if (out) return out;
+    }
+
+    return isES ? 'Ajuste renal según el rango de ClCr.' : 'Ajuste renal conforme a faixa de ClCr.';
+  };
+
   /* Dose principal */
   htmlDosing += `<div class="fd-dose-item fd-dose-item--hero">
     <div class="fd-dose-key">
@@ -17571,7 +17628,7 @@ function openFarmacoDetail(id) {
       ${hasRealPatient && hero.renalFaixa && !hero.renalAdj ? `<span class="fd-hero-renal-chip fd-hero-chip--ok"><i class="fa-solid fa-kidney"></i> ${hero.renalFaixa}</span>` : ''}
     </div>
     <div class="fd-dose-val fd-dose-val--hero">
-      ${_parsePosologyToHtml(hero.heroDose || '—')}
+      ${_parsePosologyToHtml(_fdHeroDoseVisible)}
       ${hero.heroFreq ? `<span class="fd-dose-freq-inline"> <i class="fa-solid fa-rotate" style="font-size:9px;"></i> ${hero.heroFreq}</span>` : ''}
       ${hero.heroVia  ? `<span class="fd-dose-via-inline">${hero.heroVia}</span>` : ''}
     </div>
@@ -17605,9 +17662,35 @@ function openFarmacoDetail(id) {
   ══════════════════════════════════════════════════════════════ */
   const doseSrc = get('dose');
   const doseKg  = get('doseKg');
+  /* CALC-FARMACOS-BATCH1-POSOLOGY-PIPELINE-TRIPLE-FIX-V1-B-R0
+     doseByIndication vive no RAW calculate() preservado em hero.rich.
+     O owner source é hero.source. Isto precisa existir ANTES do gate hasAnyRef
+     e fora do branch `doseSrc` object, pois Procainamida retorna dose como string. */
+  const _rawGenericDoseByIndication =
+    (Array.isArray(hero?.rich?.doseByIndication) && hero.rich.doseByIndication.length
+      ? hero.rich.doseByIndication
+      : null)
+    || (Array.isArray(hero?.result?._richResult?.doseByIndication) && hero.result._richResult.doseByIndication.length
+      ? hero.result._richResult.doseByIndication
+      : null)
+    || (() => {
+      const ceDose = hero?.source?.clinicalEnrichment?.doseByIndication;
+      if (Array.isArray(ceDose) && ceDose.length) return ceDose;
+      if (ceDose && typeof ceDose === 'object') {
+        const localized = isES ? ceDose.es : ceDose.pt;
+        if (Array.isArray(localized) && localized.length) return localized;
+      }
+      return null;
+    })();
+
+  const _genericDoseByIndication = _rawGenericDoseByIndication;
+  const _hasGenericDoseByIndication =
+    Array.isArray(_genericDoseByIndication) && _genericDoseByIndication.length > 0;
+
   const hasAnyRef = (doseSrc && typeof doseSrc === 'object' && Object.keys(doseSrc).length)
                   || (doseKg && typeof doseKg === 'object' && Object.keys(doseKg).length)
-                  || (typeof doseSrc === 'string' && doseSrc !== '—');
+                  || (typeof doseSrc === 'string' && doseSrc !== '—')
+                  || _hasGenericDoseByIndication;
 
   if (hasAnyRef) {
     htmlDosing += `<div class="fd-ref-block">
@@ -17620,6 +17703,38 @@ function openFarmacoDetail(id) {
       </div>
       <div class="fd-ref-body">`;
 
+
+    /* R6 canônico: Patologia/Indicação -> Dose.
+       Fica fora do branch dose-object para funcionar também com calculate().dose string. */
+    if (_hasGenericDoseByIndication) {
+      const _escClinical = v => String(v ?? '')
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      const _doseClinical = v => _escClinical(v).replace(
+        /(\d+(?:[.,]\d+)?(?:\s*(?:a|–|-)\s*\d+(?:[.,]\d+)?)?\s*(?:mg\/m²|mg\/kg\/dia|mg\/kg\/día|mg\/kg|mg\/dia|mg\/día|mg\/min|mg|g\/24 h|g\/dia|g\/día|g))/gi,
+        '<strong>$1</strong>'
+      );
+      const _renderPath = item => {
+        const rows = Array.isArray(item?.rows) ? item.rows : [];
+        const note = item?.note
+          ? `<div class="fd-pathology-note">${_doseClinical(item.note)}</div>`
+          : '';
+        return `<div class="fd-pathology-block">
+          <div class="fd-pathology-name">${_escClinical(item?.indication || '')}</div>
+          <div class="fd-pathology-dose-label">${isES ? 'DOSIS' : 'DOSE'}</div>
+          ${rows.map(r => `<div class="fd-pathology-dose-line">${
+            r?.label ? `<span class="fd-pathology-regimen">${_escClinical(r.label)}</span>` : ''
+          }<span class="fd-pathology-dose-value">${_doseClinical(r?.dose || '')}</span></div>`).join('')}
+          ${note}
+        </div>`;
+      };
+      htmlDosing += `<div class="fd-ref-cat fd-ref-cat--indication">
+        <div class="fd-ref-cat-title"><i class="fa-solid fa-list-check"></i> ${
+          isES ? 'Esquemas por indicación' : 'Esquemas por indicação'
+        }</div>
+        <div class="fd-indication-wrap">${_genericDoseByIndication.map(_renderPath).join('')}</div>
+      </div>`;
+    }
+
     /* ── Agrupa as entradas de dose por categoria ── */
     if (doseSrc && typeof doseSrc === 'object') {
       /* Categorias de chaves para ordenação visual */
@@ -17628,7 +17743,11 @@ function openFarmacoDetail(id) {
       const _isPediatric = k => /pediatr/i.test(k);
       const _isOther     = k => !_isAdultoVO(k) && !_isAdultoEV(k) && !_isPediatric(k);
 
-      const allEntries = Object.entries(doseSrc).filter(([k,v]) => v && v !== '—');
+      const allEntries = Object.entries(doseSrc).filter(([k,v]) => {
+        if (!v || v === '—') return false;
+        if (_hasGenericDoseByIndication && /^adulto/i.test(k)) return false;
+        return true;
+      });
 
       /* CALC-CICLOFOSFAMIDA-POSOLOGY-PATHOLOGY-DOSE-COMPACT-V1-B-R6
          Presentation-only. Conteúdo clínico permanece no source owner.
@@ -17860,7 +17979,7 @@ function openFarmacoDetail(id) {
         });
         htmlDosing += `</div>`;
       }
-    } else if (typeof doseSrc === 'string' && doseSrc !== '—') {
+    } else if (typeof doseSrc === 'string' && doseSrc !== '—' && !_hasGenericDoseByIndication) {
       htmlDosing += `<div class="fd-ref-cat">
         <div class="fd-ref-row"><span class="fd-ref-val">${_parsePosologyToHtml(doseSrc)}</span></div>
       </div>`;
@@ -17947,7 +18066,7 @@ function openFarmacoDetail(id) {
       <div class="fd-renal-body">`;
 
     if (adjMsg) {
-      htmlDosing += `<div class="fd-renal-msg"><i class="fa-solid fa-circle-info" style="color:#38BDF8;opacity:0.7;font-size:10px;"></i> ${adjMsg}</div>`;
+      htmlDosing += `<div class="fd-renal-msg"><i class="fa-solid fa-circle-info" style="color:#38BDF8;opacity:0.7;font-size:10px;"></i> ${_fdRenalMessage(adjMsg)}</div>`;
     }
 
     /* BUILD 246: wrapper .fd-renal-timeline — conecta as faixas com
@@ -21053,6 +21172,27 @@ function _adaptExternalDB(dbObj, categoryLabel) {
       try {
         if (typeof entry.calculate === 'function') {
           result = entry.calculate(p, lang);
+
+          /* CALC-FARMACOS-FIRST-CLINICAL-BATCH-10-PATHOLOGY-DOSE-SAFETY-V1-B-R1 */
+          if (entry.clinicalEnrichment && result && typeof result === 'object') {
+            const _ce = entry.clinicalEnrichment;
+            const _locClinical = value => {
+              if (Array.isArray(value)) return value.map(_locClinical);
+              if (value && typeof value === 'object') {
+                if (Object.prototype.hasOwnProperty.call(value,'pt') && Object.prototype.hasOwnProperty.call(value,'es')) {
+                  return _locClinical(lang === 'es' ? value.es : value.pt);
+                }
+                const o={}; for (const [k,v] of Object.entries(value)) o[k]=_locClinical(v); return o;
+              }
+              return value;
+            };
+            if (_ce.doseByIndication) result.doseByIndication=_locClinical(_ce.doseByIndication);
+            if (_ce.doseOverride && result.dose && typeof result.dose === 'object') Object.assign(result.dose,_locClinical(_ce.doseOverride));
+            for (const f of ['indications','commonAdverseEffects','dangerousAdverseEffects','contraindications']) {
+              if ((result[f] == null || result[f] === '' || (Array.isArray(result[f]) && result[f].length===0)) && _ce[f] != null) result[f]=_locClinical(_ce[f]);
+            }
+            if (_ce.references) result.clinicalEnrichmentReferences=_locClinical(_ce.references);
+          }
         } else if (typeof entry.dose === 'function') {
           result = entry.dose(p, lang);
         } else if (entry.dose && typeof entry.dose === 'object') {
