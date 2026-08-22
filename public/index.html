@@ -50275,8 +50275,8 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
 <!-- CALC-WEBVIEW-LANG-THEME-URL-CONTRACT-V1-B-R0 END -->
 
 
-<!-- CALC-MODULE-FAST-CLOSE-AND-CLEAR-ACTION-V1-B-R1-NATIVE-OWNER-DEDUPE BEGIN -->
-<style id="medcases-module-fast-close-clear-v1-b-r1">
+<!-- CALC-MODULE-CLEAR-OPEN-SURFACE-ONLY-V1-B-R2-HOME-LEAK-FIX BEGIN -->
+<style id="medcases-module-clear-open-surface-only-v1-b-r2">
   .mc-fast-close-target {
     touch-action: manipulation !important;
     -webkit-tap-highlight-color: transparent !important;
@@ -50320,12 +50320,12 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
     z-index: 8;
   }
 </style>
-<script id="medcases-module-fast-close-clear-v1-b-r1">
+<script id="medcases-module-clear-open-surface-only-v1-b-r2">
 (() => {
   'use strict';
 
-  const BUILD='CALC-MODULE-FAST-CLOSE-AND-CLEAR-ACTION-V1-B-R1-NATIVE-OWNER-DEDUPE';
-  if (window.__mcModuleFastCloseClearV1BR1) return;
+  const BUILD='CALC-MODULE-CLEAR-OPEN-SURFACE-ONLY-V1-B-R2-HOME-LEAK-FIX';
+  if (window.__mcModuleClearOpenSurfaceOnlyV1BR2) return;
 
   const norm=value => String(value ?? '')
     .normalize('NFD')
@@ -50464,19 +50464,21 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
     !el.matches('[data-preserve-on-reset],[data-reset-preserve]')
   );
 
+  const visibleEditableControls=root =>
+    editableControls(root).filter(el => visible(el));
+
   const isCalculatorSurface=root => {
     if (!root || !visible(root)) return false;
 
-    if (root.id?.startsWith('hub-card-')) {
-      if (excludedModules.has(root.id)) return false;
-      if (explicitCalculatorModules.has(root.id)) return true;
-    }
+    if (root.id?.startsWith('hub-card-') && excludedModules.has(root.id)) return false;
+
+    const visibleEditable=visibleEditableControls(root).length;
+    if (!visibleEditable) return false;
 
     const title=surfaceTitle(root);
     if (/(farmaco|farmacos|paciente|patient|pediatr|gestante|interac)/.test(title)) return false;
 
-    const editable=editableControls(root).length;
-    if (!editable) return false;
+    if (root.id?.startsWith('hub-card-') && explicitCalculatorModules.has(root.id)) return true;
 
     const d=norm([
       root.id,
@@ -50704,12 +50706,23 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
 
   let settleTimers=[];
 
+  const removeLeakedHomeClearButtons=() => {
+    document.querySelectorAll('.mc-module-clear-action[data-owner]').forEach(button => {
+      const hub=button.closest('[id^="hub-card-"]');
+      if (hub && visibleEditableControls(hub).length===0) {
+        button.remove();
+        console.info('['+BUILD+'] HOME_CLEAR_REMOVED',{moduleId:hub.id});
+      }
+    });
+  };
+
   const settle=reason => {
     settleTimers.forEach(clearTimeout);
     settleTimers=[];
 
     [0,40,100,220,480,900].forEach(delay => {
       settleTimers.push(setTimeout(() => {
+        removeLeakedHomeClearButtons();
         const roots=moduleRoots();
         roots.forEach(ensureClearButton);
 
@@ -50744,7 +50757,7 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
     settle('already-ready');
   }
 
-  window.__mcModuleFastCloseClearV1BR1={
+  window.__mcModuleClearOpenSurfaceOnlyV1BR2={
     build:BUILD,
     settle,
     clearModule,
@@ -50759,7 +50772,7 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
   });
 })();
 </script>
-<!-- CALC-MODULE-FAST-CLOSE-AND-CLEAR-ACTION-V1-B-R1-NATIVE-OWNER-DEDUPE END -->
+<!-- CALC-MODULE-CLEAR-OPEN-SURFACE-ONLY-V1-B-R2-HOME-LEAK-FIX END -->
 
 
 <!-- CALC-ELECTROLYTES-OSMOLARITY-HERO-VALUE-MIRROR-V1-B-R0 BEGIN -->
@@ -51008,6 +51021,757 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
 })();
 </script>
 <!-- CALC-ELECTROLYTES-OSMOLARITY-HERO-VALUE-MIRROR-V1-B-R0 END -->
+
+
+
+<!-- CALC-HOME-SCORES-CARD-CANONICAL-PARITY-V1-B-R1-COLLAPSED-ONLY BEGIN -->
+<script id="medcases-home-scores-card-canonical-parity-v1-b-r1-collapsed-only">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-HOME-SCORES-CARD-CANONICAL-PARITY-V1-B-R1-COLLAPSED-ONLY';
+  if (window.__mcHomeScoresCardCanonicalParityV1BR1CollapsedOnly) return;
+
+  const visible=el => {
+    if (!el || !el.isConnected) return false;
+    const cs=getComputedStyle(el);
+    if (cs.display==='none' || cs.visibility==='hidden') return false;
+    const r=el.getBoundingClientRect();
+    return r.width>0 && r.height>0;
+  };
+
+  const target=() => document.querySelector('#hub-card-scores');
+
+  const reference=() => [
+    '#hub-card-hemodinamica',
+    '#hub-card-fluidos',
+    '#hub-card-infusao',
+    '#hub-card-eletrolitos'
+  ].map(sel => document.querySelector(sel)).find(visible) || null;
+
+  const firstInteractiveHeader=root => {
+    if (!root) return null;
+    const direct=[...root.querySelectorAll(
+      ':scope > button,:scope > [role="button"],:scope > .hub-card-header,:scope > .card-header,:scope > header'
+    )].filter(visible);
+    if (direct.length) return direct[0];
+    return [...root.querySelectorAll(
+      'button,[role="button"],.hub-card-header,.card-header,header'
+    )].find(visible) || null;
+  };
+
+  const titleNode=root => {
+    if (!root) return null;
+    const candidates=[...root.querySelectorAll(
+      'h1,h2,h3,h4,strong,.title,.card-title,.hub-card-title'
+    )].filter(visible);
+    return candidates.find(el => /scores?/i.test(String(el.textContent || ''))) ||
+      candidates[0] || null;
+  };
+
+  const referenceTitleNode=root => {
+    if (!root) return null;
+    return [...root.querySelectorAll(
+      'h1,h2,h3,h4,strong,.title,.card-title,.hub-card-title'
+    )].filter(visible)[0] || null;
+  };
+
+  const chevronNode=root => {
+    if (!root) return null;
+    const nodes=[...root.querySelectorAll(
+      '[class*="chevron"],[class*="caret"],[class*="arrow"],[data-chevron],svg'
+    )].filter(visible);
+    return nodes[nodes.length-1] || null;
+  };
+
+  const iconNode=root => {
+    if (!root) return null;
+    const candidates=[...root.querySelectorAll('.icon,[class*="icon"],svg,img')].filter(visible);
+    const chev=chevronNode(root);
+    return candidates.find(el => el!==chev) || null;
+  };
+
+  const trackedElements=root => [
+    root,
+    firstInteractiveHeader(root),
+    titleNode(root),
+    chevronNode(root),
+    iconNode(root)
+  ].filter(Boolean);
+
+  const clearOwnedProps=el => {
+    if (!el) return;
+    const props=String(el.dataset.mcScoresParityProps || '').split(',').filter(Boolean);
+    props.forEach(prop => el.style.removeProperty(prop));
+    delete el.dataset.mcScoresParityProps;
+  };
+
+  const restoreNative=reason => {
+    const scores=target();
+    if (!scores) return false;
+
+    trackedElements(scores).forEach(clearOwnedProps);
+    delete scores.dataset.mcScoresCanonicalParity;
+
+    console.info('['+BUILD+'] NATIVE_RESTORED',{
+      reason,
+      targetId:scores.id
+    });
+
+    return true;
+  };
+
+  const ownCopy=(from,to,props) => {
+    if (!from || !to) return;
+    clearOwnedProps(to);
+
+    const cs=getComputedStyle(from);
+    props.forEach(prop => {
+      const value=cs.getPropertyValue(prop);
+      if (value) to.style.setProperty(prop,value,'important');
+    });
+
+    to.dataset.mcScoresParityProps=props.join(',');
+  };
+
+  const explicitExpanded=root => {
+    if (!root) return false;
+
+    if (root.getAttribute('aria-expanded')==='true') return true;
+
+    const expandedControl=root.querySelector(
+      '[aria-expanded="true"],[data-expanded="true"],.expanded,.is-expanded,.open,.is-open'
+    );
+
+    return !!expandedControl;
+  };
+
+  const isExpanded=(scores,ref) => {
+    if (!visible(scores) || !visible(ref)) return false;
+
+    if (explicitExpanded(scores)) return true;
+
+    const rr=ref.getBoundingClientRect();
+    const sr=scores.getBoundingClientRect();
+
+    // Physical evidence: collapsed reference ~85px, expanded Scores ~542px.
+    // A generous 24px delta prevents false positives from responsive rounding.
+    return sr.height > rr.height + 24;
+  };
+
+  const apply=reason => {
+    const scores=target();
+    const ref=reference();
+
+    if (!visible(scores) || !visible(ref)) {
+      restoreNative(reason+'-not-visible');
+      return false;
+    }
+
+    if (isExpanded(scores,ref)) {
+      restoreNative(reason+'-expanded');
+      return true;
+    }
+
+    ownCopy(ref,scores,[
+      'background-color',
+      'border-top-color','border-right-color','border-bottom-color','border-left-color',
+      'border-top-style','border-right-style','border-bottom-style','border-left-style',
+      'border-top-width','border-right-width','border-bottom-width','border-left-width',
+      'border-top-left-radius','border-top-right-radius','border-bottom-right-radius','border-bottom-left-radius',
+      'box-shadow','min-height',
+      'padding-top','padding-right','padding-bottom','padding-left'
+    ]);
+
+    const refHeader=firstInteractiveHeader(ref);
+    const scoresHeader=firstInteractiveHeader(scores);
+    if (refHeader && scoresHeader) {
+      ownCopy(refHeader,scoresHeader,[
+        'display','align-items','justify-content','gap','min-height',
+        'padding-top','padding-right','padding-bottom','padding-left'
+      ]);
+    }
+
+    const refTitle=referenceTitleNode(ref);
+    const scoresTitle=titleNode(scores);
+    if (refTitle && scoresTitle) {
+      ownCopy(refTitle,scoresTitle,[
+        'font-family','font-size','font-weight','line-height','letter-spacing','color',
+        'margin-top','margin-right','margin-bottom','margin-left'
+      ]);
+    }
+
+    const refChevron=chevronNode(ref);
+    const scoresChevron=chevronNode(scores);
+    if (refChevron && scoresChevron) {
+      ownCopy(refChevron,scoresChevron,['width','height','min-width','min-height','opacity']);
+    }
+
+    const refIcon=iconNode(ref);
+    const scoresIcon=iconNode(scores);
+    if (refIcon && scoresIcon) {
+      ownCopy(refIcon,scoresIcon,['width','height','min-width','min-height']);
+    }
+
+    scores.dataset.mcScoresCanonicalParity='true';
+
+    const rr=ref.getBoundingClientRect();
+    const sr=scores.getBoundingClientRect();
+
+    console.info('['+BUILD+'] COLLAPSED_APPLIED',{
+      reason,
+      referenceId:ref.id,
+      targetId:scores.id,
+      referenceHeight:Math.round(rr.height),
+      targetHeight:Math.round(sr.height),
+      expanded:false
+    });
+
+    return true;
+  };
+
+  let timers=[];
+
+  const settle=reason => {
+    timers.forEach(clearTimeout);
+    timers=[];
+
+    // 0ms restores native state immediately after opening.
+    [0,16,40,100,220,480].forEach(delay => {
+      timers.push(setTimeout(() => apply(reason+'-'+delay),delay));
+    });
+  };
+
+  let resizeTimer=null;
+  window.addEventListener('resize',() => {
+    clearTimeout(resizeTimer);
+    resizeTimer=setTimeout(() => settle('resize'),80);
+  },{passive:true});
+
+  window.addEventListener('pageshow',() => settle('pageshow'));
+
+  document.addEventListener('click',event => {
+    if (event.target.closest?.(
+      '#hub-card-scores,#hub-card-hemodinamica,#hub-card-fluidos,#hub-card-infusao,#hub-card-eletrolitos'
+    )) {
+      settle('home-card-click');
+    }
+  },true);
+
+  if (document.readyState==='loading') {
+    document.addEventListener('DOMContentLoaded',() => settle('dom-ready'),{once:true});
+  } else {
+    settle('already-ready');
+  }
+
+  window.__mcHomeScoresCardCanonicalParityV1BR1CollapsedOnly={
+    build:BUILD,
+    apply,
+    settle,
+    restoreNative,
+    isExpanded,
+    target,
+    reference
+  };
+
+  console.info('['+BUILD+'] MOUNTED',{
+    scope:'scores-home-card-collapsed-only',
+    expandedPolicy:'native-layout-restored',
+    logicChanged:false,
+    persistentObserver:false
+  });
+})();
+</script>
+<!-- CALC-HOME-SCORES-CARD-CANONICAL-PARITY-V1-B-R1-COLLAPSED-ONLY END -->
+
+
+
+
+<!-- CALC-SCORES-EXPANDED-HOME-COLOR-TYPOGRAPHY-PARITY-V1-B-R0 BEGIN -->
+<!-- CALC-SCORES-EXPANDED-HOME-CARD-EXACT-PARITY-V1-B-R1 BEGIN -->
+<style id="medcases-scores-expanded-home-card-exact-parity-v1-b-r1">
+  .mc-scores-home-exact-grid-r1 {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 3px !important;
+    row-gap: 3px !important;
+    column-gap: 3px !important;
+    margin-top: 5px !important;
+    padding: 0 !important;
+  }
+
+  .mc-scores-home-exact-card-r1 {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    cursor: pointer;
+  }
+</style>
+
+<script id="medcases-scores-expanded-home-card-exact-parity-v1-b-r1">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-SCORES-EXPANDED-HOME-CARD-EXACT-PARITY-V1-B-R1';
+  const CARD_SURFACE='#252930';
+  const EXPANDED_BACKGROUND='#1A1D23';
+  const TITLE_SIZE='12.5px';
+  const TITLE_WEIGHT='700';
+  const SUBTITLE_SIZE='11.5px';
+  const SUBTITLE_WEIGHT='400';
+  if (window.__mcScoresExpandedHomeCardExactParityV1BR1) return;
+
+  const labels=[
+    'SOFA','Glasgow','Wells DVT','Wells TEP','CURB-65',
+    'CHA₂DS₂','HAS-BLED','Child-Pugh','TIMI','NEWS2'
+  ];
+
+  const norm=value => String(value ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .toUpperCase()
+    .replace(/\s+/g,' ')
+    .trim();
+
+  const normalizedLabels=labels.map(norm);
+
+  const visible=el => {
+    if (!el || !el.isConnected) return false;
+    const cs=getComputedStyle(el);
+    if (cs.display==='none' || cs.visibility==='hidden') return false;
+    const r=el.getBoundingClientRect();
+    return r.width>0 && r.height>0;
+  };
+
+  const scoresRoot=() => document.querySelector('#hub-card-scores');
+
+  const homeReference=() => [
+    '#hub-card-hemodinamica',
+    '#hub-card-fluidos',
+    '#hub-card-infusao',
+    '#hub-card-eletrolitos',
+    '#hub-card-interacoes'
+  ].map(sel => document.querySelector(sel)).find(visible) || null;
+
+  const homeHeader=root => {
+    if (!root) return null;
+    const direct=[...root.querySelectorAll(
+      ':scope > button,:scope > [role="button"],:scope > .hub-card-header,:scope > .card-header,:scope > header'
+    )].filter(visible);
+    if (direct.length) return direct[0];
+
+    return [...root.querySelectorAll(
+      'button,[role="button"],.hub-card-header,.card-header,header'
+    )].find(visible) || null;
+  };
+
+  const homeTitle=root => {
+    if (!root) return null;
+    return [...root.querySelectorAll('h1,h2,h3,h4,strong,b,.title,.card-title,.hub-card-title,span,div')]
+      .filter(visible)
+      .find(el => {
+        const t=norm(el.textContent || '');
+        return [
+          'HEMODINÂMICA','HEMODINAMICA','FLUIDOS','INFUSÃO','INFUSAO',
+          'ELETRÓLITOS','ELETROLITOS','INTERAÇÕES','INTERACOES'
+        ].includes(t);
+      }) || null;
+  };
+
+  const readStyle=(el,props) => {
+    if (!el) return {};
+    const cs=getComputedStyle(el);
+    const out={};
+    props.forEach(prop => out[prop]=cs.getPropertyValue(prop));
+    return out;
+  };
+
+  const SURFACE_PROPS=[
+    'background-color',
+    'border-top-width','border-right-width','border-bottom-width','border-left-width',
+    'border-top-style','border-right-style','border-bottom-style','border-left-style',
+    'border-top-color','border-right-color','border-bottom-color','border-left-color',
+    'border-top-left-radius','border-top-right-radius','border-bottom-right-radius','border-bottom-left-radius',
+    'box-shadow',
+    'height','min-height','max-height'
+  ];
+
+  const HEADER_PROPS=[
+    'display','flex-direction','align-items','justify-content','gap',
+    'padding-top','padding-right','padding-bottom','padding-left'
+  ];
+
+  const TITLE_PROPS=[
+    'font-family','font-size','font-weight','line-height','letter-spacing','color',
+    'margin-top','margin-right','margin-bottom','margin-left'
+  ];
+
+  let homeSnapshot=null;
+
+  const forensicFallback=() => ({
+    source:'forensic-fallback',
+    surface:{
+      'background-color':'rgb(37, 41, 48)',
+      'border-top-width':'0.5px',
+      'border-right-width':'0.5px',
+      'border-bottom-width':'0.5px',
+      'border-left-width':'0.5px',
+      'border-top-style':'solid',
+      'border-right-style':'solid',
+      'border-bottom-style':'solid',
+      'border-left-style':'solid',
+      'border-top-color':'rgb(55, 65, 81)',
+      'border-right-color':'rgb(55, 65, 81)',
+      'border-bottom-color':'rgb(55, 65, 81)',
+      'border-left-color':'rgb(55, 65, 81)',
+      'border-top-left-radius':'6px',
+      'border-top-right-radius':'6px',
+      'border-bottom-right-radius':'6px',
+      'border-bottom-left-radius':'6px',
+      'box-shadow':'none',
+      'height':'85px',
+      'min-height':'85px',
+      'max-height':'85px'
+    },
+    header:{
+      'display':'flex',
+      'flex-direction':'column',
+      'align-items':'flex-start',
+      'justify-content':'center',
+      'gap':'3px',
+      'padding-top':'0px',
+      'padding-right':'20px',
+      'padding-bottom':'0px',
+      'padding-left':'20px'
+    },
+    title:{
+      'font-size':'14px',
+      'font-weight':'800'
+    }
+  });
+
+  const captureHome=reason => {
+    const ref=homeReference();
+    if (!visible(ref)) return homeSnapshot;
+
+    const header=homeHeader(ref);
+    const title=homeTitle(ref);
+    const rr=ref.getBoundingClientRect();
+
+    homeSnapshot={
+      source:'live-home',
+      reason,
+      referenceId:ref.id,
+      measuredWidth:Math.round(rr.width),
+      measuredHeight:Math.round(rr.height),
+      surface:readStyle(ref,SURFACE_PROPS),
+      header:readStyle(header,HEADER_PROPS),
+      title:readStyle(title,TITLE_PROPS)
+    };
+
+    console.info('['+BUILD+'] HOME_REFERENCE_CAPTURED',{
+      reason,
+      referenceId:ref.id,
+      width:Math.round(rr.width),
+      height:Math.round(rr.height),
+      background:homeSnapshot.surface['background-color'],
+      radius:homeSnapshot.surface['border-top-left-radius'],
+      border:homeSnapshot.surface['border-top-width'],
+      titleSize:homeSnapshot.title['font-size'],
+      titleWeight:homeSnapshot.title['font-weight']
+    });
+
+    return homeSnapshot;
+  };
+
+  const snapshot=reason => captureHome(reason) || homeSnapshot || forensicFallback();
+
+  const explicitExpanded=root => {
+    if (!root) return false;
+    if (root.getAttribute('aria-expanded')==='true') return true;
+    return !!root.querySelector(
+      '[aria-expanded="true"],[data-expanded="true"],.expanded,.is-expanded,.open,.is-open'
+    );
+  };
+
+  const isExpanded=root => {
+    if (!visible(root)) return false;
+    if (explicitExpanded(root)) return true;
+    const ref=homeReference();
+    if (!visible(ref)) return false;
+    return root.getBoundingClientRect().height > ref.getBoundingClientRect().height + 24;
+  };
+
+  const titleNodes=root => [...root.querySelectorAll(
+    'h1,h2,h3,h4,h5,h6,strong,b,span,div,p'
+  )].filter(el => visible(el) && normalizedLabels.includes(norm(el.textContent || '')));
+
+  const itemForTitle=(node,root) => {
+    if (!node || !root) return null;
+
+    const semantic=node.closest(
+      'button,a,[role="button"],[onclick],[data-score],[data-action],[class*="score-item"],[class*="score-row"],[class*="option"],[class*="item"]'
+    );
+    if (semantic && root.contains(semantic) && semantic!==root) return semantic;
+
+    let cur=node.parentElement;
+    while (cur && cur!==root) {
+      const txt=norm(cur.textContent || '');
+      const hits=normalizedLabels.filter(label => txt.includes(label)).length;
+      if (hits===1 && cur.children.length<=8) return cur;
+      cur=cur.parentElement;
+    }
+    return null;
+  };
+
+  const uniqueItems=root => {
+    const seen=new Set();
+    const items=[];
+    titleNodes(root).forEach(title => {
+      const item=itemForTitle(title,root);
+      if (!item || seen.has(item)) return;
+      const txt=norm(item.textContent || '');
+      const hits=normalizedLabels.filter(label => txt.includes(label)).length;
+      if (hits!==1) return;
+      seen.add(item);
+      items.push({item,title});
+    });
+    return items;
+  };
+
+  const nearestCommonAncestor=(entries,root) => {
+    const items=entries.map(entry => entry.item);
+    if (!items.length) return null;
+
+    const chains=items.map(item => {
+      const arr=[];
+      let cur=item.parentElement;
+      while (cur && cur!==root) {
+        arr.push(cur);
+        cur=cur.parentElement;
+      }
+      arr.push(root);
+      return arr;
+    });
+
+    for (const candidate of chains[0]) {
+      if (chains.every(chain => chain.includes(candidate))) return candidate;
+    }
+    return root;
+  };
+
+  const applyProps=(el,props) => {
+    if (!el) return;
+    Object.entries(props || {}).forEach(([prop,value]) => {
+      if (value) el.style.setProperty(prop,value,'important');
+    });
+  };
+
+  const ownedProps=[
+    ...SURFACE_PROPS,...HEADER_PROPS,
+    'box-sizing','width','min-width','margin','overflow'
+  ];
+
+  const clearCard=item => {
+    if (!item) return;
+    item.classList.remove('mc-scores-home-exact-card-r1');
+    ownedProps.forEach(prop => item.style.removeProperty(prop));
+    delete item.dataset.mcScoresHomeExact;
+  };
+
+  const clearTitle=title => {
+    if (!title) return;
+    TITLE_PROPS.forEach(prop => title.style.removeProperty(prop));
+    title.style.removeProperty('font-size');
+    title.style.removeProperty('font-weight');
+    title.style.removeProperty('line-height');
+    delete title.dataset.mcScoresHomeExactTitle;
+  };
+
+  const subtitleNodes=(item,title) => [...item.querySelectorAll('small,p,span,div')]
+    .filter(el => {
+      if (!visible(el) || el===title || el.contains(title)) return false;
+      const text=String(el.textContent || '').replace(/\s+/g,' ').trim();
+      if (!text || text.length>80) return false;
+      if (el.children.length>0) return false;
+      return !normalizedLabels.includes(norm(text));
+    });
+
+  const clearSubtitle=el => {
+    if (!el) return;
+    ['font-size','font-weight','line-height'].forEach(prop => el.style.removeProperty(prop));
+    delete el.dataset.mcScoresHomeExactSubtitle;
+  };
+
+  const clearGrid=root => {
+    if (!root) return;
+
+    root.querySelectorAll('.mc-scores-home-exact-card-r1').forEach(clearCard);
+    root.querySelectorAll('[data-mc-scores-home-exact-title="true"]').forEach(clearTitle);
+    root.querySelectorAll('[data-mc-scores-home-exact-subtitle="true"]').forEach(clearSubtitle);
+
+    root.querySelectorAll('.mc-scores-home-exact-grid-r1').forEach(grid => {
+      grid.classList.remove('mc-scores-home-exact-grid-r1');
+      grid.style.removeProperty('background-color');
+      delete grid.dataset.mcScoresHomeExactGrid;
+    });
+
+    if (root.dataset.mcScoresContrastOwner===BUILD) {
+      root.style.removeProperty('background-color');
+      delete root.dataset.mcScoresContrastOwner;
+    }
+  };
+
+  const decorateEntry=(entry,snap) => {
+    const {item,title}=entry;
+
+    item.classList.add('mc-scores-home-exact-card-r1');
+    item.dataset.mcScoresHomeExact='true';
+
+    applyProps(item,snap.surface);
+    applyProps(item,snap.header);
+    item.style.setProperty('background-color',CARD_SURFACE,'important');
+
+    item.style.setProperty('box-sizing','border-box','important');
+    item.style.setProperty('width','100%','important');
+    item.style.setProperty('min-width','0','important');
+    item.style.setProperty('margin','0','important');
+    item.style.setProperty('overflow','hidden','important');
+
+    title.dataset.mcScoresHomeExactTitle='true';
+    applyProps(title,snap.title);
+    title.style.setProperty('font-size',TITLE_SIZE,'important');
+    title.style.setProperty('font-weight',TITLE_WEIGHT,'important');
+    title.style.setProperty('line-height','1.18','important');
+
+    subtitleNodes(item,title).forEach(subtitle => {
+      subtitle.dataset.mcScoresHomeExactSubtitle='true';
+      subtitle.style.setProperty('font-size',SUBTITLE_SIZE,'important');
+      subtitle.style.setProperty('font-weight',SUBTITLE_WEIGHT,'important');
+      subtitle.style.setProperty('line-height','1.22','important');
+    });
+  };
+
+  const apply=reason => {
+    const root=scoresRoot();
+    if (!root || !visible(root)) return false;
+
+    if (!isExpanded(root)) {
+      captureHome(reason+'-collapsed');
+      clearGrid(root);
+      return true;
+    }
+
+    const entries=uniqueItems(root);
+    if (entries.length<8) {
+      console.warn('['+BUILD+'] ITEMS_NOT_READY',{reason,found:entries.length,expected:10});
+      return false;
+    }
+
+    const grid=nearestCommonAncestor(entries,root);
+    if (!grid || grid===root) {
+      console.warn('['+BUILD+'] GRID_CONTAINER_NOT_FOUND',{reason,items:entries.length});
+      return false;
+    }
+
+    const snap=snapshot(reason);
+
+    root.style.setProperty('background-color',EXPANDED_BACKGROUND,'important');
+    root.dataset.mcScoresContrastOwner=BUILD;
+
+    grid.classList.add('mc-scores-home-exact-grid-r1');
+    grid.dataset.mcScoresHomeExactGrid='true';
+    grid.style.setProperty('background-color',EXPANDED_BACKGROUND,'important');
+
+    entries.forEach(entry => decorateEntry(entry,snap));
+
+    const first=entries[0]?.item?.getBoundingClientRect();
+    console.info('['+BUILD+'] APPLIED',{
+      reason,
+      source:snap.source,
+      referenceId:snap.referenceId || null,
+      gridColumns:2,
+      gapPx:3,
+      topbarGapPx:5,
+      items:entries.length,
+      cardWidth:first ? Math.round(first.width) : null,
+      cardHeight:first ? Math.round(first.height) : null,
+      cardBackground:CARD_SURFACE,
+      expandedBackground:EXPANDED_BACKGROUND,
+      radius:snap.surface['border-top-left-radius'],
+      border:snap.surface['border-top-width'],
+      titleSize:TITLE_SIZE,
+      titleWeight:TITLE_WEIGHT,
+      subtitleSize:SUBTITLE_SIZE,
+      subtitleWeight:SUBTITLE_WEIGHT
+    });
+
+    return true;
+  };
+
+  let timers=[];
+
+  const settle=reason => {
+    timers.forEach(clearTimeout);
+    timers=[];
+    [0,16,40,100,220,480,900].forEach(delay => {
+      timers.push(setTimeout(() => apply(reason+'-'+delay),delay));
+    });
+  };
+
+  let resizeTimer=null;
+  window.addEventListener('resize',() => {
+    clearTimeout(resizeTimer);
+    resizeTimer=setTimeout(() => settle('resize'),80);
+  },{passive:true});
+
+  window.addEventListener('pageshow',() => {
+    captureHome('pageshow');
+    settle('pageshow');
+  });
+
+  document.addEventListener('click',event => {
+    if (event.target.closest?.('#hub-card-scores')) {
+      captureHome('pre-scores-click');
+      settle('scores-click');
+    }
+  },true);
+
+  if (document.readyState==='loading') {
+    document.addEventListener('DOMContentLoaded',() => {
+      captureHome('dom-ready');
+      settle('dom-ready');
+    },{once:true});
+  } else {
+    captureHome('already-ready');
+    settle('already-ready');
+  }
+
+  window.__mcScoresExpandedHomeCardExactParityV1BR1={
+    build:BUILD,
+    apply,
+    settle,
+    captureHome,
+    uniqueItems,
+    isExpanded
+  };
+
+  console.info('['+BUILD+'] MOUNTED',{
+    scope:'expanded-scores-only',
+    gridColumns:2,
+    gapPx:3,
+    topbarGapPx:5,
+    exactHomeRuntimeReference:true,
+    callbacksPreserved:true,
+    persistentObserver:false
+  });
+})();
+</script>
+<!-- CALC-SCORES-EXPANDED-HOME-CARD-EXACT-PARITY-V1-B-R1 END -->
+<!-- CALC-SCORES-EXPANDED-HOME-COLOR-TYPOGRAPHY-PARITY-V1-B-R0 END -->
+
 
 </body>
 </html>
