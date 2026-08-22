@@ -50274,5 +50274,740 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
 </script>
 <!-- CALC-WEBVIEW-LANG-THEME-URL-CONTRACT-V1-B-R0 END -->
 
+
+<!-- CALC-MODULE-FAST-CLOSE-AND-CLEAR-ACTION-V1-B-R1-NATIVE-OWNER-DEDUPE BEGIN -->
+<style id="medcases-module-fast-close-clear-v1-b-r1">
+  .mc-fast-close-target {
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .mc-module-clear-action {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid rgba(100,116,139,.34);
+    background: transparent;
+    color: inherit;
+    min-height: 32px;
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    touch-action: manipulation;
+    white-space: nowrap;
+    opacity: .88;
+  }
+
+  .mc-module-clear-action:active {
+    transform: scale(.98);
+    opacity: 1;
+  }
+
+  .mc-module-clear-host {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .mc-module-clear-action.mc-module-clear-floating {
+    position: absolute;
+    top: 8px;
+    right: 46px;
+    z-index: 8;
+  }
+</style>
+<script id="medcases-module-fast-close-clear-v1-b-r1">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-MODULE-FAST-CLOSE-AND-CLEAR-ACTION-V1-B-R1-NATIVE-OWNER-DEDUPE';
+  if (window.__mcModuleFastCloseClearV1BR1) return;
+
+  const norm=value => String(value ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase()
+    .trim();
+
+  const lang=() => {
+    const raw=norm(document.documentElement.lang || document.documentElement.dataset.lang || '');
+    return raw.startsWith('es') ? 'es' : 'pt';
+  };
+
+  const visible=el => {
+    if (!el || !el.isConnected) return false;
+    const cs=getComputedStyle(el);
+    if (cs.display==='none' || cs.visibility==='hidden' || cs.opacity==='0') return false;
+    const r=el.getBoundingClientRect();
+    return r.width>0 && r.height>0;
+  };
+
+  const dialogRoot=el =>
+    el?.closest?.(
+      '#fd-modal,[role="dialog"],dialog,.modal,.overlay,[class*="modal"],[class*="overlay"],[class*="sheet"],[class*="drawer"]'
+    ) || null;
+
+  const closeDescriptor=el => norm([
+    el?.id,
+    el?.className,
+    el?.getAttribute?.('aria-label'),
+    el?.getAttribute?.('title'),
+    el?.getAttribute?.('data-action'),
+    el?.textContent
+  ].filter(Boolean).join(' '));
+
+  const isCloseButton=el => {
+    if (!el || !el.matches?.('button,[role="button"],a')) return false;
+    if (!dialogRoot(el)) return false;
+
+    const d=closeDescriptor(el);
+    const exactText=norm(el.textContent);
+    return (
+      exactText==='×' ||
+      exactText==='x' ||
+      exactText==='✕' ||
+      /\b(close|fechar|cerrar|dismiss)\b/.test(d) ||
+      /\b(fd-close|modal-close|overlay-close|close-btn|btn-close)\b/.test(d)
+    );
+  };
+
+  let syntheticClose=false;
+  let lastFastCloseAt=0;
+
+  const fastClose=button => {
+    if (!button || !button.isConnected) return false;
+    const now=performance.now();
+    if (now-lastFastCloseAt<80) return false;
+    lastFastCloseAt=now;
+
+    button.classList.add('mc-fast-close-target');
+
+    syntheticClose=true;
+    try {
+      button.click();
+      console.info('['+BUILD+'] FAST_CLOSE',{
+        target:closeDescriptor(button).slice(0,120),
+        immediate:true
+      });
+      return true;
+    } catch (error) {
+      console.warn('['+BUILD+'] FAST_CLOSE_ERROR',error);
+      return false;
+    } finally {
+      syntheticClose=false;
+    }
+  };
+
+  document.addEventListener('pointerdown',event => {
+    if (event.pointerType==='mouse' && event.button!==0) return;
+    const button=event.target.closest?.('button,[role="button"],a');
+    if (!isCloseButton(button)) return;
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    fastClose(button);
+  },true);
+
+  document.addEventListener('touchstart',event => {
+    if (typeof PointerEvent!=='undefined') return;
+    const button=event.target.closest?.('button,[role="button"],a');
+    if (!isCloseButton(button)) return;
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    fastClose(button);
+  },{capture:true,passive:false});
+
+  document.addEventListener('click',event => {
+    if (syntheticClose) return;
+    const button=event.target.closest?.('button,[role="button"],a');
+    if (isCloseButton(button)) button.classList.add('mc-fast-close-target');
+  },true);
+
+  const excludedModules=new Set([
+    'hub-card-patient',
+    'hub-card-farmacos',
+    'hub-card-pediatria',
+    'hub-card-gestante',
+    'hub-card-interacoes'
+  ]);
+
+  const explicitCalculatorModules=new Set([
+    'hub-card-clcr',
+    'hub-card-infusao',
+    'hub-card-hemodinamica',
+    'hub-card-scores',
+    'hub-card-fluidos',
+    'hub-card-eletrolitos'
+  ]);
+
+  const surfaceTitle=root => {
+    if (!root) return '';
+    const title=root.querySelector(
+      ':scope > header h1,:scope > header h2,:scope > header h3,'+
+      ':scope > .module-header h1,:scope > .module-header h2,'+
+      ':scope > .card-header h1,:scope > .card-header h2,'+
+      'h1,h2,h3'
+    );
+    return norm(title?.textContent || root.getAttribute('aria-label') || root.id || '');
+  };
+
+  const editableControls=root => [...root.querySelectorAll(
+    'input:not([type="hidden"]):not([type="button"]):not([type="submit"]):not([disabled]):not([readonly]),'+
+    'select:not([disabled]),textarea:not([disabled]):not([readonly])'
+  )].filter(el =>
+    !el.closest('[data-preserve-on-reset],[data-reset-preserve]') &&
+    !el.matches('[data-preserve-on-reset],[data-reset-preserve]')
+  );
+
+  const isCalculatorSurface=root => {
+    if (!root || !visible(root)) return false;
+
+    if (root.id?.startsWith('hub-card-')) {
+      if (excludedModules.has(root.id)) return false;
+      if (explicitCalculatorModules.has(root.id)) return true;
+    }
+
+    const title=surfaceTitle(root);
+    if (/(farmaco|farmacos|paciente|patient|pediatr|gestante|interac)/.test(title)) return false;
+
+    const editable=editableControls(root).length;
+    if (!editable) return false;
+
+    const d=norm([
+      root.id,
+      root.className,
+      root.getAttribute('data-module'),
+      root.getAttribute('aria-label'),
+      title
+    ].filter(Boolean).join(' '));
+
+    return /(eletrol|electrol|fluido|fluid|infus|hemod|score|clcr|clearance|creatin|osmolar|sodio|sodium|potass|potasio|calcio|magnes|renal|calcul)/.test(d);
+  };
+
+  const candidateSurfaces=() => [
+    ...document.querySelectorAll('[id^="hub-card-"]'),
+    ...document.querySelectorAll(
+      '#calculator-overlay,.calculator-overlay,.mc-module-surface,.module-surface,.module-overlay,'+
+      '[data-module],[role="dialog"]'
+    )
+  ].filter((el,index,arr) => arr.indexOf(el)===index && isCalculatorSurface(el));
+
+  const moduleRoots=() => {
+    const all=candidateSurfaces();
+    return all.filter(root =>
+      !all.some(other => other!==root && root.contains(other) && isCalculatorSurface(other))
+    );
+  };
+
+  const clearDescriptor=el => norm([
+    el?.id,
+    el?.className,
+    el?.getAttribute?.('aria-label'),
+    el?.getAttribute?.('title'),
+    el?.getAttribute?.('data-action'),
+    el?.textContent
+  ].filter(Boolean).join(' '));
+
+  const isNativeClearButton=el => {
+    if (!el || !el.matches?.('button,[role="button"],a')) return false;
+    if (el.classList.contains('mc-module-clear-action')) return false;
+
+    const d=clearDescriptor(el);
+    const t=norm(el.textContent);
+    return (
+      t==='limpar' ||
+      t==='limpar dados' ||
+      t==='limpiar' ||
+      t==='limpiar datos' ||
+      t==='reset' ||
+      t==='clear' ||
+      /\b(limpar|limpiar|reset|clear)\b/.test(d)
+    );
+  };
+
+  const nativeClearButton=root =>
+    [...root.querySelectorAll('button,[role="button"],a')].find(isNativeClearButton) || null;
+
+  const resetLooseControl=el => {
+    const tag=el.tagName;
+    const type=norm(el.type);
+
+    if (tag==='SELECT') {
+      const defaultIndex=[...el.options].findIndex(o => o.defaultSelected && !o.disabled);
+      el.selectedIndex=defaultIndex>=0
+        ? defaultIndex
+        : [...el.options].findIndex(o => !o.disabled);
+      return;
+    }
+
+    if (type==='checkbox' || type==='radio') {
+      el.checked=!!el.defaultChecked;
+      return;
+    }
+
+    if (type==='range') {
+      el.value=el.defaultValue || el.min || '0';
+      return;
+    }
+
+    el.value=el.defaultValue || '';
+  };
+
+  const redispatch=controls => {
+    controls.forEach(el => {
+      try { el.dispatchEvent(new Event('input',{bubbles:true})); } catch (_) {}
+      try { el.dispatchEvent(new Event('change',{bubbles:true})); } catch (_) {}
+    });
+  };
+
+  const scrollModuleToStart=root => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        [
+          root,
+          root.querySelector('.scroll-content'),
+          root.querySelector('[class*="scroll"]')
+        ].filter(Boolean).forEach(el => {
+          try { el.scrollTo({top:0,behavior:'auto'}); }
+          catch (_) { try { el.scrollTop=0; } catch (_) {} }
+        });
+      });
+    });
+  };
+
+  const clearModule=root => {
+    if (!root || !isCalculatorSurface(root)) return false;
+
+    const controls=editableControls(root);
+    const forms=[...new Set(controls.map(el => el.form).filter(form => form && root.contains(form)))];
+
+    forms.forEach(form => {
+      try { form.reset(); } catch (_) {}
+    });
+
+    controls
+      .filter(el => !el.form || !forms.includes(el.form))
+      .forEach(resetLooseControl);
+
+    redispatch(controls);
+    scrollModuleToStart(root);
+
+    try {
+      root.dispatchEvent(new CustomEvent('medcases:module-reset',{
+        bubbles:true,
+        detail:{moduleId:root.id || surfaceTitle(root),source:BUILD}
+      }));
+    } catch (_) {}
+
+    console.info('['+BUILD+'] MODULE_CLEARED',{
+      moduleId:root.id || surfaceTitle(root),
+      controls:controls.length,
+      forms:forms.length,
+      source:'injected-fallback'
+    });
+
+    return true;
+  };
+
+  const headerHost=root => {
+    const candidates=[
+      root.querySelector(':scope > .hub-card-header'),
+      root.querySelector(':scope > .card-header'),
+      root.querySelector(':scope > .module-header'),
+      root.querySelector(':scope > header'),
+      root.querySelector('.hub-card-header'),
+      root.querySelector('.card-header'),
+      root.querySelector('.module-header'),
+      root.querySelector('header')
+    ].filter(Boolean);
+
+    return candidates.find(el => visible(el)) || null;
+  };
+
+  const bindNativeClear=root => {
+    const native=nativeClearButton(root);
+    if (!native) return false;
+
+    const injected=root.querySelector('.mc-module-clear-action[data-owner]');
+    if (injected) injected.remove();
+
+    if (native.dataset.mcNativeClearBound!==BUILD) {
+      native.dataset.mcNativeClearBound=BUILD;
+      native.addEventListener('click',() => {
+        setTimeout(() => scrollModuleToStart(root),0);
+        setTimeout(() => scrollModuleToStart(root),80);
+
+        console.info('['+BUILD+'] NATIVE_CLEAR_USED',{
+          moduleId:root.id || surfaceTitle(root),
+          label:String(native.textContent || '').trim()
+        });
+      });
+    }
+
+    console.info('['+BUILD+'] NATIVE_CLEAR_OWNER',{
+      moduleId:root.id || surfaceTitle(root),
+      label:String(native.textContent || '').trim(),
+      injected:false
+    });
+
+    return true;
+  };
+
+  const ensureClearButton=root => {
+    if (!root || !isCalculatorSurface(root)) return false;
+
+    if (bindNativeClear(root)) return true;
+
+    const existing=root.querySelector('.mc-module-clear-action[data-owner="'+BUILD+'"]');
+    if (existing) {
+      existing.textContent=lang()==='es' ? 'Limpiar' : 'Limpar';
+      existing.setAttribute('aria-label',existing.textContent);
+      return true;
+    }
+
+    const button=document.createElement('button');
+    button.type='button';
+    button.className='mc-module-clear-action';
+    button.dataset.owner=BUILD;
+    button.textContent=lang()==='es' ? 'Limpiar' : 'Limpar';
+    button.setAttribute('aria-label',button.textContent);
+
+    button.addEventListener('click',event => {
+      event.preventDefault();
+      event.stopPropagation();
+      clearModule(root);
+    });
+
+    const host=headerHost(root);
+    if (host) {
+      host.classList.add('mc-module-clear-host');
+      host.appendChild(button);
+    } else {
+      const cs=getComputedStyle(root);
+      if (cs.position==='static') root.style.position='relative';
+      button.classList.add('mc-module-clear-floating');
+      root.appendChild(button);
+    }
+
+    console.info('['+BUILD+'] FALLBACK_CLEAR_INJECTED',{
+      moduleId:root.id || surfaceTitle(root),
+      host:host ? host.className : 'floating'
+    });
+
+    return true;
+  };
+
+  let settleTimers=[];
+
+  const settle=reason => {
+    settleTimers.forEach(clearTimeout);
+    settleTimers=[];
+
+    [0,40,100,220,480,900].forEach(delay => {
+      settleTimers.push(setTimeout(() => {
+        const roots=moduleRoots();
+        roots.forEach(ensureClearButton);
+
+        document.querySelectorAll(
+          '#fd-modal button,#fd-modal [role="button"],[role="dialog"] button,.modal button,.overlay button'
+        ).forEach(button => {
+          if (isCloseButton(button)) button.classList.add('mc-fast-close-target');
+        });
+
+        if (roots.length) {
+          console.info('['+BUILD+'] SETTLED',{
+            reason,
+            delay,
+            modules:roots.map(root => root.id || surfaceTitle(root))
+          });
+        }
+      },delay));
+    });
+  };
+
+  document.addEventListener('click',event => {
+    const target=event.target.closest?.('button,[role="button"],a,[id^="hub-card-"]');
+    if (target) settle('document-click');
+  },true);
+
+  document.addEventListener('medcases:webview-contract-applied',() => settle('lang-theme-applied'));
+  window.addEventListener('pageshow',() => settle('pageshow'));
+
+  if (document.readyState==='loading') {
+    document.addEventListener('DOMContentLoaded',() => settle('dom-ready'),{once:true});
+  } else {
+    settle('already-ready');
+  }
+
+  window.__mcModuleFastCloseClearV1BR1={
+    build:BUILD,
+    settle,
+    clearModule,
+    isCloseButton,
+    moduleRoots
+  };
+
+  console.info('['+BUILD+'] MOUNTED',{
+    fastClose:'pointerdown/touchstart',
+    clearAction:true,
+    persistentObserver:false
+  });
+})();
+</script>
+<!-- CALC-MODULE-FAST-CLOSE-AND-CLEAR-ACTION-V1-B-R1-NATIVE-OWNER-DEDUPE END -->
+
+
+<!-- CALC-ELECTROLYTES-OSMOLARITY-HERO-VALUE-MIRROR-V1-B-R0 BEGIN -->
+<script id="medcases-electrolytes-osmolarity-hero-value-mirror-v1-b-r0">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-ELECTROLYTES-OSMOLARITY-HERO-VALUE-MIRROR-V1-B-R0';
+  if (window.__mcElectrolytesOsmolarityHeroMirrorV1BR0) return;
+
+  const norm=value => String(value ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase()
+    .replace(/\s+/g,' ')
+    .trim();
+
+  const visible=el => {
+    if (!el || !el.isConnected) return false;
+    const cs=getComputedStyle(el);
+    if (cs.display==='none' || cs.visibility==='hidden') return false;
+    const r=el.getBoundingClientRect();
+    return r.width>0 && r.height>0;
+  };
+
+  const isElectrolytesSurface=root => {
+    if (!root || !visible(root)) return false;
+    const text=norm([
+      root.id,
+      root.className,
+      root.getAttribute?.('data-module'),
+      root.getAttribute?.('aria-label'),
+      root.querySelector?.('h1,h2,h3')?.textContent
+    ].filter(Boolean).join(' '));
+    return /(eletrolitos|electrolitos)/.test(text);
+  };
+
+  const electrolyteSurface=() => {
+    const candidates=[
+      ...document.querySelectorAll(
+        '#hub-card-eletrolitos,#calculator-overlay,.calculator-overlay,.mc-module-surface,.module-surface,.module-overlay,[data-module],[role="dialog"]'
+      )
+    ];
+
+    return candidates
+      .filter((el,index,arr) => arr.indexOf(el)===index)
+      .find(isElectrolytesSurface) || null;
+  };
+
+  const extractRenderedOsmolarity=root => {
+    if (!root) return null;
+
+    const text=String(root.textContent || '').replace(/\s+/g,' ');
+
+    const patterns=[
+      /Osm\s*Calculad[ao]\s*[:\-]?\s*(\d+(?:[.,]\d+)?)\s*mOsm\/L/i,
+      /Osmolaridad\s+calculada\s*[:\-]?\s*(\d+(?:[.,]\d+)?)\s*mOsm\/L/i,
+      /Osmolaridade\s+calculada\s*[:\-]?\s*(\d+(?:[.,]\d+)?)\s*mOsm\/L/i
+    ];
+
+    for (const pattern of patterns) {
+      const match=text.match(pattern);
+      if (match) return match[1].replace(',','.');
+    }
+
+    return null;
+  };
+
+  const headingNode=root => [...root.querySelectorAll('h1,h2,h3,h4,h5,h6,strong,span,div')]
+    .find(el => {
+      const own=[...el.childNodes]
+        .filter(node => node.nodeType===Node.TEXT_NODE)
+        .map(node => node.textContent)
+        .join(' ');
+      const n=norm(own);
+      return n==='osmolaridad' || n==='osmolaridade';
+    }) || null;
+
+  const heroCandidates=root => {
+    const heading=headingNode(root);
+    const all=[...root.querySelectorAll('div,span,strong,p')];
+
+    return all
+      .filter(el => {
+        if (!visible(el)) return false;
+        const text=String(el.textContent || '').replace(/\s+/g,' ').trim();
+        if (!/mOsm\/L/i.test(text)) return false;
+        if (text.length>34) return false;
+
+        const n=norm(text);
+        if (/calculad[ao]|resumen|resumo|formula|component/.test(n)) return false;
+        return true;
+      })
+      .map(el => {
+        const text=String(el.textContent || '').replace(/\s+/g,' ').trim();
+        const cs=getComputedStyle(el);
+        const font=parseFloat(cs.fontSize || '0') || 0;
+        const dash=/[—–-]\s*mOsm\/L/i.test(text) ? 100 : 0;
+        const large=font>=20 ? 70 : font;
+        const classBoost=/(value|result|hero|osm)/i.test(String(el.className || '')) ? 30 : 0;
+
+        let headingBoost=0;
+        if (heading) {
+          const hr=heading.getBoundingClientRect();
+          const er=el.getBoundingClientRect();
+          const dy=Math.abs(er.top-hr.bottom);
+          if (dy<120) headingBoost=50-Math.min(45,dy/3);
+        }
+
+        return {el,score:dash+large+classBoost+headingBoost,font,text};
+      })
+      .sort((a,b) => b.score-a.score);
+  };
+
+  const replaceDashText=(el,value) => {
+    const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
+    const textNodes=[];
+    let node;
+
+    while ((node=walker.nextNode())) textNodes.push(node);
+
+    for (const textNode of textNodes) {
+      if (/^\s*[—–-]\s*$/.test(textNode.nodeValue || '')) {
+        textNode.nodeValue=String(value);
+        el.dataset.mcOsmHeroMirrored='true';
+        return true;
+      }
+    }
+
+    for (const textNode of textNodes) {
+      const current=String(textNode.nodeValue || '');
+      if (/[—–-]\s*mOsm\/L/i.test(current)) {
+        textNode.nodeValue=current.replace(/[—–-]\s*(?=mOsm\/L)/i,String(value)+' ');
+        el.dataset.mcOsmHeroMirrored='true';
+        return true;
+      }
+    }
+
+    const full=String(el.textContent || '').replace(/\s+/g,' ').trim();
+    if (/^[—–-]?\s*mOsm\/L$/i.test(full) || !/\d/.test(full)) {
+      el.textContent=String(value)+' mOsm/L';
+      el.dataset.mcOsmHeroMirrored='true';
+      return true;
+    }
+
+    return false;
+  };
+
+  const sync=reason => {
+    const root=electrolyteSurface();
+    if (!root) return false;
+
+    const value=extractRenderedOsmolarity(root);
+
+    if (!value) {
+      console.info('['+BUILD+'] SOURCE_NOT_READY',{reason});
+      return false;
+    }
+
+    const candidates=heroCandidates(root);
+    const target=candidates[0]?.el || null;
+
+    if (!target) {
+      console.warn('['+BUILD+'] HERO_TARGET_NOT_FOUND',{reason,value});
+      return false;
+    }
+
+    const before=String(target.textContent || '').replace(/\s+/g,' ').trim();
+
+    if (new RegExp('^\\s*'+value.replace('.','[.,]')+'\\s*mOsm/L\\s*$','i').test(before)) {
+      console.info('['+BUILD+'] HERO_ALREADY_SYNCED',{reason,value});
+      return true;
+    }
+
+    const applied=replaceDashText(target,value);
+    const after=String(target.textContent || '').replace(/\s+/g,' ').trim();
+
+    console.info('['+BUILD+'] HERO_SYNC',{
+      reason,
+      value,
+      before,
+      after,
+      applied,
+      targetClass:String(target.className || ''),
+      targetFont:getComputedStyle(target).fontSize
+    });
+
+    return applied;
+  };
+
+  const scheduleSync=reason => {
+    [0,20,60,120,220,380].forEach(delay => {
+      setTimeout(() => sync(reason+'-'+delay),delay);
+    });
+  };
+
+  const isCalculateAction=el => {
+    if (!el) return false;
+    const d=norm([
+      el.id,
+      el.className,
+      el.getAttribute?.('aria-label'),
+      el.getAttribute?.('title'),
+      el.textContent
+    ].filter(Boolean).join(' '));
+
+    return /\b(calcular|calculate)\b/.test(d);
+  };
+
+  document.addEventListener('click',event => {
+    const button=event.target.closest?.('button,[role="button"],a');
+    if (isCalculateAction(button)) scheduleSync('calculate-click');
+  },true);
+
+  document.addEventListener('change',event => {
+    const root=electrolyteSurface();
+    if (root && root.contains(event.target)) scheduleSync('electrolyte-change');
+  },true);
+
+  document.addEventListener('medcases:module-reset',event => {
+    const root=event.target;
+    if (root && isElectrolytesSurface(root)) scheduleSync('module-reset');
+  },true);
+
+  window.addEventListener('pageshow',() => scheduleSync('pageshow'));
+
+  if (document.readyState==='loading') {
+    document.addEventListener('DOMContentLoaded',() => scheduleSync('dom-ready'),{once:true});
+  } else {
+    scheduleSync('already-ready');
+  }
+
+  window.__mcElectrolytesOsmolarityHeroMirrorV1BR0={
+    build:BUILD,
+    sync,
+    scheduleSync,
+    extractRenderedOsmolarity,
+    heroCandidates
+  };
+
+  console.info('['+BUILD+'] MOUNTED',{
+    source:'existing rendered osmolarity result',
+    independentCalculation:false,
+    persistentObserver:false
+  });
+})();
+</script>
+<!-- CALC-ELECTROLYTES-OSMOLARITY-HERO-VALUE-MIRROR-V1-B-R0 END -->
+
 </body>
 </html>
