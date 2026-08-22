@@ -2061,7 +2061,9 @@
             )
           }
         };
-      }
+      },
+      /* CALC-FARMACOS-BATCH2-CLINICAL-10-PATHOLOGY-DOSE-SAFETY-V1-B-R0 */
+      clinicalEnrichment: {"commonAdverseEffects":{"es":["Mareo","Hipotensión","Tos seca","Cefalea","Astenia"],"pt":["Tontura","Hipotensão","Tosse seca","Cefaleia","Astenia"]},"contraindications":{"es":{"absolute":["Hipersensibilidad a enalapril","Antecedente de angioedema asociado a IECA","Angioedema hereditario o idiopático","Uso concomitante con inhibidor de neprilisina (p. ej., sacubitrilo); respetar intervalo de 36 h","Aliskireno concomitante en paciente con diabetes"],"relative":["Embarazo: no usar; suspender al detectarlo por toxicidad fetal","Depleción de volumen, hiperpotasemia o función renal inestable requieren corrección/monitorización antes de titular"]},"pt":{"absolute":["Hipersensibilidade ao enalapril","História de angioedema associado a IECA","Angioedema hereditário ou idiopático","Uso concomitante com inibidor de neprilisina (ex.: sacubitril); respeitar intervalo de 36 h","Aliscireno concomitante em paciente com diabetes"],"relative":["Gestação: não usar; suspender assim que detectada devido à toxicidade fetal","Depleção de volume, hipercalemia ou função renal instável exigem correção/monitorização antes da titulação"]}},"dangerousAdverseEffects":{"es":["Angioedema de cara/lengua/glotis con obstrucción de vía aérea","Hiperpotasemia grave","Lesión renal aguda","Hipotensión grave/síncope","Toxicidad fetal durante el embarazo"],"pt":["Angioedema de face/língua/glote com obstrução de via aérea","Hipercalemia grave","Lesão renal aguda","Hipotensão grave/síncope","Toxicidade fetal quando usado na gestação"]},"doseByIndication":{"es":[{"indication":"Hipertensión — adulto","rows":[{"dose":"5 mg VO 1 vez/día.","label":"Inicial"},{"dose":"10–40 mg/día en 1–2 tomas; máx. 40 mg/día.","label":"Rango usual/máximo"},{"dose":"Si no puede suspenderse el diurético, iniciar 2,5 mg bajo supervisión.","label":"Con diurético"}]},{"indication":"Insuficiencia cardíaca sintomática","rows":[{"dose":"2,5 mg VO cada 12 h.","label":"Inicial"},{"dose":"Hasta 20 mg VO cada 12 h según tolerancia; máx. 40 mg/día.","label":"Titulación"},{"dose":"Iniciar 2,5 mg VO 1 vez/día bajo supervisión estrecha.","label":"Na <130 o creatinina >1,6 mg/dL"}]},{"indication":"Disfunción ventricular izquierda asintomática","rows":[{"dose":"2,5 mg VO cada 12 h.","label":"Inicial"},{"dose":"10 mg VO cada 12 h según tolerancia.","label":"Objetivo"}]},{"indication":"Hipertensión — pediatría >1 mes","note":"No recomendado en neonatos ni en pediatría con TFG <30 mL/min/1,73 m².","rows":[{"dose":"0,08 mg/kg VO 1 vez/día (máx. 5 mg en la dosis inicial).","label":"Inicial"},{"dose":"Dosis >0,58 mg/kg/día o >40 mg/día no fueron estudiadas.","label":"Límite estudiado"}]}],"pt":[{"indication":"Hipertensão — adulto","rows":[{"dose":"5 mg VO 1x/dia.","label":"Inicial"},{"dose":"10–40 mg/dia em 1–2 tomadas; máx. 40 mg/dia.","label":"Faixa usual/máxima"},{"dose":"Se o diurético não puder ser suspenso, iniciar 2,5 mg sob supervisão.","label":"Em uso de diurético"}]},{"indication":"Insuficiência cardíaca sintomática","rows":[{"dose":"2,5 mg VO 12/12 h.","label":"Inicial"},{"dose":"Até 20 mg VO 12/12 h conforme tolerância; máx. 40 mg/dia.","label":"Titulação"},{"dose":"Iniciar 2,5 mg VO 1x/dia sob supervisão estreita.","label":"Na <130 ou creatinina >1,6 mg/dL"}]},{"indication":"Disfunção ventricular esquerda assintomática","rows":[{"dose":"2,5 mg VO 12/12 h.","label":"Inicial"},{"dose":"10 mg VO 12/12 h conforme tolerância.","label":"Alvo"}]},{"indication":"Hipertensão — pediatria >1 mês","note":"Não recomendado em neonatos nem em pediatria com TFG <30 mL/min/1,73 m².","rows":[{"dose":"0,08 mg/kg VO 1x/dia (máx. 5 mg na dose inicial).","label":"Inicial"},{"dose":"Doses >0,58 mg/kg/dia ou >40 mg/dia não foram estudadas.","label":"Limite estudado"}]}]},"indications":{"es":["Hipertensión arterial en adultos y niños >1 mes","Insuficiencia cardíaca sintomática","Disfunción ventricular izquierda asintomática con fracción de eyección ≤35%"],"pt":["Hipertensão arterial em adultos e crianças >1 mês","Insuficiência cardíaca sintomática","Disfunção ventricular esquerda assintomática com fração de ejeção ≤35%"]},"references":["DailyMed — Enalapril Maleate Tablets, prescribing information (2025/2026)"]}
     },
 
     /* ══════════════════════════════════════════════════════════════
@@ -8981,7 +8983,9 @@
             )
           }
         };
-      }
+      },
+      /* CALC-FARMACOS-BATCH2-CLINICAL-10-PATHOLOGY-DOSE-SAFETY-V1-B-R0 */
+      clinicalEnrichment: {"commonAdverseEffects":{"es":["Náuseas y vómitos","Anorexia","Fatiga/mareo","Alteraciones visuales"],"pt":["Náuseas e vômitos","Anorexia","Fadiga/tontura","Alterações visuais"]},"contraindications":{"es":{"absolute":["Fibrilación ventricular","Hipersensibilidad a digoxina u otros digitálicos"],"relative":["FA/flutter con vía accesoria (WPW): evitar por riesgo de respuesta ventricular muy rápida/FV","Enfermedad del nodo sinusal o bloqueo AV sin soporte de marcapasos","Insuficiencia renal, bajo peso, edad avanzada, hipopotasemia, hipomagnesemia o hipercalcemia aumentan el riesgo de toxicidad"]},"pt":{"absolute":["Fibrilação ventricular","Hipersensibilidade à digoxina ou outros digitálicos"],"relative":["FA/flutter com via acessória (WPW): evitar devido ao risco de resposta ventricular muito rápida/FV","Doença do nó sinusal ou bloqueio AV sem suporte de marcapasso","Insuficiência renal, baixo peso, idade avançada, hipocalemia, hipomagnesemia ou hipercalcemia aumentam risco de toxicidade"]}},"dangerousAdverseEffects":{"es":["Bradicardia o bloqueo AV avanzado","Arritmias ventriculares","Toxicidad digitálica potencialmente fatal","Fibrilación ventricular en FA con vía accesoria/WPW"],"pt":["Bradicardia ou bloqueio AV avançado","Arritmias ventriculares","Toxicidade digitálica potencialmente fatal","Fibrilação ventricular em FA com via acessória/WPW"]},"doseByIndication":{"es":[{"indication":"Digitalización oral — adulto y >10 años, cuando sea necesaria","note":"La carga no es obligatoria en todos los pacientes; individualizar por edad, masa corporal magra, función renal e interacciones.","rows":[{"dose":"10–15 mcg/kg VO; administrar 50% inicialmente y 25% cada 6–8 h por 2 dosis adicionales, reevaluando antes de cada fracción.","label":"Carga total"}]},{"indication":"Mantenimiento — IC/FA crónica","note":"Usar peso corporal magro y ajustar por función renal; no existe una dosis fija universal segura. Monitorizar respuesta, función renal, electrolitos y signos de toxicidad.","rows":[{"dose":"3,4–5,1 mcg/kg/día VO, habitualmente 1 vez/día en adultos y >10 años.","label":"Referencia con función renal normal"}]}],"pt":[{"indication":"Digitalização oral — adulto e >10 anos, quando necessária","note":"A carga não é obrigatória em todo paciente; individualizar por idade, massa corporal magra, função renal e interações.","rows":[{"dose":"10–15 mcg/kg VO; administrar 50% inicialmente e 25% a cada 6–8 h por mais 2 doses, reavaliando resposta antes de cada fração.","label":"Carga total"}]},{"indication":"Manutenção — IC/FA crônica","note":"Usar peso corporal magro e ajustar pela função renal; não existe dose fixa universal segura. Monitorar resposta, função renal, eletrólitos e sinais de toxicidade.","rows":[{"dose":"3,4–5,1 mcg/kg/dia VO, usualmente 1x/dia em adultos e >10 anos.","label":"Referência com função renal normal"}]}]},"indications":{"es":["Insuficiencia cardíaca crónica seleccionada como terapia adyuvante","Control de la frecuencia ventricular en fibrilación auricular crónica"],"pt":["Insuficiência cardíaca crônica selecionada como terapia adjuvante","Controle da frequência ventricular em fibrilação atrial crônica"]},"references":["DailyMed — Digoxin Tablets/Injection, prescribing information (2026)"]}
     }
 
   }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 8 (Glicosídeo Cardíaco: digoxina) */
@@ -22508,20 +22512,7 @@
         es: "Trombolítico / activador tisular del plasminógeno recombinante"
       },
 
-      indications: {
-        pt: [
-          "AVC isquêmico agudo selecionado",
-          "IAM com supra quando angioplastia não disponível em tempo adequado",
-          "Tromboembolismo pulmonar maciço com instabilidade hemodinâmica",
-          "Trombose de cateter em protocolos específicos"
-        ],
-        es: [
-          "ACV isquémico agudo seleccionado",
-          "IAM con supra cuando angioplastia no está disponible en tiempo adecuado",
-          "Tromboembolismo pulmonar masivo con inestabilidad hemodinámica",
-          "Trombosis de catéter en protocolos específicos"
-        ]
-      },
+      indications: {"es":["ACV isquémico agudo en paciente elegible para trombólisis sistémica","Infarto agudo de miocardio cuando está indicada la fibrinólisis","Embolia pulmonar aguda masiva con inestabilidad hemodinámica"],"pt":["AVC isquêmico agudo em paciente elegível para trombólise sistêmica","Infarto agudo do miocárdio quando fibrinólise está indicada","Embolia pulmonar aguda maciça com instabilidade hemodinâmica"]},
 
       commercialNames: {
         br: ["Actilyse", "Alteplase"],
@@ -22592,50 +22583,7 @@
         }
       },
 
-      contraindications: {
-        absolute: {
-          pt: [
-            "Hemorragia intracraniana atual ou prévia relevante",
-            "Sangramento ativo importante",
-            "Suspeita de dissecção de aorta",
-            "Neoplasia intracraniana, MAV ou aneurisma de alto risco",
-            "Cirurgia intracraniana ou trauma craniano recente",
-            "AVC hemorrágico prévio",
-            "PA grave não controlada no AVC"
-          ],
-          es: [
-            "Hemorragia intracraneal actual o previa relevante",
-            "Sangrado activo importante",
-            "Sospecha de disección aórtica",
-            "Neoplasia intracraneal, MAV o aneurisma de alto riesgo",
-            "Cirugía intracraneal o trauma craneal reciente",
-            "ACV hemorrágico previo",
-            "PA grave no controlada en ACV"
-          ]
-        },
-        relative: {
-          pt: [
-            "Cirurgia maior recente",
-            "Punção arterial não compressível",
-            "Uso recente de anticoagulante",
-            "Plaquetas baixas",
-            "INR elevado",
-            "Gestação ou pós-parto recente",
-            "Úlcera ativa",
-            "Idade avançada"
-          ],
-          es: [
-            "Cirugía mayor reciente",
-            "Punción arterial no compresible",
-            "Uso reciente de anticoagulante",
-            "Plaquetas bajas",
-            "INR elevado",
-            "Embarazo o posparto reciente",
-            "Úlcera activa",
-            "Edad avanzada"
-          ]
-        }
-      },
+      contraindications: {"es":{"absolute":["Sangrado interno activo","Hemorragia intracraneal actual o hemorragia subaracnoidea en el contexto de ACV","Cirugía intracraneal/intraespinal reciente o traumatismo craneal grave reciente","Condición intracraneal con alto riesgo de sangrado","Diátesis hemorrágica","Hipertensión grave no controlada"],"relative":["Los criterios adicionales varían según ACV, IAM o TEP; revisar checklist/protocolo específico antes de administrar"]},"pt":{"absolute":["Sangramento interno ativo","Hemorragia intracraniana atual ou hemorragia subaracnoidea no contexto de AVC","Cirurgia intracraniana/intraespinhal recente ou trauma craniano grave recente","Condição intracraniana com alto risco de sangramento","Diátese hemorrágica","Hipertensão grave não controlada"],"relative":["Critérios adicionais variam conforme AVC, IAM ou TEP; conferir checklist/protocolo específico antes de administrar"]}},
 
       interactions: {
         major: {
@@ -22780,7 +22728,11 @@
         "ESC Pulmonary Embolism Guidelines",
         "CHEST Antithrombotic Guidelines",
         "FDA/EMA label"
-      ]
+      ],
+      commonAdverseEffects: {"es":["Sangrado en sitios de punción/venopunción","Equimosis","Sangrado gastrointestinal o genitourinario"],"pt":["Sangramento em locais de punção/venopunção","Equimoses","Sangramento gastrointestinal ou geniturinário"]},
+      dangerousAdverseEffects: {"es":["Hemorragia intracraneal sintomática","Hemorragia interna mayor/fatal","Angioedema/hipersensibilidad","Embolización por colesterol o eventos tromboembólicos"],"pt":["Hemorragia intracraniana sintomática","Hemorragia interna maior/fatal","Angioedema/hipersensibilidade","Embolização por colesterol ou eventos tromboembólicos"]},
+      /* CALC-FARMACOS-BATCH2-CLINICAL-10-PATHOLOGY-DOSE-SAFETY-V1-B-R0 */
+      clinicalEnrichment: {"commonAdverseEffects":{"es":["Sangrado en sitios de punción/venopunción","Equimosis","Sangrado gastrointestinal o genitourinario"],"pt":["Sangramento em locais de punção/venopunção","Equimoses","Sangramento gastrointestinal ou geniturinário"]},"contraindications":{"es":{"absolute":["Sangrado interno activo","Hemorragia intracraneal actual o hemorragia subaracnoidea en el contexto de ACV","Cirugía intracraneal/intraespinal reciente o traumatismo craneal grave reciente","Condición intracraneal con alto riesgo de sangrado","Diátesis hemorrágica","Hipertensión grave no controlada"],"relative":["Los criterios adicionales varían según ACV, IAM o TEP; revisar checklist/protocolo específico antes de administrar"]},"pt":{"absolute":["Sangramento interno ativo","Hemorragia intracraniana atual ou hemorragia subaracnoidea no contexto de AVC","Cirurgia intracraniana/intraespinhal recente ou trauma craniano grave recente","Condição intracraniana com alto risco de sangramento","Diátese hemorrágica","Hipertensão grave não controlada"],"relative":["Critérios adicionais variam conforme AVC, IAM ou TEP; conferir checklist/protocolo específico antes de administrar"]}},"dangerousAdverseEffects":{"es":["Hemorragia intracraneal sintomática","Hemorragia interna mayor/fatal","Angioedema/hipersensibilidad","Embolización por colesterol o eventos tromboembólicos"],"pt":["Hemorragia intracraniana sintomática","Hemorragia interna maior/fatal","Angioedema/hipersensibilidade","Embolização por colesterol ou eventos tromboembólicos"]},"doseByIndication":{"es":[{"indication":"ACV isquémico agudo","note":"Confirmar elegibilidad, neuroimagen, presión arterial y ventana terapéutica según el protocolo vigente de ACV antes de la trombólisis.","rows":[{"dose":"0,9 mg/kg (máx. 90 mg): 10% de la dosis en bolo IV durante 1 min y el 90% restante en 60 min.","label":"IV"}]},{"indication":"IAM — infusión acelerada","rows":[{"dose":"15 mg IV en bolo, luego 50 mg en 30 min y 35 mg en los 60 min siguientes.","label":">67 kg"},{"dose":"15 mg IV en bolo, luego 0,75 mg/kg en 30 min y 0,50 mg/kg en los 60 min siguientes; dosis total máx. 100 mg.","label":"≤67 kg"}]},{"indication":"Embolia pulmonar aguda masiva","note":"Usar solo con indicación apropiada y tras valorar el riesgo hemorrágico.","rows":[{"dose":"100 mg en infusión IV durante 2 h.","label":"IV"}]}],"pt":[{"indication":"AVC isquêmico agudo","note":"Confirmar elegibilidade, neuroimagem, pressão arterial e janela terapêutica conforme protocolo de AVC vigente antes da trombólise.","rows":[{"dose":"0,9 mg/kg (máx. 90 mg): 10% da dose em bolus IV por 1 min e os 90% restantes em 60 min.","label":"IV"}]},{"indication":"IAM — infusão acelerada","rows":[{"dose":"15 mg IV em bolus, depois 50 mg em 30 min e 35 mg nos 60 min seguintes.","label":">67 kg"},{"dose":"15 mg IV em bolus, depois 0,75 mg/kg em 30 min e 0,50 mg/kg nos 60 min seguintes; dose total máx. 100 mg.","label":"≤67 kg"}]},{"indication":"Embolia pulmonar aguda maciça","note":"Aplicar apenas no contexto de indicação apropriada e risco hemorrágico avaliado.","rows":[{"dose":"100 mg em infusão IV ao longo de 2 h.","label":"IV"}]}]},"indications":{"es":["ACV isquémico agudo en paciente elegible para trombólisis sistémica","Infarto agudo de miocardio cuando está indicada la fibrinólisis","Embolia pulmonar aguda masiva con inestabilidad hemodinámica"],"pt":["AVC isquêmico agudo em paciente elegível para trombólise sistêmica","Infarto agudo do miocárdio quando fibrinólise está indicada","Embolia pulmonar aguda maciça com instabilidade hemodinâmica"]},"references":["FDA Activase (alteplase) Prescribing Information 2022","Current stroke thrombolysis protocol/guideline eligibility should be checked before use"]}
     }, /* fim alteplase */
 
     tenecteplase: {
