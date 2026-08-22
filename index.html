@@ -7,7 +7,7 @@
        base relativa "/" resolvia contra o host vazio → 404 em todos os assets.
        O valor absoluto garante resolução correta desde o milissegundo zero,
        antes de qualquer execução de JavaScript. -->
-  <base href="https://medcasescalcu.com/" />
+  <base href="/" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
   <meta name="theme-color" content="#1C2226" />
@@ -9281,7 +9281,7 @@ body.light-mode.calc-overlay-open #fd-modal.open .fd-batch2-direct-row,
 body.light-mode.calc-overlay-open #fd-modal.open .fd-batch2-direct-dose,
 body.light-mode.calc-overlay-open #fd-modal.open .fd-batch2-direct-dose strong{color:#17202B!important}
 </style>
-\n
+
 <style id="medcases-batch2-posology-hidden-structured-content-rootcause-fix-v1-b-r0">
 /* CALC-FARMACOS-BATCH2-POSOLOGY-HIDDEN-STRUCTURED-CONTENT-ROOTCAUSE-FIX-V1-B-R0
    Runtime trace proved dose HTML exists while innerText is empty.
@@ -48563,6 +48563,1716 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
   visibility:hidden!important;
 }
 </style>
+<!-- CALC-FARMACOS-PRIMARY-INTERACTIONS-CARD-R3-R2-RUNTIME-LIFECYCLE-READINESS-FIX BEGIN -->
+<style id="medcases-fd-special-interactions-data-bridge-v1-b-r0">
+#fd-modal.open .fd-data-bridge{
+  margin:8px 0 2px;
+  padding:0;
+  color:inherit;
+}
+#fd-modal.open .fd-data-bridge-block{
+  margin:0 0 8px;
+}
+#fd-modal.open .fd-data-bridge-block:last-child{
+  margin-bottom:0;
+}
+#fd-modal.open .fd-data-bridge-label{
+  display:block;
+  margin:0 0 4px;
+  font-size:11px;
+  line-height:1.25;
+  font-weight:650;
+  opacity:.78;
+}
+#fd-modal.open .fd-data-bridge-line{
+  display:block;
+  position:relative;
+  padding:0 0 0 12px;
+  margin:3px 0;
+  font-size:11.5px;
+  line-height:1.42;
+}
+#fd-modal.open .fd-data-bridge-line::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  top:0;
+  opacity:.55;
+}
+</style>
+
+<script id="medcases-fd-primary-interactions-card-r3-r2-runtime-lifecycle-readiness-fix">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-FARMACOS-PRIMARY-INTERACTIONS-CARD-R3-R2-RUNTIME-LIFECYCLE-READINESS-FIX';
+  if (window.__mcFdPrimaryInteractionsCardR3R2RuntimeLifecycleReadinessFix) return;
+
+  const norm=value => String(value ?? '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()
+    .replace(/[^a-z0-9]+/g,' ').trim();
+
+  const lang=() => {
+    try {
+      const q=new URLSearchParams(location.search).get('lang');
+      if (q==='es' || q==='pt') return q;
+    } catch (_) {}
+    return norm(document.documentElement.lang).startsWith('es') ? 'es' : 'pt';
+  };
+
+  const localized=value => {
+    if (!value || typeof value!=='object' || Array.isArray(value)) return value;
+    if (lang()==='es' && value.es != null) return value.es;
+    if (lang()==='pt' && value.pt != null) return value.pt;
+    if (value.pt != null) return value.pt;
+    if (value.es != null) return value.es;
+    return value;
+  };
+
+  const meaningful=value => {
+    const s=String(value ?? '').replace(/\s+/g,' ').trim();
+    if (!s || /^(n\/?a|na|none|null|undefined|-|—)$/i.test(s)) return '';
+    return s;
+  };
+
+  const modal=() => {
+    const candidates=[
+      document.querySelector('#fd-modal'),
+      document.querySelector('[data-fd-modal]'),
+      document.querySelector('.fd-modal.open'),
+      document.querySelector('.fd-modal.is-open'),
+      document.querySelector('.fd-modal[open]')
+    ].filter(Boolean);
+
+    return candidates.find(el => {
+      const cs=getComputedStyle(el);
+      if (cs.display==='none' || cs.visibility==='hidden') return false;
+      const r=el.getBoundingClientRect();
+      return r.width>0 && r.height>0;
+    }) || null;
+  };
+
+  const currentDrugName=() => {
+    const m=modal();
+    if (!m) return '';
+
+    const selectors=[
+      '.fd-title','[data-fd-title]','.fd-header-title','.fd-drug-name',
+      'header strong','header h1','header h2'
+    ];
+    for (const selector of selectors) {
+      const el=m.querySelector(selector);
+      const t=meaningful(el?.textContent);
+      if (t && t.length<120) return t;
+    }
+
+    const runtimeNames=[];
+    for (const source of [window.DRUG_DB,window.ALL_DRUGS_DB].filter(Boolean)) {
+      if (Array.isArray(source)) {
+        for (const d of source) {
+          const n=meaningful(d?.nome ?? d?.nombre ?? d?.name ?? d?.id);
+          if (n) runtimeNames.push(n);
+        }
+      } else if (source && typeof source==='object') {
+        for (const [k,d] of Object.entries(source)) {
+          const n=meaningful(d?.nome ?? d?.nombre ?? d?.name ?? d?.id ?? k);
+          if (n) runtimeNames.push(n);
+        }
+      }
+    }
+
+    const text=norm(String(m.textContent || '').slice(0,260));
+    const hit=runtimeNames
+      .filter(n => text.startsWith(norm(n)))
+      .sort((a,b) => b.length-a.length)[0];
+
+    return hit || '';
+  };
+
+  const variants=name => {
+    const base=norm(name);
+    const set=new Set([base]);
+
+    const aliases=window.DRUG_ALIASES;
+    if (aliases && typeof aliases==='object') {
+      for (const [k,v] of Object.entries(aliases)) {
+        const nk=norm(k);
+        const values=Array.isArray(v) ? v : [v];
+        const nvals=values.map(norm).filter(Boolean);
+        if (nk===base || nvals.includes(base)) {
+          set.add(nk);
+          nvals.forEach(x => set.add(x));
+        }
+      }
+    }
+
+    return [...set].filter(Boolean);
+  };
+
+  const objectMentionsDrug=(value,drugVariants,depth=0,seen=new Set()) => {
+    if (value == null || depth>8) return false;
+    value=localized(value);
+
+    if (typeof value==='string' || typeof value==='number') {
+      const t=norm(value);
+      return drugVariants.some(v => t===v || t.includes(v));
+    }
+
+    if (Array.isArray(value)) {
+      return value.some(x => objectMentionsDrug(x,drugVariants,depth+1,seen));
+    }
+
+    if (typeof value!=='object' || seen.has(value)) return false;
+    seen.add(value);
+
+    for (const [k,v] of Object.entries(value)) {
+      const nk=norm(k);
+      if (drugVariants.some(d => nk===d || nk.includes(d))) return true;
+      if (objectMentionsDrug(v,drugVariants,depth+1,seen)) return true;
+    }
+    return false;
+  };
+
+  const scalarPairs=(value,depth=0,seen=new Set(),path=[]) => {
+    value=localized(value);
+    if (value == null || depth>8) return [];
+
+    if (typeof value==='string' || typeof value==='number' || typeof value==='boolean') {
+      const text=meaningful(value);
+      return text ? [{key:path[path.length-1] || '',path:path.join('.'),text}] : [];
+    }
+
+    if (Array.isArray(value)) {
+      return value.flatMap((x,i) => scalarPairs(x,depth+1,seen,path.concat(String(i))));
+    }
+
+    if (typeof value!=='object' || seen.has(value)) return [];
+    seen.add(value);
+
+    return Object.entries(value).flatMap(([k,v]) => {
+      if (/^(pt|es|en)$/i.test(k)) return [];
+      return scalarPairs(v,depth+1,seen,path.concat(k));
+    });
+  };
+
+  const severityRank=text => {
+    const n=norm(text);
+    if (/(contraind|avoid|evitar|grave|severe|major|alto risco|alto riesgo|high risk)/.test(n)) return 400;
+    if (/(moderad|moderate|precauc|caution|monitor)/.test(n)) return 250;
+    if (/(minor|leve|baixo risco|bajo riesgo|low risk)/.test(n)) return 120;
+    return 50;
+  };
+
+  const keyPriority=key => {
+    const n=norm(key).replace(/\s+/g,'');
+    if (/^(severity|severidade|gravedad|risk|risco|riesgo)$/.test(n)) return 90;
+    if (/^(management|manejo|conduta|recommendation|recomendacao|recomendacion)$/.test(n)) return 80;
+    if (/^(effect|efeito|efecto|description|descricao|descripcion|message|mensagem|mensaje)$/.test(n)) return 70;
+    if (/^(mechanism|mecanismo)$/.test(n)) return 50;
+    return 10;
+  };
+
+  const partnerCandidates=(pairs,currentVariants) => {
+    const out=[];
+    for (const pair of pairs) {
+      const t=meaningful(pair.text);
+      const n=norm(t);
+      if (!t || currentVariants.some(v => n===v)) continue;
+
+      const key=norm(pair.key).replace(/\s+/g,'');
+      const likelyDrugField=/^(drug|drug1|drug2|farmaco|farmaco1|farmaco2|medicamento|medicamento1|medicamento2|pair|par|with|com|con)$/.test(key);
+      const looksShort=t.length<=80 && /^[A-Za-zÀ-ÿ0-9 +\-./()]+$/.test(t);
+
+      if (likelyDrugField || looksShort) out.push(t);
+    }
+    return out;
+  };
+
+  const candidateFromRecord=(record,currentVariants,pathKey='') => {
+    const pairs=scalarPairs(record);
+    if (!pairs.length) return null;
+
+    const combined=pairs.map(x => x.text).join(' | ');
+    if (!currentVariants.some(v => norm(combined).includes(v)) &&
+        !currentVariants.some(v => norm(pathKey).includes(v))) return null;
+
+    const partners=partnerCandidates(pairs,currentVariants);
+    const uniquePartners=[];
+    const seenP=new Set();
+
+    for (const partner of partners) {
+      const np=norm(partner);
+      if (!np || currentVariants.some(v => np===v) || seenP.has(np)) continue;
+      seenP.add(np);
+      uniquePartners.push(partner);
+      if (uniquePartners.length>=3) break;
+    }
+
+    const detailPairs=pairs
+      .filter(pair => {
+        const k=norm(pair.key).replace(/\s+/g,'');
+        const n=norm(pair.text);
+        if (currentVariants.some(v => n===v)) return false;
+        if (/^(drug|drug1|drug2|farmaco|farmaco1|farmaco2|medicamento|medicamento1|medicamento2|pair|par)$/.test(k)) return false;
+        return pair.text.length>=4;
+      })
+      .sort((a,b) => {
+        const sa=severityRank(a.text)+keyPriority(a.key);
+        const sb=severityRank(b.text)+keyPriority(b.key);
+        return sb-sa;
+      });
+
+    const detail=[];
+    const seenD=new Set();
+    for (const pair of detailPairs) {
+      const n=norm(pair.text);
+      if (!n || seenD.has(n)) continue;
+      seenD.add(n);
+      detail.push(pair.text);
+      if (detail.length>=3) break;
+    }
+
+    const title=uniquePartners[0] || (lang()==='es' ? 'Interacción relevante' : 'Interação relevante');
+    const body=detail.join(' · ') || combined.slice(0,320);
+    if (!body) return null;
+
+    const score=severityRank(combined) + (uniquePartners[0] ? 40 : 0);
+
+    return {
+      title,
+      text:body,
+      score,
+      fingerprint:norm(title+' '+body)
+    };
+  };
+
+  const extractInteractions=name => {
+    const db=window.INTERACOES_DB;
+    if (!db || typeof db!=='object') return [];
+
+    const currentVariants=variants(name);
+    const candidates=[];
+    const seenObj=new Set();
+
+    const walk=(value,depth=0,path=[]) => {
+      if (!value || typeof value!=='object' || depth>8 || seenObj.has(value)) return;
+      seenObj.add(value);
+
+      const pathKey=path.join('.');
+      if (objectMentionsDrug(value,currentVariants)) {
+        const candidate=candidateFromRecord(value,currentVariants,pathKey);
+        if (candidate) candidates.push(candidate);
+      }
+
+      if (Array.isArray(value)) {
+        value.forEach((x,i) => {
+          if (x && typeof x==='object') walk(x,depth+1,path.concat(String(i)));
+        });
+      } else {
+        Object.entries(value).forEach(([k,v]) => {
+          if (v && typeof v==='object') walk(v,depth+1,path.concat(k));
+        });
+      }
+    };
+
+    walk(db);
+    candidates.sort((a,b) => b.score-a.score);
+
+    const out=[];
+    const seen=new Set();
+    for (const item of candidates) {
+      if (!item.fingerprint || seen.has(item.fingerprint)) continue;
+      seen.add(item.fingerprint);
+      out.push({label:item.title,text:item.text,score:item.score});
+      if (out.length>=5) break;
+    }
+
+    return out;
+  };
+
+  const findImunoDrug=name => {
+    const db=window.IMUNO_CORTICOIDE_DRUGS_DB;
+    if (!db || typeof db!=='object') return null;
+
+    const vars=variants(name);
+    const candidates=[];
+
+    const scan=(value,key='') => {
+      if (!value || typeof value!=='object') return;
+      const directName=meaningful(
+        value.nome ?? value.nombre ?? value.name ?? value.id ?? value.genericName ?? key
+      );
+      if (directName && vars.includes(norm(directName))) {
+        candidates.push(value);
+      }
+    };
+
+    if (Array.isArray(db)) db.forEach(x => scan(x));
+    else Object.entries(db).forEach(([k,v]) => scan(v,k));
+
+    candidates.sort((a,b) => JSON.stringify(b).length-JSON.stringify(a).length);
+    return candidates[0] || null;
+  };
+
+  const extractSpecial=name => {
+    const drug=findImunoDrug(name);
+    if (!drug) return [];
+
+    const es=lang()==='es';
+    const keyMap=[
+      ['pediatric',es?'Pediatría':'Pediatria'],
+      ['pediatrics',es?'Pediatría':'Pediatria'],
+      ['pediatria',es?'Pediatría':'Pediatria'],
+      ['pregnancy',es?'Embarazo':'Gestação'],
+      ['gestation',es?'Embarazo':'Gestação'],
+      ['gestacao',es?'Embarazo':'Gestação'],
+      ['embarazo',es?'Embarazo':'Gestação'],
+      ['lactation',es?'Lactancia':'Lactação'],
+      ['lactancia',es?'Lactancia':'Lactação'],
+      ['lactacao',es?'Lactancia':'Lactação'],
+      ['geriatrics',es?'Geriatría':'Geriatria'],
+      ['geriatric',es?'Geriatría':'Geriatria'],
+      ['geriatria',es?'Geriatría':'Geriatria']
+    ];
+
+    const out=[];
+    for (const [key,label] of keyMap) {
+      if (!(key in drug)) continue;
+      const lines=flattenRecord(drug[key]);
+      for (const item of lines) {
+        const text=meaningful(item.text);
+        if (text) out.push({label,text});
+      }
+    }
+
+    const dedup=[];
+    const seen=new Set();
+    for (const item of out) {
+      const k=norm(item.label+' '+item.text);
+      if (!k || seen.has(k)) continue;
+      seen.add(k); dedup.push(item);
+    }
+    return dedup;
+  };
+
+  const headingMatches=(kind,text) => {
+    const n=norm(text);
+    return kind==='special'
+      ? (n==='usos especiais' || n==='usos especiales')
+      : (n==='interacoes medicamentosas' || n==='interacciones medicamentosas');
+  };
+
+  const findHeading=kind => {
+    const root=document.querySelector('#fd-body') || modal();
+    if (!root) return null;
+
+    const selectors='h1,h2,h3,h4,h5,strong,span,button,div';
+    const nodes=[...root.querySelectorAll(selectors)];
+
+    return nodes.find(el => {
+      const own=[...el.childNodes]
+        .filter(n => n.nodeType===Node.TEXT_NODE)
+        .map(n => n.textContent)
+        .join(' ')
+        .replace(/\s+/g,' ')
+        .trim();
+
+      return headingMatches(kind,own);
+    }) || null;
+  };
+
+  const findAnchor=kind => {
+    const heading=findHeading(kind);
+    if (!heading) return null;
+
+    let row=heading;
+    const root=document.querySelector('#fd-body') || modal();
+
+    for (let i=0;i<6 && row && row!==root;i+=1) {
+      const txt=norm(row.textContent);
+      const ownKind=headingMatches(kind,heading.textContent);
+      const childCount=row.children?.length || 0;
+      const hasChevron=!!row.querySelector?.(
+        '[class*="chevron"],[class*="caret"],[aria-expanded],svg'
+      );
+
+      if (ownKind && childCount<=10 && (hasChevron || row.tagName==='BUTTON')) break;
+
+      const parent=row.parentElement;
+      if (!parent || parent===root) break;
+
+      const parentTxt=norm(parent.textContent);
+      if (parentTxt.length > txt.length + 240) break;
+      row=parent;
+    }
+
+    return {heading,row};
+  };
+
+  const existingOwnedBridge=kind =>
+    document.querySelector('.fd-data-bridge[data-kind="'+kind+'"][data-owner="'+BUILD+'"]');
+
+  const nativeBodyTextAfterAnchor=(anchor,kind) => {
+    if (!anchor?.row) return '';
+
+    const owned=existingOwnedBridge(kind);
+    if (owned) return 'OWNED_BRIDGE';
+
+    let node=anchor.row.nextElementSibling;
+    let text='';
+
+    for (let i=0;node && i<3;i+=1,node=node.nextElementSibling) {
+      if (node.classList?.contains('fd-data-bridge')) continue;
+
+      const nodeText=String(node.textContent || '').replace(/\s+/g,' ').trim();
+      const n=norm(nodeText);
+
+      if (!nodeText) continue;
+
+      if (
+        n==='usos especiais' || n==='usos especiales' ||
+        n==='interacoes medicamentosas' || n==='interacciones medicamentosas' ||
+        n==='efeitos adversos' || n==='efectos adversos' ||
+        n==='dados farmacologicos' || n==='datos farmacologicos'
+      ) break;
+
+      text+=' '+nodeText;
+      if (text.trim().length>=18) break;
+    }
+
+    return text.trim();
+  };
+
+  const render=(kind,items) => {
+    const anchor=findAnchor(kind);
+    if (!anchor || !anchor.row || !items.length) {
+      console.info('['+BUILD+'] RENDER_SKIPPED',{
+        kind,
+        anchorFound:!!anchor,
+        rowFound:!!anchor?.row,
+        items:items?.length || 0
+      });
+      return false;
+    }
+
+    const existing=existingOwnedBridge(kind);
+    if (existing) existing.remove();
+
+    const nativeText=nativeBodyTextAfterAnchor(anchor,kind);
+    if (nativeText && nativeText!=='OWNED_BRIDGE') {
+      console.info('['+BUILD+'] NATIVE_CONTENT_PRESERVED',{
+        kind,
+        nativeChars:nativeText.length
+      });
+      return false;
+    }
+
+    const wrapper=document.createElement('div');
+    wrapper.className='fd-data-bridge';
+    wrapper.dataset.kind=kind;
+    wrapper.dataset.owner=BUILD;
+
+    const groups=new Map();
+    for (const item of items) {
+      const label=String(item.label || '').trim();
+      if (!groups.has(label)) groups.set(label,[]);
+      groups.get(label).push(item.text);
+    }
+
+    for (const [label,texts] of groups.entries()) {
+      const block=document.createElement('div');
+      block.className='fd-data-bridge-block';
+
+      if (label) {
+        const l=document.createElement('span');
+        l.className='fd-data-bridge-label';
+        l.textContent=label;
+        block.appendChild(l);
+      }
+
+      texts.forEach(value => {
+        const line=document.createElement('span');
+        line.className='fd-data-bridge-line';
+        line.textContent=value;
+        block.appendChild(line);
+      });
+
+      wrapper.appendChild(block);
+    }
+
+    anchor.row.insertAdjacentElement('afterend',wrapper);
+
+    console.info('['+BUILD+'] RENDERED',{
+      kind,
+      items:items.length,
+      anchorTag:anchor.row.tagName,
+      anchorText:String(anchor.heading.textContent || '').trim()
+    });
+
+    return true;
+  };
+
+  const apply=() => {
+    if (!modal()) return false;
+
+    const name=currentDrugName();
+    if (!name) {
+      console.info('['+BUILD+'] NO_IDENTITY');
+      return false;
+    }
+
+    const special=extractSpecial(name);
+    const interactions=extractInteractions(name);
+
+    const specialApplied=render('special',special);
+
+    let interactionItems=interactions;
+    if (!interactionItems.length) {
+      interactionItems=[{
+        label:'',
+        text:lang()==='es'
+          ? 'No hay interacciones principales estructuradas registradas para este fármaco en la base actual.'
+          : 'Não há interações principais estruturadas cadastradas para este fármaco na base atual.'
+      }];
+    }
+
+    const interactionsApplied=render('interaction',interactionItems);
+
+    console.info('['+BUILD+'] RESOLVED',{
+      drug:name,
+      imunoOwner:!!window.IMUNO_CORTICOIDE_DRUGS_DB,
+      interactionOwner:!!window.INTERACOES_DB,
+      specialLines:special.length,
+      interactionLines:interactions.length,
+      renderedInteractionLines:interactionItems.length,
+      primaryInteractions:Math.min(interactions.length,5),
+      specialApplied,
+      interactionsApplied
+    });
+
+    return specialApplied || interactionsApplied;
+  };
+
+  const settle=() => {
+    try { apply(); }
+    catch (error) { console.warn('['+BUILD+']',error); }
+  };
+
+  const boundedSettle=() => {
+    queueMicrotask(settle);
+    requestAnimationFrame(() => requestAnimationFrame(settle));
+    setTimeout(settle,90);
+    setTimeout(settle,220);
+    setTimeout(settle,520);
+  };
+
+  const interactionDbReady=() => {
+    const db=window.INTERACOES_DB;
+    if (!db || typeof db!=='object') return false;
+    const nodes=Array.isArray(db) ? db.length : Object.keys(db).length;
+    return nodes>0;
+  };
+
+  let lifecycleTimers=[];
+
+  const cancelLifecycleTimers=() => {
+    lifecycleTimers.forEach(id => clearTimeout(id));
+    lifecycleTimers=[];
+  };
+
+  const armLifecycleSettle=(reason='event') => {
+    cancelLifecycleTimers();
+
+    const delays=[0,60,140,280,520,900,1500];
+
+    delays.forEach((delay,index) => {
+      const id=setTimeout(() => {
+        const m=modal();
+        if (!m) return;
+
+        const db=window.INTERACOES_DB;
+        const nodes=db && typeof db==='object'
+          ? (Array.isArray(db) ? db.length : Object.keys(db).length)
+          : 0;
+
+        if (!interactionDbReady()) {
+          if (index===delays.length-1) {
+            console.info('['+BUILD+'] LIFECYCLE_WAIT_TIMEOUT',{
+              reason,
+              modalFound:true,
+              interactionDbNodes:nodes
+            });
+          }
+          return;
+        }
+
+        console.info('['+BUILD+'] LIFECYCLE_READY',{
+          reason,
+          attempt:index+1,
+          delay,
+          interactionDbNodes:nodes
+        });
+
+        cancelLifecycleTimers();
+        settle();
+      },delay);
+
+      lifecycleTimers.push(id);
+    });
+  };
+
+  document.addEventListener('click',event => {
+    const currentModal=modal();
+
+    // Clicking inside an already-open detail should not continuously rerender the bridge.
+    if (currentModal && currentModal.contains(event.target)) return;
+
+    // Any click outside the detail can be the dynamically-rendered drug result that opens it.
+    // The finite settle window makes this safe even when the click was unrelated.
+    armLifecycleSettle('pre-open-document-click');
+  },true);
+
+  window.addEventListener('load',() => armLifecycleSettle('window-load'),{once:true});
+
+  window.__mcFdPrimaryInteractionsCardR3R2RuntimeLifecycleReadinessFix={
+    build:BUILD,apply,boundedSettle,armLifecycleSettle,currentDrugName,extractSpecial,extractInteractions
+  };
+
+  console.info('['+BUILD+'] MOUNTED',{
+    interactionOwner:'INTERACOES_DB',
+    primaryInteractionsMax:5,
+    severityAware:true,
+    sourceTruthOnly:true,
+    specialOwner:'IMUNO_CORTICOIDE_DRUGS_DB',
+    emptySectionOnly:true,
+    persistentObserver:false
+  });
+
+  boundedSettle();
+})();
+</script>
+<!-- CALC-FARMACOS-PRIMARY-INTERACTIONS-CARD-R3-R2-RUNTIME-LIFECYCLE-READINESS-FIX END -->
+
+<!-- CALC-FARMACOS-GLOBAL-SEARCH-INSTANT-INPUT-MOBILE-V1-B-R0 BEGIN -->
+<style id="medcases-farmacos-groups-search-runtime-owner-v1-b-r0">
+#mc-pharm-runtime-panel{
+  display:none;
+  width:100%;
+}
+#mc-pharm-runtime-panel.is-active{
+  display:block;
+}
+#mc-pharm-runtime-panel .mc-pharm-list{
+  border-top:1px solid var(--farm-v2-border,#374151);
+}
+#mc-pharm-runtime-panel .mc-pharm-class{
+  border-bottom:1px solid var(--farm-v2-border,#374151);
+}
+#mc-pharm-runtime-panel .mc-pharm-class-row{
+  width:100%;
+  min-height:49px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border:0;
+  background:transparent;
+  color:inherit;
+  padding:10px 2px;
+  text-align:left;
+  cursor:pointer;
+}
+#mc-pharm-runtime-panel .mc-pharm-class-name{
+  flex:1;
+  min-width:0;
+  font-size:13px;
+  font-weight:650;
+  line-height:1.25;
+}
+#mc-pharm-runtime-panel .mc-pharm-class-count{
+  flex:0 0 auto;
+  opacity:.52;
+  font-size:10px;
+  font-variant-numeric:tabular-nums;
+}
+#mc-pharm-runtime-panel .mc-pharm-chevron{
+  flex:0 0 auto;
+  opacity:.55;
+  font-size:17px;
+  transition:transform .16s ease;
+}
+#mc-pharm-runtime-panel .mc-pharm-class.is-open .mc-pharm-chevron{
+  transform:rotate(90deg);
+}
+#mc-pharm-runtime-panel .mc-pharm-drugs{
+  display:none;
+  border-top:1px solid var(--farm-v2-border,#374151);
+  background:rgba(127,127,127,.035);
+}
+#mc-pharm-runtime-panel .mc-pharm-class.is-open .mc-pharm-drugs{
+  display:block;
+}
+#mc-pharm-runtime-panel .mc-pharm-drug-row{
+  width:100%;
+  min-height:42px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:0;
+  border-bottom:1px solid var(--farm-v2-border,#374151);
+  background:transparent;
+  color:inherit;
+  padding:9px 16px 9px 18px;
+  text-align:left;
+  cursor:pointer;
+}
+#mc-pharm-runtime-panel .mc-pharm-drug-row:last-child{
+  border-bottom:0;
+}
+#mc-pharm-runtime-panel .mc-pharm-drug-name{
+  flex:1;
+  min-width:0;
+  font-size:12px;
+  font-weight:600;
+  line-height:1.25;
+}
+#mc-pharm-runtime-panel .mc-pharm-empty{
+  padding:28px 10px;
+  opacity:.58;
+  text-align:center;
+  font-size:12px;
+}
+</style>
+
+<script id="medcases-farmacos-global-search-instant-input-mobile-v1-b-r0">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-FARMACOS-GLOBAL-SEARCH-INSTANT-INPUT-MOBILE-V1-B-R0';
+  if (window.__mcFarmacosGlobalSearchInstantInputMobileV1BR0) return;
+
+  const state={
+    panel:null,
+    hiddenLegacy:null,
+    hiddenLegacyDisplay:'',
+    routing:false,
+    lastRouteAt:0,
+    lastRouteQuery:''
+  };
+
+  const norm=value => String(value ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g,' ')
+    .trim();
+
+  const esc=value => String(value ?? '')
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#039;');
+
+  const lang=() => {
+    try {
+      const q=new URLSearchParams(location.search).get('lang');
+      if (q==='es' || q==='pt') return q;
+    } catch (_) {}
+    return norm(document.documentElement.lang).startsWith('es') ? 'es' : 'pt';
+  };
+
+  const tabs=() => [...document.querySelectorAll('.farmacos-v2-tab')];
+
+  const isAZ=tab => {
+    const t=norm(tab?.textContent);
+    return t==='a z' || t==='az';
+  };
+
+  const isAllGroups=tab => {
+    const t=norm(tab?.textContent);
+    return t==='todos os grupos' || t==='todos los grupos';
+  };
+
+  const isSearchInput=el => {
+    if (!el || !el.matches) return false;
+    if (el.id==='hm-drug-search') return true;
+    if (!el.matches('input[type="search"],input[type="text"]')) return false;
+    const ph=norm(el.getAttribute('placeholder') || '');
+    return ph.startsWith('busca por nome') || ph.startsWith('busca por nombre');
+  };
+
+  const searchInputs=() => [
+    ...document.querySelectorAll(
+      '#hm-drug-search,input[placeholder*="Busca por nome"],input[placeholder*="Busca por nombre"]'
+    )
+  ].filter(isSearchInput);
+
+  const searchInput=() =>
+    searchInputs().find(el =>
+      el.offsetParent!==null &&
+      getComputedStyle(el).display!=='none' &&
+      getComputedStyle(el).visibility!=='hidden'
+    ) || searchInputs()[0] || null;
+
+  const tabBar=() => {
+    const ts=tabs();
+    if (!ts.length) return null;
+    let parent=ts[0].parentElement;
+    while (parent && parent!==document.body) {
+      const count=[...parent.querySelectorAll('.farmacos-v2-tab')].length;
+      if (count>=3) return parent;
+      parent=parent.parentElement;
+    }
+    return ts[0].parentElement;
+  };
+
+  const visibleLegacyPanel=() => {
+    const candidates=[...document.querySelectorAll('.farmacos-v2-panel')]
+      .filter(el => el.id!=='mc-pharm-runtime-panel');
+
+    const visible=candidates.find(el =>
+      el.offsetParent!==null &&
+      getComputedStyle(el).display!=='none' &&
+      getComputedStyle(el).visibility!=='hidden'
+    );
+    if (visible) return visible;
+
+    // Fallback: locate the visible clinical-context group list seen under tabs.
+    const rows=[...document.querySelectorAll('.farmacos-v2-group')]
+      .filter(el => el.offsetParent!==null);
+    if (rows.length) {
+      let node=rows[0].parentElement;
+      const bar=tabBar();
+      while (node && node!==document.body) {
+        if (bar && node===bar) break;
+        if (rows.every(r => node.contains(r))) return node;
+        node=node.parentElement;
+      }
+    }
+    return null;
+  };
+
+  const panelHost=() => {
+    const legacy=visibleLegacyPanel();
+    if (legacy?.parentElement) return {host:legacy.parentElement,legacy};
+
+    const bar=tabBar();
+    if (bar?.parentElement) return {host:bar.parentElement,legacy:null};
+
+    const input=searchInput();
+    if (input?.parentElement?.parentElement) {
+      return {host:input.parentElement.parentElement,legacy:null};
+    }
+    return null;
+  };
+
+  const names=list => new Set(list.map(norm));
+
+  const catalog=[
+    {key:'acei',pt:'IECA',es:'IECA',
+      meta:[/\bieca\b/,/\bace inhibitor/,/\binibidor.*eca\b/,/\binhibidor.*eca\b/],
+      names:names(['captopril','enalapril','lisinopril','ramipril','perindopril','benazepril','fosinopril','quinapril','trandolapril'])},
+    {key:'arb',pt:'BRA',es:'ARA II',
+      meta:[/\bbra\b/,/\bara ii\b/,/\barb\b/,/\breceptor.*angiotensina/],
+      names:names(['losartana','losartan','valsartana','valsartan','candesartana','candesartan','irbesartana','irbesartan','telmisartana','telmisartan','olmesartana','olmesartan','eprosartana','azilsartana'])},
+    {key:'diuretics',pt:'Diuréticos',es:'Diuréticos',
+      meta:[/\bdiuretic/],
+      names:names(['furosemida','bumetanida','torsemida','hidroclorotiazida','clortalidona','indapamida','espironolactona','eplerenona','amilorida','triamtereno','acetazolamida','manitol'])},
+    {key:'sympathomimetics',pt:'Simpaticomiméticos',es:'Simpaticomiméticos',
+      meta:[/\bsimpaticomimet/,/\bsympathomimet/,/\bagonista adrenerg/],
+      names:names(['adrenalina','epinefrina','noradrenalina','norepinefrina','dopamina','dobutamina','fenilefrina','isoproterenol','efedrina','pseudoefedrina','midodrina'])},
+    {key:'beta_blockers',pt:'Betabloqueadores',es:'Betabloqueantes',
+      meta:[/\bbeta bloque/,/\bbeta blocker/,/\bbetabloque/],
+      names:names(['propranolol','atenolol','metoprolol','bisoprolol','carvedilol','nebivolol','esmolol','labetalol','nadolol','timolol','sotalol'])},
+    {key:'alpha_blockers',pt:'Alfabloqueadores',es:'Alfabloqueantes',
+      meta:[/\balfa bloque/,/\balpha blocker/],
+      names:names(['prazosina','doxazosina','terazosina','tamsulosina','alfuzosina','silodosina','fenoxibenzamina','fentolamina'])},
+    {key:'alpha2_agonists',pt:'Agonistas α2-adrenérgicos',es:'Agonistas α2-adrenérgicos',
+      meta:[/\balfa ?2.*agon/,/\balpha ?2.*agon/],
+      names:names(['clonidina','metildopa','dexmedetomidina','guanfacina'])},
+    {key:'ccb',pt:'Bloqueadores dos canais de cálcio',es:'Bloqueadores de los canales de calcio',
+      meta:[/\bcanal.*calci/,/\bcalcium channel blocker/],
+      names:names(['amlodipino','nifedipino','felodipino','nicardipino','nimodipino','verapamil','diltiazem'])},
+    {key:'nitrates',pt:'Nitratos',es:'Nitratos',
+      meta:[/\bnitrat/,/\bnitrovasodilat/],
+      names:names(['nitroglicerina','dinitrato de isossorbida','mononitrato de isossorbida','isosorbida'])},
+    {key:'antiarrhythmics',pt:'Antiarrítmicos',es:'Antiarrítmicos',
+      meta:[/\bantiarritm/,/\bantiarrhyth/],
+      names:names(['amiodarona','procainamida','flecainida','propafenona','quinidina','disopiramida','lidocaina','adenosina','digoxina'])},
+    {key:'anticoagulants',pt:'Anticoagulantes',es:'Anticoagulantes',
+      meta:[/\banticoagul/],
+      names:names(['heparina','enoxaparina','dalteparina','fondaparinux','warfarina','varfarina','apixabana','rivaroxabana','edoxabana','dabigatrana'])},
+    {key:'antiplatelets',pt:'Antiagregantes plaquetários',es:'Antiagregantes plaquetarios',
+      meta:[/\bantiagreg/,/\bantiplatelet/],
+      names:names(['aspirina','acido acetilsalicilico','clopidogrel','prasugrel','ticagrelor','cangrelor','abciximab','eptifibatida','tirofibana'])},
+    {key:'thrombolytics',pt:'Trombolíticos / Fibrinolíticos',es:'Trombolíticos / Fibrinolíticos',
+      meta:[/\btrombol/,/\bfibrinolit/,/\bthrombol/],
+      names:names(['alteplase','tenecteplase','reteplase','estreptoquinase','uroquinase'])},
+    {key:'statins',pt:'Estatinas',es:'Estatinas',
+      meta:[/\bestatina\b/,/\bstatin\b/],
+      names:names(['atorvastatina','rosuvastatina','sinvastatina','pravastatina','lovastatina','fluvastatina','pitavastatina'])},
+    {key:'beta2_agonists',pt:'Agonistas β2-adrenérgicos',es:'Agonistas β2-adrenérgicos',
+      meta:[/\bbeta ?2.*agon/,/\bagonista.*beta ?2/],
+      names:names(['salbutamol','albuterol','terbutalina','fenoterol','formoterol','salmeterol','indacaterol','olodaterol','vilanterol'])},
+    {key:'antimuscarinics',pt:'Antimuscarínicos',es:'Antimuscarínicos',
+      meta:[/\bantimuscarin/,/\banticolinerg/],
+      names:names(['ipratropio','tiotropio','umeclidinio','aclidinio','glicopirronio','atropina','escopolamina'])},
+    {key:'corticosteroids',pt:'Corticosteroides',es:'Corticoides',
+      meta:[/\bcorticosteroid/,/\bcorticoid/,/\bglicocorticoid/,/\bglucocorticoid/],
+      names:names(['prednisona','prednisolona','dexametasona','betametasona','metilprednisolona','hidrocortisona','budesonida','beclometasona','fluticasona','mometasona'])},
+    {key:'antihistamines',pt:'Anti-histamínicos',es:'Antihistamínicos',
+      meta:[/\banti ?histamin/],
+      names:names(['loratadina','desloratadina','cetirizina','levocetirizina','fexofenadina','difenidramina','clorfeniramina','hidroxizina'])},
+    {key:'nsaids',pt:'AINEs',es:'AINEs',
+      meta:[/\baine\b/,/\bnsaid\b/],
+      names:names(['ibuprofeno','naproxeno','diclofenaco','ketorolaco','cetoprofeno','meloxicam','piroxicam','celecoxib','etoricoxib','indometacina'])},
+    {key:'opioids',pt:'Opioides',es:'Opioides',
+      meta:[/\bopioid/],
+      names:names(['morfina','fentanil','remifentanil','sufentanil','tramadol','codeina','oxicodona','hidromorfona','metadona','buprenorfina'])},
+    {key:'benzodiazepines',pt:'Benzodiazepínicos',es:'Benzodiazepinas',
+      meta:[/\bbenzodiazep/],
+      names:names(['diazepam','midazolam','lorazepam','alprazolam','clonazepam','bromazepam','temazepam','oxazepam'])},
+    {key:'ssri',pt:'ISRS',es:'ISRS',
+      meta:[/\bisrs\b/,/\bssri\b/,/\brecapt.*serotonina/],
+      names:names(['fluoxetina','sertralina','paroxetina','citalopram','escitalopram','fluvoxamina'])},
+    {key:'snri',pt:'IRSN',es:'IRSN',
+      meta:[/\birsn\b/,/\bsnri\b/,/\bserotonina.*noradren/],
+      names:names(['venlafaxina','desvenlafaxina','duloxetina','milnaciprano'])},
+    {key:'maoi',pt:'IMAO',es:'IMAO',
+      meta:[/\bimao\b/,/\bmaoi\b/,/\bmonoamin.*oxid/],
+      names:names(['fenelzina','tranilcipromina','isocarboxazida','selegilina','moclobemida'])},
+    {key:'tricyclics',pt:'Antidepressivos tricíclicos',es:'Antidepresivos tricíclicos',
+      meta:[/\btriciclic/],
+      names:names(['amitriptilina','nortriptilina','imipramina','clomipramina','desipramina','doxepina'])},
+    {key:'antipsychotics',pt:'Antipsicóticos',es:'Antipsicóticos',
+      meta:[/\bantipsicot/,/\bneurolept/],
+      names:names(['haloperidol','clorpromazina','levomepromazina','risperidona','olanzapina','quetiapina','clozapina','aripiprazol','ziprasidona'])},
+    {key:'antiepileptics',pt:'Antiepilépticos / Anticonvulsivantes',es:'Antiepilépticos / Anticonvulsivantes',
+      meta:[/\bantiepilep/,/\banticonvuls/],
+      names:names(['valproato','acido valproico','carbamazepina','oxcarbazepina','fenitoina','fosfenitoina','fenobarbital','levetiracetam','lamotrigina','topiramato','gabapentina','pregabalina'])},
+    {key:'penicillins',pt:'Penicilinas',es:'Penicilinas',
+      meta:[/\bpenicilin/],
+      names:names(['penicilina','amoxicilina','ampicilina','oxacilina','dicloxacilina','piperacilina','ticarcilina'])},
+    {key:'cephalosporins',pt:'Cefalosporinas',es:'Cefalosporinas',
+      meta:[/\bcefalospor/,/\bcephalospor/],
+      names:names(['cefalexina','cefazolina','cefuroxima','cefoxitina','cefotaxima','ceftriaxona','ceftazidima','cefepima','ceftarolina'])},
+    {key:'carbapenems',pt:'Carbapenêmicos',es:'Carbapenémicos',
+      meta:[/\bcarbapen/],
+      names:names(['meropenem','imipenem','ertapenem','doripenem'])},
+    {key:'macrolides',pt:'Macrolídeos',es:'Macrólidos',
+      meta:[/\bmacrol/],
+      names:names(['azitromicina','claritromicina','eritromicina'])},
+    {key:'fluoroquinolones',pt:'Fluoroquinolonas',es:'Fluoroquinolonas',
+      meta:[/\bfluoroquin/,/\bquinolona/],
+      names:names(['ciprofloxacino','levofloxacino','moxifloxacino','norfloxacino','ofloxacino'])},
+    {key:'aminoglycosides',pt:'Aminoglicosídeos',es:'Aminoglucósidos',
+      meta:[/\baminoglicos/,/\baminoglycos/],
+      names:names(['gentamicina','amicacina','tobramicina','estreptomicina','neomicina'])},
+    {key:'tetracyclines',pt:'Tetraciclinas',es:'Tetraciclinas',
+      meta:[/\btetraciclin/],
+      names:names(['doxiciclina','minociclina','tetraciclina','tigeciclina'])},
+    {key:'glycopeptides',pt:'Glicopeptídeos',es:'Glucopéptidos',
+      meta:[/\bglicopept/,/\bglucopept/],
+      names:names(['vancomicina','teicoplanina','dalbavancina','oritavancina'])},
+    {key:'antifungals',pt:'Antifúngicos',es:'Antifúngicos',
+      meta:[/\bantifung/,/\bantimicot/],
+      names:names(['fluconazol','itraconazol','voriconazol','posaconazol','anfotericina b','nistatina','caspofungina','micafungina','anidulafungina','terbinafina'])},
+    {key:'antivirals',pt:'Antivirais',es:'Antivirales',
+      meta:[/\bantiviral/],
+      names:names(['aciclovir','valaciclovir','ganciclovir','valganciclovir','oseltamivir','zanamivir','remdesivir'])},
+    {key:'ppi',pt:'Inibidores da bomba de prótons',es:'Inhibidores de la bomba de protones',
+      meta:[/\bipp\b/,/\bppi\b/,/\bbomba de proton/],
+      names:names(['omeprazol','pantoprazol','esomeprazol','lansoprazol','rabeprazol','dexlansoprazol'])},
+    {key:'h2_blockers',pt:'Antagonistas H2',es:'Antagonistas H2',
+      meta:[/\bantagonista.*h2/,/\bbloqueador.*h2/],
+      names:names(['famotidina','cimetidina','nizatidina','ranitidina'])},
+    {key:'antiemetics',pt:'Antieméticos',es:'Antieméticos',
+      meta:[/\bantiemet/],
+      names:names(['ondansetrona','granisetrona','metoclopramida','domperidona','prometazina','dimenidrinato','aprepitanto'])},
+    {key:'biguanides',pt:'Biguanidas',es:'Biguanidas',
+      meta:[/\bbiguanid/],names:names(['metformina'])},
+    {key:'sulfonylureas',pt:'Sulfonilureias',es:'Sulfonilureas',
+      meta:[/\bsulfonilur/],names:names(['glibenclamida','gliburida','gliclazida','glimepirida','glipizida'])},
+    {key:'sglt2',pt:'Inibidores de SGLT2',es:'Inhibidores de SGLT2',
+      meta:[/\bsglt ?2/],names:names(['dapagliflozina','empagliflozina','canagliflozina','ertugliflozina'])},
+    {key:'dpp4',pt:'Inibidores de DPP-4',es:'Inhibidores de DPP-4',
+      meta:[/\bdpp ?4/],names:names(['sitagliptina','linagliptina','saxagliptina','alogliptina','vildagliptina'])},
+    {key:'glp1',pt:'Agonistas do receptor GLP-1',es:'Agonistas del receptor GLP-1',
+      meta:[/\bglp ?1/],names:names(['semaglutida','liraglutida','dulaglutida','exenatida','lixisenatida'])},
+    {key:'insulins',pt:'Insulinas',es:'Insulinas',
+      meta:[/\binsulina\b/],names:names(['insulina regular','insulina nph','insulina lispro','insulina aspart','insulina glulisina','insulina glargina','insulina detemir','insulina degludeca'])},
+    {key:'thyroid_hormones',pt:'Hormônios tireoidianos',es:'Hormonas tiroideas',
+      meta:[/\bhormon.*tireoid/],names:names(['levotiroxina','liotironina'])},
+    {key:'antithyroid',pt:'Antitireoidianos',es:'Antitiroideos',
+      meta:[/\bantitireoid/,/\bantithyroid/],names:names(['metimazol','tiamazol','propiltiouracil'])},
+    {key:'immunosuppressants',pt:'Imunossupressores',es:'Inmunosupresores',
+      meta:[/\bimunossup/,/\binmunosup/,/\bimmunosup/],
+      names:names(['ciclosporina','tacrolimo','sirolimo','everolimo','azatioprina','micofenolato','ciclofosfamida','metotrexato'])},
+    {key:'other',pt:'Outros grupos farmacológicos',es:'Otros grupos farmacológicos',
+      meta:[],names:new Set()}
+  ];
+
+  const importantKeys=new Set([
+    'classe','class','classes','classefarmacologica','pharmacologicalclass',
+    'pharmacologicclass','therapeuticclass','classeterapeutica',
+    'grupo','group','subgroup','subgrupo','categoria','category',
+    'familia','family','tipo','type','tags','tag','mecanismo','mechanism'
+  ]);
+
+  const drugName=(drug,key='') => {
+    if (!drug || typeof drug!=='object') return String(key || '');
+    return String(
+      drug.nome ?? drug.nombre ?? drug.name ?? drug.genericName ??
+      drug.nomeGenerico ?? drug.nombreGenerico ?? drug.id ?? key ?? ''
+    ).trim();
+  };
+
+  const metaText=drug => {
+    if (!drug || typeof drug!=='object') return '';
+    const parts=[];
+    const walk=(obj,depth=0) => {
+      if (!obj || depth>2) return;
+      if (Array.isArray(obj)) {
+        obj.slice(0,20).forEach(item => {
+          if (typeof item==='string' || typeof item==='number') parts.push(String(item));
+          else if (item && typeof item==='object') walk(item,depth+1);
+        });
+        return;
+      }
+      if (typeof obj!=='object') return;
+      Object.entries(obj).forEach(([key,value]) => {
+        const nk=norm(key).replace(/\s+/g,'');
+        if (!importantKeys.has(nk)) return;
+        if (typeof value==='string' || typeof value==='number') parts.push(String(value));
+        else if (value && typeof value==='object') walk(value,depth+1);
+      });
+    };
+    walk(drug);
+    return norm(parts.join(' | '));
+  };
+
+  const collectDrugs=() => {
+    const map=new Map();
+    const sources=[
+      window.DRUG_DB,
+      window.ALL_DRUGS_DB,
+      window.FARMACOS_DB,
+      window.DRUGS_DB
+    ].filter(Boolean);
+
+    for (const source of sources) {
+      if (Array.isArray(source)) {
+        source.forEach(drug => {
+          const name=drugName(drug);
+          const k=norm(name);
+          if (name && k && !map.has(k)) map.set(k,{name,drug});
+        });
+      } else if (source && typeof source==='object') {
+        Object.entries(source).forEach(([key,drug]) => {
+          const value=drug && typeof drug==='object' ? drug : {name:key};
+          const name=drugName(value,key);
+          const k=norm(name);
+          if (name && k && !map.has(k)) map.set(k,{name,drug:value});
+        });
+      }
+    }
+
+    return [...map.values()].sort((a,b) =>
+      a.name.localeCompare(b.name,lang()==='es'?'es':'pt',{sensitivity:'base'})
+    );
+  };
+
+  const classify=entry => {
+    const nameKey=norm(entry.name);
+    const meta=metaText(entry.drug);
+
+    for (const item of catalog) {
+      if (item.key==='other') continue;
+      if (item.names.has(nameKey)) return item.key;
+      if (meta && item.meta.some(rx => rx.test(meta))) return item.key;
+    }
+    return 'other';
+  };
+
+  const grouped=() => {
+    const buckets=new Map(catalog.map(item => [item.key,[]]));
+    collectDrugs().forEach(entry => {
+      const key=classify(entry);
+      (buckets.get(key) || buckets.get('other')).push(entry);
+    });
+
+    return catalog
+      .map(item => ({item,drugs:buckets.get(item.key) || []}))
+      .filter(group => group.drugs.length>0)
+      .sort((a,b) => {
+        if (a.item.key==='other') return 1;
+        if (b.item.key==='other') return -1;
+        const la=lang()==='es' ? a.item.es : a.item.pt;
+        const lb=lang()==='es' ? b.item.es : b.item.pt;
+        return la.localeCompare(lb,lang()==='es'?'es':'pt',{sensitivity:'base'});
+      });
+  };
+
+  const ensurePanel=() => {
+    if (state.panel?.isConnected) return state.panel;
+
+    const found=document.querySelector('#mc-pharm-runtime-panel');
+    if (found) {
+      state.panel=found;
+      return found;
+    }
+
+    const ctx=panelHost();
+    if (!ctx?.host) return null;
+
+    const panel=document.createElement('section');
+    panel.id='mc-pharm-runtime-panel';
+    panel.className='farmacos-v2-panel';
+    panel.dataset.owner=BUILD;
+
+    if (ctx.legacy) ctx.host.insertBefore(panel,ctx.legacy);
+    else ctx.host.appendChild(panel);
+
+    state.panel=panel;
+    return panel;
+  };
+
+  const renderGroups=() => {
+    const panel=ensurePanel();
+    if (!panel) return false;
+
+    const groups=grouped();
+    panel.textContent='';
+
+    if (!groups.length) {
+      const empty=document.createElement('div');
+      empty.className='mc-pharm-empty';
+      empty.textContent=lang()==='es'
+        ? 'No hay grupos farmacológicos disponibles.'
+        : 'Nenhum grupo farmacológico disponível.';
+      panel.appendChild(empty);
+      return false;
+    }
+
+    const list=document.createElement('div');
+    list.className='mc-pharm-list';
+
+    groups.forEach(group => {
+      const section=document.createElement('section');
+      section.className='mc-pharm-class';
+      section.dataset.key=group.item.key;
+
+      const row=document.createElement('button');
+      row.type='button';
+      row.className='mc-pharm-class-row';
+      row.setAttribute('aria-expanded','false');
+
+      const name=document.createElement('span');
+      name.className='mc-pharm-class-name';
+      name.textContent=lang()==='es' ? group.item.es : group.item.pt;
+
+      const count=document.createElement('span');
+      count.className='mc-pharm-class-count';
+      count.textContent=String(group.drugs.length);
+
+      const chev=document.createElement('span');
+      chev.className='mc-pharm-chevron';
+      chev.textContent='›';
+
+      row.append(name,count,chev);
+
+      const drugs=document.createElement('div');
+      drugs.className='mc-pharm-drugs';
+
+      group.drugs.forEach(entry => {
+        const btn=document.createElement('button');
+        btn.type='button';
+        btn.className='mc-pharm-drug-row';
+        btn.dataset.drugName=entry.name;
+
+        const txt=document.createElement('span');
+        txt.className='mc-pharm-drug-name';
+        txt.textContent=entry.name;
+
+        const open=document.createElement('span');
+        open.className='mc-pharm-chevron';
+        open.textContent='›';
+
+        btn.append(txt,open);
+        btn.addEventListener('click',event => {
+          event.stopPropagation();
+          const input=searchInput();
+          const az=tabs().find(isAZ);
+          if (az) az.click();
+
+          if (input) {
+            input.value=entry.name;
+            const fire=() => {
+              input.dispatchEvent(new Event('input',{bubbles:true}));
+              input.dispatchEvent(new Event('change',{bubbles:true}));
+            };
+            queueMicrotask(fire);
+            requestAnimationFrame(() => requestAnimationFrame(fire));
+            setTimeout(fire,80);
+          }
+        });
+
+        drugs.appendChild(btn);
+      });
+
+      row.addEventListener('click',() => {
+        const open=!section.classList.contains('is-open');
+        section.classList.toggle('is-open',open);
+        row.setAttribute('aria-expanded',open?'true':'false');
+      });
+
+      section.append(row,drugs);
+      list.appendChild(section);
+    });
+
+    panel.appendChild(list);
+
+    console.info('['+BUILD+'] GROUPS_RENDERED',{
+      language:lang(),
+      classes:groups.length,
+      drugs:groups.reduce((n,g) => n+g.drugs.length,0),
+      ISRS:groups.find(g => g.item.key==='ssri')?.drugs.length || 0,
+      IMAO:groups.find(g => g.item.key==='maoi')?.drugs.length || 0,
+      betaBlockers:groups.find(g => g.item.key==='beta_blockers')?.drugs.length || 0
+    });
+
+    return true;
+  };
+
+  const restoreLegacy=() => {
+    if (!state.hiddenLegacy) return;
+    state.hiddenLegacy.style.display=state.hiddenLegacyDisplay;
+    state.hiddenLegacy=null;
+    state.hiddenLegacyDisplay='';
+  };
+
+  const deactivateGroups=() => {
+    if (state.panel) state.panel.classList.remove('is-active');
+    restoreLegacy();
+  };
+
+  const activateGroups=() => {
+    const panel=ensurePanel();
+    if (!panel) {
+      console.warn('['+BUILD+'] PANEL_DISCOVERY_FAILED');
+      return false;
+    }
+
+    const legacy=visibleLegacyPanel();
+    if (legacy && legacy!==panel) {
+      restoreLegacy();
+      state.hiddenLegacy=legacy;
+      state.hiddenLegacyDisplay=legacy.style.display || '';
+      legacy.style.display='none';
+    }
+
+    renderGroups();
+    panel.classList.add('is-active');
+
+    console.info('['+BUILD+'] GROUPS_ACTIVE',{
+      legacyHidden:!!state.hiddenLegacy,
+      panelConnected:panel.isConnected
+    });
+    return true;
+  };
+
+  const activeTab=() => tabs().find(tab =>
+    tab.classList.contains('is-active') ||
+    tab.getAttribute('aria-selected')==='true'
+  ) || null;
+
+  const routeSearchToAZ=(input,reason='input') => {
+    if (!isSearchInput(input) || state.routing) return false;
+
+    const query=String(input.value || '').trim();
+    if (!query) return false;
+
+    const current=activeTab();
+    if (current && isAZ(current)) return false;
+
+    const az=tabs().find(isAZ);
+    if (!az) {
+      console.warn('['+BUILD+'] A_Z_TAB_NOT_FOUND',{query,reason});
+      return false;
+    }
+
+    const now=Date.now();
+    if (state.lastRouteQuery===query && now-state.lastRouteAt<70) return false;
+    state.lastRouteQuery=query;
+    state.lastRouteAt=now;
+
+    const hadFocus=document.activeElement===input;
+
+    state.routing=true;
+    try {
+      deactivateGroups();
+      az.click();
+    } finally {
+      state.routing=false;
+    }
+
+    const refire=() => {
+      const live=searchInput() || input;
+      if (!live || !live.isConnected) return;
+
+      if (live.value!==query) live.value=query;
+
+      if (hadFocus && document.activeElement!==live) {
+        try { live.focus({preventScroll:true}); }
+        catch (_) { try { live.focus(); } catch (_) {} }
+      }
+
+      state.routing=true;
+      try {
+        live.dispatchEvent(new Event('input',{bubbles:true}));
+        live.dispatchEvent(new Event('change',{bubbles:true}));
+      } finally {
+        queueMicrotask(() => { state.routing=false; });
+      }
+    };
+
+    queueMicrotask(refire);
+    requestAnimationFrame(() => requestAnimationFrame(refire));
+    setTimeout(refire,60);
+    setTimeout(refire,140);
+
+    console.info('['+BUILD+'] SEARCH_ROUTED',{
+      query,
+      from:current?.textContent?.trim() || 'unknown',
+      to:'A-Z',
+      reason,
+      immediate:true,
+      enterRequired:false
+    });
+
+    return true;
+  };
+
+  document.addEventListener('click',event => {
+    const tab=event.target.closest?.('.farmacos-v2-tab');
+    if (!tab) return;
+
+    if (isAllGroups(tab)) {
+      queueMicrotask(activateGroups);
+      requestAnimationFrame(() => requestAnimationFrame(activateGroups));
+      setTimeout(activateGroups,80);
+    } else {
+      deactivateGroups();
+    }
+  },true);
+
+  document.addEventListener('focusin',event => {
+    const input=event.target;
+    if (!isSearchInput(input)) return;
+    input.setAttribute('enterkeyhint','search');
+  },true);
+
+  document.addEventListener('beforeinput',event => {
+    const input=event.target;
+    if (!isSearchInput(input)) return;
+    setTimeout(() => {
+      if (String(input.value || '').trim()) routeSearchToAZ(input,'beforeinput');
+    },0);
+  },true);
+
+  document.addEventListener('input',event => {
+    const input=event.target;
+    if (!isSearchInput(input)) return;
+    if (String(input.value || '').trim()) {
+      routeSearchToAZ(input,'input');
+    }
+  },true);
+
+  document.addEventListener('compositionend',event => {
+    const input=event.target;
+    if (!isSearchInput(input)) return;
+    if (String(input.value || '').trim()) {
+      routeSearchToAZ(input,'compositionend');
+    }
+  },true);
+
+  document.addEventListener('paste',event => {
+    const input=event.target;
+    if (!isSearchInput(input)) return;
+    setTimeout(() => {
+      if (String(input.value || '').trim()) routeSearchToAZ(input,'paste');
+    },0);
+  },true);
+
+  document.addEventListener('search',event => {
+    const input=event.target;
+    if (!isSearchInput(input)) return;
+    if (String(input.value || '').trim()) {
+      routeSearchToAZ(input,'search-event');
+    }
+  },true);
+
+  document.addEventListener('keydown',event => {
+    const input=event.target;
+    if (!isSearchInput(input)) return;
+    if (event.key==='Enter' && String(input.value || '').trim()) {
+      routeSearchToAZ(input,'enter-fallback');
+    }
+  },true);
+
+  const bootCheck=() => {
+    const active=tabs().find(tab =>
+      tab.classList.contains('is-active') ||
+      tab.getAttribute('aria-selected')==='true'
+    );
+    if (active && isAllGroups(active)) activateGroups();
+  };
+
+  queueMicrotask(bootCheck);
+  requestAnimationFrame(() => requestAnimationFrame(bootCheck));
+  setTimeout(bootCheck,250);
+  setTimeout(bootCheck,800);
+
+  window.__mcFarmacosGlobalSearchInstantInputMobileV1BR0={
+    build:BUILD,
+    activateGroups,
+    deactivateGroups,
+    renderGroups,
+    routeSearchToAZ,
+    grouped
+  };
+
+  console.info('['+BUILD+'] MOUNTED',{
+    strategy:'EVENT_DRIVEN_LIVE_DOM_DISCOVERY',
+    persistentObserver:false,
+    pharmacologicalClasses:true,
+    globalSearchAcrossTabs:true,
+    instantSearchOnInput:true,
+    mobileEnterRequired:false,
+    focusPreservedOnRoute:true
+  });
+})();
+</script>
+<!-- CALC-FARMACOS-GLOBAL-SEARCH-INSTANT-INPUT-MOBILE-V1-B-R0 END -->
+
+
+<!-- CALC-WEBVIEW-LANG-THEME-URL-CONTRACT-V1-B-R0 BEGIN -->
+<script id="medcases-webview-lang-theme-url-contract-v1-b-r0">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-WEBVIEW-LANG-THEME-URL-CONTRACT-V1-B-R0';
+  if (window.__mcWebviewLangThemeUrlContractV1BR0) return;
+
+  const norm=value => String(value ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase()
+    .trim();
+
+  const params=() => {
+    try { return new URLSearchParams(location.search); }
+    catch (_) { return new URLSearchParams(); }
+  };
+
+  const firstParam=names => {
+    const p=params();
+    for (const name of names) {
+      const value=p.get(name);
+      if (value != null && String(value).trim()!=='') return String(value).trim();
+    }
+    return '';
+  };
+
+  const desiredLang=() => {
+    const raw=norm(firstParam(['lang','locale','language']));
+    if (!raw) return '';
+    if (raw==='pt' || raw.startsWith('pt-') || raw.startsWith('pt_')) return 'pt';
+    if (raw==='es' || raw.startsWith('es-') || raw.startsWith('es_')) return 'es';
+    return '';
+  };
+
+  const desiredTheme=() => {
+    const raw=norm(firstParam(['theme','appearance','mode','brightness']));
+    if (!raw) return '';
+    if (['dark','escuro','oscuro','night','1','true'].includes(raw)) return 'dark';
+    if (['light','claro','day','0','false'].includes(raw)) return 'light';
+    return '';
+  };
+
+  const descriptor=el => norm([
+    el?.id,
+    el?.className,
+    el?.getAttribute?.('data-lang'),
+    el?.getAttribute?.('data-language'),
+    el?.getAttribute?.('data-locale'),
+    el?.getAttribute?.('data-theme'),
+    el?.getAttribute?.('data-mode'),
+    el?.getAttribute?.('aria-label'),
+    el?.getAttribute?.('title'),
+    el?.textContent
+  ].filter(Boolean).join(' '));
+
+  const isActiveControl=el =>
+    !!el && (
+      el.classList.contains('active') ||
+      el.classList.contains('is-active') ||
+      el.getAttribute('aria-pressed')==='true' ||
+      el.getAttribute('aria-selected')==='true' ||
+      el.checked===true
+    );
+
+  const languageControl=lang => {
+    const candidates=[...document.querySelectorAll(
+      '[data-lang],[data-language],[data-locale],button,[role="button"]'
+    )];
+    return candidates.find(el => {
+      const d=descriptor(el);
+      if (lang==='pt') return d==='pt' || /\b(pt|portugues|portuguese)\b/.test(d);
+      return d==='es' || /\b(es|espanol|spanish)\b/.test(d);
+    }) || null;
+  };
+
+  const themeControl=theme => {
+    const candidates=[...document.querySelectorAll(
+      '[data-theme],[data-mode],button,[role="button"],input[type="checkbox"]'
+    )];
+    return candidates.find(el => {
+      const d=descriptor(el);
+      if (theme==='dark') return /\b(dark|escuro|oscuro|night)\b/.test(d);
+      return /\b(light|claro|day)\b/.test(d);
+    }) || null;
+  };
+
+  const persistExistingKeys=(kind,value) => {
+    try {
+      const rx=kind==='theme'
+        ? /(theme|appearance|brightness|mode)/i
+        : /(lang|locale|language)/i;
+      const updates=[];
+      for (let i=0;i<localStorage.length;i+=1) {
+        const key=localStorage.key(i);
+        if (key && rx.test(key)) updates.push(key);
+      }
+      updates.forEach(key => {
+        try { localStorage.setItem(key,value); } catch (_) {}
+      });
+      return updates.length;
+    } catch (_) {
+      return 0;
+    }
+  };
+
+  const applyLang=lang => {
+    if (!lang) return {requested:false,applied:false,control:false};
+
+    document.documentElement.setAttribute('lang',lang);
+    document.documentElement.dataset.lang=lang;
+    if (document.body) document.body.dataset.lang=lang;
+
+    persistExistingKeys('lang',lang);
+
+    const control=languageControl(lang);
+    if (control && !isActiveControl(control)) {
+      try { control.click(); } catch (_) {}
+    }
+
+    return {requested:true,applied:true,control:!!control};
+  };
+
+  const applyTheme=theme => {
+    if (!theme) return {requested:false,applied:false,control:false};
+
+    const html=document.documentElement;
+    const body=document.body;
+    html.dataset.theme=theme;
+    html.dataset.appearance=theme;
+    html.style.colorScheme=theme;
+
+    if (body) {
+      body.dataset.theme=theme;
+      body.dataset.appearance=theme;
+      body.style.colorScheme=theme;
+    }
+
+    const dark=theme==='dark';
+    for (const el of [html,body].filter(Boolean)) {
+      el.classList.toggle('dark',dark);
+      el.classList.toggle('dark-mode',dark);
+      el.classList.toggle('theme-dark',dark);
+      el.classList.toggle('light',!dark);
+      el.classList.toggle('light-mode',!dark);
+      el.classList.toggle('theme-light',!dark);
+    }
+
+    persistExistingKeys('theme',theme);
+
+    const control=themeControl(theme);
+    if (control && !isActiveControl(control)) {
+      try { control.click(); } catch (_) {}
+    }
+
+    return {requested:true,applied:true,control:!!control};
+  };
+
+  let applyCount=0;
+
+  const applyContract=(reason='settle') => {
+    const lang=desiredLang();
+    const theme=desiredTheme();
+    const langResult=applyLang(lang);
+    const themeResult=applyTheme(theme);
+    applyCount+=1;
+
+    const detail={
+      reason,
+      applyCount,
+      lang:lang || null,
+      theme:theme || null,
+      langControlFound:langResult.control,
+      themeControlFound:themeResult.control,
+      explicitLang:!!lang,
+      explicitTheme:!!theme
+    };
+
+    console.info('['+BUILD+'] APPLIED',detail);
+
+    try {
+      window.dispatchEvent(new CustomEvent('medcases:webview-contract-applied',{detail}));
+    } catch (_) {}
+
+    return detail;
+  };
+
+  const settle=reason => {
+    const delays=[0,40,100,220,480,900,1500];
+    delays.forEach(delay => setTimeout(() => applyContract(reason+'-'+delay),delay));
+  };
+
+  if (document.readyState==='loading') {
+    document.addEventListener('DOMContentLoaded',() => settle('dom-ready'),{once:true});
+  } else {
+    settle('already-ready');
+  }
+
+  window.addEventListener('pageshow',() => settle('pageshow'));
+  window.addEventListener('popstate',() => settle('popstate'));
+
+  window.__mcWebviewLangThemeUrlContractV1BR0={
+    build:BUILD,
+    applyContract,
+    desiredLang,
+    desiredTheme
+  };
+
+  console.info('['+BUILD+'] MOUNTED',{
+    langKeys:['lang','locale','language'],
+    themeKeys:['theme','appearance','mode','brightness'],
+    persistentObserver:false
+  });
+})();
+</script>
+<!-- CALC-WEBVIEW-LANG-THEME-URL-CONTRACT-V1-B-R0 END -->
 
 </body>
 </html>
