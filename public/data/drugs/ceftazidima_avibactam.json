@@ -337,5 +337,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "ceftazidima_avibactam",
+    "stage_a_batch": "07",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir o frasco com 10 mL de diluente compatível, como Água Estéril para Injeção, SF 0,9%, dextrose 5% ou outra solução compatível descrita na rotulagem. Misturar suavemente até dissolução completa."
+          },
+          {
+            "label": "Diluição obrigatória",
+            "text": "A solução reconstituída não é para injeção direta; retirar o volume correspondente à dose e diluir para volume final apropriado de infusão."
+          },
+          {
+            "label": "Infusão / estabilidade",
+            "text": "Administrar por infusão intravenosa durante 2 horas. Após reconstituição, transferir para a bolsa em até 30 minutos; a solução final diluída possui estabilidade conforme condições de armazenamento da rotulagem."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir el vial con 10 mL de un diluyente compatible, como Agua Estéril para Inyección, SF 0,9%, dextrosa al 5% u otra solución compatible indicada en el rotulado. Mezclar suavemente hasta la disolución completa."
+          },
+          {
+            "label": "Dilución obligatoria",
+            "text": "La solución reconstituida no es para inyección directa; retirar el volumen correspondiente a la dosis y diluir hasta un volumen final apropiado para infusión."
+          },
+          {
+            "label": "Infusión / estabilidad",
+            "text": "Administrar mediante infusión intravenosa durante 2 horas. Después de reconstituir, transferir a la bolsa dentro de 30 minutos; la solución final diluida posee estabilidad según las condiciones de almacenamiento del rotulado."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — AVYCAZ (ceftazidime and avibactam)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-04-25."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — AVYCAZ (ceftazidime and avibactam)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2025-04-25."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH07",
+        "id": "dailymed_avycaz_d9c2803f",
+        "title": "DailyMed — AVYCAZ (ceftazidime and avibactam)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d9c2803f-dc9c-4b19-b4a3-8303bc8c15fd",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-04-25"
+      }
+    ]
+  }
 }

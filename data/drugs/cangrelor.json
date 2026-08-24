@@ -171,5 +171,68 @@
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "cangrelor",
+    "stage_a_batch": "07",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir cada frasco de 50 mg com 5 mL de Água Estéril para Injeção; girar suavemente até dissolução completa e evitar agitação vigorosa."
+          },
+          {
+            "label": "Diluição",
+            "text": "Após reconstituição, diluir imediatamente em SF 0,9% ou dextrose 5%. Transferir o conteúdo reconstituído para bolsa de 250 mL, obtendo 200 mcg/mL."
+          },
+          {
+            "label": "Administração",
+            "text": "Usar linha IV dedicada. Administrar o bólus rapidamente em menos de 1 minuto a partir da solução diluída e iniciar a infusão imediatamente após o bólus."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir cada vial de 50 mg con 5 mL de Agua Estéril para Inyección; girar suavemente hasta la disolución completa y evitar agitación vigorosa."
+          },
+          {
+            "label": "Dilución",
+            "text": "Después de reconstituir, diluir inmediatamente en SF 0,9% o dextrosa al 5%. Transferir el contenido reconstituido a una bolsa de 250 mL, obteniendo 200 mcg/mL."
+          },
+          {
+            "label": "Administración",
+            "text": "Usar una línea IV dedicada. Administrar el bolo rápidamente en menos de 1 minuto desde la solución diluida e iniciar la infusión inmediatamente después del bolo."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — KENGREAL (cangrelor)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-05-21."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — KENGREAL (cangrelor)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2025-05-21."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH07",
+        "id": "dailymed_kengreal_88b434fa",
+        "title": "DailyMed — KENGREAL (cangrelor)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=88b434fa-8891-4fd5-9d86-7ea64667c08f",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-05-21"
+      }
+    ]
+  }
 }

@@ -718,5 +718,68 @@
         "sourceModule": "analgesicos.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "esmolol",
+    "stage_a_batch": "07",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via IV",
+            "text": "Administrar por via intravenosa, geralmente como infusão contínua, com ou sem dose de ataque conforme o cenário clínico e a apresentação."
+          },
+          {
+            "label": "Titulação",
+            "text": "Quando usado em infusão contínua, titular em etapas conforme resposta de frequência cardíaca e pressão arterial; a formulação pronta em solução salina não requer reconstituição."
+          },
+          {
+            "label": "Monitorização",
+            "text": "Realizar monitorização hemodinâmica durante a administração e ajustar ou interromper a infusão se ocorrer bradicardia ou hipotensão clinicamente relevante."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía IV",
+            "text": "Administrar por vía intravenosa, generalmente como infusión continua, con o sin dosis de carga según el escenario clínico y la presentación."
+          },
+          {
+            "label": "Titulación",
+            "text": "Cuando se utiliza en infusión continua, titular en etapas según la respuesta de frecuencia cardíaca y presión arterial; la formulación lista en solución salina no requiere reconstitución."
+          },
+          {
+            "label": "Monitorización",
+            "text": "Realizar monitorización hemodinámica durante la administración y ajustar o suspender la infusión si aparece bradicardia o hipotensión clínicamente relevante."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Esmolol Hydrochloride Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-06-10."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Esmolol Hydrochloride Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2025-06-10."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH07",
+        "id": "dailymed_esmolol_9c1e3a64",
+        "title": "DailyMed — Esmolol Hydrochloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c1e3a64-0ef0-4071-ad6f-63ff8789b198",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-06-10"
+      }
+    ]
+  }
 }

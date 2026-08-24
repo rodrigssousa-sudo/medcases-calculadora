@@ -754,5 +754,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "labetalol",
+    "stage_a_batch": "07",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Infusão IV",
+            "text": "As apresentações prontas em cloreto de sódio ou dextrose podem ser administradas por infusão intravenosa contínua lenta conforme a velocidade prescrita."
+          },
+          {
+            "label": "Bólus IV",
+            "text": "A apresentação em seringa pré-cheia ou frasco pode ser administrada por injeção intravenosa lenta; a rotulagem descreve administração inicial ao longo de 2 minutos, com doses adicionais em intervalos definidos quando necessárias."
+          },
+          {
+            "label": "Monitorização",
+            "text": "Monitorar pressão arterial e frequência cardíaca durante a administração intravenosa, com atenção para hipotensão e bradicardia."
+          }
+        ],
+        "es": [
+          {
+            "label": "Infusión IV",
+            "text": "Las presentaciones listas en cloruro de sodio o dextrosa pueden administrarse mediante infusión intravenosa continua lenta según la velocidad prescrita."
+          },
+          {
+            "label": "Bolo IV",
+            "text": "La presentación en jeringa precargada o vial puede administrarse mediante inyección intravenosa lenta; el rotulado describe una administración inicial durante 2 minutos, con dosis adicionales a intervalos definidos cuando sean necesarias."
+          },
+          {
+            "label": "Monitorización",
+            "text": "Monitorizar presión arterial y frecuencia cardíaca durante la administración intravenosa, con atención a hipotensión y bradicardia."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Labetalol Hydrochloride Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-12-19."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Labetalol Hydrochloride Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2025-12-19."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH07",
+        "id": "dailymed_labetalol_99a715a0",
+        "title": "DailyMed — Labetalol Hydrochloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=99a715a0-4579-410c-b102-7ef6fab8db55",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-12-19"
+      }
+    ]
+  }
 }

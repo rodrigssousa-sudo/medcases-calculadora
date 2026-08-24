@@ -236,5 +236,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "angiotensinaii",
+    "stage_a_batch": "07",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Diluição obrigatória",
+            "text": "Diluir em SF 0,9% antes do uso para obter concentração final de 5.000 ng/mL ou 10.000 ng/mL. Inspecionar partículas e alteração de cor antes da administração."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Administrar exclusivamente por infusão intravenosa contínua; acesso venoso central é recomendado."
+          },
+          {
+            "label": "Estabilidade",
+            "text": "A solução diluída pode permanecer em temperatura ambiente ou refrigerada entre 2–8 °C e deve ser descartada após 24 horas."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dilución obligatoria",
+            "text": "Diluir en SF 0,9% antes del uso para obtener una concentración final de 5.000 ng/mL o 10.000 ng/mL. Inspeccionar partículas y cambios de color antes de administrar."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "Administrar exclusivamente mediante infusión intravenosa continua; se recomienda acceso venoso central."
+          },
+          {
+            "label": "Estabilidad",
+            "text": "La solución diluida puede mantenerse a temperatura ambiente o refrigerada entre 2–8 °C y debe desecharse después de 24 horas."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — GIAPREZA (angiotensin II injection)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — GIAPREZA (angiotensin II injection)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH07",
+        "id": "dailymed_giapreza_c265d69a",
+        "title": "DailyMed — GIAPREZA (angiotensin II injection)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c265d69a-3efe-4107-9a9e-e6fd3d531c48",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

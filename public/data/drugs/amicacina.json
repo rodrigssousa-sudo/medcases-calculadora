@@ -377,5 +377,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "amicacina",
+    "stage_a_batch": "07",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "IV — diluição",
+            "text": "Para uso intravenoso, diluir o conteúdo de 500 mg em 100–200 mL de SF 0,9%, dextrose 5% ou outro diluente compatível indicado na rotulagem."
+          },
+          {
+            "label": "IV — tempo de infusão",
+            "text": "Em adultos, infundir durante 30–60 minutos. Em pediatria, usar volume suficiente para infundir em 30–60 minutos; em lactentes, a rotulagem descreve infusão de 1–2 horas."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "Não pré-misturar fisicamente amicacina com outros medicamentos; administrar separadamente conforme dose e via recomendadas."
+          }
+        ],
+        "es": [
+          {
+            "label": "IV — dilución",
+            "text": "Para uso intravenoso, diluir 500 mg en 100–200 mL de SF 0,9%, dextrosa al 5% u otro diluyente compatible indicado en el rotulado."
+          },
+          {
+            "label": "IV — tiempo de infusión",
+            "text": "En adultos, infundir durante 30–60 minutos. En pediatría, usar un volumen suficiente para infundir en 30–60 minutos; en lactantes, el rotulado describe una infusión de 1–2 horas."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "No premezclar físicamente amikacina con otros medicamentos; administrar por separado según la dosis y vía recomendadas."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Amikacin Sulfate Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-12-31."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Amikacin Sulfate Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2025-12-31."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH07",
+        "id": "dailymed_amikacin_20fa61ef",
+        "title": "DailyMed — Amikacin Sulfate Injection",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20fa61ef-11e2-4d01-82ea-b5412cefaead",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-12-31"
+      }
+    ]
+  }
 }

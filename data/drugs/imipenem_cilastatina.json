@@ -377,5 +377,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "imipenem_cilastatina",
+    "stage_a_batch": "07",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via IV",
+            "text": "A apresentação consultada é destinada exclusivamente à administração intravenosa após reconstituição/diluição conforme a rotulagem."
+          },
+          {
+            "label": "Tempo de infusão",
+            "text": "Administrar 500 mg por infusão intravenosa durante 20–30 minutos e 1.000 mg durante 40–60 minutos. Se ocorrer náusea durante a infusão, a velocidade pode ser reduzida."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "Preparar somente com diluentes compatíveis descritos na apresentação e não misturar com outros antimicrobianos na mesma solução sem compatibilidade estabelecida."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía IV",
+            "text": "La presentación consultada está destinada exclusivamente a administración intravenosa después de reconstitución/dilución según el rotulado."
+          },
+          {
+            "label": "Tiempo de infusión",
+            "text": "Administrar 500 mg mediante infusión intravenosa durante 20–30 minutos y 1.000 mg durante 40–60 minutos. Si aparece náusea durante la infusión, puede reducirse la velocidad."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "Preparar solo con diluyentes compatibles descritos en la presentación y no mezclar con otros antimicrobianos en la misma solución sin compatibilidad establecida."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Imipenem and Cilastatin for Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Imipenem and Cilastatin for Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH07",
+        "id": "dailymed_imipenem_cilastatin_46f54df9",
+        "title": "DailyMed — Imipenem and Cilastatin for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=46f54df9-5afe-430c-aa19-0d84c2044b0b",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

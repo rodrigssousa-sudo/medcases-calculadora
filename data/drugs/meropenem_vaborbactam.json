@@ -274,5 +274,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "meropenem_vaborbactam",
+    "stage_a_batch": "07",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir cada frasco com 20 mL de SF 0,9% retirados da bolsa de infusão; misturar suavemente até dissolução completa."
+          },
+          {
+            "label": "Diluição obrigatória",
+            "text": "Após reconstituição, retirar o volume correspondente à dose e realizar diluição adicional em bolsa de SF 0,9% conforme a apresentação. Utilizar técnica asséptica."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Administrar a dose final por infusão intravenosa durante 3 horas."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir cada vial con 20 mL de SF 0,9% retirados de la bolsa de infusión; mezclar suavemente hasta la disolución completa."
+          },
+          {
+            "label": "Dilución obligatoria",
+            "text": "Después de reconstituir, retirar el volumen correspondiente a la dosis y realizar una dilución adicional en una bolsa de SF 0,9% según la presentación. Utilizar técnica aséptica."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "Administrar la dosis final mediante infusión intravenosa durante 3 horas."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — VABOMERE (meropenem and vaborbactam)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-02-27."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — VABOMERE (meropenem and vaborbactam)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-02-27."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH07",
+        "id": "dailymed_vabomere_e237fd0f",
+        "title": "DailyMed — VABOMERE (meropenem and vaborbactam)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e237fd0f-3050-42a3-b43e-b6fb4824e93d",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-02-27"
+      }
+    ]
+  }
 }

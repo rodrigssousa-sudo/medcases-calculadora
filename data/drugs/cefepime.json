@@ -346,5 +346,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "cefepime",
+    "stage_a_batch": "07",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "IV — reconstituição",
+            "text": "Reconstituir o frasco com diluente compatível, como Água Estéril para Injeção, SF 0,9% ou dextrose 5%, conforme a apresentação e o volume indicado na rotulagem."
+          },
+          {
+            "label": "IV — diluição e infusão",
+            "text": "Após reconstituição, diluir em solução de infusão compatível e administrar a infusão intravenosa em aproximadamente 30 minutos."
+          },
+          {
+            "label": "Inspeção / linha Y",
+            "text": "Descartar se houver partículas visíveis. Em infusão intermitente por sistema em Y, é desejável interromper a outra solução durante a infusão de cefepime."
+          }
+        ],
+        "es": [
+          {
+            "label": "IV — reconstitución",
+            "text": "Reconstituir el vial con un diluyente compatible, como Agua Estéril para Inyección, SF 0,9% o dextrosa al 5%, según la presentación y el volumen indicado en el rotulado."
+          },
+          {
+            "label": "IV — dilución e infusión",
+            "text": "Después de reconstituir, diluir en una solución de infusión compatible y administrar la infusión intravenosa en aproximadamente 30 minutos."
+          },
+          {
+            "label": "Inspección / línea Y",
+            "text": "Desechar si hay partículas visibles. En infusión intermitente mediante sistema en Y, es conveniente interrumpir la otra solución durante la infusión de cefepime."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Cefepime for Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-06-24."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Cefepime for Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-06-24."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH07",
+        "id": "dailymed_cefepime_5fd857e5",
+        "title": "DailyMed — Cefepime for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5fd857e5-591f-44ca-80cf-fd903660b03c&version=17",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-06-24"
+      }
+    ]
+  }
 }
