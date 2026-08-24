@@ -17696,7 +17696,24 @@ function _fdResolveHeroPatient(drug, pd, lang) {
       }
     }
 
-    /* ─ Fallback seguro pediátrico: mostra msg genérica (NUNCA dose adulta) ─ */
+    /* CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R4-HERO-SOURCE-TRUTH-AND-CLEAR-OWNER-EXCLUSION
+       P4.5 — SOURCE TRUTH:
+       if a pediatric doseKg field exists but is descriptive/non-numeric,
+       expose that exact pediatric source text instead of collapsing it into
+       the generic "Ver posologia pediátrica" fallback. No number is invented. */
+    if (!heroDose) {
+      const doseKgAdvisory = rich?.doseKg;
+      if (doseKgAdvisory && typeof doseKgAdvisory === 'object') {
+        const advisoryKey = Object.keys(doseKgAdvisory).find(k => /pediatr/i.test(k));
+        const advisoryText = advisoryKey ? String(doseKgAdvisory[advisoryKey] || '').trim() : '';
+        if (advisoryText && advisoryText !== '—') {
+          heroDose = advisoryText;
+          _heroKey = advisoryKey;
+        }
+      }
+    }
+
+    /* Fallback seguro pediátrico final: NUNCA cai em dose adulta. */
     if (!heroDose) {
       heroDose = isES ? 'Ver posología pediátrica' : 'Ver posologia pediátrica';
     }
@@ -17707,11 +17724,20 @@ function _fdResolveHeroPatient(drug, pd, lang) {
       if (fmatch) heroFreq = fmatch[0];
     }
 
-    /* ─ Extrai heroVia da string heroDose se ainda vazio ─ */
+    /* CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R4-HERO-SOURCE-TRUTH-AND-CLEAR-OWNER-EXCLUSION
+       Route truth: explicit route wins. The legacy VO/EV placeholder is kept
+       only for strings that actually contain a numeric medication dose.
+       Pure guidance/fallback text must not manufacture a route. */
     if (!heroVia && heroDose) {
-      const vmatch = String(heroDose).match(/\b(VO|EV|IV|IM|SC)\b/i);
-      if (vmatch) heroVia = vmatch[0].toUpperCase();
-      else heroVia = 'VO/EV';
+      const heroDoseText = String(heroDose);
+      const vmatch = heroDoseText.match(/\b(VO|EV|IV|IM|SC)\b/i);
+      if (vmatch) {
+        heroVia = vmatch[0].toUpperCase();
+      } else if (/\d+(?:[.,]\d+)?\s*(?:mcg|mg|g|ui|u|meq|ml)\b/i.test(heroDoseText)) {
+        heroVia = 'VO/EV';
+      } else {
+        heroVia = '';
+      }
     }
 
     /* ─ Aplica ajuste APENAS do intervalo renal sobre dose pediátrica ─
@@ -22308,6 +22334,83 @@ function _adaptExternalDB(dbObj, categoryLabel) {
         /* BUILD 476-PERF: console.warn por item removido — silêncio em produção */
         return { dose: '—', freq: '—', via: '—', adj: '', note: '' };
       }
+
+      /* CALC-FARMACOS-NATIVE-ADAPTER-DEEP-LOCALE-RESULT-RESOLUTION-V1-B-R0 START */
+      /*
+       * Resolve only localized {pt,es} objects inside the DERIVED adapter result.
+       * Source entry/database objects are never mutated.
+       * Ordinary non-localized objects preserve identity.
+       * No silent cross-language fallback.
+       */
+      function _mcResolveAdapterLocaleResultTree(value, stats) {
+        if (Array.isArray(value)) {
+          let changed = false;
+          const next = value.map(function(item) {
+            const resolved = _mcResolveAdapterLocaleResultTree(item, stats);
+            if (resolved !== item) changed = true;
+            return resolved;
+          });
+          return changed ? next : value;
+        }
+
+        if (!value || typeof value !== 'object') return value;
+
+        const hasPt = Object.prototype.hasOwnProperty.call(value, 'pt');
+        const hasEs = Object.prototype.hasOwnProperty.call(value, 'es');
+
+        if (hasPt && hasEs) {
+          const selected = lang === 'es' ? value.es : value.pt;
+          if (selected === undefined || selected === null || selected === '') {
+            stats.failClosed++;
+            return value;
+          }
+          stats.localizedObjects++;
+          return _mcResolveAdapterLocaleResultTree(selected, stats);
+        }
+
+        let changed = false;
+        const out = {};
+        for (const [k, v] of Object.entries(value)) {
+          const resolved = _mcResolveAdapterLocaleResultTree(v, stats);
+          out[k] = resolved;
+          if (resolved !== v) changed = true;
+        }
+        return changed ? out : value;
+      }
+
+      if (result && typeof result === 'object') {
+        const _mcLocaleStats = { localizedObjects: 0, failClosed: 0 };
+        const _mcLocalizedResult = _mcResolveAdapterLocaleResultTree(result, _mcLocaleStats);
+
+        if (_mcLocalizedResult !== result) {
+          result = _mcLocalizedResult;
+
+          const _telemetry = window.__MC_FARMACOS_ADAPTER_LOCALE_RESULT_V1 || {
+            resolvedRecords: 0,
+            localizedObjects: 0,
+            failClosed: 0,
+            lastId: ''
+          };
+          _telemetry.resolvedRecords += 1;
+          _telemetry.localizedObjects += _mcLocaleStats.localizedObjects;
+          _telemetry.failClosed += _mcLocaleStats.failClosed;
+          _telemetry.lastId = String(key || '');
+          window.__MC_FARMACOS_ADAPTER_LOCALE_RESULT_V1 = _telemetry;
+
+          if (/^lamotrigina$/i.test(String(key || ''))) {
+            console.info(
+              '[CALC-FARMACOS-NATIVE-ADAPTER-DEEP-LOCALE-RESULT-RESOLUTION-V1-B-R0] LAMOTRIGINA_RESOLVED',
+              {
+                lang: lang,
+                id: String(key || ''),
+                localizedObjects: _mcLocaleStats.localizedObjects,
+                failClosed: _mcLocaleStats.failClosed
+              }
+            );
+          }
+        }
+      }
+      /* CALC-FARMACOS-NATIVE-ADAPTER-DEEP-LOCALE-RESULT-RESOLUTION-V1-B-R0 END */
 
       /* ── Extrai dose principal do objeto resultado ── */
       let doseStr = '';
@@ -40165,9 +40268,14 @@ body.light-mode.calc-overlay-open #fd-modal.open .mc-r10-input{
     if(!validWeight(draft.weight) || !validAge(draft.age)) return false;
 
     var old=window.patientData || {};
+    /* CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R3-PATIENT-CONTEXT-COMMIT-BRIDGE: keep canonical + PT aliases synchronized atomically. */
+    var committedWeight=Number(draft.weight);
+    var committedAge=Number(draft.age);
     window.patientData=Object.assign({},old,{
-      weight:Number(draft.weight),
-      age:Number(draft.age),
+      weight:committedWeight,
+      age:committedAge,
+      peso:committedWeight,
+      idade:committedAge,
       _mcQuickPatient:true,
       _mcQuickPatientSavedAt:Date.now()
     });
@@ -40410,7 +40518,11 @@ body.light-mode.calc-overlay-open #fd-modal.open .mc-r10-input{
     raf=requestAnimationFrame(collapseUpdate);
   }
 
-  /* Intercepta o botão inferior sem paciente: foca o Peso inline. */
+  /* CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R3-PATIENT-CONTEXT-COMMIT-BRIDGE
+     QUICK_CONTEXT_SYNC_COMMIT:
+     Calculate is a commit boundary. The visible R10 fields must be flushed
+     synchronously before downstream dose handlers read window.patientData.
+     This closes the 280 ms debounce race without touching the dose engine. */
   document.addEventListener('click',function(ev){
     var btn=ev.target && ev.target.closest ? ev.target.closest('button') : null;
     if(!btn) return;
@@ -40420,18 +40532,62 @@ body.light-mode.calc-overlay-open #fd-modal.open .mc-r10-input{
     var txt=(btn.textContent||'').replace(/\s+/g,' ').trim().toLowerCase();
     if(txt.indexOf('calcular dose')<0 && txt.indexOf('calcular dosis')<0) return;
 
+    var w=document.getElementById('mc-r10-weight');
+    var a=document.getElementById('mc-r10-age');
+
+    if(w) draft.weight=w.value;
+    if(a) draft.age=a.value;
+
+    var hasVisibleEditor=!!(w || a);
+
+    if(hasVisibleEditor && validWeight(draft.weight) && validAge(draft.age)){
+      if(timer){
+        clearTimeout(timer);
+        timer=0;
+      }
+
+      var committed=commit();
+
+      console.info('[CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R3-PATIENT-CONTEXT-COMMIT-BRIDGE] QUICK_CONTEXT_SYNC_COMMIT',{
+        committed:committed,
+        weight:Number(draft.weight),
+        age:Number(draft.age),
+        drugId:currentDrugId()
+      });
+
+      /* Do NOT prevent the calculate click. window.patientData is already
+         committed synchronously, so the canonical calculation continues. */
+      return;
+    }
+
+    if(hasVisibleEditor){
+      ev.preventDefault();
+      ev.stopImmediatePropagation();
+      manualExpanded=true;
+
+      var target=!validWeight(draft.weight) ? w : a;
+      var slot=(target && target.closest) ? target.closest('.mc-r10-qp') : null;
+
+      if(slot) slot.classList.remove('is-collapsed');
+
+      if(target){
+        target.focus();
+        try{target.select();}catch(_){}
+      }
+
+      console.info('[CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R3-PATIENT-CONTEXT-COMMIT-BRIDGE] QUICK_CONTEXT_BLOCKED_INCOMPLETE',{
+        weightValid:validWeight(draft.weight),
+        ageValid:validAge(draft.age),
+        drugId:currentDrugId()
+      });
+      return;
+    }
+
+    /* Existing real/committed patient context is untouched. */
     var pd=window.patientData || {};
     if(!hasAnyPatient(pd)){
-      var w=document.getElementById('mc-r10-weight');
-      if(w){
-        ev.preventDefault();
-        ev.stopImmediatePropagation();
-        manualExpanded=true;
-        var slot=w.closest('.mc-r10-qp');
-        if(slot) slot.classList.remove('is-collapsed');
-        w.focus();
-        try{w.select();}catch(_){}
-      }
+      ev.preventDefault();
+      ev.stopImmediatePropagation();
     }
   },true);
 
@@ -50500,6 +50656,11 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
   ].filter((el,index,arr) => arr.indexOf(el)===index && isCalculatorSurface(el));
 
   const moduleRoots=() => {
+    /* CALC-FARMACOS-CANONICAL-OWNER-CONSOLIDATION-V1-B-R0-R1-TRUTH-GATE-FIX
+       Canonical rule: while a drug detail is open, NO generic calculator
+       surface is eligible to receive a Limpar button. This blocks injection
+       at the source instead of relying on cleanup after the fact. */
+    if (activeFarmacosDetail()) return [];
     const all=candidateSurfaces();
     return all.filter(root =>
       !all.some(other => other!==root && root.contains(other) && isCalculatorSurface(other))
@@ -50660,8 +50821,28 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
     return true;
   };
 
+  /* CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R4-HERO-SOURCE-TRUTH-AND-CLEAR-OWNER-EXCLUSION
+     Farmacos detail is NOT a resettable calculator surface.
+     The global clear owner must not classify #fd-modal itself or any
+     ancestor/descendant shell that owns the currently-open drug detail. */
+  const activeFarmacosDetail=() => {
+    const fd=document.getElementById('fd-modal');
+    return fd && fd.classList.contains('open') ? fd : null;
+  };
+
+  const belongsToFarmacosDetailSurface=root => {
+    const fd=activeFarmacosDetail();
+    if (!fd || !root) return false;
+    if (root===fd) return true;
+    try {
+      if (root.contains && root.contains(fd)) return true;
+      if (fd.contains && fd.contains(root)) return true;
+    } catch (_) {}
+    return false;
+  };
+
   const ensureClearButton=root => {
-    if (!root || !isCalculatorSurface(root)) return false;
+    if (!root || belongsToFarmacosDetailSurface(root) || !isCalculatorSurface(root)) return false;
 
     if (bindNativeClear(root)) return true;
 
@@ -50716,6 +50897,32 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
     });
   };
 
+  /* CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R4-HERO-SOURCE-TRUTH-AND-CLEAR-OWNER-EXCLUSION
+     Lifecycle cleanup for a clear that may have been injected by an earlier
+     settle tick immediately before the drug detail became the active surface. */
+  const removeFarmacosDetailClearButtons=() => {
+    const fd=activeFarmacosDetail();
+    if (!fd) return;
+
+    document.querySelectorAll('.mc-module-clear-action[data-owner]').forEach(button => {
+      let belongs=false;
+      try {
+        if (fd.contains(button)) belongs=true;
+        const shell=button.closest(
+          '#fd-modal,#fd-modal-overlay,#calculator-overlay,.calculator-overlay,.module-overlay'
+        );
+        if (shell && (shell===fd || shell.contains(fd))) belongs=true;
+      } catch (_) {}
+
+      if (belongs) {
+        button.remove();
+        console.info('[CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R4-HERO-SOURCE-TRUTH-AND-CLEAR-OWNER-EXCLUSION] FARMACOS_DETAIL_CLEAR_SUPPRESSED',{
+          drugId:window._fdActiveDrugId || fd.dataset.currentDrugId || null
+        });
+      }
+    });
+  };
+
   const settle=reason => {
     settleTimers.forEach(clearTimeout);
     settleTimers=[];
@@ -50723,6 +50930,7 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
     [0,40,100,220,480,900].forEach(delay => {
       settleTimers.push(setTimeout(() => {
         removeLeakedHomeClearButtons();
+        removeFarmacosDetailClearButtons();
         const roots=moduleRoots();
         roots.forEach(ensureClearButton);
 
@@ -51772,6 +51980,2208 @@ body.calc-overlay-open #fd-modal.open #fd-body.mc-posology-nodata-state
 <!-- CALC-SCORES-EXPANDED-HOME-CARD-EXACT-PARITY-V1-B-R1 END -->
 <!-- CALC-SCORES-EXPANDED-HOME-COLOR-TYPOGRAPHY-PARITY-V1-B-R0 END -->
 
+
+
+<!-- CALC-SCORES-INTERNAL-10-CANONICAL-UI-CONVERGENCE-V1-B-R0 BEGIN -->
+<style id="medcases-scores-internal-10-canonical-ui-v1-b-r0">
+:root {
+  --mc-score-page-dark: #1A1D23;
+  --mc-score-card-dark: #252930;
+  --mc-score-divider-dark: #374151;
+  --mc-score-text-primary-dark: #F3F4F6;
+  --mc-score-text-secondary-dark: #B8C0CC;
+  --mc-score-page-light: #ECF1F3;
+  --mc-score-card-light: #FFFFFF;
+  --mc-score-divider-light: #E2E7EC;
+  --mc-score-text-primary-light: #111318;
+  --mc-score-text-secondary-light: #64748B;
+}
+
+.mc-score-internal-canonical-v1 {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 10px 16px 24px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: var(--mc-score-page-dark) !important;
+  color: var(--mc-score-text-primary-dark) !important;
+}
+
+.mc-score-internal-canonical-v1,
+.mc-score-internal-canonical-v1 * {
+  box-sizing: border-box;
+}
+
+.mc-score-internal-canonical-v1 h1,
+.mc-score-internal-canonical-v1 h2,
+.mc-score-internal-canonical-v1 h3,
+.mc-score-internal-canonical-v1 h4,
+.mc-score-internal-canonical-v1 h5,
+.mc-score-internal-canonical-v1 h6 {
+  margin: 0 0 6px !important;
+  color: var(--mc-score-text-primary-dark) !important;
+  font-size: 13px !important;
+  line-height: 1.22 !important;
+  font-weight: 700 !important;
+}
+
+.mc-score-internal-canonical-v1 label,
+.mc-score-internal-canonical-v1 legend,
+.mc-score-internal-canonical-v1 .mc-score-canonical-label-v1 {
+  color: var(--mc-score-text-primary-dark) !important;
+  font-size: 12.5px !important;
+  line-height: 1.25 !important;
+  font-weight: 600 !important;
+}
+
+.mc-score-internal-canonical-v1 p,
+.mc-score-internal-canonical-v1 small,
+.mc-score-internal-canonical-v1 .hint,
+.mc-score-internal-canonical-v1 .help,
+.mc-score-internal-canonical-v1 .description,
+.mc-score-internal-canonical-v1 .subtitle {
+  color: var(--mc-score-text-secondary-dark) !important;
+  font-size: 11.5px !important;
+  line-height: 1.32 !important;
+  font-weight: 400 !important;
+}
+
+.mc-score-internal-canonical-v1 input:not([type="checkbox"]):not([type="radio"]),
+.mc-score-internal-canonical-v1 select,
+.mc-score-internal-canonical-v1 textarea {
+  width: 100% !important;
+  min-height: 40px !important;
+  height: 40px;
+  padding: 0 10px !important;
+  border: 0.7px solid var(--mc-score-divider-dark) !important;
+  border-radius: 8px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: var(--mc-score-card-dark) !important;
+  color: var(--mc-score-text-primary-dark) !important;
+  font-size: 12.5px !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+}
+
+.mc-score-internal-canonical-v1 textarea {
+  height: auto !important;
+  min-height: 72px !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+}
+
+.mc-score-internal-canonical-v1 input[type="checkbox"],
+.mc-score-internal-canonical-v1 input[type="radio"] {
+  width: 17px !important;
+  height: 17px !important;
+  min-width: 17px !important;
+  min-height: 17px !important;
+  margin: 0 8px 0 0 !important;
+}
+
+.mc-score-internal-canonical-v1 button:not(.mc-score-canonical-close-v1):not(.mc-score-canonical-back-v1),
+.mc-score-internal-canonical-v1 [role="button"]:not(.mc-score-canonical-close-v1):not(.mc-score-canonical-back-v1) {
+  min-height: 38px !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  font-size: 12.5px !important;
+  line-height: 1.15 !important;
+  font-weight: 650 !important;
+}
+
+.mc-score-internal-canonical-v1 .mc-score-canonical-field-v1 {
+  margin: 0 0 8px !important;
+}
+
+.mc-score-internal-canonical-v1 .mc-score-canonical-choice-v1 {
+  min-height: 38px !important;
+  margin: 0 0 3px !important;
+  padding: 8px 10px !important;
+  border: 0.7px solid var(--mc-score-divider-dark) !important;
+  border-radius: 8px !important;
+  background: var(--mc-score-card-dark) !important;
+  color: var(--mc-score-text-primary-dark) !important;
+}
+
+.mc-score-internal-canonical-v1 .mc-score-canonical-result-v1 {
+  margin: 10px 0 0 !important;
+  padding: 10px 12px !important;
+  border: 0.7px solid var(--mc-score-divider-dark) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  background: var(--mc-score-card-dark) !important;
+  color: var(--mc-score-text-primary-dark) !important;
+}
+
+.mc-score-canonical-topbar-v1 {
+  min-height: 48px !important;
+  height: 48px !important;
+  padding: 0 8px !important;
+  border-bottom: 0.7px solid var(--mc-score-divider-dark) !important;
+  box-shadow: none !important;
+  background: rgba(26,29,35,.94) !important;
+}
+
+.mc-score-canonical-topbar-v1 .mc-score-canonical-topbar-title-v1 {
+  font-size: 16px !important;
+  line-height: 48px !important;
+  font-weight: 700 !important;
+}
+
+.mc-score-canonical-close-v1,
+.mc-score-canonical-back-v1 {
+  width: 36px !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1,
+body:not(.dark) .mc-score-internal-canonical-v1.mc-score-light-v1 {
+  background: var(--mc-score-page-light) !important;
+  color: var(--mc-score-text-primary-light) !important;
+}
+
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 label,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 legend,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 h1,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 h2,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 h3,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 h4,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 h5,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 h6 {
+  color: var(--mc-score-text-primary-light) !important;
+}
+
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 p,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 small {
+  color: var(--mc-score-text-secondary-light) !important;
+}
+
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 input:not([type="checkbox"]):not([type="radio"]),
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 select,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 textarea,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 .mc-score-canonical-choice-v1,
+html:not([data-theme="dark"]) .mc-score-internal-canonical-v1 .mc-score-canonical-result-v1 {
+  background: var(--mc-score-card-light) !important;
+  color: var(--mc-score-text-primary-light) !important;
+  border-color: var(--mc-score-divider-light) !important;
+}
+
+@media (max-width: 520px) {
+  .mc-score-internal-canonical-v1 {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+</style>
+
+<script id="medcases-scores-internal-10-canonical-ui-v1-b-r0-runtime">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-SCORES-INTERNAL-10-CANONICAL-UI-CONVERGENCE-V1-B-R0';
+  const NAMES=['SOFA','Glasgow','Wells TVP','Wells TEP','CURB-65','CHA2DS2-VASc','HAS-BLED','Child-Pugh','TIMI','NEWS2'];
+  const owned=new Set();
+
+  const visible=el => {
+    if (!(el instanceof Element)) return false;
+    const cs=getComputedStyle(el);
+    if (cs.display==='none' || cs.visibility==='hidden' || Number(cs.opacity)===0) return false;
+    const r=el.getBoundingClientRect();
+    return r.width>1 && r.height>1;
+  };
+
+  const text=el => String(el && el.textContent || '').replace(/\s+/g,' ').trim();
+
+  const norm=s => String(s||'')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[₂]/g,'2').replace(/[₃]/g,'3')
+    .replace(/[^a-zA-Z0-9]+/g,'')
+    .toLowerCase();
+
+  const scoreFromText=t => {
+    const n=norm(t);
+    if (!n) return null;
+    if (n.includes('sofa')) return 'SOFA';
+    if (n.includes('glasgow')) return 'Glasgow';
+    if (n.includes('wells') && (n.includes('tvp') || n.includes('dvt'))) return 'Wells TVP';
+    if (n.includes('wells') && (n.includes('tep') || n.includes('embolia') || n.includes('pulmonar'))) return 'Wells TEP';
+    if (n.includes('curb65') || n.includes('curb')) return 'CURB-65';
+    if (n.includes('cha2ds2') || n.includes('chadsvasc') || n.includes('chads2vasc')) return 'CHA2DS2-VASc';
+    if (n.includes('hasbled')) return 'HAS-BLED';
+    if (n.includes('childpugh') || (n.includes('child') && n.includes('pugh'))) return 'Child-Pugh';
+    if (n.includes('timi')) return 'TIMI';
+    if (n.includes('news2') || n==='news') return 'NEWS2';
+    return null;
+  };
+
+  const addOwned=(el,cls) => {
+    if (!(el instanceof Element)) return;
+    el.classList.add(cls);
+    owned.add(el);
+  };
+
+  const clearOwned=() => {
+    for (const el of owned) {
+      if (!(el instanceof Element)) continue;
+      [
+        'mc-score-internal-canonical-v1',
+        'mc-score-canonical-field-v1',
+        'mc-score-canonical-choice-v1',
+        'mc-score-canonical-result-v1',
+        'mc-score-canonical-topbar-v1',
+        'mc-score-canonical-topbar-title-v1',
+        'mc-score-canonical-close-v1',
+        'mc-score-canonical-back-v1'
+      ].forEach(c=>el.classList.remove(c));
+      delete el.dataset.mcScoreCanonicalOwner;
+      delete el.dataset.mcScoreCanonicalName;
+    }
+    owned.clear();
+  };
+
+  const primaryRoot=() => {
+    const area=document.querySelector('#score-calc-area');
+    if (area) {
+      const cards=[...area.children].filter(el => el instanceof Element && visible(el) && el.classList.contains('card'));
+      if (cards.length) return cards[0];
+      const nested=[...area.querySelectorAll(':scope > .card')].filter(visible);
+      if (nested.length) return nested[0];
+    }
+    return null;
+  };
+
+  const overlayRoot=() => {
+    const overlay=document.querySelector('#calculator-overlay-container');
+    if (!overlay || !visible(overlay)) return null;
+
+    const preferred=[...overlay.querySelectorAll('.card,form,section,article')]
+      .filter(visible)
+      .filter(el => el.querySelector('input,select,textarea,button,[role="button"]'))
+      .sort((a,b) => {
+        const ar=a.getBoundingClientRect(), br=b.getBoundingClientRect();
+        return (ar.width*ar.height)-(br.width*br.height);
+      });
+
+    return preferred[0] || overlay;
+  };
+
+  const localTopbar=root => {
+    if (!root) return null;
+    const pool=[
+      ...root.querySelectorAll('header,nav,.header,.topbar,[class*="topbar"],[class*="header"]'),
+      ...document.querySelectorAll('#calculator-overlay-container > header,#calculator-overlay-container > nav')
+    ].filter(visible);
+
+    return pool.find(el => {
+      const r=el.getBoundingClientRect();
+      return r.height>=34 && r.height<=72;
+    }) || null;
+  };
+
+  const classifyFields=root => {
+    if (!root) return;
+
+    const controls=[...root.querySelectorAll('input,select,textarea')]
+      .filter(visible);
+
+    controls.forEach(ctrl => {
+      const p=ctrl.closest('label,.form-group,.field,.row,li,div');
+      if (p && p!==root && root.contains(p)) addOwned(p,'mc-score-canonical-field-v1');
+    });
+
+    const choices=[...root.querySelectorAll('input[type="checkbox"],input[type="radio"]')]
+      .filter(visible);
+
+    choices.forEach(ctrl => {
+      const p=ctrl.closest('label,li,.option,.choice,.checkbox,.radio,div');
+      if (p && p!==root && root.contains(p)) addOwned(p,'mc-score-canonical-choice-v1');
+    });
+
+    const resultRe=/(resultado|result|pontua[cç][aã]o|puntuaci[oó]n|score|risco|riesgo|risk|interpreta)/i;
+    [...root.querySelectorAll('section,article,div')]
+      .filter(visible)
+      .filter(el => {
+        const t=text(el);
+        if (!t || t.length>600 || !resultRe.test(t)) return false;
+        const childResult=[...el.children].some(ch => resultRe.test(text(ch)) && text(ch).length<t.length);
+        return !childResult;
+      })
+      .slice(0,8)
+      .forEach(el => addOwned(el,'mc-score-canonical-result-v1'));
+  };
+
+  const classifyTopbar=root => {
+    const bar=localTopbar(root);
+    if (!bar) return;
+    addOwned(bar,'mc-score-canonical-topbar-v1');
+
+    const title=[...bar.querySelectorAll('h1,h2,h3,h4,strong,span,div')]
+      .filter(visible)
+      .filter(el => text(el).length>0 && text(el).length<80)
+      .sort((a,b)=>text(a).length-text(b).length)[0];
+    if (title) addOwned(title,'mc-score-canonical-topbar-title-v1');
+
+    [...bar.querySelectorAll('button,a,[role="button"]')].filter(visible).forEach(btn => {
+      const t=norm(text(btn));
+      const aria=norm(btn.getAttribute('aria-label')||'');
+      const titleAttr=norm(btn.getAttribute('title')||'');
+      const token=t+aria+titleAttr;
+      if (/fechar|close|cerrar|x/.test(token)) addOwned(btn,'mc-score-canonical-close-v1');
+      if (/voltar|back|volver|retornar/.test(token)) addOwned(btn,'mc-score-canonical-back-v1');
+    });
+  };
+
+  const apply=(score,reason) => {
+    clearOwned();
+
+    const root=primaryRoot() || overlayRoot();
+    if (!root) {
+      console.log('['+BUILD+'] ROOT_NOT_READY', {score,reason});
+      return false;
+    }
+
+    addOwned(root,'mc-score-internal-canonical-v1');
+    root.dataset.mcScoreCanonicalOwner=BUILD;
+    root.dataset.mcScoreCanonicalName=score;
+
+    classifyFields(root);
+    classifyTopbar(root);
+
+    console.log('['+BUILD+'] APPLIED', {
+      score,
+      reason,
+      root: root.id || root.className || root.tagName,
+      controls: root.querySelectorAll('input,select,textarea,button,[role="button"]').length,
+      results: root.querySelectorAll('.mc-score-canonical-result-v1').length
+    });
+    return true;
+  };
+
+  const settle=(score,reason) => [40,100,180,320,560,900].forEach(ms => setTimeout(()=>apply(score,reason+'@'+ms),ms));
+
+  document.addEventListener('click',ev => {
+    const el=ev.target instanceof Element ? ev.target.closest('button,a,[role="button"],div,section,article') : null;
+    if (!el) return;
+
+    const direct=scoreFromText(text(el));
+    if (direct) {
+      settle(direct,'score-open');
+      return;
+    }
+
+    const card=el.closest('.mc-scores-home-exact-card-r1');
+    const grid=card && card.closest('.mc-scores-home-exact-grid-r1');
+    if (card && grid) {
+      const cards=[...grid.querySelectorAll(':scope > .mc-scores-home-exact-card-r1')].filter(visible);
+      const idx=cards.indexOf(card);
+      if (idx>=0 && idx<NAMES.length) settle(NAMES[idx],'grid-position');
+    }
+  },true);
+
+  window.addEventListener('pageshow',()=>{});
+})();
+</script>
+<!-- CALC-SCORES-INTERNAL-10-CANONICAL-UI-CONVERGENCE-V1-B-R0 END -->
+
+
+<!-- CALC-FARMACOS-DETAIL-RENAL-GLOBAL-STRUCTURE-CONVERGENCE-V1-B-R4 BEGIN -->
+<style id="medcases-farmacos-detail-renal-global-structure-convergence-v1-b-r4">
+body.calc-overlay-open #fd-modal.open{
+  --mc-fdr4-page:#1A1D23;
+  --mc-fdr4-card:#252930;
+  --mc-fdr4-card-border:#46505F;
+  --mc-fdr4-primary:#F3F4F6;
+  --mc-fdr4-secondary:#B8C0CC;
+  --mc-fdr4-muted:#8F9AAA;
+  --mc-fdr4-soft:rgba(255,255,255,.04);
+  --mc-fdr4-note:rgba(148,163,184,.07);
+  background:var(--mc-fdr4-page)!important;
+  color:var(--mc-fdr4-primary)!important;
+}
+
+/* Global Farmacos detail typography stays stable. */
+body.calc-overlay-open #fd-modal.open>.fd-header{
+  min-height:48px!important;
+  box-shadow:none!important;
+  border-bottom:0.7px solid #374151!important;
+}
+body.calc-overlay-open #fd-modal.open :where(#fd-header-name,.fd-header-name){
+  font-size:16px!important;
+  line-height:1.15!important;
+  font-weight:700!important;
+}
+body.calc-overlay-open #fd-modal.open :where(
+  .fd-section-label,.fd-meta-title,.fd-ref-header-left,
+  .fd-renal-header-label,.fdm6-ref-title
+){
+  font-size:12.5px!important;
+  line-height:1.2!important;
+  font-weight:700!important;
+  letter-spacing:0!important;
+}
+body.calc-overlay-open #fd-modal.open :where(
+  .fd-section-text,.fd-meta-text,.fd-clean-list li,.fd-meta-list>li,
+  .fd-section li,.fd-ref-block li
+){
+  font-size:11.5px!important;
+  line-height:1.38!important;
+  font-weight:400!important;
+}
+
+/* Macro section layout only. */
+body.calc-overlay-open #fd-modal.open :where(
+  .fd-section,.fd-ref-block,.fd-meta-section
+){
+  border-left:0!important;
+  border-right:0!important;
+  border-bottom:0!important;
+  box-shadow:none!important;
+}
+body.calc-overlay-open #fd-modal.open :where(
+  .fd-clean-list li,.fd-meta-list>li,.fd-section li,.fd-ref-block li
+){
+  border:0!important;
+  box-shadow:none!important;
+}
+
+/*
+ Universal renal root families.
+ These selectors intentionally cover canonical, fdm6 and later data-owner variants.
+*/
+body.calc-overlay-open #fd-modal.open :where(
+  #fd-renal-dynamic,
+  .fd-renal-block,
+  .fdm6-renal-outer,
+  [class*="renal"][class*="outer"],
+  [class*="renal"][class*="list"],
+  [class*="renal"][class*="container"],
+  [data-mc-renal-root],
+  [data-fd-renal-root]
+){
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:8px!important;
+  visibility:visible!important;
+  opacity:1!important;
+  height:auto!important;
+  max-height:none!important;
+  overflow:visible!important;
+  margin:6px 0 0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+}
+
+/*
+ Universal renal range-card families.
+ This is the structural contract for EVERY drug, not a drug-name-specific patch.
+*/
+body.calc-overlay-open #fd-modal.open :where(
+  .fdm6-range,
+  .fdm6-range-block,
+  .fdm6-renal-range,
+  .fd-renal-faixa,
+  .fd-renal-tl-item,
+  .fd-renal-faixa--active,
+  .fd-renal-tl-item--active,
+  .fd-renal-range,
+  .fd-renal-row,
+  [data-mc-renal-range-group],
+  [data-mc-renal-range],
+  [data-fd-renal-range],
+  [data-renal-range],
+  [data-clcr-range],
+  [class*="renal"][class*="range"],
+  [class*="renal"][class*="faixa"],
+  [class*="renal"][class*="band"],
+  [class*="renal"][class*="group"],
+  [class*="clcr"][class*="range"],
+  [class*="clcr"][class*="group"]
+){
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  height:auto!important;
+  max-height:none!important;
+  overflow:hidden!important;
+  position:relative!important;
+  margin:0!important;
+  padding:9px 10px 9px 12px!important;
+  border:0.7px solid var(--mc-fdr4-card-border)!important;
+  border-radius:8px!important;
+  outline:0!important;
+  background:var(--mc-fdr4-card)!important;
+  box-shadow:
+    inset 3px 0 0 rgba(148,163,184,.30),
+    0 1px 0 rgba(255,255,255,.02)!important;
+}
+
+/*
+ R2-grade cleanup: EVERY descendant inside a renal range loses inherited
+ horizontal-rule borders. This is what prevents Clindamicina-like regressions.
+*/
+body.calc-overlay-open #fd-modal.open :where(
+  .fdm6-range,.fdm6-range-block,.fdm6-renal-range,
+  .fd-renal-faixa,.fd-renal-tl-item,.fd-renal-range,.fd-renal-row,
+  [data-mc-renal-range-group],[data-mc-renal-range],[data-fd-renal-range],
+  [data-renal-range],[data-clcr-range],
+  [class*="renal"][class*="range"],
+  [class*="renal"][class*="faixa"],
+  [class*="renal"][class*="band"],
+  [class*="renal"][class*="group"],
+  [class*="clcr"][class*="range"],
+  [class*="clcr"][class*="group"]
+) *{
+  border-top-color:transparent!important;
+  border-bottom-color:transparent!important;
+}
+
+body.calc-overlay-open #fd-modal.open :where(
+  .fdm6-range,.fdm6-range-block,.fdm6-renal-range,
+  .fd-renal-faixa,.fd-renal-tl-item,.fd-renal-range,.fd-renal-row,
+  [data-mc-renal-range-group],[data-mc-renal-range],[data-fd-renal-range],
+  [data-renal-range],[data-clcr-range],
+  [class*="renal"][class*="range"],
+  [class*="renal"][class*="faixa"],
+  [class*="renal"][class*="band"],
+  [class*="renal"][class*="group"],
+  [class*="clcr"][class*="range"],
+  [class*="clcr"][class*="group"]
+) :where(
+  hr,
+  [class*="divider"],
+  [class*="separator"],
+  [class*="rule"],
+  [class*="hairline"]
+){
+  display:none!important;
+}
+
+/* Range title families. Existing semantic severity/icon color is preserved. */
+body.calc-overlay-open #fd-modal.open :where(
+  .fdm6-range-title,
+  .fd-renal-range-title,
+  [data-mc-renal-range-title],
+  [data-fd-renal-range-title],
+  [class*="renal"][class*="range"][class*="title"],
+  [class*="renal"][class*="faixa"][class*="title"],
+  [class*="clcr"][class*="title"]
+){
+  margin:0 0 6px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  font-size:11.5px!important;
+  line-height:1.2!important;
+  font-weight:800!important;
+  letter-spacing:.02em!important;
+}
+
+/*
+ Dose-group families.
+ Known route/dose owners plus generic renal dose/route blocks all converge
+ to the same soft internal surface.
+*/
+body.calc-overlay-open #fd-modal.open :where(
+  .fdm6-route-line,
+  .fd-renal-dose-tile,
+  [data-mc-renal-dose-tile],
+  [data-fd-renal-dose-tile],
+  .fd-renal-pill,
+  .fd-renal-dose-row,
+  .fd-renal-adult,
+  .fd-renal-ped,
+  .fd-renal-pediatric,
+  div[class*="renal"][class*="dose"],
+  div[class*="renal"][class*="route"],
+  section[class*="renal"][class*="dose"],
+  li[class*="renal"][class*="dose"]
+){
+  min-height:0!important;
+  margin:4px 0!important;
+  padding:6px 8px!important;
+  border:0!important;
+  border-radius:6px!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:var(--mc-fdr4-soft)!important;
+}
+
+/* Pseudo-elements cannot redraw blue/amber rule lines. */
+body.calc-overlay-open #fd-modal.open :where(
+  .fdm6-route-line,
+  .fd-renal-dose-tile,
+  [data-mc-renal-dose-tile],
+  [data-fd-renal-dose-tile],
+  .fd-renal-pill,
+  .fd-renal-dose-row,
+  .fd-renal-dose-line,
+  .fdm6-dose-row,
+  .fdm6-dose-line,
+  .fdm6-row,
+  div[class*="renal"][class*="dose"],
+  div[class*="renal"][class*="route"]
+)::before,
+body.calc-overlay-open #fd-modal.open :where(
+  .fdm6-route-line,
+  .fd-renal-dose-tile,
+  [data-mc-renal-dose-tile],
+  [data-fd-renal-dose-tile],
+  .fd-renal-pill,
+  .fd-renal-dose-row,
+  .fd-renal-dose-line,
+  .fdm6-dose-row,
+  .fdm6-dose-line,
+  .fdm6-row,
+  div[class*="renal"][class*="dose"],
+  div[class*="renal"][class*="route"]
+)::after{
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+}
+
+/* Dose = primary content. */
+body.calc-overlay-open #fd-modal.open :where(
+  .fd-dose-val strong,
+  .fd-renal-dose-pill,
+  .fd-renal-dose-text,
+  .fdm6-route-line strong,
+  [data-mc-renal-dose-tile] strong,
+  [data-fd-renal-dose-tile] strong,
+  [class*="renal"][class*="dose"] strong
+){
+  font-size:14px!important;
+  line-height:1.15!important;
+  font-weight:800!important;
+  color:var(--mc-fdr4-primary)!important;
+}
+
+/* Route / frequency / max = metadata. */
+body.calc-overlay-open #fd-modal.open :where(
+  .fd-dose-freq-inline,
+  .fd-dose-via-inline,
+  .fd-renal-pill-lbl,
+  .fdm6-ref-text,
+  .fdm6-range-text,
+  [class*="renal"][class*="meta"],
+  [class*="renal"][class*="freq"]
+){
+  font-size:10.5px!important;
+  line-height:1.25!important;
+  font-weight:500!important;
+  color:var(--mc-fdr4-muted)!important;
+}
+
+/* Clinical renal note = quiet footer surface. */
+body.calc-overlay-open #fd-modal.open :where(
+  .fdm6-note,
+  .fd-renal-footer,
+  .fd-renal-obs,
+  [data-mc-renal-note],
+  [data-fd-renal-note],
+  [class*="renal"][class*="note"],
+  [class*="renal"][class*="obs"]
+){
+  margin:5px 0 0!important;
+  padding:6px 8px!important;
+  border:0!important;
+  border-radius:6px!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:var(--mc-fdr4-note)!important;
+  color:var(--mc-fdr4-secondary)!important;
+  font-size:11px!important;
+  line-height:1.32!important;
+  font-weight:400!important;
+}
+
+/* Non-renal clinical lists remain compact, without changing structure. */
+body.calc-overlay-open #fd-modal.open :where(.fd-clean-list,.fd-meta-list){
+  margin-top:4px!important;
+  margin-bottom:4px!important;
+}
+body.calc-overlay-open #fd-modal.open :where(.fd-clean-list li,.fd-meta-list>li){
+  margin:0!important;
+  padding-top:3px!important;
+  padding-bottom:3px!important;
+}
+
+/* Same type scale from narrow phone-like width through 570px. */
+@media (min-width:468px) and (max-width:570px){
+  body.calc-overlay-open #fd-modal.open :where(
+    .fd-section-text,.fd-meta-text,.fd-clean-list li,.fd-meta-list>li,
+    .fd-section li,.fd-ref-block li
+  ){
+    font-size:11.5px!important;
+  }
+  body.calc-overlay-open #fd-modal.open :where(
+    .fd-section-label,.fd-meta-title,.fd-ref-header-left,
+    .fd-renal-header-label,.fdm6-ref-title
+  ){
+    font-size:12.5px!important;
+  }
+  body.calc-overlay-open #fd-modal.open :where(
+    .fdm6-range-title,.fd-renal-range-title,[data-mc-renal-range-title],
+    [data-fd-renal-range-title],[class*="clcr"][class*="title"]
+  ){
+    font-size:11.5px!important;
+  }
+  body.calc-overlay-open #fd-modal.open :where(
+    .fd-dose-val strong,.fd-renal-dose-pill,.fd-renal-dose-text,
+    .fdm6-route-line strong,[data-mc-renal-dose-tile] strong,
+    [data-fd-renal-dose-tile] strong,[class*="renal"][class*="dose"] strong
+  ){
+    font-size:14px!important;
+  }
+}
+
+/* Light mode parity. */
+body.light-mode.calc-overlay-open #fd-modal.open,
+html[data-theme="light"] body.calc-overlay-open #fd-modal.open{
+  --mc-fdr4-page:#ECF1F3;
+  --mc-fdr4-card:#FFFFFF;
+  --mc-fdr4-card-border:#D5DCE5;
+  --mc-fdr4-primary:#111318;
+  --mc-fdr4-secondary:#334155;
+  --mc-fdr4-muted:#64748B;
+  --mc-fdr4-soft:rgba(15,23,42,.035);
+  --mc-fdr4-note:rgba(100,116,139,.075);
+}
+</style>
+<!-- CALC-FARMACOS-DETAIL-RENAL-GLOBAL-STRUCTURE-CONVERGENCE-V1-B-R4 END -->
+
+
+<!-- CALC-FARMACOS-DETAIL-SECTIONS-REAL-PANEL-ALWAYS-OPEN-V1-B-R6-R1-OPEN-LIFECYCLE-TRIGGER-FIX BEGIN -->
+<style id="medcases-farmacos-detail-sections-real-panel-always-open-v1-b-r6">
+body.calc-overlay-open #fd-modal.open details.mc-fd-r6-clinical-section{
+  display:block!important;
+}
+body.calc-overlay-open #fd-modal.open details.mc-fd-r6-clinical-section > summary{
+  list-style:none!important;
+  cursor:default!important;
+}
+body.calc-overlay-open #fd-modal.open details.mc-fd-r6-clinical-section > summary::-webkit-details-marker{
+  display:none!important;
+}
+body.calc-overlay-open #fd-modal.open details.mc-fd-r6-clinical-section > summary::marker{
+  content:""!important;
+}
+
+/* A panel resolved by R6 is clinical document content and cannot remain collapsed. */
+body.calc-overlay-open #fd-modal.open .mc-fd-r6-force-open-panel{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+  clip:auto!important;
+  clip-path:none!important;
+  transform:none!important;
+}
+
+/* Remove only the collapse affordance, never the left clinical icon. */
+body.calc-overlay-open #fd-modal.open .mc-fd-r6-collapse-chevron{
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  width:0!important;
+  min-width:0!important;
+  max-width:0!important;
+  height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  overflow:hidden!important;
+  pointer-events:none!important;
+}
+
+/* Static document header: no accordion affordance. */
+body.calc-overlay-open #fd-modal.open .mc-fd-r6-static-section-header{
+  cursor:default!important;
+  user-select:text!important;
+}
+
+/* Section containers themselves must not clip an opened panel. */
+body.calc-overlay-open #fd-modal.open .mc-fd-r6-section-container{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+}
+
+/* Keep homologated renal R4 outside this owner. */
+body.calc-overlay-open #fd-modal.open :where(
+  #fd-renal-dynamic,
+  .fd-renal-block,
+  .fdm6-renal-outer,
+  [data-mc-renal-root],
+  [data-fd-renal-root]
+){
+  max-height:none!important;
+}
+</style>
+
+<script id="medcases-farmacos-detail-sections-real-panel-always-open-v1-b-r6-runtime">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-FARMACOS-DETAIL-SECTIONS-REAL-PANEL-ALWAYS-OPEN-V1-B-R6-R1-OPEN-LIFECYCLE-TRIGGER-FIX';
+
+  const SECTION_KEYS=[
+    'indicacoes','indicacoesdeuso','indicaciones','indicacionesdeuso',
+    'posologia',
+    'administracaoepreparo','administracao','administracionypreparacion','administracion',
+    'alertascriticos',
+    'usosespeciais','usosespeciales',
+    'interacoesmedicamentosas','interaccionesmedicamentosas','interacoes','interacciones',
+    'efeitoscolaterais','efectoscolaterales','efectosadversos',
+    'dadosfarmacologicos','datosfarmacologicos',
+    'apresentacoes','presentaciones',
+    'referencias'
+  ];
+
+  const PANEL_SELECTOR=[
+    '.fd-section-content','.fd-section-body',
+    '.fd-meta-content','.fd-meta-body',
+    '.fd-ref-content','.fd-ref-body',
+    '[class*="section-content"]','[class*="section-body"]',
+    '[class*="meta-content"]','[class*="meta-body"]',
+    '[class*="ref-content"]','[class*="ref-body"]',
+    '[class*="accordion-content"]','[class*="accordion-body"]',
+    '[class*="collapse-content"]','[class*="collapse-body"]',
+    '[data-panel]','[data-accordion-panel]','[role="region"]'
+  ].join(',');
+
+  const norm=s => String(s||'')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-zA-Z0-9]+/g,'')
+    .toLowerCase();
+
+  const txt=el => String(el && el.textContent || '').replace(/\s+/g,' ').trim();
+
+  const visible=el => {
+    if (!(el instanceof Element)) return false;
+    const cs=getComputedStyle(el);
+    if (cs.display==='none' || cs.visibility==='hidden' || Number(cs.opacity)===0) return false;
+    const r=el.getBoundingClientRect();
+    return r.width>1 && r.height>1;
+  };
+
+  const isClinicalHeader=el => {
+    if (!(el instanceof Element)) return false;
+    const t=norm(txt(el));
+    if (!t || t.length>120) return false;
+    return SECTION_KEYS.some(k => t===k || t.startsWith(k));
+  };
+
+  const isRenal=el => !!(el && el.closest && el.closest(
+    '#fd-renal-dynamic,.fd-renal-block,.fdm6-renal-outer,'+
+    '[data-mc-renal-root],[data-fd-renal-root],'+
+    '[data-mc-renal-range-group],[data-mc-renal-range],'+
+    '[data-fd-renal-range],[data-renal-range],[data-clcr-range]'
+  ));
+
+  const isHeaderLike=el => {
+    if (!(el instanceof Element)) return false;
+    return isClinicalHeader(el) ||
+      !!el.matches('summary,[aria-expanded],.fd-section-label,.fd-meta-title,.fd-ref-header-left,.fd-section-header,.fd-meta-header,.fd-ref-header');
+  };
+
+  const chevronToken=el => {
+    if (!(el instanceof Element)) return false;
+    const raw=[
+      el.className,
+      el.getAttribute('aria-label'),
+      el.getAttribute('title'),
+      el.getAttribute('data-role'),
+      el.getAttribute('data-icon'),
+      txt(el)
+    ].map(x=>String(x||'').toLowerCase()).join(' ');
+
+    if (/(chevron|caret|collapse|expand|accordion|toggle-arrow|toggle-icon|section-arrow|arrow-up|arrow-down)/.test(raw)) return true;
+    if (/^[⌃⌄▲▼▴▾˄˅∨∧↑↓]$/.test(txt(el).trim())) return true;
+    return false;
+  };
+
+  const sectionContainerFor=header => {
+    if (!(header instanceof Element)) return null;
+    return header.closest(
+      '.fd-section,.fd-meta-section,.fd-ref-block,'+
+      '[data-fd-document-section],[data-section],section,article,details'
+    ) || header.parentElement;
+  };
+
+  const targetIdsFromHeader=header => {
+    const ids=[];
+    const attrs=['aria-controls','data-target','data-bs-target','data-collapse-target','data-accordion-target'];
+    attrs.forEach(name => {
+      const v=String(header.getAttribute(name)||'').trim();
+      if (!v) return;
+      v.split(/\s+/).forEach(token => {
+        const id=token.replace(/^#/,'');
+        if (id) ids.push(id);
+      });
+    });
+
+    const href=String(header.getAttribute('href')||'').trim();
+    if (href.startsWith('#') && href.length>1) ids.push(href.slice(1));
+
+    return [...new Set(ids)];
+  };
+
+  const forcePanelOpen=panel => {
+    if (!(panel instanceof Element) || isRenal(panel)) return false;
+    panel.hidden=false;
+    panel.removeAttribute('hidden');
+    panel.setAttribute('aria-hidden','false');
+    panel.classList.add('mc-fd-r6-force-open-panel');
+    return true;
+  };
+
+  const forceContainerOpen=container => {
+    if (!(container instanceof Element) || isRenal(container)) return false;
+    container.classList.add('mc-fd-r6-section-container');
+
+    if (container.tagName==='DETAILS') {
+      container.open=true;
+      container.setAttribute('open','');
+      container.classList.add('mc-fd-r6-clinical-section');
+    }
+
+    container.removeAttribute('hidden');
+    if (container.hasAttribute('aria-hidden')) container.setAttribute('aria-hidden','false');
+    return true;
+  };
+
+  const resolveByExplicitTargets=(header,root) => {
+    const panels=[];
+    for (const id of targetIdsFromHeader(header)) {
+      const el=document.getElementById(id);
+      if (el && root.contains(el) && !isRenal(el)) panels.push(el);
+    }
+    return [...new Set(panels)];
+  };
+
+  const resolveInsideContainer=(header,container) => {
+    if (!(container instanceof Element)) return [];
+    const panels=[...container.querySelectorAll(PANEL_SELECTOR)]
+      .filter(el => el!==header && !isRenal(el));
+    return [...new Set(panels)];
+  };
+
+  const nextMeaningfulSiblings=(header,container) => {
+    if (!(header instanceof Element)) return [];
+    const anchor=header.closest('button,[role="button"],summary,.fd-section-header,.fd-meta-header,.fd-ref-header') || header;
+    const parent=anchor.parentElement;
+    if (!parent) return [];
+
+    const out=[];
+    let sib=anchor.nextElementSibling;
+    while (sib) {
+      if (isRenal(sib)) break;
+      if (isHeaderLike(sib) && isClinicalHeader(sib)) break;
+      if (container && !container.contains(sib) && sib.parentElement!==container) break;
+
+      const t=txt(sib);
+      const hasControls=!!sib.querySelector('input,select,textarea,button,a,[role="button"]');
+      const hiddenLike=sib.hidden ||
+        sib.getAttribute('aria-hidden')==='true' ||
+        /(^|\s)(collapse|collapsed|accordion-body|accordion-content|section-body|section-content|content|body)(\s|$)/i.test(String(sib.className||'')) ||
+        getComputedStyle(sib).display==='none' ||
+        getComputedStyle(sib).maxHeight==='0px' ||
+        getComputedStyle(sib).height==='0px';
+
+      if ((t.length>0 || hasControls) && (hiddenLike || out.length>0)) out.push(sib);
+      sib=sib.nextElementSibling;
+    }
+    return out;
+  };
+
+  const fallbackContainerChildren=(header,container) => {
+    if (!(container instanceof Element)) return [];
+    const headerAnchor=header.closest('button,[role="button"],summary,.fd-section-header,.fd-meta-header,.fd-ref-header') || header;
+    const descendants=[...container.children].filter(el => {
+      if (el===headerAnchor || el.contains(headerAnchor) || isRenal(el)) return false;
+      if (isHeaderLike(el) && isClinicalHeader(el)) return false;
+      const t=txt(el);
+      if (!t && !el.querySelector('input,select,textarea,button,a,[role="button"]')) return false;
+      const cs=getComputedStyle(el);
+      return el.hidden ||
+        el.getAttribute('aria-hidden')==='true' ||
+        cs.display==='none' ||
+        cs.maxHeight==='0px' ||
+        cs.height==='0px' ||
+        /content|body|panel|collapse|accordion/i.test(String(el.className||''));
+    });
+    return descendants;
+  };
+
+  const resolvePanels=(header,root) => {
+    const container=sectionContainerFor(header);
+    const explicit=resolveByExplicitTargets(header,root);
+    if (explicit.length) return {container,panels:explicit,method:'explicit-target'};
+
+    const internal=resolveInsideContainer(header,container);
+    if (internal.length) return {container,panels:internal,method:'container-query'};
+
+    const siblings=nextMeaningfulSiblings(header,container);
+    if (siblings.length) return {container,panels:siblings,method:'sibling-fallback'};
+
+    const children=fallbackContainerChildren(header,container);
+    if (children.length) return {container,panels:children,method:'container-child-fallback'};
+
+    return {container,panels:[],method:'unresolved'};
+  };
+
+  const findClinicalHeaders=root => {
+    const pool=[
+      ...root.querySelectorAll('summary'),
+      ...root.querySelectorAll('[aria-expanded]'),
+      ...root.querySelectorAll(
+        '.fd-section-label,.fd-meta-title,.fd-ref-header-left,'+
+        '.fd-section-header,.fd-meta-header,.fd-ref-header,'+
+        'button,strong,h2,h3,h4'
+      )
+    ];
+    return [...new Set(pool)]
+      .filter(el => !isRenal(el))
+      .filter(isClinicalHeader);
+  };
+
+  const hideChevrons=header => {
+    const candidates=new Set();
+
+    header.querySelectorAll('*').forEach(el=>candidates.add(el));
+
+    const anchor=header.closest('button,[role="button"],summary,.fd-section-header,.fd-meta-header,.fd-ref-header') || header;
+    if (anchor.parentElement) [...anchor.parentElement.children].forEach(el=>candidates.add(el));
+
+    candidates.forEach(el => {
+      if (!(el instanceof Element) || el===header || isRenal(el)) return;
+      if (!chevronToken(el)) return;
+
+      const cls=String(el.className||'').toLowerCase();
+      let trailing=true;
+      if (visible(el) && visible(anchor)) {
+        const r=el.getBoundingClientRect();
+        const hr=anchor.getBoundingClientRect();
+        trailing = r.left >= hr.left + Math.max(0,hr.width*0.52) || r.right >= hr.right-58;
+      }
+
+      if (trailing || /chevron|caret|arrow|collapse|expand/.test(cls)) {
+        el.classList.add('mc-fd-r6-collapse-chevron');
+      }
+    });
+  };
+
+  const apply=(reason) => {
+    const root=document.querySelector('#fd-modal.open');
+    if (!root || !visible(root)) return;
+
+    let headers=0;
+    let ariaExpanded=0;
+    let detailsOpen=0;
+    let panelsResolved=0;
+    let panelsVisible=0;
+    let chevronsHidden=0;
+    const methods={};
+
+    [...root.querySelectorAll('details')].forEach(d => {
+      if (isRenal(d)) return;
+      d.open=true;
+      d.setAttribute('open','');
+      d.classList.add('mc-fd-r6-clinical-section','mc-fd-r6-section-container');
+      detailsOpen++;
+    });
+
+    for (const header of findClinicalHeaders(root)) {
+      headers++;
+      header.classList.add('mc-fd-r6-static-section-header');
+
+      const headerAnchor=header.closest('button,[role="button"],summary,.fd-section-header,.fd-meta-header,.fd-ref-header') || header;
+
+      if (header.hasAttribute('aria-expanded')) {
+        header.setAttribute('aria-expanded','true');
+        ariaExpanded++;
+      }
+      if (headerAnchor!==header && headerAnchor.hasAttribute('aria-expanded')) {
+        headerAnchor.setAttribute('aria-expanded','true');
+        ariaExpanded++;
+      }
+
+      const resolved=resolvePanels(header,root);
+      forceContainerOpen(resolved.container);
+      methods[resolved.method]=(methods[resolved.method]||0)+1;
+
+      if (resolved.panels.length) {
+        panelsResolved++;
+        resolved.panels.forEach(panel => forcePanelOpen(panel));
+      }
+
+      hideChevrons(header);
+    }
+
+    root.querySelectorAll('.mc-fd-r6-force-open-panel').forEach(panel => {
+      if (!isRenal(panel) && visible(panel)) panelsVisible++;
+    });
+    root.querySelectorAll('.mc-fd-r6-collapse-chevron').forEach(el => {
+      if (getComputedStyle(el).display==='none' || !visible(el)) chevronsHidden++;
+    });
+
+    console.log('['+BUILD+'] APPLIED',{
+      reason,
+      headers,
+      detailsOpen,
+      ariaExpanded,
+      panelsResolved,
+      panelsVisible,
+      chevronsHidden,
+      methods
+    });
+  };
+
+  const settle=reason => [40,120,260,520,900].forEach(ms => setTimeout(()=>apply(reason+'@'+ms),ms));
+
+  window.addEventListener('pageshow',()=>settle('pageshow'));
+
+  /*
+    R6-R1 lifecycle fix:
+    the real drug row/open action does not always expose data-drug/data-farmaco
+    on the clicked descendant. Do not guess the opener selector.
+    Schedule a bounded post-event settle for any pointer/click; apply() remains
+    a no-op unless #fd-modal.open is actually visible.
+  */
+  document.addEventListener('pointerdown',()=>settle('pointerdown-global'),true);
+  document.addEventListener('click',()=>settle('click-global'),true);
+
+  console.log('['+BUILD+'] MOUNTED',{
+    trigger:'global-event-driven-bounded-settle',
+    persistentObserver:false,
+    persistentPolling:false,
+    clickSimulation:false
+  });
+
+  settle('boot');
+})();
+</script>
+<!-- CALC-FARMACOS-DETAIL-SECTIONS-REAL-PANEL-ALWAYS-OPEN-V1-B-R6-R1-OPEN-LIFECYCLE-TRIGGER-FIX END -->
+
+
+<!-- CALC-FARMACOS-GLOBAL-CLINICAL-ENRICHMENT-OWNER-V1-B-R0 BEGIN -->
+<style id="medcases-farmacos-global-clinical-enrichment-owner-v1-b-r0">
+body.calc-overlay-open #fd-modal.open .mc-farmacos-enrichment-panel{
+  margin:5px 0 8px 0;
+  padding:0;
+  display:grid;
+  gap:4px;
+}
+body.calc-overlay-open #fd-modal.open .mc-farmacos-enrichment-item{
+  background:#252930;
+  border:0.7px solid #374151;
+  border-radius:7px;
+  padding:8px 10px;
+}
+body.calc-overlay-open #fd-modal.open .mc-farmacos-enrichment-label{
+  display:block;
+  margin:0 0 3px 0;
+  color:#F3F4F6;
+  font-size:11.5px;
+  line-height:1.25;
+  font-weight:700;
+}
+body.calc-overlay-open #fd-modal.open .mc-farmacos-enrichment-text{
+  margin:0;
+  color:#B8C0CC;
+  font-size:11px;
+  line-height:1.38;
+  font-weight:400;
+}
+body.calc-overlay-open #fd-modal.open .mc-farmacos-enrichment-item[data-severity="critical"]{
+  border-color:rgba(248,113,113,.48);
+}
+body.calc-overlay-open #fd-modal.open .mc-farmacos-enrichment-item[data-severity="warning"]{
+  border-color:rgba(251,146,60,.45);
+}
+</style>
+
+<script id="medcases-farmacos-global-clinical-enrichment-owner-v1-b-r0-runtime">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-FARMACOS-GLOBAL-CLINICAL-ENRICHMENT-OWNER-V1-B-R0';
+  const DRUG_FILE_MAP={"aasantiagregante":"aas_antiagregante.json","abacavir":"abacavir.json","abatacepte":"abatacepte.json","abciximabe":"abciximabe.json","acamprosato":"acamprosato.json","aceclofenaco":"aceclofenaco.json","acenocumarol":"acenocumarol.json","acetatodecalcio":"acetato_de_calcio.json","acetazolamida":"acetazolamida.json","acetilcisteina":"acetilcisteina.json","aciclovir":"aciclovir.json","acidoaminocaproico":"acidoaminocaproico.json","acidobempedoico":"acido_bempedoico.json","acidofolico":"acido_folico.json","acidoobeticolico":"acido_obeticolico.json","acidotioctico":"acido_tioctico.json","acidoursodesoxicolico":"acido_ursodesoxicolico.json","acidovalproico":"acido_valproico.json","aclidinio":"aclidinio.json","acoramidis":"acoramidis.json","adalimumabe":"adalimumabe.json","adapaleno":"adapaleno.json","adenosina":"adenosina.json","adrenalina":"adrenalina.json","aficamten":"aficamten.json","aflibercepte":"aflibercepte.json","agomelatina":"agomelatina.json","albendazol":"albendazol.json","alclometasona":"alclometasona.json","alemtuzumabe":"alemtuzumabe.json","alfacalcidol":"alfacalcidol.json","alginatodesodio":"alginato_de_sodio.json","alirocumab":"alirocumab.json","alisquireno":"alisquireno.json","almotriptana":"almotriptana.json","alopurinol":"alopurinol.json","alprazolam":"alprazolam.json","alprostadil":"alprostadil.json","alteplase":"alteplase.json","amantadina":"amantadina.json","ambrisentana":"ambrisentana.json","ambroxol":"ambroxol.json","amicacina":"amicacina.json","amilorida":"amilorida.json","aminofilina":"aminofilina.json","amiodarona":"amiodarona.json","amisulprida":"amisulprida.json","amitriptilina":"amitriptilina.json","amlodipinolosartana":"amlodipino_losartana.json","amlodipinovalsartana":"amlodipino_valsartana.json","amoxicilina":"amoxicilina.json","amoxicilinaclavulanato":"amoxicilina_clavulanato.json","ampicilina":"ampicilina.json","ampicilinasulbactam":"ampicilina_sulbactam.json","andexanetalfa":"andexanetalfa.json","anfotericinab":"anfotericina_b.json","anfotericinadesoxicolato":"anfotericina_desoxicolato.json","anfotericinalipossomal":"anfotericina_lipossomal.json","angiotensinaii":"angiotensinaii.json","anidulafungina":"anidulafungina.json","anlodipino":"anlodipino.json","apixabana":"apixabana.json","apomorfina":"apomorfina.json","argatroban":"argatroban.json","aripiprazol":"aripiprazol.json","aripiprazollai":"aripiprazol_lai.json","armodafinila":"armodafinila.json","artesunato":"artesunato.json","asenapina":"asenapina.json","atazanavir":"atazanavir.json","atenolol":"atenolol.json","atogepanta":"atogepanta.json","atomoxetina":"atomoxetina.json","atorvastatina":"atorvastatina.json","atosibana":"atosibana.json","atracurio":"atracurio.json","atropina":"atropina.json","avanafila":"avanafila.json","azatioprina":"azatioprina.json","azilsartana":"azilsartana.json","azitromicina":"azitromicina.json","aztreonam":"aztreonam.json","aztreonamavibactam":"aztreonam_avibactam.json","azulmetileno":"azul_metileno.json","baclofeno":"baclofeno.json","beclometasona":"beclometasona.json","beclometasonaformoterol":"beclometasona_formoterol.json","beclometasonaformoterolglicopirronio":"beclometasona_formoterol_glicopirronio.json","bedaquilina":"bedaquilina.json","benralizumabe":"benralizumabe.json","benzbromarona":"benzbromarona.json","benztropina":"benztropina.json","betaistina":"betaistina.json","betametasona":"betametasona.json","betrixabana":"betrixabana.json","bezafibrato":"bezafibrato.json","bicarbonatosodio":"bicarbonato_sodio.json","bictegravir":"bictegravir.json","bilastina":"bilastina.json","biperideno":"biperideno.json","bisacodil":"bisacodil.json","bisoprolol":"bisoprolol.json","bivalirudina":"bivalirudina.json","bosentana":"bosentana.json","brexpiprazol":"brexpiprazol.json","brimonidina":"brimonidina.json","brivaracetam":"brivaracetam.json","bromazepam":"bromazepam.json","bromexina":"bromexina.json","bromocriptina":"bromocriptina.json","budesonida":"budesonida.json","budesonidaformoterol":"budesonida_formoterol.json","budesonidaglicopirronioformoterol":"budesonida_glicopirronio_formoterol.json","bumetanida":"bumetanida.json","bupivacaina":"bupivacaina.json","buprenorfina":"buprenorfina.json","buprenorfinanaloxona":"buprenorfina_naloxona.json","bupropiona":"bupropiona.json","buspirona":"buspirona.json","butamirato":"butamirato.json","cabergolina":"cabergolina.json","calcitriol":"calcitriol.json","canabidiol":"canabidiol.json","canagliflozina":"canagliflozina.json","candesartana":"candesartana.json","cangrelor":"cangrelor.json","capsaicina":"capsaicina.json","carbamazepina":"carbamazepina.json","carbetocina":"carbetocina.json","carbocisteina":"carbocisteina.json","carbonatodecalcio":"carbonato_de_calcio.json","carbonatodelantanio":"carbonato_de_lantanio.json","carboximaltoseferrica":"carboximaltose_ferrica.json","cariprazina":"cariprazina.json","carisoprodol":"carisoprodol.json","carvaoativado":"carvao_ativado.json","carvedilol":"carvedilol.json","caspofungina":"caspofungina.json","cefaclor":"cefaclor.json","cefadroxila":"cefadroxila.json","cefalexina":"cefalexina.json","cefazolina":"cefazolina.json","cefdinir":"cefdinir.json","cefepime":"cefepime.json","cefiderocol":"cefiderocol.json","cefixima":"cefixima.json","cefmetazol":"cefmetazol.json","cefoperazonasulbactam":"cefoperazona_sulbactam.json","cefotaxima":"cefotaxima.json","cefoxitina":"cefoxitina.json","cefpiroma":"cefpiroma.json","cefpodoxima":"cefpodoxima.json","ceftarolina":"ceftarolina.json","ceftazidima":"ceftazidima.json","ceftazidimaavibactam":"ceftazidima_avibactam.json","ceftobiprole":"ceftobiprole.json","ceftolozanotazobactam":"ceftolozano_tazobactam.json","ceftriaxona":"ceftriaxona.json","cefuroxima":"cefuroxima.json","celecoxibe":"celecoxibe.json","cenobamato":"cenobamato.json","certolizumabepegol":"certolizumabe_pegol.json","cetamina":"cetamina.json","cetirizina":"cetirizina.json","cetoconazoloral":"cetoconazol_oral.json","cetoprofeno":"cetoprofeno.json","cetorolaco":"cetorolaco.json","ciclesonida":"ciclesonida.json","ciclobenzaprina":"ciclobenzaprina.json","ciclofosfamida":"ciclofosfamida.json","ciclosporina":"ciclosporina.json","ciclossilicatodezirconiosodico":"ciclossilicato_de_zirconio_sodico.json","cilostazol":"cilostazol.json","cimetidina":"cimetidina.json","cinacalcete":"cinacalcete.json","ciprofibrato":"ciprofibrato.json","ciprofloxacino":"ciprofloxacino.json","cisatracurio":"cisatracurio.json","cisteamina":"cisteamina.json","citalopram":"citalopram.json","citratodepotassio":"citrato_de_potassio.json","citratoferrico":"citrato_ferrico.json","citratosodioacidocitrico":"citrato_sodio_acido_citrico.json","cladribina":"cladribina.json","claritromicina":"claritromicina.json","clevidipina":"clevidipina.json","clindamicina":"clindamicina.json","clobazam":"clobazam.json","clobetasol":"clobetasol.json","clomifeno":"clomifeno.json","clomipramina":"clomipramina.json","clonazepam":"clonazepam.json","clonidina":"clonidina.json","cloperastina":"cloperastina.json","clopidogrel":"clopidogrel.json","cloranfenicol":"cloranfenicol.json","clordiazepoxido":"clordiazepoxido.json","cloretocalcio":"cloreto_calcio.json","cloretodesodio09":"cloreto_de_sodio_09.json","cloretopotassio":"cloreto_potassio.json","clorfeniramina":"clorfeniramina.json","clorpromazina":"clorpromazina.json","clortalidona":"clortalidona.json","clorzoxazona":"clorzoxazona.json","cloxacilina":"cloxacilina.json","clozapina":"clozapina.json","codeina":"codeina.json","colchicina":"colchicina.json","colecalciferol":"colecalciferol.json","colesevelam":"colesevelam.json","colestipol":"colestipol.json","colestiramina":"colestiramina.json","colistina":"colistina.json","conivaptana":"conivaptana.json","dabigatrana":"dabigatrana.json","daclatasvir":"daclatasvir.json","dalbavancina":"dalbavancina.json","dalteparina":"dalteparina.json","dapagliflozina":"dapagliflozina.json","daptomicina":"daptomicina.json","darbepoetinaalfa":"darbepoetina_alfa.json","darunavir":"darunavir.json","deferoxamina":"deferoxamina.json","deflazacorte":"deflazacorte.json","delafloxacino":"delafloxacino.json","delamanida":"delamanida.json","derisomaltoseferrica":"derisomaltose_ferrica.json","desipramina":"desipramina.json","desloratadina":"desloratadina.json","desmopressina":"desmopressina.json","desonida":"desonida.json","desvenlafaxina":"desvenlafaxina.json","deutetrabenazina":"deutetrabenazina.json","dexametasona":"dexametasona.json","dexclorfeniramina":"dexclorfeniramina.json","dexlansoprazol":"dexlansoprazol.json","dexmedetomidina":"dexmedetomidina.json","dextranaferrica":"dextrana_ferrica.json","dextrometorfano":"dextrometorfano.json","diazepam":"diazepam.json","diclofenaco":"diclofenaco.json","dicloxacilina":"dicloxacilina.json","difenidramina":"difenidramina.json","diflucortolona":"diflucortolona.json","digoxina":"digoxina.json","digoxinimmunefab":"digoxin_immune_fab.json","dihidroergotamina":"di_hidroergotamina.json","diltiazem":"diltiazem.json","dimetilfumarato":"dimetilfumarato.json","dinitratoisossorbida":"dinitratoisossorbida.json","dipirona":"dipirona.json","diroximelfumarato":"diroximel_fumarato.json","disopiramida":"disopiramida.json","dissulfiram":"dissulfiram.json","dobutamina":"dobutamina.json","docusatodesodio":"docusato_de_sodio.json","dofetilida":"dofetilida.json","dolutegravir":"dolutegravir.json","domperidona":"domperidona.json","donanemabe":"donanemabe.json","donepezila":"donepezila.json","dopamina":"dopamina.json","dornasealfa":"dornase_alfa.json","doxazosina":"doxazosina.json","doxazosinalp":"doxazosina_lp.json","doxepina":"doxepina.json","doxiciclina":"doxiciclina.json","dronedarona":"dronedarona.json","dropropizina":"dropropizina.json","drospirenona":"drospirenona.json","droxidopa":"droxidopa.json","dulaglutida":"dulaglutida.json","duloxetina":"duloxetina.json","dupilumabe":"dupilumabe.json","ebastina":"ebastina.json","edaravona":"edaravona.json","edoxabana":"edoxabana.json","efavirenz":"efavirenz.json","efedrina":"efedrina.json","efgartigimodealfa":"efgartigimode_alfa.json","eletriptana":"eletriptana.json","eltrombopague":"eltrombopague.json","emicizumabe":"emicizumabe.json","empagliflozina":"empagliflozina.json","emtricitabina":"emtricitabina.json","enalapril":"enalapril.json","enalaprilato":"enalaprilato.json","enoxaparina":"enoxaparina.json","entacapona":"entacapona.json","entecavir":"entecavir.json","eplerenona":"eplerenona.json","epoetinaalfa":"epoetina_alfa.json","epoetinabeta":"epoetina_beta.json","epoprostenol":"epoprostenol.json","eprosartana":"eprosartana.json","eptifibatide":"eptifibatide.json","eptinezumabe":"eptinezumabe.json","eravaciclina":"eravaciclina.json","erdosteina":"erdosteina.json","erenumabe":"erenumabe.json","ergotamina":"ergotamina.json","eritromicina":"eritromicina.json","ertapenem":"ertapenem.json","escitalopram":"escitalopram.json","eslicarbazepina":"eslicarbazepina.json","esmolol":"esmolol.json","esomeprazol":"esomeprazol.json","espectinomicina":"espectinomicina.json","espiramicina":"espiramicina.json","espironolactona":"espironolactona.json","estiripentol":"estiripentol.json","eszopiclona":"eszopiclona.json","etambutol":"etambutol.json","etanercepte":"etanercepte.json","etelcalcetida":"etelcalcetida.json","etinilestradiollevonorgestrel":"etinilestradiol_levonorgestrel.json","etomidato":"etomidato.json","etoricoxibe":"etoricoxibe.json","etossuximida":"etossuximida.json","evinacumab":"evinacumab.json","evolocumab":"evolocumab.json","ezetimiba":"ezetimiba.json","famotidina":"famotidina.json","fatorviia":"fator_viia.json","febuxostate":"febuxostate.json","felbamato":"felbamato.json","felodipina":"felodipina.json","fenelzina":"fenelzina.json","fenilefrina":"fenilefrina.json","fenitoina":"fenitoina.json","fenobarbital":"fenobarbital.json","fenofibrato":"fenofibrato.json","fenoterol":"fenoterol.json","fentanil":"fentanil.json","ferropolimaltosado":"ferro_polimaltosado.json","ferrosacarato":"ferro_sacarato.json","fexofenadina":"fexofenadina.json","fidaxomicina":"fidaxomicina.json","filgotinibe":"filgotinibe.json","filgrastim":"filgrastim.json","finasteridaurologia":"finasterida_urologia.json","finerenona":"finerenona.json","fingolimode":"fingolimode.json","flecainida":"flecainida.json","flucloxacilina":"flucloxacilina.json","fluconazol":"fluconazol.json","fludrocortisona":"fludrocortisona.json","flufenazina":"flufenazina.json","flumazenil":"flumazenil.json","fluocinolona":"fluocinolona.json","fluoxetina":"fluoxetina.json","flurazepam":"flurazepam.json","fluticasona":"fluticasona.json","fluticasonasalmeterol":"fluticasona_salmeterol.json","fluticasonaumeclidiniovilanterol":"fluticasona_umeclidinio_vilanterol.json","fluticasonavilanterol":"fluticasona_vilanterol.json","fluvastatina":"fluvastatina.json","fluvoxamina":"fluvoxamina.json","fomepizol":"fomepizol.json","fondaparinux":"fondaparinux.json","formoterol":"formoterol.json","fosfatodepotassio":"fosfato_de_potassio.json","fosfatodesodio":"fosfato_de_sodio.json","fosfenitoina":"fosfenitoina.json","fosfomicina":"fosfomicina.json","fremanezumabe":"fremanezumabe.json","frovatriptana":"frovatriptana.json","fumaratoferroso":"fumarato_ferroso.json","furosemida":"furosemida.json","furosemidaiv":"furosemida_iv.json","gabapentina":"gabapentina.json","galantamina":"galantamina.json","galcanezumabe":"galcanezumabe.json","ganciclovir":"ganciclovir.json","gemfibrozil":"gemfibrozil.json","gentamicina":"gentamicina.json","glatiramer":"glatiramer.json","glecaprevirpibrentasvir":"glecaprevir_pibrentasvir.json","gliclazida":"gliclazida.json","glicopirronio":"glicopirronio.json","glicopirronioindacaterol":"glicopirronio_indacaterol.json","glicosehipertonica":"glicose_hipertonica.json","glimepirida":"glimepirida.json","glucagon":"glucagon.json","gluconatocalcio":"gluconato_calcio.json","gluconatoferrico":"gluconato_ferrico.json","gluconatoferroso":"gluconato_ferroso.json","golimumabe":"golimumabe.json","guanfacina":"guanfacina.json","haloperidol":"haloperidol.json","heparinahnf":"heparina_hnf.json","hidralazina":"hidralazina.json","hidralazinaiv":"hidralazina_iv.json","hidroclorotiazida":"hidroclorotiazida.json","hidrocortisona":"hidrocortisona.json","hidromorfona":"hidromorfona.json","hidroxicloroquina":"hidroxicloroquina.json","hidroxizina":"hidroxizina.json","hidroxocobalamina":"hidroxocobalamina.json","ibuprofeno":"ibuprofeno.json","ibutilida":"ibutilida.json","icosapentoetilo":"icosapento_etilo.json","idarucizumabe":"idarucizumabe.json","iloprosta":"iloprosta.json","imipenemcilastatina":"imipenem_cilastatina.json","imipenemcilastatinarelebactam":"imipenem_cilastatina_relebactam.json","imipramina":"imipramina.json","inclisiran":"inclisiran.json","indacaterol":"indacaterol.json","indapamida":"indapamida.json","indometacina":"indometacina.json","infliximabe":"infliximabe.json","inotersen":"inotersen.json","insulinaasparte":"insulina_asparte.json","insulinadegludeca":"insulina_degludeca.json","insulinadetemir":"insulina_detemir.json","insulinaglargina":"insulina_glargina.json","insulinaglulisina":"insulina_glulisina.json","insulinalispro":"insulina_lispro.json","insulinanph":"insulina_nph.json","interferonbeta1a":"interferon_beta_1a.json","interferonbeta1b":"interferon_beta_1b.json","ipratropio":"ipratropio.json","irbesartana":"irbesartana.json","isavuconazol":"isavuconazol.json","isoflurano":"isoflurano.json","isoniazida":"isoniazida.json","isoproterenol":"isoproterenol.json","isotretinoina":"isotretinoina.json","itoprida":"itoprida.json","itraconazol":"itraconazol.json","ivabradina":"ivabradina.json","ketamina":"ketamina.json","labetalol":"labetalol.json","lacosamida":"lacosamida.json","lactulose":"lactulose.json","lamivudina":"lamivudina.json","lamotrigina":"lamotrigina.json","lansoprazol":"lansoprazol.json","lasmiditana":"lasmiditana.json","latanoprosta":"latanoprosta.json","lecanemabe":"lecanemabe.json","ledipasvirsofosbuvir":"ledipasvir_sofosbuvir.json","lefamulina":"lefamulina.json","leflunomida":"leflunomida.json","lercanidipina":"lercanidipina.json","letrozolginecologia":"letrozol_ginecologia.json","levetiracetam":"levetiracetam.json","levocetirizina":"levocetirizina.json","levodopabenserazida":"levodopa_benserazida.json","levodopacarbidopa":"levodopa_carbidopa.json","levodropropizina":"levodropropizina.json","levofloxacino":"levofloxacino.json","levomepromazina":"levomepromazina.json","levomilnaciprano":"levomilnaciprano.json","levotiroxina":"levotiroxina.json","lidocaina":"lidocaina.json","lidocainaiv":"lidocaina_iv.json","linaclotida":"linaclotida.json","linagliptina":"linagliptina.json","linezolida":"linezolida.json","liraglutida":"liraglutida.json","lisdexanfetamina":"lisdexanfetamina.json","lisinopril":"lisinopril.json","litio":"litio.json","lomitapida":"lomitapida.json","lopinavirritonavir":"lopinavir_ritonavir.json","loratadina":"loratadina.json","lorazepam":"lorazepam.json","losartana":"losartana.json","lovastatina":"lovastatina.json","lubiprostona":"lubiprostona.json","lurasidona":"lurasidona.json","macitentana":"macitentana.json","macrogol":"macrogol.json","maltolferrico":"maltol_ferrico.json","manidipina":"manidipina.json","manitol":"manitol.json","maraviroque":"maraviroque.json","mavacamten":"mavacamten.json","mebendazol":"mebendazol.json","meclizina":"meclizina.json","meloxicam":"meloxicam.json","memantina":"memantina.json","mepolizumabe":"mepolizumabe.json","meropenem":"meropenem.json","meropenemvaborbactam":"meropenem_vaborbactam.json","mesalazina":"mesalazina.json","metadona":"metadona.json","metadonacronico":"metadona_cronico.json","metamizol":"metamizol.json","metaraminol":"metaraminol.json","metformina":"metformina.json","metildopa":"metildopa.json","metilergometrina":"metilergometrina.json","metilfenidato":"metilfenidato.json","metilprednisolona":"metilprednisolona.json","metimazol":"metimazol.json","metocarbamol":"metocarbamol.json","metoclopramida":"metoclopramida.json","metolazona":"metolazona.json","metoprolol":"metoprolol.json","metoprololiv":"metoprolol_iv.json","metotrexato":"metotrexato.json","metronidazol":"metronidazol.json","mexiletina":"mexiletina.json","micafungina":"micafungina.json","micofenolatomofetila":"micofenolato_mofetila.json","midazolam":"midazolam.json","midodrina":"midodrina.json","milnaciprano":"milnaciprano.json","minociclina":"minociclina.json","minoxidil":"minoxidil.json","mipomersen":"mipomersen.json","mirabegrona":"mirabegrona.json","mircera":"mircera.json","miriquizumabe":"miriquizumabe.json","mirtazapina":"mirtazapina.json","misoprostol":"misoprostol.json","moclobemida":"moclobemida.json","modafinila":"modafinila.json","mometasona":"mometasona.json","mononitratoisossorbida":"mononitratoisossorbida.json","montelucaste":"montelucaste.json","morfina":"morfina.json","mosaprida":"mosaprida.json","moxifloxacino":"moxifloxacino.json","moxonidina":"moxonidina.json","nadolol":"nadolol.json","nafazolina":"nafazolina.json","nalbufina":"nalbufina.json","nalmefeno":"nalmefeno.json","naloxona":"naloxona.json","naltrexona":"naltrexona.json","naproxeno":"naproxeno.json","naratriptana":"naratriptana.json","natalizumabe":"natalizumabe.json","nebivolol":"nebivolol.json","neostigmina":"neostigmina.json","nicardipina":"nicardipina.json","nicorandil":"nicorandil.json","nicotinaterapia":"nicotina_terapia.json","nifedipina":"nifedipina.json","nimesulida":"nimesulida.json","nintedanibe":"nintedanibe.json","nistatina":"nistatina.json","nitazoxanida":"nitazoxanida.json","nitrazepam":"nitrazepam.json","nitrofurantoina":"nitrofurantoina.json","nitroglicerina":"nitroglicerina.json","nitroglicerinaiv":"nitroglicerinaiv.json","nitroglicerinasl":"nitroglicerinasl.json","noradrenalina":"noradrenalina.json","norfloxacino":"norfloxacino.json","nortriptilina":"nortriptilina.json","ocitocina":"ocitocina.json","ocrelizumabe":"ocrelizumabe.json","octreotide":"octreotide.json","ofatumumabe":"ofatumumabe.json","ofloxacino":"ofloxacino.json","olanzapina":"olanzapina.json","olanzapinalai":"olanzapina_lai.json","olmesartana":"olmesartana.json","olodaterol":"olodaterol.json","omadaciclina":"omadaciclina.json","omalizumabe":"omalizumabe.json","omecamtivmecarbil":"omecamtiv_mecarbil.json","omega3":"omega_3.json","omeprazol":"omeprazol.json","omeprazoliv":"omeprazol_iv.json","ondansetrona":"ondansetrona.json","opicapona":"opicapona.json","orfenadrina":"orfenadrina.json","oritavancina":"oritavancina.json","oseltamivir":"oseltamivir.json","oxacilina":"oxacilina.json","oxazepam":"oxazepam.json","oxcarbazepina":"oxcarbazepina.json","oxibutinina":"oxibutinina.json","oxicodona":"oxicodona.json","oxidodemagnesio":"oxido_de_magnesio.json","oxihidroxidosucroferrico":"oxihidroxido_sucroferrico.json","oximetazolina":"oximetazolina.json","ozanimode":"ozanimode.json","paliperidona":"paliperidona.json","paliperidonamensal":"paliperidona_mensal.json","paliperidonatrimestral":"paliperidona_trimestral.json","pancuronio":"pancuronio.json","pantoprazol":"pantoprazol.json","pantoprazoliv":"pantoprazol_iv.json","paracetamol":"paracetamol.json","paricalcitol":"paricalcitol.json","paroxetina":"paroxetina.json","patiromer":"patiromer.json","patisiran":"patisiran.json","paxlovid":"paxlovid.json","pcc4f":"pcc4f.json","pegfilgrastim":"pegfilgrastim.json","pegloticase":"pegloticase.json","penicilinabenzatina":"penicilina_benzatina.json","penicilinag":"penicilina_g.json","penicilinaprocaina":"penicilina_procaina.json","penicilinav":"penicilina_v.json","pentoxifilina":"pentoxifilina.json","perampanel":"perampanel.json","perhexilina":"perhexilina.json","periciazina":"periciazina.json","perindoprilamlodipino":"perindopril_amlodipino.json","perindoprilindapamida":"perindopril_indapamida.json","peroxidodebenzoila":"peroxido_de_benzoila.json","picossulfatodesodio":"picossulfato_de_sodio.json","pimavanserina":"pimavanserina.json","pimozida":"pimozida.json","pioglitazona":"pioglitazona.json","piperacilinatazobactam":"piperacilina_tazobactam.json","pirazinamida":"pirazinamida.json","pirfenidona":"pirfenidona.json","piridostigmina":"piridostigmina.json","piroxicam":"piroxicam.json","pitavastatina":"pitavastatina.json","pitolisanto":"pitolisanto.json","plasmalyte":"plasma_lyte.json","plazomicina":"plazomicina.json","plecanatida":"plecanatida.json","poliestirenossulfonato":"poliestirenossulfonato.json","poliestirenossulfonatodecalcio":"poliestirenossulfonato_de_calcio.json","poliestirenossulfonatodesodio":"poliestirenossulfonato_de_sodio.json","polimixinab":"polimixina_b.json","ponesimode":"ponesimode.json","posaconazol":"posaconazol.json","pralidoxima":"pralidoxima.json","pramipexol":"pramipexol.json","prasugrel":"prasugrel.json","pravastatina":"pravastatina.json","praziquantel":"praziquantel.json","prazosina":"prazosina.json","prednisolona":"prednisolona.json","prednisona":"prednisona.json","pregabalina":"pregabalina.json","pretomanida":"pretomanida.json","primidona":"primidona.json","probenecida":"probenecida.json","procainamida":"procainamida.json","proclorperazina":"proclorperazina.json","progesteronamicronizada":"progesterona_micronizada.json","prometazina":"prometazina.json","propafenona":"propafenona.json","propiltiouracil":"propiltiouracil.json","propofol":"propofol.json","propranolol":"propranolol.json","protamina":"protamina.json","prucaloprida":"prucaloprida.json","pseudoefedrina":"pseudoefedrina.json","quetiapina":"quetiapina.json","quinidina":"quinidina.json","rabeprazol":"rabeprazol.json","racecadotril":"racecadotril.json","raltegravir":"raltegravir.json","ramipril":"ramipril.json","ranolazina":"ranolazina.json","rasagilina":"rasagilina.json","reboxetina":"reboxetina.json","remdesivir":"remdesivir.json","remifentanil":"remifentanil.json","reslizumabe":"reslizumabe.json","retatrutida":"retatrutida.json","reteplase":"reteplase.json","rifabutina":"rifabutina.json","rifampicina":"rifampicina.json","rifapentina":"rifapentina.json","rifaximina":"rifaximina.json","rilpivirina":"rilpivirina.json","riluzol":"riluzol.json","rimegepanta":"rimegepanta.json","ringerlactato":"ringer_lactato.json","riociguate":"riociguate.json","risanquizumabe":"risanquizumabe.json","risperidona":"risperidona.json","risperidonalai":"risperidona_lai.json","ritonavir":"ritonavir.json","rituximabe":"rituximabe.json","rivaroxabana":"rivaroxabana.json","rivastigmina":"rivastigmina.json","rizatriptana":"rizatriptana.json","rocuronio":"rocuronio.json","roflumilaste":"roflumilaste.json","romiplostim":"romiplostim.json","ropinirol":"ropinirol.json","ropivacaina":"ropivacaina.json","rosuvastatina":"rosuvastatina.json","rotigotina":"rotigotina.json","roxitromicina":"roxitromicina.json","rozanolixizumabe":"rozanolixizumabe.json","rufinamida":"rufinamida.json","rupatadina":"rupatadina.json","sacaratohidroxidoferrico":"sacarato_hidroxido_ferrico.json","sacubitrilvalsartana":"sacubitrilvalsartana.json","safinamida":"safinamida.json","salbutamol":"salbutamol.json","salmeterol":"salmeterol.json","secnidazol":"secnidazol.json","selegilina":"selegilina.json","selexipague":"selexipague.json","semaglutida":"semaglutida.json","semaglutidaobesidade":"semaglutida_obesidade.json","sene":"sene.json","sertralina":"sertralina.json","sevelamer":"sevelamer.json","sildenafila":"sildenafila.json","sildenafilahap":"sildenafilahap.json","simeticona":"simeticona.json","sinvastatina":"sinvastatina.json","siponimode":"siponimode.json","sitagliptina":"sitagliptina.json","sodiohipertonico":"sodio_hipertonico.json","sofosbuvir":"sofosbuvir.json","solitromicina":"solitromicina.json","solriamfetol":"solriamfetol.json","somatostatina":"somatostatina.json","sotagliflozina":"sotagliflozina.json","sotalol":"sotalol.json","sparsentana":"sparsentana.json","subcitratodebismuto":"subcitrato_de_bismuto.json","subsalicilatodebismuto":"subsalicilato_de_bismuto.json","succinilcolina":"succinilcolina.json","sucralfato":"sucralfato.json","sufentanil":"sufentanil.json","sugamadex":"sugamadex.json","sulbactamdurlobactam":"sulbactam_durlobactam.json","sulfametoxazoltrimetoprim":"sulfametoxazol_trimetoprim.json","sulfassalazina":"sulfassalazina.json","sulfatoferroso":"sulfato_ferroso.json","sulfatomagnesio":"sulfato_magnesio.json","sulpirida":"sulpirida.json","sumatriptana":"sumatriptana.json","tacrolimo":"tacrolimo.json","tadalafila":"tadalafila.json","tadalafilahap":"tadalafilahap.json","tafamidis":"tafamidis.json","tamsulosina":"tamsulosina.json","tedizolida":"tedizolida.json","teicoplanina":"teicoplanina.json","telavancina":"telavancina.json","telmisartana":"telmisartana.json","temazepam":"temazepam.json","temocilina":"temocilina.json","tenecteplase":"tenecteplase.json","tenofoviralafenamida":"tenofovir_alafenamida.json","tenofovirdesoproxila":"tenofovir_desoproxila.json","teofilina":"teofilina.json","terazosina":"terazosina.json","terbutalina":"terbutalina.json","teriflunomida":"teriflunomida.json","terlipressina":"terlipressina.json","tetrabenazina":"tetrabenazina.json","tezepelumabe":"tezepelumabe.json","tiagabina":"tiagabina.json","tiamina":"tiamina.json","ticagrelor":"ticagrelor.json","tigeciclina":"tigeciclina.json","timololcolirio":"timolol_colirio.json","tinidazol":"tinidazol.json","tiopental":"tiopental.json","tiotixeno":"tiotixeno.json","tiotropio":"tiotropio.json","tiotropioolodaterol":"tiotropio_olodaterol.json","tirofibana":"tirofibana.json","tirzepatida":"tirzepatida.json","tirzepatidaobesidade":"tirzepatida_obesidade.json","tizanidina":"tizanidina.json","tobramicina":"tobramicina.json","tocilizumabe":"tocilizumabe.json","tofacitinibe":"tofacitinibe.json","tolcapona":"tolcapona.json","tolvaptana":"tolvaptana.json","topiramato":"topiramato.json","torsemida":"torsemida.json","tramadol":"tramadol.json","trandolapril":"trandolapril.json","tranilcipromina":"tranilcipromina.json","trazodona":"trazodona.json","treprostinil":"treprostinil.json","tretinoina":"tretinoina.json","triancinolonatopica":"triancinolona_topica.json","triazolam":"triazolam.json","triexifenidil":"triexifenidil.json","trimebutina":"trimebutina.json","trimetazidina":"trimetazidina.json","trimipramina":"trimipramina.json","ubrogepanta":"ubrogepanta.json","umeclidinio":"umeclidinio.json","umeclidiniovilanterol":"umeclidinio_vilanterol.json","upadacitinibe":"upadacitinibe.json","urapidil":"urapidil.json","ustekinumabe":"ustekinumabe.json","valaciclovir":"valaciclovir.json","valbenazina":"valbenazina.json","valganciclovir":"valganciclovir.json","valproatodesodio":"valproato_de_sodio.json","valsartana":"valsartana.json","vancomicina":"vancomicina.json","vareniclina":"vareniclina.json","varfarina":"varfarina.json","vasopressina":"vasopressina.json","vecuronio":"vecuronio.json","vedolizumabe":"vedolizumabe.json","velpatasvirsofosbuvir":"velpatasvir_sofosbuvir.json","venlafaxina":"venlafaxina.json","verapamil":"verapamil.json","verapamiliv":"verapamil_iv.json","vericiguat":"vericiguat.json","vernacalanto":"vernacalanto.json","vigabatrina":"vigabatrina.json","vilanterol":"vilanterol.json","vilazodona":"vilazodona.json","vildagliptina":"vildagliptina.json","vitaminab12":"vitamina_b12.json","voclosporina":"voclosporina.json","vorapaxar":"vorapaxar.json","voriconazol":"voriconazol.json","vortioxetina":"vortioxetina.json","vutrisiran":"vutrisiran.json","xilometazolina":"xilometazolina.json","zafirlucaste":"zafirlucaste.json","zavegepanta":"zavegepanta.json","zidovudina":"zidovudina.json","ziprasidona":"ziprasidona.json","zolmitriptana":"zolmitriptana.json","zolpidem":"zolpidem.json","zonisamida":"zonisamida.json","zopiclona":"zopiclona.json","zuclopentixol":"zuclopentixol.json"};
+
+  const norm=s => String(s||'')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-zA-Z0-9]+/g,'')
+    .toLowerCase();
+
+  const sectionMap={
+    administracaoepreparo:'administracao_preparo',
+    administracao:'administracao_preparo',
+    administracionypreparacion:'administracao_preparo',
+    administracion:'administracao_preparo',
+    alertascriticos:'alertas_criticos',
+    usosespeciais:'usos_especiais',
+    usosespeciales:'usos_especiais',
+    interacoesmedicamentosas:'interacoes_medicamentosas',
+    interaccionesmedicamentosas:'interacoes_medicamentosas',
+    dadosfarmacologicos:'dados_farmacologicos',
+    datosfarmacologicos:'dados_farmacologicos',
+    referencias:'referencias'
+  };
+
+  const cache=new Map();
+  let lastDetectionSig='';
+
+  const currentLang=() => {
+    const p=new URLSearchParams(location.search);
+    const q=String(p.get('lang')||'').toLowerCase();
+    if (q==='es') return 'es';
+    if (q==='pt') return 'pt';
+    return String(document.documentElement.lang||'pt').toLowerCase().startsWith('es')?'es':'pt';
+  };
+
+  const pushCandidate=(arr,source,value) => {
+    const v=String(value||'').replace(/\s+/g,' ').trim();
+    const n=norm(v);
+    if (!v || !n) return;
+    arr.push({source,value:v,norm:n,file:DRUG_FILE_MAP[n]||null});
+  };
+
+  const attrCandidates=root => {
+    const out=[];
+    const attrs=[
+      'data-drug-name','data-farmaco','data-drug','data-drug-key',
+      'data-current-drug','data-medication','data-name'
+    ];
+
+    attrs.forEach(a=>pushCandidate(out,'root@'+a,root.getAttribute(a)));
+
+    if (root.dataset) {
+      Object.keys(root.dataset).forEach(k=>{
+        if (/drug|farmaco|medication|name/i.test(k)) {
+          pushCandidate(out,'root.dataset.'+k,root.dataset[k]);
+        }
+      });
+    }
+
+    root.querySelectorAll(
+      '[data-drug-name],[data-farmaco],[data-drug],[data-drug-key],[data-current-drug],[data-medication],[data-name]'
+    ).forEach(el=>{
+      attrs.forEach(a=>pushCandidate(out,el.tagName.toLowerCase()+'@'+a,el.getAttribute(a)));
+    });
+
+    return out;
+  };
+
+  const titleCandidates=root => {
+    const out=[];
+    const selectors=[
+      '.fd-title','.fd-drug-title','.fdm-title','.fd-header-title',
+      '.fd-topbar-title','.fd-modal-title','.drug-title','.medication-title',
+      '[data-role="drug-title"]','h1','h2','h3'
+    ].join(',');
+
+    root.querySelectorAll(selectors).forEach(el=>{
+      pushCandidate(
+        out,
+        'title:'+el.tagName.toLowerCase()+(el.id?'#'+el.id:''),
+        el.textContent
+      );
+    });
+    return out;
+  };
+
+  const topRegionCandidates=root => {
+    const out=[];
+    const rr=root.getBoundingClientRect();
+    const maxY=rr.top+150;
+    const els=root.querySelectorAll('span,strong,b,div,p,button');
+    let inspected=0;
+
+    for (const el of els) {
+      if (inspected>=180) break;
+      inspected++;
+      if (el.children.length>4) continue;
+
+      const r=el.getBoundingClientRect();
+      if (r.width<1 || r.height<1) continue;
+      if (r.top<rr.top-1 || r.top>maxY) continue;
+
+      const t=String(el.textContent||'').replace(/\s+/g,' ').trim();
+      if (!t || t.length>90) continue;
+
+      pushCandidate(out,'top-region:'+el.tagName.toLowerCase()+(el.id?'#'+el.id:''),t);
+    }
+
+    return out;
+  };
+
+  const detectActiveDrug=root => {
+    const all=[
+      ...attrCandidates(root),
+      ...titleCandidates(root),
+      ...topRegionCandidates(root)
+    ];
+
+    const exact=all.find(x=>x.file);
+    if (!exact) {
+      return {
+        matched:false,
+        key:null,
+        file:null,
+        candidate:null,
+        candidates:all.slice(0,24)
+      };
+    }
+
+    return {
+      matched:true,
+      key:exact.norm,
+      file:exact.file,
+      candidate:exact,
+      candidates:all.slice(0,24)
+    };
+  };
+
+  const logDetection=(det,reason) => {
+    const sig=[
+      det.matched?'1':'0',
+      det.key||'',
+      det.file||'',
+      det.candidate && det.candidate.source || ''
+    ].join('|');
+
+    if (sig===lastDetectionSig) return;
+    lastDetectionSig=sig;
+
+    console.log('['+BUILD+'] ACTIVE_DRUG_DETECTION',{
+      reason,
+      matched:det.matched,
+      key:det.key,
+      file:det.file,
+      candidate:det.candidate,
+      sample:det.candidates.slice(0,8)
+    });
+  };
+
+  const loadDrug=file => {
+    if (cache.has(file)) return cache.get(file);
+
+    const url=new URL('data/drugs/'+encodeURIComponent(file),document.baseURI);
+    url.searchParams.set('mc_global_enrichment','v1');
+
+    const promise=fetch(url.href,{cache:'no-store'})
+      .then(r=>{
+        if (!r.ok) throw new Error('HTTP '+r.status);
+        return r.json();
+      });
+
+    cache.set(file,promise);
+    return promise;
+  };
+
+  const headerKey=el => sectionMap[norm(el && el.textContent)] || null;
+  const isTargetHeader=el => !!headerKey(el);
+  const headerAnchor=header =>
+    header.closest('button,[role="button"],.fd-section-header,.fd-meta-header,.fd-ref-header') || header;
+
+  const isAnyClinicalHeader=el => {
+    if (!(el instanceof Element)) return false;
+    const n=norm(el.textContent);
+    return !!sectionMap[n] || [
+      'indicacoesdeuso','indicacionesdeuso','indicacoes','indicaciones',
+      'posologia','efeitoscolaterais','efectoscolaterales',
+      'apresentacoes','presentaciones'
+    ].includes(n);
+  };
+
+  const nativeContentExists=header => {
+    const anchor=headerAnchor(header);
+    const parent=anchor.parentElement;
+    if (!parent) return false;
+
+    let sib=anchor.nextElementSibling;
+    let chars=0;
+    let controls=0;
+
+    while (sib) {
+      if (sib.classList && sib.classList.contains('mc-farmacos-enrichment-panel')) {
+        sib=sib.nextElementSibling;
+        continue;
+      }
+
+      if (
+        isAnyClinicalHeader(sib) ||
+        [...sib.querySelectorAll(
+          'button,strong,h2,h3,h4,.fd-section-header,.fd-meta-header,.fd-ref-header'
+        )].some(isAnyClinicalHeader)
+      ) {
+        break;
+      }
+
+      const cs=getComputedStyle(sib);
+      if (cs.display!=='none' && cs.visibility!=='hidden') {
+        chars += String(sib.textContent||'').replace(/\s+/g,' ').trim().length;
+        controls += sib.querySelectorAll('input,select,textarea,button,a,[role="button"]').length;
+      }
+
+      sib=sib.nextElementSibling;
+    }
+
+    return chars>=18 || controls>0;
+  };
+
+  const findHeaders=root => {
+    const pool=[
+      ...root.querySelectorAll('[aria-expanded]'),
+      ...root.querySelectorAll(
+        '.fd-section-label,.fd-meta-title,.fd-ref-header-left,.fd-section-header,.fd-meta-header,.fd-ref-header,button,strong,h2,h3,h4'
+      )
+    ];
+    return [...new Set(pool)].filter(isTargetHeader);
+  };
+
+  const renderPanel=(header,key,items,lang,drugKey,file) => {
+    const anchor=headerAnchor(header);
+    const parent=anchor.parentElement;
+    if (!parent || !Array.isArray(items) || !items.length) return false;
+
+    if (parent.querySelector(':scope > .mc-farmacos-enrichment-panel[data-section="'+key+'"]')) {
+      return false;
+    }
+
+    const panel=document.createElement('div');
+    panel.className='mc-farmacos-enrichment-panel';
+    panel.dataset.section=key;
+    panel.dataset.lang=lang;
+    panel.dataset.drugKey=drugKey;
+    panel.dataset.drugFile=file;
+    panel.dataset.source='mc_clinical_enrichment_v1';
+
+    items.forEach(item=>{
+      const card=document.createElement('div');
+      card.className='mc-farmacos-enrichment-item';
+      if (item && item.severity) card.dataset.severity=String(item.severity);
+
+      const label=document.createElement('strong');
+      label.className='mc-farmacos-enrichment-label';
+      label.textContent=String(item && item.label || '');
+
+      const text=document.createElement('p');
+      text.className='mc-farmacos-enrichment-text';
+      text.textContent=String(item && item.text || '');
+
+      card.append(label,text);
+      panel.append(card);
+    });
+
+    anchor.insertAdjacentElement('afterend',panel);
+    return true;
+  };
+
+  const apply=async reason => {
+    const root=document.querySelector('#fd-modal.open');
+    if (!root) return;
+
+    const det=detectActiveDrug(root);
+    logDetection(det,reason);
+
+    if (!det.matched) {
+      console.log('['+BUILD+'] ACTIVE_DRUG_UNRESOLVED',{reason});
+      return;
+    }
+
+    let drug;
+    try {
+      drug=await loadDrug(det.file);
+    } catch (e) {
+      console.warn('['+BUILD+'] DRUG_DATA_LOAD_FAILED',{
+        reason,key:det.key,file:det.file,error:String(e)
+      });
+      return;
+    }
+
+    const enrichment=drug && drug.mc_clinical_enrichment_v1;
+    if (!enrichment || !enrichment.sections) {
+      console.log('['+BUILD+'] NO_ENRICHMENT_FOR_ACTIVE_DRUG',{
+        reason,key:det.key,file:det.file
+      });
+      return;
+    }
+
+    const lang=currentLang();
+    const headers=findHeaders(root);
+
+    let inserted=0;
+    let skippedNative=0;
+    let existingEnrichment=0;
+    const resolved=[];
+
+    for (const header of headers) {
+      const key=headerKey(header);
+      if (!key) continue;
+
+      const anchor=headerAnchor(header);
+      const parent=anchor.parentElement;
+      if (!parent) {
+        resolved.push(key+':no-parent');
+        continue;
+      }
+
+      if (parent.querySelector(':scope > .mc-farmacos-enrichment-panel[data-section="'+key+'"]')) {
+        existingEnrichment++;
+        resolved.push(key+':existing-enrichment');
+        continue;
+      }
+
+      if (nativeContentExists(header)) {
+        skippedNative++;
+        resolved.push(key+':native-content');
+        continue;
+      }
+
+      const section=enrichment.sections[key];
+      const items=section && (section[lang] || section.pt);
+
+      if (renderPanel(header,key,items,lang,det.key,det.file)) {
+        inserted++;
+        resolved.push(key+':inserted');
+      } else {
+        resolved.push(key+':no-data-or-render-failed');
+      }
+    }
+
+    console.log('['+BUILD+'] APPLIED',{
+      reason,
+      activeDrugKey:det.key,
+      activeDrugFile:det.file,
+      lang,
+      headersFound:headers.length,
+      inserted,
+      skippedNative,
+      existingEnrichment,
+      resolved
+    });
+  };
+
+  const settle=reason => [80,220,520,900].forEach(ms=>setTimeout(()=>apply(reason+'@'+ms),ms));
+
+  document.addEventListener('pointerdown',()=>settle('pointerdown'),true);
+  document.addEventListener('click',()=>settle('click'),true);
+  window.addEventListener('pageshow',()=>settle('pageshow'));
+
+  console.log('['+BUILD+'] MOUNTED',{
+    drugManifestKeys:Object.keys(DRUG_FILE_MAP).length,
+    scope:'all-farmacos',
+    dataOwner:'mc_clinical_enrichment_v1',
+    missingDataPolicy:'truthful-no-invention',
+    persistentObserver:false,
+    persistentPolling:false
+  });
+
+  settle('boot');
+})();
+</script>
+<!-- CALC-FARMACOS-GLOBAL-CLINICAL-ENRICHMENT-OWNER-V1-B-R0 END -->
+
+
+<!-- CALC-FARMACOS-GLOBAL-CLINICAL-CONTENT-VISUAL-CONVERGENCE-V1-B-R0 BEGIN -->
+<style id="medcases-farmacos-global-clinical-content-visual-convergence-v1-b-r0">
+/* Global visual language for non-posology/non-renal clinical sections only. */
+body.calc-overlay-open #fd-modal.open{
+  --mc-fd-page:#1A1D23;
+  --mc-fd-card:#252930;
+  --mc-fd-card-soft:#222730;
+  --mc-fd-divider:#374151;
+  --mc-fd-border:#404958;
+  --mc-fd-text:#F3F4F6;
+  --mc-fd-support:#B8C0CC;
+  --mc-fd-muted:#8E98A8;
+}
+
+/* Section header contract */
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-clinical-header]{
+  min-height:36px !important;
+  margin:0 !important;
+  padding:8px 0 7px 0 !important;
+  border-top:0 !important;
+  border-left:0 !important;
+  border-right:0 !important;
+  border-bottom:0.7px solid var(--mc-fd-divider) !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  color:var(--mc-fd-text) !important;
+  font-size:12.5px !important;
+  line-height:1.25 !important;
+  font-weight:700 !important;
+}
+
+/* Native section content wrapper/siblings tagged by runtime. */
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block]{
+  margin:4px 0 8px 0 !important;
+  padding:8px 10px !important;
+  border:0.7px solid var(--mc-fd-divider) !important;
+  border-radius:7px !important;
+  background:var(--mc-fd-card) !important;
+  box-shadow:none !important;
+  color:var(--mc-fd-support) !important;
+  font-size:11px !important;
+  line-height:1.38 !important;
+  font-weight:400 !important;
+}
+
+/* Preserve enriched cards visually; align tokens only. */
+body.calc-overlay-open #fd-modal.open .mc-farmacos-enrichment-panel{
+  margin:4px 0 8px 0 !important;
+  gap:4px !important;
+}
+body.calc-overlay-open #fd-modal.open .mc-farmacos-enrichment-item{
+  background:var(--mc-fd-card) !important;
+  border-color:var(--mc-fd-divider) !important;
+  border-radius:7px !important;
+  padding:8px 10px !important;
+}
+body.calc-overlay-open #fd-modal.open .mc-farmacos-enrichment-label{
+  color:var(--mc-fd-text) !important;
+  font-size:11.5px !important;
+  line-height:1.25 !important;
+  font-weight:700 !important;
+}
+body.calc-overlay-open #fd-modal.open .mc-farmacos-enrichment-text{
+  color:var(--mc-fd-support) !important;
+  font-size:11px !important;
+  line-height:1.38 !important;
+  font-weight:400 !important;
+}
+
+/* Native typography hierarchy. */
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block] :is(h1,h2,h3,h4,h5,h6,strong,b){
+  color:var(--mc-fd-text) !important;
+}
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block] :is(h3,h4,h5,h6,strong,b){
+  font-size:11.5px !important;
+  line-height:1.3 !important;
+  font-weight:700 !important;
+}
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block] :is(p,li,dd,dt,span){
+  font-size:11px !important;
+  line-height:1.38 !important;
+}
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block] ul,
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block] ol{
+  margin:3px 0 0 0 !important;
+  padding-left:15px !important;
+}
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block] li{
+  margin:0 0 3px 0 !important;
+}
+
+/* Collapse the old "wall of rules" inside clinical bodies. */
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block],
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block] *{
+  box-shadow:none !important;
+}
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block] > *{
+  border-top-color:transparent !important;
+  border-bottom-color:transparent !important;
+}
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block] hr{
+  display:none !important;
+}
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block]::before,
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block]::after{
+  box-shadow:none !important;
+}
+
+/* Group labels retain distinction without adding divider walls. */
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-native-block] [data-mc-native-group-label]{
+  display:block !important;
+  margin:1px 0 3px 0 !important;
+  color:var(--mc-fd-muted) !important;
+  font-size:10.5px !important;
+  line-height:1.25 !important;
+  font-weight:700 !important;
+  text-transform:none !important;
+  letter-spacing:0 !important;
+}
+
+/* Effects/presentations stay compact rather than becoming huge cards per line. */
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-section="efeitos"] [data-mc-canonical-native-block],
+body.calc-overlay-open #fd-modal.open [data-mc-canonical-section="apresentacoes"] [data-mc-canonical-native-block]{
+  padding-top:7px !important;
+  padding-bottom:7px !important;
+}
+</style>
+
+<script id="medcases-farmacos-global-clinical-content-visual-convergence-v1-b-r0-runtime">
+(() => {
+  'use strict';
+
+  const BUILD='CALC-FARMACOS-GLOBAL-CLINICAL-CONTENT-VISUAL-CONVERGENCE-V1-B-R0';
+
+  const norm=s => String(s||'')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-zA-Z0-9]+/g,'')
+    .toLowerCase();
+
+  const sectionMap={
+    administracaoepreparo:'administracao',
+    administracao:'administracao',
+    administracionypreparacion:'administracao',
+    administracion:'administracao',
+
+    alertascriticos:'alertas',
+
+    usosespeciais:'usos',
+    usosespeciales:'usos',
+
+    interacoesmedicamentosas:'interacoes',
+    interaccionesmedicamentosas:'interacoes',
+
+    efeitoscolaterais:'efeitos',
+    efectoscolaterales:'efeitos',
+
+    dadosfarmacologicos:'farmacologicos',
+    datosfarmacologicos:'farmacologicos',
+
+    apresentacoes:'apresentacoes',
+    presentaciones:'apresentacoes',
+
+    referencias:'referencias'
+  };
+
+  const excludedHeaders=new Set([
+    'indicacoesdeuso','indicacionesdeuso','indicacoes','indicaciones',
+    'posologia','posologiadeferencia','posologiadereferencia',
+    'ajusterenal','ajusterenaltodasasfaixas'
+  ]);
+
+  const headerAnchor=header =>
+    header.closest('button,[role="button"],.fd-section-header,.fd-meta-header,.fd-ref-header') || header;
+
+  const headerSection=el => sectionMap[norm(el && el.textContent)] || null;
+
+  const isKnownHeader=el => {
+    if (!(el instanceof Element)) return false;
+    const n=norm(el.textContent);
+    return !!sectionMap[n] || excludedHeaders.has(n);
+  };
+
+  const findClinicalHeaders=root => {
+    const pool=[
+      ...root.querySelectorAll('[aria-expanded]'),
+      ...root.querySelectorAll(
+        '.fd-section-label,.fd-meta-title,.fd-ref-header-left,.fd-section-header,.fd-meta-header,.fd-ref-header,button,strong,h2,h3,h4'
+      )
+    ];
+    return [...new Set(pool)].filter(el=>!!headerSection(el));
+  };
+
+  const isEnrichment=node =>
+    !!(node && node.classList && node.classList.contains('mc-farmacos-enrichment-panel'));
+
+  const meaningful=node => {
+    if (!(node instanceof Element)) return false;
+    const cs=getComputedStyle(node);
+    if (cs.display==='none' || cs.visibility==='hidden') return false;
+    const text=String(node.textContent||'').replace(/\s+/g,' ').trim();
+    const controls=node.querySelectorAll('input,select,textarea,button,a,[role="button"],img,svg').length;
+    return text.length>0 || controls>0;
+  };
+
+  const markGroupLabels=block => {
+    const candidates=block.querySelectorAll('strong,b,h3,h4,h5,h6,dt');
+    candidates.forEach(el=>{
+      const t=String(el.textContent||'').replace(/\s+/g,' ').trim();
+      if (!t || t.length>90) return;
+      if (el.querySelector('button,input,select,textarea')) return;
+      el.setAttribute('data-mc-native-group-label','1');
+    });
+  };
+
+  const markFlatSiblings=(anchor,section) => {
+    let node=anchor.nextElementSibling;
+    let blocks=0;
+    while (node) {
+      if (isEnrichment(node)) {
+        node=node.nextElementSibling;
+        continue;
+      }
+
+      if (isKnownHeader(node)) break;
+      const nestedHeader=[...node.querySelectorAll(
+        '[aria-expanded],.fd-section-label,.fd-meta-title,.fd-ref-header-left,.fd-section-header,.fd-meta-header,.fd-ref-header,button,strong,h2,h3,h4'
+      )].find(isKnownHeader);
+      if (nestedHeader) break;
+
+      if (meaningful(node)) {
+        node.setAttribute('data-mc-canonical-native-block','1');
+        node.setAttribute('data-mc-canonical-section',section);
+        markGroupLabels(node);
+        blocks++;
+      }
+      node=node.nextElementSibling;
+    }
+    return blocks;
+  };
+
+  const markLocalPanel=(anchor,section) => {
+    const id=anchor.getAttribute('aria-controls');
+    if (id) {
+      const panel=document.getElementById(id);
+      if (panel && meaningful(panel) && !isEnrichment(panel)) {
+        panel.setAttribute('data-mc-canonical-native-block','1');
+        panel.setAttribute('data-mc-canonical-section',section);
+        markGroupLabels(panel);
+        return 1;
+      }
+    }
+
+    const parent=anchor.parentElement;
+    if (!parent) return 0;
+
+    const likely=parent.querySelector(
+      ':scope > .fd-section-content,:scope > .fd-meta-content,:scope > .fd-ref-content,:scope > .collapse,:scope > [role="region"]'
+    );
+    if (likely && meaningful(likely) && !isEnrichment(likely)) {
+      likely.setAttribute('data-mc-canonical-native-block','1');
+      likely.setAttribute('data-mc-canonical-section',section);
+      markGroupLabels(likely);
+      return 1;
+    }
+
+    return 0;
+  };
+
+  const apply=reason => {
+    const root=document.querySelector('#fd-modal.open');
+    if (!root) return;
+
+    const headers=findClinicalHeaders(root);
+    let nativeBlocks=0;
+    const bySection={};
+
+    headers.forEach(header=>{
+      const section=headerSection(header);
+      if (!section) return;
+
+      const anchor=headerAnchor(header);
+      anchor.setAttribute('data-mc-canonical-clinical-header','1');
+      anchor.setAttribute('data-mc-canonical-section',section);
+
+      let count=markLocalPanel(anchor,section);
+      if (!count) count=markFlatSiblings(anchor,section);
+
+      nativeBlocks+=count;
+      bySection[section]=(bySection[section]||0)+count;
+    });
+
+    console.log('['+BUILD+'] APPLIED',{
+      reason,
+      headers:headers.length,
+      nativeBlocks,
+      bySection,
+      enrichmentPanels:root.querySelectorAll('.mc-farmacos-enrichment-panel').length,
+      excluded:{
+        indications:true,
+        posology:true,
+        renal:true
+      }
+    });
+  };
+
+  const settle=reason =>
+    [60,180,420,800].forEach(ms=>setTimeout(()=>apply(reason+'@'+ms),ms));
+
+  document.addEventListener('pointerdown',()=>settle('pointerdown'),true);
+  document.addEventListener('click',()=>settle('click'),true);
+  window.addEventListener('pageshow',()=>settle('pageshow'));
+
+  console.log('['+BUILD+'] MOUNTED',{
+    scope:'all-farmacos-native-and-enriched-clinical-sections',
+    excluded:['indicacoes','posologia','renal'],
+    persistentObserver:false,
+    persistentPolling:false
+  });
+
+  settle('boot');
+})();
+</script>
+<!-- CALC-FARMACOS-GLOBAL-CLINICAL-CONTENT-VISUAL-CONVERGENCE-V1-B-R0 END -->
+
+
+<!-- CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R2-HERO-CARD-PRESERVE BEGIN -->
+<!-- CALC-FARMACOS-GLOBAL-CANONICAL-DETAIL-STRUCTURE-V1-B-R2-HERO-CARD-PRESERVE END -->
+
+
+<style id="CALC-FARMACOS-CANONICAL-OWNER-CONSOLIDATION-V1-B-R0-R1-TRUTH-GATE-FIX-style">
+#fd-modal.open .mc-fd-range-canonical{
+  font-size:var(--mc-fd-range-font-size)!important;
+  font-weight:var(--mc-fd-range-font-weight)!important;
+  line-height:var(--mc-fd-range-line-height)!important;
+  color:var(--mc-fd-range-color)!important;
+}
+#fd-modal.open .mc-fd-range-canonical :is(strong,b,span){
+  font-size:inherit!important;
+  font-weight:inherit!important;
+  line-height:inherit!important;
+  color:inherit!important;
+  letter-spacing:inherit!important;
+  vertical-align:baseline!important;
+}
+
+/* CALC-FARMACOS-CANONICAL-PATIENT-DOSE-HERO-V1-B-R2-DIFF-CHECK-WHITESPACE-FIX */
+#fd-modal.open .mc-pdh-hide{display:none!important}
+#fd-modal.open .mc-pdh{display:flex;flex-direction:column;gap:9px;margin-top:8px}
+#fd-modal.open .mc-pdh-k{font-size:11px;font-weight:750;opacity:.72;text-transform:uppercase}
+#fd-modal.open .mc-pdh-dose{font-size:26px;line-height:1.05;font-weight:800;letter-spacing:-.02em}
+#fd-modal.open .mc-pdh-sub{font-size:12px;line-height:1.35;opacity:.84}
+#fd-modal.open .mc-pdh-note{font-size:12px;line-height:1.38;opacity:.74}
+#fd-modal.open .mc-pdh-label{font-size:11px;font-weight:700;opacity:.76}
+#fd-modal.open .mc-pdh-options{display:flex;flex-wrap:wrap;gap:6px}
+#fd-modal.open .mc-pdh-chip,#fd-modal.open .mc-pdh-choice{appearance:none;color:inherit;border:1px solid rgba(148,163,184,.38);background:rgba(15,23,42,.08);border-radius:8px;cursor:pointer}
+#fd-modal.open .mc-pdh-chip{padding:7px 9px;font-size:11px;font-weight:650}
+#fd-modal.open .mc-pdh-chip[aria-pressed="true"],#fd-modal.open .mc-pdh-choice[aria-pressed="true"]{border-color:#22c55e;box-shadow:inset 0 0 0 1px #22c55e}
+#fd-modal.open .mc-pdh-grid{display:grid;grid-template-columns:1fr;gap:7px}
+#fd-modal.open .mc-pdh-choice{padding:9px 10px;text-align:left;width:100%}
+#fd-modal.open .mc-pdh-choice strong{display:block;font-size:13px}
+#fd-modal.open .mc-pdh-choice span{display:block;margin-top:3px;font-size:11px;opacity:.74}
+</style>
+<script id="CALC-FARMACOS-CANONICAL-OWNER-CONSOLIDATION-V1-B-R0-R1-TRUTH-GATE-FIX-runtime">
+(() => {
+  'use strict';
+  const BUILD='CALC-FARMACOS-CANONICAL-OWNER-CONSOLIDATION-V1-B-R0-R1-TRUTH-GATE-FIX';
+  const rangeRx=/\d+(?:[,.]\d+)?\s*(?:a|até|hasta|–|—|-)\s*\d+(?:[,.]\d+)?\s*(?:mcg|µg|μg|mg|g|ui|meq|ml|mmol)(?:\/(?:kg|ml|dia|día|day|h|min|dose|dosis|24\s*h|m²|m2))*/i;
+  const norm=value => String(value||'').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim().toLowerCase();
+  const isClearLabel=button => {
+    const text=norm([button.textContent,button.getAttribute('aria-label'),button.getAttribute('title')].filter(Boolean).join(' '));
+    return text==='limpar'||text==='limpar dados'||text==='limpiar'||text==='limpiar datos';
+  };
+  const candidateNodes=modal => modal.querySelectorAll([
+    '[data-fd-document-section="dosing"] .fd-dose-val--hero','[data-fd-document-section="dosing"] .fd-dose-val','[data-fd-document-section="dosing"] .fd-ref-val','[data-fd-document-section="dosing"] .fd-pathology-dose-value','[data-fd-document-section="dosing"] .fd-batch2-direct-dose','[data-fd-document-section="dosing"] .fd-indication-value','.fd-dose-val--hero','.fd-dose-val','.fd-ref-val','.fd-pathology-dose-value','.fd-batch2-direct-dose','.fd-indication-value'
+  ].join(','));
+  const clearRangeStyle=node => {
+    node.classList.remove('mc-fd-range-canonical');
+    node.removeAttribute('data-mc-fd-range-canonical');
+    node.style.removeProperty('--mc-fd-range-font-size');
+    node.style.removeProperty('--mc-fd-range-font-weight');
+    node.style.removeProperty('--mc-fd-range-line-height');
+    node.style.removeProperty('--mc-fd-range-color');
+  };
+  const equalizeRanges=modal => {
+    let ranges=0;
+    candidateNodes(modal).forEach(node => {
+      if (!(node instanceof HTMLElement)) return;
+      const text=String(node.textContent||'').replace(/\s+/g,' ').trim();
+      if (!rangeRx.test(text)) { clearRangeStyle(node); return; }
+      const visualNodes=[node,...node.querySelectorAll('*')].filter(el=>el instanceof HTMLElement).map(el=>{const cs=getComputedStyle(el);return{el,size:parseFloat(cs.fontSize)||0,weight:parseInt(cs.fontWeight,10)||400};}).sort((a,b)=>b.size!==a.size?b.size-a.size:b.weight-a.weight);
+      const source=(visualNodes[0]&&visualNodes[0].el)||node;
+      const cs=getComputedStyle(source);
+      node.style.setProperty('--mc-fd-range-font-size',cs.fontSize);
+      node.style.setProperty('--mc-fd-range-font-weight',cs.fontWeight);
+      node.style.setProperty('--mc-fd-range-line-height',cs.lineHeight);
+      node.style.setProperty('--mc-fd-range-color',cs.color);
+      node.classList.add('mc-fd-range-canonical');
+      node.setAttribute('data-mc-fd-range-canonical','1');
+      ranges++;
+    });
+    return ranges;
+  };
+  const removeStaleClear=modal => {
+    const mr=modal.getBoundingClientRect(); let removed=0;
+    document.querySelectorAll('button').forEach(button=>{
+      if (!(button instanceof HTMLElement)||button.matches('.fd-close')||!isClearLabel(button)) return;
+      const br=button.getBoundingClientRect();
+      const inside=modal.contains(button);
+      const overHeader=br.right>=mr.left-8&&br.left<=mr.right+8&&br.top>=mr.top-8&&br.top<=mr.top+112;
+      if (!inside&&!overHeader) return;
+      button.remove(); removed++;
+    });
+    return removed;
+  };
+
+  /* CALC-FARMACOS-CANONICAL-PATIENT-DOSE-HERO-V1-B-R2-DIFF-CHECK-WHITESPACE-FIX — blue card = individualized patient dose */
+  const pdhNorm=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim().toLowerCase();
+  const pdhNum=v=>{const n=Number(String(v==null?'':v).replace(',','.'));return Number.isFinite(n)?n:null};
+  const pdhFmt=n=>!Number.isFinite(n)?'':(Math.abs(n-Math.round(n))<1e-9?String(Math.round(n)):n.toFixed(2).replace(/0+$/,'').replace(/\.$/,'').replace('.',','));
+  const pdhPatient=()=>{const p=window.patientData||{};return{weight:pdhNum(p.weight??p.peso),age:pdhNum(p.age??p.idade)}};
+  const pdhLang=()=>{try{return new URLSearchParams(location.search).get('lang')==='es'?'es':'pt'}catch(_){return'pt'}};
+  const pdhDrug=modal=>pdhNorm(window._fdActiveDrugId||modal?.dataset?.currentDrugId||[...modal.querySelectorAll('h1,h2,h3,.fd-title')].map(x=>x.textContent).find(Boolean)||'').replace(/[^a-z0-9]+/g,'-');
+  const pdhEsc=v=>String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  const pdhState=d=>{try{return JSON.parse(sessionStorage.getItem('mc-pdh:'+d)||'{}')||{}}catch(_){return{}}};
+  const pdhSave=(d,x)=>{try{sessionStorage.setItem('mc-pdh:'+d,JSON.stringify(x||{}))}catch(_){}};
+  const pdhChip=(k,v,l,c)=>`<button type="button" class="mc-pdh-chip" data-pdh-k="${pdhEsc(k)}" data-pdh-v="${pdhEsc(v)}" aria-pressed="${c===v?'true':'false'}">${pdhEsc(l)}</button>`;
+
+  const pdhFindCard=modal=>{
+    const h=[...modal.querySelectorAll('*')].find(el=>{const t=pdhNorm(el.textContent);return t==='faixa usual de referencia'||t==='rango habitual de referencia'||t==='rango usual de referencia'});
+    if(!h)return null;
+    let n=h;
+    for(let i=0;i<4&&n&&n!==modal;i++,n=n.parentElement){
+      const p=n.parentElement;if(!p)break;
+      const t=pdhNorm(p.textContent),r=p.getBoundingClientRect();
+      if((t.includes('faixa usual de referencia')||t.includes('rango habitual de referencia')||t.includes('rango usual de referencia'))&&r.width>180&&r.height>70)return p;
+    }
+    return h.parentElement;
+  };
+
+  const pdhHost=card=>{
+    let h=card.querySelector(':scope > .mc-pdh');
+    if(!h){h=document.createElement('div');h.className='mc-pdh';h.dataset.owner='CALC-FARMACOS-CANONICAL-PATIENT-DOSE-HERO-V1-B-R2-DIFF-CHECK-WHITESPACE-FIX';card.appendChild(h)}
+    return h;
+  };
+
+  const pdhHideLegacy=(card,host)=>{
+    [...card.children].forEach(ch=>{
+      if(!(ch instanceof HTMLElement)||ch===host||ch.contains(host))return;
+      const t=pdhNorm(ch.textContent);
+      if(t==='faixa usual de referencia'||t==='rango habitual de referencia'||t==='rango usual de referencia')return;
+      ch.classList.add('mc-pdh-hide');
+    });
+  };
+
+  const pdhRestore=card=>{
+    card.querySelectorAll('.mc-pdh-hide').forEach(x=>x.classList.remove('mc-pdh-hide'));
+    card.querySelector(':scope > .mc-pdh')?.remove();
+  };
+
+  const pdhHideDuplicateResult=modal=>{
+    [...modal.querySelectorAll('*')].forEach(el=>{
+      if(!(el instanceof HTMLElement)||pdhNorm(el.textContent)!=='resultado calculado')return;
+      const b=el.parentElement;if(!b||b.closest('.mc-pdh'))return;
+      b.classList.add('mc-pdh-hide');b.dataset.mcPdhDuplicate='1';
+    });
+  };
+
+  const pdhLamValGuide=(w,phase)=>{
+    const bands=[
+      {a:6.7,b:14,w12:'2 mg em dias alternados',w34:'2 mg/dia'},
+      {a:14.1,b:27,w12:'2 mg/dia',w34:'4 mg/dia'},
+      {a:27.1,b:34,w12:'4 mg/dia',w34:'8 mg/dia'},
+      {a:34.1,b:40,w12:'5 mg/dia',w34:'10 mg/dia'}
+    ];
+    const x=bands.find(z=>w>=z.a&&w<=z.b);return x?x[phase]:null;
+  };
+
+  const pdhLam=(pt,st,lang)=>{
+    const es=lang==='es',w=pt.weight,a=pt.age;
+    if(!(w>0&&a>=2&&a<=12))return null;
+    const ctx=st.context||'',phase=st.phase||'';
+    const C=es?{vp:'Valproato solo',vpind:'Valproato + inductor',neutral:'Sin valproato / sin inductor',inducer:'Inductor sin valproato'}:{vp:'Valproato isolado',vpind:'Valproato + indutor',neutral:'Sem valproato / sem indutor',inducer:'Indutor sem valproato'};
+    const P=es?{w12:'Semanas 1–2',w34:'Semanas 3–4',maint:'Mantenimiento'}:{w12:'Semanas 1–2',w34:'Semanas 3–4',maint:'Manutenção'};
+    if(!ctx||!phase)return `<div class="mc-pdh-k">${es?'DOSIS INDIVIDUALIZADA':'DOSE INDIVIDUALIZADA'}</div><div class="mc-pdh-note">${es?'Seleccione el esquema concomitante y la fase para calcular la dosis.':'Selecione o esquema concomitante e a fase para calcular a dose.'}</div><div class="mc-pdh-label">${es?'Esquema concomitante':'Esquema concomitante'}</div><div class="mc-pdh-options">${Object.entries(C).map(([k,v])=>pdhChip('context',k,v,ctx)).join('')}</div><div class="mc-pdh-label">Fase</div><div class="mc-pdh-options">${Object.entries(P).map(([k,v])=>pdhChip('phase',k,v,phase)).join('')}</div>`;
+
+    let dose='',sub='',note='';
+    if(phase==='w12'||phase==='w34'){
+      if(ctx==='vp'||ctx==='vpind'){
+        const guide=pdhLamValGuide(w,phase),f=phase==='w12'?0.15:0.3;
+        dose=guide||`${pdhFmt(w*f)} mg/dia`;
+        sub=es?`${pdhFmt(f)} mg/kg/día · 1–2 tomas`:`${pdhFmt(f)} mg/kg/dia · 1–2 tomadas`;
+      }else if(ctx==='neutral'){
+        const f=phase==='w12'?0.3:0.6,d=w*f;
+        dose=`${pdhFmt(d)} mg/dia`;
+        sub=phase==='w12'?(es?'1–2 tomas/día':'1–2 tomadas/dia'):(es?`${pdhFmt(d/2)} mg por dosis · cada 12 h`:`${pdhFmt(d/2)} mg por dose · 12/12h`);
+      }else{
+        const f=phase==='w12'?0.6:1.2,d=w*f;
+        dose=`${pdhFmt(d/2)} mg`;
+        sub=es?`${pdhFmt(d)} mg/día · por dosis cada 12 h`:`${pdhFmt(d)} mg/dia · por dose 12/12h`;
+      }
+      note=es?'Ajustar a la presentación disponible; el etiquetado recomienda redondear hacia abajo cuando corresponda.':'Ajustar à apresentação disponível; a bula recomenda arredondar para baixo quando aplicável.';
+    }else{
+      let lo,hi,max,div='1–2';
+      if(ctx==='vp'){lo=1;hi=3;max=200}
+      else if(ctx==='vpind'){lo=1;hi=5;max=200}
+      else if(ctx==='neutral'){lo=4.5;hi=7.5;max=300;div='2'}
+      else{lo=5;hi=15;max=400;div='2'}
+      const dl=Math.min(w*lo,max),dh=Math.min(w*hi,max);
+      dose=`${pdhFmt(dl)}–${pdhFmt(dh)} mg/dia`;
+      sub=es?`${pdhFmt(lo)}–${pdhFmt(hi)} mg/kg/día · máximo ${max} mg/día · ${div} toma(s)`:`${pdhFmt(lo)}–${pdhFmt(hi)} mg/kg/dia · máximo ${max} mg/dia · ${div} tomada(s)`;
+      if(w<30)note=es?'En <30 kg, el mantenimiento puede requerir hasta +50% según respuesta; no se aplica automáticamente.':'Em <30 kg, a manutenção pode exigir até +50% conforme resposta; não aplicado automaticamente.';
+    }
+    return `<div class="mc-pdh-k">${es?'DOSIS INDIVIDUALIZADA':'DOSE INDIVIDUALIZADA'}</div><div class="mc-pdh-dose">${pdhEsc(dose)}</div><div class="mc-pdh-sub">${pdhEsc(sub)}</div>${note?`<div class="mc-pdh-note">${pdhEsc(note)}</div>`:''}<div class="mc-pdh-label">${es?'Esquema concomitante':'Esquema concomitante'}</div><div class="mc-pdh-options">${Object.entries(C).map(([k,v])=>pdhChip('context',k,v,ctx)).join('')}</div><div class="mc-pdh-label">Fase</div><div class="mc-pdh-options">${Object.entries(P).map(([k,v])=>pdhChip('phase',k,v,phase)).join('')}</div>`;
+  };
+
+  const pdhLev=(pt,st,lang)=>{
+    const es=lang==='es',w=pt.weight,a=pt.age;
+    if(!(w>0&&a>=4&&a<16))return null;
+    const opts=[
+      {k:'focal',t:es?'Crisis focales':'Crises focais',r:`${pdhFmt(w*10)}–${pdhFmt(w*30)} mg`,ok:true},
+      {k:'gtc',t:es?'Tónico-clónicas generalizadas primarias':'Tônico-clônicas generalizadas primárias',r:`${pdhFmt(w*10)}–${pdhFmt(w*30)} mg`,ok:a>=6},
+      {k:'myo',t:es?'Mioclónicas / EM juvenil':'Mioclônicas / EM juvenil',r:'500–1500 mg',ok:a>=12}
+    ].filter(x=>x.ok);
+    const ind=st.indication||'';
+    if(!opts.some(x=>x.k===ind)){
+      return `<div class="mc-pdh-k">${es?'DOSIS INDIVIDUALIZADA':'DOSE INDIVIDUALIZADA'}</div><div class="mc-pdh-note">${es?'La indicación cambia el régimen. Selecciónela para fijar la dosis recomendada.':'A indicação muda o regime. Selecione-a para fixar a dose recomendada.'}</div><div class="mc-pdh-grid">${opts.map(o=>`<button type="button" class="mc-pdh-choice" data-pdh-k="indication" data-pdh-v="${o.k}" aria-pressed="false"><strong>${pdhEsc(o.t)} · ${pdhEsc(o.r)} / ${es?'dosis':'dose'}</strong><span>${o.k==='myo'?(es?'500 → 1500 mg cada 12 h':'500 → 1500 mg 12/12h'):(es?'10 → 30 mg/kg por dosis cada 12 h':'10 → 30 mg/kg por dose 12/12h')}</span></button>`).join('')}</div>`;
+    }
+    const o=opts.find(x=>x.k===ind),range=o.k==='myo'?'500–1500 mg':`${pdhFmt(w*10)}–${pdhFmt(w*30)} mg`;
+    return `<div class="mc-pdh-k">${pdhEsc(o.t)}</div><div class="mc-pdh-dose">${pdhEsc(range)}</div><div class="mc-pdh-sub">${es?'por dosis · cada 12 h':'por dose · 12/12h'}</div><div class="mc-pdh-label">${es?'Indicación':'Indicação'}</div><div class="mc-pdh-options">${opts.map(x=>pdhChip('indication',x.k,x.t,ind)).join('')}</div>`;
+  };
+
+  const pdhLegacyNumeric=card=>/\b\d+(?:[,.]\d+)?\s*(?:mcg|µg|μg|mg|g|ui|meq|ml|mmol)\b/i.test(card.textContent||'');
+  const pdhLegacyDescriptive=card=>{if(pdhLegacyNumeric(card))return false;const t=pdhNorm(card.textContent);return t.includes('calcular por kg')||t.includes('ajustar conforme')||t.includes('ver posologia')||t.includes('ver posología')};
+
+  const pdhRender=modal=>{
+    const card=pdhFindCard(modal);if(!card)return{managed:false,reason:'card-not-found'};
+    const drug=pdhDrug(modal),pt=pdhPatient(),lang=pdhLang(),st=pdhState(drug);
+    let html=null;
+    if(drug.includes('lamotrigina')||drug.includes('lamotrigine'))html=pdhLam(pt,st,lang);
+    else if(drug.includes('levetiracetam'))html=pdhLev(pt,st,lang);
+    else if(pdhLegacyDescriptive(card))html=`<div class="mc-pdh-k">${lang==='es'?'DOSIS INDIVIDUALIZADA':'DOSE INDIVIDUALIZADA'}</div><div class="mc-pdh-note">${lang==='es'?'Los datos actuales no contienen una regla numérica suficiente para calcular una dosis individualizada con seguridad.':'Os dados atuais não contêm regra numérica suficiente para calcular uma dose individualizada com segurança.'}</div>`;
+
+    if(html==null){pdhRestore(card);return{managed:false,drug,patient:pt}};
+
+    const host=pdhHost(card);host.innerHTML=html;pdhHideLegacy(card,host);pdhHideDuplicateResult(modal);
+    if(!host.dataset.bound){
+      host.dataset.bound='1';
+      host.addEventListener('click',ev=>{
+        const b=ev.target?.closest?.('[data-pdh-k][data-pdh-v]');if(!b)return;
+        ev.preventDefault();ev.stopPropagation();
+        const d=pdhDrug(modal),x=pdhState(d);x[b.dataset.pdhK]=b.dataset.pdhV;pdhSave(d,x);schedule('patient-dose-choice');
+      });
+    }
+    return{managed:true,drug,patient:pt};
+  };
+
+
+  const apply=reason => {
+    const modal=document.querySelector('#fd-modal.open'); if(!modal) return;
+    const patientDoseHero=pdhRender(modal);
+    const ranges=equalizeRanges(modal); const removedClear=removeStaleClear(modal);
+    const rangeTexts=[...modal.querySelectorAll('[data-mc-fd-range-canonical="1"]')].map(node=>String(node.textContent||'').replace(/\s+/g,' ').trim()).filter(Boolean).slice(0,8);
+    console.info('['+BUILD+'] APPLIED',{reason,patientDoseHero,ranges,canonicalRanges:modal.querySelectorAll('[data-mc-fd-range-canonical="1"]').length,rangeTexts,removedClear,closeButtons:modal.querySelectorAll('.fd-close').length});
+  };
+  let raf=0; let timer=0;
+  const schedule=reason => {
+    if(raf) cancelAnimationFrame(raf); if(timer) clearTimeout(timer);
+    raf=requestAnimationFrame(()=>{raf=0;apply(reason+'@raf');timer=setTimeout(()=>{timer=0;apply(reason+'@120');},120);});
+  };
+  document.addEventListener('click',()=>schedule('click'),true);
+  document.addEventListener('input',()=>schedule('input'),true);
+  document.addEventListener('change',()=>schedule('change'),true);
+  window.addEventListener('pageshow',()=>schedule('pageshow'));
+  window.addEventListener('resize',()=>schedule('resize'));
+  console.info('['+BUILD+'] MOUNTED',{scope:'farmacos-detail',owner:'range+stale-clear-defense',contentRewrite:false,doseEngine:false,settleStorm:false});
+  schedule('boot');
+})();
+</script>
 
 </body>
 </html>
